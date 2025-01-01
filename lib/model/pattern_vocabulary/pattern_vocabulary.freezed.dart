@@ -1,0 +1,243 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'pattern_vocabulary.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
+PatternVocabulary _$PatternVocabularyFromJson(Map<String, dynamic> json) {
+  return _PatternVocabulary.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PatternVocabulary {
+  int get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'english_text')
+  String get englishText => throw _privateConstructorUsedError;
+  @JsonKey(name: 'burmese_text')
+  String get burmeseText => throw _privateConstructorUsedError;
+  @JsonKey(name: 'audio_path')
+  String? get audioPath => throw _privateConstructorUsedError;
+
+  /// Serializes this PatternVocabulary to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of PatternVocabulary
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $PatternVocabularyCopyWith<PatternVocabulary> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PatternVocabularyCopyWith<$Res> {
+  factory $PatternVocabularyCopyWith(
+          PatternVocabulary value, $Res Function(PatternVocabulary) then) =
+      _$PatternVocabularyCopyWithImpl<$Res, PatternVocabulary>;
+  @useResult
+  $Res call(
+      {int id,
+      @JsonKey(name: 'english_text') String englishText,
+      @JsonKey(name: 'burmese_text') String burmeseText,
+      @JsonKey(name: 'audio_path') String? audioPath});
+}
+
+/// @nodoc
+class _$PatternVocabularyCopyWithImpl<$Res, $Val extends PatternVocabulary>
+    implements $PatternVocabularyCopyWith<$Res> {
+  _$PatternVocabularyCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of PatternVocabulary
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? englishText = null,
+    Object? burmeseText = null,
+    Object? audioPath = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      englishText: null == englishText
+          ? _value.englishText
+          : englishText // ignore: cast_nullable_to_non_nullable
+              as String,
+      burmeseText: null == burmeseText
+          ? _value.burmeseText
+          : burmeseText // ignore: cast_nullable_to_non_nullable
+              as String,
+      audioPath: freezed == audioPath
+          ? _value.audioPath
+          : audioPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PatternVocabularyImplCopyWith<$Res>
+    implements $PatternVocabularyCopyWith<$Res> {
+  factory _$$PatternVocabularyImplCopyWith(_$PatternVocabularyImpl value,
+          $Res Function(_$PatternVocabularyImpl) then) =
+      __$$PatternVocabularyImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      @JsonKey(name: 'english_text') String englishText,
+      @JsonKey(name: 'burmese_text') String burmeseText,
+      @JsonKey(name: 'audio_path') String? audioPath});
+}
+
+/// @nodoc
+class __$$PatternVocabularyImplCopyWithImpl<$Res>
+    extends _$PatternVocabularyCopyWithImpl<$Res, _$PatternVocabularyImpl>
+    implements _$$PatternVocabularyImplCopyWith<$Res> {
+  __$$PatternVocabularyImplCopyWithImpl(_$PatternVocabularyImpl _value,
+      $Res Function(_$PatternVocabularyImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PatternVocabulary
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? englishText = null,
+    Object? burmeseText = null,
+    Object? audioPath = freezed,
+  }) {
+    return _then(_$PatternVocabularyImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      englishText: null == englishText
+          ? _value.englishText
+          : englishText // ignore: cast_nullable_to_non_nullable
+              as String,
+      burmeseText: null == burmeseText
+          ? _value.burmeseText
+          : burmeseText // ignore: cast_nullable_to_non_nullable
+              as String,
+      audioPath: freezed == audioPath
+          ? _value.audioPath
+          : audioPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PatternVocabularyImpl implements _PatternVocabulary {
+  const _$PatternVocabularyImpl(
+      {required this.id,
+      @JsonKey(name: 'english_text') required this.englishText,
+      @JsonKey(name: 'burmese_text') required this.burmeseText,
+      @JsonKey(name: 'audio_path') this.audioPath});
+
+  factory _$PatternVocabularyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PatternVocabularyImplFromJson(json);
+
+  @override
+  final int id;
+  @override
+  @JsonKey(name: 'english_text')
+  final String englishText;
+  @override
+  @JsonKey(name: 'burmese_text')
+  final String burmeseText;
+  @override
+  @JsonKey(name: 'audio_path')
+  final String? audioPath;
+
+  @override
+  String toString() {
+    return 'PatternVocabulary(id: $id, englishText: $englishText, burmeseText: $burmeseText, audioPath: $audioPath)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PatternVocabularyImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.englishText, englishText) ||
+                other.englishText == englishText) &&
+            (identical(other.burmeseText, burmeseText) ||
+                other.burmeseText == burmeseText) &&
+            (identical(other.audioPath, audioPath) ||
+                other.audioPath == audioPath));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, englishText, burmeseText, audioPath);
+
+  /// Create a copy of PatternVocabulary
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PatternVocabularyImplCopyWith<_$PatternVocabularyImpl> get copyWith =>
+      __$$PatternVocabularyImplCopyWithImpl<_$PatternVocabularyImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PatternVocabularyImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PatternVocabulary implements PatternVocabulary {
+  const factory _PatternVocabulary(
+          {required final int id,
+          @JsonKey(name: 'english_text') required final String englishText,
+          @JsonKey(name: 'burmese_text') required final String burmeseText,
+          @JsonKey(name: 'audio_path') final String? audioPath}) =
+      _$PatternVocabularyImpl;
+
+  factory _PatternVocabulary.fromJson(Map<String, dynamic> json) =
+      _$PatternVocabularyImpl.fromJson;
+
+  @override
+  int get id;
+  @override
+  @JsonKey(name: 'english_text')
+  String get englishText;
+  @override
+  @JsonKey(name: 'burmese_text')
+  String get burmeseText;
+  @override
+  @JsonKey(name: 'audio_path')
+  String? get audioPath;
+
+  /// Create a copy of PatternVocabulary
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PatternVocabularyImplCopyWith<_$PatternVocabularyImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
