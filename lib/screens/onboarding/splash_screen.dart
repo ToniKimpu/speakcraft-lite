@@ -52,7 +52,15 @@ class _SplashScreenState extends State<SplashScreen> {
                 PmpRoutes.freeUserPage,
               );
             },
-            onNewVersion: (filePath) {},
+            onNewVersion: (appVersion) {
+              Navigator.pushReplacementNamed(
+                context,
+                PmpRoutes.newVersionScreen,
+                arguments: {
+                  'appVersion': appVersion,
+                },
+              );
+            },
             deviceIdFailed: () {},
             error: (message) {},
             orElse: () => Container(),

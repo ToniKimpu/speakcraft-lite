@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -31,7 +29,8 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.unauthenticated() = _Unauthenticated;
   const factory AuthState.deviceIdFailed() = _DeviceIdFailed;
   const factory AuthState.onFreeUser() = _OnFreeUser;
-  const factory AuthState.onNewVersion(String filePath) = _OnNewVersion;
+  const factory AuthState.onNewVersion(Map<String, dynamic> appVersion) =
+      _OnNewVersion;
   const factory AuthState.error(String message) = _Error;
 }
 
@@ -85,10 +84,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         if (appVersion != null) {
           final buildNumber = appVersion['build_number'] as int;
           final packageInfo = await PackageInfo.fromPlatform();
-          String version = packageInfo.version;
           String code = packageInfo.buildNumber;
           if (buildNumber > int.parse(code)) {
-            emit(AuthState.onNewVersion(version));
+            emit(AuthState.onNewVersion(appVersion));
             return;
           }
         }

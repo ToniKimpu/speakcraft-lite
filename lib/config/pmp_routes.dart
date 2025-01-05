@@ -6,6 +6,7 @@ import 'package:pmp_english/model/translation_day/translation_day.dart';
 import 'package:pmp_english/screens/auth/login_screen.dart';
 import 'package:pmp_english/screens/auth/sign_up_screen.dart';
 import 'package:pmp_english/screens/main/free_user_screen.dart';
+import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/self_practice_pattern/pattern_list.dart';
 import 'package:pmp_english/screens/self_practice_pattern/pattern_reply_screen.dart';
@@ -47,6 +48,7 @@ class PmpRoutes {
   static const patternReplyScreen =
       '/self_practice_pattern/pattern_list/pattern_reply_screen';
   static const freeUserPage = '/free_user_page';
+  static const newVersionScreen = '/new_version_screen';
   static const youtubeVideoPage = '/youtube_video_page';
 
   static Route generateRoutes(RouteSettings settings) {
@@ -153,6 +155,14 @@ class PmpRoutes {
         );
       case freeUserPage:
         return _getRoute(const FreeUserScreen(), settings);
+      case newVersionScreen:
+        final args = settings.arguments as Map<String, dynamic>;
+        final appVersion = args['appVersion'] as Map<String, dynamic>;
+        return _getRoute(
+            NewVersionScreen(
+              appVersion: appVersion,
+            ),
+            settings);
       default:
         throw Exception(
           'Sorry, path ${settings.name} is invalid!',

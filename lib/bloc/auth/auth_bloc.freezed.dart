@@ -747,7 +747,7 @@ mixin _$AuthState {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -759,7 +759,7 @@ mixin _$AuthState {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -771,7 +771,7 @@ mixin _$AuthState {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -882,7 +882,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -897,7 +897,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -912,7 +912,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1023,7 +1023,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -1038,7 +1038,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -1053,7 +1053,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1164,7 +1164,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
     return authenticated();
@@ -1179,7 +1179,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
     return authenticated?.call();
@@ -1194,7 +1194,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1305,7 +1305,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
     return unauthenticated();
@@ -1320,7 +1320,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
     return unauthenticated?.call();
@@ -1335,7 +1335,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1446,7 +1446,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
     return deviceIdFailed();
@@ -1461,7 +1461,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
     return deviceIdFailed?.call();
@@ -1476,7 +1476,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1587,7 +1587,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
     return onFreeUser();
@@ -1602,7 +1602,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
     return onFreeUser?.call();
@@ -1617,7 +1617,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1687,7 +1687,7 @@ abstract class _$$OnNewVersionImplCopyWith<$Res> {
           _$OnNewVersionImpl value, $Res Function(_$OnNewVersionImpl) then) =
       __$$OnNewVersionImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String filePath});
+  $Res call({Map<String, dynamic> appVersion});
 }
 
 /// @nodoc
@@ -1703,13 +1703,13 @@ class __$$OnNewVersionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? filePath = null,
+    Object? appVersion = null,
   }) {
     return _then(_$OnNewVersionImpl(
-      null == filePath
-          ? _value.filePath
-          : filePath // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == appVersion
+          ? _value._appVersion
+          : appVersion // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ));
   }
 }
@@ -1717,14 +1717,20 @@ class __$$OnNewVersionImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$OnNewVersionImpl implements _OnNewVersion {
-  const _$OnNewVersionImpl(this.filePath);
+  const _$OnNewVersionImpl(final Map<String, dynamic> appVersion)
+      : _appVersion = appVersion;
 
+  final Map<String, dynamic> _appVersion;
   @override
-  final String filePath;
+  Map<String, dynamic> get appVersion {
+    if (_appVersion is EqualUnmodifiableMapView) return _appVersion;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_appVersion);
+  }
 
   @override
   String toString() {
-    return 'AuthState.onNewVersion(filePath: $filePath)';
+    return 'AuthState.onNewVersion(appVersion: $appVersion)';
   }
 
   @override
@@ -1732,12 +1738,13 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OnNewVersionImpl &&
-            (identical(other.filePath, filePath) ||
-                other.filePath == filePath));
+            const DeepCollectionEquality()
+                .equals(other._appVersion, _appVersion));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, filePath);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_appVersion));
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
@@ -1756,10 +1763,10 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
-    return onNewVersion(filePath);
+    return onNewVersion(appVersion);
   }
 
   @override
@@ -1771,10 +1778,10 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
-    return onNewVersion?.call(filePath);
+    return onNewVersion?.call(appVersion);
   }
 
   @override
@@ -1786,12 +1793,12 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (onNewVersion != null) {
-      return onNewVersion(filePath);
+      return onNewVersion(appVersion);
     }
     return orElse();
   }
@@ -1847,9 +1854,10 @@ class _$OnNewVersionImpl implements _OnNewVersion {
 }
 
 abstract class _OnNewVersion implements AuthState {
-  const factory _OnNewVersion(final String filePath) = _$OnNewVersionImpl;
+  const factory _OnNewVersion(final Map<String, dynamic> appVersion) =
+      _$OnNewVersionImpl;
 
-  String get filePath;
+  Map<String, dynamic> get appVersion;
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
@@ -1932,7 +1940,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
-    required TResult Function(String filePath) onNewVersion,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1947,7 +1955,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
-    TResult? Function(String filePath)? onNewVersion,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1962,7 +1970,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
-    TResult Function(String filePath)? onNewVersion,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
