@@ -3,8 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/screens/main/widgets/completed/completed_day_widget.dart';
-import 'package:pmp_english/screens/main/widgets/day_widget.dart';
+import 'package:pmp_english/model/day/day.dart';
+import 'package:pmp_english/screens/patterns/widgets/completed/completed_day_widget.dart';
+import 'package:pmp_english/screens/patterns/widgets/day_widget.dart';
 
 import '../../bloc/day/day_bloc.dart';
 import 'widgets/current/current_day_widget.dart';
@@ -146,30 +147,35 @@ class _DayListScreenState extends State<DayListScreen> {
                   )),
                   loaded: (c, days) {
                     if (days.isEmpty) {
-                      return const Center(
-                        child: Text('No days found'),
+                      return Center(
+                        child: Text(
+                          'မကြာခင်တင်ပေးပါမည်။',
+                          style: PmpTextStyles.body2Semi.copyWith(
+                            color: Colors.black,
+                          ),
+                        ),
                       );
                     }
                     final notCompletedDays =
                         days.where((day) => !day.isComplete).toList();
                     final completedDays =
                         days.where((day) => day.isComplete).toList();
-                    if (notCompletedDays.isEmpty) {
-                      return const Center(
-                        child: Text('No days found'),
-                      );
+                    if (notCompletedDays.isNotEmpty) {
+                      context.read<ExerciseBloc>().add(
+                            ExerciseEvent.loadExercises(
+                                notCompletedDays.first.id),
+                          );
                     }
-                    final currentDay = notCompletedDays.first;
-                    final remainingDays = notCompletedDays.skip(1).toList();
-                    context.read<ExerciseBloc>().add(
-                          ExerciseEvent.loadExercises(currentDay.id),
-                        );
+                    final remainingDays = (notCompletedDays.isNotEmpty &&
+                            notCompletedDays.length > 1)
+                        ? notCompletedDays.skip(1).toList()
+                        : <Day>[];
                     return Stack(
                       children: [
                         ValueListenableBuilder<bool>(
                           valueListenable: _completeNotifier,
                           builder: (context, complete, child) {
-                            if (!complete && remainingDays.isEmpty) {
+                            if (!complete && notCompletedDays.isEmpty) {
                               return Padding(
                                 padding: const EdgeInsets.only(top: 100),
                                 child: Center(
@@ -212,7 +218,7 @@ class _DayListScreenState extends State<DayListScreen> {
                             itemBuilder: (context, index) {
                               if (index == 0) {
                                 return CurrentDayWidget(
-                                  day: currentDay,
+                                  day: notCompletedDays.first,
                                 );
                               }
                               final day = remainingDays[index - 1];

@@ -10,8 +10,8 @@ part 'translation_day_bloc.freezed.dart';
 
 @freezed
 abstract class TranslationDayEvent with _$TranslationDayEvent {
-  const factory TranslationDayEvent.loadTranslationDays(
-      int translationLevelId) = _LoadTranslationDays;
+  const factory TranslationDayEvent.loadTranslationDays() =
+      _LoadTranslationDays;
 }
 
 @freezed
@@ -30,8 +30,8 @@ class TranslationDayBloc
       (event, emit) async {
         try {
           await event.when(
-            loadTranslationDays: (translationLevelId) =>
-                _mapLoadTranslationDaysToState(translationLevelId, emit),
+            loadTranslationDays: () =>
+                _mapLoadTranslationDaysToState(emit),
           );
         } catch (e) {
           debugPrint('Error loading translation days: ${e.toString()}');
@@ -42,13 +42,12 @@ class TranslationDayBloc
   }
 
   Future<void> _mapLoadTranslationDaysToState(
-      int translationLevelId, Emitter<TranslationDayState> emit) async {
+      Emitter<TranslationDayState> emit) async {
     emit(const TranslationDayState.loading());
     try {
       final dataRes = await supabase
           .from('translation_days')
           .select('*,translation_days_users_relation(translation_day_id)')
-          .eq('translation_level_id', translationLevelId)
           .eq('translation_days_users_relation.user_id',
               GlobalAppState().currentUser.id!)
           .eq('is_deleted', false);

@@ -10,9 +10,7 @@ import '../../config/pmp_routes.dart';
 class TranslationDayList extends StatefulWidget {
   const TranslationDayList({
     super.key,
-    required this.translationLevelId,
   });
-  final int translationLevelId;
 
   @override
   State<TranslationDayList> createState() => _TranslationDayListState();
@@ -23,7 +21,7 @@ class _TranslationDayListState extends State<TranslationDayList> {
   void initState() {
     super.initState();
     context.read<TranslationDayBloc>().add(
-          TranslationDayEvent.loadTranslationDays(widget.translationLevelId),
+          const TranslationDayEvent.loadTranslationDays(),
         );
   }
 
@@ -36,7 +34,7 @@ class _TranslationDayListState extends State<TranslationDayList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Level 1'),
+        title: const Text('Spoken Pattern Practices'),
       ),
       body: BlocBuilder<TranslationDayBloc, TranslationDayState>(
         builder: (context, state) {

@@ -15,7 +15,7 @@ class AppUser with _$AppUser {
     @JsonKey(name: 'account_id') required String accountId,
     @JsonKey(name: 'created_at') DateTime? createdAt,
     @JsonKey(name: 'device_id') String? deviceId,
-    @JsonKey(name: 'is_premium_user') required bool isPremiumUser,
+    @JsonKey(name: 'is_premium_user')  bool? isPremiumUser,
   }) = _AppUser;
 
   factory AppUser.fromJson(Map<String, dynamic> json) =>

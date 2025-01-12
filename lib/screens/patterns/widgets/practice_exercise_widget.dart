@@ -51,7 +51,12 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(widget.patternExercise.burmeseText),
+          Text(
+            widget.patternExercise.burmeseText,
+            style: PmpTextStyles.body2Regular.copyWith(
+              color: PmpColors.black,
+            ),
+          ),
           const SizedBox(
             height: 24,
           ),
@@ -104,6 +109,7 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
                       'Vocabulary',
                       style: PmpTextStyles.body2Regular.copyWith(
                         color: Colors.black,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
@@ -155,11 +161,19 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(e
-                                      .englishText), // Assuming each `e` has `englishText`
+                                  Text(
+                                    e.englishText,
+                                    style: PmpTextStyles.body2Semi.copyWith(
+                                      color: Colors.black,
+                                    ),
+                                  ),
                                   const SizedBox(height: 4),
-                                  Text(e
-                                      .burmeseText), // Assuming each `e` has `burmeseText`
+                                  Text(
+                                    e.burmeseText,
+                                    style: PmpTextStyles.body2Regular.copyWith(
+                                      color: Colors.black,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),

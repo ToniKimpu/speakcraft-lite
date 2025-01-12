@@ -17,7 +17,7 @@ _$AppUserImpl _$$AppUserImplFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['created_at'] as String),
       deviceId: json['device_id'] as String?,
-      isPremiumUser: json['is_premium_user'] as bool,
+      isPremiumUser: json['is_premium_user'] as bool?,
     );
 
 Map<String, dynamic> _$$AppUserImplToJson(_$AppUserImpl instance) =>

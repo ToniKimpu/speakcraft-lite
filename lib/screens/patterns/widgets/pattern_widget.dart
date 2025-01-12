@@ -11,6 +11,7 @@ class PatternWidget extends StatelessWidget {
     required this.pattern,
   });
   final Pattern pattern;
+  final svAggreements = "I => am;He,She,It => is;We,You,They => are";
 
   @override
   Widget build(BuildContext context) {
@@ -73,6 +74,40 @@ class PatternWidget extends StatelessWidget {
               ),
             ),
           ),
+        const SizedBox(
+          height: 12,
+        ),
+        Container(
+          width: double.infinity,
+          margin: const EdgeInsets.symmetric(horizontal: 24),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 2,
+                  blurRadius: 2,
+                  offset: const Offset(0, 2),
+                ),
+              ]),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: svAggreements
+                .split(';')
+                .map((e) => Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        e,
+                        style: PmpTextStyles.body2Semi.copyWith(
+                          color: Colors.black,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ))
+                .toList(),
+          ),
+        ),
         const SizedBox(
           height: 12,
         ),

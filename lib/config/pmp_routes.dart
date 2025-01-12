@@ -20,9 +20,9 @@ import '../model/day/day.dart';
 import '../model/exercise/exercise.dart';
 import '../model/pattern_exercise/pattern_exercise.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
-import '../screens/main/day_list_screen.dart';
 import '../screens/main/home_screen.dart';
 import '../screens/onboarding/splash_screen.dart';
+import '../screens/patterns/day_list_screen.dart';
 import '../screens/patterns/pattern_practice_result_screen.dart';
 import '../screens/patterns/speaking_pattern_screen.dart';
 import '../screens/self_practice_pattern/pattern_practice_screen.dart';
@@ -79,13 +79,9 @@ class PmpRoutes {
       case translationListPage:
         return _getRoute(const TranslationLevelList(), settings);
       case translationDayList:
-        final args = settings.arguments as Map<String, dynamic>;
-        final levelId = args['translation_level_id'] as int;
-        return _getRoute(
-            TranslationDayList(
-              translationLevelId: levelId,
-            ),
-            settings);
+        // final args = settings.arguments as Map<String, dynamic>;
+        // final levelId = args['translation_level_id'] as int;
+        return _getRoute(const TranslationDayList(), settings);
       case loginScreen:
         return _getRoute(const LoginScreen(), settings);
       case signUpScreen:

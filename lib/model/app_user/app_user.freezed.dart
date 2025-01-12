@@ -32,7 +32,7 @@ mixin _$AppUser {
   @JsonKey(name: 'device_id')
   String? get deviceId => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_premium_user')
-  bool get isPremiumUser => throw _privateConstructorUsedError;
+  bool? get isPremiumUser => throw _privateConstructorUsedError;
 
   /// Serializes this AppUser to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -56,7 +56,7 @@ abstract class $AppUserCopyWith<$Res> {
       @JsonKey(name: 'account_id') String accountId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'device_id') String? deviceId,
-      @JsonKey(name: 'is_premium_user') bool isPremiumUser});
+      @JsonKey(name: 'is_premium_user') bool? isPremiumUser});
 }
 
 /// @nodoc
@@ -81,7 +81,7 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
     Object? accountId = null,
     Object? createdAt = freezed,
     Object? deviceId = freezed,
-    Object? isPremiumUser = null,
+    Object? isPremiumUser = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -112,10 +112,10 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      isPremiumUser: null == isPremiumUser
+      isPremiumUser: freezed == isPremiumUser
           ? _value.isPremiumUser
           : isPremiumUser // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -135,7 +135,7 @@ abstract class _$$AppUserImplCopyWith<$Res> implements $AppUserCopyWith<$Res> {
       @JsonKey(name: 'account_id') String accountId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'device_id') String? deviceId,
-      @JsonKey(name: 'is_premium_user') bool isPremiumUser});
+      @JsonKey(name: 'is_premium_user') bool? isPremiumUser});
 }
 
 /// @nodoc
@@ -158,7 +158,7 @@ class __$$AppUserImplCopyWithImpl<$Res>
     Object? accountId = null,
     Object? createdAt = freezed,
     Object? deviceId = freezed,
-    Object? isPremiumUser = null,
+    Object? isPremiumUser = freezed,
   }) {
     return _then(_$AppUserImpl(
       id: freezed == id
@@ -189,10 +189,10 @@ class __$$AppUserImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      isPremiumUser: null == isPremiumUser
+      isPremiumUser: freezed == isPremiumUser
           ? _value.isPremiumUser
           : isPremiumUser // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -208,7 +208,7 @@ class _$AppUserImpl implements _AppUser {
       @JsonKey(name: 'account_id') required this.accountId,
       @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'device_id') this.deviceId,
-      @JsonKey(name: 'is_premium_user') required this.isPremiumUser});
+      @JsonKey(name: 'is_premium_user') this.isPremiumUser});
 
   factory _$AppUserImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppUserImplFromJson(json);
@@ -233,7 +233,7 @@ class _$AppUserImpl implements _AppUser {
   final String? deviceId;
   @override
   @JsonKey(name: 'is_premium_user')
-  final bool isPremiumUser;
+  final bool? isPremiumUser;
 
   @override
   String toString() {
@@ -283,15 +283,15 @@ class _$AppUserImpl implements _AppUser {
 
 abstract class _AppUser implements AppUser {
   const factory _AppUser(
-      {final int? id,
-      required final String name,
-      required final String email,
-      @JsonKey(name: 'profile_path') final String? profilePath,
-      @JsonKey(name: 'account_id') required final String accountId,
-      @JsonKey(name: 'created_at') final DateTime? createdAt,
-      @JsonKey(name: 'device_id') final String? deviceId,
-      @JsonKey(name: 'is_premium_user')
-      required final bool isPremiumUser}) = _$AppUserImpl;
+          {final int? id,
+          required final String name,
+          required final String email,
+          @JsonKey(name: 'profile_path') final String? profilePath,
+          @JsonKey(name: 'account_id') required final String accountId,
+          @JsonKey(name: 'created_at') final DateTime? createdAt,
+          @JsonKey(name: 'device_id') final String? deviceId,
+          @JsonKey(name: 'is_premium_user') final bool? isPremiumUser}) =
+      _$AppUserImpl;
 
   factory _AppUser.fromJson(Map<String, dynamic> json) = _$AppUserImpl.fromJson;
 
@@ -315,7 +315,7 @@ abstract class _AppUser implements AppUser {
   String? get deviceId;
   @override
   @JsonKey(name: 'is_premium_user')
-  bool get isPremiumUser;
+  bool? get isPremiumUser;
 
   /// Create a copy of AppUser
   /// with the given fields replaced by the non-null parameter values.

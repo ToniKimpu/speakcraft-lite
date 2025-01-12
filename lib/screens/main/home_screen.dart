@@ -35,18 +35,19 @@ class _HomePageState extends State<HomePage> {
             ModuleWidget(
               title: 'Spoken Pattern Tutorial',
               label1: 'Spoken Patternပေါင်း (၁၀၀)ကျော်လေ့လာမယ်',
-              label2: 'နေ့စဉ်ပုံမှန် လေ့ကျင့်မယ်',
+              label2: 'နေ့စဉ်ပုံမှန် လေ့လာမယ်',
               onPressed: () {
                 Navigator.pushNamed(context, PmpRoutes.dayList);
               },
             ),
             const SizedBox(height: 24),
             ModuleWidget(
-              title: 'Burmese to English Translation',
-              label1: 'မြန်မာကနေ အင်္ဂလိပ်ကို ဘာသာပြန်လေ့ကျင့်ကြမယ်',
+              title: 'Spoken Pattern Practices',
+              label1:
+                  'ကျွန်တော်တို့ လေ့လာထားတဲ့ စကားစုများကို ပြန်ပြီးတော့ လေ့ကျင့်ကြမယ်',
               label2: 'နေ့စဉ်ပုံမှန် လေ့ကျင့်မယ်',
               onPressed: () {
-                Navigator.pushNamed(context, PmpRoutes.translationListPage);
+                Navigator.pushNamed(context, PmpRoutes.translationDayList);
               },
             ),
             const SizedBox(

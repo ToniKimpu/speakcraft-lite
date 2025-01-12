@@ -99,7 +99,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           );
           return;
         }
-        if (!appUser.isPremiumUser) {
+        if (!appUser.isPremiumUser!) {
           emit(const AuthState.onFreeUser());
           return;
         }
@@ -139,7 +139,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               (json) => AppUser.fromJson(json),
             );
         GlobalAppState().currentUser = appUser;
-        if (!appUser.isPremiumUser) {
+        if (!appUser.isPremiumUser!) {
           emit(const AuthState.onFreeUser());
           return;
         }
@@ -167,7 +167,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             (json) => AppUser.fromJson(json),
           );
       GlobalAppState().currentUser = appUser;
-      if (!appUser.isPremiumUser) {
+      if (!appUser.isPremiumUser!) {
         emit(const AuthState.onFreeUser());
         return;
       }

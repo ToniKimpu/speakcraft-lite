@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
-import 'package:pmp_english/screens/main/widgets/current/current_exercise_item.dart';
-import 'package:pmp_english/screens/main/widgets/current/current_lesson_item.dart';
-import 'package:pmp_english/screens/main/widgets/exercise_item_loading.dart';
+import 'package:pmp_english/screens/patterns/widgets/current/current_exercise_item.dart';
+import 'package:pmp_english/screens/patterns/widgets/current/current_lesson_item.dart';
+import 'package:pmp_english/screens/patterns/widgets/exercise_item_loading.dart';
 
 import '../../../../config/pmp_colors.dart';
 import '../../../../config/pmp_text_styles.dart';

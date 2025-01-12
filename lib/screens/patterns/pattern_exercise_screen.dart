@@ -12,7 +12,7 @@ import 'package:pmp_english/model/day/day.dart';
 import 'package:pmp_english/model/exercise/exercise.dart';
 import 'package:pmp_english/model/exercise_user_answer/exercise_user_answer.dart';
 import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
-import 'package:pmp_english/screens/main/widgets/practice_exercise_widget.dart';
+import 'package:pmp_english/screens/patterns/widgets/practice_exercise_widget.dart';
 
 class PatternExerciseScreen extends StatefulWidget {
   const PatternExerciseScreen({

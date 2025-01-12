@@ -23,8 +23,6 @@ mixin _$TranslationDay {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'day_name')
   String get dayName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'translation_level_id')
-  int get translationLevelId => throw _privateConstructorUsedError;
   bool get isComplete => throw _privateConstructorUsedError;
 
   /// Serializes this TranslationDay to a JSON map.
@@ -44,10 +42,7 @@ abstract class $TranslationDayCopyWith<$Res> {
       _$TranslationDayCopyWithImpl<$Res, TranslationDay>;
   @useResult
   $Res call(
-      {int id,
-      @JsonKey(name: 'day_name') String dayName,
-      @JsonKey(name: 'translation_level_id') int translationLevelId,
-      bool isComplete});
+      {int id, @JsonKey(name: 'day_name') String dayName, bool isComplete});
 }
 
 /// @nodoc
@@ -67,7 +62,6 @@ class _$TranslationDayCopyWithImpl<$Res, $Val extends TranslationDay>
   $Res call({
     Object? id = null,
     Object? dayName = null,
-    Object? translationLevelId = null,
     Object? isComplete = null,
   }) {
     return _then(_value.copyWith(
@@ -79,10 +73,6 @@ class _$TranslationDayCopyWithImpl<$Res, $Val extends TranslationDay>
           ? _value.dayName
           : dayName // ignore: cast_nullable_to_non_nullable
               as String,
-      translationLevelId: null == translationLevelId
-          ? _value.translationLevelId
-          : translationLevelId // ignore: cast_nullable_to_non_nullable
-              as int,
       isComplete: null == isComplete
           ? _value.isComplete
           : isComplete // ignore: cast_nullable_to_non_nullable
@@ -100,10 +90,7 @@ abstract class _$$TranslationDayImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int id,
-      @JsonKey(name: 'day_name') String dayName,
-      @JsonKey(name: 'translation_level_id') int translationLevelId,
-      bool isComplete});
+      {int id, @JsonKey(name: 'day_name') String dayName, bool isComplete});
 }
 
 /// @nodoc
@@ -121,7 +108,6 @@ class __$$TranslationDayImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? dayName = null,
-    Object? translationLevelId = null,
     Object? isComplete = null,
   }) {
     return _then(_$TranslationDayImpl(
@@ -133,10 +119,6 @@ class __$$TranslationDayImplCopyWithImpl<$Res>
           ? _value.dayName
           : dayName // ignore: cast_nullable_to_non_nullable
               as String,
-      translationLevelId: null == translationLevelId
-          ? _value.translationLevelId
-          : translationLevelId // ignore: cast_nullable_to_non_nullable
-              as int,
       isComplete: null == isComplete
           ? _value.isComplete
           : isComplete // ignore: cast_nullable_to_non_nullable
@@ -151,7 +133,6 @@ class _$TranslationDayImpl implements _TranslationDay {
   const _$TranslationDayImpl(
       {required this.id,
       @JsonKey(name: 'day_name') required this.dayName,
-      @JsonKey(name: 'translation_level_id') required this.translationLevelId,
       required this.isComplete});
 
   factory _$TranslationDayImpl.fromJson(Map<String, dynamic> json) =>
@@ -163,14 +144,11 @@ class _$TranslationDayImpl implements _TranslationDay {
   @JsonKey(name: 'day_name')
   final String dayName;
   @override
-  @JsonKey(name: 'translation_level_id')
-  final int translationLevelId;
-  @override
   final bool isComplete;
 
   @override
   String toString() {
-    return 'TranslationDay(id: $id, dayName: $dayName, translationLevelId: $translationLevelId, isComplete: $isComplete)';
+    return 'TranslationDay(id: $id, dayName: $dayName, isComplete: $isComplete)';
   }
 
   @override
@@ -180,16 +158,13 @@ class _$TranslationDayImpl implements _TranslationDay {
             other is _$TranslationDayImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.dayName, dayName) || other.dayName == dayName) &&
-            (identical(other.translationLevelId, translationLevelId) ||
-                other.translationLevelId == translationLevelId) &&
             (identical(other.isComplete, isComplete) ||
                 other.isComplete == isComplete));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, dayName, translationLevelId, isComplete);
+  int get hashCode => Object.hash(runtimeType, id, dayName, isComplete);
 
   /// Create a copy of TranslationDay
   /// with the given fields replaced by the non-null parameter values.
@@ -212,8 +187,6 @@ abstract class _TranslationDay implements TranslationDay {
   const factory _TranslationDay(
       {required final int id,
       @JsonKey(name: 'day_name') required final String dayName,
-      @JsonKey(name: 'translation_level_id')
-      required final int translationLevelId,
       required final bool isComplete}) = _$TranslationDayImpl;
 
   factory _TranslationDay.fromJson(Map<String, dynamic> json) =
@@ -224,9 +197,6 @@ abstract class _TranslationDay implements TranslationDay {
   @override
   @JsonKey(name: 'day_name')
   String get dayName;
-  @override
-  @JsonKey(name: 'translation_level_id')
-  int get translationLevelId;
   @override
   bool get isComplete;
 

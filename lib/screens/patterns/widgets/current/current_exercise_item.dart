@@ -24,7 +24,17 @@ class CurrentExerciseItem extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: () {
-          if (exercise.isComplete || isOpenIndex) {
+          if (exercise.isComplete) {
+            Navigator.pushNamed(
+              context,
+              PmpRoutes.patternPracticeResultScreen,
+              arguments: {
+                'exercise_id': exercise.id,
+              },
+            );
+            return;
+          }
+          if (isOpenIndex) {
             Navigator.pushNamed(
               context,
               PmpRoutes.patternExerciseScreen,

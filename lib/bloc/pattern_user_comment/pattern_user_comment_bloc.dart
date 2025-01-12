@@ -84,7 +84,6 @@ class PatternUserCommentBloc
       }
 
       final comments = PatternUserComment.fromJsonList(dataRes);
-      debugPrint("_dataResinfo: ${comments.first.toJson()}");
       emit(PatternUserCommentState.loaded(comments));
     } catch (e) {
       debugPrint('Error loading comments: ${e.toString()}');

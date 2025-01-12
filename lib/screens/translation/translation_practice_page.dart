@@ -111,7 +111,7 @@ class _TranslationPracticePageState extends State<TranslationPracticePage> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Translation Practice'),
+          title: Text(widget.translationDay.dayName),
         ),
         body: BlocListener<TranslateUserAnswerBloc, TranslateUserAnswerState>(
           bloc: _userAnswerBloc,
@@ -124,7 +124,7 @@ class _TranslationPracticePageState extends State<TranslationPracticePage> {
                 context.hideLoadingDialog();
                 context
                     .read<TranslationDayBloc>()
-                    .add(const TranslationDayEvent.loadTranslationDays(1));
+                    .add(const TranslationDayEvent.loadTranslationDays());
                 Navigator.pushReplacementNamed(
                   context,
                   PmpRoutes.translationPracticeResultScreen,

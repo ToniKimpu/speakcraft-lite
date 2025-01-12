@@ -16,20 +16,19 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$TranslationDayEvent {
-  int get translationLevelId => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int translationLevelId) loadTranslationDays,
+    required TResult Function() loadTranslationDays,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int translationLevelId)? loadTranslationDays,
+    TResult? Function()? loadTranslationDays,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int translationLevelId)? loadTranslationDays,
+    TResult Function()? loadTranslationDays,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -49,12 +48,6 @@ mixin _$TranslationDayEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Create a copy of TranslationDayEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $TranslationDayEventCopyWith<TranslationDayEvent> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -62,8 +55,6 @@ abstract class $TranslationDayEventCopyWith<$Res> {
   factory $TranslationDayEventCopyWith(
           TranslationDayEvent value, $Res Function(TranslationDayEvent) then) =
       _$TranslationDayEventCopyWithImpl<$Res, TranslationDayEvent>;
-  @useResult
-  $Res call({int translationLevelId});
 }
 
 /// @nodoc
@@ -78,29 +69,13 @@ class _$TranslationDayEventCopyWithImpl<$Res, $Val extends TranslationDayEvent>
 
   /// Create a copy of TranslationDayEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? translationLevelId = null,
-  }) {
-    return _then(_value.copyWith(
-      translationLevelId: null == translationLevelId
-          ? _value.translationLevelId
-          : translationLevelId // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$LoadTranslationDaysImplCopyWith<$Res>
-    implements $TranslationDayEventCopyWith<$Res> {
+abstract class _$$LoadTranslationDaysImplCopyWith<$Res> {
   factory _$$LoadTranslationDaysImplCopyWith(_$LoadTranslationDaysImpl value,
           $Res Function(_$LoadTranslationDaysImpl) then) =
       __$$LoadTranslationDaysImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int translationLevelId});
 }
 
 /// @nodoc
@@ -113,78 +88,52 @@ class __$$LoadTranslationDaysImplCopyWithImpl<$Res>
 
   /// Create a copy of TranslationDayEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? translationLevelId = null,
-  }) {
-    return _then(_$LoadTranslationDaysImpl(
-      null == translationLevelId
-          ? _value.translationLevelId
-          : translationLevelId // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$LoadTranslationDaysImpl implements _LoadTranslationDays {
-  const _$LoadTranslationDaysImpl(this.translationLevelId);
-
-  @override
-  final int translationLevelId;
+  const _$LoadTranslationDaysImpl();
 
   @override
   String toString() {
-    return 'TranslationDayEvent.loadTranslationDays(translationLevelId: $translationLevelId)';
+    return 'TranslationDayEvent.loadTranslationDays()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadTranslationDaysImpl &&
-            (identical(other.translationLevelId, translationLevelId) ||
-                other.translationLevelId == translationLevelId));
+            other is _$LoadTranslationDaysImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, translationLevelId);
-
-  /// Create a copy of TranslationDayEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LoadTranslationDaysImplCopyWith<_$LoadTranslationDaysImpl> get copyWith =>
-      __$$LoadTranslationDaysImplCopyWithImpl<_$LoadTranslationDaysImpl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int translationLevelId) loadTranslationDays,
+    required TResult Function() loadTranslationDays,
   }) {
-    return loadTranslationDays(translationLevelId);
+    return loadTranslationDays();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int translationLevelId)? loadTranslationDays,
+    TResult? Function()? loadTranslationDays,
   }) {
-    return loadTranslationDays?.call(translationLevelId);
+    return loadTranslationDays?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int translationLevelId)? loadTranslationDays,
+    TResult Function()? loadTranslationDays,
     required TResult orElse(),
   }) {
     if (loadTranslationDays != null) {
-      return loadTranslationDays(translationLevelId);
+      return loadTranslationDays();
     }
     return orElse();
   }
@@ -219,18 +168,7 @@ class _$LoadTranslationDaysImpl implements _LoadTranslationDays {
 }
 
 abstract class _LoadTranslationDays implements TranslationDayEvent {
-  const factory _LoadTranslationDays(final int translationLevelId) =
-      _$LoadTranslationDaysImpl;
-
-  @override
-  int get translationLevelId;
-
-  /// Create a copy of TranslationDayEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoadTranslationDaysImplCopyWith<_$LoadTranslationDaysImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _LoadTranslationDays() = _$LoadTranslationDaysImpl;
 }
 
 /// @nodoc
