@@ -19,8 +19,8 @@ mixin _$PatternEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int lessonId) loadPatternsByLesson,
-    required TResult Function(
-            bool? examples, bool? vocabularies, bool? userComments)
+    required TResult Function(String? keyword, bool? examples,
+            bool? vocabularies, bool? userComments)
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
@@ -29,7 +29,8 @@ mixin _$PatternEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int lessonId)? loadPatternsByLesson,
-    TResult? Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult? Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
@@ -38,7 +39,8 @@ mixin _$PatternEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int lessonId)? loadPatternsByLesson,
-    TResult Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
@@ -168,8 +170,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int lessonId) loadPatternsByLesson,
-    required TResult Function(
-            bool? examples, bool? vocabularies, bool? userComments)
+    required TResult Function(String? keyword, bool? examples,
+            bool? vocabularies, bool? userComments)
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
@@ -181,7 +183,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int lessonId)? loadPatternsByLesson,
-    TResult? Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult? Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
@@ -193,7 +196,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int lessonId)? loadPatternsByLesson,
-    TResult Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
@@ -266,7 +270,11 @@ abstract class _$$LoadpatternsImplCopyWith<$Res> {
           _$LoadpatternsImpl value, $Res Function(_$LoadpatternsImpl) then) =
       __$$LoadpatternsImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({bool? examples, bool? vocabularies, bool? userComments});
+  $Res call(
+      {String? keyword,
+      bool? examples,
+      bool? vocabularies,
+      bool? userComments});
 }
 
 /// @nodoc
@@ -282,11 +290,16 @@ class __$$LoadpatternsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? keyword = freezed,
     Object? examples = freezed,
     Object? vocabularies = freezed,
     Object? userComments = freezed,
   }) {
     return _then(_$LoadpatternsImpl(
+      keyword: freezed == keyword
+          ? _value.keyword
+          : keyword // ignore: cast_nullable_to_non_nullable
+              as String?,
       examples: freezed == examples
           ? _value.examples
           : examples // ignore: cast_nullable_to_non_nullable
@@ -307,8 +320,10 @@ class __$$LoadpatternsImplCopyWithImpl<$Res>
 
 class _$LoadpatternsImpl implements _Loadpatterns {
   const _$LoadpatternsImpl(
-      {this.examples, this.vocabularies, this.userComments});
+      {this.keyword, this.examples, this.vocabularies, this.userComments});
 
+  @override
+  final String? keyword;
   @override
   final bool? examples;
   @override
@@ -318,7 +333,7 @@ class _$LoadpatternsImpl implements _Loadpatterns {
 
   @override
   String toString() {
-    return 'PatternEvent.loadPatterns(examples: $examples, vocabularies: $vocabularies, userComments: $userComments)';
+    return 'PatternEvent.loadPatterns(keyword: $keyword, examples: $examples, vocabularies: $vocabularies, userComments: $userComments)';
   }
 
   @override
@@ -326,6 +341,7 @@ class _$LoadpatternsImpl implements _Loadpatterns {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadpatternsImpl &&
+            (identical(other.keyword, keyword) || other.keyword == keyword) &&
             (identical(other.examples, examples) ||
                 other.examples == examples) &&
             (identical(other.vocabularies, vocabularies) ||
@@ -336,7 +352,7 @@ class _$LoadpatternsImpl implements _Loadpatterns {
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, examples, vocabularies, userComments);
+      Object.hash(runtimeType, keyword, examples, vocabularies, userComments);
 
   /// Create a copy of PatternEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -350,39 +366,41 @@ class _$LoadpatternsImpl implements _Loadpatterns {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int lessonId) loadPatternsByLesson,
-    required TResult Function(
-            bool? examples, bool? vocabularies, bool? userComments)
+    required TResult Function(String? keyword, bool? examples,
+            bool? vocabularies, bool? userComments)
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
   }) {
-    return loadPatterns(examples, vocabularies, userComments);
+    return loadPatterns(keyword, examples, vocabularies, userComments);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int lessonId)? loadPatternsByLesson,
-    TResult? Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult? Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
   }) {
-    return loadPatterns?.call(examples, vocabularies, userComments);
+    return loadPatterns?.call(keyword, examples, vocabularies, userComments);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int lessonId)? loadPatternsByLesson,
-    TResult Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadPatterns != null) {
-      return loadPatterns(examples, vocabularies, userComments);
+      return loadPatterns(keyword, examples, vocabularies, userComments);
     }
     return orElse();
   }
@@ -431,10 +449,12 @@ class _$LoadpatternsImpl implements _Loadpatterns {
 
 abstract class _Loadpatterns implements PatternEvent {
   const factory _Loadpatterns(
-      {final bool? examples,
+      {final String? keyword,
+      final bool? examples,
       final bool? vocabularies,
       final bool? userComments}) = _$LoadpatternsImpl;
 
+  String? get keyword;
   bool? get examples;
   bool? get vocabularies;
   bool? get userComments;
@@ -519,8 +539,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int lessonId) loadPatternsByLesson,
-    required TResult Function(
-            bool? examples, bool? vocabularies, bool? userComments)
+    required TResult Function(String? keyword, bool? examples,
+            bool? vocabularies, bool? userComments)
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
@@ -532,7 +552,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int lessonId)? loadPatternsByLesson,
-    TResult? Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult? Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
@@ -544,7 +565,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int lessonId)? loadPatternsByLesson,
-    TResult Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
@@ -683,8 +705,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int lessonId) loadPatternsByLesson,
-    required TResult Function(
-            bool? examples, bool? vocabularies, bool? userComments)
+    required TResult Function(String? keyword, bool? examples,
+            bool? vocabularies, bool? userComments)
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
@@ -696,7 +718,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int lessonId)? loadPatternsByLesson,
-    TResult? Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult? Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
@@ -708,7 +731,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int lessonId)? loadPatternsByLesson,
-    TResult Function(bool? examples, bool? vocabularies, bool? userComments)?
+    TResult Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,

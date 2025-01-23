@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,22 +17,106 @@ class PatternList extends StatefulWidget {
 }
 
 class _PatternListState extends State<PatternList> {
+  bool _isSearching = false;
+  Timer? _debounce;
+  final _searchController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
-    context.read<PatternBloc>().add(const PatternEvent.loadPatterns());
+    _loadPatterns();
   }
 
   @override
   void dispose() {
     super.dispose();
+    _debounce?.cancel();
+    _searchController.dispose();
+  }
+
+  _loadPatterns({String? keyword}) {
+    context
+        .read<PatternBloc>()
+        .add(PatternEvent.loadPatterns(keyword: keyword));
+  }
+
+  void _onSearchChanged(String query) {
+    if (_debounce?.isActive ?? false) _debounce?.cancel();
+    _debounce = Timer(const Duration(milliseconds: 700), () {
+      _loadPatterns(keyword: query);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Patterns'),
+        title: Row(
+          children: [
+            Expanded(
+              child: Stack(
+                children: [
+                  Offstage(
+                    offstage: _isSearching,
+                    child: const Text('Patterns'),
+                  ),
+                  Offstage(
+                    offstage: !_isSearching,
+                    child: TextField(
+                      cursorColor: Colors.white,
+                      cursorRadius: const Radius.circular(12),
+                      cursorWidth: 4,
+                      cursorHeight: 24,
+                      onChanged: (value) => _onSearchChanged(value),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                      decoration: InputDecoration(
+                        hintText: 'Search',
+                        hintStyle: TextStyle(
+                          color: Colors.white.withOpacity(0.6),
+                          fontSize: 12,
+                        ),
+                        filled: false,
+                        border: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        errorBorder: InputBorder.none,
+                        disabledBorder: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              width: 12,
+            ),
+            InkWell(
+              borderRadius: BorderRadius.circular(100),
+              onTap: () {
+                setState(() {
+                  if (_isSearching && _searchController.text.isNotEmpty) {
+                    _searchController.clear();
+                    _debounce?.cancel();
+                    FocusManager.instance.primaryFocus?.unfocus();
+                    _loadPatterns();
+                  }
+                  _isSearching = !_isSearching;
+                });
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(4),
+                child: Icon(
+                  _isSearching ? Icons.close : Icons.search,
+                  color: Colors.white,
+                  size: 24,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       body: BlocBuilder<PatternBloc, PatternState>(
         builder: (context, state) {

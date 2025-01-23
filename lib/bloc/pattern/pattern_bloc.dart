@@ -14,8 +14,12 @@ part 'pattern_bloc.freezed.dart';
 abstract class PatternEvent with _$PatternEvent {
   const factory PatternEvent.loadPatternsByLesson(int lessonId) =
       _LoadLessonPatterns;
-  const factory PatternEvent.loadPatterns(
-      {bool? examples, bool? vocabularies, bool? userComments}) = _Loadpatterns;
+  const factory PatternEvent.loadPatterns({
+    String? keyword,
+    bool? examples,
+    bool? vocabularies,
+    bool? userComments,
+  }) = _Loadpatterns;
   const factory PatternEvent.loadVocabulariesByPattern(int patternId) =
       _LoadVocabulariesByPattern;
   const factory PatternEvent.loadExamplesByPattern(int patternId) =
@@ -40,8 +44,9 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
       (event, emit) async {
         try {
           await event.when(
-            loadPatterns: (examples, vocabularies, userComments) =>
+            loadPatterns: (keyword, examples, vocabularies, userComments) =>
                 _mapLoadPatterns(
+              keyword: keyword,
               examples: examples,
               vocabularies: vocabularies,
               userComments: userComments,
@@ -63,6 +68,7 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
   }
 
   _mapLoadPatterns({
+    String? keyword,
     bool? examples,
     bool? vocabularies,
     bool? userComments,
@@ -70,12 +76,17 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
   }) async {
     emit(const PatternState.loading());
     try {
-      final dataRes = await supabase
+      var query = supabase
           .from('patterns')
           .select('*,pattern_user_comments(id)')
           .eq('pattern_user_comments.user_id', GlobalAppState().currentUser.id!)
           .eq('self_practicable', true)
           .eq('is_deleted', false);
+
+      if (keyword != null) {
+        query = query.or('pattern.ilike.%$keyword%,title.ilike.%$keyword%');
+      }
+      final dataRes = await query.order('created_at', ascending: true);
       if (dataRes.isEmpty) {
         emit(const PatternState.loaded(<Pattern>[]));
         return;
