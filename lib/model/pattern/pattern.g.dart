@@ -12,6 +12,7 @@ _$PatternImpl _$$PatternImplFromJson(Map<String, dynamic> json) =>
       pattern: json['pattern'] as String,
       title: json['title'] as String?,
       description: json['description'] as String?,
+      subjectVerbAgreement: json['subject_verb_agreement'] as String?,
       audioPath: json['audio_path'] as String?,
       lessonId: (json['lesson_id'] as num?)?.toInt(),
       createdAt: json['created_at'] == null
@@ -29,6 +30,7 @@ Map<String, dynamic> _$$PatternImplToJson(_$PatternImpl instance) =>
       'pattern': instance.pattern,
       'title': instance.title,
       'description': instance.description,
+      'subject_verb_agreement': instance.subjectVerbAgreement,
       'audio_path': instance.audioPath,
       'lesson_id': instance.lessonId,
       'created_at': instance.createdAt?.toIso8601String(),

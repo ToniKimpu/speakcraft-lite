@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "txtCancel": MessageLookupByLibrary.simpleMessage("Cancel"),
-        "txtOk": MessageLookupByLibrary.simpleMessage("Okay")
+        "txtComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
+        "txtOk": MessageLookupByLibrary.simpleMessage("Okay"),
+        "txtWillUploadSoon":
+            MessageLookupByLibrary.simpleMessage("မကြာခင်တင်ပေးပါမည်")
       };
 }

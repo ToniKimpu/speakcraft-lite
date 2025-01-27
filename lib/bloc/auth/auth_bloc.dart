@@ -75,6 +75,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             .withConverter(
               (json) => AppUser.fromJson(json),
             );
+
         final appVersion = await supabase
             .from('app_versions')
             .select()

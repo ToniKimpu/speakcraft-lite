@@ -34,7 +34,7 @@ class _PatternListState extends State<PatternList> {
     _searchController.dispose();
   }
 
-  _loadPatterns({String? keyword}) {
+  void _loadPatterns({String? keyword}) {
     context
         .read<PatternBloc>()
         .add(PatternEvent.loadPatterns(keyword: keyword));

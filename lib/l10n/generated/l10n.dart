@@ -69,6 +69,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Coming Soon`
+  String get txtComingSoon {
+    return Intl.message(
+      'Coming Soon',
+      name: 'txtComingSoon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `မကြာခင်တင်ပေးပါမည်`
+  String get txtWillUploadSoon {
+    return Intl.message(
+      'မကြာခင်တင်ပေးပါမည်',
+      name: 'txtWillUploadSoon',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -14,6 +14,7 @@ class Pattern with _$Pattern {
     required String pattern,
     String? title,
     String? description,
+    @JsonKey(name: 'subject_verb_agreement') String? subjectVerbAgreement,
     @JsonKey(name: 'audio_path') String? audioPath,
     @JsonKey(name: 'lesson_id') int? lessonId,
     @JsonKey(name: 'created_at') DateTime? createdAt,

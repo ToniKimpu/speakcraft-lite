@@ -18,6 +18,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('PMP English'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, PmpRoutes.profilePage);
+            },
+            icon: const Icon(Icons.person),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24),

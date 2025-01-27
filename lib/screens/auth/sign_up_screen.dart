@@ -136,7 +136,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       loading: () => true,
                                     ) ??
                                 false;
-                        debugPrint("_isLoading: $isLoading isLoading!");
                         return InkWell(
                           onTap: () {
                             if (_currentIndexNotifier.value == 0 &&

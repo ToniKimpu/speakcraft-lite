@@ -119,8 +119,6 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                         child: InkWell(
                           borderRadius: BorderRadius.circular(12),
                           onTap: () {
-                            debugPrint(
-                                "_audioPath: ${widget.appVersion['audio_path']} Audio Path");
                             if (_player.playing) {
                               _player.pause();
                             } else {

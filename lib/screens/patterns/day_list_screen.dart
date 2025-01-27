@@ -8,6 +8,7 @@ import 'package:pmp_english/screens/patterns/widgets/completed/completed_day_wid
 import 'package:pmp_english/screens/patterns/widgets/day_widget.dart';
 
 import '../../bloc/day/day_bloc.dart';
+import '../../l10n/generated/l10n.dart';
 import 'widgets/current/current_day_widget.dart';
 
 class DayListScreen extends StatefulWidget {
@@ -149,7 +150,7 @@ class _DayListScreenState extends State<DayListScreen> {
                     if (days.isEmpty) {
                       return Center(
                         child: Text(
-                          'မကြာခင်တင်ပေးပါမည်။',
+                            AppLocalizations.of(context).txtWillUploadSoon,
                           style: PmpTextStyles.body2Semi.copyWith(
                             color: Colors.black,
                           ),

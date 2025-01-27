@@ -14,6 +14,8 @@ import 'package:pmp_english/model/exercise_user_answer/exercise_user_answer.dart
 import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
 import 'package:pmp_english/screens/patterns/widgets/practice_exercise_widget.dart';
 
+import '../../l10n/generated/l10n.dart';
+
 class PatternExerciseScreen extends StatefulWidget {
   const PatternExerciseScreen({
     super.key,
@@ -180,7 +182,7 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
     if (exercises.isEmpty) {
       return Center(
           child: Text(
-        "မကြာခင်တင်ပေးပါမည်။",
+          AppLocalizations.of(context).txtWillUploadSoon,
         style: PmpTextStyles.body1Regular.copyWith(color: PmpColors.black),
       ));
     }

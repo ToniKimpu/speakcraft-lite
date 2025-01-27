@@ -21,6 +21,7 @@ import '../model/exercise/exercise.dart';
 import '../model/pattern_exercise/pattern_exercise.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
 import '../screens/main/home_screen.dart';
+import '../screens/main/profile_page.dart';
 import '../screens/onboarding/splash_screen.dart';
 import '../screens/patterns/day_list_screen.dart';
 import '../screens/patterns/pattern_practice_result_screen.dart';
@@ -50,6 +51,7 @@ class PmpRoutes {
   static const freeUserPage = '/free_user_page';
   static const newVersionScreen = '/new_version_screen';
   static const youtubeVideoPage = '/youtube_video_page';
+  static const profilePage = '/profile_page';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -59,6 +61,8 @@ class PmpRoutes {
         return _getRoute(const HomePage(), settings);
       case dayList:
         return _getRoute(const DayListScreen(), settings);
+      case profilePage:
+        return _getRoute(const ProfilePage(), settings);
       case speakingPattern:
         final args = settings.arguments as Map<String, dynamic>;
         final lesson = args['lesson'] as Lesson;

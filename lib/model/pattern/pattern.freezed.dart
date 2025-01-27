@@ -24,6 +24,8 @@ mixin _$Pattern {
   String get pattern => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: 'subject_verb_agreement')
+  String? get subjectVerbAgreement => throw _privateConstructorUsedError;
   @JsonKey(name: 'audio_path')
   String? get audioPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'lesson_id')
@@ -55,6 +57,7 @@ abstract class $PatternCopyWith<$Res> {
       String pattern,
       String? title,
       String? description,
+      @JsonKey(name: 'subject_verb_agreement') String? subjectVerbAgreement,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -82,6 +85,7 @@ class _$PatternCopyWithImpl<$Res, $Val extends Pattern>
     Object? pattern = null,
     Object? title = freezed,
     Object? description = freezed,
+    Object? subjectVerbAgreement = freezed,
     Object? audioPath = freezed,
     Object? lessonId = freezed,
     Object? createdAt = freezed,
@@ -104,6 +108,10 @@ class _$PatternCopyWithImpl<$Res, $Val extends Pattern>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subjectVerbAgreement: freezed == subjectVerbAgreement
+          ? _value.subjectVerbAgreement
+          : subjectVerbAgreement // ignore: cast_nullable_to_non_nullable
               as String?,
       audioPath: freezed == audioPath
           ? _value.audioPath
@@ -141,6 +149,7 @@ abstract class _$$PatternImplCopyWith<$Res> implements $PatternCopyWith<$Res> {
       String pattern,
       String? title,
       String? description,
+      @JsonKey(name: 'subject_verb_agreement') String? subjectVerbAgreement,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -166,6 +175,7 @@ class __$$PatternImplCopyWithImpl<$Res>
     Object? pattern = null,
     Object? title = freezed,
     Object? description = freezed,
+    Object? subjectVerbAgreement = freezed,
     Object? audioPath = freezed,
     Object? lessonId = freezed,
     Object? createdAt = freezed,
@@ -188,6 +198,10 @@ class __$$PatternImplCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subjectVerbAgreement: freezed == subjectVerbAgreement
+          ? _value.subjectVerbAgreement
+          : subjectVerbAgreement // ignore: cast_nullable_to_non_nullable
               as String?,
       audioPath: freezed == audioPath
           ? _value.audioPath
@@ -221,6 +235,7 @@ class _$PatternImpl implements _Pattern {
       required this.pattern,
       this.title,
       this.description,
+      @JsonKey(name: 'subject_verb_agreement') this.subjectVerbAgreement,
       @JsonKey(name: 'audio_path') this.audioPath,
       @JsonKey(name: 'lesson_id') this.lessonId,
       @JsonKey(name: 'created_at') this.createdAt,
@@ -241,6 +256,9 @@ class _$PatternImpl implements _Pattern {
   final String? title;
   @override
   final String? description;
+  @override
+  @JsonKey(name: 'subject_verb_agreement')
+  final String? subjectVerbAgreement;
   @override
   @JsonKey(name: 'audio_path')
   final String? audioPath;
@@ -267,7 +285,7 @@ class _$PatternImpl implements _Pattern {
 
   @override
   String toString() {
-    return 'Pattern(id: $id, pattern: $pattern, title: $title, description: $description, audioPath: $audioPath, lessonId: $lessonId, createdAt: $createdAt, patternExamples: $patternExamples, hasComment: $hasComment)';
+    return 'Pattern(id: $id, pattern: $pattern, title: $title, description: $description, subjectVerbAgreement: $subjectVerbAgreement, audioPath: $audioPath, lessonId: $lessonId, createdAt: $createdAt, patternExamples: $patternExamples, hasComment: $hasComment)';
   }
 
   @override
@@ -280,6 +298,8 @@ class _$PatternImpl implements _Pattern {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
+            (identical(other.subjectVerbAgreement, subjectVerbAgreement) ||
+                other.subjectVerbAgreement == subjectVerbAgreement) &&
             (identical(other.audioPath, audioPath) ||
                 other.audioPath == audioPath) &&
             (identical(other.lessonId, lessonId) ||
@@ -300,6 +320,7 @@ class _$PatternImpl implements _Pattern {
       pattern,
       title,
       description,
+      subjectVerbAgreement,
       audioPath,
       lessonId,
       createdAt,
@@ -328,6 +349,8 @@ abstract class _Pattern implements Pattern {
       required final String pattern,
       final String? title,
       final String? description,
+      @JsonKey(name: 'subject_verb_agreement')
+      final String? subjectVerbAgreement,
       @JsonKey(name: 'audio_path') final String? audioPath,
       @JsonKey(name: 'lesson_id') final int? lessonId,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
@@ -346,6 +369,9 @@ abstract class _Pattern implements Pattern {
   String? get title;
   @override
   String? get description;
+  @override
+  @JsonKey(name: 'subject_verb_agreement')
+  String? get subjectVerbAgreement;
   @override
   @JsonKey(name: 'audio_path')
   String? get audioPath;

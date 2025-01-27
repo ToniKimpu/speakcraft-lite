@@ -4,6 +4,7 @@ import 'package:pmp_english/screens/patterns/widgets/lesson_item.dart';
 
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
+import '../../../l10n/generated/l10n.dart';
 import '../../../model/day/day.dart';
 
 class DayWidget extends StatelessWidget {
@@ -55,7 +56,7 @@ class DayWidget extends StatelessWidget {
               width: double.infinity,
               child: Center(
                 child: Text(
-                  'မကြာခင်တင်ပေးပါမည်။',
+                   AppLocalizations.of(context).txtWillUploadSoon,
                   style: PmpTextStyles.body1Regular.copyWith(
                     color: Colors.black,
                   ),
