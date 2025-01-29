@@ -89,7 +89,7 @@ class PatternWidget extends StatelessWidget {
             ],
           ),
         ),
-        if (pattern.description != null)
+        if (pattern.description != null && pattern.description!.isNotEmpty) ...[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
             child: Text(
@@ -100,10 +100,11 @@ class PatternWidget extends StatelessWidget {
               ),
             ),
           ),
-        const SizedBox(
-          height: 12,
-        ),
-        if (pattern.subjectVerbAgreement != null)
+          const SizedBox(
+            height: 12,
+          ),
+        ],
+        if (pattern.subjectVerbAgreement != null) ...[
           Container(
             width: double.infinity,
             margin: const EdgeInsets.symmetric(horizontal: 24),
@@ -135,9 +136,10 @@ class PatternWidget extends StatelessWidget {
                   .toList(),
             ),
           ),
-        const SizedBox(
-          height: 12,
-        ),
+          const SizedBox(
+            height: 12,
+          ),
+        ],
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Text(

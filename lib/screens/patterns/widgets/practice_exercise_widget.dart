@@ -71,7 +71,7 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
             height: 4,
           ),
           PracticeTextField(
-            englishOnly: true,
+            // englishOnly: true,
             focusNode: widget.focusNode,
             controller: _controller,
             onChange: (value) => widget.onUserInput(value),

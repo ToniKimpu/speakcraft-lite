@@ -146,7 +146,7 @@ class _DayListScreenState extends State<DayListScreen> {
                     height: 18,
                     child: CircularProgressIndicator(),
                   )),
-                  loaded: (c, days) {
+                  loaded: (currentDay, days) {
                     if (days.isEmpty) {
                       return Center(
                         child: Text(

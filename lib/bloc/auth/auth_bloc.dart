@@ -75,6 +75,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             .withConverter(
               (json) => AppUser.fromJson(json),
             );
+        GlobalAppState().currentUser = appUser;
 
         final appVersion = await supabase
             .from('app_versions')
@@ -92,7 +93,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           }
         }
 
-        GlobalAppState().currentUser = appUser;
         if (appUser.deviceId != null &&
             appUser.deviceId != GlobalAppState().deviceID) {
           emit(

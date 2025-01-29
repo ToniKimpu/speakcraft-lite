@@ -100,7 +100,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                             .copyWith(color: Colors.black),
                       ),
                       Text(
-                        '(Version အသစ်ကို ဒေါင်းလုတ်ဖို့အတွက် အောက်က ကျွန်တော်တို့ရဲ့ telegram ကိုတစ်ချက်နှိပ်လိုက်ပါ။)',
+                        '(Version အသစ်ကို Telegram (သို့) Browser ကနေတစ်ဆင့် ဒေါင်းလို့ရပါတယ်။)',
                         style: PmpTextStyles.label2Regular
                             .copyWith(color: Colors.black),
                       ),
@@ -119,7 +119,12 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                         child: InkWell(
                           borderRadius: BorderRadius.circular(12),
                           onTap: () {
-                            if (_player.playing) {
+                            final playerState = _player.playerState;
+                            if (playerState.processingState ==
+                                ProcessingState.completed) {
+                              _player.seek(Duration.zero);
+                              _player.play();
+                            } else if (_player.playing) {
                               _player.pause();
                             } else {
                               _player.play();
@@ -133,6 +138,16 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                               builder: (context, snapshot) {
                                 final playerState = snapshot.data;
                                 final isPlaying = playerState?.playing ?? false;
+                                final processingState =
+                                    playerState?.processingState;
+                                if (processingState ==
+                                    ProcessingState.completed) {
+                                  return const Icon(
+                                    Icons.replay,
+                                    color: Colors.white,
+                                    size: 16,
+                                  );
+                                }
                                 return Icon(
                                   isPlaying ? Icons.pause : Icons.play_arrow,
                                   color: Colors.white,
@@ -160,7 +175,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                   child: InkWell(
                     borderRadius: BorderRadius.circular(12),
                     onTap: () async {
-                      String url = widget.appVersion['app_path'];
+                      String url = widget.appVersion['app_tele_path'];
                       if (await canLaunchUrl(Uri.parse(url))) {
                         launchUrl(Uri.parse(url));
                       } else {
@@ -187,6 +202,61 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                     ),
                   ),
                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: SizedBox(
+                height: 40,
+                child: Material(
+                  borderRadius: BorderRadius.circular(12),
+                  color: PmpColors.primary400,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () async {
+                      String url = widget.appVersion['app_web_path'];
+                      if (await canLaunchUrl(Uri.parse(url))) {
+                        launchUrl(Uri.parse(url));
+                      } else {
+                        showErrorSnackbar("Failed to open browser!");
+                      }
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            'Open Chrome',
+                            style: PmpTextStyles.body1Semi
+                                .copyWith(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        const Icon(
+                          Icons.chevron_right,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'App version အသစ်တင်လို့အဆင်မပြေပါက Messengerကနေတစ်ဆင့် လာရောက်မေးမြန်းနိုင်ပါတယ်ခင်ဗျ။',
+                style: PmpTextStyles.label2Regular.copyWith(
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
             const Spacer(),

@@ -52,13 +52,11 @@ class DayBloc extends Bloc<DayEvent, DayState> {
         return;
       }
       final days = dataRes.map((e) => Day.fromJson1(e)).toList();
-      final notCompleteDays = days.where((day) => !day.isComplete).toList();
       if (days.isEmpty) {
         emit(const DayState.loaded(null, <Day>[]));
         return;
       }
-      final currentDay = notCompleteDays.first;
-      emit(DayState.loaded(currentDay, days));
+      emit(DayState.loaded(null, days));
     } catch (e) {
       debugPrint(e.toString());
       emit(DayState.error(e.toString()));
