@@ -90,8 +90,11 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
             bloc: _audioPlayerBloc,
             listener: (context, state) {
               state.maybeWhen(
-                getUrl: (audioUrl) => _audioPlayer.setUrl(audioUrl),
+                getUrl: (audioUrl) {
+                  _audioPlayer.setUrl(audioUrl);
+                },
                 onPlay: () {
+                  debugPrint("_audioPlayerBloc: onPlay!");
                   _audioPlayer.play();
                 },
                 onPause: () {
@@ -127,19 +130,22 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                       _patterns.addAll(patterns);
                     }
                     if (patterns.first.audioPath != null && _currentPage == 0) {
-                      _audioPlayer.setUrl(patterns.first.audioPath!);
+                      _audioPlayer.setUrl(patterns.first.audioPath!.trim());
                     }
                     return Column(
                       children: [
                         Expanded(
                           child: IndexedStack(
                             index: _currentPage,
-                            children: List.generate(patterns.length, (index) {
-                              return PatternWidget(
-                                pattern: patterns[index],
-                                audioPlayerBloc: _audioPlayerBloc,
-                              );
-                            }),
+                            children: List.generate(
+                              patterns.length,
+                              (index) {
+                                return PatternWidget(
+                                  pattern: patterns[index],
+                                  audioPlayerBloc: _audioPlayerBloc,
+                                );
+                              },
+                            ),
                           ),
                         ),
                         _buildFooter(patterns),

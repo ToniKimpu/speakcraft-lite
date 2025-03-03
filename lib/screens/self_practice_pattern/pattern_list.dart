@@ -49,112 +49,126 @@ class _PatternListState extends State<PatternList> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            Expanded(
-              child: Stack(
-                children: [
-                  Offstage(
-                    offstage: _isSearching,
-                    child: const Text('Patterns'),
-                  ),
-                  Offstage(
-                    offstage: !_isSearching,
-                    child: TextField(
-                      cursorColor: Colors.white,
-                      cursorRadius: const Radius.circular(12),
-                      cursorWidth: 4,
-                      cursorHeight: 24,
-                      onChanged: (value) => _onSearchChanged(value),
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                      ),
-                      decoration: InputDecoration(
-                        hintText: 'Search',
-                        hintStyle: TextStyle(
-                          color: Colors.white.withOpacity(0.6),
-                          fontSize: 12,
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        if (_isSearching) {
+          setState(() {
+            _isSearching = !_isSearching;
+          });
+          return;
+        }
+        Navigator.of(context).pop();
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Row(
+            children: [
+              Expanded(
+                child: Stack(
+                  children: [
+                    Offstage(
+                      offstage: _isSearching,
+                      child: const Text('Patterns'),
+                    ),
+                    Offstage(
+                      offstage: !_isSearching,
+                      child: TextField(
+                        controller: _searchController,
+                        cursorColor: Colors.white,
+                        cursorRadius: const Radius.circular(12),
+                        cursorWidth: 4,
+                        cursorHeight: 24,
+                        onChanged: (value) => _onSearchChanged(value),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
                         ),
-                        filled: false,
-                        border: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        enabledBorder: InputBorder.none,
-                        errorBorder: InputBorder.none,
-                        disabledBorder: InputBorder.none,
+                        decoration: InputDecoration(
+                          hintText: 'Search',
+                          hintStyle: TextStyle(
+                            color: Colors.white.withOpacity(0.6),
+                            fontSize: 12,
+                          ),
+                          filled: false,
+                          border: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
+                        ),
                       ),
                     ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                width: 12,
+              ),
+              InkWell(
+                borderRadius: BorderRadius.circular(100),
+                onTap: () {
+                  setState(() {
+                    if (_isSearching && _searchController.text.isNotEmpty) {
+                      _searchController.clear();
+                      _debounce?.cancel();
+                      FocusManager.instance.primaryFocus?.unfocus();
+                      _loadPatterns();
+                    }
+                    _isSearching = !_isSearching;
+                  });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: Icon(
+                    _isSearching ? Icons.close : Icons.search,
+                    color: Colors.white,
+                    size: 24,
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              width: 12,
-            ),
-            InkWell(
-              borderRadius: BorderRadius.circular(100),
-              onTap: () {
-                setState(() {
-                  if (_isSearching && _searchController.text.isNotEmpty) {
-                    _searchController.clear();
-                    _debounce?.cancel();
-                    FocusManager.instance.primaryFocus?.unfocus();
-                    _loadPatterns();
-                  }
-                  _isSearching = !_isSearching;
-                });
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(4),
-                child: Icon(
-                  _isSearching ? Icons.close : Icons.search,
-                  color: Colors.white,
-                  size: 24,
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-      body: BlocBuilder<PatternBloc, PatternState>(
-        builder: (context, state) {
-          return state.maybeWhen(
-            loading: () {
-              return const Center(
-                child: SizedBox(
-                  width: 18,
-                  height: 18,
-                  child: CircularProgressIndicator(),
-                ),
-              );
-            },
-            loaded: (patterns) {
-              if (patterns.isEmpty) {
-                return Center(
-                  child: Text(
-                    'မကြာခင် သင်ခန်းစာများထည့်ပေးပါမည်။',
-                    style: PmpTextStyles.body2Semi.copyWith(
-                      color: Colors.black,
-                    ),
+        body: BlocBuilder<PatternBloc, PatternState>(
+          builder: (context, state) {
+            return state.maybeWhen(
+              loading: () {
+                return const Center(
+                  child: SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(),
                   ),
                 );
-              }
-              return ListView.separated(
-                itemCount: patterns.length,
-                padding: const EdgeInsets.all(16),
-                itemBuilder: (context, index) {
-                  return _buildPatternItem(patterns[index], index + 1);
-                },
-                separatorBuilder: (context, index) => const SizedBox(
-                  height: 12,
-                ),
-              );
-            },
-            orElse: () => Container(),
-          );
-        },
+              },
+              loaded: (patterns) {
+                if (patterns.isEmpty) {
+                  return Center(
+                    child: Text(
+                      'မကြာခင် သင်ခန်းစာများထည့်ပေးပါမည်။',
+                      style: PmpTextStyles.body2Semi.copyWith(
+                        color: Colors.black,
+                      ),
+                    ),
+                  );
+                }
+                return ListView.separated(
+                  itemCount: patterns.length,
+                  padding: const EdgeInsets.all(16),
+                  itemBuilder: (context, index) {
+                    return _buildPatternItem(patterns[index], index + 1);
+                  },
+                  separatorBuilder: (context, index) => const SizedBox(
+                    height: 12,
+                  ),
+                );
+              },
+              orElse: () => Container(),
+            );
+          },
+        ),
       ),
     );
   }
@@ -236,6 +250,7 @@ class _PatternListState extends State<PatternList> {
               child: InkWell(
                 borderRadius: BorderRadius.circular(14),
                 onTap: () {
+                  FocusManager.instance.primaryFocus?.unfocus();
                   Navigator.pushNamed(
                     context,
                     PmpRoutes.patternPracticeScreen,

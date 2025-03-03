@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/widgets/lyrics_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 /// Homepage
@@ -83,13 +82,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   @override
   Widget build(BuildContext context) {
-    final currentPosition = _controller.value.position - _startDuration;
-    final adjustedCurrentPosition = currentPosition.isNegative
-        ? const Duration(seconds: 0)
-        : currentPosition;
-    final remainingDuration = _endDuration - adjustedCurrentPosition;
-    sliderPosition =
-        currentPosition.inSeconds.clamp(0, (_endPosition - _startPosition));
     return YoutubePlayerBuilder(
       player: YoutubePlayer(
         controller: _controller,
@@ -110,161 +102,20 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         appBar: AppBar(
           title: Text(_videoMetaData.title),
         ),
-        body: ListView(
+        body: Column(
           children: [
             player,
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Container(
-                  height: 40,
-                  width: double.infinity,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  color: PmpColors.primary400,
-                  child: Row(
-                    children: [
-                      Material(
-                        color: PmpColors.white,
-                        borderRadius: BorderRadius.circular(100),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(100),
-                          onTap: () {
-                            final currentPosition =
-                                _controller.value.position.inSeconds;
-                            final newPosition = (currentPosition - 10)
-                                .clamp(_startPosition, _endPosition);
-                            _controller.seekTo(Duration(seconds: newPosition));
-                          },
-                          child: const SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: Icon(
-                              Icons.replay_10,
-                              color: PmpColors.primary400,
-                              size: 18,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Text(
-                        adjustedCurrentPosition.formatDuration(),
-                        style: PmpTextStyles.body2Regular.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Expanded(
-                        child: SliderTheme(
-                          data: SliderThemeData(
-                            trackShape: CustomTrackShape(),
-                          ),
-                          child: Slider(
-                            value: sliderPosition.toDouble(),
-                            min: 0,
-                            max: _endPosition.toDouble() -
-                                _startPosition.toDouble(),
-                            thumbColor: Colors.orange,
-                            activeColor: Colors.orange,
-                            onChanged: (value) {
-                              debugPrint("_sliderValue: $value value");
-                              int seekPosition = value.toInt() + _startPosition;
-                              _controller
-                                  .seekTo(Duration(seconds: seekPosition));
-                            },
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Text(
-                        '- ${remainingDuration.formatDuration()}',
-                        style: PmpTextStyles.body2Regular.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Material(
-                        color: PmpColors.white,
-                        borderRadius: BorderRadius.circular(100),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(100),
-                          onTap: () {
-                            final currentPosition =
-                                _controller.value.position.inSeconds;
-                            final newPosition = (currentPosition + 10)
-                                .clamp(_startPosition, _endPosition);
-                            _controller.seekTo(Duration(seconds: newPosition));
-                          },
-                          child: const SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: Icon(
-                              Icons.forward_10,
-                              color: PmpColors.primary400,
-                              size: 18,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const Spacer(),
-                      Material(
-                        color: PmpColors.white,
-                        borderRadius: BorderRadius.circular(100),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(100),
-                          onTap: () {
-                            _controller.value.isPlaying
-                                ? _controller.pause()
-                                : _controller.play();
-                            setState(() {});
-                          },
-                          child: SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: Icon(
-                              _controller.value.isPlaying
-                                  ? Icons.pause
-                                  : Icons.play_arrow,
-                              color: PmpColors.primary400,
-                              size: 18,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            CustomControl(
+              controller: _controller,
+              startPosition: _startPosition,
+              endPosition: _endPosition,
+              startDuration: _startDuration,
+              endDuration: _endDuration,
             ),
+            const Expanded(child: LyricsWidget()),
           ],
         ),
       ),
     );
-  }
-}
-
-class CustomTrackShape extends RoundedRectSliderTrackShape {
-  @override
-  Rect getPreferredRect({
-    required RenderBox parentBox,
-    Offset offset = Offset.zero,
-    required SliderThemeData sliderTheme,
-    bool isEnabled = false,
-    bool isDiscrete = false,
-  }) {
-    final trackHeight = sliderTheme.trackHeight;
-    final trackLeft = offset.dx;
-    final trackTop = offset.dy + (parentBox.size.height - trackHeight!) / 2;
-    final trackWidth = parentBox.size.width;
-    return Rect.fromLTWH(trackLeft, trackTop, trackWidth, trackHeight);
   }
 }

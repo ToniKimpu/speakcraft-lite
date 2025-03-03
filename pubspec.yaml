@@ -54,6 +54,8 @@ dependencies:
   path_provider: ^2.1.5
   url_launcher: ^6.3.1
   just_audio: ^0.9.42
+  firebase_core: ^3.12.0
+  firebase_messaging: ^15.2.3
 
 dev_dependencies:
   flutter_test:
@@ -95,6 +97,7 @@ flutter:
     - .envs/
     - assets/images/
     - assets/images/profiles/
+    - assets/temps/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

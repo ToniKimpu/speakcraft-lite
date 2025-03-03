@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "184571582087",
+    "project_id": "pmp-english-dev",
+    "storage_bucket": "pmp-english-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184571582087:android:7b68f03ec3183250d60a22",
+        "android_client_info": {
+          "package_name": "com.tzkenglishlab.pmp_english.d"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyG_Me4cKViq4fMmKwmYwi5QXZ4Z41WGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

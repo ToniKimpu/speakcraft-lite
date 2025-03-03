@@ -32,15 +32,15 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            // ModuleWidget(
-            //   title: 'Listening & Shadowing Practice',
-            //   label1: 'Listening လေ့ကျင့်မယ်။',
-            //   label2: 'Shadowing လိုက်လုပ်မယ်။',
-            //   onPressed: () {
-            //     Navigator.pushNamed(context, PmpRoutes.youtubeVideoPage);
-            //   },
-            // ),
-            // const SizedBox(height: 24),
+            ModuleWidget(
+              title: 'Listening & Shadowing Practice',
+              label1: 'Listening လေ့ကျင့်မယ်။',
+              label2: 'Shadowing လိုက်လုပ်မယ်။',
+              onPressed: () {
+                Navigator.pushNamed(context, PmpRoutes.youtubeVideoPage);
+              },
+            ),
+            const SizedBox(height: 24),
             ModuleWidget(
               title: 'Spoken Pattern Tutorial',
               label1: 'Spoken Patternပေါင်း (၁၀၀)ကျော်လေ့လာမယ်',

@@ -1,10 +1,12 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 
 import '../l10n/generated/l10n.dart';
+import '../model/subtitle/subtitle.dart';
 
 extension AiduPlayStateExtension on State {
   showSnackbar(String msg, Color textColor, Color bgColor) {
@@ -199,4 +201,35 @@ extension DurationExtension on Duration {
     final seconds = twoDigits(inSeconds.remainder(60));
     return '$minutes:$seconds';
   }
+}
+
+Future<List<Subtitle>> parseSrtFile(String filePath) async {
+  final List<Subtitle> subtitles = [];
+  final String data = await rootBundle.loadString(filePath);
+
+  final regex = RegExp(
+      r'(\d+)\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n(.*?)\n\n',
+      dotAll: true);
+
+  for (final match in regex.allMatches(data)) {
+    final start = _parseDuration(match.group(2)!);
+    final end = _parseDuration(match.group(3)!);
+    final text = match.group(4)!.replaceAll("\n", " "); // Remove newlines
+
+    subtitles.add(Subtitle(start: start, end: end, text: text));
+  }
+
+  return subtitles;
+}
+
+Duration _parseDuration(String time) {
+  final parts = time.split(":");
+  final secondsParts = parts[2].split(",");
+
+  return Duration(
+    hours: int.parse(parts[0]),
+    minutes: int.parse(parts[1]),
+    seconds: int.parse(secondsParts[0]),
+    milliseconds: int.parse(secondsParts[1]),
+  );
 }

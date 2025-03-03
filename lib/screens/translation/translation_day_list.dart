@@ -58,30 +58,32 @@ class _TranslationDayListState extends State<TranslationDayList> {
                 );
               }
               bool foundFirstIncomplete = false;
-              return GridView.builder(
-                itemCount: translationDays.length,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 16,
-                  crossAxisSpacing: 16,
-                  childAspectRatio: 4 / 5.3,
+              return SingleChildScrollView(
+                child: GridView.builder(
+                  itemCount: translationDays.length,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16,
+                    childAspectRatio: 4 / 5.3,
+                  ),
+                  padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    final translationDay = translationDays[index];
+                    bool isOpenIndex =
+                        !translationDay.isComplete && !foundFirstIncomplete;
+                    if (isOpenIndex) {
+                      foundFirstIncomplete = true;
+                    }
+                    return _buildDayWidget(
+                      translationDay,
+                      isOpenIndex,
+                      index + 1,
+                    );
+                  },
                 ),
-                padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  final translationDay = translationDays[index];
-                  bool isOpenIndex =
-                      !translationDay.isComplete && !foundFirstIncomplete;
-                  if (isOpenIndex) {
-                    foundFirstIncomplete = true;
-                  }
-                  return _buildDayWidget(
-                    translationDay,
-                    isOpenIndex,
-                    index + 1,
-                  );
-                },
               );
             },
             orElse: () => Container(),
