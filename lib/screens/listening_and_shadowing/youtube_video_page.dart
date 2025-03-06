@@ -111,7 +111,9 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     final maxScroll = _lyricsController.position.maxScrollExtent;
     if (currentScroll >= maxScroll) {
       _selectedSubtitle = _lastScrolledSubtitle;
-      return;
+      if (_lastScrolledSubtitle.scrollPosition! >= maxScroll) {
+        return;
+      }
     }
     _lyricsController.animateTo(
       _lastScrolledSubtitle.scrollPosition!,
@@ -125,7 +127,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   @override
   void deactivate() {
-    // Pauses video while navigating to next page.
     _controller.pause();
     super.deactivate();
   }
@@ -186,13 +187,20 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                   children: [
                     player,
                     CustomControl(
-                      controller: _controller,
-                      startPosition: _startPosition,
-                      endPosition: _endPosition,
-                      startDuration: _startDuration,
-                      endDuration: _endDuration,
-                      readyToPlay: _readyToPlay,
-                    ),
+                        controller: _controller,
+                        startPosition: _startPosition,
+                        endPosition: _endPosition,
+                        startDuration: _startDuration,
+                        endDuration: _endDuration,
+                        readyToPlay: _readyToPlay,
+                        onSeek: () {
+                          setState(() {
+                            Future.delayed(const Duration(milliseconds: 100),
+                                () {
+                              _isUserScrolling = false;
+                            });
+                          });
+                        }),
                     Expanded(
                       child: LyricsWidget(
                         selectedSubtitle: _selectedSubtitle,

@@ -15,6 +15,7 @@ class CustomControl extends StatefulWidget {
     required this.startDuration,
     required this.endDuration,
     required this.readyToPlay,
+    required this.onSeek,
   });
   final YoutubePlayerController controller;
   final int startPosition;
@@ -22,6 +23,7 @@ class CustomControl extends StatefulWidget {
   final Duration startDuration;
   final Duration endDuration;
   final bool readyToPlay;
+  final VoidCallback onSeek;
 
   @override
   State<CustomControl> createState() => _CustomControlState();
@@ -136,6 +138,7 @@ class _CustomControlState extends State<CustomControl> {
                     final newPosition = (currentPosition + 10)
                         .clamp(widget.startPosition, widget.endPosition);
                     widget.controller.seekTo(Duration(seconds: newPosition));
+                    widget.onSeek();
                   },
                   child: const SizedBox(
                     width: 24,
