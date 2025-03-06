@@ -14,12 +14,14 @@ class CustomControl extends StatefulWidget {
     required this.endPosition,
     required this.startDuration,
     required this.endDuration,
+    required this.readyToPlay,
   });
   final YoutubePlayerController controller;
   final int startPosition;
   final int endPosition;
   final Duration startDuration;
   final Duration endDuration;
+  final bool readyToPlay;
 
   @override
   State<CustomControl> createState() => _CustomControlState();
@@ -27,6 +29,12 @@ class CustomControl extends StatefulWidget {
 
 class _CustomControlState extends State<CustomControl> {
   int sliderPosition = 0;
+
+  void _checkReadyToPlay() {
+    if (!widget.readyToPlay) {
+      return;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +62,7 @@ class _CustomControlState extends State<CustomControl> {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(100),
                   onTap: () {
+                    _checkReadyToPlay();
                     final currentPosition =
                         widget.controller.value.position.inSeconds;
                     final newPosition = (currentPosition - 10)
@@ -89,14 +98,14 @@ class _CustomControlState extends State<CustomControl> {
                     trackShape: CustomTrackShape(),
                   ),
                   child: Slider(
-                    value:sliderPosition.toDouble(),
+                    value: sliderPosition.toDouble(),
                     min: 0,
                     max: widget.endPosition.toDouble() -
                         widget.startPosition.toDouble(),
                     thumbColor: Colors.orange,
                     activeColor: Colors.orange,
                     onChanged: (value) {
-                      debugPrint("_sliderValue: $value value");
+                      _checkReadyToPlay();
                       int seekPosition = value.toInt() + widget.startPosition;
                       widget.controller.seekTo(Duration(seconds: seekPosition));
                     },
@@ -121,6 +130,7 @@ class _CustomControlState extends State<CustomControl> {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(100),
                   onTap: () {
+                    _checkReadyToPlay();
                     final currentPosition =
                         widget.controller.value.position.inSeconds;
                     final newPosition = (currentPosition + 10)
@@ -139,30 +149,38 @@ class _CustomControlState extends State<CustomControl> {
                 ),
               ),
               const Spacer(),
-              Material(
-                color: PmpColors.white,
-                borderRadius: BorderRadius.circular(100),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(100),
-                  onTap: () {
-                    widget.controller.value.isPlaying
-                        ? widget.controller.pause()
-                        : widget.controller.play();
-                    setState(() {});
-                  },
-                  child: SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: Icon(
-                      widget.controller.value.isPlaying
-                          ? Icons.pause
-                          : Icons.play_arrow,
-                      color: PmpColors.primary400,
-                      size: 18,
+              widget.readyToPlay
+                  ? Material(
+                      color: PmpColors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(100),
+                        onTap: () {
+                          widget.controller.value.isPlaying
+                              ? widget.controller.pause()
+                              : widget.controller.play();
+                          setState(() {});
+                        },
+                        child: SizedBox(
+                          width: 24,
+                          height: 24,
+                          child: Icon(
+                            widget.controller.value.isPlaying
+                                ? Icons.pause
+                                : Icons.play_arrow,
+                            color: PmpColors.primary400,
+                            size: 18,
+                          ),
+                        ),
+                      ),
+                    )
+                  : const SizedBox(
+                      width: 16,
+                      height: 16,
+                      child: CircularProgressIndicator(
+                        color: PmpColors.white,
+                      ),
                     ),
-                  ),
-                ),
-              ),
             ],
           ),
         ),

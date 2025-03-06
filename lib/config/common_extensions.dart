@@ -203,7 +203,8 @@ extension DurationExtension on Duration {
   }
 }
 
-Future<List<Subtitle>> parseSrtFile(String filePath) async {
+Future<List<Subtitle>> parseSrtFile(
+    String filePath, Duration startDuration, Duration endDuration) async {
   final List<Subtitle> subtitles = [];
   final String data = await rootBundle.loadString(filePath);
 
@@ -211,12 +212,20 @@ Future<List<Subtitle>> parseSrtFile(String filePath) async {
       r'(\d+)\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n(.*?)\n\n',
       dotAll: true);
 
+  int idCounter = 1; // Start IDs from 1
+
   for (final match in regex.allMatches(data)) {
     final start = _parseDuration(match.group(2)!);
     final end = _parseDuration(match.group(3)!);
-    final text = match.group(4)!.replaceAll("\n", " "); // Remove newlines
+    if (startDuration > start || endDuration < end) continue;
+    final text = match.group(4)!.replaceAll("\n", " ");
 
-    subtitles.add(Subtitle(start: start, end: end, text: text));
+    subtitles.add(Subtitle(
+      id: idCounter++, // Assign unique ID
+      start: start,
+      end: end,
+      text: text,
+    ));
   }
 
   return subtitles;
