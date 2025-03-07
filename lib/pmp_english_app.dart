@@ -8,8 +8,10 @@ import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_themes.dart';
 import 'package:pmp_english/main.dart';
 import 'package:pmp_english/main_providers.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'l10n/generated/l10n.dart';
+import 'services/supabase_service.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
@@ -23,6 +25,8 @@ class PmpEnglishApp extends StatefulWidget {
 class _PmpEnglishAppState extends State<PmpEnglishApp> {
   late final StreamSubscription<String> _tokenStream;
   late final StreamSubscription _onMessageStream;
+  late final StreamSubscription _onAuthStateChangedStream;
+  User? _currentUser;
 
   void _setToken(String? token) {
     debugPrint('FCM Token: $token');
@@ -45,6 +49,28 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
             showFlutterNotification(event);
           },
         );
+        _onAuthStateChangedStream = supabase.auth.onAuthStateChange.listen(
+          (event) async {
+            if (event.event == AuthChangeEvent.signedOut) {
+              await FirebaseMessaging.instance.unsubscribeFromTopic(
+                'pmpenglish_all_users_topic',
+              );
+              debugPrint('tp user unsubscribe: ${_currentUser?.id}');
+              await FirebaseMessaging.instance.unsubscribeFromTopic(
+                '${_currentUser?.id}',
+              );
+            } else if (event.session != null) {
+              if (event.session?.user.id != null) {
+                _currentUser = event.session!.user;
+              }
+              debugPrint('tp user subscribe: ${_currentUser?.id} subscribe');
+              await FirebaseMessaging.instance
+                  .subscribeToTopic("pmpenglish_all_users_topic");
+            }
+          },
+        )..onError((e) {
+            debugPrint('Auth state change error: ${e.toString()}');
+          });
       },
     ).onError(
       (error, stackTrace) {
