@@ -70,13 +70,7 @@ class _PatternReplyScreenState extends State<PatternReplyScreen> {
         automaticallyImplyLeading: false,
         title: Row(
           children: [
-            Image.asset(
-              'assets/images/profiles/Boy_01.png',
-              width: 24,
-              height: 24,
-            ),
-            const SizedBox(width: 12),
-            const Text('John Doe'),
+            const Text('Replies'),
             const Spacer(),
             InkWell(
               borderRadius: BorderRadius.circular(9999),
@@ -187,7 +181,7 @@ class _PatternReplyScreenState extends State<PatternReplyScreen> {
                             if (replies.isEmpty) {
                               return Center(
                                 child: Padding(
-                                  padding: EdgeInsets.only(top: 120),
+                                  padding: const EdgeInsets.only(top: 120),
                                   child: Text(
                                     'There is no reply yet!',
                                     style: PmpTextStyles.body1Regular

@@ -72,6 +72,8 @@ class _SelfPatternWidgetState extends State<SelfPatternWidget> {
                     style: PmpTextStyles.body1Semi.copyWith(
                       color: Colors.black,
                     ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   if (widget.pattern.title != null)
                     Text(
@@ -79,6 +81,8 @@ class _SelfPatternWidgetState extends State<SelfPatternWidget> {
                       style: PmpTextStyles.body2Medium.copyWith(
                         color: Colors.black,
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                 ],
               ),
@@ -131,8 +135,12 @@ class _SelfPatternWidgetState extends State<SelfPatternWidget> {
           const SizedBox(
             height: 12,
           ),
-          Text(widget.pattern.description ?? '',
-              style: PmpTextStyles.body2Medium),
+          Text(
+            widget.pattern.description ?? '',
+            style: PmpTextStyles.body2Medium,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+          ),
           const SizedBox(height: 8),
           Row(
             children: [

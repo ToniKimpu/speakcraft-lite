@@ -33,6 +33,10 @@ class PracticeVocabularyList extends StatelessWidget {
         );
       },
       child: GestureDetector(
+        onVerticalDragUpdate: (DragUpdateDetails details) {
+          double newHeight = details.primaryDelta!;
+          debugPrint("_newHeight: $newHeight new Height!");
+        },
         onTap: () {},
         child: Container(
           width: double.infinity,
