@@ -1,0 +1,25 @@
+platform :android do
+    lane :build do |options|
+        env = options[:env]
+        versionCode = options[:c]
+        versionName = options[:n]
+        target = 'main.dart'
+        sh("flutter build apk --release --flavor #{env} -t lib/#{target} --dart-define flavor=#{env} --build-name #{versionName} --build-number #{versionCode}")
+    end
+    lane :release do |options|
+        build(options)
+        env = options[:env]
+        app = "1:184571582087:android:7b68f03ec3183250d60a22"
+        if env=="prod" then
+            app = "1:1022138253974:android:4ae97c59ba15e01a4b78b7"
+        end
+        puts app
+        release = firebase_app_distribution(
+            app: app,
+            groups: "internal-testers",
+            release_notes: "Lots of amazing new features to test out!",
+            android_artifact_type: "APK",
+            android_artifact_path: "build/app/outputs/flutter-apk/app-#{env}-release.apk"
+        )
+    end
+end

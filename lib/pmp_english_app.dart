@@ -84,6 +84,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
     super.dispose();
     _tokenStream.cancel();
     _onMessageStream.cancel();
+    _onAuthStateChangedStream.cancel();
   }
 
   @override

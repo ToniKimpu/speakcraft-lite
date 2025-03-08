@@ -8,14 +8,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:pmp_english/firebase_options-dev.dart';
+import 'package:pmp_english/firebase_options_dev.dart';
 import 'package:pmp_english/pmp_english_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
-import 'firebase_options-prod.dart';
+import 'firebase_options_prod.dart';
 import 'global_app_state.dart';
 
+@pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   const env = String.fromEnvironment('flavor', defaultValue: 'dev');
   final firebaseOption = getOption(env);
@@ -29,8 +30,6 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 late AndroidNotificationChannel channel;
 bool isFlutterLocalNotificationsInitialized = false;
 
-/// Initialize the [FlutterLocalNotificationsPlugin] package.
-late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 Future<void> setupFlutterNotifications() async {
   if (isFlutterLocalNotificationsInitialized) {
     debugPrint('about to abord noti init, already initialized.');
@@ -45,7 +44,7 @@ Future<void> setupFlutterNotifications() async {
 
   flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  flutterLocalNotificationsPlugin.initialize(
+   flutterLocalNotificationsPlugin.initialize(
     const InitializationSettings(
       android: AndroidInitializationSettings('ic_notification'),
       iOS: DarwinInitializationSettings(),
@@ -58,7 +57,7 @@ Future<void> setupFlutterNotifications() async {
     },
   );
 
-  flutterLocalNotificationsPlugin
+   flutterLocalNotificationsPlugin
       .resolvePlatformSpecificImplementation<
           AndroidFlutterLocalNotificationsPlugin>()
       ?.createNotificationChannel(channel);
@@ -99,12 +98,15 @@ void showFlutterNotification(RemoteMessage message) {
           channelDescription: channel.description,
           priority: Priority.max,
           importance: Importance.max,
-          icon: 'ic_notification',
+          // icon: 'ic_notification',
           playSound: true,
         ),
       ),
       payload: jsonEncode(data));
 }
+
+/// Initialize the [FlutterLocalNotificationsPlugin] package.
+late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 
 getOption(String env) => env == 'dev'
     ? DefaultFirebaseOptionsDev.currentPlatform
