@@ -57,7 +57,7 @@ class CurrentExerciseItem extends StatelessWidget {
                 width: 8,
                 height: 8,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(4),
                 ),
               ),
@@ -68,7 +68,7 @@ class CurrentExerciseItem extends StatelessWidget {
                 child: Text(
                   exercise.exerciseName,
                   style:
-                      PmpTextStyles.body2Regular.copyWith(color: Colors.black),
+                      PmpTextStyles.body2Regular.copyWith(color: Colors.white),
                 ),
               ),
               const SizedBox(
@@ -84,7 +84,7 @@ class CurrentExerciseItem extends StatelessWidget {
                 color: exercise.isComplete
                     ? Colors.green
                     : isOpenIndex
-                        ? Colors.black
+                        ? Colors.white
                         : Colors.red,
               ),
             ],

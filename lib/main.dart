@@ -44,7 +44,7 @@ Future<void> setupFlutterNotifications() async {
 
   flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-   flutterLocalNotificationsPlugin.initialize(
+  flutterLocalNotificationsPlugin.initialize(
     const InitializationSettings(
       android: AndroidInitializationSettings('ic_notification'),
       iOS: DarwinInitializationSettings(),
@@ -57,7 +57,7 @@ Future<void> setupFlutterNotifications() async {
     },
   );
 
-   flutterLocalNotificationsPlugin
+  flutterLocalNotificationsPlugin
       .resolvePlatformSpecificImplementation<
           AndroidFlutterLocalNotificationsPlugin>()
       ?.createNotificationChannel(channel);

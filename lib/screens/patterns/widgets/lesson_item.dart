@@ -24,7 +24,7 @@ class LessonItem extends StatelessWidget {
               width: 8,
               height: 8,
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(4),
               ),
             ),
@@ -34,7 +34,7 @@ class LessonItem extends StatelessWidget {
             Expanded(
               child: Text(
                 lesson.lessonName,
-                style: PmpTextStyles.body2Regular.copyWith(color: Colors.black),
+                style: PmpTextStyles.body2Regular.copyWith(color: Colors.white),
               ),
             ),
             const SizedBox(

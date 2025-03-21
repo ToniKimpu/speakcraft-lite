@@ -27,7 +27,7 @@ class ExampleWidget extends StatelessWidget {
             const Icon(
               Icons.circle,
               size: 12,
-              color: PmpColors.primary400,
+              color: PmpColors.white,
             ),
             const SizedBox(
               width: 12,
@@ -39,14 +39,14 @@ class ExampleWidget extends StatelessWidget {
                   Text(
                     patternExample.englishText,
                     style: PmpTextStyles.body2Semi.copyWith(
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                   if (patternExample.burmeseText != null)
                     Text(
                       patternExample.burmeseText!,
                       style: PmpTextStyles.body2Semi.copyWith(
-                        color: Colors.black,
+                        color: Colors.white,
                         fontWeight: FontWeight.normal,
                       ),
                     ),

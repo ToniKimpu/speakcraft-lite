@@ -11,124 +11,100 @@ class ModuleWidget extends StatelessWidget {
     required this.label2,
     required this.onPressed,
   });
+
   final String title;
   final String label1, label2;
-
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: PmpColors.white,
-        border: Border.all(
-          color: PmpColors.neutral10.withOpacity(0.1),
-        ),
-        borderRadius: BorderRadius.circular(12),
+        color: Colors.white.withOpacity(0.08), // Dark card with transparency
+        borderRadius: BorderRadius.circular(16),
+        border:
+            Border.all(color: Colors.white.withOpacity(0.2)), // Subtle border
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.3),
+            blurRadius: 8,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Title
           Text(
             title,
             style: PmpTextStyles.body1Regular.copyWith(
-              color: PmpColors.black,
+              color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
           ),
+          const SizedBox(height: 10),
           Container(
             height: 1,
             width: double.infinity,
-            color: Colors.black.withOpacity(0.1),
-            margin: const EdgeInsets.symmetric(vertical: 12),
+            color: Colors.white.withOpacity(0.2), // Light separator
+            margin: const EdgeInsets.symmetric(vertical: 8),
           ),
-          Row(
-            children: [
-              Container(
-                width: 8,
-                height: 8,
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(4),
-                ),
-              ),
-              const SizedBox(
-                width: 12,
-              ),
-              Expanded(
-                child: Text(
-                  label1,
-                  style:
-                      PmpTextStyles.body2Regular.copyWith(color: Colors.black),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          Row(
-            children: [
-              Container(
-                width: 8,
-                height: 8,
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(4),
-                ),
-              ),
-              const SizedBox(
-                width: 12,
-              ),
-              Expanded(
-                child: Text(
-                  label2,
-                  style:
-                      PmpTextStyles.body2Regular.copyWith(color: Colors.black),
-                ),
-              ),
-            ],
-          ),
-          // const SizedBox(
-          //   height: 16,
-          // ),
-          // LinearProgressIndicator(
-          //   color: Colors.green,
-          //   value: 0.6,
-          //   minHeight: 8,
-          //   borderRadius: BorderRadius.circular(8),
-          // ),
-          // const SizedBox(
-          //   height: 6,
-          // ),
-          // Text(
-          //   'Completed - 6/10',
-          //   style: PmpTextStyles.caption.copyWith(
-          //     color: Colors.black,
-          //     fontWeight: FontWeight.bold,
-          //   ),
-          // ),
+          const SizedBox(height: 10),
 
+          // Bullet Points
+          _buildBulletPoint(label1),
+          const SizedBox(height: 10),
+          _buildBulletPoint(label2),
+
+          const SizedBox(height: 12),
+
+          // Button
           Align(
             alignment: Alignment.bottomRight,
             child: TextButton(
               onPressed: () => onPressed(),
-              child: const Wrap(
-                crossAxisAlignment: WrapCrossAlignment.center,
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                textStyle: PmpTextStyles.body2Regular,
+              ),
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text('Start'),
-                  SizedBox(
-                    width: 2,
-                  ),
-                  Icon(Icons.chevron_right),
+                  SizedBox(width: 4),
+                  Icon(Icons.chevron_right, size: 20, color: Colors.white),
                 ],
               ),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildBulletPoint(String text) {
+    return Row(
+      children: [
+        Container(
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+            color: PmpColors.white, // Use theme color for contrast
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            text,
+            style: PmpTextStyles.body2Regular.copyWith(color: Colors.white),
+          ),
+        ),
+      ],
     );
   }
 }

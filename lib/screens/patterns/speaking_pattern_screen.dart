@@ -6,9 +6,9 @@ import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/l10n/generated/l10n.dart';
 import 'package:pmp_english/screens/patterns/widgets/pattern_widget.dart';
+import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/pattern/pattern_bloc.dart';
-import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
 import '../../model/lesson/lesson.dart';
 import '../../model/pattern/pattern.dart';
@@ -72,8 +72,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
         }
         Navigator.pop(context);
       },
-      child: Scaffold(
-        backgroundColor: Colors.white,
+      child: MainScaffold(
         appBar: AppBar(
           title: Text(widget.lesson.lessonName),
         ),
@@ -94,7 +93,6 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                   _audioPlayer.setUrl(audioUrl);
                 },
                 onPlay: () {
-                  debugPrint("_audioPlayerBloc: onPlay!");
                   _audioPlayer.play();
                 },
                 onPause: () {
@@ -163,24 +161,32 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
   }
 
   Widget _buildFooter(List<Pattern> patterns) {
-    return Container(
-      width: double.infinity,
-      height: 48,
-      color: PmpColors.primary400,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          _buildPreviousButton(patterns),
-          _buildProgressIndicator(patterns),
-          _buildNextButton(patterns),
-        ],
+    return Card(
+      elevation: 4, // Adds shadow effect
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      // color: const Color(0xFF0F2027),
+      color: const Color(0xFF1C2C3C),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            _buildPreviousButton(patterns),
+            _buildProgressIndicator(patterns),
+            _buildNextButton(patterns),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildPreviousButton(List<Pattern> patterns) {
-    return IconButton(
-      onPressed: _currentPage <= 0
+    return InkWell(
+      borderRadius: BorderRadius.circular(100),
+      onTap: _currentPage <= 0
           ? null
           : () {
               _audioPlayerBloc.add(const AudioPlayerEvent.stop());
@@ -193,31 +199,88 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                 }
               });
             },
-      icon: Icon(
-        Icons.chevron_left,
-        color: _currentPage <= 0 ? Colors.grey : Colors.white,
+      child: Ink(
+        padding: const EdgeInsets.all(6),
+        decoration: BoxDecoration(
+          gradient: _currentPage == 0
+              ? const LinearGradient(
+                  colors: [Colors.grey, Colors.grey], // Disabled state
+                )
+              : const LinearGradient(
+                  colors: [
+                    Color(0xFFFFD700), // Gold
+                    Color(0xFFFFA500), // Deep Gold
+                    Color(0xFFB8860B), // Dark Golden
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              spreadRadius: 3,
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Icon(
+          Icons.chevron_left,
+          color: _currentPage == 0
+              ? Colors.black38
+              : Colors.white, // White for contrast
+          size: 28,
+        ),
       ),
     );
   }
 
   Widget _buildProgressIndicator(List<Pattern> patterns) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-      decoration: const BoxDecoration(
-        color: PmpColors.primary400,
-        borderRadius: BorderRadius.all(Radius.circular(12)),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            Color(0xFFFFD700), // Gold
+            Color(0xFFFFA500), // Deep Gold/Orange
+            Color(0xFFB8860B), // Dark Golden
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 3,
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Text(
         '${_currentPage + 1}/${patterns.length}',
-        style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
+        style: PmpTextStyles.body2Semi.copyWith(
+          color: Colors.white, // White text for contrast
+          fontWeight: FontWeight.bold,
+          shadows: [
+            Shadow(
+              color: Colors.black.withOpacity(0.3),
+              blurRadius: 4,
+              offset: const Offset(1, 1),
+            ),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildNextButton(List<Pattern> patterns) {
     final totalPatterns = patterns.length - 1;
-    return IconButton(
-      onPressed: _currentPage >= totalPatterns
+    return InkWell(
+      borderRadius: BorderRadius.circular(100),
+      onTap: _currentPage >= totalPatterns
           ? null
           : () {
               _audioPlayerBloc.add(const AudioPlayerEvent.stop());
@@ -230,9 +293,39 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                 }
               });
             },
-      icon: Icon(
-        Icons.chevron_right,
-        color: _currentPage >= totalPatterns ? Colors.grey : Colors.white,
+      child: Ink(
+        padding: const EdgeInsets.all(6),
+        decoration: BoxDecoration(
+          gradient: _currentPage >= totalPatterns
+              ? const LinearGradient(
+                  colors: [Colors.grey, Colors.grey], // Disabled state
+                )
+              : const LinearGradient(
+                  colors: [
+                    Color(0xFFFFD700), // Gold
+                    Color(0xFFFFA500), // Deep Gold
+                    Color(0xFFB8860B), // Dark Golden
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              spreadRadius: 3,
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Icon(
+          Icons.chevron_right,
+          color: _currentPage >= totalPatterns
+              ? Colors.black38
+              : Colors.white, // White for contrast
+          size: 28,
+        ),
       ),
     );
   }

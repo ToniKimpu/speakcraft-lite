@@ -6,6 +6,7 @@ import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/day/day.dart';
 import 'package:pmp_english/screens/patterns/widgets/completed/completed_day_widget.dart';
 import 'package:pmp_english/screens/patterns/widgets/day_widget.dart';
+import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/day/day_bloc.dart';
 import '../../l10n/generated/l10n.dart';
@@ -36,7 +37,7 @@ class _DayListScreenState extends State<DayListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MainScaffold(
       appBar: AppBar(
         title: const Text('Spoken Pattern Tutorial'),
       ),
@@ -46,94 +47,91 @@ class _DayListScreenState extends State<DayListScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ValueListenableBuilder<bool>(
-                valueListenable: _completeNotifier,
-                builder: (context, complete, child) {
-                  return Row(
-                    children: [
-                      Material(
+              valueListenable: _completeNotifier,
+              builder: (context, complete, child) {
+                return Row(
+                  children: [
+                    // Completed Button
+                    Material(
+                      borderRadius: BorderRadius.circular(24),
+                      color: complete
+                          ? const Color(
+                              0xFF2C5364) // Darkest shade from gradient
+                          : Colors.transparent,
+                      child: InkWell(
                         borderRadius: BorderRadius.circular(24),
-                        color: complete
-                            ? PmpColors.primary400
-                            : Colors.transparent,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(24),
-                          onTap: () {
-                            if (!complete) {
-                              _completeNotifier.value = true;
-                            }
-                          },
-                          child: Container(
-                            height: 44,
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 4,
+                        onTap: () {
+                          if (!complete) {
+                            _completeNotifier.value = true;
+                          }
+                        },
+                        child: Container(
+                          height: 44,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 4),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(24),
+                            border: Border.all(
+                              color: complete
+                                  ? Colors.transparent
+                                  : const Color(0xFF2C5364), // Matching border
                             ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(24),
-                              border: Border.all(
-                                color: complete
-                                    ? Colors.transparent
-                                    : PmpColors.primary400,
-                              ),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Completed',
-                                style: PmpTextStyles.body2Regular.copyWith(
-                                  color: complete
-                                      ? Colors.white
-                                      : PmpColors.primary400,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Completed',
+                              style: PmpTextStyles.body2Regular.copyWith(
+                                color: complete ? Colors.white : Colors.white54,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Material(
+                    ),
+                    const SizedBox(width: 12),
+
+                    // Progress Button
+                    Material(
+                      borderRadius: BorderRadius.circular(24),
+                      color: complete
+                          ? Colors.transparent
+                          : const Color(0xFF203A43), // Mid-tone from gradient
+                      child: InkWell(
                         borderRadius: BorderRadius.circular(24),
-                        color: complete
-                            ? Colors.transparent
-                            : PmpColors.primary400,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(24),
-                          onTap: () {
-                            if (complete) {
-                              _completeNotifier.value = false;
-                            }
-                          },
-                          child: Container(
-                            height: 44,
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 4),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(24),
-                              border: Border.all(
-                                color: complete
-                                    ? PmpColors.primary400
-                                    : Colors.transparent,
-                              ),
+                        onTap: () {
+                          if (complete) {
+                            _completeNotifier.value = false;
+                          }
+                        },
+                        child: Container(
+                          height: 44,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 4),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(24),
+                            border: Border.all(
+                              color: complete
+                                  ? const Color(0xFF203A43) // Matched border
+                                  : Colors.transparent,
                             ),
-                            child: Center(
-                              child: Text(
-                                'Progress',
-                                style: PmpTextStyles.body2Regular.copyWith(
-                                  color: complete
-                                      ? PmpColors.primary400
-                                      : Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Progress',
+                              style: PmpTextStyles.body2Regular.copyWith(
+                                color: complete ? Colors.white54 : Colors.white,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ],
-                  );
-                }),
+                    ),
+                  ],
+                );
+              },
+            ),
             const SizedBox(
               height: 16,
             ),
@@ -150,7 +148,7 @@ class _DayListScreenState extends State<DayListScreen> {
                     if (days.isEmpty) {
                       return Center(
                         child: Text(
-                            AppLocalizations.of(context).txtWillUploadSoon,
+                          AppLocalizations.of(context).txtWillUploadSoon,
                           style: PmpTextStyles.body2Semi.copyWith(
                             color: Colors.black,
                           ),
@@ -237,7 +235,7 @@ class _DayListScreenState extends State<DayListScreen> {
                                   child: Text(
                                     'You haven\'t completed any tutorial yet!',
                                     style: PmpTextStyles.body2Semi.copyWith(
-                                      color: PmpColors.black,
+                                      color: PmpColors.white,
                                     ),
                                   ),
                                 ),

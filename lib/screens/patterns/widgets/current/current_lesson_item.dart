@@ -36,7 +36,7 @@ class CurrentLessonItem extends StatelessWidget {
                 width: 8,
                 height: 8,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(4),
                 ),
               ),
@@ -47,7 +47,7 @@ class CurrentLessonItem extends StatelessWidget {
                 child: Text(
                   lesson.lessonName,
                   style:
-                      PmpTextStyles.body2Regular.copyWith(color: Colors.black),
+                      PmpTextStyles.body2Regular.copyWith(color: Colors.white),
                 ),
               ),
               const SizedBox(
@@ -56,7 +56,7 @@ class CurrentLessonItem extends StatelessWidget {
               const Icon(
                 Icons.chevron_right,
                 size: 20,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ],
           ),

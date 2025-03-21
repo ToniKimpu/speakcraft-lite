@@ -21,11 +21,23 @@ class DayWidget extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
-        color: PmpColors.white,
-        border: Border.all(
-          color: PmpColors.neutral10.withOpacity(0.1),
-        ),
-        borderRadius: BorderRadius.circular(12),
+        // color: PmpColors.white,
+        // border: Border.all(
+        //   color: PmpColors.neutral10.withOpacity(0.1),
+        // ),
+        // borderRadius: BorderRadius.circular(12),
+        color: Colors.white.withOpacity(0.08), // Dark card with transparency
+        borderRadius: BorderRadius.circular(16),
+        border:
+            Border.all(color: Colors.white.withOpacity(0.2)), // Subtle border
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.3),
+            blurRadius: 8,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,13 +50,13 @@ class DayWidget extends StatelessWidget {
                 Text(
                   'Day ${day.orderNumber}',
                   style: PmpTextStyles.body1Regular.copyWith(
-                    color: PmpColors.black,
+                    color: PmpColors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 const Icon(
                   Icons.lock,
-                  color: Colors.red,
+                  color: Color(0xFFECEFF1),
                   size: 20,
                 ),
               ],
@@ -56,9 +68,9 @@ class DayWidget extends StatelessWidget {
               width: double.infinity,
               child: Center(
                 child: Text(
-                   AppLocalizations.of(context).txtWillUploadSoon,
+                  AppLocalizations.of(context).txtWillUploadSoon,
                   style: PmpTextStyles.body1Regular.copyWith(
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -67,7 +79,7 @@ class DayWidget extends StatelessWidget {
             Container(
               height: 1,
               width: double.infinity,
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.white.withOpacity(0.1),
               margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
             ),
           ...day.lessons.map((lesson) => LessonItem(lesson: lesson)),
@@ -75,7 +87,7 @@ class DayWidget extends StatelessWidget {
             Container(
               height: 1,
               width: double.infinity,
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.white.withOpacity(0.1),
               margin: const EdgeInsets.symmetric(
                 vertical: 12,
                 horizontal: 12,

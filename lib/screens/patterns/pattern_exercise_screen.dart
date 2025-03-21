@@ -118,59 +118,72 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
         Navigator.pop(context);
       },
       child: Scaffold(
+        backgroundColor: PmpColors.primary100,
         appBar: AppBar(
           title: Text(widget.exercise.exerciseName),
+          backgroundColor: const Color(0xFF0F2027),
+          elevation: 0,
         ),
-        body: MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (_) => _patternExerciseBloc,
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
             ),
-            BlocProvider(
-              create: (context) => _exerciseUserAnswerBloc,
-            ),
-          ],
-          child: BlocListener<ExerciseUserAnswerBloc, ExerciseUserAnswerState>(
-            listener: (context, state) {
-              state.whenOrNull(
-                loading: () {
-                  context.showLoadingDialog();
-                },
-                onSuccess: () {
-                  context.hideLoadingDialog();
+          ),
+          child: MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (_) => _patternExerciseBloc,
+              ),
+              BlocProvider(
+                create: (context) => _exerciseUserAnswerBloc,
+              ),
+            ],
+            child:
+                BlocListener<ExerciseUserAnswerBloc, ExerciseUserAnswerState>(
+              listener: (context, state) {
+                state.whenOrNull(
+                  loading: () {
+                    context.showLoadingDialog();
+                  },
+                  onSuccess: () {
+                    context.hideLoadingDialog();
 
-                  if (widget.isLastIndex) {
-                    context.read<DayBloc>().add(const DayEvent.loadDays());
-                  } else {
-                    context.read<ExerciseBloc>().add(
-                          ExerciseEvent.loadExercises(widget.day.id),
-                        );
-                  }
-                  Navigator.pushReplacementNamed(
-                    context,
-                    PmpRoutes.patternPracticeResultScreen,
-                    arguments: {
-                      'pattern_exercises': _patternExercises,
-                    },
-                  );
-                },
-              );
-            },
-            child: BlocBuilder<PatternExerciseBloc, PatternExerciseState>(
-              builder: (context, state) {
-                return state.maybeWhen(
-                  loading: () => const Center(
-                    child: SizedBox(
-                      width: 24,
-                      height: 24,
-                      child: CircularProgressIndicator(),
-                    ),
-                  ),
-                  loaded: (patternExercises) =>
-                      _buildExerciseContent(patternExercises),
-                  orElse: () => const SizedBox(),
+                    if (widget.isLastIndex) {
+                      context.read<DayBloc>().add(const DayEvent.loadDays());
+                    } else {
+                      context.read<ExerciseBloc>().add(
+                            ExerciseEvent.loadExercises(widget.day.id),
+                          );
+                    }
+                    Navigator.pushReplacementNamed(
+                      context,
+                      PmpRoutes.patternPracticeResultScreen,
+                      arguments: {
+                        'pattern_exercises': _patternExercises,
+                      },
+                    );
+                  },
                 );
               },
+              child: BlocBuilder<PatternExerciseBloc, PatternExerciseState>(
+                builder: (context, state) {
+                  return state.maybeWhen(
+                    loading: () => const Center(
+                      child: SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: CircularProgressIndicator(),
+                      ),
+                    ),
+                    loaded: (patternExercises) =>
+                        _buildExerciseContent(patternExercises),
+                    orElse: () => const SizedBox(),
+                  );
+                },
+              ),
             ),
           ),
         ),
@@ -182,7 +195,7 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
     if (exercises.isEmpty) {
       return Center(
           child: Text(
-          AppLocalizations.of(context).txtWillUploadSoon,
+        AppLocalizations.of(context).txtWillUploadSoon,
         style: PmpTextStyles.body1Regular.copyWith(color: PmpColors.black),
       ));
     }
@@ -214,54 +227,124 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
         return PracticeExerciseWidget(
           focusNode: _practiceNodes[index],
           patternExercise: exercises[index],
-          onUserInput: (value) => _userAnswer.value = value,
+          onUserInput: (value) {
+            if (value.isNotEmpty) {
+              _userAnswer.value = value;
+            } else {
+              _userAnswer.value = null;
+            }
+          },
         );
       }),
     );
   }
 
   Widget _buildFooter(List<PatternExercise> exercises) {
-    return Container(
-      width: double.infinity,
-      height: 48,
-      color: PmpColors.primary400,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          _buildPreviousButton(),
-          _buildProgressIndicator(exercises.length),
-          _buildNextButton(exercises),
-        ],
+    return Card(
+      elevation: 4, // Adds shadow effect
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      // color: const Color(0xFF0F2027),
+      color: const Color(0xFF1C2C3C),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            _buildPreviousButton(),
+            _buildProgressIndicator(exercises.length),
+            _buildNextButton(exercises),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildPreviousButton() {
-    return IconButton(
-      onPressed: _currentPage > 0
+    return InkWell(
+      borderRadius: BorderRadius.circular(100),
+      onTap: _currentPage > 0
           ? () {
               _userAnswer.value =
                   _patternExercises[_currentPage - 1].userAnswer;
               _handlePageChange(_currentPage - 1);
             }
           : null,
-      icon: Icon(
-        Icons.chevron_left,
-        color: _currentPage == 0 ? Colors.grey : Colors.white,
+      child: Ink(
+        padding: const EdgeInsets.all(6),
+        decoration: BoxDecoration(
+          gradient: _currentPage == 0
+              ? const LinearGradient(
+                  colors: [Colors.grey, Colors.grey], // Disabled state
+                )
+              : const LinearGradient(
+                  colors: [
+                    Color(0xFFFFD700), // Gold
+                    Color(0xFFFFA500), // Deep Gold
+                    Color(0xFFB8860B), // Dark Golden
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              spreadRadius: 3,
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Icon(
+          Icons.chevron_left,
+          color: _currentPage == 0
+              ? Colors.black38
+              : Colors.white, // White for contrast
+          size: 28,
+        ),
       ),
     );
   }
 
   Widget _buildProgressIndicator(int totalExercises) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-      decoration: const BoxDecoration(
-        color: PmpColors.primary400,
-        borderRadius: BorderRadius.all(Radius.circular(12)),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            Color(0xFFFFD700), // Gold
+            Color(0xFFFFA500), // Deep Gold/Orange
+            Color(0xFFB8860B), // Dark Golden
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 3,
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Text(
-        '${_currentPage + 1}/$totalExercises',
-        style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
+        '${_currentPage + 1} / $totalExercises',
+        style: PmpTextStyles.body2Semi.copyWith(
+          color: Colors.white, // White text for contrast
+          fontWeight: FontWeight.bold,
+          shadows: [
+            Shadow(
+              color: Colors.black.withOpacity(0.3),
+              blurRadius: 4,
+              offset: const Offset(1, 1),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -270,13 +353,44 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
     return ValueListenableBuilder<String?>(
       valueListenable: _userAnswer,
       builder: (context, userAnswer, child) {
-        return IconButton(
-          onPressed: userAnswer == null
+        return InkWell(
+          borderRadius: BorderRadius.circular(100),
+          onTap: userAnswer == null
               ? null
               : () => _addUserAnswer(exercises[_currentPage], userAnswer),
-          icon: Icon(
-            Icons.chevron_right,
-            color: userAnswer == null ? Colors.grey : Colors.white,
+          child: Ink(
+            padding: const EdgeInsets.all(6),
+            decoration: BoxDecoration(
+              gradient: userAnswer == null
+                  ? const LinearGradient(
+                      colors: [Colors.grey, Colors.grey], // Disabled state
+                    )
+                  : const LinearGradient(
+                      colors: [
+                        Color(0xFFFFD700), // Gold
+                        Color(0xFFFFA500), // Deep Gold
+                        Color(0xFFB8860B), // Dark Golden
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 3,
+                  blurRadius: 8,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Icon(
+              Icons.chevron_right,
+              color: userAnswer == null
+                  ? Colors.black38
+                  : Colors.white, // White for contrast
+              size: 28,
+            ),
           ),
         );
       },

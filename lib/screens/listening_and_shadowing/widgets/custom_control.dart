@@ -55,30 +55,53 @@ class _CustomControlState extends State<CustomControl> {
           height: 40,
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-          color: PmpColors.primary400,
+          decoration: const BoxDecoration(
+            // gradient: LinearGradient(
+            //   colors: [Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364)],
+            //   begin: Alignment.topCenter,
+            //   end: Alignment.bottomCenter,
+            // ),
+            color: Color(0xFF2C5364),
+          ),
           child: Row(
             children: [
-              Material(
-                color: PmpColors.white,
+              InkWell(
                 borderRadius: BorderRadius.circular(100),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(100),
-                  onTap: () {
-                    _checkReadyToPlay();
-                    final currentPosition =
-                        widget.controller.value.position.inSeconds;
-                    final newPosition = (currentPosition - 10)
-                        .clamp(widget.startPosition, widget.endPosition);
-                    widget.controller.seekTo(Duration(seconds: newPosition));
-                  },
-                  child: const SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: Icon(
-                      Icons.replay_10,
-                      color: PmpColors.primary400,
-                      size: 18,
+                onTap: () {
+                  _checkReadyToPlay();
+                  final currentPosition =
+                      widget.controller.value.position.inSeconds;
+                  final newPosition = (currentPosition - 10)
+                      .clamp(widget.startPosition, widget.endPosition);
+                  widget.controller.seekTo(Duration(seconds: newPosition));
+                },
+                child: Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color(0xFFFFD700), // Gold
+                        Color(0xFFFFA500), // Deep Gold
+                        Color(0xFFB8860B), // Dark Golden
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        spreadRadius: 3,
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(
+                    Icons.replay_10,
+                    color: PmpColors.white,
+                    size: 18,
                   ),
                 ),
               ),
@@ -126,54 +149,86 @@ class _CustomControlState extends State<CustomControl> {
               const SizedBox(
                 width: 12,
               ),
-              Material(
-                color: PmpColors.white,
+              InkWell(
                 borderRadius: BorderRadius.circular(100),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(100),
-                  onTap: () {
-                    _checkReadyToPlay();
-                    final currentPosition =
-                        widget.controller.value.position.inSeconds;
-                    final newPosition = (currentPosition + 10)
-                        .clamp(widget.startPosition, widget.endPosition);
-                    widget.controller.seekTo(Duration(seconds: newPosition));
-                    widget.onSeek();
-                  },
-                  child: const SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: Icon(
-                      Icons.forward_10,
-                      color: PmpColors.primary400,
-                      size: 18,
+                onTap: () {
+                  _checkReadyToPlay();
+                  final currentPosition =
+                      widget.controller.value.position.inSeconds;
+                  final newPosition = (currentPosition + 10)
+                      .clamp(widget.startPosition, widget.endPosition);
+                  widget.controller.seekTo(Duration(seconds: newPosition));
+                  widget.onSeek();
+                },
+                child: Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color(0xFFFFD700), // Gold
+                        Color(0xFFFFA500), // Deep Gold
+                        Color(0xFFB8860B), // Dark Golden
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        spreadRadius: 3,
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(
+                    Icons.forward_10,
+                    color: PmpColors.white,
+                    size: 18,
                   ),
                 ),
               ),
               const Spacer(),
               widget.readyToPlay
-                  ? Material(
-                      color: PmpColors.white,
+                  ? InkWell(
                       borderRadius: BorderRadius.circular(100),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(100),
-                        onTap: () {
-                          widget.controller.value.isPlaying
-                              ? widget.controller.pause()
-                              : widget.controller.play();
-                          setState(() {});
-                        },
-                        child: SizedBox(
-                          width: 24,
-                          height: 24,
-                          child: Icon(
-                            widget.controller.value.isPlaying
-                                ? Icons.pause
-                                : Icons.play_arrow,
-                            color: PmpColors.primary400,
-                            size: 18,
+                      onTap: () {
+                        widget.controller.value.isPlaying
+                            ? widget.controller.pause()
+                            : widget.controller.play();
+                        setState(() {});
+                      },
+                      child: Container(
+                        width: 24,
+                        height: 24,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color(0xFFFFD700), // Gold
+                              Color(0xFFFFA500), // Deep Gold
+                              Color(0xFFB8860B), // Dark Golden
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
                           ),
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              spreadRadius: 3,
+                              blurRadius: 8,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: Icon(
+                          widget.controller.value.isPlaying
+                              ? Icons.pause
+                              : Icons.play_arrow,
+                          color: PmpColors.white,
+                          size: 18,
                         ),
                       ),
                     )

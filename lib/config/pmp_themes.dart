@@ -18,11 +18,11 @@ class PmpThemes {
         brightness: brightness,
       ),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
-        color: PmpColors.primary400,
-        
+        color: PmpColors.white,
       ),
+      scaffoldBackgroundColor: PmpColors.transparent,
       appBarTheme: AppBarTheme(
-        backgroundColor: PmpColors.primary400,
+        backgroundColor: PmpColors.transparent,
         iconTheme: const IconThemeData(
           color: PmpColors.white,
           size: 24,

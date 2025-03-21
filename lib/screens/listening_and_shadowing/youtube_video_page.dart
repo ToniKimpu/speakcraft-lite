@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/lyrics_widget.dart';
+import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 /// Homepage
@@ -153,7 +154,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         });
       },
       child: _showLoadingLayout
-          ? const Scaffold(
+          ? const MainScaffold(
               body: Center(
                 child: SizedBox(
                   width: 20,
@@ -179,28 +180,36 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                 },
                 onEnded: (data) {},
               ),
-              builder: (context, player) => Scaffold(
+              builder: (context, player) => MainScaffold(
                 appBar: AppBar(
-                  title: Text(_videoMetaData.title),
+                  scrolledUnderElevation: 0.0,
+                  backgroundColor: const Color(0xFF0F2027),
+                  title: const Text(
+                    // _videoMetaData.title,
+                    "Youtube Video",
+                    style: TextStyle(color: Colors.white),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
                 ),
                 body: Column(
                   children: [
                     player,
                     CustomControl(
-                        controller: _controller,
-                        startPosition: _startPosition,
-                        endPosition: _endPosition,
-                        startDuration: _startDuration,
-                        endDuration: _endDuration,
-                        readyToPlay: _readyToPlay,
-                        onSeek: () {
-                          setState(() {
-                            Future.delayed(const Duration(milliseconds: 100),
-                                () {
-                              _isUserScrolling = false;
-                            });
+                      controller: _controller,
+                      startPosition: _startPosition,
+                      endPosition: _endPosition,
+                      startDuration: _startDuration,
+                      endDuration: _endDuration,
+                      readyToPlay: _readyToPlay,
+                      onSeek: () {
+                        setState(() {
+                          Future.delayed(const Duration(milliseconds: 100), () {
+                            _isUserScrolling = false;
                           });
-                        }),
+                        });
+                      },
+                    ),
                     Expanded(
                       child: LyricsWidget(
                         selectedSubtitle: _selectedSubtitle,

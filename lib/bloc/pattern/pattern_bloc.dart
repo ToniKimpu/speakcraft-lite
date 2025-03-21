@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/config/env.dart';
 import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 import 'package:pmp_english/services/supabase_service.dart';
@@ -106,13 +107,20 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
       final dataRes = await supabase
           .from('patterns')
           .select('*,pattern_examples(*)')
-          .eq('lesson_id', lessonId);
+          .eq('lesson_id', lessonId)
+          .order('created_at', ascending: true);
       if (dataRes.isEmpty) {
         emit(const PatternState.loaded(<Pattern>[]));
         return;
       }
       final patterns = dataRes.map((e) => Pattern.fromJson(e)).toList();
-      emit(PatternState.loaded(patterns));
+      final newPatterns = patterns.map((p) {
+        if (p.audioPath == null || p.audioPath!.isEmpty) return p;
+        return p.copyWith(
+          audioPath: "${Env.bunnyAudioAPIKey}${p.audioPath}",
+        );
+      }).toList();
+      emit(PatternState.loaded(newPatterns));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');
       emit(PatternState.error(e.toString()));

@@ -99,19 +99,20 @@ class _LyricsWidgetState extends State<LyricsWidget> {
                 shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero),
                 selected: selected,
-                selectedTileColor: Colors.orange,
+                selectedTileColor: const Color(0xFF0F2027),
+                tileColor: const Color(0xFF203A43),
                 onTap: () => widget.onTap.call(subtitle),
                 key: _subtitleKeys[index],
                 leading: Text(
                   _formatDuration(subtitle.start),
                   style: PmpTextStyles.body2Semi.copyWith(
-                    color: !selected ? PmpColors.primary400 : PmpColors.white,
+                    color: !selected ? PmpColors.white : PmpColors.white,
                   ),
                 ),
                 title: Text(
                   subtitle.text,
                   style: PmpTextStyles.body2Semi.copyWith(
-                    color: !selected ? PmpColors.black : Colors.white,
+                    color: !selected ? PmpColors.white : Colors.white,
                   ),
                 ),
               );
