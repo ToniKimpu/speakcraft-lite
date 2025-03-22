@@ -54,6 +54,61 @@ class _SignUpProfileState extends State<SignUpProfile> {
     _selectedProfileNotifier.dispose();
   }
 
+  Widget _buildProfileGrid(List<String> profiles) {
+    return GridView.builder(
+      itemCount: profiles.length,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 4,
+        mainAxisSpacing: 12,
+        crossAxisSpacing: 12,
+      ),
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+        return InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () {
+            _selectedProfileNotifier.value = profiles[index];
+            widget.onProfileSelected(profiles[index]);
+          },
+          child: ValueListenableBuilder<String?>(
+            valueListenable: _selectedProfileNotifier,
+            builder: (context, selectedProfile, _) {
+              final selected = selectedProfile == profiles[index];
+              return AnimatedContainer(
+                duration: const Duration(milliseconds: 200),
+                padding: EdgeInsets.all(selected ? 6 : 0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    width: selected ? 2 : 0,
+                    color: selected ? Colors.greenAccent : Colors.transparent,
+                  ),
+                  boxShadow: selected
+                      ? [
+                          BoxShadow(
+                            color: Colors.greenAccent.withOpacity(0.4),
+                            blurRadius: 8,
+                            spreadRadius: 2,
+                          )
+                        ]
+                      : [],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    'assets/images/profiles/${profiles[index]}',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              );
+            },
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -61,6 +116,7 @@ class _SignUpProfileState extends State<SignUpProfile> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const SizedBox(height: 60),
           Align(
             alignment: Alignment.center,
             child: ClipRRect(
@@ -68,118 +124,66 @@ class _SignUpProfileState extends State<SignUpProfile> {
               child: ValueListenableBuilder<String?>(
                 valueListenable: _selectedProfileNotifier,
                 builder: (context, selectedProfile, child) {
-                  if (selectedProfile != null) {
-                    return Image.asset(
-                      'assets/images/profiles/$selectedProfile',
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover,
-                    );
-                  }
-                  return const Icon(
-                    Icons.account_circle,
-                    size: 100,
-                    color: Colors.grey,
+                  return AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    width: 110,
+                    height: 110,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      boxShadow: selectedProfile != null
+                          ? [
+                              BoxShadow(
+                                color: Colors.greenAccent.withOpacity(0.5),
+                                blurRadius: 12,
+                                spreadRadius: 3,
+                              )
+                            ]
+                          : [],
+                    ),
+                    child: selectedProfile != null
+                        ? Image.asset(
+                            'assets/images/profiles/$selectedProfile',
+                            fit: BoxFit.cover,
+                          )
+                        : const Icon(
+                            Icons.account_circle,
+                            size: 110,
+                            color: Colors.grey,
+                          ),
                   );
                 },
               ),
             ),
           ),
-          const SizedBox(height: 12),
-          Text(
-            'Male',
-            style: PmpTextStyles.body1Semi.copyWith(color: Colors.black),
-          ),
-          const SizedBox(height: 8),
-          GridView.builder(
-            itemCount: _maleProfiles.length,
-            physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-              mainAxisSpacing: 16,
-              crossAxisSpacing: 16,
-            ),
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return InkWell(
-                borderRadius: BorderRadius.circular(9999),
-                onTap: () {
-                  _selectedProfileNotifier.value = _maleProfiles[index];
-                  widget.onProfileSelected(_maleProfiles[index]);
-                },
-                child: ValueListenableBuilder<String?>(
-                    valueListenable: _selectedProfileNotifier,
-                    builder: (context, selectedProfile, _) {
-                      final selected = selectedProfile != null &&
-                          selectedProfile == _maleProfiles[index];
-                      return Ink(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(9999),
-                          border: Border.all(
-                            width: selected ? 2 : 0,
-                            color: selected ? Colors.green : Colors.transparent,
-                          ),
-                        ),
-                        padding: EdgeInsets.zero,
-                        child: Image.asset(
-                          'assets/images/profiles/${_maleProfiles[index]}',
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                          height: double.infinity,
-                        ),
-                      );
-                    }),
-              );
-            },
-          ),
-          const SizedBox(height: 12),
-          Text(
-            'Female',
-            style: PmpTextStyles.body1Semi.copyWith(color: Colors.black),
-          ),
-          const SizedBox(height: 8),
-          GridView.builder(
-            itemCount: _femaleProfiles.length,
-            physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-              mainAxisSpacing: 16,
-              crossAxisSpacing: 16,
-            ),
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return InkWell(
-                borderRadius: BorderRadius.circular(9999),
-                onTap: () {
-                  _selectedProfileNotifier.value = _femaleProfiles[index];
-                  widget.onProfileSelected(_femaleProfiles[index]);
-                },
-                child: ValueListenableBuilder<String?>(
-                    valueListenable: _selectedProfileNotifier,
-                    builder: (context, selectedProfile, _) {
-                      final selected = selectedProfile != null &&
-                          selectedProfile == _femaleProfiles[index];
-                      return Ink(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(9999),
-                          border: Border.all(
-                            width: selected ? 2 : 0,
-                            color: selected ? Colors.green : Colors.transparent,
-                          ),
-                        ),
-                        padding: EdgeInsets.zero,
-                        child: Image.asset(
-                          'assets/images/profiles/${_femaleProfiles[index]}',
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                          height: double.infinity,
-                        ),
-                      );
-                    }),
-              );
-            },
-          ),
+          const SizedBox(height: 20),
+          _buildSection('Male', _maleProfiles),
+          const SizedBox(height: 20),
+          _buildSection('Female', _femaleProfiles),
         ],
+      ),
+    );
+  }
+
+  Widget _buildSection(String title, List<String> profiles) {
+    return Card(
+      color: Colors.white.withOpacity(0.1),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: Text(
+                title,
+                style: PmpTextStyles.body1Semi
+                    .copyWith(color: Colors.white, fontSize: 18),
+              ),
+            ),
+            const SizedBox(height: 8),
+            _buildProfileGrid(profiles),
+          ],
+        ),
       ),
     );
   }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
+import '../../bloc/auth/auth_bloc.dart';
 import 'widgets/module_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -46,6 +48,13 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.pushNamed(context, PmpRoutes.youtubeVideoPage);
               },
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () {
+                context.read<AuthBloc>().add(const AuthEvent.logout());
+              },
+              child: const Text('Logout'),
             ),
           ],
         ),

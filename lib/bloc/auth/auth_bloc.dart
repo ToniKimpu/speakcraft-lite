@@ -75,7 +75,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             .withConverter(
               (json) => AppUser.fromJson(json),
             );
+
         GlobalAppState().currentUser = appUser;
+
+        if (!appUser.isPremiumUser!) {
+          emit(const AuthState.onFreeUser());
+          return;
+        }
 
         final appVersion = await supabase
             .from('app_versions')
@@ -100,10 +106,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           );
           return;
         }
-        if (!appUser.isPremiumUser!) {
-          emit(const AuthState.onFreeUser());
-          return;
-        }
 
         emit(const AuthState.authenticated());
       } else {
@@ -117,6 +119,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   _mapSignUpWithEmailToState(String name, String email, String password,
       String? profilePath, Emitter<AuthState> emit) async {
+    final emailRegex =
+        RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+
+    if (name.isEmpty || email.isEmpty || password.isEmpty) {
+      emit(const AuthState.error("All fields are required."));
+      return;
+    }
+
+    if (!emailRegex.hasMatch(email)) {
+      emit(const AuthState.error("Invalid email format."));
+      return;
+    }
     emit(const AuthState.loading());
     try {
       final response =

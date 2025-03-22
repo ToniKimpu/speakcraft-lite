@@ -7,6 +7,7 @@ import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/screens/auth/widgets/sign_up_data.dart';
 import 'package:pmp_english/screens/auth/widgets/sign_up_profile.dart';
 import 'package:pmp_english/screens/main/home_screen.dart';
+import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../config/pmp_routes.dart';
 
@@ -63,11 +64,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
         }
         _currentIndexNotifier.value = 0;
       },
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Create an account', style: PmpTextStyles.title1SemiBold),
-          centerTitle: true,
-        ),
+      child: MainScaffold(
+        // appBar: AppBar(
+        //   title: Text('Create an account', style: PmpTextStyles.title1SemiBold),
+        //   centerTitle: true,
+        // ),
         body: BlocListener<AuthBloc, AuthState>(
           bloc: _authBloc,
           listener: (context, state) {
@@ -137,6 +138,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     ) ??
                                 false;
                         return InkWell(
+                          borderRadius: BorderRadius.circular(8),
                           onTap: () {
                             if (_currentIndexNotifier.value == 0 &&
                                 !isComplete) {
@@ -159,19 +161,48 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           },
                           child: Ink(
                             width: double.infinity,
-                            height: 42,
+                            height: 48,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: isComplete
-                                  ? PmpColors.primary400
-                                  : PmpColors.primary400.withOpacity(0.6),
+                              borderRadius: BorderRadius.circular(8),
+                              gradient: isComplete
+                                  ? const LinearGradient(
+                                      colors: [
+                                        Color(0xFF00C6FF),
+                                        Color(0xFF0072FF)
+                                      ],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    )
+                                  : LinearGradient(
+                                      colors: [
+                                        PmpColors.primary400.withOpacity(0.6),
+                                        PmpColors.primary400.withOpacity(0.4),
+                                      ],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                    ),
+                              boxShadow: isComplete
+                                  ? [
+                                      BoxShadow(
+                                        color: Colors.blue.withOpacity(0.3),
+                                        blurRadius: 6,
+                                        spreadRadius: 1,
+                                        offset: const Offset(0, 3),
+                                      )
+                                    ]
+                                  : [],
                             ),
                             child: Center(
                               child: isLoading
                                   ? const SizedBox(
-                                      height: 18,
-                                      width: 18,
-                                      child: CircularProgressIndicator(),
+                                      height: 20,
+                                      width: 20,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2,
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.white),
+                                      ),
                                     )
                                   : Text(
                                       buttonText,
@@ -179,6 +210,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                           PmpTextStyles.body1Regular.copyWith(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w600,
+                                        letterSpacing: 0.8,
                                       ),
                                     ),
                             ),

@@ -8,6 +8,7 @@ import 'package:pmp_english/shared_widgets/default_profile.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/common_extensions.dart';
+import '../../shared_widgets/main_scaffold.dart';
 
 class NewVersionScreen extends StatefulWidget {
   const NewVersionScreen({
@@ -40,10 +41,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
   @override
   Widget build(BuildContext context) {
     final appUser = GlobalAppState().currentUser;
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 0,
-      ),
+    return MainScaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Column(
@@ -68,97 +66,40 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                   ),
                 ],
               ),
-              child: Stack(
-                children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(9999),
-                        child: Image.asset(
-                          'assets/images/app_logo.png',
-                          width: 60,
-                          height: 60,
-                        ),
-                      ),
-                      if (appUser.profilePath == null) const DefaultProfile(),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Text(
-                        'Version : ${widget.appVersion['version_name']}',
-                        style: PmpTextStyles.body2Semi
-                            .copyWith(color: Colors.black),
-                      ),
-                      const SizedBox(
-                        height: 6,
-                      ),
-                      Text(
-                        'App version အသစ်ထွက်ပါပြီခင်ဗျာ...',
-                        style: PmpTextStyles.body2Semi
-                            .copyWith(color: Colors.black),
-                      ),
-                      Text(
-                        '(Version အသစ်ကို Telegram (သို့) Browser ကနေတစ်ဆင့် ဒေါင်းလို့ရပါတယ်။)',
-                        style: PmpTextStyles.label2Regular
-                            .copyWith(color: Colors.black),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                    ],
-                  ),
-                  if (widget.appVersion['audio_path'] != null)
-                    Positioned(
-                      top: 2,
-                      right: 2,
-                      child: Material(
-                        borderRadius: BorderRadius.circular(12),
-                        color: PmpColors.primary400,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(12),
-                          onTap: () {
-                            final playerState = _player.playerState;
-                            if (playerState.processingState ==
-                                ProcessingState.completed) {
-                              _player.seek(Duration.zero);
-                              _player.play();
-                            } else if (_player.playing) {
-                              _player.pause();
-                            } else {
-                              _player.play();
-                            }
-                          },
-                          child: SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: StreamBuilder<PlayerState>(
-                              stream: _player.playerStateStream,
-                              builder: (context, snapshot) {
-                                final playerState = snapshot.data;
-                                final isPlaying = playerState?.playing ?? false;
-                                final processingState =
-                                    playerState?.processingState;
-                                if (processingState ==
-                                    ProcessingState.completed) {
-                                  return const Icon(
-                                    Icons.replay,
-                                    color: Colors.white,
-                                    size: 16,
-                                  );
-                                }
-                                return Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                  size: 16,
-                                );
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(9999),
+                    child: Image.asset(
+                      'assets/images/app_logo.png',
+                      width: 60,
+                      height: 60,
                     ),
+                  ),
+                  if (appUser.profilePath == null) const DefaultProfile(),
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  Text(
+                    'Version : ${widget.appVersion['version_name']}',
+                    style:
+                        PmpTextStyles.body2Semi.copyWith(color: Colors.black),
+                  ),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                  Text(
+                    'App version အသစ်ထွက်ပါပြီခင်ဗျာ...',
+                    style: PmpTextStyles.body2Semi.copyWith(
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
                 ],
               ),
             ),
@@ -175,51 +116,12 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                   child: InkWell(
                     borderRadius: BorderRadius.circular(12),
                     onTap: () async {
-                      String url = widget.appVersion['app_tele_path'];
-                      if (await canLaunchUrl(Uri.parse(url))) {
-                        launchUrl(Uri.parse(url));
-                      } else {
-                        showErrorSnackbar("Failed to open telegram link");
-                      }
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Center(
-                          child: Text(
-                            'Open Telegram',
-                            style: PmpTextStyles.body1Semi
-                                .copyWith(color: Colors.white),
-                          ),
-                        ),
-                        const SizedBox(width: 12),
-                        const Icon(
-                          Icons.chevron_right,
-                          color: Colors.white,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: SizedBox(
-                height: 40,
-                child: Material(
-                  borderRadius: BorderRadius.circular(12),
-                  color: PmpColors.primary400,
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(12),
-                    onTap: () async {
                       String url = widget.appVersion['app_web_path'];
                       if (await canLaunchUrl(Uri.parse(url))) {
-                        launchUrl(Uri.parse(url));
+                        launchUrl(
+                          Uri.parse(url),
+                          mode: LaunchMode.inAppBrowserView,
+                        );
                       } else {
                         showErrorSnackbar("Failed to open browser!");
                       }
@@ -230,7 +132,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                       children: [
                         Center(
                           child: Text(
-                            'Open Chrome',
+                            'Download Now',
                             style: PmpTextStyles.body1Semi
                                 .copyWith(color: Colors.white),
                           ),
@@ -254,7 +156,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
               child: Text(
                 'App version အသစ်တင်လို့အဆင်မပြေပါက Messengerကနေတစ်ဆင့် လာရောက်မေးမြန်းနိုင်ပါတယ်ခင်ဗျ။',
                 style: PmpTextStyles.label2Regular.copyWith(
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -267,16 +169,20 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, PmpRoutes.home);
                   },
-                  child: const Row(
+                  child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text('Skip'),
-                      SizedBox(
+                      Text(
+                        'Skip',
+                        style: PmpTextStyles.body1Semi
+                            .copyWith(color: PmpColors.white),
+                      ),
+                      const SizedBox(
                         width: 8,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.chevron_right,
-                        color: PmpColors.primary400,
+                        color: PmpColors.white,
                       ),
                     ],
                   ),

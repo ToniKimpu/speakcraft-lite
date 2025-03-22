@@ -1,5 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
+import 'package:pmp_english/screens/auth/widgets/auth_button.dart';
+import 'package:pmp_english/screens/auth/widgets/auth_card.dart';
+import 'package:pmp_english/screens/auth/widgets/auth_text_field.dart';
 
 import '../../../config/pmp_text_styles.dart';
 
@@ -24,6 +30,10 @@ class _SignUpDataState extends State<SignUpData> {
   late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
   late final TextEditingController _confirmController;
+
+  bool _isPasswordVisible = false;
+  bool _isConfirmPasswordVisible = false;
+  final bool _isLoading = false;
 
   @override
   void initState() {
@@ -68,117 +78,171 @@ class _SignUpDataState extends State<SignUpData> {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          const SizedBox(height: 40),
+          Center(
+            child: SvgPicture.asset(
+              "assets/images/splash_logo.svg",
+              height: 100,
+              width: 100,
+              colorFilter: ColorFilter.mode(
+                Theme.of(context).colorScheme.primary,
+                BlendMode.srcIn,
+              ),
+            ),
+          ).animate().fadeIn(duration: 600.ms).scale(delay: 200.ms),
+          const SizedBox(
+            height: 16,
+          ),
           Text(
             'Welcome to PMP English',
             style: PmpTextStyles.h2.copyWith(
-              color: Colors.black,
+              color: Colors.white,
               fontWeight: FontWeight.w600,
             ),
-          ),
+            textAlign: TextAlign.center,
+          )
+              .animate()
+              .fadeIn(duration: 600.ms)
+              .slideY(begin: 0.3, delay: 200.ms),
           const SizedBox(
             height: 12,
           ),
           Text(
             'Sign up and boost your english speaking skill',
             style: PmpTextStyles.body1Regular.copyWith(
-              color: Colors.black,
+              color: Colors.white,
               fontWeight: FontWeight.w600,
             ),
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          TextField(
-            controller: _nameController,
-            onChanged: (value) => _onCompleteCheck(),
-            decoration: const InputDecoration(
-              hintText: 'Name',
-            ),
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          TextField(
-            controller: _emailController,
-            onChanged: (value) => _onCompleteCheck(),
-            decoration: const InputDecoration(
-              hintText: 'example@gmail.com',
-            ),
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          ValueListenableBuilder<bool>(
-            valueListenable: _passwordObscureNotifier,
-            builder: (context, isObscured, child) {
-              return TextField(
-                controller: _passwordController,
-                onChanged: (value) => _onCompleteCheck(),
-                decoration: InputDecoration(
-                    hintText: 'Password',
-                    suffixIcon: IconButton(
-                      onPressed: () =>
-                          _passwordObscureNotifier.value = !isObscured,
-                      icon: Icon(
-                        isObscured ? Icons.visibility : Icons.visibility_off,
-                        color: Colors.black,
-                      ),
-                    )),
-                obscureText: isObscured,
-              );
-            },
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          ValueListenableBuilder<bool>(
-            valueListenable: _confirmObscureNotifier,
-            builder: (context, isObscured, child) {
-              return TextField(
-                controller: _confirmController,
-                onChanged: (value) => _onCompleteCheck(),
-                decoration: InputDecoration(
-                    hintText: 'Confirm your password',
-                    suffixIcon: IconButton(
-                      onPressed: () =>
-                          _confirmObscureNotifier.value = !isObscured,
-                      icon: Icon(
-                        isObscured ? Icons.visibility : Icons.visibility_off,
-                        color: Colors.black,
-                      ),
-                    )),
-                obscureText: isObscured,
-              );
-            },
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          Align(
-            alignment: Alignment.center,
-            child: Text.rich(
-              TextSpan(
-                text: 'Already have an account? ',
-                style: PmpTextStyles.body1Regular.copyWith(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600,
+            textAlign: TextAlign.center,
+          )
+              .animate()
+              .fadeIn(duration: 600.ms)
+              .slideY(begin: 0.3, delay: 400.ms),
+          const SizedBox(height: 40),
+          AuthCard(
+            child: Column(
+              children: [
+                AuthTextField(
+                  controller: _nameController,
+                  labelText: 'Full Name',
+                  prefixIcon: const Icon(Icons.person_outline),
+                  textCapitalization: TextCapitalization.words,
+                  textInputAction: TextInputAction.next,
+                  onChanged: (value) => _onCompleteCheck(),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Name is required';
+                    }
+                    if (value.length < 2) {
+                      return 'Name must be at least 2 characters';
+                    }
+                    return null;
+                  },
                 ),
-                children: [
-                  TextSpan(
-                    text: 'Login',
-                    style: PmpTextStyles.body1Regular.copyWith(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w600,
-                      decoration: TextDecoration.underline,
+                const SizedBox(height: 16),
+                AuthTextField(
+                  controller: _emailController,
+                  labelText: 'Email',
+                  prefixIcon: const Icon(Icons.email_outlined),
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
+                  onChanged: (value) => _onCompleteCheck(),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Email is required';
+                    }
+                    if (!value.contains('@') || !value.contains('.')) {
+                      return 'Please enter a valid email';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                AuthTextField(
+                  controller: _passwordController,
+                  labelText: 'Password',
+                  prefixIcon: const Icon(Icons.lock_outline),
+                  obscureText: !_isPasswordVisible,
+                  textInputAction: TextInputAction.next,
+                  onChanged: (value) => _onCompleteCheck(),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _isPasswordVisible
+                          ? Icons.visibility_outlined
+                          : Icons.visibility_off_outlined,
                     ),
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () => Navigator.of(context).pop(),
+                    onPressed: () {
+                      setState(() {
+                        _isPasswordVisible = !_isPasswordVisible;
+                      });
+                    },
                   ),
-                ],
-              ),
-              textAlign: TextAlign.center,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Password is required';
+                    }
+                    if (value.length < 6) {
+                      return 'Password must be at least 6 characters';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                AuthTextField(
+                  controller: _confirmController,
+                  labelText: 'Confirm Password',
+                  prefixIcon: const Icon(Icons.lock_outline),
+                  obscureText: !_isConfirmPasswordVisible,
+                  textInputAction: TextInputAction.done,
+                  onChanged: (value) => _onCompleteCheck(),
+                  onSubmitted: (_) {},
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _isConfirmPasswordVisible
+                          ? Icons.visibility_outlined
+                          : Icons.visibility_off_outlined,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _isConfirmPasswordVisible = !_isConfirmPasswordVisible;
+                      });
+                    },
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please confirm your password';
+                    }
+                    if (value != _passwordController.text) {
+                      return 'Passwords do not match';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'Already have an account?',
+                      style: TextStyle(
+                        color: PmpColors.white,
+                      ),
+                    ),
+                    AuthButton(
+                      text: 'Login',
+                      onPressed: () => Navigator.of(context).pop(),
+                      variant: AuthButtonVariant.text,
+                      fullWidth: false,
+                      textColor: PmpColors.white,
+                    ),
+                  ],
+                )
+                    .animate()
+                    .fadeIn(duration: 600.ms)
+                    .slideY(begin: 0.3, delay: 1000.ms),
+              ],
             ),
           ),
         ],

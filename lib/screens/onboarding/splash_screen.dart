@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
+import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 
@@ -27,10 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 0,
-      ),
+    return MainScaffold(
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           state.maybeWhen(
@@ -66,13 +65,24 @@ class _SplashScreenState extends State<SplashScreen> {
             orElse: () => Container(),
           );
         },
-        child: const Center(
-          child: SizedBox(
-            height: 24,
-            width: 24,
-            child: CircularProgressIndicator(
-              color: PmpColors.primary400,
-            ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset(
+                  'assets/images/app_logo.png',
+                  height: 150,
+                  width: 150,
+                ),
+              ).animate().fadeIn(duration: 600.ms).scale(delay: 200.ms),
+              const SizedBox(height: 24),
+              Text(
+                "PMP English App",
+                style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
+              ).animate().fadeIn(delay: 400.ms).slideY(begin: 0.3, end: 0),
+            ],
           ),
         ),
       ),

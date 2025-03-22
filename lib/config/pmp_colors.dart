@@ -45,4 +45,6 @@ class PmpColors {
   static const Color destructive400 = Color(0xFFF04D4D);
   static const Color destructive300 = Color(0xFFEC5553);
   static const Color destructive50 = Color(0xFFFEF4F4);
+  static const Color darkSurface = Color(0xFF1F2532);
+  static const Color outline = Color(0xFFE2E8F0);
 }
