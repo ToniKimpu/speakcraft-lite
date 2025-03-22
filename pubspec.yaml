@@ -78,12 +78,14 @@ flutter_launcher_icons:
   android: true
   ios: true
   remove_alpha_ios: true
-  image_path: "logo/app_logo.png"
-  # adaptive_icon_background: "logo/background_logo.png"
-  background_color_ios: "#000000"
+  min_sdk_android: 21
+  
+  image_path: "logo/app_logo.png"  # Main app icon
   adaptive_icon_foreground: "logo/app_logo.png"
   adaptive_icon_background: "#000000"
-  min_sdk_android: 21
+
+  android_notification_icon: "logo/ic_notification.png"  # Notification icon
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

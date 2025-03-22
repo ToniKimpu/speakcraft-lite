@@ -98,7 +98,7 @@ void showFlutterNotification(RemoteMessage message) {
           channelDescription: channel.description,
           priority: Priority.max,
           importance: Importance.max,
-          // icon: 'ic_notification',
+          icon: 'ic_notification',
           playSound: true,
         ),
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pmp_english/bloc/auth/auth_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
@@ -85,15 +84,15 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 40),
+              const SizedBox(height: 80),
               Center(
-                child: SvgPicture.asset(
-                  "assets/images/splash_logo.svg",
-                  height: 100,
-                  width: 100,
-                  colorFilter: ColorFilter.mode(
-                    Theme.of(context).colorScheme.primary,
-                    BlendMode.srcIn,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(9999),
+                  child: Image.asset(
+                    "assets/images/app_logo.png",
+                    width: 100,
+                    height: 100,
+                    colorBlendMode: BlendMode.srcIn,
                   ),
                 ),
               ).animate().fadeIn(duration: 600.ms).scale(delay: 200.ms),
