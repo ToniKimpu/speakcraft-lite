@@ -1,0 +1,33 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'listening.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$ListeningImpl _$$ListeningImplFromJson(Map<String, dynamic> json) =>
+    _$ListeningImpl(
+      id: (json['id'] as num).toInt(),
+      title: json['title'] as String,
+      thumbnail: json['thumbnail'] as String,
+      start: (json['start'] as num).toInt(),
+      end: (json['end'] as num).toInt(),
+      hasMMSubtitle: json['mm_subtitle'] as bool,
+      youtubeId: json['youtube_id'] as String,
+      subtitlePath: json['subtitle_path'] as String,
+      listeningCategoryId: (json['listening_category_id'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$$ListeningImplToJson(_$ListeningImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'thumbnail': instance.thumbnail,
+      'start': instance.start,
+      'end': instance.end,
+      'mm_subtitle': instance.hasMMSubtitle,
+      'youtube_id': instance.youtubeId,
+      'subtitle_path': instance.subtitlePath,
+      'listening_category_id': instance.listeningCategoryId,
+    };

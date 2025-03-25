@@ -3,6 +3,7 @@ class Subtitle {
   final Duration start;
   final Duration end;
   final String text;
+  final String? burmese;
   final double? widgetHeight;
   final double? scrollPosition;
 
@@ -11,6 +12,7 @@ class Subtitle {
     required this.start,
     required this.end,
     required this.text,
+    this.burmese,
     this.widgetHeight,
     this.scrollPosition,
   });
@@ -38,14 +40,17 @@ class Subtitle {
     Duration? start,
     Duration? end,
     String? text,
+    String? burmese,
     double? widgetHeight,
     double? scrollPosition,
+    double? englishScrollPosition,
   }) {
     return Subtitle(
       id: id ?? this.id,
       start: start ?? this.start,
       end: end ?? this.end,
       text: text ?? this.text,
+      burmese: burmese ?? this.burmese,
       widgetHeight: widgetHeight ?? this.widgetHeight,
       scrollPosition: scrollPosition ?? this.scrollPosition,
     );

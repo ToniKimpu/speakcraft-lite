@@ -5,6 +5,7 @@ import 'package:pmp_english/model/translation/translation.dart';
 import 'package:pmp_english/model/translation_day/translation_day.dart';
 import 'package:pmp_english/screens/auth/login_screen.dart';
 import 'package:pmp_english/screens/auth/sign_up_screen.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:pmp_english/screens/main/free_user_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
@@ -18,6 +19,7 @@ import 'package:pmp_english/screens/translation/translation_practice_result_scre
 import '../../model/pattern/pattern.dart';
 import '../model/day/day.dart';
 import '../model/exercise/exercise.dart';
+import '../model/listening/listening.dart';
 import '../model/pattern_exercise/pattern_exercise.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
 import '../screens/main/home_screen.dart';
@@ -50,6 +52,7 @@ class PmpRoutes {
       '/self_practice_pattern/pattern_list/pattern_reply_screen';
   static const freeUserPage = '/free_user_page';
   static const newVersionScreen = '/new_version_screen';
+  static const listeningListPage = "/listening/listening_list_page";
   static const youtubeVideoPage = '/youtube_video_page';
   static const profilePage = '/profile_page';
 
@@ -146,11 +149,21 @@ class PmpRoutes {
           ),
           settings,
         );
-      case youtubeVideoPage:
-        // final args = settings.arguments as Map<String, dynamic>;
-        // final videoId = args['videoId'] as String;
+      case listeningListPage:
         return _getRoute(
-          const YoutubeVideoPage(),
+          const ListeningListPage(),
+          settings,
+        );
+
+      case youtubeVideoPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        final enableMMSub = args['enableMMSub'] as bool;
+        return _getRoute(
+          YoutubeVideoPage(
+            listening: listening,
+            enableMMSub: enableMMSub,
+          ),
           settings,
         );
       case freeUserPage:

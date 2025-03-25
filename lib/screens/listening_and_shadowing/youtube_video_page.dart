@@ -1,14 +1,25 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:pmp_english/bloc/listening/listening_bloc.dart';
+import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/widgets/listening_vocabulary_list.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/lyrics_widget.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 /// Homepage
 class YoutubeVideoPage extends StatefulWidget {
-  const YoutubeVideoPage({super.key});
+  const YoutubeVideoPage({
+    super.key,
+    required this.listening,
+    required this.enableMMSub,
+  });
+  final Listening listening;
+  final bool enableMMSub;
 
   @override
   State<YoutubeVideoPage> createState() => _YoutubeVideoPageState();
@@ -25,12 +36,10 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   final bool _muted = false;
   bool _isPlayerReady = false;
 
-  final _startPosition = 60;
-  final _endPosition = 180;
   late final Duration _startDuration;
   late final Duration _endDuration;
   int sliderPosition = 0;
-  late final _lyricsController = ScrollController();
+  final ScrollController _lyricsController = ScrollController();
 
   final int _currentIndex = 0;
   bool _readyToPlay = false;
@@ -40,14 +49,18 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   Subtitle _selectedSubtitle = Subtitle.empty;
   bool _isUserScrolling = false;
   bool _showLoadingLayout = false;
+  Timer? _scrollTimer;
+  final _showVocabularyNotifier = ValueNotifier<bool>(false);
+  final _vocabularyBloc = ListeningBloc();
 
   @override
   void initState() {
     super.initState();
-    _startDuration = Duration(seconds: _startPosition);
-    _endDuration = Duration(seconds: (_endPosition - _startPosition));
+    _startDuration = Duration(seconds: widget.listening.start);
+    _endDuration =
+        Duration(seconds: (widget.listening.end - widget.listening.start));
     _controller = YoutubePlayerController(
-      initialVideoId: 'pZ1NdE69VTs',
+      initialVideoId: widget.listening.youtubeId,
       flags: YoutubePlayerFlags(
         mute: false,
         autoPlay: false,
@@ -56,8 +69,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         loop: false,
         isLive: false,
         forceHD: false,
-        startAt: _startPosition,
-        endAt: _endPosition,
+        startAt: widget.listening.start,
+        endAt: widget.listening.end,
         enableCaption: false,
         captionLanguage: 'mm',
         hideControls: true,
@@ -72,9 +85,18 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         if (_lyricsController.position.userScrollDirection !=
             ScrollDirection.idle) {
           _isUserScrolling = true;
+          _scrollTimer?.cancel();
+          _scrollTimer = Timer(const Duration(milliseconds: 1500), () {
+            // User has stopped scrolling
+            setState(() {
+              _isUserScrolling = false;
+            });
+          });
         }
       },
     );
+    _vocabularyBloc
+        .add(ListeningEvent.loadVocabulariesByListening(widget.listening.id));
   }
 
   void listener() {
@@ -134,9 +156,13 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   @override
   void dispose() {
+    _showVocabularyNotifier.dispose();
     _controller.dispose();
     _idController.dispose();
     _seekToController.dispose();
+    _lyricsController.removeListener(listener);
+    _lyricsController.dispose();
+    _vocabularyBloc.close();
     super.dispose();
   }
 
@@ -146,6 +172,10 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       canPop: false,
       onPopInvokedWithResult: (didPop, result) {
         if (didPop) return;
+        if (_showVocabularyNotifier.value) {
+          _showVocabularyNotifier.value = false;
+          return;
+        }
         Future.delayed(const Duration(milliseconds: 300), () {
           if (context.mounted) Navigator.of(context).pop();
         });
@@ -163,83 +193,116 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                 ),
               ),
             )
-          : YoutubePlayerBuilder(
-              player: YoutubePlayer(
-                controller: _controller,
-                showVideoProgressIndicator: false,
-
-                topActions: const <Widget>[
-                  SizedBox(width: 8.0),
-                ],
-                // bottomActions: const [
-                //   SizedBox(),
-                // ],
-                thumbnail: const SizedBox(),
-                onReady: () {
-                  _isPlayerReady = true;
-                },
-                onEnded: (data) {},
-              ),
-              builder: (context, player) => MainScaffold(
-                appBar: AppBar(
-                  scrolledUnderElevation: 0.0,
-                  backgroundColor: const Color(0xFF0F2027),
-                  title: const Text(
-                    // _videoMetaData.title,
-                    "Youtube Video",
-                    style: TextStyle(color: Colors.white),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-                body: Column(
-                  children: [
-                    player,
-                    CustomControl(
-                      controller: _controller,
-                      startPosition: _startPosition,
-                      endPosition: _endPosition,
-                      startDuration: _startDuration,
-                      endDuration: _endDuration,
-                      readyToPlay: _readyToPlay,
-                      onSeek: () {
-                        setState(() {
-                          Future.delayed(const Duration(milliseconds: 100), () {
-                            _isUserScrolling = false;
-                          });
-                        });
-                      },
-                    ),
-                    Expanded(
-                      child: LyricsWidget(
-                        selectedSubtitle: _selectedSubtitle,
-                        startPosition: _startPosition,
-                        endPosition: _endPosition,
-                        mainController: _lyricsController,
-                        onTap: (subtitle) {
-                          setState(() {
-                            _controller.seekTo(subtitle.start);
-                            Future.delayed(const Duration(milliseconds: 100),
-                                () {
-                              _isUserScrolling = false;
-                              _selectedSubtitle = subtitle;
-                            });
-                          });
-                        },
-                        getSubtitleBoxHeights: (subtitleBoxHeights, subtitles) {
-                          if (_subtitleBoxHeights.isEmpty) {
-                            _subtitleBoxHeights.addAll(subtitleBoxHeights);
-                          }
-                          if (_subtitles.isEmpty) {
-                            _subtitles.addAll(subtitles);
-                          }
-                          setState(() {
-                            _readyToPlay = true;
-                          });
-                        },
-                      ),
-                    ),
+          : GestureDetector(
+              onTap: () {
+                if (_showVocabularyNotifier.value) {
+                  _showVocabularyNotifier.value = false;
+                }
+              },
+              child: YoutubePlayerBuilder(
+                player: YoutubePlayer(
+                  controller: _controller,
+                  showVideoProgressIndicator: false,
+                  topActions: const <Widget>[
+                    SizedBox(width: 8.0),
                   ],
+                  // bottomActions: const [
+                  //   SizedBox(),
+                  // ],
+                  thumbnail: const SizedBox(),
+                  onReady: () {
+                    _isPlayerReady = true;
+                  },
+                  onEnded: (data) {},
+                ),
+                builder: (context, player) => MainScaffold(
+                  appBar: AppBar(
+                    scrolledUnderElevation: 0.0,
+                    backgroundColor: const Color(0xFF0F2027),
+                    title: Text(
+                      widget.listening.title,
+                      style: const TextStyle(color: Colors.white),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                  ),
+                  body: SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      children: [
+                        player,
+                        CustomControl(
+                          controller: _controller,
+                          startPosition: widget.listening.start,
+                          endPosition: widget.listening.end,
+                          startDuration: _startDuration,
+                          endDuration: _endDuration,
+                          readyToPlay: _readyToPlay,
+                          onVocabulary: () {
+                            _showVocabularyNotifier.value =
+                                !_showVocabularyNotifier.value;
+                          },
+                          onSeek: () {
+                            setState(() {
+                              Future.delayed(const Duration(milliseconds: 100),
+                                  () {
+                                _isUserScrolling = false;
+                              });
+                            });
+                          },
+                        ),
+                        Expanded(
+                          child: Stack(
+                            children: [
+                              Positioned.fill(
+                                child: LyricsWidget(
+                                  selectedSubtitle: _selectedSubtitle,
+                                  listening: widget.listening,
+                                  mainController: _lyricsController,
+                                  enableMMSub: widget.enableMMSub,
+                                  onTap: (subtitle) {
+                                    setState(() {
+                                      _controller.seekTo(subtitle.start);
+                                      Future.delayed(
+                                          const Duration(milliseconds: 100),
+                                          () {
+                                        _isUserScrolling = false;
+                                        _selectedSubtitle = subtitle;
+                                      });
+                                    });
+                                  },
+                                  getSubtitleBoxHeights:
+                                      (subtitleBoxHeights, subtitles) {
+                                    if (_subtitleBoxHeights.isEmpty) {
+                                      _subtitleBoxHeights
+                                          .addAll(subtitleBoxHeights);
+                                    }
+                                    if (_subtitles.isEmpty) {
+                                      _subtitles.addAll(subtitles);
+                                    }
+                                    setState(() {
+                                      _readyToPlay = true;
+                                    });
+                                  },
+                                ),
+                              ),
+                              Positioned(
+                                top: 12,
+                                left: 12,
+                                right: 12,
+                                bottom: 12,
+                                child: ListeningVocabularyList(
+                                  showVocabularyNotifier:
+                                      _showVocabularyNotifier,
+                                  vocabularyBloc: _vocabularyBloc,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),

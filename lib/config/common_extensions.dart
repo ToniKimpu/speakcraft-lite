@@ -1,7 +1,8 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 
@@ -204,30 +205,60 @@ extension DurationExtension on Duration {
 }
 
 Future<List<Subtitle>> parseSrtFile(
-    String filePath, Duration startDuration, Duration endDuration) async {
+    String fileUrl, Duration startDuration, Duration endDuration) async {
   final List<Subtitle> subtitles = [];
-  final String data = await rootBundle.loadString(filePath);
 
-  final regex = RegExp(
-      r'(\d+)\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n(.*?)\n\n',
-      dotAll: true);
+  try {
+    final response = await http.get(Uri.parse(fileUrl));
 
-  int idCounter = 1; // Start IDs from 1
+    if (response.statusCode != 200) {
+      throw Exception("Failed to load subtitles: ${response.statusCode}");
+    }
 
-  for (final match in regex.allMatches(data)) {
-    final start = _parseDuration(match.group(2)!);
-    final end = _parseDuration(match.group(3)!);
-    if (startDuration > start || endDuration < end) continue;
-    final text = match.group(4)!.replaceAll("\n", " ");
+    final String data = utf8.decode(response.bodyBytes);
 
-    subtitles.add(Subtitle(
-      id: idCounter++, // Assign unique ID
-      start: start,
-      end: end,
-      text: text,
-    ));
+    final regex = RegExp(
+        r'(\d+)\s*\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\s*\n([\s\S]*?)(?:\n{2,}|\z)',
+        multiLine: true);
+
+    int idCounter = 1; // Start IDs from 1
+
+    for (final match in regex.allMatches(data)) {
+      final start = _parseDuration(match.group(2)!);
+      final end = _parseDuration(match.group(3)!);
+
+      if (startDuration > start || endDuration < end) continue;
+
+      String textBlock = match.group(4)!.trim();
+      List<String> lines = textBlock.split("\n");
+
+      String text = "";
+      String? burmese;
+
+      for (String line in lines) {
+        debugPrint("allSubtitleLine: $line");
+        line = line.trim();
+        if (line.startsWith("mm:")) {
+          burmese = line.substring(3).trim(); // Remove "mm:" and trim spaces
+        } else {
+          if (text.isNotEmpty) text += "\n"; // Keep multiline structure
+          text += line;
+        }
+      }
+
+      if (text.trim().isNotEmpty && (RegExp(r'[a-zA-Z]').hasMatch(text))) {
+        subtitles.add(Subtitle(
+          id: idCounter++, // Assign unique ID
+          start: start,
+          end: end,
+          text: text,
+          burmese: burmese, // Assign extracted Burmese text if available
+        ));
+      }
+    }
+  } catch (e) {
+    debugPrint("Error loading subtitles: $e");
   }
-
   return subtitles;
 }
 

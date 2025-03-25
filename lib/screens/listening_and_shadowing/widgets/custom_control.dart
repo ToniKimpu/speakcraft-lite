@@ -16,6 +16,7 @@ class CustomControl extends StatefulWidget {
     required this.endDuration,
     required this.readyToPlay,
     required this.onSeek,
+    required this.onVocabulary,
   });
   final YoutubePlayerController controller;
   final int startPosition;
@@ -24,6 +25,7 @@ class CustomControl extends StatefulWidget {
   final Duration endDuration;
   final bool readyToPlay;
   final VoidCallback onSeek;
+  final VoidCallback onVocabulary;
 
   @override
   State<CustomControl> createState() => _CustomControlState();
@@ -56,11 +58,6 @@ class _CustomControlState extends State<CustomControl> {
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           decoration: const BoxDecoration(
-            // gradient: LinearGradient(
-            //   colors: [Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364)],
-            //   begin: Alignment.topCenter,
-            //   end: Alignment.bottomCenter,
-            // ),
             color: Color(0xFF2C5364),
           ),
           child: Row(
@@ -187,6 +184,43 @@ class _CustomControlState extends State<CustomControl> {
                     Icons.forward_10,
                     color: PmpColors.white,
                     size: 18,
+                  ),
+                ),
+              ),
+              const Spacer(),
+              InkWell(
+                borderRadius: BorderRadius.circular(6),
+                onTap: () => widget.onVocabulary(),
+                child: Container(
+                  height: 24,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 0, horizontal: 8),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color(0xFFFFD700), // Gold
+                        Color(0xFFFFA500), // Deep Gold
+                        Color(0xFFB8860B), // Dark Golden
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(6),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        spreadRadius: 3,
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: Text(
+                      "voc",
+                      style:
+                          PmpTextStyles.labelSemi.copyWith(color: Colors.white),
+                    ),
                   ),
                 ),
               ),

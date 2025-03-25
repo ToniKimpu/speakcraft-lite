@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               label1: 'Listening လုပ်မယ်။',
               label2: 'Shadowing လိုက်လုပ်မယ်။',
               onPressed: () {
-                Navigator.pushNamed(context, PmpRoutes.youtubeVideoPage);
+                Navigator.pushNamed(context, PmpRoutes.listeningListPage);
               },
             ),
             const SizedBox(height: 24),
