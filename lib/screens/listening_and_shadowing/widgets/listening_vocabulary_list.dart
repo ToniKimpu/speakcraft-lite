@@ -66,7 +66,7 @@ class ListeningVocabularyList extends StatelessWidget {
                   );
                 },
                 vocabularyLoaded: (vocabularies) {
-                  if (vocabularies.isNotEmpty) {
+                  if (vocabularies.isEmpty) {
                     return Center(
                       child: Padding(
                         padding: const EdgeInsets.all(24),

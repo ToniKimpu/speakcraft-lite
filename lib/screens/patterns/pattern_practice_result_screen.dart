@@ -5,6 +5,7 @@ import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
+import '../../shared_widgets/main_scaffold.dart';
 
 class PatternPracticeResultScreen extends StatefulWidget {
   const PatternPracticeResultScreen({
@@ -43,7 +44,7 @@ class _PatternPracticeResultScreenState
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MainScaffold(
       appBar: AppBar(
         title: const Text('Result'),
       ),
@@ -102,88 +103,87 @@ class _PatternPracticeResultScreenState
   }
 
   _buildResultItem(PatternExercise patternExercise) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
+    return Card(
+      elevation: 12,
+      color: const Color(0xFF1C2C3C),
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        color: Colors.white,
-        border: Border.all(
-          color: PmpColors.neutral10.withOpacity(0.1),
-        ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Burmese',
-                style: PmpTextStyles.body2Semi.copyWith(
-                  color: Colors.black,
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Burmese',
+                  style: PmpTextStyles.body2Semi.copyWith(
+                    color: Colors.orange,
+                  ),
                 ),
-              ),
-              if (patternExercise.audioPath != null)
-                Material(
-                  borderRadius: BorderRadius.circular(12),
-                  color: PmpColors.primary400,
-                  child: InkWell(
+                if (patternExercise.audioPath != null)
+                  Material(
                     borderRadius: BorderRadius.circular(12),
-                    onTap: () {},
-                    child: const SizedBox(
-                      width: 24,
-                      height: 24,
-                      child: Icon(
-                        Icons.play_arrow,
-                        color: Colors.white,
-                        size: 16,
+                    color: PmpColors.white,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(12),
+                      onTap: () {},
+                      child: const SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: Icon(
+                          Icons.play_arrow,
+                          color: Color(0xFF1C2C3C),
+                          size: 16,
+                        ),
                       ),
                     ),
                   ),
-                ),
-            ],
-          ),
-          Text(
-            patternExercise.burmeseText,
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
+              ],
             ),
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          Text(
-            'English',
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: Colors.black,
+            Text(
+              patternExercise.burmeseText,
+              style: PmpTextStyles.body2Semi.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.normal,
+              ),
             ),
-          ),
-          Text(
-            patternExercise.englishText,
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
+            const SizedBox(
+              height: 12,
             ),
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          Text(
-            'Your Answer:',
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: Colors.black,
+            Text(
+              'English',
+              style: PmpTextStyles.body2Semi.copyWith(
+                color: Colors.orange,
+              ),
             ),
-          ),
-          Text(
-            patternExercise.userAnswer ?? "-",
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
+            Text(
+              patternExercise.englishText,
+              style: PmpTextStyles.body2Semi.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.normal,
+              ),
             ),
-          ),
-        ],
+            const SizedBox(
+              height: 12,
+            ),
+            Text(
+              'Your Answer:',
+              style: PmpTextStyles.body2Semi.copyWith(
+                color: Colors.orange,
+              ),
+            ),
+            Text(
+              patternExercise.userAnswer ?? "-",
+              style: PmpTextStyles.body2Semi.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

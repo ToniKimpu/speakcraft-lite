@@ -121,6 +121,8 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                       return Center(
                         child: Text(
                           AppLocalizations.of(context).txtWillUploadSoon,
+                          style: PmpTextStyles.body2Semi
+                              .copyWith(color: Colors.white),
                         ),
                       );
                     }

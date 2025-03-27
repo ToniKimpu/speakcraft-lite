@@ -20,11 +20,18 @@ class CompletedDayWidget extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
-        color: PmpColors.white,
-        border: Border.all(
-          color: PmpColors.neutral10.withOpacity(0.1),
-        ),
-        borderRadius: BorderRadius.circular(12),
+        color: Colors.white.withOpacity(0.08), // Dark card with transparency
+        borderRadius: BorderRadius.circular(16),
+        border:
+            Border.all(color: Colors.white.withOpacity(0.2)), // Subtle border
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.3),
+            blurRadius: 8,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +44,7 @@ class CompletedDayWidget extends StatelessWidget {
                 Text(
                   'Day ${day.orderNumber}',
                   style: PmpTextStyles.body1Regular.copyWith(
-                    color: PmpColors.black,
+                    color: PmpColors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -45,7 +52,7 @@ class CompletedDayWidget extends StatelessWidget {
                   width: 20,
                   height: 20,
                   decoration: BoxDecoration(
-                    color: PmpColors.primary400,
+                    color: Colors.orange,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: const Center(
@@ -62,7 +69,7 @@ class CompletedDayWidget extends StatelessWidget {
           Container(
             height: 1,
             width: double.infinity,
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.white.withOpacity(0.1),
             margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
           ),
           ...day.lessons.map((lesson) => CompletedLessonItem(lesson: lesson)),
@@ -70,7 +77,7 @@ class CompletedDayWidget extends StatelessWidget {
             Container(
               height: 1,
               width: double.infinity,
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.white.withOpacity(0.1),
               margin: const EdgeInsets.symmetric(
                 vertical: 12,
                 horizontal: 12,

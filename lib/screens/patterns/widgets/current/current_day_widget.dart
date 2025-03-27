@@ -28,11 +28,6 @@ class _CurrentDayWidgetState extends State<CurrentDayWidget> {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
-        // color: PmpColors.white,
-        // border: Border.all(
-        //   color: PmpColors.neutral10.withOpacity(0.1),
-        // ),
-        // borderRadius: BorderRadius.circular(12),
         color: Colors.white.withOpacity(0.08), // Dark card with transparency
         borderRadius: BorderRadius.circular(16),
         border:

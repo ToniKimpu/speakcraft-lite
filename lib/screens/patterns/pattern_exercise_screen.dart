@@ -146,7 +146,7 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
               listener: (context, state) {
                 state.whenOrNull(
                   loading: () {
-                    context.showLoadingDialog();
+                    context.showLoadingDialog(message: "saving...");
                   },
                   onSuccess: () {
                     context.hideLoadingDialog();
@@ -196,7 +196,7 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
       return Center(
           child: Text(
         AppLocalizations.of(context).txtWillUploadSoon,
-        style: PmpTextStyles.body1Regular.copyWith(color: PmpColors.black),
+        style: PmpTextStyles.body1Regular.copyWith(color: PmpColors.white),
       ));
     }
 

@@ -75,9 +75,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             .withConverter(
               (json) => AppUser.fromJson(json),
             );
-
         GlobalAppState().currentUser = appUser;
-
         if (!appUser.isPremiumUser!) {
           emit(const AuthState.onFreeUser());
           return;

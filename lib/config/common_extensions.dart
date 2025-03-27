@@ -155,6 +155,7 @@ class LoadingDialog extends StatelessWidget {
       elevation: 0,
       child: Card(
         elevation: 2,
+        color: const Color(0xFF1C2C3C),
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
@@ -169,14 +170,14 @@ class LoadingDialog extends StatelessWidget {
               Text(
                 message,
                 style:
-                    PmpTextStyles.body1Regular.copyWith(color: PmpColors.black),
+                    PmpTextStyles.body1Regular.copyWith(color: PmpColors.white),
               ),
               if (subMessage.isNotEmpty) ...[
                 const SizedBox(height: 4),
                 Text(
                   subMessage,
                   style: PmpTextStyles.body2Medium
-                      .copyWith(color: PmpColors.black),
+                      .copyWith(color: PmpColors.white),
                 ),
               ]
             ],
