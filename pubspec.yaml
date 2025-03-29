@@ -81,13 +81,12 @@ flutter_launcher_icons:
   ios: true
   remove_alpha_ios: true
   min_sdk_android: 21
-  
-  image_path: "logo/app_logo.png"  # Main app icon
+
+  image_path: "logo/app_logo.png" # Main app icon
   adaptive_icon_foreground: "logo/app_logo.png"
   adaptive_icon_background: "#000000"
 
-  android_notification_icon: "logo/ic_notification.png"  # Notification icon
-
+  android_notification_icon: "logo/ic_notification.png" # Notification icon
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -105,6 +104,7 @@ flutter:
     - assets/images/
     - assets/images/profiles/
     - assets/temps/
+    - shorebird.yaml
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

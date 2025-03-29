@@ -1,0 +1,2 @@
+D:/PMP_Projects/pmp-english-mobile/android/app/.cxx/RelWithDebInfo/c4h91y2x/x86_64/CMakeFiles/edit_cache.dir
+D:/PMP_Projects/pmp-english-mobile/android/app/.cxx/RelWithDebInfo/c4h91y2x/x86_64/CMakeFiles/rebuild_cache.dir
