@@ -25,6 +25,7 @@ class PmpColors {
   static const Color neutral700 = Color(0xFF4D4D4D);
   static const Color neutral800 = Color(0xFF333333);
   static const Color neutral900 = Color(0xFF1A1A1A);
+  static const Color neutral950 = Color(0xFF181818);
   static const Color transparent = Colors.transparent;
   static const Color green = Color(0xFF4FD05C);
   static const Color info50 = Color(0xFFF5FAFD);

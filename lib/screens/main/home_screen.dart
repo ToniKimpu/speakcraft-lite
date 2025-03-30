@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
@@ -50,12 +51,13 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             const SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: () {
-                context.read<AuthBloc>().add(const AuthEvent.logout());
-              },
-              child: const Text('Logout'),
-            ),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
+                  context.read<AuthBloc>().add(const AuthEvent.logout());
+                },
+                child: const Text('Logout'),
+              ),
           ],
         ),
       ),

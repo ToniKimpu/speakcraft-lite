@@ -15,6 +15,9 @@ class AuthTextField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final void Function(String)? onSubmitted;
   final void Function(String)? onChanged;
+  final Color? fillColor;
+  final Color? textColor;
+  final Color? cursorColor;
 
   const AuthTextField({
     super.key,
@@ -31,6 +34,9 @@ class AuthTextField extends StatelessWidget {
     this.textInputAction,
     this.onSubmitted,
     this.onChanged,
+    this.fillColor,
+    this.textColor,
+    this.cursorColor,
   });
 
   @override
@@ -62,8 +68,9 @@ class AuthTextField extends StatelessWidget {
       textInputAction: textInputAction,
       onFieldSubmitted: onSubmitted,
       onChanged: (value) => onChanged?.call(value),
+      cursorColor: cursorColor,
       style: TextStyle(
-        color: colorScheme.onSurface,
+        color: textColor ?? colorScheme.onSurface,
       ),
       decoration: InputDecoration(
         labelText: labelText,
@@ -84,7 +91,7 @@ class AuthTextField extends StatelessWidget {
               )
             : null,
         filled: true,
-        fillColor: PmpColors.white,
+        fillColor: fillColor ?? PmpColors.white,
         border: border,
         enabledBorder: border,
         focusedBorder: OutlineInputBorder(

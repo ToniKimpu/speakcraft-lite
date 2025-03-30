@@ -89,6 +89,76 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Name`
+  String get txtName {
+    return Intl.message(
+      'Name',
+      name: 'txtName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Name`
+  String get txtChangeName {
+    return Intl.message(
+      'Change Name',
+      name: 'txtChangeName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Avatar`
+  String get txtChangeAvatar {
+    return Intl.message(
+      'Change Avatar',
+      name: 'txtChangeAvatar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account ID`
+  String get txtAccountID {
+    return Intl.message(
+      'Account ID',
+      name: 'txtAccountID',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get txtPrivacyPolicy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'txtPrivacyPolicy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Content Request`
+  String get txtContentRequest {
+    return Intl.message(
+      'Content Request',
+      name: 'txtContentRequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Feedback`
+  String get txtFeedback {
+    return Intl.message(
+      'Feedback',
+      name: 'txtFeedback',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

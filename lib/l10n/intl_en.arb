@@ -2,5 +2,12 @@
   "txtOk": "Okay",
   "txtCancel": "Cancel",
   "txtComingSoon": "Coming Soon",
-  "txtWillUploadSoon": "မကြာခင်တင်ပေးပါမည်"
+  "txtWillUploadSoon": "မကြာခင်တင်ပေးပါမည်",
+  "txtName": "Name",
+  "txtChangeName": "Change Name",
+  "txtChangeAvatar": "Change Avatar",
+  "txtAccountID": "Account ID",
+  "txtPrivacyPolicy": "Privacy Policy",
+  "txtContentRequest": "Content Request",
+  "txtFeedback": "Feedback"
 }

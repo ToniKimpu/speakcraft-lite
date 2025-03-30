@@ -137,7 +137,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       loading: () => true,
                                     ) ??
                                 false;
-                        return InkWell(
+                        return 
+                        InkWell(
                           borderRadius: BorderRadius.circular(8),
                           onTap: () {
                             if (_currentIndexNotifier.value == 0 &&

@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/config/common_extensions.dart';
+import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/screens/main/widgets/app_version_widget.dart';
+import 'package:pmp_english/screens/main/widgets/profile_item_row.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import '../../shared_widgets/default_profile.dart';
+import '../../config/env.dart';
+import '../../config/pmp_colors.dart';
+import '../../config/pmp_text_styles.dart';
+import '../../l10n/generated/l10n.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -22,114 +29,125 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     final appUser = GlobalAppState().currentUser;
     return MainScaffold(
-        appBar: AppBar(
-          title: const Text('Profile'),
-        ),
-        body: Center(
-          child: Container(
+      appBar: AppBar(
+        title: const Text('Profile'),
+      ),
+      body: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(50),
+            child: Image.asset(
+              appUser.profilePath != null && appUser.profilePath!.isNotEmpty
+                  ? 'assets/images/profiles/${appUser.profilePath}'
+                  : "assets/images/app_logo.png",
+              width: 100,
+              height: 100,
+            ),
+          ),
+          Text(
+            appUser.name,
+            style: PmpTextStyles.body2Semi.copyWith(
+              color: PmpColors.neutral100,
+            ),
+          ),
+          const AppVersionWidget(),
+          Container(
             width: double.infinity,
-            margin: const EdgeInsets.symmetric(horizontal: 24),
-            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
+              color:
+                  Colors.white.withOpacity(0.08), // Dark card with transparency
+              borderRadius: BorderRadius.circular(16),
               border: Border.all(
-                color: Colors.blue.withOpacity(0.5),
-                width: 4,
-              ),
+                  color: Colors.white.withOpacity(0.4)), // Subtle border
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 8,
+                  spreadRadius: 2,
+                  offset: const Offset(0, 4),
+                ),
+              ],
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                if (appUser.profilePath != null)
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.blue.withOpacity(0.6),
-                          blurRadius: 18,
-                          spreadRadius: 4,
-                          offset: const Offset(0, 6),
-                        ),
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(9999),
-                      child: Image.asset(
-                        'assets/images/profiles/${appUser.profilePath}',
-                        width: 80,
-                        height: 80,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                if (appUser.profilePath == null) const DefaultProfile(),
-                const SizedBox(height: 12),
-                Text(
-                  appUser.name,
-                  style: PmpTextStyles.body2Semi.copyWith(
-                    color: Colors.black.withOpacity(0.95),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    shadows: [
-                      Shadow(
-                        color: Colors.blue.withOpacity(0.4),
-                        blurRadius: 12,
-                      ),
-                    ],
-                  ),
+              children: [
+                ProfileItemRow(
+                  label: AppLocalizations.of(context).txtChangeName,
+                  icon: "assets/images/ic_profile_white.png",
+                  onTap: () async {
+                    if (!context.mounted) return;
+                    final result = await Navigator.pushNamed(
+                        context, PmpRoutes.updateUserName) as bool?;
+                    if (result != null && result == true) {
+                      setState(() {});
+                    }
+                  },
                 ),
-                Text(
-                  '(${appUser.email})',
-                  style: PmpTextStyles.label2Regular.copyWith(
-                    color: Colors.black.withOpacity(0.8),
-                    fontSize: 14,
-                  ),
+                const SizedBox(
+                  height: 8,
                 ),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 12,
-                      height: 12,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.orange.withOpacity(0.8),
-                            blurRadius: 15,
-                            spreadRadius: 5,
-                          ),
-                        ],
-                        gradient: const LinearGradient(
-                          colors: [Colors.amber, Colors.deepOrange],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 16),
-                    Text(
-                      appUser.accountId,
-                      style: PmpTextStyles.body2Semi.copyWith(
-                        color: Colors.black.withOpacity(0.95),
-                        fontSize: 15,
-                        shadows: [
-                          Shadow(
-                            color: Colors.orange.withOpacity(0.3),
-                            blurRadius: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                ProfileItemRow(
+                  label: AppLocalizations.of(context).txtChangeAvatar,
+                  icon: "assets/images/ic_change_avator.png",
+                  onTap: () async {
+                    final result = await Navigator.pushNamed(
+                        context, PmpRoutes.updateAvatarPage) as bool?;
+                    if (result != null && result == true) {
+                      setState(() {});
+                    }
+                  },
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                ProfileItemRow(
+                  label: AppLocalizations.of(context).txtAccountID,
+                  icon: "assets/images/ic_account_id.png",
+                  accountId: GlobalAppState().currentUser.accountId,
+                  onTap: () {
+                    appUser.accountId.copyToClipboard();
+                  },
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                ProfileItemRow(
+                  label: AppLocalizations.of(context).txtPrivacyPolicy,
+                  icon: "assets/images/ic_privacy_policy.png",
+                  onTap: () async {
+                    if (await canLaunchUrl(Uri.parse(Env.privacyPolicyUrl))) {
+                      launchUrl(
+                        Uri.parse(Env.privacyPolicyUrl),
+                        mode: LaunchMode.inAppBrowserView,
+                      );
+                    } else {
+                      showErrorSnackbar("Failed to open browser!");
+                    }
+                  },
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                // ProfileItemRow(
+                //   label: AppLocalizations.of(context).txtContentRequest,
+                //   icon: "assets/images/ic_content_request.png",
+                //   onTap: () {},
+                // ),
+                // const SizedBox(
+                //   height: 8,
+                // ),
+                ProfileItemRow(
+                  label: AppLocalizations.of(context).txtFeedback,
+                  icon: "assets/images/ic_feedback.png",
+                  onTap: () {},
                 ),
               ],
             ),
           ),
-        ));
+        ],
+      ),
+    );
   }
 }

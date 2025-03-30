@@ -9,6 +9,8 @@ import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.
 import 'package:pmp_english/screens/main/free_user_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
+import 'package:pmp_english/screens/profiles/update_avatar_page.dart';
+import 'package:pmp_english/screens/profiles/update_name_page.dart';
 import 'package:pmp_english/screens/self_practice_pattern/pattern_list.dart';
 import 'package:pmp_english/screens/self_practice_pattern/pattern_reply_screen.dart';
 import 'package:pmp_english/screens/translation/translation_day_list.dart';
@@ -55,6 +57,8 @@ class PmpRoutes {
   static const listeningListPage = "/listening/listening_list_page";
   static const youtubeVideoPage = '/youtube_video_page';
   static const profilePage = '/profile_page';
+  static const updateUserName = '/update_user_name';
+  static const updateAvatarPage = '/update_avatar_page';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -176,6 +180,10 @@ class PmpRoutes {
               appVersion: appVersion,
             ),
             settings);
+      case updateUserName:
+        return _getRoute(const UpdateNamePage(), settings);
+      case updateAvatarPage:
+        return _getRoute(const UpdateAvatarPage(), settings);
       default:
         throw Exception(
           'Sorry, path ${settings.name} is invalid!',

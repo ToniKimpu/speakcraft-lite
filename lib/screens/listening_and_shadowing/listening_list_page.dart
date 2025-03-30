@@ -7,6 +7,7 @@ import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../config/pmp_routes.dart';
+import '../../l10n/generated/l10n.dart';
 
 class ListeningListPage extends StatefulWidget {
   const ListeningListPage({super.key});
@@ -44,102 +45,91 @@ class _ListeningListPageState extends State<ListeningListPage> {
                   child: CircularProgressIndicator(),
                 ),
               ),
-              loaded: (listenings) => ListView.builder(
-                padding: const EdgeInsets.all(16),
-                itemCount: listenings.length,
-                itemBuilder: (context, index) {
-                  final listening = listenings[index];
-                  final isExpanded = expandedIndex == index;
+              loaded: (listenings) {
+                if (listenings.isEmpty) {
+                  return Center(
+                    child: Text(
+                      AppLocalizations.of(context).txtWillUploadSoon,
+                      style:
+                          PmpTextStyles.body2Semi.copyWith(color: Colors.white),
+                    ),
+                  );
+                }
+                return ListView.builder(
+                  padding: const EdgeInsets.all(16),
+                  itemCount: listenings.length,
+                  itemBuilder: (context, index) {
+                    final listening = listenings[index];
+                    final isExpanded = expandedIndex == index;
 
-                  return GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        expandedIndex = isExpanded ? null : index;
-                      });
-                    },
-                    child: Card(
-                      margin: const EdgeInsets.only(bottom: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      elevation: 4,
-                      child: Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: Column(
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(8),
-                                  child: CachedNetworkImage(
-                                    imageUrl: listening.thumbnail,
-                                    width: 60,
-                                    height: 60,
-                                    fit: BoxFit.cover,
-                                    placeholder: (context, url) => Container(
-                                      width: 60,
-                                      height: 60,
-                                      color: const Color(0xFF203A43),
-                                    ),
-                                    errorWidget: (context, url, error) =>
-                                        Container(
-                                      width: 60,
-                                      height: 60,
-                                      color: const Color(0xFF203A43),
-                                      child: const Icon(
-                                        Icons.broken_image,
-                                        size: 20,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(width: 12),
-                                Expanded(
-                                  child: Text(
-                                    listening.title,
-                                    style: PmpTextStyles.body2Semi
-                                        .copyWith(color: Colors.black87),
-                                  ),
-                                ),
-                                Icon(
-                                  isExpanded
-                                      ? Icons.keyboard_arrow_up
-                                      : Icons.keyboard_arrow_down,
-                                  color: Colors.black54,
-                                ),
-                              ],
-                            ),
-                            if (isExpanded)
-                              Column(
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          expandedIndex = isExpanded ? null : index;
+                        });
+                      },
+                      child: Card(
+                        margin: const EdgeInsets.only(bottom: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        elevation: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  const SizedBox(height: 8),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                            backgroundColor:
-                                                const Color(0xFF2C5364)),
-                                        onPressed: () {
-                                          Navigator.pushNamed(
-                                            context,
-                                            PmpRoutes.youtubeVideoPage,
-                                            arguments: {
-                                              "listening": listening,
-                                              "enableMMSub": false,
-                                            },
-                                          );
-                                        },
-                                        child: Text(
-                                          'Open',
-                                          style: PmpTextStyles.body2Semi
-                                              .copyWith(color: Colors.white),
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: CachedNetworkImage(
+                                      imageUrl: listening.thumbnail,
+                                      width: 60,
+                                      height: 60,
+                                      fit: BoxFit.cover,
+                                      placeholder: (context, url) => Container(
+                                        width: 60,
+                                        height: 60,
+                                        color: const Color(0xFF203A43),
+                                      ),
+                                      errorWidget: (context, url, error) =>
+                                          Container(
+                                        width: 60,
+                                        height: 60,
+                                        color: const Color(0xFF203A43),
+                                        child: const Icon(
+                                          Icons.broken_image,
+                                          size: 20,
+                                          color: Colors.white,
                                         ),
                                       ),
-                                      const SizedBox(width: 6),
-                                      if (listening.hasMMSubtitle)
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    child: Text(
+                                      listening.title,
+                                      style: PmpTextStyles.body2Semi
+                                          .copyWith(color: Colors.black87),
+                                    ),
+                                  ),
+                                  Icon(
+                                    isExpanded
+                                        ? Icons.keyboard_arrow_up
+                                        : Icons.keyboard_arrow_down,
+                                    color: Colors.black54,
+                                  ),
+                                ],
+                              ),
+                              if (isExpanded)
+                                Column(
+                                  children: [
+                                    const SizedBox(height: 8),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
                                         ElevatedButton(
                                           style: ElevatedButton.styleFrom(
                                               backgroundColor:
@@ -150,35 +140,59 @@ class _ListeningListPageState extends State<ListeningListPage> {
                                               PmpRoutes.youtubeVideoPage,
                                               arguments: {
                                                 "listening": listening,
-                                                "enableMMSub": true,
+                                                "enableMMSub": false,
                                               },
                                             );
                                           },
                                           child: Text(
-                                            'Open with mm sub',
+                                            'Open',
                                             style: PmpTextStyles.body2Semi
                                                 .copyWith(color: Colors.white),
                                           ),
                                         ),
-                                    ],
-                                  ),
-                                ],
-                              )
-                                  .animate(
-                                      target: isExpanded
-                                          ? 1
-                                          : 0) // Control animation
-                                  .fade(duration: 500.ms) // Fade effect
-                                  .slideY(
-                                      begin: -0.1,
-                                      duration: 500.ms), // Slide down
-                          ],
+                                        const SizedBox(width: 6),
+                                        if (listening.hasMMSubtitle)
+                                          ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                backgroundColor:
+                                                    const Color(0xFF2C5364)),
+                                            onPressed: () {
+                                              Navigator.pushNamed(
+                                                context,
+                                                PmpRoutes.youtubeVideoPage,
+                                                arguments: {
+                                                  "listening": listening,
+                                                  "enableMMSub": true,
+                                                },
+                                              );
+                                            },
+                                            child: Text(
+                                              'Open with mm sub',
+                                              style: PmpTextStyles.body2Semi
+                                                  .copyWith(
+                                                      color: Colors.white),
+                                            ),
+                                          ),
+                                      ],
+                                    ),
+                                  ],
+                                )
+                                    .animate(
+                                        target: isExpanded
+                                            ? 1
+                                            : 0) // Control animation
+                                    .fade(duration: 500.ms) // Fade effect
+                                    .slideY(
+                                        begin: -0.1,
+                                        duration: 500.ms), // Slide down
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
-              ),
+                    );
+                  },
+                );
+              },
               orElse: () => Container(),
             );
           },

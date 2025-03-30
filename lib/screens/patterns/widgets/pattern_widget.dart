@@ -171,9 +171,8 @@ class PatternWidget extends StatelessWidget {
         //     height: 12,
         //   ),
         // ],
-
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          padding: const EdgeInsets.only(left: 24, right: 24, top: 12),
           child: Text(
             'Examples',
             style: PmpTextStyles.body2Semi.copyWith(
@@ -182,15 +181,17 @@ class PatternWidget extends StatelessWidget {
           ),
         ),
         if (pattern.patternExamples!.isNotEmpty)
-          ListView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: pattern.patternExamples!.length,
-            itemBuilder: (context, index) {
-              return ExampleWidget(
-                patternExample: pattern.patternExamples![index],
-              );
-            },
+          Expanded(
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: pattern.patternExamples!.length,
+              padding: const EdgeInsets.only(top: 12),
+              itemBuilder: (context, index) {
+                return ExampleWidget(
+                  patternExample: pattern.patternExamples![index],
+                );
+              },
+            ),
           ),
       ],
     );
