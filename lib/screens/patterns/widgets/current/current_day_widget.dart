@@ -7,6 +7,7 @@ import 'package:pmp_english/screens/patterns/widgets/exercise_item_loading.dart'
 
 import '../../../../config/pmp_colors.dart';
 import '../../../../config/pmp_text_styles.dart';
+import '../../../../l10n/generated/l10n.dart';
 import '../../../../model/day/day.dart';
 
 class CurrentDayWidget extends StatefulWidget {
@@ -54,12 +55,26 @@ class _CurrentDayWidgetState extends State<CurrentDayWidget> {
               ),
             ),
           ),
-          Container(
-            height: 1,
-            width: double.infinity,
-            color: Colors.white.withOpacity(0.1),
-            margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-          ),
+          if (widget.day.lessons.isEmpty && widget.day.exercises.isEmpty)
+            SizedBox(
+              height: 120,
+              width: double.infinity,
+              child: Center(
+                child: Text(
+                  AppLocalizations.of(context).txtWillUploadSoon,
+                  style: PmpTextStyles.body1Regular.copyWith(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          if (widget.day.lessons.isNotEmpty)
+            Container(
+              height: 1,
+              width: double.infinity,
+              color: Colors.white.withOpacity(0.1),
+              margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+            ),
           ...widget.day.lessons.map(
             (lesson) => CurrentLessonItem(lesson: lesson),
           ),

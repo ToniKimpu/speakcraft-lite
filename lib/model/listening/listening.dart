@@ -16,7 +16,7 @@ class Listening with _$Listening {
     @JsonKey(name: 'mm_subtitle') required bool hasMMSubtitle,
     @JsonKey(name: 'youtube_id') required String youtubeId,
     @JsonKey(name: 'subtitle_path') required String subtitlePath,
-    @JsonKey(name: 'listening_category_id') required int listeningCategoryId,
+    @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
   }) = _Listening;
 
   factory Listening.fromJson(Map<String, dynamic> json) =>

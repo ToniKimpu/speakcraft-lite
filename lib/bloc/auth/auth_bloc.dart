@@ -35,6 +35,7 @@ abstract class AuthState with _$AuthState {
 }
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
+  
   AuthBloc() : super(const AuthState.initial()) {
     on<AuthEvent>((event, emit) async {
       try {

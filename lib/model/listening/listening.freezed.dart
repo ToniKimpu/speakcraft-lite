@@ -32,7 +32,7 @@ mixin _$Listening {
   @JsonKey(name: 'subtitle_path')
   String get subtitlePath => throw _privateConstructorUsedError;
   @JsonKey(name: 'listening_category_id')
-  int get listeningCategoryId => throw _privateConstructorUsedError;
+  int? get listeningCategoryId => throw _privateConstructorUsedError;
 
   /// Serializes this Listening to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -58,7 +58,7 @@ abstract class $ListeningCopyWith<$Res> {
       @JsonKey(name: 'mm_subtitle') bool hasMMSubtitle,
       @JsonKey(name: 'youtube_id') String youtubeId,
       @JsonKey(name: 'subtitle_path') String subtitlePath,
-      @JsonKey(name: 'listening_category_id') int listeningCategoryId});
+      @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
 }
 
 /// @nodoc
@@ -84,7 +84,7 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
     Object? hasMMSubtitle = null,
     Object? youtubeId = null,
     Object? subtitlePath = null,
-    Object? listeningCategoryId = null,
+    Object? listeningCategoryId = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -119,10 +119,10 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
           ? _value.subtitlePath
           : subtitlePath // ignore: cast_nullable_to_non_nullable
               as String,
-      listeningCategoryId: null == listeningCategoryId
+      listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
@@ -144,7 +144,7 @@ abstract class _$$ListeningImplCopyWith<$Res>
       @JsonKey(name: 'mm_subtitle') bool hasMMSubtitle,
       @JsonKey(name: 'youtube_id') String youtubeId,
       @JsonKey(name: 'subtitle_path') String subtitlePath,
-      @JsonKey(name: 'listening_category_id') int listeningCategoryId});
+      @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
 }
 
 /// @nodoc
@@ -168,7 +168,7 @@ class __$$ListeningImplCopyWithImpl<$Res>
     Object? hasMMSubtitle = null,
     Object? youtubeId = null,
     Object? subtitlePath = null,
-    Object? listeningCategoryId = null,
+    Object? listeningCategoryId = freezed,
   }) {
     return _then(_$ListeningImpl(
       id: null == id
@@ -203,10 +203,10 @@ class __$$ListeningImplCopyWithImpl<$Res>
           ? _value.subtitlePath
           : subtitlePath // ignore: cast_nullable_to_non_nullable
               as String,
-      listeningCategoryId: null == listeningCategoryId
+      listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -223,8 +223,7 @@ class _$ListeningImpl implements _Listening {
       @JsonKey(name: 'mm_subtitle') required this.hasMMSubtitle,
       @JsonKey(name: 'youtube_id') required this.youtubeId,
       @JsonKey(name: 'subtitle_path') required this.subtitlePath,
-      @JsonKey(name: 'listening_category_id')
-      required this.listeningCategoryId});
+      @JsonKey(name: 'listening_category_id') this.listeningCategoryId});
 
   factory _$ListeningImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListeningImplFromJson(json);
@@ -250,7 +249,7 @@ class _$ListeningImpl implements _Listening {
   final String subtitlePath;
   @override
   @JsonKey(name: 'listening_category_id')
-  final int listeningCategoryId;
+  final int? listeningCategoryId;
 
   @override
   String toString() {
@@ -310,7 +309,7 @@ abstract class _Listening implements Listening {
       @JsonKey(name: 'youtube_id') required final String youtubeId,
       @JsonKey(name: 'subtitle_path') required final String subtitlePath,
       @JsonKey(name: 'listening_category_id')
-      required final int listeningCategoryId}) = _$ListeningImpl;
+      final int? listeningCategoryId}) = _$ListeningImpl;
 
   factory _Listening.fromJson(Map<String, dynamic> json) =
       _$ListeningImpl.fromJson;
@@ -336,7 +335,7 @@ abstract class _Listening implements Listening {
   String get subtitlePath;
   @override
   @JsonKey(name: 'listening_category_id')
-  int get listeningCategoryId;
+  int? get listeningCategoryId;
 
   /// Create a copy of Listening
   /// with the given fields replaced by the non-null parameter values.

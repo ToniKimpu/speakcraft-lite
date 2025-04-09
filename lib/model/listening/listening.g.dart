@@ -16,7 +16,7 @@ _$ListeningImpl _$$ListeningImplFromJson(Map<String, dynamic> json) =>
       hasMMSubtitle: json['mm_subtitle'] as bool,
       youtubeId: json['youtube_id'] as String,
       subtitlePath: json['subtitle_path'] as String,
-      listeningCategoryId: (json['listening_category_id'] as num).toInt(),
+      listeningCategoryId: (json['listening_category_id'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$ListeningImplToJson(_$ListeningImpl instance) =>

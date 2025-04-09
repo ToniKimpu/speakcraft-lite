@@ -120,12 +120,13 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
             ),
 
           // Vocabulary List
-          ValueListenableBuilder<bool>(
-            valueListenable: _showVocabularyNotifier,
-            builder: (context, showVocabulary, child) {
-              return _buildVocabularyList(showVocabulary);
-            },
-          ),
+          if (widget.patternExercise.vocabularies.isNotEmpty)
+            ValueListenableBuilder<bool>(
+              valueListenable: _showVocabularyNotifier,
+              builder: (context, showVocabulary, child) {
+                return _buildVocabularyList(showVocabulary);
+              },
+            ),
         ],
       ),
     );
