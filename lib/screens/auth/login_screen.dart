@@ -8,6 +8,7 @@ import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_button.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_card.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_text_field.dart';
+import 'package:pmp_english/screens/main/device_failed_screen.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../main/home_screen.dart';
@@ -55,6 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
             },
             authenticated: () {
               _loadingNotifier.value = false;
+              debugPrint("_loginScreen: Authenticated");
               Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
@@ -62,6 +64,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 ModalRoute.withName(
                   PmpRoutes.home,
+                ),
+              );
+            },
+            deviceIdFailed: () {
+              _loadingNotifier.value = false;
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DeviceFailedScreen(),
+                ),
+                ModalRoute.withName(
+                  PmpRoutes.deviceFailedScreen,
                 ),
               );
             },

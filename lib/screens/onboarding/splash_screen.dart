@@ -34,9 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         listener: (context, state) {
           state.maybeWhen(
             authenticated: () {
-              Navigator.pushReplacementNamed(context, PmpRoutes.home
-                  // (route) => false,
-                  );
+              Navigator.pushReplacementNamed(context, PmpRoutes.home);
             },
             unauthenticated: () {
               Navigator.pushReplacementNamed(
@@ -60,7 +58,12 @@ class _SplashScreenState extends State<SplashScreen> {
                 },
               );
             },
-            deviceIdFailed: () {},
+            deviceIdFailed: () {
+              Navigator.pushReplacementNamed(
+                context,
+                PmpRoutes.deviceFailedScreen,
+              );
+            },
             error: (message) {},
             orElse: () => Container(),
           );

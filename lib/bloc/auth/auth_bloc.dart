@@ -35,7 +35,6 @@ abstract class AuthState with _$AuthState {
 }
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  
   AuthBloc() : super(const AuthState.initial()) {
     on<AuthEvent>((event, emit) async {
       try {
@@ -97,15 +96,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             return;
           }
         }
-
         if (appUser.deviceId != null &&
             appUser.deviceId != GlobalAppState().deviceID) {
+          await supabase.auth.signOut();
           emit(
             const AuthState.deviceIdFailed(),
           );
           return;
         }
-
         emit(const AuthState.authenticated());
       } else {
         emit(const AuthState.unauthenticated());
@@ -169,8 +167,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       String email, String password, Emitter<AuthState> emit) async {
     try {
       emit(const AuthState.loading());
+      debugPrint(
+          "_mapLoginWithEmailToState: email: $email, password: $password");
       await supabase.auth.signInWithPassword(email: email, password: password);
       final user = supabase.auth.currentUser;
+      debugPrint("_mapLoginWithEmailToState: ${user?.id} user id!");
       final appUser = await supabase
           .rpc(
             'get_user',
@@ -180,6 +181,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           .withConverter(
             (json) => AppUser.fromJson(json),
           );
+      debugPrint(
+          "_mapLoginWithEmailToState: ${appUser.isPremiumUser} is premium user!");
       GlobalAppState().currentUser = appUser;
       if (!appUser.isPremiumUser!) {
         emit(const AuthState.onFreeUser());
@@ -191,8 +194,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const AuthState.deviceIdFailed());
         return;
       }
+      debugPrint(
+          "_mapLoginWithEmailToState: authenticated successfully! ${user.id}");
       emit(const AuthState.authenticated());
     } catch (error) {
+      debugPrint("_onAuthBlocError: ${error.toString()} Error!");
       emit(AuthState.error(error.toString()));
     }
   }

@@ -7,6 +7,7 @@ import 'package:pmp_english/screens/auth/login_screen.dart';
 import 'package:pmp_english/screens/auth/sign_up_screen.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:pmp_english/screens/main/free_user_screen.dart';
+import 'package:pmp_english/screens/main/new_path_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/profiles/update_avatar_page.dart';
@@ -24,6 +25,7 @@ import '../model/exercise/exercise.dart';
 import '../model/listening/listening.dart';
 import '../model/pattern_exercise/pattern_exercise.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
+import '../screens/main/device_failed_screen.dart';
 import '../screens/main/home_screen.dart';
 import '../screens/main/profile_page.dart';
 import '../screens/onboarding/splash_screen.dart';
@@ -59,6 +61,8 @@ class PmpRoutes {
   static const profilePage = '/profile_page';
   static const updateUserName = '/update_user_name';
   static const updateAvatarPage = '/update_avatar_page';
+  static const newPathScreen = '/new_path_screen';
+  static const deviceFailedScreen = '/device_failed_screen';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -184,6 +188,10 @@ class PmpRoutes {
         return _getRoute(const UpdateNamePage(), settings);
       case updateAvatarPage:
         return _getRoute(const UpdateAvatarPage(), settings);
+      case newPathScreen:
+        return _getRoute(const NewPathScreen(), settings);
+      case deviceFailedScreen:
+        return _getRoute(const DeviceFailedScreen(), settings);
       default:
         throw Exception(
           'Sorry, path ${settings.name} is invalid!',
