@@ -3,8 +3,8 @@
     "platforms": {
       "android": {
         "default": {
-          "projectId": "pmp-english-6d906",
-          "appId": "1:1022138253974:android:4ae97c59ba15e01a4b78b7",
+          "projectId": "pmp-english-prod",
+          "appId": "1:681598698244:android:093c9c44074022eb658651",
           "fileOutput": "android/app/google-services.json"
         }
       },
@@ -12,15 +12,13 @@
         "lib/firebase_options_dev.dart": {
           "projectId": "pmp-english-dev",
           "configurations": {
-            "android": "1:184571582087:android:257ef835733e12dfd60a22",
-            "ios": "1:184571582087:ios:0b90c6de6b0fdeb7d60a22"
+            "android": "1:184571582087:android:2c88ad6af86c4abcd60a22"
           }
         },
-        "lib/firebase_options_prod.dart": {
-          "projectId": "pmp-english-6d906",
+        "lib/firebase_options.dart": {
+          "projectId": "pmp-english-prod",
           "configurations": {
-            "android": "1:1022138253974:android:4ae97c59ba15e01a4b78b7",
-            "ios": "1:184571582087:ios:0b90c6de6b0fdeb7d60a22"
+            "android": "1:681598698244:android:093c9c44074022eb658651"
           }
         }
       }

@@ -167,11 +167,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       String email, String password, Emitter<AuthState> emit) async {
     try {
       emit(const AuthState.loading());
-      debugPrint(
-          "_mapLoginWithEmailToState: email: $email, password: $password");
       await supabase.auth.signInWithPassword(email: email, password: password);
       final user = supabase.auth.currentUser;
-      debugPrint("_mapLoginWithEmailToState: ${user?.id} user id!");
       final appUser = await supabase
           .rpc(
             'get_user',
@@ -181,8 +178,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           .withConverter(
             (json) => AppUser.fromJson(json),
           );
-      debugPrint(
-          "_mapLoginWithEmailToState: ${appUser.isPremiumUser} is premium user!");
       GlobalAppState().currentUser = appUser;
       if (!appUser.isPremiumUser!) {
         emit(const AuthState.onFreeUser());
@@ -194,8 +189,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const AuthState.deviceIdFailed());
         return;
       }
-      debugPrint(
-          "_mapLoginWithEmailToState: authenticated successfully! ${user.id}");
+      if (appUser.deviceId == null && GlobalAppState().deviceID != null) {
+        await supabase.from('users').update({
+          'device_id': GlobalAppState().deviceID,
+        }).eq('user_id', user.id);
+        GlobalAppState().currentUser =
+            appUser.copyWith(deviceId: GlobalAppState().deviceID);
+      }
       emit(const AuthState.authenticated());
     } catch (error) {
       debugPrint("_onAuthBlocError: ${error.toString()} Error!");

@@ -1,4 +1,4 @@
-package com.tzkenglishlab.pmp_english
+package com.pmpenglish.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -8,12 +8,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:pmp_english/firebase_options.dart';
 import 'package:pmp_english/firebase_options_dev.dart';
 import 'package:pmp_english/pmp_english_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
-import 'firebase_options_prod.dart';
 import 'global_app_state.dart';
 
 @pragma('vm:entry-point')

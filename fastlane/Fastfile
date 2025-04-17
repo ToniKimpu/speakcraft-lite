@@ -9,9 +9,9 @@ platform :android do
     lane :release do |options|
         build(options)
         env = options[:env]
-        app = "1:184571582087:android:7b68f03ec3183250d60a22"
+        app = "1:184571582087:android:2c88ad6af86c4abcd60a22"
         if env=="prod" then
-            app = "1:1022138253974:android:4ae97c59ba15e01a4b78b7"
+            app = "1:681598698244:android:093c9c44074022eb658651"
         end
         puts app
         release = firebase_app_distribution(

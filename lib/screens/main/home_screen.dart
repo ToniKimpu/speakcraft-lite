@@ -51,13 +51,13 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             const SizedBox(height: 24),
-            if (kDebugMode)
-              ElevatedButton(
-                onPressed: () {
-                  context.read<AuthBloc>().add(const AuthEvent.logout());
-                },
-                child: const Text('Logout'),
-              ),
+            if(kDebugMode)
+            ElevatedButton(
+              onPressed: () {
+                context.read<AuthBloc>().add(const AuthEvent.logout());
+              },
+              child: const Text('Logout'),
+            ),
           ],
         ),
       ),

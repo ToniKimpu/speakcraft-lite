@@ -14,7 +14,7 @@ import 'package:flutter/foundation.dart'
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
 /// ```
-class DefaultFirebaseOptionsDev {
+class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
       throw UnsupportedError(
@@ -53,10 +53,10 @@ class DefaultFirebaseOptionsDev {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCyG_Me4cKViq4fMmKwmYwi5QXZ4Z41WGQ',
-    appId: '1:184571582087:android:2c88ad6af86c4abcd60a22',
-    messagingSenderId: '184571582087',
-    projectId: 'pmp-english-dev',
-    storageBucket: 'pmp-english-dev.firebasestorage.app',
+    apiKey: 'AIzaSyBXdp69V0HIOXP_8LnmxFpjx_JhiRtsvGk',
+    appId: '1:681598698244:android:093c9c44074022eb658651',
+    messagingSenderId: '681598698244',
+    projectId: 'pmp-english-prod',
+    storageBucket: 'pmp-english-prod.firebasestorage.app',
   );
 }

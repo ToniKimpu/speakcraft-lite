@@ -16,5 +16,13 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ## Latest cut
+
 ## fastlane android release env:dev c:1 n:0.0.1
-## fastlane android release env:prod c:1 n:1.0.0
+## fastlane android release env:prod c:2 n:1.0.0
+
+## ShoreBird
+# shorebird init
+# shorebird release android --flavor prod --artifact apk --dart-define=flavor=prod
+# shorebird patch android --flavor prod --release-version=1.0.0+1 --dart-define=flavor=prod
+
+# flutterfire configure --project=pmp-english-prod -a com.pmpenglish.mobile --platforms android
