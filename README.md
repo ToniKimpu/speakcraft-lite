@@ -18,7 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 ## Latest cut
 
 ## fastlane android release env:dev c:1 n:0.0.1
-## fastlane android release env:prod c:2 n:1.0.0
+## fastlane android release env:prod c:1 n:1.0.0
 
 ## ShoreBird
 # shorebird init
@@ -26,3 +26,4 @@ samples, guidance on mobile development, and a full API reference.
 # shorebird patch android --flavor prod --release-version=1.0.0+1 --dart-define=flavor=prod
 
 # flutterfire configure --project=pmp-english-prod -a com.pmpenglish.mobile --platforms android
+# service_credentials_file: "D:\\PMP_Projects\\service-keys\\#{env}-service-key.json",
