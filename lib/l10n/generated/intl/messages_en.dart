@@ -22,20 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "txtAccountID": MessageLookupByLibrary.simpleMessage("Account ID"),
-        "txtCancel": MessageLookupByLibrary.simpleMessage("Cancel"),
-        "txtChangeAvatar":
-            MessageLookupByLibrary.simpleMessage("Change Avatar"),
-        "txtChangeName": MessageLookupByLibrary.simpleMessage("Change Name"),
-        "txtComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
-        "txtContentRequest":
-            MessageLookupByLibrary.simpleMessage("Content Request"),
-        "txtFeedback": MessageLookupByLibrary.simpleMessage("Feedback"),
-        "txtName": MessageLookupByLibrary.simpleMessage("Name"),
-        "txtOk": MessageLookupByLibrary.simpleMessage("Okay"),
-        "txtPrivacyPolicy":
-            MessageLookupByLibrary.simpleMessage("Privacy Policy"),
-        "txtWillUploadSoon":
-            MessageLookupByLibrary.simpleMessage("မကြာခင်တင်ပေးပါမည်")
-      };
+    "txtAccountID": MessageLookupByLibrary.simpleMessage("Account ID"),
+    "txtCancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "txtChangeAvatar": MessageLookupByLibrary.simpleMessage("Change Avatar"),
+    "txtChangeName": MessageLookupByLibrary.simpleMessage("Change Name"),
+    "txtComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
+    "txtContentRequest": MessageLookupByLibrary.simpleMessage(
+      "Content Request",
+    ),
+    "txtFeedback": MessageLookupByLibrary.simpleMessage("Feedback"),
+    "txtName": MessageLookupByLibrary.simpleMessage("Name"),
+    "txtOk": MessageLookupByLibrary.simpleMessage("Okay"),
+    "txtPrivacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "txtWillUploadSoon": MessageLookupByLibrary.simpleMessage(
+      "မကြာခင်တင်ပေးပါမည်",
+    ),
+  };
 }

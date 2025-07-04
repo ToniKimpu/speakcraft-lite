@@ -9,12 +9,12 @@ class ModuleWidget extends StatelessWidget {
     required this.title,
     required this.label1,
     required this.label2,
-    required this.onPressed,
+    this.onPressed,
   });
 
   final String title;
   final String label1, label2;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +22,14 @@ class ModuleWidget extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.08), // Dark card with transparency
+        color:
+            Colors.white.withValues(alpha: 0.08), // Dark card with transparency
         borderRadius: BorderRadius.circular(16),
-        border:
-            Border.all(color: Colors.white.withOpacity(0.2)), // Subtle border
+        border: Border.all(
+            color: Colors.white.withValues(alpha: 0.2)), // Subtle border
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.3),
+            color: Colors.black.withValues(alpha: 0.3),
             blurRadius: 8,
             spreadRadius: 2,
             offset: const Offset(0, 4),
@@ -50,7 +51,7 @@ class ModuleWidget extends StatelessWidget {
           Container(
             height: 1,
             width: double.infinity,
-            color: Colors.white.withOpacity(0.2), // Light separator
+            color: Colors.white.withValues(alpha: 0.2), // Light separator
             margin: const EdgeInsets.symmetric(vertical: 8),
           ),
           const SizedBox(height: 10),
@@ -66,7 +67,7 @@ class ModuleWidget extends StatelessWidget {
           Align(
             alignment: Alignment.bottomRight,
             child: TextButton(
-              onPressed: () => onPressed(),
+              onPressed: () => onPressed?.call(),
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 textStyle: PmpTextStyles.body2Regular,

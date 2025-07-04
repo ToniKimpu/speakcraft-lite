@@ -116,6 +116,7 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
       final patterns = dataRes.map((e) => Pattern.fromJson(e)).toList();
       final newPatterns = patterns.map((p) {
         if (p.audioPath == null || p.audioPath!.isEmpty) return p;
+        if(p.audioPath!.contains("supabase")) return p;
         return p.copyWith(
           audioPath: "${Env.bunnyAudioAPIKey}${p.audioPath}",
         );

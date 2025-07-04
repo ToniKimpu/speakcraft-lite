@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 
+import '../../config/env.dart';
 import '../../model/pattern_vocabulary/pattern_vocabulary.dart';
 import '../../services/supabase_service.dart';
 part 'listening_bloc.freezed.dart';
@@ -36,7 +37,8 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
             loadListenings: () => _mapLoadListeningsToState(emit),
             toggleBurmeseSub: (value) async =>
                 emit(ListeningState.onToggelBurmeseSub(value)),
-                loadVocabulariesByListening: (listeningId) => _mapLoadVocabulariesByListening(listeningId, emit),
+            loadVocabulariesByListening: (listeningId) =>
+                _mapLoadVocabulariesByListening(listeningId, emit),
           );
         } catch (e) {
           debugPrint('Load Days error ${e.toString()}');
@@ -54,6 +56,16 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           .eq("is_deleted", false)
           .order('created_at', ascending: true);
       final listenings = dataRes.map((e) => Listening.fromJson(e)).toList();
+      listenings.map(
+        (listening) {
+          if (listening.thumbnail.isEmpty) return listening;
+          if (listening.thumbnail.contains("supabase")) return listening;
+          return listening.copyWith(
+            thumbnail: "${Env.bunnyThumbnailAPIKey}${listening.thumbnail}",
+            subtitlePath: "${Env.bunnySubtitleAPIKey}${listening.subtitlePath}",
+          );
+        },
+      );
       emit(ListeningState.loaded(listenings));
     } catch (e) {
       debugPrint(e.toString());

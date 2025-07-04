@@ -59,7 +59,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
+                    color: Colors.grey.withValues(alpha: 0.1),
                     spreadRadius: 1,
                     blurRadius: 1,
                     offset: const Offset(0, 1), // changes position of shadow
@@ -116,7 +116,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                   child: InkWell(
                     borderRadius: BorderRadius.circular(12),
                     onTap: () async {
-                      String url = widget.appVersion['app_web_path'];
+                      String url = widget.appVersion['app_path'];
                       if (await canLaunchUrl(Uri.parse(url))) {
                         launchUrl(
                           Uri.parse(url),

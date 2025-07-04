@@ -57,8 +57,9 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   void initState() {
     super.initState();
     _startDuration = Duration(seconds: widget.listening.start);
-    _endDuration =
-        Duration(seconds: (widget.listening.end - widget.listening.start));
+    _endDuration = Duration(
+      seconds: (widget.listening.end - widget.listening.start),
+    );
     _controller = YoutubePlayerController(
       initialVideoId: widget.listening.youtubeId,
       flags: YoutubePlayerFlags(

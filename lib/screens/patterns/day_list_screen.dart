@@ -90,7 +90,6 @@ class _DayListScreenState extends State<DayListScreen> {
                       ),
                     ),
                     const SizedBox(width: 12),
-
                     // Progress Button
                     Material(
                       borderRadius: BorderRadius.circular(24),

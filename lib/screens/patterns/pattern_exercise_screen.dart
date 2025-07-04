@@ -150,7 +150,6 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
                   },
                   onSuccess: () {
                     context.hideLoadingDialog();
-
                     if (widget.isLastIndex) {
                       context.read<DayBloc>().add(const DayEvent.loadDays());
                     } else {

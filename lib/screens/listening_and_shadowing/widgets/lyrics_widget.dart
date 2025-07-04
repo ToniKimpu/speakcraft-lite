@@ -51,7 +51,6 @@ class _LyricsWidgetState extends State<LyricsWidget> {
         for (int i = 0; i < _subtitleKeys.length; i++) {
           final subtitleBox =
               _subtitleKeys[i].currentContext?.findRenderObject() as RenderBox?;
-
           if (subtitleBox != null) {
             final subtitleHeight = subtitleBox.size.height;
             _subtitleList.add(_tempSubtitleList[i].copyWith(
@@ -60,7 +59,6 @@ class _LyricsWidgetState extends State<LyricsWidget> {
               englishScrollPosition: englishScrollPosition,
             ));
             scrollPosition += subtitleHeight;
-
             // _subtitleBoxHeights.add(subtitleHeight);
           }
         }

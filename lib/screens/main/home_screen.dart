@@ -32,6 +32,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ModuleWidget(
               title: 'Spoken Pattern Tutorial',
@@ -42,22 +43,32 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             const SizedBox(height: 24),
-            ModuleWidget(
+            const Text(
+              "Coming Soon",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 12),
+            const ModuleWidget(
               title: 'Listening & Shadowing Practice',
               label1: 'Listening လုပ်မယ်။',
               label2: 'Shadowing လိုက်လုပ်မယ်။',
-              onPressed: () {
-                Navigator.pushNamed(context, PmpRoutes.listeningListPage);
-              },
+              onPressed: null,
+              // onPressed: () {
+              //   Navigator.pushNamed(context, PmpRoutes.listeningListPage);
+              // },
             ),
             const SizedBox(height: 24),
-            if(kDebugMode)
-            ElevatedButton(
-              onPressed: () {
-                context.read<AuthBloc>().add(const AuthEvent.logout());
-              },
-              child: const Text('Logout'),
-            ),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
+                  context.read<AuthBloc>().add(const AuthEvent.logout());
+                },
+                child: const Text('Logout'),
+              ),
           ],
         ),
       ),
