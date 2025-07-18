@@ -49,17 +49,23 @@ class PatternExerciseBloc
     emit(const PatternExerciseState.loading());
     try {
       final dataRes = await supabase
-          .rpc('get_pattern_exercises_with_vocabularies', params: {
-        'exercise_id_param': exerciseId,
-      });
+          .from("pattern_exercises")
+          .select(
+              "*,vocabularies:pattern_exercises_vocabularies_relation(pattern_vocabularies(*))")
+          .eq("exercise_id", exerciseId)
+          .order("created_at", ascending: true);
       if (dataRes.isEmpty) {
         emit(const PatternExerciseState.loaded(<PatternExercise>[]));
         return;
       }
-      final patternExercises = PatternExercise.fromJsonList(dataRes);
+
+      final patternExercises = dataRes
+          .map((e) => PatternExercise.fromJsonWithVocabularies(e))
+          .toList();
+
       emit(PatternExerciseState.loaded(patternExercises));
     } catch (e) {
-      debugPrint('Error fetching pattern exercises: ${e.toString()}');
+      debugPrint('_mapLoadPatternExercisesToState: errror: ${e.toString()}');
       emit(PatternExerciseState.error(e.toString()));
     }
   }
@@ -69,16 +75,19 @@ class PatternExerciseBloc
     emit(const PatternExerciseState.loading());
     try {
       final dataRes = await supabase
-          .rpc('get_pattern_exercises_with_user_answers', params: {
-        'exercise_id_param': exerciseId,
-        'user_id_param': GlobalAppState().currentUser.id,
-      });
+          .from("pattern_exercises")
+          .select("*,exercise_user_answers!inner(answer)")
+          .eq('exercise_id', exerciseId)
+          .eq("exercise_user_answers.user_id", GlobalAppState().currentUser.id!)
+          .order("created_at", ascending: true);
+
       if (dataRes.isEmpty) {
         emit(const PatternExerciseState.loaded(<PatternExercise>[]));
         return;
       }
-      final patternExercises = PatternExercise.fromJsonList1(dataRes);
-      debugPrint("_patternExerciseInfo: ${dataRes.first.toString()}");
+      final patternExercises = dataRes
+          .map((e) => PatternExercise.fromJsonWithUserAnswer(e))
+          .toList();
       emit(PatternExerciseState.loaded(patternExercises));
     } catch (e) {
       debugPrint('Error fetching pattern exercises: ${e.toString()}');

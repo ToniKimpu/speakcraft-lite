@@ -26,17 +26,38 @@ class PatternExercise with _$PatternExercise {
     return jsonList.map((json) => PatternExercise.fromJson(json)).toList();
   }
 
-  factory PatternExercise.fromJson1(Map<String, dynamic> json) {
+  factory PatternExercise.fromJsonWithUserAnswer(Map<String, dynamic> json) {
+    // Extract user answer from nested array if available
+    final userAnswers = json['exercise_user_answers'] as List<dynamic>?;
+    final userAnswer = userAnswers != null && userAnswers.isNotEmpty
+        ? userAnswers.first['answer'] as String?
+        : null;
+
     return PatternExercise(
-      id: json['id'],
-      burmeseText: json['burmese_text'],
-      englishText: json['english_text'],
-      audioPath: json['audio_path'],
-      userAnswer: json['user_answer'],
+      id: json['id'] as int,
+      burmeseText: json['burmese_text'] as String,
+      englishText: json['english_text'] as String,
+      audioPath: json['audio_path'] as String?,
+      userAnswer: userAnswer,
       vocabularies: <PatternVocabulary>[],
     );
   }
-  static List<PatternExercise> fromJsonList1(List<dynamic> jsonList) {
-    return jsonList.map((json) => PatternExercise.fromJson1(json)).toList();
+  factory PatternExercise.fromJsonWithVocabularies(Map<String, dynamic> json) {
+    final vocabList = json['vocabularies'] as List<dynamic>?;
+    final vocabularies = vocabList != null
+        ? vocabList
+            .map((item) =>
+                PatternVocabulary.fromJson(item['pattern_vocabularies']))
+            .toList()
+        : <PatternVocabulary>[];
+
+    return PatternExercise(
+      id: json['id'] as int,
+      burmeseText: json['burmese_text'] as String,
+      englishText: json['english_text'] as String,
+      audioPath: json['audio_path'] as String?,
+      userAnswer: null, // if unused
+      vocabularies: vocabularies,
+    );
   }
 }

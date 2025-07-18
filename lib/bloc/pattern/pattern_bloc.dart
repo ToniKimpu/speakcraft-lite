@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/config/env.dart';
 import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 import 'package:pmp_english/services/supabase_service.dart';
@@ -116,9 +115,9 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
       final patterns = dataRes.map((e) => Pattern.fromJson(e)).toList();
       final newPatterns = patterns.map((p) {
         if (p.audioPath == null || p.audioPath!.isEmpty) return p;
-        if(p.audioPath!.contains("supabase")) return p;
         return p.copyWith(
-          audioPath: "${Env.bunnyAudioAPIKey}${p.audioPath}",
+          audioPath: supabase.storage.from('stores').getPublicUrl(
+              '${SupabaseBucketFolders.storesAudioSpokenPatterns.name}/${p.audioPath}'),
         );
       }).toList();
       emit(PatternState.loaded(newPatterns));

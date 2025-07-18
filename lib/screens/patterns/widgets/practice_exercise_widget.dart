@@ -67,7 +67,7 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
                   Container(
                     height: 1,
                     width: double.infinity,
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.black.withValues(alpha: 0.1),
                   ),
                   const SizedBox(
                     height: 8,
@@ -89,11 +89,12 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
               valueListenable: _showVocabularyNotifier,
               builder: (context, showVocabulary, _) {
                 return Card(
-                  color: Colors.black.withOpacity(0.4),
+                  color: Colors.black.withValues(alpha: 0.4),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
-                    side: BorderSide(color: Colors.white.withOpacity(0.2)),
+                    side:
+                        BorderSide(color: Colors.white.withValues(alpha: 0.2)),
                   ),
                   child: SwitchListTile(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 8),
@@ -111,8 +112,8 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
                     ),
                     value: showVocabulary,
                     activeColor: Colors.white,
-                    activeTrackColor: Colors.white.withOpacity(0.6),
-                    inactiveTrackColor: Colors.white.withOpacity(0.2),
+                    activeTrackColor: Colors.white.withValues(alpha: 0.6),
+                    inactiveTrackColor: Colors.white.withValues(alpha: 0.2),
                     onChanged: (value) => _showVocabularyNotifier.value = value,
                   ),
                 );
@@ -155,7 +156,7 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
           borderRadius: BorderRadius.circular(8),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
+              color: Colors.grey.withValues(alpha: 0.2),
               spreadRadius: 1,
               blurRadius: 5,
             ),
