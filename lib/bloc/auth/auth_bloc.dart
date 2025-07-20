@@ -1,9 +1,11 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:flutter/material.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pmp_english/global_app_state.dart';
-import 'package:shorebird_code_push/shorebird_code_push.dart';
 
 import '../../model/app_user/app_user.dart';
 import '../../services/supabase_service.dart';
@@ -32,13 +34,14 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.onNewPath() = _OnNewPath;
   const factory AuthState.onNewVersion(Map<String, dynamic> appVersion) =
       _OnNewVersion;
+  const factory AuthState.socketError(String message) = _SocketError;
   const factory AuthState.error(String message) = _Error;
 }
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc() : super(const AuthState.initial()) {
-    on<AuthEvent>((event, emit) async {
-      try {
+    on<AuthEvent>(
+      (event, emit) async {
         await event.when(
           authCheck: (isLoading) => _mapAuthCheckToState(emit),
           loginWithEmail: (email, password) => _mapLoginWithEmailToState(
@@ -56,11 +59,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           ),
           logout: () => _mapLogoutToState(emit),
         );
-      } catch (e) {
-        debugPrint('Auth error: ${e.toString()}');
-        emit(AuthState.error(e.toString()));
-      }
-    });
+      },
+    );
   }
   _mapAuthCheckToState(Emitter<AuthState> emit) async {
     try {
@@ -94,18 +94,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             return;
           }
         }
-
-        final updater = ShorebirdUpdater();
-        final status = await updater.checkForUpdate();
-
-        if (status == UpdateStatus.outdated) {
-          try {
-            emit(const AuthState.onNewPath());
-
-            return;
-          } on UpdateException catch (_) {}
-        }
-
+        debugPrint("_mapAuthCheckToState: appUser: ${appUser.toJson()}");
         if (appUser.deviceId != null &&
             appUser.deviceId != GlobalAppState().deviceID) {
           await supabase.auth.signOut();
@@ -119,7 +108,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const AuthState.unauthenticated());
       }
     } catch (error) {
-      emit(AuthState.error(error.toString()));
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError("Please check your connection."));
+      } else {
+        emit(AuthState.error(error.toString()));
+      }
       debugPrint("_authError: ${error.toString()}");
     }
   }
@@ -167,8 +160,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const AuthState.authenticated());
       }
     } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError("Please check your connection."));
+      } else {
+        emit(AuthState.error(error.toString()));
+      }
       debugPrint("_onAuthBlocError: ${error.toString()} Error!");
-      emit(AuthState.error(error.toString()));
     }
   }
 
@@ -207,15 +204,28 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
       emit(const AuthState.authenticated());
     } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError("Please check your connection."));
+      } else {
+        emit(AuthState.error(error.toString()));
+      }
       debugPrint("_onAuthBlocError: ${error.toString()} Error!");
-      emit(AuthState.error(error.toString()));
     }
   }
 
   _mapLogoutToState(Emitter<AuthState> emit) async {
-    emit(const AuthState.loading());
-    await supabase.auth.signOut();
-    debugPrint("_mapLogoutToState: logout successfully!");
-    emit(const AuthState.unauthenticated());
+    try {
+      emit(const AuthState.loading());
+      await supabase.auth.signOut();
+      debugPrint("_mapLogoutToState: logout successfully!");
+      emit(const AuthState.unauthenticated());
+    } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError("Please check your connection."));
+      } else {
+        emit(AuthState.error(error.toString()));
+      }
+      debugPrint("_mapLogoutToState: ${error.toString()} Error!");
+    }
   }
 }

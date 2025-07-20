@@ -143,6 +143,37 @@ class _DayListScreenState extends State<DayListScreen> {
                     height: 18,
                     child: CircularProgressIndicator(),
                   )),
+                  socketError: (message) {
+                    return Center(
+                      child: Column(
+                        children: [
+                          Text(
+                            message,
+                            style: PmpTextStyles.body2Semi.copyWith(
+                              color: Colors.red,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(
+                            height: 12,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              context
+                                  .read<DayBloc>()
+                                  .add(const DayEvent.loadDays());
+                            },
+                            child: Text(
+                              "Retry",
+                              style: PmpTextStyles.body2Semi.copyWith(
+                                color: PmpColors.neutral800,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                   loaded: (currentDay, days) {
                     if (days.isEmpty) {
                       return Center(

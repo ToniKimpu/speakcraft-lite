@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -18,6 +21,7 @@ abstract class DayState with _$DayState {
   const factory DayState.initial() = _Initial;
   const factory DayState.loading() = _Loading;
   const factory DayState.loaded(Day? currentDay, List<Day> days) = _Loaded;
+  const factory DayState.socketError(String message) = _SocketError;
   const factory DayState.error(String message) = _Error;
 }
 
@@ -59,6 +63,11 @@ class DayBloc extends Bloc<DayEvent, DayState> {
       emit(DayState.loaded(null, days));
     } catch (e) {
       debugPrint(e.toString());
+      if (e is SocketException || e is TimeoutException) {
+        emit(const DayState.socketError(
+            "Please check your internet connection and try again."));
+        return;
+      }
       emit(DayState.error(e.toString()));
     }
   }

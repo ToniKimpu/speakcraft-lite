@@ -749,6 +749,7 @@ mixin _$AuthState {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -762,6 +763,7 @@ mixin _$AuthState {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -775,6 +777,7 @@ mixin _$AuthState {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -789,6 +792,7 @@ mixin _$AuthState {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -802,6 +806,7 @@ mixin _$AuthState {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -815,6 +820,7 @@ mixin _$AuthState {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -890,6 +896,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -906,6 +913,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -922,6 +930,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -942,6 +951,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -958,6 +968,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -974,6 +985,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1037,6 +1049,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -1053,6 +1066,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -1069,6 +1083,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1089,6 +1104,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -1105,6 +1121,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -1121,6 +1138,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1184,6 +1202,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return authenticated();
@@ -1200,6 +1219,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return authenticated?.call();
@@ -1216,6 +1236,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1236,6 +1257,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return authenticated(this);
@@ -1252,6 +1274,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return authenticated?.call(this);
@@ -1268,6 +1291,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1331,6 +1355,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return unauthenticated();
@@ -1347,6 +1372,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return unauthenticated?.call();
@@ -1363,6 +1389,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1383,6 +1410,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return unauthenticated(this);
@@ -1399,6 +1427,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return unauthenticated?.call(this);
@@ -1415,6 +1444,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1478,6 +1508,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return deviceIdFailed();
@@ -1494,6 +1525,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return deviceIdFailed?.call();
@@ -1510,6 +1542,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1530,6 +1563,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return deviceIdFailed(this);
@@ -1546,6 +1580,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return deviceIdFailed?.call(this);
@@ -1562,6 +1597,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1625,6 +1661,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return onFreeUser();
@@ -1641,6 +1678,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return onFreeUser?.call();
@@ -1657,6 +1695,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1677,6 +1716,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return onFreeUser(this);
@@ -1693,6 +1733,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return onFreeUser?.call(this);
@@ -1709,6 +1750,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1772,6 +1814,7 @@ class _$OnNewPathImpl implements _OnNewPath {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return onNewPath();
@@ -1788,6 +1831,7 @@ class _$OnNewPathImpl implements _OnNewPath {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return onNewPath?.call();
@@ -1804,6 +1848,7 @@ class _$OnNewPathImpl implements _OnNewPath {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1824,6 +1869,7 @@ class _$OnNewPathImpl implements _OnNewPath {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return onNewPath(this);
@@ -1840,6 +1886,7 @@ class _$OnNewPathImpl implements _OnNewPath {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return onNewPath?.call(this);
@@ -1856,6 +1903,7 @@ class _$OnNewPathImpl implements _OnNewPath {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1954,6 +2002,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return onNewVersion(appVersion);
@@ -1970,6 +2019,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return onNewVersion?.call(appVersion);
@@ -1986,6 +2036,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -2006,6 +2057,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return onNewVersion(this);
@@ -2022,6 +2074,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return onNewVersion?.call(this);
@@ -2038,6 +2091,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -2058,6 +2112,194 @@ abstract class _OnNewVersion implements AuthState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnNewVersionImplCopyWith<_$OnNewVersionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SocketErrorImplCopyWith<$Res> {
+  factory _$$SocketErrorImplCopyWith(
+          _$SocketErrorImpl value, $Res Function(_$SocketErrorImpl) then) =
+      __$$SocketErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$SocketErrorImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SocketErrorImpl>
+    implements _$$SocketErrorImplCopyWith<$Res> {
+  __$$SocketErrorImplCopyWithImpl(
+      _$SocketErrorImpl _value, $Res Function(_$SocketErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$SocketErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SocketErrorImpl implements _SocketError {
+  const _$SocketErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'AuthState.socketError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SocketErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SocketErrorImplCopyWith<_$SocketErrorImpl> get copyWith =>
+      __$$SocketErrorImplCopyWithImpl<_$SocketErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() authenticated,
+    required TResult Function() unauthenticated,
+    required TResult Function() deviceIdFailed,
+    required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
+    required TResult Function(String message) error,
+  }) {
+    return socketError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? authenticated,
+    TResult? Function()? unauthenticated,
+    TResult? Function()? deviceIdFailed,
+    TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
+    TResult? Function(String message)? error,
+  }) {
+    return socketError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? authenticated,
+    TResult Function()? unauthenticated,
+    TResult Function()? deviceIdFailed,
+    TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (socketError != null) {
+      return socketError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Authenticated value) authenticated,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
+    required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Error value) error,
+  }) {
+    return socketError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Authenticated value)? authenticated,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
+    TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Error value)? error,
+  }) {
+    return socketError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Authenticated value)? authenticated,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
+    TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (socketError != null) {
+      return socketError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SocketError implements AuthState {
+  const factory _SocketError(final String message) = _$SocketErrorImpl;
+
+  String get message;
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SocketErrorImplCopyWith<_$SocketErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2137,6 +2379,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -2153,6 +2396,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -2169,6 +2413,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -2189,6 +2434,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -2205,6 +2451,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -2221,6 +2468,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

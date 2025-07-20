@@ -176,6 +176,7 @@ mixin _$DayState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Day? currentDay, List<Day> days) loaded,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -184,6 +185,7 @@ mixin _$DayState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Day? currentDay, List<Day> days)? loaded,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -192,6 +194,7 @@ mixin _$DayState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Day? currentDay, List<Day> days)? loaded,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -201,6 +204,7 @@ mixin _$DayState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -209,6 +213,7 @@ mixin _$DayState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -217,6 +222,7 @@ mixin _$DayState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -287,6 +293,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Day? currentDay, List<Day> days) loaded,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -298,6 +305,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Day? currentDay, List<Day> days)? loaded,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -309,6 +317,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Day? currentDay, List<Day> days)? loaded,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -324,6 +333,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -335,6 +345,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -346,6 +357,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -404,6 +416,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Day? currentDay, List<Day> days) loaded,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -415,6 +428,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Day? currentDay, List<Day> days)? loaded,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -426,6 +440,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Day? currentDay, List<Day> days)? loaded,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -441,6 +456,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -452,6 +468,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -463,6 +480,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -579,6 +597,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Day? currentDay, List<Day> days) loaded,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return loaded(currentDay, days);
@@ -590,6 +609,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Day? currentDay, List<Day> days)? loaded,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return loaded?.call(currentDay, days);
@@ -601,6 +621,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Day? currentDay, List<Day> days)? loaded,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -616,6 +637,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return loaded(this);
@@ -627,6 +649,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return loaded?.call(this);
@@ -638,6 +661,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -659,6 +683,164 @@ abstract class _Loaded implements DayState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SocketErrorImplCopyWith<$Res> {
+  factory _$$SocketErrorImplCopyWith(
+          _$SocketErrorImpl value, $Res Function(_$SocketErrorImpl) then) =
+      __$$SocketErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$SocketErrorImplCopyWithImpl<$Res>
+    extends _$DayStateCopyWithImpl<$Res, _$SocketErrorImpl>
+    implements _$$SocketErrorImplCopyWith<$Res> {
+  __$$SocketErrorImplCopyWithImpl(
+      _$SocketErrorImpl _value, $Res Function(_$SocketErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DayState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$SocketErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SocketErrorImpl implements _SocketError {
+  const _$SocketErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'DayState.socketError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SocketErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of DayState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SocketErrorImplCopyWith<_$SocketErrorImpl> get copyWith =>
+      __$$SocketErrorImplCopyWithImpl<_$SocketErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(Day? currentDay, List<Day> days) loaded,
+    required TResult Function(String message) socketError,
+    required TResult Function(String message) error,
+  }) {
+    return socketError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(Day? currentDay, List<Day> days)? loaded,
+    TResult? Function(String message)? socketError,
+    TResult? Function(String message)? error,
+  }) {
+    return socketError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Day? currentDay, List<Day> days)? loaded,
+    TResult Function(String message)? socketError,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (socketError != null) {
+      return socketError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Error value) error,
+  }) {
+    return socketError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Error value)? error,
+  }) {
+    return socketError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_SocketError value)? socketError,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (socketError != null) {
+      return socketError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SocketError implements DayState {
+  const factory _SocketError(final String message) = _$SocketErrorImpl;
+
+  String get message;
+
+  /// Create a copy of DayState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SocketErrorImplCopyWith<_$SocketErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -733,6 +915,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Day? currentDay, List<Day> days) loaded,
+    required TResult Function(String message) socketError,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -744,6 +927,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Day? currentDay, List<Day> days)? loaded,
+    TResult? Function(String message)? socketError,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -755,6 +939,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Day? currentDay, List<Day> days)? loaded,
+    TResult Function(String message)? socketError,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -770,6 +955,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_SocketError value) socketError,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -781,6 +967,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_SocketError value)? socketError,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -792,6 +979,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_SocketError value)? socketError,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

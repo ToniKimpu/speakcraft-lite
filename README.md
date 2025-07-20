@@ -25,5 +25,8 @@ samples, guidance on mobile development, and a full API reference.
 # shorebird release android --flavor prod --artifact apk --dart-define=flavor=prod
 # shorebird patch android --flavor prod --release-version=1.0.0+1 --dart-define=flavor=prod
 
+# shorebird release android --flavor dev --artifact apk --dart-define=flavor=dev
+# shorebird patch android --flavor dev --release-version=1.0.0+1 --dart-define=flavor=dev
+
 # flutterfire configure --project=pmp-english-prod -a com.pmpenglish.mobile --platforms android
 # service_credentials_file: "D:\\PMP_Projects\\service-keys\\#{env}-service-key.json",
