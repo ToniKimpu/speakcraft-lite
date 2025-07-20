@@ -64,6 +64,8 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
                 _currentUser = event.session!.user;
               }
               await FirebaseMessaging.instance
+                  .subscribeToTopic('${_currentUser?.id}');
+              await FirebaseMessaging.instance
                   .subscribeToTopic("all-new-contents");
             }
           },

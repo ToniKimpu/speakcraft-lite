@@ -747,6 +747,7 @@ mixin _$AuthState {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) =>
@@ -759,6 +760,7 @@ mixin _$AuthState {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) =>
@@ -771,6 +773,7 @@ mixin _$AuthState {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -784,6 +787,7 @@ mixin _$AuthState {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) =>
@@ -796,6 +800,7 @@ mixin _$AuthState {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) =>
@@ -808,6 +813,7 @@ mixin _$AuthState {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -882,6 +888,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -897,6 +904,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -912,6 +920,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -931,6 +940,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -946,6 +956,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -961,6 +972,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -1023,6 +1035,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -1038,6 +1051,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -1053,6 +1067,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1072,6 +1087,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -1087,6 +1103,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -1102,6 +1119,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -1164,6 +1182,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -1179,6 +1198,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -1194,6 +1214,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1213,6 +1234,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -1228,6 +1250,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -1243,6 +1266,7 @@ class _$AuthenticatedImpl implements _Authenticated {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -1305,6 +1329,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -1320,6 +1345,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -1335,6 +1361,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1354,6 +1381,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -1369,6 +1397,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -1384,6 +1413,7 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -1446,6 +1476,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -1461,6 +1492,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -1476,6 +1508,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1495,6 +1528,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -1510,6 +1544,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -1525,6 +1560,7 @@ class _$DeviceIdFailedImpl implements _DeviceIdFailed {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -1587,6 +1623,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -1602,6 +1639,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -1617,6 +1655,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1636,6 +1675,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -1651,6 +1691,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -1666,6 +1707,7 @@ class _$OnFreeUserImpl implements _OnFreeUser {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -1679,6 +1721,153 @@ class _$OnFreeUserImpl implements _OnFreeUser {
 
 abstract class _OnFreeUser implements AuthState {
   const factory _OnFreeUser() = _$OnFreeUserImpl;
+}
+
+/// @nodoc
+abstract class _$$OnNewPathImplCopyWith<$Res> {
+  factory _$$OnNewPathImplCopyWith(
+          _$OnNewPathImpl value, $Res Function(_$OnNewPathImpl) then) =
+      __$$OnNewPathImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnNewPathImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$OnNewPathImpl>
+    implements _$$OnNewPathImplCopyWith<$Res> {
+  __$$OnNewPathImplCopyWithImpl(
+      _$OnNewPathImpl _value, $Res Function(_$OnNewPathImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnNewPathImpl implements _OnNewPath {
+  const _$OnNewPathImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.onNewPath()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OnNewPathImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() authenticated,
+    required TResult Function() unauthenticated,
+    required TResult Function() deviceIdFailed,
+    required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) error,
+  }) {
+    return onNewPath();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? authenticated,
+    TResult? Function()? unauthenticated,
+    TResult? Function()? deviceIdFailed,
+    TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? error,
+  }) {
+    return onNewPath?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? authenticated,
+    TResult Function()? unauthenticated,
+    TResult Function()? deviceIdFailed,
+    TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (onNewPath != null) {
+      return onNewPath();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Authenticated value) authenticated,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
+    required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_Error value) error,
+  }) {
+    return onNewPath(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Authenticated value)? authenticated,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
+    TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_Error value)? error,
+  }) {
+    return onNewPath?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Authenticated value)? authenticated,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
+    TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (onNewPath != null) {
+      return onNewPath(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnNewPath implements AuthState {
+  const factory _OnNewPath() = _$OnNewPathImpl;
 }
 
 /// @nodoc
@@ -1763,6 +1952,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -1778,6 +1968,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -1793,6 +1984,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1812,6 +2004,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -1827,6 +2020,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -1842,6 +2036,7 @@ class _$OnNewVersionImpl implements _OnNewVersion {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -1940,6 +2135,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() unauthenticated,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) error,
   }) {
@@ -1955,6 +2151,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? unauthenticated,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? error,
   }) {
@@ -1970,6 +2167,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? unauthenticated,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1989,6 +2187,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_Error value) error,
   }) {
@@ -2004,6 +2203,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_Error value)? error,
   }) {
@@ -2019,6 +2219,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_Error value)? error,
     required TResult orElse(),

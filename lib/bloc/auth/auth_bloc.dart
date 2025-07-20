@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pmp_english/global_app_state.dart';
+import 'package:shorebird_code_push/shorebird_code_push.dart';
 
 import '../../model/app_user/app_user.dart';
 import '../../services/supabase_service.dart';
@@ -28,6 +29,7 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.unauthenticated() = _Unauthenticated;
   const factory AuthState.deviceIdFailed() = _DeviceIdFailed;
   const factory AuthState.onFreeUser() = _OnFreeUser;
+  const factory AuthState.onNewPath() = _OnNewPath;
   const factory AuthState.onNewVersion(Map<String, dynamic> appVersion) =
       _OnNewVersion;
   const factory AuthState.error(String message) = _Error;
@@ -65,13 +67,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(const AuthState.loading());
       final user = supabase.auth.currentSession?.user;
       if (user != null) {
-        final dataRes = await supabase
-            .rpc(
-              'get_user',
-              params: {'user_id_param': user.id},
-            )
-            .single();
-           debugPrint("_mapAuthCheckToState: dataRes: ${dataRes.toString()}");
+        final dataRes = await supabase.rpc(
+          'get_user',
+          params: {'user_id_param': user.id},
+        ).single();
+        debugPrint("_mapAuthCheckToState: dataRes: ${dataRes.toString()}");
         final appUser = AppUser.fromJson(dataRes);
         GlobalAppState().currentUser = appUser;
         if (!appUser.isPremiumUser!) {
@@ -94,6 +94,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             return;
           }
         }
+
+        final updater = ShorebirdUpdater();
+        final status = await updater.checkForUpdate();
+
+        if (status == UpdateStatus.outdated) {
+          try {
+            emit(const AuthState.onNewPath());
+
+            return;
+          } on UpdateException catch (_) {}
+        }
+
         if (appUser.deviceId != null &&
             appUser.deviceId != GlobalAppState().deviceID) {
           await supabase.auth.signOut();

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
+import 'package:shorebird_code_push/shorebird_code_push.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import 'widgets/module_widget.dart';
@@ -15,6 +16,41 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      maybeUpdateInBackground();
+    });
+  }
+
+  Future<void> maybeUpdateInBackground() async {
+    final updater = ShorebirdUpdater();
+    if (!updater.isAvailable) {
+      debugPrint('Shorebird is not available on this platform.');
+      return;
+    }
+    try {
+      final status = await updater.checkForUpdate();
+      if (status == UpdateStatus.outdated) {
+        debugPrint('Update available. Downloading...');
+        await updater.update();
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content:
+                Text('App update downloaded. It will apply on next launch.'),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      } else {
+        debugPrint('App is already up to date.');
+      }
+    } on UpdateException catch (e) {
+      debugPrint('Update failed: ${e.reason.name}');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
