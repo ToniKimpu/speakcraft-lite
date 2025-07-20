@@ -35,15 +35,14 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
           children: [
             RepaintBoundary(
               key: _globalKey,
-              child: 
-              Container(
+              child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,
                   border: Border.all(
-                    color: Colors.blue.withOpacity(0.5),
+                    color: Colors.blue.withValues(alpha: 0.5),
                     width: 4,
                   ),
                 ),
@@ -57,7 +56,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.blue.withOpacity(0.6),
+                              color: Colors.blue.withValues(alpha: 0.6),
                               blurRadius: 18,
                               spreadRadius: 4,
                               offset: const Offset(0, 6),
@@ -77,14 +76,14 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
                     if (appUser.profilePath == null) const DefaultProfile(),
                     const SizedBox(height: 12),
                     Text(
-                      appUser.name,
+                      appUser.name ?? "Unknown User",
                       style: PmpTextStyles.body2Semi.copyWith(
-                        color: Colors.black.withOpacity(0.95),
+                        color: Colors.black.withValues(alpha: 0.95),
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                         shadows: [
                           Shadow(
-                            color: Colors.blue.withOpacity(0.4),
+                            color: Colors.blue.withValues(alpha: 0.4),
                             blurRadius: 12,
                           ),
                         ],
@@ -93,7 +92,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
                     Text(
                       '(${appUser.email})',
                       style: PmpTextStyles.label2Regular.copyWith(
-                        color: Colors.black.withOpacity(0.8),
+                        color: Colors.black.withValues(alpha: 0.8),
                         fontSize: 14,
                       ),
                     ),
@@ -108,7 +107,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
                             shape: BoxShape.circle,
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.orange.withOpacity(0.8),
+                                color: Colors.orange.withValues(alpha: 0.8),
                                 blurRadius: 15,
                                 spreadRadius: 5,
                               ),
@@ -121,19 +120,6 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        Text(
-                          appUser.accountId,
-                          style: PmpTextStyles.body2Semi.copyWith(
-                            color: Colors.black.withOpacity(0.95),
-                            fontSize: 15,
-                            shadows: [
-                              Shadow(
-                                color: Colors.orange.withOpacity(0.3),
-                                blurRadius: 8,
-                              ),
-                            ],
-                          ),
-                        ),
                       ],
                     ),
                   ],
@@ -156,7 +142,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.blue.withOpacity(0.3),
+                      color: Colors.blue.withValues(alpha: 0.3),
                       blurRadius: 6,
                       spreadRadius: 1,
                       offset: const Offset(0, 3),
@@ -213,8 +199,9 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
           Uint8List pngBytes = byteData!.buffer.asUint8List();
 
           final directory = (await getApplicationDocumentsDirectory()).path;
-          final String filePath =
-              '$directory/${GlobalAppState().currentUser.accountId.toLowerCase()}.png';
+          final accountId =
+              GlobalAppState().currentUser.email.split('@')[0].toLowerCase();
+          final String filePath = '$directory/$accountId.png';
           final File file = File(filePath);
           await file.writeAsBytes(pngBytes);
 

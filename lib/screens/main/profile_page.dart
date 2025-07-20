@@ -44,8 +44,11 @@ class _ProfilePageState extends State<ProfilePage> {
               height: 100,
             ),
           ),
+          const SizedBox(
+            height: 8,
+          ),
           Text(
-            appUser.name,
+            appUser.name ?? appUser.email,
             style: PmpTextStyles.body2Semi.copyWith(
               color: PmpColors.neutral100,
             ),
@@ -56,14 +59,14 @@ class _ProfilePageState extends State<ProfilePage> {
             margin: const EdgeInsets.all(16),
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color:
-                  Colors.white.withOpacity(0.08), // Dark card with transparency
+              color: Colors.white
+                  .withValues(alpha: 0.08), // Dark card with transparency
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
-                  color: Colors.white.withOpacity(0.4)), // Subtle border
+                  color: Colors.white.withValues(alpha: 0.4)), // Subtle border
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
+                  color: Colors.black.withValues(alpha: 0.3),
                   blurRadius: 8,
                   spreadRadius: 2,
                   offset: const Offset(0, 4),
@@ -102,17 +105,17 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(
                   height: 8,
                 ),
-                ProfileItemRow(
-                  label: AppLocalizations.of(context).txtAccountID,
-                  icon: "assets/images/ic_account_id.png",
-                  accountId: GlobalAppState().currentUser.accountId,
-                  onTap: () {
-                    appUser.accountId.copyToClipboard();
-                  },
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
+                // ProfileItemRow(
+                //   label: AppLocalizations.of(context).txtAccountID,
+                //   icon: "assets/images/ic_account_id.png",
+                //   accountId: GlobalAppState().currentUser.accountId,
+                //   onTap: () {
+                //     appUser.accountId.copyToClipboard();
+                //   },
+                // ),
+                // const SizedBox(
+                //   height: 8,
+                // ),
                 ProfileItemRow(
                   label: AppLocalizations.of(context).txtPrivacyPolicy,
                   icon: "assets/images/ic_privacy_policy.png",

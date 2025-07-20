@@ -81,16 +81,13 @@ Future<void> setupFlutterNotifications() async {
 void showFlutterNotification(RemoteMessage message) {
   if (kIsWeb) return;
   RemoteNotification? notification = message.notification;
-  // final data = message.data;
-  final data = {
-    'title': notification?.title,
-    'body': notification?.body,
-  };
 
+  final data = message.data;
+  debugPrint("_showFlutterNotification: $data");
   flutterLocalNotificationsPlugin.show(
       notification.hashCode,
-      notification?.title,
-      notification?.body,
+      data['title'],
+      data['message'],
       NotificationDetails(
         android: AndroidNotificationDetails(
           channel.id,
@@ -102,7 +99,7 @@ void showFlutterNotification(RemoteMessage message) {
           playSound: true,
         ),
       ),
-      payload: jsonEncode(data));
+      payload: jsonEncode(message.data));
 }
 
 /// Initialize the [FlutterLocalNotificationsPlugin] package.

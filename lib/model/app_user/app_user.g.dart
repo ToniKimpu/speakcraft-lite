@@ -9,10 +9,9 @@ part of 'app_user.dart';
 _$AppUserImpl _$$AppUserImplFromJson(Map<String, dynamic> json) =>
     _$AppUserImpl(
       id: (json['id'] as num?)?.toInt(),
-      name: json['name'] as String,
+      name: json['name'] as String?,
       email: json['email'] as String,
       profilePath: json['profile_path'] as String?,
-      accountId: json['account_id'] as String,
       createdAt: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
@@ -26,7 +25,6 @@ Map<String, dynamic> _$$AppUserImplToJson(_$AppUserImpl instance) =>
       'name': instance.name,
       'email': instance.email,
       'profile_path': instance.profilePath,
-      'account_id': instance.accountId,
       'created_at': instance.createdAt?.toIso8601String(),
       'device_id': instance.deviceId,
       'is_premium_user': instance.isPremiumUser,

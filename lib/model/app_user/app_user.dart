@@ -9,13 +9,12 @@ part 'app_user.g.dart';
 class AppUser with _$AppUser {
   const factory AppUser({
     int? id,
-    required String name,
+    String? name,
     required String email,
     @JsonKey(name: 'profile_path') String? profilePath,
-    @JsonKey(name: 'account_id') required String accountId,
     @JsonKey(name: 'created_at') DateTime? createdAt,
     @JsonKey(name: 'device_id') String? deviceId,
-    @JsonKey(name: 'is_premium_user')  bool? isPremiumUser,
+    @JsonKey(name: 'is_premium_user') bool? isPremiumUser,
   }) = _AppUser;
 
   factory AppUser.fromJson(Map<String, dynamic> json) =>
@@ -27,7 +26,6 @@ class AppUser with _$AppUser {
       name: '',
       email: '',
       profilePath: '',
-      accountId: '',
       isPremiumUser: false,
       createdAt: DateTime.now(),
     );

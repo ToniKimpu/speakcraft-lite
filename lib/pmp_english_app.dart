@@ -53,7 +53,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
           (event) async {
             if (event.event == AuthChangeEvent.signedOut) {
               await FirebaseMessaging.instance.unsubscribeFromTopic(
-                'pmpenglish_all_users_topic',
+                'all-new-contents',
               );
               debugPrint('tp user unsubscribe: ${_currentUser?.id}');
               await FirebaseMessaging.instance.unsubscribeFromTopic(
@@ -63,9 +63,8 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
               if (event.session?.user.id != null) {
                 _currentUser = event.session!.user;
               }
-              debugPrint('tp user subscribe: ${_currentUser?.id} subscribe');
               await FirebaseMessaging.instance
-                  .subscribeToTopic("pmpenglish_all_users_topic");
+                  .subscribeToTopic("all-new-contents");
             }
           },
         )..onError((e) {

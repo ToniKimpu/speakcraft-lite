@@ -36,7 +36,7 @@ class ReplyWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                appUser.name,
+                appUser.name ?? appUser.email,
                 style: PmpTextStyles.body2Regular.copyWith(
                   color: Colors.black,
                   fontWeight: FontWeight.w600,

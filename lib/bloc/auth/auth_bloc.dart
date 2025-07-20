@@ -2,7 +2,6 @@ import 'package:flutter/material.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/global_app_state.dart';
 
 import '../../model/app_user/app_user.dart';
@@ -66,15 +65,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(const AuthState.loading());
       final user = supabase.auth.currentSession?.user;
       if (user != null) {
-        final appUser = await supabase
+        final dataRes = await supabase
             .rpc(
               'get_user',
               params: {'user_id_param': user.id},
             )
-            .single()
-            .withConverter(
-              (json) => AppUser.fromJson(json),
-            );
+            .single();
+           debugPrint("_mapAuthCheckToState: dataRes: ${dataRes.toString()}");
+        final appUser = AppUser.fromJson(dataRes);
         GlobalAppState().currentUser = appUser;
         if (!appUser.isPremiumUser!) {
           emit(const AuthState.onFreeUser());
@@ -137,7 +135,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           'name': name,
           'email': email,
           'profile_path': profilePath,
-          'account_id': ''.generateAccountID(),
           'user_id': response.user?.id,
           'device_id': GlobalAppState().deviceID,
         });
