@@ -92,6 +92,15 @@ class _ListeningListPageState extends State<ListeningListPage> {
                                         width: 60,
                                         height: 60,
                                         color: const Color(0xFF203A43),
+                                        child: const Center(
+                                          child: SizedBox(
+                                            width: 18,
+                                            height: 18,
+                                            child: CircularProgressIndicator(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                       errorWidget: (context, url, error) =>
                                           Container(

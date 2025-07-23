@@ -272,12 +272,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                       });
                                     });
                                   },
-                                  getSubtitleBoxHeights:
-                                      (subtitleBoxHeights, subtitles) {
-                                    if (_subtitleBoxHeights.isEmpty) {
-                                      _subtitleBoxHeights
-                                          .addAll(subtitleBoxHeights);
-                                    }
+                                  getSubtitleBoxHeights: (subtitles) {
                                     if (_subtitles.isEmpty) {
                                       _subtitles.addAll(subtitles);
                                     }

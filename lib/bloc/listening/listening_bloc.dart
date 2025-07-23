@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 
-import '../../config/env.dart';
 import '../../model/pattern_vocabulary/pattern_vocabulary.dart';
 import '../../services/supabase_service.dart';
+
 part 'listening_bloc.freezed.dart';
 
 @freezed
@@ -55,17 +55,20 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           .select('*')
           .eq("is_deleted", false)
           .order('created_at', ascending: true);
-      final listenings = dataRes.map((e) => Listening.fromJson(e)).toList();
-      listenings.map(
-        (listening) {
-          if (listening.thumbnail.isEmpty) return listening;
-          if (listening.thumbnail.contains("supabase")) return listening;
-          return listening.copyWith(
-            thumbnail: "${Env.bunnyThumbnailAPIKey}${listening.thumbnail}",
-            subtitlePath: "${Env.bunnySubtitleAPIKey}${listening.subtitlePath}",
-          );
-        },
-      );
+      final listenings = dataRes.map((e) {
+        final listening = Listening.fromJson(e);
+        return listening.copyWith(
+          thumbnail: SupabaseService().getPublicUrl(
+            bucketFolder: SupabaseBucketFolders.listeningAndShadowingImages,
+            fileName: listening.thumbnail,
+          ),
+          subtitlePath: SupabaseService().getPublicUrl(
+            bucketFolder: SupabaseBucketFolders.listeningAndShadowingSubtitles,
+            fileName: listening.subtitlePath,
+          ),
+        );
+      }).toList();
+
       emit(ListeningState.loaded(listenings));
     } catch (e) {
       debugPrint(e.toString());

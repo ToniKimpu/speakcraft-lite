@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, PmpRoutes.dayList);
               },
             ),
-            const SizedBox(height: 24),
+            // const SizedBox(height: 24),
             // const Text(
             //   "Coming Soon",
             //   style: TextStyle(
@@ -87,13 +87,15 @@ class _HomePageState extends State<HomePage> {
             //     color: Colors.white,
             //   ),
             // ),
-            // const SizedBox(height: 12),
-            // const ModuleWidget(
-            //   title: 'Listening & Shadowing Practice',
-            //   label1: 'Listening လုပ်မယ်။',
-            //   label2: 'Shadowing လိုက်လုပ်မယ်။',
-            //   onPressed: null,
-            // ),
+            const SizedBox(height: 12),
+             ModuleWidget(
+              title: 'Listening & Shadowing Practice',
+              label1: 'Listening လုပ်မယ်။',
+              label2: 'Shadowing လိုက်လုပ်မယ်။',
+              onPressed: (){
+                Navigator.pushNamed(context, PmpRoutes.listeningListPage);
+              },
+            ),
             const SizedBox(height: 24),
             if (kDebugMode)
               ElevatedButton(

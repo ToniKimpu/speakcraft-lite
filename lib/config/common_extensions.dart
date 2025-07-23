@@ -214,60 +214,56 @@ extension DurationExtension on Duration {
 }
 
 Future<List<Subtitle>> parseSrtFile(
-    String fileUrl, Duration startDuration, Duration endDuration) async {
+  String fileUrl,
+  Duration startDuration,
+  Duration endDuration,
+) async {
   final List<Subtitle> subtitles = [];
 
   try {
     final response = await http.get(Uri.parse(fileUrl));
-
     if (response.statusCode != 200) {
       throw Exception("Failed to load subtitles: ${response.statusCode}");
     }
 
     final String data = utf8.decode(response.bodyBytes);
+    final normalizedData = data.replaceAll('\r\n', '\n');
 
     final regex = RegExp(
-        r'(\d+)\s*\n(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\s*\n([\s\S]*?)(?:\n{2,}|\z)',
-        multiLine: true);
+      r'(\d+)\n'
+      r'(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n'
+      r'([\s\S]*?)(?=\n{2,}|\z)',
+      multiLine: true,
+    );
 
-    int idCounter = 1; // Start IDs from 1
+    const double fixedHeight = 72.0;
+    double scrollPosition = 0;
+    int idCounter = 1;
 
-    for (final match in regex.allMatches(data)) {
+    for (final match in regex.allMatches(normalizedData)) {
       final start = _parseDuration(match.group(2)!);
       final end = _parseDuration(match.group(3)!);
 
-      if (startDuration > start || endDuration < end) continue;
+      if (start < startDuration || end > endDuration) continue;
 
-      String textBlock = match.group(4)!.trim();
-      List<String> lines = textBlock.split("\n");
-
-      String text = "";
-      String? burmese;
-
-      for (String line in lines) {
-        debugPrint("allSubtitleLine: $line");
-        line = line.trim();
-        if (line.startsWith("mm:")) {
-          burmese = line.substring(3).trim(); // Remove "mm:" and trim spaces
-        } else {
-          if (text.isNotEmpty) text += "\n"; // Keep multiline structure
-          text += line;
-        }
-      }
-
-      if (text.trim().isNotEmpty && (RegExp(r'[a-zA-Z]').hasMatch(text))) {
+      final text = match.group(4)!.trim();
+      if (text.isNotEmpty) {
         subtitles.add(Subtitle(
-          id: idCounter++, // Assign unique ID
+          id: idCounter++,
           start: start,
           end: end,
           text: text,
-          burmese: burmese, // Assign extracted Burmese text if available
+          widgetHeight: fixedHeight,
+          scrollPosition: scrollPosition,
         ));
+        scrollPosition += fixedHeight;
       }
     }
   } catch (e) {
-    debugPrint("Error loading subtitles: $e");
+    print("Error parsing subtitle file: $e");
   }
+
+  debugPrint("_subtitleInfo: ${subtitles.length} length!");
   return subtitles;
 }
 

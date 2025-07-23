@@ -116,8 +116,9 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
       final newPatterns = patterns.map((p) {
         if (p.audioPath == null || p.audioPath!.isEmpty) return p;
         return p.copyWith(
-          audioPath: supabase.storage.from('stores').getPublicUrl(
-              '${SupabaseBucketFolders.storesAudioSpokenPatterns.name}/${p.audioPath}'),
+          audioPath: SupabaseService().getPublicUrl(
+              bucketFolder: SupabaseBucketFolders.spokenPatternAudios,
+              fileName: p.audioPath),
         );
       }).toList();
       emit(PatternState.loaded(newPatterns));

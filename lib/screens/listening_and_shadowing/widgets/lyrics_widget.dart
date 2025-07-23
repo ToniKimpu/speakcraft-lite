@@ -19,8 +19,7 @@ class LyricsWidget extends StatefulWidget {
   final Listening listening;
   final ScrollController mainController;
   final Function(Subtitle subtitle) onTap;
-  final Function(List<double> subtitleBoxHeights, List<Subtitle> subtitles)
-      getSubtitleBoxHeights;
+  final Function(List<Subtitle> subtitles) getSubtitleBoxHeights;
   final bool enableMMSub;
 
   @override
@@ -30,11 +29,6 @@ class LyricsWidget extends StatefulWidget {
 class _LyricsWidgetState extends State<LyricsWidget> {
   late Future<List<Subtitle>> _subtitles;
 
-  final List<GlobalKey> _subtitleKeys = [];
-  final List<double> _subtitleBoxHeights = [];
-  final List<Subtitle> _subtitleList = [];
-  List<Subtitle> _tempSubtitleList = [];
-
   @override
   void initState() {
     super.initState();
@@ -43,28 +37,6 @@ class _LyricsWidgetState extends State<LyricsWidget> {
       Duration(seconds: widget.listening.start),
       Duration(seconds: widget.listening.end),
     );
-
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(seconds: 2), () {
-        double scrollPosition = 0;
-        double englishScrollPosition = 0;
-        for (int i = 0; i < _subtitleKeys.length; i++) {
-          final subtitleBox =
-              _subtitleKeys[i].currentContext?.findRenderObject() as RenderBox?;
-          if (subtitleBox != null) {
-            final subtitleHeight = subtitleBox.size.height;
-            _subtitleList.add(_tempSubtitleList[i].copyWith(
-              widgetHeight: subtitleHeight,
-              scrollPosition: scrollPosition,
-              englishScrollPosition: englishScrollPosition,
-            ));
-            scrollPosition += subtitleHeight;
-            // _subtitleBoxHeights.add(subtitleHeight);
-          }
-        }
-        widget.getSubtitleBoxHeights(_subtitleBoxHeights, _subtitleList);
-      });
-    });
   }
 
   @override
@@ -87,30 +59,25 @@ class _LyricsWidgetState extends State<LyricsWidget> {
         }
 
         final subtitles = snapshot.data!;
-        _tempSubtitleList = snapshot.data!;
-
-        for (int i = 0; i < subtitles.length; i++) {
-          _subtitleKeys.add(GlobalKey());
-        }
-
-        return SingleChildScrollView(
+        WidgetsBinding.instance.addPostFrameCallback(
+          (_) {
+            widget.getSubtitleBoxHeights(subtitles);
+          },
+        );
+        return ListView.builder(
           controller: widget.mainController,
-          child: ListView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: subtitles.length,
-            padding: EdgeInsets.zero,
-            itemBuilder: (context, index) {
-              final subtitle = subtitles[index];
-              final selected = subtitle.id == widget.selectedSubtitle.id;
-              return ListTile(
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.zero),
+          itemCount: subtitles.length,
+          itemBuilder: (context, index) {
+            final subtitle = subtitles[index];
+            final selected = subtitle.id == widget.selectedSubtitle.id;
+
+            return SizedBox(
+              height: 72, // <- Estimate height for 2-line ListTile
+              child: ListTile(
                 selected: selected,
                 selectedTileColor: const Color(0xFF0F2027),
                 tileColor: const Color(0xFF203A43),
                 onTap: () => widget.onTap.call(subtitle),
-                key: _subtitleKeys[index],
                 leading: Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
@@ -120,28 +87,17 @@ class _LyricsWidgetState extends State<LyricsWidget> {
                   ),
                   child: Text(
                     _formatDuration(subtitle.start),
-                    style: PmpTextStyles.labelSemi.copyWith(
-                      color: Colors.black,
-                    ),
+                    style:
+                        PmpTextStyles.labelSemi.copyWith(color: Colors.black),
                   ),
                 ),
                 title: Text(
                   subtitle.text,
-                  style: PmpTextStyles.body2Semi.copyWith(
-                    color: Colors.white,
-                  ),
+                  style: PmpTextStyles.body2Semi.copyWith(color: Colors.white),
                 ),
-                subtitle: (subtitle.burmese == null || !widget.enableMMSub)
-                    ? null
-                    : Text(
-                        subtitle.burmese!,
-                        style: PmpTextStyles.body2Regular.copyWith(
-                          color: const Color(0xFFFFD580),
-                        ),
-                      ),
-              );
-            },
-          ),
+              ),
+            );
+          },
         );
       },
     );
