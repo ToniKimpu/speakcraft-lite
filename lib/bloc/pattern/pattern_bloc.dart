@@ -107,6 +107,8 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
           .from('patterns')
           .select('*,pattern_examples(*)')
           .eq('lesson_id', lessonId)
+          .eq("is_deleted", false)
+          .eq("pattern_examples.is_deleted", false)
           .order('created_at', ascending: true);
       if (dataRes.isEmpty) {
         emit(const PatternState.loaded(<Pattern>[]));
@@ -157,7 +159,8 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
           .from('pattern_examples')
           .select()
           .eq('pattern_id', patternId)
-          .eq('is_deleted', false);
+          .eq('is_deleted', false)
+          .order("created_at", ascending: true);
 
       if (dataRes.isEmpty) {
         emit(const PatternState.examplesLoaded(<PatternExample>[]));

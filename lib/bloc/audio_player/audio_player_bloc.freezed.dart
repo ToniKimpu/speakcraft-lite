@@ -19,6 +19,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
+    required TResult Function(int position) setCurrentPosition,
     required TResult Function() play,
     required TResult Function() pause,
     required TResult Function() stop,
@@ -27,6 +28,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
+    TResult? Function(int position)? setCurrentPosition,
     TResult? Function()? play,
     TResult? Function()? pause,
     TResult? Function()? stop,
@@ -35,6 +37,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
+    TResult Function(int position)? setCurrentPosition,
     TResult Function()? play,
     TResult Function()? pause,
     TResult Function()? stop,
@@ -44,6 +47,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_SetUrl value) setUrl,
+    required TResult Function(_SetCurrentPosition value) setCurrentPosition,
     required TResult Function(_Play value) play,
     required TResult Function(_Pause value) pause,
     required TResult Function(_Stop value) stop,
@@ -52,6 +56,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_SetUrl value)? setUrl,
+    TResult? Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult? Function(_Play value)? play,
     TResult? Function(_Pause value)? pause,
     TResult? Function(_Stop value)? stop,
@@ -60,6 +65,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_SetUrl value)? setUrl,
+    TResult Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult Function(_Play value)? play,
     TResult Function(_Pause value)? pause,
     TResult Function(_Stop value)? stop,
@@ -159,6 +165,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
+    required TResult Function(int position) setCurrentPosition,
     required TResult Function() play,
     required TResult Function() pause,
     required TResult Function() stop,
@@ -170,6 +177,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
+    TResult? Function(int position)? setCurrentPosition,
     TResult? Function()? play,
     TResult? Function()? pause,
     TResult? Function()? stop,
@@ -181,6 +189,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
+    TResult Function(int position)? setCurrentPosition,
     TResult Function()? play,
     TResult Function()? pause,
     TResult Function()? stop,
@@ -196,6 +205,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_SetUrl value) setUrl,
+    required TResult Function(_SetCurrentPosition value) setCurrentPosition,
     required TResult Function(_Play value) play,
     required TResult Function(_Pause value) pause,
     required TResult Function(_Stop value) stop,
@@ -207,6 +217,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_SetUrl value)? setUrl,
+    TResult? Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult? Function(_Play value)? play,
     TResult? Function(_Pause value)? pause,
     TResult? Function(_Stop value)? stop,
@@ -218,6 +229,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_SetUrl value)? setUrl,
+    TResult Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult Function(_Play value)? play,
     TResult Function(_Pause value)? pause,
     TResult Function(_Stop value)? stop,
@@ -239,6 +251,167 @@ abstract class _SetUrl implements AudioPlayerEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SetUrlImplCopyWith<_$SetUrlImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SetCurrentPositionImplCopyWith<$Res> {
+  factory _$$SetCurrentPositionImplCopyWith(_$SetCurrentPositionImpl value,
+          $Res Function(_$SetCurrentPositionImpl) then) =
+      __$$SetCurrentPositionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int position});
+}
+
+/// @nodoc
+class __$$SetCurrentPositionImplCopyWithImpl<$Res>
+    extends _$AudioPlayerEventCopyWithImpl<$Res, _$SetCurrentPositionImpl>
+    implements _$$SetCurrentPositionImplCopyWith<$Res> {
+  __$$SetCurrentPositionImplCopyWithImpl(_$SetCurrentPositionImpl _value,
+      $Res Function(_$SetCurrentPositionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AudioPlayerEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? position = null,
+  }) {
+    return _then(_$SetCurrentPositionImpl(
+      null == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetCurrentPositionImpl implements _SetCurrentPosition {
+  const _$SetCurrentPositionImpl(this.position);
+
+  @override
+  final int position;
+
+  @override
+  String toString() {
+    return 'AudioPlayerEvent.setCurrentPosition(position: $position)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetCurrentPositionImpl &&
+            (identical(other.position, position) ||
+                other.position == position));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, position);
+
+  /// Create a copy of AudioPlayerEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetCurrentPositionImplCopyWith<_$SetCurrentPositionImpl> get copyWith =>
+      __$$SetCurrentPositionImplCopyWithImpl<_$SetCurrentPositionImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String audioUrl) setUrl,
+    required TResult Function(int position) setCurrentPosition,
+    required TResult Function() play,
+    required TResult Function() pause,
+    required TResult Function() stop,
+  }) {
+    return setCurrentPosition(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String audioUrl)? setUrl,
+    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function()? play,
+    TResult? Function()? pause,
+    TResult? Function()? stop,
+  }) {
+    return setCurrentPosition?.call(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String audioUrl)? setUrl,
+    TResult Function(int position)? setCurrentPosition,
+    TResult Function()? play,
+    TResult Function()? pause,
+    TResult Function()? stop,
+    required TResult orElse(),
+  }) {
+    if (setCurrentPosition != null) {
+      return setCurrentPosition(position);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_SetUrl value) setUrl,
+    required TResult Function(_SetCurrentPosition value) setCurrentPosition,
+    required TResult Function(_Play value) play,
+    required TResult Function(_Pause value) pause,
+    required TResult Function(_Stop value) stop,
+  }) {
+    return setCurrentPosition(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_SetUrl value)? setUrl,
+    TResult? Function(_SetCurrentPosition value)? setCurrentPosition,
+    TResult? Function(_Play value)? play,
+    TResult? Function(_Pause value)? pause,
+    TResult? Function(_Stop value)? stop,
+  }) {
+    return setCurrentPosition?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_SetUrl value)? setUrl,
+    TResult Function(_SetCurrentPosition value)? setCurrentPosition,
+    TResult Function(_Play value)? play,
+    TResult Function(_Pause value)? pause,
+    TResult Function(_Stop value)? stop,
+    required TResult orElse(),
+  }) {
+    if (setCurrentPosition != null) {
+      return setCurrentPosition(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetCurrentPosition implements AudioPlayerEvent {
+  const factory _SetCurrentPosition(final int position) =
+      _$SetCurrentPositionImpl;
+
+  int get position;
+
+  /// Create a copy of AudioPlayerEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetCurrentPositionImplCopyWith<_$SetCurrentPositionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -283,6 +456,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
+    required TResult Function(int position) setCurrentPosition,
     required TResult Function() play,
     required TResult Function() pause,
     required TResult Function() stop,
@@ -294,6 +468,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
+    TResult? Function(int position)? setCurrentPosition,
     TResult? Function()? play,
     TResult? Function()? pause,
     TResult? Function()? stop,
@@ -305,6 +480,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
+    TResult Function(int position)? setCurrentPosition,
     TResult Function()? play,
     TResult Function()? pause,
     TResult Function()? stop,
@@ -320,6 +496,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_SetUrl value) setUrl,
+    required TResult Function(_SetCurrentPosition value) setCurrentPosition,
     required TResult Function(_Play value) play,
     required TResult Function(_Pause value) pause,
     required TResult Function(_Stop value) stop,
@@ -331,6 +508,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_SetUrl value)? setUrl,
+    TResult? Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult? Function(_Play value)? play,
     TResult? Function(_Pause value)? pause,
     TResult? Function(_Stop value)? stop,
@@ -342,6 +520,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_SetUrl value)? setUrl,
+    TResult Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult Function(_Play value)? play,
     TResult Function(_Pause value)? pause,
     TResult Function(_Stop value)? stop,
@@ -400,6 +579,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
+    required TResult Function(int position) setCurrentPosition,
     required TResult Function() play,
     required TResult Function() pause,
     required TResult Function() stop,
@@ -411,6 +591,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
+    TResult? Function(int position)? setCurrentPosition,
     TResult? Function()? play,
     TResult? Function()? pause,
     TResult? Function()? stop,
@@ -422,6 +603,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
+    TResult Function(int position)? setCurrentPosition,
     TResult Function()? play,
     TResult Function()? pause,
     TResult Function()? stop,
@@ -437,6 +619,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_SetUrl value) setUrl,
+    required TResult Function(_SetCurrentPosition value) setCurrentPosition,
     required TResult Function(_Play value) play,
     required TResult Function(_Pause value) pause,
     required TResult Function(_Stop value) stop,
@@ -448,6 +631,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_SetUrl value)? setUrl,
+    TResult? Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult? Function(_Play value)? play,
     TResult? Function(_Pause value)? pause,
     TResult? Function(_Stop value)? stop,
@@ -459,6 +643,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_SetUrl value)? setUrl,
+    TResult Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult Function(_Play value)? play,
     TResult Function(_Pause value)? pause,
     TResult Function(_Stop value)? stop,
@@ -516,6 +701,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
+    required TResult Function(int position) setCurrentPosition,
     required TResult Function() play,
     required TResult Function() pause,
     required TResult Function() stop,
@@ -527,6 +713,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
+    TResult? Function(int position)? setCurrentPosition,
     TResult? Function()? play,
     TResult? Function()? pause,
     TResult? Function()? stop,
@@ -538,6 +725,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
+    TResult Function(int position)? setCurrentPosition,
     TResult Function()? play,
     TResult Function()? pause,
     TResult Function()? stop,
@@ -553,6 +741,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_SetUrl value) setUrl,
+    required TResult Function(_SetCurrentPosition value) setCurrentPosition,
     required TResult Function(_Play value) play,
     required TResult Function(_Pause value) pause,
     required TResult Function(_Stop value) stop,
@@ -564,6 +753,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_SetUrl value)? setUrl,
+    TResult? Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult? Function(_Play value)? play,
     TResult? Function(_Pause value)? pause,
     TResult? Function(_Stop value)? stop,
@@ -575,6 +765,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_SetUrl value)? setUrl,
+    TResult Function(_SetCurrentPosition value)? setCurrentPosition,
     TResult Function(_Play value)? play,
     TResult Function(_Pause value)? pause,
     TResult Function(_Stop value)? stop,
@@ -601,6 +792,7 @@ mixin _$AudioPlayerState {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -612,6 +804,7 @@ mixin _$AudioPlayerState {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -623,6 +816,7 @@ mixin _$AudioPlayerState {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -635,6 +829,7 @@ mixin _$AudioPlayerState {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -646,6 +841,7 @@ mixin _$AudioPlayerState {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -657,6 +853,7 @@ mixin _$AudioPlayerState {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -731,6 +928,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -745,6 +943,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -759,6 +958,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -777,6 +977,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -791,6 +992,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -805,6 +1007,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -866,6 +1069,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -880,6 +1084,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -894,6 +1099,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -912,6 +1118,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -926,6 +1133,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -940,6 +1148,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1029,6 +1238,7 @@ class _$GetUrlImpl implements _GetUrl {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) {
     return getUrl(audioUrl);
@@ -1043,6 +1253,7 @@ class _$GetUrlImpl implements _GetUrl {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) {
     return getUrl?.call(audioUrl);
@@ -1057,6 +1268,7 @@ class _$GetUrlImpl implements _GetUrl {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1075,6 +1287,7 @@ class _$GetUrlImpl implements _GetUrl {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) {
     return getUrl(this);
@@ -1089,6 +1302,7 @@ class _$GetUrlImpl implements _GetUrl {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) {
     return getUrl?.call(this);
@@ -1103,6 +1317,7 @@ class _$GetUrlImpl implements _GetUrl {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1172,6 +1387,7 @@ class _$OnPlayImpl implements _OnPlay {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) {
     return onPlay();
@@ -1186,6 +1402,7 @@ class _$OnPlayImpl implements _OnPlay {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) {
     return onPlay?.call();
@@ -1200,6 +1417,7 @@ class _$OnPlayImpl implements _OnPlay {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1218,6 +1436,7 @@ class _$OnPlayImpl implements _OnPlay {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) {
     return onPlay(this);
@@ -1232,6 +1451,7 @@ class _$OnPlayImpl implements _OnPlay {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) {
     return onPlay?.call(this);
@@ -1246,6 +1466,7 @@ class _$OnPlayImpl implements _OnPlay {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1307,6 +1528,7 @@ class _$onPauseImpl implements _onPause {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) {
     return onPause();
@@ -1321,6 +1543,7 @@ class _$onPauseImpl implements _onPause {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) {
     return onPause?.call();
@@ -1335,6 +1558,7 @@ class _$onPauseImpl implements _onPause {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1353,6 +1577,7 @@ class _$onPauseImpl implements _onPause {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) {
     return onPause(this);
@@ -1367,6 +1592,7 @@ class _$onPauseImpl implements _onPause {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) {
     return onPause?.call(this);
@@ -1381,6 +1607,7 @@ class _$onPauseImpl implements _onPause {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1442,6 +1669,7 @@ class _$onStopImpl implements _onStop {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) {
     return onStop();
@@ -1456,6 +1684,7 @@ class _$onStopImpl implements _onStop {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) {
     return onStop?.call();
@@ -1470,6 +1699,7 @@ class _$onStopImpl implements _onStop {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1488,6 +1718,7 @@ class _$onStopImpl implements _onStop {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) {
     return onStop(this);
@@ -1502,6 +1733,7 @@ class _$onStopImpl implements _onStop {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) {
     return onStop?.call(this);
@@ -1516,6 +1748,7 @@ class _$onStopImpl implements _onStop {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1528,6 +1761,185 @@ class _$onStopImpl implements _onStop {
 
 abstract class _onStop implements AudioPlayerState {
   const factory _onStop() = _$onStopImpl;
+}
+
+/// @nodoc
+abstract class _$$OnCurrentPositionImplCopyWith<$Res> {
+  factory _$$OnCurrentPositionImplCopyWith(_$OnCurrentPositionImpl value,
+          $Res Function(_$OnCurrentPositionImpl) then) =
+      __$$OnCurrentPositionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int position});
+}
+
+/// @nodoc
+class __$$OnCurrentPositionImplCopyWithImpl<$Res>
+    extends _$AudioPlayerStateCopyWithImpl<$Res, _$OnCurrentPositionImpl>
+    implements _$$OnCurrentPositionImplCopyWith<$Res> {
+  __$$OnCurrentPositionImplCopyWithImpl(_$OnCurrentPositionImpl _value,
+      $Res Function(_$OnCurrentPositionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AudioPlayerState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? position = null,
+  }) {
+    return _then(_$OnCurrentPositionImpl(
+      null == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnCurrentPositionImpl implements _OnCurrentPosition {
+  const _$OnCurrentPositionImpl(this.position);
+
+  @override
+  final int position;
+
+  @override
+  String toString() {
+    return 'AudioPlayerState.onCurrentPosition(position: $position)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnCurrentPositionImpl &&
+            (identical(other.position, position) ||
+                other.position == position));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, position);
+
+  /// Create a copy of AudioPlayerState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnCurrentPositionImplCopyWith<_$OnCurrentPositionImpl> get copyWith =>
+      __$$OnCurrentPositionImplCopyWithImpl<_$OnCurrentPositionImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String audioUrl) getUrl,
+    required TResult Function() onPlay,
+    required TResult Function() onPause,
+    required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(String message) error,
+  }) {
+    return onCurrentPosition(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String audioUrl)? getUrl,
+    TResult? Function()? onPlay,
+    TResult? Function()? onPause,
+    TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(String message)? error,
+  }) {
+    return onCurrentPosition?.call(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String audioUrl)? getUrl,
+    TResult Function()? onPlay,
+    TResult Function()? onPause,
+    TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (onCurrentPosition != null) {
+      return onCurrentPosition(position);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_GetUrl value) getUrl,
+    required TResult Function(_OnPlay value) onPlay,
+    required TResult Function(_onPause value) onPause,
+    required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
+    required TResult Function(_Error value) error,
+  }) {
+    return onCurrentPosition(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_GetUrl value)? getUrl,
+    TResult? Function(_OnPlay value)? onPlay,
+    TResult? Function(_onPause value)? onPause,
+    TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
+    TResult? Function(_Error value)? error,
+  }) {
+    return onCurrentPosition?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_GetUrl value)? getUrl,
+    TResult Function(_OnPlay value)? onPlay,
+    TResult Function(_onPause value)? onPause,
+    TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (onCurrentPosition != null) {
+      return onCurrentPosition(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnCurrentPosition implements AudioPlayerState {
+  const factory _OnCurrentPosition(final int position) =
+      _$OnCurrentPositionImpl;
+
+  int get position;
+
+  /// Create a copy of AudioPlayerState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnCurrentPositionImplCopyWith<_$OnCurrentPositionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1604,6 +2016,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
+    required TResult Function(int position) onCurrentPosition,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1618,6 +2031,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
+    TResult? Function(int position)? onCurrentPosition,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1632,6 +2046,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
+    TResult Function(int position)? onCurrentPosition,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1650,6 +2065,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_OnPlay value) onPlay,
     required TResult Function(_onPause value) onPause,
     required TResult Function(_onStop value) onStop,
+    required TResult Function(_OnCurrentPosition value) onCurrentPosition,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -1664,6 +2080,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_OnPlay value)? onPlay,
     TResult? Function(_onPause value)? onPause,
     TResult? Function(_onStop value)? onStop,
+    TResult? Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -1678,6 +2095,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_OnPlay value)? onPlay,
     TResult Function(_onPause value)? onPause,
     TResult Function(_onStop value)? onStop,
+    TResult Function(_OnCurrentPosition value)? onCurrentPosition,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

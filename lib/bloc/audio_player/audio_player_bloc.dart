@@ -6,6 +6,8 @@ part 'audio_player_bloc.freezed.dart';
 @freezed
 abstract class AudioPlayerEvent with _$AudioPlayerEvent {
   const factory AudioPlayerEvent.setUrl(String audioUrl) = _SetUrl;
+  const factory AudioPlayerEvent.setCurrentPosition(int position) =
+      _SetCurrentPosition;
   const factory AudioPlayerEvent.play() = _Play;
   const factory AudioPlayerEvent.pause() = _Pause;
   const factory AudioPlayerEvent.stop() = _Stop;
@@ -19,6 +21,8 @@ abstract class AudioPlayerState with _$AudioPlayerState {
   const factory AudioPlayerState.onPlay() = _OnPlay;
   const factory AudioPlayerState.onPause() = _onPause;
   const factory AudioPlayerState.onStop() = _onStop;
+  const factory AudioPlayerState.onCurrentPosition(int position) =
+      _OnCurrentPosition;
   const factory AudioPlayerState.error(String message) = _Error;
 }
 
@@ -42,6 +46,10 @@ class AudioPlayerBloc extends Bloc<AudioPlayerEvent, AudioPlayerState> {
           stop: () {
             emit(const AudioPlayerState.loading());
             emit(const AudioPlayerState.onPause());
+          },
+          setCurrentPosition: (position) {
+            emit(const AudioPlayerState.loading());
+            emit(AudioPlayerState.onCurrentPosition(position));
           },
         );
       } catch (e) {

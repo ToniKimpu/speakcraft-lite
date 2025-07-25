@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/screens/patterns/widgets/example_widget.dart';
+import 'package:pmp_english/screens/patterns/widgets/example_list_widget.dart';
 
 import '../../../model/pattern/pattern.dart';
+import '../../../model/pattern_example/pattern_example.dart';
 
 class PatternWidget extends StatelessWidget {
   const PatternWidget({
     super.key,
+    required this.audioPlayer,
     required this.pattern,
     required this.audioPlayerBloc,
+    required this.audioPositionTrackerBloc,
   });
+  final AudioPlayer audioPlayer;
   final Pattern pattern;
-  final AudioPlayerBloc audioPlayerBloc;
+  final AudioPlayerBloc audioPlayerBloc, audioPositionTrackerBloc;
   // final svAggreements = "I => am;He,She,It => is;We,You,They => are";
 
   @override
@@ -67,6 +72,7 @@ class PatternWidget extends StatelessWidget {
                             onStop: () => false,
                             orElse: () => false,
                           );
+
                           return InkWell(
                             borderRadius: BorderRadius.circular(100),
                             onTap: () {
@@ -96,7 +102,8 @@ class PatternWidget extends StatelessWidget {
                                   shape: BoxShape.circle,
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.2),
+                                      color:
+                                          Colors.black.withValues(alpha: 0.2),
                                       spreadRadius: 3,
                                       blurRadius: 8,
                                       offset: const Offset(0, 4),
@@ -182,13 +189,21 @@ class PatternWidget extends StatelessWidget {
         ),
         if (pattern.patternExamples!.isNotEmpty)
           Expanded(
-            child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: pattern.patternExamples!.length,
-              padding: const EdgeInsets.only(top: 12),
-              itemBuilder: (context, index) {
-                return ExampleWidget(
-                  patternExample: pattern.patternExamples![index],
+            child: BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
+              bloc: audioPositionTrackerBloc,
+              builder: (context, state) {
+                final currentPosition = state.maybeWhen(
+                  onCurrentPosition: (position) => position,
+                  orElse: () => 0,
+                );
+                final patternExamples =
+                    List<PatternExample>.from(pattern.patternExamples!)
+                      ..sort((a, b) => a.createdAt!.compareTo(b.createdAt!));
+
+                return ExampleListWidget(
+                  audioPlayer: audioPlayer,
+                  patternExamples: patternExamples,
+                  currentPosition: currentPosition,
                 );
               },
             ),

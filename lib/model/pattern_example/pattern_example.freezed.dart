@@ -27,6 +27,8 @@ mixin _$PatternExample {
   String? get burmeseText => throw _privateConstructorUsedError;
   @JsonKey(name: 'pattern_id')
   int get patternId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'start_at')
+  int get startAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
@@ -51,6 +53,7 @@ abstract class $PatternExampleCopyWith<$Res> {
       @JsonKey(name: 'english_text') String englishText,
       @JsonKey(name: 'burmese_text') String? burmeseText,
       @JsonKey(name: 'pattern_id') int patternId,
+      @JsonKey(name: 'start_at') int startAt,
       @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
@@ -73,6 +76,7 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
     Object? englishText = null,
     Object? burmeseText = freezed,
     Object? patternId = null,
+    Object? startAt = null,
     Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -91,6 +95,10 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
       patternId: null == patternId
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
+              as int,
+      startAt: null == startAt
+          ? _value.startAt
+          : startAt // ignore: cast_nullable_to_non_nullable
               as int,
       createdAt: freezed == createdAt
           ? _value.createdAt
@@ -113,6 +121,7 @@ abstract class _$$PatternExampleImplCopyWith<$Res>
       @JsonKey(name: 'english_text') String englishText,
       @JsonKey(name: 'burmese_text') String? burmeseText,
       @JsonKey(name: 'pattern_id') int patternId,
+      @JsonKey(name: 'start_at') int startAt,
       @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
@@ -133,6 +142,7 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
     Object? englishText = null,
     Object? burmeseText = freezed,
     Object? patternId = null,
+    Object? startAt = null,
     Object? createdAt = freezed,
   }) {
     return _then(_$PatternExampleImpl(
@@ -152,6 +162,10 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
               as int,
+      startAt: null == startAt
+          ? _value.startAt
+          : startAt // ignore: cast_nullable_to_non_nullable
+              as int,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -168,6 +182,7 @@ class _$PatternExampleImpl implements _PatternExample {
       @JsonKey(name: 'english_text') required this.englishText,
       @JsonKey(name: 'burmese_text') this.burmeseText,
       @JsonKey(name: 'pattern_id') required this.patternId,
+      @JsonKey(name: 'start_at') required this.startAt,
       @JsonKey(name: 'created_at') this.createdAt});
 
   factory _$PatternExampleImpl.fromJson(Map<String, dynamic> json) =>
@@ -185,12 +200,15 @@ class _$PatternExampleImpl implements _PatternExample {
   @JsonKey(name: 'pattern_id')
   final int patternId;
   @override
+  @JsonKey(name: 'start_at')
+  final int startAt;
+  @override
   @JsonKey(name: 'created_at')
   final DateTime? createdAt;
 
   @override
   String toString() {
-    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, patternId: $patternId, createdAt: $createdAt)';
+    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, patternId: $patternId, startAt: $startAt, createdAt: $createdAt)';
   }
 
   @override
@@ -205,6 +223,7 @@ class _$PatternExampleImpl implements _PatternExample {
                 other.burmeseText == burmeseText) &&
             (identical(other.patternId, patternId) ||
                 other.patternId == patternId) &&
+            (identical(other.startAt, startAt) || other.startAt == startAt) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt));
   }
@@ -212,7 +231,7 @@ class _$PatternExampleImpl implements _PatternExample {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, englishText, burmeseText, patternId, createdAt);
+      runtimeType, id, englishText, burmeseText, patternId, startAt, createdAt);
 
   /// Create a copy of PatternExample
   /// with the given fields replaced by the non-null parameter values.
@@ -237,6 +256,7 @@ abstract class _PatternExample implements PatternExample {
           @JsonKey(name: 'english_text') required final String englishText,
           @JsonKey(name: 'burmese_text') final String? burmeseText,
           @JsonKey(name: 'pattern_id') required final int patternId,
+          @JsonKey(name: 'start_at') required final int startAt,
           @JsonKey(name: 'created_at') final DateTime? createdAt}) =
       _$PatternExampleImpl;
 
@@ -254,6 +274,9 @@ abstract class _PatternExample implements PatternExample {
   @override
   @JsonKey(name: 'pattern_id')
   int get patternId;
+  @override
+  @JsonKey(name: 'start_at')
+  int get startAt;
   @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;

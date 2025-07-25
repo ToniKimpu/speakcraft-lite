@@ -27,9 +27,11 @@ class SpeakingPatternScreen extends StatefulWidget {
 class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
   final _patternBloc = PatternBloc();
   final _audioPlayerBloc = AudioPlayerBloc();
+  final _audioPositionTrackerBloc = AudioPlayerBloc();
   final _audioPlayer = AudioPlayer();
   int _currentPage = 0;
   StreamSubscription? _playerStateSubscription;
+  StreamSubscription<Duration>? _positionSub;
   final _patterns = <Pattern>[];
   @override
   void initState() {
@@ -42,12 +44,19 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
         _audioPlayer.seek(Duration.zero);
       }
     });
+    _positionSub = _audioPlayer.positionStream.listen(
+      (pos) {
+        _audioPositionTrackerBloc
+            .add(AudioPlayerEvent.setCurrentPosition(pos.inSeconds));
+      },
+    );
   }
 
   @override
   void dispose() {
     super.dispose();
     _playerStateSubscription?.cancel();
+    _positionSub?.cancel();
     _audioPlayer.dispose();
   }
 
@@ -83,6 +92,9 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
             ),
             BlocProvider<AudioPlayerBloc>(
               create: (context) => _audioPlayerBloc,
+            ),
+            BlocProvider<AudioPlayerBloc>(
+              create: (context) => _audioPositionTrackerBloc,
             ),
           ],
           child: BlocListener<AudioPlayerBloc, AudioPlayerState>(
@@ -141,8 +153,11 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                               patterns.length,
                               (index) {
                                 return PatternWidget(
+                                  audioPlayer: _audioPlayer,
                                   pattern: patterns[index],
                                   audioPlayerBloc: _audioPlayerBloc,
+                                  audioPositionTrackerBloc:
+                                      _audioPositionTrackerBloc,
                                 );
                               },
                             ),
@@ -220,7 +235,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withValues(alpha: 0.2),
               spreadRadius: 3,
               blurRadius: 8,
               offset: const Offset(0, 4),
@@ -254,7 +269,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.2),
+            color: Colors.black.withValues(alpha: 0.2),
             spreadRadius: 3,
             blurRadius: 8,
             offset: const Offset(0, 4),
@@ -268,7 +283,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
           fontWeight: FontWeight.bold,
           shadows: [
             Shadow(
-              color: Colors.black.withOpacity(0.3),
+              color: Colors.black.withValues(alpha: 0.3),
               blurRadius: 4,
               offset: const Offset(1, 1),
             ),
@@ -314,7 +329,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withValues(alpha: 0.2),
               spreadRadius: 3,
               blurRadius: 8,
               offset: const Offset(0, 4),

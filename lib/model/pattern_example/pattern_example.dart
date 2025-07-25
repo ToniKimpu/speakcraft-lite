@@ -12,6 +12,7 @@ class PatternExample with _$PatternExample {
     @JsonKey(name: 'english_text') required String englishText,
     @JsonKey(name: 'burmese_text') String? burmeseText,
     @JsonKey(name: 'pattern_id') required int patternId,
+    @JsonKey(name: 'start_at') required int startAt,
     @JsonKey(name: 'created_at') DateTime? createdAt,
   }) = _PatternExample;
 

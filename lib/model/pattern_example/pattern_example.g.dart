@@ -12,6 +12,7 @@ _$PatternExampleImpl _$$PatternExampleImplFromJson(Map<String, dynamic> json) =>
       englishText: json['english_text'] as String,
       burmeseText: json['burmese_text'] as String?,
       patternId: (json['pattern_id'] as num).toInt(),
+      startAt: (json['start_at'] as num).toInt(),
       createdAt: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
@@ -24,5 +25,6 @@ Map<String, dynamic> _$$PatternExampleImplToJson(
       'english_text': instance.englishText,
       'burmese_text': instance.burmeseText,
       'pattern_id': instance.patternId,
+      'start_at': instance.startAt,
       'created_at': instance.createdAt?.toIso8601String(),
     };
