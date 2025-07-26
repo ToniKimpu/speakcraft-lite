@@ -71,29 +71,73 @@ class _LyricsWidgetState extends State<LyricsWidget> {
             final subtitle = subtitles[index];
             final selected = subtitle.id == widget.selectedSubtitle.id;
 
-            return SizedBox(
-              height: 72, // <- Estimate height for 2-line ListTile
-              child: ListTile(
-                selected: selected,
-                selectedTileColor: const Color(0xFF0F2027),
-                tileColor: const Color(0xFF203A43),
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
                 onTap: () => widget.onTap.call(subtitle),
-                leading: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                child: Ink(
+                  height: 120,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Colors.white,
+                    color: selected
+                        // ? const Color(0xFF0F2027)
+                        ? Colors.white.withValues(alpha: 0.3)
+                        : const Color(0xFF203A43),
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.4),
+                        blurRadius: 6,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
                   ),
-                  child: Text(
-                    _formatDuration(subtitle.start),
-                    style:
-                        PmpTextStyles.labelSemi.copyWith(color: Colors.black),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.white,
+                        ),
+                        child: Text(
+                          _formatDuration(subtitle.start),
+                          style: PmpTextStyles.subBold
+                              .copyWith(color: Colors.black),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              subtitle.text,
+                              style: PmpTextStyles.body2Semi.copyWith(
+                                color: Colors.white,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              "တစ်ကယ်လို့ ခင်ဗျာ",
+                              style: PmpTextStyles.body2Medium.copyWith(
+                                color: Colors.amberAccent,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                title: Text(
-                  subtitle.text,
-                  style: PmpTextStyles.body2Semi.copyWith(color: Colors.white),
                 ),
               ),
             );

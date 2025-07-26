@@ -236,7 +236,7 @@ Future<List<Subtitle>> parseSrtFile(
       multiLine: true,
     );
 
-    const double fixedHeight = 72.0;
+    const double fixedHeight = 132.0;
     double scrollPosition = 0;
     int idCounter = 1;
 

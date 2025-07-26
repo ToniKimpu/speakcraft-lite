@@ -62,43 +62,30 @@ class _CustomControlState extends State<CustomControl> {
           ),
           child: Row(
             children: [
-              InkWell(
+              Material(
                 borderRadius: BorderRadius.circular(100),
-                onTap: () {
-                  _checkReadyToPlay();
-                  final currentPosition =
-                      widget.controller.value.position.inSeconds;
-                  final newPosition = (currentPosition - 10)
-                      .clamp(widget.startPosition, widget.endPosition);
-                  widget.controller.seekTo(Duration(seconds: newPosition));
-                },
-                child: Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color(0xFFFFD700), // Gold
-                        Color(0xFFFFA500), // Deep Gold
-                        Color(0xFFB8860B), // Dark Golden
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(100),
+                  onTap: () {
+                    _checkReadyToPlay();
+                    final currentPosition =
+                        widget.controller.value.position.inSeconds;
+                    final newPosition = (currentPosition - 10)
+                        .clamp(widget.startPosition, widget.endPosition);
+                    widget.controller.seekTo(Duration(seconds: newPosition));
+                  },
+                  child: Ink(
+                    width: 24,
+                    height: 24,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
                     ),
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        spreadRadius: 3,
-                        blurRadius: 8,
-                        offset: const Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: const Icon(
-                    Icons.replay_10,
-                    color: PmpColors.white,
-                    size: 18,
+                    child: const Icon(
+                      Icons.replay_10,
+                      color: PmpColors.white,
+                      size: 18,
+                    ),
                   ),
                 ),
               ),
@@ -107,30 +94,39 @@ class _CustomControlState extends State<CustomControl> {
               ),
               Text(
                 adjustedCurrentPosition.formatDuration(),
-                style: PmpTextStyles.body2Regular.copyWith(
+                style: PmpTextStyles.subBold.copyWith(
                   color: Colors.white,
                 ),
               ),
               const SizedBox(
                 width: 12,
               ),
-              Expanded(
-                child: SliderTheme(
-                  data: SliderThemeData(
-                    trackShape: CustomTrackShape(),
-                  ),
-                  child: Slider(
-                    value: sliderPosition.toDouble(),
-                    min: 0,
-                    max: widget.endPosition.toDouble() -
-                        widget.startPosition.toDouble(),
-                    thumbColor: Colors.orange,
-                    activeColor: Colors.orange,
-                    onChanged: (value) {
-                      _checkReadyToPlay();
-                      int seekPosition = value.toInt() + widget.startPosition;
-                      widget.controller.seekTo(Duration(seconds: seekPosition));
-                    },
+              Flexible(
+                flex: 3,
+                child: ConstrainedBox(
+                  constraints:
+                      const BoxConstraints(minWidth: 220, maxWidth: 400),
+                  child: SliderTheme(
+                    data: SliderThemeData(
+                      trackShape: CustomTrackShape(),
+                      thumbShape: const RoundSliderThumbShape(
+                        enabledThumbRadius: 6, // default is 6
+                      ),
+                    ),
+                    child: Slider(
+                      value: sliderPosition.toDouble(),
+                      min: 0,
+                      max: widget.endPosition.toDouble() -
+                          widget.startPosition.toDouble(),
+                      thumbColor: Colors.white,
+                      activeColor: Colors.orange,
+                      onChanged: (value) {
+                        _checkReadyToPlay();
+                        int seekPosition = value.toInt() + widget.startPosition;
+                        widget.controller
+                            .seekTo(Duration(seconds: seekPosition));
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -139,130 +135,98 @@ class _CustomControlState extends State<CustomControl> {
               ),
               Text(
                 '- ${remainingDuration.formatDuration()}',
-                style: PmpTextStyles.body2Regular.copyWith(
+                style: PmpTextStyles.subBold.copyWith(
                   color: Colors.white,
                 ),
               ),
               const SizedBox(
                 width: 12,
               ),
-              InkWell(
+              Material(
                 borderRadius: BorderRadius.circular(100),
-                onTap: () {
-                  _checkReadyToPlay();
-                  final currentPosition =
-                      widget.controller.value.position.inSeconds;
-                  final newPosition = (currentPosition + 10)
-                      .clamp(widget.startPosition, widget.endPosition);
-                  widget.controller.seekTo(Duration(seconds: newPosition));
-                  widget.onSeek();
-                },
-                child: Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color(0xFFFFD700), // Gold
-                        Color(0xFFFFA500), // Deep Gold
-                        Color(0xFFB8860B), // Dark Golden
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(100),
+                  onTap: () {
+                    _checkReadyToPlay();
+                    final currentPosition =
+                        widget.controller.value.position.inSeconds;
+                    final newPosition = (currentPosition + 10)
+                        .clamp(widget.startPosition, widget.endPosition);
+                    widget.controller.seekTo(Duration(seconds: newPosition));
+                    widget.onSeek();
+                  },
+                  child: Ink(
+                    width: 24,
+                    height: 24,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
                     ),
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        spreadRadius: 3,
-                        blurRadius: 8,
-                        offset: const Offset(0, 4),
-                      ),
-                    ],
-                  ),
-                  child: const Icon(
-                    Icons.forward_10,
-                    color: PmpColors.white,
-                    size: 18,
+                    child: const Icon(
+                      Icons.forward_10,
+                      color: PmpColors.white,
+                      size: 18,
+                    ),
                   ),
                 ),
               ),
-              const Spacer(),
-              InkWell(
+              const SizedBox(
+                width: 12,
+              ),
+              Material(
                 borderRadius: BorderRadius.circular(6),
-                onTap: () => widget.onVocabulary(),
-                child: Container(
-                  height: 24,
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 0, horizontal: 8),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color(0xFFFFD700), // Gold
-                        Color(0xFFFFA500), // Deep Gold
-                        Color(0xFFB8860B), // Dark Golden
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(6),
+                  onTap: () => widget.onVocabulary(),
+                  child: Container(
+                    height: 24,
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(color: Colors.white, width: 1),
                     ),
-                    borderRadius: BorderRadius.circular(6),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        spreadRadius: 3,
-                        blurRadius: 8,
-                        offset: const Offset(0, 4),
+                    child: Center(
+                      child: Text(
+                        "voc",
+                        style: PmpTextStyles.labelSemi
+                            .copyWith(color: Colors.white),
                       ),
-                    ],
-                  ),
-                  child: Center(
-                    child: Text(
-                      "voc",
-                      style:
-                          PmpTextStyles.labelSemi.copyWith(color: Colors.white),
                     ),
                   ),
                 ),
               ),
               const Spacer(),
               widget.readyToPlay
-                  ? InkWell(
+                  ? Material(
                       borderRadius: BorderRadius.circular(100),
-                      onTap: () {
-                        widget.controller.value.isPlaying
-                            ? widget.controller.pause()
-                            : widget.controller.play();
-                        setState(() {});
-                      },
-                      child: Container(
-                        width: 24,
-                        height: 24,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [
-                              Color(0xFFFFD700), // Gold
-                              Color(0xFFFFA500), // Deep Gold
-                              Color(0xFFB8860B), // Dark Golden
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ),
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              spreadRadius: 3,
-                              blurRadius: 8,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: Icon(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(100),
+                        onTap: () {
                           widget.controller.value.isPlaying
-                              ? Icons.pause
-                              : Icons.play_arrow,
-                          color: PmpColors.white,
-                          size: 18,
+                              ? widget.controller.pause()
+                              : widget.controller.play();
+                          setState(() {});
+                        },
+                        child: Container(
+                          width: 24,
+                          height: 24,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 1,
+                            ),
+                          ),
+                          child: Icon(
+                            widget.controller.value.isPlaying
+                                ? Icons.pause
+                                : Icons.play_arrow,
+                            color: PmpColors.white,
+                            size: 18,
+                          ),
                         ),
                       ),
                     )
