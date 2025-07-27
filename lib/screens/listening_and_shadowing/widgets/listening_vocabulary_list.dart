@@ -35,21 +35,25 @@ class ListeningVocabularyList extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             gradient: const LinearGradient(
-              colors: [Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364)],
+              colors: [
+                Color(0xFF0F2027),
+                Color(0xFF203A43),
+                Color(0xFF2C5364),
+              ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
             boxShadow: [
               BoxShadow(
-                color:
-                    Colors.black.withOpacity(0.3), // Slightly stronger shadow
+                color: Colors.black
+                    .withValues(alpha: 0.3), // Slightly stronger shadow
                 blurRadius: 12,
                 spreadRadius: 6,
               ),
             ],
             border: Border.all(
               color: Colors.white
-                  .withOpacity(0.4), // Soft white border for contrast
+                  .withValues(alpha: 0.4), // Soft white border for contrast
             ),
           ),
           child: BlocBuilder<ListeningBloc, ListeningState>(
@@ -124,7 +128,7 @@ class ListeningVocabularyList extends StatelessWidget {
                       Container(
                         height: 0.5,
                         width: double.infinity,
-                        color: Colors.white.withOpacity(0.3),
+                        color: Colors.white.withValues(alpha: 0.3),
                       ),
                       Expanded(
                         child: ListView.separated(

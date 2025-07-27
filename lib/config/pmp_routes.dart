@@ -10,6 +10,7 @@ import 'package:pmp_english/screens/main/free_user_screen.dart';
 import 'package:pmp_english/screens/main/new_path_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
+import 'package:pmp_english/screens/practice_with_api/ai_practice_screen.dart';
 import 'package:pmp_english/screens/profiles/update_avatar_page.dart';
 import 'package:pmp_english/screens/profiles/update_name_page.dart';
 import 'package:pmp_english/screens/self_practice_pattern/pattern_list.dart';
@@ -63,6 +64,7 @@ class PmpRoutes {
   static const updateAvatarPage = '/update_avatar_page';
   static const newPathScreen = '/new_path_screen';
   static const deviceFailedScreen = '/device_failed_screen';
+  static const aiPracticeScreen = '/ai_practice_screen';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -192,6 +194,8 @@ class PmpRoutes {
         return _getRoute(const NewPathScreen(), settings);
       case deviceFailedScreen:
         return _getRoute(const DeviceFailedScreen(), settings);
+      case aiPracticeScreen:
+        return _getRoute(const AiPracticeScreen(), settings);
       default:
         throw Exception(
           'Sorry, path ${settings.name} is invalid!',

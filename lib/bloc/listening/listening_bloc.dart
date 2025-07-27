@@ -82,8 +82,8 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
     try {
       final dataRes = await supabase
           .from('pattern_vocabularies')
-          .select('*,listening_vocabulary_relation!inner()')
-          .eq('listening_vocabulary_relation.listening_id', listeningId)
+          .select('*,listening_vocabularies_relation!inner()')
+          .eq('listening_vocabularies_relation.listening_id', listeningId)
           .eq('is_deleted', false);
 
       if (dataRes.isEmpty) {

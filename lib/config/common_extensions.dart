@@ -232,11 +232,12 @@ Future<List<Subtitle>> parseSrtFile(
     final regex = RegExp(
       r'(\d+)\n'
       r'(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n'
-      r'([\s\S]*?)(?=\n{2,}|\z)',
+      // r'([\s\S]*?)(?=\n{2,}|\z)',
+      r'((?:.+(?:\n|$))*)',
       multiLine: true,
     );
 
-    const double fixedHeight = 132.0;
+    const double fixedHeight = 112.0;
     double scrollPosition = 0;
     int idCounter = 1;
 

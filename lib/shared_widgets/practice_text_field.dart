@@ -7,6 +7,7 @@ class PracticeTextField extends StatefulWidget {
     super.key,
     this.focusNode,
     this.onSubmitted,
+    this.hintText,
     this.englishOnly = false,
     required this.controller,
     this.onChange,
@@ -15,6 +16,7 @@ class PracticeTextField extends StatefulWidget {
   final VoidCallback? onSubmitted;
   final bool englishOnly;
   final TextEditingController controller;
+  final String? hintText;
   final Function(String value)? onChange;
 
   @override
@@ -39,14 +41,14 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
         onSubmitted: (value) => widget.onSubmitted?.call(),
         onChanged: (value) => widget.onChange?.call(value),
         decoration: InputDecoration(
-          fillColor: Colors.white.withOpacity(0.1),
+          fillColor: Colors.white.withValues(alpha: 0.1),
           contentPadding: const EdgeInsets.all(12),
           constraints: const BoxConstraints(
             maxHeight: 88,
           ),
           border: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.white.withOpacity(0.5), // Subtle border
+              color: Colors.white.withValues(alpha: 0.5), // Subtle border
             ),
             borderRadius: const BorderRadius.all(
               Radius.circular(8),
@@ -55,7 +57,7 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.white.withOpacity(0.5),
+              color: Colors.white.withValues(alpha: 0.5),
             ),
             borderRadius: const BorderRadius.all(
               Radius.circular(8),
@@ -71,15 +73,15 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
             ),
             gapPadding: 1.0,
           ),
-          hintText: "Enter your answer...",
+          hintText: widget.hintText ?? "Enter your answer...",
           hintStyle: PmpTextStyles.body2Semi.copyWith(
-            color: Colors.white.withOpacity(0.5),
+            color: Colors.white.withValues(alpha: 0.5),
           ),
         ),
         inputFormatters: !widget.englishOnly
             ? null
             : <TextInputFormatter>[
-                FilteringTextInputFormatter.allow(RegExp('[a-z A-Z 0-9]'))
+                FilteringTextInputFormatter.allow(RegExp(r'[\x00-\x7F]'))
               ],
       ),
     );

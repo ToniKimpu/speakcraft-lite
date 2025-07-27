@@ -30,10 +30,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   late TextEditingController _idController;
   late TextEditingController _seekToController;
 
-  late PlayerState _playerState;
-  late YoutubeMetaData _videoMetaData;
-  final double _volume = 100;
-  final bool _muted = false;
   bool _isPlayerReady = false;
 
   late final Duration _startDuration;
@@ -41,9 +37,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   int sliderPosition = 0;
   final ScrollController _lyricsController = ScrollController();
 
-  final int _currentIndex = 0;
   bool _readyToPlay = false;
-  final List<double> _subtitleBoxHeights = [];
   final List<Subtitle> _subtitles = [];
   Subtitle _lastScrolledSubtitle = Subtitle.empty;
   Subtitle _selectedSubtitle = Subtitle.empty;
@@ -79,8 +73,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     )..addListener(listener);
     _idController = TextEditingController();
     _seekToController = TextEditingController();
-    _videoMetaData = const YoutubeMetaData();
-    _playerState = PlayerState.unknown;
     _lyricsController.addListener(
       () {
         if (_lyricsController.position.userScrollDirection !=
@@ -103,8 +95,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   void listener() {
     if (_isPlayerReady && mounted && !_controller.value.isFullScreen) {
       setState(() {
-        _playerState = _controller.value.playerState;
-        _videoMetaData = _controller.metadata;
         _scrollToNext();
       });
     }
