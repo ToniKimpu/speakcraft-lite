@@ -10,7 +10,7 @@ import 'package:pmp_english/screens/main/free_user_screen.dart';
 import 'package:pmp_english/screens/main/new_path_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
-import 'package:pmp_english/screens/practice_with_api/ai_practice_screen.dart';
+import 'package:pmp_english/screens/practice_with_ai/ai_practice_screen.dart';
 import 'package:pmp_english/screens/profiles/update_avatar_page.dart';
 import 'package:pmp_english/screens/profiles/update_name_page.dart';
 import 'package:pmp_english/screens/self_practice_pattern/pattern_list.dart';

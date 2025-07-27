@@ -8,6 +8,10 @@ class PracticeTextField extends StatefulWidget {
     this.focusNode,
     this.onSubmitted,
     this.hintText,
+    this.minLines,
+    this.maxLines,
+    this.maxLength,
+    this.maxHeight,
     this.englishOnly = false,
     required this.controller,
     this.onChange,
@@ -17,6 +21,11 @@ class PracticeTextField extends StatefulWidget {
   final bool englishOnly;
   final TextEditingController controller;
   final String? hintText;
+  final int? minLines;
+  final int? maxLines;
+  final int? maxLength;
+
+  final double? maxHeight;
   final Function(String value)? onChange;
 
   @override
@@ -32,19 +41,33 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
       ),
       child: TextField(
         controller: widget.controller,
-        textInputAction: TextInputAction.next,
         focusNode: widget.focusNode,
-        maxLines: 2,
+        minLines: widget.minLines,
+        maxLines: widget.maxLines,
+        maxLength: widget.maxLength,
         style: const TextStyle(color: Colors.white),
         cursorColor: Colors.white,
         scrollPadding: const EdgeInsets.only(bottom: 120),
         onSubmitted: (value) => widget.onSubmitted?.call(),
         onChanged: (value) => widget.onChange?.call(value),
+        buildCounter: (context,
+            {required currentLength, required isFocused, required maxLength}) {
+          if (maxLength == null) {
+            return null;
+          }
+          return Text(
+            "$currentLength/$maxLength",
+            style: PmpTextStyles.labelSemi.copyWith(
+              color: Colors.white.withValues(alpha: 0.7),
+            ),
+          );
+        },
         decoration: InputDecoration(
           fillColor: Colors.white.withValues(alpha: 0.1),
+          filled: true,
           contentPadding: const EdgeInsets.all(12),
-          constraints: const BoxConstraints(
-            maxHeight: 88,
+          constraints: BoxConstraints(
+            maxHeight: widget.maxHeight ?? 88.0,
           ),
           border: OutlineInputBorder(
             borderSide: BorderSide(
