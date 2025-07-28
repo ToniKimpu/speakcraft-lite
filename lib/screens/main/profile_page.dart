@@ -28,40 +28,98 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     final appUser = GlobalAppState().currentUser;
+    final int usedTokens = GlobalAppState().currentUser.totalTokenUsed;
+    const int maxTokens = GlobalAppState.maxTotalTokens;
+    final double progress = (usedTokens / maxTokens).clamp(0.0, 1.0);
     return MainScaffold(
       appBar: AppBar(
         title: const Text('Profile'),
       ),
       body: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(50),
-            child: Image.asset(
-              appUser.profilePath != null && appUser.profilePath!.isNotEmpty
-                  ? 'assets/images/profiles/${appUser.profilePath}'
-                  : "assets/images/app_logo.png",
-              width: 100,
-              height: 100,
+          Container(
+            width: double.infinity,
+            margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+            padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.08),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.4)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.3),
+                  blurRadius: 8,
+                  spreadRadius: 2,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage(
+                    appUser.profilePath != null &&
+                            appUser.profilePath!.isNotEmpty
+                        ? 'assets/images/profiles/${appUser.profilePath}'
+                        : 'assets/images/app_logo.png',
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  appUser.name ?? appUser.email,
+                  style: PmpTextStyles.body1Semi.copyWith(
+                    fontSize: 18,
+                    color: PmpColors.neutral100,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                const AppVersionWidget(),
+                const SizedBox(height: 12),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "$usedTokens",
+                        style: PmpTextStyles.body2Semi
+                            .copyWith(color: Colors.amberAccent),
+                      ),
+                      TextSpan(
+                        text: " / $maxTokens ",
+                        style: PmpTextStyles.body2Regular
+                            .copyWith(color: Colors.white),
+                      ),
+                      TextSpan(
+                        text: "tokens used",
+                        style: PmpTextStyles.body2Regular
+                            .copyWith(color: Colors.grey[400]),
+                      ),
+                    ],
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 8),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: LinearProgressIndicator(
+                    value: progress,
+                    backgroundColor: Colors.white.withValues(alpha: 0.1),
+                    valueColor:
+                        const AlwaysStoppedAnimation<Color>(Colors.amberAccent),
+                    minHeight: 6,
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(
-            height: 8,
-          ),
-          Text(
-            appUser.name ?? appUser.email,
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: PmpColors.neutral100,
-            ),
-          ),
-          const AppVersionWidget(),
           Container(
             width: double.infinity,
             margin: const EdgeInsets.all(16),
-            padding: const EdgeInsets.all(16),
+            // padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: Colors.white
                   .withValues(alpha: 0.08), // Dark card with transparency
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(8),
               border: Border.all(
                   color: Colors.white.withValues(alpha: 0.4)), // Subtle border
               boxShadow: [
@@ -77,6 +135,7 @@ class _ProfilePageState extends State<ProfilePage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 ProfileItemRow(
+                  first: true,
                   label: AppLocalizations.of(context).txtChangeName,
                   icon: "assets/images/ic_profile_white.png",
                   onTap: () async {
@@ -142,6 +201,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 //   height: 8,
                 // ),
                 ProfileItemRow(
+                  last: true,
                   label: AppLocalizations.of(context).txtFeedback,
                   icon: "assets/images/ic_feedback.png",
                   onTap: () {},

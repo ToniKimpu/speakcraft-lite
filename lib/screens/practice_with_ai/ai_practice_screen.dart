@@ -9,6 +9,7 @@ import 'package:pmp_english/model/ai_sentence_practice/ai_sentence_practice.dart
 import 'package:pmp_english/screens/practice_with_ai/widgets/ai_reponse_card.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
+import '../../bloc/user_bloc/user_bloc.dart';
 import '../../shared_widgets/practice_text_field.dart';
 
 class AiPracticeScreen extends StatefulWidget {
@@ -20,9 +21,9 @@ class AiPracticeScreen extends StatefulWidget {
 
 class _AiPracticeScreenState extends State<AiPracticeScreen> {
   final _aiSentencePracticeBloc = AiSentencePracticeBloc();
+  final _userBloc = UserBloc();
 
   late final TextEditingController _sentenceController;
-
   AiSentencePractice? _aiSentencePractice;
 
   @override
@@ -34,6 +35,7 @@ class _AiPracticeScreenState extends State<AiPracticeScreen> {
   @override
   void dispose() {
     _sentenceController.dispose();
+    _userBloc.close();
     super.dispose();
   }
 
@@ -65,6 +67,8 @@ class _AiPracticeScreenState extends State<AiPracticeScreen> {
                   _sentenceController.clear();
                   _aiSentencePractice = data;
                   setState(() {});
+                  _userBloc
+                      .add(UserEvent.updateUserToken(data.totalTokensUsed));
                   context
                       .read<AppUIBloc>()
                       .add(const AppUIEvent.reloadAISentencePracticeList());

@@ -2,11 +2,15 @@ import 'dart:math';
 
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
+import 'package:pmp_english/model/ai_sentence_practice/ai_sentence_practice.dart';
 
 class CorrectSentenceCard extends StatefulWidget {
-  final String sentence;
+  final AiSentencePractice aiSentencePractice;
 
-  const CorrectSentenceCard({super.key, required this.sentence});
+  const CorrectSentenceCard({
+    super.key,
+    required this.aiSentencePractice,
+  });
 
   @override
   State<CorrectSentenceCard> createState() => _CorrectSentenceCardState();
@@ -66,7 +70,7 @@ class _CorrectSentenceCardState extends State<CorrectSentenceCard> {
             borderRadius: BorderRadius.circular(16),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -95,13 +99,41 @@ class _CorrectSentenceCardState extends State<CorrectSentenceCard> {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  "✅ \"${widget.sentence}\"",
+                  "✅ \"${widget.aiSentencePractice.inputSentence}\"",
                   style: const TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                     fontStyle: FontStyle.italic,
                     height: 1.4,
                   ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const Icon(
+                      Icons.info,
+                      size: 18,
+                      color: Colors.white24,
+                    ),
+                    const SizedBox(
+                      width: 6,
+                    ),
+                    Tooltip(
+                      message: "Tokens are units of text processed by the AI.",
+                      child: Text(
+                        "Used ${widget.aiSentencePractice.totalTokensUsed} tokens",
+                        style: const TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 8,
                 ),
               ],
             ),

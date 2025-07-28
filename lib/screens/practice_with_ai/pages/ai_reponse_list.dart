@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:pmp_english/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
+import 'package:pmp_english/shared_widgets/empty_widget.dart';
 
 import '../../../config/pmp_text_styles.dart';
 import '../../../model/ai_sentence_practice/ai_sentence_practice.dart';
@@ -30,6 +31,15 @@ class AiReponseList extends StatelessWidget {
             );
           },
           loadedGroupData: (aiResponseGroup) {
+            if (aiResponseGroup.isEmpty) {
+              return const Padding(
+                padding: EdgeInsets.only(bottom: 24),
+                child: EmptyWidget(
+                  message:
+                      "You haven't practiced any sentences yet. Start practicing to see your progress here.",
+                ),
+              );
+            }
             return buildGroupedList(aiResponseGroup);
           },
           orElse: () => Container(),
@@ -126,8 +136,11 @@ class AiReponseList extends StatelessWidget {
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ),
-                              const Icon(Icons.chevron_right,
-                                  color: Colors.white70, size: 20),
+                              const Icon(
+                                Icons.chevron_right,
+                                color: Colors.white70,
+                                size: 20,
+                              ),
                             ],
                           ),
                         ),

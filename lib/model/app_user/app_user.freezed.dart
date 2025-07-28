@@ -29,6 +29,8 @@ mixin _$AppUser {
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'device_id')
   String? get deviceId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'total_token_used')
+  int get totalTokenUsed => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_premium_user')
   bool? get isPremiumUser => throw _privateConstructorUsedError;
 
@@ -53,6 +55,7 @@ abstract class $AppUserCopyWith<$Res> {
       @JsonKey(name: 'profile_path') String? profilePath,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'device_id') String? deviceId,
+      @JsonKey(name: 'total_token_used') int totalTokenUsed,
       @JsonKey(name: 'is_premium_user') bool? isPremiumUser});
 }
 
@@ -77,6 +80,7 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
     Object? profilePath = freezed,
     Object? createdAt = freezed,
     Object? deviceId = freezed,
+    Object? totalTokenUsed = null,
     Object? isPremiumUser = freezed,
   }) {
     return _then(_value.copyWith(
@@ -104,6 +108,10 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String?,
+      totalTokenUsed: null == totalTokenUsed
+          ? _value.totalTokenUsed
+          : totalTokenUsed // ignore: cast_nullable_to_non_nullable
+              as int,
       isPremiumUser: freezed == isPremiumUser
           ? _value.isPremiumUser
           : isPremiumUser // ignore: cast_nullable_to_non_nullable
@@ -126,6 +134,7 @@ abstract class _$$AppUserImplCopyWith<$Res> implements $AppUserCopyWith<$Res> {
       @JsonKey(name: 'profile_path') String? profilePath,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'device_id') String? deviceId,
+      @JsonKey(name: 'total_token_used') int totalTokenUsed,
       @JsonKey(name: 'is_premium_user') bool? isPremiumUser});
 }
 
@@ -148,6 +157,7 @@ class __$$AppUserImplCopyWithImpl<$Res>
     Object? profilePath = freezed,
     Object? createdAt = freezed,
     Object? deviceId = freezed,
+    Object? totalTokenUsed = null,
     Object? isPremiumUser = freezed,
   }) {
     return _then(_$AppUserImpl(
@@ -175,6 +185,10 @@ class __$$AppUserImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String?,
+      totalTokenUsed: null == totalTokenUsed
+          ? _value.totalTokenUsed
+          : totalTokenUsed // ignore: cast_nullable_to_non_nullable
+              as int,
       isPremiumUser: freezed == isPremiumUser
           ? _value.isPremiumUser
           : isPremiumUser // ignore: cast_nullable_to_non_nullable
@@ -193,6 +207,7 @@ class _$AppUserImpl implements _AppUser {
       @JsonKey(name: 'profile_path') this.profilePath,
       @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'device_id') this.deviceId,
+      @JsonKey(name: 'total_token_used') required this.totalTokenUsed,
       @JsonKey(name: 'is_premium_user') this.isPremiumUser});
 
   factory _$AppUserImpl.fromJson(Map<String, dynamic> json) =>
@@ -214,12 +229,15 @@ class _$AppUserImpl implements _AppUser {
   @JsonKey(name: 'device_id')
   final String? deviceId;
   @override
+  @JsonKey(name: 'total_token_used')
+  final int totalTokenUsed;
+  @override
   @JsonKey(name: 'is_premium_user')
   final bool? isPremiumUser;
 
   @override
   String toString() {
-    return 'AppUser(id: $id, name: $name, email: $email, profilePath: $profilePath, createdAt: $createdAt, deviceId: $deviceId, isPremiumUser: $isPremiumUser)';
+    return 'AppUser(id: $id, name: $name, email: $email, profilePath: $profilePath, createdAt: $createdAt, deviceId: $deviceId, totalTokenUsed: $totalTokenUsed, isPremiumUser: $isPremiumUser)';
   }
 
   @override
@@ -236,6 +254,8 @@ class _$AppUserImpl implements _AppUser {
                 other.createdAt == createdAt) &&
             (identical(other.deviceId, deviceId) ||
                 other.deviceId == deviceId) &&
+            (identical(other.totalTokenUsed, totalTokenUsed) ||
+                other.totalTokenUsed == totalTokenUsed) &&
             (identical(other.isPremiumUser, isPremiumUser) ||
                 other.isPremiumUser == isPremiumUser));
   }
@@ -243,7 +263,7 @@ class _$AppUserImpl implements _AppUser {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, email, profilePath,
-      createdAt, deviceId, isPremiumUser);
+      createdAt, deviceId, totalTokenUsed, isPremiumUser);
 
   /// Create a copy of AppUser
   /// with the given fields replaced by the non-null parameter values.
@@ -269,6 +289,7 @@ abstract class _AppUser implements AppUser {
           @JsonKey(name: 'profile_path') final String? profilePath,
           @JsonKey(name: 'created_at') final DateTime? createdAt,
           @JsonKey(name: 'device_id') final String? deviceId,
+          @JsonKey(name: 'total_token_used') required final int totalTokenUsed,
           @JsonKey(name: 'is_premium_user') final bool? isPremiumUser}) =
       _$AppUserImpl;
 
@@ -289,6 +310,9 @@ abstract class _AppUser implements AppUser {
   @override
   @JsonKey(name: 'device_id')
   String? get deviceId;
+  @override
+  @JsonKey(name: 'total_token_used')
+  int get totalTokenUsed;
   @override
   @JsonKey(name: 'is_premium_user')
   bool? get isPremiumUser;

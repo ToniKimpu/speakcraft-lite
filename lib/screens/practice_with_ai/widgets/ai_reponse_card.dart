@@ -14,7 +14,7 @@ class AiReponseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     if (aiSentencePractice.correctedSentence == null) {
       return CorrectSentenceCard(
-        sentence: aiSentencePractice.inputSentence,
+        aiSentencePractice: aiSentencePractice,
       );
     }
     return GrammerSuggestionCard(

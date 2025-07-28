@@ -55,6 +55,7 @@ class AiSentencePracticeBloc
       bool correctData, Emitter<AiSentencePracticeState> emit) async {
     try {
       emit(const AiSentencePracticeState.loading());
+      debugPrint("_loadGroupDataToState: starting....");
       final data =
           await ((AppDatabase.instance().aiSentencePracticeTable.select()
                 ..where(
@@ -67,7 +68,7 @@ class AiSentencePracticeBloc
                       expression: tbl.createdAt, mode: OrderingMode.desc)
                 ]))
               .get();
-
+      debugPrint("_loadGroupDataToState: has fetched....");
       final Map<DateTime, List<AiSentencePractice>> aiResponseGroupByDate = {};
 
       for (final item in data) {

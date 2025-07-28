@@ -5,7 +5,7 @@ import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 import '../../bloc/app_ui/app_ui_bloc.dart';
-import 'widgets/grammer_suggestion_card.dart';
+import 'widgets/ai_reponse_card.dart';
 
 class AiResponseDetailScreen extends StatefulWidget {
   const AiResponseDetailScreen({
@@ -68,7 +68,7 @@ class _AiResponseDetailScreenState extends State<AiResponseDetailScreen> {
             ),
             body: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
-              child: GrammerSuggestionCard(
+              child: AiReponseCard(
                 aiSentencePractice: widget.aiSentencePractice,
               ),
             ),

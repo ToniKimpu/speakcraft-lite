@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // FakeDataRepository().insertFakeAiSentencePracticeData();
     return MainScaffold(
       appBar: AppBar(
         title: const Text('PMP English'),

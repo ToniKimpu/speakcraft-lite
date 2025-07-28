@@ -14,6 +14,7 @@ class AppUser with _$AppUser {
     @JsonKey(name: 'profile_path') String? profilePath,
     @JsonKey(name: 'created_at') DateTime? createdAt,
     @JsonKey(name: 'device_id') String? deviceId,
+    @JsonKey(name: 'total_token_used') required int totalTokenUsed,
     @JsonKey(name: 'is_premium_user') bool? isPremiumUser,
   }) = _AppUser;
 
@@ -26,6 +27,7 @@ class AppUser with _$AppUser {
       name: '',
       email: '',
       profilePath: '',
+      totalTokenUsed: 0,
       isPremiumUser: false,
       createdAt: DateTime.now(),
     );

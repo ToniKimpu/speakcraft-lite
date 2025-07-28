@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:pmp_english/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 
+import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../model/ai_sentence_practice/ai_sentence_practice.dart';
+import '../../../shared_widgets/empty_widget.dart';
 
 class UserCorrectList extends StatelessWidget {
   const UserCorrectList({
@@ -29,6 +31,15 @@ class UserCorrectList extends StatelessWidget {
             );
           },
           loadedGroupData: (aiResponseGroup) {
+            if (aiResponseGroup.isEmpty) {
+              return const Padding(
+                padding: EdgeInsets.only(bottom: 24),
+                child: EmptyWidget(
+                  message:
+                      "You haven't practiced any sentences yet. Start practicing to see your progress here.",
+                ),
+              );
+            }
             return buildGroupedList(aiResponseGroup);
           },
           orElse: () => Container(),
@@ -99,7 +110,15 @@ class UserCorrectList extends StatelessWidget {
                                 bottomRight: Radius.circular(16),
                               )
                             : null,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            PmpRoutes.aiResponseDetailScreen,
+                            arguments: {
+                              "aiSentencePractice": item,
+                            },
+                          );
+                        },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 16, vertical: 12),
@@ -110,7 +129,7 @@ class UserCorrectList extends StatelessWidget {
                                 child: Text(
                                   item.inputSentence,
                                   style: PmpTextStyles.body2Semi.copyWith(
-                                    color: Colors.white,
+                                    color: Colors.amber,
                                     fontSize: 15,
                                   ),
                                   maxLines: 2,

@@ -11,6 +11,7 @@ abstract class UserEvent with _$UserEvent {
   const factory UserEvent.updateUserName(String newName) = _UpdateUserName;
   const factory UserEvent.updateUserAvatar(String newAvatar) =
       _UpdateUserAvatar;
+  const factory UserEvent.updateUserToken(int token) = _UpdateUserToken;
 }
 
 @freezed
@@ -55,6 +56,25 @@ class UserBloc extends Bloc<UserEvent, UserState> {
               GlobalAppState().currentUser = AppUser.fromJson(dataRes.first);
             }
             emit(const UserState.onSuccess());
+          },
+          updateUserToken: (token) async {
+            final appUser = GlobalAppState().currentUser;
+            int totalTokenUsed = appUser.totalTokenUsed + token;
+            GlobalAppState().currentUser = appUser.copyWith(
+              totalTokenUsed: totalTokenUsed,
+            );
+            emit(const UserState.loading());
+            final dataRes = await supabase
+                .from("users")
+                .update({"total_token_used": totalTokenUsed})
+                .eq(
+                  "id",
+                  GlobalAppState().currentUser.id!,
+                )
+                .select();
+            if (dataRes.isNotEmpty) {
+              GlobalAppState().currentUser = AppUser.fromJson(dataRes.first);
+            }
           },
         );
       } catch (e) {

@@ -16,6 +16,7 @@ _$AppUserImpl _$$AppUserImplFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['created_at'] as String),
       deviceId: json['device_id'] as String?,
+      totalTokenUsed: (json['total_token_used'] as num).toInt(),
       isPremiumUser: json['is_premium_user'] as bool?,
     );
 
@@ -27,5 +28,6 @@ Map<String, dynamic> _$$AppUserImplToJson(_$AppUserImpl instance) =>
       'profile_path': instance.profilePath,
       'created_at': instance.createdAt?.toIso8601String(),
       'device_id': instance.deviceId,
+      'total_token_used': instance.totalTokenUsed,
       'is_premium_user': instance.isPremiumUser,
     };

@@ -108,7 +108,6 @@ flutter:
     - .envs/
     - assets/images/
     - assets/images/profiles/
-    - assets/temps/
     - shorebird.yaml
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -20,18 +20,21 @@ mixin _$UserEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String newName) updateUserName,
     required TResult Function(String newAvatar) updateUserAvatar,
+    required TResult Function(int token) updateUserToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String newName)? updateUserName,
     TResult? Function(String newAvatar)? updateUserAvatar,
+    TResult? Function(int token)? updateUserToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String newName)? updateUserName,
     TResult Function(String newAvatar)? updateUserAvatar,
+    TResult Function(int token)? updateUserToken,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$UserEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_UpdateUserName value) updateUserName,
     required TResult Function(_UpdateUserAvatar value) updateUserAvatar,
+    required TResult Function(_UpdateUserToken value) updateUserToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_UpdateUserName value)? updateUserName,
     TResult? Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult? Function(_UpdateUserToken value)? updateUserToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_UpdateUserName value)? updateUserName,
     TResult Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult Function(_UpdateUserToken value)? updateUserToken,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +153,7 @@ class _$UpdateUserNameImpl implements _UpdateUserName {
   TResult when<TResult extends Object?>({
     required TResult Function(String newName) updateUserName,
     required TResult Function(String newAvatar) updateUserAvatar,
+    required TResult Function(int token) updateUserToken,
   }) {
     return updateUserName(newName);
   }
@@ -156,6 +163,7 @@ class _$UpdateUserNameImpl implements _UpdateUserName {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String newName)? updateUserName,
     TResult? Function(String newAvatar)? updateUserAvatar,
+    TResult? Function(int token)? updateUserToken,
   }) {
     return updateUserName?.call(newName);
   }
@@ -165,6 +173,7 @@ class _$UpdateUserNameImpl implements _UpdateUserName {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String newName)? updateUserName,
     TResult Function(String newAvatar)? updateUserAvatar,
+    TResult Function(int token)? updateUserToken,
     required TResult orElse(),
   }) {
     if (updateUserName != null) {
@@ -178,6 +187,7 @@ class _$UpdateUserNameImpl implements _UpdateUserName {
   TResult map<TResult extends Object?>({
     required TResult Function(_UpdateUserName value) updateUserName,
     required TResult Function(_UpdateUserAvatar value) updateUserAvatar,
+    required TResult Function(_UpdateUserToken value) updateUserToken,
   }) {
     return updateUserName(this);
   }
@@ -187,6 +197,7 @@ class _$UpdateUserNameImpl implements _UpdateUserName {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_UpdateUserName value)? updateUserName,
     TResult? Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult? Function(_UpdateUserToken value)? updateUserToken,
   }) {
     return updateUserName?.call(this);
   }
@@ -196,6 +207,7 @@ class _$UpdateUserNameImpl implements _UpdateUserName {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_UpdateUserName value)? updateUserName,
     TResult Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult Function(_UpdateUserToken value)? updateUserToken,
     required TResult orElse(),
   }) {
     if (updateUserName != null) {
@@ -289,6 +301,7 @@ class _$UpdateUserAvatarImpl implements _UpdateUserAvatar {
   TResult when<TResult extends Object?>({
     required TResult Function(String newName) updateUserName,
     required TResult Function(String newAvatar) updateUserAvatar,
+    required TResult Function(int token) updateUserToken,
   }) {
     return updateUserAvatar(newAvatar);
   }
@@ -298,6 +311,7 @@ class _$UpdateUserAvatarImpl implements _UpdateUserAvatar {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String newName)? updateUserName,
     TResult? Function(String newAvatar)? updateUserAvatar,
+    TResult? Function(int token)? updateUserToken,
   }) {
     return updateUserAvatar?.call(newAvatar);
   }
@@ -307,6 +321,7 @@ class _$UpdateUserAvatarImpl implements _UpdateUserAvatar {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String newName)? updateUserName,
     TResult Function(String newAvatar)? updateUserAvatar,
+    TResult Function(int token)? updateUserToken,
     required TResult orElse(),
   }) {
     if (updateUserAvatar != null) {
@@ -320,6 +335,7 @@ class _$UpdateUserAvatarImpl implements _UpdateUserAvatar {
   TResult map<TResult extends Object?>({
     required TResult Function(_UpdateUserName value) updateUserName,
     required TResult Function(_UpdateUserAvatar value) updateUserAvatar,
+    required TResult Function(_UpdateUserToken value) updateUserToken,
   }) {
     return updateUserAvatar(this);
   }
@@ -329,6 +345,7 @@ class _$UpdateUserAvatarImpl implements _UpdateUserAvatar {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_UpdateUserName value)? updateUserName,
     TResult? Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult? Function(_UpdateUserToken value)? updateUserToken,
   }) {
     return updateUserAvatar?.call(this);
   }
@@ -338,6 +355,7 @@ class _$UpdateUserAvatarImpl implements _UpdateUserAvatar {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_UpdateUserName value)? updateUserName,
     TResult Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult Function(_UpdateUserToken value)? updateUserToken,
     required TResult orElse(),
   }) {
     if (updateUserAvatar != null) {
@@ -357,6 +375,153 @@ abstract class _UpdateUserAvatar implements UserEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateUserAvatarImplCopyWith<_$UpdateUserAvatarImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateUserTokenImplCopyWith<$Res> {
+  factory _$$UpdateUserTokenImplCopyWith(_$UpdateUserTokenImpl value,
+          $Res Function(_$UpdateUserTokenImpl) then) =
+      __$$UpdateUserTokenImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int token});
+}
+
+/// @nodoc
+class __$$UpdateUserTokenImplCopyWithImpl<$Res>
+    extends _$UserEventCopyWithImpl<$Res, _$UpdateUserTokenImpl>
+    implements _$$UpdateUserTokenImplCopyWith<$Res> {
+  __$$UpdateUserTokenImplCopyWithImpl(
+      _$UpdateUserTokenImpl _value, $Res Function(_$UpdateUserTokenImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? token = null,
+  }) {
+    return _then(_$UpdateUserTokenImpl(
+      null == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateUserTokenImpl implements _UpdateUserToken {
+  const _$UpdateUserTokenImpl(this.token);
+
+  @override
+  final int token;
+
+  @override
+  String toString() {
+    return 'UserEvent.updateUserToken(token: $token)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateUserTokenImpl &&
+            (identical(other.token, token) || other.token == token));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, token);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateUserTokenImplCopyWith<_$UpdateUserTokenImpl> get copyWith =>
+      __$$UpdateUserTokenImplCopyWithImpl<_$UpdateUserTokenImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String newName) updateUserName,
+    required TResult Function(String newAvatar) updateUserAvatar,
+    required TResult Function(int token) updateUserToken,
+  }) {
+    return updateUserToken(token);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String newName)? updateUserName,
+    TResult? Function(String newAvatar)? updateUserAvatar,
+    TResult? Function(int token)? updateUserToken,
+  }) {
+    return updateUserToken?.call(token);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String newName)? updateUserName,
+    TResult Function(String newAvatar)? updateUserAvatar,
+    TResult Function(int token)? updateUserToken,
+    required TResult orElse(),
+  }) {
+    if (updateUserToken != null) {
+      return updateUserToken(token);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UpdateUserName value) updateUserName,
+    required TResult Function(_UpdateUserAvatar value) updateUserAvatar,
+    required TResult Function(_UpdateUserToken value) updateUserToken,
+  }) {
+    return updateUserToken(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UpdateUserName value)? updateUserName,
+    TResult? Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult? Function(_UpdateUserToken value)? updateUserToken,
+  }) {
+    return updateUserToken?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UpdateUserName value)? updateUserName,
+    TResult Function(_UpdateUserAvatar value)? updateUserAvatar,
+    TResult Function(_UpdateUserToken value)? updateUserToken,
+    required TResult orElse(),
+  }) {
+    if (updateUserToken != null) {
+      return updateUserToken(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateUserToken implements UserEvent {
+  const factory _UpdateUserToken(final int token) = _$UpdateUserTokenImpl;
+
+  int get token;
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdateUserTokenImplCopyWith<_$UpdateUserTokenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
