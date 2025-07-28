@@ -19,18 +19,24 @@ mixin _$AiSentencePracticeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() load,
+    required TResult Function(AiSentencePractice data) delete,
+    required TResult Function(bool correctData) loadGroupData,
     required TResult Function(String input) reviewSentence,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? load,
+    TResult? Function(AiSentencePractice data)? delete,
+    TResult? Function(bool correctData)? loadGroupData,
     TResult? Function(String input)? reviewSentence,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? load,
+    TResult Function(AiSentencePractice data)? delete,
+    TResult Function(bool correctData)? loadGroupData,
     TResult Function(String input)? reviewSentence,
     required TResult orElse(),
   }) =>
@@ -38,18 +44,24 @@ mixin _$AiSentencePracticeEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Load value) load,
+    required TResult Function(_Delete value) delete,
+    required TResult Function(_LoadGroupData value) loadGroupData,
     required TResult Function(_ReviewSentence value) reviewSentence,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Load value)? load,
+    TResult? Function(_Delete value)? delete,
+    TResult? Function(_LoadGroupData value)? loadGroupData,
     TResult? Function(_ReviewSentence value)? reviewSentence,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Load value)? load,
+    TResult Function(_Delete value)? delete,
+    TResult Function(_LoadGroupData value)? loadGroupData,
     TResult Function(_ReviewSentence value)? reviewSentence,
     required TResult orElse(),
   }) =>
@@ -126,6 +138,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() load,
+    required TResult Function(AiSentencePractice data) delete,
+    required TResult Function(bool correctData) loadGroupData,
     required TResult Function(String input) reviewSentence,
   }) {
     return load();
@@ -135,6 +149,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? load,
+    TResult? Function(AiSentencePractice data)? delete,
+    TResult? Function(bool correctData)? loadGroupData,
     TResult? Function(String input)? reviewSentence,
   }) {
     return load?.call();
@@ -144,6 +160,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? load,
+    TResult Function(AiSentencePractice data)? delete,
+    TResult Function(bool correctData)? loadGroupData,
     TResult Function(String input)? reviewSentence,
     required TResult orElse(),
   }) {
@@ -157,6 +175,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Load value) load,
+    required TResult Function(_Delete value) delete,
+    required TResult Function(_LoadGroupData value) loadGroupData,
     required TResult Function(_ReviewSentence value) reviewSentence,
   }) {
     return load(this);
@@ -166,6 +186,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Load value)? load,
+    TResult? Function(_Delete value)? delete,
+    TResult? Function(_LoadGroupData value)? loadGroupData,
     TResult? Function(_ReviewSentence value)? reviewSentence,
   }) {
     return load?.call(this);
@@ -175,6 +197,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Load value)? load,
+    TResult Function(_Delete value)? delete,
+    TResult Function(_LoadGroupData value)? loadGroupData,
     TResult Function(_ReviewSentence value)? reviewSentence,
     required TResult orElse(),
   }) {
@@ -187,6 +211,338 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
 
 abstract class _Load implements AiSentencePracticeEvent {
   const factory _Load() = _$LoadImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteImplCopyWith<$Res> {
+  factory _$$DeleteImplCopyWith(
+          _$DeleteImpl value, $Res Function(_$DeleteImpl) then) =
+      __$$DeleteImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AiSentencePractice data});
+
+  $AiSentencePracticeCopyWith<$Res> get data;
+}
+
+/// @nodoc
+class __$$DeleteImplCopyWithImpl<$Res>
+    extends _$AiSentencePracticeEventCopyWithImpl<$Res, _$DeleteImpl>
+    implements _$$DeleteImplCopyWith<$Res> {
+  __$$DeleteImplCopyWithImpl(
+      _$DeleteImpl _value, $Res Function(_$DeleteImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AiSentencePracticeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$DeleteImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as AiSentencePractice,
+    ));
+  }
+
+  /// Create a copy of AiSentencePracticeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AiSentencePracticeCopyWith<$Res> get data {
+    return $AiSentencePracticeCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$DeleteImpl with DiagnosticableTreeMixin implements _Delete {
+  const _$DeleteImpl(this.data);
+
+  @override
+  final AiSentencePractice data;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AiSentencePracticeEvent.delete(data: $data)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AiSentencePracticeEvent.delete'))
+      ..add(DiagnosticsProperty('data', data));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteImpl &&
+            (identical(other.data, data) || other.data == data));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data);
+
+  /// Create a copy of AiSentencePracticeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
+      __$$DeleteImplCopyWithImpl<_$DeleteImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() load,
+    required TResult Function(AiSentencePractice data) delete,
+    required TResult Function(bool correctData) loadGroupData,
+    required TResult Function(String input) reviewSentence,
+  }) {
+    return delete(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? load,
+    TResult? Function(AiSentencePractice data)? delete,
+    TResult? Function(bool correctData)? loadGroupData,
+    TResult? Function(String input)? reviewSentence,
+  }) {
+    return delete?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? load,
+    TResult Function(AiSentencePractice data)? delete,
+    TResult Function(bool correctData)? loadGroupData,
+    TResult Function(String input)? reviewSentence,
+    required TResult orElse(),
+  }) {
+    if (delete != null) {
+      return delete(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Load value) load,
+    required TResult Function(_Delete value) delete,
+    required TResult Function(_LoadGroupData value) loadGroupData,
+    required TResult Function(_ReviewSentence value) reviewSentence,
+  }) {
+    return delete(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Load value)? load,
+    TResult? Function(_Delete value)? delete,
+    TResult? Function(_LoadGroupData value)? loadGroupData,
+    TResult? Function(_ReviewSentence value)? reviewSentence,
+  }) {
+    return delete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Load value)? load,
+    TResult Function(_Delete value)? delete,
+    TResult Function(_LoadGroupData value)? loadGroupData,
+    TResult Function(_ReviewSentence value)? reviewSentence,
+    required TResult orElse(),
+  }) {
+    if (delete != null) {
+      return delete(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Delete implements AiSentencePracticeEvent {
+  const factory _Delete(final AiSentencePractice data) = _$DeleteImpl;
+
+  AiSentencePractice get data;
+
+  /// Create a copy of AiSentencePracticeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadGroupDataImplCopyWith<$Res> {
+  factory _$$LoadGroupDataImplCopyWith(
+          _$LoadGroupDataImpl value, $Res Function(_$LoadGroupDataImpl) then) =
+      __$$LoadGroupDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool correctData});
+}
+
+/// @nodoc
+class __$$LoadGroupDataImplCopyWithImpl<$Res>
+    extends _$AiSentencePracticeEventCopyWithImpl<$Res, _$LoadGroupDataImpl>
+    implements _$$LoadGroupDataImplCopyWith<$Res> {
+  __$$LoadGroupDataImplCopyWithImpl(
+      _$LoadGroupDataImpl _value, $Res Function(_$LoadGroupDataImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AiSentencePracticeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? correctData = null,
+  }) {
+    return _then(_$LoadGroupDataImpl(
+      null == correctData
+          ? _value.correctData
+          : correctData // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadGroupDataImpl
+    with DiagnosticableTreeMixin
+    implements _LoadGroupData {
+  const _$LoadGroupDataImpl(this.correctData);
+
+  @override
+  final bool correctData;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AiSentencePracticeEvent.loadGroupData(correctData: $correctData)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'AiSentencePracticeEvent.loadGroupData'))
+      ..add(DiagnosticsProperty('correctData', correctData));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadGroupDataImpl &&
+            (identical(other.correctData, correctData) ||
+                other.correctData == correctData));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, correctData);
+
+  /// Create a copy of AiSentencePracticeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadGroupDataImplCopyWith<_$LoadGroupDataImpl> get copyWith =>
+      __$$LoadGroupDataImplCopyWithImpl<_$LoadGroupDataImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() load,
+    required TResult Function(AiSentencePractice data) delete,
+    required TResult Function(bool correctData) loadGroupData,
+    required TResult Function(String input) reviewSentence,
+  }) {
+    return loadGroupData(correctData);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? load,
+    TResult? Function(AiSentencePractice data)? delete,
+    TResult? Function(bool correctData)? loadGroupData,
+    TResult? Function(String input)? reviewSentence,
+  }) {
+    return loadGroupData?.call(correctData);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? load,
+    TResult Function(AiSentencePractice data)? delete,
+    TResult Function(bool correctData)? loadGroupData,
+    TResult Function(String input)? reviewSentence,
+    required TResult orElse(),
+  }) {
+    if (loadGroupData != null) {
+      return loadGroupData(correctData);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Load value) load,
+    required TResult Function(_Delete value) delete,
+    required TResult Function(_LoadGroupData value) loadGroupData,
+    required TResult Function(_ReviewSentence value) reviewSentence,
+  }) {
+    return loadGroupData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Load value)? load,
+    TResult? Function(_Delete value)? delete,
+    TResult? Function(_LoadGroupData value)? loadGroupData,
+    TResult? Function(_ReviewSentence value)? reviewSentence,
+  }) {
+    return loadGroupData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Load value)? load,
+    TResult Function(_Delete value)? delete,
+    TResult Function(_LoadGroupData value)? loadGroupData,
+    TResult Function(_ReviewSentence value)? reviewSentence,
+    required TResult orElse(),
+  }) {
+    if (loadGroupData != null) {
+      return loadGroupData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadGroupData implements AiSentencePracticeEvent {
+  const factory _LoadGroupData(final bool correctData) = _$LoadGroupDataImpl;
+
+  bool get correctData;
+
+  /// Create a copy of AiSentencePracticeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  _$$LoadGroupDataImplCopyWith<_$LoadGroupDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -269,6 +625,8 @@ class _$ReviewSentenceImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() load,
+    required TResult Function(AiSentencePractice data) delete,
+    required TResult Function(bool correctData) loadGroupData,
     required TResult Function(String input) reviewSentence,
   }) {
     return reviewSentence(input);
@@ -278,6 +636,8 @@ class _$ReviewSentenceImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? load,
+    TResult? Function(AiSentencePractice data)? delete,
+    TResult? Function(bool correctData)? loadGroupData,
     TResult? Function(String input)? reviewSentence,
   }) {
     return reviewSentence?.call(input);
@@ -287,6 +647,8 @@ class _$ReviewSentenceImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? load,
+    TResult Function(AiSentencePractice data)? delete,
+    TResult Function(bool correctData)? loadGroupData,
     TResult Function(String input)? reviewSentence,
     required TResult orElse(),
   }) {
@@ -300,6 +662,8 @@ class _$ReviewSentenceImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Load value) load,
+    required TResult Function(_Delete value) delete,
+    required TResult Function(_LoadGroupData value) loadGroupData,
     required TResult Function(_ReviewSentence value) reviewSentence,
   }) {
     return reviewSentence(this);
@@ -309,6 +673,8 @@ class _$ReviewSentenceImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Load value)? load,
+    TResult? Function(_Delete value)? delete,
+    TResult? Function(_LoadGroupData value)? loadGroupData,
     TResult? Function(_ReviewSentence value)? reviewSentence,
   }) {
     return reviewSentence?.call(this);
@@ -318,6 +684,8 @@ class _$ReviewSentenceImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Load value)? load,
+    TResult Function(_Delete value)? delete,
+    TResult Function(_LoadGroupData value)? loadGroupData,
     TResult Function(_ReviewSentence value)? reviewSentence,
     required TResult orElse(),
   }) {
@@ -346,6 +714,9 @@ mixin _$AiSentencePracticeState {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
     required TResult Function(AiSentencePractice data) success,
     required TResult Function() socketError,
     required TResult Function(String message) error,
@@ -356,6 +727,8 @@ mixin _$AiSentencePracticeState {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult? Function(AiSentencePractice data)? success,
     TResult? Function()? socketError,
     TResult? Function(String message)? error,
@@ -366,6 +739,8 @@ mixin _$AiSentencePracticeState {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult Function(AiSentencePractice data)? success,
     TResult Function()? socketError,
     TResult Function(String message)? error,
@@ -377,6 +752,7 @@ mixin _$AiSentencePracticeState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketErro value) socketError,
     required TResult Function(_Error value) error,
@@ -387,6 +763,7 @@ mixin _$AiSentencePracticeState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketErro value)? socketError,
     TResult? Function(_Error value)? error,
@@ -397,6 +774,7 @@ mixin _$AiSentencePracticeState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
     TResult Function(_Success value)? success,
     TResult Function(_SocketErro value)? socketError,
     TResult Function(_Error value)? error,
@@ -478,6 +856,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
     required TResult Function(AiSentencePractice data) success,
     required TResult Function() socketError,
     required TResult Function(String message) error,
@@ -491,6 +872,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult? Function(AiSentencePractice data)? success,
     TResult? Function()? socketError,
     TResult? Function(String message)? error,
@@ -504,6 +887,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult Function(AiSentencePractice data)? success,
     TResult Function()? socketError,
     TResult Function(String message)? error,
@@ -521,6 +906,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketErro value) socketError,
     required TResult Function(_Error value) error,
@@ -534,6 +920,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketErro value)? socketError,
     TResult? Function(_Error value)? error,
@@ -547,6 +934,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
     TResult Function(_Success value)? success,
     TResult Function(_SocketErro value)? socketError,
     TResult Function(_Error value)? error,
@@ -629,6 +1017,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   int get hashCode => Object.hash(runtimeType, message);
 
   /// Create a copy of AiSentencePracticeState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -640,6 +1029,9 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
     required TResult Function(AiSentencePractice data) success,
     required TResult Function() socketError,
     required TResult Function(String message) error,
@@ -653,6 +1045,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult? Function(AiSentencePractice data)? success,
     TResult? Function()? socketError,
     TResult? Function(String message)? error,
@@ -666,6 +1060,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult Function(AiSentencePractice data)? success,
     TResult Function()? socketError,
     TResult Function(String message)? error,
@@ -683,6 +1079,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketErro value) socketError,
     required TResult Function(_Error value) error,
@@ -696,6 +1093,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketErro value)? socketError,
     TResult? Function(_Error value)? error,
@@ -709,6 +1107,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
     TResult Function(_Success value)? success,
     TResult Function(_SocketErro value)? socketError,
     TResult Function(_Error value)? error,
@@ -816,6 +1215,9 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
     required TResult Function(AiSentencePractice data) success,
     required TResult Function() socketError,
     required TResult Function(String message) error,
@@ -829,6 +1231,8 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult? Function(AiSentencePractice data)? success,
     TResult? Function()? socketError,
     TResult? Function(String message)? error,
@@ -842,6 +1246,8 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult Function(AiSentencePractice data)? success,
     TResult Function()? socketError,
     TResult Function(String message)? error,
@@ -859,6 +1265,7 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketErro value) socketError,
     required TResult Function(_Error value) error,
@@ -872,6 +1279,7 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketErro value)? socketError,
     TResult? Function(_Error value)? error,
@@ -885,6 +1293,7 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
     TResult Function(_Success value)? success,
     TResult Function(_SocketErro value)? socketError,
     TResult Function(_Error value)? error,
@@ -905,6 +1314,201 @@ abstract class _Loaded implements AiSentencePracticeState {
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadedGroupDataImplCopyWith<$Res> {
+  factory _$$LoadedGroupDataImplCopyWith(_$LoadedGroupDataImpl value,
+          $Res Function(_$LoadedGroupDataImpl) then) =
+      __$$LoadedGroupDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Map<DateTime, List<AiSentencePractice>> aiResponses});
+}
+
+/// @nodoc
+class __$$LoadedGroupDataImplCopyWithImpl<$Res>
+    extends _$AiSentencePracticeStateCopyWithImpl<$Res, _$LoadedGroupDataImpl>
+    implements _$$LoadedGroupDataImplCopyWith<$Res> {
+  __$$LoadedGroupDataImplCopyWithImpl(
+      _$LoadedGroupDataImpl _value, $Res Function(_$LoadedGroupDataImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AiSentencePracticeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? aiResponses = null,
+  }) {
+    return _then(_$LoadedGroupDataImpl(
+      null == aiResponses
+          ? _value._aiResponses
+          : aiResponses // ignore: cast_nullable_to_non_nullable
+              as Map<DateTime, List<AiSentencePractice>>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadedGroupDataImpl
+    with DiagnosticableTreeMixin
+    implements _LoadedGroupData {
+  const _$LoadedGroupDataImpl(
+      final Map<DateTime, List<AiSentencePractice>> aiResponses)
+      : _aiResponses = aiResponses;
+
+  final Map<DateTime, List<AiSentencePractice>> _aiResponses;
+  @override
+  Map<DateTime, List<AiSentencePractice>> get aiResponses {
+    if (_aiResponses is EqualUnmodifiableMapView) return _aiResponses;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_aiResponses);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AiSentencePracticeState.loadedGroupData(aiResponses: $aiResponses)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AiSentencePracticeState.loadedGroupData'))
+      ..add(DiagnosticsProperty('aiResponses', aiResponses));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedGroupDataImpl &&
+            const DeepCollectionEquality()
+                .equals(other._aiResponses, _aiResponses));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_aiResponses));
+
+  /// Create a copy of AiSentencePracticeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedGroupDataImplCopyWith<_$LoadedGroupDataImpl> get copyWith =>
+      __$$LoadedGroupDataImplCopyWithImpl<_$LoadedGroupDataImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String? message) loading,
+    required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
+    required TResult Function(AiSentencePractice data) success,
+    required TResult Function() socketError,
+    required TResult Function(String message) error,
+  }) {
+    return loadedGroupData(aiResponses);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String? message)? loading,
+    TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
+    TResult? Function(AiSentencePractice data)? success,
+    TResult? Function()? socketError,
+    TResult? Function(String message)? error,
+  }) {
+    return loadedGroupData?.call(aiResponses);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String? message)? loading,
+    TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
+    TResult Function(AiSentencePractice data)? success,
+    TResult Function()? socketError,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (loadedGroupData != null) {
+      return loadedGroupData(aiResponses);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
+    required TResult Function(_Success value) success,
+    required TResult Function(_SocketErro value) socketError,
+    required TResult Function(_Error value) error,
+  }) {
+    return loadedGroupData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_SocketErro value)? socketError,
+    TResult? Function(_Error value)? error,
+  }) {
+    return loadedGroupData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
+    TResult Function(_Success value)? success,
+    TResult Function(_SocketErro value)? socketError,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (loadedGroupData != null) {
+      return loadedGroupData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadedGroupData implements AiSentencePracticeState {
+  const factory _LoadedGroupData(
+          final Map<DateTime, List<AiSentencePractice>> aiResponses) =
+      _$LoadedGroupDataImpl;
+
+  Map<DateTime, List<AiSentencePractice>> get aiResponses;
+
+  /// Create a copy of AiSentencePracticeState
+  /// with the given fields replaced by the non-null parameter values.
+  _$$LoadedGroupDataImplCopyWith<_$LoadedGroupDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -998,6 +1602,9 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
     required TResult Function(AiSentencePractice data) success,
     required TResult Function() socketError,
     required TResult Function(String message) error,
@@ -1011,6 +1618,8 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult? Function(AiSentencePractice data)? success,
     TResult? Function()? socketError,
     TResult? Function(String message)? error,
@@ -1024,6 +1633,8 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult Function(AiSentencePractice data)? success,
     TResult Function()? socketError,
     TResult Function(String message)? error,
@@ -1041,6 +1652,7 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketErro value) socketError,
     required TResult Function(_Error value) error,
@@ -1054,6 +1666,7 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketErro value)? socketError,
     TResult? Function(_Error value)? error,
@@ -1067,6 +1680,7 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
     TResult Function(_Success value)? success,
     TResult Function(_SocketErro value)? socketError,
     TResult Function(_Error value)? error,
@@ -1141,6 +1755,9 @@ class _$SocketErroImpl with DiagnosticableTreeMixin implements _SocketErro {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
     required TResult Function(AiSentencePractice data) success,
     required TResult Function() socketError,
     required TResult Function(String message) error,
@@ -1154,6 +1771,8 @@ class _$SocketErroImpl with DiagnosticableTreeMixin implements _SocketErro {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult? Function(AiSentencePractice data)? success,
     TResult? Function()? socketError,
     TResult? Function(String message)? error,
@@ -1167,6 +1786,8 @@ class _$SocketErroImpl with DiagnosticableTreeMixin implements _SocketErro {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult Function(AiSentencePractice data)? success,
     TResult Function()? socketError,
     TResult Function(String message)? error,
@@ -1184,6 +1805,7 @@ class _$SocketErroImpl with DiagnosticableTreeMixin implements _SocketErro {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketErro value) socketError,
     required TResult Function(_Error value) error,
@@ -1197,6 +1819,7 @@ class _$SocketErroImpl with DiagnosticableTreeMixin implements _SocketErro {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketErro value)? socketError,
     TResult? Function(_Error value)? error,
@@ -1210,6 +1833,7 @@ class _$SocketErroImpl with DiagnosticableTreeMixin implements _SocketErro {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
     TResult Function(_Success value)? success,
     TResult Function(_SocketErro value)? socketError,
     TResult Function(_Error value)? error,
@@ -1304,6 +1928,9 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<AiSentencePractice> data) loaded,
+    required TResult Function(
+            Map<DateTime, List<AiSentencePractice>> aiResponses)
+        loadedGroupData,
     required TResult Function(AiSentencePractice data) success,
     required TResult Function() socketError,
     required TResult Function(String message) error,
@@ -1317,6 +1944,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<AiSentencePractice> data)? loaded,
+    TResult? Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult? Function(AiSentencePractice data)? success,
     TResult? Function()? socketError,
     TResult? Function(String message)? error,
@@ -1330,6 +1959,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<AiSentencePractice> data)? loaded,
+    TResult Function(Map<DateTime, List<AiSentencePractice>> aiResponses)?
+        loadedGroupData,
     TResult Function(AiSentencePractice data)? success,
     TResult Function()? socketError,
     TResult Function(String message)? error,
@@ -1347,6 +1978,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadedGroupData value) loadedGroupData,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketErro value) socketError,
     required TResult Function(_Error value) error,
@@ -1360,6 +1992,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadedGroupData value)? loadedGroupData,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketErro value)? socketError,
     TResult? Function(_Error value)? error,
@@ -1373,6 +2006,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadedGroupData value)? loadedGroupData,
     TResult Function(_Success value)? success,
     TResult Function(_SocketErro value)? socketError,
     TResult Function(_Error value)? error,

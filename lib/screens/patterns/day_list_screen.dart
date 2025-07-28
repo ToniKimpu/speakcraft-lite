@@ -55,8 +55,7 @@ class _DayListScreenState extends State<DayListScreen> {
                     Material(
                       borderRadius: BorderRadius.circular(24),
                       color: complete
-                          ? const Color(
-                              0xFF2C5364) // Darkest shade from gradient
+                          ? const Color(0xFF2C5364)
                           : Colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(24),
@@ -89,6 +88,7 @@ class _DayListScreenState extends State<DayListScreen> {
                         ),
                       ),
                     ),
+                    
                     const SizedBox(width: 12),
                     // Progress Button
                     Material(
@@ -127,6 +127,7 @@ class _DayListScreenState extends State<DayListScreen> {
                         ),
                       ),
                     ),
+                 
                   ],
                 );
               },

@@ -83,7 +83,6 @@ void showFlutterNotification(RemoteMessage message) {
   RemoteNotification? notification = message.notification;
 
   final data = message.data;
-  debugPrint("_showFlutterNotification: $data");
   flutterLocalNotificationsPlugin.show(
       notification.hashCode,
       data['title'],

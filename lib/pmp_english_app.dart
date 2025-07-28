@@ -96,9 +96,9 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
         title: 'PMP English App',
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
-        theme: PmpThemes.lightTechLearnTheme,
-        darkTheme: PmpThemes.darkTechLearnTheme,
-        themeMode: ThemeMode.light,
+        theme: PmpThemes.darkTheme,
+        darkTheme: PmpThemes.darkTheme,
+        themeMode: ThemeMode.dark,
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,

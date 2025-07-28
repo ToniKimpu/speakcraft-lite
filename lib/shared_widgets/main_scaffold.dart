@@ -15,10 +15,10 @@ class MainScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: Colors.transparent,
+      // extendBodyBehindAppBar: true,
       appBar: appBar,
       floatingActionButton: floatingActionButton,
+      // body: body,
       body: Stack(
         children: [
           Container(

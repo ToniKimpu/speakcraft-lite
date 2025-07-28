@@ -5,8 +5,8 @@ import 'pmp_colors.dart';
 import 'pmp_text_styles.dart';
 
 class PmpThemes {
-  static ThemeData get lightTechLearnTheme => _getThemeData(Brightness.light);
-  static ThemeData get darkTechLearnTheme => _getThemeData(Brightness.dark);
+  static ThemeData get lightTheme => _getThemeData(Brightness.light);
+  static ThemeData get darkTheme => _getThemeData(Brightness.dark);
 
   static ThemeData _getThemeData(Brightness brightness) {
     return ThemeData(
@@ -27,9 +27,9 @@ class PmpThemes {
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: PmpColors.white,
       ),
-      scaffoldBackgroundColor: PmpColors.transparent,
+      scaffoldBackgroundColor: const Color(0xFF0F2027),
       appBarTheme: AppBarTheme(
-        backgroundColor: PmpColors.transparent,
+        backgroundColor: const Color(0xFF0F2027),
         iconTheme: const IconThemeData(
           color: PmpColors.white,
           size: 24,

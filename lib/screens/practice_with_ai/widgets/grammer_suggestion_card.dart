@@ -18,9 +18,10 @@ class GrammerSuggestionCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             const Row(
               children: [
@@ -68,6 +69,33 @@ class GrammerSuggestionCard extends StatelessWidget {
                   .withValues(alpha: 0.08), // subtle translucent layer
               textColor: Colors.tealAccent[100]!, // friendly + high contrast
               text: aiSentencePractice.explanation!,
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Row(
+              children: [
+                const Icon(
+                  Icons.info,
+                  size: 18,
+                  color: Colors.white24,
+                ),
+                const SizedBox(
+                  width: 6,
+                ),
+                Tooltip(
+                  message: "Tokens are units of text processed by the AI.",
+                  child: Text(
+                    "Used ${aiSentencePractice.totalTokensUsed} tokens",
+                    style: const TextStyle(
+                      fontSize: 12,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 8,
             ),
           ],
         ),

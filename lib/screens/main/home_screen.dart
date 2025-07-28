@@ -93,7 +93,8 @@ class _HomePageState extends State<HomePage> {
               label1: 'sentence တွေကို ကိုယ်တိုင်လေ့ကျင့်မယ်။',
               label2: 'AI ကိုမှန်မမှန်ပြန်စစ်ခိုင်းမယ်။',
               onPressed: () {
-                Navigator.pushNamed(context, PmpRoutes.aiPracticeScreen);
+                Navigator.pushNamed(
+                    context, PmpRoutes.aiSentencePracticeListScreen);
               },
             ),
             const SizedBox(height: 24),

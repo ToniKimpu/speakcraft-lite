@@ -11,6 +11,8 @@ import 'package:pmp_english/screens/main/new_path_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/practice_with_ai/ai_practice_screen.dart';
+import 'package:pmp_english/screens/practice_with_ai/ai_response_detail_screen.dart';
+import 'package:pmp_english/screens/practice_with_ai/ai_sentence_practice_list_screen.dart';
 import 'package:pmp_english/screens/profiles/update_avatar_page.dart';
 import 'package:pmp_english/screens/profiles/update_name_page.dart';
 import 'package:pmp_english/screens/self_practice_pattern/pattern_list.dart';
@@ -21,6 +23,7 @@ import 'package:pmp_english/screens/translation/translation_practice_page.dart';
 import 'package:pmp_english/screens/translation/translation_practice_result_screen.dart';
 
 import '../../model/pattern/pattern.dart';
+import '../model/ai_sentence_practice/ai_sentence_practice.dart';
 import '../model/day/day.dart';
 import '../model/exercise/exercise.dart';
 import '../model/listening/listening.dart';
@@ -64,7 +67,10 @@ class PmpRoutes {
   static const updateAvatarPage = '/update_avatar_page';
   static const newPathScreen = '/new_path_screen';
   static const deviceFailedScreen = '/device_failed_screen';
+  static const aiSentencePracticeListScreen =
+      '/ai_sentence_practice_list_screen';
   static const aiPracticeScreen = '/ai_practice_screen';
+  static const aiResponseDetailScreen = '/ai_response_detail_screen';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -194,8 +200,17 @@ class PmpRoutes {
         return _getRoute(const NewPathScreen(), settings);
       case deviceFailedScreen:
         return _getRoute(const DeviceFailedScreen(), settings);
+      case aiSentencePracticeListScreen:
+        return _getRoute(const AiSentencePracticeListScreen(), settings);
       case aiPracticeScreen:
         return _getRoute(const AiPracticeScreen(), settings);
+      case aiResponseDetailScreen:
+        final args = settings.arguments as Map<String, dynamic>;
+        final aiSentencePractice =
+            args['aiSentencePractice'] as AiSentencePractice;
+        return _getRoute(
+            AiResponseDetailScreen(aiSentencePractice: aiSentencePractice),
+            settings);
       default:
         throw Exception(
           'Sorry, path ${settings.name} is invalid!',
