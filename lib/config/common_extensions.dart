@@ -213,69 +213,66 @@ extension DurationExtension on Duration {
   }
 }
 
-Future<List<Subtitle>> parseSrtFile(
-  String fileUrl,
-  Duration startDuration,
-  Duration endDuration,
-) async {
-  final List<Subtitle> subtitles = [];
-
+Future<List<Subtitle>> parseJsonSubtitleFile(String fileUrl) async {
+  const double fixedHeight = 112.0;
+  double scrollPosition = 0;
+  debugPrint("_parseJsonSubtitleFile: $fileUrl file Url!");
   try {
     final response = await http.get(Uri.parse(fileUrl));
     if (response.statusCode != 200) {
       throw Exception("Failed to load subtitles: ${response.statusCode}");
     }
+    final List<dynamic> jsonList = json.decode(utf8.decode(response.bodyBytes));
+    debugPrint("_parseJsonSubtitleFile: ${jsonList.first.toString()} lenght!");
+    final List<Subtitle> subtitles = [];
 
-    final String data = utf8.decode(response.bodyBytes);
-    final normalizedData = data.replaceAll('\r\n', '\n');
+    for (int i = 0; i < jsonList.length; i++) {
+      final jsonItem = jsonList[i];
+      final startDuration = _parseJsonDuration(jsonItem['start']);
+      final endDuration = _parseJsonDuration(jsonItem['end']);
 
-    final regex = RegExp(
-      r'(\d+)\n'
-      r'(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3})\n'
-      // r'([\s\S]*?)(?=\n{2,}|\z)',
-      r'((?:.+(?:\n|$))*)',
-      multiLine: true,
-    );
+      subtitles.add(Subtitle(
+        id: jsonItem['id'],
+        english: jsonItem['english'] ?? '',
+        burmese: jsonItem['burmese'],
+        description: jsonItem['description'],
+        autioName: jsonItem['autioName'],
+        start: startDuration,
+        end: endDuration,
+        scrollPosition: i < 2 ? 0 : scrollPosition,
+        vocabulary: (jsonItem['vocabulary'] as List<dynamic>?)
+            ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))
+            .toList(),
+      ));
 
-    const double fixedHeight = 112.0;
-    double scrollPosition = 0;
-    int idCounter = 1;
-
-    for (final match in regex.allMatches(normalizedData)) {
-      final start = _parseDuration(match.group(2)!);
-      final end = _parseDuration(match.group(3)!);
-
-      if (start < startDuration || end > endDuration) continue;
-
-      final text = match.group(4)!.trim();
-      if (text.isNotEmpty) {
-        subtitles.add(Subtitle(
-          id: idCounter++,
-          start: start,
-          end: end,
-          text: text,
-          widgetHeight: fixedHeight,
-          scrollPosition: scrollPosition,
-        ));
+      if (i >= 1) {
         scrollPosition += fixedHeight;
       }
     }
-  } catch (e) {
-    print("Error parsing subtitle file: $e");
-  }
 
-  debugPrint("_subtitleInfo: ${subtitles.length} length!");
-  return subtitles;
+    debugPrint("_subtitleInfo: ${subtitles.length} loaded!");
+    return subtitles;
+  } catch (e) {
+    debugPrint(
+        "_parseJsonSubtitleFile: error:  Error parsing subtitle JSON file: $e");
+    return <Subtitle>[];
+  }
 }
 
-Duration _parseDuration(String time) {
-  final parts = time.split(":");
-  final secondsParts = parts[2].split(",");
+Duration _parseJsonDuration(String time) {
+  final parts = time.split(':'); // [hh, mm, ss.mmm]
+  final hours = int.parse(parts[0]);
+  final minutes = int.parse(parts[1]);
+
+  final secParts = parts[2].split('.');
+  final seconds = int.parse(secParts[0]);
+  final milliseconds =
+      int.parse(secParts[1].padRight(3, '0')); // ensure 3 digits
 
   return Duration(
-    hours: int.parse(parts[0]),
-    minutes: int.parse(parts[1]),
-    seconds: int.parse(secondsParts[0]),
-    milliseconds: int.parse(secondsParts[1]),
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds,
+    milliseconds: milliseconds,
   );
 }

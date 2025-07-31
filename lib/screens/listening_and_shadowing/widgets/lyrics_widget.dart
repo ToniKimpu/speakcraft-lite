@@ -32,10 +32,8 @@ class _LyricsWidgetState extends State<LyricsWidget> {
   @override
   void initState() {
     super.initState();
-    _subtitles = parseSrtFile(
+    _subtitles = parseJsonSubtitleFile(
       widget.listening.subtitlePath,
-      Duration(seconds: widget.listening.start),
-      Duration(seconds: widget.listening.end),
     );
   }
 
@@ -73,29 +71,27 @@ class _LyricsWidgetState extends State<LyricsWidget> {
 
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-              child: Material(
-                color: selected
-                    // ? const Color(0xFF0F2027)
-                    ? Colors.white.withValues(alpha: 0.3)
-                    : const Color(0xFF203A43),
-                borderRadius: BorderRadius.circular(12),
-                shadowColor: Colors.black.withValues(alpha: 0.4),
-                elevation: 6,
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                decoration: BoxDecoration(
+                  color: selected
+                      ? Colors.white.withValues(alpha: 0.3)
+                      : const Color(0xFF203A43),
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: (0.4)),
+                      blurRadius: 6,
+                      offset: const Offset(0, 2),
+                    ),
+                  ],
+                ),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(12),
                   onTap: () => widget.onTap.call(subtitle),
                   child: Ink(
                     height: 100,
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.circular(12),
-                    //   boxShadow: [
-                    //     BoxShadow(
-                    //       color: Colors.black.withValues(alpha: 0.4),
-                    //       blurRadius: 6,
-                    //       offset: const Offset(0, 3),
-                    //     ),
-                    //   ],
-                    // ),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 16, vertical: 12),
                     child: Row(
@@ -117,9 +113,10 @@ class _LyricsWidgetState extends State<LyricsWidget> {
                         const SizedBox(width: 16),
                         Expanded(
                           child: Text(
-                            subtitle.text,
-                            style: PmpTextStyles.body2Semi.copyWith(
+                            subtitle.english,
+                            style: PmpTextStyles.body2Regular.copyWith(
                               color: Colors.white,
+                              fontFamily: "English Lyrics",
                             ),
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,

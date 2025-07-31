@@ -1,58 +1,61 @@
-class Subtitle {
-  final int id; // Unique identifier
-  final Duration start;
-  final Duration end;
-  final String text;
-  final String? burmese;
-  final double? widgetHeight;
-  final double? scrollPosition;
+// ignore_for_file: invalid_annotation_target
 
-  Subtitle({
-    required this.id,
-    required this.start,
-    required this.end,
-    required this.text,
-    this.burmese,
-    this.widgetHeight,
-    this.scrollPosition,
-  });
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  /// Factory constructor for an empty subtitle
-  static final Subtitle empty = Subtitle(
-    id: -1, // -1 to indicate an empty subtitle
-    start: Duration.zero,
-    end: Duration.zero,
-    text: '',
-    widgetHeight: 0,
-    scrollPosition: 0,
-  );
+part 'subtitle.freezed.dart';
+part 'subtitle.g.dart';
 
-  /// Checks if the subtitle is empty
-  bool get isEmpty =>
-      id == -1 ||
-      (start == Duration.zero && end == Duration.zero && text.isEmpty);
-
-  /// Checks if the subtitle is not empty
-  bool get isNotEmpty => !isEmpty;
-
-  Subtitle copyWith({
+@freezed
+class Subtitle with _$Subtitle {
+  const factory Subtitle({
     int? id,
-    Duration? start,
-    Duration? end,
-    String? text,
+    required String english,
     String? burmese,
-    double? widgetHeight,
-    double? scrollPosition,
-    double? englishScrollPosition,
-  }) {
-    return Subtitle(
-      id: id ?? this.id,
-      start: start ?? this.start,
-      end: end ?? this.end,
-      text: text ?? this.text,
-      burmese: burmese ?? this.burmese,
-      widgetHeight: widgetHeight ?? this.widgetHeight,
-      scrollPosition: scrollPosition ?? this.scrollPosition,
-    );
-  }
+    String? description,
+    String? autioName,
+    required Duration start,
+    required Duration end,
+    required double scrollPosition,
+    List<SubtitleVocabulary>? vocabulary,
+  }) = _Subtitle;
+
+  factory Subtitle.fromJson(Map<String, dynamic> json) =>
+      _$SubtitleFromJson(json);
+  factory Subtitle.empty() => const Subtitle(
+        id: null,
+        english: '',
+        burmese: null,
+        description: null,
+        autioName: null,
+        start: Duration.zero,
+        end: Duration.zero,
+        scrollPosition: 0,
+        vocabulary: [],
+      );
+}
+
+@freezed
+class SubtitleVocabulary with _$SubtitleVocabulary {
+  const factory SubtitleVocabulary({
+    int? id,
+    required String english,
+    required String burmese,
+    String? explanation,
+  }) = _SubtitleVocabulary;
+
+  factory SubtitleVocabulary.fromJson(Map<String, dynamic> json) =>
+      _$SubtitleVocabularyFromJson(json);
+}
+
+extension SubtitleX on Subtitle {
+  bool get isEmpty =>
+      english.isEmpty &&
+      (burmese?.isEmpty ?? true) &&
+      (description?.isEmpty ?? true) &&
+      (autioName?.isEmpty ?? true) &&
+      start == Duration.zero &&
+      end == Duration.zero &&
+      (vocabulary == null || vocabulary!.isEmpty);
+
+  bool get isNotEmpty => !isEmpty;
 }

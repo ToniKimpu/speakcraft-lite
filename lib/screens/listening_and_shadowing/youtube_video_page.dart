@@ -6,8 +6,8 @@ import 'package:pmp_english/bloc/listening/listening_bloc.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/widgets/listening_vocabulary_list.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/lyrics_widget.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_detail_widget.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -39,8 +39,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   bool _readyToPlay = false;
   final List<Subtitle> _subtitles = [];
-  Subtitle _lastScrolledSubtitle = Subtitle.empty;
-  Subtitle _selectedSubtitle = Subtitle.empty;
+  Subtitle _lastScrolledSubtitle = Subtitle.empty();
+  Subtitle _selectedSubtitle = Subtitle.empty();
   bool _isUserScrolling = false;
   bool _showLoadingLayout = false;
   Timer? _scrollTimer;
@@ -111,12 +111,10 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       (subtitle) =>
           position >= subtitle.start.inSeconds &&
           position < subtitle.end.inSeconds,
-      orElse: () => Subtitle.empty,
+      orElse: () => Subtitle.empty(),
     );
 
-    if (subtitle.isEmpty ||
-        subtitle.widgetHeight == null ||
-        subtitle.id == _lastScrolledSubtitle.id) {
+    if (subtitle.isEmpty || subtitle.id == _lastScrolledSubtitle.id) {
       return;
     }
     _lastScrolledSubtitle = subtitle;
@@ -125,12 +123,12 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     final maxScroll = _lyricsController.position.maxScrollExtent;
     if (currentScroll >= maxScroll) {
       _selectedSubtitle = _lastScrolledSubtitle;
-      if (_lastScrolledSubtitle.scrollPosition! >= maxScroll) {
+      if (_lastScrolledSubtitle.scrollPosition >= maxScroll) {
         return;
       }
     }
     _lyricsController.animateTo(
-      _lastScrolledSubtitle.scrollPosition!,
+      _lastScrolledSubtitle.scrollPosition,
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
@@ -272,15 +270,24 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                   },
                                 ),
                               ),
+                              // Positioned(
+                              //   top: 12,
+                              //   left: 12,
+                              //   right: 12,
+                              //   bottom: 12,
+                              //   child: ListeningVocabularyList(
+                              //     showVocabularyNotifier:
+                              //         _showVocabularyNotifier,
+                              //     vocabularyBloc: _vocabularyBloc,
+                              //   ),
+                              // )
                               Positioned(
-                                top: 12,
-                                left: 12,
-                                right: 12,
-                                bottom: 12,
-                                child: ListeningVocabularyList(
-                                  showVocabularyNotifier:
-                                      _showVocabularyNotifier,
-                                  vocabularyBloc: _vocabularyBloc,
+                                top: 6,
+                                left: 6,
+                                right: 6,
+                                bottom: 6,
+                                child: SubtitleDetailWidget(
+                                  showSubtitleDetail: _showVocabularyNotifier,
                                 ),
                               )
                             ],
