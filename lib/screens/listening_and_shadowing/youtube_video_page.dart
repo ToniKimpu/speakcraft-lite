@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:pmp_english/bloc/listening/listening_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
@@ -10,6 +10,8 @@ import 'package:pmp_english/screens/listening_and_shadowing/widgets/lyrics_widge
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_detail_widget.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
+import '../../bloc/subtitle_detail/subtitle_detail_bloc.dart';
 
 /// Homepage
 class YoutubeVideoPage extends StatefulWidget {
@@ -45,7 +47,10 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   bool _showLoadingLayout = false;
   Timer? _scrollTimer;
   final _showVocabularyNotifier = ValueNotifier<bool>(false);
-  final _vocabularyBloc = ListeningBloc();
+
+  final _subtitleBloc = SubtitleBloc();
+
+  int _subtitlePageIndex = 0;
 
   @override
   void initState() {
@@ -88,18 +93,18 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         }
       },
     );
-    _vocabularyBloc
-        .add(ListeningEvent.loadVocabulariesByListening(widget.listening.id));
   }
 
   void listener() {
     if (_isPlayerReady && mounted && !_controller.value.isFullScreen) {
       setState(() {
         _scrollToNext();
+        _updateCurrentSubtitleIndex();
       });
     }
   }
 
+  //For Lyrics widget
   void _scrollToNext() {
     if (!_lyricsController.hasClients || _isUserScrolling) {
       return; // Ensure scrolling is possible
@@ -137,6 +142,28 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     });
   }
 
+  // For Subtitle Detail Widget
+  void _updateCurrentSubtitleIndex() {
+    final position = _controller.value.position.inSeconds;
+
+    final subtitle = _subtitles.firstWhere(
+      (subtitle) =>
+          position >= subtitle.start.inSeconds &&
+          position < subtitle.end.inSeconds,
+      orElse: () => Subtitle.empty(),
+    );
+
+    if (subtitle.isNotEmpty) {
+      final newIndex = _subtitles.indexWhere((s) => s.id == subtitle.id);
+      if (newIndex != _subtitlePageIndex) {
+        _subtitlePageIndex = newIndex;
+        _subtitleBloc.add(
+          SubtitleDetailEvent.setCurrentPageIndex(_subtitlePageIndex),
+        );
+      }
+    }
+  }
+
   @override
   void deactivate() {
     _controller.pause();
@@ -151,154 +178,168 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     _seekToController.dispose();
     _lyricsController.removeListener(listener);
     _lyricsController.dispose();
-    _vocabularyBloc.close();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: false,
-      onPopInvokedWithResult: (didPop, result) {
-        if (didPop) return;
-        if (_showVocabularyNotifier.value) {
-          _showVocabularyNotifier.value = false;
-          return;
-        }
-        Future.delayed(const Duration(milliseconds: 300), () {
-          if (context.mounted) Navigator.of(context).pop();
-        });
-        setState(() {
-          _showLoadingLayout = true;
-        });
-      },
-      child: _showLoadingLayout
-          ? const MainScaffold(
-              body: Center(
-                child: SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: CircularProgressIndicator(),
-                ),
-              ),
-            )
-          : GestureDetector(
-              onTap: () {
-                if (_showVocabularyNotifier.value) {
-                  _showVocabularyNotifier.value = false;
-                }
-              },
-              child: YoutubePlayerBuilder(
-                player: YoutubePlayer(
-                  controller: _controller,
-                  showVideoProgressIndicator: false,
-                  topActions: const <Widget>[
-                    SizedBox(width: 8.0),
-                  ],
-                  // bottomActions: const [
-                  //   SizedBox(),
-                  // ],
-                  thumbnail: const SizedBox(),
-                  onReady: () {
-                    _isPlayerReady = true;
-                  },
-                  onEnded: (data) {},
-                ),
-                builder: (context, player) => MainScaffold(
-                  appBar: AppBar(
-                    scrolledUnderElevation: 0.0,
-                    backgroundColor: const Color(0xFF0F2027),
-                    title: Text(
-                      widget.listening.title,
-                      style: const TextStyle(color: Colors.white),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
+    return BlocProvider(
+      create: (context) => _subtitleBloc,
+      child: PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, result) {
+          if (didPop) return;
+          if (_showVocabularyNotifier.value) {
+            _showVocabularyNotifier.value = false;
+            return;
+          }
+          Future.delayed(const Duration(milliseconds: 300), () {
+            if (context.mounted) Navigator.of(context).pop();
+          });
+          setState(() {
+            _showLoadingLayout = true;
+          });
+        },
+        child: _showLoadingLayout
+            ? const MainScaffold(
+                body: Center(
+                  child: SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(),
                   ),
-                  body: SizedBox(
-                    width: double.infinity,
-                    child: Column(
-                      children: [
-                        player,
-                        CustomControl(
-                          controller: _controller,
-                          startPosition: widget.listening.start,
-                          endPosition: widget.listening.end,
-                          startDuration: _startDuration,
-                          endDuration: _endDuration,
-                          readyToPlay: _readyToPlay,
-                          onVocabulary: () {
-                            _showVocabularyNotifier.value =
-                                !_showVocabularyNotifier.value;
-                          },
-                          onSeek: () {
-                            setState(() {
-                              Future.delayed(const Duration(milliseconds: 100),
-                                  () {
-                                _isUserScrolling = false;
+                ),
+              )
+            : GestureDetector(
+                onTap: () {
+                  if (_showVocabularyNotifier.value) {
+                    _showVocabularyNotifier.value = false;
+                  }
+                },
+                child: YoutubePlayerBuilder(
+                  player: YoutubePlayer(
+                    controller: _controller,
+                    showVideoProgressIndicator: false,
+                    topActions: const <Widget>[
+                      SizedBox(width: 8.0),
+                    ],
+                    // bottomActions: const [
+                    //   SizedBox(),
+                    // ],
+                    thumbnail: const SizedBox(),
+                    onReady: () {
+                      _isPlayerReady = true;
+                    },
+                    onEnded: (data) {},
+                  ),
+                  builder: (context, player) => MainScaffold(
+                    appBar: AppBar(
+                      scrolledUnderElevation: 0.0,
+                      backgroundColor: const Color(0xFF0F2027),
+                      title: Text(
+                        widget.listening.title,
+                        style: const TextStyle(color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
+                    ),
+                    body: SizedBox(
+                      width: double.infinity,
+                      child: Column(
+                        children: [
+                          player,
+                          CustomControl(
+                            controller: _controller,
+                            startPosition: widget.listening.start,
+                            endPosition: widget.listening.end,
+                            startDuration: _startDuration,
+                            endDuration: _endDuration,
+                            readyToPlay: _readyToPlay,
+                            onVocabulary: () {
+                              _showVocabularyNotifier.value =
+                                  !_showVocabularyNotifier.value;
+                            },
+                            onSeek: () {
+                              setState(() {
+                                Future.delayed(
+                                    const Duration(milliseconds: 100), () {
+                                  _isUserScrolling = false;
+                                });
                               });
-                            });
-                          },
-                        ),
-                        Expanded(
-                          child: Stack(
-                            children: [
-                              Positioned.fill(
-                                child: LyricsWidget(
-                                  selectedSubtitle: _selectedSubtitle,
-                                  listening: widget.listening,
-                                  mainController: _lyricsController,
-                                  enableMMSub: widget.enableMMSub,
-                                  onTap: (subtitle) {
-                                    setState(() {
-                                      _controller.seekTo(subtitle.start);
-                                      Future.delayed(
-                                          const Duration(milliseconds: 100),
-                                          () {
-                                        _isUserScrolling = false;
-                                        _selectedSubtitle = subtitle;
-                                      });
-                                    });
-                                  },
-                                  getSubtitleBoxHeights: (subtitles) {
-                                    if (_subtitles.isEmpty) {
-                                      _subtitles.addAll(subtitles);
-                                    }
-                                    setState(() {
-                                      _readyToPlay = true;
-                                    });
-                                  },
-                                ),
-                              ),
-                              // Positioned(
-                              //   top: 12,
-                              //   left: 12,
-                              //   right: 12,
-                              //   bottom: 12,
-                              //   child: ListeningVocabularyList(
-                              //     showVocabularyNotifier:
-                              //         _showVocabularyNotifier,
-                              //     vocabularyBloc: _vocabularyBloc,
-                              //   ),
-                              // )
-                              Positioned(
-                                top: 6,
-                                left: 6,
-                                right: 6,
-                                bottom: 6,
-                                child: SubtitleDetailWidget(
-                                  showSubtitleDetail: _showVocabularyNotifier,
-                                ),
-                              )
-                            ],
+                            },
                           ),
-                        ),
-                      ],
+                          Expanded(
+                            child: Stack(
+                              children: [
+                                Positioned.fill(
+                                  child: ValueListenableBuilder<bool>(
+                                      valueListenable: _showVocabularyNotifier,
+                                      builder:
+                                          (context, showVocabulary, childF) {
+                                        return Offstage(
+                                          offstage: showVocabulary,
+                                          child: LyricsWidget(
+                                            selectedSubtitle: _selectedSubtitle,
+                                            listening: widget.listening,
+                                            mainController: _lyricsController,
+                                            enableMMSub: widget.enableMMSub,
+                                            onTap: (subtitle) {
+                                              setState(() {
+                                                _controller
+                                                    .seekTo(subtitle.start);
+                                                Future.delayed(
+                                                    const Duration(
+                                                        milliseconds: 100), () {
+                                                  _isUserScrolling = false;
+                                                  _selectedSubtitle = subtitle;
+                                                });
+                                              });
+                                            },
+                                            getSubtitleBoxHeights: (subtitles) {
+                                              if (_subtitles.isEmpty) {
+                                                _subtitles.addAll(subtitles);
+                                              }
+                                              setState(() {
+                                                _readyToPlay = true;
+                                              });
+                                            },
+                                          ),
+                                        );
+                                      }),
+                                ),
+                                Positioned(
+                                  top: 6,
+                                  left: 6,
+                                  right: 6,
+                                  bottom: 6,
+                                  child: SubtitleDetailWidget(
+                                    subtitleBloc: _subtitleBloc,
+                                    showSubtitleDetail: _showVocabularyNotifier,
+                                    subtitles: _subtitles,
+                                    hasMMSub: widget.listening.hasMMSubtitle,
+                                    onUserChangePage: (subtitle) async {
+                                      final isPaused =
+                                          !_controller.value.isPlaying;
+                                      _controller.seekTo(subtitle.start);
+                                      if (isPaused) {
+                                        // Re-pause after a brief delay to avoid auto-play
+                                        await Future.delayed(
+                                            const Duration(milliseconds: 100));
+                                        _controller.pause();
+                                      }
+                                    },
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
+      ),
     );
   }
 }
