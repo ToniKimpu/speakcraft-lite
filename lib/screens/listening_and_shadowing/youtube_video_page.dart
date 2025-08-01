@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
@@ -11,6 +12,7 @@ import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_det
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../bloc/audio_player/audio_player_bloc.dart';
 import '../../bloc/subtitle_detail/subtitle_detail_bloc.dart';
 
 /// Homepage
@@ -49,9 +51,15 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   final _showVocabularyNotifier = ValueNotifier<bool>(false);
 
   final _subtitleBloc = SubtitleBloc();
-
   int _subtitlePageIndex = 0;
 
+  final _audioPositionTrackerBloc = AudioPlayerBloc();
+  final _audioDurationTrackerBloc = AudioPlayerBloc();
+  final _audioPlayerStateTrackerBloc = AudioPlayerBloc();
+  final _audioPlayer = AudioPlayer();
+  StreamSubscription? _playerStateSubscription;
+  StreamSubscription<Duration>? _positionSub;
+  late final StreamSubscription<Duration?> _durationSub;
   @override
   void initState() {
     super.initState();
@@ -91,6 +99,28 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
             });
           });
         }
+      },
+    );
+    _playerStateSubscription =
+        _audioPlayer.playerStateStream.listen((playerState) {
+      debugPrint("_playerStateSubscription: ${playerState.playing} playing");
+      _audioPlayerStateTrackerBloc
+          .add(AudioPlayerEvent.updatePlayerState(playerState));
+    });
+    _positionSub = _audioPlayer.positionStream.listen(
+      (pos) {
+        _audioPositionTrackerBloc
+            .add(AudioPlayerEvent.setCurrentPosition(pos.inSeconds));
+      },
+    );
+    _durationSub = _audioPlayer.durationStream.listen(
+      (duration) {
+        if (duration == null) {
+          return;
+        }
+        _audioDurationTrackerBloc
+            .add(AudioPlayerEvent.setTotalDuration(duration));
+        debugPrint("_durationSub: ${duration.inSeconds} inSeconds!");
       },
     );
   }
@@ -167,6 +197,10 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   @override
   void deactivate() {
     _controller.pause();
+    _playerStateSubscription?.cancel();
+    _positionSub?.cancel();
+    _audioPlayer.dispose();
+    _durationSub.cancel();
     super.deactivate();
   }
 
@@ -183,8 +217,21 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => _subtitleBloc,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => _subtitleBloc,
+        ),
+        BlocProvider(
+          create: (context) => _audioPositionTrackerBloc,
+        ),
+        BlocProvider(
+          create: (context) => _audioDurationTrackerBloc,
+        ),
+        BlocProvider(
+          create: (context) => _audioPlayerStateTrackerBloc,
+        ),
+      ],
       child: PopScope(
         canPop: false,
         onPopInvokedWithResult: (didPop, result) {
@@ -295,13 +342,26 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                                 });
                                               });
                                             },
-                                            getSubtitleBoxHeights: (subtitles) {
+                                            getSubtitleBoxHeights:
+                                                (subtitles) async {
                                               if (_subtitles.isEmpty) {
                                                 _subtitles.addAll(subtitles);
+                                                if (_subtitles.isNotEmpty) {
+                                                  final subtitle =
+                                                      _subtitles.first;
+                                                  debugPrint(
+                                                      "_durationSub: //${subtitle.audioName} audioName");
+                                                  if (subtitle
+                                                      .audioName.isNotEmpty) {
+                                                    _audioPlayer.setUrl(
+                                                      subtitle.audioName,
+                                                    );
+                                                  }
+                                                }
+                                                setState(() {
+                                                  _readyToPlay = true;
+                                                });
                                               }
-                                              setState(() {
-                                                _readyToPlay = true;
-                                              });
                                             },
                                           ),
                                         );
@@ -313,7 +373,14 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                   right: 6,
                                   bottom: 6,
                                   child: SubtitleDetailWidget(
+                                    audioPlayerStateTrackerBloc:
+                                        _audioPlayerStateTrackerBloc,
+                                    audioPostionTrackerBloc:
+                                        _audioPositionTrackerBloc,
+                                    audioDurationTrackerBloc:
+                                        _audioDurationTrackerBloc,
                                     subtitleBloc: _subtitleBloc,
+                                    audioPlayer: _audioPlayer,
                                     showSubtitleDetail: _showVocabularyNotifier,
                                     subtitles: _subtitles,
                                     hasMMSub: widget.listening.hasMMSubtitle,

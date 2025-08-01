@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/services/supabase_service.dart';
 
 import '../l10n/generated/l10n.dart';
 import '../model/subtitle/subtitle.dart';
@@ -231,19 +232,25 @@ Future<List<Subtitle>> parseJsonSubtitleFile(String fileUrl) async {
       final startDuration = _parseJsonDuration(jsonItem['start']);
       final endDuration = _parseJsonDuration(jsonItem['end']);
 
-      subtitles.add(Subtitle(
-        id: jsonItem['id'],
-        english: jsonItem['english'] ?? '',
-        burmese: jsonItem['burmese'],
-        description: jsonItem['description'],
-        autioName: jsonItem['autioName'],
-        start: startDuration,
-        end: endDuration,
-        scrollPosition: i < 2 ? 0 : scrollPosition,
-        vocabulary: (jsonItem['vocabulary'] as List<dynamic>?)
-            ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))
-            .toList(),
-      ));
+      subtitles.add(
+        Subtitle(
+          id: jsonItem['id'],
+          english: jsonItem['english'] ?? '',
+          burmese: jsonItem['burmese'],
+          description: jsonItem['description'],
+          audioName: jsonItem["audioName"] == null
+              ? ""
+              : supabase.storage.from("contents").getPublicUrl(
+                    "${SupabaseBucketFolders.listeningAndShadowingAudios.name}/${jsonItem["audioName"] as String}",
+                  ),
+          start: startDuration,
+          end: endDuration,
+          scrollPosition: i < 2 ? 0 : scrollPosition,
+          vocabularies: (jsonItem['vocabulary'] as List<dynamic>?)
+              ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))
+              .toList(),
+        ),
+      );
 
       if (i >= 1) {
         scrollPosition += fixedHeight;

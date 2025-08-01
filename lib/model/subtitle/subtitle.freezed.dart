@@ -24,11 +24,11 @@ mixin _$Subtitle {
   String get english => throw _privateConstructorUsedError;
   String? get burmese => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  String? get autioName => throw _privateConstructorUsedError;
+  String get audioName => throw _privateConstructorUsedError;
   Duration get start => throw _privateConstructorUsedError;
   Duration get end => throw _privateConstructorUsedError;
   double get scrollPosition => throw _privateConstructorUsedError;
-  List<SubtitleVocabulary>? get vocabulary =>
+  List<SubtitleVocabulary>? get vocabularies =>
       throw _privateConstructorUsedError;
 
   /// Serializes this Subtitle to a JSON map.
@@ -51,11 +51,11 @@ abstract class $SubtitleCopyWith<$Res> {
       String english,
       String? burmese,
       String? description,
-      String? autioName,
+      String audioName,
       Duration start,
       Duration end,
       double scrollPosition,
-      List<SubtitleVocabulary>? vocabulary});
+      List<SubtitleVocabulary>? vocabularies});
 }
 
 /// @nodoc
@@ -77,11 +77,11 @@ class _$SubtitleCopyWithImpl<$Res, $Val extends Subtitle>
     Object? english = null,
     Object? burmese = freezed,
     Object? description = freezed,
-    Object? autioName = freezed,
+    Object? audioName = null,
     Object? start = null,
     Object? end = null,
     Object? scrollPosition = null,
-    Object? vocabulary = freezed,
+    Object? vocabularies = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -100,10 +100,10 @@ class _$SubtitleCopyWithImpl<$Res, $Val extends Subtitle>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      autioName: freezed == autioName
-          ? _value.autioName
-          : autioName // ignore: cast_nullable_to_non_nullable
-              as String?,
+      audioName: null == audioName
+          ? _value.audioName
+          : audioName // ignore: cast_nullable_to_non_nullable
+              as String,
       start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
@@ -116,9 +116,9 @@ class _$SubtitleCopyWithImpl<$Res, $Val extends Subtitle>
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
               as double,
-      vocabulary: freezed == vocabulary
-          ? _value.vocabulary
-          : vocabulary // ignore: cast_nullable_to_non_nullable
+      vocabularies: freezed == vocabularies
+          ? _value.vocabularies
+          : vocabularies // ignore: cast_nullable_to_non_nullable
               as List<SubtitleVocabulary>?,
     ) as $Val);
   }
@@ -137,11 +137,11 @@ abstract class _$$SubtitleImplCopyWith<$Res>
       String english,
       String? burmese,
       String? description,
-      String? autioName,
+      String audioName,
       Duration start,
       Duration end,
       double scrollPosition,
-      List<SubtitleVocabulary>? vocabulary});
+      List<SubtitleVocabulary>? vocabularies});
 }
 
 /// @nodoc
@@ -161,11 +161,11 @@ class __$$SubtitleImplCopyWithImpl<$Res>
     Object? english = null,
     Object? burmese = freezed,
     Object? description = freezed,
-    Object? autioName = freezed,
+    Object? audioName = null,
     Object? start = null,
     Object? end = null,
     Object? scrollPosition = null,
-    Object? vocabulary = freezed,
+    Object? vocabularies = freezed,
   }) {
     return _then(_$SubtitleImpl(
       id: freezed == id
@@ -184,10 +184,10 @@ class __$$SubtitleImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      autioName: freezed == autioName
-          ? _value.autioName
-          : autioName // ignore: cast_nullable_to_non_nullable
-              as String?,
+      audioName: null == audioName
+          ? _value.audioName
+          : audioName // ignore: cast_nullable_to_non_nullable
+              as String,
       start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
@@ -200,9 +200,9 @@ class __$$SubtitleImplCopyWithImpl<$Res>
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
               as double,
-      vocabulary: freezed == vocabulary
-          ? _value._vocabulary
-          : vocabulary // ignore: cast_nullable_to_non_nullable
+      vocabularies: freezed == vocabularies
+          ? _value._vocabularies
+          : vocabularies // ignore: cast_nullable_to_non_nullable
               as List<SubtitleVocabulary>?,
     ));
   }
@@ -216,12 +216,13 @@ class _$SubtitleImpl implements _Subtitle {
       required this.english,
       this.burmese,
       this.description,
-      this.autioName,
+      required this.audioName,
       required this.start,
       required this.end,
       required this.scrollPosition,
-      final List<SubtitleVocabulary>? vocabulary})
-      : _vocabulary = vocabulary;
+      final List<SubtitleVocabulary>? vocabularies =
+          const <SubtitleVocabulary>[]})
+      : _vocabularies = vocabularies;
 
   factory _$SubtitleImpl.fromJson(Map<String, dynamic> json) =>
       _$$SubtitleImplFromJson(json);
@@ -235,26 +236,28 @@ class _$SubtitleImpl implements _Subtitle {
   @override
   final String? description;
   @override
-  final String? autioName;
+  @JsonKey()
+  final String audioName;
   @override
   final Duration start;
   @override
   final Duration end;
   @override
   final double scrollPosition;
-  final List<SubtitleVocabulary>? _vocabulary;
+  final List<SubtitleVocabulary>? _vocabularies;
   @override
-  List<SubtitleVocabulary>? get vocabulary {
-    final value = _vocabulary;
+  @JsonKey()
+  List<SubtitleVocabulary>? get vocabularies {
+    final value = _vocabularies;
     if (value == null) return null;
-    if (_vocabulary is EqualUnmodifiableListView) return _vocabulary;
+    if (_vocabularies is EqualUnmodifiableListView) return _vocabularies;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
 
   @override
   String toString() {
-    return 'Subtitle(id: $id, english: $english, burmese: $burmese, description: $description, autioName: $autioName, start: $start, end: $end, scrollPosition: $scrollPosition, vocabulary: $vocabulary)';
+    return 'Subtitle(id: $id, english: $english, burmese: $burmese, description: $description, audioName: $audioName, start: $start, end: $end, scrollPosition: $scrollPosition, vocabularies: $vocabularies)';
   }
 
   @override
@@ -267,14 +270,14 @@ class _$SubtitleImpl implements _Subtitle {
             (identical(other.burmese, burmese) || other.burmese == burmese) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.autioName, autioName) ||
-                other.autioName == autioName) &&
+            (identical(other.audioName, audioName) ||
+                other.audioName == audioName) &&
             (identical(other.start, start) || other.start == start) &&
             (identical(other.end, end) || other.end == end) &&
             (identical(other.scrollPosition, scrollPosition) ||
                 other.scrollPosition == scrollPosition) &&
             const DeepCollectionEquality()
-                .equals(other._vocabulary, _vocabulary));
+                .equals(other._vocabularies, _vocabularies));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -285,11 +288,11 @@ class _$SubtitleImpl implements _Subtitle {
       english,
       burmese,
       description,
-      autioName,
+      audioName,
       start,
       end,
       scrollPosition,
-      const DeepCollectionEquality().hash(_vocabulary));
+      const DeepCollectionEquality().hash(_vocabularies));
 
   /// Create a copy of Subtitle
   /// with the given fields replaced by the non-null parameter values.
@@ -313,11 +316,11 @@ abstract class _Subtitle implements Subtitle {
       required final String english,
       final String? burmese,
       final String? description,
-      final String? autioName,
+      required final String audioName,
       required final Duration start,
       required final Duration end,
       required final double scrollPosition,
-      final List<SubtitleVocabulary>? vocabulary}) = _$SubtitleImpl;
+      final List<SubtitleVocabulary>? vocabularies}) = _$SubtitleImpl;
 
   factory _Subtitle.fromJson(Map<String, dynamic> json) =
       _$SubtitleImpl.fromJson;
@@ -331,7 +334,7 @@ abstract class _Subtitle implements Subtitle {
   @override
   String? get description;
   @override
-  String? get autioName;
+  String get audioName;
   @override
   Duration get start;
   @override
@@ -339,7 +342,7 @@ abstract class _Subtitle implements Subtitle {
   @override
   double get scrollPosition;
   @override
-  List<SubtitleVocabulary>? get vocabulary;
+  List<SubtitleVocabulary>? get vocabularies;
 
   /// Create a copy of Subtitle
   /// with the given fields replaced by the non-null parameter values.

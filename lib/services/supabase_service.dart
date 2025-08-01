@@ -16,6 +16,7 @@ class SupabaseService {
 
 enum SupabaseBucketFolders {
   spokenPatternAudios('spoken-patterns/audios'),
+  listeningAndShadowingAudios('listening-and-shadowing/audios'),
   listeningAndShadowingImages('listening-and-shadowing/images'),
   listeningAndShadowingSubtitles('listening-and-shadowing/subtitles');
 

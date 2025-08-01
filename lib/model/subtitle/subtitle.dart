@@ -12,11 +12,11 @@ class Subtitle with _$Subtitle {
     required String english,
     String? burmese,
     String? description,
-    String? autioName,
+    @Default("") required String audioName,
     required Duration start,
     required Duration end,
     required double scrollPosition,
-    List<SubtitleVocabulary>? vocabulary,
+    @Default(<SubtitleVocabulary>[]) List<SubtitleVocabulary>? vocabularies,
   }) = _Subtitle;
 
   factory Subtitle.fromJson(Map<String, dynamic> json) =>
@@ -26,11 +26,11 @@ class Subtitle with _$Subtitle {
         english: '',
         burmese: null,
         description: null,
-        autioName: null,
+        audioName: "",
         start: Duration.zero,
         end: Duration.zero,
         scrollPosition: 0,
-        vocabulary: [],
+        vocabularies: [],
       );
 }
 
@@ -52,10 +52,10 @@ extension SubtitleX on Subtitle {
       english.isEmpty &&
       (burmese?.isEmpty ?? true) &&
       (description?.isEmpty ?? true) &&
-      (autioName?.isEmpty ?? true) &&
+      (audioName.isEmpty) &&
       start == Duration.zero &&
       end == Duration.zero &&
-      (vocabulary == null || vocabulary!.isEmpty);
+      (vocabularies == null || vocabularies!.isEmpty);
 
   bool get isNotEmpty => !isEmpty;
 }

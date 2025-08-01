@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_widget.dart';
@@ -9,12 +11,20 @@ import '../../../model/subtitle/subtitle.dart';
 class SubtitleDetailWidget extends StatefulWidget {
   const SubtitleDetailWidget({
     super.key,
+    required this.audioPostionTrackerBloc,
+    required this.audioDurationTrackerBloc,
+    required this.audioPlayerStateTrackerBloc,
+    required this.audioPlayer,
     required this.subtitleBloc,
     required this.showSubtitleDetail,
     required this.subtitles,
     required this.hasMMSub,
     required this.onUserChangePage,
   });
+  final AudioPlayerBloc audioPostionTrackerBloc,
+      audioDurationTrackerBloc,
+      audioPlayerStateTrackerBloc;
+  final AudioPlayer audioPlayer;
   final SubtitleBloc subtitleBloc;
   final ValueNotifier<bool> showSubtitleDetail;
   final List<Subtitle> subtitles;
@@ -29,9 +39,14 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
   bool _streamData = false;
   final _pageController = PageController();
   int _currentIndex = 0;
-  void _goToNext() {
+  void _goToNext() async {
     if (_currentIndex < widget.subtitles.length - 1) {
       setState(() => _currentIndex++);
+      await widget.audioPlayer.stop();
+      final subtitle = widget.subtitles[_currentIndex];
+      if (subtitle.audioName.isNotEmpty) {
+        widget.audioPlayer.setUrl(subtitle.audioName);
+      }
       _pageController.animateToPage(
         _currentIndex,
         duration: const Duration(milliseconds: 300),
@@ -41,9 +56,15 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
     }
   }
 
-  void _goToPrevious() {
+  void _goToPrevious() async {
     if (_currentIndex > 0) {
       setState(() => _currentIndex--);
+      await widget.audioPlayer.stop();
+      final subtitle = widget.subtitles[_currentIndex];
+      if (subtitle.audioName.isNotEmpty) {
+        widget.audioPlayer.setUrl(subtitle.audioName);
+      }
+      await widget.audioPlayer.stop();
       _pageController.animateToPage(
         _currentIndex,
         duration: const Duration(milliseconds: 300),
@@ -58,9 +79,15 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
     return BlocListener<SubtitleBloc, SubtitleState>(
       listener: (context, state) {
         state.maybeWhen(
-          onPageChanged: (index) {
+          onPageChanged: (index) async {
             if (_pageController.hasClients && _streamData) {
               _currentIndex = index;
+              final subtitle = widget.subtitles[index];
+              await widget.audioPlayer.stop();
+              if (subtitle.audioName.isNotEmpty) {
+                widget.audioPlayer.setUrl(subtitle.audioName);
+              }
+
               _pageController.animateToPage(
                 _currentIndex,
                 duration: const Duration(milliseconds: 300),
@@ -160,6 +187,13 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                     itemCount: widget.subtitles.length,
                     itemBuilder: (context, index) {
                       return SubtitleWidget(
+                        audioPlayer: widget.audioPlayer,
+                        audioPositionTrackerBloc:
+                            widget.audioPostionTrackerBloc,
+                        audioDurationTrackerBloc:
+                            widget.audioDurationTrackerBloc,
+                        audioPlayerStateTrackerBloc:
+                            widget.audioPlayerStateTrackerBloc,
                         subtitle: widget.subtitles[index],
                         hasMMSub: widget.hasMMSub,
                       );

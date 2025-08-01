@@ -12,13 +12,15 @@ _$SubtitleImpl _$$SubtitleImplFromJson(Map<String, dynamic> json) =>
       english: json['english'] as String,
       burmese: json['burmese'] as String?,
       description: json['description'] as String?,
-      autioName: json['autioName'] as String?,
+      audioName: json['audioName'] as String? ?? "",
       start: Duration(microseconds: (json['start'] as num).toInt()),
       end: Duration(microseconds: (json['end'] as num).toInt()),
       scrollPosition: (json['scrollPosition'] as num).toDouble(),
-      vocabulary: (json['vocabulary'] as List<dynamic>?)
-          ?.map((e) => SubtitleVocabulary.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      vocabularies: (json['vocabularies'] as List<dynamic>?)
+              ?.map(
+                  (e) => SubtitleVocabulary.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <SubtitleVocabulary>[],
     );
 
 Map<String, dynamic> _$$SubtitleImplToJson(_$SubtitleImpl instance) =>
@@ -27,11 +29,11 @@ Map<String, dynamic> _$$SubtitleImplToJson(_$SubtitleImpl instance) =>
       'english': instance.english,
       'burmese': instance.burmese,
       'description': instance.description,
-      'autioName': instance.autioName,
+      'audioName': instance.audioName,
       'start': instance.start.inMicroseconds,
       'end': instance.end.inMicroseconds,
       'scrollPosition': instance.scrollPosition,
-      'vocabulary': instance.vocabulary,
+      'vocabularies': instance.vocabularies,
     };
 
 _$SubtitleVocabularyImpl _$$SubtitleVocabularyImplFromJson(
