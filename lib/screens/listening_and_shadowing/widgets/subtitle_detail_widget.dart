@@ -5,12 +5,16 @@ import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_widget.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../../config/pmp_colors.dart';
 import '../../../model/subtitle/subtitle.dart';
 
 class SubtitleDetailWidget extends StatefulWidget {
   const SubtitleDetailWidget({
     super.key,
+    required this.youtubeReadyToPlay,
+    required this.youtubeController,
     required this.audioPostionTrackerBloc,
     required this.audioDurationTrackerBloc,
     required this.audioPlayerStateTrackerBloc,
@@ -21,6 +25,8 @@ class SubtitleDetailWidget extends StatefulWidget {
     required this.hasMMSub,
     required this.onUserChangePage,
   });
+  final bool youtubeReadyToPlay;
+  final YoutubePlayerController youtubeController;
   final AudioPlayerBloc audioPostionTrackerBloc,
       audioDurationTrackerBloc,
       audioPlayerStateTrackerBloc;
@@ -39,13 +45,31 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
   bool _streamData = false;
   final _pageController = PageController();
   int _currentIndex = 0;
+
+  Future<void> _setAudioSourceIfNeeded(String url) async {
+    try {
+      await widget.audioPlayer.stop();
+
+      final source = widget.audioPlayer.audioSource;
+      final currentTag = source?.sequence.first.tag;
+
+      if (currentTag != url) {
+        await widget.audioPlayer.setAudioSource(
+          AudioSource.uri(Uri.parse(url), tag: url),
+        );
+      }
+    } catch (e, st) {
+      debugPrint("Error setting audio source: $e\n$st");
+    }
+  }
+
   void _goToNext() async {
     if (_currentIndex < widget.subtitles.length - 1) {
       setState(() => _currentIndex++);
-      await widget.audioPlayer.stop();
       final subtitle = widget.subtitles[_currentIndex];
       if (subtitle.audioName.isNotEmpty) {
-        widget.audioPlayer.setUrl(subtitle.audioName);
+        // widget.audioPlayer.setUrl(subtitle.audioName);
+        _setAudioSourceIfNeeded(subtitle.audioName);
       }
       _pageController.animateToPage(
         _currentIndex,
@@ -59,10 +83,11 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
   void _goToPrevious() async {
     if (_currentIndex > 0) {
       setState(() => _currentIndex--);
-      await widget.audioPlayer.stop();
+      // await widget.audioPlayer.stop();
       final subtitle = widget.subtitles[_currentIndex];
       if (subtitle.audioName.isNotEmpty) {
-        widget.audioPlayer.setUrl(subtitle.audioName);
+        // widget.audioPlayer.setUrl(subtitle.audioName);
+        _setAudioSourceIfNeeded(subtitle.audioName);
       }
       await widget.audioPlayer.stop();
       _pageController.animateToPage(
@@ -83,11 +108,9 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
             if (_pageController.hasClients && _streamData) {
               _currentIndex = index;
               final subtitle = widget.subtitles[index];
-              await widget.audioPlayer.stop();
               if (subtitle.audioName.isNotEmpty) {
-                widget.audioPlayer.setUrl(subtitle.audioName);
+                _setAudioSourceIfNeeded(subtitle.audioName);
               }
-
               _pageController.animateToPage(
                 _currentIndex,
                 duration: const Duration(milliseconds: 300),
@@ -187,6 +210,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                     itemCount: widget.subtitles.length,
                     itemBuilder: (context, index) {
                       return SubtitleWidget(
+                        youtubeController: widget.youtubeController,
                         audioPlayer: widget.audioPlayer,
                         audioPositionTrackerBloc:
                             widget.audioPostionTrackerBloc,
@@ -208,8 +232,55 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                 SizedBox(
                   height: 40,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      const SizedBox(width: 8),
+                      widget.youtubeReadyToPlay
+                          ? Material(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Colors.transparent,
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(100),
+                                onTap: () {
+                                  if (widget
+                                      .youtubeController.value.isPlaying) {
+                                    widget.youtubeController.pause();
+                                  } else {
+                                    widget.youtubeController.play();
+                                    if (widget.audioPlayer.playing) {
+                                      widget.audioPlayer.pause();
+                                    }
+                                  }
+                                  setState(() {});
+                                },
+                                child: Container(
+                                  width: 24,
+                                  height: 24,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: Colors.white,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  child: Icon(
+                                    widget.youtubeController.value.isPlaying
+                                        ? Icons.pause
+                                        : Icons.play_arrow,
+                                    color: PmpColors.white,
+                                    size: 18,
+                                  ),
+                                ),
+                              ),
+                            )
+                          : const SizedBox(
+                              width: 16,
+                              height: 16,
+                              child: CircularProgressIndicator(
+                                color: PmpColors.white,
+                              ),
+                            ),
+                      const Spacer(),
                       IconButton(
                         padding: EdgeInsets.zero,
                         onPressed: _goToPrevious,

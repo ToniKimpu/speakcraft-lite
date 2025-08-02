@@ -103,7 +103,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     );
     _playerStateSubscription =
         _audioPlayer.playerStateStream.listen((playerState) {
-      debugPrint("_playerStateSubscription: ${playerState.playing} playing");
+      // debugPrint("_playerStateSubscription: ${playerState.playing} playing");
       _audioPlayerStateTrackerBloc
           .add(AudioPlayerEvent.updatePlayerState(playerState));
     });
@@ -296,6 +296,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                         children: [
                           player,
                           CustomControl(
+                            audioPlayer: _audioPlayer,
                             controller: _controller,
                             startPosition: widget.listening.start,
                             endPosition: widget.listening.end,
@@ -373,6 +374,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                   right: 6,
                                   bottom: 6,
                                   child: SubtitleDetailWidget(
+                                    youtubeReadyToPlay: _readyToPlay,
+                                    youtubeController: _controller,
                                     audioPlayerStateTrackerBloc:
                                         _audioPlayerStateTrackerBloc,
                                     audioPostionTrackerBloc:

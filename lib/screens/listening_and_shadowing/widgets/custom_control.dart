@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_track_shape.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -9,6 +10,7 @@ import '../../../config/pmp_text_styles.dart';
 class CustomControl extends StatefulWidget {
   const CustomControl({
     super.key,
+    required this.audioPlayer,
     required this.controller,
     required this.startPosition,
     required this.endPosition,
@@ -18,6 +20,7 @@ class CustomControl extends StatefulWidget {
     required this.onSeek,
     required this.onVocabulary,
   });
+  final AudioPlayer audioPlayer;
   final YoutubePlayerController controller;
   final int startPosition;
   final int endPosition;
@@ -205,9 +208,12 @@ class _CustomControlState extends State<CustomControl> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(100),
                         onTap: () {
-                          widget.controller.value.isPlaying
-                              ? widget.controller.pause()
-                              : widget.controller.play();
+                          if (widget.controller.value.isPlaying) {
+                            widget.controller.pause();
+                          } else {
+                            widget.controller.play();
+                            widget.audioPlayer.pause();
+                          }
                           setState(() {});
                         },
                         child: Container(

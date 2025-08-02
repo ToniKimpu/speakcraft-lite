@@ -3,12 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_text_styles.dart';
 
 class SubtitleWidget extends StatelessWidget {
   const SubtitleWidget({
     super.key,
+    required this.youtubeController,
     required this.audioPlayer,
     required this.audioPositionTrackerBloc,
     required this.audioDurationTrackerBloc,
@@ -16,6 +18,7 @@ class SubtitleWidget extends StatelessWidget {
     required this.subtitle,
     required this.hasMMSub,
   });
+  final YoutubePlayerController youtubeController;
   final AudioPlayer audioPlayer;
   final AudioPlayerBloc audioPositionTrackerBloc,
       audioDurationTrackerBloc,
@@ -92,15 +95,12 @@ class SubtitleWidget extends StatelessWidget {
                           onUpdatePlayerState: (playerState) => playerState,
                           orElse: () => null,
                         );
-                        debugPrint(
-                            "_playerStateSubscription: ${currentPlayerState?.playing} playing from Bloc");
+                        // debugPrint(
+                        //     "_playerStateSubscription: ${currentPlayerState?.playing} playing from Bloc");
                         final isPlaying = currentPlayerState?.playing == true;
                         final isCompleted =
                             currentPlayerState?.processingState ==
                                 ProcessingState.completed;
-                        final isPaused = currentPlayerState?.playing == false &&
-                            currentPlayerState?.processingState ==
-                                ProcessingState.ready;
                         return Container(
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
@@ -121,19 +121,26 @@ class SubtitleWidget extends StatelessWidget {
                                   if (isCompleted) {
                                     audioPlayer.seek(Duration.zero); // rewind
                                     audioPlayer.play();
+                                    if (youtubeController.value.isPlaying) {
+                                      youtubeController.pause();
+                                    }
                                   } else if (isPlaying) {
                                     audioPlayer.pause();
                                   } else {
                                     audioPlayer.play();
+                                    if (youtubeController.value.isPlaying) {
+                                      youtubeController.pause();
+                                    }
                                   }
                                 },
                                 child: Container(
                                   padding: const EdgeInsets.all(6),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Colors.white.withOpacity(0.05),
+                                    color: Colors.white.withValues(alpha: 0.05),
                                     border: Border.all(
-                                      color: Colors.white.withOpacity(0.6),
+                                      color:
+                                          Colors.white.withValues(alpha: 0.6),
                                       width: 1.5,
                                     ),
                                   ),
