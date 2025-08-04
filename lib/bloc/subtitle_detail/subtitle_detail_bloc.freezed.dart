@@ -15,103 +15,414 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$SubtitleDetailEvent {
-  int get index => throw _privateConstructorUsedError;
+mixin _$SubtitleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseComplete value) parseComplete,
     required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseComplete value)? parseComplete,
     TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseComplete value)? parseComplete,
     TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Create a copy of SubtitleDetailEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $SubtitleDetailEventCopyWith<SubtitleDetailEvent> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SubtitleDetailEventCopyWith<$Res> {
-  factory $SubtitleDetailEventCopyWith(
-          SubtitleDetailEvent value, $Res Function(SubtitleDetailEvent) then) =
-      _$SubtitleDetailEventCopyWithImpl<$Res, SubtitleDetailEvent>;
-  @useResult
-  $Res call({int index});
+abstract class $SubtitleEventCopyWith<$Res> {
+  factory $SubtitleEventCopyWith(
+          SubtitleEvent value, $Res Function(SubtitleEvent) then) =
+      _$SubtitleEventCopyWithImpl<$Res, SubtitleEvent>;
 }
 
 /// @nodoc
-class _$SubtitleDetailEventCopyWithImpl<$Res, $Val extends SubtitleDetailEvent>
-    implements $SubtitleDetailEventCopyWith<$Res> {
-  _$SubtitleDetailEventCopyWithImpl(this._value, this._then);
+class _$SubtitleEventCopyWithImpl<$Res, $Val extends SubtitleEvent>
+    implements $SubtitleEventCopyWith<$Res> {
+  _$SubtitleEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SubtitleDetailEvent
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$ParseSubtitleImplCopyWith<$Res> {
+  factory _$$ParseSubtitleImplCopyWith(
+          _$ParseSubtitleImpl value, $Res Function(_$ParseSubtitleImpl) then) =
+      __$$ParseSubtitleImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String subtitlePath});
+}
+
+/// @nodoc
+class __$$ParseSubtitleImplCopyWithImpl<$Res>
+    extends _$SubtitleEventCopyWithImpl<$Res, _$ParseSubtitleImpl>
+    implements _$$ParseSubtitleImplCopyWith<$Res> {
+  __$$ParseSubtitleImplCopyWithImpl(
+      _$ParseSubtitleImpl _value, $Res Function(_$ParseSubtitleImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? index = null,
+    Object? subtitlePath = null,
   }) {
-    return _then(_value.copyWith(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(_$ParseSubtitleImpl(
+      null == subtitlePath
+          ? _value.subtitlePath
+          : subtitlePath // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$SetCurrentPageIndexImplCopyWith<$Res>
-    implements $SubtitleDetailEventCopyWith<$Res> {
+
+class _$ParseSubtitleImpl
+    with DiagnosticableTreeMixin
+    implements _ParseSubtitle {
+  const _$ParseSubtitleImpl(this.subtitlePath);
+
+  @override
+  final String subtitlePath;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubtitleEvent.parseSubtitle(subtitlePath: $subtitlePath)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseSubtitle'))
+      ..add(DiagnosticsProperty('subtitlePath', subtitlePath));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParseSubtitleImpl &&
+            (identical(other.subtitlePath, subtitlePath) ||
+                other.subtitlePath == subtitlePath));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, subtitlePath);
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParseSubtitleImplCopyWith<_$ParseSubtitleImpl> get copyWith =>
+      __$$ParseSubtitleImplCopyWithImpl<_$ParseSubtitleImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(List<Subtitle> subtitles) parseComplete,
+    required TResult Function(int index) setCurrentPageIndex,
+  }) {
+    return parseSubtitle(subtitlePath);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? parseComplete,
+    TResult? Function(int index)? setCurrentPageIndex,
+  }) {
+    return parseSubtitle?.call(subtitlePath);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(List<Subtitle> subtitles)? parseComplete,
+    TResult Function(int index)? setCurrentPageIndex,
+    required TResult orElse(),
+  }) {
+    if (parseSubtitle != null) {
+      return parseSubtitle(subtitlePath);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseComplete value) parseComplete,
+    required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
+  }) {
+    return parseSubtitle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseComplete value)? parseComplete,
+    TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
+  }) {
+    return parseSubtitle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseComplete value)? parseComplete,
+    TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
+    required TResult orElse(),
+  }) {
+    if (parseSubtitle != null) {
+      return parseSubtitle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ParseSubtitle implements SubtitleEvent {
+  const factory _ParseSubtitle(final String subtitlePath) = _$ParseSubtitleImpl;
+
+  String get subtitlePath;
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ParseSubtitleImplCopyWith<_$ParseSubtitleImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ParseCompleteImplCopyWith<$Res> {
+  factory _$$ParseCompleteImplCopyWith(
+          _$ParseCompleteImpl value, $Res Function(_$ParseCompleteImpl) then) =
+      __$$ParseCompleteImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Subtitle> subtitles});
+}
+
+/// @nodoc
+class __$$ParseCompleteImplCopyWithImpl<$Res>
+    extends _$SubtitleEventCopyWithImpl<$Res, _$ParseCompleteImpl>
+    implements _$$ParseCompleteImplCopyWith<$Res> {
+  __$$ParseCompleteImplCopyWithImpl(
+      _$ParseCompleteImpl _value, $Res Function(_$ParseCompleteImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? subtitles = null,
+  }) {
+    return _then(_$ParseCompleteImpl(
+      null == subtitles
+          ? _value._subtitles
+          : subtitles // ignore: cast_nullable_to_non_nullable
+              as List<Subtitle>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ParseCompleteImpl
+    with DiagnosticableTreeMixin
+    implements _ParseComplete {
+  const _$ParseCompleteImpl(final List<Subtitle> subtitles)
+      : _subtitles = subtitles;
+
+  final List<Subtitle> _subtitles;
+  @override
+  List<Subtitle> get subtitles {
+    if (_subtitles is EqualUnmodifiableListView) return _subtitles;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_subtitles);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubtitleEvent.parseComplete(subtitles: $subtitles)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseComplete'))
+      ..add(DiagnosticsProperty('subtitles', subtitles));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParseCompleteImpl &&
+            const DeepCollectionEquality()
+                .equals(other._subtitles, _subtitles));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_subtitles));
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParseCompleteImplCopyWith<_$ParseCompleteImpl> get copyWith =>
+      __$$ParseCompleteImplCopyWithImpl<_$ParseCompleteImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(List<Subtitle> subtitles) parseComplete,
+    required TResult Function(int index) setCurrentPageIndex,
+  }) {
+    return parseComplete(subtitles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? parseComplete,
+    TResult? Function(int index)? setCurrentPageIndex,
+  }) {
+    return parseComplete?.call(subtitles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(List<Subtitle> subtitles)? parseComplete,
+    TResult Function(int index)? setCurrentPageIndex,
+    required TResult orElse(),
+  }) {
+    if (parseComplete != null) {
+      return parseComplete(subtitles);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseComplete value) parseComplete,
+    required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
+  }) {
+    return parseComplete(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseComplete value)? parseComplete,
+    TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
+  }) {
+    return parseComplete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseComplete value)? parseComplete,
+    TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
+    required TResult orElse(),
+  }) {
+    if (parseComplete != null) {
+      return parseComplete(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ParseComplete implements SubtitleEvent {
+  const factory _ParseComplete(final List<Subtitle> subtitles) =
+      _$ParseCompleteImpl;
+
+  List<Subtitle> get subtitles;
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ParseCompleteImplCopyWith<_$ParseCompleteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SetCurrentPageIndexImplCopyWith<$Res> {
   factory _$$SetCurrentPageIndexImplCopyWith(_$SetCurrentPageIndexImpl value,
           $Res Function(_$SetCurrentPageIndexImpl) then) =
       __$$SetCurrentPageIndexImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({int index});
 }
 
 /// @nodoc
 class __$$SetCurrentPageIndexImplCopyWithImpl<$Res>
-    extends _$SubtitleDetailEventCopyWithImpl<$Res, _$SetCurrentPageIndexImpl>
+    extends _$SubtitleEventCopyWithImpl<$Res, _$SetCurrentPageIndexImpl>
     implements _$$SetCurrentPageIndexImplCopyWith<$Res> {
   __$$SetCurrentPageIndexImplCopyWithImpl(_$SetCurrentPageIndexImpl _value,
       $Res Function(_$SetCurrentPageIndexImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SubtitleDetailEvent
+  /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -129,15 +440,25 @@ class __$$SetCurrentPageIndexImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
+class _$SetCurrentPageIndexImpl
+    with DiagnosticableTreeMixin
+    implements _SetCurrentPageIndex {
   const _$SetCurrentPageIndexImpl(this.index);
 
   @override
   final int index;
 
   @override
-  String toString() {
-    return 'SubtitleDetailEvent.setCurrentPageIndex(index: $index)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubtitleEvent.setCurrentPageIndex(index: $index)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleEvent.setCurrentPageIndex'))
+      ..add(DiagnosticsProperty('index', index));
   }
 
   @override
@@ -151,7 +472,7 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   @override
   int get hashCode => Object.hash(runtimeType, index);
 
-  /// Create a copy of SubtitleDetailEvent
+  /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -163,6 +484,8 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
     return setCurrentPageIndex(index);
@@ -171,6 +494,8 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
     return setCurrentPageIndex?.call(index);
@@ -179,6 +504,8 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
   }) {
@@ -191,6 +518,8 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseComplete value) parseComplete,
     required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
   }) {
     return setCurrentPageIndex(this);
@@ -199,6 +528,8 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseComplete value)? parseComplete,
     TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
   }) {
     return setCurrentPageIndex?.call(this);
@@ -207,6 +538,8 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseComplete value)? parseComplete,
     TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
     required TResult orElse(),
   }) {
@@ -217,16 +550,14 @@ class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   }
 }
 
-abstract class _SetCurrentPageIndex implements SubtitleDetailEvent {
+abstract class _SetCurrentPageIndex implements SubtitleEvent {
   const factory _SetCurrentPageIndex(final int index) =
       _$SetCurrentPageIndexImpl;
 
-  @override
   int get index;
 
-  /// Create a copy of SubtitleDetailEvent
+  /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SetCurrentPageIndexImplCopyWith<_$SetCurrentPageIndexImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -238,6 +569,8 @@ mixin _$SubtitleState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(int index) onPageChanged,
     required TResult Function(String message) error,
   }) =>
@@ -246,6 +579,8 @@ mixin _$SubtitleState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(int index)? onPageChanged,
     TResult? Function(String message)? error,
   }) =>
@@ -254,6 +589,8 @@ mixin _$SubtitleState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(int index)? onPageChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -263,6 +600,8 @@ mixin _$SubtitleState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(OnPageChanged value) onPageChanged,
     required TResult Function(_Error value) error,
   }) =>
@@ -271,6 +610,8 @@ mixin _$SubtitleState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(OnPageChanged value)? onPageChanged,
     TResult? Function(_Error value)? error,
   }) =>
@@ -279,6 +620,8 @@ mixin _$SubtitleState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(OnPageChanged value)? onPageChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -328,12 +671,18 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'SubtitleState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'SubtitleState.initial'));
   }
 
   @override
@@ -350,6 +699,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(int index) onPageChanged,
     required TResult Function(String message) error,
   }) {
@@ -361,6 +712,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(int index)? onPageChanged,
     TResult? Function(String message)? error,
   }) {
@@ -372,6 +725,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(int index)? onPageChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -387,6 +742,8 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(OnPageChanged value) onPageChanged,
     required TResult Function(_Error value) error,
   }) {
@@ -398,6 +755,8 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(OnPageChanged value)? onPageChanged,
     TResult? Function(_Error value)? error,
   }) {
@@ -409,6 +768,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(OnPageChanged value)? onPageChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -459,15 +820,23 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   const _$LoadingImpl({this.message});
 
   @override
   final String? message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'SubtitleState.loading(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleState.loading'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -494,6 +863,8 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(int index) onPageChanged,
     required TResult Function(String message) error,
   }) {
@@ -505,6 +876,8 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(int index)? onPageChanged,
     TResult? Function(String message)? error,
   }) {
@@ -516,6 +889,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(int index)? onPageChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -531,6 +906,8 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(OnPageChanged value) onPageChanged,
     required TResult Function(_Error value) error,
   }) {
@@ -542,6 +919,8 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(OnPageChanged value)? onPageChanged,
     TResult? Function(_Error value)? error,
   }) {
@@ -553,6 +932,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(OnPageChanged value)? onPageChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -573,6 +954,374 @@ abstract class _Loading implements SubtitleState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnParsingSubtitleImplCopyWith<$Res> {
+  factory _$$OnParsingSubtitleImplCopyWith(_$OnParsingSubtitleImpl value,
+          $Res Function(_$OnParsingSubtitleImpl) then) =
+      __$$OnParsingSubtitleImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Subtitle> subtitles});
+}
+
+/// @nodoc
+class __$$OnParsingSubtitleImplCopyWithImpl<$Res>
+    extends _$SubtitleStateCopyWithImpl<$Res, _$OnParsingSubtitleImpl>
+    implements _$$OnParsingSubtitleImplCopyWith<$Res> {
+  __$$OnParsingSubtitleImplCopyWithImpl(_$OnParsingSubtitleImpl _value,
+      $Res Function(_$OnParsingSubtitleImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? subtitles = null,
+  }) {
+    return _then(_$OnParsingSubtitleImpl(
+      null == subtitles
+          ? _value._subtitles
+          : subtitles // ignore: cast_nullable_to_non_nullable
+              as List<Subtitle>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnParsingSubtitleImpl
+    with DiagnosticableTreeMixin
+    implements _OnParsingSubtitle {
+  const _$OnParsingSubtitleImpl(final List<Subtitle> subtitles)
+      : _subtitles = subtitles;
+
+  final List<Subtitle> _subtitles;
+  @override
+  List<Subtitle> get subtitles {
+    if (_subtitles is EqualUnmodifiableListView) return _subtitles;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_subtitles);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubtitleState.onParsingSubtitle(subtitles: $subtitles)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleState.onParsingSubtitle'))
+      ..add(DiagnosticsProperty('subtitles', subtitles));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnParsingSubtitleImpl &&
+            const DeepCollectionEquality()
+                .equals(other._subtitles, _subtitles));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_subtitles));
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnParsingSubtitleImplCopyWith<_$OnParsingSubtitleImpl> get copyWith =>
+      __$$OnParsingSubtitleImplCopyWithImpl<_$OnParsingSubtitleImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
+    required TResult Function(int index) onPageChanged,
+    required TResult Function(String message) error,
+  }) {
+    return onParsingSubtitle(subtitles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
+    TResult? Function(int index)? onPageChanged,
+    TResult? Function(String message)? error,
+  }) {
+    return onParsingSubtitle?.call(subtitles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
+    TResult Function(int index)? onPageChanged,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (onParsingSubtitle != null) {
+      return onParsingSubtitle(subtitles);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
+    required TResult Function(OnPageChanged value) onPageChanged,
+    required TResult Function(_Error value) error,
+  }) {
+    return onParsingSubtitle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
+    TResult? Function(OnPageChanged value)? onPageChanged,
+    TResult? Function(_Error value)? error,
+  }) {
+    return onParsingSubtitle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
+    TResult Function(OnPageChanged value)? onPageChanged,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (onParsingSubtitle != null) {
+      return onParsingSubtitle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnParsingSubtitle implements SubtitleState {
+  const factory _OnParsingSubtitle(final List<Subtitle> subtitles) =
+      _$OnParsingSubtitleImpl;
+
+  List<Subtitle> get subtitles;
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnParsingSubtitleImplCopyWith<_$OnParsingSubtitleImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnParseCompletedImplCopyWith<$Res> {
+  factory _$$OnParseCompletedImplCopyWith(_$OnParseCompletedImpl value,
+          $Res Function(_$OnParseCompletedImpl) then) =
+      __$$OnParseCompletedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Subtitle> subtitles});
+}
+
+/// @nodoc
+class __$$OnParseCompletedImplCopyWithImpl<$Res>
+    extends _$SubtitleStateCopyWithImpl<$Res, _$OnParseCompletedImpl>
+    implements _$$OnParseCompletedImplCopyWith<$Res> {
+  __$$OnParseCompletedImplCopyWithImpl(_$OnParseCompletedImpl _value,
+      $Res Function(_$OnParseCompletedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? subtitles = null,
+  }) {
+    return _then(_$OnParseCompletedImpl(
+      null == subtitles
+          ? _value._subtitles
+          : subtitles // ignore: cast_nullable_to_non_nullable
+              as List<Subtitle>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnParseCompletedImpl
+    with DiagnosticableTreeMixin
+    implements _OnParseCompleted {
+  const _$OnParseCompletedImpl(final List<Subtitle> subtitles)
+      : _subtitles = subtitles;
+
+  final List<Subtitle> _subtitles;
+  @override
+  List<Subtitle> get subtitles {
+    if (_subtitles is EqualUnmodifiableListView) return _subtitles;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_subtitles);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubtitleState.onParseCompleted(subtitles: $subtitles)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleState.onParseCompleted'))
+      ..add(DiagnosticsProperty('subtitles', subtitles));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnParseCompletedImpl &&
+            const DeepCollectionEquality()
+                .equals(other._subtitles, _subtitles));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_subtitles));
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnParseCompletedImplCopyWith<_$OnParseCompletedImpl> get copyWith =>
+      __$$OnParseCompletedImplCopyWithImpl<_$OnParseCompletedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
+    required TResult Function(int index) onPageChanged,
+    required TResult Function(String message) error,
+  }) {
+    return onParseCompleted(subtitles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
+    TResult? Function(int index)? onPageChanged,
+    TResult? Function(String message)? error,
+  }) {
+    return onParseCompleted?.call(subtitles);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
+    TResult Function(int index)? onPageChanged,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (onParseCompleted != null) {
+      return onParseCompleted(subtitles);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
+    required TResult Function(OnPageChanged value) onPageChanged,
+    required TResult Function(_Error value) error,
+  }) {
+    return onParseCompleted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
+    TResult? Function(OnPageChanged value)? onPageChanged,
+    TResult? Function(_Error value)? error,
+  }) {
+    return onParseCompleted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
+    TResult Function(OnPageChanged value)? onPageChanged,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (onParseCompleted != null) {
+      return onParseCompleted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnParseCompleted implements SubtitleState {
+  const factory _OnParseCompleted(final List<Subtitle> subtitles) =
+      _$OnParseCompletedImpl;
+
+  List<Subtitle> get subtitles;
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnParseCompletedImplCopyWith<_$OnParseCompletedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -611,15 +1360,25 @@ class __$$OnPageChangedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnPageChangedImpl implements OnPageChanged {
+class _$OnPageChangedImpl
+    with DiagnosticableTreeMixin
+    implements OnPageChanged {
   const _$OnPageChangedImpl(this.index);
 
   @override
   final int index;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'SubtitleState.onPageChanged(index: $index)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleState.onPageChanged'))
+      ..add(DiagnosticsProperty('index', index));
   }
 
   @override
@@ -646,6 +1405,8 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(int index) onPageChanged,
     required TResult Function(String message) error,
   }) {
@@ -657,6 +1418,8 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(int index)? onPageChanged,
     TResult? Function(String message)? error,
   }) {
@@ -668,6 +1431,8 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(int index)? onPageChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -683,6 +1448,8 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(OnPageChanged value) onPageChanged,
     required TResult Function(_Error value) error,
   }) {
@@ -694,6 +1461,8 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(OnPageChanged value)? onPageChanged,
     TResult? Function(_Error value)? error,
   }) {
@@ -705,6 +1474,8 @@ class _$OnPageChangedImpl implements OnPageChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(OnPageChanged value)? onPageChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -763,15 +1534,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'SubtitleState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -798,6 +1577,8 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(int index) onPageChanged,
     required TResult Function(String message) error,
   }) {
@@ -809,6 +1590,8 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(int index)? onPageChanged,
     TResult? Function(String message)? error,
   }) {
@@ -820,6 +1603,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(int index)? onPageChanged,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -835,6 +1620,8 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(OnPageChanged value) onPageChanged,
     required TResult Function(_Error value) error,
   }) {
@@ -846,6 +1633,8 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(OnPageChanged value)? onPageChanged,
     TResult? Function(_Error value)? error,
   }) {
@@ -857,6 +1646,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(OnPageChanged value)? onPageChanged,
     TResult Function(_Error value)? error,
     required TResult orElse(),

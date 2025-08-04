@@ -15,6 +15,7 @@ class Subtitle with _$Subtitle {
     @Default("") required String audioName,
     required Duration start,
     required Duration end,
+    required double widgetHeight,
     required double scrollPosition,
     @Default(<SubtitleVocabulary>[]) List<SubtitleVocabulary>? vocabularies,
   }) = _Subtitle;
@@ -29,6 +30,7 @@ class Subtitle with _$Subtitle {
         audioName: "",
         start: Duration.zero,
         end: Duration.zero,
+        widgetHeight: 0,
         scrollPosition: 0,
         vocabularies: [],
       );

@@ -15,6 +15,7 @@ _$SubtitleImpl _$$SubtitleImplFromJson(Map<String, dynamic> json) =>
       audioName: json['audioName'] as String? ?? "",
       start: Duration(microseconds: (json['start'] as num).toInt()),
       end: Duration(microseconds: (json['end'] as num).toInt()),
+      widgetHeight: (json['widgetHeight'] as num).toDouble(),
       scrollPosition: (json['scrollPosition'] as num).toDouble(),
       vocabularies: (json['vocabularies'] as List<dynamic>?)
               ?.map(
@@ -32,6 +33,7 @@ Map<String, dynamic> _$$SubtitleImplToJson(_$SubtitleImpl instance) =>
       'audioName': instance.audioName,
       'start': instance.start.inMicroseconds,
       'end': instance.end.inMicroseconds,
+      'widgetHeight': instance.widgetHeight,
       'scrollPosition': instance.scrollPosition,
       'vocabularies': instance.vocabularies,
     };

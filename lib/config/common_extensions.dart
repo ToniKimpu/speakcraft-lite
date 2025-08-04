@@ -245,6 +245,7 @@ Future<List<Subtitle>> parseJsonSubtitleFile(String fileUrl) async {
                   ),
           start: startDuration,
           end: endDuration,
+          widgetHeight: 0.0,
           scrollPosition: i < 2 ? 0 : scrollPosition,
           vocabularies: (jsonItem['vocabulary'] as List<dynamic>?)
               ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))

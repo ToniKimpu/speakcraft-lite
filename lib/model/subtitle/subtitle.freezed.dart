@@ -27,6 +27,7 @@ mixin _$Subtitle {
   String get audioName => throw _privateConstructorUsedError;
   Duration get start => throw _privateConstructorUsedError;
   Duration get end => throw _privateConstructorUsedError;
+  double get widgetHeight => throw _privateConstructorUsedError;
   double get scrollPosition => throw _privateConstructorUsedError;
   List<SubtitleVocabulary>? get vocabularies =>
       throw _privateConstructorUsedError;
@@ -54,6 +55,7 @@ abstract class $SubtitleCopyWith<$Res> {
       String audioName,
       Duration start,
       Duration end,
+      double widgetHeight,
       double scrollPosition,
       List<SubtitleVocabulary>? vocabularies});
 }
@@ -80,6 +82,7 @@ class _$SubtitleCopyWithImpl<$Res, $Val extends Subtitle>
     Object? audioName = null,
     Object? start = null,
     Object? end = null,
+    Object? widgetHeight = null,
     Object? scrollPosition = null,
     Object? vocabularies = freezed,
   }) {
@@ -112,6 +115,10 @@ class _$SubtitleCopyWithImpl<$Res, $Val extends Subtitle>
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as Duration,
+      widgetHeight: null == widgetHeight
+          ? _value.widgetHeight
+          : widgetHeight // ignore: cast_nullable_to_non_nullable
+              as double,
       scrollPosition: null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
@@ -140,6 +147,7 @@ abstract class _$$SubtitleImplCopyWith<$Res>
       String audioName,
       Duration start,
       Duration end,
+      double widgetHeight,
       double scrollPosition,
       List<SubtitleVocabulary>? vocabularies});
 }
@@ -164,6 +172,7 @@ class __$$SubtitleImplCopyWithImpl<$Res>
     Object? audioName = null,
     Object? start = null,
     Object? end = null,
+    Object? widgetHeight = null,
     Object? scrollPosition = null,
     Object? vocabularies = freezed,
   }) {
@@ -196,6 +205,10 @@ class __$$SubtitleImplCopyWithImpl<$Res>
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
               as Duration,
+      widgetHeight: null == widgetHeight
+          ? _value.widgetHeight
+          : widgetHeight // ignore: cast_nullable_to_non_nullable
+              as double,
       scrollPosition: null == scrollPosition
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
@@ -219,6 +232,7 @@ class _$SubtitleImpl implements _Subtitle {
       required this.audioName,
       required this.start,
       required this.end,
+      required this.widgetHeight,
       required this.scrollPosition,
       final List<SubtitleVocabulary>? vocabularies =
           const <SubtitleVocabulary>[]})
@@ -243,6 +257,8 @@ class _$SubtitleImpl implements _Subtitle {
   @override
   final Duration end;
   @override
+  final double widgetHeight;
+  @override
   final double scrollPosition;
   final List<SubtitleVocabulary>? _vocabularies;
   @override
@@ -257,7 +273,7 @@ class _$SubtitleImpl implements _Subtitle {
 
   @override
   String toString() {
-    return 'Subtitle(id: $id, english: $english, burmese: $burmese, description: $description, audioName: $audioName, start: $start, end: $end, scrollPosition: $scrollPosition, vocabularies: $vocabularies)';
+    return 'Subtitle(id: $id, english: $english, burmese: $burmese, description: $description, audioName: $audioName, start: $start, end: $end, widgetHeight: $widgetHeight, scrollPosition: $scrollPosition, vocabularies: $vocabularies)';
   }
 
   @override
@@ -274,6 +290,8 @@ class _$SubtitleImpl implements _Subtitle {
                 other.audioName == audioName) &&
             (identical(other.start, start) || other.start == start) &&
             (identical(other.end, end) || other.end == end) &&
+            (identical(other.widgetHeight, widgetHeight) ||
+                other.widgetHeight == widgetHeight) &&
             (identical(other.scrollPosition, scrollPosition) ||
                 other.scrollPosition == scrollPosition) &&
             const DeepCollectionEquality()
@@ -291,6 +309,7 @@ class _$SubtitleImpl implements _Subtitle {
       audioName,
       start,
       end,
+      widgetHeight,
       scrollPosition,
       const DeepCollectionEquality().hash(_vocabularies));
 
@@ -319,6 +338,7 @@ abstract class _Subtitle implements Subtitle {
       required final String audioName,
       required final Duration start,
       required final Duration end,
+      required final double widgetHeight,
       required final double scrollPosition,
       final List<SubtitleVocabulary>? vocabularies}) = _$SubtitleImpl;
 
@@ -339,6 +359,8 @@ abstract class _Subtitle implements Subtitle {
   Duration get start;
   @override
   Duration get end;
+  @override
+  double get widgetHeight;
   @override
   double get scrollPosition;
   @override

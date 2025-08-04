@@ -51,6 +51,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   final _showVocabularyNotifier = ValueNotifier<bool>(false);
 
   final _subtitleBloc = SubtitleBloc();
+  final _subtitleParsingBloc = SubtitleBloc();
   int _subtitlePageIndex = 0;
 
   final _audioPositionTrackerBloc = AudioPlayerBloc();
@@ -123,6 +124,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         debugPrint("_durationSub: ${duration.inSeconds} inSeconds!");
       },
     );
+    _subtitleParsingBloc
+        .add(SubtitleEvent.parseSubtitle(widget.listening.subtitlePath));
   }
 
   void listener() {
@@ -188,7 +191,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       if (newIndex != _subtitlePageIndex) {
         _subtitlePageIndex = newIndex;
         _subtitleBloc.add(
-          SubtitleDetailEvent.setCurrentPageIndex(_subtitlePageIndex),
+          SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex),
         );
       }
     }
@@ -230,6 +233,9 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         ),
         BlocProvider(
           create: (context) => _audioPlayerStateTrackerBloc,
+        ),
+        BlocProvider(
+          create: (context) => _subtitleParsingBloc,
         ),
       ],
       child: PopScope(
@@ -327,6 +333,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                         return Offstage(
                                           offstage: showVocabulary,
                                           child: LyricsWidget(
+                                            subtitleParsingBloc:
+                                                _subtitleParsingBloc,
                                             selectedSubtitle: _selectedSubtitle,
                                             listening: widget.listening,
                                             mainController: _lyricsController,
