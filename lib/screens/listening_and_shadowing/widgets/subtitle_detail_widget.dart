@@ -102,6 +102,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
   @override
   Widget build(BuildContext context) {
     return BlocListener<SubtitleBloc, SubtitleState>(
+      bloc:widget.subtitleBloc,
       listener: (context, state) {
         state.maybeWhen(
           onPageChanged: (index) async {

@@ -70,7 +70,7 @@ class AuthTextField extends StatelessWidget {
       onChanged: (value) => onChanged?.call(value),
       cursorColor: cursorColor,
       style: TextStyle(
-        color: textColor ?? colorScheme.onSurface,
+        color: textColor ?? Colors.black,
       ),
       decoration: InputDecoration(
         labelText: labelText,
@@ -106,8 +106,8 @@ class AuthTextField extends StatelessWidget {
         errorStyle: TextStyle(
           color: colorScheme.error,
         ),
-        labelStyle: TextStyle(
-          color: colorScheme.onSurfaceVariant,
+        labelStyle: const TextStyle(
+          color: PmpColors.neutral400,
         ),
         floatingLabelBehavior: FloatingLabelBehavior.never,
       ),

@@ -157,7 +157,7 @@ class _LyricsWidgetState extends State<LyricsWidget> {
                                         style:
                                             PmpTextStyles.body2Regular.copyWith(
                                           color: Colors.white,
-                                          fontFamily: "English Lyrics",
+                                          fontFamily: "ArchivoBlack Regular",
                                         ),
                                       ),
                                     ),
@@ -222,12 +222,15 @@ class _LyricsWidgetState extends State<LyricsWidget> {
                                 horizontal: 6, vertical: 2),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: Colors.white,
+                              color: selected
+                                  ? Colors.orangeAccent.withValues(alpha:0.9)
+                                  : Colors.white,
                             ),
                             child: Text(
                               _formatDuration(subtitle.start),
-                              style: PmpTextStyles.subBold
-                                  .copyWith(color: Colors.black),
+                              style: PmpTextStyles.subBold.copyWith(
+                                  color:
+                                      selected ? Colors.white : Colors.black),
                             ),
                           ),
                           const SizedBox(width: 16),
@@ -236,7 +239,7 @@ class _LyricsWidgetState extends State<LyricsWidget> {
                               subtitle.english,
                               style: PmpTextStyles.body2Regular.copyWith(
                                 color: Colors.white,
-                                fontFamily: "English Lyrics",
+                                fontFamily: "ArchivoBlack Regular",
                               ),
                             ),
                           ),

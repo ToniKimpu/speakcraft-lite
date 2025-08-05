@@ -172,6 +172,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   _mapLoginWithEmailToState(
       String email, String password, Emitter<AuthState> emit) async {
     try {
+      if (email.isEmpty || password.isEmpty) {
+        emit(const AuthState.error("Please enter email and password."));
+        return;
+      }
       emit(const AuthState.loading());
       await supabase.auth.signInWithPassword(email: email, password: password);
       final user = supabase.auth.currentUser;
@@ -207,7 +211,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       if (error is SocketException || error is TimeoutException) {
         emit(const AuthState.socketError("Please check your connection."));
       } else {
-        emit(AuthState.error(error.toString()));
+        emit(const AuthState.error("Something went wrong.Please try again."));
       }
       debugPrint("_onAuthBlocError: ${error.toString()} Error!");
     }

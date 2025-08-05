@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../config/pmp_text_styles.dart';
+
 class EmptyWidget extends StatelessWidget {
   const EmptyWidget({
     super.key,
@@ -23,9 +25,13 @@ class EmptyWidget extends StatelessWidget {
           const SizedBox(
             height: 6,
           ),
-          const Text(
-            "You haven't practiced any sentences yet. Start practicing to see your progress here.",
-            style: TextStyle(fontSize: 16, color: Colors.white),
+          Text(
+            message,
+            style: PmpTextStyles.body1Regular.copyWith(
+              color: Colors.white,
+              fontSize: 16,
+              fontFamily: "ArchivoBlack Regular",
+            ),
             textAlign: TextAlign.center,
           ),
         ],

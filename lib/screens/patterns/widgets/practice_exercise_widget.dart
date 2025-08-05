@@ -78,6 +78,9 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
                     focusNode: widget.focusNode,
                     controller: _controller,
                     onChange: widget.onUserInput,
+                    englishOnly: true,
+                    minLines: 2,
+                    maxHeight: 120,
                   ),
                 ],
               ),
@@ -96,25 +99,39 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
                     side:
                         BorderSide(color: Colors.white.withValues(alpha: 0.2)),
                   ),
-                  child: SwitchListTile(
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Show Vocabulary',
+                          style: PmpTextStyles.body2Semi.copyWith(
+                            color: Colors.white,
+                            fontFamily: "ArchivoBlack Regular",
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Transform.scale(
+                          scale:
+                              0.75, // Adjust between 0.6 to 1.0 to fine-tune size
+                          child: Switch(
+                            value: showVocabulary,
+                            onChanged: (value) {
+                              setState(() {
+                                _showVocabularyNotifier.value = value;
+                              });
+                            },
+                            activeColor: Colors.white,
+                            inactiveThumbColor:
+                                Colors.white.withValues(alpha: 0.8),
+                            activeTrackColor: Colors.green,
+                            inactiveTrackColor:
+                                Colors.white.withValues(alpha: 0.4),
+                          ),
+                        ),
+                      ],
                     ),
-                    tileColor: Colors.transparent,
-                    visualDensity: VisualDensity.compact,
-                    title: Text(
-                      'Show Vocabulary',
-                      style: PmpTextStyles.body2Regular.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    value: showVocabulary,
-                    activeColor: Colors.white,
-                    activeTrackColor: Colors.white.withValues(alpha: 0.6),
-                    inactiveTrackColor: Colors.white.withValues(alpha: 0.2),
-                    onChanged: (value) => _showVocabularyNotifier.value = value,
                   ),
                 );
               },

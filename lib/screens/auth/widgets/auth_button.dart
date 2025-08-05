@@ -34,8 +34,10 @@ class AuthButton extends StatelessWidget {
       AuthButtonVariant.filled => ElevatedButton.styleFrom(
           foregroundColor: colorScheme.onPrimary,
           backgroundColor: colorScheme.primary,
-          disabledBackgroundColor: colorScheme.onSurface.withOpacity(0.12),
-          disabledForegroundColor: colorScheme.onSurface.withOpacity(0.38),
+          disabledBackgroundColor:
+              colorScheme.onSurface.withValues(alpha: 0.12),
+          disabledForegroundColor:
+              colorScheme.onSurface.withValues(alpha: 0.38),
           elevation: 0,
           padding: const EdgeInsets.symmetric(
             horizontal: 24,

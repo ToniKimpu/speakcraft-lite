@@ -122,9 +122,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: English Lyrics
+    - family: ArchivoBlack Regular
       fonts:
-        - asset: fonts/eng/eng-lyrics-font.ttf
+        - asset: fonts/ArchivoBlack-Regular.ttf
 
     - family: MM Lyrics Bold
       fonts:

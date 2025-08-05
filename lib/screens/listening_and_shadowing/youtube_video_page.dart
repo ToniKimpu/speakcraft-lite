@@ -190,6 +190,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       final newIndex = _subtitles.indexWhere((s) => s.id == subtitle.id);
       if (newIndex != _subtitlePageIndex) {
         _subtitlePageIndex = newIndex;
+        debugPrint("_currentSubtitlePageIndex: $_subtitlePageIndex");
         _subtitleBloc.add(
           SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex),
         );

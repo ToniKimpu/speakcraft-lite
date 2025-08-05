@@ -18,6 +18,7 @@ class SubtitleWidget extends StatelessWidget {
     required this.subtitle,
     required this.hasMMSub,
   });
+
   final YoutubePlayerController youtubeController;
   final AudioPlayer audioPlayer;
   final AudioPlayerBloc audioPositionTrackerBloc,
@@ -29,50 +30,60 @@ class SubtitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // English Subtitle
           Text(
             subtitle.english,
             style: PmpTextStyles.body1Regular.copyWith(
               color: Colors.white,
-              fontFamily: "English Lyrics",
+              fontSize: 20,
+              height: 1.6,
+              fontFamily: "ArchivoBlack Regular",
             ),
           ),
+
+          const SizedBox(height: 6),
+
+          // Burmese Subtitle
           if (hasMMSub)
             Text(
               subtitle.burmese ?? "",
               style: PmpTextStyles.body2Regular.copyWith(
-                color: Colors.amber,
+                // color: Colors.amberAccent,
+                color: const Color(0xFFFFE0B2),
+                fontSize: 18,
+                height: 1.8,
                 fontFamily: "MM Lyrics Bold",
               ),
             ),
-          const SizedBox(
-            height: 24,
-          ),
+          if (hasMMSub) const SizedBox(height: 24),
+
+          // Info Box if no MM Sub
           if (!hasMMSub)
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 2,
-                  ),
-                  color: Colors.transparent,
-                ),
-                child: Text(
-                  "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
-                  style: PmpTextStyles.body2Semi.copyWith(
-                    color: Colors.white,
-                    fontFamily: "MM Lyrics Bold",
-                  ),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white.withOpacity(0.05),
+                border: Border.all(color: Colors.white.withOpacity(0.2)),
+              ),
+              child: Text(
+                "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
+                textAlign: TextAlign.center,
+                style: PmpTextStyles.body2Semi.copyWith(
+                  color: Colors.white,
+                  fontFamily: "MM Lyrics Bold",
                 ),
               ),
             ),
+
+          if (!hasMMSub) const SizedBox(height: 24),
+
+          // Audio Player Section
           if (subtitle.audioName.isNotEmpty)
             BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
               bloc: audioPositionTrackerBloc,
@@ -95,22 +106,20 @@ class SubtitleWidget extends StatelessWidget {
                           onUpdatePlayerState: (playerState) => playerState,
                           orElse: () => null,
                         );
-                        // debugPrint(
-                        //     "_playerStateSubscription: ${currentPlayerState?.playing} playing from Bloc");
                         final isPlaying = currentPlayerState?.playing == true;
                         final isCompleted =
                             currentPlayerState?.processingState ==
                                 ProcessingState.completed;
+
                         return Container(
-                          padding: const EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: Colors.white
-                                .withValues(alpha: 0.05), // subtle background
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.white.withOpacity(0.04),
                             border: Border.all(
-                              color: Colors.white.withValues(alpha: 0.4),
+                              color: Colors.white.withOpacity(0.2),
                               width: 1.5,
                             ),
-                            borderRadius: BorderRadius.circular(16),
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -119,7 +128,7 @@ class SubtitleWidget extends StatelessWidget {
                               GestureDetector(
                                 onTap: () {
                                   if (isCompleted) {
-                                    audioPlayer.seek(Duration.zero); // rewind
+                                    audioPlayer.seek(Duration.zero);
                                     audioPlayer.play();
                                     if (youtubeController.value.isPlaying) {
                                       youtubeController.pause();
@@ -134,13 +143,12 @@ class SubtitleWidget extends StatelessWidget {
                                   }
                                 },
                                 child: Container(
-                                  padding: const EdgeInsets.all(6),
+                                  padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Colors.white.withValues(alpha: 0.05),
+                                    color: Colors.white.withOpacity(0.05),
                                     border: Border.all(
-                                      color:
-                                          Colors.white.withValues(alpha: 0.6),
+                                      color: Colors.white.withOpacity(0.4),
                                       width: 1.5,
                                     ),
                                   ),
@@ -151,77 +159,65 @@ class SubtitleWidget extends StatelessWidget {
                                             ? Icons.pause
                                             : Icons.play_arrow,
                                     color: Colors.white,
-                                    size: 18,
+                                    size: 22,
                                   ),
                                 ),
                               ),
-
                               const SizedBox(width: 16),
+
                               // Slider and Time
                               Expanded(
-                                child: Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Transform.translate(
-                                    offset: const Offset(0, 10),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SliderTheme(
+                                      data: SliderTheme.of(context).copyWith(
+                                        trackHeight: 4,
+                                        thumbShape: const RoundSliderThumbShape(
+                                            enabledThumbRadius: 5),
+                                        overlayShape:
+                                            SliderComponentShape.noOverlay,
+                                      ),
+                                      child: Slider(
+                                        value: positionDuration
+                                            .clamp(0, totalDuration)
+                                            .toDouble(),
+                                        min: 0,
+                                        max: totalDuration > 0
+                                            ? totalDuration.toDouble()
+                                            : 1,
+                                        thumbColor: Colors.white,
+                                        activeColor: Colors.orange,
+                                        inactiveColor:
+                                            Colors.white.withOpacity(0.2),
+                                        onChanged: (_) {},
+                                        onChangeEnd: (value) {
+                                          audioPlayer.seek(
+                                              Duration(seconds: value.toInt()));
+                                        },
+                                      ),
+                                    ),
+                                    Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.start,
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
-                                        SliderTheme(
-                                          data:
-                                              SliderTheme.of(context).copyWith(
-                                            trackHeight: 4,
-                                            thumbShape:
-                                                const RoundSliderThumbShape(
-                                                    enabledThumbRadius: 4),
-                                            overlayShape:
-                                                SliderComponentShape.noOverlay,
-                                          ),
-                                          child: Slider(
-                                            value: positionDuration
-                                                .clamp(0, totalDuration)
-                                                .toDouble(),
-                                            min: 0,
-                                            max: totalDuration > 0
-                                                ? totalDuration.toDouble()
-                                                : 1,
-                                            thumbColor: Colors.white,
-                                            activeColor: Colors.orange,
-                                            inactiveColor: Colors.white
-                                                .withValues(alpha: 0.2),
-                                            onChanged: (value) {},
-                                            onChangeEnd: (value) {
-                                              audioPlayer.seek(Duration(
-                                                  seconds: value.toInt()));
-                                            },
+                                        Text(
+                                          _formatDuration(positionDuration),
+                                          style: PmpTextStyles.sub.copyWith(
+                                            color:
+                                                Colors.white.withOpacity(0.9),
                                           ),
                                         ),
-                                        const SizedBox(height: 6),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              _formatDuration(positionDuration),
-                                              style: PmpTextStyles.sub.copyWith(
-                                                color: Colors.white
-                                                    .withValues(alpha: 0.9),
-                                              ),
-                                            ),
-                                            Text(
-                                              _formatDuration(totalDuration),
-                                              style: PmpTextStyles.sub.copyWith(
-                                                color: Colors.white
-                                                    .withValues(alpha: 0.9),
-                                              ),
-                                            ),
-                                          ],
+                                        Text(
+                                          _formatDuration(totalDuration),
+                                          style: PmpTextStyles.sub.copyWith(
+                                            color:
+                                                Colors.white.withOpacity(0.9),
+                                          ),
                                         ),
                                       ],
                                     ),
-                                  ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -233,19 +229,18 @@ class SubtitleWidget extends StatelessWidget {
                 );
               },
             ),
-          if (subtitle.audioName.isNotEmpty)
-            const SizedBox(
-              height: 12,
-            ),
+          if (subtitle.audioName.isNotEmpty) const SizedBox(height: 20),
+
+          // Vocabularies
           if (hasMMSub && subtitle.vocabularies!.isNotEmpty)
             ...subtitle.vocabularies!.map(
-              (voc) {
-                return Column(
+              (voc) => Padding(
+                padding: const EdgeInsets.only(bottom: 16),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           width: 8,
@@ -260,41 +255,44 @@ class SubtitleWidget extends StatelessWidget {
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
                                 voc.english,
                                 style: PmpTextStyles.body1Regular.copyWith(
                                   color: Colors.white,
-                                  fontFamily: "English Lyrics",
+                                  fontSize: 16,
+                                  fontFamily: "ArchivoBlack Regular",
                                 ),
                               ),
                               Text(
                                 voc.burmese,
                                 style: PmpTextStyles.body2Regular.copyWith(
-                                  color: Colors.white,
+                                  color: Colors.white.withValues(alpha: 0.9),
+                                  fontSize: 15,
                                   fontFamily: "MM Lyrics Bold",
                                 ),
                               ),
+                              if (voc.explanation != null &&
+                                  voc.explanation!.isNotEmpty)
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 4),
+                                  child: Text(
+                                    "(${voc.explanation})",
+                                    style: PmpTextStyles.body2Regular.copyWith(
+                                      color: const Color(0xFFFFF59D),
+                                      fontFamily: "MM Lyrics Bold",
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
                             ],
                           ),
                         ),
                       ],
                     ),
-                    if (voc.explanation != null && voc.explanation!.isNotEmpty)
-                      Padding(
-                        padding: const EdgeInsets.only(left: 16),
-                        child: Text(
-                          "(${voc.explanation})",
-                          style: PmpTextStyles.body2Regular.copyWith(
-                            color: Colors.amber,
-                            fontFamily: "MM Lyrics Bold",
-                          ),
-                        ),
-                      ),
                   ],
-                );
-              },
+                ),
+              ),
             ),
         ],
       ),

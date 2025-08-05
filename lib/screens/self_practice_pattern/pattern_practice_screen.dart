@@ -115,7 +115,6 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
           _showExampleNotifier.value = false;
           return;
         }
-
         Navigator.of(context).pop();
       },
       child: MultiBlocProvider(

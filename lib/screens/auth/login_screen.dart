@@ -5,12 +5,12 @@ import 'package:pmp_english/bloc/auth/auth_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/screens/auth/widgets/auth_button.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_card.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_text_field.dart';
 import 'package:pmp_english/screens/main/device_failed_screen.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
+import '../../config/pmp_text_styles.dart';
 import '../main/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -114,6 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Text(
                 'Welcome Back',
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      fontFamily: "ArchivoBlack Regular",
                       fontWeight: FontWeight.bold,
                       color: PmpColors.white,
                     ),
@@ -127,6 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 'Sign in to continue learning',
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: PmpColors.white,
+                      fontFamily: "ArchivoBlack Regular",
                     ),
                 textAlign: TextAlign.center,
               )
@@ -184,11 +186,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 16,
                     ),
                     ValueListenableBuilder<bool>(
-                        valueListenable: _loadingNotifier,
-                        builder: (context, isLoading, child) {
-                          return AuthButton(
-                            text: 'Sign In',
-                            onPressed: () {
+                      valueListenable: _loadingNotifier,
+                      builder: (context, isLoading, child) {
+                        return Material(
+                          borderRadius: BorderRadius.circular(12),
+                          color: PmpColors.info500,
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(12),
+                            onTap: () {
                               FocusScope.of(context).unfocus();
                               _authBloc.add(
                                 AuthEvent.loginWithEmail(
@@ -197,41 +202,61 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               );
                             },
-                            isLoading: isLoading,
-                          );
-                        }),
+                            child: Ink(
+                              height: 42,
+                              width: double.infinity,
+                              child: Center(
+                                child: isLoading
+                                    ? const SizedBox(
+                                        width: 18,
+                                        height: 18,
+                                        child: CircularProgressIndicator(
+                                          color: Colors.white,
+                                        ),
+                                      )
+                                    : Text(
+                                        "Sign In",
+                                        style: PmpTextStyles.body1Semi.copyWith(
+                                          color: Colors.white,
+                                          fontFamily: "ArchivoBlack Regular",
+                                        ),
+                                      ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ).animate().fadeIn(duration: 600.ms).slideY(
                       begin: 0.3,
                       delay: const Duration(milliseconds: 600),
                     ),
               ),
-              // const SizedBox(height: 24),
-
               const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Don\'t have an account?',
-                    style: TextStyle(
-                      color: PmpColors.white,
-                    ),
-                  ),
-                  AuthButton(
-                    text: 'Sign Up',
-                    onPressed: () {
-                      Navigator.pushNamed(context, PmpRoutes.signUpScreen);
-                    },
-                    variant: AuthButtonVariant.text,
-                    fullWidth: false,
-                    textColor: PmpColors.white,
-                  ),
-                ],
-              )
-                  .animate()
-                  .fadeIn(duration: 600.ms)
-                  .slideY(begin: 0.3, delay: 1000.ms),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     const Text(
+              //       'Don\'t have an account?',
+              //       style: TextStyle(
+              //         color: PmpColors.white,
+              //       ),
+              //     ),
+              //     AuthButton(
+              //       text: 'Sign Up',
+              //       onPressed: () {
+              //         Navigator.pushNamed(context, PmpRoutes.signUpScreen);
+              //       },
+              //       variant: AuthButtonVariant.text,
+              //       fullWidth: false,
+              //       textColor: PmpColors.white,
+              //     ),
+              //   ],
+              // )
+              //     .animate()
+              //     .fadeIn(duration: 600.ms)
+              //     .slideY(begin: 0.3, delay: 1000.ms),
             ],
           ),
         ),
