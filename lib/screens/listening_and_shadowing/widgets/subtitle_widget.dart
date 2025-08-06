@@ -66,8 +66,8 @@ class SubtitleWidget extends StatelessWidget {
           //     padding: const EdgeInsets.all(16),
           //     decoration: BoxDecoration(
           //       borderRadius: BorderRadius.circular(12),
-          //       color: Colors.white.withOpacity(0.05),
-          //       border: Border.all(color: Colors.white.withOpacity(0.2)),
+          //       color: Colors.white.withValues(alpha:0.05),
+          //       border: Border.all(color: Colors.white.withValues(alpha:0.2)),
           //     ),
           //     child: Text(
           //       "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
@@ -78,7 +78,7 @@ class SubtitleWidget extends StatelessWidget {
           //       ),
           //     ),
           //   ),
-          // if (!hasMMSub) const SizedBox(height: 24),
+          if (subtitle.audioName.isNotEmpty) const SizedBox(height: 20),
 
           // Audio Player Section
           if (subtitle.audioName.isNotEmpty)
@@ -112,9 +112,9 @@ class SubtitleWidget extends StatelessWidget {
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
-                            color: Colors.white.withOpacity(0.04),
+                            color: Colors.white.withValues(alpha: 0.04),
                             border: Border.all(
-                              color: Colors.white.withOpacity(0.2),
+                              color: Colors.white.withValues(alpha: 0.2),
                               width: 1.5,
                             ),
                           ),
@@ -143,9 +143,10 @@ class SubtitleWidget extends StatelessWidget {
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Colors.white.withOpacity(0.05),
+                                    color: Colors.white.withValues(alpha: 0.05),
                                     border: Border.all(
-                                      color: Colors.white.withOpacity(0.4),
+                                      color:
+                                          Colors.white.withValues(alpha: 0.4),
                                       width: 1.5,
                                     ),
                                   ),
@@ -186,7 +187,7 @@ class SubtitleWidget extends StatelessWidget {
                                         thumbColor: Colors.white,
                                         activeColor: Colors.orange,
                                         inactiveColor:
-                                            Colors.white.withOpacity(0.2),
+                                            Colors.white.withValues(alpha: 0.2),
                                         onChanged: (_) {},
                                         onChangeEnd: (value) {
                                           audioPlayer.seek(
@@ -201,15 +202,15 @@ class SubtitleWidget extends StatelessWidget {
                                         Text(
                                           _formatDuration(positionDuration),
                                           style: PmpTextStyles.sub.copyWith(
-                                            color:
-                                                Colors.white.withOpacity(0.9),
+                                            color: Colors.white
+                                                .withValues(alpha: 0.9),
                                           ),
                                         ),
                                         Text(
                                           _formatDuration(totalDuration),
                                           style: PmpTextStyles.sub.copyWith(
-                                            color:
-                                                Colors.white.withOpacity(0.9),
+                                            color: Colors.white
+                                                .withValues(alpha: 0.9),
                                           ),
                                         ),
                                       ],

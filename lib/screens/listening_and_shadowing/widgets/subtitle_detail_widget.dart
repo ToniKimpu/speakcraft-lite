@@ -45,6 +45,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
   bool _streamData = false;
   final _pageController = PageController();
   int _currentIndex = 0;
+  int _instantStreamIndex = 0;
 
   Future<void> _setAudioSourceIfNeeded(String url) async {
     try {
@@ -106,6 +107,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
       listener: (context, state) {
         state.maybeWhen(
           onPageChanged: (index) async {
+            _instantStreamIndex = index;
             if (_pageController.hasClients && _streamData) {
               _currentIndex = index;
               final subtitle = widget.subtitles[index];
@@ -185,6 +187,15 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                               onChanged: (value) {
                                 setState(() {
                                   _streamData = value;
+                                  if (_streamData) {
+                                    _currentIndex = _instantStreamIndex;
+                                    _pageController.animateToPage(
+                                      _instantStreamIndex,
+                                      duration:
+                                          const Duration(milliseconds: 300),
+                                      curve: Curves.easeInOut,
+                                    );
+                                  }
                                 });
                               },
                               activeColor: Colors.white,

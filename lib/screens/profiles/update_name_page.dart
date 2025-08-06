@@ -99,7 +99,7 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
                             UserEvent.updateUserName(_nameController.text));
                         FocusManager.instance.primaryFocus?.unfocus();
                       },
-                      child: Ink(
+                      child: Container(
                         width: double.infinity,
                         height: 48,
                         decoration: BoxDecoration(
@@ -115,8 +115,8 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
                                 )
                               : LinearGradient(
                                   colors: [
-                                    PmpColors.primary400.withOpacity(0.6),
-                                    PmpColors.primary400.withOpacity(0.4),
+                                    PmpColors.primary400.withValues(alpha: 0.6),
+                                    PmpColors.primary400.withValues(alpha: 0.4),
                                   ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
@@ -124,7 +124,7 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
                           boxShadow: isComplete
                               ? [
                                   BoxShadow(
-                                    color: Colors.blue.withOpacity(0.3),
+                                    color: Colors.blue.withValues(alpha: 0.3),
                                     blurRadius: 6,
                                     spreadRadius: 1,
                                     offset: const Offset(0, 3),
