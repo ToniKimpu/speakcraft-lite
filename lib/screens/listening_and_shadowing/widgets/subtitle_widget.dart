@@ -44,11 +44,10 @@ class SubtitleWidget extends StatelessWidget {
               fontFamily: "ArchivoBlack Regular",
             ),
           ),
-
           const SizedBox(height: 6),
-
           // Burmese Subtitle
-          if (hasMMSub)
+          // if (hasMMSub)
+          if (subtitle.burmese != null && subtitle.burmese!.isNotEmpty)
             Text(
               subtitle.burmese ?? "",
               style: PmpTextStyles.body2Regular.copyWith(
@@ -59,29 +58,27 @@ class SubtitleWidget extends StatelessWidget {
                 fontFamily: "MM Lyrics Bold",
               ),
             ),
-          if (hasMMSub) const SizedBox(height: 24),
-
+          // if (hasMMSub) const SizedBox(height: 24),
           // Info Box if no MM Sub
-          if (!hasMMSub)
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.white.withOpacity(0.05),
-                border: Border.all(color: Colors.white.withOpacity(0.2)),
-              ),
-              child: Text(
-                "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
-                textAlign: TextAlign.center,
-                style: PmpTextStyles.body2Semi.copyWith(
-                  color: Colors.white,
-                  fontFamily: "MM Lyrics Bold",
-                ),
-              ),
-            ),
-
-          if (!hasMMSub) const SizedBox(height: 24),
+          // if (!hasMMSub)
+          //   Container(
+          //     width: double.infinity,
+          //     padding: const EdgeInsets.all(16),
+          //     decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.circular(12),
+          //       color: Colors.white.withOpacity(0.05),
+          //       border: Border.all(color: Colors.white.withOpacity(0.2)),
+          //     ),
+          //     child: Text(
+          //       "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
+          //       textAlign: TextAlign.center,
+          //       style: PmpTextStyles.body2Semi.copyWith(
+          //         color: Colors.white,
+          //         fontFamily: "MM Lyrics Bold",
+          //       ),
+          //     ),
+          //   ),
+          // if (!hasMMSub) const SizedBox(height: 24),
 
           // Audio Player Section
           if (subtitle.audioName.isNotEmpty)
@@ -229,10 +226,10 @@ class SubtitleWidget extends StatelessWidget {
                 );
               },
             ),
-          if (subtitle.audioName.isNotEmpty) const SizedBox(height: 20),
+          const SizedBox(height: 20),
 
           // Vocabularies
-          if (hasMMSub && subtitle.vocabularies!.isNotEmpty)
+          if (subtitle.vocabularies!.isNotEmpty)
             ...subtitle.vocabularies!.map(
               (voc) => Padding(
                 padding: const EdgeInsets.only(bottom: 16),
@@ -240,7 +237,7 @@ class SubtitleWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           width: 8,
@@ -272,24 +269,23 @@ class SubtitleWidget extends StatelessWidget {
                                   fontFamily: "MM Lyrics Bold",
                                 ),
                               ),
-                              if (voc.explanation != null &&
-                                  voc.explanation!.isNotEmpty)
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 4),
-                                  child: Text(
-                                    "(${voc.explanation})",
-                                    style: PmpTextStyles.body2Regular.copyWith(
-                                      color: const Color(0xFFFFF59D),
-                                      fontFamily: "MM Lyrics Bold",
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                ),
                             ],
                           ),
                         ),
                       ],
                     ),
+                    if (voc.explanation != null && voc.explanation!.isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 4, left: 12),
+                        child: Text(
+                          "(${voc.explanation})",
+                          style: PmpTextStyles.body2Regular.copyWith(
+                            color: const Color(0xFFFFF59D),
+                            fontFamily: "MM Lyrics Bold",
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
                   ],
                 ),
               ),

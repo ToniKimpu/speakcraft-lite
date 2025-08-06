@@ -46,7 +46,11 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
   flutter_dotenv: ^5.2.1
   supabase_flutter: ^2.8.0
-  youtube_player_flutter: ^9.1.1
+  # youtube_player_flutter: ^9.1.1
+  youtube_player_flutter:
+    git:
+      url: https://github.com/congdanh1608/youtube_player_flutter.git
+      path: packages/youtube_player_flutter
   device_info_plus: ^11.2.0
   package_info_plus: ^8.1.2
   permission_handler: ^11.3.1

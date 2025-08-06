@@ -1597,10 +1597,11 @@ packages:
   youtube_player_flutter:
     dependency: "direct main"
     description:
-      name: youtube_player_flutter
-      sha256: "4d14aa47f9c84929b5400a87ade4dcfdab87a2ca2e0b18ecc2ef852b1440e123"
-      url: "https://pub.dev"
-    source: hosted
+      path: "packages/youtube_player_flutter"
+      ref: HEAD
+      resolved-ref: "3232308017640f60ac34492bdca479e1aaa56f78"
+      url: "https://github.com/congdanh1608/youtube_player_flutter.git"
+    source: git
     version: "9.1.1"
 sdks:
   dart: ">=3.6.0 <4.0.0"

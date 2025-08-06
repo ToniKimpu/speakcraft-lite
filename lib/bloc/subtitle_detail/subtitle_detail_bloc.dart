@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
+import 'package:pmp_english/model/listening/listening.dart';
 
 import '../../model/subtitle/subtitle.dart';
 import '../../services/supabase_service.dart';
@@ -12,7 +13,7 @@ part 'subtitle_detail_bloc.freezed.dart';
 
 @freezed
 abstract class SubtitleEvent with _$SubtitleEvent {
-  const factory SubtitleEvent.parseSubtitle(String subtitlePath) =
+  const factory SubtitleEvent.parseSubtitle(Listening listening) =
       _ParseSubtitle;
   const factory SubtitleEvent.parseComplete(List<Subtitle> subtitles) =
       _ParseComplete;
@@ -39,8 +40,8 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
         setCurrentPageIndex: (index) async {
           emit(SubtitleState.onPageChanged(index));
         },
-        parseSubtitle: (subtitlePath) async {
-          await parseSubtitle(subtitlePath, emit);
+        parseSubtitle: (listening) async {
+          await parseSubtitle(listening, emit);
         },
         parseComplete: (subtitles) async {
           debugPrint(
@@ -51,13 +52,13 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
     });
   }
   Future<void> parseSubtitle(
-      String fileUrl, Emitter<SubtitleState> emit) async {
+      Listening listening, Emitter<SubtitleState> emit) async {
     // const double fixedHeight = 112.0;
     // double scrollPosition = 0;
-    debugPrint("_parseJsonSubtitleFile: $fileUrl file Url!");
+    debugPrint("_parseJsonSubtitleFile: ${listening.toJson()} file Url!");
     emit(const SubtitleState.onParsingSubtitle(<Subtitle>[]));
     try {
-      final response = await http.get(Uri.parse(fileUrl));
+      final response = await http.get(Uri.parse(listening.subtitlePath));
       if (response.statusCode != 200) {
         throw Exception("Failed to load subtitles: ${response.statusCode}");
       }
@@ -69,8 +70,12 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
 
       for (int i = 0; i < jsonList.length; i++) {
         final jsonItem = jsonList[i];
-        final startDuration = _parseJsonDuration(jsonItem['start']);
-        final endDuration = _parseJsonDuration(jsonItem['end']);
+        int start = jsonItem['start'] as int;
+        int end = i == jsonList.length - 1
+            ? listening.end
+            : jsonList[i + 1]['start'] as int;
+        final startDuration = Duration(seconds: start);
+        final endDuration = Duration(seconds: end);
 
         subtitles.add(
           Subtitle(
@@ -87,7 +92,6 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
             end: endDuration,
             widgetHeight: 0.0,
             scrollPosition: 0.0,
-            // scrollPosition: i < 2 ? 0 : scrollPosition,
             vocabularies: (jsonItem['vocabulary'] as List<dynamic>?)
                 ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))
                 .toList(),
@@ -104,23 +108,5 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
           "_parseJsonSubtitleFile: error:  Error parsing subtitle JSON file: $e");
       emit(SubtitleState.error(e.toString()));
     }
-  }
-
-  Duration _parseJsonDuration(String time) {
-    final parts = time.split(':'); // [hh, mm, ss.mmm]
-    final hours = int.parse(parts[0]);
-    final minutes = int.parse(parts[1]);
-
-    final secParts = parts[2].split('.');
-    final seconds = int.parse(secParts[0]);
-    final milliseconds =
-        int.parse(secParts[1].padRight(3, '0')); // ensure 3 digits
-
-    return Duration(
-      hours: hours,
-      minutes: minutes,
-      seconds: seconds,
-      milliseconds: milliseconds,
-    );
   }
 }

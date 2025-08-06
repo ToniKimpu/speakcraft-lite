@@ -12,7 +12,7 @@ class Subtitle with _$Subtitle {
     required String english,
     String? burmese,
     String? description,
-    @Default("") required String audioName,
+    required String audioName,
     required Duration start,
     required Duration end,
     required double widgetHeight,

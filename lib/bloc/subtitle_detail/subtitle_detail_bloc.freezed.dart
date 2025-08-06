@@ -18,21 +18,21 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$SubtitleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(Listening listening)? parseSubtitle,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
@@ -89,7 +89,9 @@ abstract class _$$ParseSubtitleImplCopyWith<$Res> {
           _$ParseSubtitleImpl value, $Res Function(_$ParseSubtitleImpl) then) =
       __$$ParseSubtitleImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String subtitlePath});
+  $Res call({Listening listening});
+
+  $ListeningCopyWith<$Res> get listening;
 }
 
 /// @nodoc
@@ -105,14 +107,24 @@ class __$$ParseSubtitleImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? subtitlePath = null,
+    Object? listening = null,
   }) {
     return _then(_$ParseSubtitleImpl(
-      null == subtitlePath
-          ? _value.subtitlePath
-          : subtitlePath // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == listening
+          ? _value.listening
+          : listening // ignore: cast_nullable_to_non_nullable
+              as Listening,
     ));
+  }
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ListeningCopyWith<$Res> get listening {
+    return $ListeningCopyWith<$Res>(_value.listening, (value) {
+      return _then(_value.copyWith(listening: value));
+    });
   }
 }
 
@@ -121,14 +133,14 @@ class __$$ParseSubtitleImplCopyWithImpl<$Res>
 class _$ParseSubtitleImpl
     with DiagnosticableTreeMixin
     implements _ParseSubtitle {
-  const _$ParseSubtitleImpl(this.subtitlePath);
+  const _$ParseSubtitleImpl(this.listening);
 
   @override
-  final String subtitlePath;
+  final Listening listening;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SubtitleEvent.parseSubtitle(subtitlePath: $subtitlePath)';
+    return 'SubtitleEvent.parseSubtitle(listening: $listening)';
   }
 
   @override
@@ -136,7 +148,7 @@ class _$ParseSubtitleImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseSubtitle'))
-      ..add(DiagnosticsProperty('subtitlePath', subtitlePath));
+      ..add(DiagnosticsProperty('listening', listening));
   }
 
   @override
@@ -144,12 +156,12 @@ class _$ParseSubtitleImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParseSubtitleImpl &&
-            (identical(other.subtitlePath, subtitlePath) ||
-                other.subtitlePath == subtitlePath));
+            (identical(other.listening, listening) ||
+                other.listening == listening));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, subtitlePath);
+  int get hashCode => Object.hash(runtimeType, listening);
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -162,33 +174,33 @@ class _$ParseSubtitleImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
-    return parseSubtitle(subtitlePath);
+    return parseSubtitle(listening);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
-    return parseSubtitle?.call(subtitlePath);
+    return parseSubtitle?.call(listening);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(Listening listening)? parseSubtitle,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
   }) {
     if (parseSubtitle != null) {
-      return parseSubtitle(subtitlePath);
+      return parseSubtitle(listening);
     }
     return orElse();
   }
@@ -229,9 +241,9 @@ class _$ParseSubtitleImpl
 }
 
 abstract class _ParseSubtitle implements SubtitleEvent {
-  const factory _ParseSubtitle(final String subtitlePath) = _$ParseSubtitleImpl;
+  const factory _ParseSubtitle(final Listening listening) = _$ParseSubtitleImpl;
 
-  String get subtitlePath;
+  Listening get listening;
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -326,7 +338,7 @@ class _$ParseCompleteImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
@@ -336,7 +348,7 @@ class _$ParseCompleteImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
@@ -346,7 +358,7 @@ class _$ParseCompleteImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(Listening listening)? parseSubtitle,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
@@ -484,7 +496,7 @@ class _$SetCurrentPageIndexImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String subtitlePath) parseSubtitle,
+    required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
@@ -494,7 +506,7 @@ class _$SetCurrentPageIndexImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String subtitlePath)? parseSubtitle,
+    TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
@@ -504,7 +516,7 @@ class _$SetCurrentPageIndexImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String subtitlePath)? parseSubtitle,
+    TResult Function(Listening listening)? parseSubtitle,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),

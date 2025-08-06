@@ -12,7 +12,7 @@ _$SubtitleImpl _$$SubtitleImplFromJson(Map<String, dynamic> json) =>
       english: json['english'] as String,
       burmese: json['burmese'] as String?,
       description: json['description'] as String?,
-      audioName: json['audioName'] as String? ?? "",
+      audioName: json['audioName'] as String,
       start: Duration(microseconds: (json['start'] as num).toInt()),
       end: Duration(microseconds: (json['end'] as num).toInt()),
       widgetHeight: (json['widgetHeight'] as num).toDouble(),

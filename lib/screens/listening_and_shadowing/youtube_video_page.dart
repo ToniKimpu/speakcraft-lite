@@ -69,7 +69,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       seconds: (widget.listening.end - widget.listening.start),
     );
     _controller = YoutubePlayerController(
-      initialVideoId: widget.listening.youtubeId,
+      initialVideoId: widget.listening.youtubeId.trim(),
       flags: YoutubePlayerFlags(
         mute: false,
         autoPlay: false,
@@ -85,6 +85,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         hideControls: true,
       ),
     )..addListener(listener);
+
     _idController = TextEditingController();
     _seekToController = TextEditingController();
     _lyricsController.addListener(
@@ -124,8 +125,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         debugPrint("_durationSub: ${duration.inSeconds} inSeconds!");
       },
     );
-    _subtitleParsingBloc
-        .add(SubtitleEvent.parseSubtitle(widget.listening.subtitlePath));
+    _subtitleParsingBloc.add(SubtitleEvent.parseSubtitle(widget.listening));
   }
 
   void listener() {

@@ -1,15 +1,11 @@
-import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:http/http.dart' as http;
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/services/supabase_service.dart';
 
 import '../l10n/generated/l10n.dart';
-import '../model/subtitle/subtitle.dart';
 
 extension AiduPlayStateExtension on State {
   showSnackbar(String msg, Color textColor, Color bgColor) {
@@ -214,58 +210,58 @@ extension DurationExtension on Duration {
   }
 }
 
-Future<List<Subtitle>> parseJsonSubtitleFile(String fileUrl) async {
-  const double fixedHeight = 112.0;
-  double scrollPosition = 0;
-  debugPrint("_parseJsonSubtitleFile: $fileUrl file Url!");
-  try {
-    final response = await http.get(Uri.parse(fileUrl));
-    if (response.statusCode != 200) {
-      throw Exception("Failed to load subtitles: ${response.statusCode}");
-    }
-    final List<dynamic> jsonList = json.decode(utf8.decode(response.bodyBytes));
-    debugPrint("_parseJsonSubtitleFile: ${jsonList.first.toString()} lenght!");
-    final List<Subtitle> subtitles = [];
+// Future<List<Subtitle>> parseJsonSubtitleFile(String fileUrl) async {
+//   const double fixedHeight = 112.0;
+//   double scrollPosition = 0;
+//   debugPrint("_parseJsonSubtitleFile: $fileUrl file Url!");
+//   try {
+//     final response = await http.get(Uri.parse(fileUrl));
+//     if (response.statusCode != 200) {
+//       throw Exception("Failed to load subtitles: ${response.statusCode}");
+//     }
+//     final List<dynamic> jsonList = json.decode(utf8.decode(response.bodyBytes));
+//     debugPrint("_parseJsonSubtitleFile: ${jsonList.first.toString()} lenght!");
+//     final List<Subtitle> subtitles = [];
 
-    for (int i = 0; i < jsonList.length; i++) {
-      final jsonItem = jsonList[i];
-      final startDuration = _parseJsonDuration(jsonItem['start']);
-      final endDuration = _parseJsonDuration(jsonItem['end']);
+//     for (int i = 0; i < jsonList.length; i++) {
+//       final jsonItem = jsonList[i];
+//       final startDuration = _parseJsonDuration(jsonItem['start']);
+//       final endDuration = _parseJsonDuration(jsonItem['end']);
 
-      subtitles.add(
-        Subtitle(
-          id: jsonItem['id'],
-          english: jsonItem['english'] ?? '',
-          burmese: jsonItem['burmese'],
-          description: jsonItem['description'],
-          audioName: jsonItem["audioName"] == null
-              ? ""
-              : supabase.storage.from("contents").getPublicUrl(
-                    "${SupabaseBucketFolders.listeningAndShadowingAudios.name}/${jsonItem["audioName"] as String}",
-                  ),
-          start: startDuration,
-          end: endDuration,
-          widgetHeight: 0.0,
-          scrollPosition: i < 2 ? 0 : scrollPosition,
-          vocabularies: (jsonItem['vocabulary'] as List<dynamic>?)
-              ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))
-              .toList(),
-        ),
-      );
+//       subtitles.add(
+//         Subtitle(
+//           id: jsonItem['id'],
+//           english: jsonItem['english'] ?? '',
+//           burmese: jsonItem['burmese'],
+//           description: jsonItem['description'],
+//           audioName: jsonItem["audioName"] == null
+//               ? ""
+//               : supabase.storage.from("contents").getPublicUrl(
+//                     "${SupabaseBucketFolders.listeningAndShadowingAudios.name}/${jsonItem["audioName"] as String}",
+//                   ),
+//           start: startDuration,
+//           end: endDuration,
+//           widgetHeight: 0.0,
+//           scrollPosition: i < 2 ? 0 : scrollPosition,
+//           vocabularies: (jsonItem['vocabulary'] as List<dynamic>?)
+//               ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))
+//               .toList(),
+//         ),
+//       );
 
-      if (i >= 1) {
-        scrollPosition += fixedHeight;
-      }
-    }
+//       if (i >= 1) {
+//         scrollPosition += fixedHeight;
+//       }
+//     }
 
-    debugPrint("_subtitleInfo: ${subtitles.length} loaded!");
-    return subtitles;
-  } catch (e) {
-    debugPrint(
-        "_parseJsonSubtitleFile: error:  Error parsing subtitle JSON file: $e");
-    return <Subtitle>[];
-  }
-}
+//     debugPrint("_subtitleInfo: ${subtitles.length} loaded!");
+//     return subtitles;
+//   } catch (e) {
+//     debugPrint(
+//         "_parseJsonSubtitleFile: error:  Error parsing subtitle JSON file: $e");
+//     return <Subtitle>[];
+//   }
+// }
 
 Duration _parseJsonDuration(String time) {
   final parts = time.split(':'); // [hh, mm, ss.mmm]

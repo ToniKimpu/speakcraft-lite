@@ -250,7 +250,6 @@ class _$SubtitleImpl implements _Subtitle {
   @override
   final String? description;
   @override
-  @JsonKey()
   final String audioName;
   @override
   final Duration start;
