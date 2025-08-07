@@ -31,8 +31,6 @@ class YoutubeVideoPage extends StatefulWidget {
 
 class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   late YoutubePlayerController _controller;
-  late TextEditingController _idController;
-  late TextEditingController _seekToController;
 
   bool _isPlayerReady = false;
 
@@ -85,9 +83,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         hideControls: true,
       ),
     )..addListener(listener);
-
-    _idController = TextEditingController();
-    _seekToController = TextEditingController();
     _lyricsController.addListener(
       () {
         if (_lyricsController.position.userScrollDirection !=
@@ -212,8 +207,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   void dispose() {
     _showVocabularyNotifier.dispose();
     _controller.dispose();
-    _idController.dispose();
-    _seekToController.dispose();
     _lyricsController.removeListener(listener);
     _lyricsController.dispose();
     super.dispose();
@@ -283,6 +276,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                     thumbnail: const SizedBox(),
                     onReady: () {
                       _isPlayerReady = true;
+                      // _controller.setPlaybackRate(0.75);
                     },
                     onEnded: (data) {},
                   ),

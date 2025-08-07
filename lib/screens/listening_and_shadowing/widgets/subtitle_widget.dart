@@ -45,8 +45,6 @@ class SubtitleWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 6),
-          // Burmese Subtitle
-          // if (hasMMSub)
           if (subtitle.burmese != null && subtitle.burmese!.isNotEmpty)
             Text(
               subtitle.burmese ?? "",
@@ -58,27 +56,26 @@ class SubtitleWidget extends StatelessWidget {
                 fontFamily: "MM Lyrics Bold",
               ),
             ),
-          // if (hasMMSub) const SizedBox(height: 24),
+          const SizedBox(height: 24),
           // Info Box if no MM Sub
-          // if (!hasMMSub)
-          //   Container(
-          //     width: double.infinity,
-          //     padding: const EdgeInsets.all(16),
-          //     decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(12),
-          //       color: Colors.white.withValues(alpha:0.05),
-          //       border: Border.all(color: Colors.white.withValues(alpha:0.2)),
-          //     ),
-          //     child: Text(
-          //       "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
-          //       textAlign: TextAlign.center,
-          //       style: PmpTextStyles.body2Semi.copyWith(
-          //         color: Colors.white,
-          //         fontFamily: "MM Lyrics Bold",
-          //       ),
-          //     ),
-          //   ),
-          if (subtitle.audioName.isNotEmpty) const SizedBox(height: 20),
+          if (!hasMMSub)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white.withValues(alpha: 0.05),
+                border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
+              ),
+              child: Text(
+                "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
+                textAlign: TextAlign.center,
+                style: PmpTextStyles.body2Semi.copyWith(
+                  color: Colors.white,
+                  fontFamily: "MM Lyrics Bold",
+                ),
+              ),
+            ),
 
           // Audio Player Section
           if (subtitle.audioName.isNotEmpty)
