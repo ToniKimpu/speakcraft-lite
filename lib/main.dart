@@ -8,6 +8,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:http/http.dart';
 import 'package:pmp_english/firebase_options.dart';
 import 'package:pmp_english/firebase_options_dev.dart';
 import 'package:pmp_english/pmp_english_app.dart';
@@ -78,27 +79,43 @@ Future<void> setupFlutterNotifications() async {
   isFlutterLocalNotificationsInitialized = true;
 }
 
-void showFlutterNotification(RemoteMessage message) {
+Future<Uint8List> _getByteArrayFromUrl(String url) async {
+  final response = await get(Uri.parse(url));
+  return response.bodyBytes;
+}
+
+Future<void> showFlutterNotification(RemoteMessage message) async {
   if (kIsWeb) return;
   RemoteNotification? notification = message.notification;
-
   final data = message.data;
+  ByteArrayAndroidBitmap? bigPicture;
+  if (data['poster_image'] != null) {
+    final imageResponse = await _getByteArrayFromUrl(data['poster_image']);
+    bigPicture = ByteArrayAndroidBitmap(imageResponse);
+  }
   flutterLocalNotificationsPlugin.show(
-      notification.hashCode,
-      data['title'],
-      data['message'],
-      NotificationDetails(
-        android: AndroidNotificationDetails(
-          channel.id,
-          channel.name,
-          channelDescription: channel.description,
-          priority: Priority.max,
-          importance: Importance.max,
-          icon: 'ic_notification',
-          playSound: true,
-        ),
+    notification.hashCode,
+    data['title'],
+    data['message'],
+    NotificationDetails(
+      android: AndroidNotificationDetails(
+        channel.id,
+        channel.name,
+        channelDescription: channel.description,
+        priority: Priority.max,
+        importance: Importance.max,
+        icon: 'ic_notification',
+        playSound: true,
+        largeIcon: bigPicture,
+        styleInformation: bigPicture == null
+            ? null
+            : BigPictureStyleInformation(
+                bigPicture,
+              ),
       ),
-      payload: jsonEncode(message.data));
+    ),
+    payload: jsonEncode(message.data),
+  );
 }
 
 /// Initialize the [FlutterLocalNotificationsPlugin] package.
