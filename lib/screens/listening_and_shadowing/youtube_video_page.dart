@@ -371,38 +371,40 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                         );
                                       }),
                                 ),
-                                Positioned(
-                                  top: 6,
-                                  left: 6,
-                                  right: 6,
-                                  bottom: 6,
-                                  child: SubtitleDetailWidget(
-                                    youtubeReadyToPlay: _readyToPlay,
-                                    youtubeController: _controller,
-                                    audioPlayerStateTrackerBloc:
-                                        _audioPlayerStateTrackerBloc,
-                                    audioPostionTrackerBloc:
-                                        _audioPositionTrackerBloc,
-                                    audioDurationTrackerBloc:
-                                        _audioDurationTrackerBloc,
-                                    subtitleBloc: _subtitleBloc,
-                                    audioPlayer: _audioPlayer,
-                                    showSubtitleDetail: _showVocabularyNotifier,
-                                    subtitles: _subtitles,
-                                    hasMMSub: widget.listening.hasMMSubtitle,
-                                    onUserChangePage: (subtitle) async {
-                                      final isPaused =
-                                          !_controller.value.isPlaying;
-                                      _controller.seekTo(subtitle.start);
-                                      if (isPaused) {
-                                        // Re-pause after a brief delay to avoid auto-play
-                                        await Future.delayed(
-                                            const Duration(milliseconds: 100));
-                                        _controller.pause();
-                                      }
-                                    },
-                                  ),
-                                )
+                                if (_subtitles.isNotEmpty)
+                                  Positioned(
+                                    top: 6,
+                                    left: 6,
+                                    right: 6,
+                                    bottom: 6,
+                                    child: SubtitleDetailWidget(
+                                      youtubeReadyToPlay: _readyToPlay,
+                                      youtubeController: _controller,
+                                      audioPlayerStateTrackerBloc:
+                                          _audioPlayerStateTrackerBloc,
+                                      audioPostionTrackerBloc:
+                                          _audioPositionTrackerBloc,
+                                      audioDurationTrackerBloc:
+                                          _audioDurationTrackerBloc,
+                                      subtitleBloc: _subtitleBloc,
+                                      audioPlayer: _audioPlayer,
+                                      showSubtitleDetail:
+                                          _showVocabularyNotifier,
+                                      subtitles: _subtitles,
+                                      hasMMSub: widget.listening.hasMMSubtitle,
+                                      onUserChangePage: (subtitle) async {
+                                        final isPaused =
+                                            !_controller.value.isPlaying;
+                                        _controller.seekTo(subtitle.start);
+                                        if (isPaused) {
+                                          // Re-pause after a brief delay to avoid auto-play
+                                          await Future.delayed(const Duration(
+                                              milliseconds: 100));
+                                          _controller.pause();
+                                        }
+                                      },
+                                    ),
+                                  )
                               ],
                             ),
                           ),

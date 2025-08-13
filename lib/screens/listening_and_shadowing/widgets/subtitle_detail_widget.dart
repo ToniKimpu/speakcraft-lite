@@ -43,9 +43,15 @@ class SubtitleDetailWidget extends StatefulWidget {
 
 class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
   bool _streamData = false;
-  final _pageController = PageController();
   int _currentIndex = 0;
   int _instantStreamIndex = 0;
+  late Subtitle _selectedSubtitle;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedSubtitle = widget.subtitles[_currentIndex];
+  }
 
   Future<void> _setAudioSourceIfNeeded(String url) async {
     try {
@@ -53,7 +59,8 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
 
       final source = widget.audioPlayer.audioSource;
       final currentTag = source?.sequence.first.tag;
-
+      debugPrint("_setAudioSourceIfNeeded: $currentTag current Tag");
+      debugPrint("_setAudioSourceIfNeeded: $url url Tag");
       if (currentTag != url) {
         await widget.audioPlayer.setAudioSource(
           AudioSource.uri(Uri.parse(url), tag: url),
@@ -64,39 +71,29 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
     }
   }
 
-  void _goToNext() async {
+  void _goToNext() {
     if (_currentIndex < widget.subtitles.length - 1) {
-      setState(() => _currentIndex++);
-      final subtitle = widget.subtitles[_currentIndex];
-      if (subtitle.audioName.isNotEmpty) {
-        // widget.audioPlayer.setUrl(subtitle.audioName);
-        _setAudioSourceIfNeeded(subtitle.audioName);
+      setState(() {
+        _currentIndex++;
+        _selectedSubtitle = widget.subtitles[_currentIndex];
+      });
+      if (_selectedSubtitle.audioName.isNotEmpty) {
+        _setAudioSourceIfNeeded(_selectedSubtitle.audioName);
       }
-      _pageController.animateToPage(
-        _currentIndex,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-      if (_streamData) widget.onUserChangePage(widget.subtitles[_currentIndex]);
+      if (_streamData) widget.onUserChangePage(_selectedSubtitle);
     }
   }
 
-  void _goToPrevious() async {
+  void _goToPrevious() {
     if (_currentIndex > 0) {
-      setState(() => _currentIndex--);
-      // await widget.audioPlayer.stop();
-      final subtitle = widget.subtitles[_currentIndex];
-      if (subtitle.audioName.isNotEmpty) {
-        // widget.audioPlayer.setUrl(subtitle.audioName);
-        _setAudioSourceIfNeeded(subtitle.audioName);
+      setState(() {
+        _currentIndex--;
+        _selectedSubtitle = widget.subtitles[_currentIndex];
+      });
+      if (_selectedSubtitle.audioName.isNotEmpty) {
+        _setAudioSourceIfNeeded(_selectedSubtitle.audioName);
       }
-      await widget.audioPlayer.stop();
-      _pageController.animateToPage(
-        _currentIndex,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-      if (_streamData) widget.onUserChangePage(widget.subtitles[_currentIndex]);
+      if (_streamData) widget.onUserChangePage(_selectedSubtitle);
     }
   }
 
@@ -106,19 +103,16 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
       bloc: widget.subtitleBloc,
       listener: (context, state) {
         state.maybeWhen(
-          onPageChanged: (index) async {
+          onPageChanged: (index) {
             _instantStreamIndex = index;
-            if (_pageController.hasClients && _streamData) {
-              _currentIndex = index;
-              final subtitle = widget.subtitles[index];
-              if (subtitle.audioName.isNotEmpty) {
-                _setAudioSourceIfNeeded(subtitle.audioName);
+            if (_streamData) {
+              setState(() {
+                _currentIndex = index;
+                _selectedSubtitle = widget.subtitles[index];
+              });
+              if (_selectedSubtitle.audioName.isNotEmpty) {
+                _setAudioSourceIfNeeded(_selectedSubtitle.audioName);
               }
-              _pageController.animateToPage(
-                _currentIndex,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
             }
           },
           orElse: () => -1,
@@ -136,7 +130,6 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
           onTap: () {},
           child: Container(
             width: double.infinity,
-            // padding: const EdgeInsets.only(left: 0, right: 0, top: 12),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               gradient: const LinearGradient(
@@ -150,102 +143,80 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black
-                      .withValues(alpha: 0.3), // Slightly stronger shadow
+                  color: Colors.black.withValues(alpha: 0.3),
                   blurRadius: 12,
                   spreadRadius: 6,
                 ),
               ],
               border: Border.all(
-                color: Colors.white
-                    .withValues(alpha: 0.4), // Soft white border for contrast
+                color: Colors.white.withValues(alpha: 0.4),
               ),
             ),
             child: Column(
               children: [
+                // Stream switch row
                 SizedBox(
                   height: 40,
-                  child: SizedBox(
-                    height: 40,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Stream',
-                            style: PmpTextStyles.body2Semi.copyWith(
-                              color: Colors.white,
-                            ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Stream',
+                          style: PmpTextStyles.body2Semi.copyWith(
+                            color: Colors.white,
                           ),
-                          const SizedBox(width: 4),
-                          Transform.scale(
-                            scale:
-                                0.75, // Adjust between 0.6 to 1.0 to fine-tune size
-                            child: Switch(
-                              value: _streamData,
-                              onChanged: (value) {
-                                setState(() {
-                                  _streamData = value;
-                                  if (_streamData) {
-                                    _currentIndex = _instantStreamIndex;
-                                    _pageController.animateToPage(
-                                      _instantStreamIndex,
-                                      duration:
-                                          const Duration(milliseconds: 300),
-                                      curve: Curves.easeInOut,
-                                    );
-                                  }
-                                });
-                              },
-                              activeColor: Colors.white,
-                              inactiveThumbColor:
-                                  Colors.white.withValues(alpha: 0.8),
-                              activeTrackColor: Colors.green,
-                              inactiveTrackColor:
-                                  Colors.white.withValues(alpha: 0.4),
-                            ),
+                        ),
+                        const SizedBox(width: 4),
+                        Transform.scale(
+                          scale: 0.75,
+                          child: Switch(
+                            value: _streamData,
+                            onChanged: (value) {
+                              setState(() {
+                                _streamData = value;
+                                if (_streamData) {
+                                  _currentIndex = _instantStreamIndex;
+                                  _selectedSubtitle =
+                                      widget.subtitles[_instantStreamIndex];
+                                }
+                              });
+                            },
+                            activeColor: Colors.white,
+                            inactiveThumbColor:
+                                Colors.white.withValues(alpha: 0.8),
+                            activeTrackColor: Colors.green,
+                            inactiveTrackColor:
+                                Colors.white.withValues(alpha: 0.4),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Container(
-                  height: 1,
-                  width: double.infinity,
-                  color: Colors.white.withValues(alpha: 0.4),
-                ),
+                Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
+
+                // Single subtitle
                 Expanded(
-                  child: PageView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                    controller: _pageController,
-                    itemCount: widget.subtitles.length,
-                    itemBuilder: (context, index) {
-                      return SubtitleWidget(
-                        youtubeController: widget.youtubeController,
-                        audioPlayer: widget.audioPlayer,
-                        audioPositionTrackerBloc:
-                            widget.audioPostionTrackerBloc,
-                        audioDurationTrackerBloc:
-                            widget.audioDurationTrackerBloc,
-                        audioPlayerStateTrackerBloc:
-                            widget.audioPlayerStateTrackerBloc,
-                        subtitle: widget.subtitles[index],
-                        hasMMSub: widget.hasMMSub,
-                      );
-                    },
+                  child: SubtitleWidget(
+                    youtubeController: widget.youtubeController,
+                    audioPlayer: widget.audioPlayer,
+                    audioPositionTrackerBloc: widget.audioPostionTrackerBloc,
+                    audioDurationTrackerBloc: widget.audioDurationTrackerBloc,
+                    audioPlayerStateTrackerBloc:
+                        widget.audioPlayerStateTrackerBloc,
+                    subtitle: _selectedSubtitle,
+                    hasMMSub: widget.hasMMSub,
                   ),
                 ),
-                Container(
-                  height: 1,
-                  width: double.infinity,
-                  color: Colors.white.withValues(alpha: 0.4),
-                ),
+
+                Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
+
+                // Controls row
                 SizedBox(
                   height: 40,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const SizedBox(width: 8),
                       widget.youtubeReadyToPlay

@@ -104,6 +104,10 @@ class SubtitleWidget extends StatelessWidget {
                         final isCompleted =
                             currentPlayerState?.processingState ==
                                 ProcessingState.completed;
+                        final loading = (currentPlayerState?.processingState ==
+                                ProcessingState.loading ||
+                            currentPlayerState?.processingState ==
+                                ProcessingState.buffering);
 
                         return Container(
                           padding: const EdgeInsets.all(16),
@@ -121,6 +125,9 @@ class SubtitleWidget extends StatelessWidget {
                               // Play Button
                               GestureDetector(
                                 onTap: () {
+                                  if (loading) {
+                                    return;
+                                  }
                                   if (isCompleted) {
                                     audioPlayer.seek(Duration.zero);
                                     audioPlayer.play();
@@ -147,15 +154,23 @@ class SubtitleWidget extends StatelessWidget {
                                       width: 1.5,
                                     ),
                                   ),
-                                  child: Icon(
-                                    isCompleted
-                                        ? Icons.replay
-                                        : isPlaying
-                                            ? Icons.pause
-                                            : Icons.play_arrow,
-                                    color: Colors.white,
-                                    size: 22,
-                                  ),
+                                  child: loading
+                                      ? const SizedBox(
+                                          width: 16,
+                                          height: 16,
+                                          child: CircularProgressIndicator(
+                                            color: Colors.white,
+                                          ),
+                                        )
+                                      : Icon(
+                                          isCompleted
+                                              ? Icons.replay
+                                              : isPlaying
+                                                  ? Icons.pause
+                                                  : Icons.play_arrow,
+                                          color: Colors.white,
+                                          size: 22,
+                                        ),
                                 ),
                               ),
                               const SizedBox(width: 16),
@@ -187,6 +202,9 @@ class SubtitleWidget extends StatelessWidget {
                                             Colors.white.withValues(alpha: 0.2),
                                         onChanged: (_) {},
                                         onChangeEnd: (value) {
+                                          if (loading) {
+                                            return;
+                                          }
                                           audioPlayer.seek(
                                               Duration(seconds: value.toInt()));
                                         },
@@ -197,14 +215,19 @@ class SubtitleWidget extends StatelessWidget {
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          _formatDuration(positionDuration),
+                                          loading
+                                              ? "0:00"
+                                              : _formatDuration(
+                                                  positionDuration),
                                           style: PmpTextStyles.sub.copyWith(
                                             color: Colors.white
                                                 .withValues(alpha: 0.9),
                                           ),
                                         ),
                                         Text(
-                                          _formatDuration(totalDuration),
+                                          loading
+                                              ? "0:00"
+                                              : _formatDuration(totalDuration),
                                           style: PmpTextStyles.sub.copyWith(
                                             color: Colors.white
                                                 .withValues(alpha: 0.9),

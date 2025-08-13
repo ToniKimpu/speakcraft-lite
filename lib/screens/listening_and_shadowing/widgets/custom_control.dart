@@ -181,7 +181,10 @@ class _CustomControlState extends State<CustomControl> {
                 color: Colors.transparent,
                 child: InkWell(
                   borderRadius: BorderRadius.circular(6),
-                  onTap: () => widget.onVocabulary(),
+                  onTap: () {
+                    _checkReadyToPlay();
+                    widget.onVocabulary.call();
+                  },
                   child: Container(
                     height: 24,
                     padding:
