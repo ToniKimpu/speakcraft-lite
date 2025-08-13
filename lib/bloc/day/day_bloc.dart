@@ -5,6 +5,8 @@ import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/model/exercise/exercise.dart';
+import 'package:pmp_english/model/lesson/lesson.dart';
 import 'package:pmp_english/services/supabase_service.dart';
 
 import '../../model/day/day.dart';
@@ -45,12 +47,10 @@ class DayBloc extends Bloc<DayEvent, DayState> {
     try {
       final dataRes = await supabase
           .from('days')
-          .select(
-              '*, lessons(*),days_users_relation(*),exercises(*,exercises_users_relation(*))')
+          .select('*,days_users_relation(*)')
           .eq('days_users_relation.user_id', GlobalAppState().currentUser.id!)
-          .eq('lessons.is_deleted', false)
-          .eq('exercises.is_deleted', false)
-          .eq('is_deleted', false);
+          .eq('is_deleted', false)
+          .order("order_number", ascending: true);
       if (dataRes.isEmpty) {
         emit(const DayState.loaded(null, <Day>[]));
         return;
@@ -60,9 +60,51 @@ class DayBloc extends Bloc<DayEvent, DayState> {
         emit(const DayState.loaded(null, <Day>[]));
         return;
       }
-      emit(DayState.loaded(null, days));
+      // Fetch all lessons for these days in one go
+      final lessonDataRes = await supabase
+          .from("lessons")
+          .select("*")
+          .eq("is_deleted", false)
+          .inFilter("day_id", days.map((d) => d.id).toList())
+          .order("created_at", ascending: true);
+
+      final allLessons = Lesson.fromJsonList(lessonDataRes);
+
+// Fetch all exercises for these days in one go
+      final exerciseDataRes = await supabase
+          .from("exercises")
+          .select("*, exercises_users_relation(*)")
+          .eq("is_deleted", false)
+          .inFilter("day_id", days.map((d) => d.id).toList())
+          .order("created_at", ascending: true);
+
+      final allExercises = Exercise.fromJsonList1(exerciseDataRes);
+
+// Group lessons and exercises by day_id
+      final lessonsByDay = {
+        for (var id in days.map((d) => d.id))
+          id: allLessons.where((l) => l.dayId == id).toList()
+      };
+
+      final exercisesByDay = {
+        for (var id in days.map((d) => d.id))
+          id: allExercises.where((e) => e.dayId == id).toList()
+      };
+
+// Build updated days
+      final updatedDays = days
+          .map((day) => day.copyWith(
+                lessons: lessonsByDay[day.id] ?? [],
+                exercises: exercisesByDay[day.id] ?? [],
+              ))
+          .toList();
+
+      final lesson = updatedDays.first.lessons.first;
+      debugPrint("_mapLoadDaysToState: ${lesson.lessonName} lesson Name");
+
+      emit(DayState.loaded(null, updatedDays));
     } catch (e) {
-      debugPrint(e.toString());
+      debugPrint("_mapLoadDayToState: ${e.toString()}");
       if (e is SocketException || e is TimeoutException) {
         emit(const DayState.socketError(
             "Please check your internet connection and try again."));

@@ -24,7 +24,8 @@ class Exercise with _$Exercise {
         isComplete: json['exercises_users_relation'].isNotEmpty,
       );
 
-  static List<Exercise> fromJsonList1(List<dynamic> jsonList) {
+  static List<Exercise> fromJsonList1(List<dynamic>? jsonList) {
+    if (jsonList == null) return [];
     return jsonList.map((json) => Exercise.fromJson1(json)).toList();
   }
 }

@@ -16,7 +16,8 @@ class Lesson with _$Lesson {
   }) = _Lesson;
 
   factory Lesson.fromJson(Map<String, dynamic> json) => _$LessonFromJson(json);
-  static List<Lesson> fromJsonList(List<dynamic> jsonList) {
+  static List<Lesson> fromJsonList(List<dynamic>? jsonList) {
+    if (jsonList == null) return [];
     return jsonList.map((json) => Lesson.fromJson(json)).toList();
   }
 }

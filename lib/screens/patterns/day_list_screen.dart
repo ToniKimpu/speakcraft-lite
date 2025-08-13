@@ -88,7 +88,7 @@ class _DayListScreenState extends State<DayListScreen> {
                         ),
                       ),
                     ),
-                    
+
                     const SizedBox(width: 12),
                     // Progress Button
                     Material(
@@ -127,7 +127,6 @@ class _DayListScreenState extends State<DayListScreen> {
                         ),
                       ),
                     ),
-                 
                   ],
                 );
               },

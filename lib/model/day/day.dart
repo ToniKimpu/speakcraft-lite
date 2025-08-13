@@ -29,8 +29,8 @@ class Day with _$Day {
       orderNumber: json['order_number'] as int,
       createdAt: DateTime.parse(json['created_at'] as String),
       isComplete: json['days_users_relation'].isNotEmpty,
-      lessons: Lesson.fromJsonList(json['lessons'] as List<dynamic>),
-      exercises: Exercise.fromJsonList1(json['exercises'] as List<dynamic>),
+      lessons: Lesson.fromJsonList(json['lessons'] as List<dynamic>?),
+      exercises: Exercise.fromJsonList1(json['exercises'] as List<dynamic>?),
     );
   }
 }
