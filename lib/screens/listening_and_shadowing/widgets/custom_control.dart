@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_track_shape.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart'
+    as yt_player;
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_colors.dart';
@@ -53,6 +55,10 @@ class _CustomControlState extends State<CustomControl> {
     final remainingDuration = widget.endDuration - adjustedCurrentPosition;
     sliderPosition = currentPosition.inSeconds
         .clamp(0, (widget.endPosition - widget.startPosition));
+    final playerState = widget.controller.value.playerState;
+    final isLoading = playerState == yt_player.PlayerState.buffering ||
+        playerState == yt_player.PlayerState.unStarted ||
+        playerState == yt_player.PlayerState.cued;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -219,24 +225,30 @@ class _CustomControlState extends State<CustomControl> {
                           }
                           setState(() {});
                         },
-                        child: Container(
-                          width: 24,
-                          height: 24,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: Colors.white,
-                              width: 1,
-                            ),
-                          ),
-                          child: Icon(
-                            widget.controller.value.isPlaying
-                                ? Icons.pause
-                                : Icons.play_arrow,
-                            color: PmpColors.white,
-                            size: 18,
-                          ),
-                        ),
+                        child: isLoading
+                            ? const SizedBox(
+                                width: 18,
+                                height: 18,
+                                child: CircularProgressIndicator(),
+                              )
+                            : Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.white,
+                                    width: 1,
+                                  ),
+                                ),
+                                child: Icon(
+                                  widget.controller.value.isPlaying
+                                      ? Icons.pause
+                                      : Icons.play_arrow,
+                                  color: PmpColors.white,
+                                  size: 18,
+                                ),
+                              ),
                       ),
                     )
                   : const SizedBox(

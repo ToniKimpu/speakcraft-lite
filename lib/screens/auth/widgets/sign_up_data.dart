@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_button.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_card.dart';
@@ -88,9 +87,6 @@ class _SignUpDataState extends State<SignUpData> {
                 colorBlendMode: BlendMode.srcIn,
               ),
             ),
-          ).animate().fadeIn(duration: 600.ms).scale(delay: 200.ms),
-          const SizedBox(
-            height: 16,
           ),
           Text(
             'Welcome to PMP English',
@@ -100,9 +96,7 @@ class _SignUpDataState extends State<SignUpData> {
             ),
             textAlign: TextAlign.center,
           )
-              .animate()
-              .fadeIn(duration: 600.ms)
-              .slideY(begin: 0.3, delay: 200.ms),
+              ,
           const SizedBox(
             height: 12,
           ),
@@ -114,9 +108,7 @@ class _SignUpDataState extends State<SignUpData> {
             ),
             textAlign: TextAlign.center,
           )
-              .animate()
-              .fadeIn(duration: 600.ms)
-              .slideY(begin: 0.3, delay: 400.ms),
+              ,
           const SizedBox(height: 40),
           AuthCard(
             child: Column(
@@ -236,9 +228,7 @@ class _SignUpDataState extends State<SignUpData> {
                     ),
                   ],
                 )
-                    .animate()
-                    .fadeIn(duration: 600.ms)
-                    .slideY(begin: 0.3, delay: 1000.ms),
+                   ,
               ],
             ),
           ),

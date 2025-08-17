@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
@@ -85,12 +84,12 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 150,
                   width: 150,
                 ),
-              ).animate().fadeIn(duration: 600.ms).scale(delay: 200.ms),
+              ),
               const SizedBox(height: 24),
               Text(
                 "PMP English App",
                 style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
-              ).animate().fadeIn(delay: 400.ms).slideY(begin: 0.3, end: 0),
+              ),
             ],
           ),
         ),

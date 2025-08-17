@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../config/pmp_colors.dart';
 
@@ -32,9 +31,6 @@ class AuthCard extends StatelessWidget {
       ),
       padding: const EdgeInsets.all(24),
       child: child,
-    ).animate().fadeIn(duration: 600.ms).slideY(
-          begin: 0.3,
-          delay: Duration(milliseconds: delayMilliseconds),
-        );
+    );
   }
 }

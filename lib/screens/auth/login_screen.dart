@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/auth/auth_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
@@ -109,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     colorBlendMode: BlendMode.srcIn,
                   ),
                 ),
-              ).animate().fadeIn(duration: 600.ms).scale(delay: 200.ms),
+              ),
               const SizedBox(height: 32),
               Text(
                 'Welcome Back',
@@ -120,9 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                 textAlign: TextAlign.center,
               )
-                  .animate()
-                  .fadeIn(duration: 600.ms)
-                  .slideY(begin: 0.3, delay: 200.ms),
+                ,
               const SizedBox(height: 8),
               Text(
                 'Sign in to continue learning',
@@ -132,9 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                 textAlign: TextAlign.center,
               )
-                  .animate()
-                  .fadeIn(duration: 600.ms)
-                  .slideY(begin: 0.3, delay: 400.ms),
+               ,
               const SizedBox(height: 40),
               AuthCard(
                 child: Column(
@@ -228,10 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                     ),
                   ],
-                ).animate().fadeIn(duration: 600.ms).slideY(
-                      begin: 0.3,
-                      delay: const Duration(milliseconds: 600),
-                    ),
+                ),
               ),
               const SizedBox(height: 16),
               // Row(
