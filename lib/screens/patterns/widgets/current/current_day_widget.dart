@@ -72,7 +72,7 @@ class _CurrentDayWidgetState extends State<CurrentDayWidget> {
             Container(
               height: 1,
               width: double.infinity,
-              color: Colors.white.withOpacity(0.1),
+              color: Colors.white.withValues(alpha: 0.1),
               margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
             ),
           ...widget.day.lessons.map(
@@ -82,7 +82,7 @@ class _CurrentDayWidgetState extends State<CurrentDayWidget> {
             Container(
               height: 1,
               width: double.infinity,
-              color: Colors.white.withOpacity(0.1),
+              color: Colors.white.withValues(alpha: 0.1),
               margin: const EdgeInsets.symmetric(
                 vertical: 12,
                 horizontal: 12,

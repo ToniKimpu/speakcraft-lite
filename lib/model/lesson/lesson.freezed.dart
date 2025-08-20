@@ -23,6 +23,8 @@ mixin _$Lesson {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'lesson_name')
   String get lessonName => throw _privateConstructorUsedError;
+  @JsonKey(defaultValue: "", name: 'subtitle')
+  String? get subtitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'day_id')
   int get dayId => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_deleted')
@@ -47,6 +49,7 @@ abstract class $LessonCopyWith<$Res> {
   $Res call(
       {int id,
       @JsonKey(name: 'lesson_name') String lessonName,
+      @JsonKey(defaultValue: "", name: 'subtitle') String? subtitle,
       @JsonKey(name: 'day_id') int dayId,
       @JsonKey(name: 'is_deleted') bool isDeleted,
       @JsonKey(name: 'created_at') DateTime createdAt});
@@ -69,6 +72,7 @@ class _$LessonCopyWithImpl<$Res, $Val extends Lesson>
   $Res call({
     Object? id = null,
     Object? lessonName = null,
+    Object? subtitle = freezed,
     Object? dayId = null,
     Object? isDeleted = null,
     Object? createdAt = null,
@@ -82,6 +86,10 @@ class _$LessonCopyWithImpl<$Res, $Val extends Lesson>
           ? _value.lessonName
           : lessonName // ignore: cast_nullable_to_non_nullable
               as String,
+      subtitle: freezed == subtitle
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
       dayId: null == dayId
           ? _value.dayId
           : dayId // ignore: cast_nullable_to_non_nullable
@@ -108,6 +116,7 @@ abstract class _$$LessonImplCopyWith<$Res> implements $LessonCopyWith<$Res> {
   $Res call(
       {int id,
       @JsonKey(name: 'lesson_name') String lessonName,
+      @JsonKey(defaultValue: "", name: 'subtitle') String? subtitle,
       @JsonKey(name: 'day_id') int dayId,
       @JsonKey(name: 'is_deleted') bool isDeleted,
       @JsonKey(name: 'created_at') DateTime createdAt});
@@ -128,6 +137,7 @@ class __$$LessonImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? lessonName = null,
+    Object? subtitle = freezed,
     Object? dayId = null,
     Object? isDeleted = null,
     Object? createdAt = null,
@@ -141,6 +151,10 @@ class __$$LessonImplCopyWithImpl<$Res>
           ? _value.lessonName
           : lessonName // ignore: cast_nullable_to_non_nullable
               as String,
+      subtitle: freezed == subtitle
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
       dayId: null == dayId
           ? _value.dayId
           : dayId // ignore: cast_nullable_to_non_nullable
@@ -163,6 +177,7 @@ class _$LessonImpl implements _Lesson {
   const _$LessonImpl(
       {required this.id,
       @JsonKey(name: 'lesson_name') required this.lessonName,
+      @JsonKey(defaultValue: "", name: 'subtitle') this.subtitle,
       @JsonKey(name: 'day_id') required this.dayId,
       @JsonKey(name: 'is_deleted') required this.isDeleted,
       @JsonKey(name: 'created_at') required this.createdAt});
@@ -176,6 +191,9 @@ class _$LessonImpl implements _Lesson {
   @JsonKey(name: 'lesson_name')
   final String lessonName;
   @override
+  @JsonKey(defaultValue: "", name: 'subtitle')
+  final String? subtitle;
+  @override
   @JsonKey(name: 'day_id')
   final int dayId;
   @override
@@ -187,7 +205,7 @@ class _$LessonImpl implements _Lesson {
 
   @override
   String toString() {
-    return 'Lesson(id: $id, lessonName: $lessonName, dayId: $dayId, isDeleted: $isDeleted, createdAt: $createdAt)';
+    return 'Lesson(id: $id, lessonName: $lessonName, subtitle: $subtitle, dayId: $dayId, isDeleted: $isDeleted, createdAt: $createdAt)';
   }
 
   @override
@@ -198,6 +216,8 @@ class _$LessonImpl implements _Lesson {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.lessonName, lessonName) ||
                 other.lessonName == lessonName) &&
+            (identical(other.subtitle, subtitle) ||
+                other.subtitle == subtitle) &&
             (identical(other.dayId, dayId) || other.dayId == dayId) &&
             (identical(other.isDeleted, isDeleted) ||
                 other.isDeleted == isDeleted) &&
@@ -207,8 +227,8 @@ class _$LessonImpl implements _Lesson {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, lessonName, dayId, isDeleted, createdAt);
+  int get hashCode => Object.hash(
+      runtimeType, id, lessonName, subtitle, dayId, isDeleted, createdAt);
 
   /// Create a copy of Lesson
   /// with the given fields replaced by the non-null parameter values.
@@ -230,6 +250,7 @@ abstract class _Lesson implements Lesson {
   const factory _Lesson(
           {required final int id,
           @JsonKey(name: 'lesson_name') required final String lessonName,
+          @JsonKey(defaultValue: "", name: 'subtitle') final String? subtitle,
           @JsonKey(name: 'day_id') required final int dayId,
           @JsonKey(name: 'is_deleted') required final bool isDeleted,
           @JsonKey(name: 'created_at') required final DateTime createdAt}) =
@@ -242,6 +263,9 @@ abstract class _Lesson implements Lesson {
   @override
   @JsonKey(name: 'lesson_name')
   String get lessonName;
+  @override
+  @JsonKey(defaultValue: "", name: 'subtitle')
+  String? get subtitle;
   @override
   @JsonKey(name: 'day_id')
   int get dayId;

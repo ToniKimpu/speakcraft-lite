@@ -101,8 +101,9 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     _playerStateSubscription =
         _audioPlayer.playerStateStream.listen((playerState) {
       // debugPrint("_playerStateSubscription: ${playerState.playing} playing");
-      _audioPlayerStateTrackerBloc
-          .add(AudioPlayerEvent.updatePlayerState(playerState));
+      _audioPlayerStateTrackerBloc.add(
+        AudioPlayerEvent.updatePlayerState(playerState),
+      );
     });
     _positionSub = _audioPlayer.positionStream.listen(
       (pos) {

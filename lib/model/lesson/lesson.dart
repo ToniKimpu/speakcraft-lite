@@ -10,6 +10,7 @@ class Lesson with _$Lesson {
   const factory Lesson({
     required int id,
     @JsonKey(name: 'lesson_name') required String lessonName,
+    @JsonKey(defaultValue: "", name: 'subtitle') String? subtitle,
     @JsonKey(name: 'day_id') required int dayId,
     @JsonKey(name: 'is_deleted') required bool isDeleted,
     @JsonKey(name: 'created_at') required DateTime createdAt,

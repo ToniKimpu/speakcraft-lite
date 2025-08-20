@@ -32,9 +32,22 @@ class LessonItem extends StatelessWidget {
               width: 12,
             ),
             Expanded(
-              child: Text(
-                lesson.lessonName,
-                style: PmpTextStyles.body2Regular.copyWith(color: Colors.white),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    lesson.lessonName,
+                    style: PmpTextStyles.body2Regular
+                        .copyWith(color: Colors.white),
+                  ),
+                  if (lesson.subtitle!.isNotEmpty)
+                    Text(
+                      lesson.subtitle!,
+                      style: PmpTextStyles.body2Regular
+                          .copyWith(color: Colors.white),
+                    ),
+                ],
               ),
             ),
             const SizedBox(

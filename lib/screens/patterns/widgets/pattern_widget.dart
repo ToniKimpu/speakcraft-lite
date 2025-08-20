@@ -15,10 +15,13 @@ class PatternWidget extends StatelessWidget {
     required this.pattern,
     required this.audioPlayerBloc,
     required this.audioPositionTrackerBloc,
+    required this.audioPlayerStateTrackerBloc,
   });
   final AudioPlayer audioPlayer;
   final Pattern pattern;
-  final AudioPlayerBloc audioPlayerBloc, audioPositionTrackerBloc;
+  final AudioPlayerBloc audioPlayerBloc,
+      audioPositionTrackerBloc,
+      audioPlayerStateTrackerBloc;
   // final svAggreements = "I => am;He,She,It => is;We,You,They => are";
 
   @override
@@ -63,60 +66,96 @@ class PatternWidget extends StatelessWidget {
                     ),
                     if (pattern.audioPath != null)
                       BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-                        bloc: audioPlayerBloc,
-                        builder: (context, state) {
-                          final isPlaying = state.maybeWhen(
-                            initial: () => false,
-                            onPause: () => false,
-                            onPlay: () => true,
-                            onStop: () => false,
-                            orElse: () => false,
-                          );
+                        bloc: audioPlayerStateTrackerBloc,
+                        builder: (context, audioPlayerState) {
+                          return BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
+                            bloc: audioPlayerBloc,
+                            builder: (context, state) {
+                              final currentPlayerState =
+                                  audioPlayerState.maybeWhen(
+                                onUpdatePlayerState: (playerState) =>
+                                    playerState,
+                                orElse: () => null,
+                              );
+                              final loading =
+                                  (currentPlayerState?.processingState ==
+                                          ProcessingState.loading ||
+                                      currentPlayerState?.processingState ==
+                                          ProcessingState.buffering);
+                              final isCompleted =
+                                  currentPlayerState?.processingState ==
+                                      ProcessingState.completed;
 
-                          return InkWell(
-                            borderRadius: BorderRadius.circular(100),
-                            onTap: () {
-                              if (isPlaying) {
-                                audioPlayerBloc
-                                    .add(const AudioPlayerEvent.pause());
-                              } else {
-                                audioPlayerBloc
-                                    .add(const AudioPlayerEvent.play());
-                              }
+                              final isPlaying = state.maybeWhen(
+                                initial: () => false,
+                                onPause: () => false,
+                                onPlay: () => true,
+                                onStop: () => false,
+                                orElse: () => false,
+                              );
+
+                              return InkWell(
+                                borderRadius: BorderRadius.circular(100),
+                                onTap: () {
+                                  if (loading) {
+                                    return;
+                                  }
+                                  if (isPlaying) {
+                                    audioPlayerBloc
+                                        .add(const AudioPlayerEvent.pause());
+                                  } else {
+                                    audioPlayerBloc
+                                        .add(const AudioPlayerEvent.play());
+                                  }
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.all(4),
+                                  child: loading
+                                      ? const SizedBox(
+                                          width: 20,
+                                          height: 20,
+                                          child: CircularProgressIndicator(
+                                            color: Colors.white,
+                                          ),
+                                        )
+                                      : Container(
+                                          width: 24,
+                                          height: 24,
+                                          decoration: BoxDecoration(
+                                            gradient: const LinearGradient(
+                                              colors: [
+                                                Color(0xFFFFD700), // Gold
+                                                Color(0xFFFFA500), // Deep Gold
+                                                Color(
+                                                    0xFFB8860B), // Dark Golden
+                                              ],
+                                              begin: Alignment.topLeft,
+                                              end: Alignment.bottomRight,
+                                            ),
+                                            shape: BoxShape.circle,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black
+                                                    .withValues(alpha: 0.2),
+                                                spreadRadius: 3,
+                                                blurRadius: 8,
+                                                offset: const Offset(0, 4),
+                                              ),
+                                            ],
+                                          ),
+                                          child: Icon(
+                                            isCompleted
+                                                ? Icons.replay
+                                                : isPlaying
+                                                    ? Icons.pause
+                                                    : Icons.play_arrow,
+                                            color: Colors.white,
+                                            size: 22,
+                                          ),
+                                        ),
+                                ),
+                              );
                             },
-                            child: Padding(
-                              padding: const EdgeInsets.all(4),
-                              child: Container(
-                                width: 24,
-                                height: 24,
-                                decoration: BoxDecoration(
-                                  gradient: const LinearGradient(
-                                    colors: [
-                                      Color(0xFFFFD700), // Gold
-                                      Color(0xFFFFA500), // Deep Gold
-                                      Color(0xFFB8860B), // Dark Golden
-                                    ],
-                                    begin: Alignment.topLeft,
-                                    end: Alignment.bottomRight,
-                                  ),
-                                  shape: BoxShape.circle,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color:
-                                          Colors.black.withValues(alpha: 0.2),
-                                      spreadRadius: 3,
-                                      blurRadius: 8,
-                                      offset: const Offset(0, 4),
-                                    ),
-                                  ],
-                                ),
-                                child: Icon(
-                                  isPlaying ? Icons.pause : Icons.play_arrow,
-                                  color: Colors.white,
-                                  size: 16,
-                                ),
-                              ),
-                            ),
                           );
                         },
                       ),

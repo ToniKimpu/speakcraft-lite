@@ -28,6 +28,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
   final _patternBloc = PatternBloc();
   final _audioPlayerBloc = AudioPlayerBloc();
   final _audioPositionTrackerBloc = AudioPlayerBloc();
+  final _audioPlayerStateTrackerBloc = AudioPlayerBloc();
   final _audioPlayer = AudioPlayer();
   int _currentPage = 0;
   StreamSubscription? _playerStateSubscription;
@@ -39,6 +40,9 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
     _patternBloc.add(PatternEvent.loadPatternsByLesson(widget.lesson.id));
     _playerStateSubscription =
         _audioPlayer.playerStateStream.listen((playerState) {
+      _audioPlayerStateTrackerBloc.add(
+        AudioPlayerEvent.updatePlayerState(playerState),
+      );
       if (playerState.processingState == ProcessingState.completed) {
         _audioPlayerBloc.add(const AudioPlayerEvent.stop());
         _audioPlayer.seek(Duration.zero);
@@ -158,6 +162,8 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                                   audioPlayerBloc: _audioPlayerBloc,
                                   audioPositionTrackerBloc:
                                       _audioPositionTrackerBloc,
+                                  audioPlayerStateTrackerBloc:
+                                      _audioPlayerStateTrackerBloc,
                                 );
                               },
                             ),
