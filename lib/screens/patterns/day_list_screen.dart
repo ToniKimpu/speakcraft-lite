@@ -39,7 +39,7 @@ class _DayListScreenState extends State<DayListScreen> {
   Widget build(BuildContext context) {
     return MainScaffold(
       appBar: AppBar(
-        title: const Text('Spoken Pattern Tutorial'),
+        title: const Text('Userful Spoken Patterns'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),

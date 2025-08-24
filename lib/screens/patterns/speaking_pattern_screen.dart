@@ -26,7 +26,6 @@ class SpeakingPatternScreen extends StatefulWidget {
 
 class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
   final _patternBloc = PatternBloc();
-  final _audioPlayerBloc = AudioPlayerBloc();
   final _audioPositionTrackerBloc = AudioPlayerBloc();
   final _audioPlayerStateTrackerBloc = AudioPlayerBloc();
   final _audioPlayer = AudioPlayer();
@@ -38,16 +37,13 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
   void initState() {
     super.initState();
     _patternBloc.add(PatternEvent.loadPatternsByLesson(widget.lesson.id));
-    _playerStateSubscription =
-        _audioPlayer.playerStateStream.listen((playerState) {
-      _audioPlayerStateTrackerBloc.add(
-        AudioPlayerEvent.updatePlayerState(playerState),
-      );
-      if (playerState.processingState == ProcessingState.completed) {
-        _audioPlayerBloc.add(const AudioPlayerEvent.stop());
-        _audioPlayer.seek(Duration.zero);
-      }
-    });
+    _playerStateSubscription = _audioPlayer.playerStateStream.listen(
+      (playerState) {
+        _audioPlayerStateTrackerBloc.add(
+          AudioPlayerEvent.updatePlayerState(playerState),
+        );
+      },
+    );
     _positionSub = _audioPlayer.positionStream.listen(
       (pos) {
         _audioPositionTrackerBloc
@@ -71,14 +67,12 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
       onPopInvokedWithResult: (didPop, result) {
         if (didPop) return;
         if (_currentPage > 0) {
-          _audioPlayerBloc.add(const AudioPlayerEvent.stop());
+          _audioPlayer.stop();
           setState(() {
             _currentPage--;
             if (_patterns.isNotEmpty &&
                 _patterns[_currentPage].audioPath != null) {
-              _audioPlayerBloc.add(
-                AudioPlayerEvent.setUrl(_patterns[_currentPage].audioPath!),
-              );
+              _audioPlayer.setUrl(_patterns[_currentPage].audioPath!);
             }
           });
           return;
@@ -87,7 +81,9 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
       },
       child: MainScaffold(
         appBar: AppBar(
-          title: Text(widget.lesson.lessonName),
+          title: Text(
+            widget.lesson.lessonName,
+          ),
         ),
         body: MultiBlocProvider(
           providers: [
@@ -95,88 +91,64 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
               create: (context) => _patternBloc,
             ),
             BlocProvider<AudioPlayerBloc>(
-              create: (context) => _audioPlayerBloc,
-            ),
-            BlocProvider<AudioPlayerBloc>(
               create: (context) => _audioPositionTrackerBloc,
             ),
           ],
-          child: BlocListener<AudioPlayerBloc, AudioPlayerState>(
-            bloc: _audioPlayerBloc,
-            listener: (context, state) {
-              state.maybeWhen(
-                getUrl: (audioUrl) {
-                  _audioPlayer.setUrl(audioUrl);
+          child: BlocBuilder<PatternBloc, PatternState>(
+            builder: (context, state) {
+              return state.maybeWhen(
+                loading: () {
+                  return const Center(
+                    child: SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(),
+                    ),
+                  );
                 },
-                onPlay: () {
-                  _audioPlayer.play();
-                },
-                onPause: () {
-                  _audioPlayer.pause();
-                },
-                onStop: () {
-                  _audioPlayer.stop();
-                },
-                orElse: () => -1,
-              );
-            },
-            child: BlocBuilder<PatternBloc, PatternState>(
-              builder: (context, state) {
-                return state.maybeWhen(
-                  loading: () {
-                    return const Center(
-                      child: SizedBox(
-                        width: 18,
-                        height: 18,
-                        child: CircularProgressIndicator(),
+                loaded: (patterns) {
+                  if (patterns.isEmpty) {
+                    return Center(
+                      child: Text(
+                        AppLocalizations.of(context).txtWillUploadSoon,
+                        style: PmpTextStyles.body2Semi
+                            .copyWith(color: Colors.white),
                       ),
                     );
-                  },
-                  loaded: (patterns) {
-                    if (patterns.isEmpty) {
-                      return Center(
-                        child: Text(
-                          AppLocalizations.of(context).txtWillUploadSoon,
-                          style: PmpTextStyles.body2Semi
-                              .copyWith(color: Colors.white),
-                        ),
-                      );
-                    }
-                    if (_patterns.isEmpty) {
-                      _patterns.addAll(patterns);
-                    }
-                    if (patterns.first.audioPath != null && _currentPage == 0) {
-                      _audioPlayer.setUrl(patterns.first.audioPath!.trim());
-                    }
-                    return Column(
-                      children: [
-                        Expanded(
-                          child: IndexedStack(
-                            index: _currentPage,
-                            children: List.generate(
-                              patterns.length,
-                              (index) {
-                                return PatternWidget(
-                                  audioPlayer: _audioPlayer,
-                                  pattern: patterns[index],
-                                  audioPlayerBloc: _audioPlayerBloc,
-                                  audioPositionTrackerBloc:
-                                      _audioPositionTrackerBloc,
-                                  audioPlayerStateTrackerBloc:
-                                      _audioPlayerStateTrackerBloc,
-                                );
-                              },
-                            ),
+                  }
+                  if (_patterns.isEmpty) {
+                    _patterns.addAll(patterns);
+                  }
+                  if (patterns.first.audioPath != null && _currentPage == 0) {
+                    _audioPlayer.setUrl(patterns.first.audioPath!.trim());
+                  }
+                  return Column(
+                    children: [
+                      Expanded(
+                        child: IndexedStack(
+                          index: _currentPage,
+                          children: List.generate(
+                            patterns.length,
+                            (index) {
+                              return PatternWidget(
+                                audioPlayer: _audioPlayer,
+                                pattern: patterns[index],
+                                audioPositionTrackerBloc:
+                                    _audioPositionTrackerBloc,
+                                audioPlayerStateTrackerBloc:
+                                    _audioPlayerStateTrackerBloc,
+                              );
+                            },
                           ),
                         ),
-                        _buildFooter(patterns),
-                      ],
-                    );
-                  },
-                  orElse: () => Container(),
-                );
-              },
-            ),
+                      ),
+                      _buildFooter(patterns),
+                    ],
+                  );
+                },
+                orElse: () => Container(),
+              );
+            },
           ),
         ),
       ),
@@ -212,15 +184,15 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
       onTap: _currentPage <= 0
           ? null
           : () {
-              _audioPlayerBloc.add(const AudioPlayerEvent.stop());
-              setState(() {
-                _currentPage--;
-                if (patterns[_currentPage].audioPath != null) {
-                  _audioPlayerBloc.add(
-                    AudioPlayerEvent.setUrl(patterns[_currentPage].audioPath!),
-                  );
-                }
-              });
+              _audioPlayer.stop();
+              setState(
+                () {
+                  _currentPage--;
+                  if (patterns[_currentPage].audioPath != null) {
+                    _audioPlayer.setUrl(patterns[_currentPage].audioPath!);
+                  }
+                },
+              );
             },
       child: Ink(
         padding: const EdgeInsets.all(6),
@@ -306,15 +278,15 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
       onTap: _currentPage >= totalPatterns
           ? null
           : () {
-              _audioPlayerBloc.add(const AudioPlayerEvent.stop());
-              setState(() {
-                _currentPage++;
-                if (patterns[_currentPage].audioPath != null) {
-                  _audioPlayerBloc.add(
-                    AudioPlayerEvent.setUrl(patterns[_currentPage].audioPath!),
-                  );
-                }
-              });
+              _audioPlayer.stop();
+              setState(
+                () {
+                  _currentPage++;
+                  if (patterns[_currentPage].audioPath != null) {
+                    _audioPlayer.setUrl(patterns[_currentPage].audioPath!);
+                  }
+                },
+              );
             },
       child: Ink(
         padding: const EdgeInsets.all(6),

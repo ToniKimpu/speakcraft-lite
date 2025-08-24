@@ -105,7 +105,7 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
     try {
       final dataRes = await supabase
           .from('patterns')
-          .select('*,pattern_examples(*)')
+          .select('*,subject_verb_agreements(name),pattern_examples(*)')
           .eq('lesson_id', lessonId)
           .eq("is_deleted", false)
           .eq("pattern_examples.is_deleted", false)
@@ -119,8 +119,9 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
         if (p.audioPath == null || p.audioPath!.isEmpty) return p;
         return p.copyWith(
           audioPath: SupabaseService().getPublicUrl(
-              bucketFolder: SupabaseBucketFolders.spokenPatternAudios,
-              fileName: p.audioPath),
+            bucketFolder: SupabaseBucketFolders.spokenPatternAudios,
+            fileName: p.audioPath,
+          ),
         );
       }).toList();
       emit(PatternState.loaded(newPatterns));

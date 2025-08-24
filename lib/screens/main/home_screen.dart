@@ -72,9 +72,12 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ModuleWidget(
-              title: 'Spoken Pattern Tutorial',
+              title: 'Useful Spoken Patterns',
               label1: 'Spoken Patternပေါင်း (၁၀၀)ကျော်လေ့လာမယ်',
               label2: 'နေ့စဉ်ပုံမှန် လေ့လာမယ်',
+              iconTitle: Icons.menu_book,
+              iconLabel1: Icons.format_quote,
+              iconLabel2: Icons.calendar_month,
               onPressed: () {
                 Navigator.pushNamed(context, PmpRoutes.dayList);
               },
@@ -84,6 +87,9 @@ class _HomePageState extends State<HomePage> {
               title: 'Listening & Shadowing',
               label1: 'Listening လုပ်မယ်။',
               label2: 'Shadowing လိုက်လုပ်မယ်။',
+              iconTitle: Icons.hearing,
+              iconLabel1: Icons.headphones,
+              iconLabel2: Icons.surround_sound,
               onPressed: () {
                 Navigator.pushNamed(context, PmpRoutes.listeningListPage);
               },
@@ -93,6 +99,9 @@ class _HomePageState extends State<HomePage> {
               title: 'Practice with AI',
               label1: 'sentence တွေကို ကိုယ်တိုင်လေ့ကျင့်မယ်။',
               label2: 'AI ကိုမှန်မမှန်ပြန်စစ်ခိုင်းမယ်။',
+              iconTitle: Icons.smart_toy,
+              iconLabel1: Icons.psychology,
+              iconLabel2: Icons.auto_awesome,
               onPressed: () {
                 Navigator.pushNamed(
                     context, PmpRoutes.aiSentencePracticeListScreen);

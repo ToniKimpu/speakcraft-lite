@@ -24,7 +24,8 @@ mixin _$Pattern {
   String get pattern => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: 'subject_verb_agreement')
+  @JsonKey(
+      name: 'subject_verb_agreements', fromJson: _subjectVerbAgreementFromJson)
   String? get subjectVerbAgreement => throw _privateConstructorUsedError;
   @JsonKey(name: 'audio_path')
   String? get audioPath => throw _privateConstructorUsedError;
@@ -57,7 +58,10 @@ abstract class $PatternCopyWith<$Res> {
       String pattern,
       String? title,
       String? description,
-      @JsonKey(name: 'subject_verb_agreement') String? subjectVerbAgreement,
+      @JsonKey(
+          name: 'subject_verb_agreements',
+          fromJson: _subjectVerbAgreementFromJson)
+      String? subjectVerbAgreement,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -149,7 +153,10 @@ abstract class _$$PatternImplCopyWith<$Res> implements $PatternCopyWith<$Res> {
       String pattern,
       String? title,
       String? description,
-      @JsonKey(name: 'subject_verb_agreement') String? subjectVerbAgreement,
+      @JsonKey(
+          name: 'subject_verb_agreements',
+          fromJson: _subjectVerbAgreementFromJson)
+      String? subjectVerbAgreement,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -235,7 +242,10 @@ class _$PatternImpl implements _Pattern {
       required this.pattern,
       this.title,
       this.description,
-      @JsonKey(name: 'subject_verb_agreement') this.subjectVerbAgreement,
+      @JsonKey(
+          name: 'subject_verb_agreements',
+          fromJson: _subjectVerbAgreementFromJson)
+      this.subjectVerbAgreement,
       @JsonKey(name: 'audio_path') this.audioPath,
       @JsonKey(name: 'lesson_id') this.lessonId,
       @JsonKey(name: 'created_at') this.createdAt,
@@ -257,7 +267,8 @@ class _$PatternImpl implements _Pattern {
   @override
   final String? description;
   @override
-  @JsonKey(name: 'subject_verb_agreement')
+  @JsonKey(
+      name: 'subject_verb_agreements', fromJson: _subjectVerbAgreementFromJson)
   final String? subjectVerbAgreement;
   @override
   @JsonKey(name: 'audio_path')
@@ -349,7 +360,9 @@ abstract class _Pattern implements Pattern {
       required final String pattern,
       final String? title,
       final String? description,
-      @JsonKey(name: 'subject_verb_agreement')
+      @JsonKey(
+          name: 'subject_verb_agreements',
+          fromJson: _subjectVerbAgreementFromJson)
       final String? subjectVerbAgreement,
       @JsonKey(name: 'audio_path') final String? audioPath,
       @JsonKey(name: 'lesson_id') final int? lessonId,
@@ -370,7 +383,8 @@ abstract class _Pattern implements Pattern {
   @override
   String? get description;
   @override
-  @JsonKey(name: 'subject_verb_agreement')
+  @JsonKey(
+      name: 'subject_verb_agreements', fromJson: _subjectVerbAgreementFromJson)
   String? get subjectVerbAgreement;
   @override
   @JsonKey(name: 'audio_path')

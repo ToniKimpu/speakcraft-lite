@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/model/pattern_example/pattern_example.dart';
+import 'package:pmp_english/screens/patterns/widgets/playing_indicator_widget.dart';
 
 import '../../../config/pmp_text_styles.dart';
 
@@ -32,48 +32,67 @@ class ExampleListWidget extends StatelessWidget {
           int nextEnd = patternExamples[index + 1].startAt;
           selected = currentPosition >= end && currentPosition < nextEnd;
         }
-        return InkWell(
-          onTap: () {
-            audioPlayer.seek(Duration(seconds: patternExample.startAt));
-          },
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
-            decoration: BoxDecoration(
-              color: selected ? Colors.white.withValues(alpha: 0.5) : null,
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.circle,
-                  size: 12,
-                  color: PmpColors.white,
-                ),
-                const SizedBox(
-                  width: 12,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        patternExample.englishText,
-                        style: PmpTextStyles.body2Semi.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      if (patternExample.burmeseText != null)
+        return Material(
+          color: selected
+              ? Colors.white.withValues(alpha: 0.5)
+              : Colors.transparent,
+          child: InkWell(
+            onTap: () {
+              bool isLoading =
+                  audioPlayer.processingState == ProcessingState.loading ||
+                      audioPlayer.processingState == ProcessingState.buffering;
+              if (isLoading) {
+                return;
+              }
+              audioPlayer.seek(
+                Duration(seconds: patternExample.startAt),
+              );
+              if (!audioPlayer.playing) {
+                audioPlayer.play();
+              }
+            },
+            child: Ink(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Icon(
+                  //   Icons.circle,
+                  //   size: 12,
+                  //   color: selected ? Colors.amber : PmpColors.white,
+                  // ),
+                  PlayingIndicator(
+                    isPlaying: (selected &&
+                        audioPlayer.playing &&
+                        audioPlayer.processingState !=
+                            ProcessingState.completed),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         Text(
-                          patternExample.burmeseText!,
+                          patternExample.englishText,
                           style: PmpTextStyles.body2Semi.copyWith(
                             color: Colors.white,
-                            fontWeight: FontWeight.normal,
                           ),
                         ),
-                    ],
+                        if (patternExample.burmeseText != null)
+                          Text(
+                            patternExample.burmeseText!,
+                            style: PmpTextStyles.body2Semi.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );
