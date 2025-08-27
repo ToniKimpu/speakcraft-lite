@@ -62,7 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     appUser.profilePath != null &&
                             appUser.profilePath!.isNotEmpty
                         ? 'assets/images/profiles/${appUser.profilePath}'
-                        : 'assets/images/app_logo.png',
+                        : "logo/app_logo.png",
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -204,7 +204,9 @@ class _ProfilePageState extends State<ProfilePage> {
                   last: true,
                   label: AppLocalizations.of(context).txtFeedback,
                   icon: "assets/images/ic_feedback.png",
-                  onTap: () {},
+                  onTap: () {
+                    showSuccessSnackbar("Coming soon....");
+                  },
                 ),
               ],
             ),

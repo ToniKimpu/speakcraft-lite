@@ -27,7 +27,7 @@ extension AiduPlayStateExtension on State {
   }
 
   showSuccessSnackbar(String msg) {
-    showSnackbar(msg, PmpColors.white, PmpColors.primary400);
+    showSnackbar(msg, PmpColors.white, PmpColors.green);
   }
 }
 

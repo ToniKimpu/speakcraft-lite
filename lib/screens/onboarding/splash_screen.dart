@@ -6,6 +6,7 @@ import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
+import '../../bloc/internet_checker/internet_checker_bloc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,6 +16,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  bool _socketError = false;
   @override
   void initState() {
     super.initState();
@@ -30,49 +32,69 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
-      body: BlocListener<AuthBloc, AuthState>(
-        listener: (context, state) {
-          state.maybeWhen(
-            authenticated: () {
-              Navigator.pushReplacementNamed(context, PmpRoutes.home);
-            },
-            unauthenticated: () {
-              Navigator.pushReplacementNamed(
-                context,
-                PmpRoutes.loginScreen,
-                // (route) => false,
-              );
-            },
-            onFreeUser: () {
-              Navigator.pushReplacementNamed(
-                context,
-                PmpRoutes.freeUserPage,
-              );
-            },
-            onNewVersion: (appVersion) {
-              Navigator.pushReplacementNamed(
-                context,
-                PmpRoutes.newVersionScreen,
-                arguments: {
-                  'appVersion': appVersion,
+      body: MultiBlocListener(
+        listeners: [
+          BlocListener<AuthBloc, AuthState>(
+            listener: (context, state) {
+              state.maybeWhen(
+                authenticated: () {
+                  Navigator.pushReplacementNamed(context, PmpRoutes.home);
                 },
+                unauthenticated: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    PmpRoutes.loginScreen,
+                    // (route) => false,
+                  );
+                },
+                onFreeUser: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    PmpRoutes.freeUserPage,
+                  );
+                },
+                onNewVersion: (appVersion) {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    PmpRoutes.newVersionScreen,
+                    arguments: {
+                      'appVersion': appVersion,
+                    },
+                  );
+                },
+                deviceIdFailed: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    PmpRoutes.deviceFailedScreen,
+                  );
+                },
+                error: (message) {},
+                socketError: (message) {
+                  _socketError = true;
+                  showErrorSnackbar(
+                    message,
+                  );
+                },
+                orElse: () => Container(),
               );
             },
-            deviceIdFailed: () {
-              Navigator.pushReplacementNamed(
-                context,
-                PmpRoutes.deviceFailedScreen,
+          ),
+          BlocListener<InternetCheckerBloc, InternetCheckerState>(
+            listener: (context, state) {
+              state.maybeWhen(
+                accessInternet: () {
+                  debugPrint("_internetCheckerBloc: Accessing internet");
+                  if (_socketError) {
+                    showSuccessSnackbar("You have access to the internet.");
+                    context.read<AuthBloc>().add(const AuthEvent.authCheck());
+                    _socketError = false;
+                  }
+                },
+                orElse: () => -1,
               );
             },
-            error: (message) {},
-            socketError: (message) {
-              showErrorSnackbar(
-                message,
-              );
-            },
-            orElse: () => Container(),
-          );
-        },
+          ),
+        ],
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +102,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(100),
                 child: Image.asset(
-                  'assets/images/app_logo.png',
+                  "logo/app_logo.png",
                   height: 150,
                   width: 150,
                 ),

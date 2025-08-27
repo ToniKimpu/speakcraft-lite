@@ -14,4 +14,5 @@ class GlobalAppState {
   ValueNotifier<AppUser> get currentUserNotifier => _currentUser;
   set currentUser(AppUser user) => _currentUser.value = user;
   bool tokenAvailable() => _currentUser.value.totalTokenUsed < maxTotalTokens;
+  bool isOnline = true;
 }

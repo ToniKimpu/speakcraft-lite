@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(9999),
                   child: Image.asset(
-                    "assets/images/app_logo.png",
+                    "logo/app_logo.png",
                     width: 100,
                     height: 100,
                     colorBlendMode: BlendMode.srcIn,
@@ -118,8 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: PmpColors.white,
                     ),
                 textAlign: TextAlign.center,
-              )
-                ,
+              ),
               const SizedBox(height: 8),
               Text(
                 'Sign in to continue learning',
@@ -128,8 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontFamily: "ArchivoBlack Regular",
                     ),
                 textAlign: TextAlign.center,
-              )
-               ,
+              ),
               const SizedBox(height: 40),
               AuthCard(
                 child: Column(

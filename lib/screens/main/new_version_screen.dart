@@ -65,7 +65,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                     const CircleAvatar(
                       backgroundColor: Colors.transparent,
                       radius: 36,
-                      backgroundImage: AssetImage('assets/images/app_logo.png'),
+                      backgroundImage: AssetImage('logo/app_logo.png'),
                     ),
                     const SizedBox(height: 16),
                     const Text(

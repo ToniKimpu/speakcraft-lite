@@ -5,6 +5,7 @@ import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
 import 'package:pmp_english/bloc/pattern/pattern_bloc.dart';
 
 import 'bloc/auth/auth_bloc.dart';
+import 'bloc/internet_checker/internet_checker_bloc.dart';
 
 mainBlocProviders() {
   return [
@@ -22,6 +23,9 @@ mainBlocProviders() {
     ),
     BlocProvider(
       create: (context) => AppUIBloc(),
+    ),
+    BlocProvider(
+      create: (_) => InternetCheckerBloc(),
     ),
   ];
 }

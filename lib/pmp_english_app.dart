@@ -3,17 +3,21 @@ import 'dart:async';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_themes.dart';
+import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/main.dart';
 import 'package:pmp_english/main_providers.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'bloc/internet_checker/internet_checker_bloc.dart';
 import 'l10n/generated/l10n.dart';
 import 'services/supabase_service.dart';
 
-final navigatorKey = GlobalKey<NavigatorState>();
+final _navigatorKey = GlobalKey<NavigatorState>();
 
 class PmpEnglishApp extends StatefulWidget {
   const PmpEnglishApp({super.key});
@@ -26,6 +30,9 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
   late final StreamSubscription<String> _tokenStream;
   late final StreamSubscription _onMessageStream;
   late final StreamSubscription _onAuthStateChangedStream;
+  late final InternetConnectionChecker _connectionChecker;
+  late final StreamSubscription<InternetConnectionStatus>
+      _connectionStatusSubscription;
   User? _currentUser;
 
   void _setToken(String? token) {
@@ -35,6 +42,17 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
   @override
   void initState() {
     super.initState();
+    _connectionChecker = InternetConnectionChecker.createInstance(
+      addresses: [
+        AddressCheckOption(
+          uri: Uri.parse(dotenv.env['SUPABASE_URL'] ?? ''),
+        ),
+      ],
+      slowConnectionConfig: const SlowConnectionConfig(
+        enableToCheckForSlowConnection: true,
+        slowConnectionThreshold: Duration(seconds: 3),
+      ),
+    );
     FirebaseMessaging.instance.getToken().then(
       (token) {
         _setToken(token);
@@ -78,6 +96,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
         debugPrint('getToken onError: $error');
       },
     );
+    _setupConnectionListener();
   }
 
   @override
@@ -86,6 +105,8 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
     _tokenStream.cancel();
     _onMessageStream.cancel();
     _onAuthStateChangedStream.cancel();
+    _connectionChecker.dispose();
+    _connectionStatusSubscription.cancel();
   }
 
   @override
@@ -94,7 +115,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
       providers: mainBlocProviders(),
       child: MaterialApp(
         title: 'PMP English App',
-        navigatorKey: navigatorKey,
+        navigatorKey: _navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: PmpThemes.darkTheme,
         darkTheme: PmpThemes.darkTheme,
@@ -111,6 +132,31 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
         ],
         locale: const Locale('en'),
       ),
+    );
+  }
+
+  void _setupConnectionListener() {
+    _connectionStatusSubscription = _connectionChecker.onStatusChange.listen(
+      (InternetConnectionStatus status) {
+        final navigatorState = _navigatorKey.currentState;
+        final context = navigatorState?.context;
+        final checkInternetBloc = context?.read<InternetCheckerBloc>();
+        debugPrint("_hratnaengApp: ${status.toString()} connection state!");
+        if (status == InternetConnectionStatus.connected ||
+            status == InternetConnectionStatus.slow) {
+          GlobalAppState().isOnline = true;
+          checkInternetBloc?.add(
+            const InternetCheckerEvent.internetAccess(),
+          );
+          debugPrint('_connectionStatus: Connected to the internet');
+        } else {
+          GlobalAppState().isOnline = false;
+          checkInternetBloc?.add(
+            const InternetCheckerEvent.noInternetAccess(),
+          );
+          debugPrint('_connectionStatus: Disconnected from the internet');
+        }
+      },
     );
   }
 }
