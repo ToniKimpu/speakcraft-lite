@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../bloc/pattern/pattern_bloc.dart';
+import '../../../bloc/spoken_pattern/spoken_pattern_bloc.dart';
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 
@@ -10,14 +10,14 @@ class PracticeVocabularyList extends StatelessWidget {
     super.key,
     required ValueNotifier<bool> showVocabularyNotifier,
     required double popupHeight,
-    required PatternBloc vocabularyBloc,
+    required SpokenPatternBloc vocabularyBloc,
   })  : _showVocabularyNotifier = showVocabularyNotifier,
         _popupHeight = popupHeight,
         _vocabularyBloc = vocabularyBloc;
 
   final ValueNotifier<bool> _showVocabularyNotifier;
   final double _popupHeight;
-  final PatternBloc _vocabularyBloc;
+  final SpokenPatternBloc _vocabularyBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class PracticeVocabularyList extends StatelessWidget {
               ),
             ],
           ),
-          child: BlocBuilder<PatternBloc, PatternState>(
+          child: BlocBuilder<SpokenPatternBloc, SpokenPatternState>(
             bloc: _vocabularyBloc,
             builder: (context, state) {
               return state.maybeWhen(

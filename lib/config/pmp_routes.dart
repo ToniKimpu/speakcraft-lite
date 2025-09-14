@@ -22,7 +22,7 @@ import 'package:pmp_english/screens/translation/translation_level_list.dart';
 import 'package:pmp_english/screens/translation/translation_practice_page.dart';
 import 'package:pmp_english/screens/translation/translation_practice_result_screen.dart';
 
-import '../../model/pattern/pattern.dart';
+import '../model/spoken_pattern/spoken_pattern.dart';
 import '../model/ai_sentence_practice/ai_sentence_practice.dart';
 import '../model/day/day.dart';
 import '../model/exercise/exercise.dart';
@@ -149,10 +149,10 @@ class PmpRoutes {
         return _getRoute(const PatternList(), settings);
       case patternPracticeScreen:
         final args = settings.arguments as Map<String, dynamic>;
-        final pattern = args['pattern'] as Pattern;
+        final spokenPattern = args['pattern'] as SpokenPattern;
         return _getRoute(
           PatternPracticeScreen(
-            pattern: pattern,
+            spokenPattern: spokenPattern,
           ),
           settings,
         );

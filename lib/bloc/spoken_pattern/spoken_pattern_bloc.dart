@@ -5,42 +5,43 @@ import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 import 'package:pmp_english/services/supabase_service.dart';
 
-import '../../model/pattern/pattern.dart';
+import '../../model/spoken_pattern/spoken_pattern.dart';
 import '../../model/pattern_example/pattern_example.dart';
 
-part 'pattern_bloc.freezed.dart';
+part 'spoken_pattern_bloc.freezed.dart';
 
 @freezed
-abstract class PatternEvent with _$PatternEvent {
-  const factory PatternEvent.loadPatternsByLesson(int lessonId) =
+abstract class SpokenPatternEvent with _$SpokenPatternEvent {
+  const factory SpokenPatternEvent.loadPatternsByLesson(int lessonId) =
       _LoadLessonPatterns;
-  const factory PatternEvent.loadPatterns({
+  const factory SpokenPatternEvent.loadPatterns({
     String? keyword,
     bool? examples,
     bool? vocabularies,
     bool? userComments,
   }) = _Loadpatterns;
-  const factory PatternEvent.loadVocabulariesByPattern(int patternId) =
+  const factory SpokenPatternEvent.loadVocabulariesByPattern(int patternId) =
       _LoadVocabulariesByPattern;
-  const factory PatternEvent.loadExamplesByPattern(int patternId) =
+  const factory SpokenPatternEvent.loadExamplesByPattern(int patternId) =
       _LoadExamplesByPattern;
 }
 
 @freezed
-abstract class PatternState with _$PatternState {
-  const factory PatternState.initial() = _Initial;
-  const factory PatternState.loading() = _Loading;
-  const factory PatternState.loaded(List<Pattern> patterns) = _Loaded;
-  const factory PatternState.vocabularyLoaded(
+abstract class SpokenPatternState with _$SpokenPatternState {
+  const factory SpokenPatternState.initial() = _Initial;
+  const factory SpokenPatternState.loading() = _Loading;
+  const factory SpokenPatternState.loaded(List<SpokenPattern> patterns) =
+      _Loaded;
+  const factory SpokenPatternState.vocabularyLoaded(
       List<PatternVocabulary> vocabularies) = _VocabularyLoaded;
-  const factory PatternState.examplesLoaded(List<PatternExample> examples) =
-      _ExampleLoaded;
-  const factory PatternState.error(String message) = _Error;
+  const factory SpokenPatternState.examplesLoaded(
+      List<PatternExample> examples) = _ExampleLoaded;
+  const factory SpokenPatternState.error(String message) = _Error;
 }
 
-class PatternBloc extends Bloc<PatternEvent, PatternState> {
-  PatternBloc() : super(const PatternState.initial()) {
-    on<PatternEvent>(
+class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
+  SpokenPatternBloc() : super(const SpokenPatternState.initial()) {
+    on<SpokenPatternEvent>(
       (event, emit) async {
         try {
           await event.when(
@@ -61,7 +62,7 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
           );
         } catch (e) {
           debugPrint('Load Patterns error ${e.toString()}');
-          emit(PatternState.error(e.toString()));
+          emit(SpokenPatternState.error(e.toString()));
         }
       },
     );
@@ -72,9 +73,9 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
     bool? examples,
     bool? vocabularies,
     bool? userComments,
-    required Emitter<PatternState> emit,
+    required Emitter<SpokenPatternState> emit,
   }) async {
-    emit(const PatternState.loading());
+    emit(const SpokenPatternState.loading());
     try {
       var query = supabase
           .from('patterns')
@@ -88,20 +89,20 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
       }
       final dataRes = await query.order('created_at', ascending: true);
       if (dataRes.isEmpty) {
-        emit(const PatternState.loaded(<Pattern>[]));
+        emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
         return;
       }
-      final patterns = Pattern.fromJsonList(dataRes);
-      emit(PatternState.loaded(patterns));
+      final spokenPatterns = SpokenPattern.fromJsonList(dataRes);
+      emit(SpokenPatternState.loaded(spokenPatterns));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');
-      emit(PatternState.error(e.toString()));
+      emit(SpokenPatternState.error(e.toString()));
     }
   }
 
   _mapLoadPatternsByLessonToState(
-      int lessonId, Emitter<PatternState> emit) async {
-    emit(const PatternState.loading());
+      int lessonId, Emitter<SpokenPatternState> emit) async {
+    emit(const SpokenPatternState.loading());
     try {
       final dataRes = await supabase
           .from('patterns')
@@ -111,11 +112,12 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
           .eq("pattern_examples.is_deleted", false)
           .order('created_at', ascending: true);
       if (dataRes.isEmpty) {
-        emit(const PatternState.loaded(<Pattern>[]));
+        emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
         return;
       }
-      final patterns = dataRes.map((e) => Pattern.fromJson(e)).toList();
-      final newPatterns = patterns.map((p) {
+      final spokenPatterns =
+          dataRes.map((e) => SpokenPattern.fromJson(e)).toList();
+      final newSpokenPatterns = spokenPatterns.map((p) {
         if (p.audioPath == null || p.audioPath!.isEmpty) return p;
         return p.copyWith(
           audioPath: SupabaseService().getPublicUrl(
@@ -124,16 +126,16 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
           ),
         );
       }).toList();
-      emit(PatternState.loaded(newPatterns));
+      emit(SpokenPatternState.loaded(newSpokenPatterns));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');
-      emit(PatternState.error(e.toString()));
+      emit(SpokenPatternState.error(e.toString()));
     }
   }
 
   _mapLoadVocabulariesByPattern(
-      int patternId, Emitter<PatternState> emit) async {
-    emit(const PatternState.loading());
+      int patternId, Emitter<SpokenPatternState> emit) async {
+    emit(const SpokenPatternState.loading());
     try {
       final dataRes = await supabase
           .from('pattern_vocabularies')
@@ -142,36 +144,40 @@ class PatternBloc extends Bloc<PatternEvent, PatternState> {
           .eq('is_deleted', false);
 
       if (dataRes.isEmpty) {
-        emit(const PatternState.vocabularyLoaded(<PatternVocabulary>[]));
+        emit(const SpokenPatternState.vocabularyLoaded(<PatternVocabulary>[]));
         return;
       }
       final vocabularies = PatternVocabulary.fromJsonList(dataRes);
-      emit(PatternState.vocabularyLoaded(vocabularies));
+      emit(SpokenPatternState.vocabularyLoaded(vocabularies));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');
-      emit(PatternState.error(e.toString()));
+      emit(SpokenPatternState.error(e.toString()));
     }
   }
 
-  _mapLoadExamplesByPattern(int patternId, Emitter<PatternState> emit) async {
-    emit(const PatternState.loading());
+  _mapLoadExamplesByPattern(
+      int patternId, Emitter<SpokenPatternState> emit) async {
+    emit(const SpokenPatternState.loading());
     try {
       final dataRes = await supabase
           .from('pattern_examples')
           .select()
           .eq('pattern_id', patternId)
           .eq('is_deleted', false)
-          .order("created_at", ascending: true);
+          .order(
+            "created_at",
+            ascending: true,
+          );
 
       if (dataRes.isEmpty) {
-        emit(const PatternState.examplesLoaded(<PatternExample>[]));
+        emit(const SpokenPatternState.examplesLoaded(<PatternExample>[]));
         return;
       }
       final examples = PatternExample.fromJsonList(dataRes);
-      emit(PatternState.examplesLoaded(examples));
+      emit(SpokenPatternState.examplesLoaded(examples));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');
-      emit(PatternState.error(e.toString()));
+      emit(SpokenPatternState.error(e.toString()));
     }
   }
 }

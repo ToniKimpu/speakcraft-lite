@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pattern.dart';
+part of 'spoken_pattern.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PatternImpl _$$PatternImplFromJson(Map<String, dynamic> json) =>
-    _$PatternImpl(
+_$SpokenPatternImpl _$$SpokenPatternImplFromJson(Map<String, dynamic> json) =>
+    _$SpokenPatternImpl(
       id: (json['id'] as num?)?.toInt(),
       pattern: json['pattern'] as String,
       title: json['title'] as String?,
@@ -25,7 +25,7 @@ _$PatternImpl _$$PatternImplFromJson(Map<String, dynamic> json) =>
       hasComment: _hasCommentByUser(json['pattern_user_comments'] as List?),
     );
 
-Map<String, dynamic> _$$PatternImplToJson(_$PatternImpl instance) =>
+Map<String, dynamic> _$$SpokenPatternImplToJson(_$SpokenPatternImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'pattern': instance.pattern,

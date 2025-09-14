@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'pattern.dart';
+part of 'spoken_pattern.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-Pattern _$PatternFromJson(Map<String, dynamic> json) {
-  return _Pattern.fromJson(json);
+SpokenPattern _$SpokenPatternFromJson(Map<String, dynamic> json) {
+  return _SpokenPattern.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Pattern {
+mixin _$SpokenPattern {
   int? get id => throw _privateConstructorUsedError;
   String get pattern => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
@@ -39,19 +39,21 @@ mixin _$Pattern {
   @JsonKey(name: 'pattern_user_comments', fromJson: _hasCommentByUser)
   bool? get hasComment => throw _privateConstructorUsedError;
 
-  /// Serializes this Pattern to a JSON map.
+  /// Serializes this SpokenPattern to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of Pattern
+  /// Create a copy of SpokenPattern
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PatternCopyWith<Pattern> get copyWith => throw _privateConstructorUsedError;
+  $SpokenPatternCopyWith<SpokenPattern> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PatternCopyWith<$Res> {
-  factory $PatternCopyWith(Pattern value, $Res Function(Pattern) then) =
-      _$PatternCopyWithImpl<$Res, Pattern>;
+abstract class $SpokenPatternCopyWith<$Res> {
+  factory $SpokenPatternCopyWith(
+          SpokenPattern value, $Res Function(SpokenPattern) then) =
+      _$SpokenPatternCopyWithImpl<$Res, SpokenPattern>;
   @useResult
   $Res call(
       {int? id,
@@ -71,16 +73,16 @@ abstract class $PatternCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PatternCopyWithImpl<$Res, $Val extends Pattern>
-    implements $PatternCopyWith<$Res> {
-  _$PatternCopyWithImpl(this._value, this._then);
+class _$SpokenPatternCopyWithImpl<$Res, $Val extends SpokenPattern>
+    implements $SpokenPatternCopyWith<$Res> {
+  _$SpokenPatternCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Pattern
+  /// Create a copy of SpokenPattern
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -142,10 +144,11 @@ class _$PatternCopyWithImpl<$Res, $Val extends Pattern>
 }
 
 /// @nodoc
-abstract class _$$PatternImplCopyWith<$Res> implements $PatternCopyWith<$Res> {
-  factory _$$PatternImplCopyWith(
-          _$PatternImpl value, $Res Function(_$PatternImpl) then) =
-      __$$PatternImplCopyWithImpl<$Res>;
+abstract class _$$SpokenPatternImplCopyWith<$Res>
+    implements $SpokenPatternCopyWith<$Res> {
+  factory _$$SpokenPatternImplCopyWith(
+          _$SpokenPatternImpl value, $Res Function(_$SpokenPatternImpl) then) =
+      __$$SpokenPatternImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -166,14 +169,14 @@ abstract class _$$PatternImplCopyWith<$Res> implements $PatternCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PatternImplCopyWithImpl<$Res>
-    extends _$PatternCopyWithImpl<$Res, _$PatternImpl>
-    implements _$$PatternImplCopyWith<$Res> {
-  __$$PatternImplCopyWithImpl(
-      _$PatternImpl _value, $Res Function(_$PatternImpl) _then)
+class __$$SpokenPatternImplCopyWithImpl<$Res>
+    extends _$SpokenPatternCopyWithImpl<$Res, _$SpokenPatternImpl>
+    implements _$$SpokenPatternImplCopyWith<$Res> {
+  __$$SpokenPatternImplCopyWithImpl(
+      _$SpokenPatternImpl _value, $Res Function(_$SpokenPatternImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Pattern
+  /// Create a copy of SpokenPattern
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -189,7 +192,7 @@ class __$$PatternImplCopyWithImpl<$Res>
     Object? patternExamples = freezed,
     Object? hasComment = freezed,
   }) {
-    return _then(_$PatternImpl(
+    return _then(_$SpokenPatternImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -236,8 +239,8 @@ class __$$PatternImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PatternImpl implements _Pattern {
-  const _$PatternImpl(
+class _$SpokenPatternImpl implements _SpokenPattern {
+  const _$SpokenPatternImpl(
       {this.id,
       required this.pattern,
       this.title,
@@ -255,8 +258,8 @@ class _$PatternImpl implements _Pattern {
       this.hasComment})
       : _patternExamples = patternExamples;
 
-  factory _$PatternImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PatternImplFromJson(json);
+  factory _$SpokenPatternImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SpokenPatternImplFromJson(json);
 
   @override
   final int? id;
@@ -296,14 +299,14 @@ class _$PatternImpl implements _Pattern {
 
   @override
   String toString() {
-    return 'Pattern(id: $id, pattern: $pattern, title: $title, description: $description, subjectVerbAgreement: $subjectVerbAgreement, audioPath: $audioPath, lessonId: $lessonId, createdAt: $createdAt, patternExamples: $patternExamples, hasComment: $hasComment)';
+    return 'SpokenPattern(id: $id, pattern: $pattern, title: $title, description: $description, subjectVerbAgreement: $subjectVerbAgreement, audioPath: $audioPath, lessonId: $lessonId, createdAt: $createdAt, patternExamples: $patternExamples, hasComment: $hasComment)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PatternImpl &&
+            other is _$SpokenPatternImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.pattern, pattern) || other.pattern == pattern) &&
             (identical(other.title, title) || other.title == title) &&
@@ -338,24 +341,24 @@ class _$PatternImpl implements _Pattern {
       const DeepCollectionEquality().hash(_patternExamples),
       hasComment);
 
-  /// Create a copy of Pattern
+  /// Create a copy of SpokenPattern
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PatternImplCopyWith<_$PatternImpl> get copyWith =>
-      __$$PatternImplCopyWithImpl<_$PatternImpl>(this, _$identity);
+  _$$SpokenPatternImplCopyWith<_$SpokenPatternImpl> get copyWith =>
+      __$$SpokenPatternImplCopyWithImpl<_$SpokenPatternImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PatternImplToJson(
+    return _$$SpokenPatternImplToJson(
       this,
     );
   }
 }
 
-abstract class _Pattern implements Pattern {
-  const factory _Pattern(
+abstract class _SpokenPattern implements SpokenPattern {
+  const factory _SpokenPattern(
       {final int? id,
       required final String pattern,
       final String? title,
@@ -370,9 +373,10 @@ abstract class _Pattern implements Pattern {
       @JsonKey(name: 'pattern_examples')
       required final List<PatternExample>? patternExamples,
       @JsonKey(name: 'pattern_user_comments', fromJson: _hasCommentByUser)
-      final bool? hasComment}) = _$PatternImpl;
+      final bool? hasComment}) = _$SpokenPatternImpl;
 
-  factory _Pattern.fromJson(Map<String, dynamic> json) = _$PatternImpl.fromJson;
+  factory _SpokenPattern.fromJson(Map<String, dynamic> json) =
+      _$SpokenPatternImpl.fromJson;
 
   @override
   int? get id;
@@ -402,10 +406,10 @@ abstract class _Pattern implements Pattern {
   @JsonKey(name: 'pattern_user_comments', fromJson: _hasCommentByUser)
   bool? get hasComment;
 
-  /// Create a copy of Pattern
+  /// Create a copy of SpokenPattern
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PatternImplCopyWith<_$PatternImpl> get copyWith =>
+  _$$SpokenPatternImplCopyWith<_$SpokenPatternImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

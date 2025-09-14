@@ -3,21 +3,22 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
 import 'package:pmp_english/screens/patterns/widgets/example_list_widget.dart';
+import 'package:pmp_english/screens/patterns/widgets/pattern_example_list.dart';
 
-import '../../../model/pattern/pattern.dart';
 import '../../../model/pattern_example/pattern_example.dart';
 
-class PatternWidget extends StatelessWidget {
-  const PatternWidget({
+class SpokenPatternWidget extends StatelessWidget {
+  const SpokenPatternWidget({
     super.key,
     required this.audioPlayer,
-    required this.pattern,
+    required this.spokenPattern,
     required this.audioPositionTrackerBloc,
     required this.audioPlayerStateTrackerBloc,
   });
   final AudioPlayer audioPlayer;
-  final Pattern pattern;
+  final SpokenPattern spokenPattern;
   final AudioPlayerBloc audioPositionTrackerBloc, audioPlayerStateTrackerBloc;
   // final _svgAggreements = "I => am;He,She,It => is;We,You,They => are";
 
@@ -46,14 +47,14 @@ class PatternWidget extends StatelessWidget {
                       direction: Axis.vertical,
                       children: [
                         Text(
-                          pattern.pattern,
+                          spokenPattern.pattern,
                           style: PmpTextStyles.body2Semi.copyWith(
                             color: Colors.white,
                           ),
                         ),
-                        if (pattern.title != null)
+                        if (spokenPattern.title != null)
                           Text(
-                            pattern.title!,
+                            spokenPattern.title!,
                             style: PmpTextStyles.body2Semi.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.normal,
@@ -61,7 +62,7 @@ class PatternWidget extends StatelessWidget {
                           ),
                       ],
                     ),
-                    if (pattern.audioPath != null)
+                    if (spokenPattern.audioPath != null)
                       BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
                         bloc: audioPlayerStateTrackerBloc,
                         builder: (context, audioPlayerState) {
@@ -144,22 +145,22 @@ class PatternWidget extends StatelessWidget {
                       ),
                   ],
                 ),
-                if (pattern.description != null &&
-                    pattern.description!.isNotEmpty) ...[
+                if (spokenPattern.description != null &&
+                    spokenPattern.description!.isNotEmpty) ...[
                   const SizedBox(height: 8),
                   Text(
-                    pattern.description!,
+                    spokenPattern.description!,
                     style: PmpTextStyles.body2Semi.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.normal,
                     ),
                   ),
                   const SizedBox(height: 12),
-                  if (pattern.subjectVerbAgreement != null &&
-                      pattern.subjectVerbAgreement!.isNotEmpty)
+                  if (spokenPattern.subjectVerbAgreement != null &&
+                      spokenPattern.subjectVerbAgreement!.isNotEmpty)
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: pattern.subjectVerbAgreement!
+                      children: spokenPattern.subjectVerbAgreement!
                           .split(';')
                           .map(
                             (e) => Padding(
@@ -181,36 +182,11 @@ class PatternWidget extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 24, right: 24, top: 12),
-          child: Text(
-            'Examples',
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: Colors.white,
-            ),
-          ),
+        PatternExampleList(
+          spokenPattern: spokenPattern,
+          audioPlayer: audioPlayer,
+          audioPositionTrackerBloc: audioPositionTrackerBloc,
         ),
-        if (pattern.patternExamples!.isNotEmpty)
-          Expanded(
-            child: BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-              bloc: audioPositionTrackerBloc,
-              builder: (context, state) {
-                final currentPosition = state.maybeWhen(
-                  onCurrentPosition: (position) => position,
-                  orElse: () => 0,
-                );
-                final patternExamples =
-                    List<PatternExample>.from(pattern.patternExamples!)
-                      ..sort((a, b) => a.createdAt!.compareTo(b.createdAt!));
-
-                return ExampleListWidget(
-                  audioPlayer: audioPlayer,
-                  patternExamples: patternExamples,
-                  currentPosition: currentPosition,
-                );
-              },
-            ),
-          ),
       ],
     );
   }

@@ -5,13 +5,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/l10n/generated/l10n.dart';
-import 'package:pmp_english/screens/patterns/widgets/pattern_widget.dart';
+import 'package:pmp_english/screens/patterns/widgets/spoken_pattern_widget.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
-import '../../bloc/pattern/pattern_bloc.dart';
+import '../../bloc/spoken_pattern/spoken_pattern_bloc.dart';
 import '../../config/pmp_text_styles.dart';
 import '../../model/lesson/lesson.dart';
-import '../../model/pattern/pattern.dart';
+import '../../model/spoken_pattern/spoken_pattern.dart';
 
 class SpeakingPatternScreen extends StatefulWidget {
   const SpeakingPatternScreen({
@@ -25,18 +25,19 @@ class SpeakingPatternScreen extends StatefulWidget {
 }
 
 class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
-  final _patternBloc = PatternBloc();
+  final _spokenPatternBloc = SpokenPatternBloc();
   final _audioPositionTrackerBloc = AudioPlayerBloc();
   final _audioPlayerStateTrackerBloc = AudioPlayerBloc();
   final _audioPlayer = AudioPlayer();
   int _currentPage = 0;
   StreamSubscription? _playerStateSubscription;
   StreamSubscription<Duration>? _positionSub;
-  final _patterns = <Pattern>[];
+  final _spokenPatterns = <SpokenPattern>[];
   @override
   void initState() {
     super.initState();
-    _patternBloc.add(PatternEvent.loadPatternsByLesson(widget.lesson.id));
+    _spokenPatternBloc
+        .add(SpokenPatternEvent.loadPatternsByLesson(widget.lesson.id));
     _playerStateSubscription = _audioPlayer.playerStateStream.listen(
       (playerState) {
         _audioPlayerStateTrackerBloc.add(
@@ -70,9 +71,9 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
           _audioPlayer.stop();
           setState(() {
             _currentPage--;
-            if (_patterns.isNotEmpty &&
-                _patterns[_currentPage].audioPath != null) {
-              _audioPlayer.setUrl(_patterns[_currentPage].audioPath!);
+            if (_spokenPatterns.isNotEmpty &&
+                _spokenPatterns[_currentPage].audioPath != null) {
+              _audioPlayer.setUrl(_spokenPatterns[_currentPage].audioPath!);
             }
           });
           return;
@@ -87,14 +88,14 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
         ),
         body: MultiBlocProvider(
           providers: [
-            BlocProvider<PatternBloc>(
-              create: (context) => _patternBloc,
+            BlocProvider<SpokenPatternBloc>(
+              create: (context) => _spokenPatternBloc,
             ),
             BlocProvider<AudioPlayerBloc>(
               create: (context) => _audioPositionTrackerBloc,
             ),
           ],
-          child: BlocBuilder<PatternBloc, PatternState>(
+          child: BlocBuilder<SpokenPatternBloc, SpokenPatternState>(
             builder: (context, state) {
               return state.maybeWhen(
                 loading: () {
@@ -106,8 +107,8 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                     ),
                   );
                 },
-                loaded: (patterns) {
-                  if (patterns.isEmpty) {
+                loaded: (spokenPatterns) {
+                  if (spokenPatterns.isEmpty) {
                     return Center(
                       child: Text(
                         AppLocalizations.of(context).txtWillUploadSoon,
@@ -116,11 +117,11 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                       ),
                     );
                   }
-                  if (_patterns.isEmpty) {
-                    _patterns.addAll(patterns);
+                  if (_spokenPatterns.isEmpty) {
+                    _spokenPatterns.addAll(spokenPatterns);
                   }
-                  if (patterns.first.audioPath != null && _currentPage == 0) {
-                    _audioPlayer.setUrl(patterns.first.audioPath!.trim());
+                  if (spokenPatterns.first.audioPath != null && _currentPage == 0) {
+                    _audioPlayer.setUrl(spokenPatterns.first.audioPath!.trim());
                   }
                   return Column(
                     children: [
@@ -128,11 +129,11 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                         child: IndexedStack(
                           index: _currentPage,
                           children: List.generate(
-                            patterns.length,
+                            spokenPatterns.length,
                             (index) {
-                              return PatternWidget(
+                              return SpokenPatternWidget(
                                 audioPlayer: _audioPlayer,
-                                pattern: patterns[index],
+                                spokenPattern: spokenPatterns[index],
                                 audioPositionTrackerBloc:
                                     _audioPositionTrackerBloc,
                                 audioPlayerStateTrackerBloc:
@@ -142,7 +143,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                           ),
                         ),
                       ),
-                      _buildFooter(patterns),
+                      _buildFooter(_spokenPatterns),
                     ],
                   );
                 },
@@ -155,7 +156,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
     );
   }
 
-  Widget _buildFooter(List<Pattern> patterns) {
+  Widget _buildFooter(List<SpokenPattern> spokenPatterns) {
     return Card(
       elevation: 4, // Adds shadow effect
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -169,16 +170,16 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            _buildPreviousButton(patterns),
-            _buildProgressIndicator(patterns),
-            _buildNextButton(patterns),
+            _buildPreviousButton(spokenPatterns),
+            _buildProgressIndicator(spokenPatterns),
+            _buildNextButton(spokenPatterns),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildPreviousButton(List<Pattern> patterns) {
+  Widget _buildPreviousButton(List<SpokenPattern> spokenPatterns) {
     return InkWell(
       borderRadius: BorderRadius.circular(100),
       onTap: _currentPage <= 0
@@ -188,8 +189,9 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
               setState(
                 () {
                   _currentPage--;
-                  if (patterns[_currentPage].audioPath != null) {
-                    _audioPlayer.setUrl(patterns[_currentPage].audioPath!);
+                  if (spokenPatterns[_currentPage].audioPath != null) {
+                    _audioPlayer
+                        .setUrl(spokenPatterns[_currentPage].audioPath!);
                   }
                 },
               );
@@ -231,7 +233,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
     );
   }
 
-  Widget _buildProgressIndicator(List<Pattern> patterns) {
+  Widget _buildProgressIndicator(List<SpokenPattern> spokenPatterns) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
@@ -255,7 +257,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
         ],
       ),
       child: Text(
-        '${_currentPage + 1}/${patterns.length}',
+        '${_currentPage + 1}/${spokenPatterns.length}',
         style: PmpTextStyles.body2Semi.copyWith(
           color: Colors.white, // White text for contrast
           fontWeight: FontWeight.bold,
@@ -271,8 +273,8 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
     );
   }
 
-  Widget _buildNextButton(List<Pattern> patterns) {
-    final totalPatterns = patterns.length - 1;
+  Widget _buildNextButton(List<SpokenPattern> spokenPatterns) {
+    final totalPatterns = spokenPatterns.length - 1;
     return InkWell(
       borderRadius: BorderRadius.circular(100),
       onTap: _currentPage >= totalPatterns
@@ -282,8 +284,9 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
               setState(
                 () {
                   _currentPage++;
-                  if (patterns[_currentPage].audioPath != null) {
-                    _audioPlayer.setUrl(patterns[_currentPage].audioPath!);
+                  if (spokenPatterns[_currentPage].audioPath != null) {
+                    _audioPlayer
+                        .setUrl(spokenPatterns[_currentPage].audioPath!);
                   }
                 },
               );

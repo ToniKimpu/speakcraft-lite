@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../bloc/pattern/pattern_bloc.dart';
+import '../../bloc/spoken_pattern/spoken_pattern_bloc.dart';
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_routes.dart';
 import '../../config/pmp_text_styles.dart';
-import '../../model/pattern/pattern.dart';
+import '../../model/spoken_pattern/spoken_pattern.dart';
 
 class PatternList extends StatefulWidget {
   const PatternList({super.key});
@@ -36,8 +36,8 @@ class _PatternListState extends State<PatternList> {
 
   void _loadPatterns({String? keyword}) {
     context
-        .read<PatternBloc>()
-        .add(PatternEvent.loadPatterns(keyword: keyword));
+        .read<SpokenPatternBloc>()
+        .add(SpokenPatternEvent.loadPatterns(keyword: keyword));
   }
 
   void _onSearchChanged(String query) {
@@ -131,7 +131,7 @@ class _PatternListState extends State<PatternList> {
             ],
           ),
         ),
-        body: BlocBuilder<PatternBloc, PatternState>(
+        body: BlocBuilder<SpokenPatternBloc, SpokenPatternState>(
           builder: (context, state) {
             return state.maybeWhen(
               loading: () {
@@ -143,8 +143,8 @@ class _PatternListState extends State<PatternList> {
                   ),
                 );
               },
-              loaded: (patterns) {
-                if (patterns.isEmpty) {
+              loaded: (spokenPatterns) {
+                if (spokenPatterns.isEmpty) {
                   return Center(
                     child: Text(
                       'မကြာခင် သင်ခန်းစာများထည့်ပေးပါမည်။',
@@ -155,10 +155,10 @@ class _PatternListState extends State<PatternList> {
                   );
                 }
                 return ListView.separated(
-                  itemCount: patterns.length,
+                  itemCount: spokenPatterns.length,
                   padding: const EdgeInsets.all(16),
                   itemBuilder: (context, index) {
-                    return _buildPatternItem(patterns[index], index + 1);
+                    return _buildPatternItem(spokenPatterns[index], index + 1);
                   },
                   separatorBuilder: (context, index) => const SizedBox(
                     height: 12,
@@ -173,14 +173,14 @@ class _PatternListState extends State<PatternList> {
     );
   }
 
-  Widget _buildPatternItem(Pattern pattern, int index) {
+  Widget _buildPatternItem(SpokenPattern spokenPattern, int index) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: PmpColors.white,
         border: Border.all(
-          color: PmpColors.neutral10.withOpacity(0.1),
+          color: PmpColors.neutral10.withValues(alpha: 0.1),
         ),
         borderRadius: BorderRadius.circular(12),
       ),
@@ -217,7 +217,7 @@ class _PatternListState extends State<PatternList> {
                 width: 20,
                 height: 20,
                 decoration: BoxDecoration(
-                  color: pattern.hasComment ?? false
+                  color: spokenPattern.hasComment ?? false
                       ? PmpColors.primary400
                       : Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(10),
@@ -235,11 +235,11 @@ class _PatternListState extends State<PatternList> {
           Container(
             height: 1,
             width: double.infinity,
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             margin: const EdgeInsets.symmetric(vertical: 12),
           ),
           Text(
-            pattern.pattern,
+            spokenPattern.pattern,
             style: PmpTextStyles.body2Regular.copyWith(color: Colors.black),
           ),
           Align(
@@ -255,7 +255,7 @@ class _PatternListState extends State<PatternList> {
                     context,
                     PmpRoutes.patternPracticeScreen,
                     arguments: {
-                      'pattern': pattern,
+                      'pattern': spokenPattern,
                     },
                   );
                 },

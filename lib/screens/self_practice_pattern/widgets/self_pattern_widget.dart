@@ -3,13 +3,13 @@ import 'package:just_audio/just_audio.dart';
 
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
-import '../../../model/pattern/pattern.dart';
+import '../../../model/spoken_pattern/spoken_pattern.dart';
 
 class SelfPatternWidget extends StatefulWidget {
   const SelfPatternWidget(
       {super.key,
       required this.patternContainerKey,
-      required this.pattern,
+      required this.spokenPattern,
       required ValueNotifier<bool> showVocabularyNotifier,
       required ValueNotifier<bool> showExampleNotifier})
       : _showVocabularyNotifier = showVocabularyNotifier,
@@ -18,7 +18,7 @@ class SelfPatternWidget extends StatefulWidget {
   final GlobalKey<State<StatefulWidget>> patternContainerKey;
   final ValueNotifier<bool> _showVocabularyNotifier;
   final ValueNotifier<bool> _showExampleNotifier;
-  final Pattern pattern;
+  final SpokenPattern spokenPattern;
 
   @override
   State<SelfPatternWidget> createState() => _SelfPatternWidgetState();
@@ -30,8 +30,8 @@ class _SelfPatternWidgetState extends State<SelfPatternWidget> {
   @override
   void initState() {
     super.initState();
-    if (widget.pattern.audioPath != null) {
-      _player.setUrl(widget.pattern.audioPath!);
+    if (widget.spokenPattern.audioPath != null) {
+      _player.setUrl(widget.spokenPattern.audioPath!);
     }
   }
 
@@ -68,16 +68,16 @@ class _SelfPatternWidgetState extends State<SelfPatternWidget> {
                 direction: Axis.vertical,
                 children: [
                   Text(
-                    widget.pattern.pattern.trim(),
+                    widget.spokenPattern.pattern.trim(),
                     style: PmpTextStyles.body1Semi.copyWith(
                       color: Colors.black,
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  if (widget.pattern.title != null)
+                  if (widget.spokenPattern.title != null)
                     Text(
-                      widget.pattern.title!.trim(),
+                      widget.spokenPattern.title!.trim(),
                       style: PmpTextStyles.body2Medium.copyWith(
                         color: Colors.black,
                       ),
@@ -86,7 +86,7 @@ class _SelfPatternWidgetState extends State<SelfPatternWidget> {
                     ),
                 ],
               ),
-              if (widget.pattern.audioPath != null)
+              if (widget.spokenPattern.audioPath != null)
                 Material(
                   borderRadius: BorderRadius.circular(12),
                   color: PmpColors.primary400,
@@ -136,7 +136,7 @@ class _SelfPatternWidgetState extends State<SelfPatternWidget> {
             height: 12,
           ),
           Text(
-            widget.pattern.description ?? '',
+            widget.spokenPattern.description ?? '',
             style: PmpTextStyles.body2Medium,
             maxLines: 3,
             overflow: TextOverflow.ellipsis,

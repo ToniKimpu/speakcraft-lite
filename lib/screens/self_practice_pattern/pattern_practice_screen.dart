@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/pattern/pattern_bloc.dart';
+import 'package:pmp_english/bloc/spoken_pattern/spoken_pattern_bloc.dart';
 import 'package:pmp_english/bloc/pattern_user_comment/pattern_user_comment_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/screens/self_practice_pattern/widgets/practice_example_list.dart';
 
-import '../../model/pattern/pattern.dart';
+import '../../model/spoken_pattern/spoken_pattern.dart';
 import 'widgets/comment_input_field.dart';
 import 'widgets/comment_list_widget.dart';
 import 'widgets/practice_vocabulary_list.dart';
@@ -15,9 +15,9 @@ import 'widgets/self_pattern_widget.dart';
 class PatternPracticeScreen extends StatefulWidget {
   const PatternPracticeScreen({
     super.key,
-    required this.pattern,
+    required this.spokenPattern,
   });
-  final Pattern pattern;
+  final SpokenPattern spokenPattern;
 
   @override
   State<PatternPracticeScreen> createState() => _PatternPracticeScreenState();
@@ -33,8 +33,8 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
 
   final _showVocabularyNotifier = ValueNotifier<bool>(false);
   final _showExampleNotifier = ValueNotifier<bool>(false);
-  final _vocabularyBloc = PatternBloc();
-  final _exampleBloc = PatternBloc();
+  final _vocabularyBloc = SpokenPatternBloc();
+  final _exampleBloc = SpokenPatternBloc();
 
   final _patternContainerKey = GlobalKey();
   double patternContainerHeight = -1;
@@ -68,11 +68,12 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
         });
       }
     });
-    _vocabularyBloc
-        .add(PatternEvent.loadVocabulariesByPattern(widget.pattern.id!));
-    _exampleBloc.add(PatternEvent.loadExamplesByPattern(widget.pattern.id!));
-    _patternUserCommentBloc
-        .add(PatternUserCommentEvent.loadComments(true, widget.pattern.id!));
+    _vocabularyBloc.add(
+        SpokenPatternEvent.loadVocabulariesByPattern(widget.spokenPattern.id!));
+    _exampleBloc.add(
+        SpokenPatternEvent.loadExamplesByPattern(widget.spokenPattern.id!));
+    _patternUserCommentBloc.add(
+        PatternUserCommentEvent.loadComments(true, widget.spokenPattern.id!));
   }
 
   @override
@@ -119,10 +120,10 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
       },
       child: MultiBlocProvider(
         providers: [
-          BlocProvider<PatternBloc>(
+          BlocProvider<SpokenPatternBloc>(
             create: (context) => _vocabularyBloc,
           ),
-          BlocProvider<PatternBloc>(
+          BlocProvider<SpokenPatternBloc>(
             create: (context) => _exampleBloc,
           ),
           BlocProvider<PatternUserCommentBloc>(
@@ -144,7 +145,7 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
           child: Scaffold(
             appBar: AppBar(
               title: Text(
-                widget.pattern.pattern,
+                widget.spokenPattern.pattern,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -169,7 +170,7 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
                     _patternUserCommentBloc.add(
                       PatternUserCommentEvent.loadComments(
                         false,
-                        widget.pattern.id!,
+                        widget.spokenPattern.id!,
                       ),
                     );
                   },
@@ -177,7 +178,7 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
                     _patternUserCommentBloc.add(
                       PatternUserCommentEvent.loadComments(
                         false,
-                        widget.pattern.id!,
+                        widget.spokenPattern.id!,
                       ),
                     );
                   },
@@ -196,7 +197,7 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
                       children: [
                         SelfPatternWidget(
                           patternContainerKey: _patternContainerKey,
-                          pattern: widget.pattern,
+                          spokenPattern: widget.spokenPattern,
                           showVocabularyNotifier: _showVocabularyNotifier,
                           showExampleNotifier: _showExampleNotifier,
                         ),
@@ -225,7 +226,7 @@ class _PatternPracticeScreenState extends State<PatternPracticeScreen>
                     addComment: (comment) {
                       _addOrDeleteCommentBloc.add(
                         PatternUserCommentEvent.addComment(
-                          widget.pattern.id!,
+                          widget.spokenPattern.id!,
                           _commentController.text.trim(),
                         ),
                       );

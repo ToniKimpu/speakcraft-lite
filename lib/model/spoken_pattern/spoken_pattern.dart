@@ -4,12 +4,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../pattern_example/pattern_example.dart';
 
-part 'pattern.freezed.dart';
-part 'pattern.g.dart';
+part 'spoken_pattern.freezed.dart';
+part 'spoken_pattern.g.dart';
 
 @freezed
-class Pattern with _$Pattern {
-  const factory Pattern({
+class SpokenPattern with _$SpokenPattern {
+  const factory SpokenPattern({
     int? id,
     required String pattern,
     String? title,
@@ -29,13 +29,13 @@ class Pattern with _$Pattern {
       fromJson: _hasCommentByUser,
     )
     bool? hasComment,
-  }) = _Pattern;
+  }) = _SpokenPattern;
 
-  factory Pattern.fromJson(Map<String, dynamic> json) =>
-      _$PatternFromJson(json);
+  factory SpokenPattern.fromJson(Map<String, dynamic> json) =>
+      _$SpokenPatternFromJson(json);
 
-  static List<Pattern> fromJsonList(List<dynamic> jsonList) {
-    return jsonList.map((json) => Pattern.fromJson(json)).toList();
+  static List<SpokenPattern> fromJsonList(List<dynamic> jsonList) {
+    return jsonList.map((json) => SpokenPattern.fromJson(json)).toList();
   }
 }
 
