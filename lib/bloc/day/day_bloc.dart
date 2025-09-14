@@ -99,9 +99,6 @@ class DayBloc extends Bloc<DayEvent, DayState> {
               ))
           .toList();
 
-      final lesson = updatedDays.first.lessons.first;
-      debugPrint("_mapLoadDaysToState: ${lesson.lessonName} lesson Name");
-
       emit(DayState.loaded(null, updatedDays));
     } catch (e) {
       debugPrint("_mapLoadDayToState: ${e.toString()}");
