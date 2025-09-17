@@ -21,9 +21,14 @@ import 'global_app_state.dart';
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   const env = String.fromEnvironment('flavor', defaultValue: 'dev');
   final firebaseOption = getOption(env);
-  await Firebase.initializeApp(
-    options: firebaseOption ?? DefaultFirebaseOptionsDev.currentPlatform,
-  );
+  // await Firebase.initializeApp(
+  //   options: firebaseOption ?? DefaultFirebaseOptionsDev.currentPlatform,
+  // );
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp(
+      options: firebaseOption ?? DefaultFirebaseOptionsDev.currentPlatform,
+    );
+  }
   await setupFlutterNotifications();
   showFlutterNotification(message);
 }
@@ -136,9 +141,14 @@ void main() async {
     anonKey: Env.supabaseAnonKey,
   );
 
-  await Firebase.initializeApp(
-    options: getOption(env),
-  );
+  // await Firebase.initializeApp(
+  //   options: getOption(env),
+  // );
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp(
+      options: getOption(env),
+    );
+  }
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await _populateDeviceInfo();
   await setupFlutterNotifications();

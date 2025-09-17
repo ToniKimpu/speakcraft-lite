@@ -45,7 +45,7 @@ class InProgressDayList extends StatelessWidget {
 
     return ListView.separated(
       itemCount: remainingDays.length + 1,
-      padding: const EdgeInsets.only(top: 16),
+      padding: const EdgeInsets.symmetric(vertical: 16),
       separatorBuilder: (_, __) => const SizedBox(height: 16),
       itemBuilder: (_, index) {
         if (index == 0) {

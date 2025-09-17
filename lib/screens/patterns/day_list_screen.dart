@@ -34,7 +34,7 @@ class _DayListScreenState extends State<DayListScreen> {
         title: const Text('Useful Spoken Patterns'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -83,6 +83,7 @@ class _DayListScreenState extends State<DayListScreen> {
                           days.where((day) => !day.isComplete).toList();
                       final completedDays =
                           days.where((day) => day.isComplete).toList();
+
                       /// preload exercises for current day
                       if (notCompletedDays.isNotEmpty) {
                         context.read<ExerciseBloc>().add(
