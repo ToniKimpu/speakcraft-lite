@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
 
-import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
+import '../model/ai_sentence_practice/ai_sentence_practice.dart';
 
 @UseRowClass(AiSentencePractice)
 class AiSentencePracticeTable extends Table {

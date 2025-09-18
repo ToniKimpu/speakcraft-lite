@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/screens/patterns/enum/day_item_type.dart';
-import 'package:pmp_english/screens/patterns/widgets/day_widget.dart';
+import 'package:pmp_english/screens/days/enum/day_item_type.dart';
+import 'package:pmp_english/screens/days/widgets/day_widget.dart';
 
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';

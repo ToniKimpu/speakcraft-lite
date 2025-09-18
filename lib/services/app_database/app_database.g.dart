@@ -232,16 +232,245 @@ class AiSentencePracticeTableCompanion
   }
 }
 
+class $UserExampleAnswerTableTable extends UserExampleAnswerTable
+    with TableInfo<$UserExampleAnswerTableTable, UserExampleAnswerTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UserExampleAnswerTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _exampleIdMeta =
+      const VerificationMeta('exampleId');
+  @override
+  late final GeneratedColumn<int> exampleId = GeneratedColumn<int>(
+      'example_id', aliasedName, false,
+      type: DriftSqlType.int, requiredDuringInsert: true);
+  static const VerificationMeta _userAnswerMeta =
+      const VerificationMeta('userAnswer');
+  @override
+  late final GeneratedColumn<String> userAnswer = GeneratedColumn<String>(
+      'user_answer', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  @override
+  List<GeneratedColumn> get $columns => [id, exampleId, userAnswer];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'user_example_answer_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<UserExampleAnswerTableData> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('example_id')) {
+      context.handle(_exampleIdMeta,
+          exampleId.isAcceptableOrUnknown(data['example_id']!, _exampleIdMeta));
+    } else if (isInserting) {
+      context.missing(_exampleIdMeta);
+    }
+    if (data.containsKey('user_answer')) {
+      context.handle(
+          _userAnswerMeta,
+          userAnswer.isAcceptableOrUnknown(
+              data['user_answer']!, _userAnswerMeta));
+    } else if (isInserting) {
+      context.missing(_userAnswerMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  UserExampleAnswerTableData map(Map<String, dynamic> data,
+      {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return UserExampleAnswerTableData(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      exampleId: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}example_id'])!,
+      userAnswer: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}user_answer'])!,
+    );
+  }
+
+  @override
+  $UserExampleAnswerTableTable createAlias(String alias) {
+    return $UserExampleAnswerTableTable(attachedDatabase, alias);
+  }
+}
+
+class UserExampleAnswerTableData extends DataClass
+    implements Insertable<UserExampleAnswerTableData> {
+  final int id;
+  final int exampleId;
+  final String userAnswer;
+  const UserExampleAnswerTableData(
+      {required this.id, required this.exampleId, required this.userAnswer});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['example_id'] = Variable<int>(exampleId);
+    map['user_answer'] = Variable<String>(userAnswer);
+    return map;
+  }
+
+  UserExampleAnswerTableCompanion toCompanion(bool nullToAbsent) {
+    return UserExampleAnswerTableCompanion(
+      id: Value(id),
+      exampleId: Value(exampleId),
+      userAnswer: Value(userAnswer),
+    );
+  }
+
+  factory UserExampleAnswerTableData.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return UserExampleAnswerTableData(
+      id: serializer.fromJson<int>(json['id']),
+      exampleId: serializer.fromJson<int>(json['exampleId']),
+      userAnswer: serializer.fromJson<String>(json['userAnswer']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'exampleId': serializer.toJson<int>(exampleId),
+      'userAnswer': serializer.toJson<String>(userAnswer),
+    };
+  }
+
+  UserExampleAnswerTableData copyWith(
+          {int? id, int? exampleId, String? userAnswer}) =>
+      UserExampleAnswerTableData(
+        id: id ?? this.id,
+        exampleId: exampleId ?? this.exampleId,
+        userAnswer: userAnswer ?? this.userAnswer,
+      );
+  UserExampleAnswerTableData copyWithCompanion(
+      UserExampleAnswerTableCompanion data) {
+    return UserExampleAnswerTableData(
+      id: data.id.present ? data.id.value : this.id,
+      exampleId: data.exampleId.present ? data.exampleId.value : this.exampleId,
+      userAnswer:
+          data.userAnswer.present ? data.userAnswer.value : this.userAnswer,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserExampleAnswerTableData(')
+          ..write('id: $id, ')
+          ..write('exampleId: $exampleId, ')
+          ..write('userAnswer: $userAnswer')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, exampleId, userAnswer);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is UserExampleAnswerTableData &&
+          other.id == this.id &&
+          other.exampleId == this.exampleId &&
+          other.userAnswer == this.userAnswer);
+}
+
+class UserExampleAnswerTableCompanion
+    extends UpdateCompanion<UserExampleAnswerTableData> {
+  final Value<int> id;
+  final Value<int> exampleId;
+  final Value<String> userAnswer;
+  const UserExampleAnswerTableCompanion({
+    this.id = const Value.absent(),
+    this.exampleId = const Value.absent(),
+    this.userAnswer = const Value.absent(),
+  });
+  UserExampleAnswerTableCompanion.insert({
+    this.id = const Value.absent(),
+    required int exampleId,
+    required String userAnswer,
+  })  : exampleId = Value(exampleId),
+        userAnswer = Value(userAnswer);
+  static Insertable<UserExampleAnswerTableData> custom({
+    Expression<int>? id,
+    Expression<int>? exampleId,
+    Expression<String>? userAnswer,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (exampleId != null) 'example_id': exampleId,
+      if (userAnswer != null) 'user_answer': userAnswer,
+    });
+  }
+
+  UserExampleAnswerTableCompanion copyWith(
+      {Value<int>? id, Value<int>? exampleId, Value<String>? userAnswer}) {
+    return UserExampleAnswerTableCompanion(
+      id: id ?? this.id,
+      exampleId: exampleId ?? this.exampleId,
+      userAnswer: userAnswer ?? this.userAnswer,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (exampleId.present) {
+      map['example_id'] = Variable<int>(exampleId.value);
+    }
+    if (userAnswer.present) {
+      map['user_answer'] = Variable<String>(userAnswer.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserExampleAnswerTableCompanion(')
+          ..write('id: $id, ')
+          ..write('exampleId: $exampleId, ')
+          ..write('userAnswer: $userAnswer')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
   late final $AiSentencePracticeTableTable aiSentencePracticeTable =
       $AiSentencePracticeTableTable(this);
+  late final $UserExampleAnswerTableTable userExampleAnswerTable =
+      $UserExampleAnswerTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
-  List<DatabaseSchemaEntity> get allSchemaEntities => [aiSentencePracticeTable];
+  List<DatabaseSchemaEntity> get allSchemaEntities =>
+      [aiSentencePracticeTable, userExampleAnswerTable];
 }
 
 typedef $$AiSentencePracticeTableTableCreateCompanionBuilder
@@ -438,6 +667,150 @@ typedef $$AiSentencePracticeTableTableProcessedTableManager
         ),
         AiSentencePractice,
         PrefetchHooks Function()>;
+typedef $$UserExampleAnswerTableTableCreateCompanionBuilder
+    = UserExampleAnswerTableCompanion Function({
+  Value<int> id,
+  required int exampleId,
+  required String userAnswer,
+});
+typedef $$UserExampleAnswerTableTableUpdateCompanionBuilder
+    = UserExampleAnswerTableCompanion Function({
+  Value<int> id,
+  Value<int> exampleId,
+  Value<String> userAnswer,
+});
+
+class $$UserExampleAnswerTableTableFilterComposer
+    extends Composer<_$AppDatabase, $UserExampleAnswerTableTable> {
+  $$UserExampleAnswerTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get exampleId => $composableBuilder(
+      column: $table.exampleId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => ColumnFilters(column));
+}
+
+class $$UserExampleAnswerTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $UserExampleAnswerTableTable> {
+  $$UserExampleAnswerTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get exampleId => $composableBuilder(
+      column: $table.exampleId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => ColumnOrderings(column));
+}
+
+class $$UserExampleAnswerTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UserExampleAnswerTableTable> {
+  $$UserExampleAnswerTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get exampleId =>
+      $composableBuilder(column: $table.exampleId, builder: (column) => column);
+
+  GeneratedColumn<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => column);
+}
+
+class $$UserExampleAnswerTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $UserExampleAnswerTableTable,
+    UserExampleAnswerTableData,
+    $$UserExampleAnswerTableTableFilterComposer,
+    $$UserExampleAnswerTableTableOrderingComposer,
+    $$UserExampleAnswerTableTableAnnotationComposer,
+    $$UserExampleAnswerTableTableCreateCompanionBuilder,
+    $$UserExampleAnswerTableTableUpdateCompanionBuilder,
+    (
+      UserExampleAnswerTableData,
+      BaseReferences<_$AppDatabase, $UserExampleAnswerTableTable,
+          UserExampleAnswerTableData>
+    ),
+    UserExampleAnswerTableData,
+    PrefetchHooks Function()> {
+  $$UserExampleAnswerTableTableTableManager(
+      _$AppDatabase db, $UserExampleAnswerTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UserExampleAnswerTableTableFilterComposer(
+                  $db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UserExampleAnswerTableTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UserExampleAnswerTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<int> exampleId = const Value.absent(),
+            Value<String> userAnswer = const Value.absent(),
+          }) =>
+              UserExampleAnswerTableCompanion(
+            id: id,
+            exampleId: exampleId,
+            userAnswer: userAnswer,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            required int exampleId,
+            required String userAnswer,
+          }) =>
+              UserExampleAnswerTableCompanion.insert(
+            id: id,
+            exampleId: exampleId,
+            userAnswer: userAnswer,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$UserExampleAnswerTableTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $UserExampleAnswerTableTable,
+        UserExampleAnswerTableData,
+        $$UserExampleAnswerTableTableFilterComposer,
+        $$UserExampleAnswerTableTableOrderingComposer,
+        $$UserExampleAnswerTableTableAnnotationComposer,
+        $$UserExampleAnswerTableTableCreateCompanionBuilder,
+        $$UserExampleAnswerTableTableUpdateCompanionBuilder,
+        (
+          UserExampleAnswerTableData,
+          BaseReferences<_$AppDatabase, $UserExampleAnswerTableTable,
+              UserExampleAnswerTableData>
+        ),
+        UserExampleAnswerTableData,
+        PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -445,4 +818,7 @@ class $AppDatabaseManager {
   $$AiSentencePracticeTableTableTableManager get aiSentencePracticeTable =>
       $$AiSentencePracticeTableTableTableManager(
           _db, _db.aiSentencePracticeTable);
+  $$UserExampleAnswerTableTableTableManager get userExampleAnswerTable =>
+      $$UserExampleAnswerTableTableTableManager(
+          _db, _db.userExampleAnswerTable);
 }

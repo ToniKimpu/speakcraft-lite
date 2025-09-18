@@ -9,7 +9,7 @@ import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.
 import 'package:pmp_english/screens/main/free_user_screen.dart';
 import 'package:pmp_english/screens/main/new_path_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
-import 'package:pmp_english/screens/patterns/pattern_exercise_screen.dart';
+import 'package:pmp_english/screens/days/pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/practice_with_ai/ai_practice_screen.dart';
 import 'package:pmp_english/screens/practice_with_ai/ai_response_detail_screen.dart';
 import 'package:pmp_english/screens/practice_with_ai/ai_sentence_practice_list_screen.dart';
@@ -22,20 +22,21 @@ import 'package:pmp_english/screens/translation/translation_level_list.dart';
 import 'package:pmp_english/screens/translation/translation_practice_page.dart';
 import 'package:pmp_english/screens/translation/translation_practice_result_screen.dart';
 
-import '../model/spoken_pattern/spoken_pattern.dart';
 import '../model/ai_sentence_practice/ai_sentence_practice.dart';
 import '../model/day/day.dart';
 import '../model/exercise/exercise.dart';
 import '../model/listening/listening.dart';
 import '../model/pattern_exercise/pattern_exercise.dart';
+import '../model/spoken_pattern/spoken_pattern.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
 import '../screens/main/device_failed_screen.dart';
 import '../screens/main/home_screen.dart';
 import '../screens/main/profile_page.dart';
 import '../screens/onboarding/splash_screen.dart';
-import '../screens/patterns/day_list_screen.dart';
-import '../screens/patterns/pattern_practice_result_screen.dart';
-import '../screens/patterns/speaking_pattern_screen.dart';
+import '../screens/days/day_list_screen.dart';
+import '../screens/days/pattern_practice_result_screen.dart';
+import '../screens/days/speaking_pattern_screen.dart';
+import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
 import '../screens/self_practice_pattern/pattern_practice_screen.dart';
 
 class PmpRoutes {
@@ -43,6 +44,7 @@ class PmpRoutes {
   static const home = '/home';
   static const dayList = '/day_list';
   static const speakingPattern = '/day_list/speaking_pattern';
+  static const spokenPatternPage = '/day_list/spoken_pattern_page';
   static const translationListPage = '/translation/translation_list_page';
   static const translationDayList = '/translation/translation_day_list';
   static const translationPage = '/translation/translation_page';
@@ -90,6 +92,12 @@ class PmpRoutes {
               lesson: lesson,
             ),
             settings);
+      case spokenPatternPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final lesson = args['lesson'] as Lesson;
+        return _getRoute(SpokenPatternScreen(
+          lesson: lesson,
+        ), settings);
 
       case translationPage:
         final args = settings.arguments as Map<String, dynamic>;

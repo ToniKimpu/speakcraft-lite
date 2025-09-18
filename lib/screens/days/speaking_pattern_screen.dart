@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/l10n/generated/l10n.dart';
-import 'package:pmp_english/screens/patterns/widgets/spoken_pattern_widget.dart';
+import 'package:pmp_english/screens/days/widgets/spoken_pattern_widget.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/spoken_pattern/spoken_pattern_bloc.dart';
@@ -120,7 +120,8 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
                   if (_spokenPatterns.isEmpty) {
                     _spokenPatterns.addAll(spokenPatterns);
                   }
-                  if (spokenPatterns.first.audioPath != null && _currentPage == 0) {
+                  if (spokenPatterns.first.audioPath != null &&
+                      _currentPage == 0) {
                     _audioPlayer.setUrl(spokenPatterns.first.audioPath!.trim());
                   }
                   return Column(

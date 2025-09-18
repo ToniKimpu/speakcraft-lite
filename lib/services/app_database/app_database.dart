@@ -1,13 +1,14 @@
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
-import 'package:pmp_english/tables/ai_sentence_practice/ai_sentence_practice_table.dart';
+import 'package:pmp_english/tables/ai_sentence_practice_table.dart';
 
 import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
+import '../../tables/user_example_answer_table.dart';
 
 part 'app_database.g.dart';
 
 @DriftDatabase(
-  tables: [AiSentencePracticeTable],
+  tables: [AiSentencePracticeTable, UserExampleAnswerTable],
 )
 class AppDatabase extends _$AppDatabase {
   static final _instance = AppDatabase._();

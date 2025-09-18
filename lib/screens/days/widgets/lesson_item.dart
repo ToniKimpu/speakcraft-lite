@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/lesson/lesson.dart';
-import 'package:pmp_english/screens/patterns/enum/day_item_type.dart';
+import 'package:pmp_english/screens/days/enum/day_item_type.dart';
 import '../../../../config/pmp_routes.dart';
 
 class LessonItem extends StatelessWidget {
@@ -70,10 +70,14 @@ class LessonItem extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: () {
+            // Navigator.pushNamed(
+            //   context,
+            //   PmpRoutes.speakingPattern,
+            //   arguments: {'lesson': lesson},
+            // );
             Navigator.pushNamed(
               context,
-              PmpRoutes.speakingPattern,
-              arguments: {'lesson': lesson},
+              PmpRoutes.spokenPatternPage,
             );
           },
           child: content,

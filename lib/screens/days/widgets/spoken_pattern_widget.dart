@@ -4,10 +4,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
-import 'package:pmp_english/screens/patterns/widgets/example_list_widget.dart';
-import 'package:pmp_english/screens/patterns/widgets/pattern_example_list.dart';
-
-import '../../../model/pattern_example/pattern_example.dart';
+import 'package:pmp_english/screens/days/widgets/pattern_example_list.dart';
 
 class SpokenPatternWidget extends StatelessWidget {
   const SpokenPatternWidget({
