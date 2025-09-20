@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/model/pattern_example/pattern_example.dart';
+import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 
 import '../../../../config/pmp_text_styles.dart';
+import '../../../../services/supabase_service.dart';
 import '../../../../shared_widgets/practice_text_field.dart';
 
 class SpokenPatternExample extends StatefulWidget {
-  const SpokenPatternExample({super.key});
+  const SpokenPatternExample({
+    super.key,
+    required this.spokenPatternExample,
+  });
+  final PatternExample spokenPatternExample;
 
   @override
   State<SpokenPatternExample> createState() => _SpokenPatternExampleState();
@@ -47,7 +54,7 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
             ),
           ),
           Text(
-            "ကျွန်တော် အပြင်သွားချင်တယ်။",
+            widget.spokenPatternExample.burmeseText!,
             style: PmpTextStyles.body1Semi.copyWith(
               color: Colors.white,
             ),
@@ -62,7 +69,7 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
             ),
           ),
           Text(
-            "I want to go outside.",
+            widget.spokenPatternExample.englishText,
             style: PmpTextStyles.body1Semi.copyWith(
               color: Colors.white,
             ),
@@ -89,117 +96,52 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
           const SizedBox(
             height: 12,
           ),
-          Row(
-            children: [
-              Container(
-                width: 8,
-                height: 8,
-                margin: const EdgeInsets.only(right: 8),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          if (widget.spokenPatternExample.vocabularies != null &&
+              widget.spokenPatternExample.vocabularies!.isNotEmpty) ...[
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:
+                  widget.spokenPatternExample.vocabularies!.map((vocabulary) {
+                return Row(
                   children: [
-                    Text(
-                      "Play",
-                      style: PmpTextStyles.body2Semi.copyWith(
-                        fontWeight: FontWeight.bold,
+                    Container(
+                      width: 8,
+                      height: 8,
+                      margin: const EdgeInsets.only(right: 8),
+                      decoration: const BoxDecoration(
                         color: Colors.white,
+                        shape: BoxShape.circle,
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    Text(
-                      "ကစားသည်",
-                      style: PmpTextStyles.body2Regular.copyWith(
-                        color: Colors.white,
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            vocabulary.englishText,
+                            style: PmpTextStyles.body2Semi.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            vocabulary.burmeseText,
+                            style: PmpTextStyles.body2Regular.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          Row(
-            children: [
-              Container(
-                width: 8,
-                height: 8,
-                margin: const EdgeInsets.only(right: 8),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Play",
-                      style: PmpTextStyles.body2Semi.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      "ကစားသည်",
-                      style: PmpTextStyles.body2Regular.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          Row(
-            children: [
-              Container(
-                width: 8,
-                height: 8,
-                margin: const EdgeInsets.only(right: 8),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Play",
-                      style: PmpTextStyles.body2Semi.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      "ကစားသည်",
-                      style: PmpTextStyles.body2Regular.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 8,
-          ),
+                );
+              }).toList(),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+          ],
           Material(
             borderRadius: BorderRadius.circular(12),
             color: const Color(0xFF2C5364),
@@ -225,5 +167,27 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
         ],
       ),
     );
+  }
+
+  Future<List<PatternVocabulary>> fetchVocabularies() async {
+    try {
+      final dataRes = await supabase
+          .from("pattern_vocabularies")
+          .select("*,pattern_examples_vocabularies_relation!inner()")
+          .eq("pattern_examples_vocabularies_relation.pattern_example_id",
+              widget.spokenPatternExample.id)
+          .order("created_at", ascending: true);
+      if (dataRes.isEmpty) {
+        return <PatternVocabulary>[];
+      }
+
+      final patternExercises =
+          dataRes.map((e) => PatternVocabulary.fromJson(e)).toList();
+
+      return patternExercises;
+    } catch (e) {
+      debugPrint('_mapLoadPatternExercisesToState: errror: ${e.toString()}');
+      return <PatternVocabulary>[];
+    }
   }
 }

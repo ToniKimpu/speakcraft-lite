@@ -3,11 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
-import 'package:pmp_english/services/audio_url_service.dart';
 import 'package:pmp_english/services/supabase_service.dart';
 
-import '../../model/spoken_pattern/spoken_pattern.dart';
 import '../../model/pattern_example/pattern_example.dart';
+import '../../model/spoken_pattern/spoken_pattern.dart';
 
 part 'spoken_pattern_bloc.freezed.dart';
 
@@ -107,7 +106,8 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
     try {
       final dataRes = await supabase
           .from('patterns')
-          .select('*,subject_verb_agreements(name),pattern_examples(*)')
+          .select(
+              '*,subject_verb_agreements(name),pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))')
           .eq('lesson_id', lessonId)
           .eq("is_deleted", false)
           .eq("pattern_examples.is_deleted", false)
@@ -116,12 +116,21 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
         emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
         return;
       }
+
+      debugPrint("_mapLoadPatternByLessonToState: ${dataRes.first.toString()}");
+
       final spokenPatterns =
           dataRes.map((e) => SpokenPattern.fromJson(e)).toList();
       final newSpokenPatterns = spokenPatterns.map((p) {
         if (p.audioPath == null || p.audioPath!.isEmpty) return p;
+        // return p.copyWith(
+        //   audioPath: AudioUrlService.resolveAudioUrl(p.audioPath!),
+        // );
         return p.copyWith(
-          audioPath: AudioUrlService.resolveAudioUrl(p.audioPath!),
+          audioPath: SupabaseService().getPublicUrl(
+            bucketFolder: SupabaseBucketFolders.spokenPatternAudios,
+            fileName: p.audioPath!,
+          ),
         );
       }).toList();
       emit(SpokenPatternState.loaded(newSpokenPatterns));
@@ -170,7 +179,8 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
         emit(const SpokenPatternState.examplesLoaded(<PatternExample>[]));
         return;
       }
-      final examples = PatternExample.fromJsonList(dataRes);
+      // final examples = PatternExample.fromJsonList(dataRes);
+      final examples = dataRes.map((e) => PatternExample.fromJson(e)).toList();
       emit(SpokenPatternState.examplesLoaded(examples));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');

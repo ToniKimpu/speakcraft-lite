@@ -116,6 +116,8 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                       ),
                     );
                   }
+                  debugPrint(
+                      "_spokenPatternScreen: ${spokenPatterns.length} total length!");
                   if (_spokenPatterns.isEmpty) {
                     _spokenPatterns.addAll(spokenPatterns);
                   }

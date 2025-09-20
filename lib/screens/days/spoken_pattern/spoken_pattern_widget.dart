@@ -57,22 +57,24 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
                   Wrap(
                     direction: Axis.vertical,
                     children: [
-                      const Text(
-                        "I want to + V1",
-                        style: TextStyle(
+                      Text(
+                        widget.spokenPattern.pattern,
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
                           color: Colors.white,
                           fontFamily: "ArchivoBlack Regular",
                         ),
                       ),
-                      Text(
-                        "ကျွန်တော် ...... ချင်တယ်",
-                        style: PmpTextStyles.body2Semi.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.normal,
+                      if (widget.spokenPattern.title != null &&
+                          widget.spokenPattern.title!.isNotEmpty)
+                        Text(
+                          widget.spokenPattern.title!,
+                          style: PmpTextStyles.body2Semi.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
-                      ),
                     ],
                   ),
                   Padding(
@@ -109,14 +111,17 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
                   ),
                 ],
               ),
-              const SizedBox(height: 8),
-              Text(
-                "တစ်ခုခုကို လုပ်ဆောင်ချင်တယ်လို့ ပြောချင်တဲ့အခါ သည်စကားစုကို အသုံးပြုပြီးတော့ ပြောလို့ရပါတယ်။",
-                style: PmpTextStyles.body2Semi.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
+              if (widget.spokenPattern.description != null &&
+                  widget.spokenPattern.description!.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Text(
+                  widget.spokenPattern.description!,
+                  style: PmpTextStyles.body2Semi.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                  ),
                 ),
-              ),
+              ],
               const SizedBox(height: 12),
               Ink(
                 padding: const EdgeInsets.symmetric(
@@ -136,44 +141,54 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
                     const SizedBox(
                       width: 12,
                     ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "I want to meet her.",
-                            style: PmpTextStyles.body2Semi.copyWith(
-                              color: Colors.white,
+                    if (widget.spokenPattern.patternExamples != null &&
+                        widget.spokenPattern.patternExamples!.isNotEmpty)
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              widget.spokenPattern.patternExamples!.first
+                                  .englishText,
+                              style: PmpTextStyles.body2Semi.copyWith(
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          Text(
-                            "ကျွန်တော် သူမကို တွေ့ချင်တယ်။",
-                            style: PmpTextStyles.body2Semi.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.normal,
+                            Text(
+                              widget.spokenPattern.patternExamples!.first
+                                  .burmeseText!,
+                              style: PmpTextStyles.body2Semi.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.normal,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),
             ],
           ),
         ),
-        Expanded(
-          child: ListView.separated(
-            padding: const EdgeInsets.all(16),
-            itemBuilder: (context, index) {
-              return const SpokenPatternExample();
-            },
-            separatorBuilder: (_, __) => const SizedBox(
-              height: 8,
+        if (widget.spokenPattern.patternExamples != null &&
+            widget.spokenPattern.patternExamples!.isNotEmpty)
+          Expanded(
+            child: ListView.separated(
+              itemCount: widget.spokenPattern.patternExamples!.length,
+              padding: const EdgeInsets.all(16),
+              itemBuilder: (context, index) {
+                final patternExample =
+                    widget.spokenPattern.patternExamples![index];
+                return SpokenPatternExample(
+                  spokenPatternExample: patternExample,
+                );
+              },
+              separatorBuilder: (_, __) => const SizedBox(
+                height: 8,
+              ),
             ),
-            itemCount: 3,
           ),
-        ),
       ],
     );
   }
