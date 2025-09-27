@@ -16,6 +16,7 @@ class PatternExample with _$PatternExample {
     @JsonKey(name: 'burmese_text') String? burmeseText,
     @JsonKey(name: 'pattern_id') required int patternId,
     @JsonKey(name: 'start_at') required int startAt,
+    @JsonKey(name: 'practicable') required bool practicable,
     @JsonKey(name: 'created_at') DateTime? createdAt,
     @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
     List<PatternVocabulary>? vocabularies,

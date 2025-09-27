@@ -101,7 +101,8 @@ class _PracticeExerciseWidgetState extends State<PracticeExerciseWidget> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Row(
+                    child: 
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(

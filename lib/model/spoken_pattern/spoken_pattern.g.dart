@@ -12,8 +12,7 @@ _$SpokenPatternImpl _$$SpokenPatternImplFromJson(Map<String, dynamic> json) =>
       pattern: json['pattern'] as String,
       title: json['title'] as String?,
       description: json['description'] as String?,
-      subjectVerbAgreement:
-          _subjectVerbAgreementFromJson(json['subject_verb_agreements']),
+      svgData: json['svg'] as List<dynamic>?,
       audioPath: json['audio_path'] as String?,
       lessonId: (json['lesson_id'] as num?)?.toInt(),
       createdAt: json['created_at'] == null
@@ -31,7 +30,7 @@ Map<String, dynamic> _$$SpokenPatternImplToJson(_$SpokenPatternImpl instance) =>
       'pattern': instance.pattern,
       'title': instance.title,
       'description': instance.description,
-      'subject_verb_agreements': instance.subjectVerbAgreement,
+      'svg': instance.svgData,
       'audio_path': instance.audioPath,
       'lesson_id': instance.lessonId,
       'created_at': instance.createdAt?.toIso8601String(),

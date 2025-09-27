@@ -12,6 +12,7 @@ import '../../../config/pmp_text_styles.dart';
 import '../../../l10n/generated/l10n.dart';
 import '../../../model/lesson/lesson.dart';
 import '../../../model/spoken_pattern/spoken_pattern.dart';
+import 'widgets/footer_widget.dart';
 
 class SpokenPatternScreen extends StatefulWidget {
   const SpokenPatternScreen({
@@ -33,6 +34,8 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
   StreamSubscription? _playerStateSubscription;
   StreamSubscription<Duration>? _positionSub;
   final _spokenPatterns = <SpokenPattern>[];
+
+  final List<int> _doneIds = [];
 
   @override
   void initState() {
@@ -83,7 +86,7 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
       },
       child: MainScaffold(
         appBar: AppBar(
-          title: const Text("I want to + V1"),
+          title: Text(widget.lesson.lessonName),
         ),
         body: MultiBlocProvider(
           providers: [
@@ -140,15 +143,34 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                                     _audioPositionTrackerBloc,
                                 audioPlayerStateTrackerBloc:
                                     _audioPlayerStateTrackerBloc,
+                                onNextEnabledChanged: (spokenPatternId) {
+                                  setState(() {
+                                    if (!_doneIds.contains(spokenPatternId)) {
+                                      _doneIds.add(spokenPatternId);
+                                    }
+                                  });
+                                },
                               );
                             },
                           ),
                         ),
                       ),
-                      Container(
-                        width: double.infinity,
-                        height: 40,
-                        color: Colors.amber,
+                      FooterWidget(
+                        spokenPatterns: _spokenPatterns,
+                        currentPage: _currentPage,
+                        audioPlayer: _audioPlayer,
+                        nextEnabled:
+                            _doneIds.contains(_spokenPatterns[_currentPage].id),
+                        onPageChanged: (newPage) {
+                          setState(() {
+                            _currentPage = newPage;
+                            if (_spokenPatterns[_currentPage].audioPath !=
+                                null) {
+                              _audioPlayer.setUrl(
+                                  _spokenPatterns[_currentPage].audioPath!);
+                            }
+                          });
+                        },
                       ),
                     ],
                   );

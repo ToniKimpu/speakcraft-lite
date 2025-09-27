@@ -52,7 +52,7 @@ class UserExampleAnswerBloc
                 );
             emit(UserExampleAnswerState.loaded(data.userAnswer));
           } catch (e) {
-            debugPrint("");
+            debugPrint("_userExampleAnswerInsert: ${e.toString()}");
           }
         },
       );

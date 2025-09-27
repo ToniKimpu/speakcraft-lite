@@ -13,10 +13,11 @@ _$PatternExampleImpl _$$PatternExampleImplFromJson(Map<String, dynamic> json) =>
       burmeseText: json['burmese_text'] as String?,
       patternId: (json['pattern_id'] as num).toInt(),
       startAt: (json['start_at'] as num).toInt(),
+      practicable: json['practicable'] as bool,
       createdAt: json['created_at'] == null
           ? null
           : DateTime.parse(json['created_at'] as String),
-      vocabularies: _vocabulariesFromJson(json['vocabularies']),
+      vocabularies: _vocabulariesFromJson(json['vocabularies'] as List?),
     );
 
 Map<String, dynamic> _$$PatternExampleImplToJson(
@@ -27,6 +28,7 @@ Map<String, dynamic> _$$PatternExampleImplToJson(
       'burmese_text': instance.burmeseText,
       'pattern_id': instance.patternId,
       'start_at': instance.startAt,
+      'practicable': instance.practicable,
       'created_at': instance.createdAt?.toIso8601String(),
       'vocabularies': instance.vocabularies,
     };

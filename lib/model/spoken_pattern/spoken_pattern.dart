@@ -14,11 +14,7 @@ class SpokenPattern with _$SpokenPattern {
     required String pattern,
     String? title,
     String? description,
-    @JsonKey(
-      name: 'subject_verb_agreements',
-      fromJson: _subjectVerbAgreementFromJson,
-    )
-    String? subjectVerbAgreement,
+    @JsonKey(name: 'svg') List<dynamic>? svgData,
     @JsonKey(name: 'audio_path') String? audioPath,
     @JsonKey(name: 'lesson_id') int? lessonId,
     @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -37,20 +33,6 @@ class SpokenPattern with _$SpokenPattern {
   static List<SpokenPattern> fromJsonList(List<dynamic> jsonList) {
     return jsonList.map((json) => SpokenPattern.fromJson(json)).toList();
   }
-}
-
-String? _subjectVerbAgreementFromJson(dynamic value) {
-  if (value == null) return null;
-
-  // if it's already a String
-  if (value is String) return value;
-
-  // if it's a Map (like your example: {"name": "I => am;He,She,It => is;We,You,They => are"})
-  if (value is Map<String, dynamic>) {
-    return value['name'] as String?;
-  }
-
-  return null;
 }
 
 bool? _hasCommentByUser(List<dynamic>? list) {

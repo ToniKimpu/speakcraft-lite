@@ -107,7 +107,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
       final dataRes = await supabase
           .from('patterns')
           .select(
-              '*,subject_verb_agreements(name),pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))')
+              '*,pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))')
           .eq('lesson_id', lessonId)
           .eq("is_deleted", false)
           .eq("pattern_examples.is_deleted", false)
@@ -116,9 +116,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
         emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
         return;
       }
-
       debugPrint("_mapLoadPatternByLessonToState: ${dataRes.first.toString()}");
-
       final spokenPatterns =
           dataRes.map((e) => SpokenPattern.fromJson(e)).toList();
       final newSpokenPatterns = spokenPatterns.map((p) {

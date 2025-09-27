@@ -24,9 +24,8 @@ mixin _$SpokenPattern {
   String get pattern => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'subject_verb_agreements', fromJson: _subjectVerbAgreementFromJson)
-  String? get subjectVerbAgreement => throw _privateConstructorUsedError;
+  @JsonKey(name: 'svg')
+  List<dynamic>? get svgData => throw _privateConstructorUsedError;
   @JsonKey(name: 'audio_path')
   String? get audioPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'lesson_id')
@@ -60,10 +59,7 @@ abstract class $SpokenPatternCopyWith<$Res> {
       String pattern,
       String? title,
       String? description,
-      @JsonKey(
-          name: 'subject_verb_agreements',
-          fromJson: _subjectVerbAgreementFromJson)
-      String? subjectVerbAgreement,
+      @JsonKey(name: 'svg') List<dynamic>? svgData,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -91,7 +87,7 @@ class _$SpokenPatternCopyWithImpl<$Res, $Val extends SpokenPattern>
     Object? pattern = null,
     Object? title = freezed,
     Object? description = freezed,
-    Object? subjectVerbAgreement = freezed,
+    Object? svgData = freezed,
     Object? audioPath = freezed,
     Object? lessonId = freezed,
     Object? createdAt = freezed,
@@ -115,10 +111,10 @@ class _$SpokenPatternCopyWithImpl<$Res, $Val extends SpokenPattern>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      subjectVerbAgreement: freezed == subjectVerbAgreement
-          ? _value.subjectVerbAgreement
-          : subjectVerbAgreement // ignore: cast_nullable_to_non_nullable
-              as String?,
+      svgData: freezed == svgData
+          ? _value.svgData
+          : svgData // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
       audioPath: freezed == audioPath
           ? _value.audioPath
           : audioPath // ignore: cast_nullable_to_non_nullable
@@ -156,10 +152,7 @@ abstract class _$$SpokenPatternImplCopyWith<$Res>
       String pattern,
       String? title,
       String? description,
-      @JsonKey(
-          name: 'subject_verb_agreements',
-          fromJson: _subjectVerbAgreementFromJson)
-      String? subjectVerbAgreement,
+      @JsonKey(name: 'svg') List<dynamic>? svgData,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -185,7 +178,7 @@ class __$$SpokenPatternImplCopyWithImpl<$Res>
     Object? pattern = null,
     Object? title = freezed,
     Object? description = freezed,
-    Object? subjectVerbAgreement = freezed,
+    Object? svgData = freezed,
     Object? audioPath = freezed,
     Object? lessonId = freezed,
     Object? createdAt = freezed,
@@ -209,10 +202,10 @@ class __$$SpokenPatternImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      subjectVerbAgreement: freezed == subjectVerbAgreement
-          ? _value.subjectVerbAgreement
-          : subjectVerbAgreement // ignore: cast_nullable_to_non_nullable
-              as String?,
+      svgData: freezed == svgData
+          ? _value._svgData
+          : svgData // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
       audioPath: freezed == audioPath
           ? _value.audioPath
           : audioPath // ignore: cast_nullable_to_non_nullable
@@ -245,10 +238,7 @@ class _$SpokenPatternImpl implements _SpokenPattern {
       required this.pattern,
       this.title,
       this.description,
-      @JsonKey(
-          name: 'subject_verb_agreements',
-          fromJson: _subjectVerbAgreementFromJson)
-      this.subjectVerbAgreement,
+      @JsonKey(name: 'svg') final List<dynamic>? svgData,
       @JsonKey(name: 'audio_path') this.audioPath,
       @JsonKey(name: 'lesson_id') this.lessonId,
       @JsonKey(name: 'created_at') this.createdAt,
@@ -256,7 +246,8 @@ class _$SpokenPatternImpl implements _SpokenPattern {
       required final List<PatternExample>? patternExamples,
       @JsonKey(name: 'pattern_user_comments', fromJson: _hasCommentByUser)
       this.hasComment})
-      : _patternExamples = patternExamples;
+      : _svgData = svgData,
+        _patternExamples = patternExamples;
 
   factory _$SpokenPatternImpl.fromJson(Map<String, dynamic> json) =>
       _$$SpokenPatternImplFromJson(json);
@@ -269,10 +260,17 @@ class _$SpokenPatternImpl implements _SpokenPattern {
   final String? title;
   @override
   final String? description;
+  final List<dynamic>? _svgData;
   @override
-  @JsonKey(
-      name: 'subject_verb_agreements', fromJson: _subjectVerbAgreementFromJson)
-  final String? subjectVerbAgreement;
+  @JsonKey(name: 'svg')
+  List<dynamic>? get svgData {
+    final value = _svgData;
+    if (value == null) return null;
+    if (_svgData is EqualUnmodifiableListView) return _svgData;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'audio_path')
   final String? audioPath;
@@ -299,7 +297,7 @@ class _$SpokenPatternImpl implements _SpokenPattern {
 
   @override
   String toString() {
-    return 'SpokenPattern(id: $id, pattern: $pattern, title: $title, description: $description, subjectVerbAgreement: $subjectVerbAgreement, audioPath: $audioPath, lessonId: $lessonId, createdAt: $createdAt, patternExamples: $patternExamples, hasComment: $hasComment)';
+    return 'SpokenPattern(id: $id, pattern: $pattern, title: $title, description: $description, svgData: $svgData, audioPath: $audioPath, lessonId: $lessonId, createdAt: $createdAt, patternExamples: $patternExamples, hasComment: $hasComment)';
   }
 
   @override
@@ -312,8 +310,7 @@ class _$SpokenPatternImpl implements _SpokenPattern {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.subjectVerbAgreement, subjectVerbAgreement) ||
-                other.subjectVerbAgreement == subjectVerbAgreement) &&
+            const DeepCollectionEquality().equals(other._svgData, _svgData) &&
             (identical(other.audioPath, audioPath) ||
                 other.audioPath == audioPath) &&
             (identical(other.lessonId, lessonId) ||
@@ -334,7 +331,7 @@ class _$SpokenPatternImpl implements _SpokenPattern {
       pattern,
       title,
       description,
-      subjectVerbAgreement,
+      const DeepCollectionEquality().hash(_svgData),
       audioPath,
       lessonId,
       createdAt,
@@ -363,10 +360,7 @@ abstract class _SpokenPattern implements SpokenPattern {
       required final String pattern,
       final String? title,
       final String? description,
-      @JsonKey(
-          name: 'subject_verb_agreements',
-          fromJson: _subjectVerbAgreementFromJson)
-      final String? subjectVerbAgreement,
+      @JsonKey(name: 'svg') final List<dynamic>? svgData,
       @JsonKey(name: 'audio_path') final String? audioPath,
       @JsonKey(name: 'lesson_id') final int? lessonId,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
@@ -387,9 +381,8 @@ abstract class _SpokenPattern implements SpokenPattern {
   @override
   String? get description;
   @override
-  @JsonKey(
-      name: 'subject_verb_agreements', fromJson: _subjectVerbAgreementFromJson)
-  String? get subjectVerbAgreement;
+  @JsonKey(name: 'svg')
+  List<dynamic>? get svgData;
   @override
   @JsonKey(name: 'audio_path')
   String? get audioPath;

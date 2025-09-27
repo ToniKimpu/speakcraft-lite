@@ -29,6 +29,8 @@ mixin _$PatternExample {
   int get patternId => throw _privateConstructorUsedError;
   @JsonKey(name: 'start_at')
   int get startAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'practicable')
+  bool get practicable => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
@@ -57,6 +59,7 @@ abstract class $PatternExampleCopyWith<$Res> {
       @JsonKey(name: 'burmese_text') String? burmeseText,
       @JsonKey(name: 'pattern_id') int patternId,
       @JsonKey(name: 'start_at') int startAt,
+      @JsonKey(name: 'practicable') bool practicable,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
       List<PatternVocabulary>? vocabularies});
@@ -82,6 +85,7 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
     Object? burmeseText = freezed,
     Object? patternId = null,
     Object? startAt = null,
+    Object? practicable = null,
     Object? createdAt = freezed,
     Object? vocabularies = freezed,
   }) {
@@ -106,6 +110,10 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
           ? _value.startAt
           : startAt // ignore: cast_nullable_to_non_nullable
               as int,
+      practicable: null == practicable
+          ? _value.practicable
+          : practicable // ignore: cast_nullable_to_non_nullable
+              as bool,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -132,6 +140,7 @@ abstract class _$$PatternExampleImplCopyWith<$Res>
       @JsonKey(name: 'burmese_text') String? burmeseText,
       @JsonKey(name: 'pattern_id') int patternId,
       @JsonKey(name: 'start_at') int startAt,
+      @JsonKey(name: 'practicable') bool practicable,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
       List<PatternVocabulary>? vocabularies});
@@ -155,6 +164,7 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
     Object? burmeseText = freezed,
     Object? patternId = null,
     Object? startAt = null,
+    Object? practicable = null,
     Object? createdAt = freezed,
     Object? vocabularies = freezed,
   }) {
@@ -179,6 +189,10 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
           ? _value.startAt
           : startAt // ignore: cast_nullable_to_non_nullable
               as int,
+      practicable: null == practicable
+          ? _value.practicable
+          : practicable // ignore: cast_nullable_to_non_nullable
+              as bool,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -200,6 +214,7 @@ class _$PatternExampleImpl implements _PatternExample {
       @JsonKey(name: 'burmese_text') this.burmeseText,
       @JsonKey(name: 'pattern_id') required this.patternId,
       @JsonKey(name: 'start_at') required this.startAt,
+      @JsonKey(name: 'practicable') required this.practicable,
       @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
       final List<PatternVocabulary>? vocabularies})
@@ -223,6 +238,9 @@ class _$PatternExampleImpl implements _PatternExample {
   @JsonKey(name: 'start_at')
   final int startAt;
   @override
+  @JsonKey(name: 'practicable')
+  final bool practicable;
+  @override
   @JsonKey(name: 'created_at')
   final DateTime? createdAt;
   final List<PatternVocabulary>? _vocabularies;
@@ -238,7 +256,7 @@ class _$PatternExampleImpl implements _PatternExample {
 
   @override
   String toString() {
-    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, patternId: $patternId, startAt: $startAt, createdAt: $createdAt, vocabularies: $vocabularies)';
+    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, patternId: $patternId, startAt: $startAt, practicable: $practicable, createdAt: $createdAt, vocabularies: $vocabularies)';
   }
 
   @override
@@ -254,6 +272,8 @@ class _$PatternExampleImpl implements _PatternExample {
             (identical(other.patternId, patternId) ||
                 other.patternId == patternId) &&
             (identical(other.startAt, startAt) || other.startAt == startAt) &&
+            (identical(other.practicable, practicable) ||
+                other.practicable == practicable) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             const DeepCollectionEquality()
@@ -269,6 +289,7 @@ class _$PatternExampleImpl implements _PatternExample {
       burmeseText,
       patternId,
       startAt,
+      practicable,
       createdAt,
       const DeepCollectionEquality().hash(_vocabularies));
 
@@ -296,6 +317,7 @@ abstract class _PatternExample implements PatternExample {
       @JsonKey(name: 'burmese_text') final String? burmeseText,
       @JsonKey(name: 'pattern_id') required final int patternId,
       @JsonKey(name: 'start_at') required final int startAt,
+      @JsonKey(name: 'practicable') required final bool practicable,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
       final List<PatternVocabulary>? vocabularies}) = _$PatternExampleImpl;
@@ -317,6 +339,9 @@ abstract class _PatternExample implements PatternExample {
   @override
   @JsonKey(name: 'start_at')
   int get startAt;
+  @override
+  @JsonKey(name: 'practicable')
+  bool get practicable;
   @override
   @JsonKey(name: 'created_at')
   DateTime? get createdAt;
