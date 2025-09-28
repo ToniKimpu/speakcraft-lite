@@ -3,6 +3,7 @@
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../config/env.dart';
 import '../pattern_vocabulary/pattern_vocabulary.dart';
 
 part 'pattern_example.freezed.dart';
@@ -15,6 +16,7 @@ class PatternExample with _$PatternExample {
     @JsonKey(name: 'english_text') required String englishText,
     @JsonKey(name: 'burmese_text') String? burmeseText,
     @JsonKey(name: 'pattern_id') required int patternId,
+    @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl) String? audioUrl,
     @JsonKey(name: 'start_at') required int startAt,
     @JsonKey(name: 'practicable') required bool practicable,
     @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -24,6 +26,11 @@ class PatternExample with _$PatternExample {
 
   factory PatternExample.fromJson(Map<String, dynamic> json) =>
       _$PatternExampleFromJson(json);
+}
+
+String? _nomalizeAudioUrl(String? url) {
+  if (url == null || url.isEmpty) return null;
+  return Env.bunnySpokenPatternAPIKey + url.replaceFirst('bunny/', '');
 }
 
 List<PatternVocabulary> _vocabulariesFromJson(List<dynamic>? vocabList) {

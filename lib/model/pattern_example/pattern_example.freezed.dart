@@ -27,6 +27,8 @@ mixin _$PatternExample {
   String? get burmeseText => throw _privateConstructorUsedError;
   @JsonKey(name: 'pattern_id')
   int get patternId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl)
+  String? get audioUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'start_at')
   int get startAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'practicable')
@@ -58,6 +60,7 @@ abstract class $PatternExampleCopyWith<$Res> {
       @JsonKey(name: 'english_text') String englishText,
       @JsonKey(name: 'burmese_text') String? burmeseText,
       @JsonKey(name: 'pattern_id') int patternId,
+      @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl) String? audioUrl,
       @JsonKey(name: 'start_at') int startAt,
       @JsonKey(name: 'practicable') bool practicable,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -84,6 +87,7 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
     Object? englishText = null,
     Object? burmeseText = freezed,
     Object? patternId = null,
+    Object? audioUrl = freezed,
     Object? startAt = null,
     Object? practicable = null,
     Object? createdAt = freezed,
@@ -106,6 +110,10 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
               as int,
+      audioUrl: freezed == audioUrl
+          ? _value.audioUrl
+          : audioUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       startAt: null == startAt
           ? _value.startAt
           : startAt // ignore: cast_nullable_to_non_nullable
@@ -139,6 +147,7 @@ abstract class _$$PatternExampleImplCopyWith<$Res>
       @JsonKey(name: 'english_text') String englishText,
       @JsonKey(name: 'burmese_text') String? burmeseText,
       @JsonKey(name: 'pattern_id') int patternId,
+      @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl) String? audioUrl,
       @JsonKey(name: 'start_at') int startAt,
       @JsonKey(name: 'practicable') bool practicable,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -163,6 +172,7 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
     Object? englishText = null,
     Object? burmeseText = freezed,
     Object? patternId = null,
+    Object? audioUrl = freezed,
     Object? startAt = null,
     Object? practicable = null,
     Object? createdAt = freezed,
@@ -185,6 +195,10 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
               as int,
+      audioUrl: freezed == audioUrl
+          ? _value.audioUrl
+          : audioUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       startAt: null == startAt
           ? _value.startAt
           : startAt // ignore: cast_nullable_to_non_nullable
@@ -213,6 +227,7 @@ class _$PatternExampleImpl implements _PatternExample {
       @JsonKey(name: 'english_text') required this.englishText,
       @JsonKey(name: 'burmese_text') this.burmeseText,
       @JsonKey(name: 'pattern_id') required this.patternId,
+      @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl) this.audioUrl,
       @JsonKey(name: 'start_at') required this.startAt,
       @JsonKey(name: 'practicable') required this.practicable,
       @JsonKey(name: 'created_at') this.createdAt,
@@ -235,6 +250,9 @@ class _$PatternExampleImpl implements _PatternExample {
   @JsonKey(name: 'pattern_id')
   final int patternId;
   @override
+  @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl)
+  final String? audioUrl;
+  @override
   @JsonKey(name: 'start_at')
   final int startAt;
   @override
@@ -256,7 +274,7 @@ class _$PatternExampleImpl implements _PatternExample {
 
   @override
   String toString() {
-    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, patternId: $patternId, startAt: $startAt, practicable: $practicable, createdAt: $createdAt, vocabularies: $vocabularies)';
+    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, patternId: $patternId, audioUrl: $audioUrl, startAt: $startAt, practicable: $practicable, createdAt: $createdAt, vocabularies: $vocabularies)';
   }
 
   @override
@@ -271,6 +289,8 @@ class _$PatternExampleImpl implements _PatternExample {
                 other.burmeseText == burmeseText) &&
             (identical(other.patternId, patternId) ||
                 other.patternId == patternId) &&
+            (identical(other.audioUrl, audioUrl) ||
+                other.audioUrl == audioUrl) &&
             (identical(other.startAt, startAt) || other.startAt == startAt) &&
             (identical(other.practicable, practicable) ||
                 other.practicable == practicable) &&
@@ -288,6 +308,7 @@ class _$PatternExampleImpl implements _PatternExample {
       englishText,
       burmeseText,
       patternId,
+      audioUrl,
       startAt,
       practicable,
       createdAt,
@@ -316,6 +337,8 @@ abstract class _PatternExample implements PatternExample {
       @JsonKey(name: 'english_text') required final String englishText,
       @JsonKey(name: 'burmese_text') final String? burmeseText,
       @JsonKey(name: 'pattern_id') required final int patternId,
+      @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl)
+      final String? audioUrl,
       @JsonKey(name: 'start_at') required final int startAt,
       @JsonKey(name: 'practicable') required final bool practicable,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
@@ -336,6 +359,9 @@ abstract class _PatternExample implements PatternExample {
   @override
   @JsonKey(name: 'pattern_id')
   int get patternId;
+  @override
+  @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl)
+  String? get audioUrl;
   @override
   @JsonKey(name: 'start_at')
   int get startAt;

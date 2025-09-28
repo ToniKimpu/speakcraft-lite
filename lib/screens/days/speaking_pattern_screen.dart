@@ -328,5 +328,4 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
       ),
     );
   }
-
 }

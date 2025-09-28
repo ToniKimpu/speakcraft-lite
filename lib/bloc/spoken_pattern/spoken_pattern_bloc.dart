@@ -5,6 +5,7 @@ import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 import 'package:pmp_english/services/supabase_service.dart';
 
+import '../../config/env.dart';
 import '../../model/pattern_example/pattern_example.dart';
 import '../../model/spoken_pattern/spoken_pattern.dart';
 
@@ -125,10 +126,8 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
         //   audioPath: AudioUrlService.resolveAudioUrl(p.audioPath!),
         // );
         return p.copyWith(
-          audioPath: SupabaseService().getPublicUrl(
-            bucketFolder: SupabaseBucketFolders.spokenPatternAudios,
-            fileName: p.audioPath!,
-          ),
+          audioPath: Env.bunnySpokenPatternAPIKey +
+              p.audioPath!.replaceFirst('bunny/', ''),
         );
       }).toList();
       emit(SpokenPatternState.loaded(newSpokenPatterns));

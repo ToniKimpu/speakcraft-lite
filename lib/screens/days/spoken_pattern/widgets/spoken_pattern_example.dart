@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/user_example_answer/user_example_answer_bloc.dart';
 import 'package:pmp_english/model/pattern_example/pattern_example.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
@@ -10,11 +11,19 @@ import '../../../../shared_widgets/practice_text_field.dart';
 class SpokenPatternExample extends StatefulWidget {
   const SpokenPatternExample({
     super.key,
+    required this.audioPlayer,
     required this.spokenPatternExample,
     required this.onDone,
+    required this.currentPlayingId,
+    required this.onCurrentPlayingIdChanged,
+    required this.currentPlayerState,
   });
+  final AudioPlayer audioPlayer;
   final PatternExample spokenPatternExample;
   final Function(int count) onDone;
+  final String currentPlayingId;
+  final Function(String currentPlayingId) onCurrentPlayingIdChanged;
+  final PlayerState? currentPlayerState;
 
   @override
   State<SpokenPatternExample> createState() => _SpokenPatternExampleState();
@@ -48,8 +57,34 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
     });
   }
 
+  Future<void> _setAudioSourceIfNeeded(String url, int id) async {
+    try {
+      await widget.audioPlayer.stop();
+      widget.onCurrentPlayingIdChanged("pattern-practice-$id");
+      final source = widget.audioPlayer.audioSource;
+      final currentTag = source?.sequence.first.tag as String?;
+      if (currentTag != url) {
+        await widget.audioPlayer.setAudioSource(
+          AudioSource.uri(Uri.parse(url), tag: url),
+        );
+      }
+      widget.audioPlayer.play();
+    } catch (e) {
+      widget.onCurrentPlayingIdChanged("pattern-practice-$id");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    final isCurrentAudio = widget.currentPlayingId ==
+        "pattern-practice-${widget.spokenPatternExample.id}";
+    final loading = (widget.currentPlayerState?.processingState ==
+            ProcessingState.loading ||
+        widget.currentPlayerState?.processingState ==
+            ProcessingState.buffering);
+    final isPlaying = widget.currentPlayerState?.playing ?? false;
+    final completed =
+        widget.currentPlayerState?.processingState == ProcessingState.completed;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
@@ -130,37 +165,73 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
                 style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
               ),
             ),
-          if (_userAnswer != null) ...[
+          if (_userAnswer != null &&
+              widget.spokenPatternExample.audioUrl != null &&
+              widget.spokenPatternExample.audioUrl!.isNotEmpty) ...[
             const SizedBox(
               height: 8,
             ),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(4),
-                  child: Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.2),
-                          spreadRadius: 3,
-                          blurRadius: 8,
-                          offset: const Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: const Icon(
-                      Icons.pause,
-                      color: Colors.white,
-                      size: 18,
+                InkWell(
+                  onTap: () async {
+                    if (isCurrentAudio) {
+                      if (completed) {
+                        widget.audioPlayer.seek(Duration.zero);
+                        widget.audioPlayer.play();
+                      } else if (isPlaying) {
+                        await widget.audioPlayer.pause();
+                      } else {
+                        await widget.audioPlayer.play();
+                      }
+                    } else {
+                      _setAudioSourceIfNeeded(
+                        widget.spokenPatternExample.audioUrl ?? '',
+                        widget.spokenPatternExample.id,
+                      );
+                    }
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.2),
+                            spreadRadius: 3,
+                            blurRadius: 8,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: (loading && isCurrentAudio)
+                            ? const SizedBox(
+                                width: 14,
+                                height: 14,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                      Colors.white),
+                                ),
+                              )
+                            : Icon(
+                                (completed && isCurrentAudio)
+                                    ? Icons.replay
+                                    : (isPlaying && isCurrentAudio)
+                                        ? Icons.pause
+                                        : Icons.play_arrow,
+                                color: Colors.white,
+                                size: 18,
+                              ),
+                      ),
                     ),
                   ),
                 ),
-                
                 const SizedBox(
                   width: 4,
                 ),

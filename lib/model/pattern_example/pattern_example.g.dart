@@ -12,6 +12,7 @@ _$PatternExampleImpl _$$PatternExampleImplFromJson(Map<String, dynamic> json) =>
       englishText: json['english_text'] as String,
       burmeseText: json['burmese_text'] as String?,
       patternId: (json['pattern_id'] as num).toInt(),
+      audioUrl: _nomalizeAudioUrl(json['audio_url'] as String?),
       startAt: (json['start_at'] as num).toInt(),
       practicable: json['practicable'] as bool,
       createdAt: json['created_at'] == null
@@ -27,6 +28,7 @@ Map<String, dynamic> _$$PatternExampleImplToJson(
       'english_text': instance.englishText,
       'burmese_text': instance.burmeseText,
       'pattern_id': instance.patternId,
+      'audio_url': instance.audioUrl,
       'start_at': instance.startAt,
       'practicable': instance.practicable,
       'created_at': instance.createdAt?.toIso8601String(),

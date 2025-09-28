@@ -124,10 +124,11 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                   if (_spokenPatterns.isEmpty) {
                     _spokenPatterns.addAll(spokenPatterns);
                   }
-                  if (spokenPatterns.first.audioPath != null &&
-                      _currentPage == 0) {
-                    _audioPlayer.setUrl(spokenPatterns.first.audioPath!.trim());
-                  }
+                  // if (spokenPatterns.first.audioPath != null &&
+                  //     spokenPatterns.first.audioPath!.isNotEmpty &&
+                  //     _currentPage == 0) {
+                  //   _audioPlayer.setUrl(spokenPatterns.first.audioPath!.trim());
+                  // }
                   return Column(
                     children: [
                       Expanded(
