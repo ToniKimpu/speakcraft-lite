@@ -169,7 +169,6 @@ class _SpokenPatternExamplesState extends State<SpokenPatternExamples> {
                       ),
                     ),
                   ),
-                  
                   const SizedBox(
                     width: 8,
                   ),

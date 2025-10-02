@@ -241,6 +241,7 @@ class SubtitleWidget extends StatelessWidget {
                             ],
                           ),
                         );
+                      
                       },
                     );
                   },

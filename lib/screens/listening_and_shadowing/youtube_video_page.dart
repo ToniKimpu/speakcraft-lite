@@ -140,6 +140,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     }
 
     final position = _controller.value.position.inSeconds;
+    _controller.value.position.inMilliseconds;
 
     final subtitle = _subtitles.firstWhere(
       (subtitle) =>

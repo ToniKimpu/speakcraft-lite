@@ -19,14 +19,14 @@ class CorrectSentenceCard extends StatefulWidget {
 class _CorrectSentenceCardState extends State<CorrectSentenceCard> {
   late ConfettiController _confettiController;
   final List<String> _praiseMessages = [
-    "Great job!",
-    "Impressive!",
-    "Well done!",
-    "You nailed it!",
-    "Keep it up!",
-    "Perfect!",
-    "Awesome!",
-    "Spot on!"
+    "Correct!", // Simple and clear
+    "Well done!", // Polite and encouraging
+    "Perfect!", // Strong, precise praise
+    "Spot on!", // Confirms accuracy
+    "Great job!", // Friendly, positive
+    "Nicely done!", // Polished alternative to "You nailed it"
+    "Excellent!", // Encouraging without being over-the-top
+    "Impressive!" // Optional, for translations that are particularly good
   ];
 
   final List<String> _confirmationMessages = [

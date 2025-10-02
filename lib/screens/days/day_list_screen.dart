@@ -100,7 +100,6 @@ class _DayListScreenState extends State<DayListScreen> {
                         children: [
                           /// Completed list
                           CompletedDayList(days: completedDays),
-
                           /// In progress list
                           InProgressDayList(
                             currentDay: notCompletedDays.isNotEmpty

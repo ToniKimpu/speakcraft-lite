@@ -15,6 +15,7 @@ class PracticeTextField extends StatefulWidget {
     this.englishOnly = false,
     required this.controller,
     this.onChange,
+    this.textStyle,
   });
   final FocusNode? focusNode;
   final VoidCallback? onSubmitted;
@@ -24,6 +25,7 @@ class PracticeTextField extends StatefulWidget {
   final int? minLines;
   final int? maxLines;
   final int? maxLength;
+  final TextStyle? textStyle;
 
   final double? maxHeight;
   final Function(String value)? onChange;
@@ -45,7 +47,7 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
         minLines: widget.minLines,
         maxLines: widget.maxLines,
         maxLength: widget.maxLength,
-        style: const TextStyle(color: Colors.white),
+        style: widget.textStyle ?? const TextStyle(color: Colors.white),
         cursorColor: Colors.white,
         scrollPadding: const EdgeInsets.only(bottom: 120),
         onSubmitted: (value) => widget.onSubmitted?.call(),
@@ -66,9 +68,9 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
           fillColor: Colors.white.withValues(alpha: 0.1),
           filled: true,
           contentPadding: const EdgeInsets.all(12),
-          constraints: BoxConstraints(
-            maxHeight: widget.maxHeight ?? 88.0,
-          ),
+          constraints: const BoxConstraints(
+              // maxHeight: widget.maxHeight ?? 88.0,
+              ),
           border: OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.white.withValues(alpha: 0.5), // Subtle border
@@ -87,11 +89,11 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
             ),
             gapPadding: 1.0,
           ),
-          focusedBorder: const OutlineInputBorder(
+          focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.transparent, // Highlight color when focused
+              color: Colors.white.withValues(alpha: 0.5),
             ),
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(8),
             ),
             gapPadding: 1.0,

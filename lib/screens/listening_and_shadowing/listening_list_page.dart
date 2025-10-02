@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/listening/listening_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/sheets/actions_bottom_sheet.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
-import '../../config/pmp_routes.dart';
 import '../../l10n/generated/l10n.dart';
 
 class ListeningListPage extends StatefulWidget {
@@ -61,7 +61,6 @@ class _ListeningListPageState extends State<ListeningListPage> {
                       const SizedBox(height: 12),
                   itemBuilder: (context, index) {
                     final listening = listenings[index];
-
                     return Material(
                       color: const Color.fromARGB(255, 30, 71, 86),
                       borderRadius: BorderRadius.circular(12),
@@ -70,12 +69,13 @@ class _ListeningListPageState extends State<ListeningListPage> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(12),
                         onTap: () {
-                          Navigator.pushNamed(
-                            context,
-                            PmpRoutes.youtubeVideoPage,
-                            arguments: {
-                              "listening": listening,
-                              "enableMMSub": false,
+                          showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            builder: (BuildContext context) {
+                              return ActionsBottomSheet(
+                                listening: listening,
+                              );
                             },
                           );
                         },
@@ -131,80 +131,11 @@ class _ListeningListPageState extends State<ListeningListPage> {
                                     ),
                                   ),
                                   const Icon(
-                                    // isExpanded
-                                    //     ? Icons.keyboard_arrow_up
-                                    //     : Icons.keyboard_arrow_down,
                                     Icons.chevron_right,
                                     color: Colors.white,
                                   ),
                                 ],
                               ),
-                              // if (isExpanded)
-                              //   Column(
-                              //     children: [
-                              //       const SizedBox(height: 8),
-                              //       Row(
-                              //         mainAxisAlignment:
-                              //             MainAxisAlignment.start,
-                              //         children: [
-                              //           ElevatedButton(
-                              //             style: ElevatedButton.styleFrom(
-                              //               backgroundColor: Colors.white,
-                              //             ),
-                              //             onPressed: () {
-                              //               Navigator.pushNamed(
-                              //                 context,
-                              //                 PmpRoutes.youtubeVideoPage,
-                              //                 arguments: {
-                              //                   "listening": listening,
-                              //                   "enableMMSub": false,
-                              //                 },
-                              //               );
-                              //             },
-                              //             child: Text(
-                              //               'Open',
-                              //               style: PmpTextStyles.body2Semi
-                              //                   .copyWith(
-                              //                       color: Colors.black87),
-                              //             ),
-                              //           ),
-                              //           const SizedBox(width: 6),
-                              //           if (listening.hasMMSubtitle)
-                              //             ElevatedButton(
-                              //               style: ElevatedButton.styleFrom(
-                              //                 // backgroundColor:
-                              //                 //     const Color(0xFF2C5364)),
-                              //                 backgroundColor: Colors.white,
-                              //               ),
-                              //               onPressed: () {
-                              //                 Navigator.pushNamed(
-                              //                   context,
-                              //                   PmpRoutes.youtubeVideoPage,
-                              //                   arguments: {
-                              //                     "listening": listening,
-                              //                     "enableMMSub": true,
-                              //                   },
-                              //                 );
-                              //               },
-                              //               child: Text(
-                              //                 'Open with mm sub',
-                              //                 style: PmpTextStyles.body2Semi
-                              //                     .copyWith(
-                              //                         color: Colors.black87),
-                              //               ),
-                              //             ),
-                              //         ],
-                              //       ),
-                              //     ],
-                              //   )
-                              //       .animate(
-                              //           target: isExpanded
-                              //               ? 1
-                              //               : 0) // Control animation
-                              //       .fade(duration: 500.ms) // Fade effect
-                              //       .slideY(
-                              //           begin: -0.1,
-                              //           duration: 500.ms), // Slide down
                             ],
                           ),
                         ),

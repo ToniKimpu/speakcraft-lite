@@ -66,6 +66,7 @@ dependencies:
   drift_flutter: ^0.2.5
   confetti: ^0.8.0
   internet_connection_checker: ^3.0.1
+  string_similarity: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -109,6 +110,7 @@ flutter:
     - .envs/
     - assets/images/
     - assets/images/profiles/
+    - assets/subtitles/
     - logo/
     - shorebird.yaml
 
