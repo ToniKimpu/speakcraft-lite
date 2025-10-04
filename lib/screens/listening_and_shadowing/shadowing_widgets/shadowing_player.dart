@@ -22,12 +22,11 @@ class ShadowingPlayer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loading = controller.value.playerState == PlayerState.buffering;
+    final loading = controller.value.playerState == PlayerState.buffering ||
+        !controller.value.isReady;
     final startLoading = loading && position.inSeconds == 0;
     final playing = controller.value.isPlaying;
     final paused = controller.value.playerState == PlayerState.paused;
-    // final unKnownState = controller.value.playerState == PlayerState.unknown;
-    // final notStarted = controller.value.playerState == PlayerState.unStarted;
     final complete = controller.value.playerState == PlayerState.ended;
     debugPrint(
         "_currentPlayerState: ${controller.value.playerState.name} playerState!");

@@ -19,7 +19,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -30,7 +30,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -41,7 +41,7 @@ mixin _$AudioPlayerEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -177,7 +177,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -191,7 +191,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -205,7 +205,7 @@ class _$SetUrlImpl implements _SetUrl {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -284,7 +284,7 @@ abstract class _$$SetCurrentPositionImplCopyWith<$Res> {
           $Res Function(_$SetCurrentPositionImpl) then) =
       __$$SetCurrentPositionImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int position});
+  $Res call({Duration position});
 }
 
 /// @nodoc
@@ -306,7 +306,7 @@ class __$$SetCurrentPositionImplCopyWithImpl<$Res>
       null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
-              as int,
+              as Duration,
     ));
   }
 }
@@ -317,7 +317,7 @@ class _$SetCurrentPositionImpl implements _SetCurrentPosition {
   const _$SetCurrentPositionImpl(this.position);
 
   @override
-  final int position;
+  final Duration position;
 
   @override
   String toString() {
@@ -349,7 +349,7 @@ class _$SetCurrentPositionImpl implements _SetCurrentPosition {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -363,7 +363,7 @@ class _$SetCurrentPositionImpl implements _SetCurrentPosition {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -377,7 +377,7 @@ class _$SetCurrentPositionImpl implements _SetCurrentPosition {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -439,10 +439,10 @@ class _$SetCurrentPositionImpl implements _SetCurrentPosition {
 }
 
 abstract class _SetCurrentPosition implements AudioPlayerEvent {
-  const factory _SetCurrentPosition(final int position) =
+  const factory _SetCurrentPosition(final Duration position) =
       _$SetCurrentPositionImpl;
 
-  int get position;
+  Duration get position;
 
   /// Create a copy of AudioPlayerEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -522,7 +522,7 @@ class _$SetTotalDurationImpl implements _SetTotalDuration {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -536,7 +536,7 @@ class _$SetTotalDurationImpl implements _SetTotalDuration {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -550,7 +550,7 @@ class _$SetTotalDurationImpl implements _SetTotalDuration {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -695,7 +695,7 @@ class _$UpdatePlayerStateImpl implements _UpdatePlayerState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -709,7 +709,7 @@ class _$UpdatePlayerStateImpl implements _UpdatePlayerState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -723,7 +723,7 @@ class _$UpdatePlayerStateImpl implements _UpdatePlayerState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -838,7 +838,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -852,7 +852,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -866,7 +866,7 @@ class _$PlayImpl implements _Play {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -973,7 +973,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -987,7 +987,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -1001,7 +1001,7 @@ class _$PauseImpl implements _Pause {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -1107,7 +1107,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String audioUrl) setUrl,
-    required TResult Function(int position) setCurrentPosition,
+    required TResult Function(Duration position) setCurrentPosition,
     required TResult Function(Duration duration) setTotalDuration,
     required TResult Function(PlayerState playerState) updatePlayerState,
     required TResult Function() play,
@@ -1121,7 +1121,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String audioUrl)? setUrl,
-    TResult? Function(int position)? setCurrentPosition,
+    TResult? Function(Duration position)? setCurrentPosition,
     TResult? Function(Duration duration)? setTotalDuration,
     TResult? Function(PlayerState playerState)? updatePlayerState,
     TResult? Function()? play,
@@ -1135,7 +1135,7 @@ class _$StopImpl implements _Stop {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String audioUrl)? setUrl,
-    TResult Function(int position)? setCurrentPosition,
+    TResult Function(Duration position)? setCurrentPosition,
     TResult Function(Duration duration)? setTotalDuration,
     TResult Function(PlayerState playerState)? updatePlayerState,
     TResult Function()? play,
@@ -1210,7 +1210,7 @@ mixin _$AudioPlayerState {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -1224,7 +1224,7 @@ mixin _$AudioPlayerState {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -1238,7 +1238,7 @@ mixin _$AudioPlayerState {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -1358,7 +1358,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -1375,7 +1375,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -1392,7 +1392,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -1511,7 +1511,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -1528,7 +1528,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -1545,7 +1545,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -1692,7 +1692,7 @@ class _$GetUrlImpl implements _GetUrl {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -1709,7 +1709,7 @@ class _$GetUrlImpl implements _GetUrl {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -1726,7 +1726,7 @@ class _$GetUrlImpl implements _GetUrl {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -1853,7 +1853,7 @@ class _$OnPlayImpl implements _OnPlay {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -1870,7 +1870,7 @@ class _$OnPlayImpl implements _OnPlay {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -1887,7 +1887,7 @@ class _$OnPlayImpl implements _OnPlay {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -2006,7 +2006,7 @@ class _$onPauseImpl implements _onPause {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -2023,7 +2023,7 @@ class _$onPauseImpl implements _onPause {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -2040,7 +2040,7 @@ class _$onPauseImpl implements _onPause {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -2159,7 +2159,7 @@ class _$onStopImpl implements _onStop {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -2176,7 +2176,7 @@ class _$onStopImpl implements _onStop {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -2193,7 +2193,7 @@ class _$onStopImpl implements _onStop {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -2271,7 +2271,7 @@ abstract class _$$OnCurrentPositionImplCopyWith<$Res> {
           $Res Function(_$OnCurrentPositionImpl) then) =
       __$$OnCurrentPositionImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int position});
+  $Res call({Duration position});
 }
 
 /// @nodoc
@@ -2293,7 +2293,7 @@ class __$$OnCurrentPositionImplCopyWithImpl<$Res>
       null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
-              as int,
+              as Duration,
     ));
   }
 }
@@ -2304,7 +2304,7 @@ class _$OnCurrentPositionImpl implements _OnCurrentPosition {
   const _$OnCurrentPositionImpl(this.position);
 
   @override
-  final int position;
+  final Duration position;
 
   @override
   String toString() {
@@ -2341,7 +2341,7 @@ class _$OnCurrentPositionImpl implements _OnCurrentPosition {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -2358,7 +2358,7 @@ class _$OnCurrentPositionImpl implements _OnCurrentPosition {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -2375,7 +2375,7 @@ class _$OnCurrentPositionImpl implements _OnCurrentPosition {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -2444,10 +2444,10 @@ class _$OnCurrentPositionImpl implements _OnCurrentPosition {
 }
 
 abstract class _OnCurrentPosition implements AudioPlayerState {
-  const factory _OnCurrentPosition(final int position) =
+  const factory _OnCurrentPosition(final Duration position) =
       _$OnCurrentPositionImpl;
 
-  int get position;
+  Duration get position;
 
   /// Create a copy of AudioPlayerState
   /// with the given fields replaced by the non-null parameter values.
@@ -2532,7 +2532,7 @@ class _$OnTotalDurationImpl implements _OnTotalDuration {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -2549,7 +2549,7 @@ class _$OnTotalDurationImpl implements _OnTotalDuration {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -2566,7 +2566,7 @@ class _$OnTotalDurationImpl implements _OnTotalDuration {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -2723,7 +2723,7 @@ class _$OnUpdatePlayerStateImpl implements _OnUpdatePlayerState {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -2740,7 +2740,7 @@ class _$OnUpdatePlayerStateImpl implements _OnUpdatePlayerState {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -2757,7 +2757,7 @@ class _$OnUpdatePlayerStateImpl implements _OnUpdatePlayerState {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,
@@ -2912,7 +2912,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() onPlay,
     required TResult Function() onPause,
     required TResult Function() onStop,
-    required TResult Function(int position) onCurrentPosition,
+    required TResult Function(Duration position) onCurrentPosition,
     required TResult Function(Duration duration) onTotalDuration,
     required TResult Function(PlayerState playerState) onUpdatePlayerState,
     required TResult Function(String message) error,
@@ -2929,7 +2929,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? onPlay,
     TResult? Function()? onPause,
     TResult? Function()? onStop,
-    TResult? Function(int position)? onCurrentPosition,
+    TResult? Function(Duration position)? onCurrentPosition,
     TResult? Function(Duration duration)? onTotalDuration,
     TResult? Function(PlayerState playerState)? onUpdatePlayerState,
     TResult? Function(String message)? error,
@@ -2946,7 +2946,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? onPlay,
     TResult Function()? onPause,
     TResult Function()? onStop,
-    TResult Function(int position)? onCurrentPosition,
+    TResult Function(Duration position)? onCurrentPosition,
     TResult Function(Duration duration)? onTotalDuration,
     TResult Function(PlayerState playerState)? onUpdatePlayerState,
     TResult Function(String message)? error,

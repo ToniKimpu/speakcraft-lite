@@ -41,7 +41,7 @@ class PatternExampleList extends StatelessWidget {
                 builder: (context, state) {
                   final currentPosition = state.maybeWhen(
                     onCurrentPosition: (position) => position,
-                    orElse: () => 0,
+                    orElse: () => Duration.zero,
                   );
                   final patternExamples =
                       List<PatternExample>.from(spokenPattern.patternExamples!)
@@ -50,7 +50,7 @@ class PatternExampleList extends StatelessWidget {
                   return ExampleListWidget(
                     audioPlayer: audioPlayer,
                     patternExamples: patternExamples,
-                    currentPosition: currentPosition,
+                    currentPosition: currentPosition.inSeconds,
                   );
                 },
               ),

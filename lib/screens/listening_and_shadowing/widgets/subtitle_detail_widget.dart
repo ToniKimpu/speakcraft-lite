@@ -196,7 +196,6 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                   ),
                 ),
                 Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
-
                 // Single subtitle
                 Expanded(
                   child: SubtitleWidget(
@@ -210,9 +209,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                     hasMMSub: widget.hasMMSub,
                   ),
                 ),
-
                 Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
-
                 // Controls row
                 SizedBox(
                   height: 40,

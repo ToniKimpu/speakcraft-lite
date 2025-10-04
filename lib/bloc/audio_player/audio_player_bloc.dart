@@ -7,7 +7,7 @@ part 'audio_player_bloc.freezed.dart';
 @freezed
 abstract class AudioPlayerEvent with _$AudioPlayerEvent {
   const factory AudioPlayerEvent.setUrl(String audioUrl) = _SetUrl;
-  const factory AudioPlayerEvent.setCurrentPosition(int position) =
+  const factory AudioPlayerEvent.setCurrentPosition(Duration position) =
       _SetCurrentPosition;
   const factory AudioPlayerEvent.setTotalDuration(Duration duration) =
       _SetTotalDuration;
@@ -26,7 +26,7 @@ abstract class AudioPlayerState with _$AudioPlayerState {
   const factory AudioPlayerState.onPlay() = _OnPlay;
   const factory AudioPlayerState.onPause() = _onPause;
   const factory AudioPlayerState.onStop() = _onStop;
-  const factory AudioPlayerState.onCurrentPosition(int position) =
+  const factory AudioPlayerState.onCurrentPosition(Duration position) =
       _OnCurrentPosition;
   const factory AudioPlayerState.onTotalDuration(Duration duration) =
       _OnTotalDuration;
@@ -39,28 +39,36 @@ class AudioPlayerBloc extends Bloc<AudioPlayerEvent, AudioPlayerState> {
   AudioPlayerBloc() : super(const AudioPlayerState.initial()) {
     on<AudioPlayerEvent>((event, emit) async {
       try {
-        await event.when(setUrl: (audioUrl) async {
-          emit(const AudioPlayerState.loading());
-          emit(AudioPlayerState.getUrl(audioUrl));
-        }, play: () {
-          emit(const AudioPlayerState.loading());
-          emit(const AudioPlayerState.onPlay());
-        }, pause: () {
-          emit(const AudioPlayerState.loading());
-          emit(const AudioPlayerState.onPause());
-        }, stop: () {
-          emit(const AudioPlayerState.loading());
-          emit(const AudioPlayerState.onPause());
-        }, setCurrentPosition: (position) {
-          emit(const AudioPlayerState.loading());
-          emit(AudioPlayerState.onCurrentPosition(position));
-        }, setTotalDuration: (duration) {
-          emit(const AudioPlayerState.loading());
-          emit(AudioPlayerState.onTotalDuration(duration));
-        }, updatePlayerState: (playerState) {
-          emit(const AudioPlayerState.loading());
-          emit(AudioPlayerState.onUpdatePlayerState(playerState));
-        });
+        await event.when(
+          setUrl: (audioUrl) async {
+            emit(const AudioPlayerState.loading());
+            emit(AudioPlayerState.getUrl(audioUrl));
+          },
+          play: () {
+            emit(const AudioPlayerState.loading());
+            emit(const AudioPlayerState.onPlay());
+          },
+          pause: () {
+            emit(const AudioPlayerState.loading());
+            emit(const AudioPlayerState.onPause());
+          },
+          stop: () {
+            emit(const AudioPlayerState.loading());
+            emit(const AudioPlayerState.onPause());
+          },
+          setCurrentPosition: (position) {
+            emit(const AudioPlayerState.loading());
+            emit(AudioPlayerState.onCurrentPosition(position));
+          },
+          setTotalDuration: (duration) {
+            emit(const AudioPlayerState.loading());
+            emit(AudioPlayerState.onTotalDuration(duration));
+          },
+          updatePlayerState: (playerState) {
+            emit(const AudioPlayerState.loading());
+            emit(AudioPlayerState.onUpdatePlayerState(playerState));
+          },
+        );
       } catch (e) {
         emit(AudioPlayerState.error(e.toString()));
       }

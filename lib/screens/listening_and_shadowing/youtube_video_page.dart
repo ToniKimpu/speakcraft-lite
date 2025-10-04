@@ -107,8 +107,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     });
     _positionSub = _audioPlayer.positionStream.listen(
       (pos) {
-        _audioPositionTrackerBloc
-            .add(AudioPlayerEvent.setCurrentPosition(pos.inSeconds));
+        _audioPositionTrackerBloc.add(AudioPlayerEvent.setCurrentPosition(pos));
       },
     );
     _durationSub = _audioPlayer.durationStream.listen(

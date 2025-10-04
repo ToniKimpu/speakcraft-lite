@@ -90,7 +90,7 @@ class SubtitleWidget extends StatelessWidget {
                       builder: (context, playerState) {
                         final positionDuration = positionState.maybeWhen(
                           onCurrentPosition: (position) => position,
-                          orElse: () => 0,
+                          orElse: () => Duration.zero,
                         );
                         final totalDuration = durationState.maybeWhen(
                           onTotalDuration: (duration) => duration.inSeconds,
@@ -108,7 +108,6 @@ class SubtitleWidget extends StatelessWidget {
                                 ProcessingState.loading ||
                             currentPlayerState?.processingState ==
                                 ProcessingState.buffering);
-
                         return Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
@@ -189,7 +188,7 @@ class SubtitleWidget extends StatelessWidget {
                                             SliderComponentShape.noOverlay,
                                       ),
                                       child: Slider(
-                                        value: positionDuration
+                                        value: positionDuration.inSeconds
                                             .clamp(0, totalDuration)
                                             .toDouble(),
                                         min: 0,
@@ -218,7 +217,7 @@ class SubtitleWidget extends StatelessWidget {
                                           loading
                                               ? "0:00"
                                               : _formatDuration(
-                                                  positionDuration),
+                                                  positionDuration.inSeconds),
                                           style: PmpTextStyles.sub.copyWith(
                                             color: Colors.white
                                                 .withValues(alpha: 0.9),
@@ -241,7 +240,6 @@ class SubtitleWidget extends StatelessWidget {
                             ],
                           ),
                         );
-                      
                       },
                     );
                   },

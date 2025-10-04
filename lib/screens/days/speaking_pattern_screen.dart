@@ -47,8 +47,7 @@ class _SpeakingPatternScreenState extends State<SpeakingPatternScreen> {
     );
     _positionSub = _audioPlayer.positionStream.listen(
       (pos) {
-        _audioPositionTrackerBloc
-            .add(AudioPlayerEvent.setCurrentPosition(pos.inSeconds));
+        _audioPositionTrackerBloc.add(AudioPlayerEvent.setCurrentPosition(pos));
       },
     );
   }
