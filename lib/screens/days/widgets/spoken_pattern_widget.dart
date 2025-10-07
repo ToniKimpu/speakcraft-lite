@@ -153,27 +153,6 @@ class SpokenPatternWidget extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 12),
-                  // if (spokenPattern.subjectVerbAgreement != null &&
-                  //     spokenPattern.subjectVerbAgreement!.isNotEmpty)
-                  //   Column(
-                  //     crossAxisAlignment: CrossAxisAlignment.start,
-                  //     children: spokenPattern.subjectVerbAgreement!
-                  //         .split(';')
-                  //         .map(
-                  //           (e) => Padding(
-                  //             padding:
-                  //                 const EdgeInsets.symmetric(vertical: 4.0),
-                  //             child: Text(
-                  //               e,
-                  //               style: PmpTextStyles.body2Semi.copyWith(
-                  //                 color: Colors.white,
-                  //                 fontWeight: FontWeight.normal,
-                  //               ),
-                  //             ),
-                  //           ),
-                  //         )
-                  //         .toList(),
-                  //   ),
                 ],
               ],
             ),

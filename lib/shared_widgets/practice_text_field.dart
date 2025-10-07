@@ -16,6 +16,7 @@ class PracticeTextField extends StatefulWidget {
     required this.controller,
     this.onChange,
     this.textStyle,
+    this.readOnly = false,
   });
   final FocusNode? focusNode;
   final VoidCallback? onSubmitted;
@@ -26,6 +27,7 @@ class PracticeTextField extends StatefulWidget {
   final int? maxLines;
   final int? maxLength;
   final TextStyle? textStyle;
+  final bool readOnly;
 
   final double? maxHeight;
   final Function(String value)? onChange;
@@ -47,6 +49,7 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
         minLines: widget.minLines,
         maxLines: widget.maxLines,
         maxLength: widget.maxLength,
+        readOnly: widget.readOnly,
         style: widget.textStyle ?? const TextStyle(color: Colors.white),
         cursorColor: Colors.white,
         scrollPadding: const EdgeInsets.only(bottom: 120),

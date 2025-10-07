@@ -72,6 +72,9 @@ class ActionsBottomSheet extends StatelessWidget {
                 Navigator.pushNamed(
                   context,
                   PmpRoutes.vocabularyListeningPage,
+                  arguments: {
+                    "listening": listening,
+                  },
                 );
               },
             ),
@@ -86,7 +89,10 @@ class ActionsBottomSheet extends StatelessWidget {
                 Navigator.of(context).pop();
                 Navigator.pushNamed(
                   context,
-                  PmpRoutes.listeningSentencePracticePage,
+                  PmpRoutes.listeningSentencePracticeList,
+                  arguments: {
+                    "listening": listening,
+                  },
                 );
               },
             ),

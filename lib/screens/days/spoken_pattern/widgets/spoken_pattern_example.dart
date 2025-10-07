@@ -132,6 +132,110 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
                 color: Colors.white,
               ),
             ),
+            if (_userAnswer != null &&
+                widget.spokenPatternExample.audioUrl != null &&
+                widget.spokenPatternExample.audioUrl!.isNotEmpty) ...[
+              const SizedBox(
+                height: 8,
+              ),
+              Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(12),
+                  onTap: () async {
+                    if (isCurrentAudio) {
+                      if (completed) {
+                        widget.audioPlayer.seek(Duration.zero);
+                        widget.audioPlayer.play();
+                      } else if (isPlaying) {
+                        await widget.audioPlayer.pause();
+                      } else {
+                        await widget.audioPlayer.play();
+                      }
+                    } else {
+                      _setAudioSourceIfNeeded(
+                        widget.spokenPatternExample.audioUrl ?? '',
+                        widget.spokenPatternExample.id,
+                      );
+                    }
+                  },
+                  child: Ink(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 2,
+                      ),
+                      color: Colors.blue.withValues(alpha: 0.8),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(4),
+                          child: Container(
+                            width: 24,
+                            height: 24,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withValues(alpha: 0.2),
+                                  spreadRadius: 3,
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
+                            ),
+                            child: Center(
+                              child: (loading && isCurrentAudio)
+                                  ? const SizedBox(
+                                      width: 14,
+                                      height: 14,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2,
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Colors.blue),
+                                      ),
+                                    )
+                                  : Icon(
+                                      (completed && isCurrentAudio)
+                                          ? Icons.replay
+                                          : (isPlaying && isCurrentAudio)
+                                              ? Icons.pause
+                                              : Icons.play_arrow,
+                                      color: Colors.blue,
+                                      size: 18,
+                                    ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          "Explanation",
+                          style: PmpTextStyles.body2Semi
+                              .copyWith(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+            const SizedBox(
+              height: 12,
+            ),
+            Container(
+              width: double.infinity,
+              height: 1,
+              color: Colors.white.withValues(alpha: 0.2),
+            ),
           ],
           const SizedBox(
             height: 8,
@@ -165,83 +269,6 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
                 style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
               ),
             ),
-          if (_userAnswer != null &&
-              widget.spokenPatternExample.audioUrl != null &&
-              widget.spokenPatternExample.audioUrl!.isNotEmpty) ...[
-            const SizedBox(
-              height: 8,
-            ),
-            Row(
-              children: [
-                InkWell(
-                  onTap: () async {
-                    if (isCurrentAudio) {
-                      if (completed) {
-                        widget.audioPlayer.seek(Duration.zero);
-                        widget.audioPlayer.play();
-                      } else if (isPlaying) {
-                        await widget.audioPlayer.pause();
-                      } else {
-                        await widget.audioPlayer.play();
-                      }
-                    } else {
-                      _setAudioSourceIfNeeded(
-                        widget.spokenPatternExample.audioUrl ?? '',
-                        widget.spokenPatternExample.id,
-                      );
-                    }
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(4),
-                    child: Container(
-                      width: 24,
-                      height: 24,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withValues(alpha: 0.2),
-                            spreadRadius: 3,
-                            blurRadius: 8,
-                            offset: const Offset(0, 4),
-                          ),
-                        ],
-                      ),
-                      child: Center(
-                        child: (loading && isCurrentAudio)
-                            ? const SizedBox(
-                                width: 14,
-                                height: 14,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  valueColor: AlwaysStoppedAnimation<Color>(
-                                      Colors.white),
-                                ),
-                              )
-                            : Icon(
-                                (completed && isCurrentAudio)
-                                    ? Icons.replay
-                                    : (isPlaying && isCurrentAudio)
-                                        ? Icons.pause
-                                        : Icons.play_arrow,
-                                color: Colors.white,
-                                size: 18,
-                              ),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 4,
-                ),
-                Text(
-                  "Explanation",
-                  style: PmpTextStyles.body2Semi.copyWith(color: Colors.white),
-                ),
-              ],
-            ),
-          ],
           const SizedBox(
             height: 12,
           ),

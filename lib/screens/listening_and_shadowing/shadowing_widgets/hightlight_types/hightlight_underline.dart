@@ -14,6 +14,7 @@ class HightlightUnderline extends StatelessWidget {
   final SubtitleLine? nextSubtitleLine;
   final Duration position;
   final Function(Duration seekPosition) onSeek;
+  
 
   @override
   Widget build(BuildContext context) {

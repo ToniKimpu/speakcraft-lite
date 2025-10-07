@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
+import 'package:pmp_english/shared_widgets/dialogs/success_dialog.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../shared_widgets/practice_text_field.dart';
@@ -8,13 +10,17 @@ import '../model/sentence_check_result.dart';
 class SentencePracticeWidget extends StatefulWidget {
   const SentencePracticeWidget({
     super.key,
+    required this.complete,
     required this.subtitleLine,
     required this.onListenAudio,
     required this.controller,
+    required this.onDone,
   });
+  final bool complete;
   final SubtitleLine subtitleLine;
   final Function(Duration start, Duration end) onListenAudio;
   final YoutubePlayerController controller;
+  final Function(bool correct) onDone;
 
   @override
   State<SentencePracticeWidget> createState() => _SentencePracticeWidgetState();
@@ -23,11 +29,14 @@ class SentencePracticeWidget extends StatefulWidget {
 class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
   final _userAnswerController = TextEditingController();
   final _wordVisibleNotifier = ValueNotifier<bool>(false);
+  final _errorMessageNotifier = ValueNotifier<String?>(null);
 
   @override
   initState() {
     super.initState();
-    _userAnswerController.text = widget.subtitleLine.text;
+    if (widget.complete) {
+      _userAnswerController.text = widget.subtitleLine.text;
+    }
   }
 
   @override
@@ -35,6 +44,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
     super.dispose();
     _userAnswerController.dispose();
     _wordVisibleNotifier.dispose();
+    _errorMessageNotifier.dispose();
   }
 
   @override
@@ -86,10 +96,6 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(16),
                   onTap: () {
-                    debugPrint(
-                        "_sentencePracticeWidgetLogs: ${widget.controller.value.isReady} is Ready!");
-                    debugPrint(
-                        "_sentencePracticeWidgetLogs: $loading loading!");
                     if (loading) {
                       return;
                     }
@@ -155,12 +161,10 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
             ),
           ),
         ),
-
         SliverToBoxAdapter(
           child: Column(
             children: [
               const SizedBox(height: 20),
-
               // Practice text field
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -168,8 +172,9 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                   controller: _userAnswerController,
                   hintText: "Type your answer here...",
                   englishOnly: true,
-                  minLines: 3,
+                  minLines: 2,
                   maxLines: 8,
+                  readOnly: widget.complete,
                   textStyle: const TextStyle(
                     fontSize: 18,
                     color: Colors.amber,
@@ -181,98 +186,142 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
               const SizedBox(height: 12),
 
               // Error suggestion box
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 16),
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.red.withValues(alpha: 0.1),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(Icons.error_outline, color: Colors.red, size: 20),
-                    SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        "Check spelling: 'evennn' → Did you mean 'even'?",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.redAccent,
-                          height: 1.4,
-                          fontFamily: 'ArchivoBlack Regular',
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              const SizedBox(height: 24),
-
-              // Done Button
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                      shape: RoundedRectangleBorder(
+              ValueListenableBuilder<String?>(
+                  valueListenable: _errorMessageNotifier,
+                  builder: (context, errorMessage, child) {
+                    if (errorMessage == null) {
+                      return const SizedBox();
+                    }
+                    return Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.red.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      backgroundColor: Colors.blue,
-                    ),
-                    onPressed: () {},
-                    child: const Text(
-                      "Done",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'ArchivoBlack Regular',
-                        color: Colors.white,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(Icons.error_outline,
+                              color: Colors.red, size: 20),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              errorMessage,
+                              style: const TextStyle(
+                                fontSize: 14,
+                                color: Colors.redAccent,
+                                height: 1.4,
+                                fontFamily: 'ArchivoBlack Regular',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+              if (!widget.complete) const SizedBox(height: 24),
+              // Done Button
+              if (!widget.complete)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        backgroundColor: Colors.blue,
+                      ),
+                      onPressed: () {
+                        if (_userAnswerController.text.isEmpty) {
+                          return;
+                        }
+                        _errorMessageNotifier.value = null;
+                        FocusManager.instance.primaryFocus?.unfocus();
+                        final sentenceCheckResult = checkSentenceSimple(
+                          widget.subtitleLine.text,
+                          _userAnswerController.text.trim(),
+                        );
+                        if (sentenceCheckResult.isCorrect) {
+                          widget.onDone.call(true);
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return const AnimatedSuccessDialog();
+                            },
+                          );
+                          return;
+                        }
+                        _errorMessageNotifier.value =
+                            sentenceCheckResult.message;
+                        debugPrint(
+                            "_sentenceCheckResultLogs: ${sentenceCheckResult.message} message!");
+                      },
+                      child: const Text(
+                        "Done",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'ArchivoBlack Regular',
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
 
               const SizedBox(height: 20),
 
               // Word chips toggle
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  children: [
-                    const Text(
-                      'Words',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontFamily: 'ArchivoBlack Regular',
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    ValueListenableBuilder<bool>(
-                      valueListenable: _wordVisibleNotifier,
-                      builder: (_, showWords, __) => Transform.scale(
-                        scale: 0.75,
-                        child: Switch(
-                          value: showWords,
-                          onChanged: (v) => _wordVisibleNotifier.value = v,
-                          activeColor: Colors.white,
-                          inactiveThumbColor:
-                              Colors.white.withValues(alpha: 0.8),
-                          activeTrackColor: Colors.green,
-                          inactiveTrackColor:
-                              Colors.white.withValues(alpha: 0.4),
+              if (!widget.complete)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    children: [
+                      const Text(
+                        'Words',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontFamily: 'ArchivoBlack Regular',
                         ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(width: 8),
+                      ValueListenableBuilder<bool>(
+                        valueListenable: _wordVisibleNotifier,
+                        builder: (_, showWords, __) => Transform.scale(
+                          scale: 0.75,
+                          child: Switch(
+                            value: showWords,
+                            onChanged: (v) => _wordVisibleNotifier.value = v,
+                            activeColor: Colors.white,
+                            inactiveThumbColor:
+                                Colors.white.withValues(alpha: 0.8),
+                            activeTrackColor: Colors.green,
+                            inactiveTrackColor:
+                                Colors.white.withValues(alpha: 0.4),
+                          ),
+                        ),
+                      ),
+                      ValueListenableBuilder<bool>(
+                          valueListenable: _wordVisibleNotifier,
+                          builder: (_, showWords, __) {
+                            if (!showWords) {
+                              return const SizedBox();
+                            }
+                            return Text(
+                              '[Tap the words]',
+                              style: PmpTextStyles.body2Regular.copyWith(
+                                fontFamily: "ArchivoBlack Regular",
+                              ),
+                            );
+                          }),
+                    ],
+                  ),
                 ),
-              ),
-
               // Word chips
               ValueListenableBuilder<bool>(
                 valueListenable: _wordVisibleNotifier,
@@ -283,30 +332,32 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                     child: Wrap(
                       spacing: 8,
                       runSpacing: 8,
-                      children: widget.subtitleLine.text
-                          .trim()
-                          .split(' ')
-                          .map((word) {
-                        return ActionChip(
-                          label: Text(
-                            word,
-                            style: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
+                      children: widget.subtitleLine.text.trim().split(' ').map(
+                        (word) {
+                          return ActionChip(
+                            label: Text(
+                              word,
+                              style: const TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          backgroundColor: Colors.blue,
-                          onPressed: () {
-                            final current = _userAnswerController.text.trim();
-                            _userAnswerController.text =
-                                current.isEmpty ? word : "$current $word";
-                          },
-                        );
-                      }).toList(),
+                            backgroundColor: Colors.blue,
+                            onPressed: () {
+                              final current = _userAnswerController.text.trim();
+                              _userAnswerController.text =
+                                  current.isEmpty ? word : "$current $word";
+                            },
+                          );
+                        },
+                      ).toList(),
                     ),
                   );
                 },
+              ),
+              const SizedBox(
+                height: 12,
               ),
             ],
           ),

@@ -8,11 +8,13 @@ class HightlightBackground extends StatelessWidget {
     this.nextSubtitleLine,
     required this.position,
     required this.onSeek,
+    required this.appScrolling,
   });
   final SubtitleLine subtitleLine;
   final SubtitleLine? nextSubtitleLine;
   final Duration position;
   final Function(Duration seekPosition) onSeek;
+  final bool appScrolling;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,9 @@ class HightlightBackground extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
                 padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                 decoration: BoxDecoration(
-                  color: isActive ? Colors.blue : Colors.transparent,
+                  color: (isActive && !appScrolling)
+                      ? Colors.blue
+                      : Colors.transparent,
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(

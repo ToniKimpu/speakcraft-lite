@@ -34,6 +34,8 @@ import '../screens/days/day_list_screen.dart';
 import '../screens/days/pattern_practice_result_screen.dart';
 import '../screens/days/speaking_pattern_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
+import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
+import '../screens/listening_and_shadowing/model/subtitle_line.dart';
 import '../screens/listening_and_shadowing/vocabulary_listening_page.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
 import '../screens/main/device_failed_screen.dart';
@@ -80,6 +82,8 @@ class PmpRoutes {
   static const listeningSentencePracticePage =
       '/listening_sentence_practice_page';
   static const shadowingPage = '/shadowing_page';
+  static const listeningSentencePracticeList =
+      "/listening_sentence_practice_list";
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -230,13 +234,25 @@ class PmpRoutes {
           settings,
         );
       case vocabularyListeningPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
         return _getRoute(
-          const VocabularyListeningPage(),
+          VocabularyListeningPage(
+            listening: listening,
+          ),
           settings,
         );
       case listeningSentencePracticePage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        final subtitleLines = args['subtitle_lines'] as List<SubtitleLine>;
+        final complete = args['complete'] as bool;
         return _getRoute(
-          const ListeningSentencePracticePage(),
+          ListeningSentencePracticePage(
+            complete: complete,
+            listening: listening,
+            subtitleLines: subtitleLines,
+          ),
           settings,
         );
       case shadowingPage:
@@ -244,6 +260,15 @@ class PmpRoutes {
         final listening = args['listening'] as Listening;
         return _getRoute(
           ShadowingPage(
+            listening: listening,
+          ),
+          settings,
+        );
+      case listeningSentencePracticeList:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        return _getRoute(
+          ListeningSentencePracticeList(
             listening: listening,
           ),
           settings,

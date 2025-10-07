@@ -1,10 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 import 'package:pmp_english/model/listening/listening.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 
 import '../../model/subtitle/subtitle.dart';
 import '../../services/supabase_service.dart';
@@ -13,6 +15,8 @@ part 'subtitle_detail_bloc.freezed.dart';
 
 @freezed
 abstract class SubtitleEvent with _$SubtitleEvent {
+  const factory SubtitleEvent.parseSubtitleLine(Listening listening) =
+      _ParseSubtitleLine;
   const factory SubtitleEvent.parseSubtitle(Listening listening) =
       _ParseSubtitle;
   const factory SubtitleEvent.parseComplete(List<Subtitle> subtitles) =
@@ -29,6 +33,8 @@ abstract class SubtitleState with _$SubtitleState {
       _OnParsingSubtitle;
   const factory SubtitleState.onParseCompleted(List<Subtitle> subtitles) =
       _OnParseCompleted;
+  const factory SubtitleState.onParseSubtitleLineCompleted(
+      List<SubtitleLine> subtitleLines) = _OnParseSubtitleLineCompleted;
   const factory SubtitleState.onPageChanged(int index) = OnPageChanged;
   const factory SubtitleState.error(String message) = _Error;
 }
@@ -39,6 +45,9 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       await event.when(
         setCurrentPageIndex: (index) async {
           emit(SubtitleState.onPageChanged(index));
+        },
+        parseSubtitleLine: (listening) async {
+          await _mapParseSubtitleLineToState(listening, emit);
         },
         parseSubtitle: (listening) async {
           await parseSubtitle(listening, emit);
@@ -51,6 +60,22 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       );
     });
   }
+
+  Future<void> _mapParseSubtitleLineToState(
+      Listening listening, Emitter<SubtitleState> emit) async {
+    try {
+      emit(const SubtitleState.loading());
+      final jsonString =
+          await rootBundle.loadString("assets/subtitles/audio.json");
+      final List<dynamic> jsonList = json.decode(jsonString);
+      final subtitleLines =
+          jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
+      emit(SubtitleState.onParseSubtitleLineCompleted(subtitleLines));
+    } catch (e) {
+      debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");
+    }
+  }
+
   Future<void> parseSubtitle(
       Listening listening, Emitter<SubtitleState> emit) async {
     // const double fixedHeight = 112.0;

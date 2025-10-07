@@ -55,6 +55,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
 
   int? _lastScrolledIndex;
   bool _isUserScrolling = false;
+  bool _appScrolling = false;
   Timer? _scrollTimer;
 
   bool _backPressed = false;
@@ -110,11 +111,16 @@ class _ShadowingPageState extends State<ShadowingPage> {
 
             if (!firstTwoVisibleIndexes.contains(currentIndex)) {
               _lastScrolledIndex = currentIndex;
-              _itemScrollController.scrollTo(
-                index: currentIndex,
-                duration: const Duration(milliseconds: 500),
-                alignment: 0.3,
-              );
+              _appScrolling = true;
+              _itemScrollController
+                  .scrollTo(
+                    index: currentIndex,
+                    duration: const Duration(milliseconds: 500),
+                    alignment: 0.3,
+                  )
+                  .then(
+                    (_) => _appScrolling = false,
+                  );
             }
           }
         },
@@ -336,6 +342,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
           subtitleLine: subtitleLine,
           nextSubtitleLine: nextSubtitleLine,
           position: position,
+          appScrolling: _appScrolling,
           onSeek: (seekPosition) {
             _controller.seekTo(seekPosition);
           },

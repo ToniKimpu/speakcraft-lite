@@ -6,7 +6,7 @@ import '../../../../config/pmp_text_styles.dart';
 class ListeningFooterWidget extends StatelessWidget {
   final List<SubtitleLine> subtitleLines;
   final int currentPage;
-  final Function(int) onPageChanged;
+  final Function(int index, bool previous) onPageChanged;
   final bool nextEnabled;
 
   const ListeningFooterWidget({
@@ -46,7 +46,7 @@ class ListeningFooterWidget extends StatelessWidget {
           ? null
           : () {
               // audioPlayer.stop();
-              onPageChanged(currentPage - 1);
+              onPageChanged(currentPage - 1, true);
             },
       child: Ink(
         padding: const EdgeInsets.all(6),
@@ -111,7 +111,7 @@ class ListeningFooterWidget extends StatelessWidget {
           ? null
           : () {
               // audioPlayer.stop();
-              onPageChanged(currentPage + 1);
+              onPageChanged(currentPage + 1, false);
             },
       child: Ink(
         padding: const EdgeInsets.all(6),
