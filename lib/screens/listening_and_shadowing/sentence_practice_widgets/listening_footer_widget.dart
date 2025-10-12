@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 
 import '../../../../config/pmp_text_styles.dart';
 
 class ListeningFooterWidget extends StatelessWidget {
-  final List<SubtitleLine> subtitleLines;
+  final List<ListeningQuestion> listeningQuestions;
   final int currentPage;
   final Function(int index, bool previous) onPageChanged;
   final bool nextEnabled;
 
   const ListeningFooterWidget({
     super.key,
-    required this.subtitleLines,
+    required this.listeningQuestions,
     required this.currentPage,
     required this.onPageChanged,
     required this.nextEnabled,
@@ -87,7 +88,7 @@ class ListeningFooterWidget extends StatelessWidget {
         ],
       ),
       child: Text(
-        '${currentPage + 1}/${subtitleLines.length}',
+        '${currentPage + 1}/${listeningQuestions.length}',
         style: PmpTextStyles.body2Semi.copyWith(
           color: Colors.white,
           fontWeight: FontWeight.bold,
@@ -104,7 +105,7 @@ class ListeningFooterWidget extends StatelessWidget {
   }
 
   Widget _buildNextButton() {
-    final totalPatterns = subtitleLines.length - 1;
+    final totalPatterns = listeningQuestions.length - 1;
     return InkWell(
       borderRadius: BorderRadius.circular(100),
       onTap: (currentPage >= totalPatterns || !nextEnabled)

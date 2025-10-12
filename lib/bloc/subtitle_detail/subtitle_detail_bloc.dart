@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 import 'package:pmp_english/model/listening/listening.dart';
+import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 
 import '../../model/subtitle/subtitle.dart';
@@ -19,6 +20,8 @@ abstract class SubtitleEvent with _$SubtitleEvent {
       _ParseSubtitleLine;
   const factory SubtitleEvent.parseSubtitle(Listening listening) =
       _ParseSubtitle;
+  const factory SubtitleEvent.parseListeningQuestion(Listening listening) =
+      _ParseListeningQuestion;
   const factory SubtitleEvent.parseComplete(List<Subtitle> subtitles) =
       _ParseComplete;
   const factory SubtitleEvent.setCurrentPageIndex(int index) =
@@ -31,6 +34,9 @@ abstract class SubtitleState with _$SubtitleState {
   const factory SubtitleState.loading({String? message}) = _Loading;
   const factory SubtitleState.onParsingSubtitle(List<Subtitle> subtitles) =
       _OnParsingSubtitle;
+  const factory SubtitleState.onParseListeningQuestionCompleted(
+          List<ListeningQuestion> listeningQuestions) =
+      _OnParseListeningQuestionCompleted;
   const factory SubtitleState.onParseCompleted(List<Subtitle> subtitles) =
       _OnParseCompleted;
   const factory SubtitleState.onParseSubtitleLineCompleted(
@@ -45,6 +51,9 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       await event.when(
         setCurrentPageIndex: (index) async {
           emit(SubtitleState.onPageChanged(index));
+        },
+        parseListeningQuestion: (listening) async {
+          _mapParseListeningQuestionsToState(listening, emit);
         },
         parseSubtitleLine: (listening) async {
           await _mapParseSubtitleLineToState(listening, emit);
@@ -61,13 +70,31 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
     });
   }
 
-  Future<void> _mapParseSubtitleLineToState(
+  Future<void> _mapParseListeningQuestionsToState(
       Listening listening, Emitter<SubtitleState> emit) async {
     try {
       emit(const SubtitleState.loading());
       final jsonString =
-          await rootBundle.loadString("assets/subtitles/audio.json");
+          await rootBundle.loadString("assets/subtitles/grit_questions.json");
       final List<dynamic> jsonList = json.decode(jsonString);
+      debugPrint(
+          "_mapParseSubtitleLineToState: ${jsonList.length} total length");
+      final listeningQuestions =
+          jsonList.map((e) => ListeningQuestion.fromJson(e)).toList();
+      emit(SubtitleState.onParseListeningQuestionCompleted(listeningQuestions));
+    } catch (e) {
+      debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");
+    }
+  }
+
+  Future<void> _mapParseSubtitleLineToState(
+      Listening listening, Emitter<SubtitleState> emit) async {
+    try {
+      emit(const SubtitleState.loading());
+      final jsonString = await rootBundle
+          .loadString("assets/subtitles/sentence_practice.json");
+      final List<dynamic> jsonList = json.decode(jsonString);
+      debugPrint("_mapParseSubtitleLineToState: ${jsonList.first.toString()}");
       final subtitleLines =
           jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
       emit(SubtitleState.onParseSubtitleLineCompleted(subtitleLines));
@@ -81,7 +108,8 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
     // const double fixedHeight = 112.0;
     // double scrollPosition = 0;
     debugPrint("_parseJsonSubtitleFile: ${listening.toJson()} file Url!");
-    emit(const SubtitleState.onParsingSubtitle(<Subtitle>[]));
+    // emit(const SubtitleState.onParsingSubtitle(<Subtitle>[]));
+    emit(const SubtitleState.loading());
     try {
       final response = await http.get(Uri.parse(listening.subtitlePath));
       if (response.statusCode != 200) {
@@ -122,12 +150,11 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
                 .toList(),
           ),
         );
-
         // if (i >= 1) {
         //   scrollPosition += fixedHeight;
         // }
       }
-      emit(SubtitleState.onParsingSubtitle(subtitles));
+      emit(SubtitleState.onParseCompleted(subtitles));
     } catch (e) {
       debugPrint(
           "_parseJsonSubtitleFile: error:  Error parsing subtitle JSON file: $e");

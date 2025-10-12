@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmp_english/model/lesson/lesson.dart';
+import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/model/pattern_user_comment/pattern_user_comment.dart';
 import 'package:pmp_english/model/translation/translation.dart';
 import 'package:pmp_english/model/translation_day/translation_day.dart';
@@ -195,11 +196,9 @@ class PmpRoutes {
       case youtubeVideoPage:
         final args = settings.arguments as Map<String, dynamic>;
         final listening = args['listening'] as Listening;
-        final enableMMSub = args['enableMMSub'] as bool;
         return _getRoute(
           YoutubeVideoPage(
             listening: listening,
-            enableMMSub: enableMMSub,
           ),
           settings,
         );
@@ -245,13 +244,14 @@ class PmpRoutes {
       case listeningSentencePracticePage:
         final args = settings.arguments as Map<String, dynamic>;
         final listening = args['listening'] as Listening;
-        final subtitleLines = args['subtitle_lines'] as List<SubtitleLine>;
+        final listeningQuestions =
+            args['listening_questions'] as List<ListeningQuestion>;
         final complete = args['complete'] as bool;
         return _getRoute(
           ListeningSentencePracticePage(
             complete: complete,
             listening: listening,
-            subtitleLines: subtitleLines,
+            listeningQuestions: listeningQuestions,
           ),
           settings,
         );

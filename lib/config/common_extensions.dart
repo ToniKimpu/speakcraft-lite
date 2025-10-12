@@ -280,3 +280,23 @@ Duration _parseJsonDuration(String time) {
     milliseconds: milliseconds,
   );
 }
+
+extension ShuffleWordsExtension on List<String> {
+  /// Easy shuffle: swap 1-2 words randomly
+  List<String> easyShuffle() {
+    final shuffled = List<String>.from(this);
+    if (shuffled.length > 1) {
+      final rand = Random();
+      // swap 1 or 2 pairs
+      int swaps = rand.nextBool() ? 1 : 2;
+      for (int k = 0; k < swaps; k++) {
+        final i = rand.nextInt(shuffled.length);
+        final j = rand.nextInt(shuffled.length);
+        final temp = shuffled[i];
+        shuffled[i] = shuffled[j];
+        shuffled[j] = temp;
+      }
+    }
+    return shuffled;
+  }
+}

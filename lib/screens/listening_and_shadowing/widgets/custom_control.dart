@@ -179,36 +179,6 @@ class _CustomControlState extends State<CustomControl> {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 12,
-              ),
-              Material(
-                borderRadius: BorderRadius.circular(6),
-                color: Colors.transparent,
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(6),
-                  onTap: () {
-                    _checkReadyToPlay();
-                    widget.onVocabulary.call();
-                  },
-                  child: Container(
-                    height: 24,
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 0, horizontal: 8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      border: Border.all(color: Colors.white, width: 1),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "voc",
-                        style: PmpTextStyles.labelSemi
-                            .copyWith(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
               const Spacer(),
               widget.readyToPlay
                   ? Material(

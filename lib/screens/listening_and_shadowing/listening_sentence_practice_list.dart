@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
+import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/services/share_preference_utils.dart';
 
 class ListeningSentencePracticeList extends StatefulWidget {
@@ -27,7 +27,7 @@ class _ListeningSentencePracticeListState
   @override
   void initState() {
     super.initState();
-    _subtitleBloc.add(SubtitleEvent.parseSubtitleLine(widget.listening));
+    _subtitleBloc.add(SubtitleEvent.parseListeningQuestion(widget.listening));
     _getCompletedCount();
   }
 
@@ -37,14 +37,16 @@ class _ListeningSentencePracticeListState
     setState(() {});
   }
 
-  List<List<SubtitleLine>> groupSubtitles(List<SubtitleLine> subtitles) {
+  List<List<ListeningQuestion>> groupListeningQuestions(
+      List<ListeningQuestion> listeningQuestions) {
     const int groupSize = 10;
-    final List<List<SubtitleLine>> groups = [];
+    final List<List<ListeningQuestion>> groups = [];
 
-    for (int i = 0; i < subtitles.length; i += groupSize) {
-      int end =
-          (i + groupSize < subtitles.length) ? i + groupSize : subtitles.length;
-      groups.add(subtitles.sublist(i, end));
+    for (int i = 0; i < listeningQuestions.length; i += groupSize) {
+      int end = (i + groupSize < listeningQuestions.length)
+          ? i + groupSize
+          : listeningQuestions.length;
+      groups.add(listeningQuestions.sublist(i, end));
     }
 
     // if last group < 5 → merge into previous
@@ -52,7 +54,6 @@ class _ListeningSentencePracticeListState
       final lastGroup = groups.removeLast();
       groups.last.addAll(lastGroup);
     }
-
     return groups;
   }
 
@@ -74,11 +75,12 @@ class _ListeningSentencePracticeListState
                   ),
                 );
               },
-              onParseSubtitleLineCompleted: (subtitleLines) {
-                final groupedSubtitles = groupSubtitles(subtitleLines);
+              onParseListeningQuestionCompleted: (listeningQuestions) {
+                final groupedListeningQuestions =
+                    groupListeningQuestions(listeningQuestions);
                 return ListView.separated(
                   padding: const EdgeInsets.all(16),
-                  itemCount: groupedSubtitles.length,
+                  itemCount: groupedListeningQuestions.length,
                   separatorBuilder: (_, __) => const SizedBox(height: 12),
                   itemBuilder: (context, index) {
                     final isCompleted = index < _completedGroupCount;
@@ -100,13 +102,14 @@ class _ListeningSentencePracticeListState
                       onTap: locked
                           ? null
                           : () async {
-                              final subtitleLines = groupedSubtitles[index];
+                              final listeningQuestions =
+                                  groupedListeningQuestions[index];
                               await Navigator.pushNamed(
                                 context,
                                 PmpRoutes.listeningSentencePracticePage,
                                 arguments: {
                                   'listening': widget.listening,
-                                  'subtitle_lines': subtitleLines,
+                                  'subtitle_lines': listeningQuestions,
                                   'complete': isCompleted,
                                 },
                               );

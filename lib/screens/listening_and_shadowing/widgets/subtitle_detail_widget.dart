@@ -20,7 +20,6 @@ class SubtitleDetailWidget extends StatefulWidget {
     required this.audioPlayerStateTrackerBloc,
     required this.audioPlayer,
     required this.subtitleBloc,
-    required this.showSubtitleDetail,
     required this.subtitles,
     required this.hasMMSub,
     required this.onUserChangePage,
@@ -32,7 +31,6 @@ class SubtitleDetailWidget extends StatefulWidget {
       audioPlayerStateTrackerBloc;
   final AudioPlayer audioPlayer;
   final SubtitleBloc subtitleBloc;
-  final ValueNotifier<bool> showSubtitleDetail;
   final List<Subtitle> subtitles;
   final bool hasMMSub;
   final Function(Subtitle subtitle) onUserChangePage;
@@ -42,7 +40,7 @@ class SubtitleDetailWidget extends StatefulWidget {
 }
 
 class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
-  bool _streamData = false;
+  bool _streamData = true;
   int _currentIndex = 0;
   int _instantStreamIndex = 0;
   late Subtitle _selectedSubtitle;
@@ -118,172 +116,161 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
           orElse: () => -1,
         );
       },
-      child: ValueListenableBuilder<bool>(
-        valueListenable: widget.showSubtitleDetail,
-        builder: (context, show, child) {
-          return Offstage(
-            offstage: !show,
-            child: child!,
-          );
-        },
-        child: GestureDetector(
-          onTap: () {},
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              gradient: const LinearGradient(
-                colors: [
-                  Color(0xFF0F2027),
-                  Color(0xFF203A43),
-                  Color(0xFF2C5364),
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.3),
-                  blurRadius: 12,
-                  spreadRadius: 6,
-                ),
+      child: GestureDetector(
+        onTap: () {},
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFF0F2027),
+                Color(0xFF203A43),
+                Color(0xFF2C5364),
               ],
-              border: Border.all(
-                color: Colors.white.withValues(alpha: 0.4),
-              ),
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
             ),
-            child: Column(
-              children: [
-                // Stream switch row
-                SizedBox(
-                  height: 40,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          'Stream',
-                          style: PmpTextStyles.body2Semi.copyWith(
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(width: 4),
-                        Transform.scale(
-                          scale: 0.75,
-                          child: Switch(
-                            value: _streamData,
-                            onChanged: (value) {
-                              setState(() {
-                                _streamData = value;
-                                if (_streamData) {
-                                  _currentIndex = _instantStreamIndex;
-                                  _selectedSubtitle =
-                                      widget.subtitles[_instantStreamIndex];
-                                }
-                              });
-                            },
-                            activeColor: Colors.white,
-                            inactiveThumbColor:
-                                Colors.white.withValues(alpha: 0.8),
-                            activeTrackColor: Colors.green,
-                            inactiveTrackColor:
-                                Colors.white.withValues(alpha: 0.4),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
-                // Single subtitle
-                Expanded(
-                  child: SubtitleWidget(
-                    youtubeController: widget.youtubeController,
-                    audioPlayer: widget.audioPlayer,
-                    audioPositionTrackerBloc: widget.audioPostionTrackerBloc,
-                    audioDurationTrackerBloc: widget.audioDurationTrackerBloc,
-                    audioPlayerStateTrackerBloc:
-                        widget.audioPlayerStateTrackerBloc,
-                    subtitle: _selectedSubtitle,
-                    hasMMSub: widget.hasMMSub,
-                  ),
-                ),
-                Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
-                // Controls row
-                SizedBox(
-                  height: 40,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.3),
+                blurRadius: 12,
+                spreadRadius: 6,
+              ),
+            ],
+            border: Border.all(
+              color: Colors.white.withValues(alpha: 0.4),
+            ),
+          ),
+          child: Column(
+            children: [
+              // Stream switch row
+              SizedBox(
+                height: 40,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      const SizedBox(width: 8),
-                      widget.youtubeReadyToPlay
-                          ? Material(
-                              borderRadius: BorderRadius.circular(100),
-                              color: Colors.transparent,
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(100),
-                                onTap: () {
-                                  if (widget
-                                      .youtubeController.value.isPlaying) {
-                                    widget.youtubeController.pause();
-                                  } else {
-                                    widget.youtubeController.play();
-                                    if (widget.audioPlayer.playing) {
-                                      widget.audioPlayer.pause();
-                                    }
-                                  }
-                                  setState(() {});
-                                },
-                                child: Container(
-                                  width: 24,
-                                  height: 24,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Colors.white,
-                                      width: 1,
-                                    ),
-                                  ),
-                                  child: Icon(
-                                    widget.youtubeController.value.isPlaying
-                                        ? Icons.pause
-                                        : Icons.play_arrow,
-                                    color: PmpColors.white,
-                                    size: 18,
-                                  ),
-                                ),
-                              ),
-                            )
-                          : const SizedBox(
-                              width: 16,
-                              height: 16,
-                              child: CircularProgressIndicator(
-                                color: PmpColors.white,
-                              ),
-                            ),
-                      const Spacer(),
-                      IconButton(
-                        padding: EdgeInsets.zero,
-                        onPressed: _goToPrevious,
-                        icon:
-                            const Icon(Icons.chevron_left, color: Colors.white),
-                      ),
                       Text(
-                        '${_currentIndex + 1}/${widget.subtitles.length}',
-                        style: PmpTextStyles.labelSemi
-                            .copyWith(color: Colors.white),
+                        'Stream',
+                        style: PmpTextStyles.body2Semi.copyWith(
+                          color: Colors.white,
+                        ),
                       ),
-                      IconButton(
-                        padding: EdgeInsets.zero,
-                        onPressed: _goToNext,
-                        icon: const Icon(Icons.chevron_right,
-                            color: Colors.white),
+                      const SizedBox(width: 4),
+                      Transform.scale(
+                        scale: 0.75,
+                        child: Switch(
+                          value: _streamData,
+                          onChanged: (value) {
+                            setState(() {
+                              _streamData = value;
+                              if (_streamData) {
+                                _currentIndex = _instantStreamIndex;
+                                _selectedSubtitle =
+                                    widget.subtitles[_instantStreamIndex];
+                              }
+                            });
+                          },
+                          activeColor: Colors.white,
+                          inactiveThumbColor:
+                              Colors.white.withValues(alpha: 0.8),
+                          activeTrackColor: Colors.green,
+                          inactiveTrackColor:
+                              Colors.white.withValues(alpha: 0.4),
+                        ),
                       ),
                     ],
                   ),
                 ),
-              ],
-            ),
+              ),
+              Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
+              // Single subtitle
+              Expanded(
+                child: SubtitleWidget(
+                  youtubeController: widget.youtubeController,
+                  audioPlayer: widget.audioPlayer,
+                  audioPositionTrackerBloc: widget.audioPostionTrackerBloc,
+                  audioDurationTrackerBloc: widget.audioDurationTrackerBloc,
+                  audioPlayerStateTrackerBloc:
+                      widget.audioPlayerStateTrackerBloc,
+                  subtitle: _selectedSubtitle,
+                  hasMMSub: widget.hasMMSub,
+                ),
+              ),
+              Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
+              // Controls row
+              SizedBox(
+                height: 40,
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    widget.youtubeReadyToPlay
+                        ? Material(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.transparent,
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(100),
+                              onTap: () {
+                                if (widget.youtubeController.value.isPlaying) {
+                                  widget.youtubeController.pause();
+                                } else {
+                                  widget.youtubeController.play();
+                                  if (widget.audioPlayer.playing) {
+                                    widget.audioPlayer.pause();
+                                  }
+                                }
+                                setState(() {});
+                              },
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.white,
+                                    width: 1,
+                                  ),
+                                ),
+                                child: Icon(
+                                  widget.youtubeController.value.isPlaying
+                                      ? Icons.pause
+                                      : Icons.play_arrow,
+                                  color: PmpColors.white,
+                                  size: 18,
+                                ),
+                              ),
+                            ),
+                          )
+                        : const SizedBox(
+                            width: 16,
+                            height: 16,
+                            child: CircularProgressIndicator(
+                              color: PmpColors.white,
+                            ),
+                          ),
+                    const Spacer(),
+                    IconButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: _goToPrevious,
+                      icon: const Icon(Icons.chevron_left, color: Colors.white),
+                    ),
+                    Text(
+                      '${_currentIndex + 1}/${widget.subtitles.length}',
+                      style:
+                          PmpTextStyles.labelSemi.copyWith(color: Colors.white),
+                    ),
+                    IconButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: _goToNext,
+                      icon:
+                          const Icon(Icons.chevron_right, color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),

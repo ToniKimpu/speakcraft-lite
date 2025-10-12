@@ -57,7 +57,14 @@ class ActionsBottomSheet extends StatelessWidget {
               icon: Icons.music_note_sharp,
               label: 'Play Now',
               onTap: () {
-                // TODO: Implement Play Now action
+                Navigator.of(context).pop();
+                Navigator.pushNamed(
+                  context,
+                  PmpRoutes.youtubeVideoPage,
+                  arguments: {
+                    "listening": listening,
+                  },
+                );
               },
             ),
             Divider(

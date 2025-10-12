@@ -3,13 +3,15 @@ import 'subtitle_word.dart';
 class SubtitleLine {
   final double start;
   final double end;
-  final String text;
+  final String english;
+  final String? burmese;
   final List<SubtitleWord> words;
 
   SubtitleLine({
     required this.start,
     required this.end,
-    required this.text,
+    required this.english,
+    this.burmese,
     required this.words,
   });
 
@@ -17,9 +19,13 @@ class SubtitleLine {
     return SubtitleLine(
       start: (json['start'] as num).toDouble(),
       end: (json['end'] as num).toDouble(),
-      text: json['text'],
-      words:
-          (json['words'] as List).map((w) => SubtitleWord.fromJson(w)).toList(),
+      english: json['english'] as String,
+      burmese: json['burmese'] as String?,
+      words: json['words'] != null
+          ? (json['words'] as List)
+              .map((w) => SubtitleWord.fromJson(w))
+              .toList()
+          : [],
     );
   }
 }

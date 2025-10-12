@@ -2,7 +2,7 @@
   {
     "start": 12.923,
     "end": 21.798,
-    "text": "When I was 27 years old, I left a very demanding job in management consulting for a job that was even more demanding, teaching.",
+    "english": "When I was 27 years old, I left a very demanding job in management consulting for a job that was even more demanding, teaching.",
     "words": [
       { "word": "When", "start": 12.923, "end": 13.063, "score": 0.758 },
       { "word": "I", "start": 13.103, "end": 13.143, "score": 0.847 },
@@ -38,7 +38,7 @@
   {
     "start": 21.818,
     "end": 27.588,
-    "text": "I went to teach seventh graders math in the New York City public schools.",
+    "english": "I went to teach seventh graders math in the New York City public schools.",
     "words": [
       { "word": "I", "start": 21.818, "end": 21.838, "score": 1.0 },
       { "word": "went", "start": 23.501, "end": 23.661, "score": 0.912 },
@@ -59,7 +59,7 @@
   {
     "start": 28.39,
     "end": 32.597,
-    "text": "And like any teacher, I made quizzes and tests, I gave out homework assignments.",
+    "english": "And like any teacher, I made quizzes and tests, I gave out homework assignments.",
     "words": [
       { "word": "And", "start": 28.39, "end": 28.47, "score": 0.686 },
       { "word": "like", "start": 28.53, "end": 28.69, "score": 0.879 },
@@ -85,7 +85,7 @@
   {
     "start": 33.238,
     "end": 36.163,
-    "text": "When the work came back, I calculated grades.",
+    "english": "When the work came back, I calculated grades.",
     "words": [
       { "word": "When", "start": 33.238, "end": 33.358, "score": 0.869 },
       { "word": "the", "start": 33.398, "end": 33.458, "score": 0.998 },
@@ -105,7 +105,7 @@
   {
     "start": 36.835,
     "end": 44.272,
-    "text": " What struck me was that IQ was not the only difference between my best and my worst students.",
+    "english": " What struck me was that IQ was not the only difference between my best and my worst students.",
     "words": [
       { "word": "What", "start": 36.835, "end": 37.035, "score": 0.889 },
       { "word": "struck", "start": 37.116, "end": 37.416, "score": 0.896 },
@@ -135,7 +135,7 @@
   {
     "start": 45.194,
     "end": 49.745,
-    "text": "Some of my strongest performers did not have stratospheric IQ scores.",
+    "english": "Some of my strongest performers did not have stratospheric IQ scores.",
     "words": [
       { "word": "Some", "start": 45.194, "end": 45.355, "score": 0.93 },
       { "word": "of", "start": 45.395, "end": 45.435, "score": 0.504 },
@@ -163,7 +163,7 @@
   {
     "start": 50.486,
     "end": 53.553,
-    "text": "Some of my smartest kids weren't doing so well.",
+    "english": "Some of my smartest kids weren't doing so well.",
     "words": [
       { "word": "Some", "start": 50.486, "end": 50.647, "score": 0.861 },
       { "word": "of", "start": 50.687, "end": 50.727, "score": 0.999 },
@@ -179,7 +179,7 @@
   {
     "start": 54.495,
     "end": 56.059,
-    "text": "And that got me thinking.",
+    "english": "And that got me thinking.",
     "words": [
       { "word": "And", "start": 54.495, "end": 54.576, "score": 0.814 },
       { "word": "that", "start": 54.636, "end": 54.776, "score": 0.992 },
@@ -191,7 +191,7 @@
   {
     "start": 56.512,
     "end": 60.879,
-    "text": " The kinds of things you need to learn in seventh grade math, sure, they're hard.",
+    "english": " The kinds of things you need to learn in seventh grade math, sure, they're hard.",
     "words": [
       { "word": "The", "start": 56.512, "end": 56.672, "score": 0.267 },
       { "word": "kinds", "start": 56.692, "end": 56.792, "score": 0.233 },
@@ -213,7 +213,7 @@
   {
     "start": 61.2,
     "end": 64.104,
-    "text": "Ratios, decimals, the area of a parallelogram.",
+    "english": "Ratios, decimals, the area of a parallelogram.",
     "words": [
       { "word": "Ratios,", "start": 61.2, "end": 61.801, "score": 0.921 },
       { "word": "decimals,", "start": 61.861, "end": 62.502, "score": 0.929 },
@@ -232,7 +232,7 @@
   {
     "start": 64.725,
     "end": 66.748,
-    "text": "But these concepts are not impossible.",
+    "english": "But these concepts are not impossible.",
     "words": [
       { "word": "But", "start": 64.725, "end": 64.825, "score": 0.834 },
       { "word": "these", "start": 64.865, "end": 65.066, "score": 0.682 },
@@ -245,7 +245,7 @@
   {
     "start": 67.55,
     "end": 75.603,
-    "text": "And I was firmly convinced that every one of my students could learn the material if they worked hard and long enough.",
+    "english": "And I was firmly convinced that every one of my students could learn the material if they worked hard and long enough.",
     "words": [
       { "word": "And", "start": 67.55, "end": 67.63, "score": 0.983 },
       { "word": "I", "start": 67.71, "end": 67.75, "score": 0.999 },
@@ -274,7 +274,7 @@
   {
     "start": 77.045,
     "end": 78.908,
-    "text": "After several more years of teaching,",
+    "english": "After several more years of teaching,",
     "words": [
       { "word": "After", "start": 77.045, "end": 77.205, "score": 0.996 },
       { "word": "several", "start": 77.245, "end": 77.626, "score": 0.782 },
@@ -287,7 +287,7 @@
   {
     "start": 79.462,
     "end": 91.034,
-    "text": " I came to the conclusion that what we need in education is a much better understanding of students and learning from a motivational perspective, from a psychological perspective.",
+    "english": " I came to the conclusion that what we need in education is a much better understanding of students and learning from a motivational perspective, from a psychological perspective.",
     "words": [
       { "word": "I", "start": 79.462, "end": 79.642, "score": 0.649 },
       { "word": "came", "start": 79.662, "end": 79.842, "score": 0.894 },
@@ -352,7 +352,7 @@
   {
     "start": 91.955,
     "end": 97.0,
-    "text": "In education, the one thing we know how to measure best is IQ.",
+    "english": "In education, the one thing we know how to measure best is IQ.",
     "words": [
       { "word": "In", "start": 91.955, "end": 91.995, "score": 0.966 },
       {
@@ -377,7 +377,7 @@
   {
     "start": 98.261,
     "end": 107.511,
-    "text": "But what if doing well in school and in life depends on much more than your ability to learn quickly and easily?",
+    "english": "But what if doing well in school and in life depends on much more than your ability to learn quickly and easily?",
     "words": [
       { "word": "But", "start": 98.261, "end": 98.382, "score": 0.889 },
       { "word": "what", "start": 98.482, "end": 98.702, "score": 0.822 },
@@ -406,7 +406,7 @@
   {
     "start": 108.47,
     "end": 112.994,
-    "text": " So I left the classroom and I went to graduate school to become a psychologist.",
+    "english": " So I left the classroom and I went to graduate school to become a psychologist.",
     "words": [
       { "word": "So", "start": 108.47, "end": 108.69, "score": 0.798 },
       { "word": "I", "start": 108.75, "end": 108.79, "score": 0.901 },
@@ -443,7 +443,7 @@
   {
     "start": 114.055,
     "end": 118.5,
-    "text": "I started studying kids and adults in all kinds of super challenging settings.",
+    "english": "I started studying kids and adults in all kinds of super challenging settings.",
     "words": [
       { "word": "I", "start": 114.055, "end": 114.095, "score": 0.995 },
       { "word": "started", "start": 114.156, "end": 114.496, "score": 0.89 },
@@ -473,7 +473,7 @@
   {
     "start": 119.22,
     "end": 123.485,
-    "text": "And in every study, my question was, who is successful here and why?",
+    "english": "And in every study, my question was, who is successful here and why?",
     "words": [
       { "word": "And", "start": 119.22, "end": 119.301, "score": 0.675 },
       { "word": "in", "start": 119.361, "end": 119.401, "score": 0.999 },
@@ -503,7 +503,7 @@
   {
     "start": 123.505,
     "end": 127.889,
-    "text": "My research team and I went to West Point Military Academy.",
+    "english": "My research team and I went to West Point Military Academy.",
     "words": [
       { "word": "My", "start": 123.505, "end": 124.686, "score": 0.962 },
       { "word": "research", "start": 124.746, "end": 125.106, "score": 0.86 },
@@ -526,7 +526,7 @@
   {
     "start": 128.59,
     "end": 134.275,
-    "text": "We tried to predict which cadets would stay in military training and which would drop out.",
+    "english": "We tried to predict which cadets would stay in military training and which would drop out.",
     "words": [
       { "word": "We", "start": 128.59, "end": 128.69, "score": 0.982 },
       { "word": "tried", "start": 128.75, "end": 128.97, "score": 0.863 },
@@ -559,7 +559,7 @@
   {
     "start": 134.508,
     "end": 140.916,
-    "text": " We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.",
+    "english": " We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.",
     "words": [
       { "word": "We", "start": 134.508, "end": 134.668, "score": 0.53 },
       { "word": "went", "start": 134.708, "end": 134.828, "score": 0.831 },
@@ -604,7 +604,7 @@
   {
     "start": 142.037,
     "end": 150.868,
-    "text": "We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year.",
+    "english": "We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year.",
     "words": [
       { "word": "We", "start": 142.037, "end": 142.178, "score": 0.926 },
       { "word": "studied", "start": 142.238, "end": 142.578, "score": 0.878 },
@@ -658,7 +658,7 @@
   {
     "start": 151.609,
     "end": 156.936,
-    "text": "And of those, who will be the most effective at improving learning outcomes for their students.",
+    "english": "And of those, who will be the most effective at improving learning outcomes for their students.",
     "words": [
       { "word": "And", "start": 151.609, "end": 151.709, "score": 0.685 },
       { "word": "of", "start": 151.89, "end": 151.95, "score": 0.99 },
@@ -706,7 +706,7 @@
   {
     "start": 157.737,
     "end": 164.245,
-    "text": "We partnered with private companies, asking which of these salespeople is going to keep their jobs, and who's going to earn the most money.",
+    "english": "We partnered with private companies, asking which of these salespeople is going to keep their jobs, and who's going to earn the most money.",
     "words": [
       { "word": "We", "start": 157.737, "end": 157.837, "score": 0.998 },
       {
@@ -752,7 +752,7 @@
   {
     "start": 164.849,
     "end": 171.764,
-    "text": " In all those very different contexts, one characteristic emerged as a significant predictor of success.",
+    "english": " In all those very different conenglishs, one characteristic emerged as a significant predictor of success.",
     "words": [
       { "word": "In", "start": 164.849, "end": 164.969, "score": 0.862 },
       { "word": "all", "start": 165.009, "end": 165.09, "score": 0.95 },
@@ -765,7 +765,7 @@
         "score": 0.848
       },
       {
-        "word": "contexts,",
+        "word": "conenglishs,",
         "start": 165.991,
         "end": 166.533,
         "score": 0.898
@@ -799,7 +799,7 @@
   {
     "start": 172.585,
     "end": 178.779,
-    "text": "And it wasn't social intelligence, it wasn't good looks, physical health, and it wasn't IQ.",
+    "english": "And it wasn't social intelligence, it wasn't good looks, physical health, and it wasn't IQ.",
     "words": [
       { "word": "And", "start": 172.585, "end": 172.666, "score": 0.853 },
       { "word": "it", "start": 172.706, "end": 172.746, "score": 0.999 },
@@ -831,7 +831,7 @@
   {
     "start": 178.799,
     "end": 180.883,
-    "text": "It was grit.",
+    "english": "It was grit.",
     "words": [
       { "word": "It", "start": 178.799, "end": 178.839, "score": 0.5 },
       { "word": "was", "start": 180.041, "end": 180.141, "score": 0.821 },
@@ -841,7 +841,7 @@
   {
     "start": 182.028,
     "end": 186.353,
-    "text": " Grit is passion and perseverance for very long-term goals.",
+    "english": " Grit is passion and perseverance for very long-term goals.",
     "words": [
       { "word": "Grit", "start": 182.028, "end": 182.368, "score": 0.8 },
       { "word": "is", "start": 182.448, "end": 182.529, "score": 0.626 },
@@ -867,7 +867,7 @@
   {
     "start": 187.154,
     "end": 188.615,
-    "text": "Grit is having stamina.",
+    "english": "Grit is having stamina.",
     "words": [
       { "word": "Grit", "start": 187.154, "end": 187.394, "score": 0.833 },
       { "word": "is", "start": 187.474, "end": 187.554, "score": 0.624 },
@@ -878,7 +878,7 @@
   {
     "start": 189.356,
     "end": 202.11,
-    "text": "Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.",
+    "english": "Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.",
     "words": [
       { "word": "Grit", "start": 189.356, "end": 189.576, "score": 0.806 },
       { "word": "is", "start": 189.656, "end": 189.716, "score": 0.748 },
@@ -923,7 +923,7 @@
   {
     "start": 203.151,
     "end": 207.175,
-    "text": "Grit is living life like it's a marathon, not a sprint.",
+    "english": "Grit is living life like it's a marathon, not a sprint.",
     "words": [
       { "word": "Grit", "start": 203.151, "end": 203.371, "score": 0.722 },
       { "word": "is", "start": 203.431, "end": 203.491, "score": 0.69 },
@@ -946,7 +946,7 @@
   {
     "start": 208.302,
     "end": 212.373,
-    "text": " A few years ago, I started studying grit in the Chicago Public Schools.",
+    "english": " A few years ago, I started studying grit in the Chicago Public Schools.",
     "words": [
       { "word": "A", "start": 208.302, "end": 208.382, "score": 0.521 },
       { "word": "few", "start": 208.442, "end": 208.583, "score": 0.888 },
@@ -971,7 +971,7 @@
   {
     "start": 213.296,
     "end": 220.776,
-    "text": "I asked thousands of high school juniors to take grit questionnaires and then waited around more than a year to see who would graduate.",
+    "english": "I asked thousands of high school juniors to take grit questionnaires and then waited around more than a year to see who would graduate.",
     "words": [
       { "word": "I", "start": 213.296, "end": 213.356, "score": 0.666 },
       { "word": "asked", "start": 213.456, "end": 213.596, "score": 0.852 },
@@ -1017,7 +1017,7 @@
   {
     "start": 221.617,
     "end": 230.43,
-    "text": " Turns out that grittier kids were significantly more likely to graduate, even when I matched them on every characteristic I could measure.",
+    "english": " Turns out that grittier kids were significantly more likely to graduate, even when I matched them on every characteristic I could measure.",
     "words": [
       { "word": "Turns", "start": 221.617, "end": 221.917, "score": 0.716 },
       { "word": "out", "start": 222.058, "end": 222.198, "score": 0.831 },
@@ -1061,7 +1061,7 @@
   {
     "start": 230.91,
     "end": 238.682,
-    "text": "Things like family income, standardized achievement test scores, even how safe kids felt when they were at school.",
+    "english": "Things like family income, standardized achievement test scores, even how safe kids felt when they were at school.",
     "words": [
       { "word": "Things", "start": 230.91, "end": 231.131, "score": 0.824 },
       { "word": "like", "start": 231.231, "end": 231.411, "score": 0.986 },
@@ -1096,7 +1096,7 @@
   {
     "start": 239.543,
     "end": 247.995,
-    "text": "So it's not just at West Point or the National Spelling Bee that grit matters, it's also in school, especially for kids at risk for dropping out.",
+    "english": "So it's not just at West Point or the National Spelling Bee that grit matters, it's also in school, especially for kids at risk for dropping out.",
     "words": [
       { "word": "So", "start": 239.543, "end": 239.643, "score": 0.793 },
       { "word": "it's", "start": 239.683, "end": 239.783, "score": 0.676 },
@@ -1155,7 +1155,7 @@
   {
     "start": 249.241,
     "end": 256.454,
-    "text": " To me, the most shocking thing about grit is how little we know, how little science knows about building it.",
+    "english": " To me, the most shocking thing about grit is how little we know, how little science knows about building it.",
     "words": [
       { "word": "To", "start": 249.241, "end": 249.381, "score": 0.894 },
       { "word": "me,", "start": 249.461, "end": 249.682, "score": 0.998 },
@@ -1192,7 +1192,7 @@
   {
     "start": 257.236,
     "end": 261.223,
-    "text": "Every day, parents and teachers ask me, how do I build grit in kids?",
+    "english": "Every day, parents and teachers ask me, how do I build grit in kids?",
     "words": [
       { "word": "Every", "start": 257.236, "end": 257.576, "score": 0.612 },
       { "word": "day,", "start": 257.637, "end": 257.897, "score": 0.922 },
@@ -1218,7 +1218,7 @@
   {
     "start": 261.664,
     "end": 264.409,
-    "text": "What do I do to teach kids a solid work ethic?",
+    "english": "What do I do to teach kids a solid work ethic?",
     "words": [
       { "word": "What", "start": 261.664, "end": 261.784, "score": 0.888 },
       { "word": "do", "start": 261.824, "end": 261.924, "score": 0.918 },
@@ -1236,7 +1236,7 @@
   {
     "start": 264.87,
     "end": 266.974,
-    "text": "How do I keep them motivated for the long run?",
+    "english": "How do I keep them motivated for the long run?",
     "words": [
       { "word": "How", "start": 264.87, "end": 264.97, "score": 0.886 },
       { "word": "do", "start": 264.99, "end": 265.09, "score": 0.97 },
@@ -1258,7 +1258,7 @@
   {
     "start": 267.014,
     "end": 270.861,
-    "text": "The honest answer is, I don't know.",
+    "english": "The honest answer is, I don't know.",
     "words": [
       { "word": "The", "start": 267.014, "end": 268.096, "score": 0.808 },
       { "word": "honest", "start": 268.156, "end": 268.457, "score": 0.855 },
@@ -1272,7 +1272,7 @@
   {
     "start": 272.562,
     "end": 274.966,
-    "text": " What I do know is that talent doesn't make you gritty.",
+    "english": " What I do know is that talent doesn't make you gritty.",
     "words": [
       { "word": "What", "start": 272.562, "end": 272.742, "score": 0.803 },
       { "word": "I", "start": 272.802, "end": 272.822, "score": 0.542 },
@@ -1290,7 +1290,7 @@
   {
     "start": 275.006,
     "end": 283.238,
-    "text": "Our data show very clearly that there are many talented individuals who simply do not follow through on their commitments.",
+    "english": "Our data show very clearly that there are many talented individuals who simply do not follow through on their commitments.",
     "words": [
       { "word": "Our", "start": 275.006, "end": 275.907, "score": 0.829 },
       { "word": "data", "start": 275.967, "end": 276.227, "score": 0.964 },
@@ -1332,7 +1332,7 @@
   {
     "start": 283.979,
     "end": 291.33,
-    "text": "In fact, in our data, grit is usually unrelated or even inversely related to measures of talent.",
+    "english": "In fact, in our data, grit is usually unrelated or even inversely related to measures of talent.",
     "words": [
       { "word": "In", "start": 283.979, "end": 284.039, "score": 0.75 },
       { "word": "fact,", "start": 284.119, "end": 284.36, "score": 0.98 },
@@ -1371,7 +1371,7 @@
   {
     "start": 292.542,
     "end": 298.691,
-    "text": " So far, the best idea I've heard about building grit in kids is something called growth mindset.",
+    "english": " So far, the best idea I've heard about building grit in kids is something called growth mindset.",
     "words": [
       { "word": "So", "start": 292.542, "end": 292.822, "score": 0.871 },
       { "word": "far,", "start": 292.862, "end": 293.023, "score": 0.679 },
@@ -1400,7 +1400,7 @@
   {
     "start": 299.573,
     "end": 310.99,
-    "text": "This is an idea developed at Stanford University by Carol Dweck, and it is the belief that the ability to learn is not fixed, that it can change with your effort.",
+    "english": "This is an idea developed at Stanford University by Carol Dweck, and it is the belief that the ability to learn is not fixed, that it can change with your effort.",
     "words": [
       { "word": "This", "start": 299.573, "end": 299.713, "score": 0.9 },
       { "word": "is", "start": 299.753, "end": 299.833, "score": 0.976 },
@@ -1453,7 +1453,7 @@
   {
     "start": 311.56,
     "end": 327.933,
-    "text": " Dr. Dweck has shown that when kids read and learn about the brain and how it changes and grows in response to challenge, they're much more likely to persevere when they fail because they don't believe that failure is a permanent condition.",
+    "english": " Dr. Dweck has shown that when kids read and learn about the brain and how it changes and grows in response to challenge, they're much more likely to persevere when they fail because they don't believe that failure is a permanent condition.",
     "words": [
       { "word": "Dr.", "start": 311.56, "end": 311.901, "score": 0.645 },
       { "word": "Dweck", "start": 311.941, "end": 312.181, "score": 0.93 },
@@ -1527,7 +1527,7 @@
   {
     "start": 329.296,
     "end": 332.623,
-    "text": "So growth mindset is a great idea for building grit.",
+    "english": "So growth mindset is a great idea for building grit.",
     "words": [
       { "word": "So", "start": 329.296, "end": 329.416, "score": 1.0 },
       { "word": "growth", "start": 329.497, "end": 329.777, "score": 0.802 },
@@ -1544,7 +1544,7 @@
   {
     "start": 332.789,
     "end": 334.03,
-    "text": " but we need more.",
+    "english": " but we need more.",
     "words": [
       { "word": "but", "start": 332.789, "end": 332.949, "score": 0.713 },
       { "word": "we", "start": 333.009, "end": 333.149, "score": 0.704 },
@@ -1555,7 +1555,7 @@
   {
     "start": 334.09,
     "end": 337.874,
-    "text": "And that's where I'm gonna end my remarks, because that's where we are.",
+    "english": "And that's where I'm gonna end my remarks, because that's where we are.",
     "words": [
       { "word": "And", "start": 334.09, "end": 335.091, "score": 0.758 },
       { "word": "that's", "start": 335.171, "end": 335.391, "score": 0.705 },
@@ -1575,7 +1575,7 @@
   {
     "start": 338.274,
     "end": 340.176,
-    "text": "That's the work that stands before us.",
+    "english": "That's the work that stands before us.",
     "words": [
       { "word": "That's", "start": 338.274, "end": 338.534, "score": 0.819 },
       { "word": "the", "start": 338.614, "end": 338.694, "score": 0.838 },
@@ -1589,7 +1589,7 @@
   {
     "start": 340.696,
     "end": 345.981,
-    "text": "We need to take our best ideas, our strongest intuitions, and we need to test them.",
+    "english": "We need to take our best ideas, our strongest intuitions, and we need to test them.",
     "words": [
       { "word": "We", "start": 340.696, "end": 340.776, "score": 0.742 },
       { "word": "need", "start": 340.816, "end": 340.956, "score": 0.863 },
@@ -1622,7 +1622,7 @@
   {
     "start": 346.621,
     "end": 355.449,
-    "text": "We need to measure whether we've been successful, and we have to be willing to fail, to be wrong, to start over again with lessons learned.",
+    "english": "We need to measure whether we've been successful, and we have to be willing to fail, to be wrong, to start over again with lessons learned.",
     "words": [
       { "word": "We", "start": 346.621, "end": 346.741, "score": 0.851 },
       { "word": "need", "start": 346.781, "end": 347.002, "score": 0.712 },
@@ -1660,7 +1660,7 @@
   {
     "start": 356.57,
     "end": 362.155,
-    "text": "In other words, we need to be gritty about getting our kids grittier.",
+    "english": "In other words, we need to be gritty about getting our kids grittier.",
     "words": [
       { "word": "In", "start": 356.57, "end": 356.63, "score": 0.99 },
       { "word": "other", "start": 356.69, "end": 356.85, "score": 0.798 },
@@ -1685,7 +1685,7 @@
   {
     "start": 362.455,
     "end": 363.202,
-    "text": " Thank you.",
+    "english": " Thank you.",
     "words": [
       { "word": "Thank", "start": 362.455, "end": 362.725, "score": 0.863 },
       { "word": "you.", "start": 362.766, "end": 363.202, "score": 0.878 }

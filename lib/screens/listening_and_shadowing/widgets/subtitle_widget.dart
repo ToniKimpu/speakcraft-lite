@@ -56,9 +56,9 @@ class SubtitleWidget extends StatelessWidget {
                 fontFamily: "MM Lyrics Bold",
               ),
             ),
-          const SizedBox(height: 24),
           // Info Box if no MM Sub
-          if (!hasMMSub)
+          if (!hasMMSub) ...[
+            const SizedBox(height: 24),
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(16),
@@ -76,7 +76,7 @@ class SubtitleWidget extends StatelessWidget {
                 ),
               ),
             ),
-
+          ],
           // Audio Player Section
           if (subtitle.audioName.isNotEmpty)
             BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
@@ -246,10 +246,41 @@ class SubtitleWidget extends StatelessWidget {
                 );
               },
             ),
-          const SizedBox(height: 20),
 
           // Vocabularies
-          if (subtitle.vocabularies!.isNotEmpty)
+          if (subtitle.vocabularies!.isNotEmpty) ...[
+            const SizedBox(
+              height: 8,
+            ),
+            const Divider(
+              color: Color(0xFFFFE0B2),
+              thickness: 0.5,
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const Icon(
+                  Icons.menu_book, // You can choose any icon you like
+                  color: Color(0xFFFFE0B2),
+                  size: 20,
+                ),
+                const SizedBox(width: 8), // space between icon and text
+                Text(
+                  "Vocabularies",
+                  style: PmpTextStyles.body1Regular.copyWith(
+                    color: const Color(0xFFFFE0B2),
+                    fontSize: 16,
+                    fontFamily: "ArchivoBlack Regular",
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 8,
+            ),
             ...subtitle.vocabularies!.map(
               (voc) => Padding(
                 padding: const EdgeInsets.only(bottom: 16),
@@ -310,6 +341,7 @@ class SubtitleWidget extends StatelessWidget {
                 ),
               ),
             ),
+          ],
         ],
       ),
     );

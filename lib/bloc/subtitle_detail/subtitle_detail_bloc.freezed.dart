@@ -20,6 +20,7 @@ mixin _$SubtitleEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(Listening listening) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
+    required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) =>
@@ -28,6 +29,7 @@ mixin _$SubtitleEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Listening listening)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
+    TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) =>
@@ -36,6 +38,7 @@ mixin _$SubtitleEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Listening listening)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
+    TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
@@ -45,6 +48,8 @@ mixin _$SubtitleEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_ParseSubtitleLine value) parseSubtitleLine,
     required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseListeningQuestion value)
+        parseListeningQuestion,
     required TResult Function(_ParseComplete value) parseComplete,
     required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
   }) =>
@@ -53,6 +58,7 @@ mixin _$SubtitleEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult? Function(_ParseComplete value)? parseComplete,
     TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
   }) =>
@@ -61,6 +67,7 @@ mixin _$SubtitleEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult Function(_ParseComplete value)? parseComplete,
     TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
     required TResult orElse(),
@@ -183,6 +190,7 @@ class _$ParseSubtitleLineImpl
   TResult when<TResult extends Object?>({
     required TResult Function(Listening listening) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
+    required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
@@ -194,6 +202,7 @@ class _$ParseSubtitleLineImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Listening listening)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
+    TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
@@ -205,6 +214,7 @@ class _$ParseSubtitleLineImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Listening listening)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
+    TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
@@ -220,6 +230,8 @@ class _$ParseSubtitleLineImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_ParseSubtitleLine value) parseSubtitleLine,
     required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseListeningQuestion value)
+        parseListeningQuestion,
     required TResult Function(_ParseComplete value) parseComplete,
     required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
   }) {
@@ -231,6 +243,7 @@ class _$ParseSubtitleLineImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult? Function(_ParseComplete value)? parseComplete,
     TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
   }) {
@@ -242,6 +255,7 @@ class _$ParseSubtitleLineImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult Function(_ParseComplete value)? parseComplete,
     TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
     required TResult orElse(),
@@ -359,6 +373,7 @@ class _$ParseSubtitleImpl
   TResult when<TResult extends Object?>({
     required TResult Function(Listening listening) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
+    required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
@@ -370,6 +385,7 @@ class _$ParseSubtitleImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Listening listening)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
+    TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
@@ -381,6 +397,7 @@ class _$ParseSubtitleImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Listening listening)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
+    TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
@@ -396,6 +413,8 @@ class _$ParseSubtitleImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_ParseSubtitleLine value) parseSubtitleLine,
     required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseListeningQuestion value)
+        parseListeningQuestion,
     required TResult Function(_ParseComplete value) parseComplete,
     required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
   }) {
@@ -407,6 +426,7 @@ class _$ParseSubtitleImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult? Function(_ParseComplete value)? parseComplete,
     TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
   }) {
@@ -418,6 +438,7 @@ class _$ParseSubtitleImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult Function(_ParseComplete value)? parseComplete,
     TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
     required TResult orElse(),
@@ -439,6 +460,192 @@ abstract class _ParseSubtitle implements SubtitleEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseSubtitleImplCopyWith<_$ParseSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ParseListeningQuestionImplCopyWith<$Res> {
+  factory _$$ParseListeningQuestionImplCopyWith(
+          _$ParseListeningQuestionImpl value,
+          $Res Function(_$ParseListeningQuestionImpl) then) =
+      __$$ParseListeningQuestionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Listening listening});
+
+  $ListeningCopyWith<$Res> get listening;
+}
+
+/// @nodoc
+class __$$ParseListeningQuestionImplCopyWithImpl<$Res>
+    extends _$SubtitleEventCopyWithImpl<$Res, _$ParseListeningQuestionImpl>
+    implements _$$ParseListeningQuestionImplCopyWith<$Res> {
+  __$$ParseListeningQuestionImplCopyWithImpl(
+      _$ParseListeningQuestionImpl _value,
+      $Res Function(_$ParseListeningQuestionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? listening = null,
+  }) {
+    return _then(_$ParseListeningQuestionImpl(
+      null == listening
+          ? _value.listening
+          : listening // ignore: cast_nullable_to_non_nullable
+              as Listening,
+    ));
+  }
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ListeningCopyWith<$Res> get listening {
+    return $ListeningCopyWith<$Res>(_value.listening, (value) {
+      return _then(_value.copyWith(listening: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ParseListeningQuestionImpl
+    with DiagnosticableTreeMixin
+    implements _ParseListeningQuestion {
+  const _$ParseListeningQuestionImpl(this.listening);
+
+  @override
+  final Listening listening;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubtitleEvent.parseListeningQuestion(listening: $listening)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseListeningQuestion'))
+      ..add(DiagnosticsProperty('listening', listening));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParseListeningQuestionImpl &&
+            (identical(other.listening, listening) ||
+                other.listening == listening));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, listening);
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParseListeningQuestionImplCopyWith<_$ParseListeningQuestionImpl>
+      get copyWith => __$$ParseListeningQuestionImplCopyWithImpl<
+          _$ParseListeningQuestionImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Listening listening) parseSubtitleLine,
+    required TResult Function(Listening listening) parseSubtitle,
+    required TResult Function(Listening listening) parseListeningQuestion,
+    required TResult Function(List<Subtitle> subtitles) parseComplete,
+    required TResult Function(int index) setCurrentPageIndex,
+  }) {
+    return parseListeningQuestion(listening);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Listening listening)? parseSubtitleLine,
+    TResult? Function(Listening listening)? parseSubtitle,
+    TResult? Function(Listening listening)? parseListeningQuestion,
+    TResult? Function(List<Subtitle> subtitles)? parseComplete,
+    TResult? Function(int index)? setCurrentPageIndex,
+  }) {
+    return parseListeningQuestion?.call(listening);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Listening listening)? parseSubtitleLine,
+    TResult Function(Listening listening)? parseSubtitle,
+    TResult Function(Listening listening)? parseListeningQuestion,
+    TResult Function(List<Subtitle> subtitles)? parseComplete,
+    TResult Function(int index)? setCurrentPageIndex,
+    required TResult orElse(),
+  }) {
+    if (parseListeningQuestion != null) {
+      return parseListeningQuestion(listening);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ParseSubtitleLine value) parseSubtitleLine,
+    required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseListeningQuestion value)
+        parseListeningQuestion,
+    required TResult Function(_ParseComplete value) parseComplete,
+    required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
+  }) {
+    return parseListeningQuestion(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ParseSubtitleLine value)? parseSubtitleLine,
+    TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseListeningQuestion value)? parseListeningQuestion,
+    TResult? Function(_ParseComplete value)? parseComplete,
+    TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
+  }) {
+    return parseListeningQuestion?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ParseSubtitleLine value)? parseSubtitleLine,
+    TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseListeningQuestion value)? parseListeningQuestion,
+    TResult Function(_ParseComplete value)? parseComplete,
+    TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
+    required TResult orElse(),
+  }) {
+    if (parseListeningQuestion != null) {
+      return parseListeningQuestion(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ParseListeningQuestion implements SubtitleEvent {
+  const factory _ParseListeningQuestion(final Listening listening) =
+      _$ParseListeningQuestionImpl;
+
+  Listening get listening;
+
+  /// Create a copy of SubtitleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ParseListeningQuestionImplCopyWith<_$ParseListeningQuestionImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -529,6 +736,7 @@ class _$ParseCompleteImpl
   TResult when<TResult extends Object?>({
     required TResult Function(Listening listening) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
+    required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
@@ -540,6 +748,7 @@ class _$ParseCompleteImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Listening listening)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
+    TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
@@ -551,6 +760,7 @@ class _$ParseCompleteImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Listening listening)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
+    TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
@@ -566,6 +776,8 @@ class _$ParseCompleteImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_ParseSubtitleLine value) parseSubtitleLine,
     required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseListeningQuestion value)
+        parseListeningQuestion,
     required TResult Function(_ParseComplete value) parseComplete,
     required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
   }) {
@@ -577,6 +789,7 @@ class _$ParseCompleteImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult? Function(_ParseComplete value)? parseComplete,
     TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
   }) {
@@ -588,6 +801,7 @@ class _$ParseCompleteImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult Function(_ParseComplete value)? parseComplete,
     TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
     required TResult orElse(),
@@ -693,6 +907,7 @@ class _$SetCurrentPageIndexImpl
   TResult when<TResult extends Object?>({
     required TResult Function(Listening listening) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
+    required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
@@ -704,6 +919,7 @@ class _$SetCurrentPageIndexImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Listening listening)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
+    TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
@@ -715,6 +931,7 @@ class _$SetCurrentPageIndexImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Listening listening)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
+    TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
     TResult Function(int index)? setCurrentPageIndex,
     required TResult orElse(),
@@ -730,6 +947,8 @@ class _$SetCurrentPageIndexImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_ParseSubtitleLine value) parseSubtitleLine,
     required TResult Function(_ParseSubtitle value) parseSubtitle,
+    required TResult Function(_ParseListeningQuestion value)
+        parseListeningQuestion,
     required TResult Function(_ParseComplete value) parseComplete,
     required TResult Function(_SetCurrentPageIndex value) setCurrentPageIndex,
   }) {
@@ -741,6 +960,7 @@ class _$SetCurrentPageIndexImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult? Function(_ParseSubtitle value)? parseSubtitle,
+    TResult? Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult? Function(_ParseComplete value)? parseComplete,
     TResult? Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
   }) {
@@ -752,6 +972,7 @@ class _$SetCurrentPageIndexImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ParseSubtitleLine value)? parseSubtitleLine,
     TResult Function(_ParseSubtitle value)? parseSubtitle,
+    TResult Function(_ParseListeningQuestion value)? parseListeningQuestion,
     TResult Function(_ParseComplete value)? parseComplete,
     TResult Function(_SetCurrentPageIndex value)? setCurrentPageIndex,
     required TResult orElse(),
@@ -783,6 +1004,8 @@ mixin _$SubtitleState {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -795,6 +1018,8 @@ mixin _$SubtitleState {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -807,6 +1032,8 @@ mixin _$SubtitleState {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -820,6 +1047,8 @@ mixin _$SubtitleState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -832,6 +1061,8 @@ mixin _$SubtitleState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -844,6 +1075,8 @@ mixin _$SubtitleState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -925,6 +1158,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -940,6 +1175,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -955,6 +1192,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -974,6 +1213,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -989,6 +1230,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1004,6 +1247,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1101,6 +1346,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -1116,6 +1363,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1131,6 +1380,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1150,6 +1401,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -1165,6 +1418,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1180,6 +1435,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1296,6 +1553,8 @@ class _$OnParsingSubtitleImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -1311,6 +1570,8 @@ class _$OnParsingSubtitleImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1326,6 +1587,8 @@ class _$OnParsingSubtitleImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1345,6 +1608,8 @@ class _$OnParsingSubtitleImpl
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -1360,6 +1625,8 @@ class _$OnParsingSubtitleImpl
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1375,6 +1642,8 @@ class _$OnParsingSubtitleImpl
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1400,6 +1669,223 @@ abstract class _OnParsingSubtitle implements SubtitleState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParsingSubtitleImplCopyWith<_$OnParsingSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnParseListeningQuestionCompletedImplCopyWith<$Res> {
+  factory _$$OnParseListeningQuestionCompletedImplCopyWith(
+          _$OnParseListeningQuestionCompletedImpl value,
+          $Res Function(_$OnParseListeningQuestionCompletedImpl) then) =
+      __$$OnParseListeningQuestionCompletedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ListeningQuestion> listeningQuestions});
+}
+
+/// @nodoc
+class __$$OnParseListeningQuestionCompletedImplCopyWithImpl<$Res>
+    extends _$SubtitleStateCopyWithImpl<$Res,
+        _$OnParseListeningQuestionCompletedImpl>
+    implements _$$OnParseListeningQuestionCompletedImplCopyWith<$Res> {
+  __$$OnParseListeningQuestionCompletedImplCopyWithImpl(
+      _$OnParseListeningQuestionCompletedImpl _value,
+      $Res Function(_$OnParseListeningQuestionCompletedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? listeningQuestions = null,
+  }) {
+    return _then(_$OnParseListeningQuestionCompletedImpl(
+      null == listeningQuestions
+          ? _value._listeningQuestions
+          : listeningQuestions // ignore: cast_nullable_to_non_nullable
+              as List<ListeningQuestion>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnParseListeningQuestionCompletedImpl
+    with DiagnosticableTreeMixin
+    implements _OnParseListeningQuestionCompleted {
+  const _$OnParseListeningQuestionCompletedImpl(
+      final List<ListeningQuestion> listeningQuestions)
+      : _listeningQuestions = listeningQuestions;
+
+  final List<ListeningQuestion> _listeningQuestions;
+  @override
+  List<ListeningQuestion> get listeningQuestions {
+    if (_listeningQuestions is EqualUnmodifiableListView)
+      return _listeningQuestions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_listeningQuestions);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SubtitleState.onParseListeningQuestionCompleted(listeningQuestions: $listeningQuestions)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'SubtitleState.onParseListeningQuestionCompleted'))
+      ..add(DiagnosticsProperty('listeningQuestions', listeningQuestions));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnParseListeningQuestionCompletedImpl &&
+            const DeepCollectionEquality()
+                .equals(other._listeningQuestions, _listeningQuestions));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_listeningQuestions));
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnParseListeningQuestionCompletedImplCopyWith<
+          _$OnParseListeningQuestionCompletedImpl>
+      get copyWith => __$$OnParseListeningQuestionCompletedImplCopyWithImpl<
+          _$OnParseListeningQuestionCompletedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String? message) loading,
+    required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
+    required TResult Function(List<Subtitle> subtitles) onParseCompleted,
+    required TResult Function(List<SubtitleLine> subtitleLines)
+        onParseSubtitleLineCompleted,
+    required TResult Function(int index) onPageChanged,
+    required TResult Function(String message) error,
+  }) {
+    return onParseListeningQuestionCompleted(listeningQuestions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String? message)? loading,
+    TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
+    TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
+    TResult? Function(List<SubtitleLine> subtitleLines)?
+        onParseSubtitleLineCompleted,
+    TResult? Function(int index)? onPageChanged,
+    TResult? Function(String message)? error,
+  }) {
+    return onParseListeningQuestionCompleted?.call(listeningQuestions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String? message)? loading,
+    TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
+    TResult Function(List<Subtitle> subtitles)? onParseCompleted,
+    TResult Function(List<SubtitleLine> subtitleLines)?
+        onParseSubtitleLineCompleted,
+    TResult Function(int index)? onPageChanged,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (onParseListeningQuestionCompleted != null) {
+      return onParseListeningQuestionCompleted(listeningQuestions);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
+    required TResult Function(_OnParseCompleted value) onParseCompleted,
+    required TResult Function(_OnParseSubtitleLineCompleted value)
+        onParseSubtitleLineCompleted,
+    required TResult Function(OnPageChanged value) onPageChanged,
+    required TResult Function(_Error value) error,
+  }) {
+    return onParseListeningQuestionCompleted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
+    TResult? Function(_OnParseCompleted value)? onParseCompleted,
+    TResult? Function(_OnParseSubtitleLineCompleted value)?
+        onParseSubtitleLineCompleted,
+    TResult? Function(OnPageChanged value)? onPageChanged,
+    TResult? Function(_Error value)? error,
+  }) {
+    return onParseListeningQuestionCompleted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
+    TResult Function(_OnParseCompleted value)? onParseCompleted,
+    TResult Function(_OnParseSubtitleLineCompleted value)?
+        onParseSubtitleLineCompleted,
+    TResult Function(OnPageChanged value)? onPageChanged,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (onParseListeningQuestionCompleted != null) {
+      return onParseListeningQuestionCompleted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnParseListeningQuestionCompleted implements SubtitleState {
+  const factory _OnParseListeningQuestionCompleted(
+          final List<ListeningQuestion> listeningQuestions) =
+      _$OnParseListeningQuestionCompletedImpl;
+
+  List<ListeningQuestion> get listeningQuestions;
+
+  /// Create a copy of SubtitleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnParseListeningQuestionCompletedImplCopyWith<
+          _$OnParseListeningQuestionCompletedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1492,6 +1978,8 @@ class _$OnParseCompletedImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -1507,6 +1995,8 @@ class _$OnParseCompletedImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1522,6 +2012,8 @@ class _$OnParseCompletedImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1541,6 +2033,8 @@ class _$OnParseCompletedImpl
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -1556,6 +2050,8 @@ class _$OnParseCompletedImpl
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1571,6 +2067,8 @@ class _$OnParseCompletedImpl
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1694,6 +2192,8 @@ class _$OnParseSubtitleLineCompletedImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -1709,6 +2209,8 @@ class _$OnParseSubtitleLineCompletedImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1724,6 +2226,8 @@ class _$OnParseSubtitleLineCompletedImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1743,6 +2247,8 @@ class _$OnParseSubtitleLineCompletedImpl
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -1758,6 +2264,8 @@ class _$OnParseSubtitleLineCompletedImpl
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1773,6 +2281,8 @@ class _$OnParseSubtitleLineCompletedImpl
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1883,6 +2393,8 @@ class _$OnPageChangedImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -1898,6 +2410,8 @@ class _$OnPageChangedImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1913,6 +2427,8 @@ class _$OnPageChangedImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -1932,6 +2448,8 @@ class _$OnPageChangedImpl
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -1947,6 +2465,8 @@ class _$OnPageChangedImpl
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -1962,6 +2482,8 @@ class _$OnPageChangedImpl
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -2067,6 +2589,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
+    required TResult Function(List<ListeningQuestion> listeningQuestions)
+        onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
         onParseSubtitleLineCompleted,
@@ -2082,6 +2606,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -2097,6 +2623,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
+    TResult Function(List<ListeningQuestion> listeningQuestions)?
+        onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
         onParseSubtitleLineCompleted,
@@ -2116,6 +2644,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnParsingSubtitle value) onParsingSubtitle,
+    required TResult Function(_OnParseListeningQuestionCompleted value)
+        onParseListeningQuestionCompleted,
     required TResult Function(_OnParseCompleted value) onParseCompleted,
     required TResult Function(_OnParseSubtitleLineCompleted value)
         onParseSubtitleLineCompleted,
@@ -2131,6 +2661,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult? Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult? Function(_OnParseCompleted value)? onParseCompleted,
     TResult? Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,
@@ -2146,6 +2678,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_OnParsingSubtitle value)? onParsingSubtitle,
+    TResult Function(_OnParseListeningQuestionCompleted value)?
+        onParseListeningQuestionCompleted,
     TResult Function(_OnParseCompleted value)? onParseCompleted,
     TResult Function(_OnParseSubtitleLineCompleted value)?
         onParseSubtitleLineCompleted,

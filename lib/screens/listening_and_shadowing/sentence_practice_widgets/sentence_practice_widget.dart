@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
-import 'package:pmp_english/shared_widgets/dialogs/success_dialog.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../../shared_widgets/dialogs/success_dialog.dart';
 import '../../../shared_widgets/practice_text_field.dart';
 import '../model/sentence_check_result.dart';
 
@@ -28,14 +29,13 @@ class SentencePracticeWidget extends StatefulWidget {
 
 class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
   final _userAnswerController = TextEditingController();
-  final _wordVisibleNotifier = ValueNotifier<bool>(false);
   final _errorMessageNotifier = ValueNotifier<String?>(null);
 
   @override
   initState() {
     super.initState();
     if (widget.complete) {
-      _userAnswerController.text = widget.subtitleLine.text;
+      _userAnswerController.text = widget.subtitleLine.english;
     }
   }
 
@@ -43,7 +43,6 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
   dispose() {
     super.dispose();
     _userAnswerController.dispose();
-    _wordVisibleNotifier.dispose();
     _errorMessageNotifier.dispose();
   }
 
@@ -65,12 +64,13 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                 decoration: BoxDecoration(
                   color: Colors.white.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(12),
-                  border:
-                      Border.all(color: Colors.white.withValues(alpha: 0.2)),
+                  border: Border.all(
+                    color: Colors.white.withValues(alpha: 0.2),
+                  ),
                 ),
-                child: const Text(
-                  "ကျွန်မ အသက် ၂၇ နှစ်အရွယ်မှာ အရမ်းပင်ပန်းတဲ့ စီမံခန့်ခွဲမှုဆိုင်ရာ အကြံပေးအလုပ်ကနေ ပိုပြီးတောင် ပင်ပန်းတဲ့ “ဆရာမ” အလုပ်ကို ပြောင်းခဲ့ပါတယ်။",
-                  style: TextStyle(
+                child: Text(
+                  widget.subtitleLine.burmese ?? "",
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
@@ -145,7 +145,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                           ),
                           const SizedBox(width: 12),
                           const Text(
-                            "Listen Audio",
+                            "Play Audio",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
@@ -156,6 +156,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                       ),
                     ),
                   ),
+               
                 ),
               ),
             ),
@@ -170,7 +171,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: PracticeTextField(
                   controller: _userAnswerController,
-                  hintText: "Type your answer here...",
+                  hintText: "Type what you hear...",
                   englishOnly: true,
                   minLines: 2,
                   maxLines: 8,
@@ -221,6 +222,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                     );
                   }),
               if (!widget.complete) const SizedBox(height: 24),
+
               // Done Button
               if (!widget.complete)
                 Padding(
@@ -242,7 +244,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                         _errorMessageNotifier.value = null;
                         FocusManager.instance.primaryFocus?.unfocus();
                         final sentenceCheckResult = checkSentenceSimple(
-                          widget.subtitleLine.text,
+                          widget.subtitleLine.english,
                           _userAnswerController.text.trim(),
                         );
                         if (sentenceCheckResult.isCorrect) {
@@ -274,7 +276,6 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                 ),
 
               const SizedBox(height: 20),
-
               // Word chips toggle
               if (!widget.complete)
                 Padding(
@@ -290,72 +291,44 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                         ),
                       ),
                       const SizedBox(width: 8),
-                      ValueListenableBuilder<bool>(
-                        valueListenable: _wordVisibleNotifier,
-                        builder: (_, showWords, __) => Transform.scale(
-                          scale: 0.75,
-                          child: Switch(
-                            value: showWords,
-                            onChanged: (v) => _wordVisibleNotifier.value = v,
-                            activeColor: Colors.white,
-                            inactiveThumbColor:
-                                Colors.white.withValues(alpha: 0.8),
-                            activeTrackColor: Colors.green,
-                            inactiveTrackColor:
-                                Colors.white.withValues(alpha: 0.4),
-                          ),
+                      Text(
+                        '[Tap what you hear]',
+                        style: PmpTextStyles.body2Regular.copyWith(
+                          fontFamily: "ArchivoBlack Regular",
                         ),
                       ),
-                      ValueListenableBuilder<bool>(
-                          valueListenable: _wordVisibleNotifier,
-                          builder: (_, showWords, __) {
-                            if (!showWords) {
-                              return const SizedBox();
-                            }
-                            return Text(
-                              '[Tap the words]',
-                              style: PmpTextStyles.body2Regular.copyWith(
-                                fontFamily: "ArchivoBlack Regular",
-                              ),
-                            );
-                          }),
                     ],
                   ),
                 ),
               // Word chips
-              ValueListenableBuilder<bool>(
-                valueListenable: _wordVisibleNotifier,
-                builder: (_, showWords, __) {
-                  if (!showWords) return const SizedBox.shrink();
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children: widget.subtitleLine.text.trim().split(' ').map(
-                        (word) {
-                          return ActionChip(
-                            label: Text(
-                              word,
-                              style: const TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white,
-                              ),
-                            ),
-                            backgroundColor: Colors.blue,
-                            onPressed: () {
-                              final current = _userAnswerController.text.trim();
-                              _userAnswerController.text =
-                                  current.isEmpty ? word : "$current $word";
-                            },
-                          );
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: widget.subtitleLine.english.trim().split(' ').map(
+                    (word) {
+                      return ActionChip(
+                        label: Text(
+                          word,
+                          style: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                        ),
+                        backgroundColor: Colors.blue,
+                        onPressed: () {
+                          final current = _userAnswerController.text.trim();
+                          _userAnswerController.text =
+                              current.isEmpty ? word : "$current $word";
                         },
-                      ).toList(),
-                    ),
-                  );
-                },
+                      );
+                    },
+                  ).toList(),
+                ),
               ),
+
               const SizedBox(
                 height: 12,
               ),
