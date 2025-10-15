@@ -227,6 +227,7 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
                   ),
                 ),
               ),
+          
             ],
             const SizedBox(
               height: 12,

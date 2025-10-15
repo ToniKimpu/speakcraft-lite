@@ -8,6 +8,7 @@ import 'package:pmp_english/screens/auth/login_screen.dart';
 import 'package:pmp_english/screens/auth/sign_up_screen.dart';
 import 'package:pmp_english/screens/days/pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_result_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_sentence_practice_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_page.dart';
 import 'package:pmp_english/screens/main/free_user_screen.dart';
@@ -36,7 +37,6 @@ import '../screens/days/pattern_practice_result_screen.dart';
 import '../screens/days/speaking_pattern_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
 import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
-import '../screens/listening_and_shadowing/model/subtitle_line.dart';
 import '../screens/listening_and_shadowing/vocabulary_listening_page.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
 import '../screens/main/device_failed_screen.dart';
@@ -85,6 +85,7 @@ class PmpRoutes {
   static const shadowingPage = '/shadowing_page';
   static const listeningSentencePracticeList =
       "/listening_sentence_practice_list";
+  static const listeningPracticeResultPage = '/listening_practice_result_page';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -247,11 +248,13 @@ class PmpRoutes {
         final listeningQuestions =
             args['listening_questions'] as List<ListeningQuestion>;
         final complete = args['complete'] as bool;
+        final groupId = args['group_id'] as String;
         return _getRoute(
           ListeningSentencePracticePage(
             complete: complete,
             listening: listening,
             listeningQuestions: listeningQuestions,
+            groupId: groupId,
           ),
           settings,
         );
@@ -273,6 +276,12 @@ class PmpRoutes {
           ),
           settings,
         );
+      case listeningPracticeResultPage:
+        return _getRoute(
+          const ListeningPracticeResultPage(),
+          settings,
+        );
+
       default:
         throw Exception(
           'Sorry, path ${settings.name} is invalid!',

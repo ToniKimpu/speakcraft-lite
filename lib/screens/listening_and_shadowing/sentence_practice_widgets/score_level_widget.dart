@@ -1,0 +1,86 @@
+import 'package:flutter/material.dart';
+
+import '../../../config/pmp_colors.dart';
+import '../../../config/pmp_text_styles.dart';
+
+class ScoreLevelWidget extends StatelessWidget {
+  const ScoreLevelWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const correctCount = (5 / (5 + 2 + 3)) * 100;
+    String txtLevel = calculateLevel(correctCount);
+    return Container(
+      height: 100,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: const Color(0xFF203A43),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: PmpColors.white),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Your Level',
+            style:
+                PmpTextStyles.body1Semi.copyWith(color: PmpColors.success500),
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 16),
+            decoration: BoxDecoration(
+              color: getColor(txtLevel),
+              borderRadius: BorderRadius.circular(200),
+            ),
+            child: Text(
+              txtLevel,
+              style: PmpTextStyles.body1Semi.copyWith(color: PmpColors.white),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  String calculateLevel(double score) {
+    if (score >= 0 && score <= 40) {
+      return 'F';
+    } else if (score > 40 && score <= 50) {
+      return 'D';
+    } else if (score > 50 && score <= 60) {
+      return 'C';
+    } else if (score > 60 && score <= 70) {
+      return 'B';
+    } else if (score > 70 && score <= 80) {
+      return 'A-';
+    } else if (score > 80 && score <= 90) {
+      return 'A';
+    } else if (score > 90 && score <= 100) {
+      return 'A+';
+    } else {
+      return 'Invalid score';
+    }
+  }
+
+  Color getColor(String grade) {
+    switch (grade) {
+      case 'A+':
+      case 'A':
+      case 'A-':
+        return PmpColors.success400;
+      case 'B':
+        return PmpColors.info400;
+      case 'C':
+        return const Color(0xFFFFC62D);
+      case 'D':
+        return const Color(0xFFEF7C25);
+      case 'F':
+        return PmpColors.destructive500;
+      default:
+        return Colors.transparent;
+    }
+  }
+}

@@ -53,7 +53,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
           emit(SubtitleState.onPageChanged(index));
         },
         parseListeningQuestion: (listening) async {
-          _mapParseListeningQuestionsToState(listening, emit);
+          await _mapParseListeningQuestionsToState(listening, emit);
         },
         parseSubtitleLine: (listening) async {
           await _mapParseSubtitleLineToState(listening, emit);
@@ -77,10 +77,15 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       final jsonString =
           await rootBundle.loadString("assets/subtitles/grit_questions.json");
       final List<dynamic> jsonList = json.decode(jsonString);
-      debugPrint(
-          "_mapParseSubtitleLineToState: ${jsonList.length} total length");
-      final listeningQuestions =
-          jsonList.map((e) => ListeningQuestion.fromJson(e)).toList();
+
+      final listeningQuestions = jsonList.map((e) {
+        final question = ListeningQuestion.fromJson(e);
+        // Shuffle the answers
+        final shuffledAnswers = List<AnswerOption>.from(question.answers)
+          ..shuffle();
+        // Return a new ListeningQuestion with shuffled answers
+        return question.copyWith(answers: shuffledAnswers);
+      }).toList();
       emit(SubtitleState.onParseListeningQuestionCompleted(listeningQuestions));
     } catch (e) {
       debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");

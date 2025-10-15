@@ -182,6 +182,7 @@ class ShadowingPlayer extends StatelessWidget {
                 ),
               ),
             ),
+        
           ],
         ),
       ),

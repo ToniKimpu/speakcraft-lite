@@ -25,11 +25,9 @@ class ModuleWidget extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color:
-            Colors.white.withValues(alpha: 0.08), // Dark card with transparency
+        color: Colors.white.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-            color: Colors.white.withValues(alpha: 0.2)), // Subtle border
+        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.3),
