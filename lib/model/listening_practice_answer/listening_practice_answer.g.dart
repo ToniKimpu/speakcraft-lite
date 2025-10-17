@@ -6,9 +6,9 @@ part of 'listening_practice_answer.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ListeningPracticeAnswerModelImpl _$$ListeningPracticeAnswerModelImplFromJson(
+_$ListeningPracticeAnswerImpl _$$ListeningPracticeAnswerImplFromJson(
         Map<String, dynamic> json) =>
-    _$ListeningPracticeAnswerModelImpl(
+    _$ListeningPracticeAnswerImpl(
       id: (json['id'] as num?)?.toInt(),
       groupId: json['groupId'] as String,
       questionId: (json['questionId'] as num).toInt(),
@@ -17,8 +17,8 @@ _$ListeningPracticeAnswerModelImpl _$$ListeningPracticeAnswerModelImplFromJson(
       isCorrect: json['isCorrect'] as bool,
     );
 
-Map<String, dynamic> _$$ListeningPracticeAnswerModelImplToJson(
-        _$ListeningPracticeAnswerModelImpl instance) =>
+Map<String, dynamic> _$$ListeningPracticeAnswerImplToJson(
+        _$ListeningPracticeAnswerImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'groupId': instance.groupId,

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class LineWithText extends StatefulWidget {
-  const LineWithText({super.key});
+  const LineWithText({
+    super.key,
+    required this.englishText,
+  });
+  final String englishText;
 
   @override
   State<LineWithText> createState() => _LineWithTextState();
@@ -41,7 +45,7 @@ class _LineWithTextState extends State<LineWithText> {
         const SizedBox(width: 8),
         Expanded(
           child: Text(
-            "When I was 27 years old, I left a very demanding job in management consulting for a job that was even more demanding, teaching.",
+            widget.englishText,
             key: _textKey,
             style: const TextStyle(
               color: Colors.white70,

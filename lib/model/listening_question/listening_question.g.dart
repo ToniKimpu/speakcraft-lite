@@ -16,6 +16,10 @@ _$ListeningQuestionImpl _$$ListeningQuestionImplFromJson(
       answers: (json['answers'] as List<dynamic>)
           .map((e) => AnswerOption.fromJson(e as Map<String, dynamic>))
           .toList(),
+      userAnswers: (json['userAnswers'] as List<dynamic>?)
+          ?.map((e) =>
+              ListeningPracticeAnswer.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$ListeningQuestionImplToJson(
@@ -26,6 +30,7 @@ Map<String, dynamic> _$$ListeningQuestionImplToJson(
       'text': instance.text,
       'question': instance.question,
       'answers': instance.answers,
+      'userAnswers': instance.userAnswers,
     };
 
 _$AnswerOptionImpl _$$AnswerOptionImplFromJson(Map<String, dynamic> json) =>

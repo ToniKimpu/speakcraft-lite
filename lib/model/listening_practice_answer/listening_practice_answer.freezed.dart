@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-ListeningPracticeAnswerModel _$ListeningPracticeAnswerModelFromJson(
+ListeningPracticeAnswer _$ListeningPracticeAnswerFromJson(
     Map<String, dynamic> json) {
-  return _ListeningPracticeAnswerModel.fromJson(json);
+  return _ListeningPracticeAnswer.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ListeningPracticeAnswerModel {
+mixin _$ListeningPracticeAnswer {
   int? get id => throw _privateConstructorUsedError;
   String get groupId => throw _privateConstructorUsedError;
   int get questionId => throw _privateConstructorUsedError;
@@ -28,23 +28,21 @@ mixin _$ListeningPracticeAnswerModel {
   int get timeSpent => throw _privateConstructorUsedError;
   bool get isCorrect => throw _privateConstructorUsedError;
 
-  /// Serializes this ListeningPracticeAnswerModel to a JSON map.
+  /// Serializes this ListeningPracticeAnswer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of ListeningPracticeAnswerModel
+  /// Create a copy of ListeningPracticeAnswer
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListeningPracticeAnswerModelCopyWith<ListeningPracticeAnswerModel>
-      get copyWith => throw _privateConstructorUsedError;
+  $ListeningPracticeAnswerCopyWith<ListeningPracticeAnswer> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListeningPracticeAnswerModelCopyWith<$Res> {
-  factory $ListeningPracticeAnswerModelCopyWith(
-          ListeningPracticeAnswerModel value,
-          $Res Function(ListeningPracticeAnswerModel) then) =
-      _$ListeningPracticeAnswerModelCopyWithImpl<$Res,
-          ListeningPracticeAnswerModel>;
+abstract class $ListeningPracticeAnswerCopyWith<$Res> {
+  factory $ListeningPracticeAnswerCopyWith(ListeningPracticeAnswer value,
+          $Res Function(ListeningPracticeAnswer) then) =
+      _$ListeningPracticeAnswerCopyWithImpl<$Res, ListeningPracticeAnswer>;
   @useResult
   $Res call(
       {int? id,
@@ -56,17 +54,17 @@ abstract class $ListeningPracticeAnswerModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ListeningPracticeAnswerModelCopyWithImpl<$Res,
-        $Val extends ListeningPracticeAnswerModel>
-    implements $ListeningPracticeAnswerModelCopyWith<$Res> {
-  _$ListeningPracticeAnswerModelCopyWithImpl(this._value, this._then);
+class _$ListeningPracticeAnswerCopyWithImpl<$Res,
+        $Val extends ListeningPracticeAnswer>
+    implements $ListeningPracticeAnswerCopyWith<$Res> {
+  _$ListeningPracticeAnswerCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ListeningPracticeAnswerModel
+  /// Create a copy of ListeningPracticeAnswer
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -108,12 +106,12 @@ class _$ListeningPracticeAnswerModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ListeningPracticeAnswerModelImplCopyWith<$Res>
-    implements $ListeningPracticeAnswerModelCopyWith<$Res> {
-  factory _$$ListeningPracticeAnswerModelImplCopyWith(
-          _$ListeningPracticeAnswerModelImpl value,
-          $Res Function(_$ListeningPracticeAnswerModelImpl) then) =
-      __$$ListeningPracticeAnswerModelImplCopyWithImpl<$Res>;
+abstract class _$$ListeningPracticeAnswerImplCopyWith<$Res>
+    implements $ListeningPracticeAnswerCopyWith<$Res> {
+  factory _$$ListeningPracticeAnswerImplCopyWith(
+          _$ListeningPracticeAnswerImpl value,
+          $Res Function(_$ListeningPracticeAnswerImpl) then) =
+      __$$ListeningPracticeAnswerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -126,16 +124,16 @@ abstract class _$$ListeningPracticeAnswerModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ListeningPracticeAnswerModelImplCopyWithImpl<$Res>
-    extends _$ListeningPracticeAnswerModelCopyWithImpl<$Res,
-        _$ListeningPracticeAnswerModelImpl>
-    implements _$$ListeningPracticeAnswerModelImplCopyWith<$Res> {
-  __$$ListeningPracticeAnswerModelImplCopyWithImpl(
-      _$ListeningPracticeAnswerModelImpl _value,
-      $Res Function(_$ListeningPracticeAnswerModelImpl) _then)
+class __$$ListeningPracticeAnswerImplCopyWithImpl<$Res>
+    extends _$ListeningPracticeAnswerCopyWithImpl<$Res,
+        _$ListeningPracticeAnswerImpl>
+    implements _$$ListeningPracticeAnswerImplCopyWith<$Res> {
+  __$$ListeningPracticeAnswerImplCopyWithImpl(
+      _$ListeningPracticeAnswerImpl _value,
+      $Res Function(_$ListeningPracticeAnswerImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ListeningPracticeAnswerModel
+  /// Create a copy of ListeningPracticeAnswer
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -147,7 +145,7 @@ class __$$ListeningPracticeAnswerModelImplCopyWithImpl<$Res>
     Object? timeSpent = null,
     Object? isCorrect = null,
   }) {
-    return _then(_$ListeningPracticeAnswerModelImpl(
+    return _then(_$ListeningPracticeAnswerImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -178,9 +176,8 @@ class __$$ListeningPracticeAnswerModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ListeningPracticeAnswerModelImpl
-    implements _ListeningPracticeAnswerModel {
-  const _$ListeningPracticeAnswerModelImpl(
+class _$ListeningPracticeAnswerImpl implements _ListeningPracticeAnswer {
+  const _$ListeningPracticeAnswerImpl(
       {this.id,
       required this.groupId,
       required this.questionId,
@@ -188,9 +185,8 @@ class _$ListeningPracticeAnswerModelImpl
       required this.timeSpent,
       required this.isCorrect});
 
-  factory _$ListeningPracticeAnswerModelImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ListeningPracticeAnswerModelImplFromJson(json);
+  factory _$ListeningPracticeAnswerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListeningPracticeAnswerImplFromJson(json);
 
   @override
   final int? id;
@@ -207,14 +203,14 @@ class _$ListeningPracticeAnswerModelImpl
 
   @override
   String toString() {
-    return 'ListeningPracticeAnswerModel(id: $id, groupId: $groupId, questionId: $questionId, userAnswer: $userAnswer, timeSpent: $timeSpent, isCorrect: $isCorrect)';
+    return 'ListeningPracticeAnswer(id: $id, groupId: $groupId, questionId: $questionId, userAnswer: $userAnswer, timeSpent: $timeSpent, isCorrect: $isCorrect)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ListeningPracticeAnswerModelImpl &&
+            other is _$ListeningPracticeAnswerImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.groupId, groupId) || other.groupId == groupId) &&
             (identical(other.questionId, questionId) ||
@@ -232,36 +228,34 @@ class _$ListeningPracticeAnswerModelImpl
   int get hashCode => Object.hash(
       runtimeType, id, groupId, questionId, userAnswer, timeSpent, isCorrect);
 
-  /// Create a copy of ListeningPracticeAnswerModel
+  /// Create a copy of ListeningPracticeAnswer
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListeningPracticeAnswerModelImplCopyWith<
-          _$ListeningPracticeAnswerModelImpl>
-      get copyWith => __$$ListeningPracticeAnswerModelImplCopyWithImpl<
-          _$ListeningPracticeAnswerModelImpl>(this, _$identity);
+  _$$ListeningPracticeAnswerImplCopyWith<_$ListeningPracticeAnswerImpl>
+      get copyWith => __$$ListeningPracticeAnswerImplCopyWithImpl<
+          _$ListeningPracticeAnswerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListeningPracticeAnswerModelImplToJson(
+    return _$$ListeningPracticeAnswerImplToJson(
       this,
     );
   }
 }
 
-abstract class _ListeningPracticeAnswerModel
-    implements ListeningPracticeAnswerModel {
-  const factory _ListeningPracticeAnswerModel(
+abstract class _ListeningPracticeAnswer implements ListeningPracticeAnswer {
+  const factory _ListeningPracticeAnswer(
       {final int? id,
       required final String groupId,
       required final int questionId,
       final String? userAnswer,
       required final int timeSpent,
-      required final bool isCorrect}) = _$ListeningPracticeAnswerModelImpl;
+      required final bool isCorrect}) = _$ListeningPracticeAnswerImpl;
 
-  factory _ListeningPracticeAnswerModel.fromJson(Map<String, dynamic> json) =
-      _$ListeningPracticeAnswerModelImpl.fromJson;
+  factory _ListeningPracticeAnswer.fromJson(Map<String, dynamic> json) =
+      _$ListeningPracticeAnswerImpl.fromJson;
 
   @override
   int? get id;
@@ -276,11 +270,10 @@ abstract class _ListeningPracticeAnswerModel
   @override
   bool get isCorrect;
 
-  /// Create a copy of ListeningPracticeAnswerModel
+  /// Create a copy of ListeningPracticeAnswer
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListeningPracticeAnswerModelImplCopyWith<
-          _$ListeningPracticeAnswerModelImpl>
+  _$$ListeningPracticeAnswerImplCopyWith<_$ListeningPracticeAnswerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

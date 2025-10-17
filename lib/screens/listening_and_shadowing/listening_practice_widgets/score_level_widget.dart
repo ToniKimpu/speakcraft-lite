@@ -4,12 +4,20 @@ import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 
 class ScoreLevelWidget extends StatelessWidget {
-  const ScoreLevelWidget({super.key});
+  const ScoreLevelWidget({
+    super.key,
+    required this.correctCount,
+    required this.inCorrectCount,
+    required this.notAnswerCount,
+  });
+  final int correctCount, inCorrectCount, notAnswerCount;
 
   @override
   Widget build(BuildContext context) {
-    const correctCount = (5 / (5 + 2 + 3)) * 100;
-    String txtLevel = calculateLevel(correctCount);
+    final total = correctCount + inCorrectCount + notAnswerCount;
+    final percentage = total == 0 ? 0.0 : (correctCount / total) * 100;
+    debugPrint("_scorePercentate: $percentage percentage!");
+    String txtLevel = calculateLevel(percentage);
     return Container(
       height: 100,
       width: double.infinity,

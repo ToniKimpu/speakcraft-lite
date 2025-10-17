@@ -458,6 +458,235 @@ class UserExampleAnswerTableCompanion
   }
 }
 
+class $ListeningPracticeAnswerTableTable extends ListeningPracticeAnswerTable
+    with
+        TableInfo<$ListeningPracticeAnswerTableTable, ListeningPracticeAnswer> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $ListeningPracticeAnswerTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _groupIdMeta =
+      const VerificationMeta('groupId');
+  @override
+  late final GeneratedColumn<String> groupId = GeneratedColumn<String>(
+      'group_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _questionIdMeta =
+      const VerificationMeta('questionId');
+  @override
+  late final GeneratedColumn<int> questionId = GeneratedColumn<int>(
+      'question_id', aliasedName, false,
+      type: DriftSqlType.int, requiredDuringInsert: true);
+  static const VerificationMeta _userAnswerMeta =
+      const VerificationMeta('userAnswer');
+  @override
+  late final GeneratedColumn<String> userAnswer = GeneratedColumn<String>(
+      'user_answer', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _timeSpentMeta =
+      const VerificationMeta('timeSpent');
+  @override
+  late final GeneratedColumn<int> timeSpent = GeneratedColumn<int>(
+      'time_spent', aliasedName, false,
+      type: DriftSqlType.int, requiredDuringInsert: true);
+  static const VerificationMeta _isCorrectMeta =
+      const VerificationMeta('isCorrect');
+  @override
+  late final GeneratedColumn<bool> isCorrect = GeneratedColumn<bool>(
+      'is_correct', aliasedName, false,
+      type: DriftSqlType.bool,
+      requiredDuringInsert: true,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('CHECK ("is_correct" IN (0, 1))'));
+  @override
+  List<GeneratedColumn> get $columns =>
+      [id, groupId, questionId, userAnswer, timeSpent, isCorrect];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'listening_practice_answer_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<ListeningPracticeAnswer> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('group_id')) {
+      context.handle(_groupIdMeta,
+          groupId.isAcceptableOrUnknown(data['group_id']!, _groupIdMeta));
+    } else if (isInserting) {
+      context.missing(_groupIdMeta);
+    }
+    if (data.containsKey('question_id')) {
+      context.handle(
+          _questionIdMeta,
+          questionId.isAcceptableOrUnknown(
+              data['question_id']!, _questionIdMeta));
+    } else if (isInserting) {
+      context.missing(_questionIdMeta);
+    }
+    if (data.containsKey('user_answer')) {
+      context.handle(
+          _userAnswerMeta,
+          userAnswer.isAcceptableOrUnknown(
+              data['user_answer']!, _userAnswerMeta));
+    }
+    if (data.containsKey('time_spent')) {
+      context.handle(_timeSpentMeta,
+          timeSpent.isAcceptableOrUnknown(data['time_spent']!, _timeSpentMeta));
+    } else if (isInserting) {
+      context.missing(_timeSpentMeta);
+    }
+    if (data.containsKey('is_correct')) {
+      context.handle(_isCorrectMeta,
+          isCorrect.isAcceptableOrUnknown(data['is_correct']!, _isCorrectMeta));
+    } else if (isInserting) {
+      context.missing(_isCorrectMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  ListeningPracticeAnswer map(Map<String, dynamic> data,
+      {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return ListeningPracticeAnswer(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      groupId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}group_id'])!,
+      questionId: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}question_id'])!,
+      userAnswer: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}user_answer']),
+      timeSpent: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}time_spent'])!,
+      isCorrect: attachedDatabase.typeMapping
+          .read(DriftSqlType.bool, data['${effectivePrefix}is_correct'])!,
+    );
+  }
+
+  @override
+  $ListeningPracticeAnswerTableTable createAlias(String alias) {
+    return $ListeningPracticeAnswerTableTable(attachedDatabase, alias);
+  }
+}
+
+class ListeningPracticeAnswerTableCompanion
+    extends UpdateCompanion<ListeningPracticeAnswer> {
+  final Value<int> id;
+  final Value<String> groupId;
+  final Value<int> questionId;
+  final Value<String?> userAnswer;
+  final Value<int> timeSpent;
+  final Value<bool> isCorrect;
+  const ListeningPracticeAnswerTableCompanion({
+    this.id = const Value.absent(),
+    this.groupId = const Value.absent(),
+    this.questionId = const Value.absent(),
+    this.userAnswer = const Value.absent(),
+    this.timeSpent = const Value.absent(),
+    this.isCorrect = const Value.absent(),
+  });
+  ListeningPracticeAnswerTableCompanion.insert({
+    this.id = const Value.absent(),
+    required String groupId,
+    required int questionId,
+    this.userAnswer = const Value.absent(),
+    required int timeSpent,
+    required bool isCorrect,
+  })  : groupId = Value(groupId),
+        questionId = Value(questionId),
+        timeSpent = Value(timeSpent),
+        isCorrect = Value(isCorrect);
+  static Insertable<ListeningPracticeAnswer> custom({
+    Expression<int>? id,
+    Expression<String>? groupId,
+    Expression<int>? questionId,
+    Expression<String>? userAnswer,
+    Expression<int>? timeSpent,
+    Expression<bool>? isCorrect,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (groupId != null) 'group_id': groupId,
+      if (questionId != null) 'question_id': questionId,
+      if (userAnswer != null) 'user_answer': userAnswer,
+      if (timeSpent != null) 'time_spent': timeSpent,
+      if (isCorrect != null) 'is_correct': isCorrect,
+    });
+  }
+
+  ListeningPracticeAnswerTableCompanion copyWith(
+      {Value<int>? id,
+      Value<String>? groupId,
+      Value<int>? questionId,
+      Value<String?>? userAnswer,
+      Value<int>? timeSpent,
+      Value<bool>? isCorrect}) {
+    return ListeningPracticeAnswerTableCompanion(
+      id: id ?? this.id,
+      groupId: groupId ?? this.groupId,
+      questionId: questionId ?? this.questionId,
+      userAnswer: userAnswer ?? this.userAnswer,
+      timeSpent: timeSpent ?? this.timeSpent,
+      isCorrect: isCorrect ?? this.isCorrect,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (groupId.present) {
+      map['group_id'] = Variable<String>(groupId.value);
+    }
+    if (questionId.present) {
+      map['question_id'] = Variable<int>(questionId.value);
+    }
+    if (userAnswer.present) {
+      map['user_answer'] = Variable<String>(userAnswer.value);
+    }
+    if (timeSpent.present) {
+      map['time_spent'] = Variable<int>(timeSpent.value);
+    }
+    if (isCorrect.present) {
+      map['is_correct'] = Variable<bool>(isCorrect.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ListeningPracticeAnswerTableCompanion(')
+          ..write('id: $id, ')
+          ..write('groupId: $groupId, ')
+          ..write('questionId: $questionId, ')
+          ..write('userAnswer: $userAnswer, ')
+          ..write('timeSpent: $timeSpent, ')
+          ..write('isCorrect: $isCorrect')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -465,12 +694,17 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       $AiSentencePracticeTableTable(this);
   late final $UserExampleAnswerTableTable userExampleAnswerTable =
       $UserExampleAnswerTableTable(this);
+  late final $ListeningPracticeAnswerTableTable listeningPracticeAnswerTable =
+      $ListeningPracticeAnswerTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
-  List<DatabaseSchemaEntity> get allSchemaEntities =>
-      [aiSentencePracticeTable, userExampleAnswerTable];
+  List<DatabaseSchemaEntity> get allSchemaEntities => [
+        aiSentencePracticeTable,
+        userExampleAnswerTable,
+        listeningPracticeAnswerTable
+      ];
 }
 
 typedef $$AiSentencePracticeTableTableCreateCompanionBuilder
@@ -811,6 +1045,195 @@ typedef $$UserExampleAnswerTableTableProcessedTableManager
         ),
         UserExampleAnswerTableData,
         PrefetchHooks Function()>;
+typedef $$ListeningPracticeAnswerTableTableCreateCompanionBuilder
+    = ListeningPracticeAnswerTableCompanion Function({
+  Value<int> id,
+  required String groupId,
+  required int questionId,
+  Value<String?> userAnswer,
+  required int timeSpent,
+  required bool isCorrect,
+});
+typedef $$ListeningPracticeAnswerTableTableUpdateCompanionBuilder
+    = ListeningPracticeAnswerTableCompanion Function({
+  Value<int> id,
+  Value<String> groupId,
+  Value<int> questionId,
+  Value<String?> userAnswer,
+  Value<int> timeSpent,
+  Value<bool> isCorrect,
+});
+
+class $$ListeningPracticeAnswerTableTableFilterComposer
+    extends Composer<_$AppDatabase, $ListeningPracticeAnswerTableTable> {
+  $$ListeningPracticeAnswerTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get groupId => $composableBuilder(
+      column: $table.groupId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get questionId => $composableBuilder(
+      column: $table.questionId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get timeSpent => $composableBuilder(
+      column: $table.timeSpent, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<bool> get isCorrect => $composableBuilder(
+      column: $table.isCorrect, builder: (column) => ColumnFilters(column));
+}
+
+class $$ListeningPracticeAnswerTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $ListeningPracticeAnswerTableTable> {
+  $$ListeningPracticeAnswerTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get groupId => $composableBuilder(
+      column: $table.groupId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get questionId => $composableBuilder(
+      column: $table.questionId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get timeSpent => $composableBuilder(
+      column: $table.timeSpent, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<bool> get isCorrect => $composableBuilder(
+      column: $table.isCorrect, builder: (column) => ColumnOrderings(column));
+}
+
+class $$ListeningPracticeAnswerTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $ListeningPracticeAnswerTableTable> {
+  $$ListeningPracticeAnswerTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get groupId =>
+      $composableBuilder(column: $table.groupId, builder: (column) => column);
+
+  GeneratedColumn<int> get questionId => $composableBuilder(
+      column: $table.questionId, builder: (column) => column);
+
+  GeneratedColumn<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => column);
+
+  GeneratedColumn<int> get timeSpent =>
+      $composableBuilder(column: $table.timeSpent, builder: (column) => column);
+
+  GeneratedColumn<bool> get isCorrect =>
+      $composableBuilder(column: $table.isCorrect, builder: (column) => column);
+}
+
+class $$ListeningPracticeAnswerTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $ListeningPracticeAnswerTableTable,
+    ListeningPracticeAnswer,
+    $$ListeningPracticeAnswerTableTableFilterComposer,
+    $$ListeningPracticeAnswerTableTableOrderingComposer,
+    $$ListeningPracticeAnswerTableTableAnnotationComposer,
+    $$ListeningPracticeAnswerTableTableCreateCompanionBuilder,
+    $$ListeningPracticeAnswerTableTableUpdateCompanionBuilder,
+    (
+      ListeningPracticeAnswer,
+      BaseReferences<_$AppDatabase, $ListeningPracticeAnswerTableTable,
+          ListeningPracticeAnswer>
+    ),
+    ListeningPracticeAnswer,
+    PrefetchHooks Function()> {
+  $$ListeningPracticeAnswerTableTableTableManager(
+      _$AppDatabase db, $ListeningPracticeAnswerTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$ListeningPracticeAnswerTableTableFilterComposer(
+                  $db: db, $table: table),
+          createOrderingComposer: () =>
+              $$ListeningPracticeAnswerTableTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$ListeningPracticeAnswerTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<String> groupId = const Value.absent(),
+            Value<int> questionId = const Value.absent(),
+            Value<String?> userAnswer = const Value.absent(),
+            Value<int> timeSpent = const Value.absent(),
+            Value<bool> isCorrect = const Value.absent(),
+          }) =>
+              ListeningPracticeAnswerTableCompanion(
+            id: id,
+            groupId: groupId,
+            questionId: questionId,
+            userAnswer: userAnswer,
+            timeSpent: timeSpent,
+            isCorrect: isCorrect,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            required String groupId,
+            required int questionId,
+            Value<String?> userAnswer = const Value.absent(),
+            required int timeSpent,
+            required bool isCorrect,
+          }) =>
+              ListeningPracticeAnswerTableCompanion.insert(
+            id: id,
+            groupId: groupId,
+            questionId: questionId,
+            userAnswer: userAnswer,
+            timeSpent: timeSpent,
+            isCorrect: isCorrect,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$ListeningPracticeAnswerTableTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $ListeningPracticeAnswerTableTable,
+        ListeningPracticeAnswer,
+        $$ListeningPracticeAnswerTableTableFilterComposer,
+        $$ListeningPracticeAnswerTableTableOrderingComposer,
+        $$ListeningPracticeAnswerTableTableAnnotationComposer,
+        $$ListeningPracticeAnswerTableTableCreateCompanionBuilder,
+        $$ListeningPracticeAnswerTableTableUpdateCompanionBuilder,
+        (
+          ListeningPracticeAnswer,
+          BaseReferences<_$AppDatabase, $ListeningPracticeAnswerTableTable,
+              ListeningPracticeAnswer>
+        ),
+        ListeningPracticeAnswer,
+        PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -821,4 +1244,8 @@ class $AppDatabaseManager {
   $$UserExampleAnswerTableTableTableManager get userExampleAnswerTable =>
       $$UserExampleAnswerTableTableTableManager(
           _db, _db.userExampleAnswerTable);
+  $$ListeningPracticeAnswerTableTableTableManager
+      get listeningPracticeAnswerTable =>
+          $$ListeningPracticeAnswerTableTableTableManager(
+              _db, _db.listeningPracticeAnswerTable);
 }

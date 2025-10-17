@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmp_english/model/lesson/lesson.dart';
+import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/model/pattern_user_comment/pattern_user_comment.dart';
 import 'package:pmp_english/model/translation/translation.dart';
@@ -277,8 +278,18 @@ class PmpRoutes {
           settings,
         );
       case listeningPracticeResultPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        final listeningQuestions =
+            args['listening_questions'] as List<ListeningQuestion>;
+        final listeningAnswers =
+            args['listening_answers'] as List<ListeningPracticeAnswer>;
         return _getRoute(
-          const ListeningPracticeResultPage(),
+          ListeningPracticeResultPage(
+            listening: listening,
+            listeningQuestions: listeningQuestions,
+            listeningPracticeAnswers: listeningAnswers,
+          ),
           settings,
         );
 

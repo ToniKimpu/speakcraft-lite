@@ -102,24 +102,24 @@ class _ListeningSentencePracticeListState
                       onTap: locked
                           ? null
                           : () async {
-                              Navigator.pushNamed(
-                                context,
-                                PmpRoutes.listeningPracticeResultPage,
-                              );
-                              // final listeningQuestions =
-                              //     groupedListeningQuestions[index];
-                              // await Navigator.pushNamed(
+                              // Navigator.pushNamed(
                               //   context,
-                              //   PmpRoutes.listeningSentencePracticePage,
-                              //   arguments: {
-                              //     'listening': widget.listening,
-                              //     'listening_questions': listeningQuestions,
-                              //     'complete': isCompleted,
-                              //     'group_id':
-                              //         "${widget.listening.youtubeId}_group_${index + 1}",
-                              //   },
+                              //   PmpRoutes.listeningPracticeResultPage,
                               // );
-                              // _getCompletedCount();
+                              final listeningQuestions =
+                                  groupedListeningQuestions[index];
+                              await Navigator.pushNamed(
+                                context,
+                                PmpRoutes.listeningSentencePracticePage,
+                                arguments: {
+                                  'listening': widget.listening,
+                                  'listening_questions': listeningQuestions,
+                                  'complete': isCompleted,
+                                  'group_id':
+                                      "${widget.listening.youtubeId}_group_${index + 1}",
+                                },
+                              );
+                              _getCompletedCount();
                             },
                       child: AnimatedContainer(
                         duration: const Duration(milliseconds: 300),

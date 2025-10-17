@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,7 +10,9 @@ import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 
+import '../../model/listening_practice_answer/listening_practice_answer.dart';
 import '../../model/subtitle/subtitle.dart';
+import '../../services/app_database/app_database.dart';
 import '../../services/supabase_service.dart';
 
 part 'subtitle_detail_bloc.freezed.dart';
@@ -78,14 +81,33 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
           await rootBundle.loadString("assets/subtitles/grit_questions.json");
       final List<dynamic> jsonList = json.decode(jsonString);
 
-      final listeningQuestions = jsonList.map((e) {
-        final question = ListeningQuestion.fromJson(e);
-        // Shuffle the answers
-        final shuffledAnswers = List<AnswerOption>.from(question.answers)
-          ..shuffle();
-        // Return a new ListeningQuestion with shuffled answers
-        return question.copyWith(answers: shuffledAnswers);
-      }).toList();
+      final db = AppDatabase.instance();
+
+      final listeningQuestions = await Future.wait(
+        jsonList.asMap().entries.map((entry) async {
+          final index = entry.key;
+          final e = entry.value;
+          final question = ListeningQuestion.fromJson(e);
+          // Increment group_1 according to index
+          final groupId = "${listening.youtubeId}_group_${index + 1}";
+
+          // Fetch existing answers for this group
+          final List<ListeningPracticeAnswer> data =
+              await (db.listeningPracticeAnswerTable.select()
+                    ..where((tbl) => tbl.groupId.equals(groupId)))
+                  .get();
+          // Shuffle answers
+          final shuffledAnswers = List<AnswerOption>.from(question.answers)
+            ..shuffle();
+
+          // Attach userAnswers if any exist
+          return question.copyWith(
+            answers: shuffledAnswers,
+            userAnswers: data.isNotEmpty ? data : null,
+          );
+        }),
+      );
+
       emit(SubtitleState.onParseListeningQuestionCompleted(listeningQuestions));
     } catch (e) {
       debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");

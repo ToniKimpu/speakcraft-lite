@@ -4,15 +4,17 @@ import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:pmp_english/tables/ai_sentence_practice_table.dart';
 
 import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
+import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/user_example_answer_table.dart';
 
 part 'app_database.g.dart';
 
 @DriftDatabase(
-  tables: [AiSentencePracticeTable, UserExampleAnswerTable],
-)
-@DriftDatabase(
-  tables: [AiSentencePracticeTable, UserExampleAnswerTable],
+  tables: [
+    AiSentencePracticeTable,
+    UserExampleAnswerTable,
+    ListeningPracticeAnswerTable,
+  ],
 )
 class AppDatabase extends _$AppDatabase {
   static final _instance = AppDatabase._();
@@ -40,7 +42,8 @@ class AppDatabase extends _$AppDatabase {
         }
 
         if (kDebugMode) {
-          final wrongForeignKeys = await customSelect('PRAGMA foreign_key_check').get();
+          final wrongForeignKeys =
+              await customSelect('PRAGMA foreign_key_check').get();
           assert(
             wrongForeignKeys.isEmpty,
             '${wrongForeignKeys.map((e) => e.data)}',

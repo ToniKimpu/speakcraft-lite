@@ -1,12 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/sentence_practice_widgets/sentence_practice_widget_two.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/sentence_practice_widgets/sentence_practice_youtube_player.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_widget_two.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_youtube_player.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -42,7 +43,7 @@ class _ListeningSentencePracticePageState
   final _timeSpentNotifier = ValueNotifier<int>(0);
   AnswerOption? _selectedAnswerOption;
   Timer? timer;
-  final _userAnswers = <ListeningPracticeAnswerModel>[];
+  final _userAnswers = <ListeningPracticeAnswer>[];
   int _totalQuestions = 0;
 
   @override
@@ -51,7 +52,7 @@ class _ListeningSentencePracticePageState
     _totalQuestions = widget.listeningQuestions.length;
     _pageController = PageController(initialPage: _currentPage);
     _controller = YoutubePlayerController(
-      initialVideoId: "H14bBuluwB8",
+      initialVideoId: widget.listening.youtubeId,
       flags: const YoutubePlayerFlags(
         mute: false,
         autoPlay: false,
@@ -252,7 +253,7 @@ class _ListeningSentencePracticePageState
                             }
                             _stopTimer();
                             final listeningPracticeAnswer =
-                                ListeningPracticeAnswerModel(
+                                ListeningPracticeAnswer(
                               groupId: widget.groupId,
                               questionId: _currentPage + 1,
                               timeSpent: _timeSpentNotifier.value,
@@ -264,6 +265,16 @@ class _ListeningSentencePracticePageState
                               listeningPracticeAnswer,
                             );
                             if (_totalQuestions == _userAnswers.length) {
+                              Navigator.pushNamed(
+                                context,
+                                PmpRoutes.listeningPracticeResultPage,
+                                arguments: {
+                                  "listening": widget.listening,
+                                  "listening_answers": _userAnswers,
+                                  "listening_questions":
+                                      widget.listeningQuestions,
+                                },
+                              );
                               return;
                             }
                             setState(() {
@@ -306,7 +317,7 @@ class _ListeningSentencePracticePageState
                                   }
                                   _stopTimer();
                                   final listeningPracticeAnswer =
-                                      ListeningPracticeAnswerModel(
+                                      ListeningPracticeAnswer(
                                     groupId: widget.groupId,
                                     questionId: _currentPage + 1,
                                     timeSpent: _timeSpentNotifier.value,
@@ -318,6 +329,16 @@ class _ListeningSentencePracticePageState
                                     listeningPracticeAnswer,
                                   );
                                   if (_totalQuestions == _userAnswers.length) {
+                                    Navigator.pushNamed(
+                                      context,
+                                      PmpRoutes.listeningPracticeResultPage,
+                                      arguments: {
+                                        "listening": widget.listening,
+                                        "listening_answers": _userAnswers,
+                                        "listening_questions":
+                                            widget.listeningQuestions,
+                                      },
+                                    );
                                     return;
                                   }
                                   setState(() {
