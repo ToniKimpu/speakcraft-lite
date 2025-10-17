@@ -1,15 +1,19 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/dialogs/checking_user_answers_dialog.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_widget_two.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_youtube_player.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
+import '../../bloc/subtitle_detail/subtitle_detail_bloc.dart';
 
 class ListeningSentencePracticePage extends StatefulWidget {
   const ListeningSentencePracticePage({
@@ -32,26 +36,32 @@ class ListeningSentencePracticePage extends StatefulWidget {
 class _ListeningSentencePracticePageState
     extends State<ListeningSentencePracticePage> {
   late final PageController _pageController;
-  int _currentPage = 0;
+  late final YoutubePlayerController _youtubeController;
 
-  late YoutubePlayerController _controller;
+  final _timeSpentNotifier = ValueNotifier<int>(0);
+  final _userAnswers = <ListeningPracticeAnswer>[];
+  AnswerOption? _selectedAnswerOption;
+  Timer? _timer;
+
+  int _currentPage = 0;
+  int _totalQuestions = 0;
   Duration _position = Duration.zero;
   Duration _startDuration = Duration.zero;
   Duration _endDuration = Duration.zero;
-  bool needSeek = true;
-
-  final _timeSpentNotifier = ValueNotifier<int>(0);
-  AnswerOption? _selectedAnswerOption;
-  Timer? timer;
-  final _userAnswers = <ListeningPracticeAnswer>[];
-  int _totalQuestions = 0;
+  bool _needSeek = true;
 
   @override
   void initState() {
     super.initState();
+    _initializeControllers();
+    _initializeDurationsForQuestion(0);
+  }
+
+  void _initializeControllers() {
     _totalQuestions = widget.listeningQuestions.length;
     _pageController = PageController(initialPage: _currentPage);
-    _controller = YoutubePlayerController(
+
+    _youtubeController = YoutubePlayerController(
       initialVideoId: widget.listening.youtubeId,
       flags: const YoutubePlayerFlags(
         mute: false,
@@ -63,321 +73,293 @@ class _ListeningSentencePracticePageState
         forceHD: false,
         enableCaption: false,
         hideControls: true,
-        startAt: 0,
-        endAt: 374,
       ),
-    )..addListener(
-        () {
-          if (mounted) {
-            setState(() {
-              // debugPrint(
-              //     "_controllerStateLogs: ${_controller.value.playerState.name} playerState!");
-              _position = _controller.value.position;
-              if (_position.inMilliseconds > _endDuration.inMilliseconds) {
-                _controller.pause();
-                needSeek = true;
-              }
-            });
-          }
-        },
-      );
-    _startDuration = Duration(
-      milliseconds: (widget.listeningQuestions.first.start * 1000).round(),
-    );
-    _endDuration = Duration(
-      milliseconds: (widget.listeningQuestions.first.end * 1000).round(),
-    );
+    )..addListener(_onYoutubeControllerUpdate);
+  }
+
+  void _onYoutubeControllerUpdate() {
+    if (!mounted) return;
+    setState(() {
+      _position = _youtubeController.value.position;
+      if (_position.inMilliseconds > _endDuration.inMilliseconds) {
+        _youtubeController.pause();
+        _needSeek = true;
+      }
+    });
+  }
+
+  void _initializeDurationsForQuestion(int page) {
+    final question = widget.listeningQuestions[page];
+    _startDuration = Duration(milliseconds: (question.start * 1000).round());
+    _endDuration = Duration(milliseconds: (question.end * 1000).round());
   }
 
   @override
   void dispose() {
     _pageController.dispose();
     _timeSpentNotifier.dispose();
-    timer?.cancel();
+    _youtubeController.dispose();
+    _timer?.cancel();
     super.dispose();
   }
 
   void _goToNextPage(int page) {
-    if (page >= 0 && page < widget.listeningQuestions.length) {
-      _startDuration = Duration(
-        milliseconds: (widget.listeningQuestions[page].start * 1000).round(),
-      );
-      _endDuration = Duration(
-        milliseconds: (widget.listeningQuestions[page].end * 1000).round(),
-      );
-      _controller.pause();
-      _pageController.animateToPage(
-        page,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-      setState(() => _currentPage = page);
-    }
-  }
+    if (page >= widget.listeningQuestions.length) return;
 
-  String _formatDuration(int seconds) {
-    int minutes = seconds ~/ 60;
-    int remainingSeconds = seconds % 60;
-    String twoDigitMinutes = minutes.toString().padLeft(2, '0');
-    String twoDigitSeconds = remainingSeconds.toString().padLeft(2, '0');
-    return "$twoDigitMinutes:$twoDigitSeconds";
+    _initializeDurationsForQuestion(page);
+    _youtubeController.pause();
+    _pageController.animateToPage(
+      page,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+
+    setState(() => _currentPage = page);
   }
 
   void _startTimer() {
-    timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      debugPrint('in timer tick!');
-      _timeSpentNotifier.value = 1 + _timeSpentNotifier.value;
+    _timer?.cancel();
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      _timeSpentNotifier.value++;
     });
   }
 
   void _stopTimer() {
-    timer?.cancel();
+    _timer?.cancel();
     _timeSpentNotifier.value = 0;
+  }
+
+  String _formatDuration(int seconds) {
+    final minutes = seconds ~/ 60;
+    final remainingSeconds = seconds % 60;
+    return '${minutes.toString().padLeft(2, '0')}:${remainingSeconds.toString().padLeft(2, '0')}';
+  }
+
+  ListeningPracticeAnswer _buildAnswer() {
+    return ListeningPracticeAnswer(
+      groupId: widget.groupId,
+      questionId: _currentPage + 1,
+      timeSpent: _timeSpentNotifier.value,
+      userAnswer: _selectedAnswerOption?.answer,
+      isCorrect: _selectedAnswerOption?.correct ?? false,
+      youtubeId: widget.listening.youtubeId,
+    );
+  }
+
+  void _handleAnswerSubmit({bool skipped = false}) {
+    if (_youtubeController.value.isPlaying) {
+      _youtubeController.pause();
+    }
+    _stopTimer();
+
+    final answer = _buildAnswer();
+    _userAnswers.add(answer);
+
+    final isLastQuestion = _userAnswers.length == _totalQuestions;
+
+    if (isLastQuestion) {
+      _showCheckDialog();
+    } else {
+      setState(() => _selectedAnswerOption = null);
+      _goToNextPage(_currentPage + 1);
+    }
+
+    debugPrint('_answerLogs: ${answer.toJson()}');
+  }
+
+  void _showCheckDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) =>
+          CheckingUserAnswersDialog(userAnswers: _userAnswers),
+    ).then((confirmed) {
+      if (confirmed == true && context.mounted) {
+        context
+            .read<SubtitleBloc>()
+            .add(SubtitleEvent.parseListeningQuestion(widget.listening));
+        Navigator.pushReplacementNamed(
+          context,
+          PmpRoutes.listeningPracticeResultPage,
+          arguments: {
+            "listening": widget.listening,
+            "listening_answers": _userAnswers,
+            "listening_questions": widget.listeningQuestions,
+          },
+        );
+      }
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    bool loading = _controller.value.playerState == PlayerState.buffering ||
-        !_controller.value.isReady;
+    final isLoading =
+        _youtubeController.value.playerState == PlayerState.buffering ||
+            !_youtubeController.value.isReady;
+
     return YoutubePlayerBuilder(
       player: YoutubePlayer(
-        controller: _controller,
+        controller: _youtubeController,
         showVideoProgressIndicator: false,
-        onReady: () {
-          // _isPlayerReady = true;
-          _startTimer();
-        },
+        onReady: _startTimer,
       ),
       builder: (context, player) {
         return MainScaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: Colors.blue,
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        'assets/images/timer.png',
-                        width: 13,
-                        height: 13,
-                        color: Colors.white,
-                      ),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      ValueListenableBuilder(
-                        valueListenable: _timeSpentNotifier,
-                        builder: (context, second, child) {
-                          return Text(
-                            _formatDuration(second),
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          );
-                        },
-                      )
-                    ],
-                  ),
-                ),
-                Text("${_currentPage + 1}/${widget.listeningQuestions.length}"),
-              ],
-            ),
+            title: _buildHeader(),
           ),
           body: Column(
             children: [
-              SentencePracticeYoutubePlayer(
-                player: player,
-                listening: widget.listening,
-                controller: _controller,
-                currentPage: _currentPage,
-                onTap: () {
-                  if (loading) return;
-                  if (_controller.value.isPlaying) {
-                    needSeek = false;
-                    _controller.pause();
-                    return;
-                  }
-                  if (needSeek) {
-                    _controller.seekTo(_startDuration);
-                  }
-                  _controller.play();
-                },
-              ),
+              _buildVideoPlayer(player, isLoading),
               const SizedBox(height: 8),
-              Expanded(
-                child: PageView.builder(
-                  controller: _pageController,
-                  itemCount: widget.listeningQuestions.length,
-                  physics: const NeverScrollableScrollPhysics(),
-                  onPageChanged: (index) {
-                    _startTimer();
-                    setState(
-                      () => _currentPage = index,
-                    );
-                  },
-                  itemBuilder: (context, index) {
-                    final listeningQuestion = widget.listeningQuestions[index];
-                    return SentencePracticeWidgetTwo(
-                      answerOption: _selectedAnswerOption,
-                      listeningQuestion: listeningQuestion,
-                      onAnswerSelected: (answerOption) {
-                        setState(
-                          () => _selectedAnswerOption = answerOption,
-                        );
-                      },
-                    );
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(12),
-                          onTap: () {
-                            if (_controller.value.isPlaying) {
-                              _controller.pause();
-                            }
-                            _stopTimer();
-                            final listeningPracticeAnswer =
-                                ListeningPracticeAnswer(
-                              groupId: widget.groupId,
-                              questionId: _currentPage + 1,
-                              timeSpent: _timeSpentNotifier.value,
-                              userAnswer: _selectedAnswerOption?.answer,
-                              isCorrect:
-                                  _selectedAnswerOption?.correct ?? false,
-                            );
-                            _userAnswers.add(
-                              listeningPracticeAnswer,
-                            );
-                            if (_totalQuestions == _userAnswers.length) {
-                              Navigator.pushNamed(
-                                context,
-                                PmpRoutes.listeningPracticeResultPage,
-                                arguments: {
-                                  "listening": widget.listening,
-                                  "listening_answers": _userAnswers,
-                                  "listening_questions":
-                                      widget.listeningQuestions,
-                                },
-                              );
-                              return;
-                            }
-                            setState(() {
-                              _selectedAnswerOption = null;
-                            });
-                            _goToNextPage(_currentPage + 1);
-                          },
-                          child: Ink(
-                            height: 44,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: Colors.grey.shade600,
-                            ),
-                            child: Center(
-                              child: Text(
-                                "Skip",
-                                style: PmpTextStyles.body1Regular.copyWith(
-                                  color: Colors.white,
-                                  fontFamily: "ArchivoBlack Regular",
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 12,
-                    ),
-                    Expanded(
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(12),
-                          onTap: _selectedAnswerOption == null
-                              ? null
-                              : () {
-                                  if (_controller.value.isPlaying) {
-                                    _controller.pause();
-                                  }
-                                  _stopTimer();
-                                  final listeningPracticeAnswer =
-                                      ListeningPracticeAnswer(
-                                    groupId: widget.groupId,
-                                    questionId: _currentPage + 1,
-                                    timeSpent: _timeSpentNotifier.value,
-                                    userAnswer: _selectedAnswerOption?.answer,
-                                    isCorrect:
-                                        _selectedAnswerOption?.correct ?? false,
-                                  );
-                                  _userAnswers.add(
-                                    listeningPracticeAnswer,
-                                  );
-                                  if (_totalQuestions == _userAnswers.length) {
-                                    Navigator.pushNamed(
-                                      context,
-                                      PmpRoutes.listeningPracticeResultPage,
-                                      arguments: {
-                                        "listening": widget.listening,
-                                        "listening_answers": _userAnswers,
-                                        "listening_questions":
-                                            widget.listeningQuestions,
-                                      },
-                                    );
-                                    return;
-                                  }
-                                  setState(() {
-                                    _selectedAnswerOption = null;
-                                  });
-                                  _goToNextPage(_currentPage + 1);
-                                  debugPrint(
-                                      "_listeningPracticeAnswerLogs: ${listeningPracticeAnswer.toJson()}");
-                                },
-                          child: Ink(
-                            height: 44,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: _selectedAnswerOption == null
-                                  ? Colors.blue.withValues(alpha: 0.4)
-                                  : Colors.blue,
-                            ),
-                            child: Center(
-                              child: Text(
-                                "Confirm",
-                                style: PmpTextStyles.body1Regular.copyWith(
-                                  color: _selectedAnswerOption == null
-                                      ? Colors.white.withValues(alpha: 0.4)
-                                      : Colors.white,
-                                  fontFamily: "ArchivoBlack Regular",
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              _buildQuestionPageView(),
+              _buildBottomActions(),
             ],
           ),
         );
       },
+    );
+  }
+
+  Widget _buildHeader() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(100),
+            color: Colors.blue,
+          ),
+          child: Row(
+            children: [
+              Image.asset(
+                'assets/images/timer.png',
+                width: 13,
+                height: 13,
+                color: Colors.white,
+              ),
+              const SizedBox(width: 8),
+              ValueListenableBuilder<int>(
+                valueListenable: _timeSpentNotifier,
+                builder: (_, seconds, __) => Text(
+                  _formatDuration(seconds),
+                  style: const TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Text("${_currentPage + 1}/$_totalQuestions"),
+      ],
+    );
+  }
+
+  Widget _buildVideoPlayer(Widget player, bool isLoading) {
+    return SentencePracticeYoutubePlayer(
+      player: player,
+      listening: widget.listening,
+      controller: _youtubeController,
+      currentPage: _currentPage,
+      onTap: () {
+        if (isLoading) return;
+        if (_youtubeController.value.isPlaying) {
+          _needSeek = false;
+          _youtubeController.pause();
+        } else {
+          if (_needSeek) {
+            _youtubeController.seekTo(_startDuration);
+          }
+          _youtubeController.play();
+        }
+      },
+    );
+  }
+
+  Widget _buildQuestionPageView() {
+    return Expanded(
+      child: PageView.builder(
+        controller: _pageController,
+        itemCount: widget.listeningQuestions.length,
+        physics: const NeverScrollableScrollPhysics(),
+        onPageChanged: (index) {
+          _startTimer();
+          setState(() => _currentPage = index);
+        },
+        itemBuilder: (context, index) {
+          final question = widget.listeningQuestions[index];
+          return SentencePracticeWidgetTwo(
+            answerOption: _selectedAnswerOption,
+            listeningQuestion: question,
+            onAnswerSelected: (option) {
+              setState(() => _selectedAnswerOption = option);
+            },
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildBottomActions() {
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          Expanded(
+            child: _buildActionButton(
+              label: "Skip",
+              color: Colors.grey.shade600,
+              onPressed: () => _handleAnswerSubmit(skipped: true),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: _buildActionButton(
+              label: "Confirm",
+              color: _selectedAnswerOption == null
+                  ? Colors.blue.withValues(alpha: 0.4)
+                  : Colors.blue,
+              textColor: _selectedAnswerOption == null
+                  ? Colors.white.withValues(alpha: 0.4)
+                  : Colors.white,
+              onPressed:
+                  _selectedAnswerOption == null ? null : _handleAnswerSubmit,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildActionButton({
+    required String label,
+    required Color color,
+    Color textColor = Colors.white,
+    VoidCallback? onPressed,
+  }) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onPressed,
+        child: Ink(
+          height: 44,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color: color,
+          ),
+          child: Center(
+            child: Text(
+              label,
+              style: PmpTextStyles.body1Regular.copyWith(
+                color: textColor,
+                fontFamily: "ArchivoBlack Regular",
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

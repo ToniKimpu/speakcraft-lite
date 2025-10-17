@@ -58,6 +58,7 @@ class ListeningPracticeAnswerBloc
             userAnswer: Value(answer.userAnswer),
             timeSpent: Value(answer.timeSpent),
             isCorrect: Value(answer.isCorrect),
+            youtubeId: Value(answer.youtubeId),
           ),
         );
       }

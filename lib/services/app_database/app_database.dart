@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:pmp_english/tables/ai_sentence_practice_table.dart';
 
 import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
+import '../../model/listening_practice_answer/listening_practice_answer.dart';
 import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/user_example_answer_table.dart';
 

@@ -4,7 +4,6 @@ import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
-import 'package:pmp_english/services/share_preference_utils.dart';
 
 class ListeningSentencePracticeList extends StatefulWidget {
   const ListeningSentencePracticeList({
@@ -20,21 +19,9 @@ class ListeningSentencePracticeList extends StatefulWidget {
 
 class _ListeningSentencePracticeListState
     extends State<ListeningSentencePracticeList> {
-  final _subtitleBloc = SubtitleBloc();
-
-  int _completedGroupCount = 0;
-
   @override
   void initState() {
     super.initState();
-    _subtitleBloc.add(SubtitleEvent.parseListeningQuestion(widget.listening));
-    _getCompletedCount();
-  }
-
-  void _getCompletedCount() async {
-    _completedGroupCount =
-        await SharedPreferenceUtils.getInt(widget.listening.youtubeId) ?? 0;
-    setState(() {});
   }
 
   List<List<ListeningQuestion>> groupListeningQuestions(
@@ -60,7 +47,8 @@ class _ListeningSentencePracticeListState
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => _subtitleBloc,
+      create: (context) => SubtitleBloc()
+        ..add(SubtitleEvent.parseListeningQuestion(widget.listening)),
       child: Scaffold(
         appBar: AppBar(),
         body: BlocBuilder<SubtitleBloc, SubtitleState>(
@@ -75,17 +63,33 @@ class _ListeningSentencePracticeListState
                   ),
                 );
               },
-              onParseListeningQuestionCompleted: (listeningQuestions) {
+              onParseListeningQuestionCompleted:
+                  (listeningQuestions, userAnswers) {
                 final groupedListeningQuestions =
                     groupListeningQuestions(listeningQuestions);
+
+                // Find index of the first group that has no answers — this will be the current group
+                final currentGroupIndex =
+                    groupedListeningQuestions.indexWhere((group) {
+                  final groupId =
+                      "${widget.listening.youtubeId}_group_${groupedListeningQuestions.indexOf(group) + 1}";
+                  return userAnswers.where((e) => e.groupId == groupId).isEmpty;
+                });
                 return ListView.separated(
                   padding: const EdgeInsets.all(16),
                   itemCount: groupedListeningQuestions.length,
                   separatorBuilder: (_, __) => const SizedBox(height: 12),
                   itemBuilder: (context, index) {
-                    final isCompleted = index < _completedGroupCount;
-                    final isCurrent = index == _completedGroupCount;
-                    final locked = index > _completedGroupCount;
+                    final groupId =
+                        "${widget.listening.youtubeId}_group_${index + 1}";
+                    final groupUserAnswers =
+                        userAnswers.where((e) => e.groupId == groupId).toList();
+
+                    final isCompleted = groupUserAnswers.isNotEmpty;
+                    final isCurrent = index == currentGroupIndex;
+                    final locked =
+                        index > currentGroupIndex && currentGroupIndex != -1;
+
                     IconData icon;
                     if (isCompleted) {
                       icon = Icons.check;
@@ -94,18 +98,16 @@ class _ListeningSentencePracticeListState
                     } else {
                       icon = Icons.lock;
                     }
+
                     final borderColor = isCurrent
                         ? Colors.white
                         : Colors.white.withValues(alpha: 0.2);
+
                     return InkWell(
                       borderRadius: BorderRadius.circular(16),
                       onTap: locked
                           ? null
                           : () async {
-                              // Navigator.pushNamed(
-                              //   context,
-                              //   PmpRoutes.listeningPracticeResultPage,
-                              // );
                               final listeningQuestions =
                                   groupedListeningQuestions[index];
                               await Navigator.pushNamed(
@@ -115,11 +117,9 @@ class _ListeningSentencePracticeListState
                                   'listening': widget.listening,
                                   'listening_questions': listeningQuestions,
                                   'complete': isCompleted,
-                                  'group_id':
-                                      "${widget.listening.youtubeId}_group_${index + 1}",
+                                  'group_id': groupId,
                                 },
                               );
-                              _getCompletedCount();
                             },
                       child: AnimatedContainer(
                         duration: const Duration(milliseconds: 300),
@@ -144,10 +144,7 @@ class _ListeningSentencePracticeListState
                                 border: Border.all(color: borderColor),
                               ),
                               child: Center(
-                                child: Icon(
-                                  icon,
-                                  size: 18,
-                                ),
+                                child: Icon(icon, size: 18),
                               ),
                             ),
                             const SizedBox(width: 12),

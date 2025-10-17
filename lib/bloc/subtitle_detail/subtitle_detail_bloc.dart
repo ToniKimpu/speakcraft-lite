@@ -38,7 +38,8 @@ abstract class SubtitleState with _$SubtitleState {
   const factory SubtitleState.onParsingSubtitle(List<Subtitle> subtitles) =
       _OnParsingSubtitle;
   const factory SubtitleState.onParseListeningQuestionCompleted(
-          List<ListeningQuestion> listeningQuestions) =
+          List<ListeningQuestion> listeningQuestions,
+          List<ListeningPracticeAnswer> userAnswers) =
       _OnParseListeningQuestionCompleted;
   const factory SubtitleState.onParseCompleted(List<Subtitle> subtitles) =
       _OnParseCompleted;
@@ -82,33 +83,26 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       final List<dynamic> jsonList = json.decode(jsonString);
 
       final db = AppDatabase.instance();
-
+      final List<ListeningPracticeAnswer> userAnswers =
+          await (db.listeningPracticeAnswerTable.select()
+                ..where((tbl) => tbl.groupId.equals(listening.youtubeId)))
+              .get();
       final listeningQuestions = await Future.wait(
-        jsonList.asMap().entries.map((entry) async {
-          final index = entry.key;
-          final e = entry.value;
+        jsonList.map((e) async {
           final question = ListeningQuestion.fromJson(e);
-          // Increment group_1 according to index
-          final groupId = "${listening.youtubeId}_group_${index + 1}";
-
-          // Fetch existing answers for this group
-          final List<ListeningPracticeAnswer> data =
-              await (db.listeningPracticeAnswerTable.select()
-                    ..where((tbl) => tbl.groupId.equals(groupId)))
-                  .get();
           // Shuffle answers
           final shuffledAnswers = List<AnswerOption>.from(question.answers)
             ..shuffle();
-
-          // Attach userAnswers if any exist
           return question.copyWith(
             answers: shuffledAnswers,
-            userAnswers: data.isNotEmpty ? data : null,
           );
         }),
       );
 
-      emit(SubtitleState.onParseListeningQuestionCompleted(listeningQuestions));
+      emit(
+        SubtitleState.onParseListeningQuestionCompleted(
+            listeningQuestions, userAnswers),
+      );
     } catch (e) {
       debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");
     }

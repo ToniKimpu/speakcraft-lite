@@ -27,6 +27,7 @@ mixin _$ListeningPracticeAnswer {
   String? get userAnswer => throw _privateConstructorUsedError;
   int get timeSpent => throw _privateConstructorUsedError;
   bool get isCorrect => throw _privateConstructorUsedError;
+  String get youtubeId => throw _privateConstructorUsedError;
 
   /// Serializes this ListeningPracticeAnswer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,7 +51,8 @@ abstract class $ListeningPracticeAnswerCopyWith<$Res> {
       int questionId,
       String? userAnswer,
       int timeSpent,
-      bool isCorrect});
+      bool isCorrect,
+      String youtubeId});
 }
 
 /// @nodoc
@@ -75,6 +77,7 @@ class _$ListeningPracticeAnswerCopyWithImpl<$Res,
     Object? userAnswer = freezed,
     Object? timeSpent = null,
     Object? isCorrect = null,
+    Object? youtubeId = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -101,6 +104,10 @@ class _$ListeningPracticeAnswerCopyWithImpl<$Res,
           ? _value.isCorrect
           : isCorrect // ignore: cast_nullable_to_non_nullable
               as bool,
+      youtubeId: null == youtubeId
+          ? _value.youtubeId
+          : youtubeId // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -120,7 +127,8 @@ abstract class _$$ListeningPracticeAnswerImplCopyWith<$Res>
       int questionId,
       String? userAnswer,
       int timeSpent,
-      bool isCorrect});
+      bool isCorrect,
+      String youtubeId});
 }
 
 /// @nodoc
@@ -144,6 +152,7 @@ class __$$ListeningPracticeAnswerImplCopyWithImpl<$Res>
     Object? userAnswer = freezed,
     Object? timeSpent = null,
     Object? isCorrect = null,
+    Object? youtubeId = null,
   }) {
     return _then(_$ListeningPracticeAnswerImpl(
       id: freezed == id
@@ -170,6 +179,10 @@ class __$$ListeningPracticeAnswerImplCopyWithImpl<$Res>
           ? _value.isCorrect
           : isCorrect // ignore: cast_nullable_to_non_nullable
               as bool,
+      youtubeId: null == youtubeId
+          ? _value.youtubeId
+          : youtubeId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -183,7 +196,8 @@ class _$ListeningPracticeAnswerImpl implements _ListeningPracticeAnswer {
       required this.questionId,
       this.userAnswer,
       required this.timeSpent,
-      required this.isCorrect});
+      required this.isCorrect,
+      required this.youtubeId});
 
   factory _$ListeningPracticeAnswerImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListeningPracticeAnswerImplFromJson(json);
@@ -200,10 +214,12 @@ class _$ListeningPracticeAnswerImpl implements _ListeningPracticeAnswer {
   final int timeSpent;
   @override
   final bool isCorrect;
+  @override
+  final String youtubeId;
 
   @override
   String toString() {
-    return 'ListeningPracticeAnswer(id: $id, groupId: $groupId, questionId: $questionId, userAnswer: $userAnswer, timeSpent: $timeSpent, isCorrect: $isCorrect)';
+    return 'ListeningPracticeAnswer(id: $id, groupId: $groupId, questionId: $questionId, userAnswer: $userAnswer, timeSpent: $timeSpent, isCorrect: $isCorrect, youtubeId: $youtubeId)';
   }
 
   @override
@@ -220,13 +236,15 @@ class _$ListeningPracticeAnswerImpl implements _ListeningPracticeAnswer {
             (identical(other.timeSpent, timeSpent) ||
                 other.timeSpent == timeSpent) &&
             (identical(other.isCorrect, isCorrect) ||
-                other.isCorrect == isCorrect));
+                other.isCorrect == isCorrect) &&
+            (identical(other.youtubeId, youtubeId) ||
+                other.youtubeId == youtubeId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, groupId, questionId, userAnswer, timeSpent, isCorrect);
+  int get hashCode => Object.hash(runtimeType, id, groupId, questionId,
+      userAnswer, timeSpent, isCorrect, youtubeId);
 
   /// Create a copy of ListeningPracticeAnswer
   /// with the given fields replaced by the non-null parameter values.
@@ -252,7 +270,8 @@ abstract class _ListeningPracticeAnswer implements ListeningPracticeAnswer {
       required final int questionId,
       final String? userAnswer,
       required final int timeSpent,
-      required final bool isCorrect}) = _$ListeningPracticeAnswerImpl;
+      required final bool isCorrect,
+      required final String youtubeId}) = _$ListeningPracticeAnswerImpl;
 
   factory _ListeningPracticeAnswer.fromJson(Map<String, dynamic> json) =
       _$ListeningPracticeAnswerImpl.fromJson;
@@ -269,6 +288,8 @@ abstract class _ListeningPracticeAnswer implements ListeningPracticeAnswer {
   int get timeSpent;
   @override
   bool get isCorrect;
+  @override
+  String get youtubeId;
 
   /// Create a copy of ListeningPracticeAnswer
   /// with the given fields replaced by the non-null parameter values.

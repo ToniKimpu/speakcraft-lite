@@ -178,7 +178,6 @@ class _$ParseSubtitleLineImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseSubtitleLineImplCopyWith<_$ParseSubtitleLineImpl> get copyWith =>
@@ -275,7 +274,6 @@ abstract class _ParseSubtitleLine implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseSubtitleLineImplCopyWith<_$ParseSubtitleLineImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -362,7 +360,6 @@ class _$ParseSubtitleImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseSubtitleImplCopyWith<_$ParseSubtitleImpl> get copyWith =>
@@ -457,7 +454,6 @@ abstract class _ParseSubtitle implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseSubtitleImplCopyWith<_$ParseSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -546,7 +542,6 @@ class _$ParseListeningQuestionImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseListeningQuestionImplCopyWith<_$ParseListeningQuestionImpl>
@@ -643,7 +638,6 @@ abstract class _ParseListeningQuestion implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseListeningQuestionImplCopyWith<_$ParseListeningQuestionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -725,7 +719,6 @@ class _$ParseCompleteImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseCompleteImplCopyWith<_$ParseCompleteImpl> get copyWith =>
@@ -821,7 +814,6 @@ abstract class _ParseComplete implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseCompleteImplCopyWith<_$ParseCompleteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -895,7 +887,6 @@ class _$SetCurrentPageIndexImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SetCurrentPageIndexImplCopyWith<_$SetCurrentPageIndexImpl> get copyWith =>
@@ -992,7 +983,6 @@ abstract class _SetCurrentPageIndex implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SetCurrentPageIndexImplCopyWith<_$SetCurrentPageIndexImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1004,7 +994,8 @@ mixin _$SubtitleState {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -1018,7 +1009,8 @@ mixin _$SubtitleState {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -1032,7 +1024,8 @@ mixin _$SubtitleState {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -1158,7 +1151,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -1175,7 +1169,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -1192,7 +1187,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -1334,7 +1330,6 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -1346,7 +1341,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -1363,7 +1359,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -1380,7 +1377,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -1458,7 +1456,6 @@ abstract class _Loading implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1540,7 +1537,6 @@ class _$OnParsingSubtitleImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParsingSubtitleImplCopyWith<_$OnParsingSubtitleImpl> get copyWith =>
@@ -1553,7 +1549,8 @@ class _$OnParsingSubtitleImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -1570,7 +1567,8 @@ class _$OnParsingSubtitleImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -1587,7 +1585,8 @@ class _$OnParsingSubtitleImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -1666,7 +1665,6 @@ abstract class _OnParsingSubtitle implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParsingSubtitleImplCopyWith<_$OnParsingSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1678,7 +1676,9 @@ abstract class _$$OnParseListeningQuestionCompletedImplCopyWith<$Res> {
           $Res Function(_$OnParseListeningQuestionCompletedImpl) then) =
       __$$OnParseListeningQuestionCompletedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<ListeningQuestion> listeningQuestions});
+  $Res call(
+      {List<ListeningQuestion> listeningQuestions,
+      List<ListeningPracticeAnswer> userAnswers});
 }
 
 /// @nodoc
@@ -1697,12 +1697,17 @@ class __$$OnParseListeningQuestionCompletedImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? listeningQuestions = null,
+    Object? userAnswers = null,
   }) {
     return _then(_$OnParseListeningQuestionCompletedImpl(
       null == listeningQuestions
           ? _value._listeningQuestions
           : listeningQuestions // ignore: cast_nullable_to_non_nullable
               as List<ListeningQuestion>,
+      null == userAnswers
+          ? _value._userAnswers
+          : userAnswers // ignore: cast_nullable_to_non_nullable
+              as List<ListeningPracticeAnswer>,
     ));
   }
 }
@@ -1713,8 +1718,10 @@ class _$OnParseListeningQuestionCompletedImpl
     with DiagnosticableTreeMixin
     implements _OnParseListeningQuestionCompleted {
   const _$OnParseListeningQuestionCompletedImpl(
-      final List<ListeningQuestion> listeningQuestions)
-      : _listeningQuestions = listeningQuestions;
+      final List<ListeningQuestion> listeningQuestions,
+      final List<ListeningPracticeAnswer> userAnswers)
+      : _listeningQuestions = listeningQuestions,
+        _userAnswers = userAnswers;
 
   final List<ListeningQuestion> _listeningQuestions;
   @override
@@ -1725,9 +1732,17 @@ class _$OnParseListeningQuestionCompletedImpl
     return EqualUnmodifiableListView(_listeningQuestions);
   }
 
+  final List<ListeningPracticeAnswer> _userAnswers;
+  @override
+  List<ListeningPracticeAnswer> get userAnswers {
+    if (_userAnswers is EqualUnmodifiableListView) return _userAnswers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_userAnswers);
+  }
+
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SubtitleState.onParseListeningQuestionCompleted(listeningQuestions: $listeningQuestions)';
+    return 'SubtitleState.onParseListeningQuestionCompleted(listeningQuestions: $listeningQuestions, userAnswers: $userAnswers)';
   }
 
   @override
@@ -1736,7 +1751,8 @@ class _$OnParseListeningQuestionCompletedImpl
     properties
       ..add(DiagnosticsProperty(
           'type', 'SubtitleState.onParseListeningQuestionCompleted'))
-      ..add(DiagnosticsProperty('listeningQuestions', listeningQuestions));
+      ..add(DiagnosticsProperty('listeningQuestions', listeningQuestions))
+      ..add(DiagnosticsProperty('userAnswers', userAnswers));
   }
 
   @override
@@ -1745,16 +1761,19 @@ class _$OnParseListeningQuestionCompletedImpl
         (other.runtimeType == runtimeType &&
             other is _$OnParseListeningQuestionCompletedImpl &&
             const DeepCollectionEquality()
-                .equals(other._listeningQuestions, _listeningQuestions));
+                .equals(other._listeningQuestions, _listeningQuestions) &&
+            const DeepCollectionEquality()
+                .equals(other._userAnswers, _userAnswers));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_listeningQuestions));
+      runtimeType,
+      const DeepCollectionEquality().hash(_listeningQuestions),
+      const DeepCollectionEquality().hash(_userAnswers));
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParseListeningQuestionCompletedImplCopyWith<
@@ -1768,7 +1787,8 @@ class _$OnParseListeningQuestionCompletedImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -1776,7 +1796,7 @@ class _$OnParseListeningQuestionCompletedImpl
     required TResult Function(int index) onPageChanged,
     required TResult Function(String message) error,
   }) {
-    return onParseListeningQuestionCompleted(listeningQuestions);
+    return onParseListeningQuestionCompleted(listeningQuestions, userAnswers);
   }
 
   @override
@@ -1785,7 +1805,8 @@ class _$OnParseListeningQuestionCompletedImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -1793,7 +1814,8 @@ class _$OnParseListeningQuestionCompletedImpl
     TResult? Function(int index)? onPageChanged,
     TResult? Function(String message)? error,
   }) {
-    return onParseListeningQuestionCompleted?.call(listeningQuestions);
+    return onParseListeningQuestionCompleted?.call(
+        listeningQuestions, userAnswers);
   }
 
   @override
@@ -1802,7 +1824,8 @@ class _$OnParseListeningQuestionCompletedImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -1812,7 +1835,7 @@ class _$OnParseListeningQuestionCompletedImpl
     required TResult orElse(),
   }) {
     if (onParseListeningQuestionCompleted != null) {
-      return onParseListeningQuestionCompleted(listeningQuestions);
+      return onParseListeningQuestionCompleted(listeningQuestions, userAnswers);
     }
     return orElse();
   }
@@ -1875,14 +1898,15 @@ class _$OnParseListeningQuestionCompletedImpl
 
 abstract class _OnParseListeningQuestionCompleted implements SubtitleState {
   const factory _OnParseListeningQuestionCompleted(
-          final List<ListeningQuestion> listeningQuestions) =
+          final List<ListeningQuestion> listeningQuestions,
+          final List<ListeningPracticeAnswer> userAnswers) =
       _$OnParseListeningQuestionCompletedImpl;
 
   List<ListeningQuestion> get listeningQuestions;
+  List<ListeningPracticeAnswer> get userAnswers;
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParseListeningQuestionCompletedImplCopyWith<
           _$OnParseListeningQuestionCompletedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1965,7 +1989,6 @@ class _$OnParseCompletedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParseCompletedImplCopyWith<_$OnParseCompletedImpl> get copyWith =>
@@ -1978,7 +2001,8 @@ class _$OnParseCompletedImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -1995,7 +2019,8 @@ class _$OnParseCompletedImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -2012,7 +2037,8 @@ class _$OnParseCompletedImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -2091,7 +2117,6 @@ abstract class _OnParseCompleted implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParseCompletedImplCopyWith<_$OnParseCompletedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2178,7 +2203,6 @@ class _$OnParseSubtitleLineCompletedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParseSubtitleLineCompletedImplCopyWith<
@@ -2192,7 +2216,8 @@ class _$OnParseSubtitleLineCompletedImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -2209,7 +2234,8 @@ class _$OnParseSubtitleLineCompletedImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -2226,7 +2252,8 @@ class _$OnParseSubtitleLineCompletedImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -2306,7 +2333,6 @@ abstract class _OnParseSubtitleLineCompleted implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParseSubtitleLineCompletedImplCopyWith<
           _$OnParseSubtitleLineCompletedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2381,7 +2407,6 @@ class _$OnPageChangedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnPageChangedImplCopyWith<_$OnPageChangedImpl> get copyWith =>
@@ -2393,7 +2418,8 @@ class _$OnPageChangedImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -2410,7 +2436,8 @@ class _$OnPageChangedImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -2427,7 +2454,8 @@ class _$OnPageChangedImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -2505,7 +2533,6 @@ abstract class OnPageChanged implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnPageChangedImplCopyWith<_$OnPageChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2577,7 +2604,6 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -2589,7 +2615,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function(List<Subtitle> subtitles) onParsingSubtitle,
-    required TResult Function(List<ListeningQuestion> listeningQuestions)
+    required TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)
         onParseListeningQuestionCompleted,
     required TResult Function(List<Subtitle> subtitles) onParseCompleted,
     required TResult Function(List<SubtitleLine> subtitleLines)
@@ -2606,7 +2633,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult? Function(List<ListeningQuestion> listeningQuestions)?
+    TResult? Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult? Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult? Function(List<SubtitleLine> subtitleLines)?
@@ -2623,7 +2651,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function(List<Subtitle> subtitles)? onParsingSubtitle,
-    TResult Function(List<ListeningQuestion> listeningQuestions)?
+    TResult Function(List<ListeningQuestion> listeningQuestions,
+            List<ListeningPracticeAnswer> userAnswers)?
         onParseListeningQuestionCompleted,
     TResult Function(List<Subtitle> subtitles)? onParseCompleted,
     TResult Function(List<SubtitleLine> subtitleLines)?
@@ -2701,7 +2730,6 @@ abstract class _Error implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

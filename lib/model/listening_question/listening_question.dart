@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../listening_practice_answer/listening_practice_answer.dart';
-
 part 'listening_question.freezed.dart';
 part 'listening_question.g.dart';
 
@@ -13,7 +11,6 @@ class ListeningQuestion with _$ListeningQuestion {
     required String text,
     required String question,
     required List<AnswerOption> answers,
-    List<ListeningPracticeAnswer>? userAnswers,
   }) = _ListeningQuestion;
 
   factory ListeningQuestion.fromJson(Map<String, dynamic> json) =>

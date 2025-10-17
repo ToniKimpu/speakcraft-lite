@@ -292,7 +292,6 @@ class _$DeleteImpl with DiagnosticableTreeMixin implements _Delete {
 
   /// Create a copy of AiSentencePracticeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
@@ -380,7 +379,6 @@ abstract class _Delete implements AiSentencePracticeEvent {
 
   /// Create a copy of AiSentencePracticeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -456,7 +454,6 @@ class _$LoadGroupDataImpl
 
   /// Create a copy of AiSentencePracticeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadGroupDataImplCopyWith<_$LoadGroupDataImpl> get copyWith =>
@@ -544,7 +541,6 @@ abstract class _LoadGroupData implements AiSentencePracticeEvent {
 
   /// Create a copy of AiSentencePracticeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadGroupDataImplCopyWith<_$LoadGroupDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -619,7 +615,6 @@ class _$ReviewSentenceImpl
 
   /// Create a copy of AiSentencePracticeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReviewSentenceImplCopyWith<_$ReviewSentenceImpl> get copyWith =>
@@ -708,7 +703,6 @@ abstract class _ReviewSentence implements AiSentencePracticeEvent {
 
   /// Create a copy of AiSentencePracticeEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReviewSentenceImplCopyWith<_$ReviewSentenceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1024,7 +1018,6 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -1134,7 +1127,6 @@ abstract class _Loading implements AiSentencePracticeState {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1212,7 +1204,6 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -1322,7 +1313,6 @@ abstract class _Loaded implements AiSentencePracticeState {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1406,7 +1396,6 @@ class _$LoadedGroupDataImpl
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedGroupDataImplCopyWith<_$LoadedGroupDataImpl> get copyWith =>
@@ -1519,7 +1508,6 @@ abstract class _LoadedGroupData implements AiSentencePracticeState {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedGroupDataImplCopyWith<_$LoadedGroupDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1603,7 +1591,6 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
@@ -1713,7 +1700,6 @@ abstract class _Success implements AiSentencePracticeState {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1931,7 +1917,6 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -2041,7 +2026,6 @@ abstract class _Error implements AiSentencePracticeState {
 
   /// Create a copy of AiSentencePracticeState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -4,7 +4,7 @@ part 'exercise_user_answer.freezed.dart';
 part 'exercise_user_answer.g.dart';
 
 @freezed
-class ExerciseUserAnswer with _$ExerciseUserAnswer {
+sealed class ExerciseUserAnswer with _$ExerciseUserAnswer {
   const factory ExerciseUserAnswer({
     required String userAnswer,
     required int patternExerciseId,

@@ -25,8 +25,6 @@ mixin _$ListeningQuestion {
   String get text => throw _privateConstructorUsedError;
   String get question => throw _privateConstructorUsedError;
   List<AnswerOption> get answers => throw _privateConstructorUsedError;
-  List<ListeningPracticeAnswer>? get userAnswers =>
-      throw _privateConstructorUsedError;
 
   /// Serializes this ListeningQuestion to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,8 +47,7 @@ abstract class $ListeningQuestionCopyWith<$Res> {
       double end,
       String text,
       String question,
-      List<AnswerOption> answers,
-      List<ListeningPracticeAnswer>? userAnswers});
+      List<AnswerOption> answers});
 }
 
 /// @nodoc
@@ -73,7 +70,6 @@ class _$ListeningQuestionCopyWithImpl<$Res, $Val extends ListeningQuestion>
     Object? text = null,
     Object? question = null,
     Object? answers = null,
-    Object? userAnswers = freezed,
   }) {
     return _then(_value.copyWith(
       start: null == start
@@ -96,10 +92,6 @@ class _$ListeningQuestionCopyWithImpl<$Res, $Val extends ListeningQuestion>
           ? _value.answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<AnswerOption>,
-      userAnswers: freezed == userAnswers
-          ? _value.userAnswers
-          : userAnswers // ignore: cast_nullable_to_non_nullable
-              as List<ListeningPracticeAnswer>?,
     ) as $Val);
   }
 }
@@ -117,8 +109,7 @@ abstract class _$$ListeningQuestionImplCopyWith<$Res>
       double end,
       String text,
       String question,
-      List<AnswerOption> answers,
-      List<ListeningPracticeAnswer>? userAnswers});
+      List<AnswerOption> answers});
 }
 
 /// @nodoc
@@ -139,7 +130,6 @@ class __$$ListeningQuestionImplCopyWithImpl<$Res>
     Object? text = null,
     Object? question = null,
     Object? answers = null,
-    Object? userAnswers = freezed,
   }) {
     return _then(_$ListeningQuestionImpl(
       start: null == start
@@ -162,10 +152,6 @@ class __$$ListeningQuestionImplCopyWithImpl<$Res>
           ? _value._answers
           : answers // ignore: cast_nullable_to_non_nullable
               as List<AnswerOption>,
-      userAnswers: freezed == userAnswers
-          ? _value._userAnswers
-          : userAnswers // ignore: cast_nullable_to_non_nullable
-              as List<ListeningPracticeAnswer>?,
     ));
   }
 }
@@ -178,10 +164,8 @@ class _$ListeningQuestionImpl implements _ListeningQuestion {
       required this.end,
       required this.text,
       required this.question,
-      required final List<AnswerOption> answers,
-      final List<ListeningPracticeAnswer>? userAnswers})
-      : _answers = answers,
-        _userAnswers = userAnswers;
+      required final List<AnswerOption> answers})
+      : _answers = answers;
 
   factory _$ListeningQuestionImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListeningQuestionImplFromJson(json);
@@ -202,19 +186,9 @@ class _$ListeningQuestionImpl implements _ListeningQuestion {
     return EqualUnmodifiableListView(_answers);
   }
 
-  final List<ListeningPracticeAnswer>? _userAnswers;
-  @override
-  List<ListeningPracticeAnswer>? get userAnswers {
-    final value = _userAnswers;
-    if (value == null) return null;
-    if (_userAnswers is EqualUnmodifiableListView) return _userAnswers;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   @override
   String toString() {
-    return 'ListeningQuestion(start: $start, end: $end, text: $text, question: $question, answers: $answers, userAnswers: $userAnswers)';
+    return 'ListeningQuestion(start: $start, end: $end, text: $text, question: $question, answers: $answers)';
   }
 
   @override
@@ -227,21 +201,13 @@ class _$ListeningQuestionImpl implements _ListeningQuestion {
             (identical(other.text, text) || other.text == text) &&
             (identical(other.question, question) ||
                 other.question == question) &&
-            const DeepCollectionEquality().equals(other._answers, _answers) &&
-            const DeepCollectionEquality()
-                .equals(other._userAnswers, _userAnswers));
+            const DeepCollectionEquality().equals(other._answers, _answers));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      start,
-      end,
-      text,
-      question,
-      const DeepCollectionEquality().hash(_answers),
-      const DeepCollectionEquality().hash(_userAnswers));
+  int get hashCode => Object.hash(runtimeType, start, end, text, question,
+      const DeepCollectionEquality().hash(_answers));
 
   /// Create a copy of ListeningQuestion
   /// with the given fields replaced by the non-null parameter values.
@@ -262,13 +228,11 @@ class _$ListeningQuestionImpl implements _ListeningQuestion {
 
 abstract class _ListeningQuestion implements ListeningQuestion {
   const factory _ListeningQuestion(
-          {required final double start,
-          required final double end,
-          required final String text,
-          required final String question,
-          required final List<AnswerOption> answers,
-          final List<ListeningPracticeAnswer>? userAnswers}) =
-      _$ListeningQuestionImpl;
+      {required final double start,
+      required final double end,
+      required final String text,
+      required final String question,
+      required final List<AnswerOption> answers}) = _$ListeningQuestionImpl;
 
   factory _ListeningQuestion.fromJson(Map<String, dynamic> json) =
       _$ListeningQuestionImpl.fromJson;
@@ -283,8 +247,6 @@ abstract class _ListeningQuestion implements ListeningQuestion {
   String get question;
   @override
   List<AnswerOption> get answers;
-  @override
-  List<ListeningPracticeAnswer>? get userAnswers;
 
   /// Create a copy of ListeningQuestion
   /// with the given fields replaced by the non-null parameter values.

@@ -474,6 +474,12 @@ class $ListeningPracticeAnswerTableTable extends ListeningPracticeAnswerTable
       requiredDuringInsert: false,
       defaultConstraints:
           GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _youtubeIdMeta =
+      const VerificationMeta('youtubeId');
+  @override
+  late final GeneratedColumn<String> youtubeId = GeneratedColumn<String>(
+      'youtube_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
   static const VerificationMeta _groupIdMeta =
       const VerificationMeta('groupId');
   @override
@@ -509,7 +515,7 @@ class $ListeningPracticeAnswerTableTable extends ListeningPracticeAnswerTable
           GeneratedColumn.constraintIsAlways('CHECK ("is_correct" IN (0, 1))'));
   @override
   List<GeneratedColumn> get $columns =>
-      [id, groupId, questionId, userAnswer, timeSpent, isCorrect];
+      [id, youtubeId, groupId, questionId, userAnswer, timeSpent, isCorrect];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
@@ -523,6 +529,12 @@ class $ListeningPracticeAnswerTableTable extends ListeningPracticeAnswerTable
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
       context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('youtube_id')) {
+      context.handle(_youtubeIdMeta,
+          youtubeId.isAcceptableOrUnknown(data['youtube_id']!, _youtubeIdMeta));
+    } else if (isInserting) {
+      context.missing(_youtubeIdMeta);
     }
     if (data.containsKey('group_id')) {
       context.handle(_groupIdMeta,
@@ -578,6 +590,8 @@ class $ListeningPracticeAnswerTableTable extends ListeningPracticeAnswerTable
           .read(DriftSqlType.int, data['${effectivePrefix}time_spent'])!,
       isCorrect: attachedDatabase.typeMapping
           .read(DriftSqlType.bool, data['${effectivePrefix}is_correct'])!,
+      youtubeId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}youtube_id'])!,
     );
   }
 
@@ -590,6 +604,7 @@ class $ListeningPracticeAnswerTableTable extends ListeningPracticeAnswerTable
 class ListeningPracticeAnswerTableCompanion
     extends UpdateCompanion<ListeningPracticeAnswer> {
   final Value<int> id;
+  final Value<String> youtubeId;
   final Value<String> groupId;
   final Value<int> questionId;
   final Value<String?> userAnswer;
@@ -597,6 +612,7 @@ class ListeningPracticeAnswerTableCompanion
   final Value<bool> isCorrect;
   const ListeningPracticeAnswerTableCompanion({
     this.id = const Value.absent(),
+    this.youtubeId = const Value.absent(),
     this.groupId = const Value.absent(),
     this.questionId = const Value.absent(),
     this.userAnswer = const Value.absent(),
@@ -605,17 +621,20 @@ class ListeningPracticeAnswerTableCompanion
   });
   ListeningPracticeAnswerTableCompanion.insert({
     this.id = const Value.absent(),
+    required String youtubeId,
     required String groupId,
     required int questionId,
     this.userAnswer = const Value.absent(),
     required int timeSpent,
     required bool isCorrect,
-  })  : groupId = Value(groupId),
+  })  : youtubeId = Value(youtubeId),
+        groupId = Value(groupId),
         questionId = Value(questionId),
         timeSpent = Value(timeSpent),
         isCorrect = Value(isCorrect);
   static Insertable<ListeningPracticeAnswer> custom({
     Expression<int>? id,
+    Expression<String>? youtubeId,
     Expression<String>? groupId,
     Expression<int>? questionId,
     Expression<String>? userAnswer,
@@ -624,6 +643,7 @@ class ListeningPracticeAnswerTableCompanion
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
+      if (youtubeId != null) 'youtube_id': youtubeId,
       if (groupId != null) 'group_id': groupId,
       if (questionId != null) 'question_id': questionId,
       if (userAnswer != null) 'user_answer': userAnswer,
@@ -634,6 +654,7 @@ class ListeningPracticeAnswerTableCompanion
 
   ListeningPracticeAnswerTableCompanion copyWith(
       {Value<int>? id,
+      Value<String>? youtubeId,
       Value<String>? groupId,
       Value<int>? questionId,
       Value<String?>? userAnswer,
@@ -641,6 +662,7 @@ class ListeningPracticeAnswerTableCompanion
       Value<bool>? isCorrect}) {
     return ListeningPracticeAnswerTableCompanion(
       id: id ?? this.id,
+      youtubeId: youtubeId ?? this.youtubeId,
       groupId: groupId ?? this.groupId,
       questionId: questionId ?? this.questionId,
       userAnswer: userAnswer ?? this.userAnswer,
@@ -654,6 +676,9 @@ class ListeningPracticeAnswerTableCompanion
     final map = <String, Expression>{};
     if (id.present) {
       map['id'] = Variable<int>(id.value);
+    }
+    if (youtubeId.present) {
+      map['youtube_id'] = Variable<String>(youtubeId.value);
     }
     if (groupId.present) {
       map['group_id'] = Variable<String>(groupId.value);
@@ -677,6 +702,7 @@ class ListeningPracticeAnswerTableCompanion
   String toString() {
     return (StringBuffer('ListeningPracticeAnswerTableCompanion(')
           ..write('id: $id, ')
+          ..write('youtubeId: $youtubeId, ')
           ..write('groupId: $groupId, ')
           ..write('questionId: $questionId, ')
           ..write('userAnswer: $userAnswer, ')
@@ -1048,6 +1074,7 @@ typedef $$UserExampleAnswerTableTableProcessedTableManager
 typedef $$ListeningPracticeAnswerTableTableCreateCompanionBuilder
     = ListeningPracticeAnswerTableCompanion Function({
   Value<int> id,
+  required String youtubeId,
   required String groupId,
   required int questionId,
   Value<String?> userAnswer,
@@ -1057,6 +1084,7 @@ typedef $$ListeningPracticeAnswerTableTableCreateCompanionBuilder
 typedef $$ListeningPracticeAnswerTableTableUpdateCompanionBuilder
     = ListeningPracticeAnswerTableCompanion Function({
   Value<int> id,
+  Value<String> youtubeId,
   Value<String> groupId,
   Value<int> questionId,
   Value<String?> userAnswer,
@@ -1075,6 +1103,9 @@ class $$ListeningPracticeAnswerTableTableFilterComposer
   });
   ColumnFilters<int> get id => $composableBuilder(
       column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get groupId => $composableBuilder(
       column: $table.groupId, builder: (column) => ColumnFilters(column));
@@ -1104,6 +1135,9 @@ class $$ListeningPracticeAnswerTableTableOrderingComposer
   ColumnOrderings<int> get id => $composableBuilder(
       column: $table.id, builder: (column) => ColumnOrderings(column));
 
+  ColumnOrderings<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnOrderings(column));
+
   ColumnOrderings<String> get groupId => $composableBuilder(
       column: $table.groupId, builder: (column) => ColumnOrderings(column));
 
@@ -1131,6 +1165,9 @@ class $$ListeningPracticeAnswerTableTableAnnotationComposer
   });
   GeneratedColumn<int> get id =>
       $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get youtubeId =>
+      $composableBuilder(column: $table.youtubeId, builder: (column) => column);
 
   GeneratedColumn<String> get groupId =>
       $composableBuilder(column: $table.groupId, builder: (column) => column);
@@ -1180,6 +1217,7 @@ class $$ListeningPracticeAnswerTableTableTableManager extends RootTableManager<
                   $db: db, $table: table),
           updateCompanionCallback: ({
             Value<int> id = const Value.absent(),
+            Value<String> youtubeId = const Value.absent(),
             Value<String> groupId = const Value.absent(),
             Value<int> questionId = const Value.absent(),
             Value<String?> userAnswer = const Value.absent(),
@@ -1188,6 +1226,7 @@ class $$ListeningPracticeAnswerTableTableTableManager extends RootTableManager<
           }) =>
               ListeningPracticeAnswerTableCompanion(
             id: id,
+            youtubeId: youtubeId,
             groupId: groupId,
             questionId: questionId,
             userAnswer: userAnswer,
@@ -1196,6 +1235,7 @@ class $$ListeningPracticeAnswerTableTableTableManager extends RootTableManager<
           ),
           createCompanionCallback: ({
             Value<int> id = const Value.absent(),
+            required String youtubeId,
             required String groupId,
             required int questionId,
             Value<String?> userAnswer = const Value.absent(),
@@ -1204,6 +1244,7 @@ class $$ListeningPracticeAnswerTableTableTableManager extends RootTableManager<
           }) =>
               ListeningPracticeAnswerTableCompanion.insert(
             id: id,
+            youtubeId: youtubeId,
             groupId: groupId,
             questionId: questionId,
             userAnswer: userAnswer,

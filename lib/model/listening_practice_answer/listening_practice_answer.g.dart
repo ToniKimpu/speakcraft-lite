@@ -15,6 +15,7 @@ _$ListeningPracticeAnswerImpl _$$ListeningPracticeAnswerImplFromJson(
       userAnswer: json['userAnswer'] as String?,
       timeSpent: (json['timeSpent'] as num).toInt(),
       isCorrect: json['isCorrect'] as bool,
+      youtubeId: json['youtubeId'] as String,
     );
 
 Map<String, dynamic> _$$ListeningPracticeAnswerImplToJson(
@@ -26,4 +27,5 @@ Map<String, dynamic> _$$ListeningPracticeAnswerImplToJson(
       'userAnswer': instance.userAnswer,
       'timeSpent': instance.timeSpent,
       'isCorrect': instance.isCorrect,
+      'youtubeId': instance.youtubeId,
     };

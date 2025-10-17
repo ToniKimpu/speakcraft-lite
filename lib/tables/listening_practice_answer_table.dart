@@ -4,6 +4,7 @@ import 'package:pmp_english/model/listening_practice_answer/listening_practice_a
 @UseRowClass(ListeningPracticeAnswer)
 class ListeningPracticeAnswerTable extends Table {
   IntColumn get id => integer().autoIncrement()();
+  TextColumn get youtubeId => text()();
   TextColumn get groupId => text()();
   IntColumn get questionId => integer()();
   TextColumn get userAnswer => text().nullable()();

@@ -12,6 +12,7 @@ class ListeningPracticeAnswer with _$ListeningPracticeAnswer {
     String? userAnswer,
     required int timeSpent,
     required bool isCorrect,
+    required String youtubeId,
   }) = _ListeningPracticeAnswer;
 
   factory ListeningPracticeAnswer.fromJson(Map<String, dynamic> json) =>
