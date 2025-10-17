@@ -2,18 +2,18 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/dialogs/checking_user_answers_dialog.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_widget_two.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_youtube_player.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import '../../bloc/subtitle_detail/subtitle_detail_bloc.dart';
+import '../../bloc/app_ui/app_ui_bloc.dart';
+import '../../config/pmp_routes.dart';
+import 'dialogs/checking_user_answers_dialog.dart';
 
 class ListeningSentencePracticePage extends StatefulWidget {
   const ListeningSentencePracticePage({
@@ -163,7 +163,6 @@ class _ListeningSentencePracticePageState
       setState(() => _selectedAnswerOption = null);
       _goToNextPage(_currentPage + 1);
     }
-
     debugPrint('_answerLogs: ${answer.toJson()}');
   }
 
@@ -175,9 +174,9 @@ class _ListeningSentencePracticePageState
           CheckingUserAnswersDialog(userAnswers: _userAnswers),
     ).then((confirmed) {
       if (confirmed == true && context.mounted) {
-        context
-            .read<SubtitleBloc>()
-            .add(SubtitleEvent.parseListeningQuestion(widget.listening));
+        context.read<AppUIBloc>().add(
+              const AppUIEvent.reloadListeningPracticeList(),
+            );
         Navigator.pushReplacementNamed(
           context,
           PmpRoutes.listeningPracticeResultPage,
@@ -207,14 +206,14 @@ class _ListeningSentencePracticePageState
         return MainScaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: _buildHeader(),
+            title: buildHeader(),
           ),
           body: Column(
             children: [
-              _buildVideoPlayer(player, isLoading),
+              buildVideoPlayer(player, isLoading),
               const SizedBox(height: 8),
-              _buildQuestionPageView(),
-              _buildBottomActions(),
+              buildQuestionPageView(),
+              buildBottomActions(),
             ],
           ),
         );
@@ -222,7 +221,7 @@ class _ListeningSentencePracticePageState
     );
   }
 
-  Widget _buildHeader() {
+  Widget buildHeader() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -256,7 +255,7 @@ class _ListeningSentencePracticePageState
     );
   }
 
-  Widget _buildVideoPlayer(Widget player, bool isLoading) {
+  Widget buildVideoPlayer(Widget player, bool isLoading) {
     return SentencePracticeYoutubePlayer(
       player: player,
       listening: widget.listening,
@@ -277,7 +276,7 @@ class _ListeningSentencePracticePageState
     );
   }
 
-  Widget _buildQuestionPageView() {
+  Widget buildQuestionPageView() {
     return Expanded(
       child: PageView.builder(
         controller: _pageController,
@@ -301,13 +300,13 @@ class _ListeningSentencePracticePageState
     );
   }
 
-  Widget _buildBottomActions() {
+  Widget buildBottomActions() {
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Row(
         children: [
           Expanded(
-            child: _buildActionButton(
+            child: buildActionButton(
               label: "Skip",
               color: Colors.grey.shade600,
               onPressed: () => _handleAnswerSubmit(skipped: true),
@@ -315,7 +314,7 @@ class _ListeningSentencePracticePageState
           ),
           const SizedBox(width: 12),
           Expanded(
-            child: _buildActionButton(
+            child: buildActionButton(
               label: "Confirm",
               color: _selectedAnswerOption == null
                   ? Colors.blue.withValues(alpha: 0.4)
@@ -332,7 +331,7 @@ class _ListeningSentencePracticePageState
     );
   }
 
-  Widget _buildActionButton({
+  Widget buildActionButton({
     required String label,
     required Color color,
     Color textColor = Colors.white,

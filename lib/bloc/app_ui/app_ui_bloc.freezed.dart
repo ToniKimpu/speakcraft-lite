@@ -19,32 +19,44 @@ mixin _$AppUIEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() reloadAISentencePracticeList,
+    required TResult Function() reloadListeningPracticeList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? reloadAISentencePracticeList,
+    TResult? Function()? reloadListeningPracticeList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? reloadAISentencePracticeList,
+    TResult Function()? reloadListeningPracticeList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Load value) reloadAISentencePracticeList,
+    required TResult Function(_ReloadAISentencePracticeList value)
+        reloadAISentencePracticeList,
+    required TResult Function(_ReloadListeningPracticeList value)
+        reloadListeningPracticeList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Load value)? reloadAISentencePracticeList,
+    TResult? Function(_ReloadAISentencePracticeList value)?
+        reloadAISentencePracticeList,
+    TResult? Function(_ReloadListeningPracticeList value)?
+        reloadListeningPracticeList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Load value)? reloadAISentencePracticeList,
+    TResult Function(_ReloadAISentencePracticeList value)?
+        reloadAISentencePracticeList,
+    TResult Function(_ReloadListeningPracticeList value)?
+        reloadListeningPracticeList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,17 +84,20 @@ class _$AppUIEventCopyWithImpl<$Res, $Val extends AppUIEvent>
 }
 
 /// @nodoc
-abstract class _$$LoadImplCopyWith<$Res> {
-  factory _$$LoadImplCopyWith(
-          _$LoadImpl value, $Res Function(_$LoadImpl) then) =
-      __$$LoadImplCopyWithImpl<$Res>;
+abstract class _$$ReloadAISentencePracticeListImplCopyWith<$Res> {
+  factory _$$ReloadAISentencePracticeListImplCopyWith(
+          _$ReloadAISentencePracticeListImpl value,
+          $Res Function(_$ReloadAISentencePracticeListImpl) then) =
+      __$$ReloadAISentencePracticeListImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadImplCopyWithImpl<$Res>
-    extends _$AppUIEventCopyWithImpl<$Res, _$LoadImpl>
-    implements _$$LoadImplCopyWith<$Res> {
-  __$$LoadImplCopyWithImpl(_$LoadImpl _value, $Res Function(_$LoadImpl) _then)
+class __$$ReloadAISentencePracticeListImplCopyWithImpl<$Res>
+    extends _$AppUIEventCopyWithImpl<$Res, _$ReloadAISentencePracticeListImpl>
+    implements _$$ReloadAISentencePracticeListImplCopyWith<$Res> {
+  __$$ReloadAISentencePracticeListImplCopyWithImpl(
+      _$ReloadAISentencePracticeListImpl _value,
+      $Res Function(_$ReloadAISentencePracticeListImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AppUIEvent
@@ -91,8 +106,9 @@ class __$$LoadImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadImpl implements _Load {
-  const _$LoadImpl();
+class _$ReloadAISentencePracticeListImpl
+    implements _ReloadAISentencePracticeList {
+  const _$ReloadAISentencePracticeListImpl();
 
   @override
   String toString() {
@@ -102,7 +118,8 @@ class _$LoadImpl implements _Load {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$ReloadAISentencePracticeListImpl);
   }
 
   @override
@@ -112,6 +129,7 @@ class _$LoadImpl implements _Load {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() reloadAISentencePracticeList,
+    required TResult Function() reloadListeningPracticeList,
   }) {
     return reloadAISentencePracticeList();
   }
@@ -120,6 +138,7 @@ class _$LoadImpl implements _Load {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? reloadAISentencePracticeList,
+    TResult? Function()? reloadListeningPracticeList,
   }) {
     return reloadAISentencePracticeList?.call();
   }
@@ -128,6 +147,7 @@ class _$LoadImpl implements _Load {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? reloadAISentencePracticeList,
+    TResult Function()? reloadListeningPracticeList,
     required TResult orElse(),
   }) {
     if (reloadAISentencePracticeList != null) {
@@ -139,7 +159,10 @@ class _$LoadImpl implements _Load {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Load value) reloadAISentencePracticeList,
+    required TResult Function(_ReloadAISentencePracticeList value)
+        reloadAISentencePracticeList,
+    required TResult Function(_ReloadListeningPracticeList value)
+        reloadListeningPracticeList,
   }) {
     return reloadAISentencePracticeList(this);
   }
@@ -147,7 +170,10 @@ class _$LoadImpl implements _Load {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Load value)? reloadAISentencePracticeList,
+    TResult? Function(_ReloadAISentencePracticeList value)?
+        reloadAISentencePracticeList,
+    TResult? Function(_ReloadListeningPracticeList value)?
+        reloadListeningPracticeList,
   }) {
     return reloadAISentencePracticeList?.call(this);
   }
@@ -155,7 +181,10 @@ class _$LoadImpl implements _Load {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Load value)? reloadAISentencePracticeList,
+    TResult Function(_ReloadAISentencePracticeList value)?
+        reloadAISentencePracticeList,
+    TResult Function(_ReloadListeningPracticeList value)?
+        reloadListeningPracticeList,
     required TResult orElse(),
   }) {
     if (reloadAISentencePracticeList != null) {
@@ -165,8 +194,125 @@ class _$LoadImpl implements _Load {
   }
 }
 
-abstract class _Load implements AppUIEvent {
-  const factory _Load() = _$LoadImpl;
+abstract class _ReloadAISentencePracticeList implements AppUIEvent {
+  const factory _ReloadAISentencePracticeList() =
+      _$ReloadAISentencePracticeListImpl;
+}
+
+/// @nodoc
+abstract class _$$ReloadListeningPracticeListImplCopyWith<$Res> {
+  factory _$$ReloadListeningPracticeListImplCopyWith(
+          _$ReloadListeningPracticeListImpl value,
+          $Res Function(_$ReloadListeningPracticeListImpl) then) =
+      __$$ReloadListeningPracticeListImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ReloadListeningPracticeListImplCopyWithImpl<$Res>
+    extends _$AppUIEventCopyWithImpl<$Res, _$ReloadListeningPracticeListImpl>
+    implements _$$ReloadListeningPracticeListImplCopyWith<$Res> {
+  __$$ReloadListeningPracticeListImplCopyWithImpl(
+      _$ReloadListeningPracticeListImpl _value,
+      $Res Function(_$ReloadListeningPracticeListImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppUIEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ReloadListeningPracticeListImpl
+    implements _ReloadListeningPracticeList {
+  const _$ReloadListeningPracticeListImpl();
+
+  @override
+  String toString() {
+    return 'AppUIEvent.reloadListeningPracticeList()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ReloadListeningPracticeListImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() reloadAISentencePracticeList,
+    required TResult Function() reloadListeningPracticeList,
+  }) {
+    return reloadListeningPracticeList();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? reloadAISentencePracticeList,
+    TResult? Function()? reloadListeningPracticeList,
+  }) {
+    return reloadListeningPracticeList?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? reloadAISentencePracticeList,
+    TResult Function()? reloadListeningPracticeList,
+    required TResult orElse(),
+  }) {
+    if (reloadListeningPracticeList != null) {
+      return reloadListeningPracticeList();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ReloadAISentencePracticeList value)
+        reloadAISentencePracticeList,
+    required TResult Function(_ReloadListeningPracticeList value)
+        reloadListeningPracticeList,
+  }) {
+    return reloadListeningPracticeList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ReloadAISentencePracticeList value)?
+        reloadAISentencePracticeList,
+    TResult? Function(_ReloadListeningPracticeList value)?
+        reloadListeningPracticeList,
+  }) {
+    return reloadListeningPracticeList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ReloadAISentencePracticeList value)?
+        reloadAISentencePracticeList,
+    TResult Function(_ReloadListeningPracticeList value)?
+        reloadListeningPracticeList,
+    required TResult orElse(),
+  }) {
+    if (reloadListeningPracticeList != null) {
+      return reloadListeningPracticeList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ReloadListeningPracticeList implements AppUIEvent {
+  const factory _ReloadListeningPracticeList() =
+      _$ReloadListeningPracticeListImpl;
 }
 
 /// @nodoc
@@ -176,6 +322,7 @@ mixin _$AppUIState {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function() onReloadAISentencePracticeList,
+    required TResult Function() onReloadListeningPracticeList,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -184,6 +331,7 @@ mixin _$AppUIState {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function()? onReloadAISentencePracticeList,
+    TResult? Function()? onReloadListeningPracticeList,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -192,6 +340,7 @@ mixin _$AppUIState {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function()? onReloadAISentencePracticeList,
+    TResult Function()? onReloadListeningPracticeList,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -202,6 +351,8 @@ mixin _$AppUIState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnReloadAISentencePracticeList value)
         onReloadAISentencePracticeList,
+    required TResult Function(_OnReloadListeningPracticeList value)
+        onReloadListeningPracticeList,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -211,6 +362,8 @@ mixin _$AppUIState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult? Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -220,6 +373,8 @@ mixin _$AppUIState {
     TResult Function(_Loading value)? loading,
     TResult Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -291,6 +446,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function() onReloadAISentencePracticeList,
+    required TResult Function() onReloadListeningPracticeList,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -302,6 +458,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function()? onReloadAISentencePracticeList,
+    TResult? Function()? onReloadListeningPracticeList,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -313,6 +470,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function()? onReloadAISentencePracticeList,
+    TResult Function()? onReloadListeningPracticeList,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -329,6 +487,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnReloadAISentencePracticeList value)
         onReloadAISentencePracticeList,
+    required TResult Function(_OnReloadListeningPracticeList value)
+        onReloadListeningPracticeList,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -341,6 +501,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult? Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -353,6 +515,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -438,6 +602,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function() onReloadAISentencePracticeList,
+    required TResult Function() onReloadListeningPracticeList,
     required TResult Function(String message) error,
   }) {
     return loading(message);
@@ -449,6 +614,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function()? onReloadAISentencePracticeList,
+    TResult? Function()? onReloadListeningPracticeList,
     TResult? Function(String message)? error,
   }) {
     return loading?.call(message);
@@ -460,6 +626,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function()? onReloadAISentencePracticeList,
+    TResult Function()? onReloadListeningPracticeList,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -476,6 +643,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnReloadAISentencePracticeList value)
         onReloadAISentencePracticeList,
+    required TResult Function(_OnReloadListeningPracticeList value)
+        onReloadListeningPracticeList,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -488,6 +657,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult? Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -500,6 +671,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -570,6 +743,7 @@ class _$OnReloadAISentencePracticeListImpl
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function() onReloadAISentencePracticeList,
+    required TResult Function() onReloadListeningPracticeList,
     required TResult Function(String message) error,
   }) {
     return onReloadAISentencePracticeList();
@@ -581,6 +755,7 @@ class _$OnReloadAISentencePracticeListImpl
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function()? onReloadAISentencePracticeList,
+    TResult? Function()? onReloadListeningPracticeList,
     TResult? Function(String message)? error,
   }) {
     return onReloadAISentencePracticeList?.call();
@@ -592,6 +767,7 @@ class _$OnReloadAISentencePracticeListImpl
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function()? onReloadAISentencePracticeList,
+    TResult Function()? onReloadListeningPracticeList,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -608,6 +784,8 @@ class _$OnReloadAISentencePracticeListImpl
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnReloadAISentencePracticeList value)
         onReloadAISentencePracticeList,
+    required TResult Function(_OnReloadListeningPracticeList value)
+        onReloadListeningPracticeList,
     required TResult Function(_Error value) error,
   }) {
     return onReloadAISentencePracticeList(this);
@@ -620,6 +798,8 @@ class _$OnReloadAISentencePracticeListImpl
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult? Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult? Function(_Error value)? error,
   }) {
     return onReloadAISentencePracticeList?.call(this);
@@ -632,6 +812,8 @@ class _$OnReloadAISentencePracticeListImpl
     TResult Function(_Loading value)? loading,
     TResult Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -645,6 +827,140 @@ class _$OnReloadAISentencePracticeListImpl
 abstract class _OnReloadAISentencePracticeList implements AppUIState {
   const factory _OnReloadAISentencePracticeList() =
       _$OnReloadAISentencePracticeListImpl;
+}
+
+/// @nodoc
+abstract class _$$OnReloadListeningPracticeListImplCopyWith<$Res> {
+  factory _$$OnReloadListeningPracticeListImplCopyWith(
+          _$OnReloadListeningPracticeListImpl value,
+          $Res Function(_$OnReloadListeningPracticeListImpl) then) =
+      __$$OnReloadListeningPracticeListImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnReloadListeningPracticeListImplCopyWithImpl<$Res>
+    extends _$AppUIStateCopyWithImpl<$Res, _$OnReloadListeningPracticeListImpl>
+    implements _$$OnReloadListeningPracticeListImplCopyWith<$Res> {
+  __$$OnReloadListeningPracticeListImplCopyWithImpl(
+      _$OnReloadListeningPracticeListImpl _value,
+      $Res Function(_$OnReloadListeningPracticeListImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppUIState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnReloadListeningPracticeListImpl
+    implements _OnReloadListeningPracticeList {
+  const _$OnReloadListeningPracticeListImpl();
+
+  @override
+  String toString() {
+    return 'AppUIState.onReloadListeningPracticeList()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnReloadListeningPracticeListImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String? message) loading,
+    required TResult Function() onReloadAISentencePracticeList,
+    required TResult Function() onReloadListeningPracticeList,
+    required TResult Function(String message) error,
+  }) {
+    return onReloadListeningPracticeList();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String? message)? loading,
+    TResult? Function()? onReloadAISentencePracticeList,
+    TResult? Function()? onReloadListeningPracticeList,
+    TResult? Function(String message)? error,
+  }) {
+    return onReloadListeningPracticeList?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String? message)? loading,
+    TResult Function()? onReloadAISentencePracticeList,
+    TResult Function()? onReloadListeningPracticeList,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (onReloadListeningPracticeList != null) {
+      return onReloadListeningPracticeList();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_OnReloadAISentencePracticeList value)
+        onReloadAISentencePracticeList,
+    required TResult Function(_OnReloadListeningPracticeList value)
+        onReloadListeningPracticeList,
+    required TResult Function(_Error value) error,
+  }) {
+    return onReloadListeningPracticeList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_OnReloadAISentencePracticeList value)?
+        onReloadAISentencePracticeList,
+    TResult? Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
+    TResult? Function(_Error value)? error,
+  }) {
+    return onReloadListeningPracticeList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_OnReloadAISentencePracticeList value)?
+        onReloadAISentencePracticeList,
+    TResult Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (onReloadListeningPracticeList != null) {
+      return onReloadListeningPracticeList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnReloadListeningPracticeList implements AppUIState {
+  const factory _OnReloadListeningPracticeList() =
+      _$OnReloadListeningPracticeListImpl;
 }
 
 /// @nodoc
@@ -718,6 +1034,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function(String? message) loading,
     required TResult Function() onReloadAISentencePracticeList,
+    required TResult Function() onReloadListeningPracticeList,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -729,6 +1046,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
     TResult? Function()? onReloadAISentencePracticeList,
+    TResult? Function()? onReloadListeningPracticeList,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -740,6 +1058,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? initial,
     TResult Function(String? message)? loading,
     TResult Function()? onReloadAISentencePracticeList,
+    TResult Function()? onReloadListeningPracticeList,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -756,6 +1075,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_OnReloadAISentencePracticeList value)
         onReloadAISentencePracticeList,
+    required TResult Function(_OnReloadListeningPracticeList value)
+        onReloadListeningPracticeList,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -768,6 +1089,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult? Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -780,6 +1103,8 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_OnReloadAISentencePracticeList value)?
         onReloadAISentencePracticeList,
+    TResult Function(_OnReloadListeningPracticeList value)?
+        onReloadListeningPracticeList,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

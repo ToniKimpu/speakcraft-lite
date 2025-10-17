@@ -29,6 +29,8 @@ class CheckingUserAnswersDialog extends StatelessWidget {
           listener: (context, state) {
             state.maybeWhen(
               onSaved: () {
+                debugPrint(
+                    "_checkingUserAnswerDialogLogs: on Saved is called!");
                 Navigator.of(context).pop(true);
               },
               orElse: () => -1,
@@ -43,39 +45,28 @@ class CheckingUserAnswersDialog extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            child: BlocListener<ListeningPracticeAnswerBloc,
-                ListeningPracticeAnswerState>(
-              listener: (context, state) {
-                state.maybeWhen(
-                  onSaved: () {
-                    Navigator.of(context).pop();
-                  },
-                  orElse: () => -1,
-                );
-              },
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(height: 20),
-                  Text(
-                    "Checking your answers",
-                    style: PmpTextStyles.body1Regular.copyWith(
-                      color: Colors.white,
-                      fontFamily: 'ArchivoBlack Regular',
-                    ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: 20),
+                Text(
+                  "Checking your answers",
+                  style: PmpTextStyles.body1Regular.copyWith(
+                    color: Colors.white,
+                    fontFamily: 'ArchivoBlack Regular',
                   ),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  const SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: CircularProgressIndicator(),
-                  ),
-                  const SizedBox(height: 20),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                const SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: CircularProgressIndicator(),
+                ),
+                const SizedBox(height: 20),
+              ],
             ),
           ),
         ),
