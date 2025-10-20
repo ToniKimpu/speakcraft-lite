@@ -87,15 +87,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
           await (db.listeningPracticeAnswerTable.select()
                 ..where((tbl) => tbl.youtubeId.equals(listening.youtubeId)))
               .get();
-      // final userAnswers =
-      //     await ((AppDatabase.instance().listeningPracticeAnswerTable.select()..where((tbl) => tbl.youtubeId.equals(listening.youtubeId)))
-      //           ..orderBy([
-      //             (tbl) =>
-      //                 OrderingTerm(expression: tbl.id, mode: OrderingMode.desc)
-      //           ]))
-      //         .get();
 
-      debugPrint("_userAnswerLogs: ${userAnswers.length} length from Bloc");
       final listeningQuestions = await Future.wait(
         jsonList.map((e) async {
           final question = ListeningQuestion.fromJson(e);
@@ -107,7 +99,6 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
           );
         }),
       );
-
       emit(
         SubtitleState.onParseListeningQuestionCompleted(
           listeningQuestions,

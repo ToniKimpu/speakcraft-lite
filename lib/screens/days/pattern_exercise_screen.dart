@@ -31,6 +31,7 @@ class PatternExerciseScreen extends StatefulWidget {
   @override
   State<PatternExerciseScreen> createState() => _PatternExerciseScreenState();
 }
+
 class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
   late final PatternExerciseBloc _patternExerciseBloc;
   late final ExerciseUserAnswerBloc _exerciseUserAnswerBloc;

@@ -8,6 +8,7 @@ import 'package:pmp_english/model/translation_day/translation_day.dart';
 import 'package:pmp_english/screens/auth/login_screen.dart';
 import 'package:pmp_english/screens/auth/sign_up_screen.dart';
 import 'package:pmp_english/screens/days/pattern_exercise_screen.dart';
+import 'package:pmp_english/screens/days/spoken_pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_result_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_sentence_practice_page.dart';
@@ -35,7 +36,6 @@ import '../model/pattern_exercise/pattern_exercise.dart';
 import '../model/spoken_pattern/spoken_pattern.dart';
 import '../screens/days/day_list_screen.dart';
 import '../screens/days/pattern_practice_result_screen.dart';
-import '../screens/days/speaking_pattern_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
 import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
 import '../screens/listening_and_shadowing/vocabulary_listening_page.dart';
@@ -87,6 +87,7 @@ class PmpRoutes {
   static const listeningSentencePracticeList =
       "/listening_sentence_practice_list";
   static const listeningPracticeResultPage = '/listening_practice_result_page';
+  static const spokenPatternExercisePage = '/spoken_pattern_exercise_page';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -98,14 +99,7 @@ class PmpRoutes {
         return _getRoute(const DayListScreen(), settings);
       case profilePage:
         return _getRoute(const ProfilePage(), settings);
-      case speakingPattern:
-        final args = settings.arguments as Map<String, dynamic>;
-        final lesson = args['lesson'] as Lesson;
-        return _getRoute(
-            SpeakingPatternScreen(
-              lesson: lesson,
-            ),
-            settings);
+
       case spokenPatternPage:
         final args = settings.arguments as Map<String, dynamic>;
         final lesson = args['lesson'] as Lesson;
@@ -143,6 +137,17 @@ class PmpRoutes {
             exercise: exercise,
             day: day,
             isLastIndex: isLastIndex,
+          ),
+          settings,
+        );
+      case spokenPatternExercisePage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final exercise = args['exercise'] as Exercise;
+        // final day = args['day'] as Day;
+        // final isLastIndex = args['is_last_index'] as bool;
+        return _getRoute(
+          SpokenPatternExerciseScreen(
+            exercise: exercise,
           ),
           settings,
         );

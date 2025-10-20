@@ -3,10 +3,10 @@ import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/user_example_answer/user_example_answer_bloc.dart';
 import 'package:pmp_english/model/pattern_example/pattern_example.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
+import 'package:pmp_english/screens/days/spoken_pattern/widgets/word_chips.dart';
 
 import '../../../../config/pmp_text_styles.dart';
 import '../../../../services/supabase_service.dart';
-import '../../../../shared_widgets/practice_text_field.dart';
 
 class SpokenPatternExample extends StatefulWidget {
   const SpokenPatternExample({
@@ -34,13 +34,14 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
 
   String? _userAnswer; // local state
   late final UserExampleAnswerBloc _userExampleAnswerBloc;
+  // final String englishText = "Lisa used to have a very long hair.";
+  final Set<String> _usedWords = {};
   @override
   void initState() {
     super.initState();
     _userExampleAnswerBloc = UserExampleAnswerBloc();
     _userExampleAnswerBloc
         .add(UserExampleAnswerEvent.load(widget.spokenPatternExample.id));
-    debugPrint("_spokenPatternExample: spoken pattern example...");
     _userExampleAnswerBloc.stream.listen((state) {
       state.maybeWhen(
         loaded: (answer) {
@@ -227,7 +228,6 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
                   ),
                 ),
               ),
-          
             ],
             const SizedBox(
               height: 12,
@@ -250,15 +250,16 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
           const SizedBox(
             height: 2,
           ),
-          if (_userAnswer == null) // show TextField if no answer yet
-            PracticeTextField(
-              controller: _userAnswerController,
-              hintText: "",
-              englishOnly: true,
-              minLines: 2,
-              maxHeight: 120,
-            )
-          else // show the saved answer
+          // if (_userAnswer == null) // show TextField if no answer yet
+          //   PracticeTextField(
+          //     controller: _userAnswerController,
+          //     hintText: "",
+          //     englishOnly: true,
+          //     minLines: 2,
+          //     maxHeight: 120,
+          //   )
+          // else // show the saved answer
+          if (_userAnswer != null)
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
@@ -270,55 +271,95 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
                 style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
               ),
             ),
+          if (_userAnswer == null)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              width: double.infinity,
+              constraints: const BoxConstraints(
+                minHeight: 44,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white
+                    .withOpacity(0.08), // slightly more visible glass
+                borderRadius: BorderRadius.circular(6),
+                border: Border.all(
+                  color: Colors.white.withOpacity(0.2),
+                  width: 1,
+                ),
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      _userAnswerController.text.trim().isEmpty
+                          ? "Tap the words"
+                          : _userAnswerController.text.trim(),
+                      key: ValueKey(_userAnswerController.text),
+                      style: PmpTextStyles.body1Regular.copyWith(
+                        color: Colors.white,
+                        fontFamily: "ArchivoBlack Regular",
+                      ),
+                    ),
+                  ),
+                  if (_userAnswer == null)
+                    Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(100),
+                        onTap: () {
+                          setState(() {
+                            final words =
+                                _userAnswerController.text.trim().split(' ');
+                            if (words.isNotEmpty) {
+                              final lastWord = words.removeLast();
+                              _userAnswerController.text = words.join(' ');
+                              _usedWords
+                                  .remove(lastWord); // unlock chip in WordChips
+                            }
+                          });
+                        },
+                        child: Ink(
+                          padding: const EdgeInsets.all(4),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.undo,
+                              color: Colors.white,
+                              size: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ),
           const SizedBox(
             height: 12,
           ),
-          if (widget.spokenPatternExample.vocabularies != null &&
-              widget.spokenPatternExample.vocabularies!.isNotEmpty) ...[
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-                  widget.spokenPatternExample.vocabularies!.map((vocabulary) {
-                return Row(
-                  children: [
-                    Container(
-                      width: 8,
-                      height: 8,
-                      margin: const EdgeInsets.only(right: 8),
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            vocabulary.englishText,
-                            style: PmpTextStyles.body2Semi.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            vocabulary.burmeseText,
-                            style: PmpTextStyles.body2Regular.copyWith(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                );
-              }).toList(),
+          if (_userAnswer == null)
+            Align(
+              alignment: Alignment.center,
+              child: WordChips(
+                englishText: widget.spokenPatternExample.englishText,
+                controller: _userAnswerController,
+                usedWords: _usedWords,
+                onTap: () => setState(
+                  () {},
+                ),
+                markWordUsed: (word) {
+                  setState(() {
+                    _usedWords.add(word);
+                  });
+                },
+              ),
             ),
+          if (_userAnswer == null)
             const SizedBox(
               height: 12,
             ),
-          ],
           if (_userAnswer == null)
             Material(
               borderRadius: BorderRadius.circular(12),

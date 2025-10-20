@@ -27,15 +27,16 @@ class ExerciseItem extends StatelessWidget {
       Navigator.pushNamed(
         context,
         PmpRoutes.patternPracticeResultScreen,
-        arguments: {'exercise_id': exercise.id},
+        arguments: {
+          'exercise_id': exercise.id,
+        },
       );
       return;
     }
-
     if (isOpenIndex && day != null) {
       Navigator.pushNamed(
         context,
-        PmpRoutes.patternExerciseScreen,
+        PmpRoutes.spokenPatternExercisePage,
         arguments: {
           'exercise': exercise,
           'day': day!,

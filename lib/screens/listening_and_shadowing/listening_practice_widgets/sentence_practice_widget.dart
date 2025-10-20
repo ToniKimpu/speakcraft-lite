@@ -156,7 +156,6 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                       ),
                     ),
                   ),
-               
                 ),
               ),
             ),

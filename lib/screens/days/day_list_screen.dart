@@ -158,6 +158,8 @@ class _DayListScreenState extends State<DayListScreen> {
   Widget _buildError(String message) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
             message,
@@ -172,7 +174,7 @@ class _DayListScreenState extends State<DayListScreen> {
             child: Text(
               "Retry",
               style: PmpTextStyles.body2Semi.copyWith(
-                color: PmpColors.neutral800,
+                color: PmpColors.white,
               ),
             ),
           ),

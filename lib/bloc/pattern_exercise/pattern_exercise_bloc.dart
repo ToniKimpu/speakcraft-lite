@@ -54,6 +54,7 @@ class PatternExerciseBloc
               "*,vocabularies:pattern_exercises_vocabularies_relation(pattern_vocabularies(*))")
           .eq("exercise_id", exerciseId)
           .order("created_at", ascending: true);
+      debugPrint("_mapLoadPatternExercisesToState: dataRes: $dataRes");
       if (dataRes.isEmpty) {
         emit(const PatternExerciseState.loaded(<PatternExercise>[]));
         return;
@@ -74,13 +75,16 @@ class PatternExerciseBloc
       int exerciseId, Emitter<PatternExerciseState> emit) async {
     emit(const PatternExerciseState.loading());
     try {
+      debugPrint(
+          '_mapLoadPatternExercisesWithAnswerToState: dataRes: ${GlobalAppState().currentUser.id}');
       final dataRes = await supabase
           .from("pattern_exercises")
           .select("*,exercise_user_answers!inner(answer)")
           .eq('exercise_id', exerciseId)
           .eq("exercise_user_answers.user_id", GlobalAppState().currentUser.id!)
           .order("created_at", ascending: true);
-
+      debugPrint(
+          '_mapLoadPatternExercisesWithAnswerToState: dataRes: $dataRes');
       if (dataRes.isEmpty) {
         emit(const PatternExerciseState.loaded(<PatternExercise>[]));
         return;
@@ -90,7 +94,7 @@ class PatternExerciseBloc
           .toList();
       emit(PatternExerciseState.loaded(patternExercises));
     } catch (e) {
-      debugPrint('Error fetching pattern exercises: ${e.toString()}');
+      debugPrint('_mapLoadPatternExercisesWithAnswerToState: ${e.toString()}');
       emit(PatternExerciseState.error(e.toString()));
     }
   }
