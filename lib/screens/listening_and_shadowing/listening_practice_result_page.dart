@@ -164,14 +164,11 @@ class _ListeningPracticeResultPageState
                     delegate: _StickyHeaderDelegate(
                       minHeight: 50,
                       maxHeight: 50,
-                      child: Container(
-                        color: const Color(0xFF203A43),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Your Answers',
-                          style: PmpTextStyles.body1Regular.copyWith(
-                            color: PmpColors.white,
-                          ),
+                      child: Text(
+                        'Your Answers',
+                        style: PmpTextStyles.body1Regular.copyWith(
+                          color: PmpColors.white,
+                          fontFamily: "ArchivoBlack Regular",
                         ),
                       ),
                     ),
@@ -226,7 +223,12 @@ class _StickyHeaderDelegate extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return child;
+    bool isPinned = shrinkOffset > 0;
+    return Container(
+      color: isPinned ? const Color(0xFF203A43) : Colors.transparent,
+      alignment: Alignment.center,
+      child: child,
+    );
   }
 
   @override

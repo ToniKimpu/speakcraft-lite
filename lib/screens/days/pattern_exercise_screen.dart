@@ -162,6 +162,7 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
                       PmpRoutes.patternExerciseResultScreen,
                       arguments: {
                         'pattern_exercises': _patternExercises,
+                        "pass": true,
                       },
                     );
                   },

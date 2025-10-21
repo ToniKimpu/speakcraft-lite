@@ -42,6 +42,7 @@ class ListeningPracticeAnswerBloc
   Future<void> _mapSaveUserAnswers(List<ListeningPracticeAnswer> userAnswers,
       Emitter<ListeningPracticeAnswerState> emit) async {
     try {
+      emit(const ListeningPracticeAnswerState.loading(message: ""));
       final db = AppDatabase.instance();
       await Future.delayed(const Duration(seconds: 1));
       await db.batch((batch) {

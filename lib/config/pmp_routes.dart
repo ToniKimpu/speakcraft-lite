@@ -158,10 +158,12 @@ class PmpRoutes {
         final patternExercises =
             args['pattern_exercises'] as List<PatternExercise>?;
         final exerciseId = args['exercise_id'] as int?;
+        final pass = args['pass'] as bool?;
         return _getRoute(
           PatternExerciseResultScreen(
             patternExercises: patternExercises,
             exerciseId: exerciseId,
+            pass: pass,
           ),
           settings,
         );

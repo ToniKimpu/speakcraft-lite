@@ -1,10 +1,13 @@
+import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/model/exercise/exercise.dart';
 import 'package:pmp_english/model/exercise_user_answer/exercise_user_answer.dart';
 
+import '../../global_app_state.dart';
 import '../../services/app_database/app_database.dart';
+import '../../services/supabase_service.dart';
 
 part 'exercise_user_answer_bloc.freezed.dart';
 
@@ -47,36 +50,36 @@ class ExerciseUserAnswerBloc
               //   );
               // }
 
-              // final List<Map<String, dynamic>> rows = userAnswers.map((answer) {
-              //   return {
-              //     'answer': answer.userAnswer,
-              //     'pattern_exercise_id': answer.patternExerciseId,
-              //     'user_id': GlobalAppState().currentUser.id,
-              //   };
-              // }).toList();
-              // await supabase.from('exercise_user_answers').insert(rows);
-              // await db.batch((batch) {
-              //   for (final answer in userAnswers) {
-              //     batch.insert(
-              //       db.spokenPatternExerciseAnswerTable,
-              //       SpokenPatternExerciseAnswerTableCompanion(
-              //         patternExerciseId: Value(answer.patternExerciseId),
-              //         userAnswer: Value(answer.userAnswer),
-              //       ),
-              //     );
-              //   }
-              // });
-              // await supabase.from('exercises_users_relation').insert({
-              //   'user_id': GlobalAppState().currentUser.id,
-              //   'exercise_id': exercise.id,
-              // });
-              // if (isLastIndex) {
-              //   await supabase.from('days_users_relation').insert({
-              //     'user_id': GlobalAppState().currentUser.id,
-              //     'day_id': exercise.dayId,
-              //   });
-              // }
-              // await Future.delayed(const Duration(seconds: 3));
+              final List<Map<String, dynamic>> rows = userAnswers.map((answer) {
+                return {
+                  'answer': answer.userAnswer,
+                  'pattern_exercise_id': answer.patternExerciseId,
+                  'user_id': GlobalAppState().currentUser.id,
+                };
+              }).toList();
+              await supabase.from('exercise_user_answers').insert(rows);
+              await db.batch((batch) {
+                for (final answer in userAnswers) {
+                  batch.insert(
+                    db.spokenPatternExerciseAnswerTable,
+                    SpokenPatternExerciseAnswerTableCompanion(
+                      patternExerciseId: Value(answer.patternExerciseId),
+                      userAnswer: Value(answer.userAnswer),
+                    ),
+                  );
+                }
+              });
+              await supabase.from('exercises_users_relation').insert({
+                'user_id': GlobalAppState().currentUser.id,
+                'exercise_id': exercise.id,
+              });
+              if (isLastIndex) {
+                await supabase.from('days_users_relation').insert({
+                  'user_id': GlobalAppState().currentUser.id,
+                  'day_id': exercise.dayId,
+                });
+              }
+
               emit(const ExerciseUserAnswerState.onSuccess());
             },
           );

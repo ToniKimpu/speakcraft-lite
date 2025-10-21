@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/pattern_exercise/pattern_exercise_bloc.dart';
 import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
+import 'package:pmp_english/screens/days/widgets/exercise_result_label.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
@@ -15,10 +16,12 @@ class PatternExerciseResultScreen extends StatefulWidget {
     super.key,
     this.patternExercises,
     this.exerciseId,
+    this.pass,
   });
 
   final List<PatternExercise>? patternExercises;
   final int? exerciseId;
+  final bool? pass;
 
   @override
   State<PatternExerciseResultScreen> createState() =>
@@ -120,212 +123,195 @@ class _PatternExerciseResultScreenState
   }
 
   _buildResultList(List<PatternExercise> patternExercises) {
-    return CustomScrollView(
-      slivers: [
-        SliverPadding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-          sliver: SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                Center(
-                  child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 4, horizontal: 12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.lightGreenAccent.withValues(alpha: 0.3),
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        CustomScrollView(
+          slivers: [
+            SliverPadding(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              sliver: SliverList(
+                delegate: SliverChildListDelegate(
+                  [
+                    ExerciseResultLabel(pass: widget.pass),
+                    const SizedBox(height: 24),
+                    ListeningPracticeResultChart(
+                      correctCount: correctCount,
+                      inCorrectCount: inCorrectCount,
+                      notAnswerCount: notAnswerCount,
                     ),
-                    child: Text(
-                      'Pass ✓',
-                      style: PmpTextStyles.h1.copyWith(
-                        color: PmpColors.white,
-                        fontFamily: "ArchivoBlack Regular",
-                      ),
+                    const SizedBox(height: 18),
+                    const ChartLabelWidget(),
+                    const SizedBox(height: 32),
+                    ScoreLevelWidget(
+                      correctCount: correctCount,
+                      inCorrectCount: inCorrectCount,
+                      notAnswerCount: notAnswerCount,
                     ),
-                  ),
+                    const SizedBox(height: 32),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: PmpColors.neutral300,
+                    ),
+                  ],
                 ),
-
-                // Center(
-                //   child: Container(
-                //     padding:
-                //         const EdgeInsets.symmetric(vertical: 4, horizontal: 12),
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(8),
-                //       color: Colors.deepOrangeAccent.withValues(alpha: 0.3),
-                //     ),
-                //     child: Text(
-                //       'Fail ✘',
-                //       style: PmpTextStyles.h1.copyWith(
-                //         color: PmpColors.red,
-                //         fontFamily: "ArchivoBlack Regular",
-                //       ),
-                //     ),
-                //   ),
-                // ),
-
-                // Center(
-                //   child: Container(
-                //     padding:
-                //         const EdgeInsets.symmetric(vertical: 4, horizontal: 12),
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(8),
-                //       color: Colors.lightGreenAccent.withValues(alpha: 0.3),
-                //     ),
-                //     child: Text(
-                //       'Result',
-                //       style: PmpTextStyles.h1.copyWith(
-                //         color: PmpColors.white,
-                //         fontWeight: FontWeight.w400,
-                //         fontFamily: "ArchivoBlack Regular",
-                //       ),
-                //     ),
-                //   ),
-                // ),
-
-                const SizedBox(height: 24),
-                ListeningPracticeResultChart(
-                  correctCount: correctCount,
-                  inCorrectCount: inCorrectCount,
-                  notAnswerCount: notAnswerCount,
-                ),
-                const SizedBox(height: 18),
-                const ChartLabelWidget(),
-                const SizedBox(height: 32),
-                ScoreLevelWidget(
-                  correctCount: correctCount,
-                  inCorrectCount: inCorrectCount,
-                  notAnswerCount: notAnswerCount,
-                ),
-                const SizedBox(height: 32),
-                Container(
-                  height: 1,
-                  width: double.infinity,
-                  color: PmpColors.neutral300,
-                ),
-              ],
-            ),
-          ),
-        ),
-        SliverPersistentHeader(
-          pinned: true,
-          delegate: _StickyHeaderDelegate(
-            minHeight: 50,
-            maxHeight: 50,
-            correctCount: correctCount,
-            totalCount: patternExercises.length,
-            child: Text(
-              'Your Answers',
-              style: PmpTextStyles.body1Regular.copyWith(
-                color: PmpColors.white,
-                fontFamily: "ArchivoBlack Regular",
               ),
             ),
-          ),
-        ),
-        SliverPadding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-          sliver: SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                final patternExercise = patternExercises[index];
-                final borderColor = getAnswerColor(
-                  patternExercise.userAnswer,
-                  patternExercise.englishText,
-                );
-                final trialingIconData = getTrialingIconData(
-                  patternExercise.userAnswer,
-                  patternExercise.englishText,
-                );
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.08),
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(
-                        color: borderColor,
-                        width: 2,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.3),
-                          blurRadius: 8,
-                          spreadRadius: 2,
-                          offset: const Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 12),
-                        Text(
-                          'Question ${index + 1}',
-                          style: PmpTextStyles.label2Regular
-                              .copyWith(color: PmpColors.white),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          patternExercise.englishText,
-                          style: PmpTextStyles.body1Regular.copyWith(
-                            color: PmpColors.white,
-                            fontFamily: 'ArchivoBlack Regular',
+            SliverPersistentHeader(
+              pinned: true,
+              delegate: _StickyHeaderDelegate(
+                minHeight: 50,
+                maxHeight: 50,
+                correctCount: correctCount,
+                totalCount: patternExercises.length,
+                pass: widget.pass,
+                child: Text(
+                  'Your Answers',
+                  style: PmpTextStyles.body1Regular.copyWith(
+                    color: PmpColors.white,
+                    fontFamily: "ArchivoBlack Regular",
+                  ),
+                ),
+              ),
+            ),
+            SliverPadding(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              sliver: SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final patternExercise = patternExercises[index];
+                    final borderColor = getAnswerColor(
+                      patternExercise.userAnswer,
+                      patternExercise.englishText,
+                    );
+                    final trialingIconData = getTrialingIconData(
+                      patternExercise.userAnswer,
+                      patternExercise.englishText,
+                    );
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 12),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.08),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: borderColor,
+                            width: 2,
                           ),
-                        ),
-                        Text(
-                          patternExercise.burmeseText,
-                          style: PmpTextStyles.body1Regular.copyWith(
-                            color: PmpColors.white,
-                            fontFamily: 'MM Lyrics Bold',
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        Container(
-                          height: 1,
-                          width: double.infinity,
-                          color: PmpColors.white.withValues(alpha: 0.1),
-                        ),
-                        const SizedBox(height: 8),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text(
-                                patternExercise.userAnswer == null ||
-                                        patternExercise.userAnswer!.isEmpty
-                                    ? "Not Answered"
-                                    : patternExercise.userAnswer!,
-                                style: PmpTextStyles.body1Regular.copyWith(
-                                  color: PmpColors.white,
-                                  fontFamily: 'ArchivoBlack Regular',
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 8,
-                            ),
-                            Container(
-                              width: 20,
-                              height: 20,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle, color: borderColor),
-                              child: Center(
-                                child: Icon(
-                                  trialingIconData,
-                                  color: Colors.white,
-                                  size: 13,
-                                ),
-                              ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.3),
+                              blurRadius: 8,
+                              spreadRadius: 2,
+                              offset: const Offset(0, 4),
                             ),
                           ],
                         ),
-                        const SizedBox(height: 8),
-                      ],
-                    ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SizedBox(height: 12),
+                            Text(
+                              'Question ${index + 1}',
+                              style: PmpTextStyles.label2Regular
+                                  .copyWith(color: PmpColors.white),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              patternExercise.englishText,
+                              style: PmpTextStyles.body1Regular.copyWith(
+                                color: PmpColors.white,
+                                fontFamily: 'ArchivoBlack Regular',
+                              ),
+                            ),
+                            Text(
+                              patternExercise.burmeseText,
+                              style: PmpTextStyles.body1Regular.copyWith(
+                                color: PmpColors.white,
+                                fontFamily: 'MM Lyrics Bold',
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Container(
+                              height: 1,
+                              width: double.infinity,
+                              color: PmpColors.white.withValues(alpha: 0.1),
+                            ),
+                            const SizedBox(height: 8),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    patternExercise.userAnswer == null ||
+                                            patternExercise.userAnswer!.isEmpty
+                                        ? "Not Answered"
+                                        : patternExercise.userAnswer!,
+                                    style: PmpTextStyles.body1Regular.copyWith(
+                                      // color: PmpColors.white,
+                                      color: Colors.orangeAccent,
+                                      fontFamily: 'ArchivoBlack Regular',
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 8,
+                                ),
+                                Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: borderColor),
+                                  child: Center(
+                                    child: Icon(
+                                      trialingIconData,
+                                      color: Colors.white,
+                                      size: 13,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                  childCount: patternExercises.length,
+                ),
+              ),
+            ),
+          ],
+        ),
+        Positioned(
+          top: 8,
+          right: 12,
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              borderRadius: BorderRadius.circular(8),
+              onTap: () => Navigator.pop(context),
+              child: Ink(
+                padding: const EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.blue,
+                  border: Border.all(
+                    color: PmpColors.white,
+                    width: 2,
                   ),
-                );
-              },
-              childCount: patternExercises.length,
+                ),
+                child: const Center(
+                  child: Icon(
+                    Icons.close,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                ),
+              ),
             ),
           ),
         ),
@@ -365,6 +351,7 @@ class _StickyHeaderDelegate extends SliverPersistentHeaderDelegate {
   final double maxHeight;
   final int correctCount;
   final int totalCount;
+  final bool? pass;
   final Widget child;
 
   _StickyHeaderDelegate({
@@ -372,6 +359,7 @@ class _StickyHeaderDelegate extends SliverPersistentHeaderDelegate {
     required this.maxHeight,
     required this.correctCount,
     required this.totalCount,
+    required this.pass,
     required this.child,
   });
 
@@ -380,8 +368,13 @@ class _StickyHeaderDelegate extends SliverPersistentHeaderDelegate {
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     final bool isPinned = shrinkOffset > 0;
     return Container(
-      // color: isPinned ? const Color(0xFF203A43) : Colors.transparent,
-      color: isPinned ? Colors.red : Colors.transparent,
+      color: isPinned
+          ? (pass == null
+              ? Colors.blue
+              : pass == true
+                  ? Colors.green
+                  : Colors.deepOrangeAccent)
+          : Colors.transparent,
       alignment: Alignment.center,
       child: !isPinned
           ? Text(

@@ -12,6 +12,7 @@ import '../../config/pmp_routes.dart';
 import '../../model/day/day.dart';
 import '../../model/exercise/exercise.dart';
 import '../../model/exercise_user_answer/exercise_user_answer.dart';
+import '../listening_and_shadowing/dialogs/checking_user_answers_dialog.dart';
 import 'widgets/countdown_circle.dart';
 
 class SpokenPatternExerciseScreen extends StatefulWidget {
@@ -47,6 +48,7 @@ class _SpokenPatternExerciseScreenState
   final _userAnswers = <ExerciseUserAnswer>[];
 
   final _countdownController = CountdownController();
+  BuildContext? _loadingDialogContext;
 
   @override
   void initState() {
@@ -147,10 +149,20 @@ class _SpokenPatternExerciseScreenState
         listener: (context, state) {
           state.whenOrNull(
             loading: () {
-              context.showLoadingDialog(message: "saving...");
+              showDialog(
+                context: context,
+                barrierDismissible: false,
+                builder: (context) {
+                  _loadingDialogContext = context;
+                  return const CheckingUserAnswersDialog();
+                },
+              );
             },
             onSuccess: () {
-              context.hideLoadingDialog();
+              if (_loadingDialogContext != null) {
+                Navigator.pop(_loadingDialogContext!);
+                _loadingDialogContext = null;
+              }
               if (widget.isLastIndex) {
                 context.read<DayBloc>().add(const DayEvent.loadDays());
               } else {
@@ -163,6 +175,7 @@ class _SpokenPatternExerciseScreenState
                 PmpRoutes.patternExerciseResultScreen,
                 arguments: {
                   'pattern_exercises': _exerciseWithAnswers,
+                  "pass": true,
                 },
               );
             },
@@ -274,22 +287,14 @@ class _SpokenPatternExerciseScreenState
                                     final isPassed = _checkOverallResult();
                                     _userFullAnswerNotifier.value = "";
                                     if (isPassed) {
-                                      Navigator.pushReplacementNamed(
-                                        context,
-                                        PmpRoutes.patternExerciseResultScreen,
-                                        arguments: {
-                                          'pattern_exercises':
-                                              _exerciseWithAnswers,
-                                        },
+                                      _exerciseUserAnswerBloc.add(
+                                        ExerciseUserAnswerEvent
+                                            .addUserAnswerList(
+                                          _userAnswers,
+                                          widget.exercise,
+                                          widget.isLastIndex,
+                                        ),
                                       );
-                                      // _exerciseUserAnswerBloc.add(
-                                      //   ExerciseUserAnswerEvent
-                                      //       .addUserAnswerList(
-                                      //     _userAnswers,
-                                      //     widget.exercise,
-                                      //     widget.isLastIndex,
-                                      //   ),
-                                      // );
                                     } else {
                                       Navigator.pushReplacementNamed(
                                         context,
@@ -297,6 +302,7 @@ class _SpokenPatternExerciseScreenState
                                         arguments: {
                                           'pattern_exercises':
                                               _exerciseWithAnswers,
+                                          "pass": false,
                                         },
                                       );
                                     }
@@ -355,7 +361,7 @@ class _SpokenPatternExerciseScreenState
       }
     }
     final double percentage = (correctCount / total) * 100;
-    if (percentage >= 70) {
+    if (percentage > 60) {
       return true;
     } else {
       return false;

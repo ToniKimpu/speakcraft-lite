@@ -12,6 +12,7 @@ import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../bloc/app_ui/app_ui_bloc.dart';
+import '../../bloc/listening_practice_answer/listening_practice_answer_bloc.dart';
 import '../../config/pmp_routes.dart';
 import 'dialogs/checking_user_answers_dialog.dart';
 
@@ -49,6 +50,10 @@ class _ListeningSentencePracticePageState
   Duration _startDuration = Duration.zero;
   Duration _endDuration = Duration.zero;
   bool _needSeek = true;
+
+  final _listeningPracticeAnswerBloc = ListeningPracticeAnswerBloc();
+
+  BuildContext? _loadingDialogContext;
 
   @override
   void initState() {
@@ -158,7 +163,10 @@ class _ListeningSentencePracticePageState
     final isLastQuestion = _userAnswers.length == _totalQuestions;
 
     if (isLastQuestion) {
-      _showCheckDialog();
+      // _showCheckDialog();
+      _listeningPracticeAnswerBloc.add(
+        ListeningPracticeAnswerEvent.saveUserAnswers(_userAnswers),
+      );
     } else {
       setState(() => _selectedAnswerOption = null);
       _goToNextPage(_currentPage + 1);
@@ -166,29 +174,29 @@ class _ListeningSentencePracticePageState
     debugPrint('_answerLogs: ${answer.toJson()}');
   }
 
-  void _showCheckDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) =>
-          CheckingUserAnswersDialog(userAnswers: _userAnswers),
-    ).then((confirmed) {
-      if (confirmed == true && context.mounted) {
-        context.read<AppUIBloc>().add(
-              const AppUIEvent.reloadListeningPracticeList(),
-            );
-        Navigator.pushReplacementNamed(
-          context,
-          PmpRoutes.listeningPracticeResultPage,
-          arguments: {
-            "listening": widget.listening,
-            "listening_answers": _userAnswers,
-            "listening_questions": widget.listeningQuestions,
-          },
-        );
-      }
-    });
-  }
+  // void _showCheckDialog() {
+  //   showDialog(
+  //     context: context,
+  //     barrierDismissible: false,
+  //     builder: (context) =>
+  //         CheckingUserAnswersDialog(userAnswers: _userAnswers),
+  //   ).then((confirmed) {
+  //     if (confirmed == true && context.mounted) {
+  //       context.read<AppUIBloc>().add(
+  //             const AppUIEvent.reloadListeningPracticeList(),
+  //           );
+  //       Navigator.pushReplacementNamed(
+  //         context,
+  //         PmpRoutes.listeningPracticeResultPage,
+  //         arguments: {
+  //           "listening": widget.listening,
+  //           "listening_answers": _userAnswers,
+  //           "listening_questions": widget.listeningQuestions,
+  //         },
+  //       );
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -196,28 +204,65 @@ class _ListeningSentencePracticePageState
         _youtubeController.value.playerState == PlayerState.buffering ||
             !_youtubeController.value.isReady;
 
-    return YoutubePlayerBuilder(
-      player: YoutubePlayer(
-        controller: _youtubeController,
-        showVideoProgressIndicator: false,
-        onReady: _startTimer,
-      ),
-      builder: (context, player) {
-        return MainScaffold(
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            title: buildHeader(),
-          ),
-          body: Column(
-            children: [
-              buildVideoPlayer(player, isLoading),
-              const SizedBox(height: 8),
-              buildQuestionPageView(),
-              buildBottomActions(),
-            ],
-          ),
+    return BlocListener<ListeningPracticeAnswerBloc,
+        ListeningPracticeAnswerState>(
+      bloc: _listeningPracticeAnswerBloc,
+      listener: (context, state) {
+        state.maybeWhen(
+          loading: (message) {
+            showDialog(
+              context: context,
+              barrierDismissible: false,
+              builder: (context) {
+                _loadingDialogContext = context;
+                return const CheckingUserAnswersDialog();
+              },
+            );
+          },
+          onSaved: () {
+            if (_loadingDialogContext != null) {
+              Navigator.pop(_loadingDialogContext!);
+              _loadingDialogContext = null;
+            }
+            context.read<AppUIBloc>().add(
+                  const AppUIEvent.reloadListeningPracticeList(),
+                );
+            Navigator.pushReplacementNamed(
+              context,
+              PmpRoutes.listeningPracticeResultPage,
+              arguments: {
+                "listening": widget.listening,
+                "listening_answers": _userAnswers,
+                "listening_questions": widget.listeningQuestions,
+              },
+            );
+          },
+          orElse: () => -1,
         );
       },
+      child: YoutubePlayerBuilder(
+        player: YoutubePlayer(
+          controller: _youtubeController,
+          showVideoProgressIndicator: false,
+          onReady: _startTimer,
+        ),
+        builder: (context, player) {
+          return MainScaffold(
+            appBar: AppBar(
+              automaticallyImplyLeading: false,
+              title: buildHeader(),
+            ),
+            body: Column(
+              children: [
+                buildVideoPlayer(player, isLoading),
+                const SizedBox(height: 8),
+                buildQuestionPageView(),
+                buildBottomActions(),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 
