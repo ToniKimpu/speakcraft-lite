@@ -713,6 +713,152 @@ class ListeningPracticeAnswerTableCompanion
   }
 }
 
+class $SpokenPatternExerciseAnswerTableTable
+    extends SpokenPatternExerciseAnswerTable
+    with TableInfo<$SpokenPatternExerciseAnswerTableTable, ExerciseUserAnswer> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SpokenPatternExerciseAnswerTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _patternExerciseIdMeta =
+      const VerificationMeta('patternExerciseId');
+  @override
+  late final GeneratedColumn<int> patternExerciseId = GeneratedColumn<int>(
+      'pattern_exercise_id', aliasedName, false,
+      type: DriftSqlType.int, requiredDuringInsert: true);
+  static const VerificationMeta _userAnswerMeta =
+      const VerificationMeta('userAnswer');
+  @override
+  late final GeneratedColumn<String> userAnswer = GeneratedColumn<String>(
+      'user_answer', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  @override
+  List<GeneratedColumn> get $columns => [id, patternExerciseId, userAnswer];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'spoken_pattern_exercise_answer_table';
+  @override
+  VerificationContext validateIntegrity(Insertable<ExerciseUserAnswer> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('pattern_exercise_id')) {
+      context.handle(
+          _patternExerciseIdMeta,
+          patternExerciseId.isAcceptableOrUnknown(
+              data['pattern_exercise_id']!, _patternExerciseIdMeta));
+    } else if (isInserting) {
+      context.missing(_patternExerciseIdMeta);
+    }
+    if (data.containsKey('user_answer')) {
+      context.handle(
+          _userAnswerMeta,
+          userAnswer.isAcceptableOrUnknown(
+              data['user_answer']!, _userAnswerMeta));
+    } else if (isInserting) {
+      context.missing(_userAnswerMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  ExerciseUserAnswer map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return ExerciseUserAnswer(
+      userAnswer: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}user_answer'])!,
+      patternExerciseId: attachedDatabase.typeMapping.read(
+          DriftSqlType.int, data['${effectivePrefix}pattern_exercise_id'])!,
+    );
+  }
+
+  @override
+  $SpokenPatternExerciseAnswerTableTable createAlias(String alias) {
+    return $SpokenPatternExerciseAnswerTableTable(attachedDatabase, alias);
+  }
+}
+
+class SpokenPatternExerciseAnswerTableCompanion
+    extends UpdateCompanion<ExerciseUserAnswer> {
+  final Value<int> id;
+  final Value<int> patternExerciseId;
+  final Value<String> userAnswer;
+  const SpokenPatternExerciseAnswerTableCompanion({
+    this.id = const Value.absent(),
+    this.patternExerciseId = const Value.absent(),
+    this.userAnswer = const Value.absent(),
+  });
+  SpokenPatternExerciseAnswerTableCompanion.insert({
+    this.id = const Value.absent(),
+    required int patternExerciseId,
+    required String userAnswer,
+  })  : patternExerciseId = Value(patternExerciseId),
+        userAnswer = Value(userAnswer);
+  static Insertable<ExerciseUserAnswer> custom({
+    Expression<int>? id,
+    Expression<int>? patternExerciseId,
+    Expression<String>? userAnswer,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (patternExerciseId != null) 'pattern_exercise_id': patternExerciseId,
+      if (userAnswer != null) 'user_answer': userAnswer,
+    });
+  }
+
+  SpokenPatternExerciseAnswerTableCompanion copyWith(
+      {Value<int>? id,
+      Value<int>? patternExerciseId,
+      Value<String>? userAnswer}) {
+    return SpokenPatternExerciseAnswerTableCompanion(
+      id: id ?? this.id,
+      patternExerciseId: patternExerciseId ?? this.patternExerciseId,
+      userAnswer: userAnswer ?? this.userAnswer,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (patternExerciseId.present) {
+      map['pattern_exercise_id'] = Variable<int>(patternExerciseId.value);
+    }
+    if (userAnswer.present) {
+      map['user_answer'] = Variable<String>(userAnswer.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SpokenPatternExerciseAnswerTableCompanion(')
+          ..write('id: $id, ')
+          ..write('patternExerciseId: $patternExerciseId, ')
+          ..write('userAnswer: $userAnswer')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -722,6 +868,9 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       $UserExampleAnswerTableTable(this);
   late final $ListeningPracticeAnswerTableTable listeningPracticeAnswerTable =
       $ListeningPracticeAnswerTableTable(this);
+  late final $SpokenPatternExerciseAnswerTableTable
+      spokenPatternExerciseAnswerTable =
+      $SpokenPatternExerciseAnswerTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -729,7 +878,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   List<DatabaseSchemaEntity> get allSchemaEntities => [
         aiSentencePracticeTable,
         userExampleAnswerTable,
-        listeningPracticeAnswerTable
+        listeningPracticeAnswerTable,
+        spokenPatternExerciseAnswerTable
       ];
 }
 
@@ -1275,6 +1425,153 @@ typedef $$ListeningPracticeAnswerTableTableProcessedTableManager
         ),
         ListeningPracticeAnswer,
         PrefetchHooks Function()>;
+typedef $$SpokenPatternExerciseAnswerTableTableCreateCompanionBuilder
+    = SpokenPatternExerciseAnswerTableCompanion Function({
+  Value<int> id,
+  required int patternExerciseId,
+  required String userAnswer,
+});
+typedef $$SpokenPatternExerciseAnswerTableTableUpdateCompanionBuilder
+    = SpokenPatternExerciseAnswerTableCompanion Function({
+  Value<int> id,
+  Value<int> patternExerciseId,
+  Value<String> userAnswer,
+});
+
+class $$SpokenPatternExerciseAnswerTableTableFilterComposer
+    extends Composer<_$AppDatabase, $SpokenPatternExerciseAnswerTableTable> {
+  $$SpokenPatternExerciseAnswerTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get patternExerciseId => $composableBuilder(
+      column: $table.patternExerciseId,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => ColumnFilters(column));
+}
+
+class $$SpokenPatternExerciseAnswerTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $SpokenPatternExerciseAnswerTableTable> {
+  $$SpokenPatternExerciseAnswerTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get patternExerciseId => $composableBuilder(
+      column: $table.patternExerciseId,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => ColumnOrderings(column));
+}
+
+class $$SpokenPatternExerciseAnswerTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $SpokenPatternExerciseAnswerTableTable> {
+  $$SpokenPatternExerciseAnswerTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get patternExerciseId => $composableBuilder(
+      column: $table.patternExerciseId, builder: (column) => column);
+
+  GeneratedColumn<String> get userAnswer => $composableBuilder(
+      column: $table.userAnswer, builder: (column) => column);
+}
+
+class $$SpokenPatternExerciseAnswerTableTableTableManager
+    extends RootTableManager<
+        _$AppDatabase,
+        $SpokenPatternExerciseAnswerTableTable,
+        ExerciseUserAnswer,
+        $$SpokenPatternExerciseAnswerTableTableFilterComposer,
+        $$SpokenPatternExerciseAnswerTableTableOrderingComposer,
+        $$SpokenPatternExerciseAnswerTableTableAnnotationComposer,
+        $$SpokenPatternExerciseAnswerTableTableCreateCompanionBuilder,
+        $$SpokenPatternExerciseAnswerTableTableUpdateCompanionBuilder,
+        (
+          ExerciseUserAnswer,
+          BaseReferences<_$AppDatabase, $SpokenPatternExerciseAnswerTableTable,
+              ExerciseUserAnswer>
+        ),
+        ExerciseUserAnswer,
+        PrefetchHooks Function()> {
+  $$SpokenPatternExerciseAnswerTableTableTableManager(
+      _$AppDatabase db, $SpokenPatternExerciseAnswerTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SpokenPatternExerciseAnswerTableTableFilterComposer(
+                  $db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SpokenPatternExerciseAnswerTableTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SpokenPatternExerciseAnswerTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<int> patternExerciseId = const Value.absent(),
+            Value<String> userAnswer = const Value.absent(),
+          }) =>
+              SpokenPatternExerciseAnswerTableCompanion(
+            id: id,
+            patternExerciseId: patternExerciseId,
+            userAnswer: userAnswer,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            required int patternExerciseId,
+            required String userAnswer,
+          }) =>
+              SpokenPatternExerciseAnswerTableCompanion.insert(
+            id: id,
+            patternExerciseId: patternExerciseId,
+            userAnswer: userAnswer,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$SpokenPatternExerciseAnswerTableTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $SpokenPatternExerciseAnswerTableTable,
+        ExerciseUserAnswer,
+        $$SpokenPatternExerciseAnswerTableTableFilterComposer,
+        $$SpokenPatternExerciseAnswerTableTableOrderingComposer,
+        $$SpokenPatternExerciseAnswerTableTableAnnotationComposer,
+        $$SpokenPatternExerciseAnswerTableTableCreateCompanionBuilder,
+        $$SpokenPatternExerciseAnswerTableTableUpdateCompanionBuilder,
+        (
+          ExerciseUserAnswer,
+          BaseReferences<_$AppDatabase, $SpokenPatternExerciseAnswerTableTable,
+              ExerciseUserAnswer>
+        ),
+        ExerciseUserAnswer,
+        PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -1289,4 +1586,8 @@ class $AppDatabaseManager {
       get listeningPracticeAnswerTable =>
           $$ListeningPracticeAnswerTableTableTableManager(
               _db, _db.listeningPracticeAnswerTable);
+  $$SpokenPatternExerciseAnswerTableTableTableManager
+      get spokenPatternExerciseAnswerTable =>
+          $$SpokenPatternExerciseAnswerTableTableTableManager(
+              _db, _db.spokenPatternExerciseAnswerTable);
 }

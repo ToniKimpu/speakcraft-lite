@@ -26,7 +26,7 @@ class ExerciseItem extends StatelessWidget {
     if (exercise.isComplete) {
       Navigator.pushNamed(
         context,
-        PmpRoutes.patternPracticeResultScreen,
+        PmpRoutes.patternExerciseResultScreen,
         arguments: {
           'exercise_id': exercise.id,
         },

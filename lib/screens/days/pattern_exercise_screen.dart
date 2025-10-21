@@ -159,7 +159,7 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
                     }
                     Navigator.pushReplacementNamed(
                       context,
-                      PmpRoutes.patternPracticeResultScreen,
+                      PmpRoutes.patternExerciseResultScreen,
                       arguments: {
                         'pattern_exercises': _patternExercises,
                       },

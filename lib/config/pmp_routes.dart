@@ -35,7 +35,7 @@ import '../model/listening/listening.dart';
 import '../model/pattern_exercise/pattern_exercise.dart';
 import '../model/spoken_pattern/spoken_pattern.dart';
 import '../screens/days/day_list_screen.dart';
-import '../screens/days/pattern_practice_result_screen.dart';
+import '../screens/days/pattern_exercise_result_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
 import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
 import '../screens/listening_and_shadowing/vocabulary_listening_page.dart';
@@ -58,8 +58,8 @@ class PmpRoutes {
   static const loginScreen = '/auth/login';
   static const signUpScreen = '/auth/sign_up';
   static const patternExerciseScreen = '/day_list/pattern_exercise';
-  static const patternPracticeResultScreen =
-      '/day_list/pattern_practice_result';
+  static const patternExerciseResultScreen =
+      '/day_list/pattern_exercise_result';
   static const translationPracticeResultScreen =
       '/translation/translation_practice_result';
   static const patternList = '/self_practice_pattern/pattern_list';
@@ -143,21 +143,23 @@ class PmpRoutes {
       case spokenPatternExercisePage:
         final args = settings.arguments as Map<String, dynamic>;
         final exercise = args['exercise'] as Exercise;
-        // final day = args['day'] as Day;
-        // final isLastIndex = args['is_last_index'] as bool;
+        final day = args['day'] as Day;
+        final isLastIndex = args['is_last_index'] as bool;
         return _getRoute(
           SpokenPatternExerciseScreen(
             exercise: exercise,
+            day: day,
+            isLastIndex: isLastIndex,
           ),
           settings,
         );
-      case patternPracticeResultScreen:
+      case patternExerciseResultScreen:
         final args = settings.arguments as Map<String, dynamic>;
         final patternExercises =
             args['pattern_exercises'] as List<PatternExercise>?;
         final exerciseId = args['exercise_id'] as int?;
         return _getRoute(
-          PatternPracticeResultScreen(
+          PatternExerciseResultScreen(
             patternExercises: patternExercises,
             exerciseId: exerciseId,
           ),

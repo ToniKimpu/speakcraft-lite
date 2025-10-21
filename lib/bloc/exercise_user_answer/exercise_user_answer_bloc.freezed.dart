@@ -61,7 +61,6 @@ mixin _$ExerciseUserAnswerEvent {
 
   /// Create a copy of ExerciseUserAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExerciseUserAnswerEventCopyWith<ExerciseUserAnswerEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -222,7 +221,6 @@ class _$AddUserAnswerImpl implements _AddUserAnswer {
 
   /// Create a copy of ExerciseUserAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddUserAnswerImplCopyWith<_$AddUserAnswerImpl> get copyWith =>
@@ -305,7 +303,6 @@ abstract class _AddUserAnswer implements ExerciseUserAnswerEvent {
   /// Create a copy of ExerciseUserAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddUserAnswerImplCopyWith<_$AddUserAnswerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -796,7 +793,6 @@ class _$ErrorImpl implements _Error {
 
   /// Create a copy of ExerciseUserAnswerState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -884,7 +880,6 @@ abstract class _Error implements ExerciseUserAnswerState {
 
   /// Create a copy of ExerciseUserAnswerState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
