@@ -7,7 +7,6 @@ import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import '../../../config/pmp_colors.dart';
 import '../../../model/subtitle/subtitle.dart';
 
 class SubtitleDetailWidget extends StatefulWidget {
@@ -120,9 +119,9 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
         onTap: () {},
         child: Container(
           width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            gradient: const LinearGradient(
+          decoration: const BoxDecoration(
+            // borderRadius: BorderRadius.circular(12),
+            gradient: LinearGradient(
               colors: [
                 Color(0xFF0F2027),
                 Color(0xFF203A43),
@@ -131,61 +130,10 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.3),
-                blurRadius: 12,
-                spreadRadius: 6,
-              ),
-            ],
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.4),
-            ),
           ),
           child: Column(
             children: [
-              // Stream switch row
-              SizedBox(
-                height: 40,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        'Stream',
-                        style: PmpTextStyles.body2Semi.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(width: 4),
-                      Transform.scale(
-                        scale: 0.75,
-                        child: Switch(
-                          value: _streamData,
-                          onChanged: (value) {
-                            setState(() {
-                              _streamData = value;
-                              if (_streamData) {
-                                _currentIndex = _instantStreamIndex;
-                                _selectedSubtitle =
-                                    widget.subtitles[_instantStreamIndex];
-                              }
-                            });
-                          },
-                          activeColor: Colors.white,
-                          inactiveThumbColor:
-                              Colors.white.withValues(alpha: 0.8),
-                          activeTrackColor: Colors.green,
-                          inactiveTrackColor:
-                              Colors.white.withValues(alpha: 0.4),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
+              // Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
               // Single subtitle
               Expanded(
                 child: SubtitleWidget(
@@ -204,53 +152,97 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
               SizedBox(
                 height: 40,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const SizedBox(width: 8),
-                    widget.youtubeReadyToPlay
-                        ? Material(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.transparent,
-                            child: InkWell(
-                              borderRadius: BorderRadius.circular(100),
-                              onTap: () {
-                                if (widget.youtubeController.value.isPlaying) {
-                                  widget.youtubeController.pause();
-                                } else {
-                                  widget.youtubeController.play();
-                                  if (widget.audioPlayer.playing) {
-                                    widget.audioPlayer.pause();
-                                  }
-                                }
-                                setState(() {});
-                              },
-                              child: Container(
-                                width: 24,
-                                height: 24,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: Colors.white,
-                                    width: 1,
-                                  ),
-                                ),
-                                child: Icon(
-                                  widget.youtubeController.value.isPlaying
-                                      ? Icons.pause
-                                      : Icons.play_arrow,
-                                  color: PmpColors.white,
-                                  size: 18,
-                                ),
+                    // Stream switch row
+                    SizedBox(
+                      height: 40,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Stream',
+                              style: PmpTextStyles.body2Semi.copyWith(
+                                color: Colors.white,
                               ),
                             ),
-                          )
-                        : const SizedBox(
-                            width: 16,
-                            height: 16,
-                            child: CircularProgressIndicator(
-                              color: PmpColors.white,
+                            const SizedBox(width: 4),
+                            Transform.scale(
+                              scale: 0.75,
+                              child: Switch(
+                                value: _streamData,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _streamData = value;
+                                    if (_streamData) {
+                                      _currentIndex = _instantStreamIndex;
+                                      _selectedSubtitle =
+                                          widget.subtitles[_instantStreamIndex];
+                                    }
+                                  });
+                                },
+                                activeThumbColor: Colors.white,
+                                inactiveThumbColor:
+                                    Colors.white.withValues(alpha: 0.8),
+                                activeTrackColor: Colors.green,
+                                inactiveTrackColor:
+                                    Colors.white.withValues(alpha: 0.4),
+                              ),
                             ),
-                          ),
+                          ],
+                        ),
+                      ),
+                    ),
                     const Spacer(),
+                    // Youtube controls
+                    // widget.youtubeReadyToPlay
+                    //     ? Material(
+                    //         borderRadius: BorderRadius.circular(100),
+                    //         color: Colors.transparent,
+                    //         child: InkWell(
+                    //           borderRadius: BorderRadius.circular(100),
+                    //           onTap: () {
+                    //             if (widget.youtubeController.value.isPlaying) {
+                    //               widget.youtubeController.pause();
+                    //             } else {
+                    //               widget.youtubeController.play();
+                    //               if (widget.audioPlayer.playing) {
+                    //                 widget.audioPlayer.pause();
+                    //               }
+                    //             }
+                    //             setState(() {});
+                    //           },
+                    //           child: Container(
+                    //             width: 24,
+                    //             height: 24,
+                    //             decoration: BoxDecoration(
+                    //               shape: BoxShape.circle,
+                    //               border: Border.all(
+                    //                 color: Colors.white,
+                    //                 width: 1,
+                    //               ),
+                    //             ),
+                    //             child: Icon(
+                    //               widget.youtubeController.value.isPlaying
+                    //                   ? Icons.pause
+                    //                   : Icons.play_arrow,
+                    //               color: PmpColors.white,
+                    //               size: 18,
+                    //             ),
+                    //           ),
+                    //         ),
+                    //       )
+                    //     : const SizedBox(
+                    //         width: 16,
+                    //         height: 16,
+                    //         child: CircularProgressIndicator(
+                    //           color: PmpColors.white,
+                    //         ),
+                    //       ),
+                    // const Spacer(),
                     IconButton(
                       padding: EdgeInsets.zero,
                       onPressed: _goToPrevious,
