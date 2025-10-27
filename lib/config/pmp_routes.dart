@@ -38,6 +38,7 @@ import '../screens/days/day_list_screen.dart';
 import '../screens/days/pattern_exercise_result_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
 import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
+import '../screens/listening_and_shadowing/speech_practice_session_page.dart';
 import '../screens/listening_and_shadowing/vocabulary_listening_page.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
 import '../screens/main/device_failed_screen.dart';
@@ -88,6 +89,7 @@ class PmpRoutes {
       "/listening_sentence_practice_list";
   static const listeningPracticeResultPage = '/listening_practice_result_page';
   static const spokenPatternExercisePage = '/spoken_pattern_exercise_page';
+  static const speechPracticeSessionPage = '/speech_practice_session_page';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -298,6 +300,15 @@ class PmpRoutes {
             listening: listening,
             listeningQuestions: listeningQuestions,
             listeningPracticeAnswers: listeningAnswers,
+          ),
+          settings,
+        );
+      case speechPracticeSessionPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        return _getRoute(
+          SpeechPracticeSessionPage(
+            listening: listening,
           ),
           settings,
         );

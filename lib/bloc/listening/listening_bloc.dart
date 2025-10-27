@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 
+import '../../config/env.dart';
 import '../../model/pattern_vocabulary/pattern_vocabulary.dart';
 import '../../services/supabase_service.dart';
 
@@ -62,13 +63,19 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
             bucketFolder: SupabaseBucketFolders.listeningAndShadowingImages,
             fileName: listening.thumbnail,
           ),
-          subtitlePath: SupabaseService().getPublicUrl(
-            bucketFolder: SupabaseBucketFolders.listeningAndShadowingSubtitles,
-            fileName: listening.subtitlePath,
-          ),
+          // subtitlePath: SupabaseService().getPublicUrl(
+          //   bucketFolder: SupabaseBucketFolders.listeningAndShadowingSubtitles,
+          //   fileName: listening.subtitlePath,
+          // ),
+          subtitlePath: Env.bunnyListeningAPIKey +
+              listening.subtitlePath.replaceFirst('bunny/', ''),
+          multipleChoicePath: Env.bunnyListeningAPIKey +
+              listening.multipleChoicePath.replaceFirst('bunny/', ''),
+          shadowingPath: Env.bunnyListeningAPIKey +
+              listening.shadowingPath.replaceFirst('bunny/', ''),
         );
       }).toList();
-
+      debugPrint("_mapLoadListeningsToState: ${listenings.first.toJson()}");
       emit(ListeningState.loaded(listenings));
     } catch (e) {
       debugPrint(e.toString());

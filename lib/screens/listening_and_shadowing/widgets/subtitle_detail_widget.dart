@@ -20,6 +20,7 @@ class SubtitleDetailWidget extends StatefulWidget {
     required this.audioPlayer,
     required this.subtitleBloc,
     required this.subtitles,
+    required this.hasVocabularies,
     required this.hasMMSub,
     required this.onUserChangePage,
   });
@@ -31,6 +32,7 @@ class SubtitleDetailWidget extends StatefulWidget {
   final AudioPlayer audioPlayer;
   final SubtitleBloc subtitleBloc;
   final List<Subtitle> subtitles;
+  final bool hasVocabularies;
   final bool hasMMSub;
   final Function(Subtitle subtitle) onUserChangePage;
 
@@ -143,6 +145,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                   audioDurationTrackerBloc: widget.audioDurationTrackerBloc,
                   audioPlayerStateTrackerBloc:
                       widget.audioPlayerStateTrackerBloc,
+                  hasVocabularies: widget.hasVocabularies,
                   subtitle: _selectedSubtitle,
                   hasMMSub: widget.hasMMSub,
                 ),

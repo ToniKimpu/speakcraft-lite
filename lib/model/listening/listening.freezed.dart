@@ -27,10 +27,16 @@ mixin _$Listening {
   int get end => throw _privateConstructorUsedError;
   @JsonKey(name: 'mm_subtitle')
   bool get hasMMSubtitle => throw _privateConstructorUsedError;
+  @JsonKey(name: 'has_vocabularies')
+  bool get hasVocabularies => throw _privateConstructorUsedError;
   @JsonKey(name: 'youtube_id')
   String get youtubeId => throw _privateConstructorUsedError;
   @JsonKey(name: 'subtitle_path')
   String get subtitlePath => throw _privateConstructorUsedError;
+  @JsonKey(name: 'multiple_choice_path')
+  String get multipleChoicePath => throw _privateConstructorUsedError;
+  @JsonKey(name: 'shadowing_path')
+  String get shadowingPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'listening_category_id')
   int? get listeningCategoryId => throw _privateConstructorUsedError;
 
@@ -56,8 +62,11 @@ abstract class $ListeningCopyWith<$Res> {
       int start,
       int end,
       @JsonKey(name: 'mm_subtitle') bool hasMMSubtitle,
+      @JsonKey(name: 'has_vocabularies') bool hasVocabularies,
       @JsonKey(name: 'youtube_id') String youtubeId,
       @JsonKey(name: 'subtitle_path') String subtitlePath,
+      @JsonKey(name: 'multiple_choice_path') String multipleChoicePath,
+      @JsonKey(name: 'shadowing_path') String shadowingPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
 }
 
@@ -82,8 +91,11 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
     Object? start = null,
     Object? end = null,
     Object? hasMMSubtitle = null,
+    Object? hasVocabularies = null,
     Object? youtubeId = null,
     Object? subtitlePath = null,
+    Object? multipleChoicePath = null,
+    Object? shadowingPath = null,
     Object? listeningCategoryId = freezed,
   }) {
     return _then(_value.copyWith(
@@ -111,6 +123,10 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
           ? _value.hasMMSubtitle
           : hasMMSubtitle // ignore: cast_nullable_to_non_nullable
               as bool,
+      hasVocabularies: null == hasVocabularies
+          ? _value.hasVocabularies
+          : hasVocabularies // ignore: cast_nullable_to_non_nullable
+              as bool,
       youtubeId: null == youtubeId
           ? _value.youtubeId
           : youtubeId // ignore: cast_nullable_to_non_nullable
@@ -118,6 +134,14 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
       subtitlePath: null == subtitlePath
           ? _value.subtitlePath
           : subtitlePath // ignore: cast_nullable_to_non_nullable
+              as String,
+      multipleChoicePath: null == multipleChoicePath
+          ? _value.multipleChoicePath
+          : multipleChoicePath // ignore: cast_nullable_to_non_nullable
+              as String,
+      shadowingPath: null == shadowingPath
+          ? _value.shadowingPath
+          : shadowingPath // ignore: cast_nullable_to_non_nullable
               as String,
       listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
@@ -142,8 +166,11 @@ abstract class _$$ListeningImplCopyWith<$Res>
       int start,
       int end,
       @JsonKey(name: 'mm_subtitle') bool hasMMSubtitle,
+      @JsonKey(name: 'has_vocabularies') bool hasVocabularies,
       @JsonKey(name: 'youtube_id') String youtubeId,
       @JsonKey(name: 'subtitle_path') String subtitlePath,
+      @JsonKey(name: 'multiple_choice_path') String multipleChoicePath,
+      @JsonKey(name: 'shadowing_path') String shadowingPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
 }
 
@@ -166,8 +193,11 @@ class __$$ListeningImplCopyWithImpl<$Res>
     Object? start = null,
     Object? end = null,
     Object? hasMMSubtitle = null,
+    Object? hasVocabularies = null,
     Object? youtubeId = null,
     Object? subtitlePath = null,
+    Object? multipleChoicePath = null,
+    Object? shadowingPath = null,
     Object? listeningCategoryId = freezed,
   }) {
     return _then(_$ListeningImpl(
@@ -195,6 +225,10 @@ class __$$ListeningImplCopyWithImpl<$Res>
           ? _value.hasMMSubtitle
           : hasMMSubtitle // ignore: cast_nullable_to_non_nullable
               as bool,
+      hasVocabularies: null == hasVocabularies
+          ? _value.hasVocabularies
+          : hasVocabularies // ignore: cast_nullable_to_non_nullable
+              as bool,
       youtubeId: null == youtubeId
           ? _value.youtubeId
           : youtubeId // ignore: cast_nullable_to_non_nullable
@@ -202,6 +236,14 @@ class __$$ListeningImplCopyWithImpl<$Res>
       subtitlePath: null == subtitlePath
           ? _value.subtitlePath
           : subtitlePath // ignore: cast_nullable_to_non_nullable
+              as String,
+      multipleChoicePath: null == multipleChoicePath
+          ? _value.multipleChoicePath
+          : multipleChoicePath // ignore: cast_nullable_to_non_nullable
+              as String,
+      shadowingPath: null == shadowingPath
+          ? _value.shadowingPath
+          : shadowingPath // ignore: cast_nullable_to_non_nullable
               as String,
       listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
@@ -221,8 +263,11 @@ class _$ListeningImpl implements _Listening {
       required this.start,
       required this.end,
       @JsonKey(name: 'mm_subtitle') required this.hasMMSubtitle,
+      @JsonKey(name: 'has_vocabularies') required this.hasVocabularies,
       @JsonKey(name: 'youtube_id') required this.youtubeId,
       @JsonKey(name: 'subtitle_path') required this.subtitlePath,
+      @JsonKey(name: 'multiple_choice_path') required this.multipleChoicePath,
+      @JsonKey(name: 'shadowing_path') required this.shadowingPath,
       @JsonKey(name: 'listening_category_id') this.listeningCategoryId});
 
   factory _$ListeningImpl.fromJson(Map<String, dynamic> json) =>
@@ -242,18 +287,27 @@ class _$ListeningImpl implements _Listening {
   @JsonKey(name: 'mm_subtitle')
   final bool hasMMSubtitle;
   @override
+  @JsonKey(name: 'has_vocabularies')
+  final bool hasVocabularies;
+  @override
   @JsonKey(name: 'youtube_id')
   final String youtubeId;
   @override
   @JsonKey(name: 'subtitle_path')
   final String subtitlePath;
   @override
+  @JsonKey(name: 'multiple_choice_path')
+  final String multipleChoicePath;
+  @override
+  @JsonKey(name: 'shadowing_path')
+  final String shadowingPath;
+  @override
   @JsonKey(name: 'listening_category_id')
   final int? listeningCategoryId;
 
   @override
   String toString() {
-    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, youtubeId: $youtubeId, subtitlePath: $subtitlePath, listeningCategoryId: $listeningCategoryId)';
+    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, listeningCategoryId: $listeningCategoryId)';
   }
 
   @override
@@ -269,18 +323,36 @@ class _$ListeningImpl implements _Listening {
             (identical(other.end, end) || other.end == end) &&
             (identical(other.hasMMSubtitle, hasMMSubtitle) ||
                 other.hasMMSubtitle == hasMMSubtitle) &&
+            (identical(other.hasVocabularies, hasVocabularies) ||
+                other.hasVocabularies == hasVocabularies) &&
             (identical(other.youtubeId, youtubeId) ||
                 other.youtubeId == youtubeId) &&
             (identical(other.subtitlePath, subtitlePath) ||
                 other.subtitlePath == subtitlePath) &&
+            (identical(other.multipleChoicePath, multipleChoicePath) ||
+                other.multipleChoicePath == multipleChoicePath) &&
+            (identical(other.shadowingPath, shadowingPath) ||
+                other.shadowingPath == shadowingPath) &&
             (identical(other.listeningCategoryId, listeningCategoryId) ||
                 other.listeningCategoryId == listeningCategoryId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, thumbnail, start, end,
-      hasMMSubtitle, youtubeId, subtitlePath, listeningCategoryId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      thumbnail,
+      start,
+      end,
+      hasMMSubtitle,
+      hasVocabularies,
+      youtubeId,
+      subtitlePath,
+      multipleChoicePath,
+      shadowingPath,
+      listeningCategoryId);
 
   /// Create a copy of Listening
   /// with the given fields replaced by the non-null parameter values.
@@ -306,8 +378,12 @@ abstract class _Listening implements Listening {
       required final int start,
       required final int end,
       @JsonKey(name: 'mm_subtitle') required final bool hasMMSubtitle,
+      @JsonKey(name: 'has_vocabularies') required final bool hasVocabularies,
       @JsonKey(name: 'youtube_id') required final String youtubeId,
       @JsonKey(name: 'subtitle_path') required final String subtitlePath,
+      @JsonKey(name: 'multiple_choice_path')
+      required final String multipleChoicePath,
+      @JsonKey(name: 'shadowing_path') required final String shadowingPath,
       @JsonKey(name: 'listening_category_id')
       final int? listeningCategoryId}) = _$ListeningImpl;
 
@@ -328,11 +404,20 @@ abstract class _Listening implements Listening {
   @JsonKey(name: 'mm_subtitle')
   bool get hasMMSubtitle;
   @override
+  @JsonKey(name: 'has_vocabularies')
+  bool get hasVocabularies;
+  @override
   @JsonKey(name: 'youtube_id')
   String get youtubeId;
   @override
   @JsonKey(name: 'subtitle_path')
   String get subtitlePath;
+  @override
+  @JsonKey(name: 'multiple_choice_path')
+  String get multipleChoicePath;
+  @override
+  @JsonKey(name: 'shadowing_path')
+  String get shadowingPath;
   @override
   @JsonKey(name: 'listening_category_id')
   int? get listeningCategoryId;

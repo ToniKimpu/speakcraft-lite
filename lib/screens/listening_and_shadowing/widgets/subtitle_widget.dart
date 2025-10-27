@@ -15,6 +15,7 @@ class SubtitleWidget extends StatelessWidget {
     required this.audioPositionTrackerBloc,
     required this.audioDurationTrackerBloc,
     required this.audioPlayerStateTrackerBloc,
+    required this.hasVocabularies,
     required this.subtitle,
     required this.hasMMSub,
   });
@@ -24,6 +25,7 @@ class SubtitleWidget extends StatelessWidget {
   final AudioPlayerBloc audioPositionTrackerBloc,
       audioDurationTrackerBloc,
       audioPlayerStateTrackerBloc;
+  final bool hasVocabularies;
   final Subtitle subtitle;
   final bool hasMMSub;
 
@@ -248,7 +250,7 @@ class SubtitleWidget extends StatelessWidget {
             ),
 
           // Vocabularies
-          if (subtitle.vocabularies!.isNotEmpty) ...[
+          if (hasVocabularies && subtitle.vocabularies!.isNotEmpty) ...[
             const SizedBox(
               height: 8,
             ),

@@ -14,8 +14,11 @@ _$ListeningImpl _$$ListeningImplFromJson(Map<String, dynamic> json) =>
       start: (json['start'] as num).toInt(),
       end: (json['end'] as num).toInt(),
       hasMMSubtitle: json['mm_subtitle'] as bool,
+      hasVocabularies: json['has_vocabularies'] as bool,
       youtubeId: json['youtube_id'] as String,
       subtitlePath: json['subtitle_path'] as String,
+      multipleChoicePath: json['multiple_choice_path'] as String,
+      shadowingPath: json['shadowing_path'] as String,
       listeningCategoryId: (json['listening_category_id'] as num?)?.toInt(),
     );
 
@@ -27,7 +30,10 @@ Map<String, dynamic> _$$ListeningImplToJson(_$ListeningImpl instance) =>
       'start': instance.start,
       'end': instance.end,
       'mm_subtitle': instance.hasMMSubtitle,
+      'has_vocabularies': instance.hasVocabularies,
       'youtube_id': instance.youtubeId,
       'subtitle_path': instance.subtitlePath,
+      'multiple_choice_path': instance.multipleChoicePath,
+      'shadowing_path': instance.shadowingPath,
       'listening_category_id': instance.listeningCategoryId,
     };

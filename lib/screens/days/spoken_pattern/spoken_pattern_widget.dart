@@ -142,7 +142,9 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                if (widget.spokenPattern.svgData?.isNotEmpty ?? false)
+                if (widget.spokenPattern.subjectVerbAgreement != null &&
+                    widget
+                        .spokenPattern.subjectVerbAgreement!.svgData.isNotEmpty)
                   SvgDataWidget(spokenPattern: widget.spokenPattern),
                 if (patternExamples.isNotEmpty)
                   BlocBuilder<AudioPlayerBloc, AudioPlayerState>(

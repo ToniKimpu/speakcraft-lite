@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/model/subject_verb_agreement/subject_verb_agreement.dart';
 
 import '../pattern_example/pattern_example.dart';
 
@@ -14,7 +15,6 @@ class SpokenPattern with _$SpokenPattern {
     required String pattern,
     String? title,
     String? description,
-    @JsonKey(name: 'svg') List<dynamic>? svgData,
     @JsonKey(name: 'audio_path') String? audioPath,
     @JsonKey(name: 'lesson_id') int? lessonId,
     @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -25,6 +25,8 @@ class SpokenPattern with _$SpokenPattern {
       fromJson: _hasCommentByUser,
     )
     bool? hasComment,
+    @JsonKey(name: "subject_verb_agreements")
+    SubjectVerbAgreement? subjectVerbAgreement,
   }) = _SpokenPattern;
 
   factory SpokenPattern.fromJson(Map<String, dynamic> json) =>

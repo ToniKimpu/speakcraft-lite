@@ -35,19 +35,31 @@ class _VocabularyListeningPageState extends State<VocabularyListeningPage> {
           title: const Text('Vocabularies'),
         ),
         body: BlocBuilder<SubtitleBloc, SubtitleState>(
+          bloc: _subtitleBloc,
           builder: (context, state) {
             return state.maybeWhen(
-              onParsingSubtitle: (data) {
+              loading: (message) {
+                return const Center(
+                  child: SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              },
+              onParseCompleted: (data) {
                 final subtitles = data
                     .where((s) =>
                         s.vocabularies != null && s.vocabularies!.isNotEmpty)
                     .toList();
                 if (subtitles.isEmpty) {
-                  return const Center(
-                    child: SizedBox(
-                      width: 18,
-                      height: 18,
-                      child: CircularProgressIndicator(),
+                  return Center(
+                    child: Text(
+                      "Vocabularyများ မကြာခင်ထည့်ပေးပါမည်။",
+                      style: PmpTextStyles.body1Regular.copyWith(
+                        fontFamily: "ArchivoBlack Regular",
+                        color: Colors.white,
+                      ),
                     ),
                   );
                 }

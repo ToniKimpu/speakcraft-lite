@@ -80,7 +80,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
     try {
       var query = supabase
           .from('patterns')
-          .select('*,pattern_user_comments(id)')
+          .select('*,subject_verb_agreements(*)')
           .eq('pattern_user_comments.user_id', GlobalAppState().currentUser.id!)
           .eq('self_practicable', true)
           .eq('is_deleted', false);
@@ -108,7 +108,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
       final dataRes = await supabase
           .from('patterns')
           .select(
-              '*,pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))')
+              '*,subject_verb_agreements(*),pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))')
           .eq('lesson_id', lessonId)
           .eq("is_deleted", false)
           .eq("pattern_examples.is_deleted", false)

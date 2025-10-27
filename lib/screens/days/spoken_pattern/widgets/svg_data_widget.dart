@@ -72,7 +72,9 @@ class SvgDataWidget extends StatelessWidget {
           const SizedBox(height: 8),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(spokenPattern.svgData!.length, (index) {
+            children: List.generate(
+                spokenPattern.subjectVerbAgreement!.svgData.length, (index) {
+              final data = spokenPattern.subjectVerbAgreement!.svgData[index];
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 child: Row(
@@ -90,7 +92,7 @@ class SvgDataWidget extends StatelessWidget {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        spokenPattern.svgData![index],
+                        data,
                         style: PmpTextStyles.body2Semi
                             .copyWith(color: Colors.white),
                       ),

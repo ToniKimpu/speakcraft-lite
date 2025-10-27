@@ -12,7 +12,6 @@ _$SpokenPatternImpl _$$SpokenPatternImplFromJson(Map<String, dynamic> json) =>
       pattern: json['pattern'] as String,
       title: json['title'] as String?,
       description: json['description'] as String?,
-      svgData: json['svg'] as List<dynamic>?,
       audioPath: json['audio_path'] as String?,
       lessonId: (json['lesson_id'] as num?)?.toInt(),
       createdAt: json['created_at'] == null
@@ -22,6 +21,10 @@ _$SpokenPatternImpl _$$SpokenPatternImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => PatternExample.fromJson(e as Map<String, dynamic>))
           .toList(),
       hasComment: _hasCommentByUser(json['pattern_user_comments'] as List?),
+      subjectVerbAgreement: json['subject_verb_agreements'] == null
+          ? null
+          : SubjectVerbAgreement.fromJson(
+              json['subject_verb_agreements'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$SpokenPatternImplToJson(_$SpokenPatternImpl instance) =>
@@ -30,10 +33,10 @@ Map<String, dynamic> _$$SpokenPatternImplToJson(_$SpokenPatternImpl instance) =>
       'pattern': instance.pattern,
       'title': instance.title,
       'description': instance.description,
-      'svg': instance.svgData,
       'audio_path': instance.audioPath,
       'lesson_id': instance.lessonId,
       'created_at': instance.createdAt?.toIso8601String(),
       'pattern_examples': instance.patternExamples,
       'pattern_user_comments': instance.hasComment,
+      'subject_verb_agreements': instance.subjectVerbAgreement,
     };

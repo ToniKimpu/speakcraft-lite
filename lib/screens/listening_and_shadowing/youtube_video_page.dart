@@ -272,18 +272,19 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                           _audioDurationTrackerBloc,
                                       subtitleBloc: _subtitleBloc,
                                       audioPlayer: _audioPlayer,
+                                      hasVocabularies:
+                                          widget.listening.hasVocabularies,
                                       subtitles: subtitles,
                                       hasMMSub: widget.listening.hasMMSubtitle,
                                       onUserChangePage: (subtitle) async {
                                         final isPaused =
                                             !_controller.value.isPlaying;
                                         _controller.seekTo(subtitle.start);
-                                        if (isPaused) {
-                                          // Re-pause after a brief delay to avoid auto-play
-                                          await Future.delayed(const Duration(
-                                              milliseconds: 100));
-                                          _controller.pause();
-                                        }
+                                        // if (isPaused) {
+                                        //   await Future.delayed(const Duration(
+                                        //       milliseconds: 100));
+                                        //   _controller.pause();
+                                        // }
                                       },
                                     );
                                   },

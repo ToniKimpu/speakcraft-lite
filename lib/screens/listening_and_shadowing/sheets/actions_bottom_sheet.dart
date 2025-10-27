@@ -67,24 +67,26 @@ class ActionsBottomSheet extends StatelessWidget {
                 );
               },
             ),
-            Divider(
-              height: 1,
-              color: Colors.white.withValues(alpha: 0.2),
-            ),
-            _ActionItem(
-              icon: Icons.lightbulb_outline,
-              label: 'Learn Vocabularies',
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushNamed(
-                  context,
-                  PmpRoutes.vocabularyListeningPage,
-                  arguments: {
-                    "listening": listening,
-                  },
-                );
-              },
-            ),
+            if (listening.hasVocabularies)
+              Divider(
+                height: 1,
+                color: Colors.white.withValues(alpha: 0.2),
+              ),
+            if (listening.hasVocabularies)
+              _ActionItem(
+                icon: Icons.lightbulb_outline,
+                label: 'Learn Vocabularies',
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(
+                    context,
+                    PmpRoutes.vocabularyListeningPage,
+                    arguments: {
+                      "listening": listening,
+                    },
+                  );
+                },
+              ),
             Divider(
               height: 1,
               color: Colors.white.withValues(alpha: 0.2),
@@ -115,6 +117,24 @@ class ActionsBottomSheet extends StatelessWidget {
                 Navigator.pushNamed(
                   context,
                   PmpRoutes.shadowingPage,
+                  arguments: {
+                    "listening": listening,
+                  },
+                );
+              },
+            ),
+            Divider(
+              height: 1,
+              color: Colors.white.withValues(alpha: 0.2),
+            ),
+            _ActionItem(
+              icon: Icons.check_circle_outline,
+              label: 'Record Now',
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushNamed(
+                  context,
+                  PmpRoutes.speechPracticeSessionPage,
                   arguments: {
                     "listening": listening,
                   },
