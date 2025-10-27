@@ -112,7 +112,7 @@ class $AiSentencePracticeTableTable extends AiSentencePracticeTable
   @override
   AiSentencePractice map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return AiSentencePractice(
+    return AiSentencePractice.new(
       id: attachedDatabase.typeMapping
           .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
       inputSentence: attachedDatabase.typeMapping
@@ -577,7 +577,7 @@ class $ListeningPracticeAnswerTableTable extends ListeningPracticeAnswerTable
   ListeningPracticeAnswer map(Map<String, dynamic> data,
       {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return ListeningPracticeAnswer(
+    return ListeningPracticeAnswer.new(
       id: attachedDatabase.typeMapping
           .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
       groupId: attachedDatabase.typeMapping
@@ -780,7 +780,7 @@ class $SpokenPatternExerciseAnswerTableTable
   @override
   ExerciseUserAnswer map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return ExerciseUserAnswer(
+    return ExerciseUserAnswer.new(
       userAnswer: attachedDatabase.typeMapping
           .read(DriftSqlType.string, data['${effectivePrefix}user_answer'])!,
       patternExerciseId: attachedDatabase.typeMapping.read(
@@ -859,6 +859,234 @@ class SpokenPatternExerciseAnswerTableCompanion
   }
 }
 
+class $UserRecordedSentenceAudioTableTable
+    extends UserRecordedSentenceAudioTable
+    with
+        TableInfo<$UserRecordedSentenceAudioTableTable,
+            UserRecordedSentenceAudio> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UserRecordedSentenceAudioTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _sentenceIdMeta =
+      const VerificationMeta('sentenceId');
+  @override
+  late final GeneratedColumn<String> sentenceId = GeneratedColumn<String>(
+      'sentence_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _youtubeIdMeta =
+      const VerificationMeta('youtubeId');
+  @override
+  late final GeneratedColumn<String> youtubeId = GeneratedColumn<String>(
+      'youtube_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _audioPathMeta =
+      const VerificationMeta('audioPath');
+  @override
+  late final GeneratedColumn<String> audioPath = GeneratedColumn<String>(
+      'audio_path', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _audioNameMeta =
+      const VerificationMeta('audioName');
+  @override
+  late final GeneratedColumn<String> audioName = GeneratedColumn<String>(
+      'audio_name', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime,
+      requiredDuringInsert: false,
+      defaultValue: currentDateAndTime);
+  @override
+  List<GeneratedColumn> get $columns =>
+      [id, sentenceId, youtubeId, audioPath, audioName, createdAt];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'user_recorded_sentence_audio_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<UserRecordedSentenceAudio> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('sentence_id')) {
+      context.handle(
+          _sentenceIdMeta,
+          sentenceId.isAcceptableOrUnknown(
+              data['sentence_id']!, _sentenceIdMeta));
+    } else if (isInserting) {
+      context.missing(_sentenceIdMeta);
+    }
+    if (data.containsKey('youtube_id')) {
+      context.handle(_youtubeIdMeta,
+          youtubeId.isAcceptableOrUnknown(data['youtube_id']!, _youtubeIdMeta));
+    } else if (isInserting) {
+      context.missing(_youtubeIdMeta);
+    }
+    if (data.containsKey('audio_path')) {
+      context.handle(_audioPathMeta,
+          audioPath.isAcceptableOrUnknown(data['audio_path']!, _audioPathMeta));
+    } else if (isInserting) {
+      context.missing(_audioPathMeta);
+    }
+    if (data.containsKey('audio_name')) {
+      context.handle(_audioNameMeta,
+          audioName.isAcceptableOrUnknown(data['audio_name']!, _audioNameMeta));
+    } else if (isInserting) {
+      context.missing(_audioNameMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  UserRecordedSentenceAudio map(Map<String, dynamic> data,
+      {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return UserRecordedSentenceAudio.new(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      sentenceId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}sentence_id'])!,
+      youtubeId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}youtube_id'])!,
+      audioPath: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}audio_path'])!,
+      audioName: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}audio_name'])!,
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+    );
+  }
+
+  @override
+  $UserRecordedSentenceAudioTableTable createAlias(String alias) {
+    return $UserRecordedSentenceAudioTableTable(attachedDatabase, alias);
+  }
+}
+
+class UserRecordedSentenceAudioTableCompanion
+    extends UpdateCompanion<UserRecordedSentenceAudio> {
+  final Value<int> id;
+  final Value<String> sentenceId;
+  final Value<String> youtubeId;
+  final Value<String> audioPath;
+  final Value<String> audioName;
+  final Value<DateTime> createdAt;
+  const UserRecordedSentenceAudioTableCompanion({
+    this.id = const Value.absent(),
+    this.sentenceId = const Value.absent(),
+    this.youtubeId = const Value.absent(),
+    this.audioPath = const Value.absent(),
+    this.audioName = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  });
+  UserRecordedSentenceAudioTableCompanion.insert({
+    this.id = const Value.absent(),
+    required String sentenceId,
+    required String youtubeId,
+    required String audioPath,
+    required String audioName,
+    this.createdAt = const Value.absent(),
+  })  : sentenceId = Value(sentenceId),
+        youtubeId = Value(youtubeId),
+        audioPath = Value(audioPath),
+        audioName = Value(audioName);
+  static Insertable<UserRecordedSentenceAudio> custom({
+    Expression<int>? id,
+    Expression<String>? sentenceId,
+    Expression<String>? youtubeId,
+    Expression<String>? audioPath,
+    Expression<String>? audioName,
+    Expression<DateTime>? createdAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (sentenceId != null) 'sentence_id': sentenceId,
+      if (youtubeId != null) 'youtube_id': youtubeId,
+      if (audioPath != null) 'audio_path': audioPath,
+      if (audioName != null) 'audio_name': audioName,
+      if (createdAt != null) 'created_at': createdAt,
+    });
+  }
+
+  UserRecordedSentenceAudioTableCompanion copyWith(
+      {Value<int>? id,
+      Value<String>? sentenceId,
+      Value<String>? youtubeId,
+      Value<String>? audioPath,
+      Value<String>? audioName,
+      Value<DateTime>? createdAt}) {
+    return UserRecordedSentenceAudioTableCompanion(
+      id: id ?? this.id,
+      sentenceId: sentenceId ?? this.sentenceId,
+      youtubeId: youtubeId ?? this.youtubeId,
+      audioPath: audioPath ?? this.audioPath,
+      audioName: audioName ?? this.audioName,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (sentenceId.present) {
+      map['sentence_id'] = Variable<String>(sentenceId.value);
+    }
+    if (youtubeId.present) {
+      map['youtube_id'] = Variable<String>(youtubeId.value);
+    }
+    if (audioPath.present) {
+      map['audio_path'] = Variable<String>(audioPath.value);
+    }
+    if (audioName.present) {
+      map['audio_name'] = Variable<String>(audioName.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserRecordedSentenceAudioTableCompanion(')
+          ..write('id: $id, ')
+          ..write('sentenceId: $sentenceId, ')
+          ..write('youtubeId: $youtubeId, ')
+          ..write('audioPath: $audioPath, ')
+          ..write('audioName: $audioName, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -871,6 +1099,9 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $SpokenPatternExerciseAnswerTableTable
       spokenPatternExerciseAnswerTable =
       $SpokenPatternExerciseAnswerTableTable(this);
+  late final $UserRecordedSentenceAudioTableTable
+      userRecordedSentenceAudioTable =
+      $UserRecordedSentenceAudioTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -879,7 +1110,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         aiSentencePracticeTable,
         userExampleAnswerTable,
         listeningPracticeAnswerTable,
-        spokenPatternExerciseAnswerTable
+        spokenPatternExerciseAnswerTable,
+        userRecordedSentenceAudioTable
       ];
 }
 
@@ -1572,6 +1804,196 @@ typedef $$SpokenPatternExerciseAnswerTableTableProcessedTableManager
         ),
         ExerciseUserAnswer,
         PrefetchHooks Function()>;
+typedef $$UserRecordedSentenceAudioTableTableCreateCompanionBuilder
+    = UserRecordedSentenceAudioTableCompanion Function({
+  Value<int> id,
+  required String sentenceId,
+  required String youtubeId,
+  required String audioPath,
+  required String audioName,
+  Value<DateTime> createdAt,
+});
+typedef $$UserRecordedSentenceAudioTableTableUpdateCompanionBuilder
+    = UserRecordedSentenceAudioTableCompanion Function({
+  Value<int> id,
+  Value<String> sentenceId,
+  Value<String> youtubeId,
+  Value<String> audioPath,
+  Value<String> audioName,
+  Value<DateTime> createdAt,
+});
+
+class $$UserRecordedSentenceAudioTableTableFilterComposer
+    extends Composer<_$AppDatabase, $UserRecordedSentenceAudioTableTable> {
+  $$UserRecordedSentenceAudioTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get sentenceId => $composableBuilder(
+      column: $table.sentenceId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get audioPath => $composableBuilder(
+      column: $table.audioPath, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get audioName => $composableBuilder(
+      column: $table.audioName, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$UserRecordedSentenceAudioTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $UserRecordedSentenceAudioTableTable> {
+  $$UserRecordedSentenceAudioTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get sentenceId => $composableBuilder(
+      column: $table.sentenceId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get audioPath => $composableBuilder(
+      column: $table.audioPath, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get audioName => $composableBuilder(
+      column: $table.audioName, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$UserRecordedSentenceAudioTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UserRecordedSentenceAudioTableTable> {
+  $$UserRecordedSentenceAudioTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get sentenceId => $composableBuilder(
+      column: $table.sentenceId, builder: (column) => column);
+
+  GeneratedColumn<String> get youtubeId =>
+      $composableBuilder(column: $table.youtubeId, builder: (column) => column);
+
+  GeneratedColumn<String> get audioPath =>
+      $composableBuilder(column: $table.audioPath, builder: (column) => column);
+
+  GeneratedColumn<String> get audioName =>
+      $composableBuilder(column: $table.audioName, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$UserRecordedSentenceAudioTableTableTableManager
+    extends RootTableManager<
+        _$AppDatabase,
+        $UserRecordedSentenceAudioTableTable,
+        UserRecordedSentenceAudio,
+        $$UserRecordedSentenceAudioTableTableFilterComposer,
+        $$UserRecordedSentenceAudioTableTableOrderingComposer,
+        $$UserRecordedSentenceAudioTableTableAnnotationComposer,
+        $$UserRecordedSentenceAudioTableTableCreateCompanionBuilder,
+        $$UserRecordedSentenceAudioTableTableUpdateCompanionBuilder,
+        (
+          UserRecordedSentenceAudio,
+          BaseReferences<_$AppDatabase, $UserRecordedSentenceAudioTableTable,
+              UserRecordedSentenceAudio>
+        ),
+        UserRecordedSentenceAudio,
+        PrefetchHooks Function()> {
+  $$UserRecordedSentenceAudioTableTableTableManager(
+      _$AppDatabase db, $UserRecordedSentenceAudioTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UserRecordedSentenceAudioTableTableFilterComposer(
+                  $db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UserRecordedSentenceAudioTableTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UserRecordedSentenceAudioTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<String> sentenceId = const Value.absent(),
+            Value<String> youtubeId = const Value.absent(),
+            Value<String> audioPath = const Value.absent(),
+            Value<String> audioName = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              UserRecordedSentenceAudioTableCompanion(
+            id: id,
+            sentenceId: sentenceId,
+            youtubeId: youtubeId,
+            audioPath: audioPath,
+            audioName: audioName,
+            createdAt: createdAt,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            required String sentenceId,
+            required String youtubeId,
+            required String audioPath,
+            required String audioName,
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              UserRecordedSentenceAudioTableCompanion.insert(
+            id: id,
+            sentenceId: sentenceId,
+            youtubeId: youtubeId,
+            audioPath: audioPath,
+            audioName: audioName,
+            createdAt: createdAt,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$UserRecordedSentenceAudioTableTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $UserRecordedSentenceAudioTableTable,
+        UserRecordedSentenceAudio,
+        $$UserRecordedSentenceAudioTableTableFilterComposer,
+        $$UserRecordedSentenceAudioTableTableOrderingComposer,
+        $$UserRecordedSentenceAudioTableTableAnnotationComposer,
+        $$UserRecordedSentenceAudioTableTableCreateCompanionBuilder,
+        $$UserRecordedSentenceAudioTableTableUpdateCompanionBuilder,
+        (
+          UserRecordedSentenceAudio,
+          BaseReferences<_$AppDatabase, $UserRecordedSentenceAudioTableTable,
+              UserRecordedSentenceAudio>
+        ),
+        UserRecordedSentenceAudio,
+        PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -1590,4 +2012,8 @@ class $AppDatabaseManager {
       get spokenPatternExerciseAnswerTable =>
           $$SpokenPatternExerciseAnswerTableTableTableManager(
               _db, _db.spokenPatternExerciseAnswerTable);
+  $$UserRecordedSentenceAudioTableTableTableManager
+      get userRecordedSentenceAudioTable =>
+          $$UserRecordedSentenceAudioTableTableTableManager(
+              _db, _db.userRecordedSentenceAudioTable);
 }

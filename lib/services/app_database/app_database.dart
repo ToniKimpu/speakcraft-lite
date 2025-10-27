@@ -6,9 +6,11 @@ import 'package:pmp_english/tables/ai_sentence_practice_table.dart';
 import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
 import '../../model/exercise_user_answer/exercise_user_answer.dart';
 import '../../model/listening_practice_answer/listening_practice_answer.dart';
+import '../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/spoken_pattern_exercise_answer_table.dart';
 import '../../tables/user_example_answer_table.dart';
+import '../../tables/user_recorded_sentence_audio_table.dart';
 
 part 'app_database.g.dart';
 
@@ -18,6 +20,7 @@ part 'app_database.g.dart';
     UserExampleAnswerTable,
     ListeningPracticeAnswerTable,
     SpokenPatternExerciseAnswerTable,
+    UserRecordedSentenceAudioTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {

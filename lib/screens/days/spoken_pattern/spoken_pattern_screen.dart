@@ -156,12 +156,13 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                         ),
                       ),
                       FooterWidget(
-                        spokenPatterns: _spokenPatterns,
+                        totalPage: _spokenPatterns.length,
                         currentPage: _currentPage,
-                        audioPlayer: _audioPlayer,
+                        // audioPlayer: _audioPlayer,
                         nextEnabled:
                             _doneIds.contains(_spokenPatterns[_currentPage].id),
                         onPageChanged: (newPage) {
+                          _audioPlayer.stop();
                           setState(() {
                             _currentPage = newPage;
                             if (_spokenPatterns[_currentPage].audioPath !=

@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:pmp_english/model/listening/listening.dart';
+import 'package:pmp_english/screens/days/spoken_pattern/widgets/footer_widget.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:record/record.dart';
@@ -124,8 +125,72 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                         totalDuration: Duration(seconds: widget.listening.end),
                       ),
                       const SizedBox(height: 16),
+                      SizedBox(
+                        height: 120,
+                        child: PageView.builder(
+                          itemCount: 10,
+                          controller: PageController(initialPage: 0),
+                          onPageChanged: (index) {
+                            // _controller.load(_subtitles[index].videoId);
+                          },
+                          itemBuilder: (context, index) {
+                            return const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                "When I was 27 years old, I left a very demanding job, for a job that is even more demanding — Teaching.",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  height: 1.4,
+                                  color: Colors.white,
+                                  fontFamily: "ArchivoBlack Regular",
+                                ),
+                                maxLines: 5,
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      Recorder(
+                        onStop: _onRecordingStopped,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 16.0),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                height: 1,
+                                color: Colors.white.withValues(alpha: 0.2),
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                              ),
+                            ),
+                            const Text(
+                              "Records",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontFamily: "ArchivoBlack Regular",
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                height: 1,
+                                color: Colors.white.withValues(alpha: 0.2),
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Spacer(),
-                      Recorder(onStop: _onRecordingStopped),
+                      FooterWidget(
+                        totalPage: 10,
+                        currentPage: 1,
+                        onPageChanged: (index) {},
+                        nextEnabled: true,
+                      )
                     ],
                   ),
                 );
@@ -239,68 +304,115 @@ class _RecorderState extends State<Recorder> {
     final isPaused = _recordState == RecordState.pause;
 
     return SafeArea(
-      child: Container(
-        width: double.infinity,
-        margin: const EdgeInsets.all(16),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.white.withValues(alpha: 0.04),
-          border: Border.all(
-            color: Colors.white.withValues(alpha: 0.2),
-            width: 1.5,
-          ),
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _buildCircleButton(
-                  icon: isRecording ? Icons.stop : Icons.mic,
-                  color: isRecording ? Colors.redAccent : Colors.white,
-                  iconColor: isRecording ? Colors.white : Colors.black,
-                  onTap: () => isRecording ? _stop() : _start(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: _recordState != RecordState.stop
+                ? null
+                : () {
+                    _start();
+                  },
+            child: Ink(
+              width: double.infinity,
+              height: 52,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                color: Colors.white.withValues(alpha: 0.04),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.2),
+                  width: 1.5,
                 ),
-                const SizedBox(width: 18),
-                if (_recordState != RecordState.stop)
-                  _buildCircleButton(
-                    icon: isPaused ? Icons.play_arrow : Icons.pause,
-                    color: Colors.orange,
-                    iconColor: Colors.white,
-                    onTap: () => isPaused ? _resume() : _pause(),
-                  ),
-                const SizedBox(width: 22),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      _recordState == RecordState.stop
-                          ? "Tap to record"
-                          : isPaused
-                              ? "Paused"
-                              : "Recording...",
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
-                      ),
+              ),
+              child: _recordState == RecordState.stop
+                  ? const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.mic,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Text(
+                          "Tap to record",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    )
+                  : Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        // const SizedBox(width: 18),
+                        // if (_recordState != RecordState.stop)
+                        // _buildCircleButton(
+                        //   icon: isPaused ? Icons.play_arrow : Icons.pause,
+                        //   color: Colors.orange,
+                        //   iconColor: Colors.white,
+                        //   onTap: () => isPaused ? _resume() : _pause(),
+                        // ),
+                        InkWell(
+                          borderRadius: BorderRadius.circular(100),
+                          onTap: () => _stop(),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Ink(
+                              width: 20,
+                              height: 20,
+                              decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(4),
+                                boxShadow: <BoxShadow>[
+                                  BoxShadow(
+                                    color: Colors.black.withValues(alpha: 0.2),
+                                    spreadRadius: 3,
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 4),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        InkWell(
+                          borderRadius: BorderRadius.circular(100),
+                          onTap: () => isPaused ? _resume() : _pause(),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4),
+                            child: Icon(
+                              isPaused ? Icons.play_arrow : Icons.pause,
+                              size: 32,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const Spacer(),
+                        Text(
+                          "$minutes:$seconds",
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            letterSpacing: 0.5,
+                            fontFamily: "ArchivoBlack Regular",
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 3),
-                    Text(
-                      "$minutes:$seconds",
-                      style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontSize: 12,
-                        letterSpacing: 0.5,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
             ),
-          ],
+          ),
         ),
       ),
     );

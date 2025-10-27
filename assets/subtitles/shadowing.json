@@ -1,0 +1,5610 @@
+[
+  {
+    "id": "#001",
+    "start": 12.923,
+    "end": 21.798,
+    "text": "When I was 27 years old, I left a very demanding job in management consulting for a job that was even more demanding, teaching.",
+    "words": [
+      {
+        "word": "When",
+        "start": 12.923,
+        "end": 13.063,
+        "score": 0.758
+      },
+      {
+        "word": "I",
+        "start": 13.103,
+        "end": 13.143,
+        "score": 0.847
+      },
+      {
+        "word": "was",
+        "start": 13.183,
+        "end": 13.284,
+        "score": 0.984
+      },
+      {
+        "word": "27",
+        "start": 13.304,
+        "end": 13.584,
+        "score": 0.686
+      },
+      {
+        "word": "years",
+        "start": 13.945,
+        "end": 14.145,
+        "score": 0.551
+      },
+      {
+        "word": "old,",
+        "start": 14.305,
+        "end": 14.486,
+        "score": 0.798
+      },
+      {
+        "word": "I",
+        "start": 14.506,
+        "end": 14.526,
+        "score": 0.995
+      },
+      {
+        "word": "left",
+        "start": 15.207,
+        "end": 15.387,
+        "score": 0.851
+      },
+      {
+        "word": "a",
+        "start": 15.427,
+        "end": 15.467,
+        "score": 0.5
+      },
+      {
+        "word": "very",
+        "start": 15.507,
+        "end": 15.708,
+        "score": 0.838
+      },
+      {
+        "word": "demanding",
+        "start": 15.788,
+        "end": 16.269,
+        "score": 0.872
+      },
+      {
+        "word": "job",
+        "start": 16.349,
+        "end": 16.649,
+        "score": 0.998
+      },
+      {
+        "word": "in",
+        "start": 16.73,
+        "end": 16.79,
+        "score": 0.941
+      },
+      {
+        "word": "management",
+        "start": 16.83,
+        "end": 17.21,
+        "score": 0.884
+      },
+      {
+        "word": "consulting",
+        "start": 17.25,
+        "end": 17.771,
+        "score": 0.914
+      },
+      {
+        "word": "for",
+        "start": 18.453,
+        "end": 18.573,
+        "score": 0.937
+      },
+      {
+        "word": "a",
+        "start": 18.613,
+        "end": 18.653,
+        "score": 0.5
+      },
+      {
+        "word": "job",
+        "start": 18.713,
+        "end": 18.993,
+        "score": 0.983
+      },
+      {
+        "word": "that",
+        "start": 19.034,
+        "end": 19.214,
+        "score": 0.883
+      },
+      {
+        "word": "was",
+        "start": 19.254,
+        "end": 19.414,
+        "score": 0.59
+      },
+      {
+        "word": "even",
+        "start": 19.434,
+        "end": 19.895,
+        "score": 0.737
+      },
+      {
+        "word": "more",
+        "start": 19.955,
+        "end": 20.155,
+        "score": 0.882
+      },
+      {
+        "word": "demanding,",
+        "start": 20.216,
+        "end": 20.716,
+        "score": 0.859
+      },
+      {
+        "word": "teaching.",
+        "start": 21.358,
+        "end": 21.798,
+        "score": 0.851
+      }
+    ]
+  },
+  {
+    "id": "#002",
+    "start": 21.818,
+    "end": 27.588,
+    "text": "I went to teach seventh graders math in the New York City public schools.",
+    "words": [
+      {
+        "word": "I",
+        "start": 21.818,
+        "end": 21.838,
+        "score": 1
+      },
+      {
+        "word": "went",
+        "start": 23.501,
+        "end": 23.661,
+        "score": 0.912
+      },
+      {
+        "word": "to",
+        "start": 23.682,
+        "end": 23.782,
+        "score": 0.66
+      },
+      {
+        "word": "teach",
+        "start": 23.842,
+        "end": 24.082,
+        "score": 0.766
+      },
+      {
+        "word": "seventh",
+        "start": 24.122,
+        "end": 24.503,
+        "score": 0.784
+      },
+      {
+        "word": "graders",
+        "start": 24.543,
+        "end": 24.924,
+        "score": 0.793
+      },
+      {
+        "word": "math",
+        "start": 24.964,
+        "end": 25.565,
+        "score": 0.855
+      },
+      {
+        "word": "in",
+        "start": 25.945,
+        "end": 26.006,
+        "score": 0.995
+      },
+      {
+        "word": "the",
+        "start": 26.046,
+        "end": 26.106,
+        "score": 0.994
+      },
+      {
+        "word": "New",
+        "start": 26.166,
+        "end": 26.266,
+        "score": 0.716
+      },
+      {
+        "word": "York",
+        "start": 26.286,
+        "end": 26.466,
+        "score": 0.88
+      },
+      {
+        "word": "City",
+        "start": 26.526,
+        "end": 26.787,
+        "score": 0.968
+      },
+      {
+        "word": "public",
+        "start": 26.867,
+        "end": 27.148,
+        "score": 0.842
+      },
+      {
+        "word": "schools.",
+        "start": 27.208,
+        "end": 27.588,
+        "score": 0.848
+      }
+    ]
+  },
+  {
+    "id": "#003",
+    "start": 28.39,
+    "end": 32.597,
+    "text": "And like any teacher, I made quizzes and tests, I gave out homework assignments.",
+    "words": [
+      {
+        "word": "And",
+        "start": 28.39,
+        "end": 28.47,
+        "score": 0.686
+      },
+      {
+        "word": "like",
+        "start": 28.53,
+        "end": 28.69,
+        "score": 0.879
+      },
+      {
+        "word": "any",
+        "start": 28.77,
+        "end": 28.911,
+        "score": 0.958
+      },
+      {
+        "word": "teacher,",
+        "start": 28.971,
+        "end": 29.391,
+        "score": 0.856
+      },
+      {
+        "word": "I",
+        "start": 29.411,
+        "end": 29.431,
+        "score": 1
+      },
+      {
+        "word": "made",
+        "start": 29.912,
+        "end": 30.053,
+        "score": 0.906
+      },
+      {
+        "word": "quizzes",
+        "start": 30.153,
+        "end": 30.493,
+        "score": 0.576
+      },
+      {
+        "word": "and",
+        "start": 30.513,
+        "end": 30.593,
+        "score": 0.926
+      },
+      {
+        "word": "tests,",
+        "start": 30.634,
+        "end": 31.014,
+        "score": 0.956
+      },
+      {
+        "word": "I",
+        "start": 31.335,
+        "end": 31.375,
+        "score": 0.975
+      },
+      {
+        "word": "gave",
+        "start": 31.415,
+        "end": 31.555,
+        "score": 0.949
+      },
+      {
+        "word": "out",
+        "start": 31.615,
+        "end": 31.715,
+        "score": 0.92
+      },
+      {
+        "word": "homework",
+        "start": 31.775,
+        "end": 32.016,
+        "score": 0.639
+      },
+      {
+        "word": "assignments.",
+        "start": 32.096,
+        "end": 32.597,
+        "score": 0.909
+      }
+    ]
+  },
+  {
+    "id": "#004",
+    "start": 33.238,
+    "end": 36.163,
+    "text": "When the work came back, I calculated grades.",
+    "words": [
+      {
+        "word": "When",
+        "start": 33.238,
+        "end": 33.358,
+        "score": 0.869
+      },
+      {
+        "word": "the",
+        "start": 33.398,
+        "end": 33.458,
+        "score": 0.998
+      },
+      {
+        "word": "work",
+        "start": 33.498,
+        "end": 33.659,
+        "score": 0.855
+      },
+      {
+        "word": "came",
+        "start": 33.719,
+        "end": 33.899,
+        "score": 0.786
+      },
+      {
+        "word": "back,",
+        "start": 33.939,
+        "end": 34.2,
+        "score": 0.999
+      },
+      {
+        "word": "I",
+        "start": 34.66,
+        "end": 34.701,
+        "score": 0.999
+      },
+      {
+        "word": "calculated",
+        "start": 34.761,
+        "end": 35.282,
+        "score": 0.916
+      },
+      {
+        "word": "grades.",
+        "start": 35.322,
+        "end": 36.163,
+        "score": 0.908
+      }
+    ]
+  },
+  {
+    "id": "#005",
+    "start": 36.835,
+    "end": 44.272,
+    "text": " What struck me was that IQ was not the only difference between my best and my worst students.",
+    "words": [
+      {
+        "word": "What",
+        "start": 36.835,
+        "end": 37.035,
+        "score": 0.889
+      },
+      {
+        "word": "struck",
+        "start": 37.116,
+        "end": 37.416,
+        "score": 0.896
+      },
+      {
+        "word": "me",
+        "start": 37.537,
+        "end": 37.717,
+        "score": 0.789
+      },
+      {
+        "word": "was",
+        "start": 37.757,
+        "end": 38.499,
+        "score": 0.784
+      },
+      {
+        "word": "that",
+        "start": 38.559,
+        "end": 38.679,
+        "score": 0.859
+      },
+      {
+        "word": "IQ",
+        "start": 38.84,
+        "end": 39.341,
+        "score": 0.752
+      },
+      {
+        "word": "was",
+        "start": 39.682,
+        "end": 39.822,
+        "score": 0.747
+      },
+      {
+        "word": "not",
+        "start": 40.002,
+        "end": 40.243,
+        "score": 0.898
+      },
+      {
+        "word": "the",
+        "start": 40.263,
+        "end": 40.483,
+        "score": 0.589
+      },
+      {
+        "word": "only",
+        "start": 40.684,
+        "end": 40.904,
+        "score": 0.927
+      },
+      {
+        "word": "difference",
+        "start": 40.985,
+        "end": 41.405,
+        "score": 0.897
+      },
+      {
+        "word": "between",
+        "start": 41.566,
+        "end": 41.887,
+        "score": 0.805
+      },
+      {
+        "word": "my",
+        "start": 41.947,
+        "end": 42.107,
+        "score": 0.865
+      },
+      {
+        "word": "best",
+        "start": 42.328,
+        "end": 42.708,
+        "score": 0.85
+      },
+      {
+        "word": "and",
+        "start": 43.23,
+        "end": 43.31,
+        "score": 0.813
+      },
+      {
+        "word": "my",
+        "start": 43.37,
+        "end": 43.49,
+        "score": 0.979
+      },
+      {
+        "word": "worst",
+        "start": 43.55,
+        "end": 43.851,
+        "score": 0.725
+      },
+      {
+        "word": "students.",
+        "start": 43.891,
+        "end": 44.272,
+        "score": 0.837
+      }
+    ]
+  },
+  {
+    "id": "#006",
+    "start": 45.194,
+    "end": 49.745,
+    "text": "Some of my strongest performers did not have stratospheric IQ scores.",
+    "words": [
+      {
+        "word": "Some",
+        "start": 45.194,
+        "end": 45.355,
+        "score": 0.93
+      },
+      {
+        "word": "of",
+        "start": 45.395,
+        "end": 45.435,
+        "score": 0.504
+      },
+      {
+        "word": "my",
+        "start": 45.515,
+        "end": 45.615,
+        "score": 0.993
+      },
+      {
+        "word": "strongest",
+        "start": 45.715,
+        "end": 46.216,
+        "score": 0.802
+      },
+      {
+        "word": "performers",
+        "start": 46.277,
+        "end": 46.818,
+        "score": 0.935
+      },
+      {
+        "word": "did",
+        "start": 47.279,
+        "end": 47.439,
+        "score": 0.952
+      },
+      {
+        "word": "not",
+        "start": 47.519,
+        "end": 47.74,
+        "score": 0.826
+      },
+      {
+        "word": "have",
+        "start": 47.82,
+        "end": 48.001,
+        "score": 0.818
+      },
+      {
+        "word": "stratospheric",
+        "start": 48.121,
+        "end": 48.903,
+        "score": 0.842
+      },
+      {
+        "word": "IQ",
+        "start": 49.023,
+        "end": 49.344,
+        "score": 0.75
+      },
+      {
+        "word": "scores.",
+        "start": 49.364,
+        "end": 49.745,
+        "score": 0.825
+      }
+    ]
+  },
+  {
+    "id": "#007",
+    "start": 50.486,
+    "end": 53.553,
+    "text": "Some of my smartest kids weren't doing so well.",
+    "words": [
+      {
+        "word": "Some",
+        "start": 50.486,
+        "end": 50.647,
+        "score": 0.861
+      },
+      {
+        "word": "of",
+        "start": 50.687,
+        "end": 50.727,
+        "score": 0.999
+      },
+      {
+        "word": "my",
+        "start": 50.787,
+        "end": 50.887,
+        "score": 0.83
+      },
+      {
+        "word": "smartest",
+        "start": 50.967,
+        "end": 51.368,
+        "score": 0.885
+      },
+      {
+        "word": "kids",
+        "start": 51.428,
+        "end": 51.709,
+        "score": 0.872
+      },
+      {
+        "word": "weren't",
+        "start": 52.471,
+        "end": 52.691,
+        "score": 0.842
+      },
+      {
+        "word": "doing",
+        "start": 52.772,
+        "end": 53.012,
+        "score": 0.954
+      },
+      {
+        "word": "so",
+        "start": 53.112,
+        "end": 53.273,
+        "score": 0.964
+      },
+      {
+        "word": "well.",
+        "start": 53.333,
+        "end": 53.553,
+        "score": 0.986
+      }
+    ]
+  },
+  {
+    "id": "#008",
+    "start": 54.495,
+    "end": 56.059,
+    "text": "And that got me thinking.",
+    "words": [
+      {
+        "word": "And",
+        "start": 54.495,
+        "end": 54.576,
+        "score": 0.814
+      },
+      {
+        "word": "that",
+        "start": 54.636,
+        "end": 54.776,
+        "score": 0.992
+      },
+      {
+        "word": "got",
+        "start": 54.816,
+        "end": 54.997,
+        "score": 0.965
+      },
+      {
+        "word": "me",
+        "start": 55.037,
+        "end": 55.137,
+        "score": 0.982
+      },
+      {
+        "word": "thinking.",
+        "start": 55.197,
+        "end": 56.059,
+        "score": 0.916
+      }
+    ]
+  },
+  {
+    "id": "#009",
+    "start": 56.512,
+    "end": 60.879,
+    "text": " The kinds of things you need to learn in seventh grade math, sure, they're hard.",
+    "words": [
+      {
+        "word": "The",
+        "start": 56.512,
+        "end": 56.672,
+        "score": 0.267
+      },
+      {
+        "word": "kinds",
+        "start": 56.692,
+        "end": 56.792,
+        "score": 0.233
+      },
+      {
+        "word": "of",
+        "start": 56.853,
+        "end": 56.893,
+        "score": 0.914
+      },
+      {
+        "word": "things",
+        "start": 56.973,
+        "end": 57.333,
+        "score": 0.789
+      },
+      {
+        "word": "you",
+        "start": 57.413,
+        "end": 57.514,
+        "score": 0.999
+      },
+      {
+        "word": "need",
+        "start": 57.554,
+        "end": 57.694,
+        "score": 0.939
+      },
+      {
+        "word": "to",
+        "start": 57.734,
+        "end": 57.794,
+        "score": 0.748
+      },
+      {
+        "word": "learn",
+        "start": 57.854,
+        "end": 58.095,
+        "score": 0.737
+      },
+      {
+        "word": "in",
+        "start": 58.135,
+        "end": 58.215,
+        "score": 0.84
+      },
+      {
+        "word": "seventh",
+        "start": 58.255,
+        "end": 58.515,
+        "score": 0.921
+      },
+      {
+        "word": "grade",
+        "start": 58.555,
+        "end": 58.756,
+        "score": 0.808
+      },
+      {
+        "word": "math,",
+        "start": 58.796,
+        "end": 59.136,
+        "score": 0.942
+      },
+      {
+        "word": "sure,",
+        "start": 59.677,
+        "end": 60.038,
+        "score": 0.83
+      },
+      {
+        "word": "they're",
+        "start": 60.078,
+        "end": 60.378,
+        "score": 0.541
+      },
+      {
+        "word": "hard.",
+        "start": 60.418,
+        "end": 60.879,
+        "score": 0.783
+      }
+    ]
+  },
+  {
+    "id": "#010",
+    "start": 61.2,
+    "end": 64.104,
+    "text": "Ratios, decimals, the area of a parallelogram.",
+    "words": [
+      {
+        "word": "Ratios,",
+        "start": 61.2,
+        "end": 61.801,
+        "score": 0.921
+      },
+      {
+        "word": "decimals,",
+        "start": 61.861,
+        "end": 62.502,
+        "score": 0.929
+      },
+      {
+        "word": "the",
+        "start": 62.562,
+        "end": 62.662,
+        "score": 0.619
+      },
+      {
+        "word": "area",
+        "start": 62.782,
+        "end": 63.063,
+        "score": 0.781
+      },
+      {
+        "word": "of",
+        "start": 63.103,
+        "end": 63.143,
+        "score": 1
+      },
+      {
+        "word": "a",
+        "start": 63.163,
+        "end": 63.183,
+        "score": 0.986
+      },
+      {
+        "word": "parallelogram.",
+        "start": 63.283,
+        "end": 64.104,
+        "score": 0.881
+      }
+    ]
+  },
+  {
+    "id": "#011",
+    "start": 64.725,
+    "end": 66.748,
+    "text": "But these concepts are not impossible.",
+    "words": [
+      {
+        "word": "But",
+        "start": 64.725,
+        "end": 64.825,
+        "score": 0.834
+      },
+      {
+        "word": "these",
+        "start": 64.865,
+        "end": 65.066,
+        "score": 0.682
+      },
+      {
+        "word": "concepts",
+        "start": 65.186,
+        "end": 65.687,
+        "score": 0.856
+      },
+      {
+        "word": "are",
+        "start": 65.847,
+        "end": 65.927,
+        "score": 0.859
+      },
+      {
+        "word": "not",
+        "start": 65.967,
+        "end": 66.087,
+        "score": 0.916
+      },
+      {
+        "word": "impossible.",
+        "start": 66.127,
+        "end": 66.748,
+        "score": 0.93
+      }
+    ]
+  },
+  {
+    "id": "#012",
+    "start": 67.55,
+    "end": 75.603,
+    "text": "And I was firmly convinced that every one of my students could learn the material if they worked hard and long enough.",
+    "words": [
+      {
+        "word": "And",
+        "start": 67.55,
+        "end": 67.63,
+        "score": 0.983
+      },
+      {
+        "word": "I",
+        "start": 67.71,
+        "end": 67.75,
+        "score": 0.999
+      },
+      {
+        "word": "was",
+        "start": 67.81,
+        "end": 67.91,
+        "score": 0.844
+      },
+      {
+        "word": "firmly",
+        "start": 67.95,
+        "end": 68.491,
+        "score": 0.849
+      },
+      {
+        "word": "convinced",
+        "start": 68.551,
+        "end": 69.072,
+        "score": 0.83
+      },
+      {
+        "word": "that",
+        "start": 69.573,
+        "end": 69.713,
+        "score": 0.902
+      },
+      {
+        "word": "every",
+        "start": 69.853,
+        "end": 70.054,
+        "score": 0.821
+      },
+      {
+        "word": "one",
+        "start": 70.094,
+        "end": 70.374,
+        "score": 0.842
+      },
+      {
+        "word": "of",
+        "start": 70.414,
+        "end": 70.454,
+        "score": 1
+      },
+      {
+        "word": "my",
+        "start": 70.535,
+        "end": 70.715,
+        "score": 0.914
+      },
+      {
+        "word": "students",
+        "start": 70.795,
+        "end": 71.196,
+        "score": 0.672
+      },
+      {
+        "word": "could",
+        "start": 71.676,
+        "end": 71.957,
+        "score": 0.692
+      },
+      {
+        "word": "learn",
+        "start": 71.997,
+        "end": 72.558,
+        "score": 0.603
+      },
+      {
+        "word": "the",
+        "start": 72.578,
+        "end": 72.999,
+        "score": 0.916
+      },
+      {
+        "word": "material",
+        "start": 73.039,
+        "end": 73.539,
+        "score": 0.835
+      },
+      {
+        "word": "if",
+        "start": 73.579,
+        "end": 74.341,
+        "score": 0.956
+      },
+      {
+        "word": "they",
+        "start": 74.381,
+        "end": 74.481,
+        "score": 0.98
+      },
+      {
+        "word": "worked",
+        "start": 74.521,
+        "end": 74.761,
+        "score": 0.871
+      },
+      {
+        "word": "hard",
+        "start": 74.801,
+        "end": 74.982,
+        "score": 0.972
+      },
+      {
+        "word": "and",
+        "start": 75.022,
+        "end": 75.102,
+        "score": 0.928
+      },
+      {
+        "word": "long",
+        "start": 75.142,
+        "end": 75.322,
+        "score": 0.776
+      },
+      {
+        "word": "enough.",
+        "start": 75.382,
+        "end": 75.603,
+        "score": 0.809
+      }
+    ]
+  },
+  {
+    "id": "#013",
+    "start": 77.045,
+    "end": 78.908,
+    "text": "After several more years of teaching,",
+    "words": [
+      {
+        "word": "After",
+        "start": 77.045,
+        "end": 77.205,
+        "score": 0.996
+      },
+      {
+        "word": "several",
+        "start": 77.245,
+        "end": 77.626,
+        "score": 0.782
+      },
+      {
+        "word": "more",
+        "start": 77.666,
+        "end": 77.886,
+        "score": 0.835
+      },
+      {
+        "word": "years",
+        "start": 77.926,
+        "end": 78.147,
+        "score": 0.537
+      },
+      {
+        "word": "of",
+        "start": 78.227,
+        "end": 78.267,
+        "score": 0.995
+      },
+      {
+        "word": "teaching,",
+        "start": 78.327,
+        "end": 78.908,
+        "score": 0.775
+      }
+    ]
+  },
+  {
+    "id": "#014",
+    "start": 79.462,
+    "end": 91.034,
+    "text": " I came to the conclusion that what we need in education is a much better understanding of students and learning from a motivational perspective, from a psychological perspective.",
+    "words": [
+      {
+        "word": "I",
+        "start": 79.462,
+        "end": 79.642,
+        "score": 0.649
+      },
+      {
+        "word": "came",
+        "start": 79.662,
+        "end": 79.842,
+        "score": 0.894
+      },
+      {
+        "word": "to",
+        "start": 79.882,
+        "end": 79.942,
+        "score": 0.98
+      },
+      {
+        "word": "the",
+        "start": 79.983,
+        "end": 80.043,
+        "score": 0.998
+      },
+      {
+        "word": "conclusion",
+        "start": 80.083,
+        "end": 80.683,
+        "score": 0.719
+      },
+      {
+        "word": "that",
+        "start": 80.723,
+        "end": 81.164,
+        "score": 0.88
+      },
+      {
+        "word": "what",
+        "start": 81.264,
+        "end": 81.424,
+        "score": 0.78
+      },
+      {
+        "word": "we",
+        "start": 81.484,
+        "end": 81.644,
+        "score": 0.994
+      },
+      {
+        "word": "need",
+        "start": 81.744,
+        "end": 81.965,
+        "score": 0.937
+      },
+      {
+        "word": "in",
+        "start": 82.025,
+        "end": 82.085,
+        "score": 0.988
+      },
+      {
+        "word": "education",
+        "start": 82.165,
+        "end": 82.685,
+        "score": 0.803
+      },
+      {
+        "word": "is",
+        "start": 82.725,
+        "end": 83.266,
+        "score": 0.86
+      },
+      {
+        "word": "a",
+        "start": 83.306,
+        "end": 83.326,
+        "score": 0.003
+      },
+      {
+        "word": "much",
+        "start": 83.466,
+        "end": 83.666,
+        "score": 0.813
+      },
+      {
+        "word": "better",
+        "start": 83.766,
+        "end": 84.007,
+        "score": 0.856
+      },
+      {
+        "word": "understanding",
+        "start": 84.087,
+        "end": 84.788,
+        "score": 0.848
+      },
+      {
+        "word": "of",
+        "start": 84.808,
+        "end": 85.028,
+        "score": 0.876
+      },
+      {
+        "word": "students",
+        "start": 85.168,
+        "end": 85.628,
+        "score": 0.837
+      },
+      {
+        "word": "and",
+        "start": 85.749,
+        "end": 85.829,
+        "score": 0.939
+      },
+      {
+        "word": "learning",
+        "start": 85.909,
+        "end": 86.309,
+        "score": 0.72
+      },
+      {
+        "word": "from",
+        "start": 86.689,
+        "end": 86.83,
+        "score": 0.893
+      },
+      {
+        "word": "a",
+        "start": 86.87,
+        "end": 86.93,
+        "score": 0.333
+      },
+      {
+        "word": "motivational",
+        "start": 86.99,
+        "end": 87.751,
+        "score": 0.93
+      },
+      {
+        "word": "perspective,",
+        "start": 87.831,
+        "end": 88.511,
+        "score": 0.805
+      },
+      {
+        "word": "from",
+        "start": 88.992,
+        "end": 89.132,
+        "score": 0.734
+      },
+      {
+        "word": "a",
+        "start": 89.172,
+        "end": 89.212,
+        "score": 0.445
+      },
+      {
+        "word": "psychological",
+        "start": 89.332,
+        "end": 90.133,
+        "score": 0.802
+      },
+      {
+        "word": "perspective.",
+        "start": 90.193,
+        "end": 91.034,
+        "score": 0.896
+      }
+    ]
+  },
+  {
+    "id": "#015",
+    "start": 91.955,
+    "end": 97,
+    "text": "In education, the one thing we know how to measure best is IQ.",
+    "words": [
+      {
+        "word": "In",
+        "start": 91.955,
+        "end": 91.995,
+        "score": 0.966
+      },
+      {
+        "word": "education,",
+        "start": 92.075,
+        "end": 92.616,
+        "score": 0.811
+      },
+      {
+        "word": "the",
+        "start": 92.656,
+        "end": 93.096,
+        "score": 0.814
+      },
+      {
+        "word": "one",
+        "start": 93.316,
+        "end": 93.436,
+        "score": 0.647
+      },
+      {
+        "word": "thing",
+        "start": 93.577,
+        "end": 93.857,
+        "score": 0.807
+      },
+      {
+        "word": "we",
+        "start": 93.897,
+        "end": 94.538,
+        "score": 0.928
+      },
+      {
+        "word": "know",
+        "start": 94.598,
+        "end": 94.738,
+        "score": 0.646
+      },
+      {
+        "word": "how",
+        "start": 94.798,
+        "end": 94.898,
+        "score": 0.997
+      },
+      {
+        "word": "to",
+        "start": 94.938,
+        "end": 94.978,
+        "score": 1
+      },
+      {
+        "word": "measure",
+        "start": 95.038,
+        "end": 95.298,
+        "score": 0.703
+      },
+      {
+        "word": "best",
+        "start": 95.398,
+        "end": 95.759,
+        "score": 0.899
+      },
+      {
+        "word": "is",
+        "start": 96.319,
+        "end": 96.4,
+        "score": 0.97
+      },
+      {
+        "word": "IQ.",
+        "start": 96.42,
+        "end": 97,
+        "score": 0.822
+      }
+    ]
+  },
+  {
+    "id": "#016",
+    "start": 98.261,
+    "end": 107.511,
+    "text": "But what if doing well in school and in life depends on much more than your ability to learn quickly and easily?",
+    "words": [
+      {
+        "word": "But",
+        "start": 98.261,
+        "end": 98.382,
+        "score": 0.889
+      },
+      {
+        "word": "what",
+        "start": 98.482,
+        "end": 98.702,
+        "score": 0.822
+      },
+      {
+        "word": "if",
+        "start": 98.862,
+        "end": 98.922,
+        "score": 0.98
+      },
+      {
+        "word": "doing",
+        "start": 99.042,
+        "end": 99.303,
+        "score": 0.767
+      },
+      {
+        "word": "well",
+        "start": 99.383,
+        "end": 99.563,
+        "score": 0.936
+      },
+      {
+        "word": "in",
+        "start": 99.623,
+        "end": 99.663,
+        "score": 0.697
+      },
+      {
+        "word": "school",
+        "start": 99.823,
+        "end": 100.203,
+        "score": 0.658
+      },
+      {
+        "word": "and",
+        "start": 100.244,
+        "end": 100.964,
+        "score": 0.799
+      },
+      {
+        "word": "in",
+        "start": 101.064,
+        "end": 101.124,
+        "score": 0.905
+      },
+      {
+        "word": "life",
+        "start": 101.285,
+        "end": 101.605,
+        "score": 0.683
+      },
+      {
+        "word": "depends",
+        "start": 102.286,
+        "end": 102.686,
+        "score": 0.875
+      },
+      {
+        "word": "on",
+        "start": 102.846,
+        "end": 102.906,
+        "score": 0.98
+      },
+      {
+        "word": "much",
+        "start": 102.946,
+        "end": 103.287,
+        "score": 0.8
+      },
+      {
+        "word": "more",
+        "start": 103.467,
+        "end": 103.787,
+        "score": 0.775
+      },
+      {
+        "word": "than",
+        "start": 103.827,
+        "end": 104.368,
+        "score": 0.897
+      },
+      {
+        "word": "your",
+        "start": 104.408,
+        "end": 104.668,
+        "score": 0.796
+      },
+      {
+        "word": "ability",
+        "start": 104.688,
+        "end": 105.089,
+        "score": 0.918
+      },
+      {
+        "word": "to",
+        "start": 105.129,
+        "end": 105.229,
+        "score": 0.863
+      },
+      {
+        "word": "learn",
+        "start": 105.289,
+        "end": 105.489,
+        "score": 0.611
+      },
+      {
+        "word": "quickly",
+        "start": 105.629,
+        "end": 106.11,
+        "score": 0.897
+      },
+      {
+        "word": "and",
+        "start": 106.13,
+        "end": 106.79,
+        "score": 0.751
+      },
+      {
+        "word": "easily?",
+        "start": 106.93,
+        "end": 107.511,
+        "score": 0.877
+      }
+    ]
+  },
+  {
+    "id": "#017",
+    "start": 108.47,
+    "end": 112.994,
+    "text": " So I left the classroom and I went to graduate school to become a psychologist.",
+    "words": [
+      {
+        "word": "So",
+        "start": 108.47,
+        "end": 108.69,
+        "score": 0.798
+      },
+      {
+        "word": "I",
+        "start": 108.75,
+        "end": 108.79,
+        "score": 0.901
+      },
+      {
+        "word": "left",
+        "start": 108.83,
+        "end": 109.011,
+        "score": 0.926
+      },
+      {
+        "word": "the",
+        "start": 109.031,
+        "end": 109.111,
+        "score": 0.819
+      },
+      {
+        "word": "classroom",
+        "start": 109.151,
+        "end": 109.671,
+        "score": 0.916
+      },
+      {
+        "word": "and",
+        "start": 110.412,
+        "end": 110.492,
+        "score": 0.767
+      },
+      {
+        "word": "I",
+        "start": 110.512,
+        "end": 110.532,
+        "score": 0.986
+      },
+      {
+        "word": "went",
+        "start": 110.572,
+        "end": 110.692,
+        "score": 0.863
+      },
+      {
+        "word": "to",
+        "start": 110.712,
+        "end": 110.772,
+        "score": 0.814
+      },
+      {
+        "word": "graduate",
+        "start": 110.832,
+        "end": 111.213,
+        "score": 0.922
+      },
+      {
+        "word": "school",
+        "start": 111.253,
+        "end": 111.533,
+        "score": 0.727
+      },
+      {
+        "word": "to",
+        "start": 111.593,
+        "end": 111.673,
+        "score": 0.973
+      },
+      {
+        "word": "become",
+        "start": 111.713,
+        "end": 112.033,
+        "score": 0.999
+      },
+      {
+        "word": "a",
+        "start": 112.053,
+        "end": 112.073,
+        "score": 1
+      },
+      {
+        "word": "psychologist.",
+        "start": 112.214,
+        "end": 112.994,
+        "score": 0.773
+      }
+    ]
+  },
+  {
+    "id": "#018",
+    "start": 114.055,
+    "end": 118.5,
+    "text": "I started studying kids and adults in all kinds of super challenging settings.",
+    "words": [
+      {
+        "word": "I",
+        "start": 114.055,
+        "end": 114.095,
+        "score": 0.995
+      },
+      {
+        "word": "started",
+        "start": 114.156,
+        "end": 114.496,
+        "score": 0.89
+      },
+      {
+        "word": "studying",
+        "start": 114.576,
+        "end": 114.916,
+        "score": 0.879
+      },
+      {
+        "word": "kids",
+        "start": 115.076,
+        "end": 115.397,
+        "score": 0.71
+      },
+      {
+        "word": "and",
+        "start": 115.457,
+        "end": 115.537,
+        "score": 0.8
+      },
+      {
+        "word": "adults",
+        "start": 115.597,
+        "end": 115.977,
+        "score": 0.782
+      },
+      {
+        "word": "in",
+        "start": 116.137,
+        "end": 116.197,
+        "score": 0.993
+      },
+      {
+        "word": "all",
+        "start": 116.358,
+        "end": 116.478,
+        "score": 0.798
+      },
+      {
+        "word": "kinds",
+        "start": 116.558,
+        "end": 116.818,
+        "score": 0.656
+      },
+      {
+        "word": "of",
+        "start": 116.878,
+        "end": 116.938,
+        "score": 0.9
+      },
+      {
+        "word": "super",
+        "start": 116.958,
+        "end": 117.419,
+        "score": 0.837
+      },
+      {
+        "word": "challenging",
+        "start": 117.439,
+        "end": 117.999,
+        "score": 0.896
+      },
+      {
+        "word": "settings.",
+        "start": 118.099,
+        "end": 118.5,
+        "score": 0.9
+      }
+    ]
+  },
+  {
+    "id": "#019",
+    "start": 119.22,
+    "end": 123.485,
+    "text": "And in every study, my question was, who is successful here and why?",
+    "words": [
+      {
+        "word": "And",
+        "start": 119.22,
+        "end": 119.301,
+        "score": 0.675
+      },
+      {
+        "word": "in",
+        "start": 119.361,
+        "end": 119.401,
+        "score": 0.999
+      },
+      {
+        "word": "every",
+        "start": 119.541,
+        "end": 119.721,
+        "score": 0.889
+      },
+      {
+        "word": "study,",
+        "start": 119.781,
+        "end": 120.041,
+        "score": 0.801
+      },
+      {
+        "word": "my",
+        "start": 120.121,
+        "end": 120.221,
+        "score": 0.784
+      },
+      {
+        "word": "question",
+        "start": 120.301,
+        "end": 120.702,
+        "score": 0.805
+      },
+      {
+        "word": "was,",
+        "start": 120.762,
+        "end": 121.002,
+        "score": 0.993
+      },
+      {
+        "word": "who",
+        "start": 121.543,
+        "end": 121.683,
+        "score": 0.681
+      },
+      {
+        "word": "is",
+        "start": 121.763,
+        "end": 121.823,
+        "score": 0.992
+      },
+      {
+        "word": "successful",
+        "start": 121.863,
+        "end": 122.444,
+        "score": 0.873
+      },
+      {
+        "word": "here",
+        "start": 122.464,
+        "end": 122.804,
+        "score": 0.66
+      },
+      {
+        "word": "and",
+        "start": 122.984,
+        "end": 123.064,
+        "score": 0.758
+      },
+      {
+        "word": "why?",
+        "start": 123.164,
+        "end": 123.485,
+        "score": 0.969
+      }
+    ]
+  },
+  {
+    "id": "#020",
+    "start": 123.505,
+    "end": 127.889,
+    "text": "My research team and I went to West Point Military Academy.",
+    "words": [
+      {
+        "word": "My",
+        "start": 123.505,
+        "end": 124.686,
+        "score": 0.962
+      },
+      {
+        "word": "research",
+        "start": 124.746,
+        "end": 125.106,
+        "score": 0.86
+      },
+      {
+        "word": "team",
+        "start": 125.146,
+        "end": 125.326,
+        "score": 0.834
+      },
+      {
+        "word": "and",
+        "start": 125.366,
+        "end": 125.446,
+        "score": 0.726
+      },
+      {
+        "word": "I",
+        "start": 125.567,
+        "end": 125.607,
+        "score": 0.999
+      },
+      {
+        "word": "went",
+        "start": 125.687,
+        "end": 125.847,
+        "score": 0.881
+      },
+      {
+        "word": "to",
+        "start": 125.887,
+        "end": 126.047,
+        "score": 0.796
+      },
+      {
+        "word": "West",
+        "start": 126.087,
+        "end": 126.467,
+        "score": 0.853
+      },
+      {
+        "word": "Point",
+        "start": 126.568,
+        "end": 126.828,
+        "score": 0.929
+      },
+      {
+        "word": "Military",
+        "start": 126.888,
+        "end": 127.368,
+        "score": 0.691
+      },
+      {
+        "word": "Academy.",
+        "start": 127.408,
+        "end": 127.889,
+        "score": 0.926
+      }
+    ]
+  },
+  {
+    "id": "#021",
+    "start": 128.59,
+    "end": 134.275,
+    "text": "We tried to predict which cadets would stay in military training and which would drop out.",
+    "words": [
+      {
+        "word": "We",
+        "start": 128.59,
+        "end": 128.69,
+        "score": 0.982
+      },
+      {
+        "word": "tried",
+        "start": 128.75,
+        "end": 128.97,
+        "score": 0.863
+      },
+      {
+        "word": "to",
+        "start": 128.99,
+        "end": 129.07,
+        "score": 0.749
+      },
+      {
+        "word": "predict",
+        "start": 129.11,
+        "end": 129.41,
+        "score": 0.916
+      },
+      {
+        "word": "which",
+        "start": 129.45,
+        "end": 129.771,
+        "score": 0.858
+      },
+      {
+        "word": "cadets",
+        "start": 129.831,
+        "end": 130.191,
+        "score": 0.972
+      },
+      {
+        "word": "would",
+        "start": 130.251,
+        "end": 130.411,
+        "score": 0.889
+      },
+      {
+        "word": "stay",
+        "start": 130.511,
+        "end": 130.852,
+        "score": 0.912
+      },
+      {
+        "word": "in",
+        "start": 130.892,
+        "end": 131.152,
+        "score": 0.904
+      },
+      {
+        "word": "military",
+        "start": 131.252,
+        "end": 131.713,
+        "score": 0.877
+      },
+      {
+        "word": "training",
+        "start": 131.773,
+        "end": 132.153,
+        "score": 0.895
+      },
+      {
+        "word": "and",
+        "start": 132.533,
+        "end": 132.593,
+        "score": 0.966
+      },
+      {
+        "word": "which",
+        "start": 132.673,
+        "end": 132.834,
+        "score": 0.795
+      },
+      {
+        "word": "would",
+        "start": 132.874,
+        "end": 133.014,
+        "score": 0.873
+      },
+      {
+        "word": "drop",
+        "start": 133.034,
+        "end": 133.294,
+        "score": 0.824
+      },
+      {
+        "word": "out.",
+        "start": 133.434,
+        "end": 134.275,
+        "score": 0.983
+      }
+    ]
+  },
+  {
+    "id": "#022",
+    "start": 134.508,
+    "end": 140.916,
+    "text": " We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.",
+    "words": [
+      {
+        "word": "We",
+        "start": 134.508,
+        "end": 134.668,
+        "score": 0.53
+      },
+      {
+        "word": "went",
+        "start": 134.708,
+        "end": 134.828,
+        "score": 0.831
+      },
+      {
+        "word": "to",
+        "start": 134.848,
+        "end": 134.929,
+        "score": 0.722
+      },
+      {
+        "word": "the",
+        "start": 134.969,
+        "end": 135.049,
+        "score": 0.454
+      },
+      {
+        "word": "National",
+        "start": 135.109,
+        "end": 135.509,
+        "score": 0.843
+      },
+      {
+        "word": "Spelling",
+        "start": 135.569,
+        "end": 135.93,
+        "score": 0.945
+      },
+      {
+        "word": "Bee",
+        "start": 135.99,
+        "end": 136.17,
+        "score": 0.885
+      },
+      {
+        "word": "and",
+        "start": 136.21,
+        "end": 136.891,
+        "score": 0.986
+      },
+      {
+        "word": "tried",
+        "start": 136.931,
+        "end": 137.131,
+        "score": 0.694
+      },
+      {
+        "word": "to",
+        "start": 137.151,
+        "end": 137.211,
+        "score": 0.74
+      },
+      {
+        "word": "predict",
+        "start": 137.251,
+        "end": 137.472,
+        "score": 0.738
+      },
+      {
+        "word": "which",
+        "start": 137.532,
+        "end": 137.792,
+        "score": 0.855
+      },
+      {
+        "word": "children",
+        "start": 137.952,
+        "end": 138.453,
+        "score": 0.842
+      },
+      {
+        "word": "would",
+        "start": 138.473,
+        "end": 138.954,
+        "score": 0.943
+      },
+      {
+        "word": "advance",
+        "start": 138.994,
+        "end": 139.394,
+        "score": 0.856
+      },
+      {
+        "word": "farthest",
+        "start": 139.434,
+        "end": 140.075,
+        "score": 0.894
+      },
+      {
+        "word": "in",
+        "start": 140.175,
+        "end": 140.255,
+        "score": 0.954
+      },
+      {
+        "word": "competition.",
+        "start": 140.315,
+        "end": 140.916,
+        "score": 0.983
+      }
+    ]
+  },
+  {
+    "id": "#023",
+    "start": 142.037,
+    "end": 150.868,
+    "text": "We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year.",
+    "words": [
+      {
+        "word": "We",
+        "start": 142.037,
+        "end": 142.178,
+        "score": 0.926
+      },
+      {
+        "word": "studied",
+        "start": 142.238,
+        "end": 142.578,
+        "score": 0.878
+      },
+      {
+        "word": "rookie",
+        "start": 142.598,
+        "end": 142.959,
+        "score": 0.691
+      },
+      {
+        "word": "teachers",
+        "start": 143.019,
+        "end": 143.499,
+        "score": 0.733
+      },
+      {
+        "word": "working",
+        "start": 143.88,
+        "end": 144.18,
+        "score": 0.769
+      },
+      {
+        "word": "in",
+        "start": 144.24,
+        "end": 144.28,
+        "score": 0.974
+      },
+      {
+        "word": "really",
+        "start": 144.32,
+        "end": 144.641,
+        "score": 0.745
+      },
+      {
+        "word": "tough",
+        "start": 144.721,
+        "end": 144.961,
+        "score": 0.926
+      },
+      {
+        "word": "neighborhoods,",
+        "start": 145.041,
+        "end": 145.582,
+        "score": 0.764
+      },
+      {
+        "word": "asking",
+        "start": 146.203,
+        "end": 146.543,
+        "score": 0.878
+      },
+      {
+        "word": "which",
+        "start": 146.583,
+        "end": 147.144,
+        "score": 0.908
+      },
+      {
+        "word": "teachers",
+        "start": 147.204,
+        "end": 147.604,
+        "score": 0.686
+      },
+      {
+        "word": "are",
+        "start": 147.664,
+        "end": 147.744,
+        "score": 0.764
+      },
+      {
+        "word": "still",
+        "start": 147.785,
+        "end": 147.945,
+        "score": 0.881
+      },
+      {
+        "word": "going",
+        "start": 147.965,
+        "end": 148.085,
+        "score": 0.887
+      },
+      {
+        "word": "to",
+        "start": 148.105,
+        "end": 148.145,
+        "score": 0.956
+      },
+      {
+        "word": "be",
+        "start": 148.225,
+        "end": 148.405,
+        "score": 0.808
+      },
+      {
+        "word": "here",
+        "start": 148.485,
+        "end": 148.726,
+        "score": 0.765
+      },
+      {
+        "word": "in",
+        "start": 148.746,
+        "end": 148.786,
+        "score": 0.5
+      },
+      {
+        "word": "teaching",
+        "start": 149.106,
+        "end": 149.507,
+        "score": 0.781
+      },
+      {
+        "word": "by",
+        "start": 149.587,
+        "end": 149.727,
+        "score": 0.898
+      },
+      {
+        "word": "the",
+        "start": 149.747,
+        "end": 149.867,
+        "score": 0.464
+      },
+      {
+        "word": "end",
+        "start": 149.967,
+        "end": 150.067,
+        "score": 0.828
+      },
+      {
+        "word": "of",
+        "start": 150.107,
+        "end": 150.147,
+        "score": 0.996
+      },
+      {
+        "word": "the",
+        "start": 150.188,
+        "end": 150.248,
+        "score": 0.664
+      },
+      {
+        "word": "school",
+        "start": 150.288,
+        "end": 150.608,
+        "score": 0.641
+      },
+      {
+        "word": "year.",
+        "start": 150.648,
+        "end": 150.868,
+        "score": 0.734
+      }
+    ]
+  },
+  {
+    "id": "#024",
+    "start": 151.609,
+    "end": 156.936,
+    "text": "And of those, who will be the most effective at improving learning outcomes for their students.",
+    "words": [
+      {
+        "word": "And",
+        "start": 151.609,
+        "end": 151.709,
+        "score": 0.685
+      },
+      {
+        "word": "of",
+        "start": 151.89,
+        "end": 151.95,
+        "score": 0.99
+      },
+      {
+        "word": "those,",
+        "start": 151.99,
+        "end": 152.35,
+        "score": 0.897
+      },
+      {
+        "word": "who",
+        "start": 152.791,
+        "end": 152.911,
+        "score": 0.84
+      },
+      {
+        "word": "will",
+        "start": 152.951,
+        "end": 153.111,
+        "score": 0.911
+      },
+      {
+        "word": "be",
+        "start": 153.131,
+        "end": 153.191,
+        "score": 0.845
+      },
+      {
+        "word": "the",
+        "start": 153.231,
+        "end": 153.291,
+        "score": 0.918
+      },
+      {
+        "word": "most",
+        "start": 153.311,
+        "end": 153.532,
+        "score": 0.794
+      },
+      {
+        "word": "effective",
+        "start": 153.592,
+        "end": 154.193,
+        "score": 0.865
+      },
+      {
+        "word": "at",
+        "start": 154.633,
+        "end": 154.693,
+        "score": 0.662
+      },
+      {
+        "word": "improving",
+        "start": 154.773,
+        "end": 155.294,
+        "score": 0.865
+      },
+      {
+        "word": "learning",
+        "start": 155.314,
+        "end": 155.674,
+        "score": 0.738
+      },
+      {
+        "word": "outcomes",
+        "start": 155.774,
+        "end": 156.135,
+        "score": 0.866
+      },
+      {
+        "word": "for",
+        "start": 156.235,
+        "end": 156.315,
+        "score": 0.87
+      },
+      {
+        "word": "their",
+        "start": 156.355,
+        "end": 156.495,
+        "score": 0.813
+      },
+      {
+        "word": "students.",
+        "start": 156.555,
+        "end": 156.936,
+        "score": 0.848
+      }
+    ]
+  },
+  {
+    "id": "#025",
+    "start": 157.737,
+    "end": 164.245,
+    "text": "We partnered with private companies, asking which of these salespeople is going to keep their jobs, and who's going to earn the most money.",
+    "words": [
+      {
+        "word": "We",
+        "start": 157.737,
+        "end": 157.837,
+        "score": 0.998
+      },
+      {
+        "word": "partnered",
+        "start": 157.897,
+        "end": 158.197,
+        "score": 0.819
+      },
+      {
+        "word": "with",
+        "start": 158.238,
+        "end": 158.338,
+        "score": 0.871
+      },
+      {
+        "word": "private",
+        "start": 158.418,
+        "end": 158.738,
+        "score": 0.742
+      },
+      {
+        "word": "companies,",
+        "start": 158.778,
+        "end": 159.199,
+        "score": 0.927
+      },
+      {
+        "word": "asking",
+        "start": 159.359,
+        "end": 159.659,
+        "score": 0.946
+      },
+      {
+        "word": "which",
+        "start": 159.679,
+        "end": 160.2,
+        "score": 0.934
+      },
+      {
+        "word": "of",
+        "start": 160.24,
+        "end": 160.28,
+        "score": 0.998
+      },
+      {
+        "word": "these",
+        "start": 160.32,
+        "end": 160.46,
+        "score": 0.907
+      },
+      {
+        "word": "salespeople",
+        "start": 160.5,
+        "end": 161.081,
+        "score": 0.745
+      },
+      {
+        "word": "is",
+        "start": 161.101,
+        "end": 161.141,
+        "score": 0.736
+      },
+      {
+        "word": "going",
+        "start": 161.181,
+        "end": 161.301,
+        "score": 0.661
+      },
+      {
+        "word": "to",
+        "start": 161.321,
+        "end": 161.361,
+        "score": 0.993
+      },
+      {
+        "word": "keep",
+        "start": 161.401,
+        "end": 161.562,
+        "score": 0.893
+      },
+      {
+        "word": "their",
+        "start": 161.602,
+        "end": 161.742,
+        "score": 0.885
+      },
+      {
+        "word": "jobs,",
+        "start": 161.782,
+        "end": 162.142,
+        "score": 0.999
+      },
+      {
+        "word": "and",
+        "start": 162.683,
+        "end": 162.743,
+        "score": 0.945
+      },
+      {
+        "word": "who's",
+        "start": 162.783,
+        "end": 162.923,
+        "score": 0.736
+      },
+      {
+        "word": "going",
+        "start": 162.943,
+        "end": 163.064,
+        "score": 0.458
+      },
+      {
+        "word": "to",
+        "start": 163.084,
+        "end": 163.124,
+        "score": 0.71
+      },
+      {
+        "word": "earn",
+        "start": 163.164,
+        "end": 163.284,
+        "score": 0.586
+      },
+      {
+        "word": "the",
+        "start": 163.324,
+        "end": 163.384,
+        "score": 0.984
+      },
+      {
+        "word": "most",
+        "start": 163.424,
+        "end": 163.604,
+        "score": 0.893
+      },
+      {
+        "word": "money.",
+        "start": 163.684,
+        "end": 164.245,
+        "score": 0.878
+      }
+    ]
+  },
+  {
+    "id": "#026",
+    "start": 164.849,
+    "end": 171.764,
+    "text": " In all those very different contexts, one characteristic emerged as a significant predictor of success.",
+    "words": [
+      {
+        "word": "In",
+        "start": 164.849,
+        "end": 164.969,
+        "score": 0.862
+      },
+      {
+        "word": "all",
+        "start": 165.009,
+        "end": 165.09,
+        "score": 0.95
+      },
+      {
+        "word": "those",
+        "start": 165.15,
+        "end": 165.27,
+        "score": 0.99
+      },
+      {
+        "word": "very",
+        "start": 165.33,
+        "end": 165.55,
+        "score": 0.904
+      },
+      {
+        "word": "different",
+        "start": 165.631,
+        "end": 165.931,
+        "score": 0.848
+      },
+      {
+        "word": "contexts,",
+        "start": 165.991,
+        "end": 166.533,
+        "score": 0.898
+      },
+      {
+        "word": "one",
+        "start": 167.956,
+        "end": 168.076,
+        "score": 0.863
+      },
+      {
+        "word": "characteristic",
+        "start": 168.176,
+        "end": 168.817,
+        "score": 0.904
+      },
+      {
+        "word": "emerged",
+        "start": 168.918,
+        "end": 169.419,
+        "score": 0.91
+      },
+      {
+        "word": "as",
+        "start": 170.02,
+        "end": 170.08,
+        "score": 0.995
+      },
+      {
+        "word": "a",
+        "start": 170.16,
+        "end": 170.18,
+        "score": 0.973
+      },
+      {
+        "word": "significant",
+        "start": 170.24,
+        "end": 170.721,
+        "score": 0.846
+      },
+      {
+        "word": "predictor",
+        "start": 170.782,
+        "end": 171.202,
+        "score": 0.889
+      },
+      {
+        "word": "of",
+        "start": 171.223,
+        "end": 171.283,
+        "score": 0.75
+      },
+      {
+        "word": "success.",
+        "start": 171.323,
+        "end": 171.764,
+        "score": 0.749
+      }
+    ]
+  },
+  {
+    "id": "#027",
+    "start": 172.585,
+    "end": 178.779,
+    "text": "And it wasn't social intelligence, it wasn't good looks, physical health, and it wasn't IQ.",
+    "words": [
+      {
+        "word": "And",
+        "start": 172.585,
+        "end": 172.666,
+        "score": 0.853
+      },
+      {
+        "word": "it",
+        "start": 172.706,
+        "end": 172.746,
+        "score": 0.999
+      },
+      {
+        "word": "wasn't",
+        "start": 172.846,
+        "end": 173.127,
+        "score": 0.949
+      },
+      {
+        "word": "social",
+        "start": 173.187,
+        "end": 173.447,
+        "score": 0.801
+      },
+      {
+        "word": "intelligence,",
+        "start": 173.507,
+        "end": 174.028,
+        "score": 0.864
+      },
+      {
+        "word": "it",
+        "start": 174.71,
+        "end": 174.75,
+        "score": 0.026
+      },
+      {
+        "word": "wasn't",
+        "start": 174.77,
+        "end": 174.991,
+        "score": 0.886
+      },
+      {
+        "word": "good",
+        "start": 175.071,
+        "end": 175.231,
+        "score": 0.844
+      },
+      {
+        "word": "looks,",
+        "start": 175.311,
+        "end": 175.612,
+        "score": 0.914
+      },
+      {
+        "word": "physical",
+        "start": 176.414,
+        "end": 176.754,
+        "score": 0.855
+      },
+      {
+        "word": "health,",
+        "start": 176.834,
+        "end": 177.095,
+        "score": 0.607
+      },
+      {
+        "word": "and",
+        "start": 177.796,
+        "end": 177.877,
+        "score": 0.863
+      },
+      {
+        "word": "it",
+        "start": 177.917,
+        "end": 177.957,
+        "score": 0.758
+      },
+      {
+        "word": "wasn't",
+        "start": 178.017,
+        "end": 178.278,
+        "score": 0.781
+      },
+      {
+        "word": "IQ.",
+        "start": 178.378,
+        "end": 178.779,
+        "score": 0.798
+      }
+    ]
+  },
+  {
+    "id": "#028",
+    "start": 178.799,
+    "end": 180.883,
+    "text": "It was grit.",
+    "words": [
+      {
+        "word": "It",
+        "start": 178.799,
+        "end": 178.839,
+        "score": 0.5
+      },
+      {
+        "word": "was",
+        "start": 180.041,
+        "end": 180.141,
+        "score": 0.821
+      },
+      {
+        "word": "grit.",
+        "start": 180.182,
+        "end": 180.883,
+        "score": 0.857
+      }
+    ]
+  },
+  {
+    "id": "#029",
+    "start": 182.028,
+    "end": 186.353,
+    "text": " Grit is passion and perseverance for very long-term goals.",
+    "words": [
+      {
+        "word": "Grit",
+        "start": 182.028,
+        "end": 182.368,
+        "score": 0.8
+      },
+      {
+        "word": "is",
+        "start": 182.448,
+        "end": 182.529,
+        "score": 0.626
+      },
+      {
+        "word": "passion",
+        "start": 182.689,
+        "end": 183.209,
+        "score": 0.911
+      },
+      {
+        "word": "and",
+        "start": 183.369,
+        "end": 183.43,
+        "score": 0.999
+      },
+      {
+        "word": "perseverance",
+        "start": 183.55,
+        "end": 184.27,
+        "score": 0.855
+      },
+      {
+        "word": "for",
+        "start": 184.551,
+        "end": 184.691,
+        "score": 0.919
+      },
+      {
+        "word": "very",
+        "start": 184.731,
+        "end": 185.191,
+        "score": 0.903
+      },
+      {
+        "word": "long-term",
+        "start": 185.292,
+        "end": 185.972,
+        "score": 0.795
+      },
+      {
+        "word": "goals.",
+        "start": 186.012,
+        "end": 186.353,
+        "score": 0.926
+      }
+    ]
+  },
+  {
+    "id": "#030",
+    "start": 187.154,
+    "end": 188.615,
+    "text": "Grit is having stamina.",
+    "words": [
+      {
+        "word": "Grit",
+        "start": 187.154,
+        "end": 187.394,
+        "score": 0.833
+      },
+      {
+        "word": "is",
+        "start": 187.474,
+        "end": 187.554,
+        "score": 0.624
+      },
+      {
+        "word": "having",
+        "start": 187.634,
+        "end": 187.874,
+        "score": 0.854
+      },
+      {
+        "word": "stamina.",
+        "start": 188.014,
+        "end": 188.615,
+        "score": 0.977
+      }
+    ]
+  },
+  {
+    "id": "#031",
+    "start": 189.356,
+    "end": 202.11,
+    "text": "Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.",
+    "words": [
+      {
+        "word": "Grit",
+        "start": 189.356,
+        "end": 189.576,
+        "score": 0.806
+      },
+      {
+        "word": "is",
+        "start": 189.656,
+        "end": 189.716,
+        "score": 0.748
+      },
+      {
+        "word": "sticking",
+        "start": 189.796,
+        "end": 190.177,
+        "score": 0.932
+      },
+      {
+        "word": "with",
+        "start": 190.217,
+        "end": 190.457,
+        "score": 0.8
+      },
+      {
+        "word": "your",
+        "start": 190.517,
+        "end": 190.677,
+        "score": 0.888
+      },
+      {
+        "word": "future,",
+        "start": 190.737,
+        "end": 191.138,
+        "score": 0.889
+      },
+      {
+        "word": "day",
+        "start": 191.919,
+        "end": 192.179,
+        "score": 0.904
+      },
+      {
+        "word": "in,",
+        "start": 192.299,
+        "end": 192.479,
+        "score": 0.801
+      },
+      {
+        "word": "day",
+        "start": 192.499,
+        "end": 192.719,
+        "score": 0.97
+      },
+      {
+        "word": "out,",
+        "start": 192.88,
+        "end": 193.06,
+        "score": 0.968
+      },
+      {
+        "word": "not",
+        "start": 193.701,
+        "end": 193.901,
+        "score": 0.901
+      },
+      {
+        "word": "just",
+        "start": 193.941,
+        "end": 194.081,
+        "score": 0.87
+      },
+      {
+        "word": "for",
+        "start": 194.101,
+        "end": 194.221,
+        "score": 0.887
+      },
+      {
+        "word": "the",
+        "start": 194.261,
+        "end": 194.321,
+        "score": 0.997
+      },
+      {
+        "word": "week,",
+        "start": 194.381,
+        "end": 194.682,
+        "score": 0.806
+      },
+      {
+        "word": "not",
+        "start": 195.302,
+        "end": 195.482,
+        "score": 0.887
+      },
+      {
+        "word": "just",
+        "start": 195.523,
+        "end": 195.663,
+        "score": 0.85
+      },
+      {
+        "word": "for",
+        "start": 195.703,
+        "end": 195.803,
+        "score": 0.995
+      },
+      {
+        "word": "the",
+        "start": 195.843,
+        "end": 195.903,
+        "score": 0.997
+      },
+      {
+        "word": "month,",
+        "start": 195.983,
+        "end": 196.263,
+        "score": 0.95
+      },
+      {
+        "word": "but",
+        "start": 197.024,
+        "end": 197.164,
+        "score": 0.926
+      },
+      {
+        "word": "for",
+        "start": 197.224,
+        "end": 197.364,
+        "score": 0.913
+      },
+      {
+        "word": "years,",
+        "start": 197.445,
+        "end": 197.825,
+        "score": 0.868
+      },
+      {
+        "word": "and",
+        "start": 198.706,
+        "end": 198.786,
+        "score": 0.829
+      },
+      {
+        "word": "working",
+        "start": 198.866,
+        "end": 199.206,
+        "score": 0.873
+      },
+      {
+        "word": "really",
+        "start": 199.247,
+        "end": 199.827,
+        "score": 0.79
+      },
+      {
+        "word": "hard",
+        "start": 199.887,
+        "end": 200.208,
+        "score": 0.729
+      },
+      {
+        "word": "to",
+        "start": 200.588,
+        "end": 200.688,
+        "score": 0.865
+      },
+      {
+        "word": "make",
+        "start": 200.768,
+        "end": 200.948,
+        "score": 0.938
+      },
+      {
+        "word": "that",
+        "start": 200.988,
+        "end": 201.129,
+        "score": 0.832
+      },
+      {
+        "word": "future",
+        "start": 201.189,
+        "end": 201.509,
+        "score": 0.842
+      },
+      {
+        "word": "a",
+        "start": 201.549,
+        "end": 201.569,
+        "score": 0.981
+      },
+      {
+        "word": "reality.",
+        "start": 201.629,
+        "end": 202.11,
+        "score": 0.934
+      }
+    ]
+  },
+  {
+    "id": "#032",
+    "start": 203.151,
+    "end": 207.175,
+    "text": "Grit is living life like it's a marathon, not a sprint.",
+    "words": [
+      {
+        "word": "Grit",
+        "start": 203.151,
+        "end": 203.371,
+        "score": 0.722
+      },
+      {
+        "word": "is",
+        "start": 203.431,
+        "end": 203.491,
+        "score": 0.69
+      },
+      {
+        "word": "living",
+        "start": 203.571,
+        "end": 203.811,
+        "score": 0.833
+      },
+      {
+        "word": "life",
+        "start": 203.871,
+        "end": 204.232,
+        "score": 0.856
+      },
+      {
+        "word": "like",
+        "start": 204.432,
+        "end": 204.592,
+        "score": 0.757
+      },
+      {
+        "word": "it's",
+        "start": 204.652,
+        "end": 204.752,
+        "score": 0.631
+      },
+      {
+        "word": "a",
+        "start": 204.812,
+        "end": 204.833,
+        "score": 0.926
+      },
+      {
+        "word": "marathon,",
+        "start": 204.953,
+        "end": 205.593,
+        "score": 0.937
+      },
+      {
+        "word": "not",
+        "start": 206.174,
+        "end": 206.374,
+        "score": 0.939
+      },
+      {
+        "word": "a",
+        "start": 206.394,
+        "end": 206.414,
+        "score": 1
+      },
+      {
+        "word": "sprint.",
+        "start": 206.574,
+        "end": 207.175,
+        "score": 0.927
+      }
+    ]
+  },
+  {
+    "id": "#033",
+    "start": 208.302,
+    "end": 212.373,
+    "text": " A few years ago, I started studying grit in the Chicago Public Schools.",
+    "words": [
+      {
+        "word": "A",
+        "start": 208.302,
+        "end": 208.382,
+        "score": 0.521
+      },
+      {
+        "word": "few",
+        "start": 208.442,
+        "end": 208.583,
+        "score": 0.888
+      },
+      {
+        "word": "years",
+        "start": 208.643,
+        "end": 208.843,
+        "score": 0.731
+      },
+      {
+        "word": "ago,",
+        "start": 208.904,
+        "end": 209.124,
+        "score": 0.974
+      },
+      {
+        "word": "I",
+        "start": 209.144,
+        "end": 209.164,
+        "score": 1
+      },
+      {
+        "word": "started",
+        "start": 209.806,
+        "end": 210.087,
+        "score": 0.904
+      },
+      {
+        "word": "studying",
+        "start": 210.147,
+        "end": 210.468,
+        "score": 0.921
+      },
+      {
+        "word": "grit",
+        "start": 210.508,
+        "end": 210.789,
+        "score": 0.897
+      },
+      {
+        "word": "in",
+        "start": 210.869,
+        "end": 210.929,
+        "score": 0.982
+      },
+      {
+        "word": "the",
+        "start": 210.969,
+        "end": 211.029,
+        "score": 0.995
+      },
+      {
+        "word": "Chicago",
+        "start": 211.07,
+        "end": 211.531,
+        "score": 0.939
+      },
+      {
+        "word": "Public",
+        "start": 211.571,
+        "end": 211.932,
+        "score": 0.811
+      },
+      {
+        "word": "Schools.",
+        "start": 211.992,
+        "end": 212.373,
+        "score": 0.714
+      }
+    ]
+  },
+  {
+    "id": "#034",
+    "start": 213.296,
+    "end": 220.776,
+    "text": "I asked thousands of high school juniors to take grit questionnaires and then waited around more than a year to see who would graduate.",
+    "words": [
+      {
+        "word": "I",
+        "start": 213.296,
+        "end": 213.356,
+        "score": 0.666
+      },
+      {
+        "word": "asked",
+        "start": 213.456,
+        "end": 213.596,
+        "score": 0.852
+      },
+      {
+        "word": "thousands",
+        "start": 213.717,
+        "end": 214.178,
+        "score": 0.851
+      },
+      {
+        "word": "of",
+        "start": 214.238,
+        "end": 214.278,
+        "score": 1
+      },
+      {
+        "word": "high",
+        "start": 214.298,
+        "end": 214.519,
+        "score": 0.735
+      },
+      {
+        "word": "school",
+        "start": 214.559,
+        "end": 214.8,
+        "score": 0.548
+      },
+      {
+        "word": "juniors",
+        "start": 214.84,
+        "end": 215.261,
+        "score": 0.84
+      },
+      {
+        "word": "to",
+        "start": 215.602,
+        "end": 215.702,
+        "score": 0.95
+      },
+      {
+        "word": "take",
+        "start": 215.742,
+        "end": 215.943,
+        "score": 0.952
+      },
+      {
+        "word": "grit",
+        "start": 216.023,
+        "end": 216.244,
+        "score": 0.929
+      },
+      {
+        "word": "questionnaires",
+        "start": 216.304,
+        "end": 216.926,
+        "score": 0.785
+      },
+      {
+        "word": "and",
+        "start": 217.587,
+        "end": 217.668,
+        "score": 0.791
+      },
+      {
+        "word": "then",
+        "start": 217.708,
+        "end": 217.828,
+        "score": 0.991
+      },
+      {
+        "word": "waited",
+        "start": 217.868,
+        "end": 218.129,
+        "score": 0.866
+      },
+      {
+        "word": "around",
+        "start": 218.189,
+        "end": 218.47,
+        "score": 0.922
+      },
+      {
+        "word": "more",
+        "start": 218.51,
+        "end": 218.71,
+        "score": 0.711
+      },
+      {
+        "word": "than",
+        "start": 218.751,
+        "end": 218.871,
+        "score": 0.974
+      },
+      {
+        "word": "a",
+        "start": 218.891,
+        "end": 218.931,
+        "score": 0.498
+      },
+      {
+        "word": "year",
+        "start": 218.991,
+        "end": 219.232,
+        "score": 0.592
+      },
+      {
+        "word": "to",
+        "start": 219.252,
+        "end": 219.292,
+        "score": 0.502
+      },
+      {
+        "word": "see",
+        "start": 219.513,
+        "end": 219.653,
+        "score": 0.98
+      },
+      {
+        "word": "who",
+        "start": 219.713,
+        "end": 219.833,
+        "score": 0.682
+      },
+      {
+        "word": "would",
+        "start": 219.874,
+        "end": 219.994,
+        "score": 0.996
+      },
+      {
+        "word": "graduate.",
+        "start": 220.014,
+        "end": 220.776,
+        "score": 0.892
+      }
+    ]
+  },
+  {
+    "id": "#035",
+    "start": 221.617,
+    "end": 230.43,
+    "text": " Turns out that grittier kids were significantly more likely to graduate, even when I matched them on every characteristic I could measure.",
+    "words": [
+      {
+        "word": "Turns",
+        "start": 221.617,
+        "end": 221.917,
+        "score": 0.716
+      },
+      {
+        "word": "out",
+        "start": 222.058,
+        "end": 222.198,
+        "score": 0.831
+      },
+      {
+        "word": "that",
+        "start": 222.618,
+        "end": 222.759,
+        "score": 0.829
+      },
+      {
+        "word": "grittier",
+        "start": 222.899,
+        "end": 223.299,
+        "score": 0.68
+      },
+      {
+        "word": "kids",
+        "start": 223.38,
+        "end": 223.7,
+        "score": 0.721
+      },
+      {
+        "word": "were",
+        "start": 223.96,
+        "end": 224.121,
+        "score": 0.849
+      },
+      {
+        "word": "significantly",
+        "start": 224.181,
+        "end": 224.982,
+        "score": 0.813
+      },
+      {
+        "word": "more",
+        "start": 225.082,
+        "end": 225.302,
+        "score": 0.866
+      },
+      {
+        "word": "likely",
+        "start": 225.382,
+        "end": 225.703,
+        "score": 0.855
+      },
+      {
+        "word": "to",
+        "start": 225.763,
+        "end": 225.843,
+        "score": 0.986
+      },
+      {
+        "word": "graduate,",
+        "start": 225.883,
+        "end": 226.424,
+        "score": 0.937
+      },
+      {
+        "word": "even",
+        "start": 227.225,
+        "end": 227.405,
+        "score": 0.814
+      },
+      {
+        "word": "when",
+        "start": 227.465,
+        "end": 227.606,
+        "score": 0.825
+      },
+      {
+        "word": "I",
+        "start": 227.666,
+        "end": 227.726,
+        "score": 0.89
+      },
+      {
+        "word": "matched",
+        "start": 227.806,
+        "end": 228.106,
+        "score": 0.737
+      },
+      {
+        "word": "them",
+        "start": 228.166,
+        "end": 228.347,
+        "score": 0.82
+      },
+      {
+        "word": "on",
+        "start": 228.467,
+        "end": 228.527,
+        "score": 0.998
+      },
+      {
+        "word": "every",
+        "start": 228.727,
+        "end": 229.028,
+        "score": 0.733
+      },
+      {
+        "word": "characteristic",
+        "start": 229.108,
+        "end": 229.789,
+        "score": 0.86
+      },
+      {
+        "word": "I",
+        "start": 229.869,
+        "end": 229.909,
+        "score": 0.995
+      },
+      {
+        "word": "could",
+        "start": 229.949,
+        "end": 230.089,
+        "score": 0.882
+      },
+      {
+        "word": "measure.",
+        "start": 230.129,
+        "end": 230.43,
+        "score": 0.893
+      }
+    ]
+  },
+  {
+    "id": "#036",
+    "start": 230.91,
+    "end": 238.682,
+    "text": "Things like family income, standardized achievement test scores, even how safe kids felt when they were at school.",
+    "words": [
+      {
+        "word": "Things",
+        "start": 230.91,
+        "end": 231.131,
+        "score": 0.824
+      },
+      {
+        "word": "like",
+        "start": 231.231,
+        "end": 231.411,
+        "score": 0.986
+      },
+      {
+        "word": "family",
+        "start": 231.712,
+        "end": 232.092,
+        "score": 0.889
+      },
+      {
+        "word": "income,",
+        "start": 232.192,
+        "end": 232.573,
+        "score": 0.839
+      },
+      {
+        "word": "standardized",
+        "start": 233.274,
+        "end": 234.015,
+        "score": 0.809
+      },
+      {
+        "word": "achievement",
+        "start": 234.055,
+        "end": 234.596,
+        "score": 0.8
+      },
+      {
+        "word": "test",
+        "start": 234.636,
+        "end": 234.856,
+        "score": 0.78
+      },
+      {
+        "word": "scores,",
+        "start": 234.876,
+        "end": 235.297,
+        "score": 0.767
+      },
+      {
+        "word": "even",
+        "start": 236.038,
+        "end": 236.198,
+        "score": 0.879
+      },
+      {
+        "word": "how",
+        "start": 236.298,
+        "end": 236.498,
+        "score": 0.949
+      },
+      {
+        "word": "safe",
+        "start": 236.659,
+        "end": 236.999,
+        "score": 0.909
+      },
+      {
+        "word": "kids",
+        "start": 237.099,
+        "end": 237.34,
+        "score": 0.85
+      },
+      {
+        "word": "felt",
+        "start": 237.44,
+        "end": 237.68,
+        "score": 0.957
+      },
+      {
+        "word": "when",
+        "start": 237.78,
+        "end": 237.9,
+        "score": 0.724
+      },
+      {
+        "word": "they",
+        "start": 237.941,
+        "end": 238.041,
+        "score": 0.875
+      },
+      {
+        "word": "were",
+        "start": 238.061,
+        "end": 238.181,
+        "score": 0.756
+      },
+      {
+        "word": "at",
+        "start": 238.221,
+        "end": 238.281,
+        "score": 0.747
+      },
+      {
+        "word": "school.",
+        "start": 238.381,
+        "end": 238.682,
+        "score": 0.829
+      }
+    ]
+  },
+  {
+    "id": "#037",
+    "start": 239.543,
+    "end": 247.995,
+    "text": "So it's not just at West Point or the National Spelling Bee that grit matters, it's also in school, especially for kids at risk for dropping out.",
+    "words": [
+      {
+        "word": "So",
+        "start": 239.543,
+        "end": 239.643,
+        "score": 0.793
+      },
+      {
+        "word": "it's",
+        "start": 239.683,
+        "end": 239.783,
+        "score": 0.676
+      },
+      {
+        "word": "not",
+        "start": 239.843,
+        "end": 239.963,
+        "score": 0.861
+      },
+      {
+        "word": "just",
+        "start": 240.004,
+        "end": 240.164,
+        "score": 0.793
+      },
+      {
+        "word": "at",
+        "start": 240.244,
+        "end": 240.284,
+        "score": 0.776
+      },
+      {
+        "word": "West",
+        "start": 240.344,
+        "end": 240.684,
+        "score": 0.915
+      },
+      {
+        "word": "Point",
+        "start": 240.765,
+        "end": 241.005,
+        "score": 0.755
+      },
+      {
+        "word": "or",
+        "start": 241.045,
+        "end": 241.105,
+        "score": 0.845
+      },
+      {
+        "word": "the",
+        "start": 241.145,
+        "end": 241.205,
+        "score": 0.999
+      },
+      {
+        "word": "National",
+        "start": 241.245,
+        "end": 241.566,
+        "score": 0.706
+      },
+      {
+        "word": "Spelling",
+        "start": 241.626,
+        "end": 241.986,
+        "score": 0.874
+      },
+      {
+        "word": "Bee",
+        "start": 242.026,
+        "end": 242.207,
+        "score": 0.799
+      },
+      {
+        "word": "that",
+        "start": 242.267,
+        "end": 242.387,
+        "score": 0.974
+      },
+      {
+        "word": "grit",
+        "start": 242.427,
+        "end": 242.647,
+        "score": 0.864
+      },
+      {
+        "word": "matters,",
+        "start": 242.687,
+        "end": 243.048,
+        "score": 0.969
+      },
+      {
+        "word": "it's",
+        "start": 243.629,
+        "end": 243.749,
+        "score": 0.863
+      },
+      {
+        "word": "also",
+        "start": 243.909,
+        "end": 244.27,
+        "score": 0.958
+      },
+      {
+        "word": "in",
+        "start": 244.29,
+        "end": 244.51,
+        "score": 0.781
+      },
+      {
+        "word": "school,",
+        "start": 244.63,
+        "end": 244.991,
+        "score": 0.853
+      },
+      {
+        "word": "especially",
+        "start": 245.592,
+        "end": 246.092,
+        "score": 0.892
+      },
+      {
+        "word": "for",
+        "start": 246.172,
+        "end": 246.293,
+        "score": 0.995
+      },
+      {
+        "word": "kids",
+        "start": 246.373,
+        "end": 246.613,
+        "score": 0.809
+      },
+      {
+        "word": "at",
+        "start": 246.693,
+        "end": 246.753,
+        "score": 0.808
+      },
+      {
+        "word": "risk",
+        "start": 246.833,
+        "end": 247.054,
+        "score": 0.694
+      },
+      {
+        "word": "for",
+        "start": 247.094,
+        "end": 247.194,
+        "score": 0.998
+      },
+      {
+        "word": "dropping",
+        "start": 247.234,
+        "end": 247.574,
+        "score": 0.796
+      },
+      {
+        "word": "out.",
+        "start": 247.675,
+        "end": 247.995,
+        "score": 0.954
+      }
+    ]
+  },
+  {
+    "id": "#038",
+    "start": 249.241,
+    "end": 256.454,
+    "text": " To me, the most shocking thing about grit is how little we know, how little science knows about building it.",
+    "words": [
+      {
+        "word": "To",
+        "start": 249.241,
+        "end": 249.381,
+        "score": 0.894
+      },
+      {
+        "word": "me,",
+        "start": 249.461,
+        "end": 249.682,
+        "score": 0.998
+      },
+      {
+        "word": "the",
+        "start": 249.742,
+        "end": 249.822,
+        "score": 0.964
+      },
+      {
+        "word": "most",
+        "start": 249.882,
+        "end": 250.063,
+        "score": 0.938
+      },
+      {
+        "word": "shocking",
+        "start": 250.163,
+        "end": 250.583,
+        "score": 0.882
+      },
+      {
+        "word": "thing",
+        "start": 250.684,
+        "end": 250.904,
+        "score": 0.928
+      },
+      {
+        "word": "about",
+        "start": 250.984,
+        "end": 251.185,
+        "score": 0.9
+      },
+      {
+        "word": "grit",
+        "start": 251.245,
+        "end": 251.565,
+        "score": 0.898
+      },
+      {
+        "word": "is",
+        "start": 252.367,
+        "end": 252.447,
+        "score": 0.609
+      },
+      {
+        "word": "how",
+        "start": 252.527,
+        "end": 252.667,
+        "score": 0.832
+      },
+      {
+        "word": "little",
+        "start": 252.808,
+        "end": 253.108,
+        "score": 0.738
+      },
+      {
+        "word": "we",
+        "start": 253.168,
+        "end": 253.288,
+        "score": 0.96
+      },
+      {
+        "word": "know,",
+        "start": 253.349,
+        "end": 253.569,
+        "score": 0.72
+      },
+      {
+        "word": "how",
+        "start": 253.609,
+        "end": 254.411,
+        "score": 0.445
+      },
+      {
+        "word": "little",
+        "start": 254.471,
+        "end": 254.711,
+        "score": 0.867
+      },
+      {
+        "word": "science",
+        "start": 254.811,
+        "end": 255.252,
+        "score": 0.884
+      },
+      {
+        "word": "knows",
+        "start": 255.332,
+        "end": 255.633,
+        "score": 0.833
+      },
+      {
+        "word": "about",
+        "start": 255.693,
+        "end": 255.893,
+        "score": 0.92
+      },
+      {
+        "word": "building",
+        "start": 255.973,
+        "end": 256.314,
+        "score": 0.791
+      },
+      {
+        "word": "it.",
+        "start": 256.374,
+        "end": 256.454,
+        "score": 0.938
+      }
+    ]
+  },
+  {
+    "id": "#039",
+    "start": 257.236,
+    "end": 261.223,
+    "text": "Every day, parents and teachers ask me, how do I build grit in kids?",
+    "words": [
+      {
+        "word": "Every",
+        "start": 257.236,
+        "end": 257.576,
+        "score": 0.612
+      },
+      {
+        "word": "day,",
+        "start": 257.637,
+        "end": 257.897,
+        "score": 0.922
+      },
+      {
+        "word": "parents",
+        "start": 257.977,
+        "end": 258.358,
+        "score": 0.748
+      },
+      {
+        "word": "and",
+        "start": 258.398,
+        "end": 258.478,
+        "score": 0.824
+      },
+      {
+        "word": "teachers",
+        "start": 258.498,
+        "end": 258.799,
+        "score": 0.788
+      },
+      {
+        "word": "ask",
+        "start": 258.939,
+        "end": 259.139,
+        "score": 0.912
+      },
+      {
+        "word": "me,",
+        "start": 259.179,
+        "end": 259.3,
+        "score": 0.991
+      },
+      {
+        "word": "how",
+        "start": 259.72,
+        "end": 259.861,
+        "score": 0.747
+      },
+      {
+        "word": "do",
+        "start": 259.901,
+        "end": 260.001,
+        "score": 0.984
+      },
+      {
+        "word": "I",
+        "start": 260.081,
+        "end": 260.121,
+        "score": 0.868
+      },
+      {
+        "word": "build",
+        "start": 260.161,
+        "end": 260.422,
+        "score": 0.669
+      },
+      {
+        "word": "grit",
+        "start": 260.482,
+        "end": 260.722,
+        "score": 0.706
+      },
+      {
+        "word": "in",
+        "start": 260.742,
+        "end": 260.842,
+        "score": 0.82
+      },
+      {
+        "word": "kids?",
+        "start": 260.903,
+        "end": 261.223,
+        "score": 0.924
+      }
+    ]
+  },
+  {
+    "id": "#040",
+    "start": 261.664,
+    "end": 264.409,
+    "text": "What do I do to teach kids a solid work ethic?",
+    "words": [
+      {
+        "word": "What",
+        "start": 261.664,
+        "end": 261.784,
+        "score": 0.888
+      },
+      {
+        "word": "do",
+        "start": 261.824,
+        "end": 261.924,
+        "score": 0.918
+      },
+      {
+        "word": "I",
+        "start": 261.985,
+        "end": 262.025,
+        "score": 0.765
+      },
+      {
+        "word": "do",
+        "start": 262.085,
+        "end": 262.345,
+        "score": 0.841
+      },
+      {
+        "word": "to",
+        "start": 262.425,
+        "end": 262.486,
+        "score": 0.995
+      },
+      {
+        "word": "teach",
+        "start": 262.546,
+        "end": 262.746,
+        "score": 0.677
+      },
+      {
+        "word": "kids",
+        "start": 262.826,
+        "end": 263.006,
+        "score": 0.808
+      },
+      {
+        "word": "a",
+        "start": 263.067,
+        "end": 263.107,
+        "score": 0.758
+      },
+      {
+        "word": "solid",
+        "start": 263.307,
+        "end": 263.728,
+        "score": 0.946
+      },
+      {
+        "word": "work",
+        "start": 263.808,
+        "end": 264.028,
+        "score": 0.919
+      },
+      {
+        "word": "ethic?",
+        "start": 264.109,
+        "end": 264.409,
+        "score": 0.963
+      }
+    ]
+  },
+  {
+    "id": "#041",
+    "start": 264.87,
+    "end": 266.974,
+    "text": "How do I keep them motivated for the long run?",
+    "words": [
+      {
+        "word": "How",
+        "start": 264.87,
+        "end": 264.97,
+        "score": 0.886
+      },
+      {
+        "word": "do",
+        "start": 264.99,
+        "end": 265.09,
+        "score": 0.97
+      },
+      {
+        "word": "I",
+        "start": 265.13,
+        "end": 265.17,
+        "score": 0.934
+      },
+      {
+        "word": "keep",
+        "start": 265.231,
+        "end": 265.391,
+        "score": 0.778
+      },
+      {
+        "word": "them",
+        "start": 265.411,
+        "end": 265.531,
+        "score": 0.774
+      },
+      {
+        "word": "motivated",
+        "start": 265.651,
+        "end": 266.212,
+        "score": 0.84
+      },
+      {
+        "word": "for",
+        "start": 266.253,
+        "end": 266.353,
+        "score": 0.839
+      },
+      {
+        "word": "the",
+        "start": 266.373,
+        "end": 266.453,
+        "score": 0.832
+      },
+      {
+        "word": "long",
+        "start": 266.493,
+        "end": 266.713,
+        "score": 0.892
+      },
+      {
+        "word": "run?",
+        "start": 266.773,
+        "end": 266.974,
+        "score": 0.924
+      }
+    ]
+  },
+  {
+    "id": "#042",
+    "start": 267.014,
+    "end": 270.861,
+    "text": "The honest answer is, I don't know.",
+    "words": [
+      {
+        "word": "The",
+        "start": 267.014,
+        "end": 268.096,
+        "score": 0.808
+      },
+      {
+        "word": "honest",
+        "start": 268.156,
+        "end": 268.457,
+        "score": 0.855
+      },
+      {
+        "word": "answer",
+        "start": 268.557,
+        "end": 268.857,
+        "score": 0.902
+      },
+      {
+        "word": "is,",
+        "start": 269.038,
+        "end": 269.178,
+        "score": 0.991
+      },
+      {
+        "word": "I",
+        "start": 269.198,
+        "end": 269.218,
+        "score": 1
+      },
+      {
+        "word": "don't",
+        "start": 270.14,
+        "end": 270.3,
+        "score": 0.719
+      },
+      {
+        "word": "know.",
+        "start": 270.36,
+        "end": 270.861,
+        "score": 0.74
+      }
+    ]
+  },
+  {
+    "id": "#043",
+    "start": 272.562,
+    "end": 274.966,
+    "text": " What I do know is that talent doesn't make you gritty.",
+    "words": [
+      {
+        "word": "What",
+        "start": 272.562,
+        "end": 272.742,
+        "score": 0.803
+      },
+      {
+        "word": "I",
+        "start": 272.802,
+        "end": 272.822,
+        "score": 0.542
+      },
+      {
+        "word": "do",
+        "start": 272.862,
+        "end": 273.083,
+        "score": 0.743
+      },
+      {
+        "word": "know",
+        "start": 273.123,
+        "end": 273.323,
+        "score": 0.784
+      },
+      {
+        "word": "is",
+        "start": 273.423,
+        "end": 273.483,
+        "score": 0.97
+      },
+      {
+        "word": "that",
+        "start": 273.523,
+        "end": 273.624,
+        "score": 0.998
+      },
+      {
+        "word": "talent",
+        "start": 273.684,
+        "end": 274.004,
+        "score": 0.823
+      },
+      {
+        "word": "doesn't",
+        "start": 274.044,
+        "end": 274.285,
+        "score": 0.614
+      },
+      {
+        "word": "make",
+        "start": 274.365,
+        "end": 274.525,
+        "score": 0.938
+      },
+      {
+        "word": "you",
+        "start": 274.565,
+        "end": 274.665,
+        "score": 0.973
+      },
+      {
+        "word": "gritty.",
+        "start": 274.705,
+        "end": 274.966,
+        "score": 0.927
+      }
+    ]
+  },
+  {
+    "id": "#044",
+    "start": 275.006,
+    "end": 283.238,
+    "text": "Our data show very clearly that there are many talented individuals who simply do not follow through on their commitments.",
+    "words": [
+      {
+        "word": "Our",
+        "start": 275.006,
+        "end": 275.907,
+        "score": 0.829
+      },
+      {
+        "word": "data",
+        "start": 275.967,
+        "end": 276.227,
+        "score": 0.964
+      },
+      {
+        "word": "show",
+        "start": 276.268,
+        "end": 276.448,
+        "score": 0.774
+      },
+      {
+        "word": "very",
+        "start": 276.528,
+        "end": 276.748,
+        "score": 0.81
+      },
+      {
+        "word": "clearly",
+        "start": 276.868,
+        "end": 277.309,
+        "score": 0.711
+      },
+      {
+        "word": "that",
+        "start": 277.329,
+        "end": 278.21,
+        "score": 0.469
+      },
+      {
+        "word": "there",
+        "start": 278.25,
+        "end": 278.431,
+        "score": 0.688
+      },
+      {
+        "word": "are",
+        "start": 278.511,
+        "end": 278.591,
+        "score": 0.933
+      },
+      {
+        "word": "many",
+        "start": 278.631,
+        "end": 278.992,
+        "score": 0.81
+      },
+      {
+        "word": "talented",
+        "start": 279.072,
+        "end": 279.452,
+        "score": 0.847
+      },
+      {
+        "word": "individuals",
+        "start": 279.512,
+        "end": 280.073,
+        "score": 0.779
+      },
+      {
+        "word": "who",
+        "start": 280.414,
+        "end": 280.534,
+        "score": 0.828
+      },
+      {
+        "word": "simply",
+        "start": 280.594,
+        "end": 280.894,
+        "score": 0.934
+      },
+      {
+        "word": "do",
+        "start": 280.935,
+        "end": 281.295,
+        "score": 0.882
+      },
+      {
+        "word": "not",
+        "start": 281.395,
+        "end": 281.595,
+        "score": 0.852
+      },
+      {
+        "word": "follow",
+        "start": 281.696,
+        "end": 281.976,
+        "score": 0.974
+      },
+      {
+        "word": "through",
+        "start": 282.016,
+        "end": 282.377,
+        "score": 0.755
+      },
+      {
+        "word": "on",
+        "start": 282.497,
+        "end": 282.557,
+        "score": 0.994
+      },
+      {
+        "word": "their",
+        "start": 282.597,
+        "end": 282.737,
+        "score": 0.885
+      },
+      {
+        "word": "commitments.",
+        "start": 282.777,
+        "end": 283.238,
+        "score": 0.937
+      }
+    ]
+  },
+  {
+    "id": "#045",
+    "start": 283.979,
+    "end": 291.33,
+    "text": "In fact, in our data, grit is usually unrelated or even inversely related to measures of talent.",
+    "words": [
+      {
+        "word": "In",
+        "start": 283.979,
+        "end": 284.039,
+        "score": 0.75
+      },
+      {
+        "word": "fact,",
+        "start": 284.119,
+        "end": 284.36,
+        "score": 0.98
+      },
+      {
+        "word": "in",
+        "start": 284.42,
+        "end": 284.46,
+        "score": 0.996
+      },
+      {
+        "word": "our",
+        "start": 284.58,
+        "end": 284.68,
+        "score": 0.837
+      },
+      {
+        "word": "data,",
+        "start": 284.74,
+        "end": 285.101,
+        "score": 0.982
+      },
+      {
+        "word": "grit",
+        "start": 285.561,
+        "end": 286.022,
+        "score": 0.826
+      },
+      {
+        "word": "is",
+        "start": 286.222,
+        "end": 286.303,
+        "score": 0.764
+      },
+      {
+        "word": "usually",
+        "start": 286.443,
+        "end": 286.763,
+        "score": 0.766
+      },
+      {
+        "word": "unrelated",
+        "start": 286.803,
+        "end": 287.544,
+        "score": 0.886
+      },
+      {
+        "word": "or",
+        "start": 287.564,
+        "end": 287.604,
+        "score": 0.5
+      },
+      {
+        "word": "even",
+        "start": 288.486,
+        "end": 288.646,
+        "score": 0.87
+      },
+      {
+        "word": "inversely",
+        "start": 288.666,
+        "end": 289.327,
+        "score": 0.821
+      },
+      {
+        "word": "related",
+        "start": 289.387,
+        "end": 289.808,
+        "score": 0.752
+      },
+      {
+        "word": "to",
+        "start": 289.888,
+        "end": 289.988,
+        "score": 0.968
+      },
+      {
+        "word": "measures",
+        "start": 290.028,
+        "end": 290.409,
+        "score": 0.821
+      },
+      {
+        "word": "of",
+        "start": 290.509,
+        "end": 290.549,
+        "score": 0.985
+      },
+      {
+        "word": "talent.",
+        "start": 290.589,
+        "end": 291.33,
+        "score": 0.637
+      }
+    ]
+  },
+  {
+    "id": "#046",
+    "start": 292.542,
+    "end": 298.691,
+    "text": " So far, the best idea I've heard about building grit in kids is something called growth mindset.",
+    "words": [
+      {
+        "word": "So",
+        "start": 292.542,
+        "end": 292.822,
+        "score": 0.871
+      },
+      {
+        "word": "far,",
+        "start": 292.862,
+        "end": 293.023,
+        "score": 0.679
+      },
+      {
+        "word": "the",
+        "start": 293.083,
+        "end": 293.163,
+        "score": 0.827
+      },
+      {
+        "word": "best",
+        "start": 293.243,
+        "end": 293.523,
+        "score": 0.93
+      },
+      {
+        "word": "idea",
+        "start": 293.684,
+        "end": 293.964,
+        "score": 0.807
+      },
+      {
+        "word": "I've",
+        "start": 293.984,
+        "end": 294.265,
+        "score": 0.936
+      },
+      {
+        "word": "heard",
+        "start": 294.305,
+        "end": 294.505,
+        "score": 0.76
+      },
+      {
+        "word": "about",
+        "start": 294.565,
+        "end": 294.745,
+        "score": 0.975
+      },
+      {
+        "word": "building",
+        "start": 294.825,
+        "end": 295.146,
+        "score": 0.878
+      },
+      {
+        "word": "grit",
+        "start": 295.206,
+        "end": 295.466,
+        "score": 0.786
+      },
+      {
+        "word": "in",
+        "start": 295.527,
+        "end": 295.607,
+        "score": 0.693
+      },
+      {
+        "word": "kids",
+        "start": 295.687,
+        "end": 296.047,
+        "score": 0.8
+      },
+      {
+        "word": "is",
+        "start": 296.788,
+        "end": 296.849,
+        "score": 0.765
+      },
+      {
+        "word": "something",
+        "start": 296.909,
+        "end": 297.209,
+        "score": 0.9
+      },
+      {
+        "word": "called",
+        "start": 297.269,
+        "end": 297.51,
+        "score": 0.852
+      },
+      {
+        "word": "growth",
+        "start": 297.63,
+        "end": 298.01,
+        "score": 0.895
+      },
+      {
+        "word": "mindset.",
+        "start": 298.11,
+        "end": 298.691,
+        "score": 0.859
+      }
+    ]
+  },
+  {
+    "id": "#047",
+    "start": 299.573,
+    "end": 310.99,
+    "text": "This is an idea developed at Stanford University by Carol Dweck, and it is the belief that the ability to learn is not fixed, that it can change with your effort.",
+    "words": [
+      {
+        "word": "This",
+        "start": 299.573,
+        "end": 299.713,
+        "score": 0.9
+      },
+      {
+        "word": "is",
+        "start": 299.753,
+        "end": 299.833,
+        "score": 0.976
+      },
+      {
+        "word": "an",
+        "start": 299.873,
+        "end": 299.913,
+        "score": 0.654
+      },
+      {
+        "word": "idea",
+        "start": 300.053,
+        "end": 300.354,
+        "score": 0.861
+      },
+      {
+        "word": "developed",
+        "start": 300.394,
+        "end": 300.775,
+        "score": 0.857
+      },
+      {
+        "word": "at",
+        "start": 300.835,
+        "end": 300.875,
+        "score": 0.789
+      },
+      {
+        "word": "Stanford",
+        "start": 300.955,
+        "end": 301.335,
+        "score": 0.896
+      },
+      {
+        "word": "University",
+        "start": 301.375,
+        "end": 301.876,
+        "score": 0.898
+      },
+      {
+        "word": "by",
+        "start": 301.936,
+        "end": 302.056,
+        "score": 0.922
+      },
+      {
+        "word": "Carol",
+        "start": 302.076,
+        "end": 302.437,
+        "score": 0.671
+      },
+      {
+        "word": "Dweck,",
+        "start": 302.477,
+        "end": 302.778,
+        "score": 0.957
+      },
+      {
+        "word": "and",
+        "start": 303.398,
+        "end": 303.499,
+        "score": 0.934
+      },
+      {
+        "word": "it",
+        "start": 303.559,
+        "end": 303.619,
+        "score": 0.927
+      },
+      {
+        "word": "is",
+        "start": 303.679,
+        "end": 303.759,
+        "score": 0.797
+      },
+      {
+        "word": "the",
+        "start": 303.799,
+        "end": 303.979,
+        "score": 0.812
+      },
+      {
+        "word": "belief",
+        "start": 304.06,
+        "end": 304.58,
+        "score": 0.925
+      },
+      {
+        "word": "that",
+        "start": 305.482,
+        "end": 305.622,
+        "score": 0.895
+      },
+      {
+        "word": "the",
+        "start": 305.762,
+        "end": 305.862,
+        "score": 0.991
+      },
+      {
+        "word": "ability",
+        "start": 305.942,
+        "end": 306.343,
+        "score": 0.854
+      },
+      {
+        "word": "to",
+        "start": 306.403,
+        "end": 306.503,
+        "score": 0.937
+      },
+      {
+        "word": "learn",
+        "start": 306.603,
+        "end": 306.884,
+        "score": 0.674
+      },
+      {
+        "word": "is",
+        "start": 307.024,
+        "end": 307.104,
+        "score": 0.473
+      },
+      {
+        "word": "not",
+        "start": 307.204,
+        "end": 307.405,
+        "score": 0.86
+      },
+      {
+        "word": "fixed,",
+        "start": 307.545,
+        "end": 307.925,
+        "score": 0.886
+      },
+      {
+        "word": "that",
+        "start": 308.506,
+        "end": 308.646,
+        "score": 0.934
+      },
+      {
+        "word": "it",
+        "start": 308.727,
+        "end": 308.767,
+        "score": 0.962
+      },
+      {
+        "word": "can",
+        "start": 308.807,
+        "end": 308.947,
+        "score": 0.893
+      },
+      {
+        "word": "change",
+        "start": 309.047,
+        "end": 309.508,
+        "score": 0.718
+      },
+      {
+        "word": "with",
+        "start": 309.808,
+        "end": 309.948,
+        "score": 0.82
+      },
+      {
+        "word": "your",
+        "start": 310.009,
+        "end": 310.149,
+        "score": 0.816
+      },
+      {
+        "word": "effort.",
+        "start": 310.249,
+        "end": 310.99,
+        "score": 0.879
+      }
+    ]
+  },
+  {
+    "id": "#048",
+    "start": 311.56,
+    "end": 327.933,
+    "text": " Dr. Dweck has shown that when kids read and learn about the brain and how it changes and grows in response to challenge, they're much more likely to persevere when they fail because they don't believe that failure is a permanent condition.",
+    "words": [
+      {
+        "word": "Dr.",
+        "start": 311.56,
+        "end": 311.901,
+        "score": 0.645
+      },
+      {
+        "word": "Dweck",
+        "start": 311.941,
+        "end": 312.181,
+        "score": 0.93
+      },
+      {
+        "word": "has",
+        "start": 312.201,
+        "end": 312.322,
+        "score": 0.999
+      },
+      {
+        "word": "shown",
+        "start": 312.382,
+        "end": 312.602,
+        "score": 0.843
+      },
+      {
+        "word": "that",
+        "start": 312.662,
+        "end": 312.762,
+        "score": 0.916
+      },
+      {
+        "word": "when",
+        "start": 312.863,
+        "end": 313.083,
+        "score": 0.843
+      },
+      {
+        "word": "kids",
+        "start": 313.183,
+        "end": 313.444,
+        "score": 0.856
+      },
+      {
+        "word": "read",
+        "start": 313.564,
+        "end": 313.885,
+        "score": 0.888
+      },
+      {
+        "word": "and",
+        "start": 314.025,
+        "end": 314.085,
+        "score": 0.954
+      },
+      {
+        "word": "learn",
+        "start": 314.185,
+        "end": 314.486,
+        "score": 0.644
+      },
+      {
+        "word": "about",
+        "start": 314.526,
+        "end": 314.726,
+        "score": 0.932
+      },
+      {
+        "word": "the",
+        "start": 314.767,
+        "end": 314.887,
+        "score": 0.705
+      },
+      {
+        "word": "brain",
+        "start": 314.967,
+        "end": 315.368,
+        "score": 0.816
+      },
+      {
+        "word": "and",
+        "start": 315.388,
+        "end": 316.089,
+        "score": 0.46
+      },
+      {
+        "word": "how",
+        "start": 316.149,
+        "end": 316.29,
+        "score": 0.908
+      },
+      {
+        "word": "it",
+        "start": 316.37,
+        "end": 316.41,
+        "score": 1
+      },
+      {
+        "word": "changes",
+        "start": 316.51,
+        "end": 316.991,
+        "score": 0.764
+      },
+      {
+        "word": "and",
+        "start": 317.011,
+        "end": 317.232,
+        "score": 0.69
+      },
+      {
+        "word": "grows",
+        "start": 317.352,
+        "end": 317.773,
+        "score": 0.885
+      },
+      {
+        "word": "in",
+        "start": 317.793,
+        "end": 317.933,
+        "score": 0.83
+      },
+      {
+        "word": "response",
+        "start": 317.993,
+        "end": 318.394,
+        "score": 0.817
+      },
+      {
+        "word": "to",
+        "start": 318.454,
+        "end": 318.534,
+        "score": 0.995
+      },
+      {
+        "word": "challenge,",
+        "start": 318.594,
+        "end": 319.035,
+        "score": 0.91
+      },
+      {
+        "word": "they're",
+        "start": 319.576,
+        "end": 319.777,
+        "score": 0.864
+      },
+      {
+        "word": "much",
+        "start": 319.857,
+        "end": 320.057,
+        "score": 0.792
+      },
+      {
+        "word": "more",
+        "start": 320.138,
+        "end": 320.318,
+        "score": 0.798
+      },
+      {
+        "word": "likely",
+        "start": 320.398,
+        "end": 320.739,
+        "score": 0.92
+      },
+      {
+        "word": "to",
+        "start": 320.819,
+        "end": 320.939,
+        "score": 0.948
+      },
+      {
+        "word": "persevere",
+        "start": 321.019,
+        "end": 321.761,
+        "score": 0.846
+      },
+      {
+        "word": "when",
+        "start": 321.781,
+        "end": 322.362,
+        "score": 0.918
+      },
+      {
+        "word": "they",
+        "start": 322.402,
+        "end": 322.542,
+        "score": 0.643
+      },
+      {
+        "word": "fail",
+        "start": 322.643,
+        "end": 322.963,
+        "score": 0.818
+      },
+      {
+        "word": "because",
+        "start": 323.003,
+        "end": 324.306,
+        "score": 0.615
+      },
+      {
+        "word": "they",
+        "start": 324.346,
+        "end": 325.007,
+        "score": 0.696
+      },
+      {
+        "word": "don't",
+        "start": 325.048,
+        "end": 325.529,
+        "score": 0.749
+      },
+      {
+        "word": "believe",
+        "start": 325.629,
+        "end": 325.929,
+        "score": 0.783
+      },
+      {
+        "word": "that",
+        "start": 325.989,
+        "end": 326.11,
+        "score": 0.906
+      },
+      {
+        "word": "failure",
+        "start": 326.21,
+        "end": 326.671,
+        "score": 0.884
+      },
+      {
+        "word": "is",
+        "start": 326.691,
+        "end": 326.811,
+        "score": 0.847
+      },
+      {
+        "word": "a",
+        "start": 326.871,
+        "end": 326.891,
+        "score": 0.941
+      },
+      {
+        "word": "permanent",
+        "start": 326.992,
+        "end": 327.412,
+        "score": 0.773
+      },
+      {
+        "word": "condition.",
+        "start": 327.473,
+        "end": 327.933,
+        "score": 0.973
+      }
+    ]
+  },
+  {
+    "id": "#049",
+    "start": 329.296,
+    "end": 332.623,
+    "text": "So growth mindset is a great idea for building grit.",
+    "words": [
+      {
+        "word": "So",
+        "start": 329.296,
+        "end": 329.416,
+        "score": 1
+      },
+      {
+        "word": "growth",
+        "start": 329.497,
+        "end": 329.777,
+        "score": 0.802
+      },
+      {
+        "word": "mindset",
+        "start": 329.797,
+        "end": 330.218,
+        "score": 0.702
+      },
+      {
+        "word": "is",
+        "start": 330.238,
+        "end": 330.378,
+        "score": 0.568
+      },
+      {
+        "word": "a",
+        "start": 330.419,
+        "end": 330.459,
+        "score": 0.5
+      },
+      {
+        "word": "great",
+        "start": 330.539,
+        "end": 330.799,
+        "score": 0.753
+      },
+      {
+        "word": "idea",
+        "start": 330.92,
+        "end": 331.18,
+        "score": 0.924
+      },
+      {
+        "word": "for",
+        "start": 331.26,
+        "end": 331.36,
+        "score": 0.895
+      },
+      {
+        "word": "building",
+        "start": 331.441,
+        "end": 331.741,
+        "score": 0.84
+      },
+      {
+        "word": "grit.",
+        "start": 331.781,
+        "end": 332.623,
+        "score": 0.882
+      }
+    ]
+  },
+  {
+    "id": "#050",
+    "start": 332.789,
+    "end": 334.03,
+    "text": " but we need more.",
+    "words": [
+      {
+        "word": "but",
+        "start": 332.789,
+        "end": 332.949,
+        "score": 0.713
+      },
+      {
+        "word": "we",
+        "start": 333.009,
+        "end": 333.149,
+        "score": 0.704
+      },
+      {
+        "word": "need",
+        "start": 333.269,
+        "end": 333.49,
+        "score": 0.82
+      },
+      {
+        "word": "more.",
+        "start": 333.63,
+        "end": 334.03,
+        "score": 0.852
+      }
+    ]
+  },
+  {
+    "id": "#051",
+    "start": 334.09,
+    "end": 337.874,
+    "text": "And that's where I'm gonna end my remarks, because that's where we are.",
+    "words": [
+      {
+        "word": "And",
+        "start": 334.09,
+        "end": 335.091,
+        "score": 0.758
+      },
+      {
+        "word": "that's",
+        "start": 335.171,
+        "end": 335.391,
+        "score": 0.705
+      },
+      {
+        "word": "where",
+        "start": 335.411,
+        "end": 335.531,
+        "score": 0.915
+      },
+      {
+        "word": "I'm",
+        "start": 335.591,
+        "end": 335.672,
+        "score": 0.329
+      },
+      {
+        "word": "gonna",
+        "start": 335.692,
+        "end": 335.852,
+        "score": 0.274
+      },
+      {
+        "word": "end",
+        "start": 335.912,
+        "end": 336.012,
+        "score": 0.957
+      },
+      {
+        "word": "my",
+        "start": 336.032,
+        "end": 336.152,
+        "score": 0.962
+      },
+      {
+        "word": "remarks,",
+        "start": 336.212,
+        "end": 336.612,
+        "score": 0.88
+      },
+      {
+        "word": "because",
+        "start": 336.672,
+        "end": 336.933,
+        "score": 0.926
+      },
+      {
+        "word": "that's",
+        "start": 337.013,
+        "end": 337.273,
+        "score": 0.842
+      },
+      {
+        "word": "where",
+        "start": 337.333,
+        "end": 337.473,
+        "score": 0.797
+      },
+      {
+        "word": "we",
+        "start": 337.513,
+        "end": 337.613,
+        "score": 0.906
+      },
+      {
+        "word": "are.",
+        "start": 337.773,
+        "end": 337.874,
+        "score": 0.996
+      }
+    ]
+  },
+  {
+    "id": "#052",
+    "start": 338.274,
+    "end": 340.176,
+    "text": "That's the work that stands before us.",
+    "words": [
+      {
+        "word": "That's",
+        "start": 338.274,
+        "end": 338.534,
+        "score": 0.819
+      },
+      {
+        "word": "the",
+        "start": 338.614,
+        "end": 338.694,
+        "score": 0.838
+      },
+      {
+        "word": "work",
+        "start": 338.774,
+        "end": 338.994,
+        "score": 0.916
+      },
+      {
+        "word": "that",
+        "start": 339.035,
+        "end": 339.175,
+        "score": 0.873
+      },
+      {
+        "word": "stands",
+        "start": 339.255,
+        "end": 339.595,
+        "score": 0.863
+      },
+      {
+        "word": "before",
+        "start": 339.655,
+        "end": 339.975,
+        "score": 0.803
+      },
+      {
+        "word": "us.",
+        "start": 340.095,
+        "end": 340.176,
+        "score": 0.988
+      }
+    ]
+  },
+  {
+    "id": "#053",
+    "start": 340.696,
+    "end": 345.981,
+    "text": "We need to take our best ideas, our strongest intuitions, and we need to test them.",
+    "words": [
+      {
+        "word": "We",
+        "start": 340.696,
+        "end": 340.776,
+        "score": 0.742
+      },
+      {
+        "word": "need",
+        "start": 340.816,
+        "end": 340.956,
+        "score": 0.863
+      },
+      {
+        "word": "to",
+        "start": 340.976,
+        "end": 341.016,
+        "score": 0.946
+      },
+      {
+        "word": "take",
+        "start": 341.076,
+        "end": 341.196,
+        "score": 0.788
+      },
+      {
+        "word": "our",
+        "start": 341.236,
+        "end": 341.397,
+        "score": 0.68
+      },
+      {
+        "word": "best",
+        "start": 341.517,
+        "end": 341.797,
+        "score": 0.914
+      },
+      {
+        "word": "ideas,",
+        "start": 341.977,
+        "end": 342.398,
+        "score": 0.919
+      },
+      {
+        "word": "our",
+        "start": 342.858,
+        "end": 342.958,
+        "score": 0.839
+      },
+      {
+        "word": "strongest",
+        "start": 343.078,
+        "end": 343.579,
+        "score": 0.752
+      },
+      {
+        "word": "intuitions,",
+        "start": 343.659,
+        "end": 344.259,
+        "score": 0.926
+      },
+      {
+        "word": "and",
+        "start": 344.619,
+        "end": 344.7,
+        "score": 0.763
+      },
+      {
+        "word": "we",
+        "start": 344.76,
+        "end": 344.88,
+        "score": 0.966
+      },
+      {
+        "word": "need",
+        "start": 344.94,
+        "end": 345.14,
+        "score": 0.743
+      },
+      {
+        "word": "to",
+        "start": 345.18,
+        "end": 345.26,
+        "score": 0.821
+      },
+      {
+        "word": "test",
+        "start": 345.36,
+        "end": 345.68,
+        "score": 0.967
+      },
+      {
+        "word": "them.",
+        "start": 345.781,
+        "end": 345.981,
+        "score": 0.909
+      }
+    ]
+  },
+  {
+    "id": "#054",
+    "start": 346.621,
+    "end": 355.449,
+    "text": "We need to measure whether we've been successful, and we have to be willing to fail, to be wrong, to start over again with lessons learned.",
+    "words": [
+      {
+        "word": "We",
+        "start": 346.621,
+        "end": 346.741,
+        "score": 0.851
+      },
+      {
+        "word": "need",
+        "start": 346.781,
+        "end": 347.002,
+        "score": 0.712
+      },
+      {
+        "word": "to",
+        "start": 347.022,
+        "end": 347.122,
+        "score": 0.73
+      },
+      {
+        "word": "measure",
+        "start": 347.302,
+        "end": 347.622,
+        "score": 0.789
+      },
+      {
+        "word": "whether",
+        "start": 347.662,
+        "end": 347.862,
+        "score": 0.796
+      },
+      {
+        "word": "we've",
+        "start": 347.922,
+        "end": 348.063,
+        "score": 0.992
+      },
+      {
+        "word": "been",
+        "start": 348.083,
+        "end": 348.223,
+        "score": 0.775
+      },
+      {
+        "word": "successful,",
+        "start": 348.263,
+        "end": 348.903,
+        "score": 0.822
+      },
+      {
+        "word": "and",
+        "start": 349.404,
+        "end": 349.484,
+        "score": 0.938
+      },
+      {
+        "word": "we",
+        "start": 349.544,
+        "end": 349.684,
+        "score": 0.971
+      },
+      {
+        "word": "have",
+        "start": 349.744,
+        "end": 349.884,
+        "score": 0.736
+      },
+      {
+        "word": "to",
+        "start": 349.944,
+        "end": 350.024,
+        "score": 0.812
+      },
+      {
+        "word": "be",
+        "start": 350.084,
+        "end": 350.204,
+        "score": 0.898
+      },
+      {
+        "word": "willing",
+        "start": 350.285,
+        "end": 350.565,
+        "score": 0.739
+      },
+      {
+        "word": "to",
+        "start": 350.625,
+        "end": 350.725,
+        "score": 0.585
+      },
+      {
+        "word": "fail,",
+        "start": 350.865,
+        "end": 351.205,
+        "score": 0.998
+      },
+      {
+        "word": "to",
+        "start": 351.265,
+        "end": 351.906,
+        "score": 0.853
+      },
+      {
+        "word": "be",
+        "start": 351.986,
+        "end": 352.086,
+        "score": 0.932
+      },
+      {
+        "word": "wrong,",
+        "start": 352.186,
+        "end": 352.607,
+        "score": 0.854
+      },
+      {
+        "word": "to",
+        "start": 353.187,
+        "end": 353.287,
+        "score": 0.885
+      },
+      {
+        "word": "start",
+        "start": 353.367,
+        "end": 353.667,
+        "score": 0.801
+      },
+      {
+        "word": "over",
+        "start": 353.768,
+        "end": 353.968,
+        "score": 0.894
+      },
+      {
+        "word": "again",
+        "start": 354.068,
+        "end": 354.328,
+        "score": 0.781
+      },
+      {
+        "word": "with",
+        "start": 354.368,
+        "end": 354.608,
+        "score": 0.872
+      },
+      {
+        "word": "lessons",
+        "start": 354.688,
+        "end": 355.049,
+        "score": 0.89
+      },
+      {
+        "word": "learned.",
+        "start": 355.129,
+        "end": 355.449,
+        "score": 0.893
+      }
+    ]
+  },
+  {
+    "id": "#055",
+    "start": 356.57,
+    "end": 362.155,
+    "text": "In other words, we need to be gritty about getting our kids grittier.",
+    "words": [
+      {
+        "word": "In",
+        "start": 356.57,
+        "end": 356.63,
+        "score": 0.99
+      },
+      {
+        "word": "other",
+        "start": 356.69,
+        "end": 356.85,
+        "score": 0.798
+      },
+      {
+        "word": "words,",
+        "start": 356.91,
+        "end": 357.211,
+        "score": 0.853
+      },
+      {
+        "word": "we",
+        "start": 357.611,
+        "end": 357.711,
+        "score": 0.578
+      },
+      {
+        "word": "need",
+        "start": 357.751,
+        "end": 357.911,
+        "score": 0.881
+      },
+      {
+        "word": "to",
+        "start": 357.931,
+        "end": 357.991,
+        "score": 0.744
+      },
+      {
+        "word": "be",
+        "start": 358.051,
+        "end": 358.171,
+        "score": 0.992
+      },
+      {
+        "word": "gritty",
+        "start": 358.272,
+        "end": 358.672,
+        "score": 0.88
+      },
+      {
+        "word": "about",
+        "start": 358.692,
+        "end": 359.793,
+        "score": 0.95
+      },
+      {
+        "word": "getting",
+        "start": 359.813,
+        "end": 360.053,
+        "score": 0.773
+      },
+      {
+        "word": "our",
+        "start": 360.093,
+        "end": 360.193,
+        "score": 0.684
+      },
+      {
+        "word": "kids",
+        "start": 360.313,
+        "end": 360.694,
+        "score": 0.81
+      },
+      {
+        "word": "grittier.",
+        "start": 361.274,
+        "end": 362.155,
+        "score": 0.842
+      }
+    ]
+  },
+  {
+    "id": "#056",
+    "start": 362.455,
+    "end": 363.202,
+    "text": " Thank you.",
+    "words": [
+      {
+        "word": "Thank",
+        "start": 362.455,
+        "end": 362.725,
+        "score": 0.863
+      },
+      {
+        "word": "you.",
+        "start": 362.766,
+        "end": 363.202,
+        "score": 0.878
+      }
+    ]
+  }
+]

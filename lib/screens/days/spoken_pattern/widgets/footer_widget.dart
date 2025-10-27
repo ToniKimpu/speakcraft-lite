@@ -5,18 +5,18 @@ import '../../../../config/pmp_text_styles.dart';
 import '../../../../model/spoken_pattern/spoken_pattern.dart';
 
 class FooterWidget extends StatelessWidget {
-  final List<SpokenPattern> spokenPatterns;
+  // final List<SpokenPattern> spokenPatterns;
+  final int totalPage;
   final int currentPage;
-  final Function(int) onPageChanged;
-  final AudioPlayer audioPlayer;
+  final Function(int page) onPageChanged;
   final bool nextEnabled;
 
   const FooterWidget({
     super.key,
-    required this.spokenPatterns,
+    // required this.spokenPatterns,
+    required this.totalPage,
     required this.currentPage,
     required this.onPageChanged,
-    required this.audioPlayer,
     required this.nextEnabled,
   });
 
@@ -49,7 +49,7 @@ class FooterWidget extends StatelessWidget {
       onTap: currentPage <= 0
           ? null
           : () {
-              audioPlayer.stop();
+              // audioPlayer.stop();
               onPageChanged(currentPage - 1);
             },
       child: Ink(
@@ -91,7 +91,7 @@ class FooterWidget extends StatelessWidget {
         ],
       ),
       child: Text(
-        '${currentPage + 1}/${spokenPatterns.length}',
+        '${currentPage + 1}/$totalPage',
         style: PmpTextStyles.body2Semi.copyWith(
           color: Colors.white,
           fontWeight: FontWeight.bold,
@@ -108,13 +108,13 @@ class FooterWidget extends StatelessWidget {
   }
 
   Widget _buildNextButton() {
-    final totalPatterns = spokenPatterns.length - 1;
+    final totalPatterns = totalPage - 1;
     return InkWell(
       borderRadius: BorderRadius.circular(100),
       onTap: (currentPage >= totalPatterns || !nextEnabled)
           ? null
           : () {
-              audioPlayer.stop();
+              // audioPlayer.stop();
               onPageChanged(currentPage + 1);
             },
       child: Ink(
