@@ -3,7 +3,7 @@
     "id": "#001",
     "start": 12.923,
     "end": 21.798,
-    "text": "When I was 27 years old, I left a very demanding job in management consulting for a job that was even more demanding, teaching.",
+    "english": "When I was 27 years old, I left a very demanding job in management consulting for a job that was even more demanding, teaching.",
     "words": [
       {
         "word": "When",
@@ -155,7 +155,7 @@
     "id": "#002",
     "start": 21.818,
     "end": 27.588,
-    "text": "I went to teach seventh graders math in the New York City public schools.",
+    "english": "I went to teach seventh graders math in the New York City public schools.",
     "words": [
       {
         "word": "I",
@@ -247,7 +247,7 @@
     "id": "#003",
     "start": 28.39,
     "end": 32.597,
-    "text": "And like any teacher, I made quizzes and tests, I gave out homework assignments.",
+    "english": "And like any teacher, I made quizzes and tests, I gave out homework assignments.",
     "words": [
       {
         "word": "And",
@@ -339,7 +339,7 @@
     "id": "#004",
     "start": 33.238,
     "end": 36.163,
-    "text": "When the work came back, I calculated grades.",
+    "english": "When the work came back, I calculated grades.",
     "words": [
       {
         "word": "When",
@@ -395,7 +395,7 @@
     "id": "#005",
     "start": 36.835,
     "end": 44.272,
-    "text": " What struck me was that IQ was not the only difference between my best and my worst students.",
+    "english": " What struck me was that IQ was not the only difference between my best and my worst students.",
     "words": [
       {
         "word": "What",
@@ -511,7 +511,7 @@
     "id": "#006",
     "start": 45.194,
     "end": 49.745,
-    "text": "Some of my strongest performers did not have stratospheric IQ scores.",
+    "english": "Some of my strongest performers did not have stratospheric IQ scores.",
     "words": [
       {
         "word": "Some",
@@ -585,7 +585,7 @@
     "id": "#007",
     "start": 50.486,
     "end": 53.553,
-    "text": "Some of my smartest kids weren't doing so well.",
+    "english": "Some of my smartest kids weren't doing so well.",
     "words": [
       {
         "word": "Some",
@@ -647,7 +647,7 @@
     "id": "#008",
     "start": 54.495,
     "end": 56.059,
-    "text": "And that got me thinking.",
+    "english": "And that got me thinking.",
     "words": [
       {
         "word": "And",
@@ -685,7 +685,7 @@
     "id": "#009",
     "start": 56.512,
     "end": 60.879,
-    "text": " The kinds of things you need to learn in seventh grade math, sure, they're hard.",
+    "english": " The kinds of things you need to learn in seventh grade math, sure, they're hard.",
     "words": [
       {
         "word": "The",
@@ -783,7 +783,7 @@
     "id": "#010",
     "start": 61.2,
     "end": 64.104,
-    "text": "Ratios, decimals, the area of a parallelogram.",
+    "english": "Ratios, decimals, the area of a parallelogram.",
     "words": [
       {
         "word": "Ratios,",
@@ -833,7 +833,7 @@
     "id": "#011",
     "start": 64.725,
     "end": 66.748,
-    "text": "But these concepts are not impossible.",
+    "english": "But these concepts are not impossible.",
     "words": [
       {
         "word": "But",
@@ -877,7 +877,7 @@
     "id": "#012",
     "start": 67.55,
     "end": 75.603,
-    "text": "And I was firmly convinced that every one of my students could learn the material if they worked hard and long enough.",
+    "english": "And I was firmly convinced that every one of my students could learn the material if they worked hard and long enough.",
     "words": [
       {
         "word": "And",
@@ -1017,7 +1017,7 @@
     "id": "#013",
     "start": 77.045,
     "end": 78.908,
-    "text": "After several more years of teaching,",
+    "english": "After several more years of teaching,",
     "words": [
       {
         "word": "After",
@@ -1061,7 +1061,7 @@
     "id": "#014",
     "start": 79.462,
     "end": 91.034,
-    "text": " I came to the conclusion that what we need in education is a much better understanding of students and learning from a motivational perspective, from a psychological perspective.",
+    "english": " I came to the conclusion that what we need in education is a much better understanding of students and learning from a motivational perspective, from a psychological perspective.",
     "words": [
       {
         "word": "I",
@@ -1237,7 +1237,7 @@
     "id": "#015",
     "start": 91.955,
     "end": 97,
-    "text": "In education, the one thing we know how to measure best is IQ.",
+    "english": "In education, the one thing we know how to measure best is IQ.",
     "words": [
       {
         "word": "In",
@@ -1323,7 +1323,7 @@
     "id": "#016",
     "start": 98.261,
     "end": 107.511,
-    "text": "But what if doing well in school and in life depends on much more than your ability to learn quickly and easily?",
+    "english": "But what if doing well in school and in life depends on much more than your ability to learn quickly and easily?",
     "words": [
       {
         "word": "But",
@@ -1463,7 +1463,7 @@
     "id": "#017",
     "start": 108.47,
     "end": 112.994,
-    "text": " So I left the classroom and I went to graduate school to become a psychologist.",
+    "english": " So I left the classroom and I went to graduate school to become a psychologist.",
     "words": [
       {
         "word": "So",
@@ -1561,7 +1561,7 @@
     "id": "#018",
     "start": 114.055,
     "end": 118.5,
-    "text": "I started studying kids and adults in all kinds of super challenging settings.",
+    "english": "I started studying kids and adults in all kinds of super challenging settings.",
     "words": [
       {
         "word": "I",
@@ -1647,7 +1647,7 @@
     "id": "#019",
     "start": 119.22,
     "end": 123.485,
-    "text": "And in every study, my question was, who is successful here and why?",
+    "english": "And in every study, my question was, who is successful here and why?",
     "words": [
       {
         "word": "And",
@@ -1733,7 +1733,7 @@
     "id": "#020",
     "start": 123.505,
     "end": 127.889,
-    "text": "My research team and I went to West Point Military Academy.",
+    "english": "My research team and I went to West Point Military Academy.",
     "words": [
       {
         "word": "My",
@@ -1807,7 +1807,7 @@
     "id": "#021",
     "start": 128.59,
     "end": 134.275,
-    "text": "We tried to predict which cadets would stay in military training and which would drop out.",
+    "english": "We tried to predict which cadets would stay in military training and which would drop out.",
     "words": [
       {
         "word": "We",
@@ -1911,7 +1911,7 @@
     "id": "#022",
     "start": 134.508,
     "end": 140.916,
-    "text": " We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.",
+    "english": " We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.",
     "words": [
       {
         "word": "We",
@@ -2027,7 +2027,7 @@
     "id": "#023",
     "start": 142.037,
     "end": 150.868,
-    "text": "We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year.",
+    "english": "We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year.",
     "words": [
       {
         "word": "We",
@@ -2197,7 +2197,7 @@
     "id": "#024",
     "start": 151.609,
     "end": 156.936,
-    "text": "And of those, who will be the most effective at improving learning outcomes for their students.",
+    "english": "And of those, who will be the most effective at improving learning outcomes for their students.",
     "words": [
       {
         "word": "And",
@@ -2301,7 +2301,7 @@
     "id": "#025",
     "start": 157.737,
     "end": 164.245,
-    "text": "We partnered with private companies, asking which of these salespeople is going to keep their jobs, and who's going to earn the most money.",
+    "english": "We partnered with private companies, asking which of these salespeople is going to keep their jobs, and who's going to earn the most money.",
     "words": [
       {
         "word": "We",
@@ -2453,7 +2453,7 @@
     "id": "#026",
     "start": 164.849,
     "end": 171.764,
-    "text": " In all those very different contexts, one characteristic emerged as a significant predictor of success.",
+    "english": " In all those very different contexts, one characteristic emerged as a significant predictor of success.",
     "words": [
       {
         "word": "In",
@@ -2551,7 +2551,7 @@
     "id": "#027",
     "start": 172.585,
     "end": 178.779,
-    "text": "And it wasn't social intelligence, it wasn't good looks, physical health, and it wasn't IQ.",
+    "english": "And it wasn't social intelligence, it wasn't good looks, physical health, and it wasn't IQ.",
     "words": [
       {
         "word": "And",
@@ -2649,7 +2649,7 @@
     "id": "#028",
     "start": 178.799,
     "end": 180.883,
-    "text": "It was grit.",
+    "english": "It was grit.",
     "words": [
       {
         "word": "It",
@@ -2675,7 +2675,7 @@
     "id": "#029",
     "start": 182.028,
     "end": 186.353,
-    "text": " Grit is passion and perseverance for very long-term goals.",
+    "english": " Grit is passion and perseverance for very long-term goals.",
     "words": [
       {
         "word": "Grit",
@@ -2737,7 +2737,7 @@
     "id": "#030",
     "start": 187.154,
     "end": 188.615,
-    "text": "Grit is having stamina.",
+    "english": "Grit is having stamina.",
     "words": [
       {
         "word": "Grit",
@@ -2769,7 +2769,7 @@
     "id": "#031",
     "start": 189.356,
     "end": 202.11,
-    "text": "Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.",
+    "english": "Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.",
     "words": [
       {
         "word": "Grit",
@@ -2975,7 +2975,7 @@
     "id": "#032",
     "start": 203.151,
     "end": 207.175,
-    "text": "Grit is living life like it's a marathon, not a sprint.",
+    "english": "Grit is living life like it's a marathon, not a sprint.",
     "words": [
       {
         "word": "Grit",
@@ -3049,7 +3049,7 @@
     "id": "#033",
     "start": 208.302,
     "end": 212.373,
-    "text": " A few years ago, I started studying grit in the Chicago Public Schools.",
+    "english": " A few years ago, I started studying grit in the Chicago Public Schools.",
     "words": [
       {
         "word": "A",
@@ -3135,7 +3135,7 @@
     "id": "#034",
     "start": 213.296,
     "end": 220.776,
-    "text": "I asked thousands of high school juniors to take grit questionnaires and then waited around more than a year to see who would graduate.",
+    "english": "I asked thousands of high school juniors to take grit questionnaires and then waited around more than a year to see who would graduate.",
     "words": [
       {
         "word": "I",
@@ -3287,7 +3287,7 @@
     "id": "#035",
     "start": 221.617,
     "end": 230.43,
-    "text": " Turns out that grittier kids were significantly more likely to graduate, even when I matched them on every characteristic I could measure.",
+    "english": " Turns out that grittier kids were significantly more likely to graduate, even when I matched them on every characteristic I could measure.",
     "words": [
       {
         "word": "Turns",
@@ -3427,7 +3427,7 @@
     "id": "#036",
     "start": 230.91,
     "end": 238.682,
-    "text": "Things like family income, standardized achievement test scores, even how safe kids felt when they were at school.",
+    "english": "Things like family income, standardized achievement test scores, even how safe kids felt when they were at school.",
     "words": [
       {
         "word": "Things",
@@ -3543,7 +3543,7 @@
     "id": "#037",
     "start": 239.543,
     "end": 247.995,
-    "text": "So it's not just at West Point or the National Spelling Bee that grit matters, it's also in school, especially for kids at risk for dropping out.",
+    "english": "So it's not just at West Point or the National Spelling Bee that grit matters, it's also in school, especially for kids at risk for dropping out.",
     "words": [
       {
         "word": "So",
@@ -3713,7 +3713,7 @@
     "id": "#038",
     "start": 249.241,
     "end": 256.454,
-    "text": " To me, the most shocking thing about grit is how little we know, how little science knows about building it.",
+    "english": " To me, the most shocking thing about grit is how little we know, how little science knows about building it.",
     "words": [
       {
         "word": "To",
@@ -3841,7 +3841,7 @@
     "id": "#039",
     "start": 257.236,
     "end": 261.223,
-    "text": "Every day, parents and teachers ask me, how do I build grit in kids?",
+    "english": "Every day, parents and teachers ask me, how do I build grit in kids?",
     "words": [
       {
         "word": "Every",
@@ -3933,7 +3933,7 @@
     "id": "#040",
     "start": 261.664,
     "end": 264.409,
-    "text": "What do I do to teach kids a solid work ethic?",
+    "english": "What do I do to teach kids a solid work ethic?",
     "words": [
       {
         "word": "What",
@@ -4007,7 +4007,7 @@
     "id": "#041",
     "start": 264.87,
     "end": 266.974,
-    "text": "How do I keep them motivated for the long run?",
+    "english": "How do I keep them motivated for the long run?",
     "words": [
       {
         "word": "How",
@@ -4075,7 +4075,7 @@
     "id": "#042",
     "start": 267.014,
     "end": 270.861,
-    "text": "The honest answer is, I don't know.",
+    "english": "The honest answer is, I don't know.",
     "words": [
       {
         "word": "The",
@@ -4125,7 +4125,7 @@
     "id": "#043",
     "start": 272.562,
     "end": 274.966,
-    "text": " What I do know is that talent doesn't make you gritty.",
+    "english": " What I do know is that talent doesn't make you gritty.",
     "words": [
       {
         "word": "What",
@@ -4199,7 +4199,7 @@
     "id": "#044",
     "start": 275.006,
     "end": 283.238,
-    "text": "Our data show very clearly that there are many talented individuals who simply do not follow through on their commitments.",
+    "english": "Our data show very clearly that there are many talented individuals who simply do not follow through on their commitments.",
     "words": [
       {
         "word": "Our",
@@ -4327,7 +4327,7 @@
     "id": "#045",
     "start": 283.979,
     "end": 291.33,
-    "text": "In fact, in our data, grit is usually unrelated or even inversely related to measures of talent.",
+    "english": "In fact, in our data, grit is usually unrelated or even inversely related to measures of talent.",
     "words": [
       {
         "word": "In",
@@ -4437,7 +4437,7 @@
     "id": "#046",
     "start": 292.542,
     "end": 298.691,
-    "text": " So far, the best idea I've heard about building grit in kids is something called growth mindset.",
+    "english": " So far, the best idea I've heard about building grit in kids is something called growth mindset.",
     "words": [
       {
         "word": "So",
@@ -4547,7 +4547,7 @@
     "id": "#047",
     "start": 299.573,
     "end": 310.99,
-    "text": "This is an idea developed at Stanford University by Carol Dweck, and it is the belief that the ability to learn is not fixed, that it can change with your effort.",
+    "english": "This is an idea developed at Stanford University by Carol Dweck, and it is the belief that the ability to learn is not fixed, that it can change with your effort.",
     "words": [
       {
         "word": "This",
@@ -4741,7 +4741,7 @@
     "id": "#048",
     "start": 311.56,
     "end": 327.933,
-    "text": " Dr. Dweck has shown that when kids read and learn about the brain and how it changes and grows in response to challenge, they're much more likely to persevere when they fail because they don't believe that failure is a permanent condition.",
+    "english": " Dr. Dweck has shown that when kids read and learn about the brain and how it changes and grows in response to challenge, they're much more likely to persevere when they fail because they don't believe that failure is a permanent condition.",
     "words": [
       {
         "word": "Dr.",
@@ -5001,7 +5001,7 @@
     "id": "#049",
     "start": 329.296,
     "end": 332.623,
-    "text": "So growth mindset is a great idea for building grit.",
+    "english": "So growth mindset is a great idea for building grit.",
     "words": [
       {
         "word": "So",
@@ -5069,7 +5069,7 @@
     "id": "#050",
     "start": 332.789,
     "end": 334.03,
-    "text": " but we need more.",
+    "english": " but we need more.",
     "words": [
       {
         "word": "but",
@@ -5101,7 +5101,7 @@
     "id": "#051",
     "start": 334.09,
     "end": 337.874,
-    "text": "And that's where I'm gonna end my remarks, because that's where we are.",
+    "english": "And that's where I'm gonna end my remarks, because that's where we are.",
     "words": [
       {
         "word": "And",
@@ -5187,7 +5187,7 @@
     "id": "#052",
     "start": 338.274,
     "end": 340.176,
-    "text": "That's the work that stands before us.",
+    "english": "That's the work that stands before us.",
     "words": [
       {
         "word": "That's",
@@ -5237,7 +5237,7 @@
     "id": "#053",
     "start": 340.696,
     "end": 345.981,
-    "text": "We need to take our best ideas, our strongest intuitions, and we need to test them.",
+    "english": "We need to take our best ideas, our strongest intuitions, and we need to test them.",
     "words": [
       {
         "word": "We",
@@ -5341,7 +5341,7 @@
     "id": "#054",
     "start": 346.621,
     "end": 355.449,
-    "text": "We need to measure whether we've been successful, and we have to be willing to fail, to be wrong, to start over again with lessons learned.",
+    "english": "We need to measure whether we've been successful, and we have to be willing to fail, to be wrong, to start over again with lessons learned.",
     "words": [
       {
         "word": "We",
@@ -5505,7 +5505,7 @@
     "id": "#055",
     "start": 356.57,
     "end": 362.155,
-    "text": "In other words, we need to be gritty about getting our kids grittier.",
+    "english": "In other words, we need to be gritty about getting our kids grittier.",
     "words": [
       {
         "word": "In",
@@ -5591,7 +5591,7 @@
     "id": "#056",
     "start": 362.455,
     "end": 363.202,
-    "text": " Thank you.",
+    "english": " Thank you.",
     "words": [
       {
         "word": "Thank",

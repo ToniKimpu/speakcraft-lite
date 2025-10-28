@@ -30,9 +30,9 @@ sealed class UserRecordedSentenceAudioState
   const factory UserRecordedSentenceAudioState.error(String message) = _Error;
 }
 
-class AiSentencePracticeBloc extends Bloc<UserRecordedSentenceAudioEvent,
+class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
     UserRecordedSentenceAudioState> {
-  AiSentencePracticeBloc()
+  UserRecordedSentenceAudioBloc()
       : super(const UserRecordedSentenceAudioState.initial()) {
     on<UserRecordedSentenceAudioEvent>((event, emit) async {
       await event.when(
@@ -60,92 +60,6 @@ class AiSentencePracticeBloc extends Bloc<UserRecordedSentenceAudioEvent,
     }
   }
 
-  // Future<void> _loadGroupDataToState(
-  //     bool correctData, Emitter<UserRecordedSentenceAudioState> emit) async {
-  //   try {
-  //     emit(const UserRecordedSentenceAudioState.loading());
-  //     debugPrint("_loadGroupDataToState: starting....");
-  //     final data =
-  //         await ((AppDatabase.instance().aiSentencePracticeTable.select()
-  //               ..where(
-  //                 (tbl) => correctData
-  //                     ? tbl.correctedSentence.isNull()
-  //                     : tbl.correctedSentence.isNotNull(),
-  //               ))
-  //               ..orderBy([
-  //                 (tbl) => OrderingTerm(
-  //                     expression: tbl.createdAt, mode: OrderingMode.desc)
-  //               ]))
-  //             .get();
-  //     debugPrint("_loadGroupDataToState: has fetched....");
-  //     final Map<DateTime, List<AiSentencePractice>> aiResponseGroupByDate = {};
-
-  //     for (final item in data) {
-  //       if (item.createdAt == null) continue;
-
-  //       final dateOnly = DateTime(
-  //         item.createdAt!.year,
-  //         item.createdAt!.month,
-  //         item.createdAt!.day,
-  //       );
-  //       aiResponseGroupByDate.putIfAbsent(dateOnly, () => []).add(item);
-  //     }
-  //     emit(
-  //       UserRecordedSentenceAudioState.loadedGroupData(
-  //         aiResponseGroupByDate,
-  //       ),
-  //     );
-  //   } catch (e) {
-  //     emit(UserRecordedSentenceAudioState.error(e.toString()));
-  //   }
-  // }
-
-  // Future<void> _reviewSentenceToState(
-  //     String input, Emitter<UserRecordedSentenceAudioState> emit) async {
-  //   try {
-  //     if (input.isEmpty) {
-  //       emit(const UserRecordedSentenceAudioState.error(
-  //           "Please enter a sentence"));
-  //       return;
-  //     }
-  //     emit(const UserRecordedSentenceAudioState.loading());
-  //     final resData = await supabase.functions.invoke(
-  //       "sentence-review",
-  //       body: {
-  //         "sentence": input,
-  //       },
-  //     );
-
-  //     final data = resData.data;
-  //     if (data is! Map) {
-  //       emit(const UserRecordedSentenceAudioState.error(
-  //           "Invalid response from server"));
-  //       return;
-  //     }
-  //     final aiSentencePractice =
-  //         await AppDatabase.instance().aiSentencePracticeTable.insertReturning(
-  //               AiSentencePracticeTableCompanion(
-  //                 inputSentence: Value(input),
-  //                 correctedSentence: Value(data['corrected']),
-  //                 explanation: Value(data['explanation_mm']),
-  //                 totalTokensUsed: Value(data['total_tokens'] ?? 0),
-  //               ),
-  //             );
-  //     emit(UserRecordedSentenceAudioState.success(aiSentencePractice));
-  //   } catch (e) {
-  //     if (e is SocketException) {
-  //       emit(const UserRecordedSentenceAudioState.socketError());
-  //     } else if (e is FunctionException) {
-  //       emit(const UserRecordedSentenceAudioState.error(
-  //           'Sorry, the server is busy.'));
-  //     } else {
-  //       emit(const UserRecordedSentenceAudioState.error(
-  //           'There are something wrong.'));
-  //     }
-  //     debugPrint("_reviewSentenceToState: error: ${e.toString()}");
-  //   }
-  // }
-
   Future<void> _mapInsertToState(
     UserRecordedSentenceAudio data,
     Emitter<UserRecordedSentenceAudioState> emit,
@@ -155,10 +69,10 @@ class AiSentencePracticeBloc extends Bloc<UserRecordedSentenceAudioEvent,
           .userRecordedSentenceAudioTable
           .insertReturning(
             UserRecordedSentenceAudioTableCompanion(
-              audioName: Value(data.audioName),
-              audioPath: Value(data.audioPath),
-              sentenceId: Value(data.sentenceId),
-              youtubeId: Value(data.youtubeId),
+              audioName: Value(data.audioName.trim()),
+              audioPath: Value(data.audioPath.trim()),
+              sentenceId: Value(data.sentenceId.trim()),
+              youtubeId: Value(data.youtubeId.trim()),
             ),
           );
       emit(UserRecordedSentenceAudioState.success(userRecordedSentenceAudio));

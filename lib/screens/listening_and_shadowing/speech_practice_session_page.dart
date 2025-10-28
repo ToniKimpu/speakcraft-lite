@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:pmp_english/model/listening/listening.dart';
@@ -13,6 +14,8 @@ import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:record/record.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
+import 'dialogs/save_recording_dialog.dart';
 import 'model/subtitle_line.dart';
 
 class SpeechPracticeSessionPage extends StatefulWidget {
@@ -30,21 +33,37 @@ class SpeechPracticeSessionPage extends StatefulWidget {
 
 class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
   late YoutubePlayerController _controller;
+  late final PageController _pageController;
   Duration _position = Duration.zero;
+
+  final _userRecordedSentenceAudioBloc = UserRecordedSentenceAudioBloc();
+
+  Future<List<SubtitleLine>> loadSubtitles() async {
+    final jsonString =
+        await rootBundle.loadString("assets/subtitles/shadowing.json");
+    final List<dynamic> jsonList = json.decode(jsonString);
+    return jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
+  }
 
   List<SubtitleLine> _subtitles = [];
   bool _backPressed = false;
 
+  int _currentPage = 0;
+
+  String newVoiceName = "Voice_001";
+
   @override
   void initState() {
     super.initState();
+
+    _pageController = PageController(initialPage: _currentPage);
 
     loadSubtitles().then((data) {
       setState(() => _subtitles = data);
     });
 
     _controller = YoutubePlayerController(
-      initialVideoId: "H14bBuluwB8",
+      initialVideoId: widget.listening.youtubeId,
       flags: const YoutubePlayerFlags(
         mute: false,
         autoPlay: false,
@@ -63,13 +82,10 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
           });
         }
       });
-  }
 
-  Future<List<SubtitleLine>> loadSubtitles() async {
-    final jsonString =
-        await rootBundle.loadString("assets/subtitles/audio.json");
-    final List<dynamic> jsonList = json.decode(jsonString);
-    return jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
+    _userRecordedSentenceAudioBloc.add(
+      const UserRecordedSentenceAudioEvent.load(),
+    );
   }
 
   @override
@@ -126,21 +142,25 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                       ),
                       const SizedBox(height: 16),
                       SizedBox(
-                        height: 120,
+                        height: 160,
                         child: PageView.builder(
-                          itemCount: 10,
-                          controller: PageController(initialPage: 0),
+                          itemCount: _subtitles.length,
+                          controller: _pageController,
+                          physics: const NeverScrollableScrollPhysics(),
                           onPageChanged: (index) {
                             // _controller.load(_subtitles[index].videoId);
                           },
                           itemBuilder: (context, index) {
-                            return const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 16),
+                            final subtitle = _subtitles[index];
+                            return Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
                               child: Text(
-                                "When I was 27 years old, I left a very demanding job, for a job that is even more demanding — Teaching.",
-                                style: TextStyle(
+                                subtitle.english,
+                                style: const TextStyle(
                                   fontSize: 16,
                                   height: 1.4,
+                                  fontWeight: FontWeight.w400,
                                   color: Colors.white,
                                   fontFamily: "ArchivoBlack Regular",
                                 ),
@@ -154,7 +174,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                         onStop: _onRecordingStopped,
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 16.0),
+                        padding: const EdgeInsets.only(top: 16.0),
                         child: Row(
                           children: [
                             Expanded(
@@ -184,11 +204,156 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                           ],
                         ),
                       ),
-                      const Spacer(),
+                      Expanded(
+                        child: BlocBuilder<UserRecordedSentenceAudioBloc,
+                            UserRecordedSentenceAudioState>(
+                          bloc: _userRecordedSentenceAudioBloc,
+                          builder: (context, state) {
+                            return state.maybeWhen(
+                              loading: (message) {
+                                return const Center(
+                                  child: SizedBox(
+                                    width: 18,
+                                    height: 18,
+                                    child: CircularProgressIndicator(
+                                        color: Colors.white),
+                                  ),
+                                );
+                              },
+                              loaded: (data) {
+                                final sentenceId = _subtitles[_currentPage].id;
+                                final filteredData = data
+                                    .where((e) =>
+                                        e.sentenceId == sentenceId &&
+                                        e.youtubeId ==
+                                            widget.listening.youtubeId)
+                                    .toList();
+                                final nextVoiceIndex = filteredData.length + 1;
+                                newVoiceName =
+                                    'voice_${nextVoiceIndex.toString().padLeft(3, '0')}';
+                                if (filteredData.isEmpty) {
+                                  return const Center(
+                                    child: Text(
+                                      "No Record Found For This Sentence",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: "ArchivoBlack Regular",
+                                      ),
+                                    ),
+                                  );
+                                }
+                                return ListView.separated(
+                                  itemCount: filteredData.length,
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 16),
+                                  itemBuilder: (context, index) {
+                                    return Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: SizedBox(
+                                          height: 60,
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                              horizontal: 16,
+                                            ),
+                                            child: Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  width: 30,
+                                                  height: 30,
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                    shape: BoxShape.circle,
+                                                    color: Colors.blue,
+                                                  ),
+                                                  child: Center(
+                                                    child: Text(
+                                                      "${index + 1}",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: const TextStyle(
+                                                        fontSize: 14,
+                                                        color: Colors.white,
+                                                        fontFamily:
+                                                            "ArchivoBlack Regular",
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 16),
+                                                Expanded(
+                                                  child: Text(
+                                                    "Record ${index + 1}",
+                                                    style: const TextStyle(
+                                                      fontSize: 16,
+                                                      color: Colors.white,
+                                                      fontFamily:
+                                                          "ArchivoBlack Regular",
+                                                    ),
+                                                    maxLines: 1,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
+                                                  ),
+                                                ),
+                                                const SizedBox(
+                                                  width: 4,
+                                                ),
+                                                InkWell(
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                  onTap: () {},
+                                                  child: const Padding(
+                                                    padding: EdgeInsets.all(6),
+                                                    child: Icon(
+                                                      Icons.delete_forever,
+                                                      size: 20,
+                                                      color: Colors.redAccent,
+                                                    ),
+                                                  ),
+                                                ),
+                                                InkWell(
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                  onTap: () {},
+                                                  child: const Padding(
+                                                    padding: EdgeInsets.all(6),
+                                                    child: Icon(
+                                                      Icons.edit_note,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                  separatorBuilder: (_, __) => Container(
+                                    height: 1,
+                                    color: Colors.white.withValues(alpha: 0.1),
+                                  ),
+                                );
+                              },
+                              orElse: () => Container(),
+                            );
+                          },
+                        ),
+                      ),
                       FooterWidget(
-                        totalPage: 10,
-                        currentPage: 1,
-                        onPageChanged: (index) {},
+                        totalPage: _subtitles.length,
+                        currentPage: _currentPage,
+                        onPageChanged: (index) {
+                          _pageController.jumpToPage(index);
+                          setState(
+                            () => _currentPage = index,
+                          );
+                        },
                         nextEnabled: true,
                       )
                     ],
@@ -313,7 +478,13 @@ class _RecorderState extends State<Recorder> {
             onTap: _recordState != RecordState.stop
                 ? null
                 : () {
-                    _start();
+                    // _start();
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return const SaveRecordingDialog();
+                      },
+                    );
                   },
             child: Ink(
               width: double.infinity,

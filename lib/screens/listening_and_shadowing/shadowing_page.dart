@@ -41,7 +41,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
 
   Future<List<SubtitleLine>> loadSubtitles() async {
     final jsonString =
-        await rootBundle.loadString("assets/subtitles/audio.json");
+        await rootBundle.loadString("assets/subtitles/shadowing.json");
     final List<dynamic> jsonList = json.decode(jsonString);
     return jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
   }

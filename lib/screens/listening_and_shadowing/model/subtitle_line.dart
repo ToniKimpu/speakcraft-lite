@@ -1,6 +1,7 @@
 import 'subtitle_word.dart';
 
 class SubtitleLine {
+  final String id;
   final double start;
   final double end;
   final String english;
@@ -8,6 +9,7 @@ class SubtitleLine {
   final List<SubtitleWord> words;
 
   SubtitleLine({
+    required this.id,
     required this.start,
     required this.end,
     required this.english,
@@ -17,6 +19,7 @@ class SubtitleLine {
 
   factory SubtitleLine.fromJson(Map<String, dynamic> json) {
     return SubtitleLine(
+      id: json['id'] as String,
       start: (json['start'] as num).toDouble(),
       end: (json['end'] as num).toDouble(),
       english: json['english'] as String,
