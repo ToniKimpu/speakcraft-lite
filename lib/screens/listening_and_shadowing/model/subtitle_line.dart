@@ -4,7 +4,7 @@ class SubtitleLine {
   final String id;
   final double start;
   final double end;
-  final String english;
+  final String text;
   final String? burmese;
   final List<SubtitleWord> words;
 
@@ -12,7 +12,7 @@ class SubtitleLine {
     required this.id,
     required this.start,
     required this.end,
-    required this.english,
+    required this.text,
     this.burmese,
     required this.words,
   });
@@ -22,7 +22,7 @@ class SubtitleLine {
       id: json['id'] as String,
       start: (json['start'] as num).toDouble(),
       end: (json['end'] as num).toDouble(),
-      english: json['english'] as String,
+      text: json['text'] as String,
       burmese: json['burmese'] as String?,
       words: json['words'] != null
           ? (json['words'] as List)

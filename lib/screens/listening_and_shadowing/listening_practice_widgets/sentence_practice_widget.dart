@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -35,7 +34,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
   initState() {
     super.initState();
     if (widget.complete) {
-      _userAnswerController.text = widget.subtitleLine.english;
+      _userAnswerController.text = widget.subtitleLine.text;
     }
   }
 
@@ -243,7 +242,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                         _errorMessageNotifier.value = null;
                         FocusManager.instance.primaryFocus?.unfocus();
                         final sentenceCheckResult = checkSentenceSimple(
-                          widget.subtitleLine.english,
+                          widget.subtitleLine.text,
                           _userAnswerController.text.trim(),
                         );
                         if (sentenceCheckResult.isCorrect) {
@@ -305,7 +304,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                 child: Wrap(
                   spacing: 8,
                   runSpacing: 8,
-                  children: widget.subtitleLine.english.trim().split(' ').map(
+                  children: widget.subtitleLine.text.trim().split(' ').map(
                     (word) {
                       return ActionChip(
                         label: Text(

@@ -18,21 +18,21 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$UserRecordedSentenceAudioEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() load,
+    required TResult Function(bool withLoading) load,
     required TResult Function(UserRecordedSentenceAudio data) insert,
     required TResult Function(UserRecordedSentenceAudio data) delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? load,
+    TResult? Function(bool withLoading)? load,
     TResult? Function(UserRecordedSentenceAudio data)? insert,
     TResult? Function(UserRecordedSentenceAudio data)? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? load,
+    TResult Function(bool withLoading)? load,
     TResult Function(UserRecordedSentenceAudio data)? insert,
     TResult Function(UserRecordedSentenceAudio data)? delete,
     required TResult orElse(),
@@ -91,6 +91,8 @@ abstract class _$$LoadImplCopyWith<$Res> {
   factory _$$LoadImplCopyWith(
           _$LoadImpl value, $Res Function(_$LoadImpl) then) =
       __$$LoadImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool withLoading});
 }
 
 /// @nodoc
@@ -102,64 +104,90 @@ class __$$LoadImplCopyWithImpl<$Res>
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? withLoading = null,
+  }) {
+    return _then(_$LoadImpl(
+      withLoading: null == withLoading
+          ? _value.withLoading
+          : withLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
-  const _$LoadImpl();
+  const _$LoadImpl({required this.withLoading});
+
+  @override
+  final bool withLoading;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UserRecordedSentenceAudioEvent.load()';
+    return 'UserRecordedSentenceAudioEvent.load(withLoading: $withLoading)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'UserRecordedSentenceAudioEvent.load'));
+      ..add(DiagnosticsProperty('type', 'UserRecordedSentenceAudioEvent.load'))
+      ..add(DiagnosticsProperty('withLoading', withLoading));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$LoadImpl &&
+            (identical(other.withLoading, withLoading) ||
+                other.withLoading == withLoading));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, withLoading);
+
+  /// Create a copy of UserRecordedSentenceAudioEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadImplCopyWith<_$LoadImpl> get copyWith =>
+      __$$LoadImplCopyWithImpl<_$LoadImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() load,
+    required TResult Function(bool withLoading) load,
     required TResult Function(UserRecordedSentenceAudio data) insert,
     required TResult Function(UserRecordedSentenceAudio data) delete,
   }) {
-    return load();
+    return load(withLoading);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? load,
+    TResult? Function(bool withLoading)? load,
     TResult? Function(UserRecordedSentenceAudio data)? insert,
     TResult? Function(UserRecordedSentenceAudio data)? delete,
   }) {
-    return load?.call();
+    return load?.call(withLoading);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? load,
+    TResult Function(bool withLoading)? load,
     TResult Function(UserRecordedSentenceAudio data)? insert,
     TResult Function(UserRecordedSentenceAudio data)? delete,
     required TResult orElse(),
   }) {
     if (load != null) {
-      return load();
+      return load(withLoading);
     }
     return orElse();
   }
@@ -200,7 +228,14 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
 }
 
 abstract class _Load implements UserRecordedSentenceAudioEvent {
-  const factory _Load() = _$LoadImpl;
+  const factory _Load({required final bool withLoading}) = _$LoadImpl;
+
+  bool get withLoading;
+
+  /// Create a copy of UserRecordedSentenceAudioEvent
+  /// with the given fields replaced by the non-null parameter values.
+  _$$LoadImplCopyWith<_$LoadImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -291,7 +326,7 @@ class _$InsertImpl with DiagnosticableTreeMixin implements _Insert {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() load,
+    required TResult Function(bool withLoading) load,
     required TResult Function(UserRecordedSentenceAudio data) insert,
     required TResult Function(UserRecordedSentenceAudio data) delete,
   }) {
@@ -301,7 +336,7 @@ class _$InsertImpl with DiagnosticableTreeMixin implements _Insert {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? load,
+    TResult? Function(bool withLoading)? load,
     TResult? Function(UserRecordedSentenceAudio data)? insert,
     TResult? Function(UserRecordedSentenceAudio data)? delete,
   }) {
@@ -311,7 +346,7 @@ class _$InsertImpl with DiagnosticableTreeMixin implements _Insert {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? load,
+    TResult Function(bool withLoading)? load,
     TResult Function(UserRecordedSentenceAudio data)? insert,
     TResult Function(UserRecordedSentenceAudio data)? delete,
     required TResult orElse(),
@@ -456,7 +491,7 @@ class _$DeleteImpl with DiagnosticableTreeMixin implements _Delete {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() load,
+    required TResult Function(bool withLoading) load,
     required TResult Function(UserRecordedSentenceAudio data) insert,
     required TResult Function(UserRecordedSentenceAudio data) delete,
   }) {
@@ -466,7 +501,7 @@ class _$DeleteImpl with DiagnosticableTreeMixin implements _Delete {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? load,
+    TResult? Function(bool withLoading)? load,
     TResult? Function(UserRecordedSentenceAudio data)? insert,
     TResult? Function(UserRecordedSentenceAudio data)? delete,
   }) {
@@ -476,7 +511,7 @@ class _$DeleteImpl with DiagnosticableTreeMixin implements _Delete {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? load,
+    TResult Function(bool withLoading)? load,
     TResult Function(UserRecordedSentenceAudio data)? insert,
     TResult Function(UserRecordedSentenceAudio data)? delete,
     required TResult orElse(),

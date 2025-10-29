@@ -26,7 +26,7 @@ class HighlightSentence extends StatelessWidget {
       onTap: () => onSeek
           .call(Duration(milliseconds: (subtitleLine.start * 1000).toInt())),
       child: Text(
-        subtitleLine.english,
+        subtitleLine.text,
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w400,

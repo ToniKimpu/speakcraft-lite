@@ -249,6 +249,23 @@ class _ShadowingPageState extends State<ShadowingPage> {
                         player: player,
                         position: _position,
                         totalDuration: Duration(seconds: widget.listening.end),
+                        onTogglePlay: () {
+                          final loading = _controller.value.playerState ==
+                                  PlayerState.buffering ||
+                              !_controller.value.isReady;
+                          if (loading) {
+                            return;
+                          }
+                          if (_controller.value.playerState ==
+                              PlayerState.ended) {
+                            _controller.seekTo(Duration.zero);
+                            _controller.play();
+                          } else if (_controller.value.isPlaying) {
+                            _controller.pause();
+                          } else {
+                            _controller.play();
+                          }
+                        },
                       ),
                       Expanded(
                         child: NotificationListener<ScrollNotification>(

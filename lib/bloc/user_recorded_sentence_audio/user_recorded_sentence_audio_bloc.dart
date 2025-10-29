@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +12,8 @@ part 'user_recorded_sentence_audio_bloc.freezed.dart';
 @freezed
 sealed class UserRecordedSentenceAudioEvent
     with _$UserRecordedSentenceAudioEvent {
-  const factory UserRecordedSentenceAudioEvent.load() = _Load;
+  const factory UserRecordedSentenceAudioEvent.load(
+      {required bool withLoading}) = _Load;
   const factory UserRecordedSentenceAudioEvent.insert(
       UserRecordedSentenceAudio data) = _Insert;
   const factory UserRecordedSentenceAudioEvent.delete(
@@ -36,7 +39,7 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
       : super(const UserRecordedSentenceAudioState.initial()) {
     on<UserRecordedSentenceAudioEvent>((event, emit) async {
       await event.when(
-        load: () => _mapLoadToState(emit),
+        load: (withLoading) => _mapLoadToState(withLoading, emit),
         insert: (data) => _mapInsertToState(data, emit),
         delete: (data) => _mapDeleteToState(data, emit),
       );
@@ -44,14 +47,16 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
   }
 
   Future<void> _mapLoadToState(
-      Emitter<UserRecordedSentenceAudioState> emit) async {
+      bool withLoading, Emitter<UserRecordedSentenceAudioState> emit) async {
     try {
-      emit(const UserRecordedSentenceAudioState.loading());
+      if (withLoading) {
+        emit(const UserRecordedSentenceAudioState.loading());
+      }
       final data =
           await (AppDatabase.instance().userRecordedSentenceAudioTable.select()
                 ..orderBy([
                   (tbl) => OrderingTerm(
-                      expression: tbl.createdAt, mode: OrderingMode.desc)
+                      expression: tbl.createdAt, mode: OrderingMode.asc)
                 ]))
               .get();
       emit(UserRecordedSentenceAudioState.loaded(data));
@@ -65,6 +70,8 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
     Emitter<UserRecordedSentenceAudioState> emit,
   ) async {
     try {
+      emit(const UserRecordedSentenceAudioState.loading());
+      await Future.delayed(const Duration(seconds: 1));
       final userRecordedSentenceAudio = await AppDatabase.instance()
           .userRecordedSentenceAudioTable
           .insertReturning(
@@ -88,7 +95,19 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
   ) async {
     emit(const UserRecordedSentenceAudioState.loading());
     try {
-      await Future.delayed(const Duration(seconds: 1));
+      // await Future.delayed(const Duration(seconds: 1));
+      String filePath = data.audioPath;
+      if (filePath.isNotEmpty) {
+        final file = File(filePath);
+        if (await file.exists()) {
+          await file.delete();
+          debugPrint(
+              '_userDiscardedAudio: Deleted discarded audio file: $filePath');
+        } else {
+          debugPrint(
+              '_userDiscardedAudio: No file found to delete at $filePath');
+        }
+      }
       await AppDatabase.instance().userRecordedSentenceAudioTable.deleteWhere(
             (tbl) => tbl.id.equals(data.id!),
           );

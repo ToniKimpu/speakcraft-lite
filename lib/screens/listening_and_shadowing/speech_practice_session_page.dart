@@ -5,18 +5,22 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/footer_widget.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/recording_voice_widgets/user_recorded_list.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:record/record.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart'
+    as yt_player;
 
 import '../../bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
+import '../../config/pmp_colors.dart';
 import 'dialogs/save_recording_dialog.dart';
 import 'model/subtitle_line.dart';
+import 'recording_voice_widgets/recorder.dart';
 
 class SpeechPracticeSessionPage extends StatefulWidget {
   const SpeechPracticeSessionPage({
@@ -32,7 +36,7 @@ class SpeechPracticeSessionPage extends StatefulWidget {
 }
 
 class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
-  late YoutubePlayerController _controller;
+  late yt_player.YoutubePlayerController _controller;
   late final PageController _pageController;
   Duration _position = Duration.zero;
 
@@ -45,26 +49,60 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
     return jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
   }
 
-  List<SubtitleLine> _subtitles = [];
   bool _backPressed = false;
 
   int _currentPage = 0;
 
   String newVoiceName = "Voice_001";
+  late final ValueNotifier<int> _recordDurationNotifier;
+  Timer? _timer;
+  late final AudioRecorder _audioRecorder;
+  late ValueNotifier<RecordState> _recordStateNotifier;
+  StreamSubscription<RecordState>? _recordSub;
+
+  late AudioPlayer _audioPlayer;
+  late final ValueNotifier<int?> _currentlyPlayingIndexNotifier;
+  final _subtitleDetailBloc = SubtitleBloc();
+
+  Duration _startDuration = Duration.zero;
+  Duration _endDuration = Duration.zero;
+  bool _needSeek = true;
 
   @override
   void initState() {
     super.initState();
 
-    _pageController = PageController(initialPage: _currentPage);
+    _recordDurationNotifier = ValueNotifier<int>(0);
+    _recordStateNotifier = ValueNotifier<RecordState>(RecordState.stop);
 
-    loadSubtitles().then((data) {
-      setState(() => _subtitles = data);
+    _audioRecorder = AudioRecorder();
+    _recordSub = _audioRecorder.onStateChanged().listen((recordState) {
+      setState(() => _recordStateNotifier.value = recordState);
+      if (recordState == RecordState.record) {
+        _startTimer();
+      } else if (recordState == RecordState.stop) {
+        _timer?.cancel();
+        _recordDurationNotifier.value = 0;
+      } else if (recordState == RecordState.pause) {
+        _timer?.cancel();
+      }
     });
 
-    _controller = YoutubePlayerController(
+    _audioPlayer = AudioPlayer();
+    _currentlyPlayingIndexNotifier = ValueNotifier<int?>(null);
+    // Reset when audio completes
+    _audioPlayer.playerStateStream.listen((state) {
+      if (state.processingState == ProcessingState.completed) {
+        setState(() {
+          _currentlyPlayingIndexNotifier.value = null;
+        });
+      }
+    });
+
+    _pageController = PageController(initialPage: _currentPage);
+    _controller = yt_player.YoutubePlayerController(
       initialVideoId: widget.listening.youtubeId,
-      flags: const YoutubePlayerFlags(
+      flags: const yt_player.YoutubePlayerFlags(
         mute: false,
         autoPlay: false,
         hideThumbnail: true,
@@ -79,25 +117,45 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
         if (mounted) {
           setState(() {
             _position = _controller.value.position;
+            if (_position.inMilliseconds > _endDuration.inMilliseconds) {
+              _controller.pause();
+              _needSeek = true;
+            }
           });
         }
       });
-
     _userRecordedSentenceAudioBloc.add(
-      const UserRecordedSentenceAudioEvent.load(),
+      const UserRecordedSentenceAudioEvent.load(
+        withLoading: true,
+      ),
     );
+    _subtitleDetailBloc.add(SubtitleEvent.parseSubtitleLine(widget.listening));
   }
 
   @override
   void dispose() {
     _controller.dispose();
+    _timer?.cancel();
+    _recordSub?.cancel();
+    _audioRecorder.dispose();
+    _audioPlayer.dispose();
+    _subtitleDetailBloc.close();
     super.dispose();
   }
 
-  void _onRecordingStopped(String path) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("Recording saved at:\n$path")),
-    );
+  bool _isRecording() {
+    return _recordStateNotifier.value == RecordState.record;
+  }
+
+  void _startTimer() {
+    _timer?.cancel();
+    _timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
+      setState(() {
+        int recordDuration = _recordDurationNotifier.value;
+        recordDuration++;
+        _recordDurationNotifier.value = recordDuration;
+      });
+    });
   }
 
   @override
@@ -114,8 +172,8 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
           _backPressed = true;
         });
       },
-      child: YoutubePlayerBuilder(
-        player: YoutubePlayer(controller: _controller),
+      child: yt_player.YoutubePlayerBuilder(
+        player: yt_player.YoutubePlayer(controller: _controller),
         builder: (context, player) {
           return _backPressed
               ? const MainScaffold(
@@ -131,508 +189,329 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  body: Column(
-                    children: [
-                      ShadowingPlayer(
-                        listening: widget.listening,
-                        controller: _controller,
-                        player: player,
-                        position: _position,
-                        totalDuration: Duration(seconds: widget.listening.end),
-                      ),
-                      const SizedBox(height: 16),
-                      SizedBox(
-                        height: 160,
-                        child: PageView.builder(
-                          itemCount: _subtitles.length,
-                          controller: _pageController,
-                          physics: const NeverScrollableScrollPhysics(),
-                          onPageChanged: (index) {
-                            // _controller.load(_subtitles[index].videoId);
-                          },
-                          itemBuilder: (context, index) {
-                            final subtitle = _subtitles[index];
-                            return Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 16),
-                              child: Text(
-                                subtitle.english,
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  height: 1.4,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                  fontFamily: "ArchivoBlack Regular",
-                                ),
-                                maxLines: 5,
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                      Recorder(
-                        onStop: _onRecordingStopped,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 16.0),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                height: 1,
-                                color: Colors.white.withValues(alpha: 0.2),
-                                margin:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                              ),
-                            ),
-                            const Text(
-                              "Records",
-                              style: TextStyle(
-                                fontSize: 16,
+                  body: BlocConsumer<SubtitleBloc, SubtitleState>(
+                    bloc: _subtitleDetailBloc,
+                    listener: (context, state) {
+                      state.maybeWhen(
+                        onParseSubtitleLineCompleted: (subtitleLines) {
+                          _startDuration = Duration(
+                            milliseconds:
+                                (subtitleLines.first.start * 1000).round(),
+                          );
+                          _endDuration = Duration(
+                            milliseconds:
+                                (subtitleLines.first.end * 1000).round(),
+                          );
+                        },
+                        orElse: () => -1,
+                      );
+                    },
+                    builder: (context, state) {
+                      return state.maybeWhen(
+                        loading: (message) {
+                          return const Center(
+                            child: SizedBox(
+                              width: 18,
+                              height: 18,
+                              child: CircularProgressIndicator(
                                 color: Colors.white,
-                                fontFamily: "ArchivoBlack Regular",
                               ),
                             ),
-                            Expanded(
-                              child: Container(
-                                height: 1,
-                                color: Colors.white.withValues(alpha: 0.2),
-                                margin:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: BlocBuilder<UserRecordedSentenceAudioBloc,
-                            UserRecordedSentenceAudioState>(
-                          bloc: _userRecordedSentenceAudioBloc,
-                          builder: (context, state) {
-                            return state.maybeWhen(
-                              loading: (message) {
-                                return const Center(
-                                  child: SizedBox(
-                                    width: 18,
-                                    height: 18,
-                                    child: CircularProgressIndicator(
-                                        color: Colors.white),
-                                  ),
-                                );
-                              },
-                              loaded: (data) {
-                                final sentenceId = _subtitles[_currentPage].id;
-                                final filteredData = data
-                                    .where((e) =>
-                                        e.sentenceId == sentenceId &&
-                                        e.youtubeId ==
-                                            widget.listening.youtubeId)
-                                    .toList();
-                                final nextVoiceIndex = filteredData.length + 1;
-                                newVoiceName =
-                                    'voice_${nextVoiceIndex.toString().padLeft(3, '0')}';
-                                if (filteredData.isEmpty) {
-                                  return const Center(
-                                    child: Text(
-                                      "No Record Found For This Sentence",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: "ArchivoBlack Regular",
-                                      ),
-                                    ),
-                                  );
-                                }
-                                return ListView.separated(
-                                  itemCount: filteredData.length,
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 16),
-                                  itemBuilder: (context, index) {
-                                    return Material(
-                                      color: Colors.transparent,
-                                      child: InkWell(
-                                        onTap: () {},
-                                        child: SizedBox(
-                                          height: 60,
-                                          child: Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                              horizontal: 16,
-                                            ),
-                                            child: Row(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  width: 30,
-                                                  height: 30,
-                                                  decoration:
-                                                      const BoxDecoration(
-                                                    shape: BoxShape.circle,
-                                                    color: Colors.blue,
-                                                  ),
-                                                  child: Center(
-                                                    child: Text(
-                                                      "${index + 1}",
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style: const TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.white,
-                                                        fontFamily:
-                                                            "ArchivoBlack Regular",
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                const SizedBox(width: 16),
-                                                Expanded(
-                                                  child: Text(
-                                                    "Record ${index + 1}",
-                                                    style: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.white,
-                                                      fontFamily:
-                                                          "ArchivoBlack Regular",
-                                                    ),
-                                                    maxLines: 1,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  width: 4,
-                                                ),
-                                                InkWell(
-                                                  borderRadius:
-                                                      BorderRadius.circular(20),
-                                                  onTap: () {},
-                                                  child: const Padding(
-                                                    padding: EdgeInsets.all(6),
-                                                    child: Icon(
-                                                      Icons.delete_forever,
-                                                      size: 20,
-                                                      color: Colors.redAccent,
-                                                    ),
-                                                  ),
-                                                ),
-                                                InkWell(
-                                                  borderRadius:
-                                                      BorderRadius.circular(20),
-                                                  onTap: () {},
-                                                  child: const Padding(
-                                                    padding: EdgeInsets.all(6),
-                                                    child: Icon(
-                                                      Icons.edit_note,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
+                          );
+                        },
+                        onParseSubtitleLineCompleted: (subtitleLines) {
+                          return Column(
+                            children: [
+                              ShadowingPlayer(
+                                listening: widget.listening,
+                                controller: _controller,
+                                player: player,
+                                position: _position,
+                                totalDuration:
+                                    Duration(seconds: widget.listening.end),
+                                onTogglePlay: () {
+                                  final loading =
+                                      _controller.value.playerState ==
+                                              yt_player.PlayerState.buffering ||
+                                          !_controller.value.isReady;
+                                  if (loading) {
+                                    return;
+                                  }
+                                  if (_isRecording()) {
+                                    ScaffoldMessenger.of(context)
+                                      ..clearSnackBars()
+                                      ..showSnackBar(const SnackBar(
+                                        content: Text(
+                                          "Playback is disabled while recording. Please stop the recording to continue.",
+                                          style: TextStyle(
+                                            color: PmpColors.white,
                                           ),
                                         ),
+                                        backgroundColor: Colors.green,
+                                        closeIconColor: PmpColors.white,
+                                        showCloseIcon: true,
+                                      ));
+                                    return;
+                                  }
+                                  if (_audioPlayer.playing) {
+                                    _audioPlayer.pause();
+                                  }
+                                  if (_controller.value.playerState ==
+                                      yt_player.PlayerState.ended) {
+                                    _controller.seekTo(Duration.zero);
+                                    _controller.play();
+                                  } else if (_controller.value.isPlaying) {
+                                    _needSeek = false;
+                                    _controller.pause();
+                                  } else {
+                                    if (_needSeek) {
+                                      _controller.seekTo(Duration(
+                                          milliseconds:
+                                              _startDuration.inMilliseconds));
+                                    }
+                                    _controller.play();
+                                  }
+                                },
+                              ),
+                              const SizedBox(height: 16),
+                              SizedBox(
+                                height: 160,
+                                child: PageView.builder(
+                                  itemCount: subtitleLines.length,
+                                  controller: _pageController,
+                                  physics: const NeverScrollableScrollPhysics(),
+                                  onPageChanged: (index) {
+                                    // _controller.load(_subtitles[index].videoId);
+                                  },
+                                  itemBuilder: (context, index) {
+                                    final subtitle = subtitleLines[index];
+                                    return Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 16),
+                                      child: Text(
+                                        subtitle.text,
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          height: 1.4,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.white,
+                                          fontFamily: "ArchivoBlack Regular",
+                                        ),
+                                        maxLines: 5,
                                       ),
                                     );
                                   },
-                                  separatorBuilder: (_, __) => Container(
-                                    height: 1,
-                                    color: Colors.white.withValues(alpha: 0.1),
-                                  ),
-                                );
-                              },
-                              orElse: () => Container(),
-                            );
-                          },
-                        ),
-                      ),
-                      FooterWidget(
-                        totalPage: _subtitles.length,
-                        currentPage: _currentPage,
-                        onPageChanged: (index) {
-                          _pageController.jumpToPage(index);
-                          setState(
-                            () => _currentPage = index,
+                                ),
+                              ),
+                              ValueListenableBuilder<RecordState>(
+                                  valueListenable: _recordStateNotifier,
+                                  builder: (context, recordState, child) {
+                                    return ValueListenableBuilder<int>(
+                                        valueListenable:
+                                            _recordDurationNotifier,
+                                        builder:
+                                            (context, recordDuration, child) {
+                                          return Recorder(
+                                            recordState: recordState,
+                                            recordDuration: recordDuration,
+                                            audioRecorder: _audioRecorder,
+                                            onStart: () {
+                                              if (_controller.value.isPlaying) {
+                                                _controller.pause();
+                                              }
+                                              if (_audioPlayer.playing) {
+                                                _audioPlayer.pause();
+                                              }
+                                            },
+                                            onStop: () {
+                                              showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  final sentenceId =
+                                                      subtitleLines[
+                                                              _currentPage]
+                                                          .id;
+                                                  return SaveRecordingDialog(
+                                                    sentenceId: sentenceId,
+                                                    youtubeId: widget
+                                                        .listening.youtubeId,
+                                                    audioName: newVoiceName,
+                                                    audioRecorder:
+                                                        _audioRecorder,
+                                                    onDiscard: () async {
+                                                      try {
+                                                        // Stop recording and get the file path
+                                                        final filePath =
+                                                            await _audioRecorder
+                                                                .stop();
+                                                        if (filePath != null) {
+                                                          final file =
+                                                              File(filePath);
+                                                          if (await file
+                                                              .exists()) {
+                                                            await file.delete();
+                                                            debugPrint(
+                                                                '_userDiscardedAudio: Deleted discarded audio file: $filePath');
+                                                          } else {
+                                                            debugPrint(
+                                                                '_userDiscardedAudio: No file found to delete at $filePath');
+                                                          }
+                                                        }
+                                                      } catch (e) {
+                                                        debugPrint(
+                                                            '_userDiscardedAudio: Error deleting discarded audio: $e');
+                                                      }
+                                                    },
+                                                    onSaved: (success) {
+                                                      if (success) {
+                                                        _userRecordedSentenceAudioBloc
+                                                            .add(
+                                                          const UserRecordedSentenceAudioEvent
+                                                              .load(
+                                                              withLoading:
+                                                                  false),
+                                                        );
+                                                      }
+                                                    },
+                                                  );
+                                                },
+                                              );
+                                            },
+                                          );
+                                        });
+                                  }),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 16.0),
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        height: 1,
+                                        color:
+                                            Colors.white.withValues(alpha: 0.2),
+                                        margin: const EdgeInsets.symmetric(
+                                            horizontal: 16),
+                                      ),
+                                    ),
+                                    const Text(
+                                      "Records",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white,
+                                        fontFamily: "ArchivoBlack Regular",
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                        height: 1,
+                                        color:
+                                            Colors.white.withValues(alpha: 0.2),
+                                        margin: const EdgeInsets.symmetric(
+                                            horizontal: 16),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                child: ValueListenableBuilder<int?>(
+                                    valueListenable:
+                                        _currentlyPlayingIndexNotifier,
+                                    builder: (context, currentIndex, child) {
+                                      return UserRecordedList(
+                                        audioPlayer: _audioPlayer,
+                                        currentIndex: currentIndex,
+                                        userRecordedSentenceAudioBloc:
+                                            _userRecordedSentenceAudioBloc,
+                                        onNewVoiceName: (name) {
+                                          newVoiceName = name;
+                                        },
+                                        sentenceId:
+                                            subtitleLines[_currentPage].id,
+                                        youtubeId: widget.listening.youtubeId,
+                                        onTogglePlay: (data, index) async {
+                                          if (_isRecording()) {
+                                            ScaffoldMessenger.of(context)
+                                              ..clearSnackBars()
+                                              ..showSnackBar(const SnackBar(
+                                                content: Text(
+                                                  "Playback is disabled while recording. Please stop the recording to continue.",
+                                                  style: TextStyle(
+                                                    color: PmpColors.white,
+                                                  ),
+                                                ),
+                                                backgroundColor: Colors.green,
+                                                closeIconColor: PmpColors.white,
+                                                showCloseIcon: true,
+                                              ));
+                                            return;
+                                          }
+                                          if (_controller.value.isPlaying) {
+                                            _controller.pause();
+                                          }
+                                          final isCurrent =
+                                              currentIndex == index;
+                                          if (isCurrent) {
+                                            // toggle pause / resume
+                                            if (_audioPlayer.playing) {
+                                              _audioPlayer.pause();
+                                              _currentlyPlayingIndexNotifier
+                                                  .value = null;
+                                            } else {
+                                              _audioPlayer.play();
+                                              setState(() {
+                                                _currentlyPlayingIndexNotifier
+                                                    .value = index;
+                                              });
+                                            }
+                                            setState(() {}); // refresh icon
+                                          } else {
+                                            // stop previous
+                                            await _audioPlayer.stop();
+                                            await _audioPlayer.setUrl(data
+                                                .audioPath); // play new audio
+                                            _audioPlayer.play();
+                                            setState(() {
+                                              _currentlyPlayingIndexNotifier
+                                                  .value = index;
+                                            });
+                                          }
+                                        },
+                                      );
+                                    }),
+                              ),
+                              FooterWidget(
+                                totalPage: subtitleLines.length,
+                                currentPage: _currentPage,
+                                onPageChanged: (index) {
+                                  _audioPlayer.stop();
+                                  _controller.pause();
+                                  _startDuration = Duration(
+                                      milliseconds:
+                                          (subtitleLines[index].start * 1000)
+                                              .round());
+                                  _endDuration = Duration(
+                                    milliseconds:
+                                        (subtitleLines[index].end * 1000)
+                                            .round(),
+                                  );
+                                  _pageController.jumpToPage(index);
+                                  setState(
+                                    () => _currentPage = index,
+                                  );
+                                },
+                                nextEnabled: true,
+                              )
+                            ],
                           );
                         },
-                        nextEnabled: true,
-                      )
-                    ],
+                        orElse: () => Container(),
+                      );
+                    },
                   ),
                 );
         },
       ),
     );
-  }
-}
-
-/// Recorder Widget (from official record GitHub example, simplified)
-class Recorder extends StatefulWidget {
-  final void Function(String path) onStop;
-  const Recorder({super.key, required this.onStop});
-
-  @override
-  State<Recorder> createState() => _RecorderState();
-}
-
-class _RecorderState extends State<Recorder> {
-  int _recordDuration = 0;
-  Timer? _timer;
-  late final AudioRecorder _audioRecorder;
-  RecordState _recordState = RecordState.stop;
-  StreamSubscription<RecordState>? _recordSub;
-  StreamSubscription<Amplitude>? _amplitudeSub;
-  Amplitude? _amplitude;
-
-  @override
-  void initState() {
-    super.initState();
-    _audioRecorder = AudioRecorder();
-
-    _recordSub = _audioRecorder.onStateChanged().listen((recordState) {
-      setState(() => _recordState = recordState);
-      if (recordState == RecordState.record) {
-        _startTimer();
-      } else if (recordState == RecordState.stop) {
-        _timer?.cancel();
-        _recordDuration = 0;
-      } else if (recordState == RecordState.pause) {
-        _timer?.cancel();
-      }
-    });
-
-    _amplitudeSub = _audioRecorder
-        .onAmplitudeChanged(const Duration(milliseconds: 300))
-        .listen((amp) {
-      setState(() => _amplitude = amp);
-    });
-  }
-
-  Future<void> _start() async {
-    try {
-      // Step 1: Explicitly request mic permission
-      final micGranted = await requestMicPermission();
-      if (!micGranted) {
-        debugPrint("Microphone permission not granted.");
-        return;
-      }
-
-      // Step 2: Double-check with record package
-      if (await _audioRecorder.hasPermission()) {
-        const config = RecordConfig(
-          encoder: AudioEncoder.aacLc,
-          numChannels: 1,
-          bitRate: 128000,
-        );
-
-        // Step 3: Use your local app directory instead of temp
-        final dir = await getApplicationDocumentsDirectory();
-        final filePath =
-            '${dir.path}/speech_practice_${DateTime.now().millisecondsSinceEpoch}.m4a';
-
-        debugPrint('Recording to: $filePath');
-        await _audioRecorder.start(config, path: filePath);
-      }
-    } catch (e) {
-      debugPrint("Error starting recording: $e");
-    }
-  }
-
-  Future<void> _stop() async {
-    final path = await _audioRecorder.stop();
-    if (path != null) widget.onStop(path);
-  }
-
-  Future<void> _pause() async => _audioRecorder.pause();
-  Future<void> _resume() async => _audioRecorder.resume();
-
-  void _startTimer() {
-    _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
-      setState(() => _recordDuration++);
-    });
-  }
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    _recordSub?.cancel();
-    _amplitudeSub?.cancel();
-    _audioRecorder.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final minutes = _format(_recordDuration ~/ 60);
-    final seconds = _format(_recordDuration % 60);
-    final isRecording = _recordState == RecordState.record;
-    final isPaused = _recordState == RecordState.pause;
-
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Material(
-          color: Colors.transparent,
-          child: InkWell(
-            borderRadius: BorderRadius.circular(16),
-            onTap: _recordState != RecordState.stop
-                ? null
-                : () {
-                    // _start();
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return const SaveRecordingDialog();
-                      },
-                    );
-                  },
-            child: Ink(
-              width: double.infinity,
-              height: 52,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.white.withValues(alpha: 0.04),
-                border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.2),
-                  width: 1.5,
-                ),
-              ),
-              child: _recordState == RecordState.stop
-                  ? const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.mic,
-                          color: Colors.white,
-                          size: 20,
-                        ),
-                        SizedBox(
-                          width: 12,
-                        ),
-                        Text(
-                          "Tap to record",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    )
-                  : Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        // const SizedBox(width: 18),
-                        // if (_recordState != RecordState.stop)
-                        // _buildCircleButton(
-                        //   icon: isPaused ? Icons.play_arrow : Icons.pause,
-                        //   color: Colors.orange,
-                        //   iconColor: Colors.white,
-                        //   onTap: () => isPaused ? _resume() : _pause(),
-                        // ),
-                        InkWell(
-                          borderRadius: BorderRadius.circular(100),
-                          onTap: () => _stop(),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8),
-                            child: Ink(
-                              width: 20,
-                              height: 20,
-                              decoration: BoxDecoration(
-                                color: Colors.red,
-                                borderRadius: BorderRadius.circular(4),
-                                boxShadow: <BoxShadow>[
-                                  BoxShadow(
-                                    color: Colors.black.withValues(alpha: 0.2),
-                                    spreadRadius: 3,
-                                    blurRadius: 8,
-                                    offset: const Offset(0, 4),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 16,
-                        ),
-                        InkWell(
-                          borderRadius: BorderRadius.circular(100),
-                          onTap: () => isPaused ? _resume() : _pause(),
-                          child: Padding(
-                            padding: const EdgeInsets.all(4),
-                            child: Icon(
-                              isPaused ? Icons.play_arrow : Icons.pause,
-                              size: 32,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          "$minutes:$seconds",
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            letterSpacing: 0.5,
-                            fontFamily: "ArchivoBlack Regular",
-                          ),
-                        ),
-                      ],
-                    ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildCircleButton({
-    required IconData icon,
-    required Color color,
-    required Color iconColor,
-    required VoidCallback onTap,
-  }) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(24),
-      child: Container(
-        height: 48,
-        width: 48,
-        decoration: BoxDecoration(
-          color: color,
-          shape: BoxShape.circle,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.25),
-              blurRadius: 4,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        child: Icon(icon, color: iconColor, size: 26),
-      ),
-    );
-  }
-
-  String _format(int n) => n.toString().padLeft(2, '0');
-
-  Future<bool> requestMicPermission() async {
-    final status = await Permission.microphone.request();
-    if (status.isGranted) return true;
-
-    if (status.isPermanentlyDenied) {
-      await openAppSettings();
-    }
-    return false;
-  }
-
-  Future<File> getLocalRecordingFile() async {
-    final dir = await getApplicationDocumentsDirectory();
-    final path =
-        '${dir.path}/my_recording_${DateTime.now().millisecondsSinceEpoch}.m4a';
-    return File(path);
   }
 }

@@ -111,18 +111,35 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
   }
 
   Future<void> _mapParseSubtitleLineToState(
-      Listening listening, Emitter<SubtitleState> emit) async {
+    Listening listening,
+    Emitter<SubtitleState> emit,
+  ) async {
     try {
       emit(const SubtitleState.loading());
-      final jsonString = await rootBundle
-          .loadString("assets/subtitles/sentence_practice.json");
-      final List<dynamic> jsonList = json.decode(jsonString);
-      debugPrint("_mapParseSubtitleLineToState: ${jsonList.first.toString()}");
-      final subtitleLines =
-          jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
-      emit(SubtitleState.onParseSubtitleLineCompleted(subtitleLines));
+
+      // Make sure shadowingPath is not null or empty
+      final url = listening.shadowingPath;
+      if (url.isEmpty) {
+        throw Exception("No shadowing path provided.");
+      }
+
+      final response = await http.get(Uri.parse(url));
+
+      if (response.statusCode == 200) {
+        final List<dynamic> jsonList = json.decode(response.body);
+        debugPrint(
+            "_mapParseSubtitleLineToState: ${jsonList.first.toString()}");
+        final subtitleLines =
+            jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
+
+        emit(SubtitleState.onParseSubtitleLineCompleted(subtitleLines));
+      } else {
+        throw Exception("Failed to load subtitle file: ${response.statusCode}");
+      }
     } catch (e) {
       debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");
+      // Optionally emit an error state if you have one
+      // emit(SubtitleState.error(e.toString()));
     }
   }
 

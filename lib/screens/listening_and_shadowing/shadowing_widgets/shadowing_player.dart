@@ -13,12 +13,14 @@ class ShadowingPlayer extends StatelessWidget {
     required this.player,
     required this.position,
     required this.totalDuration,
+    required this.onTogglePlay,
   });
   final Listening listening;
   final YoutubePlayerController controller;
   final Widget player;
   final Duration position;
   final Duration totalDuration;
+  final VoidCallback onTogglePlay;
 
   @override
   Widget build(BuildContext context) {
@@ -138,17 +140,7 @@ class ShadowingPlayer extends StatelessWidget {
             const SizedBox(width: 12),
             GestureDetector(
               onTap: () {
-                if (loading) {
-                  return;
-                }
-                if (controller.value.playerState == PlayerState.ended) {
-                  controller.seekTo(Duration.zero);
-                  controller.play();
-                } else if (controller.value.isPlaying) {
-                  controller.pause();
-                } else {
-                  controller.play();
-                }
+                onTogglePlay();
               },
               child: Container(
                 width: 36,
@@ -182,7 +174,6 @@ class ShadowingPlayer extends StatelessWidget {
                 ),
               ),
             ),
-        
           ],
         ),
       ),
