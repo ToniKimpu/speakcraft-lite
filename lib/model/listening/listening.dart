@@ -1,7 +1,6 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 part 'listening.freezed.dart';
 part 'listening.g.dart';
 
@@ -19,6 +18,7 @@ class Listening with _$Listening {
     @JsonKey(name: 'subtitle_path') required String subtitlePath,
     @JsonKey(name: 'multiple_choice_path') required String multipleChoicePath,
     @JsonKey(name: 'shadowing_path') required String shadowingPath,
+    @JsonKey(name: 'record_subtitle_path') required String recordSubtitlePath,
     @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
   }) = _Listening;
 

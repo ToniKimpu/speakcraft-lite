@@ -55,7 +55,7 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           .from('listenings')
           .select('*')
           .eq("is_deleted", false)
-          .order('created_at', ascending: false);
+          .order('created_at', ascending: true);
       final listenings = dataRes.map((e) {
         final listening = Listening.fromJson(e);
         return listening.copyWith(
@@ -67,12 +67,10 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           //   bucketFolder: SupabaseBucketFolders.listeningAndShadowingSubtitles,
           //   fileName: listening.subtitlePath,
           // ),
-          subtitlePath: Env.bunnyListeningAPIKey +
-              listening.subtitlePath.replaceFirst('bunny/', ''),
-          multipleChoicePath: Env.bunnyListeningAPIKey +
-              listening.multipleChoicePath.replaceFirst('bunny/', ''),
-          shadowingPath: Env.bunnyListeningAPIKey +
-              listening.shadowingPath.replaceFirst('bunny/', ''),
+          subtitlePath: _normalizePath(listening.subtitlePath),
+          multipleChoicePath: _normalizePath(listening.multipleChoicePath),
+          shadowingPath: _normalizePath(listening.shadowingPath),
+          recordSubtitlePath: _normalizePath(listening.recordSubtitlePath),
         );
       }).toList();
       debugPrint("_mapLoadListeningsToState: ${listenings.first.toJson()}");
@@ -81,6 +79,13 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
       debugPrint(e.toString());
       emit(ListeningState.error(e.toString()));
     }
+  }
+
+  String _normalizePath(String path) {
+    if (path.isEmpty) {
+      return "";
+    }
+    return Env.bunnyListeningAPIKey + path.replaceFirst('bunny/', '');
   }
 
   _mapLoadVocabulariesByListening(

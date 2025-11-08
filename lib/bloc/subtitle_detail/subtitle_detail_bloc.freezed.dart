@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$SubtitleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Listening listening) parseSubtitleLine,
+    required TResult Function(String url) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
@@ -27,7 +27,7 @@ mixin _$SubtitleEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Listening listening)? parseSubtitleLine,
+    TResult? Function(String url)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
@@ -36,7 +36,7 @@ mixin _$SubtitleEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Listening listening)? parseSubtitleLine,
+    TResult Function(String url)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
     TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
@@ -102,9 +102,7 @@ abstract class _$$ParseSubtitleLineImplCopyWith<$Res> {
           $Res Function(_$ParseSubtitleLineImpl) then) =
       __$$ParseSubtitleLineImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Listening listening});
-
-  $ListeningCopyWith<$Res> get listening;
+  $Res call({String url});
 }
 
 /// @nodoc
@@ -120,24 +118,14 @@ class __$$ParseSubtitleLineImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listening = null,
+    Object? url = null,
   }) {
     return _then(_$ParseSubtitleLineImpl(
-      null == listening
-          ? _value.listening
-          : listening // ignore: cast_nullable_to_non_nullable
-              as Listening,
+      null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  /// Create a copy of SubtitleEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $ListeningCopyWith<$Res> get listening {
-    return $ListeningCopyWith<$Res>(_value.listening, (value) {
-      return _then(_value.copyWith(listening: value));
-    });
   }
 }
 
@@ -146,14 +134,14 @@ class __$$ParseSubtitleLineImplCopyWithImpl<$Res>
 class _$ParseSubtitleLineImpl
     with DiagnosticableTreeMixin
     implements _ParseSubtitleLine {
-  const _$ParseSubtitleLineImpl(this.listening);
+  const _$ParseSubtitleLineImpl(this.url);
 
   @override
-  final Listening listening;
+  final String url;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SubtitleEvent.parseSubtitleLine(listening: $listening)';
+    return 'SubtitleEvent.parseSubtitleLine(url: $url)';
   }
 
   @override
@@ -161,7 +149,7 @@ class _$ParseSubtitleLineImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseSubtitleLine'))
-      ..add(DiagnosticsProperty('listening', listening));
+      ..add(DiagnosticsProperty('url', url));
   }
 
   @override
@@ -169,12 +157,11 @@ class _$ParseSubtitleLineImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParseSubtitleLineImpl &&
-            (identical(other.listening, listening) ||
-                other.listening == listening));
+            (identical(other.url, url) || other.url == url));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, listening);
+  int get hashCode => Object.hash(runtimeType, url);
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -187,31 +174,31 @@ class _$ParseSubtitleLineImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Listening listening) parseSubtitleLine,
+    required TResult Function(String url) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
     required TResult Function(int index) setCurrentPageIndex,
   }) {
-    return parseSubtitleLine(listening);
+    return parseSubtitleLine(url);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Listening listening)? parseSubtitleLine,
+    TResult? Function(String url)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
     TResult? Function(int index)? setCurrentPageIndex,
   }) {
-    return parseSubtitleLine?.call(listening);
+    return parseSubtitleLine?.call(url);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Listening listening)? parseSubtitleLine,
+    TResult Function(String url)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
     TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
@@ -219,7 +206,7 @@ class _$ParseSubtitleLineImpl
     required TResult orElse(),
   }) {
     if (parseSubtitleLine != null) {
-      return parseSubtitleLine(listening);
+      return parseSubtitleLine(url);
     }
     return orElse();
   }
@@ -267,10 +254,9 @@ class _$ParseSubtitleLineImpl
 }
 
 abstract class _ParseSubtitleLine implements SubtitleEvent {
-  const factory _ParseSubtitleLine(final Listening listening) =
-      _$ParseSubtitleLineImpl;
+  const factory _ParseSubtitleLine(final String url) = _$ParseSubtitleLineImpl;
 
-  Listening get listening;
+  String get url;
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -368,7 +354,7 @@ class _$ParseSubtitleImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Listening listening) parseSubtitleLine,
+    required TResult Function(String url) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
@@ -380,7 +366,7 @@ class _$ParseSubtitleImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Listening listening)? parseSubtitleLine,
+    TResult? Function(String url)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
@@ -392,7 +378,7 @@ class _$ParseSubtitleImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Listening listening)? parseSubtitleLine,
+    TResult Function(String url)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
     TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
@@ -551,7 +537,7 @@ class _$ParseListeningQuestionImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Listening listening) parseSubtitleLine,
+    required TResult Function(String url) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
@@ -563,7 +549,7 @@ class _$ParseListeningQuestionImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Listening listening)? parseSubtitleLine,
+    TResult? Function(String url)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
@@ -575,7 +561,7 @@ class _$ParseListeningQuestionImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Listening listening)? parseSubtitleLine,
+    TResult Function(String url)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
     TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
@@ -727,7 +713,7 @@ class _$ParseCompleteImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Listening listening) parseSubtitleLine,
+    required TResult Function(String url) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
@@ -739,7 +725,7 @@ class _$ParseCompleteImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Listening listening)? parseSubtitleLine,
+    TResult? Function(String url)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
@@ -751,7 +737,7 @@ class _$ParseCompleteImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Listening listening)? parseSubtitleLine,
+    TResult Function(String url)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
     TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,
@@ -896,7 +882,7 @@ class _$SetCurrentPageIndexImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Listening listening) parseSubtitleLine,
+    required TResult Function(String url) parseSubtitleLine,
     required TResult Function(Listening listening) parseSubtitle,
     required TResult Function(Listening listening) parseListeningQuestion,
     required TResult Function(List<Subtitle> subtitles) parseComplete,
@@ -908,7 +894,7 @@ class _$SetCurrentPageIndexImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Listening listening)? parseSubtitleLine,
+    TResult? Function(String url)? parseSubtitleLine,
     TResult? Function(Listening listening)? parseSubtitle,
     TResult? Function(Listening listening)? parseListeningQuestion,
     TResult? Function(List<Subtitle> subtitles)? parseComplete,
@@ -920,7 +906,7 @@ class _$SetCurrentPageIndexImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Listening listening)? parseSubtitleLine,
+    TResult Function(String url)? parseSubtitleLine,
     TResult Function(Listening listening)? parseSubtitle,
     TResult Function(Listening listening)? parseListeningQuestion,
     TResult Function(List<Subtitle> subtitles)? parseComplete,

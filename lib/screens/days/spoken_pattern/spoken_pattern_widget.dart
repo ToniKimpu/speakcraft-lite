@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/practice_label_widget.dart';
-import 'package:pmp_english/screens/days/spoken_pattern/widgets/spoken_pattern_examples.dart';
+import 'package:pmp_english/screens/days/spoken_pattern/widgets/spoken_pattern_example_list.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/spoken_pattern_header.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/svg_data_widget.dart';
 
@@ -10,7 +10,7 @@ import '../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../model/pattern_example/pattern_example.dart';
 import '../../../model/spoken_pattern/spoken_pattern.dart';
-import 'widgets/spoken_pattern_example.dart';
+import 'widgets/spoken_pattern_example_practice.dart';
 
 class SpokenPatternWidget extends StatefulWidget {
   const SpokenPatternWidget({
@@ -154,7 +154,7 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
                         onUpdatePlayerState: (playerState) => playerState,
                         orElse: () => null,
                       );
-                      return SpokenPatternExamples(
+                      return SpokenPatternExampleList(
                         patternExamples: patternExamples,
                         audioPlayer: widget.audioPlayer,
                         audioPlayerStateTrackerBloc:
@@ -186,7 +186,7 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
                           final patternExample = practicePatternExamples[index];
-                          return SpokenPatternExample(
+                          return SpokenPatternExamplePractice(
                             spokenPatternExample: patternExample,
                             audioPlayer: widget.audioPlayer,
                             currentPlayingId: _currentPlayingId,

@@ -129,7 +129,8 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
         withLoading: true,
       ),
     );
-    _subtitleDetailBloc.add(SubtitleEvent.parseSubtitleLine(widget.listening));
+    _subtitleDetailBloc.add(
+        SubtitleEvent.parseSubtitleLine(widget.listening.recordSubtitlePath));
   }
 
   @override

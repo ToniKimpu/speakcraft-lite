@@ -8,8 +8,8 @@ import 'package:pmp_english/screens/days/spoken_pattern/widgets/word_chips.dart'
 import '../../../../config/pmp_text_styles.dart';
 import '../../../../services/supabase_service.dart';
 
-class SpokenPatternExample extends StatefulWidget {
-  const SpokenPatternExample({
+class SpokenPatternExamplePractice extends StatefulWidget {
+  const SpokenPatternExamplePractice({
     super.key,
     required this.audioPlayer,
     required this.spokenPatternExample,
@@ -26,10 +26,12 @@ class SpokenPatternExample extends StatefulWidget {
   final PlayerState? currentPlayerState;
 
   @override
-  State<SpokenPatternExample> createState() => _SpokenPatternExampleState();
+  State<SpokenPatternExamplePractice> createState() =>
+      _SpokenPatternExamplePracticeState();
 }
 
-class _SpokenPatternExampleState extends State<SpokenPatternExample> {
+class _SpokenPatternExamplePracticeState
+    extends State<SpokenPatternExamplePractice> {
   final _userAnswerController = TextEditingController();
 
   String? _userAnswer; // local state
@@ -250,15 +252,6 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
           const SizedBox(
             height: 2,
           ),
-          // if (_userAnswer == null) // show TextField if no answer yet
-          //   PracticeTextField(
-          //     controller: _userAnswerController,
-          //     hintText: "",
-          //     englishOnly: true,
-          //     minLines: 2,
-          //     maxHeight: 120,
-          //   )
-          // else // show the saved answer
           if (_userAnswer != null)
             Container(
               padding: const EdgeInsets.all(8),
@@ -280,10 +273,10 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
               ),
               decoration: BoxDecoration(
                 color: Colors.white
-                    .withOpacity(0.08), // slightly more visible glass
+                    .withValues(alpha: 0.08), // slightly more visible glass
                 borderRadius: BorderRadius.circular(6),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.2),
+                  color: Colors.white.withValues(alpha: 0.2),
                   width: 1,
                 ),
               ),
@@ -343,7 +336,8 @@ class _SpokenPatternExampleState extends State<SpokenPatternExample> {
             Align(
               alignment: Alignment.center,
               child: WordChips(
-                englishText: widget.spokenPatternExample.englishText,
+                englishText: widget.spokenPatternExample.words ??
+                    widget.spokenPatternExample.englishText,
                 controller: _userAnswerController,
                 usedWords: _usedWords,
                 onTap: () => setState(

@@ -53,20 +53,21 @@ class ActionsBottomSheet extends StatelessWidget {
             const SizedBox(height: 12),
             _buildHeader(context),
             const SizedBox(height: 24),
-            _ActionItem(
-              icon: Icons.music_note_sharp,
-              label: 'Play Now',
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushNamed(
-                  context,
-                  PmpRoutes.youtubeVideoPage,
-                  arguments: {
-                    "listening": listening,
-                  },
-                );
-              },
-            ),
+            if (listening.subtitlePath.trim().isNotEmpty)
+              _ActionItem(
+                icon: Icons.music_note_sharp,
+                label: 'Play Now',
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(
+                    context,
+                    PmpRoutes.youtubeVideoPage,
+                    arguments: {
+                      "listening": listening,
+                    },
+                  );
+                },
+              ),
             if (listening.hasVocabularies)
               Divider(
                 height: 1,
@@ -87,60 +88,66 @@ class ActionsBottomSheet extends StatelessWidget {
                   );
                 },
               ),
-            Divider(
-              height: 1,
-              color: Colors.white.withValues(alpha: 0.2),
-            ),
-            _ActionItem(
-              icon: Icons.check_circle_outline,
-              label: 'Practice Now',
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushNamed(
-                  context,
-                  PmpRoutes.listeningSentencePracticeList,
-                  arguments: {
-                    "listening": listening,
-                  },
-                );
-              },
-            ),
-            Divider(
-              height: 1,
-              color: Colors.white.withValues(alpha: 0.2),
-            ),
-            _ActionItem(
-              icon: Icons.mic_none,
-              label: 'Shadowing',
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushNamed(
-                  context,
-                  PmpRoutes.shadowingPage,
-                  arguments: {
-                    "listening": listening,
-                  },
-                );
-              },
-            ),
-            Divider(
-              height: 1,
-              color: Colors.white.withValues(alpha: 0.2),
-            ),
-            _ActionItem(
-              icon: Icons.check_circle_outline,
-              label: 'Record Now',
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushNamed(
-                  context,
-                  PmpRoutes.speechPracticeSessionPage,
-                  arguments: {
-                    "listening": listening,
-                  },
-                );
-              },
-            ),
+            if (listening.multipleChoicePath.trim().isNotEmpty)
+              Divider(
+                height: 1,
+                color: Colors.white.withValues(alpha: 0.2),
+              ),
+            if (listening.multipleChoicePath.trim().isNotEmpty)
+              _ActionItem(
+                icon: Icons.check_circle_outline,
+                label: 'Practice Now',
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(
+                    context,
+                    PmpRoutes.listeningSentencePracticeList,
+                    arguments: {
+                      "listening": listening,
+                    },
+                  );
+                },
+              ),
+            if (listening.shadowingPath.trim().isNotEmpty)
+              Divider(
+                height: 1,
+                color: Colors.white.withValues(alpha: 0.2),
+              ),
+            if (listening.shadowingPath.trim().isNotEmpty)
+              _ActionItem(
+                icon: Icons.headphones,
+                label: 'Shadowing',
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(
+                    context,
+                    PmpRoutes.shadowingPage,
+                    arguments: {
+                      "listening": listening,
+                    },
+                  );
+                },
+              ),
+            if (listening.recordSubtitlePath.trim().isNotEmpty)
+              Divider(
+                height: 1,
+                color: Colors.white.withValues(alpha: 0.2),
+              ),
+            if (listening.recordSubtitlePath.trim().isNotEmpty)
+              _ActionItem(
+                icon: Icons.record_voice_over,
+                label: 'Record Now',
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.pushNamed(
+                    context,
+                    PmpRoutes.speechPracticeSessionPage,
+                    arguments: {
+                      "listening": listening,
+                    },
+                  );
+                },
+              ),
           ],
         ),
       ),

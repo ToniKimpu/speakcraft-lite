@@ -70,7 +70,7 @@ class SubtitleWidget extends StatelessWidget {
                 border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
               ),
               child: Text(
-                "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမည်။",
+                "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမယ်။",
                 textAlign: TextAlign.center,
                 style: PmpTextStyles.body2Semi.copyWith(
                   color: Colors.white,

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/listening/listening_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/sheets/actions_bottom_sheet.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../l10n/generated/l10n.dart';
+import 'sheets/actions_bottom_sheet.dart';
 
 class ListeningListPage extends StatefulWidget {
   const ListeningListPage({super.key});
@@ -31,7 +31,7 @@ class _ListeningListPageState extends State<ListeningListPage> {
       create: (context) => _listeningBloc,
       child: MainScaffold(
         appBar: AppBar(
-          title: const Text('Listening List'),
+          title: const Text('Listening And Shadowing'),
         ),
         body: BlocBuilder<ListeningBloc, ListeningState>(
           bloc: _listeningBloc,

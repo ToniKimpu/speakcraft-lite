@@ -75,7 +75,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
     _playerStateSubscription =
         _audioPlayer.playerStateStream.listen((playerState) {
-      // debugPrint("_playerStateSubscription: ${playerState.playing} playing");
       _audioPlayerStateTrackerBloc.add(
         AudioPlayerEvent.updatePlayerState(playerState),
       );
@@ -277,8 +276,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                       subtitles: subtitles,
                                       hasMMSub: widget.listening.hasMMSubtitle,
                                       onUserChangePage: (subtitle) async {
-                                        final isPaused =
-                                            !_controller.value.isPlaying;
+                                        // final isPaused =
+                                        //     !_controller.value.isPlaying;
                                         _controller.seekTo(subtitle.start);
                                         // if (isPaused) {
                                         //   await Future.delayed(const Duration(

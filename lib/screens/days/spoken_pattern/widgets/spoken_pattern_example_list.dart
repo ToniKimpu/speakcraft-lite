@@ -5,8 +5,8 @@ import 'package:pmp_english/model/pattern_example/pattern_example.dart';
 import '../../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../../config/pmp_text_styles.dart';
 
-class SpokenPatternExamples extends StatefulWidget {
-  const SpokenPatternExamples({
+class SpokenPatternExampleList extends StatefulWidget {
+  const SpokenPatternExampleList({
     super.key,
     required this.patternExamples,
     required this.audioPlayer,
@@ -24,10 +24,11 @@ class SpokenPatternExamples extends StatefulWidget {
   final PlayerState? currentPlayerState;
 
   @override
-  State<SpokenPatternExamples> createState() => _SpokenPatternExamplesState();
+  State<SpokenPatternExampleList> createState() =>
+      _SpokenPatternExampleListState();
 }
 
-class _SpokenPatternExamplesState extends State<SpokenPatternExamples> {
+class _SpokenPatternExampleListState extends State<SpokenPatternExampleList> {
   Future<void> _setAudioSourceIfNeeded(String url, int id) async {
     try {
       await widget.audioPlayer.stop();

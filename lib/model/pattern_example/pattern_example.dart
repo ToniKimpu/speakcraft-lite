@@ -15,6 +15,7 @@ class PatternExample with _$PatternExample {
     required int id,
     @JsonKey(name: 'english_text') required String englishText,
     @JsonKey(name: 'burmese_text') String? burmeseText,
+    String? words,
     @JsonKey(name: 'pattern_id') required int patternId,
     @JsonKey(name: 'audio_url', fromJson: _nomalizeAudioUrl) String? audioUrl,
     @JsonKey(name: 'start_at') required int startAt,

@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/hightlight_types/hightlight_background.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/hightlight_types/hightlight_none.dart';
@@ -34,17 +34,12 @@ class ShadowingPage extends StatefulWidget {
 class _ShadowingPageState extends State<ShadowingPage> {
   late YoutubePlayerController _controller;
 
+  final _subtitleLineBloc = SubtitleBloc();
+
   Duration _position = Duration.zero;
 
   StreamSubscription? _positionSub;
   StreamSubscription? _playerStateSubscription;
-
-  Future<List<SubtitleLine>> loadSubtitles() async {
-    final jsonString =
-        await rootBundle.loadString("assets/subtitles/shadowing.json");
-    final List<dynamic> jsonList = json.decode(jsonString);
-    return jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
-  }
 
   List<SubtitleLine> _subtitles = [];
 
@@ -63,9 +58,8 @@ class _ShadowingPageState extends State<ShadowingPage> {
   @override
   void initState() {
     super.initState();
-    loadSubtitles().then((data) {
-      setState(() => _subtitles = data);
-    });
+    _subtitleLineBloc
+        .add(SubtitleEvent.parseSubtitleLine(widget.listening.shadowingPath));
     _controller = YoutubePlayerController(
       initialVideoId: "H14bBuluwB8",
       flags: const YoutubePlayerFlags(
@@ -115,7 +109,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
               _itemScrollController
                   .scrollTo(
                     index: currentIndex,
-                    duration: const Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 700),
                     alignment: 0.3,
                   )
                   .then(
@@ -183,165 +177,211 @@ class _ShadowingPageState extends State<ShadowingPage> {
                     ),
                   ),
                 )
-              : MainScaffold(
-                  appBar: AppBar(
-                    backgroundColor: const Color(0xFF0F2027),
-                    title: const Text(
-                      "Shadowing",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    actions: [
-                      InkWell(
-                        borderRadius: BorderRadius.circular(6),
-                        onTap: () {
-                          showModalBottomSheet(
-                            context: context,
-                            isScrollControlled: true,
-                            builder: (BuildContext context) {
-                              return HightlightTypeChooser(
-                                onHighlightTypeSelected: (type) {
-                                  setState(() {
-                                    _selectedHighlightType = type;
-                                  });
+              : BlocConsumer<SubtitleBloc, SubtitleState>(
+                  bloc: _subtitleLineBloc,
+                  listener: (context, state) {
+                    state.maybeWhen(
+                      onParseSubtitleLineCompleted: (subtitleLines) {
+                        if (_subtitles.isEmpty) {
+                          setState(() {
+                            _subtitles = subtitleLines;
+                          });
+                        }
+                      },
+                      orElse: () => -1,
+                    );
+                  },
+                  builder: (context, state) {
+                    return MainScaffold(
+                      appBar: AppBar(
+                        backgroundColor: const Color(0xFF0F2027),
+                        title: const Text(
+                          "Shadowing",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        actions: [
+                          InkWell(
+                            borderRadius: BorderRadius.circular(6),
+                            onTap: () {
+                              showModalBottomSheet(
+                                context: context,
+                                isScrollControlled: true,
+                                builder: (BuildContext context) {
+                                  return HightlightTypeChooser(
+                                    onHighlightTypeSelected: (type) {
+                                      setState(() {
+                                        _selectedHighlightType = type;
+                                      });
+                                    },
+                                  );
                                 },
                               );
                             },
-                          );
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 4),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(
-                                color: Colors.white.withValues(alpha: 0.6)),
-                          ),
-                          child: Row(
-                            children: [
-                              Text(
-                                getHighlightTypeLabel(_selectedHighlightType),
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white.withValues(alpha: 0.8),
-                                  fontFamily: 'MM Lyrics Bold',
-                                ),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 8, vertical: 4),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                border: Border.all(
+                                    color: Colors.white.withValues(alpha: 0.6)),
                               ),
-                              const SizedBox(width: 6),
-                              Icon(
-                                Icons.expand_more,
-                                color: Colors.white.withValues(alpha: 0.6),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    getHighlightTypeLabel(
+                                        _selectedHighlightType),
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color:
+                                          Colors.white.withValues(alpha: 0.8),
+                                      fontFamily: 'MM Lyrics Bold',
+                                    ),
+                                  ),
+                                  const SizedBox(width: 6),
+                                  Icon(
+                                    Icons.expand_more,
+                                    color: Colors.white.withValues(alpha: 0.6),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                        ],
                       ),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                    ],
-                  ),
-                  body: Column(
-                    children: [
-                      ShadowingPlayer(
-                        listening: widget.listening,
-                        controller: _controller,
-                        player: player,
-                        position: _position,
-                        totalDuration: Duration(seconds: widget.listening.end),
-                        onTogglePlay: () {
-                          final loading = _controller.value.playerState ==
-                                  PlayerState.buffering ||
-                              !_controller.value.isReady;
-                          if (loading) {
-                            return;
-                          }
-                          if (_controller.value.playerState ==
-                              PlayerState.ended) {
-                            _controller.seekTo(Duration.zero);
-                            _controller.play();
-                          } else if (_controller.value.isPlaying) {
-                            _controller.pause();
-                          } else {
-                            _controller.play();
-                          }
-                        },
-                      ),
-                      Expanded(
-                        child: NotificationListener<ScrollNotification>(
-                          onNotification: (scrollNotification) {
-                            if (scrollNotification is UserScrollNotification) {
-                              // Called when user starts or stops scrolling
-                              if (scrollNotification.direction !=
-                                  ScrollDirection.idle) {
-                                _isUserScrolling = true;
-                                _scrollTimer?.cancel();
-                                _scrollTimer = Timer(
-                                    const Duration(milliseconds: 1500), () {
-                                  // User has stopped scrolling
-                                  setState(() {
-                                    _isUserScrolling = false;
-                                  });
-                                });
+                      body: Column(
+                        children: [
+                          ShadowingPlayer(
+                            listening: widget.listening,
+                            controller: _controller,
+                            player: player,
+                            position: _position,
+                            totalDuration:
+                                Duration(seconds: widget.listening.end),
+                            onTogglePlay: () {
+                              final loading = _controller.value.playerState ==
+                                      PlayerState.buffering ||
+                                  !_controller.value.isReady;
+                              if (loading) {
+                                return;
                               }
-                              debugPrint(
-                                  "_isUserScrollingLogic: $_isUserScrolling isUserScrolling");
-                            }
-                            return false;
-                          },
-                          child: ScrollablePositionedList.separated(
-                            itemScrollController: _itemScrollController,
-                            itemPositionsListener: _itemPositionsListener,
-                            itemCount: _subtitles.length,
-                            padding: const EdgeInsets.only(top: 12),
-                            itemBuilder: (context, index) {
-                              debugPrint(
-                                  "_scrollablePositionIndex: $index index");
-                              final line = _subtitles[index];
-                              final nextLine = (index < _subtitles.length - 1)
-                                  ? _subtitles[index + 1]
-                                  : null;
-                              final startTime = Duration(
-                                  milliseconds: (line.start * 1000).toInt());
-                              final endTime = Duration(
-                                  milliseconds: (line.end * 1000).toInt());
-                              String formatDuration(Duration d) {
-                                return "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
+                              if (_controller.value.playerState ==
+                                  PlayerState.ended) {
+                                _controller.seekTo(Duration.zero);
+                                _controller.play();
+                              } else if (_controller.value.isPlaying) {
+                                _controller.pause();
+                              } else {
+                                _controller.play();
                               }
-
-                              return Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 16, right: 16, bottom: 12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Text(formatDuration(startTime),
-                                            style: PmpTextStyles.sub
-                                                .copyWith(color: Colors.white)),
-                                        Text(" --> ", style: PmpTextStyles.sub),
-                                        Text(formatDuration(endTime),
-                                            style: PmpTextStyles.sub
-                                                .copyWith(color: Colors.white)),
-                                      ],
-                                    ),
-                                    _buildHighlightWidget(
-                                      line,
-                                      nextLine,
-                                      _position,
-                                    ),
-                                  ],
-                                ),
-                              );
                             },
-                            separatorBuilder: (_, __) =>
-                                const SizedBox(height: 12),
                           ),
-                        ),
+                          Expanded(
+                            child: state.maybeWhen(
+                              loading: (message) {
+                                return const Center(
+                                  child: SizedBox(
+                                    width: 18,
+                                    height: 18,
+                                    child: CircularProgressIndicator(),
+                                  ),
+                                );
+                              },
+                              onParseSubtitleLineCompleted: (subtitleLines) {
+                                return NotificationListener<ScrollNotification>(
+                                  onNotification: (scrollNotification) {
+                                    if (scrollNotification
+                                        is UserScrollNotification) {
+                                      // Called when user starts or stops scrolling
+                                      if (scrollNotification.direction !=
+                                          ScrollDirection.idle) {
+                                        _isUserScrolling = true;
+                                        _scrollTimer?.cancel();
+                                        _scrollTimer = Timer(
+                                            const Duration(milliseconds: 1500),
+                                            () {
+                                          // User has stopped scrolling
+                                          setState(() {
+                                            _isUserScrolling = false;
+                                          });
+                                        });
+                                      }
+                                      debugPrint(
+                                          "_isUserScrollingLogic: $_isUserScrolling isUserScrolling");
+                                    }
+                                    return false;
+                                  },
+                                  child: ScrollablePositionedList.separated(
+                                    itemScrollController: _itemScrollController,
+                                    itemPositionsListener:
+                                        _itemPositionsListener,
+                                    itemCount: subtitleLines.length,
+                                    padding: const EdgeInsets.only(top: 12),
+                                    itemBuilder: (context, index) {
+                                      debugPrint(
+                                          "_scrollablePositionIndex: $index index");
+                                      final line = subtitleLines[index];
+                                      final nextLine =
+                                          (index < subtitleLines.length - 1)
+                                              ? subtitleLines[index + 1]
+                                              : null;
+                                      final startTime = Duration(
+                                          milliseconds:
+                                              (line.start * 1000).toInt());
+                                      final endTime = Duration(
+                                          milliseconds:
+                                              (line.end * 1000).toInt());
+                                      String formatDuration(Duration d) {
+                                        return "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
+                                      }
+
+                                      return Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 16, right: 16, bottom: 12),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Text(formatDuration(startTime),
+                                                    style: PmpTextStyles.sub
+                                                        .copyWith(
+                                                            color:
+                                                                Colors.white)),
+                                                Text(" --> ",
+                                                    style: PmpTextStyles.sub),
+                                                Text(formatDuration(endTime),
+                                                    style: PmpTextStyles.sub
+                                                        .copyWith(
+                                                            color:
+                                                                Colors.white)),
+                                              ],
+                                            ),
+                                            _buildHighlightWidget(
+                                              line,
+                                              nextLine,
+                                              _position,
+                                            ),
+                                          ],
+                                        ),
+                                      );
+                                    },
+                                    separatorBuilder: (_, __) =>
+                                        const SizedBox(height: 12),
+                                  ),
+                                );
+                              },
+                              orElse: () => Container(),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    );
+                  },
                 );
         },
       ),

@@ -19,7 +19,7 @@ part 'subtitle_detail_bloc.freezed.dart';
 
 @freezed
 abstract class SubtitleEvent with _$SubtitleEvent {
-  const factory SubtitleEvent.parseSubtitleLine(Listening listening) =
+  const factory SubtitleEvent.parseSubtitleLine(String url) =
       _ParseSubtitleLine;
   const factory SubtitleEvent.parseSubtitle(Listening listening) =
       _ParseSubtitle;
@@ -59,8 +59,8 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
         parseListeningQuestion: (listening) async {
           await _mapParseListeningQuestionsToState(listening, emit);
         },
-        parseSubtitleLine: (listening) async {
-          await _mapParseSubtitleLineToState(listening, emit);
+        parseSubtitleLine: (url) async {
+          await _mapParseSubtitleLineToState(url, emit);
         },
         parseSubtitle: (listening) async {
           await parseSubtitle(listening, emit);
@@ -111,14 +111,13 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
   }
 
   Future<void> _mapParseSubtitleLineToState(
-    Listening listening,
+    String url,
     Emitter<SubtitleState> emit,
   ) async {
     try {
       emit(const SubtitleState.loading());
 
       // Make sure shadowingPath is not null or empty
-      final url = listening.shadowingPath;
       if (url.isEmpty) {
         throw Exception("No shadowing path provided.");
       }
