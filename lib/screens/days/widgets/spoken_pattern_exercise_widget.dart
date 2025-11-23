@@ -314,7 +314,7 @@ class _WordChipsState extends State<WordChips> {
                 borderRadius: BorderRadius.circular(12),
                 color: Colors.black45,
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.25),
+                  color: Colors.white.withValues(alpha: 0.25),
                   width: 4,
                 ),
               ),

@@ -48,6 +48,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   StreamSubscription? _playerStateSubscription;
   StreamSubscription<Duration>? _positionSub;
   late final StreamSubscription<Duration?> _durationSub;
+
+  double currentSpeed = 1.0;
   @override
   void initState() {
     super.initState();
@@ -248,6 +250,79 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                 onVocabulary: () {},
                                 onSeek: () {},
                               ),
+                              // SizedBox(
+                              //   width: double.infinity,
+                              //   height: 50,
+                              //   child: Center(
+                              //       child: Row(
+                              //     children: [
+                              //       const SizedBox(
+                              //         width: 12,
+                              //       ),
+                              //       Container(
+                              //         padding: const EdgeInsets.symmetric(
+                              //             vertical: 4, horizontal: 4),
+                              //         decoration: BoxDecoration(
+                              //           borderRadius:
+                              //               BorderRadius.circular(4),
+                              //           border: Border.all(
+                              //             color: Colors.white,
+                              //           ),
+                              //         ),
+                              //         child: Row(
+                              //           children: [
+                              //             Text(
+                              //               'Normal',
+                              //               style: PmpTextStyles.labelSemi
+                              //                   .copyWith(
+                              //                 color: Colors.white,
+                              //               ),
+                              //             ),
+                              //             const SizedBox(width: 12),
+                              //             const Icon(
+                              //               Icons.keyboard_arrow_down,
+                              //               color: Colors.white,
+                              //               size: 18,
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //       const Spacer(),
+                              //       Container(
+                              //         width: 40,
+                              //         height: 40,
+                              //         decoration: BoxDecoration(
+                              //           color: Colors.blue,
+                              //           border: Border.all(
+                              //             width: 1,
+                              //             color: Colors.white,
+                              //           ),
+                              //           borderRadius:
+                              //               BorderRadius.circular(8),
+                              //         ),
+                              //         child: const Icon(Icons.view_agenda,
+                              //             color: Colors.white),
+                              //       ),
+                              //       const SizedBox(width: 4),
+                              //       Container(
+                              //         width: 40,
+                              //         height: 40,
+                              //         decoration: BoxDecoration(
+                              //           color: Colors.grey,
+                              //           border: Border.all(
+                              //             width: 1,
+                              //             color: Colors.grey,
+                              //           ),
+                              //           borderRadius:
+                              //               BorderRadius.circular(8),
+                              //         ),
+                              //         child: const Icon(Icons.view_array,
+                              //             color: Colors.white),
+                              //       ),
+                              //       const SizedBox(width: 12),
+                              //     ],
+                              //   ),),
+                              // ),
                               Expanded(
                                 child: state.maybeWhen(
                                   loading: (message) {
@@ -276,14 +351,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                       subtitles: subtitles,
                                       hasMMSub: widget.listening.hasMMSubtitle,
                                       onUserChangePage: (subtitle) async {
-                                        // final isPaused =
-                                        //     !_controller.value.isPlaying;
                                         _controller.seekTo(subtitle.start);
-                                        // if (isPaused) {
-                                        //   await Future.delayed(const Duration(
-                                        //       milliseconds: 100));
-                                        //   _controller.pause();
-                                        // }
                                       },
                                     );
                                   },

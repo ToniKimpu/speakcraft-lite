@@ -4,15 +4,17 @@ class WordChips extends StatefulWidget {
   final String englishText;
   final TextEditingController controller;
   final VoidCallback onTap;
-  final Set<String> usedWords; // 👈 passed from parent
-  final void Function(String word) markWordUsed; // 👈 callback to parent
+  // now a set of indices (original positions) instead of strings
+  final Set<int> usedWordIndices;
+  // markWordUsed receives (word, originalIndex)
+  final void Function(String word, int index) markWordUsed;
 
   const WordChips({
     super.key,
     required this.englishText,
     required this.controller,
     required this.onTap,
-    required this.usedWords,
+    required this.usedWordIndices,
     required this.markWordUsed,
   });
 
@@ -21,14 +23,19 @@ class WordChips extends StatefulWidget {
 }
 
 class _WordChipsState extends State<WordChips> {
-  String? _pressedWord; // 👈 keep track of which chip is pressed
-  List<String> shuffledWords = [];
+  String? _pressedWord;
+
+  // pair of (originalIndex, word)
+  late List<MapEntry<int, String>> shuffledPairs;
+
   @override
   void initState() {
     super.initState();
     final words = widget.englishText.trim().split(' ');
-    shuffledWords = List<String>.from(words); // copy the list
-    shuffledWords.shuffle();
+    // keep original indices so duplicates are distinct
+    final pairs = words.asMap().entries.toList(); // MapEntry<int, String>
+    shuffledPairs = List<MapEntry<int, String>>.from(pairs);
+    shuffledPairs.shuffle();
   }
 
   @override
@@ -37,16 +44,18 @@ class _WordChipsState extends State<WordChips> {
       spacing: 8,
       runSpacing: 8,
       alignment: WrapAlignment.center,
-      children: shuffledWords.map((word) {
-        final isPressed = _pressedWord == word;
-        final isUsed = widget.usedWords.contains(word); // 👈 hide if used
+      children: shuffledPairs.map((pair) {
+        final originalIndex = pair.key;
+        final word = pair.value;
+        final isPressed = _pressedWord == '${word}_$originalIndex';
+        final isUsed = widget.usedWordIndices.contains(originalIndex);
 
         return InkWell(
           onTap: isUsed
               ? null
               : () async {
                   setState(() {
-                    _pressedWord = word;
+                    _pressedWord = '${word}_$originalIndex';
                   });
 
                   await Future.delayed(const Duration(milliseconds: 120));
@@ -54,10 +63,13 @@ class _WordChipsState extends State<WordChips> {
                     _pressedWord = null;
                   });
 
-                  widget.markWordUsed(word);
+                  // notify parent with the original index (so duplicates are distinct)
+                  widget.markWordUsed(word, originalIndex);
+
                   final current = widget.controller.text.trim();
                   widget.controller.text =
                       current.isEmpty ? word : "$current $word";
+
                   widget.onTap.call();
                 },
           child: AnimatedScale(
@@ -75,7 +87,6 @@ class _WordChipsState extends State<WordChips> {
                 ),
               ),
               child: Opacity(
-                // offstage: isUsed,
                 opacity: isUsed ? 0.0 : 1.0,
                 child: Text(
                   word,

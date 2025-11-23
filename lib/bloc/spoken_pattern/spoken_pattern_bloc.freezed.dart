@@ -24,6 +24,8 @@ mixin _$SpokenPatternEvent {
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
+    required TResult Function(bool withLoading, int patternId)
+        loadPracticeExamplesByPattern,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +36,8 @@ mixin _$SpokenPatternEvent {
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
+    TResult? Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +48,8 @@ mixin _$SpokenPatternEvent {
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
+    TResult Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +61,8 @@ mixin _$SpokenPatternEvent {
         loadVocabulariesByPattern,
     required TResult Function(_LoadExamplesByPattern value)
         loadExamplesByPattern,
+    required TResult Function(_LoadPracticeExamplesByPattern value)
+        loadPracticeExamplesByPattern,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +72,8 @@ mixin _$SpokenPatternEvent {
     TResult? Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult? Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult? Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,6 +83,8 @@ mixin _$SpokenPatternEvent {
     TResult Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -159,7 +171,6 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadLessonPatternsImplCopyWith<_$LoadLessonPatternsImpl> get copyWith =>
@@ -175,6 +186,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
+    required TResult Function(bool withLoading, int patternId)
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatternsByLesson(lessonId);
   }
@@ -188,6 +201,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
+    TResult? Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatternsByLesson?.call(lessonId);
   }
@@ -201,6 +216,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
+    TResult Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadPatternsByLesson != null) {
@@ -218,6 +235,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
         loadVocabulariesByPattern,
     required TResult Function(_LoadExamplesByPattern value)
         loadExamplesByPattern,
+    required TResult Function(_LoadPracticeExamplesByPattern value)
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatternsByLesson(this);
   }
@@ -230,6 +249,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
     TResult? Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult? Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult? Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatternsByLesson?.call(this);
   }
@@ -242,6 +263,8 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
     TResult Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadPatternsByLesson != null) {
@@ -259,7 +282,6 @@ abstract class _LoadLessonPatterns implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadLessonPatternsImplCopyWith<_$LoadLessonPatternsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -356,7 +378,6 @@ class _$LoadpatternsImpl implements _Loadpatterns {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadpatternsImplCopyWith<_$LoadpatternsImpl> get copyWith =>
@@ -371,6 +392,8 @@ class _$LoadpatternsImpl implements _Loadpatterns {
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
+    required TResult Function(bool withLoading, int patternId)
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatterns(keyword, examples, vocabularies, userComments);
   }
@@ -384,6 +407,8 @@ class _$LoadpatternsImpl implements _Loadpatterns {
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
+    TResult? Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatterns?.call(keyword, examples, vocabularies, userComments);
   }
@@ -397,6 +422,8 @@ class _$LoadpatternsImpl implements _Loadpatterns {
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
+    TResult Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadPatterns != null) {
@@ -414,6 +441,8 @@ class _$LoadpatternsImpl implements _Loadpatterns {
         loadVocabulariesByPattern,
     required TResult Function(_LoadExamplesByPattern value)
         loadExamplesByPattern,
+    required TResult Function(_LoadPracticeExamplesByPattern value)
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatterns(this);
   }
@@ -426,6 +455,8 @@ class _$LoadpatternsImpl implements _Loadpatterns {
     TResult? Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult? Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult? Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadPatterns?.call(this);
   }
@@ -438,6 +469,8 @@ class _$LoadpatternsImpl implements _Loadpatterns {
     TResult Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadPatterns != null) {
@@ -461,7 +494,6 @@ abstract class _Loadpatterns implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadpatternsImplCopyWith<_$LoadpatternsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -529,7 +561,6 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadVocabulariesByPatternImplCopyWith<_$LoadVocabulariesByPatternImpl>
@@ -545,6 +576,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
+    required TResult Function(bool withLoading, int patternId)
+        loadPracticeExamplesByPattern,
   }) {
     return loadVocabulariesByPattern(patternId);
   }
@@ -558,6 +591,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
+    TResult? Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadVocabulariesByPattern?.call(patternId);
   }
@@ -571,6 +606,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
+    TResult Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadVocabulariesByPattern != null) {
@@ -588,6 +625,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
         loadVocabulariesByPattern,
     required TResult Function(_LoadExamplesByPattern value)
         loadExamplesByPattern,
+    required TResult Function(_LoadPracticeExamplesByPattern value)
+        loadPracticeExamplesByPattern,
   }) {
     return loadVocabulariesByPattern(this);
   }
@@ -600,6 +639,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
     TResult? Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult? Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult? Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadVocabulariesByPattern?.call(this);
   }
@@ -612,6 +653,8 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
     TResult Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadVocabulariesByPattern != null) {
@@ -629,7 +672,6 @@ abstract class _LoadVocabulariesByPattern implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadVocabulariesByPatternImplCopyWith<_$LoadVocabulariesByPatternImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -695,7 +737,6 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadExamplesByPatternImplCopyWith<_$LoadExamplesByPatternImpl>
@@ -711,6 +752,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
         loadPatterns,
     required TResult Function(int patternId) loadVocabulariesByPattern,
     required TResult Function(int patternId) loadExamplesByPattern,
+    required TResult Function(bool withLoading, int patternId)
+        loadPracticeExamplesByPattern,
   }) {
     return loadExamplesByPattern(patternId);
   }
@@ -724,6 +767,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
         loadPatterns,
     TResult? Function(int patternId)? loadVocabulariesByPattern,
     TResult? Function(int patternId)? loadExamplesByPattern,
+    TResult? Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadExamplesByPattern?.call(patternId);
   }
@@ -737,6 +782,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
         loadPatterns,
     TResult Function(int patternId)? loadVocabulariesByPattern,
     TResult Function(int patternId)? loadExamplesByPattern,
+    TResult Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadExamplesByPattern != null) {
@@ -754,6 +801,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
         loadVocabulariesByPattern,
     required TResult Function(_LoadExamplesByPattern value)
         loadExamplesByPattern,
+    required TResult Function(_LoadPracticeExamplesByPattern value)
+        loadPracticeExamplesByPattern,
   }) {
     return loadExamplesByPattern(this);
   }
@@ -766,6 +815,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
     TResult? Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult? Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult? Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
   }) {
     return loadExamplesByPattern?.call(this);
   }
@@ -778,6 +829,8 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
     TResult Function(_LoadVocabulariesByPattern value)?
         loadVocabulariesByPattern,
     TResult Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
     required TResult orElse(),
   }) {
     if (loadExamplesByPattern != null) {
@@ -795,8 +848,200 @@ abstract class _LoadExamplesByPattern implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadExamplesByPatternImplCopyWith<_$LoadExamplesByPatternImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadPracticeExamplesByPatternImplCopyWith<$Res> {
+  factory _$$LoadPracticeExamplesByPatternImplCopyWith(
+          _$LoadPracticeExamplesByPatternImpl value,
+          $Res Function(_$LoadPracticeExamplesByPatternImpl) then) =
+      __$$LoadPracticeExamplesByPatternImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool withLoading, int patternId});
+}
+
+/// @nodoc
+class __$$LoadPracticeExamplesByPatternImplCopyWithImpl<$Res>
+    extends _$SpokenPatternEventCopyWithImpl<$Res,
+        _$LoadPracticeExamplesByPatternImpl>
+    implements _$$LoadPracticeExamplesByPatternImplCopyWith<$Res> {
+  __$$LoadPracticeExamplesByPatternImplCopyWithImpl(
+      _$LoadPracticeExamplesByPatternImpl _value,
+      $Res Function(_$LoadPracticeExamplesByPatternImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SpokenPatternEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? withLoading = null,
+    Object? patternId = null,
+  }) {
+    return _then(_$LoadPracticeExamplesByPatternImpl(
+      withLoading: null == withLoading
+          ? _value.withLoading
+          : withLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      patternId: null == patternId
+          ? _value.patternId
+          : patternId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadPracticeExamplesByPatternImpl
+    implements _LoadPracticeExamplesByPattern {
+  const _$LoadPracticeExamplesByPatternImpl(
+      {required this.withLoading, required this.patternId});
+
+  @override
+  final bool withLoading;
+  @override
+  final int patternId;
+
+  @override
+  String toString() {
+    return 'SpokenPatternEvent.loadPracticeExamplesByPattern(withLoading: $withLoading, patternId: $patternId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadPracticeExamplesByPatternImpl &&
+            (identical(other.withLoading, withLoading) ||
+                other.withLoading == withLoading) &&
+            (identical(other.patternId, patternId) ||
+                other.patternId == patternId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, withLoading, patternId);
+
+  /// Create a copy of SpokenPatternEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadPracticeExamplesByPatternImplCopyWith<
+          _$LoadPracticeExamplesByPatternImpl>
+      get copyWith => __$$LoadPracticeExamplesByPatternImplCopyWithImpl<
+          _$LoadPracticeExamplesByPatternImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int lessonId) loadPatternsByLesson,
+    required TResult Function(String? keyword, bool? examples,
+            bool? vocabularies, bool? userComments)
+        loadPatterns,
+    required TResult Function(int patternId) loadVocabulariesByPattern,
+    required TResult Function(int patternId) loadExamplesByPattern,
+    required TResult Function(bool withLoading, int patternId)
+        loadPracticeExamplesByPattern,
+  }) {
+    return loadPracticeExamplesByPattern(withLoading, patternId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int lessonId)? loadPatternsByLesson,
+    TResult? Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
+        loadPatterns,
+    TResult? Function(int patternId)? loadVocabulariesByPattern,
+    TResult? Function(int patternId)? loadExamplesByPattern,
+    TResult? Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
+  }) {
+    return loadPracticeExamplesByPattern?.call(withLoading, patternId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int lessonId)? loadPatternsByLesson,
+    TResult Function(String? keyword, bool? examples, bool? vocabularies,
+            bool? userComments)?
+        loadPatterns,
+    TResult Function(int patternId)? loadVocabulariesByPattern,
+    TResult Function(int patternId)? loadExamplesByPattern,
+    TResult Function(bool withLoading, int patternId)?
+        loadPracticeExamplesByPattern,
+    required TResult orElse(),
+  }) {
+    if (loadPracticeExamplesByPattern != null) {
+      return loadPracticeExamplesByPattern(withLoading, patternId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadLessonPatterns value) loadPatternsByLesson,
+    required TResult Function(_Loadpatterns value) loadPatterns,
+    required TResult Function(_LoadVocabulariesByPattern value)
+        loadVocabulariesByPattern,
+    required TResult Function(_LoadExamplesByPattern value)
+        loadExamplesByPattern,
+    required TResult Function(_LoadPracticeExamplesByPattern value)
+        loadPracticeExamplesByPattern,
+  }) {
+    return loadPracticeExamplesByPattern(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadLessonPatterns value)? loadPatternsByLesson,
+    TResult? Function(_Loadpatterns value)? loadPatterns,
+    TResult? Function(_LoadVocabulariesByPattern value)?
+        loadVocabulariesByPattern,
+    TResult? Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult? Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
+  }) {
+    return loadPracticeExamplesByPattern?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadLessonPatterns value)? loadPatternsByLesson,
+    TResult Function(_Loadpatterns value)? loadPatterns,
+    TResult Function(_LoadVocabulariesByPattern value)?
+        loadVocabulariesByPattern,
+    TResult Function(_LoadExamplesByPattern value)? loadExamplesByPattern,
+    TResult Function(_LoadPracticeExamplesByPattern value)?
+        loadPracticeExamplesByPattern,
+    required TResult orElse(),
+  }) {
+    if (loadPracticeExamplesByPattern != null) {
+      return loadPracticeExamplesByPattern(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadPracticeExamplesByPattern implements SpokenPatternEvent {
+  const factory _LoadPracticeExamplesByPattern(
+      {required final bool withLoading,
+      required final int patternId}) = _$LoadPracticeExamplesByPatternImpl;
+
+  bool get withLoading;
+  int get patternId;
+
+  /// Create a copy of SpokenPatternEvent
+  /// with the given fields replaced by the non-null parameter values.
+  _$$LoadPracticeExamplesByPatternImplCopyWith<
+          _$LoadPracticeExamplesByPatternImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1213,7 +1458,6 @@ class _$LoadedImpl implements _Loaded {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -1314,7 +1558,6 @@ abstract class _Loaded implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1386,7 +1629,6 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VocabularyLoadedImplCopyWith<_$VocabularyLoadedImpl> get copyWith =>
@@ -1489,7 +1731,6 @@ abstract class _VocabularyLoaded implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VocabularyLoadedImplCopyWith<_$VocabularyLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1560,7 +1801,6 @@ class _$ExampleLoadedImpl implements _ExampleLoaded {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExampleLoadedImplCopyWith<_$ExampleLoadedImpl> get copyWith =>
@@ -1662,7 +1902,6 @@ abstract class _ExampleLoaded implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExampleLoadedImplCopyWith<_$ExampleLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1726,7 +1965,6 @@ class _$ErrorImpl implements _Error {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1827,7 +2065,6 @@ abstract class _Error implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

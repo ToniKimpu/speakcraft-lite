@@ -20,6 +20,7 @@ _$PatternExampleImpl _$$PatternExampleImplFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['created_at'] as String),
       vocabularies: _vocabulariesFromJson(json['vocabularies'] as List?),
+      userAnswer: json['userAnswer'] as String?,
     );
 
 Map<String, dynamic> _$$PatternExampleImplToJson(
@@ -35,4 +36,5 @@ Map<String, dynamic> _$$PatternExampleImplToJson(
       'practicable': instance.practicable,
       'created_at': instance.createdAt?.toIso8601String(),
       'vocabularies': instance.vocabularies,
+      'userAnswer': instance.userAnswer,
     };

@@ -61,7 +61,8 @@ class _CustomControlState extends State<CustomControl> {
         playerState == yt_player.PlayerState.cued;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8),
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      // margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      margin: const EdgeInsets.only(left: 12, right: 12, bottom: 0, top: 8),
       decoration: BoxDecoration(
         color: PmpColors.black.withValues(alpha: 0.4),
         borderRadius: BorderRadius.circular(8),

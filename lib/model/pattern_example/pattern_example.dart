@@ -23,6 +23,7 @@ class PatternExample with _$PatternExample {
     @JsonKey(name: 'created_at') DateTime? createdAt,
     @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
     List<PatternVocabulary>? vocabularies,
+    String? userAnswer,
   }) = _PatternExample;
 
   factory PatternExample.fromJson(Map<String, dynamic> json) =>

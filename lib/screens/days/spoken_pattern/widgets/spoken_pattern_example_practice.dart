@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/bloc/user_example_answer/user_example_answer_bloc.dart';
 import 'package:pmp_english/model/pattern_example/pattern_example.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/word_chips.dart';
@@ -17,6 +16,7 @@ class SpokenPatternExamplePractice extends StatefulWidget {
     required this.currentPlayingId,
     required this.onCurrentPlayingIdChanged,
     required this.currentPlayerState,
+    required this.onAnswerChanged,
   });
   final AudioPlayer audioPlayer;
   final PatternExample spokenPatternExample;
@@ -24,6 +24,7 @@ class SpokenPatternExamplePractice extends StatefulWidget {
   final String currentPlayingId;
   final Function(String currentPlayingId) onCurrentPlayingIdChanged;
   final PlayerState? currentPlayerState;
+  final Function(int exampleId, String answer) onAnswerChanged;
 
   @override
   State<SpokenPatternExamplePractice> createState() =>
@@ -34,30 +35,11 @@ class _SpokenPatternExamplePracticeState
     extends State<SpokenPatternExamplePractice> {
   final _userAnswerController = TextEditingController();
 
-  String? _userAnswer; // local state
-  late final UserExampleAnswerBloc _userExampleAnswerBloc;
-  // final String englishText = "Lisa used to have a very long hair.";
-  final Set<String> _usedWords = {};
+  final Set<int> _usedWordIndices = {};
+  final List<int> _usedOrder = [];
   @override
   void initState() {
     super.initState();
-    _userExampleAnswerBloc = UserExampleAnswerBloc();
-    _userExampleAnswerBloc
-        .add(UserExampleAnswerEvent.load(widget.spokenPatternExample.id));
-    _userExampleAnswerBloc.stream.listen((state) {
-      state.maybeWhen(
-        loaded: (answer) {
-          setState(() {
-            _userAnswer = answer;
-            if (_userAnswer != null) {
-              widget.onDone.call(1);
-            }
-            _userAnswerController.text = answer ?? '';
-          });
-        },
-        orElse: () {},
-      );
-    });
   }
 
   Future<void> _setAudioSourceIfNeeded(String url, int id) async {
@@ -119,7 +101,7 @@ class _SpokenPatternExamplePracticeState
               color: Colors.white,
             ),
           ),
-          if (_userAnswer != null) ...[
+          if (widget.spokenPatternExample.userAnswer != null) ...[
             const SizedBox(
               height: 8,
             ),
@@ -135,7 +117,7 @@ class _SpokenPatternExamplePracticeState
                 color: Colors.white,
               ),
             ),
-            if (_userAnswer != null &&
+            if (widget.spokenPatternExample.userAnswer != null &&
                 widget.spokenPatternExample.audioUrl != null &&
                 widget.spokenPatternExample.audioUrl!.isNotEmpty) ...[
               const SizedBox(
@@ -252,7 +234,7 @@ class _SpokenPatternExamplePracticeState
           const SizedBox(
             height: 2,
           ),
-          if (_userAnswer != null)
+          if (widget.spokenPatternExample.userAnswer != null)
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
@@ -260,11 +242,11 @@ class _SpokenPatternExamplePracticeState
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                _userAnswer!,
+                widget.spokenPatternExample.userAnswer!,
                 style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
               ),
             ),
-          if (_userAnswer == null)
+          if (widget.spokenPatternExample.userAnswer == null)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               width: double.infinity,
@@ -294,20 +276,45 @@ class _SpokenPatternExamplePracticeState
                       ),
                     ),
                   ),
-                  if (_userAnswer == null)
+                  if (widget.spokenPatternExample.userAnswer == null)
                     Material(
                       color: Colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(100),
                         onTap: () {
                           setState(() {
-                            final words =
-                                _userAnswerController.text.trim().split(' ');
-                            if (words.isNotEmpty) {
-                              final lastWord = words.removeLast();
-                              _userAnswerController.text = words.join(' ');
-                              _usedWords
-                                  .remove(lastWord); // unlock chip in WordChips
+                            final currentText =
+                                _userAnswerController.text.trim();
+                            if (currentText.isEmpty) return;
+
+                            // remove last word textually
+                            final words = currentText.split(' ');
+                            final lastWord = words.removeLast();
+                            _userAnswerController.text = words.join(' ');
+
+                            // remove the last used index (the chip we want to unlock)
+                            if (_usedOrder.isNotEmpty) {
+                              final lastIdx = _usedOrder.removeLast();
+                              _usedWordIndices.remove(lastIdx);
+                            } else {
+                              // fallback: if order list empty, try to find a used index matching lastWord
+                              // (optional and defensive)
+                              final fallbackIndex = _usedWordIndices.firstWhere(
+                                (i) {
+                                  // need access to the original words list; derive it:
+                                  final allWords =
+                                      (widget.spokenPatternExample.words ??
+                                              widget.spokenPatternExample
+                                                  .englishText)
+                                          .trim()
+                                          .split(' ');
+                                  return allWords[i] == lastWord;
+                                },
+                                orElse: () => -1,
+                              );
+                              if (fallbackIndex >= 0) {
+                                _usedWordIndices.remove(fallbackIndex);
+                              }
                             }
                           });
                         },
@@ -332,29 +339,28 @@ class _SpokenPatternExamplePracticeState
           const SizedBox(
             height: 12,
           ),
-          if (_userAnswer == null)
+          if (widget.spokenPatternExample.userAnswer == null)
             Align(
               alignment: Alignment.center,
               child: WordChips(
                 englishText: widget.spokenPatternExample.words ??
                     widget.spokenPatternExample.englishText,
                 controller: _userAnswerController,
-                usedWords: _usedWords,
-                onTap: () => setState(
-                  () {},
-                ),
-                markWordUsed: (word) {
+                usedWordIndices: _usedWordIndices,
+                onTap: () => setState(() {}),
+                markWordUsed: (word, index) {
                   setState(() {
-                    _usedWords.add(word);
+                    _usedWordIndices.add(index);
+                    _usedOrder.add(index);
                   });
                 },
               ),
             ),
-          if (_userAnswer == null)
+          if (widget.spokenPatternExample.userAnswer == null)
             const SizedBox(
               height: 12,
             ),
-          if (_userAnswer == null)
+          if (widget.spokenPatternExample.userAnswer == null)
             Material(
               borderRadius: BorderRadius.circular(12),
               color: const Color(0xFF2C5364),
@@ -364,10 +370,9 @@ class _SpokenPatternExamplePracticeState
                   // widget.onDone();
                   final answer = _userAnswerController.text.trim();
                   if (answer.isNotEmpty) {
-                    _userExampleAnswerBloc.add(
-                      UserExampleAnswerEvent.insert(
-                          widget.spokenPatternExample.id, answer),
-                    );
+                    _userAnswerController.text = answer;
+                    widget.onAnswerChanged
+                        .call(widget.spokenPatternExample.id, answer);
                   }
                 },
                 child: SizedBox(

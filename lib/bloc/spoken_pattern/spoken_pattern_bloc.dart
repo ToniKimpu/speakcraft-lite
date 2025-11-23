@@ -1,3 +1,4 @@
+import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -8,6 +9,7 @@ import 'package:pmp_english/services/supabase_service.dart';
 import '../../config/env.dart';
 import '../../model/pattern_example/pattern_example.dart';
 import '../../model/spoken_pattern/spoken_pattern.dart';
+import '../../services/app_database/app_database.dart';
 
 part 'spoken_pattern_bloc.freezed.dart';
 
@@ -25,6 +27,9 @@ abstract class SpokenPatternEvent with _$SpokenPatternEvent {
       _LoadVocabulariesByPattern;
   const factory SpokenPatternEvent.loadExamplesByPattern(int patternId) =
       _LoadExamplesByPattern;
+  const factory SpokenPatternEvent.loadPracticeExamplesByPattern(
+      {required bool withLoading,
+      required int patternId}) = _LoadPracticeExamplesByPattern;
 }
 
 @freezed
@@ -60,6 +65,8 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
                 _mapLoadVocabulariesByPattern(patternId, emit),
             loadExamplesByPattern: (patternId) =>
                 _mapLoadExamplesByPattern(patternId, emit),
+            loadPracticeExamplesByPattern: (withLoading, patternId) =>
+                _mapLoadPracticeExamplesToState(withLoading, patternId, emit),
           );
         } catch (e) {
           debugPrint('Load Patterns error ${e.toString()}');
@@ -111,6 +118,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
               '*,subject_verb_agreements(*),pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))')
           .eq('lesson_id', lessonId)
           .eq("is_deleted", false)
+          .eq("pattern_examples.practicable", false)
           .eq("pattern_examples.is_deleted", false)
           .order('created_at', ascending: true);
       if (dataRes.isEmpty) {
@@ -131,6 +139,48 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
         );
       }).toList();
       emit(SpokenPatternState.loaded(newSpokenPatterns));
+    } catch (e) {
+      debugPrint('_loadPatternError: ${e.toString()}');
+      emit(SpokenPatternState.error(e.toString()));
+    }
+  }
+
+  _mapLoadPracticeExamplesToState(bool withLoading, int spokenPatternId,
+      Emitter<SpokenPatternState> emit) async {
+    if (withLoading) {
+      emit(const SpokenPatternState.loading());
+    }
+    try {
+      final dataRes = await supabase
+          .from('pattern_examples')
+          .select(
+              '*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*))')
+          .eq('pattern_id', spokenPatternId)
+          .eq("is_deleted", false)
+          .order('created_at', ascending: true);
+      if (dataRes.isEmpty) {
+        emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
+        return;
+      }
+      debugPrint("_mapLoadPatternByLessonToState: ${dataRes.first.toString()}");
+      final examples = dataRes.map((e) => PatternExample.fromJson(e)).toList()
+        ..sort(
+          (a, b) => (a.createdAt ?? DateTime(0))
+              .compareTo(b.createdAt ?? DateTime(0)),
+        );
+
+      final updatedExamples = await Future.wait(
+        examples.map((example) async {
+          final data =
+              await (AppDatabase.instance().userExampleAnswerTable.select()
+                    ..where((tbl) => tbl.exampleId.equals(example.id)))
+                  .getSingleOrNull();
+
+          return example.copyWith(userAnswer: data?.userAnswer);
+        }),
+      );
+
+      emit(SpokenPatternState.examplesLoaded(updatedExamples));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');
       emit(SpokenPatternState.error(e.toString()));

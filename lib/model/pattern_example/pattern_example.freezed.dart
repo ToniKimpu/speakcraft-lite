@@ -39,6 +39,7 @@ mixin _$PatternExample {
   @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
   List<PatternVocabulary>? get vocabularies =>
       throw _privateConstructorUsedError;
+  String? get userAnswer => throw _privateConstructorUsedError;
 
   /// Serializes this PatternExample to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -67,7 +68,8 @@ abstract class $PatternExampleCopyWith<$Res> {
       @JsonKey(name: 'practicable') bool practicable,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
-      List<PatternVocabulary>? vocabularies});
+      List<PatternVocabulary>? vocabularies,
+      String? userAnswer});
 }
 
 /// @nodoc
@@ -95,6 +97,7 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
     Object? practicable = null,
     Object? createdAt = freezed,
     Object? vocabularies = freezed,
+    Object? userAnswer = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -137,6 +140,10 @@ class _$PatternExampleCopyWithImpl<$Res, $Val extends PatternExample>
           ? _value.vocabularies
           : vocabularies // ignore: cast_nullable_to_non_nullable
               as List<PatternVocabulary>?,
+      userAnswer: freezed == userAnswer
+          ? _value.userAnswer
+          : userAnswer // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -160,7 +167,8 @@ abstract class _$$PatternExampleImplCopyWith<$Res>
       @JsonKey(name: 'practicable') bool practicable,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
-      List<PatternVocabulary>? vocabularies});
+      List<PatternVocabulary>? vocabularies,
+      String? userAnswer});
 }
 
 /// @nodoc
@@ -186,6 +194,7 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
     Object? practicable = null,
     Object? createdAt = freezed,
     Object? vocabularies = freezed,
+    Object? userAnswer = freezed,
   }) {
     return _then(_$PatternExampleImpl(
       id: null == id
@@ -228,6 +237,10 @@ class __$$PatternExampleImplCopyWithImpl<$Res>
           ? _value._vocabularies
           : vocabularies // ignore: cast_nullable_to_non_nullable
               as List<PatternVocabulary>?,
+      userAnswer: freezed == userAnswer
+          ? _value.userAnswer
+          : userAnswer // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -246,7 +259,8 @@ class _$PatternExampleImpl implements _PatternExample {
       @JsonKey(name: 'practicable') required this.practicable,
       @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
-      final List<PatternVocabulary>? vocabularies})
+      final List<PatternVocabulary>? vocabularies,
+      this.userAnswer})
       : _vocabularies = vocabularies;
 
   factory _$PatternExampleImpl.fromJson(Map<String, dynamic> json) =>
@@ -289,8 +303,11 @@ class _$PatternExampleImpl implements _PatternExample {
   }
 
   @override
+  final String? userAnswer;
+
+  @override
   String toString() {
-    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, words: $words, patternId: $patternId, audioUrl: $audioUrl, startAt: $startAt, practicable: $practicable, createdAt: $createdAt, vocabularies: $vocabularies)';
+    return 'PatternExample(id: $id, englishText: $englishText, burmeseText: $burmeseText, words: $words, patternId: $patternId, audioUrl: $audioUrl, startAt: $startAt, practicable: $practicable, createdAt: $createdAt, vocabularies: $vocabularies, userAnswer: $userAnswer)';
   }
 
   @override
@@ -314,7 +331,9 @@ class _$PatternExampleImpl implements _PatternExample {
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             const DeepCollectionEquality()
-                .equals(other._vocabularies, _vocabularies));
+                .equals(other._vocabularies, _vocabularies) &&
+            (identical(other.userAnswer, userAnswer) ||
+                other.userAnswer == userAnswer));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -330,7 +349,8 @@ class _$PatternExampleImpl implements _PatternExample {
       startAt,
       practicable,
       createdAt,
-      const DeepCollectionEquality().hash(_vocabularies));
+      const DeepCollectionEquality().hash(_vocabularies),
+      userAnswer);
 
   /// Create a copy of PatternExample
   /// with the given fields replaced by the non-null parameter values.
@@ -362,7 +382,8 @@ abstract class _PatternExample implements PatternExample {
       @JsonKey(name: 'practicable') required final bool practicable,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
       @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
-      final List<PatternVocabulary>? vocabularies}) = _$PatternExampleImpl;
+      final List<PatternVocabulary>? vocabularies,
+      final String? userAnswer}) = _$PatternExampleImpl;
 
   factory _PatternExample.fromJson(Map<String, dynamic> json) =
       _$PatternExampleImpl.fromJson;
@@ -395,6 +416,8 @@ abstract class _PatternExample implements PatternExample {
   @override
   @JsonKey(name: 'vocabularies', fromJson: _vocabulariesFromJson)
   List<PatternVocabulary>? get vocabularies;
+  @override
+  String? get userAnswer;
 
   /// Create a copy of PatternExample
   /// with the given fields replaced by the non-null parameter values.
