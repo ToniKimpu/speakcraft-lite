@@ -14,7 +14,7 @@ class SpokenPattern with _$SpokenPattern {
     int? id,
     required String pattern,
     String? title,
-    String? description,
+    @JsonKey(defaultValue: "") required String description,
     @JsonKey(name: 'audio_path') String? audioPath,
     @JsonKey(name: 'lesson_id') int? lessonId,
     @JsonKey(name: 'created_at') DateTime? createdAt,

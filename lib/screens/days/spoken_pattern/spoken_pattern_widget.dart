@@ -9,7 +9,6 @@ import 'package:pmp_english/screens/days/spoken_pattern/widgets/svg_data_widget.
 
 import '../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../bloc/user_example_answer/user_example_answer_bloc.dart';
-import '../../../config/pmp_text_styles.dart';
 import '../../../model/pattern_example/pattern_example.dart';
 import '../../../model/spoken_pattern/spoken_pattern.dart';
 import 'widgets/spoken_pattern_example_practice.dart';
@@ -90,83 +89,17 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            margin: const EdgeInsets.symmetric(horizontal: 12),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: Colors.white, width: 2),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.3),
-                  blurRadius: 8,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            widget.spokenPattern.pattern,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
-                              fontFamily: 'ArchivoBlack Regular',
-                            ),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          if (widget.spokenPattern.title?.isNotEmpty ?? false)
-                            Text(
-                              widget.spokenPattern.title!,
-                              style: PmpTextStyles.body2Semi.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.normal,
-                              ),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-                      bloc: widget.audioPlayerStateTrackerBloc,
-                      builder: (context, audioPlayerState) {
-                        final currentPlayerState = audioPlayerState.maybeWhen(
-                          onUpdatePlayerState: (playerState) => playerState,
-                          orElse: () => null,
-                        );
-                        return SpokenPatternHeader(
-                          audioPlayer: widget.audioPlayer,
-                          spokenPattern: widget.spokenPattern,
-                          currentPlayerState: currentPlayerState,
-                          currentPlayingId: _currentPlayingId,
-                          onCurrentPlayingIdChanged: (value) {
-                            setState(() {
-                              _currentPlayingId = value;
-                            });
-                          },
-                        );
-                      },
-                    ),
-                    const SizedBox(width: 8),
-                  ],
-                ),
-              ],
-            ),
+          SpokenPatternHeader(
+            spokenPattern: widget.spokenPattern,
+            audioPlayer: widget.audioPlayer,
+            audioPositionTrackerBloc: widget.audioPositionTrackerBloc,
+            audioPlayerStateTrackerBloc: widget.audioPlayerStateTrackerBloc,
+            currentPlayingId: _currentPlayingId,
+            onCurrentPlayingIdChanged: (value) {
+              setState(() {
+                _currentPlayingId = value;
+              });
+            },
           ),
           Expanded(
             child: SingleChildScrollView(
@@ -175,7 +108,9 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
                   if (widget.spokenPattern.subjectVerbAgreement != null &&
                       widget.spokenPattern.subjectVerbAgreement!.svgData
                           .isNotEmpty)
-                    SvgDataWidget(spokenPattern: widget.spokenPattern),
+                    SvgDataWidget(
+                      spokenPattern: widget.spokenPattern,
+                    ),
                   if (patternExamples.isNotEmpty)
                     BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
                       bloc: widget.audioPlayerStateTrackerBloc,

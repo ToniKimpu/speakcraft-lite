@@ -23,7 +23,8 @@ mixin _$SpokenPattern {
   int? get id => throw _privateConstructorUsedError;
   String get pattern => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(defaultValue: "")
+  String get description => throw _privateConstructorUsedError;
   @JsonKey(name: 'audio_path')
   String? get audioPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'lesson_id')
@@ -59,7 +60,7 @@ abstract class $SpokenPatternCopyWith<$Res> {
       {int? id,
       String pattern,
       String? title,
-      String? description,
+      @JsonKey(defaultValue: "") String description,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -90,7 +91,7 @@ class _$SpokenPatternCopyWithImpl<$Res, $Val extends SpokenPattern>
     Object? id = freezed,
     Object? pattern = null,
     Object? title = freezed,
-    Object? description = freezed,
+    Object? description = null,
     Object? audioPath = freezed,
     Object? lessonId = freezed,
     Object? createdAt = freezed,
@@ -111,10 +112,10 @@ class _$SpokenPatternCopyWithImpl<$Res, $Val extends SpokenPattern>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       audioPath: freezed == audioPath
           ? _value.audioPath
           : audioPath // ignore: cast_nullable_to_non_nullable
@@ -170,7 +171,7 @@ abstract class _$$SpokenPatternImplCopyWith<$Res>
       {int? id,
       String pattern,
       String? title,
-      String? description,
+      @JsonKey(defaultValue: "") String description,
       @JsonKey(name: 'audio_path') String? audioPath,
       @JsonKey(name: 'lesson_id') int? lessonId,
       @JsonKey(name: 'created_at') DateTime? createdAt,
@@ -200,7 +201,7 @@ class __$$SpokenPatternImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? pattern = null,
     Object? title = freezed,
-    Object? description = freezed,
+    Object? description = null,
     Object? audioPath = freezed,
     Object? lessonId = freezed,
     Object? createdAt = freezed,
@@ -221,10 +222,10 @@ class __$$SpokenPatternImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       audioPath: freezed == audioPath
           ? _value.audioPath
           : audioPath // ignore: cast_nullable_to_non_nullable
@@ -260,7 +261,7 @@ class _$SpokenPatternImpl implements _SpokenPattern {
       {this.id,
       required this.pattern,
       this.title,
-      this.description,
+      @JsonKey(defaultValue: "") required this.description,
       @JsonKey(name: 'audio_path') this.audioPath,
       @JsonKey(name: 'lesson_id') this.lessonId,
       @JsonKey(name: 'created_at') this.createdAt,
@@ -281,7 +282,8 @@ class _$SpokenPatternImpl implements _SpokenPattern {
   @override
   final String? title;
   @override
-  final String? description;
+  @JsonKey(defaultValue: "")
+  final String description;
   @override
   @JsonKey(name: 'audio_path')
   final String? audioPath;
@@ -374,7 +376,7 @@ abstract class _SpokenPattern implements SpokenPattern {
       {final int? id,
       required final String pattern,
       final String? title,
-      final String? description,
+      @JsonKey(defaultValue: "") required final String description,
       @JsonKey(name: 'audio_path') final String? audioPath,
       @JsonKey(name: 'lesson_id') final int? lessonId,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
@@ -395,7 +397,8 @@ abstract class _SpokenPattern implements SpokenPattern {
   @override
   String? get title;
   @override
-  String? get description;
+  @JsonKey(defaultValue: "")
+  String get description;
   @override
   @JsonKey(name: 'audio_path')
   String? get audioPath;

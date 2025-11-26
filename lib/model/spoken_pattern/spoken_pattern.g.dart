@@ -11,7 +11,7 @@ _$SpokenPatternImpl _$$SpokenPatternImplFromJson(Map<String, dynamic> json) =>
       id: (json['id'] as num?)?.toInt(),
       pattern: json['pattern'] as String,
       title: json['title'] as String?,
-      description: json['description'] as String?,
+      description: json['description'] as String? ?? '',
       audioPath: json['audio_path'] as String?,
       lessonId: (json['lesson_id'] as num?)?.toInt(),
       createdAt: json['created_at'] == null

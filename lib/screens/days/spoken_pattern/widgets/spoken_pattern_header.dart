@@ -1,109 +1,99 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
+import 'package:pmp_english/screens/days/spoken_pattern/widgets/spoken_pattern_audio_button.dart';
+
+import '../../../../bloc/audio_player/audio_player_bloc.dart';
+import '../../../../config/pmp_text_styles.dart';
 
 class SpokenPatternHeader extends StatelessWidget {
   const SpokenPatternHeader({
     super.key,
-    required this.audioPlayer,
     required this.spokenPattern,
-    required this.currentPlayerState,
+    required this.audioPlayer,
+    required this.audioPositionTrackerBloc,
+    required this.audioPlayerStateTrackerBloc,
     required this.currentPlayingId,
     required this.onCurrentPlayingIdChanged,
   });
-  final AudioPlayer audioPlayer;
   final SpokenPattern spokenPattern;
-  final PlayerState? currentPlayerState;
+  final AudioPlayer audioPlayer;
+  final AudioPlayerBloc audioPositionTrackerBloc, audioPlayerStateTrackerBloc;
   final String currentPlayingId;
-  final Function(String currentPlayingId) onCurrentPlayingIdChanged;
-
-  Future<void> _setAudioSourceIfNeeded(String url, int id) async {
-    try {
-      await audioPlayer.stop();
-      onCurrentPlayingIdChanged("spoken-pattern-$id");
-      final source = audioPlayer.audioSource;
-      final currentTag = source?.sequence.first.tag as String?;
-      if (currentTag != url) {
-        await audioPlayer.setAudioSource(
-          AudioSource.uri(Uri.parse(url), tag: url),
-        );
-      }
-      audioPlayer.play();
-      debugPrint('_setAudioSourceIfNeeded: $url spoken_pattern-$id');
-    } catch (e) {
-      onCurrentPlayingIdChanged("spoken-pattern-$id");
-      // Replace with proper logging if available
-      debugPrint(
-          '_setAudioSourceIfNeeded: ${e.toString()} from spoken_pattern');
-    }
-  }
+  final Function(String id) onCurrentPlayingIdChanged;
 
   @override
   Widget build(BuildContext context) {
-    final isCurrentAudio =
-        currentPlayingId == "spoken-pattern-${spokenPattern.id ?? -1}";
-    final loading =
-        (currentPlayerState?.processingState == ProcessingState.loading ||
-            currentPlayerState?.processingState == ProcessingState.buffering);
-    final isPlaying = currentPlayerState?.playing ?? false;
-    final completed =
-        currentPlayerState?.processingState == ProcessingState.completed;
-    return InkWell(
-      onTap: () async {
-        if (isCurrentAudio) {
-          if (completed) {
-            audioPlayer.seek(Duration.zero);
-            audioPlayer.play();
-          } else if (isPlaying) {
-            await audioPlayer.pause();
-          } else {
-            audioPlayer.play();
-          }
-        } else {
-          _setAudioSourceIfNeeded(
-            spokenPattern.audioPath ?? '',
-            spokenPattern.id ?? -1,
-          );
-        }
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(4),
-        child: Container(
-          width: 36,
-          height: 36,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.2),
-                spreadRadius: 2,
-                blurRadius: 6,
-                offset: const Offset(0, 3),
-              ),
-            ],
+    return Container(
+      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.white, width: 2),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.3),
+            blurRadius: 8,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
           ),
-          child: Center(
-            child: (loading && isCurrentAudio)
-                ? const SizedBox(
-                    width: 18,
-                    height: 18,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 2,
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-                    ),
-                  )
-                : Icon(
-                    (completed && isCurrentAudio)
-                        ? Icons.replay
-                        : (isPlaying && isCurrentAudio)
-                            ? Icons.pause
-                            : Icons.play_arrow,
-                    color: Colors.blue,
-                    size: 22,
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  spokenPattern.pattern,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white,
+                    fontFamily: 'ArchivoBlack Regular',
                   ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                if (spokenPattern.title?.isNotEmpty ?? false)
+                  Text(
+                    spokenPattern.title!,
+                    style: PmpTextStyles.body2Semi.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.normal,
+                    ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+              ],
+            ),
           ),
-        ),
+          const SizedBox(width: 8),
+          BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
+            bloc: audioPlayerStateTrackerBloc,
+            builder: (context, audioPlayerState) {
+              final currentPlayerState = audioPlayerState.maybeWhen(
+                onUpdatePlayerState: (playerState) => playerState,
+                orElse: () => null,
+              );
+              return SpokenPatternAudioButton(
+                audioPlayer: audioPlayer,
+                spokenPattern: spokenPattern,
+                currentPlayerState: currentPlayerState,
+                currentPlayingId: currentPlayingId,
+                onCurrentPlayingIdChanged: (value) {
+                  onCurrentPlayingIdChanged(value);
+                },
+              );
+            },
+          ),
+          const SizedBox(width: 8),
+        ],
       ),
     );
   }

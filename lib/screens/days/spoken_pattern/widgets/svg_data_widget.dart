@@ -12,6 +12,11 @@ class SvgDataWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool svgData = spokenPattern.subjectVerbAgreement != null &&
+        spokenPattern.subjectVerbAgreement!.svgData.isNotEmpty;
+    if (!svgData && spokenPattern.description.isEmpty) {
+      return const SizedBox();
+    }
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
@@ -30,78 +35,80 @@ class SvgDataWidget extends StatelessWidget {
         ],
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                'Subject Verb Agreement',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.white,
-                  fontFamily: 'ArchivoBlack Regular',
-                ),
+          if (spokenPattern.description.isNotEmpty) ...[
+            Text(
+              '“ ${spokenPattern.description} ”',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                fontFamily: 'MM Lyrics Bold',
+                shadows: [
+                  Shadow(
+                    offset: Offset(1, 1),
+                    blurRadius: 2,
+                    color: Colors.indigoAccent,
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(4),
-                child: Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.2),
-                        spreadRadius: 3,
-                        blurRadius: 8,
-                        offset: const Offset(0, 4),
+            ),
+          ],
+          if (spokenPattern.description.isEmpty && svgData)
+            const Text(
+              'Subject Verb Agreement',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                fontFamily: 'ArchivoBlack Regular',
+              ),
+            ),
+          if (svgData && spokenPattern.description.isNotEmpty) ...[
+            const SizedBox(
+              height: 8,
+            ),
+            Container(
+              height: 1,
+              width: double.infinity,
+              color: Colors.white.withValues(alpha: 0.1),
+            ),
+          ],
+          const SizedBox(height: 8),
+          if (svgData)
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: List.generate(
+                  spokenPattern.subjectVerbAgreement!.svgData.length, (index) {
+                final data = spokenPattern.subjectVerbAgreement!.svgData[index];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 6,
+                        height: 6,
+                        margin: const EdgeInsets.only(top: 6),
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          data,
+                          style: PmpTextStyles.body2Semi
+                              .copyWith(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),
-                  child: const Icon(
-                    Icons.pause,
-                    color: Colors.white,
-                    size: 18,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(
-                spokenPattern.subjectVerbAgreement!.svgData.length, (index) {
-              final data = spokenPattern.subjectVerbAgreement!.svgData[index];
-              return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 4),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: 6,
-                      height: 6,
-                      margin: const EdgeInsets.only(top: 6),
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        data,
-                        style: PmpTextStyles.body2Semi
-                            .copyWith(color: Colors.white),
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            }),
-          ),
+                );
+              }),
+            ),
         ],
       ),
     );
