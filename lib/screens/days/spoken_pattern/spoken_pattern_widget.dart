@@ -6,7 +6,6 @@ import 'package:pmp_english/screens/days/spoken_pattern/widgets/practice_label_w
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/spoken_pattern_example_list.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/spoken_pattern_header.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/svg_data_widget.dart';
-
 import '../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../bloc/user_example_answer/user_example_answer_bloc.dart';
 import '../../../model/pattern_example/pattern_example.dart';

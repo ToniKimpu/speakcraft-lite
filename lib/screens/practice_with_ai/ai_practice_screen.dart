@@ -86,38 +86,61 @@ class _AiPracticeScreenState extends State<AiPracticeScreen> {
               );
               return Column(
                 children: [
-                  Card(
-                    elevation: 3,
-                    color: const Color(0xFF1C2C3C),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.08),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                          color: Colors.white.withValues(alpha: 0.2)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.3),
+                          blurRadius: 8,
+                          spreadRadius: 2,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Write your own sentence here",
-                            style: PmpTextStyles.body2Semi.copyWith(
-                              color: PmpColors.white,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.smart_toy,
+                              color: PmpColors.warning400,
+                              size: 20,
                             ),
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          PracticeTextField(
-                            controller: _sentenceController,
-                            hintText: "",
-                            englishOnly: true,
-                            minLines: 2,
-                            maxLength: 100,
-                            maxHeight: 120,
-                          ),
-                          const SizedBox(
-                            height: 12,
-                          ),
-                          InkWell(
+                            const SizedBox(
+                                width: 8), // spacing between icon and text
+                            Text(
+                              "Write your own sentence here",
+                              style: PmpTextStyles.body2Regular.copyWith(
+                                color: PmpColors.warning400,
+                                fontFamily: "ArchivoBlack Regular",
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        PracticeTextField(
+                          controller: _sentenceController,
+                          hintText: "",
+                          englishOnly: true,
+                          minLines: 2,
+                          maxLength: 100,
+                          maxHeight: 120,
+                        ),
+                        const SizedBox(
+                          height: 12,
+                        ),
+                        Material(
+                          color: Colors.transparent,
+                          child: InkWell(
                             borderRadius: BorderRadius.circular(12),
                             onTap: isLoading
                                 ? null
@@ -133,7 +156,7 @@ class _AiPracticeScreenState extends State<AiPracticeScreen> {
                               padding: const EdgeInsets.symmetric(vertical: 8),
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                color: PmpColors.primary500,
+                                color: PmpColors.warning500,
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Center(
@@ -147,8 +170,8 @@ class _AiPracticeScreenState extends State<AiPracticeScreen> {
                               ),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
