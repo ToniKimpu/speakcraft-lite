@@ -114,28 +114,29 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
     try {
       final dataRes = await supabase
           .from('patterns')
-          .select(
-              '*,subject_verb_agreements(*),pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))')
+          // .select(
+          //     '*,subject_verb_agreements(*),pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))'
+          //     )
+          .select("*")
           .eq('lesson_id', lessonId)
           .eq("is_deleted", false)
-          .eq("pattern_examples.practicable", false)
-          .eq("pattern_examples.is_deleted", false)
-          .order('created_at', ascending: true);
+          // .eq("pattern_examples.practicable", false)
+          // .eq("pattern_examples.is_deleted", false)
+          .order('order_number', ascending: true);
       if (dataRes.isEmpty) {
         emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
         return;
       }
-      debugPrint("_mapLoadPatternByLessonToState: ${dataRes.first.toString()}");
       final spokenPatterns =
           dataRes.map((e) => SpokenPattern.fromJson(e)).toList();
       final newSpokenPatterns = spokenPatterns.map((p) {
-        if (p.audioPath == null || p.audioPath!.isEmpty) return p;
+        if (p.filePath == null || p.filePath!.isEmpty) return p;
         // return p.copyWith(
         //   audioPath: AudioUrlService.resolveAudioUrl(p.audioPath!),
         // );
         return p.copyWith(
-          audioPath: Env.bunnySpokenPatternAPIKey +
-              p.audioPath!.replaceFirst('bunny/', ''),
+          filePath: Env.bunnySpokenPatternAPIKey +
+              p.filePath!.replaceFirst('bunny/', ''),
         );
       }).toList();
       emit(SpokenPatternState.loaded(newSpokenPatterns));

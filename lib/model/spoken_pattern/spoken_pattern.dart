@@ -27,6 +27,7 @@ class SpokenPattern with _$SpokenPattern {
     bool? hasComment,
     @JsonKey(name: "subject_verb_agreements")
     SubjectVerbAgreement? subjectVerbAgreement,
+    @JsonKey(name: 'file_path') String? filePath,
   }) = _SpokenPattern;
 
   factory SpokenPattern.fromJson(Map<String, dynamic> json) =>

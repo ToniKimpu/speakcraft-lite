@@ -29,9 +29,11 @@ class SpokenPatternHeader extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
-        color: Colors.blue,
+        // color: Colors.blue,
+        color: Colors.white.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white, width: 2),
+        // border: Border.all(color: Colors.white, width: 2),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.3),
@@ -41,58 +43,86 @@ class SpokenPatternHeader extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+      child: Column(
         children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  spokenPattern.pattern,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white,
-                    fontFamily: 'ArchivoBlack Regular',
-                  ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                if (spokenPattern.title?.isNotEmpty ?? false)
-                  Text(
-                    spokenPattern.title!,
-                    style: PmpTextStyles.body2Semi.copyWith(
-                      color: Colors.white,
-                      fontWeight: FontWeight.normal,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      spokenPattern.pattern,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                        fontFamily: 'ArchivoBlack Regular',
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-              ],
+                    if (spokenPattern.title?.isNotEmpty ?? false)
+                      Text(
+                        spokenPattern.title!,
+                        style: PmpTextStyles.body2Semi.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.normal,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              if (spokenPattern.audioPath != null &&
+                  spokenPattern.audioPath!.isNotEmpty)
+                BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
+                  bloc: audioPlayerStateTrackerBloc,
+                  builder: (context, audioPlayerState) {
+                    final currentPlayerState = audioPlayerState.maybeWhen(
+                      onUpdatePlayerState: (playerState) => playerState,
+                      orElse: () => null,
+                    );
+                    return SpokenPatternAudioButton(
+                      audioPlayer: audioPlayer,
+                      spokenPattern: spokenPattern,
+                      currentPlayerState: currentPlayerState,
+                      currentPlayingId: currentPlayingId,
+                      onCurrentPlayingIdChanged: (value) {
+                        onCurrentPlayingIdChanged(value);
+                      },
+                    );
+                  },
+                ),
+              // const SizedBox(width: 8),
+            ],
+          ),
+          const SizedBox(
+            height: 4,
+          ),
+          DecoratedBox(
+            decoration: const BoxDecoration(
+              border: Border(
+                left: BorderSide(
+                  color: Colors.white,
+                  width: 4,
+                ),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 12),
+              child: Text(
+                "ဒီ pattern လေးကတော့ ကိုယ်တိုင် \"တစ်ခုခုလုပ်ချင်တယ်\" လို့ ပြောတဲ့အခါ သုံးတာပါ။ အရမ်းရိုးရှင်းပြီး နေ့စဉ်သုံးစကားမှာ အမြဲတမ်းလိုလို သုံးရပါတယ်။",
+                style: PmpTextStyles.body2Regular.copyWith(
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
-          const SizedBox(width: 8),
-          BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-            bloc: audioPlayerStateTrackerBloc,
-            builder: (context, audioPlayerState) {
-              final currentPlayerState = audioPlayerState.maybeWhen(
-                onUpdatePlayerState: (playerState) => playerState,
-                orElse: () => null,
-              );
-              return SpokenPatternAudioButton(
-                audioPlayer: audioPlayer,
-                spokenPattern: spokenPattern,
-                currentPlayerState: currentPlayerState,
-                currentPlayingId: currentPlayingId,
-                onCurrentPlayingIdChanged: (value) {
-                  onCurrentPlayingIdChanged(value);
-                },
-              );
-            },
-          ),
-          const SizedBox(width: 8),
         ],
       ),
     );

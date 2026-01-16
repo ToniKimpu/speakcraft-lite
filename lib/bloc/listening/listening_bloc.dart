@@ -71,6 +71,8 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           multipleChoicePath: _normalizePath(listening.multipleChoicePath),
           shadowingPath: _normalizePath(listening.shadowingPath),
           recordSubtitlePath: _normalizePath(listening.recordSubtitlePath),
+          sentenceExplanationPath:
+              _normalizePath(listening.sentenceExplanationPath),
         );
       }).toList();
       debugPrint("_mapLoadListeningsToState: ${listenings.first.toJson()}");

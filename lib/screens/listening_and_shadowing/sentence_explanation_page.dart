@@ -3,22 +3,23 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:http/http.dart' as http;
+import 'package:pmp_english/config/env.dart';
+import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
 
-import '../../../model/spoken_pattern/spoken_pattern.dart';
-
-class SpokenPatternWidget extends StatefulWidget {
-  const SpokenPatternWidget({
+class SentenceExplanationPage extends StatefulWidget {
+  const SentenceExplanationPage({
     super.key,
-    required this.spokenPattern,
+    required this.sentenceExplanation,
   });
 
-  final SpokenPattern spokenPattern;
+  final SentenceExplanation sentenceExplanation;
 
   @override
-  State<SpokenPatternWidget> createState() => _SpokenPatternWidgetState();
+  State<SentenceExplanationPage> createState() =>
+      _SentenceExplanationPageState();
 }
 
-class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
+class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
   String? _htmlContent;
   String? _error;
 
@@ -30,7 +31,8 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
 
   Future<void> _loadHtml() async {
     try {
-      String url = widget.spokenPattern.filePath ?? "";
+      String url =
+          Env.bunnyListeningAPIKey + widget.sentenceExplanation.explanationUrl;
       final response = await http.get(Uri.parse(url));
       if (response.statusCode != 200) {
         throw Exception('Failed to load explanation');
@@ -52,8 +54,8 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 0,
-      ),
+          // title: const Text('Sentence Explanation'),
+          ),
       body: _error != null
           ? Center(
               child: Text(
@@ -64,12 +66,11 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
           : _htmlContent == null
               ? const Center(child: CircularProgressIndicator())
               : SingleChildScrollView(
-                  padding: const EdgeInsets.all(12),
                   child: HtmlWidget(
                     _htmlContent!,
-                    // textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    //       height: 1.8,
-                    //     ),
+                    textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          height: 1.8,
+                        ),
                   ),
                 ),
     );

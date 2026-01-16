@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
 import 'package:pmp_english/screens/days/widgets/spoken_pattern_exercise_widget.dart';
 
@@ -268,50 +267,57 @@ class _SpokenPatternExerciseScreenState
                             builder: (context, userAnswer, child) {
                               return InkWell(
                                 borderRadius: BorderRadius.circular(22),
-                                onTap: () {
-                                  _exerciseWithAnswers.add(
-                                    _currentPatternExercise!.copyWith(
-                                      userAnswer: userAnswer,
-                                    ),
-                                  );
-                                  _userAnswers.add(
-                                    ExerciseUserAnswer(
-                                      patternExerciseId:
-                                          _currentPatternExercise!.id,
-                                      userAnswer: userAnswer,
-                                    ),
-                                  );
-                                  if (_currentPage >= _totalExercise - 1) {
-                                    _countdownController.reset();
-                                    _countdownController.stop();
-                                    final isPassed = _checkOverallResult();
-                                    _userFullAnswerNotifier.value = "";
-                                    if (isPassed) {
-                                      _exerciseUserAnswerBloc.add(
-                                        ExerciseUserAnswerEvent
-                                            .addUserAnswerList(
-                                          _userAnswers,
-                                          widget.exercise,
-                                          widget.isLastIndex,
-                                        ),
-                                      );
-                                    } else {
-                                      Navigator.pushReplacementNamed(
-                                        context,
-                                        PmpRoutes.patternExerciseResultScreen,
-                                        arguments: {
-                                          'pattern_exercises':
-                                              _exerciseWithAnswers,
-                                          "pass": false,
-                                        },
-                                      );
-                                    }
-
-                                    return;
-                                  }
-                                  _userFullAnswerNotifier.value = "";
-                                  _goToNextPage(_currentPage + 1);
-                                },
+                                onTap: userAnswer.isEmpty
+                                    ? null
+                                    : () {
+                                        if (userAnswer.isEmpty) {
+                                          return;
+                                        }
+                                        _exerciseWithAnswers.add(
+                                          _currentPatternExercise!.copyWith(
+                                            userAnswer: userAnswer,
+                                          ),
+                                        );
+                                        _userAnswers.add(
+                                          ExerciseUserAnswer(
+                                            patternExerciseId:
+                                                _currentPatternExercise!.id,
+                                            userAnswer: userAnswer,
+                                          ),
+                                        );
+                                        if (_currentPage >=
+                                            _totalExercise - 1) {
+                                          _countdownController.reset();
+                                          _countdownController.stop();
+                                          final isPassed =
+                                              _checkOverallResult();
+                                          _userFullAnswerNotifier.value = "";
+                                          if (isPassed) {
+                                            _exerciseUserAnswerBloc.add(
+                                              ExerciseUserAnswerEvent
+                                                  .addUserAnswerList(
+                                                _userAnswers,
+                                                widget.exercise,
+                                                widget.isLastIndex,
+                                              ),
+                                            );
+                                          } else {
+                                            Navigator.pushReplacementNamed(
+                                              context,
+                                              PmpRoutes
+                                                  .patternExerciseResultScreen,
+                                              arguments: {
+                                                'pattern_exercises':
+                                                    _exerciseWithAnswers,
+                                                "pass": false,
+                                              },
+                                            );
+                                          }
+                                          return;
+                                        }
+                                        _userFullAnswerNotifier.value = "";
+                                        _goToNextPage(_currentPage + 1);
+                                      },
                                 child: Ink(
                                   height: 44,
                                   decoration: BoxDecoration(

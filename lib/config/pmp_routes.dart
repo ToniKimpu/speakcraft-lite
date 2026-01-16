@@ -3,6 +3,7 @@ import 'package:pmp_english/model/lesson/lesson.dart';
 import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/model/pattern_user_comment/pattern_user_comment.dart';
+import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
 import 'package:pmp_english/model/translation/translation.dart';
 import 'package:pmp_english/model/translation_day/translation_day.dart';
 import 'package:pmp_english/screens/auth/login_screen.dart';
@@ -12,6 +13,8 @@ import 'package:pmp_english/screens/days/spoken_pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_result_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_sentence_practice_page.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_list.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_page.dart';
 import 'package:pmp_english/screens/main/free_user_screen.dart';
 import 'package:pmp_english/screens/main/new_path_screen.dart';
@@ -36,6 +39,7 @@ import '../model/pattern_exercise/pattern_exercise.dart';
 import '../model/spoken_pattern/spoken_pattern.dart';
 import '../screens/days/day_list_screen.dart';
 import '../screens/days/pattern_exercise_result_screen.dart';
+import '../screens/days/spoken_pattern/spoken_pattern_detail.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
 import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
 import '../screens/listening_and_shadowing/speech_practice_session_page.dart';
@@ -90,6 +94,9 @@ class PmpRoutes {
   static const listeningPracticeResultPage = '/listening_practice_result_page';
   static const spokenPatternExercisePage = '/spoken_pattern_exercise_page';
   static const speechPracticeSessionPage = '/speech_practice_session_page';
+  static const sentenceExplanationList = '/sentence_explanation_list';
+  static const sentenceExplanationPage = '/sentence_explanation_page';
+  static const spokenPatternDetail = '/spoken_pattern_detail';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -312,7 +319,30 @@ class PmpRoutes {
           ),
           settings,
         );
-
+      case sentenceExplanationPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final sentenceExplanation =
+            args['sentence_explanation'] as SentenceExplanation;
+        return _getRoute(
+          SentenceExplanationPage(
+            sentenceExplanation: sentenceExplanation,
+          ),
+          settings,
+        );
+      case sentenceExplanationList:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        return _getRoute(
+          SentenceExplanationList(
+            listening: listening,
+          ),
+          settings,
+        );
+      case spokenPatternDetail:
+        return _getRoute(
+          const SpokenPatternDetail(),
+          settings,
+        );
       default:
         throw Exception(
           'Sorry, path ${settings.name} is invalid!',

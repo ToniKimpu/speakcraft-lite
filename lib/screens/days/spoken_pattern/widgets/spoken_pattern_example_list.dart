@@ -97,7 +97,11 @@ class _SpokenPatternExampleListState extends State<SpokenPatternExampleList> {
           const SizedBox(
             height: 8,
           ),
-          ...widget.patternExamples.map((patternExample) {
+          ...widget.patternExamples.asMap().entries.map((entry) {
+            final index = entry.key;
+            final patternExample = entry.value;
+            final isLast = index == widget.patternExamples.length - 1;
+
             final isCurrentAudio = widget.currentPlayingId ==
                 "pattern-example-${patternExample.id}";
             final loading = (widget.currentPlayerState?.processingState ==
@@ -107,92 +111,136 @@ class _SpokenPatternExampleListState extends State<SpokenPatternExampleList> {
             final isPlaying = widget.currentPlayerState?.playing ?? false;
             final completed = widget.currentPlayerState?.processingState ==
                 ProcessingState.completed;
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 6.0),
-              child: Row(
-                children: [
-                  InkWell(
-                    onTap: () async {
-                      if (isCurrentAudio) {
-                        if (completed) {
-                          widget.audioPlayer.seek(Duration.zero);
-                          widget.audioPlayer.play();
-                        } else if (isPlaying) {
-                          await widget.audioPlayer.pause();
-                        } else {
-                          await widget.audioPlayer.play();
-                        }
-                      } else {
-                        _setAudioSourceIfNeeded(
-                          patternExample.audioUrl ?? '',
-                          patternExample.id,
-                        );
-                      }
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(4),
-                      child: Container(
-                        width: 24,
-                        height: 24,
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                          shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withValues(alpha: 0.2),
-                              spreadRadius: 3,
-                              blurRadius: 8,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: (loading && isCurrentAudio)
-                              ? const SizedBox(
-                                  width: 14,
-                                  height: 14,
-                                  child: CircularProgressIndicator(
-                                    strokeWidth: 2,
-                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                        Colors.white),
-                                  ),
-                                )
-                              : Icon(
-                                  (completed && isCurrentAudio)
-                                      ? Icons.replay
-                                      : (isPlaying && isCurrentAudio)
-                                          ? Icons.pause
-                                          : Icons.play_arrow,
-                                  color: Colors.white,
-                                  size: 18,
+
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  patternExample.englishText,
+                                  style: PmpTextStyles.body2Semi
+                                      .copyWith(color: Colors.white),
                                 ),
+                                if (patternExample.burmeseText?.isNotEmpty ??
+                                    false)
+                                  Text(
+                                    patternExample.burmeseText!,
+                                    style: PmpTextStyles.body2Semi
+                                        .copyWith(color: Colors.white),
+                                  ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          if (patternExample.audioUrl != null &&
+                              patternExample.audioUrl!.isNotEmpty)
+                            InkWell(
+                              onTap: () async {
+                                if (isCurrentAudio) {
+                                  if (completed) {
+                                    widget.audioPlayer.seek(Duration.zero);
+                                    widget.audioPlayer.play();
+                                  } else if (isPlaying) {
+                                    await widget.audioPlayer.pause();
+                                  } else {
+                                    await widget.audioPlayer.play();
+                                  }
+                                } else {
+                                  _setAudioSourceIfNeeded(
+                                    patternExample.audioUrl ?? '',
+                                    patternExample.id,
+                                  );
+                                }
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.all(4),
+                                child: Container(
+                                  width: 24,
+                                  height: 24,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    shape: BoxShape.circle,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color:
+                                            Colors.black.withValues(alpha: 0.2),
+                                        spreadRadius: 3,
+                                        blurRadius: 8,
+                                        offset: const Offset(0, 4),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Center(
+                                    child: (loading && isCurrentAudio)
+                                        ? const SizedBox(
+                                            width: 14,
+                                            height: 14,
+                                            child: CircularProgressIndicator(
+                                              strokeWidth: 2,
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                      Colors.white),
+                                            ),
+                                          )
+                                        : Icon(
+                                            (completed && isCurrentAudio)
+                                                ? Icons.replay
+                                                : (isPlaying && isCurrentAudio)
+                                                    ? Icons.pause
+                                                    : Icons.play_arrow,
+                                            color: Colors.white,
+                                            size: 18,
+                                          ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 6),
+                      DecoratedBox(
+                        decoration: const BoxDecoration(
+                          border: Border(
+                            left: BorderSide(
+                              color: Colors.orangeAccent,
+                              width: 4,
+                            ),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 12),
+                          child: Text(
+                            "Subject က 'I' ဆိုတော့ want မှာ 's' ထည့်စရာမလိုပါဘူး။",
+                            style: PmpTextStyles.body2Regular.copyWith(
+                              color: Colors.amberAccent,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
                       ),
+                    ],
+                  ),
+                ),
+
+                /// 🔹 Separator (NOT for last item)
+                if (!isLast)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Divider(
+                      height: 1,
+                      thickness: 1,
+                      color: Colors.white.withValues(alpha: 0.15),
                     ),
                   ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          patternExample.englishText,
-                          style: PmpTextStyles.body2Semi
-                              .copyWith(color: Colors.white),
-                        ),
-                        if (patternExample.burmeseText?.isNotEmpty ?? false)
-                          Text(
-                            patternExample.burmeseText!,
-                            style: PmpTextStyles.body2Semi
-                                .copyWith(color: Colors.white),
-                          ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              ],
             );
           }),
         ],

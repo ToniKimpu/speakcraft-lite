@@ -137,20 +137,23 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                             spokenPatterns.length,
                             (index) {
                               return SpokenPatternWidget(
-                                audioPlayer: _audioPlayer,
                                 spokenPattern: spokenPatterns[index],
-                                audioPositionTrackerBloc:
-                                    _audioPositionTrackerBloc,
-                                audioPlayerStateTrackerBloc:
-                                    _audioPlayerStateTrackerBloc,
-                                onNextEnabledChanged: (spokenPatternId) {
-                                  setState(() {
-                                    if (!_doneIds.contains(spokenPatternId)) {
-                                      _doneIds.add(spokenPatternId);
-                                    }
-                                  });
-                                },
                               );
+                              // return SpokenPatternWidget(
+                              //   audioPlayer: _audioPlayer,
+                              //   spokenPattern: spokenPatterns[index],
+                              //   audioPositionTrackerBloc:
+                              //       _audioPositionTrackerBloc,
+                              //   audioPlayerStateTrackerBloc:
+                              //       _audioPlayerStateTrackerBloc,
+                              //   onNextEnabledChanged: (spokenPatternId) {
+                              //     setState(() {
+                              //       if (!_doneIds.contains(spokenPatternId)) {
+                              //         _doneIds.add(spokenPatternId);
+                              //       }
+                              //     });
+                              //   },
+                              // );
                             },
                           ),
                         ),
@@ -159,8 +162,9 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                         totalPage: _spokenPatterns.length,
                         currentPage: _currentPage,
                         // audioPlayer: _audioPlayer,
-                        nextEnabled:
-                            _doneIds.contains(_spokenPatterns[_currentPage].id),
+                        // nextEnabled: _doneIds
+                        //     .contains(_spokenPatterns[_currentPage].id),
+                        nextEnabled: true,
                         onPageChanged: (newPage) {
                           _audioPlayer.stop();
                           setState(() {

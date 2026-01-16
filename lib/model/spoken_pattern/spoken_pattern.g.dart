@@ -25,6 +25,7 @@ _$SpokenPatternImpl _$$SpokenPatternImplFromJson(Map<String, dynamic> json) =>
           ? null
           : SubjectVerbAgreement.fromJson(
               json['subject_verb_agreements'] as Map<String, dynamic>),
+      filePath: json['file_path'] as String?,
     );
 
 Map<String, dynamic> _$$SpokenPatternImplToJson(_$SpokenPatternImpl instance) =>
@@ -39,4 +40,5 @@ Map<String, dynamic> _$$SpokenPatternImplToJson(_$SpokenPatternImpl instance) =>
       'pattern_examples': instance.patternExamples,
       'pattern_user_comments': instance.hasComment,
       'subject_verb_agreements': instance.subjectVerbAgreement,
+      'file_path': instance.filePath,
     };

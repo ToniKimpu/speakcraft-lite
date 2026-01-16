@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
 
 import '../../../../config/pmp_text_styles.dart';
-import '../../../../model/spoken_pattern/spoken_pattern.dart';
 
 class FooterWidget extends StatelessWidget {
   // final List<SpokenPattern> spokenPatterns;

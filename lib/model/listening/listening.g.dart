@@ -20,6 +20,7 @@ _$ListeningImpl _$$ListeningImplFromJson(Map<String, dynamic> json) =>
       multipleChoicePath: json['multiple_choice_path'] as String,
       shadowingPath: json['shadowing_path'] as String,
       recordSubtitlePath: json['record_subtitle_path'] as String,
+      sentenceExplanationPath: json['sentence_explanation_path'] as String,
       listeningCategoryId: (json['listening_category_id'] as num?)?.toInt(),
     );
 
@@ -37,5 +38,6 @@ Map<String, dynamic> _$$ListeningImplToJson(_$ListeningImpl instance) =>
       'multiple_choice_path': instance.multipleChoicePath,
       'shadowing_path': instance.shadowingPath,
       'record_subtitle_path': instance.recordSubtitlePath,
+      'sentence_explanation_path': instance.sentenceExplanationPath,
       'listening_category_id': instance.listeningCategoryId,
     };

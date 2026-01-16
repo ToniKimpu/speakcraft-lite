@@ -1,22 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
 
 import '../../../../config/pmp_text_styles.dart';
+import '../../../../model/spoken_pattern/spoken_pattern.dart';
 
-class SvgDataWidget extends StatelessWidget {
-  const SvgDataWidget({
+class SubjectVerbAgreementCard extends StatefulWidget {
+  const SubjectVerbAgreementCard({
     super.key,
     required this.spokenPattern,
   });
+
   final SpokenPattern spokenPattern;
 
   @override
+  State<SubjectVerbAgreementCard> createState() =>
+      _SubjectVerbAgreementCardState();
+}
+
+class _SubjectVerbAgreementCardState extends State<SubjectVerbAgreementCard> {
+  bool _expanded = false;
+
+  @override
   Widget build(BuildContext context) {
-    bool svgData = spokenPattern.subjectVerbAgreement != null &&
-        spokenPattern.subjectVerbAgreement!.svgData.isNotEmpty;
-    if (!svgData && spokenPattern.description.isEmpty) {
+    final svgData = widget.spokenPattern.subjectVerbAgreement != null &&
+        widget.spokenPattern.subjectVerbAgreement!.svgData.isNotEmpty;
+
+    if (!svgData) {
       return const SizedBox();
     }
+
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
@@ -37,78 +48,92 @@ class SvgDataWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (spokenPattern.description.isNotEmpty) ...[
-            Text(
-              '“ ${spokenPattern.description} ”',
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-                fontFamily: 'MM Lyrics Bold',
-                shadows: [
-                  Shadow(
-                    offset: Offset(1, 1),
-                    blurRadius: 2,
-                    color: Colors.indigoAccent,
+          /// 🔹 Header (tap to expand/collapse)
+          InkWell(
+            borderRadius: BorderRadius.circular(8),
+            onTap: () {
+              setState(() => _expanded = !_expanded);
+            },
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Text(
+                    'Subject Verb Agreement',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white,
+                      fontFamily: 'ArchivoBlack Regular',
+                    ),
                   ),
-                ],
-              ),
+                ),
+                AnimatedRotation(
+                  turns: _expanded ? 0.5 : 0,
+                  duration: const Duration(milliseconds: 200),
+                  child: const Icon(
+                    Icons.keyboard_arrow_down,
+                    color: Colors.white,
+                    size: 24,
+                  ),
+                ),
+              ],
             ),
-          ],
-          if (spokenPattern.description.isEmpty && svgData)
-            const Text(
-              'Subject Verb Agreement',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-                fontFamily: 'ArchivoBlack Regular',
-              ),
-            ),
-          if (svgData && spokenPattern.description.isNotEmpty) ...[
-            const SizedBox(
-              height: 8,
-            ),
+          ),
+
+          /// 🔹 Divider (only when expanded)
+          if (_expanded) ...[
+            const SizedBox(height: 8),
             Container(
               height: 1,
               width: double.infinity,
               color: Colors.white.withValues(alpha: 0.1),
             ),
+            const SizedBox(height: 8),
           ],
-          const SizedBox(height: 8),
-          if (svgData)
-            Column(
+
+          /// 🔹 Collapsible Content
+          AnimatedCrossFade(
+            duration: const Duration(milliseconds: 250),
+            crossFadeState: _expanded
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            firstChild: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: List.generate(
-                  spokenPattern.subjectVerbAgreement!.svgData.length, (index) {
-                final data = spokenPattern.subjectVerbAgreement!.svgData[index];
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 6,
-                        height: 6,
-                        margin: const EdgeInsets.only(top: 6),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
+                widget.spokenPattern.subjectVerbAgreement!.svgData.length,
+                (index) {
+                  final data =
+                      widget.spokenPattern.subjectVerbAgreement!.svgData[index];
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 6,
+                          height: 6,
+                          margin: const EdgeInsets.only(top: 6),
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          data,
-                          style: PmpTextStyles.body2Semi
-                              .copyWith(color: Colors.white),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            data,
+                            style: PmpTextStyles.body2Semi
+                                .copyWith(color: Colors.white),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                );
-              }),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
+            secondChild: const SizedBox(),
+          ),
         ],
       ),
     );

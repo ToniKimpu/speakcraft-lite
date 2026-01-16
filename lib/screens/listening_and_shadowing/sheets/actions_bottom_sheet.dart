@@ -68,6 +68,25 @@ class ActionsBottomSheet extends StatelessWidget {
                   );
                 },
               ),
+            Divider(
+              height: 1,
+              color: Colors.white.withValues(alpha: 0.2),
+            ),
+            _ActionItem(
+              icon: Icons.lightbulb_outline,
+              label: 'See Explanations',
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, PmpRoutes.sentenceExplanationList,
+                    arguments: {
+                      "listening": listening,
+                    });
+              },
+            ),
+            Divider(
+              height: 1,
+              color: Colors.white.withValues(alpha: 0.2),
+            ),
             if (listening.hasVocabularies)
               Divider(
                 height: 1,

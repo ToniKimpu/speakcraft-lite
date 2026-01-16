@@ -73,9 +73,9 @@ class LessonItem extends StatelessWidget {
           onTap: () {
             // Navigator.pushNamed(
             //   context,
-            //   PmpRoutes.speakingPattern,
-            //   arguments: {'lesson': lesson},
+            //   PmpRoutes.spokenPatternDetail,
             // );
+
             Navigator.pushNamed(
               context,
               PmpRoutes.spokenPatternPage,
