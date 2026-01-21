@@ -11,6 +11,7 @@ import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 
 import '../../model/listening_practice_answer/listening_practice_answer.dart';
+import '../../model/record_subtitle/record_subtitle.dart';
 import '../../model/subtitle/subtitle.dart';
 import '../../services/app_database/app_database.dart';
 import '../../services/supabase_service.dart';
@@ -23,6 +24,8 @@ abstract class SubtitleEvent with _$SubtitleEvent {
       _ParseSubtitleLine;
   const factory SubtitleEvent.parseSubtitle(Listening listening) =
       _ParseSubtitle;
+  const factory SubtitleEvent.parseRecordSubtitle(Listening listening) =
+      _ParseRecordSubtitle;
   const factory SubtitleEvent.parseListeningQuestion(Listening listening) =
       _ParseListeningQuestion;
   const factory SubtitleEvent.parseComplete(List<Subtitle> subtitles) =
@@ -43,6 +46,8 @@ abstract class SubtitleState with _$SubtitleState {
       _OnParseListeningQuestionCompleted;
   const factory SubtitleState.onParseCompleted(List<Subtitle> subtitles) =
       _OnParseCompleted;
+  const factory SubtitleState.onRecordSubtitleCompleted(
+      List<RecordSubtitle> recordSubtitles) = _OnRecordSubtitleCompleted;
   const factory SubtitleState.onParseSubtitleLineCompleted(
       List<SubtitleLine> subtitleLines) = _OnParseSubtitleLineCompleted;
   const factory SubtitleState.onPageChanged(int index) = OnPageChanged;
@@ -55,6 +60,9 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       await event.when(
         setCurrentPageIndex: (index) async {
           emit(SubtitleState.onPageChanged(index));
+        },
+        parseRecordSubtitle: (listening) async {
+          await parseRecordSubtitle(listening, emit);
         },
         parseListeningQuestion: (listening) async {
           await _mapParseListeningQuestionsToState(listening, emit);
@@ -200,4 +208,43 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       emit(SubtitleState.error(e.toString()));
     }
   }
+
+  Future<void> parseRecordSubtitle(
+    Listening listening,
+    Emitter<SubtitleState> emit,
+  ) async {
+    debugPrint("_parseJsonSubtitleFile: ${listening.recordSubtitlePath}");
+    emit(const SubtitleState.loading());
+
+    try {
+      final response = await http.get(Uri.parse(listening.recordSubtitlePath));
+      if (response.statusCode != 200) {
+        throw Exception(
+          "Failed to load subtitles: ${response.statusCode}",
+        );
+      }
+
+      final List<dynamic> jsonList =
+          json.decode(utf8.decode(response.bodyBytes));
+
+      final List<RecordSubtitle> recordSubtitles = [];
+
+      debugPrint(
+          "_parseJsonSubtitleFile: ${jsonList.first.toString()} lenght!");
+
+      for (int i = 0; i < jsonList.length; i++) {
+        final Map<String, dynamic> recordJson =
+            jsonList[i] as Map<String, dynamic>;
+        final record = RecordSubtitle.fromJson(recordJson);
+        recordSubtitles.add(record);
+      }
+      emit(SubtitleState.onRecordSubtitleCompleted(recordSubtitles));
+    } catch (e, stack) {
+      debugPrint(
+        "_parseJsonSubtitleFile error: $e\n$stack",
+      );
+      emit(SubtitleState.error(e.toString()));
+    }
+  }
+
 }

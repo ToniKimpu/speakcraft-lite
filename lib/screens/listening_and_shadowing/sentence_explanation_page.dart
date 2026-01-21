@@ -66,6 +66,7 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
           : _htmlContent == null
               ? const Center(child: CircularProgressIndicator())
               : SingleChildScrollView(
+                  padding: const EdgeInsets.all(12.0),
                   child: HtmlWidget(
                     _htmlContent!,
                     textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(

@@ -55,7 +55,7 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           .from('listenings')
           .select('*')
           .eq("is_deleted", false)
-          .order('created_at', ascending: true);
+          .order('order_number', ascending: true);
       final listenings = dataRes.map((e) {
         final listening = Listening.fromJson(e);
         return listening.copyWith(

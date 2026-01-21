@@ -46,6 +46,8 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     // ✅ Force UTF-8 decoding
     final decodedBody = utf8.decode(response.bodyBytes);
     final List data = jsonDecode(decodedBody);
+    debugPrint(
+        "_fetchSentenceExplanations: Fetched ${data.first.toString()} items");
     return data.map((e) => SentenceExplanation.fromJson(e)).toList();
   }
 

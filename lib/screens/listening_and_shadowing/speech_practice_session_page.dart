@@ -130,7 +130,8 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
       ),
     );
     _subtitleDetailBloc.add(
-        SubtitleEvent.parseSubtitleLine(widget.listening.recordSubtitlePath));
+      SubtitleEvent.parseRecordSubtitle(widget.listening),
+    );
   }
 
   @override
@@ -194,14 +195,14 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                     bloc: _subtitleDetailBloc,
                     listener: (context, state) {
                       state.maybeWhen(
-                        onParseSubtitleLineCompleted: (subtitleLines) {
+                        onRecordSubtitleCompleted: (recordSubtitles) {
                           _startDuration = Duration(
                             milliseconds:
-                                (subtitleLines.first.start * 1000).round(),
+                                (recordSubtitles.first.start * 1000).round(),
                           );
                           _endDuration = Duration(
                             milliseconds:
-                                (subtitleLines.first.end * 1000).round(),
+                                (recordSubtitles.first.end * 1000).round(),
                           );
                         },
                         orElse: () => -1,
@@ -220,7 +221,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                             ),
                           );
                         },
-                        onParseSubtitleLineCompleted: (subtitleLines) {
+                        onRecordSubtitleCompleted: (recordSubtitles) {
                           return Column(
                             children: [
                               ShadowingPlayer(
@@ -274,31 +275,86 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                   }
                                 },
                               ),
-                              const SizedBox(height: 16),
+                              // const SizedBox(height: 16),
                               SizedBox(
-                                height: 160,
+                                height: 240,
                                 child: PageView.builder(
-                                  itemCount: subtitleLines.length,
+                                  itemCount: recordSubtitles.length,
                                   controller: _pageController,
                                   physics: const NeverScrollableScrollPhysics(),
                                   onPageChanged: (index) {
                                     // _controller.load(_subtitles[index].videoId);
                                   },
                                   itemBuilder: (context, index) {
-                                    final subtitle = subtitleLines[index];
-                                    return Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 16),
-                                      child: Text(
-                                        subtitle.text,
-                                        style: const TextStyle(
-                                          fontSize: 16,
-                                          height: 1.4,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white,
-                                          fontFamily: "ArchivoBlack Regular",
+                                    final subtitle = recordSubtitles[index];
+                                    return Scrollbar(
+                                      thumbVisibility: true,
+                                      radius: const Radius.circular(8),
+                                      child: SingleChildScrollView(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 16,
+                                          vertical: 16,
                                         ),
-                                        maxLines: 5,
+                                        child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: subtitle.data.map(
+                                              (item) {
+                                                final isCurrent = _position
+                                                            .inMilliseconds >=
+                                                        (item.start * 1000)
+                                                            .round() &&
+                                                    _position.inMilliseconds <
+                                                        (item.end * 1000)
+                                                            .round();
+                                                return Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    bottom: 8.0,
+                                                  ),
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      const Text(
+                                                        "-",
+                                                        style: TextStyle(
+                                                          fontSize: 16,
+                                                          height: 1.4,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Colors.white,
+                                                          fontFamily:
+                                                              "ArchivoBlack Regular",
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 4,
+                                                      ),
+                                                      Expanded(
+                                                        child: Text(
+                                                          item.text,
+                                                          style: TextStyle(
+                                                            fontSize: 16,
+                                                            height: 1.4,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            color: isCurrent
+                                                                ? Colors.yellow
+                                                                : Colors.white,
+                                                            fontFamily:
+                                                                "ArchivoBlack Regular",
+                                                          ),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                );
+                                              },
+                                            ).toList()),
                                       ),
                                     );
                                   },
@@ -329,7 +385,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                 context: context,
                                                 builder: (context) {
                                                   final sentenceId =
-                                                      subtitleLines[
+                                                      recordSubtitles[
                                                               _currentPage]
                                                           .id;
                                                   return SaveRecordingDialog(
@@ -428,7 +484,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                           newVoiceName = name;
                                         },
                                         sentenceId:
-                                            subtitleLines[_currentPage].id,
+                                            recordSubtitles[_currentPage].id,
                                         youtubeId: widget.listening.youtubeId,
                                         onTogglePlay: (data, index) async {
                                           if (_isRecording()) {
@@ -482,18 +538,18 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                     }),
                               ),
                               FooterWidget(
-                                totalPage: subtitleLines.length,
+                                totalPage: recordSubtitles.length,
                                 currentPage: _currentPage,
                                 onPageChanged: (index) {
                                   _audioPlayer.stop();
                                   _controller.pause();
                                   _startDuration = Duration(
                                       milliseconds:
-                                          (subtitleLines[index].start * 1000)
+                                          (recordSubtitles[index].start * 1000)
                                               .round());
                                   _endDuration = Duration(
                                     milliseconds:
-                                        (subtitleLines[index].end * 1000)
+                                        (recordSubtitles[index].end * 1000)
                                             .round(),
                                   );
                                   _pageController.jumpToPage(index);
