@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pmp_english/model/lesson/lesson.dart';
 import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
-import 'package:pmp_english/model/pattern_user_comment/pattern_user_comment.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
-import 'package:pmp_english/model/translation/translation.dart';
-import 'package:pmp_english/model/translation_day/translation_day.dart';
 import 'package:pmp_english/screens/auth/login_screen.dart';
 import 'package:pmp_english/screens/auth/sign_up_screen.dart';
 import 'package:pmp_english/screens/days/pattern_exercise_screen.dart';
@@ -24,19 +21,12 @@ import 'package:pmp_english/screens/practice_with_ai/ai_response_detail_screen.d
 import 'package:pmp_english/screens/practice_with_ai/ai_sentence_practice_list_screen.dart';
 import 'package:pmp_english/screens/profiles/update_avatar_page.dart';
 import 'package:pmp_english/screens/profiles/update_name_page.dart';
-import 'package:pmp_english/screens/self_practice_pattern/pattern_list.dart';
-import 'package:pmp_english/screens/self_practice_pattern/pattern_reply_screen.dart';
-import 'package:pmp_english/screens/translation/translation_day_list.dart';
-import 'package:pmp_english/screens/translation/translation_level_list.dart';
-import 'package:pmp_english/screens/translation/translation_practice_page.dart';
-import 'package:pmp_english/screens/translation/translation_practice_result_screen.dart';
 
 import '../model/ai_sentence_practice/ai_sentence_practice.dart';
 import '../model/day/day.dart';
 import '../model/exercise/exercise.dart';
 import '../model/listening/listening.dart';
 import '../model/pattern_exercise/pattern_exercise.dart';
-import '../model/spoken_pattern/spoken_pattern.dart';
 import '../screens/days/day_list_screen.dart';
 import '../screens/days/pattern_exercise_result_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_detail.dart';
@@ -49,7 +39,6 @@ import '../screens/main/device_failed_screen.dart';
 import '../screens/main/home_screen.dart';
 import '../screens/main/profile_page.dart';
 import '../screens/onboarding/splash_screen.dart';
-import '../screens/self_practice_pattern/pattern_practice_screen.dart';
 
 class PmpRoutes {
   static const splash = 'splash';
@@ -108,7 +97,6 @@ class PmpRoutes {
         return _getRoute(const DayListScreen(), settings);
       case profilePage:
         return _getRoute(const ProfilePage(), settings);
-
       case spokenPatternPage:
         final args = settings.arguments as Map<String, dynamic>;
         final lesson = args['lesson'] as Lesson;
@@ -117,21 +105,6 @@ class PmpRoutes {
               lesson: lesson,
             ),
             settings);
-
-      case translationPage:
-        final args = settings.arguments as Map<String, dynamic>;
-        final translationDay = args['translation_day'] as TranslationDay;
-        return _getRoute(
-            TranslationPracticePage(
-              translationDay: translationDay,
-            ),
-            settings);
-      case translationListPage:
-        return _getRoute(const TranslationLevelList(), settings);
-      case translationDayList:
-        // final args = settings.arguments as Map<String, dynamic>;
-        // final levelId = args['translation_level_id'] as int;
-        return _getRoute(const TranslationDayList(), settings);
       case loginScreen:
         return _getRoute(const LoginScreen(), settings);
       case signUpScreen:
@@ -173,37 +146,6 @@ class PmpRoutes {
             patternExercises: patternExercises,
             exerciseId: exerciseId,
             pass: pass,
-          ),
-          settings,
-        );
-      case translationPracticeResultScreen:
-        final args = settings.arguments as Map<String, dynamic>;
-        final translations = args['translations'] as List<Translation>?;
-        final translationDayId = args['translation_day_id'] as int;
-        return _getRoute(
-          TranslationPracticeResultScreen(
-            translations: translations,
-            translationDayId: translationDayId,
-          ),
-          settings,
-        );
-      case patternList:
-        return _getRoute(const PatternList(), settings);
-      case patternPracticeScreen:
-        final args = settings.arguments as Map<String, dynamic>;
-        final spokenPattern = args['pattern'] as SpokenPattern;
-        return _getRoute(
-          PatternPracticeScreen(
-            spokenPattern: spokenPattern,
-          ),
-          settings,
-        );
-      case patternReplyScreen:
-        final args = settings.arguments as Map<String, dynamic>;
-        final comment = args['comment'] as PatternUserComment;
-        return _getRoute(
-          PatternReplyScreen(
-            comment: comment,
           ),
           settings,
         );

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
+import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
 
 class SubtitleWidget extends StatelessWidget {
@@ -250,101 +252,63 @@ class SubtitleWidget extends StatelessWidget {
                 );
               },
             ),
-          // Vocabularies
-          if (hasVocabularies && subtitle.vocabularies!.isNotEmpty) ...[
-            const SizedBox(
-              height: 8,
-            ),
-            const Divider(
-              color: Color(0xFFFFE0B2),
-              thickness: 0.5,
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Icon(
-                  Icons.menu_book, // You can choose any icon you like
-                  color: Color(0xFFFFE0B2),
-                  size: 20,
-                ),
-                const SizedBox(width: 8), // space between icon and text
-                Text(
-                  "Vocabularies",
-                  style: PmpTextStyles.body1Regular.copyWith(
-                    color: const Color(0xFFFFE0B2),
-                    fontSize: 16,
-                    fontFamily: "ArchivoBlack Regular",
+          const SizedBox(
+            height: 8,
+          ),
+          if (subtitle.explanationUrl.isNotEmpty)
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: () {
+                  if (youtubeController.value.isPlaying) {
+                    youtubeController.pause();
+                  }
+                  final sentenceExplanation = SentenceExplanation(
+                    id: 1,
+                    start: subtitle.start.inSeconds.toDouble(),
+                    end: subtitle.end.inSeconds.toDouble(),
+                    english: subtitle.english,
+                    burmese: subtitle.burmese ?? "",
+                    explanationUrl: subtitle.explanationUrl,
+                  );
+                  Navigator.pushNamed(
+                    context,
+                    PmpRoutes.sentenceExplanationPage,
+                    arguments: {
+                      "sentence_explanation": sentenceExplanation,
+                    },
+                  );
+                },
+                child: Ink(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.green,
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            ...subtitle.vocabularies!.map(
-              (voc) => Padding(
-                padding: const EdgeInsets.only(bottom: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 8,
-                          height: 8,
-                          margin: const EdgeInsets.only(top: 6),
-                          decoration: BoxDecoration(
-                            color: Colors.amber,
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                voc.english,
-                                style: PmpTextStyles.body1Regular.copyWith(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontFamily: "ArchivoBlack Regular",
-                                ),
-                              ),
-                              Text(
-                                voc.burmese,
-                                style: PmpTextStyles.body2Regular.copyWith(
-                                  color: Colors.white.withValues(alpha: 0.9),
-                                  fontSize: 15,
-                                  fontFamily: "MM Lyrics Bold",
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    if (voc.explanation != null && voc.explanation!.isNotEmpty)
-                      Padding(
-                        padding: const EdgeInsets.only(top: 4, left: 12),
-                        child: Text(
-                          "(${voc.explanation})",
-                          style: PmpTextStyles.body2Regular.copyWith(
-                            color: const Color(0xFFFFF59D),
-                            fontFamily: "MM Lyrics Bold",
-                            fontSize: 14,
-                          ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(
+                        Icons.visibility_outlined,
+                        size: 18,
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Text(
+                        "See Explanation",
+                        style: PmpTextStyles.body2Semi.copyWith(
+                          color: Colors.white,
+                          fontFamily: "ArchivoBlack Regular",
                         ),
                       ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ],
         ],
       ),
     );

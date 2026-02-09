@@ -17,6 +17,8 @@ class Subtitle with _$Subtitle {
     required Duration end,
     required double widgetHeight,
     required double scrollPosition,
+    @JsonKey(name: 'explanation_url', defaultValue: "")
+    required String explanationUrl,
     @Default(<SubtitleVocabulary>[]) List<SubtitleVocabulary>? vocabularies,
   }) = _Subtitle;
 
@@ -33,6 +35,7 @@ class Subtitle with _$Subtitle {
         widgetHeight: 0,
         scrollPosition: 0,
         vocabularies: [],
+        explanationUrl: "",
       );
 }
 

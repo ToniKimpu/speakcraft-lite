@@ -29,6 +29,8 @@ mixin _$Subtitle {
   Duration get end => throw _privateConstructorUsedError;
   double get widgetHeight => throw _privateConstructorUsedError;
   double get scrollPosition => throw _privateConstructorUsedError;
+  @JsonKey(name: 'explanation_url', defaultValue: "")
+  String get explanationUrl => throw _privateConstructorUsedError;
   List<SubtitleVocabulary>? get vocabularies =>
       throw _privateConstructorUsedError;
 
@@ -57,6 +59,7 @@ abstract class $SubtitleCopyWith<$Res> {
       Duration end,
       double widgetHeight,
       double scrollPosition,
+      @JsonKey(name: 'explanation_url', defaultValue: "") String explanationUrl,
       List<SubtitleVocabulary>? vocabularies});
 }
 
@@ -84,6 +87,7 @@ class _$SubtitleCopyWithImpl<$Res, $Val extends Subtitle>
     Object? end = null,
     Object? widgetHeight = null,
     Object? scrollPosition = null,
+    Object? explanationUrl = null,
     Object? vocabularies = freezed,
   }) {
     return _then(_value.copyWith(
@@ -123,6 +127,10 @@ class _$SubtitleCopyWithImpl<$Res, $Val extends Subtitle>
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
               as double,
+      explanationUrl: null == explanationUrl
+          ? _value.explanationUrl
+          : explanationUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       vocabularies: freezed == vocabularies
           ? _value.vocabularies
           : vocabularies // ignore: cast_nullable_to_non_nullable
@@ -149,6 +157,7 @@ abstract class _$$SubtitleImplCopyWith<$Res>
       Duration end,
       double widgetHeight,
       double scrollPosition,
+      @JsonKey(name: 'explanation_url', defaultValue: "") String explanationUrl,
       List<SubtitleVocabulary>? vocabularies});
 }
 
@@ -174,6 +183,7 @@ class __$$SubtitleImplCopyWithImpl<$Res>
     Object? end = null,
     Object? widgetHeight = null,
     Object? scrollPosition = null,
+    Object? explanationUrl = null,
     Object? vocabularies = freezed,
   }) {
     return _then(_$SubtitleImpl(
@@ -213,6 +223,10 @@ class __$$SubtitleImplCopyWithImpl<$Res>
           ? _value.scrollPosition
           : scrollPosition // ignore: cast_nullable_to_non_nullable
               as double,
+      explanationUrl: null == explanationUrl
+          ? _value.explanationUrl
+          : explanationUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       vocabularies: freezed == vocabularies
           ? _value._vocabularies
           : vocabularies // ignore: cast_nullable_to_non_nullable
@@ -234,6 +248,8 @@ class _$SubtitleImpl implements _Subtitle {
       required this.end,
       required this.widgetHeight,
       required this.scrollPosition,
+      @JsonKey(name: 'explanation_url', defaultValue: "")
+      required this.explanationUrl,
       final List<SubtitleVocabulary>? vocabularies =
           const <SubtitleVocabulary>[]})
       : _vocabularies = vocabularies;
@@ -259,6 +275,9 @@ class _$SubtitleImpl implements _Subtitle {
   final double widgetHeight;
   @override
   final double scrollPosition;
+  @override
+  @JsonKey(name: 'explanation_url', defaultValue: "")
+  final String explanationUrl;
   final List<SubtitleVocabulary>? _vocabularies;
   @override
   @JsonKey()
@@ -272,7 +291,7 @@ class _$SubtitleImpl implements _Subtitle {
 
   @override
   String toString() {
-    return 'Subtitle(id: $id, english: $english, burmese: $burmese, description: $description, audioName: $audioName, start: $start, end: $end, widgetHeight: $widgetHeight, scrollPosition: $scrollPosition, vocabularies: $vocabularies)';
+    return 'Subtitle(id: $id, english: $english, burmese: $burmese, description: $description, audioName: $audioName, start: $start, end: $end, widgetHeight: $widgetHeight, scrollPosition: $scrollPosition, explanationUrl: $explanationUrl, vocabularies: $vocabularies)';
   }
 
   @override
@@ -293,6 +312,8 @@ class _$SubtitleImpl implements _Subtitle {
                 other.widgetHeight == widgetHeight) &&
             (identical(other.scrollPosition, scrollPosition) ||
                 other.scrollPosition == scrollPosition) &&
+            (identical(other.explanationUrl, explanationUrl) ||
+                other.explanationUrl == explanationUrl) &&
             const DeepCollectionEquality()
                 .equals(other._vocabularies, _vocabularies));
   }
@@ -310,6 +331,7 @@ class _$SubtitleImpl implements _Subtitle {
       end,
       widgetHeight,
       scrollPosition,
+      explanationUrl,
       const DeepCollectionEquality().hash(_vocabularies));
 
   /// Create a copy of Subtitle
@@ -339,6 +361,8 @@ abstract class _Subtitle implements Subtitle {
       required final Duration end,
       required final double widgetHeight,
       required final double scrollPosition,
+      @JsonKey(name: 'explanation_url', defaultValue: "")
+      required final String explanationUrl,
       final List<SubtitleVocabulary>? vocabularies}) = _$SubtitleImpl;
 
   factory _Subtitle.fromJson(Map<String, dynamic> json) =
@@ -362,6 +386,9 @@ abstract class _Subtitle implements Subtitle {
   double get widgetHeight;
   @override
   double get scrollPosition;
+  @override
+  @JsonKey(name: 'explanation_url', defaultValue: "")
+  String get explanationUrl;
   @override
   List<SubtitleVocabulary>? get vocabularies;
 

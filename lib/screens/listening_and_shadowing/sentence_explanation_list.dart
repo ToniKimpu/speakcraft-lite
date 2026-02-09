@@ -31,7 +31,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     super.initState();
 
     _future = fetchSentenceExplanations(
-      widget.listening.sentenceExplanationPath,
+      widget.listening.subtitlePath,
     );
   }
 
@@ -43,12 +43,19 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     if (response.statusCode != 200) {
       throw Exception('Failed to load sentence explanations');
     }
-    // ✅ Force UTF-8 decoding
+
     final decodedBody = utf8.decode(response.bodyBytes);
     final List data = jsonDecode(decodedBody);
-    debugPrint(
-        "_fetchSentenceExplanations: Fetched ${data.first.toString()} items");
-    return data.map((e) => SentenceExplanation.fromJson(e)).toList();
+
+    // ✅ Filter out null or empty explanation_url
+    final filtered = data.where((e) {
+      final url = e['explanation_url'];
+      return url != null && url is String && url.trim().isNotEmpty;
+    }).toList();
+
+    debugPrint("_fetchSentenceExplanations: Fetched ${filtered.length} items");
+
+    return filtered.map((e) => SentenceExplanation.fromJson(e)).toList();
   }
 
   @override
@@ -74,11 +81,46 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
               ),
             );
           }
-
           final items = snapshot.data!;
           if (items.isEmpty) {
-            return const Center(
-              child: Text("No explanations found"),
+            return Center(
+              child: Padding(
+                padding: const EdgeInsets.all(32),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(18),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: PmpColors.primary400.withValues(alpha: 0.15),
+                      ),
+                      child: const Icon(
+                        Icons.lightbulb_outline,
+                        size: 48,
+                        color: PmpColors.primary400,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Text(
+                      "Coming Soon",
+                      style: PmpTextStyles.h1.copyWith(
+                        color: PmpColors.white,
+                        fontFamily: 'ArchivoBlack Regular',
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      "Sentence explanation is on the way.\nStay tuned!",
+                      style: PmpTextStyles.body2Regular.copyWith(
+                        color: PmpColors.white.withValues(alpha: 0.75),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
             );
           }
 
@@ -156,10 +198,12 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                             borderRadius: BorderRadius.circular(8),
                             onTap: () {
                               Navigator.pushNamed(
-                                  context, PmpRoutes.sentenceExplanationPage,
-                                  arguments: {
-                                    "sentence_explanation": item,
-                                  });
+                                context,
+                                PmpRoutes.sentenceExplanationPage,
+                                arguments: {
+                                  "sentence_explanation": item,
+                                },
+                              );
                             },
                             child: Ink(
                               padding: const EdgeInsets.symmetric(

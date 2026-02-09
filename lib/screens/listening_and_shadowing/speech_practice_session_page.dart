@@ -18,6 +18,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart'
 
 import '../../bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
 import '../../config/pmp_colors.dart';
+import '../../config/pmp_text_styles.dart';
 import 'dialogs/save_recording_dialog.dart';
 import 'model/subtitle_line.dart';
 import 'recording_voice_widgets/recorder.dart';
@@ -196,6 +197,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                     listener: (context, state) {
                       state.maybeWhen(
                         onRecordSubtitleCompleted: (recordSubtitles) {
+                          if (recordSubtitles.isEmpty) return;
                           _startDuration = Duration(
                             milliseconds:
                                 (recordSubtitles.first.start * 1000).round(),
@@ -222,6 +224,51 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                           );
                         },
                         onRecordSubtitleCompleted: (recordSubtitles) {
+                          if (recordSubtitles.isEmpty) {
+                            return Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(32),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(18),
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: PmpColors.primary400
+                                            .withValues(alpha: 0.15),
+                                      ),
+                                      child: const Icon(
+                                        Icons.mic_none,
+                                        size: 48,
+                                        color: PmpColors.primary400,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 20),
+                                    Text(
+                                      "Coming Soon",
+                                      style: PmpTextStyles.h1.copyWith(
+                                        color: PmpColors.white,
+                                        fontFamily: 'ArchivoBlack Regular',
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      "We’re polishing the record subtitles to give you the best shadowing experience.\n"
+                                      "Check back soon and get ready to practice!",
+                                      style:
+                                          PmpTextStyles.body2Regular.copyWith(
+                                        color: PmpColors.white
+                                            .withValues(alpha: 0.75),
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          }
                           return Column(
                             children: [
                               ShadowingPlayer(

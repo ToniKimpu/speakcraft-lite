@@ -42,3 +42,9 @@ samples, guidance on mobile development, and a full API reference.
 
 # python -m whisperx "D:\PMP_Projects\data\Shadowing\grit_the_power_of_passion\audio.mp3" --model medium --task transcribe --output_dir "D:\PMP_Projects\data\Shadowing\grit_the_power_of_passion\output" --compute_type float32 --device cpu
 
+
+
+# ***REMOVED***
+
+"Open api key ***REMOVED***\n"
+

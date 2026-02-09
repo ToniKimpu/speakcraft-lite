@@ -18,6 +18,7 @@ _$PatternExerciseImpl _$$PatternExerciseImplFromJson(
       vocabularies: (json['vocabularies'] as List<dynamic>)
           .map((e) => PatternVocabulary.fromJson(e as Map<String, dynamic>))
           .toList(),
+      words: json['words'] as String?,
       userAnswer: json['userAnswer'] as String?,
     );
 
@@ -31,5 +32,6 @@ Map<String, dynamic> _$$PatternExerciseImplToJson(
       'pattern_id': instance.patternId,
       'pattern': instance.pattern,
       'vocabularies': instance.vocabularies,
+      'words': instance.words,
       'userAnswer': instance.userAnswer,
     };

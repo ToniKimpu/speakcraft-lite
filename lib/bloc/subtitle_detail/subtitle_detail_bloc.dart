@@ -124,20 +124,32 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
   ) async {
     try {
       emit(const SubtitleState.loading());
-
+      debugPrint("_mapParseSubtitleLineToState: $url before");
       // Make sure shadowingPath is not null or empty
       if (url.isEmpty) {
         throw Exception("No shadowing path provided.");
       }
-
+      debugPrint("_mapParseSubtitleLineToState: $url after");
       final response = await http.get(Uri.parse(url));
 
       if (response.statusCode == 200) {
         final List<dynamic> jsonList = json.decode(response.body);
-        debugPrint(
-            "_mapParseSubtitleLineToState: ${jsonList.first.toString()}");
-        final subtitleLines =
-            jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
+        // final subtitleLines =
+        //     jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
+
+        final List<SubtitleLine> subtitleLines = [];
+
+        for (int i = 0; i < jsonList.length; i++) {
+          try {
+            subtitleLines.add(SubtitleLine.fromJson(jsonList[i]));
+          } catch (err, _) {
+            debugPrint(
+                "_mapParseSubtitleLineToState: ❌ Error parsing subtitle index $i");
+            debugPrint(
+                "_mapParseSubtitleLineToState: Item: ${jsonList[i]}"); // optional: remove if you want to continue
+            rethrow;
+          }
+        }
 
         emit(SubtitleState.onParseSubtitleLineCompleted(subtitleLines));
       } else {
@@ -170,12 +182,14 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
 
       for (int i = 0; i < jsonList.length; i++) {
         final jsonItem = jsonList[i];
-        int start = jsonItem['start'] as int;
-        int end = i == jsonList.length - 1
+        final num startRaw = jsonItem['start'] as num;
+
+        final num endRaw = i == jsonList.length - 1
             ? listening.end
-            : jsonList[i + 1]['start'] as int;
-        final startDuration = Duration(seconds: start);
-        final endDuration = Duration(seconds: end);
+            : jsonList[i + 1]['start'] as num;
+
+        final startDuration = _numToDuration(startRaw);
+        final endDuration = _numToDuration(endRaw);
 
         subtitles.add(
           Subtitle(
@@ -192,6 +206,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
             end: endDuration,
             widgetHeight: 0.0,
             scrollPosition: 0.0,
+            explanationUrl: jsonItem['explanation_url'] ?? "",
             vocabularies: (jsonItem['vocabulary'] as List<dynamic>?)
                 ?.map((vocabJson) => SubtitleVocabulary.fromJson(vocabJson))
                 .toList(),
@@ -213,38 +228,57 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
     Listening listening,
     Emitter<SubtitleState> emit,
   ) async {
-    debugPrint("_parseJsonSubtitleFile: ${listening.recordSubtitlePath}");
     emit(const SubtitleState.loading());
 
     try {
+      // ---- 1️⃣ No URL ----
+      if (listening.recordSubtitlePath.isEmpty) {
+        emit(const SubtitleState.onRecordSubtitleCompleted(<RecordSubtitle>[]));
+        return;
+      }
+
       final response = await http.get(Uri.parse(listening.recordSubtitlePath));
+
       if (response.statusCode != 200) {
         throw Exception(
           "Failed to load subtitles: ${response.statusCode}",
         );
       }
 
-      final List<dynamic> jsonList =
-          json.decode(utf8.decode(response.bodyBytes));
+      // ---- 2️⃣ Body empty or whitespace ----
+      final bodyString = utf8.decode(response.bodyBytes).trim();
 
-      final List<RecordSubtitle> recordSubtitles = [];
-
-      debugPrint(
-          "_parseJsonSubtitleFile: ${jsonList.first.toString()} lenght!");
-
-      for (int i = 0; i < jsonList.length; i++) {
-        final Map<String, dynamic> recordJson =
-            jsonList[i] as Map<String, dynamic>;
-        final record = RecordSubtitle.fromJson(recordJson);
-        recordSubtitles.add(record);
+      if (bodyString.isEmpty) {
+        emit(const SubtitleState.onRecordSubtitleCompleted(<RecordSubtitle>[]));
+        return;
       }
+
+      // ---- 3️⃣ Decode JSON ----
+      final decoded = json.decode(bodyString);
+
+      if (decoded is! List) {
+        throw Exception("Invalid record subtitle format: expected list");
+      }
+
+      if (decoded.isEmpty) {
+        emit(const SubtitleState.onRecordSubtitleCompleted(<RecordSubtitle>[]));
+        return;
+      }
+
+      final recordSubtitles = decoded
+          .map((e) => RecordSubtitle.fromJson(e as Map<String, dynamic>))
+          .toList();
+
       emit(SubtitleState.onRecordSubtitleCompleted(recordSubtitles));
-    } catch (e, stack) {
-      debugPrint(
-        "_parseJsonSubtitleFile error: $e\n$stack",
-      );
+    } catch (e, st) {
+      debugPrint("_parseRecordSubtitle error: $e");
+      debugPrintStack(stackTrace: st);
       emit(SubtitleState.error(e.toString()));
     }
   }
 
+  Duration _numToDuration(num value) {
+    final int microseconds = (value * 1000000).round();
+    return Duration(microseconds: microseconds);
+  }
 }

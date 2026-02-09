@@ -17,6 +17,7 @@ class PatternExercise with _$PatternExercise {
     String? pattern,
     @JsonKey(name: 'vocabularies')
     required List<PatternVocabulary> vocabularies,
+    String? words,
     String? userAnswer,
   }) = _PatternExercise;
 

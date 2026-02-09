@@ -36,7 +36,9 @@ class _ShadowingPageState extends State<ShadowingPage> {
 
   final _subtitleLineBloc = SubtitleBloc();
 
-  Duration _position = Duration.zero;
+  // Use ValueNotifier instead of setState for position
+  final ValueNotifier<Duration> _positionNotifier =
+      ValueNotifier(Duration.zero);
 
   StreamSubscription? _positionSub;
   StreamSubscription? _playerStateSubscription;
@@ -52,17 +54,20 @@ class _ShadowingPageState extends State<ShadowingPage> {
   bool _isUserScrolling = false;
   bool _appScrolling = false;
   Timer? _scrollTimer;
+  Timer? _scrollCheckTimer;
 
   bool _backPressed = false;
 
   @override
   void initState() {
     super.initState();
+    debugPrint(
+        "_subtitleLineBlocLogs: ${widget.listening.shadowingPath} shadowing path");
     _subtitleLineBloc
         .add(SubtitleEvent.parseSubtitleLine(widget.listening.shadowingPath));
     _controller = YoutubePlayerController(
-      initialVideoId: "H14bBuluwB8",
-      flags: const YoutubePlayerFlags(
+      initialVideoId: widget.listening.youtubeId,
+      flags: YoutubePlayerFlags(
         mute: false,
         autoPlay: false,
         hideThumbnail: true,
@@ -72,53 +77,93 @@ class _ShadowingPageState extends State<ShadowingPage> {
         forceHD: false,
         enableCaption: false,
         hideControls: true,
-        startAt: 0,
-        endAt: 374,
+        startAt: widget.listening.start,
+        endAt: widget.listening.end,
       ),
-    )..addListener(
-        () {
-          if (mounted) {
-            setState(() {
-              _position = _controller.value.position;
-              debugPrint(
-                  "_currentPlayingPosition: ${_position.inSeconds} in Seconds!");
-            });
+    )..addListener(_onPlayerPositionChanged);
+  }
 
-            if (_isUserScrolling) {
-              return;
-            }
-            final currentIndex = _subtitles.indexWhere((line) {
-              final start = Duration(milliseconds: (line.start * 1000).toInt());
-              final end = Duration(milliseconds: (line.end * 1000).toInt());
-              return _position >= start && _position <= end;
-            });
+  void _onPlayerPositionChanged() {
+    if (!mounted) return;
 
-            if (currentIndex == -1 || currentIndex == _lastScrolledIndex) {
-              return;
-            }
+    // Update position without setState
+    _positionNotifier.value = _controller.value.position;
 
-            final visibleIndexes = _itemPositionsListener.itemPositions.value
-                .map((position) => position.index)
-                .toList()
-              ..sort();
-            final firstTwoVisibleIndexes = visibleIndexes.take(2).toList();
+    // Debounce scroll checks to avoid excessive computation
+    _scrollCheckTimer?.cancel();
+    _scrollCheckTimer = Timer(const Duration(milliseconds: 100), () {
+      if (!mounted || _isUserScrolling) return;
 
-            if (!firstTwoVisibleIndexes.contains(currentIndex)) {
-              _lastScrolledIndex = currentIndex;
-              _appScrolling = true;
-              _itemScrollController
-                  .scrollTo(
-                    index: currentIndex,
-                    duration: const Duration(milliseconds: 700),
-                    alignment: 0.3,
-                  )
-                  .then(
-                    (_) => _appScrolling = false,
-                  );
-            }
-          }
-        },
-      );
+      final currentIndex = _findCurrentSubtitleIndex();
+
+      if (currentIndex == -1 || currentIndex == _lastScrolledIndex) {
+        return;
+      }
+
+      final visibleIndexes = _itemPositionsListener.itemPositions.value
+          .map((position) => position.index)
+          .toList()
+        ..sort();
+      final firstTwoVisibleIndexes = visibleIndexes.take(2).toList();
+
+      if (!firstTwoVisibleIndexes.contains(currentIndex)) {
+        setState(() {
+          _lastScrolledIndex = currentIndex;
+        });
+        _scrollToIndex(currentIndex);
+      }
+    });
+  }
+
+  // Binary search for better performance with large subtitle lists
+  int _findCurrentSubtitleIndex() {
+    if (_subtitles.isEmpty) return -1;
+
+    final currentMs = _positionNotifier.value.inMilliseconds;
+
+    // For small lists (< 50), linear search is fine and simpler
+    if (_subtitles.length < 50) {
+      for (int i = 0; i < _subtitles.length; i++) {
+        final startMs = (_subtitles[i].start * 1000).toInt();
+        final endMs = (_subtitles[i].end * 1000).toInt();
+        if (currentMs >= startMs && currentMs <= endMs) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    // Binary search for larger lists
+    int left = 0;
+    int right = _subtitles.length - 1;
+
+    while (left <= right) {
+      int mid = (left + right) ~/ 2;
+      final startMs = (_subtitles[mid].start * 1000).toInt();
+      final endMs = (_subtitles[mid].end * 1000).toInt();
+
+      if (currentMs >= startMs && currentMs <= endMs) {
+        return mid;
+      } else if (currentMs < startMs) {
+        right = mid - 1;
+      } else {
+        left = mid + 1;
+      }
+    }
+    return -1;
+  }
+
+  void _scrollToIndex(int index) {
+    _appScrolling = true;
+    _itemScrollController
+        .scrollTo(
+      index: index,
+      duration: const Duration(milliseconds: 700),
+      alignment: 0.3,
+    )
+        .then((_) {
+      _appScrolling = false;
+    });
   }
 
   String getHighlightTypeLabel(HightlightTypes type) {
@@ -138,9 +183,12 @@ class _ShadowingPageState extends State<ShadowingPage> {
 
   @override
   void dispose() {
+    _scrollTimer?.cancel();
+    _scrollCheckTimer?.cancel();
     _positionSub?.cancel();
     _playerStateSubscription?.cancel();
     _controller.dispose();
+    _positionNotifier.dispose();
     super.dispose();
   }
 
@@ -254,29 +302,36 @@ class _ShadowingPageState extends State<ShadowingPage> {
                       ),
                       body: Column(
                         children: [
-                          ShadowingPlayer(
-                            listening: widget.listening,
-                            controller: _controller,
-                            player: player,
-                            position: _position,
-                            totalDuration:
-                                Duration(seconds: widget.listening.end),
-                            onTogglePlay: () {
-                              final loading = _controller.value.playerState ==
-                                      PlayerState.buffering ||
-                                  !_controller.value.isReady;
-                              if (loading) {
-                                return;
-                              }
-                              if (_controller.value.playerState ==
-                                  PlayerState.ended) {
-                                _controller.seekTo(Duration.zero);
-                                _controller.play();
-                              } else if (_controller.value.isPlaying) {
-                                _controller.pause();
-                              } else {
-                                _controller.play();
-                              }
+                          // Use ValueListenableBuilder for position-dependent widget
+                          ValueListenableBuilder<Duration>(
+                            valueListenable: _positionNotifier,
+                            builder: (context, position, child) {
+                              return ShadowingPlayer(
+                                listening: widget.listening,
+                                controller: _controller,
+                                player: player,
+                                position: position,
+                                totalDuration:
+                                    Duration(seconds: widget.listening.end),
+                                onTogglePlay: () {
+                                  final loading =
+                                      _controller.value.playerState ==
+                                              PlayerState.buffering ||
+                                          !_controller.value.isReady;
+                                  if (loading) {
+                                    return;
+                                  }
+                                  if (_controller.value.playerState ==
+                                      PlayerState.ended) {
+                                    _controller.seekTo(Duration.zero);
+                                    _controller.play();
+                                  } else if (_controller.value.isPlaying) {
+                                    _controller.pause();
+                                  } else {
+                                    _controller.play();
+                                  }
+                                },
+                              );
                             },
                           ),
                           Expanded(
@@ -295,7 +350,6 @@ class _ShadowingPageState extends State<ShadowingPage> {
                                   onNotification: (scrollNotification) {
                                     if (scrollNotification
                                         is UserScrollNotification) {
-                                      // Called when user starts or stops scrolling
                                       if (scrollNotification.direction !=
                                           ScrollDirection.idle) {
                                         _isUserScrolling = true;
@@ -303,7 +357,6 @@ class _ShadowingPageState extends State<ShadowingPage> {
                                         _scrollTimer = Timer(
                                             const Duration(milliseconds: 1500),
                                             () {
-                                          // User has stopped scrolling
                                           setState(() {
                                             _isUserScrolling = false;
                                           });
@@ -314,64 +367,74 @@ class _ShadowingPageState extends State<ShadowingPage> {
                                     }
                                     return false;
                                   },
-                                  child: ScrollablePositionedList.separated(
-                                    itemScrollController: _itemScrollController,
-                                    itemPositionsListener:
-                                        _itemPositionsListener,
-                                    itemCount: subtitleLines.length,
-                                    padding: const EdgeInsets.only(top: 12),
-                                    itemBuilder: (context, index) {
-                                      debugPrint(
-                                          "_scrollablePositionIndex: $index index");
-                                      final line = subtitleLines[index];
-                                      final nextLine =
-                                          (index < subtitleLines.length - 1)
-                                              ? subtitleLines[index + 1]
-                                              : null;
-                                      final startTime = Duration(
-                                          milliseconds:
-                                              (line.start * 1000).toInt());
-                                      final endTime = Duration(
-                                          milliseconds:
-                                              (line.end * 1000).toInt());
-                                      String formatDuration(Duration d) {
-                                        return "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
-                                      }
+                                  child: ValueListenableBuilder<Duration>(
+                                    valueListenable: _positionNotifier,
+                                    builder: (context, position, child) {
+                                      return ScrollablePositionedList.separated(
+                                        itemScrollController:
+                                            _itemScrollController,
+                                        itemPositionsListener:
+                                            _itemPositionsListener,
+                                        itemCount: subtitleLines.length,
+                                        padding: const EdgeInsets.only(top: 12),
+                                        itemBuilder: (context, index) {
+                                          final line = subtitleLines[index];
+                                          final nextLine =
+                                              (index < subtitleLines.length - 1)
+                                                  ? subtitleLines[index + 1]
+                                                  : null;
+                                          final startTime = Duration(
+                                              milliseconds:
+                                                  (line.start * 1000).toInt());
+                                          final endTime = Duration(
+                                              milliseconds:
+                                                  (line.end * 1000).toInt());
+                                          String formatDuration(Duration d) {
+                                            return "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
+                                          }
 
-                                      return Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 16, right: 16, bottom: 12),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Row(
+                                          return Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 16,
+                                                right: 16,
+                                                bottom: 12),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
                                               children: [
-                                                Text(formatDuration(startTime),
-                                                    style: PmpTextStyles.sub
-                                                        .copyWith(
-                                                            color:
-                                                                Colors.white)),
-                                                Text(" --> ",
-                                                    style: PmpTextStyles.sub),
-                                                Text(formatDuration(endTime),
-                                                    style: PmpTextStyles.sub
-                                                        .copyWith(
-                                                            color:
-                                                                Colors.white)),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                        formatDuration(
+                                                            startTime),
+                                                        style: PmpTextStyles.sub
+                                                            .copyWith(
+                                                                color: Colors
+                                                                    .white)),
+                                                    Text(" --> ",
+                                                        style:
+                                                            PmpTextStyles.sub),
+                                                    Text(
+                                                        formatDuration(endTime),
+                                                        style: PmpTextStyles.sub
+                                                            .copyWith(
+                                                                color: Colors
+                                                                    .white)),
+                                                  ],
+                                                ),
+                                                _buildHighlightWidget(
+                                                  line,
+                                                  nextLine,
+                                                  position,
+                                                ),
                                               ],
                                             ),
-                                            _buildHighlightWidget(
-                                              line,
-                                              nextLine,
-                                              _position,
-                                            ),
-                                          ],
-                                        ),
+                                          );
+                                        },
+                                        separatorBuilder: (_, __) =>
+                                            const SizedBox(height: 12),
                                       );
                                     },
-                                    separatorBuilder: (_, __) =>
-                                        const SizedBox(height: 12),
                                   ),
                                 );
                               },
@@ -422,7 +485,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
             _controller.seekTo(seekPosition);
           },
         );
-      case HightlightTypes.sentence: // new
+      case HightlightTypes.sentence:
         return HighlightSentence(
           subtitleLine: subtitleLine,
           nextSubtitleLine: nextSubtitleLine,

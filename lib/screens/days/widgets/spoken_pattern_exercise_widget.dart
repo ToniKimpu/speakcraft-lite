@@ -51,12 +51,14 @@ class _SpokenPatternExerciseWidgetState
   @override
   void initState() {
     super.initState();
-    final words = widget.patternExercise.englishText.trim().split(' ');
+    final text =
+        widget.patternExercise.words ?? widget.patternExercise.englishText;
+    final words = text.trim().split(' ');
     wordChips = words.map((w) => WordItem(w)).toList();
     wordChips.shuffle();
 
-    final text = widget.patternExercise.burmeseText.trim();
-    final burmeseWords = text.split(' ');
+    final burmeseText = widget.patternExercise.burmeseText.trim();
+    final burmeseWords = burmeseText.split(' ');
     wordsWithQuotes = ['“', ...burmeseWords, '”'];
   }
 

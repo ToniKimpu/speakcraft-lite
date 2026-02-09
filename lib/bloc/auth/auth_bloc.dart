@@ -71,7 +71,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           'get_user',
           params: {'user_id_param': user.id},
         ).single();
-        debugPrint("_mapAuthCheckToState: dataRes: ${dataRes.toString()}");
         final appUser = AppUser.fromJson(dataRes);
         GlobalAppState().currentUser = appUser;
         if (!appUser.isPremiumUser!) {

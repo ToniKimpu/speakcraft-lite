@@ -34,6 +34,7 @@ mixin _$PatternExercise {
   @JsonKey(name: 'vocabularies')
   List<PatternVocabulary> get vocabularies =>
       throw _privateConstructorUsedError;
+  String? get words => throw _privateConstructorUsedError;
   String? get userAnswer => throw _privateConstructorUsedError;
 
   /// Serializes this PatternExercise to a JSON map.
@@ -60,6 +61,7 @@ abstract class $PatternExerciseCopyWith<$Res> {
       @JsonKey(name: 'pattern_id') int? patternId,
       String? pattern,
       @JsonKey(name: 'vocabularies') List<PatternVocabulary> vocabularies,
+      String? words,
       String? userAnswer});
 }
 
@@ -85,6 +87,7 @@ class _$PatternExerciseCopyWithImpl<$Res, $Val extends PatternExercise>
     Object? patternId = freezed,
     Object? pattern = freezed,
     Object? vocabularies = null,
+    Object? words = freezed,
     Object? userAnswer = freezed,
   }) {
     return _then(_value.copyWith(
@@ -116,6 +119,10 @@ class _$PatternExerciseCopyWithImpl<$Res, $Val extends PatternExercise>
           ? _value.vocabularies
           : vocabularies // ignore: cast_nullable_to_non_nullable
               as List<PatternVocabulary>,
+      words: freezed == words
+          ? _value.words
+          : words // ignore: cast_nullable_to_non_nullable
+              as String?,
       userAnswer: freezed == userAnswer
           ? _value.userAnswer
           : userAnswer // ignore: cast_nullable_to_non_nullable
@@ -140,6 +147,7 @@ abstract class _$$PatternExerciseImplCopyWith<$Res>
       @JsonKey(name: 'pattern_id') int? patternId,
       String? pattern,
       @JsonKey(name: 'vocabularies') List<PatternVocabulary> vocabularies,
+      String? words,
       String? userAnswer});
 }
 
@@ -163,6 +171,7 @@ class __$$PatternExerciseImplCopyWithImpl<$Res>
     Object? patternId = freezed,
     Object? pattern = freezed,
     Object? vocabularies = null,
+    Object? words = freezed,
     Object? userAnswer = freezed,
   }) {
     return _then(_$PatternExerciseImpl(
@@ -194,6 +203,10 @@ class __$$PatternExerciseImplCopyWithImpl<$Res>
           ? _value._vocabularies
           : vocabularies // ignore: cast_nullable_to_non_nullable
               as List<PatternVocabulary>,
+      words: freezed == words
+          ? _value.words
+          : words // ignore: cast_nullable_to_non_nullable
+              as String?,
       userAnswer: freezed == userAnswer
           ? _value.userAnswer
           : userAnswer // ignore: cast_nullable_to_non_nullable
@@ -214,6 +227,7 @@ class _$PatternExerciseImpl implements _PatternExercise {
       this.pattern,
       @JsonKey(name: 'vocabularies')
       required final List<PatternVocabulary> vocabularies,
+      this.words,
       this.userAnswer})
       : _vocabularies = vocabularies;
 
@@ -247,11 +261,13 @@ class _$PatternExerciseImpl implements _PatternExercise {
   }
 
   @override
+  final String? words;
+  @override
   final String? userAnswer;
 
   @override
   String toString() {
-    return 'PatternExercise(id: $id, burmeseText: $burmeseText, englishText: $englishText, audioPath: $audioPath, patternId: $patternId, pattern: $pattern, vocabularies: $vocabularies, userAnswer: $userAnswer)';
+    return 'PatternExercise(id: $id, burmeseText: $burmeseText, englishText: $englishText, audioPath: $audioPath, patternId: $patternId, pattern: $pattern, vocabularies: $vocabularies, words: $words, userAnswer: $userAnswer)';
   }
 
   @override
@@ -271,6 +287,7 @@ class _$PatternExerciseImpl implements _PatternExercise {
             (identical(other.pattern, pattern) || other.pattern == pattern) &&
             const DeepCollectionEquality()
                 .equals(other._vocabularies, _vocabularies) &&
+            (identical(other.words, words) || other.words == words) &&
             (identical(other.userAnswer, userAnswer) ||
                 other.userAnswer == userAnswer));
   }
@@ -286,6 +303,7 @@ class _$PatternExerciseImpl implements _PatternExercise {
       patternId,
       pattern,
       const DeepCollectionEquality().hash(_vocabularies),
+      words,
       userAnswer);
 
   /// Create a copy of PatternExercise
@@ -315,6 +333,7 @@ abstract class _PatternExercise implements PatternExercise {
       final String? pattern,
       @JsonKey(name: 'vocabularies')
       required final List<PatternVocabulary> vocabularies,
+      final String? words,
       final String? userAnswer}) = _$PatternExerciseImpl;
 
   factory _PatternExercise.fromJson(Map<String, dynamic> json) =
@@ -340,6 +359,8 @@ abstract class _PatternExercise implements PatternExercise {
   @override
   @JsonKey(name: 'vocabularies')
   List<PatternVocabulary> get vocabularies;
+  @override
+  String? get words;
   @override
   String? get userAnswer;
 

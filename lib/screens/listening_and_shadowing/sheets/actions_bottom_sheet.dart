@@ -68,68 +68,64 @@ class ActionsBottomSheet extends StatelessWidget {
                   );
                 },
               ),
-            if (listening.sentenceExplanationPath.isNotEmpty)
-              Divider(
-                height: 1,
-                color: Colors.white.withValues(alpha: 0.2),
-              ),
-            if (listening.sentenceExplanationPath.isNotEmpty)
-              _ActionItem(
-                icon: Icons.lightbulb_outline,
-                label: 'See Explanations',
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.pushNamed(
-                      context, PmpRoutes.sentenceExplanationList,
-                      arguments: {
-                        "listening": listening,
-                      });
-                },
-              ),
+
             Divider(
               height: 1,
               color: Colors.white.withValues(alpha: 0.2),
             ),
-            if (listening.hasVocabularies)
-              Divider(
-                height: 1,
-                color: Colors.white.withValues(alpha: 0.2),
-              ),
-            if (listening.hasVocabularies)
-              _ActionItem(
-                icon: Icons.lightbulb_outline,
-                label: 'Learn Vocabularies',
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.pushNamed(
-                    context,
-                    PmpRoutes.vocabularyListeningPage,
+
+            _ActionItem(
+              icon: Icons.lightbulb_outline,
+              label: 'See Explanations',
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, PmpRoutes.sentenceExplanationList,
                     arguments: {
                       "listening": listening,
-                    },
-                  );
-                },
-              ),
-            if (listening.multipleChoicePath.trim().isNotEmpty)
-              Divider(
-                height: 1,
-                color: Colors.white.withValues(alpha: 0.2),
-              ),
-            if (listening.multipleChoicePath.trim().isNotEmpty)
-              _ActionItem(
-                icon: Icons.check_circle_outline,
-                label: 'Practice Now',
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.pushNamed(
-                    context,
-                    PmpRoutes.listeningSentencePracticeList,
-                    arguments: {
-                      "listening": listening,
-                    },
-                  );
-                },
-              ),
+                    });
+              },
+            ),
+            // if (listening.hasVocabularies)
+            //   Divider(
+            //     height: 1,
+            //     color: Colors.white.withValues(alpha: 0.2),
+            //   ),
+            // if (listening.hasVocabularies)
+            //   _ActionItem(
+            //     icon: Icons.lightbulb_outline,
+            //     label: 'Learn Vocabularies',
+            //     onTap: () {
+            //       Navigator.of(context).pop();
+            //       Navigator.pushNamed(
+            //         context,
+            //         PmpRoutes.vocabularyListeningPage,
+            //         arguments: {
+            //           "listening": listening,
+            //         },
+            //       );
+            //     },
+            //   ),
+
+            // if (listening.multipleChoicePath.trim().isNotEmpty)
+            //   Divider(
+            //     height: 1,
+            //     color: Colors.white.withValues(alpha: 0.2),
+            //   ),
+            // if (listening.multipleChoicePath.trim().isNotEmpty)
+            //   _ActionItem(
+            //     icon: Icons.check_circle_outline,
+            //     label: 'Practice Now',
+            //     onTap: () {
+            //       Navigator.of(context).pop();
+            //       Navigator.pushNamed(
+            //         context,
+            //         PmpRoutes.listeningSentencePracticeList,
+            //         arguments: {
+            //           "listening": listening,
+            //         },
+            //       );
+            //     },
+            //   ),
             if (listening.shadowingPath.trim().isNotEmpty)
               Divider(
                 height: 1,

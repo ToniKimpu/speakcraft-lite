@@ -158,24 +158,27 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                           ),
                         ),
                       ),
-                      FooterWidget(
-                        totalPage: _spokenPatterns.length,
-                        currentPage: _currentPage,
-                        // audioPlayer: _audioPlayer,
-                        // nextEnabled: _doneIds
-                        //     .contains(_spokenPatterns[_currentPage].id),
-                        nextEnabled: true,
-                        onPageChanged: (newPage) {
-                          _audioPlayer.stop();
-                          setState(() {
-                            _currentPage = newPage;
-                            if (_spokenPatterns[_currentPage].audioPath !=
-                                null) {
-                              _audioPlayer.setUrl(
-                                  _spokenPatterns[_currentPage].audioPath!);
-                            }
-                          });
-                        },
+                      Padding(
+                        padding: const EdgeInsets.only(top: 12),
+                        child: FooterWidget(
+                          totalPage: _spokenPatterns.length,
+                          currentPage: _currentPage,
+                          // audioPlayer: _audioPlayer,
+                          // nextEnabled: _doneIds
+                          //     .contains(_spokenPatterns[_currentPage].id),
+                          nextEnabled: true,
+                          onPageChanged: (newPage) {
+                            _audioPlayer.stop();
+                            setState(() {
+                              _currentPage = newPage;
+                              if (_spokenPatterns[_currentPage].audioPath !=
+                                  null) {
+                                _audioPlayer.setUrl(
+                                    _spokenPatterns[_currentPage].audioPath!);
+                              }
+                            });
+                          },
+                        ),
                       ),
                     ],
                   );
