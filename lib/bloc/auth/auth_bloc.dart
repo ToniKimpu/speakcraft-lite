@@ -77,7 +77,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           emit(const AuthState.onFreeUser());
           return;
         }
-
         final appVersion = await supabase
             .from('app_versions')
             .select()

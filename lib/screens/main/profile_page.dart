@@ -75,40 +75,40 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const SizedBox(height: 4),
                 const AppVersionWidget(),
-                const SizedBox(height: 12),
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "$usedTokens",
-                        style: PmpTextStyles.body2Semi
-                            .copyWith(color: Colors.amberAccent),
-                      ),
-                      TextSpan(
-                        text: " / $maxTokens ",
-                        style: PmpTextStyles.body2Regular
-                            .copyWith(color: Colors.white),
-                      ),
-                      TextSpan(
-                        text: "tokens used",
-                        style: PmpTextStyles.body2Regular
-                            .copyWith(color: Colors.grey[400]),
-                      ),
-                    ],
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 8),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
-                  child: LinearProgressIndicator(
-                    value: progress,
-                    backgroundColor: Colors.white.withValues(alpha: 0.1),
-                    valueColor:
-                        const AlwaysStoppedAnimation<Color>(Colors.amberAccent),
-                    minHeight: 6,
-                  ),
-                ),
+                // const SizedBox(height: 12),
+                // Text.rich(
+                //   TextSpan(
+                //     children: [
+                //       TextSpan(
+                //         text: "$usedTokens",
+                //         style: PmpTextStyles.body2Semi
+                //             .copyWith(color: Colors.amberAccent),
+                //       ),
+                //       TextSpan(
+                //         text: " / $maxTokens ",
+                //         style: PmpTextStyles.body2Regular
+                //             .copyWith(color: Colors.white),
+                //       ),
+                //       TextSpan(
+                //         text: "tokens used",
+                //         style: PmpTextStyles.body2Regular
+                //             .copyWith(color: Colors.grey[400]),
+                //       ),
+                //     ],
+                //   ),
+                //   textAlign: TextAlign.center,
+                // ),
+                // const SizedBox(height: 8),
+                // ClipRRect(
+                //   borderRadius: BorderRadius.circular(4),
+                //   child: LinearProgressIndicator(
+                //     value: progress,
+                //     backgroundColor: Colors.white.withValues(alpha: 0.1),
+                //     valueColor:
+                //         const AlwaysStoppedAnimation<Color>(Colors.amberAccent),
+                //     minHeight: 6,
+                //   ),
+                // ),
               ],
             ),
           ),
