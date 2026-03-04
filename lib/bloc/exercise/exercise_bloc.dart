@@ -5,6 +5,8 @@ import 'package:pmp_english/core/logger/app_logger.dart';
 import '../../model/exercise/exercise.dart';
 import '../../services/supabase_service.dart';
 
+import 'package:json_annotation/json_annotation.dart';
+
 part 'exercise_bloc.freezed.dart';
 
 @freezed

@@ -1,6 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:json_annotation/json_annotation.dart';
+
 part 'youtube_player_bloc.freezed.dart';
 
 @freezed

@@ -3,9 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 import 'package:pmp_english/bloc/app_ui/app_ui_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/screens/practice_with_ai/pages/ai_response_list.dart';
 import 'package:pmp_english/screens/practice_with_ai/pages/user_correct_list.dart';
 import 'package:pmp_english/screens/practice_with_ai/widgets/ai_practice_tab_selector.dart';
@@ -72,7 +74,7 @@ class _AiSentencePracticeListScreenState
           floatingActionButton: FloatingActionButton.extended(
             backgroundColor: Colors.blue,
             onPressed: () {
-              if (!GlobalAppState().tokenAvailable()) {
+              if (!(sl<ValueNotifier<AppUser>>().value.totalTokenUsed < 500000)) {
                 showErrorSnackbar("You don't have enough tokens");
                 return;
               }

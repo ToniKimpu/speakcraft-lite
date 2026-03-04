@@ -21,7 +21,6 @@ import 'core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/core/logger/dev_logger.dart';
 import 'package:pmp_english/core/logger/crashlytics_logger.dart';
-import 'global_app_state.dart';
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
@@ -177,9 +176,9 @@ Future<void> _populateDeviceInfo() async {
   final di = DeviceInfoPlugin();
   if (Platform.isAndroid) {
     final androidDeviceInfo = await di.androidInfo;
-    GlobalAppState().deviceID = androidDeviceInfo.id;
+    sl<ValueNotifier<String?>>(instanceName: 'deviceId').value = androidDeviceInfo.id;
   } else {
     final iosDeviceInfo = await di.iosInfo;
-    GlobalAppState().deviceID = iosDeviceInfo.identifierForVendor;
+    sl<ValueNotifier<String?>>(instanceName: 'deviceId').value = iosDeviceInfo.identifierForVendor;
   }
 }

@@ -1,10 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/model/translation/translation.dart';
 
-import '../../global_app_state.dart';
 import '../../services/supabase_service.dart';
+
+import 'package:json_annotation/json_annotation.dart';
 
 part 'translate_user_answer_bloc.freezed.dart';
 
@@ -40,11 +44,11 @@ class TranslateUserAnswerBloc
                 await supabase.from('translation_user_answer').insert({
                   'answer': userAnswer.userAnswer,
                   'translation_id': userAnswer.id,
-                  'user_id': GlobalAppState().currentUser.id,
+                  'user_id': sl<ValueNotifier<AppUser>>().value.id,
                 });
               }
               await supabase.from('translation_days_users_relation').insert({
-                'user_id': GlobalAppState().currentUser.id,
+                'user_id': sl<ValueNotifier<AppUser>>().value.id,
                 'translation_day_id': completedDayId,
               });
               emit(const TranslateUserAnswerState.onSuccess());

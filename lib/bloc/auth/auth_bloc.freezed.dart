@@ -129,15 +129,23 @@ class __$$AuthCheckImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AuthCheckImpl implements _AuthCheck {
+class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   const _$AuthCheckImpl({this.withLoading});
 
   @override
   final bool? withLoading;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.authCheck(withLoading: $withLoading)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.authCheck'))
+      ..add(DiagnosticsProperty('withLoading', withLoading));
   }
 
   @override
@@ -293,7 +301,9 @@ class __$$LoginWithEmailImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoginWithEmailImpl implements _LoginWithEmail {
+class _$LoginWithEmailImpl
+    with DiagnosticableTreeMixin
+    implements _LoginWithEmail {
   const _$LoginWithEmailImpl(this.email, this.password);
 
   @override
@@ -302,8 +312,17 @@ class _$LoginWithEmailImpl implements _LoginWithEmail {
   final String password;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.loginWithEmail(email: $email, password: $password)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.loginWithEmail'))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('password', password));
   }
 
   @override
@@ -473,7 +492,9 @@ class __$$SignUpWithEmailImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SignUpWithEmailImpl implements _SignUpWithEmail {
+class _$SignUpWithEmailImpl
+    with DiagnosticableTreeMixin
+    implements _SignUpWithEmail {
   const _$SignUpWithEmailImpl(
       this.email, this.password, this.name, this.profilePath);
 
@@ -487,8 +508,19 @@ class _$SignUpWithEmailImpl implements _SignUpWithEmail {
   final String? profilePath;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.signupWithEmail(email: $email, password: $password, name: $name, profilePath: $profilePath)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.signupWithEmail'))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('password', password))
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('profilePath', profilePath));
   }
 
   @override
@@ -635,12 +667,18 @@ class __$$LogoutImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LogoutImpl implements _Logout {
+class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   const _$LogoutImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthEvent.logout()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthEvent.logout'));
   }
 
   @override
@@ -868,12 +906,18 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.initial'));
   }
 
   @override
@@ -1021,12 +1065,18 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   const _$LoadingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.loading'));
   }
 
   @override
@@ -1174,12 +1224,20 @@ class __$$AuthenticatedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AuthenticatedImpl implements _Authenticated {
+class _$AuthenticatedImpl
+    with DiagnosticableTreeMixin
+    implements _Authenticated {
   const _$AuthenticatedImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.authenticated()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.authenticated'));
   }
 
   @override
@@ -1327,12 +1385,20 @@ class __$$UnauthenticatedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UnauthenticatedImpl implements _Unauthenticated {
+class _$UnauthenticatedImpl
+    with DiagnosticableTreeMixin
+    implements _Unauthenticated {
   const _$UnauthenticatedImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.unauthenticated()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.unauthenticated'));
   }
 
   @override
@@ -1480,12 +1546,20 @@ class __$$DeviceIdFailedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeviceIdFailedImpl implements _DeviceIdFailed {
+class _$DeviceIdFailedImpl
+    with DiagnosticableTreeMixin
+    implements _DeviceIdFailed {
   const _$DeviceIdFailedImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.deviceIdFailed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.deviceIdFailed'));
   }
 
   @override
@@ -1633,12 +1707,18 @@ class __$$OnFreeUserImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnFreeUserImpl implements _OnFreeUser {
+class _$OnFreeUserImpl with DiagnosticableTreeMixin implements _OnFreeUser {
   const _$OnFreeUserImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.onFreeUser()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.onFreeUser'));
   }
 
   @override
@@ -1786,12 +1866,18 @@ class __$$OnNewPathImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnNewPathImpl implements _OnNewPath {
+class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
   const _$OnNewPathImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.onNewPath()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.onNewPath'));
   }
 
   @override
@@ -1953,7 +2039,7 @@ class __$$OnNewVersionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnNewVersionImpl implements _OnNewVersion {
+class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
   const _$OnNewVersionImpl(final Map<String, dynamic> appVersion)
       : _appVersion = appVersion;
 
@@ -1966,8 +2052,16 @@ class _$OnNewVersionImpl implements _OnNewVersion {
   }
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.onNewVersion(appVersion: $appVersion)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthState.onNewVersion'))
+      ..add(DiagnosticsProperty('appVersion', appVersion));
   }
 
   @override
@@ -2150,15 +2244,23 @@ class __$$SocketErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SocketErrorImpl implements _SocketError {
+class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
   const _$SocketErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.socketError(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthState.socketError'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -2338,15 +2440,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AuthState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override

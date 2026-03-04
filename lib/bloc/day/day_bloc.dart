@@ -9,6 +9,8 @@ import 'package:pmp_english/repositories/day/day_repository.dart';
 
 import '../../model/day/day.dart';
 
+import 'package:json_annotation/json_annotation.dart';
+
 part 'day_bloc.freezed.dart';
 
 @freezed

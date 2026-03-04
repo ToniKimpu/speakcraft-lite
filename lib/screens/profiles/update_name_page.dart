@@ -1,8 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/user_bloc/user_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
@@ -24,7 +26,7 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
   void initState() {
     super.initState();
     _nameController =
-        TextEditingController(text: GlobalAppState().currentUser.name);
+        TextEditingController(text: sl<ValueNotifier<AppUser>>().value.name);
   }
 
   @override
@@ -91,7 +93,7 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
                           return;
                         }
                         if (_nameController.text ==
-                            GlobalAppState().currentUser.name) {
+                            sl<ValueNotifier<AppUser>>().value.name) {
                           showErrorSnackbar('Name is not changed');
                           return;
                         }

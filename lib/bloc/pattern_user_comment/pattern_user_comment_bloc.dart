@@ -1,11 +1,15 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/bloc/user_comment_reply/user_comment_reply.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 
-import '../../global_app_state.dart';
 import '../../model/pattern_user_comment/pattern_user_comment.dart';
 import '../../services/supabase_service.dart';
+
+import 'package:json_annotation/json_annotation.dart';
 
 part 'pattern_user_comment_bloc.freezed.dart';
 
@@ -97,7 +101,7 @@ class PatternUserCommentBloc
     try {
       final dataRes = await supabase.from('pattern_user_comments').insert({
         'pattern_id': patternId,
-        'user_id': GlobalAppState().currentUser.id,
+        'user_id': sl<ValueNotifier<AppUser>>().value.id,
         'comment': txtComment,
       }).select();
       if (dataRes.isEmpty) {
@@ -141,7 +145,7 @@ class PatternUserCommentBloc
     try {
       final dataRes = await supabase.from('user_comment_replies').insert({
         'pattern_user_comment_id': commentId,
-        'user_id': GlobalAppState().currentUser.id,
+        'user_id': sl<ValueNotifier<AppUser>>().value.id,
         'reply': reply,
       }).select();
       if (dataRes.isEmpty) {

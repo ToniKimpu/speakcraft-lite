@@ -142,7 +142,7 @@ class __$$LoadCommentsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadCommentsImpl implements _LoadComments {
+class _$LoadCommentsImpl with DiagnosticableTreeMixin implements _LoadComments {
   const _$LoadCommentsImpl(this.withLoading, this.patternId);
 
   @override
@@ -151,8 +151,17 @@ class _$LoadCommentsImpl implements _LoadComments {
   final int patternId;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentEvent.loadComments(withLoading: $withLoading, patternId: $patternId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentEvent.loadComments'))
+      ..add(DiagnosticsProperty('withLoading', withLoading))
+      ..add(DiagnosticsProperty('patternId', patternId));
   }
 
   @override
@@ -318,7 +327,7 @@ class __$$LoadRepliesImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadRepliesImpl implements _LoadReplies {
+class _$LoadRepliesImpl with DiagnosticableTreeMixin implements _LoadReplies {
   const _$LoadRepliesImpl(this.withLoading, this.commentId);
 
   @override
@@ -327,8 +336,17 @@ class _$LoadRepliesImpl implements _LoadReplies {
   final int commentId;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentEvent.loadReplies(withLoading: $withLoading, commentId: $commentId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentEvent.loadReplies'))
+      ..add(DiagnosticsProperty('withLoading', withLoading))
+      ..add(DiagnosticsProperty('commentId', commentId));
   }
 
   @override
@@ -494,7 +512,7 @@ class __$$AddCommentImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddCommentImpl implements _AddComment {
+class _$AddCommentImpl with DiagnosticableTreeMixin implements _AddComment {
   const _$AddCommentImpl(this.patternId, this.comment);
 
   @override
@@ -503,8 +521,17 @@ class _$AddCommentImpl implements _AddComment {
   final String comment;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentEvent.addComment(patternId: $patternId, comment: $comment)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentEvent.addComment'))
+      ..add(DiagnosticsProperty('patternId', patternId))
+      ..add(DiagnosticsProperty('comment', comment));
   }
 
   @override
@@ -669,7 +696,7 @@ class __$$AddReplyImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddReplyImpl implements _AddReply {
+class _$AddReplyImpl with DiagnosticableTreeMixin implements _AddReply {
   const _$AddReplyImpl(this.commentId, this.reply);
 
   @override
@@ -678,8 +705,17 @@ class _$AddReplyImpl implements _AddReply {
   final String reply;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentEvent.addReply(commentId: $commentId, reply: $reply)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentEvent.addReply'))
+      ..add(DiagnosticsProperty('commentId', commentId))
+      ..add(DiagnosticsProperty('reply', reply));
   }
 
   @override
@@ -839,15 +875,26 @@ class __$$DeleteCommentImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteCommentImpl implements _DeleteComment {
+class _$DeleteCommentImpl
+    with DiagnosticableTreeMixin
+    implements _DeleteComment {
   const _$DeleteCommentImpl(this.commentId);
 
   @override
   final int commentId;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentEvent.deleteComment(commentId: $commentId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'PatternUserCommentEvent.deleteComment'))
+      ..add(DiagnosticsProperty('commentId', commentId));
   }
 
   @override
@@ -1004,15 +1051,23 @@ class __$$DeleteReplyImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteReplyImpl implements _DeleteReply {
+class _$DeleteReplyImpl with DiagnosticableTreeMixin implements _DeleteReply {
   const _$DeleteReplyImpl(this.replyId);
 
   @override
   final int replyId;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentEvent.deleteReply(replyId: $replyId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentEvent.deleteReply'))
+      ..add(DiagnosticsProperty('replyId', replyId));
   }
 
   @override
@@ -1260,12 +1315,19 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentState.initial'));
   }
 
   @override
@@ -1407,12 +1469,19 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   const _$LoadingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentState.loading'));
   }
 
   @override
@@ -1554,12 +1623,19 @@ class __$$CommentingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CommentingImpl implements _Commenting {
+class _$CommentingImpl with DiagnosticableTreeMixin implements _Commenting {
   const _$CommentingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.commenting()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentState.commenting'));
   }
 
   @override
@@ -1701,12 +1777,19 @@ class __$$DeletingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeletingImpl implements _Deleting {
+class _$DeletingImpl with DiagnosticableTreeMixin implements _Deleting {
   const _$DeletingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.deleting()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentState.deleting'));
   }
 
   @override
@@ -1862,7 +1945,7 @@ class __$$LoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadedImpl implements _Loaded {
+class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
   const _$LoadedImpl(final List<PatternUserComment> comments)
       : _comments = comments;
 
@@ -1875,8 +1958,16 @@ class _$LoadedImpl implements _Loaded {
   }
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.loaded(comments: $comments)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentState.loaded'))
+      ..add(DiagnosticsProperty('comments', comments));
   }
 
   @override
@@ -2051,7 +2142,7 @@ class __$$ReplyLoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ReplyLoadedImpl implements _ReplyLoaded {
+class _$ReplyLoadedImpl with DiagnosticableTreeMixin implements _ReplyLoaded {
   const _$ReplyLoadedImpl(final List<UserCommentReply> replies)
       : _replies = replies;
 
@@ -2064,8 +2155,17 @@ class _$ReplyLoadedImpl implements _ReplyLoaded {
   }
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.repliesLoaded(replies: $replies)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'PatternUserCommentState.repliesLoaded'))
+      ..add(DiagnosticsProperty('replies', replies));
   }
 
   @override
@@ -2227,12 +2327,22 @@ class __$$AddCommentSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddCommentSuccessImpl implements _AddCommentSuccess {
+class _$AddCommentSuccessImpl
+    with DiagnosticableTreeMixin
+    implements _AddCommentSuccess {
   const _$AddCommentSuccessImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.addComentSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'PatternUserCommentState.addComentSuccess'));
   }
 
   @override
@@ -2375,12 +2485,22 @@ class __$$DeleteCommentSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteCommentSuccessImpl implements _DeleteCommentSuccess {
+class _$DeleteCommentSuccessImpl
+    with DiagnosticableTreeMixin
+    implements _DeleteCommentSuccess {
   const _$DeleteCommentSuccessImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.deleteCommentSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'PatternUserCommentState.deleteCommentSuccess'));
   }
 
   @override
@@ -2537,15 +2657,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'PatternUserCommentState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'PatternUserCommentState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override

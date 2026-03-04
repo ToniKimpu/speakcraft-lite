@@ -1,10 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 
 import '../../model/pattern_exercise/pattern_exercise.dart';
 import '../../services/supabase_service.dart';
+
+import 'package:json_annotation/json_annotation.dart';
 
 part 'pattern_exercise_bloc.freezed.dart';
 
@@ -76,12 +80,12 @@ class PatternExerciseBloc
     emit(const PatternExerciseState.loading());
     try {
       AppLogger.instance.debug(
-          '_mapLoadPatternExercisesWithAnswerToState: dataRes: ${GlobalAppState().currentUser.id}');
+          '_mapLoadPatternExercisesWithAnswerToState: dataRes: ${sl<ValueNotifier<AppUser>>().value.id}');
       final dataRes = await supabase
           .from("pattern_exercises")
           .select("*,exercise_user_answers!inner(answer)")
           .eq('exercise_id', exerciseId)
-          .eq("exercise_user_answers.user_id", GlobalAppState().currentUser.id!)
+          .eq("exercise_user_answers.user_id", sl<ValueNotifier<AppUser>>().value.id!)
           .order("created_at", ascending: true);
       AppLogger.instance.debug(
           '_mapLoadPatternExercisesWithAnswerToState: dataRes: $dataRes');

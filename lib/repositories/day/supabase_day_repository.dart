@@ -1,4 +1,6 @@
-import 'package:pmp_english/global_app_state.dart';
+import 'package:flutter/foundation.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/model/day/day.dart';
 import 'package:pmp_english/model/exercise/exercise.dart';
 import 'package:pmp_english/model/lesson/lesson.dart';
@@ -12,7 +14,7 @@ class SupabaseDayRepository implements DayRepository {
     final dataRes = await supabase
         .from('days')
         .select('*,days_users_relation(*)')
-        .eq('days_users_relation.user_id', GlobalAppState().currentUser.id!)
+        .eq('days_users_relation.user_id', sl<ValueNotifier<AppUser>>().value.id!)
         .eq('is_deleted', false)
         .order('order_number', ascending: true);
 

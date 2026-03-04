@@ -61,6 +61,7 @@ mixin _$ExerciseUserAnswerEvent {
 
   /// Create a copy of ExerciseUserAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExerciseUserAnswerEventCopyWith<ExerciseUserAnswerEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -179,7 +180,9 @@ class __$$AddUserAnswerImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddUserAnswerImpl implements _AddUserAnswer {
+class _$AddUserAnswerImpl
+    with DiagnosticableTreeMixin
+    implements _AddUserAnswer {
   const _$AddUserAnswerImpl(final List<ExerciseUserAnswer> userAnswers,
       this.exercise, this.isLastIndex)
       : _userAnswers = userAnswers;
@@ -198,8 +201,19 @@ class _$AddUserAnswerImpl implements _AddUserAnswer {
   final bool isLastIndex;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ExerciseUserAnswerEvent.addUserAnswerList(userAnswers: $userAnswers, exercise: $exercise, isLastIndex: $isLastIndex)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'ExerciseUserAnswerEvent.addUserAnswerList'))
+      ..add(DiagnosticsProperty('userAnswers', userAnswers))
+      ..add(DiagnosticsProperty('exercise', exercise))
+      ..add(DiagnosticsProperty('isLastIndex', isLastIndex));
   }
 
   @override
@@ -221,6 +235,7 @@ class _$AddUserAnswerImpl implements _AddUserAnswer {
 
   /// Create a copy of ExerciseUserAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddUserAnswerImplCopyWith<_$AddUserAnswerImpl> get copyWith =>
@@ -303,6 +318,7 @@ abstract class _AddUserAnswer implements ExerciseUserAnswerEvent {
   /// Create a copy of ExerciseUserAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
   @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddUserAnswerImplCopyWith<_$AddUserAnswerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -404,12 +420,19 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ExerciseUserAnswerState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ExerciseUserAnswerState.initial'));
   }
 
   @override
@@ -521,12 +544,19 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   const _$LoadingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ExerciseUserAnswerState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ExerciseUserAnswerState.loading'));
   }
 
   @override
@@ -638,12 +668,19 @@ class __$$OnSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnSuccessImpl implements _OnSuccess {
+class _$OnSuccessImpl with DiagnosticableTreeMixin implements _OnSuccess {
   const _$OnSuccessImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ExerciseUserAnswerState.onSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ExerciseUserAnswerState.onSuccess'));
   }
 
   @override
@@ -769,15 +806,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ExerciseUserAnswerState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ExerciseUserAnswerState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -793,6 +838,7 @@ class _$ErrorImpl implements _Error {
 
   /// Create a copy of ExerciseUserAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -880,6 +926,7 @@ abstract class _Error implements ExerciseUserAnswerState {
 
   /// Create a copy of ExerciseUserAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

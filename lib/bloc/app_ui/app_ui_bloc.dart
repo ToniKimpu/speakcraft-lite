@@ -1,6 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'package:json_annotation/json_annotation.dart';
+
 part 'app_ui_bloc.freezed.dart';
 
 @freezed

@@ -58,6 +58,7 @@ mixin _$UserExampleAnswerEvent {
 
   /// Create a copy of UserExampleAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserExampleAnswerEventCopyWith<UserExampleAnswerEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -159,6 +160,7 @@ class _$LoadImpl implements _Load {
 
   /// Create a copy of UserExampleAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadImplCopyWith<_$LoadImpl> get copyWith =>
@@ -236,6 +238,7 @@ abstract class _Load implements UserExampleAnswerEvent {
   /// Create a copy of UserExampleAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
   @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadImplCopyWith<_$LoadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -311,6 +314,7 @@ class _$InsertImpl implements _Insert {
 
   /// Create a copy of UserExampleAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InsertImplCopyWith<_$InsertImpl> get copyWith =>
@@ -390,6 +394,7 @@ abstract class _Insert implements UserExampleAnswerEvent {
   /// Create a copy of UserExampleAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
   @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InsertImplCopyWith<_$InsertImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -646,6 +651,7 @@ class _$LoadingImpl implements _Loading {
 
   /// Create a copy of UserExampleAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -733,6 +739,7 @@ abstract class _Loading implements UserExampleAnswerState {
 
   /// Create a copy of UserExampleAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -797,6 +804,7 @@ class _$LoadedImpl implements _Loaded {
 
   /// Create a copy of UserExampleAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -884,6 +892,7 @@ abstract class _Loaded implements UserExampleAnswerState {
 
   /// Create a copy of UserExampleAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -947,6 +956,7 @@ class _$ErrorImpl implements _Error {
 
   /// Create a copy of UserExampleAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1034,6 +1044,7 @@ abstract class _Error implements UserExampleAnswerState {
 
   /// Create a copy of UserExampleAnswerState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

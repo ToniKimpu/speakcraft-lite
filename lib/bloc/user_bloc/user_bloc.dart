@@ -1,8 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/services/supabase_service.dart';
+
+import 'package:json_annotation/json_annotation.dart';
 
 part 'user_bloc.freezed.dart';
 
@@ -34,11 +37,11 @@ class UserBloc extends Bloc<UserEvent, UserState> {
                 .update({"name": newName})
                 .eq(
                   "id",
-                  GlobalAppState().currentUser.id!,
+                  sl<ValueNotifier<AppUser>>().value.id!,
                 )
                 .select();
             if (dataRes.isNotEmpty) {
-              GlobalAppState().currentUser = AppUser.fromJson(dataRes.first);
+              sl<ValueNotifier<AppUser>>().value = AppUser.fromJson(dataRes.first);
             }
             emit(const UserState.onSuccess());
           },
@@ -49,18 +52,18 @@ class UserBloc extends Bloc<UserEvent, UserState> {
                 .update({"profile_path": newAvatar})
                 .eq(
                   "id",
-                  GlobalAppState().currentUser.id!,
+                  sl<ValueNotifier<AppUser>>().value.id!,
                 )
                 .select();
             if (dataRes.isNotEmpty) {
-              GlobalAppState().currentUser = AppUser.fromJson(dataRes.first);
+              sl<ValueNotifier<AppUser>>().value = AppUser.fromJson(dataRes.first);
             }
             emit(const UserState.onSuccess());
           },
           updateUserToken: (token) async {
-            final appUser = GlobalAppState().currentUser;
+            final appUser = sl<ValueNotifier<AppUser>>().value;
             int totalTokenUsed = appUser.totalTokenUsed + token;
-            GlobalAppState().currentUser = appUser.copyWith(
+            sl<ValueNotifier<AppUser>>().value = appUser.copyWith(
               totalTokenUsed: totalTokenUsed,
             );
             emit(const UserState.loading());
@@ -69,11 +72,11 @@ class UserBloc extends Bloc<UserEvent, UserState> {
                 .update({"total_token_used": totalTokenUsed})
                 .eq(
                   "id",
-                  GlobalAppState().currentUser.id!,
+                  sl<ValueNotifier<AppUser>>().value.id!,
                 )
                 .select();
             if (dataRes.isNotEmpty) {
-              GlobalAppState().currentUser = AppUser.fromJson(dataRes.first);
+              sl<ValueNotifier<AppUser>>().value = AppUser.fromJson(dataRes.first);
             }
           },
         );

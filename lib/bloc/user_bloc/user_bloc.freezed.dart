@@ -117,15 +117,25 @@ class __$$UpdateUserNameImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UpdateUserNameImpl implements _UpdateUserName {
+class _$UpdateUserNameImpl
+    with DiagnosticableTreeMixin
+    implements _UpdateUserName {
   const _$UpdateUserNameImpl(this.newName);
 
   @override
   final String newName;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserEvent.updateUserName(newName: $newName)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'UserEvent.updateUserName'))
+      ..add(DiagnosticsProperty('newName', newName));
   }
 
   @override
@@ -264,15 +274,25 @@ class __$$UpdateUserAvatarImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UpdateUserAvatarImpl implements _UpdateUserAvatar {
+class _$UpdateUserAvatarImpl
+    with DiagnosticableTreeMixin
+    implements _UpdateUserAvatar {
   const _$UpdateUserAvatarImpl(this.newAvatar);
 
   @override
   final String newAvatar;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserEvent.updateUserAvatar(newAvatar: $newAvatar)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'UserEvent.updateUserAvatar'))
+      ..add(DiagnosticsProperty('newAvatar', newAvatar));
   }
 
   @override
@@ -413,15 +433,25 @@ class __$$UpdateUserTokenImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UpdateUserTokenImpl implements _UpdateUserToken {
+class _$UpdateUserTokenImpl
+    with DiagnosticableTreeMixin
+    implements _UpdateUserToken {
   const _$UpdateUserTokenImpl(this.token);
 
   @override
   final int token;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserEvent.updateUserToken(token: $token)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'UserEvent.updateUserToken'))
+      ..add(DiagnosticsProperty('token', token));
   }
 
   @override
@@ -620,12 +650,18 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'UserState.initial'));
   }
 
   @override
@@ -737,12 +773,18 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   const _$LoadingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'UserState.loading'));
   }
 
   @override
@@ -854,12 +896,18 @@ class __$$OnSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnSuccessImpl implements _OnSuccess {
+class _$OnSuccessImpl with DiagnosticableTreeMixin implements _OnSuccess {
   const _$OnSuccessImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserState.onSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'UserState.onSuccess'));
   }
 
   @override
@@ -985,15 +1033,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'UserState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override

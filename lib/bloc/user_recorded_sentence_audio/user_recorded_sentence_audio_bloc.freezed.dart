@@ -120,23 +120,15 @@ class __$$LoadImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
+class _$LoadImpl implements _Load {
   const _$LoadImpl({required this.withLoading});
 
   @override
   final bool withLoading;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioEvent.load(withLoading: $withLoading)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserRecordedSentenceAudioEvent.load'))
-      ..add(DiagnosticsProperty('withLoading', withLoading));
   }
 
   @override
@@ -153,6 +145,7 @@ class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadImplCopyWith<_$LoadImpl> get copyWith =>
@@ -234,6 +227,7 @@ abstract class _Load implements UserRecordedSentenceAudioEvent {
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadImplCopyWith<_$LoadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -285,24 +279,15 @@ class __$$InsertImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InsertImpl with DiagnosticableTreeMixin implements _Insert {
+class _$InsertImpl implements _Insert {
   const _$InsertImpl(this.data);
 
   @override
   final UserRecordedSentenceAudio data;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioEvent.insert(data: $data)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'UserRecordedSentenceAudioEvent.insert'))
-      ..add(DiagnosticsProperty('data', data));
   }
 
   @override
@@ -318,6 +303,7 @@ class _$InsertImpl with DiagnosticableTreeMixin implements _Insert {
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InsertImplCopyWith<_$InsertImpl> get copyWith =>
@@ -399,6 +385,7 @@ abstract class _Insert implements UserRecordedSentenceAudioEvent {
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InsertImplCopyWith<_$InsertImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -450,24 +437,15 @@ class __$$DeleteImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteImpl with DiagnosticableTreeMixin implements _Delete {
+class _$DeleteImpl implements _Delete {
   const _$DeleteImpl(this.data);
 
   @override
   final UserRecordedSentenceAudio data;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioEvent.delete(data: $data)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'UserRecordedSentenceAudioEvent.delete'))
-      ..add(DiagnosticsProperty('data', data));
   }
 
   @override
@@ -483,6 +461,7 @@ class _$DeleteImpl with DiagnosticableTreeMixin implements _Delete {
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
@@ -564,6 +543,7 @@ abstract class _Delete implements UserRecordedSentenceAudioEvent {
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -673,20 +653,12 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
+class _$InitialImpl implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'UserRecordedSentenceAudioState.initial'));
   }
 
   @override
@@ -818,24 +790,15 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
+class _$LoadingImpl implements _Loading {
   const _$LoadingImpl({this.message});
 
   @override
   final String? message;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioState.loading(message: $message)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'UserRecordedSentenceAudioState.loading'))
-      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -851,6 +814,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -944,6 +908,7 @@ abstract class _Loading implements UserRecordedSentenceAudioState {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -983,7 +948,7 @@ class __$$LoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
+class _$LoadedImpl implements _Loaded {
   const _$LoadedImpl(final List<UserRecordedSentenceAudio> data) : _data = data;
 
   final List<UserRecordedSentenceAudio> _data;
@@ -995,17 +960,8 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioState.loaded(data: $data)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'UserRecordedSentenceAudioState.loaded'))
-      ..add(DiagnosticsProperty('data', data));
   }
 
   @override
@@ -1022,6 +978,7 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -1116,6 +1073,7 @@ abstract class _Loaded implements UserRecordedSentenceAudioState {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1167,24 +1125,15 @@ class __$$SuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
+class _$SuccessImpl implements _Success {
   const _$SuccessImpl(this.data);
 
   @override
   final UserRecordedSentenceAudio data;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioState.success(data: $data)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'UserRecordedSentenceAudioState.success'))
-      ..add(DiagnosticsProperty('data', data));
   }
 
   @override
@@ -1200,6 +1149,7 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements _Success {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
@@ -1293,6 +1243,7 @@ abstract class _Success implements UserRecordedSentenceAudioState {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1332,23 +1283,15 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
+class _$ErrorImpl implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'UserRecordedSentenceAudioState.error(message: $message)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UserRecordedSentenceAudioState.error'))
-      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -1364,6 +1307,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1457,6 +1401,7 @@ abstract class _Error implements UserRecordedSentenceAudioState {
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

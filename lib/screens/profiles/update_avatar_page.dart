@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pmp_english/bloc/user_bloc/user_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 class UpdateAvatarPage extends StatefulWidget {
@@ -48,7 +50,7 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
   @override
   void initState() {
     super.initState();
-    _selectedProfile = GlobalAppState().currentUser.profilePath;
+    _selectedProfile = sl<ValueNotifier<AppUser>>().value.profilePath;
   }
 
   @override
@@ -198,7 +200,7 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
                         return;
                       }
                       if (_selectedProfile ==
-                          GlobalAppState().currentUser.profilePath) {
+                          sl<ValueNotifier<AppUser>>().value.profilePath) {
                         showErrorSnackbar("Please select a different profile");
                         return;
                       }

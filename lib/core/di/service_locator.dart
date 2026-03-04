@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/repositories/auth/auth_repository.dart';
 import 'package:pmp_english/repositories/auth/supabase_auth_repository.dart';
 import 'package:pmp_english/repositories/day/day_repository.dart';
@@ -17,4 +19,15 @@ Future<void> setupServiceLocator() async {
       () => SupabaseListeningRepository());
   sl.registerLazySingleton<SpokenPatternRepository>(
       () => SupabaseSpokenPatternRepository());
+  sl.registerLazySingleton<ValueNotifier<AppUser>>(
+    () => ValueNotifier<AppUser>(AppUser.empty()),
+  );
+  sl.registerLazySingleton<ValueNotifier<String?>>(
+    () => ValueNotifier<String?>(null),
+    instanceName: 'deviceId',
+  );
+  sl.registerLazySingleton<ValueNotifier<bool>>(
+    () => ValueNotifier<bool>(true),
+    instanceName: 'isOnline',
+  );
 }

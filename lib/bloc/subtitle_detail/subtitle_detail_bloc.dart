@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:drift/drift.dart';
+import 'package:drift/drift.dart' hide JsonKey;
 import 'package:flutter/services.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,6 +15,7 @@ import '../../model/record_subtitle/record_subtitle.dart';
 import '../../model/subtitle/subtitle.dart';
 import '../../services/app_database/app_database.dart';
 import '../../services/supabase_service.dart';
+
 
 part 'subtitle_detail_bloc.freezed.dart';
 

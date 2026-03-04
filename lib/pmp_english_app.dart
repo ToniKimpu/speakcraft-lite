@@ -9,7 +9,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_themes.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/main.dart';
 import 'package:pmp_english/main_providers.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -145,13 +145,13 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
         AppLogger.instance.debug("_hratnaengApp: ${status.toString()} connection state!");
         if (status == InternetConnectionStatus.connected ||
             status == InternetConnectionStatus.slow) {
-          GlobalAppState().isOnline = true;
+          sl<ValueNotifier<bool>>(instanceName: 'isOnline').value = true;
           checkInternetBloc?.add(
             const InternetCheckerEvent.internetAccess(),
           );
           AppLogger.instance.debug('_connectionStatus: Connected to the internet');
         } else {
-          GlobalAppState().isOnline = false;
+          sl<ValueNotifier<bool>>(instanceName: 'isOnline').value = false;
           checkInternetBloc?.add(
             const InternetCheckerEvent.noInternetAccess(),
           );

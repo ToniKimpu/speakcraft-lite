@@ -7,6 +7,8 @@ import 'package:pmp_english/repositories/listening/listening_repository.dart';
 
 import '../../model/pattern_vocabulary/pattern_vocabulary.dart';
 
+import 'package:json_annotation/json_annotation.dart';
+
 part 'listening_bloc.freezed.dart';
 
 @freezed

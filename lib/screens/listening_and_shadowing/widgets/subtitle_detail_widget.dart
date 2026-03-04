@@ -188,7 +188,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                                     }
                                   });
                                 },
-                                activeThumbColor: Colors.white,
+                                // activeThumbColor: Colors.white,
                                 inactiveThumbColor:
                                     Colors.white.withValues(alpha: 0.8),
                                 activeTrackColor: Colors.green,

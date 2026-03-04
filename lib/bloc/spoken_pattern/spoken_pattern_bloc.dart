@@ -8,6 +8,8 @@ import 'package:pmp_english/repositories/spoken_pattern/spoken_pattern_repositor
 import '../../model/pattern_example/pattern_example.dart';
 import '../../model/spoken_pattern/spoken_pattern.dart';
 
+import 'package:json_annotation/json_annotation.dart';
+
 part 'spoken_pattern_bloc.freezed.dart';
 
 @freezed

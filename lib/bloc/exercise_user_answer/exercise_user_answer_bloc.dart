@@ -1,13 +1,16 @@
-import 'package:drift/drift.dart';
+import 'package:drift/drift.dart' hide JsonKey;
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/model/exercise/exercise.dart';
 import 'package:pmp_english/model/exercise_user_answer/exercise_user_answer.dart';
 
-import '../../global_app_state.dart';
 import '../../services/app_database/app_database.dart';
 import '../../services/supabase_service.dart';
+
 
 part 'exercise_user_answer_bloc.freezed.dart';
 
@@ -45,7 +48,7 @@ class ExerciseUserAnswerBloc
               //     {
               //       'answer': userAnswer.userAnswer,
               //       'pattern_exercise_id': userAnswer.patternExerciseId,
-              //       'user_id': GlobalAppState().currentUser.id,
+              //       'user_id': sl<ValueNotifier<AppUser>>().value.id,
               //     },
               //   );
               // }
@@ -54,7 +57,7 @@ class ExerciseUserAnswerBloc
                 return {
                   'answer': answer.userAnswer,
                   'pattern_exercise_id': answer.patternExerciseId,
-                  'user_id': GlobalAppState().currentUser.id,
+                  'user_id': sl<ValueNotifier<AppUser>>().value.id,
                 };
               }).toList();
               await supabase.from('exercise_user_answers').insert(rows);
@@ -70,12 +73,12 @@ class ExerciseUserAnswerBloc
                 }
               });
               await supabase.from('exercises_users_relation').insert({
-                'user_id': GlobalAppState().currentUser.id,
+                'user_id': sl<ValueNotifier<AppUser>>().value.id,
                 'exercise_id': exercise.id,
               });
               if (isLastIndex) {
                 await supabase.from('days_users_relation').insert({
-                  'user_id': GlobalAppState().currentUser.id,
+                  'user_id': sl<ValueNotifier<AppUser>>().value.id,
                   'day_id': exercise.dayId,
                 });
               }

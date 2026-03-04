@@ -9,9 +9,11 @@ import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:gal/gal.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/shared_widgets/default_profile.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
@@ -27,7 +29,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final appUser = GlobalAppState().currentUser;
+    final appUser = sl<ValueNotifier<AppUser>>().value;
     return MainScaffold(
       body: Padding(
         padding: const EdgeInsets.all(24),
@@ -201,7 +203,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
 
           final directory = (await getApplicationDocumentsDirectory()).path;
           final accountId =
-              GlobalAppState().currentUser.email.split('@')[0].toLowerCase();
+              sl<ValueNotifier<AppUser>>().value.email.split('@')[0].toLowerCase();
           final String filePath = '$directory/$accountId.png';
           final File file = File(filePath);
           await file.writeAsBytes(pngBytes);

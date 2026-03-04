@@ -103,19 +103,12 @@ class __$$LoadImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadImpl with DiagnosticableTreeMixin implements _Load {
+class _$LoadImpl implements _Load {
   const _$LoadImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ListeningPracticeAnswerEvent.load()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ListeningPracticeAnswerEvent.load'));
   }
 
   @override
@@ -232,9 +225,7 @@ class __$$SaveUserAnswersImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SaveUserAnswersImpl
-    with DiagnosticableTreeMixin
-    implements _SaveUserAnswers {
+class _$SaveUserAnswersImpl implements _SaveUserAnswers {
   const _$SaveUserAnswersImpl(final List<ListeningPracticeAnswer> userAnswers)
       : _userAnswers = userAnswers;
 
@@ -247,17 +238,8 @@ class _$SaveUserAnswersImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ListeningPracticeAnswerEvent.saveUserAnswers(userAnswers: $userAnswers)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'ListeningPracticeAnswerEvent.saveUserAnswers'))
-      ..add(DiagnosticsProperty('userAnswers', userAnswers));
   }
 
   @override
@@ -275,7 +257,7 @@ class _$SaveUserAnswersImpl
 
   /// Create a copy of ListeningPracticeAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveUserAnswersImplCopyWith<_$SaveUserAnswersImpl> get copyWith =>
@@ -356,7 +338,7 @@ abstract class _SaveUserAnswers implements ListeningPracticeAnswerEvent {
 
   /// Create a copy of ListeningPracticeAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SaveUserAnswersImplCopyWith<_$SaveUserAnswersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -466,20 +448,12 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
+class _$InitialImpl implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ListeningPracticeAnswerState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'ListeningPracticeAnswerState.initial'));
   }
 
   @override
@@ -611,23 +585,15 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
+class _$LoadingImpl implements _Loading {
   const _$LoadingImpl({this.message});
 
   @override
   final String? message;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ListeningPracticeAnswerState.loading(message: $message)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ListeningPracticeAnswerState.loading'))
-      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -643,7 +609,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -737,7 +703,7 @@ abstract class _Loading implements ListeningPracticeAnswerState {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -777,7 +743,7 @@ class __$$LoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
+class _$LoadedImpl implements _Loaded {
   const _$LoadedImpl(final List<ListeningPracticeAnswer> userAnswers)
       : _userAnswers = userAnswers;
 
@@ -790,16 +756,8 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ListeningPracticeAnswerState.loaded(userAnswers: $userAnswers)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ListeningPracticeAnswerState.loaded'))
-      ..add(DiagnosticsProperty('userAnswers', userAnswers));
   }
 
   @override
@@ -817,7 +775,7 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -912,7 +870,7 @@ abstract class _Loaded implements ListeningPracticeAnswerState {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -938,20 +896,12 @@ class __$$OnSavedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnSavedImpl with DiagnosticableTreeMixin implements _OnSaved {
+class _$OnSavedImpl implements _OnSaved {
   const _$OnSavedImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ListeningPracticeAnswerState.onSaved()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'ListeningPracticeAnswerState.onSaved'));
   }
 
   @override
@@ -1083,23 +1033,15 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
+class _$ErrorImpl implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ListeningPracticeAnswerState.error(message: $message)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ListeningPracticeAnswerState.error'))
-      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -1115,7 +1057,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1209,7 +1151,7 @@ abstract class _Error implements ListeningPracticeAnswerState {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
-
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

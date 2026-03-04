@@ -119,15 +119,25 @@ class __$$LoadTranslationsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadTranslationsImpl implements _LoadTranslations {
+class _$LoadTranslationsImpl
+    with DiagnosticableTreeMixin
+    implements _LoadTranslations {
   const _$LoadTranslationsImpl(this.translationDayId);
 
   @override
   final int translationDayId;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationEvent.loadTranslations(translationDayId: $translationDayId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TranslationEvent.loadTranslations'))
+      ..add(DiagnosticsProperty('translationDayId', translationDayId));
   }
 
   @override
@@ -256,12 +266,22 @@ class __$$LoadTranslationLevelsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadTranslationLevelsImpl implements _LoadTranslationLevels {
+class _$LoadTranslationLevelsImpl
+    with DiagnosticableTreeMixin
+    implements _LoadTranslationLevels {
   const _$LoadTranslationLevelsImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationEvent.loadTranslationLevels()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'TranslationEvent.loadTranslationLevels'));
   }
 
   @override
@@ -383,15 +403,26 @@ class __$$LoadUserTranslationsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadUserTranslationsImpl implements _LoadUserTranslations {
+class _$LoadUserTranslationsImpl
+    with DiagnosticableTreeMixin
+    implements _LoadUserTranslations {
   const _$LoadUserTranslationsImpl(this.translationDayId);
 
   @override
   final int translationDayId;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationEvent.loadUserTranslations(translationDayId: $translationDayId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'TranslationEvent.loadUserTranslations'))
+      ..add(DiagnosticsProperty('translationDayId', translationDayId));
   }
 
   @override
@@ -605,12 +636,18 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'TranslationState.initial'));
   }
 
   @override
@@ -732,12 +769,18 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   const _$LoadingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'TranslationState.loading'));
   }
 
   @override
@@ -873,7 +916,7 @@ class __$$LoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadedImpl implements _Loaded {
+class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
   const _$LoadedImpl(final List<Translation> translations)
       : _translations = translations;
 
@@ -886,8 +929,16 @@ class _$LoadedImpl implements _Loaded {
   }
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationState.loaded(translations: $translations)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TranslationState.loaded'))
+      ..add(DiagnosticsProperty('translations', translations));
   }
 
   @override
@@ -1045,7 +1096,9 @@ class __$$TranslationLevelsLoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TranslationLevelsLoadedImpl implements _TranslationLevelsLoaded {
+class _$TranslationLevelsLoadedImpl
+    with DiagnosticableTreeMixin
+    implements _TranslationLevelsLoaded {
   const _$TranslationLevelsLoadedImpl(
       final List<TranslationLevel> translationLevels)
       : _translationLevels = translationLevels;
@@ -1060,8 +1113,17 @@ class _$TranslationLevelsLoadedImpl implements _TranslationLevelsLoaded {
   }
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationState.translationLevelsLoaded(translationLevels: $translationLevels)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'TranslationState.translationLevelsLoaded'))
+      ..add(DiagnosticsProperty('translationLevels', translationLevels));
   }
 
   @override
@@ -1220,15 +1282,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslationState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TranslationState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override

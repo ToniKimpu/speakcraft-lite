@@ -1,15 +1,17 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/repositories/auth/auth_repository.dart';
 
 import '../../model/app_user/app_user.dart';
+
+import 'package:json_annotation/json_annotation.dart';
 
 part 'auth_bloc.freezed.dart';
 
@@ -67,7 +69,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const AuthState.unauthenticated());
         return;
       }
-      GlobalAppState().currentUser = appUser;
+      sl<ValueNotifier<AppUser>>().value = appUser;
       if (!appUser.isPremiumUser!) {
         emit(const AuthState.onFreeUser());
         return;
@@ -83,7 +85,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
       AppLogger.instance.debug('_mapAuthCheckToState: appUser: ${appUser.toJson()}');
       if (appUser.deviceId != null &&
-          appUser.deviceId != GlobalAppState().deviceID) {
+          appUser.deviceId != sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
         await _repository.logout();
         emit(const AuthState.deviceIdFailed());
         return;
@@ -115,8 +117,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(const AuthState.loading());
     try {
       final appUser = await _repository.signUpWithEmail(
-          email, password, name, profilePath, GlobalAppState().deviceID);
-      GlobalAppState().currentUser = appUser;
+          email, password, name, profilePath, sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
+      sl<ValueNotifier<AppUser>>().value = appUser;
       if (!appUser.isPremiumUser!) {
         emit(const AuthState.onFreeUser());
         return;
@@ -141,21 +143,21 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(const AuthState.loading());
     try {
       final appUser = await _repository.loginWithEmail(email, password);
-      GlobalAppState().currentUser = appUser;
+      sl<ValueNotifier<AppUser>>().value = appUser;
       if (!appUser.isPremiumUser!) {
         emit(const AuthState.onFreeUser());
         return;
       }
       if (appUser.deviceId != null &&
-          appUser.deviceId != GlobalAppState().deviceID) {
+          appUser.deviceId != sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
         await _repository.logout();
         emit(const AuthState.deviceIdFailed());
         return;
       }
-      if (appUser.deviceId == null && GlobalAppState().deviceID != null) {
-        await _repository.updateDeviceId(GlobalAppState().deviceID!);
-        GlobalAppState().currentUser =
-            appUser.copyWith(deviceId: GlobalAppState().deviceID);
+      if (appUser.deviceId == null && sl<ValueNotifier<String?>>(instanceName: 'deviceId').value != null) {
+        await _repository.updateDeviceId(sl<ValueNotifier<String?>>(instanceName: 'deviceId').value!);
+        sl<ValueNotifier<AppUser>>().value =
+            appUser.copyWith(deviceId: sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
       }
       emit(const AuthState.authenticated());
     } catch (error) {

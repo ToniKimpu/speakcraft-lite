@@ -1,7 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/screens/main/widgets/app_version_widget.dart';
 import 'package:pmp_english/screens/main/widgets/profile_item_row.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
@@ -27,9 +29,9 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    final appUser = GlobalAppState().currentUser;
-    final int usedTokens = GlobalAppState().currentUser.totalTokenUsed;
-    const int maxTokens = GlobalAppState.maxTotalTokens;
+    final appUser = sl<ValueNotifier<AppUser>>().value;
+    final int usedTokens = sl<ValueNotifier<AppUser>>().value.totalTokenUsed;
+    const int maxTokens = 500000;
     final double progress = (usedTokens / maxTokens).clamp(0.0, 1.0);
     return MainScaffold(
       appBar: AppBar(

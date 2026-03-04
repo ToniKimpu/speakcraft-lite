@@ -1,10 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 
 import '../../model/translation_day/translation_day.dart';
 import '../../services/supabase_service.dart';
+
+import 'package:json_annotation/json_annotation.dart';
 
 part 'translation_day_bloc.freezed.dart';
 
@@ -49,7 +53,7 @@ class TranslationDayBloc
           .from('translation_days')
           .select('*,translation_days_users_relation(translation_day_id)')
           .eq('translation_days_users_relation.user_id',
-              GlobalAppState().currentUser.id!)
+              sl<ValueNotifier<AppUser>>().value.id!)
           .eq('is_deleted', false);
       if (dataRes.isEmpty) {
         emit(const TranslationDayState.loaded(<TranslationDay>[]));

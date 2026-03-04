@@ -151,7 +151,9 @@ class __$$AddTranslateUserAnswerListImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddTranslateUserAnswerListImpl implements _AddTranslateUserAnswerList {
+class _$AddTranslateUserAnswerListImpl
+    with DiagnosticableTreeMixin
+    implements _AddTranslateUserAnswerList {
   const _$AddTranslateUserAnswerListImpl(
       final List<Translation> userTranslations, this.completedDayId)
       : _userTranslations = userTranslations;
@@ -169,8 +171,18 @@ class _$AddTranslateUserAnswerListImpl implements _AddTranslateUserAnswerList {
   final int completedDayId;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslateUserAnswerEvent.addTranslateUserAnswerList(userTranslations: $userTranslations, completedDayId: $completedDayId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'TranslateUserAnswerEvent.addTranslateUserAnswerList'))
+      ..add(DiagnosticsProperty('userTranslations', userTranslations))
+      ..add(DiagnosticsProperty('completedDayId', completedDayId));
   }
 
   @override
@@ -376,12 +388,19 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslateUserAnswerState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TranslateUserAnswerState.initial'));
   }
 
   @override
@@ -493,12 +512,19 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
   const _$LoadingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslateUserAnswerState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TranslateUserAnswerState.loading'));
   }
 
   @override
@@ -610,12 +636,19 @@ class __$$OnSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnSuccessImpl implements _OnSuccess {
+class _$OnSuccessImpl with DiagnosticableTreeMixin implements _OnSuccess {
   const _$OnSuccessImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslateUserAnswerState.onSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TranslateUserAnswerState.onSuccess'));
   }
 
   @override
@@ -741,15 +774,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TranslateUserAnswerState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TranslateUserAnswerState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override

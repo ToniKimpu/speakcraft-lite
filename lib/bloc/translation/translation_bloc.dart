@@ -1,11 +1,15 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/global_app_state.dart';
+import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/model/translation_level/translation_level.dart';
 import 'package:pmp_english/services/supabase_service.dart';
 
 import '../../model/translation/translation.dart';
+
+import 'package:json_annotation/json_annotation.dart';
 
 part 'translation_bloc.freezed.dart';
 
@@ -77,7 +81,7 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
           .select('*,translation_user_answer!inner(answer)')
           .eq('translation_day_id', translationDayId)
           .eq('translation_user_answer.user_id',
-              GlobalAppState().currentUser.id!)
+              sl<ValueNotifier<AppUser>>().value.id!)
           .eq('is_deleted', false);
       if (dataRes.isEmpty) {
         emit(const TranslationState.loaded(<Translation>[]));

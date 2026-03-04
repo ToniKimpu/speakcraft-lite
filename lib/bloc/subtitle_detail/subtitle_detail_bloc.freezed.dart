@@ -137,25 +137,15 @@ class __$$ParseSubtitleLineImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParseSubtitleLineImpl
-    with DiagnosticableTreeMixin
-    implements _ParseSubtitleLine {
+class _$ParseSubtitleLineImpl implements _ParseSubtitleLine {
   const _$ParseSubtitleLineImpl(this.url);
 
   @override
   final String url;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleEvent.parseSubtitleLine(url: $url)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseSubtitleLine'))
-      ..add(DiagnosticsProperty('url', url));
   }
 
   @override
@@ -171,6 +161,7 @@ class _$ParseSubtitleLineImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseSubtitleLineImplCopyWith<_$ParseSubtitleLineImpl> get copyWith =>
@@ -272,6 +263,7 @@ abstract class _ParseSubtitleLine implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseSubtitleLineImplCopyWith<_$ParseSubtitleLineImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -323,25 +315,15 @@ class __$$ParseSubtitleImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParseSubtitleImpl
-    with DiagnosticableTreeMixin
-    implements _ParseSubtitle {
+class _$ParseSubtitleImpl implements _ParseSubtitle {
   const _$ParseSubtitleImpl(this.listening);
 
   @override
   final Listening listening;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleEvent.parseSubtitle(listening: $listening)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseSubtitle'))
-      ..add(DiagnosticsProperty('listening', listening));
   }
 
   @override
@@ -358,6 +340,7 @@ class _$ParseSubtitleImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseSubtitleImplCopyWith<_$ParseSubtitleImpl> get copyWith =>
@@ -458,6 +441,7 @@ abstract class _ParseSubtitle implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseSubtitleImplCopyWith<_$ParseSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -509,25 +493,15 @@ class __$$ParseRecordSubtitleImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParseRecordSubtitleImpl
-    with DiagnosticableTreeMixin
-    implements _ParseRecordSubtitle {
+class _$ParseRecordSubtitleImpl implements _ParseRecordSubtitle {
   const _$ParseRecordSubtitleImpl(this.listening);
 
   @override
   final Listening listening;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleEvent.parseRecordSubtitle(listening: $listening)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseRecordSubtitle'))
-      ..add(DiagnosticsProperty('listening', listening));
   }
 
   @override
@@ -544,6 +518,7 @@ class _$ParseRecordSubtitleImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseRecordSubtitleImplCopyWith<_$ParseRecordSubtitleImpl> get copyWith =>
@@ -646,6 +621,7 @@ abstract class _ParseRecordSubtitle implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseRecordSubtitleImplCopyWith<_$ParseRecordSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -699,25 +675,15 @@ class __$$ParseListeningQuestionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParseListeningQuestionImpl
-    with DiagnosticableTreeMixin
-    implements _ParseListeningQuestion {
+class _$ParseListeningQuestionImpl implements _ParseListeningQuestion {
   const _$ParseListeningQuestionImpl(this.listening);
 
   @override
   final Listening listening;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleEvent.parseListeningQuestion(listening: $listening)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseListeningQuestion'))
-      ..add(DiagnosticsProperty('listening', listening));
   }
 
   @override
@@ -734,6 +700,7 @@ class _$ParseListeningQuestionImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseListeningQuestionImplCopyWith<_$ParseListeningQuestionImpl>
@@ -836,6 +803,7 @@ abstract class _ParseListeningQuestion implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseListeningQuestionImplCopyWith<_$ParseListeningQuestionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -875,9 +843,7 @@ class __$$ParseCompleteImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParseCompleteImpl
-    with DiagnosticableTreeMixin
-    implements _ParseComplete {
+class _$ParseCompleteImpl implements _ParseComplete {
   const _$ParseCompleteImpl(final List<Subtitle> subtitles)
       : _subtitles = subtitles;
 
@@ -890,16 +856,8 @@ class _$ParseCompleteImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleEvent.parseComplete(subtitles: $subtitles)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleEvent.parseComplete'))
-      ..add(DiagnosticsProperty('subtitles', subtitles));
   }
 
   @override
@@ -917,6 +875,7 @@ class _$ParseCompleteImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseCompleteImplCopyWith<_$ParseCompleteImpl> get copyWith =>
@@ -1018,6 +977,7 @@ abstract class _ParseComplete implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParseCompleteImplCopyWith<_$ParseCompleteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1057,25 +1017,15 @@ class __$$SetCurrentPageIndexImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SetCurrentPageIndexImpl
-    with DiagnosticableTreeMixin
-    implements _SetCurrentPageIndex {
+class _$SetCurrentPageIndexImpl implements _SetCurrentPageIndex {
   const _$SetCurrentPageIndexImpl(this.index);
 
   @override
   final int index;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleEvent.setCurrentPageIndex(index: $index)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleEvent.setCurrentPageIndex'))
-      ..add(DiagnosticsProperty('index', index));
   }
 
   @override
@@ -1091,6 +1041,7 @@ class _$SetCurrentPageIndexImpl
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SetCurrentPageIndexImplCopyWith<_$SetCurrentPageIndexImpl> get copyWith =>
@@ -1193,6 +1144,7 @@ abstract class _SetCurrentPageIndex implements SubtitleEvent {
 
   /// Create a copy of SubtitleEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SetCurrentPageIndexImplCopyWith<_$SetCurrentPageIndexImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1344,18 +1296,12 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
+class _$InitialImpl implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'SubtitleState.initial'));
   }
 
   @override
@@ -1532,23 +1478,15 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
+class _$LoadingImpl implements _Loading {
   const _$LoadingImpl({this.message});
 
   @override
   final String? message;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.loading(message: $message)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleState.loading'))
-      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -1564,6 +1502,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -1702,6 +1641,7 @@ abstract class _Loading implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1741,9 +1681,7 @@ class __$$OnParsingSubtitleImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnParsingSubtitleImpl
-    with DiagnosticableTreeMixin
-    implements _OnParsingSubtitle {
+class _$OnParsingSubtitleImpl implements _OnParsingSubtitle {
   const _$OnParsingSubtitleImpl(final List<Subtitle> subtitles)
       : _subtitles = subtitles;
 
@@ -1756,16 +1694,8 @@ class _$OnParsingSubtitleImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.onParsingSubtitle(subtitles: $subtitles)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleState.onParsingSubtitle'))
-      ..add(DiagnosticsProperty('subtitles', subtitles));
   }
 
   @override
@@ -1783,6 +1713,7 @@ class _$OnParsingSubtitleImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParsingSubtitleImplCopyWith<_$OnParsingSubtitleImpl> get copyWith =>
@@ -1923,6 +1854,7 @@ abstract class _OnParsingSubtitle implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParsingSubtitleImplCopyWith<_$OnParsingSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1973,7 +1905,6 @@ class __$$OnParseListeningQuestionCompletedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$OnParseListeningQuestionCompletedImpl
-    with DiagnosticableTreeMixin
     implements _OnParseListeningQuestionCompleted {
   const _$OnParseListeningQuestionCompletedImpl(
       final List<ListeningQuestion> listeningQuestions,
@@ -1999,18 +1930,8 @@ class _$OnParseListeningQuestionCompletedImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.onParseListeningQuestionCompleted(listeningQuestions: $listeningQuestions, userAnswers: $userAnswers)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'SubtitleState.onParseListeningQuestionCompleted'))
-      ..add(DiagnosticsProperty('listeningQuestions', listeningQuestions))
-      ..add(DiagnosticsProperty('userAnswers', userAnswers));
   }
 
   @override
@@ -2032,6 +1953,7 @@ class _$OnParseListeningQuestionCompletedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParseListeningQuestionCompletedImplCopyWith<
@@ -2177,6 +2099,7 @@ abstract class _OnParseListeningQuestionCompleted implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParseListeningQuestionCompletedImplCopyWith<
           _$OnParseListeningQuestionCompletedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2217,9 +2140,7 @@ class __$$OnParseCompletedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnParseCompletedImpl
-    with DiagnosticableTreeMixin
-    implements _OnParseCompleted {
+class _$OnParseCompletedImpl implements _OnParseCompleted {
   const _$OnParseCompletedImpl(final List<Subtitle> subtitles)
       : _subtitles = subtitles;
 
@@ -2232,16 +2153,8 @@ class _$OnParseCompletedImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.onParseCompleted(subtitles: $subtitles)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleState.onParseCompleted'))
-      ..add(DiagnosticsProperty('subtitles', subtitles));
   }
 
   @override
@@ -2259,6 +2172,7 @@ class _$OnParseCompletedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParseCompletedImplCopyWith<_$OnParseCompletedImpl> get copyWith =>
@@ -2399,6 +2313,7 @@ abstract class _OnParseCompleted implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParseCompletedImplCopyWith<_$OnParseCompletedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2440,9 +2355,7 @@ class __$$OnRecordSubtitleCompletedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnRecordSubtitleCompletedImpl
-    with DiagnosticableTreeMixin
-    implements _OnRecordSubtitleCompleted {
+class _$OnRecordSubtitleCompletedImpl implements _OnRecordSubtitleCompleted {
   const _$OnRecordSubtitleCompletedImpl(
       final List<RecordSubtitle> recordSubtitles)
       : _recordSubtitles = recordSubtitles;
@@ -2456,17 +2369,8 @@ class _$OnRecordSubtitleCompletedImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.onRecordSubtitleCompleted(recordSubtitles: $recordSubtitles)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'SubtitleState.onRecordSubtitleCompleted'))
-      ..add(DiagnosticsProperty('recordSubtitles', recordSubtitles));
   }
 
   @override
@@ -2484,6 +2388,7 @@ class _$OnRecordSubtitleCompletedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnRecordSubtitleCompletedImplCopyWith<_$OnRecordSubtitleCompletedImpl>
@@ -2625,6 +2530,7 @@ abstract class _OnRecordSubtitleCompleted implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnRecordSubtitleCompletedImplCopyWith<_$OnRecordSubtitleCompletedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2668,7 +2574,6 @@ class __$$OnParseSubtitleLineCompletedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$OnParseSubtitleLineCompletedImpl
-    with DiagnosticableTreeMixin
     implements _OnParseSubtitleLineCompleted {
   const _$OnParseSubtitleLineCompletedImpl(
       final List<SubtitleLine> subtitleLines)
@@ -2683,17 +2588,8 @@ class _$OnParseSubtitleLineCompletedImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.onParseSubtitleLineCompleted(subtitleLines: $subtitleLines)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'SubtitleState.onParseSubtitleLineCompleted'))
-      ..add(DiagnosticsProperty('subtitleLines', subtitleLines));
   }
 
   @override
@@ -2711,6 +2607,7 @@ class _$OnParseSubtitleLineCompletedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnParseSubtitleLineCompletedImplCopyWith<
@@ -2853,6 +2750,7 @@ abstract class _OnParseSubtitleLineCompleted implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnParseSubtitleLineCompletedImplCopyWith<
           _$OnParseSubtitleLineCompletedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2893,25 +2791,15 @@ class __$$OnPageChangedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnPageChangedImpl
-    with DiagnosticableTreeMixin
-    implements OnPageChanged {
+class _$OnPageChangedImpl implements OnPageChanged {
   const _$OnPageChangedImpl(this.index);
 
   @override
   final int index;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.onPageChanged(index: $index)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleState.onPageChanged'))
-      ..add(DiagnosticsProperty('index', index));
   }
 
   @override
@@ -2927,6 +2815,7 @@ class _$OnPageChangedImpl
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OnPageChangedImplCopyWith<_$OnPageChangedImpl> get copyWith =>
@@ -3065,6 +2954,7 @@ abstract class OnPageChanged implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OnPageChangedImplCopyWith<_$OnPageChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3104,23 +2994,15 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
+class _$ErrorImpl implements _Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'SubtitleState.error(message: $message)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SubtitleState.error'))
-      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -3136,6 +3018,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -3274,6 +3157,7 @@ abstract class _Error implements SubtitleState {
 
   /// Create a copy of SubtitleState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
