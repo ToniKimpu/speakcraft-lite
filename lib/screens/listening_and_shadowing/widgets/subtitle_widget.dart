@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
@@ -83,175 +82,177 @@ class SubtitleWidget extends StatelessWidget {
           //     ),
           //   ),
           // ],
-          // Audio Player Section
-          if (subtitle.audioName.isNotEmpty)
-            BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-              bloc: audioPositionTrackerBloc,
-              builder: (context, positionState) {
-                return BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-                  bloc: audioDurationTrackerBloc,
-                  builder: (context, durationState) {
-                    return BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-                      bloc: audioPlayerStateTrackerBloc,
-                      builder: (context, playerState) {
-                        final positionDuration = positionState.maybeWhen(
-                          onCurrentPosition: (position) => position,
-                          orElse: () => Duration.zero,
-                        );
-                        final totalDuration = durationState.maybeWhen(
-                          onTotalDuration: (duration) => duration.inSeconds,
-                          orElse: () => 0,
-                        );
-                        final currentPlayerState = playerState.maybeWhen(
-                          onUpdatePlayerState: (playerState) => playerState,
-                          orElse: () => null,
-                        );
-                        final isPlaying = currentPlayerState?.playing == true;
-                        final isCompleted =
-                            currentPlayerState?.processingState ==
-                                ProcessingState.completed;
-                        final loading = (currentPlayerState?.processingState ==
-                                ProcessingState.loading ||
-                            currentPlayerState?.processingState ==
-                                ProcessingState.buffering);
-                        return Container(
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            color: Colors.white.withValues(alpha: 0.04),
-                            border: Border.all(
-                              color: Colors.white.withValues(alpha: 0.2),
-                              width: 1.5,
-                            ),
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              // Play Button
-                              GestureDetector(
-                                onTap: () {
-                                  if (loading) {
-                                    return;
-                                  }
-                                  if (isCompleted) {
-                                    audioPlayer.seek(Duration.zero);
-                                    audioPlayer.play();
-                                    if (youtubeController.value.isPlaying) {
-                                      youtubeController.pause();
-                                    }
-                                  } else if (isPlaying) {
-                                    audioPlayer.pause();
-                                  } else {
-                                    audioPlayer.play();
-                                    if (youtubeController.value.isPlaying) {
-                                      youtubeController.pause();
-                                    }
-                                  }
-                                },
-                                child: Container(
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white.withValues(alpha: 0.05),
-                                    border: Border.all(
-                                      color:
-                                          Colors.white.withValues(alpha: 0.4),
-                                      width: 1.5,
-                                    ),
-                                  ),
-                                  child: loading
-                                      ? const SizedBox(
-                                          width: 16,
-                                          height: 16,
-                                          child: CircularProgressIndicator(
-                                            color: Colors.white,
-                                          ),
-                                        )
-                                      : Icon(
-                                          isCompleted
-                                              ? Icons.replay
-                                              : isPlaying
-                                                  ? Icons.pause
-                                                  : Icons.play_arrow,
-                                          color: Colors.white,
-                                          size: 22,
-                                        ),
-                                ),
-                              ),
-                              const SizedBox(width: 16),
 
-                              // Slider and Time
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SliderTheme(
-                                      data: SliderTheme.of(context).copyWith(
-                                        trackHeight: 4,
-                                        thumbShape: const RoundSliderThumbShape(
-                                            enabledThumbRadius: 5),
-                                        overlayShape:
-                                            SliderComponentShape.noOverlay,
-                                      ),
-                                      child: Slider(
-                                        value: positionDuration.inSeconds
-                                            .clamp(0, totalDuration)
-                                            .toDouble(),
-                                        min: 0,
-                                        max: totalDuration > 0
-                                            ? totalDuration.toDouble()
-                                            : 1,
-                                        thumbColor: Colors.white,
-                                        activeColor: Colors.orange,
-                                        inactiveColor:
-                                            Colors.white.withValues(alpha: 0.2),
-                                        onChanged: (_) {},
-                                        onChangeEnd: (value) {
-                                          if (loading) {
-                                            return;
-                                          }
-                                          audioPlayer.seek(
-                                              Duration(seconds: value.toInt()));
-                                        },
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          loading
-                                              ? "0:00"
-                                              : _formatDuration(
-                                                  positionDuration.inSeconds),
-                                          style: PmpTextStyles.sub.copyWith(
-                                            color: Colors.white
-                                                .withValues(alpha: 0.9),
-                                          ),
-                                        ),
-                                        Text(
-                                          loading
-                                              ? "0:00"
-                                              : _formatDuration(totalDuration),
-                                          style: PmpTextStyles.sub.copyWith(
-                                            color: Colors.white
-                                                .withValues(alpha: 0.9),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    );
-                  },
-                );
-              },
-            ),
+          // Audio Player Section
+          // if (subtitle.audioName.isNotEmpty)
+          //   BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
+          //     bloc: audioPositionTrackerBloc,
+          //     builder: (context, positionState) {
+          //       return BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
+          //         bloc: audioDurationTrackerBloc,
+          //         builder: (context, durationState) {
+          //           return BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
+          //             bloc: audioPlayerStateTrackerBloc,
+          //             builder: (context, playerState) {
+          //               final positionDuration = positionState.maybeWhen(
+          //                 onCurrentPosition: (position) => position,
+          //                 orElse: () => Duration.zero,
+          //               );
+          //               final totalDuration = durationState.maybeWhen(
+          //                 onTotalDuration: (duration) => duration.inSeconds,
+          //                 orElse: () => 0,
+          //               );
+          //               final currentPlayerState = playerState.maybeWhen(
+          //                 onUpdatePlayerState: (playerState) => playerState,
+          //                 orElse: () => null,
+          //               );
+          //               final isPlaying = currentPlayerState?.playing == true;
+          //               final isCompleted =
+          //                   currentPlayerState?.processingState ==
+          //                       ProcessingState.completed;
+          //               final loading = (currentPlayerState?.processingState ==
+          //                       ProcessingState.loading ||
+          //                   currentPlayerState?.processingState ==
+          //                       ProcessingState.buffering);
+          //               return Container(
+          //                 padding: const EdgeInsets.all(16),
+          //                 decoration: BoxDecoration(
+          //                   borderRadius: BorderRadius.circular(16),
+          //                   color: Colors.white.withValues(alpha: 0.04),
+          //                   border: Border.all(
+          //                     color: Colors.white.withValues(alpha: 0.2),
+          //                     width: 1.5,
+          //                   ),
+          //                 ),
+          //                 child: Row(
+          //                   crossAxisAlignment: CrossAxisAlignment.center,
+          //                   children: [
+          //                     // Play Button
+          //                     GestureDetector(
+          //                       onTap: () {
+          //                         if (loading) {
+          //                           return;
+          //                         }
+          //                         if (isCompleted) {
+          //                           audioPlayer.seek(Duration.zero);
+          //                           audioPlayer.play();
+          //                           if (youtubeController.value.isPlaying) {
+          //                             youtubeController.pause();
+          //                           }
+          //                         } else if (isPlaying) {
+          //                           audioPlayer.pause();
+          //                         } else {
+          //                           audioPlayer.play();
+          //                           if (youtubeController.value.isPlaying) {
+          //                             youtubeController.pause();
+          //                           }
+          //                         }
+          //                       },
+          //                       child: Container(
+          //                         padding: const EdgeInsets.all(8),
+          //                         decoration: BoxDecoration(
+          //                           shape: BoxShape.circle,
+          //                           color: Colors.white.withValues(alpha: 0.05),
+          //                           border: Border.all(
+          //                             color:
+          //                                 Colors.white.withValues(alpha: 0.4),
+          //                             width: 1.5,
+          //                           ),
+          //                         ),
+          //                         child: loading
+          //                             ? const SizedBox(
+          //                                 width: 16,
+          //                                 height: 16,
+          //                                 child: CircularProgressIndicator(
+          //                                   color: Colors.white,
+          //                                 ),
+          //                               )
+          //                             : Icon(
+          //                                 isCompleted
+          //                                     ? Icons.replay
+          //                                     : isPlaying
+          //                                         ? Icons.pause
+          //                                         : Icons.play_arrow,
+          //                                 color: Colors.white,
+          //                                 size: 22,
+          //                               ),
+          //                       ),
+          //                     ),
+          //                     const SizedBox(width: 16),
+
+          //                     // Slider and Time
+          //                     Expanded(
+          //                       child: Column(
+          //                         crossAxisAlignment: CrossAxisAlignment.start,
+          //                         children: [
+          //                           SliderTheme(
+          //                             data: SliderTheme.of(context).copyWith(
+          //                               trackHeight: 4,
+          //                               thumbShape: const RoundSliderThumbShape(
+          //                                   enabledThumbRadius: 5),
+          //                               overlayShape:
+          //                                   SliderComponentShape.noOverlay,
+          //                             ),
+          //                             child: Slider(
+          //                               value: positionDuration.inSeconds
+          //                                   .clamp(0, totalDuration)
+          //                                   .toDouble(),
+          //                               min: 0,
+          //                               max: totalDuration > 0
+          //                                   ? totalDuration.toDouble()
+          //                                   : 1,
+          //                               thumbColor: Colors.white,
+          //                               activeColor: Colors.orange,
+          //                               inactiveColor:
+          //                                   Colors.white.withValues(alpha: 0.2),
+          //                               onChanged: (_) {},
+          //                               onChangeEnd: (value) {
+          //                                 if (loading) {
+          //                                   return;
+          //                                 }
+          //                                 audioPlayer.seek(
+          //                                     Duration(seconds: value.toInt()));
+          //                               },
+          //                             ),
+          //                           ),
+          //                           Row(
+          //                             mainAxisAlignment:
+          //                                 MainAxisAlignment.spaceBetween,
+          //                             children: [
+          //                               Text(
+          //                                 loading
+          //                                     ? "0:00"
+          //                                     : _formatDuration(
+          //                                         positionDuration.inSeconds),
+          //                                 style: PmpTextStyles.sub.copyWith(
+          //                                   color: Colors.white
+          //                                       .withValues(alpha: 0.9),
+          //                                 ),
+          //                               ),
+          //                               Text(
+          //                                 loading
+          //                                     ? "0:00"
+          //                                     : _formatDuration(totalDuration),
+          //                                 style: PmpTextStyles.sub.copyWith(
+          //                                   color: Colors.white
+          //                                       .withValues(alpha: 0.9),
+          //                                 ),
+          //                               ),
+          //                             ],
+          //                           ),
+          //                         ],
+          //                       ),
+          //                     ),
+          //                   ],
+          //                 ),
+          //               );
+          //             },
+          //           );
+          //         },
+          //       );
+          //     },
+          //   ),
+
           const SizedBox(
             height: 8,
           ),

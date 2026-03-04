@@ -15,8 +15,10 @@ class LessonItem extends StatelessWidget {
   final Lesson lesson;
   final DayItemType type;
 
-  bool get isClickable =>
-      type == DayItemType.completed || type == DayItemType.current;
+  // bool get isClickable =>
+  //     type == DayItemType.completed || type == DayItemType.current;
+
+  bool get isClickable => true;
 
   @override
   Widget build(BuildContext context) {

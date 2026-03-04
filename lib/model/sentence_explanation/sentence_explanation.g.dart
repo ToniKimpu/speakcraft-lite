@@ -11,7 +11,7 @@ _$SentenceExplanationImpl _$$SentenceExplanationImplFromJson(
     _$SentenceExplanationImpl(
       id: (json['id'] as num).toInt(),
       start: (json['start'] as num).toDouble(),
-      end: (json['end'] as num).toDouble(),
+      end: (json['end'] as num?)?.toDouble(),
       english: json['english'] as String,
       burmese: json['burmese'] as String,
       explanationUrl: json['explanation_url'] as String,

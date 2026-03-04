@@ -21,6 +21,8 @@ samples, guidance on mobile development, and a full API reference.
 
 ## fastlane android release env:prod c:1 n:1.0.0
 
+# flutter build apk --release --flavor prod -t lib/main.dart --dart-define flavor=prod --build-name 1.0.0 --build-number 1
+
 ## ShoreBird
 
 # shorebird init

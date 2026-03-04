@@ -61,7 +61,6 @@ dependencies:
   # flutter_animate: ^4.5.2
   cached_network_image: ^3.4.1
   http: ^1.3.0
-  shorebird_code_push: ^2.0.4
   drift: ^2.28.0
   drift_flutter: ^0.2.5
   confetti: ^0.8.0
@@ -118,8 +117,38 @@ flutter:
     - assets/images/profiles/
     - assets/explanation/
     - assets/subtitles/
+    - assets/days/day_01/
+    - assets/days/day_02/
+    - assets/days/day_03/
+    - assets/days/day_04/
+    - assets/days/day_05/
+    - assets/days/day_06/
+    - assets/days/day_07/
+    - assets/days/day_08/
+    - assets/days/day_09/
+    - assets/days/day_10/
+    - assets/days/day_11/
+    - assets/days/day_12/
+    - assets/days/day_13/
+    - assets/days/day_14/
+    - assets/days/day_15/
+    - assets/days/day_16/
+    - assets/days/day_17/
+    - assets/days/day_18/
+    - assets/days/day_19/
+    - assets/days/day_20/
+    - assets/days/day_21/
+    - assets/days/day_22/
+    - assets/days/day_23/
+    - assets/days/day_24/
+    - assets/days/day_25/
+    - assets/days/day_26/
+    - assets/days/day_27/
+    - assets/days/day_28/
+    - assets/days/day_29/
+    - assets/days/day_30/
     - logo/
-    - shorebird.yaml
+    # - shorebird.yaml
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -22,7 +22,7 @@ SentenceExplanation _$SentenceExplanationFromJson(Map<String, dynamic> json) {
 mixin _$SentenceExplanation {
   int get id => throw _privateConstructorUsedError;
   double get start => throw _privateConstructorUsedError;
-  double get end => throw _privateConstructorUsedError;
+  double? get end => throw _privateConstructorUsedError;
   String get english => throw _privateConstructorUsedError;
   String get burmese => throw _privateConstructorUsedError;
   @JsonKey(name: 'explanation_url')
@@ -47,7 +47,7 @@ abstract class $SentenceExplanationCopyWith<$Res> {
   $Res call(
       {int id,
       double start,
-      double end,
+      double? end,
       String english,
       String burmese,
       @JsonKey(name: 'explanation_url') String explanationUrl});
@@ -70,7 +70,7 @@ class _$SentenceExplanationCopyWithImpl<$Res, $Val extends SentenceExplanation>
   $Res call({
     Object? id = null,
     Object? start = null,
-    Object? end = null,
+    Object? end = freezed,
     Object? english = null,
     Object? burmese = null,
     Object? explanationUrl = null,
@@ -84,10 +84,10 @@ class _$SentenceExplanationCopyWithImpl<$Res, $Val extends SentenceExplanation>
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
               as double,
-      end: null == end
+      end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       english: null == english
           ? _value.english
           : english // ignore: cast_nullable_to_non_nullable
@@ -115,7 +115,7 @@ abstract class _$$SentenceExplanationImplCopyWith<$Res>
   $Res call(
       {int id,
       double start,
-      double end,
+      double? end,
       String english,
       String burmese,
       @JsonKey(name: 'explanation_url') String explanationUrl});
@@ -136,7 +136,7 @@ class __$$SentenceExplanationImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? start = null,
-    Object? end = null,
+    Object? end = freezed,
     Object? english = null,
     Object? burmese = null,
     Object? explanationUrl = null,
@@ -150,10 +150,10 @@ class __$$SentenceExplanationImplCopyWithImpl<$Res>
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
               as double,
-      end: null == end
+      end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       english: null == english
           ? _value.english
           : english // ignore: cast_nullable_to_non_nullable
@@ -176,7 +176,7 @@ class _$SentenceExplanationImpl implements _SentenceExplanation {
   const _$SentenceExplanationImpl(
       {required this.id,
       required this.start,
-      required this.end,
+      this.end,
       required this.english,
       required this.burmese,
       @JsonKey(name: 'explanation_url') required this.explanationUrl});
@@ -189,7 +189,7 @@ class _$SentenceExplanationImpl implements _SentenceExplanation {
   @override
   final double start;
   @override
-  final double end;
+  final double? end;
   @override
   final String english;
   @override
@@ -243,7 +243,7 @@ abstract class _SentenceExplanation implements SentenceExplanation {
   const factory _SentenceExplanation(
       {required final int id,
       required final double start,
-      required final double end,
+      final double? end,
       required final String english,
       required final String burmese,
       @JsonKey(name: 'explanation_url')
@@ -257,7 +257,7 @@ abstract class _SentenceExplanation implements SentenceExplanation {
   @override
   double get start;
   @override
-  double get end;
+  double? get end;
   @override
   String get english;
   @override

@@ -10,7 +10,7 @@ class SentenceExplanation with _$SentenceExplanation {
   const factory SentenceExplanation({
     required int id,
     required double start,
-    required double end,
+    double? end,
     required String english,
     required String burmese,
     @JsonKey(name: 'explanation_url') required String explanationUrl,

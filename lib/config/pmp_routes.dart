@@ -31,6 +31,8 @@ import '../screens/days/day_list_screen.dart';
 import '../screens/days/pattern_exercise_result_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_detail.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
+import '../screens/html_day_list.dart';
+import '../screens/html_preview.dart';
 import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
 import '../screens/listening_and_shadowing/speech_practice_session_page.dart';
 import '../screens/listening_and_shadowing/vocabulary_listening_page.dart';
@@ -68,7 +70,7 @@ class PmpRoutes {
   static const profilePage = '/profile_page';
   static const updateUserName = '/update_user_name';
   static const updateAvatarPage = '/update_avatar_page';
-  static const newPathScreen = '/new_path_screen';
+  // static const newPathScreen = '/new_path_screen';
   static const deviceFailedScreen = '/device_failed_screen';
   static const aiSentencePracticeListScreen =
       '/ai_sentence_practice_list_screen';
@@ -86,6 +88,8 @@ class PmpRoutes {
   static const sentenceExplanationList = '/sentence_explanation_list';
   static const sentenceExplanationPage = '/sentence_explanation_page';
   static const spokenPatternDetail = '/spoken_pattern_detail';
+  static const htmlList = '/html_list';
+  static const htmlPreview = '/html_preview';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -178,8 +182,8 @@ class PmpRoutes {
         return _getRoute(const UpdateNamePage(), settings);
       case updateAvatarPage:
         return _getRoute(const UpdateAvatarPage(), settings);
-      case newPathScreen:
-        return _getRoute(const NewPathScreen(), settings);
+      // case newPathScreen:
+      //   return _getRoute(const NewPathScreen(), settings);
       case deviceFailedScreen:
         return _getRoute(const DeviceFailedScreen(), settings);
       case aiSentencePracticeListScreen:
@@ -283,6 +287,25 @@ class PmpRoutes {
       case spokenPatternDetail:
         return _getRoute(
           const SpokenPatternDetail(),
+          settings,
+        );
+      case htmlList:
+        return _getRoute(
+          const HtmlDayList(),
+          settings,
+        );
+      case htmlPreview:
+        final args = settings.arguments as Map<String, dynamic>;
+        final assetPath = args['assetPath'] as String?;
+        final title = args['title'] as String?;
+        final sentenceExplanation =
+            args['sentence_explanation'] as SentenceExplanation?;
+        return _getRoute(
+          HtmlPreview(
+            assetPath: assetPath,
+            title: title,
+            sentenceExplanation: sentenceExplanation,
+          ),
           settings,
         );
       default:

@@ -35,6 +35,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
     final bool forceUpdate = widget.appVersion['force_update'] ?? false;
     final String versionName = widget.appVersion['version_name'] ?? "";
     final String downloadUrl = widget.appVersion['app_path'] ?? "";
+    final String telegramUrl = widget.appVersion['telegram_path'] ?? "";
 
     return Scaffold(
       backgroundColor: const Color(0xFF0D1B2A),
@@ -97,48 +98,94 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 20),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 45,
-                      child: ElevatedButton.icon(
-                        onPressed: () async {
-                          if (await canLaunchUrl(Uri.parse(downloadUrl))) {
-                            launchUrl(
-                              Uri.parse(downloadUrl),
-                              mode: LaunchMode.inAppBrowserView,
-                            );
-                          } else {
-                            if (context.mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text("Failed to open browser!"),
-                                ),
+                    if (downloadUrl.isNotEmpty)
+                      SizedBox(
+                        width: double.infinity,
+                        height: 45,
+                        child: ElevatedButton.icon(
+                          onPressed: () async {
+                            if (await canLaunchUrl(Uri.parse(downloadUrl))) {
+                              launchUrl(
+                                Uri.parse(downloadUrl),
+                                mode: LaunchMode.inAppBrowserView,
                               );
+                            } else {
+                              if (context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text("Failed to open browser!"),
+                                  ),
+                                );
+                              }
                             }
-                          }
-                        },
-                        icon: const Icon(
-                          Icons.download_rounded,
-                          color: Colors.white,
-                        ),
-                        label: const Text('Download Now'),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color(0xFF4CAF50), // A fresh green tone
-                          foregroundColor: Colors.white, // Text and icon color
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                          },
+                          icon: const Icon(
+                            Icons.download_rounded,
+                            color: Colors.white,
                           ),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 14),
-                          textStyle: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: "ArchivoBlack Regular",
+                          label: const Text('Download Now'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                const Color(0xFF4CAF50), // A fresh green tone
+                            foregroundColor:
+                                Colors.white, // Text and icon color
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 14),
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: "ArchivoBlack Regular",
+                            ),
                           ),
                         ),
                       ),
-                    ),
+                    if (telegramUrl.isNotEmpty) const SizedBox(height: 12),
+                    if (telegramUrl.isNotEmpty)
+                      SizedBox(
+                        width: double.infinity,
+                        height: 45,
+                        child: OutlinedButton.icon(
+                          onPressed: () async {
+                            if (await canLaunchUrl(Uri.parse(telegramUrl))) {
+                              launchUrl(
+                                Uri.parse(telegramUrl),
+                                mode: LaunchMode.externalApplication,
+                              );
+                            } else {
+                              if (context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text("Failed to open Telegram!"),
+                                  ),
+                                );
+                              }
+                            }
+                          },
+                          icon: const Icon(
+                            Icons.telegram,
+                            color: Color(0xFF229ED9), // Telegram blue
+                          ),
+                          label: const Text('Download via Telegram'),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Color(0xFF229ED9)),
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 14,
+                            ),
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontFamily: "ArchivoBlack Regular",
+                            ),
+                          ),
+                        ),
+                      ),
                   ],
                 ),
               ),

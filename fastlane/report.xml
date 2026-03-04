@@ -5,17 +5,12 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Switch to android build lane" time="0.0005767">
+      <testcase classname="fastlane.lanes" name="0: Switch to android build lane" time="0.0019232">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: flutter build apk --release --flavor dev -t lib/main.dart --dart-define flavor=dev --build-name 0.0.1 --build-number 1" time="106.1576028">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: firebase_app_distribution" time="63.4485927">
+      <testcase classname="fastlane.lanes" name="1: flutter build apk --release --flavor prod -t lib/main.dart --dart-define flavor=prod --build-name 1.0.0 --build-number 1" time="204.913569">
         
       </testcase>
     

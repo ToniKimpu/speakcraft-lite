@@ -53,8 +53,6 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
       return url != null && url is String && url.trim().isNotEmpty;
     }).toList();
 
-    debugPrint("_fetchSentenceExplanations: Fetched ${filtered.length} items");
-
     return filtered.map((e) => SentenceExplanation.fromJson(e)).toList();
   }
 
@@ -73,16 +71,10 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
             );
           }
 
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                snapshot.error.toString(),
-                style: const TextStyle(color: Colors.red),
-              ),
-            );
-          }
-          final items = snapshot.data!;
-          if (items.isEmpty) {
+          if (snapshot.hasError ||
+              !snapshot.hasData ||
+              snapshot.data!.isEmpty) {
+            debugPrint("_onFetchingError: ${snapshot.error?.toString()}");
             return Center(
               child: Padding(
                 padding: const EdgeInsets.all(32),
@@ -123,6 +115,8 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
               ),
             );
           }
+
+          final items = snapshot.data!;
 
           return ListView.separated(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
