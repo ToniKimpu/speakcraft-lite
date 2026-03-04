@@ -1,7 +1,7 @@
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 import 'package:pmp_english/repositories/spoken_pattern/spoken_pattern_repository.dart';
 
@@ -64,7 +64,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
                 _mapLoadPracticeExamplesToState(withLoading, patternId, emit),
           );
         } catch (e) {
-          debugPrint('SpokenPatternBloc error: ${e.toString()}');
+          AppLogger.instance.error('SpokenPatternBloc error: ${e.toString()}', error: e);
           emit(SpokenPatternState.error(e.toString()));
         }
       },
@@ -80,7 +80,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
       final patterns = await _repository.loadPatterns(keyword: keyword);
       emit(SpokenPatternState.loaded(patterns));
     } catch (e) {
-      debugPrint('_loadPatternError: ${e.toString()}');
+      AppLogger.instance.error('_loadPatternError: ${e.toString()}', error: e);
       emit(SpokenPatternState.error(e.toString()));
     }
   }
@@ -92,7 +92,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
       final patterns = await _repository.loadPatternsByLesson(lessonId);
       emit(SpokenPatternState.loaded(patterns));
     } catch (e) {
-      debugPrint('_loadPatternError: ${e.toString()}');
+      AppLogger.instance.error('_loadPatternError: ${e.toString()}', error: e);
       emit(SpokenPatternState.error(e.toString()));
     }
   }
@@ -105,7 +105,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
           await _repository.loadPracticeExamplesByPattern(spokenPatternId);
       emit(SpokenPatternState.examplesLoaded(examples));
     } catch (e) {
-      debugPrint('_loadPracticeExamplesError: ${e.toString()}');
+      AppLogger.instance.error('_loadPracticeExamplesError: ${e.toString()}', error: e);
       emit(SpokenPatternState.error(e.toString()));
     }
   }
@@ -118,7 +118,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
           await _repository.loadVocabulariesByPattern(patternId);
       emit(SpokenPatternState.vocabularyLoaded(vocabularies));
     } catch (e) {
-      debugPrint('_loadVocabulariesError: ${e.toString()}');
+      AppLogger.instance.error('_loadVocabulariesError: ${e.toString()}', error: e);
       emit(SpokenPatternState.error(e.toString()));
     }
   }
@@ -130,7 +130,7 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
       final examples = await _repository.loadExamplesByPattern(patternId);
       emit(SpokenPatternState.examplesLoaded(examples));
     } catch (e) {
-      debugPrint('_loadExamplesError: ${e.toString()}');
+      AppLogger.instance.error('_loadExamplesError: ${e.toString()}', error: e);
       emit(SpokenPatternState.error(e.toString()));
     }
   }

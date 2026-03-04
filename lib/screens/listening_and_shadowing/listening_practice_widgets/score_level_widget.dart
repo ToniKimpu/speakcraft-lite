@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
@@ -16,7 +17,7 @@ class ScoreLevelWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final total = correctCount + inCorrectCount + notAnswerCount;
     final percentage = total == 0 ? 0.0 : (correctCount / total) * 100;
-    debugPrint("_scorePercentate: $percentage percentage!");
+    AppLogger.instance.debug("_scorePercentate: $percentage percentage!");
     String txtLevel = calculateLevel(percentage);
     return Container(
       height: 100,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -257,7 +258,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                         }
                         _errorMessageNotifier.value =
                             sentenceCheckResult.message;
-                        debugPrint(
+                        AppLogger.instance.debug(
                             "_sentenceCheckResultLogs: ${sentenceCheckResult.message} message!");
                       },
                       child: const Text(
@@ -350,7 +351,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
     List<String> userWords = _tokenize(user);
 
     //Step 1: length check
-    debugPrint(
+    AppLogger.instance.debug(
         "_sentenceCheckingResult: ${correctWords.length} total correct words and ${userWords.length} total user words!");
     if (correctWords.length != userWords.length) {
       return SentenceCheckResult(

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
@@ -74,7 +75,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
           if (snapshot.hasError ||
               !snapshot.hasData ||
               snapshot.data!.isEmpty) {
-            debugPrint("_onFetchingError: ${snapshot.error?.toString()}");
+            AppLogger.instance.debug("_onFetchingError: ${snapshot.error?.toString()}");
             return Center(
               child: Padding(
                 padding: const EdgeInsets.all(32),

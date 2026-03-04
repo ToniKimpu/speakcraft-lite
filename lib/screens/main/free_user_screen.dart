@@ -5,6 +5,7 @@ import 'dart:ui' as ui;
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:gal/gal.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -215,7 +216,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
         showErrorSnackbar('Permission is required to save images.');
       }
     } catch (e) {
-      debugPrint('CaptureData: ${e.toString()}');
+      AppLogger.instance.error('CaptureData: ${e.toString()}', error: e);
     }
   }
 }

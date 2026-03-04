@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/model/listening/listening.dart';
@@ -61,7 +62,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
   @override
   void initState() {
     super.initState();
-    debugPrint(
+    AppLogger.instance.debug(
         "_subtitleLineBlocLogs: ${widget.listening.shadowingPath} shadowing path");
     _subtitleLineBloc
         .add(SubtitleEvent.parseSubtitleLine(widget.listening.shadowingPath));
@@ -362,7 +363,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
                                           });
                                         });
                                       }
-                                      debugPrint(
+                                      AppLogger.instance.debug(
                                           "_isUserScrollingLogic: $_isUserScrolling isUserScrolling");
                                     }
                                     return false;

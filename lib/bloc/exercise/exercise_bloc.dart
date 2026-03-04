@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 
 import '../../model/exercise/exercise.dart';
 import '../../services/supabase_service.dart';
@@ -29,7 +29,7 @@ class ExerciseBloc extends Bloc<ExerciseEvent, ExerciseState> {
             loadExercises: (dayId) => _mapLoadExercisesToState(dayId, emit),
           );
         } catch (e) {
-          debugPrint('Error loading exercises: ${e.toString()}');
+          AppLogger.instance.error('Error loading exercises: ${e.toString()}', error: e);
           emit(ExerciseState.error(e.toString()));
         }
       },
@@ -52,7 +52,7 @@ class ExerciseBloc extends Bloc<ExerciseEvent, ExerciseState> {
       final exercises = Exercise.fromJsonList1(dataRes);
       emit(ExerciseState.loaded(exercises));
     } catch (e) {
-      debugPrint('Error fetching exercises: ${e.toString()}');
+      AppLogger.instance.error('Error fetching exercises: ${e.toString()}', error: e);
       emit(ExerciseState.error(e.toString()));
     }
   }

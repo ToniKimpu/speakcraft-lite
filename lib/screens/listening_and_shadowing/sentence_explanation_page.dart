@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:http/http.dart' as http;
 import 'package:pmp_english/config/env.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
@@ -42,7 +43,7 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
       final url =
           Env.bunnyListeningAPIKey + widget.sentenceExplanation.explanationUrl;
 
-      debugPrint("_loadHtml: $url");
+      AppLogger.instance.debug("_loadHtml: $url");
 
       final response =
           await http.get(Uri.parse(url)).timeout(const Duration(seconds: 15));

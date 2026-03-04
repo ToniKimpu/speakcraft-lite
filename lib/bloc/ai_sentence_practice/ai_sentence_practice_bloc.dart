@@ -4,6 +4,7 @@ import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/services/app_database/app_database.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -55,7 +56,7 @@ class AiSentencePracticeBloc
       bool correctData, Emitter<AiSentencePracticeState> emit) async {
     try {
       emit(const AiSentencePracticeState.loading());
-      debugPrint("_loadGroupDataToState: starting....");
+      AppLogger.instance.debug("_loadGroupDataToState: starting....");
       final data =
           await ((AppDatabase.instance().aiSentencePracticeTable.select()
                 ..where(
@@ -68,7 +69,7 @@ class AiSentencePracticeBloc
                       expression: tbl.createdAt, mode: OrderingMode.desc)
                 ]))
               .get();
-      debugPrint("_loadGroupDataToState: has fetched....");
+      AppLogger.instance.debug("_loadGroupDataToState: has fetched....");
       final Map<DateTime, List<AiSentencePractice>> aiResponseGroupByDate = {};
 
       for (final item in data) {
@@ -130,7 +131,7 @@ class AiSentencePracticeBloc
       } else {
         emit(const AiSentencePracticeState.error('There are something wrong.'));
       }
-      debugPrint("_reviewSentenceToState: error: ${e.toString()}");
+      AppLogger.instance.error("_reviewSentenceToState: error: ${e.toString()}", error: e);
     }
   }
 

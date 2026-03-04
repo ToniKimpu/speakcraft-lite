@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart';
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/exercise/exercise.dart';
 import 'package:pmp_english/model/exercise_user_answer/exercise_user_answer.dart';
 
@@ -84,7 +84,7 @@ class ExerciseUserAnswerBloc
             },
           );
         } catch (e) {
-          debugPrint('Load Exercise User Answers error: ${e.toString()}');
+          AppLogger.instance.error('Load Exercise User Answers error: ${e.toString()}', error: e);
           emit(ExerciseUserAnswerState.error(e.toString()));
         }
       },

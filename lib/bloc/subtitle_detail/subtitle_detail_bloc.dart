@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:drift/drift.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
@@ -74,7 +74,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
           await parseSubtitle(listening, emit);
         },
         parseComplete: (subtitles) async {
-          debugPrint(
+          AppLogger.instance.debug(
               "_subtitleDetailparseInfo: ${subtitles.length} length from Bloc");
           emit(SubtitleState.onParseCompleted(subtitles));
         },
@@ -114,7 +114,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
         ),
       );
     } catch (e) {
-      debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");
+      AppLogger.instance.error("_mapParseSubtitleLineToState: ${e.toString()}", error: e);
     }
   }
 
@@ -124,12 +124,12 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
   ) async {
     try {
       emit(const SubtitleState.loading());
-      debugPrint("_mapParseSubtitleLineToState: $url before");
+      AppLogger.instance.debug("_mapParseSubtitleLineToState: $url before");
       // Make sure shadowingPath is not null or empty
       if (url.isEmpty) {
         throw Exception("No shadowing path provided.");
       }
-      debugPrint("_mapParseSubtitleLineToState: $url after");
+      AppLogger.instance.debug("_mapParseSubtitleLineToState: $url after");
       final response = await http.get(Uri.parse(url));
 
       if (response.statusCode == 200) {
@@ -143,10 +143,10 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
           try {
             subtitleLines.add(SubtitleLine.fromJson(jsonList[i]));
           } catch (err, _) {
-            debugPrint(
-                "_mapParseSubtitleLineToState: ❌ Error parsing subtitle index $i");
-            debugPrint(
-                "_mapParseSubtitleLineToState: Item: ${jsonList[i]}"); // optional: remove if you want to continue
+            AppLogger.instance.error(
+                "_mapParseSubtitleLineToState: ❌ Error parsing subtitle index $i", error: err);
+            AppLogger.instance.error(
+                "_mapParseSubtitleLineToState: Item: ${jsonList[i]}", error: err);
             rethrow;
           }
         }
@@ -156,7 +156,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
         throw Exception("Failed to load subtitle file: ${response.statusCode}");
       }
     } catch (e) {
-      debugPrint("_mapParseSubtitleLineToState: ${e.toString()}");
+      AppLogger.instance.error("_mapParseSubtitleLineToState: ${e.toString()}", error: e);
       // Optionally emit an error state if you have one
       // emit(SubtitleState.error(e.toString()));
     }
@@ -166,7 +166,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       Listening listening, Emitter<SubtitleState> emit) async {
     // const double fixedHeight = 112.0;
     // double scrollPosition = 0;
-    debugPrint("_parseJsonSubtitleFile: ${listening.toJson()} file Url!");
+    AppLogger.instance.debug("_parseJsonSubtitleFile: ${listening.toJson()} file Url!");
     // emit(const SubtitleState.onParsingSubtitle(<Subtitle>[]));
     emit(const SubtitleState.loading());
     try {
@@ -176,7 +176,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       }
       final List<dynamic> jsonList =
           json.decode(utf8.decode(response.bodyBytes));
-      debugPrint(
+      AppLogger.instance.debug(
           "_parseJsonSubtitleFile: ${jsonList.first.toString()} lenght!");
       final List<Subtitle> subtitles = [];
 
@@ -218,8 +218,8 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       }
       emit(SubtitleState.onParseCompleted(subtitles));
     } catch (e) {
-      debugPrint(
-          "_parseJsonSubtitleFile: error:  Error parsing subtitle JSON file: $e");
+      AppLogger.instance.error(
+          "_parseJsonSubtitleFile: error:  Error parsing subtitle JSON file: $e", error: e);
       emit(SubtitleState.error(e.toString()));
     }
   }
@@ -271,8 +271,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
 
       emit(SubtitleState.onRecordSubtitleCompleted(recordSubtitles));
     } catch (e, st) {
-      debugPrint("_parseRecordSubtitle error: $e");
-      debugPrintStack(stackTrace: st);
+      AppLogger.instance.error("_parseRecordSubtitle error: $e", error: e, stackTrace: st);
       emit(SubtitleState.error(e.toString()));
     }
   }

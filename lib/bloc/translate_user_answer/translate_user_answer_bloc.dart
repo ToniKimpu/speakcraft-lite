@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/translation/translation.dart';
 
 import '../../global_app_state.dart';
@@ -51,7 +51,7 @@ class TranslateUserAnswerBloc
             },
           );
         } catch (e) {
-          debugPrint('Load Translate User Answers error: ${e.toString()}');
+          AppLogger.instance.error('Load Translate User Answers error: ${e.toString()}', error: e);
           emit(TranslateUserAnswerState.error(e.toString()));
         }
       },

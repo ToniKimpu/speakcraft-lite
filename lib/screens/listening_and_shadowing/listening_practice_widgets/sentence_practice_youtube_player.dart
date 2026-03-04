@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -22,7 +23,7 @@ class SentencePracticeYoutubePlayer extends StatelessWidget {
   Widget build(BuildContext context) {
     bool loading = controller.value.playerState == PlayerState.buffering ||
         !controller.value.isReady;
-    debugPrint("_playerStateLogs: $loading loading!");
+    AppLogger.instance.debug("_playerStateLogs: $loading loading!");
     final startLoading = loading && currentPage == 0;
     final playing = controller.value.isPlaying;
     final paused = controller.value.playerState == PlayerState.paused;

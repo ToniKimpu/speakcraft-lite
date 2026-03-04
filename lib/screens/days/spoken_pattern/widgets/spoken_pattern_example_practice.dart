@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/pattern_example/pattern_example.dart';
 import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/word_chips.dart';
@@ -411,7 +412,7 @@ class _SpokenPatternExamplePracticeState
 
       return patternExercises;
     } catch (e) {
-      debugPrint('_mapLoadPatternExercisesToState: errror: ${e.toString()}');
+      AppLogger.instance.error('_mapLoadPatternExercisesToState: errror: ${e.toString()}', error: e);
       return <PatternVocabulary>[];
     }
   }

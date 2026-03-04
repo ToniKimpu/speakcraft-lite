@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
@@ -454,16 +455,16 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                           if (await file
                                                               .exists()) {
                                                             await file.delete();
-                                                            debugPrint(
+                                                            AppLogger.instance.debug(
                                                                 '_userDiscardedAudio: Deleted discarded audio file: $filePath');
                                                           } else {
-                                                            debugPrint(
+                                                            AppLogger.instance.debug(
                                                                 '_userDiscardedAudio: No file found to delete at $filePath');
                                                           }
                                                         }
                                                       } catch (e) {
-                                                        debugPrint(
-                                                            '_userDiscardedAudio: Error deleting discarded audio: $e');
+                                                        AppLogger.instance.error(
+                                                            '_userDiscardedAudio: Error deleting discarded audio: $e', error: e);
                                                       }
                                                     },
                                                     onSaved: (success) {

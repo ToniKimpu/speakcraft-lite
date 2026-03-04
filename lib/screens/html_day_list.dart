@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 class HtmlDayList extends StatefulWidget {
@@ -62,7 +63,7 @@ class _HtmlDayListState extends State<HtmlDayList> {
         });
       }
     } catch (e) {
-      debugPrint('Error loading asset manifest: $e');
+      AppLogger.instance.error('Error loading asset manifest: $e', error: e);
       if (mounted) {
         setState(() {
           _isLoading = false;
@@ -184,7 +185,7 @@ class _HtmlDayListState extends State<HtmlDayList> {
                                 color: Colors.black.withOpacity(0.3),
                               ),
                               onTap: () {
-                                debugPrint('Selected HTML path: $filePath');
+                                AppLogger.instance.debug('Selected HTML path: $filePath');
                                 Navigator.pushNamed(
                                   context,
                                   '/html_preview',

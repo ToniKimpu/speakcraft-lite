@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:record/record.dart';
@@ -35,7 +36,7 @@ class _RecorderState extends State<Recorder> {
       // Step 1: Explicitly request mic permission
       final micGranted = await requestMicPermission();
       if (!micGranted) {
-        debugPrint("Microphone permission not granted.");
+        AppLogger.instance.debug("Microphone permission not granted.");
         return;
       }
 
@@ -53,11 +54,11 @@ class _RecorderState extends State<Recorder> {
         final filePath =
             '${dir.path}/speech_practice_${DateTime.now().millisecondsSinceEpoch}.m4a';
 
-        debugPrint('Recording to: $filePath');
+        AppLogger.instance.debug('Recording to: $filePath');
         await widget.audioRecorder.start(config, path: filePath);
       }
     } catch (e) {
-      debugPrint("Error starting recording: $e");
+      AppLogger.instance.error("Error starting recording: $e", error: e);
     }
   }
 

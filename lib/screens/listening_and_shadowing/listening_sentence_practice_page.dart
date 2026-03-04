@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/listening/listening.dart';
@@ -171,7 +172,7 @@ class _ListeningSentencePracticePageState
       setState(() => _selectedAnswerOption = null);
       _goToNextPage(_currentPage + 1);
     }
-    debugPrint('_answerLogs: ${answer.toJson()}');
+    AppLogger.instance.debug('_answerLogs: ${answer.toJson()}');
   }
 
   // void _showCheckDialog() {

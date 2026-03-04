@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/spoken_pattern_widget.dart';
@@ -118,7 +119,7 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                       ),
                     );
                   }
-                  debugPrint(
+                  AppLogger.instance.debug(
                       "_spokenPatternScreen: ${spokenPatterns.length} total length!");
                   if (_spokenPatterns.isEmpty) {
                     _spokenPatterns.addAll(spokenPatterns);

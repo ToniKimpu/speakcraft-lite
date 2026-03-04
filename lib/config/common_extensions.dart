@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 
 import '../l10n/generated/l10n.dart';
@@ -195,9 +196,9 @@ extension StringCasingExtension on String {
 
   void copyToClipboard() {
     Clipboard.setData(ClipboardData(text: this))
-        .then((value) => debugPrint('Text copied to clipboard: $this'))
+        .then((value) => AppLogger.instance.debug('Text copied to clipboard: $this'))
         .catchError(
-            (error) => debugPrint('Failed to copy text to clipboard: $error'));
+            (error) => AppLogger.instance.debug('Failed to copy text to clipboard: $error'));
   }
 }
 

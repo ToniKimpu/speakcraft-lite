@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
@@ -83,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> {
             listener: (context, state) {
               state.maybeWhen(
                 accessInternet: () {
-                  debugPrint("_internetCheckerBloc: Accessing internet");
+                  AppLogger.instance.debug("_internetCheckerBloc: Accessing internet");
                   if (_socketError) {
                     showSuccessSnackbar("You have access to the internet.");
                     context.read<AuthBloc>().add(const AuthEvent.authCheck());

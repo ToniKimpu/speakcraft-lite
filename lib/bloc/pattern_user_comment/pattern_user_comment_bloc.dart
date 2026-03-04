@@ -1,7 +1,7 @@
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/bloc/user_comment_reply/user_comment_reply.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 
 import '../../global_app_state.dart';
 import '../../model/pattern_user_comment/pattern_user_comment.dart';
@@ -60,7 +60,7 @@ class PatternUserCommentBloc
             deleteReply: (replyId) => _mapDeleteReplyToState(replyId, emit),
           );
         } catch (e) {
-          debugPrint('PatternUserCommentBloc error: ${e.toString()}');
+          AppLogger.instance.error('PatternUserCommentBloc error: ${e.toString()}', error: e);
           emit(PatternUserCommentState.error(e.toString()));
         }
       },
@@ -86,7 +86,7 @@ class PatternUserCommentBloc
       final comments = PatternUserComment.fromJsonList(dataRes);
       emit(PatternUserCommentState.loaded(comments));
     } catch (e) {
-      debugPrint('Error loading comments: ${e.toString()}');
+      AppLogger.instance.error('Error loading comments: ${e.toString()}', error: e);
       emit(PatternUserCommentState.error(e.toString()));
     }
   }
@@ -106,7 +106,7 @@ class PatternUserCommentBloc
       }
       emit(const PatternUserCommentState.addComentSuccess());
     } catch (e) {
-      debugPrint('Error adding comment: ${e.toString()}');
+      AppLogger.instance.error('Error adding comment: ${e.toString()}', error: e);
       emit(PatternUserCommentState.error(e.toString()));
     }
   }
@@ -130,7 +130,7 @@ class PatternUserCommentBloc
       final replies = UserCommentReply.fromJsonList(dataRes);
       emit(PatternUserCommentState.repliesLoaded(replies));
     } catch (e) {
-      debugPrint('Error loading comments: ${e.toString()}');
+      AppLogger.instance.error('Error loading comments: ${e.toString()}', error: e);
       emit(PatternUserCommentState.error(e.toString()));
     }
   }
@@ -151,7 +151,7 @@ class PatternUserCommentBloc
       }
       emit(const PatternUserCommentState.addComentSuccess());
     } catch (e) {
-      debugPrint('Error adding comment: ${e.toString()}');
+      AppLogger.instance.error('Error adding comment: ${e.toString()}', error: e);
       emit(PatternUserCommentState.error(e.toString()));
     }
   }
@@ -167,7 +167,7 @@ class PatternUserCommentBloc
       await supabase.from('pattern_user_comments').delete().eq('id', commentId);
       emit(const PatternUserCommentState.deleteCommentSuccess());
     } catch (e) {
-      debugPrint('_mapDeleteCommentToState: ${e.toString()}');
+      AppLogger.instance.error('_mapDeleteCommentToState: ${e.toString()}', error: e);
       emit(PatternUserCommentState.error(e.toString()));
     }
   }
@@ -179,7 +179,7 @@ class PatternUserCommentBloc
       await supabase.from('user_comment_replies').delete().eq('id', replyId);
       emit(const PatternUserCommentState.deleteCommentSuccess());
     } catch (e) {
-      debugPrint('_mapDeleteCommentToState: ${e.toString()}');
+      AppLogger.instance.error('_mapDeleteCommentToState: ${e.toString()}', error: e);
       emit(PatternUserCommentState.error(e.toString()));
     }
   }

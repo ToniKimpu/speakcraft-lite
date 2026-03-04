@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/global_app_state.dart';
 
 import '../../model/pattern_exercise/pattern_exercise.dart';
@@ -37,7 +37,7 @@ class PatternExerciseBloc
               loadPatternExercisesWithAnswers: (exerciseId) =>
                   _mapLoadPatternExercisesWithAnswerToState(exerciseId, emit));
         } catch (e) {
-          debugPrint('Load Pattern Exercises error: ${e.toString()}');
+          AppLogger.instance.error('Load Pattern Exercises error: ${e.toString()}', error: e);
           emit(PatternExerciseState.error(e.toString()));
         }
       },
@@ -54,7 +54,7 @@ class PatternExerciseBloc
               "*,vocabularies:pattern_exercises_vocabularies_relation(pattern_vocabularies(*))")
           .eq("exercise_id", exerciseId)
           .order("created_at", ascending: true);
-      debugPrint("_mapLoadPatternExercisesToState: dataRes: $dataRes");
+      AppLogger.instance.debug("_mapLoadPatternExercisesToState: dataRes: $dataRes");
       if (dataRes.isEmpty) {
         emit(const PatternExerciseState.loaded(<PatternExercise>[]));
         return;
@@ -66,7 +66,7 @@ class PatternExerciseBloc
 
       emit(PatternExerciseState.loaded(patternExercises));
     } catch (e) {
-      debugPrint('_mapLoadPatternExercisesToState: errror: ${e.toString()}');
+      AppLogger.instance.error('_mapLoadPatternExercisesToState: errror: ${e.toString()}', error: e);
       emit(PatternExerciseState.error(e.toString()));
     }
   }
@@ -75,7 +75,7 @@ class PatternExerciseBloc
       int exerciseId, Emitter<PatternExerciseState> emit) async {
     emit(const PatternExerciseState.loading());
     try {
-      debugPrint(
+      AppLogger.instance.debug(
           '_mapLoadPatternExercisesWithAnswerToState: dataRes: ${GlobalAppState().currentUser.id}');
       final dataRes = await supabase
           .from("pattern_exercises")
@@ -83,7 +83,7 @@ class PatternExerciseBloc
           .eq('exercise_id', exerciseId)
           .eq("exercise_user_answers.user_id", GlobalAppState().currentUser.id!)
           .order("created_at", ascending: true);
-      debugPrint(
+      AppLogger.instance.debug(
           '_mapLoadPatternExercisesWithAnswerToState: dataRes: $dataRes');
       if (dataRes.isEmpty) {
         emit(const PatternExerciseState.loaded(<PatternExercise>[]));
@@ -94,7 +94,7 @@ class PatternExerciseBloc
           .toList();
       emit(PatternExerciseState.loaded(patternExercises));
     } catch (e) {
-      debugPrint('_mapLoadPatternExercisesWithAnswerToState: ${e.toString()}');
+      AppLogger.instance.error('_mapLoadPatternExercisesWithAnswerToState: ${e.toString()}', error: e);
       emit(PatternExerciseState.error(e.toString()));
     }
   }

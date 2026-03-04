@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:http/http.dart' as http;
 import 'package:pmp_english/config/env.dart';
@@ -45,7 +46,7 @@ class _HtmlPreviewState extends State<HtmlPreview> {
     try {
       if (widget.assetPath != null) {
         // Load from assets
-        debugPrint("_loadHtml from asset: ${widget.assetPath}");
+        AppLogger.instance.debug("_loadHtml from asset: ${widget.assetPath}");
         final String content = await rootBundle.loadString(widget.assetPath!);
 
         if (!mounted) return;
@@ -59,7 +60,7 @@ class _HtmlPreviewState extends State<HtmlPreview> {
         final url = Env.bunnyListeningAPIKey +
             widget.sentenceExplanation!.explanationUrl;
 
-        debugPrint("_loadHtml from network: $url");
+        AppLogger.instance.debug("_loadHtml from network: $url");
 
         final response =
             await http.get(Uri.parse(url)).timeout(const Duration(seconds: 15));
@@ -100,7 +101,7 @@ class _HtmlPreviewState extends State<HtmlPreview> {
     } on _UserFriendlyException catch (e) {
       _setError(e.message);
     } catch (e) {
-      debugPrint("Error loading HTML: $e");
+      AppLogger.instance.error("Error loading HTML: $e", error: e);
       _setError(
         'Something went wrong while loading this explanation.',
       );

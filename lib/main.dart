@@ -18,6 +18,9 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
 import 'core/di/service_locator.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:pmp_english/core/logger/dev_logger.dart';
+import 'package:pmp_english/core/logger/crashlytics_logger.dart';
 import 'global_app_state.dart';
 
 @pragma('vm:entry-point')
@@ -137,6 +140,7 @@ void main() {
       url: Env.supabaseURL,
       anonKey: Env.supabaseAnonKey,
     );
+    AppLogger.init(env == 'prod' ? CrashlyticsLogger() : DevLogger());
 
     if (Firebase.apps.isEmpty) {
       await Firebase.initializeApp(
@@ -149,8 +153,7 @@ void main() {
         .setCrashlyticsCollectionEnabled(env == 'prod');
 
     // Catch Flutter framework errors (e.g. widget build errors)
-    FlutterError.onError =
-        FirebaseCrashlytics.instance.recordFlutterFatalError;
+    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
 
     // Catch platform/async errors outside the Flutter framework
     PlatformDispatcher.instance.onError = (error, stack) {

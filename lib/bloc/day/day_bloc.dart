@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/repositories/day/day_repository.dart';
 
 import '../../model/day/day.dart';
@@ -46,7 +46,7 @@ class DayBloc extends Bloc<DayEvent, DayState> {
       final days = await _repository.loadDays();
       emit(DayState.loaded(null, days));
     } catch (e) {
-      debugPrint('_mapLoadDaysToState error: ${e.toString()}');
+      AppLogger.instance.error('_mapLoadDaysToState error: ${e.toString()}', error: e);
       if (e is SocketException || e is TimeoutException) {
         emit(const DayState.socketError(
             'Please check your internet connection and try again.'));

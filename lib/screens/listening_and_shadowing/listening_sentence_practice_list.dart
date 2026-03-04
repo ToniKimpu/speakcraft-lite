@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/bloc/app_ui/app_ui_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
@@ -56,7 +57,7 @@ class _ListeningSentencePracticeListState
       listener: (context, state) {
         state.maybeWhen(
           onReloadListeningPracticeList: () {
-            debugPrint("_listeningSentencePracticeListLogs: onReload");
+            AppLogger.instance.debug("_listeningSentencePracticeListLogs: onReload");
             _subtitleBloc
                 .add(SubtitleEvent.parseListeningQuestion(widget.listening));
           },
@@ -81,7 +82,7 @@ class _ListeningSentencePracticeListState
                 },
                 onParseListeningQuestionCompleted:
                     (listeningQuestions, userAnswers) {
-                  debugPrint(
+                  AppLogger.instance.debug(
                       "_listeningSentencePracticeListLogs: ${userAnswers.length} total userAnswers!");
                   final groupedListeningQuestions =
                       groupListeningQuestions(listeningQuestions);

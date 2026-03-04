@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/model/translation_level/translation_level.dart';
 import 'package:pmp_english/services/supabase_service.dart';
@@ -43,7 +43,7 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
             loadTranslationLevels: () => _mapLoadTranslationLevelsToState(emit),
           );
         } catch (e) {
-          debugPrint('Load Translations error: ${e.toString()}');
+          AppLogger.instance.error('Load Translations error: ${e.toString()}', error: e);
           emit(TranslationState.error(e.toString()));
         }
       },
@@ -63,7 +63,7 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
       final translations = TranslationLevel.fromJsonList(dataRes);
       emit(TranslationState.translationLevelsLoaded(translations));
     } catch (e) {
-      debugPrint('Error fetching translation levels: ${e.toString()}');
+      AppLogger.instance.error('Error fetching translation levels: ${e.toString()}', error: e);
       emit(TranslationState.error(e.toString()));
     }
   }
@@ -86,7 +86,7 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
       final translations = Translation.fromJsonList1(dataRes);
       emit(TranslationState.loaded(translations));
     } catch (e) {
-      debugPrint('Error fetching translations: ${e.toString()}');
+      AppLogger.instance.error('Error fetching translations: ${e.toString()}', error: e);
       emit(TranslationState.error(e.toString()));
     }
   }
@@ -103,12 +103,12 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
         emit(const TranslationState.loaded(<Translation>[]));
         return;
       }
-      debugPrint("_translationLoaded: ${dataRes[1].toString()} DataRes");
+      AppLogger.instance.debug("_translationLoaded: ${dataRes[1].toString()} DataRes");
 
       final translations = Translation.fromJsonList1(dataRes);
       emit(TranslationState.loaded(translations));
     } catch (e) {
-      debugPrint('Error fetching translations: ${e.toString()}');
+      AppLogger.instance.error('Error fetching translations: ${e.toString()}', error: e);
       emit(TranslationState.error(e.toString()));
     }
   }

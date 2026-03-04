@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
@@ -58,15 +59,15 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
 
       final source = widget.audioPlayer.audioSource;
       final currentTag = source?.sequence.first.tag;
-      debugPrint("_setAudioSourceIfNeeded: $currentTag current Tag");
-      debugPrint("_setAudioSourceIfNeeded: $url url Tag");
+      AppLogger.instance.debug("_setAudioSourceIfNeeded: $currentTag current Tag");
+      AppLogger.instance.debug("_setAudioSourceIfNeeded: $url url Tag");
       if (currentTag != url) {
         await widget.audioPlayer.setAudioSource(
           AudioSource.uri(Uri.parse(url), tag: url),
         );
       }
     } catch (e, st) {
-      debugPrint("Error setting audio source: $e\n$st");
+      AppLogger.instance.error("Error setting audio source: $e", error: e, stackTrace: st);
     }
   }
 

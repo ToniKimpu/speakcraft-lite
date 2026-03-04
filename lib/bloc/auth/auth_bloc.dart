@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter/material.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/global_app_state.dart';
 import 'package:pmp_english/repositories/auth/auth_repository.dart';
 
@@ -81,7 +81,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           return;
         }
       }
-      debugPrint('_mapAuthCheckToState: appUser: ${appUser.toJson()}');
+      AppLogger.instance.debug('_mapAuthCheckToState: appUser: ${appUser.toJson()}');
       if (appUser.deviceId != null &&
           appUser.deviceId != GlobalAppState().deviceID) {
         await _repository.logout();
@@ -95,7 +95,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       } else {
         emit(AuthState.error(error.toString()));
       }
-      debugPrint('_authError: ${error.toString()}');
+      AppLogger.instance.error('_authError: ${error.toString()}', error: error);
     }
   }
 
@@ -128,7 +128,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       } else {
         emit(AuthState.error(error.toString()));
       }
-      debugPrint('_signUpError: ${error.toString()}');
+      AppLogger.instance.error('_signUpError: ${error.toString()}', error: error);
     }
   }
 
@@ -164,7 +164,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       } else {
         emit(const AuthState.error('Something went wrong. Please try again.'));
       }
-      debugPrint('_loginError: ${error.toString()}');
+      AppLogger.instance.error('_loginError: ${error.toString()}', error: error);
     }
   }
 
@@ -172,7 +172,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     try {
       emit(const AuthState.loading());
       await _repository.logout();
-      debugPrint('_mapLogoutToState: logout successfully!');
+      AppLogger.instance.debug('_mapLogoutToState: logout successfully!');
       emit(const AuthState.unauthenticated());
     } catch (error) {
       if (error is SocketException || error is TimeoutException) {
@@ -180,7 +180,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       } else {
         emit(AuthState.error(error.toString()));
       }
-      debugPrint('_logoutError: ${error.toString()}');
+      AppLogger.instance.error('_logoutError: ${error.toString()}', error: error);
     }
   }
 }

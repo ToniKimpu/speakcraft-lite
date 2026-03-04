@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/bloc/auth/auth_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
@@ -55,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
             },
             authenticated: () {
               _loadingNotifier.value = false;
-              debugPrint("_loginScreen: Authenticated");
+              AppLogger.instance.debug("_loginScreen: Authenticated");
               Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:drift/drift.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import 'package:pmp_english/services/app_database/app_database.dart';
@@ -84,7 +84,7 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
           );
       emit(UserRecordedSentenceAudioState.success(userRecordedSentenceAudio));
     } catch (e) {
-      debugPrint('_mapInsertToState: ${e.toString()}');
+      AppLogger.instance.error('_mapInsertToState: ${e.toString()}', error: e);
       emit(UserRecordedSentenceAudioState.error(e.toString()));
     }
   }
@@ -101,10 +101,10 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
         final file = File(filePath);
         if (await file.exists()) {
           await file.delete();
-          debugPrint(
+          AppLogger.instance.debug(
               '_userDiscardedAudio: Deleted discarded audio file: $filePath');
         } else {
-          debugPrint(
+          AppLogger.instance.debug(
               '_userDiscardedAudio: No file found to delete at $filePath');
         }
       }
@@ -113,7 +113,7 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
           );
       emit(UserRecordedSentenceAudioState.success(data));
     } catch (e) {
-      debugPrint('_mapInsertToState: ${e.toString()}');
+      AppLogger.instance.error('_mapInsertToState: ${e.toString()}', error: e);
       emit(UserRecordedSentenceAudioState.error(e.toString()));
     }
   }

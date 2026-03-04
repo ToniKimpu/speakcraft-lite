@@ -1,9 +1,9 @@
 // ignore_for_file: invalid_annotation_target
 
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../config/env.dart';
+import '../../core/logger/app_logger.dart';
 import '../pattern_vocabulary/pattern_vocabulary.dart';
 
 part 'pattern_example.freezed.dart';
@@ -39,7 +39,7 @@ List<PatternVocabulary> _vocabulariesFromJson(List<dynamic>? vocabList) {
   if (vocabList == null || vocabList.isEmpty) {
     return <PatternVocabulary>[];
   }
-  debugPrint("_fromJsonWithVocabularies: ${vocabList.length} vocabularies");
+  AppLogger.instance.debug("_fromJsonWithVocabularies: ${vocabList.length} vocabularies");
   final vocabularies = vocabList
       .map((item) => PatternVocabulary.fromJson(item['pattern_vocabularies']))
       .toList();

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
 
 class SpokenPatternAudioButton extends StatelessWidget {
@@ -29,12 +30,11 @@ class SpokenPatternAudioButton extends StatelessWidget {
         );
       }
       audioPlayer.play();
-      debugPrint('_setAudioSourceIfNeeded: $url spoken_pattern-$id');
+      AppLogger.instance.debug('_setAudioSourceIfNeeded: $url spoken_pattern-$id');
     } catch (e) {
       onCurrentPlayingIdChanged("spoken-pattern-$id");
-      // Replace with proper logging if available
-      debugPrint(
-          '_setAudioSourceIfNeeded: ${e.toString()} from spoken_pattern');
+      AppLogger.instance.error(
+          '_setAudioSourceIfNeeded: ${e.toString()} from spoken_pattern', error: e);
     }
   }
 

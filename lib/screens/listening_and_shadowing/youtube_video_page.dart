@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/model/listening/listening.dart';
@@ -93,7 +94,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         }
         _audioDurationTrackerBloc
             .add(AudioPlayerEvent.setTotalDuration(duration));
-        debugPrint("_durationSub: ${duration.inSeconds} inSeconds!");
+        AppLogger.instance.debug("_durationSub: ${duration.inSeconds} inSeconds!");
       },
     );
     _subtitleParsingBloc.add(SubtitleEvent.parseSubtitle(widget.listening));
@@ -122,7 +123,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       final newIndex = _subtitles.indexWhere((s) => s.id == subtitle.id);
       if (newIndex != _subtitlePageIndex) {
         _subtitlePageIndex = newIndex;
-        debugPrint("_currentSubtitlePageIndex: $_subtitlePageIndex");
+        AppLogger.instance.debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
         _subtitleBloc.add(
           SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex),
         );

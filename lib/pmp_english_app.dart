@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -36,7 +37,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
   User? _currentUser;
 
   void _setToken(String? token) {
-    debugPrint('FCM Token: $token');
+    AppLogger.instance.debug('FCM Token: $token');
   }
 
   @override
@@ -59,7 +60,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
         _tokenStream = FirebaseMessaging.instance.onTokenRefresh.listen(
           _setToken,
           onError: (e) {
-            debugPrint('onTokenRefresh error: $e');
+            AppLogger.instance.error('onTokenRefresh error: $e', error: e);
           },
         );
         _onMessageStream = FirebaseMessaging.onMessage.listen(
@@ -73,7 +74,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
               await FirebaseMessaging.instance.unsubscribeFromTopic(
                 'all-new-contents',
               );
-              debugPrint('tp user unsubscribe: ${_currentUser?.id}');
+              AppLogger.instance.debug('tp user unsubscribe: ${_currentUser?.id}');
               await FirebaseMessaging.instance.unsubscribeFromTopic(
                 '${_currentUser?.id}',
               );
@@ -88,12 +89,12 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
             }
           },
         )..onError((e) {
-            debugPrint('Auth state change error: ${e.toString()}');
+            AppLogger.instance.error('Auth state change error: ${e.toString()}', error: e);
           });
       },
     ).onError(
       (error, stackTrace) {
-        debugPrint('getToken onError: $error');
+        AppLogger.instance.error('getToken onError: $error', error: error);
       },
     );
     _setupConnectionListener();
@@ -141,20 +142,20 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
         final navigatorState = _navigatorKey.currentState;
         final context = navigatorState?.context;
         final checkInternetBloc = context?.read<InternetCheckerBloc>();
-        debugPrint("_hratnaengApp: ${status.toString()} connection state!");
+        AppLogger.instance.debug("_hratnaengApp: ${status.toString()} connection state!");
         if (status == InternetConnectionStatus.connected ||
             status == InternetConnectionStatus.slow) {
           GlobalAppState().isOnline = true;
           checkInternetBloc?.add(
             const InternetCheckerEvent.internetAccess(),
           );
-          debugPrint('_connectionStatus: Connected to the internet');
+          AppLogger.instance.debug('_connectionStatus: Connected to the internet');
         } else {
           GlobalAppState().isOnline = false;
           checkInternetBloc?.add(
             const InternetCheckerEvent.noInternetAccess(),
           );
-          debugPrint('_connectionStatus: Disconnected from the internet');
+          AppLogger.instance.debug('_connectionStatus: Disconnected from the internet');
         }
       },
     );

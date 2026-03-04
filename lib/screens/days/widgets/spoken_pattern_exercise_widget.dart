@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
 
 import '../models/added_word.dart';
@@ -120,7 +121,7 @@ class _SpokenPatternExerciseWidgetState
         return true;
       }
     }
-    debugPrint('_spokenPatternExerciseLogs: Could not fit word "$word"');
+    AppLogger.instance.debug('_spokenPatternExerciseLogs: Could not fit word "$word"');
     // Could not fit anywhere
     return false;
   }

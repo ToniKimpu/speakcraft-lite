@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_text_styles.dart';
@@ -30,7 +31,7 @@ class ShadowingPlayer extends StatelessWidget {
     final playing = controller.value.isPlaying;
     final paused = controller.value.playerState == PlayerState.paused;
     final complete = controller.value.playerState == PlayerState.ended;
-    debugPrint(
+    AppLogger.instance.debug(
         "_currentPlayerState: ${controller.value.playerState.name} playerState!");
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16),

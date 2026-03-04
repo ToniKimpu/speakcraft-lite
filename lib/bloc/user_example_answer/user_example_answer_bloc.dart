@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../services/app_database/app_database.dart';
@@ -36,7 +36,7 @@ class UserExampleAnswerBloc
                     .getSingleOrNull();
             emit(UserExampleAnswerState.loaded(data?.userAnswer));
           } catch (e) {
-            debugPrint("");
+            AppLogger.instance.error("", error: e);
           }
         },
         insert: (exampleId, userAnswer) async {
@@ -52,7 +52,7 @@ class UserExampleAnswerBloc
                 );
             emit(UserExampleAnswerState.loaded(data.userAnswer));
           } catch (e) {
-            debugPrint("_userExampleAnswerInsert: ${e.toString()}");
+            AppLogger.instance.error("_userExampleAnswerInsert: ${e.toString()}", error: e);
           }
         },
       );

@@ -1,7 +1,7 @@
-import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/repositories/listening/listening_repository.dart';
 
@@ -46,7 +46,7 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
                 _mapLoadVocabulariesByListening(listeningId, emit),
           );
         } catch (e) {
-          debugPrint('ListeningBloc error: ${e.toString()}');
+          AppLogger.instance.error('ListeningBloc error: ${e.toString()}', error: e);
           emit(ListeningState.error(e.toString()));
         }
       },
@@ -59,7 +59,7 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
       final listenings = await _repository.loadListenings();
       emit(ListeningState.loaded(listenings));
     } catch (e) {
-      debugPrint(e.toString());
+      AppLogger.instance.error(e.toString(), error: e);
       emit(ListeningState.error(e.toString()));
     }
   }
@@ -72,7 +72,7 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           await _repository.loadVocabulariesByListening(listeningId);
       emit(ListeningState.vocabularyLoaded(vocabularies));
     } catch (e) {
-      debugPrint('_loadVocabulariesError: ${e.toString()}');
+      AppLogger.instance.error('_loadVocabulariesError: ${e.toString()}', error: e);
       emit(ListeningState.error(e.toString()));
     }
   }
