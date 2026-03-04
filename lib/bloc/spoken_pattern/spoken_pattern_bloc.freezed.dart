@@ -171,6 +171,7 @@ class _$LoadLessonPatternsImpl implements _LoadLessonPatterns {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadLessonPatternsImplCopyWith<_$LoadLessonPatternsImpl> get copyWith =>
@@ -282,6 +283,7 @@ abstract class _LoadLessonPatterns implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadLessonPatternsImplCopyWith<_$LoadLessonPatternsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -378,6 +380,7 @@ class _$LoadpatternsImpl implements _Loadpatterns {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadpatternsImplCopyWith<_$LoadpatternsImpl> get copyWith =>
@@ -494,6 +497,7 @@ abstract class _Loadpatterns implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadpatternsImplCopyWith<_$LoadpatternsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -561,6 +565,7 @@ class _$LoadVocabulariesByPatternImpl implements _LoadVocabulariesByPattern {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadVocabulariesByPatternImplCopyWith<_$LoadVocabulariesByPatternImpl>
@@ -672,6 +677,7 @@ abstract class _LoadVocabulariesByPattern implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadVocabulariesByPatternImplCopyWith<_$LoadVocabulariesByPatternImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -737,6 +743,7 @@ class _$LoadExamplesByPatternImpl implements _LoadExamplesByPattern {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadExamplesByPatternImplCopyWith<_$LoadExamplesByPatternImpl>
@@ -848,6 +855,7 @@ abstract class _LoadExamplesByPattern implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadExamplesByPatternImplCopyWith<_$LoadExamplesByPatternImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -926,6 +934,7 @@ class _$LoadPracticeExamplesByPatternImpl
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadPracticeExamplesByPatternImplCopyWith<
@@ -1040,6 +1049,7 @@ abstract class _LoadPracticeExamplesByPattern implements SpokenPatternEvent {
 
   /// Create a copy of SpokenPatternEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadPracticeExamplesByPatternImplCopyWith<
           _$LoadPracticeExamplesByPatternImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1458,6 +1468,7 @@ class _$LoadedImpl implements _Loaded {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -1558,6 +1569,7 @@ abstract class _Loaded implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1629,6 +1641,7 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VocabularyLoadedImplCopyWith<_$VocabularyLoadedImpl> get copyWith =>
@@ -1731,6 +1744,7 @@ abstract class _VocabularyLoaded implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VocabularyLoadedImplCopyWith<_$VocabularyLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1801,6 +1815,7 @@ class _$ExampleLoadedImpl implements _ExampleLoaded {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExampleLoadedImplCopyWith<_$ExampleLoadedImpl> get copyWith =>
@@ -1902,6 +1917,7 @@ abstract class _ExampleLoaded implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExampleLoadedImplCopyWith<_$ExampleLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1965,6 +1981,7 @@ class _$ErrorImpl implements _Error {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -2065,6 +2082,7 @@ abstract class _Error implements SpokenPatternState {
 
   /// Create a copy of SpokenPatternState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

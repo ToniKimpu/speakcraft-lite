@@ -17,6 +17,7 @@ import 'package:pmp_english/pmp_english_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
+import 'core/di/service_locator.dart';
 import 'global_app_state.dart';
 
 @pragma('vm:entry-point')
@@ -156,6 +157,8 @@ void main() {
       FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
       return true;
     };
+
+    await setupServiceLocator();
 
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     await _populateDeviceInfo();

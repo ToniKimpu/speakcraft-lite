@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/model/listening/listening.dart';
+import 'package:pmp_english/repositories/listening/listening_repository.dart';
 
-import '../../config/env.dart';
 import '../../model/pattern_vocabulary/pattern_vocabulary.dart';
-import '../../services/supabase_service.dart';
 
 part 'listening_bloc.freezed.dart';
 
@@ -30,7 +30,11 @@ abstract class ListeningState with _$ListeningState {
 }
 
 class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
-  ListeningBloc() : super(const ListeningState.initial()) {
+  final ListeningRepository _repository;
+
+  ListeningBloc({ListeningRepository? repository})
+      : _repository = repository ?? sl<ListeningRepository>(),
+        super(const ListeningState.initial()) {
     on<ListeningEvent>(
       (event, emit) async {
         try {
@@ -42,40 +46,17 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
                 _mapLoadVocabulariesByListening(listeningId, emit),
           );
         } catch (e) {
-          debugPrint('Load Days error ${e.toString()}');
+          debugPrint('ListeningBloc error: ${e.toString()}');
           emit(ListeningState.error(e.toString()));
         }
       },
     );
   }
-  _mapLoadListeningsToState(Emitter<ListeningState> emit) async {
+
+  Future<void> _mapLoadListeningsToState(Emitter<ListeningState> emit) async {
     emit(const ListeningState.loading());
     try {
-      final dataRes = await supabase
-          .from('listenings')
-          .select('*')
-          .eq("is_deleted", false)
-          .order('order_number', ascending: true);
-      final listenings = dataRes.map((e) {
-        final listening = Listening.fromJson(e);
-        return listening.copyWith(
-          thumbnail: SupabaseService().getPublicUrl(
-            bucketFolder: SupabaseBucketFolders.listeningAndShadowingImages,
-            fileName: listening.thumbnail,
-          ),
-          // subtitlePath: SupabaseService().getPublicUrl(
-          //   bucketFolder: SupabaseBucketFolders.listeningAndShadowingSubtitles,
-          //   fileName: listening.subtitlePath,
-          // ),
-          subtitlePath: _normalizePath(listening.subtitlePath),
-          multipleChoicePath: _normalizePath(listening.multipleChoicePath),
-          shadowingPath: _normalizePath(listening.shadowingPath),
-          recordSubtitlePath: _normalizePath(listening.recordSubtitlePath),
-          sentenceExplanationPath:
-              _normalizePath(listening.sentenceExplanationPath),
-        );
-      }).toList();
-      debugPrint("_mapLoadListeningsToState: ${listenings.first.toJson()}");
+      final listenings = await _repository.loadListenings();
       emit(ListeningState.loaded(listenings));
     } catch (e) {
       debugPrint(e.toString());
@@ -83,31 +64,15 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
     }
   }
 
-  String _normalizePath(String path) {
-    if (path.isEmpty) {
-      return "";
-    }
-    return Env.bunnyListeningAPIKey + path.replaceFirst('bunny/', '');
-  }
-
-  _mapLoadVocabulariesByListening(
+  Future<void> _mapLoadVocabulariesByListening(
       int listeningId, Emitter<ListeningState> emit) async {
     emit(const ListeningState.loading());
     try {
-      final dataRes = await supabase
-          .from('pattern_vocabularies')
-          .select('*,listening_vocabularies_relation!inner()')
-          .eq('listening_vocabularies_relation.listening_id', listeningId)
-          .eq('is_deleted', false);
-
-      if (dataRes.isEmpty) {
-        emit(const ListeningState.vocabularyLoaded(<PatternVocabulary>[]));
-        return;
-      }
-      final vocabularies = PatternVocabulary.fromJsonList(dataRes);
+      final vocabularies =
+          await _repository.loadVocabulariesByListening(listeningId);
       emit(ListeningState.vocabularyLoaded(vocabularies));
     } catch (e) {
-      debugPrint('_loadPatternError: ${e.toString()}');
+      debugPrint('_loadVocabulariesError: ${e.toString()}');
       emit(ListeningState.error(e.toString()));
     }
   }
