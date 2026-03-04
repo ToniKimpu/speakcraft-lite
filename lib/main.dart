@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +23,6 @@ import 'global_app_state.dart';
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   const env = String.fromEnvironment('flavor', defaultValue: 'dev');
   final firebaseOption = getOption(env);
-  // await Firebase.initializeApp(
-  //   options: firebaseOption ?? DefaultFirebaseOptionsDev.currentPlatform,
-  // );
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp(
       options: firebaseOption ?? DefaultFirebaseOptionsDev.currentPlatform,
@@ -55,12 +54,7 @@ Future<void> setupFlutterNotifications() async {
       android: AndroidInitializationSettings('ic_notification'),
       iOS: DarwinInitializationSettings(),
     ),
-    onDidReceiveNotificationResponse: (details) {
-      // _onNotificationTapEnter(
-      //   navigatorKey.currentState!.context,
-      //   details.payload,
-      // );
-    },
+    onDidReceiveNotificationResponse: (details) {},
   );
 
   flutterLocalNotificationsPlugin
@@ -132,27 +126,45 @@ getOption(String env) => env == 'dev'
         ? DefaultFirebaseOptions.currentPlatform
         : null;
 
-void main() async {
-  const env = String.fromEnvironment('flavor', defaultValue: 'dev');
-  WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: '.envs/.env.$env');
-  await Supabase.initialize(
-    url: Env.supabaseURL,
-    anonKey: Env.supabaseAnonKey,
-  );
-
-  // await Firebase.initializeApp(
-  //   options: getOption(env),
-  // );
-  if (Firebase.apps.isEmpty) {
-    await Firebase.initializeApp(
-      options: getOption(env),
+void main() {
+  runZonedGuarded(() async {
+    const env = String.fromEnvironment('flavor', defaultValue: 'dev');
+    WidgetsFlutterBinding.ensureInitialized();
+    await dotenv.load(fileName: '.envs/.env.$env');
+    Env.validate();
+    await Supabase.initialize(
+      url: Env.supabaseURL,
+      anonKey: Env.supabaseAnonKey,
     );
-  }
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-  await _populateDeviceInfo();
-  await setupFlutterNotifications();
-  runApp(const PmpEnglishApp());
+
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp(
+        options: getOption(env),
+      );
+    }
+
+    // Only collect crash reports in production
+    await FirebaseCrashlytics.instance
+        .setCrashlyticsCollectionEnabled(env == 'prod');
+
+    // Catch Flutter framework errors (e.g. widget build errors)
+    FlutterError.onError =
+        FirebaseCrashlytics.instance.recordFlutterFatalError;
+
+    // Catch platform/async errors outside the Flutter framework
+    PlatformDispatcher.instance.onError = (error, stack) {
+      FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+      return true;
+    };
+
+    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    await _populateDeviceInfo();
+    await setupFlutterNotifications();
+    runApp(const PmpEnglishApp());
+  }, (error, stack) {
+    // Catch any errors that escape the async zone
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+  });
 }
 
 Future<void> _populateDeviceInfo() async {

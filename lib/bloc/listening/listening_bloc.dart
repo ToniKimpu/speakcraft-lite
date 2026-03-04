@@ -24,8 +24,8 @@ abstract class ListeningState with _$ListeningState {
   const factory ListeningState.loaded(List<Listening> listenings) = _Loaded;
   const factory ListeningState.vocabularyLoaded(
       List<PatternVocabulary> vocabularies) = _VocabularyLoaded;
-  const factory ListeningState.onToggelBurmeseSub(bool value) =
-      _OnToggelBurmeseSub;
+  const factory ListeningState.onToggleBurmeseSubtitle(bool value) =
+      _OnToggleBurmeseSubtitle;
   const factory ListeningState.error(String message) = _Error;
 }
 
@@ -37,7 +37,7 @@ class ListeningBloc extends Bloc<ListeningEvent, ListeningState> {
           await event.when(
             loadListenings: () => _mapLoadListeningsToState(emit),
             toggleBurmeseSub: (value) async =>
-                emit(ListeningState.onToggelBurmeseSub(value)),
+                emit(ListeningState.onToggleBurmeseSubtitle(value)),
             loadVocabulariesByListening: (listeningId) =>
                 _mapLoadVocabulariesByListening(listeningId, emit),
           );

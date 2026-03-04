@@ -51,4 +51,7 @@ app.*.map.json
 
 note.md
 
+# Debug symbols for release obfuscation (upload to Crashlytics, do not commit)
+build/symbols/
+
 assets/days

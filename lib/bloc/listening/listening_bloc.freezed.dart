@@ -515,7 +515,7 @@ mixin _$ListeningState {
     required TResult Function(List<Listening> listenings) loaded,
     required TResult Function(List<PatternVocabulary> vocabularies)
         vocabularyLoaded,
-    required TResult Function(bool value) onToggelBurmeseSub,
+    required TResult Function(bool value) onToggleBurmeseSubtitle,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -525,7 +525,7 @@ mixin _$ListeningState {
     TResult? Function()? loading,
     TResult? Function(List<Listening> listenings)? loaded,
     TResult? Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult? Function(bool value)? onToggelBurmeseSub,
+    TResult? Function(bool value)? onToggleBurmeseSubtitle,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -535,7 +535,7 @@ mixin _$ListeningState {
     TResult Function()? loading,
     TResult Function(List<Listening> listenings)? loaded,
     TResult Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult Function(bool value)? onToggelBurmeseSub,
+    TResult Function(bool value)? onToggleBurmeseSubtitle,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -546,7 +546,8 @@ mixin _$ListeningState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_VocabularyLoaded value) vocabularyLoaded,
-    required TResult Function(_OnToggelBurmeseSub value) onToggelBurmeseSub,
+    required TResult Function(_OnToggleBurmeseSubtitle value)
+        onToggleBurmeseSubtitle,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -556,7 +557,7 @@ mixin _$ListeningState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult? Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult? Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -566,7 +567,7 @@ mixin _$ListeningState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -640,7 +641,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(List<Listening> listenings) loaded,
     required TResult Function(List<PatternVocabulary> vocabularies)
         vocabularyLoaded,
-    required TResult Function(bool value) onToggelBurmeseSub,
+    required TResult Function(bool value) onToggleBurmeseSubtitle,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -653,7 +654,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(List<Listening> listenings)? loaded,
     TResult? Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult? Function(bool value)? onToggelBurmeseSub,
+    TResult? Function(bool value)? onToggleBurmeseSubtitle,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -666,7 +667,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(List<Listening> listenings)? loaded,
     TResult Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult Function(bool value)? onToggelBurmeseSub,
+    TResult Function(bool value)? onToggleBurmeseSubtitle,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -683,7 +684,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_VocabularyLoaded value) vocabularyLoaded,
-    required TResult Function(_OnToggelBurmeseSub value) onToggelBurmeseSub,
+    required TResult Function(_OnToggleBurmeseSubtitle value)
+        onToggleBurmeseSubtitle,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -696,7 +698,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult? Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult? Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -709,7 +711,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -770,7 +772,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(List<Listening> listenings) loaded,
     required TResult Function(List<PatternVocabulary> vocabularies)
         vocabularyLoaded,
-    required TResult Function(bool value) onToggelBurmeseSub,
+    required TResult Function(bool value) onToggleBurmeseSubtitle,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -783,7 +785,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(List<Listening> listenings)? loaded,
     TResult? Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult? Function(bool value)? onToggelBurmeseSub,
+    TResult? Function(bool value)? onToggleBurmeseSubtitle,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -796,7 +798,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(List<Listening> listenings)? loaded,
     TResult Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult Function(bool value)? onToggelBurmeseSub,
+    TResult Function(bool value)? onToggleBurmeseSubtitle,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -813,7 +815,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_VocabularyLoaded value) vocabularyLoaded,
-    required TResult Function(_OnToggelBurmeseSub value) onToggelBurmeseSub,
+    required TResult Function(_OnToggleBurmeseSubtitle value)
+        onToggleBurmeseSubtitle,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -826,7 +829,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult? Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult? Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -839,7 +842,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -935,7 +938,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(List<Listening> listenings) loaded,
     required TResult Function(List<PatternVocabulary> vocabularies)
         vocabularyLoaded,
-    required TResult Function(bool value) onToggelBurmeseSub,
+    required TResult Function(bool value) onToggleBurmeseSubtitle,
     required TResult Function(String message) error,
   }) {
     return loaded(listenings);
@@ -948,7 +951,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? loading,
     TResult? Function(List<Listening> listenings)? loaded,
     TResult? Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult? Function(bool value)? onToggelBurmeseSub,
+    TResult? Function(bool value)? onToggleBurmeseSubtitle,
     TResult? Function(String message)? error,
   }) {
     return loaded?.call(listenings);
@@ -961,7 +964,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? loading,
     TResult Function(List<Listening> listenings)? loaded,
     TResult Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult Function(bool value)? onToggelBurmeseSub,
+    TResult Function(bool value)? onToggleBurmeseSubtitle,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -978,7 +981,8 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_VocabularyLoaded value) vocabularyLoaded,
-    required TResult Function(_OnToggelBurmeseSub value) onToggelBurmeseSub,
+    required TResult Function(_OnToggleBurmeseSubtitle value)
+        onToggleBurmeseSubtitle,
     required TResult Function(_Error value) error,
   }) {
     return loaded(this);
@@ -991,7 +995,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult? Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult? Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult? Function(_Error value)? error,
   }) {
     return loaded?.call(this);
@@ -1004,7 +1008,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1109,7 +1113,7 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
     required TResult Function(List<Listening> listenings) loaded,
     required TResult Function(List<PatternVocabulary> vocabularies)
         vocabularyLoaded,
-    required TResult Function(bool value) onToggelBurmeseSub,
+    required TResult Function(bool value) onToggleBurmeseSubtitle,
     required TResult Function(String message) error,
   }) {
     return vocabularyLoaded(vocabularies);
@@ -1122,7 +1126,7 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
     TResult? Function()? loading,
     TResult? Function(List<Listening> listenings)? loaded,
     TResult? Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult? Function(bool value)? onToggelBurmeseSub,
+    TResult? Function(bool value)? onToggleBurmeseSubtitle,
     TResult? Function(String message)? error,
   }) {
     return vocabularyLoaded?.call(vocabularies);
@@ -1135,7 +1139,7 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
     TResult Function()? loading,
     TResult Function(List<Listening> listenings)? loaded,
     TResult Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult Function(bool value)? onToggelBurmeseSub,
+    TResult Function(bool value)? onToggleBurmeseSubtitle,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1152,7 +1156,8 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_VocabularyLoaded value) vocabularyLoaded,
-    required TResult Function(_OnToggelBurmeseSub value) onToggelBurmeseSub,
+    required TResult Function(_OnToggleBurmeseSubtitle value)
+        onToggleBurmeseSubtitle,
     required TResult Function(_Error value) error,
   }) {
     return vocabularyLoaded(this);
@@ -1165,7 +1170,7 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult? Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult? Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult? Function(_Error value)? error,
   }) {
     return vocabularyLoaded?.call(this);
@@ -1178,7 +1183,7 @@ class _$VocabularyLoadedImpl implements _VocabularyLoaded {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1203,20 +1208,22 @@ abstract class _VocabularyLoaded implements ListeningState {
 }
 
 /// @nodoc
-abstract class _$$OnToggelBurmeseSubImplCopyWith<$Res> {
-  factory _$$OnToggelBurmeseSubImplCopyWith(_$OnToggelBurmeseSubImpl value,
-          $Res Function(_$OnToggelBurmeseSubImpl) then) =
-      __$$OnToggelBurmeseSubImplCopyWithImpl<$Res>;
+abstract class _$$OnToggleBurmeseSubtitleImplCopyWith<$Res> {
+  factory _$$OnToggleBurmeseSubtitleImplCopyWith(
+          _$OnToggleBurmeseSubtitleImpl value,
+          $Res Function(_$OnToggleBurmeseSubtitleImpl) then) =
+      __$$OnToggleBurmeseSubtitleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool value});
 }
 
 /// @nodoc
-class __$$OnToggelBurmeseSubImplCopyWithImpl<$Res>
-    extends _$ListeningStateCopyWithImpl<$Res, _$OnToggelBurmeseSubImpl>
-    implements _$$OnToggelBurmeseSubImplCopyWith<$Res> {
-  __$$OnToggelBurmeseSubImplCopyWithImpl(_$OnToggelBurmeseSubImpl _value,
-      $Res Function(_$OnToggelBurmeseSubImpl) _then)
+class __$$OnToggleBurmeseSubtitleImplCopyWithImpl<$Res>
+    extends _$ListeningStateCopyWithImpl<$Res, _$OnToggleBurmeseSubtitleImpl>
+    implements _$$OnToggleBurmeseSubtitleImplCopyWith<$Res> {
+  __$$OnToggleBurmeseSubtitleImplCopyWithImpl(
+      _$OnToggleBurmeseSubtitleImpl _value,
+      $Res Function(_$OnToggleBurmeseSubtitleImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ListeningState
@@ -1226,7 +1233,7 @@ class __$$OnToggelBurmeseSubImplCopyWithImpl<$Res>
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$OnToggelBurmeseSubImpl(
+    return _then(_$OnToggleBurmeseSubtitleImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -1237,22 +1244,22 @@ class __$$OnToggelBurmeseSubImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
-  const _$OnToggelBurmeseSubImpl(this.value);
+class _$OnToggleBurmeseSubtitleImpl implements _OnToggleBurmeseSubtitle {
+  const _$OnToggleBurmeseSubtitleImpl(this.value);
 
   @override
   final bool value;
 
   @override
   String toString() {
-    return 'ListeningState.onToggelBurmeseSub(value: $value)';
+    return 'ListeningState.onToggleBurmeseSubtitle(value: $value)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OnToggelBurmeseSubImpl &&
+            other is _$OnToggleBurmeseSubtitleImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
@@ -1264,9 +1271,9 @@ class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$OnToggelBurmeseSubImplCopyWith<_$OnToggelBurmeseSubImpl> get copyWith =>
-      __$$OnToggelBurmeseSubImplCopyWithImpl<_$OnToggelBurmeseSubImpl>(
-          this, _$identity);
+  _$$OnToggleBurmeseSubtitleImplCopyWith<_$OnToggleBurmeseSubtitleImpl>
+      get copyWith => __$$OnToggleBurmeseSubtitleImplCopyWithImpl<
+          _$OnToggleBurmeseSubtitleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1276,10 +1283,10 @@ class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
     required TResult Function(List<Listening> listenings) loaded,
     required TResult Function(List<PatternVocabulary> vocabularies)
         vocabularyLoaded,
-    required TResult Function(bool value) onToggelBurmeseSub,
+    required TResult Function(bool value) onToggleBurmeseSubtitle,
     required TResult Function(String message) error,
   }) {
-    return onToggelBurmeseSub(value);
+    return onToggleBurmeseSubtitle(value);
   }
 
   @override
@@ -1289,10 +1296,10 @@ class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
     TResult? Function()? loading,
     TResult? Function(List<Listening> listenings)? loaded,
     TResult? Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult? Function(bool value)? onToggelBurmeseSub,
+    TResult? Function(bool value)? onToggleBurmeseSubtitle,
     TResult? Function(String message)? error,
   }) {
-    return onToggelBurmeseSub?.call(value);
+    return onToggleBurmeseSubtitle?.call(value);
   }
 
   @override
@@ -1302,12 +1309,12 @@ class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
     TResult Function()? loading,
     TResult Function(List<Listening> listenings)? loaded,
     TResult Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult Function(bool value)? onToggelBurmeseSub,
+    TResult Function(bool value)? onToggleBurmeseSubtitle,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
-    if (onToggelBurmeseSub != null) {
-      return onToggelBurmeseSub(value);
+    if (onToggleBurmeseSubtitle != null) {
+      return onToggleBurmeseSubtitle(value);
     }
     return orElse();
   }
@@ -1319,10 +1326,11 @@ class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_VocabularyLoaded value) vocabularyLoaded,
-    required TResult Function(_OnToggelBurmeseSub value) onToggelBurmeseSub,
+    required TResult Function(_OnToggleBurmeseSubtitle value)
+        onToggleBurmeseSubtitle,
     required TResult Function(_Error value) error,
   }) {
-    return onToggelBurmeseSub(this);
+    return onToggleBurmeseSubtitle(this);
   }
 
   @override
@@ -1332,10 +1340,10 @@ class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult? Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult? Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult? Function(_Error value)? error,
   }) {
-    return onToggelBurmeseSub?.call(this);
+    return onToggleBurmeseSubtitle?.call(this);
   }
 
   @override
@@ -1345,28 +1353,28 @@ class _$OnToggelBurmeseSubImpl implements _OnToggelBurmeseSub {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
-    if (onToggelBurmeseSub != null) {
-      return onToggelBurmeseSub(this);
+    if (onToggleBurmeseSubtitle != null) {
+      return onToggleBurmeseSubtitle(this);
     }
     return orElse();
   }
 }
 
-abstract class _OnToggelBurmeseSub implements ListeningState {
-  const factory _OnToggelBurmeseSub(final bool value) =
-      _$OnToggelBurmeseSubImpl;
+abstract class _OnToggleBurmeseSubtitle implements ListeningState {
+  const factory _OnToggleBurmeseSubtitle(final bool value) =
+      _$OnToggleBurmeseSubtitleImpl;
 
   bool get value;
 
   /// Create a copy of ListeningState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$OnToggelBurmeseSubImplCopyWith<_$OnToggelBurmeseSubImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$OnToggleBurmeseSubtitleImplCopyWith<_$OnToggleBurmeseSubtitleImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1442,7 +1450,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(List<Listening> listenings) loaded,
     required TResult Function(List<PatternVocabulary> vocabularies)
         vocabularyLoaded,
-    required TResult Function(bool value) onToggelBurmeseSub,
+    required TResult Function(bool value) onToggleBurmeseSubtitle,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1455,7 +1463,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? loading,
     TResult? Function(List<Listening> listenings)? loaded,
     TResult? Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult? Function(bool value)? onToggelBurmeseSub,
+    TResult? Function(bool value)? onToggleBurmeseSubtitle,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1468,7 +1476,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? loading,
     TResult Function(List<Listening> listenings)? loaded,
     TResult Function(List<PatternVocabulary> vocabularies)? vocabularyLoaded,
-    TResult Function(bool value)? onToggelBurmeseSub,
+    TResult Function(bool value)? onToggleBurmeseSubtitle,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1485,7 +1493,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_VocabularyLoaded value) vocabularyLoaded,
-    required TResult Function(_OnToggelBurmeseSub value) onToggelBurmeseSub,
+    required TResult Function(_OnToggleBurmeseSubtitle value)
+        onToggleBurmeseSubtitle,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -1498,7 +1507,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult? Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult? Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -1511,7 +1520,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_VocabularyLoaded value)? vocabularyLoaded,
-    TResult Function(_OnToggelBurmeseSub value)? onToggelBurmeseSub,
+    TResult Function(_OnToggleBurmeseSubtitle value)? onToggleBurmeseSubtitle,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

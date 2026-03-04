@@ -14,7 +14,6 @@ import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation
 import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_page.dart';
 import 'package:pmp_english/screens/main/free_user_screen.dart';
-import 'package:pmp_english/screens/main/new_path_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
 import 'package:pmp_english/screens/practice_with_ai/ai_practice_screen.dart';
 import 'package:pmp_english/screens/practice_with_ai/ai_response_detail_screen.dart';
@@ -70,7 +69,6 @@ class PmpRoutes {
   static const profilePage = '/profile_page';
   static const updateUserName = '/update_user_name';
   static const updateAvatarPage = '/update_avatar_page';
-  // static const newPathScreen = '/new_path_screen';
   static const deviceFailedScreen = '/device_failed_screen';
   static const aiSentencePracticeListScreen =
       '/ai_sentence_practice_list_screen';
@@ -182,8 +180,6 @@ class PmpRoutes {
         return _getRoute(const UpdateNamePage(), settings);
       case updateAvatarPage:
         return _getRoute(const UpdateAvatarPage(), settings);
-      // case newPathScreen:
-      //   return _getRoute(const NewPathScreen(), settings);
       case deviceFailedScreen:
         return _getRoute(const DeviceFailedScreen(), settings);
       case aiSentencePracticeListScreen:

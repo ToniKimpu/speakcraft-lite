@@ -12,7 +12,7 @@ import '../../services/supabase_service.dart';
 part 'exercise_user_answer_bloc.freezed.dart';
 
 @freezed
-sealed class ExerciseUserAnswerEvent with _$ExerciseUserAnswerEvent {
+class ExerciseUserAnswerEvent with _$ExerciseUserAnswerEvent {
   const factory ExerciseUserAnswerEvent.addUserAnswerList(
     List<ExerciseUserAnswer> userAnswers,
     Exercise exercise,
@@ -21,7 +21,7 @@ sealed class ExerciseUserAnswerEvent with _$ExerciseUserAnswerEvent {
 }
 
 @freezed
-sealed class ExerciseUserAnswerState with _$ExerciseUserAnswerState {
+class ExerciseUserAnswerState with _$ExerciseUserAnswerState {
   const factory ExerciseUserAnswerState.initial() = _Initial;
   const factory ExerciseUserAnswerState.loading() = _Loading;
   const factory ExerciseUserAnswerState.onSuccess() = _OnSuccess;

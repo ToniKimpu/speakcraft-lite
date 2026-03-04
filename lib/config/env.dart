@@ -1,11 +1,32 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Env {
-  static String supabaseURL = dotenv.env['SUPABASE_URL']!;
-  static String supabaseAnonKey = dotenv.env['SUPABASE_ANON_KEY']!;
-  static String bunnySpokenPatternAPIKey =
+  static const _required = [
+    'SUPABASE_URL',
+    'SUPABASE_ANON_KEY',
+    'BUNNY_SPOKEN_PATTERN_API_KEY',
+    'BUNNY_LISTENING_API_KEY',
+    'PRIVACY_POLICY',
+  ];
+
+  /// Call once in main() immediately after dotenv.load().
+  /// Throws a [StateError] listing every missing key so the
+  /// developer knows exactly what to add to the .env file.
+  static void validate() {
+    final missing = _required.where((k) => dotenv.env[k] == null).toList();
+    if (missing.isNotEmpty) {
+      throw StateError(
+        'Missing required environment variables: $missing\n'
+        'Copy .envs/.env.example to .envs/.env.<flavor> and fill in the values.',
+      );
+    }
+  }
+
+  static String get supabaseURL => dotenv.env['SUPABASE_URL']!;
+  static String get supabaseAnonKey => dotenv.env['SUPABASE_ANON_KEY']!;
+  static String get bunnySpokenPatternAPIKey =>
       dotenv.env['BUNNY_SPOKEN_PATTERN_API_KEY']!;
-  static String bunnyListeningAPIKey = dotenv.env['BUNNY_LISTENING_API_KEY']!;
-  static String privacyPolicyUrl = dotenv.env['PRIVACY_POLICY']!;
-  // static String webClientId = dotenv.env['WEB_CLIENT_ID']!;
+  static String get bunnyListeningAPIKey =>
+      dotenv.env['BUNNY_LISTENING_API_KEY']!;
+  static String get privacyPolicyUrl => dotenv.env['PRIVACY_POLICY']!;
 }

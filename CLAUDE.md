@@ -12,7 +12,17 @@ flutter run --dart-define flavor=dev -t lib/main.dart
 flutter run --flavor prod --dart-define flavor=prod -t lib/main.dart
 
 # Build APK (release, prod flavor)
-flutter build apk --release --flavor prod -t lib/main.dart --dart-define flavor=prod --build-name 1.0.0 --build-number 1
+flutter build apk \
+  --release \
+  --flavor prod \
+  -t lib/main.dart \
+  --dart-define flavor=prod \
+  --obfuscate \
+  --split-debug-info=build/symbols/ \
+  --build-name 1.0.0 \
+  --build-number 1
+# After building, upload symbols to Crashlytics:
+# firebase crashlytics:symbols:upload --app=YOUR_APP_ID build/symbols/
 
 # Run tests
 flutter test

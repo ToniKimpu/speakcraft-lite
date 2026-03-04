@@ -88,7 +88,6 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
       var query = supabase
           .from('patterns')
           .select('*,subject_verb_agreements(*)')
-          .eq('pattern_user_comments.user_id', GlobalAppState().currentUser.id!)
           .eq('self_practicable', true)
           .eq('is_deleted', false);
 
@@ -114,32 +113,23 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
     try {
       final dataRes = await supabase
           .from('patterns')
-          // .select(
-          //     '*,subject_verb_agreements(*),pattern_examples(*,vocabularies:pattern_examples_vocabularies_relation(pattern_vocabularies(*)))'
-          //     )
-          .select("*")
+          .select('*')
           .eq('lesson_id', lessonId)
-          .eq("is_deleted", false)
-          // .eq("pattern_examples.practicable", false)
-          // .eq("pattern_examples.is_deleted", false)
+          .eq('is_deleted', false)
           .order('order_number', ascending: true);
       if (dataRes.isEmpty) {
         emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
         return;
       }
-      final spokenPatterns =
-          dataRes.map((e) => SpokenPattern.fromJson(e)).toList();
-      final newSpokenPatterns = spokenPatterns.map((p) {
+      final spokenPatterns = dataRes.map((e) {
+        final p = SpokenPattern.fromJson(e);
         if (p.filePath == null || p.filePath!.isEmpty) return p;
-        // return p.copyWith(
-        //   audioPath: AudioUrlService.resolveAudioUrl(p.audioPath!),
-        // );
         return p.copyWith(
           filePath: Env.bunnySpokenPatternAPIKey +
               p.filePath!.replaceFirst('bunny/', ''),
         );
       }).toList();
-      emit(SpokenPatternState.loaded(newSpokenPatterns));
+      emit(SpokenPatternState.loaded(spokenPatterns));
     } catch (e) {
       debugPrint('_loadPatternError: ${e.toString()}');
       emit(SpokenPatternState.error(e.toString()));
@@ -163,7 +153,6 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
         emit(const SpokenPatternState.loaded(<SpokenPattern>[]));
         return;
       }
-      debugPrint("_mapLoadPatternByLessonToState: ${dataRes.first.toString()}");
       final examples = dataRes.map((e) => PatternExample.fromJson(e)).toList()
         ..sort(
           (a, b) => (a.createdAt ?? DateTime(0))
@@ -227,7 +216,6 @@ class SpokenPatternBloc extends Bloc<SpokenPatternEvent, SpokenPatternState> {
         emit(const SpokenPatternState.examplesLoaded(<PatternExample>[]));
         return;
       }
-      // final examples = PatternExample.fromJsonList(dataRes);
       final examples = dataRes.map((e) => PatternExample.fromJson(e)).toList();
       emit(SpokenPatternState.examplesLoaded(examples));
     } catch (e) {

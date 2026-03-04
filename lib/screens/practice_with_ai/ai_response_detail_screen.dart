@@ -5,7 +5,7 @@ import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 import '../../bloc/app_ui/app_ui_bloc.dart';
-import 'widgets/ai_reponse_card.dart';
+import 'widgets/ai_response_card.dart';
 
 class AiResponseDetailScreen extends StatefulWidget {
   const AiResponseDetailScreen({

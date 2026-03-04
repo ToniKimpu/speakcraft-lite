@@ -1424,13 +1424,13 @@ This is a backend change. In your Supabase Edge Functions or backend:
 | 1 | 1.1 Rotate API key | ⬜ Todo | |
 | 1 | 1.2 Remove `.env` from git | ⬜ Todo | |
 | 1 | 1.3 Install gitleaks | ⬜ Todo | |
-| 1 | 1.4 Fix AudioPlayerBloc.stop() | ⬜ Todo | |
-| 1 | 1.5 Fix dangling Supabase filter | ⬜ Todo | |
-| 1 | 1.6 Add Env.validate() | ⬜ Todo | |
-| 1 | 1.7 Add Firebase Crashlytics | ⬜ Todo | |
-| 1 | 1.8 Enable release obfuscation | ⬜ Todo | |
-| 1 | 1.9 Delete dead code files | ⬜ Todo | |
-| 1 | 1.10 Fix typos | ⬜ Todo | |
+| 1 | 1.4 Fix AudioPlayerBloc.stop() | ✅ Done | |
+| 1 | 1.5 Fix dangling Supabase filter | ✅ Done | |
+| 1 | 1.6 Add Env.validate() | ✅ Done | |
+| 1 | 1.7 Add Firebase Crashlytics | ✅ Done | |
+| 1 | 1.8 Enable release obfuscation | ✅ Done | |
+| 1 | 1.9 Delete dead code files | ✅ Done | |
+| 1 | 1.10 Fix typos | ✅ Done | |
 | 2 | 2.1 Wire up get_it | ⬜ Todo | |
 | 2 | 2.2 Create repository interfaces | ⬜ Todo | |
 | 2 | 2.3 Implement Supabase repositories | ⬜ Todo | |

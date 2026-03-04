@@ -6,7 +6,7 @@ import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/global_app_state.dart';
-import 'package:pmp_english/screens/practice_with_ai/pages/ai_reponse_list.dart';
+import 'package:pmp_english/screens/practice_with_ai/pages/ai_response_list.dart';
 import 'package:pmp_english/screens/practice_with_ai/pages/user_correct_list.dart';
 import 'package:pmp_english/screens/practice_with_ai/widgets/ai_practice_tab_selector.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';

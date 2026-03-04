@@ -13,7 +13,7 @@ import '../../services/supabase_service.dart';
 part 'ai_sentence_practice_bloc.freezed.dart';
 
 @freezed
-sealed class AiSentencePracticeEvent with _$AiSentencePracticeEvent {
+class AiSentencePracticeEvent with _$AiSentencePracticeEvent {
   const factory AiSentencePracticeEvent.load() = _Load;
   const factory AiSentencePracticeEvent.delete(AiSentencePractice data) =
       _Delete;
@@ -24,7 +24,7 @@ sealed class AiSentencePracticeEvent with _$AiSentencePracticeEvent {
 }
 
 @freezed
-sealed class AiSentencePracticeState with _$AiSentencePracticeState {
+class AiSentencePracticeState with _$AiSentencePracticeState {
   const factory AiSentencePracticeState.initial() = _Initial;
   const factory AiSentencePracticeState.loading({String? message}) = _Loading;
   const factory AiSentencePracticeState.loaded(List<AiSentencePractice> data) =

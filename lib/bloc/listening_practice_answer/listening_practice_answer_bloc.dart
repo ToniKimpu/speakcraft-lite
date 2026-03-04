@@ -9,14 +9,14 @@ import '../../model/listening_practice_answer/listening_practice_answer.dart';
 part 'listening_practice_answer_bloc.freezed.dart';
 
 @freezed
-sealed class ListeningPracticeAnswerEvent with _$ListeningPracticeAnswerEvent {
+class ListeningPracticeAnswerEvent with _$ListeningPracticeAnswerEvent {
   const factory ListeningPracticeAnswerEvent.load() = _Load;
   const factory ListeningPracticeAnswerEvent.saveUserAnswers(
       List<ListeningPracticeAnswer> userAnswers) = _SaveUserAnswers;
 }
 
 @freezed
-sealed class ListeningPracticeAnswerState with _$ListeningPracticeAnswerState {
+class ListeningPracticeAnswerState with _$ListeningPracticeAnswerState {
   const factory ListeningPracticeAnswerState.initial() = _Initial;
   const factory ListeningPracticeAnswerState.loading({String? message}) =
       _Loading;

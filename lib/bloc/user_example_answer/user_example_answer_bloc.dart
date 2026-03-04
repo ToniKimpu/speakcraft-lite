@@ -8,14 +8,14 @@ import '../../services/app_database/app_database.dart';
 part 'user_example_answer_bloc.freezed.dart';
 
 @freezed
-sealed class UserExampleAnswerEvent with _$UserExampleAnswerEvent {
+class UserExampleAnswerEvent with _$UserExampleAnswerEvent {
   const factory UserExampleAnswerEvent.load(int exampleId) = _Load;
   const factory UserExampleAnswerEvent.insert(
       int exampleId, String userAnswer) = _Insert;
 }
 
 @freezed
-sealed class UserExampleAnswerState with _$UserExampleAnswerState {
+class UserExampleAnswerState with _$UserExampleAnswerState {
   const factory UserExampleAnswerState.initial() = _Initial;
   const factory UserExampleAnswerState.loading({String? message}) = _Loading;
   const factory UserExampleAnswerState.loaded(String? userAnswer) = _Loaded;

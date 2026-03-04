@@ -275,6 +275,7 @@ class _$SaveUserAnswersImpl
 
   /// Create a copy of ListeningPracticeAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
+
   @override
   @pragma('vm:prefer-inline')
   _$$SaveUserAnswersImplCopyWith<_$SaveUserAnswersImpl> get copyWith =>
@@ -355,6 +356,7 @@ abstract class _SaveUserAnswers implements ListeningPracticeAnswerEvent {
 
   /// Create a copy of ListeningPracticeAnswerEvent
   /// with the given fields replaced by the non-null parameter values.
+
   _$$SaveUserAnswersImplCopyWith<_$SaveUserAnswersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -641,6 +643,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
+
   @override
   @pragma('vm:prefer-inline')
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
@@ -734,6 +737,7 @@ abstract class _Loading implements ListeningPracticeAnswerState {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
+
   _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -813,6 +817,7 @@ class _$LoadedImpl with DiagnosticableTreeMixin implements _Loaded {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
+
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -907,6 +912,7 @@ abstract class _Loaded implements ListeningPracticeAnswerState {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
+
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1109,6 +1115,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
+
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1202,6 +1209,7 @@ abstract class _Error implements ListeningPracticeAnswerState {
 
   /// Create a copy of ListeningPracticeAnswerState
   /// with the given fields replaced by the non-null parameter values.
+
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
