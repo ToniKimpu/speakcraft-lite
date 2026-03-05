@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/bloc/app_ui/app_ui_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/listening_question/listening_question.dart';
 
+import '../../config/grade_utils.dart';
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
 
@@ -24,12 +24,6 @@ class ListeningSentencePracticeList extends StatefulWidget {
 
 class _ListeningSentencePracticeListState
     extends State<ListeningSentencePracticeList> {
-  final _subtitleBloc = SubtitleBloc();
-  @override
-  void initState() {
-    super.initState();
-    _subtitleBloc.add(SubtitleEvent.parseListeningQuestion(widget.listening));
-  }
 
   List<List<ListeningQuestion>> groupListeningQuestions(
       List<ListeningQuestion> listeningQuestions) {
@@ -53,20 +47,10 @@ class _ListeningSentencePracticeListState
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<AppUIBloc, AppUIState>(
-      listener: (context, state) {
-        state.maybeWhen(
-          onReloadListeningPracticeList: () {
-            AppLogger.instance.debug("_listeningSentencePracticeListLogs: onReload");
-            _subtitleBloc
-                .add(SubtitleEvent.parseListeningQuestion(widget.listening));
-          },
-          orElse: () => -1,
-        );
-      },
-      child: BlocProvider(
-        create: (context) => _subtitleBloc,
-        child: Scaffold(
+    return BlocProvider(
+      create: (context) => SubtitleBloc()
+        ..add(SubtitleEvent.parseListeningQuestion(widget.listening)),
+      child: Scaffold(
           appBar: AppBar(),
           body: BlocBuilder<SubtitleBloc, SubtitleState>(
             builder: (context, state) {
@@ -130,8 +114,8 @@ class _ListeningSentencePracticeListState
                             .length;
                         final percentage =
                             total == 0 ? 0.0 : (correctCount / total) * 100;
-                        leadingColor = getColor(calculateLevel(percentage));
-                        scoreLevel = calculateLevel(percentage);
+                        leadingColor = getGradeColor(calculateGrade(percentage));
+                        scoreLevel = calculateGrade(percentage);
                       } else {
                         leadingColor = Colors.white.withValues(alpha: 0.08);
                       }
@@ -168,6 +152,7 @@ class _ListeningSentencePracticeListState
                                     'group_id': groupId,
                                   },
                                 );
+                                if (context.mounted) _reload(context);
                               },
                         child: AnimatedContainer(
                           duration: const Duration(milliseconds: 300),
@@ -236,47 +221,13 @@ class _ListeningSentencePracticeListState
               );
             },
           ),
-        ),
       ),
     );
   }
 
-  String calculateLevel(double score) {
-    if (score >= 0 && score <= 40) {
-      return 'F';
-    } else if (score > 40 && score <= 50) {
-      return 'D';
-    } else if (score > 50 && score <= 60) {
-      return 'C';
-    } else if (score > 60 && score <= 70) {
-      return 'B';
-    } else if (score > 70 && score <= 80) {
-      return 'A-';
-    } else if (score > 80 && score <= 90) {
-      return 'A';
-    } else if (score > 90 && score <= 100) {
-      return 'A+';
-    } else {
-      return 'Invalid score';
-    }
+  void _reload(BuildContext context) {
+    context.read<SubtitleBloc>()
+        .add(SubtitleEvent.parseListeningQuestion(widget.listening));
   }
 
-  Color getColor(String grade) {
-    switch (grade) {
-      case 'A+':
-      case 'A':
-      case 'A-':
-        return PmpColors.success400;
-      case 'B':
-        return PmpColors.info400;
-      case 'C':
-        return const Color(0xFFFFC62D);
-      case 'D':
-        return const Color(0xFFEF7C25);
-      case 'F':
-        return PmpColors.destructive500;
-      default:
-        return Colors.transparent;
-    }
-  }
 }

@@ -18,9 +18,13 @@ class SpokenPatternWidget extends StatefulWidget {
   State<SpokenPatternWidget> createState() => _SpokenPatternWidgetState();
 }
 
-class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
+class _SpokenPatternWidgetState extends State<SpokenPatternWidget>
+    with AutomaticKeepAliveClientMixin {
   String? _htmlContent;
   String? _error;
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
@@ -50,6 +54,7 @@ class _SpokenPatternWidgetState extends State<SpokenPatternWidget> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,

@@ -7,6 +7,7 @@ import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/model/translation_level/translation_level.dart';
 import 'package:pmp_english/services/supabase_service.dart';
 
+import '../../model/pattern_vocabulary/pattern_vocabulary.dart';
 import '../../model/translation/translation.dart';
 
 import 'package:json_annotation/json_annotation.dart';
@@ -87,7 +88,17 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
         emit(const TranslationState.loaded(<Translation>[]));
         return;
       }
-      final translations = Translation.fromJsonList1(dataRes);
+      final translations = dataRes.map((json) => Translation(
+        id: json['id'] as int,
+        englishText: json['english_text'] as String,
+        burmeseText: json['burmese_text'] as String,
+        words: json['words'] as String?,
+        userAnswer: (json['translation_user_answer'] as List?)
+            ?.firstOrNull?['answer'] as String?,
+        vocabularies: (json['vocabularies'] as List<dynamic>? ?? [])
+            .map((v) => PatternVocabulary.fromJson(v as Map<String, dynamic>))
+            .toList(),
+      )).toList();
       emit(TranslationState.loaded(translations));
     } catch (e) {
       AppLogger.instance.error('Error fetching translations: ${e.toString()}', error: e);
@@ -109,7 +120,17 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
       }
       AppLogger.instance.debug("_translationLoaded: ${dataRes[1].toString()} DataRes");
 
-      final translations = Translation.fromJsonList1(dataRes);
+      final translations = dataRes.map((json) => Translation(
+        id: json['id'] as int,
+        englishText: json['english_text'] as String,
+        burmeseText: json['burmese_text'] as String,
+        words: json['words'] as String?,
+        userAnswer: (json['translation_user_answer'] as List?)
+            ?.firstOrNull?['answer'] as String?,
+        vocabularies: (json['vocabularies'] as List<dynamic>? ?? [])
+            .map((v) => PatternVocabulary.fromJson(v as Map<String, dynamic>))
+            .toList(),
+      )).toList();
       emit(TranslationState.loaded(translations));
     } catch (e) {
       AppLogger.instance.error('Error fetching translations: ${e.toString()}', error: e);

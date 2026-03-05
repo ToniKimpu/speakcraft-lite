@@ -12,7 +12,6 @@ import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_w
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import '../../bloc/app_ui/app_ui_bloc.dart';
 import '../../bloc/listening_practice_answer/listening_practice_answer_bloc.dart';
 import '../../config/pmp_routes.dart';
 import 'dialogs/checking_user_answers_dialog.dart';
@@ -175,30 +174,6 @@ class _ListeningSentencePracticePageState
     AppLogger.instance.debug('_answerLogs: ${answer.toJson()}');
   }
 
-  // void _showCheckDialog() {
-  //   showDialog(
-  //     context: context,
-  //     barrierDismissible: false,
-  //     builder: (context) =>
-  //         CheckingUserAnswersDialog(userAnswers: _userAnswers),
-  //   ).then((confirmed) {
-  //     if (confirmed == true && context.mounted) {
-  //       context.read<AppUIBloc>().add(
-  //             const AppUIEvent.reloadListeningPracticeList(),
-  //           );
-  //       Navigator.pushReplacementNamed(
-  //         context,
-  //         PmpRoutes.listeningPracticeResultPage,
-  //         arguments: {
-  //           "listening": widget.listening,
-  //           "listening_answers": _userAnswers,
-  //           "listening_questions": widget.listeningQuestions,
-  //         },
-  //       );
-  //     }
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     final isLoading =
@@ -225,9 +200,6 @@ class _ListeningSentencePracticePageState
               Navigator.pop(_loadingDialogContext!);
               _loadingDialogContext = null;
             }
-            context.read<AppUIBloc>().add(
-                  const AppUIEvent.reloadListeningPracticeList(),
-                );
             Navigator.pushReplacementNamed(
               context,
               PmpRoutes.listeningPracticeResultPage,

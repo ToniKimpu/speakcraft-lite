@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/app_ui/app_ui_bloc.dart';
 import 'package:pmp_english/bloc/day/day_bloc.dart';
 import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
 import 'package:pmp_english/bloc/spoken_pattern/spoken_pattern_bloc.dart';
@@ -20,9 +19,6 @@ mainBlocProviders() {
     ),
     BlocProvider<ExerciseBloc>(
       create: (context) => ExerciseBloc(),
-    ),
-    BlocProvider(
-      create: (context) => AppUIBloc(),
     ),
     BlocProvider(
       create: (_) => InternetCheckerBloc(),

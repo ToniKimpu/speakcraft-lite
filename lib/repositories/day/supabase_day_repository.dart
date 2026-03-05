@@ -20,7 +20,14 @@ class SupabaseDayRepository implements DayRepository {
 
     if (dataRes.isEmpty) return [];
 
-    final days = dataRes.map((e) => Day.fromJson1(e)).toList();
+    final days = dataRes.map((e) => Day(
+      id: e['id'] as int,
+      orderNumber: e['order_number'] as int,
+      createdAt: DateTime.parse(e['created_at'] as String),
+      isComplete: (e['days_users_relation'] as List).isNotEmpty,
+      lessons: [],
+      exercises: [],
+    )).toList();
 
     final lessonDataRes = await supabase
         .from('lessons')
@@ -37,7 +44,12 @@ class SupabaseDayRepository implements DayRepository {
         .order('created_at', ascending: true);
 
     final allLessons = Lesson.fromJsonList(lessonDataRes);
-    final allExercises = Exercise.fromJsonList1(exerciseDataRes);
+    final allExercises = exerciseDataRes.map((e) => Exercise(
+      id: e['id'] as int,
+      exerciseName: e['exercise_name'] as String,
+      dayId: e['day_id'] as int,
+      isComplete: (e['exercises_users_relation'] as List).isNotEmpty,
+    )).toList();
 
     final lessonsByDay = {
       for (var id in days.map((d) => d.id))

@@ -28,6 +28,7 @@ class SpokenPatternScreen extends StatefulWidget {
 
 class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
   int _currentPage = 0;
+  final _pageController = PageController();
   final _spokenPatternBloc = SpokenPatternBloc();
   final _audioPositionTrackerBloc = AudioPlayerBloc();
   final _audioPlayerStateTrackerBloc = AudioPlayerBloc();
@@ -35,8 +36,6 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
   StreamSubscription? _playerStateSubscription;
   StreamSubscription<Duration>? _positionSub;
   final _spokenPatterns = <SpokenPattern>[];
-
-  final List<int> _doneIds = [];
 
   @override
   void initState() {
@@ -59,10 +58,11 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
 
   @override
   void dispose() {
-    super.dispose();
+    _pageController.dispose();
     _playerStateSubscription?.cancel();
     _positionSub?.cancel();
     _audioPlayer.dispose();
+    super.dispose();
   }
 
   @override
@@ -73,8 +73,9 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
         if (didPop) return;
         if (_currentPage > 0) {
           _audioPlayer.stop();
+          _currentPage--;
+          _pageController.jumpToPage(_currentPage);
           setState(() {
-            _currentPage--;
             if (_spokenPatterns.isNotEmpty &&
                 _spokenPatterns[_currentPage].audioPath != null) {
               _audioPlayer.setUrl(_spokenPatterns[_currentPage].audioPath!);
@@ -132,31 +133,15 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                   return Column(
                     children: [
                       Expanded(
-                        child: IndexedStack(
-                          index: _currentPage,
-                          children: List.generate(
-                            spokenPatterns.length,
-                            (index) {
-                              return SpokenPatternWidget(
-                                spokenPattern: spokenPatterns[index],
-                              );
-                              // return SpokenPatternWidget(
-                              //   audioPlayer: _audioPlayer,
-                              //   spokenPattern: spokenPatterns[index],
-                              //   audioPositionTrackerBloc:
-                              //       _audioPositionTrackerBloc,
-                              //   audioPlayerStateTrackerBloc:
-                              //       _audioPlayerStateTrackerBloc,
-                              //   onNextEnabledChanged: (spokenPatternId) {
-                              //     setState(() {
-                              //       if (!_doneIds.contains(spokenPatternId)) {
-                              //         _doneIds.add(spokenPatternId);
-                              //       }
-                              //     });
-                              //   },
-                              // );
-                            },
-                          ),
+                        child: PageView.builder(
+                          controller: _pageController,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: spokenPatterns.length,
+                          itemBuilder: (context, index) {
+                            return SpokenPatternWidget(
+                              spokenPattern: spokenPatterns[index],
+                            );
+                          },
                         ),
                       ),
                       Padding(
@@ -170,6 +155,7 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
                           nextEnabled: true,
                           onPageChanged: (newPage) {
                             _audioPlayer.stop();
+                            _pageController.jumpToPage(newPage);
                             setState(() {
                               _currentPage = newPage;
                               if (_spokenPatterns[_currentPage].audioPath !=

@@ -15,12 +15,4 @@ class TranslationDay with _$TranslationDay {
 
   factory TranslationDay.fromJson(Map<String, dynamic> json) =>
       _$TranslationDayFromJson(json);
-  factory TranslationDay.fromJson1(Map<String, dynamic> json) {
-    return TranslationDay(
-      id: json['id'] as int,
-      dayName: json['day_name'] as String,
-      isComplete:
-          (json['translation_days_users_relation'].isNotEmpty ?? false) as bool, // Default to false if missing
-    );
-  }
 }

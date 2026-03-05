@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 
 part 'youtube_player_bloc.freezed.dart';
 
@@ -31,6 +32,7 @@ class YoutubePlayerBloc extends Bloc<YoutubePlayerEvent, YoutubePlayerState> {
           },
         );
       } catch (e) {
+        AppLogger.instance.error("YoutubePlayerBloc error: ${e.toString()}", error: e);
         emit(YoutubePlayerState.error(e.toString()));
       }
     });

@@ -6,7 +6,9 @@
       "Bash(flutter test:*)",
       "Bash(flutter analyze:*)",
       "Bash(xargs grep:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(dart analyze:*)",
+      "Bash(python:*)"
     ]
   }
 }

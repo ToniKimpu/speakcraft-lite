@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
-import 'package:pmp_english/bloc/app_ui/app_ui_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
@@ -69,9 +68,6 @@ class _AiPracticeScreenState extends State<AiPracticeScreen> {
                   setState(() {});
                   _userBloc
                       .add(UserEvent.updateUserToken(data.totalTokensUsed));
-                  context
-                      .read<AppUIBloc>()
-                      .add(const AppUIEvent.reloadAISentencePracticeList());
                 },
                 error: (message) {
                   showErrorSnackbar(message);

@@ -18,24 +18,16 @@ class VocabularyListeningPage extends StatefulWidget {
 }
 
 class _VocabularyListeningPageState extends State<VocabularyListeningPage> {
-  final _subtitleBloc = SubtitleBloc();
-
-  @override
-  void initState() {
-    super.initState();
-    _subtitleBloc.add(SubtitleEvent.parseSubtitle(widget.listening));
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => _subtitleBloc,
+      create: (context) => SubtitleBloc()
+        ..add(SubtitleEvent.parseSubtitle(widget.listening)),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Vocabularies'),
         ),
         body: BlocBuilder<SubtitleBloc, SubtitleState>(
-          bloc: _subtitleBloc,
           builder: (context, state) {
             return state.maybeWhen(
               loading: (message) {

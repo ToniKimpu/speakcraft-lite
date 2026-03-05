@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
-import 'package:pmp_english/bloc/app_ui/app_ui_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
@@ -56,32 +55,22 @@ class _AiSentencePracticeListScreenState
           create: (context) => _aiCorrectResponseBloc,
         ),
       ],
-      child: BlocListener<AppUIBloc, AppUIState>(
-        listener: (context, state) {
-          state.whenOrNull(
-            onReloadAISentencePracticeList: () {
-              _aiResponseBloc
-                  .add(const AiSentencePracticeEvent.loadGroupData(false));
-              _aiCorrectResponseBloc
-                  .add(const AiSentencePracticeEvent.loadGroupData(true));
-            },
-          );
-        },
-        child: MainScaffold(
+      child: MainScaffold(
           appBar: AppBar(
             title: const Text('AI Practice'),
           ),
           floatingActionButton: FloatingActionButton.extended(
             backgroundColor: Colors.blue,
-            onPressed: () {
+            onPressed: () async {
               if (!(sl<ValueNotifier<AppUser>>().value.totalTokenUsed < 500000)) {
                 showErrorSnackbar("You don't have enough tokens");
                 return;
               }
-              Navigator.pushNamed(
+              await Navigator.pushNamed(
                 context,
                 PmpRoutes.aiPracticeScreen,
               );
+              _reloadAll();
             },
             label: Text(
               "Practice Now",
@@ -110,6 +99,7 @@ class _AiSentencePracticeListScreenState
                     children: [
                       AiReponseList(
                         aiSentencePracticeBloc: _aiResponseBloc,
+                        onNeedReload: _reloadAll,
                       ),
                       UserCorrectList(
                         aiSentencePracticeBloc: _aiCorrectResponseBloc,
@@ -121,7 +111,13 @@ class _AiSentencePracticeListScreenState
             ),
           ),
         ),
-      ),
     );
+  }
+
+  void _reloadAll() {
+    _aiResponseBloc
+        .add(const AiSentencePracticeEvent.loadGroupData(false));
+    _aiCorrectResponseBloc
+        .add(const AiSentencePracticeEvent.loadGroupData(true));
   }
 }

@@ -37,7 +37,8 @@ class UserExampleAnswerBloc
                     .getSingleOrNull();
             emit(UserExampleAnswerState.loaded(data?.userAnswer));
           } catch (e) {
-            AppLogger.instance.error("", error: e);
+            AppLogger.instance.error("_userExampleAnswerLoad: ${e.toString()}", error: e);
+            emit(UserExampleAnswerState.error(e.toString()));
           }
         },
         insert: (exampleId, userAnswer) async {
@@ -54,6 +55,7 @@ class UserExampleAnswerBloc
             emit(UserExampleAnswerState.loaded(data.userAnswer));
           } catch (e) {
             AppLogger.instance.error("_userExampleAnswerInsert: ${e.toString()}", error: e);
+            emit(UserExampleAnswerState.error(e.toString()));
           }
         },
       );

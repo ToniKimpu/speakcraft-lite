@@ -60,7 +60,11 @@ class TranslationDayBloc
         return;
       }
       final List<TranslationDay> translationDays =
-          dataRes.map((item) => TranslationDay.fromJson1(item)).toList();
+          dataRes.map((item) => TranslationDay(
+            id: item['id'] as int,
+            dayName: item['day_name'] as String,
+            isComplete: (item['translation_days_users_relation'] as List).isNotEmpty,
+          )).toList();
       emit(TranslationDayState.loaded(translationDays));
     } catch (e) {
       AppLogger.instance.error('Error fetching translation days: ${e.toString()}', error: e);

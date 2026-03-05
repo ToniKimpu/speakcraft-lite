@@ -15,11 +15,11 @@ class Listening with _$Listening {
     @JsonKey(name: 'mm_subtitle') required bool hasMMSubtitle,
     @JsonKey(name: 'has_vocabularies') required bool hasVocabularies,
     @JsonKey(name: 'youtube_id') required String youtubeId,
-    @JsonKey(name: 'subtitle_path') required String subtitlePath,
-    @JsonKey(name: 'multiple_choice_path') required String multipleChoicePath,
-    @JsonKey(name: 'shadowing_path') required String shadowingPath,
-    @JsonKey(name: 'record_subtitle_path') required String recordSubtitlePath,
-    @JsonKey(name: 'sentence_explanation_path') required String sentenceExplanationPath,
+    @JsonKey(name: 'subtitle_path') @Default('') String subtitlePath,
+    @JsonKey(name: 'multiple_choice_path') @Default('') String multipleChoicePath,
+    @JsonKey(name: 'shadowing_path') @Default('') String shadowingPath,
+    @JsonKey(name: 'record_subtitle_path') @Default('') String recordSubtitlePath,
+    @JsonKey(name: 'sentence_explanation_path') @Default('') String sentenceExplanationPath,
     @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
   }) = _Listening;
 

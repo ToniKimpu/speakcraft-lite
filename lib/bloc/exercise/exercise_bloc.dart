@@ -51,7 +51,12 @@ class ExerciseBloc extends Bloc<ExerciseEvent, ExerciseState> {
         emit(const ExerciseState.loaded(<Exercise>[]));
         return;
       }
-      final exercises = Exercise.fromJsonList1(dataRes);
+      final exercises = dataRes.map((e) => Exercise(
+        id: e['id'] as int,
+        exerciseName: e['exercise_name'] as String,
+        dayId: e['day_id'] as int,
+        isComplete: (e['exercises_users_relation'] as List).isNotEmpty,
+      )).toList();
       emit(ExerciseState.loaded(exercises));
     } catch (e) {
       AppLogger.instance.error('Error fetching exercises: ${e.toString()}', error: e);

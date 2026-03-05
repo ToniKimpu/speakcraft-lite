@@ -17,15 +17,4 @@ class Exercise with _$Exercise {
   factory Exercise.fromJson(Map<String, dynamic> json) =>
       _$ExerciseFromJson(json);
 
-  factory Exercise.fromJson1(Map<String, dynamic> json) => Exercise(
-        id: json['id'] as int,
-        exerciseName: json['exercise_name'] as String,
-        dayId: json['day_id'] as int,
-        isComplete: json['exercises_users_relation'].isNotEmpty,
-      );
-
-  static List<Exercise> fromJsonList1(List<dynamic>? jsonList) {
-    if (jsonList == null) return [];
-    return jsonList.map((json) => Exercise.fromJson1(json)).toList();
-  }
 }

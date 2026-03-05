@@ -123,46 +123,6 @@
 
 ---
 
-### Step 1.4 — Fix `AudioPlayerBloc.stop()` Bug
-
-**Why:** `stop()` emits `onPause` instead of `onStop`. Every screen that listens for `onStop` to reset UI (e.g., reset play button icon) receives the wrong signal.
-
-**File:** `lib/bloc/audio_player/audio_player_bloc.dart`
-
-**How:**
-
-Before:
-```dart
-stop: () {
-  emit(const AudioPlayerState.loading());
-  emit(const AudioPlayerState.onPause()); // WRONG
-},
-```
-
-After:
-```dart
-stop: () {
-  emit(const AudioPlayerState.onStop());
-},
-```
-
-Also remove the redundant `loading` emission from all non-network events in this BLoC:
-```dart
-play: () => emit(const AudioPlayerState.onPlay()),
-pause: () => emit(const AudioPlayerState.onPause()),
-stop: () => emit(const AudioPlayerState.onStop()),
-setCurrentPosition: (position) =>
-    emit(AudioPlayerState.onCurrentPosition(position)),
-setTotalDuration: (duration) =>
-    emit(AudioPlayerState.onTotalDuration(duration)),
-updatePlayerState: (playerState) =>
-    emit(AudioPlayerState.onUpdatePlayerState(playerState)),
-```
-
-**Done When:** Play, pause, and stop each emit exactly one state. No intermediate `loading` emitted for non-network events. Audio UI behaves correctly.
-
----
-
 ### Step 1.5 — Fix Dangling Filter in `SpokenPatternBloc`
 
 **Why:** `_mapLoadPatterns` applies a `.eq()` filter on `pattern_user_comments.user_id` but `pattern_user_comments` is not in the `select()`. This is an undefined query that may silently return wrong data.

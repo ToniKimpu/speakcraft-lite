@@ -16,11 +16,12 @@ _$ListeningImpl _$$ListeningImplFromJson(Map<String, dynamic> json) =>
       hasMMSubtitle: json['mm_subtitle'] as bool,
       hasVocabularies: json['has_vocabularies'] as bool,
       youtubeId: json['youtube_id'] as String,
-      subtitlePath: json['subtitle_path'] as String,
-      multipleChoicePath: json['multiple_choice_path'] as String,
-      shadowingPath: json['shadowing_path'] as String,
-      recordSubtitlePath: json['record_subtitle_path'] as String,
-      sentenceExplanationPath: json['sentence_explanation_path'] as String,
+      subtitlePath: json['subtitle_path'] as String? ?? '',
+      multipleChoicePath: json['multiple_choice_path'] as String? ?? '',
+      shadowingPath: json['shadowing_path'] as String? ?? '',
+      recordSubtitlePath: json['record_subtitle_path'] as String? ?? '',
+      sentenceExplanationPath:
+          json['sentence_explanation_path'] as String? ?? '',
       listeningCategoryId: (json['listening_category_id'] as num?)?.toInt(),
     );
 

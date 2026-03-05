@@ -18,7 +18,6 @@ class UpdateAvatarPage extends StatefulWidget {
 }
 
 class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
-  final _userBloc = UserBloc();
   final _maleProfiles = [
     'Boy_01.png',
     'Boy_02.png',
@@ -51,11 +50,6 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
   void initState() {
     super.initState();
     _selectedProfile = sl<ValueNotifier<AppUser>>().value.profilePath;
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 
   Widget _buildProfileGrid(List<String> profiles) {
@@ -112,7 +106,7 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => _userBloc,
+      create: (context) => UserBloc(),
       child: BlocConsumer<UserBloc, UserState>(
         listener: (context, state) {
           state.maybeWhen(
@@ -204,7 +198,7 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
                         showErrorSnackbar("Please select a different profile");
                         return;
                       }
-                      _userBloc.add(
+                      context.read<UserBloc>().add(
                         UserEvent.updateUserAvatar(_selectedProfile!),
                       );
                     },

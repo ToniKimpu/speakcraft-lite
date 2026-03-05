@@ -12,8 +12,10 @@ class AiReponseList extends StatelessWidget {
   const AiReponseList({
     super.key,
     required this.aiSentencePracticeBloc,
+    this.onNeedReload,
   });
   final AiSentencePracticeBloc aiSentencePracticeBloc;
+  final VoidCallback? onNeedReload;
 
   @override
   Widget build(BuildContext context) {
@@ -110,14 +112,17 @@ class AiReponseList extends StatelessWidget {
                                 bottomRight: Radius.circular(16),
                               )
                             : null,
-                        onTap: () {
-                          Navigator.pushNamed(
+                        onTap: () async {
+                          final result = await Navigator.pushNamed(
                             context,
                             PmpRoutes.aiResponseDetailScreen,
                             arguments: {
                               "aiSentencePractice": item,
                             },
                           );
+                          if (result == true) {
+                            onNeedReload?.call();
+                          }
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(

@@ -30,7 +30,6 @@ class PatternExerciseResultScreen extends StatefulWidget {
 
 class _PatternExerciseResultScreenState
     extends State<PatternExerciseResultScreen> {
-  final _patternExerciseBloc = PatternExerciseBloc();
   int correctCount = 0;
   int inCorrectCount = 0;
   int notAnswerCount = 0;
@@ -38,13 +37,7 @@ class _PatternExerciseResultScreenState
   @override
   void initState() {
     super.initState();
-    if (widget.exerciseId != null) {
-      _patternExerciseBloc.add(
-        PatternExerciseEvent.loadPatternExercisesWithAnswers(
-          widget.exerciseId!,
-        ),
-      );
-    } else {
+    if (widget.exerciseId == null) {
       for (final exercise in widget.patternExercises!) {
         if (exercise.userAnswer?.isEmpty ?? true) {
           notAnswerCount++;
@@ -55,11 +48,6 @@ class _PatternExerciseResultScreenState
         }
       }
     }
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 
   @override
@@ -75,7 +63,9 @@ class _PatternExerciseResultScreenState
   Widget _buildBody() {
     if (widget.exerciseId != null) {
       return BlocProvider(
-        create: (context) => _patternExerciseBloc,
+        create: (context) => PatternExerciseBloc()
+          ..add(PatternExerciseEvent.loadPatternExercisesWithAnswers(
+              widget.exerciseId!)),
         child: BlocConsumer<PatternExerciseBloc, PatternExerciseState>(
           listener: (context, state) {
             state.maybeWhen(

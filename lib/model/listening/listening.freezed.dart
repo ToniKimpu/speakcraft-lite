@@ -295,12 +295,12 @@ class _$ListeningImpl implements _Listening {
       @JsonKey(name: 'mm_subtitle') required this.hasMMSubtitle,
       @JsonKey(name: 'has_vocabularies') required this.hasVocabularies,
       @JsonKey(name: 'youtube_id') required this.youtubeId,
-      @JsonKey(name: 'subtitle_path') required this.subtitlePath,
-      @JsonKey(name: 'multiple_choice_path') required this.multipleChoicePath,
-      @JsonKey(name: 'shadowing_path') required this.shadowingPath,
-      @JsonKey(name: 'record_subtitle_path') required this.recordSubtitlePath,
+      @JsonKey(name: 'subtitle_path') this.subtitlePath = '',
+      @JsonKey(name: 'multiple_choice_path') this.multipleChoicePath = '',
+      @JsonKey(name: 'shadowing_path') this.shadowingPath = '',
+      @JsonKey(name: 'record_subtitle_path') this.recordSubtitlePath = '',
       @JsonKey(name: 'sentence_explanation_path')
-      required this.sentenceExplanationPath,
+      this.sentenceExplanationPath = '',
       @JsonKey(name: 'listening_category_id') this.listeningCategoryId});
 
   factory _$ListeningImpl.fromJson(Map<String, dynamic> json) =>
@@ -426,14 +426,12 @@ abstract class _Listening implements Listening {
       @JsonKey(name: 'mm_subtitle') required final bool hasMMSubtitle,
       @JsonKey(name: 'has_vocabularies') required final bool hasVocabularies,
       @JsonKey(name: 'youtube_id') required final String youtubeId,
-      @JsonKey(name: 'subtitle_path') required final String subtitlePath,
-      @JsonKey(name: 'multiple_choice_path')
-      required final String multipleChoicePath,
-      @JsonKey(name: 'shadowing_path') required final String shadowingPath,
-      @JsonKey(name: 'record_subtitle_path')
-      required final String recordSubtitlePath,
+      @JsonKey(name: 'subtitle_path') final String subtitlePath,
+      @JsonKey(name: 'multiple_choice_path') final String multipleChoicePath,
+      @JsonKey(name: 'shadowing_path') final String shadowingPath,
+      @JsonKey(name: 'record_subtitle_path') final String recordSubtitlePath,
       @JsonKey(name: 'sentence_explanation_path')
-      required final String sentenceExplanationPath,
+      final String sentenceExplanationPath,
       @JsonKey(name: 'listening_category_id')
       final int? listeningCategoryId}) = _$ListeningImpl;
 

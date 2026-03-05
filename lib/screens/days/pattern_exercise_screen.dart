@@ -33,8 +33,6 @@ class PatternExerciseScreen extends StatefulWidget {
 }
 
 class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
-  late final PatternExerciseBloc _patternExerciseBloc;
-  late final ExerciseUserAnswerBloc _exerciseUserAnswerBloc;
   late final ValueNotifier<String?> _userAnswer;
   late List<FocusNode> _practiceNodes;
 
@@ -45,9 +43,6 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
   @override
   void initState() {
     super.initState();
-    _patternExerciseBloc = PatternExerciseBloc()
-      ..add(PatternExerciseEvent.loadPatternExercises(widget.exercise.id));
-    _exerciseUserAnswerBloc = ExerciseUserAnswerBloc();
     _userAnswer = ValueNotifier<String?>(null);
     _practiceNodes = [];
   }
@@ -85,7 +80,7 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
           ),
         );
       }
-      _exerciseUserAnswerBloc.add(
+      context.read<ExerciseUserAnswerBloc>().add(
         ExerciseUserAnswerEvent.addUserAnswerList(
             _userAnswers, widget.exercise, widget.isLastIndex),
       );
@@ -135,10 +130,12 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
           child: MultiBlocProvider(
             providers: [
               BlocProvider(
-                create: (_) => _patternExerciseBloc,
+                create: (_) => PatternExerciseBloc()
+                  ..add(PatternExerciseEvent.loadPatternExercises(
+                      widget.exercise.id)),
               ),
               BlocProvider(
-                create: (context) => _exerciseUserAnswerBloc,
+                create: (context) => ExerciseUserAnswerBloc(),
               ),
             ],
             child:

@@ -20,7 +20,6 @@ class UpdateNamePage extends StatefulWidget {
 
 class _UpdateNamePageState extends State<UpdateNamePage> {
   late final TextEditingController _nameController;
-  final _userBloc = UserBloc();
   bool isComplete = true;
   @override
   void initState() {
@@ -38,7 +37,7 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => _userBloc,
+      create: (context) => UserBloc(),
       child: BlocConsumer<UserBloc, UserState>(
         listener: (context, state) {
           state.maybeWhen(
@@ -97,7 +96,7 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
                           showErrorSnackbar('Name is not changed');
                           return;
                         }
-                        _userBloc.add(
+                        context.read<UserBloc>().add(
                             UserEvent.updateUserName(_nameController.text));
                         FocusManager.instance.primaryFocus?.unfocus();
                       },

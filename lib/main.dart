@@ -18,6 +18,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
 import 'core/di/service_locator.dart';
+import 'services/share_preference_utils.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/core/logger/dev_logger.dart';
 import 'package:pmp_english/core/logger/crashlytics_logger.dart';
@@ -161,6 +162,7 @@ void main() {
     };
 
     await setupServiceLocator();
+    await SharedPreferenceUtils.init();
 
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     await _populateDeviceInfo();

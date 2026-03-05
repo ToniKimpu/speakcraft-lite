@@ -115,7 +115,8 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
         ),
       );
     } catch (e) {
-      AppLogger.instance.error("_mapParseSubtitleLineToState: ${e.toString()}", error: e);
+      AppLogger.instance.error("_mapParseListeningQuestionsToState: ${e.toString()}", error: e);
+      emit(SubtitleState.error(e.toString()));
     }
   }
 
@@ -158,8 +159,7 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
       }
     } catch (e) {
       AppLogger.instance.error("_mapParseSubtitleLineToState: ${e.toString()}", error: e);
-      // Optionally emit an error state if you have one
-      // emit(SubtitleState.error(e.toString()));
+      emit(SubtitleState.error(e.toString()));
     }
   }
 

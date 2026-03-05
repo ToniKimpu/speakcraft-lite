@@ -16,25 +16,18 @@ class ListeningListPage extends StatefulWidget {
 }
 
 class _ListeningListPageState extends State<ListeningListPage> {
-  final _listeningBloc = ListeningBloc();
   int? expandedIndex; // Track which card is expanded
-
-  @override
-  void initState() {
-    super.initState();
-    _listeningBloc.add(const ListeningEvent.loadListenings());
-  }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => _listeningBloc,
+      create: (context) => ListeningBloc()
+        ..add(const ListeningEvent.loadListenings()),
       child: MainScaffold(
         appBar: AppBar(
           title: const Text('Listening And Shadowing'),
         ),
         body: BlocBuilder<ListeningBloc, ListeningState>(
-          bloc: _listeningBloc,
           builder: (context, state) {
             return state.maybeWhen(
               loading: () => const Center(
