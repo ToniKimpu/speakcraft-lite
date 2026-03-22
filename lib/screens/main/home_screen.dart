@@ -1,8 +1,10 @@
-import 'dart:math';
+import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
+import 'package:pmp_english/bloc/user_activity/user_activity_messages.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
@@ -17,68 +19,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<String> _welcomeMessages = [
-    "Let’s practice a little today 😊📘",
-    "Small steps every day! 👣✨",
-    "You’re improving day by day! 📈🌟",
-    "Keep going, you’re doing great! 💪🎉",
-    "Practice makes progress! 📝🚀",
-    "Speak more, fear less! 🗣️🔥",
-    "Consistency is your superpower 💪⚡",
-    "One lesson at a time! 📖⏳",
-    "Believe in your English! 🌈🧠",
-    "Today is a good day to learn! ☀️📚",
-  ];
-
-  String getDayTitle(int day) {
-    if (day == 1) return "Day 1 – 🚀";
-    if (day <= 7) return "Day $day – 💪";
-    if (day <= 30) return "Day $day – 🔥";
-    if (day <= 60) return "Day $day – 🌟";
-    if (day < 100) return "Day $day – 🚀";
-    if (day == 100) return "Day 100 – 🏆";
-
-    return "Day $day – Keep Shining! ✨";
-  }
-
-  late String _randomMessage;
+  Timer? _sessionTimer;
+  bool _sessionRecorded = false;
 
   @override
   void initState() {
     super.initState();
-    _randomMessage =
-        _welcomeMessages[Random().nextInt(_welcomeMessages.length)];
-    // WidgetsBinding.instance.addPostFrameCallback((_) {
-    //   maybeUpdateInBackground();
-    // });
+    context.read<UserActivityBloc>().add(const UserActivityEvent.initialize());
+    _sessionTimer = Timer(
+      const Duration(minutes: 1),
+      _onSessionTimerFired,
+    );
   }
 
-  // Future<void> maybeUpdateInBackground() async {
-  //   final updater = ShorebirdUpdater();
-  //   if (!updater.isAvailable) {
-  //     debugPrint('Shorebird is not available on this platform.');
-  //     return;
-  //   }
-  //   try {
-  //     final status = await updater.checkForUpdate();
-  //     if (status == UpdateStatus.outdated) {
-  //       debugPrint('Update available. Downloading...');
-  //       await updater.update();
-  //       if (!mounted) return;
-  //       ScaffoldMessenger.of(context).showSnackBar(
-  //         const SnackBar(
-  //           content:
-  //               Text('App update downloaded. It will apply on next launch.'),
-  //           behavior: SnackBarBehavior.floating,
-  //         ),
-  //       );
-  //     } else {
-  //       debugPrint('App is already up to date.');
-  //     }
-  //   } on UpdateException catch (e) {
-  //     debugPrint('Update failed: ${e.reason.name}');
-  //   }
-  // }
+  void _onSessionTimerFired() {
+    if (!mounted || _sessionRecorded) return;
+    _sessionRecorded = true;
+    context
+        .read<UserActivityBloc>()
+        .add(const UserActivityEvent.recordSession());
+  }
+
+  @override
+  void dispose() {
+    _sessionTimer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,44 +65,32 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 8,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                "“ Day 1 ”",
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.white.withValues(alpha: 0.9),
-                  fontFamily: "ArchivoBlack Regular",
-                  shadows: const [
-                    Shadow(
-                      offset: Offset(1, 1),
-                      blurRadius: 1,
-                      color: Colors.deepOrange,
+            const SizedBox(height: 8),
+            BlocBuilder<UserActivityBloc, UserActivityState>(
+              builder: (context, state) {
+                return state.when(
+                  initial: () => _buildHeader(0, 0, ''),
+                  loading: () => _buildHeader(0, 0, ''),
+                  loaded: (data) => _buildHeader(
+                    data.totalLearningDays,
+                    data.currentStreak,
+                    UserActivityMessages.get(
+                      resolveMessageType(data),
+                      streak: data.currentStreak,
                     ),
-                  ],
-                ),
-                textAlign: TextAlign.center,
-              ),
+                  ),
+                  sessionRecorded: (data) => _buildHeader(
+                    data.totalLearningDays,
+                    data.currentStreak,
+                    UserActivityMessages.get(
+                      UserActivityMessageType.activeToday,
+                    ),
+                  ),
+                  error: (_) => _buildHeader(0, 0, ''),
+                );
+              },
             ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                _randomMessage,
-                style: const TextStyle(
-                  fontSize: 16,
-                  color: Colors.white70,
-                  fontWeight: FontWeight.w400,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
+            const SizedBox(height: 24),
             ModuleWidget(
               title: 'Useful Spoken Patterns',
               label1: 'Spoken Patternပေါင်း (၁၀၀)ကျော်လေ့လာမယ်',
@@ -161,19 +115,6 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             const SizedBox(height: 12),
-            // ModuleWidget(
-            //   title: 'Practice with AI',
-            //   label1: 'sentence တွေကို ကိုယ်တိုင်လေ့ကျင့်မယ်။',
-            //   label2: 'AI ကိုမှန်မမှန်ပြန်စစ်ခိုင်းမယ်။',
-            //   iconTitle: Icons.smart_toy,
-            //   iconLabel1: Icons.psychology,
-            //   iconLabel2: Icons.auto_awesome,
-            //   onPressed: () {
-            //     Navigator.pushNamed(
-            //         context, PmpRoutes.aiSentencePracticeListScreen);
-            //   },
-            // ),
-            // const SizedBox(height: 24),
 
             if (kDebugMode)
               ElevatedButton(
@@ -194,6 +135,59 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildHeader(int totalDays, int streak, String message) {
+    return Column(
+      children: [
+        Align(
+          alignment: Alignment.center,
+          child: Text(
+            UserActivityMessages.getDayTitle(totalDays),
+            style: TextStyle(
+              fontSize: 36,
+              fontWeight: FontWeight.w400,
+              color: Colors.white.withValues(alpha: 0.9),
+              fontFamily: 'ArchivoBlack Regular',
+              shadows: const [
+                Shadow(
+                  offset: Offset(1, 1),
+                  blurRadius: 1,
+                  color: Colors.deepOrange,
+                ),
+              ],
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        if (streak > 1)
+          Padding(
+            padding: const EdgeInsets.only(top: 2),
+            child: Text(
+              '$streak day streak 🔥',
+              style: const TextStyle(
+                fontSize: 13,
+                color: Colors.orangeAccent,
+                fontWeight: FontWeight.w500,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        if (message.isNotEmpty)
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              message,
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.white70,
+                fontWeight: FontWeight.w400,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+      ],
     );
   }
 }

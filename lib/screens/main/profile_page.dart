@@ -1,7 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/common_extensions.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
+import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/screens/main/widgets/app_version_widget.dart';
@@ -10,208 +12,263 @@ import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/env.dart';
-import '../../config/pmp_colors.dart';
-import '../../config/pmp_text_styles.dart';
 import '../../l10n/generated/l10n.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
-  @override
-  State<ProfilePage> createState() => _ProfilePageState();
-}
-
-class _ProfilePageState extends State<ProfilePage> {
-  @override
-  void initState() {
-    super.initState();
-  }
+  static const _cardDecoration = BoxDecoration(
+    color: Color(0x14FFFFFF), // white 8% opacity
+    borderRadius: BorderRadius.all(Radius.circular(12)),
+    border: Border.fromBorderSide(
+      BorderSide(color: Color(0x66FFFFFF)), // white 40% opacity
+    ),
+    boxShadow: [
+      BoxShadow(
+        color: Color(0x4D000000),
+        blurRadius: 8,
+        spreadRadius: 2,
+        offset: Offset(0, 4),
+      ),
+    ],
+  );
 
   @override
   Widget build(BuildContext context) {
-    final appUser = sl<ValueNotifier<AppUser>>().value;
-    final int usedTokens = sl<ValueNotifier<AppUser>>().value.totalTokenUsed;
-    const int maxTokens = 500000;
-    final double progress = (usedTokens / maxTokens).clamp(0.0, 1.0);
     return MainScaffold(
       appBar: AppBar(
         title: const Text('Profile'),
       ),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-            padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.08),
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.4)),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.3),
-                  blurRadius: 8,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Column(
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
+        child: ValueListenableBuilder<AppUser>(
+          valueListenable: sl<ValueNotifier<AppUser>>(),
+          builder: (context, appUser, _) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: AssetImage(
-                    appUser.profilePath != null &&
-                            appUser.profilePath!.isNotEmpty
-                        ? 'assets/images/profiles/${appUser.profilePath}'
-                        : "logo/app_logo.png",
-                  ),
-                ),
-                const SizedBox(height: 12),
-                Text(
-                  appUser.name ?? appUser.email,
-                  style: PmpTextStyles.body1Semi.copyWith(
-                    fontSize: 18,
-                    color: PmpColors.neutral100,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                const AppVersionWidget(),
-                // const SizedBox(height: 12),
-                // Text.rich(
-                //   TextSpan(
-                //     children: [
-                //       TextSpan(
-                //         text: "$usedTokens",
-                //         style: PmpTextStyles.body2Semi
-                //             .copyWith(color: Colors.amberAccent),
-                //       ),
-                //       TextSpan(
-                //         text: " / $maxTokens ",
-                //         style: PmpTextStyles.body2Regular
-                //             .copyWith(color: Colors.white),
-                //       ),
-                //       TextSpan(
-                //         text: "tokens used",
-                //         style: PmpTextStyles.body2Regular
-                //             .copyWith(color: Colors.grey[400]),
-                //       ),
-                //     ],
-                //   ),
-                //   textAlign: TextAlign.center,
-                // ),
-                // const SizedBox(height: 8),
-                // ClipRRect(
-                //   borderRadius: BorderRadius.circular(4),
-                //   child: LinearProgressIndicator(
-                //     value: progress,
-                //     backgroundColor: Colors.white.withValues(alpha: 0.1),
-                //     valueColor:
-                //         const AlwaysStoppedAnimation<Color>(Colors.amberAccent),
-                //     minHeight: 6,
-                //   ),
-                // ),
+                _HeroCard(appUser: appUser),
+                const SizedBox(height: 16),
+                _SettingsCard(appUser: appUser),
               ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Hero card: avatar + name + email + version + stats
+// ---------------------------------------------------------------------------
+
+class _HeroCard extends StatelessWidget {
+  const _HeroCard({required this.appUser});
+
+  final AppUser appUser;
+
+  @override
+  Widget build(BuildContext context) {
+    debugPrint("_appUserInfo: ${appUser.profilePath} profile Path");
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+      decoration: ProfilePage._cardDecoration,
+      child: Column(
+        children: [
+          // Avatar with primary-color ring
+          Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: PmpColors.primary400, width: 2.5),
+            ),
+            child: CircleAvatar(
+              radius: 44,
+              backgroundImage: AssetImage(
+                appUser.profilePath != null && appUser.profilePath!.isNotEmpty
+                    ? 'assets/images/profiles/${appUser.profilePath}'
+                    : 'logo/app_logo.png',
+              ),
             ),
           ),
-          Container(
-            width: double.infinity,
-            margin: const EdgeInsets.all(16),
-            // padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.white
-                  .withValues(alpha: 0.08), // Dark card with transparency
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.4)), // Subtle border
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.3),
-                  blurRadius: 8,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ],
+          const SizedBox(height: 12),
+          // Name
+          Text(
+            appUser.name?.isNotEmpty == true ? appUser.name! : appUser.email,
+            style: PmpTextStyles.title1SemiBold.copyWith(
+              color: PmpColors.neutral100,
             ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                ProfileItemRow(
-                  first: true,
-                  label: AppLocalizations.of(context).txtChangeName,
-                  icon: "assets/images/ic_profile_white.png",
-                  onTap: () async {
-                    if (!context.mounted) return;
-                    final result = await Navigator.pushNamed(
-                        context, PmpRoutes.updateUserName) as bool?;
-                    if (result != null && result == true) {
-                      setState(() {});
-                    }
-                  },
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                ProfileItemRow(
-                  label: AppLocalizations.of(context).txtChangeAvatar,
-                  icon: "assets/images/ic_change_avator.png",
-                  onTap: () async {
-                    final result = await Navigator.pushNamed(
-                        context, PmpRoutes.updateAvatarPage) as bool?;
-                    if (result != null && result == true) {
-                      setState(() {});
-                    }
-                  },
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                // ProfileItemRow(
-                //   label: AppLocalizations.of(context).txtAccountID,
-                //   icon: "assets/images/ic_account_id.png",
-                //   accountId: GlobalAppState().currentUser.accountId,
-                //   onTap: () {
-                //     appUser.accountId.copyToClipboard();
-                //   },
-                // ),
-                // const SizedBox(
-                //   height: 8,
-                // ),
-                ProfileItemRow(
-                  label: AppLocalizations.of(context).txtPrivacyPolicy,
-                  icon: "assets/images/ic_privacy_policy.png",
-                  onTap: () async {
-                    if (await canLaunchUrl(Uri.parse(Env.privacyPolicyUrl))) {
-                      launchUrl(
-                        Uri.parse(Env.privacyPolicyUrl),
-                        mode: LaunchMode.inAppBrowserView,
-                      );
-                    } else {
-                      showErrorSnackbar("Failed to open browser!");
-                    }
-                  },
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                // ProfileItemRow(
-                //   label: AppLocalizations.of(context).txtContentRequest,
-                //   icon: "assets/images/ic_content_request.png",
-                //   onTap: () {},
-                // ),
-                // const SizedBox(
-                //   height: 8,
-                // ),
-                ProfileItemRow(
-                  last: true,
-                  label: AppLocalizations.of(context).txtFeedback,
-                  icon: "assets/images/ic_feedback.png",
-                  onTap: () {
-                    showSuccessSnackbar("Coming soon....");
-                  },
-                ),
-              ],
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 2),
+          // Email (only show if name is available)
+          if (appUser.name?.isNotEmpty == true)
+            Text(
+              appUser.email,
+              style: PmpTextStyles.body2Regular.copyWith(
+                color: Colors.white54,
+              ),
+              textAlign: TextAlign.center,
             ),
+          const SizedBox(height: 4),
+          const AppVersionWidget(),
+          const SizedBox(height: 20),
+          const Divider(color: Colors.white12, height: 1),
+          const SizedBox(height: 16),
+          // Learning stats
+          _StatsRow(),
+        ],
+      ),
+    );
+  }
+}
+
+class _StatsRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<UserActivityBloc, UserActivityState>(
+      builder: (context, state) {
+        final int days = state.maybeWhen(
+          loaded: (data) => data.totalLearningDays,
+          sessionRecorded: (data) => data.totalLearningDays,
+          orElse: () => 0,
+        );
+        final int streak = state.maybeWhen(
+          loaded: (data) => data.currentStreak,
+          sessionRecorded: (data) => data.currentStreak,
+          orElse: () => 0,
+        );
+
+        final daysLabel = days == 0 ? '—' : '$days';
+        final streakLabel = streak == 0
+            ? '—'
+            : streak > 1
+                ? '$streak 🔥'
+                : '$streak';
+
+        return IntrinsicHeight(
+          child: Row(
+            children: [
+              Expanded(
+                child: _StatCard(value: daysLabel, label: 'Days Learned'),
+              ),
+              const VerticalDivider(
+                color: Colors.white12,
+                width: 1,
+                thickness: 1,
+              ),
+              Expanded(
+                child: _StatCard(value: streakLabel, label: 'Day Streak'),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _StatCard extends StatelessWidget {
+  const _StatCard({required this.value, required this.label});
+
+  final String value;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          value,
+          style: PmpTextStyles.inter.copyWith(
+            fontSize: 28,
+            color: PmpColors.primary400,
+          ),
+        ),
+        const SizedBox(height: 2),
+        Text(
+          label,
+          style: PmpTextStyles.labelSemi.copyWith(color: Colors.white54),
+        ),
+      ],
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Settings card: action rows
+// ---------------------------------------------------------------------------
+
+class _SettingsCard extends StatelessWidget {
+  const _SettingsCard({required this.appUser});
+
+  final AppUser appUser;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    return Container(
+      width: double.infinity,
+      decoration: ProfilePage._cardDecoration,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ProfileItemRow(
+            first: true,
+            label: l10n.txtChangeName,
+            icon: 'assets/images/ic_profile_white.png',
+            onTap: () async {
+              if (!context.mounted) return;
+              await Navigator.pushNamed(context, PmpRoutes.updateUserName);
+            },
+          ),
+          const Divider(color: Colors.white12, height: 1, indent: 16, endIndent: 16),
+          ProfileItemRow(
+            label: l10n.txtChangeAvatar,
+            icon: 'assets/images/ic_change_avator.png',
+            onTap: () async {
+              await Navigator.pushNamed(context, PmpRoutes.updateAvatarPage);
+            },
+          ),
+          const Divider(color: Colors.white12, height: 1, indent: 16, endIndent: 16),
+          ProfileItemRow(
+            label: l10n.txtPrivacyPolicy,
+            icon: 'assets/images/ic_privacy_policy.png',
+            onTap: () async {
+              if (await canLaunchUrl(Uri.parse(Env.privacyPolicyUrl))) {
+                launchUrl(
+                  Uri.parse(Env.privacyPolicyUrl),
+                  mode: LaunchMode.inAppBrowserView,
+                );
+              } else {
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Failed to open browser!'),
+                      backgroundColor: Colors.red,
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
+                }
+              }
+            },
+          ),
+          const Divider(color: Colors.white12, height: 1, indent: 16, endIndent: 16),
+          ProfileItemRow(
+            last: true,
+            label: l10n.txtFeedback,
+            icon: 'assets/images/ic_feedback.png',
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Coming soon....'),
+                backgroundColor: Colors.green,
+                behavior: SnackBarBehavior.floating,
+              ),
+            );
+            },
           ),
         ],
       ),
