@@ -12,13 +12,11 @@ class HighlightBackground extends StatelessWidget {
   const HighlightBackground({
     super.key,
     required this.subtitleLine,
-    this.nextSubtitleLine,
     required this.position,
     required this.onSeek,
   });
 
   final SubtitleLine subtitleLine;
-  final SubtitleLine? nextSubtitleLine;
   final Duration position;
   final Function(Duration seekPosition) onSeek;
 
@@ -60,10 +58,6 @@ class HighlightBackground extends StatelessWidget {
             ),
             painter: _KaraokePainter(
               words: subtitleLine.words,
-              nextLineFirstWordStart: (nextSubtitleLine != null &&
-                      nextSubtitleLine!.words.isNotEmpty)
-                  ? nextSubtitleLine!.words.first.start
-                  : null,
               currentSeconds: position.inMilliseconds / 1000.0,
               textStyle: textStyle,
               fillColor: PmpColors.warning400.withValues(alpha: 0.55),
@@ -80,7 +74,6 @@ class HighlightBackground extends StatelessWidget {
 class _KaraokePainter extends CustomPainter {
   _KaraokePainter({
     required this.words,
-    required this.nextLineFirstWordStart,
     required this.currentSeconds,
     required this.textStyle,
     required this.fillColor,
@@ -89,7 +82,6 @@ class _KaraokePainter extends CustomPainter {
   });
 
   final List<SubtitleWord> words;
-  final double? nextLineFirstWordStart;
   final double currentSeconds;
   final TextStyle textStyle;
   final Color fillColor;
@@ -159,9 +151,8 @@ class _KaraokePainter extends CustomPainter {
 
     for (int i = 0; i < words.length; i++) {
       final w = words[i];
-      final double endBoundary = (i < words.length - 1)
-          ? words[i + 1].start
-          : (nextLineFirstWordStart ?? w.end);
+      final double endBoundary =
+          (i < words.length - 1) ? words[i + 1].start : w.end;
 
       if (currentSeconds >= endBoundary) {
         // Fully past — keep scanning to find an active or future word.
@@ -255,7 +246,6 @@ class _KaraokePainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _KaraokePainter oldDelegate) {
     return oldDelegate.currentSeconds != currentSeconds ||
-        oldDelegate.words != words ||
-        oldDelegate.nextLineFirstWordStart != nextLineFirstWordStart;
+        oldDelegate.words != words;
   }
 }

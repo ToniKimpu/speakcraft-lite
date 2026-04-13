@@ -7,14 +7,12 @@ import '../../model/subtitle_line.dart';
 /// the entire sentence gets a flat yellow background. No per-word animation.
 class HighlightSentence extends StatelessWidget {
   final SubtitleLine subtitleLine;
-  final SubtitleLine? nextSubtitleLine;
   final Duration position;
   final Function(Duration seekPosition) onSeek;
 
   const HighlightSentence({
     super.key,
     required this.subtitleLine,
-    this.nextSubtitleLine,
     required this.position,
     required this.onSeek,
   });
@@ -23,8 +21,8 @@ class HighlightSentence extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final current = position.inMilliseconds / 1000.0;
-    double endBoundary = nextSubtitleLine?.start ?? subtitleLine.end;
-    final isActive = current >= subtitleLine.start && current <= endBoundary;
+    final isActive =
+        current >= subtitleLine.start && current <= subtitleLine.end;
 
     return GestureDetector(
       onTap: () => onSeek

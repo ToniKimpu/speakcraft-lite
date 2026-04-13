@@ -30,8 +30,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   late final Duration _startDuration;
   late final Duration _endDuration;
-  int sliderPosition = 0;
-  final ScrollController _lyricsController = ScrollController();
 
   bool _readyToPlay = false;
   final List<Subtitle> _subtitles = [];
@@ -49,7 +47,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   StreamSubscription<Duration>? _positionSub;
   late final StreamSubscription<Duration?> _durationSub;
 
-  double currentSpeed = 1.0;
   @override
   void initState() {
     super.initState();
@@ -70,7 +67,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         startAt: widget.listening.start,
         endAt: widget.listening.end,
         enableCaption: false,
-        captionLanguage: 'mm',
         hideControls: true,
       ),
     )..addListener(listener);
@@ -101,52 +97,61 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   }
 
   void listener() {
-    if (_readyToPlay && mounted && !_controller.value.isFullScreen) {
-      setState(() {
-        _updateCurrentSubtitleIndex();
-      });
-    }
+    if (!_readyToPlay || !mounted || _controller.value.isFullScreen) return;
+    _updateCurrentSubtitleIndex();
   }
 
-  // For Subtitle Detail Widget
   void _updateCurrentSubtitleIndex() {
-    final position = _controller.value.position.inSeconds;
+    final newIndex = _findCurrentSubtitleIndex();
+    if (newIndex == -1 || newIndex == _subtitlePageIndex) return;
+    _subtitlePageIndex = newIndex;
+    AppLogger.instance
+        .debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
+    _subtitleBloc.add(SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex));
+  }
 
-    final subtitle = _subtitles.firstWhere(
-      (subtitle) =>
-          position >= subtitle.start.inSeconds &&
-          position < subtitle.end.inSeconds,
-      orElse: () => Subtitle.empty(),
-    );
+  int _findCurrentSubtitleIndex() {
+    if (_subtitles.isEmpty) return -1;
+    final positionSeconds = _controller.value.position.inSeconds;
 
-    if (subtitle.isNotEmpty) {
-      final newIndex = _subtitles.indexWhere((s) => s.id == subtitle.id);
-      if (newIndex != _subtitlePageIndex) {
-        _subtitlePageIndex = newIndex;
-        AppLogger.instance
-            .debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
-        _subtitleBloc.add(
-          SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex),
-        );
+    if (_subtitles.length < 50) {
+      for (int i = 0; i < _subtitles.length; i++) {
+        final startS = _subtitles[i].start.inSeconds;
+        final endS = _subtitles[i].end.inSeconds;
+        if (positionSeconds >= startS && positionSeconds < endS) return i;
+      }
+      return -1;
+    }
+
+    int left = 0;
+    int right = _subtitles.length - 1;
+    while (left <= right) {
+      final mid = (left + right) ~/ 2;
+      final startS = _subtitles[mid].start.inSeconds;
+      final endS = _subtitles[mid].end.inSeconds;
+      if (positionSeconds >= startS && positionSeconds < endS) return mid;
+      if (positionSeconds < startS) {
+        right = mid - 1;
+      } else {
+        left = mid + 1;
       }
     }
+    return -1;
   }
 
   @override
   void deactivate() {
     _controller.pause();
-    _playerStateSubscription?.cancel();
-    _positionSub?.cancel();
-    _audioPlayer.dispose();
-    _durationSub.cancel();
     super.deactivate();
   }
 
   @override
   void dispose() {
+    _playerStateSubscription?.cancel();
+    _positionSub?.cancel();
+    _durationSub.cancel();
+    _audioPlayer.dispose();
     _controller.dispose();
-    _lyricsController.removeListener(listener);
-    _lyricsController.dispose();
     super.dispose();
   }
 
@@ -204,28 +209,22 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                   );
                 },
                 builder: (context, state) {
-                  return GestureDetector(
-                    onTap: () {},
-                    child: YoutubePlayerBuilder(
-                      player: YoutubePlayer(
-                        controller: _controller,
-                        showVideoProgressIndicator: false,
-                        topActions: const <Widget>[
-                          SizedBox(width: 8.0),
-                        ],
-                        // bottomActions: const [
-                        //   SizedBox(),
-                        // ],
-                        thumbnail: const SizedBox(),
-                        onReady: () {
-                          setState(() {
-                            _readyToPlay = true;
-                          });
-                          // _controller.setPlaybackRate(0.75);
-                        },
-                        onEnded: (data) {},
-                      ),
-                      builder: (context, player) => Scaffold(
+                  return YoutubePlayerBuilder(
+                    player: YoutubePlayer(
+                      controller: _controller,
+                      showVideoProgressIndicator: false,
+                      topActions: const <Widget>[
+                        SizedBox(width: 8.0),
+                      ],
+                      thumbnail: const SizedBox(),
+                      onReady: () {
+                        setState(() {
+                          _readyToPlay = true;
+                        });
+                      },
+                      onEnded: (data) {},
+                    ),
+                    builder: (context, player) => Scaffold(
                         appBar: AppBar(
                           scrolledUnderElevation: 0.0,
                           title: Text(
@@ -240,90 +239,20 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                           child: Column(
                             children: [
                               player,
-                              CustomControl(
-                                audioPlayer: _audioPlayer,
-                                controller: _controller,
-                                startPosition: widget.listening.start,
-                                endPosition: widget.listening.end,
-                                startDuration: _startDuration,
-                                endDuration: _endDuration,
-                                readyToPlay: _readyToPlay,
-                                onVocabulary: () {},
-                                onSeek: () {},
+                              ListenableBuilder(
+                                listenable: _controller,
+                                builder: (_, __) => CustomControl(
+                                  audioPlayer: _audioPlayer,
+                                  controller: _controller,
+                                  startPosition: widget.listening.start,
+                                  endPosition: widget.listening.end,
+                                  startDuration: _startDuration,
+                                  endDuration: _endDuration,
+                                  readyToPlay: _readyToPlay,
+                                  onVocabulary: () {},
+                                  onSeek: () {},
+                                ),
                               ),
-                              // SizedBox(
-                              //   width: double.infinity,
-                              //   height: 50,
-                              //   child: Center(
-                              //       child: Row(
-                              //     children: [
-                              //       const SizedBox(
-                              //         width: 12,
-                              //       ),
-                              //       Container(
-                              //         padding: const EdgeInsets.symmetric(
-                              //             vertical: 4, horizontal: 4),
-                              //         decoration: BoxDecoration(
-                              //           borderRadius:
-                              //               BorderRadius.circular(4),
-                              //           border: Border.all(
-                              //             color: Colors.white,
-                              //           ),
-                              //         ),
-                              //         child: Row(
-                              //           children: [
-                              //             Text(
-                              //               'Normal',
-                              //               style: PmpTextStyles.labelSemi
-                              //                   .copyWith(
-                              //                 color: Colors.white,
-                              //               ),
-                              //             ),
-                              //             const SizedBox(width: 12),
-                              //             const Icon(
-                              //               Icons.keyboard_arrow_down,
-                              //               color: Colors.white,
-                              //               size: 18,
-                              //             ),
-                              //           ],
-                              //         ),
-                              //       ),
-                              //       const Spacer(),
-                              //       Container(
-                              //         width: 40,
-                              //         height: 40,
-                              //         decoration: BoxDecoration(
-                              //           color: Colors.blue,
-                              //           border: Border.all(
-                              //             width: 1,
-                              //             color: Colors.white,
-                              //           ),
-                              //           borderRadius:
-                              //               BorderRadius.circular(8),
-                              //         ),
-                              //         child: const Icon(Icons.view_agenda,
-                              //             color: Colors.white),
-                              //       ),
-                              //       const SizedBox(width: 4),
-                              //       Container(
-                              //         width: 40,
-                              //         height: 40,
-                              //         decoration: BoxDecoration(
-                              //           color: Colors.grey,
-                              //           border: Border.all(
-                              //             width: 1,
-                              //             color: Colors.grey,
-                              //           ),
-                              //           borderRadius:
-                              //               BorderRadius.circular(8),
-                              //         ),
-                              //         child: const Icon(Icons.view_array,
-                              //             color: Colors.white),
-                              //       ),
-                              //       const SizedBox(width: 12),
-                              //     ],
-                              //   ),),
-                              // ),
                               Expanded(
                                 child: state.maybeWhen(
                                   loading: (message) {
@@ -363,8 +292,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                           ),
                         ),
                       ),
-                    ),
-                  );
+                    );
                 },
               ),
       ),

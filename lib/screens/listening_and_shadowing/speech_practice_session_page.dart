@@ -4,10 +4,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/footer_widget.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/recording_voice_widgets/user_recorded_list.dart';
@@ -321,6 +321,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                   }
                                 },
                               ),
+                              
                               // const SizedBox(height: 16),
                               SizedBox(
                                 height: 240,
@@ -460,16 +461,19 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                           if (await file
                                                               .exists()) {
                                                             await file.delete();
-                                                            AppLogger.instance.debug(
-                                                                '_userDiscardedAudio: Deleted discarded audio file: $filePath');
+                                                            AppLogger.instance
+                                                                .debug(
+                                                                    '_userDiscardedAudio: Deleted discarded audio file: $filePath');
                                                           } else {
-                                                            AppLogger.instance.debug(
-                                                                '_userDiscardedAudio: No file found to delete at $filePath');
+                                                            AppLogger.instance
+                                                                .debug(
+                                                                    '_userDiscardedAudio: No file found to delete at $filePath');
                                                           }
                                                         }
                                                       } catch (e) {
                                                         AppLogger.instance.error(
-                                                            '_userDiscardedAudio: Error deleting discarded audio: $e', error: e);
+                                                            '_userDiscardedAudio: Error deleting discarded audio: $e',
+                                                            error: e);
                                                       }
                                                     },
                                                     onSaved: (success) {
@@ -605,6 +609,8 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                         (recordSubtitles[index].end * 1000)
                                             .round(),
                                   );
+                                  _needSeek = true;
+                                  _controller.seekTo(_startDuration);
                                   _pageController.jumpToPage(index);
                                   setState(
                                     () => _currentPage = index,

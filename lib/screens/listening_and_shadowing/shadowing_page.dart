@@ -378,10 +378,6 @@ class _ShadowingPageState extends State<ShadowingPage>
                                     padding: const EdgeInsets.only(top: 12),
                                     itemBuilder: (context, index) {
                                       final line = subtitleLines[index];
-                                      final nextLine =
-                                          (index < subtitleLines.length - 1)
-                                              ? subtitleLines[index + 1]
-                                              : null;
                                       final startTime = Duration(
                                           milliseconds:
                                               (line.start * 1000).toInt());
@@ -426,7 +422,6 @@ class _ShadowingPageState extends State<ShadowingPage>
                                                 HighlightType.none)
                                               _buildHighlightWidget(
                                                 line,
-                                                nextLine,
                                                 Duration.zero,
                                               )
                                             else
@@ -437,7 +432,6 @@ class _ShadowingPageState extends State<ShadowingPage>
                                                     (_, position, __) =>
                                                         _buildHighlightWidget(
                                                   line,
-                                                  nextLine,
                                                   position,
                                                 ),
                                               ),
@@ -465,14 +459,12 @@ class _ShadowingPageState extends State<ShadowingPage>
 
   Widget _buildHighlightWidget(
     SubtitleLine subtitleLine,
-    SubtitleLine? nextSubtitleLine,
     Duration position,
   ) {
     switch (_selectedHighlightType) {
       case HighlightType.readAlong:
         return HighlightBackground(
           subtitleLine: subtitleLine,
-          nextSubtitleLine: nextSubtitleLine,
           position: position,
           onSeek: (seekPosition) {
             _controller.seekTo(seekPosition);
@@ -481,7 +473,6 @@ class _ShadowingPageState extends State<ShadowingPage>
       case HighlightType.line:
         return HighlightSentence(
           subtitleLine: subtitleLine,
-          nextSubtitleLine: nextSubtitleLine,
           position: position,
           onSeek: (seekPosition) {
             _controller.seekTo(seekPosition);

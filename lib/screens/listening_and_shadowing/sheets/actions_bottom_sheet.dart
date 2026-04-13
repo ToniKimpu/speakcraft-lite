@@ -25,7 +25,6 @@ class ActionsBottomSheet extends StatelessWidget {
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
-        border: Border.all(color: colorScheme.outlineVariant),
       ),
       child: SafeArea(
         top: false,

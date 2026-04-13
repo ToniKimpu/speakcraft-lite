@@ -263,8 +263,15 @@ class SubtitleWidget extends StatelessWidget {
               child: InkWell(
                 borderRadius: BorderRadius.circular(8),
                 onTap: () {
+                  // Only pause YT when it's actively playing. Calling
+                  // pause() during buffering interrupts the buffer fetch
+                  // and the iframe gets stuck in a loading loop on return
+                  // from the pushed route.
                   if (youtubeController.value.isPlaying) {
                     youtubeController.pause();
+                  }
+                  if (audioPlayer.playing) {
+                    audioPlayer.pause();
                   }
                   final sentenceExplanation = SentenceExplanation(
                     id: 1,
@@ -311,6 +318,7 @@ class SubtitleWidget extends StatelessWidget {
                 ),
               ),
             ),
+        
         ],
       ),
     );
