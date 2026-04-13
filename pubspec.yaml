@@ -73,6 +73,7 @@ dependencies:
   record: ^6.1.2
   supabase_flutter: ^2.10.3
   flutter_widget_from_html: ^0.16.1
+  intl_utils: ^2.8.11
 
 dev_dependencies:
   flutter_test:

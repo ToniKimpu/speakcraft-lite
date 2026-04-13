@@ -7,6 +7,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
+import '../../../l10n/generated/l10n.dart';
 
 class SubtitleWidget extends StatelessWidget {
   const SubtitleWidget({
@@ -299,7 +300,7 @@ class SubtitleWidget extends StatelessWidget {
                         width: 8,
                       ),
                       Text(
-                        "See Explanation",
+                        AppLocalizations.of(context).txtViewExplanation,
                         style: PmpTextStyles.body2Semi.copyWith(
                           color: Colors.white,
                           fontFamily: "ArchivoBlack Regular",

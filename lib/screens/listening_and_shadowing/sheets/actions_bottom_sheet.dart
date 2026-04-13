@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 
 import '../../../config/pmp_text_styles.dart';
+import '../../../l10n/generated/l10n.dart';
 import '../../../model/listening/listening.dart';
 
 class ActionsBottomSheet extends StatelessWidget {
@@ -68,15 +69,13 @@ class ActionsBottomSheet extends StatelessWidget {
                   );
                 },
               ),
-
             Divider(
               height: 1,
               color: Colors.white.withValues(alpha: 0.2),
             ),
-
             _ActionItem(
               icon: Icons.lightbulb_outline,
-              label: 'See Explanations',
+              label: AppLocalizations.of(context).txtViewExplanation,
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.pushNamed(context, PmpRoutes.sentenceExplanationList,

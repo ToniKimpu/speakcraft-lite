@@ -9,5 +9,6 @@
   "txtAccountID": "Account ID",
   "txtPrivacyPolicy": "Privacy Policy",
   "txtContentRequest": "Content Request",
-  "txtFeedback": "Feedback"
+  "txtFeedback": "Feedback",
+  "txtViewExplanation": "View Explanation"
 }

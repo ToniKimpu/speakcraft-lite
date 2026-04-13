@@ -34,6 +34,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtName": MessageLookupByLibrary.simpleMessage("Name"),
     "txtOk": MessageLookupByLibrary.simpleMessage("Okay"),
     "txtPrivacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "txtViewExplanation": MessageLookupByLibrary.simpleMessage(
+      "View Explanation",
+    ),
     "txtWillUploadSoon": MessageLookupByLibrary.simpleMessage(
       "မကြာခင်တင်ပေးပါမည်",
     ),
