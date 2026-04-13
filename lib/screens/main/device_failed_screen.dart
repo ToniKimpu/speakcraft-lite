@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 class DeviceFailedScreen extends StatelessWidget {
   const DeviceFailedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Center(

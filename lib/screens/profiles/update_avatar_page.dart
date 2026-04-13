@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter/foundation.dart';
 import 'package:pmp_english/bloc/user_bloc/user_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/model/app_user/app_user.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 class UpdateAvatarPage extends StatefulWidget {
   const UpdateAvatarPage({
@@ -53,6 +51,7 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
   }
 
   Widget _buildProfileGrid(List<String> profiles) {
+    final colorScheme = Theme.of(context).colorScheme;
     return GridView.builder(
       itemCount: profiles.length,
       physics: const NeverScrollableScrollPhysics(),
@@ -73,22 +72,13 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
           },
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 200),
-            padding: EdgeInsets.all(selected ? 6 : 0),
+            padding: EdgeInsets.all(selected ? 4 : 0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 width: selected ? 2 : 0,
-                color: selected ? Colors.greenAccent : Colors.transparent,
+                color: selected ? colorScheme.primary : Colors.transparent,
               ),
-              boxShadow: selected
-                  ? [
-                      BoxShadow(
-                        color: Colors.greenAccent.withOpacity(0.4),
-                        blurRadius: 8,
-                        spreadRadius: 2,
-                      )
-                    ]
-                  : [],
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
@@ -105,6 +95,7 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return BlocProvider(
       create: (context) => UserBloc(),
       child: BlocConsumer<UserBloc, UserState>(
@@ -121,13 +112,13 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
             loading: () => true,
             orElse: () => false,
           );
-          return MainScaffold(
+          return Scaffold(
             body: Stack(
               children: [
                 Positioned.fill(
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.only(
-                        left: 16, top: 16, right: 16, bottom: 80),
+                        left: 16, top: 16, right: 16, bottom: 96),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -136,32 +127,18 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
                           alignment: Alignment.center,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(9999),
-                            child: AnimatedContainer(
-                              duration: const Duration(milliseconds: 300),
+                            child: SizedBox(
                               width: 110,
                               height: 110,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                boxShadow: _selectedProfile != null
-                                    ? [
-                                        BoxShadow(
-                                          color: Colors.greenAccent
-                                              .withOpacity(0.5),
-                                          blurRadius: 12,
-                                          spreadRadius: 3,
-                                        )
-                                      ]
-                                    : [],
-                              ),
                               child: _selectedProfile != null
                                   ? Image.asset(
                                       'assets/images/profiles/$_selectedProfile',
                                       fit: BoxFit.cover,
                                     )
-                                  : const Icon(
+                                  : Icon(
                                       Icons.account_circle,
                                       size: 110,
-                                      color: Colors.grey,
+                                      color: colorScheme.onSurfaceVariant,
                                     ),
                             ),
                           ),
@@ -178,7 +155,6 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
                   top: 30,
                   left: 20,
                   child: BackButton(
-                    color: Colors.white,
                     onPressed: () => Navigator.pop(context),
                   ),
                 ),
@@ -186,61 +162,35 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
                   left: 16,
                   right: 16,
                   bottom: 20,
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(8),
-                    onTap: () {
-                      if (_selectedProfile == null) {
-                        showErrorSnackbar("Please select a profile");
-                        return;
-                      }
-                      if (_selectedProfile ==
-                          sl<ValueNotifier<AppUser>>().value.profilePath) {
-                        showErrorSnackbar("Please select a different profile");
-                        return;
-                      }
-                      context.read<UserBloc>().add(
-                        UserEvent.updateUserAvatar(_selectedProfile!),
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 48,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        gradient: const LinearGradient(
-                          colors: [Color(0xFF00C6FF), Color(0xFF0072FF)],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.blue.withOpacity(0.3),
-                            blurRadius: 6,
-                            spreadRadius: 1,
-                            offset: const Offset(0, 3),
-                          )
-                        ],
-                      ),
-                      child: Center(
-                        child: isLoading
-                            ? const SizedBox(
-                                height: 20,
-                                width: 20,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  valueColor: AlwaysStoppedAnimation<Color>(
-                                      Colors.white),
-                                ),
-                              )
-                            : Text(
-                                "Save Changes",
-                                style: PmpTextStyles.body1Regular.copyWith(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w600,
-                                  letterSpacing: 0.8,
-                                ),
-                              ),
-                      ),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 48,
+                    child: FilledButton(
+                      onPressed: isLoading
+                          ? null
+                          : () {
+                              if (_selectedProfile == null) {
+                                showErrorSnackbar('Please select a profile');
+                                return;
+                              }
+                              if (_selectedProfile ==
+                                  sl<ValueNotifier<AppUser>>().value.profilePath) {
+                                showErrorSnackbar(
+                                    'Please select a different profile');
+                                return;
+                              }
+                              context.read<UserBloc>().add(
+                                    UserEvent.updateUserAvatar(
+                                        _selectedProfile!),
+                                  );
+                            },
+                      child: isLoading
+                          ? const SizedBox(
+                              height: 20,
+                              width: 20,
+                              child: CircularProgressIndicator(strokeWidth: 2),
+                            )
+                          : const Text('Save Changes'),
                     ),
                   ),
                 ),
@@ -253,9 +203,13 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
   }
 
   Widget _buildSection(String title, List<String> profiles) {
-    return Card(
-      color: Colors.white.withOpacity(0.1),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+    final colorScheme = Theme.of(context).colorScheme;
+    return Container(
+      decoration: BoxDecoration(
+        color: colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: colorScheme.outlineVariant),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -264,8 +218,10 @@ class _UpdateAvatarPageState extends State<UpdateAvatarPage> {
             Center(
               child: Text(
                 title,
-                style: PmpTextStyles.body1Semi
-                    .copyWith(color: Colors.white, fontSize: 18),
+                style: PmpTextStyles.body1Semi.copyWith(
+                  color: colorScheme.onSurface,
+                  fontSize: 18,
+                ),
               ),
             ),
             const SizedBox(height: 8),

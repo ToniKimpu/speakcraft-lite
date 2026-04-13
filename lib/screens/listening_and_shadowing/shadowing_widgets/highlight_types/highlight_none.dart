@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
 
-class HightlightNone extends StatelessWidget {
-  const HightlightNone({
+/// No highlight: just renders the line as plain white text.
+class HighlightNone extends StatelessWidget {
+  const HighlightNone({
     super.key,
     required this.subtitleLine,
   });
@@ -14,14 +15,6 @@ class HightlightNone extends StatelessWidget {
       text: TextSpan(
         children: List.generate(subtitleLine.words.length, (i) {
           final w = subtitleLine.words[i];
-          // final current = position.inMilliseconds / 1000.0;
-
-          // final double endBoundary = (i < subtitleLine.words.length - 1)
-          //     ? subtitleLine.words[i + 1].start
-          //     : w.end;
-
-          // final isActive = current >= w.start && current < endBoundary;
-
           return TextSpan(
             text: "${w.word} ",
             style: const TextStyle(

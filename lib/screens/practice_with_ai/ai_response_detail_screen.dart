@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/model/ai_sentence_practice/ai_sentence_practice.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 import 'widgets/ai_response_card.dart';
@@ -36,7 +35,7 @@ class _AiResponseDetailScreenState extends State<AiResponseDetailScreen> {
         builder: (context, state) {
           final isLoading =
               state.maybeWhen(loading: (_) => true, orElse: () => false);
-          return MainScaffold(
+          return Scaffold(
             appBar: AppBar(
               title: const Text('AI Response Detail'),
               actions: [

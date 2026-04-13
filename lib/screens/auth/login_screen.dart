@@ -3,14 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/bloc/auth/auth_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_card.dart';
 import 'package:pmp_english/screens/auth/widgets/auth_text_field.dart';
 import 'package:pmp_english/screens/main/device_failed_screen.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
-import '../../config/pmp_text_styles.dart';
 import '../main/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -46,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    return Scaffold(
       body: BlocListener<AuthBloc, AuthState>(
         bloc: _authBloc,
         listener: (context, state) {
@@ -116,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                       fontFamily: "ArchivoBlack Regular",
                       fontWeight: FontWeight.bold,
-                      color: PmpColors.white,
+                      color: Theme.of(context).colorScheme.onSurface,
                     ),
                 textAlign: TextAlign.center,
               ),
@@ -124,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Text(
                 'Sign in to continue learning',
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: PmpColors.white,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
                       fontFamily: "ArchivoBlack Regular",
                     ),
                 textAlign: TextAlign.center,
@@ -182,41 +179,29 @@ class _LoginScreenState extends State<LoginScreen> {
                     ValueListenableBuilder<bool>(
                       valueListenable: _loadingNotifier,
                       builder: (context, isLoading, child) {
-                        return Material(
-                          borderRadius: BorderRadius.circular(12),
-                          color: PmpColors.info500,
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(12),
-                            onTap: () {
-                              FocusScope.of(context).unfocus();
-                              _authBloc.add(
-                                AuthEvent.loginWithEmail(
-                                  _emailController.text.trim(),
-                                  _passwordController.text.trim(),
-                                ),
-                              );
-                            },
-                            child: Ink(
-                              height: 42,
-                              width: double.infinity,
-                              child: Center(
-                                child: isLoading
-                                    ? const SizedBox(
-                                        width: 18,
-                                        height: 18,
-                                        child: CircularProgressIndicator(
-                                          color: Colors.white,
-                                        ),
-                                      )
-                                    : Text(
-                                        "Sign In",
-                                        style: PmpTextStyles.body1Semi.copyWith(
-                                          color: Colors.white,
-                                          fontFamily: "ArchivoBlack Regular",
-                                        ),
+                        return SizedBox(
+                          width: double.infinity,
+                          height: 48,
+                          child: FilledButton(
+                            onPressed: isLoading
+                                ? null
+                                : () {
+                                    FocusScope.of(context).unfocus();
+                                    _authBloc.add(
+                                      AuthEvent.loginWithEmail(
+                                        _emailController.text.trim(),
+                                        _passwordController.text.trim(),
                                       ),
-                              ),
-                            ),
+                                    );
+                                  },
+                            child: isLoading
+                                ? const SizedBox(
+                                    width: 18,
+                                    height: 18,
+                                    child:
+                                        CircularProgressIndicator(strokeWidth: 2),
+                                  )
+                                : const Text('Sign In'),
                           ),
                         );
                       },

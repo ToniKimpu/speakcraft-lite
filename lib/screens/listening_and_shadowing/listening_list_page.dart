@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/listening/listening_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../l10n/generated/l10n.dart';
 import 'sheets/actions_bottom_sheet.dart';
@@ -16,14 +15,15 @@ class ListeningListPage extends StatefulWidget {
 }
 
 class _ListeningListPageState extends State<ListeningListPage> {
-  int? expandedIndex; // Track which card is expanded
+  int? expandedIndex;
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return BlocProvider(
-      create: (context) => ListeningBloc()
-        ..add(const ListeningEvent.loadListenings()),
-      child: MainScaffold(
+      create: (context) =>
+          ListeningBloc()..add(const ListeningEvent.loadListenings()),
+      child: Scaffold(
         appBar: AppBar(
           title: const Text('Listening And Shadowing'),
         ),
@@ -42,8 +42,8 @@ class _ListeningListPageState extends State<ListeningListPage> {
                   return Center(
                     child: Text(
                       AppLocalizations.of(context).txtWillUploadSoon,
-                      style:
-                          PmpTextStyles.body2Semi.copyWith(color: Colors.white),
+                      style: PmpTextStyles.body2Semi
+                          .copyWith(color: colorScheme.onSurface),
                     ),
                   );
                 }
@@ -55,16 +55,15 @@ class _ListeningListPageState extends State<ListeningListPage> {
                   itemBuilder: (context, index) {
                     final listening = listenings[index];
                     return Material(
-                      color: const Color.fromARGB(255, 30, 71, 86),
+                      color: colorScheme.surfaceContainerHighest,
                       borderRadius: BorderRadius.circular(12),
-                      shadowColor: Colors.black.withValues(alpha: 0.4),
-                      elevation: 6,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(12),
                         onTap: () {
                           showModalBottomSheet(
                             context: context,
                             isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
                             builder: (BuildContext context) {
                               return ActionsBottomSheet(
                                 listening: listening,
@@ -72,62 +71,61 @@ class _ListeningListPageState extends State<ListeningListPage> {
                             },
                           );
                         },
-                        child: Padding(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            border:
+                                Border.all(color: colorScheme.outlineVariant),
+                          ),
                           padding: const EdgeInsets.all(12),
-                          child: Column(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: CachedNetworkImage(
-                                      imageUrl: listening.thumbnail,
-                                      width: 60,
-                                      height: 60,
-                                      fit: BoxFit.cover,
-                                      placeholder: (context, url) => Container(
-                                        width: 60,
-                                        height: 60,
-                                        color: const Color(0xFF203A43),
-                                        child: const Center(
-                                          child: SizedBox(
-                                            width: 18,
-                                            height: 18,
-                                            child: CircularProgressIndicator(
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      errorWidget: (context, url, error) =>
-                                          Container(
-                                        width: 60,
-                                        height: 60,
-                                        color: const Color(0xFF203A43),
-                                        child: const Icon(
-                                          Icons.broken_image,
-                                          size: 20,
-                                          color: Colors.white,
-                                        ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: CachedNetworkImage(
+                                  imageUrl: listening.thumbnail,
+                                  width: 60,
+                                  height: 60,
+                                  fit: BoxFit.cover,
+                                  placeholder: (context, url) => Container(
+                                    width: 60,
+                                    height: 60,
+                                    color: colorScheme.surface,
+                                    child: const Center(
+                                      child: SizedBox(
+                                        width: 18,
+                                        height: 18,
+                                        child: CircularProgressIndicator(),
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(width: 12),
-                                  Expanded(
-                                    child: Text(
-                                      listening.title,
-                                      style: PmpTextStyles.body2Semi
-                                          .copyWith(color: Colors.white),
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
+                                  errorWidget: (context, url, error) =>
+                                      Container(
+                                    width: 60,
+                                    height: 60,
+                                    color: colorScheme.surface,
+                                    child: Icon(
+                                      Icons.broken_image,
+                                      size: 20,
+                                      color: colorScheme.onSurfaceVariant,
                                     ),
                                   ),
-                                  const Icon(
-                                    Icons.chevron_right,
-                                    color: Colors.white,
-                                  ),
-                                ],
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Text(
+                                  listening.title,
+                                  style: PmpTextStyles.body2Semi
+                                      .copyWith(color: colorScheme.onSurface),
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Icon(
+                                Icons.chevron_right,
+                                color: colorScheme.onSurfaceVariant,
                               ),
                             ],
                           ),

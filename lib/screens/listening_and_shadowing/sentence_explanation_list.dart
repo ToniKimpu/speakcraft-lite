@@ -2,12 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../l10n/generated/l10n.dart';
 import '../../model/sentence_explanation/sentence_explanation.dart';
@@ -49,7 +47,6 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     final decodedBody = utf8.decode(response.bodyBytes);
     final List data = jsonDecode(decodedBody);
 
-    // ✅ Filter out null or empty explanation_url
     final filtered = data.where((e) {
       final url = e['explanation_url'];
       return url != null && url is String && url.trim().isNotEmpty;
@@ -60,9 +57,10 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    final colorScheme = Theme.of(context).colorScheme;
+    return Scaffold(
       appBar: AppBar(
-        title: const Text("Sentence Explanations"),
+        title: const Text('Sentence Explanations'),
       ),
       body: FutureBuilder<List<SentenceExplanation>>(
         future: _future,
@@ -88,28 +86,29 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                       padding: const EdgeInsets.all(18),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: PmpColors.primary400.withValues(alpha: 0.15),
+                        color: colorScheme.surfaceContainerHighest,
+                        border: Border.all(color: colorScheme.outlineVariant),
                       ),
-                      child: const Icon(
+                      child: Icon(
                         Icons.lightbulb_outline,
                         size: 48,
-                        color: PmpColors.primary400,
+                        color: colorScheme.onSurface,
                       ),
                     ),
                     const SizedBox(height: 20),
                     Text(
-                      "Coming Soon",
+                      'Coming Soon',
                       style: PmpTextStyles.h1.copyWith(
-                        color: PmpColors.white,
+                        color: colorScheme.onSurface,
                         fontFamily: 'ArchivoBlack Regular',
                       ),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      "Sentence explanation is on the way.\nStay tuned!",
+                      'Sentence explanation is on the way.\nStay tuned!',
                       style: PmpTextStyles.body2Regular.copyWith(
-                        color: PmpColors.white.withValues(alpha: 0.75),
+                        color: colorScheme.onSurfaceVariant,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -132,137 +131,69 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                 width: double.infinity,
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.08),
+                  color: colorScheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(16),
-                  border:
-                      Border.all(color: Colors.white.withValues(alpha: 0.2)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.3),
-                      blurRadius: 8,
-                      spreadRadius: 2,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
+                  border: Border.all(color: colorScheme.outlineVariant),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    /// English sentence
                     Text(
                       item.english,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 16.5,
                         fontWeight: FontWeight.w600,
-                        color: PmpColors.neutral50,
+                        color: colorScheme.onSurface,
                       ),
                     ),
                     const SizedBox(height: 10),
-
-                    /// Burmese translation (soft background)
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Colors.blue.withValues(alpha: 0.2),
+                        color: colorScheme.surface,
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: colorScheme.outlineVariant),
                       ),
                       child: Text(
                         item.burmese,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 14.5,
                           height: 1.6,
-                          color: Colors.white,
-                          fontFamily: 'Pyidaungsu', // important for Burmese
+                          color: colorScheme.onSurface,
+                          fontFamily: 'Pyidaungsu',
                         ),
                       ),
                     ),
-
                     const SizedBox(height: 12),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "#${index + 1}",
+                          '#${index + 1}',
                           style: TextStyle(
                             fontSize: 12,
-                            color: Colors.grey.shade500,
+                            color: colorScheme.onSurfaceVariant,
                           ),
                         ),
-                        Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(8),
-                            onTap: () {
-                              Navigator.pushNamed(
-                                context,
-                                PmpRoutes.sentenceExplanationPage,
-                                arguments: {
-                                  "sentence_explanation": item,
-                                },
-                              );
-                            },
-                            child: Ink(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 4, horizontal: 8),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Colors.blueAccent,
-                              ),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    AppLocalizations.of(context)
-                                        .txtViewExplanation,
-                                    style: PmpTextStyles.label2Regular.copyWith(
-                                      color: PmpColors.white,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 2,
-                                  ),
-                                  const Icon(
-                                    Icons.arrow_forward,
-                                    size: 16,
-                                  ),
-                                ],
-                              ),
-                            ),
+                        FilledButton.icon(
+                          onPressed: () {
+                            Navigator.pushNamed(
+                              context,
+                              PmpRoutes.sentenceExplanationPage,
+                              arguments: {
+                                'sentence_explanation': item,
+                              },
+                            );
+                          },
+                          icon: const Icon(Icons.arrow_forward, size: 16),
+                          label: Text(
+                            AppLocalizations.of(context).txtViewExplanation,
+                            style: PmpTextStyles.label2Regular,
                           ),
                         ),
                       ],
                     ),
-
-                    /// Time row
-                    // Row(
-                    //   children: [
-                    //     Container(
-                    //       padding: const EdgeInsets.symmetric(
-                    //           horizontal: 10, vertical: 4),
-                    //       decoration: BoxDecoration(
-                    //         color: const Color(0xFF0EA5E9).withOpacity(0.12),
-                    //         borderRadius: BorderRadius.circular(20),
-                    //       ),
-                    //       child: Text(
-                    //         "⏱ ${item.start.toStringAsFixed(2)}s → ${item.end.toStringAsFixed(2)}s",
-                    //         style: const TextStyle(
-                    //           fontSize: 12,
-                    //           fontWeight: FontWeight.w500,
-                    //           color: Color(0xFF0284C7),
-                    //         ),
-                    //       ),
-                    //     ),
-                    //     const Spacer(),
-                    //     /// Optional: index badge
-                    //     Text(
-                    //       "#${index + 1}",
-                    //       style: TextStyle(
-                    //         fontSize: 12,
-                    //         color: Colors.grey.shade500,
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
                   ],
                 ),
               );

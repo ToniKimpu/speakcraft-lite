@@ -1,14 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_detail_widget.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../bloc/audio_player/audio_player_bloc.dart';
@@ -94,7 +93,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
         }
         _audioDurationTrackerBloc
             .add(AudioPlayerEvent.setTotalDuration(duration));
-        AppLogger.instance.debug("_durationSub: ${duration.inSeconds} inSeconds!");
+        AppLogger.instance
+            .debug("_durationSub: ${duration.inSeconds} inSeconds!");
       },
     );
     _subtitleParsingBloc.add(SubtitleEvent.parseSubtitle(widget.listening));
@@ -123,7 +123,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       final newIndex = _subtitles.indexWhere((s) => s.id == subtitle.id);
       if (newIndex != _subtitlePageIndex) {
         _subtitlePageIndex = newIndex;
-        AppLogger.instance.debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
+        AppLogger.instance
+            .debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
         _subtitleBloc.add(
           SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex),
         );
@@ -181,7 +182,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
           });
         },
         child: _showLoadingLayout
-            ? const MainScaffold(
+            ? const Scaffold(
                 body: Center(
                   child: SizedBox(
                     width: 20,
@@ -224,10 +225,9 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                         },
                         onEnded: (data) {},
                       ),
-                      builder: (context, player) => MainScaffold(
+                      builder: (context, player) => Scaffold(
                         appBar: AppBar(
                           scrolledUnderElevation: 0.0,
-                          backgroundColor: const Color(0xFF0F2027),
                           title: Text(
                             widget.listening.title,
                             style: const TextStyle(color: Colors.white),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/day/day.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/day/day_bloc.dart';
 import '../../l10n/generated/l10n.dart';
@@ -29,7 +27,7 @@ class _DayListScreenState extends State<DayListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('Useful Spoken Patterns'),
       ),
@@ -74,7 +72,7 @@ class _DayListScreenState extends State<DayListScreen> {
                           child: Text(
                             AppLocalizations.of(context).txtWillUploadSoon,
                             style: PmpTextStyles.body2Semi.copyWith(
-                              color: Colors.white,
+                              color: Theme.of(context).colorScheme.onSurface,
                             ),
                           ),
                         );
@@ -126,26 +124,29 @@ class _DayListScreenState extends State<DayListScreen> {
     required bool isSelected,
     required VoidCallback onTap,
   }) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Material(
       borderRadius: BorderRadius.circular(24),
-      color: isSelected ? const Color(0xFF2C5364) : Colors.transparent,
+      color: isSelected ? colorScheme.primary : Colors.transparent,
       child: InkWell(
         borderRadius: BorderRadius.circular(24),
         onTap: onTap,
         child: Container(
           height: 44,
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24),
             border: Border.all(
-              color: isSelected ? Colors.transparent : const Color(0xFF2C5364),
+              color: isSelected ? Colors.transparent : colorScheme.outline,
             ),
           ),
           child: Center(
             child: Text(
               label,
               style: PmpTextStyles.body2Regular.copyWith(
-                color: isSelected ? Colors.white : Colors.white54,
+                color: isSelected
+                    ? colorScheme.onPrimary
+                    : colorScheme.onSurfaceVariant,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -156,6 +157,7 @@ class _DayListScreenState extends State<DayListScreen> {
   }
 
   Widget _buildError(String message) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -163,7 +165,7 @@ class _DayListScreenState extends State<DayListScreen> {
         children: [
           Text(
             message,
-            style: PmpTextStyles.body2Semi.copyWith(color: Colors.red),
+            style: PmpTextStyles.body2Semi.copyWith(color: colorScheme.error),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 12),
@@ -171,12 +173,7 @@ class _DayListScreenState extends State<DayListScreen> {
             onPressed: () {
               context.read<DayBloc>().add(const DayEvent.loadDays());
             },
-            child: Text(
-              "Retry",
-              style: PmpTextStyles.body2Semi.copyWith(
-                color: PmpColors.white,
-              ),
-            ),
+            child: const Text('Retry'),
           ),
         ],
       ),

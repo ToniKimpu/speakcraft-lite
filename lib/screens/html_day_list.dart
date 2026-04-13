@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 class HtmlDayList extends StatefulWidget {
   const HtmlDayList({super.key});
@@ -74,7 +73,7 @@ class _HtmlDayListState extends State<HtmlDayList> {
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text(
           'Html Day List',

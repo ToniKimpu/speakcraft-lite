@@ -1,97 +1,80 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/model/hightlight_types.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/model/highlight_types.dart';
 
 import '../../../config/pmp_text_styles.dart';
 
-class HightlightTypeChooser extends StatelessWidget {
-  const HightlightTypeChooser({
+class HighlightTypeChooser extends StatelessWidget {
+  const HighlightTypeChooser({
     super.key,
     required this.onHighlightTypeSelected,
   });
 
-  final Function(HightlightTypes type) onHighlightTypeSelected;
+  final Function(HighlightType type) onHighlightTypeSelected;
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     final highlightOptions = [
       {
-        'type': HightlightTypes.sentence,
-        'label': 'Sentence',
-        'icon': Icons.highlight
+        'type': HighlightType.readAlong,
+        'label': 'Read Along',
+        'icon': Icons.format_color_fill,
       },
       {
-        'type': HightlightTypes.background,
-        'label': 'Background',
-        'icon': Icons.format_color_fill
+        'type': HighlightType.line,
+        'label': 'Line',
+        'icon': Icons.highlight,
       },
       {
-        'type': HightlightTypes.underline,
-        'label': 'Underline',
-        'icon': Icons.format_underline
-      },
-      {
-        'type': HightlightTypes.textColor,
-        'label': 'Text Color',
-        'icon': Icons.color_lens
-      },
-      {
-        'type': HightlightTypes.none,
+        'type': HighlightType.none,
         'label': 'None',
-        'icon': Icons.not_interested
+        'icon': Icons.not_interested,
       },
     ];
 
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 30, 71, 86),
+        color: colorScheme.surface,
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(12),
-          topRight: Radius.circular(12),
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            blurRadius: 8,
-            spreadRadius: 2,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        border: Border.all(color: colorScheme.outlineVariant),
       ),
       child: SafeArea(
         top: false,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            // drag handle
             Container(
               height: 4,
               width: 32,
               margin: const EdgeInsets.symmetric(vertical: 8),
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.8),
+                color: colorScheme.onSurfaceVariant,
                 borderRadius: BorderRadius.circular(4),
               ),
             ),
-            // title
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
               child: Text(
-                "Choose Highlight Type",
-                style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
+                'Choose Highlight Type',
+                style: PmpTextStyles.body1Semi
+                    .copyWith(color: colorScheme.onSurface),
               ),
             ),
-            const Divider(color: Colors.white24),
-            // highlight options
+            Divider(color: colorScheme.outlineVariant, height: 1),
             ...highlightOptions.map((option) => _HighlightOptionItem(
                   icon: option['icon'] as IconData,
                   label: option['label'] as String,
                   onTap: () {
-                    onHighlightTypeSelected(option['type'] as HightlightTypes);
+                    onHighlightTypeSelected(option['type'] as HighlightType);
                     Navigator.of(context).pop();
                   },
                 )),
+            const SizedBox(height: 8),
           ],
         ),
       ),
@@ -112,6 +95,7 @@ class _HighlightOptionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Material(
       color: Colors.transparent,
       child: InkWell(
@@ -122,13 +106,19 @@ class _HighlightOptionItem extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
-                Icon(icon, color: Colors.white, size: 20),
+                Icon(icon, color: colorScheme.onSurface, size: 20),
                 const SizedBox(width: 12),
-                Text(label,
-                    style:
-                        PmpTextStyles.body2Semi.copyWith(color: Colors.white)),
+                Text(
+                  label,
+                  style: PmpTextStyles.body2Semi
+                      .copyWith(color: colorScheme.onSurface),
+                ),
                 const Spacer(),
-                const Icon(Icons.chevron_right, color: Colors.white, size: 18),
+                Icon(
+                  Icons.chevron_right,
+                  color: colorScheme.onSurfaceVariant,
+                  size: 18,
+                ),
               ],
             ),
           ),

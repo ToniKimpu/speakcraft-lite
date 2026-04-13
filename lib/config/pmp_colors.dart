@@ -48,4 +48,14 @@ class PmpColors {
   static const Color destructive50 = Color(0xFFFEF4F4);
   static const Color darkSurface = Color(0xFF1F2532);
   static const Color outline = Color(0xFFE2E8F0);
+
+  // Pure black theme palette
+  static const Color darkBackground = Color(0xFF000000);
+  static const Color darkSurfaceBw = Color(0xFF0A0A0A);
+  static const Color darkSurfaceVariant = Color(0xFF1A1A1A);
+  static const Color darkOutline = Color(0xFF2A2A2A);
+  static const Color darkOutlineVariant = Color(0xFF242424);
+  static const Color darkTextPrimary = Color(0xFFFFFFFF);
+  static const Color darkTextSecondary = Color(0xFFB3B3B3);
+  static const Color darkTextDisabled = Color(0xFF6B6B6B);
 }

@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
 import 'package:pmp_english/bloc/user_activity/user_activity_messages.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import 'widgets/module_widget.dart';
@@ -48,7 +47,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('PMP English'),
         actions: [
@@ -139,6 +138,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildHeader(int totalDays, int streak, String message) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Column(
       children: [
         Align(
@@ -148,15 +148,8 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.w400,
-              color: Colors.white.withValues(alpha: 0.9),
+              color: colorScheme.onSurface,
               fontFamily: 'ArchivoBlack Regular',
-              shadows: const [
-                Shadow(
-                  offset: Offset(1, 1),
-                  blurRadius: 1,
-                  color: Colors.deepOrange,
-                ),
-              ],
             ),
             textAlign: TextAlign.center,
           ),
@@ -166,9 +159,9 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(top: 2),
             child: Text(
               '$streak day streak 🔥',
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 13,
-                color: Colors.orangeAccent,
+                color: colorScheme.onSurfaceVariant,
                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
@@ -179,9 +172,9 @@ class _HomePageState extends State<HomePage> {
             alignment: Alignment.center,
             child: Text(
               message,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
-                color: Colors.white70,
+                color: colorScheme.onSurfaceVariant,
                 fontWeight: FontWeight.w400,
               ),
               textAlign: TextAlign.center,

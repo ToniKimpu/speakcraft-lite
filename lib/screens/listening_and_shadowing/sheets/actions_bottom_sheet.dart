@@ -16,22 +16,16 @@ class ActionsBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 30, 71, 86),
+        color: colorScheme.surface,
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(12),
-          topRight: Radius.circular(12),
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            blurRadius: 8,
-            spreadRadius: 2,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        border: Border.all(color: colorScheme.outlineVariant),
       ),
       child: SafeArea(
         top: false,
@@ -44,9 +38,9 @@ class ActionsBottomSheet extends StatelessWidget {
               child: Container(
                 height: 4,
                 width: 32,
-                margin: const EdgeInsets.symmetric(vertical: 4),
+                margin: const EdgeInsets.symmetric(vertical: 8),
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.8),
+                  color: colorScheme.onSurfaceVariant,
                   borderRadius: BorderRadius.circular(4),
                 ),
               ),
@@ -69,10 +63,7 @@ class ActionsBottomSheet extends StatelessWidget {
                   );
                 },
               ),
-            Divider(
-              height: 1,
-              color: Colors.white.withValues(alpha: 0.2),
-            ),
+            Divider(height: 1, color: colorScheme.outlineVariant),
             _ActionItem(
               icon: Icons.lightbulb_outline,
               label: AppLocalizations.of(context).txtViewExplanation,
@@ -84,52 +75,8 @@ class ActionsBottomSheet extends StatelessWidget {
                     });
               },
             ),
-            // if (listening.hasVocabularies)
-            //   Divider(
-            //     height: 1,
-            //     color: Colors.white.withValues(alpha: 0.2),
-            //   ),
-            // if (listening.hasVocabularies)
-            //   _ActionItem(
-            //     icon: Icons.lightbulb_outline,
-            //     label: 'Learn Vocabularies',
-            //     onTap: () {
-            //       Navigator.of(context).pop();
-            //       Navigator.pushNamed(
-            //         context,
-            //         PmpRoutes.vocabularyListeningPage,
-            //         arguments: {
-            //           "listening": listening,
-            //         },
-            //       );
-            //     },
-            //   ),
-
-            // if (listening.multipleChoicePath.trim().isNotEmpty)
-            //   Divider(
-            //     height: 1,
-            //     color: Colors.white.withValues(alpha: 0.2),
-            //   ),
-            // if (listening.multipleChoicePath.trim().isNotEmpty)
-            //   _ActionItem(
-            //     icon: Icons.check_circle_outline,
-            //     label: 'Practice Now',
-            //     onTap: () {
-            //       Navigator.of(context).pop();
-            //       Navigator.pushNamed(
-            //         context,
-            //         PmpRoutes.listeningSentencePracticeList,
-            //         arguments: {
-            //           "listening": listening,
-            //         },
-            //       );
-            //     },
-            //   ),
             if (listening.shadowingPath.trim().isNotEmpty)
-              Divider(
-                height: 1,
-                color: Colors.white.withValues(alpha: 0.2),
-              ),
+              Divider(height: 1, color: colorScheme.outlineVariant),
             if (listening.shadowingPath.trim().isNotEmpty)
               _ActionItem(
                 icon: Icons.headphones,
@@ -146,14 +93,11 @@ class ActionsBottomSheet extends StatelessWidget {
                 },
               ),
             if (listening.recordSubtitlePath.trim().isNotEmpty)
-              Divider(
-                height: 1,
-                color: Colors.white.withValues(alpha: 0.2),
-              ),
+              Divider(height: 1, color: colorScheme.outlineVariant),
             if (listening.recordSubtitlePath.trim().isNotEmpty)
               _ActionItem(
                 icon: Icons.record_voice_over,
-                label: 'Record Now',
+                label: 'Record & Compare',
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.pushNamed(
@@ -165,6 +109,7 @@ class ActionsBottomSheet extends StatelessWidget {
                   );
                 },
               ),
+            const SizedBox(height: 8),
           ],
         ),
       ),
@@ -172,6 +117,7 @@ class ActionsBottomSheet extends StatelessWidget {
   }
 
   Widget _buildHeader(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
@@ -187,23 +133,21 @@ class ActionsBottomSheet extends StatelessWidget {
                   imageUrl: listening.thumbnail,
                   fit: BoxFit.cover,
                   placeholder: (context, url) => Container(
-                    color: const Color(0xFF203A43),
+                    color: colorScheme.surfaceContainerHighest,
                     child: const Center(
                       child: SizedBox(
                         width: 18,
                         height: 18,
-                        child: CircularProgressIndicator(
-                          color: Colors.white,
-                        ),
+                        child: CircularProgressIndicator(),
                       ),
                     ),
                   ),
                   errorWidget: (context, url, error) => Container(
-                    color: const Color(0xFF203A43),
-                    child: const Icon(
+                    color: colorScheme.surfaceContainerHighest,
+                    child: Icon(
                       Icons.broken_image,
                       size: 20,
-                      color: Colors.white,
+                      color: colorScheme.onSurfaceVariant,
                     ),
                   ),
                 ),
@@ -214,15 +158,12 @@ class ActionsBottomSheet extends StatelessWidget {
           Expanded(
             child: Text(
               listening.title,
-              style: PmpTextStyles.body2Semi.copyWith(color: Colors.white),
+              style: PmpTextStyles.body2Semi
+                  .copyWith(color: colorScheme.onSurface),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          // const Icon(
-          //   Icons.chevron_right,
-          //   color: Colors.white,
-          // ),
         ],
       ),
     );
@@ -242,32 +183,27 @@ class _ActionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Material(
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
         child: SizedBox(
-          height: 42,
+          height: 48,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
-                Icon(
-                  icon,
-                  color: Colors.white,
-                  size: 18,
-                ),
-                const SizedBox(width: 8),
+                Icon(icon, color: colorScheme.onSurface, size: 20),
+                const SizedBox(width: 12),
                 Text(
                   label,
-                  style: PmpTextStyles.body2Semi.copyWith(color: Colors.white),
+                  style: PmpTextStyles.body2Semi
+                      .copyWith(color: colorScheme.onSurface),
                 ),
                 const Spacer(),
-                const Icon(
-                  Icons.chevron_right,
-                  color: Colors.white,
-                  size: 18,
-                ),
+                Icon(Icons.chevron_right,
+                    color: colorScheme.onSurfaceVariant, size: 18),
               ],
             ),
           ),

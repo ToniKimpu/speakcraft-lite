@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
@@ -48,6 +49,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     final loading =
         widget.controller.value.playerState == PlayerState.buffering ||
             !widget.controller.value.isReady;
@@ -62,18 +64,16 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                 padding: const EdgeInsets.all(16),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.08),
+                  color: colorScheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.2),
-                  ),
+                  border: Border.all(color: colorScheme.outlineVariant),
                 ),
                 child: Text(
                   widget.subtitleLine.burmese ?? "",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                    color: colorScheme.onSurface,
                     height: 1.6,
                     fontFamily: 'MM Lyrics Bold',
                   ),
@@ -91,7 +91,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Material(
-                color: const Color(0xFF2C5364),
+                color: colorScheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.circular(16),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(16),
@@ -111,8 +111,12 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                     );
                     widget.onListenAudio.call(startDuration, endDuration);
                   },
-                  child: SizedBox(
+                  child: Container(
                     height: 52,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: colorScheme.outlineVariant),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 0, horizontal: 16),
@@ -123,13 +127,14 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                         children: [
                           CircleAvatar(
                             radius: 14,
-                            backgroundColor: Colors.blue,
+                            backgroundColor: colorScheme.primary,
                             child: loading
-                                ? const SizedBox(
+                                ? SizedBox(
                                     width: 18,
                                     height: 18,
                                     child: CircularProgressIndicator(
-                                      color: Colors.white,
+                                      color: colorScheme.onPrimary,
+                                      strokeWidth: 2,
                                     ),
                                   )
                                 : Icon(
@@ -140,16 +145,16 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                                             ? Icons.pause
                                             : Icons.play_arrow,
                                     size: 18,
-                                    color: Colors.white,
+                                    color: colorScheme.onPrimary,
                                   ),
                           ),
                           const SizedBox(width: 12),
-                          const Text(
-                            "Play Audio",
+                          Text(
+                            'Play Audio',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              color: Colors.white,
+                              color: colorScheme.onSurface,
                             ),
                           )
                         ],
@@ -175,9 +180,9 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                   minLines: 2,
                   maxLines: 8,
                   readOnly: widget.complete,
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     fontSize: 18,
-                    color: Colors.amber,
+                    color: colorScheme.onSurface,
                     fontFamily: 'ArchivoBlack Regular',
                   ),
                 ),
@@ -196,21 +201,24 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                       margin: const EdgeInsets.symmetric(horizontal: 16),
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: Colors.red.withValues(alpha: 0.1),
+                        color:
+                            PmpColors.destructive400.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(12),
+                        border:
+                            Border.all(color: PmpColors.destructive400),
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Icon(Icons.error_outline,
-                              color: Colors.red, size: 20),
+                              color: PmpColors.destructive400, size: 20),
                           const SizedBox(width: 8),
                           Expanded(
                             child: Text(
                               errorMessage,
                               style: const TextStyle(
                                 fontSize: 14,
-                                color: Colors.redAccent,
+                                color: PmpColors.destructive400,
                                 height: 1.4,
                                 fontFamily: 'ArchivoBlack Regular',
                               ),
@@ -228,14 +236,8 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 12),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        backgroundColor: Colors.blue,
-                      ),
+                    height: 48,
+                    child: FilledButton(
                       onPressed: () {
                         if (_userAnswerController.text.isEmpty) {
                           return;
@@ -261,15 +263,7 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                         AppLogger.instance.debug(
                             "_sentenceCheckResultLogs: ${sentenceCheckResult.message} message!");
                       },
-                      child: const Text(
-                        "Done",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: 'ArchivoBlack Regular',
-                          color: Colors.white,
-                        ),
-                      ),
+                      child: const Text('Done'),
                     ),
                   ),
                 ),
@@ -281,11 +275,11 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     children: [
-                      const Text(
+                      Text(
                         'Words',
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.white,
+                          color: colorScheme.onSurface,
                           fontFamily: 'ArchivoBlack Regular',
                         ),
                       ),
@@ -293,7 +287,8 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                       Text(
                         '[Tap what you hear]',
                         style: PmpTextStyles.body2Regular.copyWith(
-                          fontFamily: "ArchivoBlack Regular",
+                          color: colorScheme.onSurfaceVariant,
+                          fontFamily: 'ArchivoBlack Regular',
                         ),
                       ),
                     ],
@@ -310,13 +305,14 @@ class _SentencePracticeWidgetState extends State<SentencePracticeWidget> {
                       return ActionChip(
                         label: Text(
                           word,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                            color: colorScheme.onSurface,
                           ),
                         ),
-                        backgroundColor: Colors.blue,
+                        backgroundColor: colorScheme.surfaceContainerHighest,
+                        side: BorderSide(color: colorScheme.outlineVariant),
                         onPressed: () {
                           final current = _userAnswerController.text.trim();
                           _userAnswerController.text =

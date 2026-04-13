@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/youtube_player/youtube_player_bloc.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/shared_widgets/line_with_text.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../model/listening_practice_answer/listening_practice_answer.dart';
 import '../../../model/listening_question/listening_question.dart';
@@ -29,6 +29,7 @@ class UserAnswerDetailSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return BlocBuilder<YoutubePlayerBloc, YoutubePlayerState>(
       builder: (context, state) {
         final playerState = state.maybeWhen(
@@ -41,17 +42,9 @@ class UserAnswerDetailSheet extends StatelessWidget {
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.08),
+            color: colorScheme.surfaceContainerHighest,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.3),
-                blurRadius: 8,
-                spreadRadius: 2,
-                offset: const Offset(0, 4),
-              ),
-            ],
+            border: Border.all(color: colorScheme.outlineVariant),
           ),
           child: SafeArea(
             child: Column(
@@ -64,7 +57,7 @@ class UserAnswerDetailSheet extends StatelessWidget {
                     Text(
                       'Question $index',
                       style: PmpTextStyles.label2Regular
-                          .copyWith(color: PmpColors.white),
+                          .copyWith(color: colorScheme.onSurface),
                     ),
                     InkWell(
                       borderRadius: BorderRadius.circular(100),
@@ -75,22 +68,26 @@ class UserAnswerDetailSheet extends StatelessWidget {
                         padding: const EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Colors.white.withValues(alpha: 0.15),
+                          color: colorScheme.surface,
                         ),
-                        child: const Icon(Icons.expand_more, size: 16),
+                        child: Icon(
+                          Icons.expand_more,
+                          size: 16,
+                          color: colorScheme.onSurface,
+                        ),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 8),
-                _buildPlayButton(loading),
+                _buildPlayButton(context, loading),
                 const SizedBox(height: 12),
                 LineWithText(englishText: listeningQuestion.text),
                 const SizedBox(height: 6),
                 Text(
                   listeningQuestion.question,
                   style: PmpTextStyles.body1Regular.copyWith(
-                    color: PmpColors.white,
+                    color: colorScheme.onSurface,
                     fontFamily: "ArchivoBlack Regular",
                   ),
                 ),
@@ -106,19 +103,19 @@ class UserAnswerDetailSheet extends StatelessWidget {
 
                     if (listeningPracticeAnswer.isCorrect && isUserAnswer) {
                       icon = Icons.check;
-                      bgColor = Colors.green;
+                      bgColor = PmpColors.success400;
                     } else if (!listeningPracticeAnswer.isCorrect &&
                         isUserAnswer) {
                       icon = Icons.close;
                       bgColor = PmpColors.destructive400;
                     } else if (answerOption.correct) {
                       icon = Icons.check;
-                      bgColor = Colors.blue;
+                      bgColor = PmpColors.success400;
                     }
 
                     return Column(
                       children: [
-                        _buildOption(answerOption, icon, bgColor),
+                        _buildOption(context, answerOption, icon, bgColor),
                         if (i != listeningQuestion.answers.length - 1)
                           const SizedBox(height: 12),
                       ],
@@ -133,7 +130,8 @@ class UserAnswerDetailSheet extends StatelessWidget {
     );
   }
 
-  Widget _buildPlayButton(bool loading) {
+  Widget _buildPlayButton(BuildContext context, bool loading) {
+    final colorScheme = Theme.of(context).colorScheme;
     return InkWell(
       borderRadius: BorderRadius.circular(12),
       onTap: onPlayAudio,
@@ -141,8 +139,8 @@ class UserAnswerDetailSheet extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.white, width: 2),
-          color: Colors.blue.withValues(alpha: 0.8),
+          border: Border.all(color: colorScheme.outline, width: 1),
+          color: colorScheme.surface,
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -151,24 +149,17 @@ class UserAnswerDetailSheet extends StatelessWidget {
               width: 24,
               height: 24,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: colorScheme.primary,
                 shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.2),
-                    spreadRadius: 3,
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
               ),
               child: Center(
                 child: loading
-                    ? const SizedBox(
+                    ? SizedBox(
                         width: 16,
                         height: 16,
                         child: CircularProgressIndicator(
-                          color: Colors.blue,
+                          color: colorScheme.onPrimary,
+                          strokeWidth: 2,
                         ),
                       )
                     : Icon(
@@ -177,16 +168,18 @@ class UserAnswerDetailSheet extends StatelessWidget {
                             : controller.value.isPlaying
                                 ? Icons.pause
                                 : Icons.play_arrow,
-                        color: Colors.blue,
+                        color: colorScheme.onPrimary,
                         size: 20,
                       ),
               ),
             ),
             const SizedBox(width: 8),
             Text(
-              "Play Audio",
-              style: PmpTextStyles.body2Semi.copyWith(color: Colors.white),
+              'Play Audio',
+              style: PmpTextStyles.body2Semi
+                  .copyWith(color: colorScheme.onSurface),
             ),
+            const SizedBox(width: 6),
           ],
         ),
       ),
@@ -194,8 +187,12 @@ class UserAnswerDetailSheet extends StatelessWidget {
   }
 
   Widget _buildOption(
-      AnswerOption answerOption, IconData? leadingIcon, Color? bgColor) {
-    final optionBgColor = bgColor ?? Colors.white.withValues(alpha: 0.15);
+    BuildContext context,
+    AnswerOption answerOption,
+    IconData? leadingIcon,
+    Color? bgColor,
+  ) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Row(
       children: [
         Container(
@@ -203,24 +200,30 @@ class UserAnswerDetailSheet extends StatelessWidget {
           height: 20,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: optionBgColor,
+            color: bgColor ?? colorScheme.surface,
+            border: Border.all(color: colorScheme.outlineVariant),
           ),
           child: leadingIcon == null
               ? const SizedBox()
-              : Center(child: Icon(leadingIcon, color: Colors.white, size: 13)),
+              : Center(
+                  child: Icon(leadingIcon, color: Colors.white, size: 13),
+                ),
         ),
         const SizedBox(width: 8),
         Expanded(
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
-              color: bgColor ?? const Color(0xFF203A43),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
+              color: bgColor ?? colorScheme.surface,
+              border: Border.all(color: colorScheme.outlineVariant),
             ),
             padding: const EdgeInsets.all(16),
             child: Text(
               answerOption.answer,
-              style: const TextStyle(fontSize: 14, color: Colors.white),
+              style: TextStyle(
+                fontSize: 14,
+                color: bgColor != null ? Colors.white : colorScheme.onSurface,
+              ),
             ),
           ),
         ),

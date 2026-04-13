@@ -5,7 +5,6 @@ import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/spoken_pattern_widget.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../bloc/spoken_pattern/spoken_pattern_bloc.dart';
@@ -85,7 +84,7 @@ class _SpokenPatternScreenState extends State<SpokenPatternScreen> {
         }
         Navigator.pop(context);
       },
-      child: MainScaffold(
+      child: Scaffold(
         appBar: AppBar(
           title: Text(widget.lesson.lessonName),
         ),

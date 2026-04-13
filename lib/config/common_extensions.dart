@@ -149,12 +149,13 @@ class LoadingDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Dialog(
       backgroundColor: Colors.transparent,
       elevation: 0,
       child: Card(
         elevation: 2,
-        color: const Color(0xFF1C2C3C),
+        color: colorScheme.surface,
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
@@ -168,15 +169,15 @@ class LoadingDialog extends StatelessWidget {
               const SizedBox(height: 16),
               Text(
                 message,
-                style:
-                    PmpTextStyles.body1Regular.copyWith(color: PmpColors.white),
+                style: PmpTextStyles.body1Regular
+                    .copyWith(color: colorScheme.onSurface),
               ),
               if (subMessage.isNotEmpty) ...[
                 const SizedBox(height: 4),
                 Text(
                   subMessage,
                   style: PmpTextStyles.body2Medium
-                      .copyWith(color: PmpColors.white),
+                      .copyWith(color: colorScheme.onSurfaceVariant),
                 ),
               ]
             ],

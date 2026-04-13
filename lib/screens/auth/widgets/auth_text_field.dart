@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
 
 class AuthTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -68,9 +67,9 @@ class AuthTextField extends StatelessWidget {
       textInputAction: textInputAction,
       onFieldSubmitted: onSubmitted,
       onChanged: (value) => onChanged?.call(value),
-      cursorColor: cursorColor,
+      cursorColor: cursorColor ?? colorScheme.primary,
       style: TextStyle(
-        color: textColor ?? Colors.black,
+        color: textColor ?? colorScheme.onSurface,
       ),
       decoration: InputDecoration(
         labelText: labelText,
@@ -91,7 +90,7 @@ class AuthTextField extends StatelessWidget {
               )
             : null,
         filled: true,
-        fillColor: fillColor ?? PmpColors.white,
+        fillColor: fillColor ?? colorScheme.surfaceContainerHighest,
         border: border,
         enabledBorder: border,
         focusedBorder: OutlineInputBorder(
@@ -106,8 +105,8 @@ class AuthTextField extends StatelessWidget {
         errorStyle: TextStyle(
           color: colorScheme.error,
         ),
-        labelStyle: const TextStyle(
-          color: PmpColors.neutral400,
+        labelStyle: TextStyle(
+          color: colorScheme.onSurfaceVariant,
         ),
         floatingLabelBehavior: FloatingLabelBehavior.never,
       ),

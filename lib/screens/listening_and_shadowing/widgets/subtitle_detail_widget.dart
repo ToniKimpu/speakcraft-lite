@@ -122,22 +122,9 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
         onTap: () {},
         child: Container(
           width: double.infinity,
-          decoration: const BoxDecoration(
-            // borderRadius: BorderRadius.circular(12),
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFF0F2027),
-                Color(0xFF203A43),
-                Color(0xFF2C5364),
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
+          color: Theme.of(context).colorScheme.surface,
           child: Column(
             children: [
-              // Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
-              // Single subtitle
               Expanded(
                 child: SubtitleWidget(
                   youtubeController: widget.youtubeController,
@@ -151,7 +138,10 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                   hasMMSub: widget.hasMMSub,
                 ),
               ),
-              Divider(color: Colors.white.withValues(alpha: 0.4), height: 1),
+              Divider(
+                color: Theme.of(context).colorScheme.outlineVariant,
+                height: 1,
+              ),
               // Controls row
               SizedBox(
                 height: 40,
@@ -159,7 +149,6 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const SizedBox(width: 8),
-                    // Stream switch row
                     SizedBox(
                       height: 40,
                       child: Padding(
@@ -170,7 +159,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                             Text(
                               'Stream',
                               style: PmpTextStyles.body2Semi.copyWith(
-                                color: Colors.white,
+                                color: Theme.of(context).colorScheme.onSurface,
                               ),
                             ),
                             const SizedBox(width: 4),
@@ -188,12 +177,6 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                                     }
                                   });
                                 },
-                                // activeThumbColor: Colors.white,
-                                inactiveThumbColor:
-                                    Colors.white.withValues(alpha: 0.8),
-                                activeTrackColor: Colors.green,
-                                inactiveTrackColor:
-                                    Colors.white.withValues(alpha: 0.4),
                               ),
                             ),
                           ],
@@ -250,18 +233,24 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                     IconButton(
                       padding: EdgeInsets.zero,
                       onPressed: _goToPrevious,
-                      icon: const Icon(Icons.chevron_left, color: Colors.white),
+                      icon: Icon(
+                        Icons.chevron_left,
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
                     ),
                     Text(
                       '${_currentIndex + 1}/${widget.subtitles.length}',
-                      style:
-                          PmpTextStyles.labelSemi.copyWith(color: Colors.white),
+                      style: PmpTextStyles.labelSemi.copyWith(
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
                     ),
                     IconButton(
                       padding: EdgeInsets.zero,
                       onPressed: _goToNext,
-                      icon:
-                          const Icon(Icons.chevron_right, color: Colors.white),
+                      icon: Icon(
+                        Icons.chevron_right,
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
                     ),
                   ],
                 ),

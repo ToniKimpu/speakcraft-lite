@@ -6,7 +6,6 @@ import 'package:pmp_english/screens/days/widgets/exercise_result_label.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
-import '../../shared_widgets/main_scaffold.dart';
 import '../listening_and_shadowing/listening_practice_widgets/chart_label_widget.dart';
 import '../listening_and_shadowing/listening_practice_widgets/listening_practice_result_chart.dart';
 import '../listening_and_shadowing/listening_practice_widgets/score_level_widget.dart';
@@ -52,7 +51,7 @@ class _PatternExerciseResultScreenState
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
       ),

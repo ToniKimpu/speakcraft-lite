@@ -15,7 +15,6 @@ import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/shared_widgets/default_profile.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 class FreeUserScreen extends StatefulWidget {
   const FreeUserScreen({super.key});
@@ -30,7 +29,7 @@ class _FreeUserScreenState extends State<FreeUserScreen> {
   @override
   Widget build(BuildContext context) {
     final appUser = sl<ValueNotifier<AppUser>>().value;
-    return MainScaffold(
+    return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(

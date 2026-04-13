@@ -2,17 +2,34 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Flutter toolchain (IMPORTANT)
+
+This project is pinned to **Flutter 3.35.6** via FVM (see [.fvmrc](.fvmrc) and [.fvm/flutter_sdk](.fvm/flutter_sdk)). The machine's global `flutter` on PATH may be a different version (e.g. 3.32.4), which will produce an incompatible `pubspec.lock` and break the build (symptoms: `vector_math` downgraded to 2.1.4, `SemanticsRole.searchBox` / `elevation` errors in framework files).
+
+**Never run the global `flutter` or `dart` commands.** Always use the FVM-pinned toolchain:
+
+- Preferred: `fvm flutter ...` / `fvm dart ...`
+- Fallback (if fvm is not on PATH): `.fvm/flutter_sdk/bin/flutter ...` / `.fvm/flutter_sdk/bin/dart ...`
+
+This applies to **every** invocation — `run`, `build`, `test`, `analyze`, `pub get`, `pub upgrade`, `format`, and code generation via `dart run build_runner ...`. Running the wrong Flutter version even once (especially anything that triggers an implicit `pub get`, like `flutter analyze`) will rewrite `pubspec.lock` with versions incompatible with the pinned SDK.
+
+If `pubspec.lock` has been clobbered, recover with:
+```bash
+git checkout pubspec.lock
+fvm flutter pub get   # or: .fvm/flutter_sdk/bin/flutter pub get
+```
+
 ## Build & Run Commands
 
 ```bash
 # Run with dev flavor (default)
-flutter run --dart-define flavor=dev -t lib/main.dart
+fvm flutter run --dart-define flavor=dev -t lib/main.dart
 
 # Run with prod flavor
-flutter run --flavor prod --dart-define flavor=prod -t lib/main.dart
+fvm flutter run --flavor prod --dart-define flavor=prod -t lib/main.dart
 
 # Build APK (release, prod flavor)
-flutter build apk \
+fvm flutter build apk \
   --release \
   --flavor prod \
   -t lib/main.dart \
@@ -25,19 +42,19 @@ flutter build apk \
 # firebase crashlytics:symbols:upload --app=YOUR_APP_ID build/symbols/
 
 # Run tests
-flutter test
+fvm flutter test
 
 # Run a single test file
-flutter test test/path/to/test_file.dart
+fvm flutter test test/path/to/test_file.dart
 
 # Lint
-flutter analyze
+fvm flutter analyze
 
 # Regenerate code (freezed, json_serializable, drift)
-dart run build_runner build --delete-conflicting-outputs
+fvm dart run build_runner build --delete-conflicting-outputs
 
 # Watch for changes (during development)
-dart run build_runner watch --delete-conflicting-outputs
+fvm dart run build_runner watch --delete-conflicting-outputs
 ```
 
 ## Release (Fastlane)

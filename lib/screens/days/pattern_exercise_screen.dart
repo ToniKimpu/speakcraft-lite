@@ -5,7 +5,6 @@ import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
 import 'package:pmp_english/bloc/exercise_user_answer/exercise_user_answer_bloc.dart';
 import 'package:pmp_english/bloc/pattern_exercise/pattern_exercise_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/day/day.dart';
@@ -113,74 +112,61 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
         Navigator.pop(context);
       },
       child: Scaffold(
-        backgroundColor: PmpColors.primary100,
         appBar: AppBar(
           title: Text(widget.exercise.exerciseName),
-          backgroundColor: const Color(0xFF0F2027),
-          elevation: 0,
         ),
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF0F2027), Color(0xFF203A43), Color(0xFF2C5364)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+        body: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (_) => PatternExerciseBloc()
+                ..add(PatternExerciseEvent.loadPatternExercises(
+                    widget.exercise.id)),
             ),
-          ),
-          child: MultiBlocProvider(
-            providers: [
-              BlocProvider(
-                create: (_) => PatternExerciseBloc()
-                  ..add(PatternExerciseEvent.loadPatternExercises(
-                      widget.exercise.id)),
-              ),
-              BlocProvider(
-                create: (context) => ExerciseUserAnswerBloc(),
-              ),
-            ],
-            child:
-                BlocListener<ExerciseUserAnswerBloc, ExerciseUserAnswerState>(
-              listener: (context, state) {
-                state.whenOrNull(
-                  loading: () {
-                    context.showLoadingDialog(message: "saving...");
-                  },
-                  onSuccess: () {
-                    context.hideLoadingDialog();
-                    if (widget.isLastIndex) {
-                      context.read<DayBloc>().add(const DayEvent.loadDays());
-                    } else {
-                      context.read<ExerciseBloc>().add(
-                            ExerciseEvent.loadExercises(widget.day.id),
-                          );
-                    }
-                    Navigator.pushReplacementNamed(
-                      context,
-                      PmpRoutes.patternExerciseResultScreen,
-                      arguments: {
-                        'pattern_exercises': _patternExercises,
-                        "pass": true,
-                      },
-                    );
-                  },
-                );
-              },
-              child: BlocBuilder<PatternExerciseBloc, PatternExerciseState>(
-                builder: (context, state) {
-                  return state.maybeWhen(
-                    loading: () => const Center(
-                      child: SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: CircularProgressIndicator(),
-                      ),
-                    ),
-                    loaded: (patternExercises) =>
-                        _buildExerciseContent(patternExercises),
-                    orElse: () => const SizedBox(),
+            BlocProvider(
+              create: (context) => ExerciseUserAnswerBloc(),
+            ),
+          ],
+          child: BlocListener<ExerciseUserAnswerBloc, ExerciseUserAnswerState>(
+            listener: (context, state) {
+              state.whenOrNull(
+                loading: () {
+                  context.showLoadingDialog(message: "saving...");
+                },
+                onSuccess: () {
+                  context.hideLoadingDialog();
+                  if (widget.isLastIndex) {
+                    context.read<DayBloc>().add(const DayEvent.loadDays());
+                  } else {
+                    context.read<ExerciseBloc>().add(
+                          ExerciseEvent.loadExercises(widget.day.id),
+                        );
+                  }
+                  Navigator.pushReplacementNamed(
+                    context,
+                    PmpRoutes.patternExerciseResultScreen,
+                    arguments: {
+                      'pattern_exercises': _patternExercises,
+                      "pass": true,
+                    },
                   );
                 },
-              ),
+              );
+            },
+            child: BlocBuilder<PatternExerciseBloc, PatternExerciseState>(
+              builder: (context, state) {
+                return state.maybeWhen(
+                  loading: () => const Center(
+                    child: SizedBox(
+                      width: 24,
+                      height: 24,
+                      child: CircularProgressIndicator(),
+                    ),
+                  ),
+                  loaded: (patternExercises) =>
+                      _buildExerciseContent(patternExercises),
+                  orElse: () => const SizedBox(),
+                );
+              },
             ),
           ),
         ),
@@ -193,7 +179,9 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
       return Center(
           child: Text(
         AppLocalizations.of(context).txtWillUploadSoon,
-        style: PmpTextStyles.body1Regular.copyWith(color: PmpColors.white),
+        style: PmpTextStyles.body1Regular.copyWith(
+          color: Theme.of(context).colorScheme.onSurface,
+        ),
       ));
     }
 
@@ -238,13 +226,15 @@ class _PatternExerciseScreenState extends State<PatternExerciseScreen> {
 
   Widget _buildFooter(List<PatternExercise> exercises) {
     return Card(
-      elevation: 4, // Adds shadow effect
+      elevation: 0,
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: Theme.of(context).colorScheme.outlineVariant,
+        ),
       ),
-      // color: const Color(0xFF0F2027),
-      color: const Color(0xFF1C2C3C),
+      color: Theme.of(context).colorScheme.surfaceContainerHighest,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(

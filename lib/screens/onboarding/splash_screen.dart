@@ -4,7 +4,6 @@ import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import '../../bloc/internet_checker/internet_checker_bloc.dart';
@@ -32,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MainScaffold(
+    return Scaffold(
       body: MultiBlocListener(
         listeners: [
           BlocListener<AuthBloc, AuthState>(

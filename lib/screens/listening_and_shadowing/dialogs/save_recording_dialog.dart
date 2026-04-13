@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import 'package:record/record.dart';
@@ -47,9 +48,10 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Dialog(
       insetPadding: const EdgeInsets.symmetric(horizontal: 24),
-      backgroundColor: Colors.transparent, // removes white edges
+      backgroundColor: Colors.transparent,
       child: BlocConsumer<UserRecordedSentenceAudioBloc,
           UserRecordedSentenceAudioState>(
         bloc: _saveUserRecordedVoiceBloc,
@@ -75,104 +77,79 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
             clipBehavior: Clip.antiAlias,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFF203A43), Color(0xFF2C5364)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
+              color: colorScheme.surface,
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(width: 1.5, color: Colors.white),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  blurRadius: 12,
-                  offset: const Offset(0, 6),
-                ),
-              ],
+              border: Border.all(color: colorScheme.outlineVariant),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Title
                 Text(
-                  "Save your recording?",
+                  'Save your recording?',
                   textAlign: TextAlign.center,
                   style: PmpTextStyles.body1Regular.copyWith(
-                    color: Colors.white,
+                    color: colorScheme.onSurface,
                     fontFamily: 'ArchivoBlack Regular',
                     fontSize: 20,
                     letterSpacing: 0.5,
                   ),
                 ),
-
                 const SizedBox(height: 16),
-                // Text Field Label
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Recording name",
+                    'Recording name',
                     style: PmpTextStyles.body2Regular.copyWith(
-                      color: Colors.white70,
+                      color: colorScheme.onSurfaceVariant,
                       fontSize: 14,
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 8),
-
-                // Text Field
                 PracticeTextField(
                   controller: _nameController,
                   englishOnly: true,
                 ),
-
                 const SizedBox(height: 24),
-
-                // Divider
                 Divider(
-                  color: Colors.white.withOpacity(0.3),
+                  color: colorScheme.outlineVariant,
                   thickness: 1,
                   height: 1,
                 ),
-
                 const SizedBox(height: 16),
-                // Action buttons
                 Row(
                   children: [
                     Expanded(
                       child: TextButton(
                         onPressed: () => Navigator.pop(context),
                         style: TextButton.styleFrom(
-                          foregroundColor: Colors.white70,
-                          overlayColor: Colors.white12,
+                          foregroundColor: colorScheme.onSurfaceVariant,
                         ),
-                        child: const Text("Cancel"),
+                        child: const Text('Cancel'),
                       ),
                     ),
                     Container(
                       width: 1,
                       height: 24,
-                      color: Colors.white.withOpacity(0.2),
+                      color: colorScheme.outlineVariant,
                     ),
                     Expanded(
                       child: TextButton(
                         onPressed: () {
-                          // discard logic
                           widget.onDiscard.call();
                           Navigator.pop(context);
                         },
                         style: TextButton.styleFrom(
-                          foregroundColor: Colors.orangeAccent,
-                          overlayColor: Colors.white12,
+                          foregroundColor: PmpColors.warning400,
                         ),
-                        child: const Text("Discard"),
+                        child: const Text('Discard'),
                       ),
                     ),
                     Container(
                       width: 1,
                       height: 24,
-                      color: Colors.white.withOpacity(0.2),
+                      color: colorScheme.outlineVariant,
                     ),
                     Expanded(
                       child: loading
@@ -180,9 +157,8 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
                               child: SizedBox(
                                 width: 18,
                                 height: 18,
-                                child: CircularProgressIndicator(
-                                  color: Colors.white,
-                                ),
+                                child:
+                                    CircularProgressIndicator(strokeWidth: 2),
                               ),
                             )
                           : TextButton(
@@ -196,7 +172,7 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
                                 final data = UserRecordedSentenceAudio(
                                   sentenceId: widget.sentenceId,
                                   youtubeId: widget.youtubeId,
-                                  audioPath: audioPath ?? "",
+                                  audioPath: audioPath ?? '',
                                   audioName: audioName,
                                 );
 
@@ -207,10 +183,9 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
                                 );
                               },
                               style: TextButton.styleFrom(
-                                foregroundColor: Colors.lightGreenAccent,
-                                overlayColor: Colors.white12,
+                                foregroundColor: PmpColors.success400,
                               ),
-                              child: const Text("Save"),
+                              child: const Text('Save'),
                             ),
                     ),
                   ],

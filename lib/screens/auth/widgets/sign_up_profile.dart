@@ -55,6 +55,7 @@ class _SignUpProfileState extends State<SignUpProfile> {
   }
 
   Widget _buildProfileGrid(List<String> profiles) {
+    final colorScheme = Theme.of(context).colorScheme;
     return GridView.builder(
       itemCount: profiles.length,
       physics: const NeverScrollableScrollPhysics(),
@@ -77,22 +78,13 @@ class _SignUpProfileState extends State<SignUpProfile> {
               final selected = selectedProfile == profiles[index];
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 200),
-                padding: EdgeInsets.all(selected ? 6 : 0),
+                padding: EdgeInsets.all(selected ? 4 : 0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
                     width: selected ? 2 : 0,
-                    color: selected ? Colors.greenAccent : Colors.transparent,
+                    color: selected ? colorScheme.primary : Colors.transparent,
                   ),
-                  boxShadow: selected
-                      ? [
-                          BoxShadow(
-                            color: Colors.greenAccent.withOpacity(0.4),
-                            blurRadius: 8,
-                            spreadRadius: 2,
-                          )
-                        ]
-                      : [],
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
@@ -111,6 +103,7 @@ class _SignUpProfileState extends State<SignUpProfile> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24),
       child: Column(
@@ -124,31 +117,18 @@ class _SignUpProfileState extends State<SignUpProfile> {
               child: ValueListenableBuilder<String?>(
                 valueListenable: _selectedProfileNotifier,
                 builder: (context, selectedProfile, child) {
-                  return AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
+                  return SizedBox(
                     width: 110,
                     height: 110,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      boxShadow: selectedProfile != null
-                          ? [
-                              BoxShadow(
-                                color: Colors.greenAccent.withOpacity(0.5),
-                                blurRadius: 12,
-                                spreadRadius: 3,
-                              )
-                            ]
-                          : [],
-                    ),
                     child: selectedProfile != null
                         ? Image.asset(
                             'assets/images/profiles/$selectedProfile',
                             fit: BoxFit.cover,
                           )
-                        : const Icon(
+                        : Icon(
                             Icons.account_circle,
                             size: 110,
-                            color: Colors.grey,
+                            color: colorScheme.onSurfaceVariant,
                           ),
                   );
                 },
@@ -165,9 +145,13 @@ class _SignUpProfileState extends State<SignUpProfile> {
   }
 
   Widget _buildSection(String title, List<String> profiles) {
-    return Card(
-      color: Colors.white.withOpacity(0.1),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+    final colorScheme = Theme.of(context).colorScheme;
+    return Container(
+      decoration: BoxDecoration(
+        color: colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: colorScheme.outlineVariant),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -176,8 +160,10 @@ class _SignUpProfileState extends State<SignUpProfile> {
             Center(
               child: Text(
                 title,
-                style: PmpTextStyles.body1Semi
-                    .copyWith(color: Colors.white, fontSize: 18),
+                style: PmpTextStyles.body1Semi.copyWith(
+                  color: colorScheme.onSurface,
+                  fontSize: 18,
+                ),
               ),
             ),
             const SizedBox(height: 8),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
 
 import '../../model/subtitle_line.dart';
 
+/// Static whole-line tint: when the playhead is inside this subtitle line,
+/// the entire sentence gets a flat yellow background. No per-word animation.
 class HighlightSentence extends StatelessWidget {
   final SubtitleLine subtitleLine;
   final SubtitleLine? nextSubtitleLine;
@@ -18,6 +21,7 @@ class HighlightSentence extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     final current = position.inMilliseconds / 1000.0;
     double endBoundary = nextSubtitleLine?.start ?? subtitleLine.end;
     final isActive = current >= subtitleLine.start && current <= endBoundary;
@@ -31,9 +35,9 @@ class HighlightSentence extends StatelessWidget {
           fontSize: 20,
           fontWeight: FontWeight.w400,
           fontFamily: "ArchivoBlack Regular",
-          color: Colors.white,
+          color: colorScheme.onSurface,
           backgroundColor:
-              isActive ? Colors.yellow.withValues(alpha: 0.4) : null,
+              isActive ? PmpColors.warning400.withValues(alpha: 0.4) : null,
         ),
       ),
     );

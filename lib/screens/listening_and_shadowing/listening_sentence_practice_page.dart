@@ -9,7 +9,6 @@ import 'package:pmp_english/model/listening_practice_answer/listening_practice_a
 import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_widget_two.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_widgets/sentence_practice_youtube_player.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../bloc/listening_practice_answer/listening_practice_answer_bloc.dart';
@@ -220,7 +219,7 @@ class _ListeningSentencePracticePageState
           onReady: _startTimer,
         ),
         builder: (context, player) {
-          return MainScaffold(
+          return Scaffold(
             appBar: AppBar(
               automaticallyImplyLeading: false,
               title: buildHeader(),

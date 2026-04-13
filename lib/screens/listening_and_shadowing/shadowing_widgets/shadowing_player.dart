@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_text_styles.dart';
@@ -12,27 +12,36 @@ class ShadowingPlayer extends StatelessWidget {
     required this.listening,
     required this.controller,
     required this.player,
-    required this.position,
+    required this.positionListenable,
     required this.totalDuration,
     required this.onTogglePlay,
   });
   final Listening listening;
   final YoutubePlayerController controller;
   final Widget player;
-  final Duration position;
+  final ValueListenable<Duration> positionListenable;
   final Duration totalDuration;
   final VoidCallback onTogglePlay;
 
   @override
   Widget build(BuildContext context) {
+    // Rebuilds on controller state changes (play/pause/ready/ended) at the
+    // controller's native ~4Hz rate — not the 60fps ticker. Slider + time
+    // text still update at 60fps via the inner ValueListenableBuilder below.
+    return ListenableBuilder(
+      listenable: controller,
+      builder: (context, _) => _buildPlayer(context),
+    );
+  }
+
+  Widget _buildPlayer(BuildContext context) {
     final loading = controller.value.playerState == PlayerState.buffering ||
         !controller.value.isReady;
-    final startLoading = loading && position.inSeconds == 0;
+    final startLoading =
+        loading && controller.value.position.inSeconds == 0;
     final playing = controller.value.isPlaying;
     final paused = controller.value.playerState == PlayerState.paused;
     final complete = controller.value.playerState == PlayerState.ended;
-    AppLogger.instance.debug(
-        "_currentPlayerState: ${controller.value.playerState.name} playerState!");
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Container(
@@ -104,27 +113,35 @@ class ShadowingPlayer extends StatelessWidget {
                       ),
                       overlayShape: SliderComponentShape.noOverlay,
                     ),
-                    child: Slider(
-                      value: position.inMilliseconds.toDouble(),
-                      min: 0,
-                      max: totalDuration.inMilliseconds.toDouble(),
-                      thumbColor: Colors.white,
-                      activeColor: Colors.orange,
-                      inactiveColor: Colors.white.withValues(alpha: 0.2),
-                      onChanged: (value) {},
-                      onChangeEnd: (value) {
-                        controller
-                            .seekTo(Duration(milliseconds: value.round()));
-                      },
+                    child: ValueListenableBuilder<Duration>(
+                      valueListenable: positionListenable,
+                      builder: (context, position, _) => Slider(
+                        value: position.inMilliseconds
+                            .clamp(0, totalDuration.inMilliseconds)
+                            .toDouble(),
+                        min: 0,
+                        max: totalDuration.inMilliseconds.toDouble(),
+                        thumbColor: Colors.white,
+                        activeColor: Colors.orange,
+                        inactiveColor: Colors.white.withValues(alpha: 0.2),
+                        onChanged: (value) {},
+                        onChangeEnd: (value) {
+                          controller
+                              .seekTo(Duration(milliseconds: value.round()));
+                        },
+                      ),
                     ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        _formatDuration(position),
-                        style: PmpTextStyles.subBold.copyWith(
-                          color: Colors.white,
+                      ValueListenableBuilder<Duration>(
+                        valueListenable: positionListenable,
+                        builder: (context, position, _) => Text(
+                          _formatDuration(position),
+                          style: PmpTextStyles.subBold.copyWith(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       Text(

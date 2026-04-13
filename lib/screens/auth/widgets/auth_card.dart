@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/pmp_colors.dart';
-
 class AuthCard extends StatelessWidget {
   final Widget child;
   final int delayMilliseconds;
@@ -14,20 +12,14 @@ class AuthCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Container(
       decoration: BoxDecoration(
-        color: PmpColors.darkSurface,
+        color: colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
-          color: PmpColors.outline.withOpacity(0.1),
+          color: colorScheme.outlineVariant,
         ),
-        boxShadow: [
-          BoxShadow(
-            color: PmpColors.black.withOpacity(0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
       ),
       padding: const EdgeInsets.all(24),
       child: child,

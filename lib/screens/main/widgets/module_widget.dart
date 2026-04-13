@@ -21,41 +21,31 @@ class ModuleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.08),
+        color: colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            blurRadius: 8,
-            spreadRadius: 2,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        border: Border.all(color: colorScheme.outlineVariant),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Title
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Icon(
                 iconTitle,
                 size: 20,
-                color: Colors.white,
+                color: colorScheme.onSurface,
               ),
-              const SizedBox(
-                width: 8,
-              ),
+              const SizedBox(width: 8),
               Text(
                 title,
                 style: PmpTextStyles.body1Regular.copyWith(
-                  color: Colors.white,
+                  color: colorScheme.onSurface,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -65,39 +55,28 @@ class ModuleWidget extends StatelessWidget {
           Container(
             height: 1,
             width: double.infinity,
-            color: Colors.white.withValues(alpha: 0.2), // Light separator
+            color: colorScheme.outlineVariant,
             margin: const EdgeInsets.symmetric(vertical: 8),
           ),
           const SizedBox(height: 10),
-
-          // Bullet Points
-          _buildBulletPoint(
-            label1,
-            iconLabel1,
-          ),
+          _buildBulletPoint(context, label1, iconLabel1),
           const SizedBox(height: 10),
-          _buildBulletPoint(
-            label2,
-            iconLabel2,
-          ),
-
+          _buildBulletPoint(context, label2, iconLabel2),
           const SizedBox(height: 12),
-
-          // Button
           Align(
             alignment: Alignment.bottomRight,
             child: TextButton(
               onPressed: () => onPressed?.call(),
               style: TextButton.styleFrom(
-                foregroundColor: Colors.white,
+                foregroundColor: colorScheme.primary,
                 textStyle: PmpTextStyles.body2Regular,
               ),
-              child: const Row(
+              child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('Start'),
-                  SizedBox(width: 4),
-                  Icon(Icons.chevron_right, size: 20, color: Colors.white),
+                  const Text('Start'),
+                  const SizedBox(width: 4),
+                  Icon(Icons.chevron_right, size: 20, color: colorScheme.primary),
                 ],
               ),
             ),
@@ -107,27 +86,18 @@ class ModuleWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildBulletPoint(String text, IconData icon) {
+  Widget _buildBulletPoint(BuildContext context, String text, IconData icon) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Row(
       children: [
-        Icon(
-          icon,
-          size: 16,
-          color: Colors.white70,
-        ),
-        // Container(
-        //   width: 10,
-        //   height: 10,
-        //   decoration: BoxDecoration(
-        //     color: PmpColors.white, // Use theme color for contrast
-        //     borderRadius: BorderRadius.circular(5),
-        //   ),
-        // ),
+        Icon(icon, size: 16, color: colorScheme.onSurfaceVariant),
         const SizedBox(width: 12),
         Expanded(
           child: Text(
             text,
-            style: PmpTextStyles.body2Regular.copyWith(color: Colors.white),
+            style: PmpTextStyles.body2Regular.copyWith(
+              color: colorScheme.onSurface,
+            ),
           ),
         ),
       ],

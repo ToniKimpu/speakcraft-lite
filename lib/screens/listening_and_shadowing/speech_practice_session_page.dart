@@ -12,7 +12,6 @@ import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/footer_widget.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/recording_voice_widgets/user_recorded_list.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 import 'package:record/record.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart'
     as yt_player;
@@ -40,7 +39,8 @@ class SpeechPracticeSessionPage extends StatefulWidget {
 class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
   late yt_player.YoutubePlayerController _controller;
   late final PageController _pageController;
-  Duration _position = Duration.zero;
+  final ValueNotifier<Duration> _positionNotifier =
+      ValueNotifier(Duration.zero);
 
   final _userRecordedSentenceAudioBloc = UserRecordedSentenceAudioBloc();
 
@@ -116,14 +116,12 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
         hideControls: true,
       ),
     )..addListener(() {
-        if (mounted) {
-          setState(() {
-            _position = _controller.value.position;
-            if (_position.inMilliseconds > _endDuration.inMilliseconds) {
-              _controller.pause();
-              _needSeek = true;
-            }
-          });
+        if (!mounted) return;
+        final pos = _controller.value.position;
+        _positionNotifier.value = pos;
+        if (pos.inMilliseconds > _endDuration.inMilliseconds) {
+          _controller.pause();
+          _needSeek = true;
         }
       });
     _userRecordedSentenceAudioBloc.add(
@@ -144,6 +142,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
     _audioRecorder.dispose();
     _audioPlayer.dispose();
     _subtitleDetailBloc.close();
+    _positionNotifier.dispose();
     super.dispose();
   }
 
@@ -180,14 +179,13 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
         player: yt_player.YoutubePlayer(controller: _controller),
         builder: (context, player) {
           return _backPressed
-              ? const MainScaffold(
+              ? const Scaffold(
                   body: Center(
                     child: CircularProgressIndicator(),
                   ),
                 )
-              : MainScaffold(
+              : Scaffold(
                   appBar: AppBar(
-                    backgroundColor: const Color(0xFF0F2027),
                     title: const Text(
                       "Speech Practice Session",
                       style: TextStyle(color: Colors.white),
@@ -276,7 +274,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                 listening: widget.listening,
                                 controller: _controller,
                                 player: player,
-                                position: _position,
+                                positionListenable: _positionNotifier,
                                 totalDuration:
                                     Duration(seconds: widget.listening.end),
                                 onTogglePlay: () {
@@ -343,66 +341,73 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                           horizontal: 16,
                                           vertical: 16,
                                         ),
-                                        child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: subtitle.data.map(
-                                              (item) {
-                                                final isCurrent = _position
-                                                            .inMilliseconds >=
-                                                        (item.start * 1000)
-                                                            .round() &&
-                                                    _position.inMilliseconds <
-                                                        (item.end * 1000)
-                                                            .round();
-                                                return Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                    bottom: 8.0,
-                                                  ),
-                                                  child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      const Text(
-                                                        "-",
-                                                        style: TextStyle(
-                                                          fontSize: 16,
-                                                          height: 1.4,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          color: Colors.white,
-                                                          fontFamily:
-                                                              "ArchivoBlack Regular",
-                                                        ),
-                                                      ),
-                                                      const SizedBox(
-                                                        width: 4,
-                                                      ),
-                                                      Expanded(
-                                                        child: Text(
-                                                          item.text,
+                                        child: ValueListenableBuilder<Duration>(
+                                          valueListenable: _positionNotifier,
+                                          builder: (_, position, __) => Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: subtitle.data.map(
+                                                (item) {
+                                                  final isCurrent = position
+                                                              .inMilliseconds >=
+                                                          (item.start * 1000)
+                                                              .round() &&
+                                                      position.inMilliseconds <
+                                                          (item.end * 1000)
+                                                              .round();
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                      bottom: 8.0,
+                                                    ),
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        const Text(
+                                                          "-",
                                                           style: TextStyle(
                                                             fontSize: 16,
                                                             height: 1.4,
                                                             fontWeight:
                                                                 FontWeight.w400,
-                                                            color: isCurrent
-                                                                ? Colors.yellow
-                                                                : Colors.white,
+                                                            color: Colors.white,
                                                             fontFamily:
                                                                 "ArchivoBlack Regular",
                                                           ),
                                                         ),
-                                                      )
-                                                    ],
-                                                  ),
-                                                );
-                                              },
-                                            ).toList()),
+                                                        const SizedBox(
+                                                          width: 4,
+                                                        ),
+                                                        Expanded(
+                                                          child: Text(
+                                                            item.text,
+                                                            style: TextStyle(
+                                                              fontSize: 16,
+                                                              height: 1.4,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              color: isCurrent
+                                                                  ? Colors
+                                                                      .yellow
+                                                                  : Colors
+                                                                      .white,
+                                                              fontFamily:
+                                                                  "ArchivoBlack Regular",
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  );
+                                                },
+                                              ).toList()),
+                                        ),
                                       ),
                                     );
                                   },

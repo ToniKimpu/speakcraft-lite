@@ -6,7 +6,6 @@ import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/ai_sentence_practice/ai_sentence_practice.dart';
 import 'package:pmp_english/screens/practice_with_ai/widgets/ai_response_card.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 import '../../bloc/user_bloc/user_bloc.dart';
 import '../../shared_widgets/practice_text_field.dart';
@@ -49,7 +48,7 @@ class _AiPracticeScreenState extends State<AiPracticeScreen> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => _aiSentencePracticeBloc,
-      child: MainScaffold(
+      child: Scaffold(
         appBar: AppBar(
           title: const Text('Practice with AI'),
         ),

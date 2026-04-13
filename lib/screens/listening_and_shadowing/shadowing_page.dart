@@ -2,24 +2,22 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/hightlight_types/hightlight_background.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/hightlight_types/hightlight_none.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/hightlight_types/hightlight_textcolor.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/hightlight_types/hightlight_underline.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_none.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/sheets/hightlight_type_chooser.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/sheets/highlight_type_chooser.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../config/pmp_text_styles.dart';
-import 'model/hightlight_types.dart';
+import 'model/highlight_types.dart';
 import 'model/subtitle_line.dart';
-import 'shadowing_widgets/hightlight_types/hightlight_sentence.dart';
+import 'shadowing_widgets/highlight_types/highlight_sentence.dart';
 
 class ShadowingPage extends StatefulWidget {
   const ShadowingPage({
@@ -32,7 +30,8 @@ class ShadowingPage extends StatefulWidget {
   State<ShadowingPage> createState() => _ShadowingPageState();
 }
 
-class _ShadowingPageState extends State<ShadowingPage> {
+class _ShadowingPageState extends State<ShadowingPage>
+    with SingleTickerProviderStateMixin {
   late YoutubePlayerController _controller;
 
   final _subtitleLineBloc = SubtitleBloc();
@@ -41,19 +40,24 @@ class _ShadowingPageState extends State<ShadowingPage> {
   final ValueNotifier<Duration> _positionNotifier =
       ValueNotifier(Duration.zero);
 
+  // Extrapolate smooth position between YouTube controller updates (~250ms)
+  // so the karaoke highlight fills at 60fps instead of stepping.
+  late final Ticker _extrapolationTicker;
+  Duration _baselinePosition = Duration.zero;
+  final Stopwatch _sinceBaseline = Stopwatch();
+
   StreamSubscription? _positionSub;
   StreamSubscription? _playerStateSubscription;
 
   List<SubtitleLine> _subtitles = [];
 
-  HightlightTypes _selectedHighlightType = HightlightTypes.sentence;
+  HighlightType _selectedHighlightType = HighlightType.readAlong;
 
   final _itemScrollController = ItemScrollController();
   final _itemPositionsListener = ItemPositionsListener.create();
 
   int? _lastScrolledIndex;
   bool _isUserScrolling = false;
-  bool _appScrolling = false;
   Timer? _scrollTimer;
   Timer? _scrollCheckTimer;
 
@@ -62,6 +66,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
   @override
   void initState() {
     super.initState();
+    _extrapolationTicker = createTicker(_onExtrapolationTick)..start();
     AppLogger.instance.debug(
         "_subtitleLineBlocLogs: ${widget.listening.shadowingPath} shadowing path");
     _subtitleLineBloc
@@ -84,11 +89,24 @@ class _ShadowingPageState extends State<ShadowingPage> {
     )..addListener(_onPlayerPositionChanged);
   }
 
+  void _onExtrapolationTick(Duration _) {
+    if (!_sinceBaseline.isRunning) return;
+    _positionNotifier.value = _baselinePosition + _sinceBaseline.elapsed;
+  }
+
   void _onPlayerPositionChanged() {
     if (!mounted) return;
 
-    // Update position without setState
-    _positionNotifier.value = _controller.value.position;
+    // Real YouTube position update — snap baseline and restart (or stop) the
+    // wall-clock stopwatch that drives _onExtrapolationTick between ticks.
+    _baselinePosition = _controller.value.position;
+    _sinceBaseline
+      ..reset()
+      ..start();
+    if (!_controller.value.isPlaying) {
+      _sinceBaseline.stop();
+    }
+    _positionNotifier.value = _baselinePosition;
 
     // Debounce scroll checks to avoid excessive computation
     _scrollCheckTimer?.cancel();
@@ -108,9 +126,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
       final firstTwoVisibleIndexes = visibleIndexes.take(2).toList();
 
       if (!firstTwoVisibleIndexes.contains(currentIndex)) {
-        setState(() {
-          _lastScrolledIndex = currentIndex;
-        });
+        _lastScrolledIndex = currentIndex;
         _scrollToIndex(currentIndex);
       }
     });
@@ -155,35 +171,29 @@ class _ShadowingPageState extends State<ShadowingPage> {
   }
 
   void _scrollToIndex(int index) {
-    _appScrolling = true;
-    _itemScrollController
-        .scrollTo(
+    _itemScrollController.scrollTo(
       index: index,
       duration: const Duration(milliseconds: 700),
       alignment: 0.3,
-    )
-        .then((_) {
-      _appScrolling = false;
-    });
+    );
   }
 
-  String getHighlightTypeLabel(HightlightTypes type) {
+  String getHighlightTypeLabel(HighlightType type) {
     switch (type) {
-      case HightlightTypes.background:
-        return "Background";
-      case HightlightTypes.underline:
-        return "Underline";
-      case HightlightTypes.textColor:
-        return "Text Color";
-      case HightlightTypes.sentence:
-        return "Sentence";
-      case HightlightTypes.none:
+      case HighlightType.readAlong:
+        return "Read Along";
+      case HighlightType.line:
+        return "Line";
+      case HighlightType.none:
         return "None";
     }
   }
 
   @override
   void dispose() {
+    _subtitleLineBloc.close();
+    _extrapolationTicker.dispose();
+    _sinceBaseline.stop();
     _scrollTimer?.cancel();
     _scrollCheckTimer?.cancel();
     _positionSub?.cancel();
@@ -217,7 +227,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
         ),
         builder: (context, player) {
           return _backPressed
-              ? const MainScaffold(
+              ? const Scaffold(
                   body: Center(
                     child: SizedBox(
                       width: 20,
@@ -241,9 +251,8 @@ class _ShadowingPageState extends State<ShadowingPage> {
                     );
                   },
                   builder: (context, state) {
-                    return MainScaffold(
+                    return Scaffold(
                       appBar: AppBar(
-                        backgroundColor: const Color(0xFF0F2027),
                         title: const Text(
                           "Shadowing",
                           style: TextStyle(color: Colors.white),
@@ -256,7 +265,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
                                 context: context,
                                 isScrollControlled: true,
                                 builder: (BuildContext context) {
-                                  return HightlightTypeChooser(
+                                  return HighlightTypeChooser(
                                     onHighlightTypeSelected: (type) {
                                       setState(() {
                                         _selectedHighlightType = type;
@@ -303,36 +312,30 @@ class _ShadowingPageState extends State<ShadowingPage> {
                       ),
                       body: Column(
                         children: [
-                          // Use ValueListenableBuilder for position-dependent widget
-                          ValueListenableBuilder<Duration>(
-                            valueListenable: _positionNotifier,
-                            builder: (context, position, child) {
-                              return ShadowingPlayer(
-                                listening: widget.listening,
-                                controller: _controller,
-                                player: player,
-                                position: position,
-                                totalDuration:
-                                    Duration(seconds: widget.listening.end),
-                                onTogglePlay: () {
-                                  final loading =
-                                      _controller.value.playerState ==
-                                              PlayerState.buffering ||
-                                          !_controller.value.isReady;
-                                  if (loading) {
-                                    return;
-                                  }
-                                  if (_controller.value.playerState ==
-                                      PlayerState.ended) {
-                                    _controller.seekTo(Duration.zero);
-                                    _controller.play();
-                                  } else if (_controller.value.isPlaying) {
-                                    _controller.pause();
-                                  } else {
-                                    _controller.play();
-                                  }
-                                },
-                              );
+                          const SizedBox(height: 12),
+                          ShadowingPlayer(
+                            listening: widget.listening,
+                            controller: _controller,
+                            player: player,
+                            positionListenable: _positionNotifier,
+                            totalDuration:
+                                Duration(seconds: widget.listening.end),
+                            onTogglePlay: () {
+                              final loading = _controller.value.playerState ==
+                                      PlayerState.buffering ||
+                                  !_controller.value.isReady;
+                              if (loading) {
+                                return;
+                              }
+                              if (_controller.value.playerState ==
+                                  PlayerState.ended) {
+                                _controller.seekTo(Duration.zero);
+                                _controller.play();
+                              } else if (_controller.value.isPlaying) {
+                                _controller.pause();
+                              } else {
+                                _controller.play();
+                              }
                             },
                           ),
                           Expanded(
@@ -358,9 +361,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
                                         _scrollTimer = Timer(
                                             const Duration(milliseconds: 1500),
                                             () {
-                                          setState(() {
-                                            _isUserScrolling = false;
-                                          });
+                                          _isUserScrolling = false;
                                         });
                                       }
                                       AppLogger.instance.debug(
@@ -368,74 +369,84 @@ class _ShadowingPageState extends State<ShadowingPage> {
                                     }
                                     return false;
                                   },
-                                  child: ValueListenableBuilder<Duration>(
-                                    valueListenable: _positionNotifier,
-                                    builder: (context, position, child) {
-                                      return ScrollablePositionedList.separated(
-                                        itemScrollController:
-                                            _itemScrollController,
-                                        itemPositionsListener:
-                                            _itemPositionsListener,
-                                        itemCount: subtitleLines.length,
-                                        padding: const EdgeInsets.only(top: 12),
-                                        itemBuilder: (context, index) {
-                                          final line = subtitleLines[index];
-                                          final nextLine =
-                                              (index < subtitleLines.length - 1)
-                                                  ? subtitleLines[index + 1]
-                                                  : null;
-                                          final startTime = Duration(
-                                              milliseconds:
-                                                  (line.start * 1000).toInt());
-                                          final endTime = Duration(
-                                              milliseconds:
-                                                  (line.end * 1000).toInt());
-                                          String formatDuration(Duration d) {
-                                            return "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
-                                          }
+                                  child: ScrollablePositionedList.separated(
+                                    itemScrollController:
+                                        _itemScrollController,
+                                    itemPositionsListener:
+                                        _itemPositionsListener,
+                                    itemCount: subtitleLines.length,
+                                    padding: const EdgeInsets.only(top: 12),
+                                    itemBuilder: (context, index) {
+                                      final line = subtitleLines[index];
+                                      final nextLine =
+                                          (index < subtitleLines.length - 1)
+                                              ? subtitleLines[index + 1]
+                                              : null;
+                                      final startTime = Duration(
+                                          milliseconds:
+                                              (line.start * 1000).toInt());
+                                      final endTime = Duration(
+                                          milliseconds:
+                                              (line.end * 1000).toInt());
+                                      String formatDuration(Duration d) {
+                                        return "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
+                                      }
 
-                                          return Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 16,
-                                                right: 16,
-                                                bottom: 12),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                      return Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 16,
+                                            right: 16,
+                                            bottom: 12),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
                                               children: [
-                                                Row(
-                                                  children: [
-                                                    Text(
-                                                        formatDuration(
-                                                            startTime),
-                                                        style: PmpTextStyles.sub
-                                                            .copyWith(
-                                                                color: Colors
-                                                                    .white)),
-                                                    Text(" --> ",
-                                                        style:
-                                                            PmpTextStyles.sub),
-                                                    Text(
-                                                        formatDuration(endTime),
-                                                        style: PmpTextStyles.sub
-                                                            .copyWith(
-                                                                color: Colors
-                                                                    .white)),
-                                                  ],
-                                                ),
-                                                _buildHighlightWidget(
+                                                Text(
+                                                    formatDuration(startTime),
+                                                    style: PmpTextStyles.sub
+                                                        .copyWith(
+                                                            color:
+                                                                Colors.white)),
+                                                Text(" --> ",
+                                                    style: PmpTextStyles.sub),
+                                                Text(
+                                                    formatDuration(endTime),
+                                                    style: PmpTextStyles.sub
+                                                        .copyWith(
+                                                            color:
+                                                                Colors.white)),
+                                              ],
+                                            ),
+                                            // HighlightNone doesn't read position, so
+                                            // skip the ValueListenableBuilder wrap for
+                                            // that branch and avoid per-frame rebuilds.
+                                            if (_selectedHighlightType ==
+                                                HighlightType.none)
+                                              _buildHighlightWidget(
+                                                line,
+                                                nextLine,
+                                                Duration.zero,
+                                              )
+                                            else
+                                              ValueListenableBuilder<Duration>(
+                                                valueListenable:
+                                                    _positionNotifier,
+                                                builder:
+                                                    (_, position, __) =>
+                                                        _buildHighlightWidget(
                                                   line,
                                                   nextLine,
                                                   position,
                                                 ),
-                                              ],
-                                            ),
-                                          );
-                                        },
-                                        separatorBuilder: (_, __) =>
-                                            const SizedBox(height: 12),
+                                              ),
+                                          ],
+                                        ),
                                       );
                                     },
+                                    separatorBuilder: (_, __) =>
+                                        const SizedBox(height: 12),
                                   ),
                                 );
                               },
@@ -458,18 +469,8 @@ class _ShadowingPageState extends State<ShadowingPage> {
     Duration position,
   ) {
     switch (_selectedHighlightType) {
-      case HightlightTypes.background:
-        return HightlightBackground(
-          subtitleLine: subtitleLine,
-          nextSubtitleLine: nextSubtitleLine,
-          position: position,
-          appScrolling: _appScrolling,
-          onSeek: (seekPosition) {
-            _controller.seekTo(seekPosition);
-          },
-        );
-      case HightlightTypes.textColor:
-        return HightlightTextcolor(
+      case HighlightType.readAlong:
+        return HighlightBackground(
           subtitleLine: subtitleLine,
           nextSubtitleLine: nextSubtitleLine,
           position: position,
@@ -477,16 +478,7 @@ class _ShadowingPageState extends State<ShadowingPage> {
             _controller.seekTo(seekPosition);
           },
         );
-      case HightlightTypes.underline:
-        return HightlightUnderline(
-          subtitleLine: subtitleLine,
-          nextSubtitleLine: nextSubtitleLine,
-          position: position,
-          onSeek: (seekPosition) {
-            _controller.seekTo(seekPosition);
-          },
-        );
-      case HightlightTypes.sentence:
+      case HighlightType.line:
         return HighlightSentence(
           subtitleLine: subtitleLine,
           nextSubtitleLine: nextSubtitleLine,
@@ -495,8 +487,8 @@ class _ShadowingPageState extends State<ShadowingPage> {
             _controller.seekTo(seekPosition);
           },
         );
-      case HightlightTypes.none:
-        return HightlightNone(
+      case HighlightType.none:
+        return HighlightNone(
           subtitleLine: subtitleLine,
         );
     }

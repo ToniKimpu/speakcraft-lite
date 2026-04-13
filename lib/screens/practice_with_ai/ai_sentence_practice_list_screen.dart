@@ -10,7 +10,6 @@ import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/screens/practice_with_ai/pages/ai_response_list.dart';
 import 'package:pmp_english/screens/practice_with_ai/pages/user_correct_list.dart';
 import 'package:pmp_english/screens/practice_with_ai/widgets/ai_practice_tab_selector.dart';
-import 'package:pmp_english/shared_widgets/main_scaffold.dart';
 
 class AiSentencePracticeListScreen extends StatefulWidget {
   const AiSentencePracticeListScreen({super.key});
@@ -55,7 +54,7 @@ class _AiSentencePracticeListScreenState
           create: (context) => _aiCorrectResponseBloc,
         ),
       ],
-      child: MainScaffold(
+      child: Scaffold(
           appBar: AppBar(
             title: const Text('AI Practice'),
           ),
