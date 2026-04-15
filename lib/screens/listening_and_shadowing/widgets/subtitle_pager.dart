@@ -21,6 +21,7 @@ class SubtitlePager extends StatefulWidget {
     required this.hasMMSub,
     required this.onUserChangePage,
     this.vocabBySentenceId = const {},
+    this.sourceYoutubeId,
   });
 
   final YoutubePlayerController youtubeController;
@@ -30,6 +31,7 @@ class SubtitlePager extends StatefulWidget {
   final bool hasMMSub;
   final void Function(Subtitle subtitle) onUserChangePage;
   final Map<int, List<VocabularyWord>> vocabBySentenceId;
+  final String? sourceYoutubeId;
 
   @override
   State<SubtitlePager> createState() => _SubtitlePagerState();
@@ -113,6 +115,7 @@ class _SubtitlePagerState extends State<SubtitlePager> {
                     ? widget.vocabBySentenceId[_selectedSubtitle.id!] ??
                         const []
                     : const [],
+                sourceYoutubeId: widget.sourceYoutubeId,
               ),
             ),
             Divider(color: colorScheme.outlineVariant, height: 1),

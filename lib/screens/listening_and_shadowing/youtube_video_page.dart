@@ -236,6 +236,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                 subtitles: subtitles,
                                 hasMMSub: widget.listening.hasMMSubtitle,
                                 vocabBySentenceId: _vocabBySentenceId,
+                                sourceYoutubeId: widget.listening.youtubeId,
                                 onUserChangePage: (subtitle) {
                                   _controller.seekTo(subtitle.start);
                                 },

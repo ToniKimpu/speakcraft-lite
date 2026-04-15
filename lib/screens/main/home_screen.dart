@@ -114,6 +114,18 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             const SizedBox(height: 12),
+            ModuleWidget(
+              title: 'Saved Words',
+              label1: 'မိမိ save ထားသော စကားလုံးများ',
+              label2: 'Vocabulary ကို ပြန်လည်လေ့လာမယ်',
+              iconTitle: Icons.bookmark,
+              iconLabel1: Icons.menu_book,
+              iconLabel2: Icons.school,
+              onPressed: () {
+                Navigator.pushNamed(context, PmpRoutes.savedWordsPage);
+              },
+            ),
+            const SizedBox(height: 12),
 
             if (kDebugMode)
               ElevatedButton(

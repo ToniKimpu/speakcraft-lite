@@ -30,6 +30,7 @@ import '../screens/html_day_list.dart';
 import '../screens/html_preview.dart';
 import '../screens/listening_and_shadowing/speech_practice_session_page.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
+import '../screens/saved_words/saved_words_page.dart';
 import '../screens/main/device_failed_screen.dart';
 import '../screens/main/home_screen.dart';
 import '../screens/main/profile_page.dart';
@@ -76,6 +77,7 @@ class PmpRoutes {
   static const spokenPatternDetail = '/spoken_pattern_detail';
   static const htmlList = '/html_list';
   static const htmlPreview = '/html_preview';
+  static const savedWordsPage = '/saved_words_page';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -87,6 +89,8 @@ class PmpRoutes {
         return _getRoute(const DayListScreen(), settings);
       case profilePage:
         return _getRoute(const ProfilePage(), settings);
+      case savedWordsPage:
+        return _getRoute(const SavedWordsPage(), settings);
       case spokenPatternPage:
         final args = settings.arguments as Map<String, dynamic>;
         final lesson = args['lesson'] as Lesson;

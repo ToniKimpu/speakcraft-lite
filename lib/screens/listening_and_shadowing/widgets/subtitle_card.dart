@@ -22,6 +22,7 @@ class SubtitleCard extends StatefulWidget {
     required this.subtitle,
     required this.hasMMSub,
     this.vocabularyWords = const [],
+    this.sourceYoutubeId,
   });
 
   final YoutubePlayerController youtubeController;
@@ -29,6 +30,7 @@ class SubtitleCard extends StatefulWidget {
   final Subtitle subtitle;
   final bool hasMMSub;
   final List<VocabularyWord> vocabularyWords;
+  final String? sourceYoutubeId;
 
   @override
   State<SubtitleCard> createState() => _SubtitleCardState();
@@ -217,7 +219,11 @@ class _SubtitleCardState extends State<SubtitleCard> {
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
-      builder: (_) => VocabularyBottomSheet(word: word),
+      builder: (_) => VocabularyBottomSheet(
+        word: word,
+        sourceYoutubeId: widget.sourceYoutubeId,
+        sourceSentence: widget.subtitle.english,
+      ),
     );
   }
 }
