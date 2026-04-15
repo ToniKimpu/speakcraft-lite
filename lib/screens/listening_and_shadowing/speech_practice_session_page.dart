@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
+import 'package:pmp_english/bloc/listening/record_subtitle_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/footer_widget.dart';
@@ -64,7 +64,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
 
   late AudioPlayer _audioPlayer;
   late final ValueNotifier<int?> _currentlyPlayingIndexNotifier;
-  final _subtitleDetailBloc = SubtitleBloc();
+  final _recordSubtitleBloc = RecordSubtitleBloc();
 
   Duration _startDuration = Duration.zero;
   Duration _endDuration = Duration.zero;
@@ -129,8 +129,8 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
         withLoading: true,
       ),
     );
-    _subtitleDetailBloc.add(
-      SubtitleEvent.parseRecordSubtitle(widget.listening),
+    _recordSubtitleBloc.add(
+      RecordSubtitleEvent.parse(widget.listening),
     );
   }
 
@@ -141,7 +141,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
     _recordSub?.cancel();
     _audioRecorder.dispose();
     _audioPlayer.dispose();
-    _subtitleDetailBloc.close();
+    _recordSubtitleBloc.close();
     _positionNotifier.dispose();
     super.dispose();
   }
@@ -191,11 +191,11 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  body: BlocConsumer<SubtitleBloc, SubtitleState>(
-                    bloc: _subtitleDetailBloc,
+                  body: BlocConsumer<RecordSubtitleBloc, RecordSubtitleState>(
+                    bloc: _recordSubtitleBloc,
                     listener: (context, state) {
                       state.maybeWhen(
-                        onRecordSubtitleCompleted: (recordSubtitles) {
+                        loaded: (recordSubtitles) {
                           if (recordSubtitles.isEmpty) return;
                           _startDuration = Duration(
                             milliseconds:
@@ -211,7 +211,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                     },
                     builder: (context, state) {
                       return state.maybeWhen(
-                        loading: (message) {
+                        loading: () {
                           return const Center(
                             child: SizedBox(
                               width: 18,
@@ -222,7 +222,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                             ),
                           );
                         },
-                        onRecordSubtitleCompleted: (recordSubtitles) {
+                        loaded: (recordSubtitles) {
                           if (recordSubtitles.isEmpty) {
                             return Center(
                               child: Padding(

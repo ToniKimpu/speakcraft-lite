@@ -14,7 +14,8 @@ import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_det
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../bloc/audio_player/audio_player_bloc.dart';
-import '../../bloc/subtitle_detail/subtitle_detail_bloc.dart';
+import '../../bloc/listening/subtitle_index_bloc.dart';
+import '../../bloc/listening/subtitle_parsing_bloc.dart';
 
 /// Homepage
 class YoutubeVideoPage extends StatefulWidget {
@@ -40,8 +41,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   Map<int, List<VocabularyWord>> _vocabBySentenceId = const {};
 
-  final _subtitleBloc = SubtitleBloc();
-  final _subtitleParsingBloc = SubtitleBloc();
+  final _subtitleIndexBloc = SubtitleIndexBloc();
+  final _subtitleParsingBloc = SubtitleParsingBloc();
   int _subtitlePageIndex = 0;
 
   final _audioPositionTrackerBloc = AudioPlayerBloc();
@@ -98,7 +99,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
             .debug("_durationSub: ${duration.inSeconds} inSeconds!");
       },
     );
-    _subtitleParsingBloc.add(SubtitleEvent.parseSubtitle(widget.listening));
+    _subtitleParsingBloc.add(SubtitleParsingEvent.parse(widget.listening));
 
     if (widget.listening.hasVocabularies &&
         widget.listening.vocabularyPath.trim().isNotEmpty) {
@@ -139,7 +140,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     if (newIndex == -1 || newIndex == _subtitlePageIndex) return;
     _subtitlePageIndex = newIndex;
     AppLogger.instance.debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
-    _subtitleBloc.add(SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex));
+    _subtitleIndexBloc.add(SubtitleIndexEvent.set(_subtitlePageIndex));
   }
 
   int _findCurrentSubtitleIndex() {
@@ -192,7 +193,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => _subtitleBloc,
+          create: (context) => _subtitleIndexBloc,
         ),
         BlocProvider(
           create: (context) => _audioPositionTrackerBloc,
@@ -228,11 +229,11 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                   ),
                 ),
               )
-            : BlocConsumer<SubtitleBloc, SubtitleState>(
+            : BlocConsumer<SubtitleParsingBloc, SubtitleParsingState>(
                 bloc: _subtitleParsingBloc,
                 listener: (context, state) {
                   state.maybeWhen(
-                    onParseCompleted: (subtitles) {
+                    loaded: (subtitles) {
                       if (_subtitles.isEmpty) {
                         _subtitles.addAll(subtitles);
                       }
@@ -287,7 +288,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                             ),
                             Expanded(
                               child: state.maybeWhen(
-                                loading: (message) {
+                                loading: () {
                                   return const Center(
                                     child: SizedBox(
                                       width: 20,
@@ -296,17 +297,17 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                     ),
                                   );
                                 },
-                                onParseCompleted: (subtitles) {
+                                loaded: (subtitles) {
                                   return SubtitleDetailWidget(
                                     youtubeReadyToPlay: _readyToPlay,
                                     youtubeController: _controller,
                                     audioPlayerStateTrackerBloc:
                                         _audioPlayerStateTrackerBloc,
-                                    audioPostionTrackerBloc:
+                                    audioPositionTrackerBloc:
                                         _audioPositionTrackerBloc,
                                     audioDurationTrackerBloc:
                                         _audioDurationTrackerBloc,
-                                    subtitleBloc: _subtitleBloc,
+                                    subtitleIndexBloc: _subtitleIndexBloc,
                                     audioPlayer: _audioPlayer,
                                     hasVocabularies:
                                         widget.listening.hasVocabularies,

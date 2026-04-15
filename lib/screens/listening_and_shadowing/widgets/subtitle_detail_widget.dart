@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
-import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
+import 'package:pmp_english/bloc/listening/subtitle_index_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/model/vocabulary/vocabulary.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_widget.dart';
@@ -16,11 +16,11 @@ class SubtitleDetailWidget extends StatefulWidget {
     super.key,
     required this.youtubeReadyToPlay,
     required this.youtubeController,
-    required this.audioPostionTrackerBloc,
+    required this.audioPositionTrackerBloc,
     required this.audioDurationTrackerBloc,
     required this.audioPlayerStateTrackerBloc,
     required this.audioPlayer,
-    required this.subtitleBloc,
+    required this.subtitleIndexBloc,
     required this.subtitles,
     required this.hasVocabularies,
     required this.hasMMSub,
@@ -29,11 +29,11 @@ class SubtitleDetailWidget extends StatefulWidget {
   });
   final bool youtubeReadyToPlay;
   final YoutubePlayerController youtubeController;
-  final AudioPlayerBloc audioPostionTrackerBloc,
+  final AudioPlayerBloc audioPositionTrackerBloc,
       audioDurationTrackerBloc,
       audioPlayerStateTrackerBloc;
   final AudioPlayer audioPlayer;
-  final SubtitleBloc subtitleBloc;
+  final SubtitleIndexBloc subtitleIndexBloc;
   final List<Subtitle> subtitles;
   final bool hasVocabularies;
   final bool hasMMSub;
@@ -102,11 +102,11 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<SubtitleBloc, SubtitleState>(
-      bloc: widget.subtitleBloc,
+    return BlocListener<SubtitleIndexBloc, SubtitleIndexState>(
+      bloc: widget.subtitleIndexBloc,
       listener: (context, state) {
         state.maybeWhen(
-          onPageChanged: (index) {
+          changed: (index) {
             _instantStreamIndex = index;
             if (_streamData) {
               setState(() {
@@ -132,7 +132,7 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                 child: SubtitleWidget(
                   youtubeController: widget.youtubeController,
                   audioPlayer: widget.audioPlayer,
-                  audioPositionTrackerBloc: widget.audioPostionTrackerBloc,
+                  audioPositionTrackerBloc: widget.audioPositionTrackerBloc,
                   audioDurationTrackerBloc: widget.audioDurationTrackerBloc,
                   audioPlayerStateTrackerBloc:
                       widget.audioPlayerStateTrackerBloc,

@@ -12,7 +12,6 @@ import 'package:pmp_english/bloc/listening_practice_answer/listening_practice_an
 import 'package:pmp_english/bloc/pattern_exercise/pattern_exercise_bloc.dart';
 import 'package:pmp_english/bloc/pattern_user_comment/pattern_user_comment_bloc.dart';
 import 'package:pmp_english/bloc/spoken_pattern/spoken_pattern_bloc.dart';
-import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/bloc/translate_user_answer/translate_user_answer_bloc.dart';
 import 'package:pmp_english/bloc/translation/translation_bloc.dart';
 import 'package:pmp_english/bloc/translation_day/translation_day_bloc.dart';
@@ -67,7 +66,6 @@ Future<void> setupServiceLocator() async {
   sl.registerFactory<ListeningBloc>(() => ListeningBloc());
   sl.registerFactory<AudioPlayerBloc>(() => AudioPlayerBloc());
   sl.registerFactory<YoutubePlayerBloc>(() => YoutubePlayerBloc());
-  sl.registerFactory<SubtitleBloc>(() => SubtitleBloc());
   sl.registerFactory<PatternExerciseBloc>(() => PatternExerciseBloc());
   sl.registerFactory<PatternUserCommentBloc>(() => PatternUserCommentBloc());
   sl.registerFactory<ExerciseUserAnswerBloc>(() => ExerciseUserAnswerBloc());

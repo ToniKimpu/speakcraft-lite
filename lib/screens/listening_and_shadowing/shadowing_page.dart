@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
+import 'package:pmp_english/bloc/listening/shadowing_line_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
@@ -34,7 +34,7 @@ class _ShadowingPageState extends State<ShadowingPage>
     with SingleTickerProviderStateMixin {
   late YoutubePlayerController _controller;
 
-  final _subtitleLineBloc = SubtitleBloc();
+  final _subtitleLineBloc = ShadowingLineBloc();
 
   // Use ValueNotifier instead of setState for position
   final ValueNotifier<Duration> _positionNotifier =
@@ -70,7 +70,7 @@ class _ShadowingPageState extends State<ShadowingPage>
     AppLogger.instance.debug(
         "_subtitleLineBlocLogs: ${widget.listening.shadowingPath} shadowing path");
     _subtitleLineBloc
-        .add(SubtitleEvent.parseSubtitleLine(widget.listening.shadowingPath));
+        .add(ShadowingLineEvent.parse(widget.listening.shadowingPath));
     _controller = YoutubePlayerController(
       initialVideoId: widget.listening.youtubeId,
       flags: YoutubePlayerFlags(
@@ -236,11 +236,11 @@ class _ShadowingPageState extends State<ShadowingPage>
                     ),
                   ),
                 )
-              : BlocConsumer<SubtitleBloc, SubtitleState>(
+              : BlocConsumer<ShadowingLineBloc, ShadowingLineState>(
                   bloc: _subtitleLineBloc,
                   listener: (context, state) {
                     state.maybeWhen(
-                      onParseSubtitleLineCompleted: (subtitleLines) {
+                      loaded: (subtitleLines) {
                         if (_subtitles.isEmpty) {
                           setState(() {
                             _subtitles = subtitleLines;
@@ -340,7 +340,7 @@ class _ShadowingPageState extends State<ShadowingPage>
                           ),
                           Expanded(
                             child: state.maybeWhen(
-                              loading: (message) {
+                              loading: () {
                                 return const Center(
                                   child: SizedBox(
                                     width: 18,
@@ -349,7 +349,7 @@ class _ShadowingPageState extends State<ShadowingPage>
                                   ),
                                 );
                               },
-                              onParseSubtitleLineCompleted: (subtitleLines) {
+                              loaded: (subtitleLines) {
                                 return NotificationListener<ScrollNotification>(
                                   onNotification: (scrollNotification) {
                                     if (scrollNotification

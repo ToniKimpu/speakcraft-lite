@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pmp_english/model/lesson/lesson.dart';
-import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
-import 'package:pmp_english/model/listening_question/listening_question.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
 import 'package:pmp_english/screens/auth/login_screen.dart';
 import 'package:pmp_english/screens/auth/sign_up_screen.dart';
 import 'package:pmp_english/screens/days/pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/days/spoken_pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/listening_practice_result_page.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/listening_sentence_practice_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_list.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_page.dart';
@@ -32,9 +28,7 @@ import '../screens/days/spoken_pattern/spoken_pattern_detail.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
 import '../screens/html_day_list.dart';
 import '../screens/html_preview.dart';
-import '../screens/listening_and_shadowing/listening_sentence_practice_list.dart';
 import '../screens/listening_and_shadowing/speech_practice_session_page.dart';
-import '../screens/listening_and_shadowing/vocabulary_listening_page.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
 import '../screens/main/device_failed_screen.dart';
 import '../screens/main/home_screen.dart';
@@ -74,13 +68,7 @@ class PmpRoutes {
       '/ai_sentence_practice_list_screen';
   static const aiPracticeScreen = '/ai_practice_screen';
   static const aiResponseDetailScreen = '/ai_response_detail_screen';
-  static const vocabularyListeningPage = '/vocabulary_listening_page';
-  static const listeningSentencePracticePage =
-      '/listening_sentence_practice_page';
   static const shadowingPage = '/shadowing_page';
-  static const listeningSentencePracticeList =
-      "/listening_sentence_practice_list";
-  static const listeningPracticeResultPage = '/listening_practice_result_page';
   static const spokenPatternExercisePage = '/spoken_pattern_exercise_page';
   static const speechPracticeSessionPage = '/speech_practice_session_page';
   static const sentenceExplanationList = '/sentence_explanation_list';
@@ -194,61 +182,12 @@ class PmpRoutes {
           AiResponseDetailScreen(aiSentencePractice: aiSentencePractice),
           settings,
         );
-      case vocabularyListeningPage:
-        final args = settings.arguments as Map<String, dynamic>;
-        final listening = args['listening'] as Listening;
-        return _getRoute(
-          VocabularyListeningPage(
-            listening: listening,
-          ),
-          settings,
-        );
-      case listeningSentencePracticePage:
-        final args = settings.arguments as Map<String, dynamic>;
-        final listening = args['listening'] as Listening;
-        final listeningQuestions =
-            args['listening_questions'] as List<ListeningQuestion>;
-        final complete = args['complete'] as bool;
-        final groupId = args['group_id'] as String;
-        return _getRoute(
-          ListeningSentencePracticePage(
-            complete: complete,
-            listening: listening,
-            listeningQuestions: listeningQuestions,
-            groupId: groupId,
-          ),
-          settings,
-        );
       case shadowingPage:
         final args = settings.arguments as Map<String, dynamic>;
         final listening = args['listening'] as Listening;
         return _getRoute(
           ShadowingPage(
             listening: listening,
-          ),
-          settings,
-        );
-      case listeningSentencePracticeList:
-        final args = settings.arguments as Map<String, dynamic>;
-        final listening = args['listening'] as Listening;
-        return _getRoute(
-          ListeningSentencePracticeList(
-            listening: listening,
-          ),
-          settings,
-        );
-      case listeningPracticeResultPage:
-        final args = settings.arguments as Map<String, dynamic>;
-        final listening = args['listening'] as Listening;
-        final listeningQuestions =
-            args['listening_questions'] as List<ListeningQuestion>;
-        final listeningAnswers =
-            args['listening_answers'] as List<ListeningPracticeAnswer>;
-        return _getRoute(
-          ListeningPracticeResultPage(
-            listening: listening,
-            listeningQuestions: listeningQuestions,
-            listeningPracticeAnswers: listeningAnswers,
           ),
           settings,
         );
