@@ -1,15 +1,18 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
+import 'package:pmp_english/model/vocabulary/vocabulary.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/widgets/vocabulary_bottom_sheet.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../l10n/generated/l10n.dart';
 
-class SubtitleWidget extends StatelessWidget {
+class SubtitleWidget extends StatefulWidget {
   const SubtitleWidget({
     super.key,
     required this.youtubeController,
@@ -20,6 +23,7 @@ class SubtitleWidget extends StatelessWidget {
     required this.hasVocabularies,
     required this.subtitle,
     required this.hasMMSub,
+    this.vocabularyWords = const [],
   });
 
   final YoutubePlayerController youtubeController;
@@ -30,234 +34,62 @@ class SubtitleWidget extends StatelessWidget {
   final bool hasVocabularies;
   final Subtitle subtitle;
   final bool hasMMSub;
+  final List<VocabularyWord> vocabularyWords;
+
+  @override
+  State<SubtitleWidget> createState() => _SubtitleWidgetState();
+}
+
+class _SubtitleWidgetState extends State<SubtitleWidget> {
+  // TapGestureRecognizers attached to TextSpans must be disposed manually.
+  // Built fresh each build() and disposed here on widget tear-down.
+  final List<TapGestureRecognizer> _recognizers = [];
+
+  @override
+  void dispose() {
+    _disposeRecognizers();
+    super.dispose();
+  }
+
+  void _disposeRecognizers() {
+    for (final r in _recognizers) {
+      r.dispose();
+    }
+    _recognizers.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
+    // Recognizers from the previous build go out of scope as the RichText
+    // tree is rebuilt — release them before allocating new ones.
+    _disposeRecognizers();
+
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // English Subtitle
-          Text(
-            subtitle.english,
-            style: PmpTextStyles.body1Regular.copyWith(
-              color: Colors.white,
-              fontSize: 20,
-              height: 1.6,
-              fontFamily: "ArchivoBlack Regular",
-            ),
+          _buildInteractiveSentence(
+            context,
+            widget.subtitle.english,
+            widget.vocabularyWords,
           ),
           const SizedBox(height: 6),
-          if (hasMMSub &&
-              subtitle.burmese != null &&
-              subtitle.burmese!.isNotEmpty)
+          if (widget.hasMMSub &&
+              widget.subtitle.burmese != null &&
+              widget.subtitle.burmese!.isNotEmpty)
             Text(
-              subtitle.burmese ?? "",
+              widget.subtitle.burmese ?? "",
               style: PmpTextStyles.body2Regular.copyWith(
-                // color: Colors.amberAccent,
                 color: const Color(0xFFFFE0B2),
                 fontSize: 18,
                 height: 1.8,
                 fontFamily: "MM Lyrics Bold",
               ),
             ),
-          // Info Box if no MM Sub
-          // if (!hasMMSub) ...[
-          //   const SizedBox(height: 24),
-          //   Container(
-          //     width: double.infinity,
-          //     padding: const EdgeInsets.all(16),
-          //     decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(12),
-          //       color: Colors.white.withValues(alpha: 0.05),
-          //       border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
-          //     ),
-          //     child: Text(
-          //       "ဘာသာပြန်ဆိုချက်နှင့် ရှင်းပြချက်များ ပုံမှန်ထည့်ပေးသွားပါမယ်။",
-          //       textAlign: TextAlign.center,
-          //       style: PmpTextStyles.body2Semi.copyWith(
-          //         color: Colors.white,
-          //         fontFamily: "MM Lyrics Bold",
-          //       ),
-          //     ),
-          //   ),
-          // ],
-
-          // Audio Player Section
-          // if (subtitle.audioName.isNotEmpty)
-          //   BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-          //     bloc: audioPositionTrackerBloc,
-          //     builder: (context, positionState) {
-          //       return BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-          //         bloc: audioDurationTrackerBloc,
-          //         builder: (context, durationState) {
-          //           return BlocBuilder<AudioPlayerBloc, AudioPlayerState>(
-          //             bloc: audioPlayerStateTrackerBloc,
-          //             builder: (context, playerState) {
-          //               final positionDuration = positionState.maybeWhen(
-          //                 onCurrentPosition: (position) => position,
-          //                 orElse: () => Duration.zero,
-          //               );
-          //               final totalDuration = durationState.maybeWhen(
-          //                 onTotalDuration: (duration) => duration.inSeconds,
-          //                 orElse: () => 0,
-          //               );
-          //               final currentPlayerState = playerState.maybeWhen(
-          //                 onUpdatePlayerState: (playerState) => playerState,
-          //                 orElse: () => null,
-          //               );
-          //               final isPlaying = currentPlayerState?.playing == true;
-          //               final isCompleted =
-          //                   currentPlayerState?.processingState ==
-          //                       ProcessingState.completed;
-          //               final loading = (currentPlayerState?.processingState ==
-          //                       ProcessingState.loading ||
-          //                   currentPlayerState?.processingState ==
-          //                       ProcessingState.buffering);
-          //               return Container(
-          //                 padding: const EdgeInsets.all(16),
-          //                 decoration: BoxDecoration(
-          //                   borderRadius: BorderRadius.circular(16),
-          //                   color: Colors.white.withValues(alpha: 0.04),
-          //                   border: Border.all(
-          //                     color: Colors.white.withValues(alpha: 0.2),
-          //                     width: 1.5,
-          //                   ),
-          //                 ),
-          //                 child: Row(
-          //                   crossAxisAlignment: CrossAxisAlignment.center,
-          //                   children: [
-          //                     // Play Button
-          //                     GestureDetector(
-          //                       onTap: () {
-          //                         if (loading) {
-          //                           return;
-          //                         }
-          //                         if (isCompleted) {
-          //                           audioPlayer.seek(Duration.zero);
-          //                           audioPlayer.play();
-          //                           if (youtubeController.value.isPlaying) {
-          //                             youtubeController.pause();
-          //                           }
-          //                         } else if (isPlaying) {
-          //                           audioPlayer.pause();
-          //                         } else {
-          //                           audioPlayer.play();
-          //                           if (youtubeController.value.isPlaying) {
-          //                             youtubeController.pause();
-          //                           }
-          //                         }
-          //                       },
-          //                       child: Container(
-          //                         padding: const EdgeInsets.all(8),
-          //                         decoration: BoxDecoration(
-          //                           shape: BoxShape.circle,
-          //                           color: Colors.white.withValues(alpha: 0.05),
-          //                           border: Border.all(
-          //                             color:
-          //                                 Colors.white.withValues(alpha: 0.4),
-          //                             width: 1.5,
-          //                           ),
-          //                         ),
-          //                         child: loading
-          //                             ? const SizedBox(
-          //                                 width: 16,
-          //                                 height: 16,
-          //                                 child: CircularProgressIndicator(
-          //                                   color: Colors.white,
-          //                                 ),
-          //                               )
-          //                             : Icon(
-          //                                 isCompleted
-          //                                     ? Icons.replay
-          //                                     : isPlaying
-          //                                         ? Icons.pause
-          //                                         : Icons.play_arrow,
-          //                                 color: Colors.white,
-          //                                 size: 22,
-          //                               ),
-          //                       ),
-          //                     ),
-          //                     const SizedBox(width: 16),
-
-          //                     // Slider and Time
-          //                     Expanded(
-          //                       child: Column(
-          //                         crossAxisAlignment: CrossAxisAlignment.start,
-          //                         children: [
-          //                           SliderTheme(
-          //                             data: SliderTheme.of(context).copyWith(
-          //                               trackHeight: 4,
-          //                               thumbShape: const RoundSliderThumbShape(
-          //                                   enabledThumbRadius: 5),
-          //                               overlayShape:
-          //                                   SliderComponentShape.noOverlay,
-          //                             ),
-          //                             child: Slider(
-          //                               value: positionDuration.inSeconds
-          //                                   .clamp(0, totalDuration)
-          //                                   .toDouble(),
-          //                               min: 0,
-          //                               max: totalDuration > 0
-          //                                   ? totalDuration.toDouble()
-          //                                   : 1,
-          //                               thumbColor: Colors.white,
-          //                               activeColor: Colors.orange,
-          //                               inactiveColor:
-          //                                   Colors.white.withValues(alpha: 0.2),
-          //                               onChanged: (_) {},
-          //                               onChangeEnd: (value) {
-          //                                 if (loading) {
-          //                                   return;
-          //                                 }
-          //                                 audioPlayer.seek(
-          //                                     Duration(seconds: value.toInt()));
-          //                               },
-          //                             ),
-          //                           ),
-          //                           Row(
-          //                             mainAxisAlignment:
-          //                                 MainAxisAlignment.spaceBetween,
-          //                             children: [
-          //                               Text(
-          //                                 loading
-          //                                     ? "0:00"
-          //                                     : _formatDuration(
-          //                                         positionDuration.inSeconds),
-          //                                 style: PmpTextStyles.sub.copyWith(
-          //                                   color: Colors.white
-          //                                       .withValues(alpha: 0.9),
-          //                                 ),
-          //                               ),
-          //                               Text(
-          //                                 loading
-          //                                     ? "0:00"
-          //                                     : _formatDuration(totalDuration),
-          //                                 style: PmpTextStyles.sub.copyWith(
-          //                                   color: Colors.white
-          //                                       .withValues(alpha: 0.9),
-          //                                 ),
-          //                               ),
-          //                             ],
-          //                           ),
-          //                         ],
-          //                       ),
-          //                     ),
-          //                   ],
-          //                 ),
-          //               );
-          //             },
-          //           );
-          //         },
-          //       );
-          //     },
-          //   ),
-
-          const SizedBox(
-            height: 8,
-          ),
-          if (subtitle.explanationUrl.isNotEmpty)
+          const SizedBox(height: 8),
+          if (widget.subtitle.explanationUrl.isNotEmpty)
             Material(
               color: Colors.transparent,
               child: InkWell(
@@ -267,19 +99,19 @@ class SubtitleWidget extends StatelessWidget {
                   // pause() during buffering interrupts the buffer fetch
                   // and the iframe gets stuck in a loading loop on return
                   // from the pushed route.
-                  if (youtubeController.value.isPlaying) {
-                    youtubeController.pause();
+                  if (widget.youtubeController.value.isPlaying) {
+                    widget.youtubeController.pause();
                   }
-                  if (audioPlayer.playing) {
-                    audioPlayer.pause();
+                  if (widget.audioPlayer.playing) {
+                    widget.audioPlayer.pause();
                   }
                   final sentenceExplanation = SentenceExplanation(
                     id: 1,
-                    start: subtitle.start.inSeconds.toDouble(),
-                    end: subtitle.end.inSeconds.toDouble(),
-                    english: subtitle.english,
-                    burmese: subtitle.burmese ?? "",
-                    explanationUrl: subtitle.explanationUrl,
+                    start: widget.subtitle.start.inSeconds.toDouble(),
+                    end: widget.subtitle.end.inSeconds.toDouble(),
+                    english: widget.subtitle.english,
+                    burmese: widget.subtitle.burmese ?? "",
+                    explanationUrl: widget.subtitle.explanationUrl,
                   );
                   Navigator.pushNamed(
                     context,
@@ -318,15 +150,87 @@ class SubtitleWidget extends StatelessWidget {
                 ),
               ),
             ),
-        
         ],
       ),
     );
   }
 
-  String _formatDuration(int seconds) {
-    final minutes = seconds ~/ 60;
-    final remainingSeconds = seconds % 60;
-    return '$minutes:${remainingSeconds.toString().padLeft(2, '0')}';
+  // ---------- Interactive sentence ----------
+
+  TextStyle _englishStyle() => PmpTextStyles.body1Regular.copyWith(
+        color: Colors.white,
+        fontSize: 20,
+        height: 1.6,
+        fontFamily: "ArchivoBlack Regular",
+      );
+
+  Widget _buildInteractiveSentence(
+    BuildContext context,
+    String english,
+    List<VocabularyWord> vocabularyWords,
+  ) {
+    final baseStyle = _englishStyle();
+
+    if (vocabularyWords.isEmpty) {
+      return Text(english, style: baseStyle);
+    }
+
+    // Normalized lookup: lowercased + punctuation stripped at boundaries.
+    final lookup = <String, VocabularyWord>{};
+    for (final v in vocabularyWords) {
+      final key = _normalize(v.word);
+      if (key.isNotEmpty) {
+        lookup[key] = v;
+      }
+    }
+
+    if (lookup.isEmpty) {
+      return Text(english, style: baseStyle);
+    }
+
+    final highlightStyle = baseStyle.copyWith(
+      decoration: TextDecoration.underline,
+      decorationStyle: TextDecorationStyle.dotted,
+      decorationColor: Colors.orange,
+      decorationThickness: 1.5,
+    );
+
+    final spans = <InlineSpan>[];
+    final tokenizer = RegExp(r'(\s+|\S+)');
+    for (final match in tokenizer.allMatches(english)) {
+      final token = match.group(0)!;
+      if (token.trim().isEmpty) {
+        spans.add(TextSpan(text: token));
+        continue;
+      }
+      final normalized = _normalize(token);
+      final entry = lookup[normalized];
+      if (entry == null) {
+        spans.add(TextSpan(text: token));
+      } else {
+        final recognizer = TapGestureRecognizer()
+          ..onTap = () => _showVocabSheet(entry);
+        _recognizers.add(recognizer);
+        spans.add(TextSpan(
+          text: token,
+          style: highlightStyle,
+          recognizer: recognizer,
+        ));
+      }
+    }
+
+    return Text.rich(TextSpan(style: baseStyle, children: spans));
+  }
+
+  String _normalize(String word) =>
+      word.toLowerCase().replaceAll(RegExp(r'^[^\w]+|[^\w]+$'), '');
+
+  void _showVocabSheet(VocabularyWord word) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => VocabularyBottomSheet(word: word),
+    );
   }
 }

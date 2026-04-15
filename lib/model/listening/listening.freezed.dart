@@ -41,6 +41,8 @@ mixin _$Listening {
   String get recordSubtitlePath => throw _privateConstructorUsedError;
   @JsonKey(name: 'sentence_explanation_path')
   String get sentenceExplanationPath => throw _privateConstructorUsedError;
+  @JsonKey(name: 'vocabulary_path')
+  String get vocabularyPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'listening_category_id')
   int? get listeningCategoryId => throw _privateConstructorUsedError;
 
@@ -74,6 +76,7 @@ abstract class $ListeningCopyWith<$Res> {
       @JsonKey(name: 'record_subtitle_path') String recordSubtitlePath,
       @JsonKey(name: 'sentence_explanation_path')
       String sentenceExplanationPath,
+      @JsonKey(name: 'vocabulary_path') String vocabularyPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
 }
 
@@ -105,6 +108,7 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
     Object? shadowingPath = null,
     Object? recordSubtitlePath = null,
     Object? sentenceExplanationPath = null,
+    Object? vocabularyPath = null,
     Object? listeningCategoryId = freezed,
   }) {
     return _then(_value.copyWith(
@@ -160,6 +164,10 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
           ? _value.sentenceExplanationPath
           : sentenceExplanationPath // ignore: cast_nullable_to_non_nullable
               as String,
+      vocabularyPath: null == vocabularyPath
+          ? _value.vocabularyPath
+          : vocabularyPath // ignore: cast_nullable_to_non_nullable
+              as String,
       listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
@@ -191,6 +199,7 @@ abstract class _$$ListeningImplCopyWith<$Res>
       @JsonKey(name: 'record_subtitle_path') String recordSubtitlePath,
       @JsonKey(name: 'sentence_explanation_path')
       String sentenceExplanationPath,
+      @JsonKey(name: 'vocabulary_path') String vocabularyPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
 }
 
@@ -220,6 +229,7 @@ class __$$ListeningImplCopyWithImpl<$Res>
     Object? shadowingPath = null,
     Object? recordSubtitlePath = null,
     Object? sentenceExplanationPath = null,
+    Object? vocabularyPath = null,
     Object? listeningCategoryId = freezed,
   }) {
     return _then(_$ListeningImpl(
@@ -275,6 +285,10 @@ class __$$ListeningImplCopyWithImpl<$Res>
           ? _value.sentenceExplanationPath
           : sentenceExplanationPath // ignore: cast_nullable_to_non_nullable
               as String,
+      vocabularyPath: null == vocabularyPath
+          ? _value.vocabularyPath
+          : vocabularyPath // ignore: cast_nullable_to_non_nullable
+              as String,
       listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
@@ -301,6 +315,7 @@ class _$ListeningImpl implements _Listening {
       @JsonKey(name: 'record_subtitle_path') this.recordSubtitlePath = '',
       @JsonKey(name: 'sentence_explanation_path')
       this.sentenceExplanationPath = '',
+      @JsonKey(name: 'vocabulary_path') this.vocabularyPath = '',
       @JsonKey(name: 'listening_category_id') this.listeningCategoryId});
 
   factory _$ListeningImpl.fromJson(Map<String, dynamic> json) =>
@@ -341,12 +356,15 @@ class _$ListeningImpl implements _Listening {
   @JsonKey(name: 'sentence_explanation_path')
   final String sentenceExplanationPath;
   @override
+  @JsonKey(name: 'vocabulary_path')
+  final String vocabularyPath;
+  @override
   @JsonKey(name: 'listening_category_id')
   final int? listeningCategoryId;
 
   @override
   String toString() {
-    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, listeningCategoryId: $listeningCategoryId)';
+    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, listeningCategoryId: $listeningCategoryId)';
   }
 
   @override
@@ -377,6 +395,8 @@ class _$ListeningImpl implements _Listening {
             (identical(
                     other.sentenceExplanationPath, sentenceExplanationPath) ||
                 other.sentenceExplanationPath == sentenceExplanationPath) &&
+            (identical(other.vocabularyPath, vocabularyPath) ||
+                other.vocabularyPath == vocabularyPath) &&
             (identical(other.listeningCategoryId, listeningCategoryId) ||
                 other.listeningCategoryId == listeningCategoryId));
   }
@@ -398,6 +418,7 @@ class _$ListeningImpl implements _Listening {
       shadowingPath,
       recordSubtitlePath,
       sentenceExplanationPath,
+      vocabularyPath,
       listeningCategoryId);
 
   /// Create a copy of Listening
@@ -432,6 +453,7 @@ abstract class _Listening implements Listening {
       @JsonKey(name: 'record_subtitle_path') final String recordSubtitlePath,
       @JsonKey(name: 'sentence_explanation_path')
       final String sentenceExplanationPath,
+      @JsonKey(name: 'vocabulary_path') final String vocabularyPath,
       @JsonKey(name: 'listening_category_id')
       final int? listeningCategoryId}) = _$ListeningImpl;
 
@@ -472,6 +494,9 @@ abstract class _Listening implements Listening {
   @override
   @JsonKey(name: 'sentence_explanation_path')
   String get sentenceExplanationPath;
+  @override
+  @JsonKey(name: 'vocabulary_path')
+  String get vocabularyPath;
   @override
   @JsonKey(name: 'listening_category_id')
   int? get listeningCategoryId;

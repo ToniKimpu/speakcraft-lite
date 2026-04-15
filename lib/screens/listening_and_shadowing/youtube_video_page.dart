@@ -1,11 +1,14 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
+import 'package:pmp_english/model/vocabulary/vocabulary.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_detail_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -34,6 +37,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   bool _readyToPlay = false;
   final List<Subtitle> _subtitles = [];
   bool _showLoadingLayout = false;
+
+  Map<int, List<VocabularyWord>> _vocabBySentenceId = const {};
 
   final _subtitleBloc = SubtitleBloc();
   final _subtitleParsingBloc = SubtitleBloc();
@@ -94,6 +99,34 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
       },
     );
     _subtitleParsingBloc.add(SubtitleEvent.parseSubtitle(widget.listening));
+
+    if (widget.listening.hasVocabularies &&
+        widget.listening.vocabularyPath.trim().isNotEmpty) {
+      _loadVocabularies();
+    }
+  }
+
+  Future<void> _loadVocabularies() async {
+    try {
+      final response =
+          await http.get(Uri.parse(widget.listening.vocabularyPath));
+      if (response.statusCode != 200) return;
+      final decoded = utf8.decode(response.bodyBytes);
+      final List<dynamic> raw = jsonDecode(decoded);
+      final list = raw
+          .map((e) => SentenceVocabulary.fromJson(e as Map<String, dynamic>))
+          .toList();
+      if (!mounted) return;
+      setState(() {
+        _vocabBySentenceId = {
+          for (final s in list) s.sentenceId: s.words,
+        };
+      });
+    } catch (e, st) {
+      AppLogger.instance
+          .error('_loadVocabularies failed: $e', error: e, stackTrace: st);
+      // Silent fail — the screen still works without highlights.
+    }
   }
 
   void listener() {
@@ -105,8 +138,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     final newIndex = _findCurrentSubtitleIndex();
     if (newIndex == -1 || newIndex == _subtitlePageIndex) return;
     _subtitlePageIndex = newIndex;
-    AppLogger.instance
-        .debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
+    AppLogger.instance.debug("_currentSubtitlePageIndex: $_subtitlePageIndex");
     _subtitleBloc.add(SubtitleEvent.setCurrentPageIndex(_subtitlePageIndex));
   }
 
@@ -225,74 +257,75 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                       onEnded: (data) {},
                     ),
                     builder: (context, player) => Scaffold(
-                        appBar: AppBar(
-                          scrolledUnderElevation: 0.0,
-                          title: Text(
-                            widget.listening.title,
-                            style: const TextStyle(color: Colors.white),
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                          ),
-                        ),
-                        body: SizedBox(
-                          width: double.infinity,
-                          child: Column(
-                            children: [
-                              player,
-                              ListenableBuilder(
-                                listenable: _controller,
-                                builder: (_, __) => CustomControl(
-                                  audioPlayer: _audioPlayer,
-                                  controller: _controller,
-                                  startPosition: widget.listening.start,
-                                  endPosition: widget.listening.end,
-                                  startDuration: _startDuration,
-                                  endDuration: _endDuration,
-                                  readyToPlay: _readyToPlay,
-                                  onVocabulary: () {},
-                                  onSeek: () {},
-                                ),
-                              ),
-                              Expanded(
-                                child: state.maybeWhen(
-                                  loading: (message) {
-                                    return const Center(
-                                      child: SizedBox(
-                                        width: 20,
-                                        height: 20,
-                                        child: CircularProgressIndicator(),
-                                      ),
-                                    );
-                                  },
-                                  onParseCompleted: (subtitles) {
-                                    return SubtitleDetailWidget(
-                                      youtubeReadyToPlay: _readyToPlay,
-                                      youtubeController: _controller,
-                                      audioPlayerStateTrackerBloc:
-                                          _audioPlayerStateTrackerBloc,
-                                      audioPostionTrackerBloc:
-                                          _audioPositionTrackerBloc,
-                                      audioDurationTrackerBloc:
-                                          _audioDurationTrackerBloc,
-                                      subtitleBloc: _subtitleBloc,
-                                      audioPlayer: _audioPlayer,
-                                      hasVocabularies:
-                                          widget.listening.hasVocabularies,
-                                      subtitles: subtitles,
-                                      hasMMSub: widget.listening.hasMMSubtitle,
-                                      onUserChangePage: (subtitle) async {
-                                        _controller.seekTo(subtitle.start);
-                                      },
-                                    );
-                                  },
-                                  orElse: () => Container(),
-                                ),
-                              ),
-                            ],
-                          ),
+                      appBar: AppBar(
+                        scrolledUnderElevation: 0.0,
+                        title: Text(
+                          widget.listening.title,
+                          style: const TextStyle(color: Colors.white),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
                         ),
                       ),
-                    );
+                      body: SizedBox(
+                        width: double.infinity,
+                        child: Column(
+                          children: [
+                            player,
+                            ListenableBuilder(
+                              listenable: _controller,
+                              builder: (_, __) => CustomControl(
+                                audioPlayer: _audioPlayer,
+                                controller: _controller,
+                                startPosition: widget.listening.start,
+                                endPosition: widget.listening.end,
+                                startDuration: _startDuration,
+                                endDuration: _endDuration,
+                                readyToPlay: _readyToPlay,
+                                onVocabulary: () {},
+                                onSeek: () {},
+                              ),
+                            ),
+                            Expanded(
+                              child: state.maybeWhen(
+                                loading: (message) {
+                                  return const Center(
+                                    child: SizedBox(
+                                      width: 20,
+                                      height: 20,
+                                      child: CircularProgressIndicator(),
+                                    ),
+                                  );
+                                },
+                                onParseCompleted: (subtitles) {
+                                  return SubtitleDetailWidget(
+                                    youtubeReadyToPlay: _readyToPlay,
+                                    youtubeController: _controller,
+                                    audioPlayerStateTrackerBloc:
+                                        _audioPlayerStateTrackerBloc,
+                                    audioPostionTrackerBloc:
+                                        _audioPositionTrackerBloc,
+                                    audioDurationTrackerBloc:
+                                        _audioDurationTrackerBloc,
+                                    subtitleBloc: _subtitleBloc,
+                                    audioPlayer: _audioPlayer,
+                                    hasVocabularies:
+                                        widget.listening.hasVocabularies,
+                                    subtitles: subtitles,
+                                    hasMMSub: widget.listening.hasMMSubtitle,
+                                    vocabBySentenceId: _vocabBySentenceId,
+                                    onUserChangePage: (subtitle) async {
+                                      _controller.seekTo(subtitle.start);
+                                    },
+                                  );
+                                },
+                                orElse: () => Container(),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
                 },
               ),
       ),

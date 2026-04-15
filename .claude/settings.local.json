@@ -1,13 +1,35 @@
 {
   "permissions": {
     "allow": [
+      "Bash(fvm flutter:*)",
+      "Bash(fvm dart:*)",
+      "Bash(.fvm/flutter_sdk/bin/flutter:*)",
+      "Bash(.fvm/flutter_sdk/bin/dart:*)",
       "Bash(flutter pub:*)",
-      "Bash(dart run:*)",
+      "Bash(flutter run:*)",
+      "Bash(flutter build:*)",
       "Bash(flutter test:*)",
       "Bash(flutter analyze:*)",
+      "Bash(flutter clean:*)",
+      "Bash(dart run:*)",
+      "Bash(dart analyze:*)",
+      "Bash(dart format:*)",
+      "Bash(fastlane:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git switch:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git stash:*)",
       "Bash(xargs grep:*)",
       "Bash(grep:*)",
-      "Bash(dart analyze:*)",
       "Bash(python:*)"
     ]
   }

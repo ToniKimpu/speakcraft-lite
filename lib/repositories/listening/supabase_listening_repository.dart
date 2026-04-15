@@ -27,6 +27,7 @@ class SupabaseListeningRepository implements ListeningRepository {
         recordSubtitlePath: _normalizePath(listening.recordSubtitlePath),
         sentenceExplanationPath:
             _normalizePath(listening.sentenceExplanationPath),
+        vocabularyPath: _normalizePath(listening.vocabularyPath),
       );
     }).toList();
   }

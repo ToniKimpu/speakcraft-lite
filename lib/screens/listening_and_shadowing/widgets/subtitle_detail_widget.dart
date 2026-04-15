@@ -5,6 +5,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/bloc/subtitle_detail/subtitle_detail_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:pmp_english/model/vocabulary/vocabulary.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -24,6 +25,7 @@ class SubtitleDetailWidget extends StatefulWidget {
     required this.hasVocabularies,
     required this.hasMMSub,
     required this.onUserChangePage,
+    this.vocabBySentenceId = const {},
   });
   final bool youtubeReadyToPlay;
   final YoutubePlayerController youtubeController;
@@ -36,6 +38,7 @@ class SubtitleDetailWidget extends StatefulWidget {
   final bool hasVocabularies;
   final bool hasMMSub;
   final Function(Subtitle subtitle) onUserChangePage;
+  final Map<int, List<VocabularyWord>> vocabBySentenceId;
 
   @override
   State<SubtitleDetailWidget> createState() => _SubtitleDetailWidgetState();
@@ -136,6 +139,10 @@ class _SubtitleDetailWidgetState extends State<SubtitleDetailWidget> {
                   hasVocabularies: widget.hasVocabularies,
                   subtitle: _selectedSubtitle,
                   hasMMSub: widget.hasMMSub,
+                  vocabularyWords: _selectedSubtitle.id != null
+                      ? widget.vocabBySentenceId[_selectedSubtitle.id!] ??
+                          const []
+                      : const [],
                 ),
               ),
               Divider(

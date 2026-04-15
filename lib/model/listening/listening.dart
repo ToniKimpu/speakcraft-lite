@@ -20,6 +20,7 @@ class Listening with _$Listening {
     @JsonKey(name: 'shadowing_path') @Default('') String shadowingPath,
     @JsonKey(name: 'record_subtitle_path') @Default('') String recordSubtitlePath,
     @JsonKey(name: 'sentence_explanation_path') @Default('') String sentenceExplanationPath,
+    @JsonKey(name: 'vocabulary_path') @Default('') String vocabularyPath,
     @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
   }) = _Listening;
 
