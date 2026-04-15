@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:http/http.dart' as http;
 import 'package:pmp_english/config/env.dart';
+import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
 
 class SentenceExplanationPage extends StatefulWidget {
   const SentenceExplanationPage({
@@ -22,36 +22,34 @@ class SentenceExplanationPage extends StatefulWidget {
 }
 
 class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
-  String? _htmlContent;
+  Map<String, dynamic>? _jsonData;
   String? _errorMessage;
   bool _isLoading = false;
 
   @override
   void initState() {
     super.initState();
-    _loadHtml();
+    _loadJson();
   }
 
-  Future<void> _loadHtml() async {
+  Future<void> _loadJson() async {
     setState(() {
       _isLoading = true;
       _errorMessage = null;
-      _htmlContent = null;
+      _jsonData = null;
     });
 
     try {
       final url =
           Env.bunnyListeningAPIKey + widget.sentenceExplanation.explanationUrl;
 
-      AppLogger.instance.debug("_loadHtml: $url");
+      AppLogger.instance.debug("_loadJson: $url");
 
       final response =
           await http.get(Uri.parse(url)).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 404) {
-        throw const _UserFriendlyException(
-          'Explanation not found.',
-        );
+        throw const _UserFriendlyException('Explanation not found.');
       }
 
       if (response.statusCode != 200) {
@@ -60,28 +58,23 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
         );
       }
 
-      final decodedHtml = utf8.decode(response.bodyBytes);
+      final data =
+          json.decode(utf8.decode(response.bodyBytes)) as Map<String, dynamic>;
 
       if (!mounted) return;
 
       setState(() {
-        _htmlContent = decodedHtml;
+        _jsonData = data;
         _isLoading = false;
       });
     } on TimeoutException {
-      _setError(
-        'Connection timed out. Please try again.',
-      );
+      _setError('Connection timed out. Please try again.');
     } on http.ClientException {
-      _setError(
-        'Network error. Please check your internet connection.',
-      );
+      _setError('Network error. Please check your internet connection.');
     } on _UserFriendlyException catch (e) {
       _setError(e.message);
     } catch (_) {
-      _setError(
-        'Something went wrong while loading this explanation.',
-      );
+      _setError('Something went wrong while loading this explanation.');
     }
   }
 
@@ -91,7 +84,7 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
     setState(() {
       _errorMessage = message;
       _isLoading = false;
-      _htmlContent = null;
+      _jsonData = null;
     });
   }
 
@@ -99,10 +92,10 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false, // removes back arrow
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: const Row(
-          mainAxisSize: MainAxisSize.min, // <-- key for centering
+          mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
               Icons.lightbulb_outline,
@@ -134,19 +127,10 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
           : _errorMessage != null
               ? _ErrorView(
                   message: _errorMessage!,
-                  onRetry: _loadHtml,
+                  onRetry: _loadJson,
                 )
-              : _htmlContent != null
-                  ? SingleChildScrollView(
-                      padding: const EdgeInsets.all(12),
-                      child: HtmlWidget(
-                        _htmlContent!,
-                        textStyle: Theme.of(context)
-                            .textTheme
-                            .bodyMedium
-                            ?.copyWith(height: 1.8),
-                      ),
-                    )
+              : _jsonData != null
+                  ? SentenceExplanationJsonView(data: _jsonData!)
                   : const SizedBox.shrink(),
     );
   }
@@ -171,12 +155,11 @@ class _ErrorView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            // Icon bubble
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: theme.colorScheme.error.withOpacity(0.15),
+                color: theme.colorScheme.error.withValues(alpha: 0.15),
               ),
               child: Icon(
                 Icons.cloud_off_rounded,
@@ -184,33 +167,24 @@ class _ErrorView extends StatelessWidget {
                 color: theme.colorScheme.error,
               ),
             ),
-
             const SizedBox(height: 22),
-
-            // Headline
             Text(
-              "Couldn’t load explanation",
+              "Couldn't load explanation",
               style: theme.textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.center,
             ),
-
             const SizedBox(height: 8),
-
-            // Message
             Text(
               message,
               textAlign: TextAlign.center,
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.onSurface.withOpacity(0.75),
+                color: theme.colorScheme.onSurface.withValues(alpha: 0.75),
                 height: 1.5,
               ),
             ),
-
             const SizedBox(height: 20),
-
-            // Retry button
             FilledButton.icon(
               onPressed: onRetry,
               icon: const Icon(Icons.refresh),

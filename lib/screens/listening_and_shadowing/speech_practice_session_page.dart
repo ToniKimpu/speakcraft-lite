@@ -186,10 +186,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                 )
               : Scaffold(
                   appBar: AppBar(
-                    title: const Text(
-                      "Speech Practice Session",
-                      style: TextStyle(color: Colors.white),
-                    ),
+                    title: const Text("Speech Practice Session"),
                   ),
                   body: BlocConsumer<RecordSubtitleBloc, RecordSubtitleState>(
                     bloc: _recordSubtitleBloc,
@@ -210,15 +207,14 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                       );
                     },
                     builder: (context, state) {
+                      final colorScheme = Theme.of(context).colorScheme;
                       return state.maybeWhen(
                         loading: () {
                           return const Center(
                             child: SizedBox(
                               width: 18,
                               height: 18,
-                              child: CircularProgressIndicator(
-                                color: Colors.white,
-                              ),
+                              child: CircularProgressIndicator(),
                             ),
                           );
                         },
@@ -234,20 +230,20 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                       padding: const EdgeInsets.all(18),
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: PmpColors.primary400
-                                            .withValues(alpha: 0.15),
+                                        color: colorScheme.onSurface
+                                            .withValues(alpha: 0.08),
                                       ),
-                                      child: const Icon(
+                                      child: Icon(
                                         Icons.mic_none,
                                         size: 48,
-                                        color: PmpColors.primary400,
+                                        color: colorScheme.onSurfaceVariant,
                                       ),
                                     ),
                                     const SizedBox(height: 20),
                                     Text(
                                       "Coming Soon",
                                       style: PmpTextStyles.h1.copyWith(
-                                        color: PmpColors.white,
+                                        color: colorScheme.onSurface,
                                         fontFamily: 'ArchivoBlack Regular',
                                       ),
                                       textAlign: TextAlign.center,
@@ -258,8 +254,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                       "Check back soon and get ready to practice!",
                                       style:
                                           PmpTextStyles.body2Regular.copyWith(
-                                        color: PmpColors.white
-                                            .withValues(alpha: 0.75),
+                                        color: colorScheme.onSurfaceVariant,
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
@@ -364,14 +359,15 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                        const Text(
+                                                        Text(
                                                           "-",
                                                           style: TextStyle(
                                                             fontSize: 16,
                                                             height: 1.4,
                                                             fontWeight:
                                                                 FontWeight.w400,
-                                                            color: Colors.white,
+                                                            color: colorScheme
+                                                                .onSurface,
                                                             fontFamily:
                                                                 "ArchivoBlack Regular",
                                                           ),
@@ -389,10 +385,10 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                                   FontWeight
                                                                       .w400,
                                                               color: isCurrent
-                                                                  ? Colors
-                                                                      .yellow
-                                                                  : Colors
-                                                                      .white,
+                                                                  ? PmpColors
+                                                                      .warning400
+                                                                  : colorScheme
+                                                                      .onSurface,
                                                               fontFamily:
                                                                   "ArchivoBlack Regular",
                                                             ),
@@ -496,25 +492,23 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                     Expanded(
                                       child: Container(
                                         height: 1,
-                                        color:
-                                            Colors.white.withValues(alpha: 0.2),
+                                        color: colorScheme.outlineVariant,
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 16),
                                       ),
                                     ),
-                                    const Text(
+                                    Text(
                                       "Records",
                                       style: TextStyle(
                                         fontSize: 16,
-                                        color: Colors.white,
+                                        color: colorScheme.onSurface,
                                         fontFamily: "ArchivoBlack Regular",
                                       ),
                                     ),
                                     Expanded(
                                       child: Container(
                                         height: 1,
-                                        color:
-                                            Colors.white.withValues(alpha: 0.2),
+                                        color: colorScheme.outlineVariant,
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 16),
                                       ),

@@ -7,6 +7,7 @@ class ExerciseItemLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: 8,
@@ -18,23 +19,21 @@ class ExerciseItemLoading extends StatelessWidget {
             width: 8,
             height: 8,
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: colorScheme.outlineVariant,
               borderRadius: BorderRadius.circular(4),
             ),
           ),
-          const SizedBox(
-            width: 12,
-          ),
+          const SizedBox(width: 12),
           Container(
             height: 24,
             width: 160,
             decoration: BoxDecoration(
-              color: Colors.grey.withOpacity(0.2),
+              color: colorScheme.surfaceContainerHighest,
               borderRadius: BorderRadius.circular(4),
             ),
           ),
           const Spacer(),
-          const Icon(Icons.chevron_right),
+          Icon(Icons.chevron_right, color: colorScheme.onSurfaceVariant),
         ],
       ),
     );

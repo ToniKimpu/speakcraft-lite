@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../model/day/day.dart';
 import '../enum/day_item_type.dart';
@@ -19,6 +18,7 @@ class InProgressDayList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (currentDay == null) {
+      final onSurface = Theme.of(context).colorScheme.onSurface;
       return Padding(
         padding: const EdgeInsets.only(top: 100),
         child: Center(
@@ -26,16 +26,12 @@ class InProgressDayList extends StatelessWidget {
             children: [
               Text(
                 'Good job!',
-                style: PmpTextStyles.body1Regular.copyWith(
-                  color: PmpColors.black,
-                ),
+                style: PmpTextStyles.body1Regular.copyWith(color: onSurface),
               ),
               const SizedBox(height: 4),
               Text(
                 'You have completed all Tutorials!',
-                style: PmpTextStyles.body2Semi.copyWith(
-                  color: PmpColors.black,
-                ),
+                style: PmpTextStyles.body2Semi.copyWith(color: onSurface),
               ),
             ],
           ),

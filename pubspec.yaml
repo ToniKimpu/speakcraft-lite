@@ -151,6 +151,7 @@ flutter:
     - assets/days/day_28/
     - assets/days/day_29/
     - assets/days/day_30/
+    - assets/grit/
     - logo/
     # - shorebird.yaml
 

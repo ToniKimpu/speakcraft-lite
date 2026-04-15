@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 
-import '../../../config/pmp_colors.dart';
-
 class ProfileItemRow extends StatelessWidget {
   const ProfileItemRow({
     super.key,
@@ -23,6 +21,7 @@ class ProfileItemRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     final borderRadius = first
         ? const BorderRadius.only(
             topLeft: Radius.circular(8), topRight: Radius.circular(8))
@@ -30,6 +29,9 @@ class ProfileItemRow extends StatelessWidget {
             ? const BorderRadius.only(
                 bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8))
             : null;
+    // White PNG icons need a consistently dark tile so they stay legible in
+    // both themes — use inverseSurface (white→black flip).
+    final iconTileColor = colorScheme.inverseSurface;
     return Material(
       color: Colors.transparent,
       borderRadius: borderRadius,
@@ -51,13 +53,14 @@ class ProfileItemRow extends StatelessWidget {
                 width: 35,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xFF203A43),
+                  color: iconTileColor,
                 ),
                 child: Center(
                   child: Image.asset(
                     icon,
                     width: 20,
                     height: 20,
+                    color: colorScheme.onInverseSurface,
                   ),
                 ),
               ),
@@ -67,15 +70,15 @@ class ProfileItemRow extends StatelessWidget {
               Text(
                 label,
                 style: PmpTextStyles.body2Medium.copyWith(
-                  color: Colors.white,
+                  color: colorScheme.onSurface,
                 ),
               ),
               const Spacer(),
               if (accountId == null)
-                const Icon(
+                Icon(
                   Icons.chevron_right,
                   size: 24,
-                  color: PmpColors.neutral500,
+                  color: colorScheme.onSurfaceVariant,
                 ),
               if (accountId != null)
                 Text(

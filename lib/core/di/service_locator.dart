@@ -29,6 +29,7 @@ import 'package:pmp_english/repositories/listening/listening_repository.dart';
 import 'package:pmp_english/repositories/listening/supabase_listening_repository.dart';
 import 'package:pmp_english/repositories/spoken_pattern/spoken_pattern_repository.dart';
 import 'package:pmp_english/repositories/spoken_pattern/supabase_spoken_pattern_repository.dart';
+import 'package:pmp_english/services/theme_controller.dart';
 
 final sl = GetIt.instance;
 
@@ -53,6 +54,7 @@ Future<void> setupServiceLocator() async {
     () => ValueNotifier<bool>(true),
     instanceName: 'isOnline',
   );
+  sl.registerLazySingleton<ThemeController>(() => ThemeController.load());
 
   // Global BLoCs (lazySingleton — survive across screens)
   sl.registerLazySingleton<AuthBloc>(() => AuthBloc());

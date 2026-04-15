@@ -22,6 +22,7 @@ class LessonItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     final content = Padding(
       padding: const EdgeInsets.symmetric(
         vertical: 8,
@@ -33,7 +34,7 @@ class LessonItem extends StatelessWidget {
             width: 8,
             height: 8,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: colorScheme.onSurface,
               borderRadius: BorderRadius.circular(4),
             ),
           ),
@@ -45,24 +46,24 @@ class LessonItem extends StatelessWidget {
               children: [
                 Text(
                   lesson.lessonName,
-                  style:
-                      PmpTextStyles.body2Regular.copyWith(color: Colors.white),
+                  style: PmpTextStyles.body2Regular
+                      .copyWith(color: colorScheme.onSurface),
                 ),
                 if (lesson.subtitle?.isNotEmpty ?? false)
                   Text(
                     lesson.subtitle!,
                     style: PmpTextStyles.body2Regular
-                        .copyWith(color: Colors.white),
+                        .copyWith(color: colorScheme.onSurfaceVariant),
                   ),
               ],
             ),
           ),
           const SizedBox(width: 8),
           if (isClickable)
-            const Icon(
+            Icon(
               Icons.chevron_right,
               size: 20,
-              color: Colors.white,
+              color: colorScheme.onSurfaceVariant,
             ),
         ],
       ),

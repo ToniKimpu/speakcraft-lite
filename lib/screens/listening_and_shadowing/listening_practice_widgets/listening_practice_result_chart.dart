@@ -15,6 +15,7 @@ class ListeningPracticeResultChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return SizedBox(
       height: 200,
       width: 200,
@@ -38,12 +39,13 @@ class ListeningPracticeResultChart extends StatelessWidget {
               children: [
                 Text(
                   "$correctCount",
-                  style: PmpTextStyles.inter.copyWith(color: Colors.blue),
+                  style: PmpTextStyles.inter
+                      .copyWith(color: colorScheme.onSurface),
                 ),
                 Text(
                   'out of ${correctCount + inCorrectCount + notAnswerCount}',
                   style: PmpTextStyles.labelMedium
-                      .copyWith(color: PmpColors.white),
+                      .copyWith(color: colorScheme.onSurfaceVariant),
                 )
               ],
             ),

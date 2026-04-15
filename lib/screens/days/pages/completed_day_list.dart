@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pmp_english/screens/days/enum/day_item_type.dart';
 import 'package:pmp_english/screens/days/widgets/day_widget.dart';
 
-import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../model/day/day.dart';
 
@@ -18,7 +17,9 @@ class CompletedDayList extends StatelessWidget {
         child: Center(
           child: Text(
             'You haven\'t completed any tutorial yet!',
-            style: PmpTextStyles.body2Semi.copyWith(color: PmpColors.white),
+            style: PmpTextStyles.body2Semi.copyWith(
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
           ),
         ),
       );

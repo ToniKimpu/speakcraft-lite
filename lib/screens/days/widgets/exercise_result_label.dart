@@ -9,7 +9,7 @@ class ExerciseResultLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final labelData = _getLabelData(pass);
+    final labelData = _getLabelData(context, pass);
 
     return Center(
       child: Container(
@@ -30,24 +30,25 @@ class ExerciseResultLabel extends StatelessWidget {
     );
   }
 
-  _LabelData _getLabelData(bool? pass) {
+  _LabelData _getLabelData(BuildContext context, bool? pass) {
+    final colorScheme = Theme.of(context).colorScheme;
     if (pass == true) {
       return _LabelData(
         text: 'Pass ✓',
-        color: Colors.lightGreenAccent.withValues(alpha: 0.3),
-        textColor: PmpColors.white,
+        color: PmpColors.success400.withValues(alpha: 0.15),
+        textColor: PmpColors.success400,
       );
     } else if (pass == false) {
       return _LabelData(
         text: 'Fail ✘',
-        color: Colors.deepOrangeAccent.withValues(alpha: 0.3),
-        textColor: PmpColors.red,
+        color: PmpColors.destructive400.withValues(alpha: 0.15),
+        textColor: PmpColors.destructive400,
       );
     } else {
       return _LabelData(
         text: 'Result',
-        color: Colors.lightGreenAccent.withValues(alpha: 0.3),
-        textColor: PmpColors.white,
+        color: colorScheme.surfaceContainerHighest,
+        textColor: colorScheme.onSurface,
         fontWeight: FontWeight.w400,
       );
     }

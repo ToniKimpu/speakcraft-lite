@@ -112,6 +112,7 @@ class _PatternExerciseResultScreenState
   }
 
   _buildResultList(List<PatternExercise> patternExercises) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -141,7 +142,7 @@ class _PatternExerciseResultScreenState
                     Container(
                       height: 1,
                       width: double.infinity,
-                      color: PmpColors.neutral300,
+                      color: colorScheme.outlineVariant,
                     ),
                   ],
                 ),
@@ -158,7 +159,7 @@ class _PatternExerciseResultScreenState
                 child: Text(
                   'Your Answers',
                   style: PmpTextStyles.body1Regular.copyWith(
-                    color: PmpColors.white,
+                    color: colorScheme.onSurface,
                     fontFamily: "ArchivoBlack Regular",
                   ),
                 ),
@@ -183,7 +184,7 @@ class _PatternExerciseResultScreenState
                       child: Container(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.08),
+                          color: colorScheme.surfaceContainerHighest,
                           borderRadius: BorderRadius.circular(16),
                           border: Border.all(
                             color: borderColor,
@@ -191,9 +192,9 @@ class _PatternExerciseResultScreenState
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withValues(alpha: 0.3),
-                              blurRadius: 8,
-                              spreadRadius: 2,
+                              color: colorScheme.shadow.withValues(alpha: 0.12),
+                              blurRadius: 12,
+                              spreadRadius: 0,
                               offset: const Offset(0, 4),
                             ),
                           ],
@@ -204,21 +205,21 @@ class _PatternExerciseResultScreenState
                             const SizedBox(height: 12),
                             Text(
                               'Question ${index + 1}',
-                              style: PmpTextStyles.label2Regular
-                                  .copyWith(color: PmpColors.white),
+                              style: PmpTextStyles.label2Regular.copyWith(
+                                  color: colorScheme.onSurfaceVariant),
                             ),
                             const SizedBox(height: 8),
                             Text(
                               patternExercise.englishText,
                               style: PmpTextStyles.body1Regular.copyWith(
-                                color: PmpColors.white,
+                                color: colorScheme.onSurface,
                                 fontFamily: 'ArchivoBlack Regular',
                               ),
                             ),
                             Text(
                               patternExercise.burmeseText,
                               style: PmpTextStyles.body1Regular.copyWith(
-                                color: PmpColors.white,
+                                color: colorScheme.onSurface,
                                 fontFamily: 'MM Lyrics Bold',
                               ),
                             ),
@@ -226,7 +227,7 @@ class _PatternExerciseResultScreenState
                             Container(
                               height: 1,
                               width: double.infinity,
-                              color: PmpColors.white.withValues(alpha: 0.1),
+                              color: colorScheme.outlineVariant,
                             ),
                             const SizedBox(height: 8),
                             Row(
@@ -287,16 +288,16 @@ class _PatternExerciseResultScreenState
                 padding: const EdgeInsets.all(4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Colors.blue,
+                  color: colorScheme.inverseSurface,
                   border: Border.all(
-                    color: PmpColors.white,
+                    color: colorScheme.outline,
                     width: 2,
                   ),
                 ),
-                child: const Center(
+                child: Center(
                   child: Icon(
                     Icons.close,
-                    color: Colors.white,
+                    color: colorScheme.onInverseSurface,
                     size: 20,
                   ),
                 ),
@@ -369,7 +370,7 @@ class _StickyHeaderDelegate extends SliverPersistentHeaderDelegate {
           ? Text(
               'Your Answers',
               style: PmpTextStyles.body1Regular.copyWith(
-                color: PmpColors.white,
+                color: Theme.of(context).colorScheme.onSurface,
                 fontFamily: "ArchivoBlack Regular",
               ),
             )

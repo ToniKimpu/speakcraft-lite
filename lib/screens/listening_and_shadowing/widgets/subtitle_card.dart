@@ -60,12 +60,15 @@ class _SubtitleCardState extends State<SubtitleCard> {
     // tree is rebuilt — release them before allocating new ones.
     _disposeRecognizers();
 
+    final colorScheme = Theme.of(context).colorScheme;
+
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildInteractiveSentence(
+            context,
             widget.subtitle.english,
             widget.vocabularyWords,
           ),
@@ -76,7 +79,7 @@ class _SubtitleCardState extends State<SubtitleCard> {
             Text(
               widget.subtitle.burmese ?? "",
               style: PmpTextStyles.body2Regular.copyWith(
-                color: const Color(0xFFFFE0B2),
+                color: colorScheme.onSurfaceVariant,
                 fontSize: 18,
                 height: 1.8,
                 fontFamily: "MM Lyrics Bold",
@@ -104,7 +107,8 @@ class _SubtitleCardState extends State<SubtitleCard> {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.visibility_outlined, size: 18),
+              const Icon(Icons.visibility_outlined,
+                  size: 18, color: Colors.white),
               const SizedBox(width: 8),
               Text(
                 AppLocalizations.of(context).txtViewExplanation,
@@ -147,18 +151,20 @@ class _SubtitleCardState extends State<SubtitleCard> {
 
   // ---------- Interactive sentence ----------
 
-  TextStyle _englishStyle() => PmpTextStyles.body1Regular.copyWith(
-        color: Colors.white,
+  TextStyle _englishStyle(BuildContext context) =>
+      PmpTextStyles.body1Regular.copyWith(
+        color: Theme.of(context).colorScheme.onSurface,
         fontSize: 20,
         height: 1.6,
         fontFamily: "ArchivoBlack Regular",
       );
 
   Widget _buildInteractiveSentence(
+    BuildContext context,
     String english,
     List<VocabularyWord> vocabularyWords,
   ) {
-    final baseStyle = _englishStyle();
+    final baseStyle = _englishStyle(context);
 
     if (vocabularyWords.isEmpty) {
       return Text(english, style: baseStyle);

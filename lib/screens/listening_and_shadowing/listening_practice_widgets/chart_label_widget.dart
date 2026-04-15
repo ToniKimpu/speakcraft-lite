@@ -10,20 +10,21 @@ class ChartLabelWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildPieChartExpLabel('Correct', PmpColors.success400),
+        _buildPieChartExpLabel(context, 'Correct', PmpColors.success400),
         const SizedBox(
           width: 12,
         ),
-        _buildPieChartExpLabel('Incorrect', PmpColors.destructive400),
+        _buildPieChartExpLabel(context, 'Incorrect', PmpColors.destructive400),
         const SizedBox(
           width: 12,
         ),
-        _buildPieChartExpLabel('Not Answer', PmpColors.warning400),
+        _buildPieChartExpLabel(context, 'Not Answer', PmpColors.warning400),
       ],
     );
   }
 
-  Widget _buildPieChartExpLabel(String label, Color bgColor) {
+  Widget _buildPieChartExpLabel(
+      BuildContext context, String label, Color bgColor) {
     return Wrap(
       spacing: 8,
       children: [
@@ -35,8 +36,8 @@ class ChartLabelWidget extends StatelessWidget {
         ),
         Text(
           label,
-          style:
-              PmpTextStyles.label2Regular.copyWith(color: PmpColors.neutral50),
+          style: PmpTextStyles.label2Regular
+              .copyWith(color: Theme.of(context).colorScheme.onSurface),
         ),
       ],
     );

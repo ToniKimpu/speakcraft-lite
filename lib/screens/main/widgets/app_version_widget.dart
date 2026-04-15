@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 
 class AppVersionWidget extends StatelessWidget {
@@ -8,6 +7,7 @@ class AppVersionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Align(
       alignment: Alignment.center,
       child: FutureBuilder<PackageInfo>(
@@ -18,7 +18,7 @@ class AppVersionWidget extends StatelessWidget {
             return Text(
               'version - $version',
               style: PmpTextStyles.labelSemi.copyWith(
-                color: PmpColors.neutral100,
+                color: colorScheme.onSurfaceVariant,
               ),
             );
           } else {

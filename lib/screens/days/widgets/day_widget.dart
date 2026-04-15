@@ -6,7 +6,6 @@ import 'package:pmp_english/screens/days/widgets/exercise_item.dart';
 import 'package:pmp_english/screens/days/widgets/exercise_item_loading.dart';
 import 'package:pmp_english/screens/days/widgets/lesson_item.dart';
 
-import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../l10n/generated/l10n.dart';
 import '../../../model/day/day.dart';
@@ -23,18 +22,19 @@ class DayWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.08),
+        color: colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
+        border: Border.all(color: colorScheme.outlineVariant),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            blurRadius: 8,
-            spreadRadius: 2,
+            color: colorScheme.shadow.withValues(alpha: 0.12),
+            blurRadius: 12,
+            spreadRadius: 0,
             offset: const Offset(0, 4),
           ),
         ],
@@ -42,7 +42,7 @@ class DayWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildHeader(),
+          _buildHeader(context),
           if (day.lessons.isEmpty && day.exercises.isEmpty)
             SizedBox(
               height: 120,
@@ -51,26 +51,31 @@ class DayWidget extends StatelessWidget {
                 child: Text(
                   AppLocalizations.of(context).txtWillUploadSoon,
                   style: PmpTextStyles.body1Regular.copyWith(
-                    color: Colors.white,
+                    color: colorScheme.onSurface,
                   ),
                 ),
               ),
             ),
-          if (day.lessons.isNotEmpty) _divider(),
+          if (day.lessons.isNotEmpty) _divider(context),
           ...day.lessons.map(
             (lesson) => LessonItem(
               lesson: lesson,
               type: type,
             ),
           ),
-          if (day.exercises.isNotEmpty) _divider(),
+          if (day.exercises.isNotEmpty) _divider(context),
           _buildExercises(context),
         ],
       ),
     );
   }
 
-  Widget _buildHeader() {
+  Widget _buildHeader(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final dayTextStyle = PmpTextStyles.body1Regular.copyWith(
+      color: colorScheme.onSurface,
+      fontWeight: FontWeight.bold,
+    );
     switch (type) {
       case DayItemType.completed:
         return Padding(
@@ -78,13 +83,7 @@ class DayWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Day ${day.orderNumber}',
-                style: PmpTextStyles.body1Regular.copyWith(
-                  color: PmpColors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              Text('Day ${day.orderNumber}', style: dayTextStyle),
               Container(
                 width: 20,
                 height: 20,
@@ -100,13 +99,7 @@ class DayWidget extends StatelessWidget {
       case DayItemType.current:
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
-          child: Text(
-            'Day ${day.orderNumber}',
-            style: PmpTextStyles.body1Regular.copyWith(
-              color: PmpColors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          child: Text('Day ${day.orderNumber}', style: dayTextStyle),
         );
       case DayItemType.inProgress:
         return Padding(
@@ -114,14 +107,12 @@ class DayWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Day ${day.orderNumber}',
-                style: PmpTextStyles.body1Regular.copyWith(
-                  color: PmpColors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+              Text('Day ${day.orderNumber}', style: dayTextStyle),
+              Icon(
+                Icons.lock,
+                color: colorScheme.onSurfaceVariant,
+                size: 20,
               ),
-              const Icon(Icons.lock, color: Color(0xFFECEFF1), size: 20),
             ],
           ),
         );
@@ -182,10 +173,10 @@ class DayWidget extends StatelessWidget {
     }
   }
 
-  Widget _divider() => Container(
+  Widget _divider(BuildContext context) => Container(
         height: 1,
         width: double.infinity,
-        color: Colors.white.withValues(alpha: 0.1),
+        color: Theme.of(context).colorScheme.outlineVariant,
         margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
       );
 }

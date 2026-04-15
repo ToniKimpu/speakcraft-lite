@@ -252,12 +252,10 @@ class _ShadowingPageState extends State<ShadowingPage>
                     );
                   },
                   builder: (context, state) {
+                    final colorScheme = Theme.of(context).colorScheme;
                     return Scaffold(
                       appBar: AppBar(
-                        title: const Text(
-                          "Shadowing",
-                          style: TextStyle(color: Colors.white),
-                        ),
+                        title: const Text("Shadowing"),
                         actions: [
                           InkWell(
                             borderRadius: BorderRadius.circular(6),
@@ -281,8 +279,8 @@ class _ShadowingPageState extends State<ShadowingPage>
                                   horizontal: 8, vertical: 4),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                border: Border.all(
-                                    color: Colors.white.withValues(alpha: 0.6)),
+                                border:
+                                    Border.all(color: colorScheme.outline),
                               ),
                               child: Row(
                                 children: [
@@ -292,15 +290,14 @@ class _ShadowingPageState extends State<ShadowingPage>
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400,
-                                      color:
-                                          Colors.white.withValues(alpha: 0.8),
+                                      color: colorScheme.onSurface,
                                       fontFamily: 'MM Lyrics Bold',
                                     ),
                                   ),
                                   const SizedBox(width: 6),
                                   Icon(
                                     Icons.expand_more,
-                                    color: Colors.white.withValues(alpha: 0.6),
+                                    color: colorScheme.onSurfaceVariant,
                                   ),
                                 ],
                               ),
@@ -397,15 +394,18 @@ class _ShadowingPageState extends State<ShadowingPage>
                                                 Text(formatMmSs(startTime),
                                                     style: PmpTextStyles.sub
                                                         .copyWith(
-                                                            color: Colors
-                                                                .white)),
+                                                            color: colorScheme
+                                                                .onSurfaceVariant)),
                                                 Text(" --> ",
-                                                    style: PmpTextStyles.sub),
+                                                    style: PmpTextStyles.sub
+                                                        .copyWith(
+                                                            color: colorScheme
+                                                                .onSurfaceVariant)),
                                                 Text(formatMmSs(endTime),
                                                     style: PmpTextStyles.sub
                                                         .copyWith(
-                                                            color: Colors
-                                                                .white)),
+                                                            color: colorScheme
+                                                                .onSurfaceVariant)),
                                               ],
                                             ),
                                             // HighlightNone doesn't read position, so

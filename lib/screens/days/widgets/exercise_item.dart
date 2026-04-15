@@ -48,6 +48,7 @@ class ExerciseItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Material(
       color: Colors.transparent,
       child: InkWell(
@@ -60,7 +61,7 @@ class ExerciseItem extends StatelessWidget {
                 width: 8,
                 height: 8,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: colorScheme.onSurface,
                   borderRadius: BorderRadius.circular(4),
                 ),
               ),
@@ -68,12 +69,12 @@ class ExerciseItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   exercise.exerciseName,
-                  style:
-                      PmpTextStyles.body2Regular.copyWith(color: Colors.white),
+                  style: PmpTextStyles.body2Regular
+                      .copyWith(color: colorScheme.onSurface),
                 ),
               ),
               const SizedBox(width: 8),
-              if (showStatus) // ✅ only show if needed
+              if (showStatus)
                 Icon(
                   exercise.isComplete
                       ? Icons.check_circle
@@ -84,8 +85,8 @@ class ExerciseItem extends StatelessWidget {
                   color: exercise.isComplete
                       ? Colors.green
                       : isOpenIndex
-                          ? Colors.white
-                          : Colors.red,
+                          ? colorScheme.onSurface
+                          : colorScheme.error,
                 ),
             ],
           ),

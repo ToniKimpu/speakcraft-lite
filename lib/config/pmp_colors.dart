@@ -58,4 +58,14 @@ class PmpColors {
   static const Color darkTextPrimary = Color(0xFFFFFFFF);
   static const Color darkTextSecondary = Color(0xFFB3B3B3);
   static const Color darkTextDisabled = Color(0xFF6B6B6B);
+
+  // Pure white theme palette (inverse of dark — same B&W aesthetic)
+  static const Color lightBackground = Color(0xFFFFFFFF);
+  static const Color lightSurfaceBw = Color(0xFFFAFAFA);
+  static const Color lightSurfaceVariant = Color(0xFFF2F2F2);
+  static const Color lightOutline = Color(0xFFD6D6D6);
+  static const Color lightOutlineVariant = Color(0xFFE5E5E5);
+  static const Color lightTextPrimary = Color(0xFF000000);
+  static const Color lightTextSecondary = Color(0xFF5C5C5C);
+  static const Color lightTextDisabled = Color(0xFF999999);
 }

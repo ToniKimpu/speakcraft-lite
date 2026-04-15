@@ -196,7 +196,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                       scrolledUnderElevation: 0.0,
                       title: Text(
                         widget.listening.title,
-                        style: const TextStyle(color: Colors.white),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                       ),

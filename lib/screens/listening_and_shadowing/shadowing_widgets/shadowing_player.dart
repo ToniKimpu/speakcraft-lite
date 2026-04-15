@@ -42,15 +42,17 @@ class ShadowingPlayer extends StatelessWidget {
     final playing = controller.value.isPlaying;
     final paused = controller.value.playerState == PlayerState.paused;
     final complete = controller.value.playerState == PlayerState.ended;
+    final colorScheme = Theme.of(context).colorScheme;
+    final onSurface = colorScheme.onSurface;
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Colors.white.withValues(alpha: 0.04),
+          color: colorScheme.surfaceContainerHighest,
           border: Border.all(
-            color: Colors.white.withValues(alpha: 0.2),
+            color: colorScheme.outlineVariant,
             width: 1.5,
           ),
         ),
@@ -73,23 +75,23 @@ class ShadowingPlayer extends StatelessWidget {
                           imageUrl: listening.thumbnail,
                           fit: BoxFit.cover,
                           placeholder: (context, url) => Container(
-                            color: const Color(0xFF203A43),
-                            child: const Center(
+                            color: colorScheme.surfaceContainerHigh,
+                            child: Center(
                               child: SizedBox(
                                 width: 18,
                                 height: 18,
                                 child: CircularProgressIndicator(
-                                  color: Colors.white,
+                                  color: onSurface,
                                 ),
                               ),
                             ),
                           ),
                           errorWidget: (context, url, error) => Container(
-                            color: const Color(0xFF203A43),
-                            child: const Icon(
+                            color: colorScheme.surfaceContainerHigh,
+                            child: Icon(
                               Icons.broken_image,
                               size: 20,
-                              color: Colors.white,
+                              color: onSurface,
                             ),
                           ),
                         ),
@@ -121,9 +123,9 @@ class ShadowingPlayer extends StatelessWidget {
                             .toDouble(),
                         min: 0,
                         max: totalDuration.inMilliseconds.toDouble(),
-                        thumbColor: Colors.white,
+                        thumbColor: onSurface,
                         activeColor: Colors.orange,
-                        inactiveColor: Colors.white.withValues(alpha: 0.2),
+                        inactiveColor: onSurface.withValues(alpha: 0.2),
                         onChanged: (value) {},
                         onChangeEnd: (value) {
                           controller
@@ -140,14 +142,14 @@ class ShadowingPlayer extends StatelessWidget {
                         builder: (context, position, _) => Text(
                           _formatDuration(position),
                           style: PmpTextStyles.subBold.copyWith(
-                            color: Colors.white,
+                            color: onSurface,
                           ),
                         ),
                       ),
                       Text(
                         _formatDuration(totalDuration),
                         style: PmpTextStyles.subBold.copyWith(
-                          color: Colors.white,
+                          color: onSurface,
                         ),
                       ),
                     ],
@@ -165,19 +167,19 @@ class ShadowingPlayer extends StatelessWidget {
                 height: 36,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withValues(alpha: 0.05),
+                  color: onSurface.withValues(alpha: 0.05),
                   border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.4),
+                    color: colorScheme.outlineVariant,
                     width: 1.5,
                   ),
                 ),
                 child: Center(
                   child: loading
-                      ? const SizedBox(
+                      ? SizedBox(
                           width: 18,
                           height: 18,
                           child: CircularProgressIndicator(
-                            color: Colors.white,
+                            color: onSurface,
                           ),
                         )
                       : Icon(
@@ -186,7 +188,7 @@ class ShadowingPlayer extends StatelessWidget {
                               : controller.value.isPlaying
                                   ? Icons.pause
                                   : Icons.play_arrow,
-                          color: Colors.white,
+                          color: onSurface,
                           size: 22,
                         ),
                 ),

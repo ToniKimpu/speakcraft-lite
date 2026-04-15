@@ -6,7 +6,6 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart'
     as yt_player;
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 
 class CustomControl extends StatefulWidget {
@@ -59,15 +58,16 @@ class _CustomControlState extends State<CustomControl> {
     final isLoading = playerState == yt_player.PlayerState.buffering ||
         playerState == yt_player.PlayerState.unStarted ||
         playerState == yt_player.PlayerState.cued;
+    final colorScheme = Theme.of(context).colorScheme;
+    final onSurface = colorScheme.onSurface;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8),
-      // margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       margin: const EdgeInsets.only(left: 12, right: 12, bottom: 8, top: 8),
       decoration: BoxDecoration(
-        color: PmpColors.black.withValues(alpha: 0.4),
+        color: colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: PmpColors.white,
+          color: colorScheme.outlineVariant,
           width: 1,
         ),
       ),
@@ -92,9 +92,9 @@ class _CustomControlState extends State<CustomControl> {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.replay_10,
-                  color: PmpColors.white,
+                  color: onSurface,
                   size: 18,
                 ),
               ),
@@ -106,7 +106,7 @@ class _CustomControlState extends State<CustomControl> {
           Text(
             adjustedCurrentPosition.formatDuration(),
             style: PmpTextStyles.subBold.copyWith(
-              color: Colors.white,
+              color: onSurface,
             ),
           ),
           const SizedBox(
@@ -128,8 +128,9 @@ class _CustomControlState extends State<CustomControl> {
                   min: 0,
                   max: widget.endPosition.toDouble() -
                       widget.startPosition.toDouble(),
-                  thumbColor: Colors.white,
+                  thumbColor: onSurface,
                   activeColor: Colors.orange,
+                  inactiveColor: onSurface.withValues(alpha: 0.3),
                   onChanged: (value) {
                     _checkReadyToPlay();
                     int seekPosition = value.toInt() + widget.startPosition;
@@ -145,7 +146,7 @@ class _CustomControlState extends State<CustomControl> {
           Text(
             '- ${remainingDuration.formatDuration()}',
             style: PmpTextStyles.subBold.copyWith(
-              color: Colors.white,
+              color: onSurface,
             ),
           ),
           const SizedBox(
@@ -171,9 +172,9 @@ class _CustomControlState extends State<CustomControl> {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.forward_10,
-                  color: PmpColors.white,
+                  color: onSurface,
                   size: 18,
                 ),
               ),
@@ -201,35 +202,35 @@ class _CustomControlState extends State<CustomControl> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Colors.white,
+                          color: colorScheme.outlineVariant,
                           width: 1,
                         ),
                       ),
                       child: Center(
                         child: isLoading
-                            ? const SizedBox(
+                            ? SizedBox(
                                 width: 18,
                                 height: 18,
                                 child: CircularProgressIndicator(
-                                  color: PmpColors.white,
+                                  color: onSurface,
                                 ),
                               )
                             : Icon(
                                 widget.controller.value.isPlaying
                                     ? Icons.pause
                                     : Icons.play_arrow,
-                                color: PmpColors.white,
+                                color: onSurface,
                                 size: 18,
                               ),
                       ),
                     ),
                   ),
                 )
-              : const SizedBox(
+              : SizedBox(
                   width: 16,
                   height: 16,
                   child: CircularProgressIndicator(
-                    color: PmpColors.white,
+                    color: onSurface,
                   ),
                 ),
         ],

@@ -10,6 +10,7 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_themes.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:pmp_english/services/theme_controller.dart';
 import 'package:pmp_english/main.dart';
 import 'package:pmp_english/main_providers.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -114,24 +115,29 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: mainBlocProviders(),
-      child: MaterialApp(
-        title: 'PMP English App',
-        navigatorKey: _navigatorKey,
-        debugShowCheckedModeBanner: false,
-        theme: PmpThemes.darkTheme,
-        darkTheme: PmpThemes.darkTheme,
-        themeMode: ThemeMode.dark,
-        localizationsDelegates: const [
-          AppLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-        ],
-        onGenerateRoute: PmpRoutes.generateRoutes,
-        initialRoute: PmpRoutes.splash,
-        supportedLocales: const [
-          Locale('en'),
-        ],
-        locale: const Locale('en'),
+      child: ValueListenableBuilder<ThemeMode>(
+        valueListenable: sl<ThemeController>(),
+        builder: (context, themeMode, _) {
+          return MaterialApp(
+            title: 'PMP English App',
+            navigatorKey: _navigatorKey,
+            debugShowCheckedModeBanner: false,
+            theme: PmpThemes.lightTheme,
+            darkTheme: PmpThemes.darkTheme,
+            themeMode: themeMode,
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+            ],
+            onGenerateRoute: PmpRoutes.generateRoutes,
+            initialRoute: PmpRoutes.splash,
+            supportedLocales: const [
+              Locale('en'),
+            ],
+            locale: const Locale('en'),
+          );
+        },
       ),
     );
   }

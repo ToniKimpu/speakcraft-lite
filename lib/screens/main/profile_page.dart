@@ -7,6 +7,7 @@ import 'package:pmp_english/core/di/service_locator.dart';
 import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/screens/main/widgets/app_version_widget.dart';
 import 'package:pmp_english/screens/main/widgets/profile_item_row.dart';
+import 'package:pmp_english/services/theme_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/env.dart';
@@ -41,6 +42,8 @@ class ProfilePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 _HeroCard(appUser: appUser),
+                const SizedBox(height: 16),
+                const _AppearanceCard(),
                 const SizedBox(height: 16),
                 _SettingsCard(appUser: appUser),
               ],
@@ -182,6 +185,131 @@ class _StatCard extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _AppearanceCard extends StatelessWidget {
+  const _AppearanceCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final controller = sl<ThemeController>();
+
+    return Container(
+      width: double.infinity,
+      decoration: ProfilePage._cardDecoration(context),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 8),
+            child: Text(
+              'Appearance',
+              style: PmpTextStyles.body1Semi.copyWith(
+                color: colorScheme.onSurface,
+              ),
+            ),
+          ),
+          ValueListenableBuilder<ThemeMode>(
+            valueListenable: controller,
+            builder: (context, mode, _) {
+              return Column(
+                children: [
+                  _ThemeOptionTile(
+                    icon: Icons.light_mode_outlined,
+                    label: 'Light',
+                    selected: mode == ThemeMode.light,
+                    onTap: () => controller.setMode(ThemeMode.light),
+                  ),
+                  Divider(
+                    color: colorScheme.outlineVariant,
+                    height: 1,
+                    indent: 16,
+                    endIndent: 16,
+                  ),
+                  _ThemeOptionTile(
+                    icon: Icons.dark_mode_outlined,
+                    label: 'Dark',
+                    selected: mode == ThemeMode.dark,
+                    onTap: () => controller.setMode(ThemeMode.dark),
+                  ),
+                  Divider(
+                    color: colorScheme.outlineVariant,
+                    height: 1,
+                    indent: 16,
+                    endIndent: 16,
+                  ),
+                  _ThemeOptionTile(
+                    icon: Icons.brightness_auto_outlined,
+                    label: 'System',
+                    selected: mode == ThemeMode.system,
+                    onTap: () => controller.setMode(ThemeMode.system),
+                    isLast: true,
+                  ),
+                ],
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ThemeOptionTile extends StatelessWidget {
+  const _ThemeOptionTile({
+    required this.icon,
+    required this.label,
+    required this.selected,
+    required this.onTap,
+    this.isLast = false,
+  });
+
+  final IconData icon;
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+  final bool isLast;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.vertical(
+        bottom: isLast ? const Radius.circular(12) : Radius.zero,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        child: Row(
+          children: [
+            Icon(icon, size: 20, color: colorScheme.onSurface),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Text(
+                label,
+                style: PmpTextStyles.body2Semi.copyWith(
+                  color: colorScheme.onSurface,
+                ),
+              ),
+            ),
+            if (selected)
+              Icon(
+                Icons.check_circle,
+                size: 20,
+                color: colorScheme.primary,
+              )
+            else
+              Icon(
+                Icons.circle_outlined,
+                size: 20,
+                color: colorScheme.outline,
+              ),
+          ],
+        ),
+      ),
     );
   }
 }

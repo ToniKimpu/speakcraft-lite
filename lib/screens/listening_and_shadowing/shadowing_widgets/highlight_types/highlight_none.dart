@@ -11,17 +11,18 @@ class HighlightNone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final onSurface = Theme.of(context).colorScheme.onSurface;
     return RichText(
       text: TextSpan(
         children: List.generate(subtitleLine.words.length, (i) {
           final w = subtitleLine.words[i];
           return TextSpan(
             text: "${w.word} ",
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w400,
               fontFamily: "ArchivoBlack Regular",
-              color: Colors.white,
+              color: onSurface,
             ),
           );
         }),

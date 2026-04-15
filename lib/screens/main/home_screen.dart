@@ -126,13 +126,20 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             const SizedBox(height: 12),
-
             if (kDebugMode)
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/html_list');
                 },
                 child: const Text('See Html List'),
+              ),
+            const SizedBox(height: 8),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, PmpRoutes.gritJsonList);
+                },
+                child: const Text('Grit JSON List'),
               ),
             const SizedBox(height: 12),
 
