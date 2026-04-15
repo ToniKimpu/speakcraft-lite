@@ -1,8 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:json_annotation/json_annotation.dart';
-
 part 'internet_checker_bloc.freezed.dart';
 
 class InternetCheckerBloc

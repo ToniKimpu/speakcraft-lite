@@ -61,6 +61,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
   late final AudioRecorder _audioRecorder;
   late ValueNotifier<RecordState> _recordStateNotifier;
   StreamSubscription<RecordState>? _recordSub;
+  StreamSubscription? _playerStateSub;
 
   late AudioPlayer _audioPlayer;
   late final ValueNotifier<int?> _currentlyPlayingIndexNotifier;
@@ -79,7 +80,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
 
     _audioRecorder = AudioRecorder();
     _recordSub = _audioRecorder.onStateChanged().listen((recordState) {
-      setState(() => _recordStateNotifier.value = recordState);
+      _recordStateNotifier.value = recordState;
       if (recordState == RecordState.record) {
         _startTimer();
       } else if (recordState == RecordState.stop) {
@@ -92,12 +93,9 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
 
     _audioPlayer = AudioPlayer();
     _currentlyPlayingIndexNotifier = ValueNotifier<int?>(null);
-    // Reset when audio completes
-    _audioPlayer.playerStateStream.listen((state) {
+    _playerStateSub = _audioPlayer.playerStateStream.listen((state) {
       if (state.processingState == ProcessingState.completed) {
-        setState(() {
-          _currentlyPlayingIndexNotifier.value = null;
-        });
+        _currentlyPlayingIndexNotifier.value = null;
       }
     });
 
@@ -139,10 +137,16 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
     _controller.dispose();
     _timer?.cancel();
     _recordSub?.cancel();
+    _playerStateSub?.cancel();
     _audioRecorder.dispose();
     _audioPlayer.dispose();
     _recordSubtitleBloc.close();
+    _userRecordedSentenceAudioBloc.close();
     _positionNotifier.dispose();
+    _recordDurationNotifier.dispose();
+    _recordStateNotifier.dispose();
+    _currentlyPlayingIndexNotifier.dispose();
+    _pageController.dispose();
     super.dispose();
   }
 
@@ -153,11 +157,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
   void _startTimer() {
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
-      setState(() {
-        int recordDuration = _recordDurationNotifier.value;
-        recordDuration++;
-        _recordDurationNotifier.value = recordDuration;
-      });
+      _recordDurationNotifier.value = _recordDurationNotifier.value + 1;
     });
   }
 
@@ -321,17 +321,12 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                   }
                                 },
                               ),
-                              
-                              // const SizedBox(height: 16),
                               SizedBox(
                                 height: 240,
                                 child: PageView.builder(
                                   itemCount: recordSubtitles.length,
                                   controller: _pageController,
                                   physics: const NeverScrollableScrollPhysics(),
-                                  onPageChanged: (index) {
-                                    // _controller.load(_subtitles[index].videoId);
-                                  },
                                   itemBuilder: (context, index) {
                                     final subtitle = recordSubtitles[index];
                                     return Scrollbar(
@@ -566,29 +561,22 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                           final isCurrent =
                                               currentIndex == index;
                                           if (isCurrent) {
-                                            // toggle pause / resume
                                             if (_audioPlayer.playing) {
                                               _audioPlayer.pause();
                                               _currentlyPlayingIndexNotifier
                                                   .value = null;
                                             } else {
                                               _audioPlayer.play();
-                                              setState(() {
-                                                _currentlyPlayingIndexNotifier
-                                                    .value = index;
-                                              });
-                                            }
-                                            setState(() {}); // refresh icon
-                                          } else {
-                                            // stop previous
-                                            await _audioPlayer.stop();
-                                            await _audioPlayer.setUrl(data
-                                                .audioPath); // play new audio
-                                            _audioPlayer.play();
-                                            setState(() {
                                               _currentlyPlayingIndexNotifier
                                                   .value = index;
-                                            });
+                                            }
+                                          } else {
+                                            await _audioPlayer.stop();
+                                            await _audioPlayer
+                                                .setUrl(data.audioPath);
+                                            _audioPlayer.play();
+                                            _currentlyPlayingIndexNotifier
+                                                .value = index;
                                           }
                                         },
                                       );

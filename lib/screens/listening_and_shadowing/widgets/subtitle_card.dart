@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/bloc/audio_player/audio_player_bloc.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/model/vocabulary/vocabulary.dart';
@@ -12,15 +11,14 @@ import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../l10n/generated/l10n.dart';
 
-class SubtitleWidget extends StatefulWidget {
-  const SubtitleWidget({
+/// Renders a single subtitle line: the English sentence with inline tappable
+/// vocabulary highlights, the optional Burmese translation, and the "View
+/// Explanation" link. Built to sit inside [SubtitlePager].
+class SubtitleCard extends StatefulWidget {
+  const SubtitleCard({
     super.key,
     required this.youtubeController,
     required this.audioPlayer,
-    required this.audioPositionTrackerBloc,
-    required this.audioDurationTrackerBloc,
-    required this.audioPlayerStateTrackerBloc,
-    required this.hasVocabularies,
     required this.subtitle,
     required this.hasMMSub,
     this.vocabularyWords = const [],
@@ -28,21 +26,17 @@ class SubtitleWidget extends StatefulWidget {
 
   final YoutubePlayerController youtubeController;
   final AudioPlayer audioPlayer;
-  final AudioPlayerBloc audioPositionTrackerBloc,
-      audioDurationTrackerBloc,
-      audioPlayerStateTrackerBloc;
-  final bool hasVocabularies;
   final Subtitle subtitle;
   final bool hasMMSub;
   final List<VocabularyWord> vocabularyWords;
 
   @override
-  State<SubtitleWidget> createState() => _SubtitleWidgetState();
+  State<SubtitleCard> createState() => _SubtitleCardState();
 }
 
-class _SubtitleWidgetState extends State<SubtitleWidget> {
+class _SubtitleCardState extends State<SubtitleCard> {
   // TapGestureRecognizers attached to TextSpans must be disposed manually.
-  // Built fresh each build() and disposed here on widget tear-down.
+  // Built fresh each build() and released here on widget tear-down.
   final List<TapGestureRecognizer> _recognizers = [];
 
   @override
@@ -69,9 +63,7 @@ class _SubtitleWidgetState extends State<SubtitleWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // English Subtitle
           _buildInteractiveSentence(
-            context,
             widget.subtitle.english,
             widget.vocabularyWords,
           ),
@@ -89,69 +81,65 @@ class _SubtitleWidgetState extends State<SubtitleWidget> {
               ),
             ),
           const SizedBox(height: 8),
-          if (widget.subtitle.explanationUrl.isNotEmpty)
-            Material(
-              color: Colors.transparent,
-              child: InkWell(
-                borderRadius: BorderRadius.circular(8),
-                onTap: () {
-                  // Only pause YT when it's actively playing. Calling
-                  // pause() during buffering interrupts the buffer fetch
-                  // and the iframe gets stuck in a loading loop on return
-                  // from the pushed route.
-                  if (widget.youtubeController.value.isPlaying) {
-                    widget.youtubeController.pause();
-                  }
-                  if (widget.audioPlayer.playing) {
-                    widget.audioPlayer.pause();
-                  }
-                  final sentenceExplanation = SentenceExplanation(
-                    id: 1,
-                    start: widget.subtitle.start.inSeconds.toDouble(),
-                    end: widget.subtitle.end.inSeconds.toDouble(),
-                    english: widget.subtitle.english,
-                    burmese: widget.subtitle.burmese ?? "",
-                    explanationUrl: widget.subtitle.explanationUrl,
-                  );
-                  Navigator.pushNamed(
-                    context,
-                    PmpRoutes.sentenceExplanationPage,
-                    arguments: {
-                      "sentence_explanation": sentenceExplanation,
-                    },
-                  );
-                },
-                child: Ink(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.green,
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Icon(
-                        Icons.visibility_outlined,
-                        size: 18,
-                      ),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      Text(
-                        AppLocalizations.of(context).txtViewExplanation,
-                        style: PmpTextStyles.body2Semi.copyWith(
-                          color: Colors.white,
-                          fontFamily: "ArchivoBlack Regular",
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+          if (widget.subtitle.explanationUrl.isNotEmpty) _buildExplanationButton(),
         ],
       ),
+    );
+  }
+
+  Widget _buildExplanationButton() {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(8),
+        onTap: _onExplanationTap,
+        child: Ink(
+          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: Colors.green,
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.visibility_outlined, size: 18),
+              const SizedBox(width: 8),
+              Text(
+                AppLocalizations.of(context).txtViewExplanation,
+                style: PmpTextStyles.body2Semi.copyWith(
+                  color: Colors.white,
+                  fontFamily: "ArchivoBlack Regular",
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _onExplanationTap() {
+    // Only pause YT when it's actively playing. Calling pause() during
+    // buffering interrupts the buffer fetch and the iframe gets stuck in a
+    // loading loop on return from the pushed route.
+    if (widget.youtubeController.value.isPlaying) {
+      widget.youtubeController.pause();
+    }
+    if (widget.audioPlayer.playing) {
+      widget.audioPlayer.pause();
+    }
+    final sentenceExplanation = SentenceExplanation(
+      id: 1,
+      start: widget.subtitle.start.inSeconds.toDouble(),
+      end: widget.subtitle.end.inSeconds.toDouble(),
+      english: widget.subtitle.english,
+      burmese: widget.subtitle.burmese ?? "",
+      explanationUrl: widget.subtitle.explanationUrl,
+    );
+    Navigator.pushNamed(
+      context,
+      PmpRoutes.sentenceExplanationPage,
+      arguments: {"sentence_explanation": sentenceExplanation},
     );
   }
 
@@ -165,7 +153,6 @@ class _SubtitleWidgetState extends State<SubtitleWidget> {
       );
 
   Widget _buildInteractiveSentence(
-    BuildContext context,
     String english,
     List<VocabularyWord> vocabularyWords,
   ) {

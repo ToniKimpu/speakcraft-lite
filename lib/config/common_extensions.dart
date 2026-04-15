@@ -8,6 +8,11 @@ import 'package:pmp_english/config/pmp_text_styles.dart';
 
 import '../l10n/generated/l10n.dart';
 
+/// Formats a [Duration] as `mm:ss` (always 2-digit minutes). Top-level so it
+/// can be used from itemBuilders without allocating a closure per call.
+String formatMmSs(Duration d) =>
+    "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
+
 extension AiduPlayStateExtension on State {
   showSnackbar(String msg, Color textColor, Color bgColor) {
     ScaffoldMessenger.of(context)

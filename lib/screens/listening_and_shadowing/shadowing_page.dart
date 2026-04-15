@@ -5,6 +5,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/listening/shadowing_line_bloc.dart';
+import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
@@ -384,57 +385,50 @@ class _ShadowingPageState extends State<ShadowingPage>
                                       final endTime = Duration(
                                           milliseconds:
                                               (line.end * 1000).toInt());
-                                      String formatDuration(Duration d) {
-                                        return "${d.inMinutes.toString().padLeft(2, '0')}:${(d.inSeconds % 60).toString().padLeft(2, '0')}";
-                                      }
-
                                       return Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 16,
-                                            right: 16,
-                                            bottom: 12),
+                                            left: 16, right: 16, bottom: 12),
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
                                             Row(
                                               children: [
-                                                Text(
-                                                    formatDuration(startTime),
+                                                Text(formatMmSs(startTime),
                                                     style: PmpTextStyles.sub
                                                         .copyWith(
-                                                            color:
-                                                                Colors.white)),
+                                                            color: Colors
+                                                                .white)),
                                                 Text(" --> ",
                                                     style: PmpTextStyles.sub),
-                                                Text(
-                                                    formatDuration(endTime),
+                                                Text(formatMmSs(endTime),
                                                     style: PmpTextStyles.sub
                                                         .copyWith(
-                                                            color:
-                                                                Colors.white)),
+                                                            color: Colors
+                                                                .white)),
                                               ],
                                             ),
                                             // HighlightNone doesn't read position, so
                                             // skip the ValueListenableBuilder wrap for
                                             // that branch and avoid per-frame rebuilds.
-                                            if (_selectedHighlightType ==
-                                                HighlightType.none)
-                                              _buildHighlightWidget(
-                                                line,
-                                                Duration.zero,
-                                              )
-                                            else
-                                              ValueListenableBuilder<Duration>(
-                                                valueListenable:
-                                                    _positionNotifier,
-                                                builder:
-                                                    (_, position, __) =>
-                                                        _buildHighlightWidget(
-                                                  line,
-                                                  position,
-                                                ),
-                                              ),
+                                            // RepaintBoundary isolates per-line repaints
+                                            // so a position tick doesn't walk the whole
+                                            // list's paint tree.
+                                            RepaintBoundary(
+                                              child: _selectedHighlightType ==
+                                                      HighlightType.none
+                                                  ? _buildHighlightWidget(
+                                                      line, Duration.zero)
+                                                  : ValueListenableBuilder<
+                                                      Duration>(
+                                                      valueListenable:
+                                                          _positionNotifier,
+                                                      builder: (_, position,
+                                                              __) =>
+                                                          _buildHighlightWidget(
+                                                              line, position),
+                                                    ),
+                                            ),
                                           ],
                                         ),
                                       );
