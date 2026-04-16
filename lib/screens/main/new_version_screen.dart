@@ -26,8 +26,8 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
 
   @override
   void dispose() {
-    super.dispose();
     _player.dispose();
+    super.dispose();
   }
 
   @override
@@ -36,9 +36,9 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
     final String versionName = widget.appVersion['version_name'] ?? "";
     final String downloadUrl = widget.appVersion['app_path'] ?? "";
     final String telegramUrl = widget.appVersion['telegram_path'] ?? "";
+    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      backgroundColor: const Color(0xFF0D1B2A),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -50,12 +50,13 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
               Container(
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF1B263B),
+                  color: colorScheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: colorScheme.outlineVariant),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.25),
-                      blurRadius: 10,
+                      color: colorScheme.shadow.withValues(alpha: 0.12),
+                      blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
                   ],
@@ -69,12 +70,12 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                       backgroundImage: AssetImage('logo/app_logo.png'),
                     ),
                     const SizedBox(height: 16),
-                    const Text(
+                    Text(
                       'New Version Available!',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: colorScheme.onSurface,
                         fontFamily: "ArchivoBlack Regular",
                       ),
                     ),
@@ -83,15 +84,15 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                       'Version: $versionName',
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.grey[300],
+                        color: colorScheme.onSurfaceVariant,
                         fontFamily: "ArchivoBlack Regular",
                       ),
                     ),
                     const SizedBox(height: 16),
-                    const Text(
+                    Text(
                       'အပ်ဒိတ်အသစ်ရလာပါပြီခင်ဗျာ။\nမကြာမီ အပ်ဒိတ်လုပ်ပေးပါ။',
                       style: TextStyle(
-                        color: Colors.white70,
+                        color: colorScheme.onSurfaceVariant,
                         fontSize: 15,
                         height: 1.4,
                       ),
@@ -103,37 +104,19 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                         width: double.infinity,
                         height: 45,
                         child: ElevatedButton.icon(
-                          onPressed: () async {
-                            if (await canLaunchUrl(Uri.parse(downloadUrl))) {
-                              launchUrl(
-                                Uri.parse(downloadUrl),
-                                mode: LaunchMode.inAppBrowserView,
-                              );
-                            } else {
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text("Failed to open browser!"),
-                                  ),
-                                );
-                              }
-                            }
-                          },
-                          icon: const Icon(
-                            Icons.download_rounded,
-                            color: Colors.white,
+                          onPressed: () => _launchUrl(
+                            downloadUrl,
+                            LaunchMode.inAppBrowserView,
+                            "Failed to open browser!",
                           ),
+                          icon: const Icon(Icons.download_rounded),
                           label: const Text('Download Now'),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                const Color(0xFF4CAF50), // A fresh green tone
-                            foregroundColor:
-                                Colors.white, // Text and icon color
+                            backgroundColor: const Color(0xFF4CAF50),
+                            foregroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 14),
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
@@ -148,36 +131,21 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                         width: double.infinity,
                         height: 45,
                         child: OutlinedButton.icon(
-                          onPressed: () async {
-                            if (await canLaunchUrl(Uri.parse(telegramUrl))) {
-                              launchUrl(
-                                Uri.parse(telegramUrl),
-                                mode: LaunchMode.externalApplication,
-                              );
-                            } else {
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text("Failed to open Telegram!"),
-                                  ),
-                                );
-                              }
-                            }
-                          },
+                          onPressed: () => _launchUrl(
+                            telegramUrl,
+                            LaunchMode.externalApplication,
+                            "Failed to open Telegram!",
+                          ),
                           icon: const Icon(
                             Icons.telegram,
-                            color: Color(0xFF229ED9), // Telegram blue
+                            color: Color(0xFF229ED9),
                           ),
                           label: const Text('Download via Telegram'),
                           style: OutlinedButton.styleFrom(
                             side: const BorderSide(color: Color(0xFF229ED9)),
-                            foregroundColor: Colors.white,
+                            foregroundColor: colorScheme.onSurface,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
-                            ),
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 20,
-                              vertical: 14,
                             ),
                             textStyle: const TextStyle(
                               fontSize: 16,
@@ -190,11 +158,11 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              const Text(
+              Text(
                 'အပ်ဒိတ်မှာပြဿနာရှိပါက Messenger မှတစ်ဆင့် ဆက်သွယ်နိုင်ပါတယ်။',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white70,
+                  color: colorScheme.onSurfaceVariant,
                   fontSize: 14,
                 ),
               ),
@@ -205,21 +173,21 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                     context,
                     '/home',
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
                         'Skip',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: colorScheme.onSurface,
                           fontWeight: FontWeight.w500,
                           fontFamily: "ArchivoBlack Regular",
                         ),
                       ),
-                      SizedBox(width: 6),
+                      const SizedBox(width: 6),
                       Icon(
                         Icons.chevron_right,
-                        color: Colors.white,
+                        color: colorScheme.onSurface,
                       ),
                     ],
                   ),
@@ -229,5 +197,21 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
         ),
       ),
     );
+  }
+
+  Future<void> _launchUrl(
+    String url,
+    LaunchMode mode,
+    String errorMessage,
+  ) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      launchUrl(Uri.parse(url), mode: mode);
+    } else {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(errorMessage)),
+        );
+      }
+    }
   }
 }

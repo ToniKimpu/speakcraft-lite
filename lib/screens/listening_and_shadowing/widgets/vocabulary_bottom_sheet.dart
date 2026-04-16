@@ -85,6 +85,7 @@ class _VocabularyBottomSheetState extends State<VocabularyBottomSheet> {
         _isSaved = true;
         _busy = false;
       });
+      Navigator.of(context).pop();
       messenger
         ..clearSnackBars()
         ..showSnackBar(SnackBar(
@@ -120,6 +121,7 @@ class _VocabularyBottomSheetState extends State<VocabularyBottomSheet> {
         _isSaved = false;
         _busy = false;
       });
+      Navigator.of(context).pop();
       messenger
         ..clearSnackBars()
         ..showSnackBar(SnackBar(

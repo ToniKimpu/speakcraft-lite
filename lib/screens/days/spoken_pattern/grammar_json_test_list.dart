@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 
 import 'grammar_explanation_json_view.dart';
 
-/// Debug screen: lists all local day_list JSON assets for testing.
+/// Debug screen: lists all local spoken_patterns JSON assets for testing.
 class GrammarJsonTestList extends StatefulWidget {
   const GrammarJsonTestList({super.key});
 
@@ -27,18 +27,18 @@ class _GrammarJsonTestListState extends State<GrammarJsonTestList> {
     final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
     final keys = manifest
         .listAssets()
-        .where((k) => k.startsWith('assets/day_list/') && k.endsWith('.json'))
+        .where((k) => k.startsWith('assets/spoken_patterns/') && k.endsWith('.json'))
         .toList()
       ..sort();
 
     final entries = <_AssetEntry>[];
     for (final key in keys) {
       final parts = key.split('/');
-      // assets/day_list/day_01/lesson_01.json
+      // assets/spoken_patterns/day_01/want_to.json
       if (parts.length >= 4) {
         entries.add(_AssetEntry(
           dayFolder: parts[2],
-          lessonFile: parts[3].replaceAll('.json', ''),
+          fileName: parts[3].replaceAll('.json', ''),
           assetPath: key,
         ));
       }
@@ -66,19 +66,19 @@ class _GrammarJsonTestListState extends State<GrammarJsonTestList> {
                 final entry = _assets[index];
                 return ListTile(
                   title: Text(
-                    '${entry.dayFolder} / ${entry.lessonFile}',
+                    '${entry.dayFolder} / ${entry.fileName}',
                     style: TextStyle(color: colorScheme.onSurface),
                   ),
                   trailing: Icon(Icons.chevron_right,
                       color: colorScheme.onSurfaceVariant),
-                  onTap: () => _openLesson(entry),
+                  onTap: () => _openPattern(entry),
                 );
               },
             ),
     );
   }
 
-  void _openLesson(_AssetEntry entry) {
+  void _openPattern(_AssetEntry entry) {
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -98,99 +98,30 @@ class _GrammarJsonTestPreview extends StatefulWidget {
 }
 
 class _GrammarJsonTestPreviewState extends State<_GrammarJsonTestPreview> {
-  List<dynamic>? _patterns;
-  int _currentIndex = 0;
-  late final PageController _pageController;
+  Map<String, dynamic>? _data;
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController();
     _loadJson();
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
   }
 
   Future<void> _loadJson() async {
     final raw = await rootBundle.loadString(widget.entry.assetPath);
-    setState(() => _patterns = json.decode(raw) as List<dynamic>);
+    setState(() => _data = json.decode(raw) as Map<String, dynamic>);
   }
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            '${widget.entry.dayFolder} / ${widget.entry.lessonFile}'),
+        title: Text(widget.entry.fileName),
       ),
-      body: _patterns == null
+      body: _data == null
           ? const Center(child: CircularProgressIndicator())
-          : Column(
-              children: [
-                Expanded(
-                  child: PageView.builder(
-                    controller: _pageController,
-                    itemCount: _patterns!.length,
-                    onPageChanged: (i) => setState(() => _currentIndex = i),
-                    itemBuilder: (_, index) {
-                      final p = _patterns![index] as Map<String, dynamic>;
-                      return GrammarExplanationJsonView(
-                        pattern: p['pattern'] as String? ?? '',
-                        sections: (p['sections'] as List<dynamic>?) ?? [],
-                      );
-                    },
-                  ),
-                ),
-                if (_patterns!.length > 1)
-                  Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          onPressed: _currentIndex > 0
-                              ? () => _pageController.previousPage(
-                                    duration: const Duration(milliseconds: 300),
-                                    curve: Curves.easeInOut,
-                                  )
-                              : null,
-                          icon: Icon(Icons.chevron_left,
-                              color: cs.onSurface),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 6),
-                          decoration: BoxDecoration(
-                            color: cs.inverseSurface,
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child: Text(
-                            '${_currentIndex + 1} / ${_patterns!.length}',
-                            style: TextStyle(
-                              color: cs.onInverseSurface,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: _currentIndex < _patterns!.length - 1
-                              ? () => _pageController.nextPage(
-                                    duration: const Duration(milliseconds: 300),
-                                    curve: Curves.easeInOut,
-                                  )
-                              : null,
-                          icon: Icon(Icons.chevron_right,
-                              color: cs.onSurface),
-                        ),
-                      ],
-                    ),
-                  ),
-              ],
+          : GrammarExplanationJsonView(
+              pattern: _data!['pattern'] as String? ?? '',
+              sections: (_data!['sections'] as List<dynamic>?) ?? [],
             ),
     );
   }
@@ -198,11 +129,11 @@ class _GrammarJsonTestPreviewState extends State<_GrammarJsonTestPreview> {
 
 class _AssetEntry {
   final String dayFolder;
-  final String lessonFile;
+  final String fileName;
   final String assetPath;
   const _AssetEntry({
     required this.dayFolder,
-    required this.lessonFile,
+    required this.fileName,
     required this.assetPath,
   });
 }

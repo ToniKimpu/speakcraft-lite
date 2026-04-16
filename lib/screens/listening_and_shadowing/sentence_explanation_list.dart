@@ -180,9 +180,10 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                           onPressed: () {
                             Navigator.pushNamed(
                               context,
-                              PmpRoutes.sentenceExplanationPage,
+                              PmpRoutes.sentenceExplanationPager,
                               arguments: {
-                                'sentence_explanation': item,
+                                'explanations': items,
+                                'index': index,
                               },
                             );
                           },

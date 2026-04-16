@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 
 /// Renders a grammar-pattern explanation from structured JSON sections.
@@ -20,13 +21,13 @@ class GrammarExplanationJsonView extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return ListView(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       children: [
         _PatternCard(pattern: pattern),
-        const SizedBox(height: 16),
+        const SizedBox(height: 20),
         for (final section in sections) ...[
           _buildSection(context, colorScheme, section as Map<String, dynamic>),
-          const SizedBox(height: 16),
+          const SizedBox(height: 20),
         ],
       ],
     );
@@ -92,6 +93,18 @@ class GrammarExplanationJsonView extends StatelessWidget {
   }
 }
 
+// ─── Accent color constants ─────────────────────────────────────
+// Semantic colors for educational content — keeps app chrome B&W
+// but makes learning material vibrant and engaging.
+
+const _gold = PmpColors.warning400;
+const _goldDark = PmpColors.warning600;
+const _green = PmpColors.success400;
+const _red = PmpColors.destructive400;
+const _blue = PmpColors.info400;
+
+const _accentColors = [_green, _red, _blue, _gold];
+
 // ─── Pattern card ───────────────────────────────────────────────
 
 class _PatternCard extends StatelessWidget {
@@ -103,20 +116,28 @@ class _PatternCard extends StatelessWidget {
     final cs = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 18),
       decoration: BoxDecoration(
-        color: cs.primaryContainer,
+        color: _gold.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: cs.outline),
+        border: Border.all(color: _gold.withValues(alpha: 0.4)),
+        boxShadow: [
+          BoxShadow(
+            color: cs.shadow.withValues(alpha: 0.06),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
       child: Text(
         pattern,
         textAlign: TextAlign.center,
         style: PmpTextStyles.body1Regular.copyWith(
-          color: cs.onPrimaryContainer,
+          color: _goldDark,
           fontWeight: FontWeight.bold,
           fontSize: 18,
           letterSpacing: 0.5,
+          fontFamily: 'ArchivoBlack Regular',
         ),
       ),
     );
@@ -150,21 +171,7 @@ class _HeadingSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
-    return Container(
-      padding: const EdgeInsets.only(left: 10),
-      decoration: BoxDecoration(
-        border: Border(left: BorderSide(color: cs.primary, width: 4)),
-      ),
-      child: Text(
-        text,
-        style: PmpTextStyles.body1Regular.copyWith(
-          color: cs.onSurface,
-          fontWeight: FontWeight.bold,
-          fontSize: 17,
-        ),
-      ),
-    );
+    return _SectionTitle(text: text);
   }
 }
 
@@ -190,13 +197,13 @@ class _ExplanationSection extends StatelessWidget {
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             color: cs.surfaceContainerHighest,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(12),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               for (int i = 0; i < items.length; i++) ...[
-                if (i > 0) const SizedBox(height: 8),
+                if (i > 0) const SizedBox(height: 10),
                 _buildTermRow(cs, items[i] as Map<String, dynamic>),
               ],
             ],
@@ -211,15 +218,15 @@ class _ExplanationSection extends StatelessWidget {
       TextSpan(children: [
         TextSpan(
           text: '${item['term']}: ',
-          style: TextStyle(
-            color: cs.primary,
+          style: const TextStyle(
+            color: _green,
             fontWeight: FontWeight.bold,
             fontSize: 14,
           ),
         ),
         TextSpan(
           text: item['definition'] as String? ?? '',
-          style: TextStyle(color: cs.onSurface, fontSize: 14),
+          style: TextStyle(color: cs.onSurface, fontSize: 14, height: 1.5),
         ),
       ]),
     );
@@ -256,8 +263,12 @@ class _AgreementSection extends StatelessWidget {
           spacing: 10,
           runSpacing: 10,
           children: [
-            for (final g in groups)
-              _buildGroupChip(cs, g as Map<String, dynamic>),
+            for (int i = 0; i < groups.length; i++)
+              _buildGroupChip(
+                cs,
+                groups[i] as Map<String, dynamic>,
+                _accentColors[i % _accentColors.length],
+              ),
           ],
         ),
         if (footnote != null)
@@ -265,8 +276,8 @@ class _AgreementSection extends StatelessWidget {
             padding: const EdgeInsets.only(top: 10),
             child: Text(
               footnote!,
-              style: TextStyle(
-                color: cs.onSurfaceVariant,
+              style: const TextStyle(
+                color: _gold,
                 fontSize: 13,
                 fontStyle: FontStyle.italic,
               ),
@@ -276,14 +287,18 @@ class _AgreementSection extends StatelessWidget {
     );
   }
 
-  Widget _buildGroupChip(ColorScheme cs, Map<String, dynamic> g) {
+  Widget _buildGroupChip(
+    ColorScheme cs,
+    Map<String, dynamic> g,
+    Color accent,
+  ) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         color: cs.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(12),
         border: Border(
-          bottom: BorderSide(color: cs.primary, width: 3),
+          bottom: BorderSide(color: accent, width: 3),
         ),
       ),
       child: Column(
@@ -296,11 +311,11 @@ class _AgreementSection extends StatelessWidget {
               fontSize: 14,
             ),
           ),
-          const SizedBox(height: 2),
+          const SizedBox(height: 4),
           Text(
             g['verb'] as String? ?? '',
             style: TextStyle(
-              color: cs.primary,
+              color: accent,
               fontWeight: FontWeight.bold,
               fontSize: 14,
             ),
@@ -320,7 +335,6 @@ class _NoteSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -332,13 +346,16 @@ class _NoteSection extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: cs.tertiaryContainer,
-            borderRadius: BorderRadius.circular(10),
+            color: _gold.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(12),
+            border: const Border(
+              left: BorderSide(color: _goldDark, width: 4),
+            ),
           ),
           child: Text(
             text,
             style: TextStyle(
-              color: cs.onTertiaryContainer,
+              color: Theme.of(context).colorScheme.onSurface,
               fontSize: 14,
               height: 1.6,
             ),
@@ -377,7 +394,7 @@ class _TableSection extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             color: cs.surfaceContainerHighest,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(12),
           ),
           clipBehavior: Clip.antiAlias,
           child: Table(
@@ -386,6 +403,7 @@ class _TableSection extends StatelessWidget {
               if (headers.isNotEmpty)
                 TableRow(
                   decoration: BoxDecoration(
+                    color: _gold.withValues(alpha: 0.1),
                     border: Border(
                       bottom: BorderSide(color: cs.outlineVariant),
                     ),
@@ -396,8 +414,8 @@ class _TableSection extends StatelessWidget {
                         padding: const EdgeInsets.all(10),
                         child: Text(
                           h,
-                          style: TextStyle(
-                            color: cs.primary,
+                          style: const TextStyle(
+                            color: _goldDark,
                             fontWeight: FontWeight.bold,
                             fontSize: 13,
                           ),
@@ -475,34 +493,69 @@ class _ExamplesSection extends StatelessWidget {
     );
   }
 
-  Widget _buildExampleCard(ColorScheme cs, int index, Map<String, dynamic> item) {
+  Widget _buildExampleCard(
+      ColorScheme cs, int index, Map<String, dynamic> item) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: cs.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: cs.shadow.withValues(alpha: 0.04),
+            blurRadius: 4,
+            offset: const Offset(0, 1),
+          ),
+        ],
       ),
-      child: Column(
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            '${index + 1}. ${item['english'] ?? ''}',
-            style: TextStyle(
-              color: cs.onSurface,
-              fontWeight: FontWeight.bold,
-              fontSize: 15,
-              fontFamily: 'ArchivoBlack Regular',
+          Container(
+            width: 26,
+            height: 26,
+            decoration: BoxDecoration(
+              color: _blue.withValues(alpha: 0.15),
+              borderRadius: BorderRadius.circular(8),
             ),
-          ),
-          if (item['burmese'] != null && (item['burmese'] as String).isNotEmpty)
-            Text(
-              '(${item['burmese']})',
-              style: TextStyle(
-                color: cs.onSurfaceVariant,
-                fontSize: 13,
+            child: Center(
+              child: Text(
+                '${index + 1}',
+                style: const TextStyle(
+                  color: _blue,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 13,
+                ),
               ),
             ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  item['english'] as String? ?? '',
+                  style: TextStyle(
+                    color: cs.onSurface,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    fontFamily: 'ArchivoBlack Regular',
+                  ),
+                ),
+                if (item['burmese'] != null &&
+                    (item['burmese'] as String).isNotEmpty)
+                  Text(
+                    '(${item['burmese']})',
+                    style: TextStyle(
+                      color: cs.onSurfaceVariant,
+                      fontSize: 13,
+                    ),
+                  ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -530,9 +583,9 @@ class _PracticeSection extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: cs.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: cs.primary, width: 2),
+        color: _green.withValues(alpha: 0.06),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: _green, width: 2),
       ),
       child: Column(
         children: [
@@ -540,8 +593,8 @@ class _PracticeSection extends StatelessWidget {
             Text(
               title!,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: cs.primary,
+              style: const TextStyle(
+                color: _green,
                 fontWeight: FontWeight.bold,
                 fontSize: 17,
               ),
@@ -588,8 +641,8 @@ class _PracticeSection extends StatelessWidget {
         TextSpan(children: [
           TextSpan(
             text: '${w['word']} ',
-            style: TextStyle(
-              color: cs.primary,
+            style: const TextStyle(
+              color: _goldDark,
               fontWeight: FontWeight.bold,
               fontSize: 14,
             ),
@@ -612,21 +665,21 @@ class _TipSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(
-          color: cs.outline,
-          style: BorderStyle.solid,
-        ),
+        color: _blue.withValues(alpha: 0.06),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: _blue.withValues(alpha: 0.4)),
       ),
       child: Text(
         text,
         textAlign: TextAlign.center,
-        style: TextStyle(color: cs.onSurface, fontSize: 14),
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.onSurface,
+          fontSize: 14,
+        ),
       ),
     );
   }
@@ -640,16 +693,15 @@ class _SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.only(left: 10),
-      decoration: BoxDecoration(
-        border: Border(left: BorderSide(color: cs.primary, width: 4)),
+      decoration: const BoxDecoration(
+        border: Border(left: BorderSide(color: _blue, width: 4)),
       ),
       child: Text(
         text,
         style: TextStyle(
-          color: cs.onSurface,
+          color: Theme.of(context).colorScheme.onSurface,
           fontWeight: FontWeight.bold,
           fontSize: 17,
         ),

@@ -17,7 +17,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 DATA_DIR = Path("D:/PMP_Projects/data/Day List")
-OUTPUT_DIR = Path("d:/PMP_Projects/pmp-english-mobile/assets/day_list")
+OUTPUT_DIR = Path("d:/PMP_Projects/pmp-english-mobile/assets/spoken_patterns")
 
 
 class TextExtractor(HTMLParser):
@@ -354,30 +354,26 @@ def main():
             if not lesson_folder.is_dir():
                 continue
 
-            lesson_key = normalize_lesson_num(lesson_folder.name)
             html_files = sorted(lesson_folder.glob("*.html"))
-
             if not html_files:
                 continue
 
-            patterns = []
             for html_file in html_files:
                 try:
                     parsed = parse_html_file(html_file)
-                    patterns.append(parsed)
+                    # Use the original HTML filename (without extension) as JSON name
+                    json_name = html_file.stem + ".json"
+                    out_path = day_out / json_name
+                    out_path.write_text(
+                        json.dumps(parsed, ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
                     total_files += 1
+                    print(f"  {day_key}/{json_name}")
                 except Exception as e:
                     print(f"  ERROR parsing {html_file}: {e}")
 
-            out_path = day_out / f"{lesson_key}.json"
-            out_path.write_text(
-                json.dumps(patterns, ensure_ascii=False, indent=2),
-                encoding="utf-8",
-            )
-            total_lessons += 1
-            print(f"  {day_key}/{lesson_key}.json ({len(patterns)} patterns)")
-
-    print(f"\nDone: {total_files} HTML files -> {total_lessons} JSON files")
+    print(f"\nDone: {total_files} HTML files -> {total_files} JSON files")
 
 
 if __name__ == "__main__":

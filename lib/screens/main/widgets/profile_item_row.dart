@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 
 class ProfileItemRow extends StatelessWidget {
@@ -29,9 +30,7 @@ class ProfileItemRow extends StatelessWidget {
             ? const BorderRadius.only(
                 bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8))
             : null;
-    // White PNG icons need a consistently dark tile so they stay legible in
-    // both themes — use inverseSurface (white→black flip).
-    final iconTileColor = colorScheme.inverseSurface;
+    const iconTileColor = PmpColors.info500;
     return Material(
       color: Colors.transparent,
       borderRadius: borderRadius,

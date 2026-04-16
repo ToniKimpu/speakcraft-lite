@@ -8,6 +8,7 @@ import 'package:pmp_english/screens/days/spoken_pattern_exercise_screen.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_list.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_page.dart';
+import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_pager.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_page.dart';
 import 'package:pmp_english/screens/main/free_user_screen.dart';
 import 'package:pmp_english/screens/main/new_version_screen.dart';
@@ -77,6 +78,7 @@ class PmpRoutes {
   static const speechPracticeSessionPage = '/speech_practice_session_page';
   static const sentenceExplanationList = '/sentence_explanation_list';
   static const sentenceExplanationPage = '/sentence_explanation_page';
+  static const sentenceExplanationPager = '/sentence_explanation_pager';
   static const spokenPatternDetail = '/spoken_pattern_detail';
   static const htmlList = '/html_list';
   static const htmlPreview = '/html_preview';
@@ -217,6 +219,16 @@ class PmpRoutes {
         return _getRoute(
           SentenceExplanationPage(
             sentenceExplanation: sentenceExplanation,
+          ),
+          settings,
+        );
+      case sentenceExplanationPager:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          SentenceExplanationPager(
+            explanations:
+                args['explanations'] as List<SentenceExplanation>,
+            initialIndex: args['index'] as int? ?? 0,
           ),
           settings,
         );

@@ -152,36 +152,36 @@ flutter:
     - assets/days/day_29/
     - assets/days/day_30/
     - assets/grit/
-    - assets/day_list/day_01/
-    - assets/day_list/day_02/
-    - assets/day_list/day_03/
-    - assets/day_list/day_04/
-    - assets/day_list/day_05/
-    - assets/day_list/day_06/
-    - assets/day_list/day_07/
-    - assets/day_list/day_08/
-    - assets/day_list/day_09/
-    - assets/day_list/day_10/
-    - assets/day_list/day_11/
-    - assets/day_list/day_12/
-    - assets/day_list/day_13/
-    - assets/day_list/day_14/
-    - assets/day_list/day_15/
-    - assets/day_list/day_16/
-    - assets/day_list/day_17/
-    - assets/day_list/day_18/
-    - assets/day_list/day_19/
-    - assets/day_list/day_20/
-    - assets/day_list/day_21/
-    - assets/day_list/day_22/
-    - assets/day_list/day_23/
-    - assets/day_list/day_24/
-    - assets/day_list/day_25/
-    - assets/day_list/day_26/
-    - assets/day_list/day_27/
-    - assets/day_list/day_28/
-    - assets/day_list/day_29/
-    - assets/day_list/day_30/
+    - assets/spoken_patterns/day_01/
+    - assets/spoken_patterns/day_02/
+    - assets/spoken_patterns/day_03/
+    - assets/spoken_patterns/day_04/
+    - assets/spoken_patterns/day_05/
+    - assets/spoken_patterns/day_06/
+    - assets/spoken_patterns/day_07/
+    - assets/spoken_patterns/day_08/
+    - assets/spoken_patterns/day_09/
+    - assets/spoken_patterns/day_10/
+    - assets/spoken_patterns/day_11/
+    - assets/spoken_patterns/day_12/
+    - assets/spoken_patterns/day_13/
+    - assets/spoken_patterns/day_14/
+    - assets/spoken_patterns/day_15/
+    - assets/spoken_patterns/day_16/
+    - assets/spoken_patterns/day_17/
+    - assets/spoken_patterns/day_18/
+    - assets/spoken_patterns/day_19/
+    - assets/spoken_patterns/day_20/
+    - assets/spoken_patterns/day_21/
+    - assets/spoken_patterns/day_22/
+    - assets/spoken_patterns/day_23/
+    - assets/spoken_patterns/day_24/
+    - assets/spoken_patterns/day_25/
+    - assets/spoken_patterns/day_26/
+    - assets/spoken_patterns/day_27/
+    - assets/spoken_patterns/day_28/
+    - assets/spoken_patterns/day_29/
+    - assets/spoken_patterns/day_30/
     - logo/
     # - shorebird.yaml
 

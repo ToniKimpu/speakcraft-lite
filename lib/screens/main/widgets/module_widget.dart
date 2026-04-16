@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 
 class ModuleWidget extends StatelessWidget {
@@ -29,55 +30,63 @@ class ModuleWidget extends StatelessWidget {
         color: colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: colorScheme.outlineVariant),
+        boxShadow: [
+          BoxShadow(
+            color: colorScheme.shadow.withValues(alpha: 0.06),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(
-                iconTitle,
-                size: 20,
-                color: colorScheme.onSurface,
-              ),
-              const SizedBox(width: 8),
-              Text(
-                title,
-                style: PmpTextStyles.body1Regular.copyWith(
+              Container(
+                width: 36,
+                height: 36,
+                decoration: BoxDecoration(
+                  color: colorScheme.inverseSurface.withValues(alpha: 0.08),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Icon(
+                  iconTitle,
+                  size: 20,
                   color: colorScheme.onSurface,
-                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  title,
+                  style: PmpTextStyles.body1Regular.copyWith(
+                    color: colorScheme.onSurface,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 10),
-          Container(
-            height: 1,
-            width: double.infinity,
-            color: colorScheme.outlineVariant,
-            margin: const EdgeInsets.symmetric(vertical: 8),
-          ),
-          const SizedBox(height: 10),
+          Divider(color: colorScheme.outlineVariant, height: 24),
           _buildBulletPoint(context, label1, iconLabel1),
           const SizedBox(height: 10),
           _buildBulletPoint(context, label2, iconLabel2),
-          const SizedBox(height: 12),
+          const SizedBox(height: 16),
           Align(
             alignment: Alignment.bottomRight,
-            child: TextButton(
+            child: FilledButton.icon(
               onPressed: () => onPressed?.call(),
-              style: TextButton.styleFrom(
-                foregroundColor: colorScheme.primary,
-                textStyle: PmpTextStyles.body2Regular,
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text('Start'),
-                  const SizedBox(width: 4),
-                  Icon(Icons.chevron_right, size: 20, color: colorScheme.primary),
-                ],
+              icon: const Icon(Icons.arrow_forward, size: 16),
+              label: const Text('Start'),
+              style: FilledButton.styleFrom(
+                backgroundColor: PmpColors.info500,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               ),
             ),
           ),

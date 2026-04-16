@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/config/common_extensions.dart';
@@ -31,7 +32,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final scaffoldColor = Theme.of(context).scaffoldBackgroundColor;
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle(
+        statusBarColor: scaffoldColor,
+        statusBarIconBrightness: isDark ? Brightness.light : Brightness.dark,
+        systemNavigationBarColor: scaffoldColor,
+        systemNavigationBarIconBrightness:
+            isDark ? Brightness.light : Brightness.dark,
+      ),
+      child: Scaffold(
       body: MultiBlocListener(
         listeners: [
           BlocListener<AuthBloc, AuthState>(
@@ -110,11 +121,14 @@ class _SplashScreenState extends State<SplashScreen> {
               const SizedBox(height: 24),
               Text(
                 "PMP English App",
-                style: PmpTextStyles.body1Semi.copyWith(color: Colors.white),
+                style: PmpTextStyles.body1Semi.copyWith(
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
               ),
             ],
           ),
         ),
+      ),
       ),
     );
   }

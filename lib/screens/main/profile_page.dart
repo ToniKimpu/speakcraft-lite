@@ -20,10 +20,17 @@ class ProfilePage extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return BoxDecoration(
       color: colorScheme.surfaceContainerHighest,
-      borderRadius: const BorderRadius.all(Radius.circular(12)),
+      borderRadius: const BorderRadius.all(Radius.circular(16)),
       border: Border.fromBorderSide(
         BorderSide(color: colorScheme.outlineVariant),
       ),
+      boxShadow: [
+        BoxShadow(
+          color: colorScheme.shadow.withValues(alpha: 0.06),
+          blurRadius: 8,
+          offset: const Offset(0, 2),
+        ),
+      ],
     );
   }
 
@@ -167,24 +174,27 @@ class _StatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          value,
-          style: PmpTextStyles.inter.copyWith(
-            fontSize: 28,
-            color: colorScheme.onSurface,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            value,
+            style: PmpTextStyles.inter.copyWith(
+              fontSize: 28,
+              color: colorScheme.onSurface,
+            ),
           ),
-        ),
-        const SizedBox(height: 2),
-        Text(
-          label,
-          style: PmpTextStyles.labelSemi.copyWith(
-            color: colorScheme.onSurfaceVariant,
+          const SizedBox(height: 4),
+          Text(
+            label,
+            style: PmpTextStyles.labelSemi.copyWith(
+              color: colorScheme.onSurfaceVariant,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
