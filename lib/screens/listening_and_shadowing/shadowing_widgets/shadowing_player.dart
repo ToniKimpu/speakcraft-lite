@@ -15,6 +15,8 @@ class ShadowingPlayer extends StatelessWidget {
     required this.positionListenable,
     required this.totalDuration,
     required this.onTogglePlay,
+    this.segmentStart,
+    this.segmentEnd,
   });
   final Listening listening;
   final YoutubePlayerController controller;
@@ -22,6 +24,11 @@ class ShadowingPlayer extends StatelessWidget {
   final ValueListenable<Duration> positionListenable;
   final Duration totalDuration;
   final VoidCallback onTogglePlay;
+
+  /// Optional segment bounds. When both are set the slider and time labels
+  /// are scoped to this range instead of [Duration.zero]..[totalDuration].
+  final Duration? segmentStart;
+  final Duration? segmentEnd;
 
   @override
   Widget build(BuildContext context) {
@@ -104,58 +111,7 @@ class ShadowingPlayer extends StatelessWidget {
             const SizedBox(width: 16),
             // Slider + Time
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SliderTheme(
-                    data: SliderTheme.of(context).copyWith(
-                      trackHeight: 4,
-                      thumbShape: const RoundSliderThumbShape(
-                        enabledThumbRadius: 5,
-                      ),
-                      overlayShape: SliderComponentShape.noOverlay,
-                    ),
-                    child: ValueListenableBuilder<Duration>(
-                      valueListenable: positionListenable,
-                      builder: (context, position, _) => Slider(
-                        value: position.inMilliseconds
-                            .clamp(0, totalDuration.inMilliseconds)
-                            .toDouble(),
-                        min: 0,
-                        max: totalDuration.inMilliseconds.toDouble(),
-                        thumbColor: onSurface,
-                        activeColor: Colors.orange,
-                        inactiveColor: onSurface.withValues(alpha: 0.2),
-                        onChanged: (value) {},
-                        onChangeEnd: (value) {
-                          controller
-                              .seekTo(Duration(milliseconds: value.round()));
-                        },
-                      ),
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ValueListenableBuilder<Duration>(
-                        valueListenable: positionListenable,
-                        builder: (context, position, _) => Text(
-                          _formatDuration(position),
-                          style: PmpTextStyles.subBold.copyWith(
-                            color: onSurface,
-                          ),
-                        ),
-                      ),
-                      Text(
-                        _formatDuration(totalDuration),
-                        style: PmpTextStyles.subBold.copyWith(
-                          color: onSurface,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              child: _buildSliderSection(context, onSurface),
             ),
             const SizedBox(width: 12),
             GestureDetector(
@@ -197,6 +153,82 @@ class ShadowingPlayer extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildSliderSection(BuildContext context, Color onSurface) {
+    final hasSegment = segmentStart != null && segmentEnd != null;
+    final sliderMinMs =
+        hasSegment ? segmentStart!.inMilliseconds.toDouble() : 0.0;
+    final sliderMaxMs = hasSegment
+        ? segmentEnd!.inMilliseconds.toDouble()
+        : totalDuration.inMilliseconds.toDouble();
+    final segmentLength =
+        hasSegment ? segmentEnd! - segmentStart! : totalDuration;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SliderTheme(
+          data: SliderTheme.of(context).copyWith(
+            trackHeight: 4,
+            thumbShape: const RoundSliderThumbShape(
+              enabledThumbRadius: 5,
+            ),
+            overlayShape: SliderComponentShape.noOverlay,
+          ),
+          child: ValueListenableBuilder<Duration>(
+            valueListenable: positionListenable,
+            builder: (context, position, _) {
+              final clampedMs =
+                  position.inMilliseconds.clamp(sliderMinMs, sliderMaxMs);
+              return Slider(
+                value: clampedMs.toDouble(),
+                min: sliderMinMs,
+                max: sliderMaxMs,
+                thumbColor: onSurface,
+                activeColor: Colors.orange,
+                inactiveColor: onSurface.withValues(alpha: 0.2),
+                onChanged: (value) {},
+                onChangeEnd: (value) {
+                  controller
+                      .seekTo(Duration(milliseconds: value.round()));
+                },
+              );
+            },
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ValueListenableBuilder<Duration>(
+              valueListenable: positionListenable,
+              builder: (context, position, _) {
+                final relative = hasSegment
+                    ? position - segmentStart!
+                    : position;
+                final clamped = relative.isNegative
+                    ? Duration.zero
+                    : relative > segmentLength
+                        ? segmentLength
+                        : relative;
+                return Text(
+                  _formatDuration(clamped),
+                  style: PmpTextStyles.subBold.copyWith(
+                    color: onSurface,
+                  ),
+                );
+              },
+            ),
+            Text(
+              _formatDuration(segmentLength),
+              style: PmpTextStyles.subBold.copyWith(
+                color: onSurface,
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 

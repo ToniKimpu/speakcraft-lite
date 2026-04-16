@@ -26,6 +26,7 @@ import '../screens/days/day_list_screen.dart';
 import '../screens/days/pattern_exercise_result_screen.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_detail.dart';
 import '../screens/days/spoken_pattern/spoken_pattern_screen.dart';
+import '../screens/days/spoken_pattern/grammar_json_test_list.dart';
 import '../screens/grit_json_list.dart';
 import '../screens/grit_json_preview.dart';
 import '../screens/html_day_list.dart';
@@ -82,6 +83,7 @@ class PmpRoutes {
   static const savedWordsPage = '/saved_words_page';
   static const gritJsonList = '/grit_json_list';
   static const gritJsonPreview = '/grit_json_preview';
+  static const grammarJsonTest = '/grammar_json_test';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -237,6 +239,8 @@ class PmpRoutes {
           const HtmlDayList(),
           settings,
         );
+      case grammarJsonTest:
+        return _getRoute(const GrammarJsonTestList(), settings);
       case gritJsonList:
         return _getRoute(const GritJsonList(), settings);
       case gritJsonPreview:

@@ -141,6 +141,14 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: const Text('Grit JSON List'),
               ),
+            const SizedBox(height: 8),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, PmpRoutes.grammarJsonTest);
+                },
+                child: const Text('Grammar JSON Test'),
+              ),
             const SizedBox(height: 12),
 
             if (kDebugMode)

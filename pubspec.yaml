@@ -152,6 +152,36 @@ flutter:
     - assets/days/day_29/
     - assets/days/day_30/
     - assets/grit/
+    - assets/day_list/day_01/
+    - assets/day_list/day_02/
+    - assets/day_list/day_03/
+    - assets/day_list/day_04/
+    - assets/day_list/day_05/
+    - assets/day_list/day_06/
+    - assets/day_list/day_07/
+    - assets/day_list/day_08/
+    - assets/day_list/day_09/
+    - assets/day_list/day_10/
+    - assets/day_list/day_11/
+    - assets/day_list/day_12/
+    - assets/day_list/day_13/
+    - assets/day_list/day_14/
+    - assets/day_list/day_15/
+    - assets/day_list/day_16/
+    - assets/day_list/day_17/
+    - assets/day_list/day_18/
+    - assets/day_list/day_19/
+    - assets/day_list/day_20/
+    - assets/day_list/day_21/
+    - assets/day_list/day_22/
+    - assets/day_list/day_23/
+    - assets/day_list/day_24/
+    - assets/day_list/day_25/
+    - assets/day_list/day_26/
+    - assets/day_list/day_27/
+    - assets/day_list/day_28/
+    - assets/day_list/day_29/
+    - assets/day_list/day_30/
     - logo/
     # - shorebird.yaml
 

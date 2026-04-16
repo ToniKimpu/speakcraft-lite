@@ -39,6 +39,7 @@ class PracticeTextField extends StatefulWidget {
 class _PracticeTextFieldState extends State<PracticeTextField> {
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
@@ -50,8 +51,9 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
         maxLines: widget.maxLines,
         maxLength: widget.maxLength,
         readOnly: widget.readOnly,
-        style: widget.textStyle ?? const TextStyle(color: Colors.white),
-        cursorColor: Colors.white,
+        style: widget.textStyle ??
+            TextStyle(color: colorScheme.onSurface),
+        cursorColor: colorScheme.onSurface,
         scrollPadding: const EdgeInsets.only(bottom: 120),
         onSubmitted: (value) => widget.onSubmitted?.call(),
         onChanged: (value) => widget.onChange?.call(value),
@@ -63,47 +65,33 @@ class _PracticeTextFieldState extends State<PracticeTextField> {
           return Text(
             "$currentLength/$maxLength",
             style: PmpTextStyles.labelSemi.copyWith(
-              color: Colors.white.withValues(alpha: 0.7),
+              color: colorScheme.onSurfaceVariant,
             ),
           );
         },
         decoration: InputDecoration(
-          fillColor: Colors.white.withValues(alpha: 0.1),
+          fillColor: colorScheme.surfaceContainerHighest,
           filled: true,
           contentPadding: const EdgeInsets.all(12),
-          constraints: const BoxConstraints(
-              // maxHeight: widget.maxHeight ?? 88.0,
-              ),
+          constraints: const BoxConstraints(),
           border: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white.withValues(alpha: 0.5), // Subtle border
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(8),
-            ),
+            borderSide: BorderSide(color: colorScheme.outline),
+            borderRadius: const BorderRadius.all(Radius.circular(8)),
             gapPadding: 1.0,
           ),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white.withValues(alpha: 0.5),
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(8),
-            ),
+            borderSide: BorderSide(color: colorScheme.outline),
+            borderRadius: const BorderRadius.all(Radius.circular(8)),
             gapPadding: 1.0,
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white.withValues(alpha: 0.5),
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(8),
-            ),
+            borderSide: BorderSide(color: colorScheme.onSurface),
+            borderRadius: const BorderRadius.all(Radius.circular(8)),
             gapPadding: 1.0,
           ),
           hintText: widget.hintText ?? "Enter your answer...",
           hintStyle: PmpTextStyles.body2Semi.copyWith(
-            color: Colors.white.withValues(alpha: 0.5),
+            color: colorScheme.onSurfaceVariant,
           ),
         ),
         inputFormatters: !widget.englishOnly

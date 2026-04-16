@@ -49,8 +49,8 @@ class ActionsBottomSheet extends StatelessWidget {
             const SizedBox(height: 24),
             if (listening.subtitlePath.trim().isNotEmpty)
               _ActionItem(
-                icon: Icons.music_note_sharp,
-                label: 'Play Now',
+                icon: Icons.play_circle_outline,
+                label: 'Watch',
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.pushNamed(

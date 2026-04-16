@@ -81,8 +81,9 @@ class _RecorderState extends State<Recorder> {
   Widget build(BuildContext context) {
     final minutes = _format(widget.recordDuration ~/ 60);
     final seconds = _format(widget.recordDuration % 60);
-    // final isRecording = widget.recordState == RecordState.record;
     final isPaused = widget.recordState == RecordState.pause;
+    final colorScheme = Theme.of(context).colorScheme;
+    final onSurface = colorScheme.onSurface;
 
     return SafeArea(
       child: Padding(
@@ -95,7 +96,6 @@ class _RecorderState extends State<Recorder> {
                 ? null
                 : () {
                     _start();
-                    // widget.onStop.call(widget.audioRecorder);
                   },
             child: Ink(
               width: double.infinity,
@@ -103,28 +103,28 @@ class _RecorderState extends State<Recorder> {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                color: Colors.white.withValues(alpha: 0.04),
+                color: colorScheme.surfaceContainerHighest,
                 border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.2),
+                  color: colorScheme.outlineVariant,
                   width: 1.5,
                 ),
               ),
               child: widget.recordState == RecordState.stop
-                  ? const Row(
+                  ? Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
                           Icons.mic,
-                          color: Colors.white,
+                          color: onSurface,
                           size: 20,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 12,
                         ),
                         Text(
                           "Tap to record",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: onSurface,
                             fontSize: 13,
                             fontWeight: FontWeight.w500,
                           ),
@@ -135,14 +135,6 @@ class _RecorderState extends State<Recorder> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // const SizedBox(width: 18),
-                        // if (widget.recordState != RecordState.stop)
-                        // _buildCircleButton(
-                        //   icon: isPaused ? Icons.play_arrow : Icons.pause,
-                        //   color: Colors.orange,
-                        //   iconColor: Colors.white,
-                        //   onTap: () => isPaused ? _resume() : _pause(),
-                        // ),
                         InkWell(
                           borderRadius: BorderRadius.circular(100),
                           onTap: () => _stop(),
@@ -152,11 +144,12 @@ class _RecorderState extends State<Recorder> {
                               width: 20,
                               height: 20,
                               decoration: BoxDecoration(
-                                color: Colors.red,
+                                color: colorScheme.error,
                                 borderRadius: BorderRadius.circular(4),
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
-                                    color: Colors.black.withValues(alpha: 0.2),
+                                    color: colorScheme.shadow
+                                        .withValues(alpha: 0.2),
                                     spreadRadius: 3,
                                     blurRadius: 8,
                                     offset: const Offset(0, 4),
@@ -177,15 +170,15 @@ class _RecorderState extends State<Recorder> {
                             child: Icon(
                               isPaused ? Icons.play_arrow : Icons.pause,
                               size: 32,
-                              color: Colors.white,
+                              color: onSurface,
                             ),
                           ),
                         ),
                         const Spacer(),
                         Text(
                           "$minutes:$seconds",
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style: TextStyle(
+                            color: onSurface,
                             fontSize: 12,
                             letterSpacing: 0.5,
                             fontFamily: "ArchivoBlack Regular",

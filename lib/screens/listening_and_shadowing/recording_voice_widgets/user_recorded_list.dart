@@ -36,13 +36,14 @@ class _UserRecordedListState extends State<UserRecordedList> {
         UserRecordedSentenceAudioState>(
       bloc: widget.userRecordedSentenceAudioBloc,
       builder: (context, state) {
+        final colorScheme = Theme.of(context).colorScheme;
         return state.maybeWhen(
           loading: (message) {
             return const Center(
               child: SizedBox(
                 width: 18,
                 height: 18,
-                child: CircularProgressIndicator(color: Colors.white),
+                child: CircularProgressIndicator(),
               ),
             );
           },
@@ -58,12 +59,12 @@ class _UserRecordedListState extends State<UserRecordedList> {
                 'voice_${nextVoiceIndex.toString().padLeft(3, '0')}';
             widget.onNewVoiceName(newVoiceName);
             if (filteredData.isEmpty) {
-              return const Center(
+              return Center(
                 child: Text(
                   "No Record Found For This Sentence",
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.white,
+                    color: colorScheme.onSurfaceVariant,
                     fontWeight: FontWeight.w400,
                     fontFamily: "ArchivoBlack Regular",
                   ),
@@ -96,14 +97,14 @@ class _UserRecordedListState extends State<UserRecordedList> {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: isPlaying
-                                    ? Colors.redAccent
-                                    : Colors.blueAccent,
+                                    ? colorScheme.error
+                                    : colorScheme.inverseSurface,
                               ),
                               child: Icon(
                                 isPlaying
                                     ? Icons.pause_rounded
                                     : Icons.play_arrow_rounded,
-                                color: Colors.white,
+                                color: colorScheme.onInverseSurface,
                                 size: 22,
                               ),
                             ),
@@ -111,9 +112,9 @@ class _UserRecordedListState extends State<UserRecordedList> {
                             Expanded(
                               child: Text(
                                 data.audioName,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 16,
-                                  color: Colors.white,
+                                  color: colorScheme.onSurface,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "ArchivoBlack Regular",
                                 ),
@@ -147,12 +148,12 @@ class _UserRecordedListState extends State<UserRecordedList> {
                                   },
                                 );
                               },
-                              child: const Padding(
-                                padding: EdgeInsets.all(6),
+                              child: Padding(
+                                padding: const EdgeInsets.all(6),
                                 child: Icon(
                                   Icons.delete_forever,
                                   size: 20,
-                                  color: Colors.redAccent,
+                                  color: colorScheme.error,
                                 ),
                               ),
                             ),
@@ -175,7 +176,7 @@ class _UserRecordedListState extends State<UserRecordedList> {
               },
               separatorBuilder: (_, __) => Container(
                 height: 1,
-                color: Colors.white.withValues(alpha: 0.1),
+                color: colorScheme.outlineVariant,
               ),
             );
           },

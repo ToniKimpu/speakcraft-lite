@@ -1,9 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/listening/record_subtitle_bloc.dart';
@@ -20,7 +18,6 @@ import '../../bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_blo
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
 import 'dialogs/save_recording_dialog.dart';
-import 'model/subtitle_line.dart';
 import 'recording_voice_widgets/recorder.dart';
 
 class SpeechPracticeSessionPage extends StatefulWidget {
@@ -37,19 +34,19 @@ class SpeechPracticeSessionPage extends StatefulWidget {
 }
 
 class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
+  static const double _kRecorderHeight = 52.0;
+  static const double _kHandleHeight = 40.0;
+  static const double _kMinProportion = 0.15;
+  static const double _kMaxProportion = 0.85;
+
   late yt_player.YoutubePlayerController _controller;
   late final PageController _pageController;
   final ValueNotifier<Duration> _positionNotifier =
       ValueNotifier(Duration.zero);
+  final ValueNotifier<double> _splitProportionNotifier =
+      ValueNotifier(0.6);
 
   final _userRecordedSentenceAudioBloc = UserRecordedSentenceAudioBloc();
-
-  Future<List<SubtitleLine>> loadSubtitles() async {
-    final jsonString =
-        await rootBundle.loadString("assets/subtitles/shadowing.json");
-    final List<dynamic> jsonList = json.decode(jsonString);
-    return jsonList.map((e) => SubtitleLine.fromJson(e)).toList();
-  }
 
   bool _backPressed = false;
 
@@ -69,7 +66,6 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
 
   Duration _startDuration = Duration.zero;
   Duration _endDuration = Duration.zero;
-  bool _needSeek = true;
 
   @override
   void initState() {
@@ -119,7 +115,6 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
         _positionNotifier.value = pos;
         if (pos.inMilliseconds > _endDuration.inMilliseconds) {
           _controller.pause();
-          _needSeek = true;
         }
       });
     _userRecordedSentenceAudioBloc.add(
@@ -143,6 +138,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
     _recordSubtitleBloc.close();
     _userRecordedSentenceAudioBloc.close();
     _positionNotifier.dispose();
+    _splitProportionNotifier.dispose();
     _recordDurationNotifier.dispose();
     _recordStateNotifier.dispose();
     _currentlyPlayingIndexNotifier.dispose();
@@ -159,6 +155,75 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
     _timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
       _recordDurationNotifier.value = _recordDurationNotifier.value + 1;
     });
+  }
+
+  void _showRecordingSnackBar(BuildContext context) {
+    ScaffoldMessenger.of(context)
+      ..clearSnackBars()
+      ..showSnackBar(const SnackBar(
+        content: Text(
+          "Playback is disabled while recording. Please stop the recording to continue.",
+          style: TextStyle(color: PmpColors.white),
+        ),
+        backgroundColor: Colors.green,
+        closeIconColor: PmpColors.white,
+        showCloseIcon: true,
+      ));
+  }
+
+  Widget _buildDragHandle(ColorScheme colorScheme, double usableHeight) {
+    return GestureDetector(
+      behavior: HitTestBehavior.translucent,
+      onVerticalDragUpdate: (details) {
+        final delta = details.delta.dy / usableHeight;
+        _splitProportionNotifier.value =
+            (_splitProportionNotifier.value + delta)
+                .clamp(_kMinProportion, _kMaxProportion);
+      },
+      child: SizedBox(
+        height: _kHandleHeight,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 32,
+              height: 4,
+              decoration: BoxDecoration(
+                color: colorScheme.outlineVariant,
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+            const SizedBox(height: 6),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 1,
+                    color: colorScheme.outlineVariant,
+                    margin: const EdgeInsets.symmetric(horizontal: 16),
+                  ),
+                ),
+                Text(
+                  "Records",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: colorScheme.onSurface,
+                    fontFamily: "ArchivoBlack Regular",
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 1,
+                    color: colorScheme.outlineVariant,
+                    margin: const EdgeInsets.symmetric(horizontal: 16),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   @override
@@ -272,309 +337,339 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                 positionListenable: _positionNotifier,
                                 totalDuration:
                                     Duration(seconds: widget.listening.end),
+                                segmentStart: _startDuration,
+                                segmentEnd: _endDuration,
                                 onTogglePlay: () {
                                   final loading =
                                       _controller.value.playerState ==
                                               yt_player.PlayerState.buffering ||
                                           !_controller.value.isReady;
-                                  if (loading) {
-                                    return;
-                                  }
+                                  if (loading) return;
                                   if (_isRecording()) {
-                                    ScaffoldMessenger.of(context)
-                                      ..clearSnackBars()
-                                      ..showSnackBar(const SnackBar(
-                                        content: Text(
-                                          "Playback is disabled while recording. Please stop the recording to continue.",
-                                          style: TextStyle(
-                                            color: PmpColors.white,
-                                          ),
-                                        ),
-                                        backgroundColor: Colors.green,
-                                        closeIconColor: PmpColors.white,
-                                        showCloseIcon: true,
-                                      ));
+                                    _showRecordingSnackBar(context);
                                     return;
                                   }
                                   if (_audioPlayer.playing) {
                                     _audioPlayer.pause();
                                   }
-                                  if (_controller.value.playerState ==
-                                      yt_player.PlayerState.ended) {
-                                    _controller.seekTo(Duration.zero);
-                                    _controller.play();
-                                  } else if (_controller.value.isPlaying) {
-                                    _needSeek = false;
+                                  if (_controller.value.isPlaying) {
                                     _controller.pause();
                                   } else {
-                                    if (_needSeek) {
-                                      _controller.seekTo(Duration(
-                                          milliseconds:
-                                              _startDuration.inMilliseconds));
-                                    }
+                                    _controller.seekTo(_startDuration);
                                     _controller.play();
                                   }
                                 },
                               ),
-                              SizedBox(
-                                height: 240,
-                                child: PageView.builder(
-                                  itemCount: recordSubtitles.length,
-                                  controller: _pageController,
-                                  physics: const NeverScrollableScrollPhysics(),
-                                  itemBuilder: (context, index) {
-                                    final subtitle = recordSubtitles[index];
-                                    return Scrollbar(
-                                      thumbVisibility: true,
-                                      radius: const Radius.circular(8),
-                                      child: SingleChildScrollView(
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 16,
-                                          vertical: 16,
-                                        ),
-                                        child: ValueListenableBuilder<Duration>(
-                                          valueListenable: _positionNotifier,
-                                          builder: (_, position, __) => Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: subtitle.data.map(
-                                                (item) {
-                                                  final isCurrent = position
-                                                              .inMilliseconds >=
-                                                          (item.start * 1000)
-                                                              .round() &&
-                                                      position.inMilliseconds <
-                                                          (item.end * 1000)
-                                                              .round();
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                      bottom: 8.0,
-                                                    ),
-                                                    child: Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          "-",
-                                                          style: TextStyle(
-                                                            fontSize: 16,
-                                                            height: 1.4,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            color: colorScheme
-                                                                .onSurface,
-                                                            fontFamily:
-                                                                "ArchivoBlack Regular",
-                                                          ),
-                                                        ),
-                                                        const SizedBox(
-                                                          width: 4,
-                                                        ),
-                                                        Expanded(
-                                                          child: Text(
-                                                            item.text,
-                                                            style: TextStyle(
-                                                              fontSize: 16,
-                                                              height: 1.4,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                              color: isCurrent
-                                                                  ? PmpColors
-                                                                      .warning400
-                                                                  : colorScheme
-                                                                      .onSurface,
-                                                              fontFamily:
-                                                                  "ArchivoBlack Regular",
-                                                            ),
-                                                          ),
-                                                        )
-                                                      ],
+                              // Resizable split zone
+                              Expanded(
+                                child: ValueListenableBuilder<double>(
+                                  valueListenable: _splitProportionNotifier,
+                                  builder: (context, proportion, _) {
+                                    return LayoutBuilder(
+                                      builder: (context, constraints) {
+                                        final totalHeight =
+                                            constraints.maxHeight;
+                                        final usableHeight = totalHeight -
+                                            _kRecorderHeight -
+                                            _kHandleHeight;
+                                        if (usableHeight <= 0) {
+                                          return const SizedBox.shrink();
+                                        }
+                                        final topHeight =
+                                            (usableHeight * proportion)
+                                                .clamp(0.0, usableHeight);
+                                        final bottomHeight =
+                                            usableHeight - topHeight;
+
+                                        return Column(
+                                          children: [
+                                            // Subtitle panel
+                                            SizedBox(
+                                              height: topHeight,
+                                              child: PageView.builder(
+                                                itemCount:
+                                                    recordSubtitles.length,
+                                                controller: _pageController,
+                                                physics:
+                                                    const NeverScrollableScrollPhysics(),
+                                                itemBuilder: (context, index) {
+                                                  final subtitle =
+                                                      recordSubtitles[index];
+                                                  return Scrollbar(
+                                                    thumbVisibility: true,
+                                                    radius:
+                                                        const Radius.circular(
+                                                            8),
+                                                    child:
+                                                        SingleChildScrollView(
+                                                      padding: const EdgeInsets
+                                                          .symmetric(
+                                                        horizontal: 16,
+                                                        vertical: 16,
+                                                      ),
+                                                      child:
+                                                          ValueListenableBuilder<
+                                                              Duration>(
+                                                        valueListenable:
+                                                            _positionNotifier,
+                                                        builder: (_,
+                                                                position,
+                                                                __) =>
+                                                            Column(
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children:
+                                                                    subtitle
+                                                                        .data
+                                                                        .map(
+                                                                  (item) {
+                                                                    final isCurrent = position.inMilliseconds >=
+                                                                            (item.start * 1000)
+                                                                                .round() &&
+                                                                        position.inMilliseconds <
+                                                                            (item.end * 1000).round();
+                                                                    return Padding(
+                                                                      padding:
+                                                                          const EdgeInsets
+                                                                              .only(
+                                                                        bottom:
+                                                                            8.0,
+                                                                      ),
+                                                                      child:
+                                                                          Row(
+                                                                        crossAxisAlignment:
+                                                                            CrossAxisAlignment.start,
+                                                                        children: [
+                                                                          Text(
+                                                                            "-",
+                                                                            style:
+                                                                                TextStyle(
+                                                                              fontSize: 16,
+                                                                              height: 1.4,
+                                                                              fontWeight: FontWeight.w400,
+                                                                              color: colorScheme.onSurface,
+                                                                              fontFamily: "ArchivoBlack Regular",
+                                                                            ),
+                                                                          ),
+                                                                          const SizedBox(
+                                                                              width: 4),
+                                                                          Expanded(
+                                                                            child:
+                                                                                Text(
+                                                                              item.text,
+                                                                              style: TextStyle(
+                                                                                fontSize: 16,
+                                                                                height: 1.4,
+                                                                                fontWeight: FontWeight.w400,
+                                                                                color: isCurrent ? PmpColors.warning400 : colorScheme.onSurface,
+                                                                                fontFamily: "ArchivoBlack Regular",
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    );
+                                                                  },
+                                                                ).toList()),
+                                                      ),
                                                     ),
                                                   );
                                                 },
-                                              ).toList()),
-                                        ),
-                                      ),
+                                              ),
+                                            ),
+                                            // Recorder (fixed)
+                                            SizedBox(
+                                              height: _kRecorderHeight,
+                                              child:
+                                                  ValueListenableBuilder<
+                                                      RecordState>(
+                                                valueListenable:
+                                                    _recordStateNotifier,
+                                                builder: (context,
+                                                    recordState, child) {
+                                                  return ValueListenableBuilder<
+                                                      int>(
+                                                    valueListenable:
+                                                        _recordDurationNotifier,
+                                                    builder: (context,
+                                                        recordDuration,
+                                                        child) {
+                                                      return Recorder(
+                                                        recordState:
+                                                            recordState,
+                                                        recordDuration:
+                                                            recordDuration,
+                                                        audioRecorder:
+                                                            _audioRecorder,
+                                                        onStart: () {
+                                                          if (_controller
+                                                              .value
+                                                              .isPlaying) {
+                                                            _controller
+                                                                .pause();
+                                                          }
+                                                          if (_audioPlayer
+                                                              .playing) {
+                                                            _audioPlayer
+                                                                .pause();
+                                                          }
+                                                        },
+                                                        onStop: () {
+                                                          showDialog(
+                                                            context: context,
+                                                            builder:
+                                                                (context) {
+                                                              final sentenceId =
+                                                                  recordSubtitles[
+                                                                          _currentPage]
+                                                                      .id;
+                                                              return SaveRecordingDialog(
+                                                                sentenceId:
+                                                                    sentenceId,
+                                                                youtubeId: widget
+                                                                    .listening
+                                                                    .youtubeId,
+                                                                audioName:
+                                                                    newVoiceName,
+                                                                audioRecorder:
+                                                                    _audioRecorder,
+                                                                onDiscard:
+                                                                    () async {
+                                                                  try {
+                                                                    final filePath =
+                                                                        await _audioRecorder
+                                                                            .stop();
+                                                                    if (filePath !=
+                                                                        null) {
+                                                                      final file =
+                                                                          File(filePath);
+                                                                      if (await file
+                                                                          .exists()) {
+                                                                        await file
+                                                                            .delete();
+                                                                        AppLogger
+                                                                            .instance
+                                                                            .debug('_userDiscardedAudio: Deleted discarded audio file: $filePath');
+                                                                      } else {
+                                                                        AppLogger
+                                                                            .instance
+                                                                            .debug('_userDiscardedAudio: No file found to delete at $filePath');
+                                                                      }
+                                                                    }
+                                                                  } catch (e) {
+                                                                    AppLogger
+                                                                        .instance
+                                                                        .error(
+                                                                      '_userDiscardedAudio: Error deleting discarded audio: $e',
+                                                                      error:
+                                                                          e,
+                                                                    );
+                                                                  }
+                                                                },
+                                                                onSaved:
+                                                                    (success) {
+                                                                  if (success) {
+                                                                    _userRecordedSentenceAudioBloc
+                                                                        .add(
+                                                                      const UserRecordedSentenceAudioEvent
+                                                                          .load(
+                                                                        withLoading:
+                                                                            false,
+                                                                      ),
+                                                                    );
+                                                                  }
+                                                                },
+                                                              );
+                                                            },
+                                                          );
+                                                        },
+                                                      );
+                                                    },
+                                                  );
+                                                },
+                                              ),
+                                            ),
+                                            // Drag handle
+                                            _buildDragHandle(
+                                              colorScheme,
+                                              usableHeight,
+                                            ),
+                                            // Recordings panel
+                                            SizedBox(
+                                              height: bottomHeight,
+                                              child:
+                                                  ValueListenableBuilder<int?>(
+                                                valueListenable:
+                                                    _currentlyPlayingIndexNotifier,
+                                                builder: (context,
+                                                    currentIndex, child) {
+                                                  return UserRecordedList(
+                                                    audioPlayer: _audioPlayer,
+                                                    currentIndex:
+                                                        currentIndex,
+                                                    userRecordedSentenceAudioBloc:
+                                                        _userRecordedSentenceAudioBloc,
+                                                    onNewVoiceName: (name) {
+                                                      newVoiceName = name;
+                                                    },
+                                                    sentenceId:
+                                                        recordSubtitles[
+                                                                _currentPage]
+                                                            .id,
+                                                    youtubeId: widget
+                                                        .listening.youtubeId,
+                                                    onTogglePlay:
+                                                        (data, index) async {
+                                                      if (_isRecording()) {
+                                                        _showRecordingSnackBar(
+                                                            context);
+                                                        return;
+                                                      }
+                                                      if (_controller
+                                                          .value.isPlaying) {
+                                                        _controller.pause();
+                                                      }
+                                                      final isCurrent =
+                                                          currentIndex ==
+                                                              index;
+                                                      if (isCurrent) {
+                                                        if (_audioPlayer
+                                                            .playing) {
+                                                          _audioPlayer
+                                                              .pause();
+                                                          _currentlyPlayingIndexNotifier
+                                                                  .value =
+                                                              null;
+                                                        } else {
+                                                          _audioPlayer
+                                                              .play();
+                                                          _currentlyPlayingIndexNotifier
+                                                                  .value =
+                                                              index;
+                                                        }
+                                                      } else {
+                                                        await _audioPlayer
+                                                            .stop();
+                                                        await _audioPlayer
+                                                            .setUrl(data
+                                                                .audioPath);
+                                                        _audioPlayer.play();
+                                                        _currentlyPlayingIndexNotifier
+                                                                .value =
+                                                            index;
+                                                      }
+                                                    },
+                                                  );
+                                                },
+                                              ),
+                                            ),
+                                          ],
+                                        );
+                                      },
                                     );
                                   },
                                 ),
-                              ),
-                              ValueListenableBuilder<RecordState>(
-                                  valueListenable: _recordStateNotifier,
-                                  builder: (context, recordState, child) {
-                                    return ValueListenableBuilder<int>(
-                                        valueListenable:
-                                            _recordDurationNotifier,
-                                        builder:
-                                            (context, recordDuration, child) {
-                                          return Recorder(
-                                            recordState: recordState,
-                                            recordDuration: recordDuration,
-                                            audioRecorder: _audioRecorder,
-                                            onStart: () {
-                                              if (_controller.value.isPlaying) {
-                                                _controller.pause();
-                                              }
-                                              if (_audioPlayer.playing) {
-                                                _audioPlayer.pause();
-                                              }
-                                            },
-                                            onStop: () {
-                                              showDialog(
-                                                context: context,
-                                                builder: (context) {
-                                                  final sentenceId =
-                                                      recordSubtitles[
-                                                              _currentPage]
-                                                          .id;
-                                                  return SaveRecordingDialog(
-                                                    sentenceId: sentenceId,
-                                                    youtubeId: widget
-                                                        .listening.youtubeId,
-                                                    audioName: newVoiceName,
-                                                    audioRecorder:
-                                                        _audioRecorder,
-                                                    onDiscard: () async {
-                                                      try {
-                                                        // Stop recording and get the file path
-                                                        final filePath =
-                                                            await _audioRecorder
-                                                                .stop();
-                                                        if (filePath != null) {
-                                                          final file =
-                                                              File(filePath);
-                                                          if (await file
-                                                              .exists()) {
-                                                            await file.delete();
-                                                            AppLogger.instance
-                                                                .debug(
-                                                                    '_userDiscardedAudio: Deleted discarded audio file: $filePath');
-                                                          } else {
-                                                            AppLogger.instance
-                                                                .debug(
-                                                                    '_userDiscardedAudio: No file found to delete at $filePath');
-                                                          }
-                                                        }
-                                                      } catch (e) {
-                                                        AppLogger.instance.error(
-                                                            '_userDiscardedAudio: Error deleting discarded audio: $e',
-                                                            error: e);
-                                                      }
-                                                    },
-                                                    onSaved: (success) {
-                                                      if (success) {
-                                                        _userRecordedSentenceAudioBloc
-                                                            .add(
-                                                          const UserRecordedSentenceAudioEvent
-                                                              .load(
-                                                              withLoading:
-                                                                  false),
-                                                        );
-                                                      }
-                                                    },
-                                                  );
-                                                },
-                                              );
-                                            },
-                                          );
-                                        });
-                                  }),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 16.0),
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        height: 1,
-                                        color: colorScheme.outlineVariant,
-                                        margin: const EdgeInsets.symmetric(
-                                            horizontal: 16),
-                                      ),
-                                    ),
-                                    Text(
-                                      "Records",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: colorScheme.onSurface,
-                                        fontFamily: "ArchivoBlack Regular",
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Container(
-                                        height: 1,
-                                        color: colorScheme.outlineVariant,
-                                        margin: const EdgeInsets.symmetric(
-                                            horizontal: 16),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Expanded(
-                                child: ValueListenableBuilder<int?>(
-                                    valueListenable:
-                                        _currentlyPlayingIndexNotifier,
-                                    builder: (context, currentIndex, child) {
-                                      return UserRecordedList(
-                                        audioPlayer: _audioPlayer,
-                                        currentIndex: currentIndex,
-                                        userRecordedSentenceAudioBloc:
-                                            _userRecordedSentenceAudioBloc,
-                                        onNewVoiceName: (name) {
-                                          newVoiceName = name;
-                                        },
-                                        sentenceId:
-                                            recordSubtitles[_currentPage].id,
-                                        youtubeId: widget.listening.youtubeId,
-                                        onTogglePlay: (data, index) async {
-                                          if (_isRecording()) {
-                                            ScaffoldMessenger.of(context)
-                                              ..clearSnackBars()
-                                              ..showSnackBar(const SnackBar(
-                                                content: Text(
-                                                  "Playback is disabled while recording. Please stop the recording to continue.",
-                                                  style: TextStyle(
-                                                    color: PmpColors.white,
-                                                  ),
-                                                ),
-                                                backgroundColor: Colors.green,
-                                                closeIconColor: PmpColors.white,
-                                                showCloseIcon: true,
-                                              ));
-                                            return;
-                                          }
-                                          if (_controller.value.isPlaying) {
-                                            _controller.pause();
-                                          }
-                                          final isCurrent =
-                                              currentIndex == index;
-                                          if (isCurrent) {
-                                            if (_audioPlayer.playing) {
-                                              _audioPlayer.pause();
-                                              _currentlyPlayingIndexNotifier
-                                                  .value = null;
-                                            } else {
-                                              _audioPlayer.play();
-                                              _currentlyPlayingIndexNotifier
-                                                  .value = index;
-                                            }
-                                          } else {
-                                            await _audioPlayer.stop();
-                                            await _audioPlayer
-                                                .setUrl(data.audioPath);
-                                            _audioPlayer.play();
-                                            _currentlyPlayingIndexNotifier
-                                                .value = index;
-                                          }
-                                        },
-                                      );
-                                    }),
                               ),
                               FooterWidget(
                                 totalPage: recordSubtitles.length,
@@ -591,7 +686,6 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                         (recordSubtitles[index].end * 1000)
                                             .round(),
                                   );
-                                  _needSeek = true;
                                   _controller.seekTo(_startDuration);
                                   _pageController.jumpToPage(index);
                                   setState(
@@ -599,7 +693,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                   );
                                 },
                                 nextEnabled: true,
-                              )
+                              ),
                             ],
                           );
                         },

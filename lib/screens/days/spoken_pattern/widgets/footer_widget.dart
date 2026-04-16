@@ -20,122 +20,87 @@ class FooterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Card(
       elevation: 4,
       clipBehavior: Clip.hardEdge,
-      // margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
       margin: const EdgeInsets.only(left: 12, right: 12, bottom: 12, top: 0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      color: const Color(0xFF1C2C3C),
+      color: colorScheme.surfaceContainerHighest,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            _buildPreviousButton(),
-            _buildProgressIndicator(),
-            _buildNextButton(),
+            _buildPreviousButton(colorScheme),
+            _buildProgressIndicator(colorScheme),
+            _buildNextButton(colorScheme),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildPreviousButton() {
+  Widget _buildPreviousButton(ColorScheme colorScheme) {
+    final disabled = currentPage == 0;
     return InkWell(
       borderRadius: BorderRadius.circular(100),
-      onTap: currentPage <= 0
-          ? null
-          : () {
-              // audioPlayer.stop();
-              onPageChanged(currentPage - 1);
-            },
+      onTap: disabled ? null : () => onPageChanged(currentPage - 1),
       child: Ink(
         padding: const EdgeInsets.all(6),
         decoration: BoxDecoration(
-          color: currentPage == 0 ? Colors.grey : Colors.blue,
+          color: disabled
+              ? colorScheme.onSurface.withValues(alpha: 0.12)
+              : colorScheme.inverseSurface,
           shape: BoxShape.circle,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.2),
-              spreadRadius: 3,
-              blurRadius: 8,
-              offset: const Offset(0, 4),
-            ),
-          ],
         ),
         child: Icon(
           Icons.chevron_left,
-          color: currentPage == 0 ? Colors.black38 : Colors.white,
+          color: disabled
+              ? colorScheme.onSurface.withValues(alpha: 0.38)
+              : colorScheme.onInverseSurface,
           size: 28,
         ),
       ),
     );
   }
 
-  Widget _buildProgressIndicator() {
+  Widget _buildProgressIndicator(ColorScheme colorScheme) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.blue,
+        color: colorScheme.inverseSurface,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
-            spreadRadius: 3,
-            blurRadius: 8,
-            offset: const Offset(0, 4),
-          ),
-        ],
       ),
       child: Text(
         '${currentPage + 1}/$totalPage',
         style: PmpTextStyles.body2Semi.copyWith(
-          color: Colors.white,
+          color: colorScheme.onInverseSurface,
           fontWeight: FontWeight.bold,
-          shadows: [
-            Shadow(
-              color: Colors.black.withValues(alpha: 0.3),
-              blurRadius: 4,
-              offset: const Offset(1, 1),
-            ),
-          ],
         ),
       ),
     );
   }
 
-  Widget _buildNextButton() {
+  Widget _buildNextButton(ColorScheme colorScheme) {
     final totalPatterns = totalPage - 1;
+    final disabled = currentPage >= totalPatterns || !nextEnabled;
     return InkWell(
       borderRadius: BorderRadius.circular(100),
-      onTap: (currentPage >= totalPatterns || !nextEnabled)
-          ? null
-          : () {
-              // audioPlayer.stop();
-              onPageChanged(currentPage + 1);
-            },
+      onTap: disabled ? null : () => onPageChanged(currentPage + 1),
       child: Ink(
         padding: const EdgeInsets.all(6),
         decoration: BoxDecoration(
-          color: (currentPage >= totalPatterns || !nextEnabled)
-              ? Colors.grey
-              : Colors.blue,
+          color: disabled
+              ? colorScheme.onSurface.withValues(alpha: 0.12)
+              : colorScheme.inverseSurface,
           shape: BoxShape.circle,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.2),
-              spreadRadius: 3,
-              blurRadius: 8,
-              offset: const Offset(0, 4),
-            ),
-          ],
         ),
         child: Icon(
           Icons.chevron_right,
-          color: (currentPage >= totalPatterns || !nextEnabled)
-              ? Colors.black38
-              : Colors.white,
+          color: disabled
+              ? colorScheme.onSurface.withValues(alpha: 0.38)
+              : colorScheme.onInverseSurface,
           size: 28,
         ),
       ),
