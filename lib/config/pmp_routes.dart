@@ -34,7 +34,7 @@ import '../screens/html_day_list.dart';
 import '../screens/html_preview.dart';
 import '../screens/listening_and_shadowing/speech_practice_session_page.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
-import '../screens/saved_words/saved_words_page.dart';
+import '../screens/saved_words/saved_terms_page.dart';
 import '../screens/main/device_failed_screen.dart';
 import '../screens/main/home_screen.dart';
 import '../screens/main/profile_page.dart';
@@ -82,10 +82,15 @@ class PmpRoutes {
   static const spokenPatternDetail = '/spoken_pattern_detail';
   static const htmlList = '/html_list';
   static const htmlPreview = '/html_preview';
-  static const savedWordsPage = '/saved_words_page';
+  static const savedTermsPage = '/saved_terms_page';
   static const gritJsonList = '/grit_json_list';
   static const gritJsonPreview = '/grit_json_preview';
   static const grammarJsonTest = '/grammar_json_test';
+  static const sentenceExplanationDataList = '/sentence_explanation_data_list';
+  static const zendayaJsonList = '/zendaya_json_list';
+  static const importantOfSocialHealthJsonList = '/important_of_social_health_json_list';
+  static const paulRuddInterviewJsonList = '/paul_rudd_interview_json_list';
+  static const goingViralTaughtMeJsonList = '/going_viral_taugh_me_json_list';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -97,8 +102,8 @@ class PmpRoutes {
         return _getRoute(const DayListScreen(), settings);
       case profilePage:
         return _getRoute(const ProfilePage(), settings);
-      case savedWordsPage:
-        return _getRoute(const SavedWordsPage(), settings);
+      case savedTermsPage:
+        return _getRoute(const SavedTermsPage(), settings);
       case spokenPatternPage:
         final args = settings.arguments as Map<String, dynamic>;
         final lesson = args['lesson'] as Lesson;
@@ -255,6 +260,46 @@ class PmpRoutes {
         return _getRoute(const GrammarJsonTestList(), settings);
       case gritJsonList:
         return _getRoute(const GritJsonList(), settings);
+      case sentenceExplanationDataList:
+        return _getRoute(
+          const GritJsonList(
+            assetFolder: 'assets/sentence_explanation_data/',
+            title: 'Zendaya — JSON Files',
+          ),
+          settings,
+        );
+      case zendayaJsonList:
+        return _getRoute(
+          const GritJsonList(
+            assetFolder: 'assets/zendaya/',
+            title: 'Zendaya',
+          ),
+          settings,
+        );
+      case importantOfSocialHealthJsonList:
+        return _getRoute(
+          const GritJsonList(
+            assetFolder: 'assets/important_of_social_health/',
+            title: 'Important of Social Health',
+          ),
+          settings,
+        );
+      case paulRuddInterviewJsonList:
+        return _getRoute(
+          const GritJsonList(
+            assetFolder: 'assets/paul_rudd_interview/',
+            title: 'Paul Rudd Interview',
+          ),
+          settings,
+        );
+      case goingViralTaughtMeJsonList:
+        return _getRoute(
+          const GritJsonList(
+            assetFolder: 'assets/going_viral_taugh_me/',
+            title: 'Going Viral Taught Me',
+          ),
+          settings,
+        );
       case gritJsonPreview:
         final args = settings.arguments as Map<String, dynamic>;
         return _getRoute(

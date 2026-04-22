@@ -5,7 +5,6 @@ import 'package:pmp_english/bloc/listening/subtitle_index_bloc.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
-import 'package:pmp_english/model/vocabulary/vocabulary.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -20,8 +19,6 @@ class SubtitlePager extends StatefulWidget {
     required this.subtitles,
     required this.hasMMSub,
     required this.onUserChangePage,
-    this.vocabBySentenceId = const {},
-    this.sourceYoutubeId,
   });
 
   final YoutubePlayerController youtubeController;
@@ -30,8 +27,6 @@ class SubtitlePager extends StatefulWidget {
   final List<Subtitle> subtitles;
   final bool hasMMSub;
   final void Function(Subtitle subtitle) onUserChangePage;
-  final Map<int, List<VocabularyWord>> vocabBySentenceId;
-  final String? sourceYoutubeId;
 
   @override
   State<SubtitlePager> createState() => _SubtitlePagerState();
@@ -111,11 +106,6 @@ class _SubtitlePagerState extends State<SubtitlePager> {
                 audioPlayer: widget.audioPlayer,
                 subtitle: _selectedSubtitle,
                 hasMMSub: widget.hasMMSub,
-                vocabularyWords: _selectedSubtitle.id != null
-                    ? widget.vocabBySentenceId[_selectedSubtitle.id!] ??
-                        const []
-                    : const [],
-                sourceYoutubeId: widget.sourceYoutubeId,
               ),
             ),
             Divider(color: colorScheme.outlineVariant, height: 1),

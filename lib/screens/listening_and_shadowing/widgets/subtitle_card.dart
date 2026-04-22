@@ -1,65 +1,32 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
-import 'package:pmp_english/model/vocabulary/vocabulary.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/widgets/vocabulary_bottom_sheet.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../l10n/generated/l10n.dart';
 
-/// Renders a single subtitle line: the English sentence with inline tappable
-/// vocabulary highlights, the optional Burmese translation, and the "View
-/// Explanation" link. Built to sit inside [SubtitlePager].
-class SubtitleCard extends StatefulWidget {
+/// Renders a single subtitle line: the English sentence, the optional Burmese
+/// translation, and the "View Explanation" link. Built to sit inside
+/// [SubtitlePager].
+class SubtitleCard extends StatelessWidget {
   const SubtitleCard({
     super.key,
     required this.youtubeController,
     required this.audioPlayer,
     required this.subtitle,
     required this.hasMMSub,
-    this.vocabularyWords = const [],
-    this.sourceYoutubeId,
   });
 
   final YoutubePlayerController youtubeController;
   final AudioPlayer audioPlayer;
   final Subtitle subtitle;
   final bool hasMMSub;
-  final List<VocabularyWord> vocabularyWords;
-  final String? sourceYoutubeId;
-
-  @override
-  State<SubtitleCard> createState() => _SubtitleCardState();
-}
-
-class _SubtitleCardState extends State<SubtitleCard> {
-  // TapGestureRecognizers attached to TextSpans must be disposed manually.
-  // Built fresh each build() and released here on widget tear-down.
-  final List<TapGestureRecognizer> _recognizers = [];
-
-  @override
-  void dispose() {
-    _disposeRecognizers();
-    super.dispose();
-  }
-
-  void _disposeRecognizers() {
-    for (final r in _recognizers) {
-      r.dispose();
-    }
-    _recognizers.clear();
-  }
 
   @override
   Widget build(BuildContext context) {
-    // Recognizers from the previous build go out of scope as the RichText
-    // tree is rebuilt — release them before allocating new ones.
-    _disposeRecognizers();
-
     final colorScheme = Theme.of(context).colorScheme;
 
     return SingleChildScrollView(
@@ -67,17 +34,13 @@ class _SubtitleCardState extends State<SubtitleCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildInteractiveSentence(
-            context,
-            widget.subtitle.english,
-            widget.vocabularyWords,
-          ),
+          Text(subtitle.english, style: _englishStyle(context)),
           const SizedBox(height: 6),
-          if (widget.hasMMSub &&
-              widget.subtitle.burmese != null &&
-              widget.subtitle.burmese!.isNotEmpty)
+          if (hasMMSub &&
+              subtitle.burmese != null &&
+              subtitle.burmese!.isNotEmpty)
             Text(
-              widget.subtitle.burmese ?? "",
+              subtitle.burmese ?? "",
               style: PmpTextStyles.body2Regular.copyWith(
                 color: colorScheme.onSurfaceVariant,
                 fontSize: 18,
@@ -86,18 +49,19 @@ class _SubtitleCardState extends State<SubtitleCard> {
               ),
             ),
           const SizedBox(height: 8),
-          if (widget.subtitle.explanationUrl.isNotEmpty) _buildExplanationButton(),
+          if (subtitle.explanationUrl.isNotEmpty)
+            _buildExplanationButton(context),
         ],
       ),
     );
   }
 
-  Widget _buildExplanationButton() {
+  Widget _buildExplanationButton(BuildContext context) {
     return Material(
       color: Colors.transparent,
       child: InkWell(
         borderRadius: BorderRadius.circular(8),
-        onTap: _onExplanationTap,
+        onTap: () => _onExplanationTap(context),
         child: Ink(
           padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
           decoration: BoxDecoration(
@@ -124,23 +88,23 @@ class _SubtitleCardState extends State<SubtitleCard> {
     );
   }
 
-  void _onExplanationTap() {
+  void _onExplanationTap(BuildContext context) {
     // Only pause YT when it's actively playing. Calling pause() during
     // buffering interrupts the buffer fetch and the iframe gets stuck in a
     // loading loop on return from the pushed route.
-    if (widget.youtubeController.value.isPlaying) {
-      widget.youtubeController.pause();
+    if (youtubeController.value.isPlaying) {
+      youtubeController.pause();
     }
-    if (widget.audioPlayer.playing) {
-      widget.audioPlayer.pause();
+    if (audioPlayer.playing) {
+      audioPlayer.pause();
     }
     final sentenceExplanation = SentenceExplanation(
       id: 1,
-      start: widget.subtitle.start.inSeconds.toDouble(),
-      end: widget.subtitle.end.inSeconds.toDouble(),
-      english: widget.subtitle.english,
-      burmese: widget.subtitle.burmese ?? "",
-      explanationUrl: widget.subtitle.explanationUrl,
+      start: subtitle.start.inSeconds.toDouble(),
+      end: subtitle.end.inSeconds.toDouble(),
+      english: subtitle.english,
+      burmese: subtitle.burmese ?? "",
+      explanationUrl: subtitle.explanationUrl,
     );
     Navigator.pushNamed(
       context,
@@ -149,8 +113,6 @@ class _SubtitleCardState extends State<SubtitleCard> {
     );
   }
 
-  // ---------- Interactive sentence ----------
-
   TextStyle _englishStyle(BuildContext context) =>
       PmpTextStyles.body1Regular.copyWith(
         color: Theme.of(context).colorScheme.onSurface,
@@ -158,78 +120,4 @@ class _SubtitleCardState extends State<SubtitleCard> {
         height: 1.6,
         fontFamily: "ArchivoBlack Regular",
       );
-
-  Widget _buildInteractiveSentence(
-    BuildContext context,
-    String english,
-    List<VocabularyWord> vocabularyWords,
-  ) {
-    final baseStyle = _englishStyle(context);
-
-    if (vocabularyWords.isEmpty) {
-      return Text(english, style: baseStyle);
-    }
-
-    // Normalized lookup: lowercased + punctuation stripped at boundaries.
-    final lookup = <String, VocabularyWord>{};
-    for (final v in vocabularyWords) {
-      final key = _normalize(v.word);
-      if (key.isNotEmpty) {
-        lookup[key] = v;
-      }
-    }
-
-    if (lookup.isEmpty) {
-      return Text(english, style: baseStyle);
-    }
-
-    final highlightStyle = baseStyle.copyWith(
-      decoration: TextDecoration.underline,
-      decorationStyle: TextDecorationStyle.dotted,
-      decorationColor: Colors.orange,
-      decorationThickness: 1.5,
-    );
-
-    final spans = <InlineSpan>[];
-    final tokenizer = RegExp(r'(\s+|\S+)');
-    for (final match in tokenizer.allMatches(english)) {
-      final token = match.group(0)!;
-      if (token.trim().isEmpty) {
-        spans.add(TextSpan(text: token));
-        continue;
-      }
-      final normalized = _normalize(token);
-      final entry = lookup[normalized];
-      if (entry == null) {
-        spans.add(TextSpan(text: token));
-      } else {
-        final recognizer = TapGestureRecognizer()
-          ..onTap = () => _showVocabSheet(entry);
-        _recognizers.add(recognizer);
-        spans.add(TextSpan(
-          text: token,
-          style: highlightStyle,
-          recognizer: recognizer,
-        ));
-      }
-    }
-
-    return Text.rich(TextSpan(style: baseStyle, children: spans));
-  }
-
-  String _normalize(String word) =>
-      word.toLowerCase().replaceAll(RegExp(r'^[^\w]+|[^\w]+$'), '');
-
-  void _showVocabSheet(VocabularyWord word) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
-      builder: (_) => VocabularyBottomSheet(
-        word: word,
-        sourceYoutubeId: widget.sourceYoutubeId,
-        sourceSentence: widget.subtitle.english,
-      ),
-    );
-  }
 }

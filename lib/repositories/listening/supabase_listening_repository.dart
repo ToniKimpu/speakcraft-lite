@@ -12,6 +12,7 @@ class SupabaseListeningRepository implements ListeningRepository {
         .from('listenings')
         .select('*')
         .eq('is_deleted', false)
+        .eq("is_published", true)
         .order('order_number', ascending: true);
 
     return dataRes.map((e) {

@@ -5,10 +5,10 @@ import 'package:pmp_english/tables/ai_sentence_practice_table.dart';
 import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
 import '../../model/exercise_user_answer/exercise_user_answer.dart';
 import '../../model/listening_practice_answer/listening_practice_answer.dart';
-import '../../model/saved_vocabulary_word/saved_vocabulary_word.dart';
+import '../../model/saved_term/saved_term.dart';
 import '../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import '../../tables/listening_practice_answer_table.dart';
-import '../../tables/saved_vocabulary_word_table.dart';
+import '../../tables/saved_term_table.dart';
 import '../../tables/spoken_pattern_exercise_answer_table.dart';
 import '../../tables/user_example_answer_table.dart';
 import '../../tables/user_recorded_sentence_audio_table.dart';
@@ -22,7 +22,7 @@ part 'app_database.g.dart';
     ListeningPracticeAnswerTable,
     SpokenPatternExerciseAnswerTable,
     UserRecordedSentenceAudioTable,
-    SavedVocabularyWordTable,
+    SavedTermTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -33,7 +33,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration {
@@ -42,8 +42,11 @@ class AppDatabase extends _$AppDatabase {
         await m.createAll();
       },
       onUpgrade: (m, from, to) async {
-        if (from < 2) {
-          await m.createTable(savedVocabularyWordTable);
+        if (from < 3) {
+          await customStatement(
+            'DROP TABLE IF EXISTS saved_vocabulary_word_table',
+          );
+          await m.createTable(savedTermTable);
         }
       },
       beforeOpen: (details) async {

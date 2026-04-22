@@ -3,28 +3,27 @@ import 'dart:convert';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pmp_english/model/vocabulary/vocabulary.dart';
 
-part 'saved_vocabulary_word.freezed.dart';
-part 'saved_vocabulary_word.g.dart';
+part 'saved_term.freezed.dart';
+part 'saved_term.g.dart';
 
 @freezed
-class SavedVocabularyWord with _$SavedVocabularyWord {
-  const SavedVocabularyWord._();
+class SavedTerm with _$SavedTerm {
+  const SavedTerm._();
 
-  const factory SavedVocabularyWord({
+  const factory SavedTerm({
     int? id,
-    required String word,
-    @Default('') String pos,
-    @Default('') String ipa,
-    @Default('') String definitionEn,
-    @Default('') String definitionMy,
+    required String term,
+    @Default('') String kind,
+    String? translationMy,
+    String? definitionMy,
     @Default('[]') String examplesJson,
-    String? sourceYoutubeId,
+    String? sourceTitle,
     String? sourceSentence,
     required DateTime savedAt,
-  }) = _SavedVocabularyWord;
+  }) = _SavedTerm;
 
-  factory SavedVocabularyWord.fromJson(Map<String, dynamic> json) =>
-      _$SavedVocabularyWordFromJson(json);
+  factory SavedTerm.fromJson(Map<String, dynamic> json) =>
+      _$SavedTermFromJson(json);
 
   /// Decode the stored [examplesJson] blob into typed `VocabularyExample`s.
   List<VocabularyExample> get examples {

@@ -1087,12 +1087,12 @@ class UserRecordedSentenceAudioTableCompanion
   }
 }
 
-class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
-    with TableInfo<$SavedVocabularyWordTableTable, SavedVocabularyWord> {
+class $SavedTermTableTable extends SavedTermTable
+    with TableInfo<$SavedTermTableTable, SavedTerm> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $SavedVocabularyWordTableTable(this.attachedDatabase, [this._alias]);
+  $SavedTermTableTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<int> id = GeneratedColumn<int>(
@@ -1102,43 +1102,30 @@ class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
       requiredDuringInsert: false,
       defaultConstraints:
           GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
-  static const VerificationMeta _wordMeta = const VerificationMeta('word');
+  static const VerificationMeta _termMeta = const VerificationMeta('term');
   @override
-  late final GeneratedColumn<String> word = GeneratedColumn<String>(
-      'word', aliasedName, false,
-      type: DriftSqlType.string,
-      requiredDuringInsert: true,
-      defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'));
-  static const VerificationMeta _posMeta = const VerificationMeta('pos');
+  late final GeneratedColumn<String> term = GeneratedColumn<String>(
+      'term', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
   @override
-  late final GeneratedColumn<String> pos = GeneratedColumn<String>(
-      'pos', aliasedName, false,
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+      'kind', aliasedName, false,
       type: DriftSqlType.string,
       requiredDuringInsert: false,
       defaultValue: const Constant(''));
-  static const VerificationMeta _ipaMeta = const VerificationMeta('ipa');
+  static const VerificationMeta _translationMyMeta =
+      const VerificationMeta('translationMy');
   @override
-  late final GeneratedColumn<String> ipa = GeneratedColumn<String>(
-      'ipa', aliasedName, false,
-      type: DriftSqlType.string,
-      requiredDuringInsert: false,
-      defaultValue: const Constant(''));
-  static const VerificationMeta _definitionEnMeta =
-      const VerificationMeta('definitionEn');
-  @override
-  late final GeneratedColumn<String> definitionEn = GeneratedColumn<String>(
-      'definition_en', aliasedName, false,
-      type: DriftSqlType.string,
-      requiredDuringInsert: false,
-      defaultValue: const Constant(''));
+  late final GeneratedColumn<String> translationMy = GeneratedColumn<String>(
+      'translation_my', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _definitionMyMeta =
       const VerificationMeta('definitionMy');
   @override
   late final GeneratedColumn<String> definitionMy = GeneratedColumn<String>(
-      'definition_my', aliasedName, false,
-      type: DriftSqlType.string,
-      requiredDuringInsert: false,
-      defaultValue: const Constant(''));
+      'definition_my', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _examplesJsonMeta =
       const VerificationMeta('examplesJson');
   @override
@@ -1147,11 +1134,11 @@ class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
       type: DriftSqlType.string,
       requiredDuringInsert: false,
       defaultValue: const Constant('[]'));
-  static const VerificationMeta _sourceYoutubeIdMeta =
-      const VerificationMeta('sourceYoutubeId');
+  static const VerificationMeta _sourceTitleMeta =
+      const VerificationMeta('sourceTitle');
   @override
-  late final GeneratedColumn<String> sourceYoutubeId = GeneratedColumn<String>(
-      'source_youtube_id', aliasedName, true,
+  late final GeneratedColumn<String> sourceTitle = GeneratedColumn<String>(
+      'source_title', aliasedName, true,
       type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _sourceSentenceMeta =
       const VerificationMeta('sourceSentence');
@@ -1170,13 +1157,12 @@ class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
   @override
   List<GeneratedColumn> get $columns => [
         id,
-        word,
-        pos,
-        ipa,
-        definitionEn,
+        term,
+        kind,
+        translationMy,
         definitionMy,
         examplesJson,
-        sourceYoutubeId,
+        sourceTitle,
         sourceSentence,
         savedAt
       ];
@@ -1184,35 +1170,30 @@ class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
-  static const String $name = 'saved_vocabulary_word_table';
+  static const String $name = 'saved_term_table';
   @override
-  VerificationContext validateIntegrity(
-      Insertable<SavedVocabularyWord> instance,
+  VerificationContext validateIntegrity(Insertable<SavedTerm> instance,
       {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
       context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
     }
-    if (data.containsKey('word')) {
+    if (data.containsKey('term')) {
       context.handle(
-          _wordMeta, word.isAcceptableOrUnknown(data['word']!, _wordMeta));
+          _termMeta, term.isAcceptableOrUnknown(data['term']!, _termMeta));
     } else if (isInserting) {
-      context.missing(_wordMeta);
+      context.missing(_termMeta);
     }
-    if (data.containsKey('pos')) {
+    if (data.containsKey('kind')) {
       context.handle(
-          _posMeta, pos.isAcceptableOrUnknown(data['pos']!, _posMeta));
+          _kindMeta, kind.isAcceptableOrUnknown(data['kind']!, _kindMeta));
     }
-    if (data.containsKey('ipa')) {
+    if (data.containsKey('translation_my')) {
       context.handle(
-          _ipaMeta, ipa.isAcceptableOrUnknown(data['ipa']!, _ipaMeta));
-    }
-    if (data.containsKey('definition_en')) {
-      context.handle(
-          _definitionEnMeta,
-          definitionEn.isAcceptableOrUnknown(
-              data['definition_en']!, _definitionEnMeta));
+          _translationMyMeta,
+          translationMy.isAcceptableOrUnknown(
+              data['translation_my']!, _translationMyMeta));
     }
     if (data.containsKey('definition_my')) {
       context.handle(
@@ -1226,11 +1207,11 @@ class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
           examplesJson.isAcceptableOrUnknown(
               data['examples_json']!, _examplesJsonMeta));
     }
-    if (data.containsKey('source_youtube_id')) {
+    if (data.containsKey('source_title')) {
       context.handle(
-          _sourceYoutubeIdMeta,
-          sourceYoutubeId.isAcceptableOrUnknown(
-              data['source_youtube_id']!, _sourceYoutubeIdMeta));
+          _sourceTitleMeta,
+          sourceTitle.isAcceptableOrUnknown(
+              data['source_title']!, _sourceTitleMeta));
     }
     if (data.containsKey('source_sentence')) {
       context.handle(
@@ -1248,25 +1229,23 @@ class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
   @override
   Set<GeneratedColumn> get $primaryKey => {id};
   @override
-  SavedVocabularyWord map(Map<String, dynamic> data, {String? tablePrefix}) {
+  SavedTerm map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return SavedVocabularyWord.new(
+    return SavedTerm.new(
       id: attachedDatabase.typeMapping
           .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
-      word: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}word'])!,
-      pos: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}pos'])!,
-      ipa: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}ipa'])!,
-      definitionEn: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}definition_en'])!,
+      term: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}term'])!,
+      kind: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}kind'])!,
+      translationMy: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}translation_my']),
       definitionMy: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}definition_my'])!,
+          .read(DriftSqlType.string, data['${effectivePrefix}definition_my']),
       examplesJson: attachedDatabase.typeMapping
           .read(DriftSqlType.string, data['${effectivePrefix}examples_json'])!,
-      sourceYoutubeId: attachedDatabase.typeMapping.read(
-          DriftSqlType.string, data['${effectivePrefix}source_youtube_id']),
+      sourceTitle: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}source_title']),
       sourceSentence: attachedDatabase.typeMapping
           .read(DriftSqlType.string, data['${effectivePrefix}source_sentence']),
       savedAt: attachedDatabase.typeMapping
@@ -1275,93 +1254,85 @@ class $SavedVocabularyWordTableTable extends SavedVocabularyWordTable
   }
 
   @override
-  $SavedVocabularyWordTableTable createAlias(String alias) {
-    return $SavedVocabularyWordTableTable(attachedDatabase, alias);
+  $SavedTermTableTable createAlias(String alias) {
+    return $SavedTermTableTable(attachedDatabase, alias);
   }
 }
 
-class SavedVocabularyWordTableCompanion
-    extends UpdateCompanion<SavedVocabularyWord> {
+class SavedTermTableCompanion extends UpdateCompanion<SavedTerm> {
   final Value<int> id;
-  final Value<String> word;
-  final Value<String> pos;
-  final Value<String> ipa;
-  final Value<String> definitionEn;
-  final Value<String> definitionMy;
+  final Value<String> term;
+  final Value<String> kind;
+  final Value<String?> translationMy;
+  final Value<String?> definitionMy;
   final Value<String> examplesJson;
-  final Value<String?> sourceYoutubeId;
+  final Value<String?> sourceTitle;
   final Value<String?> sourceSentence;
   final Value<DateTime> savedAt;
-  const SavedVocabularyWordTableCompanion({
+  const SavedTermTableCompanion({
     this.id = const Value.absent(),
-    this.word = const Value.absent(),
-    this.pos = const Value.absent(),
-    this.ipa = const Value.absent(),
-    this.definitionEn = const Value.absent(),
+    this.term = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.translationMy = const Value.absent(),
     this.definitionMy = const Value.absent(),
     this.examplesJson = const Value.absent(),
-    this.sourceYoutubeId = const Value.absent(),
+    this.sourceTitle = const Value.absent(),
     this.sourceSentence = const Value.absent(),
     this.savedAt = const Value.absent(),
   });
-  SavedVocabularyWordTableCompanion.insert({
+  SavedTermTableCompanion.insert({
     this.id = const Value.absent(),
-    required String word,
-    this.pos = const Value.absent(),
-    this.ipa = const Value.absent(),
-    this.definitionEn = const Value.absent(),
+    required String term,
+    this.kind = const Value.absent(),
+    this.translationMy = const Value.absent(),
     this.definitionMy = const Value.absent(),
     this.examplesJson = const Value.absent(),
-    this.sourceYoutubeId = const Value.absent(),
+    this.sourceTitle = const Value.absent(),
     this.sourceSentence = const Value.absent(),
     this.savedAt = const Value.absent(),
-  }) : word = Value(word);
-  static Insertable<SavedVocabularyWord> custom({
+  }) : term = Value(term);
+  static Insertable<SavedTerm> custom({
     Expression<int>? id,
-    Expression<String>? word,
-    Expression<String>? pos,
-    Expression<String>? ipa,
-    Expression<String>? definitionEn,
+    Expression<String>? term,
+    Expression<String>? kind,
+    Expression<String>? translationMy,
     Expression<String>? definitionMy,
     Expression<String>? examplesJson,
-    Expression<String>? sourceYoutubeId,
+    Expression<String>? sourceTitle,
     Expression<String>? sourceSentence,
     Expression<DateTime>? savedAt,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
-      if (word != null) 'word': word,
-      if (pos != null) 'pos': pos,
-      if (ipa != null) 'ipa': ipa,
-      if (definitionEn != null) 'definition_en': definitionEn,
+      if (term != null) 'term': term,
+      if (kind != null) 'kind': kind,
+      if (translationMy != null) 'translation_my': translationMy,
       if (definitionMy != null) 'definition_my': definitionMy,
       if (examplesJson != null) 'examples_json': examplesJson,
-      if (sourceYoutubeId != null) 'source_youtube_id': sourceYoutubeId,
+      if (sourceTitle != null) 'source_title': sourceTitle,
       if (sourceSentence != null) 'source_sentence': sourceSentence,
       if (savedAt != null) 'saved_at': savedAt,
     });
   }
 
-  SavedVocabularyWordTableCompanion copyWith(
+  SavedTermTableCompanion copyWith(
       {Value<int>? id,
-      Value<String>? word,
-      Value<String>? pos,
-      Value<String>? ipa,
-      Value<String>? definitionEn,
-      Value<String>? definitionMy,
+      Value<String>? term,
+      Value<String>? kind,
+      Value<String?>? translationMy,
+      Value<String?>? definitionMy,
       Value<String>? examplesJson,
-      Value<String?>? sourceYoutubeId,
+      Value<String?>? sourceTitle,
       Value<String?>? sourceSentence,
       Value<DateTime>? savedAt}) {
-    return SavedVocabularyWordTableCompanion(
+    return SavedTermTableCompanion(
       id: id ?? this.id,
-      word: word ?? this.word,
-      pos: pos ?? this.pos,
-      ipa: ipa ?? this.ipa,
-      definitionEn: definitionEn ?? this.definitionEn,
+      term: term ?? this.term,
+      kind: kind ?? this.kind,
+      translationMy: translationMy ?? this.translationMy,
       definitionMy: definitionMy ?? this.definitionMy,
       examplesJson: examplesJson ?? this.examplesJson,
-      sourceYoutubeId: sourceYoutubeId ?? this.sourceYoutubeId,
+      sourceTitle: sourceTitle ?? this.sourceTitle,
       sourceSentence: sourceSentence ?? this.sourceSentence,
       savedAt: savedAt ?? this.savedAt,
     );
@@ -1373,17 +1344,14 @@ class SavedVocabularyWordTableCompanion
     if (id.present) {
       map['id'] = Variable<int>(id.value);
     }
-    if (word.present) {
-      map['word'] = Variable<String>(word.value);
+    if (term.present) {
+      map['term'] = Variable<String>(term.value);
     }
-    if (pos.present) {
-      map['pos'] = Variable<String>(pos.value);
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
     }
-    if (ipa.present) {
-      map['ipa'] = Variable<String>(ipa.value);
-    }
-    if (definitionEn.present) {
-      map['definition_en'] = Variable<String>(definitionEn.value);
+    if (translationMy.present) {
+      map['translation_my'] = Variable<String>(translationMy.value);
     }
     if (definitionMy.present) {
       map['definition_my'] = Variable<String>(definitionMy.value);
@@ -1391,8 +1359,8 @@ class SavedVocabularyWordTableCompanion
     if (examplesJson.present) {
       map['examples_json'] = Variable<String>(examplesJson.value);
     }
-    if (sourceYoutubeId.present) {
-      map['source_youtube_id'] = Variable<String>(sourceYoutubeId.value);
+    if (sourceTitle.present) {
+      map['source_title'] = Variable<String>(sourceTitle.value);
     }
     if (sourceSentence.present) {
       map['source_sentence'] = Variable<String>(sourceSentence.value);
@@ -1405,15 +1373,14 @@ class SavedVocabularyWordTableCompanion
 
   @override
   String toString() {
-    return (StringBuffer('SavedVocabularyWordTableCompanion(')
+    return (StringBuffer('SavedTermTableCompanion(')
           ..write('id: $id, ')
-          ..write('word: $word, ')
-          ..write('pos: $pos, ')
-          ..write('ipa: $ipa, ')
-          ..write('definitionEn: $definitionEn, ')
+          ..write('term: $term, ')
+          ..write('kind: $kind, ')
+          ..write('translationMy: $translationMy, ')
           ..write('definitionMy: $definitionMy, ')
           ..write('examplesJson: $examplesJson, ')
-          ..write('sourceYoutubeId: $sourceYoutubeId, ')
+          ..write('sourceTitle: $sourceTitle, ')
           ..write('sourceSentence: $sourceSentence, ')
           ..write('savedAt: $savedAt')
           ..write(')'))
@@ -1436,8 +1403,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $UserRecordedSentenceAudioTableTable
       userRecordedSentenceAudioTable =
       $UserRecordedSentenceAudioTableTable(this);
-  late final $SavedVocabularyWordTableTable savedVocabularyWordTable =
-      $SavedVocabularyWordTableTable(this);
+  late final $SavedTermTableTable savedTermTable = $SavedTermTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1448,7 +1414,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         listeningPracticeAnswerTable,
         spokenPatternExerciseAnswerTable,
         userRecordedSentenceAudioTable,
-        savedVocabularyWordTable
+        savedTermTable
       ];
 }
 
@@ -2331,36 +2297,34 @@ typedef $$UserRecordedSentenceAudioTableTableProcessedTableManager
         ),
         UserRecordedSentenceAudio,
         PrefetchHooks Function()>;
-typedef $$SavedVocabularyWordTableTableCreateCompanionBuilder
-    = SavedVocabularyWordTableCompanion Function({
+typedef $$SavedTermTableTableCreateCompanionBuilder = SavedTermTableCompanion
+    Function({
   Value<int> id,
-  required String word,
-  Value<String> pos,
-  Value<String> ipa,
-  Value<String> definitionEn,
-  Value<String> definitionMy,
+  required String term,
+  Value<String> kind,
+  Value<String?> translationMy,
+  Value<String?> definitionMy,
   Value<String> examplesJson,
-  Value<String?> sourceYoutubeId,
+  Value<String?> sourceTitle,
   Value<String?> sourceSentence,
   Value<DateTime> savedAt,
 });
-typedef $$SavedVocabularyWordTableTableUpdateCompanionBuilder
-    = SavedVocabularyWordTableCompanion Function({
+typedef $$SavedTermTableTableUpdateCompanionBuilder = SavedTermTableCompanion
+    Function({
   Value<int> id,
-  Value<String> word,
-  Value<String> pos,
-  Value<String> ipa,
-  Value<String> definitionEn,
-  Value<String> definitionMy,
+  Value<String> term,
+  Value<String> kind,
+  Value<String?> translationMy,
+  Value<String?> definitionMy,
   Value<String> examplesJson,
-  Value<String?> sourceYoutubeId,
+  Value<String?> sourceTitle,
   Value<String?> sourceSentence,
   Value<DateTime> savedAt,
 });
 
-class $$SavedVocabularyWordTableTableFilterComposer
-    extends Composer<_$AppDatabase, $SavedVocabularyWordTableTable> {
-  $$SavedVocabularyWordTableTableFilterComposer({
+class $$SavedTermTableTableFilterComposer
+    extends Composer<_$AppDatabase, $SavedTermTableTable> {
+  $$SavedTermTableTableFilterComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -2370,17 +2334,14 @@ class $$SavedVocabularyWordTableTableFilterComposer
   ColumnFilters<int> get id => $composableBuilder(
       column: $table.id, builder: (column) => ColumnFilters(column));
 
-  ColumnFilters<String> get word => $composableBuilder(
-      column: $table.word, builder: (column) => ColumnFilters(column));
+  ColumnFilters<String> get term => $composableBuilder(
+      column: $table.term, builder: (column) => ColumnFilters(column));
 
-  ColumnFilters<String> get pos => $composableBuilder(
-      column: $table.pos, builder: (column) => ColumnFilters(column));
+  ColumnFilters<String> get kind => $composableBuilder(
+      column: $table.kind, builder: (column) => ColumnFilters(column));
 
-  ColumnFilters<String> get ipa => $composableBuilder(
-      column: $table.ipa, builder: (column) => ColumnFilters(column));
-
-  ColumnFilters<String> get definitionEn => $composableBuilder(
-      column: $table.definitionEn, builder: (column) => ColumnFilters(column));
+  ColumnFilters<String> get translationMy => $composableBuilder(
+      column: $table.translationMy, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get definitionMy => $composableBuilder(
       column: $table.definitionMy, builder: (column) => ColumnFilters(column));
@@ -2388,9 +2349,8 @@ class $$SavedVocabularyWordTableTableFilterComposer
   ColumnFilters<String> get examplesJson => $composableBuilder(
       column: $table.examplesJson, builder: (column) => ColumnFilters(column));
 
-  ColumnFilters<String> get sourceYoutubeId => $composableBuilder(
-      column: $table.sourceYoutubeId,
-      builder: (column) => ColumnFilters(column));
+  ColumnFilters<String> get sourceTitle => $composableBuilder(
+      column: $table.sourceTitle, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get sourceSentence => $composableBuilder(
       column: $table.sourceSentence,
@@ -2400,9 +2360,9 @@ class $$SavedVocabularyWordTableTableFilterComposer
       column: $table.savedAt, builder: (column) => ColumnFilters(column));
 }
 
-class $$SavedVocabularyWordTableTableOrderingComposer
-    extends Composer<_$AppDatabase, $SavedVocabularyWordTableTable> {
-  $$SavedVocabularyWordTableTableOrderingComposer({
+class $$SavedTermTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $SavedTermTableTable> {
+  $$SavedTermTableTableOrderingComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -2412,17 +2372,14 @@ class $$SavedVocabularyWordTableTableOrderingComposer
   ColumnOrderings<int> get id => $composableBuilder(
       column: $table.id, builder: (column) => ColumnOrderings(column));
 
-  ColumnOrderings<String> get word => $composableBuilder(
-      column: $table.word, builder: (column) => ColumnOrderings(column));
+  ColumnOrderings<String> get term => $composableBuilder(
+      column: $table.term, builder: (column) => ColumnOrderings(column));
 
-  ColumnOrderings<String> get pos => $composableBuilder(
-      column: $table.pos, builder: (column) => ColumnOrderings(column));
+  ColumnOrderings<String> get kind => $composableBuilder(
+      column: $table.kind, builder: (column) => ColumnOrderings(column));
 
-  ColumnOrderings<String> get ipa => $composableBuilder(
-      column: $table.ipa, builder: (column) => ColumnOrderings(column));
-
-  ColumnOrderings<String> get definitionEn => $composableBuilder(
-      column: $table.definitionEn,
+  ColumnOrderings<String> get translationMy => $composableBuilder(
+      column: $table.translationMy,
       builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get definitionMy => $composableBuilder(
@@ -2433,9 +2390,8 @@ class $$SavedVocabularyWordTableTableOrderingComposer
       column: $table.examplesJson,
       builder: (column) => ColumnOrderings(column));
 
-  ColumnOrderings<String> get sourceYoutubeId => $composableBuilder(
-      column: $table.sourceYoutubeId,
-      builder: (column) => ColumnOrderings(column));
+  ColumnOrderings<String> get sourceTitle => $composableBuilder(
+      column: $table.sourceTitle, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get sourceSentence => $composableBuilder(
       column: $table.sourceSentence,
@@ -2445,9 +2401,9 @@ class $$SavedVocabularyWordTableTableOrderingComposer
       column: $table.savedAt, builder: (column) => ColumnOrderings(column));
 }
 
-class $$SavedVocabularyWordTableTableAnnotationComposer
-    extends Composer<_$AppDatabase, $SavedVocabularyWordTableTable> {
-  $$SavedVocabularyWordTableTableAnnotationComposer({
+class $$SavedTermTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $SavedTermTableTable> {
+  $$SavedTermTableTableAnnotationComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -2457,17 +2413,14 @@ class $$SavedVocabularyWordTableTableAnnotationComposer
   GeneratedColumn<int> get id =>
       $composableBuilder(column: $table.id, builder: (column) => column);
 
-  GeneratedColumn<String> get word =>
-      $composableBuilder(column: $table.word, builder: (column) => column);
+  GeneratedColumn<String> get term =>
+      $composableBuilder(column: $table.term, builder: (column) => column);
 
-  GeneratedColumn<String> get pos =>
-      $composableBuilder(column: $table.pos, builder: (column) => column);
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
 
-  GeneratedColumn<String> get ipa =>
-      $composableBuilder(column: $table.ipa, builder: (column) => column);
-
-  GeneratedColumn<String> get definitionEn => $composableBuilder(
-      column: $table.definitionEn, builder: (column) => column);
+  GeneratedColumn<String> get translationMy => $composableBuilder(
+      column: $table.translationMy, builder: (column) => column);
 
   GeneratedColumn<String> get definitionMy => $composableBuilder(
       column: $table.definitionMy, builder: (column) => column);
@@ -2475,8 +2428,8 @@ class $$SavedVocabularyWordTableTableAnnotationComposer
   GeneratedColumn<String> get examplesJson => $composableBuilder(
       column: $table.examplesJson, builder: (column) => column);
 
-  GeneratedColumn<String> get sourceYoutubeId => $composableBuilder(
-      column: $table.sourceYoutubeId, builder: (column) => column);
+  GeneratedColumn<String> get sourceTitle => $composableBuilder(
+      column: $table.sourceTitle, builder: (column) => column);
 
   GeneratedColumn<String> get sourceSentence => $composableBuilder(
       column: $table.sourceSentence, builder: (column) => column);
@@ -2485,81 +2438,70 @@ class $$SavedVocabularyWordTableTableAnnotationComposer
       $composableBuilder(column: $table.savedAt, builder: (column) => column);
 }
 
-class $$SavedVocabularyWordTableTableTableManager extends RootTableManager<
+class $$SavedTermTableTableTableManager extends RootTableManager<
     _$AppDatabase,
-    $SavedVocabularyWordTableTable,
-    SavedVocabularyWord,
-    $$SavedVocabularyWordTableTableFilterComposer,
-    $$SavedVocabularyWordTableTableOrderingComposer,
-    $$SavedVocabularyWordTableTableAnnotationComposer,
-    $$SavedVocabularyWordTableTableCreateCompanionBuilder,
-    $$SavedVocabularyWordTableTableUpdateCompanionBuilder,
-    (
-      SavedVocabularyWord,
-      BaseReferences<_$AppDatabase, $SavedVocabularyWordTableTable,
-          SavedVocabularyWord>
-    ),
-    SavedVocabularyWord,
+    $SavedTermTableTable,
+    SavedTerm,
+    $$SavedTermTableTableFilterComposer,
+    $$SavedTermTableTableOrderingComposer,
+    $$SavedTermTableTableAnnotationComposer,
+    $$SavedTermTableTableCreateCompanionBuilder,
+    $$SavedTermTableTableUpdateCompanionBuilder,
+    (SavedTerm, BaseReferences<_$AppDatabase, $SavedTermTableTable, SavedTerm>),
+    SavedTerm,
     PrefetchHooks Function()> {
-  $$SavedVocabularyWordTableTableTableManager(
-      _$AppDatabase db, $SavedVocabularyWordTableTable table)
+  $$SavedTermTableTableTableManager(
+      _$AppDatabase db, $SavedTermTableTable table)
       : super(TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
-              $$SavedVocabularyWordTableTableFilterComposer(
-                  $db: db, $table: table),
+              $$SavedTermTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
-              $$SavedVocabularyWordTableTableOrderingComposer(
-                  $db: db, $table: table),
+              $$SavedTermTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
-              $$SavedVocabularyWordTableTableAnnotationComposer(
-                  $db: db, $table: table),
+              $$SavedTermTableTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback: ({
             Value<int> id = const Value.absent(),
-            Value<String> word = const Value.absent(),
-            Value<String> pos = const Value.absent(),
-            Value<String> ipa = const Value.absent(),
-            Value<String> definitionEn = const Value.absent(),
-            Value<String> definitionMy = const Value.absent(),
+            Value<String> term = const Value.absent(),
+            Value<String> kind = const Value.absent(),
+            Value<String?> translationMy = const Value.absent(),
+            Value<String?> definitionMy = const Value.absent(),
             Value<String> examplesJson = const Value.absent(),
-            Value<String?> sourceYoutubeId = const Value.absent(),
+            Value<String?> sourceTitle = const Value.absent(),
             Value<String?> sourceSentence = const Value.absent(),
             Value<DateTime> savedAt = const Value.absent(),
           }) =>
-              SavedVocabularyWordTableCompanion(
+              SavedTermTableCompanion(
             id: id,
-            word: word,
-            pos: pos,
-            ipa: ipa,
-            definitionEn: definitionEn,
+            term: term,
+            kind: kind,
+            translationMy: translationMy,
             definitionMy: definitionMy,
             examplesJson: examplesJson,
-            sourceYoutubeId: sourceYoutubeId,
+            sourceTitle: sourceTitle,
             sourceSentence: sourceSentence,
             savedAt: savedAt,
           ),
           createCompanionCallback: ({
             Value<int> id = const Value.absent(),
-            required String word,
-            Value<String> pos = const Value.absent(),
-            Value<String> ipa = const Value.absent(),
-            Value<String> definitionEn = const Value.absent(),
-            Value<String> definitionMy = const Value.absent(),
+            required String term,
+            Value<String> kind = const Value.absent(),
+            Value<String?> translationMy = const Value.absent(),
+            Value<String?> definitionMy = const Value.absent(),
             Value<String> examplesJson = const Value.absent(),
-            Value<String?> sourceYoutubeId = const Value.absent(),
+            Value<String?> sourceTitle = const Value.absent(),
             Value<String?> sourceSentence = const Value.absent(),
             Value<DateTime> savedAt = const Value.absent(),
           }) =>
-              SavedVocabularyWordTableCompanion.insert(
+              SavedTermTableCompanion.insert(
             id: id,
-            word: word,
-            pos: pos,
-            ipa: ipa,
-            definitionEn: definitionEn,
+            term: term,
+            kind: kind,
+            translationMy: translationMy,
             definitionMy: definitionMy,
             examplesJson: examplesJson,
-            sourceYoutubeId: sourceYoutubeId,
+            sourceTitle: sourceTitle,
             sourceSentence: sourceSentence,
             savedAt: savedAt,
           ),
@@ -2570,23 +2512,18 @@ class $$SavedVocabularyWordTableTableTableManager extends RootTableManager<
         ));
 }
 
-typedef $$SavedVocabularyWordTableTableProcessedTableManager
-    = ProcessedTableManager<
-        _$AppDatabase,
-        $SavedVocabularyWordTableTable,
-        SavedVocabularyWord,
-        $$SavedVocabularyWordTableTableFilterComposer,
-        $$SavedVocabularyWordTableTableOrderingComposer,
-        $$SavedVocabularyWordTableTableAnnotationComposer,
-        $$SavedVocabularyWordTableTableCreateCompanionBuilder,
-        $$SavedVocabularyWordTableTableUpdateCompanionBuilder,
-        (
-          SavedVocabularyWord,
-          BaseReferences<_$AppDatabase, $SavedVocabularyWordTableTable,
-              SavedVocabularyWord>
-        ),
-        SavedVocabularyWord,
-        PrefetchHooks Function()>;
+typedef $$SavedTermTableTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $SavedTermTableTable,
+    SavedTerm,
+    $$SavedTermTableTableFilterComposer,
+    $$SavedTermTableTableOrderingComposer,
+    $$SavedTermTableTableAnnotationComposer,
+    $$SavedTermTableTableCreateCompanionBuilder,
+    $$SavedTermTableTableUpdateCompanionBuilder,
+    (SavedTerm, BaseReferences<_$AppDatabase, $SavedTermTableTable, SavedTerm>),
+    SavedTerm,
+    PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -2609,7 +2546,6 @@ class $AppDatabaseManager {
       get userRecordedSentenceAudioTable =>
           $$UserRecordedSentenceAudioTableTableTableManager(
               _db, _db.userRecordedSentenceAudioTable);
-  $$SavedVocabularyWordTableTableTableManager get savedVocabularyWordTable =>
-      $$SavedVocabularyWordTableTableTableManager(
-          _db, _db.savedVocabularyWordTable);
+  $$SavedTermTableTableTableManager get savedTermTable =>
+      $$SavedTermTableTableTableManager(_db, _db.savedTermTable);
 }

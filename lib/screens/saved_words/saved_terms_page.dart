@@ -1,27 +1,27 @@
 import 'package:drift/drift.dart' show OrderingTerm;
 import 'package:flutter/material.dart';
+import 'package:pmp_english/config/pmp_colors.dart';
 import 'package:pmp_english/config/pmp_routes.dart';
 import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/model/saved_vocabulary_word/saved_vocabulary_word.dart';
-import 'package:pmp_english/model/vocabulary/vocabulary.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/widgets/vocabulary_bottom_sheet.dart';
+import 'package:pmp_english/model/saved_term/saved_term.dart';
+import 'package:pmp_english/screens/saved_words/widgets/saved_term_detail_sheet.dart';
 import 'package:pmp_english/services/app_database/app_database.dart';
 
-class SavedWordsPage extends StatefulWidget {
-  const SavedWordsPage({super.key});
+class SavedTermsPage extends StatefulWidget {
+  const SavedTermsPage({super.key});
 
   @override
-  State<SavedWordsPage> createState() => _SavedWordsPageState();
+  State<SavedTermsPage> createState() => _SavedTermsPageState();
 }
 
-class _SavedWordsPageState extends State<SavedWordsPage> {
-  late final Stream<List<SavedVocabularyWord>> _stream;
+class _SavedTermsPageState extends State<SavedTermsPage> {
+  final _db = AppDatabase.instance();
+  late final Stream<List<SavedTerm>> _stream;
 
   @override
   void initState() {
     super.initState();
-    final db = AppDatabase.instance();
-    _stream = (db.select(db.savedVocabularyWordTable)
+    _stream = (_db.select(_db.savedTermTable)
           ..orderBy([(t) => OrderingTerm.desc(t.savedAt)]))
         .watch();
   }
@@ -31,9 +31,9 @@ class _SavedWordsPageState extends State<SavedWordsPage> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Saved Words'),
+        title: const Text('Bookmarks'),
       ),
-      body: StreamBuilder<List<SavedVocabularyWord>>(
+      body: StreamBuilder<List<SavedTerm>>(
         stream: _stream,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting &&
@@ -46,9 +46,9 @@ class _SavedWordsPageState extends State<SavedWordsPage> {
               ),
             );
           }
-          final words = snapshot.data ?? const <SavedVocabularyWord>[];
-          if (words.isEmpty) return _buildEmptyState(context, colorScheme);
-          return _buildList(words, colorScheme);
+          final terms = snapshot.data ?? const <SavedTerm>[];
+          if (terms.isEmpty) return _buildEmptyState(context, colorScheme);
+          return _buildList(terms, colorScheme);
         },
       ),
     );
@@ -68,7 +68,7 @@ class _SavedWordsPageState extends State<SavedWordsPage> {
             ),
             const SizedBox(height: 16),
             Text(
-              'No saved words yet',
+              'No bookmarks yet',
               style: PmpTextStyles.h1.copyWith(
                 color: colorScheme.onSurface,
                 fontFamily: 'ArchivoBlack Regular',
@@ -78,7 +78,7 @@ class _SavedWordsPageState extends State<SavedWordsPage> {
             ),
             const SizedBox(height: 8),
             Text(
-              "Open any video, tap a highlighted word, and tap 'Save word' to keep it here.",
+              "Open any sentence explanation and tap the bookmark icon to keep it here.",
               style: PmpTextStyles.body2Regular.copyWith(
                 color: colorScheme.onSurfaceVariant,
                 height: 1.5,
@@ -100,17 +100,14 @@ class _SavedWordsPageState extends State<SavedWordsPage> {
     );
   }
 
-  Widget _buildList(
-    List<SavedVocabularyWord> words,
-    ColorScheme colorScheme,
-  ) {
+  Widget _buildList(List<SavedTerm> terms, ColorScheme colorScheme) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 16, top: 12, bottom: 4),
           child: Text(
-            'Total — ${words.length}',
+            'Total — ${terms.length}',
             style: PmpTextStyles.body2Regular.copyWith(
               fontFamily: 'ArchivoBlack Regular',
               color: colorScheme.onSurfaceVariant,
@@ -120,11 +117,11 @@ class _SavedWordsPageState extends State<SavedWordsPage> {
         Expanded(
           child: ListView.separated(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-            itemCount: words.length,
+            itemCount: terms.length,
             separatorBuilder: (_, __) => const SizedBox(height: 12),
             itemBuilder: (context, index) {
-              final saved = words[index];
-              return _SavedWordTile(
+              final saved = terms[index];
+              return _SavedTermTile(
                 saved: saved,
                 onTap: () => _openDetail(saved),
               );
@@ -135,32 +132,27 @@ class _SavedWordsPageState extends State<SavedWordsPage> {
     );
   }
 
-  void _openDetail(SavedVocabularyWord saved) {
-    final vocab = VocabularyWord(
-      word: saved.word,
-      pos: saved.pos,
-      ipa: saved.ipa,
-      definitionEn: saved.definitionEn,
-      definitionMy: saved.definitionMy,
-      examples: saved.examples,
-    );
+  void _openDetail(SavedTerm saved) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
-      builder: (_) => VocabularyBottomSheet(
-        word: vocab,
-        sourceYoutubeId: saved.sourceYoutubeId,
-        sourceSentence: saved.sourceSentence,
+      builder: (_) => SavedTermDetailSheet(
+        saved: saved,
+        onRemove: () async {
+          await (_db.delete(_db.savedTermTable)
+                ..where((t) => t.id.equals(saved.id!)))
+              .go();
+        },
       ),
     );
   }
 }
 
-class _SavedWordTile extends StatelessWidget {
-  const _SavedWordTile({required this.saved, required this.onTap});
+class _SavedTermTile extends StatelessWidget {
+  const _SavedTermTile({required this.saved, required this.onTap});
 
-  final SavedVocabularyWord saved;
+  final SavedTerm saved;
   final VoidCallback onTap;
 
   @override
@@ -177,49 +169,57 @@ class _SavedWordTile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                saved.word,
-                style: PmpTextStyles.h1.copyWith(
-                  color: colorScheme.onSurface,
-                  fontFamily: 'ArchivoBlack Regular',
-                  fontSize: 22,
-                ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Text(
+                      saved.term,
+                      style: PmpTextStyles.h1.copyWith(
+                        color: colorScheme.onSurface,
+                        fontFamily: 'ArchivoBlack Regular',
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  if (saved.kind.isNotEmpty)
+                    Container(
+                      margin: const EdgeInsets.only(left: 8, top: 2),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: PmpColors.success400.withValues(alpha: 0.12),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text(
+                        saved.kind,
+                        style: const TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w600,
+                          color: PmpColors.success400,
+                        ),
+                      ),
+                    ),
+                ],
               ),
-              if (saved.ipa.isNotEmpty || saved.pos.isNotEmpty) ...[
-                const SizedBox(height: 4),
-                Row(
-                  children: [
-                    if (saved.ipa.isNotEmpty)
-                      Text(
-                        saved.ipa,
-                        style: PmpTextStyles.body2Regular.copyWith(
-                          color: colorScheme.onSurfaceVariant,
-                          fontStyle: FontStyle.italic,
-                        ),
-                      ),
-                    if (saved.ipa.isNotEmpty && saved.pos.isNotEmpty) ...[
-                      const SizedBox(width: 8),
-                      Text('·', style: TextStyle(color: colorScheme.onSurfaceVariant)),
-                      const SizedBox(width: 8),
-                    ],
-                    if (saved.pos.isNotEmpty)
-                      Text(
-                        saved.pos,
-                        style: PmpTextStyles.body2Regular.copyWith(
-                          color: colorScheme.onSurfaceVariant,
-                        ),
-                      ),
-                  ],
-                ),
-              ],
-              if (saved.definitionEn.isNotEmpty) ...[
+              if ((saved.translationMy ?? '').isNotEmpty) ...[
                 const SizedBox(height: 6),
                 Text(
-                  saved.definitionEn,
+                  saved.translationMy!,
+                  style: PmpTextStyles.body2Regular.copyWith(
+                    color: PmpColors.warning600,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+              if ((saved.definitionMy ?? '').isNotEmpty) ...[
+                const SizedBox(height: 4),
+                Text(
+                  saved.definitionMy!,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: PmpTextStyles.body2Regular.copyWith(
-                    color: colorScheme.onSurface,
+                    color: colorScheme.onSurfaceVariant,
                     height: 1.4,
                   ),
                 ),

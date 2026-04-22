@@ -19,6 +19,9 @@ class SentenceExplanationJsonView extends StatelessWidget {
     final terms = (data['terms'] as List<dynamic>?) ?? [];
     final note = data['note'] as Map<String, dynamic>?;
 
+    final sourceTitle = data['title'] as String?;
+    final sourceSentence = main?['english'] as String?;
+
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
@@ -29,7 +32,11 @@ class SentenceExplanationJsonView extends StatelessWidget {
         for (final t in terms)
           Padding(
             padding: const EdgeInsets.only(bottom: 14),
-            child: SejTermCard(term: t as Map<String, dynamic>),
+            child: SejTermCard(
+              term: t as Map<String, dynamic>,
+              sourceTitle: sourceTitle,
+              sourceSentence: sourceSentence,
+            ),
           ),
         if (note != null) ...[
           const SizedBox(height: 4),

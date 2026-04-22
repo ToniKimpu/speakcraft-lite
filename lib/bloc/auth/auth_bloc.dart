@@ -11,8 +11,6 @@ import 'package:pmp_english/repositories/auth/auth_repository.dart';
 
 import '../../model/app_user/app_user.dart';
 
-import 'package:json_annotation/json_annotation.dart';
-
 part 'auth_bloc.freezed.dart';
 
 @freezed
@@ -54,7 +52,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           loginWithEmail: (email, password) =>
               _mapLoginWithEmailToState(email, password, emit),
           signupWithEmail: (email, password, name, profilePath) =>
-              _mapSignUpWithEmailToState(name, email, password, profilePath, emit),
+              _mapSignUpWithEmailToState(
+                  name, email, password, profilePath, emit),
           logout: () => _mapLogoutToState(emit),
         );
       },
@@ -83,9 +82,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           return;
         }
       }
-      AppLogger.instance.debug('_mapAuthCheckToState: appUser: ${appUser.toJson()}');
+      AppLogger.instance
+          .debug('_mapAuthCheckToState: appUser: ${appUser.toJson()}');
       if (appUser.deviceId != null &&
-          appUser.deviceId != sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
+          appUser.deviceId !=
+              sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
         await _repository.logout();
         emit(const AuthState.deviceIdFailed());
         return;
@@ -117,7 +118,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(const AuthState.loading());
     try {
       final appUser = await _repository.signUpWithEmail(
-          email, password, name, profilePath, sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
+          email,
+          password,
+          name,
+          profilePath,
+          sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
       sl<ValueNotifier<AppUser>>().value = appUser;
       if (!appUser.isPremiumUser!) {
         emit(const AuthState.onFreeUser());
@@ -130,7 +135,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       } else {
         emit(AuthState.error(error.toString()));
       }
-      AppLogger.instance.error('_signUpError: ${error.toString()}', error: error);
+      AppLogger.instance
+          .error('_signUpError: ${error.toString()}', error: error);
     }
   }
 
@@ -149,24 +155,30 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }
       if (appUser.deviceId != null &&
-          appUser.deviceId != sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
+          appUser.deviceId !=
+              sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
         await _repository.logout();
         emit(const AuthState.deviceIdFailed());
         return;
       }
-      if (appUser.deviceId == null && sl<ValueNotifier<String?>>(instanceName: 'deviceId').value != null) {
-        await _repository.updateDeviceId(sl<ValueNotifier<String?>>(instanceName: 'deviceId').value!);
-        sl<ValueNotifier<AppUser>>().value =
-            appUser.copyWith(deviceId: sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
+      if (appUser.deviceId == null &&
+          sl<ValueNotifier<String?>>(instanceName: 'deviceId').value != null) {
+        await _repository.updateDeviceId(
+            sl<ValueNotifier<String?>>(instanceName: 'deviceId').value!);
+        sl<ValueNotifier<AppUser>>().value = appUser.copyWith(
+            deviceId:
+                sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
       }
       emit(const AuthState.authenticated());
     } catch (error) {
       if (error is SocketException || error is TimeoutException) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
+        debugPrint("_mapLoginWithEmailToState: ${error.toString()}");
         emit(const AuthState.error('Something went wrong. Please try again.'));
       }
-      AppLogger.instance.error('_loginError: ${error.toString()}', error: error);
+      AppLogger.instance
+          .error('_loginError: ${error.toString()}', error: error);
     }
   }
 
@@ -182,7 +194,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       } else {
         emit(AuthState.error(error.toString()));
       }
-      AppLogger.instance.error('_logoutError: ${error.toString()}', error: error);
+      AppLogger.instance
+          .error('_logoutError: ${error.toString()}', error: error);
     }
   }
 }

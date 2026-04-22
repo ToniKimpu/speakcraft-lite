@@ -1,22 +1,113 @@
+import 'dart:convert';
+
+import 'package:drift/drift.dart' show Value;
 import 'package:flutter/material.dart';
+import 'package:pmp_english/services/app_database/app_database.dart';
 
 import '../../../../config/pmp_colors.dart';
 import 'sej_example_row.dart';
 
-class SejTermCard extends StatelessWidget {
-  const SejTermCard({super.key, required this.term});
+class SejTermCard extends StatefulWidget {
+  const SejTermCard({
+    super.key,
+    required this.term,
+    this.sourceTitle,
+    this.sourceSentence,
+  });
+
   final Map<String, dynamic> term;
+  final String? sourceTitle;
+  final String? sourceSentence;
+
+  @override
+  State<SejTermCard> createState() => _SejTermCardState();
+}
+
+class _SejTermCardState extends State<SejTermCard> {
+  final _db = AppDatabase.instance();
+  int? _savedRowId;
+  bool _busy = false;
+
+  String get _termText => widget.term['term'] as String? ?? '';
+  String get _kind => widget.term['kind'] as String? ?? '';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSavedState();
+  }
+
+  Future<void> _loadSavedState() async {
+    if (_termText.isEmpty) return;
+    final row = await (_db.select(_db.savedTermTable)
+          ..where((t) => t.term.equals(_termText))
+          ..where((t) => t.kind.equals(_kind))
+          ..limit(1))
+        .getSingleOrNull();
+    if (!mounted) return;
+    setState(() => _savedRowId = row?.id);
+  }
+
+  Future<void> _toggleSaved() async {
+    if (_busy || _termText.isEmpty) return;
+    setState(() => _busy = true);
+    try {
+      if (_savedRowId != null) {
+        await (_db.delete(_db.savedTermTable)
+              ..where((t) => t.id.equals(_savedRowId!)))
+            .go();
+        if (!mounted) return;
+        setState(() => _savedRowId = null);
+        _showSnackBar('Removed');
+      } else {
+        final examples = (widget.term['examples'] as List<dynamic>?) ?? const [];
+        final translationMy = widget.term['translation_my'] as String? ?? '';
+        final definitionMy = widget.term['definition_my'] as String? ?? '';
+        final id = await _db.into(_db.savedTermTable).insert(
+              SavedTermTableCompanion(
+                term: Value(_termText),
+                kind: Value(_kind),
+                translationMy: translationMy.isEmpty
+                    ? const Value.absent()
+                    : Value(translationMy),
+                definitionMy: definitionMy.isEmpty
+                    ? const Value.absent()
+                    : Value(definitionMy),
+                examplesJson: Value(jsonEncode(examples)),
+                sourceTitle: widget.sourceTitle == null
+                    ? const Value.absent()
+                    : Value(widget.sourceTitle),
+                sourceSentence: widget.sourceSentence == null
+                    ? const Value.absent()
+                    : Value(widget.sourceSentence),
+              ),
+            );
+        if (!mounted) return;
+        setState(() => _savedRowId = id);
+        _showSnackBar('Saved');
+      }
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
+  void _showSnackBar(String msg) {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(
+        content: Text(msg),
+        duration: const Duration(seconds: 2),
+      ));
+  }
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final number = term['number'] as int? ?? 0;
-    final kind = term['kind'] as String? ?? '';
-    final termText = term['term'] as String? ?? '';
-    final translationMy = term['translation_my'] as String? ?? '';
-    final definitionMy = term['definition_my'] as String? ?? '';
-    final examples = (term['examples'] as List<dynamic>?) ?? [];
-    final items = (term['items'] as List<dynamic>?) ?? [];
+    final number = widget.term['number'] as int? ?? 0;
+    final translationMy = widget.term['translation_my'] as String? ?? '';
+    final definitionMy = widget.term['definition_my'] as String? ?? '';
+    final examples = (widget.term['examples'] as List<dynamic>?) ?? [];
+    final items = (widget.term['items'] as List<dynamic>?) ?? [];
 
     return Container(
       decoration: BoxDecoration(
@@ -33,7 +124,7 @@ class SejTermCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildHeader(colorScheme, number, termText, kind),
+          _buildHeader(colorScheme, number, _termText, _kind),
           _buildBody(colorScheme, translationMy, definitionMy, items, examples),
         ],
       ),
@@ -46,8 +137,9 @@ class SejTermCard extends StatelessWidget {
     String termText,
     String kind,
   ) {
+    final isSaved = _savedRowId != null;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      padding: const EdgeInsets.fromLTRB(14, 6, 6, 6),
       decoration: BoxDecoration(
         color: PmpColors.info400.withValues(alpha: 0.08),
         borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
@@ -99,6 +191,16 @@ class SejTermCard extends StatelessWidget {
                 ),
               ),
             ),
+          IconButton(
+            tooltip: isSaved ? 'Remove' : 'Save',
+            visualDensity: VisualDensity.compact,
+            onPressed: _busy ? null : _toggleSaved,
+            icon: Icon(
+              isSaved ? Icons.bookmark : Icons.bookmark_border,
+              size: 22,
+              color: isSaved ? PmpColors.warning600 : cs.onSurfaceVariant,
+            ),
+          ),
         ],
       ),
     );

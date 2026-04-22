@@ -115,14 +115,14 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 12),
             ModuleWidget(
-              title: 'Saved Words',
-              label1: 'မိမိ save ထားသော စကားလုံးများ',
-              label2: 'Vocabulary ကို ပြန်လည်လေ့လာမယ်',
+              title: 'Bookmarks',
+              label1: 'ကိုယ်တိုင် save ထားသော bookmarks များ',
+              label2: 'Vocabulary, phrase, grammar ကို ပြန်လေ့လာမယ်',
               iconTitle: Icons.bookmark,
               iconLabel1: Icons.menu_book,
               iconLabel2: Icons.school,
               onPressed: () {
-                Navigator.pushNamed(context, PmpRoutes.savedWordsPage);
+                Navigator.pushNamed(context, PmpRoutes.savedTermsPage);
               },
             ),
             const SizedBox(height: 12),
@@ -145,12 +145,46 @@ class _HomePageState extends State<HomePage> {
             if (kDebugMode)
               ElevatedButton(
                 onPressed: () {
+                  Navigator.pushNamed(context, PmpRoutes.zendayaJsonList);
+                },
+                child: const Text('Zendaya'),
+              ),
+            const SizedBox(height: 8),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                      context, PmpRoutes.importantOfSocialHealthJsonList);
+                },
+                child: const Text('Important of Social Health'),
+              ),
+            const SizedBox(height: 8),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                      context, PmpRoutes.paulRuddInterviewJsonList);
+                },
+                child: const Text('Paul Rudd Interview'),
+              ),
+            const SizedBox(height: 8),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                      context, PmpRoutes.goingViralTaughtMeJsonList);
+                },
+                child: const Text('Going Viral Taught Me'),
+              ),
+            const SizedBox(height: 8),
+            if (kDebugMode)
+              ElevatedButton(
+                onPressed: () {
                   Navigator.pushNamed(context, PmpRoutes.grammarJsonTest);
                 },
                 child: const Text('Grammar JSON Test'),
               ),
             const SizedBox(height: 12),
-
             if (kDebugMode)
               ElevatedButton(
                 onPressed: () {

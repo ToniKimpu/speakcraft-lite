@@ -45,20 +45,22 @@ class SejMainCard extends StatelessWidget {
               height: 1.4,
             ),
           ),
-          const SizedBox(height: 10),
-          Container(
-            height: 1,
-            color: PmpColors.warning400.withValues(alpha: 0.25),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            burmese,
-            style: TextStyle(
-              fontSize: 14,
-              color: colorScheme.onSurfaceVariant,
-              height: 1.5,
+          if (burmese.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Container(
+              height: 1,
+              color: PmpColors.warning400.withValues(alpha: 0.25),
             ),
-          ),
+            const SizedBox(height: 8),
+            Text(
+              burmese,
+              style: TextStyle(
+                fontSize: 14,
+                color: colorScheme.onSurfaceVariant,
+                height: 1.5,
+              ),
+            ),
+          ],
         ],
       ),
     );

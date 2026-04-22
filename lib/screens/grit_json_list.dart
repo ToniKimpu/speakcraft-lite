@@ -3,7 +3,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 
 class GritJsonList extends StatefulWidget {
-  const GritJsonList({super.key});
+  const GritJsonList({
+    super.key,
+    this.assetFolder = 'assets/grit/',
+    this.title = 'Grit — JSON Files',
+  });
+
+  final String assetFolder;
+  final String title;
 
   @override
   State<GritJsonList> createState() => _GritJsonListState();
@@ -26,7 +33,8 @@ class _GritJsonListState extends State<GritJsonList> {
 
     final files = manifest.keys
         .where((k) =>
-            k.startsWith('assets/grit/') && k.toLowerCase().endsWith('.json'))
+            k.startsWith(widget.assetFolder) &&
+            k.toLowerCase().endsWith('.json'))
         .toList()
       ..sort();
 
@@ -43,12 +51,14 @@ class _GritJsonListState extends State<GritJsonList> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Grit — JSON Files'),
+        title: Text(widget.title),
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : _files.isEmpty
-              ? const Center(child: Text('No JSON files found in assets/grit/'))
+              ? Center(
+                  child:
+                      Text('No JSON files found in ${widget.assetFolder}'))
               : ListView.separated(
                   padding: const EdgeInsets.all(16),
                   itemCount: _files.length,

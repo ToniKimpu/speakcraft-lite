@@ -124,6 +124,13 @@ class _ShadowingPageState extends State<ShadowingPage>
           .map((position) => position.index)
           .toList()
         ..sort();
+
+      // Stop auto-scrolling once the last line is visible — alignment 0.3
+      // can't be satisfied near the end, which causes a jarring bounce.
+      if (visibleIndexes.contains(_subtitles.length - 1)) {
+        return;
+      }
+
       final firstTwoVisibleIndexes = visibleIndexes.take(2).toList();
 
       if (!firstTwoVisibleIndexes.contains(currentIndex)) {

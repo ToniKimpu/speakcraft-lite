@@ -1,14 +1,10 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
-import 'package:pmp_english/model/vocabulary/vocabulary.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_pager.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -36,8 +32,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
   bool _showLoadingLayout = false;
   final List<Subtitle> _subtitles = [];
   int _subtitlePageIndex = 0;
-
-  Map<int, List<VocabularyWord>> _vocabBySentenceId = const {};
 
   final _subtitleIndexBloc = SubtitleIndexBloc();
   final _subtitleParsingBloc = SubtitleParsingBloc();
@@ -68,34 +62,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     )..addListener(_onPlayerTick);
 
     _subtitleParsingBloc.add(SubtitleParsingEvent.parse(widget.listening));
-
-    if (widget.listening.hasVocabularies &&
-        widget.listening.vocabularyPath.trim().isNotEmpty) {
-      _loadVocabularies();
-    }
-  }
-
-  Future<void> _loadVocabularies() async {
-    try {
-      final response =
-          await http.get(Uri.parse(widget.listening.vocabularyPath));
-      if (response.statusCode != 200) return;
-      final decoded = utf8.decode(response.bodyBytes);
-      final List<dynamic> raw = jsonDecode(decoded);
-      final list = raw
-          .map((e) => SentenceVocabulary.fromJson(e as Map<String, dynamic>))
-          .toList();
-      if (!mounted) return;
-      setState(() {
-        _vocabBySentenceId = {
-          for (final s in list) s.sentenceId: s.words,
-        };
-      });
-    } catch (e, st) {
-      AppLogger.instance
-          .error('_loadVocabularies failed: $e', error: e, stackTrace: st);
-      // Silent fail — the screen still works without highlights.
-    }
   }
 
   void _onPlayerTick() {
@@ -234,8 +200,6 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                 subtitleIndexBloc: _subtitleIndexBloc,
                                 subtitles: subtitles,
                                 hasMMSub: widget.listening.hasMMSubtitle,
-                                vocabBySentenceId: _vocabBySentenceId,
-                                sourceYoutubeId: widget.listening.youtubeId,
                                 onUserChangePage: (subtitle) {
                                   _controller.seekTo(subtitle.start);
                                 },
