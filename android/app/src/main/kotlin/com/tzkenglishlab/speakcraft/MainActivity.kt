@@ -1,4 +1,4 @@
-package com.pmpenglish.mobile
+package com.tzkenglishlab.speakcraft
 
 import io.flutter.embedding.android.FlutterActivity
 
