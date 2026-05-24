@@ -5,6 +5,7 @@ import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
 import 'package:pmp_english/bloc/internet_checker/internet_checker_bloc.dart';
 import 'package:pmp_english/bloc/spoken_pattern/spoken_pattern_bloc.dart';
 import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
+import 'package:pmp_english/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:pmp_english/core/di/service_locator.dart';
 
 List<BlocProvider> mainBlocProviders() {
@@ -15,5 +16,7 @@ List<BlocProvider> mainBlocProviders() {
     BlocProvider<ExerciseBloc>.value(value: sl<ExerciseBloc>()),
     BlocProvider<InternetCheckerBloc>.value(value: sl<InternetCheckerBloc>()),
     BlocProvider<UserActivityBloc>.value(value: sl<UserActivityBloc>()),
+    BlocProvider<VideoStepProgressBloc>.value(
+        value: sl<VideoStepProgressBloc>()),
   ];
 }

@@ -19,6 +19,7 @@ import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
 import 'package:pmp_english/bloc/user_bloc/user_bloc.dart';
 import 'package:pmp_english/bloc/user_example_answer/user_example_answer_bloc.dart';
 import 'package:pmp_english/bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
+import 'package:pmp_english/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:pmp_english/bloc/youtube_player/youtube_player_bloc.dart';
 import 'package:pmp_english/model/app_user/app_user.dart';
 import 'package:pmp_english/repositories/auth/auth_repository.dart';
@@ -63,6 +64,8 @@ Future<void> setupServiceLocator() async {
   sl.registerLazySingleton<ExerciseBloc>(() => ExerciseBloc());
   sl.registerLazySingleton<InternetCheckerBloc>(() => InternetCheckerBloc());
   sl.registerLazySingleton<UserActivityBloc>(() => UserActivityBloc());
+  sl.registerLazySingleton<VideoStepProgressBloc>(
+      () => VideoStepProgressBloc());
 
   // Screen-local BLoCs (factory — fresh instance per screen)
   sl.registerFactory<ListeningBloc>(() => ListeningBloc());
