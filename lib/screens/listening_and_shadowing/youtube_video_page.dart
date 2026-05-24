@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:pmp_english/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:pmp_english/model/listening/listening.dart';
+import 'package:pmp_english/model/video_step_progress/video_step_progress.dart';
 import 'package:pmp_english/model/subtitle/subtitle.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_pager.dart';
@@ -30,6 +32,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
 
   bool _readyToPlay = false;
   bool _showLoadingLayout = false;
+  bool _markedWatchDone = false;
   final List<Subtitle> _subtitles = [];
   int _subtitlePageIndex = 0;
 
@@ -62,10 +65,33 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
     )..addListener(_onPlayerTick);
 
     _subtitleParsingBloc.add(SubtitleParsingEvent.parse(widget.listening));
+
+    context.read<VideoStepProgressBloc>().add(
+          VideoStepProgressEvent.markInProgress(
+            widget.listening.youtubeId,
+            VideoLessonStep.watch,
+          ),
+        );
   }
 
   void _onPlayerTick() {
     if (!_readyToPlay || !mounted || _controller.value.isFullScreen) return;
+
+    if (!_markedWatchDone) {
+      final segmentLen = widget.listening.end - widget.listening.start;
+      final positionInSegment =
+          _controller.value.position.inSeconds - widget.listening.start;
+      if (segmentLen > 0 && positionInSegment >= segmentLen * 0.8) {
+        _markedWatchDone = true;
+        context.read<VideoStepProgressBloc>().add(
+              VideoStepProgressEvent.markDone(
+                widget.listening.youtubeId,
+                VideoLessonStep.watch,
+              ),
+            );
+      }
+    }
+
     final newIndex = _findCurrentSubtitleIndex();
     if (newIndex == -1 || newIndex == _subtitlePageIndex) return;
     _subtitlePageIndex = newIndex;

@@ -5,9 +5,11 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pmp_english/bloc/listening/shadowing_line_bloc.dart';
+import 'package:pmp_english/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:pmp_english/config/common_extensions.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
+import 'package:pmp_english/model/video_step_progress/video_step_progress.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_none.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
@@ -63,11 +65,18 @@ class _ShadowingPageState extends State<ShadowingPage>
   Timer? _scrollCheckTimer;
 
   bool _backPressed = false;
+  bool _markedShadowingDone = false;
 
   @override
   void initState() {
     super.initState();
     _extrapolationTicker = createTicker(_onExtrapolationTick)..start();
+    context.read<VideoStepProgressBloc>().add(
+          VideoStepProgressEvent.markInProgress(
+            widget.listening.youtubeId,
+            VideoLessonStep.shadowing,
+          ),
+        );
     AppLogger.instance.debug(
         "_subtitleLineBlocLogs: ${widget.listening.shadowingPath} shadowing path");
     _subtitleLineBloc
@@ -108,6 +117,21 @@ class _ShadowingPageState extends State<ShadowingPage>
       _sinceBaseline.stop();
     }
     _positionNotifier.value = _baselinePosition;
+
+    if (!_markedShadowingDone) {
+      final segmentLen = widget.listening.end - widget.listening.start;
+      final positionInSegment =
+          _controller.value.position.inSeconds - widget.listening.start;
+      if (segmentLen > 0 && positionInSegment >= segmentLen * 0.8) {
+        _markedShadowingDone = true;
+        context.read<VideoStepProgressBloc>().add(
+              VideoStepProgressEvent.markDone(
+                widget.listening.youtubeId,
+                VideoLessonStep.shadowing,
+              ),
+            );
+      }
+    }
 
     // Debounce scroll checks to avoid excessive computation
     _scrollCheckTimer?.cancel();

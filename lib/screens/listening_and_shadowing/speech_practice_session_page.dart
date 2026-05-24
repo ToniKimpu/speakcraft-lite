@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:pmp_english/bloc/listening/record_subtitle_bloc.dart';
+import 'package:pmp_english/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:pmp_english/core/logger/app_logger.dart';
 import 'package:pmp_english/model/listening/listening.dart';
+import 'package:pmp_english/model/video_step_progress/video_step_progress.dart';
 import 'package:pmp_english/screens/days/spoken_pattern/widgets/footer_widget.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/recording_voice_widgets/user_recorded_list.dart';
 import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
@@ -125,6 +127,13 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
     _recordSubtitleBloc.add(
       RecordSubtitleEvent.parse(widget.listening),
     );
+
+    context.read<VideoStepProgressBloc>().add(
+          VideoStepProgressEvent.markInProgress(
+            widget.listening.youtubeId,
+            VideoLessonStep.record,
+          ),
+        );
   }
 
   @override
@@ -578,6 +587,17 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                                             false,
                                                                       ),
                                                                     );
+                                                                    if (mounted) {
+                                                                      context
+                                                                          .read<
+                                                                              VideoStepProgressBloc>()
+                                                                          .add(
+                                                                            VideoStepProgressEvent.markDone(
+                                                                              widget.listening.youtubeId,
+                                                                              VideoLessonStep.record,
+                                                                            ),
+                                                                          );
+                                                                    }
                                                                   }
                                                                 },
                                                               );
