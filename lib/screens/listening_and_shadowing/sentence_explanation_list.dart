@@ -97,7 +97,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: colorScheme.surfaceContainerHighest,
-                        border: Border.all(color: colorScheme.outlineVariant),
+                        border: Border.all(color: colorScheme.outline),
                       ),
                       child: Icon(
                         Icons.lightbulb_outline,
@@ -143,7 +143,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                 decoration: BoxDecoration(
                   color: colorScheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: colorScheme.outlineVariant),
+                  border: Border.all(color: colorScheme.outline),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

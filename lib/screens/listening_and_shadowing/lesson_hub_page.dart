@@ -199,6 +199,18 @@ class _Header extends StatelessWidget {
   final int doneCount;
   final int totalCount;
 
+  String _formatDuration(int seconds) {
+    final h = seconds ~/ 3600;
+    final m = (seconds % 3600) ~/ 60;
+    final s = seconds % 60;
+    final ss = s.toString().padLeft(2, '0');
+    if (h > 0) {
+      final mm = m.toString().padLeft(2, '0');
+      return '$h:$mm:$ss';
+    }
+    return '$m:$ss';
+  }
+
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -211,27 +223,50 @@ class _Header extends StatelessWidget {
           aspectRatio: 16 / 9,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(12),
-            child: CachedNetworkImage(
-              imageUrl: listening.thumbnail,
-              fit: BoxFit.cover,
-              placeholder: (context, url) => Container(
-                color: colorScheme.surfaceContainerHighest,
-                child: const Center(
-                  child: SizedBox(
-                    width: 18,
-                    height: 18,
-                    child: CircularProgressIndicator(),
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                CachedNetworkImage(
+                  imageUrl: listening.thumbnail,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => Container(
+                    color: colorScheme.surfaceContainerHighest,
+                    child: const Center(
+                      child: SizedBox(
+                        width: 18,
+                        height: 18,
+                        child: CircularProgressIndicator(),
+                      ),
+                    ),
+                  ),
+                  errorWidget: (context, url, error) => Container(
+                    color: colorScheme.surfaceContainerHighest,
+                    child: Icon(
+                      Icons.broken_image,
+                      size: 24,
+                      color: colorScheme.onSurfaceVariant,
+                    ),
                   ),
                 ),
-              ),
-              errorWidget: (context, url, error) => Container(
-                color: colorScheme.surfaceContainerHighest,
-                child: Icon(
-                  Icons.broken_image,
-                  size: 24,
-                  color: colorScheme.onSurfaceVariant,
-                ),
-              ),
+                if (listening.end - listening.start > 0)
+                  Positioned(
+                    right: 8,
+                    bottom: 8,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withValues(alpha: 0.75),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Text(
+                        _formatDuration(listening.end - listening.start),
+                        style: PmpTextStyles.labelSemi
+                            .copyWith(color: Colors.white),
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
         ),
@@ -293,11 +328,17 @@ class _StepCard extends StatelessWidget {
 
     final borderColor = isNextRecommended
         ? colorScheme.primary
-        : colorScheme.outlineVariant;
+        : colorScheme.outline;
     final borderWidth = isNextRecommended ? 2.0 : 1.0;
+    final cardColor = isNextRecommended
+        ? Color.alphaBlend(
+            colorScheme.primary.withValues(alpha: 0.06),
+            colorScheme.surfaceContainerHighest,
+          )
+        : colorScheme.surfaceContainerHighest;
 
     return Material(
-      color: colorScheme.surfaceContainerHighest,
+      color: cardColor,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
@@ -319,9 +360,21 @@ class _StepCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(config.icon,
-                            size: 18, color: colorScheme.onSurface),
-                        const SizedBox(width: 6),
+                        Container(
+                          width: 28,
+                          height: 28,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: colorScheme.primary.withValues(alpha: 0.10),
+                          ),
+                          alignment: Alignment.center,
+                          child: Icon(
+                            config.icon,
+                            size: 16,
+                            color: colorScheme.primary,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
                         Expanded(
                           child: Text(
                             config.title,
@@ -379,7 +432,7 @@ class _NumberBadge extends StatelessWidget {
         shape: BoxShape.circle,
         color: isDone ? colorScheme.primary : colorScheme.surface,
         border: Border.all(
-          color: isDone ? colorScheme.primary : colorScheme.outlineVariant,
+          color: isDone ? colorScheme.primary : colorScheme.outline,
         ),
       ),
       alignment: Alignment.center,

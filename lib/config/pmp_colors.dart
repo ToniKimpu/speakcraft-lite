@@ -9,6 +9,9 @@ class PmpColors {
   static const Color primary900 = Color(0xFF081A20);
   static const Color secondary400 = Color(0xFFC93357);
   static const Color secondary500 = Color(0xFFBC002D);
+  // Warm accent for "tip / explanation / learn more" CTAs. AA-contrast with
+  // white text (~4.6:1). Used by the subtitle card's View Explanation button.
+  static const Color accentOrange = Color(0xFFEA580C);
   static const Color red = Colors.red;
   static const Color white = Colors.white;
   static const Color black = Colors.black;
@@ -59,13 +62,14 @@ class PmpColors {
   static const Color darkTextSecondary = Color(0xFFB3B3B3);
   static const Color darkTextDisabled = Color(0xFF6B6B6B);
 
-  // Pure white theme palette (inverse of dark — same B&W aesthetic)
-  static const Color lightBackground = Color(0xFFFFFFFF);
-  static const Color lightSurfaceBw = Color(0xFFFAFAFA);
-  static const Color lightSurfaceVariant = Color(0xFFF2F2F2);
-  static const Color lightOutline = Color(0xFFD6D6D6);
-  static const Color lightOutlineVariant = Color(0xFFE5E5E5);
-  static const Color lightTextPrimary = Color(0xFF000000);
+  // Scholar Teal light theme (warm paper background, teal primary)
+  static const Color lightBackground = Color(0xFFFAF8F5);
+  static const Color lightSurfaceBw = Color(0xFFFFFFFF);
+  static const Color lightSurfaceVariant = Color(0xFFF4F1EB);
+  // Teal-leaning border for cards, inputs, outlined buttons (brand chrome).
+  static const Color lightOutline = Color(0xFFCFE0E6);
+  static const Color lightOutlineVariant = Color(0xFFE8E2D6);
+  static const Color lightTextPrimary = Color(0xFF1A1A1A);
   static const Color lightTextSecondary = Color(0xFF5C5C5C);
   static const Color lightTextDisabled = Color(0xFF999999);
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
 
 class ModuleWidget extends StatelessWidget {
@@ -29,7 +28,7 @@ class ModuleWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: colorScheme.outlineVariant),
+        border: Border.all(color: colorScheme.outline),
         boxShadow: [
           BoxShadow(
             color: colorScheme.shadow.withValues(alpha: 0.06),
@@ -80,8 +79,8 @@ class ModuleWidget extends StatelessWidget {
               icon: const Icon(Icons.arrow_forward, size: 16),
               label: const Text('Start'),
               style: FilledButton.styleFrom(
-                backgroundColor: PmpColors.info500,
-                foregroundColor: Colors.white,
+                backgroundColor: colorScheme.primary,
+                foregroundColor: colorScheme.onPrimary,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),

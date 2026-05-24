@@ -61,11 +61,11 @@ class _CustomControlState extends State<CustomControl> {
     final colorScheme = Theme.of(context).colorScheme;
     final onSurface = colorScheme.onSurface;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       margin: const EdgeInsets.only(left: 12, right: 12, bottom: 8, top: 8),
       decoration: BoxDecoration(
         color: colorScheme.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: colorScheme.outlineVariant,
           width: 1,
@@ -87,15 +87,15 @@ class _CustomControlState extends State<CustomControl> {
                 widget.controller.seekTo(Duration(seconds: newPosition));
               },
               child: Ink(
-                width: 24,
-                height: 24,
+                width: 40,
+                height: 40,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
                   Icons.replay_10,
                   color: onSurface,
-                  size: 18,
+                  size: 22,
                 ),
               ),
             ),
@@ -105,8 +105,9 @@ class _CustomControlState extends State<CustomControl> {
           ),
           Text(
             adjustedCurrentPosition.formatDuration(),
-            style: PmpTextStyles.subBold.copyWith(
+            style: PmpTextStyles.labelMedium.copyWith(
               color: onSurface,
+              fontFeatures: const [FontFeature.tabularFigures()],
             ),
           ),
           const SizedBox(
@@ -128,9 +129,9 @@ class _CustomControlState extends State<CustomControl> {
                   min: 0,
                   max: widget.endPosition.toDouble() -
                       widget.startPosition.toDouble(),
-                  thumbColor: onSurface,
-                  activeColor: Colors.orange,
-                  inactiveColor: onSurface.withValues(alpha: 0.3),
+                  thumbColor: colorScheme.primary,
+                  activeColor: colorScheme.primary,
+                  inactiveColor: colorScheme.outlineVariant,
                   onChanged: (value) {
                     _checkReadyToPlay();
                     int seekPosition = value.toInt() + widget.startPosition;
@@ -145,8 +146,9 @@ class _CustomControlState extends State<CustomControl> {
           ),
           Text(
             '- ${remainingDuration.formatDuration()}',
-            style: PmpTextStyles.subBold.copyWith(
+            style: PmpTextStyles.labelMedium.copyWith(
               color: onSurface,
+              fontFeatures: const [FontFeature.tabularFigures()],
             ),
           ),
           const SizedBox(
@@ -167,15 +169,15 @@ class _CustomControlState extends State<CustomControl> {
                 widget.onSeek();
               },
               child: Ink(
-                width: 24,
-                height: 24,
+                width: 40,
+                height: 40,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
                   Icons.forward_10,
                   color: onSurface,
-                  size: 18,
+                  size: 22,
                 ),
               ),
             ),
@@ -184,7 +186,7 @@ class _CustomControlState extends State<CustomControl> {
           widget.readyToPlay
               ? Material(
                   borderRadius: BorderRadius.circular(100),
-                  color: Colors.transparent,
+                  color: colorScheme.primary,
                   child: InkWell(
                     borderRadius: BorderRadius.circular(100),
                     onTap: () {
@@ -196,41 +198,42 @@ class _CustomControlState extends State<CustomControl> {
                       }
                       setState(() {});
                     },
-                    child: Container(
-                      width: 30,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: colorScheme.outlineVariant,
-                          width: 1,
-                        ),
-                      ),
+                    child: SizedBox(
+                      width: 48,
+                      height: 48,
                       child: Center(
                         child: isLoading
                             ? SizedBox(
-                                width: 18,
-                                height: 18,
+                                width: 22,
+                                height: 22,
                                 child: CircularProgressIndicator(
-                                  color: onSurface,
+                                  strokeWidth: 2.5,
+                                  color: colorScheme.onPrimary,
                                 ),
                               )
                             : Icon(
                                 widget.controller.value.isPlaying
-                                    ? Icons.pause
-                                    : Icons.play_arrow,
-                                color: onSurface,
-                                size: 18,
+                                    ? Icons.pause_rounded
+                                    : Icons.play_arrow_rounded,
+                                color: colorScheme.onPrimary,
+                                size: 28,
                               ),
                       ),
                     ),
                   ),
                 )
               : SizedBox(
-                  width: 16,
-                  height: 16,
-                  child: CircularProgressIndicator(
-                    color: onSurface,
+                  width: 48,
+                  height: 48,
+                  child: Center(
+                    child: SizedBox(
+                      width: 22,
+                      height: 22,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2.5,
+                        color: colorScheme.primary,
+                      ),
+                    ),
                   ),
                 ),
         ],

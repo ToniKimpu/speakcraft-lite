@@ -197,6 +197,7 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                       child: Column(
                         children: [
                           player,
+                          const SizedBox(height: 8),
                           ListenableBuilder(
                             listenable: _controller,
                             builder: (_, __) => CustomControl(
