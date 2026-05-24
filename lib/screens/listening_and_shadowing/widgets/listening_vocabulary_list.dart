@@ -75,7 +75,7 @@ class ListeningVocabularyList extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(24),
                         child: Text(
-                          'á€žá€Šá€ºá€—á€®á€’á€®á€šá€­á€¯á€¡á€á€½á€€á€º vocabularyá€™á€»á€¬á€¸\n á€™á€€á€¼á€¬á€á€„á€ºá€á€„á€ºá€•á€±á€¸á€•á€«á€™á€Šá€ºá‹',
+                          'သည်ဗီဒီယိုအတွက် vocabularyများ\n မကြာခင်တင်ပေးပါမည်။',
                           style: PmpTextStyles.body1Regular.copyWith(
                             color: Colors.white,
                           ),
