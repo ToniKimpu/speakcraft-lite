@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/listening/listening_bloc.dart';
+import 'package:speakcraft/bloc/listening/listening_bloc.dart';
 
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
@@ -75,7 +75,7 @@ class ListeningVocabularyList extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(24),
                         child: Text(
-                          'သည်ဗီဒီယိုအတွက် vocabularyများ\n မကြာခင်တင်ပေးပါမည်။',
+                          'á€žá€Šá€ºá€—á€®á€’á€®á€šá€­á€¯á€¡á€á€½á€€á€º vocabularyá€™á€»á€¬á€¸\n á€™á€€á€¼á€¬á€á€„á€ºá€á€„á€ºá€•á€±á€¸á€•á€«á€™á€Šá€ºá‹',
                           style: PmpTextStyles.body1Regular.copyWith(
                             color: Colors.white,
                           ),

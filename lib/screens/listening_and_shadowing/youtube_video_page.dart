@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/model/subtitle/subtitle.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_control.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_pager.dart';
+import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/model/subtitle/subtitle.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/widgets/custom_control.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/widgets/subtitle_pager.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../bloc/listening/subtitle_index_bloc.dart';

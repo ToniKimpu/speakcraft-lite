@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
-import 'package:pmp_english/bloc/user_activity/user_activity_messages.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
+import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
+import 'package:speakcraft/bloc/user_activity/user_activity_messages.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import 'widgets/module_widget.dart';
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PMP English'),
+        title: const Text('SpeakCraft'),
         actions: [
           IconButton(
             onPressed: () {
@@ -92,8 +92,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 24),
             ModuleWidget(
               title: 'Useful Spoken Patterns',
-              label1: 'Spoken Patternပေါင်း (၁၀၀)ကျော်လေ့လာမယ်',
-              label2: 'နေ့စဉ်ပုံမှန် လေ့လာမယ်',
+              label1: 'Spoken Patterná€•á€±á€«á€„á€ºá€¸ (áá€á€)á€€á€»á€±á€¬á€ºá€œá€±á€·á€œá€¬á€™á€šá€º',
+              label2: 'á€”á€±á€·á€…á€‰á€ºá€•á€¯á€¶á€™á€¾á€”á€º á€œá€±á€·á€œá€¬á€™á€šá€º',
               iconTitle: Icons.menu_book,
               iconLabel1: Icons.format_quote,
               iconLabel2: Icons.calendar_month,
@@ -104,8 +104,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 12),
             ModuleWidget(
               title: 'Listening & Shadowing',
-              label1: 'Listening လုပ်မယ်။',
-              label2: 'Shadowing လိုက်လုပ်မယ်။',
+              label1: 'Listening á€œá€¯á€•á€ºá€™á€šá€ºá‹',
+              label2: 'Shadowing á€œá€­á€¯á€€á€ºá€œá€¯á€•á€ºá€™á€šá€ºá‹',
               iconTitle: Icons.hearing,
               iconLabel1: Icons.headphones,
               iconLabel2: Icons.surround_sound,
@@ -116,8 +116,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 12),
             ModuleWidget(
               title: 'Bookmarks',
-              label1: 'ကိုယ်တိုင် save ထားသော bookmarks များ',
-              label2: 'Vocabulary, phrase, grammar ကို ပြန်လေ့လာမယ်',
+              label1: 'á€€á€­á€¯á€šá€ºá€á€­á€¯á€„á€º save á€‘á€¬á€¸á€žá€±á€¬ bookmarks á€™á€»á€¬á€¸',
+              label2: 'Vocabulary, phrase, grammar á€€á€­á€¯ á€•á€¼á€”á€ºá€œá€±á€·á€œá€¬á€™á€šá€º',
               iconTitle: Icons.bookmark,
               iconLabel1: Icons.menu_book,
               iconLabel2: Icons.school,
@@ -219,7 +219,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.only(top: 2),
             child: Text(
-              '$streak day streak 🔥',
+              '$streak day streak ðŸ”¥',
               style: TextStyle(
                 fontSize: 13,
                 color: colorScheme.onSurfaceVariant,

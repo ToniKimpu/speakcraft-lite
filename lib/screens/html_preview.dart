@@ -3,11 +3,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:http/http.dart' as http;
-import 'package:pmp_english/config/env.dart';
-import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
+import 'package:speakcraft/config/env.dart';
+import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
 
 class HtmlPreview extends StatefulWidget {
   final String? assetPath;
@@ -215,7 +215,7 @@ class _ErrorView extends StatelessWidget {
 
             // Headline
             Text(
-              "Couldn’t load explanation",
+              "Couldnâ€™t load explanation",
               style: theme.textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.w600,
               ),

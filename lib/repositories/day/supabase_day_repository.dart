@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/model/app_user/app_user.dart';
-import 'package:pmp_english/model/day/day.dart';
-import 'package:pmp_english/model/exercise/exercise.dart';
-import 'package:pmp_english/model/lesson/lesson.dart';
-import 'package:pmp_english/services/supabase_service.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/model/app_user/app_user.dart';
+import 'package:speakcraft/model/day/day.dart';
+import 'package:speakcraft/model/exercise/exercise.dart';
+import 'package:speakcraft/model/lesson/lesson.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 
 import 'day_repository.dart';
 

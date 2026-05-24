@@ -1,5 +1,5 @@
-import 'package:pmp_english/model/app_user/app_user.dart';
-import 'package:pmp_english/services/supabase_service.dart';
+import 'package:speakcraft/model/app_user/app_user.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 
 import 'auth_repository.dart';
 

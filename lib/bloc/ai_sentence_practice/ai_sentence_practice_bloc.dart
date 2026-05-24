@@ -4,8 +4,8 @@ import 'package:drift/drift.dart' hide JsonKey;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/services/app_database/app_database.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/services/app_database/app_database.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../model/ai_sentence_practice/ai_sentence_practice.dart';

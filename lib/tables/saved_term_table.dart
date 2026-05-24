@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:pmp_english/model/saved_term/saved_term.dart';
+import 'package:speakcraft/model/saved_term/saved_term.dart';
 
 @UseRowClass(SavedTerm)
 class SavedTermTable extends Table {
@@ -11,7 +11,7 @@ class SavedTermTable extends Table {
   TextColumn get translationMy => text().nullable()();
   TextColumn get definitionMy => text().nullable()();
 
-  /// JSON-serialized `List<VocabularyExample>` — Drift doesn't do nested
+  /// JSON-serialized `List<VocabularyExample>` â€” Drift doesn't do nested
   /// lists; serializing keeps this table flat.
   TextColumn get examplesJson => text().withDefault(const Constant('[]'))();
 

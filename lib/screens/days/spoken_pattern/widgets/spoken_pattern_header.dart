@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
-import 'package:pmp_english/screens/days/spoken_pattern/widgets/spoken_pattern_audio_button.dart';
+import 'package:speakcraft/model/spoken_pattern/spoken_pattern.dart';
+import 'package:speakcraft/screens/days/spoken_pattern/widgets/spoken_pattern_audio_button.dart';
 
 import '../../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../../config/pmp_text_styles.dart';
@@ -116,7 +116,7 @@ class SpokenPatternHeader extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(left: 12),
               child: Text(
-                "ဒီ pattern လေးကတော့ ကိုယ်တိုင် \"တစ်ခုခုလုပ်ချင်တယ်\" လို့ ပြောတဲ့အခါ သုံးတာပါ။ အရမ်းရိုးရှင်းပြီး နေ့စဉ်သုံးစကားမှာ အမြဲတမ်းလိုလို သုံးရပါတယ်။",
+                "á€’á€® pattern á€œá€±á€¸á€€á€á€±á€¬á€· á€€á€­á€¯á€šá€ºá€á€­á€¯á€„á€º \"á€á€…á€ºá€á€¯á€á€¯á€œá€¯á€•á€ºá€á€»á€„á€ºá€á€šá€º\" á€œá€­á€¯á€· á€•á€¼á€±á€¬á€á€²á€·á€¡á€á€« á€žá€¯á€¶á€¸á€á€¬á€•á€«á‹ á€¡á€›á€™á€ºá€¸á€›á€­á€¯á€¸á€›á€¾á€„á€ºá€¸á€•á€¼á€®á€¸ á€”á€±á€·á€…á€‰á€ºá€žá€¯á€¶á€¸á€…á€€á€¬á€¸á€™á€¾á€¬ á€¡á€™á€¼á€²á€á€™á€ºá€¸á€œá€­á€¯á€œá€­á€¯ á€žá€¯á€¶á€¸á€›á€•á€«á€á€šá€ºá‹",
                 style: PmpTextStyles.body2Regular.copyWith(
                   color: Colors.white,
                 ),

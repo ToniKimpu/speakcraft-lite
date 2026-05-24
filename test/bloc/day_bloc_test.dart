@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:pmp_english/bloc/day/day_bloc.dart';
-import 'package:pmp_english/model/day/day.dart';
-import 'package:pmp_english/repositories/day/day_repository.dart';
+import 'package:speakcraft/bloc/day/day_bloc.dart';
+import 'package:speakcraft/model/day/day.dart';
+import 'package:speakcraft/repositories/day/day_repository.dart';
 
 class MockDayRepository extends Mock implements DayRepository {}
 

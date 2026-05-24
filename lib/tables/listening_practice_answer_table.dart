@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:pmp_english/model/listening_practice_answer/listening_practice_answer.dart';
+import 'package:speakcraft/model/listening_practice_answer/listening_practice_answer.dart';
 
 @UseRowClass(ListeningPracticeAnswer)
 class ListeningPracticeAnswerTable extends Table {

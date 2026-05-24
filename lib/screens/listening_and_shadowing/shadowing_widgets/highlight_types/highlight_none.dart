@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_line.dart';
 
 /// No highlight: just renders the line as plain white text.
 class HighlightNone extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
 
 class AppVersionWidget extends StatelessWidget {
   const AppVersionWidget({super.key});

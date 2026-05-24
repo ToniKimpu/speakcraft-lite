@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/user_bloc/user_bloc.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/model/app_user/app_user.dart';
+import 'package:speakcraft/bloc/user_bloc/user_bloc.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/model/app_user/app_user.dart';
 
 import '../auth/widgets/auth_text_field.dart';
 

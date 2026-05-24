@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/pattern_exercise/pattern_exercise.dart';
 
 import '../models/added_word.dart';
 import '../models/word_item.dart';
@@ -60,7 +60,7 @@ class _SpokenPatternExerciseWidgetState
 
     final burmeseText = widget.patternExercise.burmeseText.trim();
     final burmeseWords = burmeseText.split(' ');
-    wordsWithQuotes = ['“', ...burmeseWords, '”'];
+    wordsWithQuotes = ['â€œ', ...burmeseWords, 'â€'];
   }
 
   @override

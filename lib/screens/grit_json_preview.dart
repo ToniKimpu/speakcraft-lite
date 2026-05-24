@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
 
 class GritJsonPreview extends StatefulWidget {
   final String assetPath;

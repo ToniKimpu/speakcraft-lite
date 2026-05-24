@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/model/saved_term/saved_term.dart';
-import 'package:pmp_english/model/vocabulary/vocabulary.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/model/saved_term/saved_term.dart';
+import 'package:speakcraft/model/vocabulary/vocabulary.dart';
 
 class SavedTermDetailSheet extends StatelessWidget {
   const SavedTermDetailSheet({

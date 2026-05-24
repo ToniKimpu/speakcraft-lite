@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
-import 'package:pmp_english/model/ai_sentence_practice/ai_sentence_practice.dart';
+import 'package:speakcraft/model/ai_sentence_practice/ai_sentence_practice.dart';
 
 class CorrectSentenceCard extends StatefulWidget {
   final AiSentencePractice aiSentencePractice;
@@ -30,12 +30,12 @@ class _CorrectSentenceCardState extends State<CorrectSentenceCard> {
   ];
 
   final List<String> _confirmationMessages = [
-    "🎉 Your sentence is grammatically correct!",
-    "✅ That’s spot on — no errors found!",
-    "👏 Everything looks perfect!",
-    "🎯 You got it just right!",
-    "🌟 Grammar check passed with flying colors!",
-    "🙌 Nailed it! No corrections needed.",
+    "ðŸŽ‰ Your sentence is grammatically correct!",
+    "âœ… Thatâ€™s spot on â€” no errors found!",
+    "ðŸ‘ Everything looks perfect!",
+    "ðŸŽ¯ You got it just right!",
+    "ðŸŒŸ Grammar check passed with flying colors!",
+    "ðŸ™Œ Nailed it! No corrections needed.",
   ];
 
   late final String selectedPraise;
@@ -99,7 +99,7 @@ class _CorrectSentenceCardState extends State<CorrectSentenceCard> {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  "✅ \"${widget.aiSentencePractice.inputSentence}\"",
+                  "âœ… \"${widget.aiSentencePractice.inputSentence}\"",
                   style: const TextStyle(
                     fontSize: 16,
                     color: Colors.white,

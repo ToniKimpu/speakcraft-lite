@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/listening/shadowing_line_bloc.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_none.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/sheets/highlight_type_chooser.dart';
+import 'package:speakcraft/bloc/listening/shadowing_line_bloc.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_none.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/sheets/highlight_type_chooser.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -98,7 +98,7 @@ class _ShadowingPageState extends State<ShadowingPage>
   void _onPlayerPositionChanged() {
     if (!mounted) return;
 
-    // Real YouTube position update — snap baseline and restart (or stop) the
+    // Real YouTube position update â€” snap baseline and restart (or stop) the
     // wall-clock stopwatch that drives _onExtrapolationTick between ticks.
     _baselinePosition = _controller.value.position;
     _sinceBaseline
@@ -125,7 +125,7 @@ class _ShadowingPageState extends State<ShadowingPage>
           .toList()
         ..sort();
 
-      // Stop auto-scrolling once the last line is visible — alignment 0.3
+      // Stop auto-scrolling once the last line is visible â€” alignment 0.3
       // can't be satisfied near the end, which causes a jarring bounce.
       if (visibleIndexes.contains(_subtitles.length - 1)) {
         return;

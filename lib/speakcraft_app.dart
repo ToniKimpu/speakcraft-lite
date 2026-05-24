@@ -3,16 +3,16 @@ import 'dart:async';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/config/pmp_themes.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/services/theme_controller.dart';
-import 'package:pmp_english/main.dart';
-import 'package:pmp_english/main_providers.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/config/pmp_themes.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/services/theme_controller.dart';
+import 'package:speakcraft/main.dart';
+import 'package:speakcraft/main_providers.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'bloc/internet_checker/internet_checker_bloc.dart';
@@ -21,14 +21,14 @@ import 'services/supabase_service.dart';
 
 final _navigatorKey = GlobalKey<NavigatorState>();
 
-class PmpEnglishApp extends StatefulWidget {
-  const PmpEnglishApp({super.key});
+class SpeakCraftApp extends StatefulWidget {
+  const SpeakCraftApp({super.key});
 
   @override
-  State<PmpEnglishApp> createState() => _PmpEnglishAppState();
+  State<SpeakCraftApp> createState() => _SpeakCraftAppState();
 }
 
-class _PmpEnglishAppState extends State<PmpEnglishApp> {
+class _SpeakCraftAppState extends State<SpeakCraftApp> {
   late final StreamSubscription<String> _tokenStream;
   late final StreamSubscription _onMessageStream;
   late final StreamSubscription _onAuthStateChangedStream;
@@ -119,7 +119,7 @@ class _PmpEnglishAppState extends State<PmpEnglishApp> {
         valueListenable: sl<ThemeController>(),
         builder: (context, themeMode, _) {
           return MaterialApp(
-            title: 'PMP English App',
+            title: 'SpeakCraft',
             navigatorKey: _navigatorKey,
             debugShowCheckedModeBanner: false,
             theme: PmpThemes.lightTheme,

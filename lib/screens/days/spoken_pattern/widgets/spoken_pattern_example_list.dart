@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/model/pattern_example/pattern_example.dart';
+import 'package:speakcraft/model/pattern_example/pattern_example.dart';
 
 import '../../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../../config/pmp_text_styles.dart';
@@ -218,7 +218,7 @@ class _SpokenPatternExampleListState extends State<SpokenPatternExampleList> {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
                           child: Text(
-                            "Subject က 'I' ဆိုတော့ want မှာ 's' ထည့်စရာမလိုပါဘူး။",
+                            "Subject á€€ 'I' á€†á€­á€¯á€á€±á€¬á€· want á€™á€¾á€¬ 's' á€‘á€Šá€·á€ºá€…á€›á€¬á€™á€œá€­á€¯á€•á€«á€˜á€°á€¸á‹",
                             style: PmpTextStyles.body2Regular.copyWith(
                               color: Colors.amberAccent,
                               fontWeight: FontWeight.w500,
@@ -230,7 +230,7 @@ class _SpokenPatternExampleListState extends State<SpokenPatternExampleList> {
                   ),
                 ),
 
-                /// 🔹 Separator (NOT for last item)
+                /// ðŸ”¹ Separator (NOT for last item)
                 if (!isLast)
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),

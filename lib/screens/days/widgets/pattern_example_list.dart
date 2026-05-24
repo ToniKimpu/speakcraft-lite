@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
+import 'package:speakcraft/model/spoken_pattern/spoken_pattern.dart';
 
 import '../../../bloc/audio_player/audio_player_bloc.dart';
 import '../../../config/pmp_text_styles.dart';

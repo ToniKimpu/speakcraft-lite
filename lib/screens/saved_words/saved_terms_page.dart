@@ -1,11 +1,11 @@
 import 'package:drift/drift.dart' show OrderingTerm;
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/model/saved_term/saved_term.dart';
-import 'package:pmp_english/screens/saved_words/widgets/saved_term_detail_sheet.dart';
-import 'package:pmp_english/services/app_database/app_database.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/model/saved_term/saved_term.dart';
+import 'package:speakcraft/screens/saved_words/widgets/saved_term_detail_sheet.dart';
+import 'package:speakcraft/services/app_database/app_database.dart';
 
 class SavedTermsPage extends StatefulWidget {
   const SavedTermsPage({super.key});
@@ -107,7 +107,7 @@ class _SavedTermsPageState extends State<SavedTermsPage> {
         Padding(
           padding: const EdgeInsets.only(left: 16, top: 12, bottom: 4),
           child: Text(
-            'Total — ${terms.length}',
+            'Total â€” ${terms.length}',
             style: PmpTextStyles.body2Regular.copyWith(
               fontFamily: 'ArchivoBlack Regular',
               color: colorScheme.onSurfaceVariant,

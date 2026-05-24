@@ -9,9 +9,11 @@ platform :android do
     lane :release do |options|
         build(options)
         env = options[:env]
+        # Dev app ID still points to the old pmp-english-dev project — update
+        # once a speakcraft-dev Firebase project is created.
         app = "1:184571582087:android:2c88ad6af86c4abcd60a22"
         if env=="prod" then
-            app = "1:681598698244:android:093c9c44074022eb658651"
+            app = "1:48036795230:android:68f01d470fbac047a375cf"
         end
         puts app
         release = firebase_app_distribution(

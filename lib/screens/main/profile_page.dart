@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/model/app_user/app_user.dart';
-import 'package:pmp_english/screens/main/widgets/app_version_widget.dart';
-import 'package:pmp_english/screens/main/widgets/profile_item_row.dart';
-import 'package:pmp_english/services/theme_controller.dart';
+import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/model/app_user/app_user.dart';
+import 'package:speakcraft/screens/main/widgets/app_version_widget.dart';
+import 'package:speakcraft/screens/main/widgets/profile_item_row.dart';
+import 'package:speakcraft/services/theme_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/env.dart';
@@ -136,11 +136,11 @@ class _StatsRow extends StatelessWidget {
           orElse: () => 0,
         );
 
-        final daysLabel = days == 0 ? '—' : '$days';
+        final daysLabel = days == 0 ? 'â€”' : '$days';
         final streakLabel = streak == 0
-            ? '—'
+            ? 'â€”'
             : streak > 1
-                ? '$streak 🔥'
+                ? '$streak ðŸ”¥'
                 : '$streak';
 
         return IntrinsicHeight(

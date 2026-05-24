@@ -1,9 +1,9 @@
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_word.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_line.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_word.dart';
 
 /// Karaoke-style progressive highlight: a continuous fill sweeps left-to-right
 /// across the whole sentence (including spaces between words), per-word timing,
@@ -109,7 +109,7 @@ class _KaraokePainter extends CustomPainter {
 
     // 3. Row rects: one box per visual row of the wrapped text.
     //    Use includeLineSpacingMiddle so adjacent row boxes tile exactly
-    //    (row N bottom == row N+1 top) — no pixel overlap at row junctions
+    //    (row N bottom == row N+1 top) â€” no pixel overlap at row junctions
     //    which would otherwise alpha-compound to a darker band, and no gap
     //    which would look like a stripe through the middle of a sentence.
     final rowBoxes = tp.getBoxesForSelection(
@@ -155,14 +155,14 @@ class _KaraokePainter extends CustomPainter {
           (i < words.length - 1) ? words[i + 1].start : w.end;
 
       if (currentSeconds >= endBoundary) {
-        // Fully past — keep scanning to find an active or future word.
+        // Fully past â€” keep scanning to find an active or future word.
         continue;
       }
 
       allPast = false;
 
       if (currentSeconds >= w.start) {
-        // Active word — interpolate cursor through this word and into the
+        // Active word â€” interpolate cursor through this word and into the
         // following space (so the fill sweeps continuously across spaces).
         final wordBox = wordBoxes[i];
         final wordRow = rowOfWord(i);
@@ -172,9 +172,9 @@ class _KaraokePainter extends CustomPainter {
             : 1.0;
 
         // Endpoint the cursor sweeps toward during this word's window:
-        // - same-row next word → its left edge (sweeps through the space)
-        // - different-row next word → end of current row (completes the row)
-        // - no next word → end of current row
+        // - same-row next word â†’ its left edge (sweeps through the space)
+        // - different-row next word â†’ end of current row (completes the row)
+        // - no next word â†’ end of current row
         double endpointX;
         if (i + 1 < words.length) {
           final nextRow = rowOfWord(i + 1);
@@ -190,12 +190,12 @@ class _KaraokePainter extends CustomPainter {
         activeRowIndex = wordRow;
         fillRightX = wordBox.left + (endpointX - wordBox.left) * t;
       }
-      // Else: future word with no earlier active — stop here, leave activeRowIndex = -1.
+      // Else: future word with no earlier active â€” stop here, leave activeRowIndex = -1.
       break;
     }
 
     if (allPast && words.isNotEmpty) {
-      // Past the entire line — fill every row fully so completed sentences
+      // Past the entire line â€” fill every row fully so completed sentences
       // stay highlighted in the scrolling list.
       activeRowIndex = rowBoxes.length - 1;
       fillRightX = rowBoxes.last.right;

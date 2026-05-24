@@ -11,17 +11,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:http/http.dart';
-import 'package:pmp_english/firebase_options.dart';
-import 'package:pmp_english/firebase_options_dev.dart';
-import 'package:pmp_english/pmp_english_app.dart';
+import 'package:speakcraft/firebase_options.dart';
+import 'package:speakcraft/firebase_options_dev.dart';
+import 'package:speakcraft/speakcraft_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
 import 'core/di/service_locator.dart';
 import 'services/share_preference_utils.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/core/logger/dev_logger.dart';
-import 'package:pmp_english/core/logger/crashlytics_logger.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/core/logger/dev_logger.dart';
+import 'package:speakcraft/core/logger/crashlytics_logger.dart';
 
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
@@ -167,7 +167,7 @@ void main() {
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     await _populateDeviceInfo();
     await setupFlutterNotifications();
-    runApp(const PmpEnglishApp());
+    runApp(const SpeakCraftApp());
   }, (error, stack) {
     // Catch any errors that escape the async zone
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
