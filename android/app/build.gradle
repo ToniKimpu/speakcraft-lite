@@ -1,9 +1,12 @@
 plugins {
     id "com.android.application"
-    // START: FlutterFire Configuration
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    // END: FlutterFire Configuration
 }
 
 def keystoreProperties = new Properties()
@@ -58,7 +61,7 @@ android {
         }
     }
 
-    namespace = "com.pmpenglish.mobile"
+    namespace = "com.tzkenglishlab.speakcraft"
     compileSdk = 36
     ndkVersion "28.2.13676358"
 
@@ -74,7 +77,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.pmpenglish.mobile"
+        applicationId "com.tzkenglishlab.speakcraft"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdkVersion = flutter.minSdkVersion
@@ -90,12 +93,12 @@ android {
                 dimension "default"
                 applicationIdSuffix ".dev"
                 versionNameSuffix ".dev"
-                resValue "string", "app_name", "PMP English(Dev)"
+                resValue "string", "app_name", "SpeakCraft(Dev)"
         }
         prod {
                 dimension "default"
-                applicationId "com.pmpenglish.mobile"
-                resValue "string", "app_name", "PMP English"
+                applicationId "com.tzkenglishlab.speakcraft"
+                resValue "string", "app_name", "SpeakCraft"
         }
     }    
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/model/ai_sentence_practice/ai_sentence_practice.dart';
+import 'package:speakcraft/model/ai_sentence_practice/ai_sentence_practice.dart';
 
 class GrammerSuggestionCard extends StatelessWidget {
   const GrammerSuggestionCard({
@@ -39,7 +39,7 @@ class GrammerSuggestionCard extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            /// ❌ User Input
+            /// âŒ User Input
             _sectionWithIcon(
               icon: Icons.close,
               label: "Your Input",
@@ -50,7 +50,7 @@ class GrammerSuggestionCard extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            /// ✅ Corrected Sentence
+            /// âœ… Corrected Sentence
             _sectionWithIcon(
               icon: Icons.check_circle_outline,
               label: "Corrected",
@@ -61,7 +61,7 @@ class GrammerSuggestionCard extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            /// 💬 Explanation
+            /// ðŸ’¬ Explanation
             _sectionWithIcon(
               icon: Icons.chat_bubble_outline,
               label: "Explanation",

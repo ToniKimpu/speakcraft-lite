@@ -3,10 +3,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:pmp_english/config/env.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
+import 'package:speakcraft/config/env.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
 
 class SentenceExplanationPage extends StatefulWidget {
   const SentenceExplanationPage({

@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
-import 'package:pmp_english/tables/ai_sentence_practice_table.dart';
+import 'package:speakcraft/tables/ai_sentence_practice_table.dart';
 
 import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
 import '../../model/exercise_user_answer/exercise_user_answer.dart';

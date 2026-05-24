@@ -7,12 +7,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pmp_english/pmp_english_app.dart';
+import 'package:speakcraft/speakcraft_app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const PmpEnglishApp());
+    await tester.pumpWidget(const SpeakCraftApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

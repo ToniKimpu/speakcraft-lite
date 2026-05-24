@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/widgets/custom_track_shape.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/widgets/custom_track_shape.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart'
     as yt_player;
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';

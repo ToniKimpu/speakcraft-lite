@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
-import 'package:pmp_english/repositories/spoken_pattern/spoken_pattern_repository.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/pattern_vocabulary/pattern_vocabulary.dart';
+import 'package:speakcraft/repositories/spoken_pattern/spoken_pattern_repository.dart';
 
 import '../../model/pattern_example/pattern_example.dart';
 import '../../model/spoken_pattern/spoken_pattern.dart';

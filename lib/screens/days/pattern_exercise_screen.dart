@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/day/day_bloc.dart';
-import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
-import 'package:pmp_english/bloc/exercise_user_answer/exercise_user_answer_bloc.dart';
-import 'package:pmp_english/bloc/pattern_exercise/pattern_exercise_bloc.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/model/day/day.dart';
-import 'package:pmp_english/model/exercise/exercise.dart';
-import 'package:pmp_english/model/exercise_user_answer/exercise_user_answer.dart';
-import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
-import 'package:pmp_english/screens/days/widgets/practice_exercise_widget.dart';
+import 'package:speakcraft/bloc/day/day_bloc.dart';
+import 'package:speakcraft/bloc/exercise/exercise_bloc.dart';
+import 'package:speakcraft/bloc/exercise_user_answer/exercise_user_answer_bloc.dart';
+import 'package:speakcraft/bloc/pattern_exercise/pattern_exercise_bloc.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/model/day/day.dart';
+import 'package:speakcraft/model/exercise/exercise.dart';
+import 'package:speakcraft/model/exercise_user_answer/exercise_user_answer.dart';
+import 'package:speakcraft/model/pattern_exercise/pattern_exercise.dart';
+import 'package:speakcraft/screens/days/widgets/practice_exercise_widget.dart';
 
 import '../../l10n/generated/l10n.dart';
 

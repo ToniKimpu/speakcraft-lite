@@ -1,8 +1,8 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/model/exercise/exercise.dart';
-import 'package:pmp_english/model/lesson/lesson.dart';
+import 'package:speakcraft/model/exercise/exercise.dart';
+import 'package:speakcraft/model/lesson/lesson.dart';
 
 part 'day.freezed.dart';
 part 'day.g.dart';

@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
 
 import '../../../config/pmp_text_styles.dart';
 import '../../../l10n/generated/l10n.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
-import 'package:pmp_english/screens/auth/widgets/auth_button.dart';
-import 'package:pmp_english/screens/auth/widgets/auth_card.dart';
-import 'package:pmp_english/screens/auth/widgets/auth_text_field.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
+import 'package:speakcraft/screens/auth/widgets/auth_button.dart';
+import 'package:speakcraft/screens/auth/widgets/auth_card.dart';
+import 'package:speakcraft/screens/auth/widgets/auth_text_field.dart';
 
 import '../../../config/pmp_text_styles.dart';
 
@@ -89,7 +89,7 @@ class _SignUpDataState extends State<SignUpData> {
             ),
           ),
           Text(
-            'Welcome to PMP English',
+            'Welcome to SpeakCraft',
             style: PmpTextStyles.h2.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.w600,

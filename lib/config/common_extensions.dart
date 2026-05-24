@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
 
 import '../l10n/generated/l10n.dart';
 

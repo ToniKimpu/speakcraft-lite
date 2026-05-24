@@ -1,10 +1,10 @@
 import 'package:drift/drift.dart';
-import 'package:pmp_english/config/env.dart';
-import 'package:pmp_english/model/pattern_example/pattern_example.dart';
-import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
-import 'package:pmp_english/model/spoken_pattern/spoken_pattern.dart';
-import 'package:pmp_english/services/app_database/app_database.dart';
-import 'package:pmp_english/services/supabase_service.dart';
+import 'package:speakcraft/config/env.dart';
+import 'package:speakcraft/model/pattern_example/pattern_example.dart';
+import 'package:speakcraft/model/pattern_vocabulary/pattern_vocabulary.dart';
+import 'package:speakcraft/model/spoken_pattern/spoken_pattern.dart';
+import 'package:speakcraft/services/app_database/app_database.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 
 import 'spoken_pattern_repository.dart';
 

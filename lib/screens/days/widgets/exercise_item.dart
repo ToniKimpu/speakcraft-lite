@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/model/day/day.dart';
-import 'package:pmp_english/model/exercise/exercise.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/model/day/day.dart';
+import 'package:speakcraft/model/exercise/exercise.dart';
 
 import '../../../config/pmp_text_styles.dart';
 
@@ -13,7 +13,7 @@ class ExerciseItem extends StatelessWidget {
     this.isOpenIndex = false,
     this.isLastIndex = false,
     this.showStatus =
-        true, // ✅ allow hiding status icon (for pure list display)
+        true, // âœ… allow hiding status icon (for pure list display)
   });
 
   final Exercise exercise;

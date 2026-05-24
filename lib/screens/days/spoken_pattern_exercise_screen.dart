@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/model/pattern_exercise/pattern_exercise.dart';
-import 'package:pmp_english/screens/days/widgets/spoken_pattern_exercise_widget.dart';
+import 'package:speakcraft/model/pattern_exercise/pattern_exercise.dart';
+import 'package:speakcraft/screens/days/widgets/spoken_pattern_exercise_widget.dart';
 
 import '../../bloc/day/day_bloc.dart';
 import '../../bloc/exercise/exercise_bloc.dart';
@@ -111,7 +111,7 @@ class _SpokenPatternExerciseScreenState
             ),
             const SizedBox(width: 12),
 
-            // 🔹 Progress Bar
+            // ðŸ”¹ Progress Bar
             Expanded(
               child: LinearProgressIndicator(
                 borderRadius: BorderRadius.circular(4),
@@ -185,7 +185,7 @@ class _SpokenPatternExerciseScreenState
             availableWidth = constraints.maxWidth - 32;
             return Column(
               children: [
-                // 🔸 Scrollable top section
+                // ðŸ”¸ Scrollable top section
                 Expanded(
                   child:
                       BlocConsumer<PatternExerciseBloc, PatternExerciseState>(
@@ -236,7 +236,7 @@ class _SpokenPatternExerciseScreenState
                     },
                   ),
                 ),
-                // 🔸 Fixed bottom confirm row
+                // ðŸ”¸ Fixed bottom confirm row
                 Padding(
                   padding:
                       const EdgeInsets.only(bottom: 16, left: 16, right: 16),

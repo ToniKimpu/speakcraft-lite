@@ -1,4 +1,4 @@
-import 'package:pmp_english/config/env.dart';
+import 'package:speakcraft/config/env.dart';
 
 import 'supabase_service.dart';
 

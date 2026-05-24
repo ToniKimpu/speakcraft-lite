@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/model/sentence_explanation/sentence_explanation.dart';
-import 'package:pmp_english/model/subtitle/subtitle.dart';
+import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
+import 'package:speakcraft/model/subtitle/subtitle.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_routes.dart';
