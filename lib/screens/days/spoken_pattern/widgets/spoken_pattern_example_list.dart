@@ -218,7 +218,7 @@ class _SpokenPatternExampleListState extends State<SpokenPatternExampleList> {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12),
                           child: Text(
-                            "Subject á€€ 'I' á€†á€­á€¯á€á€±á€¬á€· want á€™á€¾á€¬ 's' á€‘á€Šá€·á€ºá€…á€›á€¬á€™á€œá€­á€¯á€•á€«á€˜á€°á€¸á‹",
+                            "Subject က 'I' ဆိုတော့ want မှာ 's' ထည့်စရာမလိုပါဘူး။",
                             style: PmpTextStyles.body2Regular.copyWith(
                               color: Colors.amberAccent,
                               fontWeight: FontWeight.w500,
@@ -230,7 +230,7 @@ class _SpokenPatternExampleListState extends State<SpokenPatternExampleList> {
                   ),
                 ),
 
-                /// ðŸ”¹ Separator (NOT for last item)
+                /// 🔹 Separator (NOT for last item)
                 if (!isLast)
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),

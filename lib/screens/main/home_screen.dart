@@ -92,8 +92,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 24),
             ModuleWidget(
               title: 'Useful Spoken Patterns',
-              label1: 'Spoken Patterná€•á€±á€«á€„á€ºá€¸ (áá€á€)á€€á€»á€±á€¬á€ºá€œá€±á€·á€œá€¬á€™á€šá€º',
-              label2: 'á€”á€±á€·á€…á€‰á€ºá€•á€¯á€¶á€™á€¾á€”á€º á€œá€±á€·á€œá€¬á€™á€šá€º',
+              label1: 'Spoken Patternပေါင်း (၁၀၀)ကျော်လေ့လာမယ်',
+              label2: 'နေ့စဉ်ပုံမှန် လေ့လာမယ်',
               iconTitle: Icons.menu_book,
               iconLabel1: Icons.format_quote,
               iconLabel2: Icons.calendar_month,
@@ -104,8 +104,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 12),
             ModuleWidget(
               title: 'Listening & Shadowing',
-              label1: 'Listening á€œá€¯á€•á€ºá€™á€šá€ºá‹',
-              label2: 'Shadowing á€œá€­á€¯á€€á€ºá€œá€¯á€•á€ºá€™á€šá€ºá‹',
+              label1: 'Listening လုပ်မယ်။',
+              label2: 'Shadowing လိုက်လုပ်မယ်။',
               iconTitle: Icons.hearing,
               iconLabel1: Icons.headphones,
               iconLabel2: Icons.surround_sound,
@@ -116,8 +116,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 12),
             ModuleWidget(
               title: 'Bookmarks',
-              label1: 'á€€á€­á€¯á€šá€ºá€á€­á€¯á€„á€º save á€‘á€¬á€¸á€žá€±á€¬ bookmarks á€™á€»á€¬á€¸',
-              label2: 'Vocabulary, phrase, grammar á€€á€­á€¯ á€•á€¼á€”á€ºá€œá€±á€·á€œá€¬á€™á€šá€º',
+              label1: 'ကိုယ်တိုင် save ထားသော bookmarks များ',
+              label2: 'Vocabulary, phrase, grammar ကို ပြန်လေ့လာမယ်',
               iconTitle: Icons.bookmark,
               iconLabel1: Icons.menu_book,
               iconLabel2: Icons.school,
@@ -219,7 +219,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.only(top: 2),
             child: Text(
-              '$streak day streak ðŸ”¥',
+              '$streak day streak 🔥',
               style: TextStyle(
                 fontSize: 13,
                 color: colorScheme.onSurfaceVariant,
