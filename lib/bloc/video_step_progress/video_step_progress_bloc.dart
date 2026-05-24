@@ -32,15 +32,15 @@ class VideoStepProgressState with _$VideoStepProgressState {
     String? error,
   }) = _VideoStepProgressState;
 
-  StepState stepStateFor(String youtubeId, VideoLessonStep step) {
+  VideoStepState stepStateFor(String youtubeId, VideoLessonStep step) {
     final row = byVideo[youtubeId]?[step.name];
-    if (row == null) return StepState.notStarted;
+    if (row == null) return VideoStepState.notStarted;
     final idx = row.state;
-    if (idx < 0 || idx >= StepState.values.length) return StepState.notStarted;
-    return StepState.values[idx];
+    if (idx < 0 || idx >= VideoStepState.values.length) return VideoStepState.notStarted;
+    return VideoStepState.values[idx];
   }
 
-  Map<VideoLessonStep, StepState> progressFor(String youtubeId) {
+  Map<VideoLessonStep, VideoStepState> progressFor(String youtubeId) {
     return {
       for (final s in VideoLessonStep.values) s: stepStateFor(youtubeId, s),
     };
@@ -55,9 +55,9 @@ class VideoStepProgressBloc
         loadAll: () => _loadAll(emit),
         loadVideo: (youtubeId) => _loadVideo(youtubeId, emit),
         markInProgress: (youtubeId, step) =>
-            _upsert(youtubeId, step, StepState.inProgress, emit),
+            _upsert(youtubeId, step, VideoStepState.inProgress, emit),
         markDone: (youtubeId, step) =>
-            _upsert(youtubeId, step, StepState.done, emit),
+            _upsert(youtubeId, step, VideoStepState.done, emit),
       );
     });
   }
@@ -103,20 +103,20 @@ class VideoStepProgressBloc
   Future<void> _upsert(
     String youtubeId,
     VideoLessonStep step,
-    StepState target,
+    VideoStepState target,
     Emitter<VideoStepProgressState> emit,
   ) async {
     try {
       final db = AppDatabase.instance();
       final current = state.byVideo[youtubeId]?[step.name];
       final currentState = current == null
-          ? StepState.notStarted
-          : (current.state >= 0 && current.state < StepState.values.length
-              ? StepState.values[current.state]
-              : StepState.notStarted);
+          ? VideoStepState.notStarted
+          : (current.state >= 0 && current.state < VideoStepState.values.length
+              ? VideoStepState.values[current.state]
+              : VideoStepState.notStarted);
 
       // Don't downgrade: once done, stay done.
-      if (currentState == StepState.done && target == StepState.inProgress) {
+      if (currentState == VideoStepState.done && target == VideoStepState.inProgress) {
         return;
       }
 
@@ -126,7 +126,7 @@ class VideoStepProgressBloc
         state: target.index,
         lastOpenedAt: DateTime.now(),
         openCount: (current?.openCount ?? 0) +
-            (target == StepState.inProgress ? 1 : 0),
+            (target == VideoStepState.inProgress ? 1 : 0),
       );
 
       await db.into(db.videoStepProgressTable).insertOnConflictUpdate(

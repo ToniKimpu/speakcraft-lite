@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'video_step_progress.freezed.dart';
 part 'video_step_progress.g.dart';
 
-enum StepState {
+enum VideoStepState {
   notStarted,
   inProgress,
   done,
