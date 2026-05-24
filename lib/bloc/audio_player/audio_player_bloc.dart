@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
 
 part 'audio_player_bloc.freezed.dart';
 

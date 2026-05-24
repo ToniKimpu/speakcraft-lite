@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import '../../bloc/internet_checker/internet_checker_bloc.dart';
@@ -120,7 +120,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               const SizedBox(height: 24),
               Text(
-                "PMP English App",
+                "SpeakCraft",
                 style: PmpTextStyles.body1Semi.copyWith(
                   color: Theme.of(context).colorScheme.onSurface,
                 ),

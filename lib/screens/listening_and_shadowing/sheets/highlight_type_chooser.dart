@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/model/highlight_types.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/highlight_types.dart';
 
 import '../../../config/pmp_text_styles.dart';
 

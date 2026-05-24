@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "48036795230",
+    "project_id": "speakcraft-prod",
+    "storage_bucket": "speakcraft-prod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48036795230:android:68f01d470fbac047a375cf",
+        "android_client_info": {
+          "package_name": "com.tzkenglishlab.speakcraft"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyZL4Xo2nTtuzGXZqPGO2nqA5N7_JK7hE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

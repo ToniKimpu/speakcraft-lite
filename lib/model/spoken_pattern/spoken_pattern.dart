@@ -1,7 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/model/subject_verb_agreement/subject_verb_agreement.dart';
+import 'package:speakcraft/model/subject_verb_agreement/subject_verb_agreement.dart';
 
 import '../pattern_example/pattern_example.dart';
 

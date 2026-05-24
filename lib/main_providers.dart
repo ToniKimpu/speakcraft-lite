@@ -1,12 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/auth/auth_bloc.dart';
-import 'package:pmp_english/bloc/day/day_bloc.dart';
-import 'package:pmp_english/bloc/exercise/exercise_bloc.dart';
-import 'package:pmp_english/bloc/internet_checker/internet_checker_bloc.dart';
-import 'package:pmp_english/bloc/spoken_pattern/spoken_pattern_bloc.dart';
-import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
-import 'package:pmp_english/bloc/video_step_progress/video_step_progress_bloc.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
+import 'package:speakcraft/bloc/auth/auth_bloc.dart';
+import 'package:speakcraft/bloc/day/day_bloc.dart';
+import 'package:speakcraft/bloc/exercise/exercise_bloc.dart';
+import 'package:speakcraft/bloc/internet_checker/internet_checker_bloc.dart';
+import 'package:speakcraft/bloc/spoken_pattern/spoken_pattern_bloc.dart';
+import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
+import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
 
 List<BlocProvider> mainBlocProviders() {
   return [

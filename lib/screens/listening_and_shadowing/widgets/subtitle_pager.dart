@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/bloc/listening/subtitle_index_bloc.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/subtitle/subtitle.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/widgets/subtitle_card.dart';
+import 'package:speakcraft/bloc/listening/subtitle_index_bloc.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/subtitle/subtitle.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/widgets/subtitle_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 /// Paged viewer for a list of [Subtitle]s with prev/next controls and an

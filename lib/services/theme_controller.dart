@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmp_english/services/share_preference_utils.dart';
+import 'package:speakcraft/services/share_preference_utils.dart';
 
 /// App-wide theme mode with SharedPreferences persistence.
 ///

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:pmp_english/model/pattern_example/pattern_example.dart';
-import 'package:pmp_english/screens/days/widgets/playing_indicator_widget.dart';
+import 'package:speakcraft/model/pattern_example/pattern_example.dart';
+import 'package:speakcraft/screens/days/widgets/playing_indicator_widget.dart';
 
 import '../../../config/pmp_text_styles.dart';
 

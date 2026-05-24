@@ -72,7 +72,7 @@ fastlane android release env:prod c:1 n:1.0.0
 - Reads `flavor` dart-define to select environment
 - Loads env file from `.envs/.env.<flavor>`
 - Initializes Supabase (backend), Firebase (notifications), and device info
-- Runs `PmpEnglishApp`
+- Runs `SpeakCraftApp`
 
 ### State Management: flutter_bloc + Freezed
 All BLoCs live in `lib/bloc/`. Events and states use `@freezed` annotations (generated `.freezed.dart` files). The pattern is:

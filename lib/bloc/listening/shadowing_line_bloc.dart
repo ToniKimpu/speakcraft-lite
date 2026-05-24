@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/screens/listening_and_shadowing/model/subtitle_line.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_line.dart';
 
 part 'shadowing_line_bloc.freezed.dart';
 

@@ -5,16 +5,16 @@ import 'dart:ui' as ui;
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:gal/gal.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter/foundation.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/model/app_user/app_user.dart';
-import 'package:pmp_english/shared_widgets/default_profile.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/model/app_user/app_user.dart';
+import 'package:speakcraft/shared_widgets/default_profile.dart';
 
 class FreeUserScreen extends StatefulWidget {
   const FreeUserScreen({super.key});

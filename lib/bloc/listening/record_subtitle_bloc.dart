@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/model/record_subtitle/record_subtitle.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/model/record_subtitle/record_subtitle.dart';
 
 part 'record_subtitle_bloc.freezed.dart';
 

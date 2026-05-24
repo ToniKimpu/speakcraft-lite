@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/model/vocabulary/vocabulary.dart';
+import 'package:speakcraft/model/vocabulary/vocabulary.dart';
 
 part 'saved_term.freezed.dart';
 part 'saved_term.g.dart';

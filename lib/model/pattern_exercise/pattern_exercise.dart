@@ -1,7 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
+import 'package:speakcraft/model/pattern_vocabulary/pattern_vocabulary.dart';
 
 part 'pattern_exercise.freezed.dart';
 part 'pattern_exercise.g.dart';

@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/video_step_progress/video_step_progress_bloc.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/model/video_step_progress/video_step_progress.dart';
+import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 
 class LessonHubPage extends StatefulWidget {
   const LessonHubPage({super.key, required this.listening});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:pmp_english/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
+import 'package:speakcraft/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 
 import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
@@ -75,12 +75,12 @@ class UserCorrectList extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // 📅 Date Header
+                  // ðŸ“… Date Header
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 16, vertical: 10),
                     child: Text(
-                      "📅   ${DateFormat('dd MMM yyyy').format(date)}",
+                      "ðŸ“…   ${DateFormat('dd MMM yyyy').format(date)}",
                       style: PmpTextStyles.labelSemi.copyWith(
                         color: Colors.white70,
                         fontSize: 14,
@@ -95,7 +95,7 @@ class UserCorrectList extends StatelessWidget {
                     height: 0,
                   ),
 
-                  // 📋 Sentence List
+                  // ðŸ“‹ Sentence List
                   ...items.asMap().entries.map((entry) {
                     final index = entry.key;
                     final item = entry.value;

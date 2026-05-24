@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/user_activity/user_activity_bloc.dart';
-import 'package:pmp_english/bloc/user_activity/user_activity_messages.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
+import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
+import 'package:speakcraft/bloc/user_activity/user_activity_messages.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import 'widgets/module_widget.dart';
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PMP English'),
+        title: const Text('SpeakCraft'),
         actions: [
           IconButton(
             onPressed: () {

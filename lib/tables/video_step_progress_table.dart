@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:pmp_english/model/video_step_progress/video_step_progress.dart';
+import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 
 @UseRowClass(VideoStepProgress)
 class VideoStepProgressTable extends Table {

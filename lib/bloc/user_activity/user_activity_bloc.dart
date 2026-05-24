@@ -1,15 +1,15 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/user_activity/user_activity_data.dart';
-import 'package:pmp_english/services/share_preference_utils.dart';
-import 'package:pmp_english/services/user_activity_prefs_keys.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/user_activity/user_activity_data.dart';
+import 'package:speakcraft/services/share_preference_utils.dart';
+import 'package:speakcraft/services/user_activity_prefs_keys.dart';
 
 part 'user_activity_bloc.freezed.dart';
 
 @freezed
 abstract class UserActivityEvent with _$UserActivityEvent {
-  /// Dispatched in initState of HomePage — loads persisted data and
+  /// Dispatched in initState of HomePage â€” loads persisted data and
   /// computes the current state (including streak reset if needed).
   const factory UserActivityEvent.initialize() = _Initialize;
 
@@ -69,7 +69,7 @@ class UserActivityBloc extends Bloc<UserActivityEvent, UserActivityState> {
         return;
       }
 
-      // Returning user — load persisted values
+      // Returning user â€” load persisted values
       var data = _readFromPrefs();
 
       // Reset streak if the user missed more than one consecutive calendar day
@@ -103,7 +103,7 @@ class UserActivityBloc extends Bloc<UserActivityEvent, UserActivityState> {
       final today = _todayNormalized();
       final data = _readFromPrefs();
 
-      // Idempotency guard — do not count the same calendar day twice
+      // Idempotency guard â€” do not count the same calendar day twice
       if (data.lastActiveDate != null &&
           data.lastActiveDate!.isAtSameMomentAs(today)) {
         emit(UserActivityState.sessionRecorded(data));
@@ -145,10 +145,10 @@ class UserActivityBloc extends Bloc<UserActivityEvent, UserActivityState> {
 
       emit(UserActivityState.sessionRecorded(updated));
       AppLogger.instance.debug(
-        'UserActivityBloc: session recorded — day $newTotalDays, streak $newStreak',
+        'UserActivityBloc: session recorded â€” day $newTotalDays, streak $newStreak',
       );
     } catch (e, st) {
-      // Silent failure — the session timer is a background action; no UI error.
+      // Silent failure â€” the session timer is a background action; no UI error.
       AppLogger.instance.error(
         'UserActivityBloc._recordSession failed',
         error: e,

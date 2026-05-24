@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/bloc/auth/auth_bloc.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_routes.dart';
-import 'package:pmp_english/screens/auth/widgets/auth_card.dart';
-import 'package:pmp_english/screens/auth/widgets/auth_text_field.dart';
-import 'package:pmp_english/screens/main/device_failed_screen.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/bloc/auth/auth_bloc.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/screens/auth/widgets/auth_card.dart';
+import 'package:speakcraft/screens/auth/widgets/auth_text_field.dart';
+import 'package:speakcraft/screens/main/device_failed_screen.dart';
 
 import '../main/home_screen.dart';
 

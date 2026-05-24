@@ -1,9 +1,9 @@
 import 'package:drift/drift.dart' hide JsonKey;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/video_step_progress/video_step_progress.dart';
-import 'package:pmp_english/services/app_database/app_database.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
+import 'package:speakcraft/services/app_database/app_database.dart';
 
 part 'video_step_progress_bloc.freezed.dart';
 

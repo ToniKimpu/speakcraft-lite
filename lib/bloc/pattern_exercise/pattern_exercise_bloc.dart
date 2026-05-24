@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/app_user/app_user.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/app_user/app_user.dart';
 
 import '../../model/pattern_exercise/pattern_exercise.dart';
 import '../../services/supabase_service.dart';

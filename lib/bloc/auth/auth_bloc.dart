@@ -5,9 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/repositories/auth/auth_repository.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/repositories/auth/auth_repository.dart';
 
 import '../../model/app_user/app_user.dart';
 

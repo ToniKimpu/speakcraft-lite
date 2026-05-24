@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/config/pmp_colors.dart';
-import 'package:pmp_english/config/pmp_text_styles.dart';
-import 'package:pmp_english/model/ai_sentence_practice/ai_sentence_practice.dart';
-import 'package:pmp_english/screens/practice_with_ai/widgets/ai_response_card.dart';
+import 'package:speakcraft/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
+import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/model/ai_sentence_practice/ai_sentence_practice.dart';
+import 'package:speakcraft/screens/practice_with_ai/widgets/ai_response_card.dart';
 
 import '../../bloc/user_bloc/user_bloc.dart';
 import '../../shared_widgets/practice_text_field.dart';

@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pmp_english/core/di/service_locator.dart';
-import 'package:pmp_english/core/logger/app_logger.dart';
-import 'package:pmp_english/model/app_user/app_user.dart';
-import 'package:pmp_english/model/translation_level/translation_level.dart';
-import 'package:pmp_english/services/supabase_service.dart';
+import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/app_user/app_user.dart';
+import 'package:speakcraft/model/translation_level/translation_level.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 
 import '../../model/pattern_vocabulary/pattern_vocabulary.dart';
 import '../../model/translation/translation.dart';

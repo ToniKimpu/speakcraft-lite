@@ -1,7 +1,7 @@
-import 'package:pmp_english/config/env.dart';
-import 'package:pmp_english/model/listening/listening.dart';
-import 'package:pmp_english/model/pattern_vocabulary/pattern_vocabulary.dart';
-import 'package:pmp_english/services/supabase_service.dart';
+import 'package:speakcraft/config/env.dart';
+import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/model/pattern_vocabulary/pattern_vocabulary.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 
 import 'listening_repository.dart';
 

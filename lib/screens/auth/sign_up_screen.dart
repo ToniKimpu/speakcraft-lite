@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pmp_english/bloc/auth/auth_bloc.dart';
-import 'package:pmp_english/config/common_extensions.dart';
-import 'package:pmp_english/screens/auth/widgets/sign_up_data.dart';
-import 'package:pmp_english/screens/auth/widgets/sign_up_profile.dart';
-import 'package:pmp_english/screens/main/home_screen.dart';
+import 'package:speakcraft/bloc/auth/auth_bloc.dart';
+import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/screens/auth/widgets/sign_up_data.dart';
+import 'package:speakcraft/screens/auth/widgets/sign_up_profile.dart';
+import 'package:speakcraft/screens/main/home_screen.dart';
 
 import '../../config/pmp_routes.dart';
 

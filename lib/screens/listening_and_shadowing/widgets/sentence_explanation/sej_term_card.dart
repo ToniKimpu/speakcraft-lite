@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:drift/drift.dart' show Value;
 import 'package:flutter/material.dart';
-import 'package:pmp_english/services/app_database/app_database.dart';
+import 'package:speakcraft/services/app_database/app_database.dart';
 
 import '../../../../config/pmp_colors.dart';
 import 'sej_example_row.dart';
