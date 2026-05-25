@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'utils/cloze_generator.dart';
 import 'widgets/sentence_explanation/sej_main_card.dart';
 import 'widgets/sentence_explanation/sej_note_card.dart';
+import 'widgets/sentence_explanation/sej_quiz_card.dart';
 import 'widgets/sentence_explanation/sej_term_card.dart';
 
 /// Renders a sentence-explanation JSON object (matching `__template.json`
@@ -41,8 +43,14 @@ class SentenceExplanationJsonView extends StatelessWidget {
         if (note != null) ...[
           const SizedBox(height: 4),
           SejNoteCard(note: note),
-          const SizedBox(height: 24),
         ],
+        // Runtime-generated fill-in-the-blank check, derived from the terms
+        // above. Renders nothing when no term appears in its own examples.
+        if (kEnableClozeExercises && terms.isNotEmpty) ...[
+          const SizedBox(height: 20),
+          SejQuizCard(items: buildClozeItems(terms)),
+        ],
+        const SizedBox(height: 24),
       ],
     );
   }
