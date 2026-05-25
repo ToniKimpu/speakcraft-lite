@@ -6,6 +6,7 @@ import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
 
 class LessonHubPage extends StatefulWidget {
   const LessonHubPage({super.key, required this.listening});
@@ -26,40 +27,49 @@ class _LessonHubPageState extends State<LessonHubPage> {
   }
 
   List<_StepConfig> _visibleSteps() {
-    final l = widget.listening;
-    return <_StepConfig>[
-      if (l.subtitlePath.trim().isNotEmpty)
-        const _StepConfig(
+    // Order and visibility come from the shared helper so the hub, the
+    // listening list, and the home "Continue" card never disagree on steps.
+    return [
+      for (final step in visibleLessonSteps(widget.listening))
+        _configForStep(step),
+    ];
+  }
+
+  _StepConfig _configForStep(VideoLessonStep step) {
+    switch (step) {
+      case VideoLessonStep.watch:
+        return const _StepConfig(
           step: VideoLessonStep.watch,
           title: 'Watch',
           subtitle: 'Listen with subtitles to understand the content',
           icon: Icons.play_circle_outline,
           route: PmpRoutes.youtubeVideoPage,
-        ),
-      const _StepConfig(
-        step: VideoLessonStep.explanation,
-        title: 'Study the patterns',
-        subtitle: 'Review grammar and vocabulary used in this video',
-        icon: Icons.lightbulb_outline,
-        route: PmpRoutes.sentenceExplanationList,
-      ),
-      if (l.shadowingPath.trim().isNotEmpty)
-        const _StepConfig(
+        );
+      case VideoLessonStep.explanation:
+        return const _StepConfig(
+          step: VideoLessonStep.explanation,
+          title: 'Study the patterns',
+          subtitle: 'Review grammar and vocabulary used in this video',
+          icon: Icons.lightbulb_outline,
+          route: PmpRoutes.sentenceExplanationList,
+        );
+      case VideoLessonStep.shadowing:
+        return const _StepConfig(
           step: VideoLessonStep.shadowing,
           title: 'Practice along (shadowing)',
           subtitle: 'Speak in sync with the audio',
           icon: Icons.headphones,
           route: PmpRoutes.shadowingPage,
-        ),
-      if (l.recordSubtitlePath.trim().isNotEmpty)
-        const _StepConfig(
+        );
+      case VideoLessonStep.record:
+        return const _StepConfig(
           step: VideoLessonStep.record,
           title: 'Speak on your own',
           subtitle: 'Record yourself and compare to the original',
           icon: Icons.record_voice_over,
           route: PmpRoutes.speechPracticeSessionPage,
-        ),
-    ];
+        );
+    }
   }
 
   void _openStep(_StepConfig config) {

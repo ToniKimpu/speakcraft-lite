@@ -284,6 +284,12 @@ class _ShadowingPageState extends State<ShadowingPage>
                   },
                   builder: (context, state) {
                     final colorScheme = Theme.of(context).colorScheme;
+                    // Content lives in the AppBar, whose background differs by
+                    // theme (colored bar in light, dark surface in dark), so
+                    // track the AppBar foreground rather than surface tokens.
+                    final appBarFg =
+                        Theme.of(context).appBarTheme.foregroundColor ??
+                            colorScheme.onSurface;
                     return Scaffold(
                       appBar: AppBar(
                         title: const Text("Shadowing"),
@@ -310,25 +316,26 @@ class _ShadowingPageState extends State<ShadowingPage>
                                   horizontal: 8, vertical: 4),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                border:
-                                    Border.all(color: colorScheme.outline),
+                                border: Border.all(
+                                    color: appBarFg.withValues(alpha: 0.4)),
                               ),
                               child: Row(
                                 children: [
                                   Text(
                                     getHighlightTypeLabel(
-                                        _selectedHighlightType),
+                                      _selectedHighlightType,
+                                    ),
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400,
-                                      color: colorScheme.onSurface,
+                                      color: appBarFg,
                                       fontFamily: 'MM Lyrics Bold',
                                     ),
                                   ),
                                   const SizedBox(width: 6),
                                   Icon(
                                     Icons.expand_more,
-                                    color: colorScheme.onSurfaceVariant,
+                                    color: appBarFg,
                                   ),
                                 ],
                               ),
@@ -349,6 +356,7 @@ class _ShadowingPageState extends State<ShadowingPage>
                             positionListenable: _positionNotifier,
                             totalDuration:
                                 Duration(seconds: widget.listening.end),
+                            enableSpeedControl: true,
                             onTogglePlay: () {
                               final loading = _controller.value.playerState ==
                                       PlayerState.buffering ||
@@ -399,8 +407,7 @@ class _ShadowingPageState extends State<ShadowingPage>
                                     return false;
                                   },
                                   child: ScrollablePositionedList.separated(
-                                    itemScrollController:
-                                        _itemScrollController,
+                                    itemScrollController: _itemScrollController,
                                     itemPositionsListener:
                                         _itemPositionsListener,
                                     itemCount: subtitleLines.length,

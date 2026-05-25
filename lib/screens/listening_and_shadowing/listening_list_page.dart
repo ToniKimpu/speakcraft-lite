@@ -2,9 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/listening/listening_bloc.dart';
+import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
 
 import '../../l10n/generated/l10n.dart';
 
@@ -16,6 +18,16 @@ class ListeningListPage extends StatefulWidget {
 }
 
 class _ListeningListPageState extends State<ListeningListPage> {
+  @override
+  void initState() {
+    super.initState();
+    // Pull every video's saved step progress so the list can show how far the
+    // learner got and float unfinished lessons to the top.
+    context.read<VideoStepProgressBloc>().add(
+          const VideoStepProgressEvent.loadAll(),
+        );
+  }
+
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -46,13 +58,31 @@ class _ListeningListPageState extends State<ListeningListPage> {
                     ),
                   );
                 }
-                return ListView.separated(
-                  padding: const EdgeInsets.all(16),
-                  itemCount: listenings.length,
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(height: 14),
-                  itemBuilder: (context, index) {
-                    return _ListeningCard(listening: listenings[index]);
+                return BlocBuilder<VideoStepProgressBloc,
+                    VideoStepProgressState>(
+                  builder: (context, progressState) {
+                    // Catalog order is preserved so the list stays predictable;
+                    // progress is shown inline per row. Resume lives on the
+                    // home "Continue learning" card.
+                    final anyStarted = listenings.any(
+                      (l) => lessonProgressFor(progressState, l).hasStarted,
+                    );
+                    return ListView.separated(
+                      padding: const EdgeInsets.all(16),
+                      itemCount: listenings.length,
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(height: 14),
+                      itemBuilder: (context, index) {
+                        final listening = listenings[index];
+                        return _ListeningCard(
+                          listening: listening,
+                          progress: lessonProgressFor(progressState, listening),
+                          // A brand-new learner (nothing started anywhere) gets
+                          // a single "Start here" nudge on the first lesson.
+                          isStartHere: !anyStarted && index == 0,
+                        );
+                      },
+                    );
                   },
                 );
               },
@@ -63,24 +93,24 @@ class _ListeningListPageState extends State<ListeningListPage> {
       ),
     );
   }
+
 }
 
 class _ListeningCard extends StatelessWidget {
-  const _ListeningCard({required this.listening});
+  const _ListeningCard({
+    required this.listening,
+    required this.progress,
+    required this.isStartHere,
+  });
 
   final Listening listening;
-
-  int get _stepCount {
-    var n = 1; // "Study the patterns" step is always present in the hub.
-    if (listening.subtitlePath.trim().isNotEmpty) n++;
-    if (listening.shadowingPath.trim().isNotEmpty) n++;
-    if (listening.recordSubtitlePath.trim().isNotEmpty) n++;
-    return n;
-  }
+  final LessonProgress progress;
+  final bool isStartHere;
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final highlight = isStartHere;
     return Material(
       color: colorScheme.surfaceContainerHighest,
       borderRadius: BorderRadius.circular(16),
@@ -96,7 +126,10 @@ class _ListeningCard extends StatelessWidget {
         child: Ink(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: colorScheme.outline),
+            border: Border.all(
+              color: highlight ? colorScheme.primary : colorScheme.outline,
+              width: highlight ? 2 : 1,
+            ),
           ),
           padding: const EdgeInsets.all(12),
           child: Row(
@@ -119,22 +152,10 @@ class _ListeningCard extends StatelessWidget {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 6),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.school_outlined,
-                          size: 14,
-                          color: colorScheme.onSurfaceVariant,
-                        ),
-                        const SizedBox(width: 4),
-                        Text(
-                          '$_stepCount-step lesson',
-                          style: PmpTextStyles.labelMedium.copyWith(
-                            color: colorScheme.onSurfaceVariant,
-                          ),
-                        ),
-                      ],
+                    const SizedBox(height: 8),
+                    _StatusSection(
+                      progress: progress,
+                      isStartHere: isStartHere,
                     ),
                   ],
                 ),
@@ -148,6 +169,90 @@ class _ListeningCard extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Per-row learning state: completed, in-progress (with a thin progress bar),
+/// or not-yet-started (with an optional "Start here" nudge).
+class _StatusSection extends StatelessWidget {
+  const _StatusSection({required this.progress, required this.isStartHere});
+
+  final LessonProgress progress;
+  final bool isStartHere;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    if (progress.isComplete) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.check_circle, size: 14, color: colorScheme.primary),
+          const SizedBox(width: 4),
+          Text(
+            'Completed',
+            style: PmpTextStyles.labelSemi.copyWith(color: colorScheme.primary),
+          ),
+        ],
+      );
+    }
+
+    if (progress.isInProgress) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '${progress.doneCount} of ${progress.totalCount} steps',
+            style: PmpTextStyles.labelMedium
+                .copyWith(color: colorScheme.onSurfaceVariant),
+          ),
+          const SizedBox(height: 5),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(4),
+            child: LinearProgressIndicator(
+              value: progress.fraction,
+              minHeight: 5,
+              backgroundColor: colorScheme.surface,
+              valueColor: AlwaysStoppedAnimation<Color>(colorScheme.primary),
+            ),
+          ),
+        ],
+      );
+    }
+
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(
+          Icons.school_outlined,
+          size: 14,
+          color: colorScheme.onSurfaceVariant,
+        ),
+        const SizedBox(width: 4),
+        Text(
+          '${progress.totalCount}-step lesson',
+          style: PmpTextStyles.labelMedium.copyWith(
+            color: colorScheme.onSurfaceVariant,
+          ),
+        ),
+        if (isStartHere) ...[
+          const SizedBox(width: 8),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            decoration: BoxDecoration(
+              color: colorScheme.primary,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Text(
+              'Start here',
+              style:
+                  PmpTextStyles.subBold.copyWith(color: colorScheme.onPrimary),
+            ),
+          ),
+        ],
+      ],
     );
   }
 }
