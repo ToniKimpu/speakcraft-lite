@@ -7,11 +7,13 @@ import '../../model/exercise_user_answer/exercise_user_answer.dart';
 import '../../model/listening_practice_answer/listening_practice_answer.dart';
 import '../../model/saved_term/saved_term.dart';
 import '../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
+import '../../model/video_step_progress/video_step_progress.dart';
 import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/saved_term_table.dart';
 import '../../tables/spoken_pattern_exercise_answer_table.dart';
 import '../../tables/user_example_answer_table.dart';
 import '../../tables/user_recorded_sentence_audio_table.dart';
+import '../../tables/video_step_progress_table.dart';
 
 part 'app_database.g.dart';
 
@@ -23,6 +25,7 @@ part 'app_database.g.dart';
     SpokenPatternExerciseAnswerTable,
     UserRecordedSentenceAudioTable,
     SavedTermTable,
+    VideoStepProgressTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -33,7 +36,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration {
@@ -47,6 +50,9 @@ class AppDatabase extends _$AppDatabase {
             'DROP TABLE IF EXISTS saved_vocabulary_word_table',
           );
           await m.createTable(savedTermTable);
+        }
+        if (from < 4) {
+          await m.createTable(videoStepProgressTable);
         }
       },
       beforeOpen: (details) async {

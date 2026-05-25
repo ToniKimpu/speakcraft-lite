@@ -207,6 +207,13 @@ flutter:
     - family: MM Lyrics Bold
       fonts:
         - asset: fonts/mm/NotoSansMyanmar-Bold.ttf
+
+    - family: Noto Sans Myanmar
+      fonts:
+        - asset: fonts/mm/NotoSansMyanmar-Regular.ttf
+          weight: 400
+        - asset: fonts/mm/NotoSansMyanmar-Medium.ttf
+          weight: 500
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

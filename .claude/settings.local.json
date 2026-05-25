@@ -30,7 +30,26 @@
       "Bash(git stash:*)",
       "Bash(xargs grep:*)",
       "Bash(grep:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(git ls-tree *)",
+      "Bash(git mv *)",
+      "Bash(gh pr *)",
+      "Bash(git merge *)",
+      "Bash(git rm *)",
+      "Bash(LC_ALL=en_US.UTF-8 sed -i 's|package:pmp_english/|package:speakcraft/|g' lib/screens/main/home_screen.dart lib/screens/listening_and_shadowing/widgets/listening_vocabulary_list.dart lib/screens/days/spoken_pattern/widgets/spoken_pattern_example_list.dart lib/screens/days/spoken_pattern/widgets/spoken_pattern_header.dart)",
+      "Bash(LC_ALL=en_US.UTF-8 sed -i \"s|title: const Text\\('PMP English'\\)|title: const Text\\('SpeakCraft'\\)|g\" lib/screens/main/home_screen.dart)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(.\\\\.fvm\\\\flutter_sdk\\\\bin\\\\dart run build_runner build --delete-conflicting-outputs)",
+      "PowerShell(.\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze lib/screens/listening_and_shadowing/lesson_hub_page.dart lib/screens/listening_and_shadowing/listening_list_page.dart lib/config/pmp_routes.dart lib/bloc/video_step_progress/video_step_progress_bloc.dart 2>&1 | Select-Object -Last 40)",
+      "PowerShell(.\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze lib/screens/listening_and_shadowing/lesson_hub_page.dart lib/screens/listening_and_shadowing/listening_list_page.dart lib/config/pmp_routes.dart lib/bloc/video_step_progress/video_step_progress_bloc.dart lib/model/video_step_progress/video_step_progress.dart 2>&1 | Select-Object -Last 30)",
+      "PowerShell(.\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze lib/screens/listening_and_shadowing/youtube_video_page.dart lib/screens/listening_and_shadowing/shadowing_page.dart lib/screens/listening_and_shadowing/sentence_explanation_list.dart lib/screens/listening_and_shadowing/speech_practice_session_page.dart 2>&1 | Select-Object -Last 20)",
+      "PowerShell(.\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze 2>&1 | Select-Object -Last 40)",
+      "PowerShell(& .\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter pub get 2>&1 | Select-Object -Last 15)",
+      "PowerShell(& .\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze 2>&1 | Select-Object -Last 40)",
+      "PowerShell(& .\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter pub get 2>&1 | Select-Object -Last 5; & .\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze 2>&1 | Select-Object -Last 5)",
+      "WebSearch",
+      "PowerShell(& .\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze lib/config/pmp_themes.dart lib/config/pmp_colors.dart lib/screens/main/widgets/module_widget.dart 2>&1 | Select-Object -Last 8)",
+      "PowerShell(& .\\\\.fvm\\\\flutter_sdk\\\\bin\\\\flutter analyze lib/screens/listening_and_shadowing/listening_list_page.dart lib/screens/listening_and_shadowing/lesson_hub_page.dart lib/screens/listening_and_shadowing/sentence_explanation_list.dart 2>&1 | Select-Object -Last 4)"
     ]
   }
 }

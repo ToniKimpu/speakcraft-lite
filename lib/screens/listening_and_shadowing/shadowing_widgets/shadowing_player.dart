@@ -17,6 +17,7 @@ class ShadowingPlayer extends StatelessWidget {
     required this.onTogglePlay,
     this.segmentStart,
     this.segmentEnd,
+    this.enableSpeedControl = false,
   });
   final Listening listening;
   final YoutubePlayerController controller;
@@ -29,6 +30,11 @@ class ShadowingPlayer extends StatelessWidget {
   /// are scoped to this range instead of [Duration.zero]..[totalDuration].
   final Duration? segmentStart;
   final Duration? segmentEnd;
+
+  /// When true, shows a playback-speed selector (0.5×–1.5×) in the controls so
+  /// beginners can slow the audio down. Off by default so other embedders
+  /// (e.g. Record & Compare) opt in explicitly.
+  final bool enableSpeedControl;
 
   @override
   Widget build(BuildContext context) {
@@ -114,6 +120,10 @@ class ShadowingPlayer extends StatelessWidget {
               child: _buildSliderSection(context, onSurface),
             ),
             const SizedBox(width: 12),
+            if (enableSpeedControl) ...[
+              _buildSpeedControl(context, onSurface),
+              const SizedBox(width: 12),
+            ],
             GestureDetector(
               onTap: () {
                 onTogglePlay();
@@ -154,6 +164,61 @@ class ShadowingPlayer extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _buildSpeedControl(BuildContext context, Color onSurface) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final current = controller.value.playbackRate;
+    // Beginner-friendly range; matches the YouTube iframe's supported rates.
+    const rates = <double>[0.5, 0.75, 1.0, 1.25, 1.5];
+    return PopupMenuButton<double>(
+      tooltip: 'Playback speed',
+      onSelected: controller.setPlaybackRate,
+      itemBuilder: (context) => [
+        for (final rate in rates)
+          PopupMenuItem<double>(
+            value: rate,
+            child: Row(
+              children: [
+                Icon(
+                  Icons.check,
+                  size: 18,
+                  color: current == rate
+                      ? colorScheme.primary
+                      : Colors.transparent,
+                ),
+                const SizedBox(width: 8),
+                Text(_formatRate(rate)),
+              ],
+            ),
+          ),
+      ],
+      child: Container(
+        height: 36,
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18),
+          color: onSurface.withValues(alpha: 0.05),
+          border: Border.all(
+            color: colorScheme.outlineVariant,
+            width: 1.5,
+          ),
+        ),
+        child: Text(
+          _formatRate(current),
+          style: PmpTextStyles.subBold.copyWith(color: onSurface),
+        ),
+      ),
+    );
+  }
+
+  /// 1.0 -> "1×", 0.75 -> "0.75×", 1.5 -> "1.5×".
+  String _formatRate(double rate) {
+    final value = rate == rate.roundToDouble()
+        ? rate.toStringAsFixed(0)
+        : rate.toString();
+    return '$value×';
   }
 
   Widget _buildSliderSection(BuildContext context, Color onSurface) {

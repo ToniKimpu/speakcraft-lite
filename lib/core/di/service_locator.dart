@@ -19,6 +19,7 @@ import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
 import 'package:speakcraft/bloc/user_bloc/user_bloc.dart';
 import 'package:speakcraft/bloc/user_example_answer/user_example_answer_bloc.dart';
 import 'package:speakcraft/bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
+import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/bloc/youtube_player/youtube_player_bloc.dart';
 import 'package:speakcraft/model/app_user/app_user.dart';
 import 'package:speakcraft/repositories/auth/auth_repository.dart';
@@ -56,15 +57,17 @@ Future<void> setupServiceLocator() async {
   );
   sl.registerLazySingleton<ThemeController>(() => ThemeController.load());
 
-  // Global BLoCs (lazySingleton â€” survive across screens)
+  // Global BLoCs (lazySingleton — survive across screens)
   sl.registerLazySingleton<AuthBloc>(() => AuthBloc());
   sl.registerLazySingleton<DayBloc>(() => DayBloc());
   sl.registerLazySingleton<SpokenPatternBloc>(() => SpokenPatternBloc());
   sl.registerLazySingleton<ExerciseBloc>(() => ExerciseBloc());
   sl.registerLazySingleton<InternetCheckerBloc>(() => InternetCheckerBloc());
   sl.registerLazySingleton<UserActivityBloc>(() => UserActivityBloc());
+  sl.registerLazySingleton<VideoStepProgressBloc>(
+      () => VideoStepProgressBloc());
 
-  // Screen-local BLoCs (factory â€” fresh instance per screen)
+  // Screen-local BLoCs (factory — fresh instance per screen)
   sl.registerFactory<ListeningBloc>(() => ListeningBloc());
   sl.registerFactory<AudioPlayerBloc>(() => AudioPlayerBloc());
   sl.registerFactory<YoutubePlayerBloc>(() => YoutubePlayerBloc());

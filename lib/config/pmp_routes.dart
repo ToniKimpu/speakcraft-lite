@@ -5,6 +5,7 @@ import 'package:speakcraft/screens/auth/login_screen.dart';
 import 'package:speakcraft/screens/auth/sign_up_screen.dart';
 import 'package:speakcraft/screens/days/pattern_exercise_screen.dart';
 import 'package:speakcraft/screens/days/spoken_pattern_exercise_screen.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_list.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_page.dart';
@@ -64,6 +65,7 @@ class PmpRoutes {
   static const freeUserPage = '/free_user_page';
   static const newVersionScreen = '/new_version_screen';
   static const listeningListPage = "/listening/listening_list_page";
+  static const listeningHub = '/listening/lesson_hub';
   static const youtubeVideoPage = '/youtube_video_page';
   static const profilePage = '/profile_page';
   static const updateUserName = '/update_user_name';
@@ -159,6 +161,14 @@ class PmpRoutes {
       case listeningListPage:
         return _getRoute(
           const ListeningListPage(),
+          settings,
+        );
+
+      case listeningHub:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        return _getRoute(
+          LessonHubPage(listening: listening),
           settings,
         );
 
@@ -264,7 +274,7 @@ class PmpRoutes {
         return _getRoute(
           const GritJsonList(
             assetFolder: 'assets/sentence_explanation_data/',
-            title: 'Zendaya â€” JSON Files',
+            title: 'Zendaya — JSON Files',
           ),
           settings,
         );

@@ -10,6 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
 import 'package:speakcraft/firebase_options.dart';
 import 'package:speakcraft/firebase_options_dev.dart';
@@ -134,6 +135,14 @@ void main() {
   runZonedGuarded(() async {
     const env = String.fromEnvironment('flavor', defaultValue: 'dev');
     WidgetsFlutterBinding.ensureInitialized();
+
+    // Warm Lora (used in subtitle_card.dart) in the background so it's cached
+    // by the time the user navigates into a listening lesson. Not awaited —
+    // blocking app launch on a font fetch isn't worth the trade-off.
+    unawaited(GoogleFonts.pendingFonts([
+      GoogleFonts.lora(fontWeight: FontWeight.w500),
+    ]));
+
     await dotenv.load(fileName: '.envs/.env.$env');
     Env.validate();
     await Supabase.initialize(

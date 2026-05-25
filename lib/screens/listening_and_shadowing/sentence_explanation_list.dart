@@ -1,11 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
+import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 
 import '../../l10n/generated/l10n.dart';
 import '../../model/sentence_explanation/sentence_explanation.dart';
@@ -33,6 +36,13 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     _future = fetchSentenceExplanations(
       widget.listening.subtitlePath,
     );
+
+    context.read<VideoStepProgressBloc>().add(
+          VideoStepProgressEvent.markInProgress(
+            widget.listening.youtubeId,
+            VideoLessonStep.explanation,
+          ),
+        );
   }
 
   Future<List<SentenceExplanation>> fetchSentenceExplanations(
@@ -87,7 +97,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: colorScheme.surfaceContainerHighest,
-                        border: Border.all(color: colorScheme.outlineVariant),
+                        border: Border.all(color: colorScheme.outline),
                       ),
                       child: Icon(
                         Icons.lightbulb_outline,
@@ -133,7 +143,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                 decoration: BoxDecoration(
                   color: colorScheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: colorScheme.outlineVariant),
+                  border: Border.all(color: colorScheme.outline),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,6 +188,12 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                         ),
                         FilledButton.icon(
                           onPressed: () {
+                            context.read<VideoStepProgressBloc>().add(
+                                  VideoStepProgressEvent.markDone(
+                                    widget.listening.youtubeId,
+                                    VideoLessonStep.explanation,
+                                  ),
+                                );
                             Navigator.pushNamed(
                               context,
                               PmpRoutes.sentenceExplanationPager,

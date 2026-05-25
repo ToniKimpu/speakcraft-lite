@@ -50,6 +50,7 @@ app.*.map.json
 .fvm/
 
 note.md
+sentence_template.json
 
 # Debug symbols for release obfuscation (upload to Crashlytics, do not commit)
 build/symbols/

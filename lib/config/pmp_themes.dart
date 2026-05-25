@@ -29,9 +29,9 @@ class PmpThemes {
       onErrorContainer: PmpColors.destructive500,
       surface: p.surface,
       onSurface: p.textPrimary,
-      surfaceContainerHighest: p.surfaceVariant,
-      surfaceContainerHigh: p.surfaceVariant,
-      surfaceContainer: p.surfaceVariant,
+      surfaceContainerHighest: p.cardBg,
+      surfaceContainerHigh: p.cardBg,
+      surfaceContainer: p.cardBg,
       surfaceContainerLow: p.surface,
       surfaceContainerLowest: p.background,
       onSurfaceVariant: p.textSecondary,
@@ -59,11 +59,11 @@ class PmpThemes {
       ),
       progressIndicatorTheme: ProgressIndicatorThemeData(color: p.primary),
       appBarTheme: AppBarTheme(
-        backgroundColor: p.background,
-        foregroundColor: p.textPrimary,
-        iconTheme: IconThemeData(color: p.textPrimary, size: 24),
+        backgroundColor: p.appBarBg,
+        foregroundColor: p.appBarFg,
+        iconTheme: IconThemeData(color: p.appBarFg, size: 24),
         titleTextStyle:
-            PmpTextStyles.body1Semi.copyWith(color: p.textPrimary),
+            PmpTextStyles.body1Semi.copyWith(color: p.appBarFg),
         toolbarHeight: 56,
         centerTitle: false,
         scrolledUnderElevation: 0,
@@ -142,12 +142,12 @@ class PmpThemes {
         ),
       ),
       cardTheme: CardThemeData(
-        color: p.surface,
-        surfaceTintColor: p.surface,
+        color: p.cardBg,
+        surfaceTintColor: p.cardBg,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          side: BorderSide(color: p.outlineVariant),
+          side: BorderSide(color: p.outline),
         ),
       ),
       listTileTheme: ListTileThemeData(
@@ -184,24 +184,30 @@ class _PmpPalette {
   final Color background;
   final Color surface;
   final Color surfaceVariant;
+  final Color cardBg;
   final Color outline;
   final Color outlineVariant;
   final Color textPrimary;
   final Color textSecondary;
   final Color primary;
   final Color onPrimary;
+  final Color appBarBg;
+  final Color appBarFg;
 
   const _PmpPalette({
     required this.brightness,
     required this.background,
     required this.surface,
     required this.surfaceVariant,
+    required this.cardBg,
     required this.outline,
     required this.outlineVariant,
     required this.textPrimary,
     required this.textSecondary,
     required this.primary,
     required this.onPrimary,
+    required this.appBarBg,
+    required this.appBarFg,
   });
 
   factory _PmpPalette.dark() => const _PmpPalette(
@@ -209,12 +215,15 @@ class _PmpPalette {
         background: PmpColors.darkBackground,
         surface: PmpColors.darkSurfaceBw,
         surfaceVariant: PmpColors.darkSurfaceVariant,
+        cardBg: PmpColors.darkSurfaceVariant,
         outline: PmpColors.darkOutline,
         outlineVariant: PmpColors.darkOutlineVariant,
         textPrimary: PmpColors.darkTextPrimary,
         textSecondary: PmpColors.darkTextSecondary,
         primary: PmpColors.white,
         onPrimary: PmpColors.black,
+        appBarBg: PmpColors.darkSurfaceVariant,
+        appBarFg: PmpColors.darkTextPrimary,
       );
 
   factory _PmpPalette.light() => const _PmpPalette(
@@ -222,11 +231,14 @@ class _PmpPalette {
         background: PmpColors.lightBackground,
         surface: PmpColors.lightSurfaceBw,
         surfaceVariant: PmpColors.lightSurfaceVariant,
+        cardBg: PmpColors.lightSurfaceBw,
         outline: PmpColors.lightOutline,
         outlineVariant: PmpColors.lightOutlineVariant,
         textPrimary: PmpColors.lightTextPrimary,
         textSecondary: PmpColors.lightTextSecondary,
-        primary: PmpColors.black,
+        primary: PmpColors.primary500,
         onPrimary: PmpColors.white,
+        appBarBg: PmpColors.primary500,
+        appBarFg: PmpColors.white,
       );
 }

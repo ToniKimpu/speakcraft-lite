@@ -99,6 +99,7 @@ class _SubtitlePagerState extends State<SubtitlePager> {
         width: double.infinity,
         color: colorScheme.surface,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: SubtitleCard(
@@ -117,19 +118,20 @@ class _SubtitlePagerState extends State<SubtitlePager> {
   }
 
   Widget _buildControlsRow(ColorScheme colorScheme) {
-    return SizedBox(
-      height: 40,
-      child: Row(
-        children: [
-          const SizedBox(width: 16),
-          Text(
-            'Stream',
-            style: PmpTextStyles.body2Semi.copyWith(color: colorScheme.onSurface),
-          ),
-          const SizedBox(width: 4),
-          Transform.scale(
-            scale: 0.75,
-            child: Switch(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      child: SizedBox(
+        height: 52,
+        child: Row(
+          children: [
+            const SizedBox(width: 4),
+            Text(
+              'Stream',
+              style:
+                  PmpTextStyles.body2Semi.copyWith(color: colorScheme.onSurface),
+            ),
+            const SizedBox(width: 8),
+            Switch(
               value: _streamData,
               onChanged: (value) {
                 setState(() {
@@ -141,23 +143,30 @@ class _SubtitlePagerState extends State<SubtitlePager> {
                 });
               },
             ),
-          ),
-          const Spacer(),
-          IconButton(
-            padding: EdgeInsets.zero,
-            onPressed: _goToPrevious,
-            icon: Icon(Icons.chevron_left, color: colorScheme.onSurface),
-          ),
-          Text(
-            '${_currentIndex + 1}/${widget.subtitles.length}',
-            style: PmpTextStyles.labelSemi.copyWith(color: colorScheme.onSurface),
-          ),
-          IconButton(
-            padding: EdgeInsets.zero,
-            onPressed: _goToNext,
-            icon: Icon(Icons.chevron_right, color: colorScheme.onSurface),
-          ),
-        ],
+            const Spacer(),
+            IconButton(
+              onPressed: _goToPrevious,
+              icon: Icon(Icons.chevron_left, color: colorScheme.onSurface),
+            ),
+            Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              decoration: BoxDecoration(
+                color: colorScheme.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: Text(
+                '${_currentIndex + 1}/${widget.subtitles.length}',
+                style: PmpTextStyles.labelSemi
+                    .copyWith(color: colorScheme.onSurface),
+              ),
+            ),
+            IconButton(
+              onPressed: _goToNext,
+              icon: Icon(Icons.chevron_right, color: colorScheme.onSurface),
+            ),
+          ],
+        ),
       ),
     );
   }

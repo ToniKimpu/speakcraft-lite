@@ -1388,6 +1388,210 @@ class SavedTermTableCompanion extends UpdateCompanion<SavedTerm> {
   }
 }
 
+class $VideoStepProgressTableTable extends VideoStepProgressTable
+    with TableInfo<$VideoStepProgressTableTable, VideoStepProgress> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VideoStepProgressTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _youtubeIdMeta =
+      const VerificationMeta('youtubeId');
+  @override
+  late final GeneratedColumn<String> youtubeId = GeneratedColumn<String>(
+      'youtube_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _stepKeyMeta =
+      const VerificationMeta('stepKey');
+  @override
+  late final GeneratedColumn<String> stepKey = GeneratedColumn<String>(
+      'step_key', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _stateMeta = const VerificationMeta('state');
+  @override
+  late final GeneratedColumn<int> state = GeneratedColumn<int>(
+      'state', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _lastOpenedAtMeta =
+      const VerificationMeta('lastOpenedAt');
+  @override
+  late final GeneratedColumn<DateTime> lastOpenedAt = GeneratedColumn<DateTime>(
+      'last_opened_at', aliasedName, true,
+      type: DriftSqlType.dateTime, requiredDuringInsert: false);
+  static const VerificationMeta _openCountMeta =
+      const VerificationMeta('openCount');
+  @override
+  late final GeneratedColumn<int> openCount = GeneratedColumn<int>(
+      'open_count', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  @override
+  List<GeneratedColumn> get $columns =>
+      [youtubeId, stepKey, state, lastOpenedAt, openCount];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'video_step_progress_table';
+  @override
+  VerificationContext validateIntegrity(Insertable<VideoStepProgress> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('youtube_id')) {
+      context.handle(_youtubeIdMeta,
+          youtubeId.isAcceptableOrUnknown(data['youtube_id']!, _youtubeIdMeta));
+    } else if (isInserting) {
+      context.missing(_youtubeIdMeta);
+    }
+    if (data.containsKey('step_key')) {
+      context.handle(_stepKeyMeta,
+          stepKey.isAcceptableOrUnknown(data['step_key']!, _stepKeyMeta));
+    } else if (isInserting) {
+      context.missing(_stepKeyMeta);
+    }
+    if (data.containsKey('state')) {
+      context.handle(
+          _stateMeta, state.isAcceptableOrUnknown(data['state']!, _stateMeta));
+    }
+    if (data.containsKey('last_opened_at')) {
+      context.handle(
+          _lastOpenedAtMeta,
+          lastOpenedAt.isAcceptableOrUnknown(
+              data['last_opened_at']!, _lastOpenedAtMeta));
+    }
+    if (data.containsKey('open_count')) {
+      context.handle(_openCountMeta,
+          openCount.isAcceptableOrUnknown(data['open_count']!, _openCountMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {youtubeId, stepKey};
+  @override
+  VideoStepProgress map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VideoStepProgress.new(
+      youtubeId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}youtube_id'])!,
+      stepKey: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}step_key'])!,
+      state: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}state'])!,
+      lastOpenedAt: attachedDatabase.typeMapping.read(
+          DriftSqlType.dateTime, data['${effectivePrefix}last_opened_at']),
+      openCount: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}open_count'])!,
+    );
+  }
+
+  @override
+  $VideoStepProgressTableTable createAlias(String alias) {
+    return $VideoStepProgressTableTable(attachedDatabase, alias);
+  }
+}
+
+class VideoStepProgressTableCompanion
+    extends UpdateCompanion<VideoStepProgress> {
+  final Value<String> youtubeId;
+  final Value<String> stepKey;
+  final Value<int> state;
+  final Value<DateTime?> lastOpenedAt;
+  final Value<int> openCount;
+  final Value<int> rowid;
+  const VideoStepProgressTableCompanion({
+    this.youtubeId = const Value.absent(),
+    this.stepKey = const Value.absent(),
+    this.state = const Value.absent(),
+    this.lastOpenedAt = const Value.absent(),
+    this.openCount = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  VideoStepProgressTableCompanion.insert({
+    required String youtubeId,
+    required String stepKey,
+    this.state = const Value.absent(),
+    this.lastOpenedAt = const Value.absent(),
+    this.openCount = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : youtubeId = Value(youtubeId),
+        stepKey = Value(stepKey);
+  static Insertable<VideoStepProgress> custom({
+    Expression<String>? youtubeId,
+    Expression<String>? stepKey,
+    Expression<int>? state,
+    Expression<DateTime>? lastOpenedAt,
+    Expression<int>? openCount,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (youtubeId != null) 'youtube_id': youtubeId,
+      if (stepKey != null) 'step_key': stepKey,
+      if (state != null) 'state': state,
+      if (lastOpenedAt != null) 'last_opened_at': lastOpenedAt,
+      if (openCount != null) 'open_count': openCount,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  VideoStepProgressTableCompanion copyWith(
+      {Value<String>? youtubeId,
+      Value<String>? stepKey,
+      Value<int>? state,
+      Value<DateTime?>? lastOpenedAt,
+      Value<int>? openCount,
+      Value<int>? rowid}) {
+    return VideoStepProgressTableCompanion(
+      youtubeId: youtubeId ?? this.youtubeId,
+      stepKey: stepKey ?? this.stepKey,
+      state: state ?? this.state,
+      lastOpenedAt: lastOpenedAt ?? this.lastOpenedAt,
+      openCount: openCount ?? this.openCount,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (youtubeId.present) {
+      map['youtube_id'] = Variable<String>(youtubeId.value);
+    }
+    if (stepKey.present) {
+      map['step_key'] = Variable<String>(stepKey.value);
+    }
+    if (state.present) {
+      map['state'] = Variable<int>(state.value);
+    }
+    if (lastOpenedAt.present) {
+      map['last_opened_at'] = Variable<DateTime>(lastOpenedAt.value);
+    }
+    if (openCount.present) {
+      map['open_count'] = Variable<int>(openCount.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VideoStepProgressTableCompanion(')
+          ..write('youtubeId: $youtubeId, ')
+          ..write('stepKey: $stepKey, ')
+          ..write('state: $state, ')
+          ..write('lastOpenedAt: $lastOpenedAt, ')
+          ..write('openCount: $openCount, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -1404,6 +1608,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       userRecordedSentenceAudioTable =
       $UserRecordedSentenceAudioTableTable(this);
   late final $SavedTermTableTable savedTermTable = $SavedTermTableTable(this);
+  late final $VideoStepProgressTableTable videoStepProgressTable =
+      $VideoStepProgressTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1414,7 +1620,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         listeningPracticeAnswerTable,
         spokenPatternExerciseAnswerTable,
         userRecordedSentenceAudioTable,
-        savedTermTable
+        savedTermTable,
+        videoStepProgressTable
       ];
 }
 
@@ -2524,6 +2731,187 @@ typedef $$SavedTermTableTableProcessedTableManager = ProcessedTableManager<
     (SavedTerm, BaseReferences<_$AppDatabase, $SavedTermTableTable, SavedTerm>),
     SavedTerm,
     PrefetchHooks Function()>;
+typedef $$VideoStepProgressTableTableCreateCompanionBuilder
+    = VideoStepProgressTableCompanion Function({
+  required String youtubeId,
+  required String stepKey,
+  Value<int> state,
+  Value<DateTime?> lastOpenedAt,
+  Value<int> openCount,
+  Value<int> rowid,
+});
+typedef $$VideoStepProgressTableTableUpdateCompanionBuilder
+    = VideoStepProgressTableCompanion Function({
+  Value<String> youtubeId,
+  Value<String> stepKey,
+  Value<int> state,
+  Value<DateTime?> lastOpenedAt,
+  Value<int> openCount,
+  Value<int> rowid,
+});
+
+class $$VideoStepProgressTableTableFilterComposer
+    extends Composer<_$AppDatabase, $VideoStepProgressTableTable> {
+  $$VideoStepProgressTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get stepKey => $composableBuilder(
+      column: $table.stepKey, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get state => $composableBuilder(
+      column: $table.state, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get lastOpenedAt => $composableBuilder(
+      column: $table.lastOpenedAt, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get openCount => $composableBuilder(
+      column: $table.openCount, builder: (column) => ColumnFilters(column));
+}
+
+class $$VideoStepProgressTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $VideoStepProgressTableTable> {
+  $$VideoStepProgressTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get stepKey => $composableBuilder(
+      column: $table.stepKey, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get state => $composableBuilder(
+      column: $table.state, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get lastOpenedAt => $composableBuilder(
+      column: $table.lastOpenedAt,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get openCount => $composableBuilder(
+      column: $table.openCount, builder: (column) => ColumnOrderings(column));
+}
+
+class $$VideoStepProgressTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $VideoStepProgressTableTable> {
+  $$VideoStepProgressTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get youtubeId =>
+      $composableBuilder(column: $table.youtubeId, builder: (column) => column);
+
+  GeneratedColumn<String> get stepKey =>
+      $composableBuilder(column: $table.stepKey, builder: (column) => column);
+
+  GeneratedColumn<int> get state =>
+      $composableBuilder(column: $table.state, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get lastOpenedAt => $composableBuilder(
+      column: $table.lastOpenedAt, builder: (column) => column);
+
+  GeneratedColumn<int> get openCount =>
+      $composableBuilder(column: $table.openCount, builder: (column) => column);
+}
+
+class $$VideoStepProgressTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VideoStepProgressTableTable,
+    VideoStepProgress,
+    $$VideoStepProgressTableTableFilterComposer,
+    $$VideoStepProgressTableTableOrderingComposer,
+    $$VideoStepProgressTableTableAnnotationComposer,
+    $$VideoStepProgressTableTableCreateCompanionBuilder,
+    $$VideoStepProgressTableTableUpdateCompanionBuilder,
+    (
+      VideoStepProgress,
+      BaseReferences<_$AppDatabase, $VideoStepProgressTableTable,
+          VideoStepProgress>
+    ),
+    VideoStepProgress,
+    PrefetchHooks Function()> {
+  $$VideoStepProgressTableTableTableManager(
+      _$AppDatabase db, $VideoStepProgressTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VideoStepProgressTableTableFilterComposer(
+                  $db: db, $table: table),
+          createOrderingComposer: () =>
+              $$VideoStepProgressTableTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$VideoStepProgressTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> youtubeId = const Value.absent(),
+            Value<String> stepKey = const Value.absent(),
+            Value<int> state = const Value.absent(),
+            Value<DateTime?> lastOpenedAt = const Value.absent(),
+            Value<int> openCount = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VideoStepProgressTableCompanion(
+            youtubeId: youtubeId,
+            stepKey: stepKey,
+            state: state,
+            lastOpenedAt: lastOpenedAt,
+            openCount: openCount,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String youtubeId,
+            required String stepKey,
+            Value<int> state = const Value.absent(),
+            Value<DateTime?> lastOpenedAt = const Value.absent(),
+            Value<int> openCount = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VideoStepProgressTableCompanion.insert(
+            youtubeId: youtubeId,
+            stepKey: stepKey,
+            state: state,
+            lastOpenedAt: lastOpenedAt,
+            openCount: openCount,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$VideoStepProgressTableTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $VideoStepProgressTableTable,
+        VideoStepProgress,
+        $$VideoStepProgressTableTableFilterComposer,
+        $$VideoStepProgressTableTableOrderingComposer,
+        $$VideoStepProgressTableTableAnnotationComposer,
+        $$VideoStepProgressTableTableCreateCompanionBuilder,
+        $$VideoStepProgressTableTableUpdateCompanionBuilder,
+        (
+          VideoStepProgress,
+          BaseReferences<_$AppDatabase, $VideoStepProgressTableTable,
+              VideoStepProgress>
+        ),
+        VideoStepProgress,
+        PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -2548,4 +2936,7 @@ class $AppDatabaseManager {
               _db, _db.userRecordedSentenceAudioTable);
   $$SavedTermTableTableTableManager get savedTermTable =>
       $$SavedTermTableTableTableManager(_db, _db.savedTermTable);
+  $$VideoStepProgressTableTableTableManager get videoStepProgressTable =>
+      $$VideoStepProgressTableTableTableManager(
+          _db, _db.videoStepProgressTable);
 }

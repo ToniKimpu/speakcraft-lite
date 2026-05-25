@@ -5,9 +5,11 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/listening/shadowing_line_bloc.dart';
+import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/config/common_extensions.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_none.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
@@ -63,11 +65,18 @@ class _ShadowingPageState extends State<ShadowingPage>
   Timer? _scrollCheckTimer;
 
   bool _backPressed = false;
+  bool _markedShadowingDone = false;
 
   @override
   void initState() {
     super.initState();
     _extrapolationTicker = createTicker(_onExtrapolationTick)..start();
+    context.read<VideoStepProgressBloc>().add(
+          VideoStepProgressEvent.markInProgress(
+            widget.listening.youtubeId,
+            VideoLessonStep.shadowing,
+          ),
+        );
     AppLogger.instance.debug(
         "_subtitleLineBlocLogs: ${widget.listening.shadowingPath} shadowing path");
     _subtitleLineBloc
@@ -98,7 +107,7 @@ class _ShadowingPageState extends State<ShadowingPage>
   void _onPlayerPositionChanged() {
     if (!mounted) return;
 
-    // Real YouTube position update â€” snap baseline and restart (or stop) the
+    // Real YouTube position update — snap baseline and restart (or stop) the
     // wall-clock stopwatch that drives _onExtrapolationTick between ticks.
     _baselinePosition = _controller.value.position;
     _sinceBaseline
@@ -108,6 +117,21 @@ class _ShadowingPageState extends State<ShadowingPage>
       _sinceBaseline.stop();
     }
     _positionNotifier.value = _baselinePosition;
+
+    if (!_markedShadowingDone) {
+      final segmentLen = widget.listening.end - widget.listening.start;
+      final positionInSegment =
+          _controller.value.position.inSeconds - widget.listening.start;
+      if (segmentLen > 0 && positionInSegment >= segmentLen * 0.8) {
+        _markedShadowingDone = true;
+        context.read<VideoStepProgressBloc>().add(
+              VideoStepProgressEvent.markDone(
+                widget.listening.youtubeId,
+                VideoLessonStep.shadowing,
+              ),
+            );
+      }
+    }
 
     // Debounce scroll checks to avoid excessive computation
     _scrollCheckTimer?.cancel();
@@ -125,7 +149,7 @@ class _ShadowingPageState extends State<ShadowingPage>
           .toList()
         ..sort();
 
-      // Stop auto-scrolling once the last line is visible â€” alignment 0.3
+      // Stop auto-scrolling once the last line is visible — alignment 0.3
       // can't be satisfied near the end, which causes a jarring bounce.
       if (visibleIndexes.contains(_subtitles.length - 1)) {
         return;
@@ -260,6 +284,12 @@ class _ShadowingPageState extends State<ShadowingPage>
                   },
                   builder: (context, state) {
                     final colorScheme = Theme.of(context).colorScheme;
+                    // Content lives in the AppBar, whose background differs by
+                    // theme (colored bar in light, dark surface in dark), so
+                    // track the AppBar foreground rather than surface tokens.
+                    final appBarFg =
+                        Theme.of(context).appBarTheme.foregroundColor ??
+                            colorScheme.onSurface;
                     return Scaffold(
                       appBar: AppBar(
                         title: const Text("Shadowing"),
@@ -286,25 +316,26 @@ class _ShadowingPageState extends State<ShadowingPage>
                                   horizontal: 8, vertical: 4),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                border:
-                                    Border.all(color: colorScheme.outline),
+                                border: Border.all(
+                                    color: appBarFg.withValues(alpha: 0.4)),
                               ),
                               child: Row(
                                 children: [
                                   Text(
                                     getHighlightTypeLabel(
-                                        _selectedHighlightType),
+                                      _selectedHighlightType,
+                                    ),
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400,
-                                      color: colorScheme.onSurface,
+                                      color: appBarFg,
                                       fontFamily: 'MM Lyrics Bold',
                                     ),
                                   ),
                                   const SizedBox(width: 6),
                                   Icon(
                                     Icons.expand_more,
-                                    color: colorScheme.onSurfaceVariant,
+                                    color: appBarFg,
                                   ),
                                 ],
                               ),
@@ -325,6 +356,7 @@ class _ShadowingPageState extends State<ShadowingPage>
                             positionListenable: _positionNotifier,
                             totalDuration:
                                 Duration(seconds: widget.listening.end),
+                            enableSpeedControl: true,
                             onTogglePlay: () {
                               final loading = _controller.value.playerState ==
                                       PlayerState.buffering ||
@@ -375,8 +407,7 @@ class _ShadowingPageState extends State<ShadowingPage>
                                     return false;
                                   },
                                   child: ScrollablePositionedList.separated(
-                                    itemScrollController:
-                                        _itemScrollController,
+                                    itemScrollController: _itemScrollController,
                                     itemPositionsListener:
                                         _itemPositionsListener,
                                     itemCount: subtitleLines.length,
