@@ -339,6 +339,9 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                           }
                           return Column(
                             children: [
+                              // Breathing room between the app bar and the
+                              // player card.
+                              const SizedBox(height: 12),
                               ShadowingPlayer(
                                 listening: widget.listening,
                                 controller: _controller,
@@ -348,6 +351,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                     Duration(seconds: widget.listening.end),
                                 segmentStart: _startDuration,
                                 segmentEnd: _endDuration,
+                                enableSpeedControl: true,
                                 onTogglePlay: () {
                                   final loading =
                                       _controller.value.playerState ==
