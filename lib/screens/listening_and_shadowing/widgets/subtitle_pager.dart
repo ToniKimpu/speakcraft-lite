@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:speakcraft/bloc/listening/subtitle_index_bloc.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/subtitle/subtitle.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/widgets/subtitle_card.dart';
@@ -126,7 +127,7 @@ class _SubtitlePagerState extends State<SubtitlePager> {
           children: [
             const SizedBox(width: 4),
             Text(
-              'Stream',
+              AppLocalizations.of(context).txtStream,
               style:
                   PmpTextStyles.body2Semi.copyWith(color: colorScheme.onSurface),
             ),

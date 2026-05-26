@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 import '../../../config/pmp_text_styles.dart';
 import '../../../model/listening/listening.dart';
@@ -172,7 +173,7 @@ class ShadowingPlayer extends StatelessWidget {
     // Beginner-friendly range; matches the YouTube iframe's supported rates.
     const rates = <double>[0.5, 0.75, 1.0, 1.25, 1.5];
     return PopupMenuButton<double>(
-      tooltip: 'Playback speed',
+      tooltip: AppLocalizations.of(context).txtPlaybackSpeed,
       onSelected: controller.setPlaybackRate,
       itemBuilder: (context) => [
         for (final rate in rates)

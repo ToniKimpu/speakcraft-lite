@@ -4,6 +4,7 @@ import 'package:speakcraft/bloc/listening/listening_bloc.dart';
 
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class ListeningVocabularyList extends StatelessWidget {
   const ListeningVocabularyList({
@@ -75,7 +76,7 @@ class ListeningVocabularyList extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(24),
                         child: Text(
-                          'သည်ဗီဒီယိုအတွက် vocabularyများ\n မကြာခင်တင်ပေးပါမည်။',
+                          AppLocalizations.of(context).txtVocabComingSoon,
                           style: PmpTextStyles.body1Regular.copyWith(
                             color: Colors.white,
                           ),
@@ -93,7 +94,7 @@ class ListeningVocabularyList extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Vocabularies',
+                              AppLocalizations.of(context).txtVocabularies,
                               style: PmpTextStyles.body2Semi.copyWith(
                                 color: Colors.white,
                               ),

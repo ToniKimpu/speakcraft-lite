@@ -18,6 +18,7 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'model/highlight_types.dart';
 import 'model/subtitle_line.dart';
 import 'shadowing_widgets/highlight_types/highlight_sentence.dart';
@@ -213,11 +214,11 @@ class _ShadowingPageState extends State<ShadowingPage>
   String getHighlightTypeLabel(HighlightType type) {
     switch (type) {
       case HighlightType.readAlong:
-        return "Read Along";
+        return AppLocalizations.of(context).txtHighlightReadAlong;
       case HighlightType.line:
-        return "Line";
+        return AppLocalizations.of(context).txtHighlightLine;
       case HighlightType.none:
-        return "None";
+        return AppLocalizations.of(context).txtHighlightNone;
     }
   }
 
@@ -292,7 +293,7 @@ class _ShadowingPageState extends State<ShadowingPage>
                             colorScheme.onSurface;
                     return Scaffold(
                       appBar: AppBar(
-                        title: const Text("Shadowing"),
+                        title: Text(AppLocalizations.of(context).txtShadowing),
                         actions: [
                           InkWell(
                             borderRadius: BorderRadius.circular(6),

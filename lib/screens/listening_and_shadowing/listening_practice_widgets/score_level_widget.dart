@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../config/grade_utils.dart';
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class ScoreLevelWidget extends StatelessWidget {
   const ScoreLevelWidget({
@@ -30,7 +31,7 @@ class ScoreLevelWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Your Level',
+            AppLocalizations.of(context).txtYourLevel,
             style:
                 PmpTextStyles.body1Semi.copyWith(color: PmpColors.success500),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 import '../../../../config/pmp_colors.dart';
 import '../../utils/cloze_generator.dart';
@@ -23,7 +24,7 @@ class SejQuizCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _header(cs),
+          _header(context, cs),
           Padding(
             padding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
             child: Column(
@@ -41,7 +42,7 @@ class SejQuizCard extends StatelessWidget {
     );
   }
 
-  Widget _header(ColorScheme cs) {
+  Widget _header(BuildContext context, ColorScheme cs) {
     return Container(
       padding: const EdgeInsets.fromLTRB(14, 8, 14, 8),
       decoration: BoxDecoration(
@@ -54,7 +55,7 @@ class SejQuizCard extends StatelessWidget {
           const Icon(Icons.quiz_outlined, size: 18, color: PmpColors.info400),
           const SizedBox(width: 8),
           Text(
-            'Check yourself',
+            AppLocalizations.of(context).txtCheckYourself,
             style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
@@ -63,7 +64,7 @@ class SejQuizCard extends StatelessWidget {
           ),
           const Spacer(),
           Text(
-            'Fill the blank',
+            AppLocalizations.of(context).txtFillTheBlank,
             style: TextStyle(fontSize: 11, color: cs.onSurfaceVariant),
           ),
         ],
@@ -147,7 +148,8 @@ class _ClozeFieldState extends State<_ClozeField> {
                 style: const TextStyle(fontSize: 14),
                 decoration: InputDecoration(
                   isDense: true,
-                  hintText: 'Type the missing word(s)',
+                  hintText:
+                      AppLocalizations.of(context).txtTypeMissingWords,
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                   enabledBorder: OutlineInputBorder(
@@ -173,7 +175,7 @@ class _ClozeFieldState extends State<_ClozeField> {
             if (correct)
               IconButton(
                 onPressed: _reset,
-                tooltip: 'Try again',
+                tooltip: AppLocalizations.of(context).txtTryAgain,
                 icon: Icon(Icons.refresh, color: cs.onSurfaceVariant),
               )
             else
@@ -183,7 +185,7 @@ class _ClozeFieldState extends State<_ClozeField> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 18, vertical: 13),
                 ),
-                child: const Text('Check'),
+                child: Text(AppLocalizations.of(context).txtCheck),
               ),
           ],
         ),
@@ -193,7 +195,7 @@ class _ClozeFieldState extends State<_ClozeField> {
             TextSpan(
               style: TextStyle(fontSize: 12, color: cs.onSurfaceVariant),
               children: [
-                const TextSpan(text: 'Answer: '),
+                TextSpan(text: AppLocalizations.of(context).txtAnswerLabel),
                 TextSpan(
                   text: item.answer,
                   style: TextStyle(
@@ -222,7 +224,9 @@ class _ClozeFieldState extends State<_ClozeField> {
                   const SizedBox(width: 4),
                   Expanded(
                     child: Text(
-                      _showHint ? item.hintMy : 'Show hint',
+                      _showHint
+                          ? item.hintMy
+                          : AppLocalizations.of(context).txtShowHint,
                       style: const TextStyle(
                         fontSize: 12,
                         color: PmpColors.warning600,

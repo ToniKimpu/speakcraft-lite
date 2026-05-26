@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class CheckingUserAnswersDialog extends StatelessWidget {
   const CheckingUserAnswersDialog({
@@ -29,7 +30,7 @@ class CheckingUserAnswersDialog extends StatelessWidget {
           children: [
             const SizedBox(height: 20),
             Text(
-              "Checking your answers",
+              AppLocalizations.of(context).txtCheckingAnswers,
               style: PmpTextStyles.body1Regular.copyWith(
                 color: Colors.white,
                 fontFamily: 'ArchivoBlack Regular',

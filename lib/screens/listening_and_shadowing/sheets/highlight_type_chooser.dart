@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/model/highlight_types.dart';
 
 import '../../../config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class HighlightTypeChooser extends StatelessWidget {
   const HighlightTypeChooser({
@@ -17,17 +18,17 @@ class HighlightTypeChooser extends StatelessWidget {
     final highlightOptions = [
       {
         'type': HighlightType.readAlong,
-        'label': 'Read Along',
+        'label': AppLocalizations.of(context).txtHighlightReadAlong,
         'icon': Icons.format_color_fill,
       },
       {
         'type': HighlightType.line,
-        'label': 'Line',
+        'label': AppLocalizations.of(context).txtHighlightLine,
         'icon': Icons.highlight,
       },
       {
         'type': HighlightType.none,
-        'label': 'None',
+        'label': AppLocalizations.of(context).txtHighlightNone,
         'icon': Icons.not_interested,
       },
     ];
@@ -60,7 +61,7 @@ class HighlightTypeChooser extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
               child: Text(
-                'Choose Highlight Type',
+                AppLocalizations.of(context).txtChooseHighlightType,
                 style: PmpTextStyles.body1Semi
                     .copyWith(color: colorScheme.onSurface),
               ),

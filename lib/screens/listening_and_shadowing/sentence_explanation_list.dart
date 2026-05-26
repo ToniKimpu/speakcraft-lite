@@ -70,7 +70,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sentence Explanations'),
+        title: Text(AppLocalizations.of(context).txtSentenceExplanations),
       ),
       body: FutureBuilder<List<SentenceExplanation>>(
         future: _future,
@@ -107,7 +107,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                     ),
                     const SizedBox(height: 20),
                     Text(
-                      'Coming Soon',
+                      AppLocalizations.of(context).txtComingSoon,
                       style: PmpTextStyles.h1.copyWith(
                         color: colorScheme.onSurface,
                         fontFamily: 'ArchivoBlack Regular',
@@ -116,7 +116,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Sentence explanation is on the way.\nStay tuned!',
+                      AppLocalizations.of(context).txtSentenceExplanationComing,
                       style: PmpTextStyles.body2Regular.copyWith(
                         color: colorScheme.onSurfaceVariant,
                       ),

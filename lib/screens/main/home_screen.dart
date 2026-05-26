@@ -11,6 +11,7 @@ import 'package:speakcraft/bloc/user_activity/user_activity_messages.dart';
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
 
@@ -41,9 +42,9 @@ class _HomePageState extends State<HomePage> {
       ScaffoldMessenger.of(context)
         ..clearSnackBars()
         ..showSnackBar(
-          const SnackBar(
-            content: Text('Press back again to exit'),
-            duration: Duration(seconds: 2),
+          SnackBar(
+            content: Text(AppLocalizations.of(context).txtPressBackToExit),
+            duration: const Duration(seconds: 2),
           ),
         );
       return;
@@ -146,9 +147,9 @@ class _HomePageState extends State<HomePage> {
               // ),
               // const SizedBox(height: 12),
               ModuleWidget(
-                title: 'Listening & Shadowing',
-                label1: 'Listening လုပ်မယ်။',
-                label2: 'Shadowing လိုက်လုပ်မယ်။',
+                title: AppLocalizations.of(context).txtModuleListeningTitle,
+                label1: AppLocalizations.of(context).txtModuleListeningLabel1,
+                label2: AppLocalizations.of(context).txtModuleListeningLabel2,
                 iconTitle: Icons.hearing,
                 iconLabel1: Icons.headphones,
                 iconLabel2: Icons.surround_sound,
@@ -158,9 +159,9 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 12),
               ModuleWidget(
-                title: 'Bookmarks',
-                label1: 'ကိုယ်တိုင် save ထားသော bookmarks များ',
-                label2: 'Vocabulary, phrase, grammar ကို ပြန်လေ့လာမယ်',
+                title: AppLocalizations.of(context).txtModuleBookmarksTitle,
+                label1: AppLocalizations.of(context).txtModuleBookmarksLabel1,
+                label2: AppLocalizations.of(context).txtModuleBookmarksLabel2,
                 iconTitle: Icons.bookmark,
                 iconLabel1: Icons.menu_book,
                 iconLabel2: Icons.school,
@@ -431,7 +432,7 @@ class _ContinueCard extends StatelessWidget {
                       size: 16, color: colorScheme.primary),
                   const SizedBox(width: 6),
                   Text(
-                    'Continue learning',
+                    AppLocalizations.of(context).txtContinueLearning,
                     style: PmpTextStyles.labelSemi
                         .copyWith(color: colorScheme.primary),
                   ),
@@ -492,7 +493,9 @@ class _ContinueCard extends StatelessWidget {
                             ),
                             const SizedBox(width: 10),
                             Text(
-                              '${progress.doneCount} of ${progress.totalCount}',
+                              AppLocalizations.of(context)
+                                  .txtProgressXofY(
+                                      progress.doneCount, progress.totalCount),
                               style: PmpTextStyles.labelSemi.copyWith(
                                 color: colorScheme.onSurfaceVariant,
                               ),

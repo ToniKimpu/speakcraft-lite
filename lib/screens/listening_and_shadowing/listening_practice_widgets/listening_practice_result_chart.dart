@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class ListeningPracticeResultChart extends StatelessWidget {
   const ListeningPracticeResultChart({
@@ -43,7 +44,8 @@ class ListeningPracticeResultChart extends StatelessWidget {
                       .copyWith(color: colorScheme.onSurface),
                 ),
                 Text(
-                  'out of ${correctCount + inCorrectCount + notAnswerCount}',
+                  AppLocalizations.of(context)
+                      .txtOutOf(correctCount + inCorrectCount + notAnswerCount),
                   style: PmpTextStyles.labelMedium
                       .copyWith(color: colorScheme.onSurfaceVariant),
                 )

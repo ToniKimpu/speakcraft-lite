@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:drift/drift.dart' show Value;
 import 'package:flutter/material.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/services/app_database/app_database.dart';
 
 import '../../../../config/pmp_colors.dart';
@@ -58,7 +59,7 @@ class _SejTermCardState extends State<SejTermCard> {
             .go();
         if (!mounted) return;
         setState(() => _savedRowId = null);
-        _showSnackBar('Removed');
+        _showSnackBar(AppLocalizations.of(context).txtRemoved);
       } else {
         final examples = (widget.term['examples'] as List<dynamic>?) ?? const [];
         final translationMy = widget.term['translation_my'] as String? ?? '';
@@ -84,7 +85,7 @@ class _SejTermCardState extends State<SejTermCard> {
             );
         if (!mounted) return;
         setState(() => _savedRowId = id);
-        _showSnackBar('Saved');
+        _showSnackBar(AppLocalizations.of(context).txtSaved);
       }
     } finally {
       if (mounted) setState(() => _busy = false);
@@ -192,7 +193,9 @@ class _SejTermCardState extends State<SejTermCard> {
               ),
             ),
           IconButton(
-            tooltip: isSaved ? 'Remove' : 'Save',
+            tooltip: isSaved
+                ? AppLocalizations.of(context).txtRemove
+                : AppLocalizations.of(context).txtSave,
             visualDensity: VisualDensity.compact,
             onPressed: _busy ? null : _toggleSaved,
             icon: Icon(

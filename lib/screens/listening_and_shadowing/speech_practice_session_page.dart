@@ -21,6 +21,7 @@ import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
 import 'dialogs/save_recording_dialog.dart';
 import 'recording_voice_widgets/recorder.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class SpeechPracticeSessionPage extends StatefulWidget {
   const SpeechPracticeSessionPage({
@@ -169,10 +170,10 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
   void _showRecordingSnackBar(BuildContext context) {
     ScaffoldMessenger.of(context)
       ..clearSnackBars()
-      ..showSnackBar(const SnackBar(
+      ..showSnackBar(SnackBar(
         content: Text(
-          "Playback is disabled while recording. Please stop the recording to continue.",
-          style: TextStyle(color: PmpColors.white),
+          AppLocalizations.of(context).txtPlaybackDisabledWhileRecording,
+          style: const TextStyle(color: PmpColors.white),
         ),
         backgroundColor: Colors.green,
         closeIconColor: PmpColors.white,
@@ -213,7 +214,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                   ),
                 ),
                 Text(
-                  "Records",
+                  AppLocalizations.of(context).txtRecords,
                   style: TextStyle(
                     fontSize: 16,
                     color: colorScheme.onSurface,
@@ -260,7 +261,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                 )
               : Scaffold(
                   appBar: AppBar(
-                    title: const Text("Speech Practice Session"),
+                    title: Text(AppLocalizations.of(context).txtSpeechPracticeSession),
                   ),
                   body: BlocConsumer<RecordSubtitleBloc, RecordSubtitleState>(
                     bloc: _recordSubtitleBloc,
@@ -315,7 +316,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                     ),
                                     const SizedBox(height: 20),
                                     Text(
-                                      "Coming Soon",
+                                      AppLocalizations.of(context).txtComingSoon,
                                       style: PmpTextStyles.h1.copyWith(
                                         color: colorScheme.onSurface,
                                         fontFamily: 'ArchivoBlack Regular',
@@ -324,8 +325,7 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                     ),
                                     const SizedBox(height: 8),
                                     Text(
-                                      "We’re polishing the record subtitles to give you the best shadowing experience.\n"
-                                      "Check back soon and get ready to practice!",
+                                      AppLocalizations.of(context).txtRecordComingSoonBody,
                                       style:
                                           PmpTextStyles.body2Regular.copyWith(
                                         color: colorScheme.onSurfaceVariant,

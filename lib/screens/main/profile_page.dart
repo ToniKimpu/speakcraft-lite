@@ -38,7 +38,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: Text(AppLocalizations.of(context).txtProfile),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
@@ -147,7 +147,9 @@ class _StatsRow extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: _StatCard(value: daysLabel, label: 'Days Learned'),
+                child: _StatCard(
+                    value: daysLabel,
+                    label: AppLocalizations.of(context).txtDaysLearned),
               ),
               VerticalDivider(
                 color: Theme.of(context).colorScheme.outlineVariant,
@@ -155,7 +157,9 @@ class _StatsRow extends StatelessWidget {
                 thickness: 1,
               ),
               Expanded(
-                child: _StatCard(value: streakLabel, label: 'Day Streak'),
+                child: _StatCard(
+                    value: streakLabel,
+                    label: AppLocalizations.of(context).txtDayStreak),
               ),
             ],
           ),
@@ -216,7 +220,7 @@ class _AppearanceCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 14, 16, 8),
             child: Text(
-              'Appearance',
+              AppLocalizations.of(context).txtAppearance,
               style: PmpTextStyles.body1Semi.copyWith(
                 color: colorScheme.onSurface,
               ),
@@ -229,7 +233,7 @@ class _AppearanceCard extends StatelessWidget {
                 children: [
                   _ThemeOptionTile(
                     icon: Icons.light_mode_outlined,
-                    label: 'Light',
+                    label: AppLocalizations.of(context).txtThemeLight,
                     selected: mode == ThemeMode.light,
                     onTap: () => controller.setMode(ThemeMode.light),
                   ),
@@ -241,7 +245,7 @@ class _AppearanceCard extends StatelessWidget {
                   ),
                   _ThemeOptionTile(
                     icon: Icons.dark_mode_outlined,
-                    label: 'Dark',
+                    label: AppLocalizations.of(context).txtThemeDark,
                     selected: mode == ThemeMode.dark,
                     onTap: () => controller.setMode(ThemeMode.dark),
                   ),
@@ -253,7 +257,7 @@ class _AppearanceCard extends StatelessWidget {
                   ),
                   _ThemeOptionTile(
                     icon: Icons.brightness_auto_outlined,
-                    label: 'System',
+                    label: AppLocalizations.of(context).txtThemeSystem,
                     selected: mode == ThemeMode.system,
                     onTap: () => controller.setMode(ThemeMode.system),
                     isLast: true,
@@ -377,8 +381,8 @@ class _SettingsCard extends StatelessWidget {
               } else {
                 if (context.mounted) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('Failed to open browser!'),
+                    SnackBar(
+                      content: Text(l10n.txtFailedToOpenBrowser),
                       behavior: SnackBarBehavior.floating,
                     ),
                   );
@@ -397,8 +401,8 @@ class _SettingsCard extends StatelessWidget {
             icon: 'assets/images/ic_feedback.png',
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Coming soon....'),
+                SnackBar(
+                  content: Text(l10n.txtComingSoonDots),
                   behavior: SnackBarBehavior.floating,
                 ),
               );

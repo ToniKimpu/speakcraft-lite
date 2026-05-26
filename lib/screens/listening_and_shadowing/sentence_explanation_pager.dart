@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:speakcraft/config/env.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
 import 'package:speakcraft/screens/days/spoken_pattern/widgets/footer_widget.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
@@ -47,14 +48,14 @@ class _SentenceExplanationPagerState extends State<SentenceExplanationPager> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: const Row(
+        title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.lightbulb_outline, color: Colors.amberAccent),
-            SizedBox(width: 6),
+            const Icon(Icons.lightbulb_outline, color: Colors.amberAccent),
+            const SizedBox(width: 6),
             Text(
-              'Explanation',
-              style: TextStyle(
+              AppLocalizations.of(context).txtExplanation,
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
                 color: Colors.amberAccent,
@@ -111,7 +112,7 @@ class _ExplanationPageContent extends StatefulWidget {
 class _ExplanationPageContentState extends State<_ExplanationPageContent>
     with AutomaticKeepAliveClientMixin {
   Map<String, dynamic>? _jsonData;
-  String? _errorMessage;
+  _ExplanationError? _error;
   bool _isLoading = false;
 
   @override
@@ -126,7 +127,7 @@ class _ExplanationPageContentState extends State<_ExplanationPageContent>
   Future<void> _loadJson() async {
     setState(() {
       _isLoading = true;
-      _errorMessage = null;
+      _error = null;
       _jsonData = null;
     });
 
@@ -139,12 +140,10 @@ class _ExplanationPageContentState extends State<_ExplanationPageContent>
           await http.get(Uri.parse(url)).timeout(const Duration(seconds: 15));
 
       if (response.statusCode == 404) {
-        throw const _FriendlyException('Explanation not found.');
+        throw const _FriendlyException(_ExplanationError.notFound);
       }
       if (response.statusCode != 200) {
-        throw const _FriendlyException(
-          'Failed to load explanation. Please try again later.',
-        );
+        throw const _FriendlyException(_ExplanationError.loadFailed);
       }
 
       final data =
@@ -156,20 +155,20 @@ class _ExplanationPageContentState extends State<_ExplanationPageContent>
         _isLoading = false;
       });
     } on TimeoutException {
-      _setError('Connection timed out. Please try again.');
+      _setError(_ExplanationError.timeout);
     } on http.ClientException {
-      _setError('Network error. Please check your internet connection.');
+      _setError(_ExplanationError.network);
     } on _FriendlyException catch (e) {
-      _setError(e.message);
+      _setError(e.kind);
     } catch (_) {
-      _setError('Something went wrong while loading this explanation.');
+      _setError(_ExplanationError.generic);
     }
   }
 
-  void _setError(String message) {
+  void _setError(_ExplanationError error) {
     if (!mounted) return;
     setState(() {
-      _errorMessage = message;
+      _error = error;
       _isLoading = false;
       _jsonData = null;
     });
@@ -182,8 +181,8 @@ class _ExplanationPageContentState extends State<_ExplanationPageContent>
     if (_isLoading) {
       return const Center(child: CircularProgressIndicator());
     }
-    if (_errorMessage != null) {
-      return _ErrorView(message: _errorMessage!, onRetry: _loadJson);
+    if (_error != null) {
+      return _ErrorView(error: _error!, onRetry: _loadJson);
     }
     if (_jsonData != null) {
       return SentenceExplanationJsonView(data: _jsonData!);
@@ -193,13 +192,21 @@ class _ExplanationPageContentState extends State<_ExplanationPageContent>
 }
 
 class _ErrorView extends StatelessWidget {
-  const _ErrorView({required this.message, required this.onRetry});
-  final String message;
+  const _ErrorView({required this.error, required this.onRetry});
+  final _ExplanationError error;
   final VoidCallback onRetry;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context);
+    final message = switch (error) {
+      _ExplanationError.notFound => l10n.txtExplanationNotFound,
+      _ExplanationError.loadFailed => l10n.txtExplanationLoadFailed,
+      _ExplanationError.timeout => l10n.txtConnectionTimedOut,
+      _ExplanationError.network => l10n.txtNetworkError,
+      _ExplanationError.generic => l10n.txtExplanationGenericError,
+    };
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(32),
@@ -220,7 +227,7 @@ class _ErrorView extends StatelessWidget {
             ),
             const SizedBox(height: 22),
             Text(
-              "Couldn't load explanation",
+              l10n.txtExplanationLoadError,
               style: theme.textTheme.titleLarge
                   ?.copyWith(fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
@@ -238,7 +245,7 @@ class _ErrorView extends StatelessWidget {
             FilledButton.icon(
               onPressed: onRetry,
               icon: const Icon(Icons.refresh),
-              label: const Text("Try again"),
+              label: Text(l10n.txtTryAgain),
             ),
           ],
         ),
@@ -247,7 +254,11 @@ class _ErrorView extends StatelessWidget {
   }
 }
 
+/// Distinct failure kinds for loading an explanation, resolved to localized
+/// copy at display time in [_ErrorView].
+enum _ExplanationError { notFound, loadFailed, timeout, network, generic }
+
 class _FriendlyException implements Exception {
-  final String message;
-  const _FriendlyException(this.message);
+  final _ExplanationError kind;
+  const _FriendlyException(this.kind);
 }

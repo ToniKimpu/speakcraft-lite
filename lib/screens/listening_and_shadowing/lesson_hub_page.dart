@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
@@ -38,34 +39,34 @@ class _LessonHubPageState extends State<LessonHubPage> {
   _StepConfig _configForStep(VideoLessonStep step) {
     switch (step) {
       case VideoLessonStep.watch:
-        return const _StepConfig(
+        return _StepConfig(
           step: VideoLessonStep.watch,
-          title: 'Watch',
-          subtitle: 'Listen with subtitles to understand the content',
+          title: AppLocalizations.of(context).txtStepWatchTitle,
+          subtitle: AppLocalizations.of(context).txtStepWatchSubtitle,
           icon: Icons.play_circle_outline,
           route: PmpRoutes.youtubeVideoPage,
         );
       case VideoLessonStep.explanation:
-        return const _StepConfig(
+        return _StepConfig(
           step: VideoLessonStep.explanation,
-          title: 'Study the patterns',
-          subtitle: 'Review grammar and vocabulary used in this video',
+          title: AppLocalizations.of(context).txtStepStudyTitle,
+          subtitle: AppLocalizations.of(context).txtStepStudySubtitle,
           icon: Icons.lightbulb_outline,
           route: PmpRoutes.sentenceExplanationList,
         );
       case VideoLessonStep.shadowing:
-        return const _StepConfig(
+        return _StepConfig(
           step: VideoLessonStep.shadowing,
-          title: 'Practice along (shadowing)',
-          subtitle: 'Speak in sync with the audio',
+          title: AppLocalizations.of(context).txtStepShadowTitle,
+          subtitle: AppLocalizations.of(context).txtStepShadowSubtitle,
           icon: Icons.headphones,
           route: PmpRoutes.shadowingPage,
         );
       case VideoLessonStep.record:
-        return const _StepConfig(
+        return _StepConfig(
           step: VideoLessonStep.record,
-          title: 'Speak on your own',
-          subtitle: 'Record yourself and compare to the original',
+          title: AppLocalizations.of(context).txtStepRecordTitle,
+          subtitle: AppLocalizations.of(context).txtStepRecordSubtitle,
           icon: Icons.record_voice_over,
           route: PmpRoutes.speechPracticeSessionPage,
         );
@@ -86,7 +87,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
     final steps = _visibleSteps();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Lesson')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context).txtLesson)),
       body: BlocBuilder<VideoStepProgressBloc, VideoStepProgressState>(
         builder: (context, state) {
           final stepStates = <_StepConfig, VideoStepState>{
@@ -135,7 +136,8 @@ class _LessonHubPageState extends State<LessonHubPage> {
                       child: FilledButton.icon(
                         onPressed: () => _openStep(steps[nextIndex]),
                         icon: const Icon(Icons.arrow_forward),
-                        label: Text('Continue · ${steps[nextIndex].title}'),
+                        label: Text(AppLocalizations.of(context)
+                            .txtContinueStep(steps[nextIndex].title)),
                         style: FilledButton.styleFrom(
                           minimumSize: const Size.fromHeight(52),
                           shape: RoundedRectangleBorder(
@@ -163,7 +165,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
                           const SizedBox(width: 12),
                           Expanded(
                             child: Text(
-                              'All steps complete — great work!',
+                              AppLocalizations.of(context).txtAllStepsComplete,
                               style: PmpTextStyles.body2Semi.copyWith(
                                 color: colorScheme.onPrimaryContainer,
                               ),
@@ -303,7 +305,7 @@ class _Header extends StatelessWidget {
             ),
             const SizedBox(width: 12),
             Text(
-              '$doneCount of $totalCount',
+              AppLocalizations.of(context).txtProgressXofY(doneCount, totalCount),
               style: PmpTextStyles.labelSemi.copyWith(
                 color: colorScheme.onSurfaceVariant,
               ),
@@ -469,22 +471,22 @@ class _StatusLine extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final (String text, Color color, IconData? icon) = switch (state) {
       VideoStepState.done => (
-          'Completed',
+          AppLocalizations.of(context).txtCompleted,
           colorScheme.primary,
           Icons.check_circle,
         ),
       VideoStepState.inProgress => (
-          'In progress',
+          AppLocalizations.of(context).txtInProgress,
           colorScheme.tertiary,
           Icons.timelapse,
         ),
       VideoStepState.notStarted when isNextRecommended => (
-          'Recommended next',
+          AppLocalizations.of(context).txtRecommendedNext,
           colorScheme.primary,
           Icons.flag_outlined,
         ),
       VideoStepState.notStarted => (
-          'Not started',
+          AppLocalizations.of(context).txtNotStarted,
           colorScheme.onSurfaceVariant,
           null,
         ),

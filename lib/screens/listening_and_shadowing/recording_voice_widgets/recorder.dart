@@ -5,6 +5,7 @@ import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:record/record.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class Recorder extends StatefulWidget {
   const Recorder({
@@ -122,7 +123,7 @@ class _RecorderState extends State<Recorder> {
                           width: 12,
                         ),
                         Text(
-                          "Tap to record",
+                          AppLocalizations.of(context).txtTapToRecord,
                           style: TextStyle(
                             color: onSurface,
                             fontSize: 13,

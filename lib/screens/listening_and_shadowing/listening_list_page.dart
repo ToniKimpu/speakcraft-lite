@@ -36,7 +36,7 @@ class _ListeningListPageState extends State<ListeningListPage> {
           ListeningBloc()..add(const ListeningEvent.loadListenings()),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Listening And Shadowing'),
+          title: Text(AppLocalizations.of(context).txtListeningListTitle),
         ),
         body: BlocBuilder<ListeningBloc, ListeningState>(
           builder: (context, state) {
@@ -192,7 +192,7 @@ class _StatusSection extends StatelessWidget {
           Icon(Icons.check_circle, size: 14, color: colorScheme.primary),
           const SizedBox(width: 4),
           Text(
-            'Completed',
+            AppLocalizations.of(context).txtCompleted,
             style: PmpTextStyles.labelSemi.copyWith(color: colorScheme.primary),
           ),
         ],
@@ -204,7 +204,8 @@ class _StatusSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            '${progress.doneCount} of ${progress.totalCount} steps',
+            AppLocalizations.of(context)
+                .txtStepsProgress(progress.doneCount, progress.totalCount),
             style: PmpTextStyles.labelMedium
                 .copyWith(color: colorScheme.onSurfaceVariant),
           ),
@@ -232,7 +233,7 @@ class _StatusSection extends StatelessWidget {
         ),
         const SizedBox(width: 4),
         Text(
-          '${progress.totalCount}-step lesson',
+          AppLocalizations.of(context).txtStepLesson(progress.totalCount),
           style: PmpTextStyles.labelMedium.copyWith(
             color: colorScheme.onSurfaceVariant,
           ),
@@ -246,7 +247,7 @@ class _StatusSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(
-              'Start here',
+              AppLocalizations.of(context).txtStartHere,
               style:
                   PmpTextStyles.subBold.copyWith(color: colorScheme.onPrimary),
             ),

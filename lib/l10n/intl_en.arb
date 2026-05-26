@@ -10,5 +10,127 @@
   "txtPrivacyPolicy": "Privacy Policy",
   "txtContentRequest": "Content Request",
   "txtFeedback": "Feedback",
-  "txtViewExplanation": "View Explanation"
+  "txtViewExplanation": "View Explanation",
+
+  "txtCompleted": "Completed",
+  "txtTryAgain": "Try again",
+  "txtHighlightReadAlong": "Read Along",
+  "txtHighlightLine": "Line",
+  "txtHighlightNone": "None",
+
+  "txtPressBackToExit": "Press back again to exit",
+  "txtModuleListeningTitle": "Listening & Shadowing",
+  "txtModuleListeningLabel1": "Listening လုပ်မယ်။",
+  "txtModuleListeningLabel2": "Shadowing လိုက်လုပ်မယ်။",
+  "txtModuleBookmarksTitle": "Bookmarks",
+  "txtModuleBookmarksLabel1": "ကိုယ်တိုင် save ထားသော bookmarks များ",
+  "txtModuleBookmarksLabel2": "Vocabulary, phrase, grammar ကို ပြန်လေ့လာမယ်",
+  "txtContinueLearning": "Continue learning",
+  "txtProgressXofY": "{done} of {total}",
+  "@txtProgressXofY": {
+    "placeholders": {
+      "done": {},
+      "total": {}
+    }
+  },
+  "txtStepsProgress": "{done} of {total} steps",
+  "@txtStepsProgress": {
+    "placeholders": {
+      "done": {},
+      "total": {}
+    }
+  },
+  "txtStepLesson": "{count}-step lesson",
+  "@txtStepLesson": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "txtComingSoon": "Coming Soon",
+  "txtOutOf": "out of {total}",
+  "@txtOutOf": {
+    "placeholders": {
+      "total": {}
+    }
+  },
+
+  "txtProfile": "Profile",
+  "txtDaysLearned": "Days Learned",
+  "txtDayStreak": "Day Streak",
+  "txtAppearance": "Appearance",
+  "txtThemeLight": "Light",
+  "txtThemeDark": "Dark",
+  "txtThemeSystem": "System",
+  "txtFailedToOpenBrowser": "Failed to open browser!",
+  "txtComingSoonDots": "Coming soon....",
+
+  "txtLesson": "Lesson",
+  "txtAllStepsComplete": "All steps complete — great work!",
+  "txtContinueStep": "Continue · {step}",
+  "@txtContinueStep": {
+    "placeholders": {
+      "step": {}
+    }
+  },
+  "txtInProgress": "In progress",
+  "txtRecommendedNext": "Recommended next",
+  "txtNotStarted": "Not started",
+  "txtStepWatchTitle": "Watch",
+  "txtStepWatchSubtitle": "Listen with subtitles to understand the content",
+  "txtStepStudyTitle": "Study the patterns",
+  "txtStepStudySubtitle": "Review grammar and vocabulary used in this video",
+  "txtStepShadowTitle": "Practice along (shadowing)",
+  "txtStepShadowSubtitle": "Speak in sync with the audio",
+  "txtStepRecordTitle": "Speak on your own",
+  "txtStepRecordSubtitle": "Record yourself and compare to the original",
+
+  "txtListeningListTitle": "Listening And Shadowing",
+  "txtStartHere": "Start here",
+
+  "txtExplanation": "Explanation",
+  "txtExplanationNotFound": "Explanation not found.",
+  "txtExplanationLoadFailed": "Failed to load explanation. Please try again later.",
+  "txtConnectionTimedOut": "Connection timed out. Please try again.",
+  "txtNetworkError": "Network error. Please check your internet connection.",
+  "txtExplanationGenericError": "Something went wrong while loading this explanation.",
+  "txtExplanationLoadError": "Couldn't load explanation",
+
+  "txtSaveRecordingTitle": "Save your recording?",
+  "txtRecordingName": "Recording name",
+  "txtDiscard": "Discard",
+  "txtSave": "Save",
+  "txtDeleteRecordingTitle": "Delete Recording?",
+  "txtDeleteRecordingBody": "This will permanently remove your recorded audio:",
+  "txtKeepIt": "Keep It",
+  "txtDelete": "Delete",
+  "txtCheckingAnswers": "Checking your answers",
+
+  "txtSpeechPracticeSession": "Speech Practice Session",
+  "txtRecords": "Records",
+  "txtPlaybackDisabledWhileRecording": "Playback is disabled while recording. Please stop the recording to continue.",
+  "txtRecordComingSoonBody": "We’re polishing the record subtitles to give you the best shadowing experience.\nCheck back soon and get ready to practice!",
+  "txtTapToRecord": "Tap to record",
+  "txtNoRecordForSentence": "No Record Found For This Sentence",
+  "txtSentenceExplanations": "Sentence Explanations",
+  "txtSentenceExplanationComing": "Sentence explanation is on the way.\nStay tuned!",
+  "txtChooseHighlightType": "Choose Highlight Type",
+  "txtPlaybackSpeed": "Playback speed",
+  "txtShadowing": "Shadowing",
+  "txtYourLevel": "Your Level",
+  "txtCorrect": "Correct",
+  "txtIncorrect": "Incorrect",
+  "txtNotAnswer": "Not Answer",
+  "txtStream": "Stream",
+  "txtSaved": "Saved",
+  "txtRemoved": "Removed",
+  "txtRemove": "Remove",
+  "txtVocabularies": "Vocabularies",
+  "txtVocabComingSoon": "သည်ဗီဒီယိုအတွက် vocabularyများ\n မကြာခင်တင်ပေးပါမည်။",
+
+  "txtCheckYourself": "Check yourself",
+  "txtFillTheBlank": "Fill the blank",
+  "txtTypeMissingWords": "Type the missing word(s)",
+  "txtCheck": "Check",
+  "txtAnswerLabel": "Answer: ",
+  "txtShowHint": "Show hint"
 }

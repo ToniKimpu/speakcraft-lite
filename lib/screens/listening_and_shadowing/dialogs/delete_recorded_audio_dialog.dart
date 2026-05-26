@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 
 class DeleteRecordedAudioDialog extends StatelessWidget {
@@ -72,7 +73,7 @@ class DeleteRecordedAudioDialog extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'Delete Recording?',
+                  AppLocalizations.of(context).txtDeleteRecordingTitle,
                   textAlign: TextAlign.center,
                   style: PmpTextStyles.body1Regular.copyWith(
                     color: colorScheme.onSurface,
@@ -83,7 +84,7 @@ class DeleteRecordedAudioDialog extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'This will permanently remove your recorded audio:',
+                  AppLocalizations.of(context).txtDeleteRecordingBody,
                   textAlign: TextAlign.center,
                   style: PmpTextStyles.body2Regular.copyWith(
                     color: colorScheme.onSurfaceVariant,
@@ -118,7 +119,7 @@ class DeleteRecordedAudioDialog extends StatelessWidget {
                         height: 44,
                         child: OutlinedButton(
                           onPressed: () => Navigator.pop(context),
-                          child: const Text('Keep It'),
+                          child: Text(AppLocalizations.of(context).txtKeepIt),
                         ),
                       ),
                     ),
@@ -149,7 +150,7 @@ class DeleteRecordedAudioDialog extends StatelessWidget {
                                     color: Colors.white,
                                   ),
                                 )
-                              : const Text('Delete'),
+                              : Text(AppLocalizations.of(context).txtDelete),
                         ),
                       ),
                     ),

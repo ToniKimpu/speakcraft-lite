@@ -5,6 +5,7 @@ import 'package:just_audio/just_audio.dart';
 import '../../../bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
 import '../../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import '../dialogs/delete_recorded_audio_dialog.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 class UserRecordedList extends StatefulWidget {
   const UserRecordedList({
@@ -61,7 +62,7 @@ class _UserRecordedListState extends State<UserRecordedList> {
             if (filteredData.isEmpty) {
               return Center(
                 child: Text(
-                  "No Record Found For This Sentence",
+                  AppLocalizations.of(context).txtNoRecordForSentence,
                   style: TextStyle(
                     fontSize: 16,
                     color: colorScheme.onSurfaceVariant,
