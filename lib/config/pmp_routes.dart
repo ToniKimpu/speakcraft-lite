@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:speakcraft/model/lesson/lesson.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
+import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
+import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 import 'package:speakcraft/screens/auth/login_screen.dart';
 import 'package:speakcraft/screens/auth/sign_up_screen.dart';
+import 'package:speakcraft/screens/daily_speaking/daily_speaking_entry_page.dart';
+import 'package:speakcraft/screens/daily_speaking/feedback/feedback_result_page.dart';
+import 'package:speakcraft/screens/daily_speaking/history/daily_speaking_history_page.dart';
+import 'package:speakcraft/screens/daily_speaking/just_record/just_record_page.dart';
+import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_prep_page.dart';
+import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_record_page.dart';
+import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_list_page.dart';
+import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_prep_page.dart';
+import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_record_page.dart';
+import 'package:speakcraft/screens/daily_speaking/write_path/write_path_page.dart';
 import 'package:speakcraft/screens/days/pattern_exercise_screen.dart';
 import 'package:speakcraft/screens/days/spoken_pattern_exercise_screen.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
@@ -93,6 +105,18 @@ class PmpRoutes {
   static const importantOfSocialHealthJsonList = '/important_of_social_health_json_list';
   static const paulRuddInterviewJsonList = '/paul_rudd_interview_json_list';
   static const goingViralTaughtMeJsonList = '/going_viral_taugh_me_json_list';
+
+  // Daily Speaking Practice module — see lib/screens/daily_speaking/CLAUDE.md
+  static const dailySpeakingEntry = '/daily_speaking';
+  static const dailySpeakingJustRecord = '/daily_speaking/just_record';
+  static const dailySpeakingOwnTopicPrep = '/daily_speaking/own_topic/prep';
+  static const dailySpeakingOwnTopicRecord = '/daily_speaking/own_topic/record';
+  static const dailySpeakingWritePath = '/daily_speaking/write';
+  static const dailySpeakingSuggestedList = '/daily_speaking/suggested';
+  static const dailySpeakingSuggestedPrep = '/daily_speaking/suggested/prep';
+  static const dailySpeakingSuggestedRecord = '/daily_speaking/suggested/record';
+  static const dailySpeakingFeedback = '/daily_speaking/feedback';
+  static const dailySpeakingHistory = '/daily_speaking/history';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -316,6 +340,32 @@ class PmpRoutes {
           GritJsonPreview(assetPath: args['assetPath'] as String),
           settings,
         );
+      case dailySpeakingEntry:
+        return _getRoute(const DailySpeakingEntryPage(), settings);
+      case dailySpeakingJustRecord:
+        return _getRoute(const JustRecordPage(), settings);
+      case dailySpeakingOwnTopicPrep:
+        return _getRoute(const OwnTopicPrepPage(), settings);
+      case dailySpeakingOwnTopicRecord:
+        return _getRoute(const OwnTopicRecordPage(), settings);
+      case dailySpeakingWritePath:
+        return _getRoute(const WritePathPage(), settings);
+      case dailySpeakingSuggestedList:
+        return _getRoute(const SuggestedTopicListPage(), settings);
+      case dailySpeakingSuggestedPrep:
+        final args = settings.arguments as Map<String, dynamic>;
+        final topic = args['topic'] as DailySpeakingTopic;
+        return _getRoute(SuggestedTopicPrepPage(topic: topic), settings);
+      case dailySpeakingSuggestedRecord:
+        final args = settings.arguments as Map<String, dynamic>;
+        final topic = args['topic'] as DailySpeakingTopic;
+        return _getRoute(SuggestedTopicRecordPage(topic: topic), settings);
+      case dailySpeakingFeedback:
+        final args = settings.arguments as Map<String, dynamic>;
+        final session = args['session'] as DailySpeakingSession;
+        return _getRoute(FeedbackResultPage(session: session), settings);
+      case dailySpeakingHistory:
+        return _getRoute(const DailySpeakingHistoryPage(), settings);
       case htmlPreview:
         final args = settings.arguments as Map<String, dynamic>;
         final assetPath = args['assetPath'] as String?;

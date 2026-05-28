@@ -1,0 +1,114 @@
+[
+  {
+    "id": "weekend-plans",
+    "title": "Talk about your weekend",
+    "prompt_en": "Tell me about your last weekend. What did you do? Who were you with? Was there anything that surprised you?",
+    "prompt_mm": "ပြီးခဲ့တဲ့ စနေ-တနင်္ဂနွေ အကြောင်း ပြောပြပါ။ ဘာတွေ လုပ်ဖြစ်လဲ။ ဘယ်သူနဲ့ အတူ ရှိခဲ့လဲ။ မမျှော်လင့်ထားတဲ့ အရာ တစ်ခုခု ဖြစ်ခဲ့လား။",
+    "difficulty": "beginner",
+    "duration_target_seconds": 180,
+    "vocabulary": [
+      {
+        "term": "errand",
+        "definition_mm": "ပြင်ပ အလုပ်ကိစ္စ၊ စျေးဝယ်ထွက်ခြင်းလို သေးငယ်တဲ့ ကိစ္စ",
+        "example_en": "I had to run a few errands on Saturday morning."
+      },
+      {
+        "term": "catch up",
+        "definition_mm": "သတင်းအခြေအနေ ပြန်လည် မျှဝေခြင်း၊ ပြောဆိုခြင်း",
+        "example_en": "I caught up with an old friend over coffee."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "I was supposed to ...",
+        "translation_mm": "လုပ်ဖို့ စီစဉ်ထားခဲ့တယ်..."
+      },
+      {
+        "phrase_en": "It turned out that ...",
+        "translation_mm": "နောက်ဆုံးတော့ ...ဖြစ်လာတယ်"
+      }
+    ],
+    "warmup_questions": [
+      "Where did you go?",
+      "Who were you with?",
+      "What surprised you?"
+    ],
+    "tags": ["daily-life", "weekend"]
+  },
+  {
+    "id": "my-favorite-meal",
+    "title": "Describe your favorite meal",
+    "prompt_en": "Describe a meal you really enjoy. What's in it? When do you usually eat it, and who makes it best?",
+    "prompt_mm": "ကိုယ်အကြိုက်ဆုံး အစားအစာ တစ်ခုကို ဖော်ပြပါ။ ဘာတွေ ပါဝင်လဲ။ ဘယ်အချိန် စားလေ့ရှိလဲ၊ ဘယ်သူ အကောင်းဆုံး ချက်ပေးနိုင်လဲ။",
+    "difficulty": "beginner",
+    "duration_target_seconds": 150,
+    "vocabulary": [
+      {
+        "term": "savory",
+        "definition_mm": "ငန်ငန်/ရှားရှား အရသာ၊ မချိုသော",
+        "example_en": "I prefer savory food over sweets."
+      },
+      {
+        "term": "comfort food",
+        "definition_mm": "စိတ်ချမ်းသာ ပျော်ရွှင်စေသော အစားအစာ",
+        "example_en": "On rainy days, soup is my favorite comfort food."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "It reminds me of ...",
+        "translation_mm": "...ကို သတိရစေတယ်"
+      },
+      {
+        "phrase_en": "What I love most about it is ...",
+        "translation_mm": "အကြိုက်ဆုံးက ...ပါ"
+      }
+    ],
+    "warmup_questions": [
+      "What ingredients are in it?",
+      "Who makes it best?",
+      "When do you eat it?"
+    ],
+    "tags": ["daily-life", "food"]
+  },
+  {
+    "id": "challenging-day-at-work",
+    "title": "A challenging day at work or school",
+    "prompt_en": "Think about a recent day at work or school that was challenging. What made it hard? How did you get through it? What did you learn?",
+    "prompt_mm": "လတ်တလော အလုပ်ထဲ ဒါမှမဟုတ် ကျောင်းမှာ ခက်ခဲခဲ့တဲ့ နေ့တစ်နေ့ကို စဉ်းစားပါ။ ဘာက ခက်ခဲစေခဲ့လဲ။ ဘယ်လို ကျော်လွှားခဲ့လဲ။ ဘာသင်ခန်းစာ ရခဲ့လဲ။",
+    "difficulty": "intermediate",
+    "duration_target_seconds": 210,
+    "vocabulary": [
+      {
+        "term": "overwhelming",
+        "definition_mm": "လွန်ကဲစွာ ဖိအားများသော၊ ရင်ဆိုင်ရန် ခက်ခဲသော",
+        "example_en": "The amount of work felt overwhelming at first."
+      },
+      {
+        "term": "deadline",
+        "definition_mm": "ပြီးဆုံးရမယ့် နောက်ဆုံးအချိန်",
+        "example_en": "I had a tight deadline to meet."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "I ended up ...",
+        "translation_mm": "နောက်ဆုံးတော့ ...ဖြစ်သွားတယ်"
+      },
+      {
+        "phrase_en": "Looking back, ...",
+        "translation_mm": "ပြန်ကြည့်ရင်တော့ ..."
+      },
+      {
+        "phrase_en": "What I learned was ...",
+        "translation_mm": "သင်ခန်းစာအနေနဲ့ ..."
+      }
+    ],
+    "warmup_questions": [
+      "What was the situation?",
+      "How did you feel in the moment?",
+      "What would you do differently next time?"
+    ],
+    "tags": ["work", "reflection"]
+  }
+]

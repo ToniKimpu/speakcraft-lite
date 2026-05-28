@@ -1592,6 +1592,442 @@ class VideoStepProgressTableCompanion
   }
 }
 
+class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
+    with
+        TableInfo<$DailySpeakingSessionTableTable,
+            DailySpeakingSessionTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $DailySpeakingSessionTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _topicIdMeta =
+      const VerificationMeta('topicId');
+  @override
+  late final GeneratedColumn<String> topicId = GeneratedColumn<String>(
+      'topic_id', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _onRampMeta = const VerificationMeta('onRamp');
+  @override
+  late final GeneratedColumn<String> onRamp = GeneratedColumn<String>(
+      'on_ramp', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _inputModeMeta =
+      const VerificationMeta('inputMode');
+  @override
+  late final GeneratedColumn<String> inputMode = GeneratedColumn<String>(
+      'input_mode', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _inputTextMeta =
+      const VerificationMeta('inputText');
+  @override
+  late final GeneratedColumn<String> inputText = GeneratedColumn<String>(
+      'input_text', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _feedbackJsonMeta =
+      const VerificationMeta('feedbackJson');
+  @override
+  late final GeneratedColumn<String> feedbackJson = GeneratedColumn<String>(
+      'feedback_json', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _totalTokensMeta =
+      const VerificationMeta('totalTokens');
+  @override
+  late final GeneratedColumn<int> totalTokens = GeneratedColumn<int>(
+      'total_tokens', aliasedName, false,
+      type: DriftSqlType.int, requiredDuringInsert: true);
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime,
+      requiredDuringInsert: false,
+      defaultValue: currentDateAndTime);
+  @override
+  List<GeneratedColumn> get $columns => [
+        id,
+        topicId,
+        onRamp,
+        inputMode,
+        inputText,
+        feedbackJson,
+        totalTokens,
+        createdAt
+      ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'daily_speaking_session_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<DailySpeakingSessionTableData> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('topic_id')) {
+      context.handle(_topicIdMeta,
+          topicId.isAcceptableOrUnknown(data['topic_id']!, _topicIdMeta));
+    }
+    if (data.containsKey('on_ramp')) {
+      context.handle(_onRampMeta,
+          onRamp.isAcceptableOrUnknown(data['on_ramp']!, _onRampMeta));
+    } else if (isInserting) {
+      context.missing(_onRampMeta);
+    }
+    if (data.containsKey('input_mode')) {
+      context.handle(_inputModeMeta,
+          inputMode.isAcceptableOrUnknown(data['input_mode']!, _inputModeMeta));
+    } else if (isInserting) {
+      context.missing(_inputModeMeta);
+    }
+    if (data.containsKey('input_text')) {
+      context.handle(_inputTextMeta,
+          inputText.isAcceptableOrUnknown(data['input_text']!, _inputTextMeta));
+    }
+    if (data.containsKey('feedback_json')) {
+      context.handle(
+          _feedbackJsonMeta,
+          feedbackJson.isAcceptableOrUnknown(
+              data['feedback_json']!, _feedbackJsonMeta));
+    } else if (isInserting) {
+      context.missing(_feedbackJsonMeta);
+    }
+    if (data.containsKey('total_tokens')) {
+      context.handle(
+          _totalTokensMeta,
+          totalTokens.isAcceptableOrUnknown(
+              data['total_tokens']!, _totalTokensMeta));
+    } else if (isInserting) {
+      context.missing(_totalTokensMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  DailySpeakingSessionTableData map(Map<String, dynamic> data,
+      {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return DailySpeakingSessionTableData(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      topicId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}topic_id']),
+      onRamp: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}on_ramp'])!,
+      inputMode: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}input_mode'])!,
+      inputText: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}input_text']),
+      feedbackJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}feedback_json'])!,
+      totalTokens: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}total_tokens'])!,
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+    );
+  }
+
+  @override
+  $DailySpeakingSessionTableTable createAlias(String alias) {
+    return $DailySpeakingSessionTableTable(attachedDatabase, alias);
+  }
+}
+
+class DailySpeakingSessionTableData extends DataClass
+    implements Insertable<DailySpeakingSessionTableData> {
+  final int id;
+  final String? topicId;
+  final String onRamp;
+  final String inputMode;
+  final String? inputText;
+
+  /// Serialized [DailySpeakingFeedback]. Kept as JSON so adding fields to the
+  /// feedback shape doesn't require a Drift schema migration.
+  final String feedbackJson;
+  final int totalTokens;
+  final DateTime createdAt;
+  const DailySpeakingSessionTableData(
+      {required this.id,
+      this.topicId,
+      required this.onRamp,
+      required this.inputMode,
+      this.inputText,
+      required this.feedbackJson,
+      required this.totalTokens,
+      required this.createdAt});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    if (!nullToAbsent || topicId != null) {
+      map['topic_id'] = Variable<String>(topicId);
+    }
+    map['on_ramp'] = Variable<String>(onRamp);
+    map['input_mode'] = Variable<String>(inputMode);
+    if (!nullToAbsent || inputText != null) {
+      map['input_text'] = Variable<String>(inputText);
+    }
+    map['feedback_json'] = Variable<String>(feedbackJson);
+    map['total_tokens'] = Variable<int>(totalTokens);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  DailySpeakingSessionTableCompanion toCompanion(bool nullToAbsent) {
+    return DailySpeakingSessionTableCompanion(
+      id: Value(id),
+      topicId: topicId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(topicId),
+      onRamp: Value(onRamp),
+      inputMode: Value(inputMode),
+      inputText: inputText == null && nullToAbsent
+          ? const Value.absent()
+          : Value(inputText),
+      feedbackJson: Value(feedbackJson),
+      totalTokens: Value(totalTokens),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory DailySpeakingSessionTableData.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return DailySpeakingSessionTableData(
+      id: serializer.fromJson<int>(json['id']),
+      topicId: serializer.fromJson<String?>(json['topicId']),
+      onRamp: serializer.fromJson<String>(json['onRamp']),
+      inputMode: serializer.fromJson<String>(json['inputMode']),
+      inputText: serializer.fromJson<String?>(json['inputText']),
+      feedbackJson: serializer.fromJson<String>(json['feedbackJson']),
+      totalTokens: serializer.fromJson<int>(json['totalTokens']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'topicId': serializer.toJson<String?>(topicId),
+      'onRamp': serializer.toJson<String>(onRamp),
+      'inputMode': serializer.toJson<String>(inputMode),
+      'inputText': serializer.toJson<String?>(inputText),
+      'feedbackJson': serializer.toJson<String>(feedbackJson),
+      'totalTokens': serializer.toJson<int>(totalTokens),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  DailySpeakingSessionTableData copyWith(
+          {int? id,
+          Value<String?> topicId = const Value.absent(),
+          String? onRamp,
+          String? inputMode,
+          Value<String?> inputText = const Value.absent(),
+          String? feedbackJson,
+          int? totalTokens,
+          DateTime? createdAt}) =>
+      DailySpeakingSessionTableData(
+        id: id ?? this.id,
+        topicId: topicId.present ? topicId.value : this.topicId,
+        onRamp: onRamp ?? this.onRamp,
+        inputMode: inputMode ?? this.inputMode,
+        inputText: inputText.present ? inputText.value : this.inputText,
+        feedbackJson: feedbackJson ?? this.feedbackJson,
+        totalTokens: totalTokens ?? this.totalTokens,
+        createdAt: createdAt ?? this.createdAt,
+      );
+  DailySpeakingSessionTableData copyWithCompanion(
+      DailySpeakingSessionTableCompanion data) {
+    return DailySpeakingSessionTableData(
+      id: data.id.present ? data.id.value : this.id,
+      topicId: data.topicId.present ? data.topicId.value : this.topicId,
+      onRamp: data.onRamp.present ? data.onRamp.value : this.onRamp,
+      inputMode: data.inputMode.present ? data.inputMode.value : this.inputMode,
+      inputText: data.inputText.present ? data.inputText.value : this.inputText,
+      feedbackJson: data.feedbackJson.present
+          ? data.feedbackJson.value
+          : this.feedbackJson,
+      totalTokens:
+          data.totalTokens.present ? data.totalTokens.value : this.totalTokens,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('DailySpeakingSessionTableData(')
+          ..write('id: $id, ')
+          ..write('topicId: $topicId, ')
+          ..write('onRamp: $onRamp, ')
+          ..write('inputMode: $inputMode, ')
+          ..write('inputText: $inputText, ')
+          ..write('feedbackJson: $feedbackJson, ')
+          ..write('totalTokens: $totalTokens, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, topicId, onRamp, inputMode, inputText,
+      feedbackJson, totalTokens, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is DailySpeakingSessionTableData &&
+          other.id == this.id &&
+          other.topicId == this.topicId &&
+          other.onRamp == this.onRamp &&
+          other.inputMode == this.inputMode &&
+          other.inputText == this.inputText &&
+          other.feedbackJson == this.feedbackJson &&
+          other.totalTokens == this.totalTokens &&
+          other.createdAt == this.createdAt);
+}
+
+class DailySpeakingSessionTableCompanion
+    extends UpdateCompanion<DailySpeakingSessionTableData> {
+  final Value<int> id;
+  final Value<String?> topicId;
+  final Value<String> onRamp;
+  final Value<String> inputMode;
+  final Value<String?> inputText;
+  final Value<String> feedbackJson;
+  final Value<int> totalTokens;
+  final Value<DateTime> createdAt;
+  const DailySpeakingSessionTableCompanion({
+    this.id = const Value.absent(),
+    this.topicId = const Value.absent(),
+    this.onRamp = const Value.absent(),
+    this.inputMode = const Value.absent(),
+    this.inputText = const Value.absent(),
+    this.feedbackJson = const Value.absent(),
+    this.totalTokens = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  });
+  DailySpeakingSessionTableCompanion.insert({
+    this.id = const Value.absent(),
+    this.topicId = const Value.absent(),
+    required String onRamp,
+    required String inputMode,
+    this.inputText = const Value.absent(),
+    required String feedbackJson,
+    required int totalTokens,
+    this.createdAt = const Value.absent(),
+  })  : onRamp = Value(onRamp),
+        inputMode = Value(inputMode),
+        feedbackJson = Value(feedbackJson),
+        totalTokens = Value(totalTokens);
+  static Insertable<DailySpeakingSessionTableData> custom({
+    Expression<int>? id,
+    Expression<String>? topicId,
+    Expression<String>? onRamp,
+    Expression<String>? inputMode,
+    Expression<String>? inputText,
+    Expression<String>? feedbackJson,
+    Expression<int>? totalTokens,
+    Expression<DateTime>? createdAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (topicId != null) 'topic_id': topicId,
+      if (onRamp != null) 'on_ramp': onRamp,
+      if (inputMode != null) 'input_mode': inputMode,
+      if (inputText != null) 'input_text': inputText,
+      if (feedbackJson != null) 'feedback_json': feedbackJson,
+      if (totalTokens != null) 'total_tokens': totalTokens,
+      if (createdAt != null) 'created_at': createdAt,
+    });
+  }
+
+  DailySpeakingSessionTableCompanion copyWith(
+      {Value<int>? id,
+      Value<String?>? topicId,
+      Value<String>? onRamp,
+      Value<String>? inputMode,
+      Value<String?>? inputText,
+      Value<String>? feedbackJson,
+      Value<int>? totalTokens,
+      Value<DateTime>? createdAt}) {
+    return DailySpeakingSessionTableCompanion(
+      id: id ?? this.id,
+      topicId: topicId ?? this.topicId,
+      onRamp: onRamp ?? this.onRamp,
+      inputMode: inputMode ?? this.inputMode,
+      inputText: inputText ?? this.inputText,
+      feedbackJson: feedbackJson ?? this.feedbackJson,
+      totalTokens: totalTokens ?? this.totalTokens,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (topicId.present) {
+      map['topic_id'] = Variable<String>(topicId.value);
+    }
+    if (onRamp.present) {
+      map['on_ramp'] = Variable<String>(onRamp.value);
+    }
+    if (inputMode.present) {
+      map['input_mode'] = Variable<String>(inputMode.value);
+    }
+    if (inputText.present) {
+      map['input_text'] = Variable<String>(inputText.value);
+    }
+    if (feedbackJson.present) {
+      map['feedback_json'] = Variable<String>(feedbackJson.value);
+    }
+    if (totalTokens.present) {
+      map['total_tokens'] = Variable<int>(totalTokens.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('DailySpeakingSessionTableCompanion(')
+          ..write('id: $id, ')
+          ..write('topicId: $topicId, ')
+          ..write('onRamp: $onRamp, ')
+          ..write('inputMode: $inputMode, ')
+          ..write('inputText: $inputText, ')
+          ..write('feedbackJson: $feedbackJson, ')
+          ..write('totalTokens: $totalTokens, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -1610,6 +2046,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $SavedTermTableTable savedTermTable = $SavedTermTableTable(this);
   late final $VideoStepProgressTableTable videoStepProgressTable =
       $VideoStepProgressTableTable(this);
+  late final $DailySpeakingSessionTableTable dailySpeakingSessionTable =
+      $DailySpeakingSessionTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1621,7 +2059,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         spokenPatternExerciseAnswerTable,
         userRecordedSentenceAudioTable,
         savedTermTable,
-        videoStepProgressTable
+        videoStepProgressTable,
+        dailySpeakingSessionTable
       ];
 }
 
@@ -2912,6 +3351,226 @@ typedef $$VideoStepProgressTableTableProcessedTableManager
         ),
         VideoStepProgress,
         PrefetchHooks Function()>;
+typedef $$DailySpeakingSessionTableTableCreateCompanionBuilder
+    = DailySpeakingSessionTableCompanion Function({
+  Value<int> id,
+  Value<String?> topicId,
+  required String onRamp,
+  required String inputMode,
+  Value<String?> inputText,
+  required String feedbackJson,
+  required int totalTokens,
+  Value<DateTime> createdAt,
+});
+typedef $$DailySpeakingSessionTableTableUpdateCompanionBuilder
+    = DailySpeakingSessionTableCompanion Function({
+  Value<int> id,
+  Value<String?> topicId,
+  Value<String> onRamp,
+  Value<String> inputMode,
+  Value<String?> inputText,
+  Value<String> feedbackJson,
+  Value<int> totalTokens,
+  Value<DateTime> createdAt,
+});
+
+class $$DailySpeakingSessionTableTableFilterComposer
+    extends Composer<_$AppDatabase, $DailySpeakingSessionTableTable> {
+  $$DailySpeakingSessionTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get topicId => $composableBuilder(
+      column: $table.topicId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get onRamp => $composableBuilder(
+      column: $table.onRamp, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get inputMode => $composableBuilder(
+      column: $table.inputMode, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get inputText => $composableBuilder(
+      column: $table.inputText, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get feedbackJson => $composableBuilder(
+      column: $table.feedbackJson, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get totalTokens => $composableBuilder(
+      column: $table.totalTokens, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$DailySpeakingSessionTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $DailySpeakingSessionTableTable> {
+  $$DailySpeakingSessionTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get topicId => $composableBuilder(
+      column: $table.topicId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get onRamp => $composableBuilder(
+      column: $table.onRamp, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get inputMode => $composableBuilder(
+      column: $table.inputMode, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get inputText => $composableBuilder(
+      column: $table.inputText, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get feedbackJson => $composableBuilder(
+      column: $table.feedbackJson,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get totalTokens => $composableBuilder(
+      column: $table.totalTokens, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$DailySpeakingSessionTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $DailySpeakingSessionTableTable> {
+  $$DailySpeakingSessionTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get topicId =>
+      $composableBuilder(column: $table.topicId, builder: (column) => column);
+
+  GeneratedColumn<String> get onRamp =>
+      $composableBuilder(column: $table.onRamp, builder: (column) => column);
+
+  GeneratedColumn<String> get inputMode =>
+      $composableBuilder(column: $table.inputMode, builder: (column) => column);
+
+  GeneratedColumn<String> get inputText =>
+      $composableBuilder(column: $table.inputText, builder: (column) => column);
+
+  GeneratedColumn<String> get feedbackJson => $composableBuilder(
+      column: $table.feedbackJson, builder: (column) => column);
+
+  GeneratedColumn<int> get totalTokens => $composableBuilder(
+      column: $table.totalTokens, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $DailySpeakingSessionTableTable,
+    DailySpeakingSessionTableData,
+    $$DailySpeakingSessionTableTableFilterComposer,
+    $$DailySpeakingSessionTableTableOrderingComposer,
+    $$DailySpeakingSessionTableTableAnnotationComposer,
+    $$DailySpeakingSessionTableTableCreateCompanionBuilder,
+    $$DailySpeakingSessionTableTableUpdateCompanionBuilder,
+    (
+      DailySpeakingSessionTableData,
+      BaseReferences<_$AppDatabase, $DailySpeakingSessionTableTable,
+          DailySpeakingSessionTableData>
+    ),
+    DailySpeakingSessionTableData,
+    PrefetchHooks Function()> {
+  $$DailySpeakingSessionTableTableTableManager(
+      _$AppDatabase db, $DailySpeakingSessionTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$DailySpeakingSessionTableTableFilterComposer(
+                  $db: db, $table: table),
+          createOrderingComposer: () =>
+              $$DailySpeakingSessionTableTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$DailySpeakingSessionTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<String?> topicId = const Value.absent(),
+            Value<String> onRamp = const Value.absent(),
+            Value<String> inputMode = const Value.absent(),
+            Value<String?> inputText = const Value.absent(),
+            Value<String> feedbackJson = const Value.absent(),
+            Value<int> totalTokens = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              DailySpeakingSessionTableCompanion(
+            id: id,
+            topicId: topicId,
+            onRamp: onRamp,
+            inputMode: inputMode,
+            inputText: inputText,
+            feedbackJson: feedbackJson,
+            totalTokens: totalTokens,
+            createdAt: createdAt,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<String?> topicId = const Value.absent(),
+            required String onRamp,
+            required String inputMode,
+            Value<String?> inputText = const Value.absent(),
+            required String feedbackJson,
+            required int totalTokens,
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              DailySpeakingSessionTableCompanion.insert(
+            id: id,
+            topicId: topicId,
+            onRamp: onRamp,
+            inputMode: inputMode,
+            inputText: inputText,
+            feedbackJson: feedbackJson,
+            totalTokens: totalTokens,
+            createdAt: createdAt,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$DailySpeakingSessionTableTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $DailySpeakingSessionTableTable,
+        DailySpeakingSessionTableData,
+        $$DailySpeakingSessionTableTableFilterComposer,
+        $$DailySpeakingSessionTableTableOrderingComposer,
+        $$DailySpeakingSessionTableTableAnnotationComposer,
+        $$DailySpeakingSessionTableTableCreateCompanionBuilder,
+        $$DailySpeakingSessionTableTableUpdateCompanionBuilder,
+        (
+          DailySpeakingSessionTableData,
+          BaseReferences<_$AppDatabase, $DailySpeakingSessionTableTable,
+              DailySpeakingSessionTableData>
+        ),
+        DailySpeakingSessionTableData,
+        PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -2939,4 +3598,7 @@ class $AppDatabaseManager {
   $$VideoStepProgressTableTableTableManager get videoStepProgressTable =>
       $$VideoStepProgressTableTableTableManager(
           _db, _db.videoStepProgressTable);
+  $$DailySpeakingSessionTableTableTableManager get dailySpeakingSessionTable =>
+      $$DailySpeakingSessionTableTableTableManager(
+          _db, _db.dailySpeakingSessionTable);
 }

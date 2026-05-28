@@ -158,6 +158,21 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               const SizedBox(height: 12),
+              // Daily Speaking Practice — productive-skill counterpart.
+              // P1 (stub-driven) on `feat/daily_speaking_practice`. See
+              // lib/screens/daily_speaking/CLAUDE.md.
+              ModuleWidget(
+                title: 'Daily Speaking Practice',
+                label1: 'နေ့စဉ် ၃ မိနစ် ပြောကြည့်ပါ',
+                label2: 'AI ဆီကနေ ချက်ချင်း feedback ရယူပါ',
+                iconTitle: Icons.mic,
+                iconLabel1: Icons.timer_outlined,
+                iconLabel2: Icons.auto_awesome,
+                onPressed: () {
+                  Navigator.pushNamed(context, PmpRoutes.dailySpeakingEntry);
+                },
+              ),
+              const SizedBox(height: 12),
               ModuleWidget(
                 title: AppLocalizations.of(context).txtModuleBookmarksTitle,
                 label1: AppLocalizations.of(context).txtModuleBookmarksLabel1,

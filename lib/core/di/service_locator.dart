@@ -3,6 +3,8 @@ import 'package:get_it/get_it.dart';
 import 'package:speakcraft/bloc/ai_sentence_practice/ai_sentence_practice_bloc.dart';
 import 'package:speakcraft/bloc/audio_player/audio_player_bloc.dart';
 import 'package:speakcraft/bloc/auth/auth_bloc.dart';
+import 'package:speakcraft/bloc/daily_speaking/daily_speaking_bloc.dart';
+import 'package:speakcraft/bloc/daily_speaking/daily_speaking_history_bloc.dart';
 import 'package:speakcraft/bloc/day/day_bloc.dart';
 import 'package:speakcraft/bloc/exercise/exercise_bloc.dart';
 import 'package:speakcraft/bloc/exercise_user_answer/exercise_user_answer_bloc.dart';
@@ -66,6 +68,9 @@ Future<void> setupServiceLocator() async {
   sl.registerLazySingleton<UserActivityBloc>(() => UserActivityBloc());
   sl.registerLazySingleton<VideoStepProgressBloc>(
       () => VideoStepProgressBloc());
+  sl.registerLazySingleton<DailySpeakingBloc>(() => DailySpeakingBloc());
+  sl.registerLazySingleton<DailySpeakingHistoryBloc>(
+      () => DailySpeakingHistoryBloc());
 
   // Screen-local BLoCs (factory — fresh instance per screen)
   sl.registerFactory<ListeningBloc>(() => ListeningBloc());
