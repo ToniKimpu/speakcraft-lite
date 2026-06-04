@@ -105,6 +105,8 @@ class DailySpeakingHistoryBloc
       createdAt: row.createdAt,
       topicAttemptId: row.topicAttemptId,
       revisionNumber: row.revisionNumber,
+      audioPath: row.audioPath,
+      topicJson: row.topicJson,
     );
   }
 }

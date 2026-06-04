@@ -12,6 +12,10 @@ class DailySpeakingServiceStubs {
       score: 88,
       level: CefrLevel.upperIntermediate,
       inferredTopic: 'Weekend plans',
+      transcript:
+          'So last weekend I go to market with my sister. I am there for 2 '
+          'hours and we buy some snacks and look around. It was a lot of fun '
+          'and the food is very good. I very like spending time with her.',
       durationSeconds: 142,
       wordCount: 224,
       speakingPaceWpm: 95,
@@ -113,6 +117,10 @@ class DailySpeakingServiceStubs {
       score: 64,
       level: CefrLevel.intermediate,
       inferredTopic: 'My job',
+      transcript:
+          'I work in there since 3 years. My colleague are very kind to me '
+          'always. The work is busy but I enjoy it. Sometimes I make mistake '
+          'but they help me and I learn from it.',
       durationSeconds: 95,
       wordCount: 121,
       speakingPaceWpm: 76,
@@ -195,6 +203,9 @@ class DailySpeakingServiceStubs {
       score: 42,
       level: CefrLevel.elementary,
       inferredTopic: 'My family',
+      transcript:
+          'My family have four peoples. My father work in factory and my '
+          'mother stay at home. I have one sister. We are happy together.',
       durationSeconds: 58,
       wordCount: 64,
       speakingPaceWpm: 66,

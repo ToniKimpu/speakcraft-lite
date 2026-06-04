@@ -136,11 +136,11 @@ class _StatsRow extends StatelessWidget {
           orElse: () => 0,
         );
 
-        final daysLabel = days == 0 ? 'â€”' : '$days';
+        final daysLabel = days == 0 ? '—' : '$days';
         final streakLabel = streak == 0
-            ? 'â€”'
+            ? '—'
             : streak > 1
-                ? '$streak ðŸ”¥'
+                ? '$streak 🔥'
                 : '$streak';
 
         return IntrinsicHeight(

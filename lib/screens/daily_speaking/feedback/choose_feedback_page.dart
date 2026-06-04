@@ -46,10 +46,10 @@ class ChooseFeedbackPage extends StatefulWidget {
 
   bool get _isVoice => inputMode == DailySpeakingInputMode.voice;
 
-  /// Suggested and own-topic support the iterate-and-improve loop, so the
-  /// whole-rewrite / sentence-rewrite are deferred to the terminal reveal.
-  /// Just-talk is one-shot and keeps them in the menu.
-  bool get _supportsLoop => onRamp != DailySpeakingOnRamp.justTalk;
+  /// All three on-ramps now iterate, so the whole-rewrite / sentence-rewrite are
+  /// always deferred to the terminal reveal (just-talk seeds its loop from the
+  /// AI's inferred topic — see `DailySpeakingBloc._inferredTopic`).
+  bool get _supportsLoop => true;
 
   bool get _isRevision => revisionNumber > 1;
 
@@ -143,7 +143,7 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Choose your feedback')),
+      appBar: AppBar(title: Text(l10n.txtDsChooseFeedbackTitle)),
       body: SafeArea(
         child: BlocConsumer<DailySpeakingBloc, DailySpeakingState>(
           listener: (context, state) {
@@ -191,6 +191,7 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
 
   Widget _buildSelector(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
     final sections = kFeedbackSections
         .where((s) => widget._isVoice || !s.voiceOnly)
         .where((s) =>
@@ -214,16 +215,14 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
                   const SizedBox(height: 12),
                 ],
                 Text(
-                  'Pick what you want the AI to focus on. You can change this '
-                  'anytime — only what you choose is analyzed.',
+                  l10n.txtDsChooseFeedbackIntro,
                   style: PmpTextStyles.body2Regular
                       .copyWith(color: colorScheme.onSurfaceVariant),
                 ),
                 if (widget._supportsLoop) ...[
                   const SizedBox(height: 6),
                   Text(
-                    'You\'ll get a full native rewrite to compare against when '
-                    'you finish this topic.',
+                    l10n.txtDsChooseRewriteNote,
                     style: PmpTextStyles.label2Regular
                         .copyWith(color: colorScheme.onSurfaceVariant),
                   ),
@@ -233,7 +232,7 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
                 const SizedBox(height: 8),
                 for (final g in groups) ...[
                   const SizedBox(height: 12),
-                  _GroupHeader(label: _groupLabel(g)),
+                  _GroupHeader(label: _groupLabel(context, g)),
                   const SizedBox(height: 8),
                   for (final s in sections.where((s) => s.group == g))
                     _SectionTile(
@@ -285,8 +284,7 @@ class _RevisionBanner extends StatelessWidget {
           const SizedBox(width: 10),
           Expanded(
             child: Text(
-              'Version $revisionNumber — polish your answer and see how much '
-              'you improve.',
+              AppLocalizations.of(context).txtDsVersionBanner(revisionNumber),
               style: PmpTextStyles.label2Regular
                   .copyWith(color: colorScheme.onSurface),
             ),
@@ -314,7 +312,7 @@ class _PresetRow extends StatelessWidget {
         for (final p in FeedbackPreset.values)
           ActionChip(
             avatar: Icon(_presetIcon(p), size: 16),
-            label: Text(_presetLabel(p)),
+            label: Text(_presetLabel(context, p)),
             onPressed: () => onApply(p),
           ),
       ],
@@ -393,7 +391,7 @@ class _SectionTile extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            _sectionLabel(section.key),
+                            _sectionLabel(context, section.key),
                             style: PmpTextStyles.body2Semi
                                 .copyWith(color: colorScheme.onSurface),
                           ),
@@ -404,7 +402,7 @@ class _SectionTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      _sectionDesc(section.key),
+                      _sectionDesc(context, section.key),
                       style: PmpTextStyles.label2Regular
                           .copyWith(color: colorScheme.onSurfaceVariant),
                     ),
@@ -458,8 +456,8 @@ class _Footer extends StatelessWidget {
         children: [
           Text(
             count == 0
-                ? 'Select at least one'
-                : '$count selected',
+                ? l10n.txtDsSelectAtLeastOne
+                : l10n.txtDsNSelected(count),
             style: PmpTextStyles.label2Regular
                 .copyWith(color: colorScheme.onSurfaceVariant),
           ),
@@ -515,20 +513,26 @@ class _SubmittingView extends StatelessWidget {
 // Inline display strings (localize later)
 // ---------------------------------------------------------------------------
 
-String _groupLabel(FeedbackSectionGroup g) => switch (g) {
-      FeedbackSectionGroup.accuracy => 'Accuracy',
-      FeedbackSectionGroup.vocabulary => 'Vocabulary',
-      FeedbackSectionGroup.style => 'Style & naturalness',
-      FeedbackSectionGroup.delivery => 'Delivery',
-      FeedbackSectionGroup.scoring => 'Scoring',
-    };
+String _groupLabel(BuildContext context, FeedbackSectionGroup g) {
+  final l10n = AppLocalizations.of(context);
+  return switch (g) {
+    FeedbackSectionGroup.accuracy => l10n.txtDsGroupAccuracy,
+    FeedbackSectionGroup.vocabulary => l10n.txtDsVocabulary,
+    FeedbackSectionGroup.style => l10n.txtDsGroupStyle,
+    FeedbackSectionGroup.delivery => l10n.txtDsGroupDelivery,
+    FeedbackSectionGroup.scoring => l10n.txtDsGroupScoring,
+  };
+}
 
-String _presetLabel(FeedbackPreset p) => switch (p) {
-      FeedbackPreset.recommended => 'Recommended',
-      FeedbackPreset.soundNatural => 'Sound natural',
-      FeedbackPreset.grammarFocus => 'Grammar focus',
-      FeedbackPreset.everything => 'Everything',
-    };
+String _presetLabel(BuildContext context, FeedbackPreset p) {
+  final l10n = AppLocalizations.of(context);
+  return switch (p) {
+    FeedbackPreset.recommended => l10n.txtDsPresetRecommended,
+    FeedbackPreset.soundNatural => l10n.txtDsPresetSoundNatural,
+    FeedbackPreset.grammarFocus => l10n.txtDsPresetGrammarFocus,
+    FeedbackPreset.everything => l10n.txtDsPresetEverything,
+  };
+}
 
 IconData _presetIcon(FeedbackPreset p) => switch (p) {
       FeedbackPreset.recommended => Icons.star_outline,
@@ -537,41 +541,38 @@ IconData _presetIcon(FeedbackPreset p) => switch (p) {
       FeedbackPreset.everything => Icons.all_inclusive,
     };
 
-String _sectionLabel(String key) => switch (key) {
-      FeedbackSectionKey.sentenceFixes => 'Sentence fixes',
-      FeedbackSectionKey.grammarPatterns => 'Grammar patterns',
-      FeedbackSectionKey.burmeseInterference => 'Burmese-English errors',
-      FeedbackSectionKey.betterVocab => 'Better word choices',
-      FeedbackSectionKey.collocations => 'Collocations',
-      FeedbackSectionKey.idioms => 'Idioms & phrasal verbs',
-      FeedbackSectionKey.wholeRewrite => 'Native rewrite',
-      FeedbackSectionKey.sentenceRewrite => 'Sentence-by-sentence rewrite',
-      FeedbackSectionKey.pronunciation => 'Pronunciation notes',
-      FeedbackSectionKey.fillerWords => 'Filler words',
-      FeedbackSectionKey.subScores => 'Skill sub-scores',
-      _ => key,
-    };
+String _sectionLabel(BuildContext context, String key) {
+  final l10n = AppLocalizations.of(context);
+  return switch (key) {
+    FeedbackSectionKey.sentenceFixes => l10n.txtDsSecSentenceFixes,
+    FeedbackSectionKey.grammarPatterns => l10n.txtDsGrammarPatterns,
+    FeedbackSectionKey.burmeseInterference => l10n.txtDsBurmeseErrors,
+    FeedbackSectionKey.betterVocab => l10n.txtDsBetterWordChoices,
+    FeedbackSectionKey.collocations => l10n.txtDsCollocations,
+    FeedbackSectionKey.idioms => l10n.txtDsIdioms,
+    FeedbackSectionKey.wholeRewrite => l10n.txtDsWholeRewriteLabel,
+    FeedbackSectionKey.sentenceRewrite => l10n.txtDsSentenceRewriteLabel,
+    FeedbackSectionKey.pronunciation => l10n.txtDsPronunciationNotes,
+    FeedbackSectionKey.fillerWords => l10n.txtDsFillerWords,
+    FeedbackSectionKey.subScores => l10n.txtDsSkillSubScores,
+    _ => key,
+  };
+}
 
-String _sectionDesc(String key) => switch (key) {
-      FeedbackSectionKey.sentenceFixes =>
-        'Corrects your mistakes with a Burmese reason.',
-      FeedbackSectionKey.grammarPatterns =>
-        'Groups recurring grammar issues so you see the pattern.',
-      FeedbackSectionKey.burmeseInterference =>
-        'Flags direct Burmese→English translations.',
-      FeedbackSectionKey.betterVocab =>
-        'Upgrades basic words to more precise ones.',
-      FeedbackSectionKey.collocations =>
-        'Natural word pairings ("make a decision").',
-      FeedbackSectionKey.idioms =>
-        'Idioms and phrasal verbs you could have used.',
-      FeedbackSectionKey.wholeRewrite =>
-        'One polished version of your whole talk.',
-      FeedbackSectionKey.sentenceRewrite =>
-        'Each sentence rewritten to sound native.',
-      FeedbackSectionKey.pronunciation => 'Sounds to work on.',
-      FeedbackSectionKey.fillerWords => 'Counts "um", "uh", "like", etc.',
-      FeedbackSectionKey.subScores =>
-        'Breaks your score into grammar / vocab / fluency / pronunciation.',
-      _ => '',
-    };
+String _sectionDesc(BuildContext context, String key) {
+  final l10n = AppLocalizations.of(context);
+  return switch (key) {
+    FeedbackSectionKey.sentenceFixes => l10n.txtDsDescSentenceFixes,
+    FeedbackSectionKey.grammarPatterns => l10n.txtDsDescGrammarPatterns,
+    FeedbackSectionKey.burmeseInterference => l10n.txtDsDescBurmeseErrors,
+    FeedbackSectionKey.betterVocab => l10n.txtDsDescBetterVocab,
+    FeedbackSectionKey.collocations => l10n.txtDsDescCollocations,
+    FeedbackSectionKey.idioms => l10n.txtDsDescIdioms,
+    FeedbackSectionKey.wholeRewrite => l10n.txtDsDescWholeRewrite,
+    FeedbackSectionKey.sentenceRewrite => l10n.txtDsDescSentenceRewrite,
+    FeedbackSectionKey.pronunciation => l10n.txtDsDescPronunciation,
+    FeedbackSectionKey.fillerWords => l10n.txtDsDescFillerWords,
+    FeedbackSectionKey.subScores => l10n.txtDsDescSubScores,
+    _ => '',
+  };
+}

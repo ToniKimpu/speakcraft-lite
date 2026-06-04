@@ -9,6 +9,7 @@ import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
+import 'package:speakcraft/screens/daily_speaking/widgets/session_audio_player.dart';
 import 'package:speakcraft/services/app_database/app_database.dart';
 
 /// Shared result screen for all three on-ramps.
@@ -25,13 +26,14 @@ import 'package:speakcraft/services/app_database/app_database.dart';
 /// [lastAudioPath] / [lastText] are the input that produced *this* session —
 /// the terminal reveal needs them to generate the native rewrite of the
 /// learner's final version.
-class FeedbackResultPage extends StatelessWidget {
+class FeedbackResultPage extends StatefulWidget {
   const FeedbackResultPage({
     super.key,
     required this.session,
     this.topic,
     this.lastAudioPath,
     this.lastText,
+    this.revealNativeRewrite = false,
   });
 
   final DailySpeakingSession session;
@@ -39,8 +41,70 @@ class FeedbackResultPage extends StatelessWidget {
   final String? lastAudioPath;
   final String? lastText;
 
-  bool get _canLoop =>
-      topic != null && session.onRamp != DailySpeakingOnRamp.justTalk;
+  /// When opened from history via the ✨ chip of a finished topic, jump straight
+  /// to the saved native-rewrite section instead of starting at the top.
+  final bool revealNativeRewrite;
+
+  @override
+  State<FeedbackResultPage> createState() => _FeedbackResultPageState();
+}
+
+class _FeedbackResultPageState extends State<FeedbackResultPage> {
+  /// Anchors the native-rewrite section so we can scroll to it on open.
+  final GlobalKey _nativeRewriteKey = GlobalKey();
+
+  DailySpeakingSession get session => widget.session;
+  DailySpeakingTopic? get topic => widget.topic;
+  String? get lastAudioPath => widget.lastAudioPath;
+  String? get lastText => widget.lastText;
+
+  /// The topic to resume — passed live, or rebuilt from the saved row when this
+  /// page was reopened from history.
+  DailySpeakingTopic? get _resumableTopic => topic ?? session.decodedTopic;
+
+  /// "Polish & retry" — offered live AND from history; needs only a topic to
+  /// carry forward. All three on-ramps now loop: suggested + own-topic use the
+  /// chosen topic, just-talk uses the AI's inferred topic (saved on submit), so
+  /// the only sessions without one are just-talk with no inferred topic and
+  /// legacy rows.
+  bool get _canRetry => _resumableTopic != null;
+
+  bool get _hasNativeVersion => session.feedback.nativeRewrite.isNotEmpty;
+
+  /// Whether we can generate/show the native version. Offered when there's no
+  /// saved one yet, as long as we have *some* input to rewrite — the
+  /// just-captured input (live) OR the saved transcript/text (from history).
+  /// The latter is why a learner who tapped plain "Done" and skipped the reveal
+  /// can still get it later: the rewrite only needs the words, and we persist
+  /// them in `inputText`.
+  bool get _canReveal =>
+      !_hasNativeVersion &&
+      (lastAudioPath != null ||
+          (lastText?.trim().isNotEmpty ?? false) ||
+          (session.inputText?.trim().isNotEmpty ?? false));
+
+  /// Live finish (fresh input on hand) vs reopened from history.
+  bool get _hasLiveInput =>
+      lastAudioPath != null || (lastText?.trim().isNotEmpty ?? false);
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.revealNativeRewrite &&
+        session.feedback.nativeRewrite.isNotEmpty) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        final ctx = _nativeRewriteKey.currentContext;
+        if (ctx != null) {
+          Scrollable.ensureVisible(
+            ctx,
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.easeInOut,
+            alignment: 0.05,
+          );
+        }
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,12 +136,34 @@ class FeedbackResultPage extends StatelessWidget {
             ],
             const SizedBox(height: 20),
             _MetricsRow(feedback: feedback),
+            if (session.audioPath != null) ...[
+              const SizedBox(height: 16),
+              _Section(
+                icon: Icons.mic_none,
+                iconColor: colorScheme.primary,
+                title: session.revisionNumber > 1
+                    ? l10n.txtDsHearYourProgress
+                    : l10n.txtDsYourRecording,
+                child: _AudioSection(session: session),
+              ),
+            ],
+            if ((session.inputText ?? '').trim().isNotEmpty) ...[
+              const SizedBox(height: 16),
+              _Section(
+                icon: Icons.notes,
+                iconColor: colorScheme.secondary,
+                title: session.inputMode == DailySpeakingInputMode.voice
+                    ? l10n.txtDsWhatYouSaid
+                    : l10n.txtDsWhatYouWrote,
+                child: _InputCard(text: session.inputText!.trim()),
+              ),
+            ],
             if (feedback.subScores != null) ...[
               const SizedBox(height: 16),
               _Section(
                 icon: Icons.bar_chart,
                 iconColor: colorScheme.primary,
-                title: 'Skill breakdown',
+                title: l10n.txtDsSkillBreakdown,
                 child: _SubScoresCard(scores: feedback.subScores!),
               ),
             ],
@@ -112,7 +198,7 @@ class FeedbackResultPage extends StatelessWidget {
               _Section(
                 icon: Icons.rule,
                 iconColor: PmpColors.warning500,
-                title: 'Grammar patterns',
+                title: l10n.txtDsGrammarPatterns,
                 child: _BulletList(items: feedback.grammarPatterns),
               ),
             ],
@@ -121,7 +207,7 @@ class FeedbackResultPage extends StatelessWidget {
               _Section(
                 icon: Icons.translate,
                 iconColor: PmpColors.destructive400,
-                title: 'Burmese-English errors',
+                title: l10n.txtDsBurmeseErrors,
                 child: Column(
                   children: feedback.interferenceNotes
                       .map((f) => _FixCard(fix: f))
@@ -134,7 +220,7 @@ class FeedbackResultPage extends StatelessWidget {
               _Section(
                 icon: Icons.upgrade,
                 iconColor: PmpColors.info500,
-                title: 'Better word choices',
+                title: l10n.txtDsBetterWordChoices,
                 child: Column(
                   children: feedback.vocabUpgrades
                       .map((v) => _VocabUpgradeRow(upgrade: v))
@@ -147,7 +233,7 @@ class FeedbackResultPage extends StatelessWidget {
               _Section(
                 icon: Icons.link,
                 iconColor: PmpColors.info500,
-                title: 'Collocations',
+                title: l10n.txtDsCollocations,
                 child: _ChipWrap(labels: feedback.collocations),
               ),
             ],
@@ -156,7 +242,7 @@ class FeedbackResultPage extends StatelessWidget {
               _Section(
                 icon: Icons.auto_awesome,
                 iconColor: PmpColors.accentOrange,
-                title: 'Idioms & phrasal verbs',
+                title: l10n.txtDsIdioms,
                 child: Column(
                   children: feedback.idioms
                       .map((i) => _IdiomRow(idiom: i))
@@ -167,6 +253,7 @@ class FeedbackResultPage extends StatelessWidget {
             if (feedback.nativeRewrite.isNotEmpty) ...[
               const SizedBox(height: 16),
               _Section(
+                key: _nativeRewriteKey,
                 icon: Icons.record_voice_over,
                 iconColor: colorScheme.primary,
                 title: l10n.txtDsNativeRewrite,
@@ -195,7 +282,7 @@ class FeedbackResultPage extends StatelessWidget {
               _Section(
                 icon: Icons.format_quote,
                 iconColor: colorScheme.primary,
-                title: 'Sentence rewrites',
+                title: l10n.txtDsSentenceRewritesTitle,
                 child: Column(
                   children: feedback.sentenceRewrites
                       .map((s) => _SentenceRewriteCard(rewrite: s))
@@ -230,7 +317,7 @@ class FeedbackResultPage extends StatelessWidget {
               _Section(
                 icon: Icons.bubble_chart_outlined,
                 iconColor: colorScheme.tertiary,
-                title: 'Filler words',
+                title: l10n.txtDsFillerWords,
                 child: _ChipWrap(
                   labels: feedback.fillerWords
                       .map((f) => '${f.word} ×${f.count}')
@@ -264,30 +351,36 @@ class FeedbackResultPage extends StatelessWidget {
               ),
             ],
             const SizedBox(height: 24),
-            if (_canLoop) ...[
+            if (_canRetry) ...[
               FilledButton.icon(
                 onPressed: () => _polishAndRetry(context),
                 icon: const Icon(Icons.refresh),
-                label: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 12),
-                  child: Text('Polish & retry'),
+                label: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  child: Text(l10n.txtDsPolishRetry),
                 ),
               ),
               const SizedBox(height: 10),
+            ],
+            if (_canReveal) ...[
               OutlinedButton.icon(
                 onPressed: () => _finishTopic(context),
                 icon: const Icon(Icons.auto_awesome),
-                label: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 12),
-                  child: Text('I\'m done — see native version'),
+                label: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  child: Text(_hasLiveInput
+                      ? l10n.txtDsImDoneSeeNative
+                      : l10n.txtDsSeeNativeVersion),
                 ),
               ),
               const SizedBox(height: 10),
+            ],
+            if (_canRetry || _canReveal)
               TextButton(
                 onPressed: () => _goHome(context),
                 child: Text(l10n.txtDone),
-              ),
-            ] else
+              )
+            else
               FilledButton(
                 onPressed: () => _goHome(context),
                 child: Padding(
@@ -302,15 +395,27 @@ class FeedbackResultPage extends StatelessWidget {
   }
 
   /// Start the next version: re-capture on the same topic, carrying the chain id
-  /// and an incremented revision so the next result can show the improvement.
-  void _polishAndRetry(BuildContext context) {
+  /// and the next revision so the next result can show the improvement. Works
+  /// both live and when reopened from history (the topic is rebuilt from the
+  /// saved row). Always continues from the chain's *latest* version, so
+  /// polishing an old history entry appends (a v3 chain makes v4) rather than
+  /// overwriting an existing version.
+  Future<void> _polishAndRetry(BuildContext context) async {
+    final resumeTopic = _resumableTopic;
+    if (resumeTopic == null) return;
+    final nextRevision = await _nextRevisionForChain();
+    if (!context.mounted) return;
     final args = {
-      'topic': topic,
+      'topic': resumeTopic,
       'topicAttemptId': session.topicAttemptId,
-      'revisionNumber': session.revisionNumber + 1,
+      'revisionNumber': nextRevision,
     };
     final String route;
-    if (session.onRamp == DailySpeakingOnRamp.suggested) {
+    if (session.onRamp == DailySpeakingOnRamp.justTalk) {
+      // Retry in the just-talk recorder (keeps onRamp == just_talk); the
+      // inferred topic rides along as a focus banner.
+      route = PmpRoutes.dailySpeakingJustRecord;
+    } else if (session.onRamp == DailySpeakingOnRamp.suggested) {
       route = PmpRoutes.dailySpeakingSuggestedRecord;
     } else if (session.inputMode == DailySpeakingInputMode.text) {
       route = PmpRoutes.dailySpeakingWritePath;
@@ -320,17 +425,49 @@ class FeedbackResultPage extends StatelessWidget {
     Navigator.pushReplacementNamed(context, route, arguments: args);
   }
 
-  /// End the loop and reveal the native rewrite of the learner's final version.
+  /// Next revision for this chain = the highest stored `revisionNumber` + 1.
+  Future<int> _nextRevisionForChain() async {
+    final attemptId = session.topicAttemptId;
+    if (attemptId == null) return session.revisionNumber + 1;
+    final table = AppDatabase.instance().dailySpeakingSessionTable;
+    final rows = await (table.select()
+          ..where((t) => t.topicAttemptId.equals(attemptId))
+          ..orderBy([
+            (t) => drift.OrderingTerm(
+                  expression: t.revisionNumber,
+                  mode: drift.OrderingMode.desc,
+                ),
+          ])
+          ..limit(1))
+        .get();
+    final maxRev =
+        rows.isEmpty ? session.revisionNumber : rows.first.revisionNumber;
+    return maxRev + 1;
+  }
+
+  /// Reveal the native rewrite of this version. Live, it rewrites the just-
+  /// captured input (audio or text). From history — where the learner skipped
+  /// the reveal and the audio may be pruned — it falls back to the saved words
+  /// via the text path (the rewrite only needs the words). Either way the
+  /// result is merged into this row so it's there next time (see
+  /// `FinalRewritePage._persistRewrite`).
   void _finishTopic(BuildContext context) {
+    final useLive = _hasLiveInput;
     Navigator.pushNamed(
       context,
       PmpRoutes.dailySpeakingFinalRewrite,
       arguments: {
-        'inputMode': session.inputMode,
+        'sessionId': session.id,
+        'inputMode':
+            useLive ? session.inputMode : DailySpeakingInputMode.text,
         'onRamp': session.onRamp,
-        'audioPath': lastAudioPath,
-        'text': lastText,
-        'topic': topic,
+        'audioPath': useLive ? lastAudioPath : null,
+        'text': useLive ? lastText : session.inputText,
+        // The learner's own words to show side-by-side against the native
+        // version. For voice this is the transcript (now stored in inputText),
+        // so the comparison renders on the voice path too — not just text.
+        'learnerWords': session.inputText,
+        'topic': _resumableTopic,
         'finalScore': session.feedback.score,
       },
     );
@@ -462,6 +599,7 @@ class _VersionCompareStrip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
     final prevRev = session.revisionNumber - 1;
     return FutureBuilder<int?>(
       future: _previousScore(),
@@ -470,13 +608,13 @@ class _VersionCompareStrip extends StatelessWidget {
         final delta = prev == null ? null : session.feedback.score - prev;
         final String message;
         if (delta == null) {
-          message = 'Your latest attempt at this topic.';
+          message = l10n.txtDsLatestAttempt;
         } else if (delta > 0) {
-          message = 'Up $delta from v$prevRev (was $prev).';
+          message = l10n.txtDsScoreUp(delta, prevRev, prev!);
         } else if (delta < 0) {
-          message = 'Down ${-delta} from v$prevRev (was $prev).';
+          message = l10n.txtDsScoreDown(-delta, prevRev, prev!);
         } else {
-          message = 'Same score as v$prevRev ($prev).';
+          message = l10n.txtDsScoreSame(prevRev, prev!);
         }
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
@@ -505,6 +643,104 @@ class _VersionCompareStrip extends StatelessWidget {
   }
 }
 
+/// The learner's own words — the AI transcript for voice, the typed text for
+/// the write path (both live in `session.inputText`). Shown so a session is no
+/// longer "write-only": you can re-read what you actually said.
+class _InputCard extends StatelessWidget {
+  const _InputCard({required this.text});
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: colorScheme.outlineVariant),
+      ),
+      child: Text(
+        text,
+        style: PmpTextStyles.body1Regular.copyWith(
+          color: colorScheme.onSurface,
+          height: 1.6,
+        ),
+      ),
+    );
+  }
+}
+
+/// The recording player. On a v2+ result it loads the previous version's clip
+/// (if still on disk) and shows both so the learner can A/B their progress —
+/// the most motivating use of replay. Otherwise it's a single player.
+class _AudioSection extends StatelessWidget {
+  const _AudioSection({required this.session});
+  final DailySpeakingSession session;
+
+  /// Path to the previous version's saved audio, or null if this is v1, the
+  /// chain is unknown, or the older clip was pruned.
+  Future<String?> _previousAudioPath() async {
+    final attemptId = session.topicAttemptId;
+    if (attemptId == null || session.revisionNumber <= 1) return null;
+    final table = AppDatabase.instance().dailySpeakingSessionTable;
+    final rows = await (table.select()
+          ..where((t) =>
+              t.topicAttemptId.equals(attemptId) &
+              t.revisionNumber.isSmallerThanValue(session.revisionNumber) &
+              t.audioPath.isNotNull())
+          ..orderBy([
+            (t) => drift.OrderingTerm(
+                  expression: t.revisionNumber,
+                  mode: drift.OrderingMode.desc,
+                ),
+          ])
+          ..limit(1))
+        .get();
+    if (rows.isEmpty) return null;
+    return rows.first.audioPath;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final current = session.audioPath!;
+    if (session.revisionNumber <= 1) {
+      return SessionAudioPlayer(audioPath: current);
+    }
+    final prevRev = session.revisionNumber - 1;
+    return FutureBuilder<String?>(
+      future: _previousAudioPath(),
+      builder: (context, snap) {
+        final prev = snap.data;
+        if (prev == null) {
+          // Older clip pruned / unavailable — just the current one.
+          return SessionAudioPlayer(
+            audioPath: current,
+            label: l10n.txtDsVersionShort(session.revisionNumber),
+          );
+        }
+        return Column(
+          children: [
+            SessionAudioPlayer(
+              audioPath: prev,
+              label: l10n.txtDsVersionShort(prevRev),
+              compact: true,
+            ),
+            const SizedBox(height: 8),
+            SessionAudioPlayer(
+              audioPath: current,
+              label: l10n.txtDsVersionThisOne(session.revisionNumber),
+              compact: true,
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
 class _VersionChip extends StatelessWidget {
   const _VersionChip({required this.revision});
   final int revision;
@@ -519,7 +755,7 @@ class _VersionChip extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Text(
-        'v$revision',
+        AppLocalizations.of(context).txtDsVersionShort(revision),
         style: PmpTextStyles.labelSemi.copyWith(color: colorScheme.primary),
       ),
     );
@@ -654,6 +890,7 @@ class _TopicChip extends StatelessWidget {
 
 class _Section extends StatelessWidget {
   const _Section({
+    super.key,
     required this.icon,
     required this.iconColor,
     required this.title,
@@ -834,11 +1071,12 @@ class _SubScoresCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final rows = <(String, int)>[
-      ('Grammar', scores.grammar),
-      ('Vocabulary', scores.vocabulary),
-      ('Fluency', scores.fluency),
-      ('Pronunciation', scores.pronunciation),
+      (l10n.txtDsGrammar, scores.grammar),
+      (l10n.txtDsVocabulary, scores.vocabulary),
+      (l10n.txtDsFluency, scores.fluency),
+      (l10n.txtDsPronunciation, scores.pronunciation),
     ];
     final colorScheme = Theme.of(context).colorScheme;
     return Column(

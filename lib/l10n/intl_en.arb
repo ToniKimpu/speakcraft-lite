@@ -271,5 +271,138 @@
   "txtDsStartRecording": "Start recording",
   "txtDsYourPrompt": "Your prompt",
   "txtDsExample": "Example",
-  "txtDsTryToUse": "Try to use"
+  "txtDsTryToUse": "Try to use",
+
+  "txtDsChooseFeedbackTitle": "Choose your feedback",
+  "txtDsChooseFeedbackIntro": "Pick what you want the AI to focus on. You can change this anytime — only what you choose is analyzed.",
+  "txtDsChooseRewriteNote": "You'll get a full native rewrite to compare against when you finish this topic.",
+  "txtDsVersionBanner": "Version {revision} — polish your answer and see how much you improve.",
+  "@txtDsVersionBanner": {
+    "placeholders": {
+      "revision": {}
+    }
+  },
+  "txtDsSelectAtLeastOne": "Select at least one",
+  "txtDsNSelected": "{count} selected",
+  "@txtDsNSelected": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+
+  "txtDsGroupAccuracy": "Accuracy",
+  "txtDsGroupStyle": "Style & naturalness",
+  "txtDsGroupDelivery": "Delivery",
+  "txtDsGroupScoring": "Scoring",
+  "txtDsVocabulary": "Vocabulary",
+  "txtDsGrammar": "Grammar",
+  "txtDsFluency": "Fluency",
+  "txtDsPronunciation": "Pronunciation",
+
+  "txtDsPresetRecommended": "Recommended",
+  "txtDsPresetSoundNatural": "Sound natural",
+  "txtDsPresetGrammarFocus": "Grammar focus",
+  "txtDsPresetEverything": "Everything",
+
+  "txtDsSecSentenceFixes": "Sentence fixes",
+  "txtDsGrammarPatterns": "Grammar patterns",
+  "txtDsBurmeseErrors": "Burmese-English errors",
+  "txtDsBetterWordChoices": "Better word choices",
+  "txtDsCollocations": "Collocations",
+  "txtDsIdioms": "Idioms & phrasal verbs",
+  "txtDsWholeRewriteLabel": "Native rewrite",
+  "txtDsSentenceRewriteLabel": "Sentence-by-sentence rewrite",
+  "txtDsFillerWords": "Filler words",
+  "txtDsSkillSubScores": "Skill sub-scores",
+
+  "txtDsDescSentenceFixes": "Corrects your mistakes with a Burmese reason.",
+  "txtDsDescGrammarPatterns": "Groups recurring grammar issues so you see the pattern.",
+  "txtDsDescBurmeseErrors": "Flags direct Burmese→English translations.",
+  "txtDsDescBetterVocab": "Upgrades basic words to more precise ones.",
+  "txtDsDescCollocations": "Natural word pairings (\"make a decision\").",
+  "txtDsDescIdioms": "Idioms and phrasal verbs you could have used.",
+  "txtDsDescWholeRewrite": "One polished version of your whole talk.",
+  "txtDsDescSentenceRewrite": "Each sentence rewritten to sound native.",
+  "txtDsDescPronunciation": "Sounds to work on.",
+  "txtDsDescFillerWords": "Counts \"um\", \"uh\", \"like\", etc.",
+  "txtDsDescSubScores": "Breaks your score into grammar / vocab / fluency / pronunciation.",
+
+  "txtDsHearYourProgress": "Hear your progress",
+  "txtDsYourRecording": "Your recording",
+  "txtDsWhatYouSaid": "What you said",
+  "txtDsWhatYouWrote": "What you wrote",
+  "txtDsSkillBreakdown": "Skill breakdown",
+  "txtDsSentenceRewritesTitle": "Sentence rewrites",
+
+  "txtDsPolishRetry": "Polish & retry",
+  "txtDsImDoneSeeNative": "I'm done — see native version",
+  "txtDsSeeNativeVersion": "See native version",
+
+  "txtDsLatestAttempt": "Your latest attempt at this topic.",
+  "txtDsScoreUp": "Up {delta} from v{revision} (was {previous}).",
+  "@txtDsScoreUp": {
+    "placeholders": {
+      "delta": {},
+      "revision": {},
+      "previous": {}
+    }
+  },
+  "txtDsScoreDown": "Down {delta} from v{revision} (was {previous}).",
+  "@txtDsScoreDown": {
+    "placeholders": {
+      "delta": {},
+      "revision": {},
+      "previous": {}
+    }
+  },
+  "txtDsScoreSame": "Same score as v{revision} ({previous}).",
+  "@txtDsScoreSame": {
+    "placeholders": {
+      "revision": {},
+      "previous": {}
+    }
+  },
+
+  "txtDsVersionShort": "v{revision}",
+  "@txtDsVersionShort": {
+    "placeholders": {
+      "revision": {}
+    }
+  },
+  "txtDsVersionThisOne": "v{revision} (this one)",
+  "@txtDsVersionThisOne": {
+    "placeholders": {
+      "revision": {}
+    }
+  },
+
+  "txtDsNativeVersion": "Native version",
+  "txtDsWritingNativeVersion": "Writing a native version of your best attempt…",
+  "txtDsCouldntGenerateNative": "Couldn't generate the native version.",
+  "txtDsTryAgain": "Try again",
+  "txtDsNativeHeaderNoScore": "Here's how a native speaker might say it.",
+  "txtDsNativeHeaderScore": "You finished at {score}. Here's a native version to compare against.",
+  "@txtDsNativeHeaderScore": {
+    "placeholders": {
+      "score": {}
+    }
+  },
+  "txtDsYourVersion": "Your version",
+  "txtDsSentenceBySentence": "Sentence by sentence",
+
+  "txtDsChainVersionsUp": "{count} versions · up {delta} from v1",
+  "@txtDsChainVersionsUp": {
+    "placeholders": {
+      "count": {},
+      "delta": {}
+    }
+  },
+  "txtDsChainVersions": "{count} versions",
+  "@txtDsChainVersions": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+
+  "txtDsTalkAbout": "Talk about"
 }

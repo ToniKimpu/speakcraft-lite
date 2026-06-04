@@ -63,6 +63,21 @@ class _DayGroup extends StatelessWidget {
   final DateTime day;
   final List<DailySpeakingSession> sessions;
 
+  /// Groups the day's sessions into version chains by [topicAttemptId]. Rows
+  /// with no chain id (legacy) — and just-talk, which mints a unique id per
+  /// session — fall into singleton chains. Day order (newest first) is kept by
+  /// first-seen key.
+  List<List<DailySpeakingSession>> _chains() {
+    final byKey = <String, List<DailySpeakingSession>>{};
+    final order = <String>[];
+    for (final s in sessions) {
+      final key = s.topicAttemptId ?? 'solo-${s.id}';
+      if (!byKey.containsKey(key)) order.add(key);
+      byKey.putIfAbsent(key, () => []).add(s);
+    }
+    return [for (final k in order) byKey[k]!];
+  }
+
   String _dayLabel(BuildContext context, DateTime d) {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
@@ -86,8 +101,200 @@ class _DayGroup extends StatelessWidget {
                 .copyWith(color: colorScheme.onSurfaceVariant),
           ),
         ),
-        ...sessions.map((s) => _SessionTile(session: s)),
+        ...(() {
+          final chains = _chains();
+          return chains.map((chain) => chain.length == 1
+              ? _SessionTile(session: chain.first)
+              : _ChainTile(versions: chain));
+        })(),
       ],
+    );
+  }
+}
+
+/// A multi-version topic attempt (the version loop). Shows the topic, the score
+/// climb across versions, and a tappable chip per version that opens its full
+/// feedback. Collapses what would otherwise be several near-identical tiles.
+class _ChainTile extends StatelessWidget {
+  const _ChainTile({required this.versions});
+
+  /// All versions of one [topicAttemptId], any order.
+  final List<DailySpeakingSession> versions;
+
+  Color _scoreColor(int score) {
+    if (score >= 80) return PmpColors.success500;
+    if (score >= 60) return PmpColors.warning500;
+    return PmpColors.destructive500;
+  }
+
+  String _title(BuildContext context, DailySpeakingSession s) {
+    final l10n = AppLocalizations.of(context);
+    final fromOnRamp = switch (s.onRamp) {
+      DailySpeakingOnRamp.justTalk => l10n.txtDsJustTalk,
+      DailySpeakingOnRamp.ownTopic => l10n.txtDsOwnTopic,
+      DailySpeakingOnRamp.suggested => l10n.txtDsSuggested,
+      _ => s.onRamp,
+    };
+    return s.decodedTopic?.title ??
+        s.feedback.inferredTopic ??
+        s.topicId ??
+        fromOnRamp;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
+    final sorted = [...versions]
+      ..sort((a, b) => a.revisionNumber.compareTo(b.revisionNumber));
+    final latest = sorted.last;
+    final first = sorted.first;
+    final latestColor = _scoreColor(latest.feedback.score);
+    final climb = latest.feedback.score - first.feedback.score;
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Container(
+        decoration: BoxDecoration(
+          color: colorScheme.surfaceContainerHighest,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: colorScheme.outlineVariant),
+        ),
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 48,
+                  height: 48,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: latestColor.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(12),
+                    border:
+                        Border.all(color: latestColor.withValues(alpha: 0.4)),
+                  ),
+                  child: Text(
+                    '${latest.feedback.score}',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: 'ArchivoBlack Regular',
+                      color: latestColor,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        _title(context, latest),
+                        style: PmpTextStyles.body2Semi
+                            .copyWith(color: colorScheme.onSurface),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        climb > 0
+                            ? l10n.txtDsChainVersionsUp(sorted.length, climb)
+                            : l10n.txtDsChainVersions(sorted.length),
+                        style: PmpTextStyles.sub
+                            .copyWith(color: colorScheme.onSurfaceVariant),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final v in sorted)
+                  () {
+                    final hasNative = v.feedback.nativeRewrite.isNotEmpty;
+                    return _VersionScoreChip(
+                      revision: v.revisionNumber,
+                      score: v.feedback.score,
+                      color: _scoreColor(v.feedback.score),
+                      hasNativeVersion: hasNative,
+                      onTap: () => Navigator.pushNamed(
+                        context,
+                        PmpRoutes.dailySpeakingFeedback,
+                        arguments: {
+                          'session': v,
+                          // Jump straight to the saved native version when this
+                          // is the finished version that carries it.
+                          if (hasNative) 'revealNativeRewrite': true,
+                        },
+                      ),
+                    );
+                  }(),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _VersionScoreChip extends StatelessWidget {
+  const _VersionScoreChip({
+    required this.revision,
+    required this.score,
+    required this.color,
+    required this.onTap,
+    this.hasNativeVersion = false,
+  });
+  final int revision;
+  final int score;
+  final Color color;
+  final VoidCallback onTap;
+
+  /// This version has a saved native rewrite — flagged with ✨ and, on tap,
+  /// jumps straight to that section.
+  final bool hasNativeVersion;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.10),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: color.withValues(alpha: 0.4)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'v$revision',
+              style: PmpTextStyles.labelSemi.copyWith(color: color),
+            ),
+            const SizedBox(width: 6),
+            Text(
+              '$score',
+              style: PmpTextStyles.body2Semi
+                  .copyWith(color: colorScheme.onSurface),
+            ),
+            if (hasNativeVersion) ...[
+              const SizedBox(width: 4),
+              const Icon(Icons.auto_awesome,
+                  size: 13, color: PmpColors.accentOrange),
+            ],
+          ],
+        ),
+      ),
     );
   }
 }
@@ -122,6 +329,10 @@ class _SessionTile extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final scoreColor = _scoreColor();
     final feedback = session.feedback;
+    // Has a saved native version to jump to (the loop's terminal reveal). All
+    // three on-ramps loop now — just-talk via the AI's inferred topic — so any
+    // on-ramp can carry one.
+    final hasNative = feedback.nativeRewrite.isNotEmpty;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Material(
@@ -133,7 +344,10 @@ class _SessionTile extends StatelessWidget {
             Navigator.pushNamed(
               context,
               PmpRoutes.dailySpeakingFeedback,
-              arguments: {'session': session},
+              arguments: {
+                'session': session,
+                if (hasNative) 'revealNativeRewrite': true,
+              },
             );
           },
           child: Padding(
@@ -166,7 +380,8 @@ class _SessionTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        feedback.inferredTopic ??
+                        session.decodedTopic?.title ??
+                            feedback.inferredTopic ??
                             session.topicId ??
                             _onRampLabel(context),
                         style: PmpTextStyles.body2Semi
@@ -188,6 +403,12 @@ class _SessionTile extends StatelessWidget {
                     ],
                   ),
                 ),
+                if (hasNative)
+                  const Padding(
+                    padding: EdgeInsets.only(right: 4),
+                    child: Icon(Icons.auto_awesome,
+                        size: 15, color: PmpColors.accentOrange),
+                  ),
                 Icon(
                   Icons.chevron_right,
                   color: colorScheme.onSurfaceVariant,

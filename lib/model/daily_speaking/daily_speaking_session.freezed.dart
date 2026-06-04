@@ -28,6 +28,13 @@ mixin _$DailySpeakingSession {
   DailySpeakingFeedback get feedback => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
+  /// Local path to the saved recording (voice sessions only). Audio is kept
+  /// only for the active attempt chain and pruned when a new chain starts, so
+  /// this is null for older / pruned sessions and for the text path. Powers
+  /// the result-page player and the A/B "hear your progress" comparison across
+  /// the version loop. See `daily_speaking_feature.md`.
+  String? get audioPath => throw _privateConstructorUsedError;
+
   /// Groups every version (v1, v2, …) of one topic attempt together. Minted
   /// on the first attempt; carried forward by "Polish & retry". Null for
   /// legacy rows and one-off (just-talk) sessions. See the version loop in
@@ -36,6 +43,11 @@ mixin _$DailySpeakingSession {
 
   /// 1 for the first attempt, 2 for the first retry, etc. Rendered as "v{n}".
   int get revisionNumber => throw _privateConstructorUsedError;
+
+  /// Serialized [DailySpeakingTopic] for loop-capable on-ramps, so the topic
+  /// can be resumed from history. Null for just-talk and legacy rows. See
+  /// [decodedTopic].
+  String? get topicJson => throw _privateConstructorUsedError;
 
   /// Serializes this DailySpeakingSession to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -61,8 +73,10 @@ abstract class $DailySpeakingSessionCopyWith<$Res> {
       String? inputText,
       DailySpeakingFeedback feedback,
       DateTime? createdAt,
+      String? audioPath,
       String? topicAttemptId,
-      int revisionNumber});
+      int revisionNumber,
+      String? topicJson});
 
   $DailySpeakingFeedbackCopyWith<$Res> get feedback;
 }
@@ -90,8 +104,10 @@ class _$DailySpeakingSessionCopyWithImpl<$Res,
     Object? inputText = freezed,
     Object? feedback = null,
     Object? createdAt = freezed,
+    Object? audioPath = freezed,
     Object? topicAttemptId = freezed,
     Object? revisionNumber = null,
+    Object? topicJson = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -122,6 +138,10 @@ class _$DailySpeakingSessionCopyWithImpl<$Res,
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      audioPath: freezed == audioPath
+          ? _value.audioPath
+          : audioPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       topicAttemptId: freezed == topicAttemptId
           ? _value.topicAttemptId
           : topicAttemptId // ignore: cast_nullable_to_non_nullable
@@ -130,6 +150,10 @@ class _$DailySpeakingSessionCopyWithImpl<$Res,
           ? _value.revisionNumber
           : revisionNumber // ignore: cast_nullable_to_non_nullable
               as int,
+      topicJson: freezed == topicJson
+          ? _value.topicJson
+          : topicJson // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 
@@ -160,8 +184,10 @@ abstract class _$$DailySpeakingSessionImplCopyWith<$Res>
       String? inputText,
       DailySpeakingFeedback feedback,
       DateTime? createdAt,
+      String? audioPath,
       String? topicAttemptId,
-      int revisionNumber});
+      int revisionNumber,
+      String? topicJson});
 
   @override
   $DailySpeakingFeedbackCopyWith<$Res> get feedback;
@@ -187,8 +213,10 @@ class __$$DailySpeakingSessionImplCopyWithImpl<$Res>
     Object? inputText = freezed,
     Object? feedback = null,
     Object? createdAt = freezed,
+    Object? audioPath = freezed,
     Object? topicAttemptId = freezed,
     Object? revisionNumber = null,
+    Object? topicJson = freezed,
   }) {
     return _then(_$DailySpeakingSessionImpl(
       id: null == id
@@ -219,6 +247,10 @@ class __$$DailySpeakingSessionImplCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      audioPath: freezed == audioPath
+          ? _value.audioPath
+          : audioPath // ignore: cast_nullable_to_non_nullable
+              as String?,
       topicAttemptId: freezed == topicAttemptId
           ? _value.topicAttemptId
           : topicAttemptId // ignore: cast_nullable_to_non_nullable
@@ -227,6 +259,10 @@ class __$$DailySpeakingSessionImplCopyWithImpl<$Res>
           ? _value.revisionNumber
           : revisionNumber // ignore: cast_nullable_to_non_nullable
               as int,
+      topicJson: freezed == topicJson
+          ? _value.topicJson
+          : topicJson // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -242,8 +278,10 @@ class _$DailySpeakingSessionImpl implements _DailySpeakingSession {
       this.inputText,
       required this.feedback,
       this.createdAt,
+      this.audioPath,
       this.topicAttemptId,
-      this.revisionNumber = 1});
+      this.revisionNumber = 1,
+      this.topicJson});
 
   factory _$DailySpeakingSessionImpl.fromJson(Map<String, dynamic> json) =>
       _$$DailySpeakingSessionImplFromJson(json);
@@ -263,6 +301,14 @@ class _$DailySpeakingSessionImpl implements _DailySpeakingSession {
   @override
   final DateTime? createdAt;
 
+  /// Local path to the saved recording (voice sessions only). Audio is kept
+  /// only for the active attempt chain and pruned when a new chain starts, so
+  /// this is null for older / pruned sessions and for the text path. Powers
+  /// the result-page player and the A/B "hear your progress" comparison across
+  /// the version loop. See `daily_speaking_feature.md`.
+  @override
+  final String? audioPath;
+
   /// Groups every version (v1, v2, …) of one topic attempt together. Minted
   /// on the first attempt; carried forward by "Polish & retry". Null for
   /// legacy rows and one-off (just-talk) sessions. See the version loop in
@@ -275,9 +321,15 @@ class _$DailySpeakingSessionImpl implements _DailySpeakingSession {
   @JsonKey()
   final int revisionNumber;
 
+  /// Serialized [DailySpeakingTopic] for loop-capable on-ramps, so the topic
+  /// can be resumed from history. Null for just-talk and legacy rows. See
+  /// [decodedTopic].
+  @override
+  final String? topicJson;
+
   @override
   String toString() {
-    return 'DailySpeakingSession(id: $id, topicId: $topicId, onRamp: $onRamp, inputMode: $inputMode, inputText: $inputText, feedback: $feedback, createdAt: $createdAt, topicAttemptId: $topicAttemptId, revisionNumber: $revisionNumber)';
+    return 'DailySpeakingSession(id: $id, topicId: $topicId, onRamp: $onRamp, inputMode: $inputMode, inputText: $inputText, feedback: $feedback, createdAt: $createdAt, audioPath: $audioPath, topicAttemptId: $topicAttemptId, revisionNumber: $revisionNumber, topicJson: $topicJson)';
   }
 
   @override
@@ -296,16 +348,31 @@ class _$DailySpeakingSessionImpl implements _DailySpeakingSession {
                 other.feedback == feedback) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
+            (identical(other.audioPath, audioPath) ||
+                other.audioPath == audioPath) &&
             (identical(other.topicAttemptId, topicAttemptId) ||
                 other.topicAttemptId == topicAttemptId) &&
             (identical(other.revisionNumber, revisionNumber) ||
-                other.revisionNumber == revisionNumber));
+                other.revisionNumber == revisionNumber) &&
+            (identical(other.topicJson, topicJson) ||
+                other.topicJson == topicJson));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, topicId, onRamp, inputMode,
-      inputText, feedback, createdAt, topicAttemptId, revisionNumber);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      topicId,
+      onRamp,
+      inputMode,
+      inputText,
+      feedback,
+      createdAt,
+      audioPath,
+      topicAttemptId,
+      revisionNumber,
+      topicJson);
 
   /// Create a copy of DailySpeakingSession
   /// with the given fields replaced by the non-null parameter values.
@@ -334,8 +401,10 @@ abstract class _DailySpeakingSession implements DailySpeakingSession {
       final String? inputText,
       required final DailySpeakingFeedback feedback,
       final DateTime? createdAt,
+      final String? audioPath,
       final String? topicAttemptId,
-      final int revisionNumber}) = _$DailySpeakingSessionImpl;
+      final int revisionNumber,
+      final String? topicJson}) = _$DailySpeakingSessionImpl;
 
   factory _DailySpeakingSession.fromJson(Map<String, dynamic> json) =
       _$DailySpeakingSessionImpl.fromJson;
@@ -355,6 +424,14 @@ abstract class _DailySpeakingSession implements DailySpeakingSession {
   @override
   DateTime? get createdAt;
 
+  /// Local path to the saved recording (voice sessions only). Audio is kept
+  /// only for the active attempt chain and pruned when a new chain starts, so
+  /// this is null for older / pruned sessions and for the text path. Powers
+  /// the result-page player and the A/B "hear your progress" comparison across
+  /// the version loop. See `daily_speaking_feature.md`.
+  @override
+  String? get audioPath;
+
   /// Groups every version (v1, v2, …) of one topic attempt together. Minted
   /// on the first attempt; carried forward by "Polish & retry". Null for
   /// legacy rows and one-off (just-talk) sessions. See the version loop in
@@ -365,6 +442,12 @@ abstract class _DailySpeakingSession implements DailySpeakingSession {
   /// 1 for the first attempt, 2 for the first retry, etc. Rendered as "v{n}".
   @override
   int get revisionNumber;
+
+  /// Serialized [DailySpeakingTopic] for loop-capable on-ramps, so the topic
+  /// can be resumed from history. Null for just-talk and legacy rows. See
+  /// [decodedTopic].
+  @override
+  String? get topicJson;
 
   /// Create a copy of DailySpeakingSession
   /// with the given fields replaced by the non-null parameter values.

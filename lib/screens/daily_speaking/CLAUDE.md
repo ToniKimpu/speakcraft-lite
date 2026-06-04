@@ -36,11 +36,10 @@ the stub adapter — no Gemini key needed to walk through the full UX.
   tap-to-expand definition popover, target phrase cards, warmup questions)
   → `suggested/suggested_topic_record_page.dart` (recorder with topic
   prompt banner + passive target-phrase chips).
-- All on-ramps converge on `feedback/feedback_result_page.dart`. The
-  suggested path also passes the `topic` through the route arguments so the
-  result page can render a **"Try this topic again"** CTA — only enabled
-  when `onRamp == suggested` and `topic != null`, so just-talk / own-topic
-  stay terminal.
+- All on-ramps converge on `feedback/feedback_result_page.dart`, which renders
+  the version-loop CTAs ("Polish & retry" / "I'm done — see native version").
+  (Originally only suggested looped via a "Try this topic again" CTA; the loop
+  now covers all three on-ramps — see "The version loop" below.)
 - History accessible via the app-bar icon on the entry page; persists in
   Drift `dailySpeakingSessionTable` (schema v5).
 - `SessionLimitBanner` shows "N of 3 today" derived from Drift rows
@@ -104,15 +103,28 @@ submit + spinner + success navigation.
 - The stub (`daily_speaking_service.dart#_applyRequestedSections`) blanks any
   field whose section wasn't requested, mirroring what the real edge function
   must do. The edge function MUST read `requested_sections` and emit only those.
-- Section/preset/group **labels are inline English** in the choose + result
-  pages (localize later). See `daily_speaking_feature.md` for the full design.
+- All UI strings are **localized via `lib/l10n/intl_en.arb`** (`txtDs*` keys),
+  including the choose menu, result page, version loop, and review surfaces.
+  **Do not add hardcoded literals** — add a `txtDs*` key and use
+  `AppLocalizations.of(context).txtDs…` (the section/preset/group label helpers
+  in `choose_feedback_page.dart` take a `BuildContext` for this reason). The
+  Burmese (`my`) ARB is not created yet; add it to ship Burmese. AI-returned
+  content (`explanation_mm`, `reason_mm`, `meaning_mm`) is already bilingual and
+  stays as data. See `daily_speaking_feature.md`.
 
 ## The version loop (v1 → v2 → …)
 
-Suggested + own-topic are iterate-and-improve loops; just-talk stays one-shot.
-The result page offers **"Polish & retry"** (re-capture the same topic, carrying
+**All three on-ramps** are iterate-and-improve loops. Suggested + own-topic use
+the chosen topic; just-talk seeds its loop from the AI's `inferredTopic`
+(synthesized into a topic on submit in `DailySpeakingBloc._inferredTopic`; the
+first attempt is still pure free-talk, the loop is offered after). The result
+page offers **"Polish & retry"** (re-capture the same topic, carrying
 `topicAttemptId` + an incremented `revisionNumber`) and **"I'm done — see native
 version"** (`feedback/final_rewrite_page.dart`, route `dailySpeakingFinalRewrite`).
+Polishing a just-talk session routes back through the just-talk recorder (so
+`onRamp` stays `just_talk`) with the inferred topic shown as a focus banner. The
+loop, native-version re-view (✨ + auto-jump), audio A/B, and resume-from-history
+all now apply to just-talk too. See `daily_speaking_feature.md`.
 
 - Sessions chain via `topicAttemptId` + `revisionNumber` on
   `dailySpeakingSessionTable` (**schema v6**); the id is minted in
@@ -168,11 +180,11 @@ All on-ramps end up at the same `DailySpeakingSession` Drift row and the same
 result screen. The differences are entirely in route arguments and what the
 feedback payload happens to include:
 
-| On-ramp        | topic carried?            | targetPhraseResults? | retry button? |
-|----------------|---------------------------|----------------------|---------------|
-| Just talk      | none (inferred by Gemini) | no                   | no            |
-| Own topic      | synthetic, `id='own'`     | no                   | no            |
-| Suggested      | curated topic from bank   | yes                  | yes           |
+| On-ramp        | topic carried?                       | targetPhraseResults? | loops? |
+|----------------|--------------------------------------|----------------------|--------|
+| Just talk      | synthetic from AI `inferredTopic` (`id='inferred'`, saved on submit) | no  | yes (v1 free, then focus banner) |
+| Own topic      | synthetic, `id='own'` (saved on submit) | no                | yes    |
+| Suggested      | curated topic from bank              | yes                  | yes    |
 
 ## Activating the real Gemini path (when the key lands)
 
@@ -183,7 +195,10 @@ Order, exact actions:
 2. Deploy `supabase/functions/daily-speaking-review/index.ts` (separate task;
    not in this branch). The function must return JSON matching
    `DailySpeakingFeedback.fromJson` — see the freezed model for the exact
-   shape, including snake_case keys via `@JsonKey`.
+   shape, including snake_case keys via `@JsonKey`. For **voice** sessions it
+   must always return `transcript` (the learner's words) — it's core, not gated
+   by `requested_sections`; the bloc stores it into `inputText`. See
+   "Review the input" in `daily_speaking_feature.md`.
 3. In `services/daily_speaking/daily_speaking_service.dart`, change
    `static const bool useStubResponse = true;` → `false`.
 4. Verify `_serializeInput` matches the edge function's expected body shape

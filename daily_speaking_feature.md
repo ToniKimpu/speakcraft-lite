@@ -128,8 +128,10 @@ Notes / deferred:
   register/tone, flow, pace/pauses, structure, depth, relevance, next-level,
   compare-to-last) is **reserved** — add the catalog entry + model field +
   result widget when wanted.
-- New screen/section **labels are inline English** (not in the ARB), matching
-  this module's original "inline first" convention. Localize in a later pass.
+- ~~New screen/section labels are inline English (not in the ARB).~~
+  **DONE:** all daily-speaking UI strings were migrated into `intl_en.arb`
+  (`txtDs*` keys); no hardcoded literals remain. Add an `intl_my.arb` to ship
+  Burmese. New strings must use `l10n`, never literals.
 - Edge function must read `requested_sections` and only emit those sections.
 
 ## Build impact (original plan)
@@ -173,9 +175,17 @@ Design spec for turning the one-shot "Try this topic again" button into a real
 the productive-skill core loop made visible and rewarding.
 
 > Status: **implemented** on `feat/daily_speaking_p2_p3` (behind the stub).
-> Decisions: **(1) suggested + own-topic only** — "just talk" stays terminal.
-> **(2) whole-rewrite is a terminal reveal** — hidden during iterations, shown
-> once at the end.
+> Decisions: **(1) whole-rewrite is a terminal reveal** — hidden during
+> iterations, shown once at the end.
+>
+> **UPDATE (superseded):** the loop was originally suggested + own-topic only,
+> with just-talk terminal. **All three on-ramps now loop** — just-talk seeds its
+> loop from the AI's `inferredTopic` (synthesized into a topic on submit; see
+> `DailySpeakingBloc._inferredTopic`). The first just-talk attempt is still pure
+> free-talk; the loop is offered after. So `_supportsLoop` is now always true,
+> the rewrite is hidden from every on-ramp's menu, and just-talk gets the same
+> Polish & retry / terminal reveal / ✨ re-view as the others. References below
+> to "just-talk stays terminal / keeps the rewrite" reflect the old design.
 
 ## Why rewrite must be a terminal reveal (the duplicate problem)
 
@@ -216,8 +226,8 @@ Suggested / own-topic prep
         └───────◄───────────┘   loop until "I'm done"
 ```
 
-- **Just talk**: no version loop. Result page stays terminal (no "polish &
-  retry"), exactly as today.
+- **Just talk**: loops too (see UPDATE above) — v1 is free-talk, then the AI's
+  inferred topic carries forward as a focus banner in the just-talk recorder.
 - Each retry carries the **same topic** forward (already wired for suggested;
   own-topic reuses its synthetic `id='own'` topic).
 
@@ -295,11 +305,120 @@ Two deliberate deviations from the design above:
    v2`). It's genuinely free (no tokens), so it needn't be opt-in. The
    heuristic *"addressed 3 of 5 flagged sentences"* line is **deferred** — it's
    better computed server-side by the edge function than guessed on-device.
-2. **Terminal reveal does NOT persist a history row and bypasses the bloc.**
-   `FinalRewritePage` calls `DailySpeakingService().reviewSession(...)` directly
-   with `requested_sections: [whole_rewrite, sentence_rewrite]`. The practice
-   attempts are the v1…vN rows; the reveal is just the model answer for the last
-   one, so the rewrite's token cost is paid exactly once, at the end. For voice
-   there's no transcript, so the side-by-side ("Your version" vs "Native
-   version") only renders on the write path; voice shows the native version
-   alone.
+2. **Terminal reveal bypasses the bloc and creates no new row — but merges
+   back into the final one.** `FinalRewritePage` calls
+   `DailySpeakingService().reviewSession(...)` directly with
+   `requested_sections: [whole_rewrite, sentence_rewrite]`. The practice attempts
+   are the v1…vN rows; the reveal is just the model answer for the last one, so
+   the rewrite's token cost is paid exactly once. To keep it re-viewable, the
+   generated `nativeRewrite` / `sentenceRewrites` are **merged into the final
+   session's stored `feedbackJson`** (`FinalRewritePage._persistRewrite`, keyed
+   by `sessionId`) — no new row, just an update. Reopening that session from
+   history then renders the native version inline via the result page's existing
+   `nativeRewrite` / `sentenceRewrites` sections, at no extra token cost. The
+   live side-by-side ("Your version" vs "Native version") renders on **both**
+   paths — `FinalRewritePage.learnerWords` carries the typed text or the voice
+   transcript (see "Review the input" below).
+
+---
+
+# Review the input — transcript, paragraph display, history chains, audio replay
+
+Sessions used to be "write-only": we kept the feedback and discarded the
+learner's own input. This follow-up (`feat/daily_speaking_p2_p3`) stops
+discarding it. Three locked decisions drove the build (2026-06-05): voice
+transcript is **always-on core** (not a menu checkbox); audio is retained
+**only for the active attempt chain** (older chains pruned); the transcript
+**reuses the existing `inputText` column** (no separate column).
+
+## 1. Transcript + show-the-paragraph
+
+- `DailySpeakingFeedback` gains `transcript` (`@JsonKey(name: 'transcript')`,
+  default `''`). The edge function MUST return it for voice sessions — Gemini
+  already reads the audio, so the marginal token cost is small. It is **core**,
+  not gated by `requested_sections` (`_applyRequestedSections` never blanks it).
+- `DailySpeakingBloc._submitVoice` writes `feedback.transcript` into the
+  session's `inputText`. So `inputText` is now "the learner's words" for both
+  paths — transcript for voice, typed text for write.
+- `feedback_result_page.dart` renders a **"What you said" / "What you wrote"**
+  card (`_InputCard`) from `session.inputText`.
+- The terminal reveal's side-by-side now works for voice too: the result page
+  forwards `session.inputText` as `learnerWords` →
+  `FinalRewritePage.learnerWords` (decoupled from `text`, which stays the AI
+  input for the write path).
+
+## 2. History version chains
+
+`daily_speaking_history_page.dart` groups each day's rows by `topicAttemptId`
+into `_ChainTile` (multi-version) vs `_SessionTile` (singleton). Legacy rows
+(null id) and just-talk (unique id per session) stay singletons. The chain tile
+shows the topic, the latest score, the climb ("3 versions · up 14 from v1"), and
+a tappable score chip per version → its full feedback. Grouping is within a day
+(version loops happen in one sitting; cross-day chains, which the UX doesn't
+steer toward, split across day headers — acceptable).
+
+## 3. Audio replay + A/B (keep-active-chain)
+
+- Drift `dailySpeakingSessionTable` gains `audioPath` (nullable). Schema
+  **v6 → v7**, `addColumn` migration.
+- On a voice submit, `DailySpeakingBloc._persistAudio` copies the temp clip into
+  `<app-docs>/daily_speaking_audio/<attemptId>_v<rev>.<ext>` and stores the
+  path. Best-effort: a copy failure logs and returns null, never blocks
+  feedback.
+- `_pruneAudioExceptChain(attemptId)` deletes the saved files + clears
+  `audioPath` for every chain **except** the active one — the keep-active-chain
+  policy. So only the topic currently being practised (and its earlier versions,
+  for A/B) keeps audio on disk.
+- `widgets/session_audio_player.dart` (`SessionAudioPlayer`) is a self-contained
+  just_audio play/pause/scrub widget. The result page shows a single player on
+  v1 ("Your recording") and, on v2+, loads the previous version's clip and
+  stacks both ("Hear your progress", `v1` / `v2 (this one)`) — the A/B replay.
+  If the older clip was pruned, it degrades to the single current player.
+- **Deferred (tier B):** waveform + tap-a-fix-line-to-seek needs word-level
+  timestamps from the AI; not built. History tiles don't get players (audio is
+  mostly pruned away from older rows by design).
+
+## 4. Resume a topic from history ("Polish & retry" after coming back)
+
+A learner who tapped Done (out of time, etc.) can later reopen the session from
+history and keep improving — the productive loop, picked up days later.
+
+- Drift `dailySpeakingSessionTable` gains `topicJson` (nullable). Schema
+  **v7 → v8**, `addColumn`. `DailySpeakingBloc._persist` stores `topic.toJson()`
+  for every on-ramp that has a topic — including just-talk, whose synthesized
+  inferred topic is stored too (null only when nothing was inferred / legacy).
+  This recovers the **own-topic prompt**, which was otherwise lost (own-topic
+  persists only `topicId = 'own'`), and means resume needs **no dependency on
+  the topic bank** for suggested.
+- `DailySpeakingSession.decodedTopic` (extension) rebuilds the topic from
+  `topicJson`. The result page's `_resumableTopic = topic ?? decodedTopic`, so
+  "Polish & retry" now shows even when the page was opened from history.
+- **Continues the chain from its latest version**: `_nextRevisionForChain()`
+  reads the max `revisionNumber` for the `topicAttemptId` and adds 1, so
+  polishing an old entry appends (a v3 chain → v4), never overwrites.
+- **`_canRetry` vs `_canReveal`:** retry is offered live AND from history (only
+  needs a topic — `_resumableTopic != null`, true for all on-ramps now). The
+  reveal button (`_canReveal`) shows whenever there's no saved native version
+  yet and there's input to rewrite. Label is **"I'm done — see native version"**
+  live, **"See native version"** from history.
+- **Missed-the-reveal recovery (important):** a learner who tapped plain *Done*
+  and skipped the reveal is NOT stuck. From history the reveal regenerates from
+  the saved `inputText` via the **text path** — even for a voice session whose
+  audio was pruned, because the rewrite only needs the words. `_finishTopic`
+  falls back to `inputText` when there's no live input (`_hasLiveInput`), then
+  persists the result so the ✨ chip + inline section take over afterwards.
+  Tokens still paid once. Applies to all on-ramps, just-talk included.
+- Just-talk resumes via its inferred topic (routes back through the just-talk
+  recorder, which shows a "Talk about: …" banner; `onRamp` stays `just_talk`).
+  History tiles now also label
+  rows with `decodedTopic.title` (the real typed own-topic text) instead of the
+  `'own'` sentinel / the AI's inferred guess.
+- A resumed attempt is a normal new session row (counts against the daily quota
+  banner, which is decorative anyway — real budget is server-side).
+
+## Edge-function contract impact (when the Gemini key lands)
+
+The edge function must additionally return `transcript` for voice sessions
+(always, regardless of `requested_sections`). Everything else (audio capture,
+history, replay, pruning, resume) is client-side and already live behind the
+stub.

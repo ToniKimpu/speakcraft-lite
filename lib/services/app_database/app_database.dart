@@ -38,7 +38,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 6;
+  int get schemaVersion => 8;
 
   @override
   MigrationStrategy get migration {
@@ -69,6 +69,22 @@ class AppDatabase extends _$AppDatabase {
           await m.addColumn(
             dailySpeakingSessionTable,
             dailySpeakingSessionTable.revisionNumber,
+          );
+        }
+        if (from < 7) {
+          // Saved-recording path for the audio player / A/B replay. Added
+          // separately so v6 installs keep their existing history.
+          await m.addColumn(
+            dailySpeakingSessionTable,
+            dailySpeakingSessionTable.audioPath,
+          );
+        }
+        if (from < 8) {
+          // Serialized topic so a chain can be resumed ("Polish & retry") from
+          // history. Old rows stay null → no resume button, which is correct.
+          await m.addColumn(
+            dailySpeakingSessionTable,
+            dailySpeakingSessionTable.topicJson,
           );
         }
       },

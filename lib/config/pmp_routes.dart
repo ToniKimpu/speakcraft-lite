@@ -347,7 +347,15 @@ class PmpRoutes {
       case dailySpeakingEntry:
         return _getRoute(const DailySpeakingEntryPage(), settings);
       case dailySpeakingJustRecord:
-        return _getRoute(const JustRecordPage(), settings);
+        final args = settings.arguments as Map<String, dynamic>?;
+        return _getRoute(
+          JustRecordPage(
+            topic: args?['topic'] as DailySpeakingTopic?,
+            topicAttemptId: args?['topicAttemptId'] as String?,
+            revisionNumber: args?['revisionNumber'] as int? ?? 1,
+          ),
+          settings,
+        );
       case dailySpeakingOwnTopicPrep:
         return _getRoute(const OwnTopicPrepPage(), settings);
       case dailySpeakingOwnTopicRecord:
@@ -415,6 +423,7 @@ class PmpRoutes {
             topic: topic,
             lastAudioPath: args['lastAudioPath'] as String?,
             lastText: args['lastText'] as String?,
+            revealNativeRewrite: args['revealNativeRewrite'] as bool? ?? false,
           ),
           settings,
         );
@@ -422,10 +431,12 @@ class PmpRoutes {
         final args = settings.arguments as Map<String, dynamic>;
         return _getRoute(
           FinalRewritePage(
+            sessionId: args['sessionId'] as int?,
             inputMode: args['inputMode'] as String,
             onRamp: args['onRamp'] as String,
             audioPath: args['audioPath'] as String?,
             text: args['text'] as String?,
+            learnerWords: args['learnerWords'] as String?,
             topic: args['topic'] as DailySpeakingTopic?,
             finalScore: args['finalScore'] as int?,
           ),

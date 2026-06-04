@@ -1658,6 +1658,18 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
       type: DriftSqlType.int,
       requiredDuringInsert: false,
       defaultValue: const Constant(1));
+  static const VerificationMeta _audioPathMeta =
+      const VerificationMeta('audioPath');
+  @override
+  late final GeneratedColumn<String> audioPath = GeneratedColumn<String>(
+      'audio_path', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _topicJsonMeta =
+      const VerificationMeta('topicJson');
+  @override
+  late final GeneratedColumn<String> topicJson = GeneratedColumn<String>(
+      'topic_json', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _createdAtMeta =
       const VerificationMeta('createdAt');
   @override
@@ -1677,6 +1689,8 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
         totalTokens,
         topicAttemptId,
         revisionNumber,
+        audioPath,
+        topicJson,
         createdAt
       ];
   @override
@@ -1741,6 +1755,14 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
           revisionNumber.isAcceptableOrUnknown(
               data['revision_number']!, _revisionNumberMeta));
     }
+    if (data.containsKey('audio_path')) {
+      context.handle(_audioPathMeta,
+          audioPath.isAcceptableOrUnknown(data['audio_path']!, _audioPathMeta));
+    }
+    if (data.containsKey('topic_json')) {
+      context.handle(_topicJsonMeta,
+          topicJson.isAcceptableOrUnknown(data['topic_json']!, _topicJsonMeta));
+    }
     if (data.containsKey('created_at')) {
       context.handle(_createdAtMeta,
           createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
@@ -1773,6 +1795,10 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
           DriftSqlType.string, data['${effectivePrefix}topic_attempt_id']),
       revisionNumber: attachedDatabase.typeMapping
           .read(DriftSqlType.int, data['${effectivePrefix}revision_number'])!,
+      audioPath: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}audio_path']),
+      topicJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}topic_json']),
       createdAt: attachedDatabase.typeMapping
           .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
     );
@@ -1802,6 +1828,19 @@ class DailySpeakingSessionTableData extends DataClass
   /// Nullable / default 1 so pre-v6 rows migrate cleanly as standalone v1s.
   final String? topicAttemptId;
   final int revisionNumber;
+
+  /// Local filesystem path to the saved recording (schema v7, voice only).
+  /// Audio is retained only for the active attempt chain and pruned when a new
+  /// chain starts (see `DailySpeakingBloc._pruneAudioExceptChain`), so this is
+  /// null for the text path and for pruned older sessions.
+  final String? audioPath;
+
+  /// Serialized [DailySpeakingTopic] for loop-capable on-ramps (schema v8).
+  /// Lets the learner resume the topic from history ("Polish & retry") without
+  /// depending on the topic bank — and recovers the own-topic prompt, which is
+  /// otherwise lost (own-topic stores only `topicId = 'own'`). Null for
+  /// just-talk and legacy rows.
+  final String? topicJson;
   final DateTime createdAt;
   const DailySpeakingSessionTableData(
       {required this.id,
@@ -1813,6 +1852,8 @@ class DailySpeakingSessionTableData extends DataClass
       required this.totalTokens,
       this.topicAttemptId,
       required this.revisionNumber,
+      this.audioPath,
+      this.topicJson,
       required this.createdAt});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -1832,6 +1873,12 @@ class DailySpeakingSessionTableData extends DataClass
       map['topic_attempt_id'] = Variable<String>(topicAttemptId);
     }
     map['revision_number'] = Variable<int>(revisionNumber);
+    if (!nullToAbsent || audioPath != null) {
+      map['audio_path'] = Variable<String>(audioPath);
+    }
+    if (!nullToAbsent || topicJson != null) {
+      map['topic_json'] = Variable<String>(topicJson);
+    }
     map['created_at'] = Variable<DateTime>(createdAt);
     return map;
   }
@@ -1853,6 +1900,12 @@ class DailySpeakingSessionTableData extends DataClass
           ? const Value.absent()
           : Value(topicAttemptId),
       revisionNumber: Value(revisionNumber),
+      audioPath: audioPath == null && nullToAbsent
+          ? const Value.absent()
+          : Value(audioPath),
+      topicJson: topicJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(topicJson),
       createdAt: Value(createdAt),
     );
   }
@@ -1870,6 +1923,8 @@ class DailySpeakingSessionTableData extends DataClass
       totalTokens: serializer.fromJson<int>(json['totalTokens']),
       topicAttemptId: serializer.fromJson<String?>(json['topicAttemptId']),
       revisionNumber: serializer.fromJson<int>(json['revisionNumber']),
+      audioPath: serializer.fromJson<String?>(json['audioPath']),
+      topicJson: serializer.fromJson<String?>(json['topicJson']),
       createdAt: serializer.fromJson<DateTime>(json['createdAt']),
     );
   }
@@ -1886,6 +1941,8 @@ class DailySpeakingSessionTableData extends DataClass
       'totalTokens': serializer.toJson<int>(totalTokens),
       'topicAttemptId': serializer.toJson<String?>(topicAttemptId),
       'revisionNumber': serializer.toJson<int>(revisionNumber),
+      'audioPath': serializer.toJson<String?>(audioPath),
+      'topicJson': serializer.toJson<String?>(topicJson),
       'createdAt': serializer.toJson<DateTime>(createdAt),
     };
   }
@@ -1900,6 +1957,8 @@ class DailySpeakingSessionTableData extends DataClass
           int? totalTokens,
           Value<String?> topicAttemptId = const Value.absent(),
           int? revisionNumber,
+          Value<String?> audioPath = const Value.absent(),
+          Value<String?> topicJson = const Value.absent(),
           DateTime? createdAt}) =>
       DailySpeakingSessionTableData(
         id: id ?? this.id,
@@ -1912,6 +1971,8 @@ class DailySpeakingSessionTableData extends DataClass
         topicAttemptId:
             topicAttemptId.present ? topicAttemptId.value : this.topicAttemptId,
         revisionNumber: revisionNumber ?? this.revisionNumber,
+        audioPath: audioPath.present ? audioPath.value : this.audioPath,
+        topicJson: topicJson.present ? topicJson.value : this.topicJson,
         createdAt: createdAt ?? this.createdAt,
       );
   DailySpeakingSessionTableData copyWithCompanion(
@@ -1933,6 +1994,8 @@ class DailySpeakingSessionTableData extends DataClass
       revisionNumber: data.revisionNumber.present
           ? data.revisionNumber.value
           : this.revisionNumber,
+      audioPath: data.audioPath.present ? data.audioPath.value : this.audioPath,
+      topicJson: data.topicJson.present ? data.topicJson.value : this.topicJson,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
     );
   }
@@ -1949,14 +2012,27 @@ class DailySpeakingSessionTableData extends DataClass
           ..write('totalTokens: $totalTokens, ')
           ..write('topicAttemptId: $topicAttemptId, ')
           ..write('revisionNumber: $revisionNumber, ')
+          ..write('audioPath: $audioPath, ')
+          ..write('topicJson: $topicJson, ')
           ..write('createdAt: $createdAt')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode => Object.hash(id, topicId, onRamp, inputMode, inputText,
-      feedbackJson, totalTokens, topicAttemptId, revisionNumber, createdAt);
+  int get hashCode => Object.hash(
+      id,
+      topicId,
+      onRamp,
+      inputMode,
+      inputText,
+      feedbackJson,
+      totalTokens,
+      topicAttemptId,
+      revisionNumber,
+      audioPath,
+      topicJson,
+      createdAt);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1970,6 +2046,8 @@ class DailySpeakingSessionTableData extends DataClass
           other.totalTokens == this.totalTokens &&
           other.topicAttemptId == this.topicAttemptId &&
           other.revisionNumber == this.revisionNumber &&
+          other.audioPath == this.audioPath &&
+          other.topicJson == this.topicJson &&
           other.createdAt == this.createdAt);
 }
 
@@ -1984,6 +2062,8 @@ class DailySpeakingSessionTableCompanion
   final Value<int> totalTokens;
   final Value<String?> topicAttemptId;
   final Value<int> revisionNumber;
+  final Value<String?> audioPath;
+  final Value<String?> topicJson;
   final Value<DateTime> createdAt;
   const DailySpeakingSessionTableCompanion({
     this.id = const Value.absent(),
@@ -1995,6 +2075,8 @@ class DailySpeakingSessionTableCompanion
     this.totalTokens = const Value.absent(),
     this.topicAttemptId = const Value.absent(),
     this.revisionNumber = const Value.absent(),
+    this.audioPath = const Value.absent(),
+    this.topicJson = const Value.absent(),
     this.createdAt = const Value.absent(),
   });
   DailySpeakingSessionTableCompanion.insert({
@@ -2007,6 +2089,8 @@ class DailySpeakingSessionTableCompanion
     required int totalTokens,
     this.topicAttemptId = const Value.absent(),
     this.revisionNumber = const Value.absent(),
+    this.audioPath = const Value.absent(),
+    this.topicJson = const Value.absent(),
     this.createdAt = const Value.absent(),
   })  : onRamp = Value(onRamp),
         inputMode = Value(inputMode),
@@ -2022,6 +2106,8 @@ class DailySpeakingSessionTableCompanion
     Expression<int>? totalTokens,
     Expression<String>? topicAttemptId,
     Expression<int>? revisionNumber,
+    Expression<String>? audioPath,
+    Expression<String>? topicJson,
     Expression<DateTime>? createdAt,
   }) {
     return RawValuesInsertable({
@@ -2034,6 +2120,8 @@ class DailySpeakingSessionTableCompanion
       if (totalTokens != null) 'total_tokens': totalTokens,
       if (topicAttemptId != null) 'topic_attempt_id': topicAttemptId,
       if (revisionNumber != null) 'revision_number': revisionNumber,
+      if (audioPath != null) 'audio_path': audioPath,
+      if (topicJson != null) 'topic_json': topicJson,
       if (createdAt != null) 'created_at': createdAt,
     });
   }
@@ -2048,6 +2136,8 @@ class DailySpeakingSessionTableCompanion
       Value<int>? totalTokens,
       Value<String?>? topicAttemptId,
       Value<int>? revisionNumber,
+      Value<String?>? audioPath,
+      Value<String?>? topicJson,
       Value<DateTime>? createdAt}) {
     return DailySpeakingSessionTableCompanion(
       id: id ?? this.id,
@@ -2059,6 +2149,8 @@ class DailySpeakingSessionTableCompanion
       totalTokens: totalTokens ?? this.totalTokens,
       topicAttemptId: topicAttemptId ?? this.topicAttemptId,
       revisionNumber: revisionNumber ?? this.revisionNumber,
+      audioPath: audioPath ?? this.audioPath,
+      topicJson: topicJson ?? this.topicJson,
       createdAt: createdAt ?? this.createdAt,
     );
   }
@@ -2093,6 +2185,12 @@ class DailySpeakingSessionTableCompanion
     if (revisionNumber.present) {
       map['revision_number'] = Variable<int>(revisionNumber.value);
     }
+    if (audioPath.present) {
+      map['audio_path'] = Variable<String>(audioPath.value);
+    }
+    if (topicJson.present) {
+      map['topic_json'] = Variable<String>(topicJson.value);
+    }
     if (createdAt.present) {
       map['created_at'] = Variable<DateTime>(createdAt.value);
     }
@@ -2111,6 +2209,8 @@ class DailySpeakingSessionTableCompanion
           ..write('totalTokens: $totalTokens, ')
           ..write('topicAttemptId: $topicAttemptId, ')
           ..write('revisionNumber: $revisionNumber, ')
+          ..write('audioPath: $audioPath, ')
+          ..write('topicJson: $topicJson, ')
           ..write('createdAt: $createdAt')
           ..write(')'))
         .toString();
@@ -3451,6 +3551,8 @@ typedef $$DailySpeakingSessionTableTableCreateCompanionBuilder
   required int totalTokens,
   Value<String?> topicAttemptId,
   Value<int> revisionNumber,
+  Value<String?> audioPath,
+  Value<String?> topicJson,
   Value<DateTime> createdAt,
 });
 typedef $$DailySpeakingSessionTableTableUpdateCompanionBuilder
@@ -3464,6 +3566,8 @@ typedef $$DailySpeakingSessionTableTableUpdateCompanionBuilder
   Value<int> totalTokens,
   Value<String?> topicAttemptId,
   Value<int> revisionNumber,
+  Value<String?> audioPath,
+  Value<String?> topicJson,
   Value<DateTime> createdAt,
 });
 
@@ -3504,6 +3608,12 @@ class $$DailySpeakingSessionTableTableFilterComposer
   ColumnFilters<int> get revisionNumber => $composableBuilder(
       column: $table.revisionNumber,
       builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get audioPath => $composableBuilder(
+      column: $table.audioPath, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get topicJson => $composableBuilder(
+      column: $table.topicJson, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get createdAt => $composableBuilder(
       column: $table.createdAt, builder: (column) => ColumnFilters(column));
@@ -3548,6 +3658,12 @@ class $$DailySpeakingSessionTableTableOrderingComposer
       column: $table.revisionNumber,
       builder: (column) => ColumnOrderings(column));
 
+  ColumnOrderings<String> get audioPath => $composableBuilder(
+      column: $table.audioPath, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get topicJson => $composableBuilder(
+      column: $table.topicJson, builder: (column) => ColumnOrderings(column));
+
   ColumnOrderings<DateTime> get createdAt => $composableBuilder(
       column: $table.createdAt, builder: (column) => ColumnOrderings(column));
 }
@@ -3587,6 +3703,12 @@ class $$DailySpeakingSessionTableTableAnnotationComposer
 
   GeneratedColumn<int> get revisionNumber => $composableBuilder(
       column: $table.revisionNumber, builder: (column) => column);
+
+  GeneratedColumn<String> get audioPath =>
+      $composableBuilder(column: $table.audioPath, builder: (column) => column);
+
+  GeneratedColumn<String> get topicJson =>
+      $composableBuilder(column: $table.topicJson, builder: (column) => column);
 
   GeneratedColumn<DateTime> get createdAt =>
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
@@ -3632,6 +3754,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             Value<int> totalTokens = const Value.absent(),
             Value<String?> topicAttemptId = const Value.absent(),
             Value<int> revisionNumber = const Value.absent(),
+            Value<String?> audioPath = const Value.absent(),
+            Value<String?> topicJson = const Value.absent(),
             Value<DateTime> createdAt = const Value.absent(),
           }) =>
               DailySpeakingSessionTableCompanion(
@@ -3644,6 +3768,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             totalTokens: totalTokens,
             topicAttemptId: topicAttemptId,
             revisionNumber: revisionNumber,
+            audioPath: audioPath,
+            topicJson: topicJson,
             createdAt: createdAt,
           ),
           createCompanionCallback: ({
@@ -3656,6 +3782,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             required int totalTokens,
             Value<String?> topicAttemptId = const Value.absent(),
             Value<int> revisionNumber = const Value.absent(),
+            Value<String?> audioPath = const Value.absent(),
+            Value<String?> topicJson = const Value.absent(),
             Value<DateTime> createdAt = const Value.absent(),
           }) =>
               DailySpeakingSessionTableCompanion.insert(
@@ -3668,6 +3796,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             totalTokens: totalTokens,
             topicAttemptId: topicAttemptId,
             revisionNumber: revisionNumber,
+            audioPath: audioPath,
+            topicJson: topicJson,
             createdAt: createdAt,
           ),
           withReferenceMapper: (p0) => p0

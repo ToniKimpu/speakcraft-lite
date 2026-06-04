@@ -7,7 +7,10 @@ import 'package:speakcraft/l10n/generated/l10n.dart';
 
 import 'widgets/session_limit_banner.dart';
 
-const int kDailySessionLimit = 3;
+// DEBUG: bumped from 3 → 100 so the client-side cap doesn't block testing.
+// The real budget is enforced server-side anyway (this is decorative). Restore
+// to 3 before release.
+const int kDailySessionLimit = 100;
 
 /// Daily Speaking landing page. Three on-ramps to a recording flow.
 ///

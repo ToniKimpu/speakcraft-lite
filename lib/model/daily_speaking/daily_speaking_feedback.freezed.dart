@@ -25,6 +25,14 @@ mixin _$DailySpeakingFeedback {
   CefrLevel get level => throw _privateConstructorUsedError;
   @JsonKey(name: 'inferred_topic')
   String? get inferredTopic => throw _privateConstructorUsedError;
+
+  /// The learner's words as the AI heard them. Always returned for voice
+  /// sessions (Gemini already reads the audio, so the marginal token cost is
+  /// small) and persisted into the session's `inputText` so the result page
+  /// and history can show what was actually said. Empty on the text path,
+  /// where `inputText` already holds the typed words.
+  @JsonKey(name: 'transcript')
+  String get transcript => throw _privateConstructorUsedError;
   @JsonKey(name: 'duration_seconds')
   int get durationSeconds => throw _privateConstructorUsedError;
   @JsonKey(name: 'word_count')
@@ -82,6 +90,7 @@ abstract class $DailySpeakingFeedbackCopyWith<$Res> {
       {int score,
       CefrLevel level,
       @JsonKey(name: 'inferred_topic') String? inferredTopic,
+      @JsonKey(name: 'transcript') String transcript,
       @JsonKey(name: 'duration_seconds') int durationSeconds,
       @JsonKey(name: 'word_count') int wordCount,
       @JsonKey(name: 'speaking_pace_wpm') int speakingPaceWpm,
@@ -125,6 +134,7 @@ class _$DailySpeakingFeedbackCopyWithImpl<$Res,
     Object? score = null,
     Object? level = null,
     Object? inferredTopic = freezed,
+    Object? transcript = null,
     Object? durationSeconds = null,
     Object? wordCount = null,
     Object? speakingPaceWpm = null,
@@ -157,6 +167,10 @@ class _$DailySpeakingFeedbackCopyWithImpl<$Res,
           ? _value.inferredTopic
           : inferredTopic // ignore: cast_nullable_to_non_nullable
               as String?,
+      transcript: null == transcript
+          ? _value.transcript
+          : transcript // ignore: cast_nullable_to_non_nullable
+              as String,
       durationSeconds: null == durationSeconds
           ? _value.durationSeconds
           : durationSeconds // ignore: cast_nullable_to_non_nullable
@@ -260,6 +274,7 @@ abstract class _$$DailySpeakingFeedbackImplCopyWith<$Res>
       {int score,
       CefrLevel level,
       @JsonKey(name: 'inferred_topic') String? inferredTopic,
+      @JsonKey(name: 'transcript') String transcript,
       @JsonKey(name: 'duration_seconds') int durationSeconds,
       @JsonKey(name: 'word_count') int wordCount,
       @JsonKey(name: 'speaking_pace_wpm') int speakingPaceWpm,
@@ -302,6 +317,7 @@ class __$$DailySpeakingFeedbackImplCopyWithImpl<$Res>
     Object? score = null,
     Object? level = null,
     Object? inferredTopic = freezed,
+    Object? transcript = null,
     Object? durationSeconds = null,
     Object? wordCount = null,
     Object? speakingPaceWpm = null,
@@ -334,6 +350,10 @@ class __$$DailySpeakingFeedbackImplCopyWithImpl<$Res>
           ? _value.inferredTopic
           : inferredTopic // ignore: cast_nullable_to_non_nullable
               as String?,
+      transcript: null == transcript
+          ? _value.transcript
+          : transcript // ignore: cast_nullable_to_non_nullable
+              as String,
       durationSeconds: null == durationSeconds
           ? _value.durationSeconds
           : durationSeconds // ignore: cast_nullable_to_non_nullable
@@ -417,6 +437,7 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
       {required this.score,
       this.level = CefrLevel.beginner,
       @JsonKey(name: 'inferred_topic') this.inferredTopic,
+      @JsonKey(name: 'transcript') this.transcript = '',
       @JsonKey(name: 'duration_seconds') this.durationSeconds = 0,
       @JsonKey(name: 'word_count') this.wordCount = 0,
       @JsonKey(name: 'speaking_pace_wpm') this.speakingPaceWpm = 0,
@@ -466,6 +487,15 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
   @override
   @JsonKey(name: 'inferred_topic')
   final String? inferredTopic;
+
+  /// The learner's words as the AI heard them. Always returned for voice
+  /// sessions (Gemini already reads the audio, so the marginal token cost is
+  /// small) and persisted into the session's `inputText` so the result page
+  /// and history can show what was actually said. Empty on the text path,
+  /// where `inputText` already holds the typed words.
+  @override
+  @JsonKey(name: 'transcript')
+  final String transcript;
   @override
   @JsonKey(name: 'duration_seconds')
   final int durationSeconds;
@@ -599,7 +629,7 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
 
   @override
   String toString() {
-    return 'DailySpeakingFeedback(score: $score, level: $level, inferredTopic: $inferredTopic, durationSeconds: $durationSeconds, wordCount: $wordCount, speakingPaceWpm: $speakingPaceWpm, strengths: $strengths, fixes: $fixes, nativeRewrite: $nativeRewrite, pronunciationNotes: $pronunciationNotes, explanationMm: $explanationMm, targetPhraseResults: $targetPhraseResults, grammarPatterns: $grammarPatterns, interferenceNotes: $interferenceNotes, vocabUpgrades: $vocabUpgrades, collocations: $collocations, idioms: $idioms, sentenceRewrites: $sentenceRewrites, fillerWords: $fillerWords, subScores: $subScores, totalTokens: $totalTokens)';
+    return 'DailySpeakingFeedback(score: $score, level: $level, inferredTopic: $inferredTopic, transcript: $transcript, durationSeconds: $durationSeconds, wordCount: $wordCount, speakingPaceWpm: $speakingPaceWpm, strengths: $strengths, fixes: $fixes, nativeRewrite: $nativeRewrite, pronunciationNotes: $pronunciationNotes, explanationMm: $explanationMm, targetPhraseResults: $targetPhraseResults, grammarPatterns: $grammarPatterns, interferenceNotes: $interferenceNotes, vocabUpgrades: $vocabUpgrades, collocations: $collocations, idioms: $idioms, sentenceRewrites: $sentenceRewrites, fillerWords: $fillerWords, subScores: $subScores, totalTokens: $totalTokens)';
   }
 
   @override
@@ -611,6 +641,8 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
             (identical(other.level, level) || other.level == level) &&
             (identical(other.inferredTopic, inferredTopic) ||
                 other.inferredTopic == inferredTopic) &&
+            (identical(other.transcript, transcript) ||
+                other.transcript == transcript) &&
             (identical(other.durationSeconds, durationSeconds) ||
                 other.durationSeconds == durationSeconds) &&
             (identical(other.wordCount, wordCount) ||
@@ -654,6 +686,7 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
         score,
         level,
         inferredTopic,
+        transcript,
         durationSeconds,
         wordCount,
         speakingPaceWpm,
@@ -696,6 +729,7 @@ abstract class _DailySpeakingFeedback implements DailySpeakingFeedback {
       {required final int score,
       final CefrLevel level,
       @JsonKey(name: 'inferred_topic') final String? inferredTopic,
+      @JsonKey(name: 'transcript') final String transcript,
       @JsonKey(name: 'duration_seconds') final int durationSeconds,
       @JsonKey(name: 'word_count') final int wordCount,
       @JsonKey(name: 'speaking_pace_wpm') final int speakingPaceWpm,
@@ -730,6 +764,15 @@ abstract class _DailySpeakingFeedback implements DailySpeakingFeedback {
   @override
   @JsonKey(name: 'inferred_topic')
   String? get inferredTopic;
+
+  /// The learner's words as the AI heard them. Always returned for voice
+  /// sessions (Gemini already reads the audio, so the marginal token cost is
+  /// small) and persisted into the session's `inputText` so the result page
+  /// and history can show what was actually said. Empty on the text path,
+  /// where `inputText` already holds the typed words.
+  @override
+  @JsonKey(name: 'transcript')
+  String get transcript;
   @override
   @JsonKey(name: 'duration_seconds')
   int get durationSeconds;

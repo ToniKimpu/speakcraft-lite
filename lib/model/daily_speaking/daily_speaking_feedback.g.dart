@@ -13,6 +13,7 @@ _$DailySpeakingFeedbackImpl _$$DailySpeakingFeedbackImplFromJson(
       level: $enumDecodeNullable(_$CefrLevelEnumMap, json['level']) ??
           CefrLevel.beginner,
       inferredTopic: json['inferred_topic'] as String?,
+      transcript: json['transcript'] as String? ?? '',
       durationSeconds: (json['duration_seconds'] as num?)?.toInt() ?? 0,
       wordCount: (json['word_count'] as num?)?.toInt() ?? 0,
       speakingPaceWpm: (json['speaking_pace_wpm'] as num?)?.toInt() ?? 0,
@@ -75,6 +76,7 @@ Map<String, dynamic> _$$DailySpeakingFeedbackImplToJson(
       'score': instance.score,
       'level': _$CefrLevelEnumMap[instance.level]!,
       'inferred_topic': instance.inferredTopic,
+      'transcript': instance.transcript,
       'duration_seconds': instance.durationSeconds,
       'word_count': instance.wordCount,
       'speaking_pace_wpm': instance.speakingPaceWpm,

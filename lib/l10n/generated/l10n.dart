@@ -1593,6 +1593,641 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Choose your feedback`
+  String get txtDsChooseFeedbackTitle {
+    return Intl.message(
+      'Choose your feedback',
+      name: 'txtDsChooseFeedbackTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick what you want the AI to focus on. You can change this anytime — only what you choose is analyzed.`
+  String get txtDsChooseFeedbackIntro {
+    return Intl.message(
+      'Pick what you want the AI to focus on. You can change this anytime — only what you choose is analyzed.',
+      name: 'txtDsChooseFeedbackIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You'll get a full native rewrite to compare against when you finish this topic.`
+  String get txtDsChooseRewriteNote {
+    return Intl.message(
+      'You\'ll get a full native rewrite to compare against when you finish this topic.',
+      name: 'txtDsChooseRewriteNote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version {revision} — polish your answer and see how much you improve.`
+  String txtDsVersionBanner(Object revision) {
+    return Intl.message(
+      'Version $revision — polish your answer and see how much you improve.',
+      name: 'txtDsVersionBanner',
+      desc: '',
+      args: [revision],
+    );
+  }
+
+  /// `Select at least one`
+  String get txtDsSelectAtLeastOne {
+    return Intl.message(
+      'Select at least one',
+      name: 'txtDsSelectAtLeastOne',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} selected`
+  String txtDsNSelected(Object count) {
+    return Intl.message(
+      '$count selected',
+      name: 'txtDsNSelected',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Accuracy`
+  String get txtDsGroupAccuracy {
+    return Intl.message(
+      'Accuracy',
+      name: 'txtDsGroupAccuracy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Style & naturalness`
+  String get txtDsGroupStyle {
+    return Intl.message(
+      'Style & naturalness',
+      name: 'txtDsGroupStyle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery`
+  String get txtDsGroupDelivery {
+    return Intl.message(
+      'Delivery',
+      name: 'txtDsGroupDelivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scoring`
+  String get txtDsGroupScoring {
+    return Intl.message(
+      'Scoring',
+      name: 'txtDsGroupScoring',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vocabulary`
+  String get txtDsVocabulary {
+    return Intl.message(
+      'Vocabulary',
+      name: 'txtDsVocabulary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grammar`
+  String get txtDsGrammar {
+    return Intl.message('Grammar', name: 'txtDsGrammar', desc: '', args: []);
+  }
+
+  /// `Fluency`
+  String get txtDsFluency {
+    return Intl.message('Fluency', name: 'txtDsFluency', desc: '', args: []);
+  }
+
+  /// `Pronunciation`
+  String get txtDsPronunciation {
+    return Intl.message(
+      'Pronunciation',
+      name: 'txtDsPronunciation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recommended`
+  String get txtDsPresetRecommended {
+    return Intl.message(
+      'Recommended',
+      name: 'txtDsPresetRecommended',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sound natural`
+  String get txtDsPresetSoundNatural {
+    return Intl.message(
+      'Sound natural',
+      name: 'txtDsPresetSoundNatural',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grammar focus`
+  String get txtDsPresetGrammarFocus {
+    return Intl.message(
+      'Grammar focus',
+      name: 'txtDsPresetGrammarFocus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Everything`
+  String get txtDsPresetEverything {
+    return Intl.message(
+      'Everything',
+      name: 'txtDsPresetEverything',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sentence fixes`
+  String get txtDsSecSentenceFixes {
+    return Intl.message(
+      'Sentence fixes',
+      name: 'txtDsSecSentenceFixes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grammar patterns`
+  String get txtDsGrammarPatterns {
+    return Intl.message(
+      'Grammar patterns',
+      name: 'txtDsGrammarPatterns',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Burmese-English errors`
+  String get txtDsBurmeseErrors {
+    return Intl.message(
+      'Burmese-English errors',
+      name: 'txtDsBurmeseErrors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Better word choices`
+  String get txtDsBetterWordChoices {
+    return Intl.message(
+      'Better word choices',
+      name: 'txtDsBetterWordChoices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collocations`
+  String get txtDsCollocations {
+    return Intl.message(
+      'Collocations',
+      name: 'txtDsCollocations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Idioms & phrasal verbs`
+  String get txtDsIdioms {
+    return Intl.message(
+      'Idioms & phrasal verbs',
+      name: 'txtDsIdioms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Native rewrite`
+  String get txtDsWholeRewriteLabel {
+    return Intl.message(
+      'Native rewrite',
+      name: 'txtDsWholeRewriteLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sentence-by-sentence rewrite`
+  String get txtDsSentenceRewriteLabel {
+    return Intl.message(
+      'Sentence-by-sentence rewrite',
+      name: 'txtDsSentenceRewriteLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filler words`
+  String get txtDsFillerWords {
+    return Intl.message(
+      'Filler words',
+      name: 'txtDsFillerWords',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skill sub-scores`
+  String get txtDsSkillSubScores {
+    return Intl.message(
+      'Skill sub-scores',
+      name: 'txtDsSkillSubScores',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Corrects your mistakes with a Burmese reason.`
+  String get txtDsDescSentenceFixes {
+    return Intl.message(
+      'Corrects your mistakes with a Burmese reason.',
+      name: 'txtDsDescSentenceFixes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Groups recurring grammar issues so you see the pattern.`
+  String get txtDsDescGrammarPatterns {
+    return Intl.message(
+      'Groups recurring grammar issues so you see the pattern.',
+      name: 'txtDsDescGrammarPatterns',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flags direct Burmese→English translations.`
+  String get txtDsDescBurmeseErrors {
+    return Intl.message(
+      'Flags direct Burmese→English translations.',
+      name: 'txtDsDescBurmeseErrors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upgrades basic words to more precise ones.`
+  String get txtDsDescBetterVocab {
+    return Intl.message(
+      'Upgrades basic words to more precise ones.',
+      name: 'txtDsDescBetterVocab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Natural word pairings ("make a decision").`
+  String get txtDsDescCollocations {
+    return Intl.message(
+      'Natural word pairings ("make a decision").',
+      name: 'txtDsDescCollocations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Idioms and phrasal verbs you could have used.`
+  String get txtDsDescIdioms {
+    return Intl.message(
+      'Idioms and phrasal verbs you could have used.',
+      name: 'txtDsDescIdioms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One polished version of your whole talk.`
+  String get txtDsDescWholeRewrite {
+    return Intl.message(
+      'One polished version of your whole talk.',
+      name: 'txtDsDescWholeRewrite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Each sentence rewritten to sound native.`
+  String get txtDsDescSentenceRewrite {
+    return Intl.message(
+      'Each sentence rewritten to sound native.',
+      name: 'txtDsDescSentenceRewrite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sounds to work on.`
+  String get txtDsDescPronunciation {
+    return Intl.message(
+      'Sounds to work on.',
+      name: 'txtDsDescPronunciation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Counts "um", "uh", "like", etc.`
+  String get txtDsDescFillerWords {
+    return Intl.message(
+      'Counts "um", "uh", "like", etc.',
+      name: 'txtDsDescFillerWords',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Breaks your score into grammar / vocab / fluency / pronunciation.`
+  String get txtDsDescSubScores {
+    return Intl.message(
+      'Breaks your score into grammar / vocab / fluency / pronunciation.',
+      name: 'txtDsDescSubScores',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hear your progress`
+  String get txtDsHearYourProgress {
+    return Intl.message(
+      'Hear your progress',
+      name: 'txtDsHearYourProgress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your recording`
+  String get txtDsYourRecording {
+    return Intl.message(
+      'Your recording',
+      name: 'txtDsYourRecording',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What you said`
+  String get txtDsWhatYouSaid {
+    return Intl.message(
+      'What you said',
+      name: 'txtDsWhatYouSaid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What you wrote`
+  String get txtDsWhatYouWrote {
+    return Intl.message(
+      'What you wrote',
+      name: 'txtDsWhatYouWrote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skill breakdown`
+  String get txtDsSkillBreakdown {
+    return Intl.message(
+      'Skill breakdown',
+      name: 'txtDsSkillBreakdown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sentence rewrites`
+  String get txtDsSentenceRewritesTitle {
+    return Intl.message(
+      'Sentence rewrites',
+      name: 'txtDsSentenceRewritesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Polish & retry`
+  String get txtDsPolishRetry {
+    return Intl.message(
+      'Polish & retry',
+      name: 'txtDsPolishRetry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I'm done — see native version`
+  String get txtDsImDoneSeeNative {
+    return Intl.message(
+      'I\'m done — see native version',
+      name: 'txtDsImDoneSeeNative',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See native version`
+  String get txtDsSeeNativeVersion {
+    return Intl.message(
+      'See native version',
+      name: 'txtDsSeeNativeVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your latest attempt at this topic.`
+  String get txtDsLatestAttempt {
+    return Intl.message(
+      'Your latest attempt at this topic.',
+      name: 'txtDsLatestAttempt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Up {delta} from v{revision} (was {previous}).`
+  String txtDsScoreUp(Object delta, Object revision, Object previous) {
+    return Intl.message(
+      'Up $delta from v$revision (was $previous).',
+      name: 'txtDsScoreUp',
+      desc: '',
+      args: [delta, revision, previous],
+    );
+  }
+
+  /// `Down {delta} from v{revision} (was {previous}).`
+  String txtDsScoreDown(Object delta, Object revision, Object previous) {
+    return Intl.message(
+      'Down $delta from v$revision (was $previous).',
+      name: 'txtDsScoreDown',
+      desc: '',
+      args: [delta, revision, previous],
+    );
+  }
+
+  /// `Same score as v{revision} ({previous}).`
+  String txtDsScoreSame(Object revision, Object previous) {
+    return Intl.message(
+      'Same score as v$revision ($previous).',
+      name: 'txtDsScoreSame',
+      desc: '',
+      args: [revision, previous],
+    );
+  }
+
+  /// `v{revision}`
+  String txtDsVersionShort(Object revision) {
+    return Intl.message(
+      'v$revision',
+      name: 'txtDsVersionShort',
+      desc: '',
+      args: [revision],
+    );
+  }
+
+  /// `v{revision} (this one)`
+  String txtDsVersionThisOne(Object revision) {
+    return Intl.message(
+      'v$revision (this one)',
+      name: 'txtDsVersionThisOne',
+      desc: '',
+      args: [revision],
+    );
+  }
+
+  /// `Native version`
+  String get txtDsNativeVersion {
+    return Intl.message(
+      'Native version',
+      name: 'txtDsNativeVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Writing a native version of your best attempt…`
+  String get txtDsWritingNativeVersion {
+    return Intl.message(
+      'Writing a native version of your best attempt…',
+      name: 'txtDsWritingNativeVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Couldn't generate the native version.`
+  String get txtDsCouldntGenerateNative {
+    return Intl.message(
+      'Couldn\'t generate the native version.',
+      name: 'txtDsCouldntGenerateNative',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again`
+  String get txtDsTryAgain {
+    return Intl.message('Try again', name: 'txtDsTryAgain', desc: '', args: []);
+  }
+
+  /// `Here's how a native speaker might say it.`
+  String get txtDsNativeHeaderNoScore {
+    return Intl.message(
+      'Here\'s how a native speaker might say it.',
+      name: 'txtDsNativeHeaderNoScore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You finished at {score}. Here's a native version to compare against.`
+  String txtDsNativeHeaderScore(Object score) {
+    return Intl.message(
+      'You finished at $score. Here\'s a native version to compare against.',
+      name: 'txtDsNativeHeaderScore',
+      desc: '',
+      args: [score],
+    );
+  }
+
+  /// `Your version`
+  String get txtDsYourVersion {
+    return Intl.message(
+      'Your version',
+      name: 'txtDsYourVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sentence by sentence`
+  String get txtDsSentenceBySentence {
+    return Intl.message(
+      'Sentence by sentence',
+      name: 'txtDsSentenceBySentence',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} versions · up {delta} from v1`
+  String txtDsChainVersionsUp(Object count, Object delta) {
+    return Intl.message(
+      '$count versions · up $delta from v1',
+      name: 'txtDsChainVersionsUp',
+      desc: '',
+      args: [count, delta],
+    );
+  }
+
+  /// `{count} versions`
+  String txtDsChainVersions(Object count) {
+    return Intl.message(
+      '$count versions',
+      name: 'txtDsChainVersions',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Talk about`
+  String get txtDsTalkAbout {
+    return Intl.message(
+      'Talk about',
+      name: 'txtDsTalkAbout',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -26,6 +26,12 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
     required int score,
     @Default(CefrLevel.beginner) CefrLevel level,
     @JsonKey(name: 'inferred_topic') String? inferredTopic,
+    /// The learner's words as the AI heard them. Always returned for voice
+    /// sessions (Gemini already reads the audio, so the marginal token cost is
+    /// small) and persisted into the session's `inputText` so the result page
+    /// and history can show what was actually said. Empty on the text path,
+    /// where `inputText` already holds the typed words.
+    @JsonKey(name: 'transcript') @Default('') String transcript,
     @JsonKey(name: 'duration_seconds') @Default(0) int durationSeconds,
     @JsonKey(name: 'word_count') @Default(0) int wordCount,
     @JsonKey(name: 'speaking_pace_wpm') @Default(0) int speakingPaceWpm,
