@@ -103,6 +103,8 @@ class DailySpeakingHistoryBloc
       inputText: row.inputText,
       feedback: feedback,
       createdAt: row.createdAt,
+      topicAttemptId: row.topicAttemptId,
+      revisionNumber: row.revisionNumber,
     );
   }
 }

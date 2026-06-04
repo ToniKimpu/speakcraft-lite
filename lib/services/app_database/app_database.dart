@@ -38,7 +38,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 5;
+  int get schemaVersion => 6;
 
   @override
   MigrationStrategy get migration {
@@ -58,6 +58,18 @@ class AppDatabase extends _$AppDatabase {
         }
         if (from < 5) {
           await m.createTable(dailySpeakingSessionTable);
+        }
+        if (from < 6) {
+          // Version-loop columns. Added separately so v5 installs keep their
+          // existing daily-speaking history.
+          await m.addColumn(
+            dailySpeakingSessionTable,
+            dailySpeakingSessionTable.topicAttemptId,
+          );
+          await m.addColumn(
+            dailySpeakingSessionTable,
+            dailySpeakingSessionTable.revisionNumber,
+          );
         }
       },
       beforeOpen: (details) async {

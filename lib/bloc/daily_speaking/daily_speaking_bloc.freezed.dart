@@ -19,10 +19,20 @@ mixin _$DailySpeakingEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitVoice,
     required TResult Function(
-            String text, String onRamp, DailySpeakingTopic? topic)
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitText,
     required TResult Function() reset,
   }) =>
@@ -30,9 +40,20 @@ mixin _$DailySpeakingEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult? Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult? Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult? Function()? reset,
   }) =>
@@ -40,9 +61,20 @@ mixin _$DailySpeakingEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult Function()? reset,
     required TResult orElse(),
@@ -99,7 +131,13 @@ abstract class _$$SubmitVoiceImplCopyWith<$Res> {
           _$SubmitVoiceImpl value, $Res Function(_$SubmitVoiceImpl) then) =
       __$$SubmitVoiceImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String audioPath, String onRamp, DailySpeakingTopic? topic});
+  $Res call(
+      {String audioPath,
+      String onRamp,
+      List<String> requestedSections,
+      DailySpeakingTopic? topic,
+      String? topicAttemptId,
+      int revisionNumber});
 
   $DailySpeakingTopicCopyWith<$Res>? get topic;
 }
@@ -119,7 +157,10 @@ class __$$SubmitVoiceImplCopyWithImpl<$Res>
   $Res call({
     Object? audioPath = null,
     Object? onRamp = null,
+    Object? requestedSections = null,
     Object? topic = freezed,
+    Object? topicAttemptId = freezed,
+    Object? revisionNumber = null,
   }) {
     return _then(_$SubmitVoiceImpl(
       audioPath: null == audioPath
@@ -130,10 +171,22 @@ class __$$SubmitVoiceImplCopyWithImpl<$Res>
           ? _value.onRamp
           : onRamp // ignore: cast_nullable_to_non_nullable
               as String,
+      requestedSections: null == requestedSections
+          ? _value._requestedSections
+          : requestedSections // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as DailySpeakingTopic?,
+      topicAttemptId: freezed == topicAttemptId
+          ? _value.topicAttemptId
+          : topicAttemptId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      revisionNumber: null == revisionNumber
+          ? _value.revisionNumber
+          : revisionNumber // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 
@@ -156,18 +209,38 @@ class __$$SubmitVoiceImplCopyWithImpl<$Res>
 
 class _$SubmitVoiceImpl implements _SubmitVoice {
   const _$SubmitVoiceImpl(
-      {required this.audioPath, required this.onRamp, this.topic});
+      {required this.audioPath,
+      required this.onRamp,
+      required final List<String> requestedSections,
+      this.topic,
+      this.topicAttemptId,
+      this.revisionNumber = 1})
+      : _requestedSections = requestedSections;
 
   @override
   final String audioPath;
   @override
   final String onRamp;
+  final List<String> _requestedSections;
+  @override
+  List<String> get requestedSections {
+    if (_requestedSections is EqualUnmodifiableListView)
+      return _requestedSections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_requestedSections);
+  }
+
   @override
   final DailySpeakingTopic? topic;
+  @override
+  final String? topicAttemptId;
+  @override
+  @JsonKey()
+  final int revisionNumber;
 
   @override
   String toString() {
-    return 'DailySpeakingEvent.submitVoice(audioPath: $audioPath, onRamp: $onRamp, topic: $topic)';
+    return 'DailySpeakingEvent.submitVoice(audioPath: $audioPath, onRamp: $onRamp, requestedSections: $requestedSections, topic: $topic, topicAttemptId: $topicAttemptId, revisionNumber: $revisionNumber)';
   }
 
   @override
@@ -178,11 +251,24 @@ class _$SubmitVoiceImpl implements _SubmitVoice {
             (identical(other.audioPath, audioPath) ||
                 other.audioPath == audioPath) &&
             (identical(other.onRamp, onRamp) || other.onRamp == onRamp) &&
-            (identical(other.topic, topic) || other.topic == topic));
+            const DeepCollectionEquality()
+                .equals(other._requestedSections, _requestedSections) &&
+            (identical(other.topic, topic) || other.topic == topic) &&
+            (identical(other.topicAttemptId, topicAttemptId) ||
+                other.topicAttemptId == topicAttemptId) &&
+            (identical(other.revisionNumber, revisionNumber) ||
+                other.revisionNumber == revisionNumber));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, audioPath, onRamp, topic);
+  int get hashCode => Object.hash(
+      runtimeType,
+      audioPath,
+      onRamp,
+      const DeepCollectionEquality().hash(_requestedSections),
+      topic,
+      topicAttemptId,
+      revisionNumber);
 
   /// Create a copy of DailySpeakingEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -196,42 +282,77 @@ class _$SubmitVoiceImpl implements _SubmitVoice {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitVoice,
     required TResult Function(
-            String text, String onRamp, DailySpeakingTopic? topic)
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitText,
     required TResult Function() reset,
   }) {
-    return submitVoice(audioPath, onRamp, topic);
+    return submitVoice(audioPath, onRamp, requestedSections, topic,
+        topicAttemptId, revisionNumber);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult? Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult? Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult? Function()? reset,
   }) {
-    return submitVoice?.call(audioPath, onRamp, topic);
+    return submitVoice?.call(audioPath, onRamp, requestedSections, topic,
+        topicAttemptId, revisionNumber);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult Function()? reset,
     required TResult orElse(),
   }) {
     if (submitVoice != null) {
-      return submitVoice(audioPath, onRamp, topic);
+      return submitVoice(audioPath, onRamp, requestedSections, topic,
+          topicAttemptId, revisionNumber);
     }
     return orElse();
   }
@@ -275,11 +396,17 @@ abstract class _SubmitVoice implements DailySpeakingEvent {
   const factory _SubmitVoice(
       {required final String audioPath,
       required final String onRamp,
-      final DailySpeakingTopic? topic}) = _$SubmitVoiceImpl;
+      required final List<String> requestedSections,
+      final DailySpeakingTopic? topic,
+      final String? topicAttemptId,
+      final int revisionNumber}) = _$SubmitVoiceImpl;
 
   String get audioPath;
   String get onRamp;
+  List<String> get requestedSections;
   DailySpeakingTopic? get topic;
+  String? get topicAttemptId;
+  int get revisionNumber;
 
   /// Create a copy of DailySpeakingEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -294,7 +421,13 @@ abstract class _$$SubmitTextImplCopyWith<$Res> {
           _$SubmitTextImpl value, $Res Function(_$SubmitTextImpl) then) =
       __$$SubmitTextImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String text, String onRamp, DailySpeakingTopic? topic});
+  $Res call(
+      {String text,
+      String onRamp,
+      List<String> requestedSections,
+      DailySpeakingTopic? topic,
+      String? topicAttemptId,
+      int revisionNumber});
 
   $DailySpeakingTopicCopyWith<$Res>? get topic;
 }
@@ -314,7 +447,10 @@ class __$$SubmitTextImplCopyWithImpl<$Res>
   $Res call({
     Object? text = null,
     Object? onRamp = null,
+    Object? requestedSections = null,
     Object? topic = freezed,
+    Object? topicAttemptId = freezed,
+    Object? revisionNumber = null,
   }) {
     return _then(_$SubmitTextImpl(
       text: null == text
@@ -325,10 +461,22 @@ class __$$SubmitTextImplCopyWithImpl<$Res>
           ? _value.onRamp
           : onRamp // ignore: cast_nullable_to_non_nullable
               as String,
+      requestedSections: null == requestedSections
+          ? _value._requestedSections
+          : requestedSections // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as DailySpeakingTopic?,
+      topicAttemptId: freezed == topicAttemptId
+          ? _value.topicAttemptId
+          : topicAttemptId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      revisionNumber: null == revisionNumber
+          ? _value.revisionNumber
+          : revisionNumber // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 
@@ -351,18 +499,38 @@ class __$$SubmitTextImplCopyWithImpl<$Res>
 
 class _$SubmitTextImpl implements _SubmitText {
   const _$SubmitTextImpl(
-      {required this.text, required this.onRamp, this.topic});
+      {required this.text,
+      required this.onRamp,
+      required final List<String> requestedSections,
+      this.topic,
+      this.topicAttemptId,
+      this.revisionNumber = 1})
+      : _requestedSections = requestedSections;
 
   @override
   final String text;
   @override
   final String onRamp;
+  final List<String> _requestedSections;
+  @override
+  List<String> get requestedSections {
+    if (_requestedSections is EqualUnmodifiableListView)
+      return _requestedSections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_requestedSections);
+  }
+
   @override
   final DailySpeakingTopic? topic;
+  @override
+  final String? topicAttemptId;
+  @override
+  @JsonKey()
+  final int revisionNumber;
 
   @override
   String toString() {
-    return 'DailySpeakingEvent.submitText(text: $text, onRamp: $onRamp, topic: $topic)';
+    return 'DailySpeakingEvent.submitText(text: $text, onRamp: $onRamp, requestedSections: $requestedSections, topic: $topic, topicAttemptId: $topicAttemptId, revisionNumber: $revisionNumber)';
   }
 
   @override
@@ -372,11 +540,24 @@ class _$SubmitTextImpl implements _SubmitText {
             other is _$SubmitTextImpl &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.onRamp, onRamp) || other.onRamp == onRamp) &&
-            (identical(other.topic, topic) || other.topic == topic));
+            const DeepCollectionEquality()
+                .equals(other._requestedSections, _requestedSections) &&
+            (identical(other.topic, topic) || other.topic == topic) &&
+            (identical(other.topicAttemptId, topicAttemptId) ||
+                other.topicAttemptId == topicAttemptId) &&
+            (identical(other.revisionNumber, revisionNumber) ||
+                other.revisionNumber == revisionNumber));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, text, onRamp, topic);
+  int get hashCode => Object.hash(
+      runtimeType,
+      text,
+      onRamp,
+      const DeepCollectionEquality().hash(_requestedSections),
+      topic,
+      topicAttemptId,
+      revisionNumber);
 
   /// Create a copy of DailySpeakingEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -390,42 +571,77 @@ class _$SubmitTextImpl implements _SubmitText {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitVoice,
     required TResult Function(
-            String text, String onRamp, DailySpeakingTopic? topic)
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitText,
     required TResult Function() reset,
   }) {
-    return submitText(text, onRamp, topic);
+    return submitText(
+        text, onRamp, requestedSections, topic, topicAttemptId, revisionNumber);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult? Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult? Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult? Function()? reset,
   }) {
-    return submitText?.call(text, onRamp, topic);
+    return submitText?.call(
+        text, onRamp, requestedSections, topic, topicAttemptId, revisionNumber);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult Function()? reset,
     required TResult orElse(),
   }) {
     if (submitText != null) {
-      return submitText(text, onRamp, topic);
+      return submitText(text, onRamp, requestedSections, topic, topicAttemptId,
+          revisionNumber);
     }
     return orElse();
   }
@@ -469,11 +685,17 @@ abstract class _SubmitText implements DailySpeakingEvent {
   const factory _SubmitText(
       {required final String text,
       required final String onRamp,
-      final DailySpeakingTopic? topic}) = _$SubmitTextImpl;
+      required final List<String> requestedSections,
+      final DailySpeakingTopic? topic,
+      final String? topicAttemptId,
+      final int revisionNumber}) = _$SubmitTextImpl;
 
   String get text;
   String get onRamp;
+  List<String> get requestedSections;
   DailySpeakingTopic? get topic;
+  String? get topicAttemptId;
+  int get revisionNumber;
 
   /// Create a copy of DailySpeakingEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -524,10 +746,20 @@ class _$ResetImpl implements _Reset {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitVoice,
     required TResult Function(
-            String text, String onRamp, DailySpeakingTopic? topic)
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)
         submitText,
     required TResult Function() reset,
   }) {
@@ -538,9 +770,20 @@ class _$ResetImpl implements _Reset {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult? Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult? Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult? Function()? reset,
   }) {
@@ -551,9 +794,20 @@ class _$ResetImpl implements _Reset {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            String audioPath, String onRamp, DailySpeakingTopic? topic)?
+            String audioPath,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitVoice,
-    TResult Function(String text, String onRamp, DailySpeakingTopic? topic)?
+    TResult Function(
+            String text,
+            String onRamp,
+            List<String> requestedSections,
+            DailySpeakingTopic? topic,
+            String? topicAttemptId,
+            int revisionNumber)?
         submitText,
     TResult Function()? reset,
     required TResult orElse(),

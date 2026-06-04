@@ -38,6 +38,61 @@ class DailySpeakingServiceStubs {
       pronunciationNotes: [
         '"th" sound in "there" can be softer',
       ],
+      grammarPatterns: [
+        'Past simple: solid, but watch articles before nouns ("the market").',
+        'You dropped "the/a" a few times — common when translating from Burmese.',
+      ],
+      interferenceNotes: [
+        FeedbackFix(
+          original: 'I very like the food.',
+          corrected: 'I really like the food.',
+          reasonMm:
+              'မြန်မာလို "အရမ်းကြိုက်တယ်" ကို တိုက်ရိုက်ပြန်ထားတာ။ အင်္ဂလိပ်လို "very like" မသုံးပါ — "really like" သုံးပါ။',
+        ),
+      ],
+      vocabUpgrades: [
+        VocabUpgrade(
+          original: 'good',
+          suggestion: 'rewarding',
+          reasonMm: '"good" အစား ပိုတိကျတဲ့ စကားလုံး သုံးကြည့်ပါ။',
+        ),
+        VocabUpgrade(
+          original: 'a lot of fun',
+          suggestion: 'a great time',
+          reasonMm: 'ပိုသဘာဝကျတဲ့ collocation ဖြစ်ပါတယ်။',
+        ),
+      ],
+      collocations: [
+        'grab some snacks',
+        'browse around',
+        'spend time with family',
+      ],
+      idioms: [
+        IdiomSuggestion(
+          expression: 'kill time',
+          meaningMm: 'အချိန်ဖြုန်းရင်း စောင့်နေတာ',
+        ),
+        IdiomSuggestion(
+          expression: 'now and then',
+          meaningMm: 'ရံဖန်ရံခါ',
+        ),
+      ],
+      sentenceRewrites: [
+        SentenceRewrite(
+          original: 'We were there for about two hours just looking.',
+          rewrite: 'We spent a couple of hours just browsing around.',
+        ),
+      ],
+      fillerWords: [
+        FillerWord(word: 'um', count: 4),
+        FillerWord(word: 'like', count: 2),
+      ],
+      subScores: SubScores(
+        grammar: 82,
+        vocabulary: 86,
+        fluency: 90,
+        pronunciation: 88,
+      ),
       explanationMm:
           'အလုံးစုံအနေနဲ့ ပြောတာ ရှင်းရှင်းလင်းလင်း ဖြစ်ပါတယ်။ Past tense မှ verb form တွေပေါ်တွင်တော့ ပြန်အာရုံစိုက်ဖို့လိုပါမယ်။ Speaking pace 95 wpm က intermediate အတွက် သင့်တင့်ပါတယ်။',
       targetPhraseResults: [
@@ -88,6 +143,50 @@ class DailySpeakingServiceStubs {
       pronunciationNotes: [
         '"colleagues" — stress on the first syllable: COL-leagues',
       ],
+      grammarPatterns: [
+        'Present perfect for ongoing situations needs work ("have worked").',
+        'Plural "s" was missing a couple of times.',
+      ],
+      interferenceNotes: [
+        FeedbackFix(
+          original: 'I work since 3 years.',
+          corrected: 'I have worked for three years.',
+          reasonMm:
+              'မြန်မာစဉ်းစားပုံအတိုင်း "since 3 years" ဖြစ်နေတာ။ ကာလအတိုင်းအတာဆို "for" သုံးပြီး present perfect သုံးပါ။',
+        ),
+      ],
+      vocabUpgrades: [
+        VocabUpgrade(
+          original: 'kind',
+          suggestion: 'supportive',
+          reasonMm: 'အလုပ်ခွင်အကြောင်းဆို "supportive" က ပိုသင့်တော်ပါတယ်။',
+        ),
+      ],
+      collocations: [
+        'make a mistake',
+        'get along with colleagues',
+      ],
+      idioms: [
+        IdiomSuggestion(
+          expression: 'have my back',
+          meaningMm: 'ကူညီထောက်ပံ့ပေးတယ်',
+        ),
+      ],
+      sentenceRewrites: [
+        SentenceRewrite(
+          original: 'My colleague are very kind to me always.',
+          rewrite: 'My colleagues are always really kind to me.',
+        ),
+      ],
+      fillerWords: [
+        FillerWord(word: 'uh', count: 5),
+      ],
+      subScores: SubScores(
+        grammar: 58,
+        vocabulary: 68,
+        fluency: 70,
+        pronunciation: 64,
+      ),
       explanationMm:
           'အလုပ်အကြောင်း ပြောတဲ့ vocabulary တွေ ကောင်းပါတယ်။ Grammar အပိုင်းမှာ singular/plural နဲ့ present perfect tense ကို ပိုဂရုစိုက်ပါ။ နောက်တစ်ခါ "for/since" ကိုလည်း ပြန်လေ့လာကြည့်ပါ။',
       totalTokens: 1640,
@@ -123,6 +222,49 @@ class DailySpeakingServiceStubs {
         'Try to slow down between sentences',
         '"works" — make the "s" audible',
       ],
+      grammarPatterns: [
+        'Subject-verb agreement: add "s" for he/she/it ("works").',
+        '"family" takes a singular verb ("has").',
+      ],
+      interferenceNotes: [
+        FeedbackFix(
+          original: 'My family have four peoples.',
+          corrected: 'My family has four people.',
+          reasonMm:
+              'မြန်မာလို "လူလေးယောက်" ကို တိုက်ရိုက်ပြန်တာ။ "people" က plural ဖြစ်ပြီးသား — "peoples" မထည့်ပါ။',
+        ),
+      ],
+      vocabUpgrades: [
+        VocabUpgrade(
+          original: 'stays at home',
+          suggestion: 'is a homemaker',
+          reasonMm: 'ပိုသဘာဝကျတဲ့ အသုံးအနှုန်းပါ။',
+        ),
+      ],
+      collocations: [
+        'a close-knit family',
+      ],
+      idioms: [
+        IdiomSuggestion(
+          expression: 'under one roof',
+          meaningMm: 'အိမ်တစ်အိမ်တည်းမှာ အတူနေတယ်',
+        ),
+      ],
+      sentenceRewrites: [
+        SentenceRewrite(
+          original: 'My father work in factory.',
+          rewrite: 'My father works at a factory.',
+        ),
+      ],
+      fillerWords: [
+        FillerWord(word: 'um', count: 7),
+      ],
+      subScores: SubScores(
+        grammar: 36,
+        vocabulary: 44,
+        fluency: 48,
+        pronunciation: 42,
+      ),
       explanationMm:
           'အခြေခံကို ပြောနိုင်ပါတယ်။ Speaking pace ကို နည်းနည်း ပိုနှေးနှေး ပြောကြည့်ပါ၊ ပိုသေချာစေဖို့ပါ။ Subject-verb agreement (s ထည့်တာ) ကို နောက်တစ်ပတ်ထဲမှာ အာရုံစိုက်ပြီး လေ့ကျင့်ပါ။',
       totalTokens: 1380,

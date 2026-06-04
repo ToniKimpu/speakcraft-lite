@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/daily_speaking/daily_speaking_history_bloc.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 import 'widgets/session_limit_banner.dart';
 
@@ -32,12 +33,13 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Daily Speaking'),
+        title: Text(l10n.txtDailySpeaking),
         actions: [
           IconButton(
-            tooltip: 'History',
+            tooltip: l10n.txtDsHistory,
             icon: const Icon(Icons.history),
             onPressed: () {
               Navigator.pushNamed(context, PmpRoutes.dailySpeakingHistory);
@@ -59,7 +61,7 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Three minutes a day.',
+                    l10n.txtDsHeadline,
                     style: PmpTextStyles.h1.copyWith(
                       color: colorScheme.onSurface,
                       fontFamily: 'ArchivoBlack Regular',
@@ -67,7 +69,7 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Pick how you want to start. Speak or write, then get instant feedback.',
+                    l10n.txtDsSubhead,
                     style: PmpTextStyles.body2Regular.copyWith(
                       color: colorScheme.onSurfaceVariant,
                     ),
@@ -76,13 +78,12 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
                   const SessionLimitBanner(dailyLimit: kDailySessionLimit),
                   const SizedBox(height: 24),
                   _OnRampCard(
-                    title: 'Just talk',
-                    subtitle:
-                        'No topic, no pressure. Speak freely — the AI will identify what you talked about and give you feedback.',
+                    title: l10n.txtDsJustTalk,
+                    subtitle: l10n.txtDsJustTalkDesc,
                     icon: Icons.mic,
                     accentColor: colorScheme.primary,
                     enabled: !exhausted,
-                    badge: exhausted ? 'Limit reached' : null,
+                    badge: exhausted ? l10n.txtDsLimitReached : null,
                     onTap: () {
                       Navigator.pushNamed(
                         context,
@@ -92,25 +93,33 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
                   ),
                   const SizedBox(height: 12),
                   _OnRampCard(
-                    title: 'Own topic',
-                    subtitle:
-                        'Tell us what you want to talk about, then speak or type.',
+                    title: l10n.txtDsOwnTopic,
+                    subtitle: l10n.txtDsOwnTopicDesc,
                     icon: Icons.edit_note,
                     accentColor: colorScheme.secondary,
-                    enabled: false,
-                    badge: 'Coming soon',
-                    onTap: null,
+                    enabled: !exhausted,
+                    badge: exhausted ? l10n.txtDsLimitReached : null,
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        PmpRoutes.dailySpeakingOwnTopicPrep,
+                      );
+                    },
                   ),
                   const SizedBox(height: 12),
                   _OnRampCard(
-                    title: 'Suggested topic',
-                    subtitle:
-                        'Pick from curated prompts with vocabulary and target phrases.',
+                    title: l10n.txtDsSuggestedTopic,
+                    subtitle: l10n.txtDsSuggestedTopicDesc,
                     icon: Icons.menu_book,
                     accentColor: colorScheme.tertiary,
-                    enabled: false,
-                    badge: 'Coming soon',
-                    onTap: null,
+                    enabled: !exhausted,
+                    badge: exhausted ? l10n.txtDsLimitReached : null,
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        PmpRoutes.dailySpeakingSuggestedList,
+                      );
+                    },
                   ),
                 ],
               ),

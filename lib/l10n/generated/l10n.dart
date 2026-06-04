@@ -853,6 +853,746 @@ class AppLocalizations {
   String get txtShowHint {
     return Intl.message('Show hint', name: 'txtShowHint', desc: '', args: []);
   }
+
+  /// `Done`
+  String get txtDone {
+    return Intl.message('Done', name: 'txtDone', desc: '', args: []);
+  }
+
+  /// `No internet connection.`
+  String get txtNoInternetConnection {
+    return Intl.message(
+      'No internet connection.',
+      name: 'txtNoInternetConnection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily Speaking`
+  String get txtDailySpeaking {
+    return Intl.message(
+      'Daily Speaking',
+      name: 'txtDailySpeaking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History`
+  String get txtDsHistory {
+    return Intl.message('History', name: 'txtDsHistory', desc: '', args: []);
+  }
+
+  /// `Three minutes a day.`
+  String get txtDsHeadline {
+    return Intl.message(
+      'Three minutes a day.',
+      name: 'txtDsHeadline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick how you want to start. Speak or write, then get instant feedback.`
+  String get txtDsSubhead {
+    return Intl.message(
+      'Pick how you want to start. Speak or write, then get instant feedback.',
+      name: 'txtDsSubhead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Just talk`
+  String get txtDsJustTalk {
+    return Intl.message('Just talk', name: 'txtDsJustTalk', desc: '', args: []);
+  }
+
+  /// `No topic, no pressure. Speak freely — the AI will identify what you talked about and give you feedback.`
+  String get txtDsJustTalkDesc {
+    return Intl.message(
+      'No topic, no pressure. Speak freely — the AI will identify what you talked about and give you feedback.',
+      name: 'txtDsJustTalkDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Own topic`
+  String get txtDsOwnTopic {
+    return Intl.message('Own topic', name: 'txtDsOwnTopic', desc: '', args: []);
+  }
+
+  /// `Tell us what you want to talk about, then speak or type.`
+  String get txtDsOwnTopicDesc {
+    return Intl.message(
+      'Tell us what you want to talk about, then speak or type.',
+      name: 'txtDsOwnTopicDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Suggested topic`
+  String get txtDsSuggestedTopic {
+    return Intl.message(
+      'Suggested topic',
+      name: 'txtDsSuggestedTopic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick from curated prompts with vocabulary and target phrases.`
+  String get txtDsSuggestedTopicDesc {
+    return Intl.message(
+      'Pick from curated prompts with vocabulary and target phrases.',
+      name: 'txtDsSuggestedTopicDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Limit reached`
+  String get txtDsLimitReached {
+    return Intl.message(
+      'Limit reached',
+      name: 'txtDsLimitReached',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily limit reached — comes back tomorrow.`
+  String get txtDsDailyLimitReached {
+    return Intl.message(
+      'Daily limit reached — comes back tomorrow.',
+      name: 'txtDsDailyLimitReached',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily limit reached`
+  String get txtDsDailyLimitReachedShort {
+    return Intl.message(
+      'Daily limit reached',
+      name: 'txtDsDailyLimitReachedShort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How it works`
+  String get txtDsHowItWorks {
+    return Intl.message(
+      'How it works',
+      name: 'txtDsHowItWorks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `• Tap the mic and just talk for up to 5 minutes.\n• When you stop, the AI gives you a score, strengths, fixes, and a Burmese explanation.\n• Don't worry about being perfect — the goal is to keep speaking.`
+  String get txtDsHowItWorksBody {
+    return Intl.message(
+      '• Tap the mic and just talk for up to 5 minutes.\n• When you stop, the AI gives you a score, strengths, fixes, and a Burmese explanation.\n• Don\'t worry about being perfect — the goal is to keep speaking.',
+      name: 'txtDsHowItWorksBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reviewing your recording…`
+  String get txtDsReviewingRecording {
+    return Intl.message(
+      'Reviewing your recording…',
+      name: 'txtDsReviewingRecording',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reviewing your writing…`
+  String get txtDsReviewingWriting {
+    return Intl.message(
+      'Reviewing your writing…',
+      name: 'txtDsReviewingWriting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This usually takes a few seconds.`
+  String get txtDsReviewingTakesSeconds {
+    return Intl.message(
+      'This usually takes a few seconds.',
+      name: 'txtDsReviewingTakesSeconds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily Speaking History`
+  String get txtDsHistoryTitle {
+    return Intl.message(
+      'Daily Speaking History',
+      name: 'txtDsHistoryTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today`
+  String get txtDsToday {
+    return Intl.message('Today', name: 'txtDsToday', desc: '', args: []);
+  }
+
+  /// `Yesterday`
+  String get txtDsYesterday {
+    return Intl.message(
+      'Yesterday',
+      name: 'txtDsYesterday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Suggested`
+  String get txtDsSuggested {
+    return Intl.message(
+      'Suggested',
+      name: 'txtDsSuggested',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{onRamp} • {seconds}s • {words} words`
+  String txtDsSessionMeta(Object onRamp, Object seconds, Object words) {
+    return Intl.message(
+      '$onRamp • ${seconds}s • $words words',
+      name: 'txtDsSessionMeta',
+      desc: '',
+      args: [onRamp, seconds, words],
+    );
+  }
+
+  /// `No sessions yet`
+  String get txtDsNoSessionsYet {
+    return Intl.message(
+      'No sessions yet',
+      name: 'txtDsNoSessionsYet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your past Daily Speaking sessions will show up here.`
+  String get txtDsNoSessionsBody {
+    return Intl.message(
+      'Your past Daily Speaking sessions will show up here.',
+      name: 'txtDsNoSessionsBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{used} of {total} sessions today`
+  String txtDsSessionsToday(Object used, Object total) {
+    return Intl.message(
+      '$used of $total sessions today',
+      name: 'txtDsSessionsToday',
+      desc: '',
+      args: [used, total],
+    );
+  }
+
+  /// `max {duration}`
+  String txtDsMaxDuration(Object duration) {
+    return Intl.message(
+      'max $duration',
+      name: 'txtDsMaxDuration',
+      desc: '',
+      args: [duration],
+    );
+  }
+
+  /// `Recording is unavailable.`
+  String get txtDsRecordingUnavailable {
+    return Intl.message(
+      'Recording is unavailable.',
+      name: 'txtDsRecordingUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tap to stop`
+  String get txtDsTapToStop {
+    return Intl.message(
+      'Tap to stop',
+      name: 'txtDsTapToStop',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tap and start talking`
+  String get txtDsTapToStart {
+    return Intl.message(
+      'Tap and start talking',
+      name: 'txtDsTapToStart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What do you want to talk about?`
+  String get txtDsWhatToTalkAbout {
+    return Intl.message(
+      'What do you want to talk about?',
+      name: 'txtDsWhatToTalkAbout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A topic, a question, or just a vibe — keep it short.`
+  String get txtDsTopicHint {
+    return Intl.message(
+      'A topic, a question, or just a vibe — keep it short.',
+      name: 'txtDsTopicHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. The most stressful week I had`
+  String get txtDsTopicFieldHint {
+    return Intl.message(
+      'e.g. The most stressful week I had',
+      name: 'txtDsTopicFieldHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try one of these`
+  String get txtDsTryOneOfThese {
+    return Intl.message(
+      'Try one of these',
+      name: 'txtDsTryOneOfThese',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Record this`
+  String get txtDsRecordThis {
+    return Intl.message(
+      'Record this',
+      name: 'txtDsRecordThis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write instead`
+  String get txtDsWriteInstead {
+    return Intl.message(
+      'Write instead',
+      name: 'txtDsWriteInstead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My family`
+  String get txtDsSuggestionFamily {
+    return Intl.message(
+      'My family',
+      name: 'txtDsSuggestionFamily',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A recent trip`
+  String get txtDsSuggestionTrip {
+    return Intl.message(
+      'A recent trip',
+      name: 'txtDsSuggestionTrip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My job`
+  String get txtDsSuggestionJob {
+    return Intl.message(
+      'My job',
+      name: 'txtDsSuggestionJob',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A goal I have`
+  String get txtDsSuggestionGoal {
+    return Intl.message(
+      'A goal I have',
+      name: 'txtDsSuggestionGoal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something I'm worried about`
+  String get txtDsSuggestionWorried {
+    return Intl.message(
+      'Something I\'m worried about',
+      name: 'txtDsSuggestionWorried',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your topic`
+  String get txtDsYourTopic {
+    return Intl.message(
+      'Your topic',
+      name: 'txtDsYourTopic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write at least {count} characters.`
+  String txtDsWriteAtLeastChars(Object count) {
+    return Intl.message(
+      'Write at least $count characters.',
+      name: 'txtDsWriteAtLeastChars',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `At least {count} characters`
+  String txtDsAtLeastChars(Object count) {
+    return Intl.message(
+      'At least $count characters',
+      name: 'txtDsAtLeastChars',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Write a paragraph about your topic. Aim for 5-10 sentences.`
+  String get txtDsWritePathHint {
+    return Intl.message(
+      'Write a paragraph about your topic. Aim for 5-10 sentences.',
+      name: 'txtDsWritePathHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get feedback`
+  String get txtDsGetFeedback {
+    return Intl.message(
+      'Get feedback',
+      name: 'txtDsGetFeedback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Feedback`
+  String get txtDsFeedback {
+    return Intl.message('Feedback', name: 'txtDsFeedback', desc: '', args: []);
+  }
+
+  /// `What you did well`
+  String get txtDsWhatYouDidWell {
+    return Intl.message(
+      'What you did well',
+      name: 'txtDsWhatYouDidWell',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Things to fix`
+  String get txtDsThingsToFix {
+    return Intl.message(
+      'Things to fix',
+      name: 'txtDsThingsToFix',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How a native speaker would say it`
+  String get txtDsNativeRewrite {
+    return Intl.message(
+      'How a native speaker would say it',
+      name: 'txtDsNativeRewrite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Target phrases`
+  String get txtDsTargetPhrases {
+    return Intl.message(
+      'Target phrases',
+      name: 'txtDsTargetPhrases',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pronunciation notes`
+  String get txtDsPronunciationNotes {
+    return Intl.message(
+      'Pronunciation notes',
+      name: 'txtDsPronunciationNotes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `အကျဉ်းချုပ်`
+  String get txtDsSummaryMm {
+    return Intl.message(
+      'အကျဉ်းချုပ်',
+      name: 'txtDsSummaryMm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try this topic again`
+  String get txtDsTryTopicAgain {
+    return Intl.message(
+      'Try this topic again',
+      name: 'txtDsTryTopicAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time`
+  String get txtDsTime {
+    return Intl.message('Time', name: 'txtDsTime', desc: '', args: []);
+  }
+
+  /// `Words`
+  String get txtDsWords {
+    return Intl.message('Words', name: 'txtDsWords', desc: '', args: []);
+  }
+
+  /// `Pace`
+  String get txtDsPace {
+    return Intl.message('Pace', name: 'txtDsPace', desc: '', args: []);
+  }
+
+  /// `{wpm} wpm`
+  String txtDsPaceWpm(Object wpm) {
+    return Intl.message(
+      '$wpm wpm',
+      name: 'txtDsPaceWpm',
+      desc: '',
+      args: [wpm],
+    );
+  }
+
+  /// `Topic: {label}`
+  String txtDsTopicColon(Object label) {
+    return Intl.message(
+      'Topic: $label',
+      name: 'txtDsTopicColon',
+      desc: '',
+      args: [label],
+    );
+  }
+
+  /// `Beginner`
+  String get txtDsLevelBeginner {
+    return Intl.message(
+      'Beginner',
+      name: 'txtDsLevelBeginner',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Elementary`
+  String get txtDsLevelElementary {
+    return Intl.message(
+      'Elementary',
+      name: 'txtDsLevelElementary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Intermediate`
+  String get txtDsLevelIntermediate {
+    return Intl.message(
+      'Intermediate',
+      name: 'txtDsLevelIntermediate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upper-Intermediate`
+  String get txtDsLevelUpperIntermediate {
+    return Intl.message(
+      'Upper-Intermediate',
+      name: 'txtDsLevelUpperIntermediate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Advanced`
+  String get txtDsLevelAdvanced {
+    return Intl.message(
+      'Advanced',
+      name: 'txtDsLevelAdvanced',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fluent`
+  String get txtDsLevelFluent {
+    return Intl.message('Fluent', name: 'txtDsLevelFluent', desc: '', args: []);
+  }
+
+  /// `Suggested topics`
+  String get txtDsSuggestedTopics {
+    return Intl.message(
+      'Suggested topics',
+      name: 'txtDsSuggestedTopics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New this week`
+  String get txtDsNewThisWeek {
+    return Intl.message(
+      'New this week',
+      name: 'txtDsNewThisWeek',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No topics here yet — check back soon.`
+  String get txtDsNoTopicsHere {
+    return Intl.message(
+      'No topics here yet — check back soon.',
+      name: 'txtDsNoTopicsHere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `NEW`
+  String get txtDsNew {
+    return Intl.message('NEW', name: 'txtDsNew', desc: '', args: []);
+  }
+
+  /// `~{minutes} min`
+  String txtDsApproxMin(Object minutes) {
+    return Intl.message(
+      '~$minutes min',
+      name: 'txtDsApproxMin',
+      desc: '',
+      args: [minutes],
+    );
+  }
+
+  /// `{count} target phrases`
+  String txtDsTargetPhraseCount(Object count) {
+    return Intl.message(
+      '$count target phrases',
+      name: 'txtDsTargetPhraseCount',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Words you might use`
+  String get txtDsWordsYouMightUse {
+    return Intl.message(
+      'Words you might use',
+      name: 'txtDsWordsYouMightUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try to use these phrases`
+  String get txtDsTryUseThesePhrases {
+    return Intl.message(
+      'Try to use these phrases',
+      name: 'txtDsTryUseThesePhrases',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Things you can mention`
+  String get txtDsThingsYouCanMention {
+    return Intl.message(
+      'Things you can mention',
+      name: 'txtDsThingsYouCanMention',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start recording`
+  String get txtDsStartRecording {
+    return Intl.message(
+      'Start recording',
+      name: 'txtDsStartRecording',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your prompt`
+  String get txtDsYourPrompt {
+    return Intl.message(
+      'Your prompt',
+      name: 'txtDsYourPrompt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Example`
+  String get txtDsExample {
+    return Intl.message('Example', name: 'txtDsExample', desc: '', args: []);
+  }
+
+  /// `Try to use`
+  String get txtDsTryToUse {
+    return Intl.message(
+      'Try to use',
+      name: 'txtDsTryToUse',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

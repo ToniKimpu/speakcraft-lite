@@ -12,22 +12,39 @@ structured feedback: score, level, strengths, fixes, native rewrite, Burmese
 `explanation_mm`, and — when a topic was preselected — a checklist of target
 phrases (✅ used / ⬜ missed).
 
-## Current state — `feat/daily_speaking_practice` branch
+## Current state — P1 + P2 + P3 all built behind the stub adapter
 
-The branch ships a **complete P1 flow** wired to a **stub adapter** so the
-full UX (record → submit → result → history → Drift persistence) is testable
-end-to-end without the Gemini API.
+`feat/daily_speaking_practice` shipped P1. `feat/daily_speaking_p2_p3`
+follows up with P2 (own topic + write path) and P3 (suggested topics with
+scaffolding + retry loop). Every on-ramp is now clickable end-to-end against
+the stub adapter — no Gemini key needed to walk through the full UX.
 
 ### What's wired right now
 
-- Home tile → `daily_speaking_entry_page.dart` (3 on-ramp cards; only
-  "Just talk" is enabled).
-- "Just talk" → `just_record/just_record_page.dart` (mic UI with 5-min cap)
-  → spinner ~2s → `feedback/feedback_result_page.dart` (full result UI).
-- History accessible via the app-bar icon on the entry page or by re-reading
-  Drift on demand.
-- `SessionLimitBanner` shows "N of 3 today" derived from Drift rows (decorative
-  — real budget is server-side).
+- Home tile → `daily_speaking_entry_page.dart` — all three cards active
+  (greyed only when the daily session quota is exhausted).
+- **Just talk** → `just_record/just_record_page.dart` → spinner → result.
+- **Own topic** → `own_topic/own_topic_prep_page.dart` (topic textfield + 5
+  suggestion chips) → forks via two CTAs:
+  - `own_topic/own_topic_record_page.dart` (voice with topic banner pinned)
+  - `write_path/write_path_page.dart` (multi-line text, 60–1500 chars)
+- **Suggested topic** →
+  `suggested/suggested_topic_list_page.dart` (grouped by difficulty —
+  Beginner / Intermediate / Advanced; each card shows prompt preview,
+  ~target time, target-phrase count) →
+  `suggested/suggested_topic_prep_page.dart` (prompt EN+MM, vocab chips with
+  tap-to-expand definition popover, target phrase cards, warmup questions)
+  → `suggested/suggested_topic_record_page.dart` (recorder with topic
+  prompt banner + passive target-phrase chips).
+- All on-ramps converge on `feedback/feedback_result_page.dart`. The
+  suggested path also passes the `topic` through the route arguments so the
+  result page can render a **"Try this topic again"** CTA — only enabled
+  when `onRamp == suggested` and `topic != null`, so just-talk / own-topic
+  stay terminal.
+- History accessible via the app-bar icon on the entry page; persists in
+  Drift `dailySpeakingSessionTable` (schema v5).
+- `SessionLimitBanner` shows "N of 3 today" derived from Drift rows
+  (decorative — real budget is server-side).
 
 ### What's stubbed
 
@@ -71,36 +88,91 @@ assets/daily_speaking/
 `main_providers.dart`). `DailySpeakingTopicBloc` is page-scoped because the
 topic bank only matters inside the suggested-topic flow.
 
+## "Choose your feedback" step (between capture and the AI call)
+
+After recording/writing, every on-ramp routes to
+`feedback/choose_feedback_page.dart` (route `dailySpeakingChooseFeedback`)
+**before** submitting. The learner picks which optional sections they want;
+the selection becomes `requested_sections` so unrequested sections cost no
+tokens. Capture pages no longer submit directly — the choose screen owns the
+submit + spinner + success navigation.
+
+- Catalog/presets/defaults: `model/daily_speaking/feedback_section.dart`
+  (single source of truth for the section keys — they're the wire contract).
+- Defaults persist in `shared_preferences` under `ds_feedback_sections`.
+- Voice-only options (pronunciation, filler words) auto-hide on the write path.
+- The stub (`daily_speaking_service.dart#_applyRequestedSections`) blanks any
+  field whose section wasn't requested, mirroring what the real edge function
+  must do. The edge function MUST read `requested_sections` and emit only those.
+- Section/preset/group **labels are inline English** in the choose + result
+  pages (localize later). See `daily_speaking_feature.md` for the full design.
+
+## The version loop (v1 → v2 → …)
+
+Suggested + own-topic are iterate-and-improve loops; just-talk stays one-shot.
+The result page offers **"Polish & retry"** (re-capture the same topic, carrying
+`topicAttemptId` + an incremented `revisionNumber`) and **"I'm done — see native
+version"** (`feedback/final_rewrite_page.dart`, route `dailySpeakingFinalRewrite`).
+
+- Sessions chain via `topicAttemptId` + `revisionNumber` on
+  `dailySpeakingSessionTable` (**schema v6**); the id is minted in
+  `DailySpeakingBloc._persist` on the first attempt.
+- During the loop, whole-rewrite + sentence-rewrite are hidden from the choose
+  menu (`kTerminalRevealSections` + `sectionsForMode(includeTerminalReveal:)`) —
+  handing over the answer mid-loop turns the retry into copying. They appear
+  once, at the terminal reveal, paid for exactly once.
+- v2+ results show `_VersionCompareStrip`: the score delta vs the previous
+  version, read from local Drift (no tokens).
+- The terminal reveal makes a rewrite-only `reviewSession` call **directly** (not
+  via the bloc) and does **not** persist a history row. See
+  `daily_speaking_feature.md` ("The version loop") for the rationale + deviations.
+
 ## The three on-ramps converge
 
 ```
-[ Suggested topic ]  (P3, disabled)
-[ Own topic       ]  (P2, disabled)
-[ Just talk       ]  (P1, ENABLED)
+[ Just talk       ]   [ Own topic ]                  [ Suggested topic ]
+        │                  │                                 │
+        │                  ▼                                 ▼
+        │           own_topic_prep_page          suggested_topic_list_page
+        │                  │                                 │
+        │           ┌──────┴──────┐                          ▼
+        │           ▼             ▼                  suggested_topic_prep_page
+        │   own_topic_record  write_path_page                │
+        │     (voice)          (text input)                  ▼
+        │           │             │                  suggested_topic_record_page
+        ▼           │             │                          │
+just_record_page    │             │                          │
+        │           │             │                          │
+        ▼           ▼             ▼                          ▼
+   widgets/session_recorder.dart (5-min hard cap)   (voice)
         │
         ▼
-*_record_page    (uses widgets/session_recorder.dart, 5-min hard cap)
+DailySpeakingBloc.submitVoice / submitText
         │
         ▼
-DailySpeakingBloc.submitVoice   →  service.reviewSession(SessionInput.voice(...))
-                                    ├─ stub:   one of 3 canned responses
-                                    └─ real:   supabase.functions.invoke('daily-speaking-review', ...)
+DailySpeakingService.reviewSession
+   ├─ stub:   one of 3 canned responses (high/mid/low)
+   └─ real:   supabase.functions.invoke('daily-speaking-review', ...)
         │
         ▼
-Drift insert (history only — NOT the budget source of truth)
+Drift insert  (DailySpeakingSessionTable — history only, NOT budget)
         │
         ▼
-feedback_result_page (shared by all on-ramps)
+feedback_result_page (shared)
+   ├─ target_phrase_checklist  iff feedback.targetPhraseResults.isNotEmpty
+   └─ "Try this topic again"   iff route arg `topic != null` AND
+                                   session.onRamp == suggested
 ```
 
 All on-ramps end up at the same `DailySpeakingSession` Drift row and the same
-result screen. Only differences:
+result screen. The differences are entirely in route arguments and what the
+feedback payload happens to include:
 
-| On-ramp        | topic in row?       | targetPhraseResults? |
-|----------------|---------------------|----------------------|
-| Just talk      | no (inferred field) | no                   |
-| Own topic      | user-typed string   | no                   |
-| Suggested      | curated topic id    | yes                  |
+| On-ramp        | topic carried?            | targetPhraseResults? | retry button? |
+|----------------|---------------------------|----------------------|---------------|
+| Just talk      | none (inferred by Gemini) | no                   | no            |
+| Own topic      | synthetic, `id='own'`     | no                   | no            |
+| Suggested      | curated topic from bank   | yes                  | yes           |
 
 ## Activating the real Gemini path (when the key lands)
 
@@ -123,20 +195,17 @@ Order, exact actions:
 6. Replace `SessionLimitBanner`'s client-side count with the
    `sessions_remaining` field that the edge function should return.
 
-## Activating P2 / P3
+## Topic bank — where it lives
 
-P2 (own-topic + write-path):
-- Build out the placeholder screens at `own_topic/*` and `write_path/*`.
-- Flip the `enabled: false` on the matching `_OnRampCard` calls in
-  `daily_speaking_entry_page.dart`.
+Currently bundled at `assets/daily_speaking/topics/topics.json` and loaded
+by `DailySpeakingTopicBloc`. Add new topics here — each entry must satisfy
+`DailySpeakingTopic.fromJson` (snake_case keys, see the freezed model).
 
-P3 (suggested topics):
-- Fill out the placeholder screens at `suggested/*`.
-- Decide whether to keep the topic bank as a bundled asset or migrate to
-  Bunny CDN (mirror `Env.bunnyListeningAPIKey` + a `daily-speaking-topics/`
-  bucket folder, swap the loader in `daily_speaking_topic_bloc.dart`).
-- Add new topics to `assets/daily_speaking/topics/topics.json`. Each topic
-  shape must satisfy `DailySpeakingTopic.fromJson`.
+When the bank grows past ~50 entries, migrate to Bunny CDN: mirror the
+listening JSON pattern (`Env.bunnyListeningAPIKey` style key, new bucket
+folder `daily-speaking-topics/`) and swap `_loadFromAssets` in
+`daily_speaking_topic_bloc.dart`. The `DailySpeakingTopic` model doesn't
+change.
 
 ## What's deliberately NOT in this branch
 

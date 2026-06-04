@@ -1644,6 +1644,20 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
   late final GeneratedColumn<int> totalTokens = GeneratedColumn<int>(
       'total_tokens', aliasedName, false,
       type: DriftSqlType.int, requiredDuringInsert: true);
+  static const VerificationMeta _topicAttemptIdMeta =
+      const VerificationMeta('topicAttemptId');
+  @override
+  late final GeneratedColumn<String> topicAttemptId = GeneratedColumn<String>(
+      'topic_attempt_id', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _revisionNumberMeta =
+      const VerificationMeta('revisionNumber');
+  @override
+  late final GeneratedColumn<int> revisionNumber = GeneratedColumn<int>(
+      'revision_number', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(1));
   static const VerificationMeta _createdAtMeta =
       const VerificationMeta('createdAt');
   @override
@@ -1661,6 +1675,8 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
         inputText,
         feedbackJson,
         totalTokens,
+        topicAttemptId,
+        revisionNumber,
         createdAt
       ];
   @override
@@ -1713,6 +1729,18 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
     } else if (isInserting) {
       context.missing(_totalTokensMeta);
     }
+    if (data.containsKey('topic_attempt_id')) {
+      context.handle(
+          _topicAttemptIdMeta,
+          topicAttemptId.isAcceptableOrUnknown(
+              data['topic_attempt_id']!, _topicAttemptIdMeta));
+    }
+    if (data.containsKey('revision_number')) {
+      context.handle(
+          _revisionNumberMeta,
+          revisionNumber.isAcceptableOrUnknown(
+              data['revision_number']!, _revisionNumberMeta));
+    }
     if (data.containsKey('created_at')) {
       context.handle(_createdAtMeta,
           createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
@@ -1741,6 +1769,10 @@ class $DailySpeakingSessionTableTable extends DailySpeakingSessionTable
           .read(DriftSqlType.string, data['${effectivePrefix}feedback_json'])!,
       totalTokens: attachedDatabase.typeMapping
           .read(DriftSqlType.int, data['${effectivePrefix}total_tokens'])!,
+      topicAttemptId: attachedDatabase.typeMapping.read(
+          DriftSqlType.string, data['${effectivePrefix}topic_attempt_id']),
+      revisionNumber: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}revision_number'])!,
       createdAt: attachedDatabase.typeMapping
           .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
     );
@@ -1764,6 +1796,12 @@ class DailySpeakingSessionTableData extends DataClass
   /// feedback shape doesn't require a Drift schema migration.
   final String feedbackJson;
   final int totalTokens;
+
+  /// Version-loop chaining (schema v6). [topicAttemptId] groups v1, v2, … of one
+  /// topic attempt; [revisionNumber] is the position in that chain (1-based).
+  /// Nullable / default 1 so pre-v6 rows migrate cleanly as standalone v1s.
+  final String? topicAttemptId;
+  final int revisionNumber;
   final DateTime createdAt;
   const DailySpeakingSessionTableData(
       {required this.id,
@@ -1773,6 +1811,8 @@ class DailySpeakingSessionTableData extends DataClass
       this.inputText,
       required this.feedbackJson,
       required this.totalTokens,
+      this.topicAttemptId,
+      required this.revisionNumber,
       required this.createdAt});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -1788,6 +1828,10 @@ class DailySpeakingSessionTableData extends DataClass
     }
     map['feedback_json'] = Variable<String>(feedbackJson);
     map['total_tokens'] = Variable<int>(totalTokens);
+    if (!nullToAbsent || topicAttemptId != null) {
+      map['topic_attempt_id'] = Variable<String>(topicAttemptId);
+    }
+    map['revision_number'] = Variable<int>(revisionNumber);
     map['created_at'] = Variable<DateTime>(createdAt);
     return map;
   }
@@ -1805,6 +1849,10 @@ class DailySpeakingSessionTableData extends DataClass
           : Value(inputText),
       feedbackJson: Value(feedbackJson),
       totalTokens: Value(totalTokens),
+      topicAttemptId: topicAttemptId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(topicAttemptId),
+      revisionNumber: Value(revisionNumber),
       createdAt: Value(createdAt),
     );
   }
@@ -1820,6 +1868,8 @@ class DailySpeakingSessionTableData extends DataClass
       inputText: serializer.fromJson<String?>(json['inputText']),
       feedbackJson: serializer.fromJson<String>(json['feedbackJson']),
       totalTokens: serializer.fromJson<int>(json['totalTokens']),
+      topicAttemptId: serializer.fromJson<String?>(json['topicAttemptId']),
+      revisionNumber: serializer.fromJson<int>(json['revisionNumber']),
       createdAt: serializer.fromJson<DateTime>(json['createdAt']),
     );
   }
@@ -1834,6 +1884,8 @@ class DailySpeakingSessionTableData extends DataClass
       'inputText': serializer.toJson<String?>(inputText),
       'feedbackJson': serializer.toJson<String>(feedbackJson),
       'totalTokens': serializer.toJson<int>(totalTokens),
+      'topicAttemptId': serializer.toJson<String?>(topicAttemptId),
+      'revisionNumber': serializer.toJson<int>(revisionNumber),
       'createdAt': serializer.toJson<DateTime>(createdAt),
     };
   }
@@ -1846,6 +1898,8 @@ class DailySpeakingSessionTableData extends DataClass
           Value<String?> inputText = const Value.absent(),
           String? feedbackJson,
           int? totalTokens,
+          Value<String?> topicAttemptId = const Value.absent(),
+          int? revisionNumber,
           DateTime? createdAt}) =>
       DailySpeakingSessionTableData(
         id: id ?? this.id,
@@ -1855,6 +1909,9 @@ class DailySpeakingSessionTableData extends DataClass
         inputText: inputText.present ? inputText.value : this.inputText,
         feedbackJson: feedbackJson ?? this.feedbackJson,
         totalTokens: totalTokens ?? this.totalTokens,
+        topicAttemptId:
+            topicAttemptId.present ? topicAttemptId.value : this.topicAttemptId,
+        revisionNumber: revisionNumber ?? this.revisionNumber,
         createdAt: createdAt ?? this.createdAt,
       );
   DailySpeakingSessionTableData copyWithCompanion(
@@ -1870,6 +1927,12 @@ class DailySpeakingSessionTableData extends DataClass
           : this.feedbackJson,
       totalTokens:
           data.totalTokens.present ? data.totalTokens.value : this.totalTokens,
+      topicAttemptId: data.topicAttemptId.present
+          ? data.topicAttemptId.value
+          : this.topicAttemptId,
+      revisionNumber: data.revisionNumber.present
+          ? data.revisionNumber.value
+          : this.revisionNumber,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
     );
   }
@@ -1884,6 +1947,8 @@ class DailySpeakingSessionTableData extends DataClass
           ..write('inputText: $inputText, ')
           ..write('feedbackJson: $feedbackJson, ')
           ..write('totalTokens: $totalTokens, ')
+          ..write('topicAttemptId: $topicAttemptId, ')
+          ..write('revisionNumber: $revisionNumber, ')
           ..write('createdAt: $createdAt')
           ..write(')'))
         .toString();
@@ -1891,7 +1956,7 @@ class DailySpeakingSessionTableData extends DataClass
 
   @override
   int get hashCode => Object.hash(id, topicId, onRamp, inputMode, inputText,
-      feedbackJson, totalTokens, createdAt);
+      feedbackJson, totalTokens, topicAttemptId, revisionNumber, createdAt);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1903,6 +1968,8 @@ class DailySpeakingSessionTableData extends DataClass
           other.inputText == this.inputText &&
           other.feedbackJson == this.feedbackJson &&
           other.totalTokens == this.totalTokens &&
+          other.topicAttemptId == this.topicAttemptId &&
+          other.revisionNumber == this.revisionNumber &&
           other.createdAt == this.createdAt);
 }
 
@@ -1915,6 +1982,8 @@ class DailySpeakingSessionTableCompanion
   final Value<String?> inputText;
   final Value<String> feedbackJson;
   final Value<int> totalTokens;
+  final Value<String?> topicAttemptId;
+  final Value<int> revisionNumber;
   final Value<DateTime> createdAt;
   const DailySpeakingSessionTableCompanion({
     this.id = const Value.absent(),
@@ -1924,6 +1993,8 @@ class DailySpeakingSessionTableCompanion
     this.inputText = const Value.absent(),
     this.feedbackJson = const Value.absent(),
     this.totalTokens = const Value.absent(),
+    this.topicAttemptId = const Value.absent(),
+    this.revisionNumber = const Value.absent(),
     this.createdAt = const Value.absent(),
   });
   DailySpeakingSessionTableCompanion.insert({
@@ -1934,6 +2005,8 @@ class DailySpeakingSessionTableCompanion
     this.inputText = const Value.absent(),
     required String feedbackJson,
     required int totalTokens,
+    this.topicAttemptId = const Value.absent(),
+    this.revisionNumber = const Value.absent(),
     this.createdAt = const Value.absent(),
   })  : onRamp = Value(onRamp),
         inputMode = Value(inputMode),
@@ -1947,6 +2020,8 @@ class DailySpeakingSessionTableCompanion
     Expression<String>? inputText,
     Expression<String>? feedbackJson,
     Expression<int>? totalTokens,
+    Expression<String>? topicAttemptId,
+    Expression<int>? revisionNumber,
     Expression<DateTime>? createdAt,
   }) {
     return RawValuesInsertable({
@@ -1957,6 +2032,8 @@ class DailySpeakingSessionTableCompanion
       if (inputText != null) 'input_text': inputText,
       if (feedbackJson != null) 'feedback_json': feedbackJson,
       if (totalTokens != null) 'total_tokens': totalTokens,
+      if (topicAttemptId != null) 'topic_attempt_id': topicAttemptId,
+      if (revisionNumber != null) 'revision_number': revisionNumber,
       if (createdAt != null) 'created_at': createdAt,
     });
   }
@@ -1969,6 +2046,8 @@ class DailySpeakingSessionTableCompanion
       Value<String?>? inputText,
       Value<String>? feedbackJson,
       Value<int>? totalTokens,
+      Value<String?>? topicAttemptId,
+      Value<int>? revisionNumber,
       Value<DateTime>? createdAt}) {
     return DailySpeakingSessionTableCompanion(
       id: id ?? this.id,
@@ -1978,6 +2057,8 @@ class DailySpeakingSessionTableCompanion
       inputText: inputText ?? this.inputText,
       feedbackJson: feedbackJson ?? this.feedbackJson,
       totalTokens: totalTokens ?? this.totalTokens,
+      topicAttemptId: topicAttemptId ?? this.topicAttemptId,
+      revisionNumber: revisionNumber ?? this.revisionNumber,
       createdAt: createdAt ?? this.createdAt,
     );
   }
@@ -2006,6 +2087,12 @@ class DailySpeakingSessionTableCompanion
     if (totalTokens.present) {
       map['total_tokens'] = Variable<int>(totalTokens.value);
     }
+    if (topicAttemptId.present) {
+      map['topic_attempt_id'] = Variable<String>(topicAttemptId.value);
+    }
+    if (revisionNumber.present) {
+      map['revision_number'] = Variable<int>(revisionNumber.value);
+    }
     if (createdAt.present) {
       map['created_at'] = Variable<DateTime>(createdAt.value);
     }
@@ -2022,6 +2109,8 @@ class DailySpeakingSessionTableCompanion
           ..write('inputText: $inputText, ')
           ..write('feedbackJson: $feedbackJson, ')
           ..write('totalTokens: $totalTokens, ')
+          ..write('topicAttemptId: $topicAttemptId, ')
+          ..write('revisionNumber: $revisionNumber, ')
           ..write('createdAt: $createdAt')
           ..write(')'))
         .toString();
@@ -3360,6 +3449,8 @@ typedef $$DailySpeakingSessionTableTableCreateCompanionBuilder
   Value<String?> inputText,
   required String feedbackJson,
   required int totalTokens,
+  Value<String?> topicAttemptId,
+  Value<int> revisionNumber,
   Value<DateTime> createdAt,
 });
 typedef $$DailySpeakingSessionTableTableUpdateCompanionBuilder
@@ -3371,6 +3462,8 @@ typedef $$DailySpeakingSessionTableTableUpdateCompanionBuilder
   Value<String?> inputText,
   Value<String> feedbackJson,
   Value<int> totalTokens,
+  Value<String?> topicAttemptId,
+  Value<int> revisionNumber,
   Value<DateTime> createdAt,
 });
 
@@ -3403,6 +3496,14 @@ class $$DailySpeakingSessionTableTableFilterComposer
 
   ColumnFilters<int> get totalTokens => $composableBuilder(
       column: $table.totalTokens, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get topicAttemptId => $composableBuilder(
+      column: $table.topicAttemptId,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get revisionNumber => $composableBuilder(
+      column: $table.revisionNumber,
+      builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get createdAt => $composableBuilder(
       column: $table.createdAt, builder: (column) => ColumnFilters(column));
@@ -3439,6 +3540,14 @@ class $$DailySpeakingSessionTableTableOrderingComposer
   ColumnOrderings<int> get totalTokens => $composableBuilder(
       column: $table.totalTokens, builder: (column) => ColumnOrderings(column));
 
+  ColumnOrderings<String> get topicAttemptId => $composableBuilder(
+      column: $table.topicAttemptId,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get revisionNumber => $composableBuilder(
+      column: $table.revisionNumber,
+      builder: (column) => ColumnOrderings(column));
+
   ColumnOrderings<DateTime> get createdAt => $composableBuilder(
       column: $table.createdAt, builder: (column) => ColumnOrderings(column));
 }
@@ -3472,6 +3581,12 @@ class $$DailySpeakingSessionTableTableAnnotationComposer
 
   GeneratedColumn<int> get totalTokens => $composableBuilder(
       column: $table.totalTokens, builder: (column) => column);
+
+  GeneratedColumn<String> get topicAttemptId => $composableBuilder(
+      column: $table.topicAttemptId, builder: (column) => column);
+
+  GeneratedColumn<int> get revisionNumber => $composableBuilder(
+      column: $table.revisionNumber, builder: (column) => column);
 
   GeneratedColumn<DateTime> get createdAt =>
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
@@ -3515,6 +3630,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             Value<String?> inputText = const Value.absent(),
             Value<String> feedbackJson = const Value.absent(),
             Value<int> totalTokens = const Value.absent(),
+            Value<String?> topicAttemptId = const Value.absent(),
+            Value<int> revisionNumber = const Value.absent(),
             Value<DateTime> createdAt = const Value.absent(),
           }) =>
               DailySpeakingSessionTableCompanion(
@@ -3525,6 +3642,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             inputText: inputText,
             feedbackJson: feedbackJson,
             totalTokens: totalTokens,
+            topicAttemptId: topicAttemptId,
+            revisionNumber: revisionNumber,
             createdAt: createdAt,
           ),
           createCompanionCallback: ({
@@ -3535,6 +3654,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             Value<String?> inputText = const Value.absent(),
             required String feedbackJson,
             required int totalTokens,
+            Value<String?> topicAttemptId = const Value.absent(),
+            Value<int> revisionNumber = const Value.absent(),
             Value<DateTime> createdAt = const Value.absent(),
           }) =>
               DailySpeakingSessionTableCompanion.insert(
@@ -3545,6 +3666,8 @@ class $$DailySpeakingSessionTableTableTableManager extends RootTableManager<
             inputText: inputText,
             feedbackJson: feedbackJson,
             totalTokens: totalTokens,
+            topicAttemptId: topicAttemptId,
+            revisionNumber: revisionNumber,
             createdAt: createdAt,
           ),
           withReferenceMapper: (p0) => p0

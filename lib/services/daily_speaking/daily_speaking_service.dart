@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
+import 'package:speakcraft/model/daily_speaking/feedback_section.dart';
 import 'package:speakcraft/services/supabase_service.dart';
 
 import 'daily_speaking_service_stubs.dart';
@@ -15,6 +16,7 @@ class SessionInput {
   SessionInput.voice({
     required this.audioPath,
     required this.onRamp,
+    required this.requestedSections,
     this.topic,
   })  : text = null,
         inputMode = 'voice';
@@ -22,6 +24,7 @@ class SessionInput {
   SessionInput.text({
     required this.text,
     required this.onRamp,
+    required this.requestedSections,
     this.topic,
   })  : audioPath = null,
         inputMode = 'text';
@@ -31,6 +34,11 @@ class SessionInput {
   final DailySpeakingTopic? topic;
   final String onRamp;
   final String inputMode;
+
+  /// Which optional feedback sections the learner asked for. The edge function
+  /// builds its prompt from these so unrequested sections cost no tokens.
+  /// See `FeedbackSectionKey`.
+  final List<String> requestedSections;
 }
 
 /// Single entry point the BLoC calls. Owns the stub/real switch so swapping
@@ -53,13 +61,46 @@ class DailySpeakingService {
     // Pick a canned response based on input hash so different attempts surface
     // different UI states (high / mid / low score) during dev.
     final seed = (input.text ?? input.audioPath ?? '').hashCode;
-    final response = canned[seed.abs() % canned.length];
+    var response = canned[seed.abs() % canned.length];
     // If the on-ramp doesn't carry a topic, drop any target-phrase results from
     // the canned response so the result screen renders correctly.
     if (input.topic == null) {
-      return response.copyWith(targetPhraseResults: const []);
+      response = response.copyWith(targetPhraseResults: const []);
     }
-    return response;
+    // Honor the learner's selection: blank out any optional section they didn't
+    // request, mirroring what the real edge function will omit. Core fields
+    // (score, level, strengths, explanation_mm, metrics) are always kept.
+    return _applyRequestedSections(response, input.requestedSections.toSet());
+  }
+
+  DailySpeakingFeedback _applyRequestedSections(
+    DailySpeakingFeedback f,
+    Set<String> requested,
+  ) {
+    bool has(String key) => requested.contains(key);
+    return f.copyWith(
+      fixes: has(FeedbackSectionKey.sentenceFixes) ? f.fixes : const [],
+      grammarPatterns:
+          has(FeedbackSectionKey.grammarPatterns) ? f.grammarPatterns : const [],
+      interferenceNotes: has(FeedbackSectionKey.burmeseInterference)
+          ? f.interferenceNotes
+          : const [],
+      vocabUpgrades:
+          has(FeedbackSectionKey.betterVocab) ? f.vocabUpgrades : const [],
+      collocations:
+          has(FeedbackSectionKey.collocations) ? f.collocations : const [],
+      idioms: has(FeedbackSectionKey.idioms) ? f.idioms : const [],
+      nativeRewrite:
+          has(FeedbackSectionKey.wholeRewrite) ? f.nativeRewrite : '',
+      sentenceRewrites:
+          has(FeedbackSectionKey.sentenceRewrite) ? f.sentenceRewrites : const [],
+      pronunciationNotes: has(FeedbackSectionKey.pronunciation)
+          ? f.pronunciationNotes
+          : const [],
+      fillerWords:
+          has(FeedbackSectionKey.fillerWords) ? f.fillerWords : const [],
+      subScores: has(FeedbackSectionKey.subScores) ? f.subScores : null,
+    );
   }
 
   Future<DailySpeakingFeedback> _realResponse(SessionInput input) async {
@@ -84,6 +125,7 @@ class DailySpeakingService {
     final body = <String, dynamic>{
       'on_ramp': input.onRamp,
       'input_mode': input.inputMode,
+      'requested_sections': input.requestedSections,
       if (input.topic != null) 'topic': input.topic!.toJson(),
     };
     if (input.audioPath != null) {

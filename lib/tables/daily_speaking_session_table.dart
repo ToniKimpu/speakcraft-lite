@@ -16,5 +16,12 @@ class DailySpeakingSessionTable extends Table {
   /// feedback shape doesn't require a Drift schema migration.
   late final feedbackJson = text()();
   late final totalTokens = integer()();
+
+  /// Version-loop chaining (schema v6). [topicAttemptId] groups v1, v2, … of one
+  /// topic attempt; [revisionNumber] is the position in that chain (1-based).
+  /// Nullable / default 1 so pre-v6 rows migrate cleanly as standalone v1s.
+  late final topicAttemptId = text().nullable()();
+  late final revisionNumber = integer().withDefault(const Constant(1))();
+
   DateTimeColumn get createdAt => dateTime().withDefault(currentDateAndTime)();
 }

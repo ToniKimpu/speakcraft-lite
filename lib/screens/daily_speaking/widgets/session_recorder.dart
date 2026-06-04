@@ -7,6 +7,7 @@ import 'package:record/record.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 /// Hard cap: per memory, sessions are limited to 5 min.
 const int kMaxDailySpeakingSeconds = 300;
@@ -162,7 +163,8 @@ class _SessionRecorderState extends State<SessionRecorder> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'max $capMM:00',
+                      AppLocalizations.of(context)
+                          .txtDsMaxDuration('$capMM:00'),
                       style: PmpTextStyles.label2Regular.copyWith(
                         color: colorScheme.onSurfaceVariant,
                       ),
@@ -183,10 +185,11 @@ class _SessionRecorderState extends State<SessionRecorder> {
             const SizedBox(height: 20),
             Text(
               widget.disabled
-                  ? (widget.disabledMessage ?? 'Recording is unavailable.')
+                  ? (widget.disabledMessage ??
+                      AppLocalizations.of(context).txtDsRecordingUnavailable)
                   : isRecording
-                      ? 'Tap to stop'
-                      : 'Tap and start talking',
+                      ? AppLocalizations.of(context).txtDsTapToStop
+                      : AppLocalizations.of(context).txtDsTapToStart,
               style: PmpTextStyles.body1Regular.copyWith(
                 color: widget.disabled
                     ? colorScheme.onSurfaceVariant

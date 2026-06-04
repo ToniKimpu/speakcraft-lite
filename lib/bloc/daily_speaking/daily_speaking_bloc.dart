@@ -19,12 +19,18 @@ class DailySpeakingEvent with _$DailySpeakingEvent {
   const factory DailySpeakingEvent.submitVoice({
     required String audioPath,
     required String onRamp,
+    required List<String> requestedSections,
     DailySpeakingTopic? topic,
+    String? topicAttemptId,
+    @Default(1) int revisionNumber,
   }) = _SubmitVoice;
   const factory DailySpeakingEvent.submitText({
     required String text,
     required String onRamp,
+    required List<String> requestedSections,
     DailySpeakingTopic? topic,
+    String? topicAttemptId,
+    @Default(1) int revisionNumber,
   }) = _SubmitText;
   const factory DailySpeakingEvent.reset() = _Reset;
 }
@@ -46,10 +52,10 @@ class DailySpeakingBloc
         super(const DailySpeakingState.initial()) {
     on<DailySpeakingEvent>((event, emit) async {
       await event.when(
-        submitVoice: (audioPath, onRamp, topic) =>
-            _submitVoice(audioPath, onRamp, topic, emit),
-        submitText: (text, onRamp, topic) =>
-            _submitText(text, onRamp, topic, emit),
+        submitVoice: (audioPath, onRamp, sections, topic, attemptId, rev) =>
+            _submitVoice(audioPath, onRamp, sections, topic, attemptId, rev, emit),
+        submitText: (text, onRamp, sections, topic, attemptId, rev) =>
+            _submitText(text, onRamp, sections, topic, attemptId, rev, emit),
         reset: () async => emit(const DailySpeakingState.initial()),
       );
     });
@@ -60,7 +66,10 @@ class DailySpeakingBloc
   Future<void> _submitVoice(
     String audioPath,
     String onRamp,
+    List<String> requestedSections,
     DailySpeakingTopic? topic,
+    String? topicAttemptId,
+    int revisionNumber,
     Emitter<DailySpeakingState> emit,
   ) async {
     try {
@@ -74,6 +83,7 @@ class DailySpeakingBloc
         SessionInput.voice(
           audioPath: audioPath,
           onRamp: onRamp,
+          requestedSections: requestedSections,
           topic: topic,
         ),
       );
@@ -83,6 +93,8 @@ class DailySpeakingBloc
         inputMode: DailySpeakingInputMode.voice,
         inputText: null,
         feedback: feedback,
+        topicAttemptId: topicAttemptId,
+        revisionNumber: revisionNumber,
       );
       emit(DailySpeakingState.success(session));
     } catch (e, st) {
@@ -93,7 +105,10 @@ class DailySpeakingBloc
   Future<void> _submitText(
     String text,
     String onRamp,
+    List<String> requestedSections,
     DailySpeakingTopic? topic,
+    String? topicAttemptId,
+    int revisionNumber,
     Emitter<DailySpeakingState> emit,
   ) async {
     final trimmed = text.trim();
@@ -107,6 +122,7 @@ class DailySpeakingBloc
         SessionInput.text(
           text: trimmed,
           onRamp: onRamp,
+          requestedSections: requestedSections,
           topic: topic,
         ),
       );
@@ -116,6 +132,8 @@ class DailySpeakingBloc
         inputMode: DailySpeakingInputMode.text,
         inputText: trimmed,
         feedback: feedback,
+        topicAttemptId: topicAttemptId,
+        revisionNumber: revisionNumber,
       );
       emit(DailySpeakingState.success(session));
     } catch (e, st) {
@@ -129,7 +147,14 @@ class DailySpeakingBloc
     required String inputMode,
     required String? inputText,
     required DailySpeakingFeedback feedback,
+    String? topicAttemptId,
+    int revisionNumber = 1,
   }) async {
+    // Mint a chain id on the first attempt so "Polish & retry" has something to
+    // carry forward. microsecondsSinceEpoch is unique enough for a local,
+    // single-device store and avoids pulling in a uuid dependency.
+    final attemptId =
+        topicAttemptId ?? DateTime.now().microsecondsSinceEpoch.toString();
     final row = await AppDatabase.instance()
         .dailySpeakingSessionTable
         .insertReturning(
@@ -140,6 +165,8 @@ class DailySpeakingBloc
             inputText: Value(inputText),
             feedbackJson: Value(jsonEncode(feedback.toJson())),
             totalTokens: Value(feedback.totalTokens),
+            topicAttemptId: Value(attemptId),
+            revisionNumber: Value(revisionNumber),
           ),
         );
     return DailySpeakingSession(
@@ -150,6 +177,8 @@ class DailySpeakingBloc
       inputText: row.inputText,
       feedback: feedback,
       createdAt: row.createdAt,
+      topicAttemptId: row.topicAttemptId,
+      revisionNumber: row.revisionNumber,
     );
   }
 

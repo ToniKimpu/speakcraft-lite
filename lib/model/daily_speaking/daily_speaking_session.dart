@@ -30,6 +30,14 @@ class DailySpeakingSession with _$DailySpeakingSession {
     String? inputText,
     required DailySpeakingFeedback feedback,
     DateTime? createdAt,
+    /// Groups every version (v1, v2, …) of one topic attempt together. Minted
+    /// on the first attempt; carried forward by "Polish & retry". Null for
+    /// legacy rows and one-off (just-talk) sessions. See the version loop in
+    /// `daily_speaking_feature.md`.
+    String? topicAttemptId,
+
+    /// 1 for the first attempt, 2 for the first retry, etc. Rendered as "v{n}".
+    @Default(1) int revisionNumber,
   }) = _DailySpeakingSession;
 
   factory DailySpeakingSession.fromJson(Map<String, dynamic> json) =>

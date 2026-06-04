@@ -184,7 +184,6 @@ class _StatusSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-
     if (progress.isComplete) {
       return Row(
         mainAxisSize: MainAxisSize.min,

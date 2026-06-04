@@ -30,6 +30,7 @@ class DailySpeakingTopic with _$DailySpeakingTopic {
     @JsonKey(name: 'warmup_questions') @Default(<String>[])
     List<String> warmupQuestions,
     @Default(<String>[]) List<String> tags,
+    @JsonKey(name: 'created_at') DateTime? createdAt,
   }) = _DailySpeakingTopic;
 
   factory DailySpeakingTopic.fromJson(Map<String, dynamic> json) =>

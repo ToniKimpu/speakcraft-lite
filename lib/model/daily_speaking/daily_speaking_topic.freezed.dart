@@ -36,6 +36,8 @@ mixin _$DailySpeakingTopic {
   @JsonKey(name: 'warmup_questions')
   List<String> get warmupQuestions => throw _privateConstructorUsedError;
   List<String> get tags => throw _privateConstructorUsedError;
+  @JsonKey(name: 'created_at')
+  DateTime? get createdAt => throw _privateConstructorUsedError;
 
   /// Serializes this DailySpeakingTopic to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -63,7 +65,8 @@ abstract class $DailySpeakingTopicCopyWith<$Res> {
       List<TopicVocabItem> vocabulary,
       @JsonKey(name: 'target_phrases') List<TopicTargetPhrase> targetPhrases,
       @JsonKey(name: 'warmup_questions') List<String> warmupQuestions,
-      List<String> tags});
+      List<String> tags,
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -91,6 +94,7 @@ class _$DailySpeakingTopicCopyWithImpl<$Res, $Val extends DailySpeakingTopic>
     Object? targetPhrases = null,
     Object? warmupQuestions = null,
     Object? tags = null,
+    Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -133,6 +137,10 @@ class _$DailySpeakingTopicCopyWithImpl<$Res, $Val extends DailySpeakingTopic>
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -155,7 +163,8 @@ abstract class _$$DailySpeakingTopicImplCopyWith<$Res>
       List<TopicVocabItem> vocabulary,
       @JsonKey(name: 'target_phrases') List<TopicTargetPhrase> targetPhrases,
       @JsonKey(name: 'warmup_questions') List<String> warmupQuestions,
-      List<String> tags});
+      List<String> tags,
+      @JsonKey(name: 'created_at') DateTime? createdAt});
 }
 
 /// @nodoc
@@ -181,6 +190,7 @@ class __$$DailySpeakingTopicImplCopyWithImpl<$Res>
     Object? targetPhrases = null,
     Object? warmupQuestions = null,
     Object? tags = null,
+    Object? createdAt = freezed,
   }) {
     return _then(_$DailySpeakingTopicImpl(
       id: null == id
@@ -223,6 +233,10 @@ class __$$DailySpeakingTopicImplCopyWithImpl<$Res>
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -243,7 +257,8 @@ class _$DailySpeakingTopicImpl implements _DailySpeakingTopic {
       final List<TopicTargetPhrase> targetPhrases = const <TopicTargetPhrase>[],
       @JsonKey(name: 'warmup_questions')
       final List<String> warmupQuestions = const <String>[],
-      final List<String> tags = const <String>[]})
+      final List<String> tags = const <String>[],
+      @JsonKey(name: 'created_at') this.createdAt})
       : _vocabulary = vocabulary,
         _targetPhrases = targetPhrases,
         _warmupQuestions = warmupQuestions,
@@ -305,8 +320,12 @@ class _$DailySpeakingTopicImpl implements _DailySpeakingTopic {
   }
 
   @override
+  @JsonKey(name: 'created_at')
+  final DateTime? createdAt;
+
+  @override
   String toString() {
-    return 'DailySpeakingTopic(id: $id, title: $title, promptEn: $promptEn, promptMm: $promptMm, difficulty: $difficulty, durationTargetSeconds: $durationTargetSeconds, vocabulary: $vocabulary, targetPhrases: $targetPhrases, warmupQuestions: $warmupQuestions, tags: $tags)';
+    return 'DailySpeakingTopic(id: $id, title: $title, promptEn: $promptEn, promptMm: $promptMm, difficulty: $difficulty, durationTargetSeconds: $durationTargetSeconds, vocabulary: $vocabulary, targetPhrases: $targetPhrases, warmupQuestions: $warmupQuestions, tags: $tags, createdAt: $createdAt)';
   }
 
   @override
@@ -330,7 +349,9 @@ class _$DailySpeakingTopicImpl implements _DailySpeakingTopic {
                 .equals(other._targetPhrases, _targetPhrases) &&
             const DeepCollectionEquality()
                 .equals(other._warmupQuestions, _warmupQuestions) &&
-            const DeepCollectionEquality().equals(other._tags, _tags));
+            const DeepCollectionEquality().equals(other._tags, _tags) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -346,7 +367,8 @@ class _$DailySpeakingTopicImpl implements _DailySpeakingTopic {
       const DeepCollectionEquality().hash(_vocabulary),
       const DeepCollectionEquality().hash(_targetPhrases),
       const DeepCollectionEquality().hash(_warmupQuestions),
-      const DeepCollectionEquality().hash(_tags));
+      const DeepCollectionEquality().hash(_tags),
+      createdAt);
 
   /// Create a copy of DailySpeakingTopic
   /// with the given fields replaced by the non-null parameter values.
@@ -377,7 +399,9 @@ abstract class _DailySpeakingTopic implements DailySpeakingTopic {
       @JsonKey(name: 'target_phrases')
       final List<TopicTargetPhrase> targetPhrases,
       @JsonKey(name: 'warmup_questions') final List<String> warmupQuestions,
-      final List<String> tags}) = _$DailySpeakingTopicImpl;
+      final List<String> tags,
+      @JsonKey(name: 'created_at')
+      final DateTime? createdAt}) = _$DailySpeakingTopicImpl;
 
   factory _DailySpeakingTopic.fromJson(Map<String, dynamic> json) =
       _$DailySpeakingTopicImpl.fromJson;
@@ -407,6 +431,9 @@ abstract class _DailySpeakingTopic implements DailySpeakingTopic {
   List<String> get warmupQuestions;
   @override
   List<String> get tags;
+  @override
+  @JsonKey(name: 'created_at')
+  DateTime? get createdAt;
 
   /// Create a copy of DailySpeakingTopic
   /// with the given fields replaced by the non-null parameter values.

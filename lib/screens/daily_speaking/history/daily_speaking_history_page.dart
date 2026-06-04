@@ -4,6 +4,7 @@ import 'package:speakcraft/bloc/daily_speaking/daily_speaking_history_bloc.dart'
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
 
 class DailySpeakingHistoryPage extends StatefulWidget {
@@ -26,7 +27,8 @@ class _DailySpeakingHistoryPageState extends State<DailySpeakingHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Daily Speaking History')),
+      appBar: AppBar(
+          title: Text(AppLocalizations.of(context).txtDsHistoryTitle)),
       body: BlocBuilder<DailySpeakingHistoryBloc, DailySpeakingHistoryState>(
         builder: (context, state) {
           return state.maybeWhen(
@@ -61,12 +63,12 @@ class _DayGroup extends StatelessWidget {
   final DateTime day;
   final List<DailySpeakingSession> sessions;
 
-  String _dayLabel(DateTime d) {
+  String _dayLabel(BuildContext context, DateTime d) {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
     final yesterday = today.subtract(const Duration(days: 1));
-    if (d == today) return 'Today';
-    if (d == yesterday) return 'Yesterday';
+    if (d == today) return AppLocalizations.of(context).txtDsToday;
+    if (d == yesterday) return AppLocalizations.of(context).txtDsYesterday;
     return '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
   }
 
@@ -79,7 +81,7 @@ class _DayGroup extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 12, bottom: 8),
           child: Text(
-            _dayLabel(day),
+            _dayLabel(context, day),
             style: PmpTextStyles.body2Semi
                 .copyWith(color: colorScheme.onSurfaceVariant),
           ),
@@ -101,14 +103,15 @@ class _SessionTile extends StatelessWidget {
     return PmpColors.destructive500;
   }
 
-  String _onRampLabel() {
+  String _onRampLabel(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     switch (session.onRamp) {
       case DailySpeakingOnRamp.justTalk:
-        return 'Just talk';
+        return l10n.txtDsJustTalk;
       case DailySpeakingOnRamp.ownTopic:
-        return 'Own topic';
+        return l10n.txtDsOwnTopic;
       case DailySpeakingOnRamp.suggested:
-        return 'Suggested';
+        return l10n.txtDsSuggested;
       default:
         return session.onRamp;
     }
@@ -165,7 +168,7 @@ class _SessionTile extends StatelessWidget {
                       Text(
                         feedback.inferredTopic ??
                             session.topicId ??
-                            _onRampLabel(),
+                            _onRampLabel(context),
                         style: PmpTextStyles.body2Semi
                             .copyWith(color: colorScheme.onSurface),
                         maxLines: 1,
@@ -173,7 +176,11 @@ class _SessionTile extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        '${_onRampLabel()} • ${feedback.durationSeconds}s • ${feedback.wordCount} words',
+                        AppLocalizations.of(context).txtDsSessionMeta(
+                          _onRampLabel(context),
+                          feedback.durationSeconds,
+                          feedback.wordCount,
+                        ),
                         style: PmpTextStyles.sub.copyWith(
                           color: colorScheme.onSurfaceVariant,
                         ),
@@ -210,12 +217,12 @@ class _EmptyState extends StatelessWidget {
                 size: 56, color: colorScheme.onSurfaceVariant),
             const SizedBox(height: 12),
             Text(
-              'No sessions yet',
+              AppLocalizations.of(context).txtDsNoSessionsYet,
               style: PmpTextStyles.h2.copyWith(color: colorScheme.onSurface),
             ),
             const SizedBox(height: 4),
             Text(
-              'Your past Daily Speaking sessions will show up here.',
+              AppLocalizations.of(context).txtDsNoSessionsBody,
               textAlign: TextAlign.center,
               style: PmpTextStyles.body2Regular
                   .copyWith(color: colorScheme.onSurfaceVariant),

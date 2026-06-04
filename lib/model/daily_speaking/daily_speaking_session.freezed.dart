@@ -28,6 +28,15 @@ mixin _$DailySpeakingSession {
   DailySpeakingFeedback get feedback => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
+  /// Groups every version (v1, v2, …) of one topic attempt together. Minted
+  /// on the first attempt; carried forward by "Polish & retry". Null for
+  /// legacy rows and one-off (just-talk) sessions. See the version loop in
+  /// `daily_speaking_feature.md`.
+  String? get topicAttemptId => throw _privateConstructorUsedError;
+
+  /// 1 for the first attempt, 2 for the first retry, etc. Rendered as "v{n}".
+  int get revisionNumber => throw _privateConstructorUsedError;
+
   /// Serializes this DailySpeakingSession to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
@@ -51,7 +60,9 @@ abstract class $DailySpeakingSessionCopyWith<$Res> {
       String inputMode,
       String? inputText,
       DailySpeakingFeedback feedback,
-      DateTime? createdAt});
+      DateTime? createdAt,
+      String? topicAttemptId,
+      int revisionNumber});
 
   $DailySpeakingFeedbackCopyWith<$Res> get feedback;
 }
@@ -79,6 +90,8 @@ class _$DailySpeakingSessionCopyWithImpl<$Res,
     Object? inputText = freezed,
     Object? feedback = null,
     Object? createdAt = freezed,
+    Object? topicAttemptId = freezed,
+    Object? revisionNumber = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -109,6 +122,14 @@ class _$DailySpeakingSessionCopyWithImpl<$Res,
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      topicAttemptId: freezed == topicAttemptId
+          ? _value.topicAttemptId
+          : topicAttemptId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      revisionNumber: null == revisionNumber
+          ? _value.revisionNumber
+          : revisionNumber // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 
@@ -138,7 +159,9 @@ abstract class _$$DailySpeakingSessionImplCopyWith<$Res>
       String inputMode,
       String? inputText,
       DailySpeakingFeedback feedback,
-      DateTime? createdAt});
+      DateTime? createdAt,
+      String? topicAttemptId,
+      int revisionNumber});
 
   @override
   $DailySpeakingFeedbackCopyWith<$Res> get feedback;
@@ -164,6 +187,8 @@ class __$$DailySpeakingSessionImplCopyWithImpl<$Res>
     Object? inputText = freezed,
     Object? feedback = null,
     Object? createdAt = freezed,
+    Object? topicAttemptId = freezed,
+    Object? revisionNumber = null,
   }) {
     return _then(_$DailySpeakingSessionImpl(
       id: null == id
@@ -194,6 +219,14 @@ class __$$DailySpeakingSessionImplCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      topicAttemptId: freezed == topicAttemptId
+          ? _value.topicAttemptId
+          : topicAttemptId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      revisionNumber: null == revisionNumber
+          ? _value.revisionNumber
+          : revisionNumber // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -208,7 +241,9 @@ class _$DailySpeakingSessionImpl implements _DailySpeakingSession {
       required this.inputMode,
       this.inputText,
       required this.feedback,
-      this.createdAt});
+      this.createdAt,
+      this.topicAttemptId,
+      this.revisionNumber = 1});
 
   factory _$DailySpeakingSessionImpl.fromJson(Map<String, dynamic> json) =>
       _$$DailySpeakingSessionImplFromJson(json);
@@ -228,9 +263,21 @@ class _$DailySpeakingSessionImpl implements _DailySpeakingSession {
   @override
   final DateTime? createdAt;
 
+  /// Groups every version (v1, v2, …) of one topic attempt together. Minted
+  /// on the first attempt; carried forward by "Polish & retry". Null for
+  /// legacy rows and one-off (just-talk) sessions. See the version loop in
+  /// `daily_speaking_feature.md`.
+  @override
+  final String? topicAttemptId;
+
+  /// 1 for the first attempt, 2 for the first retry, etc. Rendered as "v{n}".
+  @override
+  @JsonKey()
+  final int revisionNumber;
+
   @override
   String toString() {
-    return 'DailySpeakingSession(id: $id, topicId: $topicId, onRamp: $onRamp, inputMode: $inputMode, inputText: $inputText, feedback: $feedback, createdAt: $createdAt)';
+    return 'DailySpeakingSession(id: $id, topicId: $topicId, onRamp: $onRamp, inputMode: $inputMode, inputText: $inputText, feedback: $feedback, createdAt: $createdAt, topicAttemptId: $topicAttemptId, revisionNumber: $revisionNumber)';
   }
 
   @override
@@ -248,13 +295,17 @@ class _$DailySpeakingSessionImpl implements _DailySpeakingSession {
             (identical(other.feedback, feedback) ||
                 other.feedback == feedback) &&
             (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+                other.createdAt == createdAt) &&
+            (identical(other.topicAttemptId, topicAttemptId) ||
+                other.topicAttemptId == topicAttemptId) &&
+            (identical(other.revisionNumber, revisionNumber) ||
+                other.revisionNumber == revisionNumber));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, topicId, onRamp, inputMode,
-      inputText, feedback, createdAt);
+      inputText, feedback, createdAt, topicAttemptId, revisionNumber);
 
   /// Create a copy of DailySpeakingSession
   /// with the given fields replaced by the non-null parameter values.
@@ -282,7 +333,9 @@ abstract class _DailySpeakingSession implements DailySpeakingSession {
       required final String inputMode,
       final String? inputText,
       required final DailySpeakingFeedback feedback,
-      final DateTime? createdAt}) = _$DailySpeakingSessionImpl;
+      final DateTime? createdAt,
+      final String? topicAttemptId,
+      final int revisionNumber}) = _$DailySpeakingSessionImpl;
 
   factory _DailySpeakingSession.fromJson(Map<String, dynamic> json) =
       _$DailySpeakingSessionImpl.fromJson;
@@ -301,6 +354,17 @@ abstract class _DailySpeakingSession implements DailySpeakingSession {
   DailySpeakingFeedback get feedback;
   @override
   DateTime? get createdAt;
+
+  /// Groups every version (v1, v2, …) of one topic attempt together. Minted
+  /// on the first attempt; carried forward by "Polish & retry". Null for
+  /// legacy rows and one-off (just-talk) sessions. See the version loop in
+  /// `daily_speaking_feature.md`.
+  @override
+  String? get topicAttemptId;
+
+  /// 1 for the first attempt, 2 for the first retry, etc. Rendered as "v{n}".
+  @override
+  int get revisionNumber;
 
   /// Create a copy of DailySpeakingSession
   /// with the given fields replaced by the non-null parameter values.

@@ -6,6 +6,7 @@
     "prompt_mm": "ပြီးခဲ့တဲ့ စနေ-တနင်္ဂနွေ အကြောင်း ပြောပြပါ။ ဘာတွေ လုပ်ဖြစ်လဲ။ ဘယ်သူနဲ့ အတူ ရှိခဲ့လဲ။ မမျှော်လင့်ထားတဲ့ အရာ တစ်ခုခု ဖြစ်ခဲ့လား။",
     "difficulty": "beginner",
     "duration_target_seconds": 180,
+    "created_at": "2026-04-10T08:00:00Z",
     "vocabulary": [
       {
         "term": "errand",
@@ -42,6 +43,7 @@
     "prompt_mm": "ကိုယ်အကြိုက်ဆုံး အစားအစာ တစ်ခုကို ဖော်ပြပါ။ ဘာတွေ ပါဝင်လဲ။ ဘယ်အချိန် စားလေ့ရှိလဲ၊ ဘယ်သူ အကောင်းဆုံး ချက်ပေးနိုင်လဲ။",
     "difficulty": "beginner",
     "duration_target_seconds": 150,
+    "created_at": "2026-05-26T08:00:00Z",
     "vocabulary": [
       {
         "term": "savory",
@@ -72,12 +74,120 @@
     "tags": ["daily-life", "food"]
   },
   {
+    "id": "morning-routine",
+    "title": "Your morning routine",
+    "prompt_en": "Walk me through what you do from the moment you wake up until you leave the house (or start work). What's the first thing you do? What can't you skip?",
+    "prompt_mm": "နံနက်ခင်း အိပ်ရာထတဲ့ အချိန်ကစလို့ အိမ်က ထွက်တဲ့အထိ ဘာတွေ လုပ်လေ့ရှိလဲ၊ ပြောပြပါ။ ပထမဆုံး ဘာလုပ်လဲ၊ ဘယ်အရာက မဖြတ်နိုင်ဘူးလဲ။",
+    "difficulty": "beginner",
+    "duration_target_seconds": 150,
+    "created_at": "2026-05-27T08:00:00Z",
+    "vocabulary": [
+      {
+        "term": "first thing",
+        "definition_mm": "ပထမဆုံး လုပ်တဲ့အရာ၊ အရင်ဆုံး",
+        "example_en": "The first thing I do is check my phone."
+      },
+      {
+        "term": "wind down",
+        "definition_mm": "ဖြည်းဖြည်းချင်း အပန်းဖြေခြင်း၊ စိတ်အေးအောင် လုပ်ခြင်း",
+        "example_en": "I wind down with a cup of tea before bed."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "The first thing I do is ...",
+        "translation_mm": "ပထမဆုံး လုပ်တာက..."
+      },
+      {
+        "phrase_en": "I usually ... before I ...",
+        "translation_mm": "...မလုပ်ခင် ...ပါ"
+      }
+    ],
+    "warmup_questions": [
+      "What time do you wake up?",
+      "What's the first thing you do?",
+      "Do you have coffee or tea?",
+      "What can't you skip?"
+    ],
+    "tags": ["daily-life", "routine"]
+  },
+  {
+    "id": "hobbies",
+    "title": "Talk about a hobby",
+    "prompt_en": "Tell me about a hobby you enjoy. How did you get into it, how often do you do it, and what do you like about it?",
+    "prompt_mm": "ကိုယ်ပျော်ပျော်ပါးပါး လုပ်တဲ့ ဝါသနာတစ်ခုကို ပြောပြပါ။ ဘယ်လိုစ ဖြစ်လာခဲ့လဲ၊ ဘယ်လောက်မကြာခဏ လုပ်လဲ၊ ဘာက ကြိုက်လဲ။",
+    "difficulty": "beginner",
+    "duration_target_seconds": 180,
+    "created_at": "2026-03-15T08:00:00Z",
+    "vocabulary": [
+      {
+        "term": "get into",
+        "definition_mm": "စိတ်ဝင်စားလာခြင်း၊ စတင်လုပ်ဆောင်လာခြင်း",
+        "example_en": "I got into gardening during the lockdown."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "I got into it when ...",
+        "translation_mm": "...အချိန်တုန်းက စတင် စိတ်ဝင်စားလာတယ်"
+      },
+      {
+        "phrase_en": "What I love about it is ...",
+        "translation_mm": "ကြိုက်တာက..."
+      }
+    ],
+    "warmup_questions": [
+      "How did you start?",
+      "How often do you do it?",
+      "Who do you do it with?"
+    ],
+    "tags": ["daily-life", "hobbies"]
+  },
+  {
+    "id": "describe-your-room",
+    "title": "Describe your bedroom",
+    "prompt_en": "Paint a picture of your bedroom for someone who's never seen it. What's the layout, what's on the walls, what would they notice first?",
+    "prompt_mm": "မမြင်ဖူးတဲ့သူတစ်ယောက်ဆီကို ကိုယ့်အိပ်ခန်းအပြင်အဆင်ကို ပုံဖော်ပြောပြပါ။ အခန်းအတွင်း အပြင်အဆင်က ဘယ်လိုလဲ၊ နံရံပေါ်မှာ ဘာတွေရှိလဲ၊ သူတို့ပထမဆုံး ဘာကို သတိထားမိမလဲ။",
+    "difficulty": "beginner",
+    "duration_target_seconds": 150,
+    "created_at": "2026-05-24T08:00:00Z",
+    "vocabulary": [
+      {
+        "term": "cluttered",
+        "definition_mm": "ဖရိုဖရဲ ရှုပ်ပွနေသော",
+        "example_en": "My desk gets cluttered by the end of the week."
+      },
+      {
+        "term": "cozy",
+        "definition_mm": "နွေးထွေး ပျော်စရာ ဖြစ်နေသော",
+        "example_en": "The reading corner feels cozy in winter."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "Right next to ... there's ...",
+        "translation_mm": "...ရဲ့ နံဘေးမှာ ...ရှိတယ်"
+      },
+      {
+        "phrase_en": "The first thing you'd notice is ...",
+        "translation_mm": "ပထမဆုံး သတိထားမိမှာက..."
+      }
+    ],
+    "warmup_questions": [
+      "What's on the walls?",
+      "Is it neat or messy?",
+      "What's your favorite corner?"
+    ],
+    "tags": ["daily-life", "home"]
+  },
+  {
     "id": "challenging-day-at-work",
     "title": "A challenging day at work or school",
     "prompt_en": "Think about a recent day at work or school that was challenging. What made it hard? How did you get through it? What did you learn?",
     "prompt_mm": "လတ်တလော အလုပ်ထဲ ဒါမှမဟုတ် ကျောင်းမှာ ခက်ခဲခဲ့တဲ့ နေ့တစ်နေ့ကို စဉ်းစားပါ။ ဘာက ခက်ခဲစေခဲ့လဲ။ ဘယ်လို ကျော်လွှားခဲ့လဲ။ ဘာသင်ခန်းစာ ရခဲ့လဲ။",
     "difficulty": "intermediate",
     "duration_target_seconds": 210,
+    "created_at": "2026-02-20T08:00:00Z",
     "vocabulary": [
       {
         "term": "overwhelming",
@@ -110,5 +220,153 @@
       "What would you do differently next time?"
     ],
     "tags": ["work", "reflection"]
+  },
+  {
+    "id": "book-or-movie-changed-you",
+    "title": "A book or movie that changed you",
+    "prompt_en": "Tell me about a book or movie that genuinely changed how you see something. What was it about, and what shifted for you afterward?",
+    "prompt_mm": "ကိုယ်တို့ရဲ့ အမြင်ကို တကယ်ပြောင်းလဲစေခဲ့တဲ့ စာအုပ်တစ်အုပ်/ရုပ်ရှင်တစ်ကားအကြောင်း ပြောပြပါ။ ဘယ်အကြောင်းအရာလဲ၊ ပြီးတဲ့နောက် ဘာတွေ ပြောင်းသွားလဲ။",
+    "difficulty": "intermediate",
+    "duration_target_seconds": 210,
+    "created_at": "2026-05-25T08:00:00Z",
+    "vocabulary": [
+      {
+        "term": "perspective",
+        "definition_mm": "အမြင်၊ ရှုထောင့်",
+        "example_en": "The book gave me a new perspective on aging."
+      },
+      {
+        "term": "resonate with",
+        "definition_mm": "(တစ်စုံတစ်ခုက) စိတ်ထဲစွဲထင်စေခြင်း",
+        "example_en": "The ending really resonated with me."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "What stayed with me was ...",
+        "translation_mm": "ကိုယ့်စိတ်ထဲ ကျန်ခဲ့တာက..."
+      },
+      {
+        "phrase_en": "Before I read/watched it, I used to think ...",
+        "translation_mm": "မဖတ်/မကြည့်ခင်တုန်းက ထင်ထားတာက..."
+      }
+    ],
+    "warmup_questions": [
+      "What was it about?",
+      "What part hit hardest?",
+      "What changed for you?"
+    ],
+    "tags": ["reflection", "culture"]
+  },
+  {
+    "id": "handling-stress",
+    "title": "How you handle stress",
+    "prompt_en": "When life gets stressful, what do you actually do? Talk about your real coping habits — the helpful ones and the not-so-helpful ones.",
+    "prompt_mm": "ဘဝမှာ စိတ်ဖိစီးမှု များတဲ့အခါ၊ ကိုယ်တကယ်တမ်း ဘာတွေ လုပ်လေ့ရှိလဲ။ အသုံးဝင်တာရော အသုံးမဝင်တာရော ပြောပြပါ။",
+    "difficulty": "intermediate",
+    "duration_target_seconds": 180,
+    "created_at": "2026-05-22T08:00:00Z",
+    "vocabulary": [
+      {
+        "term": "coping mechanism",
+        "definition_mm": "စိတ်ဖိစီးမှုကို ဖြေရှင်းတဲ့ နည်းလမ်း",
+        "example_en": "Running is my main coping mechanism."
+      },
+      {
+        "term": "burned out",
+        "definition_mm": "အလွန်အကျွံ ပင်ပန်းပြီး စိတ်ပျက်နေသော",
+        "example_en": "I was completely burned out by November."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "When I'm overwhelmed, I tend to ...",
+        "translation_mm": "ဖိအားများတဲ့အခါ ပုံမှန် ...လုပ်တယ်"
+      },
+      {
+        "phrase_en": "What actually helps is ...",
+        "translation_mm": "တကယ်အကူအညီရတာက..."
+      }
+    ],
+    "warmup_questions": [
+      "What stresses you most?",
+      "What helps?",
+      "What do you wish you did less of?"
+    ],
+    "tags": ["wellness", "reflection"]
+  },
+  {
+    "id": "change-one-decision",
+    "title": "If you could change one decision",
+    "prompt_en": "Imagine you could go back and change exactly one decision in your life. What would it be, and what do you think your life would look like now?",
+    "prompt_mm": "ဘဝမှာ ဆုံးဖြတ်ချက်တစ်ခုကိုသာ ပြန်ပြီး ပြောင်းခွင့်ရရင် ဘယ်ဆုံးဖြတ်ချက်ကို ပြောင်းချင်လဲ၊ အခုဘဝက ဘယ်လို ဖြစ်နေနိုင်တယ်လို့ ထင်လဲ။",
+    "difficulty": "advanced",
+    "duration_target_seconds": 240,
+    "created_at": "2026-05-23T08:00:00Z",
+    "vocabulary": [
+      {
+        "term": "in hindsight",
+        "definition_mm": "နောက်ပြန်ကြည့်လိုက်ရင်",
+        "example_en": "In hindsight, I should have taken the offer."
+      },
+      {
+        "term": "diverge",
+        "definition_mm": "လမ်းကွဲထွက်သွားခြင်း",
+        "example_en": "Our paths diverged after college."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "Had I ..., I might have ...",
+        "translation_mm": "...လုပ်ခဲ့ရင် ...ဖြစ်နိုင်ခဲ့မယ်"
+      },
+      {
+        "phrase_en": "What I tell myself now is ...",
+        "translation_mm": "အခု ကိုယ့်ကို ပြောလေ့ရှိတာက..."
+      }
+    ],
+    "warmup_questions": [
+      "What decision?",
+      "Why that one?",
+      "What stops you from regretting it now?"
+    ],
+    "tags": ["reflection", "philosophy"]
+  },
+  {
+    "id": "leader-you-admire",
+    "title": "A leader you admire (or don't)",
+    "prompt_en": "Talk about a public figure or leader you have strong feelings about — admiration or disagreement. What specifically about how they lead?",
+    "prompt_mm": "ကိုယ်လေးစားတဲ့ ဒါမှမဟုတ် သဘောမတူတဲ့ ခေါင်းဆောင်တစ်ဦးအကြောင်း ပြောပြပါ။ သူ ဦးဆောင်ပုံကို တိတိကျကျ ဘယ်လို မြင်လဲ။",
+    "difficulty": "advanced",
+    "duration_target_seconds": 240,
+    "created_at": "2026-01-08T08:00:00Z",
+    "vocabulary": [
+      {
+        "term": "integrity",
+        "definition_mm": "ရိုးသား ဖြောင့်မတ်ခြင်း",
+        "example_en": "She has a reputation for integrity."
+      },
+      {
+        "term": "polarizing",
+        "definition_mm": "လူတွေကို ထောက်ခံ/ဆန့်ကျင် နှစ်ပိုင်းကွဲစေသော",
+        "example_en": "He's a polarizing figure in his industry."
+      }
+    ],
+    "target_phrases": [
+      {
+        "phrase_en": "What sets them apart is ...",
+        "translation_mm": "သူတို့ကို ထူးခြားစေတာက..."
+      },
+      {
+        "phrase_en": "I'd push back on ...",
+        "translation_mm": "...အပေါ်မှာတော့ ကန့်ကွက်ချင်တယ်"
+      }
+    ],
+    "warmup_questions": [
+      "Who?",
+      "What makes them effective (or not)?",
+      "Would you want to work for them?"
+    ],
+    "tags": ["culture", "leadership"]
   }
 ]

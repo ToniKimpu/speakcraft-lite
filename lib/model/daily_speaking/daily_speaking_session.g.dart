@@ -19,6 +19,8 @@ _$DailySpeakingSessionImpl _$$DailySpeakingSessionImplFromJson(
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
+      topicAttemptId: json['topicAttemptId'] as String?,
+      revisionNumber: (json['revisionNumber'] as num?)?.toInt() ?? 1,
     );
 
 Map<String, dynamic> _$$DailySpeakingSessionImplToJson(
@@ -31,4 +33,6 @@ Map<String, dynamic> _$$DailySpeakingSessionImplToJson(
       'inputText': instance.inputText,
       'feedback': instance.feedback,
       'createdAt': instance.createdAt?.toIso8601String(),
+      'topicAttemptId': instance.topicAttemptId,
+      'revisionNumber': instance.revisionNumber,
     };

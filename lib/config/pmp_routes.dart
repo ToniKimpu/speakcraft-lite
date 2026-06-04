@@ -6,7 +6,9 @@ import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 import 'package:speakcraft/screens/auth/login_screen.dart';
 import 'package:speakcraft/screens/auth/sign_up_screen.dart';
 import 'package:speakcraft/screens/daily_speaking/daily_speaking_entry_page.dart';
+import 'package:speakcraft/screens/daily_speaking/feedback/choose_feedback_page.dart';
 import 'package:speakcraft/screens/daily_speaking/feedback/feedback_result_page.dart';
+import 'package:speakcraft/screens/daily_speaking/feedback/final_rewrite_page.dart';
 import 'package:speakcraft/screens/daily_speaking/history/daily_speaking_history_page.dart';
 import 'package:speakcraft/screens/daily_speaking/just_record/just_record_page.dart';
 import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_prep_page.dart';
@@ -115,7 +117,9 @@ class PmpRoutes {
   static const dailySpeakingSuggestedList = '/daily_speaking/suggested';
   static const dailySpeakingSuggestedPrep = '/daily_speaking/suggested/prep';
   static const dailySpeakingSuggestedRecord = '/daily_speaking/suggested/record';
+  static const dailySpeakingChooseFeedback = '/daily_speaking/choose_feedback';
   static const dailySpeakingFeedback = '/daily_speaking/feedback';
+  static const dailySpeakingFinalRewrite = '/daily_speaking/final_rewrite';
   static const dailySpeakingHistory = '/daily_speaking/history';
 
   static Route generateRoutes(RouteSettings settings) {
@@ -347,9 +351,27 @@ class PmpRoutes {
       case dailySpeakingOwnTopicPrep:
         return _getRoute(const OwnTopicPrepPage(), settings);
       case dailySpeakingOwnTopicRecord:
-        return _getRoute(const OwnTopicRecordPage(), settings);
+        final args = settings.arguments as Map<String, dynamic>;
+        final topic = args['topic'] as DailySpeakingTopic;
+        return _getRoute(
+          OwnTopicRecordPage(
+            topic: topic,
+            topicAttemptId: args['topicAttemptId'] as String?,
+            revisionNumber: args['revisionNumber'] as int? ?? 1,
+          ),
+          settings,
+        );
       case dailySpeakingWritePath:
-        return _getRoute(const WritePathPage(), settings);
+        final args = settings.arguments as Map<String, dynamic>;
+        final topic = args['topic'] as DailySpeakingTopic;
+        return _getRoute(
+          WritePathPage(
+            topic: topic,
+            topicAttemptId: args['topicAttemptId'] as String?,
+            revisionNumber: args['revisionNumber'] as int? ?? 1,
+          ),
+          settings,
+        );
       case dailySpeakingSuggestedList:
         return _getRoute(const SuggestedTopicListPage(), settings);
       case dailySpeakingSuggestedPrep:
@@ -359,11 +381,56 @@ class PmpRoutes {
       case dailySpeakingSuggestedRecord:
         final args = settings.arguments as Map<String, dynamic>;
         final topic = args['topic'] as DailySpeakingTopic;
-        return _getRoute(SuggestedTopicRecordPage(topic: topic), settings);
+        return _getRoute(
+          SuggestedTopicRecordPage(
+            topic: topic,
+            topicAttemptId: args['topicAttemptId'] as String?,
+            revisionNumber: args['revisionNumber'] as int? ?? 1,
+          ),
+          settings,
+        );
+      case dailySpeakingChooseFeedback:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          ChooseFeedbackPage(
+            inputMode: args['inputMode'] as String,
+            onRamp: args['onRamp'] as String,
+            audioPath: args['audioPath'] as String?,
+            text: args['text'] as String?,
+            topic: args['topic'] as DailySpeakingTopic?,
+            topicAttemptId: args['topicAttemptId'] as String?,
+            revisionNumber: args['revisionNumber'] as int? ?? 1,
+          ),
+          settings,
+        );
       case dailySpeakingFeedback:
         final args = settings.arguments as Map<String, dynamic>;
         final session = args['session'] as DailySpeakingSession;
-        return _getRoute(FeedbackResultPage(session: session), settings);
+        // Optional — passed for loop-capable on-ramps to enable "Polish &
+        // retry" + the terminal reveal on the result page.
+        final topic = args['topic'] as DailySpeakingTopic?;
+        return _getRoute(
+          FeedbackResultPage(
+            session: session,
+            topic: topic,
+            lastAudioPath: args['lastAudioPath'] as String?,
+            lastText: args['lastText'] as String?,
+          ),
+          settings,
+        );
+      case dailySpeakingFinalRewrite:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          FinalRewritePage(
+            inputMode: args['inputMode'] as String,
+            onRamp: args['onRamp'] as String,
+            audioPath: args['audioPath'] as String?,
+            text: args['text'] as String?,
+            topic: args['topic'] as DailySpeakingTopic?,
+            finalScore: args['finalScore'] as int?,
+          ),
+          settings,
+        );
       case dailySpeakingHistory:
         return _getRoute(const DailySpeakingHistoryPage(), settings);
       case htmlPreview:

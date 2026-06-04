@@ -22,13 +22,32 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(step) => "Continue · ${step}";
 
-  static String m1(total) => "out of ${total}";
+  static String m1(minutes) => "~${minutes} min";
 
-  static String m2(done, total) => "${done} of ${total}";
+  static String m2(count) => "At least ${count} characters";
 
-  static String m3(count) => "${count}-step lesson";
+  static String m3(duration) => "max ${duration}";
 
-  static String m4(done, total) => "${done} of ${total} steps";
+  static String m4(wpm) => "${wpm} wpm";
+
+  static String m5(onRamp, seconds, words) =>
+      "${onRamp} • ${seconds}s • ${words} words";
+
+  static String m6(used, total) => "${used} of ${total} sessions today";
+
+  static String m7(count) => "${count} target phrases";
+
+  static String m8(label) => "Topic: ${label}";
+
+  static String m9(count) => "Write at least ${count} characters.";
+
+  static String m10(total) => "out of ${total}";
+
+  static String m11(done, total) => "${done} of ${total}";
+
+  static String m12(count) => "${count}-step lesson";
+
+  static String m13(done, total) => "${done} of ${total} steps";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -65,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtContinueStep": m0,
     "txtCorrect": MessageLookupByLibrary.simpleMessage("Correct"),
+    "txtDailySpeaking": MessageLookupByLibrary.simpleMessage("Daily Speaking"),
     "txtDayStreak": MessageLookupByLibrary.simpleMessage("Day Streak"),
     "txtDaysLearned": MessageLookupByLibrary.simpleMessage("Days Learned"),
     "txtDelete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -75,6 +95,160 @@ class MessageLookup extends MessageLookupByLibrary {
       "Delete Recording?",
     ),
     "txtDiscard": MessageLookupByLibrary.simpleMessage("Discard"),
+    "txtDone": MessageLookupByLibrary.simpleMessage("Done"),
+    "txtDsApproxMin": m1,
+    "txtDsAtLeastChars": m2,
+    "txtDsDailyLimitReached": MessageLookupByLibrary.simpleMessage(
+      "Daily limit reached — comes back tomorrow.",
+    ),
+    "txtDsDailyLimitReachedShort": MessageLookupByLibrary.simpleMessage(
+      "Daily limit reached",
+    ),
+    "txtDsExample": MessageLookupByLibrary.simpleMessage("Example"),
+    "txtDsFeedback": MessageLookupByLibrary.simpleMessage("Feedback"),
+    "txtDsGetFeedback": MessageLookupByLibrary.simpleMessage("Get feedback"),
+    "txtDsHeadline": MessageLookupByLibrary.simpleMessage(
+      "Three minutes a day.",
+    ),
+    "txtDsHistory": MessageLookupByLibrary.simpleMessage("History"),
+    "txtDsHistoryTitle": MessageLookupByLibrary.simpleMessage(
+      "Daily Speaking History",
+    ),
+    "txtDsHowItWorks": MessageLookupByLibrary.simpleMessage("How it works"),
+    "txtDsHowItWorksBody": MessageLookupByLibrary.simpleMessage(
+      "• Tap the mic and just talk for up to 5 minutes.\n• When you stop, the AI gives you a score, strengths, fixes, and a Burmese explanation.\n• Don\'t worry about being perfect — the goal is to keep speaking.",
+    ),
+    "txtDsJustTalk": MessageLookupByLibrary.simpleMessage("Just talk"),
+    "txtDsJustTalkDesc": MessageLookupByLibrary.simpleMessage(
+      "No topic, no pressure. Speak freely — the AI will identify what you talked about and give you feedback.",
+    ),
+    "txtDsLevelAdvanced": MessageLookupByLibrary.simpleMessage("Advanced"),
+    "txtDsLevelBeginner": MessageLookupByLibrary.simpleMessage("Beginner"),
+    "txtDsLevelElementary": MessageLookupByLibrary.simpleMessage("Elementary"),
+    "txtDsLevelFluent": MessageLookupByLibrary.simpleMessage("Fluent"),
+    "txtDsLevelIntermediate": MessageLookupByLibrary.simpleMessage(
+      "Intermediate",
+    ),
+    "txtDsLevelUpperIntermediate": MessageLookupByLibrary.simpleMessage(
+      "Upper-Intermediate",
+    ),
+    "txtDsLimitReached": MessageLookupByLibrary.simpleMessage("Limit reached"),
+    "txtDsMaxDuration": m3,
+    "txtDsNativeRewrite": MessageLookupByLibrary.simpleMessage(
+      "How a native speaker would say it",
+    ),
+    "txtDsNew": MessageLookupByLibrary.simpleMessage("NEW"),
+    "txtDsNewThisWeek": MessageLookupByLibrary.simpleMessage("New this week"),
+    "txtDsNoSessionsBody": MessageLookupByLibrary.simpleMessage(
+      "Your past Daily Speaking sessions will show up here.",
+    ),
+    "txtDsNoSessionsYet": MessageLookupByLibrary.simpleMessage(
+      "No sessions yet",
+    ),
+    "txtDsNoTopicsHere": MessageLookupByLibrary.simpleMessage(
+      "No topics here yet — check back soon.",
+    ),
+    "txtDsOwnTopic": MessageLookupByLibrary.simpleMessage("Own topic"),
+    "txtDsOwnTopicDesc": MessageLookupByLibrary.simpleMessage(
+      "Tell us what you want to talk about, then speak or type.",
+    ),
+    "txtDsPace": MessageLookupByLibrary.simpleMessage("Pace"),
+    "txtDsPaceWpm": m4,
+    "txtDsPronunciationNotes": MessageLookupByLibrary.simpleMessage(
+      "Pronunciation notes",
+    ),
+    "txtDsRecordThis": MessageLookupByLibrary.simpleMessage("Record this"),
+    "txtDsRecordingUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Recording is unavailable.",
+    ),
+    "txtDsReviewingRecording": MessageLookupByLibrary.simpleMessage(
+      "Reviewing your recording…",
+    ),
+    "txtDsReviewingTakesSeconds": MessageLookupByLibrary.simpleMessage(
+      "This usually takes a few seconds.",
+    ),
+    "txtDsReviewingWriting": MessageLookupByLibrary.simpleMessage(
+      "Reviewing your writing…",
+    ),
+    "txtDsSessionMeta": m5,
+    "txtDsSessionsToday": m6,
+    "txtDsStartRecording": MessageLookupByLibrary.simpleMessage(
+      "Start recording",
+    ),
+    "txtDsSubhead": MessageLookupByLibrary.simpleMessage(
+      "Pick how you want to start. Speak or write, then get instant feedback.",
+    ),
+    "txtDsSuggested": MessageLookupByLibrary.simpleMessage("Suggested"),
+    "txtDsSuggestedTopic": MessageLookupByLibrary.simpleMessage(
+      "Suggested topic",
+    ),
+    "txtDsSuggestedTopicDesc": MessageLookupByLibrary.simpleMessage(
+      "Pick from curated prompts with vocabulary and target phrases.",
+    ),
+    "txtDsSuggestedTopics": MessageLookupByLibrary.simpleMessage(
+      "Suggested topics",
+    ),
+    "txtDsSuggestionFamily": MessageLookupByLibrary.simpleMessage("My family"),
+    "txtDsSuggestionGoal": MessageLookupByLibrary.simpleMessage(
+      "A goal I have",
+    ),
+    "txtDsSuggestionJob": MessageLookupByLibrary.simpleMessage("My job"),
+    "txtDsSuggestionTrip": MessageLookupByLibrary.simpleMessage(
+      "A recent trip",
+    ),
+    "txtDsSuggestionWorried": MessageLookupByLibrary.simpleMessage(
+      "Something I\'m worried about",
+    ),
+    "txtDsSummaryMm": MessageLookupByLibrary.simpleMessage("အကျဉ်းချုပ်"),
+    "txtDsTapToStart": MessageLookupByLibrary.simpleMessage(
+      "Tap and start talking",
+    ),
+    "txtDsTapToStop": MessageLookupByLibrary.simpleMessage("Tap to stop"),
+    "txtDsTargetPhraseCount": m7,
+    "txtDsTargetPhrases": MessageLookupByLibrary.simpleMessage(
+      "Target phrases",
+    ),
+    "txtDsThingsToFix": MessageLookupByLibrary.simpleMessage("Things to fix"),
+    "txtDsThingsYouCanMention": MessageLookupByLibrary.simpleMessage(
+      "Things you can mention",
+    ),
+    "txtDsTime": MessageLookupByLibrary.simpleMessage("Time"),
+    "txtDsToday": MessageLookupByLibrary.simpleMessage("Today"),
+    "txtDsTopicColon": m8,
+    "txtDsTopicFieldHint": MessageLookupByLibrary.simpleMessage(
+      "e.g. The most stressful week I had",
+    ),
+    "txtDsTopicHint": MessageLookupByLibrary.simpleMessage(
+      "A topic, a question, or just a vibe — keep it short.",
+    ),
+    "txtDsTryOneOfThese": MessageLookupByLibrary.simpleMessage(
+      "Try one of these",
+    ),
+    "txtDsTryToUse": MessageLookupByLibrary.simpleMessage("Try to use"),
+    "txtDsTryTopicAgain": MessageLookupByLibrary.simpleMessage(
+      "Try this topic again",
+    ),
+    "txtDsTryUseThesePhrases": MessageLookupByLibrary.simpleMessage(
+      "Try to use these phrases",
+    ),
+    "txtDsWhatToTalkAbout": MessageLookupByLibrary.simpleMessage(
+      "What do you want to talk about?",
+    ),
+    "txtDsWhatYouDidWell": MessageLookupByLibrary.simpleMessage(
+      "What you did well",
+    ),
+    "txtDsWords": MessageLookupByLibrary.simpleMessage("Words"),
+    "txtDsWordsYouMightUse": MessageLookupByLibrary.simpleMessage(
+      "Words you might use",
+    ),
+    "txtDsWriteAtLeastChars": m9,
+    "txtDsWriteInstead": MessageLookupByLibrary.simpleMessage("Write instead"),
+    "txtDsWritePathHint": MessageLookupByLibrary.simpleMessage(
+      "Write a paragraph about your topic. Aim for 5-10 sentences.",
+    ),
+    "txtDsYesterday": MessageLookupByLibrary.simpleMessage("Yesterday"),
+    "txtDsYourPrompt": MessageLookupByLibrary.simpleMessage("Your prompt"),
+    "txtDsYourTopic": MessageLookupByLibrary.simpleMessage("Your topic"),
     "txtExplanation": MessageLookupByLibrary.simpleMessage("Explanation"),
     "txtExplanationGenericError": MessageLookupByLibrary.simpleMessage(
       "Something went wrong while loading this explanation.",
@@ -125,13 +299,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtNetworkError": MessageLookupByLibrary.simpleMessage(
       "Network error. Please check your internet connection.",
     ),
+    "txtNoInternetConnection": MessageLookupByLibrary.simpleMessage(
+      "No internet connection.",
+    ),
     "txtNoRecordForSentence": MessageLookupByLibrary.simpleMessage(
       "No Record Found For This Sentence",
     ),
     "txtNotAnswer": MessageLookupByLibrary.simpleMessage("Not Answer"),
     "txtNotStarted": MessageLookupByLibrary.simpleMessage("Not started"),
     "txtOk": MessageLookupByLibrary.simpleMessage("Okay"),
-    "txtOutOf": m1,
+    "txtOutOf": m10,
     "txtPlaybackDisabledWhileRecording": MessageLookupByLibrary.simpleMessage(
       "Playback is disabled while recording. Please stop the recording to continue.",
     ),
@@ -141,7 +318,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtPrivacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "txtProfile": MessageLookupByLibrary.simpleMessage("Profile"),
-    "txtProgressXofY": m2,
+    "txtProgressXofY": m11,
     "txtRecommendedNext": MessageLookupByLibrary.simpleMessage(
       "Recommended next",
     ),
@@ -169,7 +346,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Speech Practice Session",
     ),
     "txtStartHere": MessageLookupByLibrary.simpleMessage("Start here"),
-    "txtStepLesson": m3,
+    "txtStepLesson": m12,
     "txtStepRecordSubtitle": MessageLookupByLibrary.simpleMessage(
       "Record yourself and compare to the original",
     ),
@@ -192,7 +369,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Listen with subtitles to understand the content",
     ),
     "txtStepWatchTitle": MessageLookupByLibrary.simpleMessage("Watch"),
-    "txtStepsProgress": m4,
+    "txtStepsProgress": m13,
     "txtStream": MessageLookupByLibrary.simpleMessage("Stream"),
     "txtTapToRecord": MessageLookupByLibrary.simpleMessage("Tap to record"),
     "txtThemeDark": MessageLookupByLibrary.simpleMessage("Dark"),

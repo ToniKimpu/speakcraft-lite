@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/daily_speaking/daily_speaking_history_bloc.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/l10n/generated/l10n.dart';
 
 /// "N of 3 sessions today" banner.
 ///
@@ -44,8 +45,9 @@ class SessionLimitBanner extends StatelessWidget {
               Expanded(
                 child: Text(
                   exhausted
-                      ? 'Daily limit reached — comes back tomorrow.'
-                      : '$used of $dailyLimit sessions today',
+                      ? AppLocalizations.of(context).txtDsDailyLimitReached
+                      : AppLocalizations.of(context)
+                          .txtDsSessionsToday(used, dailyLimit),
                   style: PmpTextStyles.labelSemi.copyWith(color: fg),
                 ),
               ),

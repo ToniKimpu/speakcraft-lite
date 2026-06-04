@@ -35,6 +35,37 @@ _$DailySpeakingFeedbackImpl _$$DailySpeakingFeedbackImplFromJson(
                   (e) => TargetPhraseResult.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <TargetPhraseResult>[],
+      grammarPatterns: (json['grammar_patterns'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const <String>[],
+      interferenceNotes: (json['interference_notes'] as List<dynamic>?)
+              ?.map((e) => FeedbackFix.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <FeedbackFix>[],
+      vocabUpgrades: (json['vocab_upgrades'] as List<dynamic>?)
+              ?.map((e) => VocabUpgrade.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <VocabUpgrade>[],
+      collocations: (json['collocations'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const <String>[],
+      idioms: (json['idioms'] as List<dynamic>?)
+              ?.map((e) => IdiomSuggestion.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <IdiomSuggestion>[],
+      sentenceRewrites: (json['sentence_rewrites'] as List<dynamic>?)
+              ?.map((e) => SentenceRewrite.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <SentenceRewrite>[],
+      fillerWords: (json['filler_words'] as List<dynamic>?)
+              ?.map((e) => FillerWord.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <FillerWord>[],
+      subScores: json['sub_scores'] == null
+          ? null
+          : SubScores.fromJson(json['sub_scores'] as Map<String, dynamic>),
       totalTokens: (json['total_tokens'] as num?)?.toInt() ?? 0,
     );
 
@@ -53,6 +84,14 @@ Map<String, dynamic> _$$DailySpeakingFeedbackImplToJson(
       'pronunciation_notes': instance.pronunciationNotes,
       'explanation_mm': instance.explanationMm,
       'target_phrase_results': instance.targetPhraseResults,
+      'grammar_patterns': instance.grammarPatterns,
+      'interference_notes': instance.interferenceNotes,
+      'vocab_upgrades': instance.vocabUpgrades,
+      'collocations': instance.collocations,
+      'idioms': instance.idioms,
+      'sentence_rewrites': instance.sentenceRewrites,
+      'filler_words': instance.fillerWords,
+      'sub_scores': instance.subScores,
       'total_tokens': instance.totalTokens,
     };
 
@@ -77,6 +116,76 @@ Map<String, dynamic> _$$FeedbackFixImplToJson(_$FeedbackFixImpl instance) =>
       'original': instance.original,
       'corrected': instance.corrected,
       'reason_mm': instance.reasonMm,
+    };
+
+_$VocabUpgradeImpl _$$VocabUpgradeImplFromJson(Map<String, dynamic> json) =>
+    _$VocabUpgradeImpl(
+      original: json['original'] as String,
+      suggestion: json['suggestion'] as String,
+      reasonMm: json['reason_mm'] as String? ?? '',
+    );
+
+Map<String, dynamic> _$$VocabUpgradeImplToJson(_$VocabUpgradeImpl instance) =>
+    <String, dynamic>{
+      'original': instance.original,
+      'suggestion': instance.suggestion,
+      'reason_mm': instance.reasonMm,
+    };
+
+_$IdiomSuggestionImpl _$$IdiomSuggestionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$IdiomSuggestionImpl(
+      expression: json['expression'] as String,
+      meaningMm: json['meaning_mm'] as String? ?? '',
+    );
+
+Map<String, dynamic> _$$IdiomSuggestionImplToJson(
+        _$IdiomSuggestionImpl instance) =>
+    <String, dynamic>{
+      'expression': instance.expression,
+      'meaning_mm': instance.meaningMm,
+    };
+
+_$SentenceRewriteImpl _$$SentenceRewriteImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SentenceRewriteImpl(
+      original: json['original'] as String,
+      rewrite: json['rewrite'] as String,
+    );
+
+Map<String, dynamic> _$$SentenceRewriteImplToJson(
+        _$SentenceRewriteImpl instance) =>
+    <String, dynamic>{
+      'original': instance.original,
+      'rewrite': instance.rewrite,
+    };
+
+_$FillerWordImpl _$$FillerWordImplFromJson(Map<String, dynamic> json) =>
+    _$FillerWordImpl(
+      word: json['word'] as String,
+      count: (json['count'] as num?)?.toInt() ?? 0,
+    );
+
+Map<String, dynamic> _$$FillerWordImplToJson(_$FillerWordImpl instance) =>
+    <String, dynamic>{
+      'word': instance.word,
+      'count': instance.count,
+    };
+
+_$SubScoresImpl _$$SubScoresImplFromJson(Map<String, dynamic> json) =>
+    _$SubScoresImpl(
+      grammar: (json['grammar'] as num?)?.toInt() ?? 0,
+      vocabulary: (json['vocabulary'] as num?)?.toInt() ?? 0,
+      fluency: (json['fluency'] as num?)?.toInt() ?? 0,
+      pronunciation: (json['pronunciation'] as num?)?.toInt() ?? 0,
+    );
+
+Map<String, dynamic> _$$SubScoresImplToJson(_$SubScoresImpl instance) =>
+    <String, dynamic>{
+      'grammar': instance.grammar,
+      'vocabulary': instance.vocabulary,
+      'fluency': instance.fluency,
+      'pronunciation': instance.pronunciation,
     };
 
 _$TargetPhraseResultImpl _$$TargetPhraseResultImplFromJson(

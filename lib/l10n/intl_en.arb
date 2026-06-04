@@ -132,5 +132,144 @@
   "txtTypeMissingWords": "Type the missing word(s)",
   "txtCheck": "Check",
   "txtAnswerLabel": "Answer: ",
-  "txtShowHint": "Show hint"
+  "txtShowHint": "Show hint",
+
+  "txtDone": "Done",
+  "txtNoInternetConnection": "No internet connection.",
+
+  "txtDailySpeaking": "Daily Speaking",
+  "txtDsHistory": "History",
+  "txtDsHeadline": "Three minutes a day.",
+  "txtDsSubhead": "Pick how you want to start. Speak or write, then get instant feedback.",
+  "txtDsJustTalk": "Just talk",
+  "txtDsJustTalkDesc": "No topic, no pressure. Speak freely — the AI will identify what you talked about and give you feedback.",
+  "txtDsOwnTopic": "Own topic",
+  "txtDsOwnTopicDesc": "Tell us what you want to talk about, then speak or type.",
+  "txtDsSuggestedTopic": "Suggested topic",
+  "txtDsSuggestedTopicDesc": "Pick from curated prompts with vocabulary and target phrases.",
+  "txtDsLimitReached": "Limit reached",
+  "txtDsDailyLimitReached": "Daily limit reached — comes back tomorrow.",
+  "txtDsDailyLimitReachedShort": "Daily limit reached",
+
+  "txtDsHowItWorks": "How it works",
+  "txtDsHowItWorksBody": "• Tap the mic and just talk for up to 5 minutes.\n• When you stop, the AI gives you a score, strengths, fixes, and a Burmese explanation.\n• Don't worry about being perfect — the goal is to keep speaking.",
+  "txtDsReviewingRecording": "Reviewing your recording…",
+  "txtDsReviewingWriting": "Reviewing your writing…",
+  "txtDsReviewingTakesSeconds": "This usually takes a few seconds.",
+
+  "txtDsHistoryTitle": "Daily Speaking History",
+  "txtDsToday": "Today",
+  "txtDsYesterday": "Yesterday",
+  "txtDsSuggested": "Suggested",
+  "txtDsSessionMeta": "{onRamp} • {seconds}s • {words} words",
+  "@txtDsSessionMeta": {
+    "placeholders": {
+      "onRamp": {},
+      "seconds": {},
+      "words": {}
+    }
+  },
+  "txtDsNoSessionsYet": "No sessions yet",
+  "txtDsNoSessionsBody": "Your past Daily Speaking sessions will show up here.",
+
+  "txtDsSessionsToday": "{used} of {total} sessions today",
+  "@txtDsSessionsToday": {
+    "placeholders": {
+      "used": {},
+      "total": {}
+    }
+  },
+  "txtDsMaxDuration": "max {duration}",
+  "@txtDsMaxDuration": {
+    "placeholders": {
+      "duration": {}
+    }
+  },
+  "txtDsRecordingUnavailable": "Recording is unavailable.",
+  "txtDsTapToStop": "Tap to stop",
+  "txtDsTapToStart": "Tap and start talking",
+
+  "txtDsWhatToTalkAbout": "What do you want to talk about?",
+  "txtDsTopicHint": "A topic, a question, or just a vibe — keep it short.",
+  "txtDsTopicFieldHint": "e.g. The most stressful week I had",
+  "txtDsTryOneOfThese": "Try one of these",
+  "txtDsRecordThis": "Record this",
+  "txtDsWriteInstead": "Write instead",
+  "txtDsSuggestionFamily": "My family",
+  "txtDsSuggestionTrip": "A recent trip",
+  "txtDsSuggestionJob": "My job",
+  "txtDsSuggestionGoal": "A goal I have",
+  "txtDsSuggestionWorried": "Something I'm worried about",
+  "txtDsYourTopic": "Your topic",
+
+  "txtDsWriteAtLeastChars": "Write at least {count} characters.",
+  "@txtDsWriteAtLeastChars": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "txtDsAtLeastChars": "At least {count} characters",
+  "@txtDsAtLeastChars": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "txtDsWritePathHint": "Write a paragraph about your topic. Aim for 5-10 sentences.",
+  "txtDsGetFeedback": "Get feedback",
+
+  "txtDsFeedback": "Feedback",
+  "txtDsWhatYouDidWell": "What you did well",
+  "txtDsThingsToFix": "Things to fix",
+  "txtDsNativeRewrite": "How a native speaker would say it",
+  "txtDsTargetPhrases": "Target phrases",
+  "txtDsPronunciationNotes": "Pronunciation notes",
+  "txtDsSummaryMm": "အကျဉ်းချုပ်",
+  "txtDsTryTopicAgain": "Try this topic again",
+  "txtDsTime": "Time",
+  "txtDsWords": "Words",
+  "txtDsPace": "Pace",
+  "txtDsPaceWpm": "{wpm} wpm",
+  "@txtDsPaceWpm": {
+    "placeholders": {
+      "wpm": {}
+    }
+  },
+  "txtDsTopicColon": "Topic: {label}",
+  "@txtDsTopicColon": {
+    "placeholders": {
+      "label": {}
+    }
+  },
+
+  "txtDsLevelBeginner": "Beginner",
+  "txtDsLevelElementary": "Elementary",
+  "txtDsLevelIntermediate": "Intermediate",
+  "txtDsLevelUpperIntermediate": "Upper-Intermediate",
+  "txtDsLevelAdvanced": "Advanced",
+  "txtDsLevelFluent": "Fluent",
+
+  "txtDsSuggestedTopics": "Suggested topics",
+  "txtDsNewThisWeek": "New this week",
+  "txtDsNoTopicsHere": "No topics here yet — check back soon.",
+  "txtDsNew": "NEW",
+  "txtDsApproxMin": "~{minutes} min",
+  "@txtDsApproxMin": {
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "txtDsTargetPhraseCount": "{count} target phrases",
+  "@txtDsTargetPhraseCount": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+
+  "txtDsWordsYouMightUse": "Words you might use",
+  "txtDsTryUseThesePhrases": "Try to use these phrases",
+  "txtDsThingsYouCanMention": "Things you can mention",
+  "txtDsStartRecording": "Start recording",
+  "txtDsYourPrompt": "Your prompt",
+  "txtDsExample": "Example",
+  "txtDsTryToUse": "Try to use"
 }

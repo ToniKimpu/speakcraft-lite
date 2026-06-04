@@ -34,6 +34,9 @@ _$DailySpeakingTopicImpl _$$DailySpeakingTopicImplFromJson(
       tags:
           (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const <String>[],
+      createdAt: json['created_at'] == null
+          ? null
+          : DateTime.parse(json['created_at'] as String),
     );
 
 Map<String, dynamic> _$$DailySpeakingTopicImplToJson(
@@ -49,6 +52,7 @@ Map<String, dynamic> _$$DailySpeakingTopicImplToJson(
       'target_phrases': instance.targetPhrases,
       'warmup_questions': instance.warmupQuestions,
       'tags': instance.tags,
+      'created_at': instance.createdAt?.toIso8601String(),
     };
 
 const _$TopicDifficultyEnumMap = {
