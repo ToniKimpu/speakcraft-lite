@@ -65,3 +65,7 @@ assets/paul_rudd_interview
 assets/going_viral_taugh_me
 
 grit_the_power_of_passion
+
+# Local dev artifacts (not part of the app)
+data_samples/
+screenshots/
