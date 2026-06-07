@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+# Secrets — never commit OAuth client secrets
+client_secret*.json
+
 # IntelliJ related
 *.iml
 *.ipr
