@@ -4,10 +4,12 @@ import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/bloc/auth/auth_bloc.dart';
 import 'package:speakcraft/config/common_extensions.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
+import 'package:speakcraft/screens/auth/forgot_password_screen.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_card.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_text_field.dart';
 import 'package:speakcraft/screens/main/device_failed_screen.dart';
 
+import '../../l10n/generated/l10n.dart';
 import '../main/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -50,6 +52,10 @@ class _LoginScreenState extends State<LoginScreen> {
           state.maybeWhen(
             loading: () {
               _loadingNotifier.value = true;
+            },
+            unauthenticated: () {
+              // Reached when the user dismisses the Google account picker.
+              _loadingNotifier.value = false;
             },
             authenticated: () {
               _loadingNotifier.value = false;
@@ -202,6 +208,67 @@ class _LoginScreenState extends State<LoginScreen> {
                                         CircularProgressIndicator(strokeWidth: 2),
                                   )
                                 : const Text('Sign In'),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 4),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const ForgotPasswordScreen(),
+                          ),
+                        ),
+                        child: Text(
+                          AppLocalizations.of(context).txtForgotPassword,
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        const Expanded(child: Divider()),
+                        Padding(
+                          padding:
+                              const EdgeInsets.symmetric(horizontal: 8),
+                          child: Text(
+                            AppLocalizations.of(context).txtOr,
+                            style: TextStyle(
+                              color:
+                                  Theme.of(context).colorScheme.onSurfaceVariant,
+                            ),
+                          ),
+                        ),
+                        const Expanded(child: Divider()),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    ValueListenableBuilder<bool>(
+                      valueListenable: _loadingNotifier,
+                      builder: (context, isLoading, child) {
+                        return SizedBox(
+                          width: double.infinity,
+                          height: 48,
+                          child: OutlinedButton.icon(
+                            onPressed: isLoading
+                                ? null
+                                : () => _authBloc.add(
+                                      const AuthEvent.loginWithGoogle(),
+                                    ),
+                            icon: Image.asset(
+                              'assets/images/google_logo.png',
+                              width: 20,
+                              height: 20,
+                              errorBuilder: (_, __, ___) =>
+                                  const Icon(Icons.login, size: 20),
+                            ),
+                            label: Text(
+                              AppLocalizations.of(context)
+                                  .txtContinueWithGoogle,
+                            ),
                           ),
                         );
                       },

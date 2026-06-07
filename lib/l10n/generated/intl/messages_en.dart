@@ -66,13 +66,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m19(count) => "Write at least ${count} characters.";
 
-  static String m20(total) => "out of ${total}";
+  static String m20(email) => "Enter the 6-digit code we sent to ${email}";
 
-  static String m21(done, total) => "${done} of ${total}";
+  static String m21(total) => "out of ${total}";
 
-  static String m22(count) => "${count}-step lesson";
+  static String m22(done, total) => "${done} of ${total}";
 
-  static String m23(done, total) => "${done} of ${total} steps";
+  static String m23(seconds) => "Resend in ${seconds}s";
+
+  static String m24(count) => "${count}-step lesson";
+
+  static String m25(done, total) => "${done} of ${total} steps";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -93,11 +97,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtChooseHighlightType": MessageLookupByLibrary.simpleMessage(
       "Choose Highlight Type",
     ),
+    "txtCodeResent": MessageLookupByLibrary.simpleMessage(
+      "A new code has been sent",
+    ),
     "txtComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
     "txtComingSoonDots": MessageLookupByLibrary.simpleMessage(
       "Coming soon....",
     ),
     "txtCompleted": MessageLookupByLibrary.simpleMessage("Completed"),
+    "txtConfirmNewPassword": MessageLookupByLibrary.simpleMessage(
+      "Confirm new password",
+    ),
     "txtConnectionTimedOut": MessageLookupByLibrary.simpleMessage(
       "Connection timed out. Please try again.",
     ),
@@ -108,6 +118,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Continue learning",
     ),
     "txtContinueStep": m0,
+    "txtContinueWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "Continue with Google",
+    ),
     "txtCorrect": MessageLookupByLibrary.simpleMessage("Correct"),
     "txtDailySpeaking": MessageLookupByLibrary.simpleMessage("Daily Speaking"),
     "txtDayStreak": MessageLookupByLibrary.simpleMessage("Day Streak"),
@@ -118,6 +131,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDeleteRecordingTitle": MessageLookupByLibrary.simpleMessage(
       "Delete Recording?",
+    ),
+    "txtDidntGetCode": MessageLookupByLibrary.simpleMessage(
+      "Didn\'t get the code?",
     ),
     "txtDiscard": MessageLookupByLibrary.simpleMessage("Discard"),
     "txtDone": MessageLookupByLibrary.simpleMessage("Done"),
@@ -417,6 +433,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDsYourTopic": MessageLookupByLibrary.simpleMessage("Your topic"),
     "txtDsYourVersion": MessageLookupByLibrary.simpleMessage("Your version"),
+    "txtEnterValidCode": MessageLookupByLibrary.simpleMessage(
+      "Please enter the 6-digit code",
+    ),
     "txtExplanation": MessageLookupByLibrary.simpleMessage("Explanation"),
     "txtExplanationGenericError": MessageLookupByLibrary.simpleMessage(
       "Something went wrong while loading this explanation.",
@@ -435,6 +454,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtFeedback": MessageLookupByLibrary.simpleMessage("Feedback"),
     "txtFillTheBlank": MessageLookupByLibrary.simpleMessage("Fill the blank"),
+    "txtForgotPassword": MessageLookupByLibrary.simpleMessage(
+      "Forgot password?",
+    ),
+    "txtForgotPasswordSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Enter your account email and we\'ll send you a 6-digit code.",
+    ),
+    "txtForgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
+      "Reset password",
+    ),
     "txtHighlightLine": MessageLookupByLibrary.simpleMessage("Line"),
     "txtHighlightNone": MessageLookupByLibrary.simpleMessage("None"),
     "txtHighlightReadAlong": MessageLookupByLibrary.simpleMessage("Read Along"),
@@ -467,6 +495,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtNetworkError": MessageLookupByLibrary.simpleMessage(
       "Network error. Please check your internet connection.",
     ),
+    "txtNewPassword": MessageLookupByLibrary.simpleMessage("New password"),
     "txtNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "No internet connection.",
     ),
@@ -476,7 +505,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtNotAnswer": MessageLookupByLibrary.simpleMessage("Not Answer"),
     "txtNotStarted": MessageLookupByLibrary.simpleMessage("Not started"),
     "txtOk": MessageLookupByLibrary.simpleMessage("Okay"),
-    "txtOutOf": m20,
+    "txtOr": MessageLookupByLibrary.simpleMessage("or"),
+    "txtOtpFieldLabel": MessageLookupByLibrary.simpleMessage("6-digit code"),
+    "txtOtpSentTo": m20,
+    "txtOutOf": m21,
+    "txtPasswordMinLength": MessageLookupByLibrary.simpleMessage(
+      "Password must be at least 6 characters",
+    ),
+    "txtPasswordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
+      "Passwords do not match",
+    ),
     "txtPlaybackDisabledWhileRecording": MessageLookupByLibrary.simpleMessage(
       "Playback is disabled while recording. Please stop the recording to continue.",
     ),
@@ -486,7 +524,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtPrivacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "txtProfile": MessageLookupByLibrary.simpleMessage("Profile"),
-    "txtProgressXofY": m21,
+    "txtProgressXofY": m22,
     "txtRecommendedNext": MessageLookupByLibrary.simpleMessage(
       "Recommended next",
     ),
@@ -497,11 +535,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtRecords": MessageLookupByLibrary.simpleMessage("Records"),
     "txtRemove": MessageLookupByLibrary.simpleMessage("Remove"),
     "txtRemoved": MessageLookupByLibrary.simpleMessage("Removed"),
+    "txtResendCode": MessageLookupByLibrary.simpleMessage("Resend code"),
+    "txtResendInSeconds": m23,
+    "txtResetPasswordButton": MessageLookupByLibrary.simpleMessage(
+      "Reset password",
+    ),
     "txtSave": MessageLookupByLibrary.simpleMessage("Save"),
     "txtSaveRecordingTitle": MessageLookupByLibrary.simpleMessage(
       "Save your recording?",
     ),
     "txtSaved": MessageLookupByLibrary.simpleMessage("Saved"),
+    "txtSendCode": MessageLookupByLibrary.simpleMessage("Send code"),
     "txtSentenceExplanationComing": MessageLookupByLibrary.simpleMessage(
       "Sentence explanation is on the way.\nStay tuned!",
     ),
@@ -514,7 +558,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Speech Practice Session",
     ),
     "txtStartHere": MessageLookupByLibrary.simpleMessage("Start here"),
-    "txtStepLesson": m22,
+    "txtStepLesson": m24,
     "txtStepRecordSubtitle": MessageLookupByLibrary.simpleMessage(
       "Record yourself and compare to the original",
     ),
@@ -537,7 +581,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Listen with subtitles to understand the content",
     ),
     "txtStepWatchTitle": MessageLookupByLibrary.simpleMessage("Watch"),
-    "txtStepsProgress": m23,
+    "txtStepsProgress": m25,
     "txtStream": MessageLookupByLibrary.simpleMessage("Stream"),
     "txtTapToRecord": MessageLookupByLibrary.simpleMessage("Tap to record"),
     "txtThemeDark": MessageLookupByLibrary.simpleMessage("Dark"),
@@ -546,6 +590,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtTryAgain": MessageLookupByLibrary.simpleMessage("Try again"),
     "txtTypeMissingWords": MessageLookupByLibrary.simpleMessage(
       "Type the missing word(s)",
+    ),
+    "txtVerify": MessageLookupByLibrary.simpleMessage("Verify"),
+    "txtVerifyEmailTitle": MessageLookupByLibrary.simpleMessage(
+      "Verify your email",
     ),
     "txtViewExplanation": MessageLookupByLibrary.simpleMessage(
       "View Explanation",

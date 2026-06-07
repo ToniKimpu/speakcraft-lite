@@ -29,4 +29,11 @@ class Env {
   static String get bunnyListeningAPIKey =>
       dotenv.env['BUNNY_LISTENING_API_KEY']!;
   static String get privacyPolicyUrl => dotenv.env['PRIVACY_POLICY']!;
+
+  /// Google OAuth web client ID — used as the `serverClientId` for native Google
+  /// sign-in and registered in Supabase's Google provider. Not in [_required] so
+  /// the app still boots before Google login is configured; the auth repository
+  /// surfaces a clear error if it's missing when a user taps "Continue with
+  /// Google".
+  static String? get googleWebClientId => dotenv.env['GOOGLE_WEB_CLIENT_ID'];
 }

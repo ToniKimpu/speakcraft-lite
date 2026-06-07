@@ -20,9 +20,15 @@ mixin _$AuthEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
     required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
     required TResult Function() logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -30,9 +36,15 @@ mixin _$AuthEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
     TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult? Function()? logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -40,9 +52,15 @@ mixin _$AuthEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
     TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult Function()? logout,
     required TResult orElse(),
   }) =>
@@ -51,7 +69,12 @@ mixin _$AuthEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
     required TResult Function(_Logout value) logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -59,7 +82,12 @@ mixin _$AuthEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
     TResult? Function(_Logout value)? logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -67,7 +95,12 @@ mixin _$AuthEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
     TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) =>
@@ -173,9 +206,15 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
     required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
     required TResult Function() logout,
   }) {
     return authCheck(withLoading);
@@ -186,9 +225,15 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
     TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult? Function()? logout,
   }) {
     return authCheck?.call(withLoading);
@@ -199,9 +244,15 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
     TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -216,7 +267,12 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
     required TResult Function(_Logout value) logout,
   }) {
     return authCheck(this);
@@ -227,7 +283,12 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
     TResult? Function(_Logout value)? logout,
   }) {
     return authCheck?.call(this);
@@ -238,7 +299,12 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
     TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
@@ -352,9 +418,15 @@ class _$LoginWithEmailImpl
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
     required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
     required TResult Function() logout,
   }) {
     return loginWithEmail(email, password);
@@ -365,9 +437,15 @@ class _$LoginWithEmailImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
     TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult? Function()? logout,
   }) {
     return loginWithEmail?.call(email, password);
@@ -378,9 +456,15 @@ class _$LoginWithEmailImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
     TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -395,7 +479,12 @@ class _$LoginWithEmailImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
     required TResult Function(_Logout value) logout,
   }) {
     return loginWithEmail(this);
@@ -406,7 +495,12 @@ class _$LoginWithEmailImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
     TResult? Function(_Logout value)? logout,
   }) {
     return loginWithEmail?.call(this);
@@ -417,7 +511,12 @@ class _$LoginWithEmailImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
     TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
@@ -440,6 +539,170 @@ abstract class _LoginWithEmail implements AuthEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginWithEmailImplCopyWith<_$LoginWithEmailImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoginWithGoogleImplCopyWith<$Res> {
+  factory _$$LoginWithGoogleImplCopyWith(_$LoginWithGoogleImpl value,
+          $Res Function(_$LoginWithGoogleImpl) then) =
+      __$$LoginWithGoogleImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoginWithGoogleImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$LoginWithGoogleImpl>
+    implements _$$LoginWithGoogleImplCopyWith<$Res> {
+  __$$LoginWithGoogleImplCopyWithImpl(
+      _$LoginWithGoogleImpl _value, $Res Function(_$LoginWithGoogleImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LoginWithGoogleImpl
+    with DiagnosticableTreeMixin
+    implements _LoginWithGoogle {
+  const _$LoginWithGoogleImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.loginWithGoogle()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthEvent.loginWithGoogle'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoginWithGoogleImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return loginWithGoogle();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return loginWithGoogle?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (loginWithGoogle != null) {
+      return loginWithGoogle();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return loginWithGoogle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return loginWithGoogle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (loginWithGoogle != null) {
+      return loginWithGoogle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoginWithGoogle implements AuthEvent {
+  const factory _LoginWithGoogle() = _$LoginWithGoogleImpl;
 }
 
 /// @nodoc
@@ -554,9 +817,15 @@ class _$SignUpWithEmailImpl
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
     required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
     required TResult Function() logout,
   }) {
     return signupWithEmail(email, password, name, profilePath);
@@ -567,9 +836,15 @@ class _$SignUpWithEmailImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
     TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult? Function()? logout,
   }) {
     return signupWithEmail?.call(email, password, name, profilePath);
@@ -580,9 +855,15 @@ class _$SignUpWithEmailImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
     TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -597,7 +878,12 @@ class _$SignUpWithEmailImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
     required TResult Function(_Logout value) logout,
   }) {
     return signupWithEmail(this);
@@ -608,7 +894,12 @@ class _$SignUpWithEmailImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
     TResult? Function(_Logout value)? logout,
   }) {
     return signupWithEmail?.call(this);
@@ -619,7 +910,12 @@ class _$SignUpWithEmailImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
     TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
@@ -643,6 +939,841 @@ abstract class _SignUpWithEmail implements AuthEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SignUpWithEmailImplCopyWith<_$SignUpWithEmailImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$VerifyOtpImplCopyWith<$Res> {
+  factory _$$VerifyOtpImplCopyWith(
+          _$VerifyOtpImpl value, $Res Function(_$VerifyOtpImpl) then) =
+      __$$VerifyOtpImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email, String token});
+}
+
+/// @nodoc
+class __$$VerifyOtpImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$VerifyOtpImpl>
+    implements _$$VerifyOtpImplCopyWith<$Res> {
+  __$$VerifyOtpImplCopyWithImpl(
+      _$VerifyOtpImpl _value, $Res Function(_$VerifyOtpImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? token = null,
+  }) {
+    return _then(_$VerifyOtpImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
+  const _$VerifyOtpImpl(this.email, this.token);
+
+  @override
+  final String email;
+  @override
+  final String token;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.verifyOtp(email: $email, token: $token)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.verifyOtp'))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('token', token));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$VerifyOtpImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.token, token) || other.token == token));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, token);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$VerifyOtpImplCopyWith<_$VerifyOtpImpl> get copyWith =>
+      __$$VerifyOtpImplCopyWithImpl<_$VerifyOtpImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return verifyOtp(email, token);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return verifyOtp?.call(email, token);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (verifyOtp != null) {
+      return verifyOtp(email, token);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return verifyOtp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return verifyOtp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (verifyOtp != null) {
+      return verifyOtp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VerifyOtp implements AuthEvent {
+  const factory _VerifyOtp(final String email, final String token) =
+      _$VerifyOtpImpl;
+
+  String get email;
+  String get token;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$VerifyOtpImplCopyWith<_$VerifyOtpImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResendOtpImplCopyWith<$Res> {
+  factory _$$ResendOtpImplCopyWith(
+          _$ResendOtpImpl value, $Res Function(_$ResendOtpImpl) then) =
+      __$$ResendOtpImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email});
+}
+
+/// @nodoc
+class __$$ResendOtpImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$ResendOtpImpl>
+    implements _$$ResendOtpImplCopyWith<$Res> {
+  __$$ResendOtpImplCopyWithImpl(
+      _$ResendOtpImpl _value, $Res Function(_$ResendOtpImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+  }) {
+    return _then(_$ResendOtpImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
+  const _$ResendOtpImpl(this.email);
+
+  @override
+  final String email;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.resendOtp(email: $email)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.resendOtp'))
+      ..add(DiagnosticsProperty('email', email));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResendOtpImpl &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResendOtpImplCopyWith<_$ResendOtpImpl> get copyWith =>
+      __$$ResendOtpImplCopyWithImpl<_$ResendOtpImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return resendOtp(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return resendOtp?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (resendOtp != null) {
+      return resendOtp(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return resendOtp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return resendOtp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (resendOtp != null) {
+      return resendOtp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResendOtp implements AuthEvent {
+  const factory _ResendOtp(final String email) = _$ResendOtpImpl;
+
+  String get email;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResendOtpImplCopyWith<_$ResendOtpImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ForgotPasswordImplCopyWith<$Res> {
+  factory _$$ForgotPasswordImplCopyWith(_$ForgotPasswordImpl value,
+          $Res Function(_$ForgotPasswordImpl) then) =
+      __$$ForgotPasswordImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email});
+}
+
+/// @nodoc
+class __$$ForgotPasswordImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$ForgotPasswordImpl>
+    implements _$$ForgotPasswordImplCopyWith<$Res> {
+  __$$ForgotPasswordImplCopyWithImpl(
+      _$ForgotPasswordImpl _value, $Res Function(_$ForgotPasswordImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+  }) {
+    return _then(_$ForgotPasswordImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ForgotPasswordImpl
+    with DiagnosticableTreeMixin
+    implements _ForgotPassword {
+  const _$ForgotPasswordImpl(this.email);
+
+  @override
+  final String email;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.forgotPassword(email: $email)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.forgotPassword'))
+      ..add(DiagnosticsProperty('email', email));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ForgotPasswordImpl &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ForgotPasswordImplCopyWith<_$ForgotPasswordImpl> get copyWith =>
+      __$$ForgotPasswordImplCopyWithImpl<_$ForgotPasswordImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return forgotPassword(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return forgotPassword?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (forgotPassword != null) {
+      return forgotPassword(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return forgotPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return forgotPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (forgotPassword != null) {
+      return forgotPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ForgotPassword implements AuthEvent {
+  const factory _ForgotPassword(final String email) = _$ForgotPasswordImpl;
+
+  String get email;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ForgotPasswordImplCopyWith<_$ForgotPasswordImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResetPasswordImplCopyWith<$Res> {
+  factory _$$ResetPasswordImplCopyWith(
+          _$ResetPasswordImpl value, $Res Function(_$ResetPasswordImpl) then) =
+      __$$ResetPasswordImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email, String token, String newPassword});
+}
+
+/// @nodoc
+class __$$ResetPasswordImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$ResetPasswordImpl>
+    implements _$$ResetPasswordImplCopyWith<$Res> {
+  __$$ResetPasswordImplCopyWithImpl(
+      _$ResetPasswordImpl _value, $Res Function(_$ResetPasswordImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? token = null,
+    Object? newPassword = null,
+  }) {
+    return _then(_$ResetPasswordImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == newPassword
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ResetPasswordImpl
+    with DiagnosticableTreeMixin
+    implements _ResetPassword {
+  const _$ResetPasswordImpl(this.email, this.token, this.newPassword);
+
+  @override
+  final String email;
+  @override
+  final String token;
+  @override
+  final String newPassword;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.resetPassword(email: $email, token: $token, newPassword: $newPassword)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.resetPassword'))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('token', token))
+      ..add(DiagnosticsProperty('newPassword', newPassword));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResetPasswordImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.token, token) || other.token == token) &&
+            (identical(other.newPassword, newPassword) ||
+                other.newPassword == newPassword));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, token, newPassword);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResetPasswordImplCopyWith<_$ResetPasswordImpl> get copyWith =>
+      __$$ResetPasswordImplCopyWithImpl<_$ResetPasswordImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return resetPassword(email, token, newPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return resetPassword?.call(email, token, newPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (resetPassword != null) {
+      return resetPassword(email, token, newPassword);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return resetPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return resetPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (resetPassword != null) {
+      return resetPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetPassword implements AuthEvent {
+  const factory _ResetPassword(
+          final String email, final String token, final String newPassword) =
+      _$ResetPasswordImpl;
+
+  String get email;
+  String get token;
+  String get newPassword;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResetPasswordImplCopyWith<_$ResetPasswordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -695,9 +1826,15 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
     required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
     required TResult Function() logout,
   }) {
     return logout();
@@ -708,9 +1845,15 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
     TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult? Function()? logout,
   }) {
     return logout?.call();
@@ -721,9 +1864,15 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
     TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -738,7 +1887,12 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
     required TResult Function(_Logout value) logout,
   }) {
     return logout(this);
@@ -749,7 +1903,12 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
     TResult? Function(_Logout value)? logout,
   }) {
     return logout?.call(this);
@@ -760,7 +1919,12 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
     TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
@@ -783,6 +1947,9 @@ mixin _$AuthState {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -797,6 +1964,9 @@ mixin _$AuthState {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -811,6 +1981,9 @@ mixin _$AuthState {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -826,6 +1999,9 @@ mixin _$AuthState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -840,6 +2016,9 @@ mixin _$AuthState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -854,6 +2033,9 @@ mixin _$AuthState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -936,6 +2118,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -953,6 +2138,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -970,6 +2158,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -991,6 +2182,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -1008,6 +2202,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -1025,6 +2222,9 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -1095,6 +2295,9 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -1112,6 +2315,9 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -1129,6 +2335,9 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -1150,6 +2359,9 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -1167,6 +2379,9 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -1184,6 +2399,9 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -1256,6 +2474,9 @@ class _$AuthenticatedImpl
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -1273,6 +2494,9 @@ class _$AuthenticatedImpl
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -1290,6 +2514,9 @@ class _$AuthenticatedImpl
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -1311,6 +2538,9 @@ class _$AuthenticatedImpl
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -1328,6 +2558,9 @@ class _$AuthenticatedImpl
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -1345,6 +2578,9 @@ class _$AuthenticatedImpl
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -1417,6 +2653,9 @@ class _$UnauthenticatedImpl
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -1434,6 +2673,9 @@ class _$UnauthenticatedImpl
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -1451,6 +2693,9 @@ class _$UnauthenticatedImpl
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -1472,6 +2717,9 @@ class _$UnauthenticatedImpl
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -1489,6 +2737,9 @@ class _$UnauthenticatedImpl
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -1506,6 +2757,9 @@ class _$UnauthenticatedImpl
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -1523,6 +2777,616 @@ class _$UnauthenticatedImpl
 
 abstract class _Unauthenticated implements AuthState {
   const factory _Unauthenticated() = _$UnauthenticatedImpl;
+}
+
+/// @nodoc
+abstract class _$$OtpRequiredImplCopyWith<$Res> {
+  factory _$$OtpRequiredImplCopyWith(
+          _$OtpRequiredImpl value, $Res Function(_$OtpRequiredImpl) then) =
+      __$$OtpRequiredImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email});
+}
+
+/// @nodoc
+class __$$OtpRequiredImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$OtpRequiredImpl>
+    implements _$$OtpRequiredImplCopyWith<$Res> {
+  __$$OtpRequiredImplCopyWithImpl(
+      _$OtpRequiredImpl _value, $Res Function(_$OtpRequiredImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+  }) {
+    return _then(_$OtpRequiredImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OtpRequiredImpl with DiagnosticableTreeMixin implements _OtpRequired {
+  const _$OtpRequiredImpl(this.email);
+
+  @override
+  final String email;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthState.otpRequired(email: $email)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthState.otpRequired'))
+      ..add(DiagnosticsProperty('email', email));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OtpRequiredImpl &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OtpRequiredImplCopyWith<_$OtpRequiredImpl> get copyWith =>
+      __$$OtpRequiredImplCopyWithImpl<_$OtpRequiredImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() authenticated,
+    required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
+    required TResult Function() deviceIdFailed,
+    required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
+    required TResult Function(String message) error,
+  }) {
+    return otpRequired(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? authenticated,
+    TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
+    TResult? Function()? deviceIdFailed,
+    TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
+    TResult? Function(String message)? error,
+  }) {
+    return otpRequired?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? authenticated,
+    TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
+    TResult Function()? deviceIdFailed,
+    TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (otpRequired != null) {
+      return otpRequired(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Authenticated value) authenticated,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
+    required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
+    required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Error value) error,
+  }) {
+    return otpRequired(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Authenticated value)? authenticated,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
+    TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Error value)? error,
+  }) {
+    return otpRequired?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Authenticated value)? authenticated,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
+    TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (otpRequired != null) {
+      return otpRequired(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OtpRequired implements AuthState {
+  const factory _OtpRequired(final String email) = _$OtpRequiredImpl;
+
+  String get email;
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OtpRequiredImplCopyWith<_$OtpRequiredImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OtpResentImplCopyWith<$Res> {
+  factory _$$OtpResentImplCopyWith(
+          _$OtpResentImpl value, $Res Function(_$OtpResentImpl) then) =
+      __$$OtpResentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OtpResentImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$OtpResentImpl>
+    implements _$$OtpResentImplCopyWith<$Res> {
+  __$$OtpResentImplCopyWithImpl(
+      _$OtpResentImpl _value, $Res Function(_$OtpResentImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OtpResentImpl with DiagnosticableTreeMixin implements _OtpResent {
+  const _$OtpResentImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthState.otpResent()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthState.otpResent'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OtpResentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() authenticated,
+    required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
+    required TResult Function() deviceIdFailed,
+    required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
+    required TResult Function(String message) error,
+  }) {
+    return otpResent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? authenticated,
+    TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
+    TResult? Function()? deviceIdFailed,
+    TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
+    TResult? Function(String message)? error,
+  }) {
+    return otpResent?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? authenticated,
+    TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
+    TResult Function()? deviceIdFailed,
+    TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (otpResent != null) {
+      return otpResent();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Authenticated value) authenticated,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
+    required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
+    required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Error value) error,
+  }) {
+    return otpResent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Authenticated value)? authenticated,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
+    TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Error value)? error,
+  }) {
+    return otpResent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Authenticated value)? authenticated,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
+    TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (otpResent != null) {
+      return otpResent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OtpResent implements AuthState {
+  const factory _OtpResent() = _$OtpResentImpl;
+}
+
+/// @nodoc
+abstract class _$$PasswordResetOtpSentImplCopyWith<$Res> {
+  factory _$$PasswordResetOtpSentImplCopyWith(_$PasswordResetOtpSentImpl value,
+          $Res Function(_$PasswordResetOtpSentImpl) then) =
+      __$$PasswordResetOtpSentImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email});
+}
+
+/// @nodoc
+class __$$PasswordResetOtpSentImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$PasswordResetOtpSentImpl>
+    implements _$$PasswordResetOtpSentImplCopyWith<$Res> {
+  __$$PasswordResetOtpSentImplCopyWithImpl(_$PasswordResetOtpSentImpl _value,
+      $Res Function(_$PasswordResetOtpSentImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+  }) {
+    return _then(_$PasswordResetOtpSentImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PasswordResetOtpSentImpl
+    with DiagnosticableTreeMixin
+    implements _PasswordResetOtpSent {
+  const _$PasswordResetOtpSentImpl(this.email);
+
+  @override
+  final String email;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthState.passwordResetOtpSent(email: $email)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthState.passwordResetOtpSent'))
+      ..add(DiagnosticsProperty('email', email));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PasswordResetOtpSentImpl &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PasswordResetOtpSentImplCopyWith<_$PasswordResetOtpSentImpl>
+      get copyWith =>
+          __$$PasswordResetOtpSentImplCopyWithImpl<_$PasswordResetOtpSentImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() authenticated,
+    required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
+    required TResult Function() deviceIdFailed,
+    required TResult Function() onFreeUser,
+    required TResult Function() onNewPath,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
+    required TResult Function(String message) error,
+  }) {
+    return passwordResetOtpSent(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? authenticated,
+    TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
+    TResult? Function()? deviceIdFailed,
+    TResult? Function()? onFreeUser,
+    TResult? Function()? onNewPath,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
+    TResult? Function(String message)? error,
+  }) {
+    return passwordResetOtpSent?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? authenticated,
+    TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
+    TResult Function()? deviceIdFailed,
+    TResult Function()? onFreeUser,
+    TResult Function()? onNewPath,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (passwordResetOtpSent != null) {
+      return passwordResetOtpSent(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Authenticated value) authenticated,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
+    required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_OnFreeUser value) onFreeUser,
+    required TResult Function(_OnNewPath value) onNewPath,
+    required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Error value) error,
+  }) {
+    return passwordResetOtpSent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Authenticated value)? authenticated,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_OnFreeUser value)? onFreeUser,
+    TResult? Function(_OnNewPath value)? onNewPath,
+    TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Error value)? error,
+  }) {
+    return passwordResetOtpSent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Authenticated value)? authenticated,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_OnFreeUser value)? onFreeUser,
+    TResult Function(_OnNewPath value)? onNewPath,
+    TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (passwordResetOtpSent != null) {
+      return passwordResetOtpSent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PasswordResetOtpSent implements AuthState {
+  const factory _PasswordResetOtpSent(final String email) =
+      _$PasswordResetOtpSentImpl;
+
+  String get email;
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PasswordResetOtpSentImplCopyWith<_$PasswordResetOtpSentImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1578,6 +3442,9 @@ class _$DeviceIdFailedImpl
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -1595,6 +3462,9 @@ class _$DeviceIdFailedImpl
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -1612,6 +3482,9 @@ class _$DeviceIdFailedImpl
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -1633,6 +3506,9 @@ class _$DeviceIdFailedImpl
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -1650,6 +3526,9 @@ class _$DeviceIdFailedImpl
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -1667,6 +3546,9 @@ class _$DeviceIdFailedImpl
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -1737,6 +3619,9 @@ class _$OnFreeUserImpl with DiagnosticableTreeMixin implements _OnFreeUser {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -1754,6 +3639,9 @@ class _$OnFreeUserImpl with DiagnosticableTreeMixin implements _OnFreeUser {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -1771,6 +3659,9 @@ class _$OnFreeUserImpl with DiagnosticableTreeMixin implements _OnFreeUser {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -1792,6 +3683,9 @@ class _$OnFreeUserImpl with DiagnosticableTreeMixin implements _OnFreeUser {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -1809,6 +3703,9 @@ class _$OnFreeUserImpl with DiagnosticableTreeMixin implements _OnFreeUser {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -1826,6 +3723,9 @@ class _$OnFreeUserImpl with DiagnosticableTreeMixin implements _OnFreeUser {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -1896,6 +3796,9 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -1913,6 +3816,9 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -1930,6 +3836,9 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -1951,6 +3860,9 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -1968,6 +3880,9 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -1985,6 +3900,9 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -2092,6 +4010,9 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -2109,6 +4030,9 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -2126,6 +4050,9 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -2147,6 +4074,9 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -2164,6 +4094,9 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -2181,6 +4114,9 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -2289,6 +4225,9 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -2306,6 +4245,9 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -2323,6 +4265,9 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -2344,6 +4289,9 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -2361,6 +4309,9 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -2378,6 +4329,9 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,
@@ -2485,6 +4439,9 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function() loading,
     required TResult Function() authenticated,
     required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
     required TResult Function() onFreeUser,
     required TResult Function() onNewPath,
@@ -2502,6 +4459,9 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function()? loading,
     TResult? Function()? authenticated,
     TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
     TResult? Function()? onFreeUser,
     TResult? Function()? onNewPath,
@@ -2519,6 +4479,9 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function()? loading,
     TResult Function()? authenticated,
     TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
     TResult Function()? onFreeUser,
     TResult Function()? onNewPath,
@@ -2540,6 +4503,9 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Authenticated value) authenticated,
     required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
     required TResult Function(_OnFreeUser value) onFreeUser,
     required TResult Function(_OnNewPath value) onNewPath,
@@ -2557,6 +4523,9 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Authenticated value)? authenticated,
     TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult? Function(_OnFreeUser value)? onFreeUser,
     TResult? Function(_OnNewPath value)? onNewPath,
@@ -2574,6 +4543,9 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Authenticated value)? authenticated,
     TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
     TResult Function(_OnFreeUser value)? onFreeUser,
     TResult Function(_OnNewPath value)? onNewPath,

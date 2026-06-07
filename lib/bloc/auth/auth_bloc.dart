@@ -18,9 +18,16 @@ abstract class AuthEvent with _$AuthEvent {
   const factory AuthEvent.authCheck({bool? withLoading}) = _AuthCheck;
   const factory AuthEvent.loginWithEmail(String email, String password) =
       _LoginWithEmail;
+  const factory AuthEvent.loginWithGoogle() = _LoginWithGoogle;
   const factory AuthEvent.signupWithEmail(
           String email, String password, String name, String? profilePath) =
       _SignUpWithEmail;
+  const factory AuthEvent.verifyOtp(String email, String token) = _VerifyOtp;
+  const factory AuthEvent.resendOtp(String email) = _ResendOtp;
+  const factory AuthEvent.forgotPassword(String email) = _ForgotPassword;
+  const factory AuthEvent.resetPassword(
+          String email, String token, String newPassword) =
+      _ResetPassword;
   const factory AuthEvent.logout() = _Logout;
 }
 
@@ -30,6 +37,10 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.loading() = _Loading;
   const factory AuthState.authenticated() = _Authenticated;
   const factory AuthState.unauthenticated() = _Unauthenticated;
+  const factory AuthState.otpRequired(String email) = _OtpRequired;
+  const factory AuthState.otpResent() = _OtpResent;
+  const factory AuthState.passwordResetOtpSent(String email) =
+      _PasswordResetOtpSent;
   const factory AuthState.deviceIdFailed() = _DeviceIdFailed;
   const factory AuthState.onFreeUser() = _OnFreeUser;
   const factory AuthState.onNewPath() = _OnNewPath;
@@ -51,9 +62,16 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           authCheck: (_) => _mapAuthCheckToState(emit),
           loginWithEmail: (email, password) =>
               _mapLoginWithEmailToState(email, password, emit),
+          loginWithGoogle: () => _mapLoginWithGoogleToState(emit),
           signupWithEmail: (email, password, name, profilePath) =>
               _mapSignUpWithEmailToState(
                   name, email, password, profilePath, emit),
+          verifyOtp: (email, token) =>
+              _mapVerifyOtpToState(email, token, emit),
+          resendOtp: (email) => _mapResendOtpToState(email, emit),
+          forgotPassword: (email) => _mapForgotPasswordToState(email, emit),
+          resetPassword: (email, token, newPassword) =>
+              _mapResetPasswordToState(email, token, newPassword, emit),
           logout: () => _mapLogoutToState(emit),
         );
       },
@@ -102,6 +120,28 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
+  Future<void> _mapLoginWithGoogleToState(Emitter<AuthState> emit) async {
+    emit(const AuthState.loading());
+    try {
+      final appUser = await _repository.loginWithGoogle();
+      // Null → the user dismissed the Google picker; return to the login screen.
+      if (appUser == null) {
+        emit(const AuthState.unauthenticated());
+        return;
+      }
+      await _resolveAuthenticatedState(appUser, emit);
+    } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Google sign-in failed. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_loginWithGoogleError: ${error.toString()}', error: error);
+    }
+  }
+
   Future<void> _mapSignUpWithEmailToState(String name, String email,
       String password, String? profilePath, Emitter<AuthState> emit) async {
     final emailRegex =
@@ -117,18 +157,15 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
     emit(const AuthState.loading());
     try {
-      final appUser = await _repository.signUpWithEmail(
-          email,
-          password,
-          name,
-          profilePath,
-          sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
-      sl<ValueNotifier<AppUser>>().value = appUser;
-      if (!appUser.isPremiumUser!) {
-        emit(const AuthState.onFreeUser());
+      final appUser =
+          await _repository.signUpWithEmail(email, password, name, profilePath);
+      // No session yet → email confirmation is on and an OTP was sent.
+      if (appUser == null) {
+        emit(AuthState.otpRequired(email));
         return;
       }
-      emit(const AuthState.authenticated());
+      // Confirmation disabled → already signed in.
+      await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
       if (error is SocketException || error is TimeoutException) {
         emit(const AuthState.socketError('Please check your connection.'));
@@ -140,6 +177,121 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     }
   }
 
+  Future<void> _mapVerifyOtpToState(
+      String email, String token, Emitter<AuthState> emit) async {
+    if (token.trim().length < 6) {
+      emit(const AuthState.error('Please enter the 6-digit code.'));
+      return;
+    }
+    emit(const AuthState.loading());
+    try {
+      final appUser = await _repository.verifySignUpOtp(email, token.trim());
+      await _resolveAuthenticatedState(appUser, emit);
+    } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Invalid or expired code. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_verifyOtpError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapResendOtpToState(
+      String email, Emitter<AuthState> emit) async {
+    try {
+      await _repository.resendSignUpOtp(email);
+      emit(const AuthState.otpResent());
+    } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Could not resend the code. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_resendOtpError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapForgotPasswordToState(
+      String email, Emitter<AuthState> emit) async {
+    final emailRegex =
+        RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+    if (email.isEmpty || !emailRegex.hasMatch(email)) {
+      emit(const AuthState.error('Invalid email format.'));
+      return;
+    }
+    emit(const AuthState.loading());
+    try {
+      await _repository.sendPasswordResetOtp(email);
+      emit(AuthState.passwordResetOtpSent(email));
+    } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Could not send the reset code. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_forgotPasswordError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapResetPasswordToState(String email, String token,
+      String newPassword, Emitter<AuthState> emit) async {
+    if (token.trim().length < 6) {
+      emit(const AuthState.error('Please enter the 6-digit code.'));
+      return;
+    }
+    if (newPassword.length < 6) {
+      emit(const AuthState.error('Password must be at least 6 characters.'));
+      return;
+    }
+    emit(const AuthState.loading());
+    try {
+      final appUser =
+          await _repository.resetPassword(email, token.trim(), newPassword);
+      await _resolveAuthenticatedState(appUser, emit);
+    } catch (error) {
+      if (error is SocketException || error is TimeoutException) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Invalid or expired code. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_resetPasswordError: ${error.toString()}', error: error);
+    }
+  }
+
+  /// Shared post-authentication resolution: premium gate, single-device lock,
+  /// and first-login device binding. Used by login, OTP verify, and the
+  /// confirmation-disabled signup path.
+  Future<void> _resolveAuthenticatedState(
+      AppUser appUser, Emitter<AuthState> emit) async {
+    sl<ValueNotifier<AppUser>>().value = appUser;
+    if (!(appUser.isPremiumUser ?? false)) {
+      emit(const AuthState.onFreeUser());
+      return;
+    }
+    final localDeviceId =
+        sl<ValueNotifier<String?>>(instanceName: 'deviceId').value;
+    if (appUser.deviceId != null && appUser.deviceId != localDeviceId) {
+      await _repository.logout();
+      emit(const AuthState.deviceIdFailed());
+      return;
+    }
+    if (appUser.deviceId == null && localDeviceId != null) {
+      await _repository.updateDeviceId(localDeviceId);
+      sl<ValueNotifier<AppUser>>().value =
+          appUser.copyWith(deviceId: localDeviceId);
+    }
+    emit(const AuthState.authenticated());
+  }
+
   Future<void> _mapLoginWithEmailToState(
       String email, String password, Emitter<AuthState> emit) async {
     if (email.isEmpty || password.isEmpty) {
@@ -149,27 +301,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(const AuthState.loading());
     try {
       final appUser = await _repository.loginWithEmail(email, password);
-      sl<ValueNotifier<AppUser>>().value = appUser;
-      if (!appUser.isPremiumUser!) {
-        emit(const AuthState.onFreeUser());
-        return;
-      }
-      if (appUser.deviceId != null &&
-          appUser.deviceId !=
-              sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
-        await _repository.logout();
-        emit(const AuthState.deviceIdFailed());
-        return;
-      }
-      if (appUser.deviceId == null &&
-          sl<ValueNotifier<String?>>(instanceName: 'deviceId').value != null) {
-        await _repository.updateDeviceId(
-            sl<ValueNotifier<String?>>(instanceName: 'deviceId').value!);
-        sl<ValueNotifier<AppUser>>().value = appUser.copyWith(
-            deviceId:
-                sl<ValueNotifier<String?>>(instanceName: 'deviceId').value);
-      }
-      emit(const AuthState.authenticated());
+      await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
       if (error is SocketException || error is TimeoutException) {
         emit(const AuthState.socketError('Please check your connection.'));

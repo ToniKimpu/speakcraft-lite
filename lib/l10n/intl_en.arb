@@ -12,6 +12,38 @@
   "txtFeedback": "Feedback",
   "txtViewExplanation": "View Explanation",
 
+  "txtVerifyEmailTitle": "Verify your email",
+  "txtOtpSentTo": "Enter the 6-digit code we sent to {email}",
+  "@txtOtpSentTo": {
+    "placeholders": {
+      "email": { "type": "String" }
+    }
+  },
+  "txtOtpFieldLabel": "6-digit code",
+  "txtVerify": "Verify",
+  "txtDidntGetCode": "Didn't get the code?",
+  "txtResendCode": "Resend code",
+  "txtResendInSeconds": "Resend in {seconds}s",
+  "@txtResendInSeconds": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+  "txtCodeResent": "A new code has been sent",
+  "txtEnterValidCode": "Please enter the 6-digit code",
+
+  "txtContinueWithGoogle": "Continue with Google",
+  "txtOr": "or",
+  "txtForgotPassword": "Forgot password?",
+  "txtForgotPasswordTitle": "Reset password",
+  "txtForgotPasswordSubtitle": "Enter your account email and we'll send you a 6-digit code.",
+  "txtSendCode": "Send code",
+  "txtNewPassword": "New password",
+  "txtConfirmNewPassword": "Confirm new password",
+  "txtResetPasswordButton": "Reset password",
+  "txtPasswordsDoNotMatch": "Passwords do not match",
+  "txtPasswordMinLength": "Password must be at least 6 characters",
+
   "txtCompleted": "Completed",
   "txtTryAgain": "Try again",
   "txtHighlightReadAlong": "Read Along",

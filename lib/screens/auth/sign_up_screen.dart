@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/auth/auth_bloc.dart';
 import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/screens/auth/otp_verification_screen.dart';
 import 'package:speakcraft/screens/auth/widgets/sign_up_data.dart';
 import 'package:speakcraft/screens/auth/widgets/sign_up_profile.dart';
 import 'package:speakcraft/screens/main/home_screen.dart';
@@ -70,6 +71,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
           bloc: _authBloc,
           listener: (context, state) {
             state.whenOrNull(
+              otpRequired: (email) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OtpVerificationScreen(email: email),
+                  ),
+                );
+              },
               authenticated: () {
                 Navigator.pushAndRemoveUntil(
                   context,

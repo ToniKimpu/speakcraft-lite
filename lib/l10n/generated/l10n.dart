@@ -149,6 +149,191 @@ class AppLocalizations {
     );
   }
 
+  /// `Verify your email`
+  String get txtVerifyEmailTitle {
+    return Intl.message(
+      'Verify your email',
+      name: 'txtVerifyEmailTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the 6-digit code we sent to {email}`
+  String txtOtpSentTo(String email) {
+    return Intl.message(
+      'Enter the 6-digit code we sent to $email',
+      name: 'txtOtpSentTo',
+      desc: '',
+      args: [email],
+    );
+  }
+
+  /// `6-digit code`
+  String get txtOtpFieldLabel {
+    return Intl.message(
+      '6-digit code',
+      name: 'txtOtpFieldLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify`
+  String get txtVerify {
+    return Intl.message('Verify', name: 'txtVerify', desc: '', args: []);
+  }
+
+  /// `Didn't get the code?`
+  String get txtDidntGetCode {
+    return Intl.message(
+      'Didn\'t get the code?',
+      name: 'txtDidntGetCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend code`
+  String get txtResendCode {
+    return Intl.message(
+      'Resend code',
+      name: 'txtResendCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend in {seconds}s`
+  String txtResendInSeconds(int seconds) {
+    return Intl.message(
+      'Resend in ${seconds}s',
+      name: 'txtResendInSeconds',
+      desc: '',
+      args: [seconds],
+    );
+  }
+
+  /// `A new code has been sent`
+  String get txtCodeResent {
+    return Intl.message(
+      'A new code has been sent',
+      name: 'txtCodeResent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the 6-digit code`
+  String get txtEnterValidCode {
+    return Intl.message(
+      'Please enter the 6-digit code',
+      name: 'txtEnterValidCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Google`
+  String get txtContinueWithGoogle {
+    return Intl.message(
+      'Continue with Google',
+      name: 'txtContinueWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `or`
+  String get txtOr {
+    return Intl.message('or', name: 'txtOr', desc: '', args: []);
+  }
+
+  /// `Forgot password?`
+  String get txtForgotPassword {
+    return Intl.message(
+      'Forgot password?',
+      name: 'txtForgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password`
+  String get txtForgotPasswordTitle {
+    return Intl.message(
+      'Reset password',
+      name: 'txtForgotPasswordTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your account email and we'll send you a 6-digit code.`
+  String get txtForgotPasswordSubtitle {
+    return Intl.message(
+      'Enter your account email and we\'ll send you a 6-digit code.',
+      name: 'txtForgotPasswordSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send code`
+  String get txtSendCode {
+    return Intl.message('Send code', name: 'txtSendCode', desc: '', args: []);
+  }
+
+  /// `New password`
+  String get txtNewPassword {
+    return Intl.message(
+      'New password',
+      name: 'txtNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm new password`
+  String get txtConfirmNewPassword {
+    return Intl.message(
+      'Confirm new password',
+      name: 'txtConfirmNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password`
+  String get txtResetPasswordButton {
+    return Intl.message(
+      'Reset password',
+      name: 'txtResetPasswordButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get txtPasswordsDoNotMatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'txtPasswordsDoNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 6 characters`
+  String get txtPasswordMinLength {
+    return Intl.message(
+      'Password must be at least 6 characters',
+      name: 'txtPasswordMinLength',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Completed`
   String get txtCompleted {
     return Intl.message('Completed', name: 'txtCompleted', desc: '', args: []);
