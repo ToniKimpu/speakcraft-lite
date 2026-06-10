@@ -119,12 +119,20 @@ the chosen topic; just-talk seeds its loop from the AI's `inferredTopic`
 (synthesized into a topic on submit in `DailySpeakingBloc._inferredTopic`; the
 first attempt is still pure free-talk, the loop is offered after). The result
 page offers **"Polish & retry"** (re-capture the same topic, carrying
-`topicAttemptId` + an incremented `revisionNumber`) and **"I'm done — see native
-version"** (`feedback/final_rewrite_page.dart`, route `dailySpeakingFinalRewrite`).
+`topicAttemptId` + an incremented `revisionNumber`) and **"Done"**.
 Polishing a just-talk session routes back through the just-talk recorder (so
 `onRamp` stays `just_talk`) with the inferred topic shown as a focus banner. The
-loop, native-version re-view (✨ + auto-jump), audio A/B, and resume-from-history
-all now apply to just-talk too. See `daily_speaking_feature.md`.
+loop, audio A/B, and resume-from-history all apply to just-talk too. See
+`daily_speaking_feature.md`.
+
+**Native rewrite is no longer a gated reveal.** Under the v2 annotated-transcript
+schema each attempt's feedback already carries its own native version
+(`sentences[].native`), surfaced in the Review & highlights screen's *Compare*
+view. So `FinalRewritePage`/route `dailySpeakingFinalRewrite` was **retired**,
+and "Done" simply finishes — showing a local-data progression recap
+(`_ProgressionRecap`: v1→v2→… score deltas, no AI call) when the chain has 2+
+versions. The reveal isn't "spoiling the answer" because native is regenerated
+per attempt; retrying earns a fresh native mirror of the improved attempt.
 
 - Sessions chain via `topicAttemptId` + `revisionNumber` on
   `dailySpeakingSessionTable` (**schema v6**); the id is minted in
@@ -135,31 +143,36 @@ all now apply to just-talk too. See `daily_speaking_feature.md`.
   once, at the terminal reveal, paid for exactly once.
 - v2+ results show `_VersionCompareStrip`: the score delta vs the previous
   version, read from local Drift (no tokens).
-- The terminal reveal makes a rewrite-only `reviewSession` call **directly** (not
-  via the bloc) and does **not** persist a history row. See
-  `daily_speaking_feature.md` ("The version loop") for the rationale + deviations.
+- NOTE: the `kTerminalRevealSections` menu-hiding (above) predates the v2 schema,
+  where native ships in every response regardless of the menu — so it's legacy /
+  under review.
 
 ## The three on-ramps converge
 
+> **Speaking only — no text input.** This is speaking practice, so the write
+> path was retired (route `dailySpeakingWritePath` + `write_path/` deleted). The
+> `DailySpeakingInputMode.text` enum value and the result page's "What you wrote"
+> branch stay only so any legacy text history row still deserializes/renders;
+> nothing creates a text session anymore. (Import-audio is the planned second
+> on-ramp — see the premium roadmap.)
+
 ```
-[ Just talk       ]   [ Own topic ]                  [ Suggested topic ]
-        │                  │                                 │
-        │                  ▼                                 ▼
-        │           own_topic_prep_page          suggested_topic_list_page
-        │                  │                                 │
-        │           ┌──────┴──────┐                          ▼
-        │           ▼             ▼                  suggested_topic_prep_page
-        │   own_topic_record  write_path_page                │
-        │     (voice)          (text input)                  ▼
-        │           │             │                  suggested_topic_record_page
-        ▼           │             │                          │
-just_record_page    │             │                          │
-        │           │             │                          │
-        ▼           ▼             ▼                          ▼
+[ Just talk       ]   [ Own topic ]              [ Suggested topic ]
+        │                  │                            │
+        │                  ▼                            ▼
+        │           own_topic_prep_page     suggested_topic_list_page
+        │                  │                            │
+        │                  ▼                            ▼
+        │           own_topic_record         suggested_topic_prep_page
+        │             (voice)                           │
+        ▼                  │                            ▼
+just_record_page           │                  suggested_topic_record_page
+        │                  │                            │
+        ▼                  ▼                            ▼
    widgets/session_recorder.dart (5-min hard cap)   (voice)
         │
         ▼
-DailySpeakingBloc.submitVoice / submitText
+DailySpeakingBloc.submitVoice
         │
         ▼
 DailySpeakingService.reviewSession

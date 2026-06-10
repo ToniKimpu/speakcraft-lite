@@ -68,7 +68,12 @@ mixin _$DailySpeakingFeedback {
   @JsonKey(name: 'sub_scores')
   SubScores? get subScores => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_tokens')
-  int get totalTokens => throw _privateConstructorUsedError;
+  int get totalTokens =>
+      throw _privateConstructorUsedError; // --- v2: the annotated transcript. When present, this is the single source
+// of truth for the transcript, the inline highlights, the sentence-aligned
+// split, and the derived `effective*` lists below. Older payloads (and the
+// legacy stub responses) leave it empty and fall back to the flat lists.
+  List<FeedbackSentence> get sentences => throw _privateConstructorUsedError;
 
   /// Serializes this DailySpeakingFeedback to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -110,7 +115,8 @@ abstract class $DailySpeakingFeedbackCopyWith<$Res> {
       List<SentenceRewrite> sentenceRewrites,
       @JsonKey(name: 'filler_words') List<FillerWord> fillerWords,
       @JsonKey(name: 'sub_scores') SubScores? subScores,
-      @JsonKey(name: 'total_tokens') int totalTokens});
+      @JsonKey(name: 'total_tokens') int totalTokens,
+      List<FeedbackSentence> sentences});
 
   $SubScoresCopyWith<$Res>? get subScores;
 }
@@ -153,6 +159,7 @@ class _$DailySpeakingFeedbackCopyWithImpl<$Res,
     Object? fillerWords = null,
     Object? subScores = freezed,
     Object? totalTokens = null,
+    Object? sentences = null,
   }) {
     return _then(_value.copyWith(
       score: null == score
@@ -243,6 +250,10 @@ class _$DailySpeakingFeedbackCopyWithImpl<$Res,
           ? _value.totalTokens
           : totalTokens // ignore: cast_nullable_to_non_nullable
               as int,
+      sentences: null == sentences
+          ? _value.sentences
+          : sentences // ignore: cast_nullable_to_non_nullable
+              as List<FeedbackSentence>,
     ) as $Val);
   }
 
@@ -294,7 +305,8 @@ abstract class _$$DailySpeakingFeedbackImplCopyWith<$Res>
       List<SentenceRewrite> sentenceRewrites,
       @JsonKey(name: 'filler_words') List<FillerWord> fillerWords,
       @JsonKey(name: 'sub_scores') SubScores? subScores,
-      @JsonKey(name: 'total_tokens') int totalTokens});
+      @JsonKey(name: 'total_tokens') int totalTokens,
+      List<FeedbackSentence> sentences});
 
   @override
   $SubScoresCopyWith<$Res>? get subScores;
@@ -336,6 +348,7 @@ class __$$DailySpeakingFeedbackImplCopyWithImpl<$Res>
     Object? fillerWords = null,
     Object? subScores = freezed,
     Object? totalTokens = null,
+    Object? sentences = null,
   }) {
     return _then(_$DailySpeakingFeedbackImpl(
       score: null == score
@@ -426,13 +439,17 @@ class __$$DailySpeakingFeedbackImplCopyWithImpl<$Res>
           ? _value.totalTokens
           : totalTokens // ignore: cast_nullable_to_non_nullable
               as int,
+      sentences: null == sentences
+          ? _value._sentences
+          : sentences // ignore: cast_nullable_to_non_nullable
+              as List<FeedbackSentence>,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
+class _$DailySpeakingFeedbackImpl extends _DailySpeakingFeedback {
   const _$DailySpeakingFeedbackImpl(
       {required this.score,
       this.level = CefrLevel.beginner,
@@ -463,7 +480,8 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
       @JsonKey(name: 'filler_words')
       final List<FillerWord> fillerWords = const <FillerWord>[],
       @JsonKey(name: 'sub_scores') this.subScores,
-      @JsonKey(name: 'total_tokens') this.totalTokens = 0})
+      @JsonKey(name: 'total_tokens') this.totalTokens = 0,
+      final List<FeedbackSentence> sentences = const <FeedbackSentence>[]})
       : _strengths = strengths,
         _fixes = fixes,
         _pronunciationNotes = pronunciationNotes,
@@ -474,7 +492,9 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
         _collocations = collocations,
         _idioms = idioms,
         _sentenceRewrites = sentenceRewrites,
-        _fillerWords = fillerWords;
+        _fillerWords = fillerWords,
+        _sentences = sentences,
+        super._();
 
   factory _$DailySpeakingFeedbackImpl.fromJson(Map<String, dynamic> json) =>
       _$$DailySpeakingFeedbackImplFromJson(json);
@@ -626,10 +646,26 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
   @override
   @JsonKey(name: 'total_tokens')
   final int totalTokens;
+// --- v2: the annotated transcript. When present, this is the single source
+// of truth for the transcript, the inline highlights, the sentence-aligned
+// split, and the derived `effective*` lists below. Older payloads (and the
+// legacy stub responses) leave it empty and fall back to the flat lists.
+  final List<FeedbackSentence> _sentences;
+// --- v2: the annotated transcript. When present, this is the single source
+// of truth for the transcript, the inline highlights, the sentence-aligned
+// split, and the derived `effective*` lists below. Older payloads (and the
+// legacy stub responses) leave it empty and fall back to the flat lists.
+  @override
+  @JsonKey()
+  List<FeedbackSentence> get sentences {
+    if (_sentences is EqualUnmodifiableListView) return _sentences;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_sentences);
+  }
 
   @override
   String toString() {
-    return 'DailySpeakingFeedback(score: $score, level: $level, inferredTopic: $inferredTopic, transcript: $transcript, durationSeconds: $durationSeconds, wordCount: $wordCount, speakingPaceWpm: $speakingPaceWpm, strengths: $strengths, fixes: $fixes, nativeRewrite: $nativeRewrite, pronunciationNotes: $pronunciationNotes, explanationMm: $explanationMm, targetPhraseResults: $targetPhraseResults, grammarPatterns: $grammarPatterns, interferenceNotes: $interferenceNotes, vocabUpgrades: $vocabUpgrades, collocations: $collocations, idioms: $idioms, sentenceRewrites: $sentenceRewrites, fillerWords: $fillerWords, subScores: $subScores, totalTokens: $totalTokens)';
+    return 'DailySpeakingFeedback(score: $score, level: $level, inferredTopic: $inferredTopic, transcript: $transcript, durationSeconds: $durationSeconds, wordCount: $wordCount, speakingPaceWpm: $speakingPaceWpm, strengths: $strengths, fixes: $fixes, nativeRewrite: $nativeRewrite, pronunciationNotes: $pronunciationNotes, explanationMm: $explanationMm, targetPhraseResults: $targetPhraseResults, grammarPatterns: $grammarPatterns, interferenceNotes: $interferenceNotes, vocabUpgrades: $vocabUpgrades, collocations: $collocations, idioms: $idioms, sentenceRewrites: $sentenceRewrites, fillerWords: $fillerWords, subScores: $subScores, totalTokens: $totalTokens, sentences: $sentences)';
   }
 
   @override
@@ -676,7 +712,9 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
             (identical(other.subScores, subScores) ||
                 other.subScores == subScores) &&
             (identical(other.totalTokens, totalTokens) ||
-                other.totalTokens == totalTokens));
+                other.totalTokens == totalTokens) &&
+            const DeepCollectionEquality()
+                .equals(other._sentences, _sentences));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -704,7 +742,8 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
         const DeepCollectionEquality().hash(_sentenceRewrites),
         const DeepCollectionEquality().hash(_fillerWords),
         subScores,
-        totalTokens
+        totalTokens,
+        const DeepCollectionEquality().hash(_sentences)
       ]);
 
   /// Create a copy of DailySpeakingFeedback
@@ -724,7 +763,7 @@ class _$DailySpeakingFeedbackImpl implements _DailySpeakingFeedback {
   }
 }
 
-abstract class _DailySpeakingFeedback implements DailySpeakingFeedback {
+abstract class _DailySpeakingFeedback extends DailySpeakingFeedback {
   const factory _DailySpeakingFeedback(
       {required final int score,
       final CefrLevel level,
@@ -751,8 +790,9 @@ abstract class _DailySpeakingFeedback implements DailySpeakingFeedback {
       final List<SentenceRewrite> sentenceRewrites,
       @JsonKey(name: 'filler_words') final List<FillerWord> fillerWords,
       @JsonKey(name: 'sub_scores') final SubScores? subScores,
-      @JsonKey(name: 'total_tokens')
-      final int totalTokens}) = _$DailySpeakingFeedbackImpl;
+      @JsonKey(name: 'total_tokens') final int totalTokens,
+      final List<FeedbackSentence> sentences}) = _$DailySpeakingFeedbackImpl;
+  const _DailySpeakingFeedback._() : super._();
 
   factory _DailySpeakingFeedback.fromJson(Map<String, dynamic> json) =
       _$DailySpeakingFeedbackImpl.fromJson;
@@ -825,7 +865,12 @@ abstract class _DailySpeakingFeedback implements DailySpeakingFeedback {
   SubScores? get subScores;
   @override
   @JsonKey(name: 'total_tokens')
-  int get totalTokens;
+  int get totalTokens; // --- v2: the annotated transcript. When present, this is the single source
+// of truth for the transcript, the inline highlights, the sentence-aligned
+// split, and the derived `effective*` lists below. Older payloads (and the
+// legacy stub responses) leave it empty and fall back to the flat lists.
+  @override
+  List<FeedbackSentence> get sentences;
 
   /// Create a copy of DailySpeakingFeedback
   /// with the given fields replaced by the non-null parameter values.
@@ -833,6 +878,479 @@ abstract class _DailySpeakingFeedback implements DailySpeakingFeedback {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DailySpeakingFeedbackImplCopyWith<_$DailySpeakingFeedbackImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+FeedbackSentence _$FeedbackSentenceFromJson(Map<String, dynamic> json) {
+  return _FeedbackSentence.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FeedbackSentence {
+  String get original => throw _privateConstructorUsedError;
+  String get native => throw _privateConstructorUsedError;
+  bool get changed => throw _privateConstructorUsedError;
+  List<FeedbackSegment> get segments => throw _privateConstructorUsedError;
+
+  /// Serializes this FeedbackSentence to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of FeedbackSentence
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $FeedbackSentenceCopyWith<FeedbackSentence> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FeedbackSentenceCopyWith<$Res> {
+  factory $FeedbackSentenceCopyWith(
+          FeedbackSentence value, $Res Function(FeedbackSentence) then) =
+      _$FeedbackSentenceCopyWithImpl<$Res, FeedbackSentence>;
+  @useResult
+  $Res call(
+      {String original,
+      String native,
+      bool changed,
+      List<FeedbackSegment> segments});
+}
+
+/// @nodoc
+class _$FeedbackSentenceCopyWithImpl<$Res, $Val extends FeedbackSentence>
+    implements $FeedbackSentenceCopyWith<$Res> {
+  _$FeedbackSentenceCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of FeedbackSentence
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? original = null,
+    Object? native = null,
+    Object? changed = null,
+    Object? segments = null,
+  }) {
+    return _then(_value.copyWith(
+      original: null == original
+          ? _value.original
+          : original // ignore: cast_nullable_to_non_nullable
+              as String,
+      native: null == native
+          ? _value.native
+          : native // ignore: cast_nullable_to_non_nullable
+              as String,
+      changed: null == changed
+          ? _value.changed
+          : changed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      segments: null == segments
+          ? _value.segments
+          : segments // ignore: cast_nullable_to_non_nullable
+              as List<FeedbackSegment>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$FeedbackSentenceImplCopyWith<$Res>
+    implements $FeedbackSentenceCopyWith<$Res> {
+  factory _$$FeedbackSentenceImplCopyWith(_$FeedbackSentenceImpl value,
+          $Res Function(_$FeedbackSentenceImpl) then) =
+      __$$FeedbackSentenceImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String original,
+      String native,
+      bool changed,
+      List<FeedbackSegment> segments});
+}
+
+/// @nodoc
+class __$$FeedbackSentenceImplCopyWithImpl<$Res>
+    extends _$FeedbackSentenceCopyWithImpl<$Res, _$FeedbackSentenceImpl>
+    implements _$$FeedbackSentenceImplCopyWith<$Res> {
+  __$$FeedbackSentenceImplCopyWithImpl(_$FeedbackSentenceImpl _value,
+      $Res Function(_$FeedbackSentenceImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FeedbackSentence
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? original = null,
+    Object? native = null,
+    Object? changed = null,
+    Object? segments = null,
+  }) {
+    return _then(_$FeedbackSentenceImpl(
+      original: null == original
+          ? _value.original
+          : original // ignore: cast_nullable_to_non_nullable
+              as String,
+      native: null == native
+          ? _value.native
+          : native // ignore: cast_nullable_to_non_nullable
+              as String,
+      changed: null == changed
+          ? _value.changed
+          : changed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      segments: null == segments
+          ? _value._segments
+          : segments // ignore: cast_nullable_to_non_nullable
+              as List<FeedbackSegment>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FeedbackSentenceImpl implements _FeedbackSentence {
+  const _$FeedbackSentenceImpl(
+      {required this.original,
+      this.native = '',
+      this.changed = false,
+      final List<FeedbackSegment> segments = const <FeedbackSegment>[]})
+      : _segments = segments;
+
+  factory _$FeedbackSentenceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FeedbackSentenceImplFromJson(json);
+
+  @override
+  final String original;
+  @override
+  @JsonKey()
+  final String native;
+  @override
+  @JsonKey()
+  final bool changed;
+  final List<FeedbackSegment> _segments;
+  @override
+  @JsonKey()
+  List<FeedbackSegment> get segments {
+    if (_segments is EqualUnmodifiableListView) return _segments;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_segments);
+  }
+
+  @override
+  String toString() {
+    return 'FeedbackSentence(original: $original, native: $native, changed: $changed, segments: $segments)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FeedbackSentenceImpl &&
+            (identical(other.original, original) ||
+                other.original == original) &&
+            (identical(other.native, native) || other.native == native) &&
+            (identical(other.changed, changed) || other.changed == changed) &&
+            const DeepCollectionEquality().equals(other._segments, _segments));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, original, native, changed,
+      const DeepCollectionEquality().hash(_segments));
+
+  /// Create a copy of FeedbackSentence
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FeedbackSentenceImplCopyWith<_$FeedbackSentenceImpl> get copyWith =>
+      __$$FeedbackSentenceImplCopyWithImpl<_$FeedbackSentenceImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FeedbackSentenceImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FeedbackSentence implements FeedbackSentence {
+  const factory _FeedbackSentence(
+      {required final String original,
+      final String native,
+      final bool changed,
+      final List<FeedbackSegment> segments}) = _$FeedbackSentenceImpl;
+
+  factory _FeedbackSentence.fromJson(Map<String, dynamic> json) =
+      _$FeedbackSentenceImpl.fromJson;
+
+  @override
+  String get original;
+  @override
+  String get native;
+  @override
+  bool get changed;
+  @override
+  List<FeedbackSegment> get segments;
+
+  /// Create a copy of FeedbackSentence
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FeedbackSentenceImplCopyWith<_$FeedbackSentenceImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+FeedbackSegment _$FeedbackSegmentFromJson(Map<String, dynamic> json) {
+  return _FeedbackSegment.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FeedbackSegment {
+  String get text => throw _privateConstructorUsedError;
+  SegmentType? get type => throw _privateConstructorUsedError;
+  String get correction => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reason_mm')
+  String get reasonMm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reason_en')
+  String get reasonEn => throw _privateConstructorUsedError;
+
+  /// Serializes this FeedbackSegment to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of FeedbackSegment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $FeedbackSegmentCopyWith<FeedbackSegment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FeedbackSegmentCopyWith<$Res> {
+  factory $FeedbackSegmentCopyWith(
+          FeedbackSegment value, $Res Function(FeedbackSegment) then) =
+      _$FeedbackSegmentCopyWithImpl<$Res, FeedbackSegment>;
+  @useResult
+  $Res call(
+      {String text,
+      SegmentType? type,
+      String correction,
+      @JsonKey(name: 'reason_mm') String reasonMm,
+      @JsonKey(name: 'reason_en') String reasonEn});
+}
+
+/// @nodoc
+class _$FeedbackSegmentCopyWithImpl<$Res, $Val extends FeedbackSegment>
+    implements $FeedbackSegmentCopyWith<$Res> {
+  _$FeedbackSegmentCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of FeedbackSegment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? text = null,
+    Object? type = freezed,
+    Object? correction = null,
+    Object? reasonMm = null,
+    Object? reasonEn = null,
+  }) {
+    return _then(_value.copyWith(
+      text: null == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SegmentType?,
+      correction: null == correction
+          ? _value.correction
+          : correction // ignore: cast_nullable_to_non_nullable
+              as String,
+      reasonMm: null == reasonMm
+          ? _value.reasonMm
+          : reasonMm // ignore: cast_nullable_to_non_nullable
+              as String,
+      reasonEn: null == reasonEn
+          ? _value.reasonEn
+          : reasonEn // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$FeedbackSegmentImplCopyWith<$Res>
+    implements $FeedbackSegmentCopyWith<$Res> {
+  factory _$$FeedbackSegmentImplCopyWith(_$FeedbackSegmentImpl value,
+          $Res Function(_$FeedbackSegmentImpl) then) =
+      __$$FeedbackSegmentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String text,
+      SegmentType? type,
+      String correction,
+      @JsonKey(name: 'reason_mm') String reasonMm,
+      @JsonKey(name: 'reason_en') String reasonEn});
+}
+
+/// @nodoc
+class __$$FeedbackSegmentImplCopyWithImpl<$Res>
+    extends _$FeedbackSegmentCopyWithImpl<$Res, _$FeedbackSegmentImpl>
+    implements _$$FeedbackSegmentImplCopyWith<$Res> {
+  __$$FeedbackSegmentImplCopyWithImpl(
+      _$FeedbackSegmentImpl _value, $Res Function(_$FeedbackSegmentImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FeedbackSegment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? text = null,
+    Object? type = freezed,
+    Object? correction = null,
+    Object? reasonMm = null,
+    Object? reasonEn = null,
+  }) {
+    return _then(_$FeedbackSegmentImpl(
+      text: null == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SegmentType?,
+      correction: null == correction
+          ? _value.correction
+          : correction // ignore: cast_nullable_to_non_nullable
+              as String,
+      reasonMm: null == reasonMm
+          ? _value.reasonMm
+          : reasonMm // ignore: cast_nullable_to_non_nullable
+              as String,
+      reasonEn: null == reasonEn
+          ? _value.reasonEn
+          : reasonEn // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FeedbackSegmentImpl extends _FeedbackSegment {
+  const _$FeedbackSegmentImpl(
+      {required this.text,
+      this.type,
+      this.correction = '',
+      @JsonKey(name: 'reason_mm') this.reasonMm = '',
+      @JsonKey(name: 'reason_en') this.reasonEn = ''})
+      : super._();
+
+  factory _$FeedbackSegmentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FeedbackSegmentImplFromJson(json);
+
+  @override
+  final String text;
+  @override
+  final SegmentType? type;
+  @override
+  @JsonKey()
+  final String correction;
+  @override
+  @JsonKey(name: 'reason_mm')
+  final String reasonMm;
+  @override
+  @JsonKey(name: 'reason_en')
+  final String reasonEn;
+
+  @override
+  String toString() {
+    return 'FeedbackSegment(text: $text, type: $type, correction: $correction, reasonMm: $reasonMm, reasonEn: $reasonEn)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FeedbackSegmentImpl &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.correction, correction) ||
+                other.correction == correction) &&
+            (identical(other.reasonMm, reasonMm) ||
+                other.reasonMm == reasonMm) &&
+            (identical(other.reasonEn, reasonEn) ||
+                other.reasonEn == reasonEn));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, text, type, correction, reasonMm, reasonEn);
+
+  /// Create a copy of FeedbackSegment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FeedbackSegmentImplCopyWith<_$FeedbackSegmentImpl> get copyWith =>
+      __$$FeedbackSegmentImplCopyWithImpl<_$FeedbackSegmentImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FeedbackSegmentImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FeedbackSegment extends FeedbackSegment {
+  const factory _FeedbackSegment(
+          {required final String text,
+          final SegmentType? type,
+          final String correction,
+          @JsonKey(name: 'reason_mm') final String reasonMm,
+          @JsonKey(name: 'reason_en') final String reasonEn}) =
+      _$FeedbackSegmentImpl;
+  const _FeedbackSegment._() : super._();
+
+  factory _FeedbackSegment.fromJson(Map<String, dynamic> json) =
+      _$FeedbackSegmentImpl.fromJson;
+
+  @override
+  String get text;
+  @override
+  SegmentType? get type;
+  @override
+  String get correction;
+  @override
+  @JsonKey(name: 'reason_mm')
+  String get reasonMm;
+  @override
+  @JsonKey(name: 'reason_en')
+  String get reasonEn;
+
+  /// Create a copy of FeedbackSegment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FeedbackSegmentImplCopyWith<_$FeedbackSegmentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 FeedbackFix _$FeedbackFixFromJson(Map<String, dynamic> json) {

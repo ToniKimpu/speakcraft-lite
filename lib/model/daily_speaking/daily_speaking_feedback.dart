@@ -20,8 +20,24 @@ enum CefrLevel {
   fluent,
 }
 
+/// What kind of issue a flagged [FeedbackSegment] marks. Plain runs of text
+/// carry no type. Drives the highlight colour and which Feedback-tab list the
+/// segment is derived into.
+enum SegmentType {
+  @JsonValue('grammar')
+  grammar,
+  @JsonValue('vocab')
+  vocab,
+  @JsonValue('interference')
+  interference,
+  @JsonValue('filler')
+  filler,
+}
+
 @freezed
 class DailySpeakingFeedback with _$DailySpeakingFeedback {
+  const DailySpeakingFeedback._();
+
   const factory DailySpeakingFeedback({
     required int score,
     @Default(CefrLevel.beginner) CefrLevel level,
@@ -60,10 +76,151 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
     List<FillerWord> fillerWords,
     @JsonKey(name: 'sub_scores') SubScores? subScores,
     @JsonKey(name: 'total_tokens') @Default(0) int totalTokens,
+    // --- v2: the annotated transcript. When present, this is the single source
+    // of truth for the transcript, the inline highlights, the sentence-aligned
+    // split, and the derived `effective*` lists below. Older payloads (and the
+    // legacy stub responses) leave it empty and fall back to the flat lists.
+    @Default(<FeedbackSentence>[]) List<FeedbackSentence> sentences,
   }) = _DailySpeakingFeedback;
 
   factory DailySpeakingFeedback.fromJson(Map<String, dynamic> json) =>
       _$DailySpeakingFeedbackFromJson(json);
+
+  /// Whether the annotated transcript is available (v2 payloads). The Review &
+  /// highlights screen is only offered when this is true.
+  bool get hasSentences => sentences.isNotEmpty;
+
+  /// Sentences whose native form differs from the original — the ones worth
+  /// showing emphasised in the split-compare view.
+  List<FeedbackSentence> get changedSentences =>
+      sentences.where((s) => s.changed).toList(growable: false);
+
+  Iterable<FeedbackSegment> get _flaggedSegments =>
+      sentences.expand((s) => s.segments).where((seg) => seg.type != null);
+
+  /// Grammar fixes — derived from the annotated transcript when present, else
+  /// the flat `fixes` list. Keeps the Feedback tab populated regardless of which
+  /// schema version produced the payload.
+  List<FeedbackFix> get effectiveFixes {
+    if (sentences.isEmpty) return fixes;
+    return _flaggedSegments
+        .where((seg) => seg.type == SegmentType.grammar)
+        .map((seg) => FeedbackFix(
+              original: seg.text.trim(),
+              corrected: seg.correction,
+              reasonMm: seg.bestReason,
+            ))
+        .toList(growable: false);
+  }
+
+  /// Burmese-interference notes — derived from `interference` segments, else the
+  /// flat `interferenceNotes` list.
+  List<FeedbackFix> get effectiveInterference {
+    if (sentences.isEmpty) return interferenceNotes;
+    return _flaggedSegments
+        .where((seg) => seg.type == SegmentType.interference)
+        .map((seg) => FeedbackFix(
+              original: seg.text.trim(),
+              corrected: seg.correction,
+              reasonMm: seg.bestReason,
+            ))
+        .toList(growable: false);
+  }
+
+  /// Vocabulary upgrades — derived from `vocab` segments, else `vocabUpgrades`.
+  List<VocabUpgrade> get effectiveVocabUpgrades {
+    if (sentences.isEmpty) return vocabUpgrades;
+    return _flaggedSegments
+        .where((seg) => seg.type == SegmentType.vocab)
+        .map((seg) => VocabUpgrade(
+              original: seg.text.trim(),
+              suggestion: seg.correction,
+              reasonMm: seg.bestReason,
+            ))
+        .toList(growable: false);
+  }
+
+  /// Filler words with counts — derived by tallying `filler` segments, else the
+  /// flat `fillerWords` list.
+  List<FillerWord> get effectiveFillerWords {
+    if (sentences.isEmpty) return fillerWords;
+    final counts = <String, int>{};
+    for (final seg in _flaggedSegments.where(
+      (seg) => seg.type == SegmentType.filler,
+    )) {
+      final word = seg.text.trim().replaceAll(RegExp(r'[,.]'), '').toLowerCase();
+      if (word.isEmpty) continue;
+      counts[word] = (counts[word] ?? 0) + 1;
+    }
+    return counts.entries
+        .map((e) => FillerWord(word: e.key, count: e.value))
+        .toList(growable: false);
+  }
+
+  /// Sentence rewrites — derived from changed sentences (original → native),
+  /// else the flat `sentenceRewrites` list.
+  List<SentenceRewrite> get effectiveSentenceRewrites {
+    if (sentences.isEmpty) return sentenceRewrites;
+    return changedSentences
+        .map((s) => SentenceRewrite(original: s.original, rewrite: s.native))
+        .toList(growable: false);
+  }
+
+  /// The whole native rewrite — joined from sentences when present, else the
+  /// flat `nativeRewrite` field.
+  String get effectiveNativeRewrite {
+    if (sentences.isEmpty) return nativeRewrite;
+    return sentences.map((s) => s.native).join(' ');
+  }
+
+  /// The transcript — joined from sentences when present, else `transcript`.
+  String get effectiveTranscript {
+    if (sentences.isEmpty) return transcript;
+    return sentences.map((s) => s.original).join(' ');
+  }
+}
+
+/// One sentence of the learner's transcript, pre-annotated by the model. The
+/// join of [segments] text reproduces [original] exactly (validated on the
+/// client); the join of every sentence's [native] reproduces the whole rewrite.
+@freezed
+class FeedbackSentence with _$FeedbackSentence {
+  const factory FeedbackSentence({
+    required String original,
+    @Default('') String native,
+    @Default(false) bool changed,
+    @Default(<FeedbackSegment>[]) List<FeedbackSegment> segments,
+  }) = _FeedbackSentence;
+
+  factory FeedbackSentence.fromJson(Map<String, dynamic> json) =>
+      _$FeedbackSentenceFromJson(json);
+}
+
+/// A run of text inside a [FeedbackSentence]. Plain runs carry only [text];
+/// flagged runs also carry a [type], the [correction], and a short reason in
+/// Burmese ([reasonMm]) and/or English ([reasonEn]) — whichever the learner's
+/// `reason_lang` preference asked for.
+@freezed
+class FeedbackSegment with _$FeedbackSegment {
+  const FeedbackSegment._();
+
+  const factory FeedbackSegment({
+    required String text,
+    SegmentType? type,
+    @Default('') String correction,
+    @JsonKey(name: 'reason_mm') @Default('') String reasonMm,
+    @JsonKey(name: 'reason_en') @Default('') String reasonEn,
+  }) = _FeedbackSegment;
+
+  factory FeedbackSegment.fromJson(Map<String, dynamic> json) =>
+      _$FeedbackSegmentFromJson(json);
+
+  /// True for plain (unflagged) runs of text.
+  bool get isPlain => type == null;
+
+  /// A single reason string for places that show only one — prefers Burmese,
+  /// falls back to English. May be empty (reasons are optional).
+  String get bestReason => reasonMm.isNotEmpty ? reasonMm : reasonEn;
 }
 
 @freezed

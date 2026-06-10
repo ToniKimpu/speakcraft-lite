@@ -68,6 +68,10 @@ _$DailySpeakingFeedbackImpl _$$DailySpeakingFeedbackImplFromJson(
           ? null
           : SubScores.fromJson(json['sub_scores'] as Map<String, dynamic>),
       totalTokens: (json['total_tokens'] as num?)?.toInt() ?? 0,
+      sentences: (json['sentences'] as List<dynamic>?)
+              ?.map((e) => FeedbackSentence.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <FeedbackSentence>[],
     );
 
 Map<String, dynamic> _$$DailySpeakingFeedbackImplToJson(
@@ -95,6 +99,7 @@ Map<String, dynamic> _$$DailySpeakingFeedbackImplToJson(
       'filler_words': instance.fillerWords,
       'sub_scores': instance.subScores,
       'total_tokens': instance.totalTokens,
+      'sentences': instance.sentences,
     };
 
 const _$CefrLevelEnumMap = {
@@ -104,6 +109,54 @@ const _$CefrLevelEnumMap = {
   CefrLevel.upperIntermediate: 'upper_intermediate',
   CefrLevel.advanced: 'advanced',
   CefrLevel.fluent: 'fluent',
+};
+
+_$FeedbackSentenceImpl _$$FeedbackSentenceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$FeedbackSentenceImpl(
+      original: json['original'] as String,
+      native: json['native'] as String? ?? '',
+      changed: json['changed'] as bool? ?? false,
+      segments: (json['segments'] as List<dynamic>?)
+              ?.map((e) => FeedbackSegment.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <FeedbackSegment>[],
+    );
+
+Map<String, dynamic> _$$FeedbackSentenceImplToJson(
+        _$FeedbackSentenceImpl instance) =>
+    <String, dynamic>{
+      'original': instance.original,
+      'native': instance.native,
+      'changed': instance.changed,
+      'segments': instance.segments,
+    };
+
+_$FeedbackSegmentImpl _$$FeedbackSegmentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$FeedbackSegmentImpl(
+      text: json['text'] as String,
+      type: $enumDecodeNullable(_$SegmentTypeEnumMap, json['type']),
+      correction: json['correction'] as String? ?? '',
+      reasonMm: json['reason_mm'] as String? ?? '',
+      reasonEn: json['reason_en'] as String? ?? '',
+    );
+
+Map<String, dynamic> _$$FeedbackSegmentImplToJson(
+        _$FeedbackSegmentImpl instance) =>
+    <String, dynamic>{
+      'text': instance.text,
+      'type': _$SegmentTypeEnumMap[instance.type],
+      'correction': instance.correction,
+      'reason_mm': instance.reasonMm,
+      'reason_en': instance.reasonEn,
+    };
+
+const _$SegmentTypeEnumMap = {
+  SegmentType.grammar: 'grammar',
+  SegmentType.vocab: 'vocab',
+  SegmentType.interference: 'interference',
+  SegmentType.filler: 'filler',
 };
 
 _$FeedbackFixImpl _$$FeedbackFixImplFromJson(Map<String, dynamic> json) =>

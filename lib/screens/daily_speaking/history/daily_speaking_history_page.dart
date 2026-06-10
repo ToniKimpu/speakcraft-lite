@@ -217,7 +217,8 @@ class _ChainTile extends StatelessWidget {
               children: [
                 for (final v in sorted)
                   () {
-                    final hasNative = v.feedback.nativeRewrite.isNotEmpty;
+                    final hasNative =
+                        v.feedback.effectiveNativeRewrite.isNotEmpty;
                     return _VersionScoreChip(
                       revision: v.revisionNumber,
                       score: v.feedback.score,
@@ -228,9 +229,6 @@ class _ChainTile extends StatelessWidget {
                         PmpRoutes.dailySpeakingFeedback,
                         arguments: {
                           'session': v,
-                          // Jump straight to the saved native version when this
-                          // is the finished version that carries it.
-                          if (hasNative) 'revealNativeRewrite': true,
                         },
                       ),
                     );
@@ -332,7 +330,7 @@ class _SessionTile extends StatelessWidget {
     // Has a saved native version to jump to (the loop's terminal reveal). All
     // three on-ramps loop now — just-talk via the AI's inferred topic — so any
     // on-ramp can carry one.
-    final hasNative = feedback.nativeRewrite.isNotEmpty;
+    final hasNative = feedback.effectiveNativeRewrite.isNotEmpty;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Material(
@@ -346,7 +344,6 @@ class _SessionTile extends StatelessWidget {
               PmpRoutes.dailySpeakingFeedback,
               arguments: {
                 'session': session,
-                if (hasNative) 'revealNativeRewrite': true,
               },
             );
           },

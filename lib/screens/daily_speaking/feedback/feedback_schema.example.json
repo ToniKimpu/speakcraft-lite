@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "score": 42,
+  "level": "elementary",
+  "inferred_topic": "My family",
+  "duration_seconds": 58,
+  "word_count": 64,
+  "speaking_pace_wpm": 66,
+  "transcript": "Um, my family have four peoples. My father work in factory and my mother stay at home. I very like to spend time with them. We are happy together.",
+  "native_rewrite": "My family has four people. My father works in a factory and my mother stays at home. I really like spending time with them. We're very close.",
+  "sub_scores": {
+    "grammar": 38,
+    "vocabulary": 45,
+    "fluency": 52,
+    "pronunciation": 40
+  },
+  "sentences": [
+    {
+      "original": "Um, my family have four peoples.",
+      "native": "My family has four people.",
+      "changed": true,
+      "segments": [
+        {
+          "text": "Um, ",
+          "type": "filler",
+          "correction": "",
+          "reason_mm": "‘Um’ လို ဖြည့်စွက်စကားလုံးတွေကို လျှော့ချပါ။"
+        },
+        {
+          "text": "my family "
+        },
+        {
+          "text": "have",
+          "type": "grammar",
+          "correction": "has",
+          "reason_mm": "ကတ္တား ‘family’ က singular ဖြစ်လို့ ‘has’ သုံးပါ။",
+          "reason_en": "‘family’ is singular here, so use ‘has’."
+        },
+        {
+          "text": " four "
+        },
+        {
+          "text": "peoples",
+          "type": "grammar",
+          "correction": "people",
+          "reason_mm": "‘people’ ကိုယ်တိုင်က အများကိန်းဖြစ်လို့ ‘s’ မထည့်ပါနဲ့။",
+          "reason_en": "‘people’ is already plural — drop the ‘s’."
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "original": "My father work in factory and my mother stay at home.",
+      "native": "My father works in a factory and my mother stays at home.",
+      "changed": true,
+      "segments": [
+        {
+          "text": "My father "
+        },
+        {
+          "text": "work",
+          "type": "grammar",
+          "correction": "works",
+          "reason_mm": "‘My father’ (သူ) နဲ့တွဲရင် ‘works’ လို့ ‘s’ ထည့်ပါ။",
+          "reason_en": "Third person singular: add ‘s’ → ‘works’."
+        },
+        {
+          "text": " in "
+        },
+        {
+          "text": "factory",
+          "type": "grammar",
+          "correction": "a factory",
+          "reason_mm": "ရေတွက်လို့ရတဲ့ နာမ်တစ်ခုတည်းရှေ့မှာ ‘a’ ထည့်ပါ။",
+          "reason_en": "Add ‘a’ before a singular countable noun."
+        },
+        {
+          "text": " and my mother "
+        },
+        {
+          "text": "stay",
+          "type": "grammar",
+          "correction": "stays",
+          "reason_mm": "‘my mother’ (သူမ) နဲ့တွဲရင် ‘stays’။",
+          "reason_en": "Third person singular: ‘stays’."
+        },
+        {
+          "text": " at home."
+        }
+      ]
+    },
+    {
+      "original": "I very like to spend time with them.",
+      "native": "I really like spending time with them.",
+      "changed": true,
+      "segments": [
+        {
+          "text": "I "
+        },
+        {
+          "text": "very like",
+          "type": "interference",
+          "correction": "really like",
+          "reason_mm": "မြန်မာစကား ‘အရမ်းကြိုက်’ ကို တိုက်ရိုက်မပြန်ပါနဲ့၊ ‘really like’ သုံးပါ။",
+          "reason_en": "Don’t translate ‘အရမ်းကြိုက်’ word-for-word; say ‘really like’."
+        },
+        {
+          "text": " to spend time with them."
+        }
+      ]
+    },
+    {
+      "original": "We are happy together.",
+      "native": "We're very close.",
+      "changed": true,
+      "segments": [
+        {
+          "text": "We are "
+        },
+        {
+          "text": "happy",
+          "type": "vocab",
+          "correction": "close",
+          "reason_mm": "မိသားစုအချင်းချင်း ရင်းနှီးတယ်ဆိုရင် ‘close’ က ပိုသဘာဝကျတယ်။",
+          "reason_en": "‘close’ sounds more natural for family closeness."
+        },
+        {
+          "text": " together."
+        }
+      ]
+    }
+  ],
+  "strengths": [
+    "You spoke in complete sentences and finished every thought.",
+    "Clear, steady pace — easy to follow."
+  ],
+  "grammar_patterns": [
+    "Present-simple subject–verb agreement (have→has, work→works, stay→stays)."
+  ],
+  "pronunciation_notes": [
+    "The ‘th’ in ‘father’ tends to come out as ‘t’."
+  ],
+  "collocations": [
+    "spend quality time",
+    "a close-knit family"
+  ],
+  "idioms": [
+    {
+      "expression": "under one roof",
+      "meaning_mm": "အိမ်တစ်အိမ်တည်းမှာ အတူတကွနေထိုင်ခြင်း။"
+    }
+  ],
+  "target_phrase_results": [
+    {
+      "phrase_en": "get along with",
+      "used": false,
+      "used_correctly": false
+    },
+    {
+      "phrase_en": "take after",
+      "used": true,
+      "used_correctly": false
+    }
+  ],
+  "explanation_mm": "စကားပြောတဲ့အခါ ဝါကျအပြည့်အစုံနဲ့ ပြောနိုင်တာ ကောင်းပါတယ်။ အဓိက ပြင်ရမှာက present-simple မှာ ကတ္တားနဲ့ ကြိယာ သဟဇာတဖြစ်အောင် (has, works, stays) ပြုပြင်ဖို့နဲ့ ရေတွက်လို့ရတဲ့ နာမ်ရှေ့မှာ ‘a/the’ ထည့်ဖို့ပါ။ ဆက်လေ့ကျင့်ရင် မြန်မြန် တိုးတက်ပါလိမ့်မယ်။",
+  "total_tokens": 12480
+}

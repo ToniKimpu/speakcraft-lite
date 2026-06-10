@@ -11,12 +11,13 @@
   "txtContentRequest": "Content Request",
   "txtFeedback": "Feedback",
   "txtViewExplanation": "View Explanation",
-
   "txtVerifyEmailTitle": "Verify your email",
   "txtOtpSentTo": "Enter the 6-digit code we sent to {email}",
   "@txtOtpSentTo": {
     "placeholders": {
-      "email": { "type": "String" }
+      "email": {
+        "type": "String"
+      }
     }
   },
   "txtOtpFieldLabel": "6-digit code",
@@ -26,12 +27,13 @@
   "txtResendInSeconds": "Resend in {seconds}s",
   "@txtResendInSeconds": {
     "placeholders": {
-      "seconds": { "type": "int" }
+      "seconds": {
+        "type": "int"
+      }
     }
   },
   "txtCodeResent": "A new code has been sent",
   "txtEnterValidCode": "Please enter the 6-digit code",
-
   "txtContinueWithGoogle": "Continue with Google",
   "txtOr": "or",
   "txtForgotPassword": "Forgot password?",
@@ -49,13 +51,11 @@
   "txtNext": "Next",
   "txtAlreadyHaveAccount": "Already have an account?",
   "txtLogin": "Login",
-
   "txtCompleted": "Completed",
   "txtTryAgain": "Try again",
   "txtHighlightReadAlong": "Read Along",
   "txtHighlightLine": "Line",
   "txtHighlightNone": "None",
-
   "txtPressBackToExit": "Press back again to exit",
   "txtModuleListeningTitle": "Listening & Shadowing",
   "txtModuleListeningLabel1": "Listening လုပ်မယ်။",
@@ -84,14 +84,12 @@
       "count": {}
     }
   },
-  "txtComingSoon": "Coming Soon",
   "txtOutOf": "out of {total}",
   "@txtOutOf": {
     "placeholders": {
       "total": {}
     }
   },
-
   "txtProfile": "Profile",
   "txtDaysLearned": "Days Learned",
   "txtDayStreak": "Day Streak",
@@ -101,7 +99,6 @@
   "txtThemeSystem": "System",
   "txtFailedToOpenBrowser": "Failed to open browser!",
   "txtComingSoonDots": "Coming soon....",
-
   "txtLesson": "Lesson",
   "txtAllStepsComplete": "All steps complete — great work!",
   "txtContinueStep": "Continue · {step}",
@@ -121,10 +118,8 @@
   "txtStepShadowSubtitle": "Speak in sync with the audio",
   "txtStepRecordTitle": "Speak on your own",
   "txtStepRecordSubtitle": "Record yourself and compare to the original",
-
   "txtListeningListTitle": "Listening And Shadowing",
   "txtStartHere": "Start here",
-
   "txtExplanation": "Explanation",
   "txtExplanationNotFound": "Explanation not found.",
   "txtExplanationLoadFailed": "Failed to load explanation. Please try again later.",
@@ -132,7 +127,6 @@
   "txtNetworkError": "Network error. Please check your internet connection.",
   "txtExplanationGenericError": "Something went wrong while loading this explanation.",
   "txtExplanationLoadError": "Couldn't load explanation",
-
   "txtSaveRecordingTitle": "Save your recording?",
   "txtRecordingName": "Recording name",
   "txtDiscard": "Discard",
@@ -142,7 +136,6 @@
   "txtKeepIt": "Keep It",
   "txtDelete": "Delete",
   "txtCheckingAnswers": "Checking your answers",
-
   "txtSpeechPracticeSession": "Speech Practice Session",
   "txtRecords": "Records",
   "txtPlaybackDisabledWhileRecording": "Playback is disabled while recording. Please stop the recording to continue.",
@@ -164,17 +157,14 @@
   "txtRemove": "Remove",
   "txtVocabularies": "Vocabularies",
   "txtVocabComingSoon": "သည်ဗီဒီယိုအတွက် vocabularyများ\n မကြာခင်တင်ပေးပါမည်။",
-
   "txtCheckYourself": "Check yourself",
   "txtFillTheBlank": "Fill the blank",
   "txtTypeMissingWords": "Type the missing word(s)",
   "txtCheck": "Check",
   "txtAnswerLabel": "Answer: ",
   "txtShowHint": "Show hint",
-
   "txtDone": "Done",
   "txtNoInternetConnection": "No internet connection.",
-
   "txtDailySpeaking": "Daily Speaking",
   "txtDsHistory": "History",
   "txtDsHeadline": "Three minutes a day.",
@@ -188,13 +178,11 @@
   "txtDsLimitReached": "Limit reached",
   "txtDsDailyLimitReached": "Daily limit reached — comes back tomorrow.",
   "txtDsDailyLimitReachedShort": "Daily limit reached",
-
   "txtDsHowItWorks": "How it works",
   "txtDsHowItWorksBody": "• Tap the mic and just talk for up to 5 minutes.\n• When you stop, the AI gives you a score, strengths, fixes, and a Burmese explanation.\n• Don't worry about being perfect — the goal is to keep speaking.",
   "txtDsReviewingRecording": "Reviewing your recording…",
   "txtDsReviewingWriting": "Reviewing your writing…",
   "txtDsReviewingTakesSeconds": "This usually takes a few seconds.",
-
   "txtDsHistoryTitle": "Daily Speaking History",
   "txtDsToday": "Today",
   "txtDsYesterday": "Yesterday",
@@ -209,7 +197,6 @@
   },
   "txtDsNoSessionsYet": "No sessions yet",
   "txtDsNoSessionsBody": "Your past Daily Speaking sessions will show up here.",
-
   "txtDsSessionsToday": "{used} of {total} sessions today",
   "@txtDsSessionsToday": {
     "placeholders": {
@@ -226,7 +213,6 @@
   "txtDsRecordingUnavailable": "Recording is unavailable.",
   "txtDsTapToStop": "Tap to stop",
   "txtDsTapToStart": "Tap and start talking",
-
   "txtDsWhatToTalkAbout": "What do you want to talk about?",
   "txtDsTopicHint": "A topic, a question, or just a vibe — keep it short.",
   "txtDsTopicFieldHint": "e.g. The most stressful week I had",
@@ -239,7 +225,6 @@
   "txtDsSuggestionGoal": "A goal I have",
   "txtDsSuggestionWorried": "Something I'm worried about",
   "txtDsYourTopic": "Your topic",
-
   "txtDsWriteAtLeastChars": "Write at least {count} characters.",
   "@txtDsWriteAtLeastChars": {
     "placeholders": {
@@ -254,8 +239,9 @@
   },
   "txtDsWritePathHint": "Write a paragraph about your topic. Aim for 5-10 sentences.",
   "txtDsGetFeedback": "Get feedback",
-
   "txtDsFeedback": "Feedback",
+  "txtDsTabYours": "Yours",
+  "txtDsTabNative": "Native",
   "txtDsWhatYouDidWell": "What you did well",
   "txtDsThingsToFix": "Things to fix",
   "txtDsNativeRewrite": "How a native speaker would say it",
@@ -278,14 +264,12 @@
       "label": {}
     }
   },
-
   "txtDsLevelBeginner": "Beginner",
   "txtDsLevelElementary": "Elementary",
   "txtDsLevelIntermediate": "Intermediate",
   "txtDsLevelUpperIntermediate": "Upper-Intermediate",
   "txtDsLevelAdvanced": "Advanced",
   "txtDsLevelFluent": "Fluent",
-
   "txtDsSuggestedTopics": "Suggested topics",
   "txtDsNewThisWeek": "New this week",
   "txtDsNoTopicsHere": "No topics here yet — check back soon.",
@@ -302,7 +286,6 @@
       "count": {}
     }
   },
-
   "txtDsWordsYouMightUse": "Words you might use",
   "txtDsTryUseThesePhrases": "Try to use these phrases",
   "txtDsThingsYouCanMention": "Things you can mention",
@@ -310,7 +293,6 @@
   "txtDsYourPrompt": "Your prompt",
   "txtDsExample": "Example",
   "txtDsTryToUse": "Try to use",
-
   "txtDsChooseFeedbackTitle": "Choose your feedback",
   "txtDsChooseFeedbackIntro": "Pick what you want the AI to focus on. You can change this anytime — only what you choose is analyzed.",
   "txtDsChooseRewriteNote": "You'll get a full native rewrite to compare against when you finish this topic.",
@@ -327,7 +309,6 @@
       "count": {}
     }
   },
-
   "txtDsGroupAccuracy": "Accuracy",
   "txtDsGroupStyle": "Style & naturalness",
   "txtDsGroupDelivery": "Delivery",
@@ -336,12 +317,10 @@
   "txtDsGrammar": "Grammar",
   "txtDsFluency": "Fluency",
   "txtDsPronunciation": "Pronunciation",
-
   "txtDsPresetRecommended": "Recommended",
   "txtDsPresetSoundNatural": "Sound natural",
   "txtDsPresetGrammarFocus": "Grammar focus",
   "txtDsPresetEverything": "Everything",
-
   "txtDsSecSentenceFixes": "Sentence fixes",
   "txtDsGrammarPatterns": "Grammar patterns",
   "txtDsBurmeseErrors": "Burmese-English errors",
@@ -352,7 +331,6 @@
   "txtDsSentenceRewriteLabel": "Sentence-by-sentence rewrite",
   "txtDsFillerWords": "Filler words",
   "txtDsSkillSubScores": "Skill sub-scores",
-
   "txtDsDescSentenceFixes": "Corrects your mistakes with a Burmese reason.",
   "txtDsDescGrammarPatterns": "Groups recurring grammar issues so you see the pattern.",
   "txtDsDescBurmeseErrors": "Flags direct Burmese→English translations.",
@@ -364,18 +342,15 @@
   "txtDsDescPronunciation": "Sounds to work on.",
   "txtDsDescFillerWords": "Counts \"um\", \"uh\", \"like\", etc.",
   "txtDsDescSubScores": "Breaks your score into grammar / vocab / fluency / pronunciation.",
-
   "txtDsHearYourProgress": "Hear your progress",
   "txtDsYourRecording": "Your recording",
   "txtDsWhatYouSaid": "What you said",
   "txtDsWhatYouWrote": "What you wrote",
   "txtDsSkillBreakdown": "Skill breakdown",
   "txtDsSentenceRewritesTitle": "Sentence rewrites",
-
   "txtDsPolishRetry": "Polish & retry",
   "txtDsImDoneSeeNative": "I'm done — see native version",
   "txtDsSeeNativeVersion": "See native version",
-
   "txtDsLatestAttempt": "Your latest attempt at this topic.",
   "txtDsScoreUp": "Up {delta} from v{revision} (was {previous}).",
   "@txtDsScoreUp": {
@@ -400,7 +375,6 @@
       "previous": {}
     }
   },
-
   "txtDsVersionShort": "v{revision}",
   "@txtDsVersionShort": {
     "placeholders": {
@@ -413,7 +387,6 @@
       "revision": {}
     }
   },
-
   "txtDsNativeVersion": "Native version",
   "txtDsWritingNativeVersion": "Writing a native version of your best attempt…",
   "txtDsCouldntGenerateNative": "Couldn't generate the native version.",
@@ -427,7 +400,6 @@
   },
   "txtDsYourVersion": "Your version",
   "txtDsSentenceBySentence": "Sentence by sentence",
-
   "txtDsChainVersionsUp": "{count} versions · up {delta} from v1",
   "@txtDsChainVersionsUp": {
     "placeholders": {
@@ -441,6 +413,27 @@
       "count": {}
     }
   },
-
-  "txtDsTalkAbout": "Talk about"
+  "txtDsTalkAbout": "Talk about",
+  "txtDsReviewHighlights": "Review & highlights",
+  "txtDsHighlights": "Highlights",
+  "txtDsCompare": "Compare",
+  "txtDsInterference": "Interference",
+  "txtDsFiller": "Filler",
+  "txtDsReviewTapHint": "Tap a highlighted word to see the fix.",
+  "txtDsProgressTitle": "Your progress",
+  "txtDsProgressUp": "You gained {points} points from your first try — keep it up!",
+  "@txtDsProgressUp": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "txtDsProgressDown": "Down {points} from your first try — every rep still counts.",
+  "@txtDsProgressDown": {
+    "placeholders": {
+      "points": {}
+    }
+  },
+  "txtDsProgressSame": "Same score as your first try — consistency is progress too.",
+  "txtDsPhrasesToTry": "Phrases to try next time",
+  "txtDsPhrasesToTryHint": "Natural ways to say this on your topic — you didn't use these yet, so try working them in next time."
 }

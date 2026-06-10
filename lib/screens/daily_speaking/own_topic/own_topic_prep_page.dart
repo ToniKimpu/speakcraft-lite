@@ -4,8 +4,9 @@ import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 
-/// P2 — own-topic prep. User types what they want to talk about, then forks
-/// into either the voice recorder or the write-path text input.
+/// P2 — own-topic prep. User types what they want to talk about, then continues
+/// into the voice recorder. (This is speaking practice — there's no text input
+/// path; you say it, you don't write it.)
 ///
 /// The synthetic [DailySpeakingTopic] built here only fills the fields the
 /// edge function actually needs (`title`, `promptEn`) — everything else is
@@ -51,14 +52,6 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
     Navigator.pushNamed(
       context,
       PmpRoutes.dailySpeakingOwnTopicRecord,
-      arguments: {'topic': _buildTopic()},
-    );
-  }
-
-  void _goWrite() {
-    Navigator.pushNamed(
-      context,
-      PmpRoutes.dailySpeakingWritePath,
       arguments: {'topic': _buildTopic()},
     );
   }
@@ -149,15 +142,6 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                 label: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 12),
                   child: Text(l10n.txtDsRecordThis),
-                ),
-              ),
-              const SizedBox(height: 10),
-              OutlinedButton.icon(
-                onPressed: _canContinue ? _goWrite : null,
-                icon: const Icon(Icons.edit_outlined),
-                label: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  child: Text(l10n.txtDsWriteInstead),
                 ),
               ),
             ],

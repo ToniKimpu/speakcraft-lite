@@ -140,6 +140,16 @@ class _SessionAudioPlayerState extends State<SessionAudioPlayer> {
                         SliderTheme(
                           data: SliderTheme.of(context).copyWith(
                             trackHeight: 3,
+                            // Explicit colors so the track stays visible at rest
+                            // (position 0, not playing): the played portion is
+                            // solid primary, the remaining track a faded primary
+                            // that still reads against the card surface.
+                            activeTrackColor: colorScheme.primary,
+                            inactiveTrackColor:
+                                colorScheme.primary.withValues(alpha: 0.28),
+                            thumbColor: colorScheme.primary,
+                            overlayColor:
+                                colorScheme.primary.withValues(alpha: 0.12),
                             thumbShape: const RoundSliderThumbShape(
                                 enabledThumbRadius: 6),
                             overlayShape: const RoundSliderOverlayShape(

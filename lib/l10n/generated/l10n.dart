@@ -1544,6 +1544,16 @@ class AppLocalizations {
     return Intl.message('Feedback', name: 'txtDsFeedback', desc: '', args: []);
   }
 
+  /// `Yours`
+  String get txtDsTabYours {
+    return Intl.message('Yours', name: 'txtDsTabYours', desc: '', args: []);
+  }
+
+  /// `Native`
+  String get txtDsTabNative {
+    return Intl.message('Native', name: 'txtDsTabNative', desc: '', args: []);
+  }
+
   /// `What you did well`
   String get txtDsWhatYouDidWell {
     return Intl.message(
@@ -2454,6 +2464,116 @@ class AppLocalizations {
     return Intl.message(
       'Talk about',
       name: 'txtDsTalkAbout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Review & highlights`
+  String get txtDsReviewHighlights {
+    return Intl.message(
+      'Review & highlights',
+      name: 'txtDsReviewHighlights',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Highlights`
+  String get txtDsHighlights {
+    return Intl.message(
+      'Highlights',
+      name: 'txtDsHighlights',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Compare`
+  String get txtDsCompare {
+    return Intl.message('Compare', name: 'txtDsCompare', desc: '', args: []);
+  }
+
+  /// `Interference`
+  String get txtDsInterference {
+    return Intl.message(
+      'Interference',
+      name: 'txtDsInterference',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filler`
+  String get txtDsFiller {
+    return Intl.message('Filler', name: 'txtDsFiller', desc: '', args: []);
+  }
+
+  /// `Tap a highlighted word to see the fix.`
+  String get txtDsReviewTapHint {
+    return Intl.message(
+      'Tap a highlighted word to see the fix.',
+      name: 'txtDsReviewTapHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your progress`
+  String get txtDsProgressTitle {
+    return Intl.message(
+      'Your progress',
+      name: 'txtDsProgressTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You gained {points} points from your first try — keep it up!`
+  String txtDsProgressUp(Object points) {
+    return Intl.message(
+      'You gained $points points from your first try — keep it up!',
+      name: 'txtDsProgressUp',
+      desc: '',
+      args: [points],
+    );
+  }
+
+  /// `Down {points} from your first try — every rep still counts.`
+  String txtDsProgressDown(Object points) {
+    return Intl.message(
+      'Down $points from your first try — every rep still counts.',
+      name: 'txtDsProgressDown',
+      desc: '',
+      args: [points],
+    );
+  }
+
+  /// `Same score as your first try — consistency is progress too.`
+  String get txtDsProgressSame {
+    return Intl.message(
+      'Same score as your first try — consistency is progress too.',
+      name: 'txtDsProgressSame',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phrases to try next time`
+  String get txtDsPhrasesToTry {
+    return Intl.message(
+      'Phrases to try next time',
+      name: 'txtDsPhrasesToTry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Natural ways to say this on your topic — you didn't use these yet, so try working them in next time.`
+  String get txtDsPhrasesToTryHint {
+    return Intl.message(
+      'Natural ways to say this on your topic — you didn\'t use these yet, so try working them in next time.',
+      name: 'txtDsPhrasesToTryHint',
       desc: '',
       args: [],
     );

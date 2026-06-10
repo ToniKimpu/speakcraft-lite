@@ -8,7 +8,8 @@ import 'package:speakcraft/screens/auth/sign_up_screen.dart';
 import 'package:speakcraft/screens/daily_speaking/daily_speaking_entry_page.dart';
 import 'package:speakcraft/screens/daily_speaking/feedback/choose_feedback_page.dart';
 import 'package:speakcraft/screens/daily_speaking/feedback/feedback_result_page.dart';
-import 'package:speakcraft/screens/daily_speaking/feedback/final_rewrite_page.dart';
+import 'package:speakcraft/screens/daily_speaking/feedback/review_highlights_page.dart';
+import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/screens/daily_speaking/history/daily_speaking_history_page.dart';
 import 'package:speakcraft/screens/daily_speaking/just_record/just_record_page.dart';
 import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_prep_page.dart';
@@ -16,7 +17,6 @@ import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_record_pag
 import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_list_page.dart';
 import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_prep_page.dart';
 import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_record_page.dart';
-import 'package:speakcraft/screens/daily_speaking/write_path/write_path_page.dart';
 import 'package:speakcraft/screens/days/pattern_exercise_screen.dart';
 import 'package:speakcraft/screens/days/spoken_pattern_exercise_screen.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
@@ -111,13 +111,12 @@ class PmpRoutes {
   static const dailySpeakingJustRecord = '/daily_speaking/just_record';
   static const dailySpeakingOwnTopicPrep = '/daily_speaking/own_topic/prep';
   static const dailySpeakingOwnTopicRecord = '/daily_speaking/own_topic/record';
-  static const dailySpeakingWritePath = '/daily_speaking/write';
   static const dailySpeakingSuggestedList = '/daily_speaking/suggested';
   static const dailySpeakingSuggestedPrep = '/daily_speaking/suggested/prep';
   static const dailySpeakingSuggestedRecord = '/daily_speaking/suggested/record';
   static const dailySpeakingChooseFeedback = '/daily_speaking/choose_feedback';
   static const dailySpeakingFeedback = '/daily_speaking/feedback';
-  static const dailySpeakingFinalRewrite = '/daily_speaking/final_rewrite';
+  static const dailySpeakingReview = '/daily_speaking/review';
   static const dailySpeakingHistory = '/daily_speaking/history';
 
   static Route generateRoutes(RouteSettings settings) {
@@ -365,17 +364,6 @@ class PmpRoutes {
           ),
           settings,
         );
-      case dailySpeakingWritePath:
-        final args = settings.arguments as Map<String, dynamic>;
-        final topic = args['topic'] as DailySpeakingTopic;
-        return _getRoute(
-          WritePathPage(
-            topic: topic,
-            topicAttemptId: args['topicAttemptId'] as String?,
-            revisionNumber: args['revisionNumber'] as int? ?? 1,
-          ),
-          settings,
-        );
       case dailySpeakingSuggestedList:
         return _getRoute(const SuggestedTopicListPage(), settings);
       case dailySpeakingSuggestedPrep:
@@ -411,30 +399,20 @@ class PmpRoutes {
         final args = settings.arguments as Map<String, dynamic>;
         final session = args['session'] as DailySpeakingSession;
         // Optional — passed for loop-capable on-ramps to enable "Polish &
-        // retry" + the terminal reveal on the result page.
+        // retry" on the result page.
         final topic = args['topic'] as DailySpeakingTopic?;
         return _getRoute(
           FeedbackResultPage(
             session: session,
             topic: topic,
-            lastAudioPath: args['lastAudioPath'] as String?,
-            lastText: args['lastText'] as String?,
-            revealNativeRewrite: args['revealNativeRewrite'] as bool? ?? false,
           ),
           settings,
         );
-      case dailySpeakingFinalRewrite:
+      case dailySpeakingReview:
         final args = settings.arguments as Map<String, dynamic>;
         return _getRoute(
-          FinalRewritePage(
-            sessionId: args['sessionId'] as int?,
-            inputMode: args['inputMode'] as String,
-            onRamp: args['onRamp'] as String,
-            audioPath: args['audioPath'] as String?,
-            text: args['text'] as String?,
-            learnerWords: args['learnerWords'] as String?,
-            topic: args['topic'] as DailySpeakingTopic?,
-            finalScore: args['finalScore'] as int?,
+          ReviewHighlightsPage(
+            feedback: args['feedback'] as DailySpeakingFeedback,
           ),
           settings,
         );

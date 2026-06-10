@@ -155,12 +155,8 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
                   arguments: {
                     'session': session,
                     // Forward topic for any loop-capable on-ramp so the result
-                    // page can offer "Polish & retry" + the terminal reveal.
+                    // page can offer "Polish & retry".
                     if (widget._supportsLoop) 'topic': widget.topic,
-                    // The just-submitted input — the terminal reveal needs it to
-                    // generate the native rewrite of the learner's last version.
-                    'lastAudioPath': widget.audioPath,
-                    'lastText': widget.text,
                   },
                 );
                 context

@@ -99,7 +99,7 @@ class DailySpeakingBloc
       // Reuse `inputText` for the learner's words: the AI transcript for voice,
       // the typed text for the write path. The result page renders both the
       // same way.
-      final transcript = feedback.transcript.trim();
+      final transcript = feedback.effectiveTranscript.trim();
       // Just-talk carries no chosen topic, but the AI infers one — synthesize a
       // topic from it so just-talk can also be polished/retried and revealed.
       final effectiveTopic = topic ?? _inferredTopic(onRamp, feedback);

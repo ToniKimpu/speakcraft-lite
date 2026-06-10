@@ -7,7 +7,7 @@ import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 import 'package:speakcraft/model/daily_speaking/feedback_section.dart';
 import 'package:speakcraft/services/supabase_service.dart';
 
-import 'daily_speaking_service_stubs.dart';
+import 'daily_speaking_sample_feedback.dart';
 
 /// Input bundle for a single review request — voice OR text, plus optional
 /// topic context. Keeping the variants in one class avoids a dispatch fork in
@@ -57,11 +57,12 @@ class DailySpeakingService {
 
   Future<DailySpeakingFeedback> _stubResponse(SessionInput input) async {
     await Future<void>.delayed(const Duration(seconds: 2));
-    final canned = DailySpeakingServiceStubs.cannedResponses;
-    // Pick a canned response based on input hash so different attempts surface
-    // different UI states (high / mid / low score) during dev.
-    final seed = (input.text ?? input.audioPath ?? '').hashCode;
-    var response = canned[seed.abs() % canned.length];
+    // TEMP: always return the v2 annotated-transcript sample so the Review &
+    // highlights screen and the new schema can be exercised end-to-end before
+    // the Gemini edge function is live. Restore the hash-based rotation over
+    // `DailySpeakingServiceStubs.cannedResponses` (high/mid/low variety) when
+    // done previewing.
+    var response = kSampleFiveMinFeedback;
     // If the on-ramp doesn't carry a topic, drop any target-phrase results from
     // the canned response so the result screen renders correctly.
     if (input.topic == null) {
