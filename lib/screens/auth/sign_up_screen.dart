@@ -18,7 +18,6 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   late final ValueNotifier<int> _currentIndexNotifier;
-  late final ValueNotifier<bool> _completeNotifier;
 
   String _name = '';
   String _email = '';
@@ -32,13 +31,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
     super.initState();
     _authBloc = context.read<AuthBloc>();
     _currentIndexNotifier = ValueNotifier<int>(0);
-    _completeNotifier = ValueNotifier<bool>(false);
   }
 
   @override
   void dispose() {
     _currentIndexNotifier.dispose();
-    _completeNotifier.dispose();
     super.dispose();
   }
 
@@ -90,12 +87,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 );
               },
-              onFreeUser: () {
-                Navigator.pushReplacementNamed(
-                  context,
-                  PmpRoutes.freeUserPage,
-                );
-              },
               error: (message) {
                 showErrorSnackbar(message);
               },
@@ -112,8 +103,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       index: currentIndex,
                       children: [
                         SignUpData(
+                          onNext: _onNextButtonPressed,
                           onCompleteCheck: (isComplete, name, email, password) {
-                            _completeNotifier.value = isComplete;
                             _name = name;
                             _email = email;
                             _password = password;
@@ -128,60 +119,46 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: ValueListenableBuilder<bool>(
-                  valueListenable: _completeNotifier,
-                  builder: (context, isComplete, child) {
-                    return ValueListenableBuilder<int>(
-                      valueListenable: _currentIndexNotifier,
-                      builder: (context, currentIndex, child) {
-                        final buttonText =
-                            currentIndex == 0 ? 'Next' : 'Create an account';
-                        final isLoading =
-                            context.watch<AuthBloc>().state.whenOrNull(
-                                      loading: () => true,
-                                    ) ??
-                                false;
-                        final enabled = !isLoading &&
-                            (currentIndex != 0 || isComplete);
-                        return SizedBox(
-                          width: double.infinity,
-                          height: 48,
-                          child: FilledButton(
-                            onPressed: enabled
-                                ? () {
-                                    if (currentIndex == 0) {
-                                      FocusScope.of(context).unfocus();
-                                      _onNextButtonPressed();
-                                    } else {
-                                      _authBloc.add(
-                                        AuthEvent.signupWithEmail(
-                                          _email,
-                                          _password,
-                                          _name,
-                                          _profilePath,
-                                        ),
-                                      );
-                                    }
-                                  }
-                                : null,
-                            child: isLoading
-                                ? const SizedBox(
-                                    height: 20,
-                                    width: 20,
-                                    child:
-                                        CircularProgressIndicator(strokeWidth: 2),
-                                  )
-                                : Text(buttonText),
-                          ),
-                        );
-                      },
-                    );
-                  },
-                ),
+              ValueListenableBuilder<int>(
+                valueListenable: _currentIndexNotifier,
+                builder: (context, currentIndex, child) {
+                  // Step 0's "Next" lives inside the card; only the final
+                  // "Create an account" action is pinned at the bottom.
+                  if (currentIndex == 0) return const SizedBox.shrink();
+                  final isLoading = context.watch<AuthBloc>().state.whenOrNull(
+                            loading: () => true,
+                          ) ??
+                      false;
+                  return Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                    child: SizedBox(
+                      width: double.infinity,
+                      height: 48,
+                      child: FilledButton(
+                        onPressed: isLoading
+                            ? null
+                            : () {
+                                _authBloc.add(
+                                  AuthEvent.signupWithEmail(
+                                    _email,
+                                    _password,
+                                    _name,
+                                    _profilePath,
+                                  ),
+                                );
+                              },
+                        child: isLoading
+                            ? const SizedBox(
+                                height: 20,
+                                width: 20,
+                                child: CircularProgressIndicator(strokeWidth: 2),
+                              )
+                            : const Text('Create an account'),
+                      ),
+                    ),
+                  );
+                },
               ),
-              const SizedBox(height: 8),
             ],
           ),
         ),

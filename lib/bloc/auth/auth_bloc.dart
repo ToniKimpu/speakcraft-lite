@@ -42,7 +42,6 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.passwordResetOtpSent(String email) =
       _PasswordResetOtpSent;
   const factory AuthState.deviceIdFailed() = _DeviceIdFailed;
-  const factory AuthState.onFreeUser() = _OnFreeUser;
   const factory AuthState.onNewPath() = _OnNewPath;
   const factory AuthState.onNewVersion(Map<String, dynamic> appVersion) =
       _OnNewVersion;
@@ -87,10 +86,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }
       sl<ValueNotifier<AppUser>>().value = appUser;
-      if (!appUser.isPremiumUser!) {
-        emit(const AuthState.onFreeUser());
-        return;
-      }
       final appVersion = await _repository.getLatestAppVersion();
       if (appVersion != null) {
         final buildNumber = appVersion['build_number'] as int;
@@ -273,10 +268,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _resolveAuthenticatedState(
       AppUser appUser, Emitter<AuthState> emit) async {
     sl<ValueNotifier<AppUser>>().value = appUser;
-    if (!(appUser.isPremiumUser ?? false)) {
-      emit(const AuthState.onFreeUser());
-      return;
-    }
     final localDeviceId =
         sl<ValueNotifier<String?>>(instanceName: 'deviceId').value;
     if (appUser.deviceId != null && appUser.deviceId != localDeviceId) {

@@ -58,12 +58,6 @@ class _SplashScreenState extends State<SplashScreen> {
                     // (route) => false,
                   );
                 },
-                onFreeUser: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    PmpRoutes.freeUserPage,
-                  );
-                },
                 onNewVersion: (appVersion) {
                   Navigator.pushReplacementNamed(
                     context,

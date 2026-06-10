@@ -24,7 +24,10 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   bool _isPasswordVisible = false;
-  final _loadingNotifier = ValueNotifier<bool>(false);
+
+  /// Which auth action is in flight, so only the tapped button shows a spinner
+  /// (null = idle). Values: 'email' | 'google'.
+  final _loadingAction = ValueNotifier<String?>(null);
 
   late final AuthBloc _authBloc;
 
@@ -37,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void dispose() {
     super.dispose();
-    _loadingNotifier.dispose();
+    _loadingAction.dispose();
     _obscureNotifier.dispose();
     _emailController.dispose();
     _passwordController.dispose();
@@ -50,15 +53,14 @@ class _LoginScreenState extends State<LoginScreen> {
         bloc: _authBloc,
         listener: (context, state) {
           state.maybeWhen(
-            loading: () {
-              _loadingNotifier.value = true;
-            },
+            // The tapped button sets _loadingAction optimistically on press, so
+            // we only need to clear it on the terminal states below.
             unauthenticated: () {
               // Reached when the user dismisses the Google account picker.
-              _loadingNotifier.value = false;
+              _loadingAction.value = null;
             },
             authenticated: () {
-              _loadingNotifier.value = false;
+              _loadingAction.value = null;
               AppLogger.instance.debug("_loginScreen: Authenticated");
               Navigator.pushAndRemoveUntil(
                 context,
@@ -71,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
               );
             },
             deviceIdFailed: () {
-              _loadingNotifier.value = false;
+              _loadingAction.value = null;
               Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
@@ -82,15 +84,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               );
             },
-            onFreeUser: () {
-              _loadingNotifier.value = false;
-              Navigator.pushReplacementNamed(
-                context,
-                PmpRoutes.freeUserPage,
-              );
+            socketError: (message) {
+              _loadingAction.value = null;
+              showErrorSnackbar(message);
             },
             error: (message) {
-              _loadingNotifier.value = false;
+              _loadingAction.value = null;
               showErrorSnackbar(message);
             },
             orElse: () {},
@@ -182,17 +181,20 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 16,
                     ),
-                    ValueListenableBuilder<bool>(
-                      valueListenable: _loadingNotifier,
-                      builder: (context, isLoading, child) {
+                    ValueListenableBuilder<String?>(
+                      valueListenable: _loadingAction,
+                      builder: (context, action, child) {
+                        final isLoading = action == 'email';
+                        final disabled = action != null;
                         return SizedBox(
                           width: double.infinity,
                           height: 48,
                           child: FilledButton(
-                            onPressed: isLoading
+                            onPressed: disabled
                                 ? null
                                 : () {
                                     FocusScope.of(context).unfocus();
+                                    _loadingAction.value = 'email';
                                     _authBloc.add(
                                       AuthEvent.loginWithEmail(
                                         _emailController.text.trim(),
@@ -246,25 +248,38 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     const SizedBox(height: 12),
-                    ValueListenableBuilder<bool>(
-                      valueListenable: _loadingNotifier,
-                      builder: (context, isLoading, child) {
+                    ValueListenableBuilder<String?>(
+                      valueListenable: _loadingAction,
+                      builder: (context, action, child) {
+                        final isLoading = action == 'google';
+                        final disabled = action != null;
                         return SizedBox(
                           width: double.infinity,
                           height: 48,
                           child: OutlinedButton.icon(
-                            onPressed: isLoading
+                            onPressed: disabled
                                 ? null
-                                : () => _authBloc.add(
+                                : () {
+                                    FocusScope.of(context).unfocus();
+                                    _loadingAction.value = 'google';
+                                    _authBloc.add(
                                       const AuthEvent.loginWithGoogle(),
-                                    ),
-                            icon: Image.asset(
-                              'assets/images/google_logo.png',
-                              width: 20,
-                              height: 20,
-                              errorBuilder: (_, __, ___) =>
-                                  const Icon(Icons.login, size: 20),
-                            ),
+                                    );
+                                  },
+                            icon: isLoading
+                                ? const SizedBox(
+                                    width: 18,
+                                    height: 18,
+                                    child:
+                                        CircularProgressIndicator(strokeWidth: 2),
+                                  )
+                                : Image.asset(
+                                    'assets/images/google_logo.png',
+                                    width: 20,
+                                    height: 20,
+                                    errorBuilder: (_, __, ___) =>
+                                        const Icon(Icons.login, size: 20),
+                                  ),
                             label: Text(
                               AppLocalizations.of(context)
                                   .txtContinueWithGoogle,
@@ -277,29 +292,22 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     const Text(
-              //       'Don\'t have an account?',
-              //       style: TextStyle(
-              //         color: PmpColors.white,
-              //       ),
-              //     ),
-              //     AuthButton(
-              //       text: 'Sign Up',
-              //       onPressed: () {
-              //         Navigator.pushNamed(context, PmpRoutes.signUpScreen);
-              //       },
-              //       variant: AuthButtonVariant.text,
-              //       fullWidth: false,
-              //       textColor: PmpColors.white,
-              //     ),
-              //   ],
-              // )
-              //     .animate()
-              //     .fadeIn(duration: 600.ms)
-              //     .slideY(begin: 0.3, delay: 1000.ms),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an account?",
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () =>
+                        Navigator.pushNamed(context, PmpRoutes.signUpScreen),
+                    child: const Text('Sign Up'),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

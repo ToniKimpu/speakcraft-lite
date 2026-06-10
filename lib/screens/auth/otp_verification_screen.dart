@@ -94,10 +94,6 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 ModalRoute.withName(PmpRoutes.home),
               );
             },
-            onFreeUser: () {
-              _loadingNotifier.value = false;
-              Navigator.pushReplacementNamed(context, PmpRoutes.freeUserPage);
-            },
             deviceIdFailed: () {
               _loadingNotifier.value = false;
               Navigator.pushAndRemoveUntil(

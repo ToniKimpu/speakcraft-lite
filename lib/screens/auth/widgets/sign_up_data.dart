@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:speakcraft/config/pmp_colors.dart';
-import 'package:speakcraft/screens/auth/widgets/auth_button.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_card.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_text_field.dart';
 
@@ -10,10 +8,14 @@ class SignUpData extends StatefulWidget {
   const SignUpData({
     super.key,
     required this.onCompleteCheck,
+    required this.onNext,
   });
 
   final Function(bool isComplete, String name, String email, String password)
       onCompleteCheck;
+
+  /// Advance to the next sign-up step — wired to the in-card "Next" button.
+  final VoidCallback onNext;
 
   @override
   State<SignUpData> createState() => _SignUpDataState();
@@ -31,6 +33,9 @@ class _SignUpDataState extends State<SignUpData> {
   bool _isPasswordVisible = false;
   bool _isConfirmPasswordVisible = false;
 
+  /// All fields filled and passwords match — drives the in-card "Next" button.
+  final _isComplete = ValueNotifier<bool>(false);
+
   @override
   void initState() {
     super.initState();
@@ -47,26 +52,21 @@ class _SignUpDataState extends State<SignUpData> {
     super.dispose();
     _passwordObscureNotifier.dispose();
     _confirmObscureNotifier.dispose();
+    _isComplete.dispose();
   }
 
-  _onCompleteCheck() {
-    if (_nameController.text.isEmpty ||
-        _emailController.text.isEmpty ||
-        _passwordController.text.isEmpty ||
-        _confirmController.text.isEmpty) {
-      widget.onCompleteCheck(false, '', '', '');
-      return;
-    }
-    if (_passwordController.text != _confirmController.text) {
-      widget.onCompleteCheck(false, '', '', '');
-      return;
-    }
-    widget.onCompleteCheck(
-      true,
-      _nameController.text.trim(),
-      _emailController.text.trim(),
-      _passwordController.text.trim(),
-    );
+  void _onCompleteCheck() {
+    final name = _nameController.text.trim();
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+    final confirm = _confirmController.text.trim();
+    final isComplete = name.isNotEmpty &&
+        email.isNotEmpty &&
+        password.isNotEmpty &&
+        confirm.isNotEmpty &&
+        password == confirm;
+    _isComplete.value = isComplete;
+    widget.onCompleteCheck(isComplete, name, email, password);
   }
 
   @override
@@ -81,7 +81,7 @@ class _SignUpDataState extends State<SignUpData> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(9999),
               child: Image.asset(
-                "assets/images/app_logo.png",
+                "logo/app_logo.png",
                 width: 100,
                 height: 100,
                 colorBlendMode: BlendMode.srcIn,
@@ -209,28 +209,43 @@ class _SignUpDataState extends State<SignUpData> {
                     return null;
                   },
                 ),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Already have an account?',
-                      style: TextStyle(
-                        color: PmpColors.white,
+                const SizedBox(height: 24),
+                ValueListenableBuilder<bool>(
+                  valueListenable: _isComplete,
+                  builder: (context, isComplete, child) {
+                    return SizedBox(
+                      width: double.infinity,
+                      height: 48,
+                      child: FilledButton(
+                        onPressed: isComplete
+                            ? () {
+                                FocusScope.of(context).unfocus();
+                                widget.onNext();
+                              }
+                            : null,
+                        child: const Text('Next'),
                       ),
-                    ),
-                    AuthButton(
-                      text: 'Login',
-                      onPressed: () => Navigator.of(context).pop(),
-                      variant: AuthButtonVariant.text,
-                      fullWidth: false,
-                      textColor: PmpColors.white,
-                    ),
-                  ],
-                )
-                   ,
+                    );
+                  },
+                ),
               ],
             ),
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Already have an account?',
+                style: PmpTextStyles.body2Regular.copyWith(
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
+              ),
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('Login'),
+              ),
+            ],
           ),
         ],
       ),

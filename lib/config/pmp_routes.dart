@@ -25,7 +25,6 @@ import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_pager.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_page.dart';
-import 'package:speakcraft/screens/main/free_user_screen.dart';
 import 'package:speakcraft/screens/main/new_version_screen.dart';
 import 'package:speakcraft/screens/practice_with_ai/ai_practice_screen.dart';
 import 'package:speakcraft/screens/practice_with_ai/ai_response_detail_screen.dart';
@@ -76,7 +75,6 @@ class PmpRoutes {
       '/self_practice_pattern/pattern_list/pattern_practice_screen';
   static const patternReplyScreen =
       '/self_practice_pattern/pattern_list/pattern_reply_screen';
-  static const freeUserPage = '/free_user_page';
   static const newVersionScreen = '/new_version_screen';
   static const listeningListPage = "/listening/listening_list_page";
   static const listeningHub = '/listening/lesson_hub';
@@ -209,8 +207,6 @@ class PmpRoutes {
           ),
           settings,
         );
-      case freeUserPage:
-        return _getRoute(const FreeUserScreen(), settings);
       case newVersionScreen:
         final args = settings.arguments as Map<String, dynamic>;
         final appVersion = args['appVersion'] as Map<String, dynamic>;
