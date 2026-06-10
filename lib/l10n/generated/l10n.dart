@@ -2578,6 +2578,106 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Import audio`
+  String get txtDsImportAudio {
+    return Intl.message(
+      'Import audio',
+      name: 'txtDsImportAudio',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload a clip of you speaking`
+  String get txtDsImportAudioDesc {
+    return Intl.message(
+      'Upload a clip of you speaking',
+      name: 'txtDsImportAudioDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already recorded yourself speaking English? Import it and get the same feedback. One clear voice, up to 5 minutes, works best.`
+  String get txtDsImportIntro {
+    return Intl.message(
+      'Already recorded yourself speaking English? Import it and get the same feedback. One clear voice, up to 5 minutes, works best.',
+      name: 'txtDsImportIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose audio file`
+  String get txtDsImportChooseFile {
+    return Intl.message(
+      'Choose audio file',
+      name: 'txtDsImportChooseFile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose a different file`
+  String get txtDsImportChangeFile {
+    return Intl.message(
+      'Choose a different file',
+      name: 'txtDsImportChangeFile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unsupported format. Use m4a, mp3, wav, aac, ogg, or flac.`
+  String get txtDsImportUnsupported {
+    return Intl.message(
+      'Unsupported format. Use m4a, mp3, wav, aac, ogg, or flac.',
+      name: 'txtDsImportUnsupported',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Couldn't read that audio file. Try another one.`
+  String get txtDsImportUnreadable {
+    return Intl.message(
+      'Couldn\'t read that audio file. Try another one.',
+      name: 'txtDsImportUnreadable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `That clip is too short — it needs at least a few seconds of speech.`
+  String get txtDsImportTooShort {
+    return Intl.message(
+      'That clip is too short — it needs at least a few seconds of speech.',
+      name: 'txtDsImportTooShort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Audio must be {minutes} minutes or less.`
+  String txtDsImportTooLong(Object minutes) {
+    return Intl.message(
+      'Audio must be $minutes minutes or less.',
+      name: 'txtDsImportTooLong',
+      desc: '',
+      args: [minutes],
+    );
+  }
+
+  /// `That file is too large (max {mb} MB).`
+  String txtDsImportTooBig(Object mb) {
+    return Intl.message(
+      'That file is too large (max $mb MB).',
+      name: 'txtDsImportTooBig',
+      desc: '',
+      args: [mb],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

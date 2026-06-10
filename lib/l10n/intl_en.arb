@@ -435,5 +435,25 @@
   },
   "txtDsProgressSame": "Same score as your first try — consistency is progress too.",
   "txtDsPhrasesToTry": "Phrases to try next time",
-  "txtDsPhrasesToTryHint": "Natural ways to say this on your topic — you didn't use these yet, so try working them in next time."
+  "txtDsPhrasesToTryHint": "Natural ways to say this on your topic — you didn't use these yet, so try working them in next time.",
+  "txtDsImportAudio": "Import audio",
+  "txtDsImportAudioDesc": "Upload a clip of you speaking",
+  "txtDsImportIntro": "Already recorded yourself speaking English? Import it and get the same feedback. One clear voice, up to 5 minutes, works best.",
+  "txtDsImportChooseFile": "Choose audio file",
+  "txtDsImportChangeFile": "Choose a different file",
+  "txtDsImportUnsupported": "Unsupported format. Use m4a, mp3, wav, aac, ogg, or flac.",
+  "txtDsImportUnreadable": "Couldn't read that audio file. Try another one.",
+  "txtDsImportTooShort": "That clip is too short — it needs at least a few seconds of speech.",
+  "txtDsImportTooLong": "Audio must be {minutes} minutes or less.",
+  "@txtDsImportTooLong": {
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "txtDsImportTooBig": "That file is too large (max {mb} MB).",
+  "@txtDsImportTooBig": {
+    "placeholders": {
+      "mb": {}
+    }
+  }
 }

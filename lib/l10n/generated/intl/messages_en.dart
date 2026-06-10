@@ -30,59 +30,63 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m4(count, delta) => "${count} versions · up ${delta} from v1";
 
-  static String m5(duration) => "max ${duration}";
+  static String m5(mb) => "That file is too large (max ${mb} MB).";
 
-  static String m6(count) => "${count} selected";
+  static String m6(minutes) => "Audio must be ${minutes} minutes or less.";
 
-  static String m7(score) =>
+  static String m7(duration) => "max ${duration}";
+
+  static String m8(count) => "${count} selected";
+
+  static String m9(score) =>
       "You finished at ${score}. Here\'s a native version to compare against.";
 
-  static String m8(wpm) => "${wpm} wpm";
+  static String m10(wpm) => "${wpm} wpm";
 
-  static String m9(points) =>
+  static String m11(points) =>
       "Down ${points} from your first try — every rep still counts.";
 
-  static String m10(points) =>
+  static String m12(points) =>
       "You gained ${points} points from your first try — keep it up!";
 
-  static String m11(delta, revision, previous) =>
+  static String m13(delta, revision, previous) =>
       "Down ${delta} from v${revision} (was ${previous}).";
 
-  static String m12(revision, previous) =>
+  static String m14(revision, previous) =>
       "Same score as v${revision} (${previous}).";
 
-  static String m13(delta, revision, previous) =>
+  static String m15(delta, revision, previous) =>
       "Up ${delta} from v${revision} (was ${previous}).";
 
-  static String m14(onRamp, seconds, words) =>
+  static String m16(onRamp, seconds, words) =>
       "${onRamp} • ${seconds}s • ${words} words";
 
-  static String m15(used, total) => "${used} of ${total} sessions today";
+  static String m17(used, total) => "${used} of ${total} sessions today";
 
-  static String m16(count) => "${count} target phrases";
+  static String m18(count) => "${count} target phrases";
 
-  static String m17(label) => "Topic: ${label}";
+  static String m19(label) => "Topic: ${label}";
 
-  static String m18(revision) =>
+  static String m20(revision) =>
       "Version ${revision} — polish your answer and see how much you improve.";
 
-  static String m19(revision) => "v${revision}";
+  static String m21(revision) => "v${revision}";
 
-  static String m20(revision) => "v${revision} (this one)";
+  static String m22(revision) => "v${revision} (this one)";
 
-  static String m21(count) => "Write at least ${count} characters.";
+  static String m23(count) => "Write at least ${count} characters.";
 
-  static String m22(email) => "Enter the 6-digit code we sent to ${email}";
+  static String m24(email) => "Enter the 6-digit code we sent to ${email}";
 
-  static String m23(total) => "out of ${total}";
+  static String m25(total) => "out of ${total}";
 
-  static String m24(done, total) => "${done} of ${total}";
+  static String m26(done, total) => "${done} of ${total}";
 
-  static String m25(seconds) => "Resend in ${seconds}s";
+  static String m27(seconds) => "Resend in ${seconds}s";
 
-  static String m26(count) => "${count}-step lesson";
+  static String m28(count) => "${count}-step lesson";
 
-  static String m27(done, total) => "${done} of ${total} steps";
+  static String m29(done, total) => "${done} of ${total} steps";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -252,6 +256,30 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsImDoneSeeNative": MessageLookupByLibrary.simpleMessage(
       "I\'m done — see native version",
     ),
+    "txtDsImportAudio": MessageLookupByLibrary.simpleMessage("Import audio"),
+    "txtDsImportAudioDesc": MessageLookupByLibrary.simpleMessage(
+      "Upload a clip of you speaking",
+    ),
+    "txtDsImportChangeFile": MessageLookupByLibrary.simpleMessage(
+      "Choose a different file",
+    ),
+    "txtDsImportChooseFile": MessageLookupByLibrary.simpleMessage(
+      "Choose audio file",
+    ),
+    "txtDsImportIntro": MessageLookupByLibrary.simpleMessage(
+      "Already recorded yourself speaking English? Import it and get the same feedback. One clear voice, up to 5 minutes, works best.",
+    ),
+    "txtDsImportTooBig": m5,
+    "txtDsImportTooLong": m6,
+    "txtDsImportTooShort": MessageLookupByLibrary.simpleMessage(
+      "That clip is too short — it needs at least a few seconds of speech.",
+    ),
+    "txtDsImportUnreadable": MessageLookupByLibrary.simpleMessage(
+      "Couldn\'t read that audio file. Try another one.",
+    ),
+    "txtDsImportUnsupported": MessageLookupByLibrary.simpleMessage(
+      "Unsupported format. Use m4a, mp3, wav, aac, ogg, or flac.",
+    ),
     "txtDsInterference": MessageLookupByLibrary.simpleMessage("Interference"),
     "txtDsJustTalk": MessageLookupByLibrary.simpleMessage("Just talk"),
     "txtDsJustTalkDesc": MessageLookupByLibrary.simpleMessage(
@@ -271,12 +299,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Upper-Intermediate",
     ),
     "txtDsLimitReached": MessageLookupByLibrary.simpleMessage("Limit reached"),
-    "txtDsMaxDuration": m5,
-    "txtDsNSelected": m6,
+    "txtDsMaxDuration": m7,
+    "txtDsNSelected": m8,
     "txtDsNativeHeaderNoScore": MessageLookupByLibrary.simpleMessage(
       "Here\'s how a native speaker might say it.",
     ),
-    "txtDsNativeHeaderScore": m7,
+    "txtDsNativeHeaderScore": m9,
     "txtDsNativeRewrite": MessageLookupByLibrary.simpleMessage(
       "How a native speaker would say it",
     ),
@@ -299,7 +327,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tell us what you want to talk about, then speak or type.",
     ),
     "txtDsPace": MessageLookupByLibrary.simpleMessage("Pace"),
-    "txtDsPaceWpm": m8,
+    "txtDsPaceWpm": m10,
     "txtDsPhrasesToTry": MessageLookupByLibrary.simpleMessage(
       "Phrases to try next time",
     ),
@@ -317,12 +345,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsPresetSoundNatural": MessageLookupByLibrary.simpleMessage(
       "Sound natural",
     ),
-    "txtDsProgressDown": m9,
+    "txtDsProgressDown": m11,
     "txtDsProgressSame": MessageLookupByLibrary.simpleMessage(
       "Same score as your first try — consistency is progress too.",
     ),
     "txtDsProgressTitle": MessageLookupByLibrary.simpleMessage("Your progress"),
-    "txtDsProgressUp": m10,
+    "txtDsProgressUp": m12,
     "txtDsPronunciation": MessageLookupByLibrary.simpleMessage("Pronunciation"),
     "txtDsPronunciationNotes": MessageLookupByLibrary.simpleMessage(
       "Pronunciation notes",
@@ -346,9 +374,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsReviewingWriting": MessageLookupByLibrary.simpleMessage(
       "Reviewing your writing…",
     ),
-    "txtDsScoreDown": m11,
-    "txtDsScoreSame": m12,
-    "txtDsScoreUp": m13,
+    "txtDsScoreDown": m13,
+    "txtDsScoreSame": m14,
+    "txtDsScoreUp": m15,
     "txtDsSecSentenceFixes": MessageLookupByLibrary.simpleMessage(
       "Sentence fixes",
     ),
@@ -367,8 +395,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsSentenceRewritesTitle": MessageLookupByLibrary.simpleMessage(
       "Sentence rewrites",
     ),
-    "txtDsSessionMeta": m14,
-    "txtDsSessionsToday": m15,
+    "txtDsSessionMeta": m16,
+    "txtDsSessionsToday": m17,
     "txtDsSkillBreakdown": MessageLookupByLibrary.simpleMessage(
       "Skill breakdown",
     ),
@@ -410,7 +438,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tap and start talking",
     ),
     "txtDsTapToStop": MessageLookupByLibrary.simpleMessage("Tap to stop"),
-    "txtDsTargetPhraseCount": m16,
+    "txtDsTargetPhraseCount": m18,
     "txtDsTargetPhrases": MessageLookupByLibrary.simpleMessage(
       "Target phrases",
     ),
@@ -420,7 +448,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDsTime": MessageLookupByLibrary.simpleMessage("Time"),
     "txtDsToday": MessageLookupByLibrary.simpleMessage("Today"),
-    "txtDsTopicColon": m17,
+    "txtDsTopicColon": m19,
     "txtDsTopicFieldHint": MessageLookupByLibrary.simpleMessage(
       "e.g. The most stressful week I had",
     ),
@@ -438,9 +466,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsTryUseThesePhrases": MessageLookupByLibrary.simpleMessage(
       "Try to use these phrases",
     ),
-    "txtDsVersionBanner": m18,
-    "txtDsVersionShort": m19,
-    "txtDsVersionThisOne": m20,
+    "txtDsVersionBanner": m20,
+    "txtDsVersionShort": m21,
+    "txtDsVersionThisOne": m22,
     "txtDsVocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
     "txtDsWhatToTalkAbout": MessageLookupByLibrary.simpleMessage(
       "What do you want to talk about?",
@@ -457,7 +485,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsWordsYouMightUse": MessageLookupByLibrary.simpleMessage(
       "Words you might use",
     ),
-    "txtDsWriteAtLeastChars": m21,
+    "txtDsWriteAtLeastChars": m23,
     "txtDsWriteInstead": MessageLookupByLibrary.simpleMessage("Write instead"),
     "txtDsWritePathHint": MessageLookupByLibrary.simpleMessage(
       "Write a paragraph about your topic. Aim for 5-10 sentences.",
@@ -548,8 +576,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtOk": MessageLookupByLibrary.simpleMessage("Okay"),
     "txtOr": MessageLookupByLibrary.simpleMessage("or"),
     "txtOtpFieldLabel": MessageLookupByLibrary.simpleMessage("6-digit code"),
-    "txtOtpSentTo": m22,
-    "txtOutOf": m23,
+    "txtOtpSentTo": m24,
+    "txtOutOf": m25,
     "txtPasswordMinLength": MessageLookupByLibrary.simpleMessage(
       "Password must be at least 6 characters",
     ),
@@ -565,7 +593,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtPrivacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "txtProfile": MessageLookupByLibrary.simpleMessage("Profile"),
-    "txtProgressXofY": m24,
+    "txtProgressXofY": m26,
     "txtRecommendedNext": MessageLookupByLibrary.simpleMessage(
       "Recommended next",
     ),
@@ -577,7 +605,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtRemove": MessageLookupByLibrary.simpleMessage("Remove"),
     "txtRemoved": MessageLookupByLibrary.simpleMessage("Removed"),
     "txtResendCode": MessageLookupByLibrary.simpleMessage("Resend code"),
-    "txtResendInSeconds": m25,
+    "txtResendInSeconds": m27,
     "txtResetPasswordButton": MessageLookupByLibrary.simpleMessage(
       "Reset password",
     ),
@@ -600,7 +628,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Speech Practice Session",
     ),
     "txtStartHere": MessageLookupByLibrary.simpleMessage("Start here"),
-    "txtStepLesson": m26,
+    "txtStepLesson": m28,
     "txtStepRecordSubtitle": MessageLookupByLibrary.simpleMessage(
       "Record yourself and compare to the original",
     ),
@@ -623,7 +651,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Listen with subtitles to understand the content",
     ),
     "txtStepWatchTitle": MessageLookupByLibrary.simpleMessage("Watch"),
-    "txtStepsProgress": m27,
+    "txtStepsProgress": m29,
     "txtStream": MessageLookupByLibrary.simpleMessage("Stream"),
     "txtTapToRecord": MessageLookupByLibrary.simpleMessage("Tap to record"),
     "txtThemeDark": MessageLookupByLibrary.simpleMessage("Dark"),

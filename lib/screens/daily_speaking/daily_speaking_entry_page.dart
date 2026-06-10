@@ -12,11 +12,9 @@ import 'widgets/session_limit_banner.dart';
 // to 3 before release.
 const int kDailySessionLimit = 100;
 
-/// Daily Speaking landing page. Three on-ramps to a recording flow.
-///
-/// P1 (this branch): only "Just talk" is enabled.
-/// P2: enables "Own topic" and the write-path entry.
-/// P3: enables "Suggested topic".
+/// Daily Speaking landing page. Four on-ramps, all leading to the same
+/// voice-feedback flow: Just talk, Own topic, Suggested topic, and Import audio
+/// (bring your own recording). It's speaking practice — there is no text path.
 class DailySpeakingEntryPage extends StatefulWidget {
   const DailySpeakingEntryPage({super.key});
 
@@ -121,6 +119,21 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
                       Navigator.pushNamed(
                         context,
                         PmpRoutes.dailySpeakingSuggestedList,
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 12),
+                  _OnRampCard(
+                    title: l10n.txtDsImportAudio,
+                    subtitle: l10n.txtDsImportAudioDesc,
+                    icon: Icons.upload_file,
+                    accentColor: colorScheme.primary,
+                    enabled: !exhausted,
+                    badge: exhausted ? l10n.txtDsLimitReached : null,
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        PmpRoutes.dailySpeakingImportAudio,
                       );
                     },
                   ),
