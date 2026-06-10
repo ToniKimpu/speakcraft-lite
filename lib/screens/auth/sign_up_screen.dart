@@ -8,6 +8,7 @@ import 'package:speakcraft/screens/auth/widgets/sign_up_profile.dart';
 import 'package:speakcraft/screens/main/home_screen.dart';
 
 import '../../config/pmp_routes.dart';
+import '../../l10n/generated/l10n.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -153,7 +154,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 width: 20,
                                 child: CircularProgressIndicator(strokeWidth: 2),
                               )
-                            : const Text('Create an account'),
+                            : Text(AppLocalizations.of(context).txtCreateAccount),
                       ),
                     ),
                   );

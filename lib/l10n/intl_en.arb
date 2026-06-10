@@ -43,6 +43,12 @@
   "txtResetPasswordButton": "Reset password",
   "txtPasswordsDoNotMatch": "Passwords do not match",
   "txtPasswordMinLength": "Password must be at least 6 characters",
+  "txtDontHaveAccount": "Don't have an account?",
+  "txtSignUp": "Sign Up",
+  "txtCreateAccount": "Create an account",
+  "txtNext": "Next",
+  "txtAlreadyHaveAccount": "Already have an account?",
+  "txtLogin": "Login",
 
   "txtCompleted": "Completed",
   "txtTryAgain": "Try again",

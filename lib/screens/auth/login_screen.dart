@@ -296,7 +296,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't have an account?",
+                    AppLocalizations.of(context).txtDontHaveAccount,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onSurfaceVariant,
                     ),
@@ -304,7 +304,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextButton(
                     onPressed: () =>
                         Navigator.pushNamed(context, PmpRoutes.signUpScreen),
-                    child: const Text('Sign Up'),
+                    child: Text(AppLocalizations.of(context).txtSignUp),
                   ),
                 ],
               ),

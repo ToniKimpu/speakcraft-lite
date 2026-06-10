@@ -3,6 +3,7 @@ import 'package:speakcraft/screens/auth/widgets/auth_card.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_text_field.dart';
 
 import '../../../config/pmp_text_styles.dart';
+import '../../../l10n/generated/l10n.dart';
 
 class SignUpData extends StatefulWidget {
   const SignUpData({
@@ -223,7 +224,7 @@ class _SignUpDataState extends State<SignUpData> {
                                 widget.onNext();
                               }
                             : null,
-                        child: const Text('Next'),
+                        child: Text(AppLocalizations.of(context).txtNext),
                       ),
                     );
                   },
@@ -236,14 +237,14 @@ class _SignUpDataState extends State<SignUpData> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Already have an account?',
+                AppLocalizations.of(context).txtAlreadyHaveAccount,
                 style: PmpTextStyles.body2Regular.copyWith(
                   color: Theme.of(context).colorScheme.onSurfaceVariant,
                 ),
               ),
               TextButton(
                 onPressed: () => Navigator.of(context).pop(),
-                child: const Text('Login'),
+                child: Text(AppLocalizations.of(context).txtLogin),
               ),
             ],
           ),

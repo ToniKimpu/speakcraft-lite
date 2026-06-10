@@ -84,6 +84,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtAllStepsComplete": MessageLookupByLibrary.simpleMessage(
       "All steps complete — great work!",
     ),
+    "txtAlreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Already have an account?",
+    ),
     "txtAnswerLabel": MessageLookupByLibrary.simpleMessage("Answer: "),
     "txtAppearance": MessageLookupByLibrary.simpleMessage("Appearance"),
     "txtCancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -122,6 +125,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Continue with Google",
     ),
     "txtCorrect": MessageLookupByLibrary.simpleMessage("Correct"),
+    "txtCreateAccount": MessageLookupByLibrary.simpleMessage(
+      "Create an account",
+    ),
     "txtDailySpeaking": MessageLookupByLibrary.simpleMessage("Daily Speaking"),
     "txtDayStreak": MessageLookupByLibrary.simpleMessage("Day Streak"),
     "txtDaysLearned": MessageLookupByLibrary.simpleMessage("Days Learned"),
@@ -137,6 +143,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDiscard": MessageLookupByLibrary.simpleMessage("Discard"),
     "txtDone": MessageLookupByLibrary.simpleMessage("Done"),
+    "txtDontHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Don\'t have an account?",
+    ),
     "txtDsApproxMin": m1,
     "txtDsAtLeastChars": m2,
     "txtDsBetterWordChoices": MessageLookupByLibrary.simpleMessage(
@@ -473,6 +482,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtListeningListTitle": MessageLookupByLibrary.simpleMessage(
       "Listening And Shadowing",
     ),
+    "txtLogin": MessageLookupByLibrary.simpleMessage("Login"),
     "txtModuleBookmarksLabel1": MessageLookupByLibrary.simpleMessage(
       "ကိုယ်တိုင် save ထားသော bookmarks များ",
     ),
@@ -496,6 +506,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Network error. Please check your internet connection.",
     ),
     "txtNewPassword": MessageLookupByLibrary.simpleMessage("New password"),
+    "txtNext": MessageLookupByLibrary.simpleMessage("Next"),
     "txtNoInternetConnection": MessageLookupByLibrary.simpleMessage(
       "No internet connection.",
     ),
@@ -554,6 +565,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtShadowing": MessageLookupByLibrary.simpleMessage("Shadowing"),
     "txtShowHint": MessageLookupByLibrary.simpleMessage("Show hint"),
+    "txtSignUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "txtSpeechPracticeSession": MessageLookupByLibrary.simpleMessage(
       "Speech Practice Session",
     ),

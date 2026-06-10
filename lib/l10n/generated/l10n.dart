@@ -334,6 +334,51 @@ class AppLocalizations {
     );
   }
 
+  /// `Don't have an account?`
+  String get txtDontHaveAccount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'txtDontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get txtSignUp {
+    return Intl.message('Sign Up', name: 'txtSignUp', desc: '', args: []);
+  }
+
+  /// `Create an account`
+  String get txtCreateAccount {
+    return Intl.message(
+      'Create an account',
+      name: 'txtCreateAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get txtNext {
+    return Intl.message('Next', name: 'txtNext', desc: '', args: []);
+  }
+
+  /// `Already have an account?`
+  String get txtAlreadyHaveAccount {
+    return Intl.message(
+      'Already have an account?',
+      name: 'txtAlreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get txtLogin {
+    return Intl.message('Login', name: 'txtLogin', desc: '', args: []);
+  }
+
   /// `Completed`
   String get txtCompleted {
     return Intl.message('Completed', name: 'txtCompleted', desc: '', args: []);
