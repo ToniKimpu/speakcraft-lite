@@ -26,9 +26,11 @@ Regenerate after any `@freezed`/`@JsonSerializable` change. Never hand-edit `*.f
    **Order:** ship the text-only types (`sentence` + `paragraph`) first; add the vision types
    (`picture` + `chart`) second.
 4. **New `WritingFeedback` schema** (NOT a reuse of `DailySpeakingFeedback`) — IELTS-criteria backbone.
-5. **Supabase-first storage** — content bank, per-user progress, and submission/feedback history all
-   live in Supabase. Drift is at most an optional mobile cache; **never the source of truth**. Web is
-   Supabase-only. (This is deliberately different from daily-speaking, which is Drift-local.)
+5. **Supabase-only storage (online-only app)** — content bank, per-user progress, and
+   submission/feedback history all live in Supabase; mobile fetches live. **No Drift** — the app is
+   online-only (it already requires connectivity at launch for the auth + premium check), so there is
+   no offline data cache. (Daily-speaking is still Drift-local today; it migrates to Supabase as part
+   of the post-auth Drift-removal — see [[speakcraft-web-version-plan]] in memory.)
 
 ## Storage model & the auth dependency
 - **`writing_lessons`** — public-read content bank (no auth). **Buildable now.**
