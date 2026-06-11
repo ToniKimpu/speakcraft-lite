@@ -136,26 +136,9 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                   hintText: hint,
                   prefixIcon: Icon(Icons.edit_outlined,
                       color: colorScheme.primary, size: 20),
-                  // While the field is empty, offer a one-tap way to drop the
-                  // shown example into the box (no retyping). Hidden once the
-                  // learner starts writing their own.
-                  suffixIcon: _canContinue
-                      ? null
-                      : TextButton.icon(
-                          onPressed: () => _useStarter(hint),
-                          style: TextButton.styleFrom(
-                            foregroundColor: colorScheme.primary,
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            minimumSize: const Size(0, 32),
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                          ),
-                          icon: const Icon(Icons.subdirectory_arrow_left,
-                              size: 16),
-                          label: Text(l10n.txtDsUseThisHint,
-                              style: PmpTextStyles.labelSemi),
-                        ),
-                  suffixIconConstraints:
-                      const BoxConstraints(minWidth: 0, minHeight: 0),
+                  // Built-in counter hidden — rendered below the field instead,
+                  // next to the "Use this" action.
+                  counterText: '',
                   filled: true,
                   fillColor: colorScheme.surfaceContainerHighest,
                   contentPadding:
@@ -174,6 +157,48 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                         BorderSide(color: colorScheme.primary, width: 1.5),
                   ),
                 ),
+              ),
+              const SizedBox(height: 6),
+              // Caption row under the field: a one-tap "Use this" (drops the
+              // shown example into the box, only while empty) on the left, the
+              // live character count on the right.
+              ValueListenableBuilder<TextEditingValue>(
+                valueListenable: _controller,
+                builder: (context, value, _) {
+                  final isEmpty = value.text.trim().isEmpty;
+                  return Row(
+                    children: [
+                      if (isEmpty)
+                        InkWell(
+                          onTap: () => _useStarter(hint),
+                          borderRadius: BorderRadius.circular(6),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 4, vertical: 2),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(Icons.subdirectory_arrow_left,
+                                    size: 15, color: colorScheme.primary),
+                                const SizedBox(width: 4),
+                                Text(
+                                  l10n.txtDsUseThisHint,
+                                  style: PmpTextStyles.labelSemi
+                                      .copyWith(color: colorScheme.primary),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      const Spacer(),
+                      Text(
+                        '${value.text.characters.length}/120',
+                        style: PmpTextStyles.sub
+                            .copyWith(color: colorScheme.onSurfaceVariant),
+                      ),
+                    ],
+                  );
+                },
               ),
               const SizedBox(height: 14),
               Row(
