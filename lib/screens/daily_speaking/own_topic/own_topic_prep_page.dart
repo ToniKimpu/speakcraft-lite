@@ -136,6 +136,16 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                   hintText: hint,
                   prefixIcon: Icon(Icons.edit_outlined,
                       color: colorScheme.primary, size: 20),
+                  // Clear-all button, shown only once there's text to clear.
+                  // (_canContinue tracks empty/non-empty, so it toggles here.)
+                  suffixIcon: _canContinue
+                      ? IconButton(
+                          icon: const Icon(Icons.cancel, size: 20),
+                          color: colorScheme.onSurfaceVariant,
+                          splashRadius: 20,
+                          onPressed: _controller.clear,
+                        )
+                      : null,
                   // Built-in counter hidden — rendered below the field instead,
                   // next to the "Use this" action.
                   counterText: '',
