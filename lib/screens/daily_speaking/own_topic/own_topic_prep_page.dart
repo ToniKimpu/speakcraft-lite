@@ -138,14 +138,18 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                       color: colorScheme.primary, size: 20),
                   // Clear-all button, shown only once there's text to clear.
                   // (_canContinue tracks empty/non-empty, so it toggles here.)
+                  // Wrapped as a plain tappable Icon — NOT a default IconButton —
+                  // so its 48px tap target doesn't grow the field's height.
                   suffixIcon: _canContinue
-                      ? IconButton(
-                          icon: const Icon(Icons.cancel, size: 20),
-                          color: colorScheme.onSurfaceVariant,
-                          splashRadius: 20,
-                          onPressed: _controller.clear,
+                      ? GestureDetector(
+                          behavior: HitTestBehavior.opaque,
+                          onTap: _controller.clear,
+                          child: Icon(Icons.cancel,
+                              size: 20, color: colorScheme.onSurfaceVariant),
                         )
                       : null,
+                  suffixIconConstraints: const BoxConstraints(
+                      minWidth: 44, minHeight: 0, maxHeight: 24),
                   // Built-in counter hidden — rendered below the field instead,
                   // next to the "Use this" action.
                   counterText: '',
