@@ -1824,6 +1824,76 @@ class AppLocalizations {
     return Intl.message('Example', name: 'txtDsExample', desc: '', args: []);
   }
 
+  /// `Examples`
+  String get txtDsExamples {
+    return Intl.message('Examples', name: 'txtDsExamples', desc: '', args: []);
+  }
+
+  /// `Tap a phrase to see what it means and how to use it.`
+  String get txtDsTapPhraseHint {
+    return Intl.message(
+      'Tap a phrase to see what it means and how to use it.',
+      name: 'txtDsTapPhraseHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Excellent — you sound really fluent!`
+  String get txtDsScoreCheerHigh {
+    return Intl.message(
+      'Excellent — you sound really fluent!',
+      name: 'txtDsScoreCheerHigh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good effort — a few tweaks and you'll shine.`
+  String get txtDsScoreCheerMid {
+    return Intl.message(
+      'Good effort — a few tweaks and you\'ll shine.',
+      name: 'txtDsScoreCheerMid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nice start — keep practicing, you've got this!`
+  String get txtDsScoreCheerLow {
+    return Intl.message(
+      'Nice start — keep practicing, you\'ve got this!',
+      name: 'txtDsScoreCheerLow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show all {count}`
+  String txtDsShowAll(Object count) {
+    return Intl.message(
+      'Show all $count',
+      name: 'txtDsShowAll',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Show less`
+  String get txtDsShowLess {
+    return Intl.message('Show less', name: 'txtDsShowLess', desc: '', args: []);
+  }
+
+  /// `Quick picks`
+  String get txtDsQuickPicks {
+    return Intl.message(
+      'Quick picks',
+      name: 'txtDsQuickPicks',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Try to use`
   String get txtDsTryToUse {
     return Intl.message(
@@ -2589,11 +2659,21 @@ class AppLocalizations {
     );
   }
 
-  /// `Upload a clip of you speaking`
-  String get txtDsImportAudioDesc {
+  /// `Import a recording instead`
+  String get txtDsImportInstead {
     return Intl.message(
-      'Upload a clip of you speaking',
-      name: 'txtDsImportAudioDesc',
+      'Import a recording instead',
+      name: 'txtDsImportInstead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use this recording`
+  String get txtDsImportUseRecording {
+    return Intl.message(
+      'Use this recording',
+      name: 'txtDsImportUseRecording',
       desc: '',
       args: [],
     );

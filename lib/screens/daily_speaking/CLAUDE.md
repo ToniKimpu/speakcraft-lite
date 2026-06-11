@@ -103,6 +103,21 @@ submit + spinner + success navigation.
 - The stub (`daily_speaking_service.dart#_applyRequestedSections`) blanks any
   field whose section wasn't requested, mirroring what the real edge function
   must do. The edge function MUST read `requested_sections` and emit only those.
+  - **Collocations + idioms share one `phrases` list** (`PhraseSuggestion`,
+    `kind` = collocation|idiom). `_applyRequestedSections` filters that one list
+    by `kind` so the two menu toggles stay independent. Each `PhraseSuggestion`
+    carries `meaning_mm`/`meaning_en` + `examples[{en,mm}]` so the result-page
+    chips are **tap-to-learn** (bottom sheet with meaning + example sentences) —
+    a learner who doesn't know "watch the sunrise" can tap to find out. The edge
+    function must emit this richer shape (the old bare-string `collocations` +
+    meaning-only `idioms` were replaced; `IdiomSuggestion` is gone).
+- **"Better word choices" (`vocab_upgrades`) renders on the result page whenever
+  non-empty, regardless of schema version.** It's a vocabulary enrichment the
+  learner opts into (sibling of phrases), NOT a transcript error category — so it
+  is NOT gated behind `showInlineLists` like grammar fixes / interference are.
+  (Under v2 the same `vocab` segments are *also* highlighted inline on the Review
+  screen; that's a second view, not a replacement. Earlier the inline list was
+  wrongly gated and vanished under v2 — don't re-add that gate.)
 - All UI strings are **localized via `lib/l10n/intl_en.arb`** (`txtDs*` keys),
   including the choose menu, result page, version loop, and review surfaces.
   **Do not add hardcoded literals** — add a `txtDs*` key and use
@@ -153,8 +168,17 @@ per attempt; retrying earns a fresh native mirror of the improved attempt.
 > path was retired (route `dailySpeakingWritePath` + `write_path/` deleted). The
 > `DailySpeakingInputMode.text` enum value and the result page's "What you wrote"
 > branch stay only so any legacy text history row still deserializes/renders;
-> nothing creates a text session anymore. (Import-audio is the planned second
-> on-ramp — see the premium roadmap.)
+> nothing creates a text session anymore.
+>
+> **Import audio is a capture method, not an on-ramp.** Each record page
+> (`just_record`, `own_topic_record`, `suggested_topic_record`) offers an
+> "Import a recording instead" button under the mic — `widgets/import_audio_sheet.dart`
+> (`ImportInsteadButton` + `showImportAudioSheet`). It picks/validates a file
+> (format / ≤5 min / ≤25 MB) and returns a local path; the page routes into
+> choose-feedback with its **own** `onRamp` + `topic` context, just swapping in
+> the imported `audioPath`. So an imported clip on the suggested on-ramp still
+> gets the target-phrase checklist. (There is no standalone import on-ramp/route;
+> the old `dailySpeakingImportAudio` route + `import_audio/` page were removed.)
 
 ```
 [ Just talk       ]   [ Own topic ]              [ Suggested topic ]

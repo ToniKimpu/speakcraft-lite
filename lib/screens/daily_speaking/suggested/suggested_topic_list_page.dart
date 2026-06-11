@@ -94,7 +94,7 @@ class _ListScaffoldState extends State<_ListScaffold>
             indicatorWeight: 3,
             dividerColor: colorScheme.outlineVariant,
             labelColor: Colors.white,
-            unselectedLabelColor: Colors.black,
+            unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
             labelStyle: PmpTextStyles.body2Semi,
             unselectedLabelStyle: PmpTextStyles.body2Regular,
             overlayColor: WidgetStateProperty.resolveWith(

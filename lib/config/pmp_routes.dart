@@ -11,7 +11,6 @@ import 'package:speakcraft/screens/daily_speaking/feedback/feedback_result_page.
 import 'package:speakcraft/screens/daily_speaking/feedback/review_highlights_page.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/screens/daily_speaking/history/daily_speaking_history_page.dart';
-import 'package:speakcraft/screens/daily_speaking/import_audio/import_audio_page.dart';
 import 'package:speakcraft/screens/daily_speaking/just_record/just_record_page.dart';
 import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_prep_page.dart';
 import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_record_page.dart';
@@ -112,7 +111,6 @@ class PmpRoutes {
   static const dailySpeakingJustRecord = '/daily_speaking/just_record';
   static const dailySpeakingOwnTopicPrep = '/daily_speaking/own_topic/prep';
   static const dailySpeakingOwnTopicRecord = '/daily_speaking/own_topic/record';
-  static const dailySpeakingImportAudio = '/daily_speaking/import_audio';
   static const dailySpeakingSuggestedList = '/daily_speaking/suggested';
   static const dailySpeakingSuggestedPrep = '/daily_speaking/suggested/prep';
   static const dailySpeakingSuggestedRecord = '/daily_speaking/suggested/record';
@@ -366,8 +364,6 @@ class PmpRoutes {
           ),
           settings,
         );
-      case dailySpeakingImportAudio:
-        return _getRoute(const ImportAudioPage(), settings);
       case dailySpeakingSuggestedList:
         return _getRoute(const SuggestedTopicListPage(), settings);
       case dailySpeakingSuggestedPrep:

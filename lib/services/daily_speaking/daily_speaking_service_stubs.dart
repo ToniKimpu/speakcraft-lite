@@ -66,19 +66,52 @@ class DailySpeakingServiceStubs {
           reasonMm: 'ပိုသဘာဝကျတဲ့ collocation ဖြစ်ပါတယ်။',
         ),
       ],
-      collocations: [
-        'grab some snacks',
-        'browse around',
-        'spend time with family',
-      ],
-      idioms: [
-        IdiomSuggestion(
-          expression: 'kill time',
-          meaningMm: 'အချိန်ဖြုန်းရင်း စောင့်နေတာ',
+      phrases: [
+        PhraseSuggestion(
+          phrase: 'grab some snacks',
+          meaningMm: 'စားစရာ အမြန်အလွယ် ဝယ်ယူတာ။',
+          meaningEn: 'to quickly get some food to eat',
+          examples: [
+            PhraseExample(
+              en: "Let's grab some snacks before the movie.",
+              mm: 'ရုပ်ရှင်မကြည့်ခင် စားစရာလေး ဝယ်ရအောင်။',
+            ),
+          ],
         ),
-        IdiomSuggestion(
-          expression: 'now and then',
-          meaningMm: 'ရံဖန်ရံခါ',
+        PhraseSuggestion(
+          phrase: 'spend time with family',
+          meaningMm: 'မိသားစုနဲ့ အတူ အချိန်ဖြုန်းတာ။',
+          meaningEn: 'to be together with your family',
+          examples: [
+            PhraseExample(
+              en: 'On weekends I spend time with my family.',
+              mm: 'စနေ၊ တနင်္ဂနွေဆို မိသားစုနဲ့ အချိန်ကုန်တယ်။',
+            ),
+          ],
+        ),
+        PhraseSuggestion(
+          phrase: 'kill time',
+          kind: PhraseKind.idiom,
+          meaningMm: 'အချိန်ဖြုန်းရင်း စောင့်နေတာ။',
+          meaningEn: 'to do something while waiting, to pass the time',
+          examples: [
+            PhraseExample(
+              en: 'We killed time at the mall before the bus came.',
+              mm: 'ဘတ်စ်ကားမလာခင် ကုန်တိုက်မှာ အချိန်ဖြုန်းနေခဲ့တယ်။',
+            ),
+          ],
+        ),
+        PhraseSuggestion(
+          phrase: 'now and then',
+          kind: PhraseKind.idiom,
+          meaningMm: 'ရံဖန်ရံခါ။',
+          meaningEn: 'sometimes, but not often',
+          examples: [
+            PhraseExample(
+              en: 'Now and then we eat out.',
+              mm: 'ရံဖန်ရံခါ အပြင်မှာ စားကြတယ်။',
+            ),
+          ],
         ),
       ],
       sentenceRewrites: [
@@ -170,14 +203,40 @@ class DailySpeakingServiceStubs {
           reasonMm: 'အလုပ်ခွင်အကြောင်းဆို "supportive" က ပိုသင့်တော်ပါတယ်။',
         ),
       ],
-      collocations: [
-        'make a mistake',
-        'get along with colleagues',
-      ],
-      idioms: [
-        IdiomSuggestion(
-          expression: 'have my back',
-          meaningMm: 'ကူညီထောက်ပံ့ပေးတယ်',
+      phrases: [
+        PhraseSuggestion(
+          phrase: 'make a mistake',
+          meaningMm: 'အမှားတစ်ခု လုပ်မိတာ။',
+          meaningEn: 'to do something wrong',
+          examples: [
+            PhraseExample(
+              en: "Everyone makes a mistake sometimes.",
+              mm: 'လူတိုင်း တစ်ခါတစ်လေ အမှားလုပ်မိတတ်တယ်။',
+            ),
+          ],
+        ),
+        PhraseSuggestion(
+          phrase: 'get along with colleagues',
+          meaningMm: 'လုပ်ဖော်ကိုင်ဖက်တွေနဲ့ သင့်မြတ်တာ။',
+          meaningEn: 'to have a friendly relationship with coworkers',
+          examples: [
+            PhraseExample(
+              en: 'I get along well with my colleagues.',
+              mm: 'လုပ်ဖော်ကိုင်ဖက်တွေနဲ့ အဆင်ပြေပြေ ရှိတယ်။',
+            ),
+          ],
+        ),
+        PhraseSuggestion(
+          phrase: 'have my back',
+          kind: PhraseKind.idiom,
+          meaningMm: 'ကူညီထောက်ပံ့ပေးတယ်။',
+          meaningEn: 'to support and protect someone',
+          examples: [
+            PhraseExample(
+              en: 'My team always has my back.',
+              mm: 'ကျွန်တော့်အဖွဲ့က အမြဲ ကျွန်တော့်ကို ထောက်ပံ့ပေးတယ်။',
+            ),
+          ],
         ),
       ],
       sentenceRewrites: [
@@ -252,13 +311,29 @@ class DailySpeakingServiceStubs {
           reasonMm: 'ပိုသဘာဝကျတဲ့ အသုံးအနှုန်းပါ။',
         ),
       ],
-      collocations: [
-        'a close-knit family',
-      ],
-      idioms: [
-        IdiomSuggestion(
-          expression: 'under one roof',
-          meaningMm: 'အိမ်တစ်အိမ်တည်းမှာ အတူနေတယ်',
+      phrases: [
+        PhraseSuggestion(
+          phrase: 'a close-knit family',
+          meaningMm: 'အချင်းချင်း အရမ်းရင်းနှီးတဲ့ မိသားစု။',
+          meaningEn: 'a family whose members are very close',
+          examples: [
+            PhraseExample(
+              en: 'We are a close-knit family.',
+              mm: 'ကျွန်တော်တို့က ရင်းနှီးတဲ့ မိသားစုပါ။',
+            ),
+          ],
+        ),
+        PhraseSuggestion(
+          phrase: 'under one roof',
+          kind: PhraseKind.idiom,
+          meaningMm: 'အိမ်တစ်အိမ်တည်းမှာ အတူနေတယ်။',
+          meaningEn: 'living together in the same house',
+          examples: [
+            PhraseExample(
+              en: 'Three generations live under one roof.',
+              mm: 'မျိုးဆက်သုံးဆက် အိမ်တစ်အိမ်တည်းမှာ အတူနေကြတယ်။',
+            ),
+          ],
         ),
       ],
       sentenceRewrites: [

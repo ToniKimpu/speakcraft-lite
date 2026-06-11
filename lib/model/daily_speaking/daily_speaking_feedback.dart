@@ -68,8 +68,13 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
     List<FeedbackFix> interferenceNotes,
     @JsonKey(name: 'vocab_upgrades') @Default(<VocabUpgrade>[])
     List<VocabUpgrade> vocabUpgrades,
-    @Default(<String>[]) List<String> collocations,
-    @Default(<IdiomSuggestion>[]) List<IdiomSuggestion> idioms,
+    /// Natural phrases (collocations + idioms) the learner could pick up —
+    /// suggestions seeded by the topic, NOT pulled from what they said. Each
+    /// carries a Burmese (and optional English) meaning plus example sentences,
+    /// so a learner who doesn't know the phrase can tap to learn how to use it.
+    /// The `kind` discriminator lets the choose-feedback `collocations` /
+    /// `idioms` toggles filter independently.
+    @Default(<PhraseSuggestion>[]) List<PhraseSuggestion> phrases,
     @JsonKey(name: 'sentence_rewrites') @Default(<SentenceRewrite>[])
     List<SentenceRewrite> sentenceRewrites,
     @JsonKey(name: 'filler_words') @Default(<FillerWord>[])
@@ -249,17 +254,46 @@ class VocabUpgrade with _$VocabUpgrade {
       _$VocabUpgradeFromJson(json);
 }
 
-/// A natural idiom / phrasal verb the learner could have used, with its Burmese
-/// meaning. Used by the `idioms` section.
-@freezed
-class IdiomSuggestion with _$IdiomSuggestion {
-  const factory IdiomSuggestion({
-    required String expression,
-    @JsonKey(name: 'meaning_mm') @Default('') String meaningMm,
-  }) = _IdiomSuggestion;
+/// Whether a [PhraseSuggestion] is a collocation (natural word pairing) or an
+/// idiom / fixed expression. Drives the chip icon and the `collocations` /
+/// `idioms` request-section filtering.
+enum PhraseKind {
+  @JsonValue('collocation')
+  collocation,
+  @JsonValue('idiom')
+  idiom,
+}
 
-  factory IdiomSuggestion.fromJson(Map<String, dynamic> json) =>
-      _$IdiomSuggestionFromJson(json);
+/// One example sentence for a [PhraseSuggestion], English with an optional
+/// Burmese translation so the learner sees the phrase used in context.
+@freezed
+class PhraseExample with _$PhraseExample {
+  const factory PhraseExample({
+    required String en,
+    @JsonKey(name: 'mm') @Default('') String mm,
+  }) = _PhraseExample;
+
+  factory PhraseExample.fromJson(Map<String, dynamic> json) =>
+      _$PhraseExampleFromJson(json);
+}
+
+/// A natural phrase (collocation or idiom) the learner could pick up, with a
+/// Burmese (and optional English) meaning and example sentences. Replaces the
+/// old bare-string `collocations` + meaning-only `IdiomSuggestion` so each chip
+/// can be tapped to reveal what it means and how to use it. Used by the
+/// `collocations` / `idioms` sections (filtered by [kind]).
+@freezed
+class PhraseSuggestion with _$PhraseSuggestion {
+  const factory PhraseSuggestion({
+    required String phrase,
+    @Default(PhraseKind.collocation) PhraseKind kind,
+    @JsonKey(name: 'meaning_mm') @Default('') String meaningMm,
+    @JsonKey(name: 'meaning_en') @Default('') String meaningEn,
+    @Default(<PhraseExample>[]) List<PhraseExample> examples,
+  }) = _PhraseSuggestion;
+
+  factory PhraseSuggestion.fromJson(Map<String, dynamic> json) =>
+      _$PhraseSuggestionFromJson(json);
 }
 
 /// One of the learner's sentences rewritten to sound native. Used by the

@@ -47,7 +47,9 @@ const String _kSampleFiveMinJson = r'''
       "native": "My hometown is a small city in the middle of Myanmar.",
       "changed": false,
       "segments": [
-        { "text": "My hometown is a small city in the middle of Myanmar." }
+        { "text": "My hometown is a " },
+        { "text": "small city", "type": "vocab", "correction": "small town", "reason_mm": "‘small town’ က ပိုသဘာဝကျတဲ့ အသုံးအနှုန်းပါ။" },
+        { "text": " in the middle of Myanmar." }
       ]
     },
     {
@@ -139,7 +141,9 @@ const String _kSampleFiveMinJson = r'''
         { "text": "wake", "type": "grammar", "correction": "woke", "reason_mm": "အတိတ်ဖြစ်လို့ ‘woke’။" },
         { "text": " up " },
         { "text": "early morning", "type": "grammar", "correction": "early in the morning", "reason_mm": "‘in the morning’ လို့ preposition ထည့်ပါ။" },
-        { "text": " to see the sunrise." }
+        { "text": " to " },
+        { "text": "see", "type": "vocab", "correction": "watch", "reason_mm": "‘watch the sunrise’ က ပိုသဘာဝကျတဲ့ collocation ပါ။" },
+        { "text": " the sunrise." }
       ]
     },
     {
@@ -147,7 +151,9 @@ const String _kSampleFiveMinJson = r'''
       "native": "The view was very beautiful and I felt so happy.",
       "changed": true,
       "segments": [
-        { "text": "The view was very beautiful and I " },
+        { "text": "The view was very " },
+        { "text": "beautiful", "type": "vocab", "correction": "stunning", "reason_mm": "‘stunning’ က ပိုပြင်းထန်တဲ့ အလှအပကို ဖော်ပြတယ်။" },
+        { "text": " and I " },
         { "text": "feel", "type": "grammar", "correction": "felt", "reason_mm": "အတိတ်ဖြစ်လို့ ‘felt’။" },
         { "text": " so happy." }
       ]
@@ -173,7 +179,9 @@ const String _kSampleFiveMinJson = r'''
       "segments": [
         { "text": "I " },
         { "text": "take", "type": "grammar", "correction": "took", "reason_mm": "အတိတ်ဖြစ်လို့ ‘took’။" },
-        { "text": " many photos " },
+        { "text": " many " },
+        { "text": "photos", "type": "vocab", "correction": "snapshots", "reason_mm": "‘snapshots’ က ပေါ့ပါးတဲ့ မှတ်တမ်းဓာတ်ပုံကို ဆိုလိုတယ်။" },
+        { "text": " " },
         { "text": "for remember", "type": "interference", "correction": "to remember", "reason_mm": "ရည်ရွယ်ချက်ပြရင် ‘to + verb’ သုံးပါ၊ ‘for’ မဟုတ်ပါ။" },
         { "text": " this trip." }
       ]
@@ -183,7 +191,9 @@ const String _kSampleFiveMinJson = r'''
       "native": "The food in Bagan is very delicious, especially the tea leaf salad.",
       "changed": true,
       "segments": [
-        { "text": "The food in Bagan is very delicious " },
+        { "text": "The food in Bagan is very " },
+        { "text": "delicious", "type": "vocab", "correction": "mouthwatering", "reason_mm": "‘mouthwatering’ က ပိုသက်ဝင်လှုပ်ရှားတဲ့ အရသာကို ဖော်ပြတယ်။" },
+        { "text": " " },
         { "text": "specially", "type": "vocab", "correction": "especially", "reason_mm": "‘especially’ (အထူးသဖြင့်) လို့ သုံးတာ ပိုမှန်ပါတယ်။" },
         { "text": " the tea leaf salad." }
       ]
@@ -193,7 +203,9 @@ const String _kSampleFiveMinJson = r'''
       "native": "I think Myanmar food is the best food in the world.",
       "changed": false,
       "segments": [
-        { "text": "I think Myanmar food is the best food in the world." }
+        { "text": "I think Myanmar food is the " },
+        { "text": "best", "type": "vocab", "correction": "finest", "reason_mm": "‘finest’ က ပိုဖော်ရွေ ယဉ်ကျေးတဲ့ အသုံးအနှုန်းပါ။" },
+        { "text": " food in the world." }
       ]
     },
     {
@@ -213,7 +225,9 @@ const String _kSampleFiveMinJson = r'''
       "native": "I miss Bagan very much and I want to go again.",
       "changed": false,
       "segments": [
-        { "text": "I miss Bagan very much and I want to go again." }
+        { "text": "I miss Bagan very much and I want to " },
+        { "text": "go again", "type": "vocab", "correction": "return", "reason_mm": "‘return’ တစ်လုံးတည်းနဲ့ ပိုတိကျ သပ်ရပ်တယ်။" },
+        { "text": "." }
       ]
     },
     {
@@ -231,7 +245,9 @@ const String _kSampleFiveMinJson = r'''
       "native": "I want to improve my English so I can talk with foreigners.",
       "changed": true,
       "segments": [
-        { "text": "I want to improve my English so I can talk with " },
+        { "text": "I want to improve my English so I can " },
+        { "text": "talk", "type": "vocab", "correction": "chat", "reason_mm": "‘chat’ က ပိုပေါ့ပါး ရင်းနှီးတဲ့ အပြောအဆိုပါ။" },
+        { "text": " with " },
         { "text": "foreigner", "type": "grammar", "correction": "foreigners", "reason_mm": "လူအများကို ဆိုလို့ ‘foreigners’။" },
         { "text": "." }
       ]
@@ -243,7 +259,9 @@ const String _kSampleFiveMinJson = r'''
       "segments": [
         { "text": "My family " },
         { "text": "have", "type": "grammar", "correction": "has", "reason_mm": "‘family’ singular ဖြစ်လို့ ‘has’။" },
-        { "text": " a small shop in the market." }
+        { "text": " a small " },
+        { "text": "shop", "type": "vocab", "correction": "store", "reason_mm": "‘store’ ဆိုလည်း ရပါတယ် (American English မှာ ပိုသုံးတယ်)။" },
+        { "text": " in the market." }
       ]
     },
     {
@@ -303,18 +321,97 @@ const String _kSampleFiveMinJson = r'''
     "Final consonants get dropped — 'trip' and 'shop' lose their endings.",
     "Word stress drifts on longer words like 'especially' and 'delicious'."
   ],
-  "collocations": [
-    "take a trip (rather than 'make a trip')",
-    "watch the sunrise",
-    "famous for its temples",
-    "grow up in a small town",
-    "a close-knit family",
-    "brush up on my English"
-  ],
-  "idioms": [
-    { "expression": "off the beaten track", "meaning_mm": "ခရီးသွားများ သိပ်မရောက်တတ်တဲ့ နေရာ။" },
-    { "expression": "home sweet home", "meaning_mm": "ကိုယ့်အိမ်လောက် သက်တောင့်သက်သာရှိတဲ့ နေရာ မရှိဘူး။" },
-    { "expression": "the trip of a lifetime", "meaning_mm": "တစ်သက်တာမှာ တစ်ကြိမ်သာ ကြုံရတဲ့ အထူးခရီး။" }
+  "phrases": [
+    {
+      "phrase": "take a trip",
+      "kind": "collocation",
+      "meaning_en": "to go on a journey somewhere (English says 'take', not 'make', a trip)",
+      "meaning_mm": "ခရီးတစ်ခု သွားတာ။ အင်္ဂလိပ်လို ‘make a trip’ မဟုတ်ဘဲ ‘take a trip’ လို့ သုံးပါတယ်။",
+      "examples": [
+        { "en": "We took a trip to Bagan last year.", "mm": "မနှစ်က ပုဂံကို ခရီးသွားခဲ့တယ်။" },
+        { "en": "Let's take a short trip this weekend.", "mm": "ဒီစနေ၊ တနင်္ဂနွေမှာ ခရီးတိုလေး သွားရအောင်။" }
+      ]
+    },
+    {
+      "phrase": "watch the sunrise",
+      "kind": "collocation",
+      "meaning_en": "to look at the sun coming up in the morning",
+      "meaning_mm": "မနက်ခင်း နေထွက်တာကို ကြည့်တာ။",
+      "examples": [
+        { "en": "We woke up early to watch the sunrise.", "mm": "နေထွက်တာ ကြည့်ဖို့ စောစော နိုးခဲ့တယ်။" },
+        { "en": "Watching the sunrise over the temples was beautiful.", "mm": "ဘုရားတွေပေါ်က နေထွက်တာ ကြည့်ရတာ အရမ်းလှတယ်။" }
+      ]
+    },
+    {
+      "phrase": "famous for its temples",
+      "kind": "collocation",
+      "meaning_en": "well known because of its temples ('famous for' + the reason)",
+      "meaning_mm": "ဘုရားတွေကြောင့် နာမည်ကြီးတာ။ ‘famous for’ နောက်မှာ အကြောင်းရင်း ထည့်ပါတယ်။",
+      "examples": [
+        { "en": "Bagan is famous for its temples.", "mm": "ပုဂံဟာ ဘုရားတွေကြောင့် နာမည်ကြီးတယ်။" },
+        { "en": "The city is famous for its street food.", "mm": "ဒီမြို့ဟာ လမ်းဘေးအစားအစာတွေကြောင့် နာမည်ကြီးတယ်။" }
+      ]
+    },
+    {
+      "phrase": "grow up in a small town",
+      "kind": "collocation",
+      "meaning_en": "to spend your childhood in a small town",
+      "meaning_mm": "ငယ်ဘဝကို မြို့ငယ်လေးမှာ ဖြတ်သန်းကြီးပြင်းတာ။",
+      "examples": [
+        { "en": "I grew up in a small town near the river.", "mm": "မြစ်အနီးက မြို့ငယ်လေးမှာ ကြီးပြင်းခဲ့တယ်။" },
+        { "en": "Kids who grow up in a small town know everyone.", "mm": "မြို့ငယ်လေးမှာ ကြီးပြင်းတဲ့ ကလေးတွေက လူတိုင်းကို သိကြတယ်။" }
+      ]
+    },
+    {
+      "phrase": "a close-knit family",
+      "kind": "collocation",
+      "meaning_en": "a family whose members are very close and support each other",
+      "meaning_mm": "အချင်းချင်း အရမ်းရင်းနှီး၊ တစ်ယောက်ကို တစ်ယောက် ထောက်ပံ့ကြတဲ့ မိသားစု။",
+      "examples": [
+        { "en": "We are a close-knit family and eat dinner together.", "mm": "ကျွန်တော်တို့က ရင်းနှီးတဲ့ မိသားစုဖြစ်ပြီး ညစာ အတူစားကြတယ်။" },
+        { "en": "She comes from a close-knit family.", "mm": "သူမက ရင်းနှီးတဲ့ မိသားစုက လာတာ။" }
+      ]
+    },
+    {
+      "phrase": "brush up on my English",
+      "kind": "collocation",
+      "meaning_en": "to practice and improve a skill you already have a little of",
+      "meaning_mm": "အရင်က နည်းနည်းတတ်ထားတဲ့ ကျွမ်းကျင်မှုကို ပြန်လေ့ကျင့် တိုးတက်အောင်လုပ်တာ။",
+      "examples": [
+        { "en": "I want to brush up on my English before the trip.", "mm": "ခရီးမသွားခင် အင်္ဂလိပ်စာ ပြန်လေ့ကျင့်ချင်တယ်။" },
+        { "en": "He brushed up on his Japanese for the new job.", "mm": "အလုပ်အသစ်အတွက် ဂျပန်စာ ပြန်လေ့ကျင့်ခဲ့တယ်။" }
+      ]
+    },
+    {
+      "phrase": "off the beaten track",
+      "kind": "idiom",
+      "meaning_en": "a place far away from where most tourists go",
+      "meaning_mm": "ခရီးသွားများ သိပ်မရောက်တတ်တဲ့ နေရာ။",
+      "examples": [
+        { "en": "We found a village off the beaten track.", "mm": "ခရီးသွားများ မရောက်တတ်တဲ့ ရွာလေးတစ်ရွာ တွေ့ခဲ့တယ်။" },
+        { "en": "If you go off the beaten track, you see real local life.", "mm": "ခရီးသွားလမ်းကြောင်းက သွေဖည်ကြည့်ရင် တကယ့်ဒေသခံဘဝကို မြင်ရတယ်။" }
+      ]
+    },
+    {
+      "phrase": "home sweet home",
+      "kind": "idiom",
+      "meaning_en": "said happily when you arrive back at your own home",
+      "meaning_mm": "ကိုယ့်အိမ်ပြန်ရောက်တဲ့အခါ ပျော်ရွှင်စွာ ပြောလေ့ရှိတဲ့ စကား။",
+      "examples": [
+        { "en": "After the long trip, it was home sweet home.", "mm": "ခရီးရှည်ပြီးတော့ ကိုယ့်အိမ်ပြန်ရောက်တာ အေးချမ်းလိုက်တာ။" },
+        { "en": "I opened the door and thought, home sweet home.", "mm": "တံခါးဖွင့်လိုက်ပြီး ‘ကိုယ့်အိမ်လို့ မရှိဘူး’ လို့ တွေးမိတယ်။" }
+      ]
+    },
+    {
+      "phrase": "the trip of a lifetime",
+      "kind": "idiom",
+      "meaning_en": "an amazing trip you may only get to take once in your life",
+      "meaning_mm": "တစ်သက်တာမှာ တစ်ကြိမ်သာ ကြုံရတတ်တဲ့ အထူးခရီး။",
+      "examples": [
+        { "en": "Visiting Bagan was the trip of a lifetime.", "mm": "ပုဂံ သွားရတာ တစ်သက်တာ တစ်ကြိမ်တည်း ခရီးပါပဲ။" },
+        { "en": "They saved for years for the trip of a lifetime.", "mm": "တစ်သက်တာ ခရီးကြီးအတွက် နှစ်ပေါင်းများစွာ ငွေစုခဲ့ကြတယ်။" }
+      ]
+    }
   ],
   "target_phrase_results": [],
   "explanation_mm": "ငါးမိနစ်လုံး ရပ်နားမသွားဘဲ ဆက်ပြောနိုင်တာ အရမ်းကောင်းပါတယ်။ အကြောင်းအရာကိုလည်း ဇာတ်ဇတ်နဲ့ စီစဉ်ထားတာ ကောင်းပါတယ်။ အဓိက ပြင်ရမှာက အတိတ်ကို ပြောတဲ့အခါ ကြိယာကို past tense (made, woke, took, felt) ပြောင်းဖို့နဲ့ present simple မှာ ကတ္တားနဲ့ ကြိယာ သဟဇာတဖြစ်အောင် (has, sells, helps) လုပ်ဖို့ပါ။ ထို့အပြင် ရေတွက်လို့ရတဲ့ နာမ်ရှေ့မှာ ‘a/an’ ထည့်ဖို့နဲ့ မြန်မာလို တိုက်ရိုက်ပြန်ဆိုတဲ့ ‘very like’, ‘for remember’, ‘back to home’ တို့ကို ရှောင်ဖို့ပါ။ ဒီအချက်တွေကို တစ်ဆင့်ချင်း ပြင်သွားရင် သိသိသာသာ တိုးတက်လာပါလိမ့်မယ်။",

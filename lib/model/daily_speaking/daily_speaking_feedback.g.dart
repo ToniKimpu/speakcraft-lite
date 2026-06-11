@@ -48,14 +48,10 @@ _$DailySpeakingFeedbackImpl _$$DailySpeakingFeedbackImplFromJson(
               ?.map((e) => VocabUpgrade.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <VocabUpgrade>[],
-      collocations: (json['collocations'] as List<dynamic>?)
-              ?.map((e) => e as String)
+      phrases: (json['phrases'] as List<dynamic>?)
+              ?.map((e) => PhraseSuggestion.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <String>[],
-      idioms: (json['idioms'] as List<dynamic>?)
-              ?.map((e) => IdiomSuggestion.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const <IdiomSuggestion>[],
+          const <PhraseSuggestion>[],
       sentenceRewrites: (json['sentence_rewrites'] as List<dynamic>?)
               ?.map((e) => SentenceRewrite.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -93,8 +89,7 @@ Map<String, dynamic> _$$DailySpeakingFeedbackImplToJson(
       'grammar_patterns': instance.grammarPatterns,
       'interference_notes': instance.interferenceNotes,
       'vocab_upgrades': instance.vocabUpgrades,
-      'collocations': instance.collocations,
-      'idioms': instance.idioms,
+      'phrases': instance.phrases,
       'sentence_rewrites': instance.sentenceRewrites,
       'filler_words': instance.fillerWords,
       'sub_scores': instance.subScores,
@@ -187,19 +182,46 @@ Map<String, dynamic> _$$VocabUpgradeImplToJson(_$VocabUpgradeImpl instance) =>
       'reason_mm': instance.reasonMm,
     };
 
-_$IdiomSuggestionImpl _$$IdiomSuggestionImplFromJson(
-        Map<String, dynamic> json) =>
-    _$IdiomSuggestionImpl(
-      expression: json['expression'] as String,
-      meaningMm: json['meaning_mm'] as String? ?? '',
+_$PhraseExampleImpl _$$PhraseExampleImplFromJson(Map<String, dynamic> json) =>
+    _$PhraseExampleImpl(
+      en: json['en'] as String,
+      mm: json['mm'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$IdiomSuggestionImplToJson(
-        _$IdiomSuggestionImpl instance) =>
+Map<String, dynamic> _$$PhraseExampleImplToJson(_$PhraseExampleImpl instance) =>
     <String, dynamic>{
-      'expression': instance.expression,
-      'meaning_mm': instance.meaningMm,
+      'en': instance.en,
+      'mm': instance.mm,
     };
+
+_$PhraseSuggestionImpl _$$PhraseSuggestionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PhraseSuggestionImpl(
+      phrase: json['phrase'] as String,
+      kind: $enumDecodeNullable(_$PhraseKindEnumMap, json['kind']) ??
+          PhraseKind.collocation,
+      meaningMm: json['meaning_mm'] as String? ?? '',
+      meaningEn: json['meaning_en'] as String? ?? '',
+      examples: (json['examples'] as List<dynamic>?)
+              ?.map((e) => PhraseExample.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <PhraseExample>[],
+    );
+
+Map<String, dynamic> _$$PhraseSuggestionImplToJson(
+        _$PhraseSuggestionImpl instance) =>
+    <String, dynamic>{
+      'phrase': instance.phrase,
+      'kind': _$PhraseKindEnumMap[instance.kind]!,
+      'meaning_mm': instance.meaningMm,
+      'meaning_en': instance.meaningEn,
+      'examples': instance.examples,
+    };
+
+const _$PhraseKindEnumMap = {
+  PhraseKind.collocation: 'collocation',
+  PhraseKind.idiom: 'idiom',
+};
 
 _$SentenceRewriteImpl _$$SentenceRewriteImplFromJson(
         Map<String, dynamic> json) =>

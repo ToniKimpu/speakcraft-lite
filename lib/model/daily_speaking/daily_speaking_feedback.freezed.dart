@@ -58,8 +58,14 @@ mixin _$DailySpeakingFeedback {
   List<FeedbackFix> get interferenceNotes => throw _privateConstructorUsedError;
   @JsonKey(name: 'vocab_upgrades')
   List<VocabUpgrade> get vocabUpgrades => throw _privateConstructorUsedError;
-  List<String> get collocations => throw _privateConstructorUsedError;
-  List<IdiomSuggestion> get idioms => throw _privateConstructorUsedError;
+
+  /// Natural phrases (collocations + idioms) the learner could pick up —
+  /// suggestions seeded by the topic, NOT pulled from what they said. Each
+  /// carries a Burmese (and optional English) meaning plus example sentences,
+  /// so a learner who doesn't know the phrase can tap to learn how to use it.
+  /// The `kind` discriminator lets the choose-feedback `collocations` /
+  /// `idioms` toggles filter independently.
+  List<PhraseSuggestion> get phrases => throw _privateConstructorUsedError;
   @JsonKey(name: 'sentence_rewrites')
   List<SentenceRewrite> get sentenceRewrites =>
       throw _privateConstructorUsedError;
@@ -109,8 +115,7 @@ abstract class $DailySpeakingFeedbackCopyWith<$Res> {
       @JsonKey(name: 'grammar_patterns') List<String> grammarPatterns,
       @JsonKey(name: 'interference_notes') List<FeedbackFix> interferenceNotes,
       @JsonKey(name: 'vocab_upgrades') List<VocabUpgrade> vocabUpgrades,
-      List<String> collocations,
-      List<IdiomSuggestion> idioms,
+      List<PhraseSuggestion> phrases,
       @JsonKey(name: 'sentence_rewrites')
       List<SentenceRewrite> sentenceRewrites,
       @JsonKey(name: 'filler_words') List<FillerWord> fillerWords,
@@ -153,8 +158,7 @@ class _$DailySpeakingFeedbackCopyWithImpl<$Res,
     Object? grammarPatterns = null,
     Object? interferenceNotes = null,
     Object? vocabUpgrades = null,
-    Object? collocations = null,
-    Object? idioms = null,
+    Object? phrases = null,
     Object? sentenceRewrites = null,
     Object? fillerWords = null,
     Object? subScores = freezed,
@@ -226,14 +230,10 @@ class _$DailySpeakingFeedbackCopyWithImpl<$Res,
           ? _value.vocabUpgrades
           : vocabUpgrades // ignore: cast_nullable_to_non_nullable
               as List<VocabUpgrade>,
-      collocations: null == collocations
-          ? _value.collocations
-          : collocations // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      idioms: null == idioms
-          ? _value.idioms
-          : idioms // ignore: cast_nullable_to_non_nullable
-              as List<IdiomSuggestion>,
+      phrases: null == phrases
+          ? _value.phrases
+          : phrases // ignore: cast_nullable_to_non_nullable
+              as List<PhraseSuggestion>,
       sentenceRewrites: null == sentenceRewrites
           ? _value.sentenceRewrites
           : sentenceRewrites // ignore: cast_nullable_to_non_nullable
@@ -299,8 +299,7 @@ abstract class _$$DailySpeakingFeedbackImplCopyWith<$Res>
       @JsonKey(name: 'grammar_patterns') List<String> grammarPatterns,
       @JsonKey(name: 'interference_notes') List<FeedbackFix> interferenceNotes,
       @JsonKey(name: 'vocab_upgrades') List<VocabUpgrade> vocabUpgrades,
-      List<String> collocations,
-      List<IdiomSuggestion> idioms,
+      List<PhraseSuggestion> phrases,
       @JsonKey(name: 'sentence_rewrites')
       List<SentenceRewrite> sentenceRewrites,
       @JsonKey(name: 'filler_words') List<FillerWord> fillerWords,
@@ -342,8 +341,7 @@ class __$$DailySpeakingFeedbackImplCopyWithImpl<$Res>
     Object? grammarPatterns = null,
     Object? interferenceNotes = null,
     Object? vocabUpgrades = null,
-    Object? collocations = null,
-    Object? idioms = null,
+    Object? phrases = null,
     Object? sentenceRewrites = null,
     Object? fillerWords = null,
     Object? subScores = freezed,
@@ -415,14 +413,10 @@ class __$$DailySpeakingFeedbackImplCopyWithImpl<$Res>
           ? _value._vocabUpgrades
           : vocabUpgrades // ignore: cast_nullable_to_non_nullable
               as List<VocabUpgrade>,
-      collocations: null == collocations
-          ? _value._collocations
-          : collocations // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      idioms: null == idioms
-          ? _value._idioms
-          : idioms // ignore: cast_nullable_to_non_nullable
-              as List<IdiomSuggestion>,
+      phrases: null == phrases
+          ? _value._phrases
+          : phrases // ignore: cast_nullable_to_non_nullable
+              as List<PhraseSuggestion>,
       sentenceRewrites: null == sentenceRewrites
           ? _value._sentenceRewrites
           : sentenceRewrites // ignore: cast_nullable_to_non_nullable
@@ -473,8 +467,7 @@ class _$DailySpeakingFeedbackImpl extends _DailySpeakingFeedback {
       final List<FeedbackFix> interferenceNotes = const <FeedbackFix>[],
       @JsonKey(name: 'vocab_upgrades')
       final List<VocabUpgrade> vocabUpgrades = const <VocabUpgrade>[],
-      final List<String> collocations = const <String>[],
-      final List<IdiomSuggestion> idioms = const <IdiomSuggestion>[],
+      final List<PhraseSuggestion> phrases = const <PhraseSuggestion>[],
       @JsonKey(name: 'sentence_rewrites')
       final List<SentenceRewrite> sentenceRewrites = const <SentenceRewrite>[],
       @JsonKey(name: 'filler_words')
@@ -489,8 +482,7 @@ class _$DailySpeakingFeedbackImpl extends _DailySpeakingFeedback {
         _grammarPatterns = grammarPatterns,
         _interferenceNotes = interferenceNotes,
         _vocabUpgrades = vocabUpgrades,
-        _collocations = collocations,
-        _idioms = idioms,
+        _phrases = phrases,
         _sentenceRewrites = sentenceRewrites,
         _fillerWords = fillerWords,
         _sentences = sentences,
@@ -603,22 +595,26 @@ class _$DailySpeakingFeedbackImpl extends _DailySpeakingFeedback {
     return EqualUnmodifiableListView(_vocabUpgrades);
   }
 
-  final List<String> _collocations;
-  @override
-  @JsonKey()
-  List<String> get collocations {
-    if (_collocations is EqualUnmodifiableListView) return _collocations;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_collocations);
-  }
+  /// Natural phrases (collocations + idioms) the learner could pick up —
+  /// suggestions seeded by the topic, NOT pulled from what they said. Each
+  /// carries a Burmese (and optional English) meaning plus example sentences,
+  /// so a learner who doesn't know the phrase can tap to learn how to use it.
+  /// The `kind` discriminator lets the choose-feedback `collocations` /
+  /// `idioms` toggles filter independently.
+  final List<PhraseSuggestion> _phrases;
 
-  final List<IdiomSuggestion> _idioms;
+  /// Natural phrases (collocations + idioms) the learner could pick up —
+  /// suggestions seeded by the topic, NOT pulled from what they said. Each
+  /// carries a Burmese (and optional English) meaning plus example sentences,
+  /// so a learner who doesn't know the phrase can tap to learn how to use it.
+  /// The `kind` discriminator lets the choose-feedback `collocations` /
+  /// `idioms` toggles filter independently.
   @override
   @JsonKey()
-  List<IdiomSuggestion> get idioms {
-    if (_idioms is EqualUnmodifiableListView) return _idioms;
+  List<PhraseSuggestion> get phrases {
+    if (_phrases is EqualUnmodifiableListView) return _phrases;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_idioms);
+    return EqualUnmodifiableListView(_phrases);
   }
 
   final List<SentenceRewrite> _sentenceRewrites;
@@ -665,7 +661,7 @@ class _$DailySpeakingFeedbackImpl extends _DailySpeakingFeedback {
 
   @override
   String toString() {
-    return 'DailySpeakingFeedback(score: $score, level: $level, inferredTopic: $inferredTopic, transcript: $transcript, durationSeconds: $durationSeconds, wordCount: $wordCount, speakingPaceWpm: $speakingPaceWpm, strengths: $strengths, fixes: $fixes, nativeRewrite: $nativeRewrite, pronunciationNotes: $pronunciationNotes, explanationMm: $explanationMm, targetPhraseResults: $targetPhraseResults, grammarPatterns: $grammarPatterns, interferenceNotes: $interferenceNotes, vocabUpgrades: $vocabUpgrades, collocations: $collocations, idioms: $idioms, sentenceRewrites: $sentenceRewrites, fillerWords: $fillerWords, subScores: $subScores, totalTokens: $totalTokens, sentences: $sentences)';
+    return 'DailySpeakingFeedback(score: $score, level: $level, inferredTopic: $inferredTopic, transcript: $transcript, durationSeconds: $durationSeconds, wordCount: $wordCount, speakingPaceWpm: $speakingPaceWpm, strengths: $strengths, fixes: $fixes, nativeRewrite: $nativeRewrite, pronunciationNotes: $pronunciationNotes, explanationMm: $explanationMm, targetPhraseResults: $targetPhraseResults, grammarPatterns: $grammarPatterns, interferenceNotes: $interferenceNotes, vocabUpgrades: $vocabUpgrades, phrases: $phrases, sentenceRewrites: $sentenceRewrites, fillerWords: $fillerWords, subScores: $subScores, totalTokens: $totalTokens, sentences: $sentences)';
   }
 
   @override
@@ -702,9 +698,7 @@ class _$DailySpeakingFeedbackImpl extends _DailySpeakingFeedback {
                 .equals(other._interferenceNotes, _interferenceNotes) &&
             const DeepCollectionEquality()
                 .equals(other._vocabUpgrades, _vocabUpgrades) &&
-            const DeepCollectionEquality()
-                .equals(other._collocations, _collocations) &&
-            const DeepCollectionEquality().equals(other._idioms, _idioms) &&
+            const DeepCollectionEquality().equals(other._phrases, _phrases) &&
             const DeepCollectionEquality()
                 .equals(other._sentenceRewrites, _sentenceRewrites) &&
             const DeepCollectionEquality()
@@ -737,8 +731,7 @@ class _$DailySpeakingFeedbackImpl extends _DailySpeakingFeedback {
         const DeepCollectionEquality().hash(_grammarPatterns),
         const DeepCollectionEquality().hash(_interferenceNotes),
         const DeepCollectionEquality().hash(_vocabUpgrades),
-        const DeepCollectionEquality().hash(_collocations),
-        const DeepCollectionEquality().hash(_idioms),
+        const DeepCollectionEquality().hash(_phrases),
         const DeepCollectionEquality().hash(_sentenceRewrites),
         const DeepCollectionEquality().hash(_fillerWords),
         subScores,
@@ -784,8 +777,7 @@ abstract class _DailySpeakingFeedback extends DailySpeakingFeedback {
       @JsonKey(name: 'interference_notes')
       final List<FeedbackFix> interferenceNotes,
       @JsonKey(name: 'vocab_upgrades') final List<VocabUpgrade> vocabUpgrades,
-      final List<String> collocations,
-      final List<IdiomSuggestion> idioms,
+      final List<PhraseSuggestion> phrases,
       @JsonKey(name: 'sentence_rewrites')
       final List<SentenceRewrite> sentenceRewrites,
       @JsonKey(name: 'filler_words') final List<FillerWord> fillerWords,
@@ -850,10 +842,15 @@ abstract class _DailySpeakingFeedback extends DailySpeakingFeedback {
   @override
   @JsonKey(name: 'vocab_upgrades')
   List<VocabUpgrade> get vocabUpgrades;
+
+  /// Natural phrases (collocations + idioms) the learner could pick up —
+  /// suggestions seeded by the topic, NOT pulled from what they said. Each
+  /// carries a Burmese (and optional English) meaning plus example sentences,
+  /// so a learner who doesn't know the phrase can tap to learn how to use it.
+  /// The `kind` discriminator lets the choose-feedback `collocations` /
+  /// `idioms` toggles filter independently.
   @override
-  List<String> get collocations;
-  @override
-  List<IdiomSuggestion> get idioms;
+  List<PhraseSuggestion> get phrases;
   @override
   @JsonKey(name: 'sentence_rewrites')
   List<SentenceRewrite> get sentenceRewrites;
@@ -1752,101 +1749,101 @@ abstract class _VocabUpgrade implements VocabUpgrade {
       throw _privateConstructorUsedError;
 }
 
-IdiomSuggestion _$IdiomSuggestionFromJson(Map<String, dynamic> json) {
-  return _IdiomSuggestion.fromJson(json);
+PhraseExample _$PhraseExampleFromJson(Map<String, dynamic> json) {
+  return _PhraseExample.fromJson(json);
 }
 
 /// @nodoc
-mixin _$IdiomSuggestion {
-  String get expression => throw _privateConstructorUsedError;
-  @JsonKey(name: 'meaning_mm')
-  String get meaningMm => throw _privateConstructorUsedError;
+mixin _$PhraseExample {
+  String get en => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mm')
+  String get mm => throw _privateConstructorUsedError;
 
-  /// Serializes this IdiomSuggestion to a JSON map.
+  /// Serializes this PhraseExample to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of IdiomSuggestion
+  /// Create a copy of PhraseExample
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $IdiomSuggestionCopyWith<IdiomSuggestion> get copyWith =>
+  $PhraseExampleCopyWith<PhraseExample> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $IdiomSuggestionCopyWith<$Res> {
-  factory $IdiomSuggestionCopyWith(
-          IdiomSuggestion value, $Res Function(IdiomSuggestion) then) =
-      _$IdiomSuggestionCopyWithImpl<$Res, IdiomSuggestion>;
+abstract class $PhraseExampleCopyWith<$Res> {
+  factory $PhraseExampleCopyWith(
+          PhraseExample value, $Res Function(PhraseExample) then) =
+      _$PhraseExampleCopyWithImpl<$Res, PhraseExample>;
   @useResult
-  $Res call({String expression, @JsonKey(name: 'meaning_mm') String meaningMm});
+  $Res call({String en, @JsonKey(name: 'mm') String mm});
 }
 
 /// @nodoc
-class _$IdiomSuggestionCopyWithImpl<$Res, $Val extends IdiomSuggestion>
-    implements $IdiomSuggestionCopyWith<$Res> {
-  _$IdiomSuggestionCopyWithImpl(this._value, this._then);
+class _$PhraseExampleCopyWithImpl<$Res, $Val extends PhraseExample>
+    implements $PhraseExampleCopyWith<$Res> {
+  _$PhraseExampleCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of IdiomSuggestion
+  /// Create a copy of PhraseExample
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? expression = null,
-    Object? meaningMm = null,
+    Object? en = null,
+    Object? mm = null,
   }) {
     return _then(_value.copyWith(
-      expression: null == expression
-          ? _value.expression
-          : expression // ignore: cast_nullable_to_non_nullable
+      en: null == en
+          ? _value.en
+          : en // ignore: cast_nullable_to_non_nullable
               as String,
-      meaningMm: null == meaningMm
-          ? _value.meaningMm
-          : meaningMm // ignore: cast_nullable_to_non_nullable
+      mm: null == mm
+          ? _value.mm
+          : mm // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$IdiomSuggestionImplCopyWith<$Res>
-    implements $IdiomSuggestionCopyWith<$Res> {
-  factory _$$IdiomSuggestionImplCopyWith(_$IdiomSuggestionImpl value,
-          $Res Function(_$IdiomSuggestionImpl) then) =
-      __$$IdiomSuggestionImplCopyWithImpl<$Res>;
+abstract class _$$PhraseExampleImplCopyWith<$Res>
+    implements $PhraseExampleCopyWith<$Res> {
+  factory _$$PhraseExampleImplCopyWith(
+          _$PhraseExampleImpl value, $Res Function(_$PhraseExampleImpl) then) =
+      __$$PhraseExampleImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String expression, @JsonKey(name: 'meaning_mm') String meaningMm});
+  $Res call({String en, @JsonKey(name: 'mm') String mm});
 }
 
 /// @nodoc
-class __$$IdiomSuggestionImplCopyWithImpl<$Res>
-    extends _$IdiomSuggestionCopyWithImpl<$Res, _$IdiomSuggestionImpl>
-    implements _$$IdiomSuggestionImplCopyWith<$Res> {
-  __$$IdiomSuggestionImplCopyWithImpl(
-      _$IdiomSuggestionImpl _value, $Res Function(_$IdiomSuggestionImpl) _then)
+class __$$PhraseExampleImplCopyWithImpl<$Res>
+    extends _$PhraseExampleCopyWithImpl<$Res, _$PhraseExampleImpl>
+    implements _$$PhraseExampleImplCopyWith<$Res> {
+  __$$PhraseExampleImplCopyWithImpl(
+      _$PhraseExampleImpl _value, $Res Function(_$PhraseExampleImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of IdiomSuggestion
+  /// Create a copy of PhraseExample
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? expression = null,
-    Object? meaningMm = null,
+    Object? en = null,
+    Object? mm = null,
   }) {
-    return _then(_$IdiomSuggestionImpl(
-      expression: null == expression
-          ? _value.expression
-          : expression // ignore: cast_nullable_to_non_nullable
+    return _then(_$PhraseExampleImpl(
+      en: null == en
+          ? _value.en
+          : en // ignore: cast_nullable_to_non_nullable
               as String,
-      meaningMm: null == meaningMm
-          ? _value.meaningMm
-          : meaningMm // ignore: cast_nullable_to_non_nullable
+      mm: null == mm
+          ? _value.mm
+          : mm // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -1854,77 +1851,323 @@ class __$$IdiomSuggestionImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$IdiomSuggestionImpl implements _IdiomSuggestion {
-  const _$IdiomSuggestionImpl(
-      {required this.expression,
-      @JsonKey(name: 'meaning_mm') this.meaningMm = ''});
+class _$PhraseExampleImpl implements _PhraseExample {
+  const _$PhraseExampleImpl(
+      {required this.en, @JsonKey(name: 'mm') this.mm = ''});
 
-  factory _$IdiomSuggestionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$IdiomSuggestionImplFromJson(json);
+  factory _$PhraseExampleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PhraseExampleImplFromJson(json);
 
   @override
-  final String expression;
+  final String en;
   @override
-  @JsonKey(name: 'meaning_mm')
-  final String meaningMm;
+  @JsonKey(name: 'mm')
+  final String mm;
 
   @override
   String toString() {
-    return 'IdiomSuggestion(expression: $expression, meaningMm: $meaningMm)';
+    return 'PhraseExample(en: $en, mm: $mm)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IdiomSuggestionImpl &&
-            (identical(other.expression, expression) ||
-                other.expression == expression) &&
-            (identical(other.meaningMm, meaningMm) ||
-                other.meaningMm == meaningMm));
+            other is _$PhraseExampleImpl &&
+            (identical(other.en, en) || other.en == en) &&
+            (identical(other.mm, mm) || other.mm == mm));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, expression, meaningMm);
+  int get hashCode => Object.hash(runtimeType, en, mm);
 
-  /// Create a copy of IdiomSuggestion
+  /// Create a copy of PhraseExample
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$IdiomSuggestionImplCopyWith<_$IdiomSuggestionImpl> get copyWith =>
-      __$$IdiomSuggestionImplCopyWithImpl<_$IdiomSuggestionImpl>(
-          this, _$identity);
+  _$$PhraseExampleImplCopyWith<_$PhraseExampleImpl> get copyWith =>
+      __$$PhraseExampleImplCopyWithImpl<_$PhraseExampleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$IdiomSuggestionImplToJson(
+    return _$$PhraseExampleImplToJson(
       this,
     );
   }
 }
 
-abstract class _IdiomSuggestion implements IdiomSuggestion {
-  const factory _IdiomSuggestion(
-          {required final String expression,
-          @JsonKey(name: 'meaning_mm') final String meaningMm}) =
-      _$IdiomSuggestionImpl;
+abstract class _PhraseExample implements PhraseExample {
+  const factory _PhraseExample(
+      {required final String en,
+      @JsonKey(name: 'mm') final String mm}) = _$PhraseExampleImpl;
 
-  factory _IdiomSuggestion.fromJson(Map<String, dynamic> json) =
-      _$IdiomSuggestionImpl.fromJson;
+  factory _PhraseExample.fromJson(Map<String, dynamic> json) =
+      _$PhraseExampleImpl.fromJson;
 
   @override
-  String get expression;
+  String get en;
   @override
-  @JsonKey(name: 'meaning_mm')
-  String get meaningMm;
+  @JsonKey(name: 'mm')
+  String get mm;
 
-  /// Create a copy of IdiomSuggestion
+  /// Create a copy of PhraseExample
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$IdiomSuggestionImplCopyWith<_$IdiomSuggestionImpl> get copyWith =>
+  _$$PhraseExampleImplCopyWith<_$PhraseExampleImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+PhraseSuggestion _$PhraseSuggestionFromJson(Map<String, dynamic> json) {
+  return _PhraseSuggestion.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PhraseSuggestion {
+  String get phrase => throw _privateConstructorUsedError;
+  PhraseKind get kind => throw _privateConstructorUsedError;
+  @JsonKey(name: 'meaning_mm')
+  String get meaningMm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'meaning_en')
+  String get meaningEn => throw _privateConstructorUsedError;
+  List<PhraseExample> get examples => throw _privateConstructorUsedError;
+
+  /// Serializes this PhraseSuggestion to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of PhraseSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $PhraseSuggestionCopyWith<PhraseSuggestion> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PhraseSuggestionCopyWith<$Res> {
+  factory $PhraseSuggestionCopyWith(
+          PhraseSuggestion value, $Res Function(PhraseSuggestion) then) =
+      _$PhraseSuggestionCopyWithImpl<$Res, PhraseSuggestion>;
+  @useResult
+  $Res call(
+      {String phrase,
+      PhraseKind kind,
+      @JsonKey(name: 'meaning_mm') String meaningMm,
+      @JsonKey(name: 'meaning_en') String meaningEn,
+      List<PhraseExample> examples});
+}
+
+/// @nodoc
+class _$PhraseSuggestionCopyWithImpl<$Res, $Val extends PhraseSuggestion>
+    implements $PhraseSuggestionCopyWith<$Res> {
+  _$PhraseSuggestionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of PhraseSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? phrase = null,
+    Object? kind = null,
+    Object? meaningMm = null,
+    Object? meaningEn = null,
+    Object? examples = null,
+  }) {
+    return _then(_value.copyWith(
+      phrase: null == phrase
+          ? _value.phrase
+          : phrase // ignore: cast_nullable_to_non_nullable
+              as String,
+      kind: null == kind
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as PhraseKind,
+      meaningMm: null == meaningMm
+          ? _value.meaningMm
+          : meaningMm // ignore: cast_nullable_to_non_nullable
+              as String,
+      meaningEn: null == meaningEn
+          ? _value.meaningEn
+          : meaningEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      examples: null == examples
+          ? _value.examples
+          : examples // ignore: cast_nullable_to_non_nullable
+              as List<PhraseExample>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PhraseSuggestionImplCopyWith<$Res>
+    implements $PhraseSuggestionCopyWith<$Res> {
+  factory _$$PhraseSuggestionImplCopyWith(_$PhraseSuggestionImpl value,
+          $Res Function(_$PhraseSuggestionImpl) then) =
+      __$$PhraseSuggestionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String phrase,
+      PhraseKind kind,
+      @JsonKey(name: 'meaning_mm') String meaningMm,
+      @JsonKey(name: 'meaning_en') String meaningEn,
+      List<PhraseExample> examples});
+}
+
+/// @nodoc
+class __$$PhraseSuggestionImplCopyWithImpl<$Res>
+    extends _$PhraseSuggestionCopyWithImpl<$Res, _$PhraseSuggestionImpl>
+    implements _$$PhraseSuggestionImplCopyWith<$Res> {
+  __$$PhraseSuggestionImplCopyWithImpl(_$PhraseSuggestionImpl _value,
+      $Res Function(_$PhraseSuggestionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PhraseSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? phrase = null,
+    Object? kind = null,
+    Object? meaningMm = null,
+    Object? meaningEn = null,
+    Object? examples = null,
+  }) {
+    return _then(_$PhraseSuggestionImpl(
+      phrase: null == phrase
+          ? _value.phrase
+          : phrase // ignore: cast_nullable_to_non_nullable
+              as String,
+      kind: null == kind
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as PhraseKind,
+      meaningMm: null == meaningMm
+          ? _value.meaningMm
+          : meaningMm // ignore: cast_nullable_to_non_nullable
+              as String,
+      meaningEn: null == meaningEn
+          ? _value.meaningEn
+          : meaningEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      examples: null == examples
+          ? _value._examples
+          : examples // ignore: cast_nullable_to_non_nullable
+              as List<PhraseExample>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PhraseSuggestionImpl implements _PhraseSuggestion {
+  const _$PhraseSuggestionImpl(
+      {required this.phrase,
+      this.kind = PhraseKind.collocation,
+      @JsonKey(name: 'meaning_mm') this.meaningMm = '',
+      @JsonKey(name: 'meaning_en') this.meaningEn = '',
+      final List<PhraseExample> examples = const <PhraseExample>[]})
+      : _examples = examples;
+
+  factory _$PhraseSuggestionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PhraseSuggestionImplFromJson(json);
+
+  @override
+  final String phrase;
+  @override
+  @JsonKey()
+  final PhraseKind kind;
+  @override
+  @JsonKey(name: 'meaning_mm')
+  final String meaningMm;
+  @override
+  @JsonKey(name: 'meaning_en')
+  final String meaningEn;
+  final List<PhraseExample> _examples;
+  @override
+  @JsonKey()
+  List<PhraseExample> get examples {
+    if (_examples is EqualUnmodifiableListView) return _examples;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_examples);
+  }
+
+  @override
+  String toString() {
+    return 'PhraseSuggestion(phrase: $phrase, kind: $kind, meaningMm: $meaningMm, meaningEn: $meaningEn, examples: $examples)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PhraseSuggestionImpl &&
+            (identical(other.phrase, phrase) || other.phrase == phrase) &&
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.meaningMm, meaningMm) ||
+                other.meaningMm == meaningMm) &&
+            (identical(other.meaningEn, meaningEn) ||
+                other.meaningEn == meaningEn) &&
+            const DeepCollectionEquality().equals(other._examples, _examples));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, phrase, kind, meaningMm,
+      meaningEn, const DeepCollectionEquality().hash(_examples));
+
+  /// Create a copy of PhraseSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PhraseSuggestionImplCopyWith<_$PhraseSuggestionImpl> get copyWith =>
+      __$$PhraseSuggestionImplCopyWithImpl<_$PhraseSuggestionImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PhraseSuggestionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PhraseSuggestion implements PhraseSuggestion {
+  const factory _PhraseSuggestion(
+      {required final String phrase,
+      final PhraseKind kind,
+      @JsonKey(name: 'meaning_mm') final String meaningMm,
+      @JsonKey(name: 'meaning_en') final String meaningEn,
+      final List<PhraseExample> examples}) = _$PhraseSuggestionImpl;
+
+  factory _PhraseSuggestion.fromJson(Map<String, dynamic> json) =
+      _$PhraseSuggestionImpl.fromJson;
+
+  @override
+  String get phrase;
+  @override
+  PhraseKind get kind;
+  @override
+  @JsonKey(name: 'meaning_mm')
+  String get meaningMm;
+  @override
+  @JsonKey(name: 'meaning_en')
+  String get meaningEn;
+  @override
+  List<PhraseExample> get examples;
+
+  /// Create a copy of PhraseSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PhraseSuggestionImplCopyWith<_$PhraseSuggestionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -110,6 +110,21 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
     setState(() => _selected = keys.intersection(available));
   }
 
+  /// The preset whose resolved set exactly matches the current selection, so the
+  /// matching quick-pick chip can show as active. Null when the selection is a
+  /// custom mix. Pure UI — derived from [_selected], no extra state.
+  FeedbackPreset? _activePreset(Set<String> available) {
+    for (final p in FeedbackPreset.values) {
+      final keys = p == FeedbackPreset.everything
+          ? available
+          : kPresetSections[p]!.intersection(available);
+      if (_selected.length == keys.length && _selected.containsAll(keys)) {
+        return p;
+      }
+    }
+    return null;
+  }
+
   void _submit(BuildContext context) {
     _persistSelection();
     final sections = _selected.toList();
@@ -197,6 +212,8 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
       for (final g in FeedbackSectionGroup.values)
         if (sections.any((s) => s.group == g)) g,
     ];
+    final available = sections.map((s) => s.key).toSet();
+    final activePreset = _activePreset(available);
 
     return Column(
       children: [
@@ -223,9 +240,11 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
                         .copyWith(color: colorScheme.onSurfaceVariant),
                   ),
                 ],
-                const SizedBox(height: 16),
-                _PresetRow(onApply: _applyPreset),
-                const SizedBox(height: 8),
+                const SizedBox(height: 18),
+                _GroupHeader(label: l10n.txtDsQuickPicks),
+                const SizedBox(height: 10),
+                _PresetRow(onApply: _applyPreset, active: activePreset),
+                const SizedBox(height: 4),
                 for (final g in groups) ...[
                   const SizedBox(height: 12),
                   _GroupHeader(label: _groupLabel(context, g)),
@@ -296,22 +315,79 @@ class _RevisionBanner extends StatelessWidget {
 // ---------------------------------------------------------------------------
 
 class _PresetRow extends StatelessWidget {
-  const _PresetRow({required this.onApply});
+  const _PresetRow({required this.onApply, this.active});
   final void Function(FeedbackPreset) onApply;
+  final FeedbackPreset? active;
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Wrap(
       spacing: 8,
       runSpacing: 8,
       children: [
         for (final p in FeedbackPreset.values)
-          ActionChip(
-            avatar: Icon(_presetIcon(p), size: 16),
-            label: Text(_presetLabel(context, p)),
-            onPressed: () => onApply(p),
+          _PresetChip(
+            label: _presetLabel(context, p),
+            icon: _presetIcon(p),
+            active: p == active,
+            onTap: () => onApply(p),
+            colorScheme: colorScheme,
           ),
       ],
+    );
+  }
+}
+
+class _PresetChip extends StatelessWidget {
+  const _PresetChip({
+    required this.label,
+    required this.icon,
+    required this.active,
+    required this.onTap,
+    required this.colorScheme,
+  });
+  final String label;
+  final IconData icon;
+  final bool active;
+  final VoidCallback onTap;
+  final ColorScheme colorScheme;
+
+  @override
+  Widget build(BuildContext context) {
+    final fg = active ? colorScheme.onPrimary : colorScheme.onSurface;
+    return Material(
+      color: active ? colorScheme.primary : colorScheme.surfaceContainerHighest,
+      borderRadius: BorderRadius.circular(20),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(20),
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: active
+                  ? colorScheme.primary
+                  : colorScheme.outlineVariant,
+            ),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, size: 16, color: active ? fg : colorScheme.primary),
+              const SizedBox(width: 6),
+              Text(
+                label,
+                style: PmpTextStyles.label2Regular.copyWith(
+                  color: fg,
+                  fontWeight: active ? FontWeight.w600 : FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
@@ -350,65 +426,104 @@ class _SectionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final (icon, accent) = _sectionVisual(context, section.key);
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: onTap,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-          decoration: BoxDecoration(
-            color: selected
-                ? colorScheme.primary.withValues(alpha: 0.08)
-                : colorScheme.surfaceContainerHighest,
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(
-              color: selected
-                  ? colorScheme.primary.withValues(alpha: 0.5)
-                  : colorScheme.outlineVariant,
-            ),
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(
-                selected ? Icons.check_box : Icons.check_box_outline_blank,
-                size: 22,
+      child: Material(
+        color: selected
+            ? accent.withValues(alpha: 0.10)
+            : colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(14),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(14),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(
                 color: selected
-                    ? colorScheme.primary
-                    : colorScheme.onSurfaceVariant,
+                    ? accent.withValues(alpha: 0.55)
+                    : colorScheme.outlineVariant,
+                width: selected ? 1.5 : 1,
               ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            _sectionLabel(context, section.key),
-                            style: PmpTextStyles.body2Semi
-                                .copyWith(color: colorScheme.onSurface),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        _CostBadge(cost: section.cost),
-                      ],
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      _sectionDesc(context, section.key),
-                      style: PmpTextStyles.label2Regular
-                          .copyWith(color: colorScheme.onSurfaceVariant),
-                    ),
-                  ],
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    color: accent.withValues(alpha: selected ? 0.18 : 0.12),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Icon(icon, size: 19, color: accent),
                 ),
-              ),
-            ],
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              _sectionLabel(context, section.key),
+                              style: PmpTextStyles.body2Semi
+                                  .copyWith(color: colorScheme.onSurface),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          _CostBadge(cost: section.cost),
+                        ],
+                      ),
+                      const SizedBox(height: 3),
+                      Text(
+                        _sectionDesc(context, section.key),
+                        style: PmpTextStyles.label2Regular.copyWith(
+                          color: colorScheme.onSurfaceVariant,
+                          height: 1.3,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 10),
+                _CheckCircle(selected: selected, color: accent),
+              ],
+            ),
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Trailing selection indicator — a filled check when selected, a hollow ring
+/// when not. Clearer and more "tappable" than a leading checkbox.
+class _CheckCircle extends StatelessWidget {
+  const _CheckCircle({required this.selected, required this.color});
+  final bool selected;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 150),
+      width: 24,
+      height: 24,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: selected ? color : Colors.transparent,
+        border: Border.all(
+          color: selected ? color : colorScheme.outline,
+          width: 2,
+        ),
+      ),
+      child: selected
+          ? const Icon(Icons.check, size: 15, color: Colors.white)
+          : null,
     );
   }
 }
@@ -442,28 +557,38 @@ class _Footer extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 10, 20, 16),
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
       decoration: BoxDecoration(
         color: colorScheme.surface,
-        border: Border(top: BorderSide(color: colorScheme.outlineVariant)),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            count == 0
-                ? l10n.txtDsSelectAtLeastOne
-                : l10n.txtDsNSelected(count),
-            style: PmpTextStyles.label2Regular
-                .copyWith(color: colorScheme.onSurfaceVariant),
+        boxShadow: [
+          BoxShadow(
+            color: PmpColors.black.withValues(alpha: 0.18),
+            blurRadius: 12,
+            offset: const Offset(0, -2),
           ),
-          const SizedBox(height: 8),
-          FilledButton.icon(
-            onPressed: onSubmit,
-            icon: const Icon(Icons.auto_awesome),
-            label: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: Text(l10n.txtDsGetFeedback),
+        ],
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Text(
+              count == 0
+                  ? l10n.txtDsSelectAtLeastOne
+                  : l10n.txtDsNSelected(count),
+              style: PmpTextStyles.label2Regular
+                  .copyWith(color: colorScheme.onSurfaceVariant),
+            ),
+          ),
+          const SizedBox(width: 12),
+          SizedBox(
+            height: 48,
+            child: FilledButton.icon(
+              onPressed: onSubmit,
+              icon: const Icon(Icons.auto_awesome, size: 18),
+              label: Text(l10n.txtDsGetFeedback),
+              style: FilledButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 22),
+              ),
             ),
           ),
         ],
@@ -508,6 +633,38 @@ class _SubmittingView extends StatelessWidget {
 // ---------------------------------------------------------------------------
 // Inline display strings (localize later)
 // ---------------------------------------------------------------------------
+
+/// Per-section identity: a leading icon + accent colour, mirroring the result
+/// page's section colours so the two screens speak the same visual language.
+(IconData, Color) _sectionVisual(BuildContext context, String key) {
+  final colorScheme = Theme.of(context).colorScheme;
+  return switch (key) {
+    FeedbackSectionKey.sentenceFixes => (Icons.tune, PmpColors.warning500),
+    FeedbackSectionKey.grammarPatterns => (Icons.rule, PmpColors.warning500),
+    FeedbackSectionKey.burmeseInterference => (
+        Icons.translate,
+        PmpColors.destructive400
+      ),
+    FeedbackSectionKey.betterVocab => (Icons.upgrade, PmpColors.info500),
+    FeedbackSectionKey.collocations => (Icons.link, PmpColors.info500),
+    FeedbackSectionKey.idioms => (Icons.auto_awesome, PmpColors.accentOrange),
+    FeedbackSectionKey.wholeRewrite => (
+        Icons.article_outlined,
+        colorScheme.primary
+      ),
+    FeedbackSectionKey.sentenceRewrite => (
+        Icons.format_quote,
+        colorScheme.primary
+      ),
+    FeedbackSectionKey.pronunciation => (Icons.graphic_eq, colorScheme.tertiary),
+    FeedbackSectionKey.fillerWords => (
+        Icons.bubble_chart_outlined,
+        colorScheme.tertiary
+      ),
+    FeedbackSectionKey.subScores => (Icons.bar_chart, colorScheme.primary),
+    _ => (Icons.check_circle_outline, colorScheme.primary),
+  };
+}
 
 String _groupLabel(BuildContext context, FeedbackSectionGroup g) {
   final l10n = AppLocalizations.of(context);

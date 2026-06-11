@@ -88,9 +88,16 @@ class DailySpeakingService {
           : const [],
       vocabUpgrades:
           has(FeedbackSectionKey.betterVocab) ? f.vocabUpgrades : const [],
-      collocations:
-          has(FeedbackSectionKey.collocations) ? f.collocations : const [],
-      idioms: has(FeedbackSectionKey.idioms) ? f.idioms : const [],
+      // Collocations and idioms share one `phrases` list; honor each toggle
+      // independently by filtering on the phrase kind.
+      phrases: f.phrases.where((p) {
+        switch (p.kind) {
+          case PhraseKind.collocation:
+            return has(FeedbackSectionKey.collocations);
+          case PhraseKind.idiom:
+            return has(FeedbackSectionKey.idioms);
+        }
+      }).toList(growable: false),
       nativeRewrite:
           has(FeedbackSectionKey.wholeRewrite) ? f.nativeRewrite : '',
       sentenceRewrites:

@@ -9,6 +9,7 @@ import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 
 import '../daily_speaking_entry_page.dart' show kDailySessionLimit;
+import '../widgets/import_audio_sheet.dart';
 import '../widgets/session_recorder.dart';
 
 /// P3 — recorder with the topic header pinned and target-phrase chips
@@ -57,20 +58,14 @@ class SuggestedTopicRecordPage extends StatelessWidget {
                     disabled: exhausted,
                     disabledMessage:
                         AppLocalizations.of(context).txtDsDailyLimitReached,
-                    onComplete: (audioPath, _) {
-                      Navigator.pushNamed(
-                        context,
-                        PmpRoutes.dailySpeakingChooseFeedback,
-                        arguments: {
-                          'inputMode': DailySpeakingInputMode.voice,
-                          'onRamp': DailySpeakingOnRamp.suggested,
-                          'audioPath': audioPath,
-                          'topic': topic,
-                          'topicAttemptId': topicAttemptId,
-                          'revisionNumber': revisionNumber,
-                        },
-                      );
-                    },
+                    onComplete: (audioPath, _) =>
+                        _goToFeedback(context, audioPath),
+                  ),
+                  const SizedBox(height: 8),
+                  ImportInsteadButton(
+                    enabled: !exhausted,
+                    onImported: (audioPath) =>
+                        _goToFeedback(context, audioPath),
                   ),
                   const Spacer(),
                 ],
@@ -79,6 +74,21 @@ class SuggestedTopicRecordPage extends StatelessWidget {
           },
         ),
       ),
+    );
+  }
+
+  void _goToFeedback(BuildContext context, String audioPath) {
+    Navigator.pushNamed(
+      context,
+      PmpRoutes.dailySpeakingChooseFeedback,
+      arguments: {
+        'inputMode': DailySpeakingInputMode.voice,
+        'onRamp': DailySpeakingOnRamp.suggested,
+        'audioPath': audioPath,
+        'topic': topic,
+        'topicAttemptId': topicAttemptId,
+        'revisionNumber': revisionNumber,
+      },
     );
   }
 }

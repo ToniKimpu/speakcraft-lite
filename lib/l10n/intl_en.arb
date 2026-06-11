@@ -292,6 +292,19 @@
   "txtDsStartRecording": "Start recording",
   "txtDsYourPrompt": "Your prompt",
   "txtDsExample": "Example",
+  "txtDsExamples": "Examples",
+  "txtDsTapPhraseHint": "Tap a phrase to see what it means and how to use it.",
+  "txtDsScoreCheerHigh": "Excellent — you sound really fluent!",
+  "txtDsScoreCheerMid": "Good effort — a few tweaks and you'll shine.",
+  "txtDsScoreCheerLow": "Nice start — keep practicing, you've got this!",
+  "txtDsShowAll": "Show all {count}",
+  "@txtDsShowAll": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "txtDsShowLess": "Show less",
+  "txtDsQuickPicks": "Quick picks",
   "txtDsTryToUse": "Try to use",
   "txtDsChooseFeedbackTitle": "Choose your feedback",
   "txtDsChooseFeedbackIntro": "Pick what you want the AI to focus on. You can change this anytime — only what you choose is analyzed.",
@@ -437,7 +450,8 @@
   "txtDsPhrasesToTry": "Phrases to try next time",
   "txtDsPhrasesToTryHint": "Natural ways to say this on your topic — you didn't use these yet, so try working them in next time.",
   "txtDsImportAudio": "Import audio",
-  "txtDsImportAudioDesc": "Upload a clip of you speaking",
+  "txtDsImportInstead": "Import a recording instead",
+  "txtDsImportUseRecording": "Use this recording",
   "txtDsImportIntro": "Already recorded yourself speaking English? Import it and get the same feedback. One clear voice, up to 5 minutes, works best.",
   "txtDsImportChooseFile": "Choose audio file",
   "txtDsImportChangeFile": "Choose a different file",

@@ -50,6 +50,13 @@ class _ScoreHeader extends StatelessWidget {
     return PmpColors.destructive500;
   }
 
+  String _cheer(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    if (feedback.score >= 80) return l10n.txtDsScoreCheerHigh;
+    if (feedback.score >= 60) return l10n.txtDsScoreCheerMid;
+    return l10n.txtDsScoreCheerLow;
+  }
+
   String _levelLabel(BuildContext context, CefrLevel level) {
     final l10n = AppLocalizations.of(context);
     switch (level) {
@@ -72,55 +79,86 @@ class _ScoreHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final scoreColor = _scoreColor();
-    return Row(
-      children: [
-        SizedBox(
-          width: 88,
-          height: 88,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              CircularProgressIndicator(
-                value: feedback.score.clamp(0, 100) / 100.0,
-                strokeWidth: 8,
-                backgroundColor: scoreColor.withValues(alpha: 0.15),
-                valueColor: AlwaysStoppedAnimation<Color>(scoreColor),
-              ),
-              Center(
-                child: Text(
-                  '${feedback.score}',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontFamily: 'ArchivoBlack Regular',
-                    color: scoreColor,
+    // Performance-tinted hero band: the score colour bleeds into the surface so
+    // the result lands as a "moment" instead of a bare number in a row.
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(18),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            scoreColor.withValues(alpha: 0.20),
+            scoreColor.withValues(alpha: 0.04),
+          ],
+        ),
+        border: Border.all(color: scoreColor.withValues(alpha: 0.28)),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 92,
+            height: 92,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                CircularProgressIndicator(
+                  value: feedback.score.clamp(0, 100) / 100.0,
+                  strokeWidth: 9,
+                  backgroundColor: scoreColor.withValues(alpha: 0.18),
+                  valueColor: AlwaysStoppedAnimation<Color>(scoreColor),
+                ),
+                Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        '${feedback.score}',
+                        style: TextStyle(
+                          fontSize: 30,
+                          height: 1.0,
+                          fontFamily: 'ArchivoBlack Regular',
+                          color: scoreColor,
+                        ),
+                      ),
+                      Text(
+                        AppLocalizations.of(context).txtOutOf(100),
+                        style: PmpTextStyles.sub.copyWith(
+                          color: scoreColor.withValues(alpha: 0.8),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        const SizedBox(width: 16),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                _levelLabel(context, feedback.level),
-                style: PmpTextStyles.h2.copyWith(
-                  color: colorScheme.onSurface,
-                  fontFamily: 'ArchivoBlack Regular',
+          const SizedBox(width: 18),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  _levelLabel(context, feedback.level),
+                  style: PmpTextStyles.h2.copyWith(
+                    color: colorScheme.onSurface,
+                    fontFamily: 'ArchivoBlack Regular',
+                  ),
                 ),
-              ),
-              const SizedBox(height: 2),
-              Text(
-                AppLocalizations.of(context).txtOutOf(100),
-                style: PmpTextStyles.label2Regular
-                    .copyWith(color: colorScheme.onSurfaceVariant),
-              ),
-            ],
+                const SizedBox(height: 6),
+                Text(
+                  _cheer(context),
+                  style: PmpTextStyles.body2Regular.copyWith(
+                    color: colorScheme.onSurface,
+                    height: 1.4,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
@@ -329,15 +367,25 @@ class _MetricsRow extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     return Row(
       children: [
-        Expanded(child: _MetricTile(label: l10n.txtDsTime, value: '$mm:$ss')),
-        const SizedBox(width: 10),
         Expanded(
           child: _MetricTile(
-              label: l10n.txtDsWords, value: '${feedback.wordCount}'),
+            icon: Icons.timer_outlined,
+            label: l10n.txtDsTime,
+            value: '$mm:$ss',
+          ),
         ),
         const SizedBox(width: 10),
         Expanded(
           child: _MetricTile(
+            icon: Icons.notes_outlined,
+            label: l10n.txtDsWords,
+            value: '${feedback.wordCount}',
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: _MetricTile(
+            icon: Icons.speed_outlined,
             label: l10n.txtDsPace,
             value: l10n.txtDsPaceWpm(feedback.speakingPaceWpm),
           ),
@@ -348,7 +396,12 @@ class _MetricsRow extends StatelessWidget {
 }
 
 class _MetricTile extends StatelessWidget {
-  const _MetricTile({required this.label, required this.value});
+  const _MetricTile({
+    required this.icon,
+    required this.label,
+    required this.value,
+  });
+  final IconData icon;
   final String label;
   final String value;
 
@@ -364,6 +417,8 @@ class _MetricTile extends StatelessWidget {
       ),
       child: Column(
         children: [
+          Icon(icon, size: 16, color: colorScheme.primary),
+          const SizedBox(height: 6),
           Text(
             value,
             style: PmpTextStyles.body1Semi.copyWith(
