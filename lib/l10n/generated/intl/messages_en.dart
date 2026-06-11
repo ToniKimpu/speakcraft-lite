@@ -159,9 +159,26 @@ class MessageLookup extends MessageLookupByLibrary {
       "Don\'t have an account?",
     ),
     "txtDsApproxMin": m1,
+    "txtDsAskForMore": MessageLookupByLibrary.simpleMessage("Ask for more"),
+    "txtDsAskHarderWords": MessageLookupByLibrary.simpleMessage("Harder words"),
+    "txtDsAskHowToStart": MessageLookupByLibrary.simpleMessage(
+      "How do I start?",
+    ),
+    "txtDsAskMoreVocab": MessageLookupByLibrary.simpleMessage(
+      "More vocabulary",
+    ),
+    "txtDsAskUsefulPhrases": MessageLookupByLibrary.simpleMessage(
+      "Useful phrases",
+    ),
+    "txtDsAsksUsedUp": MessageLookupByLibrary.simpleMessage(
+      "That\'s all the prep help for this topic.",
+    ),
     "txtDsAtLeastChars": m2,
     "txtDsBetterWordChoices": MessageLookupByLibrary.simpleMessage(
       "Better word choices",
+    ),
+    "txtDsBuildingPrep": MessageLookupByLibrary.simpleMessage(
+      "Building your prep…",
     ),
     "txtDsBurmeseErrors": MessageLookupByLibrary.simpleMessage(
       "Burmese-English errors",
@@ -243,6 +260,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDsHearYourProgress": MessageLookupByLibrary.simpleMessage(
       "Hear your progress",
+    ),
+    "txtDsHelpMePrepare": MessageLookupByLibrary.simpleMessage(
+      "Help me prepare",
     ),
     "txtDsHighlights": MessageLookupByLibrary.simpleMessage("Highlights"),
     "txtDsHistory": MessageLookupByLibrary.simpleMessage("History"),
@@ -341,6 +361,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Natural ways to say this on your topic — you didn\'t use these yet, so try working them in next time.",
     ),
     "txtDsPolishRetry": MessageLookupByLibrary.simpleMessage("Polish & retry"),
+    "txtDsPrepFailed": MessageLookupByLibrary.simpleMessage(
+      "Couldn\'t build prep. Try again.",
+    ),
     "txtDsPresetEverything": MessageLookupByLibrary.simpleMessage("Everything"),
     "txtDsPresetGrammarFocus": MessageLookupByLibrary.simpleMessage(
       "Grammar focus",
@@ -362,10 +385,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Pronunciation notes",
     ),
     "txtDsQuickPicks": MessageLookupByLibrary.simpleMessage("Quick picks"),
+    "txtDsRecordNow": MessageLookupByLibrary.simpleMessage("Record now"),
     "txtDsRecordThis": MessageLookupByLibrary.simpleMessage("Record this"),
+    "txtDsRecordWithoutPrep": MessageLookupByLibrary.simpleMessage(
+      "Record without prep",
+    ),
     "txtDsRecordingUnavailable": MessageLookupByLibrary.simpleMessage(
       "Recording is unavailable.",
     ),
+    "txtDsRetry": MessageLookupByLibrary.simpleMessage("Retry"),
     "txtDsReviewHighlights": MessageLookupByLibrary.simpleMessage(
       "Review & highlights",
     ),

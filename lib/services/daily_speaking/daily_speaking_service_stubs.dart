@@ -1,4 +1,5 @@
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
+import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 
 /// Canned `DailySpeakingFeedback` payloads used while the Gemini edge function
 /// is not yet deployed. Three variants (high / mid / low score with topic
@@ -7,6 +8,112 @@ import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 /// Delete this file once `DailySpeakingService.useStubResponse` flips to
 /// `false`.
 class DailySpeakingServiceStubs {
+  /// Own-topic AI prep stub: an expanded [DailySpeakingTopic] built from the
+  /// learner's raw [topicText]. Mirrors what the future `daily-speaking-prep`
+  /// edge function will return — `id: 'own'` sentinel preserved, bilingual
+  /// (Burmese strings are *data*, not localized UI), and topic-interpolated so
+  /// the whole prep flow is demoable for any typed subject. The vocab / phrases
+  /// / warmups are intentionally general-purpose (usable for any monologue)
+  /// since this is a generic template, not a topic-aware scaffold yet.
+  static DailySpeakingTopic expandedTopic(String topicText) {
+    final t = topicText.trim();
+    return DailySpeakingTopic(
+      id: 'own',
+      title: t,
+      promptEn:
+          'Talk about "$t" for about three minutes. Describe your experience, '
+          'share a few specific details, and explain why it matters to you.',
+      promptMm:
+          '"$t" အကြောင်း ၃ မိနစ်လောက် ပြောကြည့်ပါ။ ကိုယ်တွေ့အတွေ့အကြုံတွေ၊ '
+          'အသေးစိတ်အချက်အလက်အနည်းငယ် မျှဝေပြီး ဘာကြောင့် အရေးကြီးတယ်ဆိုတာ ရှင်းပြပါ။',
+      vocabulary: const [
+        TopicVocabItem(
+          term: 'memorable',
+          definitionMm: 'မှတ်မိလွယ်တဲ့၊ စွဲမှတ်စရာကောင်းတဲ့။',
+          exampleEn: 'It was a really memorable experience for me.',
+        ),
+        TopicVocabItem(
+          term: 'in particular',
+          definitionMm: 'အထူးသဖြင့်၊ တိတိကျကျ ဆိုရရင်။',
+          exampleEn: 'One moment in particular stood out to me.',
+        ),
+        TopicVocabItem(
+          term: 'overall',
+          definitionMm: 'အလုံးစုံ ခြုံငုံကြည့်ရင်။',
+          exampleEn: 'Overall, it was a positive experience.',
+        ),
+      ],
+      targetPhrases: const [
+        TopicTargetPhrase(
+          phraseEn: 'Let me start by saying ...',
+          translationMm: 'အစချီပြောရရင် ...',
+        ),
+        TopicTargetPhrase(
+          phraseEn: 'One thing I really enjoy is ...',
+          translationMm: 'ကျွန်တော် တကယ်နှစ်သက်တဲ့ အရာတစ်ခုက ...',
+        ),
+        TopicTargetPhrase(
+          phraseEn: 'What stands out to me is ...',
+          translationMm: 'ကျွန်တော့်အတွက် အထင်ရှားဆုံးက ...',
+        ),
+        TopicTargetPhrase(
+          phraseEn: 'If I had to sum it up, ...',
+          translationMm: 'အကျဉ်းချုပ်ပြောရရင် ...',
+        ),
+      ],
+      warmupQuestions: [
+        'When did you first get into $t?',
+        'What do you like most about $t?',
+        'Is there anything challenging about $t?',
+        'How might $t change for you in the future?',
+      ],
+    );
+  }
+
+  /// Follow-up "ask" deltas — small extra batches the prep bloc appends to the
+  /// already-loaded topic. Kept tiny + general-purpose; the real edge function
+  /// would return topic-aware deltas.
+  static const List<TopicVocabItem> moreVocabDelta = [
+    TopicVocabItem(
+      term: 'for instance',
+      definitionMm: 'ဥပမာအားဖြင့်။',
+      exampleEn: 'For instance, last week something similar happened.',
+    ),
+    TopicVocabItem(
+      term: 'to be honest',
+      definitionMm: 'အမှန်အတိုင်း ပြောရရင်။',
+      exampleEn: "To be honest, I wasn't sure at first.",
+    ),
+  ];
+
+  static const List<TopicVocabItem> harderWordsDelta = [
+    TopicVocabItem(
+      term: 'compelling',
+      definitionMm: 'စိတ်ဝင်စားဖွယ်ကောင်းပြီး ဆွဲဆောင်မှုရှိတဲ့။',
+      exampleEn: 'There was a compelling reason behind my choice.',
+    ),
+    TopicVocabItem(
+      term: 'nuanced',
+      definitionMm: 'အသေးစိတ် ကွဲပြားမှုလေးတွေ ပါဝင်တဲ့။',
+      exampleEn: 'My feelings about it are a bit more nuanced than that.',
+    ),
+  ];
+
+  static const List<TopicTargetPhrase> usefulPhrasesDelta = [
+    TopicTargetPhrase(
+      phraseEn: 'That reminds me of ...',
+      translationMm: 'အဲဒါက ကျွန်တော့်ကို ... ကို သတိရစေတယ်။',
+    ),
+    TopicTargetPhrase(
+      phraseEn: 'On the other hand, ...',
+      translationMm: 'တစ်ဖက်ကကြည့်ရင်တော့ ...',
+    ),
+  ];
+
+  static const List<String> howToStartDelta = [
+    'You could open with: "I\'d like to talk about ..."',
+    'Or set the scene: "This is something I think about a lot because ..."',
+  ];
   static final List<DailySpeakingFeedback> cannedResponses = [
     const DailySpeakingFeedback(
       score: 88,

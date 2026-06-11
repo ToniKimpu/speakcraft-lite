@@ -1429,6 +1429,121 @@ class AppLocalizations {
     );
   }
 
+  /// `Help me prepare`
+  String get txtDsHelpMePrepare {
+    return Intl.message(
+      'Help me prepare',
+      name: 'txtDsHelpMePrepare',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Record now`
+  String get txtDsRecordNow {
+    return Intl.message(
+      'Record now',
+      name: 'txtDsRecordNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Building your prep…`
+  String get txtDsBuildingPrep {
+    return Intl.message(
+      'Building your prep…',
+      name: 'txtDsBuildingPrep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Couldn't build prep. Try again.`
+  String get txtDsPrepFailed {
+    return Intl.message(
+      'Couldn\'t build prep. Try again.',
+      name: 'txtDsPrepFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retry`
+  String get txtDsRetry {
+    return Intl.message('Retry', name: 'txtDsRetry', desc: '', args: []);
+  }
+
+  /// `Record without prep`
+  String get txtDsRecordWithoutPrep {
+    return Intl.message(
+      'Record without prep',
+      name: 'txtDsRecordWithoutPrep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ask for more`
+  String get txtDsAskForMore {
+    return Intl.message(
+      'Ask for more',
+      name: 'txtDsAskForMore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More vocabulary`
+  String get txtDsAskMoreVocab {
+    return Intl.message(
+      'More vocabulary',
+      name: 'txtDsAskMoreVocab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Useful phrases`
+  String get txtDsAskUsefulPhrases {
+    return Intl.message(
+      'Useful phrases',
+      name: 'txtDsAskUsefulPhrases',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How do I start?`
+  String get txtDsAskHowToStart {
+    return Intl.message(
+      'How do I start?',
+      name: 'txtDsAskHowToStart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Harder words`
+  String get txtDsAskHarderWords {
+    return Intl.message(
+      'Harder words',
+      name: 'txtDsAskHarderWords',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `That's all the prep help for this topic.`
+  String get txtDsAsksUsedUp {
+    return Intl.message(
+      'That\'s all the prep help for this topic.',
+      name: 'txtDsAsksUsedUp',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Write instead`
   String get txtDsWriteInstead {
     return Intl.message(

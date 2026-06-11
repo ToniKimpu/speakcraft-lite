@@ -221,7 +221,14 @@ class _MicButton extends StatelessWidget {
         : isRecording
             ? colorScheme.error
             : colorScheme.primary;
-    final fg = disabled ? colorScheme.onSurfaceVariant : Colors.white;
+    // Pair the icon with its background via the scheme's on* roles so it stays
+    // visible in both themes. (In dark mode `primary` is white, so a hardcoded
+    // white icon vanished — onPrimary is black there.)
+    final fg = disabled
+        ? colorScheme.onSurfaceVariant
+        : isRecording
+            ? colorScheme.onError
+            : colorScheme.onPrimary;
     return Material(
       color: bg,
       shape: const CircleBorder(),

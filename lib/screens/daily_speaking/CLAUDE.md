@@ -26,8 +26,18 @@ the stub adapter — no Gemini key needed to walk through the full UX.
 - **Just talk** → `just_record/just_record_page.dart` → spinner → result.
 - **Own topic** → `own_topic/own_topic_prep_page.dart` (topic textfield + 5
   suggestion chips) → forks via two CTAs:
-  - `own_topic/own_topic_record_page.dart` (voice with topic banner pinned)
-  - `write_path/write_path_page.dart` (multi-line text, 60–1500 chars)
+  - **Help me prepare** (✨ primary) → `own_topic/own_topic_scaffold_page.dart`
+    — an AI-scaffolded prep that fills the typed topic with vocab / target
+    phrases / warmups (reuses the suggested-prep section widgets, copied) plus
+    constrained follow-up "ask" chips (More vocab / Useful phrases / How to
+    start / Harder words), capped at 3 asks/topic. Driven by
+    `DailySpeakingPrepBloc` (page-scoped). Stub-backed via
+    `DailySpeakingService.expandTopic` / `askMore` (`useStubResponse`); the real
+    `daily-speaking-prep` edge fn is a TODO (prep is text-only and does NOT
+    consume a practice quota). → `own_topic_record_page.dart` with the
+    **scaffolded** topic.
+  - **Record now** (secondary) → `own_topic/own_topic_record_page.dart`
+    directly (skip prep; the bare `id='own'` topic).
 - **Suggested topic** →
   `suggested/suggested_topic_list_page.dart` (grouped by difficulty —
   Beginner / Intermediate / Advanced; each card shows prompt preview,
@@ -70,10 +80,11 @@ lib/
     daily_speaking_bloc.dart         # submit + persist
     daily_speaking_history_bloc.dart # Drift-backed history, sessionsToday
     daily_speaking_topic_bloc.dart   # loads assets/.../topics.json
+    daily_speaking_prep_bloc.dart    # own-topic AI prep: expand + ask-more (page-scoped)
   screens/daily_speaking/
     daily_speaking_entry_page.dart   # 3 on-ramps card (P2/P3 disabled)
     just_record/                     # P1 — wired
-    own_topic/                       # P2 stub — route registered, UI is placeholder
+    own_topic/                       # P2 — prep (2 CTAs), AI scaffold, recorder
     write_path/                      # P2 stub
     suggested/                       # P3 stub — topic_bloc already loads JSON
     feedback/                        # P1 — wired; shared by all on-ramps
@@ -220,7 +231,7 @@ feedback payload happens to include:
 | On-ramp        | topic carried?                       | targetPhraseResults? | loops? |
 |----------------|--------------------------------------|----------------------|--------|
 | Just talk      | synthetic from AI `inferredTopic` (`id='inferred'`, saved on submit) | no  | yes (v1 free, then focus banner) |
-| Own topic      | synthetic, `id='own'` (saved on submit) | no                | yes    |
+| Own topic      | synthetic `id='own'`, AI-scaffolded via "Help me prepare" (vocab/phrases/warmups filled) or bare via "Record now" | yes (topic carried ⇒ checklist kept) | yes |
 | Suggested      | curated topic from bank              | yes                  | yes    |
 
 ## Activating the real Gemini path (when the key lands)

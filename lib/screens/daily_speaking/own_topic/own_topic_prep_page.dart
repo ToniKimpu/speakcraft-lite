@@ -56,6 +56,14 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
     );
   }
 
+  void _goPrepare() {
+    Navigator.pushNamed(
+      context,
+      PmpRoutes.dailySpeakingOwnTopicScaffold,
+      arguments: {'topicText': _controller.text.trim()},
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -137,11 +145,20 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
               ),
               const SizedBox(height: 28),
               FilledButton.icon(
+                onPressed: _canContinue ? _goPrepare : null,
+                icon: const Icon(Icons.auto_awesome),
+                label: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  child: Text(l10n.txtDsHelpMePrepare),
+                ),
+              ),
+              const SizedBox(height: 8),
+              OutlinedButton.icon(
                 onPressed: _canContinue ? _goRecord : null,
                 icon: const Icon(Icons.mic),
                 label: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 12),
-                  child: Text(l10n.txtDsRecordThis),
+                  child: Text(l10n.txtDsRecordNow),
                 ),
               ),
             ],

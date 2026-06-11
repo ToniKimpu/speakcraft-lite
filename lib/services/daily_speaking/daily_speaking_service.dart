@@ -8,6 +8,12 @@ import 'package:speakcraft/model/daily_speaking/feedback_section.dart';
 import 'package:speakcraft/services/supabase_service.dart';
 
 import 'daily_speaking_sample_feedback.dart';
+import 'daily_speaking_service_stubs.dart';
+
+/// The constrained set of follow-up "asks" the learner can make on the prep
+/// scaffold. Each is a *typed* request (not free text), so the future edge
+/// function can branch on it deterministically. See `DailySpeakingPrepBloc`.
+enum PrepAskKind { moreVocab, usefulPhrases, howToStart, harderWords }
 
 /// Input bundle for a single review request — voice OR text, plus optional
 /// topic context. Keeping the variants in one class avoids a dispatch fork in
@@ -53,6 +59,66 @@ class DailySpeakingService {
       return _stubResponse(input);
     }
     return _realResponse(input);
+  }
+
+  /// Own-topic AI prep: expand a bare typed [topicText] into a scaffolded
+  /// [DailySpeakingTopic] (vocab / target phrases / warmups filled in). This is
+  /// text-only and ~8× cheaper than an audio review; it does NOT consume a
+  /// practice from the learner's quota. The future edge function must branch on
+  /// call *kind* (prep vs practice) and decrement the right counter.
+  Future<DailySpeakingTopic> expandTopic({required String topicText}) async {
+    if (useStubResponse) {
+      await Future<void>.delayed(const Duration(seconds: 2)); // match feedback feel
+      return DailySpeakingServiceStubs.expandedTopic(topicText);
+    }
+    // TODO(real): supabase.functions.invoke('daily-speaking-prep', body: {
+    //   'call_kind': 'prep',     // edge fn branches: prep does NOT decrement the
+    //                            // practices quota (5 premium / 1 free); only the
+    //                            // audio review call does.
+    //   'topic_text': topicText, // NO level/CEFR param for MVP (level-agnostic).
+    // }); then DailySpeakingTopic.fromJson(...). Must return id:'own', bilingual
+    // fields (prompt_en/prompt_mm), vocabulary, target_phrases, warmup_questions.
+    throw UnimplementedError('daily-speaking-prep edge function not deployed');
+  }
+
+  /// Follow-up "ask" on an already-expanded prep [current] topic. Returns the
+  /// topic with the requested delta appended (more vocab / phrases / warmups).
+  /// Anti-abuse cap (max 3 asks/topic) is enforced client-side for now and
+  /// server-side later.
+  Future<DailySpeakingTopic> askMore({
+    required PrepAskKind kind,
+    required DailySpeakingTopic current,
+  }) async {
+    if (useStubResponse) {
+      await Future<void>.delayed(const Duration(seconds: 1));
+      switch (kind) {
+        case PrepAskKind.moreVocab:
+          return current.copyWith(vocabulary: [
+            ...current.vocabulary,
+            ...DailySpeakingServiceStubs.moreVocabDelta,
+          ]);
+        case PrepAskKind.harderWords:
+          return current.copyWith(vocabulary: [
+            ...current.vocabulary,
+            ...DailySpeakingServiceStubs.harderWordsDelta,
+          ]);
+        case PrepAskKind.usefulPhrases:
+          return current.copyWith(targetPhrases: [
+            ...current.targetPhrases,
+            ...DailySpeakingServiceStubs.usefulPhrasesDelta,
+          ]);
+        case PrepAskKind.howToStart:
+          return current.copyWith(warmupQuestions: [
+            ...current.warmupQuestions,
+            ...DailySpeakingServiceStubs.howToStartDelta,
+          ]);
+      }
+    }
+    // TODO(real): supabase.functions.invoke('daily-speaking-prep', body: {
+    //   'call_kind': 'prep', 'ask_kind': kind.name,
+    //   'topic': current.toJson(), // server returns the merged/expanded topic.
+    // }); same budget branch as expandTopic (prep, not a practice).
+    throw UnimplementedError('daily-speaking-prep edge function not deployed');
   }
 
   Future<DailySpeakingFeedback> _stubResponse(SessionInput input) async {
