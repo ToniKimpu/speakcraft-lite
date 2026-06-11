@@ -32,9 +32,9 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
   late List<int> _order;
   static const int _visibleCount = 5;
 
-  /// A random placeholder hint, chosen once per visit so the empty field shows
-  /// a fresh example each time the page opens.
-  late final int _hintIndex;
+  /// A random placeholder hint shown in the empty field; re-rolled on shuffle
+  /// (alongside the chips) so the example stays fresh.
+  late int _hintIndex;
 
   @override
   void initState() {
@@ -53,7 +53,10 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
     super.dispose();
   }
 
-  void _shuffle() => setState(() => _order.shuffle());
+  void _shuffle() => setState(() {
+        _order.shuffle();
+        _hintIndex = Random().nextInt(_kHintCount);
+      });
 
   void _useStarter(String text) {
     _controller.text = text;
@@ -133,6 +136,26 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                   hintText: hint,
                   prefixIcon: Icon(Icons.edit_outlined,
                       color: colorScheme.primary, size: 20),
+                  // While the field is empty, offer a one-tap way to drop the
+                  // shown example into the box (no retyping). Hidden once the
+                  // learner starts writing their own.
+                  suffixIcon: _canContinue
+                      ? null
+                      : TextButton.icon(
+                          onPressed: () => _useStarter(hint),
+                          style: TextButton.styleFrom(
+                            foregroundColor: colorScheme.primary,
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            minimumSize: const Size(0, 32),
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          ),
+                          icon: const Icon(Icons.subdirectory_arrow_left,
+                              size: 16),
+                          label: Text(l10n.txtDsUseThisHint,
+                              style: PmpTextStyles.labelSemi),
+                        ),
+                  suffixIconConstraints:
+                      const BoxConstraints(minWidth: 0, minHeight: 0),
                   filled: true,
                   fillColor: colorScheme.surfaceContainerHighest,
                   contentPadding:

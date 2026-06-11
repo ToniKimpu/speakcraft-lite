@@ -1679,6 +1679,16 @@ class AppLocalizations {
     return Intl.message('Shuffle', name: 'txtDsShuffle', desc: '', args: []);
   }
 
+  /// `Use this`
+  String get txtDsUseThisHint {
+    return Intl.message(
+      'Use this',
+      name: 'txtDsUseThisHint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Get vocabulary, phrases & ideas`
   String get txtDsHelpMePrepareCaption {
     return Intl.message(

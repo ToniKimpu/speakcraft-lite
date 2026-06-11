@@ -623,6 +623,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsTryUseThesePhrases": MessageLookupByLibrary.simpleMessage(
       "Try to use these phrases",
     ),
+    "txtDsUseThisHint": MessageLookupByLibrary.simpleMessage("Use this"),
     "txtDsVersionBanner": m23,
     "txtDsVersionShort": m24,
     "txtDsVersionThisOne": m25,
