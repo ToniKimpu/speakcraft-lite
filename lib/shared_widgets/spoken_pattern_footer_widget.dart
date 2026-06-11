@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../config/pmp_text_styles.dart';
+import '../config/pmp_text_styles.dart';
 
+/// Pager footer (prev / progress / next) shared by the listening sentence-
+/// explanation and speech-practice flows. Originally lived under the removed
+/// `days` module; lifted to `shared_widgets` when that module was retired.
 class FooterWidget extends StatelessWidget {
-  // final List<SpokenPattern> spokenPatterns;
   final int totalPage;
   final int currentPage;
   final Function(int page) onPageChanged;
@@ -11,7 +13,6 @@ class FooterWidget extends StatelessWidget {
 
   const FooterWidget({
     super.key,
-    // required this.spokenPatterns,
     required this.totalPage,
     required this.currentPage,
     required this.onPageChanged,

@@ -25,11 +25,11 @@ User does **not** have an OpenAI / Whisper API key yet. Before starting #1:
 
 ## Home screen scope (v1)
 
-For v1 the app is **focused on Listening & Shadowing as the headline feature.** Other modules are deprioritized but not deleted:
+For v1 the app is **focused on Listening & Shadowing as the headline feature**, alongside Daily Speaking Practice.
 
-- **`lib/screens/main/home_screen.dart`** — the "Useful Spoken Patterns" card is commented out (not deleted) with a `// HIDDEN for V1` note. Restore it when v2 broadens scope. Bookmarks card stays — it complements Listening (saved vocab from subtitles will land there).
-- Do not add new home-screen cards while we're in v1.
-- Routes for the hidden module (`PmpRoutes.dayList` and friends) remain wired — nothing else in the codebase needs to change.
+- The original "Useful Spoken Patterns" (`days/`) and "Practice with AI" (`practice_with_ai/`) modules have since been **deleted** (the spoken-patterns work moves to a separate project) — screens, blocs, models, repos, and Drift tables removed; routes gone. This supersedes the earlier "commented out, not deleted" note.
+- `lib/screens/main/home_screen.dart` now shows Listening, Daily Speaking, and Bookmarks cards. Bookmarks complements Listening (saved vocab from subtitles lands there).
+- The shared pager `FooterWidget` was lifted out of the removed `days/` tree to `lib/shared_widgets/spoken_pattern_footer_widget.dart` (Listening still uses it).
 
 ## Roadmap — build in this order
 

@@ -1,9 +1,6 @@
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
-import 'package:speakcraft/tables/ai_sentence_practice_table.dart';
 
-import '../../model/ai_sentence_practice/ai_sentence_practice.dart';
-import '../../model/exercise_user_answer/exercise_user_answer.dart';
 import '../../model/listening_practice_answer/listening_practice_answer.dart';
 import '../../model/saved_term/saved_term.dart';
 import '../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
@@ -11,8 +8,6 @@ import '../../model/video_step_progress/video_step_progress.dart';
 import '../../tables/daily_speaking_session_table.dart';
 import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/saved_term_table.dart';
-import '../../tables/spoken_pattern_exercise_answer_table.dart';
-import '../../tables/user_example_answer_table.dart';
 import '../../tables/user_recorded_sentence_audio_table.dart';
 import '../../tables/video_step_progress_table.dart';
 
@@ -20,10 +15,7 @@ part 'app_database.g.dart';
 
 @DriftDatabase(
   tables: [
-    AiSentencePracticeTable,
-    UserExampleAnswerTable,
     ListeningPracticeAnswerTable,
-    SpokenPatternExerciseAnswerTable,
     UserRecordedSentenceAudioTable,
     SavedTermTable,
     VideoStepProgressTable,
@@ -38,7 +30,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 8;
+  int get schemaVersion => 9;
 
   @override
   MigrationStrategy get migration {
@@ -86,6 +78,17 @@ class AppDatabase extends _$AppDatabase {
             dailySpeakingSessionTable,
             dailySpeakingSessionTable.topicJson,
           );
+        }
+        if (from < 9) {
+          // The "Useful Spoken Patterns" (days) and "Practice with AI" modules
+          // were removed from the app. Drop their now-orphaned local tables so
+          // upgrading installs don't carry dead data.
+          await customStatement(
+              'DROP TABLE IF EXISTS ai_sentence_practice_table');
+          await customStatement(
+              'DROP TABLE IF EXISTS user_example_answer_table');
+          await customStatement(
+              'DROP TABLE IF EXISTS spoken_pattern_exercise_answer_table');
         }
       },
       beforeOpen: (details) async {

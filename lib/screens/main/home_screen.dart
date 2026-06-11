@@ -132,20 +132,6 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const _ContinueLearningSection(),
-              // HIDDEN for V1 — restore for v2 once Listening feedback loop is shipped.
-              // See lib/screens/listening_and_shadowing/CLAUDE.md → "Home screen scope (v1)".
-              // ModuleWidget(
-              //   title: 'Useful Spoken Patterns',
-              //   label1: 'Spoken Patternပေါင်း (၁၀၀)ကျော်လေ့လာမယ်',
-              //   label2: 'နေ့စဉ်ပုံမှန် လေ့လာမယ်',
-              //   iconTitle: Icons.menu_book,
-              //   iconLabel1: Icons.format_quote,
-              //   iconLabel2: Icons.calendar_month,
-              //   onPressed: () {
-              //     Navigator.pushNamed(context, PmpRoutes.dayList);
-              //   },
-              // ),
-              // const SizedBox(height: 12),
               ModuleWidget(
                 title: AppLocalizations.of(context).txtModuleListeningTitle,
                 label1: AppLocalizations.of(context).txtModuleListeningLabel1,
@@ -301,12 +287,6 @@ class _DebugMenu extends StatelessWidget {
           onPressed: () =>
               Navigator.pushNamed(context, PmpRoutes.goingViralTaughtMeJsonList),
           child: const Text('Going Viral Taught Me'),
-        ),
-        const SizedBox(height: 8),
-        ElevatedButton(
-          onPressed: () =>
-              Navigator.pushNamed(context, PmpRoutes.grammarJsonTest),
-          child: const Text('Grammar JSON Test'),
         ),
         const SizedBox(height: 12),
         ElevatedButton(

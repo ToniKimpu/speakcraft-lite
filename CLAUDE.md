@@ -101,24 +101,26 @@ All models live in `lib/model/<name>/`. Each model file has:
 - `<name>.freezed.dart` — generated (do not edit)
 - `<name>.g.dart` — generated JSON serializer (do not edit)
 
-Key models: `Day`, `Lesson`, `Exercise`, `SpokenPattern`, `Listening`, `Subtitle`, `SentenceExplanation`, `AppUser`, `AiSentencePractice`
+Key models: `Listening`, `Subtitle`, `SentenceExplanation`, `AppUser`, `DailySpeakingTopic`, `PatternVocabulary`
+
+> **Removed modules:** the original "Useful Spoken Patterns" (`days/`) and "Practice with AI" (`practice_with_ai/`) modules were deleted (the days/spoken-patterns work moves to a separate project). Their screens, blocs, models, repositories, and Drift tables (`AiSentencePracticeTable`, `UserExampleAnswerTable`, `SpokenPatternExerciseAnswerTable`) are gone; the tables are dropped in the schema-v9 migration. `model/pattern_vocabulary` was kept — Listening still uses it.
 
 ### Local Database: Drift
-Table definitions are in `lib/tables/`. Drift is used for local storage of user answers and AI practice results (e.g., `AiSentencePracticeTable`, `ListeningPracticeAnswerTable`).
+Table definitions are in `lib/tables/`. Drift is used for local storage of user answers and practice results (e.g., `ListeningPracticeAnswerTable`, `DailySpeakingSessionTable`).
 
 ### App Modules (Home Screen)
-The app has two main learning modules:
-1. **Useful Spoken Patterns** (`/day_list`) — Day-based spoken pattern lessons with exercises
-2. **Listening & Shadowing** (`/listening`) — Audio/video listening with subtitle synchronization, shadowing, and speech practice
+The app's active learning modules are:
+1. **Listening & Shadowing** (`/listening`) — Audio/video listening with subtitle synchronization, shadowing, and speech practice
+2. **Daily Speaking Practice** (`/daily_speaking`) — short free-talk monologues with structured AI feedback
 
 ### Screens Structure
 ```
 lib/screens/
   auth/           — Login, SignUp
-  days/           — Day list, spoken pattern pages, exercises
+  daily_speaking/ — Daily speaking practice (on-ramps, feedback, history)
   listening_and_shadowing/ — Listening list, shadowing, sentence practice, speech sessions
   main/           — Home, Profile, version/free-user gates
-  practice_with_ai/ — AI sentence practice (currently commented out in home)
+  saved_words/    — Saved terms / bookmarks
   onboarding/     — Splash screen
 ```
 

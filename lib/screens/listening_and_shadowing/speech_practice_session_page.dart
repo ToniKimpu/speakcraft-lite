@@ -9,7 +9,7 @@ import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dar
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
-import 'package:speakcraft/screens/days/spoken_pattern/widgets/footer_widget.dart';
+import 'package:speakcraft/shared_widgets/spoken_pattern_footer_widget.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/recording_voice_widgets/user_recorded_list.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
 import 'package:record/record.dart';

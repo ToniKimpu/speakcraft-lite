@@ -7,7 +7,7 @@ import 'package:speakcraft/config/env.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
-import 'package:speakcraft/screens/days/spoken_pattern/widgets/footer_widget.dart';
+import 'package:speakcraft/shared_widgets/spoken_pattern_footer_widget.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
 
 class SentenceExplanationPager extends StatefulWidget {
