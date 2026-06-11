@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 
-/// P2 — own-topic prep. User types what they want to talk about, then continues
-/// into the voice recorder. (This is speaking practice — there's no text input
-/// path; you say it, you don't write it.)
+/// P2 — own-topic prep. User types what they want to talk about, then either
+/// asks the AI to build a prep scaffold ("Help me prepare") or jumps straight
+/// into the recorder ("Record now"). This is speaking practice — you say it,
+/// you don't write it.
 ///
 /// The synthetic [DailySpeakingTopic] built here only fills the fields the
 /// edge function actually needs (`title`, `promptEn`) — everything else is
@@ -23,9 +25,15 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
   final _controller = TextEditingController();
   bool _canContinue = false;
 
+  /// Shuffled index order into the starter pool; the first [_visibleCount] are
+  /// shown. Reshuffled on the shuffle button so the chips feel fresh.
+  late List<int> _order;
+  static const int _visibleCount = 5;
+
   @override
   void initState() {
     super.initState();
+    _order = List<int>.generate(_kStarterCount, (i) => i)..shuffle();
     _controller.addListener(() {
       final ok = _controller.text.trim().isNotEmpty;
       if (ok != _canContinue) setState(() => _canContinue = ok);
@@ -36,6 +44,14 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  void _shuffle() => setState(() => _order.shuffle());
+
+  void _useStarter(String text) {
+    _controller.text = text;
+    _controller.selection =
+        TextSelection.fromPosition(TextPosition(offset: text.length));
   }
 
   DailySpeakingTopic _buildTopic() {
@@ -68,21 +84,21 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
-    final suggestions = [
-      l10n.txtDsSuggestionFamily,
-      l10n.txtDsSuggestionTrip,
-      l10n.txtDsSuggestionJob,
-      l10n.txtDsSuggestionGoal,
-      l10n.txtDsSuggestionWorried,
-    ];
+
+    final pool = _starterPool(l10n);
+    final starters =
+        _order.take(_visibleCount).map((i) => pool[i]).toList(growable: false);
+
     return Scaffold(
       appBar: AppBar(title: Text(l10n.txtDsOwnTopic)),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+          padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              const _Hero(),
+              const SizedBox(height: 22),
               Text(
                 l10n.txtDsWhatToTalkAbout,
                 style: PmpTextStyles.h2.copyWith(
@@ -90,77 +106,320 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                   fontFamily: 'ArchivoBlack Regular',
                 ),
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 6),
               Text(
                 l10n.txtDsTopicHint,
                 style: PmpTextStyles.body2Regular.copyWith(
                   color: colorScheme.onSurfaceVariant,
+                  height: 1.4,
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 18),
               TextField(
                 controller: _controller,
                 minLines: 1,
                 maxLines: 3,
                 maxLength: 120,
                 textInputAction: TextInputAction.done,
+                style: PmpTextStyles.body1Regular
+                    .copyWith(color: colorScheme.onSurface),
                 decoration: InputDecoration(
                   hintText: l10n.txtDsTopicFieldHint,
+                  prefixIcon: Icon(Icons.edit_outlined,
+                      color: colorScheme.primary, size: 20),
                   filled: true,
                   fillColor: colorScheme.surfaceContainerHighest,
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(14),
                     borderSide: BorderSide(color: colorScheme.outlineVariant),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(14),
                     borderSide: BorderSide(color: colorScheme.outlineVariant),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    borderSide:
+                        BorderSide(color: colorScheme.primary, width: 1.5),
                   ),
                 ),
               ),
-              const SizedBox(height: 8),
-              Text(
-                l10n.txtDsTryOneOfThese,
-                style: PmpTextStyles.labelSemi.copyWith(
-                  color: colorScheme.onSurfaceVariant,
-                ),
+              const SizedBox(height: 14),
+              Row(
+                children: [
+                  Icon(Icons.lightbulb_outline,
+                      size: 16, color: colorScheme.onSurfaceVariant),
+                  const SizedBox(width: 6),
+                  Text(
+                    l10n.txtDsTryOneOfThese,
+                    style: PmpTextStyles.labelSemi.copyWith(
+                      color: colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                  const Spacer(),
+                  TextButton.icon(
+                    onPressed: _shuffle,
+                    style: TextButton.styleFrom(
+                      foregroundColor: colorScheme.primary,
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      minimumSize: const Size(0, 32),
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    icon: const Icon(Icons.shuffle, size: 16),
+                    label: Text(l10n.txtDsShuffle,
+                        style: PmpTextStyles.labelSemi),
+                  ),
+                ],
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 6),
               Wrap(
                 spacing: 8,
                 runSpacing: 8,
-                children: suggestions
-                    .map(
-                      (s) => ActionChip(
-                        label: Text(s),
-                        onPressed: () {
-                          _controller.text = s;
-                          _controller.selection = TextSelection.fromPosition(
-                            TextPosition(offset: s.length),
-                          );
-                        },
-                      ),
-                    )
+                children: starters
+                    .map((s) => _StarterChip(label: s, onTap: () => _useStarter(s)))
                     .toList(growable: false),
               ),
               const SizedBox(height: 28),
-              FilledButton.icon(
-                onPressed: _canContinue ? _goPrepare : null,
-                icon: const Icon(Icons.auto_awesome),
-                label: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  child: Text(l10n.txtDsHelpMePrepare),
+              _ActionButton(
+                primary: true,
+                enabled: _canContinue,
+                onTap: _goPrepare,
+                icon: Icons.auto_awesome,
+                title: l10n.txtDsHelpMePrepare,
+                caption: l10n.txtDsHelpMePrepareCaption,
+              ),
+              const SizedBox(height: 12),
+              _ActionButton(
+                primary: false,
+                enabled: _canContinue,
+                onTap: _goRecord,
+                icon: Icons.mic,
+                title: l10n.txtDsRecordNow,
+                caption: l10n.txtDsRecordNowCaption,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// The full pool of static topic starters. A random [_visibleCount] are shown
+/// at a time (reshuffled via the shuffle button) so the page never feels stale.
+/// Keep [_kStarterCount] in sync with this list's length.
+const int _kStarterCount = 12;
+
+List<String> _starterPool(AppLocalizations l10n) => [
+      l10n.txtDsSuggestionFamily,
+      l10n.txtDsSuggestionTrip,
+      l10n.txtDsSuggestionJob,
+      l10n.txtDsSuggestionGoal,
+      l10n.txtDsSuggestionWorried,
+      l10n.txtDsSuggestionWeekend,
+      l10n.txtDsSuggestionHobby,
+      l10n.txtDsSuggestionFood,
+      l10n.txtDsSuggestionShow,
+      l10n.txtDsSuggestionHometown,
+      l10n.txtDsSuggestionDream,
+      l10n.txtDsSuggestionFriend,
+    ];
+
+/// Decorative header: a gradient mic badge above the screen title gives the
+/// page some warmth instead of opening on a bare heading.
+class _Hero extends StatelessWidget {
+  const _Hero();
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Container(
+      width: 60,
+      height: 60,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(18),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            colorScheme.primary,
+            Color.lerp(colorScheme.primary, PmpColors.info500, 0.55)!,
+          ],
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: colorScheme.primary.withValues(alpha: 0.3),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
+          ),
+        ],
+      ),
+      child: Icon(Icons.record_voice_over,
+          color: colorScheme.onPrimary, size: 30),
+    );
+  }
+}
+
+/// Tonal, tappable starter chip — softer and more inviting than a plain
+/// outlined chip, and brand-tinted so it reads as a primary action.
+class _StarterChip extends StatelessWidget {
+  const _StarterChip({required this.label, required this.onTap});
+  final String label;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Material(
+      color: colorScheme.primary.withValues(alpha: 0.08),
+      borderRadius: BorderRadius.circular(20),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Ink(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+                color: colorScheme.primary.withValues(alpha: 0.25)),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.add, size: 15, color: colorScheme.primary),
+              const SizedBox(width: 5),
+              Text(
+                label,
+                style: PmpTextStyles.body2Semi
+                    .copyWith(color: colorScheme.primary),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Rich two-line CTA: an icon tile + title + caption. The primary variant is a
+/// gradient with a soft shadow (so it doesn't read flat); the secondary is a
+/// tonal/outlined card. Both grey out cleanly when [enabled] is false.
+class _ActionButton extends StatelessWidget {
+  const _ActionButton({
+    required this.primary,
+    required this.enabled,
+    required this.onTap,
+    required this.icon,
+    required this.title,
+    required this.caption,
+  });
+
+  final bool primary;
+  final bool enabled;
+  final VoidCallback onTap;
+  final IconData icon;
+  final String title;
+  final String caption;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final disabled = !enabled;
+
+    final Color titleColor;
+    final Color captionColor;
+    final Color iconColor;
+    final Color iconBg;
+    BoxDecoration decoration;
+
+    if (primary) {
+      titleColor = disabled ? colorScheme.onSurfaceVariant : colorScheme.onPrimary;
+      captionColor = disabled
+          ? colorScheme.onSurfaceVariant.withValues(alpha: 0.7)
+          : colorScheme.onPrimary.withValues(alpha: 0.85);
+      iconColor = titleColor;
+      iconBg = disabled
+          ? colorScheme.onSurfaceVariant.withValues(alpha: 0.12)
+          : colorScheme.onPrimary.withValues(alpha: 0.2);
+      decoration = disabled
+          ? BoxDecoration(
+              color: colorScheme.surfaceContainerHighest,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: colorScheme.outlineVariant),
+            )
+          : BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  colorScheme.primary,
+                  Color.lerp(colorScheme.primary, PmpColors.info500, 0.55)!,
+                ],
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: colorScheme.primary.withValues(alpha: 0.35),
+                  blurRadius: 18,
+                  offset: const Offset(0, 8),
+                ),
+              ],
+            );
+    } else {
+      titleColor = disabled ? colorScheme.onSurfaceVariant : colorScheme.onSurface;
+      captionColor = colorScheme.onSurfaceVariant;
+      iconColor = disabled ? colorScheme.onSurfaceVariant : colorScheme.primary;
+      iconBg = (disabled ? colorScheme.onSurfaceVariant : colorScheme.primary)
+          .withValues(alpha: 0.12);
+      decoration = BoxDecoration(
+        color: colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: colorScheme.outlineVariant),
+      );
+    }
+
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(16),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: disabled ? null : onTap,
+        child: Ink(
+          decoration: decoration,
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            children: [
+              Container(
+                width: 42,
+                height: 42,
+                decoration: BoxDecoration(
+                  color: iconBg,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Icon(icon, color: iconColor, size: 22),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      title,
+                      style: PmpTextStyles.body1Semi.copyWith(color: titleColor),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      caption,
+                      style: PmpTextStyles.sub.copyWith(color: captionColor),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 8),
-              OutlinedButton.icon(
-                onPressed: _canContinue ? _goRecord : null,
-                icon: const Icon(Icons.mic),
-                label: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  child: Text(l10n.txtDsRecordNow),
-                ),
-              ),
+              Icon(Icons.arrow_forward_ios,
+                  size: 14, color: titleColor.withValues(alpha: 0.7)),
             ],
           ),
         ),

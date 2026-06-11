@@ -269,6 +269,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsHelpMePrepare": MessageLookupByLibrary.simpleMessage(
       "Help me prepare",
     ),
+    "txtDsHelpMePrepareCaption": MessageLookupByLibrary.simpleMessage(
+      "Get vocabulary, phrases & ideas",
+    ),
     "txtDsHighlights": MessageLookupByLibrary.simpleMessage("Highlights"),
     "txtDsHistory": MessageLookupByLibrary.simpleMessage("History"),
     "txtDsHistoryTitle": MessageLookupByLibrary.simpleMessage(
@@ -393,6 +396,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDsQuickPicks": MessageLookupByLibrary.simpleMessage("Quick picks"),
     "txtDsRecordNow": MessageLookupByLibrary.simpleMessage("Record now"),
+    "txtDsRecordNowCaption": MessageLookupByLibrary.simpleMessage(
+      "Skip prep — just start talking",
+    ),
     "txtDsRecordThis": MessageLookupByLibrary.simpleMessage("Record this"),
     "txtDsRecordWithoutPrep": MessageLookupByLibrary.simpleMessage(
       "Record without prep",
@@ -450,6 +456,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsSessionsToday": m19,
     "txtDsShowAll": m20,
     "txtDsShowLess": MessageLookupByLibrary.simpleMessage("Show less"),
+    "txtDsShuffle": MessageLookupByLibrary.simpleMessage("Shuffle"),
     "txtDsSkillBreakdown": MessageLookupByLibrary.simpleMessage(
       "Skill breakdown",
     ),
@@ -472,13 +479,32 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsSuggestedTopics": MessageLookupByLibrary.simpleMessage(
       "Suggested topics",
     ),
+    "txtDsSuggestionDream": MessageLookupByLibrary.simpleMessage(
+      "A dream I have",
+    ),
     "txtDsSuggestionFamily": MessageLookupByLibrary.simpleMessage("My family"),
+    "txtDsSuggestionFood": MessageLookupByLibrary.simpleMessage("Food I love"),
+    "txtDsSuggestionFriend": MessageLookupByLibrary.simpleMessage(
+      "A close friend",
+    ),
     "txtDsSuggestionGoal": MessageLookupByLibrary.simpleMessage(
       "A goal I have",
     ),
+    "txtDsSuggestionHobby": MessageLookupByLibrary.simpleMessage(
+      "A hobby I enjoy",
+    ),
+    "txtDsSuggestionHometown": MessageLookupByLibrary.simpleMessage(
+      "My hometown",
+    ),
     "txtDsSuggestionJob": MessageLookupByLibrary.simpleMessage("My job"),
+    "txtDsSuggestionShow": MessageLookupByLibrary.simpleMessage(
+      "A movie or show",
+    ),
     "txtDsSuggestionTrip": MessageLookupByLibrary.simpleMessage(
       "A recent trip",
+    ),
+    "txtDsSuggestionWeekend": MessageLookupByLibrary.simpleMessage(
+      "My weekend",
     ),
     "txtDsSuggestionWorried": MessageLookupByLibrary.simpleMessage(
       "Something I\'m worried about",

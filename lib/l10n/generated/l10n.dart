@@ -1604,6 +1604,101 @@ class AppLocalizations {
     );
   }
 
+  /// `My weekend`
+  String get txtDsSuggestionWeekend {
+    return Intl.message(
+      'My weekend',
+      name: 'txtDsSuggestionWeekend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A hobby I enjoy`
+  String get txtDsSuggestionHobby {
+    return Intl.message(
+      'A hobby I enjoy',
+      name: 'txtDsSuggestionHobby',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Food I love`
+  String get txtDsSuggestionFood {
+    return Intl.message(
+      'Food I love',
+      name: 'txtDsSuggestionFood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A movie or show`
+  String get txtDsSuggestionShow {
+    return Intl.message(
+      'A movie or show',
+      name: 'txtDsSuggestionShow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My hometown`
+  String get txtDsSuggestionHometown {
+    return Intl.message(
+      'My hometown',
+      name: 'txtDsSuggestionHometown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A dream I have`
+  String get txtDsSuggestionDream {
+    return Intl.message(
+      'A dream I have',
+      name: 'txtDsSuggestionDream',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A close friend`
+  String get txtDsSuggestionFriend {
+    return Intl.message(
+      'A close friend',
+      name: 'txtDsSuggestionFriend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shuffle`
+  String get txtDsShuffle {
+    return Intl.message('Shuffle', name: 'txtDsShuffle', desc: '', args: []);
+  }
+
+  /// `Get vocabulary, phrases & ideas`
+  String get txtDsHelpMePrepareCaption {
+    return Intl.message(
+      'Get vocabulary, phrases & ideas',
+      name: 'txtDsHelpMePrepareCaption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip prep — just start talking`
+  String get txtDsRecordNowCaption {
+    return Intl.message(
+      'Skip prep — just start talking',
+      name: 'txtDsRecordNowCaption',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Your topic`
   String get txtDsYourTopic {
     return Intl.message(
