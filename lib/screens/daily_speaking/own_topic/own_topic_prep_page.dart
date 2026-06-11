@@ -178,14 +178,14 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(Icons.subdirectory_arrow_left,
-                                    size: 15, color: colorScheme.primary),
-                                const SizedBox(width: 4),
                                 Text(
                                   l10n.txtDsUseThisHint,
                                   style: PmpTextStyles.labelSemi
                                       .copyWith(color: colorScheme.primary),
                                 ),
+                                const SizedBox(width: 4),
+                                Icon(Icons.arrow_upward,
+                                    size: 15, color: colorScheme.primary),
                               ],
                             ),
                           ),
@@ -387,20 +387,26 @@ class _ActionButton extends StatelessWidget {
     BoxDecoration decoration;
 
     if (primary) {
-      titleColor =
-          disabled ? colorScheme.onSurfaceVariant : colorScheme.onPrimary;
+      // Disabled = a dimmed, on-brand "inactive" state (NOT flat grey) so the
+      // button still reads as the colorful primary. The moment the field has
+      // text it brightens to the full gradient + shadow — that "lighting up"
+      // pulls the eye to Help-me-prepare before Record-now.
+      titleColor = disabled
+          ? colorScheme.primary.withValues(alpha: 0.55)
+          : colorScheme.onPrimary;
       captionColor = disabled
-          ? colorScheme.onSurfaceVariant.withValues(alpha: 0.7)
+          ? colorScheme.primary.withValues(alpha: 0.45)
           : colorScheme.onPrimary.withValues(alpha: 0.85);
       iconColor = titleColor;
       iconBg = disabled
-          ? colorScheme.onSurfaceVariant.withValues(alpha: 0.12)
+          ? colorScheme.primary.withValues(alpha: 0.12)
           : colorScheme.onPrimary.withValues(alpha: 0.2);
       decoration = disabled
           ? BoxDecoration(
-              color: colorScheme.surfaceContainerHighest,
+              color: colorScheme.primary.withValues(alpha: 0.10),
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: colorScheme.outlineVariant),
+              border: Border.all(
+                  color: colorScheme.primary.withValues(alpha: 0.25)),
             )
           : BoxDecoration(
               borderRadius: BorderRadius.circular(16),
