@@ -260,15 +260,29 @@ Order, exact actions:
 
 ## Topic bank — where it lives
 
-Currently bundled at `assets/daily_speaking/topics/topics.json` and loaded
-by `DailySpeakingTopicBloc`. Add new topics here — each entry must satisfy
-`DailySpeakingTopic.fromJson` (snake_case keys, see the freezed model).
+Loaded from the **Supabase `daily_speaking_topics` table** by
+`DailySpeakingTopicBloc` (`_loadTopics`: network-first → SharedPreferences
+cache → bundled-asset fallback). The table stores filter/sort columns plus the
+rich content (`vocabulary` / `target_phrases` / `warmup_questions`) as **JSONB**
+that maps 1:1 to `DailySpeakingTopic.fromJson` (snake_case keys). Only
+`is_published = true` rows are fetched, ordered by `sort_order` then
+`created_at desc`. `assets/daily_speaking/topics/topics.json` is kept **only as
+an offline/empty-table fallback** — author real topics in Supabase (via the
+admin app), not the asset. Full design + DDL + admin-app needs:
+`SUGGESTED_TOPICS_SUPABASE_PLAN.md`.
 
-When the bank grows past ~50 entries, migrate to Bunny CDN: mirror the
-listening JSON pattern (`Env.bunnyListeningAPIKey` style key, new bucket
-folder `daily-speaking-topics/`) and swap `_loadFromAssets` in
-`daily_speaking_topic_bloc.dart`. The `DailySpeakingTopic` model doesn't
-change.
+**Practiced-state (fresh-first / sink + badge):** the list enriches each topic
+with `TopicProgress` (`model/daily_speaking/topic_progress.dart`) via
+`TopicProgressRepository`. The current impl `LocalTopicProgressRepository`
+derives it from local Drift sessions (a topic is "practiced" once it has ≥1
+session row; tracks attempts / best score / last-practiced). When auth lands,
+swap in a Supabase `user_topic_progress` impl — no UI change. Practiced topics
+sink under a "Practice again" header with a ✓ badge + best score and drop out of
+the "New this week" rail; they're never hidden (re-speaking is good practice).
+
+> The earlier "migrate to Bunny CDN past ~50 entries" note is superseded —
+> Supabase is the source now (the web app reads the same content, and per-user
+> progress needs a join a CDN file can't do).
 
 ## What's deliberately NOT in this branch
 

@@ -298,6 +298,19 @@
       "count": {}
     }
   },
+  "txtDsPracticed": "Practiced",
+  "txtDsBestScore": "Best {score}",
+  "@txtDsBestScore": {
+    "placeholders": {
+      "score": {}
+    }
+  },
+  "txtDsPracticeAgain": "Practice again ({count})",
+  "@txtDsPracticeAgain": {
+    "placeholders": {
+      "count": {}
+    }
+  },
   "txtDsWordsYouMightUse": "Words you might use",
   "txtDsTryUseThesePhrases": "Try to use these phrases",
   "txtDsThingsYouCanMention": "Things you can mention",

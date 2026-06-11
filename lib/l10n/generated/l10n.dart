@@ -1884,6 +1884,36 @@ class AppLocalizations {
     );
   }
 
+  /// `Practiced`
+  String get txtDsPracticed {
+    return Intl.message(
+      'Practiced',
+      name: 'txtDsPracticed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best {score}`
+  String txtDsBestScore(Object score) {
+    return Intl.message(
+      'Best $score',
+      name: 'txtDsBestScore',
+      desc: '',
+      args: [score],
+    );
+  }
+
+  /// `Practice again ({count})`
+  String txtDsPracticeAgain(Object count) {
+    return Intl.message(
+      'Practice again ($count)',
+      name: 'txtDsPracticeAgain',
+      desc: '',
+      args: [count],
+    );
+  }
+
   /// `Words you might use`
   String get txtDsWordsYouMightUse {
     return Intl.message(

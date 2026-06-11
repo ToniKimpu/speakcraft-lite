@@ -6,6 +6,7 @@ import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
+import 'package:speakcraft/model/daily_speaking/topic_progress.dart';
 import 'package:speakcraft/services/share_preference_utils.dart';
 
 /// P3 — suggested topic list. Material 3 TabBar (Beginner / Intermediate /
@@ -122,8 +123,12 @@ class _ListScaffoldState extends State<_ListScaffold>
                 ),
               ),
             ),
-            loaded: (topics) {
-              final recent = topics.where(_isNew).toList()
+            loaded: (topics, progress) {
+              // The rail is a discovery surface — only ever-fresh, not-yet-
+              // practiced topics belong there.
+              final recent = topics
+                  .where((t) => _isNew(t) && !progress.containsKey(t.id))
+                  .toList()
                 ..sort((a, b) => b.createdAt!.compareTo(a.createdAt!));
               return Column(
                 children: [
@@ -137,6 +142,7 @@ class _ListScaffoldState extends State<_ListScaffold>
                           _DifficultyList(
                             topics:
                                 topics.where((t) => t.difficulty == d).toList(),
+                            progress: progress,
                             accent: _accentFor(d),
                             isNew: _isNew,
                           ),
@@ -298,10 +304,12 @@ class _RailCard extends StatelessWidget {
 class _DifficultyList extends StatelessWidget {
   const _DifficultyList({
     required this.topics,
+    required this.progress,
     required this.accent,
     required this.isNew,
   });
   final List<DailySpeakingTopic> topics;
+  final Map<String, TopicProgress> progress;
   final Color accent;
   final bool Function(DailySpeakingTopic) isNew;
 
@@ -321,30 +329,90 @@ class _DifficultyList extends StatelessWidget {
         ),
       );
     }
-    final sorted = [...topics]
-      ..sort((a, b) {
-        final aNew = isNew(a);
-        final bNew = isNew(b);
-        if (aNew != bNew) return aNew ? -1 : 1;
-        final aDate = a.createdAt;
-        final bDate = b.createdAt;
-        if (aDate != null && bDate != null) return bDate.compareTo(aDate);
-        if (aDate != null) return -1;
-        if (bDate != null) return 1;
-        return 0;
-      });
-    return ListView.separated(
+
+    // Fresh topics float to the top (newest first); already-practiced topics
+    // sink to the bottom under a "Practice again" header, most-recently-
+    // practiced first. Practiced topics are never hidden — re-speaking is good
+    // practice, and the list keeps feeling full.
+    final unpracticed = topics
+        .where((t) => !progress.containsKey(t.id))
+        .toList()
+      ..sort(_freshFirst);
+    final practiced = topics
+        .where((t) => progress.containsKey(t.id))
+        .toList()
+      ..sort((a, b) => progress[b.id]!
+          .lastPracticedAt
+          .compareTo(progress[a.id]!.lastPracticedAt));
+
+    final children = <Widget>[
+      for (final t in unpracticed)
+        Padding(
+          padding: const EdgeInsets.only(bottom: 8),
+          child: _TopicCard(
+            topic: t,
+            accent: accent,
+            showNewBadge: isNew(t),
+            progress: progress[t.id],
+          ),
+        ),
+      if (practiced.isNotEmpty) ...[
+        const SizedBox(height: 4),
+        _PracticeAgainHeader(count: practiced.length),
+        const SizedBox(height: 8),
+        for (final t in practiced)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: _TopicCard(
+              topic: t,
+              accent: accent,
+              showNewBadge: false,
+              progress: progress[t.id],
+            ),
+          ),
+      ],
+    ];
+
+    return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
-      itemCount: sorted.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 8),
-      itemBuilder: (context, index) {
-        final t = sorted[index];
-        return _TopicCard(
-          topic: t,
-          accent: accent,
-          showNewBadge: isNew(t),
-        );
-      },
+      children: children,
+    );
+  }
+
+  int _freshFirst(DailySpeakingTopic a, DailySpeakingTopic b) {
+    final aNew = isNew(a);
+    final bNew = isNew(b);
+    if (aNew != bNew) return aNew ? -1 : 1;
+    final aDate = a.createdAt;
+    final bDate = b.createdAt;
+    if (aDate != null && bDate != null) return bDate.compareTo(aDate);
+    if (aDate != null) return -1;
+    if (bDate != null) return 1;
+    return 0;
+  }
+}
+
+class _PracticeAgainHeader extends StatelessWidget {
+  const _PracticeAgainHeader({required this.count});
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Row(
+      children: [
+        Icon(Icons.refresh, size: 16, color: colorScheme.onSurfaceVariant),
+        const SizedBox(width: 6),
+        Text(
+          AppLocalizations.of(context).txtDsPracticeAgain(count),
+          style: PmpTextStyles.body2Semi
+              .copyWith(color: colorScheme.onSurfaceVariant),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: Divider(color: colorScheme.outlineVariant, height: 1),
+        ),
+      ],
     );
   }
 }
@@ -354,10 +422,12 @@ class _TopicCard extends StatelessWidget {
     required this.topic,
     required this.accent,
     required this.showNewBadge,
+    this.progress,
   });
   final DailySpeakingTopic topic;
   final Color accent;
   final bool showNewBadge;
+  final TopicProgress? progress;
 
   @override
   Widget build(BuildContext context) {
@@ -407,7 +477,10 @@ class _TopicCard extends StatelessWidget {
                                 .copyWith(color: colorScheme.onSurface),
                           ),
                         ),
-                        if (showNewBadge) ...[
+                        if (progress != null) ...[
+                          const SizedBox(width: 8),
+                          const _PracticedBadge(),
+                        ] else if (showNewBadge) ...[
                           const SizedBox(width: 8),
                           const _NewBadge(),
                         ],
@@ -448,6 +521,18 @@ class _TopicCard extends StatelessWidget {
                             ),
                           ),
                         ],
+                        if (progress != null) ...[
+                          const SizedBox(width: 12),
+                          const Icon(Icons.star_rounded,
+                              size: 14, color: PmpColors.success500),
+                          const SizedBox(width: 4),
+                          Text(
+                            AppLocalizations.of(context)
+                                .txtDsBestScore(progress!.bestScore),
+                            style: PmpTextStyles.sub
+                                .copyWith(color: PmpColors.success500),
+                          ),
+                        ],
                       ],
                     ),
                   ],
@@ -481,6 +566,36 @@ class _NewBadge extends StatelessWidget {
           color: colorScheme.onPrimary,
           letterSpacing: 0.4,
         ),
+      ),
+    );
+  }
+}
+
+class _PracticedBadge extends StatelessWidget {
+  const _PracticedBadge();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        color: PmpColors.success500.withValues(alpha: 0.16),
+        borderRadius: BorderRadius.circular(6),
+        border: Border.all(color: PmpColors.success500.withValues(alpha: 0.5)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(Icons.check, size: 12, color: PmpColors.success500),
+          const SizedBox(width: 3),
+          Text(
+            AppLocalizations.of(context).txtDsPracticed,
+            style: PmpTextStyles.subBold.copyWith(
+              color: PmpColors.success500,
+              letterSpacing: 0.4,
+            ),
+          ),
+        ],
       ),
     );
   }
