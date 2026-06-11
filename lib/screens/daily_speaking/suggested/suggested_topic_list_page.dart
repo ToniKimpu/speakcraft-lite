@@ -191,28 +191,36 @@ class _NewThisWeekRail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    // Horizontal padding lives INSIDE the list (and on the header) rather than
+    // on an outer wrapper — otherwise the outer inset shrinks the horizontal
+    // ListView's viewport and cards get clipped at the edges while swiping.
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+      padding: const EdgeInsets.only(top: 12, bottom: 4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Icon(Icons.auto_awesome,
-                  size: 16, color: colorScheme.primary),
-              const SizedBox(width: 6),
-              Text(
-                AppLocalizations.of(context).txtDsNewThisWeek,
-                style: PmpTextStyles.body2Semi
-                    .copyWith(color: colorScheme.onSurface),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              children: [
+                Icon(Icons.auto_awesome,
+                    size: 16, color: colorScheme.primary),
+                const SizedBox(width: 6),
+                Text(
+                  AppLocalizations.of(context).txtDsNewThisWeek,
+                  style: PmpTextStyles.body2Semi
+                      .copyWith(color: colorScheme.onSurface),
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 8),
           SizedBox(
             height: 132,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              clipBehavior: Clip.none,
               itemCount: topics.length,
               separatorBuilder: (_, __) => const SizedBox(width: 10),
               itemBuilder: (context, index) {
