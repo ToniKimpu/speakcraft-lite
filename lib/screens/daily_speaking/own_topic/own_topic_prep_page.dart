@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
@@ -30,9 +32,14 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
   late List<int> _order;
   static const int _visibleCount = 5;
 
+  /// A random placeholder hint, chosen once per visit so the empty field shows
+  /// a fresh example each time the page opens.
+  late final int _hintIndex;
+
   @override
   void initState() {
     super.initState();
+    _hintIndex = Random().nextInt(_kHintCount);
     _order = List<int>.generate(_kStarterCount, (i) => i)..shuffle();
     _controller.addListener(() {
       final ok = _controller.text.trim().isNotEmpty;
@@ -88,6 +95,7 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
     final pool = _starterPool(l10n);
     final starters =
         _order.take(_visibleCount).map((i) => pool[i]).toList(growable: false);
+    final hint = _hintPool(l10n)[_hintIndex];
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.txtDsOwnTopic)),
@@ -97,8 +105,6 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const _Hero(),
-              const SizedBox(height: 22),
               Text(
                 l10n.txtDsWhatToTalkAbout,
                 style: PmpTextStyles.h2.copyWith(
@@ -124,7 +130,7 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                 style: PmpTextStyles.body1Regular
                     .copyWith(color: colorScheme.onSurface),
                 decoration: InputDecoration(
-                  hintText: l10n.txtDsTopicFieldHint,
+                  hintText: hint,
                   prefixIcon: Icon(Icons.edit_outlined,
                       color: colorScheme.primary, size: 20),
                   filled: true,
@@ -168,8 +174,8 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                     icon: const Icon(Icons.shuffle, size: 16),
-                    label: Text(l10n.txtDsShuffle,
-                        style: PmpTextStyles.labelSemi),
+                    label:
+                        Text(l10n.txtDsShuffle, style: PmpTextStyles.labelSemi),
                   ),
                 ],
               ),
@@ -178,7 +184,8 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
                 spacing: 8,
                 runSpacing: 8,
                 children: starters
-                    .map((s) => _StarterChip(label: s, onTap: () => _useStarter(s)))
+                    .map((s) =>
+                        _StarterChip(label: s, onTap: () => _useStarter(s)))
                     .toList(growable: false),
               ),
               const SizedBox(height: 28),
@@ -227,40 +234,37 @@ List<String> _starterPool(AppLocalizations l10n) => [
       l10n.txtDsSuggestionFriend,
     ];
 
-/// Decorative header: a gradient mic badge above the screen title gives the
-/// page some warmth instead of opening on a bare heading.
-class _Hero extends StatelessWidget {
-  const _Hero();
+/// Pool of placeholder hints shown in the empty topic field — one is picked at
+/// random per visit. Keep [_kHintCount] in sync with this list's length.
+const int _kHintCount = 25;
 
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Container(
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            colorScheme.primary,
-            Color.lerp(colorScheme.primary, PmpColors.info500, 0.55)!,
-          ],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: colorScheme.primary.withValues(alpha: 0.3),
-            blurRadius: 16,
-            offset: const Offset(0, 6),
-          ),
-        ],
-      ),
-      child: Icon(Icons.record_voice_over,
-          color: colorScheme.onPrimary, size: 30),
-    );
-  }
-}
+List<String> _hintPool(AppLocalizations l10n) => [
+      l10n.txtDsFieldHint1,
+      l10n.txtDsFieldHint2,
+      l10n.txtDsFieldHint3,
+      l10n.txtDsFieldHint4,
+      l10n.txtDsFieldHint5,
+      l10n.txtDsFieldHint6,
+      l10n.txtDsFieldHint7,
+      l10n.txtDsFieldHint8,
+      l10n.txtDsFieldHint9,
+      l10n.txtDsFieldHint10,
+      l10n.txtDsFieldHint11,
+      l10n.txtDsFieldHint12,
+      l10n.txtDsFieldHint13,
+      l10n.txtDsFieldHint14,
+      l10n.txtDsFieldHint15,
+      l10n.txtDsFieldHint16,
+      l10n.txtDsFieldHint17,
+      l10n.txtDsFieldHint18,
+      l10n.txtDsFieldHint19,
+      l10n.txtDsFieldHint20,
+      l10n.txtDsFieldHint21,
+      l10n.txtDsFieldHint22,
+      l10n.txtDsFieldHint23,
+      l10n.txtDsFieldHint24,
+      l10n.txtDsFieldHint25,
+    ];
 
 /// Tonal, tappable starter chip — softer and more inviting than a plain
 /// outlined chip, and brand-tinted so it reads as a primary action.
@@ -281,8 +285,8 @@ class _StarterChip extends StatelessWidget {
         child: Ink(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-                color: colorScheme.primary.withValues(alpha: 0.25)),
+            border:
+                Border.all(color: colorScheme.primary.withValues(alpha: 0.25)),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
           child: Row(
@@ -335,7 +339,8 @@ class _ActionButton extends StatelessWidget {
     BoxDecoration decoration;
 
     if (primary) {
-      titleColor = disabled ? colorScheme.onSurfaceVariant : colorScheme.onPrimary;
+      titleColor =
+          disabled ? colorScheme.onSurfaceVariant : colorScheme.onPrimary;
       captionColor = disabled
           ? colorScheme.onSurfaceVariant.withValues(alpha: 0.7)
           : colorScheme.onPrimary.withValues(alpha: 0.85);
@@ -368,7 +373,8 @@ class _ActionButton extends StatelessWidget {
               ],
             );
     } else {
-      titleColor = disabled ? colorScheme.onSurfaceVariant : colorScheme.onSurface;
+      titleColor =
+          disabled ? colorScheme.onSurfaceVariant : colorScheme.onSurface;
       captionColor = colorScheme.onSurfaceVariant;
       iconColor = disabled ? colorScheme.onSurfaceVariant : colorScheme.primary;
       iconBg = (disabled ? colorScheme.onSurfaceVariant : colorScheme.primary)
@@ -408,7 +414,8 @@ class _ActionButton extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: PmpTextStyles.body1Semi.copyWith(color: titleColor),
+                      style:
+                          PmpTextStyles.body1Semi.copyWith(color: titleColor),
                     ),
                     const SizedBox(height: 2),
                     Text(

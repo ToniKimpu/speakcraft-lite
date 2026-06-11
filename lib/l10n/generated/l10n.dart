@@ -1699,6 +1699,256 @@ class AppLocalizations {
     );
   }
 
+  /// `e.g. The most stressful week I had`
+  String get txtDsFieldHint1 {
+    return Intl.message(
+      'e.g. The most stressful week I had',
+      name: 'txtDsFieldHint1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A small win I'm proud of`
+  String get txtDsFieldHint2 {
+    return Intl.message(
+      'e.g. A small win I\'m proud of',
+      name: 'txtDsFieldHint2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. Why I started learning English`
+  String get txtDsFieldHint3 {
+    return Intl.message(
+      'e.g. Why I started learning English',
+      name: 'txtDsFieldHint3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. My favorite way to relax`
+  String get txtDsFieldHint4 {
+    return Intl.message(
+      'e.g. My favorite way to relax',
+      name: 'txtDsFieldHint4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A person who inspires me`
+  String get txtDsFieldHint5 {
+    return Intl.message(
+      'e.g. A person who inspires me',
+      name: 'txtDsFieldHint5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. Something I changed my mind about`
+  String get txtDsFieldHint6 {
+    return Intl.message(
+      'e.g. Something I changed my mind about',
+      name: 'txtDsFieldHint6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A habit I want to build`
+  String get txtDsFieldHint7 {
+    return Intl.message(
+      'e.g. A habit I want to build',
+      name: 'txtDsFieldHint7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. The best meal I've ever had`
+  String get txtDsFieldHint8 {
+    return Intl.message(
+      'e.g. The best meal I\'ve ever had',
+      name: 'txtDsFieldHint8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A place I'd love to visit`
+  String get txtDsFieldHint9 {
+    return Intl.message(
+      'e.g. A place I\'d love to visit',
+      name: 'txtDsFieldHint9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. What I did last weekend`
+  String get txtDsFieldHint10 {
+    return Intl.message(
+      'e.g. What I did last weekend',
+      name: 'txtDsFieldHint10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A skill I wish I had`
+  String get txtDsFieldHint11 {
+    return Intl.message(
+      'e.g. A skill I wish I had',
+      name: 'txtDsFieldHint11',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. My morning routine`
+  String get txtDsFieldHint12 {
+    return Intl.message(
+      'e.g. My morning routine',
+      name: 'txtDsFieldHint12',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A video that stuck with me`
+  String get txtDsFieldHint13 {
+    return Intl.message(
+      'e.g. A video that stuck with me',
+      name: 'txtDsFieldHint13',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. Something that made me laugh recently`
+  String get txtDsFieldHint14 {
+    return Intl.message(
+      'e.g. Something that made me laugh recently',
+      name: 'txtDsFieldHint14',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A decision I'm trying to make`
+  String get txtDsFieldHint15 {
+    return Intl.message(
+      'e.g. A decision I\'m trying to make',
+      name: 'txtDsFieldHint15',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. What my ideal day looks like`
+  String get txtDsFieldHint16 {
+    return Intl.message(
+      'e.g. What my ideal day looks like',
+      name: 'txtDsFieldHint16',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A challenge at work or school`
+  String get txtDsFieldHint17 {
+    return Intl.message(
+      'e.g. A challenge at work or school',
+      name: 'txtDsFieldHint17',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. Advice I'd give my younger self`
+  String get txtDsFieldHint18 {
+    return Intl.message(
+      'e.g. Advice I\'d give my younger self',
+      name: 'txtDsFieldHint18',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A tradition in my family`
+  String get txtDsFieldHint19 {
+    return Intl.message(
+      'e.g. A tradition in my family',
+      name: 'txtDsFieldHint19',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. Something I'm grateful for today`
+  String get txtDsFieldHint20 {
+    return Intl.message(
+      'e.g. Something I\'m grateful for today',
+      name: 'txtDsFieldHint20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A goal for this year`
+  String get txtDsFieldHint21 {
+    return Intl.message(
+      'e.g. A goal for this year',
+      name: 'txtDsFieldHint21',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. The last time I felt nervous`
+  String get txtDsFieldHint22 {
+    return Intl.message(
+      'e.g. The last time I felt nervous',
+      name: 'txtDsFieldHint22',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. A song I can't stop playing`
+  String get txtDsFieldHint23 {
+    return Intl.message(
+      'e.g. A song I can\'t stop playing',
+      name: 'txtDsFieldHint23',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. How I spend my free time`
+  String get txtDsFieldHint24 {
+    return Intl.message(
+      'e.g. How I spend my free time',
+      name: 'txtDsFieldHint24',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. Something new I tried recently`
+  String get txtDsFieldHint25 {
+    return Intl.message(
+      'e.g. Something new I tried recently',
+      name: 'txtDsFieldHint25',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Your topic`
   String get txtDsYourTopic {
     return Intl.message(

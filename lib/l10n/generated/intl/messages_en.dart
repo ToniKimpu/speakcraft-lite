@@ -246,6 +246,81 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsExample": MessageLookupByLibrary.simpleMessage("Example"),
     "txtDsExamples": MessageLookupByLibrary.simpleMessage("Examples"),
     "txtDsFeedback": MessageLookupByLibrary.simpleMessage("Feedback"),
+    "txtDsFieldHint1": MessageLookupByLibrary.simpleMessage(
+      "e.g. The most stressful week I had",
+    ),
+    "txtDsFieldHint10": MessageLookupByLibrary.simpleMessage(
+      "e.g. What I did last weekend",
+    ),
+    "txtDsFieldHint11": MessageLookupByLibrary.simpleMessage(
+      "e.g. A skill I wish I had",
+    ),
+    "txtDsFieldHint12": MessageLookupByLibrary.simpleMessage(
+      "e.g. My morning routine",
+    ),
+    "txtDsFieldHint13": MessageLookupByLibrary.simpleMessage(
+      "e.g. A video that stuck with me",
+    ),
+    "txtDsFieldHint14": MessageLookupByLibrary.simpleMessage(
+      "e.g. Something that made me laugh recently",
+    ),
+    "txtDsFieldHint15": MessageLookupByLibrary.simpleMessage(
+      "e.g. A decision I\'m trying to make",
+    ),
+    "txtDsFieldHint16": MessageLookupByLibrary.simpleMessage(
+      "e.g. What my ideal day looks like",
+    ),
+    "txtDsFieldHint17": MessageLookupByLibrary.simpleMessage(
+      "e.g. A challenge at work or school",
+    ),
+    "txtDsFieldHint18": MessageLookupByLibrary.simpleMessage(
+      "e.g. Advice I\'d give my younger self",
+    ),
+    "txtDsFieldHint19": MessageLookupByLibrary.simpleMessage(
+      "e.g. A tradition in my family",
+    ),
+    "txtDsFieldHint2": MessageLookupByLibrary.simpleMessage(
+      "e.g. A small win I\'m proud of",
+    ),
+    "txtDsFieldHint20": MessageLookupByLibrary.simpleMessage(
+      "e.g. Something I\'m grateful for today",
+    ),
+    "txtDsFieldHint21": MessageLookupByLibrary.simpleMessage(
+      "e.g. A goal for this year",
+    ),
+    "txtDsFieldHint22": MessageLookupByLibrary.simpleMessage(
+      "e.g. The last time I felt nervous",
+    ),
+    "txtDsFieldHint23": MessageLookupByLibrary.simpleMessage(
+      "e.g. A song I can\'t stop playing",
+    ),
+    "txtDsFieldHint24": MessageLookupByLibrary.simpleMessage(
+      "e.g. How I spend my free time",
+    ),
+    "txtDsFieldHint25": MessageLookupByLibrary.simpleMessage(
+      "e.g. Something new I tried recently",
+    ),
+    "txtDsFieldHint3": MessageLookupByLibrary.simpleMessage(
+      "e.g. Why I started learning English",
+    ),
+    "txtDsFieldHint4": MessageLookupByLibrary.simpleMessage(
+      "e.g. My favorite way to relax",
+    ),
+    "txtDsFieldHint5": MessageLookupByLibrary.simpleMessage(
+      "e.g. A person who inspires me",
+    ),
+    "txtDsFieldHint6": MessageLookupByLibrary.simpleMessage(
+      "e.g. Something I changed my mind about",
+    ),
+    "txtDsFieldHint7": MessageLookupByLibrary.simpleMessage(
+      "e.g. A habit I want to build",
+    ),
+    "txtDsFieldHint8": MessageLookupByLibrary.simpleMessage(
+      "e.g. The best meal I\'ve ever had",
+    ),
+    "txtDsFieldHint9": MessageLookupByLibrary.simpleMessage(
+      "e.g. A place I\'d love to visit",
+    ),
     "txtDsFiller": MessageLookupByLibrary.simpleMessage("Filler"),
     "txtDsFillerWords": MessageLookupByLibrary.simpleMessage("Filler words"),
     "txtDsFluency": MessageLookupByLibrary.simpleMessage("Fluency"),
