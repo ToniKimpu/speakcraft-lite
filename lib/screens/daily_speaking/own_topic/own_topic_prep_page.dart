@@ -238,7 +238,7 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
               ),
               const SizedBox(height: 28),
               _ActionButton(
-                primary: true,
+                primary: false,
                 enabled: _canContinue,
                 onTap: _goPrepare,
                 icon: Icons.auto_awesome,
@@ -247,7 +247,7 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
               ),
               const SizedBox(height: 12),
               _ActionButton(
-                primary: false,
+                primary: true,
                 enabled: _canContinue,
                 onTap: _goRecord,
                 icon: Icons.mic,
