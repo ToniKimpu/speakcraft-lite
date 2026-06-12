@@ -29,10 +29,14 @@ TTL) so the app stops serving the old cached copies.
 
 import mimetypes
 import os
+import socket
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
+
+MAX_RETRIES = 4
 
 ZONE = os.environ.get("BUNNY_STORAGE_ZONE", "").strip()
 ACCESS_KEY = os.environ.get("BUNNY_ACCESS_KEY", "").strip()
@@ -51,8 +55,17 @@ def put_file(local: Path, remote_path: str) -> int:
         method="PUT",
         headers={"AccessKey": ACCESS_KEY, "Content-Type": content_type},
     )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        resp.read()
+    # Retry transient network timeouts (the SG region can be flaky).
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                resp.read()
+            return len(data)
+        except (socket.timeout, TimeoutError, urllib.error.URLError) as e:
+            if attempt == MAX_RETRIES:
+                raise
+            print(f"    retry {attempt}/{MAX_RETRIES - 1} ({e}) ...")
+            time.sleep(2 * attempt)
     return len(data)
 
 
