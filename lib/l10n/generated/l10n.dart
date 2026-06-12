@@ -64,6 +64,41 @@ class AppLocalizations {
     return Intl.message('Cancel', name: 'txtCancel', desc: '', args: []);
   }
 
+  /// `Log out`
+  String get txtLogout {
+    return Intl.message('Log out', name: 'txtLogout', desc: '', args: []);
+  }
+
+  /// `Log out?`
+  String get txtLogoutConfirmTitle {
+    return Intl.message(
+      'Log out?',
+      name: 'txtLogoutConfirmTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You'll need to sign in again to continue learning.`
+  String get txtLogoutConfirmMessage {
+    return Intl.message(
+      'You\'ll need to sign in again to continue learning.',
+      name: 'txtLogoutConfirmMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Couldn't log out. Please try again.`
+  String get txtLogoutFailed {
+    return Intl.message(
+      'Couldn\'t log out. Please try again.',
+      name: 'txtLogoutFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Coming Soon`
   String get txtComingSoon {
     return Intl.message(

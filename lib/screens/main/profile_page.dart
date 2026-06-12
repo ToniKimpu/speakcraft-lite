@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:speakcraft/bloc/auth/auth_bloc.dart';
 import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/core/di/service_locator.dart';
@@ -53,6 +55,8 @@ class ProfilePage extends StatelessWidget {
                 const _AppearanceCard(),
                 const SizedBox(height: 16),
                 _SettingsCard(appUser: appUser),
+                const SizedBox(height: 16),
+                const _LogoutCard(),
               ],
             );
           },
@@ -409,6 +413,175 @@ class _SettingsCard extends StatelessWidget {
             },
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _LogoutCard extends StatefulWidget {
+  const _LogoutCard();
+
+  @override
+  State<_LogoutCard> createState() => _LogoutCardState();
+}
+
+class _LogoutCardState extends State<_LogoutCard> {
+  bool _loggingOut = false;
+
+  Future<void> _confirmAndLogout() async {
+    final l10n = AppLocalizations.of(context);
+
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) {
+        final colorScheme = Theme.of(dialogContext).colorScheme;
+        return Dialog(
+          backgroundColor: colorScheme.surface,
+          insetPadding: const EdgeInsets.symmetric(horizontal: 48),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18),
+            side: BorderSide(color: colorScheme.outlineVariant),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 18, 12, 8),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Text(
+                    l10n.txtLogoutConfirmTitle,
+                    style: PmpTextStyles.body1Semi.copyWith(
+                      color: colorScheme.onSurface,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Text(
+                    l10n.txtLogoutConfirmMessage,
+                    style: PmpTextStyles.body2Regular.copyWith(
+                      color: colorScheme.onSurfaceVariant,
+                      height: 1.35,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(dialogContext, false),
+                      style: TextButton.styleFrom(
+                        foregroundColor: colorScheme.onSurfaceVariant,
+                      ),
+                      child: Text(l10n.txtCancel),
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.pop(dialogContext, true),
+                      style: TextButton.styleFrom(
+                        foregroundColor: PmpColors.destructive500,
+                      ),
+                      child: Text(l10n.txtLogout),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+
+    if (confirmed != true || !mounted) return;
+    setState(() => _loggingOut = true);
+    context.read<AuthBloc>().add(const AuthEvent.logout());
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return BlocListener<AuthBloc, AuthState>(
+      listener: (context, state) {
+        // Only react to logout we initiated from this screen.
+        if (!_loggingOut) return;
+        state.maybeWhen(
+          unauthenticated: () {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              PmpRoutes.loginScreen,
+              (route) => false,
+            );
+          },
+          error: (_) => _onLogoutFailed(l10n),
+          socketError: (_) => _onLogoutFailed(l10n),
+          orElse: () {},
+        );
+      },
+      child: Container(
+        width: double.infinity,
+        decoration: ProfilePage._cardDecoration(context),
+        child: Material(
+          color: Colors.transparent,
+          borderRadius: const BorderRadius.all(Radius.circular(16)),
+          child: InkWell(
+            onTap: _loggingOut ? null : _confirmAndLogout,
+            borderRadius: const BorderRadius.all(Radius.circular(16)),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+              child: Row(
+                children: [
+                  Container(
+                    height: 36,
+                    width: 35,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: PmpColors.destructive500,
+                    ),
+                    child: Icon(
+                      Icons.logout_rounded,
+                      size: 20,
+                      color: colorScheme.onInverseSurface,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      l10n.txtLogout,
+                      style: PmpTextStyles.body2Semi.copyWith(
+                        color: PmpColors.destructive500,
+                      ),
+                    ),
+                  ),
+                  if (_loggingOut)
+                    const SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        color: PmpColors.destructive500,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _onLogoutFailed(AppLocalizations l10n) {
+    if (!mounted) return;
+    setState(() => _loggingOut = false);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(l10n.txtLogoutFailed),
+        behavior: SnackBarBehavior.floating,
       ),
     );
   }

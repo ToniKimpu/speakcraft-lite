@@ -1,6 +1,10 @@
 {
   "txtOk": "Okay",
   "txtCancel": "Cancel",
+  "txtLogout": "Log out",
+  "txtLogoutConfirmTitle": "Log out?",
+  "txtLogoutConfirmMessage": "You'll need to sign in again to continue learning.",
+  "txtLogoutFailed": "Couldn't log out. Please try again.",
   "txtComingSoon": "Coming Soon",
   "txtWillUploadSoon": "မကြာခင်တင်ပေးပါမည်",
   "txtName": "Name",

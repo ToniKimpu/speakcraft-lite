@@ -722,6 +722,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Listening And Shadowing",
     ),
     "txtLogin": MessageLookupByLibrary.simpleMessage("Login"),
+    "txtLogout": MessageLookupByLibrary.simpleMessage("Log out"),
+    "txtLogoutConfirmMessage": MessageLookupByLibrary.simpleMessage(
+      "You\'ll need to sign in again to continue learning.",
+    ),
+    "txtLogoutConfirmTitle": MessageLookupByLibrary.simpleMessage("Log out?"),
+    "txtLogoutFailed": MessageLookupByLibrary.simpleMessage(
+      "Couldn\'t log out. Please try again.",
+    ),
     "txtModuleBookmarksLabel1": MessageLookupByLibrary.simpleMessage(
       "ကိုယ်တိုင် save ထားသော bookmarks များ",
     ),

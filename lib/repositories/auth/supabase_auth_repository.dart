@@ -1,6 +1,7 @@
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:speakcraft/config/env.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/app_user/app_user.dart';
 import 'package:speakcraft/services/supabase_service.dart';
 
@@ -160,11 +161,25 @@ class SupabaseAuthRepository implements AuthRepository {
           .rpc('get_user', params: {'user_id_param': user.id})
           .single()
           .withConverter((json) => AppUser.fromJson(json));
-    } on GoogleSignInException catch (e) {
+    } on GoogleSignInException catch (e, st) {
+      // Log every case, including "canceled" — on Android a config/SHA mismatch
+      // is surfaced through Credential Manager as a cancel, so a silent pop with
+      // code=canceled can mean the OAuth client doesn't match the build.
+      AppLogger.instance.error(
+        '[GoogleLogin] GoogleSignInException code=${e.code} '
+        'description=${e.description} details=${e.details}',
+        error: e,
+        stackTrace: st,
+      );
       if (e.code == GoogleSignInExceptionCode.canceled) {
-        return null; // user dismissed the picker
+        return null; // user dismissed the picker (or unmatched OAuth client)
       }
       throw Exception(e.toString());
+    } catch (e, st) {
+      // Anything else (PlatformException, AuthException, network, get_user RLS…).
+      AppLogger.instance.error('[GoogleLogin] ${e.runtimeType}: $e',
+          error: e, stackTrace: st);
+      rethrow;
     }
   }
 
