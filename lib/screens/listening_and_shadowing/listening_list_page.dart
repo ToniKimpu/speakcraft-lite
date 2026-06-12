@@ -1,8 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:speakcraft/bloc/listening/listening_bloc.dart';
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/listening/listening.dart';
@@ -18,6 +20,11 @@ class ListeningListPage extends StatefulWidget {
 }
 
 class _ListeningListPageState extends State<ListeningListPage> {
+  /// One-time module intro: shown until the learner dismisses it. `null` while
+  /// the stored flag is still loading, so we don't flash the card then hide it.
+  static const String _introDismissedKey = 'listening_intro_dismissed';
+  bool? _introDismissed;
+
   @override
   void initState() {
     super.initState();
@@ -26,6 +33,21 @@ class _ListeningListPageState extends State<ListeningListPage> {
     context.read<VideoStepProgressBloc>().add(
           const VideoStepProgressEvent.loadAll(),
         );
+    _loadIntroFlag();
+  }
+
+  Future<void> _loadIntroFlag() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return;
+    setState(() {
+      _introDismissed = prefs.getBool(_introDismissedKey) ?? false;
+    });
+  }
+
+  Future<void> _dismissIntro() async {
+    setState(() => _introDismissed = true);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_introDismissedKey, true);
   }
 
   @override
@@ -67,19 +89,27 @@ class _ListeningListPageState extends State<ListeningListPage> {
                     final anyStarted = listenings.any(
                       (l) => lessonProgressFor(progressState, l).hasStarted,
                     );
+                    // Show the one-time module intro as a leading card until
+                    // dismissed (and only once the stored flag has loaded).
+                    final showIntro = _introDismissed == false;
+                    final leading = showIntro ? 1 : 0;
                     return ListView.separated(
                       padding: const EdgeInsets.all(16),
-                      itemCount: listenings.length,
+                      itemCount: listenings.length + leading,
                       separatorBuilder: (context, index) =>
                           const SizedBox(height: 14),
                       itemBuilder: (context, index) {
-                        final listening = listenings[index];
+                        if (showIntro && index == 0) {
+                          return _ModuleIntroCard(onDismiss: _dismissIntro);
+                        }
+                        final li = index - leading;
+                        final listening = listenings[li];
                         return _ListeningCard(
                           listening: listening,
                           progress: lessonProgressFor(progressState, listening),
                           // A brand-new learner (nothing started anywhere) gets
                           // a single "Start here" nudge on the first lesson.
-                          isStartHere: !anyStarted && index == 0,
+                          isStartHere: !anyStarted && li == 0,
                         );
                       },
                     );
@@ -94,6 +124,133 @@ class _ListeningListPageState extends State<ListeningListPage> {
     );
   }
 
+}
+
+/// One-time, dismissable intro that frames what the whole Listening &
+/// Shadowing module gives the learner (before → after) and names the 4-step
+/// path each lesson follows. Sits at the top of the list until dismissed.
+class _ModuleIntroCard extends StatelessWidget {
+  const _ModuleIntroCard({required this.onDismiss});
+
+  final VoidCallback onDismiss;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
+    final accent = colorScheme.primary;
+
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            accent.withValues(alpha: 0.14),
+            Color.lerp(accent, PmpColors.info500, 0.55)!
+                .withValues(alpha: 0.10),
+          ],
+        ),
+        border: Border.all(color: accent.withValues(alpha: 0.25)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(Icons.auto_awesome_rounded, size: 18, color: accent),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  l10n.txtListeningIntroTitle,
+                  style: PmpTextStyles.body1Semi.copyWith(
+                    color: colorScheme.onSurface,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          _IntroLine(
+            icon: Icons.volume_off_rounded,
+            text: l10n.txtListeningIntroBefore,
+            color: colorScheme.onSurfaceVariant,
+          ),
+          const SizedBox(height: 6),
+          _IntroLine(
+            icon: Icons.graphic_eq_rounded,
+            text: l10n.txtListeningIntroAfter,
+            color: colorScheme.onSurface,
+          ),
+          const SizedBox(height: 12),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: BoxDecoration(
+              color: colorScheme.surface.withValues(alpha: 0.55),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.timeline_rounded,
+                    size: 16, color: colorScheme.onSurfaceVariant),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    l10n.txtListeningIntroPath,
+                    style: PmpTextStyles.labelSemi.copyWith(
+                      color: colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 6),
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton(
+              onPressed: onDismiss,
+              child: Text(l10n.txtGotIt),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _IntroLine extends StatelessWidget {
+  const _IntroLine({
+    required this.icon,
+    required this.text,
+    required this.color,
+  });
+
+  final IconData icon;
+  final String text;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 1),
+          child: Icon(icon, size: 16, color: color),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            text,
+            style: PmpTextStyles.body2Regular.copyWith(color: color),
+          ),
+        ),
+      ],
+    );
+  }
 }
 
 class _ListeningCard extends StatelessWidget {

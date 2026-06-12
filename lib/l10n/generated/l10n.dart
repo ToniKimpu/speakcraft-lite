@@ -774,6 +774,51 @@ class AppLocalizations {
     );
   }
 
+  /// `Understand real English — and speak it`
+  String get txtListeningIntroTitle {
+    return Intl.message(
+      'Understand real English — and speak it',
+      name: 'txtListeningIntroTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Right now, native talks can sound like one fast, blurry word.`
+  String get txtListeningIntroBefore {
+    return Intl.message(
+      'Right now, native talks can sound like one fast, blurry word.',
+      name: 'txtListeningIntroBefore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Work through these lessons and you'll follow real podcasts, YouTube & TED talks — and speak with their rhythm.`
+  String get txtListeningIntroAfter {
+    return Intl.message(
+      'Work through these lessons and you\'ll follow real podcasts, YouTube & TED talks — and speak with their rhythm.',
+      name: 'txtListeningIntroAfter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Every lesson is a 4-step path: Watch → Study → Shadow → Record.`
+  String get txtListeningIntroPath {
+    return Intl.message(
+      'Every lesson is a 4-step path: Watch → Study → Shadow → Record.',
+      name: 'txtListeningIntroPath',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Got it`
+  String get txtGotIt {
+    return Intl.message('Got it', name: 'txtGotIt', desc: '', args: []);
+  }
+
   /// `Listening And Shadowing`
   String get txtListeningListTitle {
     return Intl.message(

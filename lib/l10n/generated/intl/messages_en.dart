@@ -688,6 +688,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtForgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
       "Reset password",
     ),
+    "txtGotIt": MessageLookupByLibrary.simpleMessage("Got it"),
     "txtHighlightLine": MessageLookupByLibrary.simpleMessage("Line"),
     "txtHighlightNone": MessageLookupByLibrary.simpleMessage("None"),
     "txtHighlightReadAlong": MessageLookupByLibrary.simpleMessage("Read Along"),
@@ -695,6 +696,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtIncorrect": MessageLookupByLibrary.simpleMessage("Incorrect"),
     "txtKeepIt": MessageLookupByLibrary.simpleMessage("Keep It"),
     "txtLesson": MessageLookupByLibrary.simpleMessage("Lesson"),
+    "txtListeningIntroAfter": MessageLookupByLibrary.simpleMessage(
+      "Work through these lessons and you\'ll follow real podcasts, YouTube & TED talks — and speak with their rhythm.",
+    ),
+    "txtListeningIntroBefore": MessageLookupByLibrary.simpleMessage(
+      "Right now, native talks can sound like one fast, blurry word.",
+    ),
+    "txtListeningIntroPath": MessageLookupByLibrary.simpleMessage(
+      "Every lesson is a 4-step path: Watch → Study → Shadow → Record.",
+    ),
+    "txtListeningIntroTitle": MessageLookupByLibrary.simpleMessage(
+      "Understand real English — and speak it",
+    ),
     "txtListeningListTitle": MessageLookupByLibrary.simpleMessage(
       "Listening And Shadowing",
     ),
