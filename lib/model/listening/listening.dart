@@ -22,6 +22,12 @@ class Listening with _$Listening {
     @JsonKey(name: 'sentence_explanation_path') @Default('') String sentenceExplanationPath,
     @JsonKey(name: 'vocabulary_path') @Default('') String vocabularyPath,
     @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+    // Precomputed lesson-content counts, populated by the admin at save time
+    // from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
+    // (banner falls back to generic copy).
+    @JsonKey(name: 'sentence_count') @Default(0) int sentenceCount,
+    @JsonKey(name: 'vocab_count') @Default(0) int vocabCount,
+    @JsonKey(name: 'pattern_count') @Default(0) int patternCount,
   }) = _Listening;
 
   factory Listening.fromJson(Map<String, dynamic> json) =>

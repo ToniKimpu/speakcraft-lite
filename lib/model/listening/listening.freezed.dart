@@ -44,7 +44,16 @@ mixin _$Listening {
   @JsonKey(name: 'vocabulary_path')
   String get vocabularyPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'listening_category_id')
-  int? get listeningCategoryId => throw _privateConstructorUsedError;
+  int? get listeningCategoryId =>
+      throw _privateConstructorUsedError; // Precomputed lesson-content counts, populated by the admin at save time
+// from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
+// (banner falls back to generic copy).
+  @JsonKey(name: 'sentence_count')
+  int get sentenceCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'vocab_count')
+  int get vocabCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'pattern_count')
+  int get patternCount => throw _privateConstructorUsedError;
 
   /// Serializes this Listening to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -77,7 +86,10 @@ abstract class $ListeningCopyWith<$Res> {
       @JsonKey(name: 'sentence_explanation_path')
       String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
-      @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
+      @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+      @JsonKey(name: 'sentence_count') int sentenceCount,
+      @JsonKey(name: 'vocab_count') int vocabCount,
+      @JsonKey(name: 'pattern_count') int patternCount});
 }
 
 /// @nodoc
@@ -110,6 +122,9 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
     Object? sentenceExplanationPath = null,
     Object? vocabularyPath = null,
     Object? listeningCategoryId = freezed,
+    Object? sentenceCount = null,
+    Object? vocabCount = null,
+    Object? patternCount = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -172,6 +187,18 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      sentenceCount: null == sentenceCount
+          ? _value.sentenceCount
+          : sentenceCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      vocabCount: null == vocabCount
+          ? _value.vocabCount
+          : vocabCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      patternCount: null == patternCount
+          ? _value.patternCount
+          : patternCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -200,7 +227,10 @@ abstract class _$$ListeningImplCopyWith<$Res>
       @JsonKey(name: 'sentence_explanation_path')
       String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
-      @JsonKey(name: 'listening_category_id') int? listeningCategoryId});
+      @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+      @JsonKey(name: 'sentence_count') int sentenceCount,
+      @JsonKey(name: 'vocab_count') int vocabCount,
+      @JsonKey(name: 'pattern_count') int patternCount});
 }
 
 /// @nodoc
@@ -231,6 +261,9 @@ class __$$ListeningImplCopyWithImpl<$Res>
     Object? sentenceExplanationPath = null,
     Object? vocabularyPath = null,
     Object? listeningCategoryId = freezed,
+    Object? sentenceCount = null,
+    Object? vocabCount = null,
+    Object? patternCount = null,
   }) {
     return _then(_$ListeningImpl(
       id: null == id
@@ -293,6 +326,18 @@ class __$$ListeningImplCopyWithImpl<$Res>
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      sentenceCount: null == sentenceCount
+          ? _value.sentenceCount
+          : sentenceCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      vocabCount: null == vocabCount
+          ? _value.vocabCount
+          : vocabCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      patternCount: null == patternCount
+          ? _value.patternCount
+          : patternCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -316,7 +361,10 @@ class _$ListeningImpl implements _Listening {
       @JsonKey(name: 'sentence_explanation_path')
       this.sentenceExplanationPath = '',
       @JsonKey(name: 'vocabulary_path') this.vocabularyPath = '',
-      @JsonKey(name: 'listening_category_id') this.listeningCategoryId});
+      @JsonKey(name: 'listening_category_id') this.listeningCategoryId,
+      @JsonKey(name: 'sentence_count') this.sentenceCount = 0,
+      @JsonKey(name: 'vocab_count') this.vocabCount = 0,
+      @JsonKey(name: 'pattern_count') this.patternCount = 0});
 
   factory _$ListeningImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListeningImplFromJson(json);
@@ -361,10 +409,22 @@ class _$ListeningImpl implements _Listening {
   @override
   @JsonKey(name: 'listening_category_id')
   final int? listeningCategoryId;
+// Precomputed lesson-content counts, populated by the admin at save time
+// from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
+// (banner falls back to generic copy).
+  @override
+  @JsonKey(name: 'sentence_count')
+  final int sentenceCount;
+  @override
+  @JsonKey(name: 'vocab_count')
+  final int vocabCount;
+  @override
+  @JsonKey(name: 'pattern_count')
+  final int patternCount;
 
   @override
   String toString() {
-    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, listeningCategoryId: $listeningCategoryId)';
+    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, listeningCategoryId: $listeningCategoryId, sentenceCount: $sentenceCount, vocabCount: $vocabCount, patternCount: $patternCount)';
   }
 
   @override
@@ -398,7 +458,13 @@ class _$ListeningImpl implements _Listening {
             (identical(other.vocabularyPath, vocabularyPath) ||
                 other.vocabularyPath == vocabularyPath) &&
             (identical(other.listeningCategoryId, listeningCategoryId) ||
-                other.listeningCategoryId == listeningCategoryId));
+                other.listeningCategoryId == listeningCategoryId) &&
+            (identical(other.sentenceCount, sentenceCount) ||
+                other.sentenceCount == sentenceCount) &&
+            (identical(other.vocabCount, vocabCount) ||
+                other.vocabCount == vocabCount) &&
+            (identical(other.patternCount, patternCount) ||
+                other.patternCount == patternCount));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -419,7 +485,10 @@ class _$ListeningImpl implements _Listening {
       recordSubtitlePath,
       sentenceExplanationPath,
       vocabularyPath,
-      listeningCategoryId);
+      listeningCategoryId,
+      sentenceCount,
+      vocabCount,
+      patternCount);
 
   /// Create a copy of Listening
   /// with the given fields replaced by the non-null parameter values.
@@ -454,8 +523,11 @@ abstract class _Listening implements Listening {
       @JsonKey(name: 'sentence_explanation_path')
       final String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') final String vocabularyPath,
-      @JsonKey(name: 'listening_category_id')
-      final int? listeningCategoryId}) = _$ListeningImpl;
+      @JsonKey(name: 'listening_category_id') final int? listeningCategoryId,
+      @JsonKey(name: 'sentence_count') final int sentenceCount,
+      @JsonKey(name: 'vocab_count') final int vocabCount,
+      @JsonKey(name: 'pattern_count')
+      final int patternCount}) = _$ListeningImpl;
 
   factory _Listening.fromJson(Map<String, dynamic> json) =
       _$ListeningImpl.fromJson;
@@ -499,7 +571,19 @@ abstract class _Listening implements Listening {
   String get vocabularyPath;
   @override
   @JsonKey(name: 'listening_category_id')
-  int? get listeningCategoryId;
+  int?
+      get listeningCategoryId; // Precomputed lesson-content counts, populated by the admin at save time
+// from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
+// (banner falls back to generic copy).
+  @override
+  @JsonKey(name: 'sentence_count')
+  int get sentenceCount;
+  @override
+  @JsonKey(name: 'vocab_count')
+  int get vocabCount;
+  @override
+  @JsonKey(name: 'pattern_count')
+  int get patternCount;
 
   /// Create a copy of Listening
   /// with the given fields replaced by the non-null parameter values.

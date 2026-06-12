@@ -24,6 +24,9 @@ _$ListeningImpl _$$ListeningImplFromJson(Map<String, dynamic> json) =>
           json['sentence_explanation_path'] as String? ?? '',
       vocabularyPath: json['vocabulary_path'] as String? ?? '',
       listeningCategoryId: (json['listening_category_id'] as num?)?.toInt(),
+      sentenceCount: (json['sentence_count'] as num?)?.toInt() ?? 0,
+      vocabCount: (json['vocab_count'] as num?)?.toInt() ?? 0,
+      patternCount: (json['pattern_count'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$ListeningImplToJson(_$ListeningImpl instance) =>
@@ -43,4 +46,7 @@ Map<String, dynamic> _$$ListeningImplToJson(_$ListeningImpl instance) =>
       'sentence_explanation_path': instance.sentenceExplanationPath,
       'vocabulary_path': instance.vocabularyPath,
       'listening_category_id': instance.listeningCategoryId,
+      'sentence_count': instance.sentenceCount,
+      'vocab_count': instance.vocabCount,
+      'pattern_count': instance.patternCount,
     };

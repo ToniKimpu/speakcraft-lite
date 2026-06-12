@@ -86,13 +86,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m28(total) => "out of ${total}";
 
-  static String m29(done, total) => "${done} of ${total}";
+  static String m29(minutes) =>
+      "Follow this ${minutes}-min talk at full native speed";
 
-  static String m30(seconds) => "Resend in ${seconds}s";
+  static String m30(count) => "Master ${count} speaking patterns natives use";
 
-  static String m31(count) => "${count}-step lesson";
+  static String m31(count) => "Shadow ${count} sentences at native speed";
 
-  static String m32(done, total) => "${done} of ${total} steps";
+  static String m32(count) =>
+      "Learn ${count} new words with correct pronunciation";
+
+  static String m33(done, total) => "${done} of ${total}";
+
+  static String m34(seconds) => "Resend in ${seconds}s";
+
+  static String m35(count) => "${count}-step lesson";
+
+  static String m36(done, total) => "${done} of ${total} steps";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -761,6 +771,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtOutcomeBullet3": MessageLookupByLibrary.simpleMessage(
       "Train your pronunciation until it feels natural",
     ),
+    "txtOutcomeCountMinutes": m29,
+    "txtOutcomeCountPatterns": m30,
+    "txtOutcomeCountSentences": m31,
+    "txtOutcomeCountVocab": m32,
     "txtOutcomeStepLadder": MessageLookupByLibrary.simpleMessage(
       "Do the 4 steps in order — each one makes the next easier.",
     ),
@@ -779,7 +793,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtPrivacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "txtProfile": MessageLookupByLibrary.simpleMessage("Profile"),
-    "txtProgressXofY": m29,
+    "txtProgressXofY": m33,
     "txtRecommendedNext": MessageLookupByLibrary.simpleMessage(
       "Recommended next",
     ),
@@ -791,7 +805,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtRemove": MessageLookupByLibrary.simpleMessage("Remove"),
     "txtRemoved": MessageLookupByLibrary.simpleMessage("Removed"),
     "txtResendCode": MessageLookupByLibrary.simpleMessage("Resend code"),
-    "txtResendInSeconds": m30,
+    "txtResendInSeconds": m34,
     "txtResetPasswordButton": MessageLookupByLibrary.simpleMessage(
       "Reset password",
     ),
@@ -814,7 +828,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Speech Practice Session",
     ),
     "txtStartHere": MessageLookupByLibrary.simpleMessage("Start here"),
-    "txtStepLesson": m31,
+    "txtStepLesson": m35,
     "txtStepRecordSubtitle": MessageLookupByLibrary.simpleMessage(
       "Record yourself and compare to the original",
     ),
@@ -837,7 +851,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Listen with subtitles to understand the content",
     ),
     "txtStepWatchTitle": MessageLookupByLibrary.simpleMessage("Watch"),
-    "txtStepsProgress": m32,
+    "txtStepsProgress": m36,
     "txtStream": MessageLookupByLibrary.simpleMessage("Stream"),
     "txtTapToRecord": MessageLookupByLibrary.simpleMessage("Tap to record"),
     "txtThemeDark": MessageLookupByLibrary.simpleMessage("Dark"),

@@ -774,6 +774,46 @@ class AppLocalizations {
     );
   }
 
+  /// `Follow this {minutes}-min talk at full native speed`
+  String txtOutcomeCountMinutes(Object minutes) {
+    return Intl.message(
+      'Follow this $minutes-min talk at full native speed',
+      name: 'txtOutcomeCountMinutes',
+      desc: '',
+      args: [minutes],
+    );
+  }
+
+  /// `Learn {count} new words with correct pronunciation`
+  String txtOutcomeCountVocab(Object count) {
+    return Intl.message(
+      'Learn $count new words with correct pronunciation',
+      name: 'txtOutcomeCountVocab',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Master {count} speaking patterns natives use`
+  String txtOutcomeCountPatterns(Object count) {
+    return Intl.message(
+      'Master $count speaking patterns natives use',
+      name: 'txtOutcomeCountPatterns',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Shadow {count} sentences at native speed`
+  String txtOutcomeCountSentences(Object count) {
+    return Intl.message(
+      'Shadow $count sentences at native speed',
+      name: 'txtOutcomeCountSentences',
+      desc: '',
+      args: [count],
+    );
+  }
+
   /// `Understand real English — and speak it`
   String get txtListeningIntroTitle {
     return Intl.message(

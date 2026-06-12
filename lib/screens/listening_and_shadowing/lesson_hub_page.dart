@@ -122,7 +122,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
                       // step list once they start, so it nudges without
                       // getting in the way on return visits.
                       if (!hasStarted) ...[
-                        const _OutcomeBanner(),
+                        _OutcomeBanner(listening: widget.listening),
                         const SizedBox(height: 20),
                       ],
                       for (int i = 0; i < steps.length; i++) ...[
@@ -215,13 +215,45 @@ class _StepConfig {
 /// started. Frames the value (outcome bullets) and nudges them to do the steps
 /// in order, turning a menu of steps into a path worth finishing.
 class _OutcomeBanner extends StatelessWidget {
-  const _OutcomeBanner();
+  const _OutcomeBanner({required this.listening});
+
+  final Listening listening;
+
+  /// Builds the outcome bullets. When the admin has precomputed content counts
+  /// for this video we show concrete, specific lines ("Learn 18 new words");
+  /// otherwise we fall back to generic value copy so the banner still lands.
+  List<String> _bullets(AppLocalizations l10n) {
+    final durationSeconds = listening.end - listening.start;
+    final minutes = durationSeconds > 0 ? (durationSeconds / 60).round() : 0;
+    final hasCounts = listening.vocabCount > 0 ||
+        listening.patternCount > 0 ||
+        listening.sentenceCount > 0;
+
+    if (!hasCounts) {
+      return [
+        l10n.txtOutcomeBullet1,
+        l10n.txtOutcomeBullet2,
+        l10n.txtOutcomeBullet3,
+      ];
+    }
+
+    return [
+      if (minutes > 0) l10n.txtOutcomeCountMinutes(minutes),
+      if (listening.vocabCount > 0)
+        l10n.txtOutcomeCountVocab(listening.vocabCount),
+      if (listening.patternCount > 0)
+        l10n.txtOutcomeCountPatterns(listening.patternCount),
+      if (listening.sentenceCount > 0)
+        l10n.txtOutcomeCountSentences(listening.sentenceCount),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
     final accent = colorScheme.primary;
+    final bullets = _bullets(l10n);
 
     return Container(
       padding: const EdgeInsets.all(16),
@@ -265,11 +297,10 @@ class _OutcomeBanner extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          _OutcomeBullet(text: l10n.txtOutcomeBullet1),
-          const SizedBox(height: 8),
-          _OutcomeBullet(text: l10n.txtOutcomeBullet2),
-          const SizedBox(height: 8),
-          _OutcomeBullet(text: l10n.txtOutcomeBullet3),
+          for (int i = 0; i < bullets.length; i++) ...[
+            if (i > 0) const SizedBox(height: 8),
+            _OutcomeBullet(text: bullets[i]),
+          ],
           const SizedBox(height: 14),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),

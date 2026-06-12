@@ -123,6 +123,30 @@
   "txtOutcomeBullet2": "Pick up real phrases you can use yourself when you speak",
   "txtOutcomeBullet3": "Train your pronunciation until it feels natural",
   "txtOutcomeStepLadder": "Do the 4 steps in order — each one makes the next easier.",
+  "txtOutcomeCountMinutes": "Follow this {minutes}-min talk at full native speed",
+  "@txtOutcomeCountMinutes": {
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "txtOutcomeCountVocab": "Learn {count} new words with correct pronunciation",
+  "@txtOutcomeCountVocab": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "txtOutcomeCountPatterns": "Master {count} speaking patterns natives use",
+  "@txtOutcomeCountPatterns": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "txtOutcomeCountSentences": "Shadow {count} sentences at native speed",
+  "@txtOutcomeCountSentences": {
+    "placeholders": {
+      "count": {}
+    }
+  },
   "txtListeningIntroTitle": "Understand real English — and speak it",
   "txtListeningIntroBefore": "Right now, native talks can sound like one fast, blurry word.",
   "txtListeningIntroAfter": "Work through these lessons and you'll follow real podcasts, YouTube & TED talks — and speak with their rhythm.",
