@@ -736,6 +736,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtOtpFieldLabel": MessageLookupByLibrary.simpleMessage("6-digit code"),
     "txtOtpSentTo": m27,
     "txtOutOf": m28,
+    "txtOutcomeBannerTitle": MessageLookupByLibrary.simpleMessage(
+      "What you\'ll get from this lesson",
+    ),
+    "txtOutcomeBullet1": MessageLookupByLibrary.simpleMessage(
+      "Follow this talk at full native speed — without rewinding",
+    ),
+    "txtOutcomeBullet2": MessageLookupByLibrary.simpleMessage(
+      "Pick up real phrases you can use yourself when you speak",
+    ),
+    "txtOutcomeBullet3": MessageLookupByLibrary.simpleMessage(
+      "Train your pronunciation until it feels natural",
+    ),
+    "txtOutcomeStepLadder": MessageLookupByLibrary.simpleMessage(
+      "Do the 4 steps in order — each one makes the next easier.",
+    ),
     "txtPasswordMinLength": MessageLookupByLibrary.simpleMessage(
       "Password must be at least 6 characters",
     ),

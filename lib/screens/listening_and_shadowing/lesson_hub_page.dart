@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
@@ -100,6 +101,8 @@ class _LessonHubPageState extends State<LessonHubPage> {
           final nextIndex = steps.indexWhere(
               (s) => stepStates[s] != VideoStepState.done);
           final allDone = nextIndex == -1;
+          final hasStarted = stepStates.values
+              .any((s) => s != VideoStepState.notStarted);
 
           return SafeArea(
             child: Column(
@@ -114,6 +117,14 @@ class _LessonHubPageState extends State<LessonHubPage> {
                         totalCount: steps.length,
                       ),
                       const SizedBox(height: 20),
+                      // Outcome "what you'll get" intro — only before the
+                      // learner has touched any step. Collapses to the plain
+                      // step list once they start, so it nudges without
+                      // getting in the way on return visits.
+                      if (!hasStarted) ...[
+                        const _OutcomeBanner(),
+                        const SizedBox(height: 20),
+                      ],
                       for (int i = 0; i < steps.length; i++) ...[
                         _StepCard(
                           number: i + 1,
@@ -198,6 +209,124 @@ class _StepConfig {
   final String subtitle;
   final IconData icon;
   final String route;
+}
+
+/// "What you'll get" intro shown above the step list before the learner has
+/// started. Frames the value (outcome bullets) and nudges them to do the steps
+/// in order, turning a menu of steps into a path worth finishing.
+class _OutcomeBanner extends StatelessWidget {
+  const _OutcomeBanner();
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
+    final accent = colorScheme.primary;
+
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            accent.withValues(alpha: 0.12),
+            Color.lerp(accent, PmpColors.info500, 0.55)!
+                .withValues(alpha: 0.10),
+          ],
+        ),
+        border: Border.all(color: accent.withValues(alpha: 0.25)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: accent.withValues(alpha: 0.15),
+                ),
+                alignment: Alignment.center,
+                child: Icon(Icons.flag_rounded, size: 18, color: accent),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  l10n.txtOutcomeBannerTitle,
+                  style: PmpTextStyles.body1Semi.copyWith(
+                    color: colorScheme.onSurface,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          _OutcomeBullet(text: l10n.txtOutcomeBullet1),
+          const SizedBox(height: 8),
+          _OutcomeBullet(text: l10n.txtOutcomeBullet2),
+          const SizedBox(height: 8),
+          _OutcomeBullet(text: l10n.txtOutcomeBullet3),
+          const SizedBox(height: 14),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: BoxDecoration(
+              color: colorScheme.surface.withValues(alpha: 0.55),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.timeline_rounded,
+                    size: 16, color: colorScheme.onSurfaceVariant),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    l10n.txtOutcomeStepLadder,
+                    style: PmpTextStyles.labelSemi.copyWith(
+                      color: colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _OutcomeBullet extends StatelessWidget {
+  const _OutcomeBullet({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(top: 1),
+          child: Icon(Icons.check_circle_rounded,
+              size: 18, color: PmpColors.success500),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: Text(
+            text,
+            style: PmpTextStyles.body2Regular.copyWith(
+              color: colorScheme.onSurface,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }
 
 class _Header extends StatelessWidget {
