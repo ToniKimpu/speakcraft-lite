@@ -231,10 +231,14 @@ class _StatusSection extends StatelessWidget {
           color: colorScheme.onSurfaceVariant,
         ),
         const SizedBox(width: 4),
-        Text(
-          AppLocalizations.of(context).txtStepLesson(progress.totalCount),
-          style: PmpTextStyles.labelMedium.copyWith(
-            color: colorScheme.onSurfaceVariant,
+        Flexible(
+          child: Text(
+            AppLocalizations.of(context).txtStepLesson(progress.totalCount),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: PmpTextStyles.labelMedium.copyWith(
+              color: colorScheme.onSurfaceVariant,
+            ),
           ),
         ),
         if (isStartHere) ...[
