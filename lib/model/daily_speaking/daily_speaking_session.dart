@@ -16,6 +16,7 @@ class DailySpeakingOnRamp {
   static const String justTalk = 'just_talk';
   static const String ownTopic = 'own_topic';
   static const String suggested = 'suggested';
+  static const String guided = 'guided';
 }
 
 class DailySpeakingInputMode {

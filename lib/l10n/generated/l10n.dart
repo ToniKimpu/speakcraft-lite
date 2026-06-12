@@ -1354,6 +1354,231 @@ class AppLocalizations {
     );
   }
 
+  /// `Start here`
+  String get txtDsGuided {
+    return Intl.message('Start here', name: 'txtDsGuided', desc: '', args: []);
+  }
+
+  /// `New to speaking? We'll walk you through it — study a model, make it your own, then say it.`
+  String get txtDsGuidedDesc {
+    return Intl.message(
+      'New to speaking? We\'ll walk you through it — study a model, make it your own, then say it.',
+      name: 'txtDsGuidedDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick a lesson. We'll show you a model, help you make your own version, then you record it and get feedback. Higher levels give you less to lean on.`
+  String get txtDsGuidedIntro {
+    return Intl.message(
+      'Pick a lesson. We\'ll show you a model, help you make your own version, then you record it and get feedback. Higher levels give you less to lean on.',
+      name: 'txtDsGuidedIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Level {level}`
+  String txtDsGuidedLevel(Object level) {
+    return Intl.message(
+      'Level $level',
+      name: 'txtDsGuidedLevel',
+      desc: '',
+      args: [level],
+    );
+  }
+
+  /// `What you'll be able to do`
+  String get txtDsGuidedObjectiveHeading {
+    return Intl.message(
+      'What you\'ll be able to do',
+      name: 'txtDsGuidedObjectiveHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A model to learn from`
+  String get txtDsGuidedModelHeading {
+    return Intl.message(
+      'A model to learn from',
+      name: 'txtDsGuidedModelHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Line by line`
+  String get txtDsGuidedBreakdownHeading {
+    return Intl.message(
+      'Line by line',
+      name: 'txtDsGuidedBreakdownHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Now make it your own`
+  String get txtDsGuidedBuildHeading {
+    return Intl.message(
+      'Now make it your own',
+      name: 'txtDsGuidedBuildHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fill in the blanks with your own answers.`
+  String get txtDsGuidedBuildSubhead {
+    return Intl.message(
+      'Fill in the blanks with your own answers.',
+      name: 'txtDsGuidedBuildSubhead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your paragraph so far`
+  String get txtDsGuidedPreviewHeading {
+    return Intl.message(
+      'Your paragraph so far',
+      name: 'txtDsGuidedPreviewHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This is yours now`
+  String get txtDsGuidedYoursHeading {
+    return Intl.message(
+      'This is yours now',
+      name: 'txtDsGuidedYoursHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You built this yourself. Next, say it out loud and get feedback — just like the other practices.`
+  String get txtDsGuidedYoursSubhead {
+    return Intl.message(
+      'You built this yourself. Next, say it out loud and get feedback — just like the other practices.',
+      name: 'txtDsGuidedYoursSubhead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I'm ready — record`
+  String get txtDsGuidedReadyRecord {
+    return Intl.message(
+      'I\'m ready — record',
+      name: 'txtDsGuidedReadyRecord',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fill in every blank to continue`
+  String get txtDsGuidedFillToContinue {
+    return Intl.message(
+      'Fill in every blank to continue',
+      name: 'txtDsGuidedFillToContinue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get txtDsGuidedBack {
+    return Intl.message('Back', name: 'txtDsGuidedBack', desc: '', args: []);
+  }
+
+  /// `Next`
+  String get txtDsGuidedNext {
+    return Intl.message('Next', name: 'txtDsGuidedNext', desc: '', args: []);
+  }
+
+  /// `Let's start`
+  String get txtDsGuidedStart {
+    return Intl.message(
+      'Let\'s start',
+      name: 'txtDsGuidedStart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your paragraph`
+  String get txtDsGuidedYourParagraph {
+    return Intl.message(
+      'Your paragraph',
+      name: 'txtDsGuidedYourParagraph',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your keywords — say the rest in your own words`
+  String get txtDsGuidedYourKeywords {
+    return Intl.message(
+      'Your keywords — say the rest in your own words',
+      name: 'txtDsGuidedYourKeywords',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try saying it in your own words — you've got this.`
+  String get txtDsGuidedSpeakFromMemory {
+    return Intl.message(
+      'Try saying it in your own words — you\'ve got this.',
+      name: 'txtDsGuidedSpeakFromMemory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copy`
+  String get txtDsGuidedCopy {
+    return Intl.message('Copy', name: 'txtDsGuidedCopy', desc: '', args: []);
+  }
+
+  /// `Edit`
+  String get txtDsGuidedEdit {
+    return Intl.message('Edit', name: 'txtDsGuidedEdit', desc: '', args: []);
+  }
+
+  /// `Copied to clipboard`
+  String get txtDsGuidedCopied {
+    return Intl.message(
+      'Copied to clipboard',
+      name: 'txtDsGuidedCopied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit your paragraph`
+  String get txtDsGuidedEditTitle {
+    return Intl.message(
+      'Edit your paragraph',
+      name: 'txtDsGuidedEditTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get txtDsGuidedEditSave {
+    return Intl.message(
+      'Save',
+      name: 'txtDsGuidedEditSave',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Limit reached`
   String get txtDsLimitReached {
     return Intl.message(

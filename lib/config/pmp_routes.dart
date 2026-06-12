@@ -4,6 +4,7 @@ import 'package:speakcraft/bloc/daily_speaking/daily_speaking_prep_bloc.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
+import 'package:speakcraft/model/daily_speaking/guided_lesson.dart';
 import 'package:speakcraft/screens/auth/login_screen.dart';
 import 'package:speakcraft/screens/auth/sign_up_screen.dart';
 import 'package:speakcraft/screens/daily_speaking/daily_speaking_entry_page.dart';
@@ -19,6 +20,9 @@ import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_scaffold_p
 import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_list_page.dart';
 import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_prep_page.dart';
 import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_record_page.dart';
+import 'package:speakcraft/screens/daily_speaking/guided/guided_lesson_list_page.dart';
+import 'package:speakcraft/screens/daily_speaking/guided/guided_lesson_page.dart';
+import 'package:speakcraft/screens/daily_speaking/guided/guided_record_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_list.dart';
@@ -82,6 +86,9 @@ class PmpRoutes {
   static const dailySpeakingSuggestedList = '/daily_speaking/suggested';
   static const dailySpeakingSuggestedPrep = '/daily_speaking/suggested/prep';
   static const dailySpeakingSuggestedRecord = '/daily_speaking/suggested/record';
+  static const dailySpeakingGuidedList = '/daily_speaking/guided';
+  static const dailySpeakingGuidedLesson = '/daily_speaking/guided/lesson';
+  static const dailySpeakingGuidedRecord = '/daily_speaking/guided/record';
   static const dailySpeakingChooseFeedback = '/daily_speaking/choose_feedback';
   static const dailySpeakingFeedback = '/daily_speaking/feedback';
   static const dailySpeakingReview = '/daily_speaking/review';
@@ -287,6 +294,25 @@ class PmpRoutes {
         return _getRoute(
           SuggestedTopicRecordPage(
             topic: topic,
+            topicAttemptId: args['topicAttemptId'] as String?,
+            revisionNumber: args['revisionNumber'] as int? ?? 1,
+          ),
+          settings,
+        );
+      case dailySpeakingGuidedList:
+        return _getRoute(const GuidedLessonListPage(), settings);
+      case dailySpeakingGuidedLesson:
+        final args = settings.arguments as Map<String, dynamic>;
+        final lesson = args['lesson'] as GuidedLesson;
+        return _getRoute(GuidedLessonPage(lesson: lesson), settings);
+      case dailySpeakingGuidedRecord:
+        final args = settings.arguments as Map<String, dynamic>;
+        final topic = args['topic'] as DailySpeakingTopic;
+        return _getRoute(
+          GuidedRecordPage(
+            topic: topic,
+            userParagraph: args['userParagraph'] as String?,
+            level: args['level'] as int? ?? 3,
             topicAttemptId: args['topicAttemptId'] as String?,
             revisionNumber: args['revisionNumber'] as int? ?? 1,
           ),

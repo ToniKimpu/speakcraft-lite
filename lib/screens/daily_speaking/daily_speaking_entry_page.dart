@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/daily_speaking/daily_speaking_history_bloc.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
@@ -12,8 +13,11 @@ import 'widgets/session_limit_banner.dart';
 // to 3 before release.
 const int kDailySessionLimit = 100;
 
-/// Daily Speaking landing page. Three on-ramps, all leading to the same
-/// voice-feedback flow: Just talk, Own topic, and Suggested topic. Each on-ramp
+/// Daily Speaking landing page. Four on-ramps, all leading to the same
+/// voice-feedback flow: Start here (guided), Just talk, Own topic, and
+/// Suggested topic. "Start here" is the gentlest door — a worked-model →
+/// build-your-own → record walkthrough for learners who freeze on a blank
+/// page; it converges into the same recorder + feedback as the rest. Each on-ramp
 /// can capture via the live mic OR by importing an existing recording (the
 /// "Import a recording instead" option on each record page) — import is a
 /// capture method, not a separate on-ramp. It's speaking practice — no text path.
@@ -80,6 +84,21 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
                   const SizedBox(height: 20),
                   const SessionLimitBanner(dailyLimit: kDailySessionLimit),
                   const SizedBox(height: 24),
+                  _OnRampCard(
+                    title: l10n.txtDsGuided,
+                    subtitle: l10n.txtDsGuidedDesc,
+                    icon: Icons.school,
+                    accentColor: PmpColors.info500,
+                    enabled: !exhausted,
+                    badge: exhausted ? l10n.txtDsLimitReached : null,
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        PmpRoutes.dailySpeakingGuidedList,
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 12),
                   _OnRampCard(
                     title: l10n.txtDsJustTalk,
                     subtitle: l10n.txtDsJustTalkDesc,

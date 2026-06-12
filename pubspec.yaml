@@ -119,6 +119,7 @@ flutter:
     - assets/paul_rudd_interview/
     - assets/going_viral_taugh_me/
     - assets/daily_speaking/topics/
+    - assets/daily_speaking/guided/
     - logo/
     # - shorebird.yaml
 

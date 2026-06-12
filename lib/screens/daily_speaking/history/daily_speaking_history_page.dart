@@ -133,6 +133,7 @@ class _ChainTile extends StatelessWidget {
       DailySpeakingOnRamp.justTalk => l10n.txtDsJustTalk,
       DailySpeakingOnRamp.ownTopic => l10n.txtDsOwnTopic,
       DailySpeakingOnRamp.suggested => l10n.txtDsSuggested,
+      DailySpeakingOnRamp.guided => l10n.txtDsGuided,
       _ => s.onRamp,
     };
     return s.decodedTopic?.title ??
@@ -317,6 +318,8 @@ class _SessionTile extends StatelessWidget {
         return l10n.txtDsOwnTopic;
       case DailySpeakingOnRamp.suggested:
         return l10n.txtDsSuggested;
+      case DailySpeakingOnRamp.guided:
+        return l10n.txtDsGuided;
       default:
         return session.onRamp;
     }

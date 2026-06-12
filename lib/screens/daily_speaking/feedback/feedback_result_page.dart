@@ -158,6 +158,12 @@ class _FeedbackResultPageState extends State<FeedbackResultPage> {
       route = PmpRoutes.dailySpeakingJustRecord;
     } else if (session.onRamp == DailySpeakingOnRamp.suggested) {
       route = PmpRoutes.dailySpeakingSuggestedRecord;
+    } else if (session.onRamp == DailySpeakingOnRamp.guided) {
+      // Polish a guided attempt by re-recording the same topic. Only the topic
+      // rides along (no paragraph/level) — a retry is naturally less scaffolded,
+      // so the record page shows just the objective banner and the "speak from
+      // memory" hint.
+      route = PmpRoutes.dailySpeakingGuidedRecord;
     } else {
       // Own-topic — always re-record now (the text path is retired, so even a
       // legacy text session is polished by speaking it).
