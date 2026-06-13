@@ -190,6 +190,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "That\'s all the prep help for this topic.",
     ),
     "txtDsAtLeastChars": m2,
+    "txtDsAvoid": MessageLookupByLibrary.simpleMessage("Avoid"),
     "txtDsBestScore": m3,
     "txtDsBetterWordChoices": MessageLookupByLibrary.simpleMessage(
       "Better word choices",
@@ -256,6 +257,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "One polished version of your whole talk.",
     ),
     "txtDsExample": MessageLookupByLibrary.simpleMessage("Example"),
+    "txtDsExampleAnswer": MessageLookupByLibrary.simpleMessage(
+      "Example answer",
+    ),
     "txtDsExamples": MessageLookupByLibrary.simpleMessage("Examples"),
     "txtDsFeedback": MessageLookupByLibrary.simpleMessage("Feedback"),
     "txtDsFieldHint1": MessageLookupByLibrary.simpleMessage(
@@ -418,6 +422,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsHelpMePrepareCaption": MessageLookupByLibrary.simpleMessage(
       "Get vocabulary, phrases & ideas",
     ),
+    "txtDsHideExample": MessageLookupByLibrary.simpleMessage("Hide example"),
     "txtDsHighlights": MessageLookupByLibrary.simpleMessage("Highlights"),
     "txtDsHistory": MessageLookupByLibrary.simpleMessage("History"),
     "txtDsHistoryTitle": MessageLookupByLibrary.simpleMessage(
@@ -426,6 +431,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsHowItWorks": MessageLookupByLibrary.simpleMessage("How it works"),
     "txtDsHowItWorksBody": MessageLookupByLibrary.simpleMessage(
       "• Tap the mic and just talk for up to 5 minutes.\n• When you stop, the AI gives you a score, strengths, fixes, and a Burmese explanation.\n• Don\'t worry about being perfect — the goal is to keep speaking.",
+    ),
+    "txtDsHowToStructure": MessageLookupByLibrary.simpleMessage(
+      "How to structure it",
     ),
     "txtDsIdioms": MessageLookupByLibrary.simpleMessage(
       "Idioms & phrasal verbs",
@@ -511,6 +519,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDsPace": MessageLookupByLibrary.simpleMessage("Pace"),
     "txtDsPaceWpm": m12,
+    "txtDsPeekExample": MessageLookupByLibrary.simpleMessage(
+      "Peek at an example answer",
+    ),
     "txtDsPhrasesToTry": MessageLookupByLibrary.simpleMessage(
       "Phrases to try next time",
     ),
@@ -571,6 +582,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsReviewingWriting": MessageLookupByLibrary.simpleMessage(
       "Reviewing your writing…",
     ),
+    "txtDsSayInstead": MessageLookupByLibrary.simpleMessage("Say"),
     "txtDsScoreCheerHigh": MessageLookupByLibrary.simpleMessage(
       "Excellent — you sound really fluent!",
     ),
@@ -669,6 +681,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tap and start talking",
     ),
     "txtDsTapToStop": MessageLookupByLibrary.simpleMessage("Tap to stop"),
+    "txtDsTapWordHint": MessageLookupByLibrary.simpleMessage(
+      "Tap a word to see its meaning",
+    ),
     "txtDsTargetPhraseCount": m22,
     "txtDsTargetPhrases": MessageLookupByLibrary.simpleMessage(
       "Target phrases",
@@ -712,6 +727,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Words you can use instead",
     ),
     "txtDsVocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
+    "txtDsWatchOutFor": MessageLookupByLibrary.simpleMessage(
+      "Watch out for these",
+    ),
     "txtDsWhatToTalkAbout": MessageLookupByLibrary.simpleMessage(
       "What do you want to talk about?",
     ),

@@ -391,10 +391,12 @@ class _ModelStep extends StatelessWidget {
           if (lesson.vocabulary.isNotEmpty) ...[
             const SizedBox(height: 10),
             _GuidedSectionHeader(
-              icon: Icons.translate,
+              icon: Icons.menu_book_outlined,
               iconColor: colorScheme.primary,
               title: l10n.txtDsWordsYouMightUse,
             ),
+            const SizedBox(height: 8),
+            _TapHint(text: l10n.txtDsTapWordHint),
             const SizedBox(height: 10),
             Wrap(
               spacing: 8,
@@ -1168,6 +1170,34 @@ class _SpeakerButtonState extends State<_SpeakerButton> {
           ),
         );
       },
+    );
+  }
+}
+
+/// A subtle "tap a chip" affordance, since the vocab chips don't otherwise
+/// signal they open a detail sheet. Mirrors the suggested-topic prep page.
+class _TapHint extends StatelessWidget {
+  const _TapHint({required this.text});
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Row(
+      children: [
+        Icon(Icons.touch_app_outlined,
+            size: 14, color: colorScheme.onSurfaceVariant),
+        const SizedBox(width: 6),
+        Flexible(
+          child: Text(
+            text,
+            style: PmpTextStyles.sub.copyWith(
+              color: colorScheme.onSurfaceVariant,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

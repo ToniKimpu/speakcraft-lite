@@ -2734,6 +2734,86 @@ class AppLocalizations {
     return Intl.message('Examples', name: 'txtDsExamples', desc: '', args: []);
   }
 
+  /// `Tap a word to see its meaning`
+  String get txtDsTapWordHint {
+    return Intl.message(
+      'Tap a word to see its meaning',
+      name: 'txtDsTapWordHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How to structure it`
+  String get txtDsHowToStructure {
+    return Intl.message(
+      'How to structure it',
+      name: 'txtDsHowToStructure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grammar patterns`
+  String get txtDsGrammarPatterns {
+    return Intl.message(
+      'Grammar patterns',
+      name: 'txtDsGrammarPatterns',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Watch out for these`
+  String get txtDsWatchOutFor {
+    return Intl.message(
+      'Watch out for these',
+      name: 'txtDsWatchOutFor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid`
+  String get txtDsAvoid {
+    return Intl.message('Avoid', name: 'txtDsAvoid', desc: '', args: []);
+  }
+
+  /// `Say`
+  String get txtDsSayInstead {
+    return Intl.message('Say', name: 'txtDsSayInstead', desc: '', args: []);
+  }
+
+  /// `Example answer`
+  String get txtDsExampleAnswer {
+    return Intl.message(
+      'Example answer',
+      name: 'txtDsExampleAnswer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Peek at an example answer`
+  String get txtDsPeekExample {
+    return Intl.message(
+      'Peek at an example answer',
+      name: 'txtDsPeekExample',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hide example`
+  String get txtDsHideExample {
+    return Intl.message(
+      'Hide example',
+      name: 'txtDsHideExample',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Words you can use instead`
   String get txtDsVocabSwapTitle {
     return Intl.message(
@@ -3024,16 +3104,6 @@ class AppLocalizations {
     return Intl.message(
       'Sentence fixes',
       name: 'txtDsSecSentenceFixes',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Grammar patterns`
-  String get txtDsGrammarPatterns {
-    return Intl.message(
-      'Grammar patterns',
-      name: 'txtDsGrammarPatterns',
       desc: '',
       args: [],
     );

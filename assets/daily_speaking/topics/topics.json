@@ -48,12 +48,38 @@
       {
         "term": "savory",
         "definition_mm": "ငန်ငန်/ရှားရှား အရသာ၊ မချိုသော",
-        "example_en": "I prefer savory food over sweets."
+        "example_en": "I prefer savory food over sweets.",
+        "related": ["salty", "rich", "not sweet"]
       },
       {
         "term": "comfort food",
         "definition_mm": "စိတ်ချမ်းသာ ပျော်ရွှင်စေသော အစားအစာ",
-        "example_en": "On rainy days, soup is my favorite comfort food."
+        "example_en": "On rainy days, soup is my favorite comfort food.",
+        "related": ["home cooking", "a feel-good meal"]
+      },
+      {
+        "term": "flavor",
+        "definition_mm": "အရသာ",
+        "example_en": "The flavor is rich and a little spicy.",
+        "related": ["taste", "richness"]
+      },
+      {
+        "term": "ingredient",
+        "definition_mm": "ဟင်းချက်ရာတွင် ပါဝင်တဲ့ ပစ္စည်း",
+        "example_en": "The main ingredient is fresh fish.",
+        "related": ["component", "what's in it"]
+      },
+      {
+        "term": "homemade",
+        "definition_mm": "အိမ်မှာ ကိုယ်တိုင် ချက်ထားသော",
+        "example_en": "Homemade food always tastes better to me.",
+        "related": ["home-cooked", "made from scratch"]
+      },
+      {
+        "term": "filling",
+        "definition_mm": "ဗိုက်ပြည့်စေသော",
+        "example_en": "It's a filling meal that keeps me full for hours.",
+        "related": ["hearty", "satisfying"]
       }
     ],
     "target_phrases": [
@@ -66,6 +92,24 @@
         "translation_mm": "အကြိုက်ဆုံးက ...ပါ"
       }
     ],
+    "outline": [
+      { "point_en": "Say what the meal is and why it's your favorite", "point_mm": "ဘာအစားအစာလဲ၊ ဘာလို့ အကြိုက်ဆုံးလဲ ပြောပါ။", "starter_en": "My favorite meal is ..." },
+      { "point_en": "Describe what's in it and how it tastes", "point_mm": "ဘာတွေ ပါဝင်လဲ၊ အရသာ ဘယ်လိုလဲ ဖော်ပြပါ။", "starter_en": "It's made with ... and it tastes ..." },
+      { "point_en": "Say when you eat it and who makes it best", "point_mm": "ဘယ်အချိန် စားလဲ၊ ဘယ်သူ အကောင်းဆုံး ချက်လဲ ပြောပါ။", "starter_en": "I usually eat it ... My ... makes it best." },
+      { "point_en": "End with how it makes you feel", "point_mm": "ဘယ်လို ခံစားရလဲ နိဂုံးချုပ်ပါ။", "starter_en": "It always makes me feel ..." }
+    ],
+    "grammar_patterns": [
+      { "pattern_en": "It's made with + (ingredients)", "example_en": "It's made with rice, fish, and herbs.", "note_mm": "ဘာတွေ ပါဝင်လဲ ပြောတဲ့အခါ သုံးပါတယ်။" },
+      { "pattern_en": "present simple for habits (I + verb)", "example_en": "I eat it almost every weekend.", "note_mm": "ပုံမှန် လုပ်နေကျအကြောင်း ပြောရင် ကြိယာကို ပစ္စုပ္ပန် (eat, like) ပုံစံ သုံးပါ။" },
+      { "pattern_en": "It tastes + (adjective)", "example_en": "It tastes spicy and a little sour.", "note_mm": "အရသာကို ပြောတဲ့အခါ 'tastes' နောက်မှာ adjective ထည့်ပါ။" }
+    ],
+    "common_mistakes": [
+      { "avoid_en": "It's very delicious so much.", "use_en": "It's really delicious.", "note_mm": "'delicious' ကိုယ်တိုင်က 'အရမ်းကောင်း' ပါပြီ — 'very / so much' ထပ်ဖြည့်စရာ မလိုပါ။" },
+      { "avoid_en": "I like eat noodles.", "use_en": "I like eating noodles.", "note_mm": "'like' နောက်မှာ ကြိယာဆို -ing (eating) ပုံစံ သုံးပါ။" },
+      { "avoid_en": "My mother cook it best.", "use_en": "My mother cooks it best.", "note_mm": "She / He / မိခင် (တစ်ဦး) ဆိုရင် ကြိယာနောက်မှာ -s ထည့်ပါ — cooks။" }
+    ],
+    "example_answer_en": "My favorite meal is mohinga, a fish noodle soup. It's made with rice noodles, fish broth, and lots of herbs, and it tastes savory and a little spicy. I usually eat it for breakfast on weekends, and my grandmother makes it best — hers has the richest flavor. It always reminds me of home and makes me feel comfortable and happy.",
+    "example_answer_mm": "ကျွန်တော် အကြိုက်ဆုံး အစားအစာက ငါးနဲ့ ချက်တဲ့ ခေါက်ဆွဲဟင်းချို မုန့်ဟင်းခါးပါ။ ဆန်ခေါက်ဆွဲ၊ ငါးဟင်းရည်နဲ့ ဟင်းသီးဟင်းရွက် အများကြီးနဲ့ ချက်ထားပြီး အရသာက ငန်ငန်နဲ့ နည်းနည်း စပ်ပါတယ်။ ပုံမှန်အားဖြင့် စနေတနင်္ဂနွေ မနက်စာအဖြစ် စားလေ့ရှိပြီး အဖွားက အကောင်းဆုံး ချက်တတ်ပါတယ် — သူ့ဟင်းက အရသာ အရှိဆုံးပါ။ အဲဒါက အိမ်ကို သတိရစေပြီး စိတ်အေးချမ်းသာ ပျော်ရွှင်စေပါတယ်။",
     "warmup_questions": [
       "What ingredients are in it?",
       "Who makes it best?",
@@ -192,12 +236,38 @@
       {
         "term": "overwhelming",
         "definition_mm": "လွန်ကဲစွာ ဖိအားများသော၊ ရင်ဆိုင်ရန် ခက်ခဲသော",
-        "example_en": "The amount of work felt overwhelming at first."
+        "example_en": "The amount of work felt overwhelming at first.",
+        "related": ["stressful", "too much to handle", "exhausting"]
       },
       {
         "term": "deadline",
         "definition_mm": "ပြီးဆုံးရမယ့် နောက်ဆုံးအချိန်",
-        "example_en": "I had a tight deadline to meet."
+        "example_en": "I had a tight deadline to meet.",
+        "related": ["due date", "time limit", "cut-off"]
+      },
+      {
+        "term": "juggle",
+        "definition_mm": "အလုပ်များစွာကို တစ်ပြိုင်တည်း ကိုင်တွယ်လုပ်ဆောင်သည်",
+        "example_en": "I had to juggle three tasks at once.",
+        "related": ["manage", "handle at once", "balance"]
+      },
+      {
+        "term": "prioritize",
+        "definition_mm": "အရေးကြီးတာကို ဦးစားပေး စီစဉ်သည်",
+        "example_en": "I had to prioritize the most urgent work first.",
+        "related": ["rank", "put first"]
+      },
+      {
+        "term": "fall behind",
+        "definition_mm": "သတ်မှတ်ချိန်ထက် နောက်ကျ ကျန်ရစ်သည်",
+        "example_en": "I started to fall behind on my emails.",
+        "related": ["get behind", "lag"]
+      },
+      {
+        "term": "cope",
+        "definition_mm": "ခက်ခဲမှုကို ရင်ဆိုင် ဖြေရှင်းသည်",
+        "example_en": "I tried to cope by staying calm and making a list.",
+        "related": ["manage", "deal with it", "get through"]
       }
     ],
     "target_phrases": [
@@ -214,6 +284,24 @@
         "translation_mm": "သင်ခန်းစာအနေနဲ့ ..."
       }
     ],
+    "outline": [
+      { "point_en": "Set the scene — when it was and what happened", "point_mm": "ဘယ်တုန်းက ဘာဖြစ်ခဲ့လဲဆိုတာ အစချီပြောပါ။", "starter_en": "A few weeks ago, I had a really tough day at work because ..." },
+      { "point_en": "Explain what made it so hard", "point_mm": "ဘာကြောင့် ခက်ခဲခဲ့လဲ ရှင်းပြပါ။", "starter_en": "What made it difficult was ..." },
+      { "point_en": "Describe how you got through it", "point_mm": "ဘယ်လို ကျော်ဖြတ်ခဲ့လဲ ပြောပါ။", "starter_en": "To deal with it, I ..." },
+      { "point_en": "End with what you learned", "point_mm": "ဘာသင်ခန်းစာ ရခဲ့လဲ နိဂုံးချုပ်ပါ။", "starter_en": "Looking back, what I learned was ..." }
+    ],
+    "grammar_patterns": [
+      { "pattern_en": "past simple (verb + -ed / irregular)", "example_en": "I missed the bus and arrived late.", "note_mm": "ဖြစ်ပြီးခဲ့တာ ပြောရင် အတိတ်ပုံစံ သုံးပါ — go→went, have→had, feel→felt။" },
+      { "pattern_en": "I ended up + V-ing", "example_en": "I ended up asking my manager for help.", "note_mm": "မရည်ရွယ်ဘဲ နောက်ဆုံး ဖြစ်သွားတဲ့အရာကို ပြောတဲ့အခါ သုံးပါတယ်။" },
+      { "pattern_en": "If I had ___, I would have ___", "example_en": "If I had planned better, I wouldn't have panicked.", "note_mm": "အတိတ်က မဖြစ်ခဲ့တာကို စိတ်ကူးနဲ့ ပြန်ပြောတဲ့ (third conditional) ပုံစံပါ။" }
+    ],
+    "common_mistakes": [
+      { "avoid_en": "I was very stress.", "use_en": "I was very stressed.", "note_mm": "ခံစားချက်ကို 'stressed' (adjective) နဲ့ ပြောပါ — 'stress' က နာမ်ပါ။" },
+      { "avoid_en": "Yesterday I go to work late.", "use_en": "Yesterday I went to work late.", "note_mm": "အတိတ်အချိန်ဆိုရင် ကြိယာကို past (went) ပြောင်းပါ။" },
+      { "avoid_en": "I'm boring at work.", "use_en": "I'm bored at work.", "note_mm": "'bored' က ကိုယ်ခံစားရတာ၊ 'boring' က ငြီးငွေ့ဖွယ်ကောင်းတာ — မမှားပါစေနဲ့။" }
+    ],
+    "example_answer_en": "A few weeks ago, I had a really tough day at work. We had a big project due, and two of my teammates were off sick, so most of the work fell on me. What made it hard was the tight deadline — by lunchtime I felt completely overwhelmed. To deal with it, I made a quick list and asked my manager to reprioritize a few tasks. I ended up staying a couple of hours late, but we delivered on time. Looking back, what I learned was that asking for help early saves a lot of stress.",
+    "example_answer_mm": "လွန်ခဲ့တဲ့ ရက်အနည်းငယ်က အလုပ်မှာ အရမ်းခက်ခဲတဲ့ နေ့တစ်နေ့ ကြုံခဲ့ရတယ်။ ပရောဂျက်ကြီးတစ်ခု အချိန်နီးနေပြီး အဖွဲ့သားနှစ်ယောက် နေမကောင်းတဲ့အတွက် အလုပ်အများစု ကျွန်တော့်အပေါ် ကျလာတယ်။ ခက်ခဲစေတာက အချိန်တိုတဲ့ deadline ပါ — နေ့လယ်ရောက်တော့ ဖိအားအရမ်းများသွားတယ်။ ဒါကို ဖြေရှင်းဖို့ စာရင်းအမြန်ရေးပြီး အရေးကြီးတဲ့အလုပ်တချို့ကို ဦးစားပေး ပြန်စီစဉ်ဖို့ မန်နေဂျာကို တောင်းဆိုခဲ့တယ်။ နောက်ဆုံး နာရီအနည်းငယ် ပိုနေခဲ့ရပေမယ့် အချိန်မီ ပြီးအောင် လုပ်နိုင်ခဲ့တယ်။ ပြန်ကြည့်တော့ ရခဲ့တဲ့ သင်ခန်းစာက အကူအညီကို စောစော တောင်းတာ ဖိအား အများကြီး လျှော့ပေးတယ်ဆိုတာပါ။",
     "warmup_questions": [
       "What was the situation?",
       "How did you feel in the moment?",
@@ -307,12 +395,38 @@
       {
         "term": "in hindsight",
         "definition_mm": "နောက်ပြန်ကြည့်လိုက်ရင်",
-        "example_en": "In hindsight, I should have taken the offer."
+        "example_en": "In hindsight, I should have taken the offer.",
+        "related": ["looking back", "in retrospect", "with hindsight"]
       },
       {
         "term": "diverge",
         "definition_mm": "လမ်းကွဲထွက်သွားခြင်း",
-        "example_en": "Our paths diverged after college."
+        "example_en": "Our paths diverged after college.",
+        "related": ["split", "go separate ways", "branch off"]
+      },
+      {
+        "term": "turning point",
+        "definition_mm": "ဘဝ အသွင်ကူးပြောင်းစေတဲ့ အရေးပါတဲ့ အချက်",
+        "example_en": "That job was a turning point in my life.",
+        "related": ["crossroads", "pivotal moment"]
+      },
+      {
+        "term": "second-guess",
+        "definition_mm": "ကိုယ့်ဆုံးဖြတ်ချက်ကို ပြန်လည် သံသယဝင်သည်",
+        "example_en": "I still second-guess that choice sometimes.",
+        "related": ["doubt", "question myself"]
+      },
+      {
+        "term": "trade-off",
+        "definition_mm": "တစ်ခုရဖို့ တစ်ခုကို စွန့်လွှတ်ရတဲ့ အပေးအယူ",
+        "example_en": "Every big decision is a trade-off.",
+        "related": ["compromise", "give and take"]
+      },
+      {
+        "term": "come to terms with",
+        "definition_mm": "(တစ်ခုခုကို) လက်ခံ နိုင်လာသည်",
+        "example_en": "I've finally come to terms with my decision.",
+        "related": ["accept", "make peace with"]
       }
     ],
     "target_phrases": [
@@ -325,6 +439,24 @@
         "translation_mm": "အခု ကိုယ့်ကို ပြောလေ့ရှိတာက..."
       }
     ],
+    "outline": [
+      { "point_en": "State the one decision you'd change", "point_mm": "ပြောင်းချင်တဲ့ ဆုံးဖြတ်ချက်တစ်ခုကို ဖော်ပြပါ။", "starter_en": "If I could change one decision, it would be ..." },
+      { "point_en": "Explain the situation and why you chose as you did", "point_mm": "အဲဒီတုန်းက အခြေအနေနဲ့ ဘာကြောင့် အဲလို ဆုံးဖြတ်ခဲ့လဲ ရှင်းပြပါ။", "starter_en": "At the time, I decided to ... because ..." },
+      { "point_en": "Imagine how life might be different now", "point_mm": "အခု ဘဝ ဘယ်လို ကွဲပြားနိုင်မလဲ စိတ်ကူးကြည့်ပါ။", "starter_en": "If I had chosen differently, I might have ..." },
+      { "point_en": "End with how you feel about it now", "point_mm": "အခု ဒီအပေါ် ဘယ်လို ခံစားရလဲ နိဂုံးချုပ်ပါ။", "starter_en": "Looking back, I've made peace with it because ..." }
+    ],
+    "grammar_patterns": [
+      { "pattern_en": "third conditional: If I had ___, I would have ___", "example_en": "If I had taken that job, I would have moved abroad.", "note_mm": "အတိတ်က မဖြစ်ခဲ့တဲ့ ဖြစ်နိုင်ခြေကို စိတ်ကူးနဲ့ ပြောတဲ့ပုံစံပါ။" },
+      { "pattern_en": "might have / could have + past participle", "example_en": "I could have ended up in a different career.", "note_mm": "အတိတ်မှာ ဖြစ်နိုင်ခဲ့တာ (သေချာ မသိ) ကို ပြောတဲ့အခါ သုံးပါ။" },
+      { "pattern_en": "I've come to + verb", "example_en": "I've come to accept that decision.", "note_mm": "အချိန်ကြာလာတာနဲ့အမျှ ဖြစ်လာတဲ့ ခံစားချက်/အမြင်ကို ဖော်ပြတဲ့ အသုံးပါ။" }
+    ],
+    "common_mistakes": [
+      { "avoid_en": "If I would have known, I will not go.", "use_en": "If I had known, I wouldn't have gone.", "note_mm": "Third conditional မှာ 'if' ဘက်က 'had + V3'၊ ကျန်ဘက်က 'would have + V3' — 'would' ကို 'if' နောက်မှာ မထည့်ပါနဲ့။" },
+      { "avoid_en": "I regret to not study harder.", "use_en": "I regret not studying harder.", "note_mm": "'regret' နောက်မှာ ဖြစ်ပြီးခဲ့တာ ပြောရင် -ing (studying) ပုံစံ သုံးပါ။" },
+      { "avoid_en": "In nowadays, my life is different.", "use_en": "Nowadays, my life is different.", "note_mm": "'nowadays' ရှေ့မှာ 'in' မထည့်ပါနဲ့ — တစ်လုံးတည်းနဲ့ 'အခုခေတ်မှာ' ဆိုတဲ့ အဓိပ္ပါယ် ရပါပြီ။" }
+    ],
+    "example_answer_en": "If I could change one decision, it would be turning down a chance to study abroad after high school. At the time, I decided to stay because I didn't want to leave my family, and money was tight. Looking back, if I had gone, I might have built an international career much sooner. That said, staying meant I was here when my father got sick, and I wouldn't trade that. So in hindsight, I've come to see it not as a mistake, but as a trade-off I can live with.",
+    "example_answer_mm": "ဆုံးဖြတ်ချက်တစ်ခုကို ပြောင်းခွင့်ရရင်၊ အထက်တန်းပြီးတဲ့နောက် နိုင်ငံခြားမှာ ပညာသင်ဖို့ အခွင့်အရေးကို ငြင်းပယ်ခဲ့တာကို ပြောင်းချင်ပါတယ်။ အဲဒီတုန်းက မိသားစုကို မခွဲချင်တာနဲ့ ငွေကြေး ကြပ်တည်းတာကြောင့် နေခဲ့ဖို့ ဆုံးဖြတ်ခဲ့တယ်။ ပြန်ကြည့်ရင် သွားခဲ့မယ်ဆိုရင် နိုင်ငံတကာ အလုပ်အကိုင်ကို အများကြီး စောစော တည်ဆောက်နိုင်ခဲ့မလားလို့ ထင်မိတယ်။ ဒါပေမယ့် နေခဲ့လို့ အဖေ နေမကောင်းဖြစ်တုန်းက ဒီမှာ ရှိနေခဲ့တာ — အဲဒါကိုတော့ ဘယ်တော့မှ မလဲချင်ပါဘူး။ ဒါကြောင့် နောက်ပြန်ကြည့်တော့ အဲဒါကို အမှားတစ်ခုလို့ မမြင်တော့ဘဲ၊ လက်ခံနိုင်တဲ့ အပေးအယူတစ်ခုလို့ မြင်လာပါတယ်။",
     "warmup_questions": [
       "What decision?",
       "Why that one?",

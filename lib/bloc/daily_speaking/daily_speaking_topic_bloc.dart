@@ -52,6 +52,13 @@ class DailySpeakingTopicBloc
 
   final TopicProgressRepository _progressRepository;
 
+  /// PROTOTYPE: force the bundled asset (which carries the new guide fields —
+  /// outline / grammar_patterns / common_mistakes / example_answer) so the
+  /// enriched prep page can be reviewed before those fields are seeded into the
+  /// Supabase `daily_speaking_topics` table. Flip back to `false` (network-first)
+  /// once the table is updated. Mirrors `DailySpeakingService.useStubResponse`.
+  static const bool _prototypeAssetsOnly = true;
+
   static const _assetPath = 'assets/daily_speaking/topics/topics.json';
   static const _cacheKey = 'ds_topics_cache_json';
 
@@ -81,6 +88,7 @@ class DailySpeakingTopicBloc
   /// bundled asset. The asset is the final guarantee so the screen always has
   /// content, even offline or before the table is seeded.
   Future<List<DailySpeakingTopic>> _loadTopics() async {
+    if (_prototypeAssetsOnly) return _loadFromAssets();
     try {
       final rows = await supabase
           .from('daily_speaking_topics')
