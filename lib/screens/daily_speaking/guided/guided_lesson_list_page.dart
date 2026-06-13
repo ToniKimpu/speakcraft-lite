@@ -29,15 +29,14 @@ class _ListScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    return Scaffold(
-      appBar: AppBar(title: Text(l10n.txtDsGuided)),
-      body: SafeArea(
-        child: BlocBuilder<GuidedLessonBloc, GuidedLessonState>(
-          builder: (context, state) {
-            return state.maybeWhen(
-              loading: () =>
-                  const Center(child: CircularProgressIndicator()),
-              error: (msg) => Center(
+    return BlocBuilder<GuidedLessonBloc, GuidedLessonState>(
+      builder: (context, state) {
+        return state.maybeWhen(
+          loaded: (lessons) => _GuidedTabs(lessons: lessons),
+          error: (msg) => Scaffold(
+            appBar: AppBar(title: Text(l10n.txtDsGuided)),
+            body: SafeArea(
+              child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(24),
                   child: Text(
@@ -47,46 +46,197 @@ class _ListScaffold extends StatelessWidget {
                   ),
                 ),
               ),
-              loaded: (lessons) => _LoadedList(lessons: lessons),
-              orElse: () => const SizedBox.shrink(),
-            );
-          },
+            ),
+          ),
+          orElse: () => Scaffold(
+            appBar: AppBar(title: Text(l10n.txtDsGuided)),
+            body: const Center(child: CircularProgressIndicator()),
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// Lessons grouped under one tab per level (1 → 3), mirroring the Suggested
+/// Topics list. Each tab is a short scroll of that level's cards instead of one
+/// long stack — and the tabs make the L1 → L3 climb explicit. Defaults to the
+/// first (lowest) level so beginners land on "Start here".
+class _GuidedTabs extends StatefulWidget {
+  const _GuidedTabs({required this.lessons});
+  final List<GuidedLesson> lessons;
+
+  @override
+  State<_GuidedTabs> createState() => _GuidedTabsState();
+}
+
+class _GuidedTabsState extends State<_GuidedTabs>
+    with SingleTickerProviderStateMixin {
+  late final List<int> _levels;
+  late final TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _levels = widget.lessons.map((l) => l.level).toSet().toList()..sort();
+    _tabController = TabController(length: _levels.length, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final colorScheme = Theme.of(context).colorScheme;
+    return Scaffold(
+      appBar: AppBar(title: Text(l10n.txtDsGuided)),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
+              child: Text(
+                l10n.txtDsGuidedIntro,
+                style: PmpTextStyles.body2Regular.copyWith(
+                  color: colorScheme.onSurfaceVariant,
+                  height: 1.5,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 12),
+              // Rebuilds as the selection (tap) or a swipe moves the controller.
+              child: ListenableBuilder(
+                listenable: _tabController,
+                builder: (context, _) => _LevelSegments(
+                  levels: _levels,
+                  selectedIndex: _tabController.index,
+                  onSelected: (i) => _tabController.animateTo(i),
+                ),
+              ),
+            ),
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  for (final level in _levels)
+                    _LevelLessonList(
+                      lessons: widget.lessons
+                          .where((l) => l.level == level)
+                          .toList(growable: false),
+                    ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
-class _LoadedList extends StatelessWidget {
-  const _LoadedList({required this.lessons});
-  final List<GuidedLesson> lessons;
+/// A pill/segmented selector for the levels — replaces the flat underline
+/// TabBar. The selected pill fills with that level's accent (green → amber →
+/// red), making the active level obvious and reinforcing the L1 → L3 climb.
+class _LevelSegments extends StatelessWidget {
+  const _LevelSegments({
+    required this.levels,
+    required this.selectedIndex,
+    required this.onSelected,
+  });
+
+  final List<int> levels;
+  final int selectedIndex;
+  final ValueChanged<int> onSelected;
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final levels = lessons.map((l) => l.level).toSet().toList()..sort();
-
-    return ListView(
-      padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+    final colorScheme = Theme.of(context).colorScheme;
+    return Row(
       children: [
-        Text(
-          l10n.txtDsGuidedIntro,
-          style: PmpTextStyles.body2Regular.copyWith(
-            color: Theme.of(context).colorScheme.onSurfaceVariant,
-            height: 1.5,
+        for (var i = 0; i < levels.length; i++) ...[
+          if (i > 0) const SizedBox(width: 8),
+          Expanded(
+            child: _LevelSegment(
+              label: l10n.txtDsGuidedLevel(levels[i]),
+              accent: _accentForLevel(levels[i]),
+              selected: i == selectedIndex,
+              onTap: () => onSelected(i),
+              colorScheme: colorScheme,
+            ),
+          ),
+        ],
+      ],
+    );
+  }
+}
+
+class _LevelSegment extends StatelessWidget {
+  const _LevelSegment({
+    required this.label,
+    required this.accent,
+    required this.selected,
+    required this.onTap,
+    required this.colorScheme,
+  });
+
+  final String label;
+  final Color accent;
+  final bool selected;
+  final VoidCallback onTap;
+  final ColorScheme colorScheme;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(24),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          curve: Curves.easeOut,
+          padding: const EdgeInsets.symmetric(vertical: 9),
+          decoration: BoxDecoration(
+            color: selected ? accent : colorScheme.surfaceContainerHighest,
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(
+              color: selected ? accent : colorScheme.outlineVariant,
+            ),
+          ),
+          alignment: Alignment.center,
+          child: Text(
+            label,
+            style: PmpTextStyles.labelSemi.copyWith(
+              color: selected ? Colors.white : colorScheme.onSurfaceVariant,
+            ),
           ),
         ),
-        const SizedBox(height: 20),
-        for (final level in levels) ...[
-          _LevelHeader(level: level),
-          const SizedBox(height: 10),
-          for (final lesson in lessons.where((l) => l.level == level))
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: _LessonCard(lesson: lesson),
-            ),
-          const SizedBox(height: 12),
-        ],
+      ),
+    );
+  }
+}
+
+class _LevelLessonList extends StatelessWidget {
+  const _LevelLessonList({required this.lessons});
+  final List<GuidedLesson> lessons;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+      children: [
+        for (final lesson in lessons)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: _LessonCard(lesson: lesson),
+          ),
       ],
     );
   }
@@ -100,37 +250,6 @@ Color _accentForLevel(int level) {
       return PmpColors.warning500;
     default:
       return PmpColors.destructive400;
-  }
-}
-
-class _LevelHeader extends StatelessWidget {
-  const _LevelHeader({required this.level});
-  final int level;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    final accent = _accentForLevel(level);
-    return Row(
-      children: [
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-          decoration: BoxDecoration(
-            color: accent.withValues(alpha: 0.14),
-            borderRadius: BorderRadius.circular(6),
-            border: Border.all(color: accent.withValues(alpha: 0.4)),
-          ),
-          child: Text(
-            AppLocalizations.of(context).txtDsGuidedLevel(level),
-            style: PmpTextStyles.subBold.copyWith(color: accent),
-          ),
-        ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: Divider(color: colorScheme.outlineVariant, height: 1),
-        ),
-      ],
-    );
   }
 }
 

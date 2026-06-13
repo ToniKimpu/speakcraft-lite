@@ -1,0 +1,209 @@
+{
+  "id": "guided_tech_changed_life",
+  "title": "How technology changed my life",
+  "level": 3,
+  "sort_order": 5,
+  "objective_en": "By the end, you'll be able to reflect on how technology has changed your life, contrasting the past with now and weighing the good and bad.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် နည်းပညာက မိမိဘဝကို ဘယ်လိုပြောင်းလဲစေခဲ့လဲဆိုတာ — အတိတ်နဲ့ ယနေ့ နှိုင်းယှဉ်ပြီး အကောင်းအဆိုး ချိန်ဆကာ ပြန်လည်သုံးသပ်ပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "Technology has changed my life in many ways. I used to write letters and wait weeks for a reply, but now I can message anyone instantly. I have also learned new skills online without going to a classroom. Of course, there are downsides — I sometimes spend too much time on my phone. Still, I believe technology has made my life easier and more connected.",
+  "template": "Technology has changed my life in many ways. I used to {past_habit}, but now I can {new_ability}. I have also {benefit} online without going to a classroom. Of course, there are downsides — I sometimes {downside}. Still, I believe technology has made my life {result}.",
+  "sentences": [
+    {
+      "text_en": "Technology has changed my life in many ways.",
+      "text_mm": "နည်းပညာက ကျွန်တော့်ဘဝကို နည်းလမ်းများစွာနဲ့ ပြောင်းလဲစေခဲ့ပါတယ်။",
+      "explanation_mm": "\"has changed\" က present perfect ပါ — အတိတ်ကစပြီး အခုထိ သက်ရောက်နေတဲ့ အပြောင်းအလဲကို ဖော်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "has changed my life", "vocab_id": "change_life" },
+        { "phrase": "in many ways", "vocab_id": "in_many_ways" }
+      ]
+    },
+    {
+      "text_en": "I used to write letters and wait weeks for a reply, but now I can message anyone instantly.",
+      "text_mm": "ကျွန်တော် အရင်က စာရေးပြီး အကြောင်းပြန်ဖို့ ရက်သတ္တပတ်တွေ စောင့်ခဲ့ရပေမယ့် အခုတော့ ဘယ်သူ့ကိုမဆို ချက်ချင်း မက်ဆေ့ပို့နိုင်ပါပြီ။",
+      "explanation_mm": "\"I used to ...\" က \"အရင်က ... ခဲ့တယ် (အခုမလုပ်တော့)\"၊ \"but now ...\" နဲ့ ယနေ့အခြေအနေကို နှိုင်းယှဉ်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "used to", "vocab_id": "used_to" },
+        { "phrase": "instantly", "vocab_id": "instantly" }
+      ]
+    },
+    {
+      "text_en": "I have also learned new skills online without going to a classroom.",
+      "text_mm": "ကျွန်တော် စာသင်ခန်းကို မသွားဘဲ အွန်လိုင်းကနေ ကျွမ်းကျင်မှုအသစ်တွေလည်း သင်ယူခဲ့ပါတယ်။",
+      "explanation_mm": "\"I have also learned ...\" — present perfect နဲ့ အတွေ့အကြုံကို ပြောတာပါ။ \"without going to a classroom\" က \"စာသင်ခန်း မသွားဘဲ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "learned new skills", "vocab_id": "benefit" },
+        { "phrase": "online", "vocab_id": "online" }
+      ]
+    },
+    {
+      "text_en": "Of course, there are downsides — I sometimes spend too much time on my phone.",
+      "text_mm": "ဟုတ်ပါတယ်၊ အဆိုးဘက်တွေလည်း ရှိပါတယ် — ကျွန်တော် တခါတရံ ဖုန်းပေါ်မှာ အချိန်အရမ်းကုန်မိပါတယ်။",
+      "explanation_mm": "\"there are downsides\" က \"အဆိုးဘက်တွေ ရှိတယ်\"၊ \"sometimes\" က \"တခါတရံ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "downsides", "vocab_id": "downsides" },
+        { "phrase": "spend too much time", "vocab_id": "spend_time" }
+      ]
+    },
+    {
+      "text_en": "Still, I believe technology has made my life easier and more connected.",
+      "text_mm": "ဒါပေမယ့် နည်းပညာက ကျွန်တော့်ဘဝကို ပိုလွယ်ကူပြီး ပိုချိတ်ဆက်မှုရှိအောင် လုပ်ပေးခဲ့တယ်လို့ ယုံကြည်ပါတယ်။",
+      "explanation_mm": "\"Still, ...\" က \"ဒါပေမယ့်လည်း\"၊ \"has made my life ...\" က \"ဘဝကို ... ဖြစ်စေခဲ့တယ်\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "Still", "vocab_id": "still_linker" },
+        { "phrase": "easier and more connected", "vocab_id": "result" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "past_habit",
+      "label_en": "What you used to do",
+      "label_mm": "အရင်က အလေ့အထ",
+      "hint": "write letters and wait weeks for a reply",
+      "options": []
+    },
+    {
+      "id": "new_ability",
+      "label_en": "What you can do now",
+      "label_mm": "အခု လုပ်နိုင်တာ",
+      "hint": "message anyone instantly",
+      "options": []
+    },
+    {
+      "id": "benefit",
+      "label_en": "Something you gained online",
+      "label_mm": "အွန်လိုင်းမှ အကျိုးကျေးဇူး",
+      "hint": "learned new skills",
+      "options": ["learned new skills", "started a business", "found new friends", "taken online courses"]
+    },
+    {
+      "id": "downside",
+      "label_en": "A downside",
+      "label_mm": "အဆိုးဘက်",
+      "hint": "spend too much time on my phone",
+      "options": []
+    },
+    {
+      "id": "result",
+      "label_en": "How it changed your life overall",
+      "label_mm": "ရလဒ်",
+      "hint": "easier and more connected",
+      "options": ["easier and more connected", "faster", "more productive", "simpler"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "change_life",
+      "term": "has changed my life",
+      "group": "useful phrases",
+      "definition_mm": "ဘဝကို ပြောင်းလဲစေခဲ့သည်",
+      "related": ["transformed my life", "made a big difference", "turned my life around"],
+      "opposite": [],
+      "example_en": "That book changed my life."
+    },
+    {
+      "id": "in_many_ways",
+      "term": "in many ways",
+      "group": "useful phrases",
+      "definition_mm": "နည်းလမ်းများစွာဖြင့်",
+      "related": ["in lots of ways", "in several ways", "in different ways"],
+      "opposite": ["in one way"],
+      "example_en": "It helped me in many ways."
+    },
+    {
+      "id": "used_to",
+      "term": "used to",
+      "group": "talking about the past",
+      "definition_mm": "အရင်က ... လေ့ရှိခဲ့သည် (အခု မဟုတ်တော့)",
+      "related": ["would always", "in the past I", "once"],
+      "opposite": ["now", "these days"],
+      "example_en": "I used to walk to school."
+    },
+    {
+      "id": "instantly",
+      "term": "instantly",
+      "group": "time words",
+      "definition_mm": "ချက်ချင်း",
+      "related": ["immediately", "right away", "in seconds", "at once"],
+      "opposite": ["slowly", "eventually"],
+      "example_en": "I can reply instantly now."
+    },
+    {
+      "id": "benefit",
+      "term": "learned new skills",
+      "group": "things you gained online",
+      "definition_mm": "ကျွမ်းကျင်မှုအသစ်တွေ သင်ယူခဲ့သည်",
+      "related": ["started a business", "found new friends", "taken online courses", "watched tutorials"],
+      "opposite": [],
+      "example_en": "I have learned new skills online.",
+      "slot": "benefit"
+    },
+    {
+      "id": "online",
+      "term": "online",
+      "group": "technology",
+      "definition_mm": "အွန်လိုင်းပေါ်မှာ",
+      "related": ["on the internet", "on the web", "digitally"],
+      "opposite": ["offline", "in person"],
+      "example_en": "I study online every day."
+    },
+    {
+      "id": "downsides",
+      "term": "downsides",
+      "group": "discussion words",
+      "definition_mm": "အဆိုးဘက်များ",
+      "related": ["disadvantages", "drawbacks", "problems", "negatives"],
+      "opposite": ["upsides", "benefits"],
+      "example_en": "There are downsides to everything."
+    },
+    {
+      "id": "spend_time",
+      "term": "spend too much time",
+      "group": "useful phrases",
+      "definition_mm": "အချိန်အရမ်း ကုန်သည်",
+      "related": ["waste time", "lose track of time", "get distracted"],
+      "opposite": ["save time", "use time well"],
+      "example_en": "I spend too much time on my phone."
+    },
+    {
+      "id": "still_linker",
+      "term": "Still",
+      "group": "linking words",
+      "definition_mm": "ဒါပေမယ့်လည်း",
+      "related": ["even so", "nevertheless", "all the same", "yet"],
+      "opposite": [],
+      "example_en": "It's hard. Still, I keep trying."
+    },
+    {
+      "id": "result",
+      "term": "easier and more connected",
+      "group": "how it changed your life",
+      "definition_mm": "ပိုလွယ်ကူပြီး ပိုချိတ်ဆက်မှုရှိသော",
+      "related": ["faster", "more productive", "simpler", "more convenient"],
+      "opposite": ["harder", "more isolated"],
+      "example_en": "Technology made my life easier and more connected.",
+      "slot": "result"
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "Technology has changed my life",
+      "translation_mm": "နည်းပညာက ကျွန်တော့်ဘဝကို ပြောင်းလဲစေခဲ့တယ်"
+    },
+    {
+      "phrase_en": "I used to ..., but now",
+      "translation_mm": "အရင်က ... ခဲ့ပေမယ့် အခုတော့ ..."
+    },
+    {
+      "phrase_en": "there are downsides",
+      "translation_mm": "အဆိုးဘက်တွေလည်း ရှိတယ်"
+    }
+  ],
+  "warmup_questions": [
+    "How has technology changed your life?",
+    "What did you use to do before?",
+    "What can you do now?",
+    "Are there any downsides?"
+  ],
+  "duration_target_seconds": 90
+}

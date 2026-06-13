@@ -1,0 +1,218 @@
+{
+  "id": "guided_favorite_restaurant",
+  "title": "My favorite restaurant",
+  "level": 2,
+  "sort_order": 5,
+  "objective_en": "By the end, you'll be able to describe a place to eat — what it's like, what you order, who you go with, and why you keep going back.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် စားသောက်ဆိုင်တစ်ခုအကြောင်း — ဘယ်လိုဆိုင်မျိုး၊ ဘာမှာစား၊ ဘယ်သူနဲ့သွား၊ ဘာကြောင့် ထပ်ခါထပ်ခါ ပြန်သွားဖြစ်တယ်ဆိုတာ ဖော်ပြပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "My favorite restaurant is a small noodle shop near my house. It is always busy, but the staff are friendly and fast. My favorite dish there is the spicy beef noodles, which cost only a few dollars. I usually go there with my friends after work. I keep going back because the food is delicious and the prices are fair.",
+  "template": "My favorite restaurant is a {type} near my {location}. It is always {atmosphere}, but the staff are friendly and fast. My favorite dish there is {dish}, which costs only a few dollars. I usually go there with my {companion}. I keep going back because {reason}.",
+  "sentences": [
+    {
+      "text_en": "My favorite restaurant is a small noodle shop near my house.",
+      "text_mm": "ကျွန်တော် အကြိုက်ဆုံးစားသောက်ဆိုင်က အိမ်အနီးက ခေါက်ဆွဲဆိုင်ငယ်လေးတစ်ဆိုင်ပါ။",
+      "explanation_mm": "\"My favorite restaurant is ...\" နဲ့ ဆိုင်ကို မိတ်ဆက်ပြီး \"near my ...\" နဲ့ တည်နေရာ ဖော်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "small noodle shop", "vocab_id": "type" },
+        { "phrase": "house", "vocab_id": "location" }
+      ]
+    },
+    {
+      "text_en": "It is always busy, but the staff are friendly and fast.",
+      "text_mm": "အဲဒါက အမြဲ လူစည်ကားပေမယ့် ဝန်ထမ်းတွေက ဖော်ရွေပြီး လျင်မြန်ပါတယ်။",
+      "explanation_mm": "\"but\" က ဆန့်ကျင်ဘက်ကို ဆက်တဲ့စကားလုံးပါ — \"လူစည်ကားပေမယ့် ဝန်ထမ်းတွေ ကောင်းတယ်\" ဆိုတဲ့သဘောပါ။",
+      "highlights": [
+        { "phrase": "busy", "vocab_id": "atmosphere" },
+        { "phrase": "staff", "vocab_id": "staff" }
+      ]
+    },
+    {
+      "text_en": "My favorite dish there is the spicy beef noodles, which cost only a few dollars.",
+      "text_mm": "အဲဒီက ကျွန်တော် အကြိုက်ဆုံးဟင်းက အစပ်အမဲသားခေါက်ဆွဲဖြစ်ပြီး ဒေါ်လာအနည်းငယ်ပဲ ကုန်ပါတယ်။",
+      "explanation_mm": "\"My favorite dish is ...\" နဲ့ \"which costs ...\" — \"which\" က ရှေ့ကအရာအကြောင်း ထပ်ဖြည့်ပြောတဲ့အသုံးပါ။",
+      "highlights": [
+        { "phrase": "dish", "vocab_id": "dish" }
+      ]
+    },
+    {
+      "text_en": "I usually go there with my friends after work.",
+      "text_mm": "ကျွန်တော် ပုံမှန်အားဖြင့် အလုပ်ပြီးရင် သူငယ်ချင်းတွေနဲ့ အဲဒီကို သွားပါတယ်။",
+      "explanation_mm": "\"go there with ...\" က \"... နဲ့ အဲဒီကိုသွားတယ်\"၊ \"after work\" က \"အလုပ်ပြီးမှ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "friends", "vocab_id": "companion" },
+        { "phrase": "after work", "vocab_id": "after_work" }
+      ]
+    },
+    {
+      "text_en": "I keep going back because the food is delicious and the prices are fair.",
+      "text_mm": "ကျွန်တော် ထပ်ခါထပ်ခါ ပြန်သွားဖြစ်ရတာက အစားအစာက အရသာရှိပြီး ဈေးနှုန်းကလည်း သင့်တင့်လို့ပါ။",
+      "explanation_mm": "\"I keep going back because ...\" က \"... ကြောင့် ထပ်ခါထပ်ခါ ပြန်သွားဖြစ်တယ်\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "keep going back", "vocab_id": "keep_going_back" },
+        { "phrase": "delicious", "vocab_id": "delicious" },
+        { "phrase": "fair", "vocab_id": "fair" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "type",
+      "label_en": "Kind of place",
+      "label_mm": "ဆိုင်အမျိုးအစား",
+      "hint": "small noodle shop",
+      "options": ["small noodle shop", "cafe", "BBQ place", "tea shop"]
+    },
+    {
+      "id": "location",
+      "label_en": "Where it is near",
+      "label_mm": "ဘယ်နားမှာ",
+      "hint": "house",
+      "options": ["house", "office", "school", "market"]
+    },
+    {
+      "id": "atmosphere",
+      "label_en": "What it's like",
+      "label_mm": "ဝန်းကျင်အခြေအနေ",
+      "hint": "busy",
+      "options": ["busy", "quiet", "cozy", "lively"]
+    },
+    {
+      "id": "dish",
+      "label_en": "Your favorite dish",
+      "label_mm": "အကြိုက်ဆုံးဟင်း",
+      "hint": "the spicy beef noodles",
+      "options": []
+    },
+    {
+      "id": "companion",
+      "label_en": "Who you go with",
+      "label_mm": "ဘယ်သူနဲ့",
+      "hint": "friends",
+      "options": ["friends", "family", "coworkers", "partner"]
+    },
+    {
+      "id": "reason",
+      "label_en": "Why you keep going back",
+      "label_mm": "ပြန်သွားဖြစ်ရတဲ့အကြောင်း",
+      "hint": "the food is delicious and the prices are fair",
+      "options": []
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "type",
+      "term": "small noodle shop",
+      "group": "kinds of restaurant",
+      "definition_mm": "ခေါက်ဆွဲဆိုင်ငယ်",
+      "related": ["cafe", "BBQ place", "tea shop", "street stall", "fast food place"],
+      "opposite": [],
+      "example_en": "It's a small noodle shop.",
+      "slot": "type"
+    },
+    {
+      "id": "location",
+      "term": "house",
+      "group": "places",
+      "definition_mm": "အိမ်",
+      "related": ["office", "school", "market", "station"],
+      "opposite": [],
+      "example_en": "It's near my house.",
+      "slot": "location"
+    },
+    {
+      "id": "atmosphere",
+      "term": "busy",
+      "group": "describing a place",
+      "definition_mm": "လူစည်ကားသော",
+      "related": ["quiet", "cozy", "lively", "crowded", "calm"],
+      "opposite": ["quiet", "empty"],
+      "example_en": "The shop is always busy.",
+      "slot": "atmosphere"
+    },
+    {
+      "id": "staff",
+      "term": "staff",
+      "group": "people at work",
+      "definition_mm": "ဝန်ထမ်းများ",
+      "related": ["servers", "waiters", "employees", "workers"],
+      "opposite": [],
+      "example_en": "The staff are very helpful."
+    },
+    {
+      "id": "dish",
+      "term": "dish",
+      "group": "food",
+      "definition_mm": "ဟင်းပွဲ",
+      "related": ["meal", "plate", "course", "specialty"],
+      "opposite": [],
+      "example_en": "My favorite dish is fried rice."
+    },
+    {
+      "id": "companion",
+      "term": "friends",
+      "group": "who you go with",
+      "definition_mm": "သူငယ်ချင်းများ",
+      "related": ["family", "coworkers", "partner", "classmates"],
+      "opposite": [],
+      "example_en": "I go there with my friends.",
+      "slot": "companion"
+    },
+    {
+      "id": "after_work",
+      "term": "after work",
+      "group": "time expressions",
+      "definition_mm": "အလုပ်ပြီးမှ",
+      "related": ["after class", "in the evening", "on my break", "at lunchtime"],
+      "opposite": [],
+      "example_en": "We eat there after work."
+    },
+    {
+      "id": "keep_going_back",
+      "term": "keep going back",
+      "group": "useful phrases",
+      "definition_mm": "ထပ်ခါထပ်ခါ ပြန်သွားသည်",
+      "related": ["keep returning", "go again and again", "never get tired of it"],
+      "opposite": [],
+      "example_en": "I keep going back because the food is great."
+    },
+    {
+      "id": "delicious",
+      "term": "delicious",
+      "group": "describing food",
+      "definition_mm": "အရသာရှိသော",
+      "related": ["tasty", "yummy", "flavorful", "mouth-watering"],
+      "opposite": ["bland", "tasteless"],
+      "example_en": "The food is delicious."
+    },
+    {
+      "id": "fair",
+      "term": "fair",
+      "group": "describing prices",
+      "definition_mm": "သင့်တင့်မျှတသော",
+      "related": ["reasonable", "affordable", "cheap", "good value"],
+      "opposite": ["expensive", "overpriced"],
+      "example_en": "The prices here are fair."
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "My favorite restaurant is",
+      "translation_mm": "ကျွန်တော် အကြိုက်ဆုံးစားသောက်ဆိုင်က ..."
+    },
+    {
+      "phrase_en": "My favorite dish there is",
+      "translation_mm": "အဲဒီက အကြိုက်ဆုံးဟင်းက ..."
+    },
+    {
+      "phrase_en": "I keep going back because",
+      "translation_mm": "ထပ်ခါထပ်ခါ ပြန်သွားဖြစ်ရတာက ... ကြောင့်ပါ"
+    }
+  ],
+  "warmup_questions": [
+    "What is your favorite restaurant?",
+    "What is it like?",
+    "What do you usually order?",
+    "Why do you keep going back?"
+  ],
+  "duration_target_seconds": 90
+}

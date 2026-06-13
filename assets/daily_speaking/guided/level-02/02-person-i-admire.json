@@ -1,0 +1,248 @@
+{
+  "id": "guided_person_i_admire",
+  "title": "A person I admire",
+  "level": 2,
+  "sort_order": 2,
+  "objective_en": "By the end, you'll be able to describe a person you admire — who they are, what they're like, why you admire them, and what they taught you.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် မိမိ လေးစားအားကျတဲ့သူတစ်ယောက်အကြောင်း — ဘယ်သူ၊ ဘယ်လိုလူစား၊ ဘာကြောင့်လေးစား၊ ဘာသင်ခန်းစာ ပေးခဲ့တယ်ဆိုတာ ဖော်ပြပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "A person I really admire is my grandmother. She is hardworking, patient, and incredibly kind. I admire her because she raised five children on her own. Even when life was difficult, she never gave up. She has taught me to stay strong and treat everyone with respect.",
+  "template": "A person I really admire is my {person}. They are {trait1}, {trait2}, and incredibly {trait3}. I admire them because they {reason}. Even when life was difficult, they never gave up. They have taught me to {lesson}.",
+  "sentences": [
+    {
+      "text_en": "A person I really admire is my grandmother.",
+      "text_mm": "ကျွန်တော် တကယ် လေးစားအားကျတဲ့သူက ကျွန်တော့်အဖွားပါ။",
+      "explanation_mm": "\"A person I admire is ...\" က \"ကျွန်တော် လေးစားတဲ့သူက ...\" လို့ စတင်ပြောတဲ့ပုံစံပါ။",
+      "highlights": [
+        { "phrase": "admire", "vocab_id": "admire" },
+        { "phrase": "grandmother", "vocab_id": "person" }
+      ]
+    },
+    {
+      "text_en": "She is hardworking, patient, and incredibly kind.",
+      "text_mm": "သူက ကြိုးစားပြီး စိတ်ရှည်ကာ အလွန် သဘောကောင်းပါတယ်။",
+      "explanation_mm": "လူတစ်ယောက်ရဲ့ စရိုက်ကို ဖော်ပြတဲ့ adjective သုံးခုကို \"and\" နဲ့ ဆက်ထားတာပါ။ \"incredibly\" က \"အလွန်\" လို့ အလေးပေးတဲ့စကားလုံးပါ။ မှတ်ချက် — ကိုယ်ပိုင်ဝါကျမှာတော့ လေးစားတဲ့သူက ကျား/မ မရွေး အဆင်ပြေအောင် \"they/them\" (မြန်မာလို \"သူ\") ကို သုံးနိုင်ပါတယ်။ လိုချင်ရင် မိန်းမဆို \"she\"၊ ယောက်ျားဆို \"he\" လို့လည်း ပြောင်းသုံးနိုင်ပါတယ်။",
+      "highlights": [
+        { "phrase": "hardworking", "vocab_id": "trait1" },
+        { "phrase": "patient", "vocab_id": "trait2" },
+        { "phrase": "incredibly", "vocab_id": "incredibly" },
+        { "phrase": "kind", "vocab_id": "trait3" }
+      ]
+    },
+    {
+      "text_en": "I admire her because she raised five children on her own.",
+      "text_mm": "ကျွန်တော် သူ့ကို လေးစားရတဲ့အကြောင်းက သူ့ဟာသူ ကလေးငါးယောက်ကို ပြုစုပျိုးထောင်ခဲ့လို့ပါ။",
+      "explanation_mm": "\"I admire her because ...\" — \"because\" နောက်မှာ အကြောင်းပြချက်ကို ထည့်ပြောပါ။ \"on her own\" က \"သူ့ဟာသူ (တစ်ယောက်တည်း)\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "raised", "vocab_id": "raise" },
+        { "phrase": "on her own", "vocab_id": "on_her_own" }
+      ]
+    },
+    {
+      "text_en": "Even when life was difficult, she never gave up.",
+      "text_mm": "ဘဝ ခက်ခဲတဲ့အချိန်တောင်မှ သူ ဘယ်တော့မှ လက်မလျှော့ခဲ့ပါဘူး။",
+      "explanation_mm": "\"Even when ...\" က \"... တဲ့အချိန်တောင်မှ\"၊ \"never gave up\" က \"ဘယ်တော့မှ လက်မလျှော့ခဲ့ဘူး\" လို့ အဓိပ္ပါယ်ရပါတယ်။",
+      "highlights": [
+        { "phrase": "Even when", "vocab_id": "even_when" },
+        { "phrase": "never gave up", "vocab_id": "give_up" }
+      ]
+    },
+    {
+      "text_en": "She has taught me to stay strong and treat everyone with respect.",
+      "text_mm": "သူက ကျွန်တော့်ကို ခိုင်မာဖို့နဲ့ လူတိုင်းကို လေးစားစွာ ဆက်ဆံဖို့ သင်ပေးခဲ့ပါတယ်။",
+      "explanation_mm": "\"She has taught me to ...\" က \"သူက ကျွန်တော့်ကို ... ဖို့ သင်ပေးခဲ့တယ်\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "taught me to", "vocab_id": "taught_me_to" },
+        { "phrase": "stay strong", "vocab_id": "stay_strong" },
+        { "phrase": "respect", "vocab_id": "respect" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "person",
+      "label_en": "Who they are",
+      "label_mm": "ဘယ်သူလဲ",
+      "hint": "grandmother",
+      "options": ["grandmother", "mother", "father", "teacher", "older sister"]
+    },
+    {
+      "id": "trait1",
+      "label_en": "What they're like (1)",
+      "label_mm": "စရိုက် (၁)",
+      "hint": "hardworking",
+      "options": ["hardworking", "brave", "generous", "humble", "wise"]
+    },
+    {
+      "id": "trait2",
+      "label_en": "What they're like (2)",
+      "label_mm": "စရိုက် (၂)",
+      "hint": "patient",
+      "options": ["patient", "honest", "calm", "determined", "caring"]
+    },
+    {
+      "id": "trait3",
+      "label_en": "What they're like (3)",
+      "label_mm": "စရိုက် (၃)",
+      "hint": "kind",
+      "options": ["kind", "strong", "smart", "creative", "loyal"]
+    },
+    {
+      "id": "reason",
+      "label_en": "Why you admire them",
+      "label_mm": "လေးစားရတဲ့အကြောင်း",
+      "hint": "raised five children on their own",
+      "options": []
+    },
+    {
+      "id": "lesson",
+      "label_en": "What they taught you",
+      "label_mm": "သင်ခန်းစာ",
+      "hint": "stay strong and treat everyone with respect",
+      "options": []
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "admire",
+      "term": "admire",
+      "group": "feelings about people",
+      "definition_mm": "လေးစားအားကျသည်",
+      "related": ["respect", "look up to", "value", "appreciate", "be inspired by"],
+      "opposite": ["despise", "look down on"],
+      "example_en": "I admire people who never give up."
+    },
+    {
+      "id": "person",
+      "term": "grandmother",
+      "group": "people",
+      "definition_mm": "အဖွား",
+      "related": ["mother", "father", "teacher", "older sister", "mentor"],
+      "opposite": [],
+      "example_en": "I admire my grandmother.",
+      "slot": "person"
+    },
+    {
+      "id": "trait1",
+      "term": "hardworking",
+      "group": "personality",
+      "definition_mm": "ကြိုးစားသော",
+      "related": ["brave", "generous", "humble", "wise", "determined"],
+      "opposite": ["lazy"],
+      "example_en": "She is very hardworking.",
+      "slot": "trait1"
+    },
+    {
+      "id": "trait2",
+      "term": "patient",
+      "group": "personality",
+      "definition_mm": "စိတ်ရှည်သော",
+      "related": ["honest", "calm", "determined", "caring", "gentle"],
+      "opposite": ["impatient"],
+      "example_en": "He is patient with children.",
+      "slot": "trait2"
+    },
+    {
+      "id": "trait3",
+      "term": "kind",
+      "group": "personality",
+      "definition_mm": "သဘောကောင်းသော",
+      "related": ["strong", "smart", "creative", "loyal", "generous"],
+      "opposite": ["unkind", "cruel"],
+      "example_en": "She is incredibly kind.",
+      "slot": "trait3"
+    },
+    {
+      "id": "incredibly",
+      "term": "incredibly",
+      "group": "intensifiers",
+      "definition_mm": "အလွန်တရာ (adjective ကို အလေးပေးတဲ့စကားလုံး)",
+      "related": ["very", "extremely", "really", "so"],
+      "opposite": ["slightly", "a little"],
+      "example_en": "She is incredibly kind."
+    },
+    {
+      "id": "raise",
+      "term": "raised",
+      "group": "family verbs (past)",
+      "definition_mm": "ပြုစုပျိုးထောင်သည် (raise ၏ အတိတ်)",
+      "related": ["brought up", "looked after", "cared for"],
+      "opposite": [],
+      "example_en": "She raised three children."
+    },
+    {
+      "id": "on_her_own",
+      "term": "on her own",
+      "group": "useful phrases",
+      "definition_mm": "သူ့ဟာသူ (တစ်ယောက်တည်း)",
+      "related": ["by herself", "alone", "without help", "independently"],
+      "opposite": ["with help", "together"],
+      "example_en": "She raised the children on her own."
+    },
+    {
+      "id": "even_when",
+      "term": "Even when",
+      "group": "linking words",
+      "definition_mm": "... တဲ့အချိန်တောင်မှ",
+      "related": ["even though", "no matter how", "despite"],
+      "opposite": [],
+      "example_en": "Even when it rained, we kept walking."
+    },
+    {
+      "id": "give_up",
+      "term": "never gave up",
+      "group": "useful phrases",
+      "definition_mm": "ဘယ်တော့မှ လက်မလျှော့ခဲ့ဘူး",
+      "related": ["kept going", "didn't quit", "stayed strong", "persevered"],
+      "opposite": ["gave up", "quit"],
+      "example_en": "Even when it was hard, she never gave up."
+    },
+    {
+      "id": "taught_me_to",
+      "term": "taught me to",
+      "group": "useful phrases",
+      "definition_mm": "... ဖို့ ကျွန်တော့်ကို သင်ပေးခဲ့သည်",
+      "related": ["showed me how to", "helped me learn to", "inspired me to"],
+      "opposite": [],
+      "example_en": "She taught me to be patient."
+    },
+    {
+      "id": "stay_strong",
+      "term": "stay strong",
+      "group": "useful phrases",
+      "definition_mm": "စိတ်ဓာတ်မကျဘဲ ခိုင်မာအောင် နေသည်",
+      "related": ["keep going", "be brave", "don't give up", "stay positive"],
+      "opposite": ["give up", "break down"],
+      "example_en": "She taught me to stay strong."
+    },
+    {
+      "id": "respect",
+      "term": "respect",
+      "group": "values",
+      "definition_mm": "လေးစားမှု",
+      "related": ["honor", "admiration", "regard", "politeness"],
+      "opposite": ["disrespect", "contempt"],
+      "example_en": "Treat everyone with respect."
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "A person I really admire is",
+      "translation_mm": "ကျွန်တော် တကယ် လေးစားတဲ့သူက ..."
+    },
+    {
+      "phrase_en": "I admire her because",
+      "translation_mm": "ကျွန်တော် သူ့ကို လေးစားရတာက ... ကြောင့်ပါ"
+    },
+    {
+      "phrase_en": "She has taught me to",
+      "translation_mm": "သူက ကျွန်တော့်ကို ... ဖို့ သင်ပေးခဲ့တယ်"
+    }
+  ],
+  "warmup_questions": [
+    "Who is a person you admire?",
+    "What is he or she like?",
+    "Why do you admire them?",
+    "What have they taught you?"
+  ],
+  "duration_target_seconds": 75
+}

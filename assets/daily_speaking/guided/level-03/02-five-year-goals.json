@@ -1,0 +1,202 @@
+{
+  "id": "guided_five_year_goals",
+  "title": "My goals for the next 5 years",
+  "level": 3,
+  "sort_order": 2,
+  "objective_en": "By the end, you'll be able to talk about your plans and ambitions for the next five years and how you'll achieve them.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် နောက်ငါးနှစ်အတွက် မိမိရဲ့ အစီအစဉ်တွေ၊ ရည်မှန်းချက်တွေနဲ့ ဘယ်လို အောင်မြင်အောင် လုပ်မလဲဆိုတာ ပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "I have a few important goals for the next five years. First, I plan to improve my English so that I can work with international companies. I also hope to start my own small business one day. In my personal life, I want to travel to at least three new countries. I believe that if I work hard and stay focused, I will achieve these goals.",
+  "template": "I have a few important goals for the next five years. First, I plan to {goal1} so that I can {benefit}. I also hope to {goal2} one day. In my personal life, I want to {personal_goal}. I believe that if I work hard and stay focused, I will achieve these goals.",
+  "sentences": [
+    {
+      "text_en": "I have a few important goals for the next five years.",
+      "text_mm": "နောက်ငါးနှစ်အတွက် ကျွန်တော်မှာ အရေးကြီးတဲ့ ပန်းတိုင်အနည်းငယ် ရှိပါတယ်။",
+      "explanation_mm": "\"I have a few goals for ...\" က \"... အတွက် ပန်းတိုင်အချို့ ရှိတယ်\" လို့ အပိုင်းတစ်ခုလုံးကို မိတ်ဆက်တဲ့ ဖွင့်ဆိုချက်ပါ။",
+      "highlights": [
+        { "phrase": "goals", "vocab_id": "goal_word" },
+        { "phrase": "the next five years", "vocab_id": "next_five_years" }
+      ]
+    },
+    {
+      "text_en": "First, I plan to improve my English so that I can work with international companies.",
+      "text_mm": "ပထမဆုံး၊ နိုင်ငံတကာကုမ္ပဏီတွေနဲ့ အလုပ်လုပ်နိုင်ဖို့ ကျွန်တော် အင်္ဂလိပ်စာ တိုးတက်အောင် လုပ်ဖို့ စီစဉ်ထားပါတယ်။",
+      "explanation_mm": "\"I plan to ...\" က \"... ဖို့ စီစဉ်ထားတယ်\"၊ \"so that I can ...\" က \"... နိုင်ဖို့\" ရည်ရွယ်ချက်ပြတဲ့အသုံးပါ။",
+      "highlights": [
+        { "phrase": "plan to", "vocab_id": "plan_to" },
+        { "phrase": "improve my English", "vocab_id": "goal1" }
+      ]
+    },
+    {
+      "text_en": "I also hope to start my own small business one day.",
+      "text_mm": "တစ်နေ့နေ့မှာ ကိုယ်ပိုင် စီးပွားရေးငယ်လေး စတင်ဖို့လည်း ကျွန်တော် မျှော်လင့်ထားပါတယ်။",
+      "explanation_mm": "\"I hope to ...\" က \"... ဖို့ မျှော်လင့်တယ်\"၊ \"one day\" က \"တစ်နေ့နေ့မှာ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "hope to", "vocab_id": "hope_to" },
+        { "phrase": "start my own small business", "vocab_id": "goal2" }
+      ]
+    },
+    {
+      "text_en": "In my personal life, I want to travel to at least three new countries.",
+      "text_mm": "ကိုယ်ရေးကိုယ်တာဘဝမှာတော့ နိုင်ငံအသစ် အနည်းဆုံး သုံးနိုင်ငံ သွားလည်ချင်ပါတယ်။",
+      "explanation_mm": "\"I want to ...\" က \"... ချင်တယ်\"၊ \"at least\" က \"အနည်းဆုံး\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "want to", "vocab_id": "want_to" },
+        { "phrase": "at least", "vocab_id": "at_least" }
+      ]
+    },
+    {
+      "text_en": "I believe that if I work hard and stay focused, I will achieve these goals.",
+      "text_mm": "ကြိုးစားပြီး အာရုံစိုက်ထားရင် ဒီပန်းတိုင်တွေကို ကျွန်တော် အောင်မြင်အောင် လုပ်နိုင်မယ်လို့ ယုံကြည်ပါတယ်။",
+      "explanation_mm": "\"if I work hard ..., I will ...\" — \"if\" ဝါကျနဲ့ အနာဂတ် \"will\" ကို တွဲသုံးပြီး အခြေအနေနဲ့ ရလဒ်ကို ဖော်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "stay focused", "vocab_id": "stay_focused" },
+        { "phrase": "achieve", "vocab_id": "achieve" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "goal1",
+      "label_en": "Your first goal",
+      "label_mm": "ပထမပန်းတိုင်",
+      "hint": "improve my English",
+      "options": ["improve my English", "finish my studies", "learn a new skill", "get a promotion"]
+    },
+    {
+      "id": "benefit",
+      "label_en": "What it will let you do",
+      "label_mm": "အကျိုးကျေးဇူး",
+      "hint": "work with international companies",
+      "options": []
+    },
+    {
+      "id": "goal2",
+      "label_en": "Another goal",
+      "label_mm": "ဒုတိယပန်းတိုင်",
+      "hint": "start my own small business",
+      "options": ["start my own business", "buy a home", "change careers", "study abroad"]
+    },
+    {
+      "id": "personal_goal",
+      "label_en": "A personal goal",
+      "label_mm": "ကိုယ်ရေးကိုယ်တာ ပန်းတိုင်",
+      "hint": "travel to at least three new countries",
+      "options": []
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "goal_word",
+      "term": "goals",
+      "group": "ambition words",
+      "definition_mm": "ပန်းတိုင်များ၊ ရည်မှန်းချက်များ",
+      "related": ["targets", "aims", "ambitions", "dreams", "objectives"],
+      "opposite": [],
+      "example_en": "My main goal is to be fluent."
+    },
+    {
+      "id": "next_five_years",
+      "term": "the next five years",
+      "group": "time expressions",
+      "definition_mm": "နောက်ငါးနှစ်အတွင်း",
+      "related": ["the coming years", "the near future", "the years ahead"],
+      "opposite": ["the past few years"],
+      "example_en": "I have big plans for the next five years."
+    },
+    {
+      "id": "plan_to",
+      "term": "plan to",
+      "group": "talking about the future",
+      "definition_mm": "... ဖို့ စီစဉ်ထားသည်",
+      "related": ["intend to", "aim to", "am going to", "mean to"],
+      "opposite": [],
+      "example_en": "I plan to study abroad."
+    },
+    {
+      "id": "goal1",
+      "term": "improve my English",
+      "group": "common goals",
+      "definition_mm": "အင်္ဂလိပ်စာ တိုးတက်အောင် လုပ်သည်",
+      "related": ["finish my studies", "learn a new skill", "get a promotion", "stay healthy"],
+      "opposite": [],
+      "example_en": "I plan to improve my English.",
+      "slot": "goal1"
+    },
+    {
+      "id": "hope_to",
+      "term": "hope to",
+      "group": "talking about the future",
+      "definition_mm": "... ဖို့ မျှော်လင့်သည်",
+      "related": ["wish to", "would like to", "dream of"],
+      "opposite": [],
+      "example_en": "I hope to travel more."
+    },
+    {
+      "id": "goal2",
+      "term": "start my own small business",
+      "group": "common goals",
+      "definition_mm": "ကိုယ်ပိုင် စီးပွားရေးငယ် စတင်သည်",
+      "related": ["buy a home", "change careers", "study abroad", "start a family"],
+      "opposite": [],
+      "example_en": "I hope to start my own business.",
+      "slot": "goal2"
+    },
+    {
+      "id": "want_to",
+      "term": "want to",
+      "group": "talking about the future",
+      "definition_mm": "... ချင်သည်",
+      "related": ["would love to", "am eager to", "hope to"],
+      "opposite": [],
+      "example_en": "I want to travel the world."
+    },
+    {
+      "id": "at_least",
+      "term": "at least",
+      "group": "useful phrases",
+      "definition_mm": "အနည်းဆုံး",
+      "related": ["a minimum of", "no fewer than", "or more"],
+      "opposite": ["at most", "no more than"],
+      "example_en": "I want to read at least ten books."
+    },
+    {
+      "id": "stay_focused",
+      "term": "stay focused",
+      "group": "useful phrases",
+      "definition_mm": "အာရုံစိုက်ထားသည်",
+      "related": ["keep going", "stay motivated", "work hard", "not give up"],
+      "opposite": ["get distracted", "give up"],
+      "example_en": "If I stay focused, I will succeed."
+    },
+    {
+      "id": "achieve",
+      "term": "achieve",
+      "group": "success words",
+      "definition_mm": "အောင်မြင်အောင် လုပ်ဆောင်သည်",
+      "related": ["reach", "accomplish", "attain", "fulfill"],
+      "opposite": ["fail", "miss"],
+      "example_en": "She worked hard to achieve her dream."
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "I plan to ... so that I can",
+      "translation_mm": "... နိုင်ဖို့ ... ဖို့ စီစဉ်ထားပါတယ်"
+    },
+    {
+      "phrase_en": "I also hope to",
+      "translation_mm": "... ဖို့လည်း မျှော်လင့်ထားပါတယ်"
+    },
+    {
+      "phrase_en": "I believe that if I work hard, I will",
+      "translation_mm": "ကြိုးစားရင် ... လုပ်နိုင်မယ်လို့ ယုံကြည်ပါတယ်"
+    }
+  ],
+  "warmup_questions": [
+    "What are your goals for the next five years?",
+    "Which goal matters most to you?",
+    "What will you do to achieve it?",
+    "How will your life be different?"
+  ],
+  "duration_target_seconds": 90
+}

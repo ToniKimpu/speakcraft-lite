@@ -98,7 +98,9 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
                       );
                     },
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 20),
+                  _SectionDivider(label: l10n.txtDsMoreWays),
+                  const SizedBox(height: 20),
                   _OnRampCard(
                     title: l10n.txtDsJustTalk,
                     subtitle: l10n.txtDsJustTalkDesc,
@@ -149,6 +151,34 @@ class _DailySpeakingEntryPageState extends State<DailySpeakingEntryPage> {
           },
         ),
       ),
+    );
+  }
+}
+
+class _SectionDivider extends StatelessWidget {
+  const _SectionDivider({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Row(
+      children: [
+        Expanded(
+          child: Divider(color: colorScheme.outlineVariant, height: 1),
+        ),
+        const SizedBox(width: 12),
+        Text(
+          label,
+          style: PmpTextStyles.body2Semi
+              .copyWith(color: colorScheme.onSurfaceVariant),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Divider(color: colorScheme.outlineVariant, height: 1),
+        ),
+      ],
     );
   }
 }
@@ -235,9 +265,7 @@ class _OnRampCard extends StatelessWidget {
                 const SizedBox(width: 8),
                 Icon(
                   Icons.chevron_right,
-                  color: enabled
-                      ? accentColor
-                      : colorScheme.onSurfaceVariant,
+                  color: enabled ? accentColor : colorScheme.onSurfaceVariant,
                 ),
               ],
             ),

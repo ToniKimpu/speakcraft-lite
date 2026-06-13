@@ -1,0 +1,188 @@
+{
+  "id": "guided_my_home",
+  "title": "My home",
+  "level": 1,
+  "sort_order": 5,
+  "objective_en": "By the end, you'll be able to describe where you live — the kind of home, the rooms, your favorite room, and how you feel there.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် မိမိနေအိမ်အကြောင်း — ဘယ်လိုအိမ်မျိုး၊ ဘယ်အခန်းတွေ၊ အကြိုက်ဆုံးအခန်းနဲ့ အိမ်မှာ ဘယ်လိုခံစားရတယ်ဆိုတာ ဖော်ပြပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "I live in a small apartment in the city. It has two bedrooms, a kitchen, and a living room. My favorite room is the living room because it is bright and comfortable. There is a big sofa in front of the television. I feel happy and relaxed when I am at home.",
+  "template": "I live in a {home_type} in the {area}. It has {rooms}. My favorite room is the {favorite_room} because it is {reason}. There is a big sofa in front of the television. I feel {feeling} when I am at home.",
+  "sentences": [
+    {
+      "text_en": "I live in a small apartment in the city.",
+      "text_mm": "ကျွန်တော် မြို့ထဲက တိုက်ခန်းငယ်လေးတစ်ခုမှာ နေပါတယ်။",
+      "explanation_mm": "\"I live in a ...\" က \"... မှာနေတယ်\" လို့ နေထိုင်ရာကို ပြောတာပါ။",
+      "highlights": [
+        { "phrase": "small apartment", "vocab_id": "small_apartment" },
+        { "phrase": "city", "vocab_id": "city" }
+      ]
+    },
+    {
+      "text_en": "It has two bedrooms, a kitchen, and a living room.",
+      "text_mm": "အဲဒီမှာ အိပ်ခန်းနှစ်ခန်း၊ မီးဖိုချောင်နဲ့ ဧည့်ခန်းတစ်ခု ရှိပါတယ်။",
+      "explanation_mm": "\"It has ...\" က \"အဲဒီမှာ ... ရှိတယ်\" လို့ အရာတွေကို စာရင်းပြုပြီးပြောတာပါ။ comma နဲ့ \"and\" သုံးပုံကို သတိပြုပါ။",
+      "highlights": [
+        { "phrase": "living room", "vocab_id": "living_room" }
+      ]
+    },
+    {
+      "text_en": "My favorite room is the living room because it is bright and comfortable.",
+      "text_mm": "ကျွန်တော် အကြိုက်ဆုံးအခန်းက ဧည့်ခန်းပါ၊ ဘာလို့လဲဆိုတော့ အဲဒါက လင်းပြီး သက်တောင့်သက်သာ ရှိလို့ပါ။",
+      "explanation_mm": "\"because\" က \"ဘာလို့လဲဆိုတော့\" လို့ အကြောင်းပြချက်ကို ဆက်ပြောတဲ့ စကားလုံးပါ။",
+      "highlights": [
+        { "phrase": "bright", "vocab_id": "bright" },
+        { "phrase": "comfortable", "vocab_id": "comfortable" }
+      ]
+    },
+    {
+      "text_en": "There is a big sofa in front of the television.",
+      "text_mm": "တီဗီရှေ့မှာ ဆိုဖာအကြီးတစ်လုံး ရှိပါတယ်။",
+      "explanation_mm": "\"There is ...\" က \"... ရှိတယ်\"၊ \"in front of\" က \"... ရှေ့မှာ\" လို့ နေရာပြတဲ့အသုံးပါ။",
+      "highlights": [
+        { "phrase": "in front of", "vocab_id": "in_front_of" }
+      ]
+    },
+    {
+      "text_en": "I feel happy and relaxed when I am at home.",
+      "text_mm": "အိမ်မှာရှိတဲ့အခါ ကျွန်တော် ပျော်ရွှင်ပြီး စိတ်အေးချမ်းသာ ခံစားရပါတယ်။",
+      "explanation_mm": "\"when I am at home\" က \"အိမ်မှာရှိတဲ့အခါ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "happy and relaxed", "vocab_id": "happy_and_relaxed" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "home_type",
+      "label_en": "Kind of home",
+      "label_mm": "နေအိမ်အမျိုးအစား",
+      "hint": "small apartment",
+      "options": ["small apartment", "big house", "small house", "flat"]
+    },
+    {
+      "id": "area",
+      "label_en": "Where it is",
+      "label_mm": "ဧရိယာ",
+      "hint": "city",
+      "options": ["city", "countryside", "town", "suburbs"]
+    },
+    {
+      "id": "rooms",
+      "label_en": "The rooms it has",
+      "label_mm": "အခန်းတွေ",
+      "hint": "two bedrooms, a kitchen, and a living room",
+      "options": []
+    },
+    {
+      "id": "favorite_room",
+      "label_en": "Your favorite room",
+      "label_mm": "အကြိုက်ဆုံးအခန်း",
+      "hint": "living room",
+      "options": ["living room", "bedroom", "kitchen", "balcony"]
+    },
+    {
+      "id": "reason",
+      "label_en": "Why you like it",
+      "label_mm": "အကြောင်းရင်း",
+      "hint": "bright and comfortable",
+      "options": ["bright and comfortable", "quiet and cozy", "big and clean", "warm and peaceful"]
+    },
+    {
+      "id": "feeling",
+      "label_en": "How you feel at home",
+      "label_mm": "ခံစားချက်",
+      "hint": "happy and relaxed",
+      "options": ["happy and relaxed", "calm", "safe", "comfortable"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "small_apartment",
+      "term": "small apartment",
+      "group": "types of home",
+      "definition_mm": "တိုက်ခန်းငယ်",
+      "related": ["studio", "flat", "condo", "shared room", "townhouse", "big house"],
+      "opposite": ["big house", "mansion"],
+      "example_en": "I live in a small apartment near the station.",
+      "slot": "home_type"
+    },
+    {
+      "id": "city",
+      "term": "city",
+      "group": "places to live",
+      "definition_mm": "မြို့ကြီး",
+      "related": ["town", "countryside", "suburbs", "village", "downtown"],
+      "opposite": ["countryside", "village"],
+      "example_en": "I grew up in a busy city.",
+      "slot": "area"
+    },
+    {
+      "id": "living_room",
+      "term": "living room",
+      "group": "rooms in a home",
+      "definition_mm": "ဧည့်ခန်း",
+      "related": ["bedroom", "kitchen", "bathroom", "balcony", "study", "dining room"],
+      "opposite": [],
+      "example_en": "We watch TV together in the living room.",
+      "slot": "favorite_room"
+    },
+    {
+      "id": "bright",
+      "term": "bright",
+      "group": "describing a place",
+      "definition_mm": "လင်းသော၊ အလင်းရောင်ကောင်းသော",
+      "related": ["sunny", "airy", "light", "spacious", "open"],
+      "opposite": ["dark", "gloomy", "dim"],
+      "example_en": "The room is bright in the morning."
+    },
+    {
+      "id": "comfortable",
+      "term": "comfortable",
+      "group": "describing a place",
+      "definition_mm": "သက်တောင့်သက်သာ ရှိသော",
+      "related": ["cozy", "relaxing", "pleasant", "welcoming", "snug"],
+      "opposite": ["uncomfortable", "cramped"],
+      "example_en": "This chair is very comfortable."
+    },
+    {
+      "id": "in_front_of",
+      "term": "in front of",
+      "group": "where things are (prepositions)",
+      "definition_mm": "... ၏ ရှေ့မှာ",
+      "related": ["next to", "beside", "near", "opposite", "behind"],
+      "opposite": ["behind"],
+      "example_en": "There is a garden in front of my house."
+    },
+    {
+      "id": "happy_and_relaxed",
+      "term": "happy and relaxed",
+      "group": "feelings at home",
+      "definition_mm": "ပျော်ရွှင်ပြီး စိတ်အေးချမ်းသာ",
+      "related": ["calm", "safe", "comfortable", "at home", "content", "at ease"],
+      "opposite": ["stressed", "tense", "uneasy"],
+      "example_en": "I feel happy and relaxed when I get home.",
+      "slot": "feeling"
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "I live in a",
+      "translation_mm": "ကျွန်တော် ... မှာ နေပါတယ်"
+    },
+    {
+      "phrase_en": "It has",
+      "translation_mm": "အဲဒီမှာ ... ရှိတယ်"
+    },
+    {
+      "phrase_en": "My favorite room is ... because",
+      "translation_mm": "အကြိုက်ဆုံးအခန်းက ... ပါ၊ ဘာလို့လဲဆိုတော့ ..."
+    }
+  ],
+  "warmup_questions": [
+    "Where do you live?",
+    "What rooms does your home have?",
+    "Which room is your favorite, and why?",
+    "How do you feel when you are at home?"
+  ],
+  "duration_target_seconds": 60
+}

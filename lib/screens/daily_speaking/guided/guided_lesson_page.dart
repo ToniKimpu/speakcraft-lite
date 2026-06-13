@@ -1,4 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:just_audio/just_audio.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
@@ -19,6 +22,60 @@ import 'guided_paragraph_actions.dart';
 /// Slot answers live in local state (no bloc — they only matter inside this
 /// screen, like the own-topic scaffold). The assembled paragraph + the lesson's
 /// level travel to `guided_record_page.dart`.
+/// Asset folder holding a lesson's pre-generated audio (see tools/guided_tts.py).
+/// Files: `paragraph.mp3`, `s{index}.mp3`, `v_{vocabId}.mp3`. For the POC these
+/// are bundled; production would stream them from Bunny with the same layout.
+String _audioBase(String lessonId) =>
+    'assets/daily_speaking/guided/audio/$lessonId';
+
+/// One shared audio player for the whole lesson page. Tapping a new clip stops
+/// the previous one, so only a single line/word ever plays at a time. Speaker
+/// buttons read [currentAsset]/[isPlaying] to render their play/stop state.
+class _GuidedAudio extends ChangeNotifier {
+  final AudioPlayer _player = AudioPlayer();
+  String? _currentAsset;
+
+  String? get currentAsset => _currentAsset;
+  bool get isPlaying => _player.playing;
+
+  _GuidedAudio() {
+    _player.playerStateStream.listen((s) {
+      if (s.processingState == ProcessingState.completed) {
+        _player.seek(Duration.zero);
+        _player.pause();
+      }
+      notifyListeners();
+    });
+  }
+
+  Future<void> toggle(String assetPath) async {
+    try {
+      if (_currentAsset == assetPath) {
+        if (_player.playing) {
+          await _player.pause();
+        } else {
+          await _player.seek(Duration.zero);
+          await _player.play();
+        }
+        return;
+      }
+      _currentAsset = assetPath;
+      notifyListeners();
+      await _player.setAsset(assetPath);
+      await _player.play();
+    } catch (_) {
+      // Missing asset / decode error — stay silent (button already hidden if
+      // the asset doesn't exist; see _SpeakerButton).
+    }
+  }
+
+  @override
+  void dispose() {
+    _player.dispose();
+    super.dispose();
+  }
+}
+
 class GuidedLessonPage extends StatefulWidget {
   const GuidedLessonPage({super.key, required this.lesson});
 
@@ -40,6 +97,9 @@ class _GuidedLessonPageState extends State<GuidedLessonPage> {
   /// Controllers for free-text slots (those without preset options).
   final Map<String, TextEditingController> _controllers = {};
 
+  /// Shared player for the model audio (paragraph / sentences / vocab).
+  final _GuidedAudio _audio = _GuidedAudio();
+
   @override
   void initState() {
     super.initState();
@@ -53,6 +113,7 @@ class _GuidedLessonPageState extends State<GuidedLessonPage> {
   @override
   void dispose() {
     _pageController.dispose();
+    _audio.dispose();
     for (final c in _controllers.values) {
       c.dispose();
     }
@@ -122,7 +183,15 @@ class _GuidedLessonPageState extends State<GuidedLessonPage> {
       promptMm: lesson.objectiveMm,
       difficulty: _difficultyForLevel(lesson.level),
       durationTargetSeconds: lesson.durationTargetSeconds,
-      vocabulary: lesson.vocabulary,
+      // Map the richer GuidedVocab down to the shared TopicVocabItem shape the
+      // recorder/checklist expects — related/opposite/group are prep-only.
+      vocabulary: lesson.vocabulary
+          .map((v) => TopicVocabItem(
+                term: v.term,
+                definitionMm: v.definitionMm,
+                exampleEn: v.exampleEn,
+              ))
+          .toList(growable: false),
       targetPhrases: lesson.targetPhrases,
       warmupQuestions: lesson.warmupQuestions,
       tags: const ['guided'],
@@ -165,7 +234,7 @@ class _GuidedLessonPageState extends State<GuidedLessonPage> {
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   _ObjectiveStep(lesson: widget.lesson),
-                  _ModelStep(lesson: widget.lesson),
+                  _ModelStep(lesson: widget.lesson, audio: _audio),
                   _BuildStep(
                     lesson: widget.lesson,
                     answers: _answers,
@@ -242,7 +311,7 @@ class _ObjectiveStep extends StatelessWidget {
             Text(
               lesson.objectiveMm,
               style: PmpTextStyles.body2Regular.copyWith(
-                color: colorScheme.onSurfaceVariant,
+                color: PmpColors.myanmarGloss(Theme.of(context).brightness),
                 fontFamily: 'Noto Sans Myanmar',
                 height: 1.7,
               ),
@@ -257,8 +326,9 @@ class _ObjectiveStep extends StatelessWidget {
 // ─────────────────────────────────────── Step 1: Model (I do) ───────────────
 
 class _ModelStep extends StatelessWidget {
-  const _ModelStep({required this.lesson});
+  const _ModelStep({required this.lesson, required this.audio});
   final GuidedLesson lesson;
+  final _GuidedAudio audio;
 
   @override
   Widget build(BuildContext context) {
@@ -273,6 +343,11 @@ class _ModelStep extends StatelessWidget {
             icon: Icons.menu_book_outlined,
             iconColor: colorScheme.primary,
             title: l10n.txtDsGuidedModelHeading,
+            trailing: _SpeakerButton(
+              audio: audio,
+              assetPath: '${_audioBase(lesson.id)}/paragraph.mp3',
+              size: 26,
+            ),
           ),
           const SizedBox(height: 10),
           Container(
@@ -300,12 +375,18 @@ class _ModelStep extends StatelessWidget {
               title: l10n.txtDsGuidedBreakdownHeading,
             ),
             const SizedBox(height: 10),
-            ...lesson.sentences.map(
-              (s) => Padding(
-                padding: const EdgeInsets.only(bottom: 10),
-                child: _SentenceCard(sentence: s),
-              ),
-            ),
+            ...lesson.sentences.asMap().entries.map(
+                  (e) => Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: _SentenceCard(
+                      sentence: e.value,
+                      vocab: lesson.vocabulary,
+                      audio: audio,
+                      lessonId: lesson.id,
+                      index: e.key,
+                    ),
+                  ),
+                ),
           ],
           if (lesson.vocabulary.isNotEmpty) ...[
             const SizedBox(height: 10),
@@ -319,7 +400,11 @@ class _ModelStep extends StatelessWidget {
               spacing: 8,
               runSpacing: 8,
               children: lesson.vocabulary
-                  .map((v) => _VocabChip(item: v))
+                  .map((v) => _VocabChip(
+                        item: v,
+                        audio: audio,
+                        lessonId: lesson.id,
+                      ))
                   .toList(growable: false),
             ),
           ],
@@ -344,13 +429,108 @@ class _ModelStep extends StatelessWidget {
   }
 }
 
-class _SentenceCard extends StatelessWidget {
-  const _SentenceCard({required this.sentence});
+class _SentenceCard extends StatefulWidget {
+  const _SentenceCard({
+    required this.sentence,
+    required this.vocab,
+    required this.audio,
+    required this.lessonId,
+    required this.index,
+  });
   final GuidedSentence sentence;
+  final List<GuidedVocab> vocab;
+  final _GuidedAudio audio;
+  final String lessonId;
+  final int index;
+
+  @override
+  State<_SentenceCard> createState() => _SentenceCardState();
+}
+
+class _SentenceCardState extends State<_SentenceCard> {
+  // Tap handlers for the underlined spans; rebuilt each build, disposed here.
+  final List<TapGestureRecognizer> _recognizers = [];
+
+  @override
+  void dispose() {
+    _disposeRecognizers();
+    super.dispose();
+  }
+
+  void _disposeRecognizers() {
+    for (final r in _recognizers) {
+      r.dispose();
+    }
+    _recognizers.clear();
+  }
+
+  GuidedVocab? _vocabById(String id) {
+    for (final v in widget.vocab) {
+      if (v.id == id) return v;
+    }
+    return null;
+  }
+
+  /// Splits [textEn] into plain + underlined-tappable spans. Each highlight's
+  /// phrase is matched at its first occurrence; overlaps are skipped. Swap
+  /// words (linked to a build slot) get a solid underline, plain content words
+  /// a dotted one — so the two kinds read differently at a glance.
+  List<InlineSpan> _buildSpans(BuildContext context) {
+    final text = widget.sentence.textEn;
+    final colorScheme = Theme.of(context).colorScheme;
+
+    final matches = <({int start, int end, GuidedVocab vocab})>[];
+    for (final h in widget.sentence.highlights) {
+      final vocab = _vocabById(h.vocabId);
+      if (vocab == null || h.phrase.isEmpty) continue;
+      final idx = text.indexOf(h.phrase);
+      if (idx < 0) continue;
+      matches.add((start: idx, end: idx + h.phrase.length, vocab: vocab));
+    }
+    matches.sort((a, b) => a.start.compareTo(b.start));
+
+    final spans = <InlineSpan>[];
+    var cursor = 0;
+    for (final m in matches) {
+      if (m.start < cursor) continue; // overlapping highlight → skip
+      if (m.start > cursor) {
+        spans.add(TextSpan(text: text.substring(cursor, m.start)));
+      }
+      final isSwap = m.vocab.slot.isNotEmpty;
+      final accent = isSwap ? colorScheme.primary : PmpColors.info500;
+      final recognizer = TapGestureRecognizer()
+        ..onTap = () => _showGuidedVocabSheet(
+              context,
+              m.vocab,
+              audio: widget.audio,
+              lessonId: widget.lessonId,
+            );
+      _recognizers.add(recognizer);
+      spans.add(TextSpan(
+        text: text.substring(m.start, m.end),
+        style: TextStyle(
+          color: accent,
+          fontWeight: FontWeight.w700,
+          decoration: TextDecoration.underline,
+          decorationColor: accent,
+          decorationStyle:
+              isSwap ? TextDecorationStyle.solid : TextDecorationStyle.dotted,
+        ),
+        recognizer: recognizer,
+      ));
+      cursor = m.end;
+    }
+    if (cursor < text.length) {
+      spans.add(TextSpan(text: text.substring(cursor)));
+    }
+    return spans;
+  }
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final sentence = widget.sentence;
+    _disposeRecognizers();
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12),
@@ -362,12 +542,39 @@ class _SentenceCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            sentence.textEn,
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: colorScheme.onSurface,
-            ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Text.rich(
+                  TextSpan(
+                    style: PmpTextStyles.body2Semi
+                        .copyWith(color: colorScheme.onSurface),
+                    children: _buildSpans(context),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 4),
+              _SpeakerButton(
+                audio: widget.audio,
+                assetPath:
+                    '${_audioBase(widget.lessonId)}/s${widget.index}.mp3',
+              ),
+            ],
           ),
+          if (sentence.textMm.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Divider(height: 1, color: colorScheme.outlineVariant),
+            const SizedBox(height: 10),
+            Text(
+              sentence.textMm,
+              style: PmpTextStyles.body2Regular.copyWith(
+                color: PmpColors.myanmarGloss(Theme.of(context).brightness),
+                fontFamily: 'Noto Sans Myanmar',
+                height: 1.6,
+              ),
+            ),
+          ],
           if (sentence.explanationMm.isNotEmpty) ...[
             const SizedBox(height: 6),
             Text(
@@ -875,10 +1082,12 @@ class _GuidedSectionHeader extends StatelessWidget {
     required this.icon,
     required this.iconColor,
     required this.title,
+    this.trailing,
   });
   final IconData icon;
   final Color iconColor;
   final String title;
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
@@ -894,65 +1103,273 @@ class _GuidedSectionHeader extends StatelessWidget {
                 PmpTextStyles.body2Semi.copyWith(color: colorScheme.onSurface),
           ),
         ),
+        if (trailing != null) trailing!,
       ],
     );
   }
 }
 
-class _VocabChip extends StatelessWidget {
-  const _VocabChip({required this.item});
-  final TopicVocabItem item;
+/// A small speaker icon that plays a pre-generated audio asset through the
+/// page's shared [_GuidedAudio]. It probes the bundle first and renders nothing
+/// if the asset is missing — so the button only appears for lessons that
+/// actually have audio (during the rollout only `guided_self_intro` does).
+class _SpeakerButton extends StatefulWidget {
+  const _SpeakerButton({
+    required this.audio,
+    required this.assetPath,
+    this.size = 20,
+  });
+  final _GuidedAudio audio;
+  final String assetPath;
+  final double size;
 
-  void _showDetail(BuildContext context) {
+  @override
+  State<_SpeakerButton> createState() => _SpeakerButtonState();
+}
+
+class _SpeakerButtonState extends State<_SpeakerButton> {
+  bool _exists = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _check();
+  }
+
+  Future<void> _check() async {
+    var ok = false;
+    try {
+      await rootBundle.load(widget.assetPath);
+      ok = true;
+    } catch (_) {
+      ok = false;
+    }
+    if (mounted) setState(() => _exists = ok);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!_exists) return const SizedBox.shrink();
     final colorScheme = Theme.of(context).colorScheme;
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (_) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              item.term,
-              style: PmpTextStyles.h2.copyWith(color: colorScheme.onSurface),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              item.definitionMm,
-              style: PmpTextStyles.body1Regular.copyWith(
-                color: colorScheme.onSurface,
-                fontFamily: 'Noto Sans Myanmar',
-                height: 1.6,
-              ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              AppLocalizations.of(context).txtDsExample,
-              style: PmpTextStyles.labelSemi
-                  .copyWith(color: colorScheme.onSurfaceVariant),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              item.exampleEn,
-              style: PmpTextStyles.body2Regular.copyWith(
-                color: colorScheme.onSurface,
-                fontStyle: FontStyle.italic,
-              ),
-            ),
-          ],
-        ),
-      ),
+    return AnimatedBuilder(
+      animation: widget.audio,
+      builder: (context, _) {
+        final isThis = widget.audio.currentAsset == widget.assetPath;
+        final isPlaying = isThis && widget.audio.isPlaying;
+        return IconButton(
+          onPressed: () => widget.audio.toggle(widget.assetPath),
+          visualDensity: VisualDensity.compact,
+          padding: const EdgeInsets.all(4),
+          constraints: const BoxConstraints(),
+          iconSize: widget.size,
+          color: colorScheme.primary,
+          icon: Icon(
+            isPlaying ? Icons.stop_circle_outlined : Icons.volume_up_rounded,
+          ),
+        );
+      },
     );
   }
+}
+
+class _VocabChip extends StatelessWidget {
+  const _VocabChip({
+    required this.item,
+    required this.audio,
+    required this.lessonId,
+  });
+  final GuidedVocab item;
+  final _GuidedAudio audio;
+  final String lessonId;
 
   @override
   Widget build(BuildContext context) {
     return ActionChip(
       avatar: const Icon(Icons.book_outlined, size: 16),
       label: Text(item.term),
-      onPressed: () => _showDetail(context),
+      onPressed: () =>
+          _showGuidedVocabSheet(context, item, audio: audio, lessonId: lessonId),
+    );
+  }
+}
+
+/// Shared detail sheet for a [GuidedVocab] — opened from both the vocab chips
+/// and the underlined spans in the line-by-line breakdown. Shows the gloss,
+/// the semantic group, "use instead" / "similar" words, opposites, an example,
+/// and (for swap words) a nudge that they'll pick it in the build step.
+void _showGuidedVocabSheet(
+  BuildContext context,
+  GuidedVocab vocab, {
+  _GuidedAudio? audio,
+  String? lessonId,
+}) {
+  final l10n = AppLocalizations.of(context);
+  final colorScheme = Theme.of(context).colorScheme;
+  final isSwap = vocab.slot.isNotEmpty;
+
+  showModalBottomSheet<void>(
+    context: context,
+    showDragHandle: true,
+    isScrollControlled: true,
+    builder: (_) => SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Text(
+                    vocab.term,
+                    style:
+                        PmpTextStyles.h2.copyWith(color: colorScheme.onSurface),
+                  ),
+                ),
+                if (audio != null && lessonId != null) ...[
+                  const SizedBox(width: 6),
+                  _SpeakerButton(
+                    audio: audio,
+                    assetPath: '${_audioBase(lessonId)}/v_${vocab.id}.mp3',
+                    size: 26,
+                  ),
+                ],
+                if (vocab.group.isNotEmpty) ...[
+                  const SizedBox(width: 8),
+                  _GroupBadge(label: vocab.group),
+                ],
+              ],
+            ),
+            if (vocab.definitionMm.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Text(
+                vocab.definitionMm,
+                style: PmpTextStyles.body1Regular.copyWith(
+                  color: colorScheme.onSurface,
+                  fontFamily: 'Noto Sans Myanmar',
+                  height: 1.6,
+                ),
+              ),
+            ],
+            if (vocab.related.isNotEmpty) ...[
+              const SizedBox(height: 18),
+              _SheetLabel(
+                text: isSwap
+                    ? l10n.txtDsVocabSwapTitle
+                    : l10n.txtDsVocabRelatedTitle,
+              ),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: vocab.related
+                    .map((w) => _WordChip(label: w))
+                    .toList(growable: false),
+              ),
+            ],
+            if (vocab.opposite.isNotEmpty) ...[
+              const SizedBox(height: 18),
+              _SheetLabel(text: l10n.txtDsVocabOppositeTitle),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: vocab.opposite
+                    .map((w) => _WordChip(label: w, muted: true))
+                    .toList(growable: false),
+              ),
+            ],
+            if (vocab.exampleEn.isNotEmpty) ...[
+              const SizedBox(height: 18),
+              _SheetLabel(text: l10n.txtDsExample),
+              const SizedBox(height: 6),
+              Text(
+                vocab.exampleEn,
+                style: PmpTextStyles.body2Regular.copyWith(
+                  color: colorScheme.onSurface,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
+            if (isSwap) ...[
+              const SizedBox(height: 18),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(Icons.lightbulb_outline,
+                      size: 16, color: colorScheme.primary),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(
+                      l10n.txtDsVocabPickNext,
+                      style: PmpTextStyles.label2Regular
+                          .copyWith(color: colorScheme.onSurfaceVariant),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class _GroupBadge extends StatelessWidget {
+  const _GroupBadge({required this.label});
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      decoration: BoxDecoration(
+        color: colorScheme.primary.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(
+        label,
+        style: PmpTextStyles.sub.copyWith(color: colorScheme.primary),
+      ),
+    );
+  }
+}
+
+class _SheetLabel extends StatelessWidget {
+  const _SheetLabel({required this.text});
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: PmpTextStyles.labelSemi
+          .copyWith(color: Theme.of(context).colorScheme.onSurfaceVariant),
+    );
+  }
+}
+
+class _WordChip extends StatelessWidget {
+  const _WordChip({required this.label, this.muted = false});
+  final String label;
+  final bool muted;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final fg = muted ? colorScheme.onSurfaceVariant : colorScheme.onSurface;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      decoration: BoxDecoration(
+        color: colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: colorScheme.outlineVariant),
+      ),
+      child: Text(label, style: PmpTextStyles.body2Regular.copyWith(color: fg)),
     );
   }
 }

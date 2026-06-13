@@ -1,0 +1,162 @@
+{
+  "id": "guided_self_intro",
+  "title": "Introduce yourself",
+  "level": 1,
+  "sort_order": 1,
+  "objective_en": "By the end, you'll be able to introduce yourself — your name, where you're from, your job, and what you like — in about 30 seconds.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် မိမိရဲ့ နာမည်၊ ဘယ်ကလာတယ်၊ ဘာအလုပ်လုပ်တယ်၊ ဘာကြိုက်တယ်ဆိုတာကို စက္ကန့် ၃၀ လောက်နဲ့ မိတ်ဆက်ပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "Hello, I'm James. I come from the USA, and I live in a city called Chicago. I work as a teacher. In my free time, I love playing football.",
+  "template": "Hello, I'm {name}. I come from {country}, and I live in a city called {city}. I work as a {job}. In my free time, I love {hobby}.",
+  "sentences": [
+    {
+      "text_en": "Hello, I'm James.",
+      "text_mm": "မင်္ဂလာပါ၊ ကျွန်တော် James ပါ။",
+      "explanation_mm": "ဒီဝါကျက မိမိနာမည်ကို မိတ်ဆက်တာပါ။ \"I'm\" ဆိုတာ \"I am\" ရဲ့ အတိုကောက်ဖြစ်ပြီး နာမည်ရှေ့မှာ သုံးပါတယ်။",
+      "highlights": []
+    },
+    {
+      "text_en": "I come from the USA, and I live in a city called Chicago.",
+      "text_mm": "ကျွန်တော် အမေရိကန်ကလာတာပါ၊ ပြီးတော့ Chicago ဆိုတဲ့မြို့မှာ နေပါတယ်။",
+      "explanation_mm": "\"I come from ...\" က မိမိဘယ်နိုင်ငံ/ဘယ်ဒေသကလာတယ်ဆိုတာ ပြောတာပါ။ \"I live in ...\" ကတော့ အခု နေထိုင်တဲ့မြို့ကို ပြောတာဖြစ်ပါတယ်။",
+      "highlights": [
+        { "phrase": "come from", "vocab_id": "come_from" },
+        { "phrase": "live in", "vocab_id": "live_in" },
+        { "phrase": "the USA", "vocab_id": "country" }
+      ]
+    },
+    {
+      "text_en": "I work as a teacher.",
+      "text_mm": "ကျွန်တော် ဆရာအဖြစ် အလုပ်လုပ်ပါတယ်။",
+      "explanation_mm": "မိမိရဲ့ အလုပ်အကိုင်ကို ပြောတဲ့ ဝါကျပါ။ \"I work as a ...\" နောက်မှာ အလုပ်အမည်ကို ထည့်ပါ။",
+      "highlights": [
+        { "phrase": "teacher", "vocab_id": "job" }
+      ]
+    },
+    {
+      "text_en": "In my free time, I love playing football.",
+      "text_mm": "အားလပ်ချိန်မှာ ဘောလုံးကစားရတာ ကျွန်တော် အရမ်းကြိုက်ပါတယ်။",
+      "explanation_mm": "\"In my free time\" က အားတဲ့အချိန်လို့ ဆိုလိုပါတယ်။ \"I love + (verb)ing\" နဲ့ ကြိုက်တဲ့ ဝါသနာကို ပြောပါတယ်။",
+      "highlights": [
+        { "phrase": "In my free time", "vocab_id": "in_my_free_time" },
+        { "phrase": "playing football", "vocab_id": "hobby" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "name",
+      "label_en": "Your name",
+      "label_mm": "မိမိနာမည်",
+      "hint": "James",
+      "options": []
+    },
+    {
+      "id": "country",
+      "label_en": "Where you're from",
+      "label_mm": "ဘယ်ကလာသလဲ",
+      "hint": "the USA",
+      "options": ["the USA", "the UK", "Myanmar", "Japan", "Thailand", "Singapore"]
+    },
+    {
+      "id": "city",
+      "label_en": "The city you live in",
+      "label_mm": "နေထိုင်တဲ့မြို့",
+      "hint": "Chicago",
+      "options": []
+    },
+    {
+      "id": "job",
+      "label_en": "Your job",
+      "label_mm": "အလုပ်အကိုင်",
+      "hint": "teacher",
+      "options": ["teacher", "student", "engineer", "nurse", "business owner", "developer"]
+    },
+    {
+      "id": "hobby",
+      "label_en": "What you love doing",
+      "label_mm": "ဝါသနာ",
+      "hint": "playing football",
+      "options": ["playing football", "reading books", "cooking", "listening to music", "watching movies", "drawing"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "come_from",
+      "term": "come from",
+      "group": "talking about origin",
+      "definition_mm": "(တစ်နေရာရာ) က လာသည်၊ မွေးဖွားရာဒေသ",
+      "related": ["be from", "grow up in", "originate from"],
+      "opposite": [],
+      "example_en": "I come from a small town near the sea."
+    },
+    {
+      "id": "live_in",
+      "term": "live in",
+      "group": "talking about where you live",
+      "definition_mm": "(တစ်နေရာရာ) မှာ နေထိုင်သည်",
+      "related": ["stay in", "be based in", "reside in"],
+      "opposite": ["move away from"],
+      "example_en": "I live in a small town."
+    },
+    {
+      "id": "country",
+      "term": "the USA",
+      "group": "countries",
+      "definition_mm": "အမေရိကန် (နိုင်ငံ)",
+      "related": ["the UK", "Myanmar", "Japan", "Thailand", "Singapore", "Canada", "Australia"],
+      "opposite": [],
+      "example_en": "I come from the USA.",
+      "slot": "country"
+    },
+    {
+      "id": "job",
+      "term": "teacher",
+      "group": "jobs",
+      "definition_mm": "ဆရာ/ဆရာမ",
+      "related": ["student", "engineer", "nurse", "business owner", "developer", "doctor"],
+      "opposite": [],
+      "example_en": "I work as a teacher.",
+      "slot": "job"
+    },
+    {
+      "id": "in_my_free_time",
+      "term": "in my free time",
+      "group": "time expressions",
+      "definition_mm": "အားလပ်တဲ့အချိန်မှာ",
+      "related": ["in my spare time", "on weekends", "after work", "when I'm free"],
+      "opposite": [],
+      "example_en": "In my free time, I like to read."
+    },
+    {
+      "id": "hobby",
+      "term": "playing football",
+      "group": "hobbies",
+      "definition_mm": "ဘောလုံးကစားခြင်း",
+      "related": ["reading books", "cooking", "listening to music", "watching movies", "drawing", "playing games"],
+      "opposite": [],
+      "example_en": "I love playing football on weekends.",
+      "slot": "hobby"
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "I come from",
+      "translation_mm": "ကျွန်တော်/ကျွန်မ ... ကလာတာပါ"
+    },
+    {
+      "phrase_en": "I work as a",
+      "translation_mm": "ကျွန်တော်/ကျွန်မ ... အဖြစ် အလုပ်လုပ်ပါတယ်"
+    },
+    {
+      "phrase_en": "In my free time, I love",
+      "translation_mm": "အားတဲ့အချိန်မှာ ... လုပ်ရတာ ကြိုက်ပါတယ်"
+    }
+  ],
+  "warmup_questions": [
+    "What is your name?",
+    "Which country are you from?",
+    "What do you do for work or study?",
+    "What do you enjoy in your free time?"
+  ],
+  "duration_target_seconds": 45
+}

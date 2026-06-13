@@ -480,6 +480,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDsLimitReached": MessageLookupByLibrary.simpleMessage("Limit reached"),
     "txtDsMaxDuration": m9,
+    "txtDsMoreWays": MessageLookupByLibrary.simpleMessage(
+      "More ways to practice",
+    ),
     "txtDsNSelected": m10,
     "txtDsNativeHeaderNoScore": MessageLookupByLibrary.simpleMessage(
       "Here\'s how a native speaker might say it.",
@@ -698,6 +701,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsVersionBanner": m24,
     "txtDsVersionShort": m25,
     "txtDsVersionThisOne": m26,
+    "txtDsVocabOppositeTitle": MessageLookupByLibrary.simpleMessage("Opposite"),
+    "txtDsVocabPickNext": MessageLookupByLibrary.simpleMessage(
+      "You\'ll choose this in the next step.",
+    ),
+    "txtDsVocabRelatedTitle": MessageLookupByLibrary.simpleMessage(
+      "Similar words",
+    ),
+    "txtDsVocabSwapTitle": MessageLookupByLibrary.simpleMessage(
+      "Words you can use instead",
+    ),
     "txtDsVocabulary": MessageLookupByLibrary.simpleMessage("Vocabulary"),
     "txtDsWhatToTalkAbout": MessageLookupByLibrary.simpleMessage(
       "What do you want to talk about?",

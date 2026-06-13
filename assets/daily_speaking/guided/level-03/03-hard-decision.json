@@ -1,0 +1,224 @@
+{
+  "id": "guided_hard_decision",
+  "title": "A hard decision I made",
+  "level": 3,
+  "sort_order": 3,
+  "objective_en": "By the end, you'll be able to tell the story of a difficult decision — the choices you faced, what you decided, and how you feel about it now.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် ခက်ခဲတဲ့ ဆုံးဖြတ်ချက်တစ်ခုအကြောင်း — ဘယ်လိုရွေးချယ်စရာတွေနဲ့ ကြုံခဲ့၊ ဘာဆုံးဖြတ်ခဲ့၊ အခု ဘယ်လိုခံစားရတယ်ဆိုတဲ့ ဇာတ်လမ်းကို ပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "A few years ago, I had to make a very difficult decision. I was offered a good job in another city, but it meant leaving my family behind. I thought about it for weeks and talked to the people I trust. In the end, I decided to take the job because I knew it would help me grow. Looking back, it was hard, but it was the right choice.",
+  "template": "A few years ago, I had to make a very difficult decision. I was offered {opportunity}, but it meant {downside}. I thought about it for weeks and talked to the people I trust. In the end, I decided to {decision} because I knew it would {reason}. Looking back, it was hard, but it was the right choice.",
+  "sentences": [
+    {
+      "text_en": "A few years ago, I had to make a very difficult decision.",
+      "text_mm": "လွန်ခဲ့တဲ့ နှစ်အနည်းငယ်က ကျွန်တော် အလွန် ခက်ခဲတဲ့ ဆုံးဖြတ်ချက်တစ်ခု ချရတော့မှာ ဖြစ်ခဲ့ပါတယ်။",
+      "explanation_mm": "\"I had to ...\" က \"... ရတော့မှာ/လုပ်ရတယ်\" လို့ မလုပ်မဖြစ် လုပ်ရတာကို ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "had to", "vocab_id": "had_to" },
+        { "phrase": "difficult decision", "vocab_id": "difficult_decision" }
+      ]
+    },
+    {
+      "text_en": "I was offered a good job in another city, but it meant leaving my family behind.",
+      "text_mm": "ကျွန်တော့်ကို တခြားမြို့မှာ အလုပ်ကောင်းတစ်ခု ကမ်းလှမ်းခံရပေမယ့် အဲဒါက မိသားစုကို ထားခဲ့ရမယ့်သဘော ဖြစ်ခဲ့ပါတယ်။",
+      "explanation_mm": "\"I was offered ...\" က \"... ကို ကမ်းလှမ်းခံရတယ်\" (passive)၊ \"it meant ...\" က \"အဲဒါက ... ဆိုတဲ့သဘော\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "I was offered", "vocab_id": "be_offered" },
+        { "phrase": "a good job in another city", "vocab_id": "opportunity" },
+        { "phrase": "leaving my family behind", "vocab_id": "downside" }
+      ]
+    },
+    {
+      "text_en": "I thought about it for weeks and talked to the people I trust.",
+      "text_mm": "ကျွန်တော် အဲဒါကို ရက်သတ္တပတ်တွေ စဉ်းစားပြီး ယုံကြည်ရတဲ့သူတွေနဲ့ တိုင်ပင်ခဲ့ပါတယ်။",
+      "explanation_mm": "\"I thought about it ...\" က \"... ကို စဉ်းစားခဲ့တယ်\"၊ \"the people I trust\" က \"ယုံကြည်ရတဲ့သူတွေ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "thought about it", "vocab_id": "think_about" },
+        { "phrase": "the people I trust", "vocab_id": "people_i_trust" }
+      ]
+    },
+    {
+      "text_en": "In the end, I decided to take the job because I knew it would help me grow.",
+      "text_mm": "နောက်ဆုံးမှာ ဒါက ကျွန်တော့်ကို ကြီးပွားတိုးတက်စေမယ်လို့ သိလို့ အဲဒီအလုပ်ကို လက်ခံဖို့ ဆုံးဖြတ်ခဲ့ပါတယ်။",
+      "explanation_mm": "\"In the end, I decided to ...\" က \"နောက်ဆုံးမှာ ... ဖို့ ဆုံးဖြတ်ခဲ့တယ်\"၊ \"because I knew ...\" နဲ့ အကြောင်းပြတာပါ။",
+      "highlights": [
+        { "phrase": "In the end", "vocab_id": "in_the_end" },
+        { "phrase": "take the job", "vocab_id": "decision" },
+        { "phrase": "help me grow", "vocab_id": "reason" }
+      ]
+    },
+    {
+      "text_en": "Looking back, it was hard, but it was the right choice.",
+      "text_mm": "ပြန်ကြည့်တဲ့အခါ ခက်ခဲခဲ့ပေမယ့် မှန်ကန်တဲ့ ရွေးချယ်မှု ဖြစ်ခဲ့ပါတယ်။",
+      "explanation_mm": "\"Looking back\" က \"ပြန်ကြည့်တဲ့အခါ\"၊ \"it was the right choice\" က \"မှန်ကန်တဲ့ရွေးချယ်မှုပါ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "Looking back", "vocab_id": "looking_back" },
+        { "phrase": "the right choice", "vocab_id": "right_choice" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "opportunity",
+      "label_en": "What you were offered",
+      "label_mm": "အခွင့်အလမ်း",
+      "hint": "a good job in another city",
+      "options": []
+    },
+    {
+      "id": "downside",
+      "label_en": "The hard part of it",
+      "label_mm": "အဆိုးဘက်",
+      "hint": "leaving my family behind",
+      "options": []
+    },
+    {
+      "id": "decision",
+      "label_en": "What you decided",
+      "label_mm": "ဆုံးဖြတ်ချက်",
+      "hint": "take the job",
+      "options": []
+    },
+    {
+      "id": "reason",
+      "label_en": "Why you chose it",
+      "label_mm": "အကြောင်းရင်း",
+      "hint": "help me grow",
+      "options": []
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "had_to",
+      "term": "had to",
+      "group": "useful phrases",
+      "definition_mm": "... ရတော့မှာ/လုပ်ရသည် (မလုပ်မဖြစ်)",
+      "related": ["needed to", "was forced to", "must"],
+      "opposite": ["chose to", "wanted to"],
+      "example_en": "I had to make a choice."
+    },
+    {
+      "id": "difficult_decision",
+      "term": "difficult decision",
+      "group": "useful phrases",
+      "definition_mm": "ခက်ခဲတဲ့ ဆုံးဖြတ်ချက်",
+      "related": ["tough choice", "hard call", "big decision"],
+      "opposite": ["easy choice"],
+      "example_en": "It was a difficult decision."
+    },
+    {
+      "id": "be_offered",
+      "term": "I was offered",
+      "group": "work / passive",
+      "definition_mm": "... ကို ကမ်းလှမ်းခံရသည်",
+      "related": ["was given", "was invited to take", "got an offer of"],
+      "opposite": ["was turned down", "was rejected"],
+      "example_en": "I was offered a new job."
+    },
+    {
+      "id": "opportunity",
+      "term": "a good job in another city",
+      "group": "what you were offered",
+      "definition_mm": "တခြားမြို့မှာ အလုပ်ကောင်းတစ်ခု",
+      "related": ["a place at university", "a chance to study abroad", "a promotion", "a new role"],
+      "opposite": [],
+      "example_en": "I was offered a good job in another city.",
+      "slot": "opportunity"
+    },
+    {
+      "id": "downside",
+      "term": "leaving my family behind",
+      "group": "the hard part",
+      "definition_mm": "မိသားစုကို ထားခဲ့ရခြင်း",
+      "related": ["moving far away", "starting over", "losing my free time", "more stress"],
+      "opposite": [],
+      "example_en": "It meant leaving my family behind.",
+      "slot": "downside"
+    },
+    {
+      "id": "think_about",
+      "term": "thought about it",
+      "group": "phrasal verbs",
+      "definition_mm": "... ကို စဉ်းစားသည်",
+      "related": ["considered it", "weighed it up", "reflected on it"],
+      "opposite": ["ignored it"],
+      "example_en": "I thought about it for a long time."
+    },
+    {
+      "id": "people_i_trust",
+      "term": "the people I trust",
+      "group": "useful phrases",
+      "definition_mm": "ယုံကြည်ရတဲ့ သူများ",
+      "related": ["my close friends", "my family", "people I rely on", "my mentors"],
+      "opposite": [],
+      "example_en": "I talked to the people I trust."
+    },
+    {
+      "id": "in_the_end",
+      "term": "In the end",
+      "group": "sequence words",
+      "definition_mm": "နောက်ဆုံးမှာ",
+      "related": ["finally", "eventually", "at last", "ultimately"],
+      "opposite": ["at first", "to begin with"],
+      "example_en": "In the end, I said yes."
+    },
+    {
+      "id": "decision",
+      "term": "take the job",
+      "group": "what you decided",
+      "definition_mm": "အလုပ်ကို လက်ခံသည်",
+      "related": ["stay where I was", "turn it down", "wait and see", "move abroad"],
+      "opposite": ["turn down the job"],
+      "example_en": "I decided to take the job.",
+      "slot": "decision"
+    },
+    {
+      "id": "reason",
+      "term": "help me grow",
+      "group": "reasons",
+      "definition_mm": "ကြီးပွားတိုးတက်စေသည်",
+      "related": ["open new doors", "challenge me", "improve my life", "make me stronger"],
+      "opposite": [],
+      "example_en": "I knew it would help me grow.",
+      "slot": "reason"
+    },
+    {
+      "id": "looking_back",
+      "term": "Looking back",
+      "group": "useful phrases",
+      "definition_mm": "ပြန်လည် သုံးသပ်ကြည့်လျှင်",
+      "related": ["in hindsight", "now that I think about it", "when I reflect"],
+      "opposite": ["looking ahead"],
+      "example_en": "Looking back, I have no regrets."
+    },
+    {
+      "id": "right_choice",
+      "term": "the right choice",
+      "group": "useful phrases",
+      "definition_mm": "မှန်ကန်တဲ့ ရွေးချယ်မှု",
+      "related": ["the best decision", "a wise move", "the correct call"],
+      "opposite": ["a mistake", "the wrong choice"],
+      "example_en": "It was the right choice."
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "I had to make a difficult decision",
+      "translation_mm": "ကျွန်တော် ခက်ခဲတဲ့ ဆုံးဖြတ်ချက်တစ်ခု ချရတယ်"
+    },
+    {
+      "phrase_en": "In the end, I decided to",
+      "translation_mm": "နောက်ဆုံးမှာ ... ဖို့ ဆုံးဖြတ်ခဲ့တယ်"
+    },
+    {
+      "phrase_en": "Looking back, it was the right choice",
+      "translation_mm": "ပြန်ကြည့်တော့ မှန်ကန်တဲ့ရွေးချယ်မှုပါ"
+    }
+  ],
+  "warmup_questions": [
+    "What is a hard decision you have made?",
+    "What were your choices?",
+    "What did you decide, and why?",
+    "Do you think it was the right choice?"
+  ],
+  "duration_target_seconds": 90
+}

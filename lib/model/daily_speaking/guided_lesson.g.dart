@@ -24,9 +24,9 @@ _$GuidedLessonImpl _$$GuidedLessonImplFromJson(Map<String, dynamic> json) =>
               .toList() ??
           const <GuidedSlot>[],
       vocabulary: (json['vocabulary'] as List<dynamic>?)
-              ?.map((e) => TopicVocabItem.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => GuidedVocab.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <TopicVocabItem>[],
+          const <GuidedVocab>[],
       targetPhrases: (json['target_phrases'] as List<dynamic>?)
               ?.map(
                   (e) => TopicTargetPhrase.fromJson(e as Map<String, dynamic>))
@@ -62,14 +62,65 @@ Map<String, dynamic> _$$GuidedLessonImplToJson(_$GuidedLessonImpl instance) =>
 _$GuidedSentenceImpl _$$GuidedSentenceImplFromJson(Map<String, dynamic> json) =>
     _$GuidedSentenceImpl(
       textEn: json['text_en'] as String,
+      textMm: json['text_mm'] as String? ?? '',
       explanationMm: json['explanation_mm'] as String? ?? '',
+      highlights: (json['highlights'] as List<dynamic>?)
+              ?.map((e) => GuidedHighlight.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <GuidedHighlight>[],
     );
 
 Map<String, dynamic> _$$GuidedSentenceImplToJson(
         _$GuidedSentenceImpl instance) =>
     <String, dynamic>{
       'text_en': instance.textEn,
+      'text_mm': instance.textMm,
       'explanation_mm': instance.explanationMm,
+      'highlights': instance.highlights,
+    };
+
+_$GuidedHighlightImpl _$$GuidedHighlightImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GuidedHighlightImpl(
+      phrase: json['phrase'] as String,
+      vocabId: json['vocab_id'] as String,
+    );
+
+Map<String, dynamic> _$$GuidedHighlightImplToJson(
+        _$GuidedHighlightImpl instance) =>
+    <String, dynamic>{
+      'phrase': instance.phrase,
+      'vocab_id': instance.vocabId,
+    };
+
+_$GuidedVocabImpl _$$GuidedVocabImplFromJson(Map<String, dynamic> json) =>
+    _$GuidedVocabImpl(
+      id: json['id'] as String? ?? '',
+      term: json['term'] as String,
+      group: json['group'] as String? ?? '',
+      definitionMm: json['definition_mm'] as String? ?? '',
+      related: (json['related'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const <String>[],
+      opposite: (json['opposite'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const <String>[],
+      exampleEn: json['example_en'] as String? ?? '',
+      slot: json['slot'] as String? ?? '',
+    );
+
+Map<String, dynamic> _$$GuidedVocabImplToJson(_$GuidedVocabImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'term': instance.term,
+      'group': instance.group,
+      'definition_mm': instance.definitionMm,
+      'related': instance.related,
+      'opposite': instance.opposite,
+      'example_en': instance.exampleEn,
+      'slot': instance.slot,
     };
 
 _$GuidedSlotImpl _$$GuidedSlotImplFromJson(Map<String, dynamic> json) =>

@@ -50,7 +50,7 @@ class GuidedLesson with _$GuidedLesson {
     /// The slots the learner fills in the "We do" step.
     @Default(<GuidedSlot>[]) List<GuidedSlot> slots,
 
-    @Default(<TopicVocabItem>[]) List<TopicVocabItem> vocabulary,
+    @Default(<GuidedVocab>[]) List<GuidedVocab> vocabulary,
     @JsonKey(name: 'target_phrases') @Default(<TopicTargetPhrase>[])
     List<TopicTargetPhrase> targetPhrases,
     @JsonKey(name: 'warmup_questions') @Default(<String>[])
@@ -71,11 +71,62 @@ class GuidedLesson with _$GuidedLesson {
 class GuidedSentence with _$GuidedSentence {
   const factory GuidedSentence({
     @JsonKey(name: 'text_en') required String textEn,
+
+    /// Direct Burmese translation of [textEn] — what the sentence *means*.
+    /// Distinct from [explanationMm], which explains *why* it's built this way.
+    @JsonKey(name: 'text_mm') @Default('') String textMm,
     @JsonKey(name: 'explanation_mm') @Default('') String explanationMm,
+
+    /// Tappable spans inside [textEn]. Each marks a phrase to underline and
+    /// links it (by [GuidedHighlight.vocabId]) to a [GuidedVocab] in the
+    /// lesson's [GuidedLesson.vocabulary] bank, opening a detail sheet on tap.
+    @Default(<GuidedHighlight>[]) List<GuidedHighlight> highlights,
   }) = _GuidedSentence;
 
   factory GuidedSentence.fromJson(Map<String, dynamic> json) =>
       _$GuidedSentenceFromJson(json);
+}
+
+/// A tappable span in a [GuidedSentence]: [phrase] is matched (first
+/// occurrence) inside the sentence text and underlined; tapping it opens the
+/// [GuidedVocab] identified by [vocabId].
+@freezed
+class GuidedHighlight with _$GuidedHighlight {
+  const factory GuidedHighlight({
+    required String phrase,
+    @JsonKey(name: 'vocab_id') required String vocabId,
+  }) = _GuidedHighlight;
+
+  factory GuidedHighlight.fromJson(Map<String, dynamic> json) =>
+      _$GuidedHighlightFromJson(json);
+}
+
+/// A vocabulary item for the guided on-ramp — richer than [TopicVocabItem]:
+/// it carries a semantic [group], [related] (synonyms / same-group words a
+/// learner can use instead) and [opposite] (antonyms), surfaced in a tap sheet.
+///
+/// When [slot] is set it names a [GuidedSlot] in the same lesson, so the span
+/// is a *swappable* build-step choice (rendered with a distinct style) and the
+/// sheet can nudge "you'll choose this next". When [slot] is empty it's a plain
+/// content word. Maps down to [TopicVocabItem] (term/definition/example) when
+/// the synthetic topic is handed to the recorder, keeping downstream unchanged.
+@freezed
+class GuidedVocab with _$GuidedVocab {
+  const factory GuidedVocab({
+    @Default('') String id,
+    required String term,
+    @Default('') String group,
+    @JsonKey(name: 'definition_mm') @Default('') String definitionMm,
+    @Default(<String>[]) List<String> related,
+    @Default(<String>[]) List<String> opposite,
+    @JsonKey(name: 'example_en') @Default('') String exampleEn,
+
+    /// Optional id of a [GuidedSlot] this word can be swapped for.
+    @Default('') String slot,
+  }) = _GuidedVocab;
+
+  factory GuidedVocab.fromJson(Map<String, dynamic> json) =>
+      _$GuidedVocabFromJson(json);
 }
 
 /// One fill-in slot in the "We do" step. [options] non-empty ⇒ tap-to-pick

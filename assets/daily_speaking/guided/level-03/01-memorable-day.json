@@ -1,0 +1,288 @@
+{
+  "id": "guided_memorable_day",
+  "title": "A day I'll never forget",
+  "level": 3,
+  "sort_order": 1,
+  "objective_en": "By the end, you'll be able to tell a longer story about a memorable day — what happened, who you were with, and how you felt — for about two minutes.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် မမေ့နိုင်တဲ့နေ့တစ်နေ့အကြောင်း — ဘာဖြစ်ခဲ့တယ်၊ ဘယ်သူနဲ့အတူရှိခဲ့တယ်၊ ဘယ်လိုခံစားခဲ့ရတယ်ဆိုတာ ပိုရှည်တဲ့ဇာတ်လမ်းတစ်ခုအဖြစ် ၂ မိနစ်လောက် ပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "One day I'll never forget is when I travelled to the mountains. It happened in 2019, in a place called Kalaw. I was there with my closest friends, and the weather was cool and clear. In the morning, we hiked up a long, winding trail and stopped to take photos of the valley below. The best part of the whole day was when we reached the top and watched the clouds move slowly beneath us. I felt completely peaceful the entire time, and even now I still remember every small detail. By the evening we were tired, but we were very happy, and it became a memory I will keep with me forever.",
+  "template": "One day I'll never forget is when I {event}. It happened in {year}, in a place called {place}. I was there with my {companion}, and the weather was {weather}. In the morning, we {morning}. The best part of the whole day was when we {best_part}. I felt {feeling} the entire time, and even now I still remember every small detail. By the evening we were tired, but we were very happy, and it became a memory I will keep with me forever.",
+  "sentences": [
+    {
+      "text_en": "One day I'll never forget is when I travelled to the mountains.",
+      "text_mm": "ကျွန်တော် ဘယ်တော့မှ မမေ့နိုင်တဲ့ နေ့တစ်နေ့ကတော့ တောင်တွေဆီ ခရီးသွားခဲ့တုန်းကပါ။",
+      "explanation_mm": "\"One day I'll never forget is when ...\" က ဇာတ်လမ်းတစ်ခုကို စတင်တဲ့ ကောင်းတဲ့အဖွင့်ပုံစံပါ။ နောက်မှာ ဖြစ်ခဲ့တဲ့အရာကို ထည့်ပြောပါ။",
+      "highlights": [
+        { "phrase": "I'll never forget", "vocab_id": "never_forget" },
+        { "phrase": "travelled to the mountains", "vocab_id": "event" }
+      ]
+    },
+    {
+      "text_en": "It happened in 2019, in a place called Kalaw.",
+      "text_mm": "အဲဒါက ၂၀၁၉ ခုနှစ်၊ ကလော ဆိုတဲ့နေရာမှာ ဖြစ်ခဲ့တာပါ။",
+      "explanation_mm": "\"in (year)\" နဲ့ \"in a place called ...\" သုံးပြီး အချိန်နဲ့နေရာကို ရှင်းရှင်းလင်းလင်း ဖော်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "2019", "vocab_id": "year" },
+        { "phrase": "in a place called", "vocab_id": "place_called" }
+      ]
+    },
+    {
+      "text_en": "I was there with my closest friends, and the weather was cool and clear.",
+      "text_mm": "ကျွန်တော် အဲဒီမှာ အရင်းနှီးဆုံးသူငယ်ချင်းတွေနဲ့ ရှိခဲ့ပြီး ရာသီဥတုက အေးမြပြီး ကြည်လင်ခဲ့ပါတယ်။",
+      "explanation_mm": "\"I was there with ...\" က \"အဲဒီမှာ ... နဲ့ ရှိခဲ့တယ်\"၊ \"the weather was ...\" က ရာသီဥတုကို ဖော်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "closest friends", "vocab_id": "companion" },
+        { "phrase": "cool and clear", "vocab_id": "weather" }
+      ]
+    },
+    {
+      "text_en": "In the morning, we hiked up a long, winding trail and stopped to take photos of the valley below.",
+      "text_mm": "မနက်ပိုင်းမှာ ကျွန်တော်တို့ ရှည်လျားကွေ့ကောက်တဲ့ လမ်းကြောင်းတစ်ခုပေါ် တက်လမ်းလျှောက်ပြီး အောက်က တောင်ကြားရှုခင်းကို ဓာတ်ပုံရိုက်ဖို့ ရပ်ခဲ့ကြပါတယ်။",
+      "explanation_mm": "\"In the morning\" က မနက်ပိုင်းကို ပြောတာပါ။ \"hiked up\" က \"တောင်တက်လမ်းလျှောက်သည်\"၊ \"winding trail\" က \"ကွေ့ကောက်တဲ့လမ်း\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "hiked up", "vocab_id": "hike_up" },
+        { "phrase": "winding trail", "vocab_id": "winding_trail" }
+      ]
+    },
+    {
+      "text_en": "The best part of the whole day was when we reached the top and watched the clouds move slowly beneath us.",
+      "text_mm": "တစ်နေ့လုံးရဲ့ အကောင်းဆုံးအပိုင်းကတော့ ထိပ်ဆုံးကို ရောက်ပြီး တိမ်တွေ အောက်မှာ ဖြည်းဖြည်းရွေ့လျားတာကို ကြည့်ခဲ့ရတဲ့အချိန်ပါ။",
+      "explanation_mm": "\"The best part of the whole day was when ...\" က အကောင်းဆုံးအခိုက်အတန့်ကို မိတ်ဆက်တဲ့ပုံစံပါ။ \"reached the top\" က \"ထိပ်ဆုံးရောက်သည်\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "The best part of the whole day", "vocab_id": "best_part" },
+        { "phrase": "reached the top", "vocab_id": "reach_top" }
+      ]
+    },
+    {
+      "text_en": "I felt completely peaceful the entire time, and even now I still remember every small detail.",
+      "text_mm": "အချိန်တစ်လျှောက်လုံး ကျွန်တော် လုံးဝ ငြိမ်းချမ်းအေးချမ်းနေခဲ့ပြီး အခုထိတောင် အသေးစိတ်လေးတိုင်းကို မှတ်မိနေဆဲပါ။",
+      "explanation_mm": "\"I felt + (feeling)\" နဲ့ ခံစားချက်ကို ပြောပါတယ်။ \"the entire time\" က \"အချိန်တစ်လျှောက်လုံး\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "peaceful", "vocab_id": "feeling" },
+        { "phrase": "the entire time", "vocab_id": "entire_time" }
+      ]
+    },
+    {
+      "text_en": "By the evening we were tired, but we were very happy, and it became a memory I will keep with me forever.",
+      "text_mm": "ညနေပိုင်းရောက်တော့ ကျွန်တော်တို့ မောပန်းခဲ့ပေမယ့် အရမ်း ပျော်ခဲ့ကြပြီး အဲဒါက ထာဝရ သိမ်းထားမယ့် အမှတ်တရတစ်ခု ဖြစ်လာခဲ့ပါတယ်။",
+      "explanation_mm": "\"By the evening\" က \"ညနေပိုင်းရောက်တော့\"၊ \"a memory I will keep with me forever\" က \"ထာဝရ သိမ်းထားမယ့် အမှတ်တရ\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "By the evening", "vocab_id": "by_the_evening" },
+        { "phrase": "a memory I will keep with me forever", "vocab_id": "memory_forever" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "event",
+      "label_en": "What you did",
+      "label_mm": "ဘာလုပ်ခဲ့သလဲ",
+      "hint": "travelled to the mountains",
+      "options": []
+    },
+    {
+      "id": "year",
+      "label_en": "When it happened",
+      "label_mm": "ဘယ်နှစ်က",
+      "hint": "2019",
+      "options": ["2018", "2019", "2020", "2022", "last year"]
+    },
+    {
+      "id": "place",
+      "label_en": "Where it was",
+      "label_mm": "ဘယ်နေရာ",
+      "hint": "Kalaw",
+      "options": []
+    },
+    {
+      "id": "companion",
+      "label_en": "Who you were with",
+      "label_mm": "ဘယ်သူနဲ့",
+      "hint": "closest friends",
+      "options": ["closest friends", "family", "parents", "classmates", "partner"]
+    },
+    {
+      "id": "weather",
+      "label_en": "What the weather was like",
+      "label_mm": "ရာသီဥတု",
+      "hint": "cool and clear",
+      "options": ["cool and clear", "warm and sunny", "rainy", "hot", "cold and foggy"]
+    },
+    {
+      "id": "morning",
+      "label_en": "What you did in the morning",
+      "label_mm": "မနက်ပိုင်းလုပ်ခဲ့တာ",
+      "hint": "hiked up a long trail",
+      "options": []
+    },
+    {
+      "id": "best_part",
+      "label_en": "The best moment",
+      "label_mm": "အကောင်းဆုံးအခိုက်အတန့်",
+      "hint": "reached the top and watched the clouds",
+      "options": []
+    },
+    {
+      "id": "feeling",
+      "label_en": "How you felt",
+      "label_mm": "ဘယ်လိုခံစားခဲ့ရသလဲ",
+      "hint": "peaceful",
+      "options": ["peaceful", "excited", "amazed", "grateful", "free"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "never_forget",
+      "term": "I'll never forget",
+      "group": "useful phrases",
+      "definition_mm": "ဘယ်တော့မှ မမေ့နိုင်ဘူး",
+      "related": ["I'll always remember", "it stays with me", "I can't forget"],
+      "opposite": ["I forgot", "I can't recall"],
+      "example_en": "It's a day I'll never forget."
+    },
+    {
+      "id": "event",
+      "term": "travelled to the mountains",
+      "group": "what happened",
+      "definition_mm": "တောင်တွေဆီ ခရီးသွားခဲ့သည်",
+      "related": ["went to the beach", "visited my grandparents", "got married", "started a new job"],
+      "opposite": [],
+      "example_en": "I travelled to the mountains with friends.",
+      "slot": "event"
+    },
+    {
+      "id": "year",
+      "term": "2019",
+      "group": "years",
+      "definition_mm": "၂၀၁၉ ခုနှစ်",
+      "related": ["2018", "2020", "2022", "last year"],
+      "opposite": [],
+      "example_en": "It happened in 2019.",
+      "slot": "year"
+    },
+    {
+      "id": "place_called",
+      "term": "in a place called",
+      "group": "useful phrases",
+      "definition_mm": "... ဆိုတဲ့နေရာမှာ",
+      "related": ["in a town called", "at a spot called", "somewhere called"],
+      "opposite": [],
+      "example_en": "We stayed in a place called Kalaw."
+    },
+    {
+      "id": "companion",
+      "term": "closest friends",
+      "group": "who you were with",
+      "definition_mm": "အရင်းနှီးဆုံး သူငယ်ချင်းများ",
+      "related": ["family", "parents", "classmates", "partner"],
+      "opposite": [],
+      "example_en": "I was there with my closest friends.",
+      "slot": "companion"
+    },
+    {
+      "id": "weather",
+      "term": "cool and clear",
+      "group": "weather",
+      "definition_mm": "အေးမြပြီး ကြည်လင်သော",
+      "related": ["warm and sunny", "rainy", "hot", "cold and foggy"],
+      "opposite": [],
+      "example_en": "The weather was cool and clear.",
+      "slot": "weather"
+    },
+    {
+      "id": "hike_up",
+      "term": "hiked up",
+      "group": "outdoor verbs",
+      "definition_mm": "တောင်တက်လမ်းလျှောက်သည်",
+      "related": ["climbed", "walked up", "trekked up"],
+      "opposite": ["walked down", "descended"],
+      "example_en": "We hiked up the mountain."
+    },
+    {
+      "id": "winding_trail",
+      "term": "winding trail",
+      "group": "describing paths",
+      "definition_mm": "ကွေ့ကောက်တဲ့ လမ်းကြောင်း",
+      "related": ["narrow path", "mountain track", "steep trail"],
+      "opposite": ["straight road"],
+      "example_en": "We followed a winding trail."
+    },
+    {
+      "id": "best_part",
+      "term": "The best part of the whole day",
+      "group": "useful phrases",
+      "definition_mm": "တစ်နေ့လုံးရဲ့ အကောင်းဆုံးအပိုင်း",
+      "related": ["the highlight of the day", "my favorite moment", "the best moment"],
+      "opposite": ["the worst part"],
+      "example_en": "The best part of the whole day was the sunrise."
+    },
+    {
+      "id": "reach_top",
+      "term": "reached the top",
+      "group": "useful phrases",
+      "definition_mm": "ထိပ်ဆုံးကို ရောက်သည်",
+      "related": ["got to the top", "made it to the summit", "arrived at the peak"],
+      "opposite": ["stayed at the bottom"],
+      "example_en": "We finally reached the top."
+    },
+    {
+      "id": "feeling",
+      "term": "peaceful",
+      "group": "feelings",
+      "definition_mm": "ငြိမ်းချမ်းအေးချမ်းသော",
+      "related": ["excited", "amazed", "grateful", "free", "calm"],
+      "opposite": ["anxious", "stressed"],
+      "example_en": "I felt completely peaceful.",
+      "slot": "feeling"
+    },
+    {
+      "id": "entire_time",
+      "term": "the entire time",
+      "group": "time expressions",
+      "definition_mm": "အချိန်တစ်လျှောက်လုံး",
+      "related": ["the whole time", "all day", "throughout"],
+      "opposite": ["for a moment"],
+      "example_en": "She smiled the entire time."
+    },
+    {
+      "id": "by_the_evening",
+      "term": "By the evening",
+      "group": "time expressions",
+      "definition_mm": "ညနေပိုင်းရောက်တော့",
+      "related": ["by nightfall", "by the end of the day", "later that day"],
+      "opposite": ["in the morning"],
+      "example_en": "By the evening, we were tired."
+    },
+    {
+      "id": "memory_forever",
+      "term": "a memory I will keep with me forever",
+      "group": "useful phrases",
+      "definition_mm": "ထာဝရ သိမ်းထားမယ့် အမှတ်တရ",
+      "related": ["an unforgettable memory", "a memory I'll always treasure", "a moment I'll never forget"],
+      "opposite": [],
+      "example_en": "It became a memory I will keep with me forever."
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "A day I'll never forget is when",
+      "translation_mm": "ဘယ်တော့မှ မမေ့နိုင်တဲ့နေ့ကတော့ ... တုန်းကပါ"
+    },
+    {
+      "phrase_en": "The best part of the whole day was when",
+      "translation_mm": "တစ်နေ့လုံးရဲ့ အကောင်းဆုံးအပိုင်းကတော့ ... တုန်းကပါ"
+    },
+    {
+      "phrase_en": "a memory I will keep with me forever",
+      "translation_mm": "ထာဝရ သိမ်းထားမယ့် အမှတ်တရတစ်ခု"
+    }
+  ],
+  "warmup_questions": [
+    "What is a day you will never forget?",
+    "When and where did it happen?",
+    "Who were you with?",
+    "What made it so special?",
+    "How did you feel by the end of the day?"
+  ],
+  "duration_target_seconds": 120
+}

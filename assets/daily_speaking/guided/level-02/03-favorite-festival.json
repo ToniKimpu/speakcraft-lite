@@ -1,0 +1,215 @@
+{
+  "id": "guided_favorite_festival",
+  "title": "My favorite festival",
+  "level": 2,
+  "sort_order": 3,
+  "objective_en": "By the end, you'll be able to describe a festival — what it is, when it happens, what people do, and why you love it.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် ပွဲတော်တစ်ခုအကြောင်း — ဘာပွဲ၊ ဘယ်အချိန်၊ လူတွေ ဘာလုပ်ကြ၊ ဘာကြောင့်ကြိုက်တယ်ဆိုတာ ဖော်ပြပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "My favorite festival is Thingyan, the water festival. It happens in April, and it lasts for about four days. During the festival, people splash water on each other to wash away the old year. Families cook special food and visit the temple together. I love it because the whole country feels joyful and alive.",
+  "template": "My favorite festival is {festival}. It happens in {month}, and it lasts for about {duration}. During the festival, people {main_activity}. Families {family_activity} together. I love it because {reason}.",
+  "sentences": [
+    {
+      "text_en": "My favorite festival is Thingyan, the water festival.",
+      "text_mm": "ကျွန်တော် အကြိုက်ဆုံးပွဲတော်က ရေပက်ပွဲ သင်္ကြန်ပါ။",
+      "explanation_mm": "\"My favorite festival is ...\" က \"ကျွန်တော် အကြိုက်ဆုံးပွဲတော်က ...\" လို့ ဖော်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "festival", "vocab_id": "festival" }
+      ]
+    },
+    {
+      "text_en": "It happens in April, and it lasts for about four days.",
+      "text_mm": "အဲဒါက ဧပြီလမှာ ကျင်းပပြီး လေးရက်လောက် ကြာပါတယ်။",
+      "explanation_mm": "\"It happens in (လ)\" က ဘယ်အချိန်ကျင်းပတယ်၊ \"it lasts for ...\" က ဘယ်လောက်ကြာတယ်ဆိုတာ ပြောတာပါ။",
+      "highlights": [
+        { "phrase": "April", "vocab_id": "month" },
+        { "phrase": "lasts for", "vocab_id": "last_for" }
+      ]
+    },
+    {
+      "text_en": "During the festival, people splash water on each other to wash away the old year.",
+      "text_mm": "ပွဲတော်အတွင်းမှာ လူတွေက နှစ်ဟောင်းရဲ့ မကောင်းတာတွေကို ဆေးကြောဖို့ တစ်ယောက်ကိုတစ်ယောက် ရေပက်ကြပါတယ်။",
+      "explanation_mm": "\"During the festival\" က \"ပွဲတော်အတွင်းမှာ\"၊ \"to wash away ...\" က \"... ကို ဆေးကြောဖို့\" ရည်ရွယ်ချက်ပြတဲ့အသုံးပါ။",
+      "highlights": [
+        { "phrase": "During the festival", "vocab_id": "during_festival" },
+        { "phrase": "splash water", "vocab_id": "splash_water" },
+        { "phrase": "wash away", "vocab_id": "wash_away" }
+      ]
+    },
+    {
+      "text_en": "Families cook special food and visit the temple together.",
+      "text_mm": "မိသားစုတွေက အထူးအစားအစာတွေ ချက်ပြီး ဘုရားကို အတူတူ သွားကြပါတယ်။",
+      "explanation_mm": "လုပ်ဆောင်ချက်နှစ်ခုကို \"and\" နဲ့ ဆက်ပြီး \"together\" နဲ့ အတူတူလုပ်တာ ဖော်ပြတာပါ။",
+      "highlights": [
+        { "phrase": "special food", "vocab_id": "special_food" },
+        { "phrase": "temple", "vocab_id": "temple" }
+      ]
+    },
+    {
+      "text_en": "I love it because the whole country feels joyful and alive.",
+      "text_mm": "ကျွန်တော် အဲဒါကို ကြိုက်ရတာက တစ်နိုင်ငံလုံး ပျော်ရွှင်ပြီး အသက်ဝင်နေသလို ခံစားရလို့ပါ။",
+      "explanation_mm": "\"I love it because ...\" — \"because\" နောက်မှာ ကြိုက်ရတဲ့ အကြောင်းရင်းကို ထည့်ပြောပါ။",
+      "highlights": [
+        { "phrase": "joyful", "vocab_id": "joyful" },
+        { "phrase": "alive", "vocab_id": "alive" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "festival",
+      "label_en": "The festival",
+      "label_mm": "ပွဲတော်",
+      "hint": "Thingyan, the water festival",
+      "options": []
+    },
+    {
+      "id": "month",
+      "label_en": "When it happens",
+      "label_mm": "ဘယ်လ",
+      "hint": "April",
+      "options": ["January", "April", "October", "December"]
+    },
+    {
+      "id": "duration",
+      "label_en": "How long it lasts",
+      "label_mm": "ဘယ်လောက်ကြာ",
+      "hint": "four days",
+      "options": ["two days", "three days", "four days", "a week"]
+    },
+    {
+      "id": "main_activity",
+      "label_en": "What people do",
+      "label_mm": "အဓိကလုပ်ဆောင်ချက်",
+      "hint": "splash water on each other",
+      "options": []
+    },
+    {
+      "id": "family_activity",
+      "label_en": "What families do",
+      "label_mm": "မိသားစုလုပ်တာ",
+      "hint": "cook special food and visit the temple",
+      "options": []
+    },
+    {
+      "id": "reason",
+      "label_en": "Why you love it",
+      "label_mm": "ကြိုက်ရတဲ့အကြောင်း",
+      "hint": "the whole country feels joyful and alive",
+      "options": []
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "festival",
+      "term": "festival",
+      "group": "celebrations",
+      "definition_mm": "ပွဲတော်",
+      "related": ["celebration", "holiday", "ceremony", "carnival"],
+      "opposite": [],
+      "example_en": "The festival brings everyone together."
+    },
+    {
+      "id": "month",
+      "term": "April",
+      "group": "months",
+      "definition_mm": "ဧပြီလ",
+      "related": ["January", "October", "December", "July"],
+      "opposite": [],
+      "example_en": "It happens in April.",
+      "slot": "month"
+    },
+    {
+      "id": "last_for",
+      "term": "lasts for",
+      "group": "time",
+      "definition_mm": "(အချိန်) ကြာသည်",
+      "related": ["goes on for", "continues for", "runs for"],
+      "opposite": [],
+      "example_en": "The holiday lasts for a week."
+    },
+    {
+      "id": "during_festival",
+      "term": "During the festival",
+      "group": "time expressions",
+      "definition_mm": "ပွဲတော်အတွင်းမှာ",
+      "related": ["throughout the festival", "on the festival days", "at that time"],
+      "opposite": [],
+      "example_en": "During the festival, the streets are full of people."
+    },
+    {
+      "id": "splash_water",
+      "term": "splash water",
+      "group": "festival actions",
+      "definition_mm": "ရေပက်သည်",
+      "related": ["pour water", "spray water", "throw water"],
+      "opposite": [],
+      "example_en": "Children splash water on each other."
+    },
+    {
+      "id": "wash_away",
+      "term": "wash away",
+      "group": "phrasal verbs",
+      "definition_mm": "ဆေးကြောသည်၊ ဆေးချသည်",
+      "related": ["clean off", "rinse away", "get rid of"],
+      "opposite": [],
+      "example_en": "The rain washed away the dust."
+    },
+    {
+      "id": "special_food",
+      "term": "special food",
+      "group": "food",
+      "definition_mm": "အထူးအစားအစာ",
+      "related": ["traditional dishes", "festive food", "homemade snacks"],
+      "opposite": [],
+      "example_en": "We cook special food for the festival."
+    },
+    {
+      "id": "temple",
+      "term": "temple",
+      "group": "places",
+      "definition_mm": "ဘုရားကျောင်း",
+      "related": ["pagoda", "monastery", "shrine", "church"],
+      "opposite": [],
+      "example_en": "We visit the temple on holidays."
+    },
+    {
+      "id": "joyful",
+      "term": "joyful",
+      "group": "feelings",
+      "definition_mm": "ဝမ်းမြောက်ရွှင်လန်းသော",
+      "related": ["happy", "cheerful", "merry", "festive"],
+      "opposite": ["sad", "gloomy"],
+      "example_en": "The streets were joyful during the festival."
+    },
+    {
+      "id": "alive",
+      "term": "alive",
+      "group": "describing atmosphere",
+      "definition_mm": "အသက်ဝင်နေသော၊ စည်ကားသော",
+      "related": ["lively", "buzzing", "vibrant", "full of energy"],
+      "opposite": ["dead", "quiet", "dull"],
+      "example_en": "The whole city feels alive."
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "My favorite festival is",
+      "translation_mm": "ကျွန်တော် အကြိုက်ဆုံးပွဲတော်က ..."
+    },
+    {
+      "phrase_en": "It lasts for about",
+      "translation_mm": "အဲဒါက ... လောက် ကြာပါတယ်"
+    },
+    {
+      "phrase_en": "I love it because",
+      "translation_mm": "ကျွန်တော် အဲဒါကို ကြိုက်ရတာက ... ကြောင့်ပါ"
+    }
+  ],
+  "warmup_questions": [
+    "What is your favorite festival?",
+    "When does it happen?",
+    "What do people do during it?",
+    "Why do you love it?"
+  ],
+  "duration_target_seconds": 75
+}

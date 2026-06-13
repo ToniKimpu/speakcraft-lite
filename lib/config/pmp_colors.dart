@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show Color, Colors;
+import 'package:flutter/material.dart' show Brightness, Color, Colors;
 
 class PmpColors {
   static const Color primary300 = Color(0xFF3593B2);
@@ -72,4 +72,15 @@ class PmpColors {
   static const Color lightTextPrimary = Color(0xFF1A1A1A);
   static const Color lightTextSecondary = Color(0xFF5C5C5C);
   static const Color lightTextDisabled = Color(0xFF999999);
+
+  // Burmese (Myanmar) translation text — a calm teal that marks the "support
+  // language" sitting beside English. Distinct from primary text (white/near
+  // black) and from the muted grey used for side-notes/hints, so a learner can
+  // tell "this is the meaning" from "this is a footnote" at a glance. Mode-aware
+  // so it stays legible on both the near-black dark card and the warm-white
+  // light card. Pick via [myanmarGloss].
+  static const Color myanmarGlossDark = Color(0xFFA9C7D6);
+  static const Color myanmarGlossLight = Color(0xFF2E6072);
+  static Color myanmarGloss(Brightness brightness) =>
+      brightness == Brightness.dark ? myanmarGlossDark : myanmarGlossLight;
 }

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart' show AssetManifest, rootBundle;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
@@ -10,8 +10,8 @@ part 'guided_lesson_bloc.freezed.dart';
 
 /// Loads the beginner "Start here" lessons for the guided on-ramp.
 ///
-/// Prototype: lessons load from the bundled
-/// `assets/daily_speaking/guided/guided.json` only. When the Supabase swap
+/// Prototype: lessons load from bundled per-lesson JSON files under
+/// `assets/daily_speaking/guided/level-0N/` only. When the Supabase swap
 /// lands, add the network-first → SharedPreferences-cache → asset fallback
 /// chain (copy it verbatim from `DailySpeakingTopicBloc._loadTopics` /
 /// `_fromCacheOrAssets`) — see the `TODO(supabase)` marker in [_loadLessons].
@@ -36,7 +36,10 @@ class GuidedLessonBloc extends Bloc<GuidedLessonEvent, GuidedLessonState> {
     });
   }
 
-  static const _assetPath = 'assets/daily_speaking/guided/guided.json';
+  /// Lessons live as one JSON file per lesson under per-level folders
+  /// (`level-01/`, `level-02/`, `level-03/`). Enumerated from the asset
+  /// manifest so adding a lesson = dropping a file (no code change).
+  static const _assetDir = 'assets/daily_speaking/guided/';
 
   Future<void> _load(Emitter<GuidedLessonState> emit) async {
     try {
@@ -63,13 +66,19 @@ class GuidedLessonBloc extends Bloc<GuidedLessonEvent, GuidedLessonState> {
   }
 
   Future<List<GuidedLesson>> _loadFromAssets() async {
-    final raw = await rootBundle.loadString(_assetPath);
-    final decoded = jsonDecode(raw);
-    if (decoded is! List) {
-      throw const FormatException('guided.json: expected a list');
-    }
-    return decoded
-        .map((e) => GuidedLesson.fromJson(Map<String, dynamic>.from(e)))
+    final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
+    final paths = manifest
+        .listAssets()
+        .where((p) => p.startsWith(_assetDir) && p.endsWith('.json'))
         .toList();
+    final lessons = <GuidedLesson>[];
+    for (final path in paths) {
+      final decoded = jsonDecode(await rootBundle.loadString(path));
+      if (decoded is! Map) {
+        throw FormatException('$path: expected a lesson object');
+      }
+      lessons.add(GuidedLesson.fromJson(Map<String, dynamic>.from(decoded)));
+    }
+    return lessons;
   }
 }

@@ -1,0 +1,213 @@
+{
+  "id": "guided_best_trip",
+  "title": "The best trip I've taken",
+  "level": 2,
+  "sort_order": 4,
+  "objective_en": "By the end, you'll be able to talk about a memorable trip — where you went, who with, what you did, and why it was the best.",
+  "objective_mm": "ဒီလေ့ကျင့်ခန်းပြီးရင် မမေ့နိုင်တဲ့ခရီးတစ်ခုအကြောင်း — ဘယ်ကိုသွား၊ ဘယ်သူနဲ့၊ ဘာလုပ်ခဲ့၊ ဘာကြောင့် အကောင်းဆုံးဖြစ်တယ်ဆိုတာ ပြောနိုင်ပါပြီ။",
+  "model_paragraph_en": "The best trip I've ever taken was to Bagan. I went there with my family two years ago. We stayed for three days and explored the ancient temples. One morning, we watched the sunrise from a hot air balloon, and it was breathtaking. It was the best trip because we made memories that we still talk about today.",
+  "template": "The best trip I've ever taken was to {destination}. I went there with my {companion} {when} ago. We stayed for {duration} and {main_activity}. One morning, we {highlight}, and it was breathtaking. It was the best trip because {reason}.",
+  "sentences": [
+    {
+      "text_en": "The best trip I've ever taken was to Bagan.",
+      "text_mm": "ကျွန်တော် သွားဖူးသမျှ အကောင်းဆုံးခရီးက ပုဂံကို သွားတဲ့ခရီးပါ။",
+      "explanation_mm": "\"The best trip I've ever taken was ...\" က အကောင်းဆုံးခရီးကို စတင်မိတ်ဆက်တဲ့ပုံစံပါ။ \"was\" က အတိတ်ကာလပါ။",
+      "highlights": [
+        { "phrase": "trip", "vocab_id": "trip" }
+      ]
+    },
+    {
+      "text_en": "I went there with my family two years ago.",
+      "text_mm": "ကျွန်တော် အဲဒီကို မိသားစုနဲ့ လွန်ခဲ့တဲ့ နှစ်နှစ်က သွားခဲ့တာပါ။",
+      "explanation_mm": "\"went\" က \"go\" ရဲ့ အတိတ်ပုံစံ၊ \"... ago\" က \"လွန်ခဲ့တဲ့ ...\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "went", "vocab_id": "go_past" },
+        { "phrase": "family", "vocab_id": "companion" },
+        { "phrase": "two years", "vocab_id": "when" }
+      ]
+    },
+    {
+      "text_en": "We stayed for three days and explored the ancient temples.",
+      "text_mm": "ကျွန်တော်တို့ သုံးရက် နေပြီး ရှေးဟောင်းဘုရားတွေကို လှည့်လည်ကြည့်ရှုခဲ့ကြပါတယ်။",
+      "explanation_mm": "\"stayed\" နဲ့ \"explored\" — အတိတ်ကြိယာ (past) နှစ်ခုကို \"and\" နဲ့ ဆက်ထားတာပါ။",
+      "highlights": [
+        { "phrase": "stayed for", "vocab_id": "stay_for" },
+        { "phrase": "explored", "vocab_id": "explore" }
+      ]
+    },
+    {
+      "text_en": "One morning, we watched the sunrise from a hot air balloon, and it was breathtaking.",
+      "text_mm": "တစ်နေ့မနက်မှာ မိုးပျံပူဖောင်းပေါ်ကနေ နေထွက်တာကို ကြည့်ခဲ့ပြီး အရမ်း ကြည်နူးစရာကောင်းခဲ့ပါတယ်။",
+      "explanation_mm": "\"watched\" က အတိတ်ပုံစံပါ။ \"it was breathtaking\" က \"အရမ်း ကြည်နူးစရာကောင်းတယ်\" လို့ ဆိုလိုပါတယ်။",
+      "highlights": [
+        { "phrase": "sunrise", "vocab_id": "sunrise" },
+        { "phrase": "breathtaking", "vocab_id": "breathtaking" }
+      ]
+    },
+    {
+      "text_en": "It was the best trip because we made memories that we still talk about today.",
+      "text_mm": "အဲဒါက အကောင်းဆုံးခရီးဖြစ်ရတာက အခုထိ ပြောနေဆဲ အမှတ်တရတွေ ဖန်တီးခဲ့လို့ပါ။",
+      "explanation_mm": "\"It was the best ... because ...\" — \"because\" နောက်မှာ အကြောင်းပြချက်ကို ထည့်ပြောပါ။",
+      "highlights": [
+        { "phrase": "made memories", "vocab_id": "make_memories" }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": "destination",
+      "label_en": "Where you went",
+      "label_mm": "ဘယ်ကိုသွား",
+      "hint": "Bagan",
+      "options": []
+    },
+    {
+      "id": "companion",
+      "label_en": "Who you went with",
+      "label_mm": "ဘယ်သူနဲ့",
+      "hint": "family",
+      "options": ["family", "friends", "partner", "classmates"]
+    },
+    {
+      "id": "when",
+      "label_en": "How long ago",
+      "label_mm": "ဘယ်တုန်းက",
+      "hint": "two years",
+      "options": ["last year", "two years", "three years", "a few years"]
+    },
+    {
+      "id": "duration",
+      "label_en": "How long you stayed",
+      "label_mm": "ဘယ်နှရက်",
+      "hint": "three days",
+      "options": ["two days", "three days", "a week", "ten days"]
+    },
+    {
+      "id": "main_activity",
+      "label_en": "What you did there",
+      "label_mm": "လုပ်ခဲ့တာ",
+      "hint": "explored the ancient temples",
+      "options": []
+    },
+    {
+      "id": "highlight",
+      "label_en": "The best moment",
+      "label_mm": "အထူးအမှတ်တရ",
+      "hint": "watched the sunrise from a hot air balloon",
+      "options": []
+    },
+    {
+      "id": "reason",
+      "label_en": "Why it was the best",
+      "label_mm": "အကောင်းဆုံးဖြစ်ရတဲ့အကြောင်း",
+      "hint": "we made memories that we still talk about today",
+      "options": []
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "trip",
+      "term": "trip",
+      "group": "travel",
+      "definition_mm": "ခရီးစဉ်",
+      "related": ["journey", "holiday", "vacation", "tour", "getaway"],
+      "opposite": [],
+      "example_en": "We took a trip to the mountains."
+    },
+    {
+      "id": "go_past",
+      "term": "went",
+      "group": "verbs (past)",
+      "definition_mm": "သွားသည် (go ၏ အတိတ်ပုံစံ)",
+      "related": ["travelled", "headed to", "visited"],
+      "opposite": [],
+      "example_en": "I went to Japan last year."
+    },
+    {
+      "id": "companion",
+      "term": "family",
+      "group": "who you travel with",
+      "definition_mm": "မိသားစု",
+      "related": ["friends", "partner", "classmates", "colleagues"],
+      "opposite": [],
+      "example_en": "I travelled with my family.",
+      "slot": "companion"
+    },
+    {
+      "id": "when",
+      "term": "two years",
+      "group": "time periods",
+      "definition_mm": "နှစ်နှစ်",
+      "related": ["last year", "three years", "a few years", "recently"],
+      "opposite": [],
+      "example_en": "We went two years ago.",
+      "slot": "when"
+    },
+    {
+      "id": "stay_for",
+      "term": "stayed for",
+      "group": "travel",
+      "definition_mm": "(ကာလ) နေထိုင်သည်",
+      "related": ["spent", "remained for"],
+      "opposite": [],
+      "example_en": "We stayed for three days."
+    },
+    {
+      "id": "explore",
+      "term": "explored",
+      "group": "travel verbs",
+      "definition_mm": "လှည့်လည်ကြည့်ရှုသည်",
+      "related": ["discovered", "wandered around", "toured", "visited"],
+      "opposite": [],
+      "example_en": "We explored the old city on foot."
+    },
+    {
+      "id": "sunrise",
+      "term": "sunrise",
+      "group": "nature",
+      "definition_mm": "နေထွက်ချိန်",
+      "related": ["dawn", "daybreak", "sunup"],
+      "opposite": ["sunset"],
+      "example_en": "We watched the sunrise from the hill."
+    },
+    {
+      "id": "breathtaking",
+      "term": "breathtaking",
+      "group": "describing views",
+      "definition_mm": "အရမ်း လှပ/ကြည်နူးဖွယ်ကောင်းသော",
+      "related": ["stunning", "amazing", "spectacular", "beautiful", "gorgeous"],
+      "opposite": ["dull", "ordinary"],
+      "example_en": "The view was breathtaking."
+    },
+    {
+      "id": "make_memories",
+      "term": "made memories",
+      "group": "useful phrases",
+      "definition_mm": "အမှတ်တရတွေ ဖန်တီးသည်",
+      "related": ["created memories", "had great moments", "shared experiences"],
+      "opposite": [],
+      "example_en": "We made memories we still talk about."
+    }
+  ],
+  "target_phrases": [
+    {
+      "phrase_en": "The best trip I've ever taken was to",
+      "translation_mm": "ကျွန်တော် သွားဖူးသမျှ အကောင်းဆုံးခရီးက ... ပါ"
+    },
+    {
+      "phrase_en": "I went there with",
+      "translation_mm": "ကျွန်တော် အဲဒီကို ... နဲ့ သွားခဲ့တာပါ"
+    },
+    {
+      "phrase_en": "It was the best trip because",
+      "translation_mm": "အကောင်းဆုံးခရီးဖြစ်ရတာက ... ကြောင့်ပါ"
+    }
+  ],
+  "warmup_questions": [
+    "What is the best trip you have taken?",
+    "Where did you go, and who with?",
+    "What did you do there?",
+    "Why was it so special?"
+  ],
+  "duration_target_seconds": 90
+}

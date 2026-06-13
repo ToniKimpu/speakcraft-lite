@@ -1354,6 +1354,16 @@ class AppLocalizations {
     );
   }
 
+  /// `More ways to practice`
+  String get txtDsMoreWays {
+    return Intl.message(
+      'More ways to practice',
+      name: 'txtDsMoreWays',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Start here`
   String get txtDsGuided {
     return Intl.message('Start here', name: 'txtDsGuided', desc: '', args: []);
@@ -2722,6 +2732,46 @@ class AppLocalizations {
   /// `Examples`
   String get txtDsExamples {
     return Intl.message('Examples', name: 'txtDsExamples', desc: '', args: []);
+  }
+
+  /// `Words you can use instead`
+  String get txtDsVocabSwapTitle {
+    return Intl.message(
+      'Words you can use instead',
+      name: 'txtDsVocabSwapTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Similar words`
+  String get txtDsVocabRelatedTitle {
+    return Intl.message(
+      'Similar words',
+      name: 'txtDsVocabRelatedTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Opposite`
+  String get txtDsVocabOppositeTitle {
+    return Intl.message(
+      'Opposite',
+      name: 'txtDsVocabOppositeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You'll choose this in the next step.`
+  String get txtDsVocabPickNext {
+    return Intl.message(
+      'You\'ll choose this in the next step.',
+      name: 'txtDsVocabPickNext',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Tap a phrase to see what it means and how to use it.`
