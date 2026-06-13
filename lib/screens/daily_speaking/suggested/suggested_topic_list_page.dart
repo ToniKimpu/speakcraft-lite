@@ -82,33 +82,9 @@ class _ListScaffoldState extends State<_ListScaffold>
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(l10n.txtDsSuggestedTopics),
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(kTextTabBarHeight),
-          child: TabBar(
-            controller: _tabController,
-            indicatorColor: Colors.white,
-            indicatorWeight: 3,
-            dividerColor: colorScheme.outlineVariant,
-            labelColor: Colors.white,
-            unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
-            labelStyle: PmpTextStyles.body2Semi,
-            unselectedLabelStyle: PmpTextStyles.body2Regular,
-            overlayColor: WidgetStateProperty.resolveWith(
-              (states) => Colors.white.withValues(alpha: 0.08),
-            ),
-            tabs: [
-              Tab(text: l10n.txtDsLevelBeginner),
-              Tab(text: l10n.txtDsLevelIntermediate),
-              Tab(text: l10n.txtDsLevelAdvanced),
-            ],
-          ),
-        ),
-      ),
+      appBar: AppBar(title: Text(l10n.txtDsSuggestedTopics)),
       body: BlocBuilder<DailySpeakingTopicBloc, DailySpeakingTopicState>(
         builder: (context, state) {
           return state.maybeWhen(
@@ -134,6 +110,18 @@ class _ListScaffoldState extends State<_ListScaffold>
                 children: [
                   if (recent.isNotEmpty)
                     _NewThisWeekRail(topics: recent, isNew: _isNew),
+                  // Pill selector (replaces the flat TabBar) — rebuilds as the
+                  // controller moves, whether by tap or swipe.
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+                    child: ListenableBuilder(
+                      listenable: _tabController,
+                      builder: (context, _) => _LevelPills(
+                        selectedIndex: _tabController.index,
+                        onSelected: (i) => _tabController.animateTo(i),
+                      ),
+                    ),
+                  ),
                   Expanded(
                     child: TabBarView(
                       controller: _tabController,
@@ -180,6 +168,90 @@ String _difficultyLabel(BuildContext context, TopicDifficulty d) {
       return l10n.txtDsLevelIntermediate;
     case TopicDifficulty.advanced:
       return l10n.txtDsLevelAdvanced;
+  }
+}
+
+/// A pill/segmented level selector — replaces the flat underline TabBar. The
+/// selected pill fills with that difficulty's accent (green → amber → red),
+/// matching the guided list and reinforcing the difficulty ramp with color.
+class _LevelPills extends StatelessWidget {
+  const _LevelPills({required this.selectedIndex, required this.onSelected});
+
+  final int selectedIndex;
+  final ValueChanged<int> onSelected;
+
+  static const List<TopicDifficulty> _levels = [
+    TopicDifficulty.beginner,
+    TopicDifficulty.intermediate,
+    TopicDifficulty.advanced,
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Row(
+      children: [
+        for (var i = 0; i < _levels.length; i++) ...[
+          if (i > 0) const SizedBox(width: 8),
+          Expanded(
+            child: _LevelPill(
+              label: _difficultyLabel(context, _levels[i]),
+              accent: _accentFor(_levels[i]),
+              selected: i == selectedIndex,
+              onTap: () => onSelected(i),
+              colorScheme: colorScheme,
+            ),
+          ),
+        ],
+      ],
+    );
+  }
+}
+
+class _LevelPill extends StatelessWidget {
+  const _LevelPill({
+    required this.label,
+    required this.accent,
+    required this.selected,
+    required this.onTap,
+    required this.colorScheme,
+  });
+
+  final String label;
+  final Color accent;
+  final bool selected;
+  final VoidCallback onTap;
+  final ColorScheme colorScheme;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(24),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          curve: Curves.easeOut,
+          padding: const EdgeInsets.symmetric(vertical: 9),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: selected ? accent : colorScheme.surfaceContainerHighest,
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(
+              color: selected ? accent : colorScheme.outlineVariant,
+            ),
+          ),
+          child: Text(
+            label,
+            style: PmpTextStyles.labelSemi.copyWith(
+              color: selected ? Colors.white : colorScheme.onSurfaceVariant,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
 
