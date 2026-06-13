@@ -127,18 +127,18 @@ class SuggestedTopicPrepPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-              child: FilledButton.icon(
-                onPressed: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    PmpRoutes.dailySpeakingSuggestedRecord,
-                    arguments: {'topic': topic},
-                  );
-                },
-                icon: const Icon(Icons.mic),
-                label: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  child: Text(l10n.txtDsStartRecording),
+              child: SizedBox(
+                width: double.infinity,
+                child: FilledButton.icon(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                      context,
+                      PmpRoutes.dailySpeakingSuggestedRecord,
+                      arguments: {'topic': topic},
+                    );
+                  },
+                  icon: const Icon(Icons.mic, size: 20),
+                  label: Text(l10n.txtDsStartRecording),
                 ),
               ),
             ),
@@ -241,20 +241,22 @@ class _CollapsibleSectionState extends State<_CollapsibleSection> {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    return Container(
-      margin: const EdgeInsets.only(top: 12),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: colorScheme.outlineVariant),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          InkWell(
-            onTap: () => setState(() => _expanded = !_expanded),
-            child: Padding(
-              padding: const EdgeInsets.all(14),
+    return Padding(
+      padding: const EdgeInsets.only(top: 12),
+      child: Material(
+        color: Colors.transparent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: BorderSide(color: colorScheme.outlineVariant),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            InkWell(
+              onTap: () => setState(() => _expanded = !_expanded),
+              child: Padding(
+                padding: const EdgeInsets.all(14),
               child: Row(
                 children: [
                   Icon(widget.icon, size: 18, color: widget.iconColor),
@@ -286,8 +288,9 @@ class _CollapsibleSectionState extends State<_CollapsibleSection> {
                     child: SizedBox(width: double.infinity, child: widget.child),
                   )
                 : const SizedBox(width: double.infinity),
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

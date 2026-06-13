@@ -194,27 +194,23 @@ class _LevelSegment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.transparent,
-      borderRadius: BorderRadius.circular(24),
+      color: selected ? accent : colorScheme.surfaceContainerHighest,
+      animationDuration: const Duration(milliseconds: 180),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(24),
+        side: BorderSide(color: selected ? accent : colorScheme.outlineVariant),
+      ),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: onTap,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 180),
-          curve: Curves.easeOut,
+        child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 9),
-          decoration: BoxDecoration(
-            color: selected ? accent : colorScheme.surfaceContainerHighest,
-            borderRadius: BorderRadius.circular(24),
-            border: Border.all(
-              color: selected ? accent : colorScheme.outlineVariant,
-            ),
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            label,
-            style: PmpTextStyles.labelSemi.copyWith(
-              color: selected ? Colors.white : colorScheme.onSurfaceVariant,
+          child: Center(
+            child: Text(
+              label,
+              style: PmpTextStyles.labelSemi.copyWith(
+                color: selected ? Colors.white : colorScheme.onSurfaceVariant,
+              ),
             ),
           ),
         ),
