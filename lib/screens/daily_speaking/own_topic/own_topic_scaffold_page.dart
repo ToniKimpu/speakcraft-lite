@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/daily_speaking/daily_speaking_prep_bloc.dart';
-import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
-import 'package:speakcraft/services/daily_speaking/daily_speaking_service.dart'
-    show PrepAskKind;
+import 'package:speakcraft/model/daily_speaking/prep_section.dart';
+import 'package:speakcraft/screens/daily_speaking/widgets/prep_sections.dart';
 
-/// P2 — own-topic AI prep scaffold. Mirrors [SuggestedTopicPrepPage] but is
-/// driven by [DailySpeakingPrepBloc] state instead of a const topic: the typed
-/// topic is expanded by an AI call into vocab / target phrases / warmups, then
-/// a small set of constrained follow-up "ask" chips append more.
-///
-/// The section widgets here are intentionally copied from
-/// `suggested/suggested_topic_prep_page.dart` (not shared) to keep that working
-/// flow untouched — a small de-dup opportunity flagged for later cleanup.
+/// P2 — own-topic AI prep scaffold. The typed topic is expanded by an AI call
+/// (stubbed) into the sections the learner chose on the choose-prep screen, then
+/// rendered with the **shared** prep layout ([PrepGuideSections]) so it matches
+/// the suggested-topic prep exactly. An "Add more help" row pulls any sections
+/// the learner didn't pick up front.
 class OwnTopicScaffoldPage extends StatelessWidget {
-  const OwnTopicScaffoldPage({super.key, required this.topicText});
+  const OwnTopicScaffoldPage({
+    super.key,
+    required this.topicText,
+    required this.sections,
+  });
 
   /// The bare typed topic — kept so Retry can re-dispatch [expand] and the
   /// "record without prep" escape can build a minimal synthetic topic.
   final String topicText;
+
+  /// The sections the learner chose — kept so Retry regenerates the same set.
+  final Set<PrepSection> sections;
 
   @override
   Widget build(BuildContext context) {
@@ -35,13 +38,11 @@ class OwnTopicScaffoldPage extends StatelessWidget {
             return state.when(
               initial: () => const _PrepLoading(),
               loading: () => const _PrepLoading(),
-              loaded: (topic, asking, asksUsed) => _PrepLoaded(
+              loaded: (topic, asking) => _PrepLoaded(
                 topic: topic,
                 asking: asking,
-                asksUsed: asksUsed,
-                topicText: topicText,
               ),
-              error: (_) => _PrepError(topicText: topicText),
+              error: (_) => _PrepError(topicText: topicText, sections: sections),
             );
           },
         ),
@@ -75,8 +76,9 @@ class _PrepLoading extends StatelessWidget {
 }
 
 class _PrepError extends StatelessWidget {
-  const _PrepError({required this.topicText});
+  const _PrepError({required this.topicText, required this.sections});
   final String topicText;
+  final Set<PrepSection> sections;
 
   @override
   Widget build(BuildContext context) {
@@ -100,9 +102,9 @@ class _PrepError extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             FilledButton.icon(
-              onPressed: () => context
-                  .read<DailySpeakingPrepBloc>()
-                  .add(DailySpeakingPrepEvent.expand(topicText)),
+              onPressed: () => context.read<DailySpeakingPrepBloc>().add(
+                    DailySpeakingPrepEvent.expand(topicText, sections),
+                  ),
               icon: const Icon(Icons.refresh),
               label: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12),
@@ -141,121 +143,42 @@ void _recordWithoutPrep(BuildContext context, String topicText) {
 }
 
 class _PrepLoaded extends StatelessWidget {
-  const _PrepLoaded({
-    required this.topic,
-    required this.asking,
-    required this.asksUsed,
-    required this.topicText,
-  });
+  const _PrepLoaded({required this.topic, required this.asking});
 
   final DailySpeakingTopic topic;
   final bool asking;
-  final int asksUsed;
-  final String topicText;
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
     final mins = (topic.durationTargetSeconds / 60).round();
     return Column(
       children: [
         Expanded(
-          child: SingleChildScrollView(
+          child: ListView(
             padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _PromptCard(topic: topic, mins: mins),
-                if (topic.vocabulary.isNotEmpty) ...[
-                  const SizedBox(height: 20),
-                  _SectionHeader(
-                    icon: Icons.translate,
-                    iconColor: colorScheme.primary,
-                    title: l10n.txtDsWordsYouMightUse,
-                  ),
-                  const SizedBox(height: 10),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: topic.vocabulary
-                        .map((v) => _VocabChip(item: v))
-                        .toList(growable: false),
-                  ),
-                ],
-                if (topic.targetPhrases.isNotEmpty) ...[
-                  const SizedBox(height: 20),
-                  _SectionHeader(
-                    icon: Icons.flag_outlined,
-                    iconColor: PmpColors.info500,
-                    title: l10n.txtDsTryUseThesePhrases,
-                  ),
-                  const SizedBox(height: 10),
-                  ...topic.targetPhrases.map(
-                    (p) => Padding(
-                      padding: const EdgeInsets.only(bottom: 8),
-                      child: _TargetPhraseCard(phrase: p),
-                    ),
-                  ),
-                ],
-                if (topic.warmupQuestions.isNotEmpty) ...[
-                  const SizedBox(height: 20),
-                  _SectionHeader(
-                    icon: Icons.help_outline,
-                    iconColor: PmpColors.warning500,
-                    title: l10n.txtDsThingsYouCanMention,
-                  ),
-                  const SizedBox(height: 8),
-                  ...topic.warmupQuestions.map(
-                    (q) => Padding(
-                      padding: const EdgeInsets.only(bottom: 6),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 7, right: 8),
-                            child: Container(
-                              width: 5,
-                              height: 5,
-                              decoration: BoxDecoration(
-                                color: colorScheme.onSurface,
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Text(
-                              q,
-                              style: PmpTextStyles.body2Regular.copyWith(
-                                color: colorScheme.onSurface,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-                const SizedBox(height: 24),
-                _AskMoreSection(asking: asking, asksUsed: asksUsed),
-              ],
-            ),
+            children: [
+              PrepPromptCard(topic: topic, mins: mins),
+              PrepGuideSections(topic: topic),
+              const SizedBox(height: 20),
+              _AddMoreHelp(topic: topic, asking: asking),
+            ],
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-          child: FilledButton.icon(
-            onPressed: () {
-              Navigator.pushReplacementNamed(
-                context,
-                PmpRoutes.dailySpeakingOwnTopicRecord,
-                arguments: {'topic': topic},
-              );
-            },
-            icon: const Icon(Icons.mic),
-            label: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: Text(l10n.txtDsStartRecording),
+          child: SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              onPressed: () {
+                Navigator.pushReplacementNamed(
+                  context,
+                  PmpRoutes.dailySpeakingOwnTopicRecord,
+                  arguments: {'topic': topic},
+                );
+              },
+              icon: const Icon(Icons.mic, size: 20),
+              label: Text(l10n.txtDsStartRecording),
             ),
           ),
         ),
@@ -264,37 +187,35 @@ class _PrepLoaded extends StatelessWidget {
   }
 }
 
-/// The constrained follow-up "ask" chips. Disabled while a request is in flight
-/// or once the per-topic cap is hit; a gentle message replaces them at the cap.
-class _AskMoreSection extends StatelessWidget {
-  const _AskMoreSection({required this.asking, required this.asksUsed});
+/// Quick-add chips for the prep sections the learner didn't pick up front. Each
+/// generates just that section and merges it in. Disappears once every section
+/// is present.
+class _AddMoreHelp extends StatelessWidget {
+  const _AddMoreHelp({required this.topic, required this.asking});
 
+  final DailySpeakingTopic topic;
   final bool asking;
-  final int asksUsed;
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
-    final atCap = asksUsed >= DailySpeakingPrepBloc.maxAsks;
-    final enabled = !asking && !atCap;
-
-    final asks = <(PrepAskKind, String)>[
-      (PrepAskKind.moreVocab, l10n.txtDsAskMoreVocab),
-      (PrepAskKind.usefulPhrases, l10n.txtDsAskUsefulPhrases),
-      (PrepAskKind.howToStart, l10n.txtDsAskHowToStart),
-      (PrepAskKind.harderWords, l10n.txtDsAskHarderWords),
-    ];
+    final missing = kPrepSections
+        .where((s) => !prepSectionPresent(s, topic))
+        .toList(growable: false);
+    if (missing.isEmpty) return const SizedBox.shrink();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            _SectionHeader(
-              icon: Icons.auto_awesome,
-              iconColor: colorScheme.primary,
-              title: l10n.txtDsAskForMore,
+            Icon(Icons.auto_awesome, size: 18, color: colorScheme.primary),
+            const SizedBox(width: 8),
+            Text(
+              l10n.txtDsAddMoreHelp,
+              style: PmpTextStyles.body2Semi
+                  .copyWith(color: colorScheme.onSurface),
             ),
             if (asking) ...[
               const SizedBox(width: 10),
@@ -310,225 +231,39 @@ class _AskMoreSection extends StatelessWidget {
         Wrap(
           spacing: 8,
           runSpacing: 8,
-          children: asks
+          children: missing
               .map(
-                (a) => ActionChip(
-                  label: Text(a.$2),
-                  onPressed: enabled
-                      ? () => context
+                (s) => ActionChip(
+                  avatar: const Icon(Icons.add, size: 16),
+                  label: Text(_sectionTitle(context, s)),
+                  onPressed: asking
+                      ? null
+                      : () => context
                           .read<DailySpeakingPrepBloc>()
-                          .add(DailySpeakingPrepEvent.askMore(a.$1))
-                      : null,
+                          .add(DailySpeakingPrepEvent.askMore(s)),
                 ),
               )
               .toList(growable: false),
         ),
-        if (atCap) ...[
-          const SizedBox(height: 8),
-          Text(
-            l10n.txtDsAsksUsedUp,
-            style: PmpTextStyles.sub.copyWith(
-              color: colorScheme.onSurfaceVariant,
-            ),
-          ),
-        ],
       ],
     );
   }
 }
 
-// ---------------------------------------------------------------------------
-// Section widgets — copied from suggested_topic_prep_page.dart (see class doc).
-// ---------------------------------------------------------------------------
-
-class _PromptCard extends StatelessWidget {
-  const _PromptCard({required this.topic, required this.mins});
-  final DailySpeakingTopic topic;
-  final int mins;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: colorScheme.primary.withValues(alpha: 0.06),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: colorScheme.primary.withValues(alpha: 0.3)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.format_quote, size: 18, color: colorScheme.primary),
-              const SizedBox(width: 6),
-              Text(
-                AppLocalizations.of(context).txtDsYourPrompt,
-                style: PmpTextStyles.labelSemi.copyWith(
-                  color: colorScheme.primary,
-                ),
-              ),
-              const Spacer(),
-              Icon(Icons.timer_outlined,
-                  size: 14, color: colorScheme.onSurfaceVariant),
-              const SizedBox(width: 4),
-              Text(
-                AppLocalizations.of(context).txtDsApproxMin(mins),
-                style: PmpTextStyles.sub
-                    .copyWith(color: colorScheme.onSurfaceVariant),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Text(
-            topic.promptEn,
-            style: PmpTextStyles.body1Regular.copyWith(
-              color: colorScheme.onSurface,
-              height: 1.5,
-            ),
-          ),
-          if (topic.promptMm.isNotEmpty) ...[
-            const SizedBox(height: 10),
-            Text(
-              topic.promptMm,
-              style: PmpTextStyles.body2Regular.copyWith(
-                color: colorScheme.onSurfaceVariant,
-                fontFamily: 'Noto Sans Myanmar',
-                height: 1.7,
-              ),
-            ),
-          ],
-        ],
-      ),
-    );
-  }
-}
-
-class _SectionHeader extends StatelessWidget {
-  const _SectionHeader({
-    required this.icon,
-    required this.iconColor,
-    required this.title,
-  });
-  final IconData icon;
-  final Color iconColor;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Row(
-      children: [
-        Icon(icon, size: 18, color: iconColor),
-        const SizedBox(width: 8),
-        Text(
-          title,
-          style:
-              PmpTextStyles.body2Semi.copyWith(color: colorScheme.onSurface),
-        ),
-      ],
-    );
-  }
-}
-
-class _VocabChip extends StatelessWidget {
-  const _VocabChip({required this.item});
-  final TopicVocabItem item;
-
-  void _showDetail(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (_) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              item.term,
-              style: PmpTextStyles.h2.copyWith(
-                color: colorScheme.onSurface,
-                fontFamily: 'ArchivoBlack Regular',
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              item.definitionMm,
-              style: PmpTextStyles.body1Regular.copyWith(
-                color: colorScheme.onSurface,
-                fontFamily: 'Noto Sans Myanmar',
-                height: 1.6,
-              ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              AppLocalizations.of(context).txtDsExample,
-              style: PmpTextStyles.labelSemi.copyWith(
-                color: colorScheme.onSurfaceVariant,
-              ),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              item.exampleEn,
-              style: PmpTextStyles.body2Regular.copyWith(
-                color: colorScheme.onSurface,
-                fontStyle: FontStyle.italic,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ActionChip(
-      avatar: const Icon(Icons.book_outlined, size: 16),
-      label: Text(item.term),
-      onPressed: () => _showDetail(context),
-    );
-  }
-}
-
-class _TargetPhraseCard extends StatelessWidget {
-  const _TargetPhraseCard({required this.phrase});
-  final TopicTargetPhrase phrase;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: colorScheme.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: colorScheme.outlineVariant),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            phrase.phraseEn,
-            style: PmpTextStyles.body2Semi.copyWith(
-              color: colorScheme.onSurface,
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            phrase.translationMm,
-            style: PmpTextStyles.body2Regular.copyWith(
-              color: colorScheme.onSurfaceVariant,
-              fontFamily: 'Noto Sans Myanmar',
-            ),
-          ),
-        ],
-      ),
-    );
+String _sectionTitle(BuildContext context, PrepSection s) {
+  final l10n = AppLocalizations.of(context);
+  switch (s) {
+    case PrepSection.structure:
+      return l10n.txtDsHowToStructure;
+    case PrepSection.vocab:
+      return l10n.txtDsWordsYouMightUse;
+    case PrepSection.phrases:
+      return l10n.txtDsTryUseThesePhrases;
+    case PrepSection.grammar:
+      return l10n.txtDsGrammarPatterns;
+    case PrepSection.mistakes:
+      return l10n.txtDsWatchOutFor;
+    case PrepSection.example:
+      return l10n.txtDsExampleAnswer;
   }
 }

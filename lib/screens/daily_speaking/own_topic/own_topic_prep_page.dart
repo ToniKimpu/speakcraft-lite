@@ -85,7 +85,7 @@ class _OwnTopicPrepPageState extends State<OwnTopicPrepPage> {
   void _goPrepare() {
     Navigator.pushNamed(
       context,
-      PmpRoutes.dailySpeakingOwnTopicScaffold,
+      PmpRoutes.dailySpeakingOwnTopicChoosePrep,
       arguments: {'topicText': _controller.text.trim()},
     );
   }

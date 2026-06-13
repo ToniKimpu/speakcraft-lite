@@ -174,6 +174,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account?",
     ),
+    "txtDsAddMoreHelp": MessageLookupByLibrary.simpleMessage("Add more help"),
     "txtDsApproxMin": m1,
     "txtDsAskForMore": MessageLookupByLibrary.simpleMessage("Ask for more"),
     "txtDsAskHarderWords": MessageLookupByLibrary.simpleMessage("Harder words"),
@@ -195,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsBetterWordChoices": MessageLookupByLibrary.simpleMessage(
       "Better word choices",
     ),
+    "txtDsBuildMyPrep": MessageLookupByLibrary.simpleMessage("Build my prep"),
     "txtDsBuildingPrep": MessageLookupByLibrary.simpleMessage(
       "Building your prep…",
     ),
@@ -208,6 +210,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "txtDsChooseFeedbackTitle": MessageLookupByLibrary.simpleMessage(
       "Choose your feedback",
+    ),
+    "txtDsChoosePrepSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Pick what you\'d like us to prepare for your topic. You can add more later.",
+    ),
+    "txtDsChoosePrepTitle": MessageLookupByLibrary.simpleMessage(
+      "What help do you want?",
     ),
     "txtDsChooseRewriteNote": MessageLookupByLibrary.simpleMessage(
       "You\'ll get a full native rewrite to compare against when you finish this topic.",
@@ -531,8 +539,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsPolishRetry": MessageLookupByLibrary.simpleMessage("Polish & retry"),
     "txtDsPracticeAgain": m13,
     "txtDsPracticed": MessageLookupByLibrary.simpleMessage("Practiced"),
+    "txtDsPrepDescExample": MessageLookupByLibrary.simpleMessage(
+      "A full sample answer (hidden until you tap)",
+    ),
+    "txtDsPrepDescGrammar": MessageLookupByLibrary.simpleMessage(
+      "Sentence patterns to build on",
+    ),
+    "txtDsPrepDescMistakes": MessageLookupByLibrary.simpleMessage(
+      "Common mistakes to avoid",
+    ),
+    "txtDsPrepDescPhrases": MessageLookupByLibrary.simpleMessage(
+      "Handy phrases you can try",
+    ),
+    "txtDsPrepDescStructure": MessageLookupByLibrary.simpleMessage(
+      "A step-by-step outline for your talk",
+    ),
+    "txtDsPrepDescVocab": MessageLookupByLibrary.simpleMessage(
+      "Useful words with meanings and examples",
+    ),
     "txtDsPrepFailed": MessageLookupByLibrary.simpleMessage(
       "Couldn\'t build prep. Try again.",
+    ),
+    "txtDsPrepPickOne": MessageLookupByLibrary.simpleMessage(
+      "Pick at least one to continue",
     ),
     "txtDsPresetEverything": MessageLookupByLibrary.simpleMessage("Everything"),
     "txtDsPresetGrammarFocus": MessageLookupByLibrary.simpleMessage(
@@ -555,6 +584,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Pronunciation notes",
     ),
     "txtDsQuickPicks": MessageLookupByLibrary.simpleMessage("Quick picks"),
+    "txtDsRecommended": MessageLookupByLibrary.simpleMessage("Recommended"),
     "txtDsRecordNow": MessageLookupByLibrary.simpleMessage("Record now"),
     "txtDsRecordNowCaption": MessageLookupByLibrary.simpleMessage(
       "Skip prep — just start talking",
@@ -601,6 +631,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsSeeNativeVersion": MessageLookupByLibrary.simpleMessage(
       "See native version",
     ),
+    "txtDsSelectAll": MessageLookupByLibrary.simpleMessage("Select all"),
     "txtDsSelectAtLeastOne": MessageLookupByLibrary.simpleMessage(
       "Select at least one",
     ),

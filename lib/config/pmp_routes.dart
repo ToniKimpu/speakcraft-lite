@@ -5,6 +5,7 @@ import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart'
 import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 import 'package:speakcraft/model/daily_speaking/guided_lesson.dart';
+import 'package:speakcraft/model/daily_speaking/prep_section.dart';
 import 'package:speakcraft/screens/auth/login_screen.dart';
 import 'package:speakcraft/screens/auth/sign_up_screen.dart';
 import 'package:speakcraft/screens/daily_speaking/daily_speaking_entry_page.dart';
@@ -14,6 +15,7 @@ import 'package:speakcraft/screens/daily_speaking/feedback/review_highlights_pag
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/screens/daily_speaking/history/daily_speaking_history_page.dart';
 import 'package:speakcraft/screens/daily_speaking/just_record/just_record_page.dart';
+import 'package:speakcraft/screens/daily_speaking/own_topic/choose_prep_page.dart';
 import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_prep_page.dart';
 import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_record_page.dart';
 import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_scaffold_page.dart';
@@ -80,6 +82,8 @@ class PmpRoutes {
   static const dailySpeakingEntry = '/daily_speaking';
   static const dailySpeakingJustRecord = '/daily_speaking/just_record';
   static const dailySpeakingOwnTopicPrep = '/daily_speaking/own_topic/prep';
+  static const dailySpeakingOwnTopicChoosePrep =
+      '/daily_speaking/own_topic/choose_prep';
   static const dailySpeakingOwnTopicScaffold =
       '/daily_speaking/own_topic/scaffold';
   static const dailySpeakingOwnTopicRecord = '/daily_speaking/own_topic/record';
@@ -258,16 +262,28 @@ class PmpRoutes {
         );
       case dailySpeakingOwnTopicPrep:
         return _getRoute(const OwnTopicPrepPage(), settings);
+      case dailySpeakingOwnTopicChoosePrep:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          ChoosePrepPage(topicText: args['topicText'] as String),
+          settings,
+        );
       case dailySpeakingOwnTopicScaffold:
         final args = settings.arguments as Map<String, dynamic>;
         final topicText = args['topicText'] as String;
+        final sections =
+            (args['sections'] as Set<PrepSection>?) ?? kRecommendedPrep;
         return _getRoute(
           // Page-scoped bloc (like the suggested-topic flow): prep state only
-          // matters inside this screen. The first expand is kicked off here.
+          // matters inside this screen. The first expand is kicked off here,
+          // generating only the sections the learner chose.
           BlocProvider(
             create: (_) => DailySpeakingPrepBloc()
-              ..add(DailySpeakingPrepEvent.expand(topicText)),
-            child: OwnTopicScaffoldPage(topicText: topicText),
+              ..add(DailySpeakingPrepEvent.expand(topicText, sections)),
+            child: OwnTopicScaffoldPage(
+              topicText: topicText,
+              sections: sections,
+            ),
           ),
           settings,
         );

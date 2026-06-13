@@ -2814,6 +2814,136 @@ class AppLocalizations {
     );
   }
 
+  /// `What help do you want?`
+  String get txtDsChoosePrepTitle {
+    return Intl.message(
+      'What help do you want?',
+      name: 'txtDsChoosePrepTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick what you'd like us to prepare for your topic. You can add more later.`
+  String get txtDsChoosePrepSubtitle {
+    return Intl.message(
+      'Pick what you\'d like us to prepare for your topic. You can add more later.',
+      name: 'txtDsChoosePrepSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Build my prep`
+  String get txtDsBuildMyPrep {
+    return Intl.message(
+      'Build my prep',
+      name: 'txtDsBuildMyPrep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recommended`
+  String get txtDsRecommended {
+    return Intl.message(
+      'Recommended',
+      name: 'txtDsRecommended',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select all`
+  String get txtDsSelectAll {
+    return Intl.message(
+      'Select all',
+      name: 'txtDsSelectAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick at least one to continue`
+  String get txtDsPrepPickOne {
+    return Intl.message(
+      'Pick at least one to continue',
+      name: 'txtDsPrepPickOne',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add more help`
+  String get txtDsAddMoreHelp {
+    return Intl.message(
+      'Add more help',
+      name: 'txtDsAddMoreHelp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A step-by-step outline for your talk`
+  String get txtDsPrepDescStructure {
+    return Intl.message(
+      'A step-by-step outline for your talk',
+      name: 'txtDsPrepDescStructure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Useful words with meanings and examples`
+  String get txtDsPrepDescVocab {
+    return Intl.message(
+      'Useful words with meanings and examples',
+      name: 'txtDsPrepDescVocab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Handy phrases you can try`
+  String get txtDsPrepDescPhrases {
+    return Intl.message(
+      'Handy phrases you can try',
+      name: 'txtDsPrepDescPhrases',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sentence patterns to build on`
+  String get txtDsPrepDescGrammar {
+    return Intl.message(
+      'Sentence patterns to build on',
+      name: 'txtDsPrepDescGrammar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Common mistakes to avoid`
+  String get txtDsPrepDescMistakes {
+    return Intl.message(
+      'Common mistakes to avoid',
+      name: 'txtDsPrepDescMistakes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A full sample answer (hidden until you tap)`
+  String get txtDsPrepDescExample {
+    return Intl.message(
+      'A full sample answer (hidden until you tap)',
+      name: 'txtDsPrepDescExample',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Words you can use instead`
   String get txtDsVocabSwapTitle {
     return Intl.message(

@@ -5,15 +5,11 @@ import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 import 'package:speakcraft/model/daily_speaking/feedback_section.dart';
+import 'package:speakcraft/model/daily_speaking/prep_section.dart';
 import 'package:speakcraft/services/supabase_service.dart';
 
 import 'daily_speaking_sample_feedback.dart';
 import 'daily_speaking_service_stubs.dart';
-
-/// The constrained set of follow-up "asks" the learner can make on the prep
-/// scaffold. Each is a *typed* request (not free text), so the future edge
-/// function can branch on it deterministically. See `DailySpeakingPrepBloc`.
-enum PrepAskKind { moreVocab, usefulPhrases, howToStart, harderWords }
 
 /// Input bundle for a single review request — voice OR text, plus optional
 /// topic context. Keeping the variants in one class avoids a dispatch fork in
@@ -62,61 +58,43 @@ class DailySpeakingService {
   }
 
   /// Own-topic AI prep: expand a bare typed [topicText] into a scaffolded
-  /// [DailySpeakingTopic] (vocab / target phrases / warmups filled in). This is
-  /// text-only and ~8× cheaper than an audio review; it does NOT consume a
-  /// practice from the learner's quota. The future edge function must branch on
-  /// call *kind* (prep vs practice) and decrement the right counter.
-  Future<DailySpeakingTopic> expandTopic({required String topicText}) async {
+  /// [DailySpeakingTopic], filling **only the [sections] the learner chose** on
+  /// the choose-prep screen (the rest stay empty, so unrequested sections cost
+  /// no tokens). This is text-only and does NOT consume a practice from the
+  /// learner's quota. The future edge function must branch on call *kind* (prep
+  /// vs practice) and decrement the right counter.
+  Future<DailySpeakingTopic> expandTopic({
+    required String topicText,
+    required Set<PrepSection> sections,
+  }) async {
     if (useStubResponse) {
       await Future<void>.delayed(const Duration(seconds: 2)); // match feedback feel
-      return DailySpeakingServiceStubs.expandedTopic(topicText);
+      return DailySpeakingServiceStubs.expandedTopic(topicText, sections);
     }
     // TODO(real): supabase.functions.invoke('daily-speaking-prep', body: {
     //   'call_kind': 'prep',     // edge fn branches: prep does NOT decrement the
-    //                            // practices quota (5 premium / 1 free); only the
-    //                            // audio review call does.
-    //   'topic_text': topicText, // NO level/CEFR param for MVP (level-agnostic).
+    //                            // practices quota (5 premium / 1 free).
+    //   'topic_text': topicText,
+    //   'sections': sections.map((s) => s.name).toList(), // only generate these
     // }); then DailySpeakingTopic.fromJson(...). Must return id:'own', bilingual
-    // fields (prompt_en/prompt_mm), vocabulary, target_phrases, warmup_questions.
+    // prompt + the rich guide fields for the requested sections only.
     throw UnimplementedError('daily-speaking-prep edge function not deployed');
   }
 
-  /// Follow-up "ask" on an already-expanded prep [current] topic. Returns the
-  /// topic with the requested delta appended (more vocab / phrases / warmups).
-  /// Anti-abuse cap (max 3 asks/topic) is enforced client-side for now and
-  /// server-side later.
+  /// "Add more help" on an already-expanded prep [current]: generate one
+  /// [section] the learner didn't pick up front and merge it in. Bounded by the
+  /// set of sections not yet present (the UI only offers missing ones).
   Future<DailySpeakingTopic> askMore({
-    required PrepAskKind kind,
+    required PrepSection section,
     required DailySpeakingTopic current,
   }) async {
     if (useStubResponse) {
       await Future<void>.delayed(const Duration(seconds: 1));
-      switch (kind) {
-        case PrepAskKind.moreVocab:
-          return current.copyWith(vocabulary: [
-            ...current.vocabulary,
-            ...DailySpeakingServiceStubs.moreVocabDelta,
-          ]);
-        case PrepAskKind.harderWords:
-          return current.copyWith(vocabulary: [
-            ...current.vocabulary,
-            ...DailySpeakingServiceStubs.harderWordsDelta,
-          ]);
-        case PrepAskKind.usefulPhrases:
-          return current.copyWith(targetPhrases: [
-            ...current.targetPhrases,
-            ...DailySpeakingServiceStubs.usefulPhrasesDelta,
-          ]);
-        case PrepAskKind.howToStart:
-          return current.copyWith(warmupQuestions: [
-            ...current.warmupQuestions,
-            ...DailySpeakingServiceStubs.howToStartDelta,
-          ]);
-      }
+      return DailySpeakingServiceStubs.addSection(current, section);
     }
     // TODO(real): supabase.functions.invoke('daily-speaking-prep', body: {
-    //   'call_kind': 'prep', 'ask_kind': kind.name,
-    //   'topic': current.toJson(), // server returns the merged/expanded topic.
+    //   'call_kind': 'prep', 'sections': [section.name],
+    //   'topic': current.toJson(), // server returns the topic with that section
     // }); same budget branch as expandTopic (prep, not a practice).
     throw UnimplementedError('daily-speaking-prep edge function not deployed');
   }

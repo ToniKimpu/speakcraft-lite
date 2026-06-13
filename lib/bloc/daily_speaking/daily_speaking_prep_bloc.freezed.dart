@@ -18,22 +18,23 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$DailySpeakingPrepEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String topicText) expand,
-    required TResult Function(PrepAskKind kind) askMore,
+    required TResult Function(String topicText, Set<PrepSection> sections)
+        expand,
+    required TResult Function(PrepSection section) askMore,
     required TResult Function() reset,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String topicText)? expand,
-    TResult? Function(PrepAskKind kind)? askMore,
+    TResult? Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult? Function(PrepSection section)? askMore,
     TResult? Function()? reset,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String topicText)? expand,
-    TResult Function(PrepAskKind kind)? askMore,
+    TResult Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult Function(PrepSection section)? askMore,
     TResult Function()? reset,
     required TResult orElse(),
   }) =>
@@ -90,7 +91,7 @@ abstract class _$$ExpandImplCopyWith<$Res> {
           _$ExpandImpl value, $Res Function(_$ExpandImpl) then) =
       __$$ExpandImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String topicText});
+  $Res call({String topicText, Set<PrepSection> sections});
 }
 
 /// @nodoc
@@ -107,12 +108,17 @@ class __$$ExpandImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? topicText = null,
+    Object? sections = null,
   }) {
     return _then(_$ExpandImpl(
       null == topicText
           ? _value.topicText
           : topicText // ignore: cast_nullable_to_non_nullable
               as String,
+      null == sections
+          ? _value._sections
+          : sections // ignore: cast_nullable_to_non_nullable
+              as Set<PrepSection>,
     ));
   }
 }
@@ -120,14 +126,22 @@ class __$$ExpandImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ExpandImpl implements _Expand {
-  const _$ExpandImpl(this.topicText);
+  const _$ExpandImpl(this.topicText, final Set<PrepSection> sections)
+      : _sections = sections;
 
   @override
   final String topicText;
+  final Set<PrepSection> _sections;
+  @override
+  Set<PrepSection> get sections {
+    if (_sections is EqualUnmodifiableSetView) return _sections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableSetView(_sections);
+  }
 
   @override
   String toString() {
-    return 'DailySpeakingPrepEvent.expand(topicText: $topicText)';
+    return 'DailySpeakingPrepEvent.expand(topicText: $topicText, sections: $sections)';
   }
 
   @override
@@ -136,11 +150,13 @@ class _$ExpandImpl implements _Expand {
         (other.runtimeType == runtimeType &&
             other is _$ExpandImpl &&
             (identical(other.topicText, topicText) ||
-                other.topicText == topicText));
+                other.topicText == topicText) &&
+            const DeepCollectionEquality().equals(other._sections, _sections));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, topicText);
+  int get hashCode => Object.hash(
+      runtimeType, topicText, const DeepCollectionEquality().hash(_sections));
 
   /// Create a copy of DailySpeakingPrepEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -153,33 +169,34 @@ class _$ExpandImpl implements _Expand {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String topicText) expand,
-    required TResult Function(PrepAskKind kind) askMore,
+    required TResult Function(String topicText, Set<PrepSection> sections)
+        expand,
+    required TResult Function(PrepSection section) askMore,
     required TResult Function() reset,
   }) {
-    return expand(topicText);
+    return expand(topicText, sections);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String topicText)? expand,
-    TResult? Function(PrepAskKind kind)? askMore,
+    TResult? Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult? Function(PrepSection section)? askMore,
     TResult? Function()? reset,
   }) {
-    return expand?.call(topicText);
+    return expand?.call(topicText, sections);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String topicText)? expand,
-    TResult Function(PrepAskKind kind)? askMore,
+    TResult Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult Function(PrepSection section)? askMore,
     TResult Function()? reset,
     required TResult orElse(),
   }) {
     if (expand != null) {
-      return expand(topicText);
+      return expand(topicText, sections);
     }
     return orElse();
   }
@@ -220,9 +237,11 @@ class _$ExpandImpl implements _Expand {
 }
 
 abstract class _Expand implements DailySpeakingPrepEvent {
-  const factory _Expand(final String topicText) = _$ExpandImpl;
+  const factory _Expand(
+      final String topicText, final Set<PrepSection> sections) = _$ExpandImpl;
 
   String get topicText;
+  Set<PrepSection> get sections;
 
   /// Create a copy of DailySpeakingPrepEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -237,7 +256,7 @@ abstract class _$$AskMoreImplCopyWith<$Res> {
           _$AskMoreImpl value, $Res Function(_$AskMoreImpl) then) =
       __$$AskMoreImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({PrepAskKind kind});
+  $Res call({PrepSection section});
 }
 
 /// @nodoc
@@ -253,13 +272,13 @@ class __$$AskMoreImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? kind = null,
+    Object? section = null,
   }) {
     return _then(_$AskMoreImpl(
-      null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as PrepAskKind,
+      null == section
+          ? _value.section
+          : section // ignore: cast_nullable_to_non_nullable
+              as PrepSection,
     ));
   }
 }
@@ -267,14 +286,14 @@ class __$$AskMoreImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AskMoreImpl implements _AskMore {
-  const _$AskMoreImpl(this.kind);
+  const _$AskMoreImpl(this.section);
 
   @override
-  final PrepAskKind kind;
+  final PrepSection section;
 
   @override
   String toString() {
-    return 'DailySpeakingPrepEvent.askMore(kind: $kind)';
+    return 'DailySpeakingPrepEvent.askMore(section: $section)';
   }
 
   @override
@@ -282,11 +301,11 @@ class _$AskMoreImpl implements _AskMore {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AskMoreImpl &&
-            (identical(other.kind, kind) || other.kind == kind));
+            (identical(other.section, section) || other.section == section));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, kind);
+  int get hashCode => Object.hash(runtimeType, section);
 
   /// Create a copy of DailySpeakingPrepEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -299,33 +318,34 @@ class _$AskMoreImpl implements _AskMore {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String topicText) expand,
-    required TResult Function(PrepAskKind kind) askMore,
+    required TResult Function(String topicText, Set<PrepSection> sections)
+        expand,
+    required TResult Function(PrepSection section) askMore,
     required TResult Function() reset,
   }) {
-    return askMore(kind);
+    return askMore(section);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String topicText)? expand,
-    TResult? Function(PrepAskKind kind)? askMore,
+    TResult? Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult? Function(PrepSection section)? askMore,
     TResult? Function()? reset,
   }) {
-    return askMore?.call(kind);
+    return askMore?.call(section);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String topicText)? expand,
-    TResult Function(PrepAskKind kind)? askMore,
+    TResult Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult Function(PrepSection section)? askMore,
     TResult Function()? reset,
     required TResult orElse(),
   }) {
     if (askMore != null) {
-      return askMore(kind);
+      return askMore(section);
     }
     return orElse();
   }
@@ -366,9 +386,9 @@ class _$AskMoreImpl implements _AskMore {
 }
 
 abstract class _AskMore implements DailySpeakingPrepEvent {
-  const factory _AskMore(final PrepAskKind kind) = _$AskMoreImpl;
+  const factory _AskMore(final PrepSection section) = _$AskMoreImpl;
 
-  PrepAskKind get kind;
+  PrepSection get section;
 
   /// Create a copy of DailySpeakingPrepEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -418,8 +438,9 @@ class _$ResetImpl implements _Reset {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String topicText) expand,
-    required TResult Function(PrepAskKind kind) askMore,
+    required TResult Function(String topicText, Set<PrepSection> sections)
+        expand,
+    required TResult Function(PrepSection section) askMore,
     required TResult Function() reset,
   }) {
     return reset();
@@ -428,8 +449,8 @@ class _$ResetImpl implements _Reset {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String topicText)? expand,
-    TResult? Function(PrepAskKind kind)? askMore,
+    TResult? Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult? Function(PrepSection section)? askMore,
     TResult? Function()? reset,
   }) {
     return reset?.call();
@@ -438,8 +459,8 @@ class _$ResetImpl implements _Reset {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String topicText)? expand,
-    TResult Function(PrepAskKind kind)? askMore,
+    TResult Function(String topicText, Set<PrepSection> sections)? expand,
+    TResult Function(PrepSection section)? askMore,
     TResult Function()? reset,
     required TResult orElse(),
   }) {
@@ -494,9 +515,7 @@ mixin _$DailySpeakingPrepState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(
-            DailySpeakingTopic topic, bool asking, int asksUsed)
-        loaded,
+    required TResult Function(DailySpeakingTopic topic, bool asking) loaded,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -504,8 +523,7 @@ mixin _$DailySpeakingPrepState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult? Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -513,8 +531,7 @@ mixin _$DailySpeakingPrepState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -611,9 +628,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(
-            DailySpeakingTopic topic, bool asking, int asksUsed)
-        loaded,
+    required TResult Function(DailySpeakingTopic topic, bool asking) loaded,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -624,8 +639,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult? Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -636,8 +650,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -732,9 +745,7 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(
-            DailySpeakingTopic topic, bool asking, int asksUsed)
-        loaded,
+    required TResult Function(DailySpeakingTopic topic, bool asking) loaded,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -745,8 +756,7 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult? Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -757,8 +767,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -816,7 +825,7 @@ abstract class _$$LoadedImplCopyWith<$Res> {
           _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({DailySpeakingTopic topic, bool asking, int asksUsed});
+  $Res call({DailySpeakingTopic topic, bool asking});
 
   $DailySpeakingTopicCopyWith<$Res> get topic;
 }
@@ -836,7 +845,6 @@ class __$$LoadedImplCopyWithImpl<$Res>
   $Res call({
     Object? topic = null,
     Object? asking = null,
-    Object? asksUsed = null,
   }) {
     return _then(_$LoadedImpl(
       null == topic
@@ -847,10 +855,6 @@ class __$$LoadedImplCopyWithImpl<$Res>
           ? _value.asking
           : asking // ignore: cast_nullable_to_non_nullable
               as bool,
-      asksUsed: null == asksUsed
-          ? _value.asksUsed
-          : asksUsed // ignore: cast_nullable_to_non_nullable
-              as int,
     ));
   }
 
@@ -868,21 +872,17 @@ class __$$LoadedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl(this.topic, {this.asking = false, this.asksUsed = 0});
+  const _$LoadedImpl(this.topic, {this.asking = false});
 
   @override
   final DailySpeakingTopic topic;
   @override
   @JsonKey()
   final bool asking;
-// follow-up ask in flight (keep scaffold up)
-  @override
-  @JsonKey()
-  final int asksUsed;
 
   @override
   String toString() {
-    return 'DailySpeakingPrepState.loaded(topic: $topic, asking: $asking, asksUsed: $asksUsed)';
+    return 'DailySpeakingPrepState.loaded(topic: $topic, asking: $asking)';
   }
 
   @override
@@ -891,13 +891,11 @@ class _$LoadedImpl implements _Loaded {
         (other.runtimeType == runtimeType &&
             other is _$LoadedImpl &&
             (identical(other.topic, topic) || other.topic == topic) &&
-            (identical(other.asking, asking) || other.asking == asking) &&
-            (identical(other.asksUsed, asksUsed) ||
-                other.asksUsed == asksUsed));
+            (identical(other.asking, asking) || other.asking == asking));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, topic, asking, asksUsed);
+  int get hashCode => Object.hash(runtimeType, topic, asking);
 
   /// Create a copy of DailySpeakingPrepState
   /// with the given fields replaced by the non-null parameter values.
@@ -912,12 +910,10 @@ class _$LoadedImpl implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(
-            DailySpeakingTopic topic, bool asking, int asksUsed)
-        loaded,
+    required TResult Function(DailySpeakingTopic topic, bool asking) loaded,
     required TResult Function(String message) error,
   }) {
-    return loaded(topic, asking, asksUsed);
+    return loaded(topic, asking);
   }
 
   @override
@@ -925,11 +921,10 @@ class _$LoadedImpl implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult? Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult? Function(String message)? error,
   }) {
-    return loaded?.call(topic, asking, asksUsed);
+    return loaded?.call(topic, asking);
   }
 
   @override
@@ -937,13 +932,12 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(topic, asking, asksUsed);
+      return loaded(topic, asking);
     }
     return orElse();
   }
@@ -987,12 +981,11 @@ class _$LoadedImpl implements _Loaded {
 }
 
 abstract class _Loaded implements DailySpeakingPrepState {
-  const factory _Loaded(final DailySpeakingTopic topic,
-      {final bool asking, final int asksUsed}) = _$LoadedImpl;
+  const factory _Loaded(final DailySpeakingTopic topic, {final bool asking}) =
+      _$LoadedImpl;
 
   DailySpeakingTopic get topic;
-  bool get asking; // follow-up ask in flight (keep scaffold up)
-  int get asksUsed;
+  bool get asking;
 
   /// Create a copy of DailySpeakingPrepState
   /// with the given fields replaced by the non-null parameter values.
@@ -1071,9 +1064,7 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(
-            DailySpeakingTopic topic, bool asking, int asksUsed)
-        loaded,
+    required TResult Function(DailySpeakingTopic topic, bool asking) loaded,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1084,8 +1075,7 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult? Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1096,8 +1086,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(DailySpeakingTopic topic, bool asking, int asksUsed)?
-        loaded,
+    TResult Function(DailySpeakingTopic topic, bool asking)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
