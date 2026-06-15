@@ -47,6 +47,13 @@ List<LexiconTimeWord> _frequencyAdverbs(ResolvedToolkit t) {
 List<LexiconTimeWord> _timePhrases(ResolvedToolkit t) =>
     t.timeWords.where((w) => !w.isFrequencyAdverb).toList(growable: false);
 
+/// The shared lexicon stores **positive present-simple** examples, so they only
+/// fit an affirmative present-simple unit (`verb_form: third`). For negatives /
+/// questions (`base`) or continuous (`ing`) those examples are off-message, so
+/// the banks show form-only (the unit's own Examples section carries the
+/// tense-correct sentences).
+bool _showBankExamples(WritingUnit unit) => unit.toolkit.verbForm == 'third';
+
 class _WritingTeachPageState extends State<WritingTeachPage> {
   late final Future<_TeachData> _data = _load();
 
@@ -235,7 +242,8 @@ class _TeachBody extends StatelessWidget {
                       label: 'ဒီ verbs တွေနှင့် လေ့ကျင့်ကြည့်ပါ',
                       child: _VerbBank(
                           verbs: toolkit.verbs,
-                          formKey: unit.toolkit.verbForm),
+                          formKey: unit.toolkit.verbForm,
+                          showExamples: _showBankExamples(unit)),
                     ),
 
                   // Bespoke teach blocks (e.g. the frequency scale) sit in the
@@ -248,7 +256,9 @@ class _TeachBody extends StatelessWidget {
                     _Section(
                       icon: Icons.event_outlined,
                       label: 'Time phrases  ·  when',
-                      child: _TimeWordBank(words: _timePhrases(toolkit)),
+                      child: _TimeWordBank(
+                          words: _timePhrases(toolkit),
+                          showExamples: _showBankExamples(unit)),
                     ),
                   if (unit.toolkit.timeWordsNoteMm.isNotEmpty)
                     _NoteCard(mm: unit.toolkit.timeWordsNoteMm),
@@ -485,9 +495,11 @@ class _ExampleRow extends StatelessWidget {
 /// The verb toolkit — each row collapses to `base → third (+s)` + gloss, and
 /// expands to a bilingual example. Reinforces the -s by showing both forms.
 class _VerbBank extends StatelessWidget {
-  const _VerbBank({required this.verbs, required this.formKey});
+  const _VerbBank(
+      {required this.verbs, required this.formKey, required this.showExamples});
   final List<LexiconVerb> verbs;
   final String formKey;
+  final bool showExamples;
 
   @override
   Widget build(BuildContext context) {
@@ -500,7 +512,8 @@ class _VerbBank extends StatelessWidget {
             if (i > 0)
               Divider(
                   height: 1, color: cs.outlineVariant.withValues(alpha: 0.5)),
-            _VerbTile(verb: verbs[i], formKey: formKey),
+            _VerbTile(
+                verb: verbs[i], formKey: formKey, showExamples: showExamples),
           ],
         ],
       ),
@@ -509,37 +522,59 @@ class _VerbBank extends StatelessWidget {
 }
 
 class _VerbTile extends StatelessWidget {
-  const _VerbTile({required this.verb, required this.formKey});
+  const _VerbTile(
+      {required this.verb, required this.formKey, required this.showExamples});
   final LexiconVerb verb;
   final String formKey;
+  final bool showExamples;
 
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
     final mmColor = PmpColors.myanmarGloss(Theme.of(context).brightness);
+    final second = verb.secondForm(formKey);
+    final verbColor = writingVerbColor(Theme.of(context).brightness);
+
+    // base → form (e.g. work → works / working); or just the base form when the
+    // unit uses the verb in its base form (after don't/doesn't, do/does).
+    final title = (second == verb.base)
+        ? Text(verb.base,
+            style: PmpTextStyles.body1Semi.copyWith(color: verbColor))
+        : RichText(
+            text: TextSpan(
+              style: PmpTextStyles.body1Regular.copyWith(color: cs.onSurface),
+              children: [
+                TextSpan(text: verb.base),
+                TextSpan(
+                    text: '  →  ',
+                    style: TextStyle(color: cs.onSurfaceVariant)),
+                TextSpan(
+                    text: second,
+                    style: PmpTextStyles.body1Semi.copyWith(color: verbColor)),
+              ],
+            ),
+          );
+    final subtitle = verb.mm.isEmpty
+        ? null
+        : Text(verb.mm,
+            style: PmpTextStyles.body2Regular.copyWith(color: mmColor));
+
+    // No examples for this unit → a plain (non-expandable) reference row.
+    if (!showExamples || verb.examples.isEmpty) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [title, if (subtitle != null) subtitle],
+        ),
+      );
+    }
     return ExpansionTile(
       tilePadding: EdgeInsets.zero,
       childrenPadding: const EdgeInsets.only(left: 4, bottom: 10),
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: RichText(
-        text: TextSpan(
-          style: PmpTextStyles.body1Regular.copyWith(color: cs.onSurface),
-          children: [
-            TextSpan(text: verb.base),
-            TextSpan(
-                text: '  →  ',
-                style: TextStyle(color: cs.onSurfaceVariant)),
-            TextSpan(
-                text: verb.secondForm(formKey),
-                style: PmpTextStyles.body1Semi.copyWith(
-                    color: writingVerbColor(Theme.of(context).brightness))),
-          ],
-        ),
-      ),
-      subtitle: verb.mm.isEmpty
-          ? null
-          : Text(verb.mm,
-              style: PmpTextStyles.body2Regular.copyWith(color: mmColor)),
+      title: title,
+      subtitle: subtitle,
       children: [
         for (final ex in verb.examples) _ExampleRow(en: ex.en, mm: ex.mm),
       ],
@@ -550,8 +585,9 @@ class _VerbTile extends StatelessWidget {
 /// The frequency / time-word toolkit — header shows the word + its position
 /// rule (the part Burmese learners get wrong); expands to a bilingual example.
 class _TimeWordBank extends StatelessWidget {
-  const _TimeWordBank({required this.words});
+  const _TimeWordBank({required this.words, required this.showExamples});
   final List<LexiconTimeWord> words;
+  final bool showExamples;
 
   @override
   Widget build(BuildContext context) {
@@ -564,7 +600,7 @@ class _TimeWordBank extends StatelessWidget {
             if (i > 0)
               Divider(
                   height: 1, color: cs.outlineVariant.withValues(alpha: 0.5)),
-            _TimeWordTile(word: words[i]),
+            _TimeWordTile(word: words[i], showExamples: showExamples),
           ],
         ],
       ),
@@ -573,41 +609,54 @@ class _TimeWordBank extends StatelessWidget {
 }
 
 class _TimeWordTile extends StatelessWidget {
-  const _TimeWordTile({required this.word});
+  const _TimeWordTile({required this.word, required this.showExamples});
   final LexiconTimeWord word;
+  final bool showExamples;
 
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
     final mmColor = PmpColors.myanmarGloss(Theme.of(context).brightness);
+    final title = Row(
+      children: [
+        Flexible(
+          child: Text(word.en,
+              style: PmpTextStyles.body1Semi.copyWith(color: cs.onSurface)),
+        ),
+        if (word.positionLabel.isNotEmpty) ...[
+          const SizedBox(width: 8),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            decoration: BoxDecoration(
+              color: cs.primary.withValues(alpha: 0.10),
+              borderRadius: BorderRadius.circular(6),
+            ),
+            child: Text(word.positionLabel,
+                style: PmpTextStyles.sub.copyWith(color: cs.primary)),
+          ),
+        ],
+      ],
+    );
+    final subtitle = word.mm.isEmpty
+        ? null
+        : Text(word.mm,
+            style: PmpTextStyles.body2Regular.copyWith(color: mmColor));
+
+    if (!showExamples || word.examples.isEmpty) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [title, if (subtitle != null) subtitle],
+        ),
+      );
+    }
     return ExpansionTile(
       tilePadding: EdgeInsets.zero,
       childrenPadding: const EdgeInsets.only(left: 4, bottom: 10),
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: Row(
-        children: [
-          Flexible(
-            child: Text(word.en,
-                style: PmpTextStyles.body1Semi.copyWith(color: cs.onSurface)),
-          ),
-          if (word.positionLabel.isNotEmpty) ...[
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-              decoration: BoxDecoration(
-                color: cs.primary.withValues(alpha: 0.10),
-                borderRadius: BorderRadius.circular(6),
-              ),
-              child: Text(word.positionLabel,
-                  style: PmpTextStyles.sub.copyWith(color: cs.primary)),
-            ),
-          ],
-        ],
-      ),
-      subtitle: word.mm.isEmpty
-          ? null
-          : Text(word.mm,
-              style: PmpTextStyles.body2Regular.copyWith(color: mmColor)),
+      title: title,
+      subtitle: subtitle,
       children: [
         for (final ex in word.examples) _ExampleRow(en: ex.en, mm: ex.mm),
       ],

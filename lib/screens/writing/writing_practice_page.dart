@@ -727,7 +727,9 @@ class _ToolkitReminder extends StatelessWidget {
               _ChipWrap(
                 labels: [
                   for (final v in toolkit.verbs)
-                    '${v.base} / ${v.secondForm(formKey)}'
+                    v.secondForm(formKey) == v.base
+                        ? v.base
+                        : '${v.base} / ${v.secondForm(formKey)}'
                 ],
                 color: writingVerbColor(Theme.of(context).brightness),
               ),

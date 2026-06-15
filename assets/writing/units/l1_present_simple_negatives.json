@@ -7,7 +7,7 @@
   "title": "Present simple: negatives (don't / doesn't)",
   "subtitle_mm": "ပစ္စုပ္ပန် ရိုးရိုး — အငြင်း",
   "teach": {
-    "situation_en": "Ben is a student. He doesn't {v}like{/v} coffee, so he {v}drinks{/v} tea. He doesn't {v}have{/v} a car, so he {v}goes{/v} to school by bus. {t}On Sundays{/t} he doesn't {v}study{/v} — he {v}relaxes{/v} at home.",
+    "situation_en": "Ben is a student. He {v}doesn't like{/v} coffee, so he {v}drinks{/v} tea. He {v}doesn't have{/v} a car, so he {v}goes{/v} to school by bus. {t}On Sundays{/t} he {v}doesn't study{/v} — he {v}relaxes{/v} at home.",
     "situation_mm": "Ben က ကျောင်းသားတစ်ယောက်ပါ။ သူ ကော်ဖီ မကြိုက်ဘူး၊ ဒါကြောင့် လက်ဖက်ရည် သောက်တယ်။ သူ ကားမရှိဘူး၊ ဒါကြောင့် ကျောင်းကို ဘတ်စ်ကားနဲ့ သွားတယ်။ တနင်္ဂနွေနေ့တိုင်း သူ စာမလုပ်ဘူး — အိမ်မှာ အနားယူတယ်။",
     "use_en": "We use don't (do not) and doesn't (does not) before the base verb to say something is NOT true — habits we don't have, things we don't do.",
     "use_mm": "တစ်ခုခုကို ‘မ-ဘူး’ လို့ ငြင်းချင်တဲ့အခါ — ကိုယ်မလုပ်တဲ့အရာ၊ မရှိတဲ့ အလေ့အထတွေအတွက် — ကြိယာရှေ့မှာ don't / doesn't ထည့်ပြီး သုံးပါတယ်။",
@@ -22,12 +22,12 @@
     "trap_en": "After doesn't, the verb has NO -s.  WRONG: She doesn't works.   RIGHT: She doesn't work.",
     "trap_mm": "doesn't (= does not) ထဲမှာ -s ပါပြီးသားဖြစ်လို့ နောက်က ကြိယာကို base form (မူရင်းပုံစံ) အတိုင်းပဲ ထားရတယ် — -s ထပ်မထည့်ရဘူး။  ✗ She doesn't works  →  ✓ She doesn't work.",
     "examples": [
-      { "en": "I don't {v}drink{/v} coffee.", "mm": "ကျွန်တော် ကော်ဖီ မသောက်ဘူး။" },
-      { "en": "She doesn't {v}eat{/v} meat.", "mm": "သူမ အသား မစားဘူး။" },
-      { "en": "They don't {v}live{/v} here.", "mm": "သူတို့ ဒီမှာ မနေဘူး။" },
-      { "en": "He doesn't {v}work{/v} {t}on weekends{/t}.", "mm": "သူ စနေတနင်္ဂနွေမှာ အလုပ်မလုပ်ဘူး။" }
+      { "en": "I {v}don't drink{/v} coffee.", "mm": "ကျွန်တော် ကော်ဖီ မသောက်ဘူး။" },
+      { "en": "She {v}doesn't eat{/v} meat.", "mm": "သူမ အသား မစားဘူး။" },
+      { "en": "They {v}don't live{/v} here.", "mm": "သူတို့ ဒီမှာ မနေဘူး။" },
+      { "en": "He {v}doesn't work{/v} {t}on weekends{/t}.", "mm": "သူ စနေတနင်္ဂနွေမှာ အလုပ်မလုပ်ဘူး။" }
     ],
-    "model_paragraph_en": "My brother doesn't {v}like{/v} the city. He doesn't {v}have{/v} a big house, and he doesn't {v}drive{/v} a car. He {v}works{/v} on a farm, so he doesn't {v}wear{/v} a suit. {t}On weekends{/t} he doesn't {v}work{/v} — he {v}relaxes{/v} at home.",
+    "model_paragraph_en": "My brother {v}doesn't like{/v} the city. He {v}doesn't have{/v} a big house, and he {v}doesn't drive{/v} a car. He {v}works{/v} on a farm, so he {v}doesn't wear{/v} a suit. {t}On weekends{/t} he {v}doesn't work{/v} — he {v}relaxes{/v} at home.",
     "model_paragraph_mm": "ကျွန်တော့်အစ်ကိုက မြို့ကြီးကို မကြိုက်ဘူး။ သူ အိမ်ကြီး မရှိဘူး၊ ကားလည်း မမောင်းဘူး။ သူ လယ်ထဲမှာ အလုပ်လုပ်တာမို့ ဝတ်စုံ မဝတ်ဘူး။ စနေတနင်္ဂနွေမှာ သူ အလုပ်မလုပ်ဘူး — အိမ်မှာ အနားယူတယ်။"
   },
   "toolkit": {
@@ -37,7 +37,8 @@
     ],
     "time_words": [
       "t_every_day", "t_in_the_morning", "t_on_weekends", "t_on_mondays"
-    ]
+    ],
+    "verb_form": "base"
   },
   "exercises": [
     {
@@ -89,7 +90,7 @@
       "max_lines": 8,
       "prompt_en": "Part 1 — about YOURSELF. Write 5–8 sentences about things you DON'T do, using \"I don't\" / \"we don't\" + the base verb.",
       "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အကြောင်း။ ကိုယ် မလုပ်တဲ့အရာတွေအကြောင်း \"I don't / we don't\" သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ don't နောက်က ကြိယာက base form ပါ။ ပြီးရင် စာအုပ်ထဲ လက်နဲ့ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
-      "model": "I don't {v}drink{/v} coffee. I don't {v}eat{/v} meat. I don't {v}watch{/v} TV {t}in the morning{/t}. We don't {v}live{/v} in the city. I don't {v}work{/v} {t}on weekends{/t}.",
+      "model": "I {v}don't drink{/v} coffee. I {v}don't eat{/v} meat. I {v}don't watch{/v} TV {t}in the morning{/t}. We {v}don't live{/v} in the city. I {v}don't work{/v} {t}on weekends{/t}.",
       "explain_mm": "‘I / we’ နဲ့ဆို don't သုံးပါ။ don't နောက်က ကြိယာ အမြဲ base form — -s မထည့်ပါနဲ့။",
       "grading": {
         "grammar_point": "Present simple negatives (don't / doesn't)",
@@ -113,7 +114,7 @@
       "grade": "ai",
       "prompt_en": "Part 2 — about SOMEONE ELSE. Write one short paragraph (4–6 sentences) about what a family member (he / she) doesn't do. Use \"doesn't\" + the base verb — {v}no -s{/v} on the verb!",
       "prompt_mm": "အပိုင်း ၂ — တခြားသူတစ်ယောက်အကြောင်း။ မိသားစုဝင်တစ်ယောက် (he / she) မလုပ်တဲ့အရာတွေအကြောင်း စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ \"doesn't\" + ကြိယာ(base) သုံးပါ — ကြိယာမှာ -s မထည့်ပါနဲ့! ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ။",
-      "model": "My sister doesn't {v}like{/v} sport. She doesn't {v}play{/v} football, and she doesn't {v}watch{/v} games on TV. She doesn't {v}eat{/v} meat. {t}On weekends{/t} she doesn't {v}study{/v} — she {v}reads{/v} novels.",
+      "model": "My sister {v}doesn't like{/v} sport. She {v}doesn't play{/v} football, and she {v}doesn't watch{/v} games on TV. She {v}doesn't eat{/v} meat. {t}On weekends{/t} she {v}doesn't study{/v} — she {v}reads{/v} novels.",
       "explain_mm": "he / she နဲ့ဆို doesn't သုံးပါ။ doesn't နောက်က ကြိယာတိုင်း base form — She doesn't plays (✗) → She doesn't play (✓)။",
       "grading": {
         "grammar_point": "Present simple negatives (don't / doesn't)",
