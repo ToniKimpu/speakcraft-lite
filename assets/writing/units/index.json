@@ -182,7 +182,9 @@
     "section": "Nouns & articles",
     "order": 1,
     "title": "Singular & plural nouns",
-    "published": false
+    "published": true,
+    "subtitle_mm": "နာမ် — အနည်း & အများ",
+    "asset": "assets/writing/units/l1_plural_nouns.json"
   },
   {
     "id": "l1_countable_uncountable",
@@ -191,7 +193,9 @@
     "section": "Nouns & articles",
     "order": 2,
     "title": "Countable & uncountable nouns",
-    "published": false
+    "published": true,
+    "subtitle_mm": "ရေတွက်နိုင် & ရေတွက်မရ",
+    "asset": "assets/writing/units/l1_countable_uncountable.json"
   },
   {
     "id": "l1_a_an",
@@ -200,7 +204,9 @@
     "section": "Nouns & articles",
     "order": 3,
     "title": "a / an",
-    "published": false
+    "published": true,
+    "subtitle_mm": "a / an",
+    "asset": "assets/writing/units/l1_a_an.json"
   },
   {
     "id": "l1_the",
@@ -209,7 +215,9 @@
     "section": "Nouns & articles",
     "order": 4,
     "title": "the",
-    "published": false
+    "published": true,
+    "subtitle_mm": "the",
+    "asset": "assets/writing/units/l1_the.json"
   },
   {
     "id": "l1_articles_contrast",
@@ -218,7 +226,9 @@
     "section": "Nouns & articles",
     "order": 5,
     "title": "a/an vs the vs no article",
-    "published": false
+    "published": true,
+    "subtitle_mm": "a/an vs the vs အညွှန်း မပါ",
+    "asset": "assets/writing/units/l1_articles_contrast.json"
   },
   {
     "id": "l1_some_any",
@@ -227,7 +237,9 @@
     "section": "Nouns & articles",
     "order": 6,
     "title": "some / any",
-    "published": false
+    "published": true,
+    "subtitle_mm": "some / any",
+    "asset": "assets/writing/units/l1_some_any.json"
   },
   {
     "id": "l1_much_many",
@@ -236,7 +248,9 @@
     "section": "Nouns & articles",
     "order": 7,
     "title": "much / many / a lot of",
-    "published": false
+    "published": true,
+    "subtitle_mm": "much / many / a lot of",
+    "asset": "assets/writing/units/l1_much_many.json"
   },
   {
     "id": "l1_pronouns_subj_obj",

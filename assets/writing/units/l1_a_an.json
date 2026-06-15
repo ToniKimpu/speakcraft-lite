@@ -1,0 +1,128 @@
+{
+  "id": "l1_a_an",
+  "level": 1,
+  "section": "Nouns & articles",
+  "order": 3,
+  "type": "grammar_unit",
+  "title": "a / an",
+  "subtitle_mm": "a / an (အညွှန်း မသေချာ)",
+  "teach": {
+    "situation_en": "I want to be {v}a{/v} doctor. My friend is {v}an{/v} engineer. We live in {v}a{/v} small town. There is {v}an{/v} old temple and {v}a{/v} new market. I have {v}an{/v} hour before work.",
+    "situation_mm": "ကျွန်တော် ဆရာဝန်တစ်ယောက် ဖြစ်ချင်တယ်။ ကျွန်တော့်သူငယ်ချင်းက အင်ဂျင်နီယာတစ်ယောက်ပါ။ ကျွန်တော်တို့ မြို့ငယ်တစ်ခုမှာ နေတယ်။ ဘုရားဟောင်းတစ်ဆူနဲ့ ဈေးအသစ်တစ်ခု ရှိတယ်။ အလုပ်မဝင်ခင် တစ်နာရီ ရှိတယ်။",
+    "use_en": "We use a / an with a singular countable noun the first time, or when it's not specific. a + consonant sound; an + vowel sound.",
+    "use_mm": "အနည်းကိန်း ရေတွက်နိုင်နာမ်ကို ပထမဆုံး ဖော်ပြတဲ့အခါ (သို့) တိကျမှု မရှိတဲ့အခါ a / an သုံးပါတယ်။ a + ဗျည်းအသံ; an + သရအသံ။",
+    "timeline": "",
+    "form": [
+      { "subject": "consonant sound", "form": "a  (a book, a car)" },
+      { "subject": "vowel sound", "form": "an  (an apple, an egg)" },
+      { "subject": "sound, not letter", "form": "an hour · a university" },
+      { "subject": "only singular countable", "form": "a dog ✓ · a water ✗" }
+    ],
+    "form_note_mm": "ဗျည်းအသံ ရှေ့မှာ a (a book, a teacher)။ သရအသံ (a, e, i, o, u) ရှေ့မှာ an (an apple, an egg, an umbrella)။ စာလုံး မဟုတ်ဘဲ ‘အသံ’ ကို ကြည့်ပါ — an hour (h အသံမထွက်), a university (‘yu’ အသံ)။ a/an က အနည်းကိန်း ရေတွက်နိုင်နာမ်နဲ့သာ။",
+    "trap_en": "Choose a/an by SOUND, not spelling.  WRONG: a apple / an university / a hour   RIGHT: an apple / a university / an hour",
+    "trap_mm": "a/an ကို စာလုံးမဟုတ်ဘဲ ‘အသံ’ နဲ့ ရွေးပါ။  ✗ a apple / an university / a hour  →  ✓ an apple / a university / an hour.",
+    "examples": [
+      { "en": "{v}a{/v} book", "mm": "စာအုပ် တစ်အုပ်" },
+      { "en": "{v}an{/v} apple", "mm": "ပန်းသီး တစ်လုံး" },
+      { "en": "{v}an{/v} hour", "mm": "တစ်နာရီ" },
+      { "en": "{v}a{/v} university", "mm": "တက္ကသိုလ် တစ်ခု" }
+    ],
+    "model_paragraph_en": "My uncle has {v}an{/v} interesting job. He is {v}a{/v} pilot. He flies {v}a{/v} big plane to {v}an{/v} island every week. He stays in {v}a{/v} hotel for {v}an{/v} hour or two, then flies back. It is {v}a{/v} hard but exciting life.",
+    "model_paragraph_mm": "ကျွန်တော့်ဦးလေးမှာ စိတ်ဝင်စားဖွယ် အလုပ်တစ်ခု ရှိတယ်။ သူက လေယာဉ်မှူးတစ်ယောက်ပါ။ အပတ်တိုင်း ကျွန်းတစ်ခုဆီ လေယာဉ်ကြီးတစ်စင်း မောင်းတယ်။ ဟိုတယ်တစ်ခုမှာ တစ်နာရီနှစ်နာရီ နေပြီး ပြန်ပျံတယ်။ ခက်ခဲပေမဲ့ စိတ်လှုပ်ရှားဖွယ် ဘဝတစ်ခုပါ။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She is ___ engineer.",
+      "prompt_mm": "သူမ အင်ဂျင်နီယာတစ်ယောက်ပါ။",
+      "options": ["a", "an", "the"],
+      "answers": ["an"],
+      "explain_mm": "engineer က သရအသံ → an."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I wait for ___ hour.",
+      "prompt_mm": "ကျွန်တော် တစ်နာရီ စောင့်တယ်။",
+      "options": ["a", "an", "the"],
+      "answers": ["an"],
+      "explain_mm": "hour — h အသံ မထွက်လို့ သရအသံ → an hour."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He studies at ___ university.",
+      "prompt_mm": "သူ တက္ကသိုလ်တစ်ခုမှာ ပညာသင်တယ်။",
+      "answers": ["a"],
+      "explain_mm": "university — ‘yu’ ဗျည်းအသံ → a university."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I ate a apple.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["I ate an apple", "i ate an apple."],
+      "explain_mm": "apple က သရအသံ → an apple."
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  is  /  it  /  egg  /  an",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["It is an egg", "it is an egg."],
+      "explain_mm": "egg → an egg (သရအသံ)။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — name things and jobs. Write 5–8 sentences using a / an (e.g. \"I have a pen. My mother is an artist.\").",
+      "prompt_mm": "အပိုင်း ၁ — အရာတွေ၊ အလုပ်တွေ ပြောပါ။ a / an သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ (ဥပမာ — \"I have a pen. My mother is an artist.\")။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "I have {v}a{/v} dog. My father is {v}an{/v} engineer. We live in {v}a{/v} village. There is {v}an{/v} old tree near my house. I read {v}a{/v} book every night.",
+      "explain_mm": "a/an ကို နောက်စကားလုံးရဲ့ အသံနဲ့ ရွေးပါ — ဗျည်းအသံ → a, သရအသံ → an။",
+      "grading": {
+        "grammar_point": "a / an",
+        "rule": "a before a consonant sound, an before a vowel sound; only with singular countable nouns. Choice depends on sound, not spelling.",
+        "must_check": [
+          "a/an chosen by sound (an hour, a university)",
+          "Only with singular countable nouns",
+          "Not used with plurals or uncountables",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "a apple / an university",
+          "a/an with plural or uncountable",
+          "Choosing by letter not sound"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — describe a person's job/day. Write a short paragraph (4–6 sentences) using a / an several times.",
+      "prompt_mm": "အပိုင်း ၂ — တစ်ယောက်ယောက်ရဲ့ အလုပ်/နေ့ ဖော်ပြပါ။ a / an ကို အကြိမ်ကြိမ် သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My sister is {v}a{/v} nurse. She works in {v}a{/v} hospital. Every day she helps {v}a{/v} doctor. She has {v}an{/v} early start and {v}a{/v} long day. It is {v}a{/v} hard job but {v}an{/v} important one.",
+      "explain_mm": "a/an ကို အသံအလိုက် မှန်အောင် ရွေးပြီး စာပိုဒ် ရေးပါ။",
+      "grading": {
+        "grammar_point": "a / an",
+        "rule": "Use a/an correctly by sound throughout a short description.",
+        "must_check": [
+          "Correct a/an by sound",
+          "Singular countable nouns only",
+          "No a/an with plural/uncountable",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Sound vs spelling errors",
+          "a/an with wrong noun type",
+          "Omitting a/an where needed"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "l1_plural_nouns",
+  "level": 1,
+  "section": "Nouns & articles",
+  "order": 1,
+  "type": "grammar_unit",
+  "title": "Singular & plural nouns",
+  "subtitle_mm": "နာမ် — အနည်း & အများ",
+  "teach": {
+    "situation_en": "In my bag I have one {v}book{/v} and two {v}pens{/v}. On the table there are three {v}boxes{/v} and some {v}dishes{/v}. Outside there are many {v}buses{/v} and a few {v}children{/v}.",
+    "situation_mm": "ကျွန်တော့်အိတ်ထဲမှာ စာအုပ် တစ်အုပ်နဲ့ ဘောပင် နှစ်ချောင်း ရှိတယ်။ စားပွဲပေါ်မှာ သေတ္တာ သုံးလုံးနဲ့ ပန်းကန် အချို့ ရှိတယ်။ အပြင်မှာ ဘတ်စ်ကား အများကြီးနဲ့ ကလေး အနည်းငယ် ရှိတယ်။",
+    "use_en": "Singular = one. Plural = more than one. Most plurals add -s. Some change spelling (-es, -ies) and a few are irregular.",
+    "use_mm": "အနည်း (singular) = တစ်ခု။ အများ (plural) = တစ်ခုထက်ပို။ အများစုက -s ထည့်တယ်။ အချို့ စာလုံးပေါင်း ပြောင်းတယ် (-es, -ies)၊ အချို့က ပုံမမှန်ပါ။",
+    "timeline": "",
+    "form": [
+      { "subject": "most nouns", "form": "+s  (book → books)" },
+      { "subject": "-s, -x, -ch, -sh", "form": "+es  (box → boxes)" },
+      { "subject": "consonant + y", "form": "y → ies  (city → cities)" },
+      { "subject": "irregular", "form": "man → men, child → children" }
+    ],
+    "form_note_mm": "အများစု → -s (book → books)။ -s, -x, -ch, -sh နဲ့ဆုံးရင် → -es (box → boxes, watch → watches)။ ဗျည်း + y → y ကို i ပြောင်းပြီး -es (city → cities)။ ပုံမမှန် — man → men, woman → women, child → children, foot → feet။",
+    "trap_en": "Add the plural -s; some Burmese learners forget it.  WRONG: I have three book.   RIGHT: I have three books.",
+    "trap_mm": "မြန်မာစာမှာ နာမ်က အနည်း/အများ ပုံစံ မပြောင်းလို့ -s ကို မေ့တတ်တယ်။  ✗ three book  →  ✓ three books.",
+    "examples": [
+      { "en": "two {v}cats{/v}", "mm": "ကြောင် နှစ်ကောင်" },
+      { "en": "three {v}boxes{/v}", "mm": "သေတ္တာ သုံးလုံး" },
+      { "en": "many {v}cities{/v}", "mm": "မြို့ အများကြီး" },
+      { "en": "five {v}children{/v}", "mm": "ကလေး ၅ ယောက်" }
+    ],
+    "model_paragraph_en": "My school is busy. There are many {v}students{/v} and several {v}teachers{/v}. The {v}classes{/v} have big {v}windows{/v}. In the library there are thousands of {v}books{/v}. Two {v}buses{/v} bring the {v}children{/v} every morning.",
+    "model_paragraph_mm": "ကျွန်တော့်ကျောင်း အလုပ်များတယ်။ ကျောင်းသား အများကြီးနဲ့ ဆရာ အတော်များများ ရှိတယ်။ စာသင်ခန်းတွေမှာ ပြတင်းပေါက်ကြီးတွေ ရှိတယ်။ စာကြည့်တိုက်မှာ စာအုပ် ထောင်ပေါင်းများစွာ ရှိတယ်။ ဘတ်စ်ကား နှစ်စီးက ကလေးတွေကို မနက်တိုင်း ပို့ဆောင်ပေးတယ်။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I have two ___.",
+      "prompt_mm": "ကျွန်တော့်မှာ ___ နှစ်ခု ရှိတယ်။",
+      "options": ["box", "boxs", "boxes"],
+      "answers": ["boxes"],
+      "explain_mm": "-x နဲ့ဆုံးရင် → -es (box → boxes)။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "There are many ___ in Myanmar.",
+      "prompt_mm": "မြန်မာမှာ ___ အများကြီး ရှိတယ်။",
+      "options": ["citys", "cities", "city"],
+      "answers": ["cities"],
+      "explain_mm": "ဗျည်း + y → cities။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Plural of 'child' is ___.",
+      "prompt_mm": "‘child’ ရဲ့ အများကိန်းက ___ ပါ။",
+      "answers": ["children"],
+      "explain_mm": "ပုံမမှန် — child → children။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I have three book.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["I have three books", "i have three books."],
+      "explain_mm": "အများ → -s ထည့်ပါ — book → books။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  two  /  there  /  are  /  buses",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["There are two buses", "there are two buses."],
+      "explain_mm": "There are + two buses (အများ → -es)။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — count things. Write 5–8 sentences with plural nouns about things around you (use numbers like two, three, many).",
+      "prompt_mm": "အပိုင်း ၁ — အရာတွေ ရေတွက်ပါ။ ပတ်ဝန်းကျင်က အရာတွေအကြောင်း plural နာမ်တွေသုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ (two, three, many စတဲ့ ဂဏန်းတွေ သုံးပါ)။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "I have two {v}bags{/v}. There are three {v}boxes{/v} on the shelf. My house has four {v}rooms{/v}. I see many {v}buses{/v} on the road. There are five {v}children{/v} in the park.",
+      "explain_mm": "အများကိန်း -s / -es / -ies / ပုံမမှန် ပုံစံတွေ မှန်အောင် သုံးပါ။",
+      "grading": {
+        "grammar_point": "Singular & plural nouns",
+        "rule": "Plural nouns add -s (or -es/-ies), with some irregulars (children, men). Use plural form after numbers > 1 and after 'many'.",
+        "must_check": [
+          "Plural -s/-es/-ies spelling correct",
+          "Irregular plurals correct (children, men, feet)",
+          "Plural used after numbers > 1 / many",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "No plural -s (three book)",
+          "Wrong spelling (citys, boxs)",
+          "Irregulars wrong (childs, mans)"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — describe a busy place. Write a short paragraph (4–6 sentences) about a market or school, using plural nouns.",
+      "prompt_mm": "အပိုင်း ၂ — အလုပ်များတဲ့ နေရာ ဖော်ပြပါ။ ဈေး သို့မဟုတ် ကျောင်းအကြောင်း plural နာမ်တွေသုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "The market is full of people. There are many {v}shops{/v} and {v}stalls{/v}. Women sell {v}vegetables{/v} and {v}fruits{/v}. Children carry {v}baskets{/v}. Two {v}buses{/v} wait outside.",
+      "explain_mm": "နာမ်အများကိန်းတွေ မှန်အောင် ပေါင်းပြီး စာပိုဒ် ရေးပါ။",
+      "grading": {
+        "grammar_point": "Singular & plural nouns",
+        "rule": "A description using plural nouns with correct spelling.",
+        "must_check": [
+          "Correct plural spelling throughout",
+          "Irregular plurals correct",
+          "Plurals where meaning is more than one",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Missing -s",
+          "Spelling errors",
+          "Irregular plural mistakes"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

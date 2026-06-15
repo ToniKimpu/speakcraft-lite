@@ -1,0 +1,128 @@
+{
+  "id": "l1_some_any",
+  "level": 1,
+  "section": "Nouns & articles",
+  "order": 6,
+  "type": "grammar_unit",
+  "title": "some / any",
+  "subtitle_mm": "some / any",
+  "teach": {
+    "situation_en": "I need to cook. I have {v}some{/v} rice and {v}some{/v} eggs, but I don't have {v}any{/v} oil. \"Do we have {v}any{/v} onions?\" I ask. \"Yes, there are {v}some{/v} in the box.\"",
+    "situation_mm": "ကျွန်တော် ချက်ဖို့ လိုတယ်။ ထမင်း အချို့နဲ့ ဥ အချို့ ရှိပေမဲ့ ဆီ မရှိဘူး။ \"ကြက်သွန် ရှိသေးလား\" လို့ မေးတယ်။ \"ရှိတယ်၊ သေတ္တာထဲမှာ အချို့ ရှိတယ်။\"",
+    "use_en": "some and any mean 'an amount of'. Use some in positive sentences; use any in negatives and questions.",
+    "use_mm": "some နဲ့ any က ‘အနည်းငယ် / အတိုင်းအတာတစ်ခု’ လို့ ဆိုလိုတယ်။ some ကို အတည် ဝါကျမှာ၊ any ကို အငြင်းနဲ့ အမေးမှာ သုံးပါ။",
+    "timeline": "",
+    "form": [
+      { "subject": "positive", "form": "I have some water." },
+      { "subject": "negative", "form": "I don't have any water." },
+      { "subject": "question", "form": "Do you have any water?" },
+      { "subject": "offer/request", "form": "Would you like some tea? (some)" }
+    ],
+    "form_note_mm": "အတည် (positive) → some (I have some money)။ အငြင်း (negative) → any (I don't have any money)။ အမေး (question) → any (Do you have any money?)။  some / any ကို plural countable (some books) နဲ့ uncountable (some water) နှစ်မျိုးလုံးနဲ့ သုံးနိုင်တယ်။ ကမ်းလှမ်း/တောင်းဆိုရင်တော့ some — Would you like some tea?",
+    "trap_en": "some in positives, any in negatives/questions.  WRONG: I don't have some money. / Do you have some time?   RIGHT: I don't have any money. / Do you have any time?",
+    "trap_mm": "အတည်မှာ some၊ အငြင်း/အမေးမှာ any။  ✗ I don't have some money / Do you have some time?  →  ✓ I don't have any money / Do you have any time?",
+    "examples": [
+      { "en": "There is {v}some{/v} milk.", "mm": "နို့ အချို့ ရှိတယ်။" },
+      { "en": "There isn't {v}any{/v} sugar.", "mm": "သကြား မရှိဘူး။" },
+      { "en": "Do you have {v}any{/v} questions?", "mm": "မေးခွန်း ရှိသေးလား။" },
+      { "en": "I bought {v}some{/v} apples.", "mm": "ပန်းသီး အချို့ ဝယ်ခဲ့တယ်။" }
+    ],
+    "model_paragraph_en": "Let me check the kitchen. We have {v}some{/v} rice and {v}some{/v} vegetables. We don't have {v}any{/v} meat, and there isn't {v}any{/v} oil. \"Do we have {v}any{/v} eggs?\" Yes, there are {v}some{/v}. I will buy {v}some{/v} oil and {v}some{/v} fish later.",
+    "model_paragraph_mm": "မီးဖိုချောင် စစ်ကြည့်ရအောင်။ ထမင်း အချို့နဲ့ ဟင်းသီးဟင်းရွက် အချို့ ရှိတယ်။ အသား မရှိဘူး၊ ဆီလည်း မရှိဘူး။ \"ဥ ရှိသေးလား\" — ရှိတယ်၊ အချို့ ရှိတယ်။ နောက်မှ ဆီ အချို့နဲ့ ငါး အချို့ ဝယ်မယ်။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I have ___ money. (positive)",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ အချို့ ရှိတယ်။",
+      "options": ["any", "some", "a"],
+      "answers": ["some"],
+      "explain_mm": "အတည် ဝါကျ → some."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She doesn't have ___ friends here.",
+      "prompt_mm": "သူမ ဒီမှာ သူငယ်ချင်း မရှိဘူး။",
+      "options": ["some", "any", "a"],
+      "answers": ["any"],
+      "explain_mm": "အငြင်း → any."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Do you have ___ water? (question)",
+      "prompt_mm": "ရေ ရှိသေးလား။",
+      "answers": ["any"],
+      "explain_mm": "အမေး → any."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I don't have some time.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["I don't have any time", "i don't have any time."],
+      "explain_mm": "အငြင်းမှာ any — some မမှန်ဘူး။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  any  /  there  /  isn't  /  milk",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["There isn't any milk", "there isn't any milk."],
+      "explain_mm": "There isn't + any milk (အငြင်း)။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — what you have / don't have. Write 5–8 sentences about food or things, using some (positive) and any (negative/question).",
+      "prompt_mm": "အပိုင်း ၁ — ဘာရှိ / ဘာ မရှိ။ အစားအစာ/ပစ္စည်းတွေအကြောင်း some (အတည်) နဲ့ any (အငြင်း/အမေး) သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "I have {v}some{/v} rice. I don't have {v}any{/v} sugar. There are {v}some{/v} eggs in the box. Do you have {v}any{/v} tea? We don't have {v}any{/v} milk.",
+      "explain_mm": "အတည် → some၊ အငြင်း/အမေး → any။",
+      "grading": {
+        "grammar_point": "some / any",
+        "rule": "some in positive statements; any in negatives and questions. Both with plural countable and uncountable nouns.",
+        "must_check": [
+          "some in positives, any in negatives/questions",
+          "Used with plural or uncountable nouns",
+          "Mix of positive and negative/question",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "some in negatives (don't have some)",
+          "any in plain positives",
+          "Using a/an instead"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — check the fridge. Write a short paragraph (4–6 sentences) about what is and isn't in your kitchen, using some and any.",
+      "prompt_mm": "အပိုင်း ၂ — ရေခဲသေတ္တာ စစ်ပါ။ မီးဖိုချောင်မှာ ဘာရှိ ဘာ မရှိဆိုတာ some နဲ့ any သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "There is {v}some{/v} rice and {v}some{/v} oil. There isn't {v}any{/v} meat. We have {v}some{/v} vegetables but we don't have {v}any{/v} fruit. I need to buy {v}some{/v} eggs.",
+      "explain_mm": "some/any ကို အတည်/အငြင်း အလိုက် မှန်အောင် သုံးပါ။",
+      "grading": {
+        "grammar_point": "some / any",
+        "rule": "Use some and any correctly across positive and negative statements.",
+        "must_check": [
+          "some in positives, any in negatives",
+          "Correct noun types",
+          "Clear has/hasn't picture",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "some/any swapped",
+          "a/an misuse",
+          "Quantity confusion"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}
