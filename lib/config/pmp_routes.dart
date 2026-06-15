@@ -25,6 +25,10 @@ import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_reco
 import 'package:speakcraft/screens/daily_speaking/guided/guided_lesson_list_page.dart';
 import 'package:speakcraft/screens/daily_speaking/guided/guided_lesson_page.dart';
 import 'package:speakcraft/screens/daily_speaking/guided/guided_record_page.dart';
+import 'package:speakcraft/model/writing/writing_unit.dart';
+import 'package:speakcraft/model/writing/writing_lexicon.dart';
+import 'package:speakcraft/screens/writing/writing_teach_page.dart';
+import 'package:speakcraft/screens/writing/writing_practice_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_list.dart';
@@ -97,6 +101,10 @@ class PmpRoutes {
   static const dailySpeakingFeedback = '/daily_speaking/feedback';
   static const dailySpeakingReview = '/daily_speaking/review';
   static const dailySpeakingHistory = '/daily_speaking/history';
+
+  // Writing Practice module (Phase-0 prototype) — see WRITING_FEATURE_PLAN.md
+  static const writingTeach = '/writing/teach';
+  static const writingPractice = '/writing/practice';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -371,6 +379,17 @@ class PmpRoutes {
         );
       case dailySpeakingHistory:
         return _getRoute(const DailySpeakingHistoryPage(), settings);
+      case writingTeach:
+        return _getRoute(const WritingTeachPage(), settings);
+      case writingPractice:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          WritingPracticePage(
+            unit: args['unit'] as WritingUnit,
+            toolkit: args['toolkit'] as ResolvedToolkit?,
+          ),
+          settings,
+        );
       case htmlPreview:
         final args = settings.arguments as Map<String, dynamic>;
         final assetPath = args['assetPath'] as String?;

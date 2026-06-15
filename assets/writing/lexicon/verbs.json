@@ -1,0 +1,173 @@
+[
+  {
+    "id": "v_live",
+    "mm": "နေထိုင်သည်",
+    "forms": { "base": "live", "third": "lives", "past": "lived", "past_participle": "lived", "ing": "living" },
+    "examples": [
+      { "en": "She {v}lives{/v} in Yangon.", "mm": "သူမ ရန်ကုန်မှာ နေတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1"]
+  },
+  {
+    "id": "v_work",
+    "mm": "အလုပ်လုပ်သည်",
+    "forms": { "base": "work", "third": "works", "past": "worked", "past_participle": "worked", "ing": "working" },
+    "examples": [
+      { "en": "He {v}works{/v} at a hospital.", "mm": "သူ ဆေးရုံမှာ အလုပ်လုပ်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1"]
+  },
+  {
+    "id": "v_go",
+    "mm": "သွားသည်",
+    "forms": { "base": "go", "third": "goes", "past": "went", "past_participle": "gone", "ing": "going" },
+    "examples": [
+      { "en": "He {v}goes{/v} to school by bus.", "mm": "သူ ကျောင်းကို ဘတ်စ်ကားနဲ့ သွားတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_study",
+    "mm": "လေ့လာသည်",
+    "forms": { "base": "study", "third": "studies", "past": "studied", "past_participle": "studied", "ing": "studying" },
+    "examples": [
+      { "en": "She {v}studies{/v} English {t}every day{/t}.", "mm": "သူမ နေ့တိုင်း အင်္ဂလိပ်စာ လေ့လာတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "spelling-y"]
+  },
+  {
+    "id": "v_watch",
+    "mm": "ကြည့်သည်",
+    "forms": { "base": "watch", "third": "watches", "past": "watched", "past_participle": "watched", "ing": "watching" },
+    "examples": [
+      { "en": "He {v}watches{/v} TV {t}at night{/t}.", "mm": "သူ ညဘက် TV ကြည့်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "spelling-es"]
+  },
+  {
+    "id": "v_have",
+    "mm": "ရှိသည် / ပိုင်ဆိုင်သည်",
+    "forms": { "base": "have", "third": "has", "past": "had", "past_participle": "had", "ing": "having" },
+    "examples": [
+      { "en": "She {v}has{/v} two children.", "mm": "သူမ ကလေး နှစ်ယောက် ရှိတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_eat",
+    "mm": "စားသည်",
+    "forms": { "base": "eat", "third": "eats", "past": "ate", "past_participle": "eaten", "ing": "eating" },
+    "examples": [
+      { "en": "He {v}eats{/v} rice {t}every morning{/t}.", "mm": "သူ မနက်တိုင်း ထမင်းစားတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_drink",
+    "mm": "သောက်သည်",
+    "forms": { "base": "drink", "third": "drinks", "past": "drank", "past_participle": "drunk", "ing": "drinking" },
+    "examples": [
+      { "en": "She {v}drinks{/v} coffee {t}in the morning{/t}.", "mm": "သူမ မနက်ပိုင်း ကော်ဖီ သောက်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_wake_up",
+    "mm": "အိပ်ရာထသည်",
+    "forms": { "base": "wake up", "third": "wakes up", "past": "woke up", "past_participle": "woken up", "ing": "waking up" },
+    "examples": [
+      { "en": "He {v}wakes up{/v} at six o'clock.", "mm": "သူ ၆ နာရီမှာ အိပ်ရာထတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_sleep",
+    "mm": "အိပ်သည်",
+    "forms": { "base": "sleep", "third": "sleeps", "past": "slept", "past_participle": "slept", "ing": "sleeping" },
+    "examples": [
+      { "en": "She {v}sleeps{/v} for eight hours.", "mm": "သူမ ၈ နာရီ အိပ်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_play",
+    "mm": "ကစားသည် / တီးသည်",
+    "forms": { "base": "play", "third": "plays", "past": "played", "past_participle": "played", "ing": "playing" },
+    "examples": [
+      { "en": "He {v}plays{/v} football {t}on Sundays{/t}.", "mm": "သူ တနင်္ဂနွေနေ့တိုင်း ဘောလုံး ကစားတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1"]
+  },
+  {
+    "id": "v_read",
+    "mm": "ဖတ်သည်",
+    "forms": { "base": "read", "third": "reads", "past": "read", "past_participle": "read", "ing": "reading" },
+    "examples": [
+      { "en": "She {v}reads{/v} a book before bed.", "mm": "သူမ အိပ်ခါနီး စာအုပ် ဖတ်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1"]
+  },
+  {
+    "id": "v_speak",
+    "mm": "ပြောသည်",
+    "forms": { "base": "speak", "third": "speaks", "past": "spoke", "past_participle": "spoken", "ing": "speaking" },
+    "examples": [
+      { "en": "He {v}speaks{/v} three languages.", "mm": "သူ ဘာသာစကား သုံးမျိုး ပြောတတ်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_like",
+    "mm": "ကြိုက်သည်",
+    "forms": { "base": "like", "third": "likes", "past": "liked", "past_participle": "liked", "ing": "liking" },
+    "examples": [
+      { "en": "She {v}likes{/v} tea.", "mm": "သူမ လက်ဖက်ရည် ကြိုက်တယ်။" }
+    ],
+    "tags": ["feeling", "a1"]
+  },
+  {
+    "id": "v_want",
+    "mm": "လိုချင်သည်",
+    "forms": { "base": "want", "third": "wants", "past": "wanted", "past_participle": "wanted", "ing": "wanting" },
+    "examples": [
+      { "en": "He {v}wants{/v} a new job.", "mm": "သူ အလုပ်အသစ် တစ်ခု လိုချင်တယ်။" }
+    ],
+    "tags": ["feeling", "a1"]
+  },
+  {
+    "id": "v_get_up",
+    "mm": "(အိပ်ရာက) ထသည်",
+    "forms": { "base": "get up", "third": "gets up", "past": "got up", "past_participle": "got up", "ing": "getting up" },
+    "examples": [
+      { "en": "She {v}gets up{/v} early.", "mm": "သူမ စောစော ထတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_teach",
+    "mm": "သင်ကြားသည်",
+    "forms": { "base": "teach", "third": "teaches", "past": "taught", "past_participle": "taught", "ing": "teaching" },
+    "examples": [
+      { "en": "He {v}teaches{/v} mathematics.", "mm": "သူ သင်္ချာ သင်ပေးတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "spelling-es", "irregular"]
+  },
+  {
+    "id": "v_cook",
+    "mm": "ချက်ပြုတ်သည်",
+    "forms": { "base": "cook", "third": "cooks", "past": "cooked", "past_participle": "cooked", "ing": "cooking" },
+    "examples": [
+      { "en": "She {v}cooks{/v} dinner {t}every evening{/t}.", "mm": "သူမ ညနေတိုင်း ညစာ ချက်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1"]
+  },
+  {
+    "id": "v_start",
+    "mm": "စတင်သည်",
+    "forms": { "base": "start", "third": "starts", "past": "started", "past_participle": "started", "ing": "starting" },
+    "examples": [
+      { "en": "Work {v}starts{/v} at nine.", "mm": "အလုပ် ၉ နာရီမှာ စတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1"]
+  }
+]

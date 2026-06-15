@@ -1,0 +1,143 @@
+[
+  {
+    "id": "t_always",
+    "en": "always",
+    "mm": "အမြဲတမ်း",
+    "position": "before_main_verb",
+    "frequency": 100,
+    "examples": [
+      { "en": "I {t}always{/t} {v}drink{/v} tea in the morning.", "mm": "ကျွန်တော် မနက်တိုင်း လက်ဖက်ရည် အမြဲသောက်တယ်။" }
+    ]
+  },
+  {
+    "id": "t_usually",
+    "en": "usually",
+    "mm": "ပုံမှန်အားဖြင့်",
+    "position": "before_main_verb",
+    "frequency": 90,
+    "examples": [
+      { "en": "She {t}usually{/t} {v}walks{/v} to work.", "mm": "သူမ ပုံမှန် အလုပ်ကို လမ်းလျှောက်သွားတယ်။" }
+    ]
+  },
+  {
+    "id": "t_often",
+    "en": "often",
+    "mm": "မကြာခဏ",
+    "position": "before_main_verb",
+    "frequency": 70,
+    "examples": [
+      { "en": "We {t}often{/t} {v}eat{/v} out.", "mm": "ကျွန်တော်တို့ မကြာခဏ အပြင်မှာ စားကြတယ်။" }
+    ]
+  },
+  {
+    "id": "t_sometimes",
+    "en": "sometimes",
+    "mm": "တစ်ခါတစ်ရံ",
+    "position": "before_main_verb",
+    "frequency": 50,
+    "examples": [
+      { "en": "He {t}sometimes{/t} {v}works{/v} late.", "mm": "သူ တစ်ခါတစ်ရံ နောက်ကျ အလုပ်လုပ်တယ်။" }
+    ]
+  },
+  {
+    "id": "t_rarely",
+    "en": "rarely",
+    "mm": "ရှားရှားပါးပါး",
+    "position": "before_main_verb",
+    "frequency": 10,
+    "examples": [
+      { "en": "She {t}rarely{/t} {v}drinks{/v} coffee.", "mm": "သူမ ကော်ဖီ ရှားရှားပါးပါးပဲ သောက်တယ်။" }
+    ]
+  },
+  {
+    "id": "t_never",
+    "en": "never",
+    "mm": "ဘယ်တော့မှ မ-",
+    "position": "before_main_verb",
+    "frequency": 0,
+    "examples": [
+      { "en": "I {t}never{/t} {v}eat{/v} meat.", "mm": "ကျွန်တော် အသား ဘယ်တော့မှ မစားဘူး။" }
+    ]
+  },
+  {
+    "id": "t_every_day",
+    "en": "every day",
+    "mm": "နေ့တိုင်း",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "I {v}study{/v} English {t}every day{/t}.", "mm": "ကျွန်တော် နေ့တိုင်း အင်္ဂလိပ်စာ လေ့လာတယ်။" }
+    ]
+  },
+  {
+    "id": "t_once_a_week",
+    "en": "once a week",
+    "mm": "တစ်ပတ်တစ်ကြိမ်",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "She {v}visits{/v} her parents {t}once a week{/t}.", "mm": "သူမ မိဘတွေဆီ တစ်ပတ်တစ်ကြိမ် သွားတယ်။" }
+    ]
+  },
+  {
+    "id": "t_on_mondays",
+    "en": "on Mondays",
+    "mm": "တနင်္လာနေ့တိုင်း",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "He {v}plays{/v} football {t}on Mondays{/t}.", "mm": "သူ တနင်္လာနေ့တိုင်း ဘောလုံး ကစားတယ်။" }
+    ]
+  },
+  {
+    "id": "t_in_the_morning",
+    "en": "in the morning",
+    "mm": "မနက်ပိုင်းမှာ",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "I {v}drink{/v} coffee {t}in the morning{/t}.", "mm": "ကျွန်တော် မနက်ပိုင်း ကော်ဖီ သောက်တယ်။" }
+    ]
+  },
+  {
+    "id": "t_every_morning",
+    "en": "every morning",
+    "mm": "မနက်တိုင်း",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "He {v}gets up{/v} early {t}every morning{/t}.", "mm": "သူ မနက်တိုင်း စောစော အိပ်ရာထတယ်။" }
+    ]
+  },
+  {
+    "id": "t_in_the_evening",
+    "en": "in the evening",
+    "mm": "ညနေပိုင်းမှာ",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "She {v}cooks{/v} dinner {t}in the evening{/t}.", "mm": "သူမ ညနေပိုင်း ညစာ ချက်တယ်။" }
+    ]
+  },
+  {
+    "id": "t_at_night",
+    "en": "at night",
+    "mm": "ညဘက်မှာ",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "He {v}watches{/v} TV {t}at night{/t}.", "mm": "သူ ညဘက် TV ကြည့်တယ်။" }
+    ]
+  },
+  {
+    "id": "t_on_weekends",
+    "en": "on weekends",
+    "mm": "စနေ၊ တနင်္ဂနွေနေ့များတွင်",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "We {v}relax{/v} {t}on weekends{/t}.", "mm": "ကျွန်တော်တို့ စနေတနင်္ဂနွေမှာ အနားယူကြတယ်။" }
+    ]
+  },
+  {
+    "id": "t_twice_a_week",
+    "en": "twice a week",
+    "mm": "တစ်ပတ်နှစ်ကြိမ်",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "She {v}goes{/v} to the gym {t}twice a week{/t}.", "mm": "သူမ တစ်ပတ်နှစ်ကြိမ် အားကစားခန်း သွားတယ်။" }
+    ]
+  }
+]
