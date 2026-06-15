@@ -13,8 +13,8 @@
   { "id": "l1_present_continuous", "level": 1, "section_id": "1.2", "section": "Present", "order": 6, "title": "Present continuous (I am doing)", "subtitle_mm": "အခု ဖြစ်နေဆဲ — am / is / are + -ing", "asset": "assets/writing/units/l1_present_continuous.json", "published": true },
   { "id": "l1_present_simple_vs_continuous", "level": 1, "section_id": "1.2", "section": "Present", "order": 7, "title": "Present simple vs present continuous", "published": false },
 
-  { "id": "l1_past_was_were", "level": 1, "section_id": "1.3", "section": "Past", "order": 1, "title": "Past simple: was / were", "published": false },
-  { "id": "l1_past_regular", "level": 1, "section_id": "1.3", "section": "Past", "order": 2, "title": "Past simple: regular verbs (-ed)", "published": false },
+  { "id": "l1_past_was_were", "level": 1, "section_id": "1.3", "section": "Past", "order": 1, "title": "Past simple: was / were", "subtitle_mm": "အတိတ် — was / were", "asset": "assets/writing/units/l1_past_was_were.json", "published": true },
+  { "id": "l1_past_regular", "level": 1, "section_id": "1.3", "section": "Past", "order": 2, "title": "Past simple: regular verbs (-ed)", "subtitle_mm": "အတိတ် — ကြိယာ ပုံမှန် (-ed)", "asset": "assets/writing/units/l1_past_regular.json", "published": true },
   { "id": "l1_past_irregular", "level": 1, "section_id": "1.3", "section": "Past", "order": 3, "title": "Past simple: irregular verbs", "published": false },
   { "id": "l1_past_neg_questions", "level": 1, "section_id": "1.3", "section": "Past", "order": 4, "title": "Past simple: negatives & questions", "published": false },
 

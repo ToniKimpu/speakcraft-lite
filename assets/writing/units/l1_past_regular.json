@@ -1,0 +1,151 @@
+{
+  "id": "l1_past_regular",
+  "level": 1,
+  "section": "Past",
+  "order": 2,
+  "type": "grammar_unit",
+  "title": "Past simple: regular verbs (-ed)",
+  "subtitle_mm": "အတိတ် — ကြိယာ ပုံမှန် (-ed)",
+  "teach": {
+    "situation_en": "{t}Yesterday{/t} was a busy day. I {v}worked{/v} until five. Then I {v}cooked{/v} dinner and {v}watched{/v} a film. My sister {v}studied{/v} for her exam, and my parents {v}visited{/v} our neighbours.",
+    "situation_mm": "မနေ့က အလုပ်များတဲ့ နေ့ဖြစ်ခဲ့တယ်။ ကျွန်တော် ၅ နာရီအထိ အလုပ်လုပ်ခဲ့တယ်။ ပြီးတော့ ညစာ ချက်ပြီး ရုပ်ရှင် ကြည့်ခဲ့တယ်။ အစ်မက စာမေးပွဲအတွက် စာကျက်ခဲ့ပြီး မိဘတွေက အိမ်နီးနားချင်းတွေဆီ သွားလည်ခဲ့တယ်။",
+    "use_en": "We use the past simple for finished actions in the past. Regular verbs add -ed (worked, played, cooked).",
+    "use_mm": "ပြီးဆုံးသွားပြီဖြစ်တဲ့ အတိတ်လုပ်ဆောင်မှုတွေအတွက် past simple ကို သုံးပါတယ်။ ကြိယာ ပုံမှန်တွေမှာ -ed ထည့်ပါတယ် (worked, played, cooked)။",
+    "timeline": "◀——●———————   (finished, before now)",
+    "form": [
+      { "subject": "all subjects", "form": "verb + -ed" },
+      { "subject": "I / he / she / they", "form": "worked" },
+      { "subject": "spelling: -e", "form": "live → lived" },
+      { "subject": "spelling: consonant + y", "form": "study → studied" }
+    ],
+    "form_note_mm": "ကြိယာ ပုံမှန်တွေအတွက် အတိတ်မှာ ကြိယာနောက် -ed ထည့်ပါ — subject အားလုံးအတွက် ပုံစံတူ (I worked, She worked, They worked)။  စာလုံးပေါင်း — -e နဲ့ဆုံးရင် -d ပဲ (live → lived); ဗျည်း + y ဆို y ကို i ပြောင်းပြီး -ed (study → studied); အများစုက -ed (work → worked)။",
+    "trap_en": "Don't forget -ed for the past.  WRONG: Yesterday I work late.   RIGHT: Yesterday I worked late.",
+    "trap_mm": "မြန်မာစာမှာ အတိတ်ကို သီးခြား ပုံစံ မပြောင်းလို့ -ed ကို မေ့တတ်တယ်။  ✗ Yesterday I work late  →  ✓ Yesterday I worked late.",
+    "examples": [
+      { "en": "She {v}cooked{/v} fish {t}last night{/t}.", "mm": "သူမ မနေ့ည က ငါး ချက်ခဲ့တယ်။" },
+      { "en": "We {v}watched{/v} a film.", "mm": "ကျွန်တော်တို့ ရုပ်ရှင် ကြည့်ခဲ့တယ်။" },
+      { "en": "They {v}played{/v} football.", "mm": "သူတို့ ဘောလုံး ကစားခဲ့တယ်။" },
+      { "en": "He {v}studied{/v} all day.", "mm": "သူ တစ်နေ့လုံး စာကျက်ခဲ့တယ်။" }
+    ],
+    "model_paragraph_en": "{t}Last week{/t} I {v}visited{/v} my grandmother. I {v}cleaned{/v} her garden and {v}cooked{/v} lunch. In the afternoon we {v}watched{/v} old films and {v}talked{/v} about the past. She {v}liked{/v} my stories. I {v}stayed{/v} until the evening.",
+    "model_paragraph_mm": "ပြီးခဲ့တဲ့အပတ်က ကျွန်တော် အဖွားဆီ သွားလည်ခဲ့တယ်။ သူ့ဥယျာဉ်ကို ရှင်းပြီး နေ့လယ်စာ ချက်ပေးခဲ့တယ်။ နေ့လယ်ပိုင်းမှာ ရုပ်ရှင်ဟောင်းတွေ ကြည့်ပြီး အတိတ်အကြောင်း စကားပြောခဲ့တယ်။ ကျွန်တော့်ပုံပြင်တွေကို သူ ကြိုက်ခဲ့တယ်။ ညနေအထိ နေခဲ့တယ်။"
+  },
+  "toolkit": {
+    "verbs": [
+      "v_work", "v_live", "v_study", "v_play", "v_cook",
+      "v_watch", "v_want", "v_like", "v_start"
+    ],
+    "time_words": ["t_yesterday", "t_last_night", "t_last_week"],
+    "verb_form": "past",
+    "verb_examples": {
+      "v_work": { "en": "I {v}worked{/v} late {t}yesterday{/t}.", "mm": "ကျွန်တော် မနေ့က နောက်ကျ အလုပ်လုပ်ခဲ့တယ်။" },
+      "v_live": { "en": "They {v}lived{/v} in Mandalay.", "mm": "သူတို့ မန္တလေးမှာ နေခဲ့တယ်။" },
+      "v_study": { "en": "She {v}studied{/v} English.", "mm": "သူမ အင်္ဂလိပ်စာ လေ့လာခဲ့တယ်။" },
+      "v_play": { "en": "We {v}played{/v} football.", "mm": "ကျွန်တော်တို့ ဘောလုံး ကစားခဲ့တယ်။" },
+      "v_cook": { "en": "He {v}cooked{/v} dinner.", "mm": "သူ ညစာ ချက်ခဲ့တယ်။" },
+      "v_watch": { "en": "I {v}watched{/v} a film {t}last night{/t}.", "mm": "ကျွန်တော် မနေ့ည က ရုပ်ရှင် ကြည့်ခဲ့တယ်။" },
+      "v_want": { "en": "She {v}wanted{/v} a new phone.", "mm": "သူမ ဖုန်းအသစ် လိုချင်ခဲ့တယ်။" },
+      "v_like": { "en": "They {v}liked{/v} the food.", "mm": "သူတို့ အစားအစာ ကြိုက်ခဲ့တယ်။" },
+      "v_start": { "en": "The class {v}started{/v} at nine.", "mm": "အတန်း ၉ နာရီမှာ စခဲ့တယ်။" }
+    },
+    "time_word_examples": {
+      "t_yesterday": { "en": "I {v}cooked{/v} fish {t}yesterday{/t}.", "mm": "ကျွန်တော် မနေ့က ငါး ချက်ခဲ့တယ်။" },
+      "t_last_night": { "en": "We {v}watched{/v} TV {t}last night{/t}.", "mm": "ကျွန်တော်တို့ မနေ့ည က TV ကြည့်ခဲ့တယ်။" },
+      "t_last_week": { "en": "She {v}started{/v} a job {t}last week{/t}.", "mm": "သူမ ပြီးခဲ့တဲ့အပတ်က အလုပ် စခဲ့တယ်။" }
+    }
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Yesterday she ___ dinner.",
+      "prompt_mm": "မနေ့က သူမ ညစာ ချက်ခဲ့တယ်။",
+      "options": ["cook", "cooked", "cooks"],
+      "answers": ["cooked"],
+      "explain_mm": "အတိတ် (yesterday) → cook + ed = cooked."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ football last week.",
+      "prompt_mm": "သူတို့ ပြီးခဲ့တဲ့အပတ်က ဘောလုံး ကစားခဲ့တယ်။",
+      "options": ["play", "played", "playing"],
+      "answers": ["played"],
+      "explain_mm": "play → played (အတိတ်)။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ (study) all day yesterday.",
+      "prompt_mm": "သူ မနေ့က တစ်နေ့လုံး စာကျက်ခဲ့တယ်။ ( study ကို သုံးပါ )",
+      "answers": ["studied"],
+      "explain_mm": "ဗျည်း + y → y ကို i ပြောင်းပြီး -ed → studied."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Yesterday I work late.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["Yesterday I worked late", "yesterday i worked late."],
+      "explain_mm": "အတိတ်မို့ -ed လိုတယ် — work → worked."
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  watched  /  we  /  a film",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["We watched a film", "we watched a film."],
+      "explain_mm": "Subject + ကြိယာ-ed + ... → We watched a film."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — about YESTERDAY. Write 5–8 sentences about what you did yesterday, using regular -ed verbs (worked, cooked, watched, studied …).",
+      "prompt_mm": "အပိုင်း ၁ — မနေ့က အကြောင်း။ မနေ့က ဘာတွေ လုပ်ခဲ့လဲဆိုတာ ပုံမှန် -ed ကြိယာတွေ (worked, cooked, watched, studied …) သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "model": "Yesterday I {v}worked{/v} in the morning. I {v}cooked{/v} lunch at home. I {v}cleaned{/v} my room. In the evening I {v}watched{/v} a film. I {v}talked{/v} to my friend on the phone.",
+      "explain_mm": "ကြိယာတိုင်းမှာ -ed ထည့်ပါ။ subject ဘယ်လိုဖြစ်ဖြစ် ပုံစံတူပါ (-s မလိုတော့ဘူး)။",
+      "grading": {
+        "grammar_point": "Past simple: regular verbs (-ed)",
+        "rule": "Finished past actions. Regular verbs add -ed; the form is the same for all subjects.",
+        "must_check": [
+          "Every past verb ends in -ed",
+          "Correct -ed spelling (lived, studied, stopped)",
+          "Stays in the past (a finished time)",
+          "5–8 sentences, at least 3 different verbs"
+        ],
+        "common_mm_errors": [
+          "Forgetting -ed (Yesterday I work)",
+          "Adding -s instead of -ed",
+          "Wrong spelling (studyed, livd)"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a past day. Write a short paragraph (4–6 sentences) about one day last week, using regular past verbs.",
+      "prompt_mm": "အပိုင်း ၂ — အတိတ်က နေ့တစ်နေ့။ ပြီးခဲ့တဲ့အပတ်က နေ့တစ်နေ့အကြောင်း ပုံမှန်အတိတ်ကြိယာတွေသုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "{t}Last week{/t} I {v}visited{/v} my friend. We {v}cooked{/v} a big lunch and {v}talked{/v} for hours. In the afternoon we {v}walked{/v} in the park. She {v}showed{/v} me her photos. I {v}enjoyed{/v} the day.",
+      "explain_mm": "စာပိုဒ်တစ်ခုလုံး အတိတ် -ed နဲ့ ရေးပါ။ ပုံမှန်ကြိယာတိုင်း -ed ပါပါစေ။",
+      "grading": {
+        "grammar_point": "Past simple: regular verbs (-ed)",
+        "rule": "A short past narrative using regular -ed verbs throughout.",
+        "must_check": [
+          "All regular verbs take -ed",
+          "Whole paragraph stays in the past",
+          "Correct -ed spelling",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Switching to present mid-paragraph",
+          "Missing -ed on some verbs",
+          "Spelling errors (-yed/-d rules)"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

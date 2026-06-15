@@ -139,5 +139,50 @@
     "examples": [
       { "en": "She {v}goes{/v} to the gym {t}twice a week{/t}.", "mm": "သူမ တစ်ပတ်နှစ်ကြိမ် အားကစားခန်း သွားတယ်။" }
     ]
+  },
+  {
+    "id": "t_yesterday",
+    "en": "yesterday",
+    "mm": "မနေ့က",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "I {v}went{/v} to the market {t}yesterday{/t}.", "mm": "ကျွန်တော် မနေ့က ဈေး သွားခဲ့တယ်။" }
+    ]
+  },
+  {
+    "id": "t_last_night",
+    "en": "last night",
+    "mm": "မနေ့ည က",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "She {v}cooked{/v} fish {t}last night{/t}.", "mm": "သူမ မနေ့ည က ငါး ချက်ခဲ့တယ်။" }
+    ]
+  },
+  {
+    "id": "t_last_week",
+    "en": "last week",
+    "mm": "ပြီးခဲ့တဲ့ အပတ်က",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "We {v}visited{/v} Bagan {t}last week{/t}.", "mm": "ကျွန်တော်တို့ ပြီးခဲ့တဲ့အပတ်က ပုဂံ သွားလည်ခဲ့တယ်။" }
+    ]
+  },
+  {
+    "id": "t_last_year",
+    "en": "last year",
+    "mm": "မနှစ်က",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "He {v}started{/v} work {t}last year{/t}.", "mm": "သူ မနှစ်က အလုပ် စတင်ခဲ့တယ်။" }
+    ]
+  },
+  {
+    "id": "t_two_days_ago",
+    "en": "two days ago",
+    "mm": "လွန်ခဲ့တဲ့ ၂ ရက်က",
+    "position": "end_of_sentence",
+    "examples": [
+      { "en": "They {v}arrived{/v} {t}two days ago{/t}.", "mm": "သူတို့ လွန်ခဲ့တဲ့ ၂ ရက်က ရောက်လာခဲ့တယ်။" }
+    ]
   }
 ]
