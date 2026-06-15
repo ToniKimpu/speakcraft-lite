@@ -233,7 +233,9 @@ class _TeachBody extends StatelessWidget {
                     _Section(
                       icon: Icons.handyman_outlined,
                       label: 'ဒီ verbs တွေနှင့် လေ့ကျင့်ကြည့်ပါ',
-                      child: _VerbBank(verbs: toolkit.verbs),
+                      child: _VerbBank(
+                          verbs: toolkit.verbs,
+                          formKey: unit.toolkit.verbForm),
                     ),
 
                   // Bespoke teach blocks (e.g. the frequency scale) sit in the
@@ -483,8 +485,9 @@ class _ExampleRow extends StatelessWidget {
 /// The verb toolkit — each row collapses to `base → third (+s)` + gloss, and
 /// expands to a bilingual example. Reinforces the -s by showing both forms.
 class _VerbBank extends StatelessWidget {
-  const _VerbBank({required this.verbs});
+  const _VerbBank({required this.verbs, required this.formKey});
   final List<LexiconVerb> verbs;
+  final String formKey;
 
   @override
   Widget build(BuildContext context) {
@@ -497,7 +500,7 @@ class _VerbBank extends StatelessWidget {
             if (i > 0)
               Divider(
                   height: 1, color: cs.outlineVariant.withValues(alpha: 0.5)),
-            _VerbTile(verb: verbs[i]),
+            _VerbTile(verb: verbs[i], formKey: formKey),
           ],
         ],
       ),
@@ -506,8 +509,9 @@ class _VerbBank extends StatelessWidget {
 }
 
 class _VerbTile extends StatelessWidget {
-  const _VerbTile({required this.verb});
+  const _VerbTile({required this.verb, required this.formKey});
   final LexiconVerb verb;
+  final String formKey;
 
   @override
   Widget build(BuildContext context) {
@@ -526,7 +530,7 @@ class _VerbTile extends StatelessWidget {
                 text: '  →  ',
                 style: TextStyle(color: cs.onSurfaceVariant)),
             TextSpan(
-                text: verb.third,
+                text: verb.secondForm(formKey),
                 style: PmpTextStyles.body1Semi.copyWith(
                     color: writingVerbColor(Theme.of(context).brightness))),
           ],

@@ -68,6 +68,7 @@ class Toolkit {
     required this.verbIds,
     required this.timeWordIds,
     required this.timeWordsNoteMm,
+    required this.verbForm,
   });
 
   final List<String> verbIds;
@@ -76,6 +77,11 @@ class Toolkit {
   /// Optional Burmese "how to use" note rendered under the frequency / time
   /// words (e.g. the adverb-position rule). Empty when a unit needs none.
   final String timeWordsNoteMm;
+
+  /// Which verb form the bank shows next to the base — `third` (default, present
+  /// simple), `ing` (present continuous), `past` (past simple)… Lets each
+  /// tense-unit reuse the same lexicon entry and pull the form it needs.
+  final String verbForm;
 
   bool get isEmpty => verbIds.isEmpty && timeWordIds.isEmpty;
 
@@ -87,6 +93,7 @@ class Toolkit {
             .map((e) => e.toString())
             .toList(growable: false),
         timeWordsNoteMm: json['time_words_note_mm'] as String? ?? '',
+        verbForm: json['verb_form'] as String? ?? 'third',
       );
 }
 

@@ -52,6 +52,15 @@ class LexiconVerb {
 
   String get base => forms['base'] ?? id;
   String get third => forms['third'] ?? base;
+  String get ing => forms['ing'] ?? '${base}ing';
+
+  /// The "second form" a unit's verb bank shows next to the base — `third` for
+  /// present simple, `ing` for present continuous, `past` for past simple, etc.
+  /// Falls back to the base form when the key is missing.
+  String secondForm(String key) {
+    final v = forms[key];
+    return (v != null && v.isNotEmpty) ? v : base;
+  }
 
   factory LexiconVerb.fromJson(Map<String, dynamic> json) => LexiconVerb(
         id: json['id'] as String,

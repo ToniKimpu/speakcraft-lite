@@ -157,6 +157,7 @@ class _WritingPracticePageState extends State<WritingPracticePage> {
                   exercise: _current,
                   state: _state,
                   toolkit: widget.toolkit,
+                  verbForm: widget.unit.toolkit.verbForm,
                   onSelect: (opt) => setState(() => _state.selected = opt),
                   onChanged: () => setState(() {}),
                   onAddLine: _addLine,
@@ -204,6 +205,7 @@ class _ExerciseView extends StatelessWidget {
     required this.exercise,
     required this.state,
     required this.toolkit,
+    required this.verbForm,
     required this.onSelect,
     required this.onChanged,
     required this.onAddLine,
@@ -213,6 +215,7 @@ class _ExerciseView extends StatelessWidget {
   final WritingExercise exercise;
   final _ExState state;
   final ResolvedToolkit? toolkit;
+  final String verbForm;
   final ValueChanged<String> onSelect;
   final VoidCallback onChanged;
   final VoidCallback onAddLine;
@@ -267,7 +270,7 @@ class _ExerciseView extends StatelessWidget {
             toolkit != null &&
             !toolkit!.isEmpty &&
             !state.checked) ...[
-          _ToolkitReminder(toolkit: toolkit!),
+          _ToolkitReminder(toolkit: toolkit!, formKey: verbForm),
           const SizedBox(height: 14),
         ],
 
@@ -697,8 +700,9 @@ class _ScanCallout extends StatelessWidget {
 /// A collapsible reminder of the unit's toolkit, shown while writing a scan task
 /// so the learner can pull verbs / time words without flipping back.
 class _ToolkitReminder extends StatelessWidget {
-  const _ToolkitReminder({required this.toolkit});
+  const _ToolkitReminder({required this.toolkit, required this.formKey});
   final ResolvedToolkit toolkit;
+  final String formKey;
 
   @override
   Widget build(BuildContext context) {
@@ -721,7 +725,10 @@ class _ToolkitReminder extends StatelessWidget {
           children: [
             if (toolkit.verbs.isNotEmpty) ...[
               _ChipWrap(
-                labels: [for (final v in toolkit.verbs) '${v.base} / ${v.third}'],
+                labels: [
+                  for (final v in toolkit.verbs)
+                    '${v.base} / ${v.secondForm(formKey)}'
+                ],
                 color: writingVerbColor(Theme.of(context).brightness),
               ),
             ],
