@@ -1,0 +1,150 @@
+{
+  "id": "l1_past_irregular",
+  "level": 1,
+  "section": "Past",
+  "order": 3,
+  "type": "grammar_unit",
+  "title": "Past simple: irregular verbs",
+  "subtitle_mm": "အတိတ် — ကြိယာ ပုံမမှန်",
+  "teach": {
+    "situation_en": "{t}Yesterday{/t} was a long day. I {v}woke up{/v} early and {v}had{/v} a quick breakfast. I {v}went{/v} to work by bus. At lunch I {v}ate{/v} rice and {v}drank{/v} tea. In the evening I {v}read{/v} a book and {v}slept{/v} early.",
+    "situation_mm": "မနေ့က နေ့ရှည်ကြီးဖြစ်ခဲ့တယ်။ ကျွန်တော် စောစော အိပ်ရာထပြီး မနက်စာ အမြန် စားခဲ့တယ်။ အလုပ်ကို ဘတ်စ်ကားနဲ့ သွားခဲ့တယ်။ နေ့လယ်စာမှာ ထမင်း စားပြီး လက်ဖက်ရည် သောက်ခဲ့တယ်။ ညဘက် စာအုပ် ဖတ်ပြီး စောစော အိပ်ခဲ့တယ်။",
+    "use_en": "Many common verbs do NOT take -ed in the past. They change form — go → went, eat → ate, have → had. You must learn each one.",
+    "use_mm": "အသုံးများတဲ့ ကြိယာ အများကြီးက အတိတ်မှာ -ed မထည့်ဘူး။ ပုံစံ ပြောင်းသွားတယ် — go → went, eat → ate, have → had။ တစ်လုံးချင်း ကျက်မှတ်ရပါတယ်။",
+    "timeline": "◀——●———————   (finished, before now)",
+    "form": [
+      { "subject": "go", "form": "went" },
+      { "subject": "eat", "form": "ate" },
+      { "subject": "have", "form": "had" },
+      { "subject": "all subjects", "form": "same past form" }
+    ],
+    "form_note_mm": "ပုံမမှန် ကြိယာတွေက အတိတ်ပုံစံ သီးခြားရှိတယ် — go → went, eat → ate, drink → drank, have → had, sleep → slept, speak → spoke။ subject ဘယ်လိုဖြစ်ဖြစ် အတိတ်ပုံစံ တစ်ခုတည်းသာ သုံးပါ (I went, She went, They went)။ ‘Your verbs’ ထဲက base → past ကို ကြည့်ပြီး ကျက်ပါ။",
+    "trap_en": "Irregular verbs don't use -ed.  WRONG: She goed home. / I eated rice.   RIGHT: She went home. / I ate rice.",
+    "trap_mm": "ပုံမမှန် ကြိယာတွေမှာ -ed မထည့်ရဘူး။  ✗ goed / eated  →  ✓ went / ate.  base form ကို -ed တပ်လို့ မရဘူး၊ အတိတ်ပုံစံ သီးသန့်ကို သုံးရတယ်။",
+    "examples": [
+      { "en": "She {v}went{/v} home.", "mm": "သူမ အိမ်ပြန်ခဲ့တယ်။" },
+      { "en": "We {v}had{/v} a good time.", "mm": "ကျွန်တော်တို့ ပျော်ခဲ့တယ်။" },
+      { "en": "He {v}ate{/v} too much.", "mm": "သူ အများကြီး စားခဲ့တယ်။" },
+      { "en": "They {v}drank{/v} coffee {t}last night{/t}.", "mm": "သူတို့ မနေ့ည က ကော်ဖီ သောက်ခဲ့တယ်။" }
+    ],
+    "model_paragraph_en": "{t}Last week{/t} I {v}went{/v} to my village. I {v}woke up{/v} early every morning. I {v}ate{/v} fresh food and {v}drank{/v} clean water. I {v}had{/v} long talks with my grandfather. At night I {v}read{/v} old letters and {v}slept{/v} very well.",
+    "model_paragraph_mm": "ပြီးခဲ့တဲ့အပတ်က ကျွန်တော် ရွာကို သွားခဲ့တယ်။ မနက်တိုင်း စောစော အိပ်ရာထခဲ့တယ်။ လတ်ဆတ်တဲ့ အစားအစာ စားပြီး သန့်ရှင်းတဲ့ ရေ သောက်ခဲ့တယ်။ အဖိုးနဲ့ စကား အကြာကြီး ပြောခဲ့တယ်။ ညဘက် စာဟောင်းတွေ ဖတ်ပြီး အရမ်း အိပ်ပျော်ခဲ့တယ်။"
+  },
+  "toolkit": {
+    "verbs": [
+      "v_go", "v_eat", "v_drink", "v_have", "v_sleep",
+      "v_speak", "v_read", "v_get_up"
+    ],
+    "time_words": ["t_yesterday", "t_last_week", "t_last_night"],
+    "verb_form": "past",
+    "verb_examples": {
+      "v_go": { "en": "I {v}went{/v} home early.", "mm": "ကျွန်တော် စောစော အိမ်ပြန်ခဲ့တယ်။" },
+      "v_eat": { "en": "She {v}ate{/v} rice.", "mm": "သူမ ထမင်း စားခဲ့တယ်။" },
+      "v_drink": { "en": "He {v}drank{/v} tea.", "mm": "သူ လက်ဖက်ရည် သောက်ခဲ့တယ်။" },
+      "v_have": { "en": "We {v}had{/v} lunch together.", "mm": "ကျွန်တော်တို့ အတူတူ နေ့လယ်စာ စားခဲ့တယ်။" },
+      "v_sleep": { "en": "They {v}slept{/v} late.", "mm": "သူတို့ နောက်ကျ အိပ်ခဲ့တယ်။" },
+      "v_speak": { "en": "She {v}spoke{/v} to the teacher.", "mm": "သူမ ဆရာနဲ့ စကားပြောခဲ့တယ်။" },
+      "v_read": { "en": "I {v}read{/v} a book {t}last night{/t}.", "mm": "ကျွန်တော် မနေ့ည က စာအုပ် ဖတ်ခဲ့တယ်။" },
+      "v_get_up": { "en": "He {v}got up{/v} at six.", "mm": "သူ ၆ နာရီမှာ အိပ်ရာထခဲ့တယ်။" }
+    },
+    "time_word_examples": {
+      "t_yesterday": { "en": "I {v}went{/v} to the market {t}yesterday{/t}.", "mm": "ကျွန်တော် မနေ့က ဈေး သွားခဲ့တယ်။" },
+      "t_last_week": { "en": "We {v}had{/v} a party {t}last week{/t}.", "mm": "ကျွန်တော်တို့ ပြီးခဲ့တဲ့အပတ်က ပါတီ လုပ်ခဲ့တယ်။" },
+      "t_last_night": { "en": "She {v}slept{/v} early {t}last night{/t}.", "mm": "သူမ မနေ့ည က စောစော အိပ်ခဲ့တယ်။" }
+    }
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Yesterday he ___ home.",
+      "prompt_mm": "မနေ့က သူ အိမ်ပြန်ခဲ့တယ်။",
+      "options": ["goed", "went", "go"],
+      "answers": ["went"],
+      "explain_mm": "go ရဲ့ အတိတ်က went (goed မဟုတ်ဘူး)။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ rice for lunch.",
+      "prompt_mm": "ကျွန်တော်တို့ နေ့လယ်စာ ထမင်း စားခဲ့တယ်။",
+      "options": ["eat", "ate", "eated"],
+      "answers": ["ate"],
+      "explain_mm": "eat ရဲ့ အတိတ်က ate။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ (have) a cold last week.",
+      "prompt_mm": "သူမ ပြီးခဲ့တဲ့အပတ်က အအေးမိခဲ့တယ်။ ( have ကို သုံးပါ )",
+      "answers": ["had"],
+      "explain_mm": "have ရဲ့ အတိတ်က had။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I drinked tea this morning.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["I drank tea this morning", "i drank tea this morning."],
+      "explain_mm": "drink ရဲ့ အတိတ်က drank (drinked မဟုတ်ဘူး)။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  went  /  she  /  to school",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["She went to school", "she went to school."],
+      "explain_mm": "Subject + အတိတ်ကြိယာ + ... → She went to school."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — about YESTERDAY. Write 5–8 sentences about yesterday using irregular past verbs (went, ate, had, drank, slept …).",
+      "prompt_mm": "အပိုင်း ၁ — မနေ့က အကြောင်း။ မနေ့က အကြောင်း ပုံမမှန် အတိတ်ကြိယာတွေ (went, ate, had, drank, slept …) သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "model": "Yesterday I {v}woke up{/v} at six. I {v}had{/v} breakfast at home. I {v}went{/v} to work by bus. At lunch I {v}ate{/v} noodles. In the evening I {v}read{/v} a book.",
+      "explain_mm": "ပုံမမှန်ကြိယာ အတိတ်ပုံစံကို မှန်အောင် သုံးပါ — go → went, eat → ate စသဖြင့်။",
+      "grading": {
+        "grammar_point": "Past simple: irregular verbs",
+        "rule": "Irregular verbs change form in the past (go→went, eat→ate, have→had); they do not take -ed. The form is the same for all subjects.",
+        "must_check": [
+          "Correct irregular past forms (not -ed)",
+          "Stays in the past",
+          "Same form for all subjects",
+          "5–8 sentences, at least 3 different verbs"
+        ],
+        "common_mm_errors": [
+          "Adding -ed to irregulars (goed, eated, drinked)",
+          "Using the base form (Yesterday I go)",
+          "Mixing present and past"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a past trip. Write a short paragraph (4–6 sentences) about a trip or a special day, using irregular past verbs.",
+      "prompt_mm": "အပိုင်း ၂ — အတိတ်က ခရီး။ ခရီးတစ်ခု ဒါမှမဟုတ် အထူးနေ့တစ်နေ့အကြောင်း ပုံမမှန် အတိတ်ကြိယာတွေသုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "{t}Last year{/t} we {v}went{/v} to Inle Lake. We {v}woke up{/v} early and {v}had{/v} a big breakfast. We {v}ate{/v} fresh fish and {v}drank{/v} sweet tea. At night we {v}slept{/v} in a small hotel.",
+      "explain_mm": "စာပိုဒ်တစ်ခုလုံး အတိတ်နဲ့ ရေးပြီး ပုံမမှန်ကြိယာ ပုံစံတွေ မှန်အောင် သုံးပါ။",
+      "grading": {
+        "grammar_point": "Past simple: irregular verbs",
+        "rule": "A short past narrative using irregular past forms correctly.",
+        "must_check": [
+          "Irregular past forms correct",
+          "Whole paragraph stays in the past",
+          "No -ed on irregular verbs",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "-ed on irregulars",
+          "Base form instead of past",
+          "Tense switching"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}
