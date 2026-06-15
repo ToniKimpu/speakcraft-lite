@@ -1,0 +1,130 @@
+{
+  "id": "l1_be_neg_questions",
+  "level": 1,
+  "section": "Be & basics",
+  "order": 2,
+  "type": "grammar_unit",
+  "title": "be: negatives & questions",
+  "subtitle_mm": "be — အငြင်း & အမေး",
+  "teach": {
+    "situation_en": "\"{v}Are{/v} you a new student?\" \"Yes, I am. But I {v}am not{/v} from here.\" \"{v}Is{/v} your sister here too?\" \"No, she {v}isn't{/v}. She {v}is not{/v} a student — she {v}is{/v} a nurse.\"",
+    "situation_mm": "\"မင်း ကျောင်းသားအသစ်လား။\" \"ဟုတ်ကဲ့။ ဒါပေမဲ့ ဒီကမ ဟုတ်ဘူး။\" \"မင်းအစ်မလည်း ဒီမှာလား။\" \"မဟုတ်ဘူး။ သူ ကျောင်းသူ မဟုတ်ဘူး — သူနာပြုပါ။\"",
+    "use_en": "Negative of 'be': add not (isn't / aren't / 'm not). Question of 'be': put am / is / are before the subject.",
+    "use_mm": "be ရဲ့ အငြင်း — not ထည့်ပါ (isn't / aren't / 'm not)။ be ရဲ့ အမေး — am / is / are ကို subject ရှေ့မှာ ထားပါ။",
+    "timeline": "",
+    "form": [
+      { "subject": "negative", "form": "is not (isn't) · are not (aren't)" },
+      { "subject": "question", "form": "Am / Is / Are + subject …?" },
+      { "subject": "short answer (yes)", "form": "Yes, I am. / Yes, she is." },
+      { "subject": "short answer (no)", "form": "No, I'm not. / No, she isn't." }
+    ],
+    "form_note_mm": "အငြင်း — be နောက်မှာ not ထည့်ပါ — I'm not, he isn't (is not), they aren't (are not)။  အမေး — Am / Is / Are ကို ဝါကျ ရှေ့ဆုံးမှာ ထားပါ — Are you ready?  အဖြေတို — Yes, I am. / No, I'm not.",
+    "trap_en": "Use 'be' (not do/does) for negatives & questions of be.  WRONG: She doesn't be happy. / Do you a student?   RIGHT: She isn't happy. / Are you a student?",
+    "trap_mm": "be ရဲ့ အငြင်း/အမေးမှာ do/does မသုံးရဘူး — be ကိုပဲ သုံးပါ။  ✗ She doesn't be / Do you a student?  →  ✓ She isn't happy / Are you a student?",
+    "examples": [
+      { "en": "I {v}am not{/v} tired.", "mm": "ကျွန်တော် မပင်ပန်းဘူး။" },
+      { "en": "He {v}isn't{/v} at home.", "mm": "သူ အိမ်မှာ မရှိဘူး။" },
+      { "en": "{v}Are{/v} you ready?", "mm": "မင်း အဆင်သင့်ဖြစ်ပြီလား။" },
+      { "en": "{v}Is{/v} she a teacher?", "mm": "သူမ ဆရာမတစ်ယောက်လား။" }
+    ],
+    "model_paragraph_en": "This {v}is{/v} my classroom, but it {v}isn't{/v} big. The students {v}aren't{/v} noisy. \"{v}Are{/v} you the new teacher?\" they ask. \"Yes, I am. {v}Is{/v} everyone here?\" \"No, two students {v}aren't{/v} here today.\"",
+    "model_paragraph_mm": "ဒါက ကျွန်တော့်စာသင်ခန်းပါ၊ ဒါပေမဲ့ မကြီးဘူး။ ကျောင်းသားတွေက ဆူညံမှု မရှိဘူး။ \"ဆရာအသစ်လား\" လို့ မေးကြတယ်။ \"ဟုတ်ကဲ့။ အားလုံး ရောက်ပြီလား။\" \"မရောက်သေးဘူး၊ ကျောင်းသား နှစ်ယောက် ဒီနေ့ မရှိဘူး။\""
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ at home. (negative)",
+      "prompt_mm": "သူမ အိမ်မှာ မရှိဘူး။",
+      "options": ["isn't", "aren't", "don't"],
+      "answers": ["isn't"],
+      "explain_mm": "she → isn't (is not)။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ you a student?",
+      "prompt_mm": "မင်း ကျောင်းသားလား။",
+      "options": ["Do", "Are", "Is"],
+      "answers": ["Are"],
+      "explain_mm": "you → Are you …? (be ကို ရှေ့ထား)။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ (not / be) ready.",
+      "prompt_mm": "သူတို့ အဆင်သင့် မဖြစ်သေးဘူး။",
+      "answers": ["aren't", "are not"],
+      "explain_mm": "they → aren't (are not)။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Do you happy?",
+      "prompt_mm": "မှားနေတဲ့ မေးခွန်းကို ပြင်ပါ။",
+      "answers": ["Are you happy", "Are you happy?", "are you happy?"],
+      "explain_mm": "be ရဲ့ အမေးမှာ Do မသုံးရဘူး → Are you happy?"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  is  /  he  /  here  /  not",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["He is not here", "he is not here.", "He isn't here"],
+      "explain_mm": "Subject + be + not + ... → He is not here."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — true or not true. Write 5–8 sentences about yourself: some positive (I am …) and some negative (I'm not …). E.g. \"I am a student. I'm not married.\"",
+      "prompt_mm": "အပိုင်း ၁ — မှန် မမှန်။ ကိုယ့်အကြောင်း ဝါကျ ၅–၈ ကြောင်း ရေးပါ — အချို့ အတည် (I am …)၊ အချို့ အငြင်း (I'm not …)။ ဥပမာ — \"I am a student. I'm not married.\" ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "I {v}am{/v} from Mandalay. I {v}am not{/v} tall. I {v}am{/v} a student. My English {v}isn't{/v} perfect. My friends {v}aren't{/v} here today.",
+      "explain_mm": "အငြင်းမှာ be နောက် not ထည့်ပါ — I'm not, isn't, aren't။",
+      "grading": {
+        "grammar_point": "be: negatives",
+        "rule": "Negative of be = be + not (I'm not, isn't, aren't). Do not use don't/doesn't with be.",
+        "must_check": [
+          "Negatives use be + not (not don't)",
+          "Correct am/is/are agreement",
+          "Mix of positive and negative",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "don't/doesn't with be (I don't be)",
+          "Wrong agreement (She aren't)",
+          "Dropping be"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 4,
+      "max_lines": 6,
+      "prompt_en": "Part 2 — ask questions. Write 4–6 yes/no questions with 'be' to ask a new classmate. E.g. \"Are you from here? Is your family big?\"",
+      "prompt_mm": "အပိုင်း ၂ — မေးခွန်းမေးပါ။ အတန်းဖော်အသစ်တစ်ယောက်ကို be သုံးပြီး yes/no မေးခွန်း ၄–၆ ခု ရေးပါ။ ဥပမာ — \"Are you from here? Is your family big?\" ပြီးရင် scan လုပ်ပါ။",
+      "model": "{v}Are{/v} you a student? {v}Are{/v} you from Yangon? {v}Is{/v} your family big? {v}Are{/v} your classes difficult? {v}Is{/v} your house near here?",
+      "explain_mm": "Am / Is / Are ကို subject ရှေ့မှာ ထားပြီး မေးပါ။",
+      "grading": {
+        "grammar_point": "be: questions",
+        "rule": "Questions with be put am/is/are before the subject (no do/does).",
+        "must_check": [
+          "be comes before the subject",
+          "Correct am/is/are agreement",
+          "Each line is a yes/no question",
+          "4–6 questions"
+        ],
+        "common_mm_errors": [
+          "Using Do/Does with be (Do you a student?)",
+          "Statement order (You are a student?)",
+          "Wrong agreement"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

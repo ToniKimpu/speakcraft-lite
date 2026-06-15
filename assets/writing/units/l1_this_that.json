@@ -1,0 +1,128 @@
+{
+  "id": "l1_this_that",
+  "level": 1,
+  "section": "Be & basics",
+  "order": 3,
+  "type": "grammar_unit",
+  "title": "this / that / these / those",
+  "subtitle_mm": "this / that / these / those",
+  "teach": {
+    "situation_en": "In the shop, the seller points around. \"{v}This{/v} bag is new. {v}That{/v} bag over there is old. {v}These{/v} shoes are cheap, but {v}those{/v} shoes near the door are expensive.\"",
+    "situation_mm": "ဆိုင်ထဲမှာ ရောင်းသူက လက်ညှိုးထိုးပြတယ်။ \"ဒီအိတ်က အသစ်ပါ။ ဟိုနားက အိတ်က အဟောင်းပါ။ ဒီဖိနပ်တွေက ဈေးပေါပေမဲ့ တံခါးနားက ဟိုဖိနပ်တွေက ဈေးကြီးပါတယ်။\"",
+    "use_en": "We use this/that/these/those to point to things. this/these = near; that/those = far. this/that = one; these/those = more than one.",
+    "use_mm": "အရာဝတ္ထုတွေကို ညွှန်ပြဖို့ this/that/these/those သုံးပါတယ်။ this/these = အနီး; that/those = အဝေး။ this/that = တစ်ခု; these/those = တစ်ခုထက်ပို။",
+    "timeline": "",
+    "form": [
+      { "subject": "near + one", "form": "this  (this book)" },
+      { "subject": "far + one", "form": "that  (that book)" },
+      { "subject": "near + many", "form": "these  (these books)" },
+      { "subject": "far + many", "form": "those  (those books)" }
+    ],
+    "form_note_mm": "အနီး တစ်ခု → this; အဝေး တစ်ခု → that; အနီး အများ → these; အဝေး အများ → those။ အများ (these/those) နဲ့ဆို နာမ်မှာ -s ပါတယ် — these books, those cars။",
+    "trap_en": "Match number: these/those go with plural nouns.  WRONG: this books / these book   RIGHT: this book / these books",
+    "trap_mm": "အရေအတွက် ကိုက်ပါ — these/those က နာမ်အများ (plural) နဲ့ တွဲတယ်။  ✗ this books / these book  →  ✓ this book / these books.",
+    "examples": [
+      { "en": "{v}This{/v} is my phone.", "mm": "ဒါက ကျွန်တော့်ဖုန်းပါ။" },
+      { "en": "{v}That{/v} is your house.", "mm": "ဟိုဟာက မင်းအိမ်ပါ။" },
+      { "en": "{v}These{/v} mangoes are sweet.", "mm": "ဒီသရက်သီးတွေ ချိုတယ်။" },
+      { "en": "{v}Those{/v} birds are beautiful.", "mm": "ဟိုငှက်တွေ လှတယ်။" }
+    ],
+    "model_paragraph_en": "Welcome to my room. {v}This{/v} is my bed, and {v}that{/v} is my desk near the window. {v}These{/v} are my books, and {v}those{/v} pictures on the wall are from my village. {v}This{/v} room is small but I love it.",
+    "model_paragraph_mm": "ကျွန်တော့်အခန်းကို ကြိုဆိုပါတယ်။ ဒါက ကျွန်တော့်ကုတင်ပါ၊ ဟိုဟာက ပြတင်းပေါက်နားက စားပွဲပါ။ ဒါတွေက ကျွန်တော့်စာအုပ်တွေပါ၊ နံရံပေါ်က ဟိုပုံတွေက ကျွန်တော့်ရွာကပါ။ ဒီအခန်း သေးပေမဲ့ ကျွန်တော် နှစ်သက်တယ်။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ book here is mine. (near, one)",
+      "prompt_mm": "ဒီနားက ဒီစာအုပ်က ကျွန်တော့်ဟာပါ။",
+      "options": ["This", "These", "Those"],
+      "answers": ["This"],
+      "explain_mm": "အနီး + တစ်ခု → this."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ shoes over there are new. (far, many)",
+      "prompt_mm": "ဟိုနားက ဖိနပ်တွေက အသစ်ပါ။",
+      "options": ["That", "Those", "This"],
+      "answers": ["Those"],
+      "explain_mm": "အဝေး + အများ → those."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ mangoes here are sweet. (near, many)",
+      "prompt_mm": "ဒီနားက သရက်သီးတွေ ချိုတယ်။",
+      "answers": ["These", "these"],
+      "explain_mm": "အနီး + အများ → these."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "These book is good.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["This book is good", "this book is good."],
+      "explain_mm": "တစ်ခု (book) → this (these မဟုတ်ဘူး)။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  is  /  this  /  my bag",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["This is my bag", "this is my bag."],
+      "explain_mm": "This + is + ... → This is my bag."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — point around you. Write 5–8 sentences about things near and far, using this / that / these / those. E.g. \"This is my pen. Those are my friends.\"",
+      "prompt_mm": "အပိုင်း ၁ — ပတ်ဝန်းကျင် ညွှန်ပြပါ။ အနီး/အဝေး အရာတွေအကြောင်း this / that / these / those သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ဥပမာ — \"This is my pen. Those are my friends.\" ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "{v}This{/v} is my desk. {v}That{/v} is the door. {v}These{/v} are my books. {v}Those{/v} are the windows. {v}This{/v} pen is new.",
+      "explain_mm": "အနီး/အဝေး၊ တစ်ခု/အများ ကို မှန်အောင် ရွေးပါ။",
+      "grading": {
+        "grammar_point": "this / that / these / those",
+        "rule": "this/these = near; that/those = far. this/that = singular; these/those = plural (with plural noun).",
+        "must_check": [
+          "Near vs far chosen correctly",
+          "Singular vs plural matches the noun",
+          "Plural noun (-s) with these/those",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "Number mismatch (these book / this books)",
+          "Confusing near and far",
+          "Dropping the noun's -s in plural"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — show a place. Write a short paragraph (4–6 sentences) showing someone around a room or shop, using this/that/these/those.",
+      "prompt_mm": "အပိုင်း ၂ — နေရာတစ်ခု ပြပါ။ အခန်း သို့မဟုတ် ဆိုင်တစ်ခုကို လှည့်ပြရင်း this/that/these/those သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "Welcome to my shop. {v}This{/v} is the counter. {v}These{/v} fruits are fresh. {v}That{/v} is the rice over there. {v}Those{/v} bags near the wall are for sale.",
+      "explain_mm": "အနီး/အဝေး၊ တစ်ခု/အများ ကို ဆက်စပ်အောင် မှန်မှန် သုံးပါ။",
+      "grading": {
+        "grammar_point": "this / that / these / those",
+        "rule": "Pointing words used correctly for distance and number in a description.",
+        "must_check": [
+          "Correct near/far choice",
+          "Correct singular/plural",
+          "Plural nouns with these/those",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Number mismatch",
+          "Near/far confusion",
+          "Using 'this' for everything"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

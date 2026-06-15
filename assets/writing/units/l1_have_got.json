@@ -1,0 +1,128 @@
+{
+  "id": "l1_have_got",
+  "level": 1,
+  "section": "Be & basics",
+  "order": 5,
+  "type": "grammar_unit",
+  "title": "have / have got",
+  "subtitle_mm": "have / have got (… ရှိတယ် / ပိုင်တယ်)",
+  "teach": {
+    "situation_en": "I {v}have{/v} a big family. I {v}have got{/v} two brothers and one sister. My brother {v}has{/v} a new car. We {v}have{/v} a small house, and it {v}has got{/v} a nice garden.",
+    "situation_mm": "ကျွန်တော် မိသားစုကြီးတစ်ခု ရှိတယ်။ ကျွန်တော် အစ်ကို နှစ်ယောက်နဲ့ အစ်မ တစ်ယောက် ရှိတယ်။ အစ်ကိုက ကားအသစ်တစ်စီး ရှိတယ်။ ကျွန်တော်တို့ အိမ်ငယ်တစ်လုံး ရှိပြီး ဥယျာဉ်လှလှလေး ပါတယ်။",
+    "use_en": "We use have / have got for possession, family and features. They mean the same. With he/she/it, use has / has got.",
+    "use_mm": "ပိုင်ဆိုင်မှု၊ မိသားစု၊ အင်္ဂါရပ်တွေအတွက် have / have got သုံးပါတယ်။ အဓိပ္ပာယ် တူတူပါ။ he/she/it နဲ့ဆို has / has got သုံးပါ။",
+    "timeline": "",
+    "form": [
+      { "subject": "I / you / we / they", "form": "have  (have got)" },
+      { "subject": "he / she / it", "form": "has  (has got)" },
+      { "subject": "negative", "form": "don't have / doesn't have" },
+      { "subject": "question", "form": "Do you have …? / Has she got …?" }
+    ],
+    "form_note_mm": "I / you / we / they → have (have got)။ he / she / it → has (has got)။ ‘have got’ နဲ့ ‘have’ အဓိပ္ပာယ်တူပေမဲ့ ‘have got’ က စကားပြောမှာ ပိုသုံးတယ်။ အငြင်း — don't have / doesn't have။ has → he/she/it အတွက်သာ — -s ကို မမေ့နဲ့။",
+    "trap_en": "Use has (not have) with he/she/it.  WRONG: She have a car. / He have got a dog.   RIGHT: She has a car. / He has got a dog.",
+    "trap_mm": "he / she / it နဲ့ဆို have မဟုတ်ဘဲ has သုံးပါ။  ✗ She have / He have got  →  ✓ She has / He has got.",
+    "examples": [
+      { "en": "I {v}have{/v} a bicycle.", "mm": "ကျွန်တော် စက်ဘီးတစ်စီး ရှိတယ်။" },
+      { "en": "She {v}has{/v} long hair.", "mm": "သူမ ဆံပင်ရှည်တယ်။" },
+      { "en": "They {v}have got{/v} three children.", "mm": "သူတို့ ကလေး သုံးယောက် ရှိတယ်။" },
+      { "en": "He {v}doesn't have{/v} a phone.", "mm": "သူ ဖုန်း မရှိဘူး။" }
+    ],
+    "model_paragraph_en": "My friend Lin {v}has{/v} a happy life. She {v}has got{/v} a good job and a kind family. She {v}has{/v} two cats and a small garden. Her house {v}has got{/v} three rooms. She {v}doesn't have{/v} a car, but she {v}has{/v} a bicycle.",
+    "model_paragraph_mm": "ကျွန်တော့်သူငယ်ချင်း လင်းမှာ ပျော်ရွှင်တဲ့ ဘဝတစ်ခု ရှိတယ်။ သူမမှာ အလုပ်ကောင်းတစ်ခုနဲ့ ကြင်နာတဲ့ မိသားစု ရှိတယ်။ ကြောင် နှစ်ကောင်နဲ့ ဥယျာဉ်ငယ်တစ်ခု ရှိတယ်။ သူ့အိမ်မှာ အခန်း သုံးခန်း ပါတယ်။ ကား မရှိပေမဲ့ စက်ဘီးတစ်စီး ရှိတယ်။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ a new phone.",
+      "prompt_mm": "သူမ ဖုန်းအသစ်တစ်လုံး ရှိတယ်။",
+      "options": ["have", "has", "haves"],
+      "answers": ["has"],
+      "explain_mm": "she → has."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ a big garden.",
+      "prompt_mm": "ကျွန်တော်တို့ ဥယျာဉ်ကြီးတစ်ခု ရှိတယ်။",
+      "options": ["has", "have", "having"],
+      "answers": ["have"],
+      "explain_mm": "we → have."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ (have) two brothers.",
+      "prompt_mm": "သူ အစ်ကို နှစ်ယောက် ရှိတယ်။ ( have ကို သုံးပါ )",
+      "answers": ["has"],
+      "explain_mm": "he → has."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "My sister have a dog.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["My sister has a dog", "my sister has a dog."],
+      "explain_mm": "sister (she) → has (have မဟုတ်ဘူး)။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  have  /  I  /  a bicycle",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["I have a bicycle", "i have a bicycle."],
+      "explain_mm": "Subject + have/has + ... → I have a bicycle."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — what you have. Write 5–8 sentences about what you and your family have, using have / has.",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်မှာ ဘာရှိလဲ။ ကိုယ်နဲ့ မိသားစုမှာ ဘာတွေ ရှိလဲဆိုတာ have / has သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "I {v}have{/v} a bicycle. My family {v}has{/v} a small house. We {v}have{/v} a garden. My brother {v}has{/v} a phone. My parents {v}have{/v} a shop.",
+      "explain_mm": "I/you/we/they → have; he/she/it → has ကို subject နဲ့ ကိုက်အောင် ထားပါ။",
+      "grading": {
+        "grammar_point": "have / has",
+        "rule": "have for I/you/we/they; has for he/she/it. Used for possession and features.",
+        "must_check": [
+          "have vs has correct for subject",
+          "Possession meaning",
+          "Consistent present tense",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "She have / He have (should be has)",
+          "haves (not a word)",
+          "Dropping the verb"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — describe someone's things. Write a short paragraph (4–6 sentences) about what a friend or family member has, using has / have got.",
+      "prompt_mm": "အပိုင်း ၂ — တစ်ယောက်ယောက်ရဲ့ ပစ္စည်းတွေ။ သူငယ်ချင်း သို့မဟုတ် မိသားစုဝင်တစ်ယောက်မှာ ဘာရှိလဲဆိုတာ has / have got သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My friend {v}has{/v} a big family. He {v}has got{/v} two sisters. His family {v}has{/v} a farm. They {v}have got{/v} many animals. He {v}doesn't have{/v} a car, but he {v}has{/v} a motorbike.",
+      "explain_mm": "he/she ဆို has; အများဆို have။ has ကို -s မမေ့နဲ့။",
+      "grading": {
+        "grammar_point": "have / has (got)",
+        "rule": "A description of possessions using has/have correctly.",
+        "must_check": [
+          "has with he/she/it, have with others",
+          "Possession meaning",
+          "Consistent forms",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Wrong agreement (He have got)",
+          "Mixing have/has",
+          "doesn't has (should be doesn't have)"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}
