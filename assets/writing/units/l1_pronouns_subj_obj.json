@@ -1,0 +1,128 @@
+{
+  "id": "l1_pronouns_subj_obj",
+  "level": 1,
+  "section": "Pronouns & possessives",
+  "order": 1,
+  "type": "grammar_unit",
+  "title": "Subject & object pronouns (I / me)",
+  "subtitle_mm": "ကတ္တား & ကံ နာမ်စား (I / me)",
+  "teach": {
+    "situation_en": "{v}I{/v} like my teacher and {v}she{/v} likes {v}me{/v}. {v}We{/v} study together. {v}He{/v} helps {v}us{/v} with grammar. {v}They{/v} are my classmates, and {v}I{/v} sit near {v}them{/v}.",
+    "situation_mm": "ကျွန်တော် ဆရာမကို ကြိုက်ပြီး သူမက ကျွန်တော့်ကို ကြိုက်တယ်။ ကျွန်တော်တို့ အတူတူ စာလုပ်ကြတယ်။ သူက ကျွန်တော်တို့ကို သဒ္ဒါ ကူညီပေးတယ်။ သူတို့က ကျွန်တော့်အတန်းဖော်တွေဖြစ်ပြီး ကျွန်တော် သူတို့နားမှာ ထိုင်တယ်။",
+    "use_en": "Subject pronouns (I, you, he, she, it, we, they) do the action. Object pronouns (me, you, him, her, it, us, them) receive the action.",
+    "use_mm": "ကတ္တား နာမ်စား (I, you, he, she, it, we, they) က လုပ်ဆောင်သူ။ ကံ နာမ်စား (me, you, him, her, it, us, them) က လုပ်ဆောင်ခံရသူ။",
+    "timeline": "",
+    "form": [
+      { "subject": "I / me", "form": "I help him. He helps me." },
+      { "subject": "he / him · she / her", "form": "She sees him. He sees her." },
+      { "subject": "we / us · they / them", "form": "They call us. We call them." },
+      { "subject": "you / it", "form": "(same both ways)" }
+    ],
+    "form_note_mm": "ကတ္တား (လုပ်သူ) → I, you, he, she, it, we, they (ဝါကျရှေ့)။ ကံ (ခံရသူ) → me, you, him, her, it, us, them (ကြိယာ/preposition နောက်)။ တွဲ — I/me, he/him, she/her, we/us, they/them။ you နဲ့ it က နှစ်မျိုးလုံး ပုံစံတူ။",
+    "trap_en": "Use the object form after a verb or preposition.  WRONG: She likes I. / Come with we.   RIGHT: She likes me. / Come with us.",
+    "trap_mm": "ကြိယာ/preposition နောက်မှာ ကံ ပုံစံ သုံးပါ။  ✗ She likes I / Come with we  →  ✓ She likes me / Come with us.",
+    "examples": [
+      { "en": "{v}She{/v} loves {v}him{/v}.", "mm": "သူမက သူ့ကို ချစ်တယ်။" },
+      { "en": "{v}We{/v} help {v}them{/v}.", "mm": "ကျွန်တော်တို့ သူတို့ကို ကူညီတယ်။" },
+      { "en": "Please call {v}me{/v}.", "mm": "ကျွန်တော့်ကို ဖုန်းခေါ်ပါ။" },
+      { "en": "{v}They{/v} know {v}us{/v}.", "mm": "သူတို့ ကျွန်တော်တို့ကို သိတယ်။" }
+    ],
+    "model_paragraph_en": "My sister and {v}I{/v} are close. {v}She{/v} helps {v}me{/v} and {v}I{/v} help {v}her{/v}. Our parents love {v}us{/v}. {v}They{/v} teach {v}us{/v} many things, and {v}we{/v} listen to {v}them{/v}. {v}I{/v} am lucky to have {v}them{/v}.",
+    "model_paragraph_mm": "အစ်မနဲ့ ကျွန်တော် ရင်းနှီးကြတယ်။ သူမက ကျွန်တော့်ကို ကူပြီး ကျွန်တော်က သူမကို ကူတယ်။ မိဘတွေက ကျွန်တော်တို့ကို ချစ်တယ်။ သူတို့က ကျွန်တော်တို့ကို အများကြီး သင်ပေးပြီး ကျွန်တော်တို့က သူတို့ကို နားထောင်တယ်။ သူတို့ ရှိတာ ကံကောင်းတယ်။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She likes ___. (object)",
+      "prompt_mm": "သူမက ကျွန်တော့်ကို ကြိုက်တယ်။",
+      "options": ["I", "me", "my"],
+      "answers": ["me"],
+      "explain_mm": "ကြိယာ (likes) နောက် → ကံ → me."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ help our parents. (subject)",
+      "prompt_mm": "ကျွန်တော်တို့ မိဘတွေကို ကူညီတယ်။",
+      "options": ["Us", "We", "Them"],
+      "answers": ["We"],
+      "explain_mm": "ဝါကျရှေ့ လုပ်သူ → ကတ္တား → We."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I see her, and she sees ___.",
+      "prompt_mm": "ကျွန်တော် သူမကို မြင်ပြီး သူမက ကျွန်တော့်ကို မြင်တယ်။",
+      "answers": ["me"],
+      "explain_mm": "ကြိယာ (sees) နောက် → me."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Come with we.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["Come with us", "come with us."],
+      "explain_mm": "preposition (with) နောက် → ကံ → us."
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  them  /  help  /  we",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["We help them", "we help them."],
+      "explain_mm": "ကတ္တား (We) + ကြိယာ + ကံ (them)။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — people you know. Write 5–8 sentences about people, using both subject and object pronouns (e.g. \"My friend calls me. I help her.\").",
+      "prompt_mm": "အပိုင်း ၁ — သိတဲ့ လူတွေ။ လူတွေအကြောင်း ကတ္တား နဲ့ ကံ နာမ်စား နှစ်မျိုးလုံး သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ (ဥပမာ — \"My friend calls me. I help her.\")။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "{v}I{/v} love my family. {v}They{/v} help {v}me{/v}. {v}I{/v} call {v}them{/v} every day. My friend visits {v}us{/v}. {v}We{/v} like {v}him{/v}.",
+      "explain_mm": "လုပ်သူ → ကတ္တား (ဝါကျရှေ့)၊ ခံရသူ → ကံ (ကြိယာ/preposition နောက်)။",
+      "grading": {
+        "grammar_point": "Subject & object pronouns",
+        "rule": "Subject pronouns (I, he, she, we, they) do the action; object pronouns (me, him, her, us, them) receive it (after a verb or preposition).",
+        "must_check": [
+          "Subject form before the verb",
+          "Object form after verb/preposition",
+          "Correct pairs (I/me, he/him, they/them)",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "Object form as subject (Me like it)",
+          "Subject form after verb (She likes I)",
+          "Mixing pairs"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — your friends/family. Write a short paragraph (4–6 sentences) about how you and others help each other, using subject and object pronouns.",
+      "prompt_mm": "အပိုင်း ၂ — သူငယ်ချင်း/မိသားစု။ ကိုယ်နဲ့ တခြားသူတွေ တစ်ယောက်ကိုတစ်ယောက် ဘယ်လို ကူညီကြလဲဆိုတာ ကတ္တား/ကံ နာမ်စားတွေသုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "{v}We{/v} are a team. {v}I{/v} help {v}them{/v} and {v}they{/v} help {v}me{/v}. {v}She{/v} teaches {v}us{/v} English. {v}We{/v} thank {v}her{/v}. {v}They{/v} call {v}us{/v} friends.",
+      "explain_mm": "ကတ္တား/ကံ နာမ်စားတွေကို မှန်အောင် နေရာချပါ။",
+      "grading": {
+        "grammar_point": "Subject & object pronouns",
+        "rule": "Use subject and object pronouns correctly in a short text.",
+        "must_check": [
+          "Subject vs object used correctly",
+          "Correct pronoun pairs",
+          "Clear who does/receives the action",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Wrong case (Me help them)",
+          "Pair confusion",
+          "Pronoun-antecedent mismatch"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "l1_can_cant",
+  "level": 1,
+  "section": "Prepositions & basics",
+  "order": 3,
+  "type": "grammar_unit",
+  "title": "can / can't (ability)",
+  "subtitle_mm": "can / can't (စွမ်းရည်)",
+  "teach": {
+    "situation_en": "I {v}can{/v} swim, but I {v}can't{/v} drive. My sister {v}can{/v} speak three languages. \"{v}Can{/v} you cook?\" she asks. \"Yes, I {v}can{/v}, but I {v}can't{/v} bake a cake.\"",
+    "situation_mm": "ကျွန်တော် ရေကူးတတ်ပေမဲ့ ကားမမောင်းတတ်ဘူး။ အစ်မက ဘာသာစကား သုံးမျိုး ပြောတတ်တယ်။ \"မင်း ချက်ပြုတ်တတ်လား\" လို့ မေးတယ်။ \"တတ်တယ်၊ ဒါပေမဲ့ ကိတ်မုန့်တော့ မဖုတ်တတ်ဘူး။\"",
+    "use_en": "can / can't shows ability — what we are able or not able to do. Use can / can't + the base verb, the same for all subjects.",
+    "use_mm": "can / can't က စွမ်းရည် ပြတယ် — ဘာ လုပ်တတ် / မလုပ်တတ်ဆိုတာ။ can / can't + ကြိယာ(base) သုံးပါ၊ subject အားလုံးအတွက် တူတူပါ။",
+    "timeline": "",
+    "form": [
+      { "subject": "positive", "form": "I can swim." },
+      { "subject": "negative", "form": "I can't (cannot) swim." },
+      { "subject": "question", "form": "Can you swim?" },
+      { "subject": "all subjects", "form": "can + base verb (no -s)" }
+    ],
+    "form_note_mm": "can / can't နောက်မှာ ကြိယာ(base) သုံးပါ — subject ဘယ်လိုဖြစ်ဖြစ် တူတူ (I can, She can, They can)။ he/she/it နဲ့တောင် ‘cans’ မဟုတ်ဘဲ ‘can’ ပဲ၊ ကြိယာမှာလည်း -s မထည့်ဘူး (She can swim)။ အမေး — Can + subject + base verb?",
+    "trap_en": "No -s with can; use the base verb.  WRONG: She cans swim. / He can swims.   RIGHT: She can swim. / He can swim.",
+    "trap_mm": "can မှာ -s မထည့်ရဘူး၊ ကြိယာ base ပဲ။  ✗ She cans swim / He can swims  →  ✓ She can swim / He can swim.",
+    "examples": [
+      { "en": "I {v}can{/v} cook.", "mm": "ကျွန်တော် ချက်တတ်တယ်။" },
+      { "en": "He {v}can't{/v} swim.", "mm": "သူ ရေမကူးတတ်ဘူး။" },
+      { "en": "{v}Can{/v} you help me?", "mm": "ကူညီနိုင်မလား။" },
+      { "en": "She {v}can{/v} speak English.", "mm": "သူမ အင်္ဂလိပ်စကား ပြောတတ်တယ်။" }
+    ],
+    "model_paragraph_en": "My friends have different skills. Lin {v}can{/v} play the guitar, but she {v}can't{/v} sing. Aung {v}can{/v} fix computers. I {v}can{/v} cook and I {v}can{/v} drive, but I {v}can't{/v} swim. Together we {v}can{/v} do many things.",
+    "model_paragraph_mm": "ကျွန်တော့်သူငယ်ချင်းတွေမှာ စွမ်းရည် မတူကြဘူး။ လင်းက ဂစ်တာ တီးတတ်ပေမဲ့ သီချင်း မဆိုတတ်ဘူး။ အောင်က ကွန်ပျူတာ ပြင်တတ်တယ်။ ကျွန်တော် ချက်တတ်ပြီး ကားမောင်းတတ်ပေမဲ့ ရေမကူးတတ်ဘူး။ အတူတူဆို အများကြီး လုပ်နိုင်ကြတယ်။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ swim very well.",
+      "prompt_mm": "သူမ ရေ အရမ်း ကောင်းကောင်း ကူးတတ်တယ်။",
+      "options": ["cans", "can", "can to"],
+      "answers": ["can"],
+      "explain_mm": "can မှာ -s မထည့်ဘူး → can swim."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I ___ drive a car.",
+      "prompt_mm": "ကျွန်တော် ကား မမောင်းတတ်ဘူး။",
+      "options": ["can't", "don't can", "can not to"],
+      "answers": ["can't"],
+      "explain_mm": "အငြင်း → can't (cannot)။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He can ___ (speak) Japanese.",
+      "prompt_mm": "သူ ဂျပန်စကား ပြောတတ်တယ်။ ( speak ကို သုံးပါ )",
+      "answers": ["speak"],
+      "explain_mm": "can နောက်က base verb → speak (speaks မဟုတ်ဘူး)။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She cans play the piano.",
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "answers": ["She can play the piano", "she can play the piano."],
+      "explain_mm": "can မှာ -s မထည့်ရဘူး → can play."
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  can  /  you  /  cook  /  ?",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး မေးခွန်းမှန် ရေးပါ။",
+      "answers": ["Can you cook?", "Can you cook", "can you cook?"],
+      "explain_mm": "Can + subject + base verb → Can you cook?"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — your abilities. Write 5–8 sentences about what you and others can and can't do, using can / can't + base verb.",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်စွမ်းရည်။ ကိုယ်နဲ့ တခြားသူတွေ ဘာ လုပ်တတ် / မလုပ်တတ်လဲဆိုတာ can / can't + base verb သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "I {v}can{/v} cook. I {v}can't{/v} swim. My brother {v}can{/v} drive. My sister {v}can{/v} speak English. We {v}can't{/v} play the piano.",
+      "explain_mm": "can / can't နောက်က ကြိယာ base form ပါ — -s မထည့်ပါနဲ့။",
+      "grading": {
+        "grammar_point": "can / can't (ability)",
+        "rule": "can/can't + base verb, the same for all subjects. Shows ability.",
+        "must_check": [
+          "can/can't + base verb (no -s)",
+          "Same form for all subjects (no cans)",
+          "Mix of can and can't",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "cans / can swims",
+          "don't can",
+          "can + to + verb"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a friend's skills. Write a short paragraph (4–6 sentences) about what a friend or family member can and can't do.",
+      "prompt_mm": "အပိုင်း ၂ — သူငယ်ချင်းရဲ့ စွမ်းရည်။ သူငယ်ချင်း သို့မဟုတ် မိသားစုဝင်တစ်ယောက် ဘာ လုပ်တတ် / မလုပ်တတ်လဲဆိုတာ can / can't သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My friend {v}can{/v} do many things. He {v}can{/v} play football and he {v}can{/v} cook. He {v}can't{/v} swim, and he {v}can't{/v} drive yet. But he {v}can{/v} learn quickly.",
+      "explain_mm": "can / can't + base verb ကို subject အားလုံးနဲ့ တူအောင် သုံးပါ။",
+      "grading": {
+        "grammar_point": "can / can't (ability)",
+        "rule": "Describe abilities with can/can't + base verb.",
+        "must_check": [
+          "can/can't + base verb",
+          "No -s on can or the verb",
+          "Clear abilities and inabilities",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "cans / can + verb-s",
+          "don't can",
+          "Adding 'to' after can"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

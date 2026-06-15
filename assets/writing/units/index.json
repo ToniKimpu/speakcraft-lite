@@ -259,7 +259,9 @@
     "section": "Pronouns & possessives",
     "order": 1,
     "title": "Subject & object pronouns (I / me)",
-    "published": false
+    "published": true,
+    "subtitle_mm": "ကတ္တား & ကံ နာမ်စား (I / me)",
+    "asset": "assets/writing/units/l1_pronouns_subj_obj.json"
   },
   {
     "id": "l1_possessives",
@@ -268,7 +270,9 @@
     "section": "Pronouns & possessives",
     "order": 2,
     "title": "Possessive adjectives & pronouns (my / mine)",
-    "published": false
+    "published": true,
+    "subtitle_mm": "ပိုင်ဆိုင်မှု (my / mine)",
+    "asset": "assets/writing/units/l1_possessives.json"
   },
   {
     "id": "l1_prep_time",
@@ -277,7 +281,9 @@
     "section": "Prepositions & basics",
     "order": 1,
     "title": "Prepositions of time (in / on / at)",
-    "published": false
+    "published": true,
+    "subtitle_mm": "အချိန် ဝိဘတ် (in / on / at)",
+    "asset": "assets/writing/units/l1_prep_time.json"
   },
   {
     "id": "l1_prep_place",
@@ -286,7 +292,9 @@
     "section": "Prepositions & basics",
     "order": 2,
     "title": "Prepositions of place (in / on / at)",
-    "published": false
+    "published": true,
+    "subtitle_mm": "နေရာ ဝိဘတ် (in / on / at)",
+    "asset": "assets/writing/units/l1_prep_place.json"
   },
   {
     "id": "l1_can_cant",
@@ -295,7 +303,9 @@
     "section": "Prepositions & basics",
     "order": 3,
     "title": "can / can't (ability)",
-    "published": false
+    "published": true,
+    "subtitle_mm": "can / can't (စွမ်းရည်)",
+    "asset": "assets/writing/units/l1_can_cant.json"
   },
   {
     "id": "l1_imperatives",
@@ -304,6 +314,8 @@
     "section": "Prepositions & basics",
     "order": 4,
     "title": "Imperatives (do / don't)",
-    "published": false
+    "published": true,
+    "subtitle_mm": "အမိန့်/ညွှန်ကြားချက် (do / don't)",
+    "asset": "assets/writing/units/l1_imperatives.json"
   }
 ]

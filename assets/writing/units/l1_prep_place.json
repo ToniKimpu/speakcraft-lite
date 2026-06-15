@@ -1,0 +1,128 @@
+{
+  "id": "l1_prep_place",
+  "level": 1,
+  "section": "Prepositions & basics",
+  "order": 2,
+  "type": "grammar_unit",
+  "title": "Prepositions of place (in / on / at)",
+  "subtitle_mm": "နေရာ ဝိဘတ် (in / on / at)",
+  "teach": {
+    "situation_en": "My keys are {v}on{/v} the table. My phone is {v}in{/v} my bag. I am {v}at{/v} home now. The cat is {v}in{/v} the box, and the book is {v}on{/v} the shelf. We meet {v}at{/v} the bus stop.",
+    "situation_mm": "ကျွန်တော့်သော့တွေက စားပွဲပေါ်မှာ။ ဖုန်းက အိတ်ထဲမှာ။ ကျွန်တော် အခု အိမ်မှာ ရှိတယ်။ ကြောင်က သေတ္တာထဲမှာ၊ စာအုပ်က စင်ပေါ်မှာ။ ဘတ်စ်ကားမှတ်တိုင်မှာ တွေ့ကြတယ်။",
+    "use_en": "in = inside (enclosed). on = on a surface (touching). at = at a point or place.",
+    "use_mm": "in = အထဲမှာ (ပိတ်ထားတဲ့ နေရာ)။ on = မျက်နှာပြင်ပေါ် (ထိနေတယ်)။ at = တည်နေရာ/အမှတ်တစ်ခုမှာ။",
+    "timeline": "",
+    "form": [
+      { "subject": "in", "form": "in the box · in Yangon · in my bag" },
+      { "subject": "on", "form": "on the table · on the wall · on the floor" },
+      { "subject": "at", "form": "at home · at school · at the bus stop" },
+      { "subject": "common", "form": "at home/work/school · in a city" }
+    ],
+    "form_note_mm": "in → အထဲ/ပိတ်ထားတဲ့ နေရာ (in the room, in a car, in Mandalay)။ on → မျက်နှာပြင်ပေါ် ထိနေ (on the desk, on the wall, on the floor)။ at → အမှတ်/တည်နေရာ (at the door, at school, at the station)။ မှတ်ထား — at home, at work, at school (in မဟုတ်ဘူး)။",
+    "trap_en": "Match the right preposition to the place.  WRONG: on my bag / in the table / in home   RIGHT: in my bag / on the table / at home",
+    "trap_mm": "နေရာနဲ့ ကိုက်တဲ့ ဝိဘတ် ရွေးပါ။  ✗ on my bag / in the table / in home  →  ✓ in my bag / on the table / at home.",
+    "examples": [
+      { "en": "The food is {v}on{/v} the table.", "mm": "အစားအစာက စားပွဲပေါ်မှာ။" },
+      { "en": "She is {v}in{/v} the kitchen.", "mm": "သူမ မီးဖိုချောင်ထဲမှာ။" },
+      { "en": "We are {v}at{/v} school.", "mm": "ကျွန်တော်တို့ ကျောင်းမှာ။" },
+      { "en": "The picture is {v}on{/v} the wall.", "mm": "ပုံက နံရံပေါ်မှာ။" }
+    ],
+    "model_paragraph_en": "Welcome to my home. The sofa is {v}in{/v} the living room. The TV is {v}on{/v} the wall. My books are {v}on{/v} the shelf, and my clothes are {v}in{/v} the wardrobe. Right now my family is {v}at{/v} home, and the children are {v}in{/v} the garden.",
+    "model_paragraph_mm": "ကျွန်တော့်အိမ်ကို ကြိုဆိုပါတယ်။ ဆိုဖာက ဧည့်ခန်းထဲမှာ။ TV က နံရံပေါ်မှာ။ စာအုပ်တွေက စင်ပေါ်မှာ၊ အဝတ်တွေက ဗီရိုထဲမှာ။ အခု မိသားစု အိမ်မှာ ရှိပြီး ကလေးတွေ ဥယျာဉ်ထဲမှာ ရှိတယ်။"
+  },
+  "toolkit": { "verbs": [], "time_words": [] },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The book is ___ the table.",
+      "prompt_mm": "စာအုပ်က စားပွဲပေါ်မှာ။",
+      "options": ["in", "on", "at"],
+      "answers": ["on"],
+      "explain_mm": "မျက်နှာပြင်ပေါ် → on."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She is ___ home.",
+      "prompt_mm": "သူမ အိမ်မှာ ရှိတယ်။",
+      "options": ["in", "at", "on"],
+      "answers": ["at"],
+      "explain_mm": "at home (in home မဟုတ်ဘူး)။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "My phone is ___ my bag.",
+      "prompt_mm": "ဖုန်းက အိတ်ထဲမှာ။",
+      "answers": ["in"],
+      "explain_mm": "အထဲ → in."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "The cat is on the box.",
+      "prompt_mm": "ကြောင်က သေတ္တာထဲမှာ ရှိတယ်။ ( မှားနေတာ ပြင်ပါ )",
+      "answers": ["The cat is in the box", "the cat is in the box."],
+      "explain_mm": "အထဲမှာ ဆိုလို → in the box."
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  on  /  is  /  the wall  /  it",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "answers": ["It is on the wall", "it is on the wall."],
+      "explain_mm": "နံရံပေါ် → on the wall။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — where things are. Write 5–8 sentences about where things and people are, using in / on / at.",
+      "prompt_mm": "အပိုင်း ၁ — အရာတွေ ဘယ်မှာ။ အရာတွေ/လူတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "My keys are {v}on{/v} the desk. My money is {v}in{/v} my pocket. I am {v}at{/v} work. The clock is {v}on{/v} the wall. The dog is {v}in{/v} the garden.",
+      "explain_mm": "in (အထဲ)၊ on (ပေါ်)၊ at (တည်နေရာ) ကို မှန်အောင် ရွေးပါ။",
+      "grading": {
+        "grammar_point": "Prepositions of place (in / on / at)",
+        "rule": "in = inside; on = on a surface; at = at a point/place (at home/school/work).",
+        "must_check": [
+          "in for inside/enclosed",
+          "on for surfaces",
+          "at for points/places",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "in home (should be at home)",
+          "on/in the box confusion",
+          "Wrong preposition for the place"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — describe a room. Write a short paragraph (4–6 sentences) saying where things are in a room, using in / on / at.",
+      "prompt_mm": "အပိုင်း ၂ — အခန်းတစ်ခု ဖော်ပြပါ။ အခန်းထဲက အရာတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My room is simple. The bed is {v}in{/v} the corner. A lamp is {v}on{/v} the table. My bag is {v}on{/v} the floor. My clothes are {v}in{/v} the cupboard. I feel happy {v}at{/v} home.",
+      "explain_mm": "in/on/at ကို နေရာအလိုက် မှန်အောင် သုံးပြီး အခန်းကို ဖော်ပြပါ။",
+      "grading": {
+        "grammar_point": "Prepositions of place (in / on / at)",
+        "rule": "Describe a room's contents using place prepositions correctly.",
+        "must_check": [
+          "Correct in/on/at by location type",
+          "at home/at school fixed phrases",
+          "Clear spatial description",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "in/on confusion",
+          "in home / in work",
+          "Missing preposition"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}
