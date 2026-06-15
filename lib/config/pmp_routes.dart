@@ -27,6 +27,7 @@ import 'package:speakcraft/screens/daily_speaking/guided/guided_lesson_page.dart
 import 'package:speakcraft/screens/daily_speaking/guided/guided_record_page.dart';
 import 'package:speakcraft/model/writing/writing_unit.dart';
 import 'package:speakcraft/model/writing/writing_lexicon.dart';
+import 'package:speakcraft/screens/writing/writing_path_page.dart';
 import 'package:speakcraft/screens/writing/writing_teach_page.dart';
 import 'package:speakcraft/screens/writing/writing_practice_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
@@ -102,7 +103,8 @@ class PmpRoutes {
   static const dailySpeakingReview = '/daily_speaking/review';
   static const dailySpeakingHistory = '/daily_speaking/history';
 
-  // Writing Practice module (Phase-0 prototype) — see WRITING_FEATURE_PLAN.md
+  // Writing Practice module — see WRITING_FEATURE_PLAN.md
+  static const writingPath = '/writing';
   static const writingTeach = '/writing/teach';
   static const writingPractice = '/writing/practice';
 
@@ -379,8 +381,17 @@ class PmpRoutes {
         );
       case dailySpeakingHistory:
         return _getRoute(const DailySpeakingHistoryPage(), settings);
+      case writingPath:
+        return _getRoute(const WritingPathPage(), settings);
       case writingTeach:
-        return _getRoute(const WritingTeachPage(), settings);
+        final args = settings.arguments as Map<String, dynamic>?;
+        final asset = args?['asset'] as String?;
+        return _getRoute(
+          asset == null
+              ? const WritingTeachPage()
+              : WritingTeachPage(assetPath: asset),
+          settings,
+        );
       case writingPractice:
         final args = settings.arguments as Map<String, dynamic>;
         return _getRoute(

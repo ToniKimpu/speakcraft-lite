@@ -159,8 +159,8 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               const SizedBox(height: 12),
-              // Writing Practice — grammar-foundation course (Phase-0 prototype:
-              // one Present-simple unit). See WRITING_FEATURE_PLAN.md.
+              // Writing Practice — grammar-foundation course. Lands on the path
+              // screen (Level → Section → Unit). See WRITING_FEATURE_PLAN.md.
               ModuleWidget(
                 title: 'Writing Practice',
                 label1: 'သဒ္ဒါ အခြေခံကနေ စတင်လေ့လာပါ',
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                 iconLabel1: Icons.school_outlined,
                 iconLabel2: Icons.fact_check_outlined,
                 onPressed: () {
-                  Navigator.pushNamed(context, PmpRoutes.writingTeach);
+                  Navigator.pushNamed(context, PmpRoutes.writingPath);
                 },
               ),
               const SizedBox(height: 12),
