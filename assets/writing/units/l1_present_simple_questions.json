@@ -38,7 +38,27 @@
     "time_words": [
       "t_every_day", "t_in_the_morning", "t_on_weekends", "t_on_mondays"
     ],
-    "verb_form": "base"
+    "verb_form": "base",
+    "verb_examples": {
+      "v_like": { "en": "{v}Does{/v} she {v}like{/v} tea?", "mm": "သူမ လက်ဖက်ရည် ကြိုက်သလား။" },
+      "v_speak": { "en": "{v}Do{/v} you {v}speak{/v} English?", "mm": "မင်း အင်္ဂလိပ်စကား ပြောတတ်သလား။" },
+      "v_live": { "en": "{v}Does{/v} he {v}live{/v} here?", "mm": "သူ ဒီမှာ နေသလား။" },
+      "v_work": { "en": "{v}Do{/v} they {v}work{/v} here?", "mm": "သူတို့ ဒီမှာ အလုပ်လုပ်သလား။" },
+      "v_drink": { "en": "{v}Do{/v} you {v}drink{/v} coffee?", "mm": "မင်း ကော်ဖီ သောက်သလား။" },
+      "v_study": { "en": "{v}Does{/v} she {v}study{/v} English?", "mm": "သူမ အင်္ဂလိပ်စာ လေ့လာသလား။" },
+      "v_eat": { "en": "{v}Does{/v} he {v}eat{/v} meat?", "mm": "သူ အသား စားသလား။" },
+      "v_have": { "en": "{v}Do{/v} you {v}have{/v} a car?", "mm": "မင်း ကား ရှိသလား။" },
+      "v_go": { "en": "{v}Does{/v} she {v}go{/v} by bus?", "mm": "သူမ ဘတ်စ်ကားနဲ့ သွားသလား။" },
+      "v_play": { "en": "{v}Do{/v} they {v}play{/v} football?", "mm": "သူတို့ ဘောလုံး ကစားသလား။" },
+      "v_want": { "en": "{v}Do{/v} you {v}want{/v} tea?", "mm": "မင်း လက်ဖက်ရည် လိုချင်သလား။" },
+      "v_watch": { "en": "{v}Does{/v} he {v}watch{/v} TV?", "mm": "သူ TV ကြည့်သလား။" }
+    },
+    "time_word_examples": {
+      "t_every_day": { "en": "{v}Do{/v} you {v}study{/v} {t}every day{/t}?", "mm": "မင်း နေ့တိုင်း စာလုပ်သလား။" },
+      "t_in_the_morning": { "en": "{v}Does{/v} she {v}drink{/v} coffee {t}in the morning{/t}?", "mm": "သူမ မနက်ပိုင်း ကော်ဖီ သောက်သလား။" },
+      "t_on_weekends": { "en": "{v}Do{/v} they {v}work{/v} {t}on weekends{/t}?", "mm": "သူတို့ စနေတနင်္ဂနွေမှာ အလုပ်လုပ်သလား။" },
+      "t_on_mondays": { "en": "{v}Does{/v} he {v}study{/v} {t}on Mondays{/t}?", "mm": "သူ တနင်္လာနေ့ စာလုပ်သလား။" }
+    }
   },
   "exercises": [
     {

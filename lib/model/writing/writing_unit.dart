@@ -69,6 +69,8 @@ class Toolkit {
     required this.timeWordIds,
     required this.timeWordsNoteMm,
     required this.verbForm,
+    required this.verbExamples,
+    required this.timeWordExamples,
   });
 
   final List<String> verbIds;
@@ -83,7 +85,21 @@ class Toolkit {
   /// tense-unit reuse the same lexicon entry and pull the form it needs.
   final String verbForm;
 
+  /// Optional per-unit example overrides, keyed by lexicon id. The shared
+  /// lexicon only stores positive present-simple examples, so a unit whose
+  /// grammar differs (negatives, questions, continuous) provides bank examples
+  /// that match (e.g. `v_like` → "She doesn't like coffee."). When absent, the
+  /// bank falls back to the lexicon example for affirmative units.
+  final Map<String, ExamplePair> verbExamples;
+  final Map<String, ExamplePair> timeWordExamples;
+
   bool get isEmpty => verbIds.isEmpty && timeWordIds.isEmpty;
+
+  static Map<String, ExamplePair> _examplesFromJson(Object? raw) {
+    final map = (raw as Map?)?.cast<String, dynamic>() ?? const {};
+    return map.map((k, v) =>
+        MapEntry(k, ExamplePair.fromJson((v as Map).cast<String, dynamic>())));
+  }
 
   factory Toolkit.fromJson(Map<String, dynamic> json) => Toolkit(
         verbIds: ((json['verbs'] as List?) ?? const [])
@@ -94,6 +110,8 @@ class Toolkit {
             .toList(growable: false),
         timeWordsNoteMm: json['time_words_note_mm'] as String? ?? '',
         verbForm: json['verb_form'] as String? ?? 'third',
+        verbExamples: _examplesFromJson(json['verb_examples']),
+        timeWordExamples: _examplesFromJson(json['time_word_examples']),
       );
 }
 

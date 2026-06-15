@@ -36,7 +36,21 @@
       "v_sleep", "v_eat", "v_work", "v_go", "v_wake_up", "v_get_up"
     ],
     "time_words": [],
-    "verb_form": "ing"
+    "verb_form": "ing",
+    "verb_examples": {
+      "v_cook": { "en": "She {v}is cooking{/v} dinner.", "mm": "သူမ ညစာ ချက်နေတယ်။" },
+      "v_drink": { "en": "He {v}is drinking{/v} tea.", "mm": "သူ လက်ဖက်ရည် သောက်နေတယ်။" },
+      "v_read": { "en": "I {v}am reading{/v} a book.", "mm": "ကျွန်တော် စာအုပ် ဖတ်နေတယ်။" },
+      "v_watch": { "en": "They {v}are watching{/v} TV.", "mm": "သူတို့ TV ကြည့်နေကြတယ်။" },
+      "v_play": { "en": "The kids {v}are playing{/v} football.", "mm": "ကလေးတွေ ဘောလုံး ကစားနေကြတယ်။" },
+      "v_study": { "en": "We {v}are studying{/v} English.", "mm": "ကျွန်တော်တို့ အင်္ဂလိပ်စာ လေ့လာနေကြတယ်။" },
+      "v_sleep": { "en": "The baby {v}is sleeping{/v}.", "mm": "ကလေးငယ် အိပ်နေတယ်။" },
+      "v_eat": { "en": "He {v}is eating{/v} lunch.", "mm": "သူ နေ့လယ်စာ စားနေတယ်။" },
+      "v_work": { "en": "She {v}is working{/v} now.", "mm": "သူမ အခု အလုပ်လုပ်နေတယ်။" },
+      "v_go": { "en": "They {v}are going{/v} home.", "mm": "သူတို့ အိမ်ပြန်နေကြတယ်။" },
+      "v_wake_up": { "en": "He {v}is waking up{/v}.", "mm": "သူ အိပ်ရာထနေတယ်။" },
+      "v_get_up": { "en": "She {v}is getting up{/v} now.", "mm": "သူမ အခု အိပ်ရာထနေတယ်။" }
+    }
   },
   "exercises": [
     {

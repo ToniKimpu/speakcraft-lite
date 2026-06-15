@@ -243,7 +243,8 @@ class _TeachBody extends StatelessWidget {
                       child: _VerbBank(
                           verbs: toolkit.verbs,
                           formKey: unit.toolkit.verbForm,
-                          showExamples: _showBankExamples(unit)),
+                          showExamples: _showBankExamples(unit),
+                          overrides: unit.toolkit.verbExamples),
                     ),
 
                   // Bespoke teach blocks (e.g. the frequency scale) sit in the
@@ -258,7 +259,8 @@ class _TeachBody extends StatelessWidget {
                       label: 'Time phrases  ·  when',
                       child: _TimeWordBank(
                           words: _timePhrases(toolkit),
-                          showExamples: _showBankExamples(unit)),
+                          showExamples: _showBankExamples(unit),
+                          overrides: unit.toolkit.timeWordExamples),
                     ),
                   if (unit.toolkit.timeWordsNoteMm.isNotEmpty)
                     _NoteCard(mm: unit.toolkit.timeWordsNoteMm),
@@ -496,10 +498,14 @@ class _ExampleRow extends StatelessWidget {
 /// expands to a bilingual example. Reinforces the -s by showing both forms.
 class _VerbBank extends StatelessWidget {
   const _VerbBank(
-      {required this.verbs, required this.formKey, required this.showExamples});
+      {required this.verbs,
+      required this.formKey,
+      required this.showExamples,
+      required this.overrides});
   final List<LexiconVerb> verbs;
   final String formKey;
   final bool showExamples;
+  final Map<String, ExamplePair> overrides;
 
   @override
   Widget build(BuildContext context) {
@@ -507,13 +513,17 @@ class _VerbBank extends StatelessWidget {
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           for (var i = 0; i < verbs.length; i++) ...[
             if (i > 0)
               Divider(
                   height: 1, color: cs.outlineVariant.withValues(alpha: 0.5)),
             _VerbTile(
-                verb: verbs[i], formKey: formKey, showExamples: showExamples),
+                verb: verbs[i],
+                formKey: formKey,
+                showExamples: showExamples,
+                exampleOverride: overrides[verbs[i].id]),
           ],
         ],
       ),
@@ -523,10 +533,14 @@ class _VerbBank extends StatelessWidget {
 
 class _VerbTile extends StatelessWidget {
   const _VerbTile(
-      {required this.verb, required this.formKey, required this.showExamples});
+      {required this.verb,
+      required this.formKey,
+      required this.showExamples,
+      required this.exampleOverride});
   final LexiconVerb verb;
   final String formKey;
   final bool showExamples;
+  final ExamplePair? exampleOverride;
 
   @override
   Widget build(BuildContext context) {
@@ -534,6 +548,9 @@ class _VerbTile extends StatelessWidget {
     final mmColor = PmpColors.myanmarGloss(Theme.of(context).brightness);
     final second = verb.secondForm(formKey);
     final verbColor = writingVerbColor(Theme.of(context).brightness);
+    final examples = exampleOverride != null
+        ? [exampleOverride!]
+        : (showExamples ? verb.examples : const <ExamplePair>[]);
 
     // base → form (e.g. work → works / working); or just the base form when the
     // unit uses the verb in its base form (after don't/doesn't, do/does).
@@ -559,8 +576,8 @@ class _VerbTile extends StatelessWidget {
         : Text(verb.mm,
             style: PmpTextStyles.body2Regular.copyWith(color: mmColor));
 
-    // No examples for this unit → a plain (non-expandable) reference row.
-    if (!showExamples || verb.examples.isEmpty) {
+    // No example for this unit → a plain (non-expandable) reference row.
+    if (examples.isEmpty) {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
         child: Column(
@@ -576,7 +593,7 @@ class _VerbTile extends StatelessWidget {
       title: title,
       subtitle: subtitle,
       children: [
-        for (final ex in verb.examples) _ExampleRow(en: ex.en, mm: ex.mm),
+        for (final ex in examples) _ExampleRow(en: ex.en, mm: ex.mm),
       ],
     );
   }
@@ -585,9 +602,13 @@ class _VerbTile extends StatelessWidget {
 /// The frequency / time-word toolkit — header shows the word + its position
 /// rule (the part Burmese learners get wrong); expands to a bilingual example.
 class _TimeWordBank extends StatelessWidget {
-  const _TimeWordBank({required this.words, required this.showExamples});
+  const _TimeWordBank(
+      {required this.words,
+      required this.showExamples,
+      required this.overrides});
   final List<LexiconTimeWord> words;
   final bool showExamples;
+  final Map<String, ExamplePair> overrides;
 
   @override
   Widget build(BuildContext context) {
@@ -595,12 +616,16 @@ class _TimeWordBank extends StatelessWidget {
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           for (var i = 0; i < words.length; i++) ...[
             if (i > 0)
               Divider(
                   height: 1, color: cs.outlineVariant.withValues(alpha: 0.5)),
-            _TimeWordTile(word: words[i], showExamples: showExamples),
+            _TimeWordTile(
+                word: words[i],
+                showExamples: showExamples,
+                exampleOverride: overrides[words[i].id]),
           ],
         ],
       ),
@@ -609,9 +634,11 @@ class _TimeWordBank extends StatelessWidget {
 }
 
 class _TimeWordTile extends StatelessWidget {
-  const _TimeWordTile({required this.word, required this.showExamples});
+  const _TimeWordTile(
+      {required this.word, required this.showExamples, required this.exampleOverride});
   final LexiconTimeWord word;
   final bool showExamples;
+  final ExamplePair? exampleOverride;
 
   @override
   Widget build(BuildContext context) {
@@ -641,8 +668,11 @@ class _TimeWordTile extends StatelessWidget {
         ? null
         : Text(word.mm,
             style: PmpTextStyles.body2Regular.copyWith(color: mmColor));
+    final examples = exampleOverride != null
+        ? [exampleOverride!]
+        : (showExamples ? word.examples : const <ExamplePair>[]);
 
-    if (!showExamples || word.examples.isEmpty) {
+    if (examples.isEmpty) {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
         child: Column(
@@ -658,7 +688,7 @@ class _TimeWordTile extends StatelessWidget {
       title: title,
       subtitle: subtitle,
       children: [
-        for (final ex in word.examples) _ExampleRow(en: ex.en, mm: ex.mm),
+        for (final ex in examples) _ExampleRow(en: ex.en, mm: ex.mm),
       ],
     );
   }

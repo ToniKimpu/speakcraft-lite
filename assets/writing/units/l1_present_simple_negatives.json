@@ -38,7 +38,27 @@
     "time_words": [
       "t_every_day", "t_in_the_morning", "t_on_weekends", "t_on_mondays"
     ],
-    "verb_form": "base"
+    "verb_form": "base",
+    "verb_examples": {
+      "v_like": { "en": "She {v}doesn't like{/v} coffee.", "mm": "သူမ ကော်ဖီ မကြိုက်ဘူး။" },
+      "v_eat": { "en": "He {v}doesn't eat{/v} meat.", "mm": "သူ အသား မစားဘူး။" },
+      "v_drink": { "en": "I {v}don't drink{/v} beer.", "mm": "ကျွန်တော် ဘီယာ မသောက်ဘူး။" },
+      "v_have": { "en": "She {v}doesn't have{/v} a car.", "mm": "သူမ ကား မရှိဘူး။" },
+      "v_live": { "en": "They {v}don't live{/v} here.", "mm": "သူတို့ ဒီမှာ မနေဘူး။" },
+      "v_work": { "en": "He {v}doesn't work{/v} on Sundays.", "mm": "သူ တနင်္ဂနွေနေ့ အလုပ်မလုပ်ဘူး။" },
+      "v_go": { "en": "We {v}don't go{/v} to the gym.", "mm": "ကျွန်တော်တို့ အားကစားခန်း မသွားဘူး။" },
+      "v_study": { "en": "He {v}doesn't study{/v} at night.", "mm": "သူ ညဘက် စာမလုပ်ဘူး။" },
+      "v_play": { "en": "She {v}doesn't play{/v} football.", "mm": "သူမ ဘောလုံး မကစားဘူး။" },
+      "v_watch": { "en": "I {v}don't watch{/v} TV.", "mm": "ကျွန်တော် TV မကြည့်ဘူး။" },
+      "v_want": { "en": "He {v}doesn't want{/v} tea.", "mm": "သူ လက်ဖက်ရည် မလိုချင်ဘူး။" },
+      "v_speak": { "en": "They {v}don't speak{/v} English.", "mm": "သူတို့ အင်္ဂလိပ်စကား မပြောတတ်ဘူး။" }
+    },
+    "time_word_examples": {
+      "t_every_day": { "en": "I {v}don't study{/v} {t}every day{/t}.", "mm": "ကျွန်တော် နေ့တိုင်း စာမလုပ်ဘူး။" },
+      "t_in_the_morning": { "en": "He {v}doesn't eat{/v} {t}in the morning{/t}.", "mm": "သူ မနက်ပိုင်း အစာမစားဘူး။" },
+      "t_on_weekends": { "en": "We {v}don't work{/v} {t}on weekends{/t}.", "mm": "ကျွန်တော်တို့ စနေတနင်္ဂနွေမှာ အလုပ်မလုပ်ဘူး။" },
+      "t_on_mondays": { "en": "She {v}doesn't teach{/v} {t}on Mondays{/t}.", "mm": "သူမ တနင်္လာနေ့ သင်မပေးဘူး။" }
+    }
   },
   "exercises": [
     {
