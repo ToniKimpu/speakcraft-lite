@@ -199,6 +199,27 @@ form, mirror `daily_speaking_topics`), AI batch-authoring into the template; fli
 fn (transcribe handwriting + grade); camera scan UI; `user_writing_progress` + `writing_submissions`
 (RLS own-rows); meter via credits. **No Drift** — persistence no-ops until auth, then Supabase.
 
+> **Scan flow — capture → AI region-extract → confirm & trim → grade (decided 2026-06-15).**
+> A notebook page accumulates writing from several tasks (e.g. the Ex-6 sentences sit just above the
+> Ex-7 paragraph), so one photo can capture *more than the current task*. This is **only** a problem
+> for the handwrite+scan path — the typed line-by-line input is unambiguous (one task per screen).
+> The fix is a layered, low-friction loop, not a clever cropper:
+> 1. **AI region-extract.** The multimodal `writing-review` call is told the task's expected *shape*
+>    from the exercise (count + person — Ex-6 = first-person "I" sentences; Ex-7 = a third-person
+>    he/she paragraph) and instructed: *"the page may contain other tasks' writing; extract and grade
+>    ONLY the part matching THIS task; ignore unrelated lines."* The I-vs-he/she contrast makes this
+>    easy for the model, so it pre-selects the right region.
+> 2. **Confirm & trim (the safety net, does double duty).** The planned "show the transcription back
+>    before feedback locks" screen is **editable**: the learner sees the read-back as lines and can
+>    **delete any line that isn't this task** (and fix OCR misreads) before tapping *Grade*. Handles
+>    extra-page text *and* transcription errors in one step. Worst case = delete a couple of stray
+>    lines; never "graded the wrong thing."
+> 3. **Light anchor.** Prompt nudge: *"start this task on a new line (or write the part number)."*
+>
+> Product call: **one photo per task + trim** (flexible; notebooks fill up) over "one task per page".
+> Only the **confirmed/trimmed transcription** is stored in `writing_submissions.draft_text` — never
+> the raw photo (cheaper, more private), per decision #6.
+
 ### Supabase DDL (apply in Phase 2/3 — prod `yoolagzhgxilukjsypbh`, mirror the topics migration)
 - `writing_lexicon` (public read): `id (text pk), kind ('verb'|'time_word'), mm, en, forms jsonb,
   position, examples jsonb, tags[], timestamps`. Units store toolkit id arrays in their JSONB.
