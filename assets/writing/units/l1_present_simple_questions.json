@@ -8,56 +8,214 @@
   "subtitle_mm": "ပစ္စုပ္ပန် ရိုးရိုး — အမေး",
   "teach": {
     "situation_en": "It is Maya's first day at work. Her new friend wants to know about her. \"{v}Do{/v} you {v}live{/v} near here? {v}Do{/v} you {v}drink{/v} coffee? {v}Does{/v} your husband {v}work{/v} in the city?\" Maya {v}smiles{/v} and answers every question.",
-    "situation_mm": "ဒီနေ့က Maya ရဲ့ အလုပ်ပထမဆုံးနေ့ပါ။ သူငယ်ချင်းအသစ်က သူမအကြောင်း သိချင်တယ်။ \"ဒီနားမှာ နေသလား။ ကော်ဖီ သောက်သလား။ မင်းခင်ပွန်း မြို့ထဲမှာ အလုပ်လုပ်သလား။\" Maya က ပြုံးပြီး မေးခွန်းတိုင်းကို ဖြေတယ်။",
+    "situation_mm": "ဒီနေ့က Maya ရဲ့ ပထမဆုံး အလုပ်ဆင်းရက် ဖြစ်ပါတယ်။ သူမရဲ့ လုပ်ဖော်ကိုင်ဖက် အသစ်က သူမအကြောင်းကို သိချင်လို့ \"ဒီအနီးအနားမှာပဲ နေတာလား။ ကော်ဖီရော သောက်တတ်လား။ ခင်ပွန်းကကော မြို့ထဲမှာပဲ အလုပ်လုပ်တာလား။\" ဆိုပြီး မေးမြန်းရာ Maya က ပြုံးပြုံးလေးနဲ့ မေးခွန်းတိုင်းကို ပြန်လည်ဖြေကြားပေးခဲ့ပါတယ်။",
     "use_en": "We use Do / Does + subject + the base verb to ask a yes/no question in the present simple.",
-    "use_mm": "ပစ္စုပ္ပန် ရိုးရိုးမှာ ‘-သလား’ လို့ မေးခွန်း မေးချင်ရင် — ဝါကျရှေ့မှာ Do / Does ထည့်ပြီး subject + ကြိယာ(base) လိုက်ပါတယ်။",
+    "use_mm": "ပစ္စုပ္ပန်ရိုးရိုးကာလ (Present Simple Tense) မှာ Yes/No မေးခွန်း (ဟုတ်/မဟုတ် မေးခွန်း) မေးချင်ရင် Do / Does + Subject + Verb (Base Form) ပုံစံကို အသုံးပြုပါတယ်။\n\n- Do ကို Subject (I, We, You, They) နဲ့ အများကိန်းတွေအတွက် သုံးပါတယ်။\n- Does ကို Subject (He, She, It) နဲ့ အနည်းကိန်းတွေအတွက် သုံးပါတယ်။\n\nမှတ်ချက်။ Does ကို သုံးလိုက်ရင် အနောက်က Verb (ကြိယာ) ကို s/es မထည့်ဘဲ မူရင်းပုံစံ (Base Form) အတိုင်းပဲ ပြန်ပြောင်းပေးရပါမယ်။",
     "timeline": "",
     "form": [
-      { "subject": "I / you / we / they", "form": "Do … work?" },
-      { "subject": "he / she / it", "form": "Does … work?" },
-      { "subject": "after do / does", "form": "base verb — no -s!" },
-      { "subject": "short answers", "form": "Yes, I do. / No, she doesn't." }
+      {
+        "subject": "I / you / we / they",
+        "form": "Do … work?"
+      },
+      {
+        "subject": "he / she / it",
+        "form": "Does … work?"
+      },
+      {
+        "subject": "after do / does",
+        "form": "base verb — no -s!"
+      },
+      {
+        "subject": "short answers",
+        "form": "Yes, I do. / No, she doesn't."
+      }
     ],
-    "form_note_mm": "မေးခွန်းမေးတဲ့အခါ — I / you / we / they ဆိုရင် Do သုံးပါ — Do you work?  he / she / it ဆိုရင် Does သုံးပါ — Does she work?  အစီအစဉ်က Do/Does + subject + ကြိယာ(base)။ does နောက်က ကြိယာကို base form အတိုင်းထားပါ — -s မထည့်ပါနဲ့ (✗ Does she works?)။ အဖြေတိုက Yes, I do. / No, she doesn't.",
+    "form_note_mm": [
+      "I / You / We / They ဆိုရင် Do ကို သုံးပြီး He / She / It ဆိုရင်တော့ Does ကို သုံးရပါတယ်။",
+      "မေးခွန်းတည်ဆောက်ပုံ အစီအစဉ်ကတော့ Do / Does + Subject + Verb (Base Form) ဖြစ်ပါတယ်။",
+      "⚠️ အထူးသတိပြုရန်။",
+      "Do သို့မဟုတ် Does ရဲ့ နောက်မှာလိုက်တဲ့ Verb (ကြိယာ) သည် အမြဲတမ်း မူရင်းပုံစံ (Base Form) ဖြစ်ရပါမယ်။",
+      "✗ Does she works?",
+      "✓ Does she work?",
+      "အမေးကို တိုတိုနဲ့လိုရင်း ပြန်ဖြေမယ် (Short Answer) ဆိုရင်တော့ အောက်ပါအတိုင်း ဖြေဆိုနိုင်ပါတယ်။",
+      "- Yes, I do. / No, I don't.",
+      "- Yes, she does. / No, she doesn't."
+    ],
     "trap_en": "Word order: Do/Does + subject + base verb. After does, NO -s.  WRONG: She works? / Does she works?   RIGHT: Does she work?",
-    "trap_mm": "မြန်မာလို ‘လား’ ကို ဝါကျအဆုံးမှာ ထည့်ပြီးမေးပေမဲ့ အင်္ဂလိပ်လို Do/Does ကို ဝါကျ ရှေ့ဆုံးမှာ ထည့်ရတယ်။ Do/Does ကို မေ့ပြီး ✗ She works? လို့ မမေးရဘူး။ does နောက်က ကြိယာက base — ✗ Does she works? → ✓ Does she work?",
+    "trap_mm": "မြန်မာဘာသာစကားမှာ \"လား\" ဆိုတဲ့ အမေးစကားလုံးကို ဝါကျရဲ့ အဆုံးမှာ ထည့်ပြီး မေးလေ့ရှိပေမဲ့ အင်္ဂလိပ်စာမှာတော့ Do / Does ကို ဝါကျရဲ့ ရှေ့ဆုံးမှာ ထားပြီး မေးရပါတယ်။\nဒါကြောင့် Do / Does ကို ထည့်ဖို့ မေ့သွားပြီး ✗ She works? လို့ လုံးဝ မမေးရပါဘူး။\nထပ်ပြီး သတိထားရမှာကတော့ Does ရဲ့ နောက်မှာရှိတဲ့ ကြိယာ (Verb) ဟာ မူရင်းပုံစံ (Base Form) ဖြစ်ရမှာ ဖြစ်လို့ 's' သို့မဟုတ် 'es' ထည့်စရာ မလိုတော့ပါဘူး။\n✗ Does she works? \n✓ Does she work?",
     "examples": [
-      { "en": "{v}Do{/v} you {v}speak{/v} English?", "mm": "မင်း အင်္ဂလိပ်စကား ပြောတတ်သလား။" },
-      { "en": "{v}Does{/v} she {v}live{/v} in Yangon?", "mm": "သူမ ရန်ကုန်မှာ နေသလား။" },
-      { "en": "{v}Do{/v} they {v}work{/v} {t}on weekends{/t}?", "mm": "သူတို့ စနေတနင်္ဂနွေမှာ အလုပ်လုပ်သလား။" },
-      { "en": "{v}Does{/v} he {v}like{/v} tea?", "mm": "သူ လက်ဖက်ရည် ကြိုက်သလား။" }
+      {
+        "en": "{v}Do{/v} you {v}speak{/v} English?",
+        "mm": "မင်း အင်္ဂလိပ်စကား ပြောတတ်သလား။"
+      },
+      {
+        "en": "{v}Does{/v} she {v}live{/v} in Yangon?",
+        "mm": "သူမ ရန်ကုန်မှာ နေသလား။"
+      },
+      {
+        "en": "{v}Do{/v} they {v}work{/v} {t}on weekends{/t}?",
+        "mm": "သူတို့ စနေတနင်္ဂနွေမှာ အလုပ်လုပ်သလား။"
+      },
+      {
+        "en": "{v}Does{/v} he {v}like{/v} tea?",
+        "mm": "သူ လက်ဖက်ရည် ကြိုက်သလား။"
+      }
+    ],
+    "walkthrough": [
+      {
+        "subject": "I / you / we / they",
+        "rule_mm": "Do + subject + verb (base) … ?",
+        "en": "{v}Do{/v} you {v}work{/v} here?",
+        "why_mm": "Subject က 'you' (I/you/we/they) ဖြစ်လို့ 'Do' ကို ဝါကျရဲ့ ရှေ့ဆုံးမှာ ထားပြီး verb ကို base form 'work' အတိုင်း ထားပါတယ်။"
+      },
+      {
+        "subject": "he / she / it",
+        "rule_mm": "Does + subject + verb (base) … ?",
+        "en": "{v}Does{/v} she {v}work{/v} here?",
+        "why_mm": "Subject က 'she' (he/she/it) ဖြစ်လို့ 'Does' ကို ရှေ့မှာ ထားပါတယ်။"
+      },
+      {
+        "subject": "after Does — no -s",
+        "rule_mm": "Do / Does ရဲ့ နောက်က verb က base form",
+        "en": "{v}Does{/v} she {v}live{/v} here?  (✗ Does she lives)",
+        "why_mm": "'Does' မှာ -s ပါပြီးသား ဖြစ်လို့ နောက်က verb ကို base form 'live' အတိုင်းပဲ ထားရပါတယ်။ မြန်မာလို 'လား' ကို နောက်ထားပေမဲ့ အင်္ဂလိပ်မှာ Do/Does ကို ရှေ့ထားရတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "___ you like tea?",
+        "prompt_mm": "မင်း လက်ဖက်ရည် ကြိုက်သလား။",
+        "options": ["Do", "Does", "Is"],
+        "answer": "Do",
+        "explain_mm": "you → Do you like tea? Is မသုံးဘူး။"
+      },
+      {
+        "prompt_en": "___ she work in Yangon?",
+        "prompt_mm": "သူမ ရန်ကုန်မှာ အလုပ်လုပ်သလား။",
+        "options": ["Do", "Does", "Is"],
+        "answer": "Does",
+        "explain_mm": "she → Does she work? (work က base form)။"
+      },
+      {
+        "prompt_en": "Does she ___ here?",
+        "prompt_mm": "သူမ ဒီမှာ နေသလား။",
+        "options": ["live", "lives", "living"],
+        "answer": "live",
+        "explain_mm": "Does နောက်က verb က base form — live (lives မဟုတ်ဘူး)။"
+      }
     ],
     "model_paragraph_en": "Imagine you meet a new friend. You can ask: {v}Do{/v} you {v}live{/v} near here? {v}Do{/v} you {v}work{/v} or {v}study{/v}? {v}Does{/v} your family {v}live{/v} in Yangon? {v}Do{/v} you {v}like{/v} Burmese food? What time {v}do{/v} you {v}start{/v} work {t}every day{/t}?",
-    "model_paragraph_mm": "သူငယ်ချင်းအသစ်တစ်ယောက်နဲ့ တွေ့တယ်လို့ စဉ်းစားကြည့်ပါ။ ဒီလို မေးနိုင်တယ် — ဒီနားမှာ နေသလား။ အလုပ်လုပ်သလား ဒါမှမဟုတ် ကျောင်းတက်သလား။ မိသားစု ရန်ကုန်မှာ နေသလား။ မြန်မာအစားအစာ ကြိုက်သလား။ နေ့တိုင်း ဘယ်အချိန် အလုပ်စသလဲ။"
+    "model_paragraph_mm": "သူငယ်ချင်းအသစ်တစ်ယောက်နဲ့ တွေ့ဆုံတဲ့အခါ ရင်းနှီးမှုရအောင် အခုလိုမျိုး မေးမြန်းစကားပြောနိုင်ပါတယ် —\n\n- \"ဒီအနီးအနားမှာပဲ နေတာလား။\"\n- \"အလုပ်လုပ်နေတာလား ဒါမှမဟုတ် ကျောင်းတက်နေတာလား။\"\n- \"မိသားစုက ရန်ကုန်မှာပဲ နေတာလား။\"\n- \"မြန်မာအစားအစာ ကြိုက်တတ်လား။\"\n- \"နေ့တိုင်း ဘယ်အချိန် အလုပ်စလုပ်ရလဲ။\"",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          {
+            "subjects": "I · you · we · they",
+            "form": "Do … verb (base)?",
+            "tag": "Do",
+            "example": "{v}Do{/v} you {v}work{/v}?"
+          },
+          {
+            "subjects": "he · she · it",
+            "form": "Does … verb (base)?",
+            "tag": "Does",
+            "highlight": true,
+            "example": "{v}Does{/v} she {v}work{/v}?"
+          }
+        ]
+      }
+    ]
   },
   "toolkit": {
     "verbs": [
-      "v_like", "v_speak", "v_live", "v_work", "v_drink", "v_study",
-      "v_eat", "v_have", "v_go", "v_play", "v_want", "v_watch"
+      "v_like",
+      "v_speak",
+      "v_live",
+      "v_work",
+      "v_drink",
+      "v_study",
+      "v_eat",
+      "v_have",
+      "v_go",
+      "v_play",
+      "v_want",
+      "v_watch"
     ],
     "time_words": [
-      "t_every_day", "t_in_the_morning", "t_on_weekends", "t_on_mondays"
+      "t_every_day",
+      "t_in_the_morning",
+      "t_on_weekends",
+      "t_on_mondays"
     ],
     "verb_form": "base",
     "verb_examples": {
-      "v_like": { "en": "{v}Does{/v} she {v}like{/v} tea?", "mm": "သူမ လက်ဖက်ရည် ကြိုက်သလား။" },
-      "v_speak": { "en": "{v}Do{/v} you {v}speak{/v} English?", "mm": "မင်း အင်္ဂလိပ်စကား ပြောတတ်သလား။" },
-      "v_live": { "en": "{v}Does{/v} he {v}live{/v} here?", "mm": "သူ ဒီမှာ နေသလား။" },
-      "v_work": { "en": "{v}Do{/v} they {v}work{/v} here?", "mm": "သူတို့ ဒီမှာ အလုပ်လုပ်သလား။" },
-      "v_drink": { "en": "{v}Do{/v} you {v}drink{/v} coffee?", "mm": "မင်း ကော်ဖီ သောက်သလား။" },
-      "v_study": { "en": "{v}Does{/v} she {v}study{/v} English?", "mm": "သူမ အင်္ဂလိပ်စာ လေ့လာသလား။" },
-      "v_eat": { "en": "{v}Does{/v} he {v}eat{/v} meat?", "mm": "သူ အသား စားသလား။" },
-      "v_have": { "en": "{v}Do{/v} you {v}have{/v} a car?", "mm": "မင်း ကား ရှိသလား။" },
-      "v_go": { "en": "{v}Does{/v} she {v}go{/v} by bus?", "mm": "သူမ ဘတ်စ်ကားနဲ့ သွားသလား။" },
-      "v_play": { "en": "{v}Do{/v} they {v}play{/v} football?", "mm": "သူတို့ ဘောလုံး ကစားသလား။" },
-      "v_want": { "en": "{v}Do{/v} you {v}want{/v} tea?", "mm": "မင်း လက်ဖက်ရည် လိုချင်သလား။" },
-      "v_watch": { "en": "{v}Does{/v} he {v}watch{/v} TV?", "mm": "သူ TV ကြည့်သလား။" }
+      "v_like": {
+        "en": "{v}Does{/v} she {v}like{/v} tea?",
+        "mm": "သူမ လက်ဖက်ရည် ကြိုက်သလား။"
+      },
+      "v_speak": {
+        "en": "{v}Do{/v} you {v}speak{/v} English?",
+        "mm": "မင်း အင်္ဂလိပ်စကား ပြောတတ်သလား။"
+      },
+      "v_live": {
+        "en": "{v}Does{/v} he {v}live{/v} here?",
+        "mm": "သူ ဒီမှာ နေသလား။"
+      },
+      "v_work": {
+        "en": "{v}Do{/v} they {v}work{/v} here?",
+        "mm": "သူတို့ ဒီမှာ အလုပ်လုပ်သလား။"
+      },
+      "v_drink": {
+        "en": "{v}Do{/v} you {v}drink{/v} coffee?",
+        "mm": "မင်း ကော်ဖီ သောက်သလား။"
+      },
+      "v_study": {
+        "en": "{v}Does{/v} she {v}study{/v} English?",
+        "mm": "သူမ အင်္ဂလိပ်စာ လေ့လာသလား။"
+      },
+      "v_eat": {
+        "en": "{v}Does{/v} he {v}eat{/v} meat?",
+        "mm": "သူ အသား စားသလား။"
+      },
+      "v_have": {
+        "en": "{v}Do{/v} you {v}have{/v} a car?",
+        "mm": "မင်း ကား ရှိသလား။"
+      },
+      "v_go": {
+        "en": "{v}Does{/v} she {v}go{/v} by bus?",
+        "mm": "သူမ ဘတ်စ်ကားနဲ့ သွားသလား။"
+      },
+      "v_play": {
+        "en": "{v}Do{/v} they {v}play{/v} football?",
+        "mm": "သူတို့ ဘောလုံး ကစားသလား။"
+      },
+      "v_want": {
+        "en": "{v}Do{/v} you {v}want{/v} tea?",
+        "mm": "မင်း လက်ဖက်ရည် လိုချင်သလား။"
+      },
+      "v_watch": {
+        "en": "{v}Does{/v} he {v}watch{/v} TV?",
+        "mm": "သူ TV ကြည့်သလား။"
+      }
     },
     "time_word_examples": {
-      "t_every_day": { "en": "{v}Do{/v} you {v}study{/v} {t}every day{/t}?", "mm": "မင်း နေ့တိုင်း စာလုပ်သလား။" },
-      "t_in_the_morning": { "en": "{v}Does{/v} she {v}drink{/v} coffee {t}in the morning{/t}?", "mm": "သူမ မနက်ပိုင်း ကော်ဖီ သောက်သလား။" },
-      "t_on_weekends": { "en": "{v}Do{/v} they {v}work{/v} {t}on weekends{/t}?", "mm": "သူတို့ စနေတနင်္ဂနွေမှာ အလုပ်လုပ်သလား။" },
-      "t_on_mondays": { "en": "{v}Does{/v} he {v}study{/v} {t}on Mondays{/t}?", "mm": "သူ တနင်္လာနေ့ စာလုပ်သလား။" }
+      "t_every_day": {
+        "en": "{v}Do{/v} you {v}study{/v} {t}every day{/t}?",
+        "mm": "မင်း နေ့တိုင်း စာလုပ်သလား။"
+      },
+      "t_in_the_morning": {
+        "en": "{v}Does{/v} she {v}drink{/v} coffee {t}in the morning{/t}?",
+        "mm": "သူမ မနက်ပိုင်း ကော်ဖီ သောက်သလား။"
+      },
+      "t_on_weekends": {
+        "en": "{v}Do{/v} they {v}work{/v} {t}on weekends{/t}?",
+        "mm": "သူတို့ စနေတနင်္ဂနွေမှာ အလုပ်လုပ်သလား။"
+      },
+      "t_on_mondays": {
+        "en": "{v}Does{/v} he {v}study{/v} {t}on Mondays{/t}?",
+        "mm": "သူ တနင်္လာနေ့ စာလုပ်သလား။"
+      }
     }
   },
   "exercises": [
@@ -66,8 +224,14 @@
       "grade": "auto",
       "prompt_en": "___ you like tea?",
       "prompt_mm": "မင်း လက်ဖက်ရည် ကြိုက်သလား။",
-      "options": ["Do", "Does", "Is"],
-      "answers": ["Do"],
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ],
+      "answers": [
+        "Do"
+      ],
       "explain_mm": "you → Do သုံးပါ → Do you like tea?"
     },
     {
@@ -75,8 +239,14 @@
       "grade": "auto",
       "prompt_en": "___ she work in Yangon?",
       "prompt_mm": "သူမ ရန်ကုန်မှာ အလုပ်လုပ်သလား။",
-      "options": ["Do", "Does", "Is"],
-      "answers": ["Does"],
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ],
+      "answers": [
+        "Does"
+      ],
       "explain_mm": "she → Does သုံးပါ → Does she work? (work က base form)။"
     },
     {
@@ -84,24 +254,34 @@
       "grade": "auto",
       "prompt_en": "Does she ___ (live) in Yangon?",
       "prompt_mm": "သူမ ရန်ကုန်မှာ နေသလား။ ( live ကို သုံးပါ )",
-      "answers": ["live"],
-      "explain_mm": "Does နောက်က ကြိယာက base form — live (lives မဟုတ်ဘူး)။"
+      "answers": [
+        "live"
+      ],
+      "explain_mm": "Does နောက်က verb က base form — live (lives မဟုတ်ဘူး)။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  you  /  do  /  coffee  /  drink",
       "prompt_mm": "စကားလုံးတွေကို စီပြီး မေးခွန်းမှန် ရေးပါ။",
-      "answers": ["Do you drink coffee", "Do you drink coffee?", "do you drink coffee?"],
-      "explain_mm": "မေးခွန်းအစီအစဉ်: Do + subject + ကြိယာ(base) → Do you drink coffee?"
+      "answers": [
+        "Do you drink coffee",
+        "Do you drink coffee?",
+        "do you drink coffee?"
+      ],
+      "explain_mm": "မေးခွန်းအစီအစဉ်: Do + subject + verb (base) → Do you drink coffee?"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "Does she works here?",
       "prompt_mm": "မှားနေတဲ့ မေးခွန်းကို ပြင်ပါ။",
-      "answers": ["Does she work here", "Does she work here?", "does she work here?"],
-      "explain_mm": "Does နောက်က ကြိယာက base form ဖြစ်ရမယ် — works → work။"
+      "answers": [
+        "Does she work here",
+        "Does she work here?",
+        "does she work here?"
+      ],
+      "explain_mm": "Does နောက်က verb က base form ဖြစ်ရမယ် — works → work။"
     },
     {
       "kind": "scan_sentences",
@@ -109,9 +289,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — ask a FRIEND. Write 5–8 yes/no questions you could ask a new friend, using \"Do you …?\" (and \"Do they …?\").",
-      "prompt_mm": "အပိုင်း ၁ — သူငယ်ချင်းကို မေးပါ။ သူငယ်ချင်းအသစ်တစ်ယောက်ကို မေးနိုင်တဲ့ yes/no မေးခွန်း ၅–၈ ခု \"Do you …?\" သုံးပြီး ရေးပါ။ Do နောက်က ကြိယာက base form ပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — သူငယ်ချင်းကို မေးပါ။ သူငယ်ချင်းအသစ်တစ်ယောက်ကို မေးနိုင်တဲ့ yes/no မေးခွန်း ၅–၈ ခု \"Do you …?\" သုံးပြီး ရေးပါ။ Do နောက်က verb က base form ပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
       "model": "{v}Do{/v} you {v}live{/v} near here? {v}Do{/v} you {v}work{/v} or {v}study{/v}? {v}Do{/v} you {v}like{/v} coffee? {v}Do{/v} you {v}speak{/v} English? {v}Do{/v} you {v}play{/v} football {t}on weekends{/t}?",
-      "explain_mm": "‘you / they’ နဲ့ဆို Do သုံးပါ။ Do/Does နောက်က ကြိယာ အမြဲ base form — -s မထည့်ပါနဲ့။",
+      "explain_mm": "‘you / they’ နဲ့ဆို Do သုံးပါ။ Do/Does နောက်က verb အမြဲ base form — -s မထည့်ပါနဲ့။",
       "grading": {
         "grammar_point": "Present simple questions (do / does)",
         "rule": "Yes/no questions: Do + I/you/we/they + base verb; Does + he/she/it + base verb. The auxiliary comes first and the main verb stays in the base form (no -s).",
@@ -126,7 +306,10 @@
           "Adding -s after does (Does she works?)",
           "Using Do with he/she (or Does with you/they)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
@@ -135,9 +318,9 @@
       "min_lines": 4,
       "max_lines": 6,
       "prompt_en": "Part 2 — ask about SOMEONE ELSE. Write 4–6 questions about a family member (he / she), using \"Does he/she …?\" — base verb, no -s!",
-      "prompt_mm": "အပိုင်း ၂ — တခြားသူတစ်ယောက်အကြောင်း မေးပါ။ မိသားစုဝင်တစ်ယောက် (he / she) အကြောင်း မေးခွန်း ၄–၆ ခု \"Does he/she …?\" သုံးပြီး ရေးပါ — ကြိယာက base form, -s မထည့်ပါနဲ့! ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — တခြားသူတစ်ယောက်အကြောင်း မေးပါ။ မိသားစုဝင်တစ်ယောက် (he / she) အကြောင်း မေးခွန်း ၄–၆ ခု \"Does he/she …?\" သုံးပြီး ရေးပါ — verb က base form, -s မထည့်ပါနဲ့! ပြီးရင် scan လုပ်ပါ။",
       "model": "{v}Does{/v} she {v}live{/v} with you? {v}Does{/v} he {v}work{/v} in the city? {v}Does{/v} she {v}like{/v} sport? {v}Does{/v} he {v}study{/v} at night? {v}Does{/v} she {v}cook{/v} {t}every day{/t}?",
-      "explain_mm": "he / she နဲ့ဆို Does သုံးပါ။ Does နောက်က ကြိယာတိုင်း base form — Does she works? (✗) → Does she work? (✓)။",
+      "explain_mm": "he / she နဲ့ဆို Does သုံးပါ။ Does နောက်က verb တိုင်း base form — Does she works? (✗) → Does she work? (✓)။",
       "grading": {
         "grammar_point": "Present simple questions (do / does)",
         "rule": "Yes/no questions about a he/she subject. Every question starts with Does + subject + base verb (no -s on the main verb).",
@@ -152,7 +335,10 @@
           "Using Do with he/she",
           "Dropping the auxiliary (She works?)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

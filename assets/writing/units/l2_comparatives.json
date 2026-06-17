@@ -1,0 +1,190 @@
+{
+  "id": "l2_comparatives",
+  "level": 2,
+  "section": "Comparisons",
+  "order": 1,
+  "type": "grammar_unit",
+  "title": "Comparatives (-er / more)",
+  "subtitle_mm": "နှိုင်းယှဉ် — -er / more",
+  "teach": {
+    "situation_en": "My new phone is {v}faster{/v} than my old one, but it is also {v}more expensive{/v}. Yangon is {v}bigger{/v} than my town, and the traffic is {v}worse{/v}. But for me the food here is {v}better{/v}!",
+    "situation_mm": "ကျွန်တော့်ဖုန်းအသစ်က အဟောင်းထက် ပိုမြန်ပေမဲ့ ပိုစျေးကြီးတယ်။ ရန်ကုန်က ကျွန်တော့်မြို့ထက် ပိုကြီးပြီး ယာဉ်ကြောက ပိုဆိုးတယ်။ ဒါပေမဲ့ ကျွန်တော့်အတွက် ဒီက အစားအစာက ပိုကောင်းတယ်!",
+    "use_en": "We use comparatives to compare two things. Add -er to short adjectives (tall → taller) and use 'more' before long adjectives (more expensive). Put 'than' after the comparative.",
+    "use_mm": "နှစ်ခု နှိုင်းယှဉ်ဖို့ comparative သုံးပါတယ်။ short adjective မှာ -er ထည့်ပါ (tall → taller)၊ long adjective ရှေ့မှာ more သုံးပါ (more expensive)။ comparative နောက်မှာ than ထည့်ပါ။",
+    "timeline": "A  ───vs───  B   (compare two)",
+    "form": [
+      { "subject": "short adjective (1 syllable)", "form": "+ -er  (cheap → cheaper)" },
+      { "subject": "ending -e  ·  consonant-vowel-consonant", "form": "nice → nicer · big → bigger" },
+      { "subject": "consonant + y", "form": "happy → happier" },
+      { "subject": "long adjective (2+ syllables)", "form": "more + adjective  (more careful)" }
+    ],
+    "form_note_mm": [
+      "short adjective (1 syllable) → + -er (tall → taller)။ long adjective (2 syllable+) → more + adjective (more expensive)။",
+      "spelling — nice → nicer (-e ဆို -r ပဲ); big → bigger (double); happy → happier (y → ier)။",
+      "irregular — good → better, bad → worse, far → further။",
+      "နှိုင်းယှဉ်ရာမှာ than သုံးပါ — She is taller than me။"
+    ],
+    "trap_en": "Use -er OR more, not both. Don't add -er to a long adjective.  WRONG: more taller / expensiver   RIGHT: taller / more expensive",
+    "trap_mm": "-er ဒါမှမဟုတ် more — နှစ်ခုလုံး မသုံးရဘူး။ long adjective မှာ -er မထည့်ရဘူး။ ✗ more taller / expensiver → ✓ taller / more expensive။",
+    "examples": [
+      { "en": "A train is {v}faster{/v} than a bus.", "mm": "ရထားက ဘတ်စ်ကားထက် ပိုမြန်တယ်။" },
+      { "en": "This bag is {v}more expensive{/v} than that one.", "mm": "ဒီအိတ်က ဟိုဟာထက် ပိုစျေးကြီးတယ်။" },
+      { "en": "Today is {v}hotter{/v} than yesterday.", "mm": "ဒီနေ့က မနေ့ထက် ပိုပူတယ်။" },
+      { "en": "My sister is {v}better{/v} at maths than me.", "mm": "အစ်မက သင်္ချာမှာ ကျွန်တော့်ထက် ပိုတော်တယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "short adjective",
+        "rule_mm": "short adjective (1 syllable) → + -er + than",
+        "en": "A train is {v}faster{/v} than a bus.",
+        "why_mm": "'fast' က short adjective ဖြစ်လို့ -er ထည့်ပြီး 'faster' လုပ်ပါတယ်။ နှိုင်းယှဉ်တာ မို့ နောက်မှာ 'than' ထည့်ပါတယ်။"
+      },
+      {
+        "subject": "long adjective",
+        "rule_mm": "long adjective (2+ syllables) → more + adjective + than",
+        "en": "This bag is {v}more expensive{/v} than that one.",
+        "why_mm": "'expensive' က long adjective ဖြစ်လို့ -er မထည့်ဘဲ ရှေ့မှာ 'more' သုံးပါတယ်။ 'expensiver' လို့ မရေးပါဘူး။"
+      },
+      {
+        "subject": "not both — and irregular",
+        "rule_mm": "-er ဒါမှမဟုတ် more — တစ်ခုပဲ။ good → better, bad → worse",
+        "en": "He is {v}taller{/v} than me.  (✗ more taller)",
+        "why_mm": "-er နဲ့ more ကို တစ်ပြိုင်တည်း မသုံးရပါဘူး — 'taller' ပဲ မှန်ပါတယ်။ irregular adjective တချို့လည်း ရှိတယ် — good → better, bad → worse။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "An elephant is ___ than a dog.",
+        "prompt_mm": "ဆင်က ခွေးထက် ပိုကြီးတယ်။",
+        "options": ["bigger", "more big", "biger"],
+        "answer": "bigger",
+        "explain_mm": "short adjective → + -er၊ -g ကို double → bigger။"
+      },
+      {
+        "prompt_en": "This book is ___ than that one.",
+        "prompt_mm": "ဒီစာအုပ်က ဟိုဟာထက် ပိုစိတ်ဝင်စားဖွယ်ကောင်းတယ်။",
+        "options": ["interestinger", "more interesting", "interesting"],
+        "answer": "more interesting",
+        "explain_mm": "long adjective → more + adjective → more interesting။"
+      },
+      {
+        "prompt_en": "He is ___ than me.",
+        "prompt_mm": "သူက ကျွန်တော့်ထက် ပိုရှည်တယ်။",
+        "options": ["taller", "more taller", "more tall"],
+        "answer": "taller",
+        "explain_mm": "-er နဲ့ more နှစ်ခုလုံး မသုံးရဘူး → taller ပဲ။"
+      }
+    ],
+    "model_paragraph_en": "I think living in a village is {v}better{/v} than living in a city. The air is {v}cleaner{/v} and life is {v}quieter{/v}. Houses are {v}cheaper{/v} too. A city is {v}busier{/v} and {v}more exciting{/v}, but it is also {v}more stressful{/v}. For me, a quiet life is {v}more important{/v} than money.",
+    "model_paragraph_mm": "ရွာမှာ နေတာက မြို့မှာ နေတာထက် ပိုကောင်းတယ် ထင်တယ်။ လေက ပိုသန့်ပြီး ဘဝက ပိုတိတ်ဆိတ်တယ်။ အိမ်တွေလည်း ပိုစျေးချိုတယ်။ မြို့က ပိုရှုပ်ပြီး ပိုစိတ်လှုပ်ရှားဖွယ်ကောင်းပေမဲ့ ပိုစိတ်ဖိစီးစရာလည်း ကောင်းတယ်။ ကျွန်တော့်အတွက် တိတ်ဆိတ်တဲ့ ဘဝက ပိုက်ဆံထက် ပိုအရေးကြီးတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "short adjective (1 syllable)", "form": "adjective + -er", "tag": "-er", "example": "tall → taller" },
+          { "subjects": "long adjective (2+ syllables)", "form": "more + adjective", "tag": "more", "highlight": true, "example": "useful → more useful" },
+          { "subjects": "irregular", "form": "special form", "tag": "irreg.", "example": "good → better · bad → worse" }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [],
+    "time_words": [],
+    "note_mm": "common comparatives — tall → taller, big → bigger, hot → hotter, cheap → cheaper, happy → happier, easy → easier, good → better, bad → worse, far → further, expensive → more expensive, beautiful → more beautiful, important → more important။ နောက်မှာ than သုံးပါ။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "An elephant is ___ than a dog. (big)",
+      "prompt_mm": "ဆင်က ခွေးထက် ပိုကြီးတယ်။",
+      "options": ["bigger", "more big", "biger"],
+      "answers": ["bigger"],
+      "explain_mm": "short adjective → + -er၊ -g ကို double → bigger။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This book is ___ than that one. (interesting)",
+      "prompt_mm": "ဒီစာအုပ်က ဟိုဟာထက် ပိုစိတ်ဝင်စားဖွယ်ကောင်းတယ်။",
+      "options": ["interestinger", "more interesting", "interesting"],
+      "answers": ["more interesting"],
+      "explain_mm": "long adjective → more + adjective → more interesting။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She is ___ (happy) than before.",
+      "prompt_mm": "သူမ အရင်ထက် ပိုပျော်တယ်။ ( happy ကို သုံးပါ )",
+      "answers": ["happier"],
+      "explain_mm": "consonant + y → y ကို i ပြောင်း + -er → happier။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He is more taller than me.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["He is taller than me", "he is taller than me."],
+      "explain_mm": "more နဲ့ -er နှစ်ခုလုံး မသုံးရဘူး → taller ပဲ။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  than  /  is  /  she  /  taller  /  me",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "answers": ["She is taller than me", "she is taller than me."],
+      "explain_mm": "Subject + be + comparative + than + ... → She is taller than me."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — compare two things. Write 5–8 sentences comparing two things you know (two cities, two phones, two people), using comparatives with 'than'.",
+      "prompt_mm": "အပိုင်း ၁ — နှစ်ခု နှိုင်းယှဉ်ပါ။ ကိုယ်သိတဲ့ အရာ နှစ်ခု (မြို့ နှစ်မြို့၊ ဖုန်း နှစ်လုံး၊ လူ နှစ်ယောက်) ကို comparative နဲ့ than သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "My city is {v}bigger{/v} than my hometown. It is {v}busier{/v} and {v}noisier{/v}. The food is {v}more expensive{/v} here. But the people are {v}friendlier{/v} in my hometown. The air there is {v}cleaner{/v} too.",
+      "explain_mm": "short adjective → -er, long adjective → more၊ နောက်မှာ than ထည့်ပါ။ more နဲ့ -er မရောပါနဲ့။",
+      "grading": {
+        "grammar_point": "Comparatives (-er / more)",
+        "rule": "-er on short adjectives, 'more' before long adjectives; 'than' after the comparative. Spelling: big→bigger, happy→happier. Irregular: good→better, bad→worse.",
+        "must_check": [
+          "-er for short adjectives, 'more' for long ones (not both)",
+          "'than' used to compare",
+          "Correct spelling (bigger, happier) and irregulars (better, worse)",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "more + -er together (more taller)",
+          "-er on a long adjective (expensiver)",
+          "Dropping 'than'"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — then and now. Write a short paragraph (4–6 sentences) comparing your life now with the past (or a new thing with an old one), using comparatives.",
+      "prompt_mm": "အပိုင်း ၂ — အရင်နဲ့ အခု။ အခု ဘဝကို အတိတ်နဲ့ (ဒါမှမဟုတ် အရာအသစ်ကို အဟောင်းနဲ့) comparative သုံးပြီး နှိုင်းယှဉ်ကာ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My life now is {v}busier{/v} than before. My job is {v}harder{/v} but {v}more interesting{/v}. I am {v}healthier{/v} because I walk more. My English is {v}better{/v} too. The only problem is that the city is {v}more expensive{/v} than my old town.",
+      "explain_mm": "comparative တွေကို မှန်အောင် သုံးပါ — short -er, long more, irregular (better, worse)။",
+      "grading": {
+        "grammar_point": "Comparatives (-er / more)",
+        "rule": "Compare two states/times with correct comparative forms and 'than' where needed.",
+        "must_check": [
+          "Correct -er vs more choice",
+          "Correct spelling and irregular forms",
+          "Clear comparison of two things/times",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Double comparative (more better)",
+          "Wrong form on long adjectives",
+          "Missing 'than' when comparing"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

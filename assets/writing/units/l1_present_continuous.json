@@ -18,7 +18,11 @@
       { "subject": "you / we / they", "form": "are working" },
       { "subject": "the verb", "form": "base + -ing" }
     ],
-    "form_note_mm": "Present continuous = be (am / is / are) + ကြိယာ-ing။ I → am, he/she/it → is, you/we/they → are.  အရေးကြီးတာက be ကို မမေ့ဖို့ပါ — ✗ I working → ✓ I am working.  -ing စာလုံးပေါင်း — အများစုက +ing (work → working); -e နဲ့ဆုံးရင် e ကိုဖြုတ် (make → making); သရတိုနောက် ဗျည်းတစ်လုံးဆို double (run → running)။",
+    "form_note_mm": [
+      "Present continuous = be (am / is / are) + verb-ing။",
+      "be ကို မမေ့ပါနဲ့ — ✗ I working → ✓ I am working။",
+      "-ing spelling — work → working, make → making, run → running။"
+    ],
     "trap_en": "Don't forget am / is / are.  WRONG: I working now. / She cooking.   RIGHT: I am working now. / She is cooking.",
     "trap_mm": "မြန်မာစာမှာ ‘be’ မရှိတဲ့အတွက် am / is / are ကို မေ့ပြီး ✗ I working / She cooking လို့ မှားတတ်တယ်။ am/is/are + verb-ing အပြည့်အစုံ လိုပါတယ်။",
     "examples": [
@@ -27,8 +31,61 @@
       { "en": "They {v}are playing{/v} football.", "mm": "သူတို့ ဘောလုံး ကစားနေကြတယ်။" },
       { "en": "We {v}are studying{/v} English.", "mm": "ကျွန်တော်တို့ အင်္ဂလိပ်စာ လေ့လာနေကြတယ်။" }
     ],
+    "walkthrough": [
+      {
+        "subject": "I",
+        "rule_mm": "I → am + verb-ing",
+        "en": "I {v}am reading{/v} a book.",
+        "why_mm": "Subject က 'I' ဖြစ်လို့ 'am' နဲ့တွဲပြီး verb ကို 'reading' (base + -ing) လုပ်ပါတယ်။ be (am) ကို မမေ့ပါနဲ့။"
+      },
+      {
+        "subject": "he / she / it",
+        "rule_mm": "He · She · It → is + verb-ing",
+        "en": "She {v}is cooking{/v} dinner.",
+        "why_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ 'is' နဲ့တွဲပြီး 'cooking' လုပ်ပါတယ်။ အခု ဖြစ်နေဆဲ ဖြစ်လို့ present continuous သုံးတာပါ။"
+      },
+      {
+        "subject": "you / we / they",
+        "rule_mm": "You · We · They → are + verb-ing",
+        "en": "They {v}are playing{/v} football.",
+        "why_mm": "Subject က 'They' (you/we/they) ဖြစ်လို့ 'are' နဲ့တွဲပြီး 'playing' လုပ်ပါတယ်။ ✗ They playing မဟုတ်ဘဲ are ပါမှ မှန်ပါတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "She ___ dinner now.",
+        "prompt_mm": "သူမ အခု ညစာ ချက်နေတယ်။",
+        "options": ["cooks", "is cooking", "cooking"],
+        "answer": "is cooking",
+        "explain_mm": "'now' — အခုဖြစ်နေဆဲ + she → is + cooking။"
+      },
+      {
+        "prompt_en": "They ___ football now.",
+        "prompt_mm": "သူတို့ အခု ဘောလုံး ကစားနေကြတယ်။",
+        "options": ["play", "are playing", "plays"],
+        "answer": "are playing",
+        "explain_mm": "they + အခုဖြစ်နေဆဲ → are + playing။"
+      },
+      {
+        "prompt_en": "I ___ a book right now.",
+        "prompt_mm": "ကျွန်တော် အခု စာအုပ် ဖတ်နေတယ်။",
+        "options": ["read", "am reading", "reading"],
+        "answer": "am reading",
+        "explain_mm": "I + am + verb-ing → am reading။ be ကို မမေ့နဲ့။"
+      }
+    ],
     "model_paragraph_en": "It is seven o'clock in the evening and my family is at home. My mother {v}is cooking{/v} dinner in the kitchen. My father {v}is reading{/v} the newspaper. My sister and I {v}are watching{/v} TV. The dog {v}is sleeping{/v} on the floor. We {v}are{/v} all {v}relaxing{/v} after a long day.",
-    "model_paragraph_mm": "အခု ညနေ ၇ နာရီဖြစ်ပြီး ကျွန်တော့်မိသားစု အိမ်မှာ ရှိတယ်။ အမေက မီးဖိုချောင်မှာ ညစာ ချက်နေတယ်။ အဖေက သတင်းစာ ဖတ်နေတယ်။ ကျွန်တော်နဲ့ အစ်မက TV ကြည့်နေတယ်။ ခွေးက ကြမ်းပြင်ပေါ်မှာ အိပ်နေတယ်။ နေ့ရှည်ကြီးပြီးနောက် အားလုံး အနားယူနေကြတယ်။"
+    "model_paragraph_mm": "အခု ညနေ ၇ နာရီဖြစ်ပြီး ကျွန်တော့်မိသားစု အိမ်မှာ ရှိတယ်။ အမေက မီးဖိုချောင်မှာ ညစာ ချက်နေတယ်။ အဖေက သတင်းစာ ဖတ်နေတယ်။ ကျွန်တော်နဲ့ အစ်မက TV ကြည့်နေတယ်။ ခွေးက ကြမ်းပြင်ပေါ်မှာ အိပ်နေတယ်။ နေ့ရှည်ကြီးပြီးနောက် အားလုံး အနားယူနေကြတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "I", "form": "am + verb-ing", "tag": "I'm", "example": "I {v}am reading{/v} a book." },
+          { "subjects": "he · she · it", "form": "is + verb-ing", "tag": "he's", "example": "She {v}is cooking{/v} dinner." },
+          { "subjects": "you · we · they", "form": "are + verb-ing", "tag": "they're", "example": "They {v}are playing{/v} football." }
+        ]
+      }
+    ]
   },
   "toolkit": {
     "verbs": [
@@ -83,7 +140,7 @@
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "She cooking dinner.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": ["She is cooking dinner", "she is cooking dinner."],
       "explain_mm": "be (is) ကို မမေ့နဲ့ → She is cooking dinner."
     },
@@ -91,7 +148,7 @@
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  is  /  she  /  a book  /  reading",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
       "answers": ["She is reading a book", "she is reading a book."],
       "explain_mm": "Subject + be + verb-ing → She is reading a book."
     },
@@ -101,9 +158,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — RIGHT NOW. Write 5–8 sentences about what is happening around you at this moment. Use am / is / are + verb-ing.",
-      "prompt_mm": "အပိုင်း ၁ — အခုချက်ချင်း။ အခု သင့်ပတ်ဝန်းကျင်မှာ ဖြစ်ပျက်နေတာတွေကို ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ am / is / are + verb-ing သုံးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — အခုချက်ချင်း။ အခု သင့်ပတ်ဝန်းကျင်မှာ ဖြစ်ပျက်နေတာတွေကို sentence ၅–၈ ကြောင်း ရေးပါ။ am / is / are + verb-ing သုံးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
       "model": "I {v}am sitting{/v} at my desk. My phone {v}is charging{/v}. Outside, it {v}is raining{/v}. My brother {v}is watching{/v} TV. We {v}are waiting{/v} for dinner.",
-      "explain_mm": "be (am/is/are) ကို မမေ့နဲ့၊ ကြိယာတိုင်းမှာ -ing ပါပါစေ။ subject နဲ့ be ကိုက်ညီအောင် ထားပါ။",
+      "explain_mm": "be (am/is/are) ကို မမေ့နဲ့၊ verb တိုင်းမှာ -ing ပါပါစေ။ subject နဲ့ be ကိုက်ညီအောင် ထားပါ။",
       "grading": {
         "grammar_point": "Present continuous (am/is/are + -ing)",
         "rule": "am/is/are + verb-ing for actions happening at the moment of speaking. The verb 'be' must be present and must agree with the subject.",
@@ -125,7 +182,7 @@
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a scene. Write a short paragraph (4–6 sentences) describing what people are doing in one place right now (at home, in a market, in a classroom). Use am / is / are + verb-ing.",
-      "prompt_mm": "အပိုင်း ၂ — မြင်ကွင်းတစ်ခု။ နေရာတစ်ခု (အိမ်၊ ဈေး၊ စာသင်ခန်း) မှာ လူတွေ အခု ဘာလုပ်နေလဲဆိုတာ စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ am / is / are + verb-ing သုံးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — မြင်ကွင်းတစ်ခု။ နေရာတစ်ခု (အိမ်၊ ဈေး၊ စာသင်ခန်း) မှာ လူတွေ အခု ဘာလုပ်နေလဲဆိုတာ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ am / is / are + verb-ing သုံးပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "It is busy in the market this morning. A woman {v}is selling{/v} vegetables. Two children {v}are running{/v} between the stalls. An old man {v}is drinking{/v} tea. Some people {v}are buying{/v} fish, and a young man {v}is carrying{/v} a heavy basket.",
       "explain_mm": "မြင်ကွင်းတစ်ခုလုံး present continuous နဲ့ ရေးပါ — subject တိုင်းမှာ am/is/are + verb-ing ပါပါစေ။",
       "grading": {

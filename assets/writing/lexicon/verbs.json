@@ -169,5 +169,176 @@
       { "en": "Work {v}starts{/v} at nine.", "mm": "အလုပ် ၉ နာရီမှာ စတယ်။" }
     ],
     "tags": ["daily-routine", "a1"]
+  },
+  {
+    "id": "v_know",
+    "mm": "သိသည်",
+    "forms": { "base": "know", "third": "knows", "past": "knew", "past_participle": "known", "ing": "knowing" },
+    "examples": [
+      { "en": "She {v}knows{/v} the answer.", "mm": "သူမ အဖြေ သိတယ်။" }
+    ],
+    "tags": ["a1", "irregular"]
+  },
+  {
+    "id": "v_help",
+    "mm": "ကူညီသည်",
+    "forms": { "base": "help", "third": "helps", "past": "helped", "past_participle": "helped", "ing": "helping" },
+    "examples": [
+      { "en": "He {v}helps{/v} his mother.", "mm": "သူ အမေကို ကူညီတယ်။" }
+    ],
+    "tags": ["a1"]
+  },
+  {
+    "id": "v_leave",
+    "mm": "ထွက်ခွာသည်",
+    "forms": { "base": "leave", "third": "leaves", "past": "left", "past_participle": "left", "ing": "leaving" },
+    "examples": [
+      { "en": "She {v}leaves{/v} home at seven.", "mm": "သူမ ၇ နာရီမှာ အိမ်က ထွက်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "irregular"]
+  },
+  {
+    "id": "v_call",
+    "mm": "(ဖုန်း) ခေါ်သည်",
+    "forms": { "base": "call", "third": "calls", "past": "called", "past_participle": "called", "ing": "calling" },
+    "examples": [
+      { "en": "He {v}calls{/v} his family {t}every week{/t}.", "mm": "သူ မိသားစုကို အပတ်တိုင်း ဖုန်းခေါ်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a1"]
+  },
+  {
+    "id": "v_finish",
+    "mm": "ပြီးဆုံးသည်",
+    "forms": { "base": "finish", "third": "finishes", "past": "finished", "past_participle": "finished", "ing": "finishing" },
+    "examples": [
+      { "en": "She {v}finishes{/v} work at five.", "mm": "သူမ ၅ နာရီမှာ အလုပ် ပြီးတယ်။" }
+    ],
+    "tags": ["daily-routine", "a1", "spelling-es"]
+  },
+  {
+    "id": "v_see",
+    "mm": "မြင်သည် / တွေ့သည်",
+    "forms": { "base": "see", "third": "sees", "past": "saw", "past_participle": "seen", "ing": "seeing" },
+    "examples": [
+      { "en": "I {v}see{/v} my friends {t}at the weekend{/t}.", "mm": "ငါ စနေတနင်္ဂနွေ သူငယ်ချင်းတွေနဲ့ တွေ့တယ်။" }
+    ],
+    "tags": ["a1", "irregular"]
+  },
+  {
+    "id": "v_make",
+    "mm": "ပြုလုပ်သည်",
+    "forms": { "base": "make", "third": "makes", "past": "made", "past_participle": "made", "ing": "making" },
+    "examples": [
+      { "en": "They {v}make{/v} furniture here.", "mm": "ဒီမှာ ပရိဘောဂ ပြုလုပ်တယ်။" }
+    ],
+    "tags": ["a2", "irregular"]
+  },
+  {
+    "id": "v_build",
+    "mm": "ဆောက်လုပ်သည်",
+    "forms": { "base": "build", "third": "builds", "past": "built", "past_participle": "built", "ing": "building" },
+    "examples": [
+      { "en": "They {v}build{/v} houses near the river.", "mm": "သူတို့ မြစ်နားမှာ အိမ် ဆောက်တယ်။" }
+    ],
+    "tags": ["a2", "irregular"]
+  },
+  {
+    "id": "v_write",
+    "mm": "ရေးသည်",
+    "forms": { "base": "write", "third": "writes", "past": "wrote", "past_participle": "written", "ing": "writing" },
+    "examples": [
+      { "en": "She {v}writes{/v} stories for children.", "mm": "သူမ ကလေးတွေအတွက် ဇာတ်လမ်း ရေးတယ်။" }
+    ],
+    "tags": ["a2", "irregular"]
+  },
+  {
+    "id": "v_clean",
+    "mm": "သန့်ရှင်းရေး လုပ်သည်",
+    "forms": { "base": "clean", "third": "cleans", "past": "cleaned", "past_participle": "cleaned", "ing": "cleaning" },
+    "examples": [
+      { "en": "He {v}cleans{/v} the office {t}every day{/t}.", "mm": "သူ ရုံးကို နေ့တိုင်း သန့်ရှင်းရေး လုပ်တယ်။" }
+    ],
+    "tags": ["daily-routine", "a2"]
+  },
+  {
+    "id": "v_send",
+    "mm": "ပို့သည်",
+    "forms": { "base": "send", "third": "sends", "past": "sent", "past_participle": "sent", "ing": "sending" },
+    "examples": [
+      { "en": "I {v}send{/v} an email {t}every morning{/t}.", "mm": "ငါ မနက်တိုင်း အီးမေးလ် ပို့တယ်။" }
+    ],
+    "tags": ["a2", "irregular"]
+  },
+  {
+    "id": "v_use",
+    "mm": "သုံးသည်",
+    "forms": { "base": "use", "third": "uses", "past": "used", "past_participle": "used", "ing": "using" },
+    "examples": [
+      { "en": "People {v}use{/v} this app {t}every day{/t}.", "mm": "လူတွေ ဒီအက်ပ်ကို နေ့တိုင်း သုံးတယ်။" }
+    ],
+    "tags": ["a2"]
+  },
+  {
+    "id": "v_say",
+    "mm": "ပြောသည်",
+    "forms": { "base": "say", "third": "says", "past": "said", "past_participle": "said", "ing": "saying" },
+    "examples": [
+      { "en": "She {v}says{/v} she is tired.", "mm": "သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။" }
+    ],
+    "tags": ["a2", "irregular", "reporting"]
+  },
+  {
+    "id": "v_tell",
+    "mm": "ပြောပြသည် (လူတစ်ဦးကို)",
+    "forms": { "base": "tell", "third": "tells", "past": "told", "past_participle": "told", "ing": "telling" },
+    "examples": [
+      { "en": "He {v}tells{/v} me the truth.", "mm": "သူ ငါ့ကို အမှန်အတိုင်း ပြောတယ်။" }
+    ],
+    "tags": ["a2", "irregular", "reporting"]
+  },
+  {
+    "id": "v_ask",
+    "mm": "မေးသည် / တောင်းဆိုသည်",
+    "forms": { "base": "ask", "third": "asks", "past": "asked", "past_participle": "asked", "ing": "asking" },
+    "examples": [
+      { "en": "She {v}asks{/v} a lot of questions.", "mm": "သူမ မေးခွန်း အများကြီး မေးတယ်။" }
+    ],
+    "tags": ["a2", "reporting"]
+  },
+  {
+    "id": "v_come",
+    "mm": "လာသည်",
+    "forms": { "base": "come", "third": "comes", "past": "came", "past_participle": "come", "ing": "coming" },
+    "examples": [
+      { "en": "She {v}comes{/v} to work by bus.", "mm": "သူမ အလုပ်ကို ဘတ်စ်ကားနဲ့ လာတယ်။" }
+    ],
+    "tags": ["a1", "irregular"]
+  },
+  {
+    "id": "v_wait",
+    "mm": "စောင့်သည်",
+    "forms": { "base": "wait", "third": "waits", "past": "waited", "past_participle": "waited", "ing": "waiting" },
+    "examples": [
+      { "en": "He {v}waits{/v} for the bus {t}every morning{/t}.", "mm": "သူ မနက်တိုင်း ဘတ်စ်ကား စောင့်တယ်။" }
+    ],
+    "tags": ["a2"]
+  },
+  {
+    "id": "v_sell",
+    "mm": "ရောင်းသည်",
+    "forms": { "base": "sell", "third": "sells", "past": "sold", "past_participle": "sold", "ing": "selling" },
+    "examples": [
+      { "en": "That shop {v}sells{/v} fresh fruit.", "mm": "အဲဒီဆိုင်က လတ်ဆတ်တဲ့ အသီးအနှံ ရောင်းတယ်။" }
+    ],
+    "tags": ["a2", "irregular"]
+  },
+  {
+    "id": "v_cost",
+    "mm": "(ဈေး) ကျသည်",
+    "forms": { "base": "cost", "third": "costs", "past": "cost", "past_participle": "cost", "ing": "costing" },
+    "examples": [
+      { "en": "These shoes {v}cost{/v} a lot.", "mm": "ဒီဖိနပ်တွေ ဈေးများတယ်။" }
+    ],
+    "tags": ["a2", "irregular"]
   }
 ]

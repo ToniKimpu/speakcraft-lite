@@ -1,0 +1,189 @@
+{
+  "id": "l2_connectors_because_so",
+  "level": 2,
+  "section": "Quantifiers & connectors",
+  "order": 3,
+  "type": "grammar_unit",
+  "title": "Connectors: because / so",
+  "subtitle_mm": "because / so — အကြောင်းပြ / အကျိုးဆက်",
+  "teach": {
+    "situation_en": "I stayed home {v}because{/v} it was raining. It was raining, {v}so{/v} I stayed home. She studied hard, {v}so{/v} she passed. He was late {v}because{/v} the bus broke down.",
+    "situation_mm": "မိုးရွာနေလို့ အိမ်မှာ နေခဲ့တယ်။ မိုးရွာနေတယ်၊ ဒါကြောင့် အိမ်မှာ နေခဲ့တယ်။ သူမ ကြိုးစားလို့ အောင်တယ်။ ဘတ်စ်ကား ပျက်လို့ သူ နောက်ကျတယ်။",
+    "use_en": "We use 'because' to give a reason (because + reason) and 'so' to give a result (reason, so + result). They describe the same situation but in opposite order.",
+    "use_mm": "အကြောင်းရင်း ပြောဖို့ because (because + reason)၊ အကျိုးဆက် ပြောဖို့ so (reason, so + result) သုံးပါတယ်။ တူညီတဲ့ အခြေအနေ ဒါပေမဲ့ အစီအစဉ် ပြောင်းပြန်။",
+    "timeline": "result ← because ← reason   |   reason → so → result",
+    "form": [
+      { "subject": "because + reason", "form": "result because reason  (I'm tired because I worked.)" },
+      { "subject": "so + result", "form": "reason, so result  (I worked, so I'm tired.)" },
+      { "subject": "because", "form": "answers 'why?'" },
+      { "subject": "so", "form": "shows the result (use a comma before 'so')" }
+    ],
+    "form_note_mm": [
+      "because + အကြောင်းရင်း (reason) — I was late because the bus was slow။",
+      "so + အကျိုးဆက် (result) — The bus was slow, so I was late။",
+      "တူညီတဲ့ အကြောင်းအရာ ဒါပေမဲ့ အစီအစဉ် ပြောင်းတယ် — because က reason ကို၊ so က result ကို ချိတ်တယ်။",
+      "so ရှေ့မှာ comma (,) သုံးလေ့ရှိတယ် — …, so …။"
+    ],
+    "trap_en": "Use because OR so, not both in one sentence.  WRONG: Because it was raining, so I stayed home.   RIGHT: Because it was raining, I stayed home. / It was raining, so I stayed home.",
+    "trap_mm": "because ဒါမှမဟုတ် so — တစ်ဝါကျတည်းမှာ နှစ်ခုလုံး မသုံးရဘူး။ ✗ Because it was raining, so I stayed home → ✓ Because it was raining, I stayed home / It was raining, so I stayed home။",
+    "examples": [
+      { "en": "I was happy {v}because{/v} I passed.", "mm": "အောင်လို့ ဝမ်းသာတယ်။" },
+      { "en": "I passed, {v}so{/v} I was happy.", "mm": "အောင်တယ်၊ ဒါကြောင့် ဝမ်းသာတယ်။" },
+      { "en": "We left early {v}because{/v} it was late.", "mm": "နောက်ကျနေလို့ စောစော ထွက်ခဲ့တယ်။" },
+      { "en": "It was cold, {v}so{/v} we stayed in.", "mm": "အေးနေတယ်၊ ဒါကြောင့် အထဲမှာ နေခဲ့တယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "because + reason",
+        "rule_mm": "because က အကြောင်းရင်း (reason) ကို ချိတ် — 'why?' ကို ဖြေ",
+        "en": "I stayed home {v}because{/v} it was raining.",
+        "why_mm": "'because' နောက်မှာ အကြောင်းရင်း (it was raining) လိုက်ပါတယ် — ဘာကြောင့်လဲ ဆိုတာ ဖြေတာပါ။"
+      },
+      {
+        "subject": "so + result",
+        "rule_mm": "so က အကျိုးဆက် (result) ကို ချိတ် — ရှေ့မှာ comma",
+        "en": "It was raining, {v}so{/v} I stayed home.",
+        "why_mm": "'so' နောက်မှာ အကျိုးဆက် (I stayed home) လိုက်ပါတယ်။ တူညီတဲ့ အကြောင်းအရာ ဒါပေမဲ့ အစီအစဉ် ပြောင်းပြန်။"
+      },
+      {
+        "subject": "not both",
+        "rule_mm": "တစ်ဝါကျမှာ because နဲ့ so နှစ်ခုလုံး မသုံးရ",
+        "en": "{v}Because{/v} it rained, I stayed home.  (✗ Because it rained, so I stayed)",
+        "why_mm": "because ဒါမှမဟုတ် so — တစ်ခုပဲ ရွေးပါ။ နှစ်ခုလုံး တွဲသုံးရင် မှားပါတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "I was hungry, ___ I made a sandwich.",
+        "prompt_mm": "ဗိုက်ဆာလို့ sandwich လုပ်စားခဲ့တယ်။",
+        "options": ["so", "because", "but"],
+        "answer": "so",
+        "explain_mm": "အကျိုးဆက် (result) → so။"
+      },
+      {
+        "prompt_en": "She was tired ___ she had worked all day.",
+        "prompt_mm": "တစ်နေ့လုံး အလုပ်လုပ်ခဲ့လို့ ပင်ပန်းနေတယ်။",
+        "options": ["because", "so", "and"],
+        "answer": "because",
+        "explain_mm": "အကြောင်းရင်း (reason) → because။"
+      },
+      {
+        "prompt_en": "It was raining, ___ we took an umbrella.",
+        "prompt_mm": "မိုးရွာနေလို့ ထီး ယူခဲ့တယ်။",
+        "options": ["so", "because", "but"],
+        "answer": "so",
+        "explain_mm": "အကျိုးဆက် (result) → so။"
+      }
+    ],
+    "model_paragraph_en": "Last weekend I didn't go out {v}because{/v} I was tired. I had worked a lot, {v}so{/v} I needed to rest. My friends invited me, but I said no {v}because{/v} I wanted to sleep. On Sunday I felt better, {v}so{/v} I cleaned the house. It was a quiet weekend {v}because{/v} I stayed home.",
+    "model_paragraph_mm": "ပြီးခဲ့တဲ့ စနေတနင်္ဂနွေက ပင်ပန်းနေလို့ အပြင် မထွက်ခဲ့ဘူး။ အလုပ် အများကြီး လုပ်ထားတာမို့ အနားယူဖို့ လိုခဲ့တယ်။ သူငယ်ချင်းတွေ ဖိတ်ပေမဲ့ အိပ်ချင်လို့ ငြင်းခဲ့တယ်။ တနင်္ဂနွေနေ့မှာ သက်သာလာလို့ အိမ် ရှင်းခဲ့တယ်။ အိမ်မှာ နေခဲ့တာမို့ တိတ်ဆိတ်တဲ့ စနေတနင်္ဂနွေ ဖြစ်ခဲ့တယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "because", "form": "introduces the reason", "tag": "reason", "example": "I stayed home because it rained." },
+          { "subjects": "so", "form": "introduces the result", "tag": "result", "highlight": true, "example": "It rained, so I stayed home." }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [],
+    "time_words": [],
+    "note_mm": "because + အကြောင်းရင်း (‘why?’ ကို ဖြေတယ်)။ so + အကျိုးဆက် (ဘာဖြစ်လာလဲ)။ တစ်ဝါကျမှာ because နဲ့ so နှစ်ခုလုံး မသုံးပါနဲ့ — တစ်ခု ရွေးပါ။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I was hungry, ___ I made a sandwich.",
+      "prompt_mm": "ဗိုက်ဆာလို့ sandwich လုပ်စားခဲ့တယ်။ (အကျိုးဆက်)",
+      "options": ["so", "because", "but"],
+      "answers": ["so"],
+      "explain_mm": "အကျိုးဆက် (result) → so။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She was tired ___ she had worked all day.",
+      "prompt_mm": "တစ်နေ့လုံး အလုပ်လုပ်ခဲ့လို့ ပင်ပန်းနေတယ်။ (အကြောင်းရင်း)",
+      "options": ["because", "so", "and"],
+      "answers": ["because"],
+      "explain_mm": "အကြောင်းရင်း (reason) → because။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "It was raining, ___ we took an umbrella.",
+      "prompt_mm": "မိုးရွာနေလို့ ထီး ယူခဲ့တယ်။ (အကျိုးဆက်)",
+      "answers": ["so"],
+      "explain_mm": "result → so။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Because I was sick, so I stayed home.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["Because I was sick, I stayed home", "because i was sick, i stayed home.", "I stayed home because I was sick"],
+      "explain_mm": "because နဲ့ so နှစ်ခုလုံး မသုံးရဘူး — တစ်ခု ဖြုတ်ပါ။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  because  /  late  /  I  /  was  /  overslept  /  I",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( I was late + because + I overslept )",
+      "answers": ["I was late because I overslept", "i was late because i overslept."],
+      "explain_mm": "result + because + reason → I was late because I overslept."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — reasons and results. Write 5–8 sentences about your day or week, using because (for reasons) and so (for results).",
+      "prompt_mm": "အပိုင်း ၁ — အကြောင်းရင်းနဲ့ အကျိုးဆက်။ ကိုယ့်နေ့ သို့မဟုတ် အပတ်အကြောင်း because (အကြောင်းရင်း) နဲ့ so (အကျိုးဆက်) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "I woke up late {v}because{/v} my alarm didn't ring. I missed the bus, {v}so{/v} I walked. I was tired {v}because{/v} I didn't sleep well. I drank coffee, {v}so{/v} I felt better. I finished my work early {v}because{/v} I started on time.",
+      "explain_mm": "because + အကြောင်းရင်း၊ so + အကျိုးဆက်။ တစ်ဝါကျမှာ နှစ်ခုလုံး မသုံးပါနဲ့။",
+      "grading": {
+        "grammar_point": "Connectors: because / so",
+        "rule": "because introduces a reason; so introduces a result. Do not use both in one sentence.",
+        "must_check": [
+          "because used for reasons, so for results",
+          "Not both in the same sentence",
+          "Clear cause–result links",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "because … so together in one sentence",
+          "Swapping because and so",
+          "Missing comma before so"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — explain a decision. Write a short paragraph (4–6 sentences) explaining a decision you made (a job, a move, a purchase), using because and so.",
+      "prompt_mm": "အပိုင်း ၂ — ဆုံးဖြတ်ချက်ကို ရှင်းပြပါ။ ကိုယ်လုပ်ခဲ့တဲ့ ဆုံးဖြတ်ချက်တစ်ခု (အလုပ်၊ ပြောင်းရွှေ့မှု၊ ဝယ်ယူမှု) ကို because နဲ့ so သုံးပြီး ရှင်းပြကာ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "I changed my job {v}because{/v} the old one was too far. The new office is near my home, {v}so{/v} I save time. The salary is higher, {v}so{/v} I am happier. I left {v}because{/v} I wanted new skills. It was a good decision {v}because{/v} I learn more now.",
+      "explain_mm": "ဆုံးဖြတ်ချက်ရဲ့ အကြောင်းရင်းကို because၊ အကျိုးဆက်ကို so နဲ့ ရှင်းပြပါ။",
+      "grading": {
+        "grammar_point": "Connectors: because / so",
+        "rule": "Explain reasons and results clearly with because and so, never both together.",
+        "must_check": [
+          "Correct use of because (reason) and so (result)",
+          "Not used together",
+          "Coherent explanation",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "because and so in one sentence",
+          "Reason/result mixed up",
+          "Run-on without a connector"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

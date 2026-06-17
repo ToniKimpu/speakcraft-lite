@@ -1,0 +1,190 @@
+{
+  "id": "l2_superlatives",
+  "level": 2,
+  "section": "Comparisons",
+  "order": 2,
+  "type": "grammar_unit",
+  "title": "Superlatives (-est / most)",
+  "subtitle_mm": "အဆုံးစွန် — -est / most",
+  "teach": {
+    "situation_en": "Mount Everest is {v}the highest{/v} mountain in the world. The Nile is {v}the longest{/v} river. For me, my mother's cooking is {v}the best{/v}. Today is {v}the most important{/v} day of my life.",
+    "situation_mm": "အေဗရက်တောင်က ကမ္ဘာမှာ အမြင့်ဆုံး တောင်ပါ။ နိုင်းမြစ်က အရှည်ဆုံး မြစ်ပါ။ ကျွန်တော့်အတွက် အမေချက်တဲ့ အစားအစာက အကောင်းဆုံးပါ။ ဒီနေ့က ကျွန်တော့်ဘဝမှာ အရေးကြီးဆုံး နေ့ပါ။",
+    "use_en": "We use superlatives to compare three or more things and point to the top one. Use 'the + adjective + -est' for short adjectives and 'the most + adjective' for long ones. Always use 'the'.",
+    "use_mm": "သုံးခု (သို့) ပိုများတဲ့ အရာတွေထဲက အဆုံးစွန် တစ်ခုကို ပြဖို့ superlative သုံးပါတယ်။ short adjective မှာ the + adjective + -est၊ long adjective မှာ the most + adjective။ the ကို အမြဲ သုံးပါ။",
+    "timeline": "A · B · C ···  →  the #1   (three or more → the top)",
+    "form": [
+      { "subject": "short adjective (1 syllable)", "form": "the + adjective + -est  (the tallest)" },
+      { "subject": "ending -e  ·  consonant-vowel-consonant", "form": "the nicest · the biggest" },
+      { "subject": "consonant + y", "form": "the happiest" },
+      { "subject": "long adjective (2+ syllables)", "form": "the most + adjective  (the most useful)" }
+    ],
+    "form_note_mm": [
+      "short adjective → the + adjective + -est (tall → the tallest)။ long adjective → the most + adjective (the most expensive)။",
+      "the ကို အမြဲ သုံးပါ — the biggest, the most beautiful။",
+      "spelling — big → the biggest (double); happy → the happiest (y → iest)။",
+      "irregular — good → the best, bad → the worst, far → the furthest။"
+    ],
+    "trap_en": "Don't forget 'the', and don't use -est with 'most'.  WRONG: most tallest / He is tallest.   RIGHT: the tallest / the most expensive.",
+    "trap_mm": "the ကို မမေ့နဲ့၊ -est နဲ့ most နှစ်ခုလုံး မသုံးရဘူး။ ✗ most tallest / He is tallest → ✓ the tallest / the most expensive။",
+    "examples": [
+      { "en": "This is {v}the cheapest{/v} phone in the shop.", "mm": "ဒါက ဆိုင်ထဲမှာ အစျေးအချိုဆုံး ဖုန်းပါ။" },
+      { "en": "She is {v}the most intelligent{/v} student.", "mm": "သူမက အတော်ဆုံး ကျောင်းသူပါ။" },
+      { "en": "It was {v}the best{/v} day of my life.", "mm": "ကျွန်တော့်ဘဝမှာ အကောင်းဆုံး နေ့ပါ။" },
+      { "en": "August is {v}the hottest{/v} month here.", "mm": "ဩဂုတ်လက ဒီမှာ အပူဆုံး လပါ။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "short adjective",
+        "rule_mm": "short adjective → the + adjective + -est",
+        "en": "Everest is {v}the highest{/v} mountain in the world.",
+        "why_mm": "'high' က short adjective ဖြစ်လို့ 'the highest' လုပ်ပါတယ်။ superlative မှာ 'the' ကို အမြဲ ထည့်ပါ။"
+      },
+      {
+        "subject": "long adjective",
+        "rule_mm": "long adjective → the most + adjective",
+        "en": "She is {v}the most intelligent{/v} student.",
+        "why_mm": "'intelligent' က long adjective ဖြစ်လို့ -est မထည့်ဘဲ 'the most' သုံးပါတယ်။"
+      },
+      {
+        "subject": "don't forget 'the' — and irregular",
+        "rule_mm": "the ကို မမေ့နဲ့။ good → the best, bad → the worst",
+        "en": "It was {v}the best{/v} day of my life.  (✗ He is tallest)",
+        "why_mm": "superlative တိုင်းမှာ 'the' လိုပါတယ် — 'He is tallest' မဟုတ်ဘဲ 'the tallest'။ irregular — good → the best, bad → the worst။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "Everest is ___ mountain in the world.",
+        "prompt_mm": "အေဗရက်က ကမ္ဘာမှာ အမြင့်ဆုံး တောင်ပါ။",
+        "options": ["the highest", "the most high", "highest"],
+        "answer": "the highest",
+        "explain_mm": "short adjective → the + adjective + -est → the highest။"
+      },
+      {
+        "prompt_en": "This is ___ restaurant in town.",
+        "prompt_mm": "ဒါက မြို့ထဲမှာ အကောင်းဆုံး စားသောက်ဆိုင်ပါ။",
+        "options": ["the best", "the goodest", "the most good"],
+        "answer": "the best",
+        "explain_mm": "good ရဲ့ superlative က irregular → the best။"
+      },
+      {
+        "prompt_en": "He is ___ in the team.",
+        "prompt_mm": "သူက အသင်းထဲမှာ အရှည်ဆုံးပါ။",
+        "options": ["the tallest", "tallest", "most tallest"],
+        "answer": "the tallest",
+        "explain_mm": "superlative မှာ the ကို မမေ့နဲ့ → the tallest။"
+      }
+    ],
+    "model_paragraph_en": "My grandmother is {v}the kindest{/v} person I know. She is also {v}the oldest{/v} in our family. Her garden is {v}the most beautiful{/v} in the village, and her tea is {v}the best{/v}. For me, her house is {v}the most peaceful{/v} place in the world.",
+    "model_paragraph_mm": "အဘွားက ကျွန်တော် သိသမျှထဲမှာ အကြင်နာဆုံး လူပါ။ ကျွန်တော်တို့ မိသားစုထဲမှာလည်း အသက်အကြီးဆုံးပါ။ သူ့ဥယျာဉ်က ရွာထဲမှာ အလှဆုံးဖြစ်ပြီး သူ့လက်ဖက်ရည်က အကောင်းဆုံးပါ။ ကျွန်တော့်အတွက် သူ့အိမ်က ကမ္ဘာပေါ်မှာ အငြိမ်းချမ်းဆုံး နေရာပါ။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "short adjective (1 syllable)", "form": "the + adjective + -est", "tag": "-est", "example": "tall → the tallest" },
+          { "subjects": "long adjective (2+ syllables)", "form": "the most + adjective", "tag": "the most", "highlight": true, "example": "useful → the most useful" },
+          { "subjects": "irregular", "form": "the + special form", "tag": "irreg.", "example": "good → the best · bad → the worst" }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [],
+    "time_words": [],
+    "note_mm": "common superlatives — tall → the tallest, big → the biggest, happy → the happiest, good → the best, bad → the worst, expensive → the most expensive, beautiful → the most beautiful, important → the most important။ the ကို မမေ့နဲ့။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This is ___ restaurant in town. (good)",
+      "prompt_mm": "ဒါက မြို့ထဲမှာ အကောင်းဆုံး စားသောက်ဆိုင်ပါ။",
+      "options": ["the best", "the goodest", "the most good"],
+      "answers": ["the best"],
+      "explain_mm": "good ရဲ့ superlative က irregular → the best။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Everest is ___ mountain in the world. (high)",
+      "prompt_mm": "အေဗရက်က ကမ္ဘာမှာ အမြင့်ဆုံး တောင်ပါ။",
+      "options": ["the highest", "the most high", "highest"],
+      "answers": ["the highest"],
+      "explain_mm": "short adjective → the + adjective + -est → the highest။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She is ___ (intelligent) student in the class.",
+      "prompt_mm": "သူမက အတန်းထဲမှာ အတော်ဆုံး ကျောင်းသူပါ။",
+      "answers": ["the most intelligent"],
+      "explain_mm": "long adjective → the most + adjective → the most intelligent။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He is tallest in the team.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["He is the tallest in the team", "he is the tallest in the team."],
+      "explain_mm": "superlative မှာ the ကို မမေ့နဲ့ → the tallest။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  the  /  is  /  river  /  longest  /  it",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "answers": ["It is the longest river", "it is the longest river."],
+      "explain_mm": "Subject + be + the + superlative + noun → It is the longest river."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — the best and the worst. Write 5–8 sentences about the -est things in your life (best friend, biggest city you've visited, happiest day), using superlatives with 'the'.",
+      "prompt_mm": "အပိုင်း ၁ — အကောင်းဆုံးနဲ့ အဆိုးဆုံး။ ကိုယ့်ဘဝက အဆုံးစွန် အရာတွေ (အကောင်းဆုံး သူငယ်ချင်း၊ ရောက်ဖူးတဲ့ အကြီးဆုံး မြို့၊ အပျော်ဆုံး နေ့) အကြောင်း the နဲ့ superlative သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "My best friend is {v}the kindest{/v} person I know. Yangon is {v}the biggest{/v} city I have visited. My wedding was {v}the happiest{/v} day of my life. Maths was {v}the hardest{/v} subject at school. My phone is {v}the most useful{/v} thing I own.",
+      "explain_mm": "the + adjective + -est (short)၊ the most + adjective (long)၊ the best/worst (irregular)။ the ကို မမေ့နဲ့။",
+      "grading": {
+        "grammar_point": "Superlatives (-est / most)",
+        "rule": "the + -est for short adjectives; the most for long ones; always 'the'. Spelling: biggest, happiest. Irregular: the best, the worst.",
+        "must_check": [
+          "'the' before every superlative",
+          "-est for short adjectives, 'the most' for long ones (not both)",
+          "Correct spelling and irregulars (the best, the worst)",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "Dropping 'the' (He is tallest)",
+          "most + -est together (the most tallest)",
+          "-est on a long adjective (beautifulest)"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — describe a place. Write a short paragraph (4–6 sentences) about a place you love (a city, your home, a shop), using superlatives to say what makes it the best.",
+      "prompt_mm": "အပိုင်း ၂ — နေရာတစ်ခု ဖော်ပြပါ။ ကိုယ်ချစ်တဲ့ နေရာတစ်ခု (မြို့၊ ကိုယ့်အိမ်၊ ဆိုင်) ကို superlative သုံးပြီး ဘာကြောင့် အကောင်းဆုံးလဲဆိုတာ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My favourite café is {v}the best{/v} place in my town. It has {v}the friendliest{/v} staff and {v}the most comfortable{/v} chairs. The coffee is {v}the cheapest{/v} in the area. It is also {v}the quietest{/v} café, so I can read there. For me, it is {v}the most relaxing{/v} place.",
+      "explain_mm": "superlative တွေကို မှန်အောင် သုံးပါ — the ကို အမြဲ ထည့်ပါ၊ short -est, long the most။",
+      "grading": {
+        "grammar_point": "Superlatives (-est / most)",
+        "rule": "Describe one place with several superlatives, all with 'the' and the correct -est/most form.",
+        "must_check": [
+          "'the' with every superlative",
+          "Correct -est vs the most choice",
+          "Correct spelling and irregular forms",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Missing 'the'",
+          "Double superlative (the most biggest)",
+          "Wrong form on long adjectives"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

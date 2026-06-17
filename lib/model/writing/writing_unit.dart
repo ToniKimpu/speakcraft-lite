@@ -67,7 +67,10 @@ class Toolkit {
   const Toolkit({
     required this.verbIds,
     required this.timeWordIds,
+    required this.adjectiveIds,
+    required this.nounIds,
     required this.timeWordsNoteMm,
+    required this.noteMm,
     required this.verbForm,
     required this.verbExamples,
     required this.timeWordExamples,
@@ -76,9 +79,21 @@ class Toolkit {
   final List<String> verbIds;
   final List<String> timeWordIds;
 
+  /// Adjective / noun word-bank ids (into the shared lexicon). Used by units
+  /// built around `be` and descriptions, where the useful vocabulary is what
+  /// follows the verb (She is **happy** · I am **a student**) rather than action
+  /// verbs. Empty for action-verb units.
+  final List<String> adjectiveIds;
+  final List<String> nounIds;
+
   /// Optional Burmese "how to use" note rendered under the frequency / time
   /// words (e.g. the adverb-position rule). Empty when a unit needs none.
   final String timeWordsNoteMm;
+
+  /// Optional Burmese note rendered under the adjective / noun banks — e.g. the
+  /// `be` unit folds the "places after be" hint (I am **at home** · She is
+  /// **from Mandalay**) in here rather than carrying a separate place table.
+  final String noteMm;
 
   /// Which verb form the bank shows next to the base — `third` (default, present
   /// simple), `ing` (present continuous), `past` (past simple)… Lets each
@@ -93,7 +108,11 @@ class Toolkit {
   final Map<String, ExamplePair> verbExamples;
   final Map<String, ExamplePair> timeWordExamples;
 
-  bool get isEmpty => verbIds.isEmpty && timeWordIds.isEmpty;
+  bool get isEmpty =>
+      verbIds.isEmpty &&
+      timeWordIds.isEmpty &&
+      adjectiveIds.isEmpty &&
+      nounIds.isEmpty;
 
   static Map<String, ExamplePair> _examplesFromJson(Object? raw) {
     final map = (raw as Map?)?.cast<String, dynamic>() ?? const {};
@@ -108,7 +127,14 @@ class Toolkit {
         timeWordIds: ((json['time_words'] as List?) ?? const [])
             .map((e) => e.toString())
             .toList(growable: false),
+        adjectiveIds: ((json['adjectives'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(growable: false),
+        nounIds: ((json['nouns'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(growable: false),
         timeWordsNoteMm: json['time_words_note_mm'] as String? ?? '',
+        noteMm: json['note_mm'] as String? ?? '',
         verbForm: json['verb_form'] as String? ?? 'third',
         verbExamples: _examplesFromJson(json['verb_examples']),
         timeWordExamples: _examplesFromJson(json['time_word_examples']),
@@ -137,6 +163,19 @@ class TeachBlock {
         type: json['type'] as String? ?? '',
         data: Map<String, dynamic>.from(json)..remove('type'),
       );
+}
+
+/// Normalizes a note field that may be authored either as a single string or as
+/// a JSON array of lines (the preferred, cleaner form) into newline-separated
+/// text. The teach page splits it back into a bullet list per line.
+String _linesToText(Object? raw) {
+  if (raw is List) {
+    return raw
+        .map((e) => e.toString().trim())
+        .where((s) => s.isNotEmpty)
+        .join('\n');
+  }
+  return raw as String? ?? '';
 }
 
 /// The fixed teach spine: situation → use (+timeline) → form → Burmese trap →
@@ -173,7 +212,9 @@ class WritingTeach {
   final List<ExamplePair> examples;
 
   /// Optional Burmese note shown under the form table (e.g. how subject and verb
-  /// agree). Empty when a unit needs none.
+  /// agree), authored one rule per line. May be a single string or a JSON array
+  /// of lines in the source; both are normalized to newline-separated text and
+  /// rendered as a bullet list. Empty when a unit needs none.
   final String formNoteMm;
 
   /// A short worked example that uses the toolkit in real prose — shown right
@@ -202,7 +243,7 @@ class WritingTeach {
             .map(
                 (e) => ExamplePair.fromJson((e as Map).cast<String, dynamic>()))
             .toList(growable: false),
-        formNoteMm: json['form_note_mm'] as String? ?? '',
+        formNoteMm: _linesToText(json['form_note_mm']),
         modelParagraphEn: json['model_paragraph_en'] as String? ?? '',
         modelParagraphMm: json['model_paragraph_mm'] as String? ?? '',
         blocks: ((json['blocks'] as List?) ?? const [])

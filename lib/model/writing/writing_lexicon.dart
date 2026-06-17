@@ -19,14 +19,20 @@ import 'writing_unit.dart' show ExamplePair;
 
 const _kVerbsAsset = 'assets/writing/lexicon/verbs.json';
 const _kTimeWordsAsset = 'assets/writing/lexicon/time_words.json';
+const _kAdjectivesAsset = 'assets/writing/lexicon/adjectives.json';
+const _kNounsAsset = 'assets/writing/lexicon/nouns.json';
 
 /// Loads and indexes the bundled lexicon files.
 Future<WritingLexicon> loadWritingLexicon() async {
   final verbsRaw = await rootBundle.loadString(_kVerbsAsset);
   final timeRaw = await rootBundle.loadString(_kTimeWordsAsset);
+  final adjRaw = await rootBundle.loadString(_kAdjectivesAsset);
+  final nounRaw = await rootBundle.loadString(_kNounsAsset);
   return WritingLexicon.fromJson(
     verbsJson: jsonDecode(verbsRaw) as List,
     timeWordsJson: jsonDecode(timeRaw) as List,
+    adjectivesJson: jsonDecode(adjRaw) as List,
+    nounsJson: jsonDecode(nounRaw) as List,
   );
 }
 
@@ -126,16 +132,100 @@ class LexiconTimeWord {
       );
 }
 
+/// One adjective — a describing word that follows `be` (She is **happy**) or a
+/// noun (a **tall** man). Adjectives don't inflect, so there are no `forms`.
+class LexiconAdjective {
+  const LexiconAdjective({
+    required this.id,
+    required this.en,
+    required this.mm,
+    required this.examples,
+    required this.tags,
+  });
+
+  final String id;
+  final String en;
+  final String mm;
+  final List<ExamplePair> examples;
+  final List<String> tags;
+
+  factory LexiconAdjective.fromJson(Map<String, dynamic> json) =>
+      LexiconAdjective(
+        id: json['id'] as String,
+        en: json['en'] as String? ?? '',
+        mm: json['mm'] as String? ?? '',
+        examples: ((json['examples'] as List?) ?? const [])
+            .map((e) => ExamplePair.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(growable: false),
+        tags: ((json['tags'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(growable: false),
+      );
+}
+
+/// One noun — a thing / job / role (I am **a student**). Stores its [article]
+/// (a / an) and [plural] so the later a/an and plurals units reuse the entry.
+class LexiconNoun {
+  const LexiconNoun({
+    required this.id,
+    required this.en,
+    required this.mm,
+    required this.article,
+    required this.plural,
+    required this.examples,
+    required this.tags,
+  });
+
+  final String id;
+  final String en;
+  final String mm;
+
+  /// `a` or `an` — the indefinite article this noun takes in the singular.
+  final String article;
+
+  /// Plural form (students, businessmen). Falls back to `en + s`.
+  final String plural;
+  final List<ExamplePair> examples;
+  final List<String> tags;
+
+  /// The noun with its article, e.g. `a student`, `an engineer`. Empty article
+  /// (e.g. uncountable / proper nouns) → just the noun.
+  String get withArticle => article.isEmpty ? en : '$article $en';
+
+  factory LexiconNoun.fromJson(Map<String, dynamic> json) => LexiconNoun(
+        id: json['id'] as String,
+        en: json['en'] as String? ?? '',
+        mm: json['mm'] as String? ?? '',
+        article: json['article'] as String? ?? 'a',
+        plural: json['plural'] as String? ?? '${json['en'] ?? ''}s',
+        examples: ((json['examples'] as List?) ?? const [])
+            .map((e) => ExamplePair.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(growable: false),
+        tags: ((json['tags'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(growable: false),
+      );
+}
+
 /// The indexed lexicon. Resolve a unit's [Toolkit] id lists into full objects.
 class WritingLexicon {
-  const WritingLexicon({required this.verbs, required this.timeWords});
+  const WritingLexicon({
+    required this.verbs,
+    required this.timeWords,
+    required this.adjectives,
+    required this.nouns,
+  });
 
   final Map<String, LexiconVerb> verbs;
   final Map<String, LexiconTimeWord> timeWords;
+  final Map<String, LexiconAdjective> adjectives;
+  final Map<String, LexiconNoun> nouns;
 
   factory WritingLexicon.fromJson({
     required List<dynamic> verbsJson,
     required List<dynamic> timeWordsJson,
+    List<dynamic> adjectivesJson = const [],
+    List<dynamic> nounsJson = const [],
   }) {
     final verbs = <String, LexiconVerb>{};
     for (final v in verbsJson) {
@@ -147,7 +237,22 @@ class WritingLexicon {
       final tw = LexiconTimeWord.fromJson((t as Map).cast<String, dynamic>());
       timeWords[tw.id] = tw;
     }
-    return WritingLexicon(verbs: verbs, timeWords: timeWords);
+    final adjectives = <String, LexiconAdjective>{};
+    for (final a in adjectivesJson) {
+      final adj = LexiconAdjective.fromJson((a as Map).cast<String, dynamic>());
+      adjectives[adj.id] = adj;
+    }
+    final nouns = <String, LexiconNoun>{};
+    for (final n in nounsJson) {
+      final noun = LexiconNoun.fromJson((n as Map).cast<String, dynamic>());
+      nouns[noun.id] = noun;
+    }
+    return WritingLexicon(
+      verbs: verbs,
+      timeWords: timeWords,
+      adjectives: adjectives,
+      nouns: nouns,
+    );
   }
 
   List<LexiconVerb> resolveVerbs(List<String> ids) {
@@ -174,13 +279,52 @@ class WritingLexicon {
         .whereType<LexiconTimeWord>()
         .toList(growable: false);
   }
+
+  List<LexiconAdjective> resolveAdjectives(List<String> ids) {
+    assert(() {
+      final missing = ids.where((id) => !adjectives.containsKey(id)).toList();
+      if (missing.isNotEmpty) {
+        debugPrint('[WritingLexicon] unknown adjective ids (check the unit): $missing');
+      }
+      return true;
+    }());
+    return ids
+        .map((id) => adjectives[id])
+        .whereType<LexiconAdjective>()
+        .toList(growable: false);
+  }
+
+  List<LexiconNoun> resolveNouns(List<String> ids) {
+    assert(() {
+      final missing = ids.where((id) => !nouns.containsKey(id)).toList();
+      if (missing.isNotEmpty) {
+        debugPrint('[WritingLexicon] unknown noun ids (check the unit): $missing');
+      }
+      return true;
+    }());
+    return ids
+        .map((id) => nouns[id])
+        .whereType<LexiconNoun>()
+        .toList(growable: false);
+  }
 }
 
 /// A unit's toolkit after its id lists have been resolved against the lexicon.
 class ResolvedToolkit {
-  const ResolvedToolkit({required this.verbs, required this.timeWords});
+  const ResolvedToolkit({
+    required this.verbs,
+    required this.timeWords,
+    this.adjectives = const [],
+    this.nouns = const [],
+  });
   final List<LexiconVerb> verbs;
   final List<LexiconTimeWord> timeWords;
+  final List<LexiconAdjective> adjectives;
+  final List<LexiconNoun> nouns;
 
-  bool get isEmpty => verbs.isEmpty && timeWords.isEmpty;
+  bool get isEmpty =>
+      verbs.isEmpty &&
+      timeWords.isEmpty &&
+      adjectives.isEmpty &&
+      nouns.isEmpty;
 }

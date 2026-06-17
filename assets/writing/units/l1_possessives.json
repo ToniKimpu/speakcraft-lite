@@ -10,7 +10,7 @@
     "situation_en": "This is {v}my{/v} bag, and that is {v}your{/v} bag. This pen is {v}mine{/v}; that one is {v}yours{/v}. {v}Her{/v} car is red. The red car is {v}hers{/v}. {v}Their{/v} house is big; the big house is {v}theirs{/v}.",
     "situation_mm": "ဒါက ကျွန်တော့်အိတ်၊ ဟိုဟာက မင်းအိတ်ပါ။ ဒီဘောပင်က ကျွန်တော့်ဟာ၊ ဟိုဟာက မင်းဟာ။ သူမကားက အနီရောင်။ အနီရောင်ကားက သူမဟာ။ သူတို့အိမ်က ကြီးတယ်၊ အိမ်ကြီးက သူတို့ဟာ။",
     "use_en": "Possessive adjectives (my, your, his, her, its, our, their) come before a noun. Possessive pronouns (mine, yours, his, hers, ours, theirs) stand alone.",
-    "use_mm": "ပိုင်ဆိုင်မှု နာမဝိသေသန (my, your, his, her, its, our, their) က နာမ်ရှေ့မှာ နေတယ်။ ပိုင်ဆိုင်မှု နာမ်စား (mine, yours, his, hers, ours, theirs) က နာမ် မပါဘဲ တစ်ခုတည်း ရပ်တယ်။",
+    "use_mm": "ပိုင်ဆိုင်မှု adjective (my, your, his, her, its, our, their) က noun ရှေ့မှာ နေတယ်။ ပိုင်ဆိုင်မှု pronoun (mine, yours, his, hers, ours, theirs) က noun မပါဘဲ တစ်ခုတည်း ရပ်တယ်။",
     "timeline": "",
     "form": [
       { "subject": "before a noun", "form": "my book · her car · their house" },
@@ -18,7 +18,11 @@
       { "subject": "I → my / mine", "form": "It's my book. It's mine." },
       { "subject": "they → their / theirs", "form": "It's their car. It's theirs." }
     ],
-    "form_note_mm": "နာမ်ရှေ့မှာ → my, your, his, her, its, our, their (my book)။ နာမ် မပါဘဲ တစ်ခုတည်း → mine, yours, his, hers, ours, theirs (It's mine)။ တွဲ — my/mine, your/yours, her/hers, our/ours, their/theirs (his က နှစ်မျိုးလုံး တူ)။",
+    "form_note_mm": [
+      "noun ရှေ့မှာ → my, your, his, her, its, our, their (my book)။",
+      "noun မပါဘဲ တစ်ခုတည်း → mine, yours, his, hers, ours, theirs (It's mine)။",
+      "တွဲ — my/mine, your/yours, her/hers, our/ours, their/theirs (his က နှစ်မျိုးလုံး တူ)။"
+    ],
     "trap_en": "Possessive adjectives need a noun; possessive pronouns don't.  WRONG: This is mine bag. / This bag is my.   RIGHT: This is my bag. / This bag is mine.",
     "trap_mm": "နာမဝိသေသန (my) က နာမ် လိုတယ်၊ နာမ်စား (mine) က မလိုဘူး။  ✗ mine bag / This bag is my  →  ✓ my bag / This bag is mine.",
     "examples": [
@@ -26,6 +30,49 @@
       { "en": "The phone is {v}mine{/v}.", "mm": "ဖုန်းက ကျွန်တော့်ဟာပါ။" },
       { "en": "{v}Her{/v} name is Su.", "mm": "သူမနာမည်က Su ပါ။" },
       { "en": "This seat is {v}yours{/v}.", "mm": "ဒီထိုင်ခုံက မင်းဟာပါ။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "before a noun → adjective",
+        "rule_mm": "noun ရှေ့မှာ → possessive adjective (my, your, his, her, our, their)",
+        "en": "This is {v}my{/v} bag.",
+        "why_mm": "နောက်မှာ noun (bag) ရှိလို့ possessive adjective 'my' ကို သုံးပါတယ်။ my က noun တစ်လုံး အမြဲ လိုပါတယ်။"
+      },
+      {
+        "subject": "stands alone → pronoun",
+        "rule_mm": "noun မပါဘဲ တစ်ခုတည်း → possessive pronoun (mine, yours, hers, ours, theirs)",
+        "en": "This bag is {v}mine{/v}.",
+        "why_mm": "နောက်မှာ noun မပါဘဲ တစ်ခုတည်း ရပ်လို့ possessive pronoun 'mine' ကို သုံးပါတယ်။ mine က noun မလိုပါဘူး။"
+      },
+      {
+        "subject": "my vs mine (the trap)",
+        "rule_mm": "my + noun · mine = noun မပါ",
+        "en": "It's {v}my{/v} pen.  ·  The pen is {v}mine{/v}.",
+        "why_mm": "အဓိပ္ပာယ် တူပေမဲ့ — 'my' က noun (pen) နဲ့ တွဲရတယ်၊ 'mine' က တစ်ခုတည်း ရပ်တယ်။ ✗ mine pen / ✗ The pen is my မဟုတ်ပါဘူး။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "This is ___ book.",
+        "prompt_mm": "ဒါက ကျွန်တော့်စာအုပ်ပါ။",
+        "options": ["mine", "my", "me"],
+        "answer": "my",
+        "explain_mm": "noun (book) ရှေ့ → possessive adjective → my။"
+      },
+      {
+        "prompt_en": "The red car is ___.",
+        "prompt_mm": "အနီရောင်ကားက သူမဟာပါ။",
+        "options": ["her", "hers", "she"],
+        "answer": "hers",
+        "explain_mm": "noun မပါဘဲ တစ်ခုတည်း → possessive pronoun → hers။"
+      },
+      {
+        "prompt_en": "This bag isn't yours. It is ___.",
+        "prompt_mm": "ဒီအိတ်က မင်းဟာ မဟုတ်ဘူး။ ကျွန်တော့်ဟာပါ။",
+        "options": ["my", "mine", "me"],
+        "answer": "mine",
+        "explain_mm": "noun မပါဘဲ တစ်ခုတည်း ရပ် → mine (✗ my)။"
+      }
     ],
     "model_paragraph_en": "{v}Our{/v} family shares everything. This room is {v}mine{/v}, and that room is {v}my{/v} sister's. {v}Her{/v} books are on the shelf; {v}my{/v} books are on the desk. The big bag is {v}ours{/v}. {v}Their{/v} car is old, but {v}ours{/v} is new.",
     "model_paragraph_mm": "ကျွန်တော်တို့ မိသားစုက အရာအားလုံး မျှဝေတယ်။ ဒီအခန်းက ကျွန်တော့်ဟာ၊ ဟိုအခန်းက အစ်မဟာ။ သူမစာအုပ်တွေက စင်ပေါ်မှာ၊ ကျွန်တော့်စာအုပ်တွေက စားပွဲပေါ်မှာ။ အိတ်ကြီးက ကျွန်တော်တို့ဟာ။ သူတို့ကားက ဟောင်းပေမဲ့ ကျွန်တော်တို့ဟာက အသစ်ပါ။"
@@ -39,7 +86,7 @@
       "prompt_mm": "ဒါက ကျွန်တော့်စာအုပ်ပါ။",
       "options": ["mine", "my", "me"],
       "answers": ["my"],
-      "explain_mm": "နာမ် (book) ရှေ့ → my."
+      "explain_mm": "noun (book) ရှေ့ → my."
     },
     {
       "kind": "mcq",
@@ -48,7 +95,7 @@
       "prompt_mm": "အနီရောင်ကားက သူမဟာ။",
       "options": ["her", "hers", "she"],
       "answers": ["hers"],
-      "explain_mm": "နာမ် မပါဘဲ တစ်ခုတည်း → hers."
+      "explain_mm": "noun မပါဘဲ တစ်ခုတည်း → hers."
     },
     {
       "kind": "gap_fill",
@@ -62,17 +109,17 @@
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "This is mine pen.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": ["This is my pen", "this is my pen."],
-      "explain_mm": "နာမ် (pen) ရှေ့ → my (mine မဟုတ်ဘူး)။"
+      "explain_mm": "noun (pen) ရှေ့ → my (mine မဟုတ်ဘူး)။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  is  /  this  /  house  /  their",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
       "answers": ["This is their house", "this is their house."],
-      "explain_mm": "their + house (နာမ်ရှေ့)။"
+      "explain_mm": "their + house (noun ရှေ့)။"
     },
     {
       "kind": "scan_sentences",
@@ -80,9 +127,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — whose is it? Write 5–8 sentences about things and their owners, using my/your/her… and mine/yours/hers…",
-      "prompt_mm": "အပိုင်း ၁ — ဘယ်သူ့ဟာလဲ။ အရာတွေနဲ့ ပိုင်ရှင်တွေအကြောင်း my/your/her… နဲ့ mine/yours/hers… သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ဘယ်သူ့ဟာလဲ။ အရာတွေနဲ့ ပိုင်ရှင်တွေအကြောင်း my/your/her… နဲ့ mine/yours/hers… သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
       "model": "This is {v}my{/v} bag. That bag is {v}yours{/v}. {v}Her{/v} phone is new. The blue pen is {v}his{/v}. {v}Our{/v} house is small, but it is {v}ours{/v}.",
-      "explain_mm": "နာမ်ရှေ့ → my/her/their; တစ်ခုတည်း → mine/hers/theirs။",
+      "explain_mm": "noun ရှေ့ → my/her/their; တစ်ခုတည်း → mine/hers/theirs။",
       "grading": {
         "grammar_point": "Possessive adjectives & pronouns",
         "rule": "Possessive adjectives (my, her, their) precede a noun; possessive pronouns (mine, hers, theirs) stand alone.",
@@ -104,9 +151,9 @@
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — your family's things. Write a short paragraph (4–6 sentences) describing who owns what, using possessive adjectives and pronouns.",
-      "prompt_mm": "အပိုင်း ၂ — မိသားစုရဲ့ ပစ္စည်းတွေ။ ဘယ်သူ့ဟာ ဘာလဲဆိုတာ ပိုင်ဆိုင်မှု နာမဝိသေသန/နာမ်စားတွေသုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — မိသားစုရဲ့ ပစ္စည်းတွေ။ ဘယ်သူ့ဟာ ဘာလဲဆိုတာ ပိုင်ဆိုင်မှု adjective/pronoun တွေသုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "{v}My{/v} room is upstairs. The big bed is {v}mine{/v}. {v}My{/v} brother's room is small; the desk in it is {v}his{/v}. {v}Our{/v} parents' car is blue — it is {v}theirs{/v}. {v}Their{/v} room is the biggest.",
-      "explain_mm": "နာမဝိသေသန (နာမ်ရှေ့) နဲ့ နာမ်စား (တစ်ခုတည်း) ကို ခွဲပြီး မှန်အောင် သုံးပါ။",
+      "explain_mm": "adjective (noun ရှေ့) နဲ့ pronoun (တစ်ခုတည်း) ကို ခွဲပြီး မှန်အောင် သုံးပါ။",
       "grading": {
         "grammar_point": "Possessive adjectives & pronouns",
         "rule": "Use possessive adjectives before nouns and possessive pronouns alone.",

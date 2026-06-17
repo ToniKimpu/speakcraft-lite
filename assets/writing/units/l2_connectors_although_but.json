@@ -1,0 +1,189 @@
+{
+  "id": "l2_connectors_although_but",
+  "level": 2,
+  "section": "Quantifiers & connectors",
+  "order": 4,
+  "type": "grammar_unit",
+  "title": "Connectors: although / but",
+  "subtitle_mm": "although / but — ဆန့်ကျင်ဘက်",
+  "teach": {
+    "situation_en": "{v}Although{/v} it was raining, we went out. It was raining, {v}but{/v} we went out. {v}Although{/v} he is rich, he isn't happy. He is rich, {v}but{/v} he isn't happy. The food was cheap, {v}but{/v} it was delicious.",
+    "situation_mm": "မိုးရွာနေပေမဲ့ အပြင် ထွက်ခဲ့တယ်။ မိုးရွာနေတယ်၊ ဒါပေမဲ့ အပြင် ထွက်ခဲ့တယ်။ သူ ချမ်းသာပေမဲ့ မပျော်ဘူး။ သူ ချမ်းသာတယ်၊ ဒါပေမဲ့ မပျော်ဘူး။ အစားအစာက စျေးပေါပေမဲ့ အရသာရှိတယ်။",
+    "use_en": "We use 'although' and 'but' to show contrast — something unexpected. 'Although' starts a clause (Although it was cold, …). 'But' joins two clauses (It was cold, but …).",
+    "use_mm": "ဆန့်ကျင်ဘက် (မမျှော်လင့်တဲ့ အရာ) ပြဖို့ although နဲ့ but သုံးပါတယ်။ although က clause တစ်ခုကို စတယ် (Although it was cold, …)။ but က clause နှစ်ခုကို ချိတ်တယ် (It was cold, but …)။",
+    "timeline": "A  ⟷  unexpected B   (contrast)",
+    "form": [
+      { "subject": "although + clause", "form": "Although + A, B  (Although it was hard, I finished.)" },
+      { "subject": "but", "form": "A, but B  (It was hard, but I finished.)" },
+      { "subject": "meaning", "form": "contrast — something surprising" },
+      { "subject": "remember", "form": "don't use although AND but together" }
+    ],
+    "form_note_mm": [
+      "although + ဆန့်ကျင်ဘက် အချက် — Although it was cold, we swam။",
+      "but က ဝါကျ နှစ်ခု ချိတ်တယ် — It was cold, but we swam။",
+      "although နဲ့ but ကို တစ်ဝါကျတည်းမှာ နှစ်ခုလုံး မသုံးရဘူး — တစ်ခု ရွေးပါ။",
+      "although = even though (အဓိပ္ပါယ် တူ)။ Although ဝါကျ ရှေ့မှာ ဆိုရင် comma သုံးပါ။"
+    ],
+    "trap_en": "Don't use 'although' and 'but' in the same sentence — choose one.  WRONG: Although he is rich, but he is unhappy.   RIGHT: Although he is rich, he is unhappy. / He is rich, but he is unhappy.",
+    "trap_mm": "although နဲ့ but ကို တစ်ဝါကျတည်းမှာ နှစ်ခုလုံး မသုံးရဘူး — တစ်ခု ရွေးပါ။ ✗ Although he is rich, but he is unhappy → ✓ Although he is rich, he is unhappy / He is rich, but he is unhappy။",
+    "examples": [
+      { "en": "{v}Although{/v} I was tired, I kept working.", "mm": "ပင်ပန်းပေမဲ့ ဆက်လုပ်ခဲ့တယ်။" },
+      { "en": "I was tired, {v}but{/v} I kept working.", "mm": "ပင်ပန်းတယ်၊ ဒါပေမဲ့ ဆက်လုပ်ခဲ့တယ်။" },
+      { "en": "{v}Although{/v} it's small, the room is nice.", "mm": "သေးပေမဲ့ အခန်းက သပ်ရပ်တယ်။" },
+      { "en": "The test was hard, {v}but{/v} I passed.", "mm": "စာမေးပွဲ ခက်ပေမဲ့ အောင်ခဲ့တယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "although + clause",
+        "rule_mm": "although က ဆန့်ကျင်ဘက် clause ကို စ — Although + A, B",
+        "en": "{v}Although{/v} it was cold, we swam.",
+        "why_mm": "'Although' က မမျှော်လင့်တဲ့ ဆန့်ကျင်ဘက်ကို ပြတဲ့ clause ကို စတယ်။ ရှေ့မှာ ဆိုရင် နောက် clause ရှေ့မှာ comma ထည့်ပါ။"
+      },
+      {
+        "subject": "but joins two clauses",
+        "rule_mm": "but က ဝါကျ နှစ်ခုကို ချိတ် — A, but B",
+        "en": "It was cold, {v}but{/v} we swam.",
+        "why_mm": "'but' က ဆန့်ကျင်ဘက် ဝါကျ နှစ်ခုကို အလယ်မှာ ချိတ်ပေးတယ်။ ရှေ့မှာ comma သုံးပါတယ်။"
+      },
+      {
+        "subject": "not both",
+        "rule_mm": "တစ်ဝါကျမှာ although နဲ့ but နှစ်ခုလုံး မသုံးရ",
+        "en": "{v}Although{/v} he is rich, he is unhappy.  (✗ Although …, but …)",
+        "why_mm": "although ဒါမှမဟုတ် but — တစ်ခုပဲ ရွေးပါ။ နှစ်ခုလုံး တွဲသုံးရင် မှားပါတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "___ it was expensive, I bought it.",
+        "prompt_mm": "စျေးကြီးပေမဲ့ ဝယ်ခဲ့တယ်။",
+        "options": ["Although", "But", "Because"],
+        "answer": "Although",
+        "explain_mm": "ဆန့်ကျင်ဘက် clause စတာ → Although။"
+      },
+      {
+        "prompt_en": "The room is small, ___ it is comfortable.",
+        "prompt_mm": "အခန်းက သေးပေမဲ့ သက်တောင့်သက်သာ ရှိတယ်။",
+        "options": ["but", "although", "so"],
+        "answer": "but",
+        "explain_mm": "ဝါကျ နှစ်ခု ချိတ်တဲ့ ဆန့်ကျင်ဘက် → but။"
+      },
+      {
+        "prompt_en": "___ he studied hard, he failed.",
+        "prompt_mm": "ကြိုးစားပေမဲ့ ကျသွားတယ်။",
+        "options": ["Although", "But", "So"],
+        "answer": "Although",
+        "explain_mm": "ဆန့်ကျင်ဘက် clause စတာ → Although။"
+      }
+    ],
+    "model_paragraph_en": "I really like my hometown. {v}Although{/v} it is small, it has everything I need. The streets are quiet, {v}but{/v} they are clean. {v}Although{/v} there aren't many shops, the people are friendly. Life is slow, {v}but{/v} it is peaceful. {v}Although{/v} I live in the city now, I visit every month.",
+    "model_paragraph_mm": "ကျွန်တော် ကိုယ့်ဇာတိမြို့ကို အရမ်း ကြိုက်တယ်။ သေးပေမဲ့ လိုအပ်သမျှ ရှိတယ်။ လမ်းတွေက တိတ်ဆိတ်ပေမဲ့ သန့်ရှင်းတယ်။ ဆိုင် မများပေမဲ့ လူတွေက ဖော်ရွေတယ်။ ဘဝက နှေးပေမဲ့ ငြိမ်းချမ်းတယ်။ အခု မြို့ကြီးမှာ နေပေမဲ့ လစဉ် ပြန်လည်တယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "although", "form": "starts a contrast clause", "tag": "Although + A, B", "example": "Although it was cold, we swam." },
+          { "subjects": "but", "form": "joins two clauses", "tag": "A, but B", "highlight": true, "example": "It was cold, but we swam." }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [],
+    "time_words": [],
+    "note_mm": "although + clause (Although + A, B)။ but က clause နှစ်ခု ချိတ် (A, but B)။ although = even though။ တစ်ဝါကျမှာ although နဲ့ but နှစ်ခုလုံး မသုံးပါနဲ့ — တစ်ခု ရွေးပါ။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ it was expensive, I bought it.",
+      "prompt_mm": "စျေးကြီးပေမဲ့ ဝယ်ခဲ့တယ်။",
+      "options": ["Although", "But", "Because"],
+      "answers": ["Although"],
+      "explain_mm": "ဆန့်ကျင်ဘက် clause စတာ → Although။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The room is small, ___ it is comfortable.",
+      "prompt_mm": "အခန်းက သေးပေမဲ့ သက်တောင့်သက်သာ ရှိတယ်။",
+      "options": ["but", "although", "so"],
+      "answers": ["but"],
+      "explain_mm": "ဝါကျ နှစ်ခု ချိတ်တဲ့ ဆန့်ကျင်ဘက် → but။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ he studied hard, he failed.",
+      "prompt_mm": "ကြိုးစားပေမဲ့ ကျသွားတယ်။",
+      "answers": ["Although", "although"],
+      "explain_mm": "ဆန့်ကျင်ဘက် clause စတာ → Although။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Although he is rich, but he is unhappy.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["Although he is rich, he is unhappy", "although he is rich, he is unhappy.", "He is rich, but he is unhappy"],
+      "explain_mm": "although နဲ့ but နှစ်ခုလုံး မသုံးရဘူး — တစ်ခု ဖြုတ်ပါ။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  but  /  cold  /  it  /  was  /  swam  /  we",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( It was cold + but + we swam )",
+      "answers": ["It was cold but we swam", "it was cold, but we swam.", "It was cold, but we swam"],
+      "explain_mm": "A, but B → It was cold, but we swam."
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — surprising contrasts. Write 5–8 sentences with a contrast (something unexpected), using although and but. Don't use both in the same sentence.",
+      "prompt_mm": "အပိုင်း ၁ — မမျှော်လင့်တဲ့ ဆန့်ကျင်ဘက်များ။ မမျှော်လင့်တဲ့ အရာတစ်ခုနဲ့ ဆန့်ကျင်ဘက် ပါအောင် although နဲ့ but သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ တစ်ဝါကျမှာ နှစ်ခုလုံး မသုံးပါနဲ့။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "{v}Although{/v} I was tired, I went to the gym. The class was hard, {v}but{/v} I enjoyed it. {v}Although{/v} it rained, we had a picnic. The food was simple, {v}but{/v} it was tasty. {v}Although{/v} I'm busy, I always find time to read.",
+      "explain_mm": "although + clause၊ but က ဝါကျ နှစ်ခု ချိတ်တယ်။ တစ်ဝါကျမှာ although နဲ့ but မရောပါနဲ့။",
+      "grading": {
+        "grammar_point": "Connectors: although / but",
+        "rule": "although starts a contrast clause; but joins two clauses. Never use both in one sentence.",
+        "must_check": [
+          "although + clause, but joining clauses",
+          "Genuine contrast (something unexpected)",
+          "Not both in the same sentence",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "although … but together",
+          "Using so/because instead of a contrast word",
+          "Comma errors after the although-clause"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a balanced opinion. Write a short paragraph (4–6 sentences) about a place or thing you like, with both good and bad points, using although and but.",
+      "prompt_mm": "အပိုင်း ၂ — မျှတတဲ့ ထင်မြင်ချက်။ ကိုယ်ကြိုက်တဲ့ နေရာ သို့မဟုတ် အရာတစ်ခုကို ကောင်းတဲ့ အချက်နဲ့ ဆိုးတဲ့ အချက် နှစ်မျိုးလုံး ပါအောင် although နဲ့ but သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "I love my phone. {v}Although{/v} it was expensive, it is very fast. The screen is big, {v}but{/v} the battery is weak. {v}Although{/v} it is heavy, it feels strong. The camera is good, {v}but{/v} it isn't the best. Overall, I'm happy with it.",
+      "explain_mm": "ကောင်း/ဆိုး အချက်တွေကို although နဲ့ but သုံးပြီး မျှတအောင် ဖော်ပြပါ။ တစ်ဝါကျမှာ နှစ်ခုလုံး မသုံးပါနဲ့။",
+      "grading": {
+        "grammar_point": "Connectors: although / but",
+        "rule": "Express a balanced opinion with contrast words; never combine although and but in one sentence.",
+        "must_check": [
+          "Correct use of although and but",
+          "Both positive and negative points",
+          "Not used together",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "although and but together",
+          "No real contrast",
+          "Sentence-fragment although-clauses"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

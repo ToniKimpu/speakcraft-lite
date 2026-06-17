@@ -47,6 +47,16 @@ List<LexiconTimeWord> _frequencyAdverbs(ResolvedToolkit t) {
 List<LexiconTimeWord> _timePhrases(ResolvedToolkit t) =>
     t.timeWords.where((w) => !w.isFrequencyAdverb).toList(growable: false);
 
+/// The unit's visual subject-form agreement block, if it ships one. Rendered in
+/// the form section (replacing the dense prose note) rather than the toolkit
+/// region, so it is excluded from the bottom block loop.
+TeachBlock? _agreementBlock(WritingTeach teach) {
+  for (final b in teach.blocks) {
+    if (b.type == 'agreement') return b;
+  }
+  return null;
+}
+
 /// The shared lexicon stores **positive present-simple** examples, so they only
 /// fit an affirmative present-simple unit (`verb_form: third`). For negatives /
 /// questions (`base`) or continuous (`ing`) those examples are off-message, so
@@ -64,6 +74,8 @@ class _WritingTeachPageState extends State<WritingTeachPage> {
     final toolkit = ResolvedToolkit(
       verbs: lexicon.resolveVerbs(unit.toolkit.verbIds),
       timeWords: lexicon.resolveTimeWords(unit.toolkit.timeWordIds),
+      adjectives: lexicon.resolveAdjectives(unit.toolkit.adjectiveIds),
+      nouns: lexicon.resolveNouns(unit.toolkit.nounIds),
     );
     return _TeachData(unit: unit, toolkit: toolkit);
   }
@@ -143,42 +155,17 @@ class _TeachBody extends StatelessWidget {
                   const HighlightLegend(),
                   const SizedBox(height: 20),
 
-                  // ① Situation
-                  _Section(
-                    icon: Icons.menu_book_outlined,
-                    label: 'ဒါလေးကို အရင်ဖတ်ကြည့်ပါ',
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        HighlightedText(teach.situationEn,
-                            style: PmpTextStyles.body1Regular
-                                .copyWith(color: cs.onSurface, height: 1.6)),
-                        if (teach.situationMm.isNotEmpty) ...[
-                          const SizedBox(height: 8),
-                          Text(teach.situationMm,
-                              style: PmpTextStyles.body2Regular
-                                  .copyWith(color: mm, height: 1.6)),
-                        ],
-                      ],
-                    ),
-                  ),
-
-                  // ② Use + timeline
+                  // ① Use + timeline — when to use (Burmese only), shown first.
                   _Section(
                     icon: Icons.lightbulb_outline,
                     label: 'ဘယ်လိုအချိန်မှာ အသုံးပြုမှာလဲ',
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(teach.useEn,
-                            style: PmpTextStyles.body1Regular
-                                .copyWith(color: cs.onSurface)),
-                        if (teach.useMm.isNotEmpty) ...[
-                          const SizedBox(height: 6),
+                        if (teach.useMm.isNotEmpty)
                           Text(teach.useMm,
                               style: PmpTextStyles.body2Regular
                                   .copyWith(color: mm, height: 1.6)),
-                        ],
                         if (teach.timeline.isNotEmpty) ...[
                           const SizedBox(height: 12),
                           Container(
@@ -203,7 +190,27 @@ class _TeachBody extends StatelessWidget {
                     ),
                   ),
 
-                  // ③ Form table
+                  // ② Situation
+                  _Section(
+                    icon: Icons.menu_book_outlined,
+                    label: 'ဒါလေးကို အရင်ဖတ်ကြည့်ပါ',
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        HighlightedText(teach.situationEn,
+                            style: PmpTextStyles.body1Regular
+                                .copyWith(color: cs.onSurface, height: 1.6)),
+                        if (teach.situationMm.isNotEmpty) ...[
+                          const SizedBox(height: 8),
+                          Text(teach.situationMm,
+                              style: PmpTextStyles.body2Regular
+                                  .copyWith(color: mm, height: 1.6)),
+                        ],
+                      ],
+                    ),
+                  ),
+
+                  // ③ Form table (+ optional visual agreement buckets)
                   _Section(
                     icon: Icons.grid_view_rounded,
                     label: 'Subject နှင့် Verb ဘယ်လိုတွဲမလဲ',
@@ -211,6 +218,10 @@ class _TeachBody extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         _FormTable(rows: teach.form),
+                        if (_agreementBlock(teach) case final block?) ...[
+                          const SizedBox(height: 14),
+                          _AgreementBuckets(block: block),
+                        ],
                         if (teach.formNoteMm.isNotEmpty) ...[
                           const SizedBox(height: 12),
                           _InlineNote(mm: teach.formNoteMm),
@@ -220,8 +231,7 @@ class _TeachBody extends StatelessWidget {
                   ),
 
                   // ④ Burmese trap
-                  if (teach.trapEn.isNotEmpty || teach.trapMm.isNotEmpty)
-                    _TrapCard(en: teach.trapEn, mm: teach.trapMm),
+                  if (teach.trapMm.isNotEmpty) _TrapCard(mm: teach.trapMm),
 
                   // ⑤ Examples
                   _Section(
@@ -247,10 +257,49 @@ class _TeachBody extends StatelessWidget {
                           overrides: unit.toolkit.verbExamples),
                     ),
 
+                  // Noun bank — jobs / roles that follow be (I am a student).
+                  if (toolkit.nouns.isNotEmpty)
+                    _Section(
+                      icon: Icons.badge_outlined,
+                      label: 'Jobs & roles  ·  I am a …',
+                      child: _SimpleWordBank(
+                        entries: [
+                          for (final n in toolkit.nouns)
+                            _WordEntry(
+                                en: n.withArticle,
+                                mm: n.mm,
+                                examples: n.examples),
+                        ],
+                        showExamples: _showBankExamples(unit),
+                      ),
+                    ),
+
+                  // Adjective bank — describing words after be (She is happy).
+                  if (toolkit.adjectives.isNotEmpty)
+                    _Section(
+                      icon: Icons.palette_outlined,
+                      label: 'Describing words  ·  She is …',
+                      child: _SimpleWordBank(
+                        entries: [
+                          for (final a in toolkit.adjectives)
+                            _WordEntry(
+                                en: a.en, mm: a.mm, examples: a.examples),
+                        ],
+                        showExamples: _showBankExamples(unit),
+                      ),
+                    ),
+
+                  // Optional Burmese note under the banks (e.g. the be unit's
+                  // "places after be" hint).
+                  if (unit.toolkit.noteMm.isNotEmpty)
+                    _NoteCard(mm: unit.toolkit.noteMm),
+
                   // Bespoke teach blocks (e.g. the frequency scale) sit in the
-                  // toolkit region, on top of the fixed spine.
+                  // toolkit region, on top of the fixed spine. The agreement
+                  // block is handled in the form section, so skip it here.
                   for (final block in unit.teach.blocks)
-                    _TeachBlockView(block: block, toolkit: toolkit),
+                    if (block.type != 'agreement')
+                      _TeachBlockView(block: block, toolkit: toolkit),
 
                   // Time phrases (the "when" group) + the Burmese how-to note.
                   if (_timePhrases(toolkit).isNotEmpty)
@@ -409,8 +458,7 @@ class _FormTable extends StatelessWidget {
 }
 
 class _TrapCard extends StatelessWidget {
-  const _TrapCard({required this.en, required this.mm});
-  final String en;
+  const _TrapCard({required this.mm});
   final String mm;
 
   @override
@@ -440,15 +488,10 @@ class _TrapCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
-            if (en.isNotEmpty)
-              Text(en,
-                  style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface)),
-            if (mm.isNotEmpty) ...[
-              const SizedBox(height: 6),
+            if (mm.isNotEmpty)
               Text(mm,
                   style: PmpTextStyles.body2Regular.copyWith(
                       color: cs.onSurfaceVariant, height: 1.6)),
-            ],
           ],
         ),
       ),
@@ -694,6 +737,82 @@ class _TimeWordTile extends StatelessWidget {
   }
 }
 
+/// A plain (en + Burmese gloss) word for the adjective / noun banks. Unlike a
+/// verb it has no second form, so the tile just shows the word and expands to a
+/// bilingual example.
+class _WordEntry {
+  const _WordEntry({required this.en, required this.mm, required this.examples});
+  final String en;
+  final String mm;
+  final List<ExamplePair> examples;
+}
+
+/// A simple word bank (adjectives / nouns) — expandable bilingual rows, mirroring
+/// the verb / time-word banks but without a form column.
+class _SimpleWordBank extends StatelessWidget {
+  const _SimpleWordBank({required this.entries, required this.showExamples});
+  final List<_WordEntry> entries;
+  final bool showExamples;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Theme(
+      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          for (var i = 0; i < entries.length; i++) ...[
+            if (i > 0)
+              Divider(
+                  height: 1, color: cs.outlineVariant.withValues(alpha: 0.5)),
+            _SimpleWordTile(entry: entries[i], showExamples: showExamples),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _SimpleWordTile extends StatelessWidget {
+  const _SimpleWordTile({required this.entry, required this.showExamples});
+  final _WordEntry entry;
+  final bool showExamples;
+
+  @override
+  Widget build(BuildContext context) {
+    final mmColor = PmpColors.myanmarGloss(Theme.of(context).brightness);
+    final verbColor = writingVerbColor(Theme.of(context).brightness);
+    final title = Text(entry.en,
+        style: PmpTextStyles.body1Semi.copyWith(color: verbColor));
+    final subtitle = entry.mm.isEmpty
+        ? null
+        : Text(entry.mm,
+            style: PmpTextStyles.body2Regular.copyWith(color: mmColor));
+    final examples = showExamples ? entry.examples : const <ExamplePair>[];
+
+    if (examples.isEmpty) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [title, if (subtitle != null) subtitle],
+        ),
+      );
+    }
+    return ExpansionTile(
+      tilePadding: EdgeInsets.zero,
+      childrenPadding: const EdgeInsets.only(left: 4, bottom: 10),
+      expandedCrossAxisAlignment: CrossAxisAlignment.start,
+      title: title,
+      subtitle: subtitle,
+      children: [
+        for (final ex in examples) _ExampleRow(en: ex.en, mm: ex.mm),
+      ],
+    );
+  }
+}
+
 /// Renders one optional teach block against the block registry. Unknown types
 /// render nothing, so content can be authored ahead of app support.
 class _TeachBlockView extends StatelessWidget {
@@ -776,6 +895,105 @@ class _FrequencyScale extends StatelessWidget {
   }
 }
 
+/// The visual subject-form agreement block — one card per subject "bucket"
+/// (`I · you · we · they` → work · `he · she · it` → works), with the changed
+/// form highlighted. Replaces a dense prose note with a scan-in-one-glance split,
+/// and handles 2-way (base/+s) and 3-way (am/is/are) units alike.
+class _AgreementBuckets extends StatelessWidget {
+  const _AgreementBuckets({required this.block});
+  final TeachBlock block;
+
+  @override
+  Widget build(BuildContext context) {
+    final buckets = ((block.data['buckets'] as List?) ?? const [])
+        .map((e) => (e as Map).cast<String, dynamic>())
+        .toList(growable: false);
+    if (buckets.isEmpty) return const SizedBox.shrink();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (var i = 0; i < buckets.length; i++) ...[
+          if (i > 0) const SizedBox(height: 8),
+          _AgreementCard(data: buckets[i]),
+        ],
+      ],
+    );
+  }
+}
+
+class _AgreementCard extends StatelessWidget {
+  const _AgreementCard({required this.data});
+  final Map<String, dynamic> data;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final verbColor = writingVerbColor(Theme.of(context).brightness);
+    final highlight = data['highlight'] == true;
+    final subjects = data['subjects']?.toString() ?? '';
+    final form = data['form']?.toString() ?? '';
+    final tag = data['tag']?.toString() ?? '';
+    final example = data['example']?.toString() ?? '';
+
+    final tagColor = highlight ? PmpColors.accentOrange : cs.onSurfaceVariant;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      decoration: BoxDecoration(
+        color: highlight
+            ? PmpColors.accentOrange.withValues(alpha: 0.08)
+            : cs.surface,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: highlight
+              ? PmpColors.accentOrange.withValues(alpha: 0.45)
+              : cs.outlineVariant,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // The subject group ("bucket").
+          Text(subjects,
+              style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface)),
+          const SizedBox(height: 6),
+          // → form  [tag pill]
+          Row(
+            children: [
+              Icon(Icons.arrow_forward_rounded,
+                  size: 16, color: cs.onSurfaceVariant),
+              const SizedBox(width: 6),
+              Flexible(
+                child: Text(form,
+                    style: PmpTextStyles.body1Semi.copyWith(color: verbColor)),
+              ),
+              if (tag.isNotEmpty) ...[
+                const SizedBox(width: 8),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: tagColor.withValues(alpha: highlight ? 0.18 : 0.10),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Text(tag,
+                      style: PmpTextStyles.sub.copyWith(
+                          color: tagColor, fontWeight: FontWeight.w600)),
+                ),
+              ],
+            ],
+          ),
+          if (example.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            HighlightedText('“$example”',
+                style: PmpTextStyles.body2Regular
+                    .copyWith(color: cs.onSurfaceVariant)),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
 /// A light Burmese note that sits *inside* an existing section card (e.g. under
 /// the form table) — a thin divider + tip icon, no card chrome of its own.
 class _InlineNote extends StatelessWidget {
@@ -786,6 +1004,18 @@ class _InlineNote extends StatelessWidget {
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
     final mmColor = PmpColors.myanmarGloss(Theme.of(context).brightness);
+    final style =
+        PmpTextStyles.body2Regular.copyWith(color: mmColor, height: 1.7);
+    // Authored as one rule per line (split on newline). A single-line note
+    // renders as plain text; a multi-line note becomes a clean bullet list so
+    // each rule reads on its own.
+    final lines = mm
+        .split('\n')
+        .map((l) => l.trim())
+        .where((l) => l.isNotEmpty)
+        .toList(growable: false);
+    final multi = lines.length > 1;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -797,9 +1027,24 @@ class _InlineNote extends StatelessWidget {
             Icon(Icons.tips_and_updates_outlined, size: 17, color: cs.primary),
             const SizedBox(width: 9),
             Expanded(
-              child: Text(mm,
-                  style: PmpTextStyles.body2Regular
-                      .copyWith(color: mmColor, height: 1.7)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  for (var i = 0; i < lines.length; i++)
+                    Padding(
+                      padding: EdgeInsets.only(top: i == 0 ? 0 : 7),
+                      child: multi
+                          ? Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('•  ', style: style),
+                                Expanded(child: Text(lines[i], style: style)),
+                              ],
+                            )
+                          : Text(lines[i], style: style),
+                    ),
+                ],
+              ),
             ),
           ],
         ),

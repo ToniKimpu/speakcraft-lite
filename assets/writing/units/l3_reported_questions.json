@@ -1,0 +1,193 @@
+{
+  "id": "l3_reported_questions",
+  "level": 3,
+  "section": "Reported speech",
+  "order": 2,
+  "type": "grammar_unit",
+  "title": "Reported questions & commands",
+  "subtitle_mm": "Reported questions & commands — မေးခွန်း/အမိန့် ပြန်ပြော",
+  "teach": {
+    "situation_en": "\"Where do you live?\" → She {v}asked{/v} where I {v}lived{/v}. \"Are you ready?\" → He {v}asked{/v} {v}if{/v} I {v}was{/v} ready. \"Sit down.\" → She {v}told{/v} me {v}to sit{/v} down. \"Don't be late.\" → He {v}told{/v} me {v}not to be{/v} late.",
+    "situation_mm": "\"ဘယ်မှာ နေလဲ\" → သူမ ငါ ဘယ်မှာ နေလဲလို့ မေးတယ်။ \"အဆင်သင့်ပြီလား\" → သူ ငါ အဆင်သင့်ပြီလားလို့ မေးတယ်။ \"ထိုင်ပါ\" → သူမ ငါ့ကို ထိုင်ဖို့ ပြောတယ်။ \"နောက်မကျနဲ့\" → သူ ငါ့ကို နောက်မကျဖို့ ပြောတယ်။",
+    "use_en": "Reported QUESTIONS use statement word order (subject before verb), no 'do/does/did', and no question mark. For wh-questions keep the wh-word; for yes/no questions use 'if' or 'whether'. The tense backshifts as usual. Reported COMMANDS use: tell/ask + person + (not) to + base verb.",
+    "use_mm": "Reported QUESTION တွေမှာ statement word order (subject က verb ရှေ့) သုံးတယ်၊ 'do/does/did' မပါ၊ မေးခွန်း အမှတ်အသား (?) မပါ။ wh- မေးခွန်းအတွက် wh-word ထားပါ၊ yes/no မေးခွန်းအတွက် 'if' ဒါမှမဟုတ် 'whether' သုံးပါ။ tense က ပုံမှန်အတိုင်း backshift။ Reported COMMAND တွေ — tell/ask + လူ + (not) to + base verb။",
+    "timeline": "question → statement order (no do/did, no ?)   ·   command → (not) to + base",
+    "form": [
+      { "subject": "wh- question", "form": "ask + wh- + subject + verb  (asked where I lived)" },
+      { "subject": "yes / no question", "form": "ask + if/whether + subject + verb  (asked if I was ready)" },
+      { "subject": "command", "form": "tell/ask + person + to + base  (told me to wait)" },
+      { "subject": "negative command", "form": "+ not to + base  (told me not to go)" }
+    ],
+    "form_note_mm": [
+      "reported question — statement order (subject + verb)၊ do/does/did ဖြုတ်၊ ? မထည့်ဘူး။",
+      "wh- → wh-word ထား · yes/no → if / whether သုံးပါ။",
+      "tense backshift ပုံမှန်အတိုင်း — \"Where do you live?\" → asked where I lived။",
+      "command — tell/ask + လူ + to + base (told me to wait) · အငြင်း — not to + base (not to go)။"
+    ],
+    "trap_en": "In reported questions, don't keep question word order or 'do/did'.  WRONG: She asked where did I live / He asked am I ready.  RIGHT: She asked where I lived / He asked if I was ready.",
+    "trap_mm": "reported question မှာ မေးခွန်း word order နဲ့ 'do/did' မထားနဲ့။ ✗ She asked where did I live / He asked am I ready → ✓ She asked where I lived / He asked if I was ready။",
+    "examples": [
+      { "en": "\"What time is it?\" → He {v}asked{/v} what time it {v}was{/v}.", "mm": "\"ဘယ်အချိန်လဲ\" → သူ ဘယ်အချိန်လဲလို့ မေးတယ်။" },
+      { "en": "\"Do you like tea?\" → She {v}asked{/v} {v}if{/v} I {v}liked{/v} tea.", "mm": "\"လက်ဖက်ရည် ကြိုက်လား\" → သူမ ငါ လက်ဖက်ရည် ကြိုက်လားလို့ မေးတယ်။" },
+      { "en": "\"Please wait.\" → He {v}asked{/v} me {v}to wait{/v}.", "mm": "\"စောင့်ပေးပါ\" → သူ ငါ့ကို စောင့်ဖို့ တောင်းတယ်။" },
+      { "en": "\"Don't touch it.\" → She {v}told{/v} me {v}not to touch{/v} it.", "mm": "\"မထိနဲ့\" → သူမ ငါ့ကို မထိဖို့ ပြောတယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "wh- question",
+        "rule_mm": "ask + wh- + statement order (do/did ဖြုတ်, ? မပါ)",
+        "en": "\"Where do you live?\" → She {v}asked{/v} where I {v}lived{/v}.",
+        "why_mm": "reported question မှာ subject က verb ရှေ့ (statement order) ထားတယ်၊ 'do' ဖြုတ်တယ်၊ ? မထည့်ဘူး။ wh-word (where) ထားပြီး tense backshift — live → lived။"
+      },
+      {
+        "subject": "yes / no question",
+        "rule_mm": "ask + if / whether + statement order",
+        "en": "\"Are you ready?\" → He {v}asked{/v} {v}if{/v} I {v}was{/v} ready.",
+        "why_mm": "yes/no မေးခွန်းကို ပြန်ပြောရင် 'if' ဒါမှမဟုတ် 'whether' သုံးတယ်။ word order က statement အတိုင်း — are you → if I was။"
+      },
+      {
+        "subject": "command",
+        "rule_mm": "tell / ask + person + (not) to + base verb",
+        "en": "\"Sit down.\" → She {v}told{/v} me {v}to sit{/v} down.  ·  \"Don't be late.\" → He told me {v}not to be{/v} late.",
+        "why_mm": "အမိန့်/ညွှန်ကြားချက်ကို 'tell/ask + လူ + to + base verb' နဲ့ ပြန်ပြောတယ် (to sit)။ အငြင်းဆို 'not to + base' (not to be)။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "\"Where do you live?\" → She asked where I ___.",
+        "prompt_mm": "သူမ ငါ ဘယ်မှာ နေလဲလို့ မေးတယ်။",
+        "options": ["lived", "did live", "do live"],
+        "answer": "lived",
+        "explain_mm": "reported question — statement order + backshift → where I lived (do ဖြုတ်)။"
+      },
+      {
+        "prompt_en": "\"Are you ready?\" → He asked ___ I was ready.",
+        "prompt_mm": "သူ ငါ အဆင်သင့်ပြီလားလို့ မေးတယ်။",
+        "options": ["if", "that", "do"],
+        "answer": "if",
+        "explain_mm": "yes/no မေးခွန်း → if / whether → asked if I was ready။"
+      },
+      {
+        "prompt_en": "\"Wait here.\" → She told me ___ here.",
+        "prompt_mm": "သူမ ငါ့ကို ဒီမှာ စောင့်ဖို့ ပြောတယ်။",
+        "options": ["to wait", "wait", "waiting"],
+        "answer": "to wait",
+        "explain_mm": "reported command — tell + လူ + to + base → to wait။"
+      }
+    ],
+    "model_paragraph_en": "At the interview, the manager asked me many things. He {v}asked{/v} where I {v}had worked{/v} before. He {v}asked{/v} {v}if{/v} I {v}could{/v} start soon. Then he {v}told{/v} me {v}to wait{/v} outside. A few minutes later, the secretary {v}asked{/v} me {v}to come{/v} back in and {v}told{/v} me {v}not to worry{/v}.",
+    "model_paragraph_mm": "အင်တာဗျူးမှာ မန်နေဂျာက ငါ့ကို အများကြီး မေးတယ်။ အရင်က ဘယ်မှာ အလုပ်လုပ်ခဲ့လဲလို့ မေးတယ်။ မကြာခင် စတင်နိုင်မလားလို့ မေးတယ်။ ပြီးတော့ အပြင်မှာ စောင့်ဖို့ ပြောတယ်။ မိနစ်အနည်းငယ်အကြာမှာ စာရေးမက ပြန်ဝင်လာဖို့ ပြောပြီး မပူဖို့ ပြောတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "reported question", "form": "ask + (wh- / if) + statement order", "tag": "asked if / where …", "example": "She asked if I was ready." },
+          { "subjects": "reported command", "form": "tell/ask + person + (not) to + base", "tag": "told me (not) to …", "highlight": true, "example": "He told me to wait." }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [
+      "v_ask", "v_tell", "v_go", "v_come", "v_wait", "v_work",
+      "v_help", "v_call", "v_finish", "v_start"
+    ],
+    "time_words": [],
+    "verb_form": "base",
+    "note_mm": "reported question — ask + (wh-/if) + statement order (do/did ဖြုတ်)။ reported command — tell/ask + လူ + to + base verb (to wait, to go) · အငြင်း not to + base။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "\"Where do you live?\" → She asked where I ___.",
+      "prompt_mm": "\"ဘယ်မှာ နေလဲ\" → သူမ ငါ ဘယ်မှာ နေလဲလို့ မေးတယ်။",
+      "options": ["lived", "did live", "do live"],
+      "answers": ["lived"],
+      "explain_mm": "reported question — statement order + backshift → where I lived (do ဖြုတ်)။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "\"Are you ready?\" → He asked ___ I was ready.",
+      "prompt_mm": "\"အဆင်သင့်ပြီလား\" → သူ ငါ အဆင်သင့်ပြီလားလို့ မေးတယ်။",
+      "options": ["if", "that", "do"],
+      "answers": ["if"],
+      "explain_mm": "yes/no မေးခွန်း → if / whether → asked if I was ready။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "\"Wait here.\" → She told me ___ ___ here. (2 words)",
+      "prompt_mm": "\"ဒီမှာ စောင့်ပါ\" → သူမ ငါ့ကို ဒီမှာ စောင့်ဖို့ ပြောတယ်။ ( to + base — စကားလုံး ၂ လုံး )",
+      "answers": ["to wait"],
+      "explain_mm": "reported command — tell + လူ + to + base → to wait။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He asked me where did I work.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["He asked me where I worked", "he asked me where i worked.", "He asked where I worked"],
+      "explain_mm": "reported question — do ဖြုတ်ပြီး statement order → where I worked။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Report it:  to  /  me  /  told  /  not  /  she  /  go",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး reported command မှန် ရေးပါ။ ( She told me + not to go )",
+      "answers": ["She told me not to go", "she told me not to go.", "She told me not to go."],
+      "explain_mm": "negative command — tell + လူ + not to + base → She told me not to go။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — questions & instructions. Write 5–8 reported sentences: a mix of reported questions (ask + wh-/if, statement order) and reported commands (tell/ask + person + (not) to + base).",
+      "prompt_mm": "အပိုင်း ၁ — မေးခွန်း & ညွှန်ကြားချက်။ reported sentence ၅–၈ ကြောင်း ရေးပါ — reported question (ask + wh-/if, statement order) နဲ့ reported command (tell/ask + လူ + (not) to + base) ရောပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "She {v}asked{/v} where I {v}was{/v} from. He {v}asked{/v} if I {v}had{/v} a car. The guard {v}told{/v} us {v}to wait{/v} at the gate. My boss {v}asked{/v} me {v}to finish{/v} the report. The teacher {v}told{/v} us {v}not to talk{/v} during the test.",
+      "explain_mm": "question → statement order (do/did ဖြုတ်, ? မပါ) · command → (not) to + base။",
+      "grading": {
+        "grammar_point": "Reported questions & commands",
+        "rule": "Reported questions: ask + wh-/if + statement order, no do/did, no '?'. Reported commands: tell/ask + person + (not) to + base.",
+        "must_check": [
+          "Statement word order in reported questions",
+          "'if'/'whether' for yes-no questions; wh-word kept for wh-questions",
+          "Commands as (not) to + base verb",
+          "5–8 sentences with a mix of both"
+        ],
+        "common_mm_errors": [
+          "Question word order kept (asked where did I live)",
+          "Leaving in do/does/did",
+          "Command without 'to' or wrong negative (told me don't go)"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — an interview or a busy day. Write a short paragraph (4–6 sentences) reporting the questions you were asked and the instructions you were given (at an interview, at work, or from a parent), mixing reported questions and commands.",
+      "prompt_mm": "အပိုင်း ၂ — အင်တာဗျူး ဒါမှမဟုတ် အလုပ်များတဲ့ နေ့။ မင်းကို မေးခဲ့တဲ့ မေးခွန်းတွေနဲ့ ပေးခဲ့တဲ့ ညွှန်ကြားချက်တွေ (အင်တာဗျူး၊ အလုပ်ခွင်၊ ဒါမှမဟုတ် မိဘ) ကို reported question နဲ့ command ရောပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "On my first day, the manager asked me a lot. She {v}asked{/v} if I {v}had{/v} done this work before. She {v}asked{/v} where I {v}had{/v} studied. Then she {v}told{/v} me {v}to read{/v} the safety rules. She also {v}told{/v} me {v}not to use{/v} my phone at the desk.",
+      "explain_mm": "reported question (statement order) နဲ့ reported command ((not) to + base) ကို တွဲသုံးပါ။",
+      "grading": {
+        "grammar_point": "Reported questions & commands",
+        "rule": "Report a mix of questions and instructions with correct word order and to-infinitive commands.",
+        "must_check": [
+          "Reported questions in statement order",
+          "Reported commands as (not) to + base",
+          "Backshift where relevant",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Interrogative word order / do-did kept",
+          "Missing 'to' in commands",
+          "'don't' instead of 'not to'"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

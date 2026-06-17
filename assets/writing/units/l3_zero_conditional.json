@@ -1,0 +1,193 @@
+{
+  "id": "l3_zero_conditional",
+  "level": 3,
+  "section": "Conditionals & wish",
+  "order": 1,
+  "type": "grammar_unit",
+  "title": "Zero conditional (if + present, present)",
+  "subtitle_mm": "if + present, present — အမြဲမှန်တဲ့ အချက်",
+  "teach": {
+    "situation_en": "{v}If{/v} you {v}heat{/v} water to 100°C, it {v}boils{/v}. Ice {v}melts{/v} {v}if{/v} you {v}leave{/v} it in the sun. {v}If{/v} I {v}don't sleep{/v} well, I {v}feel{/v} tired. Plants {v}die{/v} {v}if{/v} they {v}don't get{/v} water.",
+    "situation_mm": "ရေကို ၁၀၀°C အထိ အပူပေးရင် ဆူတယ်။ ရေခဲကို နေပူထဲ ထားရင် အရည်ပျော်တယ်။ ကောင်းကောင်း မအိပ်ရရင် ပင်ပန်းတယ်။ အပင်တွေဟာ ရေ မရရင် သေတယ်။",
+    "use_en": "We use the zero conditional for things that are ALWAYS true — facts, scientific truths, and habits where the result is certain. Form: If + present simple, … present simple. Both clauses are in the present. You can replace 'if' with 'when' with no change in meaning.",
+    "use_mm": "အမြဲတမ်း မှန်နေတဲ့ အရာတွေ — အချက်အလက်၊ သိပ္ပံ အမှန်တရား၊ နဲ့ အကျိုးဆက် သေချာတဲ့ အလေ့အထ — အတွက် zero conditional သုံးတယ်။ ပုံစံ — If + present simple, … present simple။ နှစ်ပိုင်းလုံး present ဖြစ်တယ်။ 'if' နေရာမှာ 'when' သုံးလည်း အဓိပ္ပာယ် မပြောင်းဘူး။",
+    "timeline": "If [condition: present] → [result: present]  (always true)",
+    "form": [
+      { "subject": "structure", "form": "If + present, present  (If you heat ice, it melts.)" },
+      { "subject": "other order", "form": "present + if + present  (Ice melts if you heat it.)" },
+      { "subject": "if vs when", "form": "'when' works too — same meaning  (When you heat ice, it melts.)" },
+      { "subject": "negative", "form": "don't / doesn't in either clause  (If it doesn't rain, the grass dies.)" }
+    ],
+    "form_note_mm": [
+      "zero conditional — If + present simple, … present simple။ (အမြဲမှန်တဲ့ အရာ)",
+      "first conditional နဲ့ မမှားပါနဲ့ — zero မှာ result က will မဟုတ်ဘူး၊ present simple ဖြစ်တယ်။",
+      "'if' နေရာမှာ 'when' အစားထိုးနိုင်တယ် — အဓိပ္ပာယ် တူတူပဲ (အမြဲ ဖြစ်လို့)။",
+      "if က ရှေ့မှာ ဆိုရင် comma သုံးပါ — If + present , … present။"
+    ],
+    "trap_en": "Don't use 'will' in the zero conditional — the result is always true, so it stays in the present.  WRONG: If you heat ice, it will melt.   RIGHT: If you heat ice, it melts.",
+    "trap_mm": "zero conditional မှာ 'will' မထည့်ရဘူး — အကျိုးဆက်က အမြဲမှန်လို့ present simple ပဲ ဖြစ်တယ်။ ✗ If you heat ice, it will melt → ✓ If you heat ice, it melts။",
+    "examples": [
+      { "en": "{v}If{/v} you {v}mix{/v} blue and yellow, you {v}get{/v} green.", "mm": "အပြာနဲ့ အဝါ ရောရင် အစိမ်း ရတယ်။" },
+      { "en": "My dog {v}barks{/v} {v}if{/v} a stranger {v}comes{/v} in.", "mm": "သူစိမ်း ဝင်လာရင် ငါ့ခွေး ဟောင်တယ်။" },
+      { "en": "{v}If{/v} you {v}don't water{/v} plants, they {v}die{/v}.", "mm": "အပင်တွေကို ရေ မလောင်းရင် သေတယ်။" },
+      { "en": "Water {v}freezes{/v} {v}if{/v} the temperature {v}drops{/v} below zero.", "mm": "အပူချိန် သုညအောက် ကျရင် ရေ ခဲတယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "always-true fact",
+        "rule_mm": "If + present simple, … present simple (နှစ်ဖက်လုံး present)",
+        "en": "{v}If{/v} you {v}heat{/v} ice, it {v}melts{/v}.",
+        "why_mm": "အမြဲမှန်တဲ့ အချက် ဖြစ်လို့ zero conditional သုံးတယ် — condition နဲ့ result နှစ်ဖက်လုံး present simple ဖြစ်ပါတယ်။"
+      },
+      {
+        "subject": "if = when",
+        "rule_mm": "'if' နေရာမှာ 'when' သုံးလို့ ရတယ် — အဓိပ္ပာယ် တူတူ",
+        "en": "{v}When{/v} you {v}heat{/v} ice, it {v}melts{/v}.",
+        "why_mm": "အမြဲ ဖြစ်နေတာ ဖြစ်လို့ 'if' နဲ့ 'when' က အဓိပ္ပာယ် မကွာပါဘူး — နှစ်မျိုးလုံး မှန်ပါတယ်။"
+      },
+      {
+        "subject": "no will (trap)",
+        "rule_mm": "result မှာ will မထည့်ရဘူး — present simple ပဲ",
+        "en": "If you {v}heat{/v} ice, it {v}melts{/v}.  (✗ it will melt)",
+        "why_mm": "အကျိုးဆက်က အမြဲမှန်လို့ first conditional လို will မသုံးပါဘူး — present simple 'melts' ပဲ ထားပါတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "If you heat ice, it ___.",
+        "prompt_mm": "ရေခဲကို အပူပေးရင် အရည်ပျော်တယ်။",
+        "options": ["melts", "will melt", "melt"],
+        "answer": "melts",
+        "explain_mm": "zero conditional — result မှာ present simple → melts (will မဟုတ်ဘူး)။"
+      },
+      {
+        "prompt_en": "Plants die if they ___ enough water.",
+        "prompt_mm": "အပင်တွေ ရေ အလုံအလောက် မရရင် သေတယ်။",
+        "options": ["don't get", "won't get", "didn't get"],
+        "answer": "don't get",
+        "explain_mm": "if-clause မှာ present simple အငြင်း → don't get။"
+      },
+      {
+        "prompt_en": "If water boils, it ___ into steam.",
+        "prompt_mm": "ရေ ဆူရင် ရေနွေးငွေ့အဖြစ် ပြောင်းတယ်။",
+        "options": ["turns", "will turn", "turned"],
+        "answer": "turns",
+        "explain_mm": "နှစ်ဖက်လုံး present — will မထည့်ဘူး → turns။"
+      }
+    ],
+    "model_paragraph_en": "My body has simple rules. {v}If{/v} I {v}drink{/v} coffee at night, I {v}don't sleep{/v} well. {v}If{/v} I {v}skip{/v} breakfast, I {v}feel{/v} hungry by ten. My head {v}hurts{/v} {v}if{/v} I {v}stare{/v} at my phone too long. {v}When{/v} I {v}walk{/v} every morning, I {v}feel{/v} fresh all day.",
+    "model_paragraph_mm": "ငါ့ ခန္ဓာကိုယ်မှာ ရိုးရှင်းတဲ့ စည်းမျဉ်းတွေ ရှိတယ်။ ညမှာ ကော်ဖီ သောက်ရင် ကောင်းကောင်း မအိပ်ရဘူး။ မနက်စာ ချန်ထားရင် ဆယ်နာရီလောက် ဆာတယ်။ ဖုန်းကို ကြာကြာ ကြည့်ရင် ခေါင်းကိုက်တယ်။ မနက်တိုင်း လမ်းလျှောက်ရင် တစ်နေ့လုံး လန်းဆန်းတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "if-clause (the condition)", "form": "present simple", "tag": "If + present", "example": "If you heat ice …" },
+          { "subjects": "result clause", "form": "present simple — no will", "tag": "present", "highlight": true, "example": "… it melts." }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [
+      "v_go", "v_eat", "v_work", "v_play", "v_cook", "v_read",
+      "v_sleep", "v_start", "v_watch", "v_live"
+    ],
+    "time_words": [],
+    "verb_form": "base",
+    "note_mm": "If + present simple, … present simple။ နှစ်ဖက်လုံး present — will မထည့်ပါနဲ့။ he/she/it ဆို -s မမေ့ပါနဲ့ (If it rains, the road gets wet)။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "If you heat ice, it ___.",
+      "prompt_mm": "ရေခဲကို အပူပေးရင် အရည်ပျော်တယ်။",
+      "options": ["melts", "will melt", "melt"],
+      "answers": ["melts"],
+      "explain_mm": "zero conditional — အမြဲမှန်လို့ result မှာ present simple → melts (will မဟုတ်ဘူး)။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Plants die if they ___ enough water.",
+      "prompt_mm": "အပင်တွေ ရေ အလုံအလောက် မရရင် သေတယ်။",
+      "options": ["don't get", "won't get", "didn't get"],
+      "answers": ["don't get"],
+      "explain_mm": "if-clause မှာ present simple အငြင်း → don't get။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If you ___ (mix) red and white, you get pink.",
+      "prompt_mm": "အနီနဲ့ အဖြူ ရောရင် ပန်းရောင် ရတယ်။ ( mix ကို သုံးပါ )",
+      "answers": ["mix"],
+      "explain_mm": "if-clause မှာ present simple → mix။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "If water boils, it will turn into steam.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["If water boils, it turns into steam", "if water boils, it turns into steam.", "If water boils it turns into steam"],
+      "explain_mm": "zero conditional မှာ will မထည့်ရဘူး → it turns into steam။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  feel  /  if  /  tired  /  don't  /  I  /  I  /  sleep",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( If I don't sleep + I feel tired )",
+      "answers": ["If I don't sleep, I feel tired", "if i don't sleep i feel tired.", "If I don't sleep I feel tired"],
+      "explain_mm": "If + present (အငြင်း) , present → If I don't sleep, I feel tired။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — facts & habits. Write 5–8 zero-conditional sentences about general truths or your own habits (If …, … present). Keep BOTH clauses in the present.",
+      "prompt_mm": "အပိုင်း ၁ — အချက်အလက် & အလေ့အထ။ အမြဲမှန်တဲ့ အရာ ဒါမှမဟုတ် ကိုယ့်အလေ့အထ အကြောင်း zero conditional (If …, … present) sentence ၅–၈ ကြောင်း ရေးပါ။ နှစ်ဖက်လုံး present ထားပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "If I {v}drink{/v} too much coffee, I {v}feel{/v} nervous. Ice {v}melts{/v} if you {v}leave{/v} it outside. If I {v}wake{/v} up late, I {v}miss{/v} the bus. My phone {v}gets{/v} hot if I {v}play{/v} games for hours. If you {v}press{/v} this button, the light {v}turns{/v} on.",
+      "explain_mm": "If + present simple, … present simple။ နှစ်ဖက်လုံး present — will မထည့်ပါနဲ့။",
+      "grading": {
+        "grammar_point": "Zero conditional",
+        "rule": "If + present simple, … present simple, for facts / general truths / certain habits. No 'will' in either clause.",
+        "must_check": [
+          "Present simple in BOTH clauses",
+          "No will / won't anywhere",
+          "Always-true / habitual meaning (not a one-time future)",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "will in the result (If you heat ice, it will melt)",
+          "Missing -s on he/she/it verbs",
+          "Confusing it with the first conditional (one-time future)"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — how something works. Write a short paragraph (4–6 sentences) explaining how a machine, your body, or a routine works, using the zero conditional (If/When …, … present).",
+      "prompt_mm": "အပိုင်း ၂ — တစ်ခုခု ဘယ်လို အလုပ်လုပ်လဲ။ စက်တစ်ခု၊ ကိုယ့်ခန္ဓာကိုယ်၊ ဒါမှမဟုတ် နေ့စဉ်လုပ်ရိုးလုပ်စဉ် ဘယ်လို အလုပ်လုပ်လဲဆိုတာ zero conditional (If/When …, … present) သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My old laptop {v}has{/v} simple rules. If I {v}open{/v} too many tabs, it {v}slows{/v} down. The fan {v}gets{/v} loud when it {v}heats{/v} up. If I {v}don't charge{/v} it at night, it {v}dies{/v} by noon. When I {v}restart{/v} it, it {v}works{/v} fine again.",
+      "explain_mm": "If/When + present simple, … present simple။ အကြောင်းနဲ့ အကျိုး နှစ်ဖက်လုံး present နဲ့ ရေးပါ။",
+      "grading": {
+        "grammar_point": "Zero conditional",
+        "rule": "Link conditions and certain results with present + present, for how something always works.",
+        "must_check": [
+          "Both clauses in present simple",
+          "No will in the result",
+          "If / when used for an always-true result",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "will in the result clause",
+          "Mixing past and present",
+          "Dropping -s on third-person verbs"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

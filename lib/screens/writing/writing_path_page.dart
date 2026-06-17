@@ -7,10 +7,13 @@ import '../../model/writing/writing_index.dart';
 
 /// Writing module — **Phase-1 path screen** (the module's landing page).
 ///
-/// A single scrolling path: Level → Section → Unit cards, loaded from the
-/// bundled manifest (`index.json`). Published units are tappable and open the
-/// teach page; the rest render as muted "coming soon" cards so the learner sees
-/// the whole journey. Levels 2–3 show as teaser banners until authored.
+/// Level → Section → Unit, loaded from the bundled manifest (`index.json`).
+/// A level pill selector sits on top; each authored level shows a progress
+/// header + a per-section [TabBar], so each tab lists just its ~5–7 units
+/// instead of one long scroll. Levels with no authored units yet (e.g. the
+/// IELTS tier) render locked and show a "coming soon" teaser when selected.
+/// Published units open the teach page; the rest render muted so the learner
+/// still sees the whole journey.
 ///
 /// Inline English chrome for now (intl-ize before ship); authored data is
 /// already bilingual.
@@ -50,49 +53,100 @@ class _WritingPathPageState extends State<WritingPathPage> {
   }
 }
 
-class _PathBody extends StatelessWidget {
+/// One curriculum level's metadata (name + subtitle for the header/teaser).
+class _LevelMeta {
+  const _LevelMeta(this.level, this.name, this.subtitle);
+  final int level;
+  final String name;
+  final String subtitle;
+}
+
+const _levelMetas = <_LevelMeta>[
+  _LevelMeta(1, 'Foundation', 'A1–A2 · grammar from the ground up'),
+  _LevelMeta(2, 'Building', 'B1 · perfect tenses, modals, conditionals'),
+  _LevelMeta(3, 'Advanced', 'B2–C1 · conditionals, passive, clauses'),
+  _LevelMeta(4, 'IELTS', 'Task 1 & 2 · academic writing'),
+];
+
+/// A section of Level 1 — its id (`1.2`), display name and the units under it.
+class _Section {
+  const _Section({required this.id, required this.name, required this.units});
+  final String id;
+  final String name;
+  final List<WritingUnitSummary> units;
+}
+
+class _PathBody extends StatefulWidget {
   const _PathBody({required this.units});
   final List<WritingUnitSummary> units;
 
   @override
-  Widget build(BuildContext context) {
-    // Level 1 units, grouped into sections preserving manifest order.
-    final l1 = units.where((u) => u.level == 1).toList(growable: false);
-    final sections = <String, List<WritingUnitSummary>>{};
-    for (final u in l1) {
-      sections.putIfAbsent('${u.sectionId}  ${u.section}', () => []).add(u);
-    }
-    final openCount = l1.where((u) => u.isOpen).length;
+  State<_PathBody> createState() => _PathBodyState();
+}
 
+class _PathBodyState extends State<_PathBody> {
+  /// Sections per level, and per-level open/total counts — grouped once from the
+  /// manifest, preserving its order (curriculum sequence).
+  final _byLevel = <int, List<_Section>>{};
+  final _open = <int, int>{};
+  final _total = <int, int>{};
+  int _level = 1;
+
+  @override
+  void initState() {
+    super.initState();
+    final levelOrder = <int>[];
+    final sectionOrder = <int, List<String>>{};
+    final byLevelSection = <int, Map<String, List<WritingUnitSummary>>>{};
+    for (final u in widget.units) {
+      if (!byLevelSection.containsKey(u.level)) {
+        byLevelSection[u.level] = {};
+        sectionOrder[u.level] = [];
+        levelOrder.add(u.level);
+      }
+      final byId = byLevelSection[u.level]!;
+      if (!byId.containsKey(u.sectionId)) sectionOrder[u.level]!.add(u.sectionId);
+      byId.putIfAbsent(u.sectionId, () => []).add(u);
+    }
+    for (final lvl in levelOrder) {
+      final byId = byLevelSection[lvl]!;
+      _byLevel[lvl] = sectionOrder[lvl]!
+          .map((id) =>
+              _Section(id: id, name: byId[id]!.first.section, units: byId[id]!))
+          .toList(growable: false);
+      final all = byId.values.expand((e) => e).toList(growable: false);
+      _total[lvl] = all.length;
+      _open[lvl] = all.where((u) => u.isOpen).length;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final sections = _byLevel[_level];
+    final meta = _levelMetas[_level - 1];
     return SafeArea(
-      child: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _LevelHeader(
-            level: 1,
-            name: 'Foundation',
-            subtitle: 'A1–A2 · grammar from the ground up',
-            done: openCount,
-            total: l1.length,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+            child: _LevelSelector(
+              selected: _level,
+              available: _byLevel.keys.toSet(),
+              onSelect: (l) => setState(() => _level = l),
+            ),
           ),
           const SizedBox(height: 16),
-          for (final entry in sections.entries) ...[
-            _SectionHeader(label: entry.key),
-            const SizedBox(height: 8),
-            for (final u in entry.value) _UnitCard(unit: u),
-            const SizedBox(height: 14),
-          ],
-          const SizedBox(height: 4),
-          const _LevelTeaser(
-            level: 2,
-            name: 'Building',
-            subtitle: 'B1 · perfect tenses, modals, conditionals',
-          ),
-          const SizedBox(height: 10),
-          const _LevelTeaser(
-            level: 3,
-            name: 'Advanced & IELTS',
-            subtitle: 'B2–C1 · passive, clauses, IELTS writing',
+          Expanded(
+            child: (sections != null && sections.isNotEmpty)
+                ? _LevelTabsView(
+                    key: ValueKey(_level),
+                    meta: meta,
+                    sections: sections,
+                    open: _open[_level] ?? 0,
+                    total: _total[_level] ?? 0,
+                  )
+                : _LevelTeaserPanel(meta: meta),
           ),
         ],
       ),
@@ -100,16 +154,218 @@ class _PathBody extends StatelessWidget {
   }
 }
 
+/// One level's content: progress header + scrollable section tabs, each listing
+/// only that section's units. A fresh [DefaultTabController] (via the [ValueKey]
+/// on the level) sizes itself to the level's section count.
+class _LevelTabsView extends StatelessWidget {
+  const _LevelTabsView({
+    super.key,
+    required this.meta,
+    required this.sections,
+    required this.open,
+    required this.total,
+  });
+
+  final _LevelMeta meta;
+  final List<_Section> sections;
+  final int open;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return DefaultTabController(
+      length: sections.length,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: _LevelHeader(
+              name: meta.name,
+              subtitle: meta.subtitle,
+              done: open,
+              total: total,
+            ),
+          ),
+          const SizedBox(height: 14),
+          TabBar(
+            isScrollable: true,
+            tabAlignment: TabAlignment.start,
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            labelColor: cs.primary,
+            unselectedLabelColor: cs.onSurfaceVariant,
+            labelStyle: PmpTextStyles.body2Semi,
+            unselectedLabelStyle: PmpTextStyles.body2Regular,
+            indicatorColor: cs.primary,
+            indicatorWeight: 2.5,
+            dividerColor: cs.outlineVariant.withValues(alpha: 0.5),
+            tabs: [
+              for (final s in sections) Tab(text: '${s.id}  ${s.name}'),
+            ],
+          ),
+          Expanded(
+            child: TabBarView(
+              children: [
+                for (final s in sections)
+                  ListView(
+                    padding: const EdgeInsets.fromLTRB(20, 14, 20, 28),
+                    children: [
+                      for (final u in s.units) _UnitCard(unit: u),
+                    ],
+                  ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// A pill/segmented selector for the levels, mirroring the guided-lessons
+/// pattern. Level 1 is open; locked levels carry a lock and show a teaser.
+class _LevelSelector extends StatelessWidget {
+  const _LevelSelector({
+    required this.selected,
+    required this.available,
+    required this.onSelect,
+  });
+  final int selected;
+
+  /// The levels that actually have authored units in the manifest. A level with
+  /// no content renders locked (a "coming soon" teaser on tap).
+  final Set<int> available;
+  final ValueChanged<int> onSelect;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        for (final m in _levelMetas) ...[
+          Expanded(
+            child: _LevelPill(
+              label: 'Level ${m.level}',
+              selected: m.level == selected,
+              locked: !available.contains(m.level),
+              onTap: () => onSelect(m.level),
+            ),
+          ),
+          if (m.level != _levelMetas.last.level) const SizedBox(width: 8),
+        ],
+      ],
+    );
+  }
+}
+
+class _LevelPill extends StatelessWidget {
+  const _LevelPill({
+    required this.label,
+    required this.selected,
+    required this.locked,
+    required this.onTap,
+  });
+
+  final String label;
+  final bool selected;
+  final bool locked;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final bg = selected ? cs.primary : cs.surfaceContainerHighest;
+    final fg = selected ? cs.onPrimary : cs.onSurfaceVariant;
+    return Material(
+      color: bg,
+      borderRadius: BorderRadius.circular(20),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(20),
+        onTap: onTap,
+        child: Container(
+          height: 38,
+          alignment: Alignment.center,
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: selected
+                ? null
+                : Border.all(color: cs.outlineVariant),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (locked) ...[
+                Icon(Icons.lock_outline_rounded, size: 13, color: fg),
+                const SizedBox(width: 4),
+              ],
+              Flexible(
+                child: Text(label,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: PmpTextStyles.labelSemi.copyWith(color: fg)),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Shown when a locked level's pill is selected — a "coming soon" panel reusing
+/// the level's name/subtitle.
+class _LevelTeaserPanel extends StatelessWidget {
+  const _LevelTeaserPanel({required this.meta});
+  final _LevelMeta meta;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(28),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.lock_outline_rounded,
+                size: 40, color: cs.onSurfaceVariant),
+            const SizedBox(height: 14),
+            Text('Level ${meta.level} · ${meta.name}',
+                textAlign: TextAlign.center,
+                style: PmpTextStyles.h2.copyWith(color: cs.onSurface)),
+            const SizedBox(height: 6),
+            Text(meta.subtitle,
+                textAlign: TextAlign.center,
+                style: PmpTextStyles.body2Regular
+                    .copyWith(color: cs.onSurfaceVariant)),
+            const SizedBox(height: 14),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: cs.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: cs.outlineVariant),
+              ),
+              child: Text('Coming soon',
+                  style: PmpTextStyles.labelSemi
+                      .copyWith(color: cs.onSurfaceVariant)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _LevelHeader extends StatelessWidget {
   const _LevelHeader({
-    required this.level,
     required this.name,
     required this.subtitle,
     required this.done,
     required this.total,
   });
 
-  final int level;
   final String name;
   final String subtitle;
   final int done;
@@ -121,18 +377,14 @@ class _LevelHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('LEVEL $level',
-            style: PmpTextStyles.labelSemi
-                .copyWith(color: cs.primary, letterSpacing: 1.0)),
-        const SizedBox(height: 2),
         Text(name,
-            style: PmpTextStyles.h1.copyWith(
+            style: PmpTextStyles.h2.copyWith(
                 color: cs.onSurface, fontFamily: 'ArchivoBlack Regular')),
-        const SizedBox(height: 4),
+        const SizedBox(height: 2),
         Text(subtitle,
             style:
                 PmpTextStyles.body2Regular.copyWith(color: cs.onSurfaceVariant)),
-        const SizedBox(height: 12),
+        const SizedBox(height: 10),
         ClipRRect(
           borderRadius: BorderRadius.circular(6),
           child: LinearProgressIndicator(
@@ -146,22 +398,6 @@ class _LevelHeader extends StatelessWidget {
         Text('$done of $total lessons ready',
             style: PmpTextStyles.sub.copyWith(color: cs.onSurfaceVariant)),
       ],
-    );
-  }
-}
-
-class _SectionHeader extends StatelessWidget {
-  const _SectionHeader({required this.label});
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
-    return Padding(
-      padding: const EdgeInsets.only(top: 6, bottom: 2),
-      child: Text(label.toUpperCase(),
-          style: PmpTextStyles.labelSemi
-              .copyWith(color: cs.onSurfaceVariant, letterSpacing: 0.6)),
     );
   }
 }
@@ -250,61 +486,17 @@ class _UnitCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(14),
                 onTap: () => Navigator.pushNamed(
                   context,
-                  PmpRoutes.writingTeach,
+                  // Levels 1–3 are fully migrated to the step-by-step pager.
+                  // (Any future level falls back to the single-scroll teach page.)
+                  unit.level <= 3
+                      ? PmpRoutes.writingTeachSteps
+                      : PmpRoutes.writingTeach,
                   arguments: {'asset': unit.asset},
                 ),
                 child: card,
               ),
             )
           : card,
-    );
-  }
-}
-
-/// A whole-level "coming soon" banner for levels not yet authored.
-class _LevelTeaser extends StatelessWidget {
-  const _LevelTeaser({
-    required this.level,
-    required this.name,
-    required this.subtitle,
-  });
-
-  final int level;
-  final String name;
-  final String subtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
-    return Container(
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: cs.surfaceContainerHighest.withValues(alpha: 0.35),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: cs.outlineVariant.withValues(alpha: 0.5)),
-      ),
-      child: Row(
-        children: [
-          Icon(Icons.lock_outline_rounded, size: 18, color: cs.onSurfaceVariant),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Level $level · $name',
-                    style: PmpTextStyles.body1Semi.copyWith(
-                        color: cs.onSurface.withValues(alpha: 0.7))),
-                const SizedBox(height: 2),
-                Text(subtitle,
-                    style:
-                        PmpTextStyles.sub.copyWith(color: cs.onSurfaceVariant)),
-              ],
-            ),
-          ),
-          Text('soon',
-              style: PmpTextStyles.sub.copyWith(color: cs.onSurfaceVariant)),
-        ],
-      ),
     );
   }
 }

@@ -1,0 +1,193 @@
+{
+  "id": "l3_passive_other_tenses",
+  "level": 3,
+  "section": "The passive",
+  "order": 2,
+  "type": "grammar_unit",
+  "title": "Passive: other tenses (will be / has been / can be done)",
+  "subtitle_mm": "Passive — will be · has been · can be + V3",
+  "teach": {
+    "situation_en": "The results {v}will be announced{/v} tomorrow. The road {v}is being repaired{/v} right now. My car {v}has been stolen{/v}! This problem {v}can be solved{/v} easily.",
+    "situation_mm": "ရလဒ်တွေကို မနက်ဖြန် ကြေညာမယ်။ လမ်းကို အခု ပြင်နေတယ်။ ငါ့ကား ခိုးခံရတယ်! ဒီပြဿနာကို လွယ်လွယ် ဖြေရှင်းနိုင်တယ်။",
+    "use_en": "The passive works in EVERY tense and with modals — you only change the form of 'be', and the main verb stays as the past participle (V3). Future: will be + V3. Present continuous: is/are being + V3. Present perfect: has/have been + V3. Modals: can/should/must + be + V3.",
+    "use_mm": "passive ဟာ tense တိုင်းမှာ၊ modal တွေနဲ့ပါ အလုပ်လုပ်တယ် — 'be' ရဲ့ ပုံစံကိုသာ ပြောင်းရတယ်၊ main verb က past participle (V3) အတိုင်း ဆက်ရှိတယ်။ Future — will be + V3။ Present continuous — is/are being + V3။ Present perfect — has/have been + V3။ Modals — can/should/must + be + V3။",
+    "timeline": "be changes by tense  +  V3 stays the same  =  passive in any tense",
+    "form": [
+      { "subject": "future", "form": "will be + V3  (It will be finished soon.)" },
+      { "subject": "present continuous", "form": "is / are being + V3  (It is being cleaned now.)" },
+      { "subject": "present perfect", "form": "has / have been + V3  (It has been done.)" },
+      { "subject": "modals", "form": "can / should / must + be + V3  (It must be paid.)" }
+    ],
+    "form_note_mm": [
+      "passive ၏ အသွင် — [be ကို tense အလိုက် ပြောင်း] + V3 (V3 မပြောင်း)။",
+      "future — will be + V3 · perfect — has/have been + V3။",
+      "continuous — is/are being + V3 (being ကို မမေ့ပါနဲ့)။",
+      "modal + be + V3 — can be done, should be sent, must be finished။"
+    ],
+    "trap_en": "Keep ONE 'be' element and the V3 — don't drop 'be/been/being', and don't change the main verb.  WRONG: It will finished / It has stolen / It is repairing (when you mean passive).  RIGHT: It will be finished / It has been stolen / It is being repaired.",
+    "trap_mm": "'be' အစိတ်အပိုင်း တစ်ခုနဲ့ V3 ကို ထားပါ — be/been/being မချန်ထားနဲ့၊ main verb လည်း မပြောင်းနဲ့။ ✗ It will finished / It has stolen / It is repairing (passive ဆိုလိုရင်) → ✓ It will be finished / It has been stolen / It is being repaired။",
+    "examples": [
+      { "en": "The bridge {v}will be opened{/v} next month.", "mm": "တံတားကို လာမယ့်လ ဖွင့်မယ်။" },
+      { "en": "The house {v}is being painted{/v} at the moment.", "mm": "အိမ်ကို အခု ဆေးသုတ်နေတယ်။" },
+      { "en": "The work {v}has been finished{/v} already.", "mm": "အလုပ် ပြီးသွားပြီ။" },
+      { "en": "This form {v}must be signed{/v} today.", "mm": "ဒီပုံစံကို ဒီနေ့ လက်မှတ်ထိုးရမယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "future",
+        "rule_mm": "future → will be + V3",
+        "en": "The bridge {v}will be opened{/v} next month.",
+        "why_mm": "future passive မှာ 'will be' နဲ့ V3 (opened) ကို တွဲတယ်။ be ကို tense အလိုက် ပြောင်းပေမဲ့ main verb က V3 အတိုင်းပဲ ဆက်ရှိတယ်။"
+      },
+      {
+        "subject": "present perfect",
+        "rule_mm": "perfect → has / have been + V3",
+        "en": "The work {v}has been finished{/v}.",
+        "why_mm": "present perfect passive မှာ 'has/have been' + V3 (finished)။ 'been' ကို မမေ့ပါနဲ့။"
+      },
+      {
+        "subject": "modal / continuous",
+        "rule_mm": "modal + be + V3 · is/are being + V3",
+        "en": "This problem {v}can be solved{/v}.  ·  The road {v}is being repaired{/v}.",
+        "why_mm": "modal (can) နဲ့ဆို 'be + V3' (can be solved)၊ continuous နဲ့ဆို 'is/are being + V3' (is being repaired)။ be / been / being ကို မချန်ထားနဲ့၊ V3 ကိုလည်း မပြောင်းနဲ့။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "The results ___ be announced tomorrow.",
+        "prompt_mm": "ရလဒ်တွေကို မနက်ဖြန် ကြေညာမယ်။",
+        "options": ["will", "are", "have"],
+        "answer": "will",
+        "explain_mm": "future passive — will be + V3 → will be announced။"
+      },
+      {
+        "prompt_en": "The road is ___ repaired right now.",
+        "prompt_mm": "လမ်းကို အခု ပြင်နေတယ်။",
+        "options": ["being", "been", "be"],
+        "answer": "being",
+        "explain_mm": "present continuous passive — is being + V3 → is being repaired။"
+      },
+      {
+        "prompt_en": "This problem can ___ solved easily.",
+        "prompt_mm": "ဒီပြဿနာကို လွယ်လွယ် ဖြေရှင်းနိုင်တယ်။",
+        "options": ["be", "been", "being"],
+        "answer": "be",
+        "explain_mm": "modal passive — modal + be + V3 → can be solved။"
+      }
+    ],
+    "model_paragraph_en": "Our office is changing fast. The old computers {v}are being replaced{/v} this week. New software {v}has been installed{/v} on every desk. Next month, the whole floor {v}will be redesigned{/v}. The staff were told that nothing {v}should be thrown{/v} away. Everyone agrees the work {v}must be finished{/v} before the new year.",
+    "model_paragraph_mm": "ငါတို့ ရုံး မြန်မြန် ပြောင်းလဲနေတယ်။ ကွန်ပျူတာဟောင်းတွေကို ဒီအပတ် အစားထိုးနေတယ်။ စားပွဲတိုင်းမှာ software အသစ် တင်ပြီးပြီ။ လာမယ့်လ တစ်ထပ်လုံးကို ပြန်ဒီဇိုင်းဆွဲမယ်။ ဘာမှ မစွန့်ပစ်ရဘူးလို့ ဝန်ထမ်းတွေကို ပြောထားတယ်။ နှစ်သစ်မတိုင်ခင် အလုပ် ပြီးရမယ်ဆိုတာ အားလုံး သဘောတူတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "future / perfect", "form": "will be + V3 · has/have been + V3", "tag": "will be / has been + V3", "example": "It will be / has been done." },
+          { "subjects": "continuous / modal", "form": "is being + V3 · can be + V3", "tag": "is being / can be + V3", "highlight": true, "example": "It is being / can be done." }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [
+      "v_make", "v_build", "v_write", "v_clean", "v_send", "v_use",
+      "v_finish", "v_see", "v_teach", "v_cook"
+    ],
+    "time_words": [],
+    "verb_form": "past_participle",
+    "note_mm": "be ကိုသာ tense အလိုက် ပြောင်းပါ၊ V3 မပြောင်းပါနဲ့။ will be + V3 · is/are being + V3 · has/have been + V3 · modal + be + V3။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The results ___ be announced tomorrow.",
+      "prompt_mm": "ရလဒ်တွေကို မနက်ဖြန် ကြေညာမယ်။",
+      "options": ["will", "are", "have"],
+      "answers": ["will"],
+      "explain_mm": "future passive — will be + V3 → will be announced။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The road is ___ repaired right now.",
+      "prompt_mm": "လမ်းကို အခု ပြင်နေတယ်။",
+      "options": ["being", "been", "be"],
+      "answers": ["being"],
+      "explain_mm": "present continuous passive — is being + V3 → is being repaired။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The work ___ ___ ___ (finish) already. (present perfect, 3 words)",
+      "prompt_mm": "အလုပ် ပြီးသွားပြီ။ ( present perfect passive — စကားလုံး ၃ လုံး )",
+      "answers": ["has been finished"],
+      "explain_mm": "present perfect passive — has/have been + V3 → has been finished။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "This problem can solved easily.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["This problem can be solved easily", "this problem can be solved easily.", "This problem can be solved easily."],
+      "explain_mm": "modal passive — modal + be + V3 → can be solved (be မမေ့ပါနဲ့)။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  be  /  will  /  the  /  opened  /  bridge  /  soon",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( The bridge will be opened + soon )",
+      "answers": ["The bridge will be opened soon", "the bridge will be opened soon.", "The bridge will be opened soon."],
+      "explain_mm": "future passive — will be + V3 → The bridge will be opened soon။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — across tenses. Write 5–8 passive sentences using a MIX of tenses and modals: will be + V3, is/are being + V3, has/have been + V3, and modal + be + V3. Keep the main verb as V3.",
+      "prompt_mm": "အပိုင်း ၁ — tense အမျိုးမျိုး။ tense နဲ့ modal အမျိုးမျိုး ရောပြီး passive sentence ၅–၈ ကြောင်း ရေးပါ — will be + V3, is/are being + V3, has/have been + V3, modal + be + V3။ main verb ကို V3 အတိုင်း ထားပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "The new hospital {v}will be opened{/v} next year. The streets {v}are being cleaned{/v} for the festival. My application {v}has been accepted{/v}. The documents {v}must be sent{/v} by Friday. The bridge {v}is being repaired{/v} at the moment.",
+      "explain_mm": "be ကို tense အလိုက် ပြောင်း · V3 မပြောင်း။ will be / is being / has been / modal + be + V3။",
+      "grading": {
+        "grammar_point": "Passive (other tenses & modals)",
+        "rule": "Change only the 'be' part for each tense/modal; the main verb stays as the past participle.",
+        "must_check": [
+          "Correct be element per tense (will be / being / been / be)",
+          "Main verb in V3 throughout",
+          "At least three different tenses/modals used",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "Dropping be/been/being (will finished, has stolen)",
+          "Modal + V3 without 'be' (can solved)",
+          "Changing the main verb instead of keeping V3"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a project or change. Write a short paragraph (4–6 sentences) about something being built, fixed, or changed near you (a road, a building, your workplace), using passives in different tenses.",
+      "prompt_mm": "အပိုင်း ၂ — စီမံကိန်း ဒါမှမဟုတ် ပြောင်းလဲမှု။ မင်းအနီးမှာ ဆောက်/ပြင်/ပြောင်းနေတဲ့ အရာတစ်ခု (လမ်း၊ အဆောက်အအုံ၊ အလုပ်ခွင်) အကြောင်း passive ကို tense အမျိုးမျိုးနဲ့ သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "A new market {v}is being built{/v} near my house. The old shops {v}have been knocked{/v} down. The main road {v}is being widened{/v} too. People say it {v}will be finished{/v} by next year. Everyone hopes the noise {v}can be reduced{/v} soon.",
+      "explain_mm": "passive ကို tense အမျိုးမျိုးနဲ့ ရေးပါ — be ကိုသာ ပြောင်း၊ V3 ထား။",
+      "grading": {
+        "grammar_point": "Passive (other tenses & modals)",
+        "rule": "Use passive forms across future, perfect, continuous, and modals to describe an ongoing project.",
+        "must_check": [
+          "Varied be elements (will be / has been / is being / can be)",
+          "Past participle main verbs",
+          "Coherent description",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Missing be/been/being",
+          "Modal + V3 without be",
+          "Active forms where passive is intended"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}

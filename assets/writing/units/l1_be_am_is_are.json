@@ -8,37 +8,172 @@
   "subtitle_mm": "be — am / is / are",
   "teach": {
     "situation_en": "Hello! My name {v}is{/v} Su. I {v}am{/v} a student. I {v}am{/v} nineteen years old. My brothers {v}are{/v} engineers. We {v}are{/v} from Mandalay. Our house {v}is{/v} near the river.",
-    "situation_mm": "မင်္ဂလာပါ။ ကျွန်မ နာမည် Su ပါ။ ကျွန်မ ကျောင်းသူတစ်ယောက်ပါ။ အသက် ၁၉ နှစ်ပါ။ ကျွန်မ အစ်ကိုတွေက အင်ဂျင်နီယာတွေပါ။ ကျွန်မတို့ မန္တလေးကပါ။ အိမ်က မြစ်နားမှာပါ။",
+    "situation_mm": "မင်္ဂလာပါ။ ကျွန်မနာမည် ဆူ ပါ။ ကျွန်မက ကျောင်းသူတစ်ယောက်ပါ။ ကျွန်မအသက်က ၁၉ နှစ်ပါ။ ကျွန်မရဲ့ အစ်ကိုတွေက အင်ဂျင်နီယာတွေပါ။ ကျွန်မတို့က မန္တလေးကပါ။ ကျွန်မတို့အိမ်က မြစ်အနီးမှာ ရှိပါတယ်။",
     "use_en": "am / is / are (the verb 'be') links a subject to what it is — a name, a job, an age, a place, a description.",
-    "use_mm": "am / is / are (be ကြိယာ) က subject ကို သူဘာဖြစ်တယ်ဆိုတာနဲ့ ချိတ်ဆက်ပေးတယ် — နာမည်၊ အလုပ်၊ အသက်၊ နေရာ၊ ဖော်ပြချက်။",
+    "use_mm": "'am / is / are' (Verb to be) ဆိုတာ Subject တစ်ခုကို သူရဲ့ နာမည်၊ အလုပ်အကိုင်၊ အသက်၊ နေရာ ဒေသ ဒါမှမဟုတ် အခြေအနေ ဖော်ပြချက်တွေနဲ့ ချိတ်ဆက်ပေးတဲ့ စကားလုံးတွေ ဖြစ်ပါတယ်။",
     "timeline": "",
     "form": [
-      { "subject": "I", "form": "am  (I'm)" },
-      { "subject": "he / she / it", "form": "is  (he's)" },
-      { "subject": "you / we / they", "form": "are  (you're)" },
-      { "subject": "short forms", "form": "I'm · he's · they're" }
+      {
+        "subject": "I",
+        "form": "am  (I'm)"
+      },
+      {
+        "subject": "he / she / it",
+        "form": "is  (he's)"
+      },
+      {
+        "subject": "you / we / they",
+        "form": "are  (you're)"
+      },
+      {
+        "subject": "short forms",
+        "form": "I'm · he's · they're"
+      }
     ],
-    "form_note_mm": "I → am, he / she / it → is, you / we / they → are.  အတိုကောက် — I'm, you're, he's, she's, we're, they're။ ဝါကျတိုင်းမှာ be (am/is/are) တစ်ခု ပါရမယ် — ‘ကျွန်တော် ကျောင်းသား’ မဟုတ်ဘဲ ‘I am a student’ လို့ am ထည့်ရတယ်။",
+    "form_note_mm": [
+      "sentence တိုင်းမှာ 'be' (am / is / are) တစ်ခု အမြဲတမ်း ပါဝင်ရပါမယ်။ ဥပမာ — ✗ ‘I student’ (မှား) → ✓ ‘I am a student’ (မှန်)။",
+      "အတိုကောက် ရေးနည်းများ — I'm · he's · they're"
+    ],
     "trap_en": "Don't drop 'be', and match it to the subject.  WRONG: I student. / She are happy.   RIGHT: I am a student. / She is happy.",
-    "trap_mm": "မြန်မာစာမှာ ‘ဖြစ်တယ်’ ကို မပြောတာများလို့ am/is/are ကို မေ့တတ်တယ်။  ✗ I student / She are happy  →  ✓ I am a student / She is happy.",
+    "trap_mm": "မြန်မာစာမှာ ‘ဖြစ်တယ်’ ကို မပြောတာများလို့ am/is/are ကို မေ့တတ်ကြပါတယ်။ \n✗ I student / She are happy  \n✓ I am a student / She is happy.",
     "examples": [
-      { "en": "I {v}am{/v} a teacher.", "mm": "ကျွန်တော် ဆရာတစ်ယောက်ပါ။" },
-      { "en": "She {v}is{/v} my sister.", "mm": "သူမက ကျွန်တော့်အစ်မပါ။" },
-      { "en": "They {v}are{/v} at school.", "mm": "သူတို့ ကျောင်းမှာ ရှိတယ်။" },
-      { "en": "The food {v}is{/v} delicious.", "mm": "အစားအစာက အရမ်း စားကောင်းတယ်။" }
+      {
+        "en": "I {v}am{/v} a teacher.",
+        "mm": "ကျွန်တော် ဆရာတစ်ယောက်ပါ။"
+      },
+      {
+        "en": "She {v}is{/v} my sister.",
+        "mm": "သူမက ကျွန်တော့်အစ်မပါ။"
+      },
+      {
+        "en": "They {v}are{/v} at school.",
+        "mm": "သူတို့ ကျောင်းမှာ ရှိတယ်။"
+      },
+      {
+        "en": "The food {v}is{/v} delicious.",
+        "mm": "အစားအစာက အရသာရှိပါတယ်။"
+      }
+    ],
+    "walkthrough": [
+      {
+        "subject": "I",
+        "rule_mm": "Subject က 'I' ဆိုရင် → am",
+        "en": "I {v}am{/v} a student.",
+        "why_mm": "Subject က 'I' ဖြစ်လို့ 'am' ကို သုံးပါတယ်။ 'am' က 'I' ကို 'a student' နဲ့ ချိတ်ပေးတဲ့ linking verb ပါ — 'I' က 'a student' ဖြစ်တယ် လို့ ပြောတာပါ။"
+      },
+      {
+        "subject": "he / she / it",
+        "rule_mm": "He · She · It (တစ်ယောက်တည်း) ဆိုရင် → is",
+        "en": "She {v}is{/v} a student.",
+        "why_mm": "Subject က 'She' (he/she/it ထဲက တစ်ခု) ဖြစ်လို့ 'is' ကို သုံးပါတယ်။ 'is' က 'She' ကို 'a student' နဲ့ ချိတ်ပေးတာပါ။"
+      },
+      {
+        "subject": "you / we / they",
+        "rule_mm": "You · We · They (အများ) ဆိုရင် → are",
+        "en": "They {v}are{/v} students.",
+        "why_mm": "Subject က 'They' (အများကိန်း) ဖြစ်လို့ 'are' ကို သုံးပါတယ်။ တစ်ယောက်ထက် ပိုတဲ့အခါ 'are' ကို သုံးပြီး noun ကိုလည်း 'students' လို့ အများကိန်းပြောင်းပါတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "I ___ a teacher.",
+        "prompt_mm": "ကျွန်တော် ဆရာတစ်ယောက်ပါ။",
+        "options": ["am", "is", "are"],
+        "answer": "am",
+        "explain_mm": "Subject က 'I' ဖြစ်လို့ → am ။"
+      },
+      {
+        "prompt_en": "She ___ a student.",
+        "prompt_mm": "သူမ ကျောင်းသူတစ်ယောက်ပါ။",
+        "options": ["am", "is", "are"],
+        "answer": "is",
+        "explain_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ → is ။"
+      },
+      {
+        "prompt_en": "They ___ from Yangon.",
+        "prompt_mm": "သူတို့ ရန်ကုန်ကပါ။",
+        "options": ["am", "is", "are"],
+        "answer": "are",
+        "explain_mm": "Subject က 'They' (you/we/they) ဖြစ်လို့ → are ။"
+      }
     ],
     "model_paragraph_en": "My name {v}is{/v} Aung. I {v}am{/v} twenty years old, and I {v}am{/v} a student at university. My family {v}is{/v} small. My parents {v}are{/v} teachers, and my sister {v}is{/v} a doctor. We {v}are{/v} very close.",
-    "model_paragraph_mm": "ကျွန်တော် နာမည် အောင် ပါ။ အသက် ၂၀ နှစ်ဖြစ်ပြီး တက္ကသိုလ်ကျောင်းသားတစ်ယောက်ပါ။ မိသားစုက သေးငယ်ပါတယ်။ မိဘတွေက ဆရာတွေဖြစ်ပြီး အစ်မက ဆရာဝန်တစ်ယောက်ပါ။ ကျွန်တော်တို့ အရမ်း ရင်းနှီးကြတယ်။"
+    "model_paragraph_mm": "ကျွန်တော့်နာမည် အောင် ပါ။ ကျွန်တော်က အသက် ၂၀ နှစ်ဖြစ်ပြီး တက္ကသိုလ်ကျောင်းသားတစ်ယောက်ပါ။ ကျွန်တော့်မိသားစုက မိသားစုအသေးလေးပါ။ မိဘတွေက ဆရာဝန်/ဆရာမတွေဖြစ်ပြီး အစ်မက ဆရာဝန်တစ်ယောက်ပါ။ ကျွန်တော်တို့တွေက အရမ်းရင်းနှီးကြပါတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          {
+            "subjects": "I",
+            "form": "am",
+            "tag": "I'm",
+            "example": "I {v}am{/v} a student."
+          },
+          {
+            "subjects": "he · she · it",
+            "form": "is",
+            "tag": "he's",
+            "example": "She {v}is{/v} happy."
+          },
+          {
+            "subjects": "you · we · they",
+            "form": "are",
+            "tag": "they're",
+            "example": "We {v}are{/v} friends."
+          }
+        ]
+      }
+    ]
   },
-  "toolkit": { "verbs": [], "time_words": [] },
+  "toolkit": {
+    "verbs": [],
+    "time_words": [],
+    "nouns": [
+      "n_student",
+      "n_teacher",
+      "n_doctor",
+      "n_nurse",
+      "n_engineer",
+      "n_farmer",
+      "n_driver",
+      "n_shopkeeper",
+      "n_worker",
+      "n_businessman"
+    ],
+    "adjectives": [
+      "a_happy",
+      "a_sad",
+      "a_tired",
+      "a_hungry",
+      "a_busy",
+      "a_tall",
+      "a_short",
+      "a_young",
+      "a_old",
+      "a_kind",
+      "a_friendly",
+      "a_clever",
+      "a_beautiful",
+      "a_new",
+      "a_hot",
+      "a_cold"
+    ],
+    "note_mm": "'be' (am / is / are) ရဲ့ နောက်မှာ တည်နေရာပြ စကားလုံးတွေ (Places) ကိုလည်း ထည့်သွင်း ပြောဆိုနိုင်ပါတယ်။ ဥပမာ — I am {v}at home{/v} (ကျွန်မ အိမ်မှာ ရှိနေတယ်)၊ She is {v}from Mandalay{/v} (သူမက မန္တလေးကပါ)၊ They are {v}at school{/v} (သူတို့ ကျောင်းမှာ ရှိနေတယ်)၊ We are {v}in Yangon{/v} (ကျွန်မတို့ ရန်ကုန်မှာ ရှိနေတယ်)။\n\n'at / in / from' စတဲ့ ဝိဘတ် (Prepositions of place) တွေကိုတော့ နောက်လာမယ့် သင်ခန်းစာတွေမှာ အသေးစိတ် ထပ်မံ လေ့လာသွားရပါမယ်။"
+  },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I ___ a student.",
       "prompt_mm": "ကျွန်တော် ကျောင်းသားတစ်ယောက်ပါ။",
-      "options": ["am", "is", "are"],
-      "answers": ["am"],
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answers": [
+        "am"
+      ],
       "explain_mm": "I → am."
     },
     {
@@ -46,8 +181,14 @@
       "grade": "auto",
       "prompt_en": "They ___ from Yangon.",
       "prompt_mm": "သူတို့ ရန်ကုန်ကပါ။",
-      "options": ["is", "are", "am"],
-      "answers": ["are"],
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "answers": [
+        "are"
+      ],
       "explain_mm": "they → are."
     },
     {
@@ -55,23 +196,32 @@
       "grade": "auto",
       "prompt_en": "She ___ a nurse.",
       "prompt_mm": "သူမ သူနာပြုတစ်ယောက်ပါ။ ( be ကို သုံးပါ )",
-      "answers": ["is", "'s"],
+      "answers": [
+        "is",
+        "'s"
+      ],
       "explain_mm": "she → is."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "We is happy.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
-      "answers": ["We are happy", "we are happy."],
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "We are happy",
+        "we are happy."
+      ],
       "explain_mm": "we → are (is မဟုတ်ဘူး)။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  is  /  she  /  a doctor",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
-      "answers": ["She is a doctor", "she is a doctor."],
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "answers": [
+        "She is a doctor",
+        "she is a doctor."
+      ],
       "explain_mm": "Subject + be + ... → She is a doctor."
     },
     {
@@ -79,8 +229,8 @@
       "grade": "ai",
       "min_lines": 5,
       "max_lines": 8,
-      "prompt_en": "Part 1 — about YOU. Write 5–8 sentences introducing yourself and your family, using am / is / are (name, age, job, place).",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အကြောင်း။ ကိုယ်နဲ့ မိသားစုကို မိတ်ဆက်ပြီး am / is / are သုံးကာ ဝါကျ ၅–၈ ကြောင်း ရေးပါ (နာမည်၊ အသက်၊ အလုပ်၊ နေရာ)။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ ရိုက်ထည့်ပါ။",
+      "prompt_en": "Part 1 — about YOU. Write 5–8 sentences introducing yourself and your family, using am / is / are (name, age, job, place). Try a job and at least 2 describing words from your toolkit below.",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အကြောင်း။ ကိုယ်နဲ့ မိသားစုကို မိတ်ဆက်ပြီး am / is / are သုံးကာ sentence ၅–၈ ကြောင်း ရေးပါ (နာမည်၊ အသက်၊ အလုပ်၊ နေရာ)။ အောက်က toolkit ထဲက အလုပ် (job) တစ်ခုနဲ့ ဖော်ပြစကားလုံး (describing word) အနည်းဆုံး ၂ လုံး သုံးကြည့်ပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ ရိုက်ထည့်ပါ။",
       "model": "My name {v}is{/v} Mya. I {v}am{/v} eighteen. I {v}am{/v} a student. My father {v}is{/v} a farmer. My brothers {v}are{/v} in Yangon.",
       "explain_mm": "I → am, he/she/it → is, you/we/they → are ကို subject နဲ့ ကိုက်အောင် ထားပါ။",
       "grading": {
@@ -97,14 +247,17 @@
           "Wrong form (She are / They is)",
           "Using a main verb instead (I am study)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
-      "prompt_en": "Part 2 — describe a person. Write a short paragraph (4–6 sentences) describing a friend or family member, using am / is / are.",
-      "prompt_mm": "အပိုင်း ၂ — လူတစ်ယောက် ဖော်ပြပါ။ သူငယ်ချင်း သို့မဟုတ် မိသားစုဝင်တစ်ယောက်ကို am / is / are သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_en": "Part 2 — describe a person. Write a short paragraph (4–6 sentences) describing a friend or family member, using am / is / are. Use their job and 2–3 describing words from your toolkit.",
+      "prompt_mm": "အပိုင်း ၂ — လူတစ်ယောက် ဖော်ပြပါ။ သူငယ်ချင်း သို့မဟုတ် မိသားစုဝင်တစ်ယောက်ကို am / is / are သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ သူ့ရဲ့ အလုပ် (job) နဲ့ toolkit ထဲက ဖော်ပြစကားလုံး ၂–၃ လုံး သုံးပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "My best friend {v}is{/v} Kyaw. He {v}is{/v} twenty-two. He {v}is{/v} tall and friendly. His parents {v}are{/v} shopkeepers. They {v}are{/v} kind people.",
       "explain_mm": "လူတစ်ယောက်ကို ဖော်ပြရာမှာ am/is/are ကို မှန်အောင် သုံးပါ။",
       "grading": {
@@ -121,7 +274,10 @@
           "Wrong agreement (He are)",
           "Adding -s to 'be'"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

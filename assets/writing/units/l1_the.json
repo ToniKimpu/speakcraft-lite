@@ -18,7 +18,12 @@
       { "subject": "only one", "form": "the sun · the moon" },
       { "subject": "singular & plural", "form": "the book · the books" }
     ],
-    "form_note_mm": "a/an နဲ့ ပထမ ဖော်ပြပြီးနောက် ဒုတိယအကြိမ် → the (I have a dog. The dog is big.)။ နှစ်ဦးစလုံး ဘယ်ဟာလဲ သိနေရင် → the (Close the door)။ တစ်ခုတည်းသာ ရှိတာ → the (the sun, the sky)။ the က အနည်း/အများ၊ countable/uncountable အားလုံးနဲ့ သုံးနိုင်တယ်။",
+    "form_note_mm": [
+      "a / an နဲ့ ပထမ ဖော်ပြပြီးနောက် ဒုတိယအကြိမ် → the (I have a dog. The dog is big.)။",
+      "နှစ်ဦးစလုံး ဘယ်ဟာလဲ သိနေရင် → the (Close the door)။",
+      "တစ်ခုတည်းသာ ရှိတာ → the (the sun, the sky)။",
+      "the က singular / plural၊ countable / uncountable အားလုံးနဲ့ သုံးနိုင်တယ်။"
+    ],
     "trap_en": "Use the for something specific/known, not the first general mention.  WRONG: I saw a moon. / Open a door (we both know which).   RIGHT: I saw the moon. / Open the door.",
     "trap_mm": "တိကျ/သိပြီးသား အရာအတွက် the သုံးပါ၊ ပထမ ယေဘုယျ ဖော်ပြမှာ မဟုတ်ဘူး။  ✗ I saw a moon  →  ✓ I saw the moon (တစ်ခုတည်း)။",
     "examples": [
@@ -26,6 +31,49 @@
       { "en": "Close {v}the{/v} door, please.", "mm": "တံခါး ပိတ်ပေးပါ။" },
       { "en": "I like {v}the{/v} book you gave me.", "mm": "မင်းပေးတဲ့ စာအုပ်ကို ကြိုက်တယ်။" },
       { "en": "{v}The{/v} children are at school.", "mm": "ကလေးတွေ ကျောင်းမှာ ရှိတယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "second mention",
+        "rule_mm": "a/an နဲ့ ပထမ ဖော်ပြပြီး → ဒုတိယ the",
+        "en": "I have a dog. {v}The{/v} dog is big.",
+        "why_mm": "ပထမအကြိမ် 'a dog' နဲ့ မိတ်ဆက်ပြီးနောက် ဘယ် dog လဲ သိသွားလို့ ဒုတိယအကြိမ် 'the dog' လို့ ပြောပါတယ်။"
+      },
+      {
+        "subject": "known / only one",
+        "rule_mm": "နှစ်ဦးစလုံး သိ / တစ်ခုတည်း → the",
+        "en": "Close {v}the{/v} door.  ·  {v}The{/v} sun is hot.",
+        "why_mm": "ဘယ်ဟာလဲ နှစ်ဦးစလုံး သိနေတာ (the door) ဒါမှမဟုတ် တစ်ခုတည်းသာ ရှိတာ (the sun, the moon) ဆိုရင် 'the' သုံးပါတယ်။"
+      },
+      {
+        "subject": "unique thing",
+        "rule_mm": "တစ်ခုတည်းသာ ရှိတာ → the (a မဟုတ်)",
+        "en": "✗ I saw a moon  →  ✓ I saw {v}the{/v} moon.",
+        "why_mm": "လ က တစ်ခုတည်းသာ ရှိလို့ 'a moon' မဟုတ်ဘဲ 'the moon' ပါ။ တိကျ/တစ်ခုတည်း အရာတွေအတွက် the သုံးပါ။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "Look at ___ moon tonight!",
+        "prompt_mm": "ဒီည လကို ကြည့်စမ်း!",
+        "options": ["a", "an", "the"],
+        "answer": "the",
+        "explain_mm": "လ က တစ်ခုတည်းသာ → the moon။"
+      },
+      {
+        "prompt_en": "I have a cat. ___ cat is black.",
+        "prompt_mm": "ကျွန်တော့်မှာ ကြောင်တစ်ကောင် ရှိတယ်။ အဲဒီ ကြောင်က အနက်ရောင်ပါ။",
+        "options": ["A", "An", "The"],
+        "answer": "The",
+        "explain_mm": "ဒုတိယအကြိမ် (သိပြီးသား) → The cat။"
+      },
+      {
+        "prompt_en": "Please open ___ window.",
+        "prompt_mm": "ပြတင်းပေါက် ဖွင့်ပေးပါ။",
+        "options": ["a", "an", "the"],
+        "answer": "the",
+        "explain_mm": "ဘယ်ဟာလဲ နှစ်ဦးစလုံး သိတဲ့ (တိကျ) window → the window။"
+      }
     ],
     "model_paragraph_en": "Yesterday I bought a phone and a case. {v}The{/v} phone is fast, and {v}the{/v} case is strong. In the evening I sat in {v}the{/v} garden and watched {v}the{/v} moon. {v}The{/v} air was cool. {v}The{/v} neighbours were quiet. It was a peaceful night.",
     "model_paragraph_mm": "မနေ့က ကျွန်တော် ဖုန်းတစ်လုံးနဲ့ ဖုန်းအိတ်တစ်ခု ဝယ်ခဲ့တယ်။ အဲဒီ ဖုန်းက မြန်ပြီး ဖုန်းအိတ်က ခိုင်တယ်။ ညနေပိုင်း ဥယျာဉ်ထဲ ထိုင်ပြီး လကို ကြည့်ခဲ့တယ်။ လေက အေးမြတယ်။ အိမ်နီးနားချင်းတွေက တိတ်ဆိတ်ခဲ့တယ်။ ငြိမ်းချမ်းတဲ့ ည တစ်ညပါ။"
@@ -62,7 +110,7 @@
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "The sun rise in a east.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": ["The sun rises in the east", "the sun rises in the east."],
       "explain_mm": "the east (တိကျ)၊ the sun rises (-s) — a east မမှန်ဘူး။"
     },
@@ -70,7 +118,7 @@
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  the  /  close  /  door",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
       "answers": ["Close the door", "close the door."],
       "explain_mm": "Close + the door (သိပြီးသား)။"
     },
@@ -80,7 +128,7 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — specific things. Write 5–8 sentences using the for specific or unique things (the sun, the kitchen, the book you have).",
-      "prompt_mm": "အပိုင်း ၁ — တိကျတဲ့ အရာတွေ။ တိကျ (သို့) တစ်ခုတည်းသာရှိတဲ့ အရာတွေအတွက် the သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ (the sun, the kitchen …)။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — တိကျတဲ့ အရာတွေ။ တိကျ (သို့) တစ်ခုတည်းသာရှိတဲ့ အရာတွေအတွက် the သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ (the sun, the kitchen …)။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
       "model": "{v}The{/v} sun is hot today. I cleaned {v}the{/v} kitchen this morning. {v}The{/v} book on my desk is new. Please close {v}the{/v} door. {v}The{/v} children are in {v}the{/v} garden.",
       "explain_mm": "သိပြီးသား/တိကျ/တစ်ခုတည်း အရာတွေအတွက် the သုံးပါ။",
       "grading": {
@@ -104,7 +152,7 @@
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a story with 'a' then 'the'. Write a short paragraph (4–6 sentences). Introduce things with a/an, then refer back with the.",
-      "prompt_mm": "အပိုင်း ၂ — ‘a’ ပြီးမှ ‘the’ ပုံပြင်။ စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ အရာတွေကို a/an နဲ့ မိတ်ဆက်ပြီး နောက်မှ the နဲ့ ပြန်ရည်ညွှန်းပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — ‘a’ ပြီးမှ ‘the’ ပုံပြင်။ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ အရာတွေကို a/an နဲ့ မိတ်ဆက်ပြီး နောက်မှ the နဲ့ ပြန်ရည်ညွှန်းပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "I saw a dog and a cat in the street. {v}The{/v} dog was big and {v}the{/v} cat was small. {v}The{/v} dog ran to me. I gave {v}the{/v} cat some food. {v}The{/v} animals were friendly.",
       "explain_mm": "ပထမ a/an နဲ့ မိတ်ဆက်၊ ဒုတိယ the နဲ့ ပြန်ညွှန်းတဲ့ ပုံစံကို သုံးပါ။",
       "grading": {

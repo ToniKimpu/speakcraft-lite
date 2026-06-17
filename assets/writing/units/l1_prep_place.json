@@ -18,7 +18,12 @@
       { "subject": "at", "form": "at home · at school · at the bus stop" },
       { "subject": "common", "form": "at home/work/school · in a city" }
     ],
-    "form_note_mm": "in → အထဲ/ပိတ်ထားတဲ့ နေရာ (in the room, in a car, in Mandalay)။ on → မျက်နှာပြင်ပေါ် ထိနေ (on the desk, on the wall, on the floor)။ at → အမှတ်/တည်နေရာ (at the door, at school, at the station)။ မှတ်ထား — at home, at work, at school (in မဟုတ်ဘူး)။",
+    "form_note_mm": [
+      "in → အထဲ / ပိတ်ထားတဲ့ နေရာ (in the room, in a car, in Mandalay)။",
+      "on → မျက်နှာပြင်ပေါ် ထိနေ (on the desk, on the wall, on the floor)။",
+      "at → အမှတ် / တည်နေရာ (at the door, at school, at the station)။",
+      "မှတ်ထား — at home, at work, at school (in မဟုတ်ဘူး)။"
+    ],
     "trap_en": "Match the right preposition to the place.  WRONG: on my bag / in the table / in home   RIGHT: in my bag / on the table / at home",
     "trap_mm": "နေရာနဲ့ ကိုက်တဲ့ ဝိဘတ် ရွေးပါ။  ✗ on my bag / in the table / in home  →  ✓ in my bag / on the table / at home.",
     "examples": [
@@ -26,6 +31,49 @@
       { "en": "She is {v}in{/v} the kitchen.", "mm": "သူမ မီးဖိုချောင်ထဲမှာ။" },
       { "en": "We are {v}at{/v} school.", "mm": "ကျွန်တော်တို့ ကျောင်းမှာ။" },
       { "en": "The picture is {v}on{/v} the wall.", "mm": "ပုံက နံရံပေါ်မှာ။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "in",
+        "rule_mm": "အထဲ / ပိတ်ထားတဲ့ နေရာ → in",
+        "en": "My phone is {v}in{/v} my bag.",
+        "why_mm": "အိတ်ထဲ (enclosed) ဖြစ်လို့ preposition 'in' ကို သုံးပါတယ် — in the box, in the room, in Mandalay။"
+      },
+      {
+        "subject": "on",
+        "rule_mm": "မျက်နှာပြင်ပေါ် (ထိနေ) → on",
+        "en": "The book is {v}on{/v} the table.",
+        "why_mm": "စားပွဲ မျက်နှာပြင်ပေါ်မှာ ထိနေလို့ preposition 'on' ကို သုံးပါတယ် — on the wall, on the floor။"
+      },
+      {
+        "subject": "at",
+        "rule_mm": "အမှတ် / တည်နေရာ → at",
+        "en": "I am {v}at{/v} home now.",
+        "why_mm": "တည်နေရာ တစ်ခုမှာ ဆိုလို့ preposition 'at' ကို သုံးပါတယ်။ မှတ်ထား — at home, at school, at work (in home မဟုတ်ဘူး)။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "The book is ___ the table.",
+        "prompt_mm": "စာအုပ်က စားပွဲပေါ်မှာ။",
+        "options": ["in", "on", "at"],
+        "answer": "on",
+        "explain_mm": "မျက်နှာပြင်ပေါ် → on။"
+      },
+      {
+        "prompt_en": "My phone is ___ my bag.",
+        "prompt_mm": "ဖုန်းက အိတ်ထဲမှာ။",
+        "options": ["in", "on", "at"],
+        "answer": "in",
+        "explain_mm": "အထဲ → in။"
+      },
+      {
+        "prompt_en": "She is ___ home.",
+        "prompt_mm": "သူမ အိမ်မှာ ရှိတယ်။",
+        "options": ["in", "on", "at"],
+        "answer": "at",
+        "explain_mm": "at home (in home မဟုတ်ဘူး)။"
+      }
     ],
     "model_paragraph_en": "Welcome to my home. The sofa is {v}in{/v} the living room. The TV is {v}on{/v} the wall. My books are {v}on{/v} the shelf, and my clothes are {v}in{/v} the wardrobe. Right now my family is {v}at{/v} home, and the children are {v}in{/v} the garden.",
     "model_paragraph_mm": "ကျွန်တော့်အိမ်ကို ကြိုဆိုပါတယ်။ ဆိုဖာက ဧည့်ခန်းထဲမှာ။ TV က နံရံပေါ်မှာ။ စာအုပ်တွေက စင်ပေါ်မှာ၊ အဝတ်တွေက ဗီရိုထဲမှာ။ အခု မိသားစု အိမ်မှာ ရှိပြီး ကလေးတွေ ဥယျာဉ်ထဲမှာ ရှိတယ်။"
@@ -70,7 +118,7 @@
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  on  /  is  /  the wall  /  it",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
       "answers": ["It is on the wall", "it is on the wall."],
       "explain_mm": "နံရံပေါ် → on the wall။"
     },
@@ -80,7 +128,7 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — where things are. Write 5–8 sentences about where things and people are, using in / on / at.",
-      "prompt_mm": "အပိုင်း ၁ — အရာတွေ ဘယ်မှာ။ အရာတွေ/လူတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — အရာတွေ ဘယ်မှာ။ အရာတွေ/လူတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
       "model": "My keys are {v}on{/v} the desk. My money is {v}in{/v} my pocket. I am {v}at{/v} work. The clock is {v}on{/v} the wall. The dog is {v}in{/v} the garden.",
       "explain_mm": "in (အထဲ)၊ on (ပေါ်)၊ at (တည်နေရာ) ကို မှန်အောင် ရွေးပါ။",
       "grading": {
@@ -104,7 +152,7 @@
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — describe a room. Write a short paragraph (4–6 sentences) saying where things are in a room, using in / on / at.",
-      "prompt_mm": "အပိုင်း ၂ — အခန်းတစ်ခု ဖော်ပြပါ။ အခန်းထဲက အရာတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — အခန်းတစ်ခု ဖော်ပြပါ။ အခန်းထဲက အရာတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "My room is simple. The bed is {v}in{/v} the corner. A lamp is {v}on{/v} the table. My bag is {v}on{/v} the floor. My clothes are {v}in{/v} the cupboard. I feel happy {v}at{/v} home.",
       "explain_mm": "in/on/at ကို နေရာအလိုက် မှန်အောင် သုံးပြီး အခန်းကို ဖော်ပြပါ။",
       "grading": {

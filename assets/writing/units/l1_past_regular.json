@@ -5,12 +5,12 @@
   "order": 2,
   "type": "grammar_unit",
   "title": "Past simple: regular verbs (-ed)",
-  "subtitle_mm": "အတိတ် — ကြိယာ ပုံမှန် (-ed)",
+  "subtitle_mm": "အတိတ် — regular verb (-ed)",
   "teach": {
     "situation_en": "{t}Yesterday{/t} was a busy day. I {v}worked{/v} until five. Then I {v}cooked{/v} dinner and {v}watched{/v} a film. My sister {v}studied{/v} for her exam, and my parents {v}visited{/v} our neighbours.",
     "situation_mm": "မနေ့က အလုပ်များတဲ့ နေ့ဖြစ်ခဲ့တယ်။ ကျွန်တော် ၅ နာရီအထိ အလုပ်လုပ်ခဲ့တယ်။ ပြီးတော့ ညစာ ချက်ပြီး ရုပ်ရှင် ကြည့်ခဲ့တယ်။ အစ်မက စာမေးပွဲအတွက် စာကျက်ခဲ့ပြီး မိဘတွေက အိမ်နီးနားချင်းတွေဆီ သွားလည်ခဲ့တယ်။",
     "use_en": "We use the past simple for finished actions in the past. Regular verbs add -ed (worked, played, cooked).",
-    "use_mm": "ပြီးဆုံးသွားပြီဖြစ်တဲ့ အတိတ်လုပ်ဆောင်မှုတွေအတွက် past simple ကို သုံးပါတယ်။ ကြိယာ ပုံမှန်တွေမှာ -ed ထည့်ပါတယ် (worked, played, cooked)။",
+    "use_mm": "ပြီးဆုံးသွားပြီဖြစ်တဲ့ အတိတ်လုပ်ဆောင်မှုတွေအတွက် past simple ကို သုံးပါတယ်။ regular verb တွေမှာ -ed ထည့်ပါတယ် (worked, played, cooked)။",
     "timeline": "◀——●———————   (finished, before now)",
     "form": [
       { "subject": "all subjects", "form": "verb + -ed" },
@@ -18,7 +18,10 @@
       { "subject": "spelling: -e", "form": "live → lived" },
       { "subject": "spelling: consonant + y", "form": "study → studied" }
     ],
-    "form_note_mm": "ကြိယာ ပုံမှန်တွေအတွက် အတိတ်မှာ ကြိယာနောက် -ed ထည့်ပါ — subject အားလုံးအတွက် ပုံစံတူ (I worked, She worked, They worked)။  စာလုံးပေါင်း — -e နဲ့ဆုံးရင် -d ပဲ (live → lived); ဗျည်း + y ဆို y ကို i ပြောင်းပြီး -ed (study → studied); အများစုက -ed (work → worked)။",
+    "form_note_mm": [
+      "regular verb တွေအတွက် အတိတ်မှာ verb နောက် -ed ထည့်ပါ — subject အားလုံးအတွက် ပုံစံတူ (I worked, She worked, They worked)။",
+      "spelling — -e နဲ့ဆုံးရင် -d ပဲ (live → lived); consonant + y ဆို y ကို i ပြောင်းပြီး -ed (study → studied); အများစုက -ed (work → worked)။"
+    ],
     "trap_en": "Don't forget -ed for the past.  WRONG: Yesterday I work late.   RIGHT: Yesterday I worked late.",
     "trap_mm": "မြန်မာစာမှာ အတိတ်ကို သီးခြား ပုံစံ မပြောင်းလို့ -ed ကို မေ့တတ်တယ်။  ✗ Yesterday I work late  →  ✓ Yesterday I worked late.",
     "examples": [
@@ -26,6 +29,49 @@
       { "en": "We {v}watched{/v} a film.", "mm": "ကျွန်တော်တို့ ရုပ်ရှင် ကြည့်ခဲ့တယ်။" },
       { "en": "They {v}played{/v} football.", "mm": "သူတို့ ဘောလုံး ကစားခဲ့တယ်။" },
       { "en": "He {v}studied{/v} all day.", "mm": "သူ တစ်နေ့လုံး စာကျက်ခဲ့တယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "add -ed (all subjects)",
+        "rule_mm": "regular verb → verb + -ed (subject အားလုံး ပုံစံတူ)",
+        "en": "They {v}played{/v} football.",
+        "why_mm": "ပြီးဆုံးသွားတဲ့ အတိတ်လုပ်ဆောင်မှု ဖြစ်လို့ verb 'play' နောက်မှာ -ed ထည့်ပြီး 'played' ဖြစ်ပါတယ်။ subject ဘယ်လိုဖြစ်ဖြစ် ပုံစံတူ (I/She/They played)။"
+      },
+      {
+        "subject": "spelling",
+        "rule_mm": "-e → -d · consonant + y → -ied",
+        "en": "She {v}studied{/v} all day.  ·  They {v}lived{/v} here.",
+        "why_mm": "-e နဲ့ဆုံးရင် -d ပဲ ထည့် (live → lived)။ consonant + y နဲ့ဆုံးရင် y ကို i ပြောင်းပြီး -ied (study → studied)။ အများစုကတော့ -ed ပဲ (work → worked)။"
+      },
+      {
+        "subject": "don't forget -ed",
+        "rule_mm": "အတိတ်ဆို -ed မမေ့နဲ့",
+        "en": "{t}Yesterday{/t} I {v}worked{/v} late.  (✗ I work late)",
+        "why_mm": "မြန်မာစာမှာ အတိတ်အတွက် verb ပုံစံ မပြောင်းလို့ -ed ကို မေ့တတ်ပါတယ်။ 'yesterday' လို အတိတ် signal ရှိရင် verb မှာ -ed ထည့်ဖို့ မမေ့ပါနဲ့။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "Yesterday she ___ dinner.",
+        "prompt_mm": "မနေ့က သူမ ညစာ ချက်ခဲ့တယ်။",
+        "options": ["cook", "cooked", "cooks"],
+        "answer": "cooked",
+        "explain_mm": "အတိတ် (yesterday) → cook + ed = cooked။"
+      },
+      {
+        "prompt_en": "They ___ football last week.",
+        "prompt_mm": "သူတို့ ပြီးခဲ့တဲ့အပတ်က ဘောလုံး ကစားခဲ့တယ်။",
+        "options": ["play", "played", "playing"],
+        "answer": "played",
+        "explain_mm": "play → played (အတိတ်)။"
+      },
+      {
+        "prompt_en": "He ___ all day yesterday.",
+        "prompt_mm": "သူ မနေ့က တစ်နေ့လုံး စာကျက်ခဲ့တယ်။",
+        "options": ["studied", "studyed", "studed"],
+        "answer": "studied",
+        "explain_mm": "consonant + y → y ကို i ပြောင်းပြီး -ed → studied။"
+      }
     ],
     "model_paragraph_en": "{t}Last week{/t} I {v}visited{/v} my grandmother. I {v}cleaned{/v} her garden and {v}cooked{/v} lunch. In the afternoon we {v}watched{/v} old films and {v}talked{/v} about the past. She {v}liked{/v} my stories. I {v}stayed{/v} until the evening.",
     "model_paragraph_mm": "ပြီးခဲ့တဲ့အပတ်က ကျွန်တော် အဖွားဆီ သွားလည်ခဲ့တယ်။ သူ့ဥယျာဉ်ကို ရှင်းပြီး နေ့လယ်စာ ချက်ပေးခဲ့တယ်။ နေ့လယ်ပိုင်းမှာ ရုပ်ရှင်ဟောင်းတွေ ကြည့်ပြီး အတိတ်အကြောင်း စကားပြောခဲ့တယ်။ ကျွန်တော့်ပုံပြင်တွေကို သူ ကြိုက်ခဲ့တယ်။ ညနေအထိ နေခဲ့တယ်။"
@@ -79,13 +125,13 @@
       "prompt_en": "He ___ (study) all day yesterday.",
       "prompt_mm": "သူ မနေ့က တစ်နေ့လုံး စာကျက်ခဲ့တယ်။ ( study ကို သုံးပါ )",
       "answers": ["studied"],
-      "explain_mm": "ဗျည်း + y → y ကို i ပြောင်းပြီး -ed → studied."
+      "explain_mm": "consonant + y → y ကို i ပြောင်းပြီး -ed → studied."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "Yesterday I work late.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": ["Yesterday I worked late", "yesterday i worked late."],
       "explain_mm": "အတိတ်မို့ -ed လိုတယ် — work → worked."
     },
@@ -93,9 +139,9 @@
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  watched  /  we  /  a film",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
       "answers": ["We watched a film", "we watched a film."],
-      "explain_mm": "Subject + ကြိယာ-ed + ... → We watched a film."
+      "explain_mm": "Subject + verb -ed + ... → We watched a film."
     },
     {
       "kind": "scan_sentences",
@@ -103,9 +149,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — about YESTERDAY. Write 5–8 sentences about what you did yesterday, using regular -ed verbs (worked, cooked, watched, studied …).",
-      "prompt_mm": "အပိုင်း ၁ — မနေ့က အကြောင်း။ မနေ့က ဘာတွေ လုပ်ခဲ့လဲဆိုတာ ပုံမှန် -ed ကြိယာတွေ (worked, cooked, watched, studied …) သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — မနေ့က အကြောင်း။ မနေ့က ဘာတွေ လုပ်ခဲ့လဲဆိုတာ regular -ed verb တွေ (worked, cooked, watched, studied …) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
       "model": "Yesterday I {v}worked{/v} in the morning. I {v}cooked{/v} lunch at home. I {v}cleaned{/v} my room. In the evening I {v}watched{/v} a film. I {v}talked{/v} to my friend on the phone.",
-      "explain_mm": "ကြိယာတိုင်းမှာ -ed ထည့်ပါ။ subject ဘယ်လိုဖြစ်ဖြစ် ပုံစံတူပါ (-s မလိုတော့ဘူး)။",
+      "explain_mm": "verb တိုင်းမှာ -ed ထည့်ပါ။ subject ဘယ်လိုဖြစ်ဖြစ် ပုံစံတူပါ (-s မလိုတော့ဘူး)။",
       "grading": {
         "grammar_point": "Past simple: regular verbs (-ed)",
         "rule": "Finished past actions. Regular verbs add -ed; the form is the same for all subjects.",
@@ -127,9 +173,9 @@
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a past day. Write a short paragraph (4–6 sentences) about one day last week, using regular past verbs.",
-      "prompt_mm": "အပိုင်း ၂ — အတိတ်က နေ့တစ်နေ့။ ပြီးခဲ့တဲ့အပတ်က နေ့တစ်နေ့အကြောင်း ပုံမှန်အတိတ်ကြိယာတွေသုံးပြီး စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — အတိတ်က နေ့တစ်နေ့။ ပြီးခဲ့တဲ့အပတ်က နေ့တစ်နေ့အကြောင်း regular past verb တွေသုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "{t}Last week{/t} I {v}visited{/v} my friend. We {v}cooked{/v} a big lunch and {v}talked{/v} for hours. In the afternoon we {v}walked{/v} in the park. She {v}showed{/v} me her photos. I {v}enjoyed{/v} the day.",
-      "explain_mm": "စာပိုဒ်တစ်ခုလုံး အတိတ် -ed နဲ့ ရေးပါ။ ပုံမှန်ကြိယာတိုင်း -ed ပါပါစေ။",
+      "explain_mm": "စာပိုဒ်တစ်ခုလုံး အတိတ် -ed နဲ့ ရေးပါ။ regular verb တိုင်း -ed ပါပါစေ။",
       "grading": {
         "grammar_point": "Past simple: regular verbs (-ed)",
         "rule": "A short past narrative using regular -ed verbs throughout.",

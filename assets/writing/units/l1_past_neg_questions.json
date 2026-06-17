@@ -10,7 +10,7 @@
     "situation_en": "A: \"{v}Did{/v} you {v}go{/v} to the party {t}last night{/t}?\" B: \"No, I {v}didn't go{/v}. I {v}didn't have{/v} time. {v}Did{/v} you {v}see{/v} my brother there?\" A: \"No, he {v}didn't come{/v} either.\"",
     "situation_mm": "A: \"မနေ့ည က ပါတီကို သွားခဲ့သလား။\" B: \"မသွားခဲ့ဘူး။ အချိန် မရှိခဲ့ဘူး။ ကျွန်တော့်အစ်ကိုကို အဲ့မှာ တွေ့ခဲ့လား။\" A: \"မတွေ့ခဲ့ဘူး၊ သူလည်း မလာခဲ့ဘူး။\"",
     "use_en": "In the past, negatives use didn't + base verb, and questions use Did + subject + base verb. did/didn't already shows the past, so the main verb stays in its base form.",
-    "use_mm": "အတိတ်မှာ အငြင်းက didn't + ကြိယာ(base)၊ အမေးက Did + subject + ကြိယာ(base) သုံးပါတယ်။ did / didn't က အတိတ်ကို ပြပြီးသားဖြစ်လို့ ကြိယာ အဓိကက base form အတိုင်း ဖြစ်ရတယ်။",
+    "use_mm": "အတိတ်မှာ အငြင်းက didn't + verb (base)၊ အမေးက Did + subject + verb (base) သုံးပါတယ်။ did / didn't က အတိတ်ကို ပြပြီးသားဖြစ်လို့ verb အဓိကက base form အတိုင်း ဖြစ်ရတယ်။",
     "timeline": "◀——●———————   (finished, before now)",
     "form": [
       { "subject": "negative", "form": "didn't + base verb" },
@@ -18,7 +18,12 @@
       { "subject": "all subjects", "form": "did / didn't (same)" },
       { "subject": "the verb", "form": "base form — no past, no -ed!" }
     ],
-    "form_note_mm": "အငြင်း — didn't (= did not) + ကြိယာ(base) — She didn't go.  အမေး — Did + subject + ကြိယာ(base) — Did she go?  did / didn't က subject အားလုံးအတွက် တူတူပါ။ အရေးကြီးတာက — did/didn't က အတိတ်ကို ကိုင်ထားပြီးသားမို့ ကြိယာ အဓိကကို base form ပဲ ထားပါ၊ အတိတ်ပုံစံ/-ed မထည့်ပါနဲ့။",
+    "form_note_mm": [
+      "negative — didn't (= did not) + verb (base) — She didn't go.",
+      "question — Did + subject + verb (base) — Did she go?",
+      "did / didn't က subject အားလုံးအတွက် တူတူပါ။",
+      "did / didn't က အတိတ်ကို ကိုင်ထားပြီးသားမို့ main verb ကို base form ပဲ ထားပါ — past form / -ed မထည့်ပါနဲ့။"
+    ],
     "trap_en": "After did/didn't, use the BASE verb — not the past form.  WRONG: She didn't went. / Did you ate?   RIGHT: She didn't go. / Did you eat?",
     "trap_mm": "did / didn't နောက်မှာ base form ပဲ သုံးပါ — အတိတ်ပုံစံ မသုံးရဘူး။  ✗ She didn't went / Did you ate?  →  ✓ She didn't go / Did you eat?  (did က အတိတ်ကို ပြပြီးသား)။",
     "examples": [
@@ -26,6 +31,49 @@
       { "en": "She {v}didn't go{/v} to work.", "mm": "သူမ အလုပ် မသွားခဲ့ဘူး။" },
       { "en": "{v}Did{/v} you {v}eat{/v} lunch?", "mm": "မင်း နေ့လယ်စာ စားခဲ့လား။" },
       { "en": "{v}Did{/v} they {v}come{/v} {t}last night{/t}?", "mm": "သူတို့ မနေ့ည က လာခဲ့လား။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "negative",
+        "rule_mm": "အငြင်း → didn't + verb (base)",
+        "en": "She {v}didn't go{/v} to work.",
+        "why_mm": "အတိတ် အငြင်းမှာ 'didn't' (did not) နဲ့တွဲပြီး verb ကို base form 'go' အတိုင်း ထားပါတယ်။ didn't က subject အားလုံးအတွက် တူပါတယ်။"
+      },
+      {
+        "subject": "question",
+        "rule_mm": "အမေး → Did + subject + verb (base) ?",
+        "en": "{v}Did{/v} you {v}eat{/v} lunch?",
+        "why_mm": "အတိတ် မေးခွန်းမှာ 'Did' ကို ဝါကျရဲ့ ရှေ့ဆုံးမှာ ထားပြီး verb ကို base form 'eat' အတိုင်း ထားပါတယ်။"
+      },
+      {
+        "subject": "base verb after did / didn't",
+        "rule_mm": "did / didn't နောက်က verb က base form — past/-ed မထည့်",
+        "en": "She {v}didn't go{/v}.  (✗ didn't went)  ·  {v}Did{/v} you {v}eat{/v}?  (✗ Did you ate)",
+        "why_mm": "did / didn't က အတိတ်ကို ပြပြီးသား ဖြစ်လို့ main verb ကို base form အတိုင်းပဲ ထားရပါတယ် — 'went' / 'ate' လို အတိတ်ပုံစံ ထပ်မသုံးဘူး။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "She ___ to work yesterday.",
+        "prompt_mm": "သူမ မနေ့က အလုပ် မသွားခဲ့ဘူး။",
+        "options": ["didn't went", "didn't go", "don't go"],
+        "answer": "didn't go",
+        "explain_mm": "didn't + base verb (go)။ didn't went လို့ အတိတ်ပုံစံ မသုံးဘူး။"
+      },
+      {
+        "prompt_en": "___ you eat lunch?",
+        "prompt_mm": "မင်း နေ့လယ်စာ စားခဲ့လား။",
+        "options": ["Do", "Did", "Does"],
+        "answer": "Did",
+        "explain_mm": "အတိတ် မေးခွန်း → Did + subject + base verb။"
+      },
+      {
+        "prompt_en": "They ___ to the party.",
+        "prompt_mm": "သူတို့ ပါတီကို မလာခဲ့ဘူး။",
+        "options": ["didn't come", "didn't came", "don't come"],
+        "answer": "didn't come",
+        "explain_mm": "didn't + base verb (come)။ didn't came မဟုတ်ဘူး။"
+      }
     ],
     "model_paragraph_en": "{t}Yesterday{/t} was quiet. I {v}didn't go{/v} out and I {v}didn't see{/v} anyone. I {v}didn't cook{/v} a big meal. \"{v}Did{/v} you {v}call{/v} me?\" my friend asked later. \"No,\" I said, \"I {v}didn't have{/v} my phone.\"",
     "model_paragraph_mm": "မနေ့က ငြိမ်သက်ခဲ့တယ်။ ကျွန်တော် အပြင် မထွက်ခဲ့ဘူး၊ ဘယ်သူ့ကိုမှ မတွေ့ခဲ့ဘူး။ ထမင်း အများကြီး မချက်ခဲ့ဘူး။ \"ငါ့ကို ဖုန်းခေါ်ခဲ့လား\" လို့ သူငယ်ချင်းက နောက်မှ မေးတယ်။ \"မဟုတ်ဘူး၊ ဖုန်း မရှိခဲ့ဘူး\" လို့ ပြောခဲ့တယ်။"
@@ -92,7 +140,7 @@
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  didn't  /  she  /  the film  /  watch",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
       "answers": ["She didn't watch the film", "she didn't watch the film."],
       "explain_mm": "Subject + didn't + base verb + ... → She didn't watch the film."
     },
@@ -102,9 +150,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — what you DIDN'T do. Write 5–8 sentences about things you didn't do yesterday, using \"I didn't\" + the base verb.",
-      "prompt_mm": "အပိုင်း ၁ — မလုပ်ခဲ့တာတွေ။ မနေ့က မလုပ်ခဲ့တဲ့ အရာတွေအကြောင်း \"I didn't\" + ကြိယာ(base) သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — မလုပ်ခဲ့တာတွေ။ မနေ့က မလုပ်ခဲ့တဲ့ အရာတွေအကြောင်း \"I didn't\" + verb (base) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
       "model": "Yesterday I {v}didn't go{/v} to work. I {v}didn't eat{/v} breakfast. I {v}didn't watch{/v} TV. I {v}didn't see{/v} my friends. I {v}didn't study{/v} English.",
-      "explain_mm": "didn't နောက်က ကြိယာ အမြဲ base form — အတိတ်ပုံစံ/-ed မထည့်ပါနဲ့။",
+      "explain_mm": "didn't နောက်က verb အမြဲ base form — အတိတ်ပုံစံ/-ed မထည့်ပါနဲ့။",
       "grading": {
         "grammar_point": "Past simple: negatives & questions (did / didn't)",
         "rule": "Negatives use didn't + base verb. did/didn't carries the past, so the main verb stays in the base form.",
@@ -128,9 +176,9 @@
       "min_lines": 4,
       "max_lines": 6,
       "prompt_en": "Part 2 — ask about the past. Write 4–6 yes/no questions about what someone did yesterday, using \"Did you/he/she …?\" + the base verb.",
-      "prompt_mm": "အပိုင်း ၂ — အတိတ်အကြောင်း မေးပါ။ တစ်ယောက်ယောက် မနေ့က ဘာလုပ်ခဲ့လဲဆိုတာ \"Did you/he/she …?\" + ကြိယာ(base) သုံးပြီး မေးခွန်း ၄–၆ ခု ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — အတိတ်အကြောင်း မေးပါ။ တစ်ယောက်ယောက် မနေ့က ဘာလုပ်ခဲ့လဲဆိုတာ \"Did you/he/she …?\" + verb (base) သုံးပြီး မေးခွန်း ၄–၆ ခု ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "{v}Did{/v} you {v}sleep{/v} well? {v}Did{/v} you {v}eat{/v} breakfast? {v}Did{/v} she {v}go{/v} to work? {v}Did{/v} they {v}watch{/v} the game? {v}Did{/v} he {v}call{/v} you?",
-      "explain_mm": "Did + subject + ကြိယာ(base)။ Did နောက်မှာ အတိတ်ပုံစံ မသုံးပါနဲ့။",
+      "explain_mm": "Did + subject + verb (base)။ Did နောက်မှာ အတိတ်ပုံစံ မသုံးပါနဲ့။",
       "grading": {
         "grammar_point": "Past simple: negatives & questions (did / didn't)",
         "rule": "Yes/no past questions: Did + subject + base verb (no past form on the main verb).",

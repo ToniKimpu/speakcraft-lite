@@ -8,56 +8,209 @@
   "subtitle_mm": "ပစ္စုပ္ပန် ရိုးရိုး — အငြင်း",
   "teach": {
     "situation_en": "Ben is a student. He {v}doesn't like{/v} coffee, so he {v}drinks{/v} tea. He {v}doesn't have{/v} a car, so he {v}goes{/v} to school by bus. {t}On Sundays{/t} he {v}doesn't study{/v} — he {v}relaxes{/v} at home.",
-    "situation_mm": "Ben က ကျောင်းသားတစ်ယောက်ပါ။ သူ ကော်ဖီ မကြိုက်ဘူး၊ ဒါကြောင့် လက်ဖက်ရည် သောက်တယ်။ သူ ကားမရှိဘူး၊ ဒါကြောင့် ကျောင်းကို ဘတ်စ်ကားနဲ့ သွားတယ်။ တနင်္ဂနွေနေ့တိုင်း သူ စာမလုပ်ဘူး — အိမ်မှာ အနားယူတယ်။",
+    "situation_mm": "Ben က ကျောင်းသားတစ်ယောက်ပါ။ သူက ကော်ဖီမကြိုက်တဲ့အတွက် လက်ဖက်ရည်ပဲ သောက်လေ့ရှိပါတယ်။ ကားမရှိတာကြောင့် ကျောင်းကို ဘတ်စ်ကားနဲ့ပဲ သွားပါတယ်။ တနင်္ဂနွေနေ့တိုင်းမှာတော့ စာမလုပ်ဘဲ အိမ်မှာပဲ အေးအေးဆေးဆေး အနားယူတတ်ပါတယ်။",
     "use_en": "We use don't (do not) and doesn't (does not) before the base verb to say something is NOT true — habits we don't have, things we don't do.",
-    "use_mm": "တစ်ခုခုကို ‘မ-ဘူး’ လို့ ငြင်းချင်တဲ့အခါ — ကိုယ်မလုပ်တဲ့အရာ၊ မရှိတဲ့ အလေ့အထတွေအတွက် — ကြိယာရှေ့မှာ don't / doesn't ထည့်ပြီး သုံးပါတယ်။",
+    "use_mm": "တစ်ခုခုက မဟုတ်ဘူး၊ မမှန်ဘူးလို့ ငြင်းဆိုချင်တဲ့အခါ (ဒါမှမဟုတ်) ကိုယ်မလုပ်တဲ့အရာတွေ၊ ကိုယ့်မှာမရှိတဲ့ အလေ့အထတွေကို ပြောချင်တဲ့အခါမှာ — မူလကြိယာ (Base verb) ရဲ့ ရှေ့မှာ don't (do not) သို့မဟုတ် doesn't (does not) ကို ထည့်ပြီး သုံးပါတယ်။\n\nစိတ်ထဲမှတ်ရလွယ်အောင် ပုံစံလေးနဲ့ ခွဲပေးထားပါတယ် —\n\n- I / You / We / They + don't + Base Verb\n- He / She / It + doesn't + Base Verb\n\n* အရေးကြီးတဲ့ သတိပြုရန်အချက်:\ndoesn't ကို သုံးလိုက်ပြီဆိုရင် နောက်က ကြိယာမှာ -s / -es ထပ်ထည့်စရာ မလိုတော့ပါဘူး။ မူလပုံစံ (Base verb) အတိုင်းပဲ ပြန်ပြောင်းပေးရပါမယ်။\n (ဥပမာ — ✗ He doesn't likes → ✓ He doesn't like)",
     "timeline": "",
     "form": [
-      { "subject": "I / you / we / they", "form": "don't work" },
-      { "subject": "he / she / it", "form": "doesn't work" },
-      { "subject": "full form", "form": "do not / does not work" },
-      { "subject": "after don't / doesn't", "form": "base verb — no -s!" }
+      {
+        "subject": "I / you / we / they",
+        "form": "don't work"
+      },
+      {
+        "subject": "he / she / it",
+        "form": "doesn't work"
+      },
+      {
+        "subject": "full form",
+        "form": "do not / does not work"
+      },
+      {
+        "subject": "after don't / doesn't",
+        "form": "base verb — no -s!"
+      }
     ],
-    "form_note_mm": "‘မ-ဘူး’ လို့ ငြင်းတဲ့အခါ — I / you / we / they ဆိုရင် don't (= do not) သုံးပါ — I don't work.  he / she / it ဆိုရင် doesn't (= does not) သုံးပါ — He doesn't work.  အရေးကြီးဆုံးက — don't / doesn't နောက်က ကြိယာကို အမြဲ base form (မူရင်းပုံစံ) အတိုင်းထားပါ၊ -s မထည့်ပါနဲ့ (doesn't ထဲမှာ -s ပါပြီးသား)။",
+    "form_note_mm": [
+      "I / You / We / They → don't",
+      "He / She / It → doesn't",
+      "အရေးကြီးချက် -",
+      "don't / doesn't နောက်က verb ကို base form အတိုင်းပဲ ထားပေးပါ — -s ထပ်မထည့်ပါနဲ့ (doesn't ထဲမှာ -s ပါပြီးသားဖြစ်လို့ပါ)။"
+    ],
     "trap_en": "After doesn't, the verb has NO -s.  WRONG: She doesn't works.   RIGHT: She doesn't work.",
-    "trap_mm": "doesn't (= does not) ထဲမှာ -s ပါပြီးသားဖြစ်လို့ နောက်က ကြိယာကို base form (မူရင်းပုံစံ) အတိုင်းပဲ ထားရတယ် — -s ထပ်မထည့်ရဘူး။  ✗ She doesn't works  →  ✓ She doesn't work.",
+    "trap_mm": "doesn't (= does not) ထဲမှာ -s ပါပြီးသားဖြစ်လို့ နောက်က verb ကို base form (မူရင်းပုံစံ) အတိုင်းပဲ ထားရတယ် — -s ထပ်မထည့်ရဘူး။\nဥပမာ — \n✗ She doesn't works \n✓ She doesn't work.",
     "examples": [
-      { "en": "I {v}don't drink{/v} coffee.", "mm": "ကျွန်တော် ကော်ဖီ မသောက်ဘူး။" },
-      { "en": "She {v}doesn't eat{/v} meat.", "mm": "သူမ အသား မစားဘူး။" },
-      { "en": "They {v}don't live{/v} here.", "mm": "သူတို့ ဒီမှာ မနေဘူး။" },
-      { "en": "He {v}doesn't work{/v} {t}on weekends{/t}.", "mm": "သူ စနေတနင်္ဂနွေမှာ အလုပ်မလုပ်ဘူး။" }
+      {
+        "en": "I {v}don't drink{/v} coffee.",
+        "mm": "ကျွန်တော် ကော်ဖီ မသောက်ဘူး။"
+      },
+      {
+        "en": "She {v}doesn't eat{/v} meat.",
+        "mm": "သူမ အသား မစားဘူး။"
+      },
+      {
+        "en": "They {v}don't live{/v} here.",
+        "mm": "သူတို့ ဒီမှာ မနေဘူး။"
+      },
+      {
+        "en": "He {v}doesn't work{/v} {t}on weekends{/t}.",
+        "mm": "သူ စနေတနင်္ဂနွေမှာ အလုပ်မလုပ်ဘူး။"
+      }
+    ],
+    "walkthrough": [
+      {
+        "subject": "I / you / we / they",
+        "rule_mm": "I · You · We · They → don't + verb (base)",
+        "en": "They {v}don't work{/v} on Sundays.",
+        "why_mm": "Subject က 'They' ဖြစ်လို့ 'don't' (do not) နဲ့တွဲပြီး verb ကို base form 'work' အတိုင်း ထားပါတယ်။"
+      },
+      {
+        "subject": "he / she / it",
+        "rule_mm": "He · She · It → doesn't + verb (base)",
+        "en": "She {v}doesn't work{/v} on Sundays.",
+        "why_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ 'doesn't' (does not) ကို သုံးပါတယ်။ ဒါက အလွယ်တကူ မှားတတ်တဲ့ နေရာပါ။"
+      },
+      {
+        "subject": "after doesn't — no -s",
+        "rule_mm": "doesn't / don't ရဲ့ နောက်က verb က base form",
+        "en": "She {v}doesn't like{/v} coffee.  (✗ doesn't likes)",
+        "why_mm": "'doesn't' ထဲမှာ -s ပါပြီးသား ဖြစ်လို့ နောက်က verb ကို base form 'like' အတိုင်းပဲ ထားရပါတယ် — 'doesn't likes' လို့ -s ထပ်မထည့်ပါဘူး။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "He ___ meat.",
+        "prompt_mm": "သူ အသား မစားဘူး။",
+        "options": ["doesn't eat", "doesn't eats", "don't eat"],
+        "answer": "doesn't eat",
+        "explain_mm": "he → doesn't + base verb (eat)။ doesn't eats လို့ -s ထပ်မထည့်ဘူး။"
+      },
+      {
+        "prompt_en": "My friends ___ in Yangon.",
+        "prompt_mm": "ကျွန်တော့်သူငယ်ချင်းတွေ ရန်ကုန်မှာ မနေဘူး။",
+        "options": ["don't live", "doesn't live", "don't lives"],
+        "answer": "don't live",
+        "explain_mm": "they (friends) → don't + base verb (live)။"
+      },
+      {
+        "prompt_en": "She ___ a car.",
+        "prompt_mm": "သူမ ကား မရှိဘူး။",
+        "options": ["doesn't have", "doesn't has", "don't have"],
+        "answer": "doesn't have",
+        "explain_mm": "she → doesn't + base verb (have)။ doesn't has မဟုတ်ဘူး။"
+      }
     ],
     "model_paragraph_en": "My brother {v}doesn't like{/v} the city. He {v}doesn't have{/v} a big house, and he {v}doesn't drive{/v} a car. He {v}works{/v} on a farm, so he {v}doesn't wear{/v} a suit. {t}On weekends{/t} he {v}doesn't work{/v} — he {v}relaxes{/v} at home.",
-    "model_paragraph_mm": "ကျွန်တော့်အစ်ကိုက မြို့ကြီးကို မကြိုက်ဘူး။ သူ အိမ်ကြီး မရှိဘူး၊ ကားလည်း မမောင်းဘူး။ သူ လယ်ထဲမှာ အလုပ်လုပ်တာမို့ ဝတ်စုံ မဝတ်ဘူး။ စနေတနင်္ဂနွေမှာ သူ အလုပ်မလုပ်ဘူး — အိမ်မှာ အနားယူတယ်။"
+    "model_paragraph_mm": "ကျွန်တော့်အစ်ကိုက မြို့ကြီးပြကြီးတွေကို မကြိုက်ပါဘူး။ သူ့မှာ အိမ်ကြီးအိမ်ကောင်း မရှိသလို၊ ကားလည်း မမောင်းတတ်ပါဘူး။ သူက လယ်ထဲမှာ အလုပ်လုပ်တာမို့ ဝတ်စုံ (suit) တွေလည်း မဝတ်ပါဘူး။ စနေ၊ တနင်္ဂနွေတွေမှာတော့ သူ အလုပ်မလုပ်ဘဲ အိမ်မှာပဲ အနားယူလေ့ရှိပါတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          {
+            "subjects": "I · you · we · they",
+            "form": "don't + verb (base)",
+            "tag": "don't",
+            "example": "They {v}don't work{/v}."
+          },
+          {
+            "subjects": "he · she · it",
+            "form": "doesn't + verb (base)",
+            "tag": "doesn't",
+            "highlight": true,
+            "example": "She {v}doesn't work{/v}."
+          }
+        ]
+      }
+    ]
   },
   "toolkit": {
     "verbs": [
-      "v_like", "v_eat", "v_drink", "v_have", "v_live", "v_work",
-      "v_go", "v_study", "v_play", "v_watch", "v_want", "v_speak"
+      "v_like",
+      "v_eat",
+      "v_drink",
+      "v_have",
+      "v_live",
+      "v_work",
+      "v_go",
+      "v_study",
+      "v_play",
+      "v_watch",
+      "v_want",
+      "v_speak"
     ],
     "time_words": [
-      "t_every_day", "t_in_the_morning", "t_on_weekends", "t_on_mondays"
+      "t_every_day",
+      "t_in_the_morning",
+      "t_on_weekends",
+      "t_on_mondays"
     ],
     "verb_form": "base",
     "verb_examples": {
-      "v_like": { "en": "She {v}doesn't like{/v} coffee.", "mm": "သူမ ကော်ဖီ မကြိုက်ဘူး။" },
-      "v_eat": { "en": "He {v}doesn't eat{/v} meat.", "mm": "သူ အသား မစားဘူး။" },
-      "v_drink": { "en": "I {v}don't drink{/v} beer.", "mm": "ကျွန်တော် ဘီယာ မသောက်ဘူး။" },
-      "v_have": { "en": "She {v}doesn't have{/v} a car.", "mm": "သူမ ကား မရှိဘူး။" },
-      "v_live": { "en": "They {v}don't live{/v} here.", "mm": "သူတို့ ဒီမှာ မနေဘူး။" },
-      "v_work": { "en": "He {v}doesn't work{/v} on Sundays.", "mm": "သူ တနင်္ဂနွေနေ့ အလုပ်မလုပ်ဘူး။" },
-      "v_go": { "en": "We {v}don't go{/v} to the gym.", "mm": "ကျွန်တော်တို့ အားကစားခန်း မသွားဘူး။" },
-      "v_study": { "en": "He {v}doesn't study{/v} at night.", "mm": "သူ ညဘက် စာမလုပ်ဘူး။" },
-      "v_play": { "en": "She {v}doesn't play{/v} football.", "mm": "သူမ ဘောလုံး မကစားဘူး။" },
-      "v_watch": { "en": "I {v}don't watch{/v} TV.", "mm": "ကျွန်တော် TV မကြည့်ဘူး။" },
-      "v_want": { "en": "He {v}doesn't want{/v} tea.", "mm": "သူ လက်ဖက်ရည် မလိုချင်ဘူး။" },
-      "v_speak": { "en": "They {v}don't speak{/v} English.", "mm": "သူတို့ အင်္ဂလိပ်စကား မပြောတတ်ဘူး။" }
+      "v_like": {
+        "en": "She {v}doesn't like{/v} coffee.",
+        "mm": "သူမ ကော်ဖီ မကြိုက်ဘူး။"
+      },
+      "v_eat": {
+        "en": "He {v}doesn't eat{/v} meat.",
+        "mm": "သူ အသား မစားဘူး။"
+      },
+      "v_drink": {
+        "en": "I {v}don't drink{/v} beer.",
+        "mm": "ကျွန်တော် ဘီယာ မသောက်ဘူး။"
+      },
+      "v_have": {
+        "en": "She {v}doesn't have{/v} a car.",
+        "mm": "သူမ ကား မရှိဘူး။"
+      },
+      "v_live": {
+        "en": "They {v}don't live{/v} here.",
+        "mm": "သူတို့ ဒီမှာ မနေဘူး။"
+      },
+      "v_work": {
+        "en": "He {v}doesn't work{/v} on Sundays.",
+        "mm": "သူ တနင်္ဂနွေနေ့ အလုပ်မလုပ်ဘူး။"
+      },
+      "v_go": {
+        "en": "We {v}don't go{/v} to the gym.",
+        "mm": "ကျွန်တော်တို့ အားကစားခန်း မသွားဘူး။"
+      },
+      "v_study": {
+        "en": "He {v}doesn't study{/v} at night.",
+        "mm": "သူ ညဘက် စာမလုပ်ဘူး။"
+      },
+      "v_play": {
+        "en": "She {v}doesn't play{/v} football.",
+        "mm": "သူမ ဘောလုံး မကစားဘူး။"
+      },
+      "v_watch": {
+        "en": "I {v}don't watch{/v} TV.",
+        "mm": "ကျွန်တော် TV မကြည့်ဘူး။"
+      },
+      "v_want": {
+        "en": "He {v}doesn't want{/v} tea.",
+        "mm": "သူ လက်ဖက်ရည် မလိုချင်ဘူး။"
+      },
+      "v_speak": {
+        "en": "They {v}don't speak{/v} English.",
+        "mm": "သူတို့ အင်္ဂလိပ်စကား မပြောတတ်ဘူး။"
+      }
     },
     "time_word_examples": {
-      "t_every_day": { "en": "I {v}don't study{/v} {t}every day{/t}.", "mm": "ကျွန်တော် နေ့တိုင်း စာမလုပ်ဘူး။" },
-      "t_in_the_morning": { "en": "He {v}doesn't eat{/v} {t}in the morning{/t}.", "mm": "သူ မနက်ပိုင်း အစာမစားဘူး။" },
-      "t_on_weekends": { "en": "We {v}don't work{/v} {t}on weekends{/t}.", "mm": "ကျွန်တော်တို့ စနေတနင်္ဂနွေမှာ အလုပ်မလုပ်ဘူး။" },
-      "t_on_mondays": { "en": "She {v}doesn't teach{/v} {t}on Mondays{/t}.", "mm": "သူမ တနင်္လာနေ့ သင်မပေးဘူး။" }
+      "t_every_day": {
+        "en": "I {v}don't study{/v} {t}every day{/t}.",
+        "mm": "ကျွန်တော် နေ့တိုင်း စာမလုပ်ဘူး။"
+      },
+      "t_in_the_morning": {
+        "en": "He {v}doesn't eat{/v} {t}in the morning{/t}.",
+        "mm": "သူ မနက်ပိုင်း အစာမစားဘူး။"
+      },
+      "t_on_weekends": {
+        "en": "We {v}don't work{/v} {t}on weekends{/t}.",
+        "mm": "ကျွန်တော်တို့ စနေတနင်္ဂနွေမှာ အလုပ်မလုပ်ဘူး။"
+      },
+      "t_on_mondays": {
+        "en": "She {v}doesn't teach{/v} {t}on Mondays{/t}.",
+        "mm": "သူမ တနင်္လာနေ့ သင်မပေးဘူး။"
+      }
     }
   },
   "exercises": [
@@ -66,17 +219,29 @@
       "grade": "auto",
       "prompt_en": "He ___ meat.",
       "prompt_mm": "သူ အသား မစားဘူး။",
-      "options": ["doesn't eat", "doesn't eats", "don't eat"],
-      "answers": ["doesn't eat"],
-      "explain_mm": "he → doesn't သုံးပြီး ကြိယာက base form (eat)။ doesn't eats လို့ -s ထပ်မထည့်ရဘူး။"
+      "options": [
+        "doesn't eat",
+        "doesn't eats",
+        "don't eat"
+      ],
+      "answers": [
+        "doesn't eat"
+      ],
+      "explain_mm": "he → doesn't သုံးပြီး verb က base form (eat)။ doesn't eats လို့ -s ထပ်မထည့်ရဘူး။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "My friends ___ in Yangon.",
       "prompt_mm": "ကျွန်တော့်သူငယ်ချင်းတွေ ရန်ကုန်မှာ မနေဘူး။",
-      "options": ["don't live", "doesn't live", "don't lives"],
-      "answers": ["don't live"],
+      "options": [
+        "don't live",
+        "doesn't live",
+        "don't lives"
+      ],
+      "answers": [
+        "don't live"
+      ],
       "explain_mm": "they (friends) → don't + base verb (live)။"
     },
     {
@@ -84,24 +249,34 @@
       "grade": "auto",
       "prompt_en": "She ___ (not / have) a car.",
       "prompt_mm": "သူမ ကား မရှိဘူး။ ( have ကို သုံးပါ )",
-      "answers": ["doesn't have", "does not have", "doesnt have"],
+      "answers": [
+        "doesn't have",
+        "does not have",
+        "doesnt have"
+      ],
       "explain_mm": "she → doesn't + have (base form)။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  doesn't  /  she  /  tea  /  drink",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
-      "answers": ["She doesn't drink tea", "she doesn't drink tea."],
-      "explain_mm": "ဝါကျအစီအစဉ်: Subject + doesn't + ကြိယာ(base) → She doesn't drink tea."
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "answers": [
+        "She doesn't drink tea",
+        "she doesn't drink tea."
+      ],
+      "explain_mm": "sentence အစီအစဉ်: Subject + doesn't + verb (base) → She doesn't drink tea."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "She doesn't likes coffee.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
-      "answers": ["She doesn't like coffee", "she doesn't like coffee."],
-      "explain_mm": "doesn't နောက်က ကြိယာက base form ဖြစ်ရမယ် — likes → like။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She doesn't like coffee",
+        "she doesn't like coffee."
+      ],
+      "explain_mm": "doesn't နောက်က verb က base form ဖြစ်ရမယ် — likes → like။"
     },
     {
       "kind": "scan_sentences",
@@ -109,9 +284,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — about YOURSELF. Write 5–8 sentences about things you DON'T do, using \"I don't\" / \"we don't\" + the base verb.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အကြောင်း။ ကိုယ် မလုပ်တဲ့အရာတွေအကြောင်း \"I don't / we don't\" သုံးပြီး ဝါကျ ၅–၈ ကြောင်း ရေးပါ။ don't နောက်က ကြိယာက base form ပါ။ ပြီးရင် စာအုပ်ထဲ လက်နဲ့ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အကြောင်း။ ကိုယ် မလုပ်တဲ့အရာတွေအကြောင်း \"I don't / we don't\" သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ don't နောက်က verb က base form ပါ။ ပြီးရင် စာအုပ်ထဲ လက်နဲ့ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
       "model": "I {v}don't drink{/v} coffee. I {v}don't eat{/v} meat. I {v}don't watch{/v} TV {t}in the morning{/t}. We {v}don't live{/v} in the city. I {v}don't work{/v} {t}on weekends{/t}.",
-      "explain_mm": "‘I / we’ နဲ့ဆို don't သုံးပါ။ don't နောက်က ကြိယာ အမြဲ base form — -s မထည့်ပါနဲ့။",
+      "explain_mm": "‘I / we’ နဲ့ဆို don't သုံးပါ။ don't နောက်က verb အမြဲ base form — -s မထည့်ပါနဲ့။",
       "grading": {
         "grammar_point": "Present simple negatives (don't / doesn't)",
         "rule": "I/you/we/they → don't + base verb; he/she/it → doesn't + base verb. The main verb stays in the base form (no -s) because do/does already carries it.",
@@ -126,16 +301,19 @@
           "Using doesn't with I/you/we/they (or don't with he/she/it)",
           "Dropping the auxiliary entirely (She not like)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — about SOMEONE ELSE. Write one short paragraph (4–6 sentences) about what a family member (he / she) doesn't do. Use \"doesn't\" + the base verb — {v}no -s{/v} on the verb!",
-      "prompt_mm": "အပိုင်း ၂ — တခြားသူတစ်ယောက်အကြောင်း။ မိသားစုဝင်တစ်ယောက် (he / she) မလုပ်တဲ့အရာတွေအကြောင်း စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ရေးပါ။ \"doesn't\" + ကြိယာ(base) သုံးပါ — ကြိယာမှာ -s မထည့်ပါနဲ့! ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — တခြားသူတစ်ယောက်အကြောင်း။ မိသားစုဝင်တစ်ယောက် (he / she) မလုပ်တဲ့အရာတွေအကြောင်း စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ \"doesn't\" + verb (base) သုံးပါ — verb မှာ -s မထည့်ပါနဲ့! ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ။",
       "model": "My sister {v}doesn't like{/v} sport. She {v}doesn't play{/v} football, and she {v}doesn't watch{/v} games on TV. She {v}doesn't eat{/v} meat. {t}On weekends{/t} she {v}doesn't study{/v} — she {v}reads{/v} novels.",
-      "explain_mm": "he / she နဲ့ဆို doesn't သုံးပါ။ doesn't နောက်က ကြိယာတိုင်း base form — She doesn't plays (✗) → She doesn't play (✓)။",
+      "explain_mm": "he / she နဲ့ဆို doesn't သုံးပါ။ doesn't နောက်က verb တိုင်း base form — She doesn't plays (✗) → She doesn't play (✓)။",
       "grading": {
         "grammar_point": "Present simple negatives (don't / doesn't)",
         "rule": "A he/she paragraph in the negative. Every negative uses doesn't + the base verb (no -s on the main verb).",
@@ -150,7 +328,10 @@
           "don't used with he/she",
           "Switching tense mid-paragraph"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

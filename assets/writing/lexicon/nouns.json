@@ -1,0 +1,112 @@
+[
+  {
+    "id": "n_student",
+    "en": "student",
+    "mm": "ကျောင်းသား / ကျောင်းသူ",
+    "article": "a",
+    "plural": "students",
+    "examples": [
+      { "en": "I {v}am{/v} a student.", "mm": "ကျွန်တော် ကျောင်းသားတစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_teacher",
+    "en": "teacher",
+    "mm": "ဆရာ / ဆရာမ",
+    "article": "a",
+    "plural": "teachers",
+    "examples": [
+      { "en": "She {v}is{/v} a teacher.", "mm": "သူမ ဆရာမတစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_doctor",
+    "en": "doctor",
+    "mm": "ဆရာဝန်",
+    "article": "a",
+    "plural": "doctors",
+    "examples": [
+      { "en": "My brother {v}is{/v} a doctor.", "mm": "အစ်ကိုက ဆရာဝန်တစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_nurse",
+    "en": "nurse",
+    "mm": "သူနာပြု",
+    "article": "a",
+    "plural": "nurses",
+    "examples": [
+      { "en": "She {v}is{/v} a nurse.", "mm": "သူမ သူနာပြုတစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_engineer",
+    "en": "engineer",
+    "mm": "အင်ဂျင်နီယာ",
+    "article": "an",
+    "plural": "engineers",
+    "examples": [
+      { "en": "My father {v}is{/v} an engineer.", "mm": "အဖေက အင်ဂျင်နီယာတစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_farmer",
+    "en": "farmer",
+    "mm": "လယ်သမား",
+    "article": "a",
+    "plural": "farmers",
+    "examples": [
+      { "en": "My grandfather {v}is{/v} a farmer.", "mm": "အဘိုးက လယ်သမားတစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_driver",
+    "en": "driver",
+    "mm": "ယာဉ်မောင်း",
+    "article": "a",
+    "plural": "drivers",
+    "examples": [
+      { "en": "He {v}is{/v} a driver.", "mm": "သူ ယာဉ်မောင်းတစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_shopkeeper",
+    "en": "shopkeeper",
+    "mm": "ဆိုင်ပိုင်ရှင်",
+    "article": "a",
+    "plural": "shopkeepers",
+    "examples": [
+      { "en": "My mother {v}is{/v} a shopkeeper.", "mm": "အမေက ဆိုင်ပိုင်ရှင်တစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_worker",
+    "en": "worker",
+    "mm": "အလုပ်သမား",
+    "article": "a",
+    "plural": "workers",
+    "examples": [
+      { "en": "They {v}are{/v} workers.", "mm": "သူတို့ အလုပ်သမားတွေပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  },
+  {
+    "id": "n_businessman",
+    "en": "businessman",
+    "mm": "စီးပွားရေးသမား",
+    "article": "a",
+    "plural": "businessmen",
+    "examples": [
+      { "en": "My uncle {v}is{/v} a businessman.", "mm": "ဦးလေးက စီးပွားရေးသမားတစ်ယောက်ပါ။" }
+    ],
+    "tags": ["job", "a1"]
+  }
+]

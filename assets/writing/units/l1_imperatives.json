@@ -10,7 +10,7 @@
     "situation_en": "Here is a simple recipe. {v}Wash{/v} the rice. {v}Boil{/v} the water. {v}Add{/v} the rice and {v}wait{/v} ten minutes. {v}Don't open{/v} the pot too early. {v}Don't add{/v} too much salt. {v}Enjoy{/v} your meal!",
     "situation_mm": "ရိုးရှင်းတဲ့ ချက်နည်းတစ်ခုပါ။ ဆန် ဆေးပါ။ ရေ ကျိုပါ။ ဆန် ထည့်ပြီး ၁၀ မိနစ် စောင့်ပါ။ အိုးကို စောစော မဖွင့်ပါနဲ့။ ဆား များများ မထည့်ပါနဲ့။ အစားအစာ ပျော်ပျော် သုံးဆောင်ပါ!",
     "use_en": "We use the imperative to give instructions, orders, directions and advice. Use the base verb (no subject). Negative: don't + base verb.",
-    "use_mm": "ညွှန်ကြားချက်၊ အမိန့်၊ လမ်းညွှန်၊ အကြံပြုချက် ပေးဖို့ imperative သုံးပါတယ်။ ကြိယာ(base) ကို subject မပါဘဲ သုံးပါ။ အငြင်း — don't + ကြိယာ(base)။",
+    "use_mm": "ညွှန်ကြားချက်၊ အမိန့်၊ လမ်းညွှန်၊ အကြံပြုချက် ပေးဖို့ imperative သုံးပါတယ်။ verb (base) ကို subject မပါဘဲ သုံးပါ။ အငြင်း — don't + verb (base)။",
     "timeline": "",
     "form": [
       { "subject": "positive", "form": "Open the door." },
@@ -18,7 +18,11 @@
       { "subject": "no subject", "form": "(You) Sit down. → Sit down." },
       { "subject": "polite", "form": "Please sit down. / Sit down, please." }
     ],
-    "form_note_mm": "Imperative — ကြိယာ(base) နဲ့ စပါ၊ subject (you) မထည့်ဘူး — ‘Sit down.’ ‘Come here.’။ အငြင်း — don't + ကြိယာ (Don't run.)။ ယဉ်ကျေးချင်ရင် please ထည့်ပါ — Please wait. / Wait, please.",
+    "form_note_mm": [
+      "Imperative — verb (base) နဲ့ စပါ၊ subject (you) မထည့်ဘူး — ‘Sit down.’ ‘Come here.’။",
+      "negative — don't + verb (Don't run.)။",
+      "ယဉ်ကျေးချင်ရင် please ထည့်ပါ — Please wait. / Wait, please."
+    ],
     "trap_en": "Don't add a subject or -s; start with the base verb.  WRONG: You sits down. / To open the door.   RIGHT: Sit down. / Open the door.",
     "trap_mm": "subject (you) ဒါမှမဟုတ် -s မထည့်နဲ့၊ ကြိယာ base နဲ့ စပါ။  ✗ You sits down / To open the door  →  ✓ Sit down / Open the door.",
     "examples": [
@@ -26,6 +30,49 @@
       { "en": "{v}Don't be{/v} late.", "mm": "နောက်မကျပါနဲ့။" },
       { "en": "{v}Turn{/v} left at the corner.", "mm": "ထောင့်မှာ ဘယ်ဘက် ကွေ့ပါ။" },
       { "en": "Please {v}wait{/v} here.", "mm": "ဒီမှာ စောင့်ပေးပါ။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "positive",
+        "rule_mm": "verb (base) နဲ့ စ — subject မပါ",
+        "en": "{v}Open{/v} the door.",
+        "why_mm": "imperative က ညွှန်ကြားချက်/အမိန့် ပေးတာမို့ verb ကို base form 'Open' နဲ့ စပါတယ် — subject (you) မထည့်ဘူး။"
+      },
+      {
+        "subject": "negative",
+        "rule_mm": "don't + verb (base)",
+        "en": "{v}Don't run{/v} here.",
+        "why_mm": "မလုပ်ဖို့ ပြောချင်ရင် 'don't' ကို verb base ရဲ့ ရှေ့မှာ ထည့်ပါတယ် — Don't run, Don't be late။"
+      },
+      {
+        "subject": "watch out",
+        "rule_mm": "subject မပါ၊ -s မပါ၊ 'to' မပါ",
+        "en": "{v}Sit{/v} down.  (✗ You sits down / To sit down)",
+        "why_mm": "imperative မှာ subject (you) မထည့်ဘူး၊ verb မှာ -s မထည့်ဘူး၊ 'to' လည်း မပါဘူး — base verb ပဲ။ ယဉ်ကျေးချင်ရင် 'please' ထည့်ပါ။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "___ the door, please.",
+        "prompt_mm": "တံခါး ဖွင့်ပေးပါ။",
+        "options": ["You open", "Open", "Opens"],
+        "answer": "Open",
+        "explain_mm": "imperative — base verb နဲ့ စ → Open (subject မပါ)။"
+      },
+      {
+        "prompt_en": "___ late!",
+        "prompt_mm": "နောက်မကျပါနဲ့!",
+        "options": ["Don't be", "Not be", "Don't to be"],
+        "answer": "Don't be",
+        "explain_mm": "အငြင်း → Don't + base verb (be)။"
+      },
+      {
+        "prompt_en": "___ in the classroom.",
+        "prompt_mm": "စာသင်ခန်းထဲ မပြေးပါနဲ့။",
+        "options": ["Don't run", "Don't runs", "No run"],
+        "answer": "Don't run",
+        "explain_mm": "အငြင်း imperative → Don't + base verb (run)။"
+      }
     ],
     "model_paragraph_en": "Listen carefully. {v}Take{/v} the first street on the right. {v}Walk{/v} to the market and {v}turn{/v} left. {v}Don't cross{/v} the big road. {v}Stop{/v} at the white building. {v}Don't worry{/v} — it is easy to find!",
     "model_paragraph_mm": "ဂရုစိုက် နားထောင်ပါ။ ညာဘက်က ပထမ လမ်းကို ယူပါ။ ဈေးအထိ လမ်းလျှောက်ပြီး ဘယ်ဘက် ကွေ့ပါ။ လမ်းမကြီးကို မဖြတ်ပါနဲ့။ အဖြူရောင် အဆောက်အအုံမှာ ရပ်ပါ။ စိတ်မပူပါနဲ့ — ရှာရတာ လွယ်ပါတယ်!"
@@ -62,7 +109,7 @@
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "You sits down.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": ["Sit down", "sit down."],
       "explain_mm": "imperative — subject မပါ၊ base verb → Sit down."
     },
@@ -70,7 +117,7 @@
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  the light  /  off  /  turn",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး ဝါကျမှန် ရေးပါ။",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
       "answers": ["Turn off the light", "turn off the light.", "Turn the light off"],
       "explain_mm": "base verb (Turn) နဲ့ စ → Turn off the light."
     },
@@ -82,7 +129,7 @@
       "prompt_en": "Part 1 — give instructions. Write 5–8 imperatives (a simple recipe, rules, or directions). Mix positive (Do …) and negative (Don't …).",
       "prompt_mm": "အပိုင်း ၁ — ညွှန်ကြားချက် ပေးပါ။ imperative ၅–၈ ကြောင်း ရေးပါ (ရိုးရှင်းတဲ့ ချက်နည်း၊ စည်းကမ်း၊ လမ်းညွှန်)။ အတည် (Do …) နဲ့ အငြင်း (Don't …) ရောပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
       "model": "{v}Wash{/v} your hands. {v}Open{/v} the book. {v}Read{/v} the first page. {v}Don't talk{/v} loudly. {v}Don't forget{/v} your homework.",
-      "explain_mm": "ကြိယာ base နဲ့ စ၊ subject မထည့်ဘူး။ အငြင်းဆို Don't + base verb။",
+      "explain_mm": "verb base နဲ့ စ၊ subject မထည့်ဘူး။ အငြင်းဆို Don't + base verb။",
       "grading": {
         "grammar_point": "Imperatives (do / don't)",
         "rule": "Imperatives start with the base verb (no subject). Negative: don't + base verb.",
@@ -104,9 +151,9 @@
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — how to do something. Write a short paragraph (4–6 sentences) of instructions (a recipe or directions), using imperatives.",
-      "prompt_mm": "အပိုင်း ၂ — တစ်ခုခု ဘယ်လိုလုပ်ရမလဲ။ ညွှန်ကြားချက် (ချက်နည်း သို့မဟုတ် လမ်းညွှန်) စာပိုဒ်တို (ဝါကျ ၄–၆ ကြောင်း) ကို imperative တွေသုံးပြီး ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — တစ်ခုခု ဘယ်လိုလုပ်ရမလဲ။ ညွှန်ကြားချက် (ချက်နည်း သို့မဟုတ် လမ်းညွှန်) စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ကို imperative တွေသုံးပြီး ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
       "model": "{v}Make{/v} a cup of tea. First, {v}boil{/v} the water. {v}Put{/v} a tea bag in the cup. {v}Add{/v} the hot water and {v}wait{/v} three minutes. {v}Don't add{/v} too much sugar. {v}Enjoy{/v}!",
-      "explain_mm": "ကြိယာ base နဲ့ စတဲ့ ညွှန်ကြားချက်တွေ ဆက်တိုက် ရေးပါ။ အငြင်းဆို Don't ထည့်ပါ။",
+      "explain_mm": "verb base နဲ့ စတဲ့ ညွှန်ကြားချက်တွေ ဆက်တိုက် ရေးပါ။ အငြင်းဆို Don't ထည့်ပါ။",
       "grading": {
         "grammar_point": "Imperatives (do / don't)",
         "rule": "A set of instructions using imperatives correctly.",

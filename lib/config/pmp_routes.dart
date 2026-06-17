@@ -29,6 +29,7 @@ import 'package:speakcraft/model/writing/writing_unit.dart';
 import 'package:speakcraft/model/writing/writing_lexicon.dart';
 import 'package:speakcraft/screens/writing/writing_path_page.dart';
 import 'package:speakcraft/screens/writing/writing_teach_page.dart';
+import 'package:speakcraft/screens/writing/writing_teach_steps_page.dart';
 import 'package:speakcraft/screens/writing/writing_practice_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/listening_list_page.dart';
@@ -106,6 +107,7 @@ class PmpRoutes {
   // Writing Practice module — see WRITING_FEATURE_PLAN.md
   static const writingPath = '/writing';
   static const writingTeach = '/writing/teach';
+  static const writingTeachSteps = '/writing/teach-steps'; // step-by-step prototype
   static const writingPractice = '/writing/practice';
 
   static Route generateRoutes(RouteSettings settings) {
@@ -390,6 +392,15 @@ class PmpRoutes {
           asset == null
               ? const WritingTeachPage()
               : WritingTeachPage(assetPath: asset),
+          settings,
+        );
+      case writingTeachSteps:
+        final args = settings.arguments as Map<String, dynamic>?;
+        final asset = args?['asset'] as String?;
+        return _getRoute(
+          asset == null
+              ? const WritingTeachStepsPage()
+              : WritingTeachStepsPage(assetPath: asset),
           settings,
         );
       case writingPractice:

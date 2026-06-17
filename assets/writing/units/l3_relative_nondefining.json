@@ -1,0 +1,193 @@
+{
+  "id": "l3_relative_nondefining",
+  "level": 3,
+  "section": "Relative clauses & cohesion",
+  "order": 2,
+  "type": "grammar_unit",
+  "title": "Non-defining relative clauses (, who … , )",
+  "subtitle_mm": "Non-defining relative clause — အပို ဖော်ပြချက် (comma ဖြင့်)",
+  "teach": {
+    "situation_en": "My brother, {v}who{/v} lives in Tokyo, is a doctor. Yangon, {v}which{/v} is the largest city, has a busy port. Our teacher, {v}whose{/v} class I love, is retiring. We visited Bagan, {v}where{/v} there are thousands of temples.",
+    "situation_mm": "ငါ့အစ်ကိုက — တိုကျိုမှာ နေတယ် — ဆရာဝန်ပါ။ ရန်ကုန်က — အကြီးဆုံး မြို့ပါ — အလုပ်ရှုပ်တဲ့ ဆိပ်ကမ်း ရှိတယ်။ ငါတို့ဆရာက — သူ့အတန်းကို ငါ ကြိုက်တယ် — အငြိမ်းစား ယူတော့မယ်။ ဘုရားပေါင်း ထောင်ချီ ရှိတဲ့ ပုဂံကို သွားလည်ခဲ့တယ်။",
+    "use_en": "A non-defining relative clause adds EXTRA, non-essential information — the sentence still makes sense without it. It is always set off by COMMAS. Use who, which, whose, where — but NEVER 'that', and you can NEVER leave the pronoun out. 'which' can also refer back to a whole clause.",
+    "use_mm": "Non-defining relative clause ဟာ အပို၊ မရှိမဖြစ် မဟုတ်တဲ့ (non-essential) အချက်အလက်ကို ထပ်ဖြည့်တယ် — မပါလည်း sentence အဓိပ္ပာယ် ရှိဆဲ။ အမြဲ COMMA နဲ့ ပိုင်းခြားတယ်။ who, which, whose, where သုံးပါ — ဒါပေမယ့် 'that' ဘယ်တော့မှ မသုံးရဘူး၊ pronoun ကိုလည်း ဘယ်တော့မှ မဖြုတ်ရဘူး။ 'which' က sentence တစ်ခုလုံးကိုလည်း ရည်ညွှန်းနိုင်တယ်။",
+    "timeline": "noun , [extra info] ,  → adds detail (sentence works without it)",
+    "form": [
+      { "subject": "people", "form": ", who ,  (My uncle, who is a pilot, …)" },
+      { "subject": "things / places", "form": ", which , · , where ,  (Paris, which is in France, …)" },
+      { "subject": "no 'that'", "form": "✗ that in non-defining  (NOT: My car, that is red, …)" },
+      { "subject": "whole-clause which", "form": "He passed, which surprised everyone." }
+    ],
+    "form_note_mm": [
+      "non-defining = အပို အချက် — အမြဲ comma နှစ်ခုကြားမှာ (ဒါမှမဟုတ် sentence အဆုံးမှာ comma တစ်ခုနဲ့)။",
+      "who / which / whose / where သုံးပါ — 'that' မသုံးရဘူး။ pronoun ကို မဖြုတ်ရဘူး။",
+      "မပါလည်း sentence အဓိပ္ပာယ် ပြည့်စုံတယ် (defining နဲ့ ဒီနေရာမှာ ကွဲတယ်)။",
+      "which က sentence တစ်ခုလုံးကို ရည်ညွှန်းနိုင်တယ် — She was late, which annoyed me။"
+    ],
+    "trap_en": "Don't use 'that' and don't drop the pronoun in a non-defining clause — and don't forget the commas.  WRONG: My mother that is a nurse works hard.  RIGHT: My mother, who is a nurse, works hard.",
+    "trap_mm": "non-defining clause မှာ 'that' မသုံးနဲ့၊ pronoun မဖြုတ်နဲ့၊ comma မမေ့နဲ့။ ✗ My mother that is a nurse works hard → ✓ My mother, who is a nurse, works hard။",
+    "examples": [
+      { "en": "My best friend, {v}who{/v} lives abroad, called me.", "mm": " နိုင်ငံခြားမှာ နေတဲ့ ငါ့သူငယ်ချင်းအရင်းက ဖုန်းခေါ်တယ်။" },
+      { "en": "Inle Lake, {v}which{/v} is very beautiful, attracts tourists.", "mm": "အရမ်းလှတဲ့ အင်းလေးကန်က ခရီးသွားတွေ ဆွဲဆောင်တယ်။" },
+      { "en": "My boss, {v}whose{/v} office is upstairs, is very kind.", "mm": "ရုံးခန်း အပေါ်ထပ်မှာ ရှိတဲ့ ငါ့သူဌေးက အရမ်း ကြင်နာတယ်။" },
+      { "en": "He arrived late, {v}which{/v} made everyone wait.", "mm": "သူ နောက်ကျလာတယ် — အဲဒါ အားလုံးကို စောင့် စေတယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "extra info, with commas",
+        "rule_mm": "အပို အချက် → comma နှစ်ခုကြားမှာ (who / which / whose / where)",
+        "en": "My brother, {v}who{/v} lives in Tokyo, is a doctor.",
+        "why_mm": "'who lives in Tokyo' က အပို အချက်ပါ — မပါလည်း 'My brother is a doctor' က အဓိပ္ပာယ် ပြည့်စုံတယ်။ ဒါကြောင့် comma နှစ်ခုကြားမှာ ထားပါတယ်။"
+      },
+      {
+        "subject": "which for a whole clause",
+        "rule_mm": "sentence တစ်ခုလုံးကို ရည်ညွှန်းရင် → which",
+        "en": "He arrived late, {v}which{/v} made everyone wait.",
+        "why_mm": "'which' က ရှေ့က sentence တစ်ခုလုံး (he arrived late) ကို ရည်ညွှန်းပါတယ်။ ဒီလို အသုံးမှာ 'that' မသုံးနိုင်ပါဘူး။"
+      },
+      {
+        "subject": "no 'that', keep the pronoun",
+        "rule_mm": "non-defining မှာ that မသုံးရ · pronoun မဖြုတ်ရ · comma မမေ့",
+        "en": "My mother, {v}who{/v} is a nurse, works hard.  (✗ My mother that is a nurse)",
+        "why_mm": "non-defining clause မှာ 'that' ကို ဘယ်တော့မှ မသုံးရဘူး၊ relative pronoun ကိုလည်း မဖြုတ်ရဘူး၊ comma နှစ်ခု အမြဲ လိုပါတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "My brother, ___ lives in Tokyo, is a doctor.",
+        "prompt_mm": "တိုကျိုမှာ နေတဲ့ ငါ့အစ်ကိုက ဆရာဝန်ပါ။",
+        "options": ["who", "that", "which"],
+        "answer": "who",
+        "explain_mm": "non-defining + လူ → who (that မသုံးရ)။"
+      },
+      {
+        "prompt_en": "She passed all her exams, ___ made her parents proud.",
+        "prompt_mm": "သူမ စာမေးပွဲ အားလုံး အောင်တယ် — အဲဒါ မိဘတွေ ဂုဏ်ယူ စေတယ်။",
+        "options": ["which", "that", "who"],
+        "answer": "which",
+        "explain_mm": "sentence တစ်ခုလုံးကို ရည်ညွှန်းရင် → which။"
+      },
+      {
+        "prompt_en": "Inle Lake, ___ is very beautiful, attracts tourists.",
+        "prompt_mm": "အရမ်းလှတဲ့ အင်းလေးကန်က ခရီးသွားတွေ ဆွဲဆောင်တယ်။",
+        "options": ["which", "that", "where"],
+        "answer": "which",
+        "explain_mm": "non-defining + အရာ → which (that မသုံးရ)။"
+      }
+    ],
+    "model_paragraph_en": "Last summer I visited my grandparents. My grandfather, {v}who{/v} is over eighty, still works in his garden. Their house, {v}which{/v} stands by a river, is over a hundred years old. We went to the local market, {v}where{/v} my grandmother knows everyone. On the last day it rained heavily, {v}which{/v} spoiled our picnic, but I still loved the trip.",
+    "model_paragraph_mm": "မနှစ်က နွေမှာ အဖိုးအဖွားဆီ သွားလည်ခဲ့တယ်။ အသက် ရှစ်ဆယ်ကျော်နေတဲ့ အဖိုးက ဥယျာဉ်ထဲမှာ အခုထိ အလုပ်လုပ်တယ်။ မြစ်နားမှာ ရှိတဲ့ သူတို့အိမ်က အနှစ် တစ်ရာကျော် သက်တမ်း ရှိပြီ။ အဖွား လူတိုင်းကို သိတဲ့ ဒေသခံ ဈေးကို သွားခဲ့တယ်။ နောက်ဆုံးနေ့မှာ မိုး သည်းသည်း ရွာတယ် — အဲဒါ ငါတို့ ပျော်ပွဲစား ပျက်စေတယ် — ဒါပေမယ့် ခရီးကို ကြိုက်ဆဲပါ။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "defining (which one?)", "form": "no commas · that allowed · pronoun can drop", "tag": "no commas", "example": "The man who called …" },
+          { "subjects": "non-defining (extra info)", "form": "commas · NO that · pronoun stays", "tag": ", who / which ,", "highlight": true, "example": "My dad, who called, …" }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [
+      "v_live", "v_work", "v_teach", "v_make", "v_help", "v_know",
+      "v_sell", "v_study", "v_cook", "v_write"
+    ],
+    "time_words": [],
+    "verb_form": "third",
+    "note_mm": "noun , who/which/whose/where + clause , (comma နှစ်ခုကြား)။ 'that' မသုံးရဘူး · pronoun မဖြုတ်ရဘူး။ which က sentence တစ်ခုလုံးကို ရည်ညွှန်းနိုင်တယ်။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "My brother, ___ lives in Tokyo, is a doctor.",
+      "prompt_mm": "တိုကျိုမှာ နေတဲ့ ငါ့အစ်ကိုက ဆရာဝန်ပါ။",
+      "options": ["who", "that", "which"],
+      "answers": ["who"],
+      "explain_mm": "non-defining + လူ → who (that မသုံးရဘူး)။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Which is correct (non-defining)?",
+      "prompt_mm": "ဘယ်ဟာ မှန်လဲ။ (non-defining)",
+      "options": ["Bagan, which has many temples, is famous.", "Bagan which has many temples is famous.", "Bagan that has many temples is famous."],
+      "answers": ["Bagan, which has many temples, is famous."],
+      "explain_mm": "non-defining → comma နှစ်ခု + which (that မဟုတ်)။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She passed all her exams, ___ made her parents proud. (1 word — whole idea)",
+      "prompt_mm": "သူမ စာမေးပွဲ အားလုံး အောင်တယ် — အဲဒါ မိဘတွေ ဂုဏ်ယူ စေတယ်။ ( sentence တစ်ခုလုံးကို ရည်ညွှန်း )",
+      "answers": ["which"],
+      "explain_mm": "sentence တစ်ခုလုံးကို ရည်ညွှန်းတဲ့အခါ → which။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "My mother that is a nurse works very hard.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။ (non-defining)",
+      "answers": ["My mother, who is a nurse, works very hard", "my mother, who is a nurse, works very hard.", "My mother, who is a nurse, works hard"],
+      "explain_mm": "non-defining → comma + who (that မသုံးရဘူး) → My mother, who is a nurse, works very hard။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Add commas & order:  is  /  Inle Lake  /  beautiful  /  which  /  attracts tourists  /  ,  /  ,",
+      "prompt_mm": "comma ထည့်ပြီး စီပါ။ ( Inle Lake , which is beautiful , attracts tourists )",
+      "answers": ["Inle Lake, which is beautiful, attracts tourists", "inle lake, which is beautiful, attracts tourists.", "Inle Lake, which is beautiful, attracts tourists."],
+      "explain_mm": "non-defining → noun , which … , + ကျန် sentence။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — add extra detail. Write 5–8 sentences that each add EXTRA information about a named person or place using a non-defining relative clause (, who/which/whose/where ,). Remember the commas and never use 'that'.",
+      "prompt_mm": "အပိုင်း ၁ — အပို အချက် ဖြည့်ပါ။ နာမည်ရှိ လူ ဒါမှမဟုတ် နေရာတစ်ခု အကြောင်း non-defining relative clause (, who/which/whose/where ,) သုံးပြီး အပို အချက်အလက် ထည့်ကာ sentence ၅–၈ ကြောင်း ရေးပါ။ comma မမေ့နဲ့၊ 'that' မသုံးနဲ့။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "My father, {v}who{/v} works in a factory, is very strong. Mandalay, {v}which{/v} is in central Myanmar, is famous for gold. My neighbour, {v}whose{/v} son is my friend, is a teacher. Our school, {v}where{/v} I spent ten years, has a big garden. I failed the first test, {v}which{/v} taught me to study harder.",
+      "explain_mm": "noun , who/which/whose/where … , — comma နှစ်ခု · that မသုံးရဘူး · pronoun မဖြုတ်ရဘူး။",
+      "grading": {
+        "grammar_point": "Non-defining relative clauses",
+        "rule": "Add non-essential information set off by commas, using who/which/whose/where (never 'that'), with the pronoun never omitted.",
+        "must_check": [
+          "Commas around the clause",
+          "No 'that' in non-defining clauses",
+          "Pronoun present (not omitted)",
+          "5–8 sentences"
+        ],
+        "common_mm_errors": [
+          "Using 'that' in a non-defining clause",
+          "Missing commas",
+          "Dropping the relative pronoun"
+        ],
+        "ignore": ["capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a place you know well. Write a short paragraph (4–6 sentences) about a town, school, or home you know, adding background detail with non-defining relative clauses.",
+      "prompt_mm": "အပိုင်း ၂ — ကောင်းကောင်း သိတဲ့ နေရာ။ မင်း သိတဲ့ မြို့၊ ကျောင်း၊ ဒါမှမဟုတ် အိမ်တစ်ခု အကြောင်း non-defining relative clause တွေနဲ့ နောက်ခံ အချက်အလက် ဖြည့်ပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "I grew up in a small town, {v}which{/v} sits beside a wide river. My old house, {v}where{/v} my parents still live, has a red roof. My grandmother, {v}who{/v} cooked for the whole street, lived next door. The market, {v}which{/v} opens at dawn, was my favourite place. Those years, {v}which{/v} now feel like a dream, shaped who I am.",
+      "explain_mm": "non-defining relative clause တွေနဲ့ နောက်ခံ အချက် ထည့်ပါ — comma သုံးပြီး that ရှောင်ပါ။",
+      "grading": {
+        "grammar_point": "Non-defining relative clauses",
+        "rule": "Use comma-set non-defining clauses to add background detail about named people and places.",
+        "must_check": [
+          "Several non-defining clauses with commas",
+          "who/which/whose/where (no 'that')",
+          "Pronoun kept",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "'that' in non-defining clauses",
+          "Missing commas",
+          "Omitted pronoun"
+        ],
+        "ignore": ["capitalization"]
+      }
+    }
+  ]
+}

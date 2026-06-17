@@ -1,0 +1,193 @@
+{
+  "id": "l3_linkers_contrast",
+  "level": 3,
+  "section": "Relative clauses & cohesion",
+  "order": 4,
+  "type": "grammar_unit",
+  "title": "Contrast linkers (despite / in spite of / whereas)",
+  "subtitle_mm": "Contrast linkers — despite / in spite of / although / whereas",
+  "teach": {
+    "situation_en": "{v}Despite{/v} the rain, we went out. {v}In spite of{/v} being tired, she kept working. {v}Although{/v} it was expensive, I bought it. He likes tea, {v}whereas{/v} I prefer coffee.",
+    "situation_mm": "မိုးရွာနေပေမယ့် အပြင် ထွက်ခဲ့တယ်။ ပင်ပန်းနေပေမယ့် သူမ ဆက်လုပ်တယ်။ ဈေးကြီးပေမယ့် ဝယ်လိုက်တယ်။ သူ လက်ဖက်ရည် ကြိုက်ပြီး ငါက ကော်ဖီ ပိုကြိုက်တယ်။",
+    "use_en": "These all show contrast, but they are built differently. Despite / In spite of are followed by a NOUN or -ing (not a full clause). Although is followed by a CLAUSE (subject + verb). Whereas compares two different things, usually with a comma before it.",
+    "use_mm": "ဒါတွေ အားလုံး ဆန့်ကျင်ဘက် ပြတယ်၊ ဒါပေမယ့် ဖွဲ့စည်းပုံ ကွဲတယ်။ Despite / In spite of နောက်မှာ NOUN ဒါမှမဟုတ် -ing (full clause မဟုတ်)။ Although နောက်မှာ CLAUSE (subject + verb)။ Whereas က မတူတဲ့ အရာနှစ်ခုကို နှိုင်းယှဉ်တယ် — ရှေ့မှာ comma များတယ်။",
+    "timeline": "Despite / In spite of + noun/-ing   ·   Although + clause   ·   …, whereas + clause",
+    "form": [
+      { "subject": "despite / in spite of", "form": "+ noun or -ing  (Despite the rain / In spite of being late)" },
+      { "subject": "although", "form": "+ clause (subject + verb)  (Although it rained)" },
+      { "subject": "despite the fact that", "form": "+ clause  (= although)  (Despite the fact that it rained)" },
+      { "subject": "whereas", "form": "compares two things  (He's tall, whereas I'm short.)" }
+    ],
+    "form_note_mm": [
+      "despite / in spite of + noun / -ing — Despite the rain · In spite of being tired။ (verb ဆိုရင် -ing)",
+      "although + clause (subject + verb) — Although it was raining。",
+      "despite နောက်မှာ clause ထည့်ချင်ရင် 'despite the fact that' သုံးပါ။",
+      "whereas = နှိုင်းယှဉ် (ဆန့်ကျင်) — I work hard, whereas he is lazy. ရှေ့မှာ comma။"
+    ],
+    "trap_en": "Don't put a full clause directly after despite / in spite of, and don't put a noun after although.  WRONG: Despite it was raining / Although the rain.  RIGHT: Despite the rain / Although it was raining.",
+    "trap_mm": "despite / in spite of နောက်မှာ full clause မထည့်နဲ့၊ although နောက်မှာ noun တစ်လုံးတည်း မထည့်နဲ့။ ✗ Despite it was raining / Although the rain → ✓ Despite the rain / Although it was raining။",
+    "examples": [
+      { "en": "{v}Despite{/v} his age, he is very active.", "mm": "အသက်ကြီးပေမယ့် သူ အရမ်း တက်ကြွတယ်။" },
+      { "en": "{v}In spite of{/v} the noise, the baby slept.", "mm": "ဆူညံပေမယ့် ကလေး အိပ်ပျော်တယ်။" },
+      { "en": "{v}Although{/v} she was ill, she came to work.", "mm": "နေမကောင်းပေမယ့် သူမ အလုပ် လာတယ်။" },
+      { "en": "I save money, {v}whereas{/v} my brother spends it.", "mm": "ငါ ပိုက်ဆံ စုပြီး ငါ့အစ်ကိုက သုံးတယ်။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "despite / in spite of + noun / -ing",
+        "rule_mm": "Despite / In spite of နောက် → noun ဒါမှမဟုတ် -ing (clause မဟုတ်)",
+        "en": "{v}Despite{/v} the rain, we went out.",
+        "why_mm": "'Despite' / 'In spite of' နောက်မှာ noun ('the rain') ဒါမှမဟုတ် -ing ('being tired') ပဲ လိုက်ပါတယ် — subject + verb ပါတဲ့ full clause မဟုတ်ပါဘူး။"
+      },
+      {
+        "subject": "although + clause",
+        "rule_mm": "Although နောက် → clause (subject + verb)",
+        "en": "{v}Although{/v} it was raining, we went out.",
+        "why_mm": "'Although' နောက်မှာ subject + verb ပါတဲ့ clause ('it was raining') လိုက်ပါတယ်။ အဓိပ္ပာယ်က Despite နဲ့ တူပေမယ့် ဖွဲ့စည်းပုံ ကွဲတယ်။"
+      },
+      {
+        "subject": "whereas (compare) + the trap",
+        "rule_mm": "whereas = နှိုင်းယှဉ် · despite နောက် clause မထည့်နဲ့",
+        "en": "I save money, {v}whereas{/v} my brother spends it.  (✗ Despite it was raining)",
+        "why_mm": "'whereas' က မတူတဲ့ နှစ်ခုကို နှိုင်းယှဉ်တယ် (ရှေ့မှာ comma)။ သတိ — despite နောက်မှာ clause ('it was raining') မထည့်ရဘူး; Although ကို သုံးပါ။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "___ the rain, we went out.",
+        "prompt_mm": "မိုးရွာနေပေမယ့် အပြင် ထွက်ခဲ့တယ်။",
+        "options": ["Despite", "Although", "Whereas"],
+        "answer": "Despite",
+        "explain_mm": "noun (the rain) ရှေ့ → Despite (Although ဆို clause လိုတယ်)။"
+      },
+      {
+        "prompt_en": "___ it was raining, we went out.",
+        "prompt_mm": "မိုးရွာနေပေမယ့် အပြင် ထွက်ခဲ့တယ်။",
+        "options": ["Although", "Despite", "In spite of"],
+        "answer": "Although",
+        "explain_mm": "clause (it was raining) ရှေ့ → Although။"
+      },
+      {
+        "prompt_en": "In spite of ___ tired, she kept working.",
+        "prompt_mm": "ပင်ပန်းနေပေမယ့် သူမ ဆက်လုပ်တယ်။",
+        "options": ["being", "was", "is"],
+        "answer": "being",
+        "explain_mm": "in spite of + -ing → being tired။"
+      }
+    ],
+    "model_paragraph_en": "Living in a big city is not easy. {v}Despite{/v} the high cost, many people move there for work. {v}Although{/v} the streets are crowded, life is exciting. City people often feel rushed, {v}whereas{/v} village people enjoy a slower pace. {v}In spite of{/v} all the problems, I still prefer the city, because it offers more chances to grow.",
+    "model_paragraph_mm": "မြို့ကြီးမှာ နေတာ မလွယ်ဘူး။ ကုန်ကျစရိတ် များပေမယ့် လူ အများ အလုပ်အတွက် ပြောင်းလာကြတယ်။ လမ်းတွေ လူရှုပ်ပေမယ့် ဘဝက စိတ်လှုပ်ရှားစရာ ကောင်းတယ်။ မြို့သားတွေ အလျင်လို ခံစားရပြီး ရွာသားတွေက ဖြည်းဖြည်း နေထိုင်မှုကို ခံစားကြတယ်။ ပြဿနာတွေ ရှိနေပေမယ့် ကြီးထွားဖို့ အခွင့်အလမ်း ပိုပေးလို့ ငါ မြို့ကိုပဲ ပိုကြိုက်ဆဲပါ။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "despite / in spite of", "form": "+ noun or -ing", "tag": "+ noun / -ing", "example": "Despite the rain …" },
+          { "subjects": "although / whereas", "form": "+ clause (subject + verb)", "tag": "+ clause", "highlight": true, "example": "Although it rained …" }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [
+      "v_work", "v_study", "v_live", "v_help", "v_like", "v_want",
+      "v_cost", "v_make", "v_start", "v_finish"
+    ],
+    "time_words": [],
+    "verb_form": "ing",
+    "note_mm": "despite / in spite of + noun / -ing (Despite being tired)။ although + clause (Although he was tired)。 whereas = နှိုင်းယှဉ် — ရှေ့မှာ comma။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ the rain, we went out.",
+      "prompt_mm": "မိုးရွာနေပေမယ့် အပြင် ထွက်ခဲ့တယ်။",
+      "options": ["Despite", "Although", "Whereas"],
+      "answers": ["Despite"],
+      "explain_mm": "noun (the rain) ရှေ့ → Despite။ (Although ဆို clause လိုတယ်။)"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ it was raining, we went out.",
+      "prompt_mm": "မိုးရွာနေပေမယ့် အပြင် ထွက်ခဲ့တယ်။",
+      "options": ["Although", "Despite", "In spite of"],
+      "answers": ["Although"],
+      "explain_mm": "clause (it was raining) ရှေ့ → Although။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "In spite of ___ (be) tired, she kept working. (-ing form)",
+      "prompt_mm": "ပင်ပန်းနေပေမယ့် သူမ ဆက်လုပ်တယ်။ ( in spite of + -ing )",
+      "answers": ["being"],
+      "explain_mm": "in spite of + -ing → being tired။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Despite it was expensive, I bought it.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["Although it was expensive, I bought it", "although it was expensive, i bought it.", "Despite being expensive, I bought it"],
+      "explain_mm": "despite နောက်မှာ clause မထည့်ရဘူး → Although it was expensive (ဒါမှမဟုတ် Despite being expensive)။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Order:  whereas  /  I save money  /  spends it  /  my brother  /  ,",
+      "prompt_mm": "စီပါ — ( I save money , whereas my brother spends it )",
+      "answers": ["I save money, whereas my brother spends it", "i save money, whereas my brother spends it.", "I save money, whereas my brother spends it."],
+      "explain_mm": "whereas = နှိုင်းယှဉ် → I save money, whereas my brother spends it။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — show contrast. Write 5–8 sentences showing contrast. Use despite / in spite of (+ noun/-ing), although (+ clause), and whereas (comparison). Use each at least once and watch the structure after each one.",
+      "prompt_mm": "အပိုင်း ၁ — ဆန့်ကျင်ဘက် ပြပါ။ ဆန့်ကျင်ဘက် ပြတဲ့ sentence ၅–၈ ကြောင်း ရေးပါ။ despite / in spite of (+ noun/-ing), although (+ clause), whereas (နှိုင်းယှဉ်) သုံးပါ။ တစ်ခုစီ အနည်းဆုံး တစ်ခါ သုံးပြီး နောက်က ဖွဲ့စည်းပုံကို ဂရုစိုက်ပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "Despite the cold, the children played outside. Although I was nervous, I gave the speech. In spite of working hard, he didn't pass. My sister loves sports, whereas I prefer reading. Although it costs a lot, the phone is worth it.",
+      "explain_mm": "despite / in spite of + noun/-ing · although + clause · whereas = နှိုင်းယှဉ်။",
+      "grading": {
+        "grammar_point": "Contrast linkers",
+        "rule": "despite / in spite of + noun or -ing; although + clause; whereas compares two things.",
+        "must_check": [
+          "Noun or -ing after despite / in spite of (not a clause)",
+          "Clause after although",
+          "whereas used to compare, with a comma",
+          "5–8 sentences, each linker used"
+        ],
+        "common_mm_errors": [
+          "Clause after despite / in spite of (Despite it was …)",
+          "Noun-only after although (Although the rain)",
+          "Missing -ing after in spite of / despite + verb"
+        ],
+        "ignore": ["capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a balanced view. Write a short paragraph (4–6 sentences) weighing two sides of a choice (study vs work, phone vs book, city vs village), using despite / in spite of, although, and whereas.",
+      "prompt_mm": "အပိုင်း ၂ — မျှတတဲ့ အမြင်။ ရွေးချယ်စရာ နှစ်ဖက် (လေ့လာ vs အလုပ်၊ ဖုန်း vs စာအုပ်၊ မြို့ vs ရွာ) ကို despite / in spite of, although, whereas သုံးပြီး ချိန်ဆကာ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "Studying at university has clear benefits. Although it takes years, it opens many doors. Despite the high fees, most students think it is worth it. A degree leads to better jobs, whereas leaving school early often limits choices. In spite of the hard work, I believe education is the safest path.",
+      "explain_mm": "contrast linker တွေနဲ့ နှစ်ဖက် ချိန်ဆပါ — ဖွဲ့စည်းပုံ မှန်အောင် ဂရုစိုက်ပါ။",
+      "grading": {
+        "grammar_point": "Contrast linkers",
+        "rule": "Weigh two sides using despite/in spite of (+ noun/-ing), although (+ clause), and whereas (comparison).",
+        "must_check": [
+          "Correct structure after each linker",
+          "At least two different contrast linkers",
+          "Balanced, coherent argument",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "Clause after despite / in spite of",
+          "Noun after although",
+          "whereas used like 'because'"
+        ],
+        "ignore": ["capitalization"]
+      }
+    }
+  ]
+}

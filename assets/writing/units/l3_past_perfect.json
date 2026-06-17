@@ -1,0 +1,193 @@
+{
+  "id": "l3_past_perfect",
+  "level": 3,
+  "section": "Advanced tenses",
+  "order": 1,
+  "type": "grammar_unit",
+  "title": "Past perfect (had + V3)",
+  "subtitle_mm": "Past perfect — had + V3 — အတိတ်ရဲ့ ရှေ့အတိတ်",
+  "teach": {
+    "situation_en": "When I {v}arrived{/v} at the station, the train {v}had{/v} already {v}left{/v}. She {v}had{/v} never {v}seen{/v} the sea before that trip. After he {v}had finished{/v} dinner, he {v}went{/v} to bed. They {v}were{/v} tired because they {v}had worked{/v} all day.",
+    "situation_mm": "ဘူတာ ရောက်တော့ ရထား ထွက်သွားပြီးသား ဖြစ်နေတယ်။ အဲဒီ ခရီးမတိုင်ခင် သူမ ပင်လယ်ကို တစ်ခါမှ မမြင်ဖူးဘူး။ ညစာ စားပြီးတဲ့နောက် သူ အိပ်ရာဝင်တယ်။ တစ်နေ့လုံး အလုပ်လုပ်ခဲ့လို့ သူတို့ ပင်ပန်းနေတယ်။",
+    "use_en": "We use the past perfect for an action that happened BEFORE another past action — the 'earlier past'. It makes the order of two past events clear. Form: had + past participle (V3), the same 'had' for every subject. Often used with already, just, never, after, before, by the time.",
+    "use_mm": "အခြား အတိတ် လုပ်ဆောင်ချက်တစ်ခု မဖြစ်ခင် ဖြစ်ခဲ့တဲ့ လုပ်ဆောင်ချက် — 'ပိုစော အတိတ်' — အတွက် past perfect သုံးတယ်။ အတိတ် ဖြစ်ရပ်နှစ်ခုရဲ့ အစီအစဉ်ကို ရှင်းအောင် လုပ်ပေးတယ်။ ပုံစံ — had + past participle (V3)၊ subject အားလုံးအတွက် 'had' တူတူ။ already, just, never, after, before, by the time တို့နဲ့ မကြာခဏ တွဲသုံးတယ်။",
+    "timeline": "[had + V3 — earlier past] ---→ [past simple — later past] ---→ now",
+    "form": [
+      { "subject": "all subjects", "form": "had + V3  (I / he / they had gone)" },
+      { "subject": "negative", "form": "hadn't + V3  (She hadn't eaten.)" },
+      { "subject": "question", "form": "Had + subject + V3?  (Had you seen it?)" },
+      { "subject": "short form", "form": "'d = had  (I'd already left.)" }
+    ],
+    "form_note_mm": [
+      "past perfect — had + V3 (past participle)။ subject အားလုံးအတွက် had တူတူ။",
+      "အတိတ် ဖြစ်ရပ် နှစ်ခု ရှိမှ သုံးတယ် — ပိုစောတာက past perfect၊ နောက်တာက past simple။",
+      "'d ဆိုတာ had ရဲ့ အတိုကောက် (I'd finished = I had finished)။ would နဲ့ မမှားပါနဲ့။",
+      "already / just / never က had နဲ့ V3 ကြားမှာ ထားတယ် (had already left)။"
+    ],
+    "trap_en": "Use the past perfect only for the EARLIER of two past actions — don't use it for a single past event. WRONG: Yesterday I had gone to the market.  RIGHT: Yesterday I went to the market. / When I arrived, she had already gone.",
+    "trap_mm": "အတိတ် နှစ်ခုထဲက ပိုစောတဲ့ တစ်ခုအတွက်သာ past perfect သုံးပါ — တစ်ခုတည်းသော အတိတ် ဖြစ်ရပ်အတွက် မသုံးနဲ့။ ✗ Yesterday I had gone to the market → ✓ Yesterday I went … / When I arrived, she had already gone။",
+    "examples": [
+      { "en": "The film {v}had{/v} already {v}started{/v} when we {v}arrived{/v}.", "mm": "ရောက်တော့ ရုပ်ရှင် စပြီးသား ဖြစ်နေတယ်။" },
+      { "en": "I {v}knew{/v} his face because I {v}had met{/v} him before.", "mm": "အရင်က တွေ့ဖူးလို့ သူ့မျက်နှာ မှတ်မိတယ်။" },
+      { "en": "She {v}hadn't eaten{/v} all day, so she {v}was{/v} hungry.", "mm": "တစ်နေ့လုံး မစားခဲ့လို့ သူမ ဆာနေတယ်။" },
+      { "en": "By the time he {v}called{/v}, I {v}had{/v} already {v}slept{/v}.", "mm": "သူ ဖုန်းခေါ်တဲ့အချိန် ငါ အိပ်ပျော်သွားပြီ။" }
+    ],
+    "walkthrough": [
+      {
+        "subject": "the earlier past",
+        "rule_mm": "ပိုစောဖြစ်တဲ့ အတိတ် → had + V3",
+        "en": "When I {v}arrived{/v}, the train {v}had{/v} already {v}left{/v}.",
+        "why_mm": "အတိတ် ဖြစ်ရပ် နှစ်ခုထဲက ပိုစောတဲ့ 'left' ကို 'had + V3' နဲ့ ပြတယ်၊ နောက်ဖြစ်တဲ့ 'arrived' က past simple။"
+      },
+      {
+        "subject": "had for all subjects",
+        "rule_mm": "subject အားလုံးအတွက် had တူတူ",
+        "en": "She {v}hadn't eaten{/v} all day, so she {v}was{/v} hungry.",
+        "why_mm": "I / he / she / they — subject ဘယ်သူပဲ ဖြစ်ဖြစ် 'had' တူတူ သုံးပါတယ်။ negative က 'hadn't + V3'။"
+      },
+      {
+        "subject": "V3, not past simple (trap)",
+        "rule_mm": "had ရဲ့ နောက်က V3 (past participle) ဖြစ်ရမယ်",
+        "en": "After I {v}had eaten{/v} dinner, I {v}watched{/v} TV.  (✗ had ate)",
+        "why_mm": "had နောက်မှာ V3 သုံးပါ — eat ရဲ့ V3 က 'eaten' (ate မဟုတ်)။ အတိတ် နှစ်ခု ရှိမှ သုံးတယ်။"
+      }
+    ],
+    "checks": [
+      {
+        "prompt_en": "When I arrived, the train ___ already left.",
+        "prompt_mm": "ရောက်တော့ ရထား ထွက်သွားပြီးသား ဖြစ်နေတယ်။",
+        "options": ["had", "has", "was"],
+        "answer": "had",
+        "explain_mm": "past perfect — had + V3 → had already left။"
+      },
+      {
+        "prompt_en": "She was tired because she ___ all night.",
+        "prompt_mm": "တစ်ညလုံး အလုပ်လုပ်ခဲ့လို့ သူမ ပင်ပန်းနေတယ်။",
+        "options": ["had worked", "has worked", "worked"],
+        "answer": "had worked",
+        "explain_mm": "ပိုစော အတိတ် (အကြောင်းရင်း) → past perfect → had worked။"
+      },
+      {
+        "prompt_en": "After I had ___ dinner, I watched TV.",
+        "prompt_mm": "ညစာ စားပြီးတဲ့နောက် TV ကြည့်တယ်။",
+        "options": ["eaten", "ate", "eat"],
+        "answer": "eaten",
+        "explain_mm": "had နောက်မှာ V3 → eaten (eat ရဲ့ past participle)။"
+      }
+    ],
+    "model_paragraph_en": "My morning was a mess. By the time I {v}woke{/v} up, the bus {v}had{/v} already {v}left{/v}. I {v}realized{/v} I {v}had forgotten{/v} to set my alarm. When I {v}reached{/v} the office, the meeting {v}had{/v} just {v}started{/v}. My boss {v}was{/v} annoyed because I {v}had been{/v} late twice that week.",
+    "model_paragraph_mm": "ငါ့ မနက်ခင်း ရှုပ်ထွေးခဲ့တယ်။ အိပ်ရာက နိုးတဲ့အချိန် ဘတ်စ်ကား ထွက်သွားပြီးသား။ နှိုးစက် ပေးဖို့ မေ့ခဲ့မှန်း သတိရတယ်။ ရုံး ရောက်တော့ အစည်းအဝေး စပြီးသား။ အဲဒီအပတ် နှစ်ခါ နောက်ကျခဲ့လို့ သူဌေး စိတ်တိုနေတယ်။",
+    "blocks": [
+      {
+        "type": "agreement",
+        "buckets": [
+          { "subjects": "earlier past action", "form": "had + V3", "tag": "had + V3", "highlight": true, "example": "The train had left …" },
+          { "subjects": "later past action", "form": "past simple", "tag": "past simple", "example": "… when I arrived." }
+        ]
+      }
+    ]
+  },
+  "toolkit": {
+    "verbs": [
+      "v_go", "v_eat", "v_leave", "v_start", "v_finish", "v_see",
+      "v_study", "v_work", "v_speak", "v_call"
+    ],
+    "time_words": [],
+    "verb_form": "past_participle",
+    "note_mm": "had + V3 (had gone, had eaten, had left, had finished)။ subject အားလုံးအတွက် had တူတူ။ V3 = past participle (irregular verbs သတိထားပါ — go→gone, eat→eaten, see→seen)။"
+  },
+  "exercises": [
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "When I arrived, the train ___ already left.",
+      "prompt_mm": "ရောက်တော့ ရထား ထွက်သွားပြီးသား ဖြစ်နေတယ်။",
+      "options": ["had", "has", "was"],
+      "answers": ["had"],
+      "explain_mm": "past perfect — had + V3 → had already left။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She was tired because she ___ all night.",
+      "prompt_mm": "တစ်ညလုံး အလုပ်လုပ်ခဲ့လို့ သူမ ပင်ပန်းနေတယ်။",
+      "options": ["had worked", "has worked", "worked"],
+      "answers": ["had worked"],
+      "explain_mm": "ပိုစော အတိတ် (အကြောင်းရင်း) → past perfect → had worked။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "By the time we got there, the shop ___ ___ (close). (2 words)",
+      "prompt_mm": "ရောက်တဲ့အချိန် ဆိုင် ပိတ်သွားပြီ။ ( had + V3 — စကားလုံး ၂ လုံး )",
+      "answers": ["had closed"],
+      "explain_mm": "ပိုစောတဲ့ အတိတ် → had + V3 → had closed။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "After I had ate dinner, I watched TV.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": ["After I had eaten dinner, I watched TV", "after i had eaten dinner, i watched tv.", "After I had eaten dinner I watched TV"],
+      "explain_mm": "had နောက်မှာ V3 သုံးပါ — eat ရဲ့ V3 က eaten (ate မဟုတ်)။"
+    },
+    {
+      "kind": "reorder",
+      "grade": "auto",
+      "prompt_en": "Put in order:  had  /  when  /  arrived  /  she  /  I  /  gone  /  already",
+      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( When I arrived + she had already gone )",
+      "answers": ["When I arrived, she had already gone", "when i arrived she had already gone.", "When I arrived she had already gone"],
+      "explain_mm": "later past (When I arrived) + earlier past (she had already gone)။"
+    },
+    {
+      "kind": "scan_sentences",
+      "grade": "ai",
+      "min_lines": 5,
+      "max_lines": 8,
+      "prompt_en": "Part 1 — two past events. Write 5–8 sentences that each link two past actions, using the past perfect for the earlier one (… had + V3 … when/before/after … past simple).",
+      "prompt_mm": "အပိုင်း ၁ — အတိတ် ဖြစ်ရပ် နှစ်ခု။ အတိတ် လုပ်ဆောင်ချက် နှစ်ခုကို ချိတ်ဆက်ပြီး၊ ပိုစောတဲ့ တစ်ခုအတွက် past perfect သုံးကာ sentence ၅–၈ ကြောင်း ရေးပါ (… had + V3 … when/before/after … past simple)။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "model": "When I {v}got{/v} home, my family {v}had{/v} already {v}eaten{/v}. She {v}passed{/v} the test because she {v}had studied{/v} hard. After the rain {v}had stopped{/v}, we {v}went{/v} out. I {v}couldn't{/v} get in because I {v}had lost{/v} my key. By the time the doctor {v}came{/v}, the baby {v}had{/v} already {v}slept{/v}.",
+      "explain_mm": "ပိုစောတဲ့ အတိတ် = had + V3 · နောက်ဖြစ်တဲ့ အတိတ် = past simple။",
+      "grading": {
+        "grammar_point": "Past perfect",
+        "rule": "had + past participle for the earlier of two past actions; past simple for the later action.",
+        "must_check": [
+          "had + V3 for the earlier action",
+          "past simple for the later action",
+          "Correct past participles (irregulars)",
+          "5–8 sentences, each linking two past events"
+        ],
+        "common_mm_errors": [
+          "Past simple where past perfect is needed (the earlier action)",
+          "Wrong past participle (had ate, had went)",
+          "Using past perfect for a single past event"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    },
+    {
+      "kind": "scan_paragraph",
+      "grade": "ai",
+      "prompt_en": "Part 2 — a day that started badly. Write a short paragraph (4–6 sentences) about a morning or trip where things had already gone wrong before you acted, using the past perfect alongside the past simple.",
+      "prompt_mm": "အပိုင်း ၂ — ဆိုးဆိုးရွားရွား စတဲ့ နေ့တစ်နေ့။ မင်း ဘာမှ မလုပ်ခင်ကတည်းက အရာတွေ မှားနေပြီးသား ဖြစ်နေတဲ့ မနက်ခင်း ဒါမှမဟုတ် ခရီးတစ်ခု အကြောင်း — past perfect ကို past simple နဲ့ တွဲသုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "model": "My trip started badly. When I {v}reached{/v} the airport, the gate {v}had{/v} already {v}closed{/v}. I {v}realized{/v} I {v}had left{/v} my passport at home. The staff {v}told{/v} me the next flight {v}had been{/v} cancelled. By the time I {v}found{/v} a hotel, it {v}had got{/v} dark.",
+      "explain_mm": "ပိုစောဖြစ်တဲ့ အကြောင်းအရာတွေကို had + V3 နဲ့၊ နောက်ဖြစ်တာတွေကို past simple နဲ့ ရေးပါ။",
+      "grading": {
+        "grammar_point": "Past perfect",
+        "rule": "Use had + V3 for events that happened before the main past narrative, mixed with past simple for the main line.",
+        "must_check": [
+          "Past perfect for earlier background events",
+          "Past simple for the main story line",
+          "Clear before/after time order",
+          "4–6 sentences"
+        ],
+        "common_mm_errors": [
+          "All past simple (no earlier-past marking)",
+          "Wrong past participles",
+          "Overusing past perfect for every verb"
+        ],
+        "ignore": ["punctuation", "capitalization"]
+      }
+    }
+  ]
+}
