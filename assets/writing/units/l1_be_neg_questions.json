@@ -58,13 +58,13 @@
     "walkthrough": [
       {
         "subject": "Negative",
-        "rule_mm": "အငြင်း (negative) — be ရဲ့ နောက်မှာ 'not' ထည့်",
+        "rule_mm": "အငြင်း (negative) — be ရဲ့ နောက်မှာ 'not' ထည့်ပေးပါ",
         "en": "She {v}is not{/v} a student.  (She {v}isn't{/v} a student.)",
         "why_mm": "be (is) ရဲ့ နောက်မှာ 'not' ထည့်ပြီး အငြင်း ဖြစ်အောင် လုပ်ပါတယ် — isn't / aren't / 'm not။ 'do / does' ကို လုံးဝ မသုံးပါဘူး။"
       },
       {
         "subject": "Question",
-        "rule_mm": "အမေး (question) — be ကို subject ရဲ့ ရှေ့မှာ ထား",
+        "rule_mm": "အမေး (question) — be ကို subject ရဲ့ ရှေ့မှာ ထားပေးပါ",
         "en": "{v}Are{/v} you a student?",
         "why_mm": "am / is / are ကို subject (you) ရဲ့ ရှေ့ဆုံးမှာ ထားပြီး မေးခွန်း ဖြစ်အောင် လုပ်ပါတယ်။ ဒီနေရာမှာလည်း 'Do' မသုံးပါဘူး။"
       },
@@ -72,34 +72,46 @@
         "subject": "Short answer",
         "rule_mm": "အတိုဖြေ — Yes / No + subject + be",
         "en": "Yes, I {v}am{/v}.  ·  No, she {v}isn't{/v}.",
-        "why_mm": "အတိုဖြေတဲ့အခါ subject နဲ့ be ကိုပဲ ပြန်သုံးပါတယ် — Yes, I am. / No, she isn't.။"
+        "why_mm": "အတိုဖြေတဲ့အခါ subject နဲ့ be ကိုပဲ ပြန်သုံးပါတယ် — Yes, I am. / No, she isn't."
       }
     ],
     "checks": [
       {
         "prompt_en": "He ___ at home.",
         "prompt_mm": "သူ အိမ်မှာ မရှိဘူး။",
-        "options": ["isn't", "aren't", "doesn't"],
+        "options": [
+          "isn't",
+          "aren't",
+          "doesn't"
+        ],
         "answer": "isn't",
-        "explain_mm": "he → isn't (is not)။ be ရဲ့ အငြင်းမှာ doesn't မသုံးဘူး။"
+        "explain_mm": "he → isn't (is not)။ be ရဲ့ အငြင်းမှာ doesn't မသုံးဘူးနော်"
       },
       {
         "prompt_en": "___ you ready?",
         "prompt_mm": "မင်း အဆင်သင့်ဖြစ်ပြီလား။",
-        "options": ["Do", "Are", "Is"],
+        "options": [
+          "Do",
+          "Are",
+          "Is"
+        ],
         "answer": "Are",
-        "explain_mm": "you → Are you …? be ကို ရှေ့ထား; Do မသုံးဘူး။"
+        "explain_mm": "you → Are you …? be ကို subjectရှေ့ထားပေးရပါမယ်။"
       },
       {
         "prompt_en": "___ she a nurse?",
         "prompt_mm": "သူမ သူနာပြုတစ်ယောက်လား။",
-        "options": ["Is", "Are", "Does"],
+        "options": [
+          "Is",
+          "Are",
+          "Does"
+        ],
         "answer": "Is",
-        "explain_mm": "she → Is she …? Does မသုံးဘူး။"
+        "explain_mm": "she → Is she …? မေးခွန်းဖြစ်လို့ 'Is'ကို subjectရှေ့ထားပေးရပါမယ်။"
       }
     ],
     "model_paragraph_en": "This {v}is{/v} my classroom, but it {v}isn't{/v} big. The students {v}aren't{/v} noisy. \"{v}Are{/v} you the new teacher?\" they ask. \"Yes, I am. {v}Is{/v} everyone here?\" \"No, two students {v}aren't{/v} here today.\"",
-    "model_paragraph_mm": "ဒါက ကျွန်တော့်ရဲ့ စာသင်ခန်းပါ၊ ဒါပေမဲ့ မကြီးပါဘူး။ ကျောင်းသားတွေက ဆူညံမနေကြဘူး။ \"ဆရာက အသစ်လား\" လို့ သူတို့ မေးကြတယ်။ \"ဟုတ်ပါတယ်။ အားလုံး ရောက်ကြပြီလား။\" \"မရောက်သေးပါဘူး၊ ဒီနေ့ ကျောင်းသားနှစ်ယောက် ပျက်ကွက်နေပါတယ် (မရှိပါဘူး)။\"",
+    "model_paragraph_mm": "ဒါက ကျွန်တော့်ရဲ့ စာသင်ခန်းပါ။ ဒါပေမဲ့ သိပ်တော့မကျယ်ဘူးပေါ့။ ကျောင်းသားတွေကလည်း ငြိမ်ကြပါတယ်။ 'ဆရာက အတန်းသစ်က ဆရာလားခင်ဗျာ' လို့ သူတို့က မေးကြတယ်။ 'ဟုတ်တယ်၊ အားလုံး စုံပြီလား။' 'မစုံသေးပါဘူးဆရာ၊ ဒီနေ့ ကျောင်းသားနှစ်ယောက် မလာပါဘူး။",
     "blocks": [
       {
         "type": "agreement",
@@ -124,7 +136,11 @@
           }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "'be' verb ကို အငြင်းနဲ့ အမေးဝါကျမှာ ဘယ်လိုသုံးမလဲ",
+      "pattern": "Subject, be, not တို့ကို ဘယ်လို စီစဉ်မလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],

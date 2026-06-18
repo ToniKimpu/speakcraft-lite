@@ -197,6 +197,7 @@ class WritingTeach {
     required this.modelParagraphEn,
     required this.modelParagraphMm,
     required this.blocks,
+    this.stepTitlesMm = const {},
   });
 
   final String situationEn;
@@ -226,6 +227,13 @@ class WritingTeach {
   /// in the toolkit region. Empty for units that need none.
   final List<TeachBlock> blocks;
 
+  /// Optional per-unit Burmese overrides for the pager step headings, keyed by
+  /// step id (`when`, `pattern`, `walkthrough`, `frequency`, `trap`, `toolkit`,
+  /// `check`). The pager falls back to its built-in default for any key absent
+  /// here — so a unit only lists the headings that don't fit the generic ones
+  /// (most commonly `pattern`, which otherwise reads as "Subject & Verb").
+  final Map<String, String> stepTitlesMm;
+
   bool get hasModelParagraph => modelParagraphEn.isNotEmpty;
 
   factory WritingTeach.fromJson(Map<String, dynamic> json) => WritingTeach(
@@ -249,7 +257,18 @@ class WritingTeach {
         blocks: ((json['blocks'] as List?) ?? const [])
             .map((e) => TeachBlock.fromJson((e as Map).cast<String, dynamic>()))
             .toList(growable: false),
+        stepTitlesMm: _stepTitles(json['step_titles_mm']),
       );
+}
+
+/// Parse the optional `step_titles_mm` map, keeping only non-empty string values.
+Map<String, String> _stepTitles(dynamic raw) {
+  if (raw is! Map) return const {};
+  final out = <String, String>{};
+  raw.forEach((k, v) {
+    if (v is String && v.isNotEmpty) out[k.toString()] = v;
+  });
+  return out;
 }
 
 /// One row of the "form" table — a subject group and how the verb looks for it.

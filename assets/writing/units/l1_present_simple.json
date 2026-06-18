@@ -31,13 +31,13 @@
       }
     ],
     "form_note_mm": [
-      "He / She / It နှင့်ဆိုလျှင် = Verb နောက်တွင် -s / -es ထည့်ရမည်",
+      "Subjectက He / She / It နှင့်ဆိုရင် Verb နောက်မှာ -s / -es ထည့်ပေးရပါမယ်။",
       "(✓ She eats / He goes)",
-      "I / You / We / They နှင့်ဆိုလျှင် = Verb ကို မူလပုံစံအတိုင်းသာ ထားရမည်",
+      "Subjectက I / You / We / They နှင့်ဆိုရင်တော့ Verb ကို မူလပုံစံအတိုင်းသာ ထားရပါမယ်။",
       "(-s မထည့်ရ → ✓ I eat / We go)"
     ],
     "trap_en": "he / she / it needs -s.  WRONG: She work.   RIGHT: She works.",
-    "trap_mm": "He / She / It နှင့်ဆိုလျှင် Verb နောက်တွင် -s ထည့်ပေးရပါမယ်။ မြန်မာစာမှာတော့ Subject ဘယ်သူပဲဖြစ်ဖြစ် Verbပုံစံ မပြောင်းလဲတဲ့အတွက် ဒါဟာ အင်္ဂလိပ်စာလေ့လာသူတွေ အလွယ်ဆုံးနဲ့ အမှားအများဆုံး အချက်ဖြစ်ပါတယ်။\n\nဥပမာ — \n✗ She work here. (မြန်မာလို \"သူမ အလုပ်လုပ်တယ်\" ဟု တွေးပြီး -s ကျန်ခဲ့တတ်သဖြင့် မှားပါသည်)\n✓ She works here. (မှန်)",
+    "trap_mm": "Subjectက 'He / She / It' ဆိုရင် Verb နောက်မှာ -s ထည့်ပေးရပါမယ်။ မြန်မာစာမှာတော့ Subject ဘယ်သူပဲဖြစ်ဖြစ် Verbပုံစံ မပြောင်းလဲတဲ့အတွက် ဒါဟာ အင်္ဂလိပ်စာလေ့လာသူတွေ အလွယ်ဆုံးနဲ့ အမှားအများဆုံး အချက်ဖြစ်ပါတယ်။\n\nဥပမာ — \n✗ She work here. (မှား)\n✓ She works here. (မှန်)",
     "examples": [
       {
         "en": "The sun {v}rises{/v} in the east.",
@@ -55,19 +55,19 @@
     "walkthrough": [
       {
         "subject": "I / you / we / they",
-        "rule_mm": "Subject က I · You · We · They ဆိုရင် → verb ကို base form (-s မထည့်)",
+        "rule_mm": "Subject က I · You · We · They ဆိုရင် → verb ကို base form အတိုင်း သုံးပါ",
         "en": "They {v}work{/v} in Yangon.",
-        "why_mm": "Subject က 'They' (I/you/we/they ထဲက တစ်ခု) ဖြစ်လို့ verb ကို base form အတိုင်း 'work' လို့ပဲ ထားပါတယ် — -s မထည့်ပါဘူး။"
+        "why_mm": "Subject က 'They' (I/you/we/they ထဲက တစ်ခု) ဖြစ်လို့ verb ကို base form အတိုင်း 'work' လို့ပဲ ထားပါတယ်။"
       },
       {
         "subject": "he / she / it",
-        "rule_mm": "Subject က He · She · It (တစ်ယောက်တည်း) ဆိုရင် → verb နောက်မှာ -s ထည့်",
+        "rule_mm": "Subject က He · She · It (တစ်ယောက်တည်း) ဆိုရင် → verb နောက်မှာ -s, es ထည့်ပေးပါ",
         "en": "She {v}works{/v} in Yangon.",
-        "why_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ verb 'work' နောက်မှာ -s ထည့်ပြီး 'works' လို့ ပြောင်းရပါတယ်။ ဒါက present simple ရဲ့ အဓိက စည်းမျဉ်းပါ။"
+        "why_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ 'work' နောက်မှာ -s ထည့်ပြီး 'works' လို့ ပြောင်းရပါတယ်။ ဒါက present simple ရဲ့ အဓိက စည်းမျဉ်းပါ။"
       },
       {
         "subject": "spelling",
-        "rule_mm": "he/she/it နဲ့ဆိုရင် verb အဆုံးပေါ်မူတည်ပြီး -es / -ies လည်း ဖြစ်တတ်",
+        "rule_mm": "he/she/it နဲ့ဆိုရင် verb အဆုံးပေါ်မူတည်ပြီး -es / -ies လည်း ဖြစ်တတ်ပါတယ်",
         "en": "He {v}watches{/v} TV. · She {v}studies{/v} English.",
         "why_mm": "-ch, -sh, -s, -o နဲ့ဆုံးတဲ့ verb တွေမှာ -es ထည့်ပါတယ် (watch → watches, go → goes)။ consonant + y နဲ့ဆုံးရင် y ကို i ပြောင်းပြီး -ies (study → studies)။"
       }
@@ -76,23 +76,35 @@
       {
         "prompt_en": "They ___ in Yangon.",
         "prompt_mm": "သူတို့ ရန်ကုန်မှာ နေတယ်။",
-        "options": ["work", "works", "working"],
+        "options": [
+          "work",
+          "works",
+          "working"
+        ],
         "answer": "work",
-        "explain_mm": "Subject က 'They' ဖြစ်လို့ base form → work (-s မထည့်)။"
+        "explain_mm": "Subject က 'They' (plural / အများကိန်း) ဖြစ်တဲ့အတွက် Verb ရဲ့ မူရင်းပုံစံ Base form (work) ကိုပဲ သုံးရပြီး -s /-es ထည့်စရာ မလိုပါဘူး။"
       },
       {
         "prompt_en": "She ___ tea {t}every morning{/t}.",
         "prompt_mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။",
-        "options": ["drink", "drinks", "drinking"],
+        "options": [
+          "drink",
+          "drinks",
+          "drinking"
+        ],
         "answer": "drinks",
-        "explain_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ → drinks (-s ထည့်)။"
+        "explain_mm": "Subject က 'She' (he / she / it - Singular / အနည်းကိန်း) ဖြစ်တဲ့အတွက် Present simple မှာ Verb ရဲ့ အနောက်မှာ -s ထည့်ပြီး 'drinks' လို့ သုံးရပါတယ်။"
       },
       {
         "prompt_en": "He ___ TV {t}at night{/t}.",
         "prompt_mm": "သူ ညဘက် TV ကြည့်တယ်။",
-        "options": ["watch", "watchs", "watches"],
+        "options": [
+          "watch",
+          "watchs",
+          "watches"
+        ],
         "answer": "watches",
-        "explain_mm": "watch က -ch နဲ့ဆုံးလို့ -es ထည့်ရတယ် → watches (watchs မဟုတ်)။"
+        "explain_mm": "Verb တစ်ခုရဲ့ အဆုံးသတ်က -ch, -sh, -s, -x, -z (သို့မဟုတ်) -o နဲ့ ဆုံးရင် Present Simple (He/She/It) မှာ -s တစ်လုံးတည်းတင်ရုံနဲ့ မရဘဲ -es ထည့်ပေးရပါတယ်။"
       }
     ],
     "model_paragraph_en": "My sister is a teacher. She {v}wakes up{/v} at six o'clock {t}every day{/t}. She {t}usually{/t} {v}drinks{/v} coffee {t}in the morning{/t}, and she {t}always{/t} {v}reads{/v} the news. She {v}teaches{/v} mathematics at a school. {t}On Mondays{/t} she {v}plays{/v} football with her friends. She {t}rarely{/t} {v}watches{/v} TV at night.",
@@ -119,7 +131,11 @@
       {
         "type": "frequency_scale"
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "Present simple ကို ဘယ်အချိန်မှာ သုံးမလဲ",
+      "pattern": "Subject နှင့် Verb ဘယ်လို တွဲမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [

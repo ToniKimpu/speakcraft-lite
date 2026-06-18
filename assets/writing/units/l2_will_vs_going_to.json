@@ -8,116 +8,177 @@
   "subtitle_mm": "will vs going to",
   "teach": {
     "situation_en": "A: \"We have no milk.\" B: \"Oh, I {v}'ll buy{/v} some.\" (decide now → will) — A: \"What are your plans?\" B: \"I {v}'m going to{/v} start a business.\" (already decided → going to). Look at the sky — it {v}'s going to{/v} rain (evidence). I think it {v}will be{/v} cold tonight (opinion).",
-    "situation_mm": "A: \"နို့ ကုန်နေပြီ။\" B: \"အို၊ ကျွန်တော် ဝယ်လာမယ်။\" (အခု ဆုံးဖြတ် → will) — A: \"မင်း အစီအစဉ်က ဘာလဲ။\" B: \"စီးပွားရေး စဖို့ ရှိတယ်။\" (အရင်က ဆုံးဖြတ်ထား → going to)။ ကောင်းကင် ကြည့်စမ်း — မိုးရွာတော့မယ် (သက်သေ)။ ဒီည အေးလိမ့်မယ် ထင်တယ် (ထင်မြင်ချက်)။",
+    "situation_mm": "A: \"နို့ကုန်နေပြီ။\" B: \"အို၊ ဒါဆို ကျွန်တော် ဝယ်လာခဲ့မယ်လေ။\" (ဒါက အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာမို့လို့ will ကို သုံးတာပါ)။ — A: \"မင်းမှာ ဘာအစီအစဉ်ရှိလဲ။\" B: \"ကိုယ်ပိုင်စီးပွားရေးတစ်ခု စလုပ်ဖို့ အစီအစဉ်ရှိတယ်။\" (ဒါကတော့ ကြိုတင်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်မို့လို့ going to ကို သုံးတာပါ)။ ကောင်းကင်ကြီးကို ကြည့်လိုက်စမ်း၊ မိုးရွာတော့မယ်။ (ဒါက မျက်မြင်သက်သေကြောင့် ခန့်မှန်းတာပါ)။ ဒီည အေးမယ်လို့ ကျွန်တော်ထင်တယ်။ (ဒါကတော့ ကိုယ့်ရဲ့ ထင်မြင်ချက်နဲ့ ခန့်မှန်းတာပါ)။",
     "use_en": "Use going to for a plan you already decided and for a prediction from evidence you can see now. Use will for a decision you make at this moment and for a prediction based on opinion or belief.",
-    "use_mm": "အရင်က ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်နဲ့ မြင်နေရတဲ့ သက်သေအရ ခန့်မှန်းချက်အတွက် going to။ အခုချက်ချင်း ဆုံးဖြတ်တာနဲ့ ထင်မြင်ယူဆချက်အရ ခန့်မှန်းချက်အတွက် will။",
+    "use_mm": "ကြိုတင်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်တွေနဲ့ မျက်မြင်သက်သေကိုကြည့်ပြီး ခန့်မှန်းတာတွေအတွက် 'going to' ကို သုံးပါတယ်။ အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာတွေနဲ့ ကိုယ့်ရဲ့ထင်မြင်ချက်အရ ခန့်မှန်းတာတွေအတွက်တော့ 'will' ကို သုံးပါတယ်နော်။",
     "timeline": "going to: ──(decided before)──▶●   |   will: ──(decide now)──▶●",
     "form": [
-      { "subject": "plan decided before", "form": "going to — I'm going to travel." },
-      { "subject": "decision made now", "form": "will — I'll get it." },
-      { "subject": "prediction from evidence", "form": "going to — It's going to rain (clouds)." },
-      { "subject": "prediction from opinion", "form": "will — I think it will rain." }
+      {
+        "subject": "plan decided before",
+        "form": "going to — I'm going to travel."
+      },
+      {
+        "subject": "decision made now",
+        "form": "will — I'll get it."
+      },
+      {
+        "subject": "prediction from evidence",
+        "form": "going to — It's going to rain (clouds)."
+      },
+      {
+        "subject": "prediction from opinion",
+        "form": "will — I think it will rain."
+      }
     ],
     "form_note_mm": [
-      "အရင်က ဆုံးဖြတ်ထားတဲ့ အစီအစဉ် → going to (I'm going to …)။",
-      "အခုချက်ချင်း ဆုံးဖြတ်တာ → will (I'll …)။",
-      "မြင်နေရတဲ့ သက်သေအရ ခန့်မှန်းတာ → going to (Look! It's going to rain)။",
-      "ထင်မြင်ယူဆချက်အရ ခန့်မှန်းတာ → will (I think it will …)။"
+      "ကြိုတင်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်အတွက် → going to (I'm going to …) ကို သုံးပါတယ်။",
+      "အခုချက်ချင်း ဆုံးဖြတ်လိုက်တဲ့အခါ → will (I'll …) ကို သုံးပါတယ်။",
+      "မျက်မြင်သက်သေကိုကြည့်ပြီး ခန့်မှန်းတဲ့အခါ → going to (Look! It's going to rain) ကို သုံးပါတယ်။",
+      "ကိုယ့်ရဲ့ ထင်မြင်ယူဆချက်နဲ့ ခန့်မှန်းတဲ့အခါ → will (I think it will …) ကို သုံးပါတယ်နော်။"
     ],
     "trap_en": "For a plan you already have, use going to (not will).  WRONG: I will visit my aunt next week (already planned).   RIGHT: I'm going to visit my aunt next week.",
-    "trap_mm": "အရင်က စီစဉ်ထားပြီးသား အစီအစဉ်အတွက် going to သုံးပါ (will မဟုတ်ဘူး)။ ✗ I will visit my aunt next week (စီစဉ်ထားပြီး) → ✓ I'm going to visit my aunt next week။",
+    "trap_mm": "ကြိုတင်စီစဉ်ထားပြီးသား အစီအစဉ်တွေအတွက် 'going to' ကို သုံးပေးရပါတယ် ('will' မဟုတ်ပါဘူးနော်)။ ဥပမာ - ✗ I will visit my aunt next week (ဒါက ကြိုတင်စီစဉ်ထားတာပါ) → ✓ I'm going to visit my aunt next week။",
     "examples": [
-      { "en": "The phone's ringing — I {v}'ll get{/v} it. (decide now)", "mm": "ဖုန်းမြည်နေတယ် — ကျွန်တော် ကိုင်လိုက်မယ် (အခု ဆုံးဖြတ်)။" },
-      { "en": "I {v}'m going to{/v} paint my room. (planned)", "mm": "အခန်း ဆေးသုတ်ဖို့ စီစဉ်ထားတယ် (အစီအစဉ်)။" },
-      { "en": "Watch out — you {v}'re going to{/v} fall! (evidence)", "mm": "သတိ — လဲတော့မယ်! (မြင်နေရတဲ့ သက်သေ)။" },
-      { "en": "I think our team {v}will win{/v}. (opinion)", "mm": "ကျွန်တော်တို့အသင်း နိုင်လိမ့်မယ် ထင်တယ် (ထင်မြင်ချက်)။" }
+      {
+        "en": "The phone's ringing — I {v}'ll get{/v} it. (decide now)",
+        "mm": "ဖုန်းမြည်နေတယ် — ကျွန်တော် ကိုင်လိုက်မယ်။ (အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာပါ)။"
+      },
+      {
+        "en": "I {v}'m going to{/v} paint my room. (planned)",
+        "mm": "အခန်းကို ဆေးသုတ်ဖို့ စီစဉ်ထားပါတယ်။ (ဒါက ကြိုတင်အစီအစဉ်ပါ)။"
+      },
+      {
+        "en": "Watch out — you {v}'re going to{/v} fall! (evidence)",
+        "mm": "သတိထား — လဲတော့မယ်! (မျက်စိရှေ့မှာ မြင်နေရတဲ့ သက်သေပါ)။"
+      },
+      {
+        "en": "I think our team {v}will win{/v}. (opinion)",
+        "mm": "ကျွန်တော်တို့အသင်း နိုင်မယ်လို့ ထင်တယ်။ (ဒါက ကိုယ့်ရဲ့ ထင်မြင်ချက်ပါ)။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "plan decided before",
-        "rule_mm": "အရင်က ဆုံးဖြတ်ထားတဲ့ အစီအစဉ် → going to",
+        "rule_mm": "ကြိုတင်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်အတွက်ဆိုရင် → 'going to' ကို သုံးပါတယ်။",
         "en": "I {v}'m going to{/v} travel next week.",
-        "why_mm": "အရင်ကတည်းက စီစဉ်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ် ဖြစ်လို့ 'going to' ကို သုံးပါတယ်။"
+        "why_mm": "ဒါက အရင်ကတည်းက စီစဉ်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်ဖြစ်တဲ့အတွက် 'going to' ကို သုံးပေးရတာပါနော်။"
       },
       {
         "subject": "decision made now",
-        "rule_mm": "အခုချက်ချင်း ဆုံးဖြတ်တာ → will",
+        "rule_mm": "အခုချက်ချင်း ဆုံးဖြတ်လိုက်တဲ့အခါ → 'will' ကို သုံးပါတယ်။",
         "en": "The phone's ringing — I {v}'ll get{/v} it.",
-        "why_mm": "အခု ပြောရင်းနဲ့ ချက်ချင်း ဆုံးဖြတ်လိုက်တာ ဖြစ်လို့ 'will' ('ll) ကို သုံးပါတယ်။"
+        "why_mm": "အခုလို ပြောနေရင်းနဲ့ ချက်ချင်းဆုံးဖြတ်လိုက်တာမျိုး ဖြစ်တဲ့အတွက် 'will' (အတိုကောက် 'll) ကို သုံးပေးရတာပါ။"
       },
       {
         "subject": "predictions — evidence vs opinion",
-        "rule_mm": "မြင်ရတဲ့ သက်သေ → going to · ထင်မြင်ချက် → will",
+        "rule_mm": "မျက်မြင်သက်သေကြောင့် ခန့်မှန်းရင် → going to · ကိုယ့်ထင်မြင်ချက်နဲ့ ခန့်မှန်းရင် → will",
         "en": "Look at the clouds — it {v}'s going to{/v} rain.  ·  I think it {v}will{/v} be cold.",
-        "why_mm": "မြင်နေရတဲ့ သက်သေ (clouds) အရ ခန့်မှန်းရင် 'going to'။ ထင်မြင်ယူဆချက် ('I think') အရ ခန့်မှန်းရင် 'will'။"
+        "why_mm": "မျက်စိရှေ့မှာ မြင်နေရတဲ့ သက်သေ (ဥပမာ - clouds) ကို ကြည့်ပြီး ခန့်မှန်းရင် 'going to' ကို သုံးပါတယ်။ ကိုယ့်ရဲ့ ထင်မြင်ယူဆချက် ('I think' နဲ့ စတဲ့စာကြောင်း) နဲ့ ခန့်မှန်းရင်တော့ 'will' ကို သုံးပါတယ်နော်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "\"The bags are heavy.\"  \"OK, I ___ carry one.\"",
-        "prompt_mm": "\"အိတ်တွေ လေးတယ်။\" \"အိုကေ၊ ကျွန်တော် တစ်လုံး သယ်ပေးမယ်။\"",
-        "options": ["'ll", "'m going to", "will to"],
+        "prompt_mm": "\"အိတ်တွေက လေးလိုက်တာ။\" \"ဟုတ်ကဲ့၊ ကျွန်တော် တစ်လုံး ကူသယ်ပေးမယ်လေ။\"",
+        "options": [
+          "'ll",
+          "'m going to",
+          "will to"
+        ],
         "answer": "'ll",
-        "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ်တာ → will (I'll)။"
+        "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ်ပြီး ကူညီမယ်ပြောတာမို့လို့ → will (I'll) ကို သုံးပါတယ်။"
       },
       {
         "prompt_en": "I've decided. I ___ study abroad next year.",
-        "prompt_mm": "ဆုံးဖြတ်ပြီးပြီ။ နောက်နှစ် နိုင်ငံခြားမှာ ပညာသင်ဖို့ ရှိတယ်။",
-        "options": ["'m going to", "'ll", "will"],
+        "prompt_mm": "ဆုံးဖြတ်ချက် ချပြီးသွားပြီ။ နောက်နှစ်ကျရင် နိုင်ငံခြားမှာ ပညာသွားသင်ဖို့ အစီအစဉ်ရှိတယ်။",
+        "options": [
+          "'m going to",
+          "'ll",
+          "will"
+        ],
         "answer": "'m going to",
-        "explain_mm": "အရင်က ဆုံးဖြတ်ထားတဲ့ အစီအစဉ် → going to။"
+        "explain_mm": "ဒါက ကြိုတင်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်မို့လို့ → 'going to' ကို သုံးပါတယ်။"
       },
       {
         "prompt_en": "Look at those clouds! It ___ rain.",
-        "prompt_mm": "အဲဒီ တိမ်တွေ ကြည့်စမ်း! မိုးရွာတော့မယ်။",
-        "options": ["'s going to", "will", "is going"],
+        "prompt_mm": "ဟိုးက တိမ်တွေကို ကြည့်လိုက်စမ်း! မိုးရွာတော့မယ်။",
+        "options": [
+          "'s going to",
+          "will",
+          "is going"
+        ],
         "answer": "'s going to",
-        "explain_mm": "မြင်နေရတဲ့ သက်သေအရ ခန့်မှန်းတာ → going to။"
+        "explain_mm": "မျက်မြင်သက်သေကို ကြည့်ပြီး ခန့်မှန်းတာဖြစ်လို့ → 'going to' ကို သုံးပါတယ်။"
       }
     ],
     "model_paragraph_en": "I {v}'m going to{/v} have a busy weekend. I {v}'m going to{/v} clean the house and visit my parents. The sky is grey, so I think it {v}'s going to{/v} rain on Saturday. If you need help, I {v}'ll come{/v} over — just call me. I'm sure we {v}'ll have{/v} a good time anyway.",
-    "model_paragraph_mm": "ဒီ စနေတနင်္ဂနွေ အလုပ်များမယ်။ အိမ်ရှင်းပြီး မိဘတွေဆီ သွားလည်ဖို့ စီစဉ်ထားတယ်။ ကောင်းကင်က မိုးမည်းနေလို့ စနေနေ့ မိုးရွာမယ် ထင်တယ်။ အကူအညီ လိုရင် ကျွန်တော် လာပေးမယ် — ဖုန်းပဲ ခေါ်လိုက်ပါ။ ဘယ်လိုပဲဖြစ်ဖြစ် ပျော်စရာ ဖြစ်မယ် သေချာတယ်။"
+    "model_paragraph_mm": "ဒီစနေတနင်္ဂနွေတော့ အလုပ်နည်းနည်းများမယ်။ အိမ်သန့်ရှင်းရေးလုပ်ပြီး မိဘတွေဆီ သွားလည်ဖို့ အစီအစဉ်ရှိတယ်။ ကောင်းကင်ကြီးက မည်းနေတာဆိုတော့ စနေနေ့ မိုးရွာမယ်လို့ ထင်တယ်။ အကူအညီလိုရင် ကျွန်တော့်ကို ဖုန်းခေါ်လိုက်နော်၊ လာကူပေးမယ်။ ဘယ်လိုပဲဖြစ်ဖြစ် ပျော်စရာကောင်းမှာတော့ သေချာပါတယ်။",
+    "step_titles_mm": {
+      "when": "'will' နဲ့ 'going to' ကို ဘယ်လိုခွဲသုံးမလဲ",
+      "pattern": "'will' နဲ့ 'going to' — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],
     "time_words": [],
-    "note_mm": "ရွေးချယ်နည်း — အစီအစဉ် ရှိပြီးသားလား (going to) ဒါမှမဟုတ် အခုမှ ဆုံးဖြတ်တာလား (will)? ; ခန့်မှန်းချက်က မြင်နေရတဲ့ သက်သေကလား (going to) ဒါမှမဟုတ် ထင်မြင်ချက်ကလား (will)?"
+    "note_mm": "ဘယ်လိုရွေးမလဲဆိုတော့ — ဒါက ကြိုတင်အစီအစဉ်ရှိပြီးသားလား (going to) ဒါမှမဟုတ် အခုမှ ချက်ချင်းဆုံးဖြတ်လိုက်တာလား (will)? ခန့်မှန်းတဲ့အခါမှာရော၊ မျက်မြင်သက်သေကြောင့်လား (going to) ဒါမှမဟုတ် ကိုယ့်ထင်မြင်ချက်ကြောင့်လား (will)? ဒီလိုလေး စဉ်းစားပြီးရွေးရမှာပါနော်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "\"The bags are heavy.\" \"OK, I ___ carry one.\"",
-      "prompt_mm": "\"အိတ်တွေ လေးတယ်။\" \"အိုကေ၊ ကျွန်တော် တစ်လုံး သယ်ပေးမယ်။\" (အခု ဆုံးဖြတ်)",
-      "options": ["'ll", "'m going to", "will to"],
-      "answers": ["'ll"],
-      "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ်တာ → will (I'll)။"
+      "prompt_mm": "\"အိတ်တွေက လေးလိုက်တာ။\" \"ဟုတ်ကဲ့၊ ကျွန်တော် တစ်လုံး ကူသယ်ပေးမယ်လေ။\" (အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာပါ)",
+      "options": [
+        "'ll",
+        "'m going to",
+        "will to"
+      ],
+      "answers": [
+        "'ll"
+      ],
+      "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ်ပြီး ကူညီမယ်ပြောတာမို့လို့ → will (I'll) ကို သုံးပါတယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I've decided. I ___ study abroad next year.",
-      "prompt_mm": "ဆုံးဖြတ်ပြီးပြီ။ နောက်နှစ် နိုင်ငံခြားမှာ ပညာသင်ဖို့ ရှိတယ်။ (စီစဉ်ထားပြီး)",
-      "options": ["'m going to", "'ll", "will"],
-      "answers": ["'m going to"],
-      "explain_mm": "အရင်က ဆုံးဖြတ်ထားတဲ့ အစီအစဉ် → going to။"
+      "prompt_mm": "ဆုံးဖြတ်ချက် ချပြီးသွားပြီ။ နောက်နှစ်ကျရင် နိုင်ငံခြားမှာ ပညာသွားသင်ဖို့ အစီအစဉ်ရှိတယ်။ (ဒါက ကြိုတင်စီစဉ်ထားတာပါ)",
+      "options": [
+        "'m going to",
+        "'ll",
+        "will"
+      ],
+      "answers": [
+        "'m going to"
+      ],
+      "explain_mm": "ဒါက ကြိုတင်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်မို့လို့ → 'going to' ကို သုံးပါတယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Look at those clouds! It ___ rain.",
-      "prompt_mm": "အဲဒီ တိမ်တွေ ကြည့်စမ်း! မိုးရွာတော့မယ်။ (မြင်နေရတဲ့ သက်သေ)",
-      "options": ["'s going to", "will", "is going"],
-      "answers": ["'s going to"],
-      "explain_mm": "မြင်နေရတဲ့ သက်သေအရ ခန့်မှန်းတာ → going to။"
+      "prompt_mm": "ဟိုးက တိမ်တွေကို ကြည့်လိုက်စမ်း! မိုးရွာတော့မယ်။ (မျက်မြင်သက်သေကြောင့် ခန့်မှန်းတာပါ)",
+      "options": [
+        "'s going to",
+        "will",
+        "is going"
+      ],
+      "answers": [
+        "'s going to"
+      ],
+      "explain_mm": "မျက်မြင်သက်သေကို ကြည့်ပြီး ခန့်မှန်းတာဖြစ်လို့ → 'going to' ကို သုံးပါတယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "I will visit my aunt next week. (I planned it before)",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။ ( အရင်က စီစဉ်ထားတယ် )",
-      "answers": ["I'm going to visit my aunt next week", "I am going to visit my aunt next week"],
-      "explain_mm": "အရင်က စီစဉ်ထားတဲ့ အစီအစဉ် → going to (will မဟုတ်ဘူး)။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပေးပါနော်။ (သဲလွန်စ: ဒါက ကြိုတင်စီစဉ်ထားတဲ့ ကိစ္စပါ)",
+      "answers": [
+        "I'm going to visit my aunt next week",
+        "I am going to visit my aunt next week"
+      ],
+      "explain_mm": "ဒါက ကြိုတင်စီစဉ်ထားတဲ့ အစီအစဉ်ဖြစ်လို့ → 'going to' ကို သုံးရမှာပါ ('will' မဟုတ်ပါဘူးနော်)။"
     },
     {
       "kind": "scan_sentences",
@@ -125,9 +186,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — plans vs decisions. Write 5–8 sentences: some about plans you already have (going to) and some instant decisions/offers (will). Make it clear which is which.",
-      "prompt_mm": "အပိုင်း ၁ — အစီအစဉ် vs ဆုံးဖြတ်ချက်။ sentence ၅–၈ ကြောင်း ရေးပါ — အချို့က အရင်က ရှိပြီးသား အစီအစဉ် (going to)၊ အချို့က အခုချက်ချင်း ဆုံးဖြတ်ချက်/ကမ်းလှမ်းချက် (will)။ ဘယ်ဟာ ဘယ်ဟာဆိုတာ ထင်ရှားအောင် ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — အစီအစဉ် နဲ့ ဆုံးဖြတ်ချက်။ ကိုယ်ပိုင် sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ရအောင်။ တချို့စာကြောင်းတွေက ကြိုတင်ရှိပြီးသား အစီအစဉ် (going to) အကြောင်း ဖြစ်ရမှာဖြစ်ပြီး၊ တချို့ကတော့ အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာ ဒါမှမဟုတ် ကမ်းလှမ်းတာ (will) အကြောင်း ဖြစ်ရပါမယ်။ ဘယ်စာကြောင်းက ဘာအတွက်ဆိုတာကို ရှင်းရှင်းလင်းလင်းလေး ရေးပေးပါနော်။ ပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်ပေးก็ได้ပါတယ်။",
       "model": "I {v}'m going to{/v} start a cooking class next month. I {v}'m going to{/v} buy the ingredients this weekend. Oh, the kettle is boiling — I {v}'ll turn{/v} it off. You look tired; I {v}'ll make{/v} the tea. I think you {v}'ll enjoy{/v} the class.",
-      "explain_mm": "အစီအစဉ်အတွက် going to၊ အခု ဆုံးဖြတ်ချက်/ထင်မြင်ချက်အတွက် will ကို မှန်အောင် ရွေးပါ။",
+      "explain_mm": "ကြိုတင်အစီအစဉ်အတွက် 'going to' နဲ့၊ အခုမှချက်ချင်းချတဲ့ ဆုံးဖြတ်ချက်/ထင်မြင်ချက်အတွက် 'will' ကို မှန်အောင် ရွေးချယ်ပေးပါနော်။",
       "grading": {
         "grammar_point": "will vs going to",
         "rule": "going to for prior plans and evidence-based predictions; will for instant decisions, offers, and opinion-based predictions.",
@@ -142,16 +203,19 @@
           "going to for a spur-of-the-moment decision",
           "Dropping be in going to"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a plan with predictions. Write a short paragraph (4–6 sentences) about a plan you have (going to), with predictions about how it will go (will + opinion, going to + evidence).",
-      "prompt_mm": "အပိုင်း ၂ — အစီအစဉ် + ခန့်မှန်းချက်။ ကိုယ့်မှာ ရှိတဲ့ အစီအစဉ်တစ်ခု (going to) အကြောင်း၊ ဘယ်လို ဖြစ်လာမယ်ဆိုတဲ့ ခန့်မှန်းချက် (ထင်မြင်ချက် will၊ သက်သေ going to) တွေနဲ့ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — အစီအစဉ် နဲ့ ခန့်မှန်းချက်။ ကိုယ့်မှာရှိတဲ့ အစီအစဉ်တစ်ခု ('going to' သုံးပြီး) အကြောင်းကို စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ အဲဒီအထဲမှာ အနာဂတ်မှာ ဘယ်လိုဖြစ်လာမလဲဆိုတဲ့ ခန့်မှန်းချက်တွေကိုလည်း ထည့်ရေးပေးပါ (ကိုယ့်ထင်မြင်ချက်ဆို 'will'၊ မျက်မြင်သက်သေရှိရင် 'going to' သုံးပြီး)။ ပြီးရင် စာရွက်ကို scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "Next weekend we {v}'re going to{/v} have a picnic. We {v}'re going to{/v} go to the lake. The forecast is bad, so I think it {v}'s going to{/v} rain. But I'm sure we {v}'ll have{/v} fun anyway. If it rains, we {v}'ll eat{/v} inside.",
-      "explain_mm": "အစီအစဉ်ကို going to၊ ထင်မြင်ချက် ခန့်မှန်းချက်ကို will၊ မြင်နေရတဲ့ သက်သေ ခန့်မှန်းချက်ကို going to နဲ့ ရေးပါ။",
+      "explain_mm": "ရေးတဲ့အခါမှာ ကြိုတင်အစီအစဉ်ကို 'going to' နဲ့၊ ကိုယ့်ထင်မြင်ချက်နဲ့ ခန့်မှန်းတာကို 'will' နဲ့၊ မျက်မြင်သက်သေကိုကြည့်ပြီး ခန့်မှန်းတာကို 'going to' နဲ့ သုံးပြီး ရေးပေးပါနော်။",
       "grading": {
         "grammar_point": "will vs going to",
         "rule": "Combine a going-to plan with will/going-to predictions correctly in one paragraph.",
@@ -166,7 +230,10 @@
           "Wrong verb form after will / going to",
           "Dropping be"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

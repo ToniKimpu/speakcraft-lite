@@ -8,136 +8,218 @@
   "subtitle_mm": "Defining relative clause — အရေးပါတဲ့ ဖော်ပြချက် (comma မပါ)",
   "teach": {
     "situation_en": "The man {v}who{/v} lives next door is a doctor. I lost the keys {v}that{/v} you gave me. This is the restaurant {v}where{/v} we first met. She's the woman {v}whose{/v} car was stolen.",
-    "situation_mm": "ဘေးအိမ်မှာ နေတဲ့ လူက ဆရာဝန်ပါ။ မင်းပေးတဲ့ သော့တွေ ပျောက်သွားတယ်။ ဒါက ငါတို့ ပထမဆုံး တွေ့ခဲ့တဲ့ စားသောက်ဆိုင်ပါ။ သူမက ကား ခိုးခံရတဲ့ အမျိုးသမီးပါ။",
+    "situation_mm": "ဘေးအိမ်မှာ နေတဲ့လူက ဆရာဝန်တစ်ယောက်ပါ။ မင်းပေးခဲ့တဲ့ သော့တွေ ပျောက်သွားပြီ။ ဒါကလေ ငါတို့ ပထမဆုံး တွေ့ခဲ့ကြတဲ့ စားသောက်ဆိုင်လေးပါ။ သူက ကားအခိုးခံလိုက်ရတဲ့ အမျိုးသမီးပေါ့။",
     "use_en": "A defining relative clause gives ESSENTIAL information that identifies which person or thing we mean — without it, the sentence is unclear. No commas. Use who (people), which (things), that (people or things), where (places), whose (possession). When the relative pronoun is the object, you can leave it out (the book [that] I read).",
-    "use_mm": "Defining relative clause ဟာ ဘယ်လူ/ဘယ်အရာကို ဆိုလိုမှန်း ဖော်ထုတ်ပေးတဲ့ အရေးပါတဲ့ (essential) အချက်အလက်ကို ပေးတယ် — မပါရင် အဓိပ္ပာယ် မရှင်းဘူး။ comma မပါ။ who (လူ), which (အရာ), that (လူ/အရာ), where (နေရာ), whose (ပိုင်ဆိုင်မှု) သုံးပါ။ relative pronoun က object ဖြစ်ရင် ဖြုတ်လို့ ရတယ် (the book [that] I read)။",
+    "use_mm": "Defining relative clause ဆိုတာကလေ ဘယ်လူ၊ ဘယ်အရာကို ပြောနေမှန်း အတိအကျသိရအောင် ထည့်ပြောပေးတဲ့ အရေးကြီးတဲ့ (essential) အချက်အလက်ပါပဲ။ သူသာမပါရင် ဝါကျက အဓိပ္ပာယ်မပြည့်စုံဘူးပေါ့။ ဒီ clause မှာ comma သုံးလေ့မရှိပါဘူးနော်။ who (လူအတွက်), which (အရာဝတ္ထုအတွက်), that (လူ/အရာ နှစ်မျိုးလုံး), where (နေရာအတွက်), whose (ပိုင်ဆိုင်မှုကိုပြချင်ရင်) တို့ကို သုံးပါတယ်။ Relative pronoun က object နေရာမှာရှိနေရင်တော့ သူ့ကိုဖြုတ်ထားခဲ့လို့ရပါတယ် (ဥပမာ the book [that] I read)။",
     "timeline": "noun + [who/which/that/where + clause]  → tells us WHICH one (no commas)",
     "form": [
-      { "subject": "people", "form": "who / that  (the man who / that lives here)" },
-      { "subject": "things", "form": "which / that  (the book which / that I read)" },
-      { "subject": "places / possession", "form": "where (the city where …) · whose (the girl whose bag …)" },
-      { "subject": "object pronoun", "form": "can be omitted  (the film [that] we saw)" }
+      {
+        "subject": "people",
+        "form": "who / that  (the man who / that lives here)"
+      },
+      {
+        "subject": "things",
+        "form": "which / that  (the book which / that I read)"
+      },
+      {
+        "subject": "places / possession",
+        "form": "where (the city where …) · whose (the girl whose bag …)"
+      },
+      {
+        "subject": "object pronoun",
+        "form": "can be omitted  (the film [that] we saw)"
+      }
     ],
     "form_note_mm": [
-      "defining = အရေးပါတဲ့ အချက် — comma မပါ။ ဘယ်တစ်ခုလဲ ဖော်ပြတယ်။",
-      "who = လူ · which = အရာ · that = လူ/အရာ နှစ်မျိုးလုံး · where = နေရာ · whose = ပိုင်ဆိုင်မှု။",
-      "relative pronoun က object ဆိုရင် ဖြုတ်လို့ ရတယ် — the man [who] I met။ subject ဆိုရင် မဖြုတ်ရဘူး။",
-      "relative clause ထဲမှာ object နာမ်စား မထပ်ထည့်ပါနဲ့ (the book that I read it ✗)။"
+      "Defining clause ဆိုတာက အရေးကြီးတဲ့အချက်ကို ပြောပြတာမို့ comma မသုံးရပါဘူး။ ဘယ်တစ်ခုကို ပြောနေမှန်း အတိအကျ သိစေပါတယ်။",
+      "who က လူအတွက်၊ which က အရာဝတ္ထုအတွက်၊ that ကတော့ လူရော အရာဝတ္ထုရော နှစ်မျိုးလုံးအတွက် သုံးလို့ရပါတယ်။ where က နေရာ၊ whose က ပိုင်ဆိုင်မှုကို ပြပါတယ်။",
+      "Relative pronoun က object နေရာမှာဆိုရင် ဖြုတ်ထားခဲ့လို့ ရပါတယ် — ဥပမာ the man [who] I met။ subject နေရာမှာဆိုရင်တော့ ဖြုတ်လို့မရပါဘူးနော်။",
+      "Relative clause ထဲမှာ object pronoun တွေ ထပ်မထည့်မိဖို့ သတိထားရပါမယ်။ ဥပမာ the book that I read it ✗ ဆိုတာမျိုးပေါ့။"
     ],
     "trap_en": "Don't repeat the noun as a pronoun inside the clause, and don't use commas in a defining clause.  WRONG: The man who he lives here / The book that I read it.  RIGHT: The man who lives here / The book that I read.",
-    "trap_mm": "clause ထဲမှာ နာမ်ကို နာမ်စားနဲ့ မထပ်နဲ့၊ defining clause မှာ comma မထည့်နဲ့။ ✗ The man who he lives here / The book that I read it → ✓ The man who lives here / The book that I read။",
+    "trap_mm": "Relative clause ထဲမှာ pronoun တွေ ထပ်မထည့်မိဖို့နဲ့ defining clause မှာ comma မထည့်မိဖို့ သတိထားရပါမယ်နော်။ ✗ The man who he lives here / The book that I read it → ✓ The man who lives here / The book that I read။",
     "examples": [
-      { "en": "The woman {v}who{/v} teaches us is very kind.", "mm": "ငါတို့ကို သင်ပေးတဲ့ အမျိုးသမီးက အရမ်း ကြင်နာတယ်။" },
-      { "en": "I like books {v}that{/v} make me think.", "mm": "ငါ့ကို တွေးစေတဲ့ စာအုပ်တွေ ကြိုက်တယ်။" },
-      { "en": "That's the village {v}where{/v} I grew up.", "mm": "အဲဒါ ငါ ကြီးပြင်းခဲ့တဲ့ ရွာပါ။" },
-      { "en": "He's the boy {v}whose{/v} father owns the shop.", "mm": "သူက အဖေ ဆိုင်ပိုင်တဲ့ ကောင်လေးပါ။" }
+      {
+        "en": "The woman {v}who{/v} teaches us is very kind.",
+        "mm": "ကျွန်တော်တို့ကို စာသင်ပေးတဲ့ ဆရာမက အရမ်း ကြင်နာတတ်ပါတယ်။"
+      },
+      {
+        "en": "I like books {v}that{/v} make me think.",
+        "mm": "ကျွန်တော့်ကို တွေးစရာတွေပေးတဲ့ စာအုပ်မျိုးတွေကို ကြိုက်ပါတယ်။"
+      },
+      {
+        "en": "That's the village {v}where{/v} I grew up.",
+        "mm": "အဲဒါက ကျွန်တော် ကြီးပြင်းခဲ့တဲ့ ရွာလေးပါ။"
+      },
+      {
+        "en": "He's the boy {v}whose{/v} father owns the shop.",
+        "mm": "သူက သူ့အဖေက ဆိုင်ပိုင်တဲ့ ကောင်လေးပါ။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "people → who / that",
-        "rule_mm": "လူကို ဖော်ပြရင် → who (ဒါမှမဟုတ် that)",
+        "rule_mm": "လူတစ်ယောက်အကြောင်း ပြောချင်ရင်တော့ → who (ဒါမှမဟုတ် that) ကို သုံးပေးရပါမယ်။",
         "en": "The man {v}who{/v} lives next door is a doctor.",
-        "why_mm": "'the man' က လူ ဖြစ်လို့ relative pronoun 'who' နဲ့ ဘယ်လူလဲ ဖော်ပြတယ်။ defining relative clause မို့ comma မပါပါဘူး။"
+        "why_mm": "'the man' ဆိုတာက လူကို ရည်ညွှန်းတာဖြစ်လို့ relative pronoun 'who' ကိုသုံးပြီး ဘယ်လူလဲဆိုတာကို အတိအကျ ပြောပြထားတာပါ။ ဒါက defining relative clause ဖြစ်တဲ့အတွက် comma ထည့်စရာမလိုပါဘူးနော်။"
       },
       {
         "subject": "things / places / possession",
-        "rule_mm": "အရာ → which / that · နေရာ → where · ပိုင်ဆိုင်မှု → whose",
+        "rule_mm": "အရာဝတ္ထုအတွက်ဆို → which / that · နေရာအတွက်ဆို → where · ပိုင်ဆိုင်မှုကို ပြချင်ရင် → whose သုံးပါတယ်။",
         "en": "That's the village {v}where{/v} I grew up.",
-        "why_mm": "နေရာကို ဖော်ပြလို့ 'where' သုံးတယ်။ အရာဆို which/that၊ ပိုင်ဆိုင်မှုဆို whose ဖြစ်ပါတယ်။"
+        "why_mm": "နေရာအကြောင်း ပြောနေတာဖြစ်လို့ 'where' ကို သုံးထားတာပါ။ အရာဝတ္ထုဆိုရင်တော့ which ဒါမှမဟုတ် that၊ ပိုင်ဆိုင်မှုကို ပြချင်ရင်တော့ whose ကို သုံးရပါတယ်နော်။"
       },
       {
         "subject": "no repeated pronoun",
-        "rule_mm": "relative clause ထဲမှာ object နာမ်စား မထပ်နဲ့",
+        "rule_mm": "Relative clause ထဲမှာ object pronoun တွေကို ထပ်မသုံးမိအောင် သတိထားပါနော်။",
         "en": "The book {v}that{/v} I read was very good.  (✗ that I read it)",
-        "why_mm": "relative clause ထဲမှာ 'it' လို object နာမ်စားကို ထပ်မထည့်ရပါဘူး — relative pronoun 'that' က object အဖြစ် ပါပြီးသား ဖြစ်လို့ပါ။ defining clause မှာ comma မပါ။"
+        "why_mm": "Relative clause ထဲမှာ 'it' လိုမျိုး object pronoun တွေကို ထပ်ပြီးထည့်စရာ မလိုပါဘူး။ ဘာလို့လဲဆိုတော့ relative pronoun 'that' က object အဖြစ်နဲ့ ရှိနှင့်ပြီးသားမို့လို့ပါ။ ပြီးတော့ defining clause ဖြစ်တဲ့အတွက် comma လည်း မလိုပါဘူးနော်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "The man ___ lives next door is a doctor.",
-        "prompt_mm": "ဘေးအိမ်မှာ နေတဲ့ လူက ဆရာဝန်ပါ။",
-        "options": ["who", "which", "where"],
+        "prompt_mm": "ဘေးအိမ်မှာ နေတဲ့လူက ဆရာဝန်တစ်ယောက်ပါ။",
+        "options": [
+          "who",
+          "which",
+          "where"
+        ],
         "answer": "who",
-        "explain_mm": "လူ → who (that လည်း ရ)။"
+        "explain_mm": "လူအကြောင်းပြောချင်ရင် → who (that ကိုလည်း သုံးလို့ရပါတယ်)။"
       },
       {
         "prompt_en": "This is the town ___ I was born.",
-        "prompt_mm": "ဒါက ငါ မွေးဖွားခဲ့တဲ့ မြို့ပါ။",
-        "options": ["where", "which", "who"],
+        "prompt_mm": "ဒါက ကျွန်တော် မွေးဖွားခဲ့တဲ့ မြို့လေးပါ။",
+        "options": [
+          "where",
+          "which",
+          "who"
+        ],
         "answer": "where",
-        "explain_mm": "နေရာ → where။"
+        "explain_mm": "နေရာကို ရည်ညွှန်းချင်ရင် → where ကို သုံးပါတယ်။"
       },
       {
         "prompt_en": "I like books ___ make me think.",
-        "prompt_mm": "ငါ့ကို တွေးစေတဲ့ စာအုပ်တွေ ကြိုက်တယ်။",
-        "options": ["that", "who", "where"],
+        "prompt_mm": "ကျွန်တော့်ကို တွေးစရာတွေပေးတဲ့ စာအုပ်မျိုးတွေကို ကြိုက်ပါတယ်။",
+        "options": [
+          "that",
+          "who",
+          "where"
+        ],
         "answer": "that",
-        "explain_mm": "အရာ → that (which လည်း ရ)။"
+        "explain_mm": "အရာဝတ္ထုအတွက်ဆို → that (which ကိုလည်း သုံးလို့ရပါတယ်)။"
       }
     ],
     "model_paragraph_en": "Let me tell you about my favourite places. The café {v}that{/v} I visit every morning makes the best coffee. The owner, a man {v}who{/v} knows everyone, always smiles. Next to it is the park {v}where{/v} I run. I also love the small library {v}which{/v} stays open late. These are the places {v}that{/v} make my town feel like home.",
-    "model_paragraph_mm": "ငါ အကြိုက်ဆုံး နေရာတွေ အကြောင်း ပြောပြမယ်။ မနက်တိုင်း သွားတဲ့ café က အကောင်းဆုံး ကော်ဖီ လုပ်တယ်။ လူတိုင်းကို သိတဲ့ ပိုင်ရှင်က အမြဲ ပြုံးတယ်။ ဘေးမှာက ငါ ပြေးတဲ့ ပန်းခြံ။ ညဉ့်နက်တဲ့အထိ ဖွင့်တဲ့ စာကြည့်တိုက်လေးကိုလည်း ကြိုက်တယ်။ ဒါတွေက ငါ့မြို့ကို အိမ်လို ခံစားစေတဲ့ နေရာတွေပါ။",
+    "model_paragraph_mm": "ကျွန်တော် အကြိုက်ဆုံး နေရာလေးတွေအကြောင်း ပြောပြမယ်နော်။ မနက်တိုင်း သွားဖြစ်တဲ့ café လေးက အကောင်းဆုံးကော်ဖီကို ဖျော်ပေးတယ်။ လူတိုင်းကို သိတဲ့ ပိုင်ရှင်ကလည်း အမြဲတမ်း ပြုံးနေတာ။ သူ့ဘေးမှာက ကျွန်တော် အမြဲပြေးလေ့ရှိတဲ့ ပန်းခြံပေါ့။ ညဉ့်နက်တဲ့အထိ ဖွင့်တဲ့ စာကြည့်တိုက်လေးကိုလည်း သဘောကျတယ်။ ဒါတွေက ကျွန်တော့်မြို့ကို ကိုယ့်အိမ်လေးလို ခံစားရစေတဲ့ နေရာတွေပါပဲ။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "people", "form": "who / that", "tag": "who / that", "example": "the man who lives here" },
-          { "subjects": "things / places / possession", "form": "which / that · where · whose", "tag": "which / where / whose", "highlight": true, "example": "the city where I live" }
+          {
+            "subjects": "people",
+            "form": "who / that",
+            "tag": "who / that",
+            "example": "the man who lives here"
+          },
+          {
+            "subjects": "things / places / possession",
+            "form": "which / that · where · whose",
+            "tag": "which / where / whose",
+            "highlight": true,
+            "example": "the city where I live"
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "ဘယ်ဟာကို ပြောမှန်း အတိအကျ ညွှန်းဖို့ ဘယ်လိုသုံးမလဲ",
+      "pattern": "who / which / that / where — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_live", "v_work", "v_teach", "v_make", "v_help", "v_know",
-      "v_sell", "v_study", "v_cook", "v_write"
+      "v_live",
+      "v_work",
+      "v_teach",
+      "v_make",
+      "v_help",
+      "v_know",
+      "v_sell",
+      "v_study",
+      "v_cook",
+      "v_write"
     ],
     "time_words": [],
     "verb_form": "third",
-    "note_mm": "noun + who/which/that/where/whose + clause။ who (လူ) · which (အရာ) · that (နှစ်မျိုးလုံး) · where (နေရာ) · whose (ပိုင်ဆိုင်မှု)။ comma မပါ။"
+    "note_mm": "ပုံစံကတော့ noun + who/which/that/where/whose + clause ပါ။ who က လူအတွက်၊ which က အရာဝတ္ထုအတွက်၊ that က နှစ်မျိုးလုံးရပါတယ်။ where က နေရာ၊ whose က ပိုင်ဆိုင်မှုကို ပြပြီး comma မလိုပါဘူးနော်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The man ___ lives next door is a doctor.",
-      "prompt_mm": "ဘေးအိမ်မှာ နေတဲ့ လူက ဆရာဝန်ပါ။",
-      "options": ["who", "which", "where"],
-      "answers": ["who"],
-      "explain_mm": "လူ → who (ဒါမှမဟုတ် that)။"
+      "prompt_mm": "ဘေးအိမ်မှာ နေတဲ့လူက ဆရာဝန်တစ်ယောက်ပါ။",
+      "options": [
+        "who",
+        "which",
+        "where"
+      ],
+      "answers": [
+        "who"
+      ],
+      "explain_mm": "လူအကြောင်း ပြောချင်ရင် → who (that ကိုလည်း သုံးလို့ရပါတယ်)။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "This is the town ___ I was born.",
-      "prompt_mm": "ဒါက ငါ မွေးဖွားခဲ့တဲ့ မြို့ပါ။",
-      "options": ["where", "which", "who"],
-      "answers": ["where"],
-      "explain_mm": "နေရာ → where။"
+      "prompt_mm": "ဒါက ကျွန်တော် မွေးဖွားခဲ့တဲ့ မြို့လေးပါ။",
+      "options": [
+        "where",
+        "which",
+        "who"
+      ],
+      "answers": [
+        "where"
+      ],
+      "explain_mm": "နေရာကို ရည်ညွှန်းချင်ရင် → where ကို သုံးပါတယ်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "I like films ___ have a happy ending. (1 word — thing)",
-      "prompt_mm": "အဆုံးသတ် ကောင်းတဲ့ ရုပ်ရှင်တွေ ကြိုက်တယ်။ ( အရာ — စကားလုံး ၁ လုံး )",
-      "answers": ["that", "which"],
-      "explain_mm": "အရာ → that / which။"
+      "prompt_mm": "အဆုံးသတ်ကောင်းတဲ့ ရုပ်ရှင်ကားမျိုးတွေကို ကြိုက်ပါတယ်။ ( အရာ — စကားလုံး ၁ လုံး )",
+      "answers": [
+        "that",
+        "which"
+      ],
+      "explain_mm": "အရာဝတ္ထုအတွက်ဆိုရင် → that / which ကို သုံးပေးပါ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "The book that I read it was very good.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["The book that I read was very good", "the book that i read was very good.", "The book I read was very good"],
-      "explain_mm": "clause ထဲမှာ object 'it' ကို မထပ်ထည့်ရဘူး → The book that I read was very good။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "answers": [
+        "The book that I read was very good",
+        "the book that i read was very good.",
+        "The book I read was very good"
+      ],
+      "explain_mm": "Clause ထဲမှာ object pronoun 'it' ကို ထပ်ပြီးထည့်စရာမလိုပါဘူး။ → The book that I read was very good။ ဆိုရင် မှန်သွားပါပြီ။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  who  /  the  /  teaches  /  woman  /  us  /  kind  /  is",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( The woman who teaches us + is kind )",
-      "answers": ["The woman who teaches us is kind", "the woman who teaches us is kind.", "The woman who teaches us is kind."],
-      "explain_mm": "noun + who + clause → The woman who teaches us is kind။"
+      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်အောင်စီပြီး ဝါကျအမှန်လေးတစ်ခု ဖြစ်အောင် ရေးပေးပါနော်။ ( The woman who teaches us + is kind )",
+      "answers": [
+        "The woman who teaches us is kind",
+        "the woman who teaches us is kind.",
+        "The woman who teaches us is kind."
+      ],
+      "explain_mm": "ဖွဲ့စည်းပုံက noun + who + clause ပုံစံလေးပါ → The woman who teaches us is kind။"
     },
     {
       "kind": "scan_sentences",
@@ -145,9 +227,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — describe people and things. Write 5–8 sentences that each use a defining relative clause (who / which / that / where / whose) to identify a person, thing, or place. No commas.",
-      "prompt_mm": "အပိုင်း ၁ — လူနဲ့ အရာတွေ ဖော်ပြပါ။ လူ၊ အရာ၊ ဒါမှမဟုတ် နေရာတစ်ခုကို ဖော်ထုတ်ဖို့ defining relative clause (who / which / that / where / whose) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ comma မပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — လူတွေနဲ့ အရာဝတ္ထုတွေအကြောင်း ပြောကြည့်ရအောင်။ လူတစ်ယောက်၊ အရာဝတ္ထုတစ်ခု၊ ဒါမှမဟုတ် နေရာတစ်ခုကို အတိအကျသိအောင် defining relative clause (who / which / that / where / whose) တွေကို သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ပါနော်။ comma မသုံးဖို့ သတိပြုပါ။ ရေးပြီးရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
       "model": "I have a friend {v}who{/v} works at a hospital. The phone {v}that{/v} I bought last week is broken. This is the school {v}where{/v} I studied. I know a girl {v}whose{/v} mother is a famous singer. People {v}who{/v} read a lot usually write well.",
-      "explain_mm": "noun + who/which/that/where/whose + clause။ comma မပါ၊ object နာမ်စား မထပ်ပါနဲ့။",
+      "explain_mm": "ဖွဲ့စည်းပုံက noun + who/which/that/where/whose + clause ပါ။ comma မသုံးရဘူး၊ object pronoun တွေလည်း ထပ်မထည့်ရဘူးဆိုတာလေးကို သတိရပါနော်။",
       "grading": {
         "grammar_point": "Defining relative clauses",
         "rule": "who/which/that/where/whose introduce essential identifying information; no commas; no repeated object pronoun.",
@@ -162,16 +244,19 @@
           "Using commas in a defining clause",
           "who for things / which for people"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a person you admire. Write a short paragraph (4–6 sentences) about someone you admire, using several defining relative clauses to describe who they are and what they do.",
-      "prompt_mm": "အပိုင်း ၂ — လေးစားတဲ့ လူတစ်ယောက်။ မင်း လေးစားတဲ့ တစ်စုံတစ်ယောက် အကြောင်း — သူ ဘယ်သူလဲ၊ ဘာလုပ်လဲဆိုတာ defining relative clause အများအပြား သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — ကိုယ်လေးစားရတဲ့ လူတစ်ယောက်အကြောင်း ရေးကြည့်ကြမယ်။ ကိုယ်လေးစားရတဲ့ လူတစ်ယောက်အကြောင်းကို — သူက ဘယ်သူလဲ၊ ဘာတွေလုပ်သလဲဆိုတာတွေကို defining relative clause တွေ များများသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "The person {v}who{/v} inspires me most is my old teacher. She is someone {v}who{/v} never gives up. The school {v}where{/v} she works is very poor. The students {v}that{/v} she teaches all love her. She is a woman {v}whose{/v} kindness changed my life.",
-      "explain_mm": "defining relative clause တွေ သုံးပြီး လူတစ်ယောက်ကို အသေးစိတ် ဖော်ပြပါ။ comma မပါ။",
+      "explain_mm": "Defining relative clause တွေကို သုံးပြီး လူတစ်ယောက်အကြောင်းကို အသေးစိတ် ပြောပြကြည့်ပါနော်။ comma မသုံးဖို့လည်း သတိပြုပါ။",
       "grading": {
         "grammar_point": "Defining relative clauses",
         "rule": "Describe a person using multiple defining relative clauses, correctly chosen and without commas.",
@@ -186,7 +271,10 @@
           "Wrong pronoun (which for people)",
           "Adding commas"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

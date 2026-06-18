@@ -8,93 +8,152 @@
   "subtitle_mm": "Reported statements — တစ်ဆင့်ပြန်ပြော (tense နောက်ဆုတ်)",
   "teach": {
     "situation_en": "Direct: \"I am tired.\" → She {v}said{/v} (that) she {v}was{/v} tired. Direct: \"I work in Yangon.\" → He {v}told{/v} me he {v}worked{/v} in Yangon. Direct: \"We will come.\" → They {v}said{/v} they {v}would{/v} come.",
-    "situation_mm": "တိုက်ရိုက် — \"I am tired.\" → သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။ တိုက်ရိုက် — \"I work in Yangon.\" → သူ ရန်ကုန်မှာ အလုပ်လုပ်တယ်လို့ ငါ့ကို ပြောတယ်။ တိုက်ရိုက် — \"We will come.\" → သူတို့ လာမယ်လို့ ပြောတယ်။",
+    "situation_mm": "တိုက်ရိုက်စကား (Direct speech) မှာဆိုရင် ဒီလိုပါ — \"I am tired.\" → ဒါကို ပြန်ပြောရင် \"သူမ ပင်ပန်းတယ်လို့ ပြောတယ်\" ပေါ့။ \"I work in Yangon.\" → ဆိုရင်တော့ \"သူ ရန်ကုန်မှာ အလုပ်လုပ်တယ်လို့ ငါ့ကို ပြောတယ်\" လို့ ဖြစ်သွားပါတယ်။ \"We will come.\" → ဆိုရင် \"သူတို့ လာမယ်လို့ ပြောတယ်\" ဆိုပြီး ပြန်ပြောရပါတယ်။",
     "use_en": "Reported (indirect) speech tells what someone said WITHOUT quotation marks. When the reporting verb is past (said/told), the tense usually 'backshifts' one step into the past. Pronouns and time words also change. Use 'say' with no person; use 'tell' + a person (told me / told her).",
-    "use_mm": "Reported (သွယ်ဝိုက်) speech ဟာ တစ်စုံတစ်ယောက် ပြောခဲ့တာကို quotation marks မပါဘဲ ပြန်ပြောတာ။ reporting verb က past (said/told) ဆိုရင် tense က အတိတ်ဘက် တစ်ဆင့် 'နောက်ဆုတ်' တယ် (backshift)။ nနာမ်စားနဲ့ အချိန်ပြ စကားလုံးတွေလည်း ပြောင်းတယ်။ 'say' က လူ မပါ၊ 'tell' က လူ + (told me / told her)။",
+    "use_mm": "Reported speech (သွယ်ဝိုက်စကား) ဆိုတာက တစ်စုံတစ်ယောက် ပြောခဲ့တဲ့စကားကို quotation marks မသုံးဘဲနဲ့ ပြန်ပြောပြတာမျိုးပါ။ အကယ်၍ reporting verb က past tense (ဥပမာ said/told) ဖြစ်နေခဲ့ရင်၊ tense ကို အတိတ်ဘက်ကို တစ်ဆင့် 'နောက်ဆုတ်' ပေးရပါတယ် (backshift)။ နာမ်စားတွေနဲ့ အချိန်ကိုပြတဲ့ စကားလုံးတွေကိုလည်း ပြောင်းပေးရတတ်ပါတယ်။ 'say' ရဲ့နောက်မှာ လူ မလိုက်ပါဘူး၊ 'tell' ရဲ့နောက်မှာတော့ လူ လိုက်ပါတယ် (ဥပမာ told me / told her)။",
     "timeline": "present → past · past → past perfect · will → would · can → could · am/is → was · are → were",
     "form": [
-      { "subject": "present → past", "form": "\"I work\" → he worked" },
-      { "subject": "will / can → would / could", "form": "\"I will go\" → he would go" },
-      { "subject": "say vs tell", "form": "said (no person) · told + me/her  (NOT 'said me')" },
-      { "subject": "pronouns / time", "form": "I → he/she · now → then · today → that day · tomorrow → the next day" }
+      {
+        "subject": "present → past",
+        "form": "\"I work\" → he worked"
+      },
+      {
+        "subject": "will / can → would / could",
+        "form": "\"I will go\" → he would go"
+      },
+      {
+        "subject": "say vs tell",
+        "form": "said (no person) · told + me/her  (NOT 'said me')"
+      },
+      {
+        "subject": "pronouns / time",
+        "form": "I → he/she · now → then · today → that day · tomorrow → the next day"
+      }
     ],
     "form_note_mm": [
-      "reporting verb က past (said/told) ဆိုရင် backshift — present → past, past → past perfect, will → would, can → could။",
-      "say + (လူ မပါ) · tell + လူ (told me, told her)။ ✗ said me → ✓ told me / said to me။",
-      "'that' က optional — She said (that) she was tired (ဖြုတ်လို့ ရတယ်)။",
-      "nနာမ်စား နဲ့ အချိန်ပြ စကားလုံးတွေ ပြောင်းတယ် — I→he, now→then, tomorrow→the next day။"
+      "Reporting verb က past tense (said/told) ဆိုရင် tense ကို နောက်တစ်ဆင့်ဆုတ်ပေးရပါတယ် (backshift)။ ဥပမာ — present → past, past → past perfect, will → would, can → could ဆိုပြီး ပြောင်းပေးရပါတယ်။",
+      "'say' ရဲ့နောက်မှာ လူ မလိုက်ပါဘူး။ 'tell' ရဲ့နောက်မှာတော့ လူ လိုက်ရပါတယ် (ဥပမာ told me, told her)။ ✗ said me လို့ မသုံးပါဘူး → ✓ told me / said to me ဆိုပြီး သုံးရပါတယ်။",
+      "'that' ကို ထည့်သုံးချင်လည်း ရတယ်၊ မသုံးချင်လည်း ရပါတယ် (optional)။ ဥပမာ — She said (that) she was tired မှာ 'that' ကို ဖြုတ်ရေးလို့လည်း ရပါတယ်။",
+      "နာမ်စားတွေနဲ့ အချိန်ပြစကားလုံးတွေကိုလည်း ပြောင်းပေးရပါတယ် — ဥပမာ I→he, now→then, tomorrow→the next day ဆိုပြီးတော့ပေါ့။"
     ],
     "trap_en": "Don't keep the original tense after a past reporting verb, and don't use 'said + person'.  WRONG: She said she is tired / He said me he works.  RIGHT: She said she was tired / He told me he worked.",
-    "trap_mm": "past reporting verb နောက်မှာ မူရင်း tense မထားနဲ့၊ 'said + လူ' လည်း မသုံးနဲ့။ ✗ She said she is tired / He said me he works → ✓ She said she was tired / He told me he worked။",
+    "trap_mm": "Past reporting verb (ဥပမာ said) ရဲ့နောက်မှာ မူရင်း tense ကို ဒီအတိုင်း မထားခဲ့ပါနဲ့နော်။ 'said' နောက်မှာလည်း လူ တိုက်ရိုက်မလိုက်ပါဘူး။ ✗ She said she is tired / He said me he works ဆိုတာမျိုးက မှားပါတယ်။ → ✓ She said she was tired / He told me he worked ဆိုပြီး ပြင်ပေးရပါမယ်။",
     "examples": [
-      { "en": "\"I'm busy.\" → She {v}said{/v} she {v}was{/v} busy.", "mm": "\"အလုပ်များတယ်\" → သူမ အလုပ်များတယ်လို့ ပြောတယ်။" },
-      { "en": "\"I live here.\" → He {v}told{/v} me he {v}lived{/v} there.", "mm": "\"ဒီမှာ နေတယ်\" → သူ အဲဒီမှာ နေတယ်လို့ ငါ့ကို ပြောတယ်။" },
-      { "en": "\"I'll help you.\" → She {v}said{/v} she {v}would{/v} help me.", "mm": "\"မင်းကို ကူမယ်\" → သူမ ငါ့ကို ကူမယ်လို့ ပြောတယ်။" },
-      { "en": "\"I can swim.\" → He {v}said{/v} he {v}could{/v} swim.", "mm": "\"ရေကူးတတ်တယ်\" → သူ ရေကူးတတ်တယ်လို့ ပြောတယ်။" }
+      {
+        "en": "\"I'm busy.\" → She {v}said{/v} she {v}was{/v} busy.",
+        "mm": "\"အလုပ်များတယ်\" → သူမ အလုပ်များတယ်လို့ ပြောတယ်။"
+      },
+      {
+        "en": "\"I live here.\" → He {v}told{/v} me he {v}lived{/v} there.",
+        "mm": "\"ဒီမှာ နေတယ်\" → သူ အဲဒီမှာ နေတယ်လို့ ငါ့ကို ပြောတယ်။"
+      },
+      {
+        "en": "\"I'll help you.\" → She {v}said{/v} she {v}would{/v} help me.",
+        "mm": "\"မင်းကို ကူမယ်\" → သူမ ငါ့ကို ကူမယ်လို့ ပြောတယ်။"
+      },
+      {
+        "en": "\"I can swim.\" → He {v}said{/v} he {v}could{/v} swim.",
+        "mm": "\"ရေကူးတတ်တယ်\" → သူ ရေကူးတတ်တယ်လို့ ပြောတယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "backshift the tense",
-        "rule_mm": "past reporting verb (said) → tense တစ်ဆင့် နောက်ဆုတ်",
+        "rule_mm": "Past reporting verb (ဥပမာ said) သုံးထားရင် tense ကို အတိတ်ဘက်ကို တစ်ဆင့် နောက်ဆုတ်ပေးရပါမယ်။",
         "en": "\"I am tired.\" → She {v}said{/v} she {v}was{/v} tired.",
-        "why_mm": "reporting verb က past (said) ဖြစ်လို့ reported clause ရဲ့ tense က အတိတ်ဘက် တစ်ဆင့် backshift တယ် — am → was။ pronoun လည်း I → she ပြောင်းတယ်။"
+        "why_mm": "Reporting verb က past tense (said) ဖြစ်တဲ့အတွက် reported clause ထဲက tense ကို အတိတ်ဘက်ကို တစ်ဆင့် backshift လုပ်ပေးရပါတယ်။ ဥပမာ am → was ပေါ့။ Pronoun ကိုလည်း I → she ဆိုပြီး ပြောင်းပေးထားပါတယ်။"
       },
       {
         "subject": "say vs tell",
-        "rule_mm": "say (လူ မပါ) · tell + လူ (told me)",
+        "rule_mm": "'say' ရဲ့နောက်မှာ လူ မလိုက်ပါဘူး၊ 'tell' ရဲ့နောက်မှာတော့ လူ (ဥပမာ told me) လိုက်ရပါတယ်။",
         "en": "He {v}told{/v} me he {v}worked{/v} in Yangon.",
-        "why_mm": "'tell' က နောက်မှာ လူ လိုတယ် (told me)၊ 'say' က လူ မပါဘူး။ ✗ said me → ✓ told me / said to me။"
+        "why_mm": "'tell' ရဲ့နောက်မှာ လူတစ်ယောက်ယောက် (ဥပမာ told me) လိုက်ဖို့လိုပါတယ်။ 'say' ရဲ့နောက်မှာတော့ လူ မလိုက်ပါဘူး။ ✗ said me လို့ မသုံးပါဘူးနော်။ ✓ told me ဒါမှမဟုတ် said to me ဆိုပြီး သုံးပေးရပါမယ်။"
       },
       {
         "subject": "will / can → would / could",
-        "rule_mm": "will → would · can → could (မူရင်း tense မထားနဲ့)",
+        "rule_mm": "Tense ကို backshift လုပ်တဲ့အခါ will → would, can → could ဆိုပြီး ပြောင်းပေးရပါတယ်။ မူရင်း tense ကို ဒီအတိုင်း မထားခဲ့ပါနဲ့နော်။",
         "en": "\"I will help.\" → She {v}said{/v} she {v}would{/v} help.  (✗ said she will)",
-        "why_mm": "backshift မှာ will → would, can → could ပြောင်းတယ်။ past reporting verb နောက်မှာ မူရင်း 'will' ကို မထားရဘူး။"
+        "why_mm": "Backshift လုပ်တဲ့အခါမှာ will → would နဲ့ can → could ဆိုပြီး ပြောင်းပေးရပါတယ်။ Past reporting verb ရဲ့နောက်မှာ မူရင်း 'will' ကို ဒီအတိုင်း ထားလို့မရပါဘူး။"
       }
     ],
     "checks": [
       {
         "prompt_en": "\"I am tired.\" → She said she ___ tired.",
         "prompt_mm": "သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။",
-        "options": ["was", "is", "were"],
+        "options": [
+          "was",
+          "is",
+          "were"
+        ],
         "answer": "was",
-        "explain_mm": "backshift — am → was။"
+        "explain_mm": "Tense ကို backshift လုပ်တဲ့အခါ am ကနေ was ကို ပြောင်းပေးရပါတယ်။"
       },
       {
         "prompt_en": "He ___ me that he worked in a bank.",
         "prompt_mm": "သူ ဘဏ်မှာ အလုပ်လုပ်တယ်လို့ ငါ့ကို ပြောတယ်။",
-        "options": ["told", "said", "say"],
+        "options": [
+          "told",
+          "said",
+          "say"
+        ],
         "answer": "told",
-        "explain_mm": "လူ (me) ပါတဲ့အခါ tell — told me (said me မဟုတ်)။"
+        "explain_mm": "စကားပြန်ပြောတဲ့အခါမှာ လူ (me) ပါလာရင် 'tell' ကို သုံးပေးရပါတယ် — told me ပေါ့။ (said me လို့ မသုံးပါဘူး)။"
       },
       {
         "prompt_en": "\"I will call you.\" → He said he ___ call me.",
         "prompt_mm": "သူ ဖုန်းခေါ်မယ်လို့ ပြောတယ်။",
-        "options": ["would", "will", "will be"],
+        "options": [
+          "would",
+          "will",
+          "will be"
+        ],
         "answer": "would",
-        "explain_mm": "backshift — will → would။"
+        "explain_mm": "Tense ကို backshift လုပ်တဲ့အခါ will ကနေ would ကို ပြောင်းပေးရပါတယ်။"
       }
     ],
     "model_paragraph_en": "I met an old friend yesterday and she had a lot of news. She {v}said{/v} she {v}was{/v} living in Bangkok now. She {v}told{/v} me she {v}had changed{/v} her job. She {v}said{/v} she {v}would{/v} visit Yangon soon. She also {v}told{/v} me that she {v}missed{/v} our old neighbourhood and {v}wanted{/v} to come home one day.",
-    "model_paragraph_mm": "မနေ့က သူငယ်ချင်းဟောင်းတစ်ယောက်နဲ့ တွေ့တော့ သတင်း အများကြီး ရှိတယ်။ အခု ဘန်ကောက်မှာ နေနေတယ်လို့ ပြောတယ်။ အလုပ် ပြောင်းလိုက်ပြီလို့ ငါ့ကို ပြောတယ်။ မကြာခင် ရန်ကုန် လာလည်မယ်လို့ ပြောတယ်။ ငါတို့ ရပ်ကွက်ဟောင်းကို လွမ်းတယ်၊ တစ်နေ့ ပြန်လာချင်တယ်လို့လည်း ပြောတယ်။",
+    "model_paragraph_mm": "မနေ့က သူငယ်ချင်းဟောင်းတစ်ယောက်နဲ့ တွေ့တော့ ပြောစရာသတင်းတွေ အများကြီးပဲ။ သူက အခု ဘန်ကောက်မှာ နေနေတယ်လို့ ပြောတယ်။ အလုပ်လည်း ပြောင်းလိုက်ပြီလို့ ငါ့ကို ပြောပြတယ်။ မကြာခင် ရန်ကုန်ကို လာလည်မယ်လို့လည်း ပြောသေးတယ်။ ပြီးတော့ ငါတို့ရပ်ကွက်ဟောင်းလေးကို လွမ်းတယ်၊ တစ်နေ့နေ့မှာ ပြန်လာချင်တယ်လို့လည်း ပြောသွားပါတယ်။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "reporting verb", "form": "said (no person) / told + person", "tag": "said / told me", "example": "She said … / told me …" },
-          { "subjects": "the reported tense", "form": "backshift one step into the past", "tag": "present → past", "highlight": true, "example": "\"I am\" → she was" }
+          {
+            "subjects": "reporting verb",
+            "form": "said (no person) / told + person",
+            "tag": "said / told me",
+            "example": "She said … / told me …"
+          },
+          {
+            "subjects": "the reported tense",
+            "form": "backshift one step into the past",
+            "tag": "present → past",
+            "highlight": true,
+            "example": "\"I am\" → she was"
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "သူများပြောတဲ့စကားကို တစ်ဆင့်ပြန်ပြောရင် ဘယ်လိုသုံးသလဲ",
+      "pattern": "Tense, pronoun နဲ့ အချိန်စကားလုံးတွေ ဘယ်လိုပြောင်းမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_say", "v_tell", "v_work", "v_live", "v_study", "v_like",
-      "v_want", "v_know", "v_see", "v_finish"
+      "v_say",
+      "v_tell",
+      "v_work",
+      "v_live",
+      "v_study",
+      "v_like",
+      "v_want",
+      "v_know",
+      "v_see",
+      "v_finish"
     ],
     "time_words": [],
     "verb_form": "past",
-    "note_mm": "say (လူ မပါ) / tell + လူ (told me)။ backshift — present → past (work → worked, am → was), will → would, can → could။ 'that' က optional။"
+    "note_mm": "သတိထားရမှာတွေကတော့ — 'say' နောက်မှာ လူ မလိုက်ပါဘူး၊ 'tell' နောက်မှာတော့ လူ (told me) လိုက်ပါတယ်။ Tense ကို backshift လုပ်ပေးရပါမယ် — present → past (ဥပမာ work → worked, am → was), will → would, can → could ဆိုပြီးပေါ့။ 'that' ကိုတော့ ထည့်ရေးချင်လည်းရတယ်၊ မထည့်ချင်လည်း ရပါတယ် (optional)။"
   },
   "exercises": [
     {
@@ -102,42 +161,64 @@
       "grade": "auto",
       "prompt_en": "\"I am tired.\" → She said she ___ tired.",
       "prompt_mm": "\"ပင်ပန်းတယ်\" → သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။",
-      "options": ["was", "is", "were"],
-      "answers": ["was"],
-      "explain_mm": "backshift — am → was (single subject)။"
+      "options": [
+        "was",
+        "is",
+        "were"
+      ],
+      "answers": [
+        "was"
+      ],
+      "explain_mm": "Backshift လုပ်တဲ့အခါ am → was ဆိုပြီး ပြောင်းပေးရပါတယ်။ (Subject က Singular / အနည်းကိန်း ဖြစ်လို့ပါ)။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "He ___ me that he worked in a bank.",
       "prompt_mm": "သူ ဘဏ်မှာ အလုပ်လုပ်တယ်လို့ ငါ့ကို ပြောတယ်။",
-      "options": ["told", "said", "say"],
-      "answers": ["told"],
-      "explain_mm": "လူ (me) ပါတဲ့အခါ tell သုံးပါ — told me (said me မဟုတ်)။"
+      "options": [
+        "told",
+        "said",
+        "say"
+      ],
+      "answers": [
+        "told"
+      ],
+      "explain_mm": "စကားပြန်ပြောတဲ့အခါမှာ လူ (me) ပါလာရင် 'tell' ကို သုံးပေးပါနော် — told me လို့ သုံးရပြီး (said me လို့ မသုံးရပါဘူး)။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "\"I will call you.\" → He said he ___ call me. (1 word)",
-      "prompt_mm": "\"ဖုန်းခေါ်မယ်\" → သူ ဖုန်းခေါ်မယ်လို့ ပြောတယ်။ ( will ကို backshift )",
-      "answers": ["would"],
-      "explain_mm": "backshift — will → would။"
+      "prompt_mm": "\"ဖုန်းခေါ်မယ်\" → သူ ဖုန်းခေါ်မယ်လို့ ပြောတယ်။ (will ကို backshift လုပ်ပေးရပါမယ်)",
+      "answers": [
+        "would"
+      ],
+      "explain_mm": "Tense ကို backshift လုပ်တဲ့အခါ will ကနေ would ကို ပြောင်းပေးရပါတယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "She said me that she is happy.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။ (say/tell + backshift)",
-      "answers": ["She told me that she was happy", "she told me that she was happy.", "She told me she was happy"],
-      "explain_mm": "လူ ပါတော့ told me · backshift — is → was → She told me she was happy။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။ (say/tell သုံးပုံနဲ့ backshift ကို သတိပြုပါ)။",
+      "answers": [
+        "She told me that she was happy",
+        "she told me that she was happy.",
+        "She told me she was happy"
+      ],
+      "explain_mm": "ဒီမှာ လူ (me) ပါတဲ့အတွက် told me ကို သုံးပေးရပါမယ်။ Tense ကိုလည်း backshift လုပ်ရမှာမို့ is → was ဖြစ်သွားပါတယ်။ → ဒါကြောင့် She told me she was happy။ ဆိုပြီး ဖြစ်သွားတာပါ။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Report it:  said  /  she  /  tired  /  was  /  she",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး reported sentence မှန် ရေးပါ။ ( She said + she was tired )",
-      "answers": ["She said she was tired", "she said she was tired.", "She said she was tired."],
-      "explain_mm": "She said (that) she was tired — backshift was။"
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး reported sentence အမှန်လေးတစ်ခု ဖြစ်အောင် ရေးပေးပါ။ ( She said + she was tired )",
+      "answers": [
+        "She said she was tired",
+        "she said she was tired.",
+        "She said she was tired."
+      ],
+      "explain_mm": "She said (that) she was tired — ဒီမှာ tense ကို backshift လုပ်ထားတဲ့အတွက် 'was' ကို သုံးထားတာပါ။"
     },
     {
       "kind": "scan_sentences",
@@ -145,9 +226,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — report what people said. Write 5–8 reported statements from direct speech you imagine. Use 'said' / 'told (someone)' and backshift the tense (present→past, will→would, can→could).",
-      "prompt_mm": "အပိုင်း ၁ — သူများ ပြောတာကို ပြန်ပြောပါ။ စိတ်ကူးထဲက တိုက်ရိုက် စကားတွေကို reported statement ၅–၈ ကြောင်း အဖြစ် ရေးပါ။ 'said' / 'told (တစ်ယောက်ယောက်)' သုံးပြီး tense ကို backshift လုပ်ပါ (present→past, will→would, can→could)။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း (၁) — သူများပြောတဲ့စကားကို ပြန်ပြောကြည့်ကြမယ်။ ကိုယ့်စိတ်ကူးထဲက တိုက်ရိုက်စကားပြောတွေကို reported statement တွေအနေနဲ့ (၅) ကြောင်းကနေ (၈) ကြောင်းလောက်အထိ ရေးကြည့်ပါ။ 'said' ဒါမှမဟုတ် 'told (တစ်ယောက်ယောက်)' ကို သုံးပြီး tense ကိုလည်း backshift လုပ်ပေးရပါမယ် (ဥပမာ present→past, will→would, can→could)။ ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်နော်။",
       "model": "My mother {v}said{/v} she {v}was{/v} proud of me. My friend {v}told{/v} me he {v}had found{/v} a new job. The teacher {v}said{/v} the test {v}would{/v} be easy. My sister {v}told{/v} me she {v}couldn't{/v} come. The doctor {v}said{/v} I {v}needed{/v} more rest.",
-      "explain_mm": "say (လူ မပါ) / tell + လူ · backshift — present→past, will→would, can→could။",
+      "explain_mm": "သတိရဖို့ကတော့ 'say' နောက်မှာ လူ မလိုက်ပါဘူး၊ 'tell' နောက်မှာတော့ လူ လိုက်ပါတယ်။ Tense ကိုလည်း backshift လုပ်ပေးရပါမယ် — present→past, will→would, can→could ဆိုပြီးတော့ပေါ့။",
       "grading": {
         "grammar_point": "Reported statements",
         "rule": "After a past reporting verb, backshift the tense one step; use 'say' with no person and 'tell' + person.",
@@ -162,16 +243,19 @@
           "'said me' instead of 'told me'",
           "Forgetting pronoun changes"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a conversation you remember. Write a short paragraph (4–6 sentences) reporting what someone told you recently (news, a story, advice), using reported statements with backshift.",
-      "prompt_mm": "အပိုင်း ၂ — မှတ်မိနေတဲ့ စကားဝိုင်း။ မကြာသေးခင်က တစ်စုံတစ်ယောက် မင်းကို ပြောခဲ့တာ (သတင်း၊ ဇာတ်လမ်း၊ အကြံ) ကို reported statement (backshift) သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း (၂) — ကိုယ်မှတ်မိနေတဲ့ စကားဝိုင်းတစ်ခုအကြောင်း ရေးကြည့်ကြမယ်။ မကြာသေးခင်က တစ်စုံတစ်ယောက်က ကိုယ့်ကို ပြောပြခဲ့တဲ့အကြောင်းအရာ (သတင်း၊ ဇာတ်လမ်း၊ ဒါမှမဟုတ် အကြံဉာဏ်) တစ်ခုကို reported statement (backshift) တွေ သုံးပြီးတော့ စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "Last week my uncle told me about his trip. He {v}said{/v} he {v}had visited{/v} three countries. He {v}told{/v} me the food {v}was{/v} amazing. He {v}said{/v} he {v}would{/v} go again next year. He also {v}said{/v} that he {v}missed{/v} home after a month.",
-      "explain_mm": "reported statement — say/tell + backshift။ nနာမ်စားနဲ့ tense ကို ညှိပါ။",
+      "explain_mm": "Reported statement မှာ 'say' နဲ့ 'tell' ကို နေရာမှန်အောင်သုံးပြီး tense ကို backshift လုပ်ဖို့ မမေ့ပါနဲ့နော်။ နာမ်စားနဲ့ tense ကိုလည်း အမြဲတမ်း ညှိပေးဖို့လိုပါတယ်။",
       "grading": {
         "grammar_point": "Reported statements",
         "rule": "Report a remembered conversation using past reporting verbs and consistent backshift.",
@@ -186,7 +270,10 @@
           "said + person",
           "Unchanged pronouns"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

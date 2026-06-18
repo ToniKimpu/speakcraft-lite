@@ -8,128 +8,196 @@
   "subtitle_mm": "might / could — ဖြစ်နိုင်ခြေ",
   "teach": {
     "situation_en": "I'm not sure about tonight. I {v}might go{/v} to the party, or I {v}might stay{/v} home. It {v}could rain{/v} later, so take an umbrella. She {v}might not come{/v} — she's very busy. This {v}could be{/v} a great year.",
-    "situation_mm": "ဒီည အတွက် မသေချာဘူး။ ပါတီကို သွားကောင်းသွားမယ်၊ ဒါမှမဟုတ် အိမ်မှာ နေကောင်းနေမယ်။ နောက်ပိုင်း မိုးရွာနိုင်လို့ ထီး ယူသွားပါ။ သူမ မလာဖြစ်နိုင်ဘူး — အရမ်း အလုပ်များနေတယ်။ ဒီနှစ်က အရမ်းကောင်းတဲ့ နှစ် ဖြစ်နိုင်တယ်။",
+    "situation_mm": "ဒီညအတွက်တော့ မသေချာသေးဘူး။ ပါတီကို သွားဖြစ်ချင်လည်း သွားဖြစ်မယ်၊ ဒါမှမဟုတ် အိမ်မှာပဲ နေကောင်းနေမယ်။ နောက်ပိုင်း မိုးရွာနိုင်တယ်နော်၊ ထီးယူသွားပါ။ သူမကတော့ မလာဖြစ်နိုင်လောက်ဘူး၊ အရမ်းအလုပ်များနေလို့လေ။ ဒီနှစ်က အရမ်းကောင်းတဲ့ နှစ်တစ်နှစ် ဖြစ်လာနိုင်ပါတယ်။",
     "use_en": "We use might and could + base verb to say something is possible but not certain. might not = possibly not. They are the same for every subject.",
-    "use_mm": "တစ်ခုခု ဖြစ်နိုင်ပေမဲ့ မသေချာဘူးဆိုတာ ပြောဖို့ might နဲ့ could + verb (base) သုံးပါတယ်။ might not = မဖြစ်နိုင် (ဖြစ်ကောင်းမှ မဖြစ်)။ subject အားလုံးအတွက် တူတူပါ။",
+    "use_mm": "တစ်ခုခုက ဖြစ်နိုင်ပေမဲ့ သိပ်မသေချာဘူးဆိုတာကို ပြောချင်တဲ့အခါမှာ ‘might’ နဲ့ ‘could’ ကို verb ရဲ့ base form နဲ့ တွဲသုံးပေးရပါတယ်။ အငြင်းဝါကျအတွက်ကတော့ ‘might not’ ကို သုံးပြီး ‘ဖြစ်ချင်မှ ဖြစ်မယ်’ လို့ ပြောတာပါ။ Subject က ဘာပဲဖြစ်ဖြစ် သုံးရတဲ့ပုံစံက အတူတူပါပဲ။",
     "timeline": "now ──▶? maybe   (possible, not sure)",
     "form": [
-      { "subject": "possibility", "form": "might / could + base  (might rain)" },
-      { "subject": "negative", "form": "might not + base  (might not come)" },
-      { "subject": "all subjects", "form": "same form (I / she / they might go)" },
-      { "subject": "meaning", "form": "maybe · not sure · possible" }
+      {
+        "subject": "possibility",
+        "form": "might / could + base  (might rain)"
+      },
+      {
+        "subject": "negative",
+        "form": "might not + base  (might not come)"
+      },
+      {
+        "subject": "all subjects",
+        "form": "same form (I / she / they might go)"
+      },
+      {
+        "subject": "meaning",
+        "form": "maybe · not sure · possible"
+      }
     ],
     "form_note_mm": [
-      "might / could + verb (base) — တစ်ခုခု ဖြစ်နိုင်ပေမဲ့ မသေချာဘူး (maybe)။",
-      "subject ဘယ်လိုဖြစ်ဖြစ် တူတူ (I might, she might, they might)။",
-      "negative — might not + verb (base) — She might not come။",
-      "ဒီနေရာမှာ could က ဖြစ်နိုင်ခြေ (possibility) ကို ပြတယ် — past အဓိပ္ပါယ် မဟုတ်ဘူး။"
+      "might / could + verb (base) — တစ်ခုခု ဖြစ်နိုင်ပေမဲ့ သိပ်မသေချာတဲ့အခါ (maybe) သုံးပါတယ်။",
+      "Subject က ဘာပဲဖြစ်ဖြစ် ပုံစံတူတူပါပဲ (ဥပမာ I might, she might, they might)။",
+      "Negative (အငြင်း) အတွက်ကတော့ might not + verb (base) ကို သုံးပါတယ် — ဥပမာ She might not come။",
+      "ဒီနေရာမှာသုံးတဲ့ could က ဖြစ်နိုင်ခြေ (possibility) ကို ပြောတာပါ — Past (အတိတ်) အဓိပ္ပာယ် မဟုတ်ပါဘူးနော်။"
     ],
     "trap_en": "After might/could, use the base verb — no -s, no 'to'.  WRONG: It might rains. / She could to come.   RIGHT: It might rain. / She could come.",
-    "trap_mm": "might / could နောက်မှာ verb (base) သုံးပါ — -s မထည့်နဲ့၊ to မထည့်နဲ့။ ✗ It might rains / She could to come → ✓ It might rain / She could come။",
+    "trap_mm": "‘might’ နဲ့ ‘could’ ရဲ့နောက်မှာ verb ရဲ့ base form ကိုပဲ သုံးပေးရပါတယ်နော်။ -s တို့၊ to တို့ လုံးဝထည့်သုံးလို့ မရပါဘူး။ ဥပမာကြည့်ရအောင် — ✗ It might rains / She could to come → ✓ It might rain / She could come။",
     "examples": [
-      { "en": "It {v}might rain{/v} this evening.", "mm": "ဒီည မိုးရွာနိုင်တယ်။" },
-      { "en": "We {v}could go{/v} to the beach.", "mm": "ပင်လယ်ကမ်းခြေ သွားကောင်းသွားနိုင်တယ်။" },
-      { "en": "He {v}might not be{/v} at home.", "mm": "သူ အိမ်မှာ မရှိနိုင်ဘူး။" },
-      { "en": "This {v}could be{/v} the answer.", "mm": "ဒါ အဖြေ ဖြစ်နိုင်တယ်။" }
+      {
+        "en": "It {v}might rain{/v} this evening.",
+        "mm": "ဒီည မိုးရွာနိုင်ပါတယ်။"
+      },
+      {
+        "en": "We {v}could go{/v} to the beach.",
+        "mm": "ပင်လယ်ကမ်းခြေကို သွားဖြစ်နိုင်ပါတယ်။"
+      },
+      {
+        "en": "He {v}might not be{/v} at home.",
+        "mm": "သူ အိမ်မှာ မရှိနိုင်ပါဘူး။"
+      },
+      {
+        "en": "This {v}could be{/v} the answer.",
+        "mm": "ဒါ အဖြေဖြစ်နိုင်ပါတယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "possibility — might",
-        "rule_mm": "might + verb (base) — ဖြစ်နိုင်ပေမဲ့ မသေချာ",
+        "rule_mm": "might + verb (base) — ဖြစ်နိုင်ပေမဲ့ သိပ်မသေချာတဲ့အခါ သုံးပါတယ်။",
         "en": "It {v}might rain{/v} this evening.",
-        "why_mm": "တစ်ခုခု ဖြစ်နိုင်ပေမဲ့ မသေချာဘူးဆိုတာ 'might' + base verb နဲ့ ပြောပါတယ် (maybe နဲ့ ဆင်တူ)။"
+        "why_mm": "တစ်ခုခုက ဖြစ်နိုင်ပေမဲ့ သိပ်မသေချာဘူးဆိုတဲ့ အဓိပ္ပာယ်အတွက် ‘might’ ကို base verb နဲ့ တွဲပြီး ပြောလေ့ရှိပါတယ် (maybe ဆိုတဲ့ စကားလုံးနဲ့ အဓိပ္ပာယ် ဆင်တူပါတယ်)။"
       },
       {
         "subject": "possibility — could",
-        "rule_mm": "could + verb (base) — ဖြစ်နိုင်ခြေ (past မဟုတ်)",
+        "rule_mm": "could + verb (base) — ဖြစ်နိုင်ခြေ (possibility) ကို ပြောတာပါ (Past tense မဟုတ်ပါဘူး)။",
         "en": "We {v}could go{/v} to the beach.",
-        "why_mm": "ဒီနေရာမှာ 'could' က ဖြစ်နိုင်ခြေ (possibility) ကို ပြတာပါ — အတိတ် အဓိပ္ပါယ် မဟုတ်ပါဘူး။ subject အားလုံး တူတူ။"
+        "why_mm": "ဒီနေရာမှာသုံးတဲ့ ‘could’ ကတော့ ဖြစ်နိုင်ခြေ (possibility) ကိုပဲ ပြတာပါနော်၊ Past tense (အတိတ်) အဓိပ္ပာယ် မဟုတ်ပါဘူး။ Subject အားလုံးအတွက် ပုံစံတူတူပဲ သုံးရပါတယ်။"
       },
       {
         "subject": "base verb — no -s, no 'to' (+ negative)",
-        "rule_mm": "might / could နောက်က verb base · negative — might not",
+        "rule_mm": "might / could နောက်မှာ verb base form လိုက်ရပြီး negative ကတော့ might not ပါ။",
         "en": "He {v}might not be{/v} at home.  (✗ might rains / could to come)",
-        "why_mm": "might / could က modal verb ဖြစ်လို့ နောက်က verb ကို base form ထားရတယ် — -s မထည့်ဘူး၊ 'to' မထည့်ဘူး။ negative က 'might not' + base verb။"
+        "why_mm": "‘might’ နဲ့ ‘could’ က modal verb တွေဖြစ်တဲ့အတွက် သူတို့နောက်က verb ကို အမြဲတမ်း base form ပဲ ထားပေးရပါတယ်။ ဆိုလိုတာက -s တို့၊ ‘to’ တို့ ထည့်စရာမလိုပါဘူး။ Negative (အငြင်း) ပြောချင်ရင်တော့ ‘might not’ + base verb ပုံစံကို သုံးပေးရပါမယ်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "Take an umbrella. It ___ later.",
-        "prompt_mm": "ထီး ယူသွားပါ။ နောက်ပိုင်း မိုးရွာနိုင်တယ်။",
-        "options": ["might rain", "might rains", "might to rain"],
+        "prompt_mm": "ထီးယူသွားပါဦးနော်။ နောက်ပိုင်း မိုးရွာနိုင်လို့ပါ။",
+        "options": [
+          "might rain",
+          "might rains",
+          "might to rain"
+        ],
         "answer": "might rain",
-        "explain_mm": "might + verb (base) → might rain။"
+        "explain_mm": "might + verb (base) ပုံစံကိုသုံးပြီး → might rain လို့ရေးရပါမယ်။"
       },
       {
         "prompt_en": "I'm not sure. We ___ to the cinema.",
-        "prompt_mm": "မသေချာဘူး။ ရုပ်ရှင်ရုံ သွားကောင်းသွားနိုင်တယ်။",
-        "options": ["could go", "could goes", "could to go"],
+        "prompt_mm": "မသေချာသေးဘူး။ ရုပ်ရှင်ရုံကို သွားဖြစ်နိုင်ပါတယ်။",
+        "options": [
+          "could go",
+          "could goes",
+          "could to go"
+        ],
         "answer": "could go",
-        "explain_mm": "could + verb (base) → could go (ဖြစ်နိုင်ခြေ)။"
+        "explain_mm": "could + verb (base) ပုံစံကိုသုံးပြီး → could go လို့ရေးရပါမယ် (ဒါက ဖြစ်နိုင်ခြေကို ပြောတာပါ)။"
       },
       {
         "prompt_en": "She's busy, so she ___.",
-        "prompt_mm": "သူမ အလုပ်များနေလို့ မလာဖြစ်နိုင်ဘူး။",
-        "options": ["might not come", "might not comes", "might don't come"],
+        "prompt_mm": "သူမက အလုပ်များနေလို့ မလာဖြစ်နိုင်ပါဘူး။",
+        "options": [
+          "might not come",
+          "might not comes",
+          "might don't come"
+        ],
         "answer": "might not come",
-        "explain_mm": "negative — might not + verb (base) → might not come။"
+        "explain_mm": "Negative (အငြင်း) ပုံစံ might not + verb (base) → might not come လို့ သုံးရပါမယ်။"
       }
     ],
     "model_paragraph_en": "I'm not sure about my holiday yet. I {v}might travel{/v} to Thailand, or I {v}could stay{/v} in Myanmar. If I have enough money, I {v}might fly{/v}; if not, I {v}could take{/v} the bus. The weather {v}might be{/v} hot, so I {v}might not go{/v} in April. Anything could happen!",
-    "model_paragraph_mm": "ကျွန်တော့် အားလပ်ရက် အတွက် မသေချာသေးဘူး။ ထိုင်းကို သွားကောင်းသွားမယ်၊ ဒါမှမဟုတ် မြန်မာမှာ နေကောင်းနေမယ်။ ပိုက်ဆံ လုံလောက်ရင် လေယာဉ်နဲ့ သွားကောင်းသွားမယ်၊ မလုံလောက်ရင် ဘတ်စ်ကားနဲ့ သွားနိုင်တယ်။ ရာသီဥတု ပူနိုင်လို့ ဧပြီမှာ မသွားဖြစ်ဘူး ဖြစ်နိုင်တယ်။ ဘာမဆို ဖြစ်နိုင်တယ်!",
-    "blocks": []
+    "model_paragraph_mm": "ကျွန်တော့်ရဲ့ အားလပ်ရက်အတွက်တော့ ဘာလုပ်မယ်ဆိုတာ မသေချာသေးပါဘူး။ ထိုင်းကို သွားဖြစ်ချင်လည်း သွားဖြစ်မယ်၊ ဒါမှမဟုတ် မြန်မာမှာပဲ နေဖြစ်လောက်တယ်။ ပိုက်ဆံသာ လုံလောက်ရင် လေယာဉ်နဲ့ သွားဖြစ်နိုင်တယ်၊ မလုံလောက်ရင်တော့ ဘတ်စ်ကားနဲ့ပဲ သွားရနိုင်ပါတယ်။ ရာသီဥတုက ပူနိုင်တဲ့အတွက် ဧပြီလမှာတော့ မသွားဖြစ်လောက်ပါဘူး။ ဘာမဆို ဖြစ်နိုင်တာပဲလေ!",
+    "blocks": [],
+    "step_titles_mm": {
+      "when": "‘might’ နဲ့ ‘could’ ကို ဘယ်လိုအခြေအနေမှာ သုံးမလဲ",
+      "pattern": "‘might / could’ နဲ့ Verb ကို ဘယ်လို တွဲသုံးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_go", "v_study", "v_work", "v_play", "v_cook", "v_read",
-      "v_eat", "v_watch", "v_start", "v_live"
+      "v_go",
+      "v_study",
+      "v_work",
+      "v_play",
+      "v_cook",
+      "v_read",
+      "v_eat",
+      "v_watch",
+      "v_start",
+      "v_live"
     ],
     "time_words": [],
     "verb_form": "base",
-    "note_mm": "might / could / might not နောက်က verb က base form (go, rain, be)။ မသေချာတဲ့ ဖြစ်နိုင်ခြေကို ပြောတဲ့အခါ သုံးပါ — maybe, perhaps နဲ့ အဓိပ္ပါယ် ဆင်တူတယ်။"
+    "note_mm": "‘might’, ‘could’, ‘might not’ တို့ရဲ့နောက်မှာ လိုက်တဲ့ verb က အမြဲတမ်း base form (ဥပမာ go, rain, be) ဖြစ်ရပါမယ်။ သိပ်မသေချာတဲ့ ဖြစ်နိုင်ခြေတွေကို ပြောချင်တဲ့အခါမှာ သုံးပေးရပြီး သူတို့ရဲ့ အဓိပ္ပာယ်က ‘maybe’ ဒါမှမဟုတ် ‘perhaps’ နဲ့ ဆင်တူပါတယ်နော်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Take an umbrella. It ___ later. (rain)",
-      "prompt_mm": "ထီး ယူသွားပါ။ နောက်ပိုင်း မိုးရွာနိုင်တယ်။",
-      "options": ["might rain", "might rains", "might to rain"],
-      "answers": ["might rain"],
-      "explain_mm": "might + verb (base) → might rain။"
+      "prompt_mm": "ထီးယူသွားပါဦးနော်။ နောက်ပိုင်း မိုးရွာနိုင်လို့ပါ။",
+      "options": [
+        "might rain",
+        "might rains",
+        "might to rain"
+      ],
+      "answers": [
+        "might rain"
+      ],
+      "explain_mm": "might + verb (base) ပုံစံကိုသုံးပြီး → might rain လို့ရေးရပါမယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I'm not sure. We ___ to the cinema. (go)",
-      "prompt_mm": "မသေချာဘူး။ ရုပ်ရှင်ရုံ သွားကောင်းသွားနိုင်တယ်။",
-      "options": ["could go", "could goes", "could to go"],
-      "answers": ["could go"],
-      "explain_mm": "could + verb (base) → could go (ဖြစ်နိုင်ခြေ)။"
+      "prompt_mm": "မသေချာသေးဘူး။ ရုပ်ရှင်ရုံကို သွားဖြစ်နိုင်ပါတယ်။",
+      "options": [
+        "could go",
+        "could goes",
+        "could to go"
+      ],
+      "answers": [
+        "could go"
+      ],
+      "explain_mm": "could + verb (base) ပုံစံကိုသုံးပြီး → could go လို့ရေးရပါမယ် (ဒါက ဖြစ်နိုင်ခြေကို ပြောတာပါ)။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "She's busy, so she ___ (might / not / come).",
-      "prompt_mm": "သူမ အလုပ်များနေလို့ မလာဖြစ်နိုင်ဘူး။ ( might not + come )",
-      "answers": ["might not come"],
-      "explain_mm": "negative — might not + verb (base) → might not come။"
+      "prompt_mm": "သူမက အလုပ်များနေလို့ မလာဖြစ်နိုင်ပါဘူး။ ( might not + come )",
+      "answers": [
+        "might not come"
+      ],
+      "explain_mm": "Negative (အငြင်း) ပုံစံ might not + verb (base) → might not come လို့ သုံးရပါမယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "It might rains tomorrow.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["It might rain tomorrow", "it might rain tomorrow."],
-      "explain_mm": "might နောက်က verb base → rain (rains မဟုတ်ဘူး)။"
+      "prompt_mm": "မှားနေတဲ့ ဝါကျလေးကို ပြင်ပေးပါဦး။",
+      "answers": [
+        "It might rain tomorrow",
+        "it might rain tomorrow."
+      ],
+      "explain_mm": "‘might’ ရဲ့နောက်မှာ verb base form ကိုပဲ သုံးရမှာမို့လို့ ‘rain’ ဖြစ်ရပါမယ် (‘rains’ မဟုတ်ပါဘူးနော်)။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  might  /  late  /  be  /  they",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["They might be late", "they might be late."],
-      "explain_mm": "Subject + might + verb (base) + ... → They might be late."
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးလေးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်ဖြစ်အောင် ရေးပေးပါနော်။",
+      "answers": [
+        "They might be late",
+        "they might be late."
+      ],
+      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + might + verb (base) + ... ပုံစံဖြစ်ရပါမယ် → ဥပမာ They might be late."
     },
     {
       "kind": "scan_sentences",
@@ -137,9 +205,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — maybe plans. Write 5–8 sentences about things you are not sure about (this weekend, next year), using might, could and might not.",
-      "prompt_mm": "အပိုင်း ၁ — မသေချာတဲ့ အစီအစဉ်များ။ မသေချာတဲ့ အရာတွေ (ဒီ စနေတနင်္ဂနွေ၊ နောက်နှစ်) အကြောင်း might, could, might not သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း (၁) — မသေချာတဲ့ အစီအစဉ်လေးတွေ။ ကိုယ်သိပ်မသေချာသေးတဲ့ အစီအစဉ်တွေ (ဥပမာ ဒီစနေ၊တနင်္ဂနွေမှာ ဘာလုပ်မလဲ၊ နောက်နှစ်မှာ ဘာဖြစ်မလဲ) အကြောင်းကို ‘might’, ‘could’, ‘might not’ တို့ကိုသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပါနော်။ ရေးပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
       "model": "This weekend I {v}might visit{/v} my friend. We {v}could go{/v} to the market. I {v}might not have{/v} time on Sunday. It {v}could be{/v} a quiet weekend. I {v}might start{/v} a new book.",
-      "explain_mm": "might / could / might not + verb (base) ကို မှန်အောင် သုံးပါ — subject ဘယ်လိုဖြစ်ဖြစ် တူတူ၊ -s မထည့်ဘူး။",
+      "explain_mm": "‘might / could / might not’ ရဲ့နောက်မှာ verb (base) ကို မှန်မှန်ကန်ကန် သုံးဖို့ သတိရပါနော်။ Subject က ဘာပဲဖြစ်ဖြစ် ပုံစံတူတူပါပဲ၊ -s လုံးဝထည့်စရာ မလိုပါဘူး။",
       "grading": {
         "grammar_point": "might / could (possibility)",
         "rule": "might/could + base verb for present/future possibility; might not for negative possibility. Same form for all subjects.",
@@ -154,16 +222,19 @@
           "might + to (might to go)",
           "Using will (certain) instead of might/could (possible)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — an uncertain future. Write a short paragraph (4–6 sentences) about what your life might be like in ten years, using might, could and might not.",
-      "prompt_mm": "အပိုင်း ၂ — မသေချာတဲ့ အနာဂတ်။ နောက် ၁၀ နှစ်မှာ ကိုယ့်ဘဝ ဘယ်လို ဖြစ်နိုင်လဲဆိုတာ might, could, might not သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း (၂) — ကိုယ့်ရဲ့ မသေချာသေးတဲ့ အနာဂတ်။ နောက် ၁၀ နှစ်လောက်မှာ ကိုယ့်ဘဝက ဘယ်လိုတွေဖြစ်နေနိုင်မလဲ ဆိုတာကို ‘might’, ‘could’, ‘might not’ တို့ကိုသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးကြည့်ပေးပါ။ ရေးပြီးရင်တော့ scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "In ten years I {v}might live{/v} in another country. I {v}could have{/v} my own business. I {v}might not be{/v} in this city. I {v}could speak{/v} three languages. Life {v}might be{/v} very different — who knows?",
-      "explain_mm": "ဖြစ်နိုင်ခြေကို might / could နဲ့ ဖော်ပြပါ။ verb က base form။ မသေချာတာကို will နဲ့ မရောပါနဲ့။",
+      "explain_mm": "ဖြစ်နိုင်ခြေ (possibility) ကို ပြောချင်ရင် ‘might’ ဒါမှမဟုတ် ‘could’ ကို သုံးပေးပါ။ သူတို့နောက်က verb ကတော့ အမြဲတမ်း base form ပါပဲ။ သတိထားရမှာက သိပ်မသေချာတဲ့ ကိစ္စတွေအတွက် ‘will’ ကို သုံးလေ့မရှိတာမို့၊ မရောထွေးမိဖို့ အရေးကြီးပါတယ်နော်။",
       "grading": {
         "grammar_point": "might / could (possibility)",
         "rule": "Speculate about the future with might/could + base verb; might not for negatives.",
@@ -178,7 +249,10 @@
           "Using will for uncertain things",
           "Wrong negative form"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

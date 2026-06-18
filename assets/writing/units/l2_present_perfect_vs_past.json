@@ -8,124 +8,188 @@
   "subtitle_mm": "present perfect vs past simple",
   "teach": {
     "situation_en": "I {v}have been{/v} to Thailand. I {v}went{/v} there {t}in 2019{/t}. I {v}have eaten{/v} sushi many times, but I {v}ate{/v} it for the first time {t}last year{/t}. A specific time → past simple; experience with no time → present perfect.",
-    "situation_mm": "ထိုင်းနိုင်ငံကို ရောက်ဖူးတယ် (အတွေ့အကြုံ)။ ၂၀၁၉ မှာ သွားခဲ့တာ (အချိန်တိ)။ ဆူရှီ အကြိမ်ကြိမ် စားဖူးတယ်၊ ဒါပေမဲ့ ပထမဆုံး စားခဲ့တာက မနှစ်က။ အချိန်တိ ပါရင် past simple; အချိန်မပြောတဲ့ အတွေ့အကြုံ ဆိုရင် present perfect။",
+    "situation_mm": "ထိုင်းနိုင်ငံကို ရောက်ဖူးတယ်ဆိုတာက (အတွေ့အကြုံ) ပါ။ ၂၀၁၉ မှာ သွားခဲ့တယ်ဆိုတာကတော့ (အချိန်အတိအကျ) ပါ။ ဆူရှီ အကြိမ်ကြိမ် စားဖူးတယ်၊ ဒါပေမဲ့ ပထမဆုံး စားခဲ့တာကတော့ မနှစ်ကပေါ့။ ဒီတော့ အချိန်အတိအကျ ပါလာရင် past simple သုံးပြီး၊ အချိန်အတိအကျ မပြောဘဲ အတွေ့အကြုံကိုပဲ ပြောချင်ရင်တော့ present perfect ကို သုံးပေးရပါတယ်နော်။",
     "use_en": "Use the past simple for a finished action at a specific time (yesterday, in 2019, last week, ago). Use the present perfect for experience or unfinished time, when the exact time is not important or not stated.",
-    "use_mm": "ပြီးဆုံးပြီး အချိန်တိ ပါတဲ့ လုပ်ဆောင်မှုအတွက် past simple (yesterday, in 2019, ago)။ အချိန် အရေးမကြီးတဲ့ ဒါမှမဟုတ် မပြောတဲ့ အတွေ့အကြုံအတွက် present perfect (have / has + V3)။",
+    "use_mm": "ပြီးသွားပြီဖြစ်ပြီး အချိန်အတိအကျ ပါတဲ့ ကိစ္စတွေအတွက်ဆိုရင် past simple ကို သုံးပါတယ် (ဥပမာ yesterday, in 2019, ago)။ အချိန်က အရေးမကြီးဘူး၊ ဒါမှမဟုတ် အချိန်ကို ထည့်မပြောဘဲ အတွေ့အကြုံကိုပဲ ပြောချင်တဲ့အခါမျိုးမှာတော့ present perfect (have / has + V3) ကို သုံးပေးရပါတယ်နော်။",
     "timeline": "past simple: ──●(when)──▶   |   present perfect: ✓·····●(now)",
     "form": [
-      { "subject": "finished + a time", "form": "past simple — I saw him yesterday." },
-      { "subject": "experience / no time", "form": "present perfect — I have seen him." },
-      { "subject": "signal: past simple", "form": "yesterday · last week · in 2019 · ago" },
-      { "subject": "signal: present perfect", "form": "ever · never · already · yet · since · for" }
+      {
+        "subject": "finished + a time",
+        "form": "past simple — I saw him yesterday."
+      },
+      {
+        "subject": "experience / no time",
+        "form": "present perfect — I have seen him."
+      },
+      {
+        "subject": "signal: past simple",
+        "form": "yesterday · last week · in 2019 · ago"
+      },
+      {
+        "subject": "signal: present perfect",
+        "form": "ever · never · already · yet · since · for"
+      }
     ],
     "form_note_mm": [
-      "အချိန်တိ (yesterday, in 2019, two days ago) ပါရင် → past simple (V2)။",
-      "အချိန် မပြောဘဲ အတွေ့အကြုံ ဆိုရင် → present perfect (have / has + V3)။",
-      "ago, last …, in + year → past simple; for, since, ever, never, already, yet → present perfect။",
-      "ပြီးပြတ်တဲ့ အချိန်နဲ့ present perfect မတွဲရဘူး — ✗ I have seen him yesterday → ✓ I saw him yesterday။"
+      "အချိန်အတိအကျ (ဥပမာ yesterday, in 2019, two days ago) ပါလာရင် → past simple (V2) ကို သုံးပေးရပါမယ်။",
+      "အချိန်ကို ထည့်မပြောဘဲ အတွေ့အကြုံကိုပဲ ပြောချင်ရင် → present perfect (have / has + V3) ကို သုံးပေးရပါမယ်။",
+      "ago, last…, in + year လို စကားလုံးတွေက past simple နဲ့ သုံးပြီး၊ for, since, ever, never, already, yet တို့ကတော့ present perfect နဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "ပြီးသွားတဲ့ အချိန်ကိုပြတဲ့ စကားလုံးနဲ့ present perfect ကို ဘယ်တော့မှ တွဲမသုံးရပါဘူးနော်။ ဥပမာ — ✗ I have seen him yesterday → ✓ I saw him yesterday။"
     ],
     "trap_en": "Don't use the present perfect with a finished time word.  WRONG: I have visited Bagan last year.   RIGHT: I visited Bagan last year. / I have visited Bagan (no time).",
-    "trap_mm": "ပြီးပြတ်တဲ့ အချိန်စကားလုံးနဲ့ present perfect မသုံးရဘူး။ ✗ I have visited Bagan last year → ✓ I visited Bagan last year (အချိန်တိ) / I have visited Bagan (အချိန် မပါ)။",
+    "trap_mm": "ပြီးသွားတဲ့ အချိန်ကိုပြတဲ့ စကားလုံးတွေနဲ့ present perfect ကို တွဲမသုံးရပါဘူးနော်။ ဥပမာ — ✗ I have visited Bagan last year ဆိုတာ မှားပါတယ်။ ✓ I visited Bagan last year (အချိန်အတိအကျ ပါလို့) ဒါမှမဟုတ် ✓ I have visited Bagan (အချိန် မပါဘဲ အတွေ့အကြုံကိုပဲ ပြောချင်ရင်) ဆိုပြီး သုံးရပါမယ်။",
     "examples": [
-      { "en": "I {v}have lost{/v} my keys. (I can't get in now)", "mm": "သော့ ပျောက်နေတယ် (အခု အိမ်ထဲ မဝင်နိုင်)။" },
-      { "en": "I {v}lost{/v} my keys {t}yesterday{/t}. (finished, a time)", "mm": "မနေ့က သော့ ပျောက်ခဲ့တယ် (ပြီးပြတ်၊ အချိန်တိ)။" },
-      { "en": "She {v}has lived{/v} here {t}for years{/t}. (still here)", "mm": "သူမ ဒီမှာ နှစ်များစွာ နေထိုင်ခဲ့ပြီ (အခုလည်း နေဆဲ)။" },
-      { "en": "She {v}lived{/v} there {t}in 2010{/t}. (finished)", "mm": "သူမ ၂၀၁၀ မှာ အဲဒီမှာ နေခဲ့တယ် (ပြီးပြတ်)။" }
+      {
+        "en": "I {v}have lost{/v} my keys. (I can't get in now)",
+        "mm": "သော့ ပျောက်နေတယ် (အခု အိမ်ထဲ ဝင်လို့မရဘူး)။"
+      },
+      {
+        "en": "I {v}lost{/v} my keys {t}yesterday{/t}. (finished, a time)",
+        "mm": "မနေ့က သော့ ပျောက်သွားခဲ့တယ် (ပြီးသွားတဲ့ ကိစ္စ၊ အချိန်အတိအကျ)။"
+      },
+      {
+        "en": "She {v}has lived{/v} here {t}for years{/t}. (still here)",
+        "mm": "သူမ ဒီမှာ နှစ်တော်တော်ကြာ နေခဲ့ပြီးပြီ (အခုထိလည်း နေတုန်းပဲ)။"
+      },
+      {
+        "en": "She {v}lived{/v} there {t}in 2010{/t}. (finished)",
+        "mm": "သူမ ၂၀၁၀ တုန်းက အဲဒီမှာ နေခဲ့တယ် (အခုမနေတော့ဘူး၊ ပြီးသွားပြီ)။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "finished + a time",
-        "rule_mm": "အချိန်တိ ပါရင် → past simple (V2)",
+        "rule_mm": "အချိန်အတိအကျ ပါလာရင် → past simple (V2) ကို သုံးပေးရပါတယ်နော်။",
         "en": "I {v}went{/v} to Paris {t}in 2019{/t}.",
-        "why_mm": "'in 2019' က ပြီးပြတ်သွားတဲ့ အချိန်တိ ဖြစ်လို့ past simple (went = V2) ကို သုံးပါတယ်။ signal — yesterday, last week, ago, in + year။"
+        "why_mm": "'in 2019' ဆိုတာက ပြီးသွားတဲ့ အချိန်အတိအကျကို ပြောတာဖြစ်လို့ past simple (went = V2) ကို သုံးပေးရတာပါ။ သူ့ရဲ့ signal words တွေကတော့ — yesterday, last week, ago, in + year တို့ ဖြစ်ပါတယ်။"
       },
       {
         "subject": "experience / no time",
-        "rule_mm": "အချိန်မပြောတဲ့ အတွေ့အကြုံ → present perfect",
+        "rule_mm": "အချိန်ကို ထည့်မပြောဘဲ အတွေ့အကြုံကိုပဲ ပြောချင်ရင် → present perfect ကို သုံးပေးရပါတယ်။",
         "en": "I {v}have been{/v} to Paris.",
-        "why_mm": "ဘယ်တုန်းက ဆိုတာ မပြောဘဲ အတွေ့အကြုံ ပြောတာ ဖြစ်လို့ present perfect (have + V3) ကို သုံးပါတယ်။ signal — ever, never, already, yet, for, since။"
+        "why_mm": "ဘယ်အချိန်တုန်းကလဲဆိုတာ အတိအကျမပြောဘဲ အတွေ့အကြုံကိုပဲ ပြောချင်တာမို့လို့ present perfect (have + V3) ကို သုံးပေးရတာပါ။ သူ့ရဲ့ signal words တွေကတော့ — ever, never, already, yet, for, since တို့ ဖြစ်ပါတယ်။"
       },
       {
         "subject": "don't mix them",
-        "rule_mm": "ပြီးပြတ်တဲ့ အချိန်နဲ့ present perfect မတွဲရ",
+        "rule_mm": "ပြီးသွားတဲ့ အချိန်ကိုပြတဲ့ စကားလုံးနဲ့ present perfect ကို တွဲမသုံးရပါဘူးနော်။",
         "en": "I {v}saw{/v} him {t}yesterday{/t}.  (✗ have seen him yesterday)",
-        "why_mm": "'yesterday' က ပြီးပြတ်တဲ့ အချိန် ဖြစ်လို့ past simple (saw) ပဲ ရပါတယ် — 'have seen … yesterday' မှားပါတယ်။"
+        "why_mm": "'yesterday' ဆိုတာ ပြီးသွားတဲ့ အချိန်ကိုပြတာဖြစ်လို့ past simple (saw) ကိုပဲ သုံးလို့ရပါတယ်နော်။ 'have seen … yesterday' ဆိုရင်တော့ မှားပါတယ်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "I ___ to Paris in 2018.",
-        "prompt_mm": "၂၀၁၈ မှာ ပါရီကို သွားခဲ့တယ်။",
-        "options": ["have gone", "went", "have been"],
+        "prompt_mm": "၂၀၁၈ တုန်းက ပါရီကို သွားခဲ့တယ်။",
+        "options": [
+          "have gone",
+          "went",
+          "have been"
+        ],
         "answer": "went",
-        "explain_mm": "'in 2018' = အချိန်တိ → past simple → went။"
+        "explain_mm": "'in 2018' ဆိုတာ အချိန်အတိအကျကို ပြောတာမို့လို့ past simple ဖြစ်တဲ့ 'went' ကို သုံးရပါမယ်။"
       },
       {
         "prompt_en": "She ___ here since 2015.",
-        "prompt_mm": "သူမ ၂၀၁၅ ကတည်းက ဒီမှာ နေထိုင်ခဲ့ပြီ။",
-        "options": ["has lived", "lived", "lives"],
+        "prompt_mm": "သူမ ၂၀၁၅ ကတည်းက ဒီမှာ နေလာခဲ့တာပါ။",
+        "options": [
+          "has lived",
+          "lived",
+          "lives"
+        ],
         "answer": "has lived",
-        "explain_mm": "'since 2015' = အခုထိ ဆက်နေဆဲ → present perfect → has lived။"
+        "explain_mm": "'since 2015' ဆိုတာ အတိတ်ကစပြီး အခုထိ ဆက်နေတုန်းဆိုတဲ့ အဓိပ္ပာယ်မို့လို့ present perfect (has lived) ကို သုံးရပါမယ်။"
       },
       {
         "prompt_en": "We ___ dinner an hour ago.",
-        "prompt_mm": "ကျွန်တော်တို့ လွန်ခဲ့တဲ့ တစ်နာရီက ညစာ စားခဲ့တယ်။",
-        "options": ["have eaten", "ate", "have had"],
+        "prompt_mm": "ကျွန်တော်တို့ လွန်ခဲ့တဲ့ တစ်နာရီတုန်းက ညစာ စားခဲ့ကြတယ်။",
+        "options": [
+          "have eaten",
+          "ate",
+          "have had"
+        ],
         "answer": "ate",
-        "explain_mm": "'an hour ago' = အချိန်တိ → past simple → ate။"
+        "explain_mm": "'an hour ago' ဆိုတာ အချိန်အတိအကျကို ပြောတာဖြစ်လို့ past simple ဖြစ်တဲ့ 'ate' ကို သုံးရပါမယ်။"
       }
     ],
     "model_paragraph_en": "My grandfather {v}has had{/v} an interesting life. He {v}was born{/v} in 1950 and {v}grew up{/v} in a small village. He {v}has travelled{/v} to many countries, but he {v}moved{/v} to Yangon {t}in 1980{/t}. He {v}has worked{/v} as a teacher for thirty years, and he still loves it.",
-    "model_paragraph_mm": "ကျွန်တော့်အဖိုးမှာ စိတ်ဝင်စားဖွယ် ဘဝတစ်ခု ရှိခဲ့တယ်။ ၁၉၅၀ မှာ မွေးပြီး ရွာငယ်လေးမှာ ကြီးပြင်းခဲ့တယ်။ နိုင်ငံ အများကြီးကို သွားဖူးပေမဲ့ ၁၉၈၀ မှာ ရန်ကုန်ကို ပြောင်းခဲ့တယ်။ ဆရာအဖြစ် အနှစ် ၃၀ လုပ်ခဲ့ပြီး အခုထိ နှစ်သက်နေဆဲပါ။"
+    "model_paragraph_mm": "ကျွန်တော့်အဘိုးမှာ စိတ်ဝင်စားစရာကောင်းတဲ့ ဘဝလေးတစ်ခု ရှိခဲ့ပါတယ်။ သူက ၁၉၅၀ မှာ မွေးပြီး ရွာငယ်လေးတစ်ရွာမှာ ကြီးပြင်းခဲ့တာပါ။ နိုင်ငံပေါင်းများစွာကိုလည်း သွားဖူးပေမဲ့ ၁၉၈၀ မှာတော့ ရန်ကုန်ကို ပြောင်းလာခဲ့တယ်။ ဆရာတစ်ယောက်အနေနဲ့ အနှစ် ၃၀ ကြာ လုပ်ကိုင်ခဲ့ပြီး အခုထိလည်း သူ့အလုပ်ကို သူနှစ်သက်နေတုန်းပါပဲ။",
+    "step_titles_mm": {
+      "when": "Present perfect နဲ့ past simple ဘယ်လိုခွဲသုံးမလဲ",
+      "pattern": "Past simple နဲ့ present perfect ဘယ်ဟာရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],
     "time_words": [],
-    "note_mm": "Signal word တွေက ဘယ် tense လဲဆိုတာ ပြတယ် — past simple: yesterday, last week/year, in 2019, two days ago, when …? ; present perfect: ever, never, already, yet, just, so far, for + ကြာချိန်, since + စချိန်။"
+    "note_mm": "Signal word လေးတွေကို ကြည့်ပြီး ဘယ် tense ကို သုံးရမလဲဆိုတာ သိနိုင်ပါတယ်နော်။ — past simple အတွက်ကတော့: yesterday, last week/year, in 2019, two days ago, when …? တို့ဖြစ်ပြီး၊ present perfect အတွက်ကတော့: ever, never, already, yet, just, so far, for + ကြာချိန်, since + စချိန် တို့ပဲ ဖြစ်ပါတယ်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I ___ to Paris in 2018.",
-      "prompt_mm": "၂၀၁၈ မှာ ပါရီကို သွားခဲ့တယ်။",
-      "options": ["have gone", "went", "have been"],
-      "answers": ["went"],
-      "explain_mm": "‘in 2018’ — အချိန်တိ ဖြစ်လို့ past simple → went။"
+      "prompt_mm": "၂၀၁၈ တုန်းက ပါရီကို သွားခဲ့တယ်။",
+      "options": [
+        "have gone",
+        "went",
+        "have been"
+      ],
+      "answers": [
+        "went"
+      ],
+      "explain_mm": "‘in 2018’ ဆိုတာ အချိန်အတိအကျကို ပြောတာဖြစ်လို့ past simple ဖြစ်တဲ့ ‘went’ ကို သုံးရပါမယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "___ you ever ___ sushi?",
-      "prompt_mm": "ဆူရှီ တစ်ခါမှ စားဖူးလား။",
-      "options": ["Have you eaten", "Did you eat", "Do you eat"],
-      "answers": ["Have you eaten"],
-      "explain_mm": "‘ever’ (အတွေ့အကြုံ) — present perfect → Have you eaten။"
+      "prompt_mm": "ဆူရှီ တစ်ခါမှ စားဖူးသလား။",
+      "options": [
+        "Have you eaten",
+        "Did you eat",
+        "Do you eat"
+      ],
+      "answers": [
+        "Have you eaten"
+      ],
+      "explain_mm": "‘ever’ ဆိုတာက အတွေ့အကြုံကို မေးတာဖြစ်လို့ present perfect → Have you eaten ကို သုံးပေးရပါမယ်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "She ___ (live) here since 2015.",
-      "prompt_mm": "သူမ ၂၀၁၅ ကတည်းက ဒီမှာ နေထိုင်ခဲ့ပြီ။",
-      "answers": ["has lived", "'s lived"],
-      "explain_mm": "‘since 2015’ — အခုထိ ဆက်နေဆဲ → present perfect (has lived)။"
+      "prompt_mm": "သူမ ၂၀၁၅ ကတည်းက ဒီမှာ နေလာခဲ့တာပါ။",
+      "answers": [
+        "has lived",
+        "'s lived"
+      ],
+      "explain_mm": "‘since 2015’ ဆိုတာ အတိတ်ကစပြီး အခုထိ ဆက်နေတုန်းဆိုတဲ့ အဓိပ္ပာယ်မို့လို့ present perfect (has lived) ကို သုံးရပါမယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "We ___ dinner an hour ago.",
-      "prompt_mm": "ကျွန်တော်တို့ လွန်ခဲ့တဲ့ တစ်နာရီက ညစာ စားခဲ့တယ်။",
-      "options": ["have eaten", "ate", "have had"],
-      "answers": ["ate"],
-      "explain_mm": "‘an hour ago’ — အချိန်တိ → past simple → ate။"
+      "prompt_mm": "ကျွန်တော်တို့ လွန်ခဲ့တဲ့ တစ်နာရီတုန်းက ညစာ စားခဲ့ကြတယ်။",
+      "options": [
+        "have eaten",
+        "ate",
+        "have had"
+      ],
+      "answers": [
+        "ate"
+      ],
+      "explain_mm": "‘an hour ago’ ဆိုတာ အချိန်အတိအကျကို ပြောတာဖြစ်လို့ past simple ဖြစ်တဲ့ ‘ate’ ကို သုံးရပါမယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "I have seen that film last night.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["I saw that film last night", "i saw that film last night."],
-      "explain_mm": "‘last night’ (ပြီးပြတ်) — present perfect မဟုတ်ဘဲ past simple → I saw။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "answers": [
+        "I saw that film last night",
+        "i saw that film last night."
+      ],
+      "explain_mm": "‘last night’ ဆိုတာ ပြီးသွားတဲ့ အချိန်ကိုပြတာဖြစ်လို့ present perfect မသုံးရပါဘူး။ past simple ဖြစ်တဲ့ ‘I saw’ ကိုပဲ သုံးရပါမယ်။"
     },
     {
       "kind": "scan_sentences",
@@ -133,9 +197,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — experience + when. Write pairs of sentences: first an experience in the present perfect, then when it happened in the past simple. E.g. \"I have visited Bagan. I went there in 2019.\"",
-      "prompt_mm": "အပိုင်း ၁ — အတွေ့အကြုံ + ဘယ်တုန်းက။ sentence အတွဲလိုက် ရေးပါ — ပထမ အတွေ့အကြုံကို present perfect၊ ပြီးရင် ဘယ်တုန်းက ဖြစ်ခဲ့လဲဆိုတာ past simple။ ဥပမာ — \"I have visited Bagan. I went there in 2019.\" sentence ၅–၈ ကြောင်း ရေးပြီး scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — အတွေ့အကြုံ နဲ့ ဘယ်အချိန်တုန်းကလဲ ဆိုတာကို ရေးကြည့်ကြမယ်။ sentence တွေကို အတွဲလိုက်လေး ရေးပေးပါနော် — ပထမဆုံး အတွေ့အကြုံကို present perfect နဲ့ ရေးပြီး၊ နောက်တစ်ကြောင်းမှာ အဲဒါက ဘယ်အချိန်တုန်းက ဖြစ်ခဲ့လဲဆိုတာကို past simple နဲ့ ရေးပေးပါ။ ဥပမာ — \"I have visited Bagan. I went there in 2019.\" ဆိုတာမျိုးပေါ့။ sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်ထိ ရေးပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "I {v}have been{/v} to the sea. I {v}went{/v} there in 2021. I {v}have tried{/v} diving. I {v}tried{/v} it last summer. I {v}have eaten{/v} crab — I {v}ate{/v} it on that trip.",
-      "explain_mm": "အတွေ့အကြုံ (အချိန်မပါ) → present perfect; အချိန်တိ ပြောတဲ့အခါ → past simple။ တစ်ကြောင်းတည်းမှာ နှစ်မျိုး မရောပါနဲ့။",
+      "explain_mm": "အတွေ့အကြုံ (အချိန်မပါ) ကို ပြောချင်ရင် → present perfect သုံးပြီး၊ အချိန်အတိအကျကို ပြောတဲ့အခါ → past simple ကို သုံးပေးပါ။ တစ်ကြောင်းတည်းမှာတော့ ဒီနှစ်မျိုးကို ရောမသုံးမိဖို့ သတိထားရပါမယ်နော်။",
       "grading": {
         "grammar_point": "Present perfect vs past simple",
         "rule": "Present perfect for experience/unfinished time (no specific time). Past simple for a finished action with a specific time.",
@@ -150,16 +214,19 @@
           "Past simple for an open experience (I went there — meaning ever)",
           "Wrong past participle vs past simple form (have went / have ate)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a person's life. Write a short paragraph (4–6 sentences) about someone's life, mixing the present perfect (overall experience) and the past simple (specific events with a time).",
-      "prompt_mm": "အပိုင်း ၂ — တစ်ယောက်ယောက်ရဲ့ ဘဝ။ တစ်ယောက်ယောက်ရဲ့ ဘဝအကြောင်း present perfect (ယေဘုယျ အတွေ့အကြုံ) နဲ့ past simple (အချိန်တိ ပါတဲ့ အဖြစ်အပျက်) ရောပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — တစ်စုံတစ်ယောက်ရဲ့ ဘဝအကြောင်း ရေးကြည့်ကြမယ်။ တစ်ယောက်ယောက်ရဲ့ ဘဝအကြောင်းကို present perfect (ယေဘုယျ အတွေ့အကြုံတွေ) နဲ့ past simple (အချိန်အတိအကျပါတဲ့ အဖြစ်အပျက်တွေ) ကို ရောပြီးတော့ စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ရေးပြီးရင် scan ဖတ်ပြီး တင်ပေးပါ။",
       "model": "My mother {v}has done{/v} many things. She {v}studied{/v} medicine in 1995. She {v}has worked{/v} in three hospitals. She {v}moved{/v} to Yangon ten years ago. She {v}has helped{/v} thousands of patients since then.",
-      "explain_mm": "ယေဘုယျ အတွေ့အကြုံကို present perfect၊ အချိန်တိ ပါတဲ့ အဖြစ်ကို past simple နဲ့ ရေးပါ။",
+      "explain_mm": "ယေဘုယျ အတွေ့အကြုံတွေကို ပြောပြချင်ရင် present perfect ကို သုံးပြီး၊ အချိန်အတိအကျ ပါတဲ့ အဖြစ်အပျက်တွေကိုတော့ past simple နဲ့ ရေးပေးပါနော်။",
       "grading": {
         "grammar_point": "Present perfect vs past simple",
         "rule": "A life description mixing present perfect (general experience) and past simple (dated events).",
@@ -174,7 +241,10 @@
           "Finished time with the present perfect",
           "Wrong verb forms (have went, has ate)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

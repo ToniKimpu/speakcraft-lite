@@ -8,136 +8,217 @@
   "subtitle_mm": "Cause & result — because of / due to / as a result of",
   "teach": {
     "situation_en": "The flight was delayed {v}because of{/v} the storm. {v}Due to{/v} heavy rain, the match was cancelled. Sales fell {v}as a result of{/v} the price rise. Prices went up; {v}as a result{/v}, fewer people bought tickets.",
-    "situation_mm": "မုန်တိုင်းကြောင့် လေယာဉ် နောက်ကျတယ်။ မိုးသည်းလို့ ပွဲ ဖျက်လိုက်တယ်။ ဈေးတက်တဲ့ အကျိုးဆက်အနေနဲ့ အရောင်း ကျတယ်။ ဈေးတွေ တက်တယ်၊ အကျိုးဆက်အနေနဲ့ လက်မှတ် ဝယ်သူ နည်းသွားတယ်။",
+    "situation_mm": "မုန်တိုင်းကြောင့် လေယာဉ် နောက်ကျသွားတယ်။ မိုးသည်းလို့ ပွဲကို ဖျက်လိုက်ရတယ်။ ဈေးတက်တဲ့ အကျိုးဆက်အနေနဲ့ အရောင်းကျသွားတယ်။ ဈေးတွေ တက်လာတယ်၊ အကျိုးဆက်အနေနဲ့ လက်မှတ်ဝယ်သူတွေ နည်းသွားတယ်။",
     "use_en": "These phrases connect a CAUSE and its RESULT in formal writing. Because of / Due to / As a result of are all followed by a NOUN (or -ing) — not a clause. 'As a result' (no 'of') stands alone before the result, like a linker: …; as a result, …. Use 'because' (no 'of') when a full clause follows.",
-    "use_mm": "ဒီ phrase တွေက formal အရေးအသားမှာ အကြောင်းရင်း (cause) နဲ့ အကျိုးဆက် (result) ကို ချိတ်ဆက်တယ်။ Because of / Due to / As a result of အားလုံး နောက်မှာ NOUN (ဒါမှမဟုတ် -ing) — clause မဟုတ်။ 'As a result' (of မပါ) က result ရှေ့မှာ တစ်ခုတည်း ရပ်တယ် — …; as a result, …။ full clause လိုက်ရင် 'because' (of မပါ) သုံးပါ။",
+    "use_mm": "ဒီ phrase လေးတွေက formal အရေးအသားတွေမှာ အကြောင်းရင်း (cause) နဲ့ အကျိုးဆက် (result) ကို ချိတ်ဆက်ပေးပါတယ်။ Because of / Due to / As a result of အားလုံးရဲ့နောက်မှာ NOUN (ဒါမှမဟုတ် -ing form) လိုက်ရပြီး clause လိုက်လို့ မရပါဘူး။ 'As a result' (of မပါ) ကတော့ result ရဲ့ရှေ့မှာ တစ်ခုတည်း သီးသန့်ရပ်ပြီး သုံးပါတယ် — …; as a result, … ပုံစံမျိုးပေါ့။ Subject + Verb ပါတဲ့ full clause တစ်ခုလုံး လိုက်ချင်ရင်တော့ 'because' (of မပါ) ကို သုံးပေးရပါမယ်။",
     "timeline": "result + because of / due to + CAUSE(noun)   ·   cause. As a result, RESULT.",
     "form": [
-      { "subject": "because of / due to", "form": "+ noun  (… because of the rain / due to illness)" },
-      { "subject": "as a result of", "form": "+ noun  (… as a result of the strike)" },
-      { "subject": "as a result", "form": "linker before the result  (…. As a result, ….)" },
-      { "subject": "because (no 'of')", "form": "+ clause  (… because it rained)" }
+      {
+        "subject": "because of / due to",
+        "form": "+ noun  (… because of the rain / due to illness)"
+      },
+      {
+        "subject": "as a result of",
+        "form": "+ noun  (… as a result of the strike)"
+      },
+      {
+        "subject": "as a result",
+        "form": "linker before the result  (…. As a result, ….)"
+      },
+      {
+        "subject": "because (no 'of')",
+        "form": "+ clause  (… because it rained)"
+      }
     ],
     "form_note_mm": [
-      "because of / due to / as a result of + noun (ဒါမှမဟုတ် -ing)。 clause မထည့်ရဘူး။",
-      "because (of မပါ) + clause (subject + verb) — because it rained。",
-      "as a result (of မပါ) — result ရှေ့မှာ linker အဖြစ် — … . As a result, …。",
-      "due to က formal — စာရေးမှာ များ။ because of က ပိုသာမန်။"
+      "because of / due to / as a result of ရဲ့နောက်မှာ noun (ဒါမှမဟုတ် -ing) ပဲ လိုက်ရပါမယ်။ clause လိုက်လို့ မရပါဘူးနော်။",
+      "because (of မပါ) ရဲ့နောက်မှာတော့ clause (subject + verb) လိုက်ရပါတယ် — ဥပမာ because it rained လိုမျိုးပေါ့။",
+      "as a result (of မပါ) ကတော့ result ကိုပြတဲ့ဝါကျရဲ့ရှေ့မှာ linker အဖြစ် သုံးပါတယ် — … . As a result, … ပုံစံမျိုးပါ။",
+      "due to က formal ဖြစ်ပြီး စာရေးသားရာမှာ အသုံးများပါတယ်။ because of ကတော့ ပိုပြီး သာမန်ကျပါတယ်။"
     ],
     "trap_en": "Don't put a clause after because of / due to, and don't use 'because of' where you need 'because' + clause.  WRONG: It was cancelled because of it rained.  RIGHT: It was cancelled because of the rain. / … because it rained.",
-    "trap_mm": "because of / due to နောက်မှာ clause မထည့်နဲ့၊ clause လိုတဲ့နေရာမှာ 'because of' မသုံးနဲ့။ ✗ It was cancelled because of it rained → ✓ … because of the rain. / … because it rained။",
+    "trap_mm": "because of / due to နောက်မှာ clause မလိုက်ရပါဘူး။ clause လိုအပ်တဲ့နေရာမှာ 'because of' ကို မသုံးမိဖို့ သတိထားရပါမယ်။ ✗ It was cancelled because of it rained → ✓ … because of the rain. / … because it rained။",
     "examples": [
-      { "en": "The roads are wet {v}because of{/v} the rain.", "mm": "မိုးကြောင့် လမ်းတွေ စိုနေတယ်။" },
-      { "en": "{v}Due to{/v} the strike, no buses ran.", "mm": "သပိတ်ကြောင့် ဘတ်စ်ကား မပြေးခဲ့ဘူး။" },
-      { "en": "Many shops closed {v}as a result of{/v} the crisis.", "mm": "အကျပ်အတည်းကြောင့် ဆိုင် အများ ပိတ်ခဲ့တယ်။" },
-      { "en": "It snowed heavily; {v}as a result{/v}, school was closed.", "mm": "နှင်း သည်းသည်း ကျတယ်၊ အကျိုးဆက်အနေနဲ့ ကျောင်း ပိတ်တယ်။" }
+      {
+        "en": "The roads are wet {v}because of{/v} the rain.",
+        "mm": "မိုးကြောင့် လမ်းတွေ စိုနေတယ်။"
+      },
+      {
+        "en": "{v}Due to{/v} the strike, no buses ran.",
+        "mm": "သပိတ်ကြောင့် ဘတ်စ်ကားတွေ မပြေးခဲ့ဘူး။"
+      },
+      {
+        "en": "Many shops closed {v}as a result of{/v} the crisis.",
+        "mm": "အကျပ်အတည်းကြောင့် ဆိုင်အများစု ပိတ်ခဲ့ရတယ်။"
+      },
+      {
+        "en": "It snowed heavily; {v}as a result{/v}, school was closed.",
+        "mm": "နှင်းတွေ သည်းသည်းမည်းမည်း ကျတယ်၊ အကျိုးဆက်အနေနဲ့ ကျောင်းပိတ်လိုက်တယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "because of / due to + noun",
-        "rule_mm": "because of / due to နောက် → noun (clause မဟုတ်)",
+        "rule_mm": "because of / due to နောက်မှာ noun ပဲ လိုက်ရပါတယ် (clause မဟုတ်ပါဘူး)။",
         "en": "The flight was delayed {v}because of{/v} the storm.",
-        "why_mm": "'because of' / 'due to' နောက်မှာ noun phrase ('the storm') ပဲ လိုက်ပါတယ် — subject + verb ပါတဲ့ clause မဟုတ်ပါဘူး။ 'due to' က ပိုပြီး formal ဖြစ်တယ်။"
+        "why_mm": "'because of' / 'due to' ရဲ့နောက်မှာ noun phrase ('the storm' လိုမျိုး) ပဲ လိုက်ရပါတယ် — subject + verb ပါတဲ့ clause လိုက်လို့ မရပါဘူး။ 'due to' ကတော့ ပိုပြီး formal ကျပါတယ်။"
       },
       {
         "subject": "because + clause",
-        "rule_mm": "full clause လိုက်ရင် → because (of မပါ)",
+        "rule_mm": "full clause (Subject + Verb) လိုက်ချင်ရင်တော့ because (of မပါ) ကို သုံးပေးရပါမယ်။",
         "en": "He was late {v}because{/v} he missed the bus.",
-        "why_mm": "'he missed the bus' က subject + verb ပါတဲ့ clause ဖြစ်လို့ 'of' မပါတဲ့ 'because' ကို သုံးပါတယ်။ 'because of' နဲ့ မရောနဲ့။"
+        "why_mm": "'he missed the bus' က subject + verb ပါတဲ့ clause ဖြစ်တဲ့အတွက် 'of' မပါတဲ့ 'because' ကို သုံးပေးရမှာပါ။ 'because of' နဲ့ မမှားစေနဲ့နော်။"
       },
       {
         "subject": "as a result (linker) + the trap",
-        "rule_mm": "as a result = result ရှေ့ linker · because of နောက် clause မထည့်နဲ့",
+        "rule_mm": "as a result က result ရဲ့ရှေ့မှာ linker အဖြစ် သုံးပါတယ်။ · because of နောက်မှာတော့ clause မလိုက်ရပါဘူး။",
         "en": "Prices rose; {v}as a result{/v}, fewer people bought tickets.  (✗ because of he missed)",
-        "why_mm": "'as a result' (of မပါ) က အကျိုးဆက် sentence ရှေ့မှာ linker အဖြစ် ရပ်တယ်။ သတိ — 'because of' နောက်မှာ clause ('he missed the bus') မထည့်ရဘူး; 'because' ကို သုံးပါ။"
+        "why_mm": "'as a result' (of မပါ) က အကျိုးဆက်ကိုပြတဲ့ sentence ရဲ့ရှေ့မှာ linker အဖြစ် ရပ်တည်ပေးပါတယ်။ သတိထားရမှာက — 'because of' နောက်မှာ clause ('he missed the bus' လိုမျိုး) လိုက်လို့မရပါဘူး။ အဲ့ဒီအစား 'because' ကိုပဲ သုံးပေးရပါမယ်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "The match was cancelled ___ the rain.",
-        "prompt_mm": "မိုးကြောင့် ပွဲ ဖျက်လိုက်တယ်။",
-        "options": ["because of", "because", "as a result"],
+        "prompt_mm": "မိုးကြောင့် ပွဲကို ဖျက်လိုက်တယ်။",
+        "options": [
+          "because of",
+          "because",
+          "as a result"
+        ],
         "answer": "because of",
-        "explain_mm": "noun (the rain) ရှေ့ → because of။"
+        "explain_mm": "noun (the rain) ရဲ့ရှေ့မှာမို့လို့ because of ကို သုံးထားတာပါ။"
       },
       {
         "prompt_en": "The match was cancelled ___ it rained.",
-        "prompt_mm": "မိုးရွာလို့ ပွဲ ဖျက်လိုက်တယ်။",
-        "options": ["because", "because of", "due to"],
+        "prompt_mm": "မိုးရွာလို့ ပွဲကို ဖျက်လိုက်တယ်။",
+        "options": [
+          "because",
+          "because of",
+          "due to"
+        ],
         "answer": "because",
-        "explain_mm": "clause (it rained) ရှေ့ → because (of မပါ)။"
+        "explain_mm": "clause (it rained) ရဲ့ရှေ့မှာမို့လို့ because (of မပါ) ကို သုံးထားတာပါ။"
       },
       {
         "prompt_en": "___ the strike, no buses ran.",
-        "prompt_mm": "သပိတ်ကြောင့် ဘတ်စ်ကား မပြေးခဲ့ဘူး။",
-        "options": ["Due to", "Because", "As a result"],
+        "prompt_mm": "သပိတ်ကြောင့် ဘတ်စ်ကားတွေ မပြေးခဲ့ဘူး။",
+        "options": [
+          "Due to",
+          "Because",
+          "As a result"
+        ],
         "answer": "Due to",
-        "explain_mm": "noun (the strike) ရှေ့ formal cause → Due to။"
+        "explain_mm": "noun (the strike) ရဲ့ရှေ့မှာ formal အသုံးနဲ့ အကြောင်းပြချင်လို့ Due to ကို သုံးထားတာပါ။"
       }
     ],
     "model_paragraph_en": "My town has changed a lot in recent years. {v}Because of{/v} the new factory, many people found jobs. {v}Due to{/v} this growth, the population doubled. However, traffic increased {v}as a result of{/v} all the new cars. The air became dirtier; {v}as a result{/v}, the council planted more trees. Overall, the changes brought both good and bad.",
-    "model_paragraph_mm": "ငါ့မြို့ဟာ မကြာသေးခင် နှစ်တွေမှာ အများကြီး ပြောင်းခဲ့တယ်။ စက်ရုံအသစ်ကြောင့် လူ အများ အလုပ် ရခဲ့တယ်။ ဒီ ဖွံ့ဖြိုးမှုကြောင့် လူဦးရေ နှစ်ဆ တိုးခဲ့တယ်။ ဒါပေမယ့် ကားအသစ်တွေ အားလုံးကြောင့် ယာဉ်ကြော ပိုများလာတယ်။ လေထု ပိုညစ်ညမ်းလာတယ်၊ အကျိုးဆက်အနေနဲ့ ကောင်စီက သစ်ပင် ပိုစိုက်ခဲ့တယ်။ ယေဘုယျအားဖြင့် ပြောင်းလဲမှုတွေက အကောင်းရော အဆိုးပါ ယူဆောင်လာတယ်။",
+    "model_paragraph_mm": "ကျွန်တော့်/ကျွန်မရဲ့မြို့လေးက မကြာသေးခင်နှစ်တွေအတွင်းမှာ အများကြီး ပြောင်းလဲသွားခဲ့ပါတယ်။ စက်ရုံအသစ်ကြောင့် လူတော်တော်များများ အလုပ်ရခဲ့ကြတယ်။ ဒီလို ဖွံ့ဖြိုးတိုးတက်မှုကြောင့် လူဦးရေက နှစ်ဆတိုးလာခဲ့တယ်။ ဒါပေမဲ့ ကားအသစ်တွေ အားလုံးကြောင့် ယာဉ်ကြောပိတ်ဆို့မှုတွေ ပိုများလာတယ်။ လေထုကလည်း ပိုပြီးညစ်ညမ်းလာတယ်၊ အကျိုးဆက်အနေနဲ့ မြို့တော်ကောင်စီက သစ်ပင်တွေ ပိုစိုက်ခဲ့ရတယ်။ ယေဘုယျအားဖြင့်တော့ ဒီပြောင်းလဲမှုတွေက အကောင်းရော အဆိုးပါ ယူဆောင်လာခဲ့ပါတယ်လို့ ပြောရမှာပါပဲ။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "because of / due to / as a result of", "form": "+ noun (or -ing)", "tag": "+ noun", "example": "… because of the rain" },
-          { "subjects": "because (+ clause) · as a result (linker)", "form": "because + clause · . As a result, …", "tag": "because + clause", "highlight": true, "example": "… because it rained" }
+          {
+            "subjects": "because of / due to / as a result of",
+            "form": "+ noun (or -ing)",
+            "tag": "+ noun",
+            "example": "… because of the rain"
+          },
+          {
+            "subjects": "because (+ clause) · as a result (linker)",
+            "form": "because + clause · . As a result, …",
+            "tag": "because + clause",
+            "highlight": true,
+            "example": "… because it rained"
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "Cause & result ကို ပြောပြဖို့ ဘယ်အခါ သုံးမလဲ",
+      "pattern": "Phrase တစ်ခုချင်းစီရဲ့နောက်မှာ ဘယ်လိုလိုက်မလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_work", "v_study", "v_live", "v_help", "v_make", "v_use",
-      "v_cost", "v_start", "v_finish", "v_want"
+      "v_work",
+      "v_study",
+      "v_live",
+      "v_help",
+      "v_make",
+      "v_use",
+      "v_cost",
+      "v_start",
+      "v_finish",
+      "v_want"
     ],
     "time_words": [],
     "verb_form": "base",
-    "note_mm": "because of / due to / as a result of + noun (clause မဟုတ်)。 because (of မပါ) + clause。 as a result (of မပါ) — result ရှေ့မှာ linker。"
+    "note_mm": "because of / due to / as a result of နောက်မှာ noun (clause မဟုတ်) လိုက်ပါတယ်။ because (of မပါ) နောက်မှာတော့ clause လိုက်ပါတယ်။ as a result (of မပါ) ကတော့ result ရဲ့ရှေ့မှာ linker အဖြစ် သုံးပါတယ်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The match was cancelled ___ the rain.",
-      "prompt_mm": "မိုးကြောင့် ပွဲ ဖျက်လိုက်တယ်။",
-      "options": ["because of", "because", "as a result"],
-      "answers": ["because of"],
-      "explain_mm": "noun (the rain) ရှေ့ → because of။"
+      "prompt_mm": "မိုးကြောင့် ပွဲကို ဖျက်လိုက်တယ်။",
+      "options": [
+        "because of",
+        "because",
+        "as a result"
+      ],
+      "answers": [
+        "because of"
+      ],
+      "explain_mm": "noun (the rain) ရဲ့ရှေ့မှာမို့လို့ because of ကို သုံးထားတာပါ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The match was cancelled ___ it rained.",
-      "prompt_mm": "မိုးရွာလို့ ပွဲ ဖျက်လိုက်တယ်။",
-      "options": ["because", "because of", "due to"],
-      "answers": ["because"],
-      "explain_mm": "clause (it rained) ရှေ့ → because (of မပါ)။"
+      "prompt_mm": "မိုးရွာလို့ ပွဲကို ဖျက်လိုက်တယ်။",
+      "options": [
+        "because",
+        "because of",
+        "due to"
+      ],
+      "answers": [
+        "because"
+      ],
+      "explain_mm": "clause (it rained) ရဲ့ရှေ့မှာမို့လို့ because (of မပါ) ကို သုံးထားတာပါ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "___ ___ heavy rain, the match was cancelled. (formal, 2 words)",
-      "prompt_mm": "မိုးသည်းခြင်းကြောင့် ပွဲ ဖျက်လိုက်တယ်။ ( formal — due … : စကားလုံး ၂ လုံး )",
-      "answers": ["due to"],
-      "explain_mm": "noun ရှေ့ formal cause → Due to။"
+      "prompt_mm": "မိုးသည်းထန်မှုကြောင့် ပွဲကို ဖျက်သိမ်းလိုက်ရပါတယ်။ ( formal အသုံး — due … : စကားလုံး ၂ လုံးနဲ့ ဖြေပေးပါ )",
+      "answers": [
+        "due to"
+      ],
+      "explain_mm": "noun ရဲ့ရှေ့မှာ formal အသုံးနဲ့ အကြောင်းပြချင်ရင် Due to ကို သုံးပေးပါ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "He was late because of he missed the bus.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["He was late because he missed the bus", "he was late because he missed the bus.", "He was late because he missed the bus."],
-      "explain_mm": "clause (he missed the bus) ရှေ့ → because (of မပါ)။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပေးပါဦး။",
+      "answers": [
+        "He was late because he missed the bus",
+        "he was late because he missed the bus.",
+        "He was late because he missed the bus."
+      ],
+      "explain_mm": "clause (he missed the bus) ရဲ့ရှေ့မှာမို့လို့ because (of မပါ) ကို သုံးရမှာပါ။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Order:  As a result  /  it snowed heavily  /  school was closed  /  .  /  ,",
-      "prompt_mm": "စီပါ — ( It snowed heavily . As a result , school was closed )",
-      "answers": ["It snowed heavily. As a result, school was closed", "it snowed heavily. as a result, school was closed.", "It snowed heavily. As a result, school was closed."],
-      "explain_mm": "cause . As a result , result ။"
+      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်အောင် စီပေးပါ — ( It snowed heavily . As a result , school was closed )",
+      "answers": [
+        "It snowed heavily. As a result, school was closed",
+        "it snowed heavily. as a result, school was closed.",
+        "It snowed heavily. As a result, school was closed."
+      ],
+      "explain_mm": "Cause (အကြောင်းရင်း) ကို အရင်ရေးမယ်။ ပြီးရင် As a result, Result (အကျိုးဆက်) ဆိုတဲ့ပုံစံအတိုင်း ရေးရမှာပါ။"
     },
     {
       "kind": "scan_sentences",
@@ -145,9 +226,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — link cause and result. Write 5–8 sentences linking a cause and a result. Use because of / due to / as a result of (+ noun), because (+ clause), and 'as a result' as a linker. Watch what follows each one.",
-      "prompt_mm": "အပိုင်း ၁ — အကြောင်းနဲ့ အကျိုး ချိတ်ပါ။ အကြောင်းရင်းနဲ့ အကျိုးဆက်ကို ချိတ်တဲ့ sentence ၅–၈ ကြောင်း ရေးပါ။ because of / due to / as a result of (+ noun), because (+ clause), 'as a result' (linker) သုံးပါ။ တစ်ခုစီ နောက်က ဖွဲ့စည်းပုံကို ဂရုစိုက်ပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — အကြောင်းနဲ့ အကျိုးကို ချိတ်ဆက်ကြည့်ရအောင်။ အကြောင်းရင်းနဲ့ အကျိုးဆက်ကို ချိတ်ဆက်ထားတဲ့ sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ because of / due to / as a result of (+ noun), because (+ clause), နဲ့ 'as a result' (linker) တို့ကို သုံးပြီး ရေးရမှာနော်။ တစ်ခုချင်းစီရဲ့နောက်မှာ လိုက်ရမယ့် ပုံစံ (structure) ကို သေချာဂရုစိုက်ပေးပါ။ ပြီးသွားရင်တော့ scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
       "model": "The shops closed early because of the heatwave. Due to the strike, the trains stopped. He lost his job as a result of the crisis. I stayed home because I felt sick. The river flooded; as a result, many families left.",
-      "explain_mm": "because of / due to / as a result of + noun · because + clause · as a result (linker)。",
+      "explain_mm": "သတိထားရမှာတွေကတော့: because of / due to / as a result of နောက်မှာ noun, because နောက်မှာ clause, နဲ့ as a result ကိုတော့ linker အဖြစ် သုံးရပါမယ်။",
       "grading": {
         "grammar_point": "Cause & result linkers",
         "rule": "because of / due to / as a result of + noun; because + clause; 'as a result' links a following result sentence.",
@@ -162,16 +243,18 @@
           "'because' + noun only",
           "Confusing 'as a result' with 'as a result of'"
         ],
-        "ignore": ["capitalization"]
+        "ignore": [
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a change and its effects. Write a short paragraph (4–6 sentences) explaining a change (in your town, school, or country) and its causes and results, using because of / due to / as a result of.",
-      "prompt_mm": "အပိုင်း ၂ — ပြောင်းလဲမှုနဲ့ သက်ရောက်မှု။ ပြောင်းလဲမှုတစ်ခု (မင်းမြို့၊ ကျောင်း၊ ဒါမှမဟုတ် နိုင်ငံ) နဲ့ ၎င်းရဲ့ အကြောင်းရင်း/အကျိုးဆက်တွေကို because of / due to / as a result of သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရှင်းပြ ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — ပြောင်းလဲမှုနဲ့ သက်ရောက်မှုများ။ ကိုယ့်ရဲ့မြို့၊ ကျောင်း၊ ဒါမှမဟုတ် နိုင်ငံမှာ ဖြစ်ခဲ့တဲ့ ပြောင်းလဲမှုတစ်ခုနဲ့ အဲ့ဒီပြောင်းလဲမှုရဲ့ အကြောင်းရင်း/အကျိုးဆက်တွေကို because of / due to / as a result of သုံးပြီး စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပြီး ရှင်းပြပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "My school has improved a lot. Because of a new principal, the rules became clearer. Due to extra funding, we got new computers. More students joined as a result of the better facilities. The results rose sharply; as a result, parents now trust the school more.",
-      "explain_mm": "cause–result linker တွေနဲ့ ပြောင်းလဲမှုကို ရှင်းပြပါ — noun vs clause မှန်အောင် သုံးပါ။",
+      "explain_mm": "cause–result linker တွေကိုသုံးပြီး ပြောင်းလဲမှုတစ်ခုအကြောင်း ရှင်းပြပေးပါ။ noun နဲ့ clause ကို နေရာမှန်မှာ သုံးဖို့ မမေ့နဲ့နော်။",
       "grading": {
         "grammar_point": "Cause & result linkers",
         "rule": "Explain causes and results using because of/due to/as a result of (+ noun) and because (+ clause).",
@@ -186,7 +269,9 @@
           "because + noun",
           "Mixing 'as a result' and 'as a result of'"
         ],
-        "ignore": ["capitalization"]
+        "ignore": [
+          "capitalization"
+        ]
       }
     }
   ]

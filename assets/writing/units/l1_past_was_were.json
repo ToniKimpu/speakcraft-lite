@@ -8,92 +8,153 @@
   "subtitle_mm": "အတိတ် — was / were (be ၏ အတိတ်)",
   "teach": {
     "situation_en": "{t}Last year{/t} I {v}was{/v} a student in Mandalay. My classes {v}were{/v} difficult, but my friends {v}were{/v} kind. My teacher {v}was{/v} very patient, and the school {v}was{/v} near my house.",
-    "situation_mm": "မနှစ်က ကျွန်တော် မန္တလေးမှာ ကျောင်းသားတစ်ယောက် ဖြစ်ခဲ့တယ်။ အတန်းတွေက ခက်ခဲပေမဲ့ သူငယ်ချင်းတွေက ကြင်နာခဲ့တယ်။ ဆရာက အရမ်း သည်းခံတတ်ပြီး ကျောင်းက အိမ်နဲ့ နီးခဲ့တယ်။",
+    "situation_mm": "မနှစ်က ကျွန်တော် မန္တလေးမှာ ကျောင်းသားတစ်ယောက် ဖြစ်ခဲ့ပါတယ်။ အတန်းတွေက ခက်ခဲခဲ့ပေမဲ့ သူငယ်ချင်းတွေကတော့ ကြင်နာခဲ့ကြတယ်။ ဆရာက အရမ်း သည်းခံတတ်ပြီး ကျောင်းကလည်း အိမ်နဲ့ နီးခဲ့ပါတယ်။",
     "use_en": "was / were is the past of am / is / are. We use it to describe people, places, things and feelings in the past.",
-    "use_mm": "was / were ဟာ am / is / are ရဲ့ အတိတ်ပုံစံပါ။ အတိတ်က လူ၊ နေရာ၊ အရာဝတ္ထု၊ ခံစားချက်တွေကို ဖော်ပြဖို့ သုံးပါတယ်။",
+    "use_mm": "was / were ဆိုတာကတော့ am / is / are ရဲ့ Past simple (အတိတ်) ပုံစံတွေ ဖြစ်ပါတယ်။ အတိတ်က လူ၊ နေရာ၊ အရာဝတ္ထုတွေနဲ့ ခံစားချက်တွေကို ဖော်ပြချင်တဲ့အခါ သုံးရတာပါ။",
     "timeline": "◀——●———————   (before now / past)",
     "form": [
-      { "subject": "I / he / she / it", "form": "was" },
-      { "subject": "you / we / they", "form": "were" },
-      { "subject": "negative", "form": "wasn't / weren't" },
-      { "subject": "question", "form": "Was / Were …?" }
+      {
+        "subject": "I / he / she / it",
+        "form": "was"
+      },
+      {
+        "subject": "you / we / they",
+        "form": "were"
+      },
+      {
+        "subject": "negative",
+        "form": "wasn't / weren't"
+      },
+      {
+        "subject": "question",
+        "form": "Was / Were …?"
+      }
     ],
     "form_note_mm": [
-      "I / he / she / it နဲ့ဆို was။",
-      "you / we / they နဲ့ဆို were။",
-      "negative — wasn't / weren't။ question — Was / Were ကို sentence ရှေ့မှာ ထားပါ။"
+      "Subject က I / he / she / it (Singular / အနည်းကိန်း) ဆိုရင် ‘was’ ကို သုံးပေးရပါမယ်။",
+      "Subject က you / we / they (plural / အများကိန်း) ဆိုရင်တော့ ‘were’ ကို သုံးပေးရပါမယ်။",
+      "Negative (အငြင်းဝါကျ) မှာဆိုရင် wasn't / weren't ကို သုံးပြီး၊ Question (မေးခွန်း) ဆိုရင်တော့ Was / Were ကို ဝါကျရဲ့ ရှေ့ဆုံးမှာ ထားပေးရပါတယ်။"
     ],
     "trap_en": "Choose was or were by the subject.  WRONG: They was happy. / I were late.   RIGHT: They were happy. / I was late.",
-    "trap_mm": "subject ပေါ်မူတည်ပြီး was / were ရွေးပါ။ မြန်မာစာမှာ ‘ဖြစ်ခဲ့’ က မပြောင်းပေမဲ့ အင်္ဂလိပ်လို ဆုံးဖြတ်ရတယ် —  ✗ They was / I were  →  ✓ They were / I was.",
+    "trap_mm": "Subject ပေါ်မူတည်ပြီး was ဒါမှမဟုတ် were ကို မှန်အောင် ရွေးပေးရပါမယ်။ မြန်မာလိုမှာတော့ ‘ဖြစ်ခဲ့တယ်’ ဆိုတာက Subject ဘာပဲဖြစ်ဖြစ် ပုံစံမပြောင်းပေမဲ့၊ အင်္ဂလိပ်စာမှာတော့ Subject အလိုက် ပြောင်းလဲ သုံးစွဲရပါတယ် — ဥပမာ ✗ They was / I were ဆိုတာမျိုး သုံးလို့မရဘဲ ✓ They were / I was ဆိုပြီး မှန်အောင် သုံးပေးရမှာပါ။",
     "examples": [
-      { "en": "I {v}was{/v} tired {t}yesterday{/t}.", "mm": "ကျွန်တော် မနေ့က ပင်ပန်းခဲ့တယ်။" },
-      { "en": "They {v}were{/v} at home.", "mm": "သူတို့ အိမ်မှာ ရှိခဲ့တယ်။" },
-      { "en": "She {v}was{/v} a nurse.", "mm": "သူမ သူနာပြုတစ်ယောက် ဖြစ်ခဲ့တယ်။" },
-      { "en": "We {v}weren't{/v} ready.", "mm": "ကျွန်တော်တို့ အဆင်သင့် မဖြစ်ခဲ့ဘူး။" }
+      {
+        "en": "I {v}was{/v} tired {t}yesterday{/t}.",
+        "mm": "ကျွန်တော် မနေ့က ပင်ပန်းခဲ့ပါတယ်။"
+      },
+      {
+        "en": "They {v}were{/v} at home.",
+        "mm": "သူတို့ အိမ်မှာ ရှိခဲ့ကြပါတယ်။"
+      },
+      {
+        "en": "She {v}was{/v} a nurse.",
+        "mm": "သူမ သူနာပြုတစ်ယောက် ဖြစ်ခဲ့ပါတယ်။"
+      },
+      {
+        "en": "We {v}weren't{/v} ready.",
+        "mm": "ကျွန်တော်တို့ အဆင်သင့် မဖြစ်ခဲ့ကြပါဘူး။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "I / he / she / it",
-        "rule_mm": "Subject က I · He · She · It → was",
+        "rule_mm": "Subject က I · He · She · It (Singular / အနည်းကိန်း) ဆိုရင် ‘was’ ကို သုံးပါတယ်။",
         "en": "She {v}was{/v} a nurse.",
-        "why_mm": "Subject က 'She' (I/he/she/it) ဖြစ်လို့ 'was' ကို သုံးပါတယ်။ was ဟာ am / is ရဲ့ အတိတ်ပုံစံပါ။"
+        "why_mm": "ဒီမှာ Subject က 'She' (Singular) ဖြစ်တဲ့အတွက် 'was' ကို သုံးထားတာပါ။ ‘was’ ဆိုတာက am / is ရဲ့ Past simple (အတိတ်) ပုံစံ ဖြစ်ပါတယ်။"
       },
       {
         "subject": "you / we / they",
-        "rule_mm": "Subject က You · We · They → were",
+        "rule_mm": "Subject က You · We · They (plural / အများကိန်း) ဆိုရင် ‘were’ ကို သုံးပါတယ်။",
         "en": "They {v}were{/v} at home.",
-        "why_mm": "Subject က 'They' (you/we/they) ဖြစ်လို့ 'were' ကို သုံးပါတယ်။ were ဟာ are ရဲ့ အတိတ်ပုံစံပါ။"
+        "why_mm": "ဒီမှာ Subject က 'They' (plural) ဖြစ်တဲ့အတွက် 'were' ကို သုံးထားတာပါ။ ‘were’ ဆိုတာက are ရဲ့ Past simple (အတိတ်) ပုံစံ ဖြစ်ပါတယ်။"
       },
       {
         "subject": "negative",
-        "rule_mm": "အငြင်း → wasn't / weren't",
+        "rule_mm": "Negative (အငြင်းဝါကျ) ပုံစံကတော့ wasn't / weren't ဖြစ်ပါတယ်။",
         "en": "We {v}weren't{/v} ready.",
-        "why_mm": "အငြင်းမှာ was / were ရဲ့ နောက်မှာ 'not' ထည့်ပါတယ် — wasn't (was not) / weren't (were not)။ subject နဲ့ ကိုက်အောင် ရွေးပါ။"
+        "why_mm": "Negative (အငြင်းဝါကျ) လုပ်ချင်ရင် was / were ရဲ့ နောက်မှာ 'not' ထည့်ပေးရုံပါပဲ။ ဥပမာ — wasn't (was not) / weren't (were not) ပေါ့။ Subject နဲ့လိုက်ပြီး မှန်အောင် ရွေးသုံးဖို့တော့ လိုပါမယ်နော်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "They ___ at home yesterday.",
-        "prompt_mm": "သူတို့ မနေ့က အိမ်မှာ ရှိခဲ့တယ်။",
-        "options": ["was", "were", "are"],
+        "prompt_mm": "သူတို့ မနေ့က အိမ်မှာ ရှိခဲ့ကြပါတယ်။",
+        "options": [
+          "was",
+          "were",
+          "are"
+        ],
         "answer": "were",
-        "explain_mm": "they → were (you/we/they)။"
+        "explain_mm": "Subject က ‘they’ (plural) ဖြစ်တဲ့အတွက် ‘were’ ကို သုံးပေးရပါမယ်။"
       },
       {
         "prompt_en": "She ___ a teacher.",
-        "prompt_mm": "သူမ ဆရာမတစ်ယောက် ဖြစ်ခဲ့တယ်။",
-        "options": ["was", "were", "is"],
+        "prompt_mm": "သူမ ဆရာမတစ်ယောက် ဖြစ်ခဲ့ပါတယ်။",
+        "options": [
+          "was",
+          "were",
+          "is"
+        ],
         "answer": "was",
-        "explain_mm": "she → was (I/he/she/it)။"
+        "explain_mm": "Subject က ‘she’ (Singular) ဖြစ်တဲ့အတွက် ‘was’ ကို သုံးပေးရပါမယ်။"
       },
       {
         "prompt_en": "I ___ late yesterday.",
-        "prompt_mm": "ကျွန်တော် မနေ့က နောက်ကျခဲ့တယ်။",
-        "options": ["was", "were", "are"],
+        "prompt_mm": "ကျွန်တော် မနေ့က နောက်ကျခဲ့ပါတယ်။",
+        "options": [
+          "was",
+          "were",
+          "are"
+        ],
         "answer": "was",
-        "explain_mm": "I → was (were မဟုတ်ဘူး)။"
+        "explain_mm": "Subject က ‘I’ ဖြစ်တဲ့အတွက် ‘was’ ကို သုံးရမှာပါ။ ‘were’ မဟုတ်ပါဘူးနော်။"
       }
     ],
     "model_paragraph_en": "{t}Last year{/t} my family {v}was{/v} in Yangon. Our house {v}was{/v} small but comfortable. My parents {v}were{/v} busy, and my brother and I {v}were{/v} at school all day. The weekends {v}were{/v} my favourite time because we {v}were{/v} all together.",
-    "model_paragraph_mm": "မနှစ်က ကျွန်တော့်မိသားစု ရန်ကုန်မှာ ရှိခဲ့တယ်။ အိမ်က သေးပေမဲ့ သက်တောင့်သက်သာ ရှိခဲ့တယ်။ မိဘတွေက အလုပ်များပြီး ကျွန်တော်နဲ့ ညီက တစ်နေ့လုံး ကျောင်းမှာ ရှိခဲ့တယ်။ စနေတနင်္ဂနွေတွေက အကြိုက်ဆုံး အချိန်ဖြစ်ခဲ့တယ်၊ ဘာလို့ဆို အားလုံး အတူတူ ရှိခဲ့လို့ပါ။",
+    "model_paragraph_mm": "မနှစ်က ကျွန်တော့်မိသားစု ရန်ကုန်မှာ ရှိခဲ့ကြပါတယ်။ အိမ်က သေးပေမဲ့ သက်တောင့်သက်သာ ရှိခဲ့တယ်။ မိဘတွေက အလုပ်များပြီး ကျွန်တော်နဲ့ ညီက တစ်နေ့လုံး ကျောင်းမှာပဲ ရှိနေခဲ့ကြတာပါ။ စနေ၊ တနင်္ဂနွေတွေကတော့ အကြိုက်ဆုံးအချိန်တွေပေါ့၊ ဘာလို့လဲဆိုတော့ အားလုံး အတူတူ ရှိနေခဲ့ကြလို့ပါ။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "I · he · she · it", "form": "was", "example": "She {v}was{/v} tired." },
-          { "subjects": "you · we · they", "form": "were", "example": "They {v}were{/v} at home." }
+          {
+            "subjects": "I · he · she · it",
+            "form": "was",
+            "example": "She {v}was{/v} tired."
+          },
+          {
+            "subjects": "you · we · they",
+            "form": "were",
+            "example": "They {v}were{/v} at home."
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "‘was / were’ ကို ဘယ်အခါ သုံးမလဲ",
+      "pattern": "Subject နဲ့ was / were ဘယ်လို တွဲမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],
-    "time_words": ["t_yesterday", "t_last_week", "t_last_year"],
+    "time_words": [
+      "t_yesterday",
+      "t_last_week",
+      "t_last_year"
+    ],
     "verb_form": "past",
     "time_word_examples": {
-      "t_yesterday": { "en": "I {v}was{/v} busy {t}yesterday{/t}.", "mm": "ကျွန်တော် မနေ့က အလုပ်များခဲ့တယ်။" },
-      "t_last_week": { "en": "They {v}were{/v} in Bagan {t}last week{/t}.", "mm": "သူတို့ ပြီးခဲ့တဲ့အပတ်က ပုဂံမှာ ရှိခဲ့တယ်။" },
-      "t_last_year": { "en": "She {v}was{/v} a student {t}last year{/t}.", "mm": "သူမ မနှစ်က ကျောင်းသူတစ်ယောက် ဖြစ်ခဲ့တယ်။" }
+      "t_yesterday": {
+        "en": "I {v}was{/v} busy {t}yesterday{/t}.",
+        "mm": "ကျွန်တော် မနေ့က အလုပ်များခဲ့ပါတယ်။"
+      },
+      "t_last_week": {
+        "en": "They {v}were{/v} in Bagan {t}last week{/t}.",
+        "mm": "သူတို့ ပြီးခဲ့တဲ့အပတ်က ပုဂံမှာ ရှိခဲ့ကြပါတယ်။"
+      },
+      "t_last_year": {
+        "en": "She {v}was{/v} a student {t}last year{/t}.",
+        "mm": "သူမ မနှစ်က ကျောင်းသူတစ်ယောက် ဖြစ်ခဲ့ပါတယ်။"
+      }
     }
   },
   "exercises": [
@@ -101,43 +162,64 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "They ___ at home yesterday.",
-      "prompt_mm": "သူတို့ မနေ့က အိမ်မှာ ရှိခဲ့တယ်။",
-      "options": ["was", "were", "are"],
-      "answers": ["were"],
-      "explain_mm": "they → were သုံးပါ။"
+      "prompt_mm": "သူတို့ မနေ့က အိမ်မှာ ရှိခဲ့ကြပါတယ်။",
+      "options": [
+        "was",
+        "were",
+        "are"
+      ],
+      "answers": [
+        "were"
+      ],
+      "explain_mm": "Subject က ‘they’ (plural) ဖြစ်လို့ ‘were’ ကို သုံးပေးပါနော်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She ___ a teacher.",
-      "prompt_mm": "သူမ ဆရာမတစ်ယောက် ဖြစ်ခဲ့တယ်။",
-      "options": ["was", "were", "is"],
-      "answers": ["was"],
-      "explain_mm": "she → was သုံးပါ။"
+      "prompt_mm": "သူမ ဆရာမတစ်ယောက် ဖြစ်ခဲ့ပါတယ်။",
+      "options": [
+        "was",
+        "were",
+        "is"
+      ],
+      "answers": [
+        "was"
+      ],
+      "explain_mm": "Subject က ‘she’ (Singular) ဖြစ်လို့ ‘was’ ကို သုံးပေးပါနော်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "We ___ (not / be) ready.",
-      "prompt_mm": "ကျွန်တော်တို့ အဆင်သင့် မဖြစ်ခဲ့ဘူး။",
-      "answers": ["weren't", "were not"],
-      "explain_mm": "we → were၊ အငြင်းဆို weren't (were not)။"
+      "prompt_mm": "ကျွန်တော်တို့ အဆင်သင့် မဖြစ်ခဲ့ကြပါဘူး။",
+      "answers": [
+        "weren't",
+        "were not"
+      ],
+      "explain_mm": "Subject က ‘we’ (plural) ဖြစ်လို့ ‘were’ ကို သုံးရပြီး၊ negative (အငြင်း) ဖြစ်တဲ့အတွက် weren't (were not) ကို သုံးပေးရပါမယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "I were late yesterday.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["I was late yesterday", "i was late yesterday."],
-      "explain_mm": "I → was (were မဟုတ်)။"
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါ။",
+      "answers": [
+        "I was late yesterday",
+        "i was late yesterday."
+      ],
+      "explain_mm": "Subject က ‘I’ နဲ့ဆို ‘was’ ကို သုံးရပါတယ် (‘were’ မဟုတ်ပါဘူး)။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  were  /  they  /  happy",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["They were happy", "they were happy."],
-      "explain_mm": "Subject + were + ... → They were happy."
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်တစ်ခု ဖြစ်အောင် ရေးပေးပါ။",
+      "answers": [
+        "They were happy",
+        "they were happy."
+      ],
+      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + were + ... ပုံစံ ဖြစ်ပါတယ် → ဥပမာ They were happy."
     },
     {
       "kind": "scan_sentences",
@@ -145,9 +227,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — about YESTERDAY / the PAST. Write 5–8 sentences about where you were and how you felt, using was / were.",
-      "prompt_mm": "အပိုင်း ၁ — မနေ့က / အတိတ်အကြောင်း။ ကိုယ် ဘယ်မှာ ရှိခဲ့လဲ၊ ဘယ်လို ခံစားခဲ့ရလဲဆိုတာ was / were သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း (၁) — မနေ့က (သို့) အတိတ်က အကြောင်းအရာတစ်ခု။ ကိုယ် ဘယ်နေရာမှာ ရှိခဲ့လဲ၊ ဘယ်လို ခံစားခဲ့ရလဲ ဆိုတာတွေကို was / were သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ရအောင်။ ပြီးရင် စာအုပ်ထဲမှာ ရေးပြီး scan ဖတ်တင်ပေးပါ — ဒါမှမဟုတ် အောက်က အကွက်ထဲမှာ တစ်ကြောင်းချင်းစီ ရိုက်ထည့်ပြီး တင်ပေးလို့လည်း ရပါတယ်နော်။",
       "model": "Yesterday I {v}was{/v} at home. The weather {v}was{/v} hot. My parents {v}were{/v} at work. My friends {v}were{/v} busy. I {v}was{/v} a little tired.",
-      "explain_mm": "I / he / she → was၊ you / we / they → were ကို subject ပေါ်မူတည်ပြီး ရွေးပါ။",
+      "explain_mm": "Subject ပေါ်မူတည်ပြီး I / he / she နဲ့ဆို ‘was’၊ you / we / they နဲ့ဆို ‘were’ ကို မှန်အောင် ရွေးချယ်ပေးပါနော်။",
       "grading": {
         "grammar_point": "Past simple: was / were",
         "rule": "was for I/he/she/it; were for you/we/they. Used for past states and descriptions.",
@@ -162,16 +244,19 @@
           "Using is/are instead of was/were",
           "Dropping was/were before an adjective (I tired)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a past scene. Write a short paragraph (4–6 sentences) about a place in the past (your old school, a trip, your childhood home) using was / were.",
-      "prompt_mm": "အပိုင်း ၂ — အတိတ် မြင်ကွင်းတစ်ခု။ အတိတ်က နေရာတစ်ခု (ကျောင်းဟောင်း၊ ခရီးတစ်ခု၊ ငယ်ငယ်က အိမ်) အကြောင်း was / were သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း (၂) — အတိတ်က မြင်ကွင်းတစ်ခု။ ကိုယ့်အတွက် အမှတ်တရဖြစ်ခဲ့တဲ့ အတိတ်က နေရာတစ်ခုခု (ဥပမာ - ကျောင်းဟောင်း၊ ခရီးတစ်ခု၊ ငယ်ငယ်ကအိမ်) အကြောင်းကို was / were သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးပေးပါ။ ပြီးရင် စာရွက်ကို scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "My old school {v}was{/v} small. The classrooms {v}were{/v} bright and the teachers {v}were{/v} friendly. My best friend {v}was{/v} in my class. The playground {v}was{/v} behind the building. Those days {v}were{/v} happy.",
-      "explain_mm": "တစ်ဦးတည်း → was၊ အများ → were ကို မှန်အောင် ရွေးပါ။ စာပိုဒ်တစ်ခုလုံး အတိတ်နဲ့ ရေးပါ။",
+      "explain_mm": "Subject က တစ်ယောက်တည်း (Singular) ဆိုရင် ‘was’၊ အများ (plural) ဆိုရင် ‘were’ ကို မှန်အောင် ရွေးပေးပါ။ စာပိုဒ်တစ်ခုလုံးကို Past tense (အတိတ်ကာလ) နဲ့ ရေးဖို့ မမေ့နဲ့နော်။",
       "grading": {
         "grammar_point": "Past simple: was / were",
         "rule": "A past description. was for singular subjects, were for plural subjects.",
@@ -186,7 +271,10 @@
           "Slipping into present (is/are)",
           "Missing was/were before adjectives"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

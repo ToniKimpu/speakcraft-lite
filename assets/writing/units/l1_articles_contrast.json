@@ -8,119 +8,182 @@
   "subtitle_mm": "a/an vs the vs အညွှန်း မပါ",
   "teach": {
     "situation_en": "I have {v}a{/v} cat and {v}a{/v} dog. {v}The{/v} cat is lazy, but {v}the{/v} dog is active. I like {v}dogs{/v} in general. I drink {v}coffee{/v} every morning. {v}The{/v} coffee in this shop is the best.",
-    "situation_mm": "ကျွန်တော့်မှာ ကြောင်တစ်ကောင်နဲ့ ခွေးတစ်ကောင် ရှိတယ်။ အဲဒီ ကြောင်က ပျင်းပေမဲ့ ခွေးက တက်ကြွတယ်။ ကျွန်တော် ခွေးတွေကို ယေဘုယျအားဖြင့် ကြိုက်တယ်။ မနက်တိုင်း ကော်ဖီ သောက်တယ်။ ဒီဆိုင်က ကော်ဖီက အကောင်းဆုံးပါ။",
+    "situation_mm": "ကျွန်တော့်မှာ ကြောင်တစ်ကောင်နဲ့ ခွေးတစ်ကောင် ရှိပါတယ်။ အဲဒီကြောင်လေးကတော့ ပျင်းပေမဲ့ ခွေးလေးကတော့ တက်ကြွတယ်။ ကျွန်တော်က ယေဘုယျအားဖြင့်တော့ ခွေးတွေကို ကြိုက်ပါတယ်။ မနက်တိုင်း ကော်ဖီသောက်လေ့ရှိပြီး ဒီဆိုင်က ကော်ဖီကတော့ အကောင်းဆုံးပါပဲ။",
     "use_en": "a/an = one, not specific (first mention). the = specific/known. No article = plural or uncountable nouns in general.",
-    "use_mm": "a/an = တစ်ခု၊ မတိကျ (ပထမ ဖော်ပြ)။ the = တိကျ/သိပြီးသား။ အညွှန်း မပါ = ယေဘုယျ plural (သို့) uncountable noun။",
+    "use_mm": "a/an ကတော့ တစ်ခုခုကို မတိမကျ၊ ပထမဆုံးအကြိမ် ဖော်ပြတဲ့အခါ သုံးပါတယ်။ the ကတော့ ဘယ်ဟာကို ပြောမှန်း တိတိကျကျ သိပြီးသားဖြစ်တဲ့အခါ သုံးပါတယ်။ Article မပါတာကတော့ ယေဘုယျပြောတဲ့ plural (အများကိန်း) ဒါမှမဟုတ် uncountable noun တွေနဲ့ သုံးပါတယ်နော်။",
     "timeline": "",
     "form": [
-      { "subject": "a / an", "form": "one, general — a dog" },
-      { "subject": "the", "form": "specific — the dog (you know which)" },
-      { "subject": "no article (plural)", "form": "I like dogs." },
-      { "subject": "no article (uncountable)", "form": "I drink coffee." }
+      {
+        "subject": "a / an",
+        "form": "one, general — a dog"
+      },
+      {
+        "subject": "the",
+        "form": "specific — the dog (you know which)"
+      },
+      {
+        "subject": "no article (plural)",
+        "form": "I like dogs."
+      },
+      {
+        "subject": "no article (uncountable)",
+        "form": "I drink coffee."
+      }
     ],
     "form_note_mm": [
-      "တစ်ခု၊ မတိကျ (ပထမအကြိမ်) → a / an (I saw a bird)။",
-      "တိကျ / သိပြီးသား → the (The bird flew away)။",
-      "general plural → no article (I like birds)။",
-      "general uncountable → no article (I like music)။"
+      "တစ်ခုခုကို မတိမကျ၊ ပထမဆုံးအကြိမ် စပြောတဲ့အခါ → a / an (I saw a bird)။",
+      "ဘယ်ဟာကို ပြောမှန်း တိတိကျကျ သိတဲ့အခါ → the (The bird flew away)။",
+      "ယေဘုယျပြောတဲ့ plural (အများကိန်း) → အညွှန်း မပါ (I like birds)။",
+      "ယေဘုယျပြောတဲ့ uncountable noun → အညွှန်း မပါ (I like music)။"
     ],
     "trap_en": "Don't use a/an or the for general plural/uncountable nouns.  WRONG: I like the dogs (in general). / I drink a water.   RIGHT: I like dogs. / I drink water.",
-    "trap_mm": "ယေဘုယျ အများကိန်း/uncountable မှာ a/an, the မသုံးရဘူး။  ✗ I like the dogs (ယေဘုယျ) / I drink a water  →  ✓ I like dogs / I drink water.",
+    "trap_mm": "ယေဘုယျပြောတဲ့ plural (အများကိန်း) နဲ့ uncountable noun တွေမှာ a/an, the တို့ကို ထည့်သုံးလို့ မရပါဘူးနော်။ ဥပမာ - ✗ I like the dogs (ယေဘုယျ) / I drink a water ဆိုတာမျိုးက မှားပြီး၊ ✓ I like dogs / I drink water ဆိုတာကမှ မှန်ပါတယ်။",
     "examples": [
-      { "en": "I saw {v}a{/v} bird.", "mm": "ငှက်တစ်ကောင် မြင်ခဲ့တယ်။ (ပထမ)" },
-      { "en": "{v}The{/v} bird was blue.", "mm": "အဲဒီ ငှက်က အပြာရောင်ပါ။ (တိကျ)" },
-      { "en": "I love {v}animals{/v}.", "mm": "တိရစ္ဆာန်တွေကို ချစ်တယ်။ (ယေဘုယျ — အညွှန်း မပါ)" },
-      { "en": "Tea is good for you.", "mm": "လက်ဖက်ရည်က ကျန်းမာရေးကောင်းတယ်။ (uncountable — အညွှန်း မပါ)" }
+      {
+        "en": "I saw {v}a{/v} bird.",
+        "mm": "ငှက်တစ်ကောင်ကို မြင်ခဲ့တယ်။ (ပထမဆုံးအကြိမ် ပြောတာ)"
+      },
+      {
+        "en": "{v}The{/v} bird was blue.",
+        "mm": "အဲဒီငှက်လေးက အပြာရောင်ပါ။ (ဘယ်ငှက်လဲ တိတိကျကျ သိသွားပြီ)"
+      },
+      {
+        "en": "I love {v}animals{/v}.",
+        "mm": "တိရစ္ဆာန်တွေကို ချစ်တယ်။ (ယေဘုယျပြောတာ — အညွှန်း မလိုပါဘူး)"
+      },
+      {
+        "en": "Tea is good for you.",
+        "mm": "လက်ဖက်ရည်က ကျန်းမာရေးအတွက် ကောင်းပါတယ်။ (uncountable — အညွှန်း မလိုပါဘူး)"
+      }
     ],
     "walkthrough": [
       {
         "subject": "a / an",
-        "rule_mm": "တစ်ခု၊ မတိကျ (ပထမ ဖော်ပြ) → a / an",
+        "rule_mm": "တစ်ခုခုကို မတိမကျ၊ ပထမဆုံးအကြိမ် ဖော်ပြတဲ့အခါ → a / an ကို သုံးပါတယ်။",
         "en": "I saw {v}a{/v} bird.",
-        "why_mm": "ဘယ် bird လဲ မသတ်မှတ်ရသေး၊ ပထမအကြိမ် ဖော်ပြတာ ဖြစ်လို့ 'a bird' သုံးပါတယ်။"
+        "why_mm": "ဒီနေရာမှာ ဘယ် bird ကို ပြောမှန်း တိတိကျကျ မသိသေးဘူးလေ။ ပထမဆုံးအကြိမ် စပြီးပြောတာဖြစ်လို့ 'a bird' လို့ သုံးပေးရတာပါ။"
       },
       {
         "subject": "the",
-        "rule_mm": "တိကျ / သိပြီးသား → the",
+        "rule_mm": "ဘယ်ဟာကို ပြောမှန်း တိတိကျကျ သိပြီးသားဖြစ်တဲ့အခါ → the ကို သုံးပါတယ်။",
         "en": "{v}The{/v} bird was blue.",
-        "why_mm": "အခု ဘယ် bird လဲ သိပြီးသား (တိကျ) ဖြစ်လို့ 'the bird' လို့ ပြောပါတယ်။"
+        "why_mm": "အခုဆိုရင်တော့ ဘယ် bird ကို ပြောနေမှန်း သိသွားပြီလေ (တိတိကျကျ ဖြစ်သွားပြီ)။ ဒါကြောင့် 'the bird' လို့ သုံးရတာပါ။"
       },
       {
         "subject": "no article",
-        "rule_mm": "ယေဘုယျ plural / uncountable → အညွှန်း မပါ",
+        "rule_mm": "ယေဘုယျပြောတဲ့ plural (အများကိန်း) နဲ့ uncountable noun တွေမှာ → အညွှန်း မလိုပါဘူး။",
         "en": "I like {v}dogs{/v}.  ·  I drink {v}coffee{/v}.",
-        "why_mm": "ယေဘုယျအားဖြင့် ပြောတဲ့ plural (dogs) နဲ့ uncountable (coffee) မှာ အညွှန်း မထည့်ဘူး — ✗ the dogs (general) / a coffee။"
+        "why_mm": "ယေဘုယျသဘောနဲ့ ပြောတဲ့ plural (dogs) နဲ့ uncountable (coffee) တွေရဲ့ရှေ့မှာ အညွှန်း ထည့်စရာမလိုပါဘူး။ ဥပမာ ✗ the dogs (general) / a coffee ဆိုတာမျိုးက မှားပါတယ်နော်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "I like ___ in general.",
-        "prompt_mm": "ယေဘုယျအားဖြင့် ဂီတကို ကြိုက်တယ်။",
-        "options": ["the music", "a music", "music"],
+        "prompt_mm": "ကျွန်တော်က ယေဘုယျအားဖြင့် ဂီတကို ကြိုက်ပါတယ်။",
+        "options": [
+          "the music",
+          "a music",
+          "music"
+        ],
         "answer": "music",
-        "explain_mm": "ယေဘုယျ uncountable → အညွှန်း မပါ → music။"
+        "explain_mm": "Music ဆိုတာ ယေဘုယျပြောတဲ့ uncountable noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။"
       },
       {
         "prompt_en": "I bought a shirt. ___ shirt is blue.",
-        "prompt_mm": "အင်္ကျီတစ်ထည် ဝယ်ခဲ့တယ်။ အဲဒီ အင်္ကျီက အပြာရောင်ပါ။",
-        "options": ["A", "An", "The"],
+        "prompt_mm": "ကျွန်တော် အင်္ကျီတစ်ထည် ဝယ်ခဲ့တယ်။ အဲဒီအင်္ကျီလေးက အပြာရောင်ပါ။",
+        "options": [
+          "A",
+          "An",
+          "The"
+        ],
         "answer": "The",
-        "explain_mm": "ဒုတိယအကြိမ် (တိကျ) → The shirt။"
+        "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတဲ့အခါ ဘယ်အင်္ကျီမှန်း တိကျသွားပြီမို့ → The shirt လို့ သုံးပါတယ်။"
       },
       {
         "prompt_en": "I drink ___ every day.",
-        "prompt_mm": "ကျွန်တော် နေ့တိုင်း ရေ သောက်တယ်။",
-        "options": ["a water", "the water", "water"],
+        "prompt_mm": "ကျွန်တော် နေ့တိုင်း ရေသောက်ပါတယ်။",
+        "options": [
+          "a water",
+          "the water",
+          "water"
+        ],
         "answer": "water",
-        "explain_mm": "ယေဘုယျ uncountable → အညွှန်း မပါ → water။"
+        "explain_mm": "Water က ယေဘုယျပြောတဲ့ uncountable noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။"
       }
     ],
     "model_paragraph_en": "I want to open {v}a{/v} shop. {v}The{/v} shop will be near my house. I will sell {v}books{/v} and {v}coffee{/v}. {v}Books{/v} are my passion, and {v}coffee{/v} brings people together. {v}The{/v} idea is simple, but it is {v}a{/v} good plan.",
-    "model_paragraph_mm": "ကျွန်တော် ဆိုင်တစ်ဆိုင် ဖွင့်ချင်တယ်။ အဲဒီ ဆိုင်က အိမ်နားမှာ ဖြစ်မယ်။ စာအုပ်တွေနဲ့ ကော်ဖီ ရောင်းမယ်။ စာအုပ်တွေက ကျွန်တော့်ဝါသနာဖြစ်ပြီး ကော်ဖီက လူတွေကို စုစည်းပေးတယ်။ အကြံက ရိုးရှင်းပေမဲ့ ကောင်းတဲ့ အစီအစဉ်တစ်ခုပါ။"
+    "model_paragraph_mm": "ကျွန်တော် ဆိုင်လေးတစ်ဆိုင် ဖွင့်ချင်ပါတယ်။ အဲဒီဆိုင်လေးက အိမ်နားမှာ ရှိမှာပါ။ ဆိုင်မှာ စာအုပ်တွေနဲ့ ကော်ဖီ ရောင်းမှာပေါ့။ စာအုပ်တွေက ကျွန်တော့်ရဲ့ဝါသနာဖြစ်ပြီး ကော်ဖီက လူတွေကို စုစည်းပေးနိုင်တယ်လေ။ အကြံဉာဏ်ကတော့ ရိုးရှင်းပေမဲ့ တကယ်ကောင်းတဲ့ အစီအစဉ်တစ်ခုပါပဲ။",
+    "step_titles_mm": {
+      "when": "a/an, the နဲ့ article မပါတာ ဘယ်လို ခွဲသုံးမလဲ",
+      "pattern": "a/an, the, article မပါ — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
-  "toolkit": { "verbs": [], "time_words": [] },
+  "toolkit": {
+    "verbs": [],
+    "time_words": []
+  },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I like ___ in general.",
-      "prompt_mm": "ယေဘုယျအားဖြင့် ___ ကို ကြိုက်တယ်။",
-      "options": ["the music", "a music", "music"],
-      "answers": ["music"],
-      "explain_mm": "ယေဘုယျ uncountable → အညွှန်း မပါ → music."
+      "prompt_mm": "ကျွန်တော်က ယေဘုယျအားဖြင့် ___ ကို ကြိုက်ပါတယ်။",
+      "options": [
+        "the music",
+        "a music",
+        "music"
+      ],
+      "answers": [
+        "music"
+      ],
+      "explain_mm": "Music ဆိုတာ ယေဘုယျပြောတဲ့ uncountable noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I bought a shirt. ___ shirt is blue.",
-      "prompt_mm": "အင်္ကျီတစ်ထည် ဝယ်ခဲ့တယ်။ အဲဒီ အင်္ကျီက အပြာရောင်ပါ။",
-      "options": ["A", "The", "—"],
-      "answers": ["The"],
-      "explain_mm": "ဒုတိယအကြိမ် (တိကျ) → The."
+      "prompt_mm": "ကျွန်တော် အင်္ကျီတစ်ထည် ဝယ်ခဲ့တယ်။ အဲဒီအင်္ကျီလေးက အပြာရောင်ပါ။",
+      "options": [
+        "A",
+        "The",
+        "—"
+      ],
+      "answers": [
+        "The"
+      ],
+      "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတဲ့အခါ ဘယ်ဟာမှန်း တိကျသွားပြီမို့ → The ကို သုံးရပါမယ်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "She is ___ honest person. (first mention, vowel sound)",
-      "prompt_mm": "သူမ ရိုးသားတဲ့ လူတစ်ယောက်ပါ။",
-      "answers": ["an"],
-      "explain_mm": "honest — h အသံ မထွက် → an honest."
+      "prompt_mm": "သူမဟာ ရိုးသားတဲ့ လူတစ်ယောက်ပါ။",
+      "answers": [
+        "an"
+      ],
+      "explain_mm": "honest ဆိုတဲ့စကားလုံးမှာ 'h' က အသံမထွက်ဘဲ vowel (သရ)သံနဲ့ စတဲ့အတွက် → an honest လို့ သုံးရတာပါနော်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "I like the cats. (in general)",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။ ( ယေဘုယျ )",
-      "answers": ["I like cats", "i like cats."],
-      "explain_mm": "ယေဘုယျ plural → အညွှန်း မပါ → I like cats."
+      "prompt_mm": "အောက်က မှားနေတဲ့ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါဦး။ (ယေဘုယျအကြောင်း ပြောနေတာနော်)",
+      "answers": [
+        "I like cats",
+        "i like cats."
+      ],
+      "explain_mm": "Cats ဆိုတာ ယေဘုယျပြောတဲ့ plural noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။ ဒါကြောင့် I like cats. က မှန်ပါတယ်။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  water  /  drink  /  I",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( ယေဘုယျ )",
-      "answers": ["I drink water", "i drink water."],
-      "explain_mm": "uncountable ယေဘုယျ → အညွှန်း မပါ → I drink water."
+      "prompt_mm": "ဒီစကားလုံးလေးတွေကို အစဉ်လိုက် richtig စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ရေးပေးပါနော်။ (ယေဘုယျအကြောင်း ပြောနေတာပါ)",
+      "answers": [
+        "I drink water",
+        "i drink water."
+      ],
+      "explain_mm": "Water က ယေဘုယျပြောတဲ့ uncountable noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။ ဒါကြောင့် I drink water. က မှန်ပါတယ်။"
     },
     {
       "kind": "scan_sentences",
@@ -128,9 +191,9 @@
       "min_lines": 6,
       "max_lines": 8,
       "prompt_en": "Part 1 — mix the three. Write 6–8 sentences using a/an (first mention), the (specific), and no article (general plural/uncountable).",
-      "prompt_mm": "အပိုင်း ၁ — သုံးမျိုး ရောပါ။ a/an (ပထမ)၊ the (တိကျ)၊ အညွှန်း မပါ (ယေဘုယျ အများ/uncountable) သုံးပြီး sentence ၆–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း (၁) — Article သုံးမျိုးစလုံးကို ရောပြီး သုံးကြည့်ကြရအောင်။ a/an (ပထမဆုံးအကြိမ်ပြောတာ)၊ the (တိတိကျကျသိတာ)၊ ပြီးတော့ အညွှန်းမလိုတဲ့ (ယေဘုယျ အများ/uncountable) ပုံစံတွေကို သုံးပြီး ဝါကျ ၆ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ပါနော်။ ရေးပြီးရင် ဖုန်းနဲ့ scan ဖတ်တာ၊ ဒါမှမဟုတ် ရိုက်ထည့်လိုက်တာမျိုး လုပ်လို့ရပါတယ်ခင်ဗျ။",
       "model": "I have {v}a{/v} bike. {v}The{/v} bike is red. I like {v}music{/v}. I drink {v}tea{/v} every day. {v}The{/v} tea in this shop is good. I love {v}animals{/v}.",
-      "explain_mm": "ပထမ/မတိကျ → a/an; တိကျ → the; ယေဘုယျ အများ/uncountable → အညွှန်း မပါ။",
+      "explain_mm": "မှတ်ထားရမှာက: ပထမဆုံး/မတိမကျ ပြောရင် → a/an; တိတိကျကျ သိရင် → the; ယေဘုယျ plural/uncountable ဆိုရင် → အညွှန်း မလိုပါဘူး။",
       "grading": {
         "grammar_point": "a/an vs the vs no article",
         "rule": "a/an for a non-specific singular (first mention); the for specific/known; no article for general plurals and uncountables.",
@@ -145,16 +208,19 @@
           "a/an on second mention",
           "Omitting a/an on a singular countable"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a plan or a place. Write a short paragraph (5–6 sentences) using all three article choices correctly.",
-      "prompt_mm": "အပိုင်း ၂ — အစီအစဉ် (သို့) နေရာတစ်ခု။ အညွှန်း သုံးမျိုးစလုံးကို မှန်အောင် သုံးပြီး စာပိုဒ်တို (sentence ၅–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း (၂) — ကိုယ်ကြိုက်တဲ့ အစီအစဉ်တစ်ခု ဒါမှမဟုတ် နေရာတစ်ခုအကြောင်း ရေးကြည့်ရအောင်။ Article သုံးမျိုးစလုံးကို နေရာတကျ မှန်မှန်ကန်ကန်သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၅-၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးရင်တော့ ဖုန်းနဲ့ scan ဖတ်ပြီး ပို့ပေးလို့ရပါတယ်။",
       "model": "I want {v}a{/v} small café. {v}The{/v} café will sell {v}coffee{/v} and {v}cakes{/v}. {v}Coffee{/v} is popular here. {v}The{/v} location is near the school. It is {v}a{/v} simple but good idea.",
-      "explain_mm": "a/an, the, အညွှန်း မပါ ကို အခြေအနေအလိုက် မှန်အောင် သုံးပါ။",
+      "explain_mm": "a/an, the, နဲ့ အညွှန်းမလိုတဲ့ ပုံစံတွေကို အခြေအနေပေါ်မူတည်ပြီး မှန်မှန်ကန်ကန် သုံးပေးပါနော်။",
       "grading": {
         "grammar_point": "a/an vs the vs no article",
         "rule": "Use all three article choices correctly across a short text.",
@@ -169,7 +235,10 @@
           "a/an with uncountables",
           "Missing articles on singular countables"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

@@ -8,132 +8,201 @@
   "subtitle_mm": "verb-ing vs to + verb",
   "teach": {
     "situation_en": "I {v}enjoy reading{/v} and I {v}love cooking{/v}. This year I {v}want to learn{/v} the guitar, so I {v}have decided to practise{/v} every day. I usually {v}finish working{/v} at five. I'm not good yet, but I don't {v}mind making{/v} mistakes.",
-    "situation_mm": "ကျွန်တော် စာဖတ်ရတာ နှစ်သက်ပြီး ချက်ပြုတ်ရတာ ကြိုက်တယ်။ ဒီနှစ် ဂစ်တာ သင်ချင်လို့ နေ့တိုင်း လေ့ကျင့်ဖို့ ဆုံးဖြတ်ထားတယ်။ ပုံမှန် ၅ နာရီမှာ အလုပ် ပြီးတယ်။ မတော်သေးပေမဲ့ အမှား လုပ်မိတာကို ဂရုမစိုက်ဘူး။",
+    "situation_mm": "ကျွန်တော်က စာဖတ်ရတာကို နှစ်သက်ပြီး ချက်ပြုတ်ရတာကိုလည်း ကြိုက်ပါတယ်။ ဒီနှစ်မှာ ဂစ်တာသင်ချင်လို့ နေ့တိုင်းလေ့ကျင့်ဖို့ ဆုံးဖြတ်ထားပါတယ်။ ပုံမှန်ဆို ၅ နာရီမှာ အလုပ်ပြီးပါတယ်။ အခုထိ မတော်သေးပေမဲ့ အမှားလုပ်မိမှာကိုတော့ ဂရုမစိုက်ပါဘူး။",
     "use_en": "Some verbs are followed by a gerund (verb + -ing): enjoy, finish, stop, mind, avoid. Others are followed by an infinitive (to + verb): want, need, decide, hope, plan. A few (like, love, hate, start) take either.",
-    "use_mm": "verb တချို့ နောက်မှာ gerund (verb + -ing) သုံးတယ် — enjoy, finish, stop, mind, avoid။ တချို့ နောက်မှာ infinitive (to + verb) သုံးတယ် — want, need, decide, hope, plan။ တချို့ (like, love, hate, start) ဆို နှစ်မျိုးလုံး ရတယ်။",
+    "use_mm": "Verb တချို့ရဲ့နောက်မှာ gerund (verb + -ing) ပုံစံကို သုံးပေးရပါတယ် — ဥပမာ enjoy, finish, stop, mind, avoid တို့လိုပေါ့။ တချို့ verb တွေရဲ့နောက်မှာတော့ infinitive (to + verb) ကို သုံးပေးရပါတယ် — ဥပမာ want, need, decide, hope, plan တို့လိုမျိုးပါ။ like, love, hate, start တို့လို verb တွေနဲ့ဆိုရင်တော့ ပုံစံနှစ်မျိုးလုံး သုံးလို့ရပါတယ်။",
     "timeline": "verb + ?  →  -ing  or  to + verb",
     "form": [
-      { "subject": "verb + -ing (gerund)", "form": "enjoy / finish / stop / mind / avoid / keep" },
-      { "subject": "verb + to (infinitive)", "form": "want / need / decide / hope / plan / learn" },
-      { "subject": "either (small change)", "form": "like / love / hate / start / begin" },
-      { "subject": "after a preposition", "form": "always -ing  (good at cooking)" }
+      {
+        "subject": "verb + -ing (gerund)",
+        "form": "enjoy / finish / stop / mind / avoid / keep"
+      },
+      {
+        "subject": "verb + to (infinitive)",
+        "form": "want / need / decide / hope / plan / learn"
+      },
+      {
+        "subject": "either (small change)",
+        "form": "like / love / hate / start / begin"
+      },
+      {
+        "subject": "after a preposition",
+        "form": "always -ing  (good at cooking)"
+      }
     ],
     "form_note_mm": [
-      "verb + -ing (gerund) သုံးတဲ့ verb — enjoy, finish, stop, mind, avoid, keep, practise, suggest။",
-      "verb + to + verb (infinitive) သုံးတဲ့ verb — want, need, decide, hope, plan, learn, try, would like။",
-      "like / love / hate / start နဲ့ဆို နှစ်မျိုးလုံး ရတယ် — I like swimming = I like to swim။",
-      "preposition (at, in, of, about) နောက်မှာ အမြဲ -ing — good at cooking, interested in learning။"
+      "verb + -ing (gerund) ပုံစံနဲ့ သုံးရမယ့် verb တွေကတော့ — enjoy, finish, stop, mind, avoid, keep, practise, suggest တို့ ဖြစ်ပါတယ်။",
+      "verb + to + verb (infinitive) ပုံစံနဲ့ သုံးရမယ့် verb တွေကတော့ — want, need, decide, hope, plan, learn, try, would like တို့ ဖြစ်ပါတယ်။",
+      "like / love / hate / start တို့နဲ့ဆိုရင်တော့ ပုံစံနှစ်မျိုးလုံး သုံးလို့ရပါတယ် — I like swimming = I like to swim။",
+      "preposition (ဥပမာ at, in, of, about) ရဲ့နောက်မှာဆိုရင် အမြဲတမ်း -ing ပုံစံကိုပဲ သုံးရပါတယ် — good at cooking, interested in learning။"
     ],
     "trap_en": "Match the verb to its pattern.  WRONG: I enjoy to swim. / I want swimming.   RIGHT: I enjoy swimming. / I want to swim.",
-    "trap_mm": "verb နဲ့ သူ့ပုံစံ ကိုက်အောင် ထားပါ။ ✗ I enjoy to swim / I want swimming → ✓ I enjoy swimming / I want to swim။",
+    "trap_mm": "Verb နဲ့ သူ့ရဲ့လိုက်ဖက်တဲ့ပုံစံကို မှန်အောင်တွဲပေးဖို့ လိုပါတယ်နော်။ ✗ I enjoy to swim / I want swimming → ✓ I enjoy swimming / I want to swim။",
     "examples": [
-      { "en": "I enjoy {v}playing{/v} football.", "mm": "ဘောလုံး ကစားရတာ နှစ်သက်တယ်။" },
-      { "en": "She wants {v}to travel{/v} the world.", "mm": "သူမ ကမ္ဘာပတ် ခရီးသွားချင်တယ်။" },
-      { "en": "We finished {v}eating{/v} at eight.", "mm": "၈ နာရီမှာ စားပြီးတယ်။" },
-      { "en": "He decided {v}to study{/v} abroad.", "mm": "သူ နိုင်ငံခြားမှာ ပညာသင်ဖို့ ဆုံးဖြတ်တယ်။" }
+      {
+        "en": "I enjoy {v}playing{/v} football.",
+        "mm": "ဘောလုံးကစားရတာကို နှစ်သက်ပါတယ်။"
+      },
+      {
+        "en": "She wants {v}to travel{/v} the world.",
+        "mm": "သူမက ကမ္ဘာပတ်ပြီး ခရီးသွားချင်ပါတယ်။"
+      },
+      {
+        "en": "We finished {v}eating{/v} at eight.",
+        "mm": "၈ နာရီမှာ စားပြီးသွားပါတယ်။"
+      },
+      {
+        "en": "He decided {v}to study{/v} abroad.",
+        "mm": "သူက နိုင်ငံခြားမှာ ပညာသင်ဖို့ ဆုံးဖြတ်လိုက်ပါတယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "verb + -ing (gerund)",
-        "rule_mm": "enjoy · finish · stop · mind · avoid နောက်မှာ → verb + -ing",
+        "rule_mm": "enjoy · finish · stop · mind · avoid တို့ရဲ့နောက်မှာဆိုရင် → verb + -ing ပုံစံကို သုံးပေးရပါမယ်။",
         "en": "I enjoy {v}reading{/v}.",
-        "why_mm": "'enjoy' က gerund verb ဖြစ်လို့ နောက်မှာ verb ကို -ing (reading) နဲ့ သုံးပါတယ်။"
+        "why_mm": "'enjoy' က gerund (verb + -ing) လိုက်ရတဲ့ verb အမျိုးအစားဖြစ်လို့ သူ့နောက်မှာ verb ကို -ing ပုံစံ (reading) နဲ့ သုံးပေးထားတာပါ။"
       },
       {
         "subject": "verb + to (infinitive)",
-        "rule_mm": "want · need · decide · hope · plan နောက်မှာ → to + verb",
+        "rule_mm": "want · need · decide · hope · plan တို့ရဲ့နောက်မှာဆိုရင် → to + verb ပုံစံကို သုံးပေးရပါမယ်။",
         "en": "She wants {v}to travel{/v}.",
-        "why_mm": "'want' က infinitive verb ဖြစ်လို့ နောက်မှာ to + verb (to travel) နဲ့ သုံးပါတယ်။"
+        "why_mm": "'want' က infinitive (to + verb) လိုက်ရတဲ့ verb အမျိုးအစားဖြစ်လို့ သူ့နောက်မှာ to + verb ပုံစံ (to travel) နဲ့ သုံးပေးထားတာပါ။"
       },
       {
         "subject": "match the verb",
-        "rule_mm": "verb တိုင်းမှာ သူ့ pattern ရှိ — ကိုက်အောင် ရွေး",
+        "rule_mm": "Verb တိုင်းမှာ သူ့ရဲ့ pattern ရှိတတ်ပါတယ် — ဒါကြောင့် မှန်ကန်ကိုက်ညီတဲ့ပုံစံကို ရွေးချယ်ပေးရပါမယ်။",
         "en": "I enjoy {v}swimming{/v}.  (✗ I enjoy to swim)",
-        "why_mm": "verb တစ်လုံးချင်းစီက -ing ဒါမှမဟုတ် to + verb ကို လိုက်တယ်။ 'enjoy' က -ing လိုလို့ 'to swim' မဟုတ်ဘဲ 'swimming' ပါ။"
+        "why_mm": "Verb တစ်လုံးချင်းစီမှာ သူ့နောက်မှာ -ing လိုက်ရမလား ဒါမှမဟုတ် to + verb လိုက်ရမလားဆိုတာ သတ်မှတ်ထားပြီးသားပါ။ ဥပမာ 'enjoy' ရဲ့နောက်မှာ -ing လိုက်ရတဲ့အတွက် 'to swim' မဟုတ်ဘဲ 'swimming' လို့ သုံးရတာ ဖြစ်ပါတယ်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "I enjoy ___ to music.",
-        "prompt_mm": "တေးဂီတ နားထောင်ရတာ နှစ်သက်တယ်။",
-        "options": ["listening", "to listen", "listen"],
+        "prompt_mm": "တေးဂီတနားထောင်ရတာကို နှစ်သက်ပါတယ်။",
+        "options": [
+          "listening",
+          "to listen",
+          "listen"
+        ],
         "answer": "listening",
-        "explain_mm": "enjoy နောက်မှာ gerund → listening။"
+        "explain_mm": "'enjoy' ရဲ့နောက်မှာ gerund (verb + -ing) လိုက်ရတဲ့အတွက် → listening ဖြစ်သွားပါတယ်။"
       },
       {
         "prompt_en": "She wants ___ a doctor.",
-        "prompt_mm": "သူမ ဆရာဝန် ဖြစ်ချင်တယ်။",
-        "options": ["to become", "becoming", "become"],
+        "prompt_mm": "သူမက ဆရာဝန်တစ်ယောက် ဖြစ်ချင်ပါတယ်။",
+        "options": [
+          "to become",
+          "becoming",
+          "become"
+        ],
         "answer": "to become",
-        "explain_mm": "want နောက်မှာ to + verb → to become။"
+        "explain_mm": "'want' ရဲ့နောက်မှာ infinitive (to + verb) လိုက်ရတဲ့အတွက် → to become ဖြစ်သွားပါတယ်။"
       },
       {
         "prompt_en": "We decided ___ home early.",
-        "prompt_mm": "စောစော အိမ်ပြန်ဖို့ ဆုံးဖြတ်တယ်။",
-        "options": ["to go", "going", "go"],
+        "prompt_mm": "အိမ်စောစောပြန်ဖို့ ဆုံးဖြတ်လိုက်ပါတယ်။",
+        "options": [
+          "to go",
+          "going",
+          "go"
+        ],
         "answer": "to go",
-        "explain_mm": "decide နောက်မှာ to + verb → to go။"
+        "explain_mm": "'decide' ရဲ့နောက်မှာ infinitive (to + verb) လိုက်ရတဲ့အတွက် → to go ဖြစ်သွားပါတယ်။"
       }
     ],
     "model_paragraph_en": "In my free time I enjoy {v}drawing{/v} and I love {v}listening{/v} to music. I have decided {v}to learn{/v} the piano this year, and I want {v}to join{/v} a class. I usually finish {v}studying{/v} early, so I hope {v}to have{/v} enough time. I don't mind {v}practising{/v} alone, and I'm getting better at {v}playing{/v} simple songs.",
-    "model_paragraph_mm": "အားတဲ့အချိန် ပုံဆွဲရတာ နှစ်သက်ပြီး တေးဂီတ နားထောင်ရတာ ကြိုက်တယ်။ ဒီနှစ် စန္ဒရား သင်ဖို့ ဆုံးဖြတ်ထားပြီး သင်တန်း တက်ချင်တယ်။ ပုံမှန် စာ စောစော ပြီးလို့ အချိန် လုံလောက်မယ် မျှော်လင့်တယ်။ တစ်ယောက်တည်း လေ့ကျင့်ရတာ ဂရုမစိုက်ဘူး၊ သီချင်းရိုးရိုး တီးတာ တဖြည်းဖြည်း တော်လာတယ်။",
+    "model_paragraph_mm": "ကျွန်မက အားတဲ့အချိန်တွေမှာ ပုံဆွဲရတာကို နှစ်သက်ပြီး တေးဂီတနားထောင်ရတာကိုလည်း ကြိုက်ပါတယ်။ ဒီနှစ်မှာ စန္ဒရားသင်ဖို့ ဆုံးဖြတ်ထားပြီး သင်တန်းတက်ချင်နေပါတယ်။ ပုံမှန်ဆို ကျောင်းစာတွေ စောစောပြီးလို့ အချိန်လုံလောက်မယ်လို့ မျှော်လင့်ပါတယ်။ တစ်ယောက်တည်း လေ့ကျင့်ရတာကိုလည်း ဂရုမစိုက်ပါဘူး၊ သီချင်းရိုးရိုးလေးတွေ တီးတာ တဖြည်းဖြည်းနဲ့ တော်လာပါပြီ။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "verb + -ing (gerund)", "form": "enjoy · finish · stop · avoid · mind", "tag": "-ing", "example": "I enjoy reading." },
-          { "subjects": "verb + to (infinitive)", "form": "want · need · decide · hope · plan", "tag": "to + verb", "example": "I want to read." }
+          {
+            "subjects": "verb + -ing (gerund)",
+            "form": "enjoy · finish · stop · avoid · mind",
+            "tag": "-ing",
+            "example": "I enjoy reading."
+          },
+          {
+            "subjects": "verb + to (infinitive)",
+            "form": "want · need · decide · hope · plan",
+            "tag": "to + verb",
+            "example": "I want to read."
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "Verb နောက်မှာ -ing နဲ့ to + verb ဘယ်အခါသုံးမလဲ",
+      "pattern": "verb-ing နဲ့ to + verb — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],
     "time_words": [],
-    "note_mm": "verb + -ing: enjoy, like, love, hate, finish, stop, mind, avoid, keep, practise, suggest။  verb + to: want, need, would like, decide, hope, plan, promise, learn, try, agree, forget။  preposition နောက် → အမြဲ -ing။"
+    "note_mm": "verb + -ing လိုက်တဲ့ verb တွေကတော့: enjoy, like, love, hate, finish, stop, mind, avoid, keep, practise, suggest တို့ ဖြစ်ပါတယ်။\nto + verb လိုက်တဲ့ verb တွေကတော့: want, need, would like, decide, hope, plan, promise, learn, try, agree, forget တို့ ဖြစ်ပါတယ်။\npreposition ရဲ့နောက်မှာဆိုရင်တော့ အမြဲတမ်း -ing ပုံစံကိုပဲ သုံးရပါတယ်နော်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I enjoy ___ to music.",
-      "prompt_mm": "တေးဂီတ နားထောင်ရတာ နှစ်သက်တယ်။",
-      "options": ["listening", "to listen", "listen"],
-      "answers": ["listening"],
-      "explain_mm": "enjoy နောက်မှာ -ing → listening။"
+      "prompt_mm": "တေးဂီတနားထောင်ရတာကို နှစ်သက်ပါတယ်။",
+      "options": [
+        "listening",
+        "to listen",
+        "listen"
+      ],
+      "answers": [
+        "listening"
+      ],
+      "explain_mm": "'enjoy' ရဲ့နောက်မှာ -ing ပုံစံလိုက်ရတဲ့အတွက် → listening ဖြစ်သွားပါတယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She wants ___ a doctor.",
-      "prompt_mm": "သူမ ဆရာဝန် ဖြစ်ချင်တယ်။",
-      "options": ["to become", "becoming", "become"],
-      "answers": ["to become"],
-      "explain_mm": "want နောက်မှာ to + verb → to become။"
+      "prompt_mm": "သူမက ဆရာဝန်တစ်ယောက် ဖြစ်ချင်ပါတယ်။",
+      "options": [
+        "to become",
+        "becoming",
+        "become"
+      ],
+      "answers": [
+        "to become"
+      ],
+      "explain_mm": "'want' ရဲ့နောက်မှာ to + verb ပုံစံလိုက်ရတဲ့အတွက် → to become ဖြစ်သွားပါတယ်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "We decided ___ (go) home early.",
-      "prompt_mm": "စောစော အိမ်ပြန်ဖို့ ဆုံးဖြတ်တယ်။ ( go ကို သုံးပါ )",
-      "answers": ["to go"],
-      "explain_mm": "decide နောက်မှာ to + verb → to go။"
+      "prompt_mm": "အိမ်စောစောပြန်ဖို့ ဆုံးဖြတ်လိုက်ပါတယ်။ ( go ကို သုံးပေးပါ )",
+      "answers": [
+        "to go"
+      ],
+      "explain_mm": "'decide' ရဲ့နောက်မှာ to + verb ပုံစံလိုက်ရတဲ့အတွက် → to go ဖြစ်သွားပါတယ်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "He finished ___ (eat) and left.",
-      "prompt_mm": "သူ စားပြီး ထွက်သွားတယ်။ ( eat ကို သုံးပါ )",
-      "answers": ["eating"],
-      "explain_mm": "finish နောက်မှာ -ing → eating။"
+      "prompt_mm": "သူက စားပြီးတော့ ထွက်သွားပါတယ်။ ( eat ကို သုံးပေးပါ )",
+      "answers": [
+        "eating"
+      ],
+      "explain_mm": "'finish' ရဲ့နောက်မှာ -ing ပုံစံလိုက်ရတဲ့အတွက် → eating ဖြစ်သွားပါတယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "I enjoy to swim in the sea.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["I enjoy swimming in the sea", "i enjoy swimming in the sea."],
-      "explain_mm": "enjoy နောက်မှာ -ing → swimming (to swim မဟုတ်ဘူး)။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "answers": [
+        "I enjoy swimming in the sea",
+        "i enjoy swimming in the sea."
+      ],
+      "explain_mm": "'enjoy' ရဲ့နောက်မှာ -ing ပုံစံလိုက်ရတဲ့အတွက် 'swimming' ဖြစ်ရမှာပါ ('to swim' မဟုတ်ပါဘူး)။"
     },
     {
       "kind": "scan_sentences",
@@ -141,9 +210,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — likes & plans. Write 5–8 sentences: some about what you enjoy/like doing (verb + -ing) and some about what you want/plan/hope to do (verb + to).",
-      "prompt_mm": "အပိုင်း ၁ — ဝါသနာ & အစီအစဉ်။ sentence ၅–၈ ကြောင်း ရေးပါ — အချို့က နှစ်သက်/ကြိုက်တဲ့ အရာ (verb + -ing)၊ အချို့က လုပ်ချင်/စီစဉ်/မျှော်လင့်တဲ့ အရာ (verb + to)။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ဝါသနာနဲ့ အစီအစဉ်များ။ ကိုယ့်အကြောင်း sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ရအောင် — တချို့ sentence တွေမှာ ကိုယ်နှစ်သက်တဲ့/ကြိုက်တဲ့ အရာတွေ (verb + -ing) ကိုသုံးပြီး၊ တချို့မှာတော့ လုပ်ချင်တဲ့/စီစဉ်ထားတဲ့/မျှော်လင့်တဲ့ အရာတွေ (verb + to) ကို သုံးပေးပါ။ ရေးပြီးသွားရင် scan ဖတ်ပြီးပို့ပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်နော်။",
       "model": "I enjoy {v}cooking{/v} at the weekend. I love {v}watching{/v} films. I want {v}to learn{/v} French. I have decided {v}to save{/v} money. I hope {v}to visit{/v} Japan one day.",
-      "explain_mm": "verb နဲ့ သူ့ပုံစံ (-ing သို့ to + verb) ကို ကိုက်အောင် သုံးပါ။ enjoy/finish → -ing; want/decide/hope → to။",
+      "explain_mm": "Verb နဲ့ သူ့ရဲ့လိုက်ဖက်တဲ့ပုံစံ (-ing ဒါမှမဟုတ် to + verb) ကို မှန်အောင်တွဲသုံးဖို့ မမေ့နဲ့နော်။ ဥပမာ enjoy/finish ဆိုရင် -ing နဲ့ သုံးပြီး၊ want/decide/hope ဆိုရင်တော့ to နဲ့ သုံးရပါမယ်။",
       "grading": {
         "grammar_point": "Gerunds vs infinitives",
         "rule": "Use verb + -ing after enjoy/finish/stop/mind/avoid; verb + to after want/need/decide/hope/plan. like/love/hate take either.",
@@ -158,16 +227,19 @@
           "want/decide + -ing (I want going)",
           "Base verb with no -ing or 'to'"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a goal. Write a short paragraph (4–6 sentences) about a goal you have and how you plan to reach it, mixing verb + -ing and verb + to patterns.",
-      "prompt_mm": "အပိုင်း ၂ — ပန်းတိုင်။ ကိုယ့်မှာ ရှိတဲ့ ပန်းတိုင်တစ်ခုနဲ့ ဘယ်လို ရောက်အောင် လုပ်မလဲဆိုတာ verb + -ing နဲ့ verb + to ပုံစံ ရောပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — ကိုယ့်ရဲ့ပန်းတိုင်။ ကိုယ့်မှာရှိတဲ့ ပန်းတိုင်တစ်ခုအကြောင်းနဲ့ အဲဒီပန်းတိုင်ကို ဘယ်လိုရောက်အောင် လုပ်သွားမလဲဆိုတာကို verb + -ing နဲ့ verb + to ပုံစံတွေ ရောပြီးတော့ စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးသွားရင် scan ဖတ်ပြီး ပို့ပေးပါနော်။",
       "model": "I want {v}to improve{/v} my English this year. I have decided {v}to study{/v} every morning. I enjoy {v}watching{/v} English videos, so I keep {v}doing{/v} that. I don't mind {v}making{/v} mistakes. I hope {v}to pass{/v} an exam by December.",
-      "explain_mm": "ပန်းတိုင်ကို verb + to (want, decide, hope) နဲ့၊ ဝါသနာ/အလေ့အထကို verb + -ing (enjoy, keep, mind) နဲ့ ဖော်ပြပါ။",
+      "explain_mm": "ကိုယ့်ရဲ့ပန်းတိုင်တွေကို ပြောချင်ရင် verb + to (ဥပမာ want, decide, hope) ပုံစံနဲ့ သုံးပြီး၊ ဝါသနာ ဒါမှမဟုတ် အလေ့အထတွေကို ပြောချင်ရင်တော့ verb + -ing (ဥပမာ enjoy, keep, mind) ပုံစံနဲ့ ဖော်ပြပေးလို့ရပါတယ်နော်။",
       "grading": {
         "grammar_point": "Gerunds vs infinitives",
         "rule": "Combine -ing and to-infinitive patterns correctly when describing a goal and plan.",
@@ -182,7 +254,10 @@
           "Mixing -ing and to on the same verb",
           "Base verb with no ending"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

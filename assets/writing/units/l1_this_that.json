@@ -53,7 +53,7 @@
       },
       {
         "en": "{v}Those{/v} birds are beautiful.",
-        "mm": "ဟိုငှက်တွေ လှတယ်။"
+        "mm": "ဟိုငှက်လေးတွေ လှတယ်။"
       }
     ],
     "walkthrough": [
@@ -73,7 +73,7 @@
         "subject": "near + many",
         "rule_mm": "အနီး + အများ (plural) → these",
         "en": "{v}These{/v} shoes are cheap.",
-        "why_mm": "အနီးမှာ ရှိပြီး တစ်ခုထက်ပို (plural) ဖြစ်လို့ 'these' ကို သုံးပါတယ် — noun ကိုလည်း 'shoes' လို့ အများကိန်း (-s) ထားပါတယ်။"
+        "why_mm": "ကိုယ့်အနီးမှာ ရှိပြီး တစ်ခုထက်ပိုနေရင်  'these' ကို သုံးပေးရပါမယ်— noun ကိုလည်း 'shoes' လို့ အများကိန်းပြောင်းပေးရပါမယ်။"
       },
       {
         "subject": "far + many",
@@ -86,27 +86,43 @@
       {
         "prompt_en": "___ book here is mine.",
         "prompt_mm": "ဒီနားက ဒီစာအုပ်က ကျွန်တော့်ဟာပါ။",
-        "options": ["This", "These", "Those"],
+        "options": [
+          "This",
+          "These",
+          "Those"
+        ],
         "answer": "This",
         "explain_mm": "အနီး + တစ်ခု → this။"
       },
       {
         "prompt_en": "___ shoes over there are new.",
         "prompt_mm": "ဟိုဘက်က ဖိနပ်တွေက အသစ်ပါ။",
-        "options": ["That", "Those", "This"],
+        "options": [
+          "That",
+          "Those",
+          "This"
+        ],
         "answer": "Those",
         "explain_mm": "အဝေး + အများ → those။"
       },
       {
         "prompt_en": "___ mangoes here are sweet.",
         "prompt_mm": "ဒီနားက ဒီသရက်သီးတွေ ချိုတယ်။",
-        "options": ["This", "These", "Those"],
+        "options": [
+          "This",
+          "These",
+          "Those"
+        ],
         "answer": "These",
         "explain_mm": "အနီး + အများ → these (နောက်က noun က plural)။"
       }
     ],
     "model_paragraph_en": "Welcome to my room. {v}This{/v} is my bed, and {v}that{/v} is my desk near the window. {v}These{/v} are my books, and {v}those{/v} pictures on the wall are from my village. {v}This{/v} room is small but I love it.",
-    "model_paragraph_mm": "ကျွန်တော့်ရဲ့ အခန်းမှ ကြိုဆိုပါတယ်။ ဒါက ကျွန်တော့်ရဲ့ ကုတင်ဖြစ်ပြီး ဟိုအရာကတော့ ပြတင်းပေါက်နားက စာရေးစားပွဲပါ။ ဒါတွေက ကျွန်တော့်ရဲ့ စာအုပ်တွေဖြစ်ပြီး နံရံပေါ်က ဟိုဓာတ်ပုံတွေကတော့ ကျွန်တော့်ရွာက ဓာတ်ပုံတွေ ဖြစ်ပါတယ်။ ဒီအခန်းက သေးငယ်ပေမဲ့ ကျွန်တော် သဘောကျပါတယ်။"
+    "model_paragraph_mm": "ကျွန်တော့်ရဲ့ အခန်းမှ ကြိုဆိုပါတယ်။ ဒါက ကျွန်တော့်ရဲ့ ကုတင်ဖြစ်ပြီး ဟိုအရာကတော့ ပြတင်းပေါက်နားက စာရေးစားပွဲပါ။ ဒါတွေက ကျွန်တော့်ရဲ့ စာအုပ်တွေဖြစ်ပြီး နံရံပေါ်က ဟိုဓာတ်ပုံတွေကတော့ ကျွန်တော့်ရွာက ဓာတ်ပုံတွေ ဖြစ်ပါတယ်။ ဒီအခန်းက သေးငယ်ပေမဲ့ ကျွန်တော် သဘောကျပါတယ်။",
+    "step_titles_mm": {
+      "when": "အနီးအဝေးက အရာတွေကို ညွှန်ပြဖို့ ဘယ်လိုသုံးမလဲ",
+      "pattern": "this / that / these / those — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],

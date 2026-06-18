@@ -260,17 +260,28 @@ class _StepsBodyState extends State<_StepsBody> {
     final teach = unit.teach;
     final steps = <_Step>[];
 
+    // A unit may override any step's Burmese heading via `step_titles_mm` in its
+    // JSON; otherwise we use the generic default below. This keeps the heading
+    // matched to the topic (e.g. the "pattern" step is Subject+Verb agreement
+    // for verb units but noun forms / article choice / preposition choice for
+    // others).
+    String title(String key, String fallback) {
+      final v = teach.stepTitlesMm[key];
+      return (v != null && v.isNotEmpty) ? v : fallback;
+    }
+
     // 1 — When + Read.
     steps.add(_Step(
       kicker: 'WHEN TO USE',
-      titleMm: 'ဘယ်အချိန်မှာ သုံးမလဲ',
+      titleMm: title('when', 'ဘယ်အချိန်မှာ သုံးမလဲ'),
       builder: (_) => _WhenStep(teach: teach),
     ));
 
-    // 2 — The pattern (form + agreement).
+    // 2 — The pattern (form + agreement). Default heading is topic-neutral; verb
+    // units override it to the Subject+Verb wording via step_titles_mm.
     steps.add(_Step(
       kicker: 'THE PATTERN',
-      titleMm: 'Subject နှင့် Verb ဘယ်လို တွဲမလဲ',
+      titleMm: title('pattern', 'ပုံစံ — ဘယ်လို ဖွဲ့မလဲ'),
       builder: (_) => _PatternStep(teach: teach),
     ));
 
@@ -278,7 +289,7 @@ class _StepsBodyState extends State<_StepsBody> {
     if (widget.data.walkthrough.isNotEmpty) {
       steps.add(_Step(
         kicker: 'STEP BY STEP',
-        titleMm: 'ဥပမာတွေနဲ့ နားလည်အောင်',
+        titleMm: title('walkthrough', 'ဥပမာတွေနဲ့ နားလည်အောင်'),
         builder: (_) => _WalkthroughStep(
           items: widget.data.walkthrough,
           revealed: _walkRevealed,
@@ -293,7 +304,7 @@ class _StepsBodyState extends State<_StepsBody> {
         _frequencyAdverbs(widget.data.toolkit).isNotEmpty) {
       steps.add(_Step(
         kicker: 'HOW OFTEN',
-        titleMm: 'ဘယ်လောက် မကြာခဏလဲ — verb ရှေ့မှာ',
+        titleMm: title('frequency', 'ဘယ်လောက် မကြာခဏလဲ — verb ရှေ့မှာ'),
         builder: (_) =>
             _FrequencyScale(adverbs: _frequencyAdverbs(widget.data.toolkit)),
       ));
@@ -303,7 +314,7 @@ class _StepsBodyState extends State<_StepsBody> {
     if (teach.trapMm.isNotEmpty) {
       steps.add(_Step(
         kicker: 'WATCH OUT',
-        titleMm: 'အမှားများတဲ့ နေရာ',
+        titleMm: title('trap', 'အမှားများတဲ့ နေရာ'),
         builder: (_) => _TrapStep(mm: teach.trapMm),
       ));
     }
@@ -314,7 +325,7 @@ class _StepsBodyState extends State<_StepsBody> {
     if (!widget.data.toolkit.isEmpty || teach.hasModelParagraph) {
       steps.add(_Step(
         kicker: 'GET READY TO WRITE',
-        titleMm: 'ဒီစကားလုံးတွေနဲ့ ရေးကြည့်ရအောင်',
+        titleMm: title('toolkit', 'ဒီစကားလုံးတွေနဲ့ ရေးကြည့်ရအောင်'),
         builder: (_) =>
             _ToolkitStep(unit: widget.data.unit, toolkit: widget.data.toolkit),
       ));
@@ -324,7 +335,7 @@ class _StepsBodyState extends State<_StepsBody> {
     if (widget.data.checks.isNotEmpty) {
       steps.add(_Step(
         kicker: 'QUICK CHECK',
-        titleMm: 'နားလည်ရဲ့လား စမ်းကြည့်ရအောင်',
+        titleMm: title('check', 'နားလည်ရဲ့လား စမ်းကြည့်ရအောင်'),
         builder: (_) => _CheckStep(
           checks: widget.data.checks,
           picks: _checkPicks,

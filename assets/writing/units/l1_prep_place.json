@@ -8,119 +8,182 @@
   "subtitle_mm": "နေရာ ဝိဘတ် (in / on / at)",
   "teach": {
     "situation_en": "My keys are {v}on{/v} the table. My phone is {v}in{/v} my bag. I am {v}at{/v} home now. The cat is {v}in{/v} the box, and the book is {v}on{/v} the shelf. We meet {v}at{/v} the bus stop.",
-    "situation_mm": "ကျွန်တော့်သော့တွေက စားပွဲပေါ်မှာ။ ဖုန်းက အိတ်ထဲမှာ။ ကျွန်တော် အခု အိမ်မှာ ရှိတယ်။ ကြောင်က သေတ္တာထဲမှာ၊ စာအုပ်က စင်ပေါ်မှာ။ ဘတ်စ်ကားမှတ်တိုင်မှာ တွေ့ကြတယ်။",
+    "situation_mm": "ကျွန်တော့်သော့တွေက စားပွဲပေါ်မှာ ရှိပါတယ်။ ဖုန်းကတော့ အိတ်ထဲမှာပါ။ ကျွန်တော် အခု အိမ်မှာ ရှိနေပါတယ်။ ကြောင်လေးက သေတ္တာထဲမှာ၊ စာအုပ်က စင်ပေါ်မှာပါ။ ဘတ်စ်ကားမှတ်တိုင်မှာ တွေ့ကြမယ်နော်။",
     "use_en": "in = inside (enclosed). on = on a surface (touching). at = at a point or place.",
-    "use_mm": "in = အထဲမှာ (ပိတ်ထားတဲ့ နေရာ)။ on = မျက်နှာပြင်ပေါ် (ထိနေတယ်)။ at = တည်နေရာ/အမှတ်တစ်ခုမှာ။",
+    "use_mm": "`in` ဆိုတာကတော့ 'အထဲမှာ' (ပိတ်ထားတဲ့ နေရာတစ်ခု) ကို ပြောတာပါ။ `on` ကတော့ 'မျက်နှာပြင်ပေါ်မှာ' (တစ်ခုခုနဲ့ ထိနေတဲ့အခါ) သုံးပါတယ်။ `at` ကတော့ တည်နေရာ ဒါမှမဟုတ် အမှတ်တစ်ခုခုမှာလို့ ပြောချင်တဲ့အခါ သုံးပါတယ်နော်။",
     "timeline": "",
     "form": [
-      { "subject": "in", "form": "in the box · in Yangon · in my bag" },
-      { "subject": "on", "form": "on the table · on the wall · on the floor" },
-      { "subject": "at", "form": "at home · at school · at the bus stop" },
-      { "subject": "common", "form": "at home/work/school · in a city" }
+      {
+        "subject": "in",
+        "form": "in the box · in Yangon · in my bag"
+      },
+      {
+        "subject": "on",
+        "form": "on the table · on the wall · on the floor"
+      },
+      {
+        "subject": "at",
+        "form": "at home · at school · at the bus stop"
+      },
+      {
+        "subject": "common",
+        "form": "at home/work/school · in a city"
+      }
     ],
     "form_note_mm": [
-      "in → အထဲ / ပိတ်ထားတဲ့ နေရာ (in the room, in a car, in Mandalay)။",
-      "on → မျက်နှာပြင်ပေါ် ထိနေ (on the desk, on the wall, on the floor)။",
-      "at → အမှတ် / တည်နေရာ (at the door, at school, at the station)။",
-      "မှတ်ထား — at home, at work, at school (in မဟုတ်ဘူး)။"
+      "in → 'အထဲမှာ' ဒါမှမဟုတ် ပိတ်ထားတဲ့ နေရာတွေအတွက် သုံးပါတယ် (ဥပမာ ‘in the room’, ‘in a car’, ‘in Mandalay’)။",
+      "on → မျက်နှာပြင်တစ်ခုခုရဲ့ 'အပေါ်မှာ' ထိနေတဲ့အခါ သုံးပါတယ် (ဥပမာ ‘on the desk’, ‘on the wall’, ‘on the floor’)။",
+      "at → တိကျတဲ့အမှတ် ဒါမှမဟုတ် တည်နေရာတစ်ခုအတွက် သုံးပါတယ် (ဥပမာ ‘at the door’, ‘at school’, ‘at the station’)။",
+      "ဒါလေးတော့ အထူးမှတ်ထားပေးပါနော် — ‘at home’, ‘at work’, ‘at school’ လို့ သုံးပါတယ်။ (‘in’ မဟုတ်ပါဘူး)။"
     ],
     "trap_en": "Match the right preposition to the place.  WRONG: on my bag / in the table / in home   RIGHT: in my bag / on the table / at home",
-    "trap_mm": "နေရာနဲ့ ကိုက်တဲ့ ဝိဘတ် ရွေးပါ။  ✗ on my bag / in the table / in home  →  ✓ in my bag / on the table / at home.",
+    "trap_mm": "နေရာနဲ့ ကိုက်ညီတဲ့ preposition (ဝိဘတ်) မှန်လေးကို ရွေးပေးပါနော်။ ဥပမာ — ✗ on my bag → ✓ in my bag · ✗ in the table → ✓ on the table · ✗ in home → ✓ at home.",
     "examples": [
-      { "en": "The food is {v}on{/v} the table.", "mm": "အစားအစာက စားပွဲပေါ်မှာ။" },
-      { "en": "She is {v}in{/v} the kitchen.", "mm": "သူမ မီးဖိုချောင်ထဲမှာ။" },
-      { "en": "We are {v}at{/v} school.", "mm": "ကျွန်တော်တို့ ကျောင်းမှာ။" },
-      { "en": "The picture is {v}on{/v} the wall.", "mm": "ပုံက နံရံပေါ်မှာ။" }
+      {
+        "en": "The food is {v}on{/v} the table.",
+        "mm": "အစားအစာက စားပွဲပေါ်မှာပါ။"
+      },
+      {
+        "en": "She is {v}in{/v} the kitchen.",
+        "mm": "သူမက မီးဖိုချောင်ထဲမှာပါ။"
+      },
+      {
+        "en": "We are {v}at{/v} school.",
+        "mm": "ကျွန်တော်တို့ ကျောင်းမှာပါ။"
+      },
+      {
+        "en": "The picture is {v}on{/v} the wall.",
+        "mm": "ပုံက နံရံပေါ်မှာပါ။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "in",
-        "rule_mm": "အထဲ / ပိတ်ထားတဲ့ နေရာ → in",
+        "rule_mm": "တစ်ခုခုရဲ့ 'အထဲမှာ' ဒါမှမဟုတ် ပိတ်ထားတဲ့ နေရာတစ်ခုခုကို ပြောချင်ရင် ‘in’ ကို သုံးပါတယ်နော်။",
         "en": "My phone is {v}in{/v} my bag.",
-        "why_mm": "အိတ်ထဲ (enclosed) ဖြစ်လို့ preposition 'in' ကို သုံးပါတယ် — in the box, in the room, in Mandalay။"
+        "why_mm": "အိတ်ထဲမှာဆိုတာ ပိတ်နေတဲ့ (enclosed) နေရာဖြစ်တဲ့အတွက် preposition 'in' ကို သုံးပေးရတာပါ — ဥပမာ ‘in the box’, ‘in the room’, ‘in Mandalay’ လိုမျိုးပေါ့။"
       },
       {
         "subject": "on",
-        "rule_mm": "မျက်နှာပြင်ပေါ် (ထိနေ) → on",
+        "rule_mm": "မျက်နှာပြင်တစ်ခုခုရဲ့ 'အပေါ်မှာ' ထိနေတယ်ဆိုတာကို ပြောချင်ရင်တော့ ‘on’ ကို သုံးပေးရပါမယ်။",
         "en": "The book is {v}on{/v} the table.",
-        "why_mm": "စားပွဲ မျက်နှာပြင်ပေါ်မှာ ထိနေလို့ preposition 'on' ကို သုံးပါတယ် — on the wall, on the floor။"
+        "why_mm": "စားပွဲရဲ့ မျက်နှာပြင်ပေါ်မှာ ထိနေတဲ့အတွက် preposition 'on' ကို သုံးတာပါ — ဥပမာ ‘on the wall’, ‘on the floor’ လိုမျိုးပေါ့။"
       },
       {
         "subject": "at",
-        "rule_mm": "အမှတ် / တည်နေရာ → at",
+        "rule_mm": "တိကျတဲ့ အမှတ်တစ်ခု ဒါမှမဟုတ် တည်နေရာတစ်ခုကို ပြောချင်ရင် ‘at’ ကို သုံးပါတယ်နော်။",
         "en": "I am {v}at{/v} home now.",
-        "why_mm": "တည်နေရာ တစ်ခုမှာ ဆိုလို့ preposition 'at' ကို သုံးပါတယ်။ မှတ်ထား — at home, at school, at work (in home မဟုတ်ဘူး)။"
+        "why_mm": "တိကျတဲ့ တည်နေရာတစ်ခုကို ပြောချင်တဲ့အတွက် preposition 'at' ကို သုံးတာပါ။ ဒါလေးကိုတော့ အထူးမှတ်ထားပေးပါနော် — ‘at home’, ‘at school’, ‘at work’ လို့ သုံးပါတယ် (‘in home’ မဟုတ်ပါဘူး)။"
       }
     ],
     "checks": [
       {
         "prompt_en": "The book is ___ the table.",
-        "prompt_mm": "စာအုပ်က စားပွဲပေါ်မှာ။",
-        "options": ["in", "on", "at"],
+        "prompt_mm": "စာအုပ်က စားပွဲပေါ်မှာ ရှိပါတယ်။",
+        "options": [
+          "in",
+          "on",
+          "at"
+        ],
         "answer": "on",
-        "explain_mm": "မျက်နှာပြင်ပေါ် → on။"
+        "explain_mm": "မျက်နှာပြင်တစ်ခုခုရဲ့ 'အပေါ်မှာ' ဆိုရင် ‘on’ ကို သုံးပါတယ်နော်။"
       },
       {
         "prompt_en": "My phone is ___ my bag.",
-        "prompt_mm": "ဖုန်းက အိတ်ထဲမှာ။",
-        "options": ["in", "on", "at"],
+        "prompt_mm": "ဖုန်းက အိတ်ထဲမှာ ရှိပါတယ်။",
+        "options": [
+          "in",
+          "on",
+          "at"
+        ],
         "answer": "in",
-        "explain_mm": "အထဲ → in။"
+        "explain_mm": "တစ်ခုခုရဲ့ 'အထဲမှာ' ဆိုရင် ‘in’ ကို သုံးပါတယ်နော်။"
       },
       {
         "prompt_en": "She is ___ home.",
-        "prompt_mm": "သူမ အိမ်မှာ ရှိတယ်။",
-        "options": ["in", "on", "at"],
+        "prompt_mm": "သူမ အိမ်မှာ ရှိနေပါတယ်။",
+        "options": [
+          "in",
+          "on",
+          "at"
+        ],
         "answer": "at",
-        "explain_mm": "at home (in home မဟုတ်ဘူး)။"
+        "explain_mm": "အိမ်မှာဆိုရင် ‘at home’ လို့ သုံးပါတယ် (‘in home’ မဟုတ်ပါဘူးနော်)။"
       }
     ],
     "model_paragraph_en": "Welcome to my home. The sofa is {v}in{/v} the living room. The TV is {v}on{/v} the wall. My books are {v}on{/v} the shelf, and my clothes are {v}in{/v} the wardrobe. Right now my family is {v}at{/v} home, and the children are {v}in{/v} the garden.",
-    "model_paragraph_mm": "ကျွန်တော့်အိမ်ကို ကြိုဆိုပါတယ်။ ဆိုဖာက ဧည့်ခန်းထဲမှာ။ TV က နံရံပေါ်မှာ။ စာအုပ်တွေက စင်ပေါ်မှာ၊ အဝတ်တွေက ဗီရိုထဲမှာ။ အခု မိသားစု အိမ်မှာ ရှိပြီး ကလေးတွေ ဥယျာဉ်ထဲမှာ ရှိတယ်။"
+    "model_paragraph_mm": "ကျွန်တော့်အိမ်ကို ကြိုဆိုပါတယ်။ ဆိုဖာက ဧည့်ခန်းထဲမှာ ရှိပါတယ်။ TV ကတော့ နံရံပေါ်မှာပါ။ စာအုပ်တွေက စင်ပေါ်မှာရှိပြီး အဝတ်အစားတွေကတော့ ဗီရိုထဲမှာပါ။ အခု မိသားစုက အိမ်မှာ ရှိနေပြီး ကလေးတွေကတော့ ဥယျာဉ်ထဲမှာ ရှိနေကြပါတယ်နော်။",
+    "step_titles_mm": {
+      "when": "နေရာအကြောင်း ပြောရင် ဘယ်လိုသုံးမလဲ",
+      "pattern": "in / on / at — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
-  "toolkit": { "verbs": [], "time_words": [] },
+  "toolkit": {
+    "verbs": [],
+    "time_words": []
+  },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The book is ___ the table.",
-      "prompt_mm": "စာအုပ်က စားပွဲပေါ်မှာ။",
-      "options": ["in", "on", "at"],
-      "answers": ["on"],
-      "explain_mm": "မျက်နှာပြင်ပေါ် → on."
+      "prompt_mm": "စာအုပ်က စားပွဲပေါ်မှာ ရှိပါတယ်။",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answers": [
+        "on"
+      ],
+      "explain_mm": "မျက်နှာပြင်တစ်ခုခုရဲ့ 'အပေါ်မှာ' ဆိုရင် ‘on’ ကို သုံးပါတယ်နော်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She is ___ home.",
-      "prompt_mm": "သူမ အိမ်မှာ ရှိတယ်။",
-      "options": ["in", "at", "on"],
-      "answers": ["at"],
-      "explain_mm": "at home (in home မဟုတ်ဘူး)။"
+      "prompt_mm": "သူမ အိမ်မှာ ရှိနေပါတယ်။",
+      "options": [
+        "in",
+        "at",
+        "on"
+      ],
+      "answers": [
+        "at"
+      ],
+      "explain_mm": "အိမ်မှာဆိုရင် ‘at home’ လို့ သုံးပါတယ် (‘in home’ မဟုတ်ပါဘူးနော်)။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "My phone is ___ my bag.",
-      "prompt_mm": "ဖုန်းက အိတ်ထဲမှာ။",
-      "answers": ["in"],
-      "explain_mm": "အထဲ → in."
+      "prompt_mm": "ဖုန်းက အိတ်ထဲမှာ ရှိပါတယ်။",
+      "answers": [
+        "in"
+      ],
+      "explain_mm": "တစ်ခုခုရဲ့ 'အထဲမှာ' ဆိုရင် ‘in’ ကို သုံးပါတယ်နော်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "The cat is on the box.",
-      "prompt_mm": "ကြောင်က သေတ္တာထဲမှာ ရှိတယ်။ ( မှားနေတာ ပြင်ပါ )",
-      "answers": ["The cat is in the box", "the cat is in the box."],
-      "explain_mm": "အထဲမှာ ဆိုလို → in the box."
+      "prompt_mm": "“ကြောင်က သေတ္တာထဲမှာ ရှိတယ်။” (ဒီဝါကျလေးကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။)",
+      "answers": [
+        "The cat is in the box",
+        "the cat is in the box."
+      ],
+      "explain_mm": "'အထဲမှာ' လို့ ပြောချင်တာဆိုရင် ‘in the box’ လို့ သုံးရပါမယ်။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  on  /  is  /  the wall  /  it",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["It is on the wall", "it is on the wall."],
-      "explain_mm": "နံရံပေါ် → on the wall။"
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်မှန်အောင်စီပြီး ဝါကျလေးတစ်ခု တည်ဆောက်ပေးပါနော်။",
+      "answers": [
+        "It is on the wall",
+        "it is on the wall."
+      ],
+      "explain_mm": "'နံရံပေါ်မှာ' ဆိုတဲ့အတွက် ‘on the wall’ လို့ သုံးရပါမယ်။"
     },
     {
       "kind": "scan_sentences",
@@ -128,9 +191,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — where things are. Write 5–8 sentences about where things and people are, using in / on / at.",
-      "prompt_mm": "အပိုင်း ၁ — အရာတွေ ဘယ်မှာ။ အရာတွေ/လူတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — အရာတွေ ဘယ်မှာရှိသလဲ။ အရာဝတ္ထုတွေနဲ့ လူတွေ ဘယ်နေရာမှာ ရှိတယ်ဆိုတာကို ‘in’, ‘on’, ‘at’ သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော်။ ပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်ဖြစ်၊ ဒီမှာပဲ ရိုက်ထည့်ပြီးဖြစ်ဖြစ် တင်ပေးလို့ရပါတယ်။",
       "model": "My keys are {v}on{/v} the desk. My money is {v}in{/v} my pocket. I am {v}at{/v} work. The clock is {v}on{/v} the wall. The dog is {v}in{/v} the garden.",
-      "explain_mm": "in (အထဲ)၊ on (ပေါ်)၊ at (တည်နေရာ) ကို မှန်အောင် ရွေးပါ။",
+      "explain_mm": "‘in’ (အထဲမှာ), ‘on’ (အပေါ်မှာ), ‘at’ (တည်နေရာမှာ) — ဒီထဲကမှ အမှန်ဆုံးတစ်ခုကို ရွေးပေးပါနော်။",
       "grading": {
         "grammar_point": "Prepositions of place (in / on / at)",
         "rule": "in = inside; on = on a surface; at = at a point/place (at home/school/work).",
@@ -145,16 +208,19 @@
           "on/in the box confusion",
           "Wrong preposition for the place"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — describe a room. Write a short paragraph (4–6 sentences) saying where things are in a room, using in / on / at.",
-      "prompt_mm": "အပိုင်း ၂ — အခန်းတစ်ခု ဖော်ပြပါ။ အခန်းထဲက အရာတွေ ဘယ်မှာ ရှိလဲဆိုတာ in / on / at သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — အခန်းတစ်ခန်းကို ဖော်ပြကြည့်ရအောင်။ ကိုယ့်အခန်းထဲက ပစ္စည်းတွေ ဘယ်နေရာမှာ ရှိတယ်ဆိုတာကို ‘in’, ‘on’, ‘at’ သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပြပါနော်။ ပြီးရင် ရေးထားတဲ့စာရွက်ကို scan ဖတ်ပြီး တင်ပေးပါ။",
       "model": "My room is simple. The bed is {v}in{/v} the corner. A lamp is {v}on{/v} the table. My bag is {v}on{/v} the floor. My clothes are {v}in{/v} the cupboard. I feel happy {v}at{/v} home.",
-      "explain_mm": "in/on/at ကို နေရာအလိုက် မှန်အောင် သုံးပြီး အခန်းကို ဖော်ပြပါ။",
+      "explain_mm": "‘in’, ‘on’, ‘at’ တို့ကို နေရာအလိုက် မှန်မှန်ကန်ကန်လေးသုံးပြီး အခန်းတစ်ခန်းအကြောင်း ဖော်ပြပေးပါနော်။",
       "grading": {
         "grammar_point": "Prepositions of place (in / on / at)",
         "rule": "Describe a room's contents using place prepositions correctly.",
@@ -169,7 +235,10 @@
           "in home / in work",
           "Missing preposition"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

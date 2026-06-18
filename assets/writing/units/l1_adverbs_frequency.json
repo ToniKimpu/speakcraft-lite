@@ -10,25 +10,46 @@
     "situation_en": "Kyaw has a steady routine. He {t}always{/t} {v}wakes up{/v} at six. He {t}usually{/t} {v}drinks{/v} tea, but he {t}sometimes{/t} {v}drinks{/v} coffee. He {t}never{/t} {v}eats{/v} a big breakfast. He is {t}often{/t} busy at work, so he {t}rarely{/t} {v}watches{/v} TV.",
     "situation_mm": "ကျော် မှာ ပုံမှန် နေ့စဉ်လုပ်ရိုးရှိတယ်။ သူ မနက် ၆ နာရီ အမြဲ အိပ်ရာထတယ်။ ပုံမှန်အားဖြင့် လက်ဖက်ရည် သောက်ပေမဲ့ တစ်ခါတစ်ရံ ကော်ဖီ သောက်တယ်။ မနက်စာ အများကြီး ဘယ်တော့မှ မစားဘူး။ အလုပ်မှာ မကြာခဏ အလုပ်များတာမို့ TV ကို ရှားရှားပါးပါးပဲ ကြည့်တယ်။",
     "use_en": "Adverbs of frequency say HOW OFTEN something happens — from always (every time) to never (no times).",
-    "use_mm": "Frequency adverb တွေက တစ်ခုခုကို ဘယ်လောက်မကြာခဏ လုပ်သလဲဆိုတာ ပြပါတယ် — always (အမြဲ) ကနေ never (ဘယ်တော့မှ မ-) အထိ။",
+    "use_mm": "Frequency adverb တွေဟာ အရာတစ်ခုခု ဘယ်လောက်မကြာခဏ ဖြစ်ပျက်တတ်သလဲ ဆိုတာကို ဖော်ပြပေးတာပါ — always (အမြဲတမ်း) ကနေ never (ဘယ်တော့မှ) အထိ ဖြစ်ပါတယ်။",
     "timeline": "",
     "form": [
-      { "subject": "before the main verb", "form": "I always drink tea." },
-      { "subject": "after am / is / are", "form": "She is always late." },
-      { "subject": "in a question", "form": "Do you often cook?" }
+      {
+        "subject": "before the main verb",
+        "form": "I always drink tea."
+      },
+      {
+        "subject": "after am / is / are",
+        "form": "She is always late."
+      },
+      {
+        "subject": "in a question",
+        "form": "Do you often cook?"
+      }
     ],
     "form_note_mm": [
-      "Frequency adverb (always, usually, often, sometimes, rarely, never) တွေက verb ရဲ့ ရှေ့မှာ နေပါတယ် — She always drinks tea.",
-      "ဒါပေမဲ့ be (am / is / are) နဲ့တွဲရင်တော့ be ရဲ့ နောက်မှာ — She is always late.",
-      "မြန်မာစကားအတိုင်း verb နောက် / sentence အဆုံးမှာ မထားမိဖို့ သတိထားပါ။"
+      "Frequency adverb (always, usually, often, sometimes, rarely, never) တွေဟာ Verb ရဲ့ ရှေ့မှာ ရှိနေတတ်ပါတယ် — She always drinks tea.",
+      "ဒါပေမဲ့ To be verb (am / is / are) နဲ့ တွဲသုံးရင်တော့ Be verb ရဲ့ နောက်မှာ ထားရမှာပါ — She is always late.",
+      "မြန်မာစကား အသုံးအနှုန်းအတိုင်း Verb ရဲ့ နောက်မှာ ဒါမှမဟုတ် ဝါကျရဲ့ အဆုံးမှာ မထားမိဖို့ သတိပြုပါ။"
     ],
     "trap_en": "Frequency adverbs go BEFORE the main verb, but AFTER 'be'.  WRONG: She drinks always tea.   RIGHT: She always drinks tea.",
-    "trap_mm": "မြန်မာလို ‘အမြဲ’ ကို ကြိယာနောက်မှာ ထားလို့ ✗ She drinks always tea လို့ မှားတတ်တယ်။ frequency adverb က ကြိယာ ရှေ့မှာ — ✓ She always drinks tea.  (be နဲ့ဆိုတော့ နောက်မှာ — She is always late.)",
+    "trap_mm": "မြန်မာလို ‘အမြဲ’ ကို ကြိယာရဲ့ နောက်မှာ ထားလေ့ရှိတာကြောင့် ✗ She drinks always tea. လို့ မှားတတ်ကြပါတယ်။ Frequency adverb တွေကို Verb ရဲ့ ရှေ့မှာပဲ ထားရမှာ ဖြစ်လို့ — ✓ She always drinks tea. လို့ ရေးရပါမယ်။ (To be verb နဲ့ တွဲသုံးရင်တော့ နောက်မှာ ထားရမှာမို့ — She is always late. ဖြစ်ပါတယ်။)",
     "examples": [
-      { "en": "I {t}always{/t} {v}drink{/v} tea in the morning.", "mm": "ကျွန်တော် မနက်တိုင်း လက်ဖက်ရည် အမြဲသောက်တယ်။" },
-      { "en": "She {t}usually{/t} {v}walks{/v} to work.", "mm": "သူမ ပုံမှန် အလုပ်ကို လမ်းလျှောက်သွားတယ်။" },
-      { "en": "They {t}never{/t} {v}eat{/v} meat.", "mm": "သူတို့ အသား ဘယ်တော့မှ မစားဘူး။" },
-      { "en": "He is {t}often{/t} late.", "mm": "သူ မကြာခဏ နောက်ကျတယ်။" }
+      {
+        "en": "I {t}always{/t} {v}drink{/v} tea in the morning.",
+        "mm": "ကျွန်တော် မနက်တိုင်း လက်ဖက်ရည် အမြဲသောက်တယ်။"
+      },
+      {
+        "en": "She {t}usually{/t} {v}walks{/v} to work.",
+        "mm": "သူမ ပုံမှန် အလုပ်ကို လမ်းလျှောက်သွားတယ်။"
+      },
+      {
+        "en": "They {t}never{/t} {v}eat{/v} meat.",
+        "mm": "သူတို့ အသား ဘယ်တော့မှ မစားဘူး။"
+      },
+      {
+        "en": "He is {t}often{/t} late.",
+        "mm": "သူ မကြာခဏ နောက်ကျတယ်။"
+      }
     ],
     "walkthrough": [
       {
@@ -45,7 +66,7 @@
       },
       {
         "subject": "watch the order",
-        "rule_mm": "မြန်မာအတိုင်း verb နောက်/sentence အဆုံး မထားမိနဲ့",
+        "rule_mm": "မြန်မာစကား အလိုအရ 'အမြဲ' ကို ကြိယာနောက်မှာ ထားလေ့ရှိပေမဲ့ အင်္ဂလိပ်စာမှာတော့ Verb ရဲ့ နောက်မှာ ဒါမှမဟုတ် ဝါကျရဲ့ အဆုံးမှာ မထားမိဖို့ သတိပြုပါ။",
         "en": "She {t}always{/t} {v}drinks{/v} tea.  (✗ She drinks always tea)",
         "why_mm": "မြန်မာလို 'အမြဲ' ကို verb နောက်မှာ ထားလို့ မှားတတ်ပါတယ်။ frequency adverb က main verb ရဲ့ ရှေ့မှာ ထားပါ။"
       }
@@ -54,21 +75,30 @@
       {
         "prompt_en": "She ___ tea.",
         "prompt_mm": "သူမ လက်ဖက်ရည် အမြဲ သောက်တယ်။",
-        "options": ["always drinks", "drinks always"],
+        "options": [
+          "always drinks",
+          "drinks always"
+        ],
         "answer": "always drinks",
         "explain_mm": "frequency adverb (always) က main verb (drinks) ရဲ့ ရှေ့မှာ။"
       },
       {
         "prompt_en": "She ___ late.",
         "prompt_mm": "သူမ အမြဲ နောက်ကျတယ်။",
-        "options": ["is always", "always is"],
+        "options": [
+          "is always",
+          "always is"
+        ],
         "answer": "is always",
         "explain_mm": "be (is) နဲ့ဆို adverb (always) က be ရဲ့ နောက်မှာ → She is always late."
       },
       {
         "prompt_en": "They ___ meat.",
         "prompt_mm": "သူတို့ အသား ဘယ်တော့မှ မစားဘူး။",
-        "options": ["never eat", "eat never"],
+        "options": [
+          "never eat",
+          "eat never"
+        ],
         "answer": "never eat",
         "explain_mm": "frequency adverb (never) က main verb (eat) ရဲ့ ရှေ့မှာ။"
       }
@@ -76,17 +106,40 @@
     "model_paragraph_en": "My mother {t}always{/t} {v}gets up{/v} early. She {t}usually{/t} {v}cooks{/v} breakfast, and she {t}often{/t} {v}reads{/v} the newspaper. She {t}sometimes{/t} {v}visits{/v} her friends. She is {t}rarely{/t} angry, and she {t}never{/t} {v}forgets{/v} a birthday.",
     "model_paragraph_mm": "ကျွန်တော့်အမေက အမြဲ စောစော အိပ်ရာထတယ်။ ပုံမှန်အားဖြင့် မနက်စာ ချက်ပြီး မကြာခဏ သတင်းစာ ဖတ်တယ်။ တစ်ခါတစ်ရံ သူငယ်ချင်းတွေဆီ သွားလည်တယ်။ ရှားရှားပါးပါးပဲ စိတ်ဆိုးတတ်ပြီး မွေးနေ့ကို ဘယ်တော့မှ မမေ့ဘူး။",
     "blocks": [
-      { "type": "frequency_scale" }
-    ]
+      {
+        "type": "frequency_scale"
+      }
+    ],
+    "step_titles_mm": {
+      "when": "Frequency adverb တွေကို ဘယ်အခါ သုံးမလဲ",
+      "pattern": "Adverb ကို ဝါကျထဲမှာ ဘယ်နေရာ ထားမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_drink", "v_eat", "v_watch", "v_read", "v_cook", "v_play",
-      "v_get_up", "v_wake_up", "v_go", "v_study", "v_work", "v_sleep"
+      "v_drink",
+      "v_eat",
+      "v_watch",
+      "v_read",
+      "v_cook",
+      "v_play",
+      "v_get_up",
+      "v_wake_up",
+      "v_go",
+      "v_study",
+      "v_work",
+      "v_sleep"
     ],
     "time_words": [
-      "t_always", "t_usually", "t_often", "t_sometimes", "t_rarely", "t_never",
-      "t_every_day", "t_in_the_morning", "t_on_weekends"
+      "t_always",
+      "t_usually",
+      "t_often",
+      "t_sometimes",
+      "t_rarely",
+      "t_never",
+      "t_every_day",
+      "t_in_the_morning",
+      "t_on_weekends"
     ],
     "time_words_note_mm": "always, usually, often, sometimes, rarely, never စတဲ့ frequency adverb တွေက ကြိယာ (verb) ရဲ့ ရှေ့မှာ နေပါတယ် — She always drinks tea.  ဒါပေမဲ့ be (am / is / are) နဲ့တွဲရင်တော့ နောက်မှာ နေတယ် — She is always late.  every day, in the morning, on weekends စတဲ့ time phrase တွေကတော့ ဝါကျရဲ့ အဆုံးမှာ နေပါတယ် — I study English every day."
   },
@@ -96,8 +149,14 @@
       "grade": "auto",
       "prompt_en": "Which sentence is correct?",
       "prompt_mm": "ဘယ် sentence က မှန်သလဲ။",
-      "options": ["She drinks always tea.", "She always drinks tea.", "Always she drinks tea."],
-      "answers": ["She always drinks tea."],
+      "options": [
+        "She drinks always tea.",
+        "She always drinks tea.",
+        "Always she drinks tea."
+      ],
+      "answers": [
+        "She always drinks tea."
+      ],
       "explain_mm": "frequency adverb (always) က verb (drinks) ရဲ့ ရှေ့မှာ နေတယ်။"
     },
     {
@@ -105,8 +164,14 @@
       "grade": "auto",
       "prompt_en": "Which sentence is correct?",
       "prompt_mm": "ဘယ် sentence က မှန်သလဲ။",
-      "options": ["She always is late.", "She is always late.", "Always she is late."],
-      "answers": ["She is always late."],
+      "options": [
+        "She always is late.",
+        "She is always late.",
+        "Always she is late."
+      ],
+      "answers": [
+        "She is always late."
+      ],
       "explain_mm": "be (is) နဲ့ဆို frequency adverb က be ရဲ့ နောက်မှာ နေတယ် → She is always late."
     },
     {
@@ -114,7 +179,10 @@
       "grade": "auto",
       "prompt_en": "Put in order:  always  /  I  /  tea  /  drink",
       "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["I always drink tea", "i always drink tea."],
+      "answers": [
+        "I always drink tea",
+        "i always drink tea."
+      ],
       "explain_mm": "Subject + frequency adverb + verb → I always drink tea."
     },
     {
@@ -122,7 +190,10 @@
       "grade": "auto",
       "prompt_en": "Put in order:  is  /  she  /  late  /  never",
       "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( be နဲ့ဆို adverb က နောက်မှာ )",
-      "answers": ["She is never late", "she is never late."],
+      "answers": [
+        "She is never late",
+        "she is never late."
+      ],
       "explain_mm": "be (is) နဲ့ဆို adverb (never) က နောက်မှာ → She is never late."
     },
     {
@@ -130,7 +201,10 @@
       "grade": "auto",
       "prompt_en": "He watches never TV.",
       "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["He never watches TV", "he never watches tv."],
+      "answers": [
+        "He never watches TV",
+        "he never watches tv."
+      ],
       "explain_mm": "frequency adverb (never) က verb (watches) ရဲ့ ရှေ့မှာ ထားရတယ် → He never watches TV."
     },
     {
@@ -156,7 +230,10 @@
           "Adverb before 'be' (She always is late)",
           "Repeating only one adverb"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
@@ -180,7 +257,10 @@
           "Dropping -s on he/she verbs",
           "Adverb before 'be' (He always is busy)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

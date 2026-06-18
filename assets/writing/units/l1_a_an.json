@@ -8,119 +8,182 @@
   "subtitle_mm": "a / an (အညွှန်း မသေချာ)",
   "teach": {
     "situation_en": "I want to be {v}a{/v} doctor. My friend is {v}an{/v} engineer. We live in {v}a{/v} small town. There is {v}an{/v} old temple and {v}a{/v} new market. I have {v}an{/v} hour before work.",
-    "situation_mm": "ကျွန်တော် ဆရာဝန်တစ်ယောက် ဖြစ်ချင်တယ်။ ကျွန်တော့်သူငယ်ချင်းက အင်ဂျင်နီယာတစ်ယောက်ပါ။ ကျွန်တော်တို့ မြို့ငယ်တစ်ခုမှာ နေတယ်။ ဘုရားဟောင်းတစ်ဆူနဲ့ ဈေးအသစ်တစ်ခု ရှိတယ်။ အလုပ်မဝင်ခင် တစ်နာရီ ရှိတယ်။",
+    "situation_mm": "ကျွန်တော်က ဆရာဝန်တစ်ယောက် ဖြစ်ချင်ပါတယ်။ ကျွန်တော့်သူငယ်ချင်းက အင်ဂျင်နီယာတစ်ယောက်ပါ။ ကျွန်တော်တို့ မြို့ငယ်လေးတစ်ခုမှာ နေကြပါတယ်။ ဘုရားဟောင်းတစ်ဆူနဲ့ ဈေးအသစ်တစ်ခု ရှိပါတယ်။ အလုပ်မစခင် တစ်နာရီလောက် အချိန်ရပါတယ်။",
     "use_en": "We use a / an with a singular countable noun the first time, or when it's not specific. a + consonant sound; an + vowel sound.",
-    "use_mm": "singular countable noun ကို ပထမဆုံး ဖော်ပြတဲ့အခါ (သို့) တိကျမှု မရှိတဲ့အခါ a / an သုံးပါတယ်။ a + consonant အသံ; an + vowel အသံ။",
+    "use_mm": "singular countable noun တွေကို ပထမဆုံးအကြိမ် စပြီးပြောတဲ့အခါ၊ ဒါမှမဟုတ် တိတိကျကျ ရည်ညွှန်းတာမဟုတ်တဲ့အခါမှာ a / an ကို သုံးပါတယ်။ a ကို consonant အသံ (ဗျည်းအသံ) ရှေ့မှာ သုံးပြီးတော့ an ကိုတော့ vowel အသံ (သရအသံ) ရှေ့မှာ သုံးပါတယ်နော်။",
     "timeline": "",
     "form": [
-      { "subject": "consonant sound", "form": "a  (a book, a car)" },
-      { "subject": "vowel sound", "form": "an  (an apple, an egg)" },
-      { "subject": "sound, not letter", "form": "an hour · a university" },
-      { "subject": "only singular countable", "form": "a dog ✓ · a water ✗" }
+      {
+        "subject": "consonant sound",
+        "form": "a  (a book, a car)"
+      },
+      {
+        "subject": "vowel sound",
+        "form": "an  (an apple, an egg)"
+      },
+      {
+        "subject": "sound, not letter",
+        "form": "an hour · a university"
+      },
+      {
+        "subject": "only singular countable",
+        "form": "a dog ✓ · a water ✗"
+      }
     ],
     "form_note_mm": [
-      "ဗျည်းအသံ (consonant sound) ရှေ့မှာ a (a book, a teacher)။",
-      "သရအသံ (vowel sound: a, e, i, o, u) ရှေ့မှာ an (an apple, an egg, an umbrella)။",
-      "စာလုံး မဟုတ်ဘဲ ‘အသံ’ ကို ကြည့်ပါ — an hour (h အသံမထွက်), a university (‘yu’ အသံ)။",
-      "a / an က singular countable noun နဲ့သာ။"
+      "စကားလုံးက ဗျည်းအသံ (consonant sound) နဲ့ စရင် သူ့ရှေ့မှာ a ကို သုံးပါတယ် (ဥပမာ a book, a teacher)။",
+      "စကားလုံးက သရအသံ (vowel sound: a, e, i, o, u) နဲ့ စရင်တော့ an ကို သုံးပေးရပါတယ် (ဥပမာ an apple, an egg, an umbrella)။",
+      "အရေးကြီးတာက စာလုံးပေါင်းကို မဟုတ်ဘဲ ‘အသံ’ ကို အဓိက နားထောင်ပြီး ဆုံးဖြတ်ရမှာပါ — ဥပမာ an hour (h အသံမထွက်လို့ပါ), a university (‘yu’ ဆိုတဲ့ ဗျည်းအသံနဲ့ စလို့ပါ)။",
+      "a / an ကို singular countable noun (ရေတွက်လို့ရတဲ့ အနည်းကိန်း) တွေနဲ့ပဲ သုံးပါတယ်နော်။"
     ],
     "trap_en": "Choose a/an by SOUND, not spelling.  WRONG: a apple / an university / a hour   RIGHT: an apple / a university / an hour",
-    "trap_mm": "a/an ကို စာလုံးမဟုတ်ဘဲ ‘အသံ’ နဲ့ ရွေးပါ။  ✗ a apple / an university / a hour  →  ✓ an apple / a university / an hour.",
+    "trap_mm": "a/an ကိုရွေးတဲ့အခါ စာလုံးပေါင်းကိုမကြည့်ဘဲ ‘အသံ’ ကိုပဲ အဓိကနားထောင်ပြီး ရွေးပေးပါနော်။ ✗ a apple / an university / a hour  →  ✓ an apple / a university / an hour.",
     "examples": [
-      { "en": "{v}a{/v} book", "mm": "စာအုပ် တစ်အုပ်" },
-      { "en": "{v}an{/v} apple", "mm": "ပန်းသီး တစ်လုံး" },
-      { "en": "{v}an{/v} hour", "mm": "တစ်နာရီ" },
-      { "en": "{v}a{/v} university", "mm": "တက္ကသိုလ် တစ်ခု" }
+      {
+        "en": "{v}a{/v} book",
+        "mm": "စာအုပ်တစ်အုပ်"
+      },
+      {
+        "en": "{v}an{/v} apple",
+        "mm": "ပန်းသီးတစ်လုံး"
+      },
+      {
+        "en": "{v}an{/v} hour",
+        "mm": "တစ်နာရီ"
+      },
+      {
+        "en": "{v}a{/v} university",
+        "mm": "တက္ကသိုလ်တစ်ခု"
+      }
     ],
     "walkthrough": [
       {
         "subject": "consonant sound",
-        "rule_mm": "ဗျည်းအသံ ရှေ့မှာ → a",
+        "rule_mm": "ဗျည်းအသံ (consonant sound) နဲ့ စတဲ့ စကားလုံးရှေ့မှာ → a ကို သုံးပါတယ်။",
         "en": "{v}a{/v} book",
-        "why_mm": "နောက်စကားလုံးက ဗျည်းအသံ (consonant sound) နဲ့ စလို့ 'a' သုံးပါတယ် — a book, a car, a teacher။"
+        "why_mm": "နောက်ကလိုက်တဲ့ စကားလုံးက ဗျည်းအသံ (consonant sound) နဲ့ စတဲ့အတွက် 'a' ကို သုံးပေးရတာပါ — ဥပမာ a book, a car, a teacher။"
       },
       {
         "subject": "vowel sound",
-        "rule_mm": "သရအသံ (a e i o u) ရှေ့မှာ → an",
+        "rule_mm": "သရအသံ (vowel sound: a, e, i, o, u) နဲ့ စတဲ့ စကားလုံးရှေ့မှာ → an ကို သုံးပါတယ်။",
         "en": "{v}an{/v} apple",
-        "why_mm": "နောက်စကားလုံးက သရအသံ (vowel sound) နဲ့ စလို့ 'an' သုံးပါတယ် — an apple, an egg, an umbrella။"
+        "why_mm": "နောက်ကလိုက်တဲ့ စကားလုံးက သရအသံ (vowel sound) နဲ့ စတဲ့အတွက် 'an' ကို သုံးပေးရတာပါ — ဥပမာ an apple, an egg, an umbrella။"
       },
       {
         "subject": "sound, not letter",
-        "rule_mm": "စာလုံးမဟုတ် — ‘အသံ’ ကို ကြည့်ပါ",
+        "rule_mm": "စာလုံးပေါင်းကို မကြည့်ပါနဲ့ — ‘အသံ’ ကိုပဲ အဓိကထားပြီး ကြည့်ပေးပါနော်။",
         "en": "{v}an{/v} hour · {v}a{/v} university",
-        "why_mm": "spelling မဟုတ်ဘဲ အသံကို ကြည့်ပါ — hour က h အသံ မထွက်လို့ 'an hour'; university က 'yu' (consonant) အသံမို့ 'a university'။"
+        "why_mm": "Spelling ကို မကြည့်ဘဲ အသံထွက်ကိုပဲ အဓိက နားထောင်ရမှာပါ — hour မှာဆို h အသံ မထွက်ဘဲ vowel အသံနဲ့ စလို့ 'an hour' ဖြစ်ပြီး၊ university မှာတော့ 'yu' ဆိုတဲ့ consonant အသံနဲ့ စတဲ့အတွက် 'a university' ဖြစ်သွားတာပါ။"
       }
     ],
     "checks": [
       {
         "prompt_en": "She is ___ engineer.",
-        "prompt_mm": "သူမ အင်ဂျင်နီယာတစ်ယောက်ပါ။",
-        "options": ["a", "an", "the"],
+        "prompt_mm": "သူမက အင်ဂျင်နီယာတစ်ယောက်ပါ။",
+        "options": [
+          "a",
+          "an",
+          "the"
+        ],
         "answer": "an",
-        "explain_mm": "engineer က vowel အသံ → an။"
+        "explain_mm": "'engineer' ဆိုတဲ့ စကားလုံးက vowel အသံနဲ့ စတဲ့အတွက် သူ့ရှေ့မှာ → an ကို သုံးပေးရပါတယ်။"
       },
       {
         "prompt_en": "I wait for ___ hour.",
-        "prompt_mm": "ကျွန်တော် တစ်နာရီ စောင့်တယ်။",
-        "options": ["a", "an", "the"],
+        "prompt_mm": "ကျွန်တော် တစ်နာရီလောက် စောင့်ပါတယ်။",
+        "options": [
+          "a",
+          "an",
+          "the"
+        ],
         "answer": "an",
-        "explain_mm": "hour — h အသံ မထွက်လို့ vowel အသံ → an hour။"
+        "explain_mm": "'hour' မှာ h အသံက အသံတိတ်ဖြစ်နေလို့ vowel အသံနဲ့ စပါတယ်၊ ဒါကြောင့် → an hour လို့ သုံးရတာပါ။"
       },
       {
         "prompt_en": "He studies at ___ university.",
-        "prompt_mm": "သူ တက္ကသိုလ်တစ်ခုမှာ ပညာသင်တယ်။",
-        "options": ["a", "an", "the"],
+        "prompt_mm": "သူက တက္ကသိုလ်တစ်ခုမှာ ပညာသင်ပါတယ်။",
+        "options": [
+          "a",
+          "an",
+          "the"
+        ],
         "answer": "a",
-        "explain_mm": "university — ‘yu’ consonant အသံ → a university။"
+        "explain_mm": "'university' က ‘yu’ ဆိုတဲ့ consonant အသံနဲ့ စတဲ့အတွက် → a university လို့ သုံးရတာပါ။"
       }
     ],
     "model_paragraph_en": "My uncle has {v}an{/v} interesting job. He is {v}a{/v} pilot. He flies {v}a{/v} big plane to {v}an{/v} island every week. He stays in {v}a{/v} hotel for {v}an{/v} hour or two, then flies back. It is {v}a{/v} hard but exciting life.",
-    "model_paragraph_mm": "ကျွန်တော့်ဦးလေးမှာ စိတ်ဝင်စားဖွယ် အလုပ်တစ်ခု ရှိတယ်။ သူက လေယာဉ်မှူးတစ်ယောက်ပါ။ အပတ်တိုင်း ကျွန်းတစ်ခုဆီ လေယာဉ်ကြီးတစ်စင်း မောင်းတယ်။ ဟိုတယ်တစ်ခုမှာ တစ်နာရီနှစ်နာရီ နေပြီး ပြန်ပျံတယ်။ ခက်ခဲပေမဲ့ စိတ်လှုပ်ရှားဖွယ် ဘဝတစ်ခုပါ။"
+    "model_paragraph_mm": "ကျွန်တော့်ဦးလေးမှာ စိတ်ဝင်စားစရာကောင်းတဲ့ အလုပ်တစ်ခု ရှိပါတယ်။ သူက လေယာဉ်မှူးတစ်ယောက်ပါ။ အပတ်တိုင်း ကျွန်းလေးတစ်ခုဆီကို လေယာဉ်ကြီးတစ်စင်း မောင်းသွားရပါတယ်။ ဟိုတယ်တစ်ခုမှာ တစ်နာရီ၊ နှစ်နာရီလောက်နားပြီး ပြန်လာရပါတယ်။ ခက်ခဲပေမဲ့ စိတ်လှုပ်ရှားစရာကောင်းတဲ့ ဘဝလေးတစ်ခုပါပဲ။",
+    "step_titles_mm": {
+      "when": "‘a / an’ ကို ဘယ်လိုနေရာမှာ သုံးမလဲ",
+      "pattern": "a နဲ့ an — ဘယ်ဟာကို ရွေးချယ်မလဲ"
+    }
   },
-  "toolkit": { "verbs": [], "time_words": [] },
+  "toolkit": {
+    "verbs": [],
+    "time_words": []
+  },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She is ___ engineer.",
-      "prompt_mm": "သူမ အင်ဂျင်နီယာတစ်ယောက်ပါ။",
-      "options": ["a", "an", "the"],
-      "answers": ["an"],
-      "explain_mm": "engineer က vowel အသံ → an."
+      "prompt_mm": "သူမက အင်ဂျင်နီယာတစ်ယောက်ပါ။",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "answers": [
+        "an"
+      ],
+      "explain_mm": "'engineer' က vowel အသံနဲ့ စတဲ့အတွက် သူ့ရှေ့မှာ → an ကို သုံးရပါတယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I wait for ___ hour.",
-      "prompt_mm": "ကျွန်တော် တစ်နာရီ စောင့်တယ်။",
-      "options": ["a", "an", "the"],
-      "answers": ["an"],
-      "explain_mm": "hour — h အသံ မထွက်လို့ vowel အသံ → an hour."
+      "prompt_mm": "ကျွန်တော် တစ်နာရီလောက် စောင့်ပါတယ်။",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "answers": [
+        "an"
+      ],
+      "explain_mm": "'hour' မှာ h အသံက အသံတိတ်ဖြစ်နေလို့ vowel အသံနဲ့ စပါတယ်၊ ဒါကြောင့် → an hour လို့ သုံးရတာပါ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "He studies at ___ university.",
-      "prompt_mm": "သူ တက္ကသိုလ်တစ်ခုမှာ ပညာသင်တယ်။",
-      "answers": ["a"],
-      "explain_mm": "university — ‘yu’ consonant အသံ → a university."
+      "prompt_mm": "သူက တက္ကသိုလ်တစ်ခုမှာ ပညာသင်ပါတယ်။",
+      "answers": [
+        "a"
+      ],
+      "explain_mm": "'university' က ‘yu’ ဆိုတဲ့ consonant အသံနဲ့ စတဲ့အတွက် → a university လို့ သုံးရတာပါ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "I ate a apple.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["I ate an apple", "i ate an apple."],
-      "explain_mm": "apple က vowel အသံ → an apple."
+      "prompt_mm": "အောက်မှာ မှားနေတဲ့ sentence လေးကို အမှန်ဖြစ်အောင် ပြင်ပေးပါဦး။",
+      "answers": [
+        "I ate an apple",
+        "i ate an apple."
+      ],
+      "explain_mm": "'apple' က vowel အသံနဲ့ စတဲ့အတွက် → an apple လို့ သုံးရမှာပါ။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  is  /  it  /  egg  /  an",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["It is an egg", "it is an egg."],
-      "explain_mm": "egg → an egg (vowel အသံ)။"
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးလေးတွေကို နေရာတကျပြန်စီပြီး sentence အမှန်လေးတစ်ခုဖြစ်အောင် ရေးပေးပါနော်။",
+      "answers": [
+        "It is an egg",
+        "it is an egg."
+      ],
+      "explain_mm": "'egg' က vowel အသံနဲ့ စတဲ့အတွက် → an egg လို့ ရေးရမှာပါ။"
     },
     {
       "kind": "scan_sentences",
@@ -128,9 +191,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — name things and jobs. Write 5–8 sentences using a / an (e.g. \"I have a pen. My mother is an artist.\").",
-      "prompt_mm": "အပိုင်း ၁ — အရာတွေ၊ အလုပ်တွေ ပြောပါ။ a / an သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ (ဥပမာ — \"I have a pen. My mother is an artist.\")။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ပတ်ဝန်းကျင်က အရာတွေ၊ အလုပ်အကိုင်တွေအကြောင်း ပြောကြည့်ကြရအောင်။ a / an ကို သုံးပြီးတော့ sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ (ဥပမာ — \"I have a pen. My mother is an artist.\")။ ရေးပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ပြီးတင်ပေးလို့လည်း ရပါတယ်နော်။",
       "model": "I have {v}a{/v} dog. My father is {v}an{/v} engineer. We live in {v}a{/v} village. There is {v}an{/v} old tree near my house. I read {v}a{/v} book every night.",
-      "explain_mm": "a/an ကို နောက်စကားလုံးရဲ့ အသံနဲ့ ရွေးပါ — consonant အသံ → a, vowel အသံ → an။",
+      "explain_mm": "a/an ကို ရွေးရတော့မယ်ဆိုရင် နောက်ကလိုက်တဲ့ စကားလုံးရဲ့ အသံထွက်ကိုပဲ ကြည့်ပြီးရွေးပါ — consonant အသံဆိုရင် → a, vowel အသံဆိုရင် → an ပါ။",
       "grading": {
         "grammar_point": "a / an",
         "rule": "a before a consonant sound, an before a vowel sound; only with singular countable nouns. Choice depends on sound, not spelling.",
@@ -145,16 +208,19 @@
           "a/an with plural or uncountable",
           "Choosing by letter not sound"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — describe a person's job/day. Write a short paragraph (4–6 sentences) using a / an several times.",
-      "prompt_mm": "အပိုင်း ၂ — တစ်ယောက်ယောက်ရဲ့ အလုပ်/နေ့ ဖော်ပြပါ။ a / an ကို အကြိမ်ကြိမ် သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — ဒီတစ်ခါတော့ ကိုယ်သိတဲ့ တစ်ယောက်ယောက်ရဲ့ အလုပ်အကိုင် ဒါမှမဟုတ် သူတို့ရဲ့ တစ်နေ့တာအကြောင်းကို ဖော်ပြကြည့်ရအောင်။ a / an ကို များများသုံးပြီးတော့ စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးသွားရင်တော့ scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "My sister is {v}a{/v} nurse. She works in {v}a{/v} hospital. Every day she helps {v}a{/v} doctor. She has {v}an{/v} early start and {v}a{/v} long day. It is {v}a{/v} hard job but {v}an{/v} important one.",
-      "explain_mm": "a/an ကို အသံအလိုက် မှန်အောင် ရွေးပြီး စာပိုဒ် ရေးပါ။",
+      "explain_mm": "a/an ကို အသံထွက်အလိုက် မှန်မှန်ကန်ကန်ရွေးပြီး စာပိုဒ်လေးတစ်ပုဒ် ရေးပေးပါနော်။",
       "grading": {
         "grammar_point": "a / an",
         "rule": "Use a/an correctly by sound throughout a short description.",
@@ -169,7 +235,10 @@
           "a/an with wrong noun type",
           "Omitting a/an where needed"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

@@ -8,137 +8,222 @@
   "subtitle_mm": "be going to — အစီအစဉ်",
   "teach": {
     "situation_en": "I {v}'m going to{/v} visit my grandmother next week. My sister {v}is going to{/v} study medicine. We {v}are going to{/v} move to a new house. Look at those dark clouds — it {v}'s going to{/v} rain!",
-    "situation_mm": "နောက်အပတ် အဖွားကို သွားလည်ဖို့ စီစဉ်ထားတယ်။ အစ်မက ဆေးပညာ သင်ဖို့ ရှိတယ်။ ကျွန်တော်တို့ အိမ်အသစ် ပြောင်းဖို့ ရှိတယ်။ အဲဒီ မိုးတိမ်မည်းတွေ ကြည့်စမ်း — မိုးရွာတော့မယ်!",
+    "situation_mm": "နောက်အပတ် အဖွားကို သွားလည်ဖို့ စီစဉ်ထားပါတယ်။ အစ်မက ဆေးပညာ သင်ယူဖို့ ရှိပါတယ်။ ကျွန်တော်တို့ အိမ်အသစ် ပြောင်းဖို့ အစီအစဉ်ရှိပါတယ်။ ဟို မိုးတိမ်မည်းကြီးတွေ ကြည့်ပါဦး — မိုးရွာတော့မယ်!",
     "use_en": "We use be (am / is / are) + going to + base verb for future plans and intentions decided before now, and for predictions based on evidence we can see now.",
-    "use_mm": "be (am / is / are) + going to + verb (base) ကို အရင်က ဆုံးဖြတ်ထားပြီးသား အစီအစဉ်/ရည်ရွယ်ချက်အတွက်၊ နဲ့ အခု မြင်နေရတဲ့ သက်သေအပေါ် အခြေခံတဲ့ ခန့်မှန်းချက်အတွက် သုံးပါတယ်။",
+    "use_mm": "be (am / is / are) + going to + verb (base) ကို အရင်ကတည်းက ဆုံးဖြတ်ထားပြီးသား အစီအစဉ်တွေ၊ ရည်ရွယ်ချက်တွေအကြောင်း ပြောတဲ့အခါ သုံးပါတယ်။ ပြီးတော့ မျက်စိရှေ့မှာ မြင်နေရတဲ့ သက်သေအပေါ်မူတည်ပြီး ခန့်မှန်းတဲ့အခါမှာလည်း သုံးပါတယ်ခင်ဗျ။",
     "timeline": "now ──(plan already made)──▶● future",
     "form": [
-      { "subject": "I", "form": "am going to + base  (I'm going to go)" },
-      { "subject": "he / she / it", "form": "is going to + base" },
-      { "subject": "you / we / they", "form": "are going to + base" },
-      { "subject": "negative / question", "form": "'m not / isn't / aren't going to · Am/Is/Are … going to?" }
+      {
+        "subject": "I",
+        "form": "am going to + base  (I'm going to go)"
+      },
+      {
+        "subject": "he / she / it",
+        "form": "is going to + base"
+      },
+      {
+        "subject": "you / we / they",
+        "form": "are going to + base"
+      },
+      {
+        "subject": "negative / question",
+        "form": "'m not / isn't / aren't going to · Am/Is/Are … going to?"
+      }
     ],
     "form_note_mm": [
-      "be (am / is / are) + going to + verb (base)။",
-      "I → am, he / she / it → is, you / we / they → are going to။",
-      "negative — 'm not / isn't / aren't going to + verb။ question — Am / Is / Are + subject + going to + verb?",
-      "အရင်က ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်/ရည်ရွယ်ချက်၊ မြင်နေရတဲ့ သက်သေအရ ခန့်မှန်းချက်အတွက် သုံးတယ်။"
+      "ဖွဲ့စည်းပုံကတော့ be (am / is / are) + going to + verb (base) ပဲ ဖြစ်ပါတယ်။",
+      "I နဲ့ဆို am, he / she / it နဲ့ဆို is, you / we / they နဲ့ဆို are going to ကို သုံးပေးရပါမယ်။",
+      "Negative (အငြင်းဝါကျ) ဆိုရင် 'm not / isn't / aren't going to + verb ပုံစံကို သုံးပါတယ်။",
+      "Question (မေးခွန်း) ဆိုရင်တော့ Am / Is / Are + subject + going to + verb? ပုံစံနဲ့ မေးရပါမယ်။",
+      "အရင်ကတည်းက ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်တွေ၊ ရည်ရွယ်ချက်တွေနဲ့ မျက်စိရှေ့မှာ မြင်နေရတဲ့ သက်သေအပေါ်မူတည်ပြီး ခန့်မှန်းတဲ့အခါမှာ သုံးပါတယ်။"
     ],
     "trap_en": "Use be + going to + base verb; don't drop 'be'.  WRONG: I going to study. / She going to leave.   RIGHT: I am going to study. / She is going to leave.",
-    "trap_mm": "be (am / is / are) + going to + verb (base) သုံးပါ၊ be ကို မမေ့နဲ့။ ✗ I going to study / She going to leave → ✓ I am going to study / She is going to leave။",
+    "trap_mm": "be (am / is / are) + going to + verb (base) ပုံစံကို သုံးတဲ့အခါ 'be' ကို ချန်ထားခဲ့လို့ မရပါဘူးနော်။ ✗ I going to study / She going to leave → ✓ I am going to study / She is going to leave။",
     "examples": [
-      { "en": "I {v}'m going to{/v} learn to drive.", "mm": "ကားမောင်း သင်ဖို့ စီစဉ်ထားတယ်။" },
-      { "en": "She {v}is going to{/v} start a business.", "mm": "သူမ စီးပွားရေး လုပ်ဖို့ ရှိတယ်။" },
-      { "en": "They {v}aren't going to{/v} sell the house.", "mm": "သူတို့ အိမ် ရောင်းမှာ မဟုတ်ဘူး။" },
-      { "en": "{v}Are{/v} you {v}going to{/v} watch the match?", "mm": "ပွဲ ကြည့်ဖို့ ရှိလား။" }
+      {
+        "en": "I {v}'m going to{/v} learn to drive.",
+        "mm": "ကားမောင်းသင်ဖို့ စီစဉ်ထားပါတယ်။"
+      },
+      {
+        "en": "She {v}is going to{/v} start a business.",
+        "mm": "သူမ စီးပွားရေးလုပ်ဖို့ အစီအစဉ်ရှိပါတယ်။"
+      },
+      {
+        "en": "They {v}aren't going to{/v} sell the house.",
+        "mm": "သူတို့ အိမ်ကို ရောင်းမှာ မဟုတ်ပါဘူး။"
+      },
+      {
+        "en": "{v}Are{/v} you {v}going to{/v} watch the match?",
+        "mm": "ပွဲ ကြည့်ဖို့ အစီအစဉ်ရှိသလား။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "I",
-        "rule_mm": "I → am going to + verb (base)",
+        "rule_mm": "I နဲ့ဆိုရင် → am going to + verb (base) ပါ။",
         "en": "I {v}am going to{/v} study medicine.",
-        "why_mm": "Subject က 'I' ဖြစ်လို့ 'am going to' နဲ့တွဲပါတယ် — အရင်က ဆုံးဖြတ်ထားတဲ့ အစီအစဉ် ဖြစ်လို့။"
+        "why_mm": "Subject က 'I' ဖြစ်တဲ့အတွက် 'am going to' နဲ့ တွဲပေးရပါမယ်။ ဒါက အရင်ကတည်းက ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်တစ်ခုဖြစ်လို့ပါခင်ဗျ။"
       },
       {
         "subject": "he / she / it",
-        "rule_mm": "He · She · It → is going to + verb (base)",
+        "rule_mm": "He · She · It (Singular) → is going to + verb (base)",
         "en": "She {v}is going to{/v} leave.",
-        "why_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ 'is going to' ကို သုံးပါတယ်။"
+        "why_mm": "Subject က 'She' (he/she/it လိုမျိုး Singular / အနည်းကိန်း) ဖြစ်တဲ့အတွက် 'is going to' ကို သုံးပေးရပါမယ်။"
       },
       {
         "subject": "you / we / they — don't drop 'be'",
-        "rule_mm": "You · We · They → are going to (be ကို မမေ့နဲ့)",
+        "rule_mm": "You · We · They (Plural) → are going to ('be' ကို မမေ့နဲ့နော်)",
         "en": "They {v}are going to{/v} move.  (✗ They going to move)",
-        "why_mm": "Subject က 'They' (you/we/they) ဖြစ်လို့ 'are going to'။ be (am/is/are) ကို မမေ့ပါနဲ့ — 'going to' တစ်ခုတည်း မရပါဘူး။"
+        "why_mm": "Subject က 'They' (you/we/they လိုမျိုး Plural / အများကိန်း) ဖြစ်တဲ့အတွက် 'are going to' ကို သုံးရပါမယ်။ 'be' (am/is/are) ကို ထည့်ဖို့ မမေ့ပါနဲ့နော် — 'going to' တစ်ခုတည်း သုံးလို့ မရပါဘူး။"
       }
     ],
     "checks": [
       {
         "prompt_en": "She ___ study medicine.",
-        "prompt_mm": "သူမ ဆေးပညာ သင်ဖို့ ရှိတယ်။",
-        "options": ["is going to", "am going to", "are going to"],
+        "prompt_mm": "သူမ ဆေးပညာ သင်ယူဖို့ အစီအစဉ်ရှိပါတယ်။",
+        "options": [
+          "is going to",
+          "am going to",
+          "are going to"
+        ],
         "answer": "is going to",
-        "explain_mm": "she → is going to။"
+        "explain_mm": "she (Singular) ဖြစ်တဲ့အတွက် → is going to ကို သုံးရပါမယ်။"
       },
       {
         "prompt_en": "We ___ move next month.",
-        "prompt_mm": "ကျွန်တော်တို့ နောက်လ ပြောင်းဖို့ ရှိတယ်။",
-        "options": ["is going to", "are going to", "am going to"],
+        "prompt_mm": "ကျွန်တော်တို့ နောက်လမှာ ပြောင်းဖို့ အစီအစဉ်ရှိပါတယ်။",
+        "options": [
+          "is going to",
+          "are going to",
+          "am going to"
+        ],
         "answer": "are going to",
-        "explain_mm": "we → are going to။"
+        "explain_mm": "we (Plural) ဖြစ်တဲ့အတွက် → are going to ကို သုံးရပါမယ်။"
       },
       {
         "prompt_en": "He ___ buy a car.",
-        "prompt_mm": "သူ ကား ဝယ်ဖို့ ရှိတယ်။",
-        "options": ["is going to", "going to", "are going to"],
+        "prompt_mm": "သူ ကားတစ်စီး ဝယ်ဖို့ အစီအစဉ်ရှိပါတယ်။",
+        "options": [
+          "is going to",
+          "going to",
+          "are going to"
+        ],
         "answer": "is going to",
-        "explain_mm": "he → is going to။ be ('is') ကို မမေ့နဲ့ — 'going to' ချည်း မရဘူး။"
+        "explain_mm": "he (Singular) ဖြစ်တဲ့အတွက် → is going to ကို သုံးရပါမယ်။ 'be' ('is') ကို ထည့်ဖို့ မမေ့ပါနဲ့နော် — 'going to' တစ်ခုတည်း သုံးလို့ မရပါဘူး။"
       }
     ],
     "model_paragraph_en": "Next year {v}is going to{/v} be busy. I {v}'m going to{/v} start university. My brother {v}is going to{/v} get his first job. My parents {v}are going to{/v} travel abroad. We {v}'re going to{/v} celebrate my sister's wedding. It {v}'s going to{/v} be a big year!",
-    "model_paragraph_mm": "နောက်နှစ်က အလုပ်များလိမ့်မယ်။ ကျွန်တော် တက္ကသိုလ် စဖို့ ရှိတယ်။ အစ်ကိုက ပထမဆုံး အလုပ် ရဖို့ ရှိတယ်။ မိဘတွေက နိုင်ငံခြား ခရီးသွားဖို့ ရှိတယ်။ ကျွန်တော်တို့ အစ်မရဲ့ မင်္ဂလာဆောင် ကျင်းပဖို့ ရှိတယ်။ နှစ်ကြီးတစ်နှစ် ဖြစ်တော့မယ်!",
+    "model_paragraph_mm": "နောက်နှစ်ကတော့ အလုပ်တွေများမယ့်နှစ်ပါပဲ။ ကျွန်တော် တက္ကသိုလ် စတက်ဖို့ ရှိပါတယ်။ အစ်ကိုကလည်း သူ့ရဲ့ ပထမဆုံးအလုပ်ကို ရတော့မှာပါ။ မိဘတွေက နိုင်ငံခြားခရီး သွားဖို့ အစီအစဉ်ရှိပါတယ်။ ပြီးတော့ ကျွန်တော်တို့ အစ်မရဲ့ မင်္ဂလာဆောင်ကိုလည်း ကျင်းပဖို့ ရှိပါသေးတယ်။ တကယ့်ကို နှစ်ကြီးတစ်နှစ် ဖြစ်တော့မှာပါ!",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "I", "form": "am going to", "tag": "I'm", "example": "I {v}am going to{/v} study." },
-          { "subjects": "he · she · it", "form": "is going to", "tag": "he's", "example": "She {v}is going to{/v} leave." },
-          { "subjects": "you · we · they", "form": "are going to", "tag": "they're", "example": "They {v}are going to{/v} move." }
+          {
+            "subjects": "I",
+            "form": "am going to",
+            "tag": "I'm",
+            "example": "I {v}am going to{/v} study."
+          },
+          {
+            "subjects": "he · she · it",
+            "form": "is going to",
+            "tag": "he's",
+            "example": "She {v}is going to{/v} leave."
+          },
+          {
+            "subjects": "you · we · they",
+            "form": "are going to",
+            "tag": "they're",
+            "example": "They {v}are going to{/v} move."
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "‘be going to’ ကို ဘယ်လိုအခြေအနေမှာ သုံးမလဲ",
+      "pattern": "Subject အလိုက် am / is / are ဘယ်လို ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_study", "v_work", "v_start", "v_go", "v_live", "v_cook",
-      "v_play", "v_read", "v_watch", "v_eat"
+      "v_study",
+      "v_work",
+      "v_start",
+      "v_go",
+      "v_live",
+      "v_cook",
+      "v_play",
+      "v_read",
+      "v_watch",
+      "v_eat"
     ],
     "time_words": [],
     "verb_form": "base",
-    "note_mm": "going to နောက်က verb က base form (go, study, start)။ အနာဂတ် အချိန်စကားလုံး — tomorrow, next week / month, soon, this weekend၊ this evening။"
+    "note_mm": "going to ရဲ့နောက်မှာ လိုက်တဲ့ verb က သူ့ရဲ့မူရင်းပုံစံ base form (go, study, start) ပဲ ဖြစ်ရပါမယ်။ အနာဂတ်ကိုပြတဲ့ အချိန်ပြစကားလုံးတွေကတော့ — tomorrow, next week / month, soon, this weekend, this evening တို့ပဲ ဖြစ်ပါတယ်ခင်ဗျ။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She ___ study medicine.",
-      "prompt_mm": "သူမ ဆေးပညာ သင်ဖို့ ရှိတယ်။",
-      "options": ["is going to", "am going to", "are going to"],
-      "answers": ["is going to"],
-      "explain_mm": "she → is going to။"
+      "prompt_mm": "သူမ ဆေးပညာ သင်ယူဖို့ အစီအစဉ်ရှိပါတယ်။",
+      "options": [
+        "is going to",
+        "am going to",
+        "are going to"
+      ],
+      "answers": [
+        "is going to"
+      ],
+      "explain_mm": "she (Singular) ဖြစ်တဲ့အတွက် → is going to ကို သုံးရပါမယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "We ___ move next month.",
-      "prompt_mm": "ကျွန်တော်တို့ နောက်လ ပြောင်းဖို့ ရှိတယ်။",
-      "options": ["is going to", "are going to", "am going to"],
-      "answers": ["are going to"],
-      "explain_mm": "we → are going to။"
+      "prompt_mm": "ကျွန်တော်တို့ နောက်လမှာ ပြောင်းဖို့ အစီအစဉ်ရှိပါတယ်။",
+      "options": [
+        "is going to",
+        "are going to",
+        "am going to"
+      ],
+      "answers": [
+        "are going to"
+      ],
+      "explain_mm": "we (Plural) ဖြစ်တဲ့အတွက် → are going to ကို သုံးရပါမယ်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "I ___ (be) going to start a class.",
-      "prompt_mm": "ကျွန်တော် သင်တန်း စဖို့ ရှိတယ်။ ( be ကို သုံးပါ )",
-      "answers": ["am", "'m"],
-      "explain_mm": "I → am going to start။"
+      "prompt_mm": "ကျွန်တော် သင်တန်းတစ်ခု စတက်ဖို့ရှိတယ်။ ( 'be' ကို သုံးပေးပါနော်။ )",
+      "answers": [
+        "am",
+        "'m"
+      ],
+      "explain_mm": "I ဖြစ်တဲ့အတွက် → am going to start ကို သုံးရပါမယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "He going to buy a car.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["He is going to buy a car", "he is going to buy a car."],
-      "explain_mm": "be ကို မမေ့နဲ့ — he → is going to buy။"
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါခင်ဗျ။",
+      "answers": [
+        "He is going to buy a car",
+        "he is going to buy a car."
+      ],
+      "explain_mm": "'be' ကို ထည့်ဖို့ မမေ့ပါနဲ့နော် — he (Singular) ဖြစ်တဲ့အတွက် is going to buy ဆိုပြီး ဖြစ်ရပါမယ်။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  going to  /  I  /  am  /  travel",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["I am going to travel", "i am going to travel."],
-      "explain_mm": "Subject + be + going to + verb (base) → I am going to travel."
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ရေးပေးပါခင်ဗျ။",
+      "answers": [
+        "I am going to travel",
+        "i am going to travel."
+      ],
+      "explain_mm": "ဖွဲ့စည်းပုံကတော့ Subject + be + going to + verb (base) ဖြစ်ပါတယ် → ဥပမာ I am going to travel ပေါ့။"
     },
     {
       "kind": "scan_sentences",
@@ -146,9 +231,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — your plans. Write 5–8 sentences about your plans for next week / month / year, using be going to (am/is/are going to).",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အစီအစဉ်။ နောက်အပတ်/လ/နှစ်အတွက် ကိုယ့်အစီအစဉ်တွေကို be going to (am / is / are going to) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ရဲ့ အစီအစဉ်များ။ နောက်လာမယ့် အပတ်/လ/နှစ်အတွက် ကိုယ့်ရဲ့ အစီအစဉ်တွေကို be going to (am / is / are going to) သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော်။ ပြီးသွားရင် ရေးထားတာလေးကို scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်ခင်ဗျ။",
       "model": "Next month I {v}'m going to{/v} take an English exam. I {v}'m going to{/v} study every day. My family {v}is going to{/v} visit Bagan. We {v}'re going to{/v} stay for a week. I {v}'m not going to{/v} miss the trip.",
-      "explain_mm": "be (am/is/are) + going to + verb (base) ကို subject နဲ့ ကိုက်အောင် ထားပါ။",
+      "explain_mm": "be (am/is/are) + going to + verb (base) ကို သုံးတဲ့အခါ Subject နဲ့ လိုက်ဖက်အောင် သုံးဖို့ မမေ့နဲ့နော်။",
       "grading": {
         "grammar_point": "be going to (plans)",
         "rule": "am/is/are + going to + base verb for plans decided before now. be must agree with the subject.",
@@ -163,16 +248,19 @@
           "Wrong be (She are going to)",
           "going to + wrong verb form (going to studies)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — someone's plan + a prediction. Write a short paragraph (4–6 sentences): a friend's or family member's plans, plus one prediction from evidence (Look! It's going to …).",
-      "prompt_mm": "အပိုင်း ၂ — တစ်ယောက်ယောက်ရဲ့ အစီအစဉ် + ခန့်မှန်းချက်။ သူငယ်ချင်း သို့မဟုတ် မိသားစုဝင်တစ်ယောက်ရဲ့ အစီအစဉ်တွေနဲ့ မြင်နေရတဲ့ သက်သေအရ ခန့်မှန်းချက်တစ်ခု (Look! It's going to …) ပါအောင် စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — သူတစ်ပါးရဲ့ အစီအစဉ်နဲ့ ကိုယ့်ရဲ့ခန့်မှန်းချက်။ ကိုယ့်သူငယ်ချင်း ဒါမှမဟုတ် မိသားစုဝင်တစ်ယောက်ယောက်ရဲ့ အစီအစဉ်တွေအကြောင်း ရေးပေးပါ။ ပြီးတော့ မျက်စိရှေ့မှာ မြင်နေရတဲ့ သက်သေတစ်ခုခုအပေါ်မူတည်ပြီး ခန့်မှန်းတဲ့ဝါကျတစ်ကြောင်း (ဥပမာ Look! It's going to …) ထည့်ရေးပေးပါနော်။ စုစုပေါင်း ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်ထိ ရေးပြီးရင် scan ဖတ်ပြီး တင်ပေးပါခင်ဗျ။",
       "model": "My brother {v}is going to{/v} open a shop. He {v}is going to{/v} sell phones. He {v}'s going to{/v} hire two workers. Look at all the customers waiting — it {v}'s going to{/v} be popular. I {v}'m going to{/v} help him on weekends.",
-      "explain_mm": "အစီအစဉ် (going to) နဲ့ မြင်နေရတဲ့ သက်သေအရ ခန့်မှန်းချက် (going to) ကို သုံးပါ။ be ကို subject နဲ့ ကိုက်စေ။",
+      "explain_mm": "အစီအစဉ်အကြောင်းပြောတဲ့ (going to) ရော၊ မျက်စိရှေ့က သက်သေအပေါ်မူတည်ပြီး ခန့်မှန်းတဲ့ (going to) ရော နှစ်မျိုးလုံးကို သုံးပေးပါနော်။ 'be' (am/is/are) ကိုလည်း Subject နဲ့ လိုက်ဖက်အောင် သုံးဖို့ မမေ့ပါနဲ့ခင်ဗျ။",
       "grading": {
         "grammar_point": "be going to (plans & evidence predictions)",
         "rule": "going to for plans and for predictions from present evidence. be agrees with the subject.",
@@ -187,7 +275,10 @@
           "Using will for an already-decided plan",
           "Wrong verb form after going to"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

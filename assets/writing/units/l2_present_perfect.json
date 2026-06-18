@@ -8,101 +8,178 @@
   "subtitle_mm": "Present perfect — have / has + V3",
   "teach": {
     "situation_en": "I {v}have lived{/v} in Yangon {t}for five years{/t}. I {v}have visited{/v} Bagan twice, but I {v}haven't seen{/v} Inle Lake yet. My sister {v}has just finished{/v} university. {v}Have{/v} you ever {v}been{/v} to Mandalay?",
-    "situation_mm": "ကျွန်တော် ရန်ကုန်မှာ ၅ နှစ် နေထိုင်ခဲ့ပြီ။ ပုဂံကို နှစ်ကြိမ် သွားဖူးပေမဲ့ အင်းလေးကန်ကိုတော့ မရောက်သေးဘူး။ အစ်မက တက္ကသိုလ် အခုပဲ ပြီးသွားတယ်။ မန္တလေးကို ရောက်ဖူးလား။",
+    "situation_mm": "ကျွန်တော် ရန်ကုန်မှာ နေခဲ့တာ ၅ နှစ်ရှိပါပြီ။ ပုဂံကိုတော့ နှစ်ကြိမ် သွားဖူးပေမဲ့ အင်းလေးကန်ကိုတော့ မရောက်ဖူးသေးဘူး။ ကျွန်တော့်အစ်မက တက္ကသိုလ်ကနေ အခုလေးတင်ပဲ ဘွဲ့ရသွားတယ်။ ခင်ဗျား မန္တလေးကို ရောက်ဖူးလား။",
     "use_en": "We use the present perfect (have / has + past participle) for a past action that connects to now — life experience, something that started in the past and still continues, or recent news. The exact past time is not stated.",
-    "use_mm": "Present perfect (have / has + past participle) ကို အခုနဲ့ ဆက်စပ်နေတဲ့ အတိတ်လုပ်ဆောင်မှုအတွက် သုံးပါတယ် — ဘဝအတွေ့အကြုံ၊ အတိတ်က စပြီး အခုထိ ဆက်ဖြစ်နေတာ၊ ဒါမှမဟုတ် မကြာသေးမီက သတင်း။ ဘယ်အချိန်တိတိ ဆိုတာ မပြောဘူး။",
+    "use_mm": "Present perfect (have / has + past participle) ကို အခုလက်ရှိအချိန်နဲ့ ဆက်စပ်နေတဲ့ အတိတ်က လုပ်ဆောင်ချက်တွေအကြောင်း ပြောတဲ့အခါ သုံးပါတယ်။ ဥပမာ - ကိုယ့်ဘဝအတွေ့အကြုံတွေ၊ အတိတ်ကတည်းက စပြီး အခုထိ ဆက်ဖြစ်နေတဲ့ ကိစ္စတွေ၊ ဒါမှမဟုတ် မကြာသေးခင်က သတင်းတွေအကြောင်း ပြောတဲ့အခါမျိုးမှာပေါ့။ ဘယ်အချိန်မှာ ဖြစ်ခဲ့တယ်ဆိုတာကိုတော့ တိတိကျကျ ထည့်ပြောလေ့မရှိပါဘူး။",
     "timeline": "✓──────●  (sometime before now → matters now)",
     "form": [
-      { "subject": "I / you / we / they", "form": "have + V3  (have eaten)" },
-      { "subject": "he / she / it", "form": "has + V3  (has eaten)" },
-      { "subject": "negative", "form": "haven't / hasn't + V3" },
-      { "subject": "question", "form": "Have / Has + subject + V3?" }
+      {
+        "subject": "I / you / we / they",
+        "form": "have + V3  (have eaten)"
+      },
+      {
+        "subject": "he / she / it",
+        "form": "has + V3  (has eaten)"
+      },
+      {
+        "subject": "negative",
+        "form": "haven't / hasn't + V3"
+      },
+      {
+        "subject": "question",
+        "form": "Have / Has + subject + V3?"
+      }
     ],
     "form_note_mm": [
-      "have / has + verb ရဲ့ V3 (past participle) — eat → eaten, go → gone, see → seen။",
-      "he / she / it နဲ့ဆို has၊ ကျန် subject တွေ (I / you / we / they) နဲ့ဆို have။",
-      "negative — haven't / hasn't + V3။ question — Have / Has ကို sentence ရှေ့မှာ ထားပါ။",
-      "for + ကြာချိန် (for five years)၊ since + စချိန် (since 2020)။",
-      "already / yet / just / ever / never နဲ့ မကြာခဏ တွဲသုံးတယ်။"
+      "ပုံစံကတော့ have / has + Verb ရဲ့ V3 (past participle) ကို သုံးရပါတယ် — ဥပမာ eat → eaten, go → gone, see → seen ပေါ့။",
+      "Subject က he / she / it (Singular / အနည်းကိန်း) ဆိုရင် has ကို သုံးပြီး၊ ကျန်တဲ့ Subject တွေ (I / you / we / they) နဲ့ဆိုရင်တော့ have ကို သုံးပေးရပါတယ်။",
+      "Negative (အငြင်းဝါကျ) ဆိုရင် haven't / hasn't + V3 ပုံစံကို သုံးပါတယ်။ Question (မေးခွန်း) ဆိုရင်တော့ Have / Has ကို ဝါကျရဲ့ အရှေ့ဆုံးမှာ ထားပြီး မေးရပါတယ်။",
+      "for ကို အချိန်ကာလတစ်ခု (ဥပမာ for five years) နဲ့ တွဲသုံးပြီး၊ since ကိုတော့ အချိန်တစ်ခုရဲ့ အစ (ဥပမာ since 2020) နဲ့ တွဲသုံးပါတယ်။",
+      "already / yet / just / ever / never တို့လို စကားလုံးလေးတွေနဲ့လည်း မကြာခဏ တွဲပြီး သုံးလေ့ရှိပါတယ်။"
     ],
     "trap_en": "Use the past participle (V3), not the past simple. And don't use a finished-time word like 'yesterday'.  WRONG: I have ate. / I have seen him yesterday.   RIGHT: I have eaten. / I saw him yesterday.",
-    "trap_mm": "V3 (past participle) သုံးပါ — past simple မဟုတ်ဘူး (✗ I have ate → ✓ I have eaten)။ ပြီးပြတ်သွားတဲ့ အချိန်စကားလုံး (yesterday, last year) နဲ့ မတွဲရဘူး — အဲဒါဆိုရင် past simple သုံးပါ (I saw him yesterday)။",
+    "trap_mm": "သတိထားရမှာက Verb ရဲ့ V3 (past participle) ပုံစံကိုပဲ သုံးရမှာပါ။ Past simple (V2) ကို သုံးလို့ မရပါဘူး (✗ I have ate → ✓ I have eaten)။ ပြီးတော့ ‘yesterday’, ‘last year’ တို့လို အတိတ်မှာ ပြီးပြတ်သွားတဲ့ အချိန်ကိုပြတဲ့ စကားလုံးတွေနဲ့လည်း တွဲမသုံးရပါဘူး။ အဲ့ဒီလို စကားလုံးတွေ ပါလာရင်တော့ Past simple ကိုပဲ သုံးရမှာပါ (ဥပမာ I saw him yesterday)။",
     "examples": [
-      { "en": "I {v}have finished{/v} my homework.", "mm": "ကျွန်တော် အိမ်စာ ပြီးသွားပြီ။" },
-      { "en": "She {v}has gone{/v} to the market.", "mm": "သူမ ဈေးကို သွားနေတယ် (ပြန်မရောက်သေး)။" },
-      { "en": "We {v}have lived{/v} here {t}for ten years{/t}.", "mm": "ကျွန်တော်တို့ ဒီမှာ ၁၀ နှစ် နေထိုင်ခဲ့ပြီ (အခုလည်း နေဆဲ)။" },
-      { "en": "{v}Have{/v} you {v}eaten{/v} lunch yet?", "mm": "နေ့လယ်စာ စားပြီးပြီလား။" }
+      {
+        "en": "I {v}have finished{/v} my homework.",
+        "mm": "ကျွန်တော် အိမ်စာ လုပ်ပြီးသွားပြီ။"
+      },
+      {
+        "en": "She {v}has gone{/v} to the market.",
+        "mm": "သူမ ဈေးကို သွားတယ် (ပြန်မရောက်သေးဘူး)။"
+      },
+      {
+        "en": "We {v}have lived{/v} here {t}for ten years{/t}.",
+        "mm": "ကျွန်တော်တို့ ဒီမှာ နေလာတာ ၁၀ နှစ်ရှိပြီ (အခုထိလည်း ဒီမှာပဲ နေတုန်းပါ)။"
+      },
+      {
+        "en": "{v}Have{/v} you {v}eaten{/v} lunch yet?",
+        "mm": "နေ့လယ်စာ စားပြီးပြီလား။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "I / you / we / they",
         "rule_mm": "I · You · We · They → have + V3 (past participle)",
         "en": "I {v}have eaten{/v} lunch.",
-        "why_mm": "Subject က 'I' (I/you/we/they) ဖြစ်လို့ 'have' နဲ့တွဲပြီး verb ရဲ့ V3 (past participle = eaten) ကို သုံးပါတယ်။"
+        "why_mm": "ဒီမှာ Subject က 'I' (I/you/we/they အုပ်စု) ဖြစ်တဲ့အတွက် 'have' နဲ့ တွဲပေးပြီး Verb ရဲ့ V3 (past participle) ပုံစံဖြစ်တဲ့ ‘eaten’ ကို သုံးထားတာပါ။"
       },
       {
         "subject": "he / she / it",
         "rule_mm": "He · She · It → has + V3",
         "en": "She {v}has gone{/v} home.",
-        "why_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ 'have' မဟုတ်ဘဲ 'has' ကို သုံးပါတယ် — has + V3 (gone)။"
+        "why_mm": "Subject က 'She' (he/she/it အုပ်စု) ဖြစ်တဲ့အတွက် 'have' မဟုတ်ဘဲ 'has' ကို သုံးပေးရပါတယ်။ ပုံစံကတော့ has + V3 (gone) ပေါ့။"
       },
       {
         "subject": "V3, not past simple",
-        "rule_mm": "have / has ရဲ့ နောက်က verb က V3 (V2 မဟုတ်)",
+        "rule_mm": "have / has ရဲ့ နောက်မှာလိုက်တဲ့ Verb က V3 (past participle) ပုံစံ ဖြစ်ရပါမယ် (V2 မဟုတ်ပါဘူး)။",
         "en": "He {v}has gone{/v} to school.  (✗ has went)",
-        "why_mm": "go ရဲ့ V3 က 'gone' ပါ။ 'went' က past simple (V2) ဖြစ်လို့ 'has went' မှားပါတယ်။ yesterday လို ပြီးပြတ်တဲ့ အချိန်စကားလုံးနဲ့လည်း မတွဲရပါဘူး။"
+        "why_mm": "‘go’ ရဲ့ V3 က 'gone' ပါ။ 'went' က Past simple (V2) ဖြစ်တဲ့အတွက် 'has went' ဆိုရင် မှားပါတယ်။ ပြီးတော့ ‘yesterday’ လို အတိတ်မှာ ပြီးပြတ်သွားတဲ့ အချိန်ကိုပြတဲ့ စကားလုံးနဲ့လည်း တွဲသုံးလို့ မရပါဘူး။"
       }
     ],
     "checks": [
       {
         "prompt_en": "She ___ her keys.",
         "prompt_mm": "သူမ သော့ ပျောက်သွားပြီ။",
-        "options": ["has lost", "have lost", "lost"],
+        "options": [
+          "has lost",
+          "have lost",
+          "lost"
+        ],
         "answer": "has lost",
-        "explain_mm": "she → has + V3 (lost)။"
+        "explain_mm": "Subject က ‘she’ ဖြစ်တဲ့အတွက် has + V3 (lost) ကို သုံးပါတယ်။"
       },
       {
         "prompt_en": "I ___ this film before.",
         "prompt_mm": "ဒီ ရုပ်ရှင်ကို အရင်က ကြည့်ဖူးတယ်။",
-        "options": ["have seen", "has seen", "saw"],
+        "options": [
+          "have seen",
+          "has seen",
+          "saw"
+        ],
         "answer": "have seen",
-        "explain_mm": "I → have + V3 (seen)။ 'before' = အတွေ့အကြုံ → present perfect။"
+        "explain_mm": "Subject က ‘I’ ဖြစ်လို့ have + V3 (seen) ကို သုံးပါတယ်။ ‘before’ (အရင်က) ဆိုတဲ့ စကားလုံးက ဘဝအတွေ့အကြုံကို ရည်ညွှန်းတဲ့အတွက် Present perfect ကို သုံးရတာပါ။"
       },
       {
         "prompt_en": "He ___ to school.",
-        "prompt_mm": "သူ ကျောင်းကို သွားပြီ။",
-        "options": ["has gone", "has went", "have gone"],
+        "prompt_mm": "သူ ကျောင်းသွားပြီ။",
+        "options": [
+          "has gone",
+          "has went",
+          "have gone"
+        ],
         "answer": "has gone",
-        "explain_mm": "he → has + V3 (gone)။ has went မဟုတ်ဘူး — went က V2 ပါ။"
+        "explain_mm": "Subject က ‘he’ ဖြစ်လို့ has + V3 (gone) ကို သုံးရပါမယ်။ ‘has went’ ဆိုရင် မှားပါတယ်၊ ဘာလို့လဲဆိုတော့ ‘went’ က V2 (Past simple) ဖြစ်လို့ပါ။"
       }
     ],
     "model_paragraph_en": "I {v}have lived{/v} in this city all my life. I {v}have had{/v} the same job {t}for ten years{/t}, and I {v}have made{/v} many good friends here. I {v}have just moved{/v} to a new flat near the river. I {v}haven't met{/v} my neighbours yet, but everyone {v}has been{/v} friendly so far.",
-    "model_paragraph_mm": "ကျွန်တော် ဒီမြို့မှာ တစ်သက်လုံး နေထိုင်ခဲ့တာပါ။ အလုပ်တစ်ခုတည်းကို ၁၀ နှစ် လုပ်ခဲ့ပြီး သူငယ်ချင်းကောင်း အများကြီး ရခဲ့တယ်။ မြစ်နားက တိုက်ခန်းအသစ်ကို အခုပဲ ပြောင်းလာတယ်။ အိမ်နီးချင်းတွေနဲ့ မတွေ့ရသေးပေမဲ့ အခုထိ အားလုံး ဖော်ရွေကြတယ်။",
+    "model_paragraph_mm": "ကျွန်တော် ဒီမြို့မှာ တစ်သက်လုံး နေထိုင်ခဲ့တာပါ။ အလုပ်တစ်ခုတည်းကိုပဲ ၁၀ နှစ်ကြာ လုပ်ခဲ့ပြီး သူငယ်ချင်းကောင်းတွေ အများကြီး ရခဲ့ပါတယ်။ မြစ်နားက တိုက်ခန်းအသစ်ကို အခုလေးတင်ပဲ ပြောင်းလာခဲ့တယ်။ အိမ်နီးချင်းတွေနဲ့တော့ မတွေ့ရသေးပေမဲ့လို့ အခုထိတော့ အားလုံးက ဖော်ရွေကြပါတယ်။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "I · you · we · they", "form": "have + V3", "tag": "have", "example": "They {v}have eaten{/v}." },
-          { "subjects": "he · she · it", "form": "has + V3", "tag": "has", "highlight": true, "example": "She {v}has eaten{/v}." }
+          {
+            "subjects": "I · you · we · they",
+            "form": "have + V3",
+            "tag": "have",
+            "example": "They {v}have eaten{/v}."
+          },
+          {
+            "subjects": "he · she · it",
+            "form": "has + V3",
+            "tag": "has",
+            "highlight": true,
+            "example": "She {v}has eaten{/v}."
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "Present perfect ကို ဘယ်လိုအခြေအနေမျိုးမှာ သုံးမလဲ",
+      "pattern": "Subject နဲ့ have/has ဘယ်လို တွဲမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_go", "v_eat", "v_drink", "v_speak", "v_read", "v_sleep",
-      "v_have", "v_teach", "v_live", "v_work", "v_study", "v_play",
-      "v_cook", "v_start"
+      "v_go",
+      "v_eat",
+      "v_drink",
+      "v_speak",
+      "v_read",
+      "v_sleep",
+      "v_have",
+      "v_teach",
+      "v_live",
+      "v_work",
+      "v_study",
+      "v_play",
+      "v_cook",
+      "v_start"
     ],
     "time_words": [],
     "verb_form": "past_participle",
-    "note_mm": "Present perfect နဲ့ မကြာခဏ တွဲတဲ့ စကားလုံးတွေ — for (ကြာချိန်): for two years; since (စချိန်): since Monday; already (ပြီးသွားပြီ): I've already eaten; yet (မ … သေး, အငြင်း/အမေး): Have you finished yet?; just (အခုလေးတင်): She has just left; ever / never (တစ်ခါမှ): Have you ever been …? / I've never seen …။",
+    "note_mm": "Present perfect နဲ့ မကြာခဏ တွဲသုံးလေ့ရှိတဲ့ စကားလုံးလေးတွေကတော့ — for (အချိန်ကာလ): for two years; since (အချိန်ရဲ့အစ): since Monday; already (လုပ်ပြီးသွားပြီ): I've already eaten; yet (မလုပ်ရသေးဘူး၊ မေးခွန်းနဲ့ အငြင်းမှာသုံး): Have you finished yet?; just (အခုလေးတင်ပဲ): She has just left; ever / never (ဘယ်တုန်းကမှ / တစ်ခါမှ): Have you ever been …? / I've never seen …။",
     "verb_examples": {
-      "v_go": { "en": "She {v}has gone{/v} home.", "mm": "သူမ အိမ်ပြန်သွားပြီ။" },
-      "v_eat": { "en": "I {v}have eaten{/v} already.", "mm": "ကျွန်တော် စားပြီးပြီ။" },
-      "v_speak": { "en": "We {v}have spoken{/v} to the teacher.", "mm": "ကျွန်တော်တို့ ဆရာနဲ့ စကားပြောပြီးပြီ။" },
-      "v_drink": { "en": "He {v}has drunk{/v} all the water.", "mm": "သူ ရေအကုန် သောက်ပြီးပြီ။" },
-      "v_read": { "en": "I {v}have read{/v} this book.", "mm": "ဒီစာအုပ်ကို ဖတ်ဖူးတယ်။" }
+      "v_go": {
+        "en": "She {v}has gone{/v} home.",
+        "mm": "သူမ အိမ်ပြန်သွားပြီ။"
+      },
+      "v_eat": {
+        "en": "I {v}have eaten{/v} already.",
+        "mm": "ကျွန်တော် စားပြီးပြီ။"
+      },
+      "v_speak": {
+        "en": "We {v}have spoken{/v} to the teacher.",
+        "mm": "ကျွန်တော်တို့ ဆရာနဲ့ စကားပြောပြီးပြီ။"
+      },
+      "v_drink": {
+        "en": "He {v}has drunk{/v} all the water.",
+        "mm": "သူ ရေအကုန် သောက်လိုက်ပြီ။"
+      },
+      "v_read": {
+        "en": "I {v}have read{/v} this book.",
+        "mm": "ဒီစာအုပ်ကို ဖတ်ဖူးတယ်။"
+      }
     }
   },
   "exercises": [
@@ -111,42 +188,63 @@
       "grade": "auto",
       "prompt_en": "She ___ her keys. (lose)",
       "prompt_mm": "သူမ သော့ ပျောက်သွားပြီ။",
-      "options": ["has lost", "have lost", "lost"],
-      "answers": ["has lost"],
-      "explain_mm": "she → has + V3 (lost)။"
+      "options": [
+        "has lost",
+        "have lost",
+        "lost"
+      ],
+      "answers": [
+        "has lost"
+      ],
+      "explain_mm": "Subject က ‘she’ ဖြစ်တဲ့အတွက် has + V3 (lost) ကို သုံးပါတယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I ___ this film before.",
       "prompt_mm": "ဒီ ရုပ်ရှင်ကို အရင်က ကြည့်ဖူးတယ်။",
-      "options": ["have seen", "has seen", "saw"],
-      "answers": ["have seen"],
-      "explain_mm": "I → have + V3 (seen)။ ‘before’ နဲ့ဆို အတွေ့အကြုံ — present perfect။"
+      "options": [
+        "have seen",
+        "has seen",
+        "saw"
+      ],
+      "answers": [
+        "have seen"
+      ],
+      "explain_mm": "Subject က ‘I’ ဖြစ်လို့ have + V3 (seen) ကို သုံးပါတယ်။ ‘before’ (အရင်က) ဆိုတဲ့ စကားလုံးက ဘဝအတွေ့အကြုံကို ရည်ညွှန်းတဲ့အတွက် Present perfect ကို သုံးရတာပါ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "We ___ (live) here for five years.",
-      "prompt_mm": "ကျွန်တော်တို့ ဒီမှာ ၅ နှစ် နေထိုင်ခဲ့ပြီ။ ( live ကို သုံးပါ )",
-      "answers": ["have lived", "'ve lived"],
-      "explain_mm": "we → have + V3 (lived)။ for five years — အတိတ်က စပြီး အခုထိ ဆက်နေဆဲ။"
+      "prompt_mm": "ကျွန်တော်တို့ ဒီမှာ နေလာတာ ၅ နှစ်ရှိပြီ။ ( live ကို သုံးပါ )",
+      "answers": [
+        "have lived",
+        "'ve lived"
+      ],
+      "explain_mm": "Subject က ‘we’ ဖြစ်လို့ have + V3 (lived) ကို သုံးပါတယ်။ ‘for five years’ ဆိုတာက အတိတ်ကတည်းက စပြီး အခုထိ ဆက်နေတုန်းဆိုတဲ့ အဓိပ္ပာယ်ပါ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "He has went to school.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["He has gone to school", "he has gone to school."],
-      "explain_mm": "go ရဲ့ V3 က gone — went က past simple ပါ (✗ has went → ✓ has gone)။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို မှန်အောင် ပြန်ပြင်ပေးပါ။",
+      "answers": [
+        "He has gone to school",
+        "he has gone to school."
+      ],
+      "explain_mm": "‘go’ ရဲ့ V3 က ‘gone’ ဖြစ်ပါတယ်။ ‘went’ က Past simple (V2) ဖြစ်တဲ့အတွက် (✗ has went → ✓ has gone) လို့ ပြင်ပေးရပါမယ်။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  eaten  /  I  /  have  /  lunch",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["I have eaten lunch", "i have eaten lunch."],
-      "explain_mm": "Subject + have + V3 + ... → I have eaten lunch."
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို နေရာတကျဖြစ်အောင် စီပြီး sentence အမှန်တစ်ခု ရေးပေးပါ။",
+      "answers": [
+        "I have eaten lunch",
+        "i have eaten lunch."
+      ],
+      "explain_mm": "ပုံစံက Subject + have + V3 + ... ပါ။ → I have eaten lunch."
     },
     {
       "kind": "scan_sentences",
@@ -154,9 +252,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — your experiences. Write 5–8 sentences about things you HAVE and HAVEN'T done in your life, using the present perfect (have/has + V3). Try ever, never, already and yet.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အတွေ့အကြုံ။ ဘဝမှာ လုပ်ဖူး/မလုပ်ဖူးတာတွေကို present perfect (have/has + V3) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ever, never, already, yet တွေ သုံးကြည့်ပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ်ပိုင်အတွေ့အကြုံ။ ကိုယ့်ဘဝမှာ လုပ်ဖူးတာတွေ၊ မလုပ်ဖူးတာတွေကို Present perfect (have/has + V3) သုံးပြီး sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ပါ။ ever, never, already, yet တို့လို စကားလုံးလေးတွေကိုလည်း ထည့်သုံးကြည့်နော်။ ပြီးရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်ဖြစ်၊ အောက်ကနေရာမှာ ရိုက်ထည့်ပြီးဖြစ်ဖြစ် တင်ပေးလို့ရပါတယ်။",
       "model": "I {v}have visited{/v} three countries. I {v}have never seen{/v} snow. I {v}have already finished{/v} school. I {v}haven't learned{/v} to drive yet. I {v}have met{/v} many kind people.",
-      "explain_mm": "have / has + V3 ကို မှန်အောင် သုံးပါ။ ever/never/already/yet ကို have နဲ့ V3 ကြားမှာ ထားလေ့ရှိတယ်။",
+      "explain_mm": "have / has + V3 ပုံစံကို မှန်မှန်ကန်ကန် သုံးထားဖို့ လိုပါတယ်။ ever/never/already/yet တို့ကိုတော့ have/has နဲ့ V3 ကြားထဲမှာ ထားလေ့ရှိတယ်ဆိုတာလေး သတိရနော်။",
       "grading": {
         "grammar_point": "Present perfect (have/has + V3)",
         "rule": "have/has + past participle for experience and unfinished time. has for he/she/it; have for I/you/we/they. No finished-time words (yesterday).",
@@ -171,16 +269,19 @@
           "Wrong agreement (She have)",
           "Adding a finished time (I have seen it yesterday)"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — recent news. Write a short paragraph (4–6 sentences) about what you or your family have done recently, using the present perfect with just / already / yet.",
-      "prompt_mm": "အပိုင်း ၂ — မကြာသေးမီက သတင်း။ ကိုယ် ဒါမှမဟုတ် မိသားစုက မကြာသေးမီက ဘာတွေ လုပ်ပြီးပြီလဲဆိုတာ present perfect (just / already / yet နဲ့) သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — မကြာသေးခင်က သတင်း။ ကိုယ် ဒါမှမဟုတ် ကိုယ့်မိသားစုဝင်တွေ မကြာသေးခင်က ဘာတွေ လုပ်ပြီးသွားပြီလဲဆိုတာကို Present perfect (just / already / yet တို့နဲ့) သုံးပြီး စာပိုဒ်တိုလေးတစ်ခု (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးလို့ရပါတယ်။",
       "model": "My family {v}has just moved{/v} to a new house. We {v}have already painted{/v} the kitchen. My father {v}has bought{/v} a new table. I {v}haven't unpacked{/v} my books yet. My sister {v}has made{/v} new friends in the area.",
-      "explain_mm": "have/has + V3 ကို စာပိုဒ်တစ်ခုလုံးမှာ မှန်အောင် သုံးပါ။ just/already က have နဲ့ V3 ကြား၊ yet က sentence အဆုံးမှာ။",
+      "explain_mm": "စာပိုဒ်တစ်ပိုဒ်လုံးမှာ have/has + V3 ပုံစံကို မှန်မှန်ကန်ကန် သုံးထားဖို့ သတိပြုပါ။ နေရာလေးတွေ မှတ်ထားရအောင်နော်: just နဲ့ already ကို have/has နဲ့ V3 ကြားမှာ ထားပြီး၊ yet ကိုတော့ sentence ရဲ့ အဆုံးမှာ ထားပေးရပါမယ်။",
       "grading": {
         "grammar_point": "Present perfect (have/has + V3)",
         "rule": "Recent past with a result now. Correct have/has agreement and past participle. just/already between have and V3; yet at the end.",
@@ -195,7 +296,10 @@
           "Wrong or missing past participle",
           "yet placed before the verb"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

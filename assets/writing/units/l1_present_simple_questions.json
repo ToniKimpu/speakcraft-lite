@@ -85,21 +85,33 @@
       {
         "prompt_en": "___ you like tea?",
         "prompt_mm": "မင်း လက်ဖက်ရည် ကြိုက်သလား။",
-        "options": ["Do", "Does", "Is"],
+        "options": [
+          "Do",
+          "Does",
+          "Is"
+        ],
         "answer": "Do",
         "explain_mm": "you → Do you like tea? Is မသုံးဘူး။"
       },
       {
         "prompt_en": "___ she work in Yangon?",
         "prompt_mm": "သူမ ရန်ကုန်မှာ အလုပ်လုပ်သလား။",
-        "options": ["Do", "Does", "Is"],
+        "options": [
+          "Do",
+          "Does",
+          "Is"
+        ],
         "answer": "Does",
         "explain_mm": "she → Does she work? (work က base form)။"
       },
       {
         "prompt_en": "Does she ___ here?",
         "prompt_mm": "သူမ ဒီမှာ နေသလား။",
-        "options": ["live", "lives", "living"],
+        "options": [
+          "live",
+          "lives",
+          "living"
+        ],
         "answer": "live",
         "explain_mm": "Does နောက်က verb က base form — live (lives မဟုတ်ဘူး)။"
       }
@@ -125,7 +137,11 @@
           }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "‘do / does’ ကို မေးခွန်းအတွက် ဘယ်လိုသုံးမလဲ",
+      "pattern": "Subject အလိုက် do နဲ့ does ဘယ်လိုရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [

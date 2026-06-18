@@ -80,21 +80,33 @@
       {
         "prompt_en": "He ___ meat.",
         "prompt_mm": "သူ အသား မစားဘူး။",
-        "options": ["doesn't eat", "doesn't eats", "don't eat"],
+        "options": [
+          "doesn't eat",
+          "doesn't eats",
+          "don't eat"
+        ],
         "answer": "doesn't eat",
         "explain_mm": "he → doesn't + base verb (eat)။ doesn't eats လို့ -s ထပ်မထည့်ဘူး။"
       },
       {
         "prompt_en": "My friends ___ in Yangon.",
         "prompt_mm": "ကျွန်တော့်သူငယ်ချင်းတွေ ရန်ကုန်မှာ မနေဘူး။",
-        "options": ["don't live", "doesn't live", "don't lives"],
+        "options": [
+          "don't live",
+          "doesn't live",
+          "don't lives"
+        ],
         "answer": "don't live",
         "explain_mm": "they (friends) → don't + base verb (live)။"
       },
       {
         "prompt_en": "She ___ a car.",
         "prompt_mm": "သူမ ကား မရှိဘူး။",
-        "options": ["doesn't have", "doesn't has", "don't have"],
+        "options": [
+          "doesn't have",
+          "doesn't has",
+          "don't have"
+        ],
         "answer": "doesn't have",
         "explain_mm": "she → doesn't + base verb (have)။ doesn't has မဟုတ်ဘူး။"
       }
@@ -120,7 +132,11 @@
           }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "don't / doesn't ကို ဘယ်အခါ သုံးမလဲ",
+      "pattern": "Subject နဲ့ don't / doesn't ဘယ်လို တွဲမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [

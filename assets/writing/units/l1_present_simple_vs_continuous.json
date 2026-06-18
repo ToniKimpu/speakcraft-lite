@@ -8,75 +8,114 @@
   "subtitle_mm": "ပစ္စုပ္ပန် ရိုးရိုး vs ဖြစ်နေဆဲ",
   "teach": {
     "situation_en": "My brother is a cook. Every day he {v}makes{/v} breakfast for us. But look — right now he {v}is making{/v} a cake, not breakfast! He usually {v}works{/v} in the morning, but today he {v}is working{/v} late.",
-    "situation_mm": "ကျွန်တော့်အစ်ကိုက စားဖိုမှူးပါ။ နေ့တိုင်း ကျွန်တော်တို့အတွက် မနက်စာ လုပ်ပေးတယ်။ ဒါပေမဲ့ ကြည့်စမ်း — အခုတော့ မနက်စာ မဟုတ်ဘဲ ကိတ်မုန့် လုပ်နေတယ်! သူ ပုံမှန် မနက်ပိုင်း အလုပ်လုပ်ပေမဲ့ ဒီနေ့တော့ နောက်ကျ အလုပ်လုပ်နေတယ်။",
+    "situation_mm": "ကျွန်တော့်အစ်ကိုက စားဖိုမှူးတစ်ယောက်ပါ။ သူက နေ့တိုင်း ကျွန်တော်တို့အတွက် မနက်စာ လုပ်ပေးလေ့ရှိပါတယ်။ ဒါပေမဲ့ ကြည့်လိုက်ပါဦး — အခုတော့ မနက်စာ မဟုတ်ဘဲ ကိတ်မုန့် ဖုတ်နေတာပါ! သူက ပုံမှန်ဆို မနက်ပိုင်းပဲ အလုပ်လုပ်တာ ဖြစ်ပေမဲ့ ဒီနေ့တော့ ညဘက်အထိ နောက်ကျပြီး အလုပ်လုပ်နေပါတယ်။",
     "use_en": "Present simple = habits and facts (every day, usually). Present continuous = happening now (right now, at the moment, Look!). Same verbs, different time.",
-    "use_mm": "Present simple = အလေ့အထ၊ အမှန်တရား (every day, usually)။ Present continuous = အခု ဖြစ်နေဆဲ (right now, at the moment, Look!)။ verb တူပေမဲ့ အချိန် မတူဘူး။",
+    "use_mm": "Present simple ကို နေ့စဉ်လုပ်လေ့လုပ်ထရှိတဲ့ အလေ့အထ (Habit) နဲ့ အမှန်တရားတွေအတွက် သုံးပြီး (every day, usually စတဲ့ စကားလုံးတွေ ပါတတ်ပါတယ်)၊ Present continuous ကိုတော့ အခု လက်ရှိ ဖြစ်ပျက်နေဆဲ အခြေအနေတွေအတွက် သုံးပါတယ်။ (right now, at the moment, Look! စတဲ့ စကားလုံးတွေ ပါတတ်ပါတယ်)။ သုံးထားတဲ့ Verb တူရင်တောင် ပြသတဲ့ အချိန်ကာလချင်း မတူပါဘူး။",
     "timeline": "simple: —•——•——•—▶   |   continuous: ——●——▶ (now)",
     "form": [
-      { "subject": "habit / fact", "form": "Present simple — She works." },
-      { "subject": "now / this moment", "form": "Present continuous — She is working." },
-      { "subject": "signal: simple", "form": "every day · usually · always" },
-      { "subject": "signal: continuous", "form": "now · at the moment · Look!" }
+      {
+        "subject": "habit / fact",
+        "form": "Present simple — She works."
+      },
+      {
+        "subject": "now / this moment",
+        "form": "Present continuous — She is working."
+      },
+      {
+        "subject": "signal: simple",
+        "form": "every day · usually · always"
+      },
+      {
+        "subject": "signal: continuous",
+        "form": "now · at the moment · Look!"
+      }
     ],
     "form_note_mm": [
-      "ပုံမှန် / နေ့စဉ် အမှန်တရားဆို present simple (She works every day)။",
-      "အခု ဖြစ်နေဆဲဆို present continuous (She is working now)။",
-      "Signal word တွေက အရိပ်ပြတယ် — every day / usually → simple; now / at the moment / Look! → continuous။",
-      "continuous မှာ be (am / is / are) ကို မမေ့နဲ့။"
+      "ပုံမှန် လုပ်လေ့လုပ်ထရှိတဲ့ အလေ့အထနဲ့ နေ့စဉ်အမှန်တရားတွေဆိုရင် Present simple (She works every day) ကို သုံးပြီး၊ အခု လက်ရှိ ဖြစ်ပျက်နေဆဲ အခြေအနေဆိုရင်တော့ Present continuous (She is working now) ကို သုံးပါတယ်။",
+      "ဝါကျထဲမှာပါတဲ့ Signal word (အရိပ်ပြစကားလုံး) တွေက ဘယ် Tense သုံးရမလဲဆိုတာကို ခွဲခြားရလွယ်ကူစေပါတယ် — every day / usually ပါရင် Simple ဖြစ်ပြီး၊ now / at the moment / Look! ပါရင်တော့ Continuous ဖြစ်ပါတယ်။",
+      "Present continuous ကို သုံးတဲ့အခါ 'be' (am / is / are) ထည့်ဖို့ ဘယ်တော့မှ မမေ့ပါနဲ့။"
     ],
     "trap_en": "Don't use continuous for habits.  WRONG: Every day I am going to work.   RIGHT: Every day I go to work. (habit)   /   Right now I am going to work. (now)",
-    "trap_mm": "အလေ့အထ (every day) အတွက် continuous မသုံးရဘူး။  ✗ Every day I am going to work  →  ✓ Every day I go to work (အလေ့အထ)။  အခုဆိုမှ — Right now I am going to work (ဖြစ်နေဆဲ)။",
+    "trap_mm": "နေ့စဉ်လုပ်လေ့လုပ်ထရှိတဲ့ အလေ့အထ (every day) တွေအတွက် Continuous tense ကို မသုံးရပါဘူး။\n\n* ✗ Every day I am going to work လို့ မသုံးဘဲ\n* ✓ **Every day I go to work** လို့ပဲ သုံးရပါမယ် (ဒါဟာ အလေ့အထ ဖြစ်လို့ပါ)။\n\nအခု လက်ရှိ သွားနေဆဲ ဖြစ်နေတဲ့ အခါမျိုးကျမှသာ — **Right now I am going to work** (အခု သွားနေဆဲ) ဆိုပြီး သုံးရမှာ ဖြစ်ပါတယ်။",
     "examples": [
-      { "en": "She {v}drinks{/v} tea every morning.", "mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။ (အလေ့အထ)" },
-      { "en": "Look! She {v}is drinking{/v} coffee now.", "mm": "ကြည့်စမ်း! သူမ အခု ကော်ဖီ သောက်နေတယ်။ (ဖြစ်နေဆဲ)" },
-      { "en": "I usually {v}work{/v} at home.", "mm": "ကျွန်တော် ပုံမှန် အိမ်မှာ အလုပ်လုပ်တယ်။ (အလေ့အထ)" },
-      { "en": "Today I {v}am working{/v} in the office.", "mm": "ဒီနေ့တော့ ရုံးမှာ အလုပ်လုပ်နေတယ်။ (ဖြစ်နေဆဲ)" }
+      {
+        "en": "She {v}drinks{/v} tea every morning.",
+        "mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။ (အလေ့အထ)"
+      },
+      {
+        "en": "Look! She {v}is drinking{/v} coffee now.",
+        "mm": "ကြည့်စမ်း! သူမ အခု ကော်ဖီ သောက်နေတယ်။ (ဖြစ်နေဆဲ)"
+      },
+      {
+        "en": "I usually {v}work{/v} at home.",
+        "mm": "ကျွန်တော် ပုံမှန် အိမ်မှာ အလုပ်လုပ်တယ်။ (အလေ့အထ)"
+      },
+      {
+        "en": "Today I {v}am working{/v} in the office.",
+        "mm": "ဒီနေ့တော့ ရုံးမှာ အလုပ်လုပ်နေတယ်။ (ဖြစ်နေဆဲ)"
+      }
     ],
     "walkthrough": [
       {
         "subject": "habit / fact",
         "rule_mm": "နေ့စဉ်အလေ့အထ / အမှန်တရား → present simple",
         "en": "She {v}drinks{/v} tea {t}every morning{/t}.",
-        "why_mm": "'every morning' က ပုံမှန်အလေ့အထ ကို ပြလို့ present simple (drinks) သုံးပါတယ်။ signal — every day, usually, always။"
+        "why_mm": "'every morning' ဆိုတာ **ပုံမှန်လုပ်လေ့လုပ်ထရှိတဲ့ အလေ့အထ**ကို ပြတာဖြစ်လို့ **Present simple** (drinks) ကို သုံးပါတယ်။ ဒီလိုနေရာမျိုးမှာ အသုံးများတဲ့ Signal word (အရိပ်ပြစကားလုံး) တွေကတော့ every day, usually, always တို့ ဖြစ်ပါတယ်။"
       },
       {
         "subject": "happening now",
         "rule_mm": "အခု ဖြစ်နေဆဲ → present continuous (am/is/are + -ing)",
         "en": "Look! She {v}is drinking{/v} coffee now.",
-        "why_mm": "'Look! … now' က အခုချက်ချင်း ဖြစ်နေတာကို ပြလို့ present continuous (is drinking) သုံးပါတယ်။ signal — now, at the moment, Look!။"
+        "why_mm": "'Look! … now' က **အခုချက်ချင်း မျက်စိရှေ့မှောက်မှာ ဖြစ်ပျက်နေတာ**ကို ပြတာဖြစ်လို့ **Present continuous** (is drinking) ကို သုံးပါတယ်။\n\nဒီလို အခုဖြစ်နေဆဲ အခြေအနေကို ပြသတဲ့ အဓိက Signal words (အရိပ်ပြစကားလုံး) တွေကတော့ **now**, **at the moment**, **Look!**, **Listen!** တို့ ဖြစ်ပါတယ်။"
       },
       {
         "subject": "same verb, different time",
         "rule_mm": "verb တူ၊ signal ကြည့်ပြီး tense ရွေး",
         "en": "I usually {v}work{/v} at home, but today I {v}am working{/v} in the office.",
-        "why_mm": "verb က 'work' အတူတူပါ — 'usually' မို့ ပထမအပိုင်းက present simple၊ 'today' (အခု) မို့ ဒုတိယအပိုင်းက present continuous။ signal word ကို ကြည့်ပါ။"
+        "why_mm": "မှန်ပါတယ်! Verb က 'work' ချင်း အတူတူပဲ ဖြစ်ပေမဲ့ **Signal word** ပေါ်မူတည်ပြီး Tense ပြောင်းသွားတာပါ။\n\n* **usually** ပါတဲ့ ပထမအပိုင်းက ပုံမှန်အလေ့အထမို့ **Present simple** သုံးရပြီး (ဥပမာ - He usually *works*...)\n* **today** (အခုထူးခြားတဲ့ အခြေအနေ) ပါတဲ့ ဒုတိယအပိုင်းကတော့ အခုလောလောဆယ် ဖြစ်ပျက်နေတာမို့ **Present continuous** သုံးရပါတယ် (ဥပမာ - ...but *is working* late today)။\n\nဒါကြောင့် အင်္ဂလိပ်စာမှာ ဘယ် Tense သုံးရမလဲဆိုတာ သိဖို့ **Signal word** ကို သေချာကြည့်ဖို့ အရေးကြီးပါတယ်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "Every day she ___ to work.",
         "prompt_mm": "နေ့တိုင်း သူမ အလုပ်ကို သွားတယ်။",
-        "options": ["goes", "is going", "going"],
+        "options": [
+          "goes",
+          "is going",
+          "going"
+        ],
         "answer": "goes",
         "explain_mm": "'every day' — အလေ့အထမို့ present simple → goes။"
       },
       {
         "prompt_en": "Look! The baby ___ now.",
         "prompt_mm": "ကြည့်စမ်း! ကလေး အခု အိပ်နေတယ်။",
-        "options": ["sleeps", "is sleeping", "sleep"],
+        "options": [
+          "sleeps",
+          "is sleeping",
+          "sleep"
+        ],
         "answer": "is sleeping",
         "explain_mm": "'Look! … now' — အခုဖြစ်နေဆဲမို့ present continuous → is sleeping။"
       },
       {
         "prompt_en": "Water ___ at 100°C.",
         "prompt_mm": "ရေ ၁၀၀°C မှာ ဆူတယ်။",
-        "options": ["is boiling", "boils", "boil"],
+        "options": [
+          "is boiling",
+          "boils",
+          "boil"
+        ],
         "answer": "boils",
         "explain_mm": "အမြဲမှန်တဲ့ အမှန်တရား (fact) မို့ present simple → boils။"
       }
     ],
     "model_paragraph_en": "My sister usually {v}studies{/v} in the evening. She always {v}reads{/v} before bed. But it is exam week now, so this week she {v}is studying{/v} all day. Right now she {v}is reading{/v} her notes, and she {v}is drinking{/v} a lot of coffee!",
-    "model_paragraph_mm": "ကျွန်တော့်အစ်မက ပုံမှန် ညနေပိုင်း စာလုပ်တယ်။ အိပ်ခါနီး အမြဲ စာဖတ်တယ်။ ဒါပေမဲ့ အခု စာမေးပွဲ အပတ်ဖြစ်လို့ ဒီအပတ် တစ်နေ့လုံး စာလုပ်နေတယ်။ အခုတော့ မှတ်စုတွေ ဖတ်နေပြီး ကော်ဖီ အများကြီး သောက်နေတယ်!"
+    "model_paragraph_mm": "ကျွန်တော့်အစ်မက ပုံမှန် ညနေပိုင်း စာလုပ်တယ်။ အိပ်ခါနီး အမြဲ စာဖတ်တယ်။ ဒါပေမဲ့ အခု စာမေးပွဲ အပတ်ဖြစ်လို့ ဒီအပတ် တစ်နေ့လုံး စာလုပ်နေတယ်။ အခုတော့ မှတ်စုတွေ ဖတ်နေပြီး ကော်ဖီ အများကြီး သောက်နေတယ်!",
+    "step_titles_mm": {
+      "when": "Present simple နဲ့ Present continuous ဘယ်လို ခွဲသုံးမလဲ",
+      "pattern": "Present simple နဲ့ Present continuous — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],
@@ -88,8 +127,14 @@
       "grade": "auto",
       "prompt_en": "Every day she ___ to work.",
       "prompt_mm": "နေ့တိုင်း သူမ အလုပ်ကို သွားတယ်။ (အလေ့အထ)",
-      "options": ["goes", "is going", "going"],
-      "answers": ["goes"],
+      "options": [
+        "goes",
+        "is going",
+        "going"
+      ],
+      "answers": [
+        "goes"
+      ],
       "explain_mm": "‘every day’ — အလေ့အထမို့ present simple → goes."
     },
     {
@@ -97,8 +142,14 @@
       "grade": "auto",
       "prompt_en": "Look! The baby ___ now.",
       "prompt_mm": "ကြည့်စမ်း! ကလေး အခု ... (ဖြစ်နေဆဲ)",
-      "options": ["sleeps", "is sleeping", "sleep"],
-      "answers": ["is sleeping"],
+      "options": [
+        "sleeps",
+        "is sleeping",
+        "sleep"
+      ],
+      "answers": [
+        "is sleeping"
+      ],
       "explain_mm": "‘Look! … now’ — အခုဖြစ်နေဆဲမို့ present continuous → is sleeping."
     },
     {
@@ -106,7 +157,10 @@
       "grade": "auto",
       "prompt_en": "I usually ___ (drink) tea, but right now I ___ (drink) coffee.",
       "prompt_mm": "ကျွန်တော် ပုံမှန် လက်ဖက်ရည် သောက်ပေမဲ့ အခုတော့ ကော်ဖီ သောက်နေတယ်။",
-      "answers": ["drink ... am drinking", "drink, am drinking"],
+      "answers": [
+        "drink ... am drinking",
+        "drink, am drinking"
+      ],
       "explain_mm": "usually → simple (drink); right now → continuous (am drinking)။"
     },
     {
@@ -114,7 +168,10 @@
       "grade": "auto",
       "prompt_en": "Every day I am going to school.",
       "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။ ( အလေ့အထ )",
-      "answers": ["Every day I go to school", "every day i go to school."],
+      "answers": [
+        "Every day I go to school",
+        "every day i go to school."
+      ],
       "explain_mm": "‘every day’ — အလေ့အထမို့ present simple → I go (am going မဟုတ်ဘူး)။"
     },
     {
@@ -122,8 +179,14 @@
       "grade": "auto",
       "prompt_en": "Water ___ at 100°C.",
       "prompt_mm": "ရေ ၁၀၀°C မှာ ဆူတယ်။ (အမှန်တရား)",
-      "options": ["is boiling", "boils", "boil"],
-      "answers": ["boils"],
+      "options": [
+        "is boiling",
+        "boils",
+        "boil"
+      ],
+      "answers": [
+        "boils"
+      ],
       "explain_mm": "အမှန်တရား (fact) → present simple → boils."
     },
     {
@@ -149,7 +212,10 @@
           "Simple for now (Look! she drinks)",
           "Dropping be in the continuous"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
@@ -173,7 +239,10 @@
           "Dropping be in continuous",
           "Using continuous for permanent facts"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

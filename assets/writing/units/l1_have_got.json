@@ -10,7 +10,7 @@
     "situation_en": "I {v}have{/v} a big family. I {v}have got{/v} two brothers and one sister. My brother {v}has{/v} a new car. We {v}have{/v} a small house, and it {v}has got{/v} a nice garden.",
     "situation_mm": "ကျွန်တော့်မှာ မိသားစုကြီးတစ်ခု ရှိပါတယ်။ ကျွန်တော့်မှာ အစ်ကို နှစ်ယောက်နဲ့ အစ်မ တစ်ယောက် ရှိပါတယ်။ ကျွန်တော့်အစ်ကို့မှာ ကားအသစ်တစ်စီး ရှိတယ်။ ကျွန်တော်တို့မှာ အိမ်အသေးလေးတစ်လုံး ရှိပြီး သာယာလှပတဲ့ ဥယျာဉ်လေးတစ်ခု ပါဝင်ပါတယ်။",
     "use_en": "We use have / have got for possession, family and features. They mean the same. With he/she/it, use has / has got.",
-    "use_mm": "ပိုင်ဆိုင်မှု၊ မိသားစုနဲ့ အင်္ဂါရပ် (လက္ခဏာ) တွေကို ဖော်ပြဖို့အတွက် have / have got ကို သုံးပါတယ်။ နှစ်ခုစလုံးရဲ့ အဓိပ္ပာယ်က အတူတူပါပဲ။\n- I / We / You / They နဲ့ဆိုရင် → have / have got သုံးပါ။\n- He / She / It နဲ့ဆိုရင် → has / has got ပြောင်းသုံးပါ။",
+    "use_mm": "ပိုင်ဆိုင်မှု၊ မိသားစုနဲ့ အင်္ဂါရပ် (လက္ခဏာ) တွေကို ဖော်ပြဖို့အတွက် have / have got ကို သုံးလို့ရပါတယ်။ နှစ်ခုစလုံးရဲ့ အဓိပ္ပာယ်က အတူတူပါပဲ။\n- I / We / You / They နဲ့ဆိုရင် → have / have got သုံးပါ။\n- He / She / It နဲ့ဆိုရင် → has / has got ပြောင်းသုံးပါ။",
     "timeline": "",
     "form": [
       {
@@ -32,11 +32,11 @@
     ],
     "form_note_mm": [
       "- He / She / It နှင့်ဆိုလျှင် = have မဟုတ်ဘဲ has ကို သုံးရပါမည်။",
-      "- have got / has got = စာရေးသားမှုထက် စကားပြော (Spoken English) တွင် ပိုမိုအသုံးပြုလေ့ရှိသည်။",
+      "- have got / has got = စာရေးသားမှုထက် စကားပြော (Spoken English) မှာ ပိုပြီးတော့ အသုံးများပါတယ်။",
       "- Negative (အငြင်းဝါကျ) = don't have / doesn't have ကို အသုံးပြုရမည်။"
     ],
     "trap_en": "Use has (not have) with he/she/it.  WRONG: She have a car. / He have got a dog.   RIGHT: She has a car. / He has got a dog.",
-    "trap_mm": "He / She / It နှင့်ဆိုလျှင် have မဟုတ်ဘဲ has ကို ကိုက်ညီအောင် သုံးပေးရပါမယ်။\nဥပမာ — \n✗ She have / He have got (မှား)\n✓ She has / He has got (မှန်)။",
+    "trap_mm": "He / She / It နှင့်ဆိုရင် အနည်းကိန်းဖြစ်လို့ hasနဲ့တွဲပေးရပါမယ်။ \nဥပမာ — \n✗ She have / He have got (မှား)\n✓ She has / He has got (မှန်)။",
     "examples": [
       {
         "en": "I {v}have{/v} a bicycle.",
@@ -60,7 +60,7 @@
         "subject": "I / you / we / they",
         "rule_mm": "I · You · We · They → have (have got)",
         "en": "They {v}have{/v} a dog.",
-        "why_mm": "Subject က 'They' ဖြစ်လို့ 'have' ကို သုံးပါတယ်။ have got လို့လည်း ပြောလို့ ရတယ် — အဓိပ္ပာယ် အတူတူပါ။"
+        "why_mm": "Subject က 'They' ဖြစ်လို့ 'have' ကို သုံးပါတယ်။ have got လို့လည်း ပြောလို့ ရတယ် — အဓိပ္ပာယ် အတူတူပါပဲ။"
       },
       {
         "subject": "he / she / it",
@@ -79,23 +79,35 @@
       {
         "prompt_en": "She ___ a new phone.",
         "prompt_mm": "သူမ ဖုန်းအသစ်တစ်လုံး ရှိတယ်။",
-        "options": ["have", "has", "haves"],
+        "options": [
+          "have",
+          "has",
+          "haves"
+        ],
         "answer": "has",
         "explain_mm": "she → has။"
       },
       {
         "prompt_en": "We ___ a big garden.",
         "prompt_mm": "ကျွန်တော်တို့ ဥယျာဉ်ကြီးတစ်ခု ရှိတယ်။",
-        "options": ["has", "have", "having"],
+        "options": [
+          "has",
+          "have",
+          "having"
+        ],
         "answer": "have",
         "explain_mm": "we → have။"
       },
       {
         "prompt_en": "He ___ a car.",
         "prompt_mm": "သူ ကားမရှိဘူး။",
-        "options": ["doesn't have", "doesn't has", "don't has"],
+        "options": [
+          "doesn't have",
+          "doesn't has",
+          "don't has"
+        ],
         "answer": "doesn't have",
-        "explain_mm": "doesn't နဲ့ဆို 'have' ကို base form ထား → doesn't have။"
+        "explain_mm": "doesn't နဲ့ဆို 'have' ကို base form ထားပေးပါ → doesn't have။"
       }
     ],
     "model_paragraph_en": "My friend Lin {v}has{/v} a happy life. She {v}has got{/v} a good job and a kind family. She {v}has{/v} two cats and a small garden. Her house {v}has got{/v} three rooms. She {v}doesn't have{/v} a car, but she {v}has{/v} a bicycle.",
@@ -119,7 +131,11 @@
           }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "‘have / have got’ ကို ဘယ်လိုအခြေအနေမှာ သုံးမလဲ",
+      "pattern": "Subject နဲ့ have / has ဘယ်လို တွဲမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],

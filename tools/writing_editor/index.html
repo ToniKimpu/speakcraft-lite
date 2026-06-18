@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Writing Units — Editor (L1–L3)</title>
+<style>
+  :root {
+    --bg: #0f1419; --panel: #161c24; --panel2: #1c2530; --line: #2a3645;
+    --fg: #e6edf3; --mut: #8b98a8; --acc: #5aa9ff; --v: #ffd479; --t: #7ee0b8;
+    --ok: #3fb950; --bad: #f85149; --chip: #233040;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; }
+  /* Burmese renders better with a fallback font + larger line height */
+  .mm { font-family: "Myanmar Text", "Padauk", "Noto Sans Myanmar", sans-serif;
+    line-height: 1.9; }
+  #app { display: grid; grid-template-columns: 320px 1fr; height: 100vh; }
+  /* Sidebar */
+  #side { background: var(--panel); border-right: 1px solid var(--line);
+    overflow-y: auto; }
+  #side h1 { font-size: 15px; margin: 0; padding: 14px 16px;
+    border-bottom: 1px solid var(--line); position: sticky; top: 0;
+    background: var(--panel); z-index: 2; }
+  .levtabs { display: flex; gap: 6px; padding: 10px 12px; position: sticky;
+    top: 46px; background: var(--panel); z-index: 2;
+    border-bottom: 1px solid var(--line); }
+  .levtab { flex: 1; text-align: center; padding: 6px; border-radius: 8px;
+    background: var(--chip); cursor: pointer; color: var(--mut); font-weight: 600; }
+  .levtab.on { background: var(--acc); color: #04121f; }
+  .sec { padding: 8px 12px 2px; color: var(--acc); font-size: 11px;
+    text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+  .unit { padding: 8px 14px; cursor: pointer; border-left: 3px solid transparent; }
+  .unit:hover { background: var(--panel2); }
+  .unit.on { background: var(--panel2); border-left-color: var(--acc); }
+  .unit .t { font-weight: 600; }
+  .unit .s { color: var(--mut); font-size: 12px; }
+  .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    margin-left: 6px; background: var(--ok); }
+  .dot.draft { background: var(--mut); }
+  /* Main */
+  #main { display: flex; flex-direction: column; overflow: hidden; }
+  #bar { display: flex; align-items: center; gap: 10px; padding: 10px 16px;
+    border-bottom: 1px solid var(--line); background: var(--panel); }
+  #bar .grow { flex: 1; }
+  .tabbtn { padding: 6px 14px; border-radius: 8px; background: var(--chip);
+    color: var(--mut); cursor: pointer; border: 0; font-weight: 600; }
+  .tabbtn.on { background: var(--panel2); color: var(--fg);
+    outline: 1px solid var(--line); }
+  #save { background: var(--acc); color: #04121f; border: 0; padding: 8px 18px;
+    border-radius: 8px; font-weight: 700; cursor: pointer; }
+  #save:disabled { opacity: .4; cursor: default; }
+  #status { font-size: 12px; color: var(--mut); min-width: 120px; }
+  #status.ok { color: var(--ok); } #status.bad { color: var(--bad); }
+  #panes { flex: 1; overflow: hidden; display: grid;
+    grid-template-columns: 1fr 1fr; }
+  .pane { overflow-y: auto; padding: 18px 22px; }
+  #editPane { border-right: 1px solid var(--line); }
+  .hide { display: none !important; }
+  /* Preview render */
+  .pv h2 { font-size: 18px; margin: 0 0 2px; }
+  .pv .sub { color: var(--mut); margin-bottom: 16px; }
+  .block { background: var(--panel); border: 1px solid var(--line);
+    border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+  .block .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--acc); font-weight: 700; margin-bottom: 8px; }
+  .en { margin-bottom: 6px; } .gloss { color: var(--mut); }
+  .v { color: var(--v); font-weight: 600; }
+  .t { color: var(--t); font-weight: 600; }
+  table.form { width: 100%; border-collapse: collapse; }
+  table.form td { border-top: 1px solid var(--line); padding: 6px 8px;
+    vertical-align: top; }
+  table.form td.k { color: var(--acc); white-space: nowrap; width: 38%; }
+  .bullets { margin: 0; padding-left: 18px; } .bullets li { margin: 3px 0; }
+  .ex { padding: 6px 0; border-top: 1px solid var(--line); }
+  .ex:first-child { border-top: 0; }
+  .trap { border-color: #5a3a2a; background: #20160f; }
+  .vbank { display: flex; flex-wrap: wrap; gap: 6px; }
+  .vchip { background: var(--chip); border-radius: 8px; padding: 4px 8px;
+    font-size: 12px; }
+  .vchip b { color: var(--v); } .vchip .mm { color: var(--mut); margin-left: 4px; }
+  .vchip.miss { outline: 1px solid var(--bad); }
+  .exq { border-left: 3px solid var(--line); }
+  .exq .kind { font-size: 11px; color: var(--mut); text-transform: uppercase; }
+  .ans { color: var(--ok); } .opt { color: var(--fg); }
+  /* Editor form */
+  .fld { margin-bottom: 12px; }
+  .fld > label { display: block; font-size: 12px; color: var(--mut);
+    margin-bottom: 4px; font-weight: 600; }
+  .fld input, .fld textarea, .fld select { width: 100%; background: var(--panel2);
+    color: var(--fg); border: 1px solid var(--line); border-radius: 8px;
+    padding: 8px 10px; font: inherit; }
+  /* auto-grow: textareas show their full content, no inner scrollbar */
+  .fld textarea { min-height: 40px; resize: none; overflow: hidden; }
+  .grp { border: 1px solid var(--line); border-radius: 12px; padding: 12px;
+    margin-bottom: 16px; }
+  .grp > h3 { margin: 0 0 10px; font-size: 13px; color: var(--acc);
+    text-transform: uppercase; letter-spacing: .05em; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .item { border: 1px dashed var(--line); border-radius: 10px; padding: 10px;
+    margin-bottom: 10px; position: relative; }
+  .item .rm { position: absolute; top: 8px; right: 8px; background: transparent;
+    border: 1px solid var(--line); color: var(--bad); border-radius: 6px;
+    cursor: pointer; padding: 2px 8px; }
+  .addbtn { background: var(--chip); color: var(--fg); border: 1px solid var(--line);
+    border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  .hint { color: var(--mut); font-size: 11px; margin-top: 2px; }
+  details.exitem > summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+  #rawWrap textarea { width: 100%; min-height: 70vh; background: #0b0f14;
+    color: var(--fg); border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px; font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; }
+  .empty { color: var(--mut); padding: 40px; text-align: center; }
+  /* Index editor */
+  #indexView { flex: 1; overflow-y: auto; padding: 18px 24px; }
+  .ixsec { border: 1px solid var(--line); border-radius: 12px; margin-bottom: 16px; }
+  .ixsec > .head { display: flex; gap: 10px; align-items: center; padding: 10px 12px;
+    background: var(--panel); border-bottom: 1px solid var(--line);
+    border-radius: 12px 12px 0 0; }
+  .ixsec .head .sid { width: 70px; }
+  .ixsec .head input { background: var(--panel2); color: var(--fg);
+    border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; font: inherit; }
+  .ixsec .head .nm { flex: 1; }
+  .ixrow { display: flex; gap: 10px; align-items: center; padding: 8px 12px;
+    border-top: 1px solid var(--line); }
+  .ixrow:first-child { border-top: 0; }
+  .ixrow .ord { width: 26px; text-align: center; color: var(--mut); }
+  .ixrow .arrows { display: flex; flex-direction: column; }
+  .ixrow .arrows button { background: var(--chip); border: 1px solid var(--line);
+    color: var(--fg); cursor: pointer; line-height: 1; padding: 1px 6px; font-size: 11px; }
+  .ixrow .arrows button:first-child { border-radius: 6px 6px 0 0; }
+  .ixrow .arrows button:last-child { border-radius: 0 0 6px 6px; margin-top: -1px; }
+  .ixrow .meta { flex: 1; min-width: 0; }
+  .ixrow .meta .tt { font-weight: 600; white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; }
+  .ixrow .meta .ss { color: var(--mut); font-size: 12px; }
+  .ixrow .pub { display: flex; align-items: center; gap: 6px; color: var(--mut);
+    font-size: 12px; white-space: nowrap; }
+  .ixrow.unpub { opacity: .6; }
+  .hbtn { background: var(--chip); color: var(--fg); border: 1px solid var(--line);
+    border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 12px; }
+  .hbtn.on { background: var(--acc); color: #04121f; border-color: var(--acc); }
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <h1>Writing Units — Editor
+      <button class="hbtn" id="ixBtn" onclick="toggleIndexView()"
+        style="float:right;margin-top:-2px">Index ✎</button>
+    </h1>
+    <div class="levtabs" id="levtabs"></div>
+    <div id="unitlist"></div>
+  </aside>
+  <section id="main">
+    <div id="bar">
+      <button class="tabbtn on" id="tabForm" onclick="setMode('form')">Edit (form)</button>
+      <button class="tabbtn" id="tabRaw" onclick="setMode('raw')">Raw JSON</button>
+      <span class="grow"></span>
+      <span id="status"></span>
+      <button id="save" onclick="saveDispatch()" disabled>Save to file</button>
+    </div>
+    <div id="panes">
+      <div class="pane" id="editPane"><div class="empty">Pick a unit on the left.</div></div>
+      <div class="pane" id="previewPane"><div class="pv" id="preview"></div></div>
+    </div>
+    <div id="indexView" class="hide"></div>
+  </section>
+</div>
+
+<script>
+"use strict";
+let DATA = null, VERBS = {}, CURRENT = null, CURRENT_ID = null;
+let MODE = "form", LEVEL = 1, DIRTY = false;
+let INDEX_VIEW = false, INDEX_DIRTY = false;
+
+// auto-grow a textarea to fit its content (no inner scrollbar)
+function autoGrow(ta) {
+  if (!ta || ta.tagName !== "TEXTAREA") return;
+  ta.style.height = "auto";
+  ta.style.height = (ta.scrollHeight + 2) + "px";
+}
+
+// ---- tiny DOM helper ----
+function el(tag, props, ...kids) {
+  const e = document.createElement(tag);
+  props = props || {};
+  for (const k in props) {
+    const v = props[k];
+    if (k === "class") e.className = v;
+    else if (k === "html") e.innerHTML = v;
+    else if (k === "value") e.value = v;
+    else if (k.startsWith("on") && typeof v === "function")
+      e.addEventListener(k.slice(2), v);
+    else if (v !== null && v !== undefined) e.setAttribute(k, v);
+  }
+  for (const kid of kids) {
+    if (kid === null || kid === undefined || kid === false) continue;
+    e.appendChild(typeof kid === "string" ? document.createTextNode(kid) : kid);
+  }
+  return e;
+}
+function esc(s) { return (s || "").replace(/[&<>]/g, c =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c])); }
+// {v}..{/v} and {t}..{/t} -> coloured spans
+function hl(s) {
+  return esc(s)
+    .replace(/\{v\}([\s\S]*?)\{\/v\}/g, '<span class="v">$1</span>')
+    .replace(/\{t\}([\s\S]*?)\{\/t\}/g, '<span class="t">$1</span>');
+}
+// path get/set: "teach.examples.0.en"
+function getPath(o, p) { return p.split(".").reduce((a, k) => (a == null ? a : a[k]), o); }
+function setPath(o, p, val) {
+  const ks = p.split("."); let a = o;
+  for (let i = 0; i < ks.length - 1; i++) {
+    if (a[ks[i]] == null) a[ks[i]] = /^\d+$/.test(ks[i + 1]) ? [] : {};
+    a = a[ks[i]];
+  }
+  a[ks[ks.length - 1]] = val;
+}
+
+// ---- load ----
+async function load() {
+  const r = await fetch("/api/data");
+  DATA = await r.json();
+  (DATA.lexicon.verbs || []).forEach(v => { VERBS[v.id] = v; });
+  buildLevelTabs();
+  renderSidebar();
+}
+function buildLevelTabs() {
+  const levels = [...new Set(DATA.index.map(u => u.level))].sort();
+  const box = document.getElementById("levtabs");
+  box.innerHTML = "";
+  levels.forEach(l => box.appendChild(el("div",
+    { class: "levtab" + (l === LEVEL ? " on" : ""),
+      onclick: () => { LEVEL = l; buildLevelTabs(); renderSidebar();
+        if (INDEX_VIEW) renderIndexEditor(); } },
+    "Level " + l)));
+}
+function renderSidebar() {
+  const list = document.getElementById("unitlist");
+  list.innerHTML = "";
+  const units = DATA.index.filter(u => u.level === LEVEL);
+  let lastSec = null;
+  units.forEach(u => {
+    if (u.section_id !== lastSec) {
+      lastSec = u.section_id;
+      list.appendChild(el("div", { class: "sec" }, u.section_id + "  " + (u.section || "")));
+    }
+    const row = el("div",
+      { class: "unit" + (u.id === CURRENT_ID ? " on" : ""), onclick: () => selectUnit(u.id) },
+      el("div", { class: "t" }, u.title,
+        el("span", { class: "dot" + (u.published ? "" : " draft") })),
+      el("div", { class: "s mm" }, u.subtitle_mm || ""));
+    list.appendChild(row);
+  });
+}
+
+function selectUnit(id) {
+  if (DIRTY && !confirm("You have unsaved changes. Discard them?")) return;
+  CURRENT_ID = id;
+  CURRENT = JSON.parse(JSON.stringify(DATA.units[id]));  // working copy
+  DIRTY = false;
+  INDEX_VIEW = false;
+  // show the unit view (and hide the index view) BEFORE rendering, so the
+  // auto-grow pass can measure textarea heights against a laid-out pane.
+  document.getElementById("panes").classList.remove("hide");
+  document.getElementById("indexView").classList.add("hide");
+  document.getElementById("tabForm").classList.remove("hide");
+  document.getElementById("tabRaw").classList.remove("hide");
+  document.getElementById("ixBtn").classList.remove("on");
+  const sv = document.getElementById("save");
+  sv.textContent = "Save to file"; sv.disabled = true;
+  setStatus("");
+  renderSidebar();
+  renderEditor();
+  renderPreview();
+}
+
+function markDirty() {
+  DIRTY = true;
+  document.getElementById("save").disabled = false;
+  setStatus("unsaved changes…");
+}
+function setStatus(msg, cls) {
+  const s = document.getElementById("status");
+  s.textContent = msg; s.className = cls || "";
+}
+
+// ---- field builders ----
+function textField(label, path, multiline, mm) {
+  const val = getPath(CURRENT, path);
+  const input = multiline
+    ? el("textarea", { class: mm ? "mm" : "" })
+    : el("input", { class: mm ? "mm" : "", type: "text" });
+  input.value = val == null ? "" : val;
+  input.addEventListener("input", () => {
+    setPath(CURRENT, path, input.value); markDirty(); renderPreview(); autoGrow(input);
+  });
+  return el("div", { class: "fld" }, el("label", {}, label), input);
+}
+// array-of-strings <-> textarea (one per line)
+function linesField(label, path, mm, hint) {
+  const arr = getPath(CURRENT, path) || [];
+  const ta = el("textarea", { class: mm ? "mm" : "" });
+  ta.value = Array.isArray(arr) ? arr.join("\n") : String(arr);
+  ta.addEventListener("input", () => {
+    setPath(CURRENT, path, ta.value.split("\n").map(s => s.trim()).filter(Boolean));
+    markDirty(); renderPreview(); autoGrow(ta);
+  });
+  return el("div", { class: "fld" }, el("label", {}, label), ta,
+    hint ? el("div", { class: "hint" }, hint) : null);
+}
+
+function renderEditor() {
+  const pane = document.getElementById("editPane");
+  pane.innerHTML = "";
+  if (!CURRENT) { pane.innerHTML = '<div class="empty">Pick a unit.</div>'; return; }
+  if (MODE === "raw") { renderRaw(pane); return; }
+  const t = CURRENT.teach || (CURRENT.teach = {});
+
+  // Header
+  pane.appendChild(grp("Unit", [
+    textField("Title (English)", "title"),
+    textField("Subtitle (Burmese)", "subtitle_mm", false, true),
+  ]));
+
+  // Teach spine
+  pane.appendChild(grp("Teach — situation & use", [
+    textField("Situation (EN)", "teach.situation_en", true),
+    textField("Situation (MM)", "teach.situation_mm", true, true),
+    textField("Use / explanation (EN)", "teach.use_en", true),
+    textField("Use / explanation (MM)", "teach.use_mm", true, true),
+    // `teach.timeline` is intentionally not editable here: the L1–3 pager never
+    // renders it (only the legacy scroll page does, which no unit reaches). It
+    // round-trips untouched via the Raw JSON tab.
+  ]));
+
+  // Form table rows
+  pane.appendChild(arrayGroup("Form table rows", "teach.form",
+    () => ({ subject: "", form: "" }),
+    (row, base) => [
+      textField("Subject / label", base + ".subject"),
+      textField("Form", base + ".form"),
+    ]));
+  pane.appendChild(grp("Form note (MM) — one rule per line", [
+    linesField("form_note_mm", "teach.form_note_mm", true,
+      "Each line becomes a bullet under the form table."),
+  ]));
+
+  // Trap
+  pane.appendChild(grp("Trap (common mistake)", [
+    textField("Trap (EN)", "teach.trap_en", true),
+    textField("Trap (MM)", "teach.trap_mm", true, true),
+  ]));
+
+  // Examples
+  pane.appendChild(arrayGroup("Examples", "teach.examples",
+    () => ({ en: "", mm: "" }),
+    (row, base) => [
+      textField("English (use {v}…{/v} to highlight)", base + ".en"),
+      textField("Burmese gloss", base + ".mm", false, true),
+    ]));
+
+  // Walkthrough — the step-by-step "why" cards shown in the L1–3 pager.
+  pane.appendChild(arrayGroup("Walkthrough — step-by-step cards", "teach.walkthrough",
+    () => ({ subject: "", rule_mm: "", en: "", why_mm: "" }),
+    (row, base) => [
+      textField("Subject / label (pill)", base + ".subject"),
+      textField("Rule (MM)", base + ".rule_mm", true, true),
+      textField("Example (EN — use {v}…{/v})", base + ".en", true),
+      textField("Why (MM)", base + ".why_mm", true, true),
+    ]));
+
+  // Toolkit
+  pane.appendChild(grp("Toolkit (verb bank)", [
+    linesField("Verb ids (one per line)", "toolkit.verbs", false,
+      "Ids into the shared lexicon, e.g. v_go. Unknown ids show red in the preview."),
+    verbFormField(),
+    textField("Toolkit note (MM)", "toolkit.note_mm", true, true),
+  ]));
+
+  // Model paragraph
+  pane.appendChild(grp("Model paragraph", [
+    textField("Model (EN)", "teach.model_paragraph_en", true),
+    textField("Model (MM)", "teach.model_paragraph_mm", true, true),
+  ]));
+
+  // Quick-check — the gated MCQs the learner must pass before the exercises.
+  pane.appendChild(arrayGroup("Quick check — questions", "teach.checks",
+    () => ({ prompt_en: "", prompt_mm: "", options: [], answer: "", explain_mm: "" }),
+    (row, base) => [
+      textField("Prompt (EN — use {v}…{/v})", base + ".prompt_en", true),
+      textField("Prompt (MM)", base + ".prompt_mm", true, true),
+      linesField("Options (one per line)", base + ".options"),
+      textField("Answer (must exactly match one option)", base + ".answer"),
+      textField("Explain (MM)", base + ".explain_mm", true, true),
+    ]));
+
+  // Exercises
+  pane.appendChild(exercisesGroup());
+
+  pane.appendChild(el("div", { class: "hint" },
+    "Form table blocks, agreement blocks and other advanced fields are editable in the Raw JSON tab."));
+
+  // grow every textarea to fit its content (after layout)
+  requestAnimationFrame(() =>
+    pane.querySelectorAll("textarea").forEach(autoGrow));
+}
+
+function grp(title, children) {
+  return el("div", { class: "grp" }, el("h3", {}, title), ...children);
+}
+function verbFormField() {
+  const cur = getPath(CURRENT, "toolkit.verb_form") || "third";
+  const sel = el("select", {});
+  ["base", "third", "past", "past_participle", "ing"].forEach(o =>
+    sel.appendChild(el("option", { value: o }, o)));
+  sel.value = cur;
+  sel.addEventListener("change", () => {
+    setPath(CURRENT, "toolkit.verb_form", sel.value); markDirty(); renderPreview();
+  });
+  return el("div", { class: "fld" }, el("label", {}, "verb_form (which form the bank shows)"), sel);
+}
+
+// generic add/remove array editor
+function arrayGroup(title, path, factory, rowFields) {
+  let arr = getPath(CURRENT, path);
+  if (!Array.isArray(arr)) { arr = []; setPath(CURRENT, path, arr); }
+  const body = el("div", {});
+  function redraw() {
+    body.innerHTML = "";
+    arr.forEach((row, i) => {
+      const base = path + "." + i;
+      const item = el("div", { class: "item" },
+        el("button", { class: "rm", onclick: () => { arr.splice(i, 1); markDirty(); redraw(); renderPreview(); } }, "remove"),
+        ...rowFields(row, base));
+      body.appendChild(item);
+    });
+    body.appendChild(el("button", { class: "addbtn",
+      onclick: () => { arr.push(factory()); markDirty(); redraw(); renderPreview(); } },
+      "+ add"));
+  }
+  redraw();
+  return el("div", { class: "grp" }, el("h3", {}, title + "  (" + arr.length + ")"), body);
+}
+
+function exercisesGroup() {
+  let arr = CURRENT.exercises;
+  if (!Array.isArray(arr)) { arr = []; CURRENT.exercises = arr; }
+  const body = el("div", {});
+  const KINDS = ["mcq", "gap_fill", "correct_error", "reorder", "join",
+    "transform", "scan_sentences", "scan_paragraph", "free_write"];
+  function redraw() {
+    body.innerHTML = "";
+    arr.forEach((ex, i) => {
+      const base = "exercises." + i;
+      const kindSel = el("select", {});
+      KINDS.forEach(k => kindSel.appendChild(el("option", { value: k }, k)));
+      if (!KINDS.includes(ex.kind)) kindSel.appendChild(el("option", { value: ex.kind }, ex.kind));
+      kindSel.value = ex.kind || "mcq";
+      kindSel.addEventListener("change", () => { ex.kind = kindSel.value; markDirty(); renderPreview(); });
+
+      const gradeSel = el("select", {});
+      ["auto", "ai"].forEach(g => gradeSel.appendChild(el("option", { value: g }, g)));
+      gradeSel.value = ex.grade || "auto";
+      gradeSel.addEventListener("change", () => { ex.grade = gradeSel.value; markDirty(); renderPreview(); });
+
+      const det = el("details", { class: "exitem" },
+        el("summary", {}, "#" + (i + 1) + " · " + (ex.kind || "?") + " · " + (ex.grade || "auto")),
+        el("button", { class: "rm", onclick: () => { arr.splice(i, 1); markDirty(); redraw(); renderPreview(); } }, "remove"),
+        el("div", { class: "row2" },
+          el("div", { class: "fld" }, el("label", {}, "kind"), kindSel),
+          el("div", { class: "fld" }, el("label", {}, "grade"), gradeSel)),
+        textField("Prompt (EN)", base + ".prompt_en", true),
+        textField("Prompt (MM)", base + ".prompt_mm", true, true),
+        linesField("Options (one per line — mcq)", base + ".options"),
+        linesField("Answers (one per line — auto-grade)", base + ".answers"),
+        textField("Explain (MM)", base + ".explain_mm", true, true),
+        textField("Model answer (EN — ai items)", base + ".model", true),
+        el("div", { class: "row2" },
+          numField("min_lines", base + ".min_lines"),
+          numField("max_lines", base + ".max_lines")),
+        // grading sub-block (for ai items)
+        el("details", { class: "exitem" }, el("summary", {}, "grading rubric (ai)"),
+          textField("grammar_point", base + ".grading.grammar_point"),
+          textField("rule", base + ".grading.rule", true),
+          linesField("must_check (one per line)", base + ".grading.must_check"),
+          linesField("common_mm_errors (one per line)", base + ".grading.common_mm_errors"),
+          linesField("ignore (one per line)", base + ".grading.ignore")));
+      body.appendChild(det);
+    });
+    body.appendChild(el("button", { class: "addbtn",
+      onclick: () => { arr.push({ kind: "mcq", grade: "auto", prompt_en: "", prompt_mm: "", options: [], answers: [] }); markDirty(); redraw(); renderPreview(); } },
+      "+ add exercise"));
+  }
+  redraw();
+  return el("div", { class: "grp" }, el("h3", {}, "Exercises  (" + arr.length + ")"), body);
+}
+function numField(label, path) {
+  const input = el("input", { type: "number" });
+  const v = getPath(CURRENT, path); input.value = v == null ? "" : v;
+  input.addEventListener("input", () => {
+    setPath(CURRENT, path, input.value === "" ? undefined : parseInt(input.value, 10));
+    markDirty();
+  });
+  return el("div", { class: "fld" }, el("label", {}, label), input);
+}
+
+// ---- raw json ----
+function renderRaw(pane) {
+  const wrap = el("div", { id: "rawWrap" });
+  const ta = el("textarea", {});
+  ta.value = JSON.stringify(CURRENT, null, 2);
+  const msg = el("div", { class: "hint" }, "Edit JSON directly. ‘Apply’ validates and updates the preview; then Save writes the file.");
+  const apply = el("button", { class: "addbtn", onclick: () => {
+    try {
+      const obj = JSON.parse(ta.value);
+      if (obj.id !== CURRENT_ID) throw new Error("id must stay '" + CURRENT_ID + "'");
+      CURRENT = obj; markDirty(); renderPreview();
+      setStatus("JSON applied ✓", "ok");
+    } catch (e) { setStatus("JSON error: " + e.message, "bad"); }
+  } }, "Apply JSON");
+  wrap.appendChild(msg); wrap.appendChild(apply); wrap.appendChild(el("div", { style: "height:8px" }));
+  wrap.appendChild(ta);
+  pane.appendChild(wrap);
+}
+
+function setMode(m) {
+  MODE = m;
+  document.getElementById("tabForm").classList.toggle("on", m === "form");
+  document.getElementById("tabRaw").classList.toggle("on", m === "raw");
+  renderEditor();
+}
+
+// ---- preview (mirrors the app teach spine) ----
+function renderPreview() {
+  const p = document.getElementById("preview");
+  if (!CURRENT) { p.innerHTML = ""; return; }
+  const t = CURRENT.teach || {};
+  const parts = [];
+  parts.push('<h2>' + esc(CURRENT.title || "") + '</h2>');
+  parts.push('<div class="sub mm">' + esc(CURRENT.subtitle_mm || "") + '</div>');
+
+  parts.push(blockHtml("Situation", hl(t.situation_en) +
+    '<div class="gloss mm">' + esc(t.situation_mm) + '</div>'));
+  let useHtml = hl(t.use_en) + '<div class="gloss mm">' + esc(t.use_mm) + '</div>';
+  // teach.timeline omitted — the L1–3 pager doesn't render it (see editor note).
+  parts.push(blockHtml("Use", useHtml));
+
+  if (Array.isArray(t.form) && t.form.length) {
+    let rows = t.form.map(r => '<tr><td class="k">' + esc(r.subject) +
+      '</td><td>' + hl(r.form) + '</td></tr>').join("");
+    let fn = "";
+    const note = t.form_note_mm;
+    const notes = Array.isArray(note) ? note : (note ? String(note).split("\n") : []);
+    if (notes.length) fn = '<ul class="bullets mm">' +
+      notes.filter(Boolean).map(n => '<li>' + esc(n) + '</li>').join("") + '</ul>';
+    parts.push(blockHtml("Form", '<table class="form">' + rows + '</table>' + fn));
+  }
+
+  if (t.trap_en || t.trap_mm) {
+    parts.push('<div class="block trap"><div class="lbl">Trap</div>' +
+      hl(t.trap_en) + '<div class="gloss mm">' + esc(t.trap_mm) + '</div></div>');
+  }
+
+  if (Array.isArray(t.examples) && t.examples.length) {
+    const ex = t.examples.map(e => '<div class="ex">' + hl(e.en) +
+      '<div class="gloss mm">' + esc(e.mm) + '</div></div>').join("");
+    parts.push(blockHtml("Examples", ex));
+  }
+
+  // walkthrough — the step-by-step "why" cards
+  if (Array.isArray(t.walkthrough) && t.walkthrough.length) {
+    const w = t.walkthrough.map((c, i) =>
+      '<div class="ex"><div class="v">' +
+      esc(c.subject || ("Step " + (i + 1))) + '</div>' +
+      (c.rule_mm ? '<div class="gloss mm">' + esc(c.rule_mm) + '</div>' : '') +
+      '<div style="margin-top:4px">' + hl(c.en) + '</div>' +
+      (c.why_mm ? '<div class="gloss mm" style="margin-top:4px">… ' +
+        esc(c.why_mm) + '</div>' : '') +
+      '</div>').join("");
+    parts.push(blockHtml("Walkthrough", w));
+  }
+
+  // toolkit verb bank
+  const tk = CURRENT.toolkit || {};
+  if (Array.isArray(tk.verbs) && tk.verbs.length) {
+    const form = tk.verb_form || "third";
+    const chips = tk.verbs.map(id => {
+      const v = VERBS[id];
+      if (!v) return '<span class="vchip miss">' + esc(id) + ' ?</span>';
+      const base = (v.forms && v.forms.base) || id;
+      const second = (v.forms && v.forms[form]) || base;
+      return '<span class="vchip"><b>' + esc(base) + '</b> → ' + esc(second) +
+        '<span class="mm">' + esc(v.mm || "") + '</span></span>';
+    }).join("");
+    let note = tk.note_mm ? '<div class="gloss mm" style="margin-top:8px">' + esc(tk.note_mm) + '</div>' : "";
+    parts.push(blockHtml("Toolkit · verb_form = " + form,
+      '<div class="vbank">' + chips + '</div>' + note));
+  }
+
+  if (t.model_paragraph_en || t.model_paragraph_mm) {
+    parts.push(blockHtml("Model paragraph", hl(t.model_paragraph_en) +
+      '<div class="gloss mm">' + esc(t.model_paragraph_mm) + '</div>'));
+  }
+
+  // quick-check — flags an answer that doesn't match any option (breaks the gate)
+  if (Array.isArray(t.checks) && t.checks.length) {
+    const items = t.checks.map(c => {
+      const opts = Array.isArray(c.options) ? c.options : [];
+      const ok = opts.includes(c.answer);
+      const optHtml = opts.map(o => o === c.answer
+        ? '<span class="ans">' + esc(o) + ' ✓</span>'
+        : '<span class="opt">' + esc(o) + '</span>').join("  ·  ");
+      return '<div class="ex"><div>' + hl(c.prompt_en || "") + '</div>' +
+        (c.prompt_mm ? '<div class="gloss mm">' + esc(c.prompt_mm) + '</div>' : '') +
+        '<div style="margin-top:4px">' + optHtml + '</div>' +
+        (ok ? '' : '<div style="color:var(--bad);font-size:12px">⚠ answer “' +
+          esc(c.answer || "") + '” is not one of the options</div>') +
+        (c.explain_mm ? '<div class="gloss mm" style="margin-top:2px">' +
+          esc(c.explain_mm) + '</div>' : '') +
+        '</div>';
+    }).join("");
+    parts.push(blockHtml("Quick check (" + t.checks.length + ")", items));
+  }
+
+  // exercises
+  if (Array.isArray(CURRENT.exercises) && CURRENT.exercises.length) {
+    const items = CURRENT.exercises.map((e, i) => {
+      let h = '<div class="block exq"><div class="kind">#' + (i + 1) + " · " +
+        esc(e.kind || "") + " · " + esc(e.grade || "auto") + '</div>';
+      h += '<div>' + hl(e.prompt_en || "") + '</div>';
+      if (e.prompt_mm) h += '<div class="gloss mm">' + esc(e.prompt_mm) + '</div>';
+      if (Array.isArray(e.options) && e.options.length)
+        h += '<div class="opt">options: ' + e.options.map(esc).join(" · ") + '</div>';
+      if (Array.isArray(e.answers) && e.answers.length)
+        h += '<div class="ans">answer: ' + e.answers.map(esc).join("  /  ") + '</div>';
+      if (e.model) h += '<div style="margin-top:4px">' + hl(e.model) + '</div>';
+      if (e.explain_mm) h += '<div class="gloss mm">' + esc(e.explain_mm) + '</div>';
+      return h + '</div>';
+    }).join("");
+    parts.push('<div class="lbl" style="margin:18px 0 6px">Exercises (' +
+      CURRENT.exercises.length + ')</div>' + items);
+  }
+
+  p.innerHTML = parts.join("");
+}
+function blockHtml(label, inner) {
+  return '<div class="block"><div class="lbl">' + esc(label) + '</div>' + inner + '</div>';
+}
+
+// ---- index editor ----
+function toggleIndexView() { INDEX_VIEW = !INDEX_VIEW; updateView(); }
+function updateView() {
+  const ix = INDEX_VIEW;
+  document.getElementById("panes").classList.toggle("hide", ix);
+  document.getElementById("indexView").classList.toggle("hide", !ix);
+  document.getElementById("tabForm").classList.toggle("hide", ix);
+  document.getElementById("tabRaw").classList.toggle("hide", ix);
+  document.getElementById("ixBtn").classList.toggle("on", ix);
+  const sv = document.getElementById("save");
+  if (ix) {
+    renderIndexEditor();
+    sv.textContent = "Save index"; sv.disabled = !INDEX_DIRTY; setStatus("");
+  } else {
+    sv.textContent = "Save to file"; sv.disabled = !DIRTY;
+  }
+}
+function markIndexDirty() {
+  INDEX_DIRTY = true;
+  document.getElementById("save").disabled = false;
+  setStatus("unsaved index changes…");
+}
+function recomputeOrders() {  // order is 1-based within each section_id
+  const cnt = {};
+  DATA.index.forEach(e => { cnt[e.section_id] = (cnt[e.section_id] || 0) + 1;
+    e.order = cnt[e.section_id]; });
+}
+function moveUnit(id, dir) {
+  const arr = DATA.index;
+  const i = arr.findIndex(e => e.id === id), j = i + dir;
+  if (j < 0 || j >= arr.length) return;
+  if (arr[j].section_id !== arr[i].section_id) return;  // stay within section
+  [arr[i], arr[j]] = [arr[j], arr[i]];
+  recomputeOrders(); markIndexDirty(); renderIndexEditor(); renderSidebar();
+}
+function setPublished(id, val) {
+  const e = DATA.index.find(x => x.id === id); if (!e) return;
+  e.published = val; markIndexDirty(); renderIndexEditor(); renderSidebar();
+}
+function setSectionField(sectionId, level, key, val) {
+  DATA.index.forEach(e => {
+    if (e.section_id === sectionId && e.level === level) e[key] = val;
+  });
+  markIndexDirty(); renderSidebar();
+}
+function renderIndexEditor() {
+  const host = document.getElementById("indexView");
+  host.innerHTML = "";
+  host.appendChild(el("div", { class: "hint", style: "margin-bottom:12px" },
+    "Level " + LEVEL + " — reorder with ▲/▼ (within a section), toggle Published, " +
+    "rename sections. Titles & subtitles are edited in the unit editor. " +
+    "Click “Save index” to write index.json."));
+  const units = DATA.index.filter(e => e.level === LEVEL);
+  const groups = [], seen = {};
+  units.forEach(e => {
+    if (!seen[e.section_id]) {
+      seen[e.section_id] = { id: e.section_id, name: e.section, level: e.level, items: [] };
+      groups.push(seen[e.section_id]);
+    }
+    seen[e.section_id].items.push(e);
+  });
+  groups.forEach(g => {
+    const sid = el("input", { class: "sid", value: g.id });
+    sid.addEventListener("change", () => {
+      setSectionField(g.id, g.level, "section_id", sid.value.trim());
+      recomputeOrders(); renderIndexEditor();
+    });
+    const nm = el("input", { class: "nm mm", value: g.name });
+    nm.addEventListener("input", () =>
+      setSectionField(g.id, g.level, "section", nm.value));
+    const sec = el("div", { class: "ixsec" },
+      el("div", { class: "head" }, el("span", { style: "color:var(--mut)" }, "Section"), sid, nm));
+    g.items.forEach((e, idx) => {
+      const up = el("button", { onclick: () => moveUnit(e.id, -1), title: "move up" }, "▲");
+      const dn = el("button", { onclick: () => moveUnit(e.id, 1), title: "move down" }, "▼");
+      if (idx === 0) up.disabled = true;
+      if (idx === g.items.length - 1) dn.disabled = true;
+      const pub = el("input", { type: "checkbox" }); pub.checked = !!e.published;
+      pub.addEventListener("change", () => setPublished(e.id, pub.checked));
+      sec.appendChild(el("div", { class: "ixrow" + (e.published ? "" : " unpub") },
+        el("span", { class: "ord" }, String(e.order)),
+        el("div", { class: "arrows" }, up, dn),
+        el("div", { class: "meta" },
+          el("div", { class: "tt" }, e.title || e.id),
+          el("div", { class: "ss mm" }, e.subtitle_mm || "")),
+        el("label", { class: "pub" }, pub, "published"),
+        el("button", { class: "hbtn", onclick: () => selectUnit(e.id) }, "open")));
+    });
+    host.appendChild(sec);
+  });
+}
+async function saveIndex() {
+  setStatus("saving index…");
+  try {
+    const r = await fetch("/api/save_index", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ index: DATA.index }),
+    });
+    const out = await r.json();
+    if (!r.ok) throw new Error(out.error || r.status);
+    INDEX_DIRTY = false; document.getElementById("save").disabled = true;
+    setStatus("saved index (" + out.count + " units) ✓", "ok");
+  } catch (e) { setStatus("index save failed: " + e.message, "bad"); }
+}
+function saveDispatch() { INDEX_VIEW ? saveIndex() : save(); }
+
+// ---- save ----
+async function save() {
+  setStatus("saving…");
+  try {
+    const r = await fetch("/api/save", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: CURRENT_ID, data: CURRENT }),
+    });
+    const out = await r.json();
+    if (!r.ok) throw new Error(out.error || r.status);
+    DATA.units[CURRENT_ID] = JSON.parse(JSON.stringify(CURRENT));
+    // reflect title/subtitle changes in the index used for the sidebar
+    const ie = DATA.index.find(u => u.id === CURRENT_ID);
+    if (ie) { ie.title = CURRENT.title; ie.subtitle_mm = CURRENT.subtitle_mm; }
+    DIRTY = false; document.getElementById("save").disabled = true;
+    setStatus("saved → " + out.path + " ✓", "ok");
+    renderSidebar();
+  } catch (e) { setStatus("save failed: " + e.message, "bad"); }
+}
+
+window.addEventListener("beforeunload", e => {
+  if (DIRTY || INDEX_DIRTY) { e.preventDefault(); e.returnValue = ""; }
+});
+load();
+</script>
+</body>
+</html>

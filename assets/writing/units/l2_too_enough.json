@@ -8,139 +8,213 @@
   "subtitle_mm": "too / enough",
   "teach": {
     "situation_en": "This coffee is {v}too hot{/v} to drink. The room isn't {v}big enough{/v} for ten people. I can't buy the bag — it's {v}too expensive{/v}. We don't have {v}enough chairs{/v}, and there are {v}too many{/v} guests.",
-    "situation_mm": "ဒီ ကော်ဖီက သောက်ဖို့ ပူလွန်းတယ်။ အခန်းက လူ ၁၀ ယောက်အတွက် မလုံလောက်ဘူး (မကြီးလောက်ဘူး)။ အိတ်ကို မဝယ်နိုင်ဘူး — စျေး ကြီးလွန်းတယ်။ ထိုင်ခုံ မလုံလောက်ဘဲ ဧည့်သည် များလွန်းတယ်။",
+    "situation_mm": "ဒီကော်ဖီက သောက်ဖို့ ပူလွန်းနေတယ်။ အခန်းက လူ ၁၀ ယောက်အတွက် မလုံလောက်ဘူး (မကျယ်ဘူး)။ အိတ်ကို မဝယ်နိုင်ဘူး — စျေးက ကြီးလွန်းလို့ပါ။ ထိုင်ခုံတွေ မလုံလောက်ဘဲ ဧည့်သည်တွေက များလွန်းနေတယ်။",
     "use_en": "We use 'too' for more than necessary (a problem): too + adjective, too much / too many. We use 'enough' for the right amount: adjective + enough, enough + noun.",
-    "use_mm": "too ကို လိုအပ်တာထက် ပိုတဲ့အခါ (ပြဿနာ) သုံးတယ် — too + adjective, too much / too many။ enough ကို လုံလောက်တဲ့ ပမာဏအတွက် သုံးတယ် — adjective + enough, enough + noun။",
+    "use_mm": "'too' ကို လိုအပ်တာထက် ပိုနေတဲ့အခါ (ပြဿနာတစ်ခုခု ရှိနေတဲ့အခါ) သုံးပါတယ် — ဥပမာ too + adjective, too much / too many ပေါ့။ 'enough' ကိုတော့ လုံလောက်တဲ့ ပမာဏကို ပြောချင်တဲ့အခါ သုံးပါတယ် — adjective + enough, enough + noun ဆိုပြီး သုံးရပါတယ်။",
     "timeline": "",
     "form": [
-      { "subject": "too + adjective", "form": "too + adjective  (too hot)" },
-      { "subject": "too much / too many", "form": "too much (uncountable) · too many (countable)" },
-      { "subject": "adjective + enough", "form": "adjective + enough  (big enough)" },
-      { "subject": "enough + noun", "form": "enough + noun  (enough money)" }
+      {
+        "subject": "too + adjective",
+        "form": "too + adjective  (too hot)"
+      },
+      {
+        "subject": "too much / too many",
+        "form": "too much (uncountable) · too many (countable)"
+      },
+      {
+        "subject": "adjective + enough",
+        "form": "adjective + enough  (big enough)"
+      },
+      {
+        "subject": "enough + noun",
+        "form": "enough + noun  (enough money)"
+      }
     ],
     "form_note_mm": [
-      "too + adjective = လိုအပ်တာထက် ပို (ပြဿနာ) — too hot, too expensive။",
-      "too much (uncountable) / too many (countable) — too much sugar, too many people။",
-      "enough = လုံလောက်တဲ့ ပမာဏ — adjective နောက်မှာ (warm enough)၊ noun ရှေ့မှာ (enough chairs)။",
-      "position သတိ — big enough (✓) / enough big (✗); enough food (✓)။ too ≠ very (too = ပြဿနာ ပါတယ်)။"
+      "`too + adjective` ဆိုတာက လိုအပ်တာထက် ပိုနေတာ (ပြဿနာတစ်ခုခု ရှိတာ) ကို ပြောတာပါ — ဥပမာ `too hot`, `too expensive`။",
+      "`too much` ကို ရေတွက်လို့မရတဲ့ (uncountable) noun တွေနဲ့ သုံးပြီး၊ `too many` ကို ရေတွက်လို့ရတဲ့ (countable) noun တွေနဲ့ သုံးပါတယ် — ဥပမာ `too much sugar`, `too many people`။",
+      "`enough` ကတော့ လုံလောက်တဲ့ ပမာဏကို ပြောတာပါ — adjective ရဲ့ နောက်မှာ (ဥပမာ `warm enough`)၊ noun ရဲ့ ရှေ့မှာ (ဥပမာ `enough chairs`) ထားပြီး သုံးရပါတယ်။",
+      "နေရာ (position) ကို သတိထားပေးနော် — ✓ `big enough` (✗ `enough big` မဟုတ်ပါဘူး); ✓ `enough food`။ `too` နဲ့ `very` က မတူပါဘူး (`too` မှာ ပြဿနာရဲ့ အဓိပ္ပာယ် ပါပါတယ်)။"
     ],
     "trap_en": "'enough' goes after an adjective but before a noun.  WRONG: enough big / food enough.   RIGHT: big enough / enough food.  Also: 'too' is negative (a problem), not the same as 'very'.",
-    "trap_mm": "enough က adjective နောက်၊ noun ရှေ့မှာ။ ✗ enough big / food enough → ✓ big enough / enough food။ too က negative (ပြဿနာ) — very နဲ့ မတူဘူး။",
+    "trap_mm": "`enough` ကို သုံးတဲ့အခါ adjective ရဲ့ နောက်မှာ ထားပေးရပြီး noun ရဲ့ ရှေ့မှာ ထားပေးရပါတယ်နော်။ ✗ `enough big` / `food enough` ဆိုတာတွေက မှားပြီး → ✓ `big enough` / `enough food` ကမှ မှန်ပါတယ်။ `too` က negative အဓိပ္ပာယ် (ပြဿနာတစ်ခုခု ရှိတာ) ပါပါတယ် — `very` နဲ့ မတူဘူးဆိုတာလေးကိုလည်း မှတ်ထားပေးပါ။",
     "examples": [
-      { "en": "The tea is {v}too sweet{/v}.", "mm": "လက်ဖက်ရည်က ချိုလွန်းတယ်။" },
-      { "en": "He isn't {v}old enough{/v} to drive.", "mm": "သူ ကားမောင်းဖို့ အသက် မပြည့်သေးဘူး။" },
-      { "en": "There are {v}too many{/v} cars.", "mm": "ကား များလွန်းတယ်။" },
-      { "en": "We have {v}enough food{/v} for everyone.", "mm": "အားလုံးအတွက် အစားအစာ လုံလောက်တယ်။" }
+      {
+        "en": "The tea is {v}too sweet{/v}.",
+        "mm": "လက်ဖက်ရည်က ချိုလွန်းနေတယ်။"
+      },
+      {
+        "en": "He isn't {v}old enough{/v} to drive.",
+        "mm": "သူက ကားမောင်းဖို့ အသက်မပြည့်သေးဘူး။"
+      },
+      {
+        "en": "There are {v}too many{/v} cars.",
+        "mm": "ကားတွေ များလွန်းနေတယ်။"
+      },
+      {
+        "en": "We have {v}enough food{/v} for everyone.",
+        "mm": "အားလုံးအတွက် အစားအသောက် လုံလောက်ပါတယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "too + adjective",
-        "rule_mm": "too က adjective ရဲ့ ရှေ့မှာ (လိုအပ်တာထက် ပို — ပြဿနာ)",
+        "rule_mm": "`too` ကို adjective ရဲ့ ရှေ့မှာ ထားပြီး သုံးပါတယ် (လိုအပ်တာထက် ပိုနေတဲ့ ပြဿနာကို ပြောချင်တာပါ)။",
         "en": "This coffee is {v}too hot{/v}.",
-        "why_mm": "'too' က adjective (hot) ရဲ့ ရှေ့မှာ ထားပြီး လိုအပ်တာထက် ပိုနေတဲ့ ပြဿနာကို ပြပါတယ် — သောက်လို့ မရဘူး။"
+        "why_mm": "`too` ကို adjective (ဥပမာ ‘hot’) ရဲ့ ရှေ့မှာ ထားပြီး လိုအပ်တာထက် ပိုနေတဲ့ ပြဿနာကို ပြောပြချင်တဲ့အခါ သုံးပါတယ် — ဥပမာ ဒီလောက်ပူနေရင် သောက်လို့မရတော့ဘူးပေါ့။"
       },
       {
         "subject": "too much / too many",
-        "rule_mm": "too much + uncountable · too many + countable plural",
+        "rule_mm": "`too much` ကို uncountable noun နဲ့ သုံးပြီး၊ `too many` ကိုတော့ countable plural noun နဲ့ သုံးရပါတယ်နော်။",
         "en": "There are {v}too many{/v} cars.  ·  {v}too much{/v} noise",
-        "why_mm": "ပမာဏ များလွန်းတဲ့အခါ countable plural noun နဲ့ too many၊ uncountable noun နဲ့ too much ကို သုံးပါတယ်။"
+        "why_mm": "ပမာဏက များလွန်းတယ်လို့ ပြောချင်တဲ့အခါမှာ၊ ရေတွက်လို့ရတဲ့ countable plural noun တွေနဲ့ဆို `too many` ကို သုံးပြီး၊ ရေတွက်လို့မရတဲ့ uncountable noun တွေနဲ့ဆို `too much` ကို သုံးပေးရပါတယ်နော်။"
       },
       {
         "subject": "adjective + enough / enough + noun",
-        "rule_mm": "enough က adjective ရဲ့ နောက်၊ noun ရဲ့ ရှေ့ (လုံလောက်)",
+        "rule_mm": "`enough` ကို သုံးမယ်ဆိုရင် adjective ရဲ့ နောက်မှာ ထားရပြီး၊ noun ရဲ့ ရှေ့မှာ ထားရပါတယ် (လုံလောက်တယ်လို့ ပြောချင်တဲ့အခါ သုံးပါတယ်)။",
         "en": "The room is {v}big enough{/v}.  ·  We have {v}enough chairs{/v}.",
-        "why_mm": "'enough' က လုံလောက်တဲ့ ပမာဏကို ပြတယ် — adjective (big) နောက်မှာ၊ ဒါပေမဲ့ noun (chairs) ရှေ့မှာ နေပါတယ်။"
+        "why_mm": "`enough` ဆိုတာက လုံလောက်တဲ့ ပမာဏကို ပြောချင်တာပါ — သူ့ကို adjective (ဥပမာ ‘big’) ရဲ့ နောက်မှာ ထားရပေမဲ့၊ noun (ဥပမာ ‘chairs’) ရဲ့ ရှေ့မှာတော့ ထားပေးရပါတယ်နော်။"
       },
       {
         "subject": "watch the position",
-        "rule_mm": "✗ enough big → ✓ big enough",
+        "rule_mm": "ဥပမာ ✗ `enough big` လို့ မသုံးဘဲ → ✓ `big enough` လို့ သုံးရပါမယ်။",
         "en": "This box isn't {v}big enough{/v}.  (✗ enough big)",
-        "why_mm": "'enough' က adjective ရဲ့ နောက်မှာ နေရတယ် — 'enough big' မဟုတ်ဘူး။ ('too' ကတော့ ပြဿနာ ပြတာ — 'very' နဲ့ မတူဘူး။)"
+        "why_mm": "`enough` က adjective ရဲ့ နောက်ကနေ လိုက်ရပါတယ် — ဒါကြောင့် ‘enough big’ ဆိုတာ မှားပြီး ‘big enough’ ကမှ မှန်ပါတယ်။ (နောက်ပြီး ‘too’ က ပြဿနာတစ်ခုခုကို ပြောချင်တာဖြစ်လို့ ‘very’ နဲ့ မတူဘူးဆိုတာလေးလည်း သတိရပေးပါ)။"
       }
     ],
     "checks": [
       {
         "prompt_en": "I can't drink this. It's ___.",
-        "prompt_mm": "ဒါကို မသောက်နိုင်ဘူး။ ပူလွန်းတယ်။",
-        "options": ["too hot", "hot enough", "enough hot"],
+        "prompt_mm": "ဒါကို သောက်လို့မရဘူး။ ပူလွန်းတယ်။",
+        "options": [
+          "too hot",
+          "hot enough",
+          "enough hot"
+        ],
         "answer": "too hot",
-        "explain_mm": "ပြဿနာ (သောက်လို့ မရ) → too + adjective → too hot။"
+        "explain_mm": "ပြဿနာတစ်ခုခု (ဥပမာ သောက်လို့မရတာ) ရှိနေတဲ့အတွက် `too + adjective` ပုံစံကို သုံးရပါမယ် → `too hot`။"
       },
       {
         "prompt_en": "She is ___ to drive a car.",
-        "prompt_mm": "သူမ ကားမောင်းဖို့ အသက် ပြည့်ပြီ။",
-        "options": ["old enough", "enough old", "too old"],
+        "prompt_mm": "သူမ ကားမောင်းဖို့ အသက်ပြည့်ပါပြီ။",
+        "options": [
+          "old enough",
+          "enough old",
+          "too old"
+        ],
         "answer": "old enough",
-        "explain_mm": "adjective + enough → old enough။ enough က adjective နောက်မှာ။"
+        "explain_mm": "ဒီနေရာမှာ `adjective + enough` ပုံစံကို သုံးရပါမယ် → `old enough`။ `enough` က adjective ရဲ့ နောက်မှာ လိုက်ရပါတယ်နော်။"
       },
       {
         "prompt_en": "There is ___ noise in this street.",
-        "prompt_mm": "ဒီလမ်းမှာ ဆူညံသံ များလွန်းတယ်။",
-        "options": ["too much", "too many", "enough"],
+        "prompt_mm": "ဒီလမ်းမှာ ဆူညံသံတွေက များလွန်းနေတယ်။",
+        "options": [
+          "too much",
+          "too many",
+          "enough"
+        ],
         "answer": "too much",
-        "explain_mm": "noise (uncountable) → too much။"
+        "explain_mm": "`noise` က uncountable noun ဖြစ်တဲ့အတွက် → `too much` ကို သုံးပေးရပါမယ်။"
       }
     ],
     "model_paragraph_en": "My flat is nice, but it has some problems. The kitchen is {v}too small{/v}, and there isn't {v}enough light{/v}. In summer it gets {v}too hot{/v}. There are {v}too many{/v} stairs and the lift isn't {v}fast enough{/v}. Still, the rent is low {v}enough{/v}, so I will stay.",
-    "model_paragraph_mm": "ကျွန်တော့်တိုက်ခန်းက ကောင်းပေမဲ့ ပြဿနာ အနည်းငယ် ရှိတယ်။ မီးဖိုချောင်က သေးလွန်းပြီး အလင်းရောင် မလုံလောက်ဘူး။ နွေဦးမှာ ပူလွန်းတယ်။ လှေကား များလွန်းပြီး ဓာတ်လှေကားက မမြန်လောက်ဘူး။ ဒါပေမဲ့ အခန်းခက သက်သာလောက်လို့ ဆက်နေမယ်။",
+    "model_paragraph_mm": "ကျွန်တော့်တိုက်ခန်းက ကောင်းပေမဲ့ ပြဿနာလေးတွေတော့ နည်းနည်းရှိတယ်။ မီးဖိုချောင်က သေးလွန်းပြီး အလင်းရောင်လည်း လုံလုံလောက်လောက်မရဘူး။ နွေဦးရာသီဆိုရင်လည်း ပူလွန်းတယ်။ လှေကားတွေက များလွန်းပြီး ဓာတ်လှေကားကလည်း သိပ်မမြန်ဘူး။ ဒါပေမဲ့ အခန်းခက တော်တော်လေး သက်သာတော့ ဆက်နေဖြစ်မှာပါ။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "too", "form": "before an adjective (a problem)", "tag": "too", "example": "too hot · too many" },
-          { "subjects": "enough", "form": "after adjective / before noun", "tag": "enough", "highlight": true, "example": "warm enough · enough chairs" }
+          {
+            "subjects": "too",
+            "form": "before an adjective (a problem)",
+            "tag": "too",
+            "example": "too hot · too many"
+          },
+          {
+            "subjects": "enough",
+            "form": "after adjective / before noun",
+            "tag": "enough",
+            "highlight": true,
+            "example": "warm enough · enough chairs"
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "'too' နဲ့ 'enough' ကို ဘယ်လိုအခြေအနေမှာ သုံးမလဲ",
+      "pattern": "'too / enough' ကို noun, adjective နဲ့ ဘယ်လို တွဲသုံးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],
     "time_words": [],
-    "note_mm": "too + adjective (too hot)၊ too much/too many (+ noun)။ adjective + enough (big enough)၊ enough + noun (enough money)။ too = ပြဿနာ (very မဟုတ်ဘူး)။"
+    "note_mm": "Key points တွေကို ပြန်ကြည့်ရအောင်နော်: `too + adjective` (ဥပမာ `too hot`), `too much/too many (+ noun)`။ ပြီးတော့ `adjective + enough` (ဥပမာ `big enough`), `enough + noun` (ဥပမာ `enough money`)။ `too` ဆိုတာ ပြဿနာတစ်ခုခုကို ပြောတာဖြစ်ပြီး `very` နဲ့ မတူဘူးဆိုတာကိုလည်း သတိရပါနော်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I can't drink this. It's ___.",
-      "prompt_mm": "ဒါကို မသောက်နိုင်ဘူး။ ပူလွန်းတယ်။",
-      "options": ["too hot", "hot enough", "enough hot"],
-      "answers": ["too hot"],
-      "explain_mm": "ပြဿနာ (သောက်လို့မရ) → too + adjective → too hot။"
+      "prompt_mm": "ဒါကို သောက်လို့မရဘူး။ ပူလွန်းတယ်။",
+      "options": [
+        "too hot",
+        "hot enough",
+        "enough hot"
+      ],
+      "answers": [
+        "too hot"
+      ],
+      "explain_mm": "ပြဿနာတစ်ခုခု (ဥပမာ သောက်လို့မရတာ) ရှိနေတဲ့အတွက် `too + adjective` ပုံစံကို သုံးရပါမယ် → `too hot`။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She is ___ to drive a car. (old)",
-      "prompt_mm": "သူမ ကားမောင်းဖို့ အသက် ပြည့်ပြီ။",
-      "options": ["old enough", "enough old", "too old"],
-      "answers": ["old enough"],
-      "explain_mm": "adjective + enough → old enough။ enough က adjective နောက်မှာ။"
+      "prompt_mm": "သူမ ကားမောင်းဖို့ အသက်ပြည့်ပါပြီ။",
+      "options": [
+        "old enough",
+        "enough old",
+        "too old"
+      ],
+      "answers": [
+        "old enough"
+      ],
+      "explain_mm": "ဒီနေရာမှာ `adjective + enough` ပုံစံကို သုံးရပါမယ် → `old enough`။ `enough` က adjective ရဲ့ နောက်မှာ လိုက်ရပါတယ်နော်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "There is ___ noise in this street.",
-      "prompt_mm": "ဒီလမ်းမှာ ဆူညံသံ များလွန်းတယ်။",
-      "options": ["too much", "too many", "enough"],
-      "answers": ["too much"],
-      "explain_mm": "noise (uncountable) → too much။"
+      "prompt_mm": "ဒီလမ်းမှာ ဆူညံသံတွေက များလွန်းနေတယ်။",
+      "options": [
+        "too much",
+        "too many",
+        "enough"
+      ],
+      "answers": [
+        "too much"
+      ],
+      "explain_mm": "`noise` က uncountable noun ဖြစ်တဲ့အတွက် → `too much` ကို သုံးပေးရပါမယ်။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "We don't have ___ (enough / chair) for everyone.",
-      "prompt_mm": "အားလုံးအတွက် ထိုင်ခုံ မလုံလောက်ဘူး။ ( enough + chairs )",
-      "answers": ["enough chairs"],
-      "explain_mm": "enough + noun → enough chairs။ enough က noun ရှေ့မှာ။"
+      "prompt_mm": "အားလုံးအတွက် ထိုင်ခုံ မလုံလောက်ပါဘူး။ ( enough + chairs )",
+      "answers": [
+        "enough chairs"
+      ],
+      "explain_mm": "ဒီမှာ `enough + noun` ပုံစံကို သုံးရမှာပါ → `enough chairs`။ `enough` က noun ရဲ့ ရှေ့မှာ လာရပါတယ်နော်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "This box isn't enough big.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["This box isn't big enough", "this box isn't big enough."],
-      "explain_mm": "enough က adjective နောက်မှာ → big enough (enough big မဟုတ်ဘူး)။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါ။",
+      "answers": [
+        "This box isn't big enough",
+        "this box isn't big enough."
+      ],
+      "explain_mm": "`enough` က adjective ရဲ့ နောက်က လိုက်ရပါတယ် → ဒါကြောင့် `big enough` ကမှန်ပြီး `enough big` က မှားပါတယ်နော်။"
     },
     {
       "kind": "scan_sentences",
@@ -148,9 +222,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — problems and the right amount. Write 5–8 sentences about your home, town or job, using too (a problem) and enough (the right amount).",
-      "prompt_mm": "အပိုင်း ၁ — ပြဿနာနဲ့ လုံလောက်မှု။ ကိုယ့်အိမ်/မြို့/အလုပ်အကြောင်း too (ပြဿနာ) နဲ့ enough (လုံလောက်မှု) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ပြဿနာနဲ့ လုံလောက်မှုအကြောင်း ပြောကြည့်ရအောင်။ ကိုယ့်ရဲ့အိမ်၊ မြို့၊ ဒါမှမဟုတ် အလုပ်အကြောင်းကို `too` (ပြဿနာတစ်ခုခု) နဲ့ `enough` (လုံလောက်မှု) သုံးပြီး sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ ပြီးရင် စာရွက်ကို scan ဖတ်ပြီး ပို့ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်နော်။",
       "model": "My town is {v}too crowded{/v}. There aren't {v}enough parks{/v}. The buses are {v}too slow{/v}. Houses are {v}too expensive{/v} for young people. But there are {v}enough schools{/v} and hospitals.",
-      "explain_mm": "too + adjective / too much / too many (ပြဿနာ)၊ adjective + enough / enough + noun (လုံလောက်)။ position ကို သတိထားပါ။",
+      "explain_mm": "ရေးတဲ့အခါမှာ `too + adjective` / `too much` / `too many` (ပြဿနာအတွက်) နဲ့ `adjective + enough` / `enough + noun` (လုံလောက်မှုအတွက်) ပုံစံတွေကို သုံးဖို့ မမေ့နဲ့နော်။ စကားလုံးတွေရဲ့ နေရာ (position) ကိုလည်း သတိထားပေးပါ။",
       "grading": {
         "grammar_point": "too / enough",
         "rule": "too + adjective and too much/many for problems; adjective + enough and enough + noun for sufficiency. enough goes after adjectives, before nouns.",
@@ -165,16 +239,19 @@
           "too much with countable / too many with uncountable",
           "Using too to mean very"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — review something. Write a short paragraph (4–6 sentences) reviewing a place or product (a café, a phone, a hotel), using too and enough.",
-      "prompt_mm": "အပိုင်း ၂ — တစ်ခုခုကို သုံးသပ်ပါ။ နေရာ သို့မဟုတ် ပစ္စည်းတစ်ခု (ကော်ဖီဆိုင်၊ ဖုန်း၊ ဟိုတယ်) ကို too နဲ့ enough သုံးပြီး သုံးသပ်ကာ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — တစ်ခုခုကို သုံးသပ်ကြည့်ကြမယ်။ နေရာတစ်ခုခု ဒါမှမဟုတ် ပစ္စည်းတစ်ခုခု (ဥပမာ ကော်ဖီဆိုင်၊ ဖုန်း၊ ဟိုတယ်) ကို ရွေးပြီး `too` နဲ့ `enough` သုံးပြီး သုံးသပ်ချက် စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင်တော့ scan ဖတ်ပြီး ပို့ပေးပါနော်။",
       "model": "The café was nice but {v}too noisy{/v}. The tables weren't {v}clean enough{/v}. The coffee was good but {v}too expensive{/v}. There weren't {v}enough staff{/v}, so we waited a long time. The seats were {v}comfortable enough{/v}, though.",
-      "explain_mm": "too (ပြဿနာ) နဲ့ enough (လုံလောက်/မလုံလောက်) ကို position မှန်အောင် သုံးပါ။",
+      "explain_mm": "`too` (ပြဿနာ) နဲ့ `enough` (လုံလောက်/မလုံလောက်) ကို သုံးတဲ့အခါ နေရာ (position) မှန်အောင် သတိထားပြီး သုံးပေးပါနော်။",
       "grading": {
         "grammar_point": "too / enough",
         "rule": "Review with too (problems) and enough (sufficiency) in the correct positions.",
@@ -189,7 +266,10 @@
           "too/very confusion",
           "much/many mismatch"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

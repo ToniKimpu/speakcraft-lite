@@ -31,8 +31,11 @@
       }
     ],
     "form_note_mm": [
-      "sentence တိုင်းမှာ 'be' (am / is / are) တစ်ခု အမြဲတမ်း ပါဝင်ရပါမယ်။ ဥပမာ — ✗ ‘I student’ (မှား) → ✓ ‘I am a student’ (မှန်)။",
-      "အတိုကောက် ရေးနည်းများ — I'm · he's · they're"
+      "sentence တိုင်းမှာ 'be' (am / is / are) တစ်ခု အမြဲတမ်း ပါဝင်ရပါမယ်။",
+      "ဥပမာ —",
+      "✗ ‘I student’ (မှား)",
+      "✓ ‘I am a student’ (မှန်)။",
+      "အတိုကောက် ရေးမယ်ဆိုရင် — I'm , he's , they're"
     ],
     "trap_en": "Don't drop 'be', and match it to the subject.  WRONG: I student. / She are happy.   RIGHT: I am a student. / She is happy.",
     "trap_mm": "မြန်မာစာမှာ ‘ဖြစ်တယ်’ ကို မပြောတာများလို့ am/is/are ကို မေ့တတ်ကြပါတယ်။ \n✗ I student / She are happy  \n✓ I am a student / She is happy.",
@@ -78,21 +81,33 @@
       {
         "prompt_en": "I ___ a teacher.",
         "prompt_mm": "ကျွန်တော် ဆရာတစ်ယောက်ပါ။",
-        "options": ["am", "is", "are"],
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
         "answer": "am",
         "explain_mm": "Subject က 'I' ဖြစ်လို့ → am ။"
       },
       {
         "prompt_en": "She ___ a student.",
         "prompt_mm": "သူမ ကျောင်းသူတစ်ယောက်ပါ။",
-        "options": ["am", "is", "are"],
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
         "answer": "is",
         "explain_mm": "Subject က 'She' (he/she/it) ဖြစ်လို့ → is ။"
       },
       {
         "prompt_en": "They ___ from Yangon.",
         "prompt_mm": "သူတို့ ရန်ကုန်ကပါ။",
-        "options": ["am", "is", "are"],
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
         "answer": "are",
         "explain_mm": "Subject က 'They' (you/we/they) ဖြစ်လို့ → are ။"
       }
@@ -123,7 +138,11 @@
           }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "‘am / is / are’ ကို ဘယ်လိုအခြေအနေမှာ သုံးမလဲ",
+      "pattern": "Subject နဲ့ ‘am / is / are’ ဘယ်လို တွဲမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],

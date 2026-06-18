@@ -34,10 +34,10 @@
       "singular noun နဲ့ဆို There is။",
       "plural noun နဲ့ဆို There are။",
       "noun ရဲ့ အရေအတွက်ကို ကြည့်ပြီး ရွေးပါ။",
-      "negative — There isn't / aren't။ question — Is there …? / Are there …?"
+      "negative — There isn't / aren't။  မေးခွန်းဆိုရင်တော့ 'there'ရဲ့ရှေ့မှာ 'be' verbs တွေကို ပို့ပေးရပါမယ် — Is there …? / Are there …?"
     ],
     "trap_en": "Match is/are to the noun's number.  WRONG: There is two shops. / There are a tree.   RIGHT: There are two shops. / There is a tree.",
-    "trap_mm": "နောက်ကလိုက်မယ့် နာမ် (Noun) ရဲ့ အရေအတွက်နဲ့ is/are ကို မှန်ကန်အောင် ကိုက်ညီပေးပါ။\nဥပမာ —\n✗ There is two shops / There are a tree (မှား)\n✓ There are two shops / There is a tree (မှန်)။",
+    "trap_mm": "နောက်ကလိုက်မယ့် နာမ် (Noun) ရဲ့ အရေအတွက်နဲ့ is/are ကို မှန်ကန်အောင် ညှိပေးရပါမယ်။\nဥပမာ —\n✗ There is two shops / There are a tree (မှား)\n✓ There are two shops / There is a tree (မှန်)။",
     "examples": [
       {
         "en": "{v}There is{/v} a book on the table.",
@@ -67,34 +67,46 @@
         "subject": "many things",
         "rule_mm": "အများ (plural noun) → There are",
         "en": "{v}There are{/v} five shops.",
-        "why_mm": "noun (five shops) က တစ်ခုထက်ပို ဖြစ်လို့ 'There are' ကို သုံးပါတယ်။ is / are ကို noun အရေအတွက်နဲ့ ကိုက်အောင် ရွေးပါ။"
+        "why_mm": "noun (five shops) က တစ်ခုထက်ပို ဖြစ်လို့ 'There are' ကို သုံးပါတယ်။ is / are ကို noun အရေအတွက်နဲ့ ကိုက်အောင် ရွေးပေးရပါမယ်။"
       },
       {
         "subject": "negative & question",
         "rule_mm": "အငြင်း — There isn't / aren't · အမေး — Is / Are there …?",
         "en": "{v}There isn't{/v} a hospital.  ·  {v}Are there{/v} any shops?",
-        "why_mm": "အငြင်းမှာ be ရဲ့ နောက် 'not' ထည့်ပါ (isn't / aren't)။ အမေးမှာ Is / Are ကို 'there' ရဲ့ ရှေ့ထားပါ။"
+        "why_mm": "အငြင်းမှာ be ရဲ့ နောက်မှာ 'not' ထည့်ပေးပါ (isn't / aren't)။ အမေးမှာ Is / Are ကို 'there' ရဲ့ ရှေ့ထားပေးပါ။"
       }
     ],
     "checks": [
       {
         "prompt_en": "___ a book on the desk.",
         "prompt_mm": "စားပွဲပေါ်မှာ စာအုပ်တစ်အုပ် ရှိတယ်။",
-        "options": ["There is", "There are", "There be"],
+        "options": [
+          "There is",
+          "There are",
+          "There be"
+        ],
         "answer": "There is",
         "explain_mm": "တစ်ခု (a book) → There is။"
       },
       {
         "prompt_en": "___ many people here.",
         "prompt_mm": "ဒီမှာ လူ အများကြီး ရှိတယ်။",
-        "options": ["There is", "There are", "There am"],
+        "options": [
+          "There is",
+          "There are",
+          "There am"
+        ],
         "answer": "There are",
         "explain_mm": "အများ (many people) → There are။"
       },
       {
         "prompt_en": "___ two cats.",
         "prompt_mm": "ကြောင် နှစ်ကောင် ရှိတယ်။",
-        "options": ["There is", "There are", "There be"],
+        "options": [
+          "There is",
+          "There are",
+          "There be"
+        ],
         "answer": "There are",
         "explain_mm": "two cats က အများ မို့လို့ There are။"
       }
@@ -120,7 +132,11 @@
           }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "တစ်ခုခု ရှိတယ်လို့ ပြောဖို့ ဘယ်လို သုံးမလဲ",
+      "pattern": "there is နဲ့ there are — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [],

@@ -8,119 +8,182 @@
   "subtitle_mm": "အချိန် ဝိဘတ် (in / on / at)",
   "teach": {
     "situation_en": "My class starts {v}at{/v} nine o'clock {v}on{/v} Monday. {v}In{/v} the morning I study, and {v}in{/v} the afternoon I work. My birthday is {v}in{/v} July, {v}on{/v} the fifth. I sleep {v}at{/v} night.",
-    "situation_mm": "ကျွန်တော့်အတန်းက တနင်္လာနေ့ ၉ နာရီမှာ စတယ်။ မနက်ပိုင်း စာလုပ်ပြီး နေ့လယ်ပိုင်း အလုပ်လုပ်တယ်။ ကျွန်တော့်မွေးနေ့က ဇူလိုင်လ ၅ ရက်နေ့ပါ။ ညဘက် အိပ်တယ်။",
+    "situation_mm": "ကျွန်တော့်အတန်းက တနင်္လာနေ့ ၉ နာရီမှာ စပါတယ်။ မနက်ပိုင်းမှာ စာလုပ်ပြီး နေ့လယ်ပိုင်းမှာ အလုပ်လုပ်ပါတယ်။ ကျွန်တော့်မွေးနေ့က ဇူလိုင်လ ၅ ရက်နေ့ပါ။ ညဘက်မှာတော့ အိပ်ပါတယ်။",
     "use_en": "at = clock times & night. on = days & dates. in = months, years, seasons & parts of the day.",
-    "use_mm": "at = နာရီ အချိန် & night။ on = နေ့ရက် & ရက်စွဲ။ in = လ၊ နှစ်၊ ရာသီ & နေ့ရဲ့ အပိုင်း (morning/afternoon/evening)။",
+    "use_mm": "at ကိုတော့ နာရီ အချိန်တွေနဲ့ ‘night’ မှာ သုံးပါတယ်။ on ကိုတော့ နေ့ရက်တွေနဲ့ ရက်စွဲတွေမှာ သုံးပါတယ်။ in ကိုတော့ လ၊ နှစ်၊ ရာသီတွေနဲ့ နေ့ရဲ့ အပိုင်းတွေ (morning/afternoon/evening) မှာ သုံးပါတယ်နော်။",
     "timeline": "",
     "form": [
-      { "subject": "at", "form": "at 9 o'clock · at night · at the weekend" },
-      { "subject": "on", "form": "on Monday · on 5 July · on my birthday" },
-      { "subject": "in", "form": "in July · in 2025 · in the morning" },
-      { "subject": "exception", "form": "at night (not 'in the night')" }
+      {
+        "subject": "at",
+        "form": "at 9 o'clock · at night · at the weekend"
+      },
+      {
+        "subject": "on",
+        "form": "on Monday · on 5 July · on my birthday"
+      },
+      {
+        "subject": "in",
+        "form": "in July · in 2025 · in the morning"
+      },
+      {
+        "subject": "exception",
+        "form": "at night (not 'in the night')"
+      }
     ],
     "form_note_mm": [
-      "နာရီ / အချိန်တိ → at (at six, at 8:30)၊ night → at night။",
-      "နေ့ရက် / ရက်စွဲ → on (on Sunday, on 1 January)။",
-      "လ / နှစ် / ရာသီ / နေ့အပိုင်း → in (in May, in 2024, in summer, in the evening)။",
-      "သတိ — ‘at night’ ဖြစ်ပြီး ‘in the night’ မဟုတ်ဘူး။"
+      "နာရီအချိန်အတိအကျ (ဥပမာ at six, at 8:30) နဲ့ ‘night’ (at night) တို့အတွက် ‘at’ ကို သုံးပေးရပါမယ်။",
+      "နေ့ရက်တွေ (on Sunday) နဲ့ ရက်စွဲတွေ (on 1 January) အတွက်ကျတော့ ‘on’ ကို သုံးပေးရပါမယ်။",
+      "လ (in May)၊ နှစ် (in 2024)၊ ရာသီ (in summer) နဲ့ နေ့ရဲ့ အပိုင်းတွေ (in the evening) မှာတော့ ‘in’ ကို သုံးပေးရပါမယ်။",
+      "တစ်ခု သတိထားရမှာက ‘at night’ လို့ပဲ သုံးပြီး ‘in the night’ လို့ မသုံးပါဘူးနော်။"
     ],
     "trap_en": "Match the right preposition.  WRONG: in Monday / on the morning / in 9 o'clock   RIGHT: on Monday / in the morning / at 9 o'clock",
-    "trap_mm": "မှန်ကန်တဲ့ ဝိဘတ် ရွေးပါ။  ✗ in Monday / on the morning / in 9 o'clock  →  ✓ on Monday / in the morning / at 9 o'clock.",
+    "trap_mm": "မှန်ကန်တဲ့ preposition ကို ရွေးပေးပါနော်။\n✗ in Monday → ✓ on Monday\n✗ on the morning → ✓ in the morning\n✗ in 9 o'clock → ✓ at 9 o'clock",
     "examples": [
-      { "en": "The meeting is {v}at{/v} 3 p.m.", "mm": "အစည်းအဝေးက ညနေ ၃ နာရီမှာ။" },
-      { "en": "I was born {v}in{/v} 2000.", "mm": "ကျွန်တော် ၂၀၀၀ မှာ မွေးတယ်။" },
-      { "en": "We meet {v}on{/v} Fridays.", "mm": "သောကြာနေ့တိုင်း တွေ့ကြတယ်။" },
-      { "en": "She reads {v}in{/v} the evening.", "mm": "သူမ ညနေပိုင်း စာဖတ်တယ်။" }
+      {
+        "en": "The meeting is {v}at{/v} 3 p.m.",
+        "mm": "အစည်းအဝေးက ညနေ ၃ နာရီမှာပါ။"
+      },
+      {
+        "en": "I was born {v}in{/v} 2000.",
+        "mm": "ကျွန်တော် ၂၀၀၀ ခုနှစ်မှာ မွေးခဲ့တာပါ။"
+      },
+      {
+        "en": "We meet {v}on{/v} Fridays.",
+        "mm": "ကျွန်တော်တို့ သောကြာနေ့တိုင်း တွေ့ကြပါတယ်။"
+      },
+      {
+        "en": "She reads {v}in{/v} the evening.",
+        "mm": "သူမက ညနေပိုင်းမှာ စာဖတ်ပါတယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "at",
-        "rule_mm": "နာရီ အချိန် & night → at",
+        "rule_mm": "နာရီအချိန်တွေနဲ့ ‘night’ အတွက်ဆိုရင် ‘at’ ကို သုံးပါတယ်နော်။",
         "en": "My class starts {v}at{/v} nine o'clock.",
-        "why_mm": "နာရီအချိန်တိ (nine o'clock) ဖြစ်လို့ preposition 'at' ကို သုံးပါတယ် — at 6, at 8:30, at night။"
+        "why_mm": "ဒီမှာက နာရီအချိန်အတိအကျ (nine o'clock) ကို ပြောတာဖြစ်လို့ preposition 'at' ကို သုံးပေးရမှာပါ။ ဥပမာ - at 6, at 8:30, at night။"
       },
       {
         "subject": "on",
-        "rule_mm": "နေ့ရက် & ရက်စွဲ → on",
+        "rule_mm": "နေ့ရက်တွေနဲ့ ရက်စွဲတွေအတွက်ဆိုရင်တော့ ‘on’ ကို သုံးပါတယ်နော်။",
         "en": "We meet {v}on{/v} Monday.",
-        "why_mm": "နေ့ရက် (Monday) ဖြစ်လို့ preposition 'on' ကို သုံးပါတယ် — on Sunday, on 5 July, on my birthday။"
+        "why_mm": "ဒီမှာက နေ့ရက် (Monday) ကို ပြောတာဖြစ်လို့ preposition 'on' ကို သုံးပေးရမှာပါ။ ဥပမာ - on Sunday, on 5 July, on my birthday။"
       },
       {
         "subject": "in",
-        "rule_mm": "လ / နှစ် / ရာသီ / နေ့အပိုင်း → in",
+        "rule_mm": "လ၊ နှစ်၊ ရာသီ နဲ့ နေ့ရဲ့ အပိုင်းတွေအတွက်ဆိုရင် ‘in’ ကို သုံးပေးရပါမယ်။",
         "en": "I study {v}in{/v} the morning.",
-        "why_mm": "နေ့ရဲ့ အပိုင်း (the morning) ဖြစ်လို့ preposition 'in' ကို သုံးပါတယ် — in May, in 2025, in summer။ သတိ — 'at night' ဖြစ်ပြီး 'in the night' မဟုတ်ဘူး။"
+        "why_mm": "ဒီမှာက နေ့ရဲ့ အပိုင်းတစ်ခု (the morning) ကို ပြောတာဖြစ်လို့ preposition 'in' ကို သုံးပေးရမှာပါ။ ဥပမာ - in May, in 2025, in summer။ ဒါပေမဲ့ တစ်ခု သတိထားရမှာက ‘at night’ လို့ပဲ သုံးပြီး ‘in the night’ လို့ မသုံးပါဘူးနော်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "The class starts ___ 9 o'clock.",
-        "prompt_mm": "အတန်းက ၉ နာရီမှာ စတယ်။",
-        "options": ["in", "on", "at"],
+        "prompt_mm": "အတန်းက ၉ နာရီမှာ စပါတယ်။",
+        "options": [
+          "in",
+          "on",
+          "at"
+        ],
         "answer": "at",
-        "explain_mm": "နာရီ အချိန် → at။"
+        "explain_mm": "နာရီအချိန်အတိအကျမို့လို့ ‘at’ ကို သုံးရတာပါ။"
       },
       {
         "prompt_en": "We meet ___ Monday.",
-        "prompt_mm": "တနင်္လာနေ့ တွေ့ကြတယ်။",
-        "options": ["in", "on", "at"],
+        "prompt_mm": "ကျွန်တော်တို့ တနင်္လာနေ့မှာ တွေ့ကြပါတယ်။",
+        "options": [
+          "in",
+          "on",
+          "at"
+        ],
         "answer": "on",
-        "explain_mm": "နေ့ရက် → on။"
+        "explain_mm": "နေ့ရက်ကို ပြောတာမို့လို့ ‘on’ ကို သုံးရတာပါ။"
       },
       {
         "prompt_en": "My birthday is ___ July.",
-        "prompt_mm": "ကျွန်တော့်မွေးနေ့က ဇူလိုင်လမှာ။",
-        "options": ["in", "on", "at"],
+        "prompt_mm": "ကျွန်တော့်မွေးနေ့က ဇူလိုင်လမှာပါ။",
+        "options": [
+          "in",
+          "on",
+          "at"
+        ],
         "answer": "in",
-        "explain_mm": "လ (July) → in (on မဟုတ်ဘူး)။"
+        "explain_mm": "လ (July) ကို ပြောတဲ့အခါ ‘in’ ကို သုံးရပါတယ်၊ ‘on’ မဟုတ်ပါဘူးနော်။"
       }
     ],
     "model_paragraph_en": "My week is busy. {v}On{/v} Mondays I have class {v}at{/v} eight. {v}In{/v} the morning I study, and {v}in{/v} the afternoon I rest. {v}On{/v} Saturday I visit my grandmother. {v}In{/v} December we travel, and {v}at{/v} night we tell stories.",
-    "model_paragraph_mm": "ကျွန်တော့်အပတ်က အလုပ်များတယ်။ တနင်္လာနေ့တိုင်း ၈ နာရီမှာ အတန်း ရှိတယ်။ မနက်ပိုင်း စာလုပ်ပြီး နေ့လယ်ပိုင်း အနားယူတယ်။ စနေနေ့ အဖွားဆီ သွားလည်တယ်။ ဒီဇင်ဘာလမှာ ခရီးသွားပြီး ညဘက် ပုံပြင်တွေ ပြောကြတယ်။"
+    "model_paragraph_mm": "ကျွန်တော့်ရဲ့ တစ်ပတ်တာက အလုပ်များပါတယ်။ တနင်္လာနေ့တိုင်း ၈ နာရီမှာ အတန်းရှိပါတယ်။ မနက်ပိုင်းမှာ စာလုပ်ပြီး နေ့လယ်ပိုင်းမှာ အနားယူပါတယ်။ စနေနေ့မှာတော့ အဖွားဆီ သွားလည်ပါတယ်။ ဒီဇင်ဘာလမှာ ခရီးတွေသွားပြီး ညဘက်ဆို ပုံပြင်တွေ ပြောဖြစ်ကြပါတယ်။",
+    "step_titles_mm": {
+      "when": "အချိန်အကြောင်း ပြောတဲ့အခါ ဘယ်လိုသုံးမလဲ",
+      "pattern": "in / on / at — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
-  "toolkit": { "verbs": [], "time_words": [] },
+  "toolkit": {
+    "verbs": [],
+    "time_words": []
+  },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The class starts ___ 9 o'clock.",
-      "prompt_mm": "အတန်းက ၉ နာရီမှာ စတယ်။",
-      "options": ["in", "on", "at"],
-      "answers": ["at"],
-      "explain_mm": "နာရီ အချိန် → at."
+      "prompt_mm": "အတန်းက ၉ နာရီမှာ စပါတယ်။",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "answers": [
+        "at"
+      ],
+      "explain_mm": "နာရီအချိန်အတိအကျမို့လို့ ‘at’ ကို သုံးရတာပါ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "We meet ___ Monday.",
-      "prompt_mm": "တနင်္လာနေ့ တွေ့ကြတယ်။",
-      "options": ["on", "in", "at"],
-      "answers": ["on"],
-      "explain_mm": "နေ့ရက် → on."
+      "prompt_mm": "ကျွန်တော်တို့ တနင်္လာနေ့မှာ တွေ့ကြပါတယ်။",
+      "options": [
+        "on",
+        "in",
+        "at"
+      ],
+      "answers": [
+        "on"
+      ],
+      "explain_mm": "နေ့ရက်ကို ပြောတာမို့လို့ ‘on’ ကို သုံးရတာပါ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "I study ___ the morning.",
-      "prompt_mm": "ကျွန်တော် မနက်ပိုင်း စာလုပ်တယ်။",
-      "answers": ["in"],
-      "explain_mm": "နေ့အပိုင်း (morning) → in."
+      "prompt_mm": "ကျွန်တော်က မနက်ပိုင်းမှာ စာလုပ်ပါတယ်။",
+      "answers": [
+        "in"
+      ],
+      "explain_mm": "နေ့ရဲ့ အပိုင်း (morning) ကို ပြောတာမို့လို့ ‘in’ ကို သုံးရတာပါ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "My birthday is on July.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["My birthday is in July", "my birthday is in july."],
-      "explain_mm": "လ (July) → in (on မဟုတ်ဘူး)။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "answers": [
+        "My birthday is in July",
+        "my birthday is in july."
+      ],
+      "explain_mm": "လ (July) ကို ပြောတဲ့အခါ ‘in’ ကို သုံးရပါတယ်၊ ‘on’ မဟုတ်ပါဘူးနော်။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  at  /  sleep  /  I  /  night",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
-      "answers": ["I sleep at night", "i sleep at night."],
-      "explain_mm": "night → at night။"
+      "prompt_mm": "စကားလုံးတွေကို နေရာတကျစီပြီး sentence အမှန်လေးတစ်ခု ဖြစ်အောင် ရေးပေးပါနော်။",
+      "answers": [
+        "I sleep at night",
+        "i sleep at night."
+      ],
+      "explain_mm": "‘night’ ရဲ့ရှေ့မှာ ‘at’ ကို သုံးပြီး ‘at night’ လို့ ပြောရပါတယ်နော်။"
     },
     {
       "kind": "scan_sentences",
@@ -128,9 +191,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — your schedule. Write 5–8 sentences about when you do things, using in / on / at.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အချိန်ဇယား။ ကိုယ် ဘယ်အချိန် ဘာလုပ်လဲဆိုတာ in / on / at သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ရဲ့အချိန်ဇယား။ ကိုယ် ဘယ်အချိန်မှာ ဘာတွေလုပ်လဲဆိုတာကို in / on / at သုံးပြီး sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးပေးပါနော်။ ရေးပြီးရင် ဖုန်းနဲ့ scan ဖတ်ပြီး တင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
       "model": "I get up {v}at{/v} six. I work {v}in{/v} the morning. I have a meeting {v}on{/v} Tuesday. I rest {v}in{/v} the afternoon. I go to bed {v}at{/v} night.",
-      "explain_mm": "at (နာရီ/night)၊ on (နေ့ရက်)၊ in (လ/နေ့အပိုင်း) ကို မှန်အောင် ရွေးပါ။",
+      "explain_mm": "at (နာရီ/night), on (နေ့ရက်), in (လ/နေ့အပိုင်း) တို့ထဲက အမှန်ဖြစ်မယ့်တစ်ခုကို ရွေးပေးပါနော်။",
       "grading": {
         "grammar_point": "Prepositions of time (in / on / at)",
         "rule": "at + clock time & night; on + days & dates; in + months, years, parts of the day.",
@@ -145,16 +208,19 @@
           "in the night (should be at night)",
           "Wrong preposition for the time word"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a typical week. Write a short paragraph (4–6 sentences) about your week, using in / on / at.",
-      "prompt_mm": "အပိုင်း ၂ — ပုံမှန် အပတ်တစ်ပတ်။ ကိုယ့်အပတ်အကြောင်း in / on / at သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — ပုံမှန် အပတ်တစ်ပတ်။ ကိုယ့်ရဲ့ ပုံမှန်ဖြတ်သန်းနေကျ အပတ်တစ်ပတ်အကြောင်းကို in / on / at သုံးပြီး စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် ဖုန်းနဲ့ scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "{v}On{/v} weekdays I start work {v}at{/v} nine. {v}In{/v} the morning I am busy. {v}On{/v} Saturday I relax. {v}In{/v} the evening I cook. {v}At{/v} night I read.",
-      "explain_mm": "in/on/at ကို အချိန်အမျိုးအစားနဲ့ ကိုက်အောင် ရွေးပါ။",
+      "explain_mm": "in, on, at တို့ကို သက်ဆိုင်ရာ အချိန်အမျိုးအစားတွေနဲ့ လိုက်ဖက်အောင် တွဲပေးပါနော်။",
       "grading": {
         "grammar_point": "Prepositions of time (in / on / at)",
         "rule": "Describe a week using time prepositions correctly.",
@@ -169,7 +235,10 @@
           "at/in night confusion",
           "Missing preposition"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

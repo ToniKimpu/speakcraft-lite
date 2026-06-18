@@ -8,136 +8,217 @@
   "subtitle_mm": "Linkers — however / moreover / therefore (စာရေး အသွင်)",
   "teach": {
     "situation_en": "The plan was good. {v}However{/v}, it was too expensive. Prices are rising. {v}Moreover{/v}, wages are falling. He didn't study. {v}Therefore{/v}, he failed the exam.",
-    "situation_mm": "အစီအစဉ်က ကောင်းတယ်။ ဒါပေမယ့် ဈေးကြီးလွန်းတယ်။ ဈေးတွေ တက်နေတယ်။ ထို့အပြင် လုပ်ခတွေ ကျနေတယ်။ သူ မလေ့လာခဲ့ဘူး။ ထို့ကြောင့် စာမေးပွဲ ကျတယ်။",
+    "situation_mm": "အစီအစဉ်က ကောင်းပါတယ်။ ဒါပေမဲ့ ဈေးကြီးလွန်းတယ်။ ဈေးတွေက တက်နေတယ်။ ဒါ့အပြင် လုပ်ခတွေကလည်း ကျနေတယ်။ သူ စာမကျက်ခဲ့ဘူး။ ဒါကြောင့် စာမေးပွဲ ကျသွားတယ်။",
     "use_en": "These linking words connect two sentences in formal / academic writing. However = contrast (but). Moreover = adding a stronger point (also, in addition). Therefore = result (so). They usually begin a new sentence and are followed by a comma. You can also join two clauses with a semicolon: …; however, ….",
-    "use_mm": "ဒီ linking word တွေက formal / academic အရေးအသားမှာ sentence နှစ်ခုကို ချိတ်ဆက်တယ်။ However = ဆန့်ကျင် (but)။ Moreover = ပိုအားကောင်းတဲ့ အချက် ထပ်ဖြည့် (also, in addition)။ Therefore = အကျိုးဆက် (so)။ များသောအားဖြင့် sentence အသစ် စပြီး နောက်မှာ comma ထည့်တယ်။ semicolon နဲ့လည်း ချိတ်နိုင်တယ် — …; however, …။",
+    "use_mm": "ဒီ linking word တွေက formal / academic အရေးအသားမှာ sentence နှစ်ခုကို ချိတ်ဆက်ပေးပါတယ်။ However ဆိုတာက ဆန့်ကျင်ဘက်အဓိပ္ပာယ် (but) အတွက်ပါ။ Moreover ကတော့ အရင်အချက်ကို ပိုအားကောင်းစေတဲ့ အချက်တစ်ခု ထပ်ဖြည့်ချင်တဲ့အခါ (also, in addition) သုံးပါတယ်။ Therefore ကတော့ အကျိုးဆက် (so) ကို ဖော်ပြပါတယ်။ များသောအားဖြင့် sentence အသစ်ရဲ့အစမှာ သူတို့ကိုသုံးပြီး နောက်ကနေ comma လေး ထည့်ပေးရပါတယ်။ semicolon နဲ့လည်း ချိတ်ဆက်လို့ရပါတယ် — …; however, …။",
     "timeline": "Sentence 1.  [However / Moreover / Therefore] , Sentence 2.",
     "form": [
-      { "subject": "however", "form": "contrast (= but)  (…. However, ….)" },
-      { "subject": "moreover", "form": "addition (= also, in addition)  (…. Moreover, ….)" },
-      { "subject": "therefore", "form": "result (= so)  (…. Therefore, ….)" },
-      { "subject": "punctuation", "form": "new sentence + comma  OR  ; however, …" }
+      {
+        "subject": "however",
+        "form": "contrast (= but)  (…. However, ….)"
+      },
+      {
+        "subject": "moreover",
+        "form": "addition (= also, in addition)  (…. Moreover, ….)"
+      },
+      {
+        "subject": "therefore",
+        "form": "result (= so)  (…. Therefore, ….)"
+      },
+      {
+        "subject": "punctuation",
+        "form": "new sentence + comma  OR  ; however, …"
+      }
     ],
     "form_note_mm": [
-      "however = ဆန့်ကျင် · moreover = ထပ်ဖြည့် · therefore = အကျိုးဆက်။",
-      "sentence အသစ် စရင် နောက်မှာ comma — However, it was expensive။",
-      "sentence နှစ်ခုကို တစ်ကြောင်းတည်း ချိတ်ချင်ရင် semicolon — It was good; however, it was costly။",
-      "however ≠ but ၏ နေရာ — however က sentence အစ/semicolon နောက်မှာ၊ but က clause နှစ်ခုကြားမှာ။"
+      "however = ဆန့်ကျင်ဘက်အဓိပ္ပာယ် · moreover = အချက်ထပ်ဖြည့်ခြင်း · therefore = အကျိုးဆက်။",
+      "sentence အသစ်ရဲ့အစမှာ သုံးရင် နောက်ကနေ comma လေး ထည့်ပေးပါ — However, it was expensive။",
+      "sentence နှစ်ခုကို တစ်ကြောင်းတည်းမှာ ချိတ်ချင်ရင်တော့ semicolon (;) ကို သုံးနိုင်ပါတယ် — It was good; however, it was costly။",
+      "however နဲ့ but က နေရာချင်း မတူပါဘူး။ however ကို sentence အစ ဒါမှမဟုတ် semicolon နောက်မှာ သုံးပြီး but ကိုတော့ clause နှစ်ခုကြားမှာ သုံးပါတယ်။"
     ],
     "trap_en": "Don't join two full sentences with just a comma before however.  WRONG: It was cheap, however the quality was poor.  RIGHT: It was cheap. However, the quality was poor.  /  It was cheap; however, the quality was poor.",
-    "trap_mm": "however ရှေ့မှာ comma တစ်ခုတည်းနဲ့ sentence နှစ်ခုကို မချိတ်ရဘူး။ ✗ It was cheap, however the quality was poor → ✓ It was cheap. However, the quality was poor. / … cheap; however, the quality …။",
+    "trap_mm": "however ရဲ့ ရှေ့မှာ comma တစ်ခုတည်းသုံးပြီး sentence နှစ်ခုကို မချိတ်ဆက်ရပါဘူးနော်။ ✗ It was cheap, however the quality was poor → ✓ It was cheap. However, the quality was poor. / … cheap; however, the quality …။",
     "examples": [
-      { "en": "I wanted to go. {v}However{/v}, I was too tired.", "mm": "သွားချင်တယ်။ ဒါပေမယ့် အရမ်း ပင်ပန်းနေတယ်။" },
-      { "en": "The city is crowded. {v}Moreover{/v}, it is expensive.", "mm": "မြို့က လူရှုပ်တယ်။ ထို့အပြင် ဈေးကြီးတယ်။" },
-      { "en": "It was raining. {v}Therefore{/v}, we stayed home.", "mm": "မိုးရွာနေတယ်။ ထို့ကြောင့် အိမ်မှာ နေခဲ့တယ်။" },
-      { "en": "The test was hard; {v}however{/v}, I passed.", "mm": "စာမေးပွဲ ခက်တယ်၊ ဒါပေမယ့် အောင်တယ်။" }
+      {
+        "en": "I wanted to go. {v}However{/v}, I was too tired.",
+        "mm": "သွားချင်ပါတယ်။ ဒါပေမဲ့ အရမ်း ပင်ပန်းနေတယ်။"
+      },
+      {
+        "en": "The city is crowded. {v}Moreover{/v}, it is expensive.",
+        "mm": "မြို့က လူရှုပ်တယ်။ ဒါ့အပြင် ဈေးလည်းကြီးတယ်။"
+      },
+      {
+        "en": "It was raining. {v}Therefore{/v}, we stayed home.",
+        "mm": "မိုးရွာနေတယ်။ ဒါကြောင့် အိမ်မှာပဲ နေခဲ့တယ်။"
+      },
+      {
+        "en": "The test was hard; {v}however{/v}, I passed.",
+        "mm": "စာမေးပွဲက ခက်ပေမဲ့ အောင်ခဲ့ပါတယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "however = contrast",
-        "rule_mm": "ဆန့်ကျင် (= but) → However, …",
+        "rule_mm": "ဆန့်ကျင်ဘက်အဓိပ္ပာယ် (= but) → However, …",
         "en": "I wanted to go. {v}However{/v}, I was too tired.",
-        "why_mm": "'However' က ရှေ့အချက်နဲ့ ဆန့်ကျင်တာ ပြတယ်။ sentence အသစ် စပြီး နောက်မှာ comma ထည့်ပါ — comma တစ်ခုတည်းနဲ့ sentence နှစ်ခု မချိတ်ရဘူး။"
+        "why_mm": "'However' က ရှေ့မှာပြောခဲ့တဲ့အချက်နဲ့ ဆန့်ကျင်ဘက်ဖြစ်တာကို ပြပါတယ်။ sentence အသစ်ရဲ့အစမှာ သုံးပြီး နောက်ကနေ comma လေး ထည့်ပေးရပါမယ်။ comma တစ်ခုတည်းနဲ့တော့ sentence နှစ်ခုကို မချိတ်ရပါဘူးနော်။"
       },
       {
         "subject": "moreover = addition",
-        "rule_mm": "အချက် ထပ်ဖြည့် (= also) → Moreover, …",
+        "rule_mm": "အချက်အလက် ထပ်ဖြည့်ချင်ရင် (= also) → Moreover, …",
         "en": "The city is crowded. {v}Moreover{/v}, it is expensive.",
-        "why_mm": "'Moreover' က အရင်အချက်ပေါ် ပိုအားကောင်းတဲ့ အချက် ထပ်ဖြည့်ပါတယ်။ ဒါလည်း sentence အသစ် + comma ဖြစ်ပါတယ်။"
+        "why_mm": "'Moreover' ကတော့ အရင်ပြောခဲ့တဲ့အချက်ကို ပိုပြီးခိုင်မာစေမယ့် အချက်တစ်ခု ထပ်ဖြည့်ပြောချင်တဲ့အခါ သုံးပါတယ်။ ဒါလည်းပဲ sentence အသစ်ရဲ့အစမှာ သုံးပြီး နောက်ကနေ comma ထည့်ပေးရပါတယ်။"
       },
       {
         "subject": "therefore = result",
-        "rule_mm": "အကျိုးဆက် (= so) → Therefore, …",
+        "rule_mm": "အကျိုးဆက်ကို ဖော်ပြချင်ရင် (= so) → Therefore, …",
         "en": "It was raining. {v}Therefore{/v}, we stayed home.",
-        "why_mm": "'Therefore' က အကျိုးဆက်ကို ပြတယ်။ sentence အသစ် (ဒါမှမဟုတ် ; therefore,) + comma သုံးပါ — formal အရေးအသားအတွက် သင့်တော်တယ်။"
+        "why_mm": "'Therefore' ကတော့ အကြောင်းကြောင့်ဖြစ်လာတဲ့ အကျိုးဆက်ကို ဖော်ပြပါတယ်။ sentence အသစ်ရဲ့အစမှာ (ဒါမှမဟုတ် semicolon နောက်မှာ ; therefore,) သုံးပြီး comma လေး ထည့်ပေးရပါမယ်။ formal အရေးအသားတွေအတွက် သင့်တော်ပါတယ်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "The plan was good. ___, it was too expensive.",
-        "prompt_mm": "အစီအစဉ်က ကောင်းတယ်။ ဒါပေမယ့် ဈေးကြီးလွန်းတယ်။",
-        "options": ["However", "Moreover", "Therefore"],
+        "prompt_mm": "အစီအစဉ်က ကောင်းပါတယ်။ ဒါပေမဲ့ ဈေးကကြီးလွန်းတယ်။",
+        "options": [
+          "However",
+          "Moreover",
+          "Therefore"
+        ],
         "answer": "However",
-        "explain_mm": "ဆန့်ကျင်တဲ့ အဓိပ္ပာယ် → However။"
+        "explain_mm": "ဆန့်ကျင်ဘက် အဓိပ္ပာယ်ကို ပြောချင်ရင် → However။"
       },
       {
         "prompt_en": "The city is crowded. ___, it is expensive.",
-        "prompt_mm": "မြို့က လူရှုပ်တယ်။ ထို့အပြင် ဈေးကြီးတယ်။",
-        "options": ["Moreover", "However", "Therefore"],
+        "prompt_mm": "မြို့က လူရှုပ်တယ်။ ဒါ့အပြင် ဈေးလည်းကြီးတယ်။",
+        "options": [
+          "Moreover",
+          "However",
+          "Therefore"
+        ],
         "answer": "Moreover",
-        "explain_mm": "အချက် ထပ်ဖြည့်ခြင်း → Moreover။"
+        "explain_mm": "အချက်အလက် ထပ်ဖြည့်ချင်ရင် → Moreover။"
       },
       {
         "prompt_en": "He didn't study. ___, he failed.",
-        "prompt_mm": "သူ မလေ့လာခဲ့ဘူး။ ထို့ကြောင့် စာမေးပွဲ ကျတယ်။",
-        "options": ["Therefore", "However", "Moreover"],
+        "prompt_mm": "သူ စာမကျက်ခဲ့ဘူး။ ဒါကြောင့် စာမေးပွဲ ကျသွားတယ်။",
+        "options": [
+          "Therefore",
+          "However",
+          "Moreover"
+        ],
         "answer": "Therefore",
-        "explain_mm": "အကျိုးဆက် (result) → Therefore။"
+        "explain_mm": "အကျိုးဆက် (result) ကို ဖော်ပြချင်ရင် → Therefore။"
       }
     ],
     "model_paragraph_en": "Online learning has become very popular. It is flexible and cheap. {v}Moreover{/v}, students can study from anywhere. {v}However{/v}, it also has problems. Many learners feel lonely and lose motivation. {v}Therefore{/v}, schools should mix online lessons with face-to-face classes. This balance, in my view, gives the best results.",
-    "model_paragraph_mm": "အွန်လိုင်း သင်ယူမှု အရမ်း ရေပန်းစားလာတယ်။ ပြောင်းလွယ်ပြီး ဈေးသက်သာတယ်။ ထို့အပြင် ကျောင်းသားတွေ ဘယ်နေရာကမဆို လေ့လာနိုင်တယ်။ ဒါပေမယ့် ပြဿနာတွေလည်း ရှိတယ်။ သင်ယူသူ အများက အထီးကျန်ပြီး စိတ်အားထက်သန်မှု ကျသွားတယ်။ ထို့ကြောင့် ကျောင်းတွေဟာ အွန်လိုင်းနဲ့ မျက်နှာချင်းဆိုင် အတန်းတွေ ရောသင့်တယ်။ ဒီ ဟန်ချက်က အကောင်းဆုံး ရလဒ် ပေးတယ်လို့ ထင်တယ်။",
+    "model_paragraph_mm": "အွန်လိုင်းကနေ သင်ယူတာက အရမ်းကို ရေပန်းစားလာပါတယ်။ ပြောင်းလွယ်ပြင်လွယ်ရှိပြီး ဈေးလည်းသက်သာတယ်။ ဒါ့အပြင် ကျောင်းသားတွေက ဘယ်နေရာကမဆို လေ့လာနိုင်ပါတယ်။ ဒါပေမဲ့ အခက်အခဲလေးတွေလည်း ရှိနေပါတယ်။ သင်ယူသူအများစုက အထီးကျန်သလို ခံစားရပြီး စိတ်အားထက်သန်မှုလည်း ကျသွားတတ်ပါတယ်။ ဒါကြောင့် ကျောင်းတွေအနေနဲ့ အွန်လိုင်းသင်တန်းတွေနဲ့ မျက်နှာချင်းဆိုင်သင်တန်းတွေကို ပေါင်းစပ်သင့်ပါတယ်။ ဒီလို ဟန်ချက်ညီညီလုပ်တာက အကောင်းဆုံးရလဒ်ကို ပေးနိုင်မယ်လို့ ထင်ပါတယ်။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "however", "form": "contrast (= but)", "tag": "However,", "example": ". However, it was costly." },
-          { "subjects": "moreover / therefore", "form": "addition / result (= also / so)", "tag": "Moreover, / Therefore,", "highlight": true, "example": ". Therefore, we left." }
+          {
+            "subjects": "however",
+            "form": "contrast (= but)",
+            "tag": "However,",
+            "example": ". However, it was costly."
+          },
+          {
+            "subjects": "moreover / therefore",
+            "form": "addition / result (= also / so)",
+            "tag": "Moreover, / Therefore,",
+            "highlight": true,
+            "example": ". Therefore, we left."
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "Sentence နှစ်ခုကို ချိတ်ဆက်ဖို့ ဘယ်လို သုံးမလဲ",
+      "pattern": "however, moreover, therefore — ဘယ်ဟာ ရွေးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_work", "v_study", "v_help", "v_cost", "v_make", "v_use",
-      "v_live", "v_start", "v_finish", "v_want"
+      "v_work",
+      "v_study",
+      "v_help",
+      "v_cost",
+      "v_make",
+      "v_use",
+      "v_live",
+      "v_start",
+      "v_finish",
+      "v_want"
     ],
     "time_words": [],
     "verb_form": "base",
-    "note_mm": "however (ဆန့်ကျင်) · moreover (ထပ်ဖြည့်) · therefore (အကျိုးဆက်)။ sentence အသစ် + comma၊ ဒါမှမဟုတ် ; however, …။ comma တစ်ခုတည်းနဲ့ sentence နှစ်ခု မချိတ်ရဘူး။"
+    "note_mm": "however (ဆန့်ကျင်ဘက်) · moreover (အချက်ထပ်ဖြည့်) · therefore (အကျိုးဆက်)။ sentence အသစ်ရဲ့အစမှာ သုံးရင် comma ထည့်ပေးပါ၊ ဒါမှမဟုတ် semicolon နောက်မှာလည်း သုံးနိုင်ပါတယ် (…; however, …)။ comma တစ်ခုတည်းသုံးပြီးတော့ sentence နှစ်ခုကို မချိတ်ရပါဘူးနော်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The plan was good. ___, it was too expensive.",
-      "prompt_mm": "အစီအစဉ်က ကောင်းတယ်။ ဒါပေမယ့် ဈေးကြီးလွန်းတယ်။",
-      "options": ["However", "Moreover", "Therefore"],
-      "answers": ["However"],
-      "explain_mm": "ဆန့်ကျင်တဲ့ အဓိပ္ပာယ် → However။"
+      "prompt_mm": "အစီအစဉ်က ကောင်းပါတယ်။ ဒါပေမဲ့ ဈေးကကြီးလွန်းတယ်။",
+      "options": [
+        "However",
+        "Moreover",
+        "Therefore"
+      ],
+      "answers": [
+        "However"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် အဓိပ္ပာယ်ကို ပြောချင်ရင် → However။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "He didn't study. ___, he failed.",
-      "prompt_mm": "သူ မလေ့လာခဲ့ဘူး။ ထို့ကြောင့် ကျတယ်။",
-      "options": ["Therefore", "However", "Moreover"],
-      "answers": ["Therefore"],
-      "explain_mm": "အကျိုးဆက် (result) → Therefore။"
+      "prompt_mm": "သူ စာမကျက်ခဲ့ဘူး။ ဒါကြောင့် ကျသွားတယ်။",
+      "options": [
+        "Therefore",
+        "However",
+        "Moreover"
+      ],
+      "answers": [
+        "Therefore"
+      ],
+      "explain_mm": "အကျိုးဆက် (result) ကို ဖော်ပြချင်ရင် → Therefore။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "The city is crowded. ___, it is very expensive. (adds another point)",
-      "prompt_mm": "မြို့က လူရှုပ်တယ်။ ထို့အပြင် ဈေးလည်း ကြီးတယ်။ ( အချက် ထပ်ဖြည့် )",
-      "answers": ["moreover"],
-      "explain_mm": "အချက် ထပ်ဖြည့်ခြင်း → Moreover။"
+      "prompt_mm": "မြို့က လူရှုပ်တယ်။ ဒါ့အပြင် ဈေးလည်း ကြီးတယ်။ ( အချက် ထပ်ဖြည့်ခြင်း )",
+      "answers": [
+        "moreover"
+      ],
+      "explain_mm": "အချက်အလက် ထပ်ဖြည့်ချင်ရင် → Moreover။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "It was cheap, however the quality was poor.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။ (however ၏ punctuation)",
-      "answers": ["It was cheap. However, the quality was poor", "it was cheap. however, the quality was poor.", "It was cheap; however, the quality was poor"],
-      "explain_mm": "comma တစ်ခုတည်းနဲ့ မချိတ်ရဘူး → full stop ဒါမှမဟုတ် semicolon + However,။"
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြန်ပြင်ပေးပါ။ (however ရဲ့ punctuation ကို သတိထားပါ)",
+      "answers": [
+        "It was cheap. However, the quality was poor",
+        "it was cheap. however, the quality was poor.",
+        "It was cheap; however, the quality was poor"
+      ],
+      "explain_mm": "comma တစ်ခုတည်းနဲ့ မချိတ်ရပါဘူးနော်။ full stop (.) ဒါမှမဟုတ် semicolon (;) သုံးပြီးမှ ‘However,’ လို့ ရေးရပါမယ်။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Order:  Therefore  /  it was raining  /  we stayed home  /  .  /  ,",
-      "prompt_mm": "စီပါ — ( It was raining . Therefore , we stayed home )",
-      "answers": ["It was raining. Therefore, we stayed home", "it was raining. therefore, we stayed home.", "It was raining. Therefore, we stayed home."],
-      "explain_mm": "Sentence 1 . Therefore , Sentence 2 ။"
+      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်အောင် စီပေးပါ — ( It was raining . Therefore , we stayed home )",
+      "answers": [
+        "It was raining. Therefore, we stayed home",
+        "it was raining. therefore, we stayed home.",
+        "It was raining. Therefore, we stayed home."
+      ],
+      "explain_mm": "ဖွဲ့စည်းပုံကတော့ ဒီလိုပါ — Sentence 1. Therefore, Sentence 2."
     },
     {
       "kind": "scan_sentences",
@@ -145,9 +226,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — link ideas formally. Write 5–8 pairs of sentences linked with however, moreover, or therefore. Start a new sentence with the linker and put a comma after it. Use each linker at least once.",
-      "prompt_mm": "အပိုင်း ၁ — အကြံတွေကို formal ချိတ်ပါ။ however, moreover, therefore နဲ့ ချိတ်ထားတဲ့ sentence အတွဲ ၅–၈ ခု ရေးပါ။ linker နဲ့ sentence အသစ် စပြီး နောက်မှာ comma ထည့်ပါ။ linker တစ်ခုစီ အနည်းဆုံး တစ်ခါ သုံးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — အကြံဉာဏ်တွေကို formal linking words တွေနဲ့ ချိတ်ဆက်ကြည့်ရအောင်။ however, moreover, therefore တို့ကိုသုံးပြီး sentence အတွဲ ၅ ခုကနေ ၈ ခုလောက်အထိ ရေးပေးပါ။ linker နဲ့ sentence အသစ်ကို စပြီး နောက်ကနေ comma လေး ထည့်ဖို့ မမေ့နဲ့နော်။ linker တစ်ခုစီကို အနည်းဆုံး တစ်ခါတော့ သုံးပေးပါ။ ပြီးသွားရင် scan ဖတ်ပြီး ပို့ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
       "model": "The job pays well. However, the hours are very long. Public transport is cheap. Moreover, it reduces traffic. I missed the bus. Therefore, I was late for work. The phone is fast. However, the battery is weak. Exercise improves health. Moreover, it lifts the mood.",
-      "explain_mm": "however (ဆန့်ကျင်) · moreover (ထပ်ဖြည့်) · therefore (အကျိုးဆက်)။ linker + comma၊ sentence အသစ်။",
+      "explain_mm": "however (ဆန့်ကျင်ဘက်) · moreover (အချက်ထပ်ဖြည့်) · therefore (အကျိုးဆက်)။ linker နဲ့ sentence အသစ်ကို စပြီး နောက်ကနေ comma လေး ထည့်ပေးပါ။",
       "grading": {
         "grammar_point": "Linkers: however / moreover / therefore",
         "rule": "Connect two sentences with however (contrast), moreover (addition), therefore (result); start a new sentence (or use a semicolon) and follow the linker with a comma.",
@@ -162,16 +243,18 @@
           "Wrong linker for the relationship",
           "No comma after the linker"
         ],
-        "ignore": ["capitalization"]
+        "ignore": [
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a short opinion. Write a short paragraph (4–6 sentences) giving your opinion on a topic (city vs village life, online vs classroom study), using however, moreover, and therefore to organise your ideas.",
-      "prompt_mm": "အပိုင်း ၂ — ထင်မြင်ချက်တို။ ခေါင်းစဉ်တစ်ခု (မြို့ vs ရွာ ဘဝ၊ အွန်လိုင်း vs အတန်းခန်း သင်ယူမှု) အပေါ် ထင်မြင်ချက်ကို however, moreover, therefore သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — ကိုယ့်ရဲ့ထင်မြင်ချက်ကို ရေးကြည့်ရအောင်။ ပေးထားတဲ့ ခေါင်းစဉ်တစ်ခု (ဥပမာ - မြို့ဘဝနဲ့ ရွာဘဝ၊ အွန်လိုင်းသင်ယူခြင်းနဲ့ အတန်းထဲမှာသင်ယူခြင်း) အပေါ်မှာ ကိုယ့်ရဲ့အမြင်ကို however, moreover, therefore တို့သုံးပြီး စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး ပို့ပေးပါနော်။",
       "model": "City life has many advantages. There are more jobs and better hospitals. Moreover, there is more to do at night. However, cities are crowded and noisy. The cost of living is also very high. Therefore, I believe a small town offers the best balance.",
-      "explain_mm": "however / moreover / therefore နဲ့ အကြံအစည်တွေကို စနစ်တကျ ချိတ်ဆက်ပါ။ linker + comma။",
+      "explain_mm": "however / moreover / therefore တို့ကိုသုံးပြီး ကိုယ့်ရဲ့အကြံဉာဏ်တွေကို စနစ်တကျ ချိတ်ဆက်ပြီး ရေးကြည့်ပါ။ linker နဲ့ sentence အသစ်ကို စပြီး နောက်ကနေ comma လေး ထည့်ဖို့ မမေ့ပါနဲ့။",
       "grading": {
         "grammar_point": "Linkers: however / moreover / therefore",
         "rule": "Organise an opinion paragraph using contrast, addition, and result linkers with correct punctuation.",
@@ -186,7 +269,9 @@
           "Overusing one linker",
           "Linker meaning mismatch"
         ],
-        "ignore": ["capitalization"]
+        "ignore": [
+          "capitalization"
+        ]
       }
     }
   ]

@@ -8,136 +8,217 @@
   "subtitle_mm": "Passive — is/are + V3 · was/were + V3",
   "teach": {
     "situation_en": "Rice {v}is grown{/v} in many countries. This bridge {v}was built{/v} in 1990. English {v}is spoken{/v} all over the world. The windows {v}were cleaned{/v} yesterday.",
-    "situation_mm": "ဆန်ကို နိုင်ငံ အများကြီးမှာ စိုက်ပျိုးတယ်။ ဒီတံတားကို ၁၉၉၀ မှာ ဆောက်ခဲ့တယ်။ အင်္ဂလိပ်စာကို ကမ္ဘာတစ်ဝှမ်း ပြောတယ်။ ပြတင်းပေါက်တွေကို မနေ့က သန့်ရှင်းရေး လုပ်ခဲ့တယ်။",
+    "situation_mm": "ဆန်ကို နိုင်ငံအများကြီးမှာ စိုက်ပျိုးကြပါတယ်။ ဒီတံတားကိုတော့ ၁၉၉၀ မှာ ဆောက်ခဲ့တာပါ။ အင်္ဂလိပ်စာကို ကမ္ဘာတစ်ဝှမ်းမှာ ပြောကြပါတယ်။ ပြတင်းပေါက်တွေကို မနေ့က သန့်ရှင်းရေးလုပ်ခဲ့ကြပါတယ်။",
     "use_en": "We use the passive when the ACTION matters more than who does it — or when the doer is unknown or obvious. The object of the active sentence becomes the subject. Form: be + past participle (V3). Present: am/is/are + V3. Past: was/were + V3. Add 'by …' only if the doer is important.",
-    "use_mm": "ဘယ်သူ လုပ်တာထက် လုပ်ဆောင်ချက် (action) က ပိုအရေးကြီးတဲ့အခါ — ဒါမှမဟုတ် လုပ်သူ မသိ/ထင်ရှားတဲ့အခါ — passive သုံးတယ်။ active sentence ရဲ့ object က subject ဖြစ်သွားတယ်။ ပုံစံ — be + past participle (V3)။ Present — am/is/are + V3။ Past — was/were + V3။ လုပ်သူ အရေးကြီးမှသာ 'by …' ထည့်ပါ။",
+    "use_mm": "ဘယ်သူလုပ်သလဲဆိုတာထက် လုပ်ဆောင်ချက် (action) က ပိုအရေးကြီးတဲ့အခါ၊ ဒါမှမဟုတ် ဘယ်သူလုပ်မှန်း မသိတဲ့အခါမျိုးမှာ passive voice ကို သုံးပါတယ်။ active sentence မှာရှိတဲ့ object က passive မှာ subject ဖြစ်သွားပါတယ်။ သူ့ရဲ့ပုံစံကတော့ be + past participle (V3) ပါ။ Present tense မှာဆိုရင် am/is/are + V3 ကို သုံးပြီး၊ Past tense မှာဆိုရင် was/were + V3 ကို သုံးပေးရပါမယ်။ ဘယ်သူလုပ်တယ်ဆိုတာကို အတိအကျပြောချင်မှသာ 'by …' ကို ထည့်ပေးရတာပါ။",
     "timeline": "active: Someone built it.  →  passive: It was built (by someone).",
     "form": [
-      { "subject": "present passive", "form": "am / is / are + V3  (Rice is grown. Cars are made.)" },
-      { "subject": "past passive", "form": "was / were + V3  (It was built. They were cleaned.)" },
-      { "subject": "the doer", "form": "by + agent (optional)  (… was written by her.)" },
-      { "subject": "negative", "form": "isn't / aren't / wasn't / weren't + V3" }
+      {
+        "subject": "present passive",
+        "form": "am / is / are + V3  (Rice is grown. Cars are made.)"
+      },
+      {
+        "subject": "past passive",
+        "form": "was / were + V3  (It was built. They were cleaned.)"
+      },
+      {
+        "subject": "the doer",
+        "form": "by + agent (optional)  (… was written by her.)"
+      },
+      {
+        "subject": "negative",
+        "form": "isn't / aren't / wasn't / weren't + V3"
+      }
     ],
     "form_note_mm": [
-      "passive = be + V3 (past participle)။ be ကို tense/number အလိုက် ပြောင်းပါ (is/are/was/were)။",
-      "active ရဲ့ object → passive ရဲ့ subject (They built the bridge → The bridge was built)။",
-      "လုပ်သူ မသိ/မရေးချင်ရင် by မထည့်ပါနဲ့ — Rice is grown here. (by မလို)။",
-      "V3 မှန်အောင် သုံးပါ — irregular verbs (build→built, write→written, make→made)။"
+      "passive ရဲ့ ပုံစံက be + V3 (past participle) ပါ။ 'be' verb ကိုတော့ tense နဲ့ subject ရဲ့ number (အနည်း/အများ) အလိုက် ပြောင်းပေးရပါမယ် (ဥပမာ is/are/was/were)။",
+      "active sentence ရဲ့ object က passive sentence မှာ subject ဖြစ်သွားပါတယ် (ဥပမာ They built the bridge → The bridge was built)။",
+      "ဘယ်သူလုပ်မှန်း မသိရင် ဒါမှမဟုတ် ပြောစရာမလိုဘူးထင်ရင် 'by' ကို ထည့်စရာမလိုပါဘူး။ ဥပမာ — Rice is grown here. (ဒီမှာ 'by' မလိုပါဘူး)။",
+      "V3 (past participle) ကို ပုံစံမှန်အောင် သုံးဖို့ အရေးကြီးပါတယ်။ အထူးသဖြင့် irregular verbs တွေကို သတိထားရပါမယ် (ဥပမာ build→built, write→written, make→made)။"
     ],
     "trap_en": "Don't forget the form of 'be' — the past participle alone is not passive.  WRONG: This house built in 2000 / English spoken here.  RIGHT: This house was built in 2000 / English is spoken here.",
-    "trap_mm": "'be' ကို မမေ့ပါနဲ့ — V3 တစ်ခုတည်းနဲ့ passive မဖြစ်ဘူး။ ✗ This house built in 2000 / English spoken here → ✓ This house was built in 2000 / English is spoken here။",
+    "trap_mm": "'be' verb ကို ထည့်ဖို့ မမေ့ပါနဲ့နော်။ V3 တစ်ခုတည်းနဲ့ passive sentence မဖြစ်ပါဘူး။ ✗ This house built in 2000 / English spoken here → ✓ This house was built in 2000 / English is spoken here ဆိုပြီး 'be' verb ကို ထည့်ပေးရပါမယ်။",
     "examples": [
-      { "en": "Coffee {v}is grown{/v} in the hills.", "mm": "ကော်ဖီကို တောင်တန်းတွေမှာ စိုက်တယ်။" },
-      { "en": "The letter {v}was written{/v} by my father.", "mm": "ဒီစာကို ငါ့အဖေ ရေးခဲ့တာ။" },
-      { "en": "These shoes {v}are made{/v} in Vietnam.", "mm": "ဒီဖိနပ်တွေကို ဗီယက်နမ်မှာ လုပ်တယ်။" },
-      { "en": "The streets {v}were cleaned{/v} before the festival.", "mm": "ပွဲမတိုင်ခင် လမ်းတွေ သန့်ရှင်းရေး လုပ်ခဲ့တယ်။" }
+      {
+        "en": "Coffee {v}is grown{/v} in the hills.",
+        "mm": "ကော်ဖီကို တောင်တန်းတွေမှာ စိုက်ပျိုးကြပါတယ်။"
+      },
+      {
+        "en": "The letter {v}was written{/v} by my father.",
+        "mm": "ဒီစာကို ကျွန်တော့်အဖေက ရေးခဲ့တာပါ။"
+      },
+      {
+        "en": "These shoes {v}are made{/v} in Vietnam.",
+        "mm": "ဒီဖိနပ်လေးတွေကို ဗီယက်နမ်မှာ လုပ်တာပါ။"
+      },
+      {
+        "en": "The streets {v}were cleaned{/v} before the festival.",
+        "mm": "ပွဲတော်မတိုင်ခင် လမ်းတွေကို သန့်ရှင်းရေးလုပ်ခဲ့ကြပါတယ်။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "present passive",
-        "rule_mm": "present → am / is / are + V3 (past participle)",
+        "rule_mm": "Present tense မှာဆိုရင် → am / is / are + V3 (past participle) ပုံစံကို သုံးပါတယ်။",
         "en": "Rice {v}is grown{/v} here.",
-        "why_mm": "active 'They grow rice here' မှာ object 'rice' က passive ရဲ့ subject ဖြစ်သွားတယ်။ လုပ်ဆောင်ချက်ကို အလေးပေးလို့ be (is) + V3 (grown) သုံးတယ် — လုပ်သူ မရေးတော့ဘူး။"
+        "why_mm": "active sentence ဖြစ်တဲ့ 'They grow rice here' မှာပါတဲ့ object 'rice' က passive sentence မှာ subject ဖြစ်သွားပါတယ်။ ဒီမှာ လုပ်ဆောင်ချက်ကို အဓိကထားပြောချင်တာမို့လို့ be (is) + V3 (grown) ပုံစံကို သုံးလိုက်ပြီး ဘယ်သူလုပ်သလဲဆိုတာကိုတော့ ထည့်မရေးတော့ပါဘူး။"
       },
       {
         "subject": "past passive",
-        "rule_mm": "past → was / were + V3",
+        "rule_mm": "Past tense မှာဆိုရင်တော့ → was / were + V3 ပုံစံကို သုံးပေးရပါမယ်။",
         "en": "The bridge {v}was built{/v} in 1990.",
-        "why_mm": "အတိတ်မှာ ဖြစ်ခဲ့လို့ be ကို past (was) ပြောင်းပြီး V3 (built) နဲ့ တွဲတယ်။ noun တစ်ခု (bridge) မို့ was၊ အများဆို were။"
+        "why_mm": "ဒီလုပ်ဆောင်ချက်က အတိတ် (past) မှာ ဖြစ်ခဲ့တာကြောင့် 'be' verb ကို past tense ဖြစ်တဲ့ 'was' ပြောင်းပြီး V3 (built) နဲ့ တွဲသုံးလိုက်တာပါ။ Subject က 'bridge' (singular / အနည်းကိန်း) ဖြစ်လို့ 'was' ကို သုံးတာဖြစ်ပြီး၊ plural (အများကိန်း) ဆိုရင်တော့ 'were' ကို သုံးရပါမယ်။"
       },
       {
         "subject": "don't drop 'be'",
-        "rule_mm": "V3 တစ်ခုတည်းနဲ့ passive မဖြစ် — be + V3 လိုတယ်",
+        "rule_mm": "V3 တစ်ခုတည်းနဲ့ passive sentence မဖြစ်ပါဘူးနော် — be + V3 ပုံစံအပြည့်အစုံ လိုအပ်ပါတယ်။",
         "en": "English {v}is spoken{/v} here.  (✗ English spoken here)",
-        "why_mm": "past participle (spoken) တစ်ခုတည်းနဲ့ passive မဖြစ်ပါဘူး။ be (is) ကို မမေ့ပါနဲ့ — be + V3 အပြည့် လိုပါတယ်။"
+        "why_mm": "past participle (ဥပမာ 'spoken') တစ်ခုတည်းနဲ့ passive sentence မဖြစ်ပါဘူး။ 'be' verb (ဥပမာ 'is') ကို ထည့်ဖို့ မမေ့ပါနဲ့နော် — be + V3 ဆိုတဲ့ ပုံစံအပြည့်အစုံ လိုအပ်ပါတယ်။"
       }
     ],
     "checks": [
       {
         "prompt_en": "This bridge ___ built in 1990.",
-        "prompt_mm": "ဒီတံတားကို ၁၉၉၀ မှာ ဆောက်ခဲ့တယ်။",
-        "options": ["was", "is", "were"],
+        "prompt_mm": "ဒီတံတားကို ၁၉၉၀ ခုနှစ်မှာ ဆောက်ခဲ့တာပါ။",
+        "options": [
+          "was",
+          "is",
+          "were"
+        ],
         "answer": "was",
-        "explain_mm": "past passive — noun တစ်ခု (bridge) → was + V3 → was built။"
+        "explain_mm": "Past passive ပုံစံပါ — Subject က singular noun (bridge) ဖြစ်တဲ့အတွက် → was + V3 → was built ဆိုပြီး သုံးထားတာပါ။"
       },
       {
         "prompt_en": "English ___ spoken in many countries.",
-        "prompt_mm": "အင်္ဂလိပ်စာကို နိုင်ငံ အများကြီးမှာ ပြောတယ်။",
-        "options": ["is", "are", "was"],
+        "prompt_mm": "အင်္ဂလိပ်စာကို နိုင်ငံအများကြီးမှာ ပြောဆိုကြပါတယ်။",
+        "options": [
+          "is",
+          "are",
+          "was"
+        ],
         "answer": "is",
-        "explain_mm": "present passive — English (တစ်ခု) → is + V3 → is spoken။"
+        "explain_mm": "Present passive ပုံစံပါ — Subject က 'English' (singular) ဖြစ်တဲ့အတွက် → is + V3 → is spoken ဆိုပြီး သုံးထားတာပါ။"
       },
       {
         "prompt_en": "The letter ___ by my father.",
-        "prompt_mm": "ဒီစာကို ငါ့အဖေ ရေးခဲ့တာ။",
-        "options": ["was written", "was wrote", "wrote"],
+        "prompt_mm": "ဒီစာကို ကျွန်တော့်အဖေက ရေးခဲ့တာပါ။",
+        "options": [
+          "was written",
+          "was wrote",
+          "wrote"
+        ],
         "answer": "was written",
-        "explain_mm": "passive = be + V3 → was written (V3, past simple 'wrote' မဟုတ်)။"
+        "explain_mm": "passive ပုံစံက be + V3 ဖြစ်တဲ့အတွက် → was written လို့ သုံးရပါမယ်။ past simple verb ဖြစ်တဲ့ 'wrote' ကို သုံးလို့မရပါဘူးနော်။"
       }
     ],
     "model_paragraph_en": "My town is famous for its market. Fresh vegetables {v}are sold{/v} there every morning. The old market hall {v}was built{/v} a hundred years ago. Most of the goods {v}are made{/v} by local families. Last year, the roof {v}was repaired{/v}, and now the whole place {v}is loved{/v} by tourists.",
-    "model_paragraph_mm": "ငါ့မြို့ဟာ ဈေးနဲ့ နာမည်ကြီးတယ်။ လတ်ဆတ်တဲ့ ဟင်းသီးဟင်းရွက်တွေကို မနက်တိုင်း အဲဒီမှာ ရောင်းတယ်။ ဈေးရုံဟောင်းကို လွန်ခဲ့တဲ့ နှစ်တစ်ရာက ဆောက်ခဲ့တာ။ ကုန်ပစ္စည်း အများစုကို ဒေသခံ မိသားစုတွေ လုပ်တာ။ မနှစ်က အမိုး ပြင်ခဲ့ပြီး အခု တစ်နေရာလုံးကို ခရီးသွားတွေ နှစ်သက်ကြတယ်။",
+    "model_paragraph_mm": "ကျွန်တော်တို့မြို့လေးက ဈေးနဲ့ နာမည်ကြီးပါတယ်။ လတ်ဆတ်တဲ့ ဟင်းသီးဟင်းရွက်တွေကို မနက်တိုင်း အဲဒီမှာ ရောင်းချကြပါတယ်။ ဈေးအဆောက်အအုံအဟောင်းကိုတော့ လွန်ခဲ့တဲ့ နှစ်တစ်ရာလောက်က ဆောက်လုပ်ခဲ့တာပါ။ ကုန်ပစ္စည်းအများစုကိုလည်း ဒေသခံမိသားစုတွေကပဲ ပြုလုပ်ကြတာဖြစ်ပါတယ်။ ပြီးခဲ့တဲ့နှစ်က အမိုးကို ပြင်လိုက်ပြီးတဲ့နောက်မှာတော့ အခုဆို နေရာတစ်ခုလုံးကို ခရီးသွားတွေက သိပ်ကိုနှစ်သက်နေကြပါပြီ။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "present passive", "form": "am / is / are + V3", "tag": "is/are + V3", "example": "Rice is grown here." },
-          { "subjects": "past passive", "form": "was / were + V3", "tag": "was/were + V3", "highlight": true, "example": "It was built in 1990." }
+          {
+            "subjects": "present passive",
+            "form": "am / is / are + V3",
+            "tag": "is/are + V3",
+            "example": "Rice is grown here."
+          },
+          {
+            "subjects": "past passive",
+            "form": "was / were + V3",
+            "tag": "was/were + V3",
+            "highlight": true,
+            "example": "It was built in 1990."
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "Passive voice ကို ဘယ်လိုအခြေအနေမှာ သုံးမလဲ",
+      "pattern": "Subject နဲ့ be + V3 ကို ဘယ်လို တွဲမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_make", "v_build", "v_write", "v_clean", "v_send", "v_use",
-      "v_teach", "v_cook", "v_finish", "v_see"
+      "v_make",
+      "v_build",
+      "v_write",
+      "v_clean",
+      "v_send",
+      "v_use",
+      "v_teach",
+      "v_cook",
+      "v_finish",
+      "v_see"
     ],
     "time_words": [],
     "verb_form": "past_participle",
-    "note_mm": "passive = be + V3။ present → is/are + V3 (is made, are built)။ past → was/were + V3 (was written, were cleaned)။ V3 = past participle။"
+    "note_mm": "passive ရဲ့ ပုံသေနည်းက be + V3 ပါ။ present မှာဆိုရင် is/are + V3 (ဥပမာ is made, are built)၊ past မှာဆိုရင် was/were + V3 (ဥပမာ was written, were cleaned) ဆိုပြီး သုံးရပါတယ်။ V3 ဆိုတာ past participle ကို ပြောတာပါနော်။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "This bridge ___ built in 1990.",
-      "prompt_mm": "ဒီတံတားကို ၁၉၉၀ မှာ ဆောက်ခဲ့တယ်။",
-      "options": ["was", "is", "were"],
-      "answers": ["was"],
-      "explain_mm": "past passive — တစ်ခု (bridge) → was + V3 → was built။"
+      "prompt_mm": "ဒီတံတားကို ၁၉၉၀ ခုနှစ်မှာ ဆောက်ခဲ့တာပါ။",
+      "options": [
+        "was",
+        "is",
+        "were"
+      ],
+      "answers": [
+        "was"
+      ],
+      "explain_mm": "Past passive ပုံစံပါ — Subject က singular (bridge) ဖြစ်တဲ့အတွက် → was + V3 → was built ဆိုပြီး သုံးထားတာပါ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "English ___ spoken in many countries.",
-      "prompt_mm": "အင်္ဂလိပ်စာကို နိုင်ငံ အများကြီးမှာ ပြောတယ်။",
-      "options": ["is", "are", "was"],
-      "answers": ["is"],
-      "explain_mm": "present passive — English (တစ်ခု) → is + V3 → is spoken။"
+      "prompt_mm": "အင်္ဂလိပ်စာကို နိုင်ငံအများကြီးမှာ ပြောဆိုကြပါတယ်။",
+      "options": [
+        "is",
+        "are",
+        "was"
+      ],
+      "answers": [
+        "is"
+      ],
+      "explain_mm": "Present passive ပုံစံပါ — Subject က 'English' (singular) ဖြစ်တဲ့အတွက် → is + V3 → is spoken ဆိုပြီး သုံးထားတာပါ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "These cars ___ ___ (make) in Japan. (present, 2 words)",
-      "prompt_mm": "ဒီကားတွေကို ဂျပန်မှာ လုပ်တယ်။ ( present passive — စကားလုံး ၂ လုံး )",
-      "answers": ["are made"],
-      "explain_mm": "အများ (cars) + present → are + V3 → are made။"
+      "prompt_mm": "ဒီကားတွေကို ဂျပန်မှာ လုပ်ပါတယ်။ (present passive ပုံစံဖြစ်အောင် စကားလုံး ၂ လုံး ဖြည့်ပေးရမှာပါ)",
+      "answers": [
+        "are made"
+      ],
+      "explain_mm": "Subject က plural (cars) ဖြစ်ပြီး present tense ဖြစ်တဲ့အတွက် → are + V3 → are made ဆိုပြီး သုံးရပါမယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "The letter wrote by my father.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["The letter was written by my father", "the letter was written by my father.", "The letter was written by my father."],
-      "explain_mm": "passive = be + V3 → was written (be မမေ့နဲ့၊ V3 သုံးပါ)။"
+      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "answers": [
+        "The letter was written by my father",
+        "the letter was written by my father.",
+        "The letter was written by my father."
+      ],
+      "explain_mm": "passive ပုံစံက be + V3 ဖြစ်တဲ့အတွက် was written လို့ ပြင်ပေးရပါမယ် ('be' verb ကို မေ့မကျန်ခဲ့ပါနဲ့၊ V3 ကို သုံးပေးပါ)။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Make it passive:  grow  /  rice  /  here  /  is",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး passive sentence မှန် ရေးပါ။ ( Rice is + grown here )",
-      "answers": ["Rice is grown here", "rice is grown here.", "Rice is grown here."],
-      "explain_mm": "present passive → Rice is grown here။"
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး passive sentence အမှန်ဖြစ်အောင် ဖွဲ့ပေးပါ။ (ပုံစံက Rice is grown here လိုမျိုးပါ)။",
+      "answers": [
+        "Rice is grown here",
+        "rice is grown here.",
+        "Rice is grown here."
+      ],
+      "explain_mm": "Present passive ပုံစံနဲ့ဆိုရင် → Rice is grown here ဆိုတာ အဖြေမှန်ဖြစ်ပါတယ်။"
     },
     {
       "kind": "scan_sentences",
@@ -145,9 +226,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — how things are made & done. Write 5–8 passive sentences (present and past) about products, places, or processes — where the action matters more than the doer. Use is/are + V3 and was/were + V3.",
-      "prompt_mm": "အပိုင်း ၁ — အရာတွေ ဘယ်လို လုပ်/ဖြစ်သလဲ။ ထုတ်ကုန်၊ နေရာ၊ ဒါမှမဟုတ် လုပ်ငန်းစဉ်တွေ အကြောင်း — လုပ်သူထက် လုပ်ဆောင်ချက် က ပိုအရေးကြီးတဲ့ — passive sentence (present & past) ၅–၈ ကြောင်း ရေးပါ။ is/are + V3 နဲ့ was/were + V3 သုံးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း (၁) — အရာတွေ ဘယ်လိုပြုလုပ်သလဲ။ ထုတ်ကုန်တစ်ခု၊ နေရာတစ်ခု၊ ဒါမှမဟုတ် လုပ်ငန်းစဉ်တစ်ခုအကြောင်းကို ရေးရမှာပါ။ ဘယ်သူလုပ်သလဲဆိုတာထက် လုပ်ဆောင်ချက်ကို ပိုအလေးပေးတဲ့ passive sentence (present & past) ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ is/are + V3 နဲ့ was/were + V3 ပုံစံတွေကို သုံးဖို့ မမေ့နဲ့နော်။ ရေးပြီးရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်စေ၊ ဒီမှာပဲ စာရိုက်ပြီးဖြစ်စေ တင်ပေးနိုင်ပါတယ်။",
       "model": "Tea {v}is grown{/v} in the north of my country. The leaves {v}are picked{/v} by hand. This temple {v}was built{/v} hundreds of years ago. The roads {v}were repaired{/v} last month. Our bread {v}is made{/v} fresh every morning.",
-      "explain_mm": "passive = be + V3။ present → is/are + V3 · past → was/were + V3။",
+      "explain_mm": "သတိပြုရမှာက passive = be + V3 ပါ။ present tense အတွက် is/are + V3 ကို သုံးပြီး၊ past tense အတွက် was/were + V3 ကို သုံးရပါမယ်။",
       "grading": {
         "grammar_point": "Passive (present & past)",
         "rule": "be + past participle: am/is/are + V3 (present), was/were + V3 (past); 'by' agent only when needed.",
@@ -162,16 +243,19 @@
           "Using past simple instead of V3 (was wrote)",
           "Adding an unnecessary 'by' agent"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a famous place or product. Write a short paragraph (4–6 sentences) describing a well-known place, food, or product from your country, using the passive (present and past).",
-      "prompt_mm": "အပိုင်း ၂ — နာမည်ကြီး နေရာ ဒါမှမဟုတ် ထုတ်ကုန်။ မင်းနိုင်ငံက ထင်ရှားတဲ့ နေရာ၊ အစားအစာ၊ ဒါမှမဟုတ် ထုတ်ကုန်တစ်ခု အကြောင်း passive (present & past) သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း (၂) — နာမည်ကြီးတဲ့ နေရာ သို့မဟုတ် ထုတ်ကုန်တစ်ခုအကြောင်း။ ကိုယ့်နိုင်ငံက ထင်ရှားတဲ့ နေရာ၊ အစားအသောက်၊ ဒါမှမဟုတ် ထုတ်ကုန်တစ်ခုအကြောင်း passive voice (present & past) ကို သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းမှ ၆ ကြောင်း) ရေးပေးပါ။ ရေးပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "Thanaka {v}is used{/v} all over Myanmar. It {v}is made{/v} from the bark of a tree. The bark {v}is ground{/v} on a stone with a little water. For centuries it {v}has been worn{/v} on the face. It {v}was introduced{/v} to me by my grandmother.",
-      "explain_mm": "passive = be + V3။ လုပ်ဆောင်ချက်ကို အလေးပေးပြီး by ကို လိုမှသာ ထည့်ပါ။",
+      "explain_mm": "passive ရဲ့ ပုံစံက be + V3 ပါ။ လုပ်ဆောင်ချက်ကို အဓိကထားပြီး 'by' ကိုတော့ တကယ်လိုအပ်မှသာ ထည့်ပေးပါနော်။",
       "grading": {
         "grammar_point": "Passive (present & past)",
         "rule": "Describe a place/product mainly through passive forms, focusing on the action over the doer.",
@@ -186,7 +270,10 @@
           "Base verb or past simple instead of V3",
           "Overusing 'by' agents"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]

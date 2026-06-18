@@ -8,136 +8,217 @@
   "subtitle_mm": "if + past, would — အခု မဖြစ်နိုင်/စိတ်ကူး",
   "teach": {
     "situation_en": "{v}If{/v} I {v}had{/v} a million dollars, I {v}would travel{/v} the world. {v}If{/v} I {v}were{/v} you, I {v}would tell{/v} the truth. She {v}would be{/v} happier {v}if{/v} she {v}lived{/v} near the sea. What {v}would{/v} you {v}do{/v} {v}if{/v} you {v}won{/v} the lottery?",
-    "situation_mm": "ဒေါ်လာ သန်းတစ်ဆယ် ရှိရင် ကမ္ဘာ လှည့်လည် မယ်။ မင်းနေရာ ငါဆိုရင် အမှန်အတိုင်း ပြောမယ်။ ပင်လယ်နား နေရင် သူမ ပိုပျော်မယ်။ ထီပေါက်ရင် မင်း ဘာလုပ်မလဲ။",
+    "situation_mm": "ဒေါ်လာ သန်းတစ်ဆယ်သာ ရှိရင် ကမ္ဘာပတ်ပြီး ခရီးထွက်မှာ။ မင်းနေရာမှာ ငါသာဆိုရင် အမှန်အတိုင်း ပြောလိုက်မှာပါ။ ပင်လယ်နားမှာ နေရရင် သူမ ပိုပျော်မှာပေါ့။ ထီပေါက်ရင်ကော မင်း ဘာလုပ်မလဲ။",
     "use_en": "We use the second conditional for situations that are unreal, imaginary, or unlikely NOW or in the future — daydreams and advice. Form: If + past simple, … would + base verb. The past tense here does NOT mean past time; it signals 'this isn't real'. With 'be', use 'were' for all subjects (If I were …).",
-    "use_mm": "အခု သို့မဟုတ် အနာဂတ်မှာ မဖြစ်နိုင်တဲ့၊ စိတ်ကူးယဉ်တဲ့၊ ဖြစ်ဖို့ နည်းတဲ့ အခြေအနေတွေ — စိတ်ကူးတွေ၊ အကြံပေးချက်တွေ — အတွက် second conditional သုံးတယ်။ ပုံစံ — If + past simple, … would + verb (base)။ ဒီမှာ past tense ဟာ အတိတ် အချိန် မဟုတ်ဘူး — 'ဒါ တကယ် မဟုတ်ဘူး' လို့ ပြတာ။ 'be' ဆိုရင် subject အားလုံးအတွက် 'were' သုံးပါ (If I were …)။",
+    "use_mm": "အခု ဒါမှမဟုတ် အနာဂတ်မှာ မဖြစ်နိုင်တဲ့၊ စိတ်ကူးယဉ်ဆန်တဲ့၊ ဖြစ်နိုင်ခြေနည်းတဲ့ အခြေအနေတွေအကြောင်း (ဥပမာ - စိတ်ကူးအိပ်မက်တွေ၊ အကြံပေးချက်တွေ) ပြောချင်တဲ့အခါ second conditional ကို သုံးပါတယ်။ သူ့ရဲ့ပုံစံက If + past simple, … would + verb (base) ပါ။ ဒီမှာ သုံးတဲ့ past tense က အတိတ်အချိန်ကို ပြောတာမဟုတ်ဘဲ 'ဒါဟာ တကယ့်အဖြစ်မှန်မဟုတ်ဘူး၊ စိတ်ကူး मात्र' ဆိုတာကို ပြတာပါ။ Verb 'be' အတွက်ဆိုရင် Subject အားလုံးနဲ့ 'were' ကိုပဲ သုံးပေးရပါတယ် (ဥပမာ If I were …)။",
     "timeline": "If [past simple — unreal now] → [result: would + base]",
     "form": [
-      { "subject": "structure", "form": "If + past, would + base  (If I had time, I would help.)" },
-      { "subject": "be", "form": "were for all subjects  (If I were rich · If he were here)" },
-      { "subject": "result", "form": "would / could / might + base  (I would buy · I could travel)" },
-      { "subject": "negative", "form": "didn't in the if-part · wouldn't in the result" }
+      {
+        "subject": "structure",
+        "form": "If + past, would + base  (If I had time, I would help.)"
+      },
+      {
+        "subject": "be",
+        "form": "were for all subjects  (If I were rich · If he were here)"
+      },
+      {
+        "subject": "result",
+        "form": "would / could / might + base  (I would buy · I could travel)"
+      },
+      {
+        "subject": "negative",
+        "form": "didn't in the if-part · wouldn't in the result"
+      }
     ],
     "form_note_mm": [
-      "second conditional — If + past simple, … would + verb (base)။ (အခု မဖြစ်နိုင်/စိတ်ကူး)",
-      "if-part က past tense ဖြစ်ပေမယ့် အတိတ် အဓိပ္ပာယ် မဟုတ်ဘူး — 'တကယ်မဟုတ်' လို့ ပြတာ။",
-      "'be' ဆိုရင် subject အားလုံးအတွက် were သုံးပါ — If I were you (was မဟုတ်)။",
-      "would နေရာမှာ could (လုပ်နိုင်) / might (ဖြစ်နိုင်) လည်း သုံးနိုင်တယ်။"
+      "second conditional ရဲ့ ပုံစံက If + past simple, … would + verb (base) ပါ။ (အခု မဖြစ်နိုင်တဲ့ စိတ်ကူးအခြေအနေတွေအတွက် သုံးပါတယ်)။",
+      "if-clause ထဲက past tense က အတိတ်ကို ပြောတာမဟုတ်ပါဘူး — 'ဒါက တကယ်မဟုတ်ဘူး' ဆိုတဲ့ အဓိပ္ပာယ်ကို ပြတာပါ။",
+      "Verb 'be' ကို သုံးတဲ့အခါ Subject အားလုံးအတွက် 'were' ကိုပဲ သုံးပေးရပါမယ် — ဥပမာ If I were you လို့ သုံးပြီး (was မသုံးရပါဘူး)။",
+      "'would' ရဲ့နေရာမှာ 'could' (လုပ်နိုင်ခဲ့မှာ) ဒါမှမဟုတ် 'might' (ဖြစ်နိုင်ခဲ့မှာ) ကိုလည်း အစားထိုး သုံးလို့ရပါတယ်။"
     ],
     "trap_en": "Don't use 'would' in the if-part, and don't use the present.  WRONG: If I would have time / If I have time, I would help.   RIGHT: If I had time, I would help.",
-    "trap_mm": "if-part မှာ 'would' မထည့်ရဘူး၊ present လည်း မသုံးရဘူး — past simple သုံးပါ။ ✗ If I would have time / If I have time → ✓ If I had time, I would help။",
+    "trap_mm": "if-clause ထဲမှာ 'would' လုံးဝ ထည့်မသုံးရပါဘူးနော်။ present tense ကိုလည်း သုံးလို့မရပါဘူး — past simple ကိုပဲ သုံးပေးရမှာပါ။ ✗ If I would have time / If I have time → ✓ If I had time, I would help။",
     "examples": [
-      { "en": "{v}If{/v} I {v}knew{/v} her number, I {v}would call{/v} her.", "mm": "သူမ နံပါတ် သိရင် ဖုန်းခေါ်မှာ။" },
-      { "en": "{v}If{/v} I {v}were{/v} you, I {v}wouldn't worry{/v}.", "mm": "မင်းနေရာ ငါဆိုရင် စိတ်ပူမှာ မဟုတ်ဘူး။" },
-      { "en": "We {v}would buy{/v} that house {v}if{/v} it {v}weren't{/v} so expensive.", "mm": "အဲဒီ အိမ် ဒီလောက် မဈေးကြီးရင် ဝယ်မှာ။" },
-      { "en": "What {v}would{/v} you {v}do{/v} {v}if{/v} you {v}lost{/v} your job?", "mm": "အလုပ် ဆုံးရှုံးရင် မင်း ဘာလုပ်မလဲ။" }
+      {
+        "en": "{v}If{/v} I {v}knew{/v} her number, I {v}would call{/v} her.",
+        "mm": "သူမရဲ့ နံပါတ်ကိုသာ သိရင် ဖုန်းခေါ်လိုက်မှာပါ။"
+      },
+      {
+        "en": "{v}If{/v} I {v}were{/v} you, I {v}wouldn't worry{/v}.",
+        "mm": "မင်းနေရာမှာ ငါသာဆိုရင် စိတ်ပူမှာ မဟုတ်ပါဘူး။"
+      },
+      {
+        "en": "We {v}would buy{/v} that house {v}if{/v} it {v}weren't{/v} so expensive.",
+        "mm": "အဲဒီအိမ်သာ ဒီလောက် ဈေးမကြီးရင် ဝယ်လိုက်မှာ။"
+      },
+      {
+        "en": "What {v}would{/v} you {v}do{/v} {v}if{/v} you {v}lost{/v} your job?",
+        "mm": "မင်းသာ အလုပ်ပြုတ်သွားခဲ့ရင် ဘာလုပ်မလဲ။"
+      }
     ],
     "walkthrough": [
       {
         "subject": "if-clause (unreal now)",
-        "rule_mm": "If + past simple — အတိတ်ပုံစံ ဖြစ်ပေမဲ့ အတိတ် အဓိပ္ပာယ် မဟုတ်ဘူး",
+        "rule_mm": "If + past simple — past tense ပုံစံကို သုံးထားပေမဲ့ အတိတ်အကြောင်း ပြောတာ မဟုတ်ပါဘူးနော်။",
         "en": "{v}If{/v} I {v}had{/v} a million dollars, …",
-        "why_mm": "if-clause မှာ past simple 'had' သုံးတယ် — ဒါက 'အခု တကယ် မဖြစ်နိုင်ဘူး' လို့ ပြတာ၊ အတိတ် အချိန်ကို မဆိုလိုပါဘူး။"
+        "why_mm": "if-clause မှာ past simple ပုံစံ 'had' ကို သုံးထားပါတယ်။ ဒါက 'အခုချိန်မှာ တကယ်မဖြစ်နိုင်တဲ့အရာ' ဆိုတာကို ပြချင်တာဖြစ်ပြီး အတိတ်ကအချိန်ကို ရည်ညွှန်းတာ မဟုတ်ပါဘူး။"
       },
       {
         "subject": "result clause",
-        "rule_mm": "would + verb (base)",
+        "rule_mm": "အကျိုးဆက်ကိုပြတဲ့ result clause မှာတော့ would + verb (base) ကို သုံးပါတယ်။",
         "en": "… I {v}would travel{/v} the world.",
-        "why_mm": "result မှာ would + base verb 'travel' သုံးပါတယ် (would + travels မဟုတ်)။ could / might လည်း သုံးနိုင်တယ်။"
+        "why_mm": "result clause မှာ would + base verb 'travel' ကို သုံးပေးရပါမယ် (would + travels ဆိုပြီး -s ထည့်လို့ မရပါဘူး)။ 'would' နေရာမှာ 'could' ဒါမှမဟုတ် 'might' ကိုလည်း သုံးနိုင်ပါတယ်။"
       },
       {
         "subject": "be → were · no would in if (trap)",
-        "rule_mm": "be ဆိုရင် subject အားလုံး were · if-clause မှာ would မထည့်",
+        "rule_mm": "Verb 'be' အတွက်ဆိုရင် Subject အားလုံးနဲ့ 'were' ကို သုံးပါ · if-clause ထဲမှာ 'would' မထည့်ရပါဘူး။",
         "en": "{v}If{/v} I {v}were{/v} you, I {v}would tell{/v} the truth.  (✗ If I would)",
-        "why_mm": "be ဆိုရင် 'was' မဟုတ်ဘဲ subject အားလုံးအတွက် 'were'။ if-clause မှာ 'would' မထည့်ရဘူး — past simple ပဲ။"
+        "why_mm": "Verb 'be' ကို သုံးတဲ့အခါ Subject ဘာပဲဖြစ်ဖြစ် 'was' အစား 'were' ကိုပဲ သုံးပေးရပါမယ်။ if-clause ထဲမှာ 'would' လုံးဝမထည့်ရဘဲ past simple ကိုပဲ သုံးရမှာပါ။"
       }
     ],
     "checks": [
       {
         "prompt_en": "If I ___ rich, I would buy a big house.",
-        "prompt_mm": "ချမ်းသာရင် အိမ်ကြီးတစ်လုံး ဝယ်မှာ။",
-        "options": ["were", "am", "would be"],
+        "prompt_mm": "ငါသာ ချမ်းသာရင် အိမ်ကြီးကြီးတစ်လုံး ဝယ်မှာ။",
+        "options": [
+          "were",
+          "am",
+          "would be"
+        ],
         "answer": "were",
-        "explain_mm": "be ဆိုရင် subject အားလုံးအတွက် were → If I were rich။"
+        "explain_mm": "Verb 'be' ကို သုံးတဲ့အခါ Subject အားလုံးအတွက် 'were' ကို သုံးရပါတယ် → If I were rich။"
       },
       {
         "prompt_en": "If she had more time, she ___ a language.",
-        "prompt_mm": "အချိန် ပိုရှိရင် သူမ ဘာသာစကားတစ်ခု သင်မှာ။",
-        "options": ["would learn", "will learn", "learns"],
+        "prompt_mm": "သူမမှာသာ အချိန်ပိုရှိရင် ဘာသာစကားအသစ်တစ်ခု သင်ယူမှာ။",
+        "options": [
+          "would learn",
+          "will learn",
+          "learns"
+        ],
         "answer": "would learn",
-        "explain_mm": "result မှာ would + verb (base) → would learn။"
+        "explain_mm": "result clause မှာ would + verb (base) ပုံစံကို သုံးရပါတယ် → would learn။"
       },
       {
         "prompt_en": "If I ___ the answer, I would tell you.",
-        "prompt_mm": "အဖြေ သိရင် မင်းကို ပြောမှာ။",
-        "options": ["knew", "would know", "know"],
+        "prompt_mm": "အဖြေကိုသာ သိရင် မင်းကို ပြောပြမှာပေါ့။",
+        "options": [
+          "knew",
+          "would know",
+          "know"
+        ],
         "answer": "knew",
-        "explain_mm": "if-clause မှာ past simple → knew (would မထည့်ဘူး)။"
+        "explain_mm": "if-clause မှာ past simple ကို သုံးရမှာမို့လို့ 'knew' ကို သုံးပါတယ် ('would' ထည့်စရာမလိုပါဘူး)။"
       }
     ],
     "model_paragraph_en": "Sometimes I imagine a different life. {v}If{/v} I {v}lived{/v} by the sea, I {v}would swim{/v} every morning. {v}If{/v} I {v}had{/v} more free time, I {v}would learn{/v} the guitar. I {v}would travel{/v} to Japan {v}if{/v} I {v}weren't{/v} so busy. {v}If{/v} I {v}were{/v} braver, I {v}would start{/v} my own business.",
-    "model_paragraph_mm": "တစ်ခါတစ်လေ မတူတဲ့ ဘဝတစ်ခုကို စိတ်ကူးကြည့်တယ်။ ပင်လယ်နား နေရင် မနက်တိုင်း ရေကူးမှာ။ အားလပ်ချိန် ပိုရှိရင် ဂစ်တာ သင်မှာ။ ဒီလောက် အလုပ်မများရင် ဂျပန် သွားမှာ။ ပိုရဲရင့်ရင် ကိုယ်ပိုင် စီးပွားရေး စမှာ။",
+    "model_paragraph_mm": "တစ်ခါတစ်လေမှာ ကိုယ်မနေထိုင်ရတဲ့ ဘဝလေးတစ်ခုကို စိတ်ကူးကြည့်မိတယ်။ ပင်လယ်နားမှာသာ နေရရင် မနက်တိုင်း ရေသွားကူးမှာ။ အားလပ်ချိန်တွေသာ ပိုရှိရင် ဂစ်တာတီး သင်မှာ။ အခုလောက် အလုပ်မများဘူးဆိုရင် ဂျပန်ကို ခရီးထွက်မှာ။ ကိုယ်သာ နည်းနည်းလေး ပိုရဲရင့်ခဲ့ရင် ကိုယ်ပိုင်စီးပွားရေးတစ်ခု စလုပ်နေမိမှာ။",
     "blocks": [
       {
         "type": "agreement",
         "buckets": [
-          { "subjects": "if-clause (unreal condition)", "form": "past simple (were for be)", "tag": "If + past", "example": "If I had / If I were …" },
-          { "subjects": "result clause", "form": "would + base verb", "tag": "would", "highlight": true, "example": "… I would travel." }
+          {
+            "subjects": "if-clause (unreal condition)",
+            "form": "past simple (were for be)",
+            "tag": "If + past",
+            "example": "If I had / If I were …"
+          },
+          {
+            "subjects": "result clause",
+            "form": "would + base verb",
+            "tag": "would",
+            "highlight": true,
+            "example": "… I would travel."
+          }
         ]
       }
-    ]
+    ],
+    "step_titles_mm": {
+      "when": "မဖြစ်နိုင်တဲ့ စိတ်ကူးတွေအတွက် ဘယ်လိုသုံးမလဲ",
+      "pattern": "If + past နဲ့ would ကို ဘယ်လိုသုံးမလဲ"
+    }
   },
   "toolkit": {
     "verbs": [
-      "v_go", "v_live", "v_work", "v_play", "v_study", "v_read",
-      "v_eat", "v_start", "v_watch", "v_cook"
+      "v_go",
+      "v_live",
+      "v_work",
+      "v_play",
+      "v_study",
+      "v_read",
+      "v_eat",
+      "v_start",
+      "v_watch",
+      "v_cook"
     ],
     "time_words": [],
     "verb_form": "past",
-    "note_mm": "If + past simple (had, lived, knew · be → were), … would + verb (base) (would go, would help)။ if-clause မှာ would မထည့်ပါနဲ့။ if ရှေ့မှာ ဆိုရင် comma သုံးပါ။"
+    "note_mm": "ပုံစံက If + past simple (ဥပမာ had, lived, knew · 'be' ဆိုရင်တော့ were), … would + verb (base) (ဥပမာ would go, would help) ပါ။ if-clause ထဲမှာ 'would' လုံးဝ မထည့်ရပါဘူးနော်။ if-clause ကို ဝါကျအရှေ့မှာထားရင် comma (,) ခံပေးဖို့ မမေ့ပါနဲ့။"
   },
   "exercises": [
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "If I ___ rich, I would buy a big house.",
-      "prompt_mm": "ချမ်းသာရင် အိမ်ကြီးတစ်လုံး ဝယ်မှာ။",
-      "options": ["were", "am", "would be"],
-      "answers": ["were"],
-      "explain_mm": "second conditional — be ဆိုရင် subject အားလုံးအတွက် were → If I were rich။"
+      "prompt_mm": "ငါသာ ချမ်းသာရင် အိမ်ကြီးကြီးတစ်လုံး ဝယ်မှာ။",
+      "options": [
+        "were",
+        "am",
+        "would be"
+      ],
+      "answers": [
+        "were"
+      ],
+      "explain_mm": "second conditional မှာ Verb 'be' ကို သုံးရင် Subject အားလုံးအတွက် 'were' ကိုပဲ သုံးရပါတယ် → If I were rich။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "If she had more time, she ___ a language.",
-      "prompt_mm": "အချိန် ပိုရှိရင် သူမ ဘာသာစကားတစ်ခု သင်မှာ။",
-      "options": ["would learn", "will learn", "learns"],
-      "answers": ["would learn"],
-      "explain_mm": "result မှာ would + verb (base) → would learn။"
+      "prompt_mm": "သူမမှာသာ အချိန်ပိုရှိရင် ဘာသာစကားအသစ်တစ်ခု သင်ယူမှာ။",
+      "options": [
+        "would learn",
+        "will learn",
+        "learns"
+      ],
+      "answers": [
+        "would learn"
+      ],
+      "explain_mm": "result clause မှာ would + verb (base) ပုံစံကို သုံးရပါတယ် → would learn။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
       "prompt_en": "If I ___ (know) the answer, I would tell you.",
-      "prompt_mm": "အဖြေ သိရင် မင်းကို ပြောမှာ။ ( know ကို သုံးပါ )",
-      "answers": ["knew"],
-      "explain_mm": "if-clause မှာ past simple → knew (know ရဲ့ အတိတ်)။"
+      "prompt_mm": "အဖြေကိုသာ သိရင် မင်းကို ပြောပြမှာပေါ့။ ( know ကို သုံးပေးပါ )",
+      "answers": [
+        "knew"
+      ],
+      "explain_mm": "if-clause မှာ past simple ကို သုံးရမှာဖြစ်လို့ 'know' ရဲ့ past tense ပုံစံ 'knew' ကို သုံးပေးရပါမယ်။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "If I would have a car, I would drive to work.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
-      "answers": ["If I had a car, I would drive to work", "if i had a car, i would drive to work.", "If I had a car I would drive to work"],
-      "explain_mm": "if-clause မှာ would မထည့်ရဘူး → If I had a car, …။"
+      "prompt_mm": "အောက်က ဝါကျမှာ မှားနေတာလေးကို ပြင်ပေးပါနော်။",
+      "answers": [
+        "If I had a car, I would drive to work",
+        "if i had a car, i would drive to work.",
+        "If I had a car I would drive to work"
+      ],
+      "explain_mm": "if-clause ထဲမှာ 'would' ထည့်သုံးလို့ မရပါဘူး → If I had a car, … ဆိုပြီး past simple ပဲ သုံးရမှာပါ။"
     },
     {
       "kind": "reorder",
       "grade": "auto",
       "prompt_en": "Put in order:  were  /  if  /  you  /  I  /  would  /  go  /  I",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( If I were you + I would go )",
-      "answers": ["If I were you, I would go", "if i were you i would go.", "If I were you I would go"],
-      "explain_mm": "If + past (were) , would + base → If I were you, I would go။"
+      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ရေးပေးပါ။ ( If I were you + I would go )",
+      "answers": [
+        "If I were you, I would go",
+        "if i were you i would go.",
+        "If I were you I would go"
+      ],
+      "explain_mm": "ပုံစံလေးအတိုင်း If + past (were) , would + base (go) → If I were you, I would go. ဆိုပြီး ဖြေရမှာပါနော်။"
     },
     {
       "kind": "scan_sentences",
@@ -145,9 +226,9 @@
       "min_lines": 5,
       "max_lines": 8,
       "prompt_en": "Part 1 — daydreams. Write 5–8 second-conditional sentences about imaginary or unlikely situations (If I …, I would …). Use the past in the if-part and 'would' in the result. Try 'If I were …' at least once.",
-      "prompt_mm": "အပိုင်း ၁ — စိတ်ကူးယဉ်ချက်များ။ စိတ်ကူး သို့မဟုတ် ဖြစ်ဖို့နည်းတဲ့ အခြေအနေတွေ အကြောင်း second conditional (If I …, I would …) sentence ၅–၈ ကြောင်း ရေးပါ။ if-part မှာ past၊ result မှာ would သုံးပါ။ 'If I were …' ကို အနည်းဆုံး တစ်ခါ စမ်းကြည့်ပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
+      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ရဲ့ စိတ်ကူးယဉ်အိပ်မက်များ။ ကိုယ့်ရဲ့ စိတ်ကူးထဲက ဒါမှမဟုတ် တကယ်ဖြစ်လာဖို့ မလွယ်တဲ့ အခြေအနေတွေအကြောင်း second conditional (If I …, I would …) ပုံစံကိုသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ရအောင်။ if-clause မှာ past tense သုံးပြီး result clause မှာ 'would' သုံးဖို့ မမေ့နဲ့နော်။ 'If I were …' ဆိုတဲ့ ပုံစံကိုလည်း အနည်းဆုံး တစ်ခါလောက် ထည့်သုံးကြည့်ပါ။ ရေးပြီးသွားရင် ဖုန်းနဲ့ scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ စာရိုက်ပြီး ထည့်ပေးก็ได้ပါတယ်။",
       "model": "If I {v}had{/v} a free year, I {v}would travel{/v} across Asia. If I {v}were{/v} taller, I {v}would play{/v} basketball. If I {v}spoke{/v} French, I {v}would live{/v} in Paris. If I {v}didn't work{/v} weekends, I {v}would see{/v} my family more. If I {v}won{/v} the lottery, I {v}would help{/v} my village.",
-      "explain_mm": "If + past simple (were for be), … would + verb (base)။ if-clause မှာ would မထည့်ပါနဲ့။",
+      "explain_mm": "ပုံစံကို မှတ်ထားရအောင်နော်: If + past simple ('be' အတွက်ဆို 'were'), … would + verb (base)။ if-clause ထဲမှာ 'would' လုံးဝမထည့်ရပါဘူး။",
       "grading": {
         "grammar_point": "Second conditional",
         "rule": "If + past simple, … would + base verb, for unreal / unlikely present or future situations. 'were' for all subjects with be.",
@@ -162,16 +243,19 @@
           "Present tense in the if-clause (If I have)",
           "'was' instead of 'were' with I/he/she"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     },
     {
       "kind": "scan_paragraph",
       "grade": "ai",
       "prompt_en": "Part 2 — a different life. Write a short paragraph (4–6 sentences) about how your life would be different if one big thing changed (a place, a job, a skill), using the second conditional.",
-      "prompt_mm": "အပိုင်း ၂ — မတူတဲ့ ဘဝ။ ကြီးမားတဲ့ အရာတစ်ခု (နေရာ၊ အလုပ်၊ ကျွမ်းကျင်မှု) ပြောင်းရင် မင်းဘဝ ဘယ်လို ကွဲပြားမလဲဆိုတာ second conditional သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
+      "prompt_mm": "အပိုင်း ၂ — မတူညီတဲ့ ဘဝတစ်ခု။ ကိုယ့်ဘဝမှာ အရေးကြီးတဲ့အရာတစ်ခု (ဥပမာ - နေထိုင်တဲ့နေရာ၊ အလုပ်အကိုင်၊ ကိုယ့်ရဲ့အရည်အချင်း) သာ ပြောင်းလဲသွားခဲ့မယ်ဆိုရင် ဘဝက ဘယ်လိုတွေ ကွဲပြားသွားမလဲ။ second conditional ကို သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးကြည့်ပါ။ ပြီးရင် ဖုန်းနဲ့ scan ဖတ်ပြီး တင်ပေးပါနော်။",
       "model": "I often think about life in another city. If I {v}lived{/v} in Yangon, I {v}would have{/v} more job choices. If I {v}earned{/v} more, I {v}would send{/v} money home. I {v}wouldn't feel{/v} so far away if my family {v}were{/v} closer. If I {v}had{/v} the courage, I {v}would change{/v} everything tomorrow.",
-      "explain_mm": "If + past simple, … would + verb (base)။ စိတ်ကူးတဲ့ အခြေအနေနဲ့ သူ့အကျိုးဆက်ကို ချိတ်ဆက်ပါ။",
+      "explain_mm": "If + past simple, … would + verb (base) ပုံစံကို သုံးပြီးတော့ ကိုယ်စိတ်ကူးထားတဲ့ အခြေအနေ (if-clause) နဲ့ အဲဒီကနေ ဖြစ်လာမယ့် အကျိုးဆက် (result clause) ကို ဆက်စပ်ပြီး ရေးပေးရမှာပါ။",
       "grading": {
         "grammar_point": "Second conditional",
         "rule": "Link an unreal condition (past) to its imagined result (would), for a hypothetical life.",
@@ -186,7 +270,10 @@
           "Mixing in real future (will)",
           "was/were confusion"
         ],
-        "ignore": ["punctuation", "capitalization"]
+        "ignore": [
+          "punctuation",
+          "capitalization"
+        ]
       }
     }
   ]
