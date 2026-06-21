@@ -1,30 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:speakcraft/bloc/daily_speaking/daily_speaking_prep_bloc.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
-import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
-import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
-import 'package:speakcraft/model/daily_speaking/guided_lesson.dart';
-import 'package:speakcraft/model/daily_speaking/prep_section.dart';
 import 'package:speakcraft/screens/auth/login_screen.dart';
 import 'package:speakcraft/screens/auth/sign_up_screen.dart';
-import 'package:speakcraft/screens/daily_speaking/daily_speaking_entry_page.dart';
-import 'package:speakcraft/screens/daily_speaking/feedback/choose_feedback_page.dart';
-import 'package:speakcraft/screens/daily_speaking/feedback/feedback_result_page.dart';
-import 'package:speakcraft/screens/daily_speaking/feedback/review_highlights_page.dart';
-import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
-import 'package:speakcraft/screens/daily_speaking/history/daily_speaking_history_page.dart';
-import 'package:speakcraft/screens/daily_speaking/just_record/just_record_page.dart';
-import 'package:speakcraft/screens/daily_speaking/own_topic/choose_prep_page.dart';
-import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_prep_page.dart';
-import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_record_page.dart';
-import 'package:speakcraft/screens/daily_speaking/own_topic/own_topic_scaffold_page.dart';
-import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_list_page.dart';
-import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_prep_page.dart';
-import 'package:speakcraft/screens/daily_speaking/suggested/suggested_topic_record_page.dart';
-import 'package:speakcraft/screens/daily_speaking/guided/guided_lesson_list_page.dart';
-import 'package:speakcraft/screens/daily_speaking/guided/guided_lesson_page.dart';
-import 'package:speakcraft/screens/daily_speaking/guided/guided_record_page.dart';
 import 'package:speakcraft/model/writing/writing_unit.dart';
 import 'package:speakcraft/model/writing/writing_lexicon.dart';
 import 'package:speakcraft/screens/writing/writing_path_page.dart';
@@ -83,26 +60,6 @@ class PmpRoutes {
       '/important_of_social_health_json_list';
   static const paulRuddInterviewJsonList = '/paul_rudd_interview_json_list';
   static const goingViralTaughtMeJsonList = '/going_viral_taugh_me_json_list';
-
-  // Daily Speaking Practice module — see lib/screens/daily_speaking/CLAUDE.md
-  static const dailySpeakingEntry = '/daily_speaking';
-  static const dailySpeakingJustRecord = '/daily_speaking/just_record';
-  static const dailySpeakingOwnTopicPrep = '/daily_speaking/own_topic/prep';
-  static const dailySpeakingOwnTopicChoosePrep =
-      '/daily_speaking/own_topic/choose_prep';
-  static const dailySpeakingOwnTopicScaffold =
-      '/daily_speaking/own_topic/scaffold';
-  static const dailySpeakingOwnTopicRecord = '/daily_speaking/own_topic/record';
-  static const dailySpeakingSuggestedList = '/daily_speaking/suggested';
-  static const dailySpeakingSuggestedPrep = '/daily_speaking/suggested/prep';
-  static const dailySpeakingSuggestedRecord = '/daily_speaking/suggested/record';
-  static const dailySpeakingGuidedList = '/daily_speaking/guided';
-  static const dailySpeakingGuidedLesson = '/daily_speaking/guided/lesson';
-  static const dailySpeakingGuidedRecord = '/daily_speaking/guided/record';
-  static const dailySpeakingChooseFeedback = '/daily_speaking/choose_feedback';
-  static const dailySpeakingFeedback = '/daily_speaking/feedback';
-  static const dailySpeakingReview = '/daily_speaking/review';
-  static const dailySpeakingHistory = '/daily_speaking/history';
 
   // Writing Practice module — see WRITING_FEATURE_PLAN.md
   static const writingPath = '/writing';
@@ -260,129 +217,6 @@ class PmpRoutes {
           GritJsonPreview(assetPath: args['assetPath'] as String),
           settings,
         );
-      case dailySpeakingEntry:
-        return _getRoute(const DailySpeakingEntryPage(), settings);
-      case dailySpeakingJustRecord:
-        final args = settings.arguments as Map<String, dynamic>?;
-        return _getRoute(
-          JustRecordPage(
-            topic: args?['topic'] as DailySpeakingTopic?,
-            topicAttemptId: args?['topicAttemptId'] as String?,
-            revisionNumber: args?['revisionNumber'] as int? ?? 1,
-          ),
-          settings,
-        );
-      case dailySpeakingOwnTopicPrep:
-        return _getRoute(const OwnTopicPrepPage(), settings);
-      case dailySpeakingOwnTopicChoosePrep:
-        final args = settings.arguments as Map<String, dynamic>;
-        return _getRoute(
-          ChoosePrepPage(topicText: args['topicText'] as String),
-          settings,
-        );
-      case dailySpeakingOwnTopicScaffold:
-        final args = settings.arguments as Map<String, dynamic>;
-        final topicText = args['topicText'] as String;
-        final sections =
-            (args['sections'] as Set<PrepSection>?) ?? kRecommendedPrep;
-        return _getRoute(
-          // Page-scoped bloc (like the suggested-topic flow): prep state only
-          // matters inside this screen. The first expand is kicked off here,
-          // generating only the sections the learner chose.
-          BlocProvider(
-            create: (_) => DailySpeakingPrepBloc()
-              ..add(DailySpeakingPrepEvent.expand(topicText, sections)),
-            child: OwnTopicScaffoldPage(
-              topicText: topicText,
-              sections: sections,
-            ),
-          ),
-          settings,
-        );
-      case dailySpeakingOwnTopicRecord:
-        final args = settings.arguments as Map<String, dynamic>;
-        final topic = args['topic'] as DailySpeakingTopic;
-        return _getRoute(
-          OwnTopicRecordPage(
-            topic: topic,
-            topicAttemptId: args['topicAttemptId'] as String?,
-            revisionNumber: args['revisionNumber'] as int? ?? 1,
-          ),
-          settings,
-        );
-      case dailySpeakingSuggestedList:
-        return _getRoute(const SuggestedTopicListPage(), settings);
-      case dailySpeakingSuggestedPrep:
-        final args = settings.arguments as Map<String, dynamic>;
-        final topic = args['topic'] as DailySpeakingTopic;
-        return _getRoute(SuggestedTopicPrepPage(topic: topic), settings);
-      case dailySpeakingSuggestedRecord:
-        final args = settings.arguments as Map<String, dynamic>;
-        final topic = args['topic'] as DailySpeakingTopic;
-        return _getRoute(
-          SuggestedTopicRecordPage(
-            topic: topic,
-            topicAttemptId: args['topicAttemptId'] as String?,
-            revisionNumber: args['revisionNumber'] as int? ?? 1,
-          ),
-          settings,
-        );
-      case dailySpeakingGuidedList:
-        return _getRoute(const GuidedLessonListPage(), settings);
-      case dailySpeakingGuidedLesson:
-        final args = settings.arguments as Map<String, dynamic>;
-        final lesson = args['lesson'] as GuidedLesson;
-        return _getRoute(GuidedLessonPage(lesson: lesson), settings);
-      case dailySpeakingGuidedRecord:
-        final args = settings.arguments as Map<String, dynamic>;
-        final topic = args['topic'] as DailySpeakingTopic;
-        return _getRoute(
-          GuidedRecordPage(
-            topic: topic,
-            userParagraph: args['userParagraph'] as String?,
-            level: args['level'] as int? ?? 3,
-            topicAttemptId: args['topicAttemptId'] as String?,
-            revisionNumber: args['revisionNumber'] as int? ?? 1,
-          ),
-          settings,
-        );
-      case dailySpeakingChooseFeedback:
-        final args = settings.arguments as Map<String, dynamic>;
-        return _getRoute(
-          ChooseFeedbackPage(
-            inputMode: args['inputMode'] as String,
-            onRamp: args['onRamp'] as String,
-            audioPath: args['audioPath'] as String?,
-            text: args['text'] as String?,
-            topic: args['topic'] as DailySpeakingTopic?,
-            topicAttemptId: args['topicAttemptId'] as String?,
-            revisionNumber: args['revisionNumber'] as int? ?? 1,
-          ),
-          settings,
-        );
-      case dailySpeakingFeedback:
-        final args = settings.arguments as Map<String, dynamic>;
-        final session = args['session'] as DailySpeakingSession;
-        // Optional — passed for loop-capable on-ramps to enable "Polish &
-        // retry" on the result page.
-        final topic = args['topic'] as DailySpeakingTopic?;
-        return _getRoute(
-          FeedbackResultPage(
-            session: session,
-            topic: topic,
-          ),
-          settings,
-        );
-      case dailySpeakingReview:
-        final args = settings.arguments as Map<String, dynamic>;
-        return _getRoute(
-          ReviewHighlightsPage(
-            feedback: args['feedback'] as DailySpeakingFeedback,
-          ),
-          settings,
-        );
-      case dailySpeakingHistory:
-        return _getRoute(const DailySpeakingHistoryPage(), settings);
       case writingPath:
         return _getRoute(const WritingPathPage(), settings);
       case writingTeach:

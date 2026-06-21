@@ -2,8 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:speakcraft/bloc/audio_player/audio_player_bloc.dart';
 import 'package:speakcraft/bloc/auth/auth_bloc.dart';
-import 'package:speakcraft/bloc/daily_speaking/daily_speaking_bloc.dart';
-import 'package:speakcraft/bloc/daily_speaking/daily_speaking_history_bloc.dart';
 import 'package:speakcraft/bloc/internet_checker/internet_checker_bloc.dart';
 import 'package:speakcraft/bloc/listening/listening_bloc.dart';
 import 'package:speakcraft/bloc/listening_practice_answer/listening_practice_answer_bloc.dart';
@@ -47,9 +45,6 @@ Future<void> setupServiceLocator() async {
   sl.registerLazySingleton<UserActivityBloc>(() => UserActivityBloc());
   sl.registerLazySingleton<VideoStepProgressBloc>(
       () => VideoStepProgressBloc());
-  sl.registerLazySingleton<DailySpeakingBloc>(() => DailySpeakingBloc());
-  sl.registerLazySingleton<DailySpeakingHistoryBloc>(
-      () => DailySpeakingHistoryBloc());
 
   // Screen-local BLoCs (factory — fresh instance per screen)
   sl.registerFactory<ListeningBloc>(() => ListeningBloc());

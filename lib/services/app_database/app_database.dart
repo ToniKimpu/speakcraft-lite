@@ -5,7 +5,6 @@ import '../../model/listening_practice_answer/listening_practice_answer.dart';
 import '../../model/saved_term/saved_term.dart';
 import '../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import '../../model/video_step_progress/video_step_progress.dart';
-import '../../tables/daily_speaking_session_table.dart';
 import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/saved_term_table.dart';
 import '../../tables/user_recorded_sentence_audio_table.dart';
@@ -19,7 +18,6 @@ part 'app_database.g.dart';
     UserRecordedSentenceAudioTable,
     SavedTermTable,
     VideoStepProgressTable,
-    DailySpeakingSessionTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -30,7 +28,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 9;
+  int get schemaVersion => 10;
 
   @override
   MigrationStrategy get migration {
@@ -48,37 +46,9 @@ class AppDatabase extends _$AppDatabase {
         if (from < 4) {
           await m.createTable(videoStepProgressTable);
         }
-        if (from < 5) {
-          await m.createTable(dailySpeakingSessionTable);
-        }
-        if (from < 6) {
-          // Version-loop columns. Added separately so v5 installs keep their
-          // existing daily-speaking history.
-          await m.addColumn(
-            dailySpeakingSessionTable,
-            dailySpeakingSessionTable.topicAttemptId,
-          );
-          await m.addColumn(
-            dailySpeakingSessionTable,
-            dailySpeakingSessionTable.revisionNumber,
-          );
-        }
-        if (from < 7) {
-          // Saved-recording path for the audio player / A/B replay. Added
-          // separately so v6 installs keep their existing history.
-          await m.addColumn(
-            dailySpeakingSessionTable,
-            dailySpeakingSessionTable.audioPath,
-          );
-        }
-        if (from < 8) {
-          // Serialized topic so a chain can be resumed ("Polish & retry") from
-          // history. Old rows stay null → no resume button, which is correct.
-          await m.addColumn(
-            dailySpeakingSessionTable,
-            dailySpeakingSessionTable.topicJson,
-          );
-        }
+        // NOTE: schema v5–v8 built up the daily_speaking_session_table. That
+        // module was removed in this (standalone) app, so its create/alter
+        // steps are gone and the table is dropped in the v10 step below.
         if (from < 9) {
           // The "Useful Spoken Patterns" (days) and "Practice with AI" modules
           // were removed from the app. Drop their now-orphaned local tables so
@@ -89,6 +59,13 @@ class AppDatabase extends _$AppDatabase {
               'DROP TABLE IF EXISTS user_example_answer_table');
           await customStatement(
               'DROP TABLE IF EXISTS spoken_pattern_exercise_answer_table');
+        }
+        if (from < 10) {
+          // Daily Speaking module removed in the standalone build. Drop its
+          // now-orphaned local history table so upgrading installs don't carry
+          // dead data.
+          await customStatement(
+              'DROP TABLE IF EXISTS daily_speaking_session_table');
         }
       },
       beforeOpen: (details) async {
