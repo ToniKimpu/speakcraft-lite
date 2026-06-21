@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
+import 'package:speakcraft/repositories/daily_speaking/daily_speaking_session_repository.dart';
 
 /// Compact play/pause + scrubber for a locally-saved daily-speaking recording.
 ///
@@ -44,7 +47,19 @@ class _SessionAudioPlayerState extends State<SessionAudioPlayer> {
 
   Future<void> _load() async {
     try {
-      await _player.setFilePath(widget.audioPath);
+      final path = widget.audioPath;
+      // A local file path (imported clip / legacy session) → play directly.
+      // Otherwise it's a Supabase Storage object path → resolve a signed URL.
+      if (File(path).existsSync()) {
+        await _player.setFilePath(path);
+      } else {
+        final url = await DailySpeakingSessionRepository().audioUrl(path);
+        if (url == null) {
+          if (mounted) setState(() => _failed = true);
+          return;
+        }
+        await _player.setUrl(url);
+      }
       // Reset to the start once playback completes so the button shows ▶ again.
       _player.playerStateStream.listen((state) {
         if (state.processingState == ProcessingState.completed) {

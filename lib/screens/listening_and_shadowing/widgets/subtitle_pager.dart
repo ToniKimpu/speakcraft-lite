@@ -20,6 +20,7 @@ class SubtitlePager extends StatefulWidget {
     required this.subtitles,
     required this.hasMMSub,
     required this.onUserChangePage,
+    this.explanationLocked = false,
   });
 
   final YoutubePlayerController youtubeController;
@@ -28,6 +29,9 @@ class SubtitlePager extends StatefulWidget {
   final List<Subtitle> subtitles;
   final bool hasMMSub;
   final void Function(Subtitle subtitle) onUserChangePage;
+
+  /// When true, the in-player "View explanation" link is gated behind Premium.
+  final bool explanationLocked;
 
   @override
   State<SubtitlePager> createState() => _SubtitlePagerState();
@@ -108,6 +112,7 @@ class _SubtitlePagerState extends State<SubtitlePager> {
                 audioPlayer: widget.audioPlayer,
                 subtitle: _selectedSubtitle,
                 hasMMSub: widget.hasMMSub,
+                explanationLocked: widget.explanationLocked,
               ),
             ),
             Divider(color: colorScheme.outlineVariant, height: 1),

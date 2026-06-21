@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:speakcraft/core/logger/app_logger.dart';
@@ -7,9 +6,45 @@ import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 import 'package:speakcraft/model/daily_speaking/feedback_section.dart';
 import 'package:speakcraft/model/daily_speaking/prep_section.dart';
 import 'package:speakcraft/services/supabase_service.dart';
+import 'package:supabase_flutter/supabase_flutter.dart'
+    show FunctionException, FileOptions;
 
 import 'daily_speaking_sample_feedback.dart';
 import 'daily_speaking_service_stubs.dart';
+
+/// Thrown when the learner has hit their daily AI-feedback quota (free 1/day, or
+/// premium daily token grant). The BLoC catches this to prompt an upgrade
+/// instead of showing a generic error. [reason] is `free_daily` or
+/// `premium_tokens`.
+class DailySpeakingLimitException implements Exception {
+  DailySpeakingLimitException(this.reason);
+  final String reason;
+  @override
+  String toString() => 'DailySpeakingLimitException($reason)';
+}
+
+/// Thrown when the AI is temporarily overloaded (Gemini "high demand" / 503)
+/// and the edge function's retries + model fallback were all exhausted. Distinct
+/// from a generic error: the learner's audio/text is intact and a retry is FREE
+/// (no session was recorded server-side, so no quota was spent), so the UI
+/// offers an immediate "tap to retry" instead of a dead-end. The edge function
+/// signals this with HTTP 503 + `{reason: 'overloaded'}`; a 502 (older upstream
+/// gemini failure) is treated the same way since it's almost always transient.
+class DailySpeakingBusyException implements Exception {
+  @override
+  String toString() => 'DailySpeakingBusyException';
+}
+
+/// Thrown when the async job is still running after the client give-up window.
+/// The job row lives on (the server keeps it; a sweep can finish it), so this is
+/// "taking longer than usual — try again", not a hard failure. [sessionId] is
+/// the row that's still processing.
+class DailySpeakingProcessingException implements Exception {
+  DailySpeakingProcessingException(this.sessionId);
+  final int sessionId;
+  @override
+  String toString() => 'DailySpeakingProcessingException($sessionId)';
+}
 
 /// Input bundle for a single review request — voice OR text, plus optional
 /// topic context. Keeping the variants in one class avoids a dispatch fork in
@@ -20,6 +55,9 @@ class SessionInput {
     required this.onRamp,
     required this.requestedSections,
     this.topic,
+    this.durationSeconds = 0,
+    this.topicAttemptId,
+    this.revisionNumber = 1,
   })  : text = null,
         inputMode = 'voice';
 
@@ -28,7 +66,10 @@ class SessionInput {
     required this.onRamp,
     required this.requestedSections,
     this.topic,
+    this.topicAttemptId,
+    this.revisionNumber = 1,
   })  : audioPath = null,
+        durationSeconds = 0,
         inputMode = 'text';
 
   final String? audioPath;
@@ -36,6 +77,15 @@ class SessionInput {
   final DailySpeakingTopic? topic;
   final String onRamp;
   final String inputMode;
+
+  /// Version-loop chain id (minted before the call) + position, so the edge
+  /// function can write a complete session row for history's v1/v2 grouping.
+  final String? topicAttemptId;
+  final int revisionNumber;
+
+  /// Actual recording length (seconds), measured client-side. Gemini can't read
+  /// wall-clock duration reliably, so the edge function trusts this when > 0.
+  final int durationSeconds;
 
   /// Which optional feedback sections the learner asked for. The edge function
   /// builds its prompt from these so unrequested sections cost no tokens.
@@ -46,12 +96,16 @@ class SessionInput {
 /// Single entry point the BLoC calls. Owns the stub/real switch so swapping
 /// to the live edge function is a one-line change.
 class DailySpeakingService {
-  /// Flip to `false` the moment the Supabase edge function
-  /// `daily-speaking-review` is deployed with `GEMINI_API_KEY` set.
+  /// Prep (expandTopic / askMore) still uses the stub — the
+  /// `daily-speaking-prep` edge function isn't deployed yet.
   static const bool useStubResponse = true;
 
+  /// The `daily-speaking-review` edge function IS deployed, so the feedback path
+  /// runs for real. Flip to `true` to fall back to the canned stub.
+  static const bool useStubReview = false;
+
   Future<DailySpeakingFeedback> reviewSession(SessionInput input) async {
-    if (useStubResponse) {
+    if (useStubReview) {
       return _stubResponse(input);
     }
     return _realResponse(input);
@@ -140,6 +194,8 @@ class DailySpeakingService {
             return has(FeedbackSectionKey.collocations);
           case PhraseKind.idiom:
             return has(FeedbackSectionKey.idioms);
+          case PhraseKind.phrasalVerb:
+            return has(FeedbackSectionKey.phrasalVerbs);
         }
       }).toList(growable: false),
       nativeRewrite:
@@ -155,24 +211,107 @@ class DailySpeakingService {
     );
   }
 
+  /// Async pipeline: upload audio + SUBMIT (returns a session id in ~1s) → the
+  /// edge function processes Gemini in the background → we POLL the session row
+  /// until it's `completed`/`error`. A worker that dies mid-call (the old 5-min
+  /// wall-clock failure) leaves the row stuck `processing`; we re-KICK it so a
+  /// fresh worker takes over. See DAILY_SPEAKING_ASYNC_PLAN.md.
   Future<DailySpeakingFeedback> _realResponse(SessionInput input) async {
     final body = await _serializeInput(input);
-    final res = await supabase.functions.invoke(
-      'daily-speaking-review',
-      body: body,
-    );
-    final data = res.data;
-    if (data is! Map) {
-      throw const FormatException('daily-speaking-review: bad response');
-    }
-    return DailySpeakingFeedback.fromJson(
-      Map<String, dynamic>.from(data),
-    );
+    final sessionId = await _submit(body);
+    return _pollUntilDone(sessionId);
   }
 
-  // TODO: finalize audio upload format with the edge function. Gemini accepts
-  // audio natively — likely base64 in the JSON body. Confirm with the first
-  // real test call.
+  /// Submit the job; returns the session id. Throws limit/busy as today.
+  Future<int> _submit(Map<String, dynamic> body) async {
+    try {
+      final res = await supabase.functions.invoke(
+        'daily-speaking-review',
+        body: body,
+      );
+      final data = res.data;
+      if (res.status == 429 ||
+          (data is Map && data['limit_reached'] == true)) {
+        throw DailySpeakingLimitException(
+          (data is Map ? data['reason']?.toString() : null) ?? 'limit',
+        );
+      }
+      if (data is Map && data['session_id'] != null) {
+        return (data['session_id'] as num).toInt();
+      }
+      if (res.status == 503 || res.status == 502 || res.status == 546) {
+        throw DailySpeakingBusyException();
+      }
+      throw FormatException('daily-speaking submit: status ${res.status}');
+    } on FunctionException catch (e) {
+      final details = e.details;
+      if (e.status == 429 ||
+          (details is Map && details['limit_reached'] == true)) {
+        throw DailySpeakingLimitException(
+          (details is Map ? details['reason']?.toString() : null) ?? 'limit',
+        );
+      }
+      if (e.status == 503 || e.status == 502 || e.status == 546) {
+        throw DailySpeakingBusyException();
+      }
+      rethrow;
+    }
+  }
+
+  /// Poll the session row until terminal. Re-kicks a stuck `processing` row (the
+  /// app drives retries while open). Throws [DailySpeakingBusyException] on a
+  /// transient `overloaded` error, [DailySpeakingProcessingException] if it's
+  /// still going after the give-up window (the row lives on for history/sweep).
+  Future<DailySpeakingFeedback> _pollUntilDone(int sessionId) async {
+    const pollEvery = Duration(seconds: 2);
+    const kickAfter = Duration(seconds: 160); // > server STALE_SECONDS (150)
+    const giveUpAfter = Duration(minutes: 6);
+    final startedAt = DateTime.now();
+    var lastKick = DateTime.now();
+
+    while (true) {
+      await Future<void>.delayed(pollEvery);
+      final row = await supabase
+          .from('daily_speaking_sessions')
+          .select('status, error_message, feedback')
+          .eq('id', sessionId)
+          .maybeSingle();
+      final status = row?['status'] as String?;
+      if (status == 'completed') {
+        final fb = row?['feedback'];
+        if (fb is Map) {
+          return DailySpeakingFeedback.fromJson(Map<String, dynamic>.from(fb));
+        }
+        throw const FormatException('completed session missing feedback');
+      }
+      if (status == 'error') {
+        final reason = row?['error_message'] as String?;
+        if (reason == 'overloaded') throw DailySpeakingBusyException();
+        throw Exception('daily-speaking failed: ${reason ?? 'unknown'}');
+      }
+      // queued / processing → re-kick a stuck job so a fresh worker takes over.
+      if (DateTime.now().difference(lastKick) > kickAfter) {
+        lastKick = DateTime.now();
+        try {
+          await supabase.functions.invoke(
+            'daily-speaking-review',
+            body: {'kick': sessionId},
+          );
+        } catch (_) {/* best-effort re-dispatch */}
+      }
+      if (DateTime.now().difference(startedAt) > giveUpAfter) {
+        throw DailySpeakingProcessingException(sessionId);
+      }
+    }
+  }
+
+  /// Builds the edge-function request. Audio is UPLOADED to Storage first (the
+  /// `user-recordings` bucket, under `{uid}/daily-speaking/…`) and only the
+  /// storage PATH is sent — never the base64 bytes. Keeping the audio out of the
+  /// request body keeps the worker from holding a multi-MB clip in memory (which
+  /// blew the resource limit on 5-min recordings), and lets the edge function
+  /// reuse the uploaded file as the replayable session recording. The `{uid}`
+  /// prefix matches the bucket's "own user audio" RLS policy.
   Future<Map<String, dynamic>> _serializeInput(SessionInput input) async {
     final body = <String, dynamic>{
       'on_ramp': input.onRamp,
@@ -181,9 +320,28 @@ class DailySpeakingService {
       if (input.topic != null) 'topic': input.topic!.toJson(),
     };
     if (input.audioPath != null) {
-      final bytes = await File(input.audioPath!).readAsBytes();
-      body['audio_base64'] = base64Encode(bytes);
+      final uid = supabase.auth.currentUser?.id;
+      if (uid == null) {
+        throw StateError('Not signed in — cannot upload audio.');
+      }
+      final ts = DateTime.now().microsecondsSinceEpoch;
+      final attempt = input.topicAttemptId ?? 'x';
+      final storagePath =
+          '$uid/daily-speaking/${ts}_${attempt}_v${input.revisionNumber}.m4a';
+      await supabase.storage.from('user-recordings').upload(
+            storagePath,
+            File(input.audioPath!),
+            fileOptions: const FileOptions(contentType: 'audio/mp4', upsert: true),
+          );
+      body['audio_path'] = storagePath;
       body['audio_format'] = 'm4a';
+    }
+    if (input.durationSeconds > 0) {
+      body['duration_seconds'] = input.durationSeconds;
+    }
+    if (input.topicAttemptId != null) {
+      body['topic_attempt_id'] = input.topicAttemptId;
+      body['revision_number'] = input.revisionNumber;
     }
     if (input.text != null) {
       body['text'] = input.text;

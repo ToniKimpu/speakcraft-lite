@@ -173,24 +173,11 @@ class _VersionCompareStrip extends StatelessWidget {
   Future<int?> _previousScore() async {
     final attemptId = session.topicAttemptId;
     if (attemptId == null) return null;
-    final table = AppDatabase.instance().dailySpeakingSessionTable;
-    final rows = await (table.select()
-          ..where((t) =>
-              t.topicAttemptId.equals(attemptId) &
-              t.revisionNumber.isSmallerThanValue(session.revisionNumber))
-          ..orderBy([
-            (t) => drift.OrderingTerm(
-                  expression: t.revisionNumber,
-                  mode: drift.OrderingMode.desc,
-                ),
-          ])
-          ..limit(1))
-        .get();
-    if (rows.isEmpty) return null;
-    final fb = DailySpeakingFeedback.fromJson(
-      Map<String, dynamic>.from(jsonDecode(rows.first.feedbackJson) as Map),
+    final prev = await DailySpeakingSessionRepository().previousVersion(
+      topicAttemptId: attemptId,
+      revisionNumber: session.revisionNumber,
     );
-    return fb.score;
+    return prev?.feedback.score;
   }
 
   @override
@@ -252,22 +239,11 @@ class _AudioSection extends StatelessWidget {
   Future<String?> _previousAudioPath() async {
     final attemptId = session.topicAttemptId;
     if (attemptId == null || session.revisionNumber <= 1) return null;
-    final table = AppDatabase.instance().dailySpeakingSessionTable;
-    final rows = await (table.select()
-          ..where((t) =>
-              t.topicAttemptId.equals(attemptId) &
-              t.revisionNumber.isSmallerThanValue(session.revisionNumber) &
-              t.audioPath.isNotNull())
-          ..orderBy([
-            (t) => drift.OrderingTerm(
-                  expression: t.revisionNumber,
-                  mode: drift.OrderingMode.desc,
-                ),
-          ])
-          ..limit(1))
-        .get();
-    if (rows.isEmpty) return null;
-    return rows.first.audioPath;
+    final prev = await DailySpeakingSessionRepository().previousVersion(
+      topicAttemptId: attemptId,
+      revisionNumber: session.revisionNumber,
+    );
+    return prev?.audioPath;
   }
 
   @override
@@ -460,10 +436,14 @@ class _TopicChip extends StatelessWidget {
           children: [
             Icon(Icons.label_outline, size: 14, color: colorScheme.primary),
             const SizedBox(width: 6),
-            Text(
-              AppLocalizations.of(context).txtDsTopicColon(label),
-              style: PmpTextStyles.labelSemi.copyWith(
-                color: colorScheme.primary,
+            Flexible(
+              child: Text(
+                AppLocalizations.of(context).txtDsTopicColon(label),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: PmpTextStyles.labelSemi.copyWith(
+                  color: colorScheme.primary,
+                ),
               ),
             ),
           ],

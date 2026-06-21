@@ -1,0 +1,77 @@
+[
+  {
+    "id": "fn_giving_opinions",
+    "function_en": "Giving opinions",
+    "function_mm": "ကိုယ့်အမြင် ပြောခြင်း",
+    "phrases": [
+      {
+        "phrase": "In my view,",
+        "gloss_mm": "ကျွန်တော့်အမြင်အရ",
+        "example_en": "In my view, public transport should be free.",
+        "formality_mm": "formal essay မှာ သုံးလို့ကောင်း။ 'I think' ထက် စာရေးဆန်တယ်။"
+      },
+      {
+        "phrase": "It seems to me that",
+        "gloss_mm": "ကျွန်တော် ထင်မြင်ရတာက",
+        "example_en": "It seems to me that this policy benefits everyone.",
+        "formality_mm": "အခြေအနေတစ်ခုကို စဉ်းစားပြီးမှ အမြင်ပေးတဲ့အခါ သုံး။"
+      },
+      {
+        "phrase": "I would argue that",
+        "gloss_mm": "ကျွန်တော် ငြင်းခုံလိုတာက",
+        "example_en": "I would argue that education matters more than wealth.",
+        "formality_mm": "ကိုယ့်ရပ်တည်ချက်ကို ခိုင်ခိုင်မာမာ ပြောတဲ့အခါ — academic tone။"
+      }
+    ]
+  },
+  {
+    "id": "fn_giving_examples",
+    "function_en": "Giving examples",
+    "function_mm": "ဥပမာ ပေးခြင်း",
+    "phrases": [
+      {
+        "phrase": "for example",
+        "gloss_mm": "ဥပမာအားဖြင့်",
+        "example_en": "Many cities, for example Tokyo, have excellent train systems.",
+        "formality_mm": "ရှေ့မှာ comma လို။ formal/informal နှစ်မျိုးလုံး ရ။"
+      },
+      {
+        "phrase": "such as",
+        "gloss_mm": "… ကဲ့သို့",
+        "example_en": "Healthy foods such as fruit and vegetables prevent disease.",
+        "formality_mm": "ရှေ့မှာ comma မလို။ noun ကို တိုက်ရိုက် ဥပမာပေးတဲ့အခါ သုံး။"
+      },
+      {
+        "phrase": "In particular,",
+        "gloss_mm": "အထူးသဖြင့်",
+        "example_en": "Young people, in particular, rely on social media.",
+        "formality_mm": "ဥပမာ တစ်ခုကို အထူးပြ ထောက်ပြတဲ့အခါ။"
+      }
+    ]
+  },
+  {
+    "id": "fn_concluding",
+    "function_en": "Concluding",
+    "function_mm": "အကျဉ်းချုပ်ခြင်း",
+    "phrases": [
+      {
+        "phrase": "In conclusion,",
+        "gloss_mm": "နိဂုံးချုပ်အားဖြင့်",
+        "example_en": "In conclusion, the benefits clearly outweigh the drawbacks.",
+        "formality_mm": "conclusion paragraph ကို စတဲ့အခါ အသုံးအများဆုံး။"
+      },
+      {
+        "phrase": "Overall,",
+        "gloss_mm": "ယေဘုယျအားဖြင့်",
+        "example_en": "Overall, technology has improved our daily lives.",
+        "formality_mm": "အကျဉ်းချုပ် သဘောထား ပေးတဲ့အခါ။"
+      },
+      {
+        "phrase": "For these reasons,",
+        "gloss_mm": "ဤအကြောင်းများကြောင့်",
+        "example_en": "For these reasons, I strongly support the change.",
+        "formality_mm": "အကြောင်းပြချက်တွေ ပြီးမှ ရပ်တည်ချက်ကို ပြန်ချုပ်တဲ့အခါ။"
+      }
+    ]
+  }
+]

@@ -1,24 +1,31 @@
 import 'dart:io';
 
-import 'package:drift/drift.dart' hide JsonKey;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:speakcraft/model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
-import 'package:speakcraft/services/app_database/app_database.dart';
-
+import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/model/listening/listening_recording.dart';
+import 'package:speakcraft/repositories/listening/listening_recording_repository.dart';
 
 part 'user_recorded_sentence_audio_bloc.freezed.dart';
 
 @freezed
 sealed class UserRecordedSentenceAudioEvent
     with _$UserRecordedSentenceAudioEvent {
-  const factory UserRecordedSentenceAudioEvent.load(
-      {required bool withLoading}) = _Load;
-  const factory UserRecordedSentenceAudioEvent.insert(
-      UserRecordedSentenceAudio data) = _Insert;
-  const factory UserRecordedSentenceAudioEvent.delete(
-      UserRecordedSentenceAudio data) = _Delete;
+  /// Load all of this video's recordings for the current user.
+  const factory UserRecordedSentenceAudioEvent.load({
+    required int listeningId,
+    required bool withLoading,
+  }) = _Load;
+
+  /// Upload + persist a new take for a sentence (cap enforced server-side).
+  const factory UserRecordedSentenceAudioEvent.insert({
+    required int listeningId,
+    required String sentenceId,
+    required File file,
+  }) = _Insert;
+
+  const factory UserRecordedSentenceAudioEvent.delete(ListeningRecording data) =
+      _Delete;
 }
 
 @freezed
@@ -28,93 +35,80 @@ sealed class UserRecordedSentenceAudioState
   const factory UserRecordedSentenceAudioState.loading({String? message}) =
       _Loading;
   const factory UserRecordedSentenceAudioState.loaded(
-      List<UserRecordedSentenceAudio> data) = _Loaded;
-  const factory UserRecordedSentenceAudioState.success(
-      UserRecordedSentenceAudio data) = _Success;
+      List<ListeningRecording> data) = _Loaded;
+  const factory UserRecordedSentenceAudioState.success() = _Success;
   const factory UserRecordedSentenceAudioState.error(String message) = _Error;
 }
 
 class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
     UserRecordedSentenceAudioState> {
-  UserRecordedSentenceAudioBloc()
-      : super(const UserRecordedSentenceAudioState.initial()) {
+  UserRecordedSentenceAudioBloc({ListeningRecordingRepository? repository})
+      : _repo = repository ?? ListeningRecordingRepository(),
+        super(const UserRecordedSentenceAudioState.initial()) {
     on<UserRecordedSentenceAudioEvent>((event, emit) async {
       await event.when(
-        load: (withLoading) => _mapLoadToState(withLoading, emit),
-        insert: (data) => _mapInsertToState(data, emit),
+        load: (listeningId, withLoading) =>
+            _mapLoadToState(listeningId, withLoading, emit),
+        insert: (listeningId, sentenceId, file) =>
+            _mapInsertToState(listeningId, sentenceId, file, emit),
         delete: (data) => _mapDeleteToState(data, emit),
       );
     });
   }
 
+  final ListeningRecordingRepository _repo;
+
   Future<void> _mapLoadToState(
-      bool withLoading, Emitter<UserRecordedSentenceAudioState> emit) async {
+    int listeningId,
+    bool withLoading,
+    Emitter<UserRecordedSentenceAudioState> emit,
+  ) async {
     try {
       if (withLoading) {
         emit(const UserRecordedSentenceAudioState.loading());
       }
-      final data =
-          await (AppDatabase.instance().userRecordedSentenceAudioTable.select()
-                ..orderBy([
-                  (tbl) => OrderingTerm(
-                      expression: tbl.createdAt, mode: OrderingMode.asc)
-                ]))
-              .get();
+      final data = await _repo.list(listeningId: listeningId);
       emit(UserRecordedSentenceAudioState.loaded(data));
     } catch (e) {
+      AppLogger.instance.error('recordings load: $e', error: e);
       emit(UserRecordedSentenceAudioState.error(e.toString()));
     }
   }
 
   Future<void> _mapInsertToState(
-    UserRecordedSentenceAudio data,
+    int listeningId,
+    String sentenceId,
+    File file,
     Emitter<UserRecordedSentenceAudioState> emit,
   ) async {
     try {
       emit(const UserRecordedSentenceAudioState.loading());
-      await Future.delayed(const Duration(seconds: 1));
-      final userRecordedSentenceAudio = await AppDatabase.instance()
-          .userRecordedSentenceAudioTable
-          .insertReturning(
-            UserRecordedSentenceAudioTableCompanion(
-              audioName: Value(data.audioName.trim()),
-              audioPath: Value(data.audioPath.trim()),
-              sentenceId: Value(data.sentenceId.trim()),
-              youtubeId: Value(data.youtubeId.trim()),
-            ),
-          );
-      emit(UserRecordedSentenceAudioState.success(userRecordedSentenceAudio));
+      await _repo.save(
+        listeningId: listeningId,
+        sentenceId: sentenceId,
+        audio: file,
+      );
+      // The local temp file has been uploaded; clean it up.
+      try {
+        if (await file.exists()) await file.delete();
+      } catch (_) {}
+      emit(const UserRecordedSentenceAudioState.success());
     } catch (e) {
-      AppLogger.instance.error('_mapInsertToState: ${e.toString()}', error: e);
+      AppLogger.instance.error('recording insert: $e', error: e);
       emit(UserRecordedSentenceAudioState.error(e.toString()));
     }
   }
 
   Future<void> _mapDeleteToState(
-    UserRecordedSentenceAudio data,
+    ListeningRecording data,
     Emitter<UserRecordedSentenceAudioState> emit,
   ) async {
     emit(const UserRecordedSentenceAudioState.loading());
     try {
-      // await Future.delayed(const Duration(seconds: 1));
-      String filePath = data.audioPath;
-      if (filePath.isNotEmpty) {
-        final file = File(filePath);
-        if (await file.exists()) {
-          await file.delete();
-          AppLogger.instance.debug(
-              '_userDiscardedAudio: Deleted discarded audio file: $filePath');
-        } else {
-          AppLogger.instance.debug(
-              '_userDiscardedAudio: No file found to delete at $filePath');
-        }
-      }
-      await AppDatabase.instance().userRecordedSentenceAudioTable.deleteWhere(
-            (tbl) => tbl.id.equals(data.id!),
-          );
-      emit(UserRecordedSentenceAudioState.success(data));
+      await _repo.delete(data);
+      emit(const UserRecordedSentenceAudioState.success());
     } catch (e) {
-      AppLogger.instance.error('_mapInsertToState: ${e.toString()}', error: e);
+      AppLogger.instance.error('recording delete: $e', error: e);
       emit(UserRecordedSentenceAudioState.error(e.toString()));
     }
   }

@@ -131,7 +131,8 @@ _$FeedbackSegmentImpl _$$FeedbackSegmentImplFromJson(
         Map<String, dynamic> json) =>
     _$FeedbackSegmentImpl(
       text: json['text'] as String,
-      type: $enumDecodeNullable(_$SegmentTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$SegmentTypeEnumMap, json['type'],
+          unknownValue: SegmentType.grammar),
       correction: json['correction'] as String? ?? '',
       reasonMm: json['reason_mm'] as String? ?? '',
       reasonEn: json['reason_en'] as String? ?? '',
@@ -157,15 +158,20 @@ const _$SegmentTypeEnumMap = {
 _$FeedbackFixImpl _$$FeedbackFixImplFromJson(Map<String, dynamic> json) =>
     _$FeedbackFixImpl(
       original: json['original'] as String,
-      corrected: json['corrected'] as String,
-      reasonMm: json['reason_mm'] as String,
+      corrected: json['correction'] as String? ?? '',
+      type: $enumDecodeNullable(_$SegmentTypeEnumMap, json['type'],
+          unknownValue: SegmentType.grammar),
+      reasonMm: json['reason_mm'] as String? ?? '',
+      reasonEn: json['reason_en'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$FeedbackFixImplToJson(_$FeedbackFixImpl instance) =>
     <String, dynamic>{
       'original': instance.original,
-      'corrected': instance.corrected,
+      'correction': instance.corrected,
+      'type': _$SegmentTypeEnumMap[instance.type],
       'reason_mm': instance.reasonMm,
+      'reason_en': instance.reasonEn,
     };
 
 _$VocabUpgradeImpl _$$VocabUpgradeImplFromJson(Map<String, dynamic> json) =>
@@ -221,6 +227,7 @@ Map<String, dynamic> _$$PhraseSuggestionImplToJson(
 const _$PhraseKindEnumMap = {
   PhraseKind.collocation: 'collocation',
   PhraseKind.idiom: 'idiom',
+  PhraseKind.phrasalVerb: 'phrasal_verb',
 };
 
 _$SentenceRewriteImpl _$$SentenceRewriteImplFromJson(

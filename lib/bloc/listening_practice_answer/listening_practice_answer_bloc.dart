@@ -1,8 +1,7 @@
-import 'package:drift/drift.dart' hide JsonKey;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
-import 'package:speakcraft/services/app_database/app_database.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 
 import '../../model/listening_practice_answer/listening_practice_answer.dart';
 
@@ -44,22 +43,22 @@ class ListeningPracticeAnswerBloc
       Emitter<ListeningPracticeAnswerState> emit) async {
     try {
       emit(const ListeningPracticeAnswerState.loading(message: ""));
-      final db = AppDatabase.instance();
-      await Future.delayed(const Duration(seconds: 1));
-      await db.batch((batch) {
-        for (final answer in userAnswers) {
-          batch.insert(
-            db.listeningPracticeAnswerTable,
-            ListeningPracticeAnswerTableCompanion(
-              groupId: Value(answer.groupId),
-              questionId: Value(answer.questionId),
-              userAnswer: Value(answer.userAnswer),
-              timeSpent: Value(answer.timeSpent),
-              isCorrect: Value(answer.isCorrect),
-              youtubeId: Value(answer.youtubeId.trim()),
-            ),
-          );
-        }
+      if (userAnswers.isEmpty) {
+        emit(const ListeningPracticeAnswerState.onSaved());
+        return;
+      }
+      await supabase.rpc('save_practice_answers', params: {
+        'p_youtube_id': userAnswers.first.youtubeId.trim(),
+        'p_answers': [
+          for (final a in userAnswers)
+            {
+              'group_id': a.groupId,
+              'question_id': a.questionId,
+              'user_answer': a.userAnswer,
+              'time_spent': a.timeSpent,
+              'is_correct': a.isCorrect,
+            },
+        ],
       });
       emit(const ListeningPracticeAnswerState.onSaved());
     } catch (e) {

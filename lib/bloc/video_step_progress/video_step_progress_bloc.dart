@@ -1,9 +1,8 @@
-import 'package:drift/drift.dart' hide JsonKey;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
-import 'package:speakcraft/services/app_database/app_database.dart';
+import 'package:speakcraft/repositories/listening/video_step_progress_repository.dart';
 
 part 'video_step_progress_bloc.freezed.dart';
 
@@ -49,7 +48,9 @@ class VideoStepProgressState with _$VideoStepProgressState {
 
 class VideoStepProgressBloc
     extends Bloc<VideoStepProgressEvent, VideoStepProgressState> {
-  VideoStepProgressBloc() : super(const VideoStepProgressState()) {
+  VideoStepProgressBloc({VideoStepProgressRepository? repository})
+      : _repo = repository ?? VideoStepProgressRepository(),
+        super(const VideoStepProgressState()) {
     on<VideoStepProgressEvent>((event, emit) async {
       await event.when(
         loadAll: () => _loadAll(emit),
@@ -62,11 +63,12 @@ class VideoStepProgressBloc
     });
   }
 
+  final VideoStepProgressRepository _repo;
+
   Future<void> _loadAll(Emitter<VideoStepProgressState> emit) async {
     try {
       emit(state.copyWith(isLoading: true, error: null));
-      final db = AppDatabase.instance();
-      final rows = await db.select(db.videoStepProgressTable).get();
+      final rows = await _repo.loadAll();
       final grouped = <String, Map<String, VideoStepProgress>>{};
       for (final r in rows) {
         grouped.putIfAbsent(r.youtubeId, () => {})[r.stepKey] = r;
@@ -83,10 +85,7 @@ class VideoStepProgressBloc
     Emitter<VideoStepProgressState> emit,
   ) async {
     try {
-      final db = AppDatabase.instance();
-      final rows = await (db.select(db.videoStepProgressTable)
-            ..where((t) => t.youtubeId.equals(youtubeId)))
-          .get();
+      final rows = await _repo.loadVideo(youtubeId);
       final forVideo = <String, VideoStepProgress>{
         for (final r in rows) r.stepKey: r,
       };
@@ -107,7 +106,6 @@ class VideoStepProgressBloc
     Emitter<VideoStepProgressState> emit,
   ) async {
     try {
-      final db = AppDatabase.instance();
       final current = state.byVideo[youtubeId]?[step.name];
       final currentState = current == null
           ? VideoStepState.notStarted
@@ -129,15 +127,12 @@ class VideoStepProgressBloc
             (target == VideoStepState.inProgress ? 1 : 0),
       );
 
-      await db.into(db.videoStepProgressTable).insertOnConflictUpdate(
-            VideoStepProgressTableCompanion(
-              youtubeId: Value(next.youtubeId),
-              stepKey: Value(next.stepKey),
-              state: Value(next.state),
-              lastOpenedAt: Value(next.lastOpenedAt),
-              openCount: Value(next.openCount),
-            ),
-          );
+      await _repo.upsert(
+        youtubeId: next.youtubeId,
+        stepKey: next.stepKey,
+        state: next.state,
+        openCount: next.openCount,
+      );
 
       final nextByVideo = Map<String, Map<String, VideoStepProgress>>.from(
           state.byVideo);

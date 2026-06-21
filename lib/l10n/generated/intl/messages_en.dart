@@ -175,6 +175,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Don\'t have an account?",
     ),
     "txtDsAddMoreHelp": MessageLookupByLibrary.simpleMessage("Add more help"),
+    "txtDsAiBusy": MessageLookupByLibrary.simpleMessage(
+      "The AI is busy right now. Please tap to try again.",
+    ),
     "txtDsApproxMin": m1,
     "txtDsAskForMore": MessageLookupByLibrary.simpleMessage("Ask for more"),
     "txtDsAskHarderWords": MessageLookupByLibrary.simpleMessage("Harder words"),
@@ -247,7 +250,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Groups recurring grammar issues so you see the pattern.",
     ),
     "txtDsDescIdioms": MessageLookupByLibrary.simpleMessage(
-      "Idioms and phrasal verbs you could have used.",
+      "Useful idioms and expressions you could have used.",
+    ),
+    "txtDsDescPhrasalVerbs": MessageLookupByLibrary.simpleMessage(
+      "Handy phrasal verbs for your topic (\"follow through\").",
     ),
     "txtDsDescPronunciation": MessageLookupByLibrary.simpleMessage(
       "Sounds to work on.",
@@ -443,9 +449,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsHowToStructure": MessageLookupByLibrary.simpleMessage(
       "How to structure it",
     ),
-    "txtDsIdioms": MessageLookupByLibrary.simpleMessage(
-      "Idioms & phrasal verbs",
-    ),
+    "txtDsIdioms": MessageLookupByLibrary.simpleMessage("Idioms"),
     "txtDsImDoneSeeNative": MessageLookupByLibrary.simpleMessage(
       "I\'m done — see native version",
     ),
@@ -530,6 +534,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsPeekExample": MessageLookupByLibrary.simpleMessage(
       "Peek at an example answer",
     ),
+    "txtDsPhrasalVerbs": MessageLookupByLibrary.simpleMessage("Phrasal verbs"),
     "txtDsPhrasesToTry": MessageLookupByLibrary.simpleMessage(
       "Phrases to try next time",
     ),
@@ -658,6 +663,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsStartRecording": MessageLookupByLibrary.simpleMessage(
       "Start recording",
     ),
+    "txtDsStudyPatterns": MessageLookupByLibrary.simpleMessage(
+      "Patterns to study",
+    ),
     "txtDsSubhead": MessageLookupByLibrary.simpleMessage(
       "Pick how you want to start. Speak or write, then get instant feedback.",
     ),
@@ -772,6 +780,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "txtDsWholeRewriteLabel": MessageLookupByLibrary.simpleMessage(
       "Native rewrite",
     ),
+    "txtDsWordChoice": MessageLookupByLibrary.simpleMessage("Word choice"),
     "txtDsWords": MessageLookupByLibrary.simpleMessage("Words"),
     "txtDsWordsYouMightUse": MessageLookupByLibrary.simpleMessage(
       "Words you might use",

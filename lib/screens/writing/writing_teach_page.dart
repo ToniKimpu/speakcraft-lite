@@ -117,6 +117,14 @@ class _TeachBody extends StatelessWidget {
     final mm = PmpColors.myanmarGloss(Theme.of(context).brightness);
     final teach = unit.teach;
 
+    // A unit may override a section's Burmese heading via `step_titles_mm` (same
+    // map the step pager uses), so composition/IELTS units read right instead of
+    // the grammar-flavoured defaults. Falls back to the default when absent.
+    String sectionLabel(String key, String fallback) {
+      final v = teach.stepTitlesMm[key];
+      return (v != null && v.isNotEmpty) ? v : fallback;
+    }
+
     return SafeArea(
       child: Column(
         children: [
@@ -158,7 +166,7 @@ class _TeachBody extends StatelessWidget {
                   // ① Use + timeline — when to use (Burmese only), shown first.
                   _Section(
                     icon: Icons.lightbulb_outline,
-                    label: 'ဘယ်လိုအချိန်မှာ အသုံးပြုမှာလဲ',
+                    label: sectionLabel('when', 'ဘယ်လိုအချိန်မှာ အသုံးပြုမှာလဲ'),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -210,25 +218,32 @@ class _TeachBody extends StatelessWidget {
                     ),
                   ),
 
-                  // ③ Form table (+ optional visual agreement buckets)
-                  _Section(
-                    icon: Icons.grid_view_rounded,
-                    label: 'Subject နှင့် Verb ဘယ်လိုတွဲမလဲ',
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _FormTable(rows: teach.form),
-                        if (_agreementBlock(teach) case final block?) ...[
-                          const SizedBox(height: 14),
-                          _AgreementBuckets(block: block),
+                  // ③ Form / pattern — only when the unit ships a form table,
+                  // agreement block or form note. Composition / IELTS units may
+                  // carry none, so we skip the section instead of showing an
+                  // empty "Subject & Verb" card.
+                  if (teach.form.isNotEmpty ||
+                      _agreementBlock(teach) != null ||
+                      teach.formNoteMm.isNotEmpty)
+                    _Section(
+                      icon: Icons.grid_view_rounded,
+                      label: sectionLabel(
+                          'pattern', 'Subject နှင့် Verb ဘယ်လိုတွဲမလဲ'),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _FormTable(rows: teach.form),
+                          if (_agreementBlock(teach) case final block?) ...[
+                            const SizedBox(height: 14),
+                            _AgreementBuckets(block: block),
+                          ],
+                          if (teach.formNoteMm.isNotEmpty) ...[
+                            const SizedBox(height: 12),
+                            _InlineNote(mm: teach.formNoteMm),
+                          ],
                         ],
-                        if (teach.formNoteMm.isNotEmpty) ...[
-                          const SizedBox(height: 12),
-                          _InlineNote(mm: teach.formNoteMm),
-                        ],
-                      ],
+                      ),
                     ),
-                  ),
 
                   // ④ Burmese trap
                   if (teach.trapMm.isNotEmpty) _TrapCard(mm: teach.trapMm),

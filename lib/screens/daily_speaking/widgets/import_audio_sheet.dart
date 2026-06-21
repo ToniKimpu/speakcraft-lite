@@ -8,6 +8,10 @@ import 'session_audio_player.dart';
 
 /// Sensible default limits, mirroring the live recorder's 5-minute cap.
 const Duration _kMaxDuration = Duration(minutes: 5);
+/// Silent grace on top of [_kMaxDuration] — clips that run a second or two over
+/// 5:00 (clock/encoder rounding) should still import. The user-facing message
+/// still says "5 minutes"; this just avoids rejecting a 5:01 recording.
+const Duration _kDurationTolerance = Duration(seconds: 10);
 const Duration _kMinDuration = Duration(seconds: 5);
 const int _kMaxBytes = 25 * 1024 * 1024; // 25 MB
 const List<String> _kAllowedExt = ['m4a', 'mp3', 'wav', 'aac', 'ogg', 'flac'];
@@ -104,7 +108,7 @@ class _ImportAudioSheetState extends State<_ImportAudioSheet> {
         _fail(l10n.txtDsImportUnreadable);
         return;
       }
-      if (duration > _kMaxDuration) {
+      if (duration > _kMaxDuration + _kDurationTolerance) {
         _fail(l10n.txtDsImportTooLong(_kMaxDuration.inMinutes));
         return;
       }

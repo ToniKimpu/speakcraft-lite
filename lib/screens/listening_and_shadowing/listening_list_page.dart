@@ -9,6 +9,7 @@ import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
+import 'package:speakcraft/shared_widgets/premium_gate.dart';
 
 import '../../l10n/generated/l10n.dart';
 
@@ -295,6 +296,7 @@ class _ListeningCard extends StatelessWidget {
               _Thumbnail(
                 imageUrl: listening.thumbnail,
                 durationSeconds: listening.end - listening.start,
+                isFree: listening.isFree,
               ),
               const SizedBox(width: 14),
               Expanded(
@@ -419,10 +421,15 @@ class _StatusSection extends StatelessWidget {
 }
 
 class _Thumbnail extends StatelessWidget {
-  const _Thumbnail({required this.imageUrl, required this.durationSeconds});
+  const _Thumbnail({
+    required this.imageUrl,
+    required this.durationSeconds,
+    required this.isFree,
+  });
 
   final String imageUrl;
   final int durationSeconds;
+  final bool isFree;
 
   static const double _width = 112;
   static const double _height = 72; // 16:9
@@ -495,6 +502,11 @@ class _Thumbnail extends StatelessWidget {
               size: 20,
               color: Colors.black,
             ),
+          ),
+          Positioned(
+            top: 4,
+            left: 4,
+            child: FreePremiumBadge(isFree: isFree),
           ),
           if (durationSeconds > 0)
             Positioned(

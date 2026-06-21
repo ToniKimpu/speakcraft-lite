@@ -1,15 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:drift/drift.dart' hide JsonKey;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
-import 'package:speakcraft/services/app_database/app_database.dart';
+import 'package:speakcraft/repositories/daily_speaking/daily_speaking_session_repository.dart';
 import 'package:speakcraft/services/daily_speaking/daily_speaking_service.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -43,6 +42,10 @@ class DailySpeakingState with _$DailySpeakingState {
   const factory DailySpeakingState.success(DailySpeakingSession session) =
       _Success;
   const factory DailySpeakingState.socketError() = _SocketError;
+
+  /// AI temporarily overloaded (Gemini "high demand"). Transient and retryable
+  /// for free — the UI offers an immediate retry rather than a dead-end error.
+  const factory DailySpeakingState.busy() = _Busy;
   const factory DailySpeakingState.error(String message) = _Error;
 }
 
@@ -63,6 +66,7 @@ class DailySpeakingBloc
   }
 
   final DailySpeakingService _service;
+  final DailySpeakingSessionRepository _repo = DailySpeakingSessionRepository();
 
   Future<void> _submitVoice(
     String audioPath,
@@ -80,40 +84,43 @@ class DailySpeakingBloc
         return;
       }
       emit(const DailySpeakingState.submitting());
+      // Measure the real recording length here (the edge function trusts it
+      // over Gemini's unreliable estimate).
+      int durationSeconds = 0;
+      final probe = AudioPlayer();
+      try {
+        final d = await probe.setFilePath(audioPath);
+        durationSeconds = d?.inSeconds ?? 0;
+      } catch (_) {
+        // Non-fatal — fall back to the AI estimate.
+      } finally {
+        await probe.dispose();
+      }
+      // Mint the chain id up front so the server row, the saved audio filename,
+      // and the local persist all share it.
+      final attemptId =
+          topicAttemptId ?? DateTime.now().microsecondsSinceEpoch.toString();
       final feedback = await _service.reviewSession(
         SessionInput.voice(
           audioPath: audioPath,
           onRamp: onRamp,
           requestedSections: requestedSections,
           topic: topic,
+          durationSeconds: durationSeconds,
+          topicAttemptId: attemptId,
+          revisionNumber: revisionNumber,
         ),
       );
-      // Mint the chain id up front so the saved audio filename can reference it.
-      final attemptId =
-          topicAttemptId ?? DateTime.now().microsecondsSinceEpoch.toString();
-      // Keep the recording for replay / A/B, then prune older chains' audio so
-      // on-device storage stays bounded (keep-active-chain policy).
-      final savedAudioPath =
-          await _persistAudio(audioPath, attemptId, revisionNumber);
-      await _pruneAudioExceptChain(attemptId);
-      // Reuse `inputText` for the learner's words: the AI transcript for voice,
-      // the typed text for the write path. The result page renders both the
-      // same way.
-      final transcript = feedback.effectiveTranscript.trim();
-      // Just-talk carries no chosen topic, but the AI infers one — synthesize a
-      // topic from it so just-talk can also be polished/retried and revealed.
-      final effectiveTopic = topic ?? _inferredTopic(onRamp, feedback);
-      final session = await _persist(
-        topicId: effectiveTopic?.id,
+      // The edge function already wrote the session (incl. audio) to Supabase —
+      // build the result session from that server row.
+      final session = await _buildSession(
         onRamp: onRamp,
         inputMode: DailySpeakingInputMode.voice,
-        inputText: transcript.isEmpty ? null : transcript,
+        topic: topic,
         feedback: feedback,
-        topicAttemptId: attemptId,
+        attemptId: attemptId,
         revisionNumber: revisionNumber,
-        audioPath: savedAudioPath,
-        topicJson:
-            effectiveTopic == null ? null : jsonEncode(effectiveTopic.toJson()),
+        fallbackText: feedback.effectiveTranscript.trim(),
       );
       emit(DailySpeakingState.success(session));
     } catch (e, st) {
@@ -137,25 +144,26 @@ class DailySpeakingBloc
     }
     try {
       emit(const DailySpeakingState.submitting());
+      final attemptId =
+          topicAttemptId ?? DateTime.now().microsecondsSinceEpoch.toString();
       final feedback = await _service.reviewSession(
         SessionInput.text(
           text: trimmed,
           onRamp: onRamp,
           requestedSections: requestedSections,
           topic: topic,
+          topicAttemptId: attemptId,
+          revisionNumber: revisionNumber,
         ),
       );
-      final effectiveTopic = topic ?? _inferredTopic(onRamp, feedback);
-      final session = await _persist(
-        topicId: effectiveTopic?.id,
+      final session = await _buildSession(
         onRamp: onRamp,
         inputMode: DailySpeakingInputMode.text,
-        inputText: trimmed,
+        topic: topic,
         feedback: feedback,
-        topicAttemptId: topicAttemptId,
+        attemptId: attemptId,
         revisionNumber: revisionNumber,
-        topicJson:
-            effectiveTopic == null ? null : jsonEncode(effectiveTopic.toJson()),
+        fallbackText: trimmed,
       );
       emit(DailySpeakingState.success(session));
     } catch (e, st) {
@@ -163,109 +171,49 @@ class DailySpeakingBloc
     }
   }
 
-  Future<DailySpeakingSession> _persist({
-    required String? topicId,
+  /// Builds the result-screen session from the server row the edge function just
+  /// wrote (id, audio_path, created_at), then overlays the client-side topic —
+  /// just-talk's topic is inferred on the client after feedback, so it isn't on
+  /// the server row. Falls back to a local-only session if the fetch fails.
+  Future<DailySpeakingSession> _buildSession({
     required String onRamp,
     required String inputMode,
-    required String? inputText,
+    required DailySpeakingTopic? topic,
     required DailySpeakingFeedback feedback,
-    String? topicAttemptId,
-    int revisionNumber = 1,
-    String? audioPath,
-    String? topicJson,
+    required String attemptId,
+    required int revisionNumber,
+    required String? fallbackText,
   }) async {
-    // Mint a chain id on the first attempt so "Polish & retry" has something to
-    // carry forward. microsecondsSinceEpoch is unique enough for a local,
-    // single-device store and avoids pulling in a uuid dependency.
-    final attemptId =
-        topicAttemptId ?? DateTime.now().microsecondsSinceEpoch.toString();
-    final row = await AppDatabase.instance()
-        .dailySpeakingSessionTable
-        .insertReturning(
-          DailySpeakingSessionTableCompanion(
-            topicId: Value(topicId),
-            onRamp: Value(onRamp),
-            inputMode: Value(inputMode),
-            inputText: Value(inputText),
-            feedbackJson: Value(jsonEncode(feedback.toJson())),
-            totalTokens: Value(feedback.totalTokens),
-            topicAttemptId: Value(attemptId),
-            revisionNumber: Value(revisionNumber),
-            audioPath: Value(audioPath),
-            topicJson: Value(topicJson),
-          ),
+    final effectiveTopic = topic ?? _inferredTopic(onRamp, feedback);
+    final text =
+        (fallbackText == null || fallbackText.isEmpty) ? null : fallbackText;
+    DailySpeakingSession? fetched;
+    try {
+      fetched = await _repo.latestFor(
+        topicAttemptId: attemptId,
+        revisionNumber: revisionNumber,
+      );
+    } catch (e) {
+      AppLogger.instance.error('DailySpeaking: fetch session failed: $e');
+    }
+    final base = fetched ??
+        DailySpeakingSession(
+          id: 0,
+          onRamp: onRamp,
+          inputMode: inputMode,
+          inputText: text,
+          feedback: feedback,
+          createdAt: DateTime.now(),
+          topicAttemptId: attemptId,
+          revisionNumber: revisionNumber,
         );
-    return DailySpeakingSession(
-      id: row.id,
-      topicId: row.topicId,
-      onRamp: row.onRamp,
-      inputMode: row.inputMode,
-      inputText: row.inputText,
-      feedback: feedback,
-      createdAt: row.createdAt,
-      topicAttemptId: row.topicAttemptId,
-      revisionNumber: row.revisionNumber,
-      audioPath: row.audioPath,
-      topicJson: row.topicJson,
+    return base.copyWith(
+      topicId: effectiveTopic?.id ?? base.topicId,
+      topicJson:
+          effectiveTopic == null ? null : jsonEncode(effectiveTopic.toJson()),
+      inputText:
+          (base.inputText == null || base.inputText!.isEmpty) ? text : base.inputText,
     );
-  }
-
-  /// Copies the just-recorded temp clip into the app documents directory so it
-  /// survives past the OS temp cache. Returns the saved path, or null if the
-  /// source is missing or the copy fails (audio replay is best-effort — a
-  /// failure here must not block showing feedback).
-  Future<String?> _persistAudio(
-    String tempPath,
-    String attemptId,
-    int revisionNumber,
-  ) async {
-    try {
-      final src = File(tempPath);
-      if (!await src.exists()) return null;
-      final docs = await getApplicationDocumentsDirectory();
-      final dir = Directory('${docs.path}/daily_speaking_audio');
-      if (!await dir.exists()) await dir.create(recursive: true);
-      final dot = tempPath.lastIndexOf('.');
-      final ext = dot == -1 ? 'm4a' : tempPath.substring(dot + 1);
-      final dest = '${dir.path}/${attemptId}_v$revisionNumber.$ext';
-      await src.copy(dest);
-      return dest;
-    } catch (e) {
-      AppLogger.instance.error('DailySpeaking: save audio failed: $e', error: e);
-      return null;
-    }
-  }
-
-  /// Keep-active-chain storage policy: deletes the saved audio files for every
-  /// attempt chain except [attemptId] and clears their `audioPath`. Called when
-  /// a new chain's first version is recorded, so only the topic currently being
-  /// practised (and its earlier versions, for A/B replay) keeps audio on disk.
-  Future<void> _pruneAudioExceptChain(String attemptId) async {
-    try {
-      final table = AppDatabase.instance().dailySpeakingSessionTable;
-      final stale = await (table.select()
-            ..where((t) =>
-                t.audioPath.isNotNull() &
-                t.topicAttemptId.equals(attemptId).not()))
-          .get();
-      if (stale.isEmpty) return;
-      for (final row in stale) {
-        final path = row.audioPath;
-        if (path == null) continue;
-        final f = File(path);
-        if (await f.exists()) await f.delete();
-      }
-      await (table.update()
-            ..where((t) =>
-                t.audioPath.isNotNull() &
-                t.topicAttemptId.equals(attemptId).not()))
-          .write(const DailySpeakingSessionTableCompanion(
-        audioPath: Value(null),
-      ));
-    } catch (e) {
-      AppLogger.instance
-          .error('DailySpeaking: prune audio failed: $e', error: e);
-    }
   }
 
   /// Just-talk carries no chosen topic, but the AI returns an inferred one.
@@ -290,7 +238,12 @@ class DailySpeakingBloc
     Emitter<DailySpeakingState> emit,
   ) {
     AppLogger.instance.error('DailySpeakingBloc submit error: $e', error: e);
-    if (e is SocketException) {
+    if (e is DailySpeakingBusyException) {
+      emit(const DailySpeakingState.busy());
+    } else if (e is DailySpeakingProcessingException) {
+      // The job is still running server-side; ask the learner to retry shortly.
+      emit(const DailySpeakingState.busy());
+    } else if (e is SocketException) {
       emit(const DailySpeakingState.socketError());
     } else if (e is FunctionException) {
       emit(const DailySpeakingState.error('Sorry, the server is busy.'));

@@ -9,6 +9,7 @@ import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dar
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
+import 'package:speakcraft/repositories/listening/listening_recording_repository.dart';
 import 'package:speakcraft/shared_widgets/spoken_pattern_footer_widget.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/recording_voice_widgets/user_recorded_list.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
@@ -50,12 +51,12 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
       ValueNotifier(0.6);
 
   final _userRecordedSentenceAudioBloc = UserRecordedSentenceAudioBloc();
+  final _recordingRepo = ListeningRecordingRepository();
 
   bool _backPressed = false;
 
   int _currentPage = 0;
 
-  String newVoiceName = "Voice_001";
   late final ValueNotifier<int> _recordDurationNotifier;
   Timer? _timer;
   late final AudioRecorder _audioRecorder;
@@ -121,7 +122,8 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
         }
       });
     _userRecordedSentenceAudioBloc.add(
-      const UserRecordedSentenceAudioEvent.load(
+      UserRecordedSentenceAudioEvent.load(
+        listeningId: widget.listening.id,
         withLoading: true,
       ),
     );
@@ -538,13 +540,10 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                                           _currentPage]
                                                                       .id;
                                                               return SaveRecordingDialog(
+                                                                listeningId: widget
+                                                                    .listening.id,
                                                                 sentenceId:
                                                                     sentenceId,
-                                                                youtubeId: widget
-                                                                    .listening
-                                                                    .youtubeId,
-                                                                audioName:
-                                                                    newVoiceName,
                                                                 audioRecorder:
                                                                     _audioRecorder,
                                                                 onDiscard:
@@ -585,8 +584,10 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                                   if (success) {
                                                                     _userRecordedSentenceAudioBloc
                                                                         .add(
-                                                                      const UserRecordedSentenceAudioEvent
+                                                                      UserRecordedSentenceAudioEvent
                                                                           .load(
+                                                                        listeningId:
+                                                                            widget.listening.id,
                                                                         withLoading:
                                                                             false,
                                                                       ),
@@ -634,15 +635,12 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                         currentIndex,
                                                     userRecordedSentenceAudioBloc:
                                                         _userRecordedSentenceAudioBloc,
-                                                    onNewVoiceName: (name) {
-                                                      newVoiceName = name;
-                                                    },
+                                                    listeningId: widget
+                                                        .listening.id,
                                                     sentenceId:
                                                         recordSubtitles[
                                                                 _currentPage]
                                                             .id,
-                                                    youtubeId: widget
-                                                        .listening.youtubeId,
                                                     onTogglePlay:
                                                         (data, index) async {
                                                       if (_isRecording()) {
@@ -675,9 +673,12 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                       } else {
                                                         await _audioPlayer
                                                             .stop();
+                                                        final url =
+                                                            await _recordingRepo
+                                                                .signedUrl(data
+                                                                    .audioPath);
                                                         await _audioPlayer
-                                                            .setUrl(data
-                                                                .audioPath);
+                                                            .setUrl(url);
                                                         _audioPlayer.play();
                                                         _currentlyPlayingIndexNotifier
                                                                 .value =

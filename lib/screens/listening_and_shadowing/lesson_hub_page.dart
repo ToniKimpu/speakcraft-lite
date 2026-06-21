@@ -9,6 +9,7 @@ import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
+import 'package:speakcraft/shared_widgets/premium_gate.dart';
 
 class LessonHubPage extends StatefulWidget {
   const LessonHubPage({super.key, required this.listening});
@@ -74,7 +75,17 @@ class _LessonHubPageState extends State<LessonHubPage> {
     }
   }
 
+  /// Watch (subtitle play) is free on every video; the other steps are gated on
+  /// non-free videos for free users.
+  bool _isLocked(VideoLessonStep step) =>
+      step != VideoLessonStep.watch &&
+      !isUnlocked(isFree: widget.listening.isFree);
+
   void _openStep(_StepConfig config) {
+    if (_isLocked(config.step)) {
+      showPremiumSheet(context, featureName: config.title);
+      return;
+    }
     Navigator.pushNamed(
       context,
       config.route,
@@ -131,6 +142,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
                           config: steps[i],
                           state: stepStates[steps[i]] ?? VideoStepState.notStarted,
                           isNextRecommended: !allDone && i == nextIndex,
+                          locked: _isLocked(steps[i].step),
                           onTap: () => _openStep(steps[i]),
                         ),
                         if (i < steps.length - 1) const SizedBox(height: 12),
@@ -483,6 +495,7 @@ class _StepCard extends StatelessWidget {
     required this.config,
     required this.state,
     required this.isNextRecommended,
+    required this.locked,
     required this.onTap,
   });
 
@@ -490,6 +503,7 @@ class _StepCard extends StatelessWidget {
   final _StepConfig config;
   final VideoStepState state;
   final bool isNextRecommended;
+  final bool locked;
   final VoidCallback onTap;
 
   @override
@@ -515,7 +529,9 @@ class _StepCard extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
         onTap: onTap,
-        child: Container(
+        child: Stack(
+          children: [
+            Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
@@ -582,6 +598,14 @@ class _StepCard extends StatelessWidget {
               ),
             ],
           ),
+            ),
+            if (locked)
+              const Positioned(
+                top: 10,
+                right: 10,
+                child: PremiumLockBadge(),
+              ),
+          ],
         ),
       ),
     );

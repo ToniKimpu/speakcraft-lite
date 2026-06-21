@@ -22,6 +22,10 @@ class Listening with _$Listening {
     @JsonKey(name: 'sentence_explanation_path') @Default('') String sentenceExplanationPath,
     @JsonKey(name: 'vocabulary_path') @Default('') String vocabularyPath,
     @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+    // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
+    // features; on non-free videos free users get subtitle play only, the rest
+    // is premium. Gating: isFree || currentUser.isPremiumUser.
+    @JsonKey(name: 'is_free') @Default(false) bool isFree,
     // Precomputed lesson-content counts, populated by the admin at save time
     // from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
     // (banner falls back to generic copy).

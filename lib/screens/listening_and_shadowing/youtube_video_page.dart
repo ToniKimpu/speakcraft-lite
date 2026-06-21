@@ -9,6 +9,7 @@ import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 import 'package:speakcraft/model/subtitle/subtitle.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/widgets/custom_control.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/widgets/subtitle_pager.dart';
+import 'package:speakcraft/shared_widgets/premium_gate.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../bloc/listening/subtitle_index_bloc.dart';
@@ -227,6 +228,8 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                 subtitleIndexBloc: _subtitleIndexBloc,
                                 subtitles: subtitles,
                                 hasMMSub: widget.listening.hasMMSubtitle,
+                                explanationLocked: !isUnlocked(
+                                    isFree: widget.listening.isFree),
                                 onUserChangePage: (subtitle) {
                                   _controller.seekTo(subtitle.start);
                                 },

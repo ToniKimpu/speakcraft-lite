@@ -3269,11 +3269,16 @@ class AppLocalizations {
     );
   }
 
-  /// `Idioms & phrasal verbs`
+  /// `Idioms`
   String get txtDsIdioms {
+    return Intl.message('Idioms', name: 'txtDsIdioms', desc: '', args: []);
+  }
+
+  /// `Phrasal verbs`
+  String get txtDsPhrasalVerbs {
     return Intl.message(
-      'Idioms & phrasal verbs',
-      name: 'txtDsIdioms',
+      'Phrasal verbs',
+      name: 'txtDsPhrasalVerbs',
       desc: '',
       args: [],
     );
@@ -3369,11 +3374,21 @@ class AppLocalizations {
     );
   }
 
-  /// `Idioms and phrasal verbs you could have used.`
+  /// `Useful idioms and expressions you could have used.`
   String get txtDsDescIdioms {
     return Intl.message(
-      'Idioms and phrasal verbs you could have used.',
+      'Useful idioms and expressions you could have used.',
       name: 'txtDsDescIdioms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Handy phrasal verbs for your topic ("follow through").`
+  String get txtDsDescPhrasalVerbs {
+    return Intl.message(
+      'Handy phrasal verbs for your topic ("follow through").',
+      name: 'txtDsDescPhrasalVerbs',
       desc: '',
       args: [],
     );
@@ -3614,6 +3629,16 @@ class AppLocalizations {
     return Intl.message('Try again', name: 'txtDsTryAgain', desc: '', args: []);
   }
 
+  /// `The AI is busy right now. Please tap to try again.`
+  String get txtDsAiBusy {
+    return Intl.message(
+      'The AI is busy right now. Please tap to try again.',
+      name: 'txtDsAiBusy',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Here's how a native speaker might say it.`
   String get txtDsNativeHeaderNoScore {
     return Intl.message(
@@ -3722,6 +3747,26 @@ class AppLocalizations {
   /// `Filler`
   String get txtDsFiller {
     return Intl.message('Filler', name: 'txtDsFiller', desc: '', args: []);
+  }
+
+  /// `Word choice`
+  String get txtDsWordChoice {
+    return Intl.message(
+      'Word choice',
+      name: 'txtDsWordChoice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patterns to study`
+  String get txtDsStudyPatterns {
+    return Intl.message(
+      'Patterns to study',
+      name: 'txtDsStudyPatterns',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Tap a highlighted word to see the fix.`

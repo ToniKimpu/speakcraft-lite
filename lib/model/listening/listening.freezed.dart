@@ -45,6 +45,11 @@ mixin _$Listening {
   String get vocabularyPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'listening_category_id')
   int? get listeningCategoryId =>
+      throw _privateConstructorUsedError; // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
+// features; on non-free videos free users get subtitle play only, the rest
+// is premium. Gating: isFree || currentUser.isPremiumUser.
+  @JsonKey(name: 'is_free')
+  bool get isFree =>
       throw _privateConstructorUsedError; // Precomputed lesson-content counts, populated by the admin at save time
 // from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
 // (banner falls back to generic copy).
@@ -87,6 +92,7 @@ abstract class $ListeningCopyWith<$Res> {
       String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+      @JsonKey(name: 'is_free') bool isFree,
       @JsonKey(name: 'sentence_count') int sentenceCount,
       @JsonKey(name: 'vocab_count') int vocabCount,
       @JsonKey(name: 'pattern_count') int patternCount});
@@ -122,6 +128,7 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
     Object? sentenceExplanationPath = null,
     Object? vocabularyPath = null,
     Object? listeningCategoryId = freezed,
+    Object? isFree = null,
     Object? sentenceCount = null,
     Object? vocabCount = null,
     Object? patternCount = null,
@@ -187,6 +194,10 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      isFree: null == isFree
+          ? _value.isFree
+          : isFree // ignore: cast_nullable_to_non_nullable
+              as bool,
       sentenceCount: null == sentenceCount
           ? _value.sentenceCount
           : sentenceCount // ignore: cast_nullable_to_non_nullable
@@ -228,6 +239,7 @@ abstract class _$$ListeningImplCopyWith<$Res>
       String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+      @JsonKey(name: 'is_free') bool isFree,
       @JsonKey(name: 'sentence_count') int sentenceCount,
       @JsonKey(name: 'vocab_count') int vocabCount,
       @JsonKey(name: 'pattern_count') int patternCount});
@@ -261,6 +273,7 @@ class __$$ListeningImplCopyWithImpl<$Res>
     Object? sentenceExplanationPath = null,
     Object? vocabularyPath = null,
     Object? listeningCategoryId = freezed,
+    Object? isFree = null,
     Object? sentenceCount = null,
     Object? vocabCount = null,
     Object? patternCount = null,
@@ -326,6 +339,10 @@ class __$$ListeningImplCopyWithImpl<$Res>
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      isFree: null == isFree
+          ? _value.isFree
+          : isFree // ignore: cast_nullable_to_non_nullable
+              as bool,
       sentenceCount: null == sentenceCount
           ? _value.sentenceCount
           : sentenceCount // ignore: cast_nullable_to_non_nullable
@@ -362,6 +379,7 @@ class _$ListeningImpl implements _Listening {
       this.sentenceExplanationPath = '',
       @JsonKey(name: 'vocabulary_path') this.vocabularyPath = '',
       @JsonKey(name: 'listening_category_id') this.listeningCategoryId,
+      @JsonKey(name: 'is_free') this.isFree = false,
       @JsonKey(name: 'sentence_count') this.sentenceCount = 0,
       @JsonKey(name: 'vocab_count') this.vocabCount = 0,
       @JsonKey(name: 'pattern_count') this.patternCount = 0});
@@ -409,6 +427,12 @@ class _$ListeningImpl implements _Listening {
   @override
   @JsonKey(name: 'listening_category_id')
   final int? listeningCategoryId;
+// Per-video free flag (Supabase listenings.is_free). Free videos unlock all
+// features; on non-free videos free users get subtitle play only, the rest
+// is premium. Gating: isFree || currentUser.isPremiumUser.
+  @override
+  @JsonKey(name: 'is_free')
+  final bool isFree;
 // Precomputed lesson-content counts, populated by the admin at save time
 // from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
 // (banner falls back to generic copy).
@@ -424,7 +448,7 @@ class _$ListeningImpl implements _Listening {
 
   @override
   String toString() {
-    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, listeningCategoryId: $listeningCategoryId, sentenceCount: $sentenceCount, vocabCount: $vocabCount, patternCount: $patternCount)';
+    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, listeningCategoryId: $listeningCategoryId, isFree: $isFree, sentenceCount: $sentenceCount, vocabCount: $vocabCount, patternCount: $patternCount)';
   }
 
   @override
@@ -459,6 +483,7 @@ class _$ListeningImpl implements _Listening {
                 other.vocabularyPath == vocabularyPath) &&
             (identical(other.listeningCategoryId, listeningCategoryId) ||
                 other.listeningCategoryId == listeningCategoryId) &&
+            (identical(other.isFree, isFree) || other.isFree == isFree) &&
             (identical(other.sentenceCount, sentenceCount) ||
                 other.sentenceCount == sentenceCount) &&
             (identical(other.vocabCount, vocabCount) ||
@@ -469,26 +494,28 @@ class _$ListeningImpl implements _Listening {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      title,
-      thumbnail,
-      start,
-      end,
-      hasMMSubtitle,
-      hasVocabularies,
-      youtubeId,
-      subtitlePath,
-      multipleChoicePath,
-      shadowingPath,
-      recordSubtitlePath,
-      sentenceExplanationPath,
-      vocabularyPath,
-      listeningCategoryId,
-      sentenceCount,
-      vocabCount,
-      patternCount);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        title,
+        thumbnail,
+        start,
+        end,
+        hasMMSubtitle,
+        hasVocabularies,
+        youtubeId,
+        subtitlePath,
+        multipleChoicePath,
+        shadowingPath,
+        recordSubtitlePath,
+        sentenceExplanationPath,
+        vocabularyPath,
+        listeningCategoryId,
+        isFree,
+        sentenceCount,
+        vocabCount,
+        patternCount
+      ]);
 
   /// Create a copy of Listening
   /// with the given fields replaced by the non-null parameter values.
@@ -524,6 +551,7 @@ abstract class _Listening implements Listening {
       final String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') final String vocabularyPath,
       @JsonKey(name: 'listening_category_id') final int? listeningCategoryId,
+      @JsonKey(name: 'is_free') final bool isFree,
       @JsonKey(name: 'sentence_count') final int sentenceCount,
       @JsonKey(name: 'vocab_count') final int vocabCount,
       @JsonKey(name: 'pattern_count')
@@ -572,7 +600,13 @@ abstract class _Listening implements Listening {
   @override
   @JsonKey(name: 'listening_category_id')
   int?
-      get listeningCategoryId; // Precomputed lesson-content counts, populated by the admin at save time
+      get listeningCategoryId; // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
+// features; on non-free videos free users get subtitle play only, the rest
+// is premium. Gating: isFree || currentUser.isPremiumUser.
+  @override
+  @JsonKey(name: 'is_free')
+  bool
+      get isFree; // Precomputed lesson-content counts, populated by the admin at save time
 // from the referenced JSON. Drive the "what you'll get" banner; 0 = unknown
 // (banner falls back to generic copy).
   @override

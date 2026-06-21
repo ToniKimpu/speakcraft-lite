@@ -20,6 +20,7 @@ class FeedbackSectionKey {
   static const String betterVocab = 'better_vocab';
   static const String collocations = 'collocations';
   static const String idioms = 'idioms';
+  static const String phrasalVerbs = 'phrasal_verbs';
   static const String wholeRewrite = 'whole_rewrite';
   static const String sentenceRewrite = 'sentence_rewrite';
   static const String pronunciation = 'pronunciation';
@@ -72,11 +73,6 @@ const List<FeedbackSection> kFeedbackSections = [
     defaultOn: true,
   ),
   FeedbackSection(
-    key: FeedbackSectionKey.grammarPatterns,
-    group: FeedbackSectionGroup.accuracy,
-    cost: FeedbackSectionCost.medium,
-  ),
-  FeedbackSection(
     key: FeedbackSectionKey.burmeseInterference,
     group: FeedbackSectionGroup.accuracy,
     cost: FeedbackSectionCost.medium,
@@ -92,23 +88,19 @@ const List<FeedbackSection> kFeedbackSections = [
     key: FeedbackSectionKey.collocations,
     group: FeedbackSectionGroup.vocabulary,
     cost: FeedbackSectionCost.medium,
+    defaultOn: true,
   ),
   FeedbackSection(
     key: FeedbackSectionKey.idioms,
     group: FeedbackSectionGroup.vocabulary,
     cost: FeedbackSectionCost.medium,
-  ),
-  // Style
-  FeedbackSection(
-    key: FeedbackSectionKey.wholeRewrite,
-    group: FeedbackSectionGroup.style,
-    cost: FeedbackSectionCost.medium,
     defaultOn: true,
   ),
   FeedbackSection(
-    key: FeedbackSectionKey.sentenceRewrite,
-    group: FeedbackSectionGroup.style,
-    cost: FeedbackSectionCost.high,
+    key: FeedbackSectionKey.phrasalVerbs,
+    group: FeedbackSectionGroup.vocabulary,
+    cost: FeedbackSectionCost.medium,
+    defaultOn: true,
   ),
   // Delivery (voice only)
   FeedbackSection(
@@ -116,12 +108,7 @@ const List<FeedbackSection> kFeedbackSections = [
     group: FeedbackSectionGroup.delivery,
     cost: FeedbackSectionCost.low,
     voiceOnly: true,
-  ),
-  FeedbackSection(
-    key: FeedbackSectionKey.fillerWords,
-    group: FeedbackSectionGroup.delivery,
-    cost: FeedbackSectionCost.low,
-    voiceOnly: true,
+    defaultOn: true,
   ),
   // Scoring
   FeedbackSection(
@@ -147,17 +134,19 @@ const Map<FeedbackPreset, Set<String>> kPresetSections = {
   FeedbackPreset.recommended: {
     FeedbackSectionKey.sentenceFixes,
     FeedbackSectionKey.betterVocab,
-    FeedbackSectionKey.wholeRewrite,
+    FeedbackSectionKey.collocations,
+    FeedbackSectionKey.idioms,
+    FeedbackSectionKey.phrasalVerbs,
+    FeedbackSectionKey.pronunciation,
   },
   FeedbackPreset.soundNatural: {
     FeedbackSectionKey.betterVocab,
     FeedbackSectionKey.collocations,
     FeedbackSectionKey.idioms,
-    FeedbackSectionKey.sentenceRewrite,
-    FeedbackSectionKey.wholeRewrite,
+    FeedbackSectionKey.phrasalVerbs,
+    FeedbackSectionKey.pronunciation,
   },
   FeedbackPreset.grammarFocus: {
-    FeedbackSectionKey.grammarPatterns,
     FeedbackSectionKey.burmeseInterference,
     FeedbackSectionKey.sentenceFixes,
     FeedbackSectionKey.subScores,
@@ -170,10 +159,7 @@ const Map<FeedbackPreset, Set<String>> kPresetSections = {
 /// version into copying, not practice. The learner gets them once, when they
 /// tap "I'm done with this topic". Just-talk has no loop, so it keeps them.
 /// See `daily_speaking_feature.md` ("The version loop").
-const Set<String> kTerminalRevealSections = {
-  FeedbackSectionKey.wholeRewrite,
-  FeedbackSectionKey.sentenceRewrite,
-};
+const Set<String> kTerminalRevealSections = <String>{};
 
 /// Keys applicable to the given input mode (drops voice-only on the text path).
 ///

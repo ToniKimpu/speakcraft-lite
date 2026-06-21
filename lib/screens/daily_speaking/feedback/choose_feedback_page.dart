@@ -180,6 +180,9 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
               },
               socketError: () =>
                   _snack(context, l10n.txtNoInternetConnection),
+              // Transient AI overload — offer an inline retry (free, the audio
+              // is still in hand and no session was recorded server-side).
+              busy: () => _busySnack(context),
               error: (msg) => _snack(context, msg),
               orElse: () {},
             );
@@ -272,6 +275,25 @@ class _ChooseFeedbackPageState extends State<ChooseFeedbackPage> {
     ScaffoldMessenger.of(context)
       ..clearSnackBars()
       ..showSnackBar(SnackBar(content: Text(msg)));
+  }
+
+  /// Overloaded-AI snackbar with a Retry action. After the `busy` state the
+  /// builder falls back to the selector (selection preserved), so re-running
+  /// `_submit` resends the same request.
+  void _busySnack(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    ScaffoldMessenger.of(context)
+      ..clearSnackBars()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(l10n.txtDsAiBusy),
+          duration: const Duration(seconds: 6),
+          action: SnackBarAction(
+            label: l10n.txtDsTryAgain,
+            onPressed: () => _submit(context),
+          ),
+        ),
+      );
   }
 }
 
@@ -648,6 +670,7 @@ class _SubmittingView extends StatelessWidget {
     FeedbackSectionKey.betterVocab => (Icons.upgrade, PmpColors.info500),
     FeedbackSectionKey.collocations => (Icons.link, PmpColors.info500),
     FeedbackSectionKey.idioms => (Icons.auto_awesome, PmpColors.accentOrange),
+    FeedbackSectionKey.phrasalVerbs => (Icons.swap_calls, PmpColors.info500),
     FeedbackSectionKey.wholeRewrite => (
         Icons.article_outlined,
         colorScheme.primary
@@ -703,6 +726,7 @@ String _sectionLabel(BuildContext context, String key) {
     FeedbackSectionKey.betterVocab => l10n.txtDsBetterWordChoices,
     FeedbackSectionKey.collocations => l10n.txtDsCollocations,
     FeedbackSectionKey.idioms => l10n.txtDsIdioms,
+    FeedbackSectionKey.phrasalVerbs => l10n.txtDsPhrasalVerbs,
     FeedbackSectionKey.wholeRewrite => l10n.txtDsWholeRewriteLabel,
     FeedbackSectionKey.sentenceRewrite => l10n.txtDsSentenceRewriteLabel,
     FeedbackSectionKey.pronunciation => l10n.txtDsPronunciationNotes,
@@ -721,6 +745,7 @@ String _sectionDesc(BuildContext context, String key) {
     FeedbackSectionKey.betterVocab => l10n.txtDsDescBetterVocab,
     FeedbackSectionKey.collocations => l10n.txtDsDescCollocations,
     FeedbackSectionKey.idioms => l10n.txtDsDescIdioms,
+    FeedbackSectionKey.phrasalVerbs => l10n.txtDsDescPhrasalVerbs,
     FeedbackSectionKey.wholeRewrite => l10n.txtDsDescWholeRewrite,
     FeedbackSectionKey.sentenceRewrite => l10n.txtDsDescSentenceRewrite,
     FeedbackSectionKey.pronunciation => l10n.txtDsDescPronunciation,

@@ -1008,13 +1008,14 @@ class __$$FeedbackSentenceImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$FeedbackSentenceImpl implements _FeedbackSentence {
+class _$FeedbackSentenceImpl extends _FeedbackSentence {
   const _$FeedbackSentenceImpl(
       {required this.original,
       this.native = '',
       this.changed = false,
       final List<FeedbackSegment> segments = const <FeedbackSegment>[]})
-      : _segments = segments;
+      : _segments = segments,
+        super._();
 
   factory _$FeedbackSentenceImpl.fromJson(Map<String, dynamic> json) =>
       _$$FeedbackSentenceImplFromJson(json);
@@ -1075,12 +1076,13 @@ class _$FeedbackSentenceImpl implements _FeedbackSentence {
   }
 }
 
-abstract class _FeedbackSentence implements FeedbackSentence {
+abstract class _FeedbackSentence extends FeedbackSentence {
   const factory _FeedbackSentence(
       {required final String original,
       final String native,
       final bool changed,
       final List<FeedbackSegment> segments}) = _$FeedbackSentenceImpl;
+  const _FeedbackSentence._() : super._();
 
   factory _FeedbackSentence.fromJson(Map<String, dynamic> json) =
       _$FeedbackSentenceImpl.fromJson;
@@ -1108,7 +1110,11 @@ FeedbackSegment _$FeedbackSegmentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FeedbackSegment {
-  String get text => throw _privateConstructorUsedError;
+  String get text =>
+      throw _privateConstructorUsedError; // Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+// from a reverted experiment) instead of crashing history deserialization —
+// map any unknown value to grammar (where those errors belong now).
+  @JsonKey(unknownEnumValue: SegmentType.grammar)
   SegmentType? get type => throw _privateConstructorUsedError;
   String get correction => throw _privateConstructorUsedError;
   @JsonKey(name: 'reason_mm')
@@ -1134,7 +1140,7 @@ abstract class $FeedbackSegmentCopyWith<$Res> {
   @useResult
   $Res call(
       {String text,
-      SegmentType? type,
+      @JsonKey(unknownEnumValue: SegmentType.grammar) SegmentType? type,
       String correction,
       @JsonKey(name: 'reason_mm') String reasonMm,
       @JsonKey(name: 'reason_en') String reasonEn});
@@ -1196,7 +1202,7 @@ abstract class _$$FeedbackSegmentImplCopyWith<$Res>
   @useResult
   $Res call(
       {String text,
-      SegmentType? type,
+      @JsonKey(unknownEnumValue: SegmentType.grammar) SegmentType? type,
       String correction,
       @JsonKey(name: 'reason_mm') String reasonMm,
       @JsonKey(name: 'reason_en') String reasonEn});
@@ -1251,7 +1257,7 @@ class __$$FeedbackSegmentImplCopyWithImpl<$Res>
 class _$FeedbackSegmentImpl extends _FeedbackSegment {
   const _$FeedbackSegmentImpl(
       {required this.text,
-      this.type,
+      @JsonKey(unknownEnumValue: SegmentType.grammar) this.type,
       this.correction = '',
       @JsonKey(name: 'reason_mm') this.reasonMm = '',
       @JsonKey(name: 'reason_en') this.reasonEn = ''})
@@ -1262,7 +1268,11 @@ class _$FeedbackSegmentImpl extends _FeedbackSegment {
 
   @override
   final String text;
+// Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+// from a reverted experiment) instead of crashing history deserialization —
+// map any unknown value to grammar (where those errors belong now).
   @override
+  @JsonKey(unknownEnumValue: SegmentType.grammar)
   final SegmentType? type;
   @override
   @JsonKey()
@@ -1318,20 +1328,24 @@ class _$FeedbackSegmentImpl extends _FeedbackSegment {
 
 abstract class _FeedbackSegment extends FeedbackSegment {
   const factory _FeedbackSegment(
-          {required final String text,
-          final SegmentType? type,
-          final String correction,
-          @JsonKey(name: 'reason_mm') final String reasonMm,
-          @JsonKey(name: 'reason_en') final String reasonEn}) =
-      _$FeedbackSegmentImpl;
+      {required final String text,
+      @JsonKey(unknownEnumValue: SegmentType.grammar) final SegmentType? type,
+      final String correction,
+      @JsonKey(name: 'reason_mm') final String reasonMm,
+      @JsonKey(name: 'reason_en')
+      final String reasonEn}) = _$FeedbackSegmentImpl;
   const _FeedbackSegment._() : super._();
 
   factory _FeedbackSegment.fromJson(Map<String, dynamic> json) =
       _$FeedbackSegmentImpl.fromJson;
 
   @override
-  String get text;
+  String
+      get text; // Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+// from a reverted experiment) instead of crashing history deserialization —
+// map any unknown value to grammar (where those errors belong now).
   @override
+  @JsonKey(unknownEnumValue: SegmentType.grammar)
   SegmentType? get type;
   @override
   String get correction;
@@ -1357,9 +1371,17 @@ FeedbackFix _$FeedbackFixFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FeedbackFix {
   String get original => throw _privateConstructorUsedError;
-  String get corrected => throw _privateConstructorUsedError;
+  @JsonKey(name: 'correction')
+  String get corrected =>
+      throw _privateConstructorUsedError; // Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+// from a reverted experiment) instead of crashing history deserialization —
+// map any unknown value to grammar (where those errors belong now).
+  @JsonKey(unknownEnumValue: SegmentType.grammar)
+  SegmentType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'reason_mm')
   String get reasonMm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reason_en')
+  String get reasonEn => throw _privateConstructorUsedError;
 
   /// Serializes this FeedbackFix to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1379,8 +1401,10 @@ abstract class $FeedbackFixCopyWith<$Res> {
   @useResult
   $Res call(
       {String original,
-      String corrected,
-      @JsonKey(name: 'reason_mm') String reasonMm});
+      @JsonKey(name: 'correction') String corrected,
+      @JsonKey(unknownEnumValue: SegmentType.grammar) SegmentType? type,
+      @JsonKey(name: 'reason_mm') String reasonMm,
+      @JsonKey(name: 'reason_en') String reasonEn});
 }
 
 /// @nodoc
@@ -1400,7 +1424,9 @@ class _$FeedbackFixCopyWithImpl<$Res, $Val extends FeedbackFix>
   $Res call({
     Object? original = null,
     Object? corrected = null,
+    Object? type = freezed,
     Object? reasonMm = null,
+    Object? reasonEn = null,
   }) {
     return _then(_value.copyWith(
       original: null == original
@@ -1411,9 +1437,17 @@ class _$FeedbackFixCopyWithImpl<$Res, $Val extends FeedbackFix>
           ? _value.corrected
           : corrected // ignore: cast_nullable_to_non_nullable
               as String,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SegmentType?,
       reasonMm: null == reasonMm
           ? _value.reasonMm
           : reasonMm // ignore: cast_nullable_to_non_nullable
+              as String,
+      reasonEn: null == reasonEn
+          ? _value.reasonEn
+          : reasonEn // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -1429,8 +1463,10 @@ abstract class _$$FeedbackFixImplCopyWith<$Res>
   @useResult
   $Res call(
       {String original,
-      String corrected,
-      @JsonKey(name: 'reason_mm') String reasonMm});
+      @JsonKey(name: 'correction') String corrected,
+      @JsonKey(unknownEnumValue: SegmentType.grammar) SegmentType? type,
+      @JsonKey(name: 'reason_mm') String reasonMm,
+      @JsonKey(name: 'reason_en') String reasonEn});
 }
 
 /// @nodoc
@@ -1448,7 +1484,9 @@ class __$$FeedbackFixImplCopyWithImpl<$Res>
   $Res call({
     Object? original = null,
     Object? corrected = null,
+    Object? type = freezed,
     Object? reasonMm = null,
+    Object? reasonEn = null,
   }) {
     return _then(_$FeedbackFixImpl(
       original: null == original
@@ -1459,9 +1497,17 @@ class __$$FeedbackFixImplCopyWithImpl<$Res>
           ? _value.corrected
           : corrected // ignore: cast_nullable_to_non_nullable
               as String,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SegmentType?,
       reasonMm: null == reasonMm
           ? _value.reasonMm
           : reasonMm // ignore: cast_nullable_to_non_nullable
+              as String,
+      reasonEn: null == reasonEn
+          ? _value.reasonEn
+          : reasonEn // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -1472,8 +1518,10 @@ class __$$FeedbackFixImplCopyWithImpl<$Res>
 class _$FeedbackFixImpl implements _FeedbackFix {
   const _$FeedbackFixImpl(
       {required this.original,
-      required this.corrected,
-      @JsonKey(name: 'reason_mm') required this.reasonMm});
+      @JsonKey(name: 'correction') this.corrected = '',
+      @JsonKey(unknownEnumValue: SegmentType.grammar) this.type,
+      @JsonKey(name: 'reason_mm') this.reasonMm = '',
+      @JsonKey(name: 'reason_en') this.reasonEn = ''});
 
   factory _$FeedbackFixImpl.fromJson(Map<String, dynamic> json) =>
       _$$FeedbackFixImplFromJson(json);
@@ -1481,14 +1529,24 @@ class _$FeedbackFixImpl implements _FeedbackFix {
   @override
   final String original;
   @override
+  @JsonKey(name: 'correction')
   final String corrected;
+// Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+// from a reverted experiment) instead of crashing history deserialization —
+// map any unknown value to grammar (where those errors belong now).
+  @override
+  @JsonKey(unknownEnumValue: SegmentType.grammar)
+  final SegmentType? type;
   @override
   @JsonKey(name: 'reason_mm')
   final String reasonMm;
+  @override
+  @JsonKey(name: 'reason_en')
+  final String reasonEn;
 
   @override
   String toString() {
-    return 'FeedbackFix(original: $original, corrected: $corrected, reasonMm: $reasonMm)';
+    return 'FeedbackFix(original: $original, corrected: $corrected, type: $type, reasonMm: $reasonMm, reasonEn: $reasonEn)';
   }
 
   @override
@@ -1500,13 +1558,17 @@ class _$FeedbackFixImpl implements _FeedbackFix {
                 other.original == original) &&
             (identical(other.corrected, corrected) ||
                 other.corrected == corrected) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.reasonMm, reasonMm) ||
-                other.reasonMm == reasonMm));
+                other.reasonMm == reasonMm) &&
+            (identical(other.reasonEn, reasonEn) ||
+                other.reasonEn == reasonEn));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, original, corrected, reasonMm);
+  int get hashCode =>
+      Object.hash(runtimeType, original, corrected, type, reasonMm, reasonEn);
 
   /// Create a copy of FeedbackFix
   /// with the given fields replaced by the non-null parameter values.
@@ -1526,10 +1588,11 @@ class _$FeedbackFixImpl implements _FeedbackFix {
 
 abstract class _FeedbackFix implements FeedbackFix {
   const factory _FeedbackFix(
-          {required final String original,
-          required final String corrected,
-          @JsonKey(name: 'reason_mm') required final String reasonMm}) =
-      _$FeedbackFixImpl;
+      {required final String original,
+      @JsonKey(name: 'correction') final String corrected,
+      @JsonKey(unknownEnumValue: SegmentType.grammar) final SegmentType? type,
+      @JsonKey(name: 'reason_mm') final String reasonMm,
+      @JsonKey(name: 'reason_en') final String reasonEn}) = _$FeedbackFixImpl;
 
   factory _FeedbackFix.fromJson(Map<String, dynamic> json) =
       _$FeedbackFixImpl.fromJson;
@@ -1537,10 +1600,20 @@ abstract class _FeedbackFix implements FeedbackFix {
   @override
   String get original;
   @override
-  String get corrected;
+  @JsonKey(name: 'correction')
+  String
+      get corrected; // Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+// from a reverted experiment) instead of crashing history deserialization —
+// map any unknown value to grammar (where those errors belong now).
+  @override
+  @JsonKey(unknownEnumValue: SegmentType.grammar)
+  SegmentType? get type;
   @override
   @JsonKey(name: 'reason_mm')
   String get reasonMm;
+  @override
+  @JsonKey(name: 'reason_en')
+  String get reasonEn;
 
   /// Create a copy of FeedbackFix
   /// with the given fields replaced by the non-null parameter values.

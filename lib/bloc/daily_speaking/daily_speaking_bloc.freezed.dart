@@ -865,6 +865,7 @@ mixin _$DailySpeakingState {
     required TResult Function(String? message) submitting,
     required TResult Function(DailySpeakingSession session) success,
     required TResult Function() socketError,
+    required TResult Function() busy,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -874,6 +875,7 @@ mixin _$DailySpeakingState {
     TResult? Function(String? message)? submitting,
     TResult? Function(DailySpeakingSession session)? success,
     TResult? Function()? socketError,
+    TResult? Function()? busy,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -883,6 +885,7 @@ mixin _$DailySpeakingState {
     TResult Function(String? message)? submitting,
     TResult Function(DailySpeakingSession session)? success,
     TResult Function()? socketError,
+    TResult Function()? busy,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -893,6 +896,7 @@ mixin _$DailySpeakingState {
     required TResult Function(_Submitting value) submitting,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Busy value) busy,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -902,6 +906,7 @@ mixin _$DailySpeakingState {
     TResult? Function(_Submitting value)? submitting,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Busy value)? busy,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -911,6 +916,7 @@ mixin _$DailySpeakingState {
     TResult Function(_Submitting value)? submitting,
     TResult Function(_Success value)? success,
     TResult Function(_SocketError value)? socketError,
+    TResult Function(_Busy value)? busy,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -983,6 +989,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(String? message) submitting,
     required TResult Function(DailySpeakingSession session) success,
     required TResult Function() socketError,
+    required TResult Function() busy,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -995,6 +1002,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(String? message)? submitting,
     TResult? Function(DailySpeakingSession session)? success,
     TResult? Function()? socketError,
+    TResult? Function()? busy,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -1007,6 +1015,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(String? message)? submitting,
     TResult Function(DailySpeakingSession session)? success,
     TResult Function()? socketError,
+    TResult Function()? busy,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1023,6 +1032,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Submitting value) submitting,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Busy value) busy,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -1035,6 +1045,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Submitting value)? submitting,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Busy value)? busy,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -1047,6 +1058,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Submitting value)? submitting,
     TResult Function(_Success value)? success,
     TResult Function(_SocketError value)? socketError,
+    TResult Function(_Busy value)? busy,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1133,6 +1145,7 @@ class _$SubmittingImpl implements _Submitting {
     required TResult Function(String? message) submitting,
     required TResult Function(DailySpeakingSession session) success,
     required TResult Function() socketError,
+    required TResult Function() busy,
     required TResult Function(String message) error,
   }) {
     return submitting(message);
@@ -1145,6 +1158,7 @@ class _$SubmittingImpl implements _Submitting {
     TResult? Function(String? message)? submitting,
     TResult? Function(DailySpeakingSession session)? success,
     TResult? Function()? socketError,
+    TResult? Function()? busy,
     TResult? Function(String message)? error,
   }) {
     return submitting?.call(message);
@@ -1157,6 +1171,7 @@ class _$SubmittingImpl implements _Submitting {
     TResult Function(String? message)? submitting,
     TResult Function(DailySpeakingSession session)? success,
     TResult Function()? socketError,
+    TResult Function()? busy,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1173,6 +1188,7 @@ class _$SubmittingImpl implements _Submitting {
     required TResult Function(_Submitting value) submitting,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Busy value) busy,
     required TResult Function(_Error value) error,
   }) {
     return submitting(this);
@@ -1185,6 +1201,7 @@ class _$SubmittingImpl implements _Submitting {
     TResult? Function(_Submitting value)? submitting,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Busy value)? busy,
     TResult? Function(_Error value)? error,
   }) {
     return submitting?.call(this);
@@ -1197,6 +1214,7 @@ class _$SubmittingImpl implements _Submitting {
     TResult Function(_Submitting value)? submitting,
     TResult Function(_Success value)? success,
     TResult Function(_SocketError value)? socketError,
+    TResult Function(_Busy value)? busy,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1303,6 +1321,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(String? message) submitting,
     required TResult Function(DailySpeakingSession session) success,
     required TResult Function() socketError,
+    required TResult Function() busy,
     required TResult Function(String message) error,
   }) {
     return success(session);
@@ -1315,6 +1334,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(String? message)? submitting,
     TResult? Function(DailySpeakingSession session)? success,
     TResult? Function()? socketError,
+    TResult? Function()? busy,
     TResult? Function(String message)? error,
   }) {
     return success?.call(session);
@@ -1327,6 +1347,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(String? message)? submitting,
     TResult Function(DailySpeakingSession session)? success,
     TResult Function()? socketError,
+    TResult Function()? busy,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1343,6 +1364,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(_Submitting value) submitting,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Busy value) busy,
     required TResult Function(_Error value) error,
   }) {
     return success(this);
@@ -1355,6 +1377,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(_Submitting value)? submitting,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Busy value)? busy,
     TResult? Function(_Error value)? error,
   }) {
     return success?.call(this);
@@ -1367,6 +1390,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(_Submitting value)? submitting,
     TResult Function(_Success value)? success,
     TResult Function(_SocketError value)? socketError,
+    TResult Function(_Busy value)? busy,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1434,6 +1458,7 @@ class _$SocketErrorImpl implements _SocketError {
     required TResult Function(String? message) submitting,
     required TResult Function(DailySpeakingSession session) success,
     required TResult Function() socketError,
+    required TResult Function() busy,
     required TResult Function(String message) error,
   }) {
     return socketError();
@@ -1446,6 +1471,7 @@ class _$SocketErrorImpl implements _SocketError {
     TResult? Function(String? message)? submitting,
     TResult? Function(DailySpeakingSession session)? success,
     TResult? Function()? socketError,
+    TResult? Function()? busy,
     TResult? Function(String message)? error,
   }) {
     return socketError?.call();
@@ -1458,6 +1484,7 @@ class _$SocketErrorImpl implements _SocketError {
     TResult Function(String? message)? submitting,
     TResult Function(DailySpeakingSession session)? success,
     TResult Function()? socketError,
+    TResult Function()? busy,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1474,6 +1501,7 @@ class _$SocketErrorImpl implements _SocketError {
     required TResult Function(_Submitting value) submitting,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Busy value) busy,
     required TResult Function(_Error value) error,
   }) {
     return socketError(this);
@@ -1486,6 +1514,7 @@ class _$SocketErrorImpl implements _SocketError {
     TResult? Function(_Submitting value)? submitting,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Busy value)? busy,
     TResult? Function(_Error value)? error,
   }) {
     return socketError?.call(this);
@@ -1498,6 +1527,7 @@ class _$SocketErrorImpl implements _SocketError {
     TResult Function(_Submitting value)? submitting,
     TResult Function(_Success value)? success,
     TResult Function(_SocketError value)? socketError,
+    TResult Function(_Busy value)? busy,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1510,6 +1540,134 @@ class _$SocketErrorImpl implements _SocketError {
 
 abstract class _SocketError implements DailySpeakingState {
   const factory _SocketError() = _$SocketErrorImpl;
+}
+
+/// @nodoc
+abstract class _$$BusyImplCopyWith<$Res> {
+  factory _$$BusyImplCopyWith(
+          _$BusyImpl value, $Res Function(_$BusyImpl) then) =
+      __$$BusyImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$BusyImplCopyWithImpl<$Res>
+    extends _$DailySpeakingStateCopyWithImpl<$Res, _$BusyImpl>
+    implements _$$BusyImplCopyWith<$Res> {
+  __$$BusyImplCopyWithImpl(_$BusyImpl _value, $Res Function(_$BusyImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DailySpeakingState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$BusyImpl implements _Busy {
+  const _$BusyImpl();
+
+  @override
+  String toString() {
+    return 'DailySpeakingState.busy()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$BusyImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String? message) submitting,
+    required TResult Function(DailySpeakingSession session) success,
+    required TResult Function() socketError,
+    required TResult Function() busy,
+    required TResult Function(String message) error,
+  }) {
+    return busy();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String? message)? submitting,
+    TResult? Function(DailySpeakingSession session)? success,
+    TResult? Function()? socketError,
+    TResult? Function()? busy,
+    TResult? Function(String message)? error,
+  }) {
+    return busy?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String? message)? submitting,
+    TResult Function(DailySpeakingSession session)? success,
+    TResult Function()? socketError,
+    TResult Function()? busy,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (busy != null) {
+      return busy();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Submitting value) submitting,
+    required TResult Function(_Success value) success,
+    required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Busy value) busy,
+    required TResult Function(_Error value) error,
+  }) {
+    return busy(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Submitting value)? submitting,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Busy value)? busy,
+    TResult? Function(_Error value)? error,
+  }) {
+    return busy?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Submitting value)? submitting,
+    TResult Function(_Success value)? success,
+    TResult Function(_SocketError value)? socketError,
+    TResult Function(_Busy value)? busy,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (busy != null) {
+      return busy(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Busy implements DailySpeakingState {
+  const factory _Busy() = _$BusyImpl;
 }
 
 /// @nodoc
@@ -1584,6 +1742,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(String? message) submitting,
     required TResult Function(DailySpeakingSession session) success,
     required TResult Function() socketError,
+    required TResult Function() busy,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1596,6 +1755,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(String? message)? submitting,
     TResult? Function(DailySpeakingSession session)? success,
     TResult? Function()? socketError,
+    TResult? Function()? busy,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1608,6 +1768,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(String? message)? submitting,
     TResult Function(DailySpeakingSession session)? success,
     TResult Function()? socketError,
+    TResult Function()? busy,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1624,6 +1785,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Submitting value) submitting,
     required TResult Function(_Success value) success,
     required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Busy value) busy,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -1636,6 +1798,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Submitting value)? submitting,
     TResult? Function(_Success value)? success,
     TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Busy value)? busy,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -1648,6 +1811,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Submitting value)? submitting,
     TResult Function(_Success value)? success,
     TResult Function(_SocketError value)? socketError,
+    TResult Function(_Busy value)? busy,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

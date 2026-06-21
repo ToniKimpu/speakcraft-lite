@@ -82,10 +82,11 @@ class _FeedbackSections extends StatelessWidget {
     final feedback = session.feedback;
     final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
-    // Inline error categories live on the Review screen when we have an
-    // annotated transcript; only fall back to flat lists for legacy payloads.
+    // Sentence rewrites are the "answer" reveal — kept off the result page when
+    // we have an annotated transcript (they live on the Review/Compare screen).
+    // The itemized fix lists (things to fix / Burmese errors / better words /
+    // filler) now come from the reliable flat `fixes`, so they always show.
     final showInlineLists = !feedback.hasSentences;
-    final fillerWords = feedback.effectiveFillerWords;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -112,7 +113,7 @@ class _FeedbackSections extends StatelessWidget {
             child: _BulletList(items: feedback.strengths),
           ),
         ],
-        if (showInlineLists && feedback.effectiveFixes.isNotEmpty) ...[
+        if (feedback.effectiveFixes.isNotEmpty) ...[
           const SizedBox(height: 16),
           _Section(
             icon: Icons.tune,
@@ -126,17 +127,7 @@ class _FeedbackSections extends StatelessWidget {
             ),
           ),
         ],
-        if (feedback.grammarPatterns.isNotEmpty) ...[
-          const SizedBox(height: 16),
-          _Section(
-            icon: Icons.rule,
-            iconColor: PmpColors.warning500,
-            title: l10n.txtDsGrammarPatterns,
-            count: feedback.grammarPatterns.length,
-            child: _BulletList(items: feedback.grammarPatterns),
-          ),
-        ],
-        if (showInlineLists && feedback.effectiveInterference.isNotEmpty) ...[
+        if (feedback.effectiveInterference.isNotEmpty) ...[
           const SizedBox(height: 16),
           _Section(
             icon: Icons.translate,
@@ -214,20 +205,6 @@ class _FeedbackSections extends StatelessWidget {
             title: l10n.txtDsPronunciationNotes,
             count: feedback.pronunciationNotes.length,
             child: _BulletList(items: feedback.pronunciationNotes),
-          ),
-        ],
-        if (fillerWords.isNotEmpty) ...[
-          const SizedBox(height: 16),
-          _Section(
-            icon: Icons.bubble_chart_outlined,
-            iconColor: colorScheme.tertiary,
-            title: l10n.txtDsFillerWords,
-            count: fillerWords.length,
-            child: _ChipWrap(
-              labels: fillerWords
-                  .map((f) => '${f.word} ×${f.count}')
-                  .toList(growable: false),
-            ),
           ),
         ],
         if (feedback.explanationMm.isNotEmpty) ...[
@@ -619,11 +596,21 @@ class _FixCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-          Text(
-            fix.corrected,
-            style: PmpTextStyles.body1Semi.copyWith(
-              color: PmpColors.success500,
-            ),
+          Row(
+            children: [
+              Flexible(
+                child: Text(
+                  fix.corrected,
+                  style: PmpTextStyles.body1Semi.copyWith(
+                    color: PmpColors.success500,
+                  ),
+                ),
+              ),
+              PronounceButton(
+                text: fix.corrected,
+                color: PmpColors.success500,
+              ),
+            ],
           ),
           if (fix.reasonMm.isNotEmpty) ...[
             const SizedBox(height: 8),
@@ -782,6 +769,10 @@ class _VocabUpgradeRow extends StatelessWidget {
                       .copyWith(color: PmpColors.success500),
                 ),
               ),
+              PronounceButton(
+                text: upgrade.suggestion,
+                color: PmpColors.success500,
+              ),
             ],
           ),
           if (upgrade.reasonMm.isNotEmpty) ...[
@@ -860,7 +851,11 @@ class _PhraseChip extends StatelessWidget {
   const _PhraseChip({required this.phrase});
   final PhraseSuggestion phrase;
 
-  bool get _isIdiom => phrase.kind == PhraseKind.idiom;
+  IconData get _kindIcon => switch (phrase.kind) {
+        PhraseKind.idiom => Icons.auto_awesome,
+        PhraseKind.phrasalVerb => Icons.swap_calls,
+        PhraseKind.collocation => Icons.add,
+      };
 
   void _showDetail(BuildContext context) {
     final l10n = AppLocalizations.of(context);
@@ -878,7 +873,7 @@ class _PhraseChip extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(_isIdiom ? Icons.auto_awesome : Icons.add,
+                  Icon(_kindIcon,
                       size: 18, color: PmpColors.accentOrange),
                   const SizedBox(width: 8),
                   Expanded(
@@ -889,6 +884,11 @@ class _PhraseChip extends StatelessWidget {
                         fontFamily: 'ArchivoBlack Regular',
                       ),
                     ),
+                  ),
+                  PronounceButton(
+                    text: phrase.phrase,
+                    color: PmpColors.accentOrange,
+                    size: 22,
                   ),
                 ],
               ),
@@ -949,7 +949,7 @@ class _PhraseChip extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(_isIdiom ? Icons.auto_awesome : Icons.add,
+              Icon(_kindIcon,
                   size: 14, color: PmpColors.accentOrange),
               const SizedBox(width: 4),
               Text(
@@ -998,6 +998,11 @@ class _PhraseExampleRow extends StatelessWidget {
                     fontStyle: FontStyle.italic,
                   ),
                 ),
+              ),
+              PronounceButton(
+                text: example.en,
+                color: colorScheme.onSurfaceVariant,
+                size: 16,
               ),
             ],
           ),
@@ -1057,32 +1062,3 @@ class _SentenceRewriteCard extends StatelessWidget {
   }
 }
 
-class _ChipWrap extends StatelessWidget {
-  const _ChipWrap({required this.labels});
-  final List<String> labels;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Wrap(
-      spacing: 6,
-      runSpacing: 6,
-      children: labels
-          .map(
-            (label) => Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-              decoration: BoxDecoration(
-                color: colorScheme.surfaceContainerHighest,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: colorScheme.outlineVariant),
-              ),
-              child: Text(
-                label,
-                style: PmpTextStyles.sub.copyWith(color: colorScheme.onSurface),
-              ),
-            ),
-          )
-          .toList(growable: false),
-    );
-  }
-}

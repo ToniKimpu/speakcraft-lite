@@ -1,28 +1,27 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
-import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
-import 'package:speakcraft/model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import 'package:record/record.dart';
 
-import '../../../shared_widgets/practice_text_field.dart';
-
+/// Confirm-and-save sheet for a fresh take. Takes are auto-labelled "Take N" at
+/// display time (from order + created_at), so there is no name to enter — Save
+/// just uploads the take and lets the cap (free 1 / premium 5) apply.
 class SaveRecordingDialog extends StatefulWidget {
   const SaveRecordingDialog({
     super.key,
+    required this.listeningId,
     required this.sentenceId,
-    required this.youtubeId,
-    required this.audioName,
     required this.audioRecorder,
     required this.onSaved,
     required this.onDiscard,
   });
+  final int listeningId;
   final String sentenceId;
-  final String youtubeId;
-  final String audioName;
   final AudioRecorder audioRecorder;
   final Function(bool success) onSaved;
   final VoidCallback onDiscard;
@@ -32,19 +31,12 @@ class SaveRecordingDialog extends StatefulWidget {
 }
 
 class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
-  late final TextEditingController _nameController;
   final _saveUserRecordedVoiceBloc = UserRecordedSentenceAudioBloc();
 
   @override
-  void initState() {
-    super.initState();
-    _nameController = TextEditingController(text: widget.audioName);
-  }
-
-  @override
   void dispose() {
+    _saveUserRecordedVoiceBloc.close();
     super.dispose();
-    _nameController.dispose();
   }
 
   @override
@@ -58,7 +50,7 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
         bloc: _saveUserRecordedVoiceBloc,
         listener: (context, state) {
           state.maybeWhen(
-            success: (data) {
+            success: () {
               widget.onSaved(true);
               Navigator.pop(context);
             },
@@ -66,7 +58,7 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
               widget.onSaved(false);
               Navigator.pop(context);
             },
-            orElse: () => -1,
+            orElse: () {},
           );
         },
         builder: (context, state) {
@@ -95,22 +87,6 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
                     fontSize: 20,
                     letterSpacing: 0.5,
                   ),
-                ),
-                const SizedBox(height: 16),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    AppLocalizations.of(context).txtRecordingName,
-                    style: PmpTextStyles.body2Regular.copyWith(
-                      color: colorScheme.onSurfaceVariant,
-                      fontSize: 14,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 8),
-                PracticeTextField(
-                  controller: _nameController,
-                  englishOnly: true,
                 ),
                 const SizedBox(height: 24),
                 Divider(
@@ -164,23 +140,19 @@ class _SaveRecordingDialogState extends State<SaveRecordingDialog> {
                             )
                           : TextButton(
                               onPressed: () async {
-                                final audioName =
-                                    _nameController.text.trim().isEmpty
-                                        ? widget.audioName
-                                        : _nameController.text.trim();
                                 final audioPath =
                                     await widget.audioRecorder.stop();
-                                final data = UserRecordedSentenceAudio(
-                                  sentenceId: widget.sentenceId,
-                                  youtubeId: widget.youtubeId,
-                                  audioPath: audioPath ?? '',
-                                  audioName: audioName,
-                                );
-
-                                AppLogger.instance.debug(
-                                    "_onUserSavedData: ${data.toJson()} saved data!");
+                                if (audioPath == null || audioPath.isEmpty) {
+                                  widget.onSaved(false);
+                                  if (context.mounted) Navigator.pop(context);
+                                  return;
+                                }
                                 _saveUserRecordedVoiceBloc.add(
-                                  UserRecordedSentenceAudioEvent.insert(data),
+                                  UserRecordedSentenceAudioEvent.insert(
+                                    listeningId: widget.listeningId,
+                                    sentenceId: widget.sentenceId,
+                                    file: File(audioPath),
+                                  ),
                                 );
                               },
                               style: TextButton.styleFrom(

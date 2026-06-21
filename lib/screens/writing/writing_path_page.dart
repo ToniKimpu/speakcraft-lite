@@ -65,7 +65,7 @@ const _levelMetas = <_LevelMeta>[
   _LevelMeta(1, 'Foundation', 'A1–A2 · grammar from the ground up'),
   _LevelMeta(2, 'Building', 'B1 · perfect tenses, modals, conditionals'),
   _LevelMeta(3, 'Advanced', 'B2–C1 · conditionals, passive, clauses'),
-  _LevelMeta(4, 'IELTS', 'Task 1 & 2 · academic writing'),
+  _LevelMeta(4, 'Essay & Academic', 'Paragraphs → essays · IELTS-ready'),
 ];
 
 /// A section of Level 1 — its id (`1.2`), display name and the units under it.

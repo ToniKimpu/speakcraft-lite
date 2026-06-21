@@ -1,6 +1,4 @@
-import 'dart:convert';
-
-import 'package:drift/drift.dart' as drift;
+import 'package:speakcraft/repositories/daily_speaking/daily_speaking_session_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
@@ -10,7 +8,7 @@ import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_session.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_topic.dart';
 import 'package:speakcraft/screens/daily_speaking/widgets/session_audio_player.dart';
-import 'package:speakcraft/services/app_database/app_database.dart';
+import 'package:speakcraft/shared_widgets/pronounce_button.dart';
 
 part 'feedback_result_page.summary.dart';
 part 'feedback_result_page.cards.dart';
@@ -176,19 +174,11 @@ class _FeedbackResultPageState extends State<FeedbackResultPage> {
   Future<int> _nextRevisionForChain() async {
     final attemptId = session.topicAttemptId;
     if (attemptId == null) return session.revisionNumber + 1;
-    final table = AppDatabase.instance().dailySpeakingSessionTable;
-    final rows = await (table.select()
-          ..where((t) => t.topicAttemptId.equals(attemptId))
-          ..orderBy([
-            (t) => drift.OrderingTerm(
-                  expression: t.revisionNumber,
-                  mode: drift.OrderingMode.desc,
-                ),
-          ])
-          ..limit(1))
-        .get();
-    final maxRev =
-        rows.isEmpty ? session.revisionNumber : rows.first.revisionNumber;
+    final chain =
+        await DailySpeakingSessionRepository().chain(attemptId);
+    final maxRev = chain.isEmpty
+        ? session.revisionNumber
+        : chain.map((s) => s.revisionNumber).reduce((a, b) => a > b ? a : b);
     return maxRev + 1;
   }
 
@@ -222,19 +212,10 @@ class _FeedbackResultPageState extends State<FeedbackResultPage> {
   Future<List<({int revision, int score})>> _chainScores() async {
     final attemptId = session.topicAttemptId;
     if (attemptId == null) return const [];
-    final table = AppDatabase.instance().dailySpeakingSessionTable;
-    final rows = await (table.select()
-          ..where((t) => t.topicAttemptId.equals(attemptId))
-          ..orderBy([
-            (t) => drift.OrderingTerm(expression: t.revisionNumber),
-          ]))
-        .get();
-    return rows.map((r) {
-      final fb = DailySpeakingFeedback.fromJson(
-        Map<String, dynamic>.from(jsonDecode(r.feedbackJson) as Map),
-      );
-      return (revision: r.revisionNumber, score: fb.score);
-    }).toList(growable: false);
+    final chain = await DailySpeakingSessionRepository().chain(attemptId);
+    return chain
+        .map((s) => (revision: s.revisionNumber, score: s.feedback.score))
+        .toList(growable: false);
   }
 
   void _goHome(BuildContext context) {

@@ -1,0 +1,543 @@
+{
+  "fixes": [
+    {
+      "type": "grammar",
+      "original": "I want to teach",
+      "reason_mm": "Past tense ကို သုံးရမှာဖြစ်ပါတယ်။ အတိတ်က အကြောင်းအရာကို ပြောနေတာဖြစ်လို့ 'want' ကို 'wanted' လို့ ပြောင်းရပါမယ်။",
+      "correction": "I wanted to teach"
+    },
+    {
+      "type": "grammar",
+      "original": "seven graders",
+      "reason_mm": "ဒီနေရာမှာ 'seventh' လိုမျိုး ordinal number ကို သုံးရပါမယ်။ 'seven' က cardinal number ဖြစ်ပါတယ်။",
+      "correction": "seventh graders"
+    },
+    {
+      "type": "grammar",
+      "original": "match",
+      "reason_mm": "သင်္ချာဘာသာရပ်ကို ရည်ညွှန်းတာဖြစ်လို့ 'math' လို့ ပြောရပါမယ်။ 'match' က လိုက်ဖက်တာ ဒါမှမဟုတ် ပြိုင်ပွဲကို ဆိုလိုပါတယ်။",
+      "correction": "math"
+    },
+    {
+      "type": "grammar",
+      "original": "make",
+      "reason_mm": "အတိတ်က လုပ်ခဲ့တဲ့အကြောင်းကို ပြောတာဖြစ်လို့ 'make' ရဲ့ past tense ဖြစ်တဲ့ 'made' ကို သုံးရပါမယ်။",
+      "correction": "made"
+    },
+    {
+      "type": "grammar",
+      "original": "gave all",
+      "reason_mm": "'all' ကို ထပ်ထည့်စရာမလိုပါဘူး။ 'gave homework assignments' လို့ ပြောရင် လုံလောက်ပါတယ်။",
+      "correction": "gave"
+    },
+    {
+      "type": "grammar",
+      "original": "grace",
+      "reason_mm": "ကျောင်းသားတွေရဲ့ ရမှတ်တွေကို ပြောတာဖြစ်လို့ 'grades' လို့ သုံးရပါမယ်။ 'grace' က ကျေးဇူးတရား ဒါမှမဟုတ် လှပမှုလို့ အဓိပ္ပာယ်ရပါတယ်။",
+      "correction": "grades"
+    },
+    {
+      "type": "grammar",
+      "original": "different",
+      "reason_mm": "ဒီနေရာမှာ နာမ် (noun) ဖြစ်တဲ့ 'difference' ကို သုံးရမှာဖြစ်ပါတယ်။ 'different' က နာမဝိသေသန (adjective) ဖြစ်ပါတယ်။",
+      "correction": "difference"
+    },
+    {
+      "type": "grammar",
+      "original": "stronger",
+      "reason_mm": "အကောင်းဆုံးဆိုတဲ့ အဓိပ္ပာယ်ရအောင် superlative adjective ဖြစ်တဲ့ 'strongest' ကို သုံးရပါမယ်။ 'stronger' က နှိုင်းယှဉ်တဲ့အခါ သုံးပါတယ်။",
+      "correction": "strongest"
+    },
+    {
+      "type": "grammar",
+      "original": "such a PARRIC IQ scores",
+      "reason_mm": "ဒီနေရာမှာ 'particularly high' လို့ သုံးတာက ပိုပြီး သဘာဝကျပါတယ်။ 'PARRIC' ဆိုတဲ့ စကားလုံးက မှားနေပါတယ်။",
+      "correction": "particularly high IQ scores"
+    },
+    {
+      "type": "grammar",
+      "original": "went doing",
+      "reason_mm": "ဒီနေရာမှာ 'weren't doing' (was not doing) လို့ ပြောတာက ပိုမှန်ကန်ပါတယ်။ သူတို့ ကောင်းကောင်းမလုပ်နိုင်ခဲ့ဘူးလို့ ဆိုလိုတာပါ။",
+      "correction": "weren't doing"
+    },
+    {
+      "type": "grammar",
+      "original": "thing",
+      "reason_mm": "အမျိုးအစားများစွာကို ရည်ညွှန်းတာဖြစ်လို့ အများကိန်း (plural) 'things' ကို သုံးရပါမယ်။",
+      "correction": "things"
+    },
+    {
+      "type": "grammar",
+      "original": "seven grader",
+      "reason_mm": "ဒီနေရာမှာ 'seventh' လိုမျိုး ordinal number ကို သုံးရပါမယ်။ 'seven' က cardinal number ဖြစ်ပါတယ်။",
+      "correction": "seventh grader"
+    },
+    {
+      "type": "grammar",
+      "original": "match",
+      "reason_mm": "သင်္ချာဘာသာရပ်ကို ရည်ညွှန်းတာဖြစ်လို့ 'math' လို့ ပြောရပါမယ်။ 'match' က လိုက်ဖက်တာ ဒါမှမဟုတ် ပြိုင်ပွဲကို ဆိုလိုပါတယ်။",
+      "correction": "math"
+    },
+    {
+      "type": "grammar",
+      "original": "hot",
+      "reason_mm": "ခက်ခဲတယ်လို့ ပြောချင်တာဖြစ်လို့ 'hard' လို့ သုံးရပါမယ်။ 'hot' က ပူတယ်လို့ အဓိပ္ပာယ်ရပါတယ်။",
+      "correction": "hard"
+    },
+    {
+      "type": "grammar",
+      "original": "parallelogram",
+      "reason_mm": "ဒီနေရာမှာ 'a' ဆိုတဲ့ article ကို ထည့်ပေးရပါမယ်။ 'parallelogram' က အများကိန်းမဟုတ်လို့ပါ။",
+      "correction": "a parallelogram"
+    },
+    {
+      "type": "grammar",
+      "original": "concept are",
+      "reason_mm": "အများကိန်း (plural) ဖြစ်တဲ့ 'concepts' နဲ့ 'are' ကို တွဲသုံးရပါမယ်။",
+      "correction": "concepts are"
+    },
+    {
+      "type": "grammar",
+      "original": "work hard",
+      "reason_mm": "အတိတ်က အခြေအနေကို ပြောတာဖြစ်လို့ 'work' ရဲ့ past tense ဖြစ်တဲ့ 'worked' ကို သုံးရပါမယ်။",
+      "correction": "worked hard"
+    },
+    {
+      "type": "grammar",
+      "original": "concept are",
+      "reason_mm": "အများကိန်း (plural) ဖြစ်တဲ့ 'concepts' နဲ့ 'are' ကို တွဲသုံးရပါမယ်။",
+      "correction": "concepts are"
+    },
+    {
+      "type": "grammar",
+      "original": "psychologics",
+      "reason_mm": "စိတ်ပညာရှင်ကို ရည်ညွှန်းတာဖြစ်လို့ 'psychologist' လို့ သုံးရပါမယ်။ 'psychologics' က မှားယွင်းတဲ့ စကားလုံးပါ။",
+      "correction": "psychologist"
+    },
+    {
+      "type": "grammar",
+      "original": "carries who stay",
+      "reason_mm": "စစ်ကျောင်းသားတွေကို 'cadets' လို့ ခေါ်ပါတယ်။ အနာဂတ်မှာ ဖြစ်လာမယ့် အရာကို ခန့်မှန်းတာဖြစ်လို့ 'would stay' ကို သုံးရပါမယ်။",
+      "correction": "cadets who would stay"
+    },
+    {
+      "type": "grammar",
+      "original": "who advance fathers",
+      "reason_mm": "အနာဂတ်မှာ ဖြစ်လာမယ့် အရာကို ခန့်မှန်းတာဖြစ်လို့ 'would advance' ကို သုံးရပါမယ်။ 'far' ရဲ့ superlative form က 'furthest' ဖြစ်ပါတယ်။",
+      "correction": "who would advance furthest"
+    },
+    {
+      "type": "grammar",
+      "original": "neighbors",
+      "reason_mm": "ပတ်ဝန်းကျင်ဒေသတွေကို ရည်ညွှန်းတာဖြစ်လို့ 'neighborhoods' လို့ သုံးရပါမယ်။ 'neighbors' က အိမ်နီးချင်းတွေကို ဆိုလိုပါတယ်။",
+      "correction": "neighborhoods"
+    },
+    {
+      "type": "grammar",
+      "original": "teacher are",
+      "reason_mm": "အများကိန်း (plural) ဖြစ်တဲ့ 'teachers' နဲ့ 'are' ကို တွဲသုံးရပါမယ်။",
+      "correction": "teachers are"
+    },
+    {
+      "type": "grammar",
+      "original": "outcome for",
+      "reason_mm": "ရလဒ်များစွာကို ပြောတာဖြစ်လို့ အများကိန်း (plural) 'outcomes' ကို သုံးရပါမယ်။",
+      "correction": "outcomes for"
+    },
+    {
+      "type": "grammar",
+      "original": "self person",
+      "reason_mm": "အရောင်းဝန်ထမ်းကို ရည်ညွှန်းတာဖြစ်လို့ 'salesperson' လို့ သုံးရပါမယ်။",
+      "correction": "salesperson"
+    },
+    {
+      "type": "grammar",
+      "original": "is you Mars is",
+      "reason_mm": "ဒီနေရာမှာ 'emerges as' (ပေါ်ထွက်လာသည်) လို့ ပြောတာက ပိုမှန်ကန်ပါတယ်။ 'you Mars is' က မှားယွင်းနေပါတယ်။",
+      "correction": "emerges as"
+    },
+    {
+      "type": "grammar",
+      "original": "social intelligent",
+      "reason_mm": "ဒီနေရာမှာ နာမ် (noun) ဖြစ်တဲ့ 'intelligence' ကို သုံးရမှာဖြစ်ပါတယ်။ 'intelligent' က နာမဝိသေသန (adjective) ဖြစ်ပါတယ်။",
+      "correction": "social intelligence"
+    },
+    {
+      "type": "grammar",
+      "original": "Good is patient and perservation",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပြီး 'patience' နဲ့ 'perseverance' ဆိုတဲ့ နာမ်တွေကို သုံးရပါမယ်။",
+      "correction": "Grit is patience and perseverance"
+    },
+    {
+      "type": "grammar",
+      "original": "Good is",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit is"
+    },
+    {
+      "type": "grammar",
+      "original": "Good is",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit is"
+    },
+    {
+      "type": "grammar",
+      "original": "future",
+      "reason_mm": "ဒီနေရာမှာ 'sticking with it' လို့ သုံးတာက ပိုမှန်ကန်ပါတယ်။ 'it' က 'your goal' ကို ရည်ညွှန်းပါတယ်။",
+      "correction": "it"
+    },
+    {
+      "type": "grammar",
+      "original": "Grid is living light, living love like a marathon, it is a marathon.",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပြီး 'living life' (ဘဝကို ဖြတ်သန်းတာ) လို့ ပြောတာက ပိုမှန်ကန်ပါတယ်။ 'living light, living love' က အဓိပ္ပာယ် မမှန်ကန်ပါဘူး။",
+      "correction": "Grit is living life like a marathon. It is a marathon."
+    },
+    {
+      "type": "grammar",
+      "original": "Not a screen.",
+      "reason_mm": "ဒီနေရာမှာ 'sprint' (တိုတိုတုတ်တုတ် ပြေးတာ) လို့ ပြောတာက ပိုမှန်ကန်ပါတယ်။ 'screen' က မျက်နှာပြင်ကို ဆိုလိုပါတယ်။",
+      "correction": "not a sprint."
+    },
+    {
+      "type": "grammar",
+      "original": "grid",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit"
+    },
+    {
+      "type": "grammar",
+      "original": "high school junior",
+      "reason_mm": "အများကိန်း (plural) ဖြစ်တဲ့ 'juniors' ကို သုံးရပါမယ်။",
+      "correction": "high school juniors"
+    },
+    {
+      "type": "grammar",
+      "original": "grid",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit"
+    },
+    {
+      "type": "grammar",
+      "original": "who who graduate",
+      "reason_mm": "အနာဂတ်မှာ ဖြစ်လာမယ့် အရာကို ခန့်မှန်းတာဖြစ်လို့ 'would graduate' ကို သုံးရပါမယ်။",
+      "correction": "who would graduate"
+    },
+    {
+      "type": "grammar",
+      "original": "Tens of that greedier kids",
+      "reason_mm": "ဒီနေရာမှာ 'It turns out that' (ပေါ်ထွက်လာသည်) လို့ ပြောတာက ပိုမှန်ကန်ပါတယ်။ 'greedier' က 'grittier' ဖြစ်ရပါမယ်။",
+      "correction": "It turns out that grittier kids"
+    },
+    {
+      "type": "grammar",
+      "original": "character it is",
+      "reason_mm": "ဒီနေရာမှာ 'characteristic' (ထူးခြားချက်) လို့ သုံးတာက ပိုမှန်ကန်ပါတယ်။",
+      "correction": "characteristic"
+    },
+    {
+      "type": "grammar",
+      "original": "task school",
+      "reason_mm": "စစ်ဆေးမှုရမှတ်တွေကို ပြောတာဖြစ်လို့ 'test scores' လို့ သုံးရပါမယ်။",
+      "correction": "test scores"
+    },
+    {
+      "type": "grammar",
+      "original": "kid for",
+      "reason_mm": "အများကိန်း (plural) ဖြစ်တဲ့ 'kids' နဲ့ 'feel' ရဲ့ past tense ဖြစ်တဲ့ 'felt' ကို သုံးရပါမယ်။",
+      "correction": "kids felt"
+    },
+    {
+      "type": "grammar",
+      "original": "grid",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit"
+    },
+    {
+      "type": "grammar",
+      "original": "rig",
+      "reason_mm": "အန္တရာယ်ရှိတဲ့ အခြေအနေကို ပြောတာဖြစ်လို့ 'risk' လို့ သုံးရပါမယ်။ 'rig' က လိမ်လည်တာ ဒါမှမဟုတ် ကိရိယာကို ဆိုလိုပါတယ်။",
+      "correction": "risk"
+    },
+    {
+      "type": "grammar",
+      "original": "grid",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit"
+    },
+    {
+      "type": "grammar",
+      "original": "asked",
+      "reason_mm": "နေ့စဉ် ဖြစ်ပျက်နေတဲ့ အကြောင်းအရာကို ပြောတာဖြစ်လို့ simple present tense ဖြစ်တဲ့ 'ask' ကို သုံးရပါမယ်။",
+      "correction": "ask"
+    },
+    {
+      "type": "grammar",
+      "original": "grid",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit"
+    },
+    {
+      "type": "grammar",
+      "original": "take great teach, sorry work at it.",
+      "reason_mm": "'cultivate grit' (ဇွဲလုံ့လကို မွေးမြူတာ) လို့ ပြောတာက ပိုမှန်ကန်ပါတယ်။ 'take great teach' က အဓိပ္ပာယ် မမှန်ကန်ပါဘူး။",
+      "correction": "cultivate grit, teach, sorry, work at it."
+    },
+    {
+      "type": "grammar",
+      "original": "The honest and sorry is I don't know.",
+      "reason_mm": "ဒီနေရာမှာ 'answer' (အဖြေ) လို့ သုံးတာက ပိုမှန်ကန်ပါတယ်။ 'sorry' က ဝမ်းနည်းတာကို ဆိုလိုပါတယ်။",
+      "correction": "The honest answer is I don't know."
+    },
+    {
+      "type": "grammar",
+      "original": "make you greedy",
+      "reason_mm": "'greedy' (လောဘကြီးတာ) က 'gritty' (ဇွဲလုံ့လရှိတာ) ဖြစ်ရပါမယ်။",
+      "correction": "make you gritty"
+    },
+    {
+      "type": "grammar",
+      "original": "individual",
+      "reason_mm": "အများကိန်း (plural) ဖြစ်တဲ့ 'individuals' ကို သုံးရပါမယ်။",
+      "correction": "individuals"
+    },
+    {
+      "type": "grammar",
+      "original": "grid",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit"
+    },
+    {
+      "type": "grammar",
+      "original": "measure",
+      "reason_mm": "အများကိန်း (plural) ဖြစ်တဲ့ 'measures' ကို သုံးရပါမယ်။",
+      "correction": "measures"
+    },
+    {
+      "type": "grammar",
+      "original": "grid",
+      "reason_mm": "'Grit' ဆိုတဲ့ စကားလုံးကို သုံးရမှာဖြစ်ပါတယ်။",
+      "correction": "Grit"
+    }
+  ],
+  "level": "upper_intermediate",
+  "score": 85,
+  "phrases": [
+    {
+      "kind": "collocation",
+      "phrase": "a demanding job",
+      "examples": [
+        {
+          "en": "Being a doctor is a demanding job.",
+          "mm": "ဆရာဝန်အလုပ်က တောင်းဆိုမှုများတဲ့ အလုပ်တစ်ခုပါ။"
+        }
+      ],
+      "meaning_mm": "အချိန်၊ စွမ်းအင်၊ ကြိုးစားအားထုတ်မှုတွေ အများကြီးလိုအပ်တဲ့ အလုပ်ကို ဆိုလိုပါတယ်။"
+    },
+    {
+      "kind": "collocation",
+      "phrase": "come to a conclusion",
+      "examples": [
+        {
+          "en": "After much deliberation, we came to the conclusion that we should invest in new technology.",
+          "mm": "အများကြီး စဉ်းစားပြီးနောက်မှာ နည်းပညာအသစ်တွေမှာ ရင်းနှီးမြှုပ်နှံသင့်တယ်လို့ ကျွန်တော်တို့ နိဂုံးချုပ်ခဲ့ပါတယ်။"
+        }
+      ],
+      "meaning_mm": "စဉ်းစားသုံးသပ်ပြီးနောက် ဆုံးဖြတ်ချက်တစ်ခု ဒါမှမဟုတ် အဖြေတစ်ခုကို ရောက်ရှိတာကို ဆိုလိုပါတယ်။"
+    },
+    {
+      "kind": "collocation",
+      "phrase": "follow through on commitments",
+      "examples": [
+        {
+          "en": "It's important to follow through on your commitments to build trust.",
+          "mm": "ယုံကြည်မှုတည်ဆောက်ဖို့အတွက် ကိုယ့်ရဲ့ ကတိကဝတ်တွေကို ဆက်လက်လုပ်ဆောင်ဖို့ အရေးကြီးပါတယ်။"
+        }
+      ],
+      "meaning_mm": "ပေးထားတဲ့ ကတိတွေ၊ ကတိကဝတ်တွေကို အဆုံးထိ ဆက်လက်လုပ်ဆောင်တာကို ဆိုလိုပါတယ်။"
+    },
+    {
+      "kind": "idiom",
+      "phrase": "day in and day out",
+      "examples": [
+        {
+          "en": "She practices the piano day in and day out to improve her skills.",
+          "mm": "သူမ စန္ဒယားကို နေ့တိုင်း လေ့ကျင့်ပြီး စွမ်းရည်တွေ တိုးတက်အောင် လုပ်ပါတယ်။"
+        }
+      ],
+      "meaning_mm": "နေ့တိုင်း၊ အဆက်မပြတ်၊ ပုံမှန်ဆိုတဲ့ အဓိပ္ပာယ်ရပါတယ်။"
+    }
+  ],
+  "sentences": [
+    {
+      "original": "When I was 27 years old, I left a very demanding job in management consulting for a job that was even more demanding, teaching."
+    },
+    {
+      "original": "I want to teach seven graders match in the New York City public schools."
+    },
+    {
+      "original": "And like any teacher, I make quizzes and tests, I gave all homework assignments."
+    },
+    { "original": "When the work came back, I calculated grace." },
+    {
+      "original": "What struck me was that IQ was not the only different between my best and my worst students."
+    },
+    {
+      "original": "Some of my stronger performers did not have such a PARRIC IQ scores."
+    },
+    { "original": "Some of my smartest kids went doing so well." },
+    {
+      "original": "And that got me thinking, the kinds of thing you need to learn in seven grader match, sure they are hot."
+    },
+    { "original": "Ratio, decimals, the area of parallelogram." },
+    { "original": "But this concept are not impossible." },
+    {
+      "original": "And I was firmly convinced that every one of my students could learn the material if they work hard and long enough."
+    },
+    {
+      "original": "After several more years of teaching, I came to the conclusion that what we need in education is a much better understanding of students and learning from a motivational perspective, from a psychological perspective."
+    },
+    {
+      "original": "In education, the one thing we know how to measure best is IQ."
+    },
+    {
+      "original": "But this concept are not But what you're doing well in school and in life depends on much more than your ability to learn quickly and easily."
+    },
+    {
+      "original": "So I left the classroom and I went to graduate school to graduate school to become a psychologics."
+    },
+    {
+      "original": "I started studying kids and adults in all kinds of super challenging settings."
+    },
+    {
+      "original": "And in every study, my question was, who is successful here and why?"
+    },
+    {
+      "original": "Uh, my research team and I went to West Point Military Academy."
+    },
+    {
+      "original": "We tried to predict which carries who stay in military training and which will drop out."
+    },
+    {
+      "original": "We went to spelling bee, national spelling bee and try to predict which children who advance fathers in competition."
+    },
+    {
+      "original": "We study rookie teachers working in really tough neighbors, asking which teacher are still going to be here in teaching by the end of the school year."
+    },
+    {
+      "original": "And of those, who will be the most effective at improving learning outcome for their students."
+    },
+    {
+      "original": "We partner with private companies, asking which of these self person is going to keep their job and who is going to earn the most money."
+    },
+    {
+      "original": "In all those very different contexts, one characteristic is you Mars is a significant predictor of success."
+    },
+    { "original": "And it wasn't social intelligent." },
+    { "original": "It wasn't looks, physical health and it wasn't IQ." },
+    { "original": "It was great." },
+    {
+      "original": "Good is patient and perservation for very long time goals."
+    },
+    { "original": "Good is having stamina." },
+    {
+      "original": "Good is sticking with your future day in day out, not just for the week, not just for the month, but for years and working really hard to make that future a reality."
+    },
+    {
+      "original": "Grid is living light, living love like a marathon, it is a marathon."
+    },
+    { "original": "Not a screen." },
+    {
+      "original": "A few years ago, I started studying grid in that Chicago public school."
+    },
+    {
+      "original": "I had thousands of high school junior to take grid questionnaires and then waited around more than a year to see who who graduate."
+    },
+    {
+      "original": "Tens of that greedier kids were significantly more likely to graduate even when I matched them on every character it is I could measure."
+    },
+    {
+      "original": "Things like family income, standardized achievement task school, even how safe kid for when they were at school."
+    },
+    {
+      "original": "So it's not just a West Point or the national spelling bee that grid matters."
+    },
+    {
+      "original": "It is also in school, especially for kids at rig for dropping out."
+    },
+    {
+      "original": "To me the most shocking thing about grid is how little we know, how little science knows about building it."
+    },
+    {
+      "original": "Everyday, my parents and teachers asked me how do I build grid in kids?"
+    },
+    { "original": "Uh what do I do to take great teach, sorry work at it." },
+    { "original": "How do I keep them motivated for the long run?" },
+    { "original": "The honest and sorry is I don't know." },
+    { "original": "What do I know is that talent doesn't make you greedy." },
+    {
+      "original": "Our data show very clearly that there are many talented individual who simply do not follow through on their commitments."
+    },
+    {
+      "original": "In fact, in our data, grid is usually unrelated or even inversely related to measure of talent."
+    },
+    { "original": "So far, the best idea I have heard about building grid in" }
+  ],
+  "strengths": [
+    "Clear and confident delivery.",
+    "Good use of complex sentence structures.",
+    "Excellent vocabulary for the topic."
+  ],
+  "sub_scores": {
+    "fluency": 85,
+    "grammar": 80,
+    "vocabulary": 90,
+    "pronunciation": 75
+  },
+  "word_count": 1000,
+  "total_tokens": 19441,
+  "explanation_mm": "အရမ်းကောင်းပါတယ်။ အကြောင်းအရာကို ကောင်းကောင်းရှင်းပြနိုင်ပြီး စကားပြောနှုန်းလည်း မှန်ပါတယ်။ Grammar ပိုင်းမှာ သေးသေးလေးတွေပဲ မှားတာ တွေ့ရပါတယ်။ အသံထွက်ကို နည်းနည်းလေး ပိုပြီး ဂရုစိုက်မယ်ဆိုရင် ပိုပြီး ပြေပြစ်လာပါလိမ့်မယ်။",
+  "inferred_topic": "The importance of grit over IQ",
+  "duration_seconds": 300,
+  "speaking_pace_wpm": 200,
+  "pronunciation_notes": [
+    "match: 'match' နဲ့ 'math' အသံထွက် မတူပါဘူး။ 'match' မှာ 'ch' အသံ (ချ်) ပါပြီး 'math' မှာ 'th' အသံ (သ်) ပါပါတယ်။ လျှာကို သွားနှစ်ချောင်းကြား ညှပ်ပြီး 'သ်' လို့ ထွက်ကြည့်ပါ။",
+    "grace: 'grace' နဲ့ 'grades' အသံထွက် မတူပါဘူး။ 'grace' မှာ 's' အသံ (စ်) ပါပြီး 'grades' မှာ 'z' အသံ (ဇ်) ပါပါတယ်။ 'grades' မှာ 'd' အသံကိုလည်း ရှင်းရှင်းလင်းလင်း ထွက်ပေးပါ။",
+    "different: 'different' ရဲ့ 'e' အသံ (အစ်) ကို ပိုပြီး ရှင်းအောင် ထွက်ပေးပါ။",
+    "stronger: 'stronger' မှာ 'g' အသံကို ပိုပြီး ရှင်းအောင် ထွက်ပေးပါ။",
+    "Parrick: ဒီစကားလုံးက 'particularly' ဖြစ်ရမှာပါ။ 'particularly' ရဲ့ 'par' အသံကို ရှင်းအောင် ထွက်ပြီး 'tic' အသံကို မြန်မြန်လေး ထွက်ပေးပါ။",
+    "went: 'went' နဲ့ 'weren't' အသံထွက် မတူပါဘူး။ 'weren't' မှာ 'r' အသံနဲ့ 't' အသံကို ပိုပြီး ရှင်းအောင် ထွက်ပေးပါ။",
+    "hot: 'hot' နဲ့ 'hard' အသံထွက် မတူပါဘူး။ 'hard' မှာ 'r' အသံကို ရှင်းအောင် ထွက်ပြီး 'd' အသံကိုလည်း ထွက်ပေးပါ။",
+    "parallelogram: 'parallelogram' ရဲ့ 'gram' အသံကို ပိုပြီး ရှင်းအောင် ထွက်ပေးပါ။",
+    "work: 'work' နဲ့ 'worked' အသံထွက် မတူပါဘူး။ 'worked' မှာ 'ed' အသံကို 't' လိုမျိုး ထွက်ပေးပါ။",
+    "psychologics: ဒီစကားလုံးက 'psychologist' ဖြစ်ရမှာပါ။ 'psychologist' ရဲ့ 'gist' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "carries: ဒီစကားလုံးက 'cadets' ဖြစ်ရမှာပါ။ 'cadets' ရဲ့ 'ca' အသံကို 'ခ' လိုမျိုး ထွက်ပြီး 'dets' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "fathers: ဒီစကားလုံးက 'furthest' ဖြစ်ရမှာပါ။ 'furthest' ရဲ့ 'fur' အသံကို ရှင်းအောင် ထွက်ပြီး 'th' အသံ (သ်) ကို လျှာကို သွားနှစ်ချောင်းကြား ညှပ်ပြီး ထွက်ပေးပါ။",
+    "neighbors: 'neighbors' မှာ 'gh' အသံက silent ဖြစ်ပါတယ်။ 'neighborhoods' မှာ 'hoods' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "teacher: 'teacher' မှာ 'er' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "outcome: 'outcome' မှာ 'come' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "self person: ဒီစကားလုံးက 'salesperson' ဖြစ်ရမှာပါ။ 'salesperson' ရဲ့ 'sales' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "Mars: ဒီစကားလုံးက 'emerges' ဖြစ်ရမှာပါ။ 'emerges' ရဲ့ 'e' အသံကို 'အီ' လိုမျိုး ထွက်ပြီး 'mer' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "intelligent: 'intelligent' မှာ 'g' အသံကို 'ဂျ' လိုမျိုး ထွက်ပေးပါ။",
+    "Good: ဒီစကားလုံးက 'Grit' ဖြစ်ရမှာပါ။ 'Grit' ရဲ့ 'i' အသံကို 'အစ်' လိုမျိုး ထွက်ပေးပါ။",
+    "perservation: ဒီစကားလုံးက 'perseverance' ဖြစ်ရမှာပါ။ 'perseverance' ရဲ့ 'per' အသံကို ရှင်းအောင် ထွက်ပြီး 'sever' အသံကိုလည်း ရှင်းအောင် ထွက်ပေးပါ။",
+    "future: 'future' မှာ 'u' အသံကို 'ယူ' လိုမျိုး ထွက်ပေးပါ။",
+    "Grid: ဒီစကားလုံးက 'Grit' ဖြစ်ရမှာပါ။ 'Grit' ရဲ့ 'i' အသံကို 'အစ်' လိုမျိုး ထွက်ပေးပါ။",
+    "light: 'light' မှာ 'gh' အသံက silent ဖြစ်ပါတယ်။",
+    "love: 'love' မှာ 'o' အသံကို 'အ' လိုမျိုး ထွက်ပေးပါ။",
+    "screen: 'screen' နဲ့ 'sprint' အသံထွက် မတူပါဘူး။ 'sprint' မှာ 'i' အသံကို 'အစ်' လိုမျိုး ထွက်ပြီး 't' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "grid: ဒီစကားလုံးက 'Grit' ဖြစ်ရမှာပါ။ 'Grit' ရဲ့ 'i' အသံကို 'အစ်' လိုမျိုး ထွက်ပေးပါ။",
+    "junior: 'junior' မှာ 'u' အသံကို 'ယူ' လိုမျိုး ထွက်ပေးပါ။",
+    "greedier: ဒီစကားလုံးက 'grittier' ဖြစ်ရမှာပါ။ 'grittier' ရဲ့ 'i' အသံကို 'အစ်' လိုမျိုး ထွက်ပေးပါ။",
+    "character: 'character' မှာ 'ch' အသံကို 'ခ' လိုမျိုး ထွက်ပေးပါ။",
+    "task: 'task' နဲ့ 'test' အသံထွက် မတူပါဘူး။ 'test' မှာ 'e' အသံကို 'အက်' လိုမျိုး ထွက်ပေးပါ။",
+    "kid: 'kid' နဲ့ 'kids' အသံထွက် မတူပါဘူး။ 'kids' မှာ 's' အသံကို 'ဇ်' လိုမျိုး ထွက်ပေးပါ။",
+    "for: 'for' နဲ့ 'felt' အသံထွက် မတူပါဘူး။ 'felt' မှာ 'e' အသံကို 'အက်' လိုမျိုး ထွက်ပြီး 't' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "rig: 'rig' နဲ့ 'risk' အသံထွက် မတူပါဘူး။ 'risk' မှာ 's' အသံကို ရှင်းအောင် ထွက်ပေးပါ။",
+    "asked: 'asked' မှာ 'ed' အသံကို 't' လိုမျိုး ထွက်ပေးပါ။",
+    "take great teach: ဒီစကားလုံးက 'cultivate grit' ဖြစ်ရမှာပါ။ 'cultivate' ရဲ့ 'cul' အသံကို 'ခါး' လိုမျိုး ထွက်ပြီး 'ti' အသံကို 'တိ' လိုမျိုး ထွက်ပေးပါ။",
+    "sorry: 'sorry' နဲ့ 'answer' အသံထွက် မတူပါဘူး။ 'answer' မှာ 's' အသံက silent ဖြစ်ပါတယ်။",
+    "greedy: 'greedy' နဲ့ 'gritty' အသံထွက် မတူပါဘူး။ 'gritty' မှာ 'i' အသံကို 'အစ်' လိုမျိုး ထွက်ပေးပါ။",
+    "individual: 'individual' မှာ 'i' အသံကို 'အစ်' လိုမျိုး ထွက်ပေးပါ။",
+    "measure: 'measure' မှာ 's' အသံကို 'ရှ' လိုမျိုး ထွက်ပေးပါ။"
+  ]
+}

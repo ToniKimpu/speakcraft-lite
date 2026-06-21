@@ -96,18 +96,24 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
   bool get hasSentences => sentences.isNotEmpty;
 
   /// Sentences whose native form differs from the original — the ones worth
-  /// showing emphasised in the split-compare view.
+  /// showing emphasised in the split-compare view. Uses [FeedbackSentence.isRewrite]
+  /// (text-derived) rather than the model's unreliable `changed` flag.
   List<FeedbackSentence> get changedSentences =>
-      sentences.where((s) => s.changed).toList(growable: false);
+      sentences.where((s) => s.isRewrite).toList(growable: false);
 
   Iterable<FeedbackSegment> get _flaggedSegments =>
-      sentences.expand((s) => s.segments).where((seg) => seg.type != null);
+      sentences.expand((s) => s.segments).where((seg) => seg.isActionable);
 
-  /// Grammar fixes — derived from the annotated transcript when present, else
-  /// the flat `fixes` list. Keeps the Feedback tab populated regardless of which
-  /// schema version produced the payload.
+  /// Grammar fixes. Preferred source is the flat, model-filled [fixes] list
+  /// (each carries a `type`); untyped entries are treated as grammar. Falls back
+  /// to the legacy annotated `segments` for older payloads.
   List<FeedbackFix> get effectiveFixes {
-    if (sentences.isEmpty) return fixes;
+    if (fixes.isNotEmpty) {
+      return fixes
+          .where((f) => (f.type ?? SegmentType.grammar) == SegmentType.grammar)
+          .where((f) => f.corrected.trim().isNotEmpty)
+          .toList(growable: false);
+    }
     return _flaggedSegments
         .where((seg) => seg.type == SegmentType.grammar)
         .map((seg) => FeedbackFix(
@@ -118,9 +124,15 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
         .toList(growable: false);
   }
 
-  /// Burmese-interference notes — derived from `interference` segments, else the
-  /// flat `interferenceNotes` list.
+  /// Burmese-interference notes — `interference`-typed [fixes], else legacy
+  /// `interference` segments, else the flat `interferenceNotes` list.
   List<FeedbackFix> get effectiveInterference {
+    if (fixes.isNotEmpty) {
+      return fixes
+          .where((f) => f.type == SegmentType.interference)
+          .where((f) => f.corrected.trim().isNotEmpty)
+          .toList(growable: false);
+    }
     if (sentences.isEmpty) return interferenceNotes;
     return _flaggedSegments
         .where((seg) => seg.type == SegmentType.interference)
@@ -132,8 +144,19 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
         .toList(growable: false);
   }
 
-  /// Vocabulary upgrades — derived from `vocab` segments, else `vocabUpgrades`.
+  /// Vocabulary upgrades — `vocab`-typed [fixes], else legacy `vocab` segments,
+  /// else `vocabUpgrades`.
   List<VocabUpgrade> get effectiveVocabUpgrades {
+    if (fixes.isNotEmpty) {
+      return fixes
+          .where((f) => f.type == SegmentType.vocab && f.corrected.trim().isNotEmpty)
+          .map((f) => VocabUpgrade(
+                original: f.original.trim(),
+                suggestion: f.corrected,
+                reasonMm: f.reasonMm,
+              ))
+          .toList(growable: false);
+    }
     if (sentences.isEmpty) return vocabUpgrades;
     return _flaggedSegments
         .where((seg) => seg.type == SegmentType.vocab)
@@ -145,15 +168,23 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
         .toList(growable: false);
   }
 
-  /// Filler words with counts — derived by tallying `filler` segments, else the
-  /// flat `fillerWords` list.
+  /// Filler words with counts — tallied from `filler`-typed [fixes], else legacy
+  /// `filler` segments, else the flat `fillerWords` list.
   List<FillerWord> get effectiveFillerWords {
+    if (fixes.isNotEmpty) {
+      return _tallyFillers(fixes.where((f) => f.type == SegmentType.filler)
+          .map((f) => f.original));
+    }
     if (sentences.isEmpty) return fillerWords;
+    return _tallyFillers(_flaggedSegments
+        .where((seg) => seg.type == SegmentType.filler)
+        .map((seg) => seg.text));
+  }
+
+  List<FillerWord> _tallyFillers(Iterable<String> words) {
     final counts = <String, int>{};
-    for (final seg in _flaggedSegments.where(
-      (seg) => seg.type == SegmentType.filler,
-    )) {
-      final word = seg.text.trim().replaceAll(RegExp(r'[,.]'), '').toLowerCase();
+    for (final raw in words) {
+      final word = raw.trim().replaceAll(RegExp(r'[,.]'), '').toLowerCase();
       if (word.isEmpty) continue;
       counts[word] = (counts[word] ?? 0) + 1;
     }
@@ -190,6 +221,8 @@ class DailySpeakingFeedback with _$DailySpeakingFeedback {
 /// client); the join of every sentence's [native] reproduces the whole rewrite.
 @freezed
 class FeedbackSentence with _$FeedbackSentence {
+  const FeedbackSentence._();
+
   const factory FeedbackSentence({
     required String original,
     @Default('') String native,
@@ -199,6 +232,12 @@ class FeedbackSentence with _$FeedbackSentence {
 
   factory FeedbackSentence.fromJson(Map<String, dynamic> json) =>
       _$FeedbackSentenceFromJson(json);
+
+  /// True when [native] is a genuine rewrite worth comparing — derived from the
+  /// text rather than the model's `changed` flag, which some models (notably
+  /// flash-lite) fill inconsistently or leave false even when native differs.
+  bool get isRewrite =>
+      native.trim().isNotEmpty && native.trim() != original.trim();
 }
 
 /// A run of text inside a [FeedbackSentence]. Plain runs carry only [text];
@@ -211,7 +250,10 @@ class FeedbackSegment with _$FeedbackSegment {
 
   const factory FeedbackSegment({
     required String text,
-    SegmentType? type,
+    // Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+    // from a reverted experiment) instead of crashing history deserialization —
+    // map any unknown value to grammar (where those errors belong now).
+    @JsonKey(unknownEnumValue: SegmentType.grammar) SegmentType? type,
     @Default('') String correction,
     @JsonKey(name: 'reason_mm') @Default('') String reasonMm,
     @JsonKey(name: 'reason_en') @Default('') String reasonEn,
@@ -223,17 +265,37 @@ class FeedbackSegment with _$FeedbackSegment {
   /// True for plain (unflagged) runs of text.
   bool get isPlain => type == null;
 
+  /// A flagged run worth surfacing. Filler is a "drop this word" flag that needs
+  /// no correction; every other type must carry a non-empty correction to be
+  /// useful — otherwise tapping the highlight shows nothing and the derived card
+  /// has an empty arrow. Guards against sloppy model output that flags a span
+  /// but leaves the fix blank.
+  bool get isActionable =>
+      type == SegmentType.filler ||
+      (type != null && correction.trim().isNotEmpty);
+
   /// A single reason string for places that show only one — prefers Burmese,
   /// falls back to English. May be empty (reasons are optional).
   String get bestReason => reasonMm.isNotEmpty ? reasonMm : reasonEn;
 }
 
+/// One correction the learner needs: the exact wrong words ([original]) → the
+/// fixed English ([corrected]), with a Burmese reason. [type] categorises it
+/// (grammar / vocab / interference / filler) so the result page can split the
+/// flat `fixes` list into its sections; it's null on legacy segment-derived
+/// fixes (which are already filtered by category at the call site). The model
+/// emits the fixed English under the JSON key `correction`.
 @freezed
 class FeedbackFix with _$FeedbackFix {
   const factory FeedbackFix({
     required String original,
-    required String corrected,
-    @JsonKey(name: 'reason_mm') required String reasonMm,
+    @JsonKey(name: 'correction') @Default('') String corrected,
+    // Tolerate retired enum values in OLD saved sessions (e.g. "word_choice"
+    // from a reverted experiment) instead of crashing history deserialization —
+    // map any unknown value to grammar (where those errors belong now).
+    @JsonKey(unknownEnumValue: SegmentType.grammar) SegmentType? type,
+    @JsonKey(name: 'reason_mm') @Default('') String reasonMm,
+    @JsonKey(name: 'reason_en') @Default('') String reasonEn,
   }) = _FeedbackFix;
 
   factory FeedbackFix.fromJson(Map<String, dynamic> json) =>
@@ -262,6 +324,8 @@ enum PhraseKind {
   collocation,
   @JsonValue('idiom')
   idiom,
+  @JsonValue('phrasal_verb')
+  phrasalVerb,
 }
 
 /// One example sentence for a [PhraseSuggestion], English with an optional

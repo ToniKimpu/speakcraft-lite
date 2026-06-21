@@ -18,23 +18,24 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$UserRecordedSentenceAudioEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool withLoading) load,
-    required TResult Function(UserRecordedSentenceAudio data) insert,
-    required TResult Function(UserRecordedSentenceAudio data) delete,
+    required TResult Function(int listeningId, bool withLoading) load,
+    required TResult Function(int listeningId, String sentenceId, File file)
+        insert,
+    required TResult Function(ListeningRecording data) delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool withLoading)? load,
-    TResult? Function(UserRecordedSentenceAudio data)? insert,
-    TResult? Function(UserRecordedSentenceAudio data)? delete,
+    TResult? Function(int listeningId, bool withLoading)? load,
+    TResult? Function(int listeningId, String sentenceId, File file)? insert,
+    TResult? Function(ListeningRecording data)? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool withLoading)? load,
-    TResult Function(UserRecordedSentenceAudio data)? insert,
-    TResult Function(UserRecordedSentenceAudio data)? delete,
+    TResult Function(int listeningId, bool withLoading)? load,
+    TResult Function(int listeningId, String sentenceId, File file)? insert,
+    TResult Function(ListeningRecording data)? delete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -92,7 +93,7 @@ abstract class _$$LoadImplCopyWith<$Res> {
           _$LoadImpl value, $Res Function(_$LoadImpl) then) =
       __$$LoadImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({bool withLoading});
+  $Res call({int listeningId, bool withLoading});
 }
 
 /// @nodoc
@@ -107,9 +108,14 @@ class __$$LoadImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? listeningId = null,
     Object? withLoading = null,
   }) {
     return _then(_$LoadImpl(
+      listeningId: null == listeningId
+          ? _value.listeningId
+          : listeningId // ignore: cast_nullable_to_non_nullable
+              as int,
       withLoading: null == withLoading
           ? _value.withLoading
           : withLoading // ignore: cast_nullable_to_non_nullable
@@ -121,14 +127,16 @@ class __$$LoadImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadImpl implements _Load {
-  const _$LoadImpl({required this.withLoading});
+  const _$LoadImpl({required this.listeningId, required this.withLoading});
 
+  @override
+  final int listeningId;
   @override
   final bool withLoading;
 
   @override
   String toString() {
-    return 'UserRecordedSentenceAudioEvent.load(withLoading: $withLoading)';
+    return 'UserRecordedSentenceAudioEvent.load(listeningId: $listeningId, withLoading: $withLoading)';
   }
 
   @override
@@ -136,12 +144,14 @@ class _$LoadImpl implements _Load {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadImpl &&
+            (identical(other.listeningId, listeningId) ||
+                other.listeningId == listeningId) &&
             (identical(other.withLoading, withLoading) ||
                 other.withLoading == withLoading));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, withLoading);
+  int get hashCode => Object.hash(runtimeType, listeningId, withLoading);
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -154,33 +164,34 @@ class _$LoadImpl implements _Load {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool withLoading) load,
-    required TResult Function(UserRecordedSentenceAudio data) insert,
-    required TResult Function(UserRecordedSentenceAudio data) delete,
+    required TResult Function(int listeningId, bool withLoading) load,
+    required TResult Function(int listeningId, String sentenceId, File file)
+        insert,
+    required TResult Function(ListeningRecording data) delete,
   }) {
-    return load(withLoading);
+    return load(listeningId, withLoading);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool withLoading)? load,
-    TResult? Function(UserRecordedSentenceAudio data)? insert,
-    TResult? Function(UserRecordedSentenceAudio data)? delete,
+    TResult? Function(int listeningId, bool withLoading)? load,
+    TResult? Function(int listeningId, String sentenceId, File file)? insert,
+    TResult? Function(ListeningRecording data)? delete,
   }) {
-    return load?.call(withLoading);
+    return load?.call(listeningId, withLoading);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool withLoading)? load,
-    TResult Function(UserRecordedSentenceAudio data)? insert,
-    TResult Function(UserRecordedSentenceAudio data)? delete,
+    TResult Function(int listeningId, bool withLoading)? load,
+    TResult Function(int listeningId, String sentenceId, File file)? insert,
+    TResult Function(ListeningRecording data)? delete,
     required TResult orElse(),
   }) {
     if (load != null) {
-      return load(withLoading);
+      return load(listeningId, withLoading);
     }
     return orElse();
   }
@@ -221,8 +232,11 @@ class _$LoadImpl implements _Load {
 }
 
 abstract class _Load implements UserRecordedSentenceAudioEvent {
-  const factory _Load({required final bool withLoading}) = _$LoadImpl;
+  const factory _Load(
+      {required final int listeningId,
+      required final bool withLoading}) = _$LoadImpl;
 
+  int get listeningId;
   bool get withLoading;
 
   /// Create a copy of UserRecordedSentenceAudioEvent
@@ -238,9 +252,7 @@ abstract class _$$InsertImplCopyWith<$Res> {
           _$InsertImpl value, $Res Function(_$InsertImpl) then) =
       __$$InsertImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserRecordedSentenceAudio data});
-
-  $UserRecordedSentenceAudioCopyWith<$Res> get data;
+  $Res call({int listeningId, String sentenceId, File file});
 }
 
 /// @nodoc
@@ -256,38 +268,45 @@ class __$$InsertImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = null,
+    Object? listeningId = null,
+    Object? sentenceId = null,
+    Object? file = null,
   }) {
     return _then(_$InsertImpl(
-      null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as UserRecordedSentenceAudio,
+      listeningId: null == listeningId
+          ? _value.listeningId
+          : listeningId // ignore: cast_nullable_to_non_nullable
+              as int,
+      sentenceId: null == sentenceId
+          ? _value.sentenceId
+          : sentenceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      file: null == file
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as File,
     ));
-  }
-
-  /// Create a copy of UserRecordedSentenceAudioEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $UserRecordedSentenceAudioCopyWith<$Res> get data {
-    return $UserRecordedSentenceAudioCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$InsertImpl implements _Insert {
-  const _$InsertImpl(this.data);
+  const _$InsertImpl(
+      {required this.listeningId,
+      required this.sentenceId,
+      required this.file});
 
   @override
-  final UserRecordedSentenceAudio data;
+  final int listeningId;
+  @override
+  final String sentenceId;
+  @override
+  final File file;
 
   @override
   String toString() {
-    return 'UserRecordedSentenceAudioEvent.insert(data: $data)';
+    return 'UserRecordedSentenceAudioEvent.insert(listeningId: $listeningId, sentenceId: $sentenceId, file: $file)';
   }
 
   @override
@@ -295,11 +314,15 @@ class _$InsertImpl implements _Insert {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InsertImpl &&
-            (identical(other.data, data) || other.data == data));
+            (identical(other.listeningId, listeningId) ||
+                other.listeningId == listeningId) &&
+            (identical(other.sentenceId, sentenceId) ||
+                other.sentenceId == sentenceId) &&
+            (identical(other.file, file) || other.file == file));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, data);
+  int get hashCode => Object.hash(runtimeType, listeningId, sentenceId, file);
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -312,33 +335,34 @@ class _$InsertImpl implements _Insert {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool withLoading) load,
-    required TResult Function(UserRecordedSentenceAudio data) insert,
-    required TResult Function(UserRecordedSentenceAudio data) delete,
+    required TResult Function(int listeningId, bool withLoading) load,
+    required TResult Function(int listeningId, String sentenceId, File file)
+        insert,
+    required TResult Function(ListeningRecording data) delete,
   }) {
-    return insert(data);
+    return insert(listeningId, sentenceId, file);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool withLoading)? load,
-    TResult? Function(UserRecordedSentenceAudio data)? insert,
-    TResult? Function(UserRecordedSentenceAudio data)? delete,
+    TResult? Function(int listeningId, bool withLoading)? load,
+    TResult? Function(int listeningId, String sentenceId, File file)? insert,
+    TResult? Function(ListeningRecording data)? delete,
   }) {
-    return insert?.call(data);
+    return insert?.call(listeningId, sentenceId, file);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool withLoading)? load,
-    TResult Function(UserRecordedSentenceAudio data)? insert,
-    TResult Function(UserRecordedSentenceAudio data)? delete,
+    TResult Function(int listeningId, bool withLoading)? load,
+    TResult Function(int listeningId, String sentenceId, File file)? insert,
+    TResult Function(ListeningRecording data)? delete,
     required TResult orElse(),
   }) {
     if (insert != null) {
-      return insert(data);
+      return insert(listeningId, sentenceId, file);
     }
     return orElse();
   }
@@ -379,9 +403,14 @@ class _$InsertImpl implements _Insert {
 }
 
 abstract class _Insert implements UserRecordedSentenceAudioEvent {
-  const factory _Insert(final UserRecordedSentenceAudio data) = _$InsertImpl;
+  const factory _Insert(
+      {required final int listeningId,
+      required final String sentenceId,
+      required final File file}) = _$InsertImpl;
 
-  UserRecordedSentenceAudio get data;
+  int get listeningId;
+  String get sentenceId;
+  File get file;
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -396,9 +425,7 @@ abstract class _$$DeleteImplCopyWith<$Res> {
           _$DeleteImpl value, $Res Function(_$DeleteImpl) then) =
       __$$DeleteImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserRecordedSentenceAudio data});
-
-  $UserRecordedSentenceAudioCopyWith<$Res> get data;
+  $Res call({ListeningRecording data});
 }
 
 /// @nodoc
@@ -420,18 +447,8 @@ class __$$DeleteImplCopyWithImpl<$Res>
       null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as UserRecordedSentenceAudio,
+              as ListeningRecording,
     ));
-  }
-
-  /// Create a copy of UserRecordedSentenceAudioEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $UserRecordedSentenceAudioCopyWith<$Res> get data {
-    return $UserRecordedSentenceAudioCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value));
-    });
   }
 }
 
@@ -441,7 +458,7 @@ class _$DeleteImpl implements _Delete {
   const _$DeleteImpl(this.data);
 
   @override
-  final UserRecordedSentenceAudio data;
+  final ListeningRecording data;
 
   @override
   String toString() {
@@ -470,9 +487,10 @@ class _$DeleteImpl implements _Delete {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool withLoading) load,
-    required TResult Function(UserRecordedSentenceAudio data) insert,
-    required TResult Function(UserRecordedSentenceAudio data) delete,
+    required TResult Function(int listeningId, bool withLoading) load,
+    required TResult Function(int listeningId, String sentenceId, File file)
+        insert,
+    required TResult Function(ListeningRecording data) delete,
   }) {
     return delete(data);
   }
@@ -480,9 +498,9 @@ class _$DeleteImpl implements _Delete {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool withLoading)? load,
-    TResult? Function(UserRecordedSentenceAudio data)? insert,
-    TResult? Function(UserRecordedSentenceAudio data)? delete,
+    TResult? Function(int listeningId, bool withLoading)? load,
+    TResult? Function(int listeningId, String sentenceId, File file)? insert,
+    TResult? Function(ListeningRecording data)? delete,
   }) {
     return delete?.call(data);
   }
@@ -490,9 +508,9 @@ class _$DeleteImpl implements _Delete {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool withLoading)? load,
-    TResult Function(UserRecordedSentenceAudio data)? insert,
-    TResult Function(UserRecordedSentenceAudio data)? delete,
+    TResult Function(int listeningId, bool withLoading)? load,
+    TResult Function(int listeningId, String sentenceId, File file)? insert,
+    TResult Function(ListeningRecording data)? delete,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -537,9 +555,9 @@ class _$DeleteImpl implements _Delete {
 }
 
 abstract class _Delete implements UserRecordedSentenceAudioEvent {
-  const factory _Delete(final UserRecordedSentenceAudio data) = _$DeleteImpl;
+  const factory _Delete(final ListeningRecording data) = _$DeleteImpl;
 
-  UserRecordedSentenceAudio get data;
+  ListeningRecording get data;
 
   /// Create a copy of UserRecordedSentenceAudioEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -554,8 +572,8 @@ mixin _$UserRecordedSentenceAudioState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
-    required TResult Function(List<UserRecordedSentenceAudio> data) loaded,
-    required TResult Function(UserRecordedSentenceAudio data) success,
+    required TResult Function(List<ListeningRecording> data) loaded,
+    required TResult Function() success,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -563,8 +581,8 @@ mixin _$UserRecordedSentenceAudioState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
-    TResult? Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult? Function(UserRecordedSentenceAudio data)? success,
+    TResult? Function(List<ListeningRecording> data)? loaded,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -572,8 +590,8 @@ mixin _$UserRecordedSentenceAudioState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
-    TResult Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult Function(UserRecordedSentenceAudio data)? success,
+    TResult Function(List<ListeningRecording> data)? loaded,
+    TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -675,8 +693,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
-    required TResult Function(List<UserRecordedSentenceAudio> data) loaded,
-    required TResult Function(UserRecordedSentenceAudio data) success,
+    required TResult Function(List<ListeningRecording> data) loaded,
+    required TResult Function() success,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -687,8 +705,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
-    TResult? Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult? Function(UserRecordedSentenceAudio data)? success,
+    TResult? Function(List<ListeningRecording> data)? loaded,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -699,8 +717,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
-    TResult Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult Function(UserRecordedSentenceAudio data)? success,
+    TResult Function(List<ListeningRecording> data)? loaded,
+    TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -825,8 +843,8 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
-    required TResult Function(List<UserRecordedSentenceAudio> data) loaded,
-    required TResult Function(UserRecordedSentenceAudio data) success,
+    required TResult Function(List<ListeningRecording> data) loaded,
+    required TResult Function() success,
     required TResult Function(String message) error,
   }) {
     return loading(message);
@@ -837,8 +855,8 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
-    TResult? Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult? Function(UserRecordedSentenceAudio data)? success,
+    TResult? Function(List<ListeningRecording> data)? loaded,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
     return loading?.call(message);
@@ -849,8 +867,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
-    TResult Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult Function(UserRecordedSentenceAudio data)? success,
+    TResult Function(List<ListeningRecording> data)? loaded,
+    TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -919,7 +937,7 @@ abstract class _$$LoadedImplCopyWith<$Res> {
           _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<UserRecordedSentenceAudio> data});
+  $Res call({List<ListeningRecording> data});
 }
 
 /// @nodoc
@@ -941,7 +959,7 @@ class __$$LoadedImplCopyWithImpl<$Res>
       null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<UserRecordedSentenceAudio>,
+              as List<ListeningRecording>,
     ));
   }
 }
@@ -949,11 +967,11 @@ class __$$LoadedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl(final List<UserRecordedSentenceAudio> data) : _data = data;
+  const _$LoadedImpl(final List<ListeningRecording> data) : _data = data;
 
-  final List<UserRecordedSentenceAudio> _data;
+  final List<ListeningRecording> _data;
   @override
-  List<UserRecordedSentenceAudio> get data {
+  List<ListeningRecording> get data {
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
@@ -989,8 +1007,8 @@ class _$LoadedImpl implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
-    required TResult Function(List<UserRecordedSentenceAudio> data) loaded,
-    required TResult Function(UserRecordedSentenceAudio data) success,
+    required TResult Function(List<ListeningRecording> data) loaded,
+    required TResult Function() success,
     required TResult Function(String message) error,
   }) {
     return loaded(data);
@@ -1001,8 +1019,8 @@ class _$LoadedImpl implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
-    TResult? Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult? Function(UserRecordedSentenceAudio data)? success,
+    TResult? Function(List<ListeningRecording> data)? loaded,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
     return loaded?.call(data);
@@ -1013,8 +1031,8 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
-    TResult Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult Function(UserRecordedSentenceAudio data)? success,
+    TResult Function(List<ListeningRecording> data)? loaded,
+    TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1066,10 +1084,9 @@ class _$LoadedImpl implements _Loaded {
 }
 
 abstract class _Loaded implements UserRecordedSentenceAudioState {
-  const factory _Loaded(final List<UserRecordedSentenceAudio> data) =
-      _$LoadedImpl;
+  const factory _Loaded(final List<ListeningRecording> data) = _$LoadedImpl;
 
-  List<UserRecordedSentenceAudio> get data;
+  List<ListeningRecording> get data;
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
@@ -1083,10 +1100,6 @@ abstract class _$$SuccessImplCopyWith<$Res> {
   factory _$$SuccessImplCopyWith(
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({UserRecordedSentenceAudio data});
-
-  $UserRecordedSentenceAudioCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -1099,72 +1112,37 @@ class __$$SuccessImplCopyWithImpl<$Res>
 
   /// Create a copy of UserRecordedSentenceAudioState
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? data = null,
-  }) {
-    return _then(_$SuccessImpl(
-      null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as UserRecordedSentenceAudio,
-    ));
-  }
-
-  /// Create a copy of UserRecordedSentenceAudioState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $UserRecordedSentenceAudioCopyWith<$Res> get data {
-    return $UserRecordedSentenceAudioCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(this.data);
-
-  @override
-  final UserRecordedSentenceAudio data;
+  const _$SuccessImpl();
 
   @override
   String toString() {
-    return 'UserRecordedSentenceAudioState.success(data: $data)';
+    return 'UserRecordedSentenceAudioState.success()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            (identical(other.data, data) || other.data == data));
+        (other.runtimeType == runtimeType && other is _$SuccessImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, data);
-
-  /// Create a copy of UserRecordedSentenceAudioState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
-    required TResult Function(List<UserRecordedSentenceAudio> data) loaded,
-    required TResult Function(UserRecordedSentenceAudio data) success,
+    required TResult Function(List<ListeningRecording> data) loaded,
+    required TResult Function() success,
     required TResult Function(String message) error,
   }) {
-    return success(data);
+    return success();
   }
 
   @override
@@ -1172,11 +1150,11 @@ class _$SuccessImpl implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
-    TResult? Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult? Function(UserRecordedSentenceAudio data)? success,
+    TResult? Function(List<ListeningRecording> data)? loaded,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
-    return success?.call(data);
+    return success?.call();
   }
 
   @override
@@ -1184,13 +1162,13 @@ class _$SuccessImpl implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
-    TResult Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult Function(UserRecordedSentenceAudio data)? success,
+    TResult Function(List<ListeningRecording> data)? loaded,
+    TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(data);
+      return success();
     }
     return orElse();
   }
@@ -1237,15 +1215,7 @@ class _$SuccessImpl implements _Success {
 }
 
 abstract class _Success implements UserRecordedSentenceAudioState {
-  const factory _Success(final UserRecordedSentenceAudio data) = _$SuccessImpl;
-
-  UserRecordedSentenceAudio get data;
-
-  /// Create a copy of UserRecordedSentenceAudioState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _Success() = _$SuccessImpl;
 }
 
 /// @nodoc
@@ -1318,8 +1288,8 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String? message) loading,
-    required TResult Function(List<UserRecordedSentenceAudio> data) loaded,
-    required TResult Function(UserRecordedSentenceAudio data) success,
+    required TResult Function(List<ListeningRecording> data) loaded,
+    required TResult Function() success,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -1330,8 +1300,8 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(String? message)? loading,
-    TResult? Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult? Function(UserRecordedSentenceAudio data)? success,
+    TResult? Function(List<ListeningRecording> data)? loaded,
+    TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -1342,8 +1312,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String? message)? loading,
-    TResult Function(List<UserRecordedSentenceAudio> data)? loaded,
-    TResult Function(UserRecordedSentenceAudio data)? success,
+    TResult Function(List<ListeningRecording> data)? loaded,
+    TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {

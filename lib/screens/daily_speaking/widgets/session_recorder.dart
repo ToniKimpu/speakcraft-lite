@@ -110,7 +110,13 @@ class _SessionRecorderState extends State<SessionRecorder> {
         const RecordConfig(
           encoder: AudioEncoder.aacLc,
           numChannels: 1,
-          bitRate: 128000,
+          // Speech only: 48 kbps mono @ 22 kHz is clear for transcription and
+          // keeps a 5-min clip small (~1.8 MB vs ~4.8 MB at 128 kbps). The edge
+          // function holds the audio (base64) in memory several times, so a
+          // smaller clip avoids the worker resource limit on long recordings.
+          // Gemini bills audio per-second, not by bitrate, so cost is unchanged.
+          bitRate: 48000,
+          sampleRate: 22050,
         ),
         path: path,
       );

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 
 import '../../../bloc/user_recorded_sentence_audio/user_recorded_sentence_audio_bloc.dart';
-import '../../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
+import '../../../model/listening/listening_recording.dart';
 import '../dialogs/delete_recorded_audio_dialog.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 
@@ -11,20 +11,26 @@ class UserRecordedList extends StatefulWidget {
   const UserRecordedList({
     super.key,
     required this.userRecordedSentenceAudioBloc,
-    required this.onNewVoiceName,
+    required this.listeningId,
     required this.sentenceId,
-    required this.youtubeId,
     required this.audioPlayer,
     required this.currentIndex,
     required this.onTogglePlay,
   });
   final UserRecordedSentenceAudioBloc userRecordedSentenceAudioBloc;
-  final Function(String name) onNewVoiceName;
+  final int listeningId;
   final String sentenceId;
-  final String youtubeId;
   final AudioPlayer audioPlayer;
   final int? currentIndex;
-  final Function(UserRecordedSentenceAudio data, int index) onTogglePlay;
+  final Function(ListeningRecording data, int index) onTogglePlay;
+
+  /// "Take N · 3:42 PM" — derived from list order + created_at (not stored).
+  String _label(BuildContext context, ListeningRecording rec, int index) {
+    final n = 'Take ${index + 1}';
+    final at = rec.createdAt;
+    if (at == null) return n;
+    return '$n · ${TimeOfDay.fromDateTime(at.toLocal()).format(context)}';
+  }
 
   @override
   State<UserRecordedList> createState() => _UserRecordedListState();
@@ -49,16 +55,9 @@ class _UserRecordedListState extends State<UserRecordedList> {
             );
           },
           loaded: (data) {
-            // final sentenceId = _subtitles[_currentPage].id;
             final filteredData = data
-                .where((e) =>
-                    e.sentenceId == widget.sentenceId &&
-                    e.youtubeId == widget.youtubeId)
+                .where((e) => e.sentenceId == widget.sentenceId)
                 .toList();
-            final nextVoiceIndex = filteredData.length + 1;
-            final newVoiceName =
-                'voice_${nextVoiceIndex.toString().padLeft(3, '0')}';
-            widget.onNewVoiceName(newVoiceName);
             if (filteredData.isEmpty) {
               return Center(
                 child: Text(
@@ -77,6 +76,7 @@ class _UserRecordedListState extends State<UserRecordedList> {
               padding: const EdgeInsets.symmetric(vertical: 16),
               itemBuilder: (context, index) {
                 final data = filteredData[index];
+                final label = widget._label(context, data, index);
                 final isPlaying =
                     widget.currentIndex == index && widget.audioPlayer.playing;
                 return Material(
@@ -86,9 +86,7 @@ class _UserRecordedListState extends State<UserRecordedList> {
                     child: SizedBox(
                       height: 60,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                        ),
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -112,7 +110,7 @@ class _UserRecordedListState extends State<UserRecordedList> {
                             const SizedBox(width: 16),
                             Expanded(
                               child: Text(
-                                data.audioName,
+                                label,
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: colorScheme.onSurface,
@@ -123,9 +121,7 @@ class _UserRecordedListState extends State<UserRecordedList> {
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                            const SizedBox(
-                              width: 4,
-                            ),
+                            const SizedBox(width: 4),
                             InkWell(
                               borderRadius: BorderRadius.circular(20),
                               onTap: () {
@@ -134,12 +130,13 @@ class _UserRecordedListState extends State<UserRecordedList> {
                                   builder: (context) {
                                     return DeleteRecordedAudioDialog(
                                       data: data,
+                                      label: label,
                                       onDeleted: (success) {
                                         if (success) {
                                           widget.userRecordedSentenceAudioBloc
                                               .add(
-                                            const UserRecordedSentenceAudioEvent
-                                                .load(
+                                            UserRecordedSentenceAudioEvent.load(
+                                              listeningId: widget.listeningId,
                                               withLoading: false,
                                             ),
                                           );
@@ -155,16 +152,6 @@ class _UserRecordedListState extends State<UserRecordedList> {
                                   Icons.delete_forever,
                                   size: 20,
                                   color: colorScheme.error,
-                                ),
-                              ),
-                            ),
-                            InkWell(
-                              borderRadius: BorderRadius.circular(20),
-                              onTap: () {},
-                              child: const Padding(
-                                padding: EdgeInsets.all(6),
-                                child: Icon(
-                                  Icons.edit_note,
                                 ),
                               ),
                             ),

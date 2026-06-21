@@ -4,16 +4,18 @@ import 'package:speakcraft/bloc/user_recorded_sentence_audio/user_recorded_sente
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
-import 'package:speakcraft/model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
+import 'package:speakcraft/model/listening/listening_recording.dart';
 
 class DeleteRecordedAudioDialog extends StatelessWidget {
   DeleteRecordedAudioDialog({
     super.key,
     required this.data,
+    required this.label,
     required this.onDeleted,
   });
 
-  final UserRecordedSentenceAudio data;
+  final ListeningRecording data;
+  final String label;
   final Function(bool success) onDeleted;
   final _deleteUserRecordedVoiceBloc = UserRecordedSentenceAudioBloc();
 
@@ -28,7 +30,7 @@ class DeleteRecordedAudioDialog extends StatelessWidget {
         bloc: _deleteUserRecordedVoiceBloc,
         listener: (context, state) {
           state.maybeWhen(
-            success: (_) {
+            success: () {
               onDeleted(true);
               Navigator.pop(context);
             },
@@ -42,7 +44,7 @@ class DeleteRecordedAudioDialog extends StatelessWidget {
         builder: (context, state) {
           final isLoading = state.maybeWhen(
             loading: (_) => true,
-            success: (data) => true,
+            success: () => true,
             orElse: () => false,
           );
 
@@ -102,7 +104,7 @@ class DeleteRecordedAudioDialog extends StatelessWidget {
                     border: Border.all(color: colorScheme.outlineVariant),
                   ),
                   child: Text(
-                    data.audioName,
+                    label,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: colorScheme.onSurface,

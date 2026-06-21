@@ -9,6 +9,7 @@ import '../../../config/pmp_colors.dart';
 import '../../../config/pmp_routes.dart';
 import '../../../config/pmp_text_styles.dart';
 import '../../../l10n/generated/l10n.dart';
+import '../../../shared_widgets/premium_gate.dart';
 
 /// Renders a single subtitle line: the English sentence, the optional Burmese
 /// translation, and the "View Explanation" link. Built to sit inside
@@ -20,12 +21,16 @@ class SubtitleCard extends StatelessWidget {
     required this.audioPlayer,
     required this.subtitle,
     required this.hasMMSub,
+    this.explanationLocked = false,
   });
 
   final YoutubePlayerController youtubeController;
   final AudioPlayer audioPlayer;
   final Subtitle subtitle;
   final bool hasMMSub;
+
+  /// When true, "View explanation" is gated behind Premium (non-free video).
+  final bool explanationLocked;
 
   @override
   Widget build(BuildContext context) {
@@ -73,14 +78,19 @@ class SubtitleCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       child: InkWell(
         borderRadius: BorderRadius.circular(10),
-        onTap: () => _onExplanationTap(context),
+        onTap: () => explanationLocked
+            ? showPremiumSheet(context,
+                featureName: AppLocalizations.of(context).txtViewExplanation)
+            : _onExplanationTap(context),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(
-                Icons.lightbulb_outline,
+              Icon(
+                explanationLocked
+                    ? Icons.lock_outline
+                    : Icons.lightbulb_outline,
                 size: 18,
                 color: Colors.white,
               ),

@@ -7,6 +7,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   connectivity_plus
   firebase_core
   flutter_inappwebview_windows
+  flutter_tts
   permission_handler_windows
   record_windows
   sqlite3_flutter_libs

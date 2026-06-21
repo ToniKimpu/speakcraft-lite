@@ -4,6 +4,7 @@ import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/daily_speaking/daily_speaking_feedback.dart';
+import 'package:speakcraft/shared_widgets/pronounce_button.dart';
 
 /// Full annotated transcript: the learner's words with inline error highlights
 /// (tap a highlight for the fix + reason), plus a sentence-aligned "Compare"
@@ -23,11 +24,7 @@ class ReviewHighlightsPage extends StatefulWidget {
   State<ReviewHighlightsPage> createState() => _ReviewHighlightsPageState();
 }
 
-enum _ReviewMode { highlights, compare }
-
 class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
-  _ReviewMode _mode = _ReviewMode.highlights;
-
   /// Tap recognizers for the highlighted runs. Rebuilt each [build]; the
   /// previous batch is disposed first so we never leak them.
   final List<TapGestureRecognizer> _recognizers = [];
@@ -42,20 +39,36 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
 
   DailySpeakingFeedback get feedback => widget.feedback;
 
-  /// The error categories that actually appear in this transcript — only these
-  /// get a filter chip.
+  /// Corrections to locate in the transcript. Prefers the flat, model-filled
+  /// `fixes` list (the reliable source); for legacy annotated-segment payloads
+  /// it synthesizes equivalents from the actionable segments.
+  late final List<FeedbackFix> _fixes = _collectFixes();
+
+  List<FeedbackFix> _collectFixes() {
+    if (feedback.fixes.isNotEmpty) return feedback.fixes;
+    return [
+      for (final s in feedback.sentences)
+        for (final seg in s.segments)
+          if (seg.isActionable)
+            FeedbackFix(
+              original: seg.text.trim(),
+              corrected: seg.correction,
+              type: seg.type,
+              reasonMm: seg.reasonMm,
+              reasonEn: seg.reasonEn,
+            ),
+    ];
+  }
+
+  /// The error categories that actually appear — only these get a filter chip.
   late final Set<SegmentType> _presentTypes = {
-    for (final s in feedback.sentences)
-      for (final seg in s.segments)
-        if (seg.type != null) seg.type!,
+    for (final f in _fixes)
+      if (f.type != null) f.type!,
   };
 
   /// Which categories are currently highlighted. Starts with everything on;
   /// unchecking one renders its runs as plain text.
   late final Set<SegmentType> _active = {..._presentTypes};
-
-  bool get _hasNative =>
-      feedback.sentences.any((s) => s.changed && s.native.isNotEmpty);
 
   static Color _typeColor(SegmentType type, ColorScheme cs) {
     switch (type) {
@@ -89,38 +102,7 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
     final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(title: Text(l10n.txtDsReviewHighlights)),
-      body: SafeArea(
-        top: false,
-        child: Column(
-          children: [
-            if (_hasNative)
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 12, 20, 4),
-                child: SegmentedButton<_ReviewMode>(
-                  segments: [
-                    ButtonSegment(
-                      value: _ReviewMode.highlights,
-                      icon: const Icon(Icons.highlight_alt, size: 18),
-                      label: Text(l10n.txtDsHighlights),
-                    ),
-                    ButtonSegment(
-                      value: _ReviewMode.compare,
-                      icon: const Icon(Icons.compare_arrows, size: 18),
-                      label: Text(l10n.txtDsCompare),
-                    ),
-                  ],
-                  selected: {_mode},
-                  onSelectionChanged: (s) => setState(() => _mode = s.first),
-                ),
-              ),
-            Expanded(
-              child: _mode == _ReviewMode.highlights
-                  ? _buildHighlights(context)
-                  : _buildCompare(context),
-            ),
-          ],
-        ),
-      ),
+      body: SafeArea(top: false, child: _buildHighlights(context)),
     );
   }
 
@@ -133,30 +115,29 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
     }
     _recognizers.clear();
 
+    // Active corrections, longest first so a longer span wins over a shorter one
+    // it contains when we locate them in the text.
+    final active = _fixes
+        .where((f) => f.type != null && _active.contains(f.type))
+        .where((f) => f.original.trim().isNotEmpty)
+        .toList()
+      ..sort((a, b) =>
+          b.original.trim().length.compareTo(a.original.trim().length));
+
     final spans = <InlineSpan>[];
     for (final sentence in feedback.sentences) {
-      // Guard the invariant: if the segments don't reconstruct the original,
-      // fall back to the plain sentence so we never render broken markup.
-      final joined = sentence.segments.map((s) => s.text).join();
-      if (sentence.segments.isEmpty || joined != sentence.original) {
-        spans.add(TextSpan(text: sentence.original));
-        spans.add(const TextSpan(text: ' '));
-        continue;
-      }
-      for (final seg in sentence.segments) {
-        // Plain runs, and flagged runs whose category is filtered off, render
-        // as ordinary text with no highlight or tap target.
-        if (seg.isPlain || !_active.contains(seg.type)) {
-          spans.add(TextSpan(text: seg.text));
+      for (final run in _annotate(sentence.original, active)) {
+        if (run.fix == null) {
+          spans.add(TextSpan(text: run.text));
           continue;
         }
-        final color = _typeColor(seg.type!, colorScheme);
+        final color = _typeColor(run.fix!.type!, colorScheme);
         final recognizer = TapGestureRecognizer()
-          ..onTap = () => _showSegmentSheet(context, seg);
+          ..onTap = () => _showFixSheet(context, run.fix!);
         _recognizers.add(recognizer);
         spans.add(
           TextSpan(
-            text: seg.text,
+            text: run.text,
             recognizer: recognizer,
             style: TextStyle(
               color: color,
@@ -189,9 +170,58 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
     );
   }
 
-  void _showSegmentSheet(BuildContext context, FeedbackSegment seg) {
+  /// Split [sentence] into runs, marking the first non-overlapping occurrence of
+  /// each fix's `original` (case-insensitive). A fix whose text isn't found is
+  /// simply not highlighted here (it still appears in the result-page list), so
+  /// the transcript never renders broken markup.
+  List<_Run> _annotate(String sentence, List<FeedbackFix> fixes) {
+    final lower = sentence.toLowerCase();
+    final claimed = List<bool>.filled(sentence.length, false);
+    final hits = <_Hit>[];
+    for (final f in fixes) {
+      final needle = f.original.trim().toLowerCase();
+      if (needle.isEmpty) continue;
+      var from = 0;
+      while (from <= lower.length - needle.length) {
+        final idx = lower.indexOf(needle, from);
+        if (idx < 0) break;
+        final end = idx + needle.length;
+        var overlap = false;
+        for (var i = idx; i < end; i++) {
+          if (claimed[i]) {
+            overlap = true;
+            break;
+          }
+        }
+        if (!overlap) {
+          for (var i = idx; i < end; i++) {
+            claimed[i] = true;
+          }
+          hits.add(_Hit(idx, end, f));
+          break;
+        }
+        from = idx + 1;
+      }
+    }
+    hits.sort((a, b) => a.start.compareTo(b.start));
+    final runs = <_Run>[];
+    var cursor = 0;
+    for (final h in hits) {
+      if (h.start > cursor) {
+        runs.add(_Run(sentence.substring(cursor, h.start), null));
+      }
+      runs.add(_Run(sentence.substring(h.start, h.end), h.fix));
+      cursor = h.end;
+    }
+    if (cursor < sentence.length) {
+      runs.add(_Run(sentence.substring(cursor), null));
+    }
+    return runs;
+  }
+
+  void _showFixSheet(BuildContext context, FeedbackFix fix) {
     final colorScheme = Theme.of(context).colorScheme;
-    final color = _typeColor(seg.type!, colorScheme);
+    final color = _typeColor(fix.type!, colorScheme);
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
@@ -210,7 +240,7 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
-                  _typeLabel(context, seg.type!),
+                  _typeLabel(context, fix.type!),
                   style: PmpTextStyles.labelSemi.copyWith(color: color),
                 ),
               ),
@@ -220,32 +250,36 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
                 children: [
                   Flexible(
                     child: Text(
-                      seg.text.trim(),
+                      fix.original.trim(),
                       style: PmpTextStyles.body1Regular.copyWith(
                         color: PmpColors.destructive400,
                         decoration: TextDecoration.lineThrough,
                       ),
                     ),
                   ),
-                  if (seg.correction.isNotEmpty) ...[
+                  if (fix.corrected.isNotEmpty) ...[
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: Icon(Icons.arrow_forward, size: 16),
                     ),
                     Flexible(
                       child: Text(
-                        seg.correction,
+                        fix.corrected,
                         style: PmpTextStyles.body1Semi
                             .copyWith(color: PmpColors.success500),
                       ),
                     ),
+                    PronounceButton(
+                      text: fix.corrected,
+                      color: PmpColors.success500,
+                    ),
                   ],
                 ],
               ),
-              if (seg.reasonMm.isNotEmpty) ...[
+              if (fix.reasonMm.isNotEmpty) ...[
                 const SizedBox(height: 12),
                 Text(
-                  seg.reasonMm,
+                  fix.reasonMm,
                   style: PmpTextStyles.body2Regular.copyWith(
                     color: colorScheme.onSurface,
                     fontFamily: 'Noto Sans Myanmar',
@@ -253,10 +287,10 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
                   ),
                 ),
               ],
-              if (seg.reasonEn.isNotEmpty) ...[
+              if (fix.reasonEn.isNotEmpty) ...[
                 const SizedBox(height: 10),
                 Text(
-                  seg.reasonEn,
+                  fix.reasonEn,
                   style: PmpTextStyles.body2Regular.copyWith(
                     color: colorScheme.onSurfaceVariant,
                     height: 1.6,
@@ -320,106 +354,23 @@ class _ReviewHighlightsPageState extends State<ReviewHighlightsPage> {
     );
   }
 
-  // --- Compare view ---------------------------------------------------------
-
-  Widget _buildCompare(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    final l10n = AppLocalizations.of(context);
-    return ListView.separated(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
-      itemCount: feedback.sentences.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 10),
-      itemBuilder: (context, i) {
-        final s = feedback.sentences[i];
-        if (!s.changed || s.native.isEmpty || s.native == s.original) {
-          return Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(14),
-            decoration: BoxDecoration(
-              color: colorScheme.surfaceContainerHighest,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: colorScheme.outlineVariant),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Icon(Icons.check_circle_outline,
-                    size: 16, color: PmpColors.success500),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Text(
-                    s.original,
-                    style: PmpTextStyles.body2Regular
-                        .copyWith(color: colorScheme.onSurfaceVariant),
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-        return Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: colorScheme.surfaceContainerHighest,
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: colorScheme.outlineVariant),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _CompareRow(
-                label: l10n.txtDsTabYours,
-                text: s.original,
-                color: colorScheme.onSurfaceVariant,
-              ),
-              const SizedBox(height: 8),
-              _CompareRow(
-                label: l10n.txtDsTabNative,
-                text: s.native,
-                color: PmpColors.success500,
-                emphasise: true,
-              ),
-            ],
-          ),
-        );
-      },
-    );
-  }
 }
 
-class _CompareRow extends StatelessWidget {
-  const _CompareRow({
-    required this.label,
-    required this.text,
-    required this.color,
-    this.emphasise = false,
-  });
-
-  final String label;
+/// A run of transcript text — plain when [fix] is null, otherwise a located
+/// correction to highlight + make tappable.
+class _Run {
+  const _Run(this.text, this.fix);
   final String text;
-  final Color color;
-  final bool emphasise;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label.toUpperCase(),
-          style: PmpTextStyles.sub.copyWith(color: color),
-        ),
-        const SizedBox(height: 2),
-        Text(
-          text,
-          style: (emphasise
-                  ? PmpTextStyles.body1Semi
-                  : PmpTextStyles.body1Regular)
-              .copyWith(color: color, height: 1.5),
-        ),
-      ],
-    );
-  }
+  final FeedbackFix? fix;
 }
+
+/// A located occurrence of a fix's `original` within a sentence ([start], [end]
+/// are indices into the sentence).
+class _Hit {
+  const _Hit(this.start, this.end, this.fix);
+  final int start;
+  final int end;
+  final FeedbackFix fix;
+}
+
 

@@ -52,5 +52,10 @@
             <action android:name="android.intent.action.PROCESS_TEXT" />
             <data android:mimeType="text/plain" />
         </intent>
+        <!-- Lets flutter_tts bind to the system text-to-speech engine on
+             Android 11+ (without this, TTS silently fails). -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
     </queries>
 </manifest>
