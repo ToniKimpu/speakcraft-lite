@@ -1,7 +1,7 @@
-/// One user voice recording for a listening sentence, as stored in Supabase
-/// (`public.listening_recordings`). The audio bytes live in the private
-/// `user-recordings` Storage bucket at [audioPath]; playback uses a short-lived
-/// signed URL fetched on demand (the bucket is not public).
+/// One user voice recording for a listening sentence. Stored locally now
+/// (Drift + phone files via [ListeningRecordingRepository]): [audioPath] is the
+/// on-device file path, played back directly. The `fromJson` factory is legacy
+/// from the old Supabase backing and is no longer used.
 class ListeningRecording {
   const ListeningRecording({
     required this.id,
@@ -15,7 +15,7 @@ class ListeningRecording {
   final int listeningId;
   final String sentenceId;
 
-  /// Storage object path within the `user-recordings` bucket.
+  /// On-device file path to the recorded `.m4a`.
   final String audioPath;
   final DateTime? createdAt;
 

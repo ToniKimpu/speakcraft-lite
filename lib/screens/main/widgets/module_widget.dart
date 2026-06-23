@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/pmp_text_styles.dart';
+import '../../../config/pmp_colors.dart';
+import '../../../shared_widgets/glass.dart';
 
+enum ModuleAccent { cyan, orange }
+
+/// Home "module" entry as a frosted glass card: a colored icon tile, a title,
+/// two support sub-labels, and a chevron. The whole card is tappable.
 class ModuleWidget extends StatelessWidget {
   const ModuleWidget({
     super.key,
@@ -12,103 +17,89 @@ class ModuleWidget extends StatelessWidget {
     required this.iconLabel1,
     required this.iconLabel2,
     this.onPressed,
+    this.accent = ModuleAccent.cyan,
   });
 
   final String title;
   final String label1, label2;
   final IconData iconTitle, iconLabel1, iconLabel2;
   final VoidCallback? onPressed;
+  final ModuleAccent accent;
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: colorScheme.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: colorScheme.outline),
-        boxShadow: [
-          BoxShadow(
-            color: colorScheme.shadow.withValues(alpha: 0.06),
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                width: 36,
-                height: 36,
-                decoration: BoxDecoration(
-                  color: colorScheme.inverseSurface.withValues(alpha: 0.08),
-                  borderRadius: BorderRadius.circular(10),
+    final cs = Theme.of(context).colorScheme;
+    final mm = PmpColors.myanmarGloss(Theme.of(context).brightness);
+    final isCyan = accent == ModuleAccent.cyan;
+    final accentBase = isCyan ? PmpColors.brandCyan : PmpColors.brandOrange;
+    final accentBright =
+        isCyan ? PmpColors.brandCyanBright : PmpColors.brandOrangeBright;
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 13),
+      child: GlassCard(
+        onTap: onPressed,
+        child: Row(
+          children: [
+            Container(
+              width: 50,
+              height: 50,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    accentBase.withValues(alpha: 0.22),
+                    accentBase.withValues(alpha: 0.05),
+                  ],
                 ),
-                child: Icon(
-                  iconTitle,
-                  size: 20,
-                  color: colorScheme.onSurface,
-                ),
+                border:
+                    Border.all(color: accentBase.withValues(alpha: 0.30)),
               ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Text(
-                  title,
-                  style: PmpTextStyles.body1Regular.copyWith(
-                    color: colorScheme.onSurface,
-                    fontWeight: FontWeight.bold,
+              child: Icon(iconTitle, size: 26, color: accentBright),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: cs.onSurface,
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          Divider(color: colorScheme.outlineVariant, height: 24),
-          _buildBulletPoint(context, label1, iconLabel1),
-          const SizedBox(height: 10),
-          _buildBulletPoint(context, label2, iconLabel2),
-          const SizedBox(height: 16),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: FilledButton.icon(
-              onPressed: () => onPressed?.call(),
-              icon: const Icon(Icons.arrow_forward, size: 16),
-              label: const Text('Start'),
-              style: FilledButton.styleFrom(
-                backgroundColor: colorScheme.primary,
-                foregroundColor: colorScheme.onPrimary,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                  const SizedBox(height: 5),
+                  _sub(cs, mm, iconLabel1, label1),
+                  _sub(cs, mm, iconLabel2, label2),
+                ],
               ),
             ),
-          ),
-        ],
+            const SizedBox(width: 8),
+            Icon(Icons.chevron_right, color: cs.onSurfaceVariant, size: 24),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildBulletPoint(BuildContext context, String text, IconData icon) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Row(
-      children: [
-        Icon(icon, size: 16, color: colorScheme.onSurfaceVariant),
-        const SizedBox(width: 12),
-        Expanded(
-          child: Text(
-            text,
-            style: PmpTextStyles.body2Regular.copyWith(
-              color: colorScheme.onSurface,
+  Widget _sub(ColorScheme cs, Color mm, IconData icon, String text) => Padding(
+        padding: const EdgeInsets.only(top: 3),
+        child: Row(
+          children: [
+            Icon(icon, size: 14, color: cs.onSurfaceVariant),
+            const SizedBox(width: 6),
+            Expanded(
+              child: Text(
+                text,
+                style: TextStyle(fontSize: 12.5, color: mm, height: 1.3),
+              ),
             ),
-          ),
+          ],
         ),
-      ],
-    );
-  }
+      );
 }

@@ -138,7 +138,31 @@
       "Bash(deno check *)",
       "Bash(supabase migration *)",
       "Bash(echo \"EXIT: $?\")",
-      "Bash(echo \"CHECK_EXIT: $?\")"
+      "Bash(echo \"CHECK_EXIT: $?\")",
+      "Bash(ls \"D:/PMP_Projects/data/Shadowing/promps/\")",
+      "Bash(ls -a \"D:/PMP_Projects/data/Shadowing/.claude/\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(ls -a .envs/)",
+      "Bash(grep -hE \"BUNNY_LISTENING\" .envs/.env.dev .envs/.env.prod)",
+      "Bash(grep -rn \"assets/key_takeaways\\\\|rootBundle\\\\|grit.json\" lib/screens/listening_and_shadowing/key_takeaways_page.dart lib/config/pmp_routes.dart)",
+      "Bash(ls assets/key_takeaways)",
+      "Read(//d/PMP_Projects/**)",
+      "Bash(find pmp_english_admin/screenshoots speakcraft-lite -iname \"image.png\")",
+      "Bash(ls -la pmp_english_admin/screenshoots/)",
+      "Bash(supabase projects *)",
+      "Bash(supabase secrets *)",
+      "Bash(PYTHONIOENCODING=utf-8 python -c ' *)",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s11.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s12.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s13.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s14.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s15_16.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s21.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s22_23.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s24_27.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s31.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s32_33.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/patch_s34_35.py\")"
     ]
   }
 }

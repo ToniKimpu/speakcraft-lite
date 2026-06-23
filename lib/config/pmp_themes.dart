@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'pmp_colors.dart';
@@ -47,7 +48,7 @@ class PmpThemes {
     return ThemeData(
       useMaterial3: true,
       brightness: p.brightness,
-      fontFamily: GoogleFonts.inter().fontFamily,
+      fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: p.background,
       pageTransitionsTheme: const PageTransitionsTheme(
@@ -68,6 +69,13 @@ class PmpThemes {
         centerTitle: false,
         scrolledUnderElevation: 0,
         elevation: 0,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness:
+              p.brightness == Brightness.dark ? Brightness.light : Brightness.dark,
+          statusBarBrightness:
+              p.brightness == Brightness.dark ? Brightness.dark : Brightness.light,
+        ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         fillColor: p.surfaceVariant,
@@ -212,33 +220,36 @@ class _PmpPalette {
 
   factory _PmpPalette.dark() => const _PmpPalette(
         brightness: Brightness.dark,
-        background: PmpColors.darkBackground,
-        surface: PmpColors.darkSurfaceBw,
-        surfaceVariant: PmpColors.darkSurfaceVariant,
-        cardBg: PmpColors.darkSurfaceVariant,
-        outline: PmpColors.darkOutline,
+        background: PmpColors.glassDarkBg0,
+        surface: PmpColors.glassDarkSurface,
+        surfaceVariant: PmpColors.glassDarkCard,
+        cardBg: PmpColors.glassDarkCard,
+        outline: PmpColors.glassDarkOutline,
         outlineVariant: PmpColors.darkOutlineVariant,
         textPrimary: PmpColors.darkTextPrimary,
         textSecondary: PmpColors.darkTextSecondary,
-        primary: PmpColors.white,
-        onPrimary: PmpColors.black,
-        appBarBg: PmpColors.darkSurfaceVariant,
+        // Cyan brand — bright on dark for buttons/progress/accents.
+        primary: PmpColors.brandCyanBright,
+        onPrimary: Color(0xFF04212C),
+        // App bars sit over the gradient; a subtle surface tint keeps
+        // not-yet-glassed screens looking intentional.
+        appBarBg: PmpColors.glassDarkSurface,
         appBarFg: PmpColors.darkTextPrimary,
       );
 
   factory _PmpPalette.light() => const _PmpPalette(
         brightness: Brightness.light,
-        background: PmpColors.lightBackground,
+        background: PmpColors.glassLightBg0,
         surface: PmpColors.lightSurfaceBw,
         surfaceVariant: PmpColors.lightSurfaceVariant,
         cardBg: PmpColors.lightSurfaceBw,
         outline: PmpColors.lightOutline,
         outlineVariant: PmpColors.lightOutlineVariant,
-        textPrimary: PmpColors.lightTextPrimary,
-        textSecondary: PmpColors.lightTextSecondary,
-        primary: PmpColors.primary500,
+        textPrimary: PmpColors.glassLightText,
+        textSecondary: PmpColors.glassLightTextDim,
+        primary: PmpColors.brandCyan,
         onPrimary: PmpColors.white,
-        appBarBg: PmpColors.primary500,
-        appBarFg: PmpColors.white,
+        appBarBg: PmpColors.lightSurfaceBw,
+        appBarFg: PmpColors.glassLightText,
       );
 }

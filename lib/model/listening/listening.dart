@@ -21,6 +21,9 @@ class Listening with _$Listening {
     @JsonKey(name: 'record_subtitle_path') @Default('') String recordSubtitlePath,
     @JsonKey(name: 'sentence_explanation_path') @Default('') String sentenceExplanationPath,
     @JsonKey(name: 'vocabulary_path') @Default('') String vocabularyPath,
+    // Per-video Key Takeaways deck (Bunny path to key_takeaways.json). Empty =
+    // the Key Takeaways step is hidden for this video.
+    @JsonKey(name: 'key_takeaways_path') @Default('') String keyTakeawaysPath,
     @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
     // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
     // features; on non-free videos free users get subtitle play only, the rest

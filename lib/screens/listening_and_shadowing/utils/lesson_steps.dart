@@ -12,6 +12,8 @@ import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 List<VideoLessonStep> visibleLessonSteps(Listening listening) {
   return <VideoLessonStep>[
     if (listening.subtitlePath.trim().isNotEmpty) VideoLessonStep.watch,
+    if (listening.keyTakeawaysPath.trim().isNotEmpty)
+      VideoLessonStep.keyTakeaways,
     VideoLessonStep.explanation,
     if (listening.shadowingPath.trim().isNotEmpty) VideoLessonStep.shadowing,
     if (listening.recordSubtitlePath.trim().isNotEmpty) VideoLessonStep.record,

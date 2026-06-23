@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/user_bloc/user_bloc.dart';
 import 'package:speakcraft/config/common_extensions.dart';
@@ -50,6 +51,8 @@ class _UpdateNamePageState extends State<UpdateNamePage> {
           );
           return Scaffold(
             appBar: AppBar(
+              leading: const Padding(
+                  padding: EdgeInsets.only(left: 8), child: GlassBackButton()),
               title: const Text('Update Name'),
             ),
             body: Padding(

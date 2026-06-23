@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
@@ -186,6 +187,9 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                   ),
                   builder: (context, player) => Scaffold(
                     appBar: AppBar(
+                      leading: const Padding(
+                          padding: EdgeInsets.only(left: 8),
+                          child: GlassBackButton()),
                       scrolledUnderElevation: 0.0,
                       title: Text(
                         widget.listening.title,

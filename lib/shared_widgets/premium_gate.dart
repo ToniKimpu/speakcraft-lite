@@ -21,21 +21,24 @@ class PremiumLockBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
       decoration: BoxDecoration(
-        color: cs.tertiaryContainer,
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [PmpColors.premiumGold, PmpColors.premiumGoldDeep],
+        ),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.lock_rounded, size: 12, color: cs.onTertiaryContainer),
+          const Icon(Icons.lock_rounded, size: 12, color: PmpColors.onPremium),
           const SizedBox(width: 4),
           Text('PREMIUM',
               style: PmpTextStyles.sub.copyWith(
-                color: cs.onTertiaryContainer,
+                color: PmpColors.onPremium,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0.5,
               )),
@@ -46,28 +49,34 @@ class PremiumLockBadge extends StatelessWidget {
 }
 
 /// A tiny corner tag for a content thumbnail: "FREE" (green) or "PREMIUM"
-/// (tertiary). Minimal text on a solid pill.
+/// (warm gold). Minimal text on a small pill.
 class FreePremiumBadge extends StatelessWidget {
   const FreePremiumBadge({super.key, required this.isFree});
   final bool isFree;
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
-    final bg = isFree ? PmpColors.success500 : cs.tertiary;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
       decoration: BoxDecoration(
-        color: bg,
-        borderRadius: BorderRadius.circular(6),
+        color: isFree ? PmpColors.success500 : null,
+        gradient: isFree
+            ? null
+            : const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [PmpColors.premiumGold, PmpColors.premiumGoldDeep],
+              ),
+        borderRadius: BorderRadius.circular(5),
       ),
       child: Text(
         isFree ? 'FREE' : 'PREMIUM',
-        style: PmpTextStyles.sub.copyWith(
-          color: Colors.white,
+        style: TextStyle(
+          color: isFree ? Colors.white : PmpColors.onPremium,
           fontWeight: FontWeight.w800,
-          letterSpacing: 0.5,
-          fontSize: 9,
+          letterSpacing: 0.3,
+          fontSize: 8.5,
+          height: 1.0,
         ),
       ),
     );

@@ -10,6 +10,7 @@ import 'package:speakcraft/model/app_user/app_user.dart';
 import 'package:speakcraft/screens/main/widgets/app_version_widget.dart';
 import 'package:speakcraft/screens/main/widgets/profile_item_row.dart';
 import 'package:speakcraft/services/theme_controller.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/env.dart';
@@ -19,18 +20,26 @@ class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   static BoxDecoration _cardDecoration(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final dark = Theme.of(context).brightness == Brightness.dark;
     return BoxDecoration(
-      color: colorScheme.surfaceContainerHighest,
+      color: dark
+          ? Colors.white.withValues(alpha: 0.055)
+          : Colors.white.withValues(alpha: 0.92),
       borderRadius: const BorderRadius.all(Radius.circular(16)),
       border: Border.fromBorderSide(
-        BorderSide(color: colorScheme.outlineVariant),
+        BorderSide(
+          color: dark
+              ? Colors.white.withValues(alpha: 0.10)
+              : const Color(0xFF0D3147).withValues(alpha: 0.08),
+        ),
       ),
       boxShadow: [
         BoxShadow(
-          color: colorScheme.shadow.withValues(alpha: 0.06),
-          blurRadius: 8,
-          offset: const Offset(0, 2),
+          color: dark
+              ? Colors.black.withValues(alpha: 0.30)
+              : const Color(0xFF1E3A4C).withValues(alpha: 0.10),
+          blurRadius: dark ? 22 : 18,
+          offset: const Offset(0, 8),
         ),
       ],
     );
@@ -38,10 +47,8 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(AppLocalizations.of(context).txtProfile),
-      ),
+    return GlassScaffold(
+      title: Text(AppLocalizations.of(context).txtProfile),
       body: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
         child: ValueListenableBuilder<AppUser>(

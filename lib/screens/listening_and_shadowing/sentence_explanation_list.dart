@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
@@ -70,6 +71,8 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
+        leading: const Padding(
+            padding: EdgeInsets.only(left: 8), child: GlassBackButton()),
         title: Text(AppLocalizations.of(context).txtSentenceExplanations),
       ),
       body: FutureBuilder<List<SentenceExplanation>>(

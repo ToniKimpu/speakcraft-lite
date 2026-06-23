@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakCraft — Lesson Hub (redesign)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+<style>
+  :root{
+    --cyan:#0496C7; --cyan-bright:#28BBE6; --cyan-deep:#03789F;
+    --orange:#EA580C; --orange-bright:#F97316;
+    /* DARK — brighter text + clearer card fills/borders for more contrast */
+    --text:#F2F7FB; --dim:#9FB6C6; --mm:#AECEDD;
+    --card-top:rgba(255,255,255,.10); --card-bot:rgba(255,255,255,.045);
+    --card-bd:rgba(255,255,255,.16); --card-shadow:0 8px 22px rgba(0,0,0,.34);
+    --chip:rgba(255,255,255,.08); --chip-bd:rgba(255,255,255,.20);
+    --icon-bg:rgba(40,187,230,.18); --icon-bd:rgba(40,187,230,.34);
+    --track:rgba(255,255,255,.12);
+    --next-bg:rgba(40,187,230,.12); --next-bd:rgba(40,187,230,.60);
+    --success:#3FD982; --on-cyan:#04212C;
+    --outcome-bg-a:rgba(40,187,230,.16); --outcome-bg-b:rgba(249,115,22,.07);
+    --outcome-bd:rgba(40,187,230,.30);
+  }
+  html[data-theme="light"]{
+    --text:#0E2A38; --dim:#54707F; --mm:#2E6072;
+    --card-top:rgba(255,255,255,.92); --card-bot:rgba(255,255,255,.82);
+    --card-bd:rgba(13,49,71,.12); --card-shadow:0 12px 26px rgba(13,49,71,.12);
+    --chip:rgba(13,49,71,.05); --chip-bd:rgba(13,49,71,.14);
+    --icon-bg:rgba(4,150,199,.12); --icon-bd:rgba(4,150,199,.30);
+    --track:rgba(13,49,71,.12);
+    --next-bg:rgba(4,150,199,.10); --next-bd:rgba(4,150,199,.55);
+    --cyan-bright:#0A9BCC; --success:#15A04A; --on-cyan:#FFFFFF;
+    --outcome-bg-a:rgba(4,150,199,.12); --outcome-bg-b:rgba(249,115,22,.06);
+    --outcome-bd:rgba(4,150,199,.26);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Plus Jakarta Sans','Padauk',sans-serif;
+    min-height:100vh; color:var(--text);
+    padding:36px 20px 60px; display:flex; flex-wrap:wrap; gap:40px;
+    justify-content:center; align-items:flex-start; transition:background .35s;
+    background:
+      radial-gradient(1200px 760px at 82% -12%, #0c3a50 0%, transparent 55%),
+      radial-gradient(900px 700px at -8% 112%, #3a1606 0%, transparent 52%),
+      linear-gradient(180deg, #080d13 0%, #0b141d 100%);
+  }
+  html[data-theme="light"] body{
+    background:
+      radial-gradient(1150px 740px at 84% -12%, rgba(4,150,199,.20), transparent 55%),
+      radial-gradient(840px 660px at -8% 112%, rgba(249,115,22,.12), transparent 52%),
+      linear-gradient(180deg, #eff5f9 0%, #e2ecf2 100%);
+  }
+  .mm{font-family:'Padauk',sans-serif;}
+  .ico{font-family:'Material Symbols Rounded';font-weight:normal;line-height:1;}
+
+  .caption{width:100%;text-align:center;margin-bottom:4px;}
+  .caption h1{font-size:22px;font-weight:800;color:var(--text);}
+  .caption p{font-size:13px;margin-top:4px;color:var(--dim);}
+  .toggle{display:inline-flex;align-items:center;gap:8px;margin-top:14px;cursor:pointer;
+    padding:9px 16px;border-radius:30px;font-weight:700;font-size:13px;color:var(--text);
+    background:var(--chip);border:1px solid var(--chip-bd);user-select:none;}
+  .toggle .ico{font-size:18px;color:var(--cyan-bright);}
+
+  .phone{width:390px;height:840px;border-radius:46px;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#0a131c,#0c1620);border:1px solid rgba(255,255,255,.07);
+    box-shadow:0 40px 90px rgba(0,0,0,.55);}
+  html[data-theme="light"] .phone{background:linear-gradient(180deg,#f4f9fc,#e9f1f6);
+    border:1px solid rgba(13,49,71,.08);box-shadow:0 40px 90px rgba(13,49,71,.20);}
+  .phone::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(540px 380px at 90% -6%, rgba(40,187,230,.20), transparent 60%),
+      radial-gradient(460px 320px at 2% 106%, rgba(249,115,22,.13), transparent 60%);}
+  html[data-theme="light"] .phone::before{
+    background:
+      radial-gradient(540px 380px at 90% -6%, rgba(4,150,199,.14), transparent 60%),
+      radial-gradient(460px 320px at 2% 106%, rgba(249,115,22,.10), transparent 60%);}
+
+  .scroll{position:absolute;inset:0;overflow:auto;padding:0 18px 26px;}
+  .scroll::-webkit-scrollbar{display:none;}
+  .statusbar{display:flex;justify-content:space-between;align-items:center;
+    padding:14px 8px 4px;font-size:13px;font-weight:600;}
+  .statusbar .ico{font-size:17px;vertical-align:-3px;}
+  .topbar{display:flex;align-items:center;gap:14px;padding:8px 2px 16px;}
+  .topbar .back{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+    background:var(--chip);border:1px solid var(--chip-bd);}
+  .topbar .back .ico{font-size:22px;}
+  .topbar h2{font-size:18px;font-weight:700;}
+
+  /* HERO */
+  .hero{border-radius:20px;overflow:hidden;position:relative;aspect-ratio:16/9;margin-bottom:16px;
+    background:radial-gradient(120% 90% at 70% 0%, #11506b, #0a2331 70%);
+    border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,.25), transparent 45%, rgba(0,0,0,.45));}
+  .hero .play{position:relative;z-index:1;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;
+    background:rgba(8,16,22,.42);border:1.5px solid rgba(255,255,255,.55);}
+  .hero .play .ico{font-size:34px;color:#fff;}
+  .hero .dur{position:absolute;z-index:1;right:10px;bottom:10px;padding:4px 9px;border-radius:8px;
+    background:rgba(0,0,0,.7);font-size:11.5px;font-weight:700;color:#fff;}
+
+  .hub-title{font-size:20px;font-weight:800;line-height:1.3;margin:2px 2px 14px;}
+  .hub-prog{display:flex;align-items:center;gap:12px;margin:0 2px 20px;}
+  .pbar{height:7px;border-radius:7px;background:var(--track);overflow:hidden;flex:1;}
+  .pfill{height:100%;border-radius:7px;background:linear-gradient(90deg,var(--cyan-bright),var(--cyan));}
+  .pcount{font-size:12px;font-weight:700;color:var(--dim);white-space:nowrap;}
+
+  /* OUTCOME */
+  .outcome{padding:16px;margin-bottom:20px;border-radius:18px;
+    background:linear-gradient(135deg, var(--outcome-bg-a), var(--outcome-bg-b));
+    border:1px solid var(--outcome-bd);box-shadow:var(--card-shadow);}
+  .outcome-h{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;margin-bottom:12px;}
+  .outcome-h .flag{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+    background:var(--icon-bg);border:1px solid var(--icon-bd);}
+  .outcome-h .flag .ico{font-size:17px;color:var(--cyan-bright);}
+  .bullet{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;margin-bottom:9px;color:var(--text);}
+  .bullet:last-child{margin-bottom:0;}
+  .bullet .ico{font-size:18px;color:var(--success);flex-shrink:0;}
+
+  /* STEP CARD */
+  .card{padding:14px;margin-bottom:12px;border-radius:16px;display:flex;align-items:center;gap:13px;
+    background:linear-gradient(180deg,var(--card-top),var(--card-bot));
+    border:1px solid var(--card-bd);box-shadow:var(--card-shadow);}
+  .card.next{background:var(--next-bg);border:1.5px solid var(--next-bd);
+    box-shadow:0 8px 26px rgba(4,150,199,.22);}
+  .badge{width:34px;height:34px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
+    font-size:14px;font-weight:800;background:var(--chip);border:1px solid var(--chip-bd);color:var(--text);}
+  .badge.done{background:linear-gradient(135deg,var(--success),#1ea862);border:0;}
+  .badge.done .ico{font-size:20px;color:#06140c;}
+  .s-icon{width:32px;height:32px;border-radius:10px;flex-shrink:0;display:grid;place-items:center;
+    background:var(--icon-bg);border:1px solid var(--icon-bd);}
+  .s-icon .ico{font-size:18px;color:var(--cyan-bright);}
+  .s-body{flex:1;min-width:0;}
+  .s-title{font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .s-title .new{font-size:9px;font-weight:800;letter-spacing:.4px;padding:2px 6px;border-radius:20px;
+    color:#3A2400;background:linear-gradient(135deg,#F6B23C,#E08A1E);}
+  .s-sub{font-size:12.5px;color:var(--dim);margin-top:3px;}
+  .s-status{font-size:11.5px;font-weight:700;margin-top:6px;display:flex;align-items:center;gap:4px;}
+  .s-status .ico{font-size:14px;}
+  .st-done{color:var(--success);} .st-next{color:var(--cyan-bright);} .st-idle{color:var(--dim);}
+  .chev{color:var(--dim);} .card.next .chev{color:var(--cyan-bright);}
+  .chev .ico{font-size:22px;}
+</style>
+</head>
+<body>
+
+<div class="caption">
+  <h1>SpeakCraft · Lesson Hub (redesign)</h1>
+  <p>higher contrast · no bottom button · the next step is the CTA</p>
+  <div class="toggle" onclick="toggleTheme()">
+    <span class="ico" id="tIcon">light_mode</span><span id="tLabel">Switch to Light</span>
+  </div>
+</div>
+
+<div class="phone">
+  <div class="scroll">
+    <div class="statusbar"><span>9:41</span><span><span class="ico">network_wifi</span>&nbsp;<span class="ico">battery_full</span></span></div>
+    <div class="topbar"><div class="back"><span class="ico">arrow_back</span></div><h2>Lesson</h2></div>
+
+    <div class="hero"><div class="play"><span class="ico">play_arrow</span></div><div class="dur">6:12</div></div>
+
+    <div class="hub-title">Grit: The Power of Passion and Perseverance | Angela Lee Duckworth | TED</div>
+    <div class="hub-prog">
+      <div class="pbar"><div class="pfill" style="width:20%"></div></div>
+      <span class="pcount">1 of 5</span>
+    </div>
+
+    <div class="outcome">
+      <div class="outcome-h"><span class="flag"><span class="ico">flag</span></span> What you'll get</div>
+      <div class="bullet"><span class="ico">check_circle</span> Follow this talk at full native speed</div>
+      <div class="bullet mm"><span class="ico">check_circle</span> အသုံးဝင်ဆုံး စကားလုံး ၂၁ လုံး</div>
+      <div class="bullet"><span class="ico">check_circle</span> Record &amp; compare your own voice</div>
+    </div>
+
+    <div class="card">
+      <div class="badge done"><span class="ico">check</span></div>
+      <div class="s-icon"><span class="ico">play_circle</span></div>
+      <div class="s-body"><div class="s-title">Watch</div><div class="s-sub">Listen with subtitles</div>
+        <div class="s-status st-done"><span class="ico">check_circle</span> Completed</div></div>
+      <div class="chev"><span class="ico">chevron_right</span></div>
+    </div>
+
+    <div class="card next">
+      <div class="badge">2</div>
+      <div class="s-icon"><span class="ico">workspace_premium</span></div>
+      <div class="s-body"><div class="s-title">Key Takeaways <span class="new">NEW</span></div>
+        <div class="s-sub mm">ယူသွားသင့်တဲ့ အရေးကြီးဆုံး စကားများ</div>
+        <div class="s-status st-next"><span class="ico">flag</span> Recommended next</div></div>
+      <div class="chev"><span class="ico">chevron_right</span></div>
+    </div>
+
+    <div class="card">
+      <div class="badge">3</div>
+      <div class="s-icon"><span class="ico">menu_book</span></div>
+      <div class="s-body"><div class="s-title">Sentence by sentence</div><div class="s-sub">Every line explained in detail</div>
+        <div class="s-status st-idle">Not started</div></div>
+      <div class="chev"><span class="ico">chevron_right</span></div>
+    </div>
+
+    <div class="card">
+      <div class="badge">4</div>
+      <div class="s-icon"><span class="ico">headphones</span></div>
+      <div class="s-body"><div class="s-title">Practice along</div><div class="s-sub">Speak in sync with the audio</div>
+        <div class="s-status st-idle">Not started</div></div>
+      <div class="chev"><span class="ico">chevron_right</span></div>
+    </div>
+
+    <div class="card">
+      <div class="badge">5</div>
+      <div class="s-icon"><span class="ico">mic</span></div>
+      <div class="s-body"><div class="s-title">Speak on your own</div><div class="s-sub">Record yourself &amp; compare</div>
+        <div class="s-status st-idle">Not started</div></div>
+      <div class="chev"><span class="ico">chevron_right</span></div>
+    </div>
+  </div>
+</div>
+
+<!--
+  FLUTTER MAPPING (1:1 portable — gradient fills, uniform borders, outer shadow only)
+  - Card = GlassCard(blur:false) with the gradient fill (--card-top → --card-bot).
+  - Next/recommended card = GlassCard(highlight:true) → cyan fill + cyan border + glow.
+  - Tokens map to PmpColors: --cyan-bright=brandCyanBright, --success≈success400,
+    NEW pill = premiumGold→premiumGoldDeep, --on-cyan=onPrimary.
+  - No pinned bottom button. Tapping the highlighted "next" card continues the lesson.
+  - Contrast bumps vs current: brighter title/text, card border .10→.16 (dark),
+    stronger "next" border (.60) + glow, brighter step icon tint (.18).
+-->
+
+<script>
+  function toggleTheme(){
+    const root=document.documentElement;
+    const light = root.getAttribute('data-theme')==='light';
+    root.setAttribute('data-theme', light?'dark':'light');
+    document.getElementById('tIcon').textContent = light?'light_mode':'dark_mode';
+    document.getElementById('tLabel').textContent = light?'Switch to Light':'Switch to Dark';
+  }
+</script>
+</body>
+</html>

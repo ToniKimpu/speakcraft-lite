@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:http/http.dart' as http;
 import 'package:speakcraft/config/env.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
@@ -46,6 +47,8 @@ class _SentenceExplanationPagerState extends State<SentenceExplanationPager> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const Padding(
+            padding: EdgeInsets.only(left: 8), child: GlassBackButton()),
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Row(

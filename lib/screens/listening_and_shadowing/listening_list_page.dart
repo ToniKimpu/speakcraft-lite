@@ -9,6 +9,7 @@ import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:speakcraft/shared_widgets/premium_gate.dart';
 
 import '../../l10n/generated/l10n.dart';
@@ -57,10 +58,8 @@ class _ListeningListPageState extends State<ListeningListPage> {
     return BlocProvider(
       create: (context) =>
           ListeningBloc()..add(const ListeningEvent.loadListenings()),
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(AppLocalizations.of(context).txtListeningListTitle),
-        ),
+      child: GlassScaffold(
+        title: Text(AppLocalizations.of(context).txtListeningListTitle),
         body: BlocBuilder<ListeningBloc, ListeningState>(
           builder: (context, state) {
             return state.maybeWhen(
@@ -139,7 +138,7 @@ class _ModuleIntroCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
-    final accent = colorScheme.primary;
+    const accent = PmpColors.brandCyanBright;
 
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
@@ -149,19 +148,19 @@ class _ModuleIntroCard extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            accent.withValues(alpha: 0.14),
-            Color.lerp(accent, PmpColors.info500, 0.55)!
-                .withValues(alpha: 0.10),
+            PmpColors.brandCyan.withValues(alpha: 0.14),
+            PmpColors.brandOrange.withValues(alpha: 0.07),
           ],
         ),
-        border: Border.all(color: accent.withValues(alpha: 0.25)),
+        border:
+            Border.all(color: PmpColors.brandCyan.withValues(alpha: 0.22)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.auto_awesome_rounded, size: 18, color: accent),
+              const Icon(Icons.auto_awesome_rounded, size: 18, color: accent),
               const SizedBox(width: 8),
               Expanded(
                 child: Text(
@@ -269,28 +268,22 @@ class _ListeningCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final highlight = isStartHere;
-    return Material(
-      color: colorScheme.surfaceContainerHighest,
-      borderRadius: BorderRadius.circular(16),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: () {
-          Navigator.pushNamed(
-            context,
-            PmpRoutes.listeningHub,
-            arguments: {'listening': listening},
-          );
-        },
-        child: Ink(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(
-              color: highlight ? colorScheme.primary : colorScheme.outline,
-              width: highlight ? 2 : 1,
-            ),
-          ),
-          padding: const EdgeInsets.all(12),
-          child: Row(
+    return GlassCard(
+      highlight: highlight,
+      borderRadius: 16,
+      padding: const EdgeInsets.all(12),
+      // List rows render many-at-once while scrolling; skip the costly
+      // BackdropFilter (invisible over the smooth gradient anyway) to keep
+      // scrolling smooth on low-end devices.
+      blur: false,
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          PmpRoutes.listeningHub,
+          arguments: {'listening': listening},
+        );
+      },
+      child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _Thumbnail(
@@ -326,8 +319,6 @@ class _ListeningCard extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
     );
   }
 }
@@ -347,11 +338,13 @@ class _StatusSection extends StatelessWidget {
       return Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.check_circle, size: 14, color: colorScheme.primary),
+          const Icon(Icons.check_circle,
+              size: 14, color: PmpColors.success500),
           const SizedBox(width: 4),
           Text(
             AppLocalizations.of(context).txtCompleted,
-            style: PmpTextStyles.labelSemi.copyWith(color: colorScheme.primary),
+            style:
+                PmpTextStyles.labelSemi.copyWith(color: PmpColors.success500),
           ),
         ],
       );
@@ -373,8 +366,9 @@ class _StatusSection extends StatelessWidget {
             child: LinearProgressIndicator(
               value: progress.fraction,
               minHeight: 5,
-              backgroundColor: colorScheme.surface,
-              valueColor: AlwaysStoppedAnimation<Color>(colorScheme.primary),
+              backgroundColor: colorScheme.onSurface.withValues(alpha: 0.10),
+              valueColor: const AlwaysStoppedAnimation<Color>(
+                  PmpColors.brandOrange),
             ),
           ),
         ],
@@ -460,6 +454,9 @@ class _Thumbnail extends StatelessWidget {
             width: _width,
             height: _height,
             fit: BoxFit.cover,
+            // Decode to roughly the on-screen size (~2x for crispness) instead
+            // of the full 720p thumbnail — much less memory/decode work per row.
+            memCacheWidth: (_width * 2).round(),
             placeholder: (context, url) => Container(
               width: _width,
               height: _height,

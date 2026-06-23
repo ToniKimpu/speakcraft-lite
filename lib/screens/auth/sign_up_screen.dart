@@ -6,6 +6,7 @@ import 'package:speakcraft/screens/auth/otp_verification_screen.dart';
 import 'package:speakcraft/screens/auth/widgets/sign_up_data.dart';
 import 'package:speakcraft/screens/auth/widgets/sign_up_profile.dart';
 import 'package:speakcraft/screens/main/home_screen.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 
 import '../../config/pmp_routes.dart';
 import '../../l10n/generated/l10n.dart';
@@ -65,7 +66,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
         //   title: Text('Create an account', style: PmpTextStyles.title1SemiBold),
         //   centerTitle: true,
         // ),
-        body: BlocListener<AuthBloc, AuthState>(
+        body: GradientBackground(
+          child: BlocListener<AuthBloc, AuthState>(
           bloc: _authBloc,
           listener: (context, state) {
             state.whenOrNull(
@@ -162,6 +164,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ],
           ),
+        ),
         ),
       ),
     );

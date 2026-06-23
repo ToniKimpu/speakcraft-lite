@@ -23,6 +23,7 @@ _$ListeningImpl _$$ListeningImplFromJson(Map<String, dynamic> json) =>
       sentenceExplanationPath:
           json['sentence_explanation_path'] as String? ?? '',
       vocabularyPath: json['vocabulary_path'] as String? ?? '',
+      keyTakeawaysPath: json['key_takeaways_path'] as String? ?? '',
       listeningCategoryId: (json['listening_category_id'] as num?)?.toInt(),
       isFree: json['is_free'] as bool? ?? false,
       sentenceCount: (json['sentence_count'] as num?)?.toInt() ?? 0,
@@ -46,6 +47,7 @@ Map<String, dynamic> _$$ListeningImplToJson(_$ListeningImpl instance) =>
       'record_subtitle_path': instance.recordSubtitlePath,
       'sentence_explanation_path': instance.sentenceExplanationPath,
       'vocabulary_path': instance.vocabularyPath,
+      'key_takeaways_path': instance.keyTakeawaysPath,
       'listening_category_id': instance.listeningCategoryId,
       'is_free': instance.isFree,
       'sentence_count': instance.sentenceCount,

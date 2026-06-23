@@ -699,20 +699,40 @@ class AppLocalizations {
     );
   }
 
-  /// `Study the patterns`
+  /// `Key Takeaways`
+  String get txtStepTakeawaysTitle {
+    return Intl.message(
+      'Key Takeaways',
+      name: 'txtStepTakeawaysTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The key words & phrases worth keeping`
+  String get txtStepTakeawaysSubtitle {
+    return Intl.message(
+      'The key words & phrases worth keeping',
+      name: 'txtStepTakeawaysSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sentence by sentence`
   String get txtStepStudyTitle {
     return Intl.message(
-      'Study the patterns',
+      'Sentence by sentence',
       name: 'txtStepStudyTitle',
       desc: '',
       args: [],
     );
   }
 
-  /// `Review grammar and vocabulary used in this video`
+  /// `Every line explained in detail`
   String get txtStepStudySubtitle {
     return Intl.message(
-      'Review grammar and vocabulary used in this video',
+      'Every line explained in detail',
       name: 'txtStepStudySubtitle',
       desc: '',
       args: [],

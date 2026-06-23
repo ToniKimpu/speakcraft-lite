@@ -1,5 +1,6 @@
 import 'package:drift/drift.dart' show OrderingTerm;
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
@@ -31,6 +32,8 @@ class _SavedTermsPageState extends State<SavedTermsPage> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
+        leading: const Padding(
+            padding: EdgeInsets.only(left: 8), child: GlassBackButton()),
         title: const Text('Bookmarks'),
       ),
       body: StreamBuilder<List<SavedTerm>>(

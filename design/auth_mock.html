@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeakCraft — Auth Flow Mock (Login · Sign Up · OTP)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+<style>
+  :root{
+    /* brand accents (shared) — same identity as glass_theme_mock.html */
+    --cyan:#0496C7; --cyan-bright:#28BBE6; --cyan-deep:#03789F;
+    --orange:#EA580C; --orange-bright:#F97316;
+    /* themed — DARK defaults */
+    --text:#EAF1F7; --dim:#90A4B8; --mm:#A9C7D6;
+    --glass:rgba(255,255,255,.055); --border:rgba(255,255,255,.10);
+    --card-shadow:0 10px 30px rgba(0,0,0,.30);
+    /* Glass card = vertical-gradient fill (brighter top) + uniform border +
+       outer-only shadow. No per-side border colour / inset highlight, so it
+       maps 1:1 to Flutter's GlassCard. */
+    --glass-top:rgba(255,255,255,.11); --glass-bottom:rgba(255,255,255,.045);
+    --glass-bd:rgba(255,255,255,.16); --glass-shadow:0 8px 22px rgba(0,0,0,.30);
+    --field:rgba(255,255,255,.05); --field-bd:rgba(255,255,255,.13); --field-focus:rgba(40,187,230,.55);
+    --chip:rgba(255,255,255,.07); --chip-bd:rgba(255,255,255,.18);
+    --on-cyan:#04212C; --danger:#FF6B6B; --success:#34D27B;
+    --icon-cyan-bg:linear-gradient(150deg, rgba(40,187,230,.22), rgba(4,150,199,.06));
+    --icon-cyan-bd:rgba(40,187,230,.30);
+  }
+  html[data-theme="light"]{
+    --text:#0F2C3A; --dim:#5C7585; --mm:#2E6072;
+    --glass:rgba(255,255,255,.66); --border:rgba(255,255,255,.85);
+    --card-shadow:0 14px 32px rgba(13,49,71,.12);
+    --glass-top:rgba(255,255,255,.72); --glass-bottom:rgba(255,255,255,.55);
+    --glass-bd:rgba(13,49,71,.10); --glass-shadow:0 12px 26px rgba(13,49,71,.12);
+    --field:rgba(255,255,255,.80); --field-bd:rgba(13,49,71,.14); --field-focus:rgba(4,150,199,.55);
+    --chip:rgba(13,49,71,.045); --chip-bd:rgba(13,49,71,.12);
+    --cyan-bright:#0A9BCC; --on-cyan:#FFFFFF; --danger:#D7263D; --success:#15A04A;
+    --icon-cyan-bg:linear-gradient(150deg, rgba(4,150,199,.16), rgba(4,150,199,.04));
+    --icon-cyan-bd:rgba(4,150,199,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Plus Jakarta Sans','Padauk',sans-serif;
+    min-height:100vh; color:var(--text);
+    padding:36px 20px 60px; display:flex; flex-wrap:wrap; gap:40px;
+    justify-content:center; align-items:flex-start;
+    transition:background .35s ease;
+    background:
+      radial-gradient(1200px 760px at 82% -12%, #0c3a50 0%, transparent 55%),
+      radial-gradient(900px 700px at -8% 112%, #3a1606 0%, transparent 52%),
+      linear-gradient(180deg, #080d13 0%, #0b141d 100%);
+  }
+  html[data-theme="light"] body{
+    background:
+      radial-gradient(1150px 740px at 84% -12%, rgba(4,150,199,.20), transparent 55%),
+      radial-gradient(840px 660px at -8% 112%, rgba(249,115,22,.12), transparent 52%),
+      linear-gradient(180deg, #eff5f9 0%, #e2ecf2 100%);
+  }
+  .mm{font-family:'Padauk',sans-serif;}
+  .ico{font-family:'Material Symbols Rounded';font-weight:normal;line-height:1;}
+
+  .caption{width:100%;text-align:center;margin-bottom:4px;}
+  .caption h1{font-size:22px;font-weight:800;color:var(--text);letter-spacing:.2px;}
+  .caption p{font-size:13px;margin-top:4px;color:var(--dim);}
+  .toggle{display:inline-flex;align-items:center;gap:8px;margin-top:14px;cursor:pointer;
+    padding:9px 16px;border-radius:30px;font-weight:700;font-size:13px;color:var(--text);
+    background:var(--glass);border:1px solid var(--border);
+    backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);
+    box-shadow:var(--card-shadow);user-select:none;transition:all .2s;}
+  .toggle:hover{transform:translateY(-1px);}
+  .toggle .ico{font-size:18px;color:var(--cyan-bright);}
+
+  /* phone frame */
+  .phone{width:380px;height:812px;border-radius:46px;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#0a131c 0%, #0c1620 100%);
+    border:1px solid rgba(255,255,255,.07);
+    box-shadow:0 40px 90px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.05);
+    transition:background .35s ease;}
+  html[data-theme="light"] .phone{
+    background:linear-gradient(180deg,#f4f9fc 0%, #e9f1f6 100%);
+    border:1px solid rgba(13,49,71,.08);
+    box-shadow:0 40px 90px rgba(13,49,71,.20), inset 0 1px 0 rgba(255,255,255,.85);}
+  .phone::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(520px 360px at 88% -6%, rgba(40,187,230,.18), transparent 60%),
+      radial-gradient(460px 320px at 4% 104%, rgba(249,115,22,.13), transparent 60%);}
+  html[data-theme="light"] .phone::before{
+    background:
+      radial-gradient(520px 360px at 88% -6%, rgba(4,150,199,.14), transparent 60%),
+      radial-gradient(460px 320px at 4% 104%, rgba(249,115,22,.10), transparent 60%);}
+
+  .scroll{position:absolute;inset:0;overflow:auto;padding:0 22px 26px;display:flex;flex-direction:column;}
+  .scroll::-webkit-scrollbar{display:none;}
+  .statusbar{display:flex;justify-content:space-between;align-items:center;
+    padding:14px 6px 6px;font-size:13px;font-weight:600;color:var(--text);}
+  .statusbar .ico{font-size:17px;vertical-align:-3px;}
+  .topbar{display:flex;align-items:center;gap:14px;padding:6px 0 6px;min-height:40px;}
+  .topbar .back{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+    background:var(--chip);border:1px solid var(--chip-bd);cursor:pointer;}
+  .topbar .back .ico{font-size:22px;color:var(--text);}
+
+  /* 1:1 with Flutter GlassCard: gradient fill, uniform border, outer shadow,
+     blur + saturate. */
+  .glass{background:linear-gradient(180deg,var(--glass-top),var(--glass-bottom));
+    border:1px solid var(--glass-bd);
+    border-radius:24px;backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
+    box-shadow:var(--glass-shadow);}
+
+  /* brand mark + headings */
+  .brand{display:grid;place-items:center;margin:18px 0 22px;}
+  .logo{width:84px;height:84px;border-radius:26px;display:grid;place-items:center;
+    background:var(--icon-cyan-bg);border:1px solid var(--icon-cyan-bd);
+    box-shadow:0 10px 30px rgba(4,150,199,.25);}
+  .logo .ico{font-size:42px;color:var(--cyan-bright);}
+  .h-title{font-size:26px;font-weight:800;text-align:center;letter-spacing:.2px;}
+  .h-sub{font-size:14px;color:var(--dim);text-align:center;margin-top:7px;}
+  .h-sub.mm{margin-top:5px;}
+
+  /* form */
+  .card{padding:20px 18px;margin-top:24px;}
+  .field-label{font-size:12.5px;font-weight:700;color:var(--text);margin:0 2px 7px;display:block;}
+  .field{display:flex;align-items:center;gap:10px;height:58px;border-radius:15px;padding:0 14px;margin-bottom:16px;
+    background:var(--field);border:1px solid var(--field-bd);transition:border-color .15s, box-shadow .15s;}
+  .field:last-of-type{margin-bottom:0;}
+  .field .ico.lead{font-size:21px;color:var(--dim);}
+  .field input{flex:1;border:0;background:none;outline:none;color:var(--text);font-size:15px;
+    font-family:inherit;font-weight:500;}
+  .field input::placeholder{color:var(--dim);font-weight:400;}
+  .field .ico.eye{font-size:21px;color:var(--dim);cursor:pointer;}
+  .field.focus{border-color:var(--field-focus);
+    box-shadow:0 0 0 3px rgba(40,187,230,.14);}
+  html[data-theme="light"] .field.focus{box-shadow:0 0 0 3px rgba(4,150,199,.12);}
+
+  .row-end{display:flex;justify-content:flex-end;margin:12px 2px 2px;}
+  .link{color:var(--cyan-bright);font-weight:700;font-size:13px;cursor:pointer;background:none;border:0;font-family:inherit;}
+
+  .btn{height:54px;border-radius:16px;border:0;width:100%;cursor:pointer;font-family:inherit;
+    font-weight:800;font-size:15.5px;display:flex;align-items:center;justify-content:center;gap:9px;
+    color:var(--on-cyan);background:linear-gradient(135deg,var(--cyan-bright),var(--cyan-deep));
+    box-shadow:0 10px 26px rgba(4,150,199,.40);transition:transform .15s;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn .ico{font-size:20px;}
+  .btn.block{margin-top:20px;}
+
+  .divider{display:flex;align-items:center;gap:12px;margin:18px 0;}
+  .divider .line{flex:1;height:1px;background:var(--border);}
+  .divider span{font-size:12px;font-weight:600;color:var(--dim);}
+
+  .btn-ghost{height:54px;border-radius:16px;width:100%;cursor:pointer;font-family:inherit;
+    font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;gap:11px;
+    color:var(--text);background:var(--chip);border:1px solid var(--chip-bd);transition:transform .15s;}
+  .btn-ghost:hover{transform:translateY(-1px);}
+  .g-logo{width:20px;height:20px;display:block;}
+
+  .foot{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:auto;padding-top:22px;
+    font-size:13.5px;color:var(--dim);}
+  .foot .link{font-size:13.5px;}
+
+  /* sign-up step indicator */
+  .steps{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;}
+  .steps .dot{height:6px;border-radius:6px;background:var(--chip-bd);transition:all .25s;width:22px;}
+  .steps .dot.on{width:34px;background:linear-gradient(90deg,var(--cyan-bright),var(--cyan));}
+  .steps .lbl{font-size:11.5px;font-weight:700;color:var(--dim);margin-left:4px;}
+
+  /* OTP — mirrors flutter `pinput` (6 boxes, default / focused / submitted states) */
+  .otp-icon{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;margin:6px auto 0;
+    background:var(--icon-cyan-bg);border:1px solid var(--icon-cyan-bd);}
+  .otp-icon .ico{font-size:44px;color:var(--cyan-bright);}
+  .pinput{display:flex;justify-content:space-between;gap:10px;margin:4px 0 4px;}
+  .pin{flex:1;height:62px;border-radius:15px;display:grid;place-items:center;
+    font-size:24px;font-weight:800;color:var(--text);
+    background:var(--field);border:1.5px solid var(--field-bd);transition:all .15s;}
+  .pin.filled{border-color:var(--cyan);background:rgba(40,187,230,.10);}      /* submittedPinTheme */
+  html[data-theme="light"] .pin.filled{background:rgba(4,150,199,.08);}
+  .pin.active{border-color:var(--cyan-bright);box-shadow:0 0 0 3px rgba(40,187,230,.16);} /* focusedPinTheme */
+  .pin .caret{width:2px;height:26px;background:var(--cyan-bright);border-radius:2px;animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  .resend{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:18px;font-size:13.5px;color:var(--dim);}
+  .resend .muted{color:var(--dim);font-weight:700;}
+  .resend .on{color:var(--cyan-bright);font-weight:700;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="caption">
+  <h1>SpeakCraft · Auth Flow</h1>
+  <p>Login · Sign Up · OTP (pinput) — dark &amp; light</p>
+  <div class="toggle" onclick="toggleTheme()">
+    <span class="ico" id="tIcon">light_mode</span><span id="tLabel">Switch to Light</span>
+  </div>
+</div>
+
+<!-- ============ LOGIN ============ -->
+<div class="phone">
+  <div class="scroll">
+    <div class="statusbar"><span>9:41</span><span><span class="ico">network_wifi</span>&nbsp;<span class="ico">battery_full</span></span></div>
+
+    <div class="brand">
+      <div class="logo"><span class="ico">graphic_eq</span></div>
+    </div>
+    <div class="h-title">Welcome back</div>
+    <div class="h-sub">Sign in to continue learning</div>
+    <div class="h-sub mm">ဆက်လက်လေ့လာရန် အကောင့်ဝင်ပါ</div>
+
+    <div class="card glass">
+      <label class="field-label">Email</label>
+      <div class="field">
+        <span class="ico lead">mail</span>
+        <input type="email" placeholder="you@email.com" value="thetnaing@gmail.com" inputmode="email">
+      </div>
+
+      <label class="field-label">Password</label>
+      <div class="field focus">
+        <span class="ico lead">lock</span>
+        <input type="password" placeholder="Your password" value="········">
+        <span class="ico eye">visibility_off</span>
+      </div>
+
+      <div class="row-end"><button class="link">Forgot password?</button></div>
+
+      <button class="btn block"><span class="ico">login</span> Sign In</button>
+
+      <div class="divider"><div class="line"></div><span>OR</span><div class="line"></div></div>
+
+      <button class="btn-ghost">
+        <svg class="g-logo" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.4 29.3 35.5 24 35.5c-6.4 0-11.5-5.1-11.5-11.5S17.6 12.5 24 12.5c2.9 0 5.6 1.1 7.6 2.9l5.7-5.7C33.6 6.5 29 4.5 24 4.5 13.2 4.5 4.5 13.2 4.5 24S13.2 43.5 24 43.5 43.5 34.8 43.5 24c0-1.2-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12.5 24 12.5c2.9 0 5.6 1.1 7.6 2.9l5.7-5.7C33.6 6.5 29 4.5 24 4.5 16.3 4.5 9.7 8.9 6.3 14.7z"/><path fill="#4CAF50" d="M24 43.5c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.5-4.6 2.4-7.2 2.4-5.3 0-9.7-3.1-11.3-7.6l-6.5 5C9.6 39.1 16.2 43.5 24 43.5z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.1 5.6l6.2 5.2C41.6 35.7 43.5 30.3 43.5 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
+        Continue with Google
+      </button>
+
+      <div class="foot">Don't have an account? <button class="link">Sign up</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SIGN UP (step 1 of 2: details) ============ -->
+<div class="phone">
+  <div class="scroll">
+    <div class="statusbar"><span>9:41</span><span><span class="ico">network_wifi</span>&nbsp;<span class="ico">battery_full</span></span></div>
+    <div class="topbar"><div class="back"><span class="ico">arrow_back</span></div></div>
+
+    <div class="h-title" style="text-align:left;margin-top:8px;">Create your account</div>
+    <div class="h-sub" style="text-align:left;">Start speaking with confidence</div>
+    <div class="steps">
+      <div class="dot on"></div><div class="dot"></div>
+      <span class="lbl">Step 1 of 2 · Details</span>
+    </div>
+
+    <div class="card glass">
+      <label class="field-label">Full name</label>
+      <div class="field">
+        <span class="ico lead">person</span>
+        <input type="text" placeholder="Thet Naing" value="Thet Naing">
+      </div>
+
+      <label class="field-label">Email</label>
+      <div class="field">
+        <span class="ico lead">mail</span>
+        <input type="email" placeholder="you@email.com" value="thetnaing@gmail.com" inputmode="email">
+      </div>
+
+      <label class="field-label">Password</label>
+      <div class="field">
+        <span class="ico lead">lock</span>
+        <input type="password" placeholder="At least 6 characters" value="········">
+        <span class="ico eye">visibility_off</span>
+      </div>
+
+      <label class="field-label">Confirm password</label>
+      <div class="field">
+        <span class="ico lead">lock</span>
+        <input type="password" placeholder="Re-enter password" value="········">
+        <span class="ico eye">visibility_off</span>
+      </div>
+
+      <button class="btn block">Next <span class="ico">arrow_forward</span></button>
+    </div>
+
+    <div class="foot">Already have an account? <button class="link">Sign in</button></div>
+  </div>
+</div>
+
+<!-- ============ OTP (pinput) ============ -->
+<div class="phone">
+  <div class="scroll">
+    <div class="statusbar"><span>9:41</span><span><span class="ico">network_wifi</span>&nbsp;<span class="ico">battery_full</span></span></div>
+    <div class="topbar"><div class="back"><span class="ico">arrow_back</span></div></div>
+
+    <div class="otp-icon"><span class="ico">mark_email_read</span></div>
+    <div class="h-title" style="margin-top:20px;">Verify your email</div>
+    <div class="h-sub">We sent a 6-digit code to<br><b style="color:var(--text)">thetnaing@gmail.com</b></div>
+    <div class="h-sub mm">အီးမေးလ်ထဲက ၆ လုံးကုဒ်ကို ထည့်ပါ</div>
+
+    <div class="card glass">
+      <div class="pinput">
+        <div class="pin filled">4</div>
+        <div class="pin filled">2</div>
+        <div class="pin filled">9</div>
+        <div class="pin active"><div class="caret"></div></div>
+        <div class="pin"></div>
+        <div class="pin"></div>
+      </div>
+      <button class="btn block"><span class="ico">check_circle</span> Verify</button>
+    </div>
+
+    <div class="resend">
+      Didn't get the code? <span class="muted">Resend in 0:42</span>
+    </div>
+    <div class="resend" style="margin-top:4px;opacity:.0;">spacer</div>
+  </div>
+</div>
+
+<!--
+  ──────────────────────────────────────────────────────────────────────────
+  FLUTTER MAPPING NOTES (so this copies cleanly into the app)
+  ──────────────────────────────────────────────────────────────────────────
+
+  Tokens already exist in lib/config/pmp_colors.dart:
+    --cyan        → PmpColors.brandCyan        (#0496C7)
+    --cyan-bright → PmpColors.brandCyanBright  (#28BBE6)
+    --cyan-deep   → PmpColors.brandCyanDeep    (#03789F)
+    --on-cyan     → onPrimary  (dark #04212C / light white)
+  Cards = GlassCard (already frosted). Background = GradientBackground.
+  Font = Plus Jakarta Sans (already the theme font); Burmese (.mm) = Padauk.
+
+  FIELD (.field): height 54, radius 15, fill var(--field), 1px border,
+    focus → border brandCyan + 3px outer glow. Use a TextField inside a
+    Container, or theme InputDecoration with these values.
+
+  PRIMARY BUTTON (.btn): height 54, radius 16,
+    gradient [brandCyanBright → brandCyanDeep], shadow brandCyan @.40.
+    (Same recipe as the lesson-hub _ContinueCta — reuse it.)
+
+  GOOGLE BUTTON (.btn-ghost): height 54, var(--chip) fill + chip border.
+
+  OTP — flutter `pinput` themes (6 boxes, gap 10, each ~52x62, radius 15):
+    defaultPinTheme = PinTheme(
+      width: 52, height: 62,
+      textStyle: 24/w800, color: onSurface,
+      decoration: BoxDecoration(
+        color: field fill (white@.05 dark / white@.80 light),
+        borderRadius: BorderRadius.circular(15),
+        border: Border.all(color: fieldBorder, width: 1.5)));
+    focusedPinTheme  = default.copyDecorationWith(
+        border: Border.all(color: brandCyanBright, width: 1.5))   // + optional boxShadow glow
+    submittedPinTheme= default.copyWith(decoration: default.decoration!.copyWith(
+        color: brandCyan@.10, border: Border.all(color: brandCyan, width: 1.5)));
+    Pinput(length: 6, keyboardType: TextInputType.number,
+      androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsRetrieverApi,
+      onCompleted: (pin) => _onVerify(),   // auto-submit at 6 digits
+      defaultPinTheme:..., focusedPinTheme:..., submittedPinTheme:...);
+-->
+
+<script>
+  function toggleTheme(){
+    const root=document.documentElement;
+    const light = root.getAttribute('data-theme')==='light';
+    root.setAttribute('data-theme', light?'dark':'light');
+    document.getElementById('tIcon').textContent = light?'light_mode':'dark_mode';
+    document.getElementById('tLabel').textContent = light?'Switch to Light':'Switch to Dark';
+  }
+</script>
+</body>
+</html>

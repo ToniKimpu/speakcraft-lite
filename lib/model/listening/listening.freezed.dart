@@ -42,7 +42,11 @@ mixin _$Listening {
   @JsonKey(name: 'sentence_explanation_path')
   String get sentenceExplanationPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'vocabulary_path')
-  String get vocabularyPath => throw _privateConstructorUsedError;
+  String get vocabularyPath =>
+      throw _privateConstructorUsedError; // Per-video Key Takeaways deck (Bunny path to key_takeaways.json). Empty =
+// the Key Takeaways step is hidden for this video.
+  @JsonKey(name: 'key_takeaways_path')
+  String get keyTakeawaysPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'listening_category_id')
   int? get listeningCategoryId =>
       throw _privateConstructorUsedError; // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
@@ -91,6 +95,7 @@ abstract class $ListeningCopyWith<$Res> {
       @JsonKey(name: 'sentence_explanation_path')
       String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
+      @JsonKey(name: 'key_takeaways_path') String keyTakeawaysPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
       @JsonKey(name: 'is_free') bool isFree,
       @JsonKey(name: 'sentence_count') int sentenceCount,
@@ -127,6 +132,7 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
     Object? recordSubtitlePath = null,
     Object? sentenceExplanationPath = null,
     Object? vocabularyPath = null,
+    Object? keyTakeawaysPath = null,
     Object? listeningCategoryId = freezed,
     Object? isFree = null,
     Object? sentenceCount = null,
@@ -190,6 +196,10 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
           ? _value.vocabularyPath
           : vocabularyPath // ignore: cast_nullable_to_non_nullable
               as String,
+      keyTakeawaysPath: null == keyTakeawaysPath
+          ? _value.keyTakeawaysPath
+          : keyTakeawaysPath // ignore: cast_nullable_to_non_nullable
+              as String,
       listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
@@ -238,6 +248,7 @@ abstract class _$$ListeningImplCopyWith<$Res>
       @JsonKey(name: 'sentence_explanation_path')
       String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
+      @JsonKey(name: 'key_takeaways_path') String keyTakeawaysPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
       @JsonKey(name: 'is_free') bool isFree,
       @JsonKey(name: 'sentence_count') int sentenceCount,
@@ -272,6 +283,7 @@ class __$$ListeningImplCopyWithImpl<$Res>
     Object? recordSubtitlePath = null,
     Object? sentenceExplanationPath = null,
     Object? vocabularyPath = null,
+    Object? keyTakeawaysPath = null,
     Object? listeningCategoryId = freezed,
     Object? isFree = null,
     Object? sentenceCount = null,
@@ -335,6 +347,10 @@ class __$$ListeningImplCopyWithImpl<$Res>
           ? _value.vocabularyPath
           : vocabularyPath // ignore: cast_nullable_to_non_nullable
               as String,
+      keyTakeawaysPath: null == keyTakeawaysPath
+          ? _value.keyTakeawaysPath
+          : keyTakeawaysPath // ignore: cast_nullable_to_non_nullable
+              as String,
       listeningCategoryId: freezed == listeningCategoryId
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
@@ -378,6 +394,7 @@ class _$ListeningImpl implements _Listening {
       @JsonKey(name: 'sentence_explanation_path')
       this.sentenceExplanationPath = '',
       @JsonKey(name: 'vocabulary_path') this.vocabularyPath = '',
+      @JsonKey(name: 'key_takeaways_path') this.keyTakeawaysPath = '',
       @JsonKey(name: 'listening_category_id') this.listeningCategoryId,
       @JsonKey(name: 'is_free') this.isFree = false,
       @JsonKey(name: 'sentence_count') this.sentenceCount = 0,
@@ -424,6 +441,11 @@ class _$ListeningImpl implements _Listening {
   @override
   @JsonKey(name: 'vocabulary_path')
   final String vocabularyPath;
+// Per-video Key Takeaways deck (Bunny path to key_takeaways.json). Empty =
+// the Key Takeaways step is hidden for this video.
+  @override
+  @JsonKey(name: 'key_takeaways_path')
+  final String keyTakeawaysPath;
   @override
   @JsonKey(name: 'listening_category_id')
   final int? listeningCategoryId;
@@ -448,7 +470,7 @@ class _$ListeningImpl implements _Listening {
 
   @override
   String toString() {
-    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, listeningCategoryId: $listeningCategoryId, isFree: $isFree, sentenceCount: $sentenceCount, vocabCount: $vocabCount, patternCount: $patternCount)';
+    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, keyTakeawaysPath: $keyTakeawaysPath, listeningCategoryId: $listeningCategoryId, isFree: $isFree, sentenceCount: $sentenceCount, vocabCount: $vocabCount, patternCount: $patternCount)';
   }
 
   @override
@@ -481,6 +503,8 @@ class _$ListeningImpl implements _Listening {
                 other.sentenceExplanationPath == sentenceExplanationPath) &&
             (identical(other.vocabularyPath, vocabularyPath) ||
                 other.vocabularyPath == vocabularyPath) &&
+            (identical(other.keyTakeawaysPath, keyTakeawaysPath) ||
+                other.keyTakeawaysPath == keyTakeawaysPath) &&
             (identical(other.listeningCategoryId, listeningCategoryId) ||
                 other.listeningCategoryId == listeningCategoryId) &&
             (identical(other.isFree, isFree) || other.isFree == isFree) &&
@@ -510,6 +534,7 @@ class _$ListeningImpl implements _Listening {
         recordSubtitlePath,
         sentenceExplanationPath,
         vocabularyPath,
+        keyTakeawaysPath,
         listeningCategoryId,
         isFree,
         sentenceCount,
@@ -550,6 +575,7 @@ abstract class _Listening implements Listening {
       @JsonKey(name: 'sentence_explanation_path')
       final String sentenceExplanationPath,
       @JsonKey(name: 'vocabulary_path') final String vocabularyPath,
+      @JsonKey(name: 'key_takeaways_path') final String keyTakeawaysPath,
       @JsonKey(name: 'listening_category_id') final int? listeningCategoryId,
       @JsonKey(name: 'is_free') final bool isFree,
       @JsonKey(name: 'sentence_count') final int sentenceCount,
@@ -596,7 +622,12 @@ abstract class _Listening implements Listening {
   String get sentenceExplanationPath;
   @override
   @JsonKey(name: 'vocabulary_path')
-  String get vocabularyPath;
+  String
+      get vocabularyPath; // Per-video Key Takeaways deck (Bunny path to key_takeaways.json). Empty =
+// the Key Takeaways step is hidden for this video.
+  @override
+  @JsonKey(name: 'key_takeaways_path')
+  String get keyTakeawaysPath;
   @override
   @JsonKey(name: 'listening_category_id')
   int?

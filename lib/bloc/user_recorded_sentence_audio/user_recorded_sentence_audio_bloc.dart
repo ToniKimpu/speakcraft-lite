@@ -83,15 +83,13 @@ class UserRecordedSentenceAudioBloc extends Bloc<UserRecordedSentenceAudioEvent,
   ) async {
     try {
       emit(const UserRecordedSentenceAudioState.loading());
+      // Local storage: the file stays on disk and the repo indexes it in Drift
+      // (no upload, no temp cleanup — the file IS the saved take).
       await _repo.save(
         listeningId: listeningId,
         sentenceId: sentenceId,
         audio: file,
       );
-      // The local temp file has been uploaded; clean it up.
-      try {
-        if (await file.exists()) await file.delete();
-      } catch (_) {}
       emit(const UserRecordedSentenceAudioState.success());
     } catch (e) {
       AppLogger.instance.error('recording insert: $e', error: e);

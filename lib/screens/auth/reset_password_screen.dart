@@ -9,6 +9,7 @@ import 'package:speakcraft/screens/auth/widgets/auth_card.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_text_field.dart';
 import 'package:speakcraft/screens/main/device_failed_screen.dart';
 import 'package:speakcraft/screens/main/home_screen.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 
 import '../../l10n/generated/l10n.dart';
 
@@ -69,8 +70,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     final l10n = AppLocalizations.of(context);
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Scaffold(
-      appBar: AppBar(),
+    return GlassScaffold(
       body: BlocListener<AuthBloc, AuthState>(
         bloc: _authBloc,
         listener: (context, state) {

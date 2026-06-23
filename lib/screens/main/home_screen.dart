@@ -9,11 +9,13 @@ import 'package:speakcraft/bloc/listening/listening_bloc.dart';
 import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
 import 'package:speakcraft/bloc/user_activity/user_activity_messages.dart';
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
+import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import 'widgets/module_widget.dart';
@@ -28,12 +30,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Timer? _sessionTimer;
   bool _sessionRecorded = false;
-
-  /// Timestamp of the last back press, for the double-tap-to-exit guard.
   DateTime? _lastBackPressed;
 
-  /// Android root-screen back handling: first press hints, a second press
-  /// within the window exits the app.
   void _handleBackPressed() {
     final now = DateTime.now();
     if (_lastBackPressed == null ||
@@ -56,14 +54,10 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     context.read<UserActivityBloc>().add(const UserActivityEvent.initialize());
-    // Saved step progress feeds the "Continue learning" card below the header.
     context.read<VideoStepProgressBloc>().add(
           const VideoStepProgressEvent.loadAll(),
         );
-    _sessionTimer = Timer(
-      const Duration(minutes: 1),
-      _onSessionTimerFired,
-    );
+    _sessionTimer = Timer(const Duration(minutes: 1), _onSessionTimerFired);
   }
 
   void _onSessionTimerFired() {
@@ -82,110 +76,96 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) {
         if (didPop) return;
         _handleBackPressed();
       },
-      child: Scaffold(
-        appBar: AppBar(
-          // Header merged into the bar: Day title + streak + profile sit on the
-          // teal band, replacing the old standalone "SpeakCraft" title. Fixed
-          // toolbarHeight so the bar never resizes between loading/loaded states.
-          toolbarHeight: 104,
-          automaticallyImplyLeading: false,
-          flexibleSpace: SafeArea(
-            bottom: false,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(24, 4, 8, 12),
-              child: BlocBuilder<UserActivityBloc, UserActivityState>(
-                builder: (context, state) {
-                  return state.when(
-                    initial: () => _buildHeader(0, 0, ''),
-                    loading: () => _buildHeader(0, 0, ''),
-                    loaded: (data) => _buildHeader(
-                      data.totalLearningDays,
-                      data.currentStreak,
-                      UserActivityMessages.get(
-                        resolveMessageType(data),
-                        streak: data.currentStreak,
-                      ),
-                    ),
-                    sessionRecorded: (data) => _buildHeader(
-                      data.totalLearningDays,
-                      data.currentStreak,
-                      UserActivityMessages.get(
-                        UserActivityMessageType.activeToday,
-                      ),
-                    ),
-                    error: (_) => _buildHeader(0, 0, ''),
-                  );
-                },
+      child: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: glassOverlayStyle(Theme.of(context).brightness),
+        child: Scaffold(
+          body: GradientBackground(
+          child: SafeArea(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 28),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  BlocBuilder<UserActivityBloc, UserActivityState>(
+                    builder: (context, state) {
+                      return state.when(
+                        initial: () => _buildHeader(0, 0, ''),
+                        loading: () => _buildHeader(0, 0, ''),
+                        loaded: (data) => _buildHeader(
+                          data.totalLearningDays,
+                          data.currentStreak,
+                          UserActivityMessages.get(
+                            resolveMessageType(data),
+                            streak: data.currentStreak,
+                          ),
+                        ),
+                        sessionRecorded: (data) => _buildHeader(
+                          data.totalLearningDays,
+                          data.currentStreak,
+                          UserActivityMessages.get(
+                            UserActivityMessageType.activeToday,
+                          ),
+                        ),
+                        error: (_) => _buildHeader(0, 0, ''),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 22),
+                  const _ContinueLearningSection(),
+                  const _SectionLabel('Learn'),
+                  ModuleWidget(
+                    title: l10n.txtModuleListeningTitle,
+                    label1: l10n.txtModuleListeningLabel1,
+                    label2: l10n.txtModuleListeningLabel2,
+                    iconTitle: Icons.hearing,
+                    iconLabel1: Icons.headphones,
+                    iconLabel2: Icons.surround_sound,
+                    accent: ModuleAccent.cyan,
+                    onPressed: () =>
+                        Navigator.pushNamed(context, PmpRoutes.listeningListPage),
+                  ),
+                  ModuleWidget(
+                    title: 'Writing Practice',
+                    label1: 'သဒ္ဒါ အခြေခံကနေ စတင်လေ့လာပါ',
+                    label2: 'လေ့ကျင့်ခန်းတွေနဲ့ ချက်ချင်း စစ်ဆေးပါ',
+                    iconTitle: Icons.edit_document,
+                    iconLabel1: Icons.school_outlined,
+                    iconLabel2: Icons.fact_check_outlined,
+                    accent: ModuleAccent.orange,
+                    onPressed: () =>
+                        Navigator.pushNamed(context, PmpRoutes.writingPath),
+                  ),
+                  ModuleWidget(
+                    title: l10n.txtModuleBookmarksTitle,
+                    label1: l10n.txtModuleBookmarksLabel1,
+                    label2: l10n.txtModuleBookmarksLabel2,
+                    iconTitle: Icons.bookmark,
+                    iconLabel1: Icons.menu_book,
+                    iconLabel2: Icons.school,
+                    accent: ModuleAccent.cyan,
+                    onPressed: () =>
+                        Navigator.pushNamed(context, PmpRoutes.savedTermsPage),
+                  ),
+                ],
               ),
             ),
           ),
         ),
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(24, 16, 24, 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const _ContinueLearningSection(),
-              ModuleWidget(
-                title: AppLocalizations.of(context).txtModuleListeningTitle,
-                label1: AppLocalizations.of(context).txtModuleListeningLabel1,
-                label2: AppLocalizations.of(context).txtModuleListeningLabel2,
-                iconTitle: Icons.hearing,
-                iconLabel1: Icons.headphones,
-                iconLabel2: Icons.surround_sound,
-                onPressed: () {
-                  Navigator.pushNamed(context, PmpRoutes.listeningListPage);
-                },
-              ),
-              const SizedBox(height: 12),
-              // Writing Practice — grammar-foundation course. Lands on the path
-              // screen (Level → Section → Unit). See WRITING_FEATURE_PLAN.md.
-              ModuleWidget(
-                title: 'Writing Practice',
-                label1: 'သဒ္ဒါ အခြေခံကနေ စတင်လေ့လာပါ',
-                label2: 'လေ့ကျင့်ခန်းတွေနဲ့ ချက်ချင်း စစ်ဆေးပါ',
-                iconTitle: Icons.edit_document,
-                iconLabel1: Icons.school_outlined,
-                iconLabel2: Icons.fact_check_outlined,
-                onPressed: () {
-                  Navigator.pushNamed(context, PmpRoutes.writingPath);
-                },
-              ),
-              const SizedBox(height: 12),
-              ModuleWidget(
-                title: AppLocalizations.of(context).txtModuleBookmarksTitle,
-                label1: AppLocalizations.of(context).txtModuleBookmarksLabel1,
-                label2: AppLocalizations.of(context).txtModuleBookmarksLabel2,
-                iconTitle: Icons.bookmark,
-                iconLabel1: Icons.menu_book,
-                iconLabel2: Icons.school,
-                onPressed: () {
-                  Navigator.pushNamed(context, PmpRoutes.savedTermsPage);
-                },
-              ),
-              // Debug-only navigation/dev tools. Comment out the single line
-              // below to hide the whole block; it already no-ops in release.
-              //const _DebugMenu(),
-            ],
-          ),
-        ),
+      ),
       ),
     );
   }
 
   Widget _buildHeader(int totalDays, int streak, String message) {
-    // Content lives on the teal AppBar band, so colors track the AppBar
-    // foreground (white in light, light text in dark) rather than surface.
-    final appBarFg = Theme.of(context).appBarTheme.foregroundColor ??
-        Theme.of(context).colorScheme.onSurface;
+    final cs = Theme.of(context).colorScheme;
     return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
@@ -196,42 +176,27 @@ class _HomePageState extends State<HomePage> {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w400,
-                  color: appBarFg,
-                  fontFamily: 'ArchivoBlack Regular',
+                  fontSize: 26,
+                  fontWeight: FontWeight.w800,
+                  color: cs.onSurface,
+                  letterSpacing: 0.2,
                 ),
               ),
             ),
             if (streak > 1) _StreakChip(streak: streak),
             const SizedBox(width: 10),
-            // Circular translucent button so the profile target reads as a
-            // tappable avatar on the teal band, not a faint bare glyph.
-            Material(
-              color: appBarFg.withValues(alpha: 0.15),
-              shape: CircleBorder(
-                side: BorderSide(color: appBarFg.withValues(alpha: 0.4)),
-              ),
-              clipBehavior: Clip.antiAlias,
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, PmpRoutes.profilePage);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(9),
-                  child: Icon(Icons.person, color: appBarFg, size: 22),
-                ),
-              ),
-            ),
+            _ProfileAvatar(),
           ],
         ),
         if (message.isNotEmpty)
-          Text(
-            message,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: PmpTextStyles.body2Regular.copyWith(
-              color: appBarFg.withValues(alpha: 0.85),
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Text(
+              message,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: PmpTextStyles.body2Regular
+                  .copyWith(color: cs.onSurfaceVariant),
             ),
           ),
       ],
@@ -239,9 +204,96 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-/// Debug-only tools surfaced on the home screen (JSON/HTML test lists and a
-/// quick logout). Renders nothing in release builds, so the call site can be
-/// commented out in one line without leaving dead UI in production.
+/// Small all-caps section divider label.
+class _SectionLabel extends StatelessWidget {
+  const _SectionLabel(this.text);
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(4, 2, 4, 12),
+      child: Text(
+        text.toUpperCase(),
+        style: TextStyle(
+          fontSize: 12,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0.7,
+          color: Theme.of(context).colorScheme.onSurfaceVariant,
+        ),
+      ),
+    );
+  }
+}
+
+class _ProfileAvatar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    return Material(
+      color: dark
+          ? Colors.white.withValues(alpha: 0.10)
+          : Colors.white.withValues(alpha: 0.70),
+      shape: CircleBorder(
+        side: BorderSide(
+          color: dark
+              ? Colors.white.withValues(alpha: 0.20)
+              : PmpColors.brandCyan.withValues(alpha: 0.25),
+        ),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => Navigator.pushNamed(context, PmpRoutes.profilePage),
+        child: Padding(
+          padding: const EdgeInsets.all(9),
+          child: Icon(Icons.person, color: cs.onSurface, size: 22),
+        ),
+      ),
+    );
+  }
+}
+
+class _StreakChip extends StatelessWidget {
+  const _StreakChip({required this.streak});
+
+  final int streak;
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    final tx = dark ? const Color(0xFFFFD9B8) : const Color(0xFFB4470F);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            PmpColors.brandOrange.withValues(alpha: dark ? 0.22 : 0.16),
+            PmpColors.brandOrange.withValues(alpha: dark ? 0.10 : 0.08),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(30),
+        border:
+            Border.all(color: PmpColors.brandOrange.withValues(alpha: 0.40)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text('🔥', style: TextStyle(fontSize: 13)),
+          const SizedBox(width: 5),
+          Text(
+            '$streak day streak',
+            style: PmpTextStyles.labelSemi.copyWith(color: tx),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Debug-only tools surfaced on the home screen. Renders nothing in release.
 // ignore: unused_element  // call site in HomePage.build is intentionally toggled
 class _DebugMenu extends StatelessWidget {
   const _DebugMenu();
@@ -254,41 +306,6 @@ class _DebugMenu extends StatelessWidget {
       children: [
         const SizedBox(height: 12),
         ElevatedButton(
-          onPressed: () => Navigator.pushNamed(context, '/html_list'),
-          child: const Text('See Html List'),
-        ),
-        const SizedBox(height: 8),
-        ElevatedButton(
-          onPressed: () =>
-              Navigator.pushNamed(context, PmpRoutes.gritJsonList),
-          child: const Text('Grit JSON List'),
-        ),
-        const SizedBox(height: 8),
-        ElevatedButton(
-          onPressed: () =>
-              Navigator.pushNamed(context, PmpRoutes.zendayaJsonList),
-          child: const Text('Zendaya'),
-        ),
-        const SizedBox(height: 8),
-        ElevatedButton(
-          onPressed: () => Navigator.pushNamed(
-              context, PmpRoutes.importantOfSocialHealthJsonList),
-          child: const Text('Important of Social Health'),
-        ),
-        const SizedBox(height: 8),
-        ElevatedButton(
-          onPressed: () =>
-              Navigator.pushNamed(context, PmpRoutes.paulRuddInterviewJsonList),
-          child: const Text('Paul Rudd Interview'),
-        ),
-        const SizedBox(height: 8),
-        ElevatedButton(
-          onPressed: () =>
-              Navigator.pushNamed(context, PmpRoutes.goingViralTaughtMeJsonList),
-          child: const Text('Going Viral Taught Me'),
-        ),
-        const SizedBox(height: 12),
-        ElevatedButton(
           onPressed: () =>
               context.read<AuthBloc>().add(const AuthEvent.logout()),
           child: const Text('Logout'),
@@ -298,43 +315,9 @@ class _DebugMenu extends StatelessWidget {
   }
 }
 
-/// Compact streak indicator shown beside the day title.
-class _StreakChip extends StatelessWidget {
-  const _StreakChip({required this.streak});
-
-  final int streak;
-
-  @override
-  Widget build(BuildContext context) {
-    // Sits on the teal AppBar band: translucent foreground pill so it reads on
-    // the colored bar in light mode and the dark surface bar in dark mode.
-    final fg = Theme.of(context).appBarTheme.foregroundColor ??
-        Theme.of(context).colorScheme.onSurface;
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      decoration: BoxDecoration(
-        color: fg.withValues(alpha: 0.15),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: fg.withValues(alpha: 0.4)),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Text('🔥', style: TextStyle(fontSize: 13)),
-          const SizedBox(width: 4),
-          Text(
-            '$streak day streak',
-            style: PmpTextStyles.labelSemi.copyWith(color: fg),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 /// Surfaces the most recently opened, not-yet-finished lesson so the learner
-/// can resume in one tap. Renders nothing for brand-new users (no lesson
-/// started) or once every started lesson is complete.
+/// can resume in one tap. Renders nothing for brand-new users or once every
+/// started lesson is complete.
 class _ContinueLearningSection extends StatelessWidget {
   const _ContinueLearningSection();
 
@@ -356,7 +339,7 @@ class _ContinueLearningSection extends StatelessWidget {
               final resume = _pickResume(progressState, listenings);
               if (resume == null) return const SizedBox.shrink();
               return Padding(
-                padding: const EdgeInsets.only(bottom: 20),
+                padding: const EdgeInsets.only(bottom: 22),
                 child: _ContinueCard(
                   listening: resume.$1,
                   progress: resume.$2,
@@ -369,7 +352,6 @@ class _ContinueLearningSection extends StatelessWidget {
     );
   }
 
-  /// The in-progress lesson opened most recently, or null if none qualify.
   (Listening, LessonProgress)? _pickResume(
     VideoStepProgressState state,
     List<Listening> listenings,
@@ -398,114 +380,103 @@ class _ContinueCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Material(
-      color: colorScheme.surfaceContainerHighest,
-      borderRadius: BorderRadius.circular(16),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: () {
-          Navigator.pushNamed(
-            context,
-            PmpRoutes.listeningHub,
-            arguments: {'listening': listening},
-          );
-        },
-        child: Ink(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: colorScheme.primary, width: 2),
-          ),
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    final cs = Theme.of(context).colorScheme;
+    return GlassCard(
+      padding: const EdgeInsets.all(14),
+      borderRadius: 22,
+      onTap: () => Navigator.pushNamed(
+        context,
+        PmpRoutes.listeningHub,
+        arguments: {'listening': listening},
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
             children: [
-              Row(
-                children: [
-                  Icon(Icons.play_circle_fill,
-                      size: 16, color: colorScheme.primary),
-                  const SizedBox(width: 6),
-                  Text(
-                    AppLocalizations.of(context).txtContinueLearning,
-                    style: PmpTextStyles.labelSemi
-                        .copyWith(color: colorScheme.primary),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: CachedNetworkImage(
-                      imageUrl: listening.thumbnail,
-                      width: 96,
-                      height: 60,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) => Container(
-                        width: 96,
-                        height: 60,
-                        color: colorScheme.surface,
-                      ),
-                      errorWidget: (context, url, error) => Container(
-                        width: 96,
-                        height: 60,
-                        color: colorScheme.surface,
-                        child: Icon(Icons.broken_image,
-                            size: 20, color: colorScheme.onSurfaceVariant),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          listening.title,
-                          style: PmpTextStyles.body1Semi
-                              .copyWith(color: colorScheme.onSurface),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        const SizedBox(height: 8),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(4),
-                                child: LinearProgressIndicator(
-                                  value: progress.fraction,
-                                  minHeight: 5,
-                                  backgroundColor: colorScheme.surface,
-                                  valueColor: AlwaysStoppedAnimation<Color>(
-                                      colorScheme.primary),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            Text(
-                              AppLocalizations.of(context)
-                                  .txtProgressXofY(
-                                      progress.doneCount, progress.totalCount),
-                              style: PmpTextStyles.labelSemi.copyWith(
-                                color: colorScheme.onSurfaceVariant,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(width: 4),
-                  Icon(Icons.chevron_right, color: colorScheme.primary),
-                ],
+              const Icon(Icons.play_circle,
+                  size: 16, color: PmpColors.brandCyanBright),
+              const SizedBox(width: 6),
+              Text(
+                AppLocalizations.of(context).txtContinueLearning,
+                style: PmpTextStyles.labelSemi.copyWith(
+                  color: PmpColors.brandCyanBright,
+                  letterSpacing: 0.4,
+                ),
               ),
             ],
           ),
-        ),
+          const SizedBox(height: 11),
+          Row(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: CachedNetworkImage(
+                  imageUrl: listening.thumbnail,
+                  width: 100,
+                  height: 62,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => Container(
+                    width: 100,
+                    height: 62,
+                    color: Colors.white.withValues(alpha: 0.05),
+                  ),
+                  errorWidget: (context, url, error) => Container(
+                    width: 100,
+                    height: 62,
+                    color: Colors.white.withValues(alpha: 0.05),
+                    child: Icon(Icons.broken_image,
+                        size: 20, color: cs.onSurfaceVariant),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      listening.title,
+                      style: PmpTextStyles.body1Semi
+                          .copyWith(color: cs.onSurface),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(6),
+                            child: LinearProgressIndicator(
+                              value: progress.fraction,
+                              minHeight: 6,
+                              backgroundColor:
+                                  cs.onSurface.withValues(alpha: 0.10),
+                              valueColor: const AlwaysStoppedAnimation<Color>(
+                                  PmpColors.brandOrange),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          AppLocalizations.of(context).txtProgressXofY(
+                              progress.doneCount, progress.totalCount),
+                          style: PmpTextStyles.labelSemi
+                              .copyWith(color: cs.onSurfaceVariant),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 4),
+              const Icon(Icons.chevron_right,
+                  color: PmpColors.brandCyanBright),
+            ],
+          ),
+        ],
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -293,6 +294,9 @@ class _ShadowingPageState extends State<ShadowingPage>
                             colorScheme.onSurface;
                     return Scaffold(
                       appBar: AppBar(
+                        leading: const Padding(
+                            padding: EdgeInsets.only(left: 8),
+                            child: GlassBackButton()),
                         title: Text(AppLocalizations.of(context).txtShadowing),
                         actions: [
                           InkWell(

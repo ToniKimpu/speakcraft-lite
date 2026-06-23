@@ -1,6 +1,9 @@
+import 'dart:ui' show ImageFilter;
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:material_symbols_icons/symbols.dart';
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
@@ -9,6 +12,7 @@ import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:speakcraft/shared_widgets/premium_gate.dart';
 
 class LessonHubPage extends StatefulWidget {
@@ -30,8 +34,6 @@ class _LessonHubPageState extends State<LessonHubPage> {
   }
 
   List<_StepConfig> _visibleSteps() {
-    // Order and visibility come from the shared helper so the hub, the
-    // listening list, and the home "Continue" card never disagree on steps.
     return [
       for (final step in visibleLessonSteps(widget.listening))
         _configForStep(step),
@@ -45,15 +47,23 @@ class _LessonHubPageState extends State<LessonHubPage> {
           step: VideoLessonStep.watch,
           title: AppLocalizations.of(context).txtStepWatchTitle,
           subtitle: AppLocalizations.of(context).txtStepWatchSubtitle,
-          icon: Icons.play_circle_outline,
+          icon: Symbols.play_circle,
           route: PmpRoutes.youtubeVideoPage,
+        );
+      case VideoLessonStep.keyTakeaways:
+        return _StepConfig(
+          step: VideoLessonStep.keyTakeaways,
+          title: AppLocalizations.of(context).txtStepTakeawaysTitle,
+          subtitle: AppLocalizations.of(context).txtStepTakeawaysSubtitle,
+          icon: Symbols.workspace_premium,
+          route: PmpRoutes.keyTakeawaysPage,
         );
       case VideoLessonStep.explanation:
         return _StepConfig(
           step: VideoLessonStep.explanation,
           title: AppLocalizations.of(context).txtStepStudyTitle,
           subtitle: AppLocalizations.of(context).txtStepStudySubtitle,
-          icon: Icons.lightbulb_outline,
+          icon: Symbols.menu_book,
           route: PmpRoutes.sentenceExplanationList,
         );
       case VideoLessonStep.shadowing:
@@ -61,7 +71,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
           step: VideoLessonStep.shadowing,
           title: AppLocalizations.of(context).txtStepShadowTitle,
           subtitle: AppLocalizations.of(context).txtStepShadowSubtitle,
-          icon: Icons.headphones,
+          icon: Symbols.headphones,
           route: PmpRoutes.shadowingPage,
         );
       case VideoLessonStep.record:
@@ -69,14 +79,12 @@ class _LessonHubPageState extends State<LessonHubPage> {
           step: VideoLessonStep.record,
           title: AppLocalizations.of(context).txtStepRecordTitle,
           subtitle: AppLocalizations.of(context).txtStepRecordSubtitle,
-          icon: Icons.record_voice_over,
+          icon: Symbols.mic,
           route: PmpRoutes.speechPracticeSessionPage,
         );
     }
   }
 
-  /// Watch (subtitle play) is free on every video; the other steps are gated on
-  /// non-free videos for free users.
   bool _isLocked(VideoLessonStep step) =>
       step != VideoLessonStep.watch &&
       !isUnlocked(isFree: widget.listening.isFree);
@@ -86,6 +94,10 @@ class _LessonHubPageState extends State<LessonHubPage> {
       showPremiumSheet(context, featureName: config.title);
       return;
     }
+    if (config.step == VideoLessonStep.record) {
+      _showSpeakModeSheet();
+      return;
+    }
     Navigator.pushNamed(
       context,
       config.route,
@@ -93,118 +105,111 @@ class _LessonHubPageState extends State<LessonHubPage> {
     );
   }
 
+  void _showSpeakModeSheet() {
+    showModalBottomSheet(
+      context: context,
+      showDragHandle: true,
+      builder: (sheetContext) => _SpeakModeSheet(
+        onBySection: () {
+          Navigator.pop(sheetContext);
+          Navigator.pushNamed(context, PmpRoutes.speechPracticeSessionPage,
+              arguments: {'listening': widget.listening});
+        },
+        onFullTalk: () {
+          Navigator.pop(sheetContext);
+          Navigator.pushNamed(context, PmpRoutes.fullTalkPage,
+              arguments: {'listening': widget.listening});
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
     final steps = _visibleSteps();
 
-    return Scaffold(
-      appBar: AppBar(title: Text(AppLocalizations.of(context).txtLesson)),
+    return GlassScaffold(
+      title: Text(l10n.txtLesson),
       body: BlocBuilder<VideoStepProgressBloc, VideoStepProgressState>(
-        builder: (context, state) {
-          final stepStates = <_StepConfig, VideoStepState>{
-            for (final s in steps)
-              s: state.stepStateFor(widget.listening.youtubeId, s.step),
-          };
+          builder: (context, state) {
+            final stepStates = <_StepConfig, VideoStepState>{
+              for (final s in steps)
+                s: state.stepStateFor(widget.listening.youtubeId, s.step),
+            };
+            final doneCount =
+                stepStates.values.where((s) => s == VideoStepState.done).length;
+            final nextIndex =
+                steps.indexWhere((s) => stepStates[s] != VideoStepState.done);
+            final allDone = nextIndex == -1;
+            final hasStarted =
+                stepStates.values.any((s) => s != VideoStepState.notStarted);
 
-          final doneCount =
-              stepStates.values.where((s) => s == VideoStepState.done).length;
-          final nextIndex = steps.indexWhere(
-              (s) => stepStates[s] != VideoStepState.done);
-          final allDone = nextIndex == -1;
-          final hasStarted = stepStates.values
-              .any((s) => s != VideoStepState.notStarted);
-
-          return SafeArea(
-            child: Column(
-              children: [
-                Expanded(
-                  child: ListView(
-                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-                    children: [
-                      _Header(
-                        listening: widget.listening,
-                        doneCount: doneCount,
-                        totalCount: steps.length,
-                      ),
-                      const SizedBox(height: 20),
-                      // Outcome "what you'll get" intro — only before the
-                      // learner has touched any step. Collapses to the plain
-                      // step list once they start, so it nudges without
-                      // getting in the way on return visits.
-                      if (!hasStarted) ...[
-                        _OutcomeBanner(listening: widget.listening),
-                        const SizedBox(height: 20),
-                      ],
-                      for (int i = 0; i < steps.length; i++) ...[
-                        _StepCard(
-                          number: i + 1,
-                          config: steps[i],
-                          state: stepStates[steps[i]] ?? VideoStepState.notStarted,
-                          isNextRecommended: !allDone && i == nextIndex,
-                          locked: _isLocked(steps[i].step),
-                          onTap: () => _openStep(steps[i]),
-                        ),
-                        if (i < steps.length - 1) const SizedBox(height: 12),
-                      ],
-                      const SizedBox(height: 16),
-                    ],
-                  ),
-                ),
-                if (!allDone)
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: FilledButton.icon(
-                        onPressed: () => _openStep(steps[nextIndex]),
-                        icon: const Icon(Icons.arrow_forward),
-                        label: Text(AppLocalizations.of(context)
-                            .txtContinueStep(steps[nextIndex].title)),
-                        style: FilledButton.styleFrom(
-                          minimumSize: const Size.fromHeight(52),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
+            // No pinned bottom button: the highlighted "recommended next" step
+            // card is the continue action. The all-done note rides at the end
+            // of the list instead of a pinned bar.
+            return SafeArea(
+              child: ListView(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                children: [
+                  _Header(
+                    listening: widget.listening,
+                    doneCount: doneCount,
+                    totalCount: steps.length,
+                    onPlay: () => _openStep(
+                      steps.firstWhere(
+                        (s) => s.step == VideoLessonStep.watch,
+                        orElse: () => steps.first,
                       ),
                     ),
-                  )
-                else
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-                    child: Container(
-                      width: double.infinity,
+                  ),
+                  const SizedBox(height: 20),
+                  if (!hasStarted) ...[
+                    _OutcomeBanner(listening: widget.listening),
+                    const SizedBox(height: 20),
+                  ],
+                  for (int i = 0; i < steps.length; i++) ...[
+                    _StepCard(
+                      number: i + 1,
+                      config: steps[i],
+                      state: stepStates[steps[i]] ?? VideoStepState.notStarted,
+                      isNextRecommended: !allDone && i == nextIndex,
+                      locked: _isLocked(steps[i].step),
+                      onTap: () => _openStep(steps[i]),
+                    ),
+                    if (i < steps.length - 1) const SizedBox(height: 12),
+                  ],
+                  if (allDone) ...[
+                    const SizedBox(height: 16),
+                    GlassCard(
+                      blur: false,
                       padding: const EdgeInsets.symmetric(
                           vertical: 14, horizontal: 16),
-                      decoration: BoxDecoration(
-                        color: colorScheme.primaryContainer,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
                       child: Row(
                         children: [
-                          Icon(Icons.celebration,
-                              color: colorScheme.onPrimaryContainer),
+                          const Icon(Symbols.celebration,
+                              color: PmpColors.success500),
                           const SizedBox(width: 12),
                           Expanded(
                             child: Text(
-                              AppLocalizations.of(context).txtAllStepsComplete,
+                              l10n.txtAllStepsComplete,
                               style: PmpTextStyles.body2Semi.copyWith(
-                                color: colorScheme.onPrimaryContainer,
+                                color: Theme.of(context).colorScheme.onSurface,
                               ),
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ),
-              ],
-            ),
-          );
-        },
-      ),
+                  ],
+                ],
+              ),
+            );
+          },
+        ),
     );
   }
+
 }
 
 class _StepConfig {
@@ -223,36 +228,190 @@ class _StepConfig {
   final String route;
 }
 
-/// "What you'll get" intro shown above the step list before the learner has
-/// started. Frames the value (outcome bullets) and nudges them to do the steps
-/// in order, turning a menu of steps into a path worth finishing.
+/// Glass video hero + title + progress.
+class _Header extends StatelessWidget {
+  const _Header({
+    required this.listening,
+    required this.doneCount,
+    required this.totalCount,
+    required this.onPlay,
+  });
+
+  final Listening listening;
+  final int doneCount;
+  final int totalCount;
+
+  /// Tapping the poster opens the video — same destination as the Watch step.
+  final VoidCallback onPlay;
+
+  String _formatDuration(int seconds) {
+    final h = seconds ~/ 3600;
+    final m = (seconds % 3600) ~/ 60;
+    final s = seconds % 60;
+    final ss = s.toString().padLeft(2, '0');
+    if (h > 0) return '$h:${m.toString().padLeft(2, '0')}:$ss';
+    return '$m:$ss';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final progress = totalCount == 0 ? 0.0 : doneCount / totalCount;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        GestureDetector(
+          onTap: onPlay,
+          child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: AspectRatio(
+            aspectRatio: 16 / 9,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                CachedNetworkImage(
+                  imageUrl: listening.thumbnail,
+                  fit: BoxFit.cover,
+                  // Cap decode to ~display width (2x) so a 1280px thumbnail
+                  // isn't held in memory at full size on low-RAM devices.
+                  memCacheWidth: 760,
+                  placeholder: (context, url) => Container(
+                    color: Colors.white.withValues(alpha: 0.05),
+                  ),
+                  errorWidget: (context, url, error) => Container(
+                    color: Colors.white.withValues(alpha: 0.05),
+                    child: Icon(Symbols.broken_image,
+                        size: 24, color: cs.onSurfaceVariant),
+                  ),
+                ),
+                // Scrim: darken top + bottom so the play button and duration
+                // chip stay legible over any thumbnail, and add a soft radial
+                // pool behind the play button so it never washes out against a
+                // bright frame.
+                const DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      stops: [0.0, 0.5, 1.0],
+                      colors: [
+                        Color(0x40000000),
+                        Color(0x14000000),
+                        Color(0x73000000),
+                      ],
+                    ),
+                  ),
+                ),
+                const DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      radius: 0.55,
+                      colors: [Color(0x4D000000), Color(0x00000000)],
+                    ),
+                  ),
+                ),
+                Center(
+                  child: ClipOval(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+                      child: Container(
+                        width: 62,
+                        height: 62,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.black.withValues(alpha: 0.36),
+                          border: Border.all(
+                              color: Colors.white.withValues(alpha: 0.45),
+                              width: 1.5),
+                        ),
+                        child: const Icon(Symbols.play_arrow,
+                            size: 34, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                if (listening.end - listening.start > 0)
+                  Positioned(
+                    right: 10,
+                    bottom: 10,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withValues(alpha: 0.60),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Text(
+                        _formatDuration(listening.end - listening.start),
+                        style: PmpTextStyles.labelSemi
+                            .copyWith(color: Colors.white),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        Text(
+          listening.title,
+          style: TextStyle(
+            fontSize: 19,
+            fontWeight: FontWeight.w800,
+            height: 1.3,
+            color: cs.onSurface,
+          ),
+        ),
+        const SizedBox(height: 12),
+        Row(
+          children: [
+            Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 7,
+                  backgroundColor: cs.onSurface.withValues(alpha: 0.10),
+                  valueColor: const AlwaysStoppedAnimation<Color>(
+                      PmpColors.brandOrange),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Text(
+              AppLocalizations.of(context)
+                  .txtProgressXofY(doneCount, totalCount),
+              style: PmpTextStyles.labelSemi
+                  .copyWith(color: cs.onSurfaceVariant),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+/// "What you'll get" intro shown above the step list before the learner starts.
 class _OutcomeBanner extends StatelessWidget {
   const _OutcomeBanner({required this.listening});
 
   final Listening listening;
 
-  /// Builds the outcome bullets. When the admin has precomputed content counts
-  /// for this video we show concrete, specific lines ("Learn 18 new words");
-  /// otherwise we fall back to generic value copy so the banner still lands.
   List<String> _bullets(AppLocalizations l10n) {
     final durationSeconds = listening.end - listening.start;
     final minutes = durationSeconds > 0 ? (durationSeconds / 60).round() : 0;
     final hasCounts = listening.vocabCount > 0 ||
         listening.patternCount > 0 ||
         listening.sentenceCount > 0;
-
     if (!hasCounts) {
-      return [
-        l10n.txtOutcomeBullet1,
-        l10n.txtOutcomeBullet2,
-        l10n.txtOutcomeBullet3,
-      ];
+      return [l10n.txtOutcomeBullet1, l10n.txtOutcomeBullet2, l10n.txtOutcomeBullet3];
     }
-
     return [
       if (minutes > 0) l10n.txtOutcomeCountMinutes(minutes),
-      if (listening.vocabCount > 0)
-        l10n.txtOutcomeCountVocab(listening.vocabCount),
+      if (listening.vocabCount > 0) l10n.txtOutcomeCountVocab(listening.vocabCount),
       if (listening.patternCount > 0)
         l10n.txtOutcomeCountPatterns(listening.patternCount),
       if (listening.sentenceCount > 0)
@@ -262,25 +421,23 @@ class _OutcomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final cs = Theme.of(context).colorScheme;
     final l10n = AppLocalizations.of(context);
-    final accent = colorScheme.primary;
     final bullets = _bullets(l10n);
 
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            accent.withValues(alpha: 0.12),
-            Color.lerp(accent, PmpColors.info500, 0.55)!
-                .withValues(alpha: 0.10),
+            PmpColors.brandCyan.withValues(alpha: 0.12),
+            PmpColors.brandOrange.withValues(alpha: 0.06),
           ],
         ),
-        border: Border.all(color: accent.withValues(alpha: 0.25)),
+        border: Border.all(color: PmpColors.brandCyan.withValues(alpha: 0.22)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -290,20 +447,20 @@ class _OutcomeBanner extends StatelessWidget {
               Container(
                 width: 30,
                 height: 30,
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: accent.withValues(alpha: 0.15),
+                  color: PmpColors.brandCyan.withValues(alpha: 0.15),
                 ),
-                alignment: Alignment.center,
-                child: Icon(Icons.flag_rounded, size: 18, color: accent),
+                child: const Icon(Symbols.flag,
+                    size: 17, color: PmpColors.brandCyanBright),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   l10n.txtOutcomeBannerTitle,
-                  style: PmpTextStyles.body1Semi.copyWith(
-                    color: colorScheme.onSurface,
-                  ),
+                  style: PmpTextStyles.body1Semi
+                      .copyWith(color: cs.onSurface),
                 ),
               ),
             ],
@@ -313,29 +470,6 @@ class _OutcomeBanner extends StatelessWidget {
             if (i > 0) const SizedBox(height: 8),
             _OutcomeBullet(text: bullets[i]),
           ],
-          const SizedBox(height: 14),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-            decoration: BoxDecoration(
-              color: colorScheme.surface.withValues(alpha: 0.55),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Row(
-              children: [
-                Icon(Icons.timeline_rounded,
-                    size: 16, color: colorScheme.onSurfaceVariant),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    l10n.txtOutcomeStepLadder,
-                    style: PmpTextStyles.labelSemi.copyWith(
-                      color: colorScheme.onSurfaceVariant,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
         ],
       ),
     );
@@ -349,22 +483,21 @@ class _OutcomeBullet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final cs = Theme.of(context).colorScheme;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
           padding: EdgeInsets.only(top: 1),
-          child: Icon(Icons.check_circle_rounded,
+          child: Icon(Symbols.check_circle,
               size: 18, color: PmpColors.success500),
         ),
         const SizedBox(width: 10),
         Expanded(
           child: Text(
             text,
-            style: PmpTextStyles.body2Regular.copyWith(
-              color: colorScheme.onSurface,
-            ),
+            style:
+                PmpTextStyles.body2Regular.copyWith(color: cs.onSurface),
           ),
         ),
       ],
@@ -372,119 +505,89 @@ class _OutcomeBullet extends StatelessWidget {
   }
 }
 
-class _Header extends StatelessWidget {
-  const _Header({
-    required this.listening,
-    required this.doneCount,
-    required this.totalCount,
-  });
+/// Choose-mode sheet shown when the learner taps "Speak on your own".
+class _SpeakModeSheet extends StatelessWidget {
+  const _SpeakModeSheet({required this.onBySection, required this.onFullTalk});
 
-  final Listening listening;
-  final int doneCount;
-  final int totalCount;
-
-  String _formatDuration(int seconds) {
-    final h = seconds ~/ 3600;
-    final m = (seconds % 3600) ~/ 60;
-    final s = seconds % 60;
-    final ss = s.toString().padLeft(2, '0');
-    if (h > 0) {
-      final mm = m.toString().padLeft(2, '0');
-      return '$h:$mm:$ss';
-    }
-    return '$m:$ss';
-  }
+  final VoidCallback onBySection;
+  final VoidCallback onFullTalk;
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    final progress = totalCount == 0 ? 0.0 : doneCount / totalCount;
+    final cs = Theme.of(context).colorScheme;
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(4, 4, 4, 12),
+              child: Text('How do you want to speak?',
+                  style: PmpTextStyles.title1SemiBold
+                      .copyWith(color: cs.onSurface)),
+            ),
+            _option(context,
+                icon: Icons.segment,
+                title: 'By section',
+                subtitle: 'Practice one chunk at a time — record, compare, redo.',
+                onTap: onBySection),
+            const SizedBox(height: 12),
+            _option(context,
+                icon: Icons.record_voice_over,
+                title: 'Full talk',
+                subtitle: 'Record the whole talk in one continuous take.',
+                onTap: onFullTalk),
+          ],
+        ),
+      ),
+    );
+  }
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        AspectRatio(
-          aspectRatio: 16 / 9,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Stack(
-              fit: StackFit.expand,
+  Widget _option(
+    BuildContext context, {
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required VoidCallback onTap,
+  }) {
+    final cs = Theme.of(context).colorScheme;
+    return GlassCard(
+      onTap: onTap,
+      borderRadius: 16,
+      padding: const EdgeInsets.all(14),
+      child: Row(
+        children: [
+          Container(
+            width: 42,
+            height: 42,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: PmpColors.brandCyan.withValues(alpha: 0.14),
+            ),
+            child: const Icon(Icons.mic_none_rounded,
+                color: PmpColors.brandCyanBright, size: 20),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CachedNetworkImage(
-                  imageUrl: listening.thumbnail,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) => Container(
-                    color: colorScheme.surfaceContainerHighest,
-                    child: const Center(
-                      child: SizedBox(
-                        width: 18,
-                        height: 18,
-                        child: CircularProgressIndicator(),
-                      ),
-                    ),
-                  ),
-                  errorWidget: (context, url, error) => Container(
-                    color: colorScheme.surfaceContainerHighest,
-                    child: Icon(
-                      Icons.broken_image,
-                      size: 24,
-                      color: colorScheme.onSurfaceVariant,
-                    ),
-                  ),
-                ),
-                if (listening.end - listening.start > 0)
-                  Positioned(
-                    right: 8,
-                    bottom: 8,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: Colors.black.withValues(alpha: 0.75),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: Text(
-                        _formatDuration(listening.end - listening.start),
-                        style: PmpTextStyles.labelSemi
-                            .copyWith(color: Colors.white),
-                      ),
-                    ),
-                  ),
+                Text(title,
+                    style: PmpTextStyles.body1Semi
+                        .copyWith(color: cs.onSurface)),
+                const SizedBox(height: 2),
+                Text(subtitle,
+                    style: PmpTextStyles.body2Regular
+                        .copyWith(color: cs.onSurfaceVariant)),
               ],
             ),
           ),
-        ),
-        const SizedBox(height: 16),
-        Text(
-          listening.title,
-          style: PmpTextStyles.title1SemiBold.copyWith(
-            color: colorScheme.onSurface,
-          ),
-        ),
-        const SizedBox(height: 12),
-        Row(
-          children: [
-            Expanded(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: LinearProgressIndicator(
-                  value: progress,
-                  minHeight: 8,
-                  backgroundColor: colorScheme.surfaceContainerHighest,
-                  valueColor: AlwaysStoppedAnimation<Color>(colorScheme.primary),
-                ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Text(
-              AppLocalizations.of(context).txtProgressXofY(doneCount, totalCount),
-              style: PmpTextStyles.labelSemi.copyWith(
-                color: colorScheme.onSurfaceVariant,
-              ),
-            ),
-          ],
-        ),
-      ],
+          Icon(Icons.chevron_right, color: cs.onSurfaceVariant, size: 22),
+        ],
+      ),
     );
   }
 }
@@ -508,107 +611,87 @@ class _StepCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final cs = Theme.of(context).colorScheme;
+    final dark = Theme.of(context).brightness == Brightness.dark;
     final isDone = state == VideoStepState.done;
     final isInProgress = state == VideoStepState.inProgress;
 
-    final borderColor = isNextRecommended
-        ? colorScheme.primary
-        : colorScheme.outline;
-    final borderWidth = isNextRecommended ? 2.0 : 1.0;
-    final cardColor = isNextRecommended
-        ? Color.alphaBlend(
-            colorScheme.primary.withValues(alpha: 0.06),
-            colorScheme.surfaceContainerHighest,
-          )
-        : colorScheme.surfaceContainerHighest;
-
-    return Material(
-      color: cardColor,
-      borderRadius: BorderRadius.circular(12),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: onTap,
-        child: Stack(
-          children: [
-            Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: borderColor, width: borderWidth),
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              _NumberBadge(number: number, isDone: isDone),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          width: 28,
-                          height: 28,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: colorScheme.primary.withValues(alpha: 0.10),
-                          ),
-                          alignment: Alignment.center,
-                          child: Icon(
-                            config.icon,
-                            size: 16,
-                            color: colorScheme.primary,
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: Text(
-                            config.title,
-                            style: PmpTextStyles.body1Semi.copyWith(
-                              color: colorScheme.onSurface,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      config.subtitle,
-                      style: PmpTextStyles.body2Regular.copyWith(
-                        color: colorScheme.onSurfaceVariant,
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-                    _StatusLine(
-                      state: state,
-                      isNextRecommended: isNextRecommended,
-                    ),
-                  ],
-                ),
+    final card = GlassCard(
+      highlight: isNextRecommended,
+      onTap: onTap,
+      borderRadius: 16,
+      padding: const EdgeInsets.all(14),
+      // Several step cards render at once — skip the per-card BackdropFilter
+      // (invisible over the gradient) so the screen stays light on low-end GPUs.
+      blur: false,
+      child: Row(
+        children: [
+          _NumberBadge(number: number, isDone: isDone),
+          const SizedBox(width: 12),
+          Container(
+            width: 32,
+            height: 32,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: PmpColors.brandCyan.withValues(alpha: dark ? 0.18 : 0.12),
+              border: Border.all(
+                color: PmpColors.brandCyanBright
+                    .withValues(alpha: dark ? 0.34 : 0.30),
               ),
-              const SizedBox(width: 8),
-              Icon(
-                Icons.chevron_right,
-                size: 20,
-                color: isInProgress || isNextRecommended
-                    ? colorScheme.primary
-                    : colorScheme.onSurfaceVariant,
-              ),
-            ],
-          ),
             ),
-            if (locked)
-              const Positioned(
-                top: 10,
-                right: 10,
-                child: PremiumLockBadge(),
-              ),
-          ],
-        ),
+            child: Icon(config.icon,
+                size: 17, color: PmpColors.brandCyanBright),
+          ),
+          const SizedBox(width: 11),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  config.title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: PmpTextStyles.body1Semi.copyWith(color: cs.onSurface),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  config.subtitle,
+                  style: PmpTextStyles.body2Regular
+                      .copyWith(color: cs.onSurfaceVariant),
+                ),
+                const SizedBox(height: 5),
+                // Locked steps show the PREMIUM chip inline (instead of a
+                // "Not started" line) — no corner overlay that collides with
+                // the title.
+                if (locked)
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: PremiumLockBadge(),
+                  )
+                else
+                  _StatusLine(
+                    state: state,
+                    isNextRecommended: isNextRecommended,
+                  ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          Icon(
+            locked
+                ? Symbols.lock
+                : Symbols.chevron_right,
+            size: 20,
+            color: isInProgress || isNextRecommended
+                ? PmpColors.brandCyanBright
+                : cs.onSurfaceVariant,
+          ),
+        ],
       ),
     );
+
+    return card;
   }
 }
 
@@ -620,25 +703,36 @@ class _NumberBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final cs = Theme.of(context).colorScheme;
+    final dark = Theme.of(context).brightness == Brightness.dark;
     return Container(
-      width: 32,
-      height: 32,
+      width: 34,
+      height: 34,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: isDone ? colorScheme.primary : colorScheme.surface,
+        gradient: isDone
+            ? const LinearGradient(
+                colors: [PmpColors.success400, PmpColors.success600])
+            : null,
+        color: isDone
+            ? null
+            : (dark
+                ? Colors.white.withValues(alpha: 0.06)
+                : const Color(0xFF0D3147).withValues(alpha: 0.05)),
         border: Border.all(
-          color: isDone ? colorScheme.primary : colorScheme.outline,
+          color: isDone
+              ? Colors.transparent
+              : (dark
+                  ? Colors.white.withValues(alpha: 0.18)
+                  : const Color(0xFF0D3147).withValues(alpha: 0.12)),
         ),
       ),
-      alignment: Alignment.center,
       child: isDone
-          ? Icon(Icons.check, size: 18, color: colorScheme.onPrimary)
+          ? const Icon(Symbols.check, size: 19, color: Color(0xFF06140C))
           : Text(
               '$number',
-              style: PmpTextStyles.body2Semi.copyWith(
-                color: colorScheme.onSurface,
-              ),
+              style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface),
             ),
     );
   }
@@ -652,26 +746,26 @@ class _StatusLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final cs = Theme.of(context).colorScheme;
     final (String text, Color color, IconData? icon) = switch (state) {
       VideoStepState.done => (
           AppLocalizations.of(context).txtCompleted,
-          colorScheme.primary,
-          Icons.check_circle,
+          PmpColors.success500,
+          Symbols.check_circle,
         ),
       VideoStepState.inProgress => (
           AppLocalizations.of(context).txtInProgress,
-          colorScheme.tertiary,
-          Icons.timelapse,
+          PmpColors.brandCyanBright,
+          Symbols.timelapse,
         ),
       VideoStepState.notStarted when isNextRecommended => (
           AppLocalizations.of(context).txtRecommendedNext,
-          colorScheme.primary,
-          Icons.flag_outlined,
+          PmpColors.brandCyanBright,
+          Symbols.flag,
         ),
       VideoStepState.notStarted => (
           AppLocalizations.of(context).txtNotStarted,
-          colorScheme.onSurfaceVariant,
+          cs.onSurfaceVariant,
           null,
         ),
     };
@@ -683,10 +777,7 @@ class _StatusLine extends StatelessWidget {
           Icon(icon, size: 14, color: color),
           const SizedBox(width: 4),
         ],
-        Text(
-          text,
-          style: PmpTextStyles.labelSemi.copyWith(color: color),
-        ),
+        Text(text, style: PmpTextStyles.labelSemi.copyWith(color: color)),
       ],
     );
   }

@@ -982,10 +982,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Practice along (shadowing)",
     ),
     "txtStepStudySubtitle": MessageLookupByLibrary.simpleMessage(
-      "Review grammar and vocabulary used in this video",
+      "Every line explained in detail",
     ),
     "txtStepStudyTitle": MessageLookupByLibrary.simpleMessage(
-      "Study the patterns",
+      "Sentence by sentence",
+    ),
+    "txtStepTakeawaysSubtitle": MessageLookupByLibrary.simpleMessage(
+      "The key words & phrases worth keeping",
+    ),
+    "txtStepTakeawaysTitle": MessageLookupByLibrary.simpleMessage(
+      "Key Takeaways",
     ),
     "txtStepWatchSubtitle": MessageLookupByLibrary.simpleMessage(
       "Listen with subtitles to understand the content",

@@ -29,6 +29,7 @@ class SupabaseListeningRepository implements ListeningRepository {
         sentenceExplanationPath:
             _normalizePath(listening.sentenceExplanationPath),
         vocabularyPath: _normalizePath(listening.vocabularyPath),
+        keyTakeawaysPath: _normalizePath(listening.keyTakeawaysPath),
       );
     }).toList();
   }
@@ -48,6 +49,9 @@ class SupabaseListeningRepository implements ListeningRepository {
 
   String _normalizePath(String path) {
     if (path.isEmpty) return '';
+    // Tolerate a full URL being stored (admin paste) — use it as-is. Otherwise
+    // it's the relative `bunny/...` form: strip the prefix and prepend the base.
+    if (path.startsWith('http://') || path.startsWith('https://')) return path;
     return Env.bunnyListeningAPIKey + path.replaceFirst('bunny/', '');
   }
 }

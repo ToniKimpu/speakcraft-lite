@@ -66,6 +66,9 @@ dependencies:
   supabase_flutter: ^2.10.3
   google_sign_in: ^7.2.0
   flutter_widget_from_html: ^0.16.1
+  pinput: ^6.0.2
+  material_symbols_icons: ^4.2951.0
+  flutter_svg: ^2.3.0
 
 dev_dependencies:
   flutter_test:

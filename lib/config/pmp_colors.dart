@@ -83,4 +83,31 @@ class PmpColors {
   static const Color myanmarGlossLight = Color(0xFF2E6072);
   static Color myanmarGloss(Brightness brightness) =>
       brightness == Brightness.dark ? myanmarGlossDark : myanmarGlossLight;
+
+  // ── Glass theme (cyan + orange identity) ────────────────────────────────
+  // Brand accents (shared across modes).
+  static const Color brandCyan = Color(0xFF0496C7);
+  static const Color brandCyanBright = Color(0xFF28BBE6);
+  static const Color brandCyanDeep = Color(0xFF03789F);
+  static const Color brandOrange = Color(0xFFEA580C);
+  static const Color brandOrangeBright = Color(0xFFF97316);
+
+  // Premium accent — warm gold reads "premium" on a thumbnail/chip far better
+  // than the flat grey `tertiary`. Pair with [onPremium] dark text for contrast.
+  static const Color premiumGold = Color(0xFFF6B23C);
+  static const Color premiumGoldDeep = Color(0xFFE08A1E);
+  static const Color onPremium = Color(0xFF3A2400);
+
+  // Dark gradient backdrop stops.
+  static const Color glassDarkBg0 = Color(0xFF080D13);
+  static const Color glassDarkBg1 = Color(0xFF0B141D);
+  static const Color glassDarkSurface = Color(0xFF0E1722);
+  static const Color glassDarkCard = Color(0xFF131E29);
+  static const Color glassDarkOutline = Color(0xFF243441);
+
+  // Light gradient backdrop stops.
+  static const Color glassLightBg0 = Color(0xFFEFF5F9);
+  static const Color glassLightBg1 = Color(0xFFE2ECF2);
+  static const Color glassLightText = Color(0xFF0F2C3A);
+  static const Color glassLightTextDim = Color(0xFF5C7585);
 }

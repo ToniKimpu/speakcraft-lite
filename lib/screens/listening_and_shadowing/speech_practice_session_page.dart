@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:speakcraft/bloc/listening/record_subtitle_bloc.dart';
@@ -9,7 +10,6 @@ import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dar
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
-import 'package:speakcraft/repositories/listening/listening_recording_repository.dart';
 import 'package:speakcraft/shared_widgets/spoken_pattern_footer_widget.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/recording_voice_widgets/user_recorded_list.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/shadowing_player.dart';
@@ -51,7 +51,6 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
       ValueNotifier(0.6);
 
   final _userRecordedSentenceAudioBloc = UserRecordedSentenceAudioBloc();
-  final _recordingRepo = ListeningRecordingRepository();
 
   bool _backPressed = false;
 
@@ -263,6 +262,9 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                 )
               : Scaffold(
                   appBar: AppBar(
+                    leading: const Padding(
+                        padding: EdgeInsets.only(left: 8),
+                        child: GlassBackButton()),
                     title: Text(AppLocalizations.of(context).txtSpeechPracticeSession),
                   ),
                   body: BlocConsumer<RecordSubtitleBloc, RecordSubtitleState>(
@@ -673,12 +675,9 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                                                       } else {
                                                         await _audioPlayer
                                                             .stop();
-                                                        final url =
-                                                            await _recordingRepo
-                                                                .signedUrl(data
-                                                                    .audioPath);
                                                         await _audioPlayer
-                                                            .setUrl(url);
+                                                            .setFilePath(
+                                                                data.audioPath);
                                                         _audioPlayer.play();
                                                         _currentlyPlayingIndexNotifier
                                                                 .value =

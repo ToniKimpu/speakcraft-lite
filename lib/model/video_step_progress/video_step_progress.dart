@@ -11,6 +11,7 @@ enum VideoStepState {
 
 enum VideoLessonStep {
   watch,
+  keyTakeaways,
   explanation,
   shadowing,
   record,

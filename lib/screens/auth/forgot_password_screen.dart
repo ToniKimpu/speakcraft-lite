@@ -5,6 +5,7 @@ import 'package:speakcraft/config/common_extensions.dart';
 import 'package:speakcraft/screens/auth/reset_password_screen.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_card.dart';
 import 'package:speakcraft/screens/auth/widgets/auth_text_field.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 
 import '../../l10n/generated/l10n.dart';
 
@@ -43,8 +44,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     final l10n = AppLocalizations.of(context);
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Scaffold(
-      appBar: AppBar(),
+    return GlassScaffold(
       body: BlocListener<AuthBloc, AuthState>(
         bloc: _authBloc,
         listener: (context, state) {
