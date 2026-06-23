@@ -125,8 +125,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "___ the door, please. (instruction)",
-      "prompt_mm": "တံခါးကို ဖွင့်ပေးပါဦး။",
+      "prompt_en": "___ the door, please.",
+      "prompt_mm": "ကျေးဇူးပြုပြီး တံခါးကို ဖွင့်ပါ။",
       "options": [
         "You open",
         "Open",
@@ -135,13 +135,13 @@
       "answers": [
         "Open"
       ],
-      "explain_mm": "Imperative ဝါကျမို့လို့ Verb ရဲ့ Base form ဖြစ်တဲ့ 'Open' နဲ့ စပေးရပါမယ်။"
+      "explain_mm": "imperative — subject မပါ၊ base verb → Open ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "___ late! (negative)",
-      "prompt_mm": "နောက်မကျစေနဲ့နော်!",
+      "prompt_en": "___ late!",
+      "prompt_mm": "နောက်မကျပါနဲ့!",
       "options": [
         "Don't be",
         "Not be",
@@ -150,97 +150,236 @@
       "answers": [
         "Don't be"
       ],
-      "explain_mm": "ဒါက အငြင်းဝါကျ (negative) ဖြစ်လို့ 'Don't' ရဲ့နောက်မှာ Base verb ဖြစ်တဲ့ 'be' ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "အငြင်း → Don't + base (be) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ in the classroom.",
+      "prompt_mm": "စာသင်ခန်းထဲမှာ မပြေးပါနဲ့။",
+      "options": [
+        "Don't run",
+        "Don't runs",
+        "No run"
+      ],
+      "answers": [
+        "Don't run"
+      ],
+      "explain_mm": "အငြင်း → Don't + base (run) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Please ___ here.",
+      "prompt_mm": "ကျေးဇူးပြုပြီး ဒီမှာ စောင့်ပါ။",
+      "options": [
+        "wait",
+        "waits",
+        "to wait"
+      ],
+      "answers": [
+        "wait"
+      ],
+      "explain_mm": "imperative — base verb → wait ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ left at the corner.",
+      "prompt_mm": "ထောင့်ရောက်ရင် ဘယ်ဘက်ကို ကွေ့ပါ။",
+      "options": [
+        "Turn",
+        "Turns",
+        "You turn"
+      ],
+      "answers": [
+        "Turn"
+      ],
+      "explain_mm": "imperative — base verb၊ subject မပါ → Turn ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "___ (not / run) in the classroom.",
-      "prompt_mm": "စာသင်ခန်းထဲမှာ မပြေးပါနဲ့နော်။",
+      "prompt_en": "___ the window.  ( close )",
+      "prompt_mm": "ပြတင်းပေါက်ကို ပိတ်ပါ။",
       "answers": [
-        "Don't run",
-        "don't run"
+        "Close"
       ],
-      "explain_mm": "ဒါက အငြင်းပုံစံ Imperative ဝါကျဖြစ်တဲ့အတွက် 'Don't run' ဆိုပြီး သုံးရမှာပါ။"
+      "explain_mm": "imperative — base verb → Close ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ late.  ( negative, be )",
+      "prompt_mm": "နောက်မကျပါနဲ့။",
+      "answers": [
+        "Don't be"
+      ],
+      "explain_mm": "အငြင်း → Don't + base (be) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Please ___ here.  ( wait )",
+      "prompt_mm": "ဒီမှာ စောင့်ပေးပါ။",
+      "answers": [
+        "wait"
+      ],
+      "explain_mm": "base verb → wait ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ the door.  ( open )",
+      "prompt_mm": "တံခါးကို ဖွင့်ပါ။",
+      "answers": [
+        "Open"
+      ],
+      "explain_mm": "imperative → Open ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ in the classroom.  ( negative, run )",
+      "prompt_mm": "စာသင်ခန်းထဲမှာ မပြေးပါနဲ့။",
+      "answers": [
+        "Don't run"
+      ],
+      "explain_mm": "အငြင်း → Don't + base (run) ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "You sits down.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျလေးကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "You open the door.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Sit down",
-        "sit down."
+        "Open the door"
       ],
-      "explain_mm": "Imperative ဝါကျမှာ Subject ထည့်စရာမလိုဘဲ Base verb နဲ့ပဲ စရမှာဖြစ်လို့ 'Sit down' က အဖြေမှန်ဖြစ်ပါတယ်။"
+      "explain_mm": "imperative — subject (You) မပါရ → Open the door ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  the light  /  off  /  turn",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးလေးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်လေးတစ်ခုဖြစ်အောင် ရေးပေးပါနော်။",
+      "prompt_en": "Don't to be late.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Turn off the light",
-        "turn off the light.",
-        "Turn the light off"
+        "Don't be late"
       ],
-      "explain_mm": "Base verb ဖြစ်တဲ့ 'Turn' နဲ့ ဝါကျကို စရမှာဖြစ်လို့ 'Turn off the light' က အဖြေမှန်ဖြစ်ပါတယ်။"
+      "explain_mm": "Don't နောက်မှာ base verb (be) — ‘to’ မလို ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — give instructions. Write 5–8 imperatives (a simple recipe, rules, or directions). Mix positive (Do …) and negative (Don't …).",
-      "prompt_mm": "အပိုင်း ၁ — ညွှန်ကြားချက်တွေ ပေးကြည့်ရအောင်။ Imperative ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော် (ဥပမာ ရိုးရှင်းတဲ့ ချက်နည်းလေးတွေ၊ စည်းကမ်းချက်တွေ၊ လမ်းညွှန်တာမျိုးတွေပေါ့)။ အတည်ဝါကျ (Do …) နဲ့ အငြင်းဝါကျ (Don't …) နှစ်မျိုးလုံး ပါအောင် ရောပြီးရေးပေးပါ။ ပြီးသွားရင်တော့ scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ပြီးတင်ပေးလို့လည်း ရပါတယ်နော်။",
-      "model": "{v}Wash{/v} your hands. {v}Open{/v} the book. {v}Read{/v} the first page. {v}Don't talk{/v} loudly. {v}Don't forget{/v} your homework.",
-      "explain_mm": "Verb ရဲ့ Base form နဲ့ စရေးရမယ်၊ Subject ထည့်စရာမလိုဘူးဆိုတာကို သတိရပါနော်။ အငြင်းဝါကျဆိုရင်တော့ 'Don't' ရဲ့နောက်မှာ Base verb ကို ထည့်ပေးရပါမယ်။",
-      "grading": {
-        "grammar_point": "Imperatives (do / don't)",
-        "rule": "Imperatives start with the base verb (no subject). Negative: don't + base verb.",
-        "must_check": [
-          "Starts with the base verb (no subject, no -s)",
-          "Negatives use Don't + base verb",
-          "Gives instructions/orders",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Adding a subject (You open)",
-          "Adding -s (Opens the door)",
-          "Negative without don't"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Opens the window.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Open the window"
+      ],
+      "explain_mm": "imperative — base verb → Open (Opens မဟုတ်) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — how to do something. Write a short paragraph (4–6 sentences) of instructions (a recipe or directions), using imperatives.",
-      "prompt_mm": "အပိုင်း ၂ — တစ်ခုခုကို ဘယ်လိုလုပ်ရမလဲဆိုတာ ရှင်းပြကြည့်ရအောင်။ ညွှန်ကြားချက်တွေပါတဲ့ စာပိုဒ်တိုလေးတစ်ပုဒ် (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ကို Imperative တွေသုံးပြီး ရေးပေးပါနော် (ဥပမာ ချက်နည်း ဒါမှမဟုတ် လမ်းညွှန်တာမျိုးပေါ့)။ ရေးပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "{v}Make{/v} a cup of tea. First, {v}boil{/v} the water. {v}Put{/v} a tea bag in the cup. {v}Add{/v} the hot water and {v}wait{/v} three minutes. {v}Don't add{/v} too much sugar. {v}Enjoy{/v}!",
-      "explain_mm": "Verb ရဲ့ Base form နဲ့ စတဲ့ ညွှန်ကြားချက်တွေကို တစ်ကြောင်းပြီးတစ်ကြောင်း ဆက်တိုက်ရေးသွားရုံပါပဲ။ အငြင်းပုံစံ ပြောချင်တဲ့နေရာမှာတော့ 'Don't' ကို ထည့်ပေးဖို့ မမေ့နဲ့နော်။",
-      "grading": {
-        "grammar_point": "Imperatives (do / don't)",
-        "rule": "A set of instructions using imperatives correctly.",
-        "must_check": [
-          "Base-verb start, no subject",
-          "Negatives with don't",
-          "Clear step-by-step instructions",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Subjects added",
-          "-s on the verb",
-          "Missing don't in negatives"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "No run in the classroom.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Don't run in the classroom"
+      ],
+      "explain_mm": "အငြင်း → Don't + base (run) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပြတင်းပေါက်ကို ပိတ်ပါ။",
+      "options": [
+        "Close",
+        "the",
+        "window"
+      ],
+      "answers": [
+        "Close the window"
+      ],
+      "explain_mm": "base verb၊ subject မပါ → Close ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နောက်မကျပါနဲ့။",
+      "options": [
+        "Don't",
+        "be",
+        "late"
+      ],
+      "answers": [
+        "Don't be late"
+      ],
+      "explain_mm": "အငြင်း → Don't + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ထောင့်ရောက်ရင် ဘယ်ဘက် ကွေ့ပါ။",
+      "options": [
+        "Turn",
+        "left",
+        "at",
+        "the",
+        "corner"
+      ],
+      "answers": [
+        "Turn left at the corner"
+      ],
+      "explain_mm": "imperative → Turn ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီမှာ စောင့်ပေးပါ။",
+      "options": [
+        "Please",
+        "wait",
+        "here"
+      ],
+      "answers": [
+        "Please wait here"
+      ],
+      "explain_mm": "ယဉ်ကျေးအောင် Please + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "တံခါးကို ဖွင့်ပါ။",
+      "options": [
+        "Open",
+        "the",
+        "door"
+      ],
+      "answers": [
+        "Open the door"
+      ],
+      "explain_mm": "base verb → Open ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီမှာ မပြေးပါနဲ့။",
+      "options": [
+        "Don't",
+        "run",
+        "here"
+      ],
+      "answers": [
+        "Don't run here"
+      ],
+      "explain_mm": "အငြင်း → Don't + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Imperative = base verb, no subject (Open the door).  Negative: {v}Don't{/v} + base (Don't be late).  Polite: {v}Please{/v} …",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — imperative = base verb ၊ subject မပါ (Open the door) ။ အငြင်း — Don't + base (Don't be late) ။ ယဉ်ကျေးအောင် — Please … ။"
 }

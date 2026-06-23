@@ -153,23 +153,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "This is ___ restaurant in town. (good)",
-      "prompt_mm": "ဒါက မြို့ထဲမှာရှိတဲ့ အကောင်းဆုံးစားသောက်ဆိုင်လေးပါပဲ။",
-      "options": [
-        "the best",
-        "the goodest",
-        "the most good"
-      ],
-      "answers": [
-        "the best"
-      ],
-      "explain_mm": "'good' ရဲ့ superlative ပုံစံက ပုံမှန်မဟုတ်တဲ့ irregular ဖြစ်တဲ့အတွက် 'the best' လို့ ပြောင်းပေးရပါတယ်။"
-    },
-    {
-      "kind": "mcq",
-      "grade": "auto",
-      "prompt_en": "Everest is ___ mountain in the world. (high)",
-      "prompt_mm": "အေဗရက်တောင်က ကမ္ဘာပေါ်မှာ အမြင့်ဆုံးတောင်ပါပဲ။",
+      "prompt_en": "Everest is ___ mountain in the world.",
+      "prompt_mm": "Everest က ကမ္ဘာပေါ်မှာ အမြင့်ဆုံးတောင်ပါ။",
       "options": [
         "the highest",
         "the most high",
@@ -178,95 +163,271 @@
       "answers": [
         "the highest"
       ],
-      "explain_mm": "short adjective ဖြစ်တဲ့အတွက် ပုံစံက the + adjective + -est ပါ။ ဒါကြောင့် 'the highest' ဖြစ်သွားပါတယ်။"
+      "explain_mm": "short adjective → the highest (-est) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This is ___ restaurant in town.",
+      "prompt_mm": "ဒါက မြို့ထဲမှာ အကောင်းဆုံး စားသောက်ဆိုင်ပါ။",
+      "options": [
+        "the best",
+        "the goodest",
+        "the most good"
+      ],
+      "answers": [
+        "the best"
+      ],
+      "explain_mm": "irregular — good → the best ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He is ___ in the team.",
+      "prompt_mm": "သူက အသင်းထဲမှာ အရပ်အရှည်ဆုံးပါ။",
+      "options": [
+        "the tallest",
+        "tallest",
+        "most tallest"
+      ],
+      "answers": [
+        "the tallest"
+      ],
+      "explain_mm": "short adjective → the tallest ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She is ___ student in the class.",
+      "prompt_mm": "သူမက အတန်းထဲမှာ အတော်ဆုံး ကျောင်းသူပါ။",
+      "options": [
+        "the intelligentest",
+        "the most intelligent",
+        "most intelligent"
+      ],
+      "answers": [
+        "the most intelligent"
+      ],
+      "explain_mm": "long adjective → the most intelligent ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "August is ___ month here.",
+      "prompt_mm": "ဩဂုတ်လက ဒီမှာ အပူဆုံးလပါ။",
+      "options": [
+        "the hottest",
+        "the most hot",
+        "the hotest"
+      ],
+      "answers": [
+        "the hottest"
+      ],
+      "explain_mm": "‘hot’ (CVC) → the hottest ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She is ___ (intelligent) student in the class.",
-      "prompt_mm": "သူမက အတန်းထဲမှာ အတော်ဆုံးကျောင်းသူလေးပါ။",
+      "prompt_en": "This is ___ phone in the shop.  ( cheap )",
+      "prompt_mm": "ဒါက ဆိုင်ထဲမှာ ဈေးအချိုဆုံး ဖုန်းပါ။",
       "answers": [
-        "the most intelligent"
+        "the cheapest"
       ],
-      "explain_mm": "long adjective ဖြစ်တဲ့အတွက် ပုံစံက the most + adjective ပါ။ ဒါကြောင့် 'the most intelligent' ဖြစ်သွားပါတယ်။"
+      "explain_mm": "short adjective → the cheapest ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "It was ___ day of my life.  ( good )",
+      "prompt_mm": "ဒါက ကျွန်တော့်ဘဝ အကောင်းဆုံးနေ့ပါ။",
+      "answers": [
+        "the best"
+      ],
+      "explain_mm": "irregular — good → the best ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He is ___ player in the team.  ( fast )",
+      "prompt_mm": "သူက အသင်းထဲမှာ အမြန်ဆုံး ကစားသမားပါ။",
+      "answers": [
+        "the fastest"
+      ],
+      "explain_mm": "short adjective → the fastest ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This is ___ book in the library.  ( useful )",
+      "prompt_mm": "ဒါက စာကြည့်တိုက်ထဲမှာ အသုံးအဝင်ဆုံး စာအုပ်ပါ။",
+      "answers": [
+        "the most useful"
+      ],
+      "explain_mm": "long adjective → the most useful ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This is ___ day of the year.  ( bad )",
+      "prompt_mm": "ဒါက တစ်နှစ်လုံးထဲမှာ အဆိုးဆုံးနေ့ပါ။",
+      "answers": [
+        "the worst"
+      ],
+      "explain_mm": "irregular — bad → the worst ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "He is tallest in the team.",
-      "prompt_mm": "မှားနေတဲ့ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါ။",
+      "prompt_en": "Everest is the most high mountain.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "He is the tallest in the team",
-        "he is the tallest in the team."
+        "Everest is the highest mountain"
       ],
-      "explain_mm": "superlative adjective တွေရဲ့ရှေ့မှာ 'the' ကို ထည့်ပေးဖို့ မမေ့ပါနဲ့နော်။ ဥပမာ → the tallest။"
+      "explain_mm": "short adjective → the highest (most မသုံး) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  the  /  is  /  river  /  longest  /  it",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်ဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "This is the goodest restaurant.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "It is the longest river",
-        "it is the longest river."
+        "This is the best restaurant"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + be + the + superlative + noun ပုံစံမျိုးပါပဲ။ ဥပမာ → It is the longest river."
+      "explain_mm": "irregular — good → the best ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — the best and the worst. Write 5–8 sentences about the -est things in your life (best friend, biggest city you've visited, happiest day), using superlatives with 'the'.",
-      "prompt_mm": "အပိုင်း ၁ — အကောင်းဆုံးနဲ့ အဆိုးဆုံးအကြောင်းလေးတွေ ပြောကြမယ်။ ကိုယ့်ဘဝမှာ ကြုံခဲ့ရတဲ့ အဆုံးစွန်အရာတွေ (ဥပမာ - အကောင်းဆုံးသူငယ်ချင်း၊ ရောက်ဖူးသမျှထဲမှာ အကြီးဆုံးမြို့၊ အပျော်ရွှင်ဆုံးနေ့) အကြောင်းကို 'the' နဲ့ superlative adjective တွေသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ ရေးပြီးသွားရင် ဖုန်းနဲ့ scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ စာရိုက်ပြီး တင်ပေးก็ได้နော်။",
-      "model": "My best friend is {v}the kindest{/v} person I know. Yangon is {v}the biggest{/v} city I have visited. My wedding was {v}the happiest{/v} day of my life. Maths was {v}the hardest{/v} subject at school. My phone is {v}the most useful{/v} thing I own.",
-      "explain_mm": "ပုံစံလေးတွေကို ပြန်သတိပေးမယ်နော် — short adjective ဆိုရင် the + adjective + -est၊ long adjective ဆိုရင် the most + adjective၊ ပြီးတော့ ပုံစံမမှန်တဲ့ irregular တွေအတွက် the best/worst ပေါ့။ 'the' ကိုတော့ ဘယ်တော့မှ မမေ့နဲ့နော်။",
-      "grading": {
-        "grammar_point": "Superlatives (-est / most)",
-        "rule": "the + -est for short adjectives; the most for long ones; always 'the'. Spelling: biggest, happiest. Irregular: the best, the worst.",
-        "must_check": [
-          "'the' before every superlative",
-          "-est for short adjectives, 'the most' for long ones (not both)",
-          "Correct spelling and irregulars (the best, the worst)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Dropping 'the' (He is tallest)",
-          "most + -est together (the most tallest)",
-          "-est on a long adjective (beautifulest)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She is the intelligentest student.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She is the most intelligent student"
+      ],
+      "explain_mm": "long adjective → the most intelligent ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — describe a place. Write a short paragraph (4–6 sentences) about a place you love (a city, your home, a shop), using superlatives to say what makes it the best.",
-      "prompt_mm": "အပိုင်း ၂ — ကိုယ်အကြိုက်ဆုံးနေရာလေးအကြောင်း ဖော်ပြကြမယ်။ ကိုယ်အရမ်းနှစ်သက်တဲ့ နေရာတစ်ခု (ဥပမာ - မြို့တစ်မြို့၊ ကိုယ့်အိမ်၊ ဒါမှမဟုတ် ဆိုင်တစ်ဆိုင်) အကြောင်းကို superlative adjective တွေသုံးပြီး ဘာကြောင့် အကောင်းဆုံးနေရာလေးဖြစ်ရသလဲဆိုတာကို ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်အထိ စာပိုဒ်တိုလေးတစ်ခု ရေးပေးပါ။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "My favourite café is {v}the best{/v} place in my town. It has {v}the friendliest{/v} staff and {v}the most comfortable{/v} chairs. The coffee is {v}the cheapest{/v} in the area. It is also {v}the quietest{/v} café, so I can read there. For me, it is {v}the most relaxing{/v} place.",
-      "explain_mm": "superlative တွေကို သုံးတဲ့အခါ ပုံစံမှန်အောင် သတိထားပြီး သုံးပေးပါနော် — 'the' ကို အမြဲတမ်းထည့်ပေးရပါမယ်၊ short adjective ဆို -est ပေါင်းပြီး long adjective ဆို the most သုံးပေးပါ။",
-      "grading": {
-        "grammar_point": "Superlatives (-est / most)",
-        "rule": "Describe one place with several superlatives, all with 'the' and the correct -est/most form.",
-        "must_check": [
-          "'the' with every superlative",
-          "Correct -est vs the most choice",
-          "Correct spelling and irregular forms",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Missing 'the'",
-          "Double superlative (the most biggest)",
-          "Wrong form on long adjectives"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He is most tallest in the team.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He is the tallest in the team"
+      ],
+      "explain_mm": "‘the’ + ‑est → the tallest (most ကို မတွဲရ) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက ဆိုင်ထဲမှာ ဈေးအချိုဆုံး ဖုန်းပါ။",
+      "options": [
+        "This",
+        "is",
+        "the",
+        "cheapest",
+        "phone",
+        "in",
+        "the",
+        "shop"
+      ],
+      "answers": [
+        "This is the cheapest phone in the shop"
+      ],
+      "explain_mm": "the + ‑est → the cheapest ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမက အတော်ဆုံး ကျောင်းသူပါ။",
+      "options": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "intelligent",
+        "student"
+      ],
+      "answers": [
+        "She is the most intelligent student"
+      ],
+      "explain_mm": "long adj → the most intelligent ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက ကျွန်တော့်ဘဝ အကောင်းဆုံးနေ့ပါ။",
+      "options": [
+        "It",
+        "was",
+        "the",
+        "best",
+        "day",
+        "of",
+        "my",
+        "life"
+      ],
+      "answers": [
+        "It was the best day of my life"
+      ],
+      "explain_mm": "irregular → the best ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဩဂုတ်လက ဒီမှာ အပူဆုံးလပါ။",
+      "options": [
+        "August",
+        "is",
+        "the",
+        "hottest",
+        "month",
+        "here"
+      ],
+      "answers": [
+        "August is the hottest month here"
+      ],
+      "explain_mm": "CVC → the hottest ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူက အသင်းထဲမှာ အမြန်ဆုံးပါ။",
+      "options": [
+        "He",
+        "is",
+        "the",
+        "fastest",
+        "in",
+        "the",
+        "team"
+      ],
+      "answers": [
+        "He is the fastest in the team"
+      ],
+      "explain_mm": "short adj → the fastest ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက အဆိုးဆုံးနေ့ပါ။",
+      "options": [
+        "It",
+        "was",
+        "the",
+        "worst",
+        "day"
+      ],
+      "answers": [
+        "It was the worst day"
+      ],
+      "explain_mm": "irregular → the worst ။"
     }
-  ]
+  ],
+  "practice_recap_en": "The most of 3+: short adj → {v}the …-est{/v} (the tallest) · long adj → {v}the most …{/v} (the most useful).  Irregular: good → the best, bad → the worst.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — ၃ ခုနဲ့အထက်ထဲက အဆုံးစွန် — short adjective → the …‑est (the tallest) ၊ long adjective → the most … (the most useful) ။ irregular — good → the best ၊ bad → the worst ။"
 }

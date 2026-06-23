@@ -198,7 +198,7 @@
       "answers": [
         "didn't go"
       ],
-      "explain_mm": "didn't နောက်မှာ base verb ဖြစ်တဲ့ 'go' ကို သုံးပေးရပါတယ်။ 'didn't went' ဆိုပြီး past form ကို ထပ်မသုံးရပါဘူးနော်။"
+      "explain_mm": "didn't + base (go) ။  ➝ She didn't go to work."
     },
     {
       "kind": "mcq",
@@ -213,99 +213,246 @@
       "answers": [
         "Did"
       ],
-      "explain_mm": "Past simple မေးခွန်းပုံစံက → Did + subject + base verb ပါ။"
+      "explain_mm": "အတိတ်အမေး → Did ။  ➝ Did you eat lunch?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ to the party.",
+      "prompt_mm": "သူတို့ ပါတီကို မလာခဲ့ကြဘူး။",
+      "options": [
+        "didn't come",
+        "didn't came",
+        "don't come"
+      ],
+      "answers": [
+        "didn't come"
+      ],
+      "explain_mm": "didn't + base (come) ။  ➝ They didn't come."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Did he ___ the film?",
+      "prompt_mm": "သူ ဒီဇာတ်ကား ကြည့်ခဲ့သလား။",
+      "options": [
+        "watch",
+        "watched",
+        "watches"
+      ],
+      "answers": [
+        "watch"
+      ],
+      "explain_mm": "Did နောက်မှာ base (watch) ။  ➝ Did he watch the film?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I ___ TV last night.",
+      "prompt_mm": "ကျွန်တော် မနေ့ည တီဗီ မကြည့်ခဲ့ပါဘူး။",
+      "options": [
+        "didn't watch",
+        "didn't watched",
+        "don't watch"
+      ],
+      "answers": [
+        "didn't watch"
+      ],
+      "explain_mm": "didn't + base (watch) ။  ➝ I didn't watch TV."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "They ___ (not / come) to the party.",
-      "prompt_mm": "သူတို့ ပါတီကို မလာခဲ့ကြဘူး။ (verb 'come' ကို သုံးပေးပါ)",
+      "prompt_en": "She ___ to work.  ( go, negative )",
+      "prompt_mm": "သူမ အလုပ်မသွားခဲ့ပါဘူး။",
       "answers": [
-        "didn't come",
-        "did not come"
+        "didn't go",
+        "did not go"
       ],
-      "explain_mm": "didn't နောက်မှာ base form ဖြစ်တဲ့ 'come' ကို သုံးပေးပါ။"
+      "explain_mm": "didn't + base (go) ။  ➝ She didn't go to work."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I ___ TV yesterday.  ( watch, negative )",
+      "prompt_mm": "ကျွန်တော် မနေ့က တီဗီမကြည့်ခဲ့ပါဘူး။",
+      "answers": [
+        "didn't watch",
+        "did not watch"
+      ],
+      "explain_mm": "didn't + base (watch) ။  ➝ I didn't watch TV."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ you eat lunch?  ( question )",
+      "prompt_mm": "မင်း နေ့လယ်စာ စားခဲ့သလား။",
+      "answers": [
+        "Did"
+      ],
+      "explain_mm": "အတိတ်အမေး → Did ။  ➝ Did you eat lunch?"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ they come last night?  ( question )",
+      "prompt_mm": "သူတို့ မနေ့ညက လာခဲ့ကြလား။",
+      "answers": [
+        "Did"
+      ],
+      "explain_mm": "အတိတ်အမေး → Did ။  ➝ Did they come last night?"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Did she ___ dinner?  ( cook )",
+      "prompt_mm": "သူမ ညစာ ချက်ခဲ့သလား။",
+      "answers": [
+        "cook"
+      ],
+      "explain_mm": "Did နောက်မှာ base (cook) ။  ➝ Did she cook dinner?"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Did you went home?",
-      "prompt_mm": "မှားနေတဲ့ မေးခွန်းလေးကို ပြန်ပြင်ပေးပါနော်။",
+      "prompt_en": "She didn't went to work.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Did you go home",
-        "Did you go home?",
-        "did you go home?"
+        "She didn't go to work"
       ],
-      "explain_mm": "Did ရဲ့နောက်မှာ base verb ကိုပဲ သုံးရမှာမို့လို့ 'went' ကို 'go' လို့ ပြင်ပေးရပါမယ်။"
+      "explain_mm": "didn't နောက်မှာ base (go) — went မဟုတ် ။  ➝ She didn't go to work."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  didn't  /  she  /  the film  /  watch",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်လေးတစ်ခု ဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "Do you eat lunch yesterday?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She didn't watch the film",
-        "she didn't watch the film."
+        "Did you eat lunch yesterday"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက ဒီလိုလေးပါ → Subject + didn't + base verb + ... (ဥပမာ: She didn't watch the film.)"
+      "explain_mm": "အတိတ် → Did ။  ➝ Did you eat lunch yesterday?"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — what you DIDN'T do. Write 5–8 sentences about things you didn't do yesterday, using \"I didn't\" + the base verb.",
-      "prompt_mm": "အပိုင်း (၁) — မလုပ်ခဲ့တဲ့အရာတွေ။ မနေ့က ကိုယ်မလုပ်ဖြစ်ခဲ့တဲ့ အရာတွေအကြောင်းကို \"I didn't\" + verb (base) ပုံစံသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပေးပါ။ ပြီးရင် စာအုပ်ထဲမှာ ချရေးပြီး scan ဖတ်တင်ပေးနိုင်သလို၊ ဒီအောက်မှာပဲ တစ်ကြောင်းချင်း ရိုက်ထည့်ပြီး ပို့ပေးလို့လည်း ရပါတယ်နော်။",
-      "model": "Yesterday I {v}didn't go{/v} to work. I {v}didn't eat{/v} breakfast. I {v}didn't watch{/v} TV. I {v}didn't see{/v} my friends. I {v}didn't study{/v} English.",
-      "explain_mm": "သတိထားရမှာက didn't ရဲ့နောက်က verb က အမြဲတမ်း base form ပါပဲ။ past form (-ed) တွေ လုံးဝထည့်စရာ မလိုပါဘူးနော်။",
-      "grading": {
-        "grammar_point": "Past simple: negatives & questions (did / didn't)",
-        "rule": "Negatives use didn't + base verb. did/didn't carries the past, so the main verb stays in the base form.",
-        "must_check": [
-          "didn't + base verb (no past form, no -ed)",
-          "Past meaning (a finished time)",
-          "Same didn't for all subjects",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "didn't + past form (She didn't went)",
-          "Using don't/doesn't for the past",
-          "Keeping the past form after didn't"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "They didn't came.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "They didn't come"
+      ],
+      "explain_mm": "didn't + base (come) ။  ➝ They didn't come."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 4,
-      "max_lines": 6,
-      "prompt_en": "Part 2 — ask about the past. Write 4–6 yes/no questions about what someone did yesterday, using \"Did you/he/she …?\" + the base verb.",
-      "prompt_mm": "အပိုင်း (၂) — အတိတ်ကအကြောင်းတွေ မေးကြည့်ရအောင်။ တစ်စုံတစ်ယောက်က မနေ့က ဘာတွေလုပ်ခဲ့သလဲဆိုတာကို \"Did you/he/she …?\" + verb (base) ပုံစံသုံးပြီး မေးခွန်း ၄ ခုကနေ ၆ ခုလောက်အထိ ရေးကြည့်ပေးပါ။ ပြီးသွားရင် စာအုပ်ထဲမှာရေးပြီး scan ဖတ်တင်ပေးပါနော်။",
-      "model": "{v}Did{/v} you {v}sleep{/v} well? {v}Did{/v} you {v}eat{/v} breakfast? {v}Did{/v} she {v}go{/v} to work? {v}Did{/v} they {v}watch{/v} the game? {v}Did{/v} he {v}call{/v} you?",
-      "explain_mm": "မေးခွန်းပုံစံက Did + subject + verb (base) ပါ။ Did ရဲ့နောက်မှာ past form (အတိတ်ပုံစံ) တွေ လုံးဝမသုံးရပါဘူးနော်။",
-      "grading": {
-        "grammar_point": "Past simple: negatives & questions (did / didn't)",
-        "rule": "Yes/no past questions: Did + subject + base verb (no past form on the main verb).",
-        "must_check": [
-          "Did + subject + base verb",
-          "Base verb, not the past form, after Did",
-          "Each line is a yes/no question",
-          "4–6 questions"
-        ],
-        "common_mm_errors": [
-          "Did + past form (Did you went?)",
-          "Using Do/Does for the past",
-          "Dropping Did (You went home?)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Did he watched the film?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Did he watch the film"
+      ],
+      "explain_mm": "Did နောက် base (watch) ။  ➝ Did he watch the film?"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် မနေ့က တီဗီမကြည့်ခဲ့ပါဘူး။",
+      "options": [
+        "I",
+        "didn't",
+        "watch",
+        "TV",
+        "yesterday"
+      ],
+      "answers": [
+        "I didn't watch TV yesterday"
+      ],
+      "explain_mm": "didn't + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ အလုပ်မသွားခဲ့ပါဘူး။",
+      "options": [
+        "She",
+        "didn't",
+        "go",
+        "to",
+        "work"
+      ],
+      "answers": [
+        "She didn't go to work"
+      ],
+      "explain_mm": "didn't + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း နေ့လယ်စာ စားခဲ့သလား။",
+      "options": [
+        "Did",
+        "you",
+        "eat",
+        "lunch"
+      ],
+      "answers": [
+        "Did you eat lunch"
+      ],
+      "explain_mm": "Did + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ မနေ့ညက လာခဲ့ကြလား။",
+      "options": [
+        "Did",
+        "they",
+        "come",
+        "last",
+        "night"
+      ],
+      "answers": [
+        "Did they come last night"
+      ],
+      "explain_mm": "Did + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ကော်ဖီ မသောက်ခဲ့ပါဘူး။",
+      "options": [
+        "I",
+        "didn't",
+        "drink",
+        "coffee"
+      ],
+      "answers": [
+        "I didn't drink coffee"
+      ],
+      "explain_mm": "didn't + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ဒီဇာတ်ကား ကြည့်ခဲ့သလား။",
+      "options": [
+        "Did",
+        "he",
+        "watch",
+        "the",
+        "film"
+      ],
+      "answers": [
+        "Did he watch the film"
+      ],
+      "explain_mm": "Did + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Past negative: {v}didn't{/v} + base.  Question: {v}Did{/v} + subject + base.  (base verb — no -ed!)",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — အတိတ်အငြင်း — didn't + base ။ အမေး — Did + subject + base ။ verb ကို base form (‑ed/past မထည့်) သုံးပါ။"
 }

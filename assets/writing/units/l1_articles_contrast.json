@@ -127,7 +127,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I like ___ in general.",
-      "prompt_mm": "ကျွန်တော်က ယေဘုယျအားဖြင့် ___ ကို ကြိုက်ပါတယ်။",
+      "prompt_mm": "ကျွန်တော် ယေဘုယျအားဖြင့် ဂီတကို ကြိုက်တယ်။",
       "options": [
         "the music",
         "a music",
@@ -136,110 +136,256 @@
       "answers": [
         "music"
       ],
-      "explain_mm": "Music ဆိုတာ ယေဘုယျပြောတဲ့ uncountable noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။"
+      "explain_mm": "ယေဘုယျပြောတဲ့ uncountable (music) ဖြစ်လို့ ရှေ့မှာ အညွှန်း မလိုပါဘူး → music ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I bought a shirt. ___ shirt is blue.",
-      "prompt_mm": "ကျွန်တော် အင်္ကျီတစ်ထည် ဝယ်ခဲ့တယ်။ အဲဒီအင်္ကျီလေးက အပြာရောင်ပါ။",
+      "prompt_mm": "ကျွန်တော် အင်္ကျီတစ်ထည် ဝယ်ခဲ့တယ်။ အဲဒီအင်္ကျီက အပြာရောင်ပါ။",
       "options": [
         "A",
-        "The",
-        "—"
+        "An",
+        "The"
       ],
       "answers": [
         "The"
       ],
-      "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတဲ့အခါ ဘယ်ဟာမှန်း တိကျသွားပြီမို့ → The ကို သုံးရပါမယ်။"
+      "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတော့ ဘယ်အင်္ကျီလဲ တိကျသွားပြီ → The shirt ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I drink ___ every day.",
+      "prompt_mm": "ကျွန်တော် နေ့တိုင်း ရေ သောက်တယ်။",
+      "options": [
+        "a water",
+        "the water",
+        "water"
+      ],
+      "answers": [
+        "water"
+      ],
+      "explain_mm": "ယေဘုယျပြောတဲ့ uncountable (water) ဖြစ်လို့ အညွှန်း မလိုပါဘူး → water ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I saw ___ bird yesterday.",
+      "prompt_mm": "မနေ့က ငှက်တစ်ကောင်ကို မြင်ခဲ့တယ်။",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "answers": [
+        "a"
+      ],
+      "explain_mm": "ပထမဆုံးအကြိမ် ပြောတာ + consonant အသံ → a bird ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I love ___.",
+      "prompt_mm": "ကျွန်တော် တိရစ္ဆာန်တွေကို ချစ်တယ်။",
+      "options": [
+        "an animal",
+        "the animals",
+        "animals"
+      ],
+      "answers": [
+        "animals"
+      ],
+      "explain_mm": "ယေဘုယျပြောတဲ့ plural (animals) ဖြစ်လို့ အညွှန်း မလိုပါဘူး → animals ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She is ___ honest person. (first mention, vowel sound)",
-      "prompt_mm": "သူမဟာ ရိုးသားတဲ့ လူတစ်ယောက်ပါ။",
+      "prompt_en": "I saw ___ bird yesterday.  ( first mention )",
+      "prompt_mm": "မနေ့က ငှက်တစ်ကောင် မြင်ခဲ့တယ်။",
+      "answers": [
+        "a"
+      ],
+      "explain_mm": "ပထမအကြိမ် ပြောတာ → a bird ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I have a dog. ___ dog is big.  ( second mention )",
+      "prompt_mm": "ကျွန်တော့်မှာ ခွေးတစ်ကောင် ရှိတယ်။ အဲဒီခွေးက ကြီးတယ်။",
+      "answers": [
+        "The"
+      ],
+      "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတော့ တိကျသွားပြီ → The dog ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She bought a book. ___ book is interesting.",
+      "prompt_mm": "သူမ စာအုပ်တစ်အုပ် ဝယ်ခဲ့တယ်။ အဲဒီစာအုပ်က စိတ်ဝင်စားဖို့ကောင်းတယ်။",
+      "answers": [
+        "The"
+      ],
+      "explain_mm": "ဒုတိယအကြိမ် → The book ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He is ___ teacher.  ( job )",
+      "prompt_mm": "သူ ဆရာတစ်ယောက်ပါ။",
+      "answers": [
+        "a"
+      ],
+      "explain_mm": "အလုပ်အကိုင် တစ်ခု ပြောတာ → a teacher ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I ate ___ apple.  ( first mention )",
+      "prompt_mm": "ပန်းသီးတစ်လုံး စားခဲ့တယ်။",
       "answers": [
         "an"
       ],
-      "explain_mm": "honest ဆိုတဲ့စကားလုံးမှာ 'h' က အသံမထွက်ဘဲ vowel (သရ)သံနဲ့ စတဲ့အတွက် → an honest လို့ သုံးရတာပါနော်။"
+      "explain_mm": "ပထမအကြိမ် + vowel အသံ → an apple ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I like the cats. (in general)",
-      "prompt_mm": "အောက်က မှားနေတဲ့ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါဦး။ (ယေဘုယျအကြောင်း ပြောနေတာနော်)",
+      "prompt_en": "I like the music in general.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I like cats",
-        "i like cats."
+        "I like music in general"
       ],
-      "explain_mm": "Cats ဆိုတာ ယေဘုယျပြောတဲ့ plural noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။ ဒါကြောင့် I like cats. က မှန်ပါတယ်။"
+      "explain_mm": "ယေဘုယျ uncountable → music (the မလို) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  water  /  drink  /  I",
-      "prompt_mm": "ဒီစကားလုံးလေးတွေကို အစဉ်လိုက် richtig စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ရေးပေးပါနော်။ (ယေဘုယျအကြောင်း ပြောနေတာပါ)",
+      "prompt_en": "I drink the water every day.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I drink water",
-        "i drink water."
+        "I drink water every day"
       ],
-      "explain_mm": "Water က ယေဘုယျပြောတဲ့ uncountable noun ဖြစ်လို့ → ရှေ့မှာ အညွှန်း မလိုပါဘူး။ ဒါကြောင့် I drink water. က မှန်ပါတယ်။"
+      "explain_mm": "ယေဘုယျ uncountable → water (the မလို) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 6,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — mix the three. Write 6–8 sentences using a/an (first mention), the (specific), and no article (general plural/uncountable).",
-      "prompt_mm": "အပိုင်း (၁) — Article သုံးမျိုးစလုံးကို ရောပြီး သုံးကြည့်ကြရအောင်။ a/an (ပထမဆုံးအကြိမ်ပြောတာ)၊ the (တိတိကျကျသိတာ)၊ ပြီးတော့ အညွှန်းမလိုတဲ့ (ယေဘုယျ အများ/uncountable) ပုံစံတွေကို သုံးပြီး ဝါကျ ၆ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ပါနော်။ ရေးပြီးရင် ဖုန်းနဲ့ scan ဖတ်တာ၊ ဒါမှမဟုတ် ရိုက်ထည့်လိုက်တာမျိုး လုပ်လို့ရပါတယ်ခင်ဗျ။",
-      "model": "I have {v}a{/v} bike. {v}The{/v} bike is red. I like {v}music{/v}. I drink {v}tea{/v} every day. {v}The{/v} tea in this shop is good. I love {v}animals{/v}.",
-      "explain_mm": "မှတ်ထားရမှာက: ပထမဆုံး/မတိမကျ ပြောရင် → a/an; တိတိကျကျ သိရင် → the; ယေဘုယျ plural/uncountable ဆိုရင် → အညွှန်း မလိုပါဘူး။",
-      "grading": {
-        "grammar_point": "a/an vs the vs no article",
-        "rule": "a/an for a non-specific singular (first mention); the for specific/known; no article for general plurals and uncountables.",
-        "must_check": [
-          "a/an for first, non-specific singular",
-          "the for specific/known",
-          "No article for general plural/uncountable",
-          "6–8 sentences, all three used"
-        ],
-        "common_mm_errors": [
-          "the/a with general plural or uncountable",
-          "a/an on second mention",
-          "Omitting a/an on a singular countable"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I love the animals.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I love animals"
+      ],
+      "explain_mm": "ယေဘုယျ plural → animals (the မလို) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a plan or a place. Write a short paragraph (5–6 sentences) using all three article choices correctly.",
-      "prompt_mm": "အပိုင်း (၂) — ကိုယ်ကြိုက်တဲ့ အစီအစဉ်တစ်ခု ဒါမှမဟုတ် နေရာတစ်ခုအကြောင်း ရေးကြည့်ရအောင်။ Article သုံးမျိုးစလုံးကို နေရာတကျ မှန်မှန်ကန်ကန်သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၅-၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးရင်တော့ ဖုန်းနဲ့ scan ဖတ်ပြီး ပို့ပေးလို့ရပါတယ်။",
-      "model": "I want {v}a{/v} small café. {v}The{/v} café will sell {v}coffee{/v} and {v}cakes{/v}. {v}Coffee{/v} is popular here. {v}The{/v} location is near the school. It is {v}a{/v} simple but good idea.",
-      "explain_mm": "a/an, the, နဲ့ အညွှန်းမလိုတဲ့ ပုံစံတွေကို အခြေအနေပေါ်မူတည်ပြီး မှန်မှန်ကန်ကန် သုံးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "a/an vs the vs no article",
-        "rule": "Use all three article choices correctly across a short text.",
-        "must_check": [
-          "a/an, the, and no-article each correct",
-          "General plural/uncountable take no article",
-          "Specific mentions take the",
-          "5–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Overusing the",
-          "a/an with uncountables",
-          "Missing articles on singular countables"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I bought a shirt. A shirt is blue.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I bought a shirt. The shirt is blue"
+      ],
+      "explain_mm": "ဒုတိယအကြိမ် → The shirt ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ငှက်တစ်ကောင်ကို မြင်ခဲ့တယ်။",
+      "options": [
+        "I",
+        "saw",
+        "a",
+        "bird"
+      ],
+      "answers": [
+        "I saw a bird"
+      ],
+      "explain_mm": "ပထမအကြိမ် → a bird ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အဲဒီငှက်က အပြာရောင်ပါ။",
+      "options": [
+        "The",
+        "bird",
+        "was",
+        "blue"
+      ],
+      "answers": [
+        "The bird was blue"
+      ],
+      "explain_mm": "တိကျ (ဒုတိယအကြိမ်) → The bird ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "တိရစ္ဆာန်တွေကို ချစ်တယ်။",
+      "options": [
+        "I",
+        "love",
+        "animals"
+      ],
+      "answers": [
+        "I love animals"
+      ],
+      "explain_mm": "ယေဘုယျ plural → animals (အညွှန်းမလို) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "လက်ဖက်ရည်က ကျန်းမာရေးအတွက် ကောင်းတယ်။",
+      "options": [
+        "Tea",
+        "is",
+        "good",
+        "for",
+        "you"
+      ],
+      "answers": [
+        "Tea is good for you"
+      ],
+      "explain_mm": "ယေဘုယျ uncountable → Tea (အညွှန်းမလို) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် နေ့တိုင်း ရေ သောက်တယ်။",
+      "options": [
+        "I",
+        "drink",
+        "water",
+        "every",
+        "day"
+      ],
+      "answers": [
+        "I drink water every day"
+      ],
+      "explain_mm": "ယေဘုယျ uncountable → water ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ဆရာတစ်ယောက်ပါ။",
+      "options": [
+        "He",
+        "is",
+        "a",
+        "teacher"
+      ],
+      "answers": [
+        "He is a teacher"
+      ],
+      "explain_mm": "အလုပ်အကိုင် တစ်ခု → a teacher ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}a/an{/v} = one, first/general · {v}the{/v} = specific (you know which) · {v}no article{/v} = general plural / uncountable (I like dogs · I drink coffee).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — a/an = တစ်ခု၊ ပထမအကြိမ်/ယေဘုယျ ၊ the = တိကျ (ဘယ်ဟာလဲ သိတယ်) ၊ အညွှန်းမပါ = ယေဘုယျ plural/uncountable (I like dogs · I drink coffee) ။"
 }

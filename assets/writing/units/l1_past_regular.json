@@ -192,7 +192,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Yesterday she ___ dinner.",
-      "prompt_mm": "မနေ့က သူမ ညစာ ချက်ခဲ့ပါတယ်။",
+      "prompt_mm": "သူမ မနေ့က ညစာ ချက်ခဲ့တယ်။",
       "options": [
         "cook",
         "cooked",
@@ -201,13 +201,13 @@
       "answers": [
         "cooked"
       ],
-      "explain_mm": "အတိတ်ကာလ (yesterday) ကို ပြောတာဖြစ်တဲ့အတွက် → cook + ed = cooked ဖြစ်သွားတာပါနော်။"
+      "explain_mm": "cook → cooked (+ ed) ။  ➝ She cooked dinner."
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "They ___ football last week.",
-      "prompt_mm": "သူတို့ ပြီးခဲ့တဲ့အပတ်က ဘောလုံး ကစားခဲ့ကြတယ်။",
+      "prompt_mm": "သူတို့ မနေ့သီတင်းပတ်က ဘောလုံး ကစားခဲ့ကြတယ်။",
       "options": [
         "play",
         "played",
@@ -216,95 +216,241 @@
       "answers": [
         "played"
       ],
-      "explain_mm": "play → played (အတိတ်ကာလဖြစ်လို့ပါနော်)။"
+      "explain_mm": "play → played ။  ➝ They played football."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He ___ all day yesterday.",
+      "prompt_mm": "သူ မနေ့က တစ်နေ့လုံး စာကျက်ခဲ့တယ်။",
+      "options": [
+        "studied",
+        "studyed",
+        "studed"
+      ],
+      "answers": [
+        "studied"
+      ],
+      "explain_mm": "study → studied (y → ied) ။  ➝ He studied all day."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ a film last night.",
+      "prompt_mm": "ကျွန်တော်တို့ မနေ့ညက ရုပ်ရှင် ကြည့်ခဲ့တယ်။",
+      "options": [
+        "watch",
+        "watched",
+        "watching"
+      ],
+      "answers": [
+        "watched"
+      ],
+      "explain_mm": "watch → watched ။  ➝ We watched a film."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ in Yangon in 2020.",
+      "prompt_mm": "သူမ ၂၀၂၀ မှာ ရန်ကုန်မှာ နေခဲ့တယ်။",
+      "options": [
+        "live",
+        "lived",
+        "lives"
+      ],
+      "answers": [
+        "lived"
+      ],
+      "explain_mm": "live → lived (+ d) ။  ➝ She lived in Yangon."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "He ___ (study) all day yesterday.",
-      "prompt_mm": "သူ မနေ့က တစ်နေ့လုံး စာကျက်ခဲ့ပါတယ်။ (verb ‘study’ ကို သုံးပေးပါနော်)။",
+      "prompt_en": "She ___ fish last night.  ( cook )",
+      "prompt_mm": "သူမ မနေ့ညက ငါး ချက်ခဲ့ပါတယ်။",
+      "answers": [
+        "cooked"
+      ],
+      "explain_mm": "cook → cooked ။  ➝ She cooked fish last night."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ a film.  ( watch )",
+      "prompt_mm": "ကျွန်တော်တို့ ရုပ်ရှင် ကြည့်ခဲ့ကြတယ်။",
+      "answers": [
+        "watched"
+      ],
+      "explain_mm": "watch → watched ။  ➝ We watched a film."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ football.  ( play )",
+      "prompt_mm": "သူတို့ ဘောလုံး ကစားခဲ့ကြတယ်။",
+      "answers": [
+        "played"
+      ],
+      "explain_mm": "play → played ။  ➝ They played football."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ all day.  ( study )",
+      "prompt_mm": "သူ တစ်နေ့လုံး စာကျက်ခဲ့ပါတယ်။",
       "answers": [
         "studied"
       ],
-      "explain_mm": "Verb က consonant + y နဲ့ဆုံးနေတဲ့အတွက် → y ကို i ပြောင်းပြီး -ed ပေါင်းထည့်လိုက်တော့ → studied ဆိုပြီး ဖြစ်သွားတာပါနော်။"
+      "explain_mm": "study → studied (y → ied) ။  ➝ He studied all day."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I ___ in Mandalay.  ( live )",
+      "prompt_mm": "ကျွန်တော် မန္တလေးမှာ နေခဲ့ဖူးတယ်။",
+      "answers": [
+        "lived"
+      ],
+      "explain_mm": "live → lived ။  ➝ I lived in Mandalay."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Yesterday I work late.",
-      "prompt_mm": "မှားနေတဲ့ sentence လေးကို ပြင်ပေးပါဦးနော်။",
+      "prompt_en": "Yesterday she cook dinner.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Yesterday I worked late",
-        "yesterday i worked late."
+        "Yesterday she cooked dinner"
       ],
-      "explain_mm": "ဒါက အတိတ်ကာလအကြောင်း ပြောနေတာဖြစ်လို့ verb မှာ -ed ထည့်ပေးရပါမယ်နော်။ work → worked."
+      "explain_mm": "အတိတ် → cooked (+ ed) ။  ➝ Yesterday she cooked dinner."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  watched  /  we  /  a film",
-      "prompt_mm": "စကားလုံးလေးတွေကို နေရာတကျပြန်စီပြီး ဝါကျအမှန်လေးတစ်ခု ဖြစ်အောင် လုပ်ပေးပါနော်။",
+      "prompt_en": "He studyed all day.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "We watched a film",
-        "we watched a film."
+        "He studied all day"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + verb -ed + ... ပုံစံအတိုင်းပါပဲ။ ဥပမာ → We watched a film."
+      "explain_mm": "study → studied (y → ied) ။  ➝ He studied all day."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — about YESTERDAY. Write 5–8 sentences about what you did yesterday, using regular -ed verbs (worked, cooked, watched, studied …).",
-      "prompt_mm": "အပိုင်း ၁ — မနေ့ကအကြောင်းလေး ပြောပြကြရအောင်။ မနေ့က ကိုယ်ဘာတွေ လုပ်ခဲ့သလဲဆိုတာကို regular -ed verb တွေ (worked, cooked, watched, studied …) သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော်။ ပြီးရင် စာအုပ်ထဲမှာရေးပြီး scan ဖတ်ပြီး တင်ပေးလို့ရသလို၊ ဒီအောက်မှာ တစ်ကြောင်းချင်းစီ ရိုက်ထည့်ပြီး တင်လို့လည်း ရပါတယ်နော်။",
-      "model": "Yesterday I {v}worked{/v} in the morning. I {v}cooked{/v} lunch at home. I {v}cleaned{/v} my room. In the evening I {v}watched{/v} a film. I {v}talked{/v} to my friend on the phone.",
-      "explain_mm": "verb တိုင်းရဲ့နောက်မှာ -ed ထည့်ပေးဖို့ မမေ့နဲ့နော်။ Subject က ဘာပဲဖြစ်ဖြစ် ပုံစံက အတူတူပါပဲ (Present Simple တုန်းကလို -s ထည့်စရာ မလိုတော့ဘူးပေါ့)။",
-      "grading": {
-        "grammar_point": "Past simple: regular verbs (-ed)",
-        "rule": "Finished past actions. Regular verbs add -ed; the form is the same for all subjects.",
-        "must_check": [
-          "Every past verb ends in -ed",
-          "Correct -ed spelling (lived, studied, stopped)",
-          "Stays in the past (a finished time)",
-          "5–8 sentences, at least 3 different verbs"
-        ],
-        "common_mm_errors": [
-          "Forgetting -ed (Yesterday I work)",
-          "Adding -s instead of -ed",
-          "Wrong spelling (studyed, livd)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "They play football last week.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "They played football last week"
+      ],
+      "explain_mm": "အတိတ် → played ။  ➝ They played football last week."
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a past day. Write a short paragraph (4–6 sentences) about one day last week, using regular past verbs.",
-      "prompt_mm": "အပိုင်း ၂ — အတိတ်က နေ့တစ်နေ့အကြောင်း ပြောပြပါဦး။ ပြီးခဲ့တဲ့အပတ်က ကိုယ်အကြိုက်ဆုံး နေ့တစ်နေ့အကြောင်းကို regular past verb တွေသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးရင် စာအုပ်ထဲမှာရေးပြီး scan ဖတ်ပြီး တင်ပေးလို့ရပါတယ်နော်။",
-      "model": "{t}Last week{/t} I {v}visited{/v} my friend. We {v}cooked{/v} a big lunch and {v}talked{/v} for hours. In the afternoon we {v}walked{/v} in the park. She {v}showed{/v} me her photos. I {v}enjoyed{/v} the day.",
-      "explain_mm": "စာပိုဒ်တစ်ခုလုံးကို အတိတ်ကာလ Past tense နဲ့ ရေးပေးပါနော်။ Regular verb တိုင်းရဲ့နောက်မှာ -ed ပါအောင် သတိထားပြီး ထည့်ပေးဖို့ မမေ့နဲ့နော်။",
-      "grading": {
-        "grammar_point": "Past simple: regular verbs (-ed)",
-        "rule": "A short past narrative using regular -ed verbs throughout.",
-        "must_check": [
-          "All regular verbs take -ed",
-          "Whole paragraph stays in the past",
-          "Correct -ed spelling",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Switching to present mid-paragraph",
-          "Missing -ed on some verbs",
-          "Spelling errors (-yed/-d rules)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "We watch a film last night.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "We watched a film last night"
+      ],
+      "explain_mm": "အတိတ် → watched ။  ➝ We watched a film last night."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ မနေ့ညက ငါး ချက်ခဲ့ပါတယ်။",
+      "options": [
+        "She",
+        "cooked",
+        "fish",
+        "last",
+        "night"
+      ],
+      "answers": [
+        "She cooked fish last night"
+      ],
+      "explain_mm": "cook → cooked ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ ရုပ်ရှင် ကြည့်ခဲ့ကြတယ်။",
+      "options": [
+        "We",
+        "watched",
+        "a",
+        "film"
+      ],
+      "answers": [
+        "We watched a film"
+      ],
+      "explain_mm": "watch → watched ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ ဘောလုံး ကစားခဲ့ကြတယ်။",
+      "options": [
+        "They",
+        "played",
+        "football"
+      ],
+      "answers": [
+        "They played football"
+      ],
+      "explain_mm": "play → played ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ တစ်နေ့လုံး စာကျက်ခဲ့ပါတယ်။",
+      "options": [
+        "He",
+        "studied",
+        "all",
+        "day"
+      ],
+      "answers": [
+        "He studied all day"
+      ],
+      "explain_mm": "study → studied ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် မနေ့က အလုပ် လုပ်ခဲ့တယ်။",
+      "options": [
+        "I",
+        "worked",
+        "yesterday"
+      ],
+      "answers": [
+        "I worked yesterday"
+      ],
+      "explain_mm": "work → worked ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ၂၀၂၀ မှာ ရန်ကုန်မှာ နေခဲ့တယ်။",
+      "options": [
+        "She",
+        "lived",
+        "in",
+        "Yangon",
+        "in",
+        "2020"
+      ],
+      "answers": [
+        "She lived in Yangon in 2020"
+      ],
+      "explain_mm": "live → lived ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Regular past = verb + {v}-ed{/v} (same for all subjects).  live → lived · study → studied.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — regular verb ရဲ့ အတိတ် = verb + -ed (subject အားလုံး အတူတူ) ။ live → lived ၊ study → studied ။"
 }

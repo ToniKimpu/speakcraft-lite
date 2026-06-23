@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/glass.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
@@ -30,7 +31,11 @@ class _WritingPathPageState extends State<WritingPathPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Writing')),
+      appBar: AppBar(
+        leading: const Padding(
+            padding: EdgeInsets.only(left: 8), child: GlassBackButton()),
+        title: const Text('Writing'),
+      ),
       body: FutureBuilder<List<WritingUnitSummary>>(
         future: _data,
         builder: (context, snap) {
@@ -65,7 +70,6 @@ const _levelMetas = <_LevelMeta>[
   _LevelMeta(1, 'Foundation', 'A1–A2 · grammar from the ground up'),
   _LevelMeta(2, 'Building', 'B1 · perfect tenses, modals, conditionals'),
   _LevelMeta(3, 'Advanced', 'B2–C1 · conditionals, passive, clauses'),
-  _LevelMeta(4, 'Essay & Academic', 'Paragraphs → essays · IELTS-ready'),
 ];
 
 /// A section of Level 1 — its id (`1.2`), display name and the units under it.
@@ -391,7 +395,8 @@ class _LevelHeader extends StatelessWidget {
             value: total == 0 ? 0 : done / total,
             minHeight: 6,
             backgroundColor: cs.surfaceContainerHighest,
-            valueColor: AlwaysStoppedAnimation<Color>(cs.primary),
+            valueColor: const AlwaysStoppedAnimation<Color>(
+                PmpColors.brandOrange),
           ),
         ),
         const SizedBox(height: 6),
@@ -486,11 +491,8 @@ class _UnitCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(14),
                 onTap: () => Navigator.pushNamed(
                   context,
-                  // Levels 1–3 are fully migrated to the step-by-step pager.
-                  // (Any future level falls back to the single-scroll teach page.)
-                  unit.level <= 3
-                      ? PmpRoutes.writingTeachSteps
-                      : PmpRoutes.writingTeach,
+                  // Every unit uses the step-by-step pager (Levels 1–3).
+                  PmpRoutes.writingTeachSteps,
                   arguments: {'asset': unit.asset},
                 ),
                 child: card,

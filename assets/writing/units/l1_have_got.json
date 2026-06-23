@@ -155,7 +155,7 @@
       "answers": [
         "has"
       ],
-      "explain_mm": "she → has."
+      "explain_mm": "she (he/she/it) → has ။  ➝ She has a new phone."
     },
     {
       "kind": "mcq",
@@ -170,95 +170,246 @@
       "answers": [
         "have"
       ],
-      "explain_mm": "we → have."
+      "explain_mm": "we (I/you/we/they) → have ။  ➝ We have a big garden."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He ___ a car.  ( negative )",
+      "prompt_mm": "သူ ကား မရှိဘူး။",
+      "options": [
+        "doesn't have",
+        "don't have",
+        "doesn't has"
+      ],
+      "answers": [
+        "doesn't have"
+      ],
+      "explain_mm": "he → doesn't have ။  ➝ He doesn't have a car."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ two dogs.",
+      "prompt_mm": "သူတို့ ခွေး နှစ်ကောင် ရှိတယ်။",
+      "options": [
+        "has",
+        "have",
+        "got"
+      ],
+      "answers": [
+        "have"
+      ],
+      "explain_mm": "they → have ။  ➝ They have two dogs."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "My sister ___ long hair.",
+      "prompt_mm": "ကျွန်တော့်အစ်မ ဆံပင်ရှည်တယ်။",
+      "options": [
+        "have",
+        "has",
+        "haves"
+      ],
+      "answers": [
+        "has"
+      ],
+      "explain_mm": "sister (she) → has ။  ➝ My sister has long hair."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "He ___ (have) two brothers.",
-      "prompt_mm": "သူ အစ်ကို နှစ်ယောက် ရှိတယ်။ ( have ကို သုံးပါ )",
+      "prompt_en": "I ___ a bicycle.",
+      "prompt_mm": "ကျွန်တော် စက်ဘီးတစ်စီး ရှိတယ်။",
       "answers": [
-        "has"
+        "have",
+        "have got"
       ],
-      "explain_mm": "he → has."
+      "explain_mm": "I → have ။  ➝ I have a bicycle."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ long hair.",
+      "prompt_mm": "သူမ ဆံပင်ရှည်တယ်။",
+      "answers": [
+        "has",
+        "has got"
+      ],
+      "explain_mm": "she → has ။  ➝ She has long hair."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ three children.",
+      "prompt_mm": "သူတို့ ကလေး သုံးယောက် ရှိတယ်။",
+      "answers": [
+        "have",
+        "have got"
+      ],
+      "explain_mm": "they → have ။  ➝ They have three children."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ a phone.  ( negative )",
+      "prompt_mm": "သူ ဖုန်း မရှိဘူး။",
+      "answers": [
+        "doesn't have"
+      ],
+      "explain_mm": "he → doesn't have ။  ➝ He doesn't have a phone."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ a car.  ( negative )",
+      "prompt_mm": "ကျွန်တော်တို့ ကား မရှိဘူး။",
+      "answers": [
+        "don't have"
+      ],
+      "explain_mm": "we → don't have ။  ➝ We don't have a car."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "My sister have a dog.",
+      "prompt_en": "She have a new bag.",
       "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "My sister has a dog",
-        "my sister has a dog."
+        "She has a new bag"
       ],
-      "explain_mm": "sister (she) → has (have မဟုတ်ဘူး)။"
+      "explain_mm": "she → has ။  ➝ She has a new bag."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  have  /  I  /  a bicycle",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "prompt_en": "He have got a car.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I have a bicycle",
-        "i have a bicycle."
+        "He has got a car"
       ],
-      "explain_mm": "Subject + have/has + ... → I have a bicycle."
+      "explain_mm": "he → has (got) ။  ➝ He has got a car."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — what you have. Write 5–8 sentences about what you and your family have, using have / has.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်မှာ ဘာရှိလဲ။ ကိုယ်နဲ့ မိသားစုမှာ ဘာတွေ ရှိလဲဆိုတာ have / has သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
-      "model": "I {v}have{/v} a bicycle. My family {v}has{/v} a small house. We {v}have{/v} a garden. My brother {v}has{/v} a phone. My parents {v}have{/v} a shop.",
-      "explain_mm": "I/you/we/they → have; he/she/it → has ကို subject နဲ့ ကိုက်အောင် ထားပါ။",
-      "grading": {
-        "grammar_point": "have / has",
-        "rule": "have for I/you/we/they; has for he/she/it. Used for possession and features.",
-        "must_check": [
-          "have vs has correct for subject",
-          "Possession meaning",
-          "Consistent present tense",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "She have / He have (should be has)",
-          "haves (not a word)",
-          "Dropping the verb"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "They has two cats.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "They have two cats"
+      ],
+      "explain_mm": "they → have ။  ➝ They have two cats."
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — describe someone's things. Write a short paragraph (4–6 sentences) about what a friend or family member has, using has / have got.",
-      "prompt_mm": "အပိုင်း ၂ — တစ်ယောက်ယောက်ရဲ့ ပစ္စည်းတွေ။ သူငယ်ချင်း သို့မဟုတ် မိသားစုဝင်တစ်ယောက်မှာ ဘာရှိလဲဆိုတာ has / have got သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
-      "model": "My friend {v}has{/v} a big family. He {v}has got{/v} two sisters. His family {v}has{/v} a farm. They {v}have got{/v} many animals. He {v}doesn't have{/v} a car, but he {v}has{/v} a motorbike.",
-      "explain_mm": "he/she ဆို has; အများဆို have။ has ကို -s မမေ့နဲ့။",
-      "grading": {
-        "grammar_point": "have / has (got)",
-        "rule": "A description of possessions using has/have correctly.",
-        "must_check": [
-          "has with he/she/it, have with others",
-          "Possession meaning",
-          "Consistent forms",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Wrong agreement (He have got)",
-          "Mixing have/has",
-          "doesn't has (should be doesn't have)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I has a bicycle.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I have a bicycle"
+      ],
+      "explain_mm": "I → have ။  ➝ I have a bicycle."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် စက်ဘီးတစ်စီး ရှိတယ်။",
+      "options": [
+        "I",
+        "have",
+        "a",
+        "bicycle"
+      ],
+      "answers": [
+        "I have a bicycle"
+      ],
+      "explain_mm": "I → have ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ဆံပင်ရှည်တယ်။",
+      "options": [
+        "She",
+        "has",
+        "long",
+        "hair"
+      ],
+      "answers": [
+        "She has long hair"
+      ],
+      "explain_mm": "she → has ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ ကလေး သုံးယောက် ရှိတယ်။",
+      "options": [
+        "They",
+        "have",
+        "three",
+        "children"
+      ],
+      "answers": [
+        "They have three children"
+      ],
+      "explain_mm": "they → have ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ဖုန်း မရှိဘူး။",
+      "options": [
+        "He",
+        "doesn't",
+        "have",
+        "a",
+        "phone"
+      ],
+      "answers": [
+        "He doesn't have a phone"
+      ],
+      "explain_mm": "he → doesn't have ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ အိမ်ကြီးကြီး ရှိတယ်။",
+      "options": [
+        "We",
+        "have",
+        "a",
+        "big",
+        "house"
+      ],
+      "answers": [
+        "We have a big house"
+      ],
+      "explain_mm": "we → have ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ကားအသစ်တစ်စီး ရှိတယ်။",
+      "options": [
+        "He",
+        "has",
+        "a",
+        "new",
+        "car"
+      ],
+      "answers": [
+        "He has a new car"
+      ],
+      "explain_mm": "he → has ။"
     }
-  ]
+  ],
+  "practice_recap_en": "I / you / we / they → {v}have{/v}  ·  he / she / it → {v}has{/v}.   Negative: {v}don't / doesn't have{/v}.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — I / you / we / they → have ၊ he / she / it → has ။ အငြင်း — don't have / doesn't have ။"
 }

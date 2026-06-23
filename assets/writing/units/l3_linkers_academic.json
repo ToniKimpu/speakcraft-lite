@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The plan was good. ___, it was too expensive.",
-      "prompt_mm": "အစီအစဉ်က ကောင်းပါတယ်။ ဒါပေမဲ့ ဈေးကကြီးလွန်းတယ်။",
+      "prompt_mm": "အစီအစဉ်က ကောင်းတယ်။ ဒါပေမဲ့ ဈေးကြီးလွန်းတယ်။",
       "options": [
         "However",
         "Moreover",
@@ -169,13 +169,28 @@
       "answers": [
         "However"
       ],
-      "explain_mm": "ဆန့်ကျင်ဘက် အဓိပ္ပာယ်ကို ပြောချင်ရင် → However။"
+      "explain_mm": "ဆန့်ကျင် (but) → However ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The city is crowded. ___, it is expensive.",
+      "prompt_mm": "မြို့က လူရှုပ်တယ်။ ဒါ့အပြင် ဈေးကြီးတယ်။",
+      "options": [
+        "Moreover",
+        "However",
+        "Therefore"
+      ],
+      "answers": [
+        "Moreover"
+      ],
+      "explain_mm": "ထပ်ဖြည့် (also) → Moreover ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "He didn't study. ___, he failed.",
-      "prompt_mm": "သူ စာမကျက်ခဲ့ဘူး။ ဒါကြောင့် ကျသွားတယ်။",
+      "prompt_mm": "သူ စာမကြိုးစားဘူး။ ဒါကြောင့် ကျသွားတယ်။",
       "options": [
         "Therefore",
         "However",
@@ -184,95 +199,228 @@
       "answers": [
         "Therefore"
       ],
-      "explain_mm": "အကျိုးဆက် (result) ကို ဖော်ပြချင်ရင် → Therefore။"
+      "explain_mm": "အကျိုးဆက် (so) → Therefore ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "It was raining. ___, we stayed home.",
+      "prompt_mm": "မိုးရွာတယ်။ ဒါကြောင့် အိမ်မှာ နေခဲ့တယ်။",
+      "options": [
+        "Therefore",
+        "However",
+        "Moreover"
+      ],
+      "answers": [
+        "Therefore"
+      ],
+      "explain_mm": "အကျိုးဆက် → Therefore ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I wanted to go. ___, I was too tired.",
+      "prompt_mm": "သွားချင်တယ်။ ဒါပေမဲ့ အရမ်း ပင်ပန်းနေတယ်။",
+      "options": [
+        "However",
+        "Moreover",
+        "Therefore"
+      ],
+      "answers": [
+        "However"
+      ],
+      "explain_mm": "ဆန့်ကျင် → However ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "The city is crowded. ___, it is very expensive. (adds another point)",
-      "prompt_mm": "မြို့က လူရှုပ်တယ်။ ဒါ့အပြင် ဈေးလည်း ကြီးတယ်။ ( အချက် ထပ်ဖြည့်ခြင်း )",
+      "prompt_en": "The plan was good. ___, it was too expensive.  ( contrast )",
+      "prompt_mm": "အစီအစဉ်က ကောင်းတယ်။ ဒါပေမဲ့ ဈေးကြီးလွန်းတယ်။",
       "answers": [
-        "moreover"
+        "However"
       ],
-      "explain_mm": "အချက်အလက် ထပ်ဖြည့်ချင်ရင် → Moreover။"
+      "explain_mm": "ဆန့်ကျင် → However ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The city is crowded. ___, it is expensive.  ( addition )",
+      "prompt_mm": "မြို့က လူရှုပ်တယ်။ ဒါ့အပြင် ဈေးကြီးတယ်။",
+      "answers": [
+        "Moreover"
+      ],
+      "explain_mm": "ထပ်ဖြည့် → Moreover ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "It was raining. ___, we stayed home.  ( result )",
+      "prompt_mm": "မိုးရွာတယ်။ ဒါကြောင့် အိမ်မှာ နေခဲ့တယ်။",
+      "answers": [
+        "Therefore"
+      ],
+      "explain_mm": "အကျိုးဆက် → Therefore ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I was tired. ___, I kept working.  ( contrast )",
+      "prompt_mm": "ပင်ပန်းတယ်။ ဒါပေမဲ့ ဆက်လုပ်ခဲ့တယ်။",
+      "answers": [
+        "However"
+      ],
+      "explain_mm": "ဆန့်ကျင် → However ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He works hard. ___, he is honest.  ( addition )",
+      "prompt_mm": "သူ ကြိုးစားတယ်။ ဒါ့အပြင် ရိုးသားတယ်။",
+      "answers": [
+        "Moreover"
+      ],
+      "explain_mm": "ထပ်ဖြည့် → Moreover ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "It was cheap, however the quality was poor.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြန်ပြင်ပေးပါ။ (however ရဲ့ punctuation ကို သတိထားပါ)",
+      "prompt_en": "The plan was good. Moreover, it was too expensive.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "It was cheap. However, the quality was poor",
-        "it was cheap. however, the quality was poor.",
-        "It was cheap; however, the quality was poor"
+        "The plan was good. However, it was too expensive"
       ],
-      "explain_mm": "comma တစ်ခုတည်းနဲ့ မချိတ်ရပါဘူးနော်။ full stop (.) ဒါမှမဟုတ် semicolon (;) သုံးပြီးမှ ‘However,’ လို့ ရေးရပါမယ်။"
+      "explain_mm": "ဆန့်ကျင်အဓိပ္ပာယ် → However (Moreover မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Order:  Therefore  /  it was raining  /  we stayed home  /  .  /  ,",
-      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်အောင် စီပေးပါ — ( It was raining . Therefore , we stayed home )",
+      "prompt_en": "He didn't study. However, he failed.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "It was raining. Therefore, we stayed home",
-        "it was raining. therefore, we stayed home.",
-        "It was raining. Therefore, we stayed home."
+        "He didn't study. Therefore, he failed"
       ],
-      "explain_mm": "ဖွဲ့စည်းပုံကတော့ ဒီလိုပါ — Sentence 1. Therefore, Sentence 2."
+      "explain_mm": "အကျိုးဆက် → Therefore ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — link ideas formally. Write 5–8 pairs of sentences linked with however, moreover, or therefore. Start a new sentence with the linker and put a comma after it. Use each linker at least once.",
-      "prompt_mm": "အပိုင်း ၁ — အကြံဉာဏ်တွေကို formal linking words တွေနဲ့ ချိတ်ဆက်ကြည့်ရအောင်။ however, moreover, therefore တို့ကိုသုံးပြီး sentence အတွဲ ၅ ခုကနေ ၈ ခုလောက်အထိ ရေးပေးပါ။ linker နဲ့ sentence အသစ်ကို စပြီး နောက်ကနေ comma လေး ထည့်ဖို့ မမေ့နဲ့နော်။ linker တစ်ခုစီကို အနည်းဆုံး တစ်ခါတော့ သုံးပေးပါ။ ပြီးသွားရင် scan ဖတ်ပြီး ပို့ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "The job pays well. However, the hours are very long. Public transport is cheap. Moreover, it reduces traffic. I missed the bus. Therefore, I was late for work. The phone is fast. However, the battery is weak. Exercise improves health. Moreover, it lifts the mood.",
-      "explain_mm": "however (ဆန့်ကျင်ဘက်) · moreover (အချက်ထပ်ဖြည့်) · therefore (အကျိုးဆက်)။ linker နဲ့ sentence အသစ်ကို စပြီး နောက်ကနေ comma လေး ထည့်ပေးပါ။",
-      "grading": {
-        "grammar_point": "Linkers: however / moreover / therefore",
-        "rule": "Connect two sentences with however (contrast), moreover (addition), therefore (result); start a new sentence (or use a semicolon) and follow the linker with a comma.",
-        "must_check": [
-          "Correct linker for the meaning (contrast/addition/result)",
-          "New sentence (or semicolon) before the linker — not a lone comma",
-          "Comma after the linker",
-          "5–8 pairs, each linker used at least once"
-        ],
-        "common_mm_errors": [
-          "Comma splice (…, however …)",
-          "Wrong linker for the relationship",
-          "No comma after the linker"
-        ],
-        "ignore": [
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "The city is crowded. Therefore, it is expensive.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "The city is crowded. Moreover, it is expensive"
+      ],
+      "explain_mm": "ထပ်ဖြည့် → Moreover ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a short opinion. Write a short paragraph (4–6 sentences) giving your opinion on a topic (city vs village life, online vs classroom study), using however, moreover, and therefore to organise your ideas.",
-      "prompt_mm": "အပိုင်း ၂ — ကိုယ့်ရဲ့ထင်မြင်ချက်ကို ရေးကြည့်ရအောင်။ ပေးထားတဲ့ ခေါင်းစဉ်တစ်ခု (ဥပမာ - မြို့ဘဝနဲ့ ရွာဘဝ၊ အွန်လိုင်းသင်ယူခြင်းနဲ့ အတန်းထဲမှာသင်ယူခြင်း) အပေါ်မှာ ကိုယ့်ရဲ့အမြင်ကို however, moreover, therefore တို့သုံးပြီး စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး ပို့ပေးပါနော်။",
-      "model": "City life has many advantages. There are more jobs and better hospitals. Moreover, there is more to do at night. However, cities are crowded and noisy. The cost of living is also very high. Therefore, I believe a small town offers the best balance.",
-      "explain_mm": "however / moreover / therefore တို့ကိုသုံးပြီး ကိုယ့်ရဲ့အကြံဉာဏ်တွေကို စနစ်တကျ ချိတ်ဆက်ပြီး ရေးကြည့်ပါ။ linker နဲ့ sentence အသစ်ကို စပြီး နောက်ကနေ comma လေး ထည့်ဖို့ မမေ့ပါနဲ့။",
-      "grading": {
-        "grammar_point": "Linkers: however / moreover / therefore",
-        "rule": "Organise an opinion paragraph using contrast, addition, and result linkers with correct punctuation.",
-        "must_check": [
-          "At least two different linkers used correctly",
-          "Correct sentence/semicolon + comma punctuation",
-          "Logical flow of ideas",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Comma splices with however",
-          "Overusing one linker",
-          "Linker meaning mismatch"
-        ],
-        "ignore": [
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "It was raining. Moreover, we stayed home.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "It was raining. Therefore, we stayed home"
+      ],
+      "explain_mm": "အကျိုးဆက် → Therefore ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါပေမဲ့ အရမ်း ပင်ပန်းနေတယ်။",
+      "options": [
+        "However,",
+        "I",
+        "was",
+        "too",
+        "tired"
+      ],
+      "answers": [
+        "However, I was too tired"
+      ],
+      "explain_mm": "ဆန့်ကျင် → However ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါ့အပြင် ဈေးလည်း ကြီးတယ်။",
+      "options": [
+        "Moreover,",
+        "it",
+        "is",
+        "expensive"
+      ],
+      "answers": [
+        "Moreover, it is expensive"
+      ],
+      "explain_mm": "ထပ်ဖြည့် → Moreover ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါကြောင့် အိမ်မှာ နေခဲ့တယ်။",
+      "options": [
+        "Therefore,",
+        "we",
+        "stayed",
+        "home"
+      ],
+      "answers": [
+        "Therefore, we stayed home"
+      ],
+      "explain_mm": "အကျိုးဆက် → Therefore ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါပေမဲ့ စာမေးပွဲ အောင်ခဲ့တယ်။",
+      "options": [
+        "However,",
+        "I",
+        "passed",
+        "the",
+        "test"
+      ],
+      "answers": [
+        "However, I passed the test"
+      ],
+      "explain_mm": "ဆန့်ကျင် → However ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါ့အပြင် သူ ရိုးသားတယ်။",
+      "options": [
+        "Moreover,",
+        "he",
+        "is",
+        "honest"
+      ],
+      "answers": [
+        "Moreover, he is honest"
+      ],
+      "explain_mm": "ထပ်ဖြည့် → Moreover ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါကြောင့် ကျောင်း ပိတ်ခဲ့တယ်။",
+      "options": [
+        "Therefore,",
+        "the",
+        "school",
+        "was",
+        "closed"
+      ],
+      "answers": [
+        "Therefore, the school was closed"
+      ],
+      "explain_mm": "အကျိုးဆက် → Therefore ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}However{/v} = but (contrast) · {v}Moreover{/v} = also (addition) · {v}Therefore{/v} = so (result).  New sentence, then a comma.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — However = but (ဆန့်ကျင်) ၊ Moreover = also (ထပ်ဖြည့်) ၊ Therefore = so (အကျိုးဆက်) ။ ဝါကျအသစ် + comma ။"
 }

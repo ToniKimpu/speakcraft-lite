@@ -140,7 +140,7 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "I think it ___ tomorrow. (rain)",
+      "prompt_en": "I think it ___ tomorrow.",
       "prompt_mm": "မနက်ဖြန် မိုးရွာမယ်လို့ ထင်တယ်။",
       "options": [
         "will rain",
@@ -150,13 +150,13 @@
       "answers": [
         "will rain"
       ],
-      "explain_mm": "ဒီဝါကျမှာ ‘will’ + ‘verb (base)’ ပုံစံကို သုံးထားတာဖြစ်လို့ ‘will rain’ ဖြစ်ပါတယ်၊ Verb မှာ -s ထည့်စရာမလိုပါဘူး။"
+      "explain_mm": "will နောက်မှာ base → will rain (will rains မဟုတ်) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "She ___ to the party. (not come)",
-      "prompt_mm": "သူမ ပါတီကို လာဖြစ်မှာ မဟုတ်ဘူး။",
+      "prompt_en": "She ___ to the party.",
+      "prompt_mm": "သူမ ပါတီကို လာမှာ မဟုတ်ဘူး။",
       "options": [
         "won't come",
         "will comes",
@@ -165,96 +165,248 @@
       "answers": [
         "won't come"
       ],
-      "explain_mm": "အငြင်းဝါကျ Negative ဖြစ်တဲ့အတွက် ‘won't’ (will not) + ‘verb (base)’ ပုံစံကို သုံးရပြီး ‘won't come’ လို့ ဖြစ်သွားပါတယ်။"
+      "explain_mm": "အငြင်း → won't + base (come) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "It ___ sunny tomorrow.",
+      "prompt_mm": "မနက်ဖြန် နေသာမယ်။",
+      "options": [
+        "will be",
+        "will is",
+        "is"
+      ],
+      "answers": [
+        "will be"
+      ],
+      "explain_mm": "will နောက်မှာ base (be) → will be ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ you help me?",
+      "prompt_mm": "ကူညီပေးမလား။",
+      "options": [
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answers": [
+        "Will"
+      ],
+      "explain_mm": "အနာဂတ်အမေး → Will you help me? ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Don't worry, I ___ you tonight.",
+      "prompt_mm": "စိတ်မပူနဲ့၊ ဒီည မင်းကို ဖုန်းခေါ်မယ်။",
+      "options": [
+        "will call",
+        "will calls",
+        "call"
+      ],
+      "answers": [
+        "will call"
+      ],
+      "explain_mm": "will + base → will call ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Don't worry, I ___ (help) you.",
-      "prompt_mm": "စိတ်မပူပါနဲ့၊ ကျွန်တော် ကူညီပေးပါ့မယ်။ ( ‘help’ ကို သုံးပေးပါနော် )",
+      "prompt_en": "I ___ you tomorrow.  ( call )",
+      "prompt_mm": "မနက်ဖြန် မင်းကို ဖုန်းခေါ်မယ်။",
+      "answers": [
+        "will call",
+        "'ll call"
+      ],
+      "explain_mm": "will + base → will call ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ late.  ( negative, be )",
+      "prompt_mm": "သူတို့ နောက်ကျမှာ မဟုတ်ဘူး။",
+      "answers": [
+        "won't be",
+        "will not be"
+      ],
+      "explain_mm": "အငြင်း → won't be ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Maybe she ___ tomorrow.  ( come )",
+      "prompt_mm": "မနက်ဖြန် သူမ လာကောင်းလာမယ်။",
+      "answers": [
+        "will come"
+      ],
+      "explain_mm": "ခန့်မှန်း → will come ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I'm tired. I ___ to bed.  ( go )",
+      "prompt_mm": "ပင်ပန်းတယ်၊ အိပ်ရာဝင်တော့မယ်။",
+      "answers": [
+        "will go",
+        "'ll go"
+      ],
+      "explain_mm": "အခုဆုံးဖြတ် → will go ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I promise I ___ you.  ( help )",
+      "prompt_mm": "မင်းကို ကူညီမယ်လို့ ကတိပေးတယ်။",
       "answers": [
         "will help",
         "'ll help"
       ],
-      "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ်လိုက်တဲ့ ကိစ္စ (instant decision) ဖြစ်တဲ့အတွက် ‘will’ + ‘help’ ကို သုံးရမှာပါ။"
+      "explain_mm": "ကတိ → will help ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "She will goes home.",
-      "prompt_mm": "မှားနေတဲ့ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "It will rains tomorrow.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She will go home",
-        "she will go home."
+        "It will rain tomorrow"
       ],
-      "explain_mm": "‘will’ ရဲ့နောက်က Verb က Base form ဖြစ်ရမှာမို့လို့ ‘go’ ကို သုံးရပါမယ် (‘goes’ မဟုတ်ပါဘူး)။"
+      "explain_mm": "will နောက်မှာ base (rain) — rains မဟုတ် ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  will  /  rain  /  it  /  tomorrow",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "She will comes home.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "It will rain tomorrow",
-        "it will rain tomorrow."
+        "She will come home"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + will + verb (base) + ... ပုံစံဖြစ်ပါတယ် → ဥပမာ ‘It will rain tomorrow.’"
+      "explain_mm": "will + base (come) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — predictions. Write 5–8 sentences predicting the future (your life, technology, your country), using will and won't.",
-      "prompt_mm": "အပိုင်း ၁ — ခန့်မှန်းချက်များ။ အနာဂတ်အကြောင်းကို (ဥပမာ - ကိုယ့်ရဲ့ဘဝ၊ နည်းပညာ၊ ကိုယ့်နိုင်ငံ) ‘will’ နဲ့ ‘won't’ ကိုသုံးပြီး ခန့်မှန်းချက် ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော်။ ရေးပြီးရင် ဖုန်းနဲ့ scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "I think I {v}will live{/v} in a big city. I {v}will have{/v} an interesting job. People {v}won't drive{/v} petrol cars. We {v}will use{/v} clean energy. Life {v}will be{/v} faster.",
-      "explain_mm": "‘will’ / ‘won't’ + ‘verb (base)’ ပုံစံကို မှန်မှန်ကန်ကန် သုံးဖို့ မမေ့နဲ့နော် — Subject က ဘာပဲဖြစ်ဖြစ် ပုံစံတူတူပါပဲ၊ Verb မှာ -s လည်း ထည့်စရာမလိုပါဘူး။",
-      "grading": {
-        "grammar_point": "will (future)",
-        "rule": "will/won't + base verb for predictions. Same form for all subjects; the base verb takes no -s and no 'to'.",
-        "must_check": [
-          "will / won't + base verb (no -s, no 'to')",
-          "Future meaning (predictions)",
-          "Same form for every subject",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Adding -s after will (She will goes)",
-          "will + to + verb (I will to go)",
-          "Using present simple for a prediction"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "They will to be late.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "They will be late"
+      ],
+      "explain_mm": "will နောက်မှာ base — ‘to’ မလို ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — offers & promises. Write a short paragraph (4–6 sentences) offering to help someone and making promises, using I'll / we'll.",
-      "prompt_mm": "အပိုင်း ၂ — ကမ်းလှမ်းချက် & ကတိ။ တစ်စုံတစ်ယောက်ကို ကူညီဖို့ ကမ်းလှမ်းတာ ဒါမှမဟုတ် ကတိပေးတာနဲ့ ပတ်သက်ပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ကို ‘I'll’ / ‘we'll’ သုံးပြီး ရေးပေးပါနော်။ ပြီးရင် ဖုန်းနဲ့ scan ဖတ်ပြီး တင်ပေးပါ။",
-      "model": "Don't worry about the party. I {v}'ll bring{/v} the food and we {v}'ll clean{/v} the house. I {v}'ll call{/v} the guests tonight. We {v}won't forget{/v} the music. It {v}'ll be{/v} a great evening, I promise.",
-      "explain_mm": "တစ်စုံတစ်ခုကို ကမ်းလှမ်းတာ ဒါမှမဟုတ် ကတိပေးတာတွေအတွက် ‘I'll’ / ‘we'll’ + ‘verb (base)’ ပုံစံကို သုံးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "will (offers & promises)",
-        "rule": "will for offers and promises decided now. Base verb after will.",
-        "must_check": [
-          "will / 'll + base verb",
-          "Offers or promises (not fixed plans)",
-          "Base verb form (no -s, no 'to')",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Using going to for an instant offer",
-          "Adding -s or 'to' after will",
-          "Dropping will"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I no will help you.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I won't help you"
+      ],
+      "explain_mm": "အငြင်း → won't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မနက်ဖြန် နေသာမှာပါ။",
+      "options": [
+        "It",
+        "will",
+        "be",
+        "sunny",
+        "tomorrow"
+      ],
+      "answers": [
+        "It will be sunny tomorrow"
+      ],
+      "explain_mm": "will + base (be) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီည မင်းကို ဖုန်းခေါ်မယ်။",
+      "options": [
+        "I",
+        "will",
+        "call",
+        "you",
+        "tonight"
+      ],
+      "answers": [
+        "I will call you tonight"
+      ],
+      "explain_mm": "will + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ နောက်ကျမှာ မဟုတ်ပါဘူး။",
+      "options": [
+        "They",
+        "won't",
+        "be",
+        "late"
+      ],
+      "answers": [
+        "They won't be late"
+      ],
+      "explain_mm": "အငြင်း → won't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့နဲ့ အတူ လိုက်မလား။",
+      "options": [
+        "Will",
+        "you",
+        "come",
+        "with",
+        "us"
+      ],
+      "answers": [
+        "Will you come with us"
+      ],
+      "explain_mm": "အမေး → Will + subject + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မိုးရွာမယ်လို့ ထင်တယ်။",
+      "options": [
+        "I",
+        "think",
+        "it",
+        "will",
+        "rain"
+      ],
+      "answers": [
+        "I think it will rain"
+      ],
+      "explain_mm": "ခန့်မှန်း → will rain ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် မင်းကို ကူညီမယ်။",
+      "options": [
+        "I",
+        "will",
+        "help",
+        "you"
+      ],
+      "answers": [
+        "I will help you"
+      ],
+      "explain_mm": "ကတိ → will help ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}will{/v} + base verb (all subjects) — predictions, instant decisions, offers, promises.  Negative: {v}won't{/v}.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — will + base verb (subject အားလုံး) ။ ခန့်မှန်းချက်၊ အခုချက်ချင်း ဆုံးဖြတ်ချက်၊ ကမ်းလှမ်း၊ ကတိအတွက် သုံးပါ ။ အငြင်း — won't ။"
 }

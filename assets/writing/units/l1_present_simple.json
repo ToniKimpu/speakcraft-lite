@@ -182,8 +182,23 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "She ___ tea {t}every morning{/t}.",
-      "prompt_mm": "မနက်တိုင်း လက်ဖက်ရည်သောက်တယ်။",
+      "prompt_en": "They ___ in Yangon.",
+      "prompt_mm": "သူတို့ ရန်ကုန်မှာ အလုပ်လုပ်တယ်။",
+      "options": [
+        "work",
+        "works",
+        "working"
+      ],
+      "answers": [
+        "work"
+      ],
+      "explain_mm": "I / you / we / they → work ။  ➝ They work in Yangon."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ tea every morning.",
+      "prompt_mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။",
       "options": [
         "drink",
         "drinks",
@@ -192,112 +207,245 @@
       "answers": [
         "drinks"
       ],
-      "explain_mm": "she နဲ့ဆို verb နောက်မှာ -s ထည့်ရတယ် → drinks."
+      "explain_mm": "she (he/she/it) → drinks (+ s) ။  ➝ She drinks tea."
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "My friends ___ in Yangon.",
-      "prompt_mm": "ကျွန်တော့်သူငယ်ချင်းတွေ ရန်ကုန်မှာ နေတယ်။",
+      "prompt_en": "He ___ TV at night.",
+      "prompt_mm": "သူ ည TV ကြည့်တယ်။",
       "options": [
-        "live",
-        "lives",
-        "living"
+        "watch",
+        "watchs",
+        "watches"
       ],
       "answers": [
-        "live"
+        "watches"
       ],
-      "explain_mm": "they (friends) နဲ့ဆို -s မထည့်ဘူး → live."
+      "explain_mm": "-ch ဆုံးရင် → watches (+ es) ။  ➝ He watches TV."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ English.",
+      "prompt_mm": "ကျွန်တော်တို့ အင်္ဂလိပ်စာ လေ့လာတယ်။",
+      "options": [
+        "study",
+        "studies",
+        "studys"
+      ],
+      "answers": [
+        "study"
+      ],
+      "explain_mm": "we → study (base, no -s) ။  ➝ We study English."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The sun ___ in the east.",
+      "prompt_mm": "နေဟာ အရှေ့ဘက်ကနေ ထွက်တယ်။",
+      "options": [
+        "rise",
+        "rises",
+        "rising"
+      ],
+      "answers": [
+        "rises"
+      ],
+      "explain_mm": "the sun (it) → rises (+ s) ။  ➝ The sun rises."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "They ___ (not / live) here.",
-      "prompt_mm": "သူတို့ ဒီမှာ မနေဘူး။ ( live ကို သုံးပါ )",
+      "prompt_en": "I ___ to work every day.  ( go )",
+      "prompt_mm": "ကျွန်တော် နေ့တိုင်း အလုပ်ကို သွားတယ်။",
       "answers": [
-        "don't live",
-        "do not live",
-        "dont live"
+        "go"
       ],
-      "explain_mm": "they နဲ့ negative ဆို don't + verb → don't live."
+      "explain_mm": "I → go ။  ➝ I go to work every day."
     },
     {
-      "kind": "reorder",
+      "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Put in order:  always  /  drinks  /  she  /  tea",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။ ( frequency word က verb ရှေ့မှာ )",
+      "prompt_en": "She ___ in a hospital.  ( work )",
+      "prompt_mm": "သူမ ဆေးရုံမှာ အလုပ်လုပ်တယ်။",
       "answers": [
-        "She always drinks tea",
-        "she always drinks tea."
+        "works"
       ],
-      "explain_mm": "always လို frequency word က verb (drinks) ရှေ့မှာ နေတယ်။ မြန်မာလို ‘အမြဲ’ ကို နောက်မှာထားလို့ ✗ She drinks always tea လို့ မှားတတ်တယ်။"
+      "explain_mm": "she → works (+ s) ။  ➝ She works in a hospital."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ English.  ( speak )",
+      "prompt_mm": "သူ အင်္ဂလိပ်စကား ပြောတတ်တယ်။",
+      "answers": [
+        "speaks"
+      ],
+      "explain_mm": "he → speaks (+ s) ။  ➝ He speaks English."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ rice every day.  ( eat )",
+      "prompt_mm": "သူတို့ နေ့တိုင်း ထမင်း စားတယ်။",
+      "answers": [
+        "eat"
+      ],
+      "explain_mm": "they → eat (base) ။  ➝ They eat rice."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "My mother ___ dinner.  ( cook )",
+      "prompt_mm": "ကျွန်တော့်အမေ ညစာ ချက်တယ်။",
+      "answers": [
+        "cooks"
+      ],
+      "explain_mm": "mother (she) → cooks (+ s) ။  ➝ My mother cooks dinner."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "She go to school {t}every day{/t}.",
+      "prompt_en": "She work in Yangon.",
       "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She goes to school every day",
-        "she goes to school every day."
+        "She works in Yangon"
       ],
-      "explain_mm": "she နဲ့ဆို go → goes."
+      "explain_mm": "she → works (+ s) ။  ➝ She works in Yangon."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 10,
-      "prompt_en": "Part 1 — about YOURSELF. Write 5–10 sentences about your daily routine using \"I\" (and \"we\"). With \"I\" the verb stays in its base form — {v}no -s{/v}. Try at least 3 verbs and 2 time words from your toolkit.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အကြောင်း။ ကိုယ့်ရဲ့ နေ့စဉ်လုပ်ရိုးလုပ်စဉ်ကို \"I\" (ကျွန်တော်/ကျွန်မ) သုံးပြီး sentence ၅–၁၀ ကြောင်း ရေးပါ။ \"I\" နဲ့ဆို verb ကို မပြောင်းဘဲ base form အတိုင်းပဲ သုံးပါ — -s မထည့်ပါနဲ့ (ဒါက လွယ်တဲ့အပိုင်းပါ)။ Toolkit ထဲက verb အနည်းဆုံး ၃ လုံးနဲ့ time word ၂ လုံး သုံးကြည့်ပါ။ ပြီးရင် စာအုပ်ထဲ လက်နဲ့ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
-      "model": "I {v}wake up{/v} at six o'clock {t}every day{/t}. I {t}usually{/t} {v}drink{/v} coffee {t}in the morning{/t}. I {v}go{/v} to work by bus. I {t}sometimes{/t} {v}read{/v} a book at night. I {t}always{/t} {v}call{/v} my mother on Sundays.",
-      "explain_mm": "‘I’ နဲ့ဆို verb ပုံမှန်ပဲ — -s မထည့်ဘူး။ frequency word (always, usually …) ကို verb ရှေ့မှာ ထားပါ။ နေ့စဉ်အမှန်တရားဖြစ်လို့ present simple သုံးပါ။",
-      "grading": {
-        "grammar_point": "Present simple",
-        "rule": "Habits, routines and facts. he/she/it takes -s; I/you/we/they take the base form. Frequency adverbs go before the main verb; time phrases go at the end.",
-        "must_check": [
-          "Correct subject-verb agreement (-s only on he/she/it)",
-          "No past or continuous forms (writer must stay in present simple)",
-          "Frequency adverb placed before the verb, not after",
-          "At least 3 different verbs and 2 time/frequency words used"
-        ],
-        "common_mm_errors": [
-          "Dropping the -s on he/she/it (Burmese verbs do not conjugate)",
-          "Placing the frequency adverb after the verb (She drinks always tea)",
-          "Using 'be' + base verb together (She is work)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He watch TV every night.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He watches TV every night"
+      ],
+      "explain_mm": "-ch ဆုံးရင် → watches ။  ➝ He watches TV every night."
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — about SOMEONE ELSE. Now write one short paragraph (4–6 sentences) about a family member (he / she). This is the tricky part: every verb needs {v}-s{/v} — He {v}gets up{/v}, She {v}watches{/v}. Use the present simple only.",
-      "prompt_mm": "အပိုင်း ၂ — တခြားသူတစ်ယောက်အကြောင်း။ အခု မိသားစုဝင်တစ်ယောက် (he / she) ရဲ့ နေ့စဉ်လုပ်ရိုးလုပ်စဉ်ကို စာပိုဒ်တို တစ်ပိုဒ် (sentence ၄–၆ ကြောင်း) ရေးပါ။ ဒါက ခက်တဲ့အပိုင်းပါ — verb တိုင်းမှာ -s လိုတယ်! (He gets up, She watches, He goes)။ present simple ပဲ သုံးပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ။",
-      "model": "My father is a farmer. He {v}gets up{/v} early {t}every morning{/t}. He {v}works{/v} in the field all day. He {t}usually{/t} {v}comes{/v} home in the evening. He {t}often{/t} {v}watches{/v} the news after dinner. He {v}sleeps{/v} at nine o'clock.",
-      "explain_mm": "he / she နဲ့ဆို verb တိုင်းမှာ -s လိုတယ် (gets, works, comes, watches, sleeps)။ စာပိုဒ်တစ်ခုလုံး present simple နဲ့ စီပါ။",
-      "grading": {
-        "grammar_point": "Present simple",
-        "rule": "One short paragraph about a third-person subject (he/she). Every present-simple verb must take -s.",
-        "must_check": [
-          "Every verb carries -s for the he/she subject",
-          "Whole paragraph stays in present simple (no past/continuous)",
-          "Spelling of -es / -ies forms (watches, studies)",
-          "Frequency adverbs before the verb; time phrases at the end"
-        ],
-        "common_mm_errors": [
-          "Inconsistent -s (some verbs get it, some do not)",
-          "Switching tense mid-paragraph",
-          "Wrong -es/-ies spelling (watchs, studys)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "They works hard.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "They work hard"
+      ],
+      "explain_mm": "they → work (base, no -s) ။  ➝ They work hard."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "The sun rise in the east.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "The sun rises in the east"
+      ],
+      "explain_mm": "the sun (it) → rises ။  ➝ The sun rises in the east."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နေဟာ အရှေ့ဘက်ကနေ ထွက်တယ်။",
+      "options": [
+        "The",
+        "sun",
+        "rises",
+        "in",
+        "the",
+        "east"
+      ],
+      "answers": [
+        "The sun rises in the east"
+      ],
+      "explain_mm": "it → rises (+ s) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။",
+      "options": [
+        "She",
+        "drinks",
+        "tea",
+        "every",
+        "morning"
+      ],
+      "answers": [
+        "She drinks tea every morning"
+      ],
+      "explain_mm": "she → drinks (+ s) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ ရန်ကုန်မှာ အလုပ်လုပ်တယ်။",
+      "options": [
+        "They",
+        "work",
+        "in",
+        "Yangon"
+      ],
+      "answers": [
+        "They work in Yangon"
+      ],
+      "explain_mm": "they → work (base) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် နေ့တိုင်း အလုပ်ကို သွားတယ်။",
+      "options": [
+        "I",
+        "go",
+        "to",
+        "work",
+        "every",
+        "day"
+      ],
+      "answers": [
+        "I go to work every day"
+      ],
+      "explain_mm": "I → go ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ည TV ကြည့်တယ်။",
+      "options": [
+        "He",
+        "watches",
+        "TV",
+        "at",
+        "night"
+      ],
+      "answers": [
+        "He watches TV at night"
+      ],
+      "explain_mm": "he → watches ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ အင်္ဂလိပ်စာ လေ့လာတယ်။",
+      "options": [
+        "We",
+        "study",
+        "English"
+      ],
+      "answers": [
+        "We study English"
+      ],
+      "explain_mm": "we → study ။"
     }
-  ]
+  ],
+  "practice_recap_en": "I / you / we / they → {v}work{/v}  ·  he / she / it → {v}works{/v} (+ s).  Daily habits, routines & facts.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — I / you / we / they → work ၊ he / she / it → works (+ s) ။ နေ့စဉ် အလေ့အထ၊ ပုံမှန်လုပ်ရိုးနဲ့ အမှန်တရားတွေအတွက် သုံးပါ။"
 }

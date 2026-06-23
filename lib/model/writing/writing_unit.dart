@@ -23,6 +23,8 @@ class WritingUnit {
     required this.teach,
     required this.toolkit,
     required this.exercises,
+    this.practiceRecapEn = '',
+    this.practiceRecapMm = '',
   });
 
   final String id;
@@ -42,6 +44,13 @@ class WritingUnit {
   final Toolkit toolkit;
   final List<WritingExercise> exercises;
 
+  /// An optional one-line rule recap shown as a card above the **first**
+  /// exercise — a confidence nudge that restates the pattern right before the
+  /// learner starts practising (mirrors the teach page's quick-check tone).
+  /// Empty when a unit needs none. The English line may carry `{v}`/`{t}` markup.
+  final String practiceRecapEn;
+  final String practiceRecapMm;
+
   factory WritingUnit.fromJson(Map<String, dynamic> json) => WritingUnit(
         id: json['id'] as String,
         level: (json['level'] as num?)?.toInt() ?? 1,
@@ -58,6 +67,8 @@ class WritingUnit {
             .map((e) =>
                 WritingExercise.fromJson((e as Map).cast<String, dynamic>()))
             .toList(growable: false),
+        practiceRecapEn: json['practice_recap_en'] as String? ?? '',
+        practiceRecapMm: json['practice_recap_mm'] as String? ?? '',
       );
 }
 

@@ -127,8 +127,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "I have ___ money. (positive)",
-      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံနည်းနည်းတော့ ရှိပါတယ်။",
+      "prompt_en": "I have ___ money.",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ နည်းနည်း ရှိတယ်။",
       "options": [
         "any",
         "some",
@@ -137,13 +137,13 @@
       "answers": [
         "some"
       ],
-      "explain_mm": "ဒီဝါကျက အတည်ဝါကျ (positive sentence) ဖြစ်တဲ့အတွက် 'some' ကို သုံးထားတာပါနော်။"
+      "explain_mm": "ဒီဝါကျက အတည်ဝါကျ ဖြစ်လို့ → some money ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She doesn't have ___ friends here.",
-      "prompt_mm": "သူမက ဒီမှာ သူငယ်ချင်းတစ်ယောက်မှ မရှိပါဘူး။",
+      "prompt_mm": "သူမ ဒီမှာ သူငယ်ချင်း မရှိဘူး။",
       "options": [
         "some",
         "any",
@@ -152,95 +152,242 @@
       "answers": [
         "any"
       ],
-      "explain_mm": "ဒီဝါကျက အငြင်းဝါကျ (negative) ဖြစ်တဲ့အတွက် 'any' ကို သုံးပေးရတာပါ။"
+      "explain_mm": "ဒီဝါကျက အငြင်းဝါကျ ဖြစ်လို့ → any friends ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Do you have ___ water?",
+      "prompt_mm": "မင်းမှာ ရေ ရှိလား။",
+      "options": [
+        "some",
+        "any",
+        "a"
+      ],
+      "answers": [
+        "any"
+      ],
+      "explain_mm": "ဒီဝါကျက အမေးဝါကျ ဖြစ်လို့ → any water ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "There is ___ milk in the fridge.",
+      "prompt_mm": "ရေခဲသေတ္တာထဲမှာ နွားနို့ နည်းနည်း ရှိတယ်။",
+      "options": [
+        "any",
+        "some",
+        "a"
+      ],
+      "answers": [
+        "some"
+      ],
+      "explain_mm": "အတည်ဝါကျ ဖြစ်လို့ → some milk ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Would you like ___ tea?",
+      "prompt_mm": "လက်ဖက်ရည် သောက်ချင်လား။",
+      "options": [
+        "any",
+        "some",
+        "a"
+      ],
+      "answers": [
+        "some"
+      ],
+      "explain_mm": "ကမ်းလှမ်းတဲ့အခါ (offer) → some tea ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Do you have ___ water? (question)",
-      "prompt_mm": "ရေများ ရှိသေးလား။",
+      "prompt_en": "I bought ___ apples.  ( positive )",
+      "prompt_mm": "ပန်းသီးတစ်ချို့ ဝယ်ခဲ့တယ်။",
+      "answers": [
+        "some"
+      ],
+      "explain_mm": "အတည်ဝါကျ → some ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "There isn't ___ sugar.  ( negative )",
+      "prompt_mm": "သကြားတော့ မရှိဘူး။",
       "answers": [
         "any"
       ],
-      "explain_mm": "ဒါက အမေးဝါကျ (question) ဖြစ်တဲ့အတွက် 'any' ကို သုံးထားတာပါနော်။"
+      "explain_mm": "အငြင်းဝါကျ → any ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Do you have ___ questions?  ( question )",
+      "prompt_mm": "မေးခွန်းတွေ ရှိသေးလား။",
+      "answers": [
+        "any"
+      ],
+      "explain_mm": "အမေးဝါကျ → any ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "There is ___ milk.  ( positive )",
+      "prompt_mm": "နွားနို့ နည်းနည်း ရှိတယ်။",
+      "answers": [
+        "some"
+      ],
+      "explain_mm": "အတည်ဝါကျ → some ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I don't have ___ time.  ( negative )",
+      "prompt_mm": "ကျွန်တော့်မှာ အချိန် မရှိဘူး။",
+      "answers": [
+        "any"
+      ],
+      "explain_mm": "အငြင်းဝါကျ → any ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I don't have some time.",
-      "prompt_mm": "မှားနေတဲ့ဝါကျလေးကို အမှန်ဖြစ်အောင် ပြင်ကြည့်ရအောင်နော်။",
+      "prompt_en": "I don't have some money.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I don't have any time",
-        "i don't have any time."
+        "I don't have any money"
       ],
-      "explain_mm": "ဒီဝါကျက အငြင်းဝါကျ (negative) ဖြစ်တဲ့အတွက် 'any' ကို သုံးပေးရမှာပါ၊ 'some' ကို သုံးလို့ မရပါဘူးနော်။"
+      "explain_mm": "အငြင်းဝါကျ → any (some မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  any  /  there  /  isn't  /  milk",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးလေးတွေကို အစဉ်လိုက်ပြန်စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ဖွဲ့ကြည့်ရအောင်နော်။",
+      "prompt_en": "Do you have some water?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "There isn't any milk",
-        "there isn't any milk."
+        "Do you have any water"
       ],
-      "explain_mm": "ဝါကျက အငြင်း (negative) ဖြစ်တဲ့အတွက် There isn't + any milk ဆိုတဲ့ပုံစံမျိုးလေး ဖြစ်ရမှာပါနော်။"
+      "explain_mm": "အမေးဝါကျ → any ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — what you have / don't have. Write 5–8 sentences about food or things, using some (positive) and any (negative/question).",
-      "prompt_mm": "အပိုင်း ၁ — ကဲ၊ ဘာတွေရှိလဲ၊ ဘာတွေမရှိဘူးလဲ ဆိုတာလေး ရေးကြည့်ကြရအောင်။ အစားအစာတွေ၊ ပစ္စည်းတွေအကြောင်းကို 'some' (အတည်ဝါကျအတွက်) နဲ့ 'any' (အငြင်း/အမေးဝါကျအတွက်) သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ပါနော်။ ပြီးရင်တော့ ဖုန်းနဲ့ scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "I have {v}some{/v} rice. I don't have {v}any{/v} sugar. There are {v}some{/v} eggs in the box. Do you have {v}any{/v} tea? We don't have {v}any{/v} milk.",
-      "explain_mm": "ဒီအချက်လေးကို သတိရပါနော်- အတည်ဝါကျမှာ 'some'၊ အငြင်းနဲ့ အမေးဝါကျမှာတော့ 'any' ပါ။",
-      "grading": {
-        "grammar_point": "some / any",
-        "rule": "some in positive statements; any in negatives and questions. Both with plural countable and uncountable nouns.",
-        "must_check": [
-          "some in positives, any in negatives/questions",
-          "Used with plural or uncountable nouns",
-          "Mix of positive and negative/question",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "some in negatives (don't have some)",
-          "any in plain positives",
-          "Using a/an instead"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "There isn't some sugar.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "There isn't any sugar"
+      ],
+      "explain_mm": "အငြင်းဝါကျ → any ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — check the fridge. Write a short paragraph (4–6 sentences) about what is and isn't in your kitchen, using some and any.",
-      "prompt_mm": "အပိုင်း ၂ — ကဲ ဒီတစ်ခါ ကိုယ့်ရဲ့ရေခဲသေတ္တာကို စစ်ကြည့်ကြရအောင်။ ကိုယ့်မီးဖိုချောင်ထဲမှာ ဘာတွေရှိတယ်၊ ဘာတွေမရှိဘူးဆိုတာကို 'some' နဲ့ 'any' သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးရင်တော့ ဖုန်းနဲ့ scan ဖတ်ပြီး တင်ပေးလို့ရပါတယ်။",
-      "model": "There is {v}some{/v} rice and {v}some{/v} oil. There isn't {v}any{/v} meat. We have {v}some{/v} vegetables but we don't have {v}any{/v} fruit. I need to buy {v}some{/v} eggs.",
-      "explain_mm": "'some' နဲ့ 'any' ကို ဝါကျက အတည် (positive) လား၊ အငြင်း (negative) လားဆိုတာပေါ်မူတည်ပြီး မှန်မှန်ကန်ကန်လေး သုံးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "some / any",
-        "rule": "Use some and any correctly across positive and negative statements.",
-        "must_check": [
-          "some in positives, any in negatives",
-          "Correct noun types",
-          "Clear has/hasn't picture",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "some/any swapped",
-          "a/an misuse",
-          "Quantity confusion"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I bought any apples.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I bought some apples"
+      ],
+      "explain_mm": "အတည်ဝါကျ → some ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နွားနို့နည်းနည်းတော့ ရှိပါတယ်။",
+      "options": [
+        "There",
+        "is",
+        "some",
+        "milk"
+      ],
+      "answers": [
+        "There is some milk"
+      ],
+      "explain_mm": "အတည်ဝါကျ → some ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သကြားတော့ မရှိပါဘူး။",
+      "options": [
+        "There",
+        "isn't",
+        "any",
+        "sugar"
+      ],
+      "answers": [
+        "There isn't any sugar"
+      ],
+      "explain_mm": "အငြင်း → any ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မေးခွန်းတွေများ ရှိသေးလား။",
+      "options": [
+        "Do",
+        "you",
+        "have",
+        "any",
+        "questions"
+      ],
+      "answers": [
+        "Do you have any questions"
+      ],
+      "explain_mm": "အမေး → any ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပန်းသီးတစ်ချို့ ဝယ်ခဲ့ပါတယ်။",
+      "options": [
+        "I",
+        "bought",
+        "some",
+        "apples"
+      ],
+      "answers": [
+        "I bought some apples"
+      ],
+      "explain_mm": "အတည်ဝါကျ → some ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ နည်းနည်း ရှိတယ်။",
+      "options": [
+        "I",
+        "have",
+        "some",
+        "money"
+      ],
+      "answers": [
+        "I have some money"
+      ],
+      "explain_mm": "အတည်ဝါကျ → some ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "လက်ဖက်ရည် နည်းနည်း သောက်ချင်လား။",
+      "options": [
+        "Would",
+        "you",
+        "like",
+        "some",
+        "tea"
+      ],
+      "answers": [
+        "Would you like some tea"
+      ],
+      "explain_mm": "ကမ်းလှမ်း (offer) → some ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}some{/v} in positive sentences · {v}any{/v} in negatives & questions.  (Offers/requests use some: Would you like some tea?)",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — အတည်ဝါကျမှာ ‘some’ ၊ အငြင်း/အမေးဝါကျမှာ ‘any’ ။ (ကမ်းလှမ်း/တောင်းဆိုရင်တော့ some — Would you like some tea?) ။"
 }

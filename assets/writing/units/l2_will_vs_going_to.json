@@ -128,7 +128,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "\"The bags are heavy.\" \"OK, I ___ carry one.\"",
-      "prompt_mm": "\"အိတ်တွေက လေးလိုက်တာ။\" \"ဟုတ်ကဲ့၊ ကျွန်တော် တစ်လုံး ကူသယ်ပေးမယ်လေ။\" (အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာပါ)",
+      "prompt_mm": "\"အိတ်တွေ လေးတယ်။\" \"ရတယ်၊ ကျွန်တော် တစ်လုံး သယ်ပေးမယ်။\"",
       "options": [
         "'ll",
         "'m going to",
@@ -137,13 +137,13 @@
       "answers": [
         "'ll"
       ],
-      "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ်ပြီး ကူညီမယ်ပြောတာမို့လို့ → will (I'll) ကို သုံးပါတယ်။"
+      "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာ → 'll (will) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I've decided. I ___ study abroad next year.",
-      "prompt_mm": "ဆုံးဖြတ်ချက် ချပြီးသွားပြီ။ နောက်နှစ်ကျရင် နိုင်ငံခြားမှာ ပညာသွားသင်ဖို့ အစီအစဉ်ရှိတယ်။ (ဒါက ကြိုတင်စီစဉ်ထားတာပါ)",
+      "prompt_mm": "ဆုံးဖြတ်ပြီးပြီ။ နောက်နှစ် ပြည်ပမှာ ပညာသွားသင်မယ်။",
       "options": [
         "'m going to",
         "'ll",
@@ -152,13 +152,13 @@
       "answers": [
         "'m going to"
       ],
-      "explain_mm": "ဒါက ကြိုတင်ဆုံးဖြတ်ထားတဲ့ အစီအစဉ်မို့လို့ → 'going to' ကို သုံးပါတယ်။"
+      "explain_mm": "ကြိုဆုံးဖြတ်ထား → 'm going to ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Look at those clouds! It ___ rain.",
-      "prompt_mm": "ဟိုးက တိမ်တွေကို ကြည့်လိုက်စမ်း! မိုးရွာတော့မယ်။ (မျက်မြင်သက်သေကြောင့် ခန့်မှန်းတာပါ)",
+      "prompt_mm": "ဟိုတိမ်တွေ ကြည့်စမ်း! မိုး ရွာတော့မယ်။",
       "options": [
         "'s going to",
         "will",
@@ -167,74 +167,240 @@
       "answers": [
         "'s going to"
       ],
-      "explain_mm": "မျက်မြင်သက်သေကို ကြည့်ပြီး ခန့်မှန်းတာဖြစ်လို့ → 'going to' ကို သုံးပါတယ်။"
+      "explain_mm": "မျက်မြင်သက်သေ → 's going to ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I think our team ___ win.",
+      "prompt_mm": "ကျွန်တော်တို့အသင်း နိုင်မယ်လို့ ထင်တယ်။",
+      "options": [
+        "will",
+        "is going to",
+        "going to"
+      ],
+      "answers": [
+        "will"
+      ],
+      "explain_mm": "ထင်မြင်ချက် → will ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Watch out — you ___ fall!",
+      "prompt_mm": "သတိထား — လဲတော့မယ်!",
+      "options": [
+        "'re going to",
+        "will",
+        "'ll"
+      ],
+      "answers": [
+        "'re going to"
+      ],
+      "explain_mm": "မျက်မြင်သက်သေ → 're going to ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I've already planned it. I ___ paint my room.  ( going to )",
+      "prompt_mm": "ကြိုစီစဉ်ထားပြီ — အခန်း ဆေးသုတ်တော့မယ်။",
+      "answers": [
+        "am going to",
+        "'m going to"
+      ],
+      "explain_mm": "ကြိုဆုံးဖြတ် → am going to ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The phone is ringing. I ___ answer it.  ( decide now )",
+      "prompt_mm": "ဖုန်းမြည်နေတယ် — ကျွန်တော် ကောက်ကိုင်လိုက်မယ်။",
+      "answers": [
+        "will",
+        "'ll"
+      ],
+      "explain_mm": "အခုဆုံးဖြတ် → will ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I think she ___ pass the exam.  ( opinion )",
+      "prompt_mm": "သူမ စာမေးပွဲ အောင်မယ်လို့ ထင်တယ်။",
+      "answers": [
+        "will",
+        "'ll"
+      ],
+      "explain_mm": "ထင်မြင်ချက် → will ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Be careful! You ___ drop it.  ( evidence )",
+      "prompt_mm": "သတိထား! ကျတော့မယ်။",
+      "answers": [
+        "are going to",
+        "'re going to"
+      ],
+      "explain_mm": "မျက်မြင်သက်သေ → are going to ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ travel to Japan in June.  ( plan )",
+      "prompt_mm": "ဇွန်လမှာ ဂျပန် ခရီးသွားဖို့ စီစဉ်ထားတယ်။",
+      "answers": [
+        "are going to"
+      ],
+      "explain_mm": "ကြိုအစီအစဉ် → are going to ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I will visit my aunt next week. (I planned it before)",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပေးပါနော်။ (သဲလွန်စ: ဒါက ကြိုတင်စီစဉ်ထားတဲ့ ကိစ္စပါ)",
+      "prompt_en": "The phone's ringing — I'm going to get it.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I'm going to visit my aunt next week",
-        "I am going to visit my aunt next week"
+        "The phone's ringing — I'll get it"
       ],
-      "explain_mm": "ဒါက ကြိုတင်စီစဉ်ထားတဲ့ အစီအစဉ်ဖြစ်လို့ → 'going to' ကို သုံးရမှာပါ ('will' မဟုတ်ပါဘူးနော်)။"
+      "explain_mm": "အခုချက်ချင်း ဆုံးဖြတ် → will ('ll) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — plans vs decisions. Write 5–8 sentences: some about plans you already have (going to) and some instant decisions/offers (will). Make it clear which is which.",
-      "prompt_mm": "အပိုင်း ၁ — အစီအစဉ် နဲ့ ဆုံးဖြတ်ချက်။ ကိုယ်ပိုင် sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ရအောင်။ တချို့စာကြောင်းတွေက ကြိုတင်ရှိပြီးသား အစီအစဉ် (going to) အကြောင်း ဖြစ်ရမှာဖြစ်ပြီး၊ တချို့ကတော့ အခုချက်ချင်း ဆုံးဖြတ်လိုက်တာ ဒါမှမဟုတ် ကမ်းလှမ်းတာ (will) အကြောင်း ဖြစ်ရပါမယ်။ ဘယ်စာကြောင်းက ဘာအတွက်ဆိုတာကို ရှင်းရှင်းလင်းလင်းလေး ရေးပေးပါနော်။ ပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်ပေးก็ได้ပါတယ်။",
-      "model": "I {v}'m going to{/v} start a cooking class next month. I {v}'m going to{/v} buy the ingredients this weekend. Oh, the kettle is boiling — I {v}'ll turn{/v} it off. You look tired; I {v}'ll make{/v} the tea. I think you {v}'ll enjoy{/v} the class.",
-      "explain_mm": "ကြိုတင်အစီအစဉ်အတွက် 'going to' နဲ့၊ အခုမှချက်ချင်းချတဲ့ ဆုံးဖြတ်ချက်/ထင်မြင်ချက်အတွက် 'will' ကို မှန်အောင် ရွေးချယ်ပေးပါနော်။",
-      "grading": {
-        "grammar_point": "will vs going to",
-        "rule": "going to for prior plans and evidence-based predictions; will for instant decisions, offers, and opinion-based predictions.",
-        "must_check": [
-          "going to used for already-decided plans",
-          "will used for instant decisions/offers",
-          "Form correct (be + going to + base; will + base)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "will for a fixed plan",
-          "going to for a spur-of-the-moment decision",
-          "Dropping be in going to"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I've already decided — I'll study abroad.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I've already decided — I'm going to study abroad"
+      ],
+      "explain_mm": "ကြိုဆုံးဖြတ်ထား → going to ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a plan with predictions. Write a short paragraph (4–6 sentences) about a plan you have (going to), with predictions about how it will go (will + opinion, going to + evidence).",
-      "prompt_mm": "အပိုင်း ၂ — အစီအစဉ် နဲ့ ခန့်မှန်းချက်။ ကိုယ့်မှာရှိတဲ့ အစီအစဉ်တစ်ခု ('going to' သုံးပြီး) အကြောင်းကို စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ အဲဒီအထဲမှာ အနာဂတ်မှာ ဘယ်လိုဖြစ်လာမလဲဆိုတဲ့ ခန့်မှန်းချက်တွေကိုလည်း ထည့်ရေးပေးပါ (ကိုယ့်ထင်မြင်ချက်ဆို 'will'၊ မျက်မြင်သက်သေရှိရင် 'going to' သုံးပြီး)။ ပြီးရင် စာရွက်ကို scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "Next weekend we {v}'re going to{/v} have a picnic. We {v}'re going to{/v} go to the lake. The forecast is bad, so I think it {v}'s going to{/v} rain. But I'm sure we {v}'ll have{/v} fun anyway. If it rains, we {v}'ll eat{/v} inside.",
-      "explain_mm": "ရေးတဲ့အခါမှာ ကြိုတင်အစီအစဉ်ကို 'going to' နဲ့၊ ကိုယ့်ထင်မြင်ချက်နဲ့ ခန့်မှန်းတာကို 'will' နဲ့၊ မျက်မြင်သက်သေကိုကြည့်ပြီး ခန့်မှန်းတာကို 'going to' နဲ့ သုံးပြီး ရေးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "will vs going to",
-        "rule": "Combine a going-to plan with will/going-to predictions correctly in one paragraph.",
-        "must_check": [
-          "going to for the plan",
-          "will for opinion predictions and conditional offers",
-          "Correct forms for both",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Mixing up will and going to for plans vs decisions",
-          "Wrong verb form after will / going to",
-          "Dropping be"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Look at the clouds! It will rain.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Look at the clouds! It's going to rain"
+      ],
+      "explain_mm": "မျက်မြင်သက်သေ → going to ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Watch out — you will fall!",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Watch out — you're going to fall"
+      ],
+      "explain_mm": "မျက်မြင်သက်သေ → going to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဖုန်းသံ မြည်နေတယ် — ကျွန်တော် ကောက်ကိုင်လိုက်မယ်။",
+      "options": [
+        "I",
+        "will",
+        "answer",
+        "the",
+        "phone"
+      ],
+      "answers": [
+        "I will answer the phone"
+      ],
+      "explain_mm": "အခုဆုံးဖြတ် → will ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အခန်းကို ဆေးသုတ်ဖို့ စီစဉ်ထားတယ်။",
+      "options": [
+        "I",
+        "am",
+        "going",
+        "to",
+        "paint",
+        "my",
+        "room"
+      ],
+      "answers": [
+        "I am going to paint my room"
+      ],
+      "explain_mm": "ကြိုအစီအစဉ် → going to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သတိထား — လဲတော့မယ်!",
+      "options": [
+        "You",
+        "are",
+        "going",
+        "to",
+        "fall"
+      ],
+      "answers": [
+        "You are going to fall"
+      ],
+      "explain_mm": "မျက်မြင်သက်သေ → going to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့အသင်း နိုင်မယ်လို့ ထင်တယ်။",
+      "options": [
+        "I",
+        "think",
+        "our",
+        "team",
+        "will",
+        "win"
+      ],
+      "answers": [
+        "I think our team will win"
+      ],
+      "explain_mm": "ထင်မြင်ချက် → will ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဇွန်လမှာ ဂျပန် ခရီးသွားဖို့ စီစဉ်ထားတယ်။",
+      "options": [
+        "We",
+        "are",
+        "going",
+        "to",
+        "travel",
+        "to",
+        "Japan"
+      ],
+      "answers": [
+        "We are going to travel to Japan"
+      ],
+      "explain_mm": "ကြိုအစီအစဉ် → going to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မိုး ရွာတော့မယ်။",
+      "options": [
+        "It",
+        "is",
+        "going",
+        "to",
+        "rain"
+      ],
+      "answers": [
+        "It is going to rain"
+      ],
+      "explain_mm": "မျက်မြင်သက်သေ → going to ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Decided before / evidence → {v}going to{/v}.  Decide now / opinion → {v}will{/v}.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — ကြိုတင်ဆုံးဖြတ်ထား/မျက်မြင်သက်သေ → going to ။ အခုချက်ချင်း ဆုံးဖြတ်/ထင်မြင်ချက် → will ။"
 }

@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The man ___ lives next door is a doctor.",
-      "prompt_mm": "ဘေးအိမ်မှာ နေတဲ့လူက ဆရာဝန်တစ်ယောက်ပါ။",
+      "prompt_mm": "ဘေးအိမ်က နေတဲ့ လူက ဆရာဝန်ပါ။",
       "options": [
         "who",
         "which",
@@ -169,13 +169,13 @@
       "answers": [
         "who"
       ],
-      "explain_mm": "လူအကြောင်း ပြောချင်ရင် → who (that ကိုလည်း သုံးလို့ရပါတယ်)။"
+      "explain_mm": "လူ → who ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "This is the town ___ I was born.",
-      "prompt_mm": "ဒါက ကျွန်တော် မွေးဖွားခဲ့တဲ့ မြို့လေးပါ။",
+      "prompt_mm": "ဒါက ကျွန်တော် မွေးခဲ့တဲ့ မြို့ပါ။",
       "options": [
         "where",
         "which",
@@ -184,98 +184,265 @@
       "answers": [
         "where"
       ],
-      "explain_mm": "နေရာကို ရည်ညွှန်းချင်ရင် → where ကို သုံးပါတယ်။"
+      "explain_mm": "နေရာ → where ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I like books ___ make me think.",
+      "prompt_mm": "တွေးစရာပေးတဲ့ စာအုပ်တွေ ကြိုက်တယ်။",
+      "options": [
+        "that",
+        "who",
+        "where"
+      ],
+      "answers": [
+        "that"
+      ],
+      "explain_mm": "အရာ → that/which ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He's the boy ___ father owns the shop.",
+      "prompt_mm": "သူက သူ့အဖေ ဆိုင်ပိုင်တဲ့ ကောင်လေးပါ။",
+      "options": [
+        "whose",
+        "who",
+        "which"
+      ],
+      "answers": [
+        "whose"
+      ],
+      "explain_mm": "ပိုင်ဆိုင် → whose ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The woman ___ teaches us is kind.",
+      "prompt_mm": "ကျွန်တော်တို့ကို စာသင်ပေးတဲ့ ဆရာမက ကြင်နာတယ်။",
+      "options": [
+        "who",
+        "which",
+        "where"
+      ],
+      "answers": [
+        "who"
+      ],
+      "explain_mm": "လူ → who ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "I like films ___ have a happy ending. (1 word — thing)",
-      "prompt_mm": "အဆုံးသတ်ကောင်းတဲ့ ရုပ်ရှင်ကားမျိုးတွေကို ကြိုက်ပါတယ်။ ( အရာ — စကားလုံး ၁ လုံး )",
+      "prompt_en": "The man ___ lives next door is a doctor.  ( people )",
+      "prompt_mm": "ဘေးအိမ်က နေတဲ့ လူက ဆရာဝန်ပါ။",
+      "answers": [
+        "who",
+        "that"
+      ],
+      "explain_mm": "လူ → who/that ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This is the town ___ I was born.  ( place )",
+      "prompt_mm": "ဒါက ကျွန်တော် မွေးခဲ့တဲ့ မြို့ပါ။",
+      "answers": [
+        "where"
+      ],
+      "explain_mm": "နေရာ → where ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I like books ___ make me think.  ( things )",
+      "prompt_mm": "တွေးစရာပေးတဲ့ စာအုပ်တွေ ကြိုက်တယ်။",
       "answers": [
         "that",
         "which"
       ],
-      "explain_mm": "အရာဝတ္ထုအတွက်ဆိုရင် → that / which ကို သုံးပေးပါ။"
+      "explain_mm": "အရာ → that/which ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She's the girl ___ bag was stolen.  ( possession )",
+      "prompt_mm": "သူမက အိတ် ခိုးခံရတဲ့ မိန်းကလေးပါ။",
+      "answers": [
+        "whose"
+      ],
+      "explain_mm": "ပိုင်ဆိုင် → whose ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "That's the village ___ I grew up.  ( place )",
+      "prompt_mm": "အဲဒါက ကျွန်တော် ကြီးပြင်းခဲ့တဲ့ ရွာပါ။",
+      "answers": [
+        "where"
+      ],
+      "explain_mm": "နေရာ → where ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "The book that I read it was very good.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "The man which lives next door is a doctor.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "The book that I read was very good",
-        "the book that i read was very good.",
-        "The book I read was very good"
+        "The man who lives next door is a doctor"
       ],
-      "explain_mm": "Clause ထဲမှာ object pronoun 'it' ကို ထပ်ပြီးထည့်စရာမလိုပါဘူး။ → The book that I read was very good။ ဆိုရင် မှန်သွားပါပြီ။"
+      "explain_mm": "လူ → who (which မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  who  /  the  /  teaches  /  woman  /  us  /  kind  /  is",
-      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်အောင်စီပြီး ဝါကျအမှန်လေးတစ်ခု ဖြစ်အောင် ရေးပေးပါနော်။ ( The woman who teaches us + is kind )",
+      "prompt_en": "This is the town which I was born.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "The woman who teaches us is kind",
-        "the woman who teaches us is kind.",
-        "The woman who teaches us is kind."
+        "This is the town where I was born"
       ],
-      "explain_mm": "ဖွဲ့စည်းပုံက noun + who + clause ပုံစံလေးပါ → The woman who teaches us is kind။"
+      "explain_mm": "နေရာ → where ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — describe people and things. Write 5–8 sentences that each use a defining relative clause (who / which / that / where / whose) to identify a person, thing, or place. No commas.",
-      "prompt_mm": "အပိုင်း ၁ — လူတွေနဲ့ အရာဝတ္ထုတွေအကြောင်း ပြောကြည့်ရအောင်။ လူတစ်ယောက်၊ အရာဝတ္ထုတစ်ခု၊ ဒါမှမဟုတ် နေရာတစ်ခုကို အတိအကျသိအောင် defining relative clause (who / which / that / where / whose) တွေကို သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ပါနော်။ comma မသုံးဖို့ သတိပြုပါ။ ရေးပြီးရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "I have a friend {v}who{/v} works at a hospital. The phone {v}that{/v} I bought last week is broken. This is the school {v}where{/v} I studied. I know a girl {v}whose{/v} mother is a famous singer. People {v}who{/v} read a lot usually write well.",
-      "explain_mm": "ဖွဲ့စည်းပုံက noun + who/which/that/where/whose + clause ပါ။ comma မသုံးရဘူး၊ object pronoun တွေလည်း ထပ်မထည့်ရဘူးဆိုတာလေးကို သတိရပါနော်။",
-      "grading": {
-        "grammar_point": "Defining relative clauses",
-        "rule": "who/which/that/where/whose introduce essential identifying information; no commas; no repeated object pronoun.",
-        "must_check": [
-          "Correct relative pronoun (who/which/that/where/whose)",
-          "No commas around the clause",
-          "No repeated subject/object pronoun inside the clause",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Repeating the noun as a pronoun (who he lives)",
-          "Using commas in a defining clause",
-          "who for things / which for people"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I like books who make me think.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I like books that make me think"
+      ],
+      "explain_mm": "အရာ → that/which (who မဟုတ်) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a person you admire. Write a short paragraph (4–6 sentences) about someone you admire, using several defining relative clauses to describe who they are and what they do.",
-      "prompt_mm": "အပိုင်း ၂ — ကိုယ်လေးစားရတဲ့ လူတစ်ယောက်အကြောင်း ရေးကြည့်ကြမယ်။ ကိုယ်လေးစားရတဲ့ လူတစ်ယောက်အကြောင်းကို — သူက ဘယ်သူလဲ၊ ဘာတွေလုပ်သလဲဆိုတာတွေကို defining relative clause တွေ များများသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "The person {v}who{/v} inspires me most is my old teacher. She is someone {v}who{/v} never gives up. The school {v}where{/v} she works is very poor. The students {v}that{/v} she teaches all love her. She is a woman {v}whose{/v} kindness changed my life.",
-      "explain_mm": "Defining relative clause တွေကို သုံးပြီး လူတစ်ယောက်အကြောင်းကို အသေးစိတ် ပြောပြကြည့်ပါနော်။ comma မသုံးဖို့လည်း သတိပြုပါ။",
-      "grading": {
-        "grammar_point": "Defining relative clauses",
-        "rule": "Describe a person using multiple defining relative clauses, correctly chosen and without commas.",
-        "must_check": [
-          "Several defining relative clauses",
-          "Correct pronoun choice",
-          "No commas, no repeated pronoun",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Repeated pronoun inside the clause",
-          "Wrong pronoun (which for people)",
-          "Adding commas"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He's the boy who father owns the shop.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He's the boy whose father owns the shop"
+      ],
+      "explain_mm": "ပိုင်ဆိုင် → whose ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ကို စာသင်ပေးတဲ့ ဆရာမက ကြင်နာတယ်။",
+      "options": [
+        "The",
+        "woman",
+        "who",
+        "teaches",
+        "us",
+        "is",
+        "very",
+        "kind"
+      ],
+      "answers": [
+        "The woman who teaches us is very kind"
+      ],
+      "explain_mm": "လူ → who ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "တွေးစရာပေးတဲ့ စာအုပ်တွေ ကြိုက်တယ်။",
+      "options": [
+        "I",
+        "like",
+        "books",
+        "that",
+        "make",
+        "me",
+        "think"
+      ],
+      "answers": [
+        "I like books that make me think"
+      ],
+      "explain_mm": "အရာ → that ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အဲဒါက ကျွန်တော် ကြီးပြင်းခဲ့တဲ့ ရွာပါ။",
+      "options": [
+        "That's",
+        "the",
+        "village",
+        "where",
+        "I",
+        "grew",
+        "up"
+      ],
+      "answers": [
+        "That's the village where I grew up"
+      ],
+      "explain_mm": "နေရာ → where ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူက သူ့အဖေ ဆိုင်ပိုင်တဲ့ ကောင်လေးပါ။",
+      "options": [
+        "He's",
+        "the",
+        "boy",
+        "whose",
+        "father",
+        "owns",
+        "the",
+        "shop"
+      ],
+      "answers": [
+        "He's the boy whose father owns the shop"
+      ],
+      "explain_mm": "ပိုင်ဆိုင် → whose ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဘေးအိမ်က နေတဲ့ လူက ဆရာဝန်ပါ။",
+      "options": [
+        "The",
+        "man",
+        "who",
+        "lives",
+        "next",
+        "door",
+        "is",
+        "a",
+        "doctor"
+      ],
+      "answers": [
+        "The man who lives next door is a doctor"
+      ],
+      "explain_mm": "လူ → who ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက ကျွန်တော် မွေးခဲ့တဲ့ မြို့ပါ။",
+      "options": [
+        "This",
+        "is",
+        "the",
+        "town",
+        "where",
+        "I",
+        "was",
+        "born"
+      ],
+      "answers": [
+        "This is the town where I was born"
+      ],
+      "explain_mm": "နေရာ → where ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Defining relative clauses (essential info): {v}who/that{/v} (people) · {v}which/that{/v} (things) · {v}where{/v} (places) · {v}whose{/v} (possession).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — defining relative clause (မရှိမဖြစ် အချက်) — who/that (လူ) ၊ which/that (အရာ) ၊ where (နေရာ) ၊ whose (ပိုင်ဆိုင်) ။"
 }

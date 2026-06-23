@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I wish I ___ taller.",
-      "prompt_mm": "ကိုယ်သာ ပိုအရပ်ရှည်ရင် ကောင်းမှာပဲ။",
+      "prompt_mm": "ပိုအရပ်ရှည်ရင် ကောင်းမှာပဲ။",
       "options": [
         "were",
         "am",
@@ -169,13 +169,13 @@
       "answers": [
         "were"
       ],
-      "explain_mm": "wish + Verb to be ပုံစံမှာ Subject က ဘာပဲဖြစ်ဖြစ် 'were' ကို သုံးရပါတယ် → I wish I were taller။"
+      "explain_mm": "wish + were (subject အားလုံး) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "I wish I ___ harder for the test. (it's already over)",
-      "prompt_mm": "စာမေးပွဲအတွက် အဲ့ဒီတုန်းက ပိုကြိုးစားခဲ့ရင် ကောင်းမှာပဲ။ (ပြီးသွားတဲ့ကိစ္စ)",
+      "prompt_en": "I wish I ___ harder for the test. (it's over)",
+      "prompt_mm": "စာမေးပွဲအတွက် ပိုကြိုးစားခဲ့ရင် ကောင်းမှာ။",
       "options": [
         "had studied",
         "studied",
@@ -184,97 +184,257 @@
       "answers": [
         "had studied"
       ],
-      "explain_mm": "အတိတ်က နောင်တ (Past regret) → wish + past perfect → had studied။"
+      "explain_mm": "အတိတ်နောင်တ → wish + past perfect → had studied ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I wish I ___ more time.",
+      "prompt_mm": "အချိန် ပိုရှိရင် ကောင်းမှာ။",
+      "options": [
+        "had",
+        "have",
+        "would have"
+      ],
+      "answers": [
+        "had"
+      ],
+      "explain_mm": "အခု မဖြစ်နိုင် → wish + past → had ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She wishes she ___ a bigger house.",
+      "prompt_mm": "သူမ အိမ်ပိုကြီး ရှိရင် ကောင်းမှာလို့ ဆန္ဒရှိတယ်။",
+      "options": [
+        "had",
+        "has",
+        "would have"
+      ],
+      "answers": [
+        "had"
+      ],
+      "explain_mm": "wish + past simple → had ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I wish I ___ how to swim.",
+      "prompt_mm": "ရေကူးတတ်ရင် ကောင်းမှာ။",
+      "options": [
+        "knew",
+        "know",
+        "would know"
+      ],
+      "answers": [
+        "knew"
+      ],
+      "explain_mm": "wish + past → knew ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She wishes she ___ (know) the answer.",
-      "prompt_mm": "အဖြေကိုသာ သိရင် ကောင်းမှာပဲလို့ သူမက ဆန္ဒရှိနေတယ်။ (Verb 'know' ကို သုံးပေးပါ)",
+      "prompt_en": "I wish I ___ how to swim.  ( know )",
+      "prompt_mm": "ရေကူးတတ်ရင် ကောင်းမှာပဲ။",
       "answers": [
         "knew"
       ],
-      "explain_mm": "Unreal present (အခု မဖြစ်နိုင်တာ) → wish + past simple → knew။"
+      "explain_mm": "wish + past → knew ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She wishes she ___ a bigger house.  ( have )",
+      "prompt_mm": "သူမ အိမ်ပိုကြီး ရှိရင် ကောင်းမှာ။",
+      "answers": [
+        "had"
+      ],
+      "explain_mm": "wish + past → had ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If only I ___ to my parents.  ( past regret, listen )",
+      "prompt_mm": "မိဘစကား နားထောင်ခဲ့ရင် ကောင်းမှာ။",
+      "answers": [
+        "had listened"
+      ],
+      "explain_mm": "အတိတ်နောင်တ → had + V3 → had listened ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I wish I ___ so much.  ( negative past regret, eat )",
+      "prompt_mm": "ဒီလောက် များများ မစားမိခဲ့ရင် ကောင်းမှာ။",
+      "answers": [
+        "hadn't eaten",
+        "had not eaten"
+      ],
+      "explain_mm": "အတိတ်နောင်တ အငြင်း → hadn't + V3 ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I wish I ___ younger.  ( be )",
+      "prompt_mm": "ပိုငယ်ရင် ကောင်းမှာပဲ။",
+      "answers": [
+        "were"
+      ],
+      "explain_mm": "wish + were ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I wish I was taller.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I wish I were taller"
+      ],
+      "explain_mm": "wish + were (was မဟုတ်) ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "I wish I have more time.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျလေးကို ပြင်ပေးပါဦး။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I wish I had more time",
-        "i wish i had more time.",
-        "I wish I had more time."
+        "I wish I had more time"
       ],
-      "explain_mm": "'wish' နောက်မှာ present tense ကို သုံးလို့မရပါဘူး။ past simple ကိုပဲ သုံးရပါတယ် → I wish I had more time။"
+      "explain_mm": "wish + past → had ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  only  /  if  /  had  /  I  /  listened",
-      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်မှာထားပြီး ဝါကျအမှန်ဖြစ်အောင် ရေးပေးပါနော်။ ( If only + I had listened )",
+      "prompt_en": "I wish I studied harder for the test.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "If only I had listened",
-        "if only i had listened.",
-        "If only I had listened."
+        "I wish I had studied harder for the test"
       ],
-      "explain_mm": "if only + past perfect (အတိတ်က နောင်တအတွက်) → If only I had listened။"
+      "explain_mm": "အတိတ်နောင်တ → past perfect (had studied) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — wishes & regrets. Write 5–8 sentences with 'wish' or 'if only'. Mix present wishes (wish + past) and past regrets (wish + past perfect). Try 'I wish I were …' at least once.",
-      "prompt_mm": "အပိုင်း ၁ — ဆန္ဒတွေနဲ့ နောင်တတွေအကြောင်း။ 'wish' ဒါမှမဟုတ် 'if only' ကိုသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ရအောင်။ လက်ရှိဆန္ဒ (wish + past) နဲ့ အတိတ်က နောင်တ (wish + past perfect) ကို ရောပြီး ရေးပေးပါနော်။ 'I wish I were …' ပုံစံကိုလည်း အနည်းဆုံးတစ်ခါလောက် စမ်းသုံးကြည့်ပါ။ ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "I {v}wish{/v} I {v}had{/v} a quieter room. I {v}wish{/v} I {v}were{/v} more patient. If only I {v}had saved{/v} more money last year. I {v}wish{/v} I {v}knew{/v} how to drive. I {v}wish{/v} I {v}hadn't wasted{/v} so much time on my phone.",
-      "explain_mm": "သတိရဖို့က: wish + past simple (အခုလက်ရှိအတွက်) · wish + past perfect (အတိတ်အတွက်)။ Verb to be နဲ့ဆိုရင်တော့ 'were' ကို သုံးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "wish / if only",
-        "rule": "wish + past simple for an unreal present; wish + past perfect for a past regret. 'were' for all subjects with be.",
-        "must_check": [
-          "Past simple after wish for present wishes (not present, not would)",
-          "Past perfect after wish for past regrets",
-          "'were' (not was) with be",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Present tense after wish (I wish I have)",
-          "'would' for one's own situation (I wish I would have)",
-          "was instead of were"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I wish I would know how to swim.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I wish I knew how to swim"
+      ],
+      "explain_mm": "wish + past → knew (would မသုံး) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — things I'd change. Write a short paragraph (4–6 sentences) about what you wish were different in your life now, and one thing you regret from the past, using 'wish' / 'if only'.",
-      "prompt_mm": "အပိုင်း ၂ — ပြောင်းလဲချင်တဲ့ အရာတွေအကြောင်း။ ကိုယ့်ရဲ့အခုလက်ရှိဘဝမှာ ကွဲပြားစေချင်တဲ့အရာတွေရယ်၊ အတိတ်က နောင်တရခဲ့တဲ့အရာတစ်ခုရယ်အကြောင်း 'wish' / 'if only' သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးလို့ရပါတယ်။",
-      "model": "There are a few things I {v}wish{/v} were different. I {v}wish{/v} I {v}lived{/v} closer to my family. I {v}wish{/v} I {v}had{/v} more time to read. If only I {v}had started{/v} exercising years ago! I also {v}wish{/v} I {v}hadn't quit{/v} my music lessons.",
-      "explain_mm": "wish + past (အခုလက်ရှိအတွက်) နဲ့ wish + past perfect (အတိတ်အတွက်) ပုံစံနှစ်မျိုးလုံးကို ရောပြီး ရေးကြည့်ပေးပါနော်။",
-      "grading": {
-        "grammar_point": "wish / if only",
-        "rule": "Use wish + past for present wishes and wish + past perfect for past regrets, with consistent unreal meaning.",
-        "must_check": [
-          "Correct tense after wish for present vs past",
-          "At least one past regret (wish + had + V3)",
-          "Natural, unreal meaning",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Present after wish",
-          "Mixing up present-wish and past-regret tenses",
-          "was/were confusion"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေကူးတတ်ရင် ကောင်းမှာပဲ။",
+      "options": [
+        "I",
+        "wish",
+        "I",
+        "knew",
+        "how",
+        "to",
+        "swim"
+      ],
+      "answers": [
+        "I wish I knew how to swim"
+      ],
+      "explain_mm": "wish + past → knew ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ အိမ်ပိုကြီး ရှိရင် ကောင်းမှာ။",
+      "options": [
+        "She",
+        "wishes",
+        "she",
+        "had",
+        "a",
+        "bigger",
+        "house"
+      ],
+      "answers": [
+        "She wishes she had a bigger house"
+      ],
+      "explain_mm": "wish + past → had ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မိဘစကား နားထောင်ခဲ့ရင် ကောင်းမှာ။",
+      "options": [
+        "If",
+        "only",
+        "I",
+        "had",
+        "listened",
+        "to",
+        "my",
+        "parents"
+      ],
+      "answers": [
+        "If only I had listened to my parents"
+      ],
+      "explain_mm": "If only + past perfect ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီလောက် များများ မစားမိခဲ့ရင် ကောင်းမှာ။",
+      "options": [
+        "I",
+        "wish",
+        "I",
+        "hadn't",
+        "eaten",
+        "so",
+        "much"
+      ],
+      "answers": [
+        "I wish I hadn't eaten so much"
+      ],
+      "explain_mm": "wish + past perfect အငြင်း ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပိုငယ်ရင် ကောင်းမှာပဲ။",
+      "options": [
+        "I",
+        "wish",
+        "I",
+        "were",
+        "younger"
+      ],
+      "answers": [
+        "I wish I were younger"
+      ],
+      "explain_mm": "wish + were ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အချိန် ပိုရှိရင် ကောင်းမှာ။",
+      "options": [
+        "I",
+        "wish",
+        "I",
+        "had",
+        "more",
+        "time"
+      ],
+      "answers": [
+        "I wish I had more time"
+      ],
+      "explain_mm": "wish + past → had ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}wish{/v} + past simple — unreal present (I wish I had a car) · {v}wish{/v} + past perfect — past regret (I wish I had studied).  Use {v}were{/v} for all subjects.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — wish + past simple — အခု မဖြစ်နိုင်တာ (I wish I had a car) ၊ wish + past perfect — အတိတ်အတွက် နောင်တ (I wish I had studied) ။ be အတွက် → were ။"
 }

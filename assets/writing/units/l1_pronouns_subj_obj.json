@@ -126,7 +126,7 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "She likes ___. (object)",
+      "prompt_en": "She likes ___.",
       "prompt_mm": "သူမက ကျွန်တော့်ကို ကြိုက်တယ်။",
       "options": [
         "I",
@@ -136,110 +136,249 @@
       "answers": [
         "me"
       ],
-      "explain_mm": "verb (likes) ရဲ့ နောက်မှာ လိုက်တဲ့အတွက် object pronoun ဖြစ်တဲ့ 'me' ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "verb (likes) ရဲ့ နောက်က ခံရသူ ဖြစ်လို့ object pronoun → me ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "___ help our parents. (subject)",
+      "prompt_en": "___ help our parents.",
       "prompt_mm": "ကျွန်တော်တို့ မိဘတွေကို ကူညီတယ်။",
       "options": [
-        "Us",
         "We",
+        "Us",
         "Them"
       ],
       "answers": [
         "We"
       ],
-      "explain_mm": "ဝါကျရဲ့ အရှေ့မှာ လာတဲ့ အလုပ်လုပ်သူ (subject) ဖြစ်တဲ့အတွက် 'We' ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "verb ရဲ့ ရှေ့က လုပ်သူ ဖြစ်လို့ subject pronoun → We ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Please come with ___.",
+      "prompt_mm": "ကျွန်တော်တို့နဲ့ အတူ လာပါ။",
+      "options": [
+        "we",
+        "us",
+        "they"
+      ],
+      "answers": [
+        "us"
+      ],
+      "explain_mm": "preposition (with) ရဲ့ နောက်က object pronoun → us ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He sees ___.",
+      "prompt_mm": "သူက သူမကို မြင်တယ်။",
+      "options": [
+        "she",
+        "her",
+        "hers"
+      ],
+      "answers": [
+        "her"
+      ],
+      "explain_mm": "verb (sees) ရဲ့ နောက်က ခံရသူ → her ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ know him.",
+      "prompt_mm": "သူတို့က သူ့ကို သိတယ်။",
+      "options": [
+        "They",
+        "Them",
+        "Their"
+      ],
+      "answers": [
+        "They"
+      ],
+      "explain_mm": "verb ရဲ့ ရှေ့က လုပ်သူ → They ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "I see her, and she sees ___.",
-      "prompt_mm": "ကျွန်တော်က သူမကို မြင်တယ်၊ သူမကလည်း ကျွန်တော့်ကို မြင်တယ်။",
+      "prompt_en": "I love ___.  ( she )",
+      "prompt_mm": "ကျွန်တော် သူမကို ချစ်တယ်။",
+      "answers": [
+        "her"
+      ],
+      "explain_mm": "verb ရဲ့ နောက်က ခံရသူ → object her ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ help them.  ( we )",
+      "prompt_mm": "ကျွန်တော်တို့ သူတို့ကို ကူညီတယ်။",
+      "answers": [
+        "We"
+      ],
+      "explain_mm": "verb ရှေ့က လုပ်သူ → subject We ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Please call ___.  ( I )",
+      "prompt_mm": "ကျွန်တော့်ကို ဖုန်းခေါ်ပါ။",
       "answers": [
         "me"
       ],
-      "explain_mm": "verb (sees) ရဲ့ နောက်မှာ လိုက်တဲ့အတွက် object pronoun ဖြစ်တဲ့ 'me' ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "verb ရဲ့ နောက် → object me ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They know ___.  ( we )",
+      "prompt_mm": "သူတို့က ကျွန်တော်တို့ကို သိတယ်။",
+      "answers": [
+        "us"
+      ],
+      "explain_mm": "verb ရဲ့ နောက် → object us ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ loves him.  ( she )",
+      "prompt_mm": "သူမက သူ့ကို ချစ်တယ်။",
+      "answers": [
+        "She"
+      ],
+      "explain_mm": "verb ရှေ့က လုပ်သူ → subject She ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Come with we.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျလေးကို မှန်အောင် ပြင်ပေးပါဦး။",
+      "prompt_en": "Her loves me.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Come with us",
-        "come with us."
+        "She loves me"
       ],
-      "explain_mm": "preposition (with) ရဲ့ နောက်မှာ လိုက်တဲ့အတွက် object pronoun ဖြစ်တဲ့ 'us' ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "verb ရှေ့က လုပ်သူ → subject She (Her မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  them  /  help  /  we",
-      "prompt_mm": "စကားလုံးလေးတွေကို နေရာမှန်အောင် စီပြီး ဝါကျလေးတစ်ခုဖြစ်အောင် ရေးပေးပါနော်။",
+      "prompt_en": "She loves he.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "We help them",
-        "we help them."
+        "She loves him"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက subject (We) + verb + object (them) ဆိုတဲ့ ပုံစံလေးအတိုင်းပါပဲ။"
+      "explain_mm": "verb ရဲ့ နောက်က ခံရသူ → object him ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — people you know. Write 5–8 sentences about people, using both subject and object pronouns (e.g. \"My friend calls me. I help her.\").",
-      "prompt_mm": "အပိုင်း ၁ — သိတဲ့သူတွေအကြောင်း။ ကိုယ်သိတဲ့သူတွေအကြောင်းကို subject နဲ့ object pronoun နှစ်မျိုးလုံးသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးပေးပါ (ဥပမာ — \"My friend calls me. I help her.\")။ ရေးပြီးရင်တော့ scan ဖတ်ပြီး ပို့ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်ပါနော်။",
-      "model": "{v}I{/v} love my family. {v}They{/v} help {v}me{/v}. {v}I{/v} call {v}them{/v} every day. My friend visits {v}us{/v}. {v}We{/v} like {v}him{/v}.",
-      "explain_mm": "သတိရဖို့ကတော့: လုပ်သူ (subject) က ဝါကျရဲ့ အရှေ့မှာ လာပြီး၊ ခံရသူ (object) ကတော့ verb ဒါမှမဟုတ် preposition ရဲ့ နောက်မှာ လိုက်ပါတယ်နော်။",
-      "grading": {
-        "grammar_point": "Subject & object pronouns",
-        "rule": "Subject pronouns (I, he, she, we, they) do the action; object pronouns (me, him, her, us, them) receive it (after a verb or preposition).",
-        "must_check": [
-          "Subject form before the verb",
-          "Object form after verb/preposition",
-          "Correct pairs (I/me, he/him, they/them)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Object form as subject (Me like it)",
-          "Subject form after verb (She likes I)",
-          "Mixing pairs"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Please call I.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Please call me"
+      ],
+      "explain_mm": "verb ရဲ့ နောက် → object me ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — your friends/family. Write a short paragraph (4–6 sentences) about how you and others help each other, using subject and object pronouns.",
-      "prompt_mm": "အပိုင်း ၂ — သူငယ်ချင်းနဲ့ မိသားစု။ ကိုယ်နဲ့ တခြားသူတွေ တစ်ယောက်ကိုတစ်ယောက် ဘယ်လို ကူညီကြသလဲဆိုတာကို subject နဲ့ object pronoun တွေသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးပေးပါနော်။ ပြီးရင် scan ဖတ်ပြီး ပို့ပေးပါ။",
-      "model": "{v}We{/v} are a team. {v}I{/v} help {v}them{/v} and {v}they{/v} help {v}me{/v}. {v}She{/v} teaches {v}us{/v} English. {v}We{/v} thank {v}her{/v}. {v}They{/v} call {v}us{/v} friends.",
-      "explain_mm": "subject နဲ့ object pronoun တွေကို နေရာမှန်မှာ ဖြည့်ပေးပါနော်။",
-      "grading": {
-        "grammar_point": "Subject & object pronouns",
-        "rule": "Use subject and object pronouns correctly in a short text.",
-        "must_check": [
-          "Subject vs object used correctly",
-          "Correct pronoun pairs",
-          "Clear who does/receives the action",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Wrong case (Me help them)",
-          "Pair confusion",
-          "Pronoun-antecedent mismatch"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Us help them.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "We help them"
+      ],
+      "explain_mm": "verb ရှေ့က လုပ်သူ → subject We ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမက သူ့ကို ချစ်တယ်။",
+      "options": [
+        "She",
+        "loves",
+        "him"
+      ],
+      "answers": [
+        "She loves him"
+      ],
+      "explain_mm": "She (လုပ်သူ) + him (ခံရသူ) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ သူတို့ကို ကူညီတယ်။",
+      "options": [
+        "We",
+        "help",
+        "them"
+      ],
+      "answers": [
+        "We help them"
+      ],
+      "explain_mm": "We (လုပ်သူ) + them (ခံရသူ) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်ကို ဖုန်းခေါ်ပါ။",
+      "options": [
+        "Please",
+        "call",
+        "me"
+      ],
+      "answers": [
+        "Please call me"
+      ],
+      "explain_mm": "verb ရဲ့ နောက် → object me ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့က ကျွန်တော်တို့ကို သိတယ်။",
+      "options": [
+        "They",
+        "know",
+        "us"
+      ],
+      "answers": [
+        "They know us"
+      ],
+      "explain_mm": "They (လုပ်သူ) + us (ခံရသူ) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူက သူမကို မြင်တယ်။",
+      "options": [
+        "He",
+        "sees",
+        "her"
+      ],
+      "answers": [
+        "He sees her"
+      ],
+      "explain_mm": "He (လုပ်သူ) + her (ခံရသူ) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်နဲ့ အတူ လာပါ။",
+      "options": [
+        "Come",
+        "with",
+        "me"
+      ],
+      "answers": [
+        "Come with me"
+      ],
+      "explain_mm": "preposition (with) ရဲ့ နောက် → object me ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Subject (doer): {v}I, he, she, we, they{/v}.  Object (receiver): {v}me, him, her, us, them{/v}.  Object goes after a verb or preposition.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — Subject (လုပ်သူ) — I, he, she, we, they ။ Object (ခံရသူ) — me, him, her, us, them ။ verb/preposition ရဲ့ နောက်မှာ object pronoun သုံးပါ ။"
 }

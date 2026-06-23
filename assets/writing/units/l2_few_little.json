@@ -148,7 +148,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "There are ___ apples on the table.",
-      "prompt_mm": "စားပွဲပေါ်မှာ ပန်းသီးလေးတွေ နည်းနည်း ရှိပါတယ်။",
+      "prompt_mm": "စားပွဲပေါ်မှာ ပန်းသီး အနည်းငယ် ရှိတယ်။",
       "options": [
         "a few",
         "a little",
@@ -157,13 +157,13 @@
       "answers": [
         "a few"
       ],
-      "explain_mm": "'apples' က countable plural noun ဖြစ်လို့ a few ကို သုံးရတာပါ။"
+      "explain_mm": "countable plural (apples) → a few ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Can I have ___ water, please?",
-      "prompt_mm": "ရေ နည်းနည်းလောက် ရနိုင်မလား။",
+      "prompt_mm": "ရေ နည်းနည်း ရနိုင်မလား။",
       "options": [
         "a little",
         "a few",
@@ -172,95 +172,248 @@
       "answers": [
         "a little"
       ],
-      "explain_mm": "'water' က uncountable noun ဖြစ်တဲ့အတွက် a little ကို သုံးရတာပါ။"
+      "explain_mm": "uncountable (water) → a little ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She has ___ friends here.",
+      "prompt_mm": "သူမ ဒီမှာ သူငယ်ချင်း အနည်းငယ် ရှိတယ်။",
+      "options": [
+        "a few",
+        "a little",
+        "much"
+      ],
+      "answers": [
+        "a few"
+      ],
+      "explain_mm": "countable plural (friends) → a few ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I have ___ money left.",
+      "prompt_mm": "ပိုက်ဆံ နည်းနည်း ကျန်တယ်။",
+      "options": [
+        "a little",
+        "a few",
+        "many"
+      ],
+      "answers": [
+        "a little"
+      ],
+      "explain_mm": "uncountable (money) → a little ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We have ___ time, so hurry.",
+      "prompt_mm": "အချိန် နည်းနည်းပဲ ရှိတယ်၊ မြန်မြန်လုပ်ပါ။",
+      "options": [
+        "little",
+        "few",
+        "many"
+      ],
+      "answers": [
+        "little"
+      ],
+      "explain_mm": "uncountable (time) → little ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "I have ___ (small amount) free time today.",
-      "prompt_mm": "ဒီနေ့ ကျွန်တော့်မှာ အားလပ်ချိန် နည်းနည်း ရှိပါတယ်။ ( a little / a few )",
+      "prompt_en": "There are ___ shops near here.  ( countable )",
+      "prompt_mm": "ဒီနားမှာ ဆိုင်လေး အနည်းငယ် ရှိတယ်။",
+      "answers": [
+        "a few"
+      ],
+      "explain_mm": "countable plural → a few ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I have ___ milk.  ( uncountable )",
+      "prompt_mm": "နွားနို့ နည်းနည်း ရှိတယ်။",
       "answers": [
         "a little"
       ],
-      "explain_mm": "'time' က uncountable noun ဖြစ်တဲ့အတွက် a little ကို သုံးရမှာပါ။"
+      "explain_mm": "uncountable → a little ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She made ___ mistakes.  ( countable )",
+      "prompt_mm": "သူမ အမှား နည်းနည်းလေး လုပ်မိတယ်။",
+      "answers": [
+        "a few"
+      ],
+      "explain_mm": "countable plural → a few ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Add ___ salt.  ( uncountable )",
+      "prompt_mm": "ဆား နည်းနည်း ထည့်ပါ။",
+      "answers": [
+        "a little"
+      ],
+      "explain_mm": "uncountable → a little ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ students passed the test.  ( not many )",
+      "prompt_mm": "စာမေးပွဲအောင်တဲ့ ကျောင်းသား နည်းနည်းလေးပဲ ရှိတယ်။",
+      "answers": [
+        "Few"
+      ],
+      "explain_mm": "‘few’ (a မပါ) = မများ — countable → Few ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "She has a little friends here.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "There are a little apples.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She has a few friends here",
-        "she has a few friends here."
+        "There are a few apples"
       ],
-      "explain_mm": "'friends' က countable noun ဖြစ်လို့ a few ကို သုံးရမှာပါ။ a little ကို သုံးလို့ မရပါဘူး။"
+      "explain_mm": "countable plural → a few ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  a few  /  I  /  have  /  questions",
-      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်မှာထားပြီး sentence အမှန်တစ်ခုဖြစ်အောင် ပြန်စီပေးပါ။",
+      "prompt_en": "Can I have a few water?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I have a few questions",
-        "i have a few questions."
+        "Can I have a little water"
       ],
-      "explain_mm": "'questions' က countable noun ဖြစ်တဲ့အတွက် a few ကို သုံးရမှာပါ။"
+      "explain_mm": "uncountable → a little ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — what you have. Write 5–8 sentences about things you have a few / a little of (friends, money, time, books, water), choosing few or little by the noun.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်မှာ ရှိတဲ့အရာတွေအကြောင်း ပြောကြည့်ရအောင်။ ကိုယ့်မှာ 'နည်းနည်း' ပဲရှိတဲ့ အရာတွေ (ဥပမာ - သူငယ်ချင်း၊ ပိုက်ဆံ၊ အချိန်၊ စာအုပ်၊ ရေ) အကြောင်းကို noun ပေါ်မူတည်ပြီး few ဒါမှမဟုတ် little သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်နော်။",
-      "model": "I have {v}a few{/v} close friends. I have {v}a little{/v} money in the bank. There are {v}a few{/v} books on my shelf. I drink {v}a little{/v} coffee in the morning. I get {v}a little{/v} free time at night.",
-      "explain_mm": "noun က countable plural လား uncountable လားဆိုတာ ကြည့်ပြီး (a) few နဲ့ (a) little ကို မှန်အောင် ရွေးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "(a) few / (a) little",
-        "rule": "(a) few with countable plural nouns; (a) little with uncountable nouns. 'a' = positive (some); no 'a' = negative (not many/much).",
-        "must_check": [
-          "few with countable, little with uncountable",
-          "Correct positive/negative meaning where relevant",
-          "Noun number matches the quantifier",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "a little + countable (a little books)",
-          "a few + uncountable (a few water)",
-          "Confusing few and little"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She has a little friends.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She has a few friends"
+      ],
+      "explain_mm": "countable plural → a few ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — describe a place. Write a short paragraph (4–6 sentences) about your neighbourhood or kitchen, using (a) few and (a) little to say what there is.",
-      "prompt_mm": "အပိုင်း ၂ — နေရာတစ်ခုအကြောင်း ဖော်ပြကြည့်ကြမယ်။ ကိုယ့်ရဲ့ ရပ်ကွက် ဒါမှမဟုတ် မီးဖိုချောင်ထဲမှာ ဘာတွေ ရှိလဲဆိုတာကို (a) few နဲ့ (a) little သုံးပြီးတော့ စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးနော်။",
-      "model": "In my kitchen there are {v}a few{/v} plates and {v}a few{/v} cups. There is {v}a little{/v} rice and {v}a little{/v} oil. There are {v}few{/v} vegetables left. I need to buy {v}a little{/v} milk and {v}a few{/v} eggs.",
-      "explain_mm": "ပေးထားတဲ့ noun က countable လား uncountable လားဆိုတာပေါ် မူတည်ပြီး (a) few ဒါမှမဟုတ် (a) little ကို မှန်အောင် ရွေးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "(a) few / (a) little",
-        "rule": "Use the right quantifier for each noun type when describing what there is.",
-        "must_check": [
-          "few/little matched to countable/uncountable nouns",
-          "Sensible amounts described",
-          "Correct forms",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Wrong quantifier for the noun type",
-          "much/many confusion",
-          "Dropping the noun"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I have a few money.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I have a little money"
+      ],
+      "explain_mm": "uncountable → a little ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီနားမှာ ဆိုင်လေး အနည်းငယ် ရှိတယ်။",
+      "options": [
+        "There",
+        "are",
+        "a",
+        "few",
+        "shops",
+        "near",
+        "here"
+      ],
+      "answers": [
+        "There are a few shops near here"
+      ],
+      "explain_mm": "countable → a few ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပိုက်ဆံ နည်းနည်း ကျန်ပါသေးတယ်။",
+      "options": [
+        "I",
+        "have",
+        "a",
+        "little",
+        "money",
+        "left"
+      ],
+      "answers": [
+        "I have a little money left"
+      ],
+      "explain_mm": "uncountable → a little ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ဒီမှာ သူငယ်ချင်း အနည်းငယ် ရှိတယ်။",
+      "options": [
+        "She",
+        "has",
+        "a",
+        "few",
+        "friends",
+        "here"
+      ],
+      "answers": [
+        "She has a few friends here"
+      ],
+      "explain_mm": "countable → a few ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဆား နည်းနည်း ထည့်ပါ။",
+      "options": [
+        "Add",
+        "a",
+        "little",
+        "salt"
+      ],
+      "answers": [
+        "Add a little salt"
+      ],
+      "explain_mm": "uncountable → a little ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အချိန် နည်းနည်းပဲ ရှိတယ်။",
+      "options": [
+        "We",
+        "have",
+        "little",
+        "time"
+      ],
+      "answers": [
+        "We have little time"
+      ],
+      "explain_mm": "uncountable → little ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပန်းသီး အနည်းငယ် ဝယ်ခဲ့တယ်။",
+      "options": [
+        "I",
+        "bought",
+        "a",
+        "few",
+        "apples"
+      ],
+      "answers": [
+        "I bought a few apples"
+      ],
+      "explain_mm": "countable → a few ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}(a) few{/v} + countable plural (a few apples) · {v}(a) little{/v} + uncountable (a little water).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — (a) few + countable plural (a few apples) ၊ (a) little + uncountable (a little water) ။"
 }

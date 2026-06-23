@@ -126,7 +126,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She ___ swim very well.",
-      "prompt_mm": "သူမက ရေ အရမ်း ကောင်းကောင်း ကူးတတ်ပါတယ်။",
+      "prompt_mm": "သူမ ရေ အရမ်း ကူးတတ်တယ်။",
       "options": [
         "cans",
         "can",
@@ -135,13 +135,13 @@
       "answers": [
         "can"
       ],
-      "explain_mm": "‘can’ မှာ -s ဘယ်တော့မှ မထည့်ပါနဲ့နော်။ ဥပမာ → can swim။"
+      "explain_mm": "‘can’ မှာ ‑s မပေါင်းရ → She can swim ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I ___ drive a car.",
-      "prompt_mm": "ကျွန်တော် ကားမမောင်းတတ်ပါဘူး။",
+      "prompt_mm": "ကျွန်တော် ကား မမောင်းတတ်ဘူး။",
       "options": [
         "can't",
         "don't can",
@@ -150,96 +150,240 @@
       "answers": [
         "can't"
       ],
-      "explain_mm": "အငြင်း (negative) ပုံစံကတော့ can't (cannot) ပါ။"
+      "explain_mm": "မလုပ်တတ်ဘူး ဆိုလို → can't drive ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He can ___ Japanese.",
+      "prompt_mm": "သူ ဂျပန်စကား ပြောတတ်တယ်။",
+      "options": [
+        "speak",
+        "speaks",
+        "to speak"
+      ],
+      "answers": [
+        "speak"
+      ],
+      "explain_mm": "‘can’ နောက်မှာ base verb → can speak (speaks/to speak မဟုတ်) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ you help me?",
+      "prompt_mm": "ကူညီပေးနိုင်မလား။",
+      "options": [
+        "Can",
+        "Do",
+        "Are"
+      ],
+      "answers": [
+        "Can"
+      ],
+      "explain_mm": "စွမ်းရည် အမေး → Can you help me? ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ cook well.",
+      "prompt_mm": "သူတို့ ကောင်းကောင်း ချက်တတ်တယ်။",
+      "options": [
+        "cans",
+        "can",
+        "can to"
+      ],
+      "answers": [
+        "can"
+      ],
+      "explain_mm": "subject အားလုံး → can (‑s မပေါင်း) ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "He can ___ (speak) Japanese.",
-      "prompt_mm": "သူ ဂျပန်စကား ပြောတတ်တယ်။ (ဒီဝါကျအတွက် 'speak' ကို သုံးပေးပါနော်။)",
+      "prompt_en": "I ___ cook.  ( ability )",
+      "prompt_mm": "ကျွန်တော် ချက်တတ်တယ်။",
       "answers": [
-        "speak"
+        "can"
       ],
-      "explain_mm": "'can' ရဲ့နောက်မှာ Base verb ကိုပဲ သုံးရမှာမို့လို့ 'speak' ကို သုံးပေးပါ။ ('speaks' မဟုတ်ပါဘူး)။"
+      "explain_mm": "လုပ်တတ်တယ် → can cook ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ swim.  ( negative )",
+      "prompt_mm": "သူ ရေမကူးတတ်ဘူး။",
+      "answers": [
+        "can't",
+        "cannot"
+      ],
+      "explain_mm": "မလုပ်တတ်ဘူး → can't swim ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ speak English.  ( ability )",
+      "prompt_mm": "သူမ အင်္ဂလိပ်စကား ပြောတတ်တယ်။",
+      "answers": [
+        "can"
+      ],
+      "explain_mm": "လုပ်တတ်တယ် → can speak ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Can you ___ me?  ( help )",
+      "prompt_mm": "ကူညီပေးနိုင်မလား။",
+      "answers": [
+        "help"
+      ],
+      "explain_mm": "‘can’ နောက်မှာ base → help ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ play football.  ( ability )",
+      "prompt_mm": "ကျွန်တော်တို့ ဘောလုံး ကစားတတ်တယ်။",
+      "answers": [
+        "can"
+      ],
+      "explain_mm": "can + base → can play ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "She cans play the piano.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "She cans swim.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She can play the piano",
-        "she can play the piano."
+        "She can swim"
       ],
-      "explain_mm": "‘can’ မှာ -s ထည့်လို့မရပါဘူးနော်။ ဥပမာ → can play။"
+      "explain_mm": "‘can’ မှာ ‑s မပေါင်းရ → can swim ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  can  /  you  /  cook  /  ?",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး မေးခွန်းဝါကျ အမှန်တစ်ခု ဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "He can swims.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Can you cook?",
-        "Can you cook",
-        "can you cook?"
+        "He can swim"
       ],
-      "explain_mm": "မေးခွန်းပုံစံက Can + subject + base verb ပါ။ ဥပမာ → Can you cook?"
+      "explain_mm": "‘can’ နောက်မှာ base verb (swim) — swims မဟုတ် ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — your abilities. Write 5–8 sentences about what you and others can and can't do, using can / can't + base verb.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ရဲ့စွမ်းရည်များ။ ကိုယ်နဲ့ တခြားသူတွေ ဘာတွေ လုပ်တတ်တယ်၊ မလုပ်တတ်ဘူး ဆိုတာကို can / can't + base verb ပုံစံသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးပေးပါ။ ပြီးသွားရင် ရေးထားတာလေးကို scan ဖတ်ပြီး တင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လို့လည်း ရပါတယ်နော်။",
-      "model": "I {v}can{/v} cook. I {v}can't{/v} swim. My brother {v}can{/v} drive. My sister {v}can{/v} speak English. We {v}can't{/v} play the piano.",
-      "explain_mm": "သတိထားရမှာက can / can't နောက်မှာ Verb ရဲ့ Base form ပဲ လိုက်ရပါမယ် — -s လုံးဝမထည့်ရပါဘူးနော်။",
-      "grading": {
-        "grammar_point": "can / can't (ability)",
-        "rule": "can/can't + base verb, the same for all subjects. Shows ability.",
-        "must_check": [
-          "can/can't + base verb (no -s)",
-          "Same form for all subjects (no cans)",
-          "Mix of can and can't",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "cans / can swims",
-          "don't can",
-          "can + to + verb"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I don't can drive.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I can't drive"
+      ],
+      "explain_mm": "အငြင်း → can't (don't can မဟုတ်) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a friend's skills. Write a short paragraph (4–6 sentences) about what a friend or family member can and can't do.",
-      "prompt_mm": "အပိုင်း ၂ — သူငယ်ချင်းရဲ့ စွမ်းရည်။ ကိုယ့်သူငယ်ချင်း ဒါမှမဟုတ် မိသားစုဝင်တစ်ယောက်ယောက်က ဘာတွေ လုပ်တတ်တယ်၊ မလုပ်တတ်ဘူး ဆိုတာကို can / can't သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် ရေးထားတာလေးကို scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "My friend {v}can{/v} do many things. He {v}can{/v} play football and he {v}can{/v} cook. He {v}can't{/v} swim, and he {v}can't{/v} drive yet. But he {v}can{/v} learn quickly.",
-      "explain_mm": "can / can't + base verb ပုံစံကို Subject အားလုံးနဲ့ ပုံစံတူတူပဲ သုံးပေးရမှာပါနော်။",
-      "grading": {
-        "grammar_point": "can / can't (ability)",
-        "rule": "Describe abilities with can/can't + base verb.",
-        "must_check": [
-          "can/can't + base verb",
-          "No -s on can or the verb",
-          "Clear abilities and inabilities",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "cans / can + verb-s",
-          "don't can",
-          "Adding 'to' after can"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Can you to help me?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Can you help me"
+      ],
+      "explain_mm": "‘can’ နောက်မှာ base verb (help) — ‘to’ မလို ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ချက်တတ်တယ်။",
+      "options": [
+        "I",
+        "can",
+        "cook"
+      ],
+      "answers": [
+        "I can cook"
+      ],
+      "explain_mm": "can + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ရေမကူးတတ်ဘူး။",
+      "options": [
+        "He",
+        "can't",
+        "swim"
+      ],
+      "answers": [
+        "He can't swim"
+      ],
+      "explain_mm": "မလုပ်တတ် → can't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကူညီပေးနိုင်မလား။",
+      "options": [
+        "Can",
+        "you",
+        "help",
+        "me"
+      ],
+      "answers": [
+        "Can you help me"
+      ],
+      "explain_mm": "အမေး → Can + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ အင်္ဂလိပ်စကား ပြောတတ်တယ်။",
+      "options": [
+        "She",
+        "can",
+        "speak",
+        "English"
+      ],
+      "answers": [
+        "She can speak English"
+      ],
+      "explain_mm": "can + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ ဘောလုံး ကစားတတ်တယ်။",
+      "options": [
+        "We",
+        "can",
+        "play",
+        "football"
+      ],
+      "answers": [
+        "We can play football"
+      ],
+      "explain_mm": "can + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း ကားမောင်းတတ်လား။",
+      "options": [
+        "Can",
+        "you",
+        "drive",
+        "a",
+        "car"
+      ],
+      "answers": [
+        "Can you drive a car"
+      ],
+      "explain_mm": "အမေး → Can + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}can{/v} / {v}can't{/v} + base verb (same for all subjects, no -s).  Question: {v}Can{/v} you …?",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — can / can't + base verb (subject အားလုံး အတူတူ၊ ‑s မပေါင်း) ။ အမေး — Can you …? ။"
 }

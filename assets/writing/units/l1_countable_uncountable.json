@@ -126,7 +126,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I need some ___.",
-      "prompt_mm": "ကျွန်တော် ___ နည်းနည်းလောက် လိုတယ်။",
+      "prompt_mm": "ကျွန်တော် ရေ နည်းနည်း လိုတယ်။",
       "options": [
         "water",
         "a water",
@@ -135,13 +135,13 @@
       "answers": [
         "water"
       ],
-      "explain_mm": "‘Water’ က uncountable noun ဖြစ်တဲ့အတွက် သူ့ရှေ့မှာ a/an မသုံးရသလို၊ -s ပေါင်းပြီး plural လည်း လုပ်လို့မရပါဘူး။ ဒါကြောင့် ‘some water’ လို့ သုံးရပါတယ်။"
+      "explain_mm": "‘water’ က uncountable ဖြစ်လို့ a/an မသုံး၊ ‑s မပေါင်းရပါဘူး → some water ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She bought three ___.",
-      "prompt_mm": "သူမက ___ သုံးလုံး ဝယ်ခဲ့ပါတယ်။",
+      "prompt_mm": "သူမ ပန်းသီး သုံးလုံး ဝယ်ခဲ့တယ်။",
       "options": [
         "rice",
         "apples",
@@ -150,95 +150,242 @@
       "answers": [
         "apples"
       ],
-      "explain_mm": "ဒီနေရာမှာ ရေတွက်လို့ရတဲ့ (countable) noun က ‘apples’ ပါ။ ‘rice’ နဲ့ ‘money’ ကတော့ uncountable တွေပါ။"
+      "explain_mm": "ရေတွက်လို့ရတာက ‘apples’ ပါ ။ ‘rice’ နဲ့ ‘money’ က uncountable ဖြစ်လို့ ‘three’ နဲ့ မတွဲနိုင်ပါ ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I have ___ money.",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ နည်းနည်း ရှိတယ်။",
+      "options": [
+        "a",
+        "some",
+        "two"
+      ],
+      "answers": [
+        "some"
+      ],
+      "explain_mm": "‘money’ က uncountable ဖြစ်လို့ ‘a money’ မဖြစ် — ‘some money’ လို့ သုံးပါ ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Can I have an ___?",
+      "prompt_mm": "ကျွန်တော် ဥတစ်လုံး ရနိုင်မလား။",
+      "options": [
+        "egg",
+        "water",
+        "rice"
+      ],
+      "answers": [
+        "egg"
+      ],
+      "explain_mm": "‘an’ ရဲ့ နောက်မှာ countable singular ‘egg’ ပဲ လာနိုင်ပါတယ် — water/rice က uncountable ဖြစ်ပါတယ် ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We don't have much ___.",
+      "prompt_mm": "ကျွန်တော်တို့မှာ ပေါင်မုန့် သိပ်မရှိဘူး။",
+      "options": [
+        "breads",
+        "bread",
+        "a bread"
+      ],
+      "answers": [
+        "bread"
+      ],
+      "explain_mm": "‘bread’ က uncountable ဖြစ်လို့ plural/a မသုံးရ → much bread ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Is 'money' countable or uncountable? ___",
-      "prompt_mm": "‘money’ က countable noun လား၊ uncountable noun လား။",
+      "prompt_en": "I drink ___ water every day.",
+      "prompt_mm": "ကျွန်တော် နေ့တိုင်း ရေ နည်းနည်း သောက်တယ်။",
       "answers": [
-        "uncountable"
+        "some"
       ],
-      "explain_mm": "‘Money’ က uncountable noun ဖြစ်တဲ့အတွက် ‘moneys’ ဆိုပြီး plural ပုံစံ မရှိပါဘူး။"
+      "explain_mm": "uncountable (water) ဖြစ်လို့ → ‘some water’ ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She has ___ apple.",
+      "prompt_mm": "သူမမှာ ပန်းသီးတစ်လုံး ရှိတယ်။",
+      "answers": [
+        "an"
+      ],
+      "explain_mm": "countable singular + vowel အသံ → ‘an apple’ ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We need ___ rice.",
+      "prompt_mm": "ကျွန်တော်တို့ ထမင်း လိုတယ်။",
+      "answers": [
+        "some"
+      ],
+      "explain_mm": "uncountable (rice) → ‘some rice’ ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "There are two ___.  ( egg )",
+      "prompt_mm": "ဥ နှစ်လုံး ရှိတယ်။",
+      "answers": [
+        "eggs"
+      ],
+      "explain_mm": "countable ဖြစ်လို့ plural လုပ်ပါ → eggs ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I have ___ money.",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ နည်းနည်း ရှိတယ်။",
+      "answers": [
+        "some"
+      ],
+      "explain_mm": "uncountable (money) → ‘some money’ ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I have a money.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါ။",
+      "prompt_en": "I need a water.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I have some money",
-        "i have some money."
+        "I need some water"
       ],
-      "explain_mm": "‘Money’ က uncountable noun ဖြစ်လို့ ‘a money’ ဆိုရင် မှားပါတယ်။ ‘some money’ လို့ပဲ သုံးရပါမယ်။"
+      "explain_mm": "‘water’ က uncountable ဖြစ်လို့ ‘a’ မသုံး → some water ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  some  /  need  /  I  /  rice",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်တစ်ခု ဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "She bought three rices.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I need some rice",
-        "i need some rice."
+        "She bought some rice"
       ],
-      "explain_mm": "‘Rice’ က uncountable noun ဖြစ်တဲ့အတွက် ‘some rice’ လို့ သုံးရပါတယ်။"
+      "explain_mm": "‘rice’ က uncountable ဖြစ်လို့ ရေတွက်/plural မလုပ်ရ → some rice ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — your kitchen. Write 5–8 sentences about food/things you have, mixing countable (two eggs) and uncountable (some rice) nouns.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ရဲ့မီးဖိုချောင်။ ကိုယ့်မီးဖိုချောင်ထဲမှာ ရှိတဲ့ အစားအစာတွေ၊ ပစ္စည်းတွေအကြောင်းကို countable (ဥပမာ two eggs) နဲ့ uncountable (ဥပမာ some rice) noun တွေ ရောပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ ရေးပြီးသွားရင် ဖုန်းနဲ့ scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်ပေးနိုင်ပါတယ်။",
-      "model": "I have three {v}eggs{/v}. There is some {v}rice{/v} in the bag. I have a little {v}oil{/v}. There are two {v}onions{/v}. I don't have much {v}sugar{/v}.",
-      "explain_mm": "Countable noun တွေနဲ့ဆို a/an, ဂဏန်းတွေ၊ plural (-s) တို့ကို သုံးနိုင်ပြီး၊ uncountable noun တွေနဲ့ကျတော့ some / a little တို့ကို သုံးရပါတယ် (a/an နဲ့ plural -s သုံးလို့မရပါဘူး)။",
-      "grading": {
-        "grammar_point": "Countable & uncountable nouns",
-        "rule": "Countable nouns take a/an and plurals; uncountable nouns take some/a little and no a/an, no plural.",
-        "must_check": [
-          "No a/an or plural on uncountable nouns",
-          "Countable nouns counted/pluralized correctly",
-          "some/a little/a lot of used appropriately",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "a money / two breads / informations",
-          "Plural on uncountables",
-          "Counting uncountables directly"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I have moneys.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I have some money"
+      ],
+      "explain_mm": "‘money’ က uncountable ဖြစ်လို့ ‑s မပေါင်းရ → some money ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a shopping list story. Write a short paragraph (4–6 sentences) about what you need to buy, using countable and uncountable nouns.",
-      "prompt_mm": "အပိုင်း ၂ — ဈေးဝယ်စာရင်းလေးတစ်ခု။ ကိုယ်ဘာတွေ ဈေးဝယ်ဖို့ လိုအပ်နေလဲဆိုတာကို countable နဲ့ uncountable noun တွေ သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် ဖုန်းနဲ့ scan ဖတ်ပြီး တင်ပေးနိုင်ပါတယ်။",
-      "model": "Today I need to buy some {v}food{/v}. I want three {v}apples{/v} and two {v}fish{/v}. I also need some {v}rice{/v} and a little {v}oil{/v}. We don't have much {v}sugar{/v}. I will get some {v}bread{/v} too.",
-      "explain_mm": "Noun တွေကို countable နဲ့ uncountable ဆိုပြီး ခွဲခြားနိုင်အောင် လေ့ကျင့်ပြီး a/an, some နဲ့ ဂဏန်းတွေကို နေရာမှန်မှာ သုံးနိုင်အောင် ကြိုးစားကြည့်ပါ။",
-      "grading": {
-        "grammar_point": "Countable & uncountable nouns",
-        "rule": "A shopping description distinguishing countable and uncountable nouns correctly.",
-        "must_check": [
-          "Uncountables: no a/an, no plural",
-          "Countables: correct number/plural",
-          "Quantity words used correctly",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "a/an with uncountables",
-          "Pluralizing uncountables",
-          "Wrong quantity word"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Can I have a bread?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Can I have some bread"
+      ],
+      "explain_mm": "‘bread’ က uncountable ဖြစ်လို့ ‘a’ မသုံး → some bread ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်မှာ ဥ နှစ်လုံး ရှိတယ်။",
+      "options": [
+        "I",
+        "have",
+        "two",
+        "eggs"
+      ],
+      "answers": [
+        "I have two eggs"
+      ],
+      "explain_mm": "countable → two eggs ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ရေ နည်းနည်း လိုတယ်။",
+      "options": [
+        "I",
+        "need",
+        "some",
+        "water"
+      ],
+      "answers": [
+        "I need some water"
+      ],
+      "explain_mm": "uncountable → some water ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ပန်းသီး သုံးလုံး ဝယ်ခဲ့တယ်။",
+      "options": [
+        "She",
+        "bought",
+        "three",
+        "apples"
+      ],
+      "answers": [
+        "She bought three apples"
+      ],
+      "explain_mm": "countable → three apples ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ ထမင်း အများကြီး ရှိတယ်။",
+      "options": [
+        "We",
+        "have",
+        "a",
+        "lot",
+        "of",
+        "rice"
+      ],
+      "answers": [
+        "We have a lot of rice"
+      ],
+      "explain_mm": "uncountable + အများ → a lot of rice ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ နည်းနည်း ရှိတယ်။",
+      "options": [
+        "I",
+        "have",
+        "some",
+        "money"
+      ],
+      "answers": [
+        "I have some money"
+      ],
+      "explain_mm": "uncountable → some money ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ပန်းသီးတစ်လုံး စားချင်တယ်။",
+      "options": [
+        "I",
+        "want",
+        "an",
+        "apple"
+      ],
+      "answers": [
+        "I want an apple"
+      ],
+      "explain_mm": "countable singular + vowel အသံ → an apple ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Countable: {v}a book, two books{/v} (can count, has a plural).  Uncountable: {v}water, rice, money{/v} (no a/an, no plural — use {v}some{/v}).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — countable noun (ရေတွက်လို့ရ) — a book, two books ။ uncountable noun (ရေတွက်လို့မရ — water, rice, money) — a/an မသုံး၊ ‑s မပေါင်း၊ ‘some’ သုံးပါ ။"
 }

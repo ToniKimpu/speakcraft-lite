@@ -127,7 +127,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "How ___ books do you have?",
-      "prompt_mm": "စာအုပ် ဘယ်နှအုပ် ရှိလဲ။",
+      "prompt_mm": "မင်းမှာ စာအုပ် ဘယ်နှအုပ် ရှိလဲ။",
       "options": [
         "much",
         "many",
@@ -136,13 +136,13 @@
       "answers": [
         "many"
       ],
-      "explain_mm": "‘books’ က ရေတွက်လို့ရတဲ့ countable noun ဖြစ်လို့ ‘many’ ကို သုံးရပါမယ်။"
+      "explain_mm": "‘books’ က ရေတွက်လို့ရတဲ့ countable noun ဖြစ်လို့ → many books ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I don't have ___ money.",
-      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ သိပ်မရှိပါဘူး။",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ သိပ်မရှိဘူး။",
       "options": [
         "many",
         "much",
@@ -151,98 +151,248 @@
       "answers": [
         "much"
       ],
-      "explain_mm": "‘money’ က ရေတွက်လို့မရတဲ့ uncountable noun ဖြစ်လို့ ‘much’ ကို သုံးရပါမယ်။"
+      "explain_mm": "‘money’ က ရေတွက်လို့မရတဲ့ uncountable noun ဖြစ်လို့ → much money ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She has ___ money.",
+      "prompt_mm": "သူမမှာ ပိုက်ဆံ အများကြီး ရှိတယ်။",
+      "options": [
+        "many",
+        "a lot of",
+        "much"
+      ],
+      "answers": [
+        "a lot of"
+      ],
+      "explain_mm": "uncountable ကို အတည်ဝါကျမှာ ‘a lot of’ နဲ့ သုံးပါ → a lot of money ။ (‘many money’ မှားပါတယ်) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "How ___ water do we need?",
+      "prompt_mm": "ရေ ဘယ်လောက် လိုလဲ။",
+      "options": [
+        "many",
+        "much",
+        "a lot"
+      ],
+      "answers": [
+        "much"
+      ],
+      "explain_mm": "‘water’ က uncountable ဖြစ်လို့ → much water ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "There are ___ students here.",
+      "prompt_mm": "ဒီမှာ ကျောင်းသား အများကြီး ရှိတယ်။",
+      "options": [
+        "much",
+        "many",
+        "a lot"
+      ],
+      "answers": [
+        "many"
+      ],
+      "explain_mm": "‘students’ က countable ဖြစ်လို့ → many students ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "There are ___ people in the market. (positive)",
-      "prompt_mm": "ဈေးထဲမှာ လူတွေ အများကြီး ရှိတယ်။",
+      "prompt_en": "How ___ students are there?",
+      "prompt_mm": "ကျောင်းသား ဘယ်နှယောက် ရှိလဲ။",
       "answers": [
-        "a lot of",
         "many"
       ],
-      "explain_mm": "Countable noun ကို အတည်ဝါကျ (positive sentence) မှာ သုံးရင် ‘a lot of’ ဒါမှမဟုတ် ‘many’ ကို သုံးလို့ရပါတယ်။"
+      "explain_mm": "countable (students) → many ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "How ___ water do we need?",
+      "prompt_mm": "ရေ ဘယ်လောက် လိုလဲ။",
+      "answers": [
+        "much"
+      ],
+      "explain_mm": "uncountable (water) → much ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She doesn't eat ___ rice.",
+      "prompt_mm": "သူမ ထမင်း သိပ်မစားဘူး။",
+      "answers": [
+        "much"
+      ],
+      "explain_mm": "uncountable (rice) → much ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I have ___ work.  ( a lot )",
+      "prompt_mm": "အလုပ်တွေ အများကြီး ရှိတယ်။",
+      "answers": [
+        "a lot of"
+      ],
+      "explain_mm": "အတည်ဝါကျမှာ အများကို → a lot of work ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "There aren't ___ cars.",
+      "prompt_mm": "ကား သိပ်မရှိဘူး။",
+      "answers": [
+        "many"
+      ],
+      "explain_mm": "countable (cars) → many ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "How much books do you have?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "How many books do you have"
+      ],
+      "explain_mm": "‘books’ က countable ဖြစ်လို့ → many books ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I don't have many money.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I don't have much money"
+      ],
+      "explain_mm": "‘money’ က uncountable ဖြစ်လို့ → much money ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "She has many money.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြန်ပြင်ပေးပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She has a lot of money",
-        "she has a lot of money.",
-        "She has much money"
+        "She has a lot of money"
       ],
-      "explain_mm": "‘money’ က uncountable noun ဖြစ်တဲ့အတွက် ‘a lot of money’ (ဒါမှမဟုတ် much money) လို့ သုံးရပါမယ်။ ‘many money’ ဆိုတာ မှားပါတယ်။"
+      "explain_mm": "uncountable ကို အတည်ဝါကျမှာ → a lot of money ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  much  /  how  /  water  /  ?",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး မေးခွန်းဝါကျ မှန်အောင် ပြန်ရေးပေးပါ။",
+      "prompt_en": "How many water do we need?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "How much water?",
-        "How much water",
-        "how much water?"
+        "How much water do we need"
       ],
-      "explain_mm": "‘How much’ ကို uncountable noun (ဥပမာ water) နဲ့ တွဲသုံးရပါတယ်။"
+      "explain_mm": "‘water’ က uncountable ဖြစ်လို့ → much water ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — quantities. Write 5–8 sentences using many (countable), much (uncountable) and a lot of. E.g. \"I have a lot of books. I don't have much time.\"",
-      "prompt_mm": "အပိုင်း ၁ — အရေအတွက်/ပမာဏ။ ‘many’ (countable)၊ ‘much’ (uncountable) နဲ့ ‘a lot of’ တို့ကို သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပါ။ ဥပမာ — \"I have a lot of books. I don't have much time.\" ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်နော်။",
-      "model": "I have {v}a lot of{/v} friends. I don't have {v}much{/v} money. There are {v}many{/v} shops near my house. I don't drink {v}much{/v} coffee. How {v}many{/v} languages do you speak?",
-      "explain_mm": "‘many’ ကို countable noun တွေနဲ့ သုံးရပြီး၊ ‘much’ ကို uncountable noun တွေနဲ့ သုံးရပါတယ်။ ‘a lot of’ ကတော့ နှစ်မျိုးလုံးနဲ့ သုံးလို့ရပါတယ်။",
-      "grading": {
-        "grammar_point": "much / many / a lot of",
-        "rule": "many + countable plural; much + uncountable; a lot of + both. much/many common in negatives and questions.",
-        "must_check": [
-          "many with countable, much with uncountable",
-          "a lot of used correctly",
-          "Negatives/questions use much/many appropriately",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "many money / much books",
-          "much in plain positives",
-          "Noun-type confusion"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျောင်းသား ဘယ်နှယောက် ရှိလဲ။",
+      "options": [
+        "How",
+        "many",
+        "students",
+        "are",
+        "there"
+      ],
+      "answers": [
+        "How many students are there"
+      ],
+      "explain_mm": "countable → many ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — describe your town/life. Write a short paragraph (4–6 sentences) using many, much and a lot of.",
-      "prompt_mm": "အပိုင်း ၂ — ကိုယ့်မြို့ ဒါမှမဟုတ် ကိုယ့်ဘဝအကြောင်း ဖော်ပြရေးသားပါ။ ‘many’, ‘much’, နဲ့ ‘a lot of’ တို့ကို သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "My city has {v}a lot of{/v} people and {v}many{/v} cars. There is {v}a lot of{/v} noise. I don't have {v}much{/v} free time. I don't have {v}many{/v} holidays. But I have {v}a lot of{/v} good friends.",
-      "explain_mm": "Noun တွေက countable လား uncountable လားဆိုတာကို သေချာခွဲပြီး ‘many’, ‘much’, ‘a lot of’ တို့ကို မှန်မှန်ကန်ကန် သုံးကြည့်ကြရအောင်။",
-      "grading": {
-        "grammar_point": "much / many / a lot of",
-        "rule": "A description using quantity words correctly with countable and uncountable nouns.",
-        "must_check": [
-          "many/much match the noun type",
-          "a lot of used correctly",
-          "Clear quantities",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "many/much swapped",
-          "much in positives",
-          "Noun type errors"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေ ဘယ်လောက် လိုလဲ။",
+      "options": [
+        "How",
+        "much",
+        "water",
+        "do",
+        "we",
+        "need"
+      ],
+      "answers": [
+        "How much water do we need"
+      ],
+      "explain_mm": "uncountable → much ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အလုပ်တွေ အများကြီး ရှိတယ်။",
+      "options": [
+        "I",
+        "have",
+        "a",
+        "lot",
+        "of",
+        "work"
+      ],
+      "answers": [
+        "I have a lot of work"
+      ],
+      "explain_mm": "အတည်ဝါကျ → a lot of ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ထမင်း သိပ်မစားဘူး။",
+      "options": [
+        "She",
+        "doesn't",
+        "eat",
+        "much",
+        "rice"
+      ],
+      "answers": [
+        "She doesn't eat much rice"
+      ],
+      "explain_mm": "uncountable → much ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီမှာ ကျောင်းသား အများကြီး ရှိတယ်။",
+      "options": [
+        "There",
+        "are",
+        "many",
+        "students",
+        "here"
+      ],
+      "answers": [
+        "There are many students here"
+      ],
+      "explain_mm": "countable → many ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်မှာ ပိုက်ဆံ သိပ်မရှိဘူး။",
+      "options": [
+        "I",
+        "don't",
+        "have",
+        "much",
+        "money"
+      ],
+      "answers": [
+        "I don't have much money"
+      ],
+      "explain_mm": "uncountable → much ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}many{/v} + countable (many books) · {v}much{/v} + uncountable (much water) · {v}a lot of{/v} = both (positive).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — ‘many’ + countable (many books) ၊ ‘much’ + uncountable (much water) ၊ ‘a lot of’ = နှစ်မျိုးလုံး (အတည်ဝါကျမှာ) ။"
 }

@@ -5,9 +5,10 @@ import 'package:speakcraft/screens/auth/sign_up_screen.dart';
 import 'package:speakcraft/model/writing/writing_unit.dart';
 import 'package:speakcraft/model/writing/writing_lexicon.dart';
 import 'package:speakcraft/screens/writing/writing_path_page.dart';
-import 'package:speakcraft/screens/writing/writing_teach_page.dart';
 import 'package:speakcraft/screens/writing/writing_teach_steps_page.dart';
 import 'package:speakcraft/screens/writing/writing_practice_page.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/full_talk_page.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/key_takeaways_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/listening_list_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_list.dart';
@@ -46,6 +47,8 @@ class PmpRoutes {
   static const deviceFailedScreen = '/device_failed_screen';
   static const shadowingPage = '/shadowing_page';
   static const speechPracticeSessionPage = '/speech_practice_session_page';
+  static const keyTakeawaysPage = '/key_takeaways_page';
+  static const fullTalkPage = '/full_talk_page';
   static const sentenceExplanationList = '/sentence_explanation_list';
   static const sentenceExplanationPage = '/sentence_explanation_page';
   static const sentenceExplanationPager = '/sentence_explanation_pager';
@@ -63,8 +66,7 @@ class PmpRoutes {
 
   // Writing Practice module — see WRITING_FEATURE_PLAN.md
   static const writingPath = '/writing';
-  static const writingTeach = '/writing/teach';
-  static const writingTeachSteps = '/writing/teach-steps'; // step-by-step prototype
+  static const writingTeachSteps = '/writing/teach-steps'; // step-by-step pager
   static const writingPractice = '/writing/practice';
 
   static Route generateRoutes(RouteSettings settings) {
@@ -155,6 +157,26 @@ class PmpRoutes {
           ),
           settings,
         );
+      case keyTakeawaysPage:
+        // Loads the per-video deck from the listening's key_takeaways_path
+        // (Bunny URL, normalized in the repo). The Key Takeaways step is only
+        // shown when the path is set, so the url is non-empty here.
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        return _getRoute(
+          KeyTakeawaysPage(
+            url: listening.keyTakeawaysPath,
+            youtubeId: listening.youtubeId,
+          ),
+          settings,
+        );
+      case fullTalkPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        return _getRoute(
+          FullTalkPage(listening: listening),
+          settings,
+        );
       case sentenceExplanationList:
         final args = settings.arguments as Map<String, dynamic>;
         final listening = args['listening'] as Listening;
@@ -219,15 +241,6 @@ class PmpRoutes {
         );
       case writingPath:
         return _getRoute(const WritingPathPage(), settings);
-      case writingTeach:
-        final args = settings.arguments as Map<String, dynamic>?;
-        final asset = args?['asset'] as String?;
-        return _getRoute(
-          asset == null
-              ? const WritingTeachPage()
-              : WritingTeachPage(assetPath: asset),
-          settings,
-        );
       case writingTeachSteps:
         final args = settings.arguments as Map<String, dynamic>?;
         final asset = args?['asset'] as String?;

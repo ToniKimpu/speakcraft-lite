@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I ___ live in Mandalay when I was young.",
-      "prompt_mm": "ကျွန်တော် ငယ်ငယ်တုန်းက မန္တလေးမှာ နေခဲ့ဖူးတယ်။",
+      "prompt_mm": "ငယ်ငယ်က မန္တလေးမှာ နေခဲ့တယ်။",
       "options": [
         "used to",
         "use to",
@@ -169,113 +169,274 @@
       "answers": [
         "used to"
       ],
-      "explain_mm": "ဒါက အတိတ်က အခြေအနေ (state) ကို ပြောတာဖြစ်လို့ပါ → used to + base → used to live။"
+      "explain_mm": "အတိတ် အလေ့အထ → used to + base ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "Which is WRONG?",
-      "prompt_mm": "ဘယ်ဝါကျက မှားနေပါသလဲ။ (သတိပြုရန်: state verb တွေနဲ့ 'would' ကို သုံးလို့မရပါဘူးနော်)",
+      "prompt_en": "I ___ a dog when I was a child.",
+      "prompt_mm": "ကလေးဘဝက ခွေးတစ်ကောင် မွေးခဲ့တယ်။",
       "options": [
-        "I would have a cat.",
-        "I used to have a cat.",
-        "We would play outside."
+        "used to have",
+        "would have",
+        "use to have"
       ],
       "answers": [
-        "I would have a cat."
+        "used to have"
       ],
-      "explain_mm": "`have` က state verb ဖြစ်တဲ့အတွက် 'would' နဲ့ သုံးလို့မရပါဘူး → ဒါကြောင့် `I used to have a cat` ဆိုပြီး ဖြစ်ရမှာပါ။"
+      "explain_mm": "‘have’ က state ဖြစ်လို့ would မသုံး → used to have ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ wear glasses, but now she does.",
+      "prompt_mm": "သူမ အရင်က မျက်မှန် မတပ်ခဲ့ဘူး၊ အခုတော့ တပ်တယ်။",
+      "options": [
+        "didn't use to",
+        "didn't used to",
+        "doesn't use to"
+      ],
+      "answers": [
+        "didn't use to"
+      ],
+      "explain_mm": "အငြင်း → didn't use to (use to, ‑d မပါ) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Every summer we ___ visit our grandparents.",
+      "prompt_mm": "နွေတိုင်း အဖိုးအဖွားဆီ သွားလည်လေ့ရှိတယ်။",
+      "options": [
+        "would",
+        "use to",
+        "will"
+      ],
+      "answers": [
+        "would"
+      ],
+      "explain_mm": "ထပ်ခါ လုပ်ခဲ့တဲ့ action → would (or used to) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ you use to live near the river?",
+      "prompt_mm": "မင်း အရင်က မြစ်နားမှာ နေခဲ့ဖူးလား။",
+      "options": [
+        "Did",
+        "Do",
+        "Were"
+      ],
+      "answers": [
+        "Did"
+      ],
+      "explain_mm": "အမေး → Did + subject + use to ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She ___ ___ ___ wear glasses, but now she does. (negative, 3 words)",
-      "prompt_mm": "သူမ အရင်တုန်းက မျက်မှန် မတပ်ခဲ့ဘူး၊ အခုတော့ တပ်တယ်။ ( အငြင်း (negative) ပုံစံ — စကားလုံး ၃ လုံးနဲ့ ဖြည့်ပေးပါ )",
+      "prompt_en": "I ___ be afraid of dogs.  ( used to )",
+      "prompt_mm": "အရင်တုန်းက ခွေးတွေ ကြောက်ခဲ့တယ်။",
       "answers": [
-        "didn't use to",
-        "did not use to"
+        "used to be"
       ],
-      "explain_mm": "အငြင်း (negative) ပုံစံကတော့ `didn't use to + base` ပါ။ `did` ပါလာပြီဖြစ်လို့ `use` မှာ -d ထည့်စရာ မလိုတော့ပါဘူး။"
+      "explain_mm": "used to + base → used to be ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Every summer we ___ visit our grandparents.  ( would )",
+      "prompt_mm": "နွေတိုင်း အဖိုးအဖွားဆီ သွားလေ့ရှိတယ်။",
+      "answers": [
+        "would visit"
+      ],
+      "explain_mm": "ထပ်ခါ action → would visit ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ wear glasses.  ( negative )",
+      "prompt_mm": "သူမ အရင်တုန်းက မျက်မှန် မတပ်ခဲ့ဘူး။",
+      "answers": [
+        "didn't use to"
+      ],
+      "explain_mm": "အငြင်း → didn't use to ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I ___ long hair when I was young.  ( used to, state )",
+      "prompt_mm": "ငယ်ငယ်က ဆံပင်ရှည် ရှိခဲ့တယ်။",
+      "answers": [
+        "used to have"
+      ],
+      "explain_mm": "state → used to have (would မသုံး) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ play in the park every day.  ( used to )",
+      "prompt_mm": "ကျွန်တော်တို့ နေ့တိုင်း ပန်းခြံမှာ ကစားခဲ့တယ်။",
+      "answers": [
+        "used to play"
+      ],
+      "explain_mm": "used to + base ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "When I was a child, I would be very shy.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါ။ (သတိပြုရန်: `be` က state verb ပါ)",
+      "prompt_en": "I use to live in Mandalay.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "When I was a child, I used to be very shy",
-        "when i was a child, i used to be very shy.",
-        "When I was a child I used to be very shy"
+        "I used to live in Mandalay"
       ],
-      "explain_mm": "`be` က state verb ဖြစ်တဲ့အတွက် 'would' နဲ့ သုံးလို့မရပါဘူး → ဒါကြောင့် `used to be` လို့ပဲ ပြင်ပေးရမှာပါ။"
+      "explain_mm": "used to (‑d ပါ) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  to  /  used  /  we  /  outside  /  play",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်တစ်ခု ဖြစ်အောင် ရေးပေးပါ။ ( We used to + play outside )",
+      "prompt_en": "She didn't used to wear glasses.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "We used to play outside",
-        "we used to play outside.",
-        "We used to play outside."
+        "She didn't use to wear glasses"
       ],
-      "explain_mm": "ပုံစံက `used to + base verb` ဖြစ်တဲ့အတွက် → `We used to play outside` ဆိုပြီး ဖြစ်လာမှာပါ။"
+      "explain_mm": "အငြင်းမှာ ‘use to’ (‑d မပါ) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — how things used to be. Write 5–8 sentences about past habits and states that are no longer true, using 'used to' (and 'would' for repeated actions). Use 'used to' for any state (have/be/like).",
-      "prompt_mm": "အပိုင်း ၁ — အရင်တုန်းက ဘယ်လို ရှိခဲ့သလဲ။ အခုချိန်မှာ မမှန်တော့တဲ့ ကိုယ့်ရဲ့ အတိတ်က အလေ့အထတွေ၊ အခြေအနေတွေအကြောင်း 'used to' (ထပ်ခါထပ်ခါ လုပ်ခဲ့တဲ့ action ဆိုရင် 'would') ကို သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ state verb တွေ (ဥပမာ have/be/like) နဲ့ဆိုရင်တော့ 'used to' ကိုပဲ သုံးပေးပါနော်။ ရေးပြီးသွားရင် scan ဖတ်ပြီး တင်နိုင်သလို၊ ဒီမှာပဲ ရိုက်ထည့်လို့လည်း ရပါတယ်။",
-      "model": "I {v}used to{/v} be very shy at school. We {v}would{/v} play in the street every evening. My family {v}used to{/v} have a small farm. On Fridays, my father {v}would{/v} take us to the market. I {v}didn't use to{/v} like vegetables when I was young.",
-      "explain_mm": "`used to + base` (အလေ့အထ/state အတွက်) · `would + base` (ထပ်ခါထပ်ခါ လုပ်တဲ့ action အတွက်)။ state verb တွေနဲ့ဆို 'would' ကို သုံးလို့မရတာလေးကို သတိရပါနော်။",
-      "grading": {
-        "grammar_point": "used to / would (past habits)",
-        "rule": "used to + base for past habits and states; would + base only for repeated past actions, never for states.",
-        "must_check": [
-          "used to + base verb form",
-          "'would' only for repeated actions, not states",
-          "Negatives/questions use 'use to' (no -d)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "would + state verb (would have / would be)",
-          "'used to' kept as 'used' in negatives/questions (didn't used to)",
-          "Adding -ed/-s after used to"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I would have a dog when I was a child.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I used to have a dog when I was a child"
+      ],
+      "explain_mm": "‘have’ က state ဖြစ်လို့ would မသုံး → used to ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — childhood vs now. Write a short paragraph (4–6 sentences) comparing your childhood habits and surroundings with your life today, using 'used to' and 'would'.",
-      "prompt_mm": "အပိုင်း ၂ — ကလေးဘဝ နဲ့ အခုဘဝ။ ကိုယ့်ရဲ့ ကလေးဘဝက အလေ့အထတွေ၊ ပတ်ဝန်းကျင်တွေကို အခုလက်ရှိဘဝနဲ့ နှိုင်းယှဉ်ပြီး 'used to' နဲ့ 'would' သုံးကာ စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးကြည့်ရအောင်။ ရေးပြီးရင်တော့ scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "My life {v}used to{/v} be much simpler. We {v}used to{/v} live in a quiet village. Every morning my mother {v}would{/v} wake us at dawn. I {v}didn't use to{/v} worry about money. After school, we {v}would{/v} swim in the river until sunset.",
-      "explain_mm": "`used to + base` နဲ့ `would + base` ကို အဆင်ပြေသလို တွဲသုံးကြည့်ပါ။ ဒါပေမဲ့ state verb တွေအတွက်ကတော့ `used to` ကိုပဲ သုံးဖို့ မမေ့နဲ့နော်။",
-      "grading": {
-        "grammar_point": "used to / would (past habits)",
-        "rule": "Contrast past and present using used to (habits + states) and would (repeated actions).",
-        "must_check": [
-          "Correct used to + base / would + base forms",
-          "No 'would' for states",
-          "Clear past-vs-now contrast",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "would for states (would be / would have)",
-          "didn't used to (should be use to)",
-          "Wrong verb form after used to / would"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Did you used to smoke?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Did you use to smoke"
+      ],
+      "explain_mm": "Did နောက်မှာ ‘use to’ (‑d မပါ) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အရင်တုန်းက ခွေးတွေ ကြောက်ခဲ့တယ်။",
+      "options": [
+        "I",
+        "used",
+        "to",
+        "be",
+        "afraid",
+        "of",
+        "dogs"
+      ],
+      "answers": [
+        "I used to be afraid of dogs"
+      ],
+      "explain_mm": "used to + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နွေတိုင်း အဖိုးအဖွားဆီ သွားလေ့ရှိတယ်။",
+      "options": [
+        "Every",
+        "summer",
+        "we",
+        "would",
+        "visit",
+        "our",
+        "grandparents"
+      ],
+      "answers": [
+        "Every summer we would visit our grandparents"
+      ],
+      "explain_mm": "ထပ်ခါ action → would ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ အရင်တုန်းက မျက်မှန် မတပ်ခဲ့ဘူး။",
+      "options": [
+        "She",
+        "didn't",
+        "use",
+        "to",
+        "wear",
+        "glasses"
+      ],
+      "answers": [
+        "She didn't use to wear glasses"
+      ],
+      "explain_mm": "အငြင်း → didn't use to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း အရင်က မြစ်နားမှာ နေခဲ့ဖူးလား။",
+      "options": [
+        "Did",
+        "you",
+        "use",
+        "to",
+        "live",
+        "near",
+        "the",
+        "river"
+      ],
+      "answers": [
+        "Did you use to live near the river"
+      ],
+      "explain_mm": "အမေး → Did + use to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ငယ်ငယ်က ဆံပင်ရှည် ရှိခဲ့တယ်။",
+      "options": [
+        "I",
+        "used",
+        "to",
+        "have",
+        "long",
+        "hair"
+      ],
+      "answers": [
+        "I used to have long hair"
+      ],
+      "explain_mm": "state → used to have ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ နေ့တိုင်း ပန်းခြံမှာ ကစားခဲ့တယ်။",
+      "options": [
+        "We",
+        "used",
+        "to",
+        "play",
+        "in",
+        "the",
+        "park",
+        "every",
+        "day"
+      ],
+      "answers": [
+        "We used to play in the park every day"
+      ],
+      "explain_mm": "used to + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}used to{/v} + base — past habits & states (no longer true).  {v}would{/v} + base — repeated past actions only (not states).  Negative: {v}didn't use to{/v}.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — used to + base — အတိတ် အလေ့အထ နဲ့ အခြေအနေ (အခု မမှန်တော့) ။ would + base — ထပ်ခါထပ်ခါ လုပ်ခဲ့တဲ့ action ပဲ (state မဟုတ်) ။ အငြင်း — didn't use to ။"
 }

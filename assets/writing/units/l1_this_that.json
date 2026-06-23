@@ -132,8 +132,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "___ book here is mine. (near, one)",
-      "prompt_mm": "ဒီနားက ဒီစာအုပ်က ကျွန်တော့်ဟာပါ။",
+      "prompt_en": "___ book here is mine.",
+      "prompt_mm": "ဒီစာအုပ်က ကျွန်တော့်ဟာပါ။",
       "options": [
         "This",
         "These",
@@ -142,13 +142,13 @@
       "answers": [
         "This"
       ],
-      "explain_mm": "အနီး + တစ်ခု → this."
+      "explain_mm": "အနီး + တစ်ခု → this ။  ➝ This book is mine."
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "___ shoes over there are new. (far, many)",
-      "prompt_mm": "ဟိုနားက ဖိနပ်တွေက အသစ်ပါ။",
+      "prompt_en": "___ shoes over there are new.",
+      "prompt_mm": "ဟိုဖိနပ်တွေက အသစ်တွေပါ။",
       "options": [
         "That",
         "Those",
@@ -157,96 +157,240 @@
       "answers": [
         "Those"
       ],
-      "explain_mm": "အဝေး + အများ → those."
+      "explain_mm": "အဝေး + အများ → those ။  ➝ Those shoes are new."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ mangoes here are sweet.",
+      "prompt_mm": "ဒီသရက်သီးတွေ ချိုတယ်။",
+      "options": [
+        "This",
+        "These",
+        "Those"
+      ],
+      "answers": [
+        "These"
+      ],
+      "explain_mm": "အနီး + အများ → these ။  ➝ These mangoes are sweet."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ house over there is big.",
+      "prompt_mm": "ဟိုအိမ်က ကြီးတယ်။",
+      "options": [
+        "That",
+        "These",
+        "Those"
+      ],
+      "answers": [
+        "That"
+      ],
+      "explain_mm": "အဝေး + တစ်ခု → that ။  ➝ That house is big."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Look at ___ stars in the sky.",
+      "prompt_mm": "ကောင်းကင်က ဟိုကြယ်တွေကို ကြည့်ပါ။",
+      "options": [
+        "this",
+        "that",
+        "those"
+      ],
+      "answers": [
+        "those"
+      ],
+      "explain_mm": "အဝေး + အများ → those ။  ➝ those stars."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "___ mangoes here are sweet. (near, many)",
-      "prompt_mm": "ဒီနားက သရက်သီးတွေ ချိုတယ်။",
+      "prompt_en": "___ is my phone.  ( near, one )",
+      "prompt_mm": "ဒါက ကျွန်တော့်ဖုန်းပါ။",
       "answers": [
-        "These",
-        "these"
+        "This"
       ],
-      "explain_mm": "အနီး + အများ → these."
+      "explain_mm": "အနီး + တစ်ခု → This ။  ➝ This is my phone."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ is your house.  ( far, one )",
+      "prompt_mm": "ဟိုဟာက မင်းအိမ်ပါ။",
+      "answers": [
+        "That"
+      ],
+      "explain_mm": "အဝေး + တစ်ခု → That ။  ➝ That is your house."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ books here are new.  ( near, many )",
+      "prompt_mm": "ဒီစာအုပ်တွေ အသစ်တွေပါ။",
+      "answers": [
+        "These"
+      ],
+      "explain_mm": "အနီး + အများ → These ။  ➝ These books are new."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ birds over there are beautiful.  ( far, many )",
+      "prompt_mm": "ဟိုငှက်လေးတွေ လှတယ်။",
+      "answers": [
+        "Those"
+      ],
+      "explain_mm": "အဝေး + အများ → Those ။  ➝ Those birds are beautiful."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ pen here is mine.  ( near, one )",
+      "prompt_mm": "ဒီဘောပင်က ကျွန်တော့်ဟာပါ။",
+      "answers": [
+        "This"
+      ],
+      "explain_mm": "အနီး + တစ်ခု → This ။  ➝ This pen is mine."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "These book is good.",
+      "prompt_en": "This are my shoes.",
       "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "This book is good",
-        "this book is good."
+        "These are my shoes"
       ],
-      "explain_mm": "တစ်ခု (book) → this (these မဟုတ်ဘူး)။"
+      "explain_mm": "အများ ဆိုရင် → these ။  ➝ These are my shoes."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  is  /  this  /  my bag",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "prompt_en": "These is my book.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "This is my bag",
-        "this is my bag."
+        "This is my book"
       ],
-      "explain_mm": "This + is + ... → This is my bag."
+      "explain_mm": "တစ်ခု ဆိုရင် → this ။  ➝ This is my book."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — point around you. Write 5–8 sentences about things near and far, using this / that / these / those. E.g. \"This is my pen. Those are my friends.\"",
-      "prompt_mm": "အပိုင်း ၁ — ပတ်ဝန်းကျင် ညွှန်ပြပါ။ အနီး/အဝေး အရာတွေအကြောင်း this / that / these / those သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ဥပမာ — \"This is my pen. Those are my friends.\" ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
-      "model": "{v}This{/v} is my desk. {v}That{/v} is the door. {v}These{/v} are my books. {v}Those{/v} are the windows. {v}This{/v} pen is new.",
-      "explain_mm": "အနီး/အဝေး၊ တစ်ခု/အများ ကို မှန်အောင် ရွေးပါ။",
-      "grading": {
-        "grammar_point": "this / that / these / those",
-        "rule": "this/these = near; that/those = far. this/that = singular; these/those = plural (with plural noun).",
-        "must_check": [
-          "Near vs far chosen correctly",
-          "Singular vs plural matches the noun",
-          "Plural noun (-s) with these/those",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Number mismatch (these book / this books)",
-          "Confusing near and far",
-          "Dropping the noun's -s in plural"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "That mangoes are sweet.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Those mangoes are sweet"
+      ],
+      "explain_mm": "အဝေး + အများ → those ။  ➝ Those mangoes are sweet."
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — show a place. Write a short paragraph (4–6 sentences) showing someone around a room or shop, using this/that/these/those.",
-      "prompt_mm": "အပိုင်း ၂ — နေရာတစ်ခု ပြပါ။ အခန်း သို့မဟုတ် ဆိုင်တစ်ခုကို လှည့်ပြရင်း this/that/these/those သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
-      "model": "Welcome to my shop. {v}This{/v} is the counter. {v}These{/v} fruits are fresh. {v}That{/v} is the rice over there. {v}Those{/v} bags near the wall are for sale.",
-      "explain_mm": "အနီး/အဝေး၊ တစ်ခု/အများ ကို ဆက်စပ်အောင် မှန်မှန် သုံးပါ။",
-      "grading": {
-        "grammar_point": "this / that / these / those",
-        "rule": "Pointing words used correctly for distance and number in a description.",
-        "must_check": [
-          "Correct near/far choice",
-          "Correct singular/plural",
-          "Plural nouns with these/those",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Number mismatch",
-          "Near/far confusion",
-          "Using 'this' for everything"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Those bird is beautiful.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "That bird is beautiful"
+      ],
+      "explain_mm": "အဝေး + တစ်ခု → that ။  ➝ That bird is beautiful."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက ကျွန်တော့်ဖုန်းပါ။",
+      "options": [
+        "This",
+        "is",
+        "my",
+        "phone"
+      ],
+      "answers": [
+        "This is my phone"
+      ],
+      "explain_mm": "အနီး + တစ်ခု → this ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဟိုဟာက မင်းအိမ်ပါ။",
+      "options": [
+        "That",
+        "is",
+        "your",
+        "house"
+      ],
+      "answers": [
+        "That is your house"
+      ],
+      "explain_mm": "အဝေး + တစ်ခု → that ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီသရက်သီးတွေ ချိုတယ်။",
+      "options": [
+        "These",
+        "mangoes",
+        "are",
+        "sweet"
+      ],
+      "answers": [
+        "These mangoes are sweet"
+      ],
+      "explain_mm": "အနီး + အများ → these ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဟိုငှက်လေးတွေ လှတယ်။",
+      "options": [
+        "Those",
+        "birds",
+        "are",
+        "beautiful"
+      ],
+      "answers": [
+        "Those birds are beautiful"
+      ],
+      "explain_mm": "အဝေး + အများ → those ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက ကျွန်တော့်စာအုပ်ပါ။",
+      "options": [
+        "This",
+        "is",
+        "my",
+        "book"
+      ],
+      "answers": [
+        "This is my book"
+      ],
+      "explain_mm": "အနီး + တစ်ခု → this ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဟိုကားက အသစ်ပါ။",
+      "options": [
+        "That",
+        "car",
+        "is",
+        "new"
+      ],
+      "answers": [
+        "That car is new"
+      ],
+      "explain_mm": "အဝေး + တစ်ခု → that ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}this / these{/v} = near  ·  {v}that / those{/v} = far.   {v}this / that{/v} = one  ·  {v}these / those{/v} = many.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — this / these = အနီး ၊ that / those = အဝေး ။ this / that = တစ်ခု ၊ these / those = အများ ။"
 }

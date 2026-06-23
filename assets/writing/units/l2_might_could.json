@@ -140,8 +140,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "Take an umbrella. It ___ later. (rain)",
-      "prompt_mm": "ထီးယူသွားပါဦးနော်။ နောက်ပိုင်း မိုးရွာနိုင်လို့ပါ။",
+      "prompt_en": "Take an umbrella. It ___ later.",
+      "prompt_mm": "ထီး ယူသွားပါ။ နောက်ပိုင်း မိုးရွာနိုင်တယ်။",
       "options": [
         "might rain",
         "might rains",
@@ -150,13 +150,13 @@
       "answers": [
         "might rain"
       ],
-      "explain_mm": "might + verb (base) ပုံစံကိုသုံးပြီး → might rain လို့ရေးရပါမယ်။"
+      "explain_mm": "might နောက်မှာ base → might rain ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "I'm not sure. We ___ to the cinema. (go)",
-      "prompt_mm": "မသေချာသေးဘူး။ ရုပ်ရှင်ရုံကို သွားဖြစ်နိုင်ပါတယ်။",
+      "prompt_en": "I'm not sure. We ___ to the cinema.",
+      "prompt_mm": "မသေချာဘူး။ ရုပ်ရှင်ရုံ သွားဖြစ်နိုင်တယ်။",
       "options": [
         "could go",
         "could goes",
@@ -165,95 +165,250 @@
       "answers": [
         "could go"
       ],
-      "explain_mm": "could + verb (base) ပုံစံကိုသုံးပြီး → could go လို့ရေးရပါမယ် (ဒါက ဖြစ်နိုင်ခြေကို ပြောတာပါ)။"
+      "explain_mm": "could + base → could go ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She's busy, so she ___.",
+      "prompt_mm": "သူမ အလုပ်များနေလို့ မလာနိုင်ဘူး။",
+      "options": [
+        "might not come",
+        "might not comes",
+        "might don't come"
+      ],
+      "answers": [
+        "might not come"
+      ],
+      "explain_mm": "အငြင်း → might not + base (come) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This ___ the answer.",
+      "prompt_mm": "ဒါ အဖြေ ဖြစ်နိုင်တယ်။",
+      "options": [
+        "could be",
+        "could is",
+        "could to be"
+      ],
+      "answers": [
+        "could be"
+      ],
+      "explain_mm": "could + base (be) → could be ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He ___ at home now.",
+      "prompt_mm": "သူ အခု အိမ်မှာ ရှိနိုင်တယ်။",
+      "options": [
+        "might be",
+        "might is",
+        "might to be"
+      ],
+      "answers": [
+        "might be"
+      ],
+      "explain_mm": "might + base (be) → might be ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She's busy, so she ___ (might / not / come).",
-      "prompt_mm": "သူမက အလုပ်များနေလို့ မလာဖြစ်နိုင်ပါဘူး။ ( might not + come )",
+      "prompt_en": "It ___ this evening.  ( rain )",
+      "prompt_mm": "ဒီည မိုးရွာနိုင်တယ်။",
       "answers": [
-        "might not come"
+        "might rain",
+        "could rain"
       ],
-      "explain_mm": "Negative (အငြင်း) ပုံစံ might not + verb (base) → might not come လို့ သုံးရပါမယ်။"
+      "explain_mm": "might/could + base → might rain ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ to the beach.  ( go )",
+      "prompt_mm": "ပင်လယ်ကမ်းခြေ သွားဖြစ်နိုင်တယ်။",
+      "answers": [
+        "could go",
+        "might go"
+      ],
+      "explain_mm": "could + base → could go ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ at home.  ( negative, be )",
+      "prompt_mm": "သူ အိမ်မှာ မရှိနိုင်ဘူး။",
+      "answers": [
+        "might not be"
+      ],
+      "explain_mm": "might not + base ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This ___ the answer.  ( be )",
+      "prompt_mm": "ဒါ အဖြေ ဖြစ်နိုင်တယ်။",
+      "answers": [
+        "could be",
+        "might be"
+      ],
+      "explain_mm": "could + base (be) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ late.  ( be, possibility )",
+      "prompt_mm": "သူမ နောက်ကျနိုင်တယ်။",
+      "answers": [
+        "might be",
+        "could be"
+      ],
+      "explain_mm": "might + base (be) ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "It might rains tomorrow.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျလေးကို ပြင်ပေးပါဦး။",
+      "prompt_en": "It might rains later.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "It might rain tomorrow",
-        "it might rain tomorrow."
+        "It might rain later"
       ],
-      "explain_mm": "‘might’ ရဲ့နောက်မှာ verb base form ကိုပဲ သုံးရမှာမို့လို့ ‘rain’ ဖြစ်ရပါမယ် (‘rains’ မဟုတ်ပါဘူးနော်)။"
+      "explain_mm": "might နောက်မှာ base (rain) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  might  /  late  /  be  /  they",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးလေးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်ဖြစ်အောင် ရေးပေးပါနော်။",
+      "prompt_en": "We could to go to the beach.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "They might be late",
-        "they might be late."
+        "We could go to the beach"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + might + verb (base) + ... ပုံစံဖြစ်ရပါမယ် → ဥပမာ They might be late."
+      "explain_mm": "could နောက်မှာ base — ‘to’ မလို ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — maybe plans. Write 5–8 sentences about things you are not sure about (this weekend, next year), using might, could and might not.",
-      "prompt_mm": "အပိုင်း (၁) — မသေချာတဲ့ အစီအစဉ်လေးတွေ။ ကိုယ်သိပ်မသေချာသေးတဲ့ အစီအစဉ်တွေ (ဥပမာ ဒီစနေ၊တနင်္ဂနွေမှာ ဘာလုပ်မလဲ၊ နောက်နှစ်မှာ ဘာဖြစ်မလဲ) အကြောင်းကို ‘might’, ‘could’, ‘might not’ တို့ကိုသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပါနော်။ ရေးပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "This weekend I {v}might visit{/v} my friend. We {v}could go{/v} to the market. I {v}might not have{/v} time on Sunday. It {v}could be{/v} a quiet weekend. I {v}might start{/v} a new book.",
-      "explain_mm": "‘might / could / might not’ ရဲ့နောက်မှာ verb (base) ကို မှန်မှန်ကန်ကန် သုံးဖို့ သတိရပါနော်။ Subject က ဘာပဲဖြစ်ဖြစ် ပုံစံတူတူပါပဲ၊ -s လုံးဝထည့်စရာ မလိုပါဘူး။",
-      "grading": {
-        "grammar_point": "might / could (possibility)",
-        "rule": "might/could + base verb for present/future possibility; might not for negative possibility. Same form for all subjects.",
-        "must_check": [
-          "might / could + base verb (no -s, no 'to')",
-          "Possibility meaning (not certainty)",
-          "Correct negative (might not)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "might + -s (It might rains)",
-          "might + to (might to go)",
-          "Using will (certain) instead of might/could (possible)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She might not comes.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She might not come"
+      ],
+      "explain_mm": "might not + base (come) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — an uncertain future. Write a short paragraph (4–6 sentences) about what your life might be like in ten years, using might, could and might not.",
-      "prompt_mm": "အပိုင်း (၂) — ကိုယ့်ရဲ့ မသေချာသေးတဲ့ အနာဂတ်။ နောက် ၁၀ နှစ်လောက်မှာ ကိုယ့်ဘဝက ဘယ်လိုတွေဖြစ်နေနိုင်မလဲ ဆိုတာကို ‘might’, ‘could’, ‘might not’ တို့ကိုသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးကြည့်ပေးပါ။ ရေးပြီးရင်တော့ scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "In ten years I {v}might live{/v} in another country. I {v}could have{/v} my own business. I {v}might not be{/v} in this city. I {v}could speak{/v} three languages. Life {v}might be{/v} very different — who knows?",
-      "explain_mm": "ဖြစ်နိုင်ခြေ (possibility) ကို ပြောချင်ရင် ‘might’ ဒါမှမဟုတ် ‘could’ ကို သုံးပေးပါ။ သူတို့နောက်က verb ကတော့ အမြဲတမ်း base form ပါပဲ။ သတိထားရမှာက သိပ်မသေချာတဲ့ ကိစ္စတွေအတွက် ‘will’ ကို သုံးလေ့မရှိတာမို့၊ မရောထွေးမိဖို့ အရေးကြီးပါတယ်နော်။",
-      "grading": {
-        "grammar_point": "might / could (possibility)",
-        "rule": "Speculate about the future with might/could + base verb; might not for negatives.",
-        "must_check": [
-          "might / could + base verb",
-          "Speculation (not certainty)",
-          "Correct negative (might not)",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Adding -s or 'to' after might/could",
-          "Using will for uncertain things",
-          "Wrong negative form"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He could is busy.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He could be busy"
+      ],
+      "explain_mm": "could + base (be) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီည မိုးရွာနိုင်တယ်။",
+      "options": [
+        "It",
+        "might",
+        "rain",
+        "this",
+        "evening"
+      ],
+      "answers": [
+        "It might rain this evening"
+      ],
+      "explain_mm": "might + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပင်လယ်ကမ်းခြေ သွားဖြစ်နိုင်တယ်။",
+      "options": [
+        "We",
+        "could",
+        "go",
+        "to",
+        "the",
+        "beach"
+      ],
+      "answers": [
+        "We could go to the beach"
+      ],
+      "explain_mm": "could + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ အိမ်မှာ မရှိနိုင်ဘူး။",
+      "options": [
+        "He",
+        "might",
+        "not",
+        "be",
+        "at",
+        "home"
+      ],
+      "answers": [
+        "He might not be at home"
+      ],
+      "explain_mm": "might not + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါ အဖြေ ဖြစ်နိုင်တယ်။",
+      "options": [
+        "This",
+        "could",
+        "be",
+        "the",
+        "answer"
+      ],
+      "answers": [
+        "This could be the answer"
+      ],
+      "explain_mm": "could + base (be) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ နောက်ကျနိုင်တယ်။",
+      "options": [
+        "She",
+        "might",
+        "be",
+        "late"
+      ],
+      "answers": [
+        "She might be late"
+      ],
+      "explain_mm": "might + base (be) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ မနက်ဖြန် တွေ့ဖြစ်နိုင်တယ်။",
+      "options": [
+        "We",
+        "could",
+        "meet",
+        "tomorrow"
+      ],
+      "answers": [
+        "We could meet tomorrow"
+      ],
+      "explain_mm": "could + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}might{/v} / {v}could{/v} + base — possibility (maybe, not sure).  Negative: {v}might not{/v} + base.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — might / could + base verb — ဖြစ်နိုင်ခြေ (maybe, မသေချာ) ။ အငြင်း — might not + base ။"
 }

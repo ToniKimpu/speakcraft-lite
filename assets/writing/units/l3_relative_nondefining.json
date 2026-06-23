@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "My brother, ___ lives in Tokyo, is a doctor.",
-      "prompt_mm": "တိုကျိုမှာနေတဲ့ ကျွန်တော့်အစ်ကိုက ဆရာဝန်တစ်ယောက်ပါ။",
+      "prompt_mm": "တိုကျိုမှာ နေတဲ့ ကျွန်တော့်အစ်ကိုက ဆရာဝန်ပါ။",
       "options": [
         "who",
         "that",
@@ -169,110 +169,282 @@
       "answers": [
         "who"
       ],
-      "explain_mm": "non-defining clause မှာ လူကို ရည်ညွှန်းရင် → who ကို သုံးရပါတယ် (that သုံးလို့မရပါဘူးနော်)။"
+      "explain_mm": "လူ (non-defining) → who (that မသုံး) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "Which is correct (non-defining)?",
-      "prompt_mm": "ဘယ်ဝါကျက အမှန်ဖြစ်မလဲ။ (non-defining)",
+      "prompt_en": "She passed all her exams, ___ made her parents proud.",
+      "prompt_mm": "သူမ စာမေးပွဲ အားလုံး အောင်တယ် — အဲဒါ မိဘတွေကို ဂုဏ်ယူစေတယ်။",
       "options": [
-        "Bagan, which has many temples, is famous.",
-        "Bagan which has many temples is famous.",
-        "Bagan that has many temples is famous."
+        "which",
+        "that",
+        "who"
       ],
       "answers": [
-        "Bagan, which has many temples, is famous."
+        "which"
       ],
-      "explain_mm": "non-defining clause ဖြစ်တဲ့အတွက် → comma နှစ်ခု သုံးရပါမယ်၊ ပြီးတော့ 'which' ကိုပဲ သုံးရမှာပါ ('that' မဟုတ်ပါဘူး)။"
+      "explain_mm": "ဝါကျတစ်ခုလုံးကို → which ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Inle Lake, ___ is very beautiful, attracts tourists.",
+      "prompt_mm": "အရမ်းလှတဲ့ အင်းလေးကန်က ခရီးသွားတွေ ဆွဲဆောင်တယ်။",
+      "options": [
+        "which",
+        "that",
+        "where"
+      ],
+      "answers": [
+        "which"
+      ],
+      "explain_mm": "အရာ/နေရာ (non-defining) → which ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "My uncle, ___ is a pilot, lives abroad.",
+      "prompt_mm": "လေယာဉ်မှူး ဖြစ်တဲ့ ကျွန်တော့်ဦးလေးက နိုင်ငံခြားမှာ နေတယ်။",
+      "options": [
+        "who",
+        "which",
+        "that"
+      ],
+      "answers": [
+        "who"
+      ],
+      "explain_mm": "လူ → who ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "My boss, ___ office is upstairs, is kind.",
+      "prompt_mm": "ရုံးခန်း အပေါ်ထပ်က ကျွန်တော့်သူဌေးက ကြင်နာတယ်။",
+      "options": [
+        "whose",
+        "who",
+        "which"
+      ],
+      "answers": [
+        "whose"
+      ],
+      "explain_mm": "ပိုင်ဆိုင် → whose ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She passed all her exams, ___ made her parents proud. (1 word — whole idea)",
-      "prompt_mm": "သူမ စာမေးပွဲအားလုံးကို အောင်မြင်ခဲ့တယ် — အဲဒီအချက်က သူမရဲ့မိဘတွေကို ဂုဏ်ယူစေခဲ့ပါတယ်။ (ဝါကျတစ်ကြောင်းလုံးကို ရည်ညွှန်းပါတယ်)",
+      "prompt_en": "My best friend, ___ lives abroad, called me.  ( people )",
+      "prompt_mm": "နိုင်ငံခြားမှာ နေတဲ့ ကျွန်တော့်သူငယ်ချင်းက ဖုန်းခေါ်တယ်။",
+      "answers": [
+        "who"
+      ],
+      "explain_mm": "လူ → who ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Inle Lake, ___ is very beautiful, attracts tourists.  ( things )",
+      "prompt_mm": "အရမ်းလှတဲ့ အင်းလေးကန်က ခရီးသွားတွေ ဆွဲဆောင်တယ်။",
       "answers": [
         "which"
       ],
-      "explain_mm": "ဝါကျတစ်ကြောင်းလုံးကို ပြန်ရည်ညွှန်းတဲ့အခါမှာ → which ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "အရာ → which ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He arrived late, ___ made everyone wait.  ( whole clause )",
+      "prompt_mm": "သူ နောက်ကျရောက်တယ် — အဲဒါ လူတိုင်း စောင့်ရတယ်။",
+      "answers": [
+        "which"
+      ],
+      "explain_mm": "ဝါကျတစ်ခုလုံး → which ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "My boss, ___ office is upstairs, is kind.  ( possession )",
+      "prompt_mm": "ရုံးခန်း အပေါ်ထပ်က ကျွန်တော့်သူဌေးက ကြင်နာတယ်။",
+      "answers": [
+        "whose"
+      ],
+      "explain_mm": "ပိုင်ဆိုင် → whose ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "My brother, ___ is a teacher, lives in Mandalay.  ( people )",
+      "prompt_mm": "ဆရာ ဖြစ်တဲ့ ကျွန်တော့်အစ်ကိုက မန္တလေးမှာ နေတယ်။",
+      "answers": [
+        "who"
+      ],
+      "explain_mm": "လူ → who ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "My mother that is a nurse works very hard.",
-      "prompt_mm": "မှားနေတဲ့ဝါကျကို ပြန်ပြင်ပေးပါဦး။ (non-defining)",
+      "prompt_en": "My brother, that lives in Tokyo, is a doctor.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "My mother, who is a nurse, works very hard",
-        "my mother, who is a nurse, works very hard.",
-        "My mother, who is a nurse, works hard"
+        "My brother, who lives in Tokyo, is a doctor"
       ],
-      "explain_mm": "non-defining clause မို့လို့ → comma ထည့်ပေးရပါမယ်၊ လူဖြစ်တဲ့အတွက် 'who' ကို သုံးရပါမယ် ('that' သုံးလို့မရပါဘူး)။ → My mother, who is a nurse, works very hard။"
+      "explain_mm": "non-defining မှာ ‘that’ မသုံးရ → who ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Add commas & order:  is  /  Inle Lake  /  beautiful  /  which  /  attracts tourists  /  ,  /  ,",
-      "prompt_mm": "comma တွေ ထည့်ပြီး ဝါကျကို အစဉ်လိုက်ပြန်စီပေးပါ။ ( Inle Lake , which is beautiful , attracts tourists )",
+      "prompt_en": "Inle Lake, that is very beautiful, attracts tourists.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Inle Lake, which is beautiful, attracts tourists",
-        "inle lake, which is beautiful, attracts tourists.",
-        "Inle Lake, which is beautiful, attracts tourists."
+        "Inle Lake, which is very beautiful, attracts tourists"
       ],
-      "explain_mm": "non-defining clause ရဲ့ ပုံစံကတော့ → noun ရဲ့နောက်မှာ comma ခั่น၊ ပြီးမှ 'which …' clause ကို comma နှစ်ခုကြားမှာထည့်၊ နောက်ကမှ ကျန်တဲ့ဝါကျကို ဆက်ရေးရမှာပါ။"
+      "explain_mm": "non-defining → which (that မဟုတ်) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — add extra detail. Write 5–8 sentences that each add EXTRA information about a named person or place using a non-defining relative clause (, who/which/whose/where ,). Remember the commas and never use 'that'.",
-      "prompt_mm": "အပိုင်း ၁ — အပိုအချက်အလက်လေးတွေ ဖြည့်ကြမယ်။ နာမည်ကြီးတဲ့ လူတစ်ယောက် ဒါမှမဟုတ် နေရာတစ်ခုအကြောင်းကို non-defining relative clause (, who/which/whose/where ,) သုံးပြီးတော့ အပိုအချက်အလက်လေးတွေ ထပ်ထည့်ကာ ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းအထိ ရေးပေးပါ။ comma တွေ မမေ့ပါနဲ့နော်၊ 'that' ကိုလည်း သုံးလို့မရပါဘူး။ ရေးပြီးသွားရင်တော့ scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လို့လည်း ရပါတယ်။",
-      "model": "My father, {v}who{/v} works in a factory, is very strong. Mandalay, {v}which{/v} is in central Myanmar, is famous for gold. My neighbour, {v}whose{/v} son is my friend, is a teacher. Our school, {v}where{/v} I spent ten years, has a big garden. I failed the first test, {v}which{/v} taught me to study harder.",
-      "explain_mm": "ပုံစံကတော့: noun, who/which/whose/where … , — အရေးကြီးတာက comma နှစ်ခုကြားမှာ ထားရမယ် · 'that' ကို သုံးလို့မရဘူး · pronoun ကို ချန်ထားခဲ့လို့ မရဘူး။",
-      "grading": {
-        "grammar_point": "Non-defining relative clauses",
-        "rule": "Add non-essential information set off by commas, using who/which/whose/where (never 'that'), with the pronoun never omitted.",
-        "must_check": [
-          "Commas around the clause",
-          "No 'that' in non-defining clauses",
-          "Pronoun present (not omitted)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Using 'that' in a non-defining clause",
-          "Missing commas",
-          "Dropping the relative pronoun"
-        ],
-        "ignore": [
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She passed, that made her parents proud.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She passed, which made her parents proud"
+      ],
+      "explain_mm": "ဝါကျတစ်ခုလုံး → which ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a place you know well. Write a short paragraph (4–6 sentences) about a town, school, or home you know, adding background detail with non-defining relative clauses.",
-      "prompt_mm": "အပိုင်း ၂ — ကိုယ်နဲ့ ရင်းနှီးတဲ့နေရာလေးတစ်ခုအကြောင်း။ ကိုယ်သိတဲ့ မြို့၊ ကျောင်း၊ ဒါမှမဟုတ် အိမ်တစ်လုံးအကြောင်းကို non-defining relative clause တွေသုံးပြီး နောက်ခံအချက်အလက်လေးတွေ ဖြည့်စွက်ကာ စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းအထိ) ရေးကြည့်ရအောင်။ ရေးပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "I grew up in a small town, {v}which{/v} sits beside a wide river. My old house, {v}where{/v} my parents still live, has a red roof. My grandmother, {v}who{/v} cooked for the whole street, lived next door. The market, {v}which{/v} opens at dawn, was my favourite place. Those years, {v}which{/v} now feel like a dream, shaped who I am.",
-      "explain_mm": "non-defining relative clause တွေသုံးပြီး နောက်ခံအချက်အလက်လေးတွေ ထပ်ထည့်ပေးပါ — comma သုံးဖို့မမေ့နဲ့နော်၊ 'that' ကိုတော့ ရှောင်ရပါမယ်။",
-      "grading": {
-        "grammar_point": "Non-defining relative clauses",
-        "rule": "Use comma-set non-defining clauses to add background detail about named people and places.",
-        "must_check": [
-          "Several non-defining clauses with commas",
-          "who/which/whose/where (no 'that')",
-          "Pronoun kept",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "'that' in non-defining clauses",
-          "Missing commas",
-          "Omitted pronoun"
-        ],
-        "ignore": [
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "My uncle who is a pilot lives abroad.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "My uncle, who is a pilot, lives abroad"
+      ],
+      "explain_mm": "non-defining — comma ၂ ခု လိုတယ် ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "တိုကျိုမှာ နေတဲ့ ကျွန်တော့်အစ်ကိုက ဆရာဝန်ပါ။",
+      "options": [
+        "My",
+        "brother,",
+        "who",
+        "lives",
+        "in",
+        "Tokyo,",
+        "is",
+        "a",
+        "doctor"
+      ],
+      "answers": [
+        "My brother, who lives in Tokyo, is a doctor"
+      ],
+      "explain_mm": "လူ → who ၊ comma ၂ ခု ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အရမ်းလှတဲ့ အင်းလေးကန်က ခရီးသွားတွေ ဆွဲဆောင်တယ်။",
+      "options": [
+        "Inle",
+        "Lake,",
+        "which",
+        "is",
+        "very",
+        "beautiful,",
+        "attracts",
+        "tourists"
+      ],
+      "answers": [
+        "Inle Lake, which is very beautiful, attracts tourists"
+      ],
+      "explain_mm": "အရာ → which ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "လေယာဉ်မှူး ဖြစ်တဲ့ ကျွန်တော့်ဦးလေးက နိုင်ငံခြားမှာ နေတယ်။",
+      "options": [
+        "My",
+        "uncle,",
+        "who",
+        "is",
+        "a",
+        "pilot,",
+        "lives",
+        "abroad"
+      ],
+      "answers": [
+        "My uncle, who is a pilot, lives abroad"
+      ],
+      "explain_mm": "လူ → who ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ နောက်ကျရောက်တယ် — အဲဒါ လူတိုင်း စောင့်ရတယ်။",
+      "options": [
+        "He",
+        "arrived",
+        "late,",
+        "which",
+        "made",
+        "everyone",
+        "wait"
+      ],
+      "answers": [
+        "He arrived late, which made everyone wait"
+      ],
+      "explain_mm": "ဝါကျတစ်ခုလုံး → which ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရုံးခန်း အပေါ်ထပ်က ကျွန်တော့်သူဌေးက ကြင်နာတယ်။",
+      "options": [
+        "My",
+        "boss,",
+        "whose",
+        "office",
+        "is",
+        "upstairs,",
+        "is",
+        "very",
+        "kind"
+      ],
+      "answers": [
+        "My boss, whose office is upstairs, is very kind"
+      ],
+      "explain_mm": "ပိုင်ဆိုင် → whose ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ စာမေးပွဲ အားလုံး အောင်တယ် — အဲဒါ မိဘတွေကို ဂုဏ်ယူစေတယ်။",
+      "options": [
+        "She",
+        "passed",
+        "all",
+        "her",
+        "exams,",
+        "which",
+        "made",
+        "her",
+        "parents",
+        "proud"
+      ],
+      "answers": [
+        "She passed all her exams, which made her parents proud"
+      ],
+      "explain_mm": "ဝါကျတစ်ခုလုံး → which ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Non-defining clauses add extra info between {v}commas{/v}: , {v}who{/v} … , / , {v}which{/v} … ,  Never use {v}that{/v}.  Whole-clause: He passed, {v}which{/v} surprised everyone.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — non-defining clause — အပိုအချက်ကို comma ၂ ခုကြားမှာ — , who … , / , which … , ။ ‘that’ မသုံးရ ။ ဝါကျတစ်ခုလုံးကို → which ။"
 }

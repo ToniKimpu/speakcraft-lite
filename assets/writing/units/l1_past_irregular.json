@@ -188,7 +188,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Yesterday he ___ home.",
-      "prompt_mm": "မနေ့က သူ အိမ်ပြန်ခဲ့တယ်။",
+      "prompt_mm": "သူ မနေ့က အိမ်ပြန်ခဲ့တယ်။",
       "options": [
         "goed",
         "went",
@@ -197,7 +197,7 @@
       "answers": [
         "went"
       ],
-      "explain_mm": "'go' ရဲ့ အတိတ် (past form) က 'went' ပါ ('goed' မဟုတ်ပါဘူးနော်)။"
+      "explain_mm": "go → went ။  ➝ He went home."
     },
     {
       "kind": "mcq",
@@ -212,95 +212,241 @@
       "answers": [
         "ate"
       ],
-      "explain_mm": "'eat' ရဲ့ အတိတ် (past form) က 'ate' ပါ။"
+      "explain_mm": "eat → ate ။  ➝ We ate rice."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I ___ tea this morning.",
+      "prompt_mm": "ကျွန်တော် ဒီမနက် လက်ဖက်ရည် သောက်ခဲ့တယ်။",
+      "options": [
+        "drank",
+        "drinked",
+        "drink"
+      ],
+      "answers": [
+        "drank"
+      ],
+      "explain_mm": "drink → drank ။  ➝ I drank tea."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ a good time.",
+      "prompt_mm": "သူမ ပျော်ခဲ့တယ်။",
+      "options": [
+        "haved",
+        "had",
+        "has"
+      ],
+      "answers": [
+        "had"
+      ],
+      "explain_mm": "have → had ။  ➝ She had a good time."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ early last night.",
+      "prompt_mm": "သူတို့ မနေ့ည စောစော အိပ်ခဲ့ကြတယ်။",
+      "options": [
+        "sleeped",
+        "slept",
+        "sleep"
+      ],
+      "answers": [
+        "slept"
+      ],
+      "explain_mm": "sleep → slept ။  ➝ They slept early."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She ___ (have) a cold last week.",
-      "prompt_mm": "သူမ ပြီးခဲ့တဲ့အပတ်က အအေးမိခဲ့တယ်။ (have ကို သုံးပေးပါ)",
+      "prompt_en": "She ___ home early.  ( go )",
+      "prompt_mm": "သူမ စောစော အိမ်ပြန်ခဲ့တယ်။",
+      "answers": [
+        "went"
+      ],
+      "explain_mm": "go → went ။  ➝ She went home early."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ too much.  ( eat )",
+      "prompt_mm": "သူ အများကြီး စားခဲ့တယ်။",
+      "answers": [
+        "ate"
+      ],
+      "explain_mm": "eat → ate ။  ➝ He ate too much."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ a good time.  ( have )",
+      "prompt_mm": "ကျွန်တော်တို့ ပျော်ခဲ့တယ်။",
       "answers": [
         "had"
       ],
-      "explain_mm": "'have' ရဲ့ အတိတ် (past form) က 'had' ပါ။"
+      "explain_mm": "have → had ။  ➝ We had a good time."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ coffee last night.  ( drink )",
+      "prompt_mm": "သူတို့ မနေ့ည က ကော်ဖီ သောက်ခဲ့တယ်။",
+      "answers": [
+        "drank"
+      ],
+      "explain_mm": "drink → drank ။  ➝ They drank coffee."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I ___ a book yesterday.  ( read )",
+      "prompt_mm": "ကျွန်တော် မနေ့က စာအုပ် ဖတ်ခဲ့တယ်။",
+      "answers": [
+        "read"
+      ],
+      "explain_mm": "read → read (spelling အတူတူ) ။  ➝ I read a book yesterday."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I drinked tea this morning.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပေးပါ။",
+      "prompt_en": "Yesterday he goed home.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I drank tea this morning",
-        "i drank tea this morning."
+        "Yesterday he went home"
       ],
-      "explain_mm": "'drink' ရဲ့ အတိတ် (past form) က 'drank' ပါ ('drinked' မဟုတ်ပါဘူးနော်)။"
+      "explain_mm": "go → went (goed မဟုတ်) ။  ➝ Yesterday he went home."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  went  /  she  /  to school",
-      "prompt_mm": "စကားလုံးတွေကို အစဉ်လိုက်စီပြီး sentence အမှန်ဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "We eated rice.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She went to school",
-        "she went to school."
+        "We ate rice"
       ],
-      "explain_mm": "Subject + အတိတ် verb + ... ပုံစံအတိုင်း သုံးရပါတယ် → She went to school."
+      "explain_mm": "eat → ate ။  ➝ We ate rice."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — about YESTERDAY. Write 5–8 sentences about yesterday using irregular past verbs (went, ate, had, drank, slept …).",
-      "prompt_mm": "အပိုင်း ၁ — မနေ့ကအကြောင်း။ မနေ့က ကိုယ်ဘာတွေလုပ်ခဲ့လဲဆိုတာကို irregular past verb တွေ (went, ate, had, drank, slept …) သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ရအောင်။ ရေးပြီးရင် စာအုပ်ထဲမှာကူးပြီး scan ဖတ်တင်ပေးပါ — ဒါမှမဟုတ် အောက်ကနေရာမှာ တစ်ကြောင်းချင်းစီ ရိုက်ထည့်ပြီး တင်လို့လည်းရပါတယ်နော်။",
-      "model": "Yesterday I {v}woke up{/v} at six. I {v}had{/v} breakfast at home. I {v}went{/v} to work by bus. At lunch I {v}ate{/v} noodles. In the evening I {v}read{/v} a book.",
-      "explain_mm": "Irregular verb တွေရဲ့ past form ကို မှန်အောင် သုံးပေးပါနော် — ဥပမာ go → went, eat → ate ဆိုတာမျိုးပေါ့။",
-      "grading": {
-        "grammar_point": "Past simple: irregular verbs",
-        "rule": "Irregular verbs change form in the past (go→went, eat→ate, have→had); they do not take -ed. The form is the same for all subjects.",
-        "must_check": [
-          "Correct irregular past forms (not -ed)",
-          "Stays in the past",
-          "Same form for all subjects",
-          "5–8 sentences, at least 3 different verbs"
-        ],
-        "common_mm_errors": [
-          "Adding -ed to irregulars (goed, eated, drinked)",
-          "Using the base form (Yesterday I go)",
-          "Mixing present and past"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I drinked tea.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I drank tea"
+      ],
+      "explain_mm": "drink → drank ။  ➝ I drank tea."
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a past trip. Write a short paragraph (4–6 sentences) about a trip or a special day, using irregular past verbs.",
-      "prompt_mm": "အပိုင်း ၂ — အတိတ်က ခရီးစဉ်တစ်ခုအကြောင်း။ ကိုယ်သွားခဲ့တဲ့ ခရီးတစ်ခု ဒါမှမဟုတ် အမှတ်တရနေ့တစ်နေ့အကြောင်းကို irregular past verb တွေသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် စာအုပ်ထဲကူးပြီး scan ဖတ်တင်ပေးပါနော်။",
-      "model": "{t}Last year{/t} we {v}went{/v} to Inle Lake. We {v}woke up{/v} early and {v}had{/v} a big breakfast. We {v}ate{/v} fresh fish and {v}drank{/v} sweet tea. At night we {v}slept{/v} in a small hotel.",
-      "explain_mm": "စာပိုဒ်တစ်ခုလုံးကို အတိတ်ကာလ (Past Tense) နဲ့ ရေးပေးပြီး irregular verb ပုံစံတွေကိုလည်း မှန်မှန်ကန်ကန် သုံးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "Past simple: irregular verbs",
-        "rule": "A short past narrative using irregular past forms correctly.",
-        "must_check": [
-          "Irregular past forms correct",
-          "Whole paragraph stays in the past",
-          "No -ed on irregular verbs",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "-ed on irregulars",
-          "Base form instead of past",
-          "Tense switching"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She haved a good time.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She had a good time"
+      ],
+      "explain_mm": "have → had ။  ➝ She had a good time."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ အိမ်ပြန်ခဲ့တယ်။",
+      "options": [
+        "She",
+        "went",
+        "home"
+      ],
+      "answers": [
+        "She went home"
+      ],
+      "explain_mm": "go → went ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ ပျော်ခဲ့တယ်။",
+      "options": [
+        "We",
+        "had",
+        "a",
+        "good",
+        "time"
+      ],
+      "answers": [
+        "We had a good time"
+      ],
+      "explain_mm": "have → had ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ အများကြီး စားခဲ့တယ်။",
+      "options": [
+        "He",
+        "ate",
+        "too",
+        "much"
+      ],
+      "answers": [
+        "He ate too much"
+      ],
+      "explain_mm": "eat → ate ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ မနေ့ည က ကော်ဖီ သောက်ခဲ့တယ်။",
+      "options": [
+        "They",
+        "drank",
+        "coffee",
+        "last",
+        "night"
+      ],
+      "answers": [
+        "They drank coffee last night"
+      ],
+      "explain_mm": "drink → drank ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် မနေ့က စာအုပ် ဖတ်ခဲ့တယ်။",
+      "options": [
+        "I",
+        "read",
+        "a",
+        "book",
+        "yesterday"
+      ],
+      "answers": [
+        "I read a book yesterday"
+      ],
+      "explain_mm": "read → read ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း စောစော အိပ်ခဲ့တယ်။",
+      "options": [
+        "You",
+        "slept",
+        "early"
+      ],
+      "answers": [
+        "You slept early"
+      ],
+      "explain_mm": "sleep → slept ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Irregular verbs change shape: go → {v}went{/v} · eat → {v}ate{/v} · have → {v}had{/v} · drink → {v}drank{/v}.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — irregular verb တွေက -ed မပေါင်းဘဲ ပုံစံပြောင်းတယ် — go → went ၊ eat → ate ၊ have → had ၊ drink → drank ။"
 }

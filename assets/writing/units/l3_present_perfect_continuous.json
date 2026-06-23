@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She ___ been working here since 2020.",
-      "prompt_mm": "သူမက ၂၀၂၀ ကတည်းက ဒီမှာ အလုပ်လုပ်နေတာပါ။",
+      "prompt_mm": "သူမ ၂၀၂၀ ကတည်းက ဒီမှာ အလုပ်လုပ်နေတယ်။",
       "options": [
         "has",
         "have",
@@ -169,13 +169,13 @@
       "answers": [
         "has"
       ],
-      "explain_mm": "Subject က he/she/it ဖြစ်တဲ့အတွက် → has been + verb-ing ပုံစံကိုသုံးပြီး → has been working ဖြစ်သွားပါတယ်။"
+      "explain_mm": "she → has been + ‑ing ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I have been studying English ___ three years.",
-      "prompt_mm": "ကျွန်တော် အင်္ဂလိပ်စာ လေ့လာနေတာ သုံးနှစ်ရှိပါပြီ။",
+      "prompt_mm": "အင်္ဂလိပ်စာ သင်နေတာ ၃ နှစ်ရှိပြီ။",
       "options": [
         "for",
         "since",
@@ -184,97 +184,261 @@
       "answers": [
         "for"
       ],
-      "explain_mm": "ကြာချိန် (three years) ကို ပြောချင်တာဖြစ်လို့ 'for' ကို သုံးရပါမယ်။ 'since' ကတော့ စတင်တဲ့အချိန်အတွက်ပဲ သုံးပါတယ်။"
+      "explain_mm": "ကြာချိန် → for three years ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I ___ here since 2015.",
+      "prompt_mm": "ဒီမှာ နေလာတာ ၂၀၁၅ ကတည်းကပါ။",
+      "options": [
+        "have been living",
+        "am living",
+        "live"
+      ],
+      "answers": [
+        "have been living"
+      ],
+      "explain_mm": "have been + ‑ing → have been living ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He has been playing football ___ 3 o'clock.",
+      "prompt_mm": "သူ ၃ နာရီကတည်းက ဘောလုံး ကစားနေတယ်။",
+      "options": [
+        "since",
+        "for",
+        "from"
+      ],
+      "answers": [
+        "since"
+      ],
+      "explain_mm": "အချိန်အမှတ် → since 3 o'clock ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ been waiting for an hour.",
+      "prompt_mm": "သူတို့ တစ်နာရီကြာ စောင့်နေတယ်။",
+      "options": [
+        "have",
+        "has",
+        "are"
+      ],
+      "answers": [
+        "have"
+      ],
+      "explain_mm": "they → have been + ‑ing ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "It ___ ___ ___ (rain) all morning. (3 words)",
-      "prompt_mm": "မနက်တစ်မနက်လုံး မိုးရွာနေတာပါ။ ( has been rain… ပုံစံနဲ့ စကားလုံး ၃ လုံး ဖြည့်ပေးပါ )",
+      "prompt_en": "We ___ here for ten years.  ( live )",
+      "prompt_mm": "ဒီမှာ နေလာတာ ၁၀ နှစ်ရှိပြီ။",
       "answers": [
-        "has been raining"
+        "have been living"
       ],
-      "explain_mm": "Subject က 'it' ဖြစ်တဲ့အတွက် → has been + verb-ing ပုံစံကိုသုံးပြီး → has been raining ဖြစ်သွားပါတယ်။"
+      "explain_mm": "we → have been + ‑ing → have been living ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ football since 3 o'clock.  ( play )",
+      "prompt_mm": "သူ ၃ နာရီကတည်းက ဘောလုံး ကစားနေတယ်။",
+      "answers": [
+        "has been playing"
+      ],
+      "explain_mm": "he → has been + ‑ing ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I'm tired because I ___ all day.  ( work )",
+      "prompt_mm": "တစ်နေ့လုံး အလုပ်လုပ်နေလို့ ပင်ပန်းတယ်။",
+      "answers": [
+        "have been working"
+      ],
+      "explain_mm": "have been + ‑ing → have been working ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I have been studying English ___ three years.  ( length )",
+      "prompt_mm": "အင်္ဂလိပ်စာ သင်နေတာ ၃ နှစ်ရှိပြီ။",
+      "answers": [
+        "for"
+      ],
+      "explain_mm": "ကြာချိန် → for ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ here since 2018.  ( work )",
+      "prompt_mm": "သူမ ၂၀၁၈ ကတည်းက ဒီမှာ အလုပ်လုပ်နေတယ်။",
+      "answers": [
+        "has been working"
+      ],
+      "explain_mm": "she → has been + ‑ing ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I am living here since 2015.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျလေးကို အမှန်ဖြစ်အောင် ပြင်ပေးပါ။",
+      "prompt_en": "She have been working here since 2020.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I have been living here since 2015",
-        "i have been living here since 2015.",
-        "I have been living here since 2015."
+        "She has been working here since 2020"
       ],
-      "explain_mm": "အတိတ်ကနေစပြီး အခုထိ ဆက်ဖြစ်နေတဲ့ အဓိပ္ပာယ်ဖြစ်လို့ → have been + verb-ing ပုံစံကိုသုံးပြီး → 'I have been living …' ဆိုပြီး ဖြစ်သွားပါတယ်။"
+      "explain_mm": "she → has ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  been  /  have  /  waiting  /  we  /  an  /  for  /  hour",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ရေးပေးပါ။ ( We have been waiting + for an hour )",
+      "prompt_en": "I have been study English for three years.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "We have been waiting for an hour",
-        "we have been waiting for an hour.",
-        "We have been waiting for an hour."
+        "I have been studying English for three years"
       ],
-      "explain_mm": "ပုံစံက have been + verb-ing + for + ကြာချိန် ဖြစ်တဲ့အတွက် → 'We have been waiting for an hour' ဆိုပြီး ဖြစ်သွားပါတယ်။"
+      "explain_mm": "have been နောက်မှာ verb‑ing (studying) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — how long. Write 5–8 sentences about things you have been doing that started in the past and still continue, using have/has been + -ing with 'for' or 'since'.",
-      "prompt_mm": "အပိုင်း ၁ — ဘယ်လောက်ကြာပြီလဲ။ အတိတ်ကနေစပြီး အခုထိ ဆက်လုပ်နေဆဲ အရာတွေအကြောင်းကို have/has been + -ing ပုံစံကို for ဒါမှမဟုတ် since နဲ့ တွဲသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းအထိ ရေးပေးပါ။ ပြီးရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်စေ၊ ဒီမှာပဲ ရိုက်ထည့်ပြီးဖြစ်စေ တင်ပေးနိုင်ပါတယ်နော်။",
-      "model": "I {v}have been learning{/v} English for two years. My family {v}has been living{/v} in this town since 2015. I {v}have been working{/v} on a new project for a month. My friends {v}have been planning{/v} a trip since January. It {v}has been getting{/v} colder for a few weeks.",
-      "explain_mm": "ပုံစံက have/has + been + verb-ing ပါ။ for ကို ကြာချိန်အတွက်သုံးပြီး · since ကိုတော့ စတင်တဲ့အချိန်အတွက် သုံးရပါမယ်။",
-      "grading": {
-        "grammar_point": "Present perfect continuous",
-        "rule": "have/has + been + verb-ing for an action that began in the past and continues, with for / since.",
-        "must_check": [
-          "have/has + been + verb-ing structure",
-          "has for he/she/it, have for the rest",
-          "Correct for (duration) vs since (start point)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Present simple/continuous for ongoing-since-past (I am studying for 3 years)",
-          "Dropping 'been' (I have working)",
-          "for/since mixed up"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "We have been living here since ten years.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "We have been living here for ten years"
+      ],
+      "explain_mm": "ကြာချိန် → for (since မဟုတ်) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a busy stretch. Write a short paragraph (4–6 sentences) about what you and the people around you have been doing lately, using the present perfect continuous.",
-      "prompt_mm": "အပိုင်း ၂ — အလုပ်များတဲ့ ကာလလေးတစ်ခု။ မကြာသေးခင်က ကိုယ်နဲ့ ကိုယ့်ပတ်ဝန်းကျင်ကလူတွေ ဘာတွေ ဆက်တိုက်လုပ်ဆောင်နေခဲ့ကြသလဲ ဆိုတာကို present perfect continuous သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းအထိ) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "Life has been busy lately. I {v}have been studying{/v} for my final exams for weeks. My mother {v}has been cooking{/v} extra food to keep me going. My friends {v}have been revising{/v} together every night. We {v}have been sleeping{/v} very little. I {v}have been hoping{/v} the exams finish soon.",
-      "explain_mm": "have/has + been + verb-ing ပုံစံကို သုံးပေးပါ။ အဓိကကတော့ အလုပ်တစ်ခုကို အချိန်တစ်ခုအထိ ဆက်တိုက်လုပ်နေတဲ့အကြောင်းကို ပြောပြဖို့ပါပဲ။",
-      "grading": {
-        "grammar_point": "Present perfect continuous",
-        "rule": "Describe recent ongoing activities with have/has + been + verb-ing.",
-        "must_check": [
-          "Correct have/has + been + verb-ing form",
-          "Subject–auxiliary agreement",
-          "Ongoing / recent meaning",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Plain present continuous (am/is/are + -ing) for the duration",
-          "Missing 'been'",
-          "Wrong auxiliary (has/have)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He has been play football since 3 o'clock.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He has been playing football since 3 o'clock"
+      ],
+      "explain_mm": "has been နောက်မှာ verb‑ing (playing) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ ဒီမှာ နေလာတာ ၁၀ နှစ်ရှိပြီ။",
+      "options": [
+        "We",
+        "have",
+        "been",
+        "living",
+        "here",
+        "for",
+        "ten",
+        "years"
+      ],
+      "answers": [
+        "We have been living here for ten years"
+      ],
+      "explain_mm": "have been + ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ၃ နာရီကတည်းက ဘောလုံး ကစားနေတယ်။",
+      "options": [
+        "He",
+        "has",
+        "been",
+        "playing",
+        "football",
+        "since",
+        "3",
+        "o'clock"
+      ],
+      "answers": [
+        "He has been playing football since 3 o'clock"
+      ],
+      "explain_mm": "has been + ‑ing ၊ since + အချိန်အမှတ် ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "တစ်နေ့လုံး အလုပ်လုပ်နေလို့ ပင်ပန်းတယ်။",
+      "options": [
+        "I",
+        "am",
+        "tired",
+        "because",
+        "I",
+        "have",
+        "been",
+        "working",
+        "all",
+        "day"
+      ],
+      "answers": [
+        "I am tired because I have been working all day"
+      ],
+      "explain_mm": "have been + ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မျက်လုံးတွေ နီနေတယ် — ငိုနေတာလား။",
+      "options": [
+        "Have",
+        "you",
+        "been",
+        "crying"
+      ],
+      "answers": [
+        "Have you been crying"
+      ],
+      "explain_mm": "အမေး → Have + subject + been + ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ၂၀၂၀ ကတည်းက ဒီမှာ အလုပ်လုပ်နေတယ်။",
+      "options": [
+        "She",
+        "has",
+        "been",
+        "working",
+        "here",
+        "since",
+        "2020"
+      ],
+      "answers": [
+        "She has been working here since 2020"
+      ],
+      "explain_mm": "has been + ‑ing ၊ since ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အင်္ဂလိပ်စာ သင်နေတာ ၃ နှစ်ရှိပြီ။",
+      "options": [
+        "I",
+        "have",
+        "been",
+        "studying",
+        "English",
+        "for",
+        "three",
+        "years"
+      ],
+      "answers": [
+        "I have been studying English for three years"
+      ],
+      "explain_mm": "for + ကြာချိန် ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}have / has been{/v} + verb-{v}ing{/v} — an action continuing from the past until now.  {v}for{/v} + length · {v}since{/v} + point.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — have / has been + verb‑ing — အတိတ်က စပြီး အခုထိ ဆက်ဖြစ်နေဆဲ ။ for + ကြာချိန် ၊ since + အချိန်အမှတ် ။"
 }

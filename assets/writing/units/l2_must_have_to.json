@@ -166,7 +166,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She ___ work this weekend.",
-      "prompt_mm": "သူမ ဒီ စနေ၊ တနင်္ဂနွေမှာ အလုပ်လုပ်ရပါတယ်။",
+      "prompt_mm": "သူမ ဒီစနေတနင်္ဂနွေ အလုပ်လုပ်ရတယ်။",
       "options": [
         "has to",
         "have to",
@@ -175,28 +175,13 @@
       "answers": [
         "has to"
       ],
-      "explain_mm": "Subject က ‘she’ (he/she/it) ဖြစ်တဲ့အတွက် has to + verb (base form) ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "she → has to + base ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "It's free, so we ___ pay. (not necessary)",
-      "prompt_mm": "ဒါက အခမဲ့ဖြစ်တဲ့အတွက် ပိုက်ဆံ ပေးစရာမလိုပါဘူး။",
-      "options": [
-        "don't have to",
-        "mustn't",
-        "have to"
-      ],
-      "answers": [
-        "don't have to"
-      ],
-      "explain_mm": "လုပ်ဖို့ ‘မလိုအပ်ဘူး’ (your choice) ဆိုတဲ့ အဓိပ္ပာယ်အတွက် don't have to ကို သုံးပါတယ်။ mustn't ကို သုံးလိုက်ရင်တော့ ‘တားမြစ်တယ်’ ဆိုတဲ့ အဓိပ္ပာယ် ဖြစ်သွားမှာမို့လို့ သတိထားပါနော်။"
-    },
-    {
-      "kind": "mcq",
-      "grade": "auto",
-      "prompt_en": "This is a library. You ___ talk loudly. (forbidden)",
-      "prompt_mm": "ဒီနေရာက စာကြည့်တိုက်ဖြစ်တဲ့အတွက် ကျယ်ကျယ် မပြောရပါဘူးနော်။ (ဒါက တားမြစ်ချက်တစ်ခုပါ)",
+      "prompt_en": "This is a library. You ___ talk loudly.",
+      "prompt_mm": "ဒါက စာကြည့်တိုက်ပါ။ ကျယ်ကျယ် မပြောရဘူး။",
       "options": [
         "mustn't",
         "don't have to",
@@ -205,84 +190,245 @@
       "answers": [
         "mustn't"
       ],
-      "explain_mm": "တစ်ခုခုကို ‘တားမြစ်’ ချင်တယ်ဆိုရင် mustn't (must not) ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "တားမြစ် → mustn't ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "It's free, so we ___ pay.",
+      "prompt_mm": "အခမဲ့ဖြစ်လို့ ပိုက်ဆံ ပေးစရာမလိုဘူး။",
+      "options": [
+        "don't have to",
+        "mustn't",
+        "have to"
+      ],
+      "answers": [
+        "don't have to"
+      ],
+      "explain_mm": "မလိုအပ် → don't have to ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I ___ finish this today.",
+      "prompt_mm": "ဒါကို ဒီနေ့ ပြီးအောင် လုပ်ရမယ်။",
+      "options": [
+        "must",
+        "musts",
+        "must to"
+      ],
+      "answers": [
+        "must"
+      ],
+      "explain_mm": "မဖြစ်မနေ → must + base ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He ___ wear a uniform at school.",
+      "prompt_mm": "သူ ကျောင်းမှာ ယူနီဖောင်း ဝတ်ရတယ်။",
+      "options": [
+        "has to",
+        "have to",
+        "must to"
+      ],
+      "answers": [
+        "has to"
+      ],
+      "explain_mm": "he → has to ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "He ___ (have to) wear a helmet at work.",
-      "prompt_mm": "သူ အလုပ်မှာ ဦးထုပ် ဆောင်းရတယ်။ (have to ကို သုံးပေးပါ)",
+      "prompt_en": "I ___ finish this today.  ( must )",
+      "prompt_mm": "ဒါကို ဒီနေ့ ပြီးအောင် လုပ်ရမယ်။",
       "answers": [
-        "has to"
+        "must finish"
       ],
-      "explain_mm": "Subject က ‘he’ ဖြစ်တဲ့အတွက် has to ကို သုံးရမှာပါ (have to မဟုတ်ပါဘူး)။"
+      "explain_mm": "must + base → must finish ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ work on Saturday.  ( has to )",
+      "prompt_mm": "သူမ စနေနေ့ အလုပ်လုပ်ရတယ်။",
+      "answers": [
+        "has to work"
+      ],
+      "explain_mm": "she → has to + base ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ pay — it's free.  ( negative necessity )",
+      "prompt_mm": "ပိုက်ဆံ ပေးစရာမလိုဘူး — အခမဲ့ပါ။",
+      "answers": [
+        "don't have to"
+      ],
+      "explain_mm": "မလိုအပ် → don't have to ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "You ___ smoke here.  ( forbidden )",
+      "prompt_mm": "ဒီမှာ ဆေးလိပ် မသောက်ရဘူး။",
+      "answers": [
+        "mustn't"
+      ],
+      "explain_mm": "တားမြစ် → mustn't ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ wear a uniform.  ( obligation, have to )",
+      "prompt_mm": "သူတို့ ယူနီဖောင်း ဝတ်ရတယ်။",
+      "answers": [
+        "have to wear"
+      ],
+      "explain_mm": "they → have to + base ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "You must to finish your homework.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "She have to work on Saturday.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "You must finish your homework",
-        "you must finish your homework."
+        "She has to work on Saturday"
       ],
-      "explain_mm": "must ရဲ့နောက်မှာ verb base form ကိုပဲ သုံးရပါတယ်၊ ‘to’ ထည့်စရာမလိုပါဘူး။ ဥပမာ → must finish။"
+      "explain_mm": "she → has to ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — rules and duties. Write 5–8 sentences about the rules and duties in your school, job or home, using must, have to / has to, mustn't and don't have to.",
-      "prompt_mm": "အပိုင်း ၁ — စည်းကမ်းနဲ့ တာဝန်များ။ ကိုယ့်ရဲ့ကျောင်း၊ အလုပ်၊ ဒါမှမဟုတ် အိမ်မှာရှိတဲ့ စည်းကမ်းတွေနဲ့ တာဝန်တွေအကြောင်းကို must, have to / has to, mustn't, don't have to တို့ကို သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော်။ ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "At my school we {v}must wear{/v} a uniform. We {v}have to{/v} arrive by eight. My teacher {v}has to{/v} mark our tests. We {v}mustn't run{/v} in the corridors. We {v}don't have to{/v} stay after class.",
-      "explain_mm": "သတိထားရမှာတွေကတော့: must / have to / has to နောက်မှာ verb (base form) လိုက်ရပါမယ်။ Subject က he/she/it ဆိုရင် has to သုံးပေးပါ။ mustn't (တားမြစ်တာ) နဲ့ don't have to (မလိုအပ်တာ) ကိုလည်း အဓိပ္ပာယ်မမှားအောင် သေချာခွဲပြီး သုံးကြည့်ပါနော်။",
-      "grading": {
-        "grammar_point": "must / have to (obligation)",
-        "rule": "must/have to/has to + base verb for obligation. has to for he/she/it. mustn't = forbidden; don't have to = not necessary.",
-        "must_check": [
-          "has to for he/she/it; have to for others",
-          "Base verb after must/have to (no 'to' after must)",
-          "mustn't vs don't have to used with the right meaning",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "must to + verb",
-          "have to for he/she/it (should be has to)",
-          "Confusing mustn't and don't have to"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "You must to finish it.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "You must finish it"
+      ],
+      "explain_mm": "must နောက်မှာ base — ‘to’ မလို ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a typical day's obligations. Write a short paragraph (4–6 sentences) about what you have to / don't have to do on a normal day, using have to / has to and don't have to.",
-      "prompt_mm": "အပိုင်း ၂ — နေ့စဉ် တာဝန်များ။ ကိုယ့်ရဲ့ ပုံမှန်နေ့တစ်နေ့မှာ ဘာတွေလုပ်ရတယ်၊ ဘာတွေလုပ်စရာမလိုဘူး ဆိုတာကို have to / has to နဲ့ don't have to တို့ကို သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "On weekdays I {v}have to{/v} get up at six. I {v}have to{/v} catch the bus to work. My sister {v}has to{/v} take the children to school. In the evening I {v}don't have to{/v} cook — my mother does it. At the weekend we {v}don't have to{/v} wake up early.",
-      "explain_mm": "have to / has to (တာဝန်ရှိတာ) နဲ့ don't have to (မလိုအပ်တာ) ကို အဓိပ္ပာယ်မှန်အောင် သုံးပေးပါနော်။ Subject က he/she/it ဆိုရင် has to သုံးဖို့ မမေ့ပါနဲ့။",
-      "grading": {
-        "grammar_point": "have to (obligation)",
-        "rule": "have to/has to + base verb for daily obligations; don't/doesn't have to for what isn't necessary.",
-        "must_check": [
-          "Correct have to / has to agreement",
-          "don't/doesn't have to for 'not necessary'",
-          "Base verb forms",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "have to for he/she/it",
-          "Using mustn't to mean 'not necessary'",
-          "Adding 'to' after must"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He have to go now.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He has to go now"
+      ],
+      "explain_mm": "he → has to ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "You don't must smoke here.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "You mustn't smoke here"
+      ],
+      "explain_mm": "တားမြစ် → mustn't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါကို ဒီနေ့ ပြီးအောင် လုပ်ရမယ်။",
+      "options": [
+        "I",
+        "must",
+        "finish",
+        "this",
+        "today"
+      ],
+      "answers": [
+        "I must finish this today"
+      ],
+      "explain_mm": "must + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ စနေနေ့ အလုပ်လုပ်ရတယ်။",
+      "options": [
+        "She",
+        "has",
+        "to",
+        "work",
+        "on",
+        "Saturday"
+      ],
+      "answers": [
+        "She has to work on Saturday"
+      ],
+      "explain_mm": "she → has to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပိုက်ဆံ ပေးစရာမလိုဘူး — အခမဲ့ပါ။",
+      "options": [
+        "We",
+        "don't",
+        "have",
+        "to",
+        "pay"
+      ],
+      "answers": [
+        "We don't have to pay"
+      ],
+      "explain_mm": "မလိုအပ် → don't have to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီမှာ ဆေးလိပ် မသောက်ရဘူး။",
+      "options": [
+        "You",
+        "mustn't",
+        "smoke",
+        "here"
+      ],
+      "answers": [
+        "You mustn't smoke here"
+      ],
+      "explain_mm": "တားမြစ် → mustn't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ယူနီဖောင်း ဝတ်ရတယ်။",
+      "options": [
+        "He",
+        "has",
+        "to",
+        "wear",
+        "a",
+        "uniform"
+      ],
+      "answers": [
+        "He has to wear a uniform"
+      ],
+      "explain_mm": "he → has to ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ မြန်မြန် လုပ်ရမယ်။",
+      "options": [
+        "We",
+        "must",
+        "hurry"
+      ],
+      "answers": [
+        "We must hurry"
+      ],
+      "explain_mm": "must + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}must{/v} / {v}have to{/v} + base — obligation.  {v}mustn't{/v} = forbidden · {v}don't have to{/v} = not necessary.  he/she/it → {v}has to{/v}.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — must / have to + base — မဖြစ်မနေ လုပ်ရမယ် ။ mustn't = တားမြစ် ၊ don't have to = မလိုအပ် ။ he/she/it → has to ။"
 }

@@ -126,7 +126,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Every day she ___ to work.",
-      "prompt_mm": "နေ့တိုင်း သူမ အလုပ်ကို သွားတယ်။ (အလေ့အထ)",
+      "prompt_mm": "သူမ နေ့တိုင်း အလုပ်ကို သွားတယ်။",
       "options": [
         "goes",
         "is going",
@@ -135,13 +135,13 @@
       "answers": [
         "goes"
       ],
-      "explain_mm": "‘every day’ — အလေ့အထမို့ present simple → goes."
+      "explain_mm": "every day → အလေ့အထ → present simple (goes) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Look! The baby ___ now.",
-      "prompt_mm": "ကြည့်စမ်း! ကလေး အခု ... (ဖြစ်နေဆဲ)",
+      "prompt_mm": "ကြည့်စမ်း! ကလေး အခု အိပ်နေတယ်။",
       "options": [
         "sleeps",
         "is sleeping",
@@ -150,35 +150,13 @@
       "answers": [
         "is sleeping"
       ],
-      "explain_mm": "‘Look! … now’ — အခုဖြစ်နေဆဲမို့ present continuous → is sleeping."
-    },
-    {
-      "kind": "gap_fill",
-      "grade": "auto",
-      "prompt_en": "I usually ___ (drink) tea, but right now I ___ (drink) coffee.",
-      "prompt_mm": "ကျွန်တော် ပုံမှန် လက်ဖက်ရည် သောက်ပေမဲ့ အခုတော့ ကော်ဖီ သောက်နေတယ်။",
-      "answers": [
-        "drink ... am drinking",
-        "drink, am drinking"
-      ],
-      "explain_mm": "usually → simple (drink); right now → continuous (am drinking)။"
-    },
-    {
-      "kind": "correct_error",
-      "grade": "auto",
-      "prompt_en": "Every day I am going to school.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။ ( အလေ့အထ )",
-      "answers": [
-        "Every day I go to school",
-        "every day i go to school."
-      ],
-      "explain_mm": "‘every day’ — အလေ့အထမို့ present simple → I go (am going မဟုတ်ဘူး)။"
+      "explain_mm": "Look! / now → ဖြစ်နေဆဲ → is sleeping ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Water ___ at 100°C.",
-      "prompt_mm": "ရေ ၁၀၀°C မှာ ဆူတယ်။ (အမှန်တရား)",
+      "prompt_mm": "ရေဟာ ၁၀၀°C မှာ ဆူတယ်။",
       "options": [
         "is boiling",
         "boils",
@@ -187,63 +165,234 @@
       "answers": [
         "boils"
       ],
-      "explain_mm": "အမှန်တရား (fact) → present simple → boils."
+      "explain_mm": "အမှန်တရား → present simple (boils) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 6,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — habit vs now. Write 6–8 sentences. For each habit (present simple), add what is happening right now (present continuous). E.g. \"I usually walk to work, but today I am taking the bus.\"",
-      "prompt_mm": "အပိုင်း ၁ — အလေ့အထ vs အခု။ sentence ၆–၈ ကြောင်း ရေးပါ။ အလေ့အထ (present simple) တစ်ခုစီအတွက် အခု ဖြစ်နေတာ (present continuous) ကို တွဲရေးပါ။ ဥပမာ — \"I usually walk to work, but today I am taking the bus.\" ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ ရိုက်ထည့်ပါ။",
-      "model": "I usually {v}drink{/v} tea, but right now I {v}am drinking{/v} coffee. She normally {v}works{/v} in the office, but today she {v}is working{/v} from home. We usually {v}eat{/v} at home, but tonight we {v}are eating{/v} out.",
-      "explain_mm": "every day / usually → simple; now / today / right now → continuous (be + -ing)။",
-      "grading": {
-        "grammar_point": "Present simple vs present continuous",
-        "rule": "Simple for habits/facts (every day, usually); continuous for actions happening now (right now, today). Continuous uses am/is/are + -ing.",
-        "must_check": [
-          "Habits use the present simple",
-          "Now-actions use am/is/are + -ing",
-          "Signal words match the tense",
-          "Both tenses appear correctly"
-        ],
-        "common_mm_errors": [
-          "Continuous for habits (Every day I am going)",
-          "Simple for now (Look! she drinks)",
-          "Dropping be in the continuous"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ tea every morning.",
+      "prompt_mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။",
+      "options": [
+        "drinks",
+        "is drinking",
+        "drink"
+      ],
+      "answers": [
+        "drinks"
+      ],
+      "explain_mm": "every morning → present simple (drinks) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — this week is different. Write a short paragraph (4–6 sentences) about what someone usually does, and what they are doing differently this week / right now.",
-      "prompt_mm": "အပိုင်း ၂ — ဒီအပတ် ထူးခြားတယ်။ တစ်ယောက်ယောက် ပုံမှန် ဘာလုပ်လဲ၊ ဒီအပတ်/အခု ဘာ ကွဲပြားစွာ လုပ်နေလဲဆိုတာ စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
-      "model": "My father usually {v}drives{/v} to work. He always {v}comes{/v} home at six. But this week his car is broken, so he {v}is taking{/v} the train. Right now he {v}is waiting{/v} at the station, and he {v}is reading{/v} the news.",
-      "explain_mm": "ပုံမှန်အပိုင်းကို present simple၊ ဒီအပတ်/အခုအပိုင်းကို present continuous နဲ့ ရေးပါ။",
-      "grading": {
-        "grammar_point": "Present simple vs present continuous",
-        "rule": "Contrast a usual routine (simple) with a temporary/now situation (continuous) in one paragraph.",
-        "must_check": [
-          "Habits in present simple",
-          "Temporary/now actions in continuous (be + -ing)",
-          "Clear contrast between the two",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Wrong tense for the time signal",
-          "Dropping be in continuous",
-          "Using continuous for permanent facts"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Look! It ___ now.",
+      "prompt_mm": "ကြည့်စမ်း! အခု မိုးရွာနေတယ်။",
+      "options": [
+        "rains",
+        "is raining",
+        "rain"
+      ],
+      "answers": [
+        "is raining"
+      ],
+      "explain_mm": "Look! / now → present continuous (is raining) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ tea every morning.  ( drink )",
+      "prompt_mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။ ( အလေ့အထ )",
+      "answers": [
+        "drinks"
+      ],
+      "explain_mm": "every morning → present simple → drinks ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Look! She ___ coffee now.  ( drink )",
+      "prompt_mm": "ကြည့်စမ်း! သူမ အခု ကော်ဖီ သောက်နေတယ်။ ( ဖြစ်နေဆဲ )",
+      "answers": [
+        "is drinking"
+      ],
+      "explain_mm": "Look! / now → present continuous → is drinking ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I usually ___ at home.  ( work )",
+      "prompt_mm": "ကျွန်တော် ပုံမှန် အိမ်မှာ အလုပ်လုပ်တယ်။",
+      "answers": [
+        "work"
+      ],
+      "explain_mm": "usually → present simple → work ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Today I ___ in the office.  ( work )",
+      "prompt_mm": "ဒီနေ့တော့ ရုံးမှာ အလုပ်လုပ်နေတယ်။",
+      "answers": [
+        "am working"
+      ],
+      "explain_mm": "today/now → present continuous → am working ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The sun ___ in the east.  ( rise )",
+      "prompt_mm": "နေဟာ အရှေ့ဘက်ကနေ ထွက်တယ်။",
+      "answers": [
+        "rises"
+      ],
+      "explain_mm": "အမှန်တရား → present simple → rises ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Every day she is going to work.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Every day she goes to work"
+      ],
+      "explain_mm": "every day → present simple (goes) ။  ➝ Every day she goes to work."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Look! The baby sleeps now.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Look! The baby is sleeping now"
+      ],
+      "explain_mm": "Look! / now → present continuous (is sleeping) ။  ➝ Look! The baby is sleeping now."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Water is boiling at 100°C.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Water boils at 100°C"
+      ],
+      "explain_mm": "အမှန်တရား → present simple (boils) ။  ➝ Water boils at 100°C."
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I am working at home every day.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I work at home every day"
+      ],
+      "explain_mm": "every day → present simple (work) ။  ➝ I work at home every day."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ မနက်တိုင်း လက်ဖက်ရည် သောက်တယ်။",
+      "options": [
+        "She",
+        "drinks",
+        "tea",
+        "every",
+        "morning"
+      ],
+      "answers": [
+        "She drinks tea every morning"
+      ],
+      "explain_mm": "every morning → present simple ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ အခု ကော်ဖီ သောက်နေတယ်။",
+      "options": [
+        "She",
+        "is",
+        "drinking",
+        "coffee",
+        "now"
+      ],
+      "answers": [
+        "She is drinking coffee now"
+      ],
+      "explain_mm": "now → present continuous ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ပုံမှန် အိမ်မှာ အလုပ်လုပ်တယ်။",
+      "options": [
+        "I",
+        "usually",
+        "work",
+        "at",
+        "home"
+      ],
+      "answers": [
+        "I usually work at home"
+      ],
+      "explain_mm": "usually → present simple ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီနေ့တော့ ရုံးမှာ အလုပ်လုပ်နေတယ်။",
+      "options": [
+        "Today",
+        "I",
+        "am",
+        "working",
+        "in",
+        "the",
+        "office"
+      ],
+      "answers": [
+        "Today I am working in the office"
+      ],
+      "explain_mm": "today → present continuous ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နေဟာ အရှေ့ဘက်ကနေ ထွက်တယ်။",
+      "options": [
+        "The",
+        "sun",
+        "rises",
+        "in",
+        "the",
+        "east"
+      ],
+      "answers": [
+        "The sun rises in the east"
+      ],
+      "explain_mm": "အမှန်တရား → present simple ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ အခု အင်္ဂလိပ်စာ လေ့လာနေကြတယ်။",
+      "options": [
+        "They",
+        "are",
+        "studying",
+        "English",
+        "now"
+      ],
+      "answers": [
+        "They are studying English now"
+      ],
+      "explain_mm": "now → present continuous ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Habit / fact → {v}present simple{/v} (every day, usually).   Now → {v}present continuous{/v} (now, Look!).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — အလေ့အထ/အမှန်တရား (every day, usually) → present simple ။ အခု ဖြစ်နေဆဲ (now, Look!) → present continuous ။"
 }

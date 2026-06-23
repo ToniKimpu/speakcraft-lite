@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "If you heat ice, it ___.",
-      "prompt_mm": "ရေခဲကို အပူပေးလိုက်ရင် အရည်ပျော်သွားပါတယ်။",
+      "prompt_mm": "ရေခဲကို အပူပေးရင် အရည်ပျော်တယ်။",
       "options": [
         "melts",
         "will melt",
@@ -169,13 +169,13 @@
       "answers": [
         "melts"
       ],
-      "explain_mm": "Zero conditional ဖြစ်ပြီး အမြဲတမ်းမှန်တဲ့အချက်မို့လို့ result clause မှာ present simple ကိုပဲ သုံးရပါမယ်။ ဒါကြောင့် 'melts' ပါ။ ('will melt' မဟုတ်ပါဘူး)"
+      "explain_mm": "zero conditional → result ပိုင်းမှာလည်း present → melts ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Plants die if they ___ enough water.",
-      "prompt_mm": "အပင်တွေက ရေအလုံအလောက်မရရင် သေသွားကြပါတယ်။",
+      "prompt_mm": "ရေ အလုံအလောက် မရရင် အပင်တွေ သေတယ်။",
       "options": [
         "don't get",
         "won't get",
@@ -184,97 +184,261 @@
       "answers": [
         "don't get"
       ],
-      "explain_mm": "If-clause မှာ present simple negative (အငြင်း) ပုံစံကို သုံးရမှာဖြစ်လို့ 'don't get' က အဖြေမှန်ဖြစ်ပါတယ်။"
+      "explain_mm": "if ပိုင်း → present (don't get) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "If water boils, it ___ into steam.",
+      "prompt_mm": "ရေ ဆူရင် ရေနွေးငွေ့ ဖြစ်တယ်။",
+      "options": [
+        "turns",
+        "will turn",
+        "turned"
+      ],
+      "answers": [
+        "turns"
+      ],
+      "explain_mm": "zero conditional → present → turns ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "If you mix blue and yellow, you ___ green.",
+      "prompt_mm": "အပြာနဲ့ အဝါ ရောရင် အစိမ်း ရတယ်။",
+      "options": [
+        "get",
+        "will get",
+        "got"
+      ],
+      "answers": [
+        "get"
+      ],
+      "explain_mm": "result → present → get ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Ice ___ if you heat it.",
+      "prompt_mm": "အပူပေးရင် ရေခဲ အရည်ပျော်တယ်။",
+      "options": [
+        "melts",
+        "will melt",
+        "melt"
+      ],
+      "answers": [
+        "melts"
+      ],
+      "explain_mm": "zero conditional → present → melts ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "If you ___ (mix) red and white, you get pink.",
-      "prompt_mm": "အနီရောင်နဲ့ အဖြူရောင်ကို ရောလိုက်ရင် ပန်းရောင် ရပါတယ်။ ( 'mix' ကို သုံးပေးပါ )",
+      "prompt_en": "If you ___ plants, they grow.  ( water )",
+      "prompt_mm": "အပင်တွေကို ရေလောင်းရင် ကြီးထွားလာတယ်။",
       "answers": [
-        "mix"
+        "water"
       ],
-      "explain_mm": "If-clause မှာ present simple ကို သုံးရမှာဖြစ်လို့ Verb ရဲ့ base form ဖြစ်တဲ့ 'mix' ကိုပဲ သုံးပေးရပါမယ်။"
+      "explain_mm": "if ပိုင်း → present → water ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "My dog ___ if a stranger comes in.  ( bark )",
+      "prompt_mm": "လူစိမ်း ဝင်လာရင် ခွေး ဟောင်တယ်။",
+      "answers": [
+        "barks"
+      ],
+      "explain_mm": "result → present → barks ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If the temperature drops below zero, water ___.  ( freeze )",
+      "prompt_mm": "အပူချိန် သုညအောက် ကျရင် ရေ ခဲတယ်။",
+      "answers": [
+        "freezes"
+      ],
+      "explain_mm": "result → present → freezes ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If you don't water plants, they ___.  ( die )",
+      "prompt_mm": "အပင်တွေကို ရေမလောင်းရင် သေသွားတယ်။",
+      "answers": [
+        "die"
+      ],
+      "explain_mm": "result → present → die ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Plants grow if they ___ sunlight.  ( get )",
+      "prompt_mm": "အပင်တွေ နေရောင် ရရင် ကြီးထွားတယ်။",
+      "answers": [
+        "get"
+      ],
+      "explain_mm": "if ပိုင်း → present → get ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "If water boils, it will turn into steam.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "If you heat ice, it will melt.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "If water boils, it turns into steam",
-        "if water boils, it turns into steam.",
+        "If you heat ice, it melts"
+      ],
+      "explain_mm": "zero conditional → present (melts, will မသုံး) ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Water freezes if the temperature will drop.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Water freezes if the temperature drops"
+      ],
+      "explain_mm": "if ပိုင်း → present (drops) ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "If you mix blue and yellow, you will get green.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "If you mix blue and yellow, you get green"
+      ],
+      "explain_mm": "result → present (get) ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "My dog barks if a stranger will come in.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "My dog barks if a stranger comes in"
+      ],
+      "explain_mm": "if ပိုင်း → present (comes) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေခဲကို အပူပေးရင် အရည်ပျော်တယ်။",
+      "options": [
+        "If",
+        "you",
+        "heat",
+        "ice",
+        "it",
+        "melts"
+      ],
+      "answers": [
+        "If you heat ice it melts"
+      ],
+      "explain_mm": "zero conditional → present ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "လူစိမ်း ဝင်လာရင် ခွေး ဟောင်တယ်။",
+      "options": [
+        "My",
+        "dog",
+        "barks",
+        "if",
+        "a",
+        "stranger",
+        "comes",
+        "in"
+      ],
+      "answers": [
+        "My dog barks if a stranger comes in"
+      ],
+      "explain_mm": "present + if + present ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အပြာနဲ့ အဝါ ရောရင် အစိမ်း ရတယ်။",
+      "options": [
+        "If",
+        "you",
+        "mix",
+        "blue",
+        "and",
+        "yellow",
+        "you",
+        "get",
+        "green"
+      ],
+      "answers": [
+        "If you mix blue and yellow you get green"
+      ],
+      "explain_mm": "result → present ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေ ဆူရင် ရေနွေးငွေ့ ဖြစ်တယ်။",
+      "options": [
+        "If",
+        "water",
+        "boils",
+        "it",
+        "turns",
+        "into",
+        "steam"
+      ],
+      "answers": [
         "If water boils it turns into steam"
       ],
-      "explain_mm": "Zero conditional မှာ 'will' ကို မသုံးရပါဘူး။ ဒါကြောင့် အဖြေမှန်က 'it turns into steam' ဖြစ်ပါတယ်။"
+      "explain_mm": "present ။"
     },
     {
-      "kind": "reorder",
+      "kind": "word_order",
       "grade": "auto",
-      "prompt_en": "Put in order:  feel  /  if  /  tired  /  don't  /  I  /  I  /  sleep",
-      "prompt_mm": "ပေးထားတဲ့ စကားစုတွေကို ပေါင်းပြီး sentence အမှန်ဖြစ်အောင် ရေးပေးပါ။ ( If I don't sleep + I feel tired )",
-      "answers": [
-        "If I don't sleep, I feel tired",
-        "if i don't sleep i feel tired.",
-        "If I don't sleep I feel tired"
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အပင်တွေကို ရေမလောင်းရင် သေတယ်။",
+      "options": [
+        "If",
+        "you",
+        "don't",
+        "water",
+        "plants",
+        "they",
+        "die"
       ],
-      "explain_mm": "ပုံစံက If + present simple (negative), present simple ဖြစ်တဲ့အတွက် 'If I don't sleep, I feel tired' ဆိုပြီး ရေးရပါမယ်။"
+      "answers": [
+        "If you don't water plants they die"
+      ],
+      "explain_mm": "negative present ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — facts & habits. Write 5–8 zero-conditional sentences about general truths or your own habits (If …, … present). Keep BOTH clauses in the present.",
-      "prompt_mm": "အပိုင်း (၁) — အချက်အလက်တွေနဲ့ အလေ့အထတွေအကြောင်း ရေးကြည့်ကြမယ်။ အမြဲတမ်းမှန်တဲ့ အကြောင်းအရာတွေ ဒါမှမဟုတ် ကိုယ့်ရဲ့အလေ့အထတွေအကြောင်းကို zero conditional (If …, … present) ပုံစံသုံးပြီး sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ ဝါကျနှစ်ပိုင်းလုံးမှာ present simple ကိုပဲ သုံးဖို့ မမေ့နဲ့နော်။ ရေးပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ၊ ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "If I {v}drink{/v} too much coffee, I {v}feel{/v} nervous. Ice {v}melts{/v} if you {v}leave{/v} it outside. If I {v}wake{/v} up late, I {v}miss{/v} the bus. My phone {v}gets{/v} hot if I {v}play{/v} games for hours. If you {v}press{/v} this button, the light {v}turns{/v} on.",
-      "explain_mm": "ပုံစံက If + present simple, … present simple ပါ။ ဝါကျနှစ်ပိုင်းလုံးမှာ present simple ကိုပဲ သုံးရမှာဖြစ်လို့ 'will' လုံးဝမထည့်ရပါဘူးနော်။",
-      "grading": {
-        "grammar_point": "Zero conditional",
-        "rule": "If + present simple, … present simple, for facts / general truths / certain habits. No 'will' in either clause.",
-        "must_check": [
-          "Present simple in BOTH clauses",
-          "No will / won't anywhere",
-          "Always-true / habitual meaning (not a one-time future)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "will in the result (If you heat ice, it will melt)",
-          "Missing -s on he/she/it verbs",
-          "Confusing it with the first conditional (one-time future)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
-    },
-    {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — how something works. Write a short paragraph (4–6 sentences) explaining how a machine, your body, or a routine works, using the zero conditional (If/When …, … present).",
-      "prompt_mm": "အပိုင်း (၂) — တစ်ခုခုက ဘယ်လိုအလုပ်လုပ်လဲဆိုတာ ရှင်းပြကြမယ်။ စက်ပစ္စည်းတစ်ခု၊ ကိုယ့်ခန္ဓာကိုယ်၊ ဒါမှမဟုတ် ကိုယ့်ရဲ့နေ့စဉ်လုပ်ငန်းဆောင်တာတွေက ဘယ်လိုအလုပ်လုပ်လဲဆိုတာကို zero conditional (If/When …, … present) ပုံစံသုံးပြီး စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးကြည့်ပါ။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "My old laptop {v}has{/v} simple rules. If I {v}open{/v} too many tabs, it {v}slows{/v} down. The fan {v}gets{/v} loud when it {v}heats{/v} up. If I {v}don't charge{/v} it at night, it {v}dies{/v} by noon. When I {v}restart{/v} it, it {v}works{/v} fine again.",
-      "explain_mm": "ပုံစံက If/When + present simple, … present simple ပါ။ အကြောင်းပြတဲ့အပိုင်း (condition) ရော အကျိုးဆက်ပြတဲ့အပိုင်း (result) ရော နှစ်ခုလုံးကို present simple နဲ့ ရေးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "Zero conditional",
-        "rule": "Link conditions and certain results with present + present, for how something always works.",
-        "must_check": [
-          "Both clauses in present simple",
-          "No will in the result",
-          "If / when used for an always-true result",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "will in the result clause",
-          "Mixing past and present",
-          "Dropping -s on third-person verbs"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အပူချိန် သုညအောက် ကျရင် ရေ ခဲတယ်။",
+      "options": [
+        "Water",
+        "freezes",
+        "if",
+        "the",
+        "temperature",
+        "drops",
+        "below",
+        "zero"
+      ],
+      "answers": [
+        "Water freezes if the temperature drops below zero"
+      ],
+      "explain_mm": "present ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}If{/v} + present, present — general truths & facts (If you heat ice, it melts).  'When' works too.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — If + present, present — အမြဲမှန်တဲ့ အမှန်တရား/အလေ့အထ (If you heat ice, it melts) ။ ‘when’ လည်း သုံးနိုင် ။"
 }

@@ -147,7 +147,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I enjoy ___ to music.",
-      "prompt_mm": "တေးဂီတနားထောင်ရတာကို နှစ်သက်ပါတယ်။",
+      "prompt_mm": "ဂီတ နားထောင်ရတာ နှစ်သက်တယ်။",
       "options": [
         "listening",
         "to listen",
@@ -156,13 +156,13 @@
       "answers": [
         "listening"
       ],
-      "explain_mm": "'enjoy' ရဲ့နောက်မှာ -ing ပုံစံလိုက်ရတဲ့အတွက် → listening ဖြစ်သွားပါတယ်။"
+      "explain_mm": "enjoy နောက်မှာ → ‑ing (listening) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "She wants ___ a doctor.",
-      "prompt_mm": "သူမက ဆရာဝန်တစ်ယောက် ဖြစ်ချင်ပါတယ်။",
+      "prompt_mm": "သူမ ဆရာဝန် ဖြစ်ချင်တယ်။",
       "options": [
         "to become",
         "becoming",
@@ -171,94 +171,246 @@
       "answers": [
         "to become"
       ],
-      "explain_mm": "'want' ရဲ့နောက်မှာ to + verb ပုံစံလိုက်ရတဲ့အတွက် → to become ဖြစ်သွားပါတယ်။"
+      "explain_mm": "want နောက်မှာ → to + verb (to become) ။"
     },
     {
-      "kind": "gap_fill",
+      "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "We decided ___ (go) home early.",
-      "prompt_mm": "အိမ်စောစောပြန်ဖို့ ဆုံးဖြတ်လိုက်ပါတယ်။ ( go ကို သုံးပေးပါ )",
+      "prompt_en": "We decided ___ home early.",
+      "prompt_mm": "ကျွန်တော်တို့ စောစော အိမ်ပြန်ဖို့ ဆုံးဖြတ်တယ်။",
+      "options": [
+        "to go",
+        "going",
+        "go"
+      ],
       "answers": [
         "to go"
       ],
-      "explain_mm": "'decide' ရဲ့နောက်မှာ to + verb ပုံစံလိုက်ရတဲ့အတွက် → to go ဖြစ်သွားပါတယ်။"
+      "explain_mm": "decide နောက်မှာ → to + verb (to go) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He finished ___ at eight.",
+      "prompt_mm": "သူ ၈ နာရီမှာ စားပြီးသွားတယ်။",
+      "options": [
+        "eating",
+        "to eat",
+        "eat"
+      ],
+      "answers": [
+        "eating"
+      ],
+      "explain_mm": "finish နောက်မှာ → ‑ing (eating) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They hope ___ abroad.",
+      "prompt_mm": "သူတို့ နိုင်ငံခြား သွားချင်တယ်။",
+      "options": [
+        "to travel",
+        "traveling",
+        "travel"
+      ],
+      "answers": [
+        "to travel"
+      ],
+      "explain_mm": "hope နောက်မှာ → to + verb ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "He finished ___ (eat) and left.",
-      "prompt_mm": "သူက စားပြီးတော့ ထွက်သွားပါတယ်။ ( eat ကို သုံးပေးပါ )",
+      "prompt_en": "I enjoy ___ football.  ( play )",
+      "prompt_mm": "ဘောလုံး ကစားရတာ နှစ်သက်တယ်။",
+      "answers": [
+        "playing"
+      ],
+      "explain_mm": "enjoy → ‑ing → playing ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She wants ___ the world.  ( travel )",
+      "prompt_mm": "သူမ ကမ္ဘာပတ် ခရီးသွားချင်တယ်။",
+      "answers": [
+        "to travel"
+      ],
+      "explain_mm": "want → to + verb → to travel ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We finished ___ at eight.  ( eat )",
+      "prompt_mm": "၈ နာရီမှာ စားပြီးသွားတယ်။",
       "answers": [
         "eating"
       ],
-      "explain_mm": "'finish' ရဲ့နောက်မှာ -ing ပုံစံလိုက်ရတဲ့အတွက် → eating ဖြစ်သွားပါတယ်။"
+      "explain_mm": "finish → ‑ing → eating ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He decided ___ abroad.  ( study )",
+      "prompt_mm": "သူ နိုင်ငံခြားမှာ ပညာသင်ဖို့ ဆုံးဖြတ်တယ်။",
+      "answers": [
+        "to study"
+      ],
+      "explain_mm": "decide → to + verb → to study ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She is good at ___.  ( cook )",
+      "prompt_mm": "သူမ ချက်ပြုတ်ရာမှာ တော်တယ်။",
+      "answers": [
+        "cooking"
+      ],
+      "explain_mm": "preposition (at) နောက်မှာ → ‑ing → cooking ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I enjoy to swim in the sea.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "I enjoy to play football.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I enjoy swimming in the sea",
-        "i enjoy swimming in the sea."
+        "I enjoy playing football"
       ],
-      "explain_mm": "'enjoy' ရဲ့နောက်မှာ -ing ပုံစံလိုက်ရတဲ့အတွက် 'swimming' ဖြစ်ရမှာပါ ('to swim' မဟုတ်ပါဘူး)။"
+      "explain_mm": "enjoy နောက်မှာ → ‑ing (playing) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — likes & plans. Write 5–8 sentences: some about what you enjoy/like doing (verb + -ing) and some about what you want/plan/hope to do (verb + to).",
-      "prompt_mm": "အပိုင်း ၁ — ဝါသနာနဲ့ အစီအစဉ်များ။ ကိုယ့်အကြောင်း sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ရအောင် — တချို့ sentence တွေမှာ ကိုယ်နှစ်သက်တဲ့/ကြိုက်တဲ့ အရာတွေ (verb + -ing) ကိုသုံးပြီး၊ တချို့မှာတော့ လုပ်ချင်တဲ့/စီစဉ်ထားတဲ့/မျှော်လင့်တဲ့ အရာတွေ (verb + to) ကို သုံးပေးပါ။ ရေးပြီးသွားရင် scan ဖတ်ပြီးပို့ပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်နော်။",
-      "model": "I enjoy {v}cooking{/v} at the weekend. I love {v}watching{/v} films. I want {v}to learn{/v} French. I have decided {v}to save{/v} money. I hope {v}to visit{/v} Japan one day.",
-      "explain_mm": "Verb နဲ့ သူ့ရဲ့လိုက်ဖက်တဲ့ပုံစံ (-ing ဒါမှမဟုတ် to + verb) ကို မှန်အောင်တွဲသုံးဖို့ မမေ့နဲ့နော်။ ဥပမာ enjoy/finish ဆိုရင် -ing နဲ့ သုံးပြီး၊ want/decide/hope ဆိုရင်တော့ to နဲ့ သုံးရပါမယ်။",
-      "grading": {
-        "grammar_point": "Gerunds vs infinitives",
-        "rule": "Use verb + -ing after enjoy/finish/stop/mind/avoid; verb + to after want/need/decide/hope/plan. like/love/hate take either.",
-        "must_check": [
-          "-ing after gerund verbs (enjoy, finish …)",
-          "to + verb after infinitive verbs (want, decide …)",
-          "No base verb alone after these verbs",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "enjoy/finish + to (I enjoy to read)",
-          "want/decide + -ing (I want going)",
-          "Base verb with no -ing or 'to'"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She wants becoming a doctor.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She wants to become a doctor"
+      ],
+      "explain_mm": "want နောက်မှာ → to + verb (to become) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a goal. Write a short paragraph (4–6 sentences) about a goal you have and how you plan to reach it, mixing verb + -ing and verb + to patterns.",
-      "prompt_mm": "အပိုင်း ၂ — ကိုယ့်ရဲ့ပန်းတိုင်။ ကိုယ့်မှာရှိတဲ့ ပန်းတိုင်တစ်ခုအကြောင်းနဲ့ အဲဒီပန်းတိုင်ကို ဘယ်လိုရောက်အောင် လုပ်သွားမလဲဆိုတာကို verb + -ing နဲ့ verb + to ပုံစံတွေ ရောပြီးတော့ စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးသွားရင် scan ဖတ်ပြီး ပို့ပေးပါနော်။",
-      "model": "I want {v}to improve{/v} my English this year. I have decided {v}to study{/v} every morning. I enjoy {v}watching{/v} English videos, so I keep {v}doing{/v} that. I don't mind {v}making{/v} mistakes. I hope {v}to pass{/v} an exam by December.",
-      "explain_mm": "ကိုယ့်ရဲ့ပန်းတိုင်တွေကို ပြောချင်ရင် verb + to (ဥပမာ want, decide, hope) ပုံစံနဲ့ သုံးပြီး၊ ဝါသနာ ဒါမှမဟုတ် အလေ့အထတွေကို ပြောချင်ရင်တော့ verb + -ing (ဥပမာ enjoy, keep, mind) ပုံစံနဲ့ ဖော်ပြပေးလို့ရပါတယ်နော်။",
-      "grading": {
-        "grammar_point": "Gerunds vs infinitives",
-        "rule": "Combine -ing and to-infinitive patterns correctly when describing a goal and plan.",
-        "must_check": [
-          "Correct pattern for each verb (-ing vs to)",
-          "Goal/plan is clear",
-          "No base verb alone after these verbs",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Wrong pattern after a verb",
-          "Mixing -ing and to on the same verb",
-          "Base verb with no ending"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "We finished to eat.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "We finished eating"
+      ],
+      "explain_mm": "finish နောက်မှာ → ‑ing (eating) ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He is good at cook.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He is good at cooking"
+      ],
+      "explain_mm": "preposition (at) နောက်မှာ → ‑ing (cooking) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဘောလုံး ကစားရတာ နှစ်သက်တယ်။",
+      "options": [
+        "I",
+        "enjoy",
+        "playing",
+        "football"
+      ],
+      "answers": [
+        "I enjoy playing football"
+      ],
+      "explain_mm": "enjoy → ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ကမ္ဘာပတ် ခရီးသွားချင်တယ်။",
+      "options": [
+        "She",
+        "wants",
+        "to",
+        "travel",
+        "the",
+        "world"
+      ],
+      "answers": [
+        "She wants to travel the world"
+      ],
+      "explain_mm": "want → to + verb ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "၈ နာရီမှာ စားပြီးသွားတယ်။",
+      "options": [
+        "We",
+        "finished",
+        "eating",
+        "at",
+        "eight"
+      ],
+      "answers": [
+        "We finished eating at eight"
+      ],
+      "explain_mm": "finish → ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ နိုင်ငံခြားမှာ ပညာသင်ဖို့ ဆုံးဖြတ်တယ်။",
+      "options": [
+        "He",
+        "decided",
+        "to",
+        "study",
+        "abroad"
+      ],
+      "answers": [
+        "He decided to study abroad"
+      ],
+      "explain_mm": "decide → to + verb ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ချက်ပြုတ်ရာမှာ တော်တယ်။",
+      "options": [
+        "She",
+        "is",
+        "good",
+        "at",
+        "cooking"
+      ],
+      "answers": [
+        "She is good at cooking"
+      ],
+      "explain_mm": "preposition → ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ဆေးလိပ်ဖြတ်ဖို့ ဆုံးဖြတ်တယ်။",
+      "options": [
+        "I",
+        "decided",
+        "to",
+        "stop",
+        "smoking"
+      ],
+      "answers": [
+        "I decided to stop smoking"
+      ],
+      "explain_mm": "decide → to stop ၊ stop → ‑ing (smoking) ။"
     }
-  ]
+  ],
+  "practice_recap_en": "After enjoy / finish / stop / avoid → {v}-ing{/v}.  After want / need / decide / hope / plan → {v}to + verb{/v}.  After a preposition → {v}-ing{/v}.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — enjoy / finish / stop / avoid နောက်မှာ → ‑ing ။ want / need / decide / hope / plan နောက်မှာ → to + verb ။ preposition နောက်မှာ → ‑ing ။"
 }

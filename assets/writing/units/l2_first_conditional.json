@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "If it ___ tomorrow, we'll cancel the trip.",
-      "prompt_mm": "မနက်ဖြန် မိုးရွာရင် ခရီးစဉ်ကို ဖျက်လိုက်ပါမယ်။",
+      "prompt_mm": "မနက်ဖြန် မိုးရွာရင် ခရီး ဖျက်လိုက်မယ်။",
       "options": [
         "rains",
         "will rain",
@@ -169,13 +169,13 @@
       "answers": [
         "rains"
       ],
-      "explain_mm": "if-clause မှာ present simple ကိုသုံးရမှာမို့လို့ → rains ('will' မထည့်ရပါဘူးနော်)။"
+      "explain_mm": "if ပိုင်း → present simple → rains (will rain မဟုတ်) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "If you study, you ___ the exam.",
-      "prompt_mm": "ကြိုးကြိုးစားစားလုပ်ရင် စာမေးပွဲ အောင်မှာပါ။",
+      "prompt_mm": "ကြိုးစားရင် စာမေးပွဲ အောင်မယ်။",
       "options": [
         "will pass",
         "pass",
@@ -184,97 +184,265 @@
       "answers": [
         "will pass"
       ],
-      "explain_mm": "result (အကျိုးဆက်) အပိုင်းမှာတော့ will + verb (base) ပုံစံမို့လို့ → will pass ဖြစ်ပါတယ်နော်။"
+      "explain_mm": "result ပိုင်း → will + base → will pass ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "If I ___ time, I'll help you.",
+      "prompt_mm": "အချိန် ရှိရင် မင်းကို ကူညီမယ်။",
+      "options": [
+        "have",
+        "will have",
+        "has"
+      ],
+      "answers": [
+        "have"
+      ],
+      "explain_mm": "if ပိုင်း → present → have ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "If she asks me, I ___ her.",
+      "prompt_mm": "သူမ တောင်းဆိုရင် ကူညီမယ်။",
+      "options": [
+        "will help",
+        "help",
+        "will helps"
+      ],
+      "answers": [
+        "will help"
+      ],
+      "explain_mm": "result → will + base (help) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ the bus if we don't hurry.",
+      "prompt_mm": "မြန်မြန်မလုပ်ရင် ဘတ်စ်ကား လွတ်သွားမယ်။",
+      "options": [
+        "will miss",
+        "miss",
+        "will misses"
+      ],
+      "answers": [
+        "will miss"
+      ],
+      "explain_mm": "result → will + base (miss) ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "If I ___ (have) time, I'll help you.",
-      "prompt_mm": "အချိန်ရရင် မင်းကို ကူညီပေးပါ့မယ်။ ( have ကို သုံးပေးပါနော်။ )",
+      "prompt_en": "If it ___ tomorrow, we'll stay home.  ( rain )",
+      "prompt_mm": "မနက်ဖြန် မိုးရွာရင် အိမ်မှာ နေမယ်။",
       "answers": [
-        "have"
+        "rains"
       ],
-      "explain_mm": "if-clause မှာ present simple ကိုသုံးရမှာမို့လို့ → have ဖြစ်ပါတယ်။"
+      "explain_mm": "if ပိုင်း → present → rains ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If you study, you ___ the exam.  ( pass )",
+      "prompt_mm": "ကြိုးစားရင် စာမေးပွဲ အောင်မယ်။",
+      "answers": [
+        "will pass",
+        "'ll pass"
+      ],
+      "explain_mm": "result → will pass ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If she ___ me, I'll help.  ( ask )",
+      "prompt_mm": "သူမ တောင်းဆိုရင် ကူညီမယ်။",
+      "answers": [
+        "asks"
+      ],
+      "explain_mm": "if ပိုင်း → present → asks ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ the bus if we don't hurry.  ( miss )",
+      "prompt_mm": "မြန်မြန်မလုပ်ရင် ဘတ်စ်ကား လွတ်သွားမယ်။",
+      "answers": [
+        "will miss",
+        "'ll miss"
+      ],
+      "explain_mm": "result → will miss ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If it ___ sunny, we'll go out.  ( be )",
+      "prompt_mm": "နေသာရင် အပြင်ထွက်မယ်။",
+      "answers": [
+        "is"
+      ],
+      "explain_mm": "if ပိုင်း → present → is ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "If it will rain, I will stay home.",
-      "prompt_mm": "ဒီဝါကျမှာ ဘာမှားနေလဲ၊ မှန်အောင် ပြင်ကြည့်ရအောင်။",
+      "prompt_en": "If it will rain, we'll stay home.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "If it rains, I will stay home",
-        "if it rains, i will stay home.",
-        "If it rains I will stay home"
+        "If it rains, we'll stay home"
       ],
-      "explain_mm": "သတိရမယ်နော်၊ if-clause မှာ 'will' မထည့်ရပါဘူး။ → If it rains, … ဆိုပြီး ဖြစ်ရမှာပါ။"
+      "explain_mm": "if ပိုင်းမှာ will မသုံးရ → present (rains) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  rains  /  if  /  it  /  stay  /  I'll  /  home",
-      "prompt_mm": "ဒီစကားလုံးလေးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်လေးတစ်ခု ဖြစ်အောင် ရေးပေးပါ။ ( If it rains + I'll stay home )",
+      "prompt_en": "If you will study, you will pass.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "If it rains, I'll stay home",
-        "if it rains i'll stay home.",
-        "If it rains I'll stay home"
+        "If you study, you will pass"
       ],
-      "explain_mm": "ပုံစံလေးအတိုင်း If + present , will + base ဆိုတော့ → If it rains, I'll stay home. ဆိုပြီး ဖြစ်သွားမှာပေါ့။"
+      "explain_mm": "if ပိုင်း → present (study) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — plans with conditions. Write 5–8 first-conditional sentences about tomorrow or the weekend (If …, I will …). Keep the present simple in the if-part.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ရဲ့ အခြေအနေနဲ့ အစီအစဉ်လေးတွေအကြောင်း ပြောကြည့်ရအောင်။ မနက်ဖြန် ဒါမှမဟုတ် စနေတနင်္ဂနွေ အစီအစဉ်တွေအကြောင်း first conditional (If …, I will …) ပုံစံကိုသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပါ။ if-part မှာ present simple ကိုပဲ သုံးဖို့ မမေ့နဲ့နော်။ ပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်ဖြစ်၊ ဒီမှာပဲ ရိုက်ပြီးဖြစ်ဖြစ် တင်ပေးလို့ရပါတယ်။",
-      "model": "If the weather {v}is{/v} good, I {v}will walk{/v} to work. If I {v}have{/v} time, I {v}will read{/v} a book. If my friend {v}calls{/v}, we {v}will meet{/v}. If I {v}finish{/v} early, I {v}will cook{/v} dinner. If I {v}am{/v} tired, I {v}will sleep{/v} early.",
-      "explain_mm": "ပုံစံလေးကို သတိရပါနော်- If + present simple, … will + verb (base)။ if-clause မှာ 'will' ကို ထည့်မရေးမိပါစေနဲ့။",
-      "grading": {
-        "grammar_point": "First conditional",
-        "rule": "If + present simple, … will + base verb, for likely future situations. No 'will' in the if-clause.",
-        "must_check": [
-          "Present simple in the if-clause (not will)",
-          "will + base verb in the result",
-          "Real/likely future meaning",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "will in the if-clause (If it will rain)",
-          "Past tense in the if-clause",
-          "Missing will in the result"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "If she asks me, I help her.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "If she asks me, I will help her"
+      ],
+      "explain_mm": "result ပိုင်း → will + base (will help) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a goal and its conditions. Write a short paragraph (4–6 sentences) about a goal and what will happen if you do (or don't do) certain things, using the first conditional.",
-      "prompt_mm": "အပိုင်း ၂ — ကိုယ့်ရဲ့ ပန်းတိုင်တွေနဲ့ ကြုံလာနိုင်တဲ့ အခြေအနေတွေအကြောင်း ရေးကြည့်ကြမယ်။ ကိုယ့်မှာရှိတဲ့ ပန်းတိုင်တစ်ခုကို အခြေခံပြီး၊ တချို့အရာတွေကို လုပ်ဖြစ်ခဲ့ရင် (ဒါမှမဟုတ်) မလုပ်ဖြစ်ခဲ့ရင် ဘာတွေဆက်ဖြစ်လာမလဲဆိုတာကို first conditional သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "I want to pass my English exam. If I {v}practise{/v} every day, I {v}will improve{/v}. If I {v}don't study{/v}, I {v}will fail{/v}. If I {v}join{/v} a class, I {v}will learn{/v} faster. If I {v}pass{/v}, I {v}will apply{/v} for a better job.",
-      "explain_mm": "ပုံစံလေးက If + present simple, … will + verb (base) ပါ။ အကျိုးဆက် (result) တွေကို 'will' နဲ့ ရေးပြီး၊ အခြေအနေ (condition) တွေကိုတော့ present simple နဲ့ ရေးပေးပါနော်။",
-      "grading": {
-        "grammar_point": "First conditional",
-        "rule": "Link conditions (present) and results (will) for a goal, keeping the if-clause in the present.",
-        "must_check": [
-          "If-clause in present simple",
-          "Result clause with will + base verb",
-          "Logical condition–result links",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "will in the if-clause",
-          "Wrong tense mix",
-          "Dropping will in the result"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "If I will have time, I'll help.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "If I have time, I'll help"
+      ],
+      "explain_mm": "if ပိုင်း → present (have) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မနက်ဖြန် မိုးရွာရင် အိမ်မှာ နေမယ်။",
+      "options": [
+        "If",
+        "it",
+        "rains",
+        "tomorrow",
+        "I",
+        "will",
+        "stay",
+        "home"
+      ],
+      "answers": [
+        "If it rains tomorrow I will stay home"
+      ],
+      "explain_mm": "If + present, will + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကြိုးစားရင် စာမေးပွဲ အောင်မယ်။",
+      "options": [
+        "If",
+        "you",
+        "study",
+        "you",
+        "will",
+        "pass",
+        "the",
+        "exam"
+      ],
+      "answers": [
+        "If you study you will pass the exam"
+      ],
+      "explain_mm": "result → will pass ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ တောင်းဆိုရင် ကူညီမယ်။",
+      "options": [
+        "If",
+        "she",
+        "asks",
+        "me",
+        "I",
+        "will",
+        "help"
+      ],
+      "answers": [
+        "If she asks me I will help"
+      ],
+      "explain_mm": "if → present (asks) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နေသာရင် အပြင်ထွက်မယ်။",
+      "options": [
+        "If",
+        "it",
+        "is",
+        "sunny",
+        "we",
+        "will",
+        "go",
+        "out"
+      ],
+      "answers": [
+        "If it is sunny we will go out"
+      ],
+      "explain_mm": "if → present (is) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မြန်မြန်မလုပ်ရင် ဘတ်စ်ကား လွတ်သွားမယ်။",
+      "options": [
+        "We",
+        "will",
+        "miss",
+        "the",
+        "bus",
+        "if",
+        "we",
+        "don't",
+        "hurry"
+      ],
+      "answers": [
+        "We will miss the bus if we don't hurry"
+      ],
+      "explain_mm": "result → will miss ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေခဲကို အပူပေးရင် အရည်ပျော်မယ်။",
+      "options": [
+        "If",
+        "you",
+        "heat",
+        "ice",
+        "it",
+        "will",
+        "melt"
+      ],
+      "answers": [
+        "If you heat ice it will melt"
+      ],
+      "explain_mm": "If + present, will + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}If{/v} + present simple, {v}will{/v} + base.  (If it rains, I will stay.)  The if-part uses present — NOT will.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — If + present simple, will + base verb ။ (If it rains, I will stay.) ။ if ပိုင်းမှာ present သုံးပါ — will မသုံးရ ။"
 }

@@ -186,7 +186,7 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "She ___ her keys. (lose)",
+      "prompt_en": "She ___ her keys.",
       "prompt_mm": "သူမ သော့ ပျောက်သွားပြီ။",
       "options": [
         "has lost",
@@ -196,13 +196,13 @@
       "answers": [
         "has lost"
       ],
-      "explain_mm": "Subject က ‘she’ ဖြစ်တဲ့အတွက် has + V3 (lost) ကို သုံးပါတယ်။"
+      "explain_mm": "she → has + V3 (lost) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I ___ this film before.",
-      "prompt_mm": "ဒီ ရုပ်ရှင်ကို အရင်က ကြည့်ဖူးတယ်။",
+      "prompt_mm": "ကျွန်တော် ဒီဇာတ်ကား ကြည့်ဖူးတယ်။",
       "options": [
         "have seen",
         "has seen",
@@ -211,96 +211,250 @@
       "answers": [
         "have seen"
       ],
-      "explain_mm": "Subject က ‘I’ ဖြစ်လို့ have + V3 (seen) ကို သုံးပါတယ်။ ‘before’ (အရင်က) ဆိုတဲ့ စကားလုံးက ဘဝအတွေ့အကြုံကို ရည်ညွှန်းတဲ့အတွက် Present perfect ကို သုံးရတာပါ။"
+      "explain_mm": "I → have + V3 (seen) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He ___ to school.",
+      "prompt_mm": "သူ ကျောင်းကို သွားပြီ။",
+      "options": [
+        "has gone",
+        "has went",
+        "have gone"
+      ],
+      "answers": [
+        "has gone"
+      ],
+      "explain_mm": "he → has + V3 (gone — went မဟုတ်) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ their homework.",
+      "prompt_mm": "သူတို့ အိမ်စာ လုပ်ပြီးသွားပြီ။",
+      "options": [
+        "have finished",
+        "has finished",
+        "finished"
+      ],
+      "answers": [
+        "have finished"
+      ],
+      "explain_mm": "they → have + V3 (finished) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ this book already.",
+      "prompt_mm": "ကျွန်တော်တို့ ဒီစာအုပ် ဖတ်ပြီးသွားပြီ။",
+      "options": [
+        "have read",
+        "has read",
+        "reads"
+      ],
+      "answers": [
+        "have read"
+      ],
+      "explain_mm": "we → have + V3 (read) ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "We ___ (live) here for five years.",
-      "prompt_mm": "ကျွန်တော်တို့ ဒီမှာ နေလာတာ ၅ နှစ်ရှိပြီ။ ( live ကို သုံးပါ )",
+      "prompt_en": "I ___ my homework.  ( finish )",
+      "prompt_mm": "ကျွန်တော် အိမ်စာ လုပ်ပြီးသွားပြီ။",
       "answers": [
-        "have lived",
-        "'ve lived"
+        "have finished"
       ],
-      "explain_mm": "Subject က ‘we’ ဖြစ်လို့ have + V3 (lived) ကို သုံးပါတယ်။ ‘for five years’ ဆိုတာက အတိတ်ကတည်းက စပြီး အခုထိ ဆက်နေတုန်းဆိုတဲ့ အဓိပ္ပာယ်ပါ။"
+      "explain_mm": "I → have + finished ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ to the market.  ( go )",
+      "prompt_mm": "သူမ ဈေးကို သွားပြီ။",
+      "answers": [
+        "has gone"
+      ],
+      "explain_mm": "she → has + gone ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ here for ten years.  ( live )",
+      "prompt_mm": "ကျွန်တော်တို့ ဒီမှာ နေလာတာ ၁၀ နှစ်ရှိပြီ။",
+      "answers": [
+        "have lived"
+      ],
+      "explain_mm": "we → have + lived ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ his phone.  ( break )",
+      "prompt_mm": "သူ ဖုန်း ကွဲသွားပြီ။",
+      "answers": [
+        "has broken"
+      ],
+      "explain_mm": "he → has + broken (V3) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ to Japan.  ( be )",
+      "prompt_mm": "သူတို့ ဂျပန်ကို ရောက်ဖူးတယ်။",
+      "answers": [
+        "have been"
+      ],
+      "explain_mm": "they → have + been (V3) ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She have lost her keys.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She has lost her keys"
+      ],
+      "explain_mm": "she → has (have မဟုတ်) ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "He has went to school.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို မှန်အောင် ပြန်ပြင်ပေးပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "He has gone to school",
-        "he has gone to school."
+        "He has gone to school"
       ],
-      "explain_mm": "‘go’ ရဲ့ V3 က ‘gone’ ဖြစ်ပါတယ်။ ‘went’ က Past simple (V2) ဖြစ်တဲ့အတွက် (✗ has went → ✓ has gone) လို့ ပြင်ပေးရပါမယ်။"
+      "explain_mm": "V3 က ‘gone’ (went မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  eaten  /  I  /  have  /  lunch",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို နေရာတကျဖြစ်အောင် စီပြီး sentence အမှန်တစ်ခု ရေးပေးပါ။",
+      "prompt_en": "I has finished my homework.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I have eaten lunch",
-        "i have eaten lunch."
+        "I have finished my homework"
       ],
-      "explain_mm": "ပုံစံက Subject + have + V3 + ... ပါ။ → I have eaten lunch."
+      "explain_mm": "I → have ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — your experiences. Write 5–8 sentences about things you HAVE and HAVEN'T done in your life, using the present perfect (have/has + V3). Try ever, never, already and yet.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ်ပိုင်အတွေ့အကြုံ။ ကိုယ့်ဘဝမှာ လုပ်ဖူးတာတွေ၊ မလုပ်ဖူးတာတွေကို Present perfect (have/has + V3) သုံးပြီး sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးကြည့်ပါ။ ever, never, already, yet တို့လို စကားလုံးလေးတွေကိုလည်း ထည့်သုံးကြည့်နော်။ ပြီးရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်ဖြစ်၊ အောက်ကနေရာမှာ ရိုက်ထည့်ပြီးဖြစ်ဖြစ် တင်ပေးလို့ရပါတယ်။",
-      "model": "I {v}have visited{/v} three countries. I {v}have never seen{/v} snow. I {v}have already finished{/v} school. I {v}haven't learned{/v} to drive yet. I {v}have met{/v} many kind people.",
-      "explain_mm": "have / has + V3 ပုံစံကို မှန်မှန်ကန်ကန် သုံးထားဖို့ လိုပါတယ်။ ever/never/already/yet တို့ကိုတော့ have/has နဲ့ V3 ကြားထဲမှာ ထားလေ့ရှိတယ်ဆိုတာလေး သတိရနော်။",
-      "grading": {
-        "grammar_point": "Present perfect (have/has + V3)",
-        "rule": "have/has + past participle for experience and unfinished time. has for he/she/it; have for I/you/we/they. No finished-time words (yesterday).",
-        "must_check": [
-          "have/has agrees with the subject",
-          "Past participle (V3) used, not past simple",
-          "No finished-time words (yesterday, last year)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Using V2/past simple after have (I have ate)",
-          "Wrong agreement (She have)",
-          "Adding a finished time (I have seen it yesterday)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "We have ate lunch.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "We have eaten lunch"
+      ],
+      "explain_mm": "V3 က ‘eaten’ (ate မဟုတ်) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — recent news. Write a short paragraph (4–6 sentences) about what you or your family have done recently, using the present perfect with just / already / yet.",
-      "prompt_mm": "အပိုင်း ၂ — မကြာသေးခင်က သတင်း။ ကိုယ် ဒါမှမဟုတ် ကိုယ့်မိသားစုဝင်တွေ မကြာသေးခင်က ဘာတွေ လုပ်ပြီးသွားပြီလဲဆိုတာကို Present perfect (just / already / yet တို့နဲ့) သုံးပြီး စာပိုဒ်တိုလေးတစ်ခု (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးလို့ရပါတယ်။",
-      "model": "My family {v}has just moved{/v} to a new house. We {v}have already painted{/v} the kitchen. My father {v}has bought{/v} a new table. I {v}haven't unpacked{/v} my books yet. My sister {v}has made{/v} new friends in the area.",
-      "explain_mm": "စာပိုဒ်တစ်ပိုဒ်လုံးမှာ have/has + V3 ပုံစံကို မှန်မှန်ကန်ကန် သုံးထားဖို့ သတိပြုပါ။ နေရာလေးတွေ မှတ်ထားရအောင်နော်: just နဲ့ already ကို have/has နဲ့ V3 ကြားမှာ ထားပြီး၊ yet ကိုတော့ sentence ရဲ့ အဆုံးမှာ ထားပေးရပါမယ်။",
-      "grading": {
-        "grammar_point": "Present perfect (have/has + V3)",
-        "rule": "Recent past with a result now. Correct have/has agreement and past participle. just/already between have and V3; yet at the end.",
-        "must_check": [
-          "have/has + past participle throughout",
-          "Correct subject agreement (has for he/she/it)",
-          "just/already/yet placed correctly",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Past simple instead of present perfect",
-          "Wrong or missing past participle",
-          "yet placed before the verb"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် အိမ်စာ လုပ်ပြီးသွားပြီ။",
+      "options": [
+        "I",
+        "have",
+        "finished",
+        "my",
+        "homework"
+      ],
+      "answers": [
+        "I have finished my homework"
+      ],
+      "explain_mm": "have + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ဈေးကို သွားပြီ။",
+      "options": [
+        "She",
+        "has",
+        "gone",
+        "to",
+        "the",
+        "market"
+      ],
+      "answers": [
+        "She has gone to the market"
+      ],
+      "explain_mm": "has + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နေ့လယ်စာ စားပြီးပြီလား။",
+      "options": [
+        "Have",
+        "you",
+        "eaten",
+        "lunch",
+        "yet"
+      ],
+      "answers": [
+        "Have you eaten lunch yet"
+      ],
+      "explain_mm": "အမေး → Have + subject + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ ဒီမှာ ၁၀ နှစ် နေလာပြီ။",
+      "options": [
+        "We",
+        "have",
+        "lived",
+        "here",
+        "for",
+        "ten",
+        "years"
+      ],
+      "answers": [
+        "We have lived here for ten years"
+      ],
+      "explain_mm": "have + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ကျောင်းကို သွားပြီ။",
+      "options": [
+        "He",
+        "has",
+        "gone",
+        "to",
+        "school"
+      ],
+      "answers": [
+        "He has gone to school"
+      ],
+      "explain_mm": "has + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် အဲဒီ ဇာတ်ကား ကြည့်ဖူးတယ်။",
+      "options": [
+        "I",
+        "have",
+        "seen",
+        "this",
+        "film",
+        "before"
+      ],
+      "answers": [
+        "I have seen this film before"
+      ],
+      "explain_mm": "have + V3 ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}have / has{/v} + past participle (V3) — a past action linked to now.  have (I/you/we/they) · has (he/she/it).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — have / has + V3 (past participle) ။ အခုနဲ့ ဆက်စပ်နေတဲ့ အတိတ် ဖြစ်ရပ်/အတွေ့အကြုံအတွက် သုံးပါ ။ have (I/you/we/they) ၊ has (he/she/it) ။"
 }

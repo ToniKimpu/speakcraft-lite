@@ -125,8 +125,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "This is ___ book. (before a noun)",
-      "prompt_mm": "ဒါက ကျွန်တော့်ရဲ့စာအုပ်လေးပါ။",
+      "prompt_en": "This is ___ book.",
+      "prompt_mm": "ဒါက ကျွန်တော့်ရဲ့ စာအုပ်ပါ။",
       "options": [
         "mine",
         "my",
@@ -135,13 +135,13 @@
       "answers": [
         "my"
       ],
-      "explain_mm": "Noun (book) ရဲ့ ရှေ့မှာဖြစ်တဲ့အတွက် ‘my’ ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "noun (book) ရဲ့ ရှေ့မှာ → possessive adjective my ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "The red car is ___. (stands alone)",
-      "prompt_mm": "အနီရောင်ကားလေးက သူမဟာပေါ့။",
+      "prompt_en": "The red car is ___.",
+      "prompt_mm": "ဟိုကားနီနီက သူမဟာပါ။",
       "options": [
         "her",
         "hers",
@@ -150,95 +150,240 @@
       "answers": [
         "hers"
       ],
-      "explain_mm": "Noun မပါဘဲ တစ်လုံးတည်း သီးသန့်ရပ်တည်တဲ့အတွက် ‘hers’ ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "noun မပါဘဲ တစ်လုံးတည်း ရပ်လို့ → possessive pronoun hers ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This bag isn't yours. It is ___.",
+      "prompt_mm": "ဒီအိတ်က မင်းဟာ မဟုတ်ဘူး၊ ကျွန်တော့်ဟာပါ။",
+      "options": [
+        "my",
+        "mine",
+        "me"
+      ],
+      "answers": [
+        "mine"
+      ],
+      "explain_mm": "noun မပါဘဲ ရပ်တယ် → mine ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ name is Su.",
+      "prompt_mm": "သူမရဲ့ နာမည်က Su ပါ။",
+      "options": [
+        "Hers",
+        "Her",
+        "She"
+      ],
+      "answers": [
+        "Her"
+      ],
+      "explain_mm": "noun (name) ရဲ့ ရှေ့ → possessive adjective Her ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This house is ___.",
+      "prompt_mm": "ဒီအိမ်က သူတို့ဟာပါ။",
+      "options": [
+        "their",
+        "theirs",
+        "them"
+      ],
+      "answers": [
+        "theirs"
+      ],
+      "explain_mm": "noun မပါဘဲ တစ်လုံးတည်း → theirs ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "This bag isn't yours. It is ___. (I)",
-      "prompt_mm": "ဒီအိတ်လေးက မင်းဟာ မဟုတ်ဘူးနော်။ ဒါက ကျွန်တော့်ဟာပါ။",
+      "prompt_en": "This is ___ phone.  ( I )",
+      "prompt_mm": "ဒါက ကျွန်တော့်ရဲ့ ဖုန်းပါ။",
+      "answers": [
+        "my"
+      ],
+      "explain_mm": "noun (phone) ရဲ့ ရှေ့ → my ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The phone is ___.  ( I )",
+      "prompt_mm": "ဒီဖုန်းက ကျွန်တော့်ဟာပါ။",
       "answers": [
         "mine"
       ],
-      "explain_mm": "တစ်လုံးတည်း သီးသန့်ရပ်တည်တဲ့အတွက် ‘mine’ ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "noun မပါ → mine ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ name is Su.  ( she )",
+      "prompt_mm": "သူမရဲ့ နာမည်က Su ပါ။",
+      "answers": [
+        "Her"
+      ],
+      "explain_mm": "noun ရဲ့ ရှေ့ → Her ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This seat is ___.  ( you )",
+      "prompt_mm": "ဒီထိုင်ခုံက မင်းဟာပါ။",
+      "answers": [
+        "yours"
+      ],
+      "explain_mm": "noun မပါ → yours ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "That is ___ house.  ( they )",
+      "prompt_mm": "ဟိုဟာက သူတို့ရဲ့ အိမ်ပါ။",
+      "answers": [
+        "their"
+      ],
+      "explain_mm": "noun ရဲ့ ရှေ့ → their ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "This is mine pen.",
-      "prompt_mm": "မှားနေတဲ့ sentence လေးတွေကို အမှန်ဖြစ်အောင် ပြင်ပေးပါဦးနော်။",
+      "prompt_en": "This is mine book.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "This is my pen",
-        "this is my pen."
+        "This is my book"
       ],
-      "explain_mm": "Noun (pen) ရဲ့ ရှေ့မှာဖြစ်တဲ့အတွက် ‘my’ (mine မဟုတ်ဘူးနော်) ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "noun (book) ရဲ့ ရှေ့ → my (mine မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  is  /  this  /  house  /  their",
-      "prompt_mm": "ဒီစကားလုံးလေးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်လေးတစ်ခုဖြစ်အောင် ရေးပေးပါဦးနော်။",
+      "prompt_en": "The red car is her.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "This is their house",
-        "this is their house."
+        "The red car is hers"
       ],
-      "explain_mm": "‘their’ ကို noun (house) ရဲ့ ရှေ့မှာ ထားပြီး သုံးပေးရပါမယ်နော်။"
+      "explain_mm": "noun မပါဘဲ ရပ်လို့ → hers ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — whose is it? Write 5–8 sentences about things and their owners, using my/your/her… and mine/yours/hers…",
-      "prompt_mm": "အပိုင်း ၁ — ဘယ်သူ့ဟာလဲ။ ဒီပစ္စည်းလေးတွေနဲ့ ပိုင်ရှင်တွေအကြောင်းကို my/your/her… နဲ့ mine/yours/hers… တို့ကိုသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးပေးပါနော်။ ပြီးရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်ပေးလို့လည်း ရပါတယ်။",
-      "model": "This is {v}my{/v} bag. That bag is {v}yours{/v}. {v}Her{/v} phone is new. The blue pen is {v}his{/v}. {v}Our{/v} house is small, but it is {v}ours{/v}.",
-      "explain_mm": "Noun လေးတွေရဲ့ ရှေ့မှာဆိုရင် my/her/their တို့ကို သုံးပေးရပြီး၊ တစ်လုံးတည်း သီးသန့်ရပ်တည်ရင်တော့ mine/hers/theirs တို့ကို သုံးပေးရပါမယ်။",
-      "grading": {
-        "grammar_point": "Possessive adjectives & pronouns",
-        "rule": "Possessive adjectives (my, her, their) precede a noun; possessive pronouns (mine, hers, theirs) stand alone.",
-        "must_check": [
-          "Adjective + noun (my book)",
-          "Pronoun stands alone (it's mine)",
-          "Correct pairs (my/mine, her/hers)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "mine + noun (mine book)",
-          "adjective alone (This is my)",
-          "Pair confusion"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She name is Su.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Her name is Su"
+      ],
+      "explain_mm": "noun (name) ရဲ့ ရှေ့ → Her (She မဟုတ်) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — your family's things. Write a short paragraph (4–6 sentences) describing who owns what, using possessive adjectives and pronouns.",
-      "prompt_mm": "အပိုင်း ၂ — မိသားစုရဲ့ ပစ္စည်းလေးတွေ။ ဘယ်ပစ္စည်းက ဘယ်သူ့ဟာလဲဆိုတာကို possessive adjective/pronoun တွေသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးပေးပါဦး။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "{v}My{/v} room is upstairs. The big bed is {v}mine{/v}. {v}My{/v} brother's room is small; the desk in it is {v}his{/v}. {v}Our{/v} parents' car is blue — it is {v}theirs{/v}. {v}Their{/v} room is the biggest.",
-      "explain_mm": "Possessive adjective (noun ရဲ့ ရှေ့မှာလိုက်တာ) နဲ့ possessive pronoun (တစ်လုံးတည်း သီးသန့်ရပ်တည်တာ) နှစ်မျိုးကို သေချာခွဲခြားပြီး မှန်မှန်ကန်ကန် သုံးပေးပါဦးနော်။",
-      "grading": {
-        "grammar_point": "Possessive adjectives & pronouns",
-        "rule": "Use possessive adjectives before nouns and possessive pronouns alone.",
-        "must_check": [
-          "Adjective before noun",
-          "Pronoun stands alone",
-          "Correct forms (its vs it's not confused)",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "mine/yours + noun",
-          "my/her standing alone",
-          "Pair errors"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "This seat is your.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "This seat is yours"
+      ],
+      "explain_mm": "noun မပါ → yours ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက ကျွန်တော့်ရဲ့ဖုန်းပါ။",
+      "options": [
+        "This",
+        "is",
+        "my",
+        "phone"
+      ],
+      "answers": [
+        "This is my phone"
+      ],
+      "explain_mm": "noun ရဲ့ ရှေ့ → my ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီဖုန်းက ကျွန်တော့်ဟာပါ။",
+      "options": [
+        "The",
+        "phone",
+        "is",
+        "mine"
+      ],
+      "answers": [
+        "The phone is mine"
+      ],
+      "explain_mm": "noun မပါ → mine ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမရဲ့နာမည်က Su ပါ။",
+      "options": [
+        "Her",
+        "name",
+        "is",
+        "Su"
+      ],
+      "answers": [
+        "Her name is Su"
+      ],
+      "explain_mm": "noun ရဲ့ ရှေ့ → Her ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီထိုင်ခုံက မင်းဟာပါ။",
+      "options": [
+        "This",
+        "seat",
+        "is",
+        "yours"
+      ],
+      "answers": [
+        "This seat is yours"
+      ],
+      "explain_mm": "noun မပါ → yours ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဟိုကားက သူတို့ဟာပါ။",
+      "options": [
+        "That",
+        "car",
+        "is",
+        "theirs"
+      ],
+      "answers": [
+        "That car is theirs"
+      ],
+      "explain_mm": "noun မပါ → theirs ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒါက ကျွန်တော်တို့ရဲ့ အိမ်ပါ။",
+      "options": [
+        "This",
+        "is",
+        "our",
+        "house"
+      ],
+      "answers": [
+        "This is our house"
+      ],
+      "explain_mm": "noun ရဲ့ ရှေ့ → our ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Before a noun: {v}my, your, her, our, their{/v} (my book).  Stands alone: {v}mine, yours, hers, ours, theirs{/v} (It's mine).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — noun ရဲ့ ရှေ့မှာ — my, your, her, our, their (my book) ။ noun မပါဘဲ တစ်လုံးတည်း — mine, yours, hers, ours, theirs (It's mine) ။"
 }

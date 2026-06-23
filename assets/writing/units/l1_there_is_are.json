@@ -156,13 +156,13 @@
       "answers": [
         "There is"
       ],
-      "explain_mm": "တစ်ခု (a book) → There is."
+      "explain_mm": "တစ်ခု ဆိုရင် → There is ။  ➝ There is a book on the desk."
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "___ many people here.",
-      "prompt_mm": "ဒီမှာ လူ အများကြီး ရှိတယ်။",
+      "prompt_mm": "ဒီနေရာမှာ လူများတယ်။",
       "options": [
         "There is",
         "There are",
@@ -171,96 +171,254 @@
       "answers": [
         "There are"
       ],
-      "explain_mm": "အများ (people) → There are."
+      "explain_mm": "အများ ဆိုရင် → There are ။  ➝ There are many people here."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ two cats under the table.",
+      "prompt_mm": "စားပွဲအောက်မှာ ကြောင် နှစ်ကောင် ရှိတယ်။",
+      "options": [
+        "There is",
+        "There are",
+        "There be"
+      ],
+      "answers": [
+        "There are"
+      ],
+      "explain_mm": "အများ (two) → There are ။  ➝ There are two cats."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ any milk in the fridge?",
+      "prompt_mm": "ရေခဲသေတ္တာထဲမှာ နို့ ရှိလား။",
+      "options": [
+        "Is there",
+        "Are there",
+        "There is"
+      ],
+      "answers": [
+        "Is there"
+      ],
+      "explain_mm": "အမေး + တစ်ခု → Is there ။  ➝ Is there any milk?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ five chairs in the room.",
+      "prompt_mm": "အခန်းထဲမှာ ကုလားထိုင် ၅ လုံး ရှိတယ်။",
+      "options": [
+        "There is",
+        "There are",
+        "There be"
+      ],
+      "answers": [
+        "There are"
+      ],
+      "explain_mm": "အများ (five) → There are ။  ➝ There are five chairs."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "___ three windows in the room.",
-      "prompt_mm": "အခန်းထဲမှာ ပြတင်းပေါက် ၃ ခု ရှိတယ်။",
+      "prompt_en": "___ a school near my house.",
+      "prompt_mm": "ကျွန်တော့်အိမ်နားမှာ ကျောင်းတစ်ခု ရှိတယ်။",
       "answers": [
-        "There are",
-        "there are"
+        "There is",
+        "There's"
       ],
-      "explain_mm": "အများ (three windows) → There are."
+      "explain_mm": "တစ်ခု ဆိုရင် → There is ။  ➝ There is a school near my house."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ three books on the table.",
+      "prompt_mm": "စားပွဲပေါ်မှာ စာအုပ် ၃ အုပ် ရှိတယ်။",
+      "answers": [
+        "There are"
+      ],
+      "explain_mm": "အများ (three) → There are ။  ➝ There are three books."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ any water in the bottle.  ( negative )",
+      "prompt_mm": "ပုလင်းထဲမှာ ရေ မရှိဘူး။",
+      "answers": [
+        "There isn't",
+        "There is not"
+      ],
+      "explain_mm": "တစ်ခု + အငြင်း → There isn't ။  ➝ There isn't any water."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ many shops here.  ( negative )",
+      "prompt_mm": "ဒီနားမှာ ဆိုင်တွေ သိပ်မရှိဘူး။",
+      "answers": [
+        "There aren't",
+        "There are not"
+      ],
+      "explain_mm": "အများ + အငြင်း → There aren't ။  ➝ There aren't many shops."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ a hospital in this town?  ( question )",
+      "prompt_mm": "ဒီမြို့မှာ ဆေးရုံတစ်ခု ရှိလား။",
+      "answers": [
+        "Is there"
+      ],
+      "explain_mm": "အမေး + တစ်ခု → Is there ။  ➝ Is there a hospital?"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "There is two cats.",
+      "prompt_en": "There is two dogs.",
       "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "There are two cats",
-        "there are two cats."
+        "There are two dogs"
       ],
-      "explain_mm": "two cats (အများ) → There are."
+      "explain_mm": "အများ (two) → There are ။  ➝ There are two dogs."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  is  /  there  /  a market  /  here",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "prompt_en": "There are a book on the table.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "There is a market here",
-        "there is a market here."
+        "There is a book on the table"
       ],
-      "explain_mm": "There + is + a market + here."
+      "explain_mm": "တစ်ခု (a book) → There is ။  ➝ There is a book on the table."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — your neighbourhood. Write 5–8 sentences about what is near your home, using there is / there are (and there isn't / there aren't).",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်ရပ်ကွက်။ အိမ်နားမှာ ဘာတွေ ရှိလဲဆိုတာ there is / there are (နဲ့ there isn't / there aren't) သုံးပြီး sentence ၅–၈ ကြောင်း ရေးပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
-      "model": "{v}There is{/v} a market near my house. {v}There are{/v} two schools. {v}There is{/v} a tea shop on the corner. {v}There aren't{/v} any cinemas. {v}There are{/v} many trees.",
-      "explain_mm": "တစ်ခု → There is; အများ → There are ကို noun အရေအတွက်နဲ့ ကိုက်အောင် ရွေးပါ။",
-      "grading": {
-        "grammar_point": "there is / there are",
-        "rule": "there is + singular; there are + plural. Negatives: there isn't / there aren't.",
-        "must_check": [
-          "is/are matches the noun number",
-          "Correct negatives (isn't/aren't)",
-          "Describes existence/location",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "There is + plural (There is two shops)",
-          "There are + singular",
-          "Dropping 'there'"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "There be many people.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "There are many people"
+      ],
+      "explain_mm": "be မဟုတ် — အများ ဆိုရင် → There are ။  ➝ There are many people."
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — describe a room. Write a short paragraph (4–6 sentences) describing a room or place, using there is / there are.",
-      "prompt_mm": "အပိုင်း ၂ — အခန်းတစ်ခု ဖော်ပြပါ။ အခန်း သို့မဟုတ် နေရာတစ်ခုကို there is / there are သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ ပြီးရင် scan လုပ်ပါ။",
-      "model": "{v}There is{/v} a big table in my kitchen. {v}There are{/v} four chairs around it. {v}There is{/v} a window above the sink. {v}There aren't{/v} any pictures on the wall. {v}There is{/v} a clock near the door.",
-      "explain_mm": "noun အရေအတွက်ကို ကြည့်ပြီး there is / there are ကို မှန်အောင် ရွေးပါ။",
-      "grading": {
-        "grammar_point": "there is / there are",
-        "rule": "Describe a place using there is/are with correct number agreement.",
-        "must_check": [
-          "is/are agrees with the noun",
-          "Mix of singular and plural",
-          "Clear location/description",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Number disagreement",
-          "Dropping 'there'",
-          "Using have instead of there is"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Is there many cars?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Are there many cars"
+      ],
+      "explain_mm": "အများ ဆိုရင် အမေး → Are there ။  ➝ Are there many cars?"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "စားပွဲပေါ်မှာ စာအုပ်တစ်အုပ် ရှိတယ်။",
+      "options": [
+        "There",
+        "is",
+        "a",
+        "book",
+        "on",
+        "the",
+        "table"
+      ],
+      "answers": [
+        "There is a book on the table"
+      ],
+      "explain_mm": "တစ်ခု → There is ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျောင်းသား ၅ ယောက် ရှိတယ်။",
+      "options": [
+        "There",
+        "are",
+        "five",
+        "students"
+      ],
+      "answers": [
+        "There are five students"
+      ],
+      "explain_mm": "အများ → There are ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေ မရှိဘူး။",
+      "options": [
+        "There",
+        "isn't",
+        "any",
+        "water"
+      ],
+      "answers": [
+        "There isn't any water"
+      ],
+      "explain_mm": "တစ်ခု + အငြင်း → There isn't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီနားမှာ ဆိုင်တွေ ရှိလား။",
+      "options": [
+        "Are",
+        "there",
+        "any",
+        "shops",
+        "near",
+        "here"
+      ],
+      "answers": [
+        "Are there any shops near here"
+      ],
+      "explain_mm": "အများ ဆိုရင် အမေး → Are there ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အခန်းထဲမှာ ကုလားထိုင် နှစ်လုံး ရှိတယ်။",
+      "options": [
+        "There",
+        "are",
+        "two",
+        "chairs",
+        "in",
+        "the",
+        "room"
+      ],
+      "answers": [
+        "There are two chairs in the room"
+      ],
+      "explain_mm": "အများ → There are ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေခဲသေတ္တာထဲမှာ နို့ ရှိလား။",
+      "options": [
+        "Is",
+        "there",
+        "any",
+        "milk",
+        "in",
+        "the",
+        "fridge"
+      ],
+      "answers": [
+        "Is there any milk in the fridge"
+      ],
+      "explain_mm": "တစ်ခု ဆိုရင် အမေး → Is there ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}There is{/v} + one thing  ·  {v}There are{/v} + many.   Negative: {v}There isn't / aren't{/v}.   Question: {v}Is / Are there{/v} …?",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — တစ်ခု ဆိုရင် There is ၊ အများ ဆိုရင် There are ။ အငြင်း — There isn't / aren't ၊ အမေး — Is / Are there …? ။"
 }

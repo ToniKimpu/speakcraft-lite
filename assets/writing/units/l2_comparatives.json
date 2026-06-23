@@ -153,8 +153,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "An elephant is ___ than a dog. (big)",
-      "prompt_mm": "ဆင်က ခွေးထက် ပိုကြီးပါတယ်။",
+      "prompt_en": "An elephant is ___ than a dog.",
+      "prompt_mm": "ဆင်က ခွေးထက် ပိုကြီးတယ်။",
       "options": [
         "bigger",
         "more big",
@@ -163,13 +163,13 @@
       "answers": [
         "bigger"
       ],
-      "explain_mm": "'big' က short adjective ဖြစ်လို့ -er ပေါင်းရပါတယ်။ စာလုံးပေါင်းတဲ့အခါ နောက်ဆုံးအက္ခရာ -g ကို နှစ်ခါထပ်ပြီး 'bigger' လို့ ရေးပေးရပါတယ်နော်။"
+      "explain_mm": "‘big’ (CVC) → bigger (g ထပ် + er) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "This book is ___ than that one. (interesting)",
-      "prompt_mm": "ဒီစာအုပ်က ဟိုစာအုပ်ထက် ပိုပြီး စိတ်ဝင်စားဖို့ကောင်းပါတယ်။",
+      "prompt_en": "This book is ___ than that one.",
+      "prompt_mm": "ဒီစာအုပ်က ဟိုစာအုပ်ထက် ပိုစိတ်ဝင်စားဖို့ကောင်းတယ်။",
       "options": [
         "interestinger",
         "more interesting",
@@ -178,95 +178,257 @@
       "answers": [
         "more interesting"
       ],
-      "explain_mm": "'interesting' က long adjective ဖြစ်တဲ့အတွက် ရှေ့မှာ more ကို ထည့်ပြီး 'more interesting' လို့ သုံးပေးရပါတယ်။"
+      "explain_mm": "long adjective → more interesting ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He is ___ than me.",
+      "prompt_mm": "သူက ကျွန်တော့်ထက် ပိုအရပ်ရှည်တယ်။",
+      "options": [
+        "taller",
+        "more taller",
+        "more tall"
+      ],
+      "answers": [
+        "taller"
+      ],
+      "explain_mm": "short adjective → taller (+ er) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Today is ___ than yesterday.",
+      "prompt_mm": "ဒီနေ့က မနေ့ကထက် ပိုပူတယ်။",
+      "options": [
+        "hotter",
+        "more hot",
+        "hoter"
+      ],
+      "answers": [
+        "hotter"
+      ],
+      "explain_mm": "‘hot’ (CVC) → hotter (t ထပ် + er) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She is ___ at maths than me.",
+      "prompt_mm": "သူမက သင်္ချာမှာ ကျွန်တော့်ထက် ပိုတော်တယ်။",
+      "options": [
+        "gooder",
+        "more good",
+        "better"
+      ],
+      "answers": [
+        "better"
+      ],
+      "explain_mm": "irregular — good → better ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She is ___ (happy) than before.",
-      "prompt_mm": "သူမက အရင်ကထက် ပိုပျော်နေပါတယ်။ ( happy ကို သုံးပေးပါ )",
+      "prompt_en": "A train is ___ than a bus.  ( fast )",
+      "prompt_mm": "ရထားက ဘတ်စ်ကားထက် ပိုမြန်တယ်။",
       "answers": [
-        "happier"
+        "faster"
       ],
-      "explain_mm": "adjective က consonant + y နဲ့ ဆုံးရင် (ဥပမာ 'happy')၊ y ကို i ပြောင်းပြီး -er ပေါင်းပေးရပါတယ် → happier။"
+      "explain_mm": "short adjective → faster ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This phone is ___ than that one.  ( expensive )",
+      "prompt_mm": "ဒီဖုန်းက ဟိုဖုန်းထက် ပိုဈေးကြီးတယ်။",
+      "answers": [
+        "more expensive"
+      ],
+      "explain_mm": "long adjective → more expensive ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "My bag is ___ than yours.  ( heavy )",
+      "prompt_mm": "ကျွန်တော့်အိတ်က မင်းအိတ်ထက် ပိုလေးတယ်။",
+      "answers": [
+        "heavier"
+      ],
+      "explain_mm": "cons + y → heavier (y → ier) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This road is ___ than that one.  ( narrow )",
+      "prompt_mm": "ဒီလမ်းက ဟိုလမ်းထက် ပိုကျဉ်းတယ်။",
+      "answers": [
+        "narrower"
+      ],
+      "explain_mm": "short adjective → narrower ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "His car is ___ than mine.  ( bad )",
+      "prompt_mm": "သူ့ကားက ကျွန်တော့်ကားထက် ပိုဆိုးတယ်။",
+      "answers": [
+        "worse"
+      ],
+      "explain_mm": "irregular — bad → worse ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "An elephant is more big than a dog.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "An elephant is bigger than a dog"
+      ],
+      "explain_mm": "short adjective → bigger (more မသုံး) ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "This book is interestinger than that.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "This book is more interesting than that"
+      ],
+      "explain_mm": "long adjective → more interesting ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "He is more taller than me.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပေးပါနော်။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "He is taller than me",
-        "he is taller than me."
+        "He is taller than me"
       ],
-      "explain_mm": "သတိရပါ၊ more နဲ့ -er ကို တွဲမသုံးရပါဘူး။ 'more taller' ဆိုတာ မှားပြီး 'taller' ကသာ အမှန်ဖြစ်ပါတယ်။"
+      "explain_mm": "‑er နဲ့ more ကို တွဲမသုံးရ → taller ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  than  /  is  /  she  /  taller  /  me",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး sentence အမှန်ဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "She is gooder than me.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She is taller than me",
-        "she is taller than me."
+        "She is better than me"
       ],
-      "explain_mm": "Sentence တည်ဆောက်ပုံက Subject + be + comparative + than + ... ပုံစံဖြစ်ပါတယ် → She is taller than me."
+      "explain_mm": "irregular — good → better ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — compare two things. Write 5–8 sentences comparing two things you know (two cities, two phones, two people), using comparatives with 'than'.",
-      "prompt_mm": "အပိုင်း ၁ — အရာနှစ်ခုကို နှိုင်းယှဉ်ကြည့်ရအောင်။ ကိုယ်သိတဲ့ အရာနှစ်ခု (ဥပမာ - မြို့နှစ်မြို့၊ ဖုန်းနှစ်လုံး၊ လူနှစ်ယောက်) ကို comparative နဲ့ than သုံးပြီး sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ ပြီးသွားရင် ရေးထားတာလေးကို scan ဖတ်ပြီး ပို့ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်ပေးก็ได้နော်။",
-      "model": "My city is {v}bigger{/v} than my hometown. It is {v}busier{/v} and {v}noisier{/v}. The food is {v}more expensive{/v} here. But the people are {v}friendlier{/v} in my hometown. The air there is {v}cleaner{/v} too.",
-      "explain_mm": "မှတ်ထားရမှာက short adjective ဆို -er ပေါင်းပြီး long adjective ဆို more သုံးပေးရပါမယ်။ နောက်မှာ than ထည့်ပေးဖို့လည်း မမေ့နဲ့နော်။ အရေးကြီးတာက more နဲ့ -er ကို ရောမသုံးမိဖို့ပါပဲ။",
-      "grading": {
-        "grammar_point": "Comparatives (-er / more)",
-        "rule": "-er on short adjectives, 'more' before long adjectives; 'than' after the comparative. Spelling: big→bigger, happy→happier. Irregular: good→better, bad→worse.",
-        "must_check": [
-          "-er for short adjectives, 'more' for long ones (not both)",
-          "'than' used to compare",
-          "Correct spelling (bigger, happier) and irregulars (better, worse)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "more + -er together (more taller)",
-          "-er on a long adjective (expensiver)",
-          "Dropping 'than'"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရထားက ဘတ်စ်ကားထက် ပိုမြန်တယ်။",
+      "options": [
+        "A",
+        "train",
+        "is",
+        "faster",
+        "than",
+        "a",
+        "bus"
+      ],
+      "answers": [
+        "A train is faster than a bus"
+      ],
+      "explain_mm": "short adj → faster + than ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — then and now. Write a short paragraph (4–6 sentences) comparing your life now with the past (or a new thing with an old one), using comparatives.",
-      "prompt_mm": "အပိုင်း ၂ — အရင်နဲ့အခုကို နှိုင်းယှဉ်ရေးသားခြင်း။ ကိုယ့်ရဲ့အခုဘဝကို အတိတ်ကဘဝနဲ့ (ဒါမှမဟုတ် အရာအသစ်တစ်ခုကို အဟောင်းနဲ့) comparative တွေသုံးပြီး နှိုင်းယှဉ်ကာ စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးပေးပါ။ ပြီးရင် ရေးထားတာလေးကို scan ဖတ်ပြီး ပို့ပေးပါနော်။",
-      "model": "My life now is {v}busier{/v} than before. My job is {v}harder{/v} but {v}more interesting{/v}. I am {v}healthier{/v} because I walk more. My English is {v}better{/v} too. The only problem is that the city is {v}more expensive{/v} than my old town.",
-      "explain_mm": "comparative တွေကို မှန်မှန်ကန်ကန် သုံးဖို့ သတိရပါနော် — short adjective ဆို -er၊ long adjective ဆို more၊ ပြီးတော့ irregular ပုံစံတွေ (better, worse) ကိုလည်း မှတ်ထားပေးပါ။",
-      "grading": {
-        "grammar_point": "Comparatives (-er / more)",
-        "rule": "Compare two states/times with correct comparative forms and 'than' where needed.",
-        "must_check": [
-          "Correct -er vs more choice",
-          "Correct spelling and irregular forms",
-          "Clear comparison of two things/times",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Double comparative (more better)",
-          "Wrong form on long adjectives",
-          "Missing 'than' when comparing"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီအိတ်က ဟိုအိတ်ထက် ပိုဈေးကြီးတယ်။",
+      "options": [
+        "This",
+        "bag",
+        "is",
+        "more",
+        "expensive",
+        "than",
+        "that",
+        "one"
+      ],
+      "answers": [
+        "This bag is more expensive than that one"
+      ],
+      "explain_mm": "long adj → more expensive ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီနေ့က မနေ့ကထက် ပိုပူတယ်။",
+      "options": [
+        "Today",
+        "is",
+        "hotter",
+        "than",
+        "yesterday"
+      ],
+      "answers": [
+        "Today is hotter than yesterday"
+      ],
+      "explain_mm": "CVC → hotter ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အစ်မက သင်္ချာမှာ ကျွန်တော့်ထက် ပိုတော်တယ်။",
+      "options": [
+        "My",
+        "sister",
+        "is",
+        "better",
+        "than",
+        "me",
+        "at",
+        "maths"
+      ],
+      "answers": [
+        "My sister is better than me at maths"
+      ],
+      "explain_mm": "irregular → better ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီကားက ဟိုကားထက် ပိုမြန်တယ်။",
+      "options": [
+        "This",
+        "car",
+        "is",
+        "faster",
+        "than",
+        "that",
+        "one"
+      ],
+      "answers": [
+        "This car is faster than that one"
+      ],
+      "explain_mm": "short adj → faster ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်အိတ်က မင်းအိတ်ထက် ပိုလေးတယ်။",
+      "options": [
+        "My",
+        "bag",
+        "is",
+        "heavier",
+        "than",
+        "yours"
+      ],
+      "answers": [
+        "My bag is heavier than yours"
+      ],
+      "explain_mm": "y → ier → heavier ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Compare two things: short adj + {v}-er{/v} (taller) · long adj → {v}more{/v} (more careful) · use {v}than{/v}.  Irregular: good → better, bad → worse.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — အရာ ၂ ခု နှိုင်းယှဉ် — short adjective + ‑er (taller) ၊ long adjective → more (more careful) ၊ ‘than’ နဲ့ တွဲပါ ။ irregular — good → better ၊ bad → worse ။"
 }

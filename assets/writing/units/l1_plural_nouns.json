@@ -133,7 +133,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I have two ___.",
-      "prompt_mm": "ကျွန်တော့်မှာ ___ နှစ်လုံး ရှိပါတယ်။",
+      "prompt_mm": "ကျွန်တော့်မှာ သေတ္တာ နှစ်လုံး ရှိတယ်။",
       "options": [
         "box",
         "boxs",
@@ -142,110 +142,257 @@
       "answers": [
         "boxes"
       ],
-      "explain_mm": "‘box’ ဆိုတဲ့စကားလုံးက ‘-x’ နဲ့ဆုံးတဲ့အတွက် နောက်မှာ -es ပေါင်းပြီး (boxes) လို့ သုံးပေးရပါမယ်နော်။"
+      "explain_mm": "‘box’ က ‑x နဲ့ ဆုံးတဲ့အတွက် နောက်မှာ ‑es ပေါင်းပေးရပါတယ် → boxes ။ ‘boxs’ ဆိုရင် မှားပါတယ်။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "There are many ___ in Myanmar.",
-      "prompt_mm": "မြန်မာပြည်မှာ ___ တွေအများကြီး ရှိပါတယ်။",
+      "prompt_mm": "မြန်မာပြည်မှာ မြို့တွေ အများကြီး ရှိတယ်။",
       "options": [
+        "city",
         "citys",
-        "cities",
-        "city"
+        "cities"
       ],
       "answers": [
         "cities"
       ],
-      "explain_mm": "‘city’ ဆိုတဲ့စကားလုံးက Consonant (ဗျည်း) + y နဲ့ဆုံးတဲ့အတွက် ‘y’ ကို ‘i’ ပြောင်းပြီး ‘cities’ လို့ ပေါင်းပေးရပါမယ်နော်။"
+      "explain_mm": "‘city’ က consonant + y နဲ့ ဆုံးတဲ့အတွက် ‘y’ ကို ‘i’ ပြောင်းပြီး ‑es ပေါင်းပါတယ် → cities ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I have five ___.",
+      "prompt_mm": "ကျွန်တော့်မှာ ကလေး ၅ ယောက် ရှိတယ်။",
+      "options": [
+        "childs",
+        "childrens",
+        "children"
+      ],
+      "answers": [
+        "children"
+      ],
+      "explain_mm": "‘child’ က irregular noun ဖြစ်လို့ plural က ‘children’ ပါ — ‑s မပေါင်းရပါဘူး ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "There are three ___ on the table.",
+      "prompt_mm": "စားပွဲပေါ်မှာ စာအုပ် သုံးအုပ် ရှိတယ်။",
+      "options": [
+        "book",
+        "bookes",
+        "books"
+      ],
+      "answers": [
+        "books"
+      ],
+      "explain_mm": "‘book’ က သာမန် noun ဖြစ်လို့ ‑s ပဲ ပေါင်းပါတယ် → books ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Two ___ are working here.",
+      "prompt_mm": "လူ နှစ်ယောက် ဒီမှာ အလုပ်လုပ်နေတယ်။",
+      "options": [
+        "mans",
+        "men",
+        "mens"
+      ],
+      "answers": [
+        "men"
+      ],
+      "explain_mm": "‘man’ က irregular ဖြစ်လို့ plural က ‘men’ ပါ — ‘mans’ မဟုတ်ပါဘူး ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Plural of 'child' is ___.",
-      "prompt_mm": "‘child’ ရဲ့ plural က ___ ပါနော်။",
+      "prompt_en": "I see three ___.  ( cat )",
+      "prompt_mm": "ကြောင် သုံးကောင် မြင်တယ်။",
+      "answers": [
+        "cats"
+      ],
+      "explain_mm": "သာမန် noun ဖြစ်လို့ ‑s ပဲ ပေါင်းပါ → cats ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She bought two ___.  ( box )",
+      "prompt_mm": "သူမ သေတ္တာ နှစ်လုံး ဝယ်ခဲ့တယ်။",
+      "answers": [
+        "boxes"
+      ],
+      "explain_mm": "‑x နဲ့ ဆုံးလို့ ‑es ပေါင်းပါ → boxes ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "There are many ___.  ( city )",
+      "prompt_mm": "မြို့တွေ အများကြီး ရှိတယ်။",
+      "answers": [
+        "cities"
+      ],
+      "explain_mm": "consonant + y → ‘y’ ကို ‘i’ ပြောင်းပြီး ‑es → cities ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I have five ___.  ( child )",
+      "prompt_mm": "ကလေး ၅ ယောက် ရှိတယ်။",
       "answers": [
         "children"
       ],
-      "explain_mm": "‘child’ က irregular noun ဖြစ်တဲ့အတွက် သူ့ရဲ့ plural က ‘children’ ပါနော်။"
+      "explain_mm": "‘child’ က irregular → children ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We need three ___.  ( dish )",
+      "prompt_mm": "ပန်းကန် သုံးချပ် လိုတယ်။",
+      "answers": [
+        "dishes"
+      ],
+      "explain_mm": "‑sh နဲ့ ဆုံးလို့ ‑es ပေါင်းပါ → dishes ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "I have three book.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျလေးကို အမှန်ဖြစ်အောင် ပြင်ပေးပါဦးနော်။",
+      "prompt_en": "I have two boxs.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "I have three books",
-        "i have three books."
+        "I have two boxes"
       ],
-      "explain_mm": "Plural (အများကိန်း) ဖြစ်တဲ့အတွက် noun ရဲ့နောက်မှာ -s ထည့်ပေးရပါမယ်နော်။ ဥပမာ - book → books။"
+      "explain_mm": "‑x နဲ့ ဆုံးရင် ‑es ပေါင်းပါ → boxes ။ ‘boxs’ မဟုတ်ပါဘူး ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  two  /  there  /  are  /  buses",
-      "prompt_mm": "စကားလုံးလေးတွေကို နေရာတကျဖြစ်အောင် ပြန်စီပြီး ဝါကျအမှန်လေးတစ်ခု တည်ဆောက်ပေးပါနော်။",
+      "prompt_en": "There are many citys.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "There are two buses",
-        "there are two buses."
+        "There are many cities"
       ],
-      "explain_mm": "‘There are’ နဲ့သုံးထားပြီး ‘two buses’ (plural / အများကိန်း) ဖြစ်တဲ့အတွက် ‘bus’ ရဲ့နောက်မှာ -es ပေါင်းထည့်ပေးရပါမယ်နော်။"
+      "explain_mm": "consonant + y → cities (y → ies) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — count things. Write 5–8 sentences with plural nouns about things around you (use numbers like two, three, many).",
-      "prompt_mm": "အပိုင်း ၁ — ကဲ... ကိုယ့်ပတ်ဝန်းကျင်က အရာဝတ္ထုလေးတွေကို ရေတွက်ကြည့်ကြရအောင်။ Plural noun တွေကိုသုံးပြီး ကိုယ့်ပတ်ဝန်းကျင်အကြောင်း ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော်။ (two, three, many စတဲ့ အရေအတွက်ပြ စကားလုံးလေးတွေ သုံးဖို့ မမေ့နဲ့ဦးနော်)။ ရေးပြီးသွားရင် ဖုန်းနဲ့ scan ဖတ်ပြီးဖြစ်ဖြစ်၊ စာရိုက်ပြီးဖြစ်ဖြစ် တင်ပေးလိုက်ပါ။",
-      "model": "I have two {v}bags{/v}. There are three {v}boxes{/v} on the shelf. My house has four {v}rooms{/v}. I see many {v}buses{/v} on the road. There are five {v}children{/v} in the park.",
-      "explain_mm": "Plural noun တွေရဲ့ ပုံစံမှန် (-s / -es / -ies / irregular) တွေကို သေသေချာချာ မှန်မှန်ကန်ကန် သုံးထားဖို့ လိုပါတယ်နော်။",
-      "grading": {
-        "grammar_point": "Singular & plural nouns",
-        "rule": "Plural nouns add -s (or -es/-ies), with some irregulars (children, men). Use plural form after numbers > 1 and after 'many'.",
-        "must_check": [
-          "Plural -s/-es/-ies spelling correct",
-          "Irregular plurals correct (children, men, feet)",
-          "Plural used after numbers > 1 / many",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "No plural -s (three book)",
-          "Wrong spelling (citys, boxs)",
-          "Irregulars wrong (childs, mans)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I have five childs.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I have five children"
+      ],
+      "explain_mm": "‘child’ ရဲ့ plural က irregular ‘children’ ပါ ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — describe a busy place. Write a short paragraph (4–6 sentences) about a market or school, using plural nouns.",
-      "prompt_mm": "အပိုင်း ၂ — ဒီတစ်ခါတော့ စည်ကားတဲ့နေရာတစ်ခုအကြောင်း ပြောပြကြည့်ကြရအောင်။ ဈေး ဒါမှမဟုတ် ကျောင်းလို နေရာတစ်ခုအကြောင်းကို plural noun တွေသုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးပေးပါနော်။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးလိုက်ပါဦး။",
-      "model": "The market is full of people. There are many {v}shops{/v} and {v}stalls{/v}. Women sell {v}vegetables{/v} and {v}fruits{/v}. Children carry {v}baskets{/v}. Two {v}buses{/v} wait outside.",
-      "explain_mm": "Plural noun တွေရဲ့ စာလုံးပေါင်းကို မှန်မှန်ကန်ကန်သုံးပြီး အကြောင်းအရာဆက်စပ်မှုရှိတဲ့ စာပိုဒ်တစ်ခုဖြစ်အောင် ရေးဖွဲ့ပေးပါနော်။",
-      "grading": {
-        "grammar_point": "Singular & plural nouns",
-        "rule": "A description using plural nouns with correct spelling.",
-        "must_check": [
-          "Correct plural spelling throughout",
-          "Irregular plurals correct",
-          "Plurals where meaning is more than one",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Missing -s",
-          "Spelling errors",
-          "Irregular plural mistakes"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She has three cat.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She has three cats"
+      ],
+      "explain_mm": "‘three’ (အများ) ဆိုလို့ noun ကို plural လုပ်ပါ → cats ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်မှာ ကြောင် နှစ်ကောင် ရှိတယ်။",
+      "options": [
+        "I",
+        "have",
+        "two",
+        "cats"
+      ],
+      "answers": [
+        "I have two cats"
+      ],
+      "explain_mm": "အများကိန်း → ‑s ပေါင်း → cats ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ သေတ္တာ သုံးလုံး ဝယ်ခဲ့တယ်။",
+      "options": [
+        "She",
+        "bought",
+        "three",
+        "boxes"
+      ],
+      "answers": [
+        "She bought three boxes"
+      ],
+      "explain_mm": "‑x → ‑es → boxes ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မြန်မာပြည်မှာ မြို့တွေ အများကြီး ရှိတယ်။",
+      "options": [
+        "There",
+        "are",
+        "many",
+        "cities",
+        "in",
+        "Myanmar"
+      ],
+      "answers": [
+        "There are many cities in Myanmar"
+      ],
+      "explain_mm": "consonant + y → cities ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော့်မှာ ကလေး ၅ ယောက် ရှိတယ်။",
+      "options": [
+        "I",
+        "have",
+        "five",
+        "children"
+      ],
+      "answers": [
+        "I have five children"
+      ],
+      "explain_mm": "irregular → children ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ပန်းကန် သုံးချပ် လိုတယ်။",
+      "options": [
+        "I",
+        "need",
+        "three",
+        "dishes"
+      ],
+      "answers": [
+        "I need three dishes"
+      ],
+      "explain_mm": "‑sh → ‑es → dishes ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "လူ နှစ်ယောက် ဒီမှာ အလုပ်လုပ်တယ်။",
+      "options": [
+        "Two",
+        "men",
+        "work",
+        "here"
+      ],
+      "answers": [
+        "Two men work here"
+      ],
+      "explain_mm": "‘man’ → ‘men’ (irregular) ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Plural: most nouns + {v}-s{/v}; -s/-x/-ch/-sh + {v}-es{/v}; consonant + y → {v}-ies{/v}; irregular (man → men, child → children).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — noun အများစု + -s ၊ -s/-x/-ch/-sh ဆုံးရင် + -es ၊ consonant + y ဆိုရင် y → ies ၊ irregular (man → men, child → children) ။"
 }

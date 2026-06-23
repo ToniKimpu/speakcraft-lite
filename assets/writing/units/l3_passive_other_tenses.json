@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The results ___ be announced tomorrow.",
-      "prompt_mm": "ရလဒ်တွေကို မနက်ဖြန် ကြေညာပါမယ်။",
+      "prompt_mm": "ရလဒ်တွေ မနက်ဖြန် ကြေညာမယ်။",
       "options": [
         "will",
         "are",
@@ -169,13 +169,13 @@
       "answers": [
         "will"
       ],
-      "explain_mm": "Future passive ပုံစံကတော့ — will be + V3 → will be announced ပါ။"
+      "explain_mm": "future passive → will be + V3 ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The road is ___ repaired right now.",
-      "prompt_mm": "လမ်းကို အခု ပြင်နေပါတယ်။",
+      "prompt_mm": "လမ်းကို အခု ပြုပြင်နေတယ်။",
       "options": [
         "being",
         "been",
@@ -184,97 +184,255 @@
       "answers": [
         "being"
       ],
-      "explain_mm": "Present continuous passive ပုံစံကတော့ — is being + V3 → is being repaired ပါ။"
+      "explain_mm": "continuous passive → is being + V3 ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This problem can ___ solved easily.",
+      "prompt_mm": "ဒီပြဿနာကို လွယ်လွယ် ဖြေရှင်းနိုင်တယ်။",
+      "options": [
+        "be",
+        "been",
+        "being"
+      ],
+      "answers": [
+        "be"
+      ],
+      "explain_mm": "modal passive → can be + V3 ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The work ___ been finished already.",
+      "prompt_mm": "အလုပ် ပြီးသွားပြီ။",
+      "options": [
+        "has",
+        "is",
+        "will"
+      ],
+      "answers": [
+        "has"
+      ],
+      "explain_mm": "perfect passive → has been + V3 ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "This form must ___ signed today.",
+      "prompt_mm": "ဒီပုံစံကို ဒီနေ့ လက်မှတ်ထိုးရမယ်။",
+      "options": [
+        "be",
+        "been",
+        "being"
+      ],
+      "answers": [
+        "be"
+      ],
+      "explain_mm": "modal passive → must be + V3 ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "The work ___ ___ ___ (finish) already. (present perfect, 3 words)",
-      "prompt_mm": "အလုပ် ပြီးသွားပါပြီ။ ( present perfect passive — စကားလုံး ၃ လုံး )",
+      "prompt_en": "The bridge ___ next month.  ( future, open )",
+      "prompt_mm": "တံတားကို လာမယ့်လ ဖွင့်မယ်။",
+      "answers": [
+        "will be opened"
+      ],
+      "explain_mm": "future passive → will be + V3 ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The house ___ at the moment.  ( continuous, paint )",
+      "prompt_mm": "အိမ်ကို အခု ဆေးသုတ်နေတယ်။",
+      "answers": [
+        "is being painted"
+      ],
+      "explain_mm": "continuous passive → is being + V3 ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The work ___ already.  ( perfect, finish )",
+      "prompt_mm": "အလုပ် ပြီးသွားပြီ။",
       "answers": [
         "has been finished"
       ],
-      "explain_mm": "Present perfect passive ပုံစံကတော့ — has/have been + V3 → has been finished ပါ။"
+      "explain_mm": "perfect passive → has been + V3 ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "This form ___ today.  ( modal must, sign )",
+      "prompt_mm": "ဒီပုံစံကို ဒီနေ့ လက်မှတ်ထိုးရမယ်။",
+      "answers": [
+        "must be signed"
+      ],
+      "explain_mm": "modal passive → must be + V3 ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The results ___ tomorrow.  ( future, announce )",
+      "prompt_mm": "ရလဒ်တွေ မနက်ဖြန် ကြေညာမယ်။",
+      "answers": [
+        "will be announced"
+      ],
+      "explain_mm": "future passive → will be + V3 ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "This problem can solved easily.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ကြည့်ကြရအောင်။",
+      "prompt_en": "The bridge will opened next month.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "This problem can be solved easily",
-        "this problem can be solved easily.",
-        "This problem can be solved easily."
+        "The bridge will be opened next month"
       ],
-      "explain_mm": "Modal passive ပုံစံကတော့ — modal + be + V3 → can be solved ('be' ကို ထည့်ဖို့ မမေ့နဲ့နော်)။"
+      "explain_mm": "future passive → will be + V3 ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  be  /  will  /  the  /  opened  /  bridge  /  soon",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး sentence အမှန်ဖြစ်အောင် ရေးပေးပါနော်။ ( The bridge will be opened + soon )",
+      "prompt_en": "The house is been painted now.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "The bridge will be opened soon",
-        "the bridge will be opened soon.",
-        "The bridge will be opened soon."
+        "The house is being painted now"
       ],
-      "explain_mm": "Future passive ပုံစံကတော့ — will be + V3 → The bridge will be opened soon ပါ။"
+      "explain_mm": "continuous passive → is being + V3 ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — across tenses. Write 5–8 passive sentences using a MIX of tenses and modals: will be + V3, is/are being + V3, has/have been + V3, and modal + be + V3. Keep the main verb as V3.",
-      "prompt_mm": "အပိုင်း ၁ — Tense အမျိုးမျိုးနဲ့ လေ့ကျင့်ကြမယ်။ Tense နဲ့ modal verb ပုံစံအမျိုးမျိုးကို သုံးပြီး passive sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပါ — will be + V3, is/are being + V3, has/have been + V3, modal + be + V3 ပုံစံတွေ သုံးပြီးပေါ့။ Main verb ကိုတော့ V3 ပုံစံအတိုင်းပဲ ထားပေးပါနော်။ ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်။",
-      "model": "The new hospital {v}will be opened{/v} next year. The streets {v}are being cleaned{/v} for the festival. My application {v}has been accepted{/v}. The documents {v}must be sent{/v} by Friday. The bridge {v}is being repaired{/v} at the moment.",
-      "explain_mm": "'be' ကို tense အလိုက် ပြောင်းပေးပါ · V3 ကတော့ ပုံစံမပြောင်းပါဘူး။ will be / is being / has been / modal + be + V3။",
-      "grading": {
-        "grammar_point": "Passive (other tenses & modals)",
-        "rule": "Change only the 'be' part for each tense/modal; the main verb stays as the past participle.",
-        "must_check": [
-          "Correct be element per tense (will be / being / been / be)",
-          "Main verb in V3 throughout",
-          "At least three different tenses/modals used",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Dropping be/been/being (will finished, has stolen)",
-          "Modal + V3 without 'be' (can solved)",
-          "Changing the main verb instead of keeping V3"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "The work has been finish already.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "The work has been finished already"
+      ],
+      "explain_mm": "perfect passive → has been + V3 (finished) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a project or change. Write a short paragraph (4–6 sentences) about something being built, fixed, or changed near you (a road, a building, your workplace), using passives in different tenses.",
-      "prompt_mm": "အပိုင်း ၂ — စီမံကိန်းတစ်ခု ဒါမှမဟုတ် အပြောင်းအလဲတစ်ခုအကြောင်း ရေးကြည့်ကြမယ်။ ကိုယ့်ပတ်ဝန်းကျင်မှာ ဆောက်လုပ်နေတာ၊ ပြင်ဆင်နေတာ၊ ပြောင်းလဲနေတာ တစ်ခုခု (ဥပမာ လမ်း၊ အဆောက်အအုံ၊ အလုပ်ခွင်) အကြောင်းကို passive voice ပုံစံအမျိုးမျိုးသုံးပြီး စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါ။",
-      "model": "A new market {v}is being built{/v} near my house. The old shops {v}have been knocked{/v} down. The main road {v}is being widened{/v} too. People say it {v}will be finished{/v} by next year. Everyone hopes the noise {v}can be reduced{/v} soon.",
-      "explain_mm": "Passive voice ကို tense အမျိုးမျိုးနဲ့ ရေးကြည့်ပါ — 'be' verb ကိုပဲ ပြောင်းပေးပြီး V3 ကိုတော့ ပုံစံမပြောင်းဘဲ ထားပေးပါနော်။",
-      "grading": {
-        "grammar_point": "Passive (other tenses & modals)",
-        "rule": "Use passive forms across future, perfect, continuous, and modals to describe an ongoing project.",
-        "must_check": [
-          "Varied be elements (will be / has been / is being / can be)",
-          "Past participle main verbs",
-          "Coherent description",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Missing be/been/being",
-          "Modal + V3 without be",
-          "Active forms where passive is intended"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "This form must signed today.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "This form must be signed today"
+      ],
+      "explain_mm": "modal passive → must be + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "တံတားကို လာမယ့်လ ဖွင့်မယ်။",
+      "options": [
+        "The",
+        "bridge",
+        "will",
+        "be",
+        "opened",
+        "next",
+        "month"
+      ],
+      "answers": [
+        "The bridge will be opened next month"
+      ],
+      "explain_mm": "future passive → will be + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အိမ်ကို အခု ဆေးသုတ်နေတယ်။",
+      "options": [
+        "The",
+        "house",
+        "is",
+        "being",
+        "painted",
+        "at",
+        "the",
+        "moment"
+      ],
+      "answers": [
+        "The house is being painted at the moment"
+      ],
+      "explain_mm": "continuous passive → is being + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အလုပ် ပြီးသွားပြီ။",
+      "options": [
+        "The",
+        "work",
+        "has",
+        "been",
+        "finished",
+        "already"
+      ],
+      "answers": [
+        "The work has been finished already"
+      ],
+      "explain_mm": "perfect passive → has been + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီပုံစံကို ဒီနေ့ လက်မှတ်ထိုးရမယ်။",
+      "options": [
+        "This",
+        "form",
+        "must",
+        "be",
+        "signed",
+        "today"
+      ],
+      "answers": [
+        "This form must be signed today"
+      ],
+      "explain_mm": "modal passive → must be + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရလဒ်တွေ မနက်ဖြန် ကြေညာမယ်။",
+      "options": [
+        "The",
+        "results",
+        "will",
+        "be",
+        "announced",
+        "tomorrow"
+      ],
+      "answers": [
+        "The results will be announced tomorrow"
+      ],
+      "explain_mm": "future passive → will be + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီပြဿနာကို လွယ်လွယ် ဖြေရှင်းနိုင်တယ်။",
+      "options": [
+        "This",
+        "problem",
+        "can",
+        "be",
+        "solved",
+        "easily"
+      ],
+      "answers": [
+        "This problem can be solved easily"
+      ],
+      "explain_mm": "modal passive → can be + V3 ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Passive in other tenses: future {v}will be{/v} + V3 · continuous {v}is being{/v} + V3 · perfect {v}has been{/v} + V3 · modal {v}must be{/v} + V3.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — passive အခြား tense — future → will be + V3 ၊ continuous → is being + V3 ၊ perfect → has been + V3 ၊ modal → can/must be + V3 ။"
 }

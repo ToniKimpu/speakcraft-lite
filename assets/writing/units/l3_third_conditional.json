@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "If I had studied, I ___ the exam.",
-      "prompt_mm": "ကြိုးစားခဲ့ရင် စာမေးပွဲ အောင်ခဲ့မှာပါ။",
+      "prompt_mm": "ကြိုးစားခဲ့ရင် စာမေးပွဲ အောင်ခဲ့မှာ။",
       "options": [
         "would have passed",
         "would pass",
@@ -169,13 +169,13 @@
       "answers": [
         "would have passed"
       ],
-      "explain_mm": "Third conditional မှာ result ကိုပြတဲ့အပိုင်းက would have + V3 ပုံစံဖြစ်လို့ → would have passed လို့ သုံးပေးရပါမယ်။"
+      "explain_mm": "result → would have + V3 → would have passed ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "If we ___ earlier, we wouldn't have missed the bus.",
-      "prompt_mm": "စောစော ထွက်ခဲ့ရင် ဘတ်စ်ကား လွတ်သွားမှာ မဟုတ်ပါဘူး။",
+      "prompt_mm": "စောစော ထွက်ခဲ့ရင် ဘတ်စ်ကား မလွတ်ခဲ့ဘူး။",
       "options": [
         "had left",
         "left",
@@ -184,97 +184,272 @@
       "answers": [
         "had left"
       ],
-      "explain_mm": "if-clause မှာ past perfect ပုံစံကို သုံးရမှာဖြစ်လို့ → had left လို့ ဖြစ်သွားပါတယ်။"
+      "explain_mm": "if ပိုင်း → had + V3 → had left ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "If I ___ known, I would have come.",
+      "prompt_mm": "သိခဲ့ရင် လာခဲ့မှာ။",
+      "options": [
+        "had",
+        "would have",
+        "would"
+      ],
+      "answers": [
+        "had"
+      ],
+      "explain_mm": "if ပိုင်း → had + V3 (had known) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "If you had asked, I ___ you.",
+      "prompt_mm": "တောင်းဆိုခဲ့ရင် ကူညီခဲ့မှာ။",
+      "options": [
+        "would have helped",
+        "would help",
+        "had helped"
+      ],
+      "answers": [
+        "would have helped"
+      ],
+      "explain_mm": "result → would have + V3 ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ won if we had played better.",
+      "prompt_mm": "ပိုကောင်း ကစားခဲ့ရင် နိုင်ခဲ့မှာ။",
+      "options": [
+        "would have",
+        "would",
+        "had"
+      ],
+      "answers": [
+        "would have"
+      ],
+      "explain_mm": "result → would have + V3 (would have won) ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "If you had asked, I ___ ___ ___ (help) you. (3 words)",
-      "prompt_mm": "မင်းသာ တောင်းဆိုခဲ့ရင် ကူညီခဲ့မှာပါ။ ( would have help… ပုံစံကို သုံးပြီး စကားလုံး ၃ လုံး ဖြည့်ပေးပါ )",
+      "prompt_en": "If I had seen you, I ___ hello.  ( say )",
+      "prompt_mm": "မင်းကို မြင်ခဲ့ရင် နှုတ်ဆက်ခဲ့မှာ။",
       "answers": [
-        "would have helped"
+        "would have said"
       ],
-      "explain_mm": "result အပိုင်းမှာ would have + V3 ပုံစံကို သုံးရမှာဖြစ်လို့ → would have helped ဖြစ်သွားပါတယ်။"
+      "explain_mm": "result → would have + V3 → would have said ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We would have won if we ___ better.  ( play )",
+      "prompt_mm": "ပိုကောင်း ကစားခဲ့ရင် နိုင်ခဲ့မှာ။",
+      "answers": [
+        "had played"
+      ],
+      "explain_mm": "if ပိုင်း → had + V3 → had played ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If you ___ me, I would have failed.  ( negative, help )",
+      "prompt_mm": "မင်း မကူညီခဲ့ရင် ကျရှုံးခဲ့မှာ။",
+      "answers": [
+        "hadn't helped",
+        "had not helped"
+      ],
+      "explain_mm": "if ပိုင်း အငြင်း → hadn't + V3 ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She might have come if we ___ earlier.  ( ask )",
+      "prompt_mm": "စောစော တောင်းဆိုခဲ့ရင် သူ လာခဲ့မှာ။",
+      "answers": [
+        "had asked"
+      ],
+      "explain_mm": "if ပိုင်း → had + V3 → had asked ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "If I had known, I ___ earlier.  ( come )",
+      "prompt_mm": "သိခဲ့ရင် စောစော လာခဲ့မှာ။",
+      "answers": [
+        "would have come"
+      ],
+      "explain_mm": "result → would have + V3 ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "If I had studied, I would passed the exam.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "If I had studied, I would have passed the exam"
+      ],
+      "explain_mm": "result → would have + V3 (would have passed) ။"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "If we left earlier, we wouldn't have missed the bus.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "If we had left earlier, we wouldn't have missed the bus"
+      ],
+      "explain_mm": "if ပိုင်း → had + V3 (had left) ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
       "prompt_en": "If I would have known, I would have come.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို ပြင်ပေးပါ။",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "If I had known, I would have come",
-        "if i had known, i would have come.",
-        "If I had known I would have come"
+        "If I had known, I would have come"
       ],
-      "explain_mm": "if-clause မှာ 'would have' မသုံးရပါဘူးနော်။ ဒါကြောင့် မှန်ကန်တဲ့ပုံစံက → If I had known, … ဖြစ်ရပါမယ်။"
+      "explain_mm": "if ပိုင်း → had + V3 (had known, would have မသုံး) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  had  /  seen  /  if  /  you  /  I  /  said  /  would  /  have  /  hello  /  I",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး ဝါကျအမှန်ဖြစ်အောင် ရေးပေးပါ။ ( If I had seen you + I would have said hello )",
+      "prompt_en": "If I had seen you, I would said hello.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "If I had seen you, I would have said hello",
-        "if i had seen you i would have said hello.",
+        "If I had seen you, I would have said hello"
+      ],
+      "explain_mm": "result → would have + V3 (would have said) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်းကို မြင်ခဲ့ရင် နှုတ်ဆက်ခဲ့မှာ။",
+      "options": [
+        "If",
+        "I",
+        "had",
+        "seen",
+        "you",
+        "I",
+        "would",
+        "have",
+        "said",
+        "hello"
+      ],
+      "answers": [
         "If I had seen you I would have said hello"
       ],
-      "explain_mm": "ပုံစံက If + had + V3 , would have + V3 ဖြစ်တဲ့အတွက် → If I had seen you, I would have said hello။ ဆိုပြီး ဖြစ်သွားမှာပါ။"
+      "explain_mm": "If + had + V3, would have + V3 ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — past regrets. Write 5–8 third-conditional sentences about things that didn't happen in the past (If I had …, I would have …). Use the past perfect in the if-part.",
-      "prompt_mm": "အပိုင်း ၁ — အတိတ်က နောင်တတွေအကြောင်း။ အတိတ်မှာ ကိုယ်လုပ်မဖြစ်ခဲ့တဲ့အရာတွေနဲ့ ပတ်သက်ပြီး နောင်တရတဲ့အကြောင်းကို third conditional (If I had …, I would have …) ပုံစံသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ရအောင်။ if-part မှာ past perfect (had + V3) ကို သုံးပေးပါနော်။ ရေးပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လို့လည်း ရပါတယ်။",
-      "model": "If I {v}had woken{/v} up earlier, I {v}wouldn't have missed{/v} the meeting. If I {v}had saved{/v} money, I {v}would have bought{/v} the ticket. If she {v}had told{/v} me, I {v}would have understood{/v}. If we {v}had booked{/v} early, we {v}would have paid{/v} less. If I {v}had listened{/v}, I {v}wouldn't have made{/v} that mistake.",
-      "explain_mm": "သတိရဖို့ကတော့ ပုံစံက If + had + V3, … would have + V3 ပါ။ if-clause မှာ 'would have' လုံးဝမထည့်မိဖို့ သတိပြုပါနော်။",
-      "grading": {
-        "grammar_point": "Third conditional",
-        "rule": "If + past perfect (had + V3), … would have + V3, for an unreal past and its imagined result.",
-        "must_check": [
-          "Past perfect (had + V3) in the if-clause",
-          "would have + V3 in the result",
-          "Clearly about the past (something already over)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "would have in the if-clause (If I would have known)",
-          "Past simple instead of past perfect (If I knew)",
-          "Using the base verb instead of V3 after 'have'"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပိုကောင်း ကစားခဲ့ရင် နိုင်ခဲ့မှာ။",
+      "options": [
+        "We",
+        "would",
+        "have",
+        "won",
+        "if",
+        "we",
+        "had",
+        "played",
+        "better"
+      ],
+      "answers": [
+        "We would have won if we had played better"
+      ],
+      "explain_mm": "would have + V3 ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a day that went wrong. Write a short paragraph (4–6 sentences) about a past day or event that went badly, imagining how it would have been different, using the third conditional.",
-      "prompt_mm": "အပိုင်း ၂ — အဆင်မပြေခဲ့တဲ့ နေ့တစ်နေ့။ ကိုယ့်ဘဝမှာ အဆင်မပြေဖြစ်ခဲ့တဲ့ အတိတ်က နေ့တစ်နေ့ ဒါမှမဟုတ် အဖြစ်အပျက်တစ်ခုအကြောင်းကို ပြန်စဉ်းစားကြည့်ပါ။ အဲဒီတုန်းက တစ်ခုခုကို တခြားပုံစံနဲ့သာ လုပ်ခဲ့မယ်ဆိုရင် အခြေအနေ ဘယ်လိုများ ပြောင်းလဲသွားနိုင်မလဲဆိုတာကို စိတ်ကူးယဉ်ပြီး third conditional သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးပေးပါ။ ပြီးရင်တော့ ရေးထားတာလေးကို scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "Last week's trip was a disaster. If I {v}had checked{/v} the weather, I {v}would have brought{/v} a coat. If we {v}hadn't taken{/v} the wrong bus, we {v}would have arrived{/v} on time. The hotel {v}wouldn't have cancelled{/v} our room if I {v}had confirmed{/v} it. If I {v}had planned{/v} more carefully, we {v}would have enjoyed{/v} the day.",
-      "explain_mm": "ပုံစံက If + had + V3, … would have + V3 ပါ။ အတိတ်မှာ တကယ်မဖြစ်ခဲ့တဲ့ အကြောင်းရင်း (if-clause) နဲ့ ကိုယ်စိတ်ကူးထားတဲ့ အကျိုးဆက် (result-clause) ကို မှန်မှန်ကန်ကန် ချိတ်ဆက်ပေးဖို့ မမေ့နဲ့နော်။",
-      "grading": {
-        "grammar_point": "Third conditional",
-        "rule": "Link an unreal past condition (had + V3) to its imagined result (would have + V3).",
-        "must_check": [
-          "If-clause in past perfect",
-          "Result clause with would have + V3",
-          "Consistent past, unreal meaning",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "would have in the if-clause",
-          "Mixing in present or second-conditional forms",
-          "Base verb after 'have' instead of V3"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း မကူညီခဲ့ရင် ကျရှုံးခဲ့မှာ။",
+      "options": [
+        "If",
+        "you",
+        "hadn't",
+        "helped",
+        "me",
+        "I",
+        "would",
+        "have",
+        "failed"
+      ],
+      "answers": [
+        "If you hadn't helped me I would have failed"
+      ],
+      "explain_mm": "if ပိုင်း အငြင်း → hadn't + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သိခဲ့ရင် လာခဲ့မှာ။",
+      "options": [
+        "If",
+        "I",
+        "had",
+        "known",
+        "I",
+        "would",
+        "have",
+        "come"
+      ],
+      "answers": [
+        "If I had known I would have come"
+      ],
+      "explain_mm": "If + had + V3, would have + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "စောစော တောင်းဆိုခဲ့ရင် သူ လာခဲ့မှာ။",
+      "options": [
+        "She",
+        "might",
+        "have",
+        "come",
+        "if",
+        "we",
+        "had",
+        "asked",
+        "earlier"
+      ],
+      "answers": [
+        "She might have come if we had asked earlier"
+      ],
+      "explain_mm": "might have + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကြိုးစားခဲ့ရင် စာမေးပွဲ အောင်ခဲ့မှာ။",
+      "options": [
+        "If",
+        "I",
+        "had",
+        "studied",
+        "I",
+        "would",
+        "have",
+        "passed",
+        "the",
+        "exam"
+      ],
+      "answers": [
+        "If I had studied I would have passed the exam"
+      ],
+      "explain_mm": "If + had + V3, would have + V3 ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}If{/v} + had + V3, {v}would have{/v} + V3 — unreal past (If I had known, I would have come).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — If + had + V3, would have + V3 — အတိတ်မှာ မဖြစ်ခဲ့တဲ့ စိတ်ကူး (If I had known, I would have come) ။"
 }

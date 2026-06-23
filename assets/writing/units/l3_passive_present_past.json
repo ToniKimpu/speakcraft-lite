@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "This bridge ___ built in 1990.",
-      "prompt_mm": "ဒီတံတားကို ၁၉၉၀ ခုနှစ်မှာ ဆောက်ခဲ့တာပါ။",
+      "prompt_mm": "ဒီတံတားကို ၁၉၉၀ မှာ ဆောက်ခဲ့တာ။",
       "options": [
         "was",
         "is",
@@ -169,13 +169,13 @@
       "answers": [
         "was"
       ],
-      "explain_mm": "Past passive ပုံစံပါ — Subject က singular (bridge) ဖြစ်တဲ့အတွက် → was + V3 → was built ဆိုပြီး သုံးထားတာပါ။"
+      "explain_mm": "အတိတ် passive → was + V3 (built) ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "English ___ spoken in many countries.",
-      "prompt_mm": "အင်္ဂလိပ်စာကို နိုင်ငံအများကြီးမှာ ပြောဆိုကြပါတယ်။",
+      "prompt_mm": "အင်္ဂလိပ်စကားကို နိုင်ငံ အများကြီးမှာ ပြောတယ်။",
       "options": [
         "is",
         "are",
@@ -184,97 +184,254 @@
       "answers": [
         "is"
       ],
-      "explain_mm": "Present passive ပုံစံပါ — Subject က 'English' (singular) ဖြစ်တဲ့အတွက် → is + V3 → is spoken ဆိုပြီး သုံးထားတာပါ။"
+      "explain_mm": "present passive → is + V3 (spoken) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The letter ___ by my father.",
+      "prompt_mm": "ဒီစာကို ကျွန်တော့်အဖေ ရေးခဲ့တာ။",
+      "options": [
+        "was written",
+        "was wrote",
+        "wrote"
+      ],
+      "answers": [
+        "was written"
+      ],
+      "explain_mm": "passive → was + V3 (written, wrote မဟုတ်) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "These shoes ___ in Vietnam.",
+      "prompt_mm": "ဒီဖိနပ်တွေကို ဗီယက်နမ်မှာ လုပ်တာ။",
+      "options": [
+        "are made",
+        "is made",
+        "make"
+      ],
+      "answers": [
+        "are made"
+      ],
+      "explain_mm": "present passive (plural) → are + V3 (made) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "The streets ___ before the festival.",
+      "prompt_mm": "ပွဲမတိုင်ခင် လမ်းတွေကို သန့်ရှင်းရေး လုပ်ခဲ့တယ်။",
+      "options": [
+        "were cleaned",
+        "was cleaned",
+        "cleaned"
+      ],
+      "answers": [
+        "were cleaned"
+      ],
+      "explain_mm": "အတိတ် passive (plural) → were + V3 ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "These cars ___ ___ (make) in Japan. (present, 2 words)",
-      "prompt_mm": "ဒီကားတွေကို ဂျပန်မှာ လုပ်ပါတယ်။ (present passive ပုံစံဖြစ်အောင် စကားလုံး ၂ လုံး ဖြည့်ပေးရမှာပါ)",
+      "prompt_en": "Coffee ___ in the hills.  ( present, grow )",
+      "prompt_mm": "ကော်ဖီကို တောင်တန်းတွေမှာ စိုက်တယ်။",
+      "answers": [
+        "is grown"
+      ],
+      "explain_mm": "present passive → is + V3 (grown) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The letter ___ by my father.  ( past, write )",
+      "prompt_mm": "ဒီစာကို ကျွန်တော့်အဖေ ရေးခဲ့တာ။",
+      "answers": [
+        "was written"
+      ],
+      "explain_mm": "past passive → was + V3 (written) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "These cars ___ in Japan.  ( present, make )",
+      "prompt_mm": "ဒီကားတွေကို ဂျပန်မှာ လုပ်တာ။",
       "answers": [
         "are made"
       ],
-      "explain_mm": "Subject က plural (cars) ဖြစ်ပြီး present tense ဖြစ်တဲ့အတွက် → are + V3 → are made ဆိုပြီး သုံးရပါမယ်။"
+      "explain_mm": "present passive (plural) → are made ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The house ___ last year.  ( past, build )",
+      "prompt_mm": "အိမ်ကို မနှစ်က ဆောက်ခဲ့တာ။",
+      "answers": [
+        "was built"
+      ],
+      "explain_mm": "past passive → was built ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Rice ___ in many countries.  ( present, eat )",
+      "prompt_mm": "ထမင်းကို နိုင်ငံ အများကြီးမှာ စားကြတယ်။",
+      "answers": [
+        "is eaten"
+      ],
+      "explain_mm": "present passive → is + V3 (eaten) ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "The letter wrote by my father.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "This bridge was build in 1990.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "The letter was written by my father",
-        "the letter was written by my father.",
-        "The letter was written by my father."
+        "This bridge was built in 1990"
       ],
-      "explain_mm": "passive ပုံစံက be + V3 ဖြစ်တဲ့အတွက် was written လို့ ပြင်ပေးရပါမယ် ('be' verb ကို မေ့မကျန်ခဲ့ပါနဲ့၊ V3 ကို သုံးပေးပါ)။"
+      "explain_mm": "passive → was + V3 (built) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Make it passive:  grow  /  rice  /  here  /  is",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး passive sentence အမှန်ဖြစ်အောင် ဖွဲ့ပေးပါ။ (ပုံစံက Rice is grown here လိုမျိုးပါ)။",
+      "prompt_en": "English are spoken in many countries.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Rice is grown here",
-        "rice is grown here.",
-        "Rice is grown here."
+        "English is spoken in many countries"
       ],
-      "explain_mm": "Present passive ပုံစံနဲ့ဆိုရင် → Rice is grown here ဆိုတာ အဖြေမှန်ဖြစ်ပါတယ်။"
+      "explain_mm": "‘English’ (singular) → is ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — how things are made & done. Write 5–8 passive sentences (present and past) about products, places, or processes — where the action matters more than the doer. Use is/are + V3 and was/were + V3.",
-      "prompt_mm": "အပိုင်း (၁) — အရာတွေ ဘယ်လိုပြုလုပ်သလဲ။ ထုတ်ကုန်တစ်ခု၊ နေရာတစ်ခု၊ ဒါမှမဟုတ် လုပ်ငန်းစဉ်တစ်ခုအကြောင်းကို ရေးရမှာပါ။ ဘယ်သူလုပ်သလဲဆိုတာထက် လုပ်ဆောင်ချက်ကို ပိုအလေးပေးတဲ့ passive sentence (present & past) ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါ။ is/are + V3 နဲ့ was/were + V3 ပုံစံတွေကို သုံးဖို့ မမေ့နဲ့နော်။ ရေးပြီးရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်စေ၊ ဒီမှာပဲ စာရိုက်ပြီးဖြစ်စေ တင်ပေးနိုင်ပါတယ်။",
-      "model": "Tea {v}is grown{/v} in the north of my country. The leaves {v}are picked{/v} by hand. This temple {v}was built{/v} hundreds of years ago. The roads {v}were repaired{/v} last month. Our bread {v}is made{/v} fresh every morning.",
-      "explain_mm": "သတိပြုရမှာက passive = be + V3 ပါ။ present tense အတွက် is/are + V3 ကို သုံးပြီး၊ past tense အတွက် was/were + V3 ကို သုံးရပါမယ်။",
-      "grading": {
-        "grammar_point": "Passive (present & past)",
-        "rule": "be + past participle: am/is/are + V3 (present), was/were + V3 (past); 'by' agent only when needed.",
-        "must_check": [
-          "Correct form of be (is/are/was/were)",
-          "Past participle (V3) after be, not base or past simple",
-          "Subject–be agreement (singular/plural)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Dropping 'be' (English spoken here)",
-          "Using past simple instead of V3 (was wrote)",
-          "Adding an unnecessary 'by' agent"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "The letter was wrote by my father.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "The letter was written by my father"
+      ],
+      "explain_mm": "V3 → written (wrote မဟုတ်) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a famous place or product. Write a short paragraph (4–6 sentences) describing a well-known place, food, or product from your country, using the passive (present and past).",
-      "prompt_mm": "အပိုင်း (၂) — နာမည်ကြီးတဲ့ နေရာ သို့မဟုတ် ထုတ်ကုန်တစ်ခုအကြောင်း။ ကိုယ့်နိုင်ငံက ထင်ရှားတဲ့ နေရာ၊ အစားအသောက်၊ ဒါမှမဟုတ် ထုတ်ကုန်တစ်ခုအကြောင်း passive voice (present & past) ကို သုံးပြီး စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းမှ ၆ ကြောင်း) ရေးပေးပါ။ ရေးပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "Thanaka {v}is used{/v} all over Myanmar. It {v}is made{/v} from the bark of a tree. The bark {v}is ground{/v} on a stone with a little water. For centuries it {v}has been worn{/v} on the face. It {v}was introduced{/v} to me by my grandmother.",
-      "explain_mm": "passive ရဲ့ ပုံစံက be + V3 ပါ။ လုပ်ဆောင်ချက်ကို အဓိကထားပြီး 'by' ကိုတော့ တကယ်လိုအပ်မှသာ ထည့်ပေးပါနော်။",
-      "grading": {
-        "grammar_point": "Passive (present & past)",
-        "rule": "Describe a place/product mainly through passive forms, focusing on the action over the doer.",
-        "must_check": [
-          "be + V3 throughout",
-          "Correct present vs past be",
-          "Natural use of the passive (action-focused)",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Missing 'be'",
-          "Base verb or past simple instead of V3",
-          "Overusing 'by' agents"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "These shoes is made in Vietnam.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "These shoes are made in Vietnam"
+      ],
+      "explain_mm": "plural → are made ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကော်ဖီကို တောင်တန်းတွေမှာ စိုက်တယ်။",
+      "options": [
+        "Coffee",
+        "is",
+        "grown",
+        "in",
+        "the",
+        "hills"
+      ],
+      "answers": [
+        "Coffee is grown in the hills"
+      ],
+      "explain_mm": "present passive → is + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီစာကို ကျွန်တော့်အဖေ ရေးခဲ့တာ။",
+      "options": [
+        "The",
+        "letter",
+        "was",
+        "written",
+        "by",
+        "my",
+        "father"
+      ],
+      "answers": [
+        "The letter was written by my father"
+      ],
+      "explain_mm": "past passive → was + V3 + by ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီဖိနပ်တွေကို ဗီယက်နမ်မှာ လုပ်တာ။",
+      "options": [
+        "These",
+        "shoes",
+        "are",
+        "made",
+        "in",
+        "Vietnam"
+      ],
+      "answers": [
+        "These shoes are made in Vietnam"
+      ],
+      "explain_mm": "present passive (plural) → are made ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပွဲမတိုင်ခင် လမ်းတွေ သန့်ရှင်းရေး လုပ်ခဲ့တယ်။",
+      "options": [
+        "The",
+        "streets",
+        "were",
+        "cleaned",
+        "before",
+        "the",
+        "festival"
+      ],
+      "answers": [
+        "The streets were cleaned before the festival"
+      ],
+      "explain_mm": "past passive (plural) → were + V3 ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဒီတံတားကို ၁၉၉၀ မှာ ဆောက်ခဲ့တာ။",
+      "options": [
+        "This",
+        "bridge",
+        "was",
+        "built",
+        "in",
+        "1990"
+      ],
+      "answers": [
+        "This bridge was built in 1990"
+      ],
+      "explain_mm": "past passive → was built ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "အင်္ဂလိပ်စကားကို နိုင်ငံ အများကြီးမှာ ပြောတယ်။",
+      "options": [
+        "English",
+        "is",
+        "spoken",
+        "in",
+        "many",
+        "countries"
+      ],
+      "answers": [
+        "English is spoken in many countries"
+      ],
+      "explain_mm": "present passive → is + V3 ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Passive: present {v}am/is/are{/v} + V3 (Rice is grown) · past {v}was/were{/v} + V3 (It was built).  Add {v}by{/v} + doer if needed.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — passive: present → am/is/are + V3 (Rice is grown) ၊ past → was/were + V3 (It was built) ။ လိုရင် by + လုပ်သူ ထည့်ပါ ။"
 }

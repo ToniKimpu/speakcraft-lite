@@ -248,7 +248,7 @@
       "answers": [
         "Do"
       ],
-      "explain_mm": "you → Do သုံးပါ → Do you like tea?"
+      "explain_mm": "you → Do ။  ➝ Do you like tea?"
     },
     {
       "kind": "mcq",
@@ -263,99 +263,242 @@
       "answers": [
         "Does"
       ],
-      "explain_mm": "she → Does သုံးပါ → Does she work? (work က base form)။"
+      "explain_mm": "she → Does ။  ➝ Does she work in Yangon?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Does she ___ here?",
+      "prompt_mm": "သူမ ဒီမှာ နေသလား။",
+      "options": [
+        "live",
+        "lives",
+        "living"
+      ],
+      "answers": [
+        "live"
+      ],
+      "explain_mm": "Does နောက်မှာ base (live) ။  ➝ Does she live here?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ they speak English?",
+      "prompt_mm": "သူတို့ အင်္ဂလိပ်စကား ပြောတတ်သလား။",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "answers": [
+        "Do"
+      ],
+      "explain_mm": "they → Do ။  ➝ Do they speak English?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Does he ___ coffee?",
+      "prompt_mm": "သူ ကော်ဖီ သောက်သလား။",
+      "options": [
+        "drink",
+        "drinks",
+        "drinking"
+      ],
+      "answers": [
+        "drink"
+      ],
+      "explain_mm": "Does နောက်မှာ base (drink) ။  ➝ Does he drink coffee?"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Does she ___ (live) in Yangon?",
-      "prompt_mm": "သူမ ရန်ကုန်မှာ နေသလား။ ( live ကို သုံးပါ )",
+      "prompt_en": "___ you speak English?  ( question )",
+      "prompt_mm": "မင်း အင်္ဂလိပ်စကား ပြောတတ်သလား။",
       "answers": [
-        "live"
+        "Do"
       ],
-      "explain_mm": "Does နောက်က verb က base form — live (lives မဟုတ်ဘူး)။"
+      "explain_mm": "you → Do ။  ➝ Do you speak English?"
     },
     {
-      "kind": "reorder",
+      "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Put in order:  you  /  do  /  coffee  /  drink",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး မေးခွန်းမှန် ရေးပါ။",
+      "prompt_en": "___ she live in Yangon?  ( question )",
+      "prompt_mm": "သူမ ရန်ကုန်မှာ နေသလား။",
       "answers": [
-        "Do you drink coffee",
-        "Do you drink coffee?",
-        "do you drink coffee?"
+        "Does"
       ],
-      "explain_mm": "မေးခွန်းအစီအစဉ်: Do + subject + verb (base) → Do you drink coffee?"
+      "explain_mm": "she → Does ။  ➝ Does she live in Yangon?"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ they work on weekends?  ( question )",
+      "prompt_mm": "သူတို့ စနေတနင်္ဂနွေမှာ အလုပ်လုပ်သလား။",
+      "answers": [
+        "Do"
+      ],
+      "explain_mm": "they → Do ။  ➝ Do they work on weekends?"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Does he ___ tea?  ( like )",
+      "prompt_mm": "သူ လက်ဖက်ရည် ကြိုက်သလား။",
+      "answers": [
+        "like"
+      ],
+      "explain_mm": "Does နောက်မှာ base (like) ။  ➝ Does he like tea?"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Do you ___ rice?  ( eat )",
+      "prompt_mm": "မင်း ထမင်း စားသလား။",
+      "answers": [
+        "eat"
+      ],
+      "explain_mm": "Do နောက်မှာ base (eat) ။  ➝ Do you eat rice?"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Does she works here?",
-      "prompt_mm": "မှားနေတဲ့ မေးခွန်းကို ပြင်ပါ။",
+      "prompt_en": "Does you like tea?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Does she work here",
-        "Does she work here?",
-        "does she work here?"
+        "Do you like tea"
       ],
-      "explain_mm": "Does နောက်က verb က base form ဖြစ်ရမယ် — works → work။"
+      "explain_mm": "you → Do ။  ➝ Do you like tea?"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — ask a FRIEND. Write 5–8 yes/no questions you could ask a new friend, using \"Do you …?\" (and \"Do they …?\").",
-      "prompt_mm": "အပိုင်း ၁ — သူငယ်ချင်းကို မေးပါ။ သူငယ်ချင်းအသစ်တစ်ယောက်ကို မေးနိုင်တဲ့ yes/no မေးခွန်း ၅–၈ ခု \"Do you …?\" သုံးပြီး ရေးပါ။ Do နောက်က verb က base form ပါ။ ပြီးရင် စာအုပ်ထဲ ရေးပြီး scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ တစ်ကြောင်းချင်း ရိုက်ထည့်ပါ။",
-      "model": "{v}Do{/v} you {v}live{/v} near here? {v}Do{/v} you {v}work{/v} or {v}study{/v}? {v}Do{/v} you {v}like{/v} coffee? {v}Do{/v} you {v}speak{/v} English? {v}Do{/v} you {v}play{/v} football {t}on weekends{/t}?",
-      "explain_mm": "‘you / they’ နဲ့ဆို Do သုံးပါ။ Do/Does နောက်က verb အမြဲ base form — -s မထည့်ပါနဲ့။",
-      "grading": {
-        "grammar_point": "Present simple questions (do / does)",
-        "rule": "Yes/no questions: Do + I/you/we/they + base verb; Does + he/she/it + base verb. The auxiliary comes first and the main verb stays in the base form (no -s).",
-        "must_check": [
-          "Do vs Does correct for the subject",
-          "Base verb after do / does (no -s)",
-          "Question word order: Do/Does + subject + verb",
-          "Each line is a yes/no question (ends with ?)"
-        ],
-        "common_mm_errors": [
-          "Omitting do/does and using statement order (You like tea? / She works?)",
-          "Adding -s after does (Does she works?)",
-          "Using Do with he/she (or Does with you/they)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Do she work here?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Does she work here"
+      ],
+      "explain_mm": "she → Does ။  ➝ Does she work here?"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 4,
-      "max_lines": 6,
-      "prompt_en": "Part 2 — ask about SOMEONE ELSE. Write 4–6 questions about a family member (he / she), using \"Does he/she …?\" — base verb, no -s!",
-      "prompt_mm": "အပိုင်း ၂ — တခြားသူတစ်ယောက်အကြောင်း မေးပါ။ မိသားစုဝင်တစ်ယောက် (he / she) အကြောင်း မေးခွန်း ၄–၆ ခု \"Does he/she …?\" သုံးပြီး ရေးပါ — verb က base form, -s မထည့်ပါနဲ့! ပြီးရင် scan လုပ်ပါ။",
-      "model": "{v}Does{/v} she {v}live{/v} with you? {v}Does{/v} he {v}work{/v} in the city? {v}Does{/v} she {v}like{/v} sport? {v}Does{/v} he {v}study{/v} at night? {v}Does{/v} she {v}cook{/v} {t}every day{/t}?",
-      "explain_mm": "he / she နဲ့ဆို Does သုံးပါ။ Does နောက်က verb တိုင်း base form — Does she works? (✗) → Does she work? (✓)။",
-      "grading": {
-        "grammar_point": "Present simple questions (do / does)",
-        "rule": "Yes/no questions about a he/she subject. Every question starts with Does + subject + base verb (no -s on the main verb).",
-        "must_check": [
-          "Does (not Do) for he/she",
-          "Base verb after Does — no -s",
-          "Question word order: Does + subject + verb",
-          "4–6 yes/no questions"
-        ],
-        "common_mm_errors": [
-          "Adding -s after does (Does she works?)",
-          "Using Do with he/she",
-          "Dropping the auxiliary (She works?)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Does she lives in Yangon?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Does she live in Yangon"
+      ],
+      "explain_mm": "Does နောက်မှာ base (live) ။  ➝ Does she live in Yangon?"
+    },
+    {
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Do he speak English?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Does he speak English"
+      ],
+      "explain_mm": "he → Does ။  ➝ Does he speak English?"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း အင်္ဂလိပ်စကား ပြောတတ်သလား။",
+      "options": [
+        "Do",
+        "you",
+        "speak",
+        "English"
+      ],
+      "answers": [
+        "Do you speak English"
+      ],
+      "explain_mm": "you → Do + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ရန်ကုန်မှာ နေသလား။",
+      "options": [
+        "Does",
+        "she",
+        "live",
+        "in",
+        "Yangon"
+      ],
+      "answers": [
+        "Does she live in Yangon"
+      ],
+      "explain_mm": "she → Does + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ စနေတနင်္ဂနွေမှာ အလုပ်လုပ်သလား။",
+      "options": [
+        "Do",
+        "they",
+        "work",
+        "on",
+        "weekends"
+      ],
+      "answers": [
+        "Do they work on weekends"
+      ],
+      "explain_mm": "they → Do + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ လက်ဖက်ရည် ကြိုက်သလား။",
+      "options": [
+        "Does",
+        "he",
+        "like",
+        "tea"
+      ],
+      "answers": [
+        "Does he like tea"
+      ],
+      "explain_mm": "he → Does + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း ထမင်း စားသလား။",
+      "options": [
+        "Do",
+        "you",
+        "eat",
+        "rice"
+      ],
+      "answers": [
+        "Do you eat rice"
+      ],
+      "explain_mm": "you → Do + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ TV ကြည့်သလား။",
+      "options": [
+        "Does",
+        "she",
+        "watch",
+        "TV"
+      ],
+      "answers": [
+        "Does she watch TV"
+      ],
+      "explain_mm": "she → Does + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Questions: {v}Do{/v} + I/you/we/they …?  ·  {v}Does{/v} + he/she/it …?  (base verb — no -s).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — အမေးမှာ Do (I/you/we/they) ၊ Does (he/she/it) ကို ရှေ့ထားပါ ။ verb ကို base form (‑s မထည့်) သုံးပါ။"
 }

@@ -179,6 +179,8 @@
     ],
     "note_mm": "'be' (am / is / are) ရဲ့ နောက်မှာ တည်နေရာပြ စကားလုံးတွေ (Places) ကိုလည်း ထည့်သွင်း ပြောဆိုနိုင်ပါတယ်။ ဥပမာ — I am {v}at home{/v} (ကျွန်မ အိမ်မှာ ရှိနေတယ်)၊ She is {v}from Mandalay{/v} (သူမက မန္တလေးကပါ)၊ They are {v}at school{/v} (သူတို့ ကျောင်းမှာ ရှိနေတယ်)၊ We are {v}in Yangon{/v} (ကျွန်မတို့ ရန်ကုန်မှာ ရှိနေတယ်)။\n\n'at / in / from' စတဲ့ ဝိဘတ် (Prepositions of place) တွေကိုတော့ နောက်လာမယ့် သင်ခန်းစာတွေမှာ အသေးစိတ် ထပ်မံ လေ့လာသွားရပါမယ်။"
   },
+  "practice_recap_en": "Quick recap: {v}I → am{/v}  ·  {v}he / she / it → is{/v}  ·  {v}you / we / they → are{/v}. Every sentence needs a 'be' verb.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — I → am ၊ he / she / it → is ၊ you / we / they → are ။ Sentence တိုင်းမှာ be (am / is / are) တစ်ခု အမြဲ ပါရပါမယ်။",
   "exercises": [
     {
       "kind": "mcq",
@@ -193,7 +195,22 @@
       "answers": [
         "am"
       ],
-      "explain_mm": "I → am."
+      "explain_mm": "Subject က 'I' ဖြစ်လို့ → am ။  ➝ I am a student."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ a doctor.",
+      "prompt_mm": "သူမ ဆရာဝန်တစ်ယောက်ပါ။",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answers": [
+        "is"
+      ],
+      "explain_mm": "He / She / It (တစ်ယောက်) ဆိုရင် → is ။  ➝ She is a doctor."
     },
     {
       "kind": "mcq",
@@ -208,96 +225,226 @@
       "answers": [
         "are"
       ],
-      "explain_mm": "they → are."
+      "explain_mm": "You / We / They (အများ) ဆိုရင် → are ။  ➝ They are from Yangon."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He ___ tall.",
+      "prompt_mm": "သူက အရပ်ရှည်တယ်။",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answers": [
+        "is"
+      ],
+      "explain_mm": "He ဆိုရင် → is ။  ➝ He is tall."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ friends.",
+      "prompt_mm": "ကျွန်တော်တို့ သူငယ်ချင်းတွေပါ။",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "answers": [
+        "are"
+      ],
+      "explain_mm": "We ဆိုရင် → are ။  ➝ We are friends."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "She ___ a nurse.",
-      "prompt_mm": "သူမ သူနာပြုတစ်ယောက်ပါ။ ( be ကို သုံးပါ )",
+      "prompt_en": "He ___ a farmer.",
+      "prompt_mm": "သူက လယ်သမားတစ်ယောက်ပါ။ ( be ကို သုံးပါ )",
       "answers": [
         "is",
         "'s"
       ],
-      "explain_mm": "she → is."
+      "explain_mm": "He → is ။  ➝ He is a farmer."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "You ___ kind.",
+      "prompt_mm": "မင်းက သဘောကောင်းတယ်။ ( be ကို သုံးပါ )",
+      "answers": [
+        "are",
+        "'re"
+      ],
+      "explain_mm": "You → are ။  ➝ You are kind."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I ___ hungry.",
+      "prompt_mm": "ကျွန်တော် ဗိုက်ဆာတယ်။ ( be ကို သုံးပါ )",
+      "answers": [
+        "am",
+        "'m"
+      ],
+      "explain_mm": "I → am ။  ➝ I am hungry."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "It ___ hot today.",
+      "prompt_mm": "ဒီနေ့ ပူတယ်။ ( be ကို သုံးပါ )",
+      "answers": [
+        "is",
+        "'s"
+      ],
+      "explain_mm": "It → is ။  ➝ It is hot today."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ at home.",
+      "prompt_mm": "ကျွန်တော်တို့ အိမ်မှာ ရှိတယ်။ ( be ကို သုံးပါ )",
+      "answers": [
+        "are",
+        "'re"
+      ],
+      "explain_mm": "We → are ။  ➝ We are at home."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "We is happy.",
+      "prompt_en": "She are a nurse.",
       "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "We are happy",
-        "we are happy."
+        "She is a nurse"
       ],
-      "explain_mm": "we → are (is မဟုတ်ဘူး)။"
+      "explain_mm": "He / She / It → is (are မဟုတ်ပါ)။  ➝ She is a nurse."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  is  /  she  /  a doctor",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "prompt_en": "I is tired.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She is a doctor",
-        "she is a doctor."
+        "I am tired"
       ],
-      "explain_mm": "Subject + be + ... → She is a doctor."
+      "explain_mm": "I → am (is မဟုတ်ပါ)။  ➝ I am tired."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — about YOU. Write 5–8 sentences introducing yourself and your family, using am / is / are (name, age, job, place). Try a job and at least 2 describing words from your toolkit below.",
-      "prompt_mm": "အပိုင်း ၁ — ကိုယ့်အကြောင်း။ ကိုယ်နဲ့ မိသားစုကို မိတ်ဆက်ပြီး am / is / are သုံးကာ sentence ၅–၈ ကြောင်း ရေးပါ (နာမည်၊ အသက်၊ အလုပ်၊ နေရာ)။ အောက်က toolkit ထဲက အလုပ် (job) တစ်ခုနဲ့ ဖော်ပြစကားလုံး (describing word) အနည်းဆုံး ၂ လုံး သုံးကြည့်ပါ။ ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် အောက်မှာ ရိုက်ထည့်ပါ။",
-      "model": "My name {v}is{/v} Mya. I {v}am{/v} eighteen. I {v}am{/v} a student. My father {v}is{/v} a farmer. My brothers {v}are{/v} in Yangon.",
-      "explain_mm": "I → am, he/she/it → is, you/we/they → are ကို subject နဲ့ ကိုက်အောင် ထားပါ။",
-      "grading": {
-        "grammar_point": "be: am / is / are",
-        "rule": "am for I; is for he/she/it; are for you/we/they. Every sentence needs a 'be' verb.",
-        "must_check": [
-          "Correct am/is/are for each subject",
-          "'be' is present in every sentence",
-          "Present tense (introducing yourself)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Dropping 'be' (I a student)",
-          "Wrong form (She are / They is)",
-          "Using a main verb instead (I am study)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "They is students.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "They are students"
+      ],
+      "explain_mm": "They → are ၊ noun ကိုလည်း students (အများ)။  ➝ They are students."
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — describe a person. Write a short paragraph (4–6 sentences) describing a friend or family member, using am / is / are. Use their job and 2–3 describing words from your toolkit.",
-      "prompt_mm": "အပိုင်း ၂ — လူတစ်ယောက် ဖော်ပြပါ။ သူငယ်ချင်း သို့မဟုတ် မိသားစုဝင်တစ်ယောက်ကို am / is / are သုံးပြီး စာပိုဒ်တို (sentence ၄–၆ ကြောင်း) ရေးပါ။ သူ့ရဲ့ အလုပ် (job) နဲ့ toolkit ထဲက ဖော်ပြစကားလုံး ၂–၃ လုံး သုံးပါ။ ပြီးရင် scan လုပ်ပါ။",
-      "model": "My best friend {v}is{/v} Kyaw. He {v}is{/v} twenty-two. He {v}is{/v} tall and friendly. His parents {v}are{/v} shopkeepers. They {v}are{/v} kind people.",
-      "explain_mm": "လူတစ်ယောက်ကို ဖော်ပြရာမှာ am/is/are ကို မှန်အောင် သုံးပါ။",
-      "grading": {
-        "grammar_point": "be: am / is / are",
-        "rule": "A description of a person using 'be' correctly with each subject.",
-        "must_check": [
-          "Correct am/is/are agreement",
-          "'be' present in each sentence",
-          "Consistent present tense",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Dropping 'be'",
-          "Wrong agreement (He are)",
-          "Adding -s to 'be'"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He a teacher.",
+      "prompt_mm": "'be' ပျောက်နေလို့ ဖြည့်ပြီး ပြင်ပါ။",
+      "answers": [
+        "He is a teacher"
+      ],
+      "explain_mm": "Sentence တိုင်းမှာ be ပါရမယ် ။ He → is ။  ➝ He is a teacher."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ဆရာဝန်တစ်ယောက်ပါ။",
+      "options": [
+        "She",
+        "is",
+        "a",
+        "doctor"
+      ],
+      "answers": [
+        "She is a doctor"
+      ],
+      "explain_mm": "He / She / It → is ။  ➝ She is a doctor."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ဆရာတစ်ယောက်ပါ။",
+      "options": [
+        "I",
+        "am",
+        "a",
+        "teacher"
+      ],
+      "answers": [
+        "I am a teacher"
+      ],
+      "explain_mm": "I → am ။  ➝ I am a teacher."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ ကျောင်းမှာ ရှိတယ်။",
+      "options": [
+        "They",
+        "are",
+        "at",
+        "school"
+      ],
+      "answers": [
+        "They are at school"
+      ],
+      "explain_mm": "They → are ။  ➝ They are at school."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူက ပျော်နေတယ်။",
+      "options": [
+        "He",
+        "is",
+        "happy"
+      ],
+      "answers": [
+        "He is happy"
+      ],
+      "explain_mm": "He → is ။  ➝ He is happy."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ မန္တလေးကပါ။",
+      "options": [
+        "We",
+        "are",
+        "from",
+        "Mandalay"
+      ],
+      "answers": [
+        "We are from Mandalay"
+      ],
+      "explain_mm": "We → are ။  ➝ We are from Mandalay."
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်းက သဘောကောင်းတယ်။",
+      "options": [
+        "You",
+        "are",
+        "kind"
+      ],
+      "answers": [
+        "You are kind"
+      ],
+      "explain_mm": "You → are ။  ➝ You are kind."
     }
   ]
 }

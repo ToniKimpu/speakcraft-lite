@@ -175,7 +175,7 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "At seven last night, she ___ dinner. (cook)",
+      "prompt_en": "At seven last night, she ___ dinner.",
       "prompt_mm": "မနေ့ည ၇ နာရီမှာ သူမ ညစာ ချက်နေခဲ့တယ်။",
       "options": [
         "was cooking",
@@ -185,13 +185,13 @@
       "answers": [
         "was cooking"
       ],
-      "explain_mm": "Subject က she (Singular) ဖြစ်လို့ → was + verb-ing (cooking) ပုံစံကို သုံးပါတယ်။"
+      "explain_mm": "she → was + cooking ။ အတိတ်အချိန်မှာ ဖြစ်နေဆဲ ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "They ___ football when it started to rain.",
-      "prompt_mm": "မိုး စရွာလာတဲ့အချိန်မှာ သူတို့ ဘောလုံး ကစားနေခဲ့ကြတယ်။",
+      "prompt_mm": "မိုးစရွာတုန်းက သူတို့ ဘောလုံး ကစားနေခဲ့ကြတယ်။",
       "options": [
         "was playing",
         "were playing",
@@ -200,95 +200,247 @@
       "answers": [
         "were playing"
       ],
-      "explain_mm": "Subject က they (plural) ဖြစ်လို့ were + verb-ing (playing) ကို သုံးပါတယ်။ နောက်ခံမှာ ဖြစ်နေတဲ့ လုပ်ဆောင်ချက်ရှည်ဖြစ်တဲ့အတွက် past continuous ကို သုံးတာပါ။"
+      "explain_mm": "they → were + playing ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I ___ at ten o'clock.",
+      "prompt_mm": "ကျွန်တော် ၁၀ နာရီမှာ စာကျက်နေခဲ့တယ်။",
+      "options": [
+        "was studying",
+        "were studying",
+        "studied"
+      ],
+      "answers": [
+        "was studying"
+      ],
+      "explain_mm": "I → was + studying ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "We ___ TV when you called.",
+      "prompt_mm": "မင်းဖုန်းခေါ်တုန်းက ကျွန်တော်တို့ တီဗီ ကြည့်နေခဲ့ကြတယ်။",
+      "options": [
+        "was watching",
+        "were watching",
+        "watched"
+      ],
+      "answers": [
+        "were watching"
+      ],
+      "explain_mm": "we → were + watching ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "He ___ to work this morning.",
+      "prompt_mm": "ဒီမနက် သူ အလုပ်ကို ကားမောင်းသွားနေခဲ့တယ်။",
+      "options": [
+        "was driving",
+        "were driving",
+        "drove"
+      ],
+      "answers": [
+        "was driving"
+      ],
+      "explain_mm": "he → was + driving ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "I ___ (study) at ten o'clock.",
-      "prompt_mm": "ကျွန်တော် ၁၀ နာရီမှာ စာကျက်နေခဲ့တယ်။ ( study ကို သုံးပေးပါ )",
+      "prompt_en": "At eight, I ___ a book.  ( read )",
+      "prompt_mm": "၈ နာရီမှာ ကျွန်တော် စာအုပ် ဖတ်နေခဲ့တယ်။",
       "answers": [
-        "was studying"
+        "was reading"
       ],
-      "explain_mm": "Subject က I ဖြစ်လို့ → was + verb-ing (studying) ပုံစံကို သုံးပါတယ်။"
+      "explain_mm": "I → was + reading ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "They ___ in the garden.  ( work )",
+      "prompt_mm": "သူတို့ ဥယျာဉ်ထဲမှာ အလုပ်လုပ်နေခဲ့ကြတယ်။",
+      "answers": [
+        "were working"
+      ],
+      "explain_mm": "they → were + working ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ when I arrived.  ( sleep )",
+      "prompt_mm": "ကျွန်တော်ရောက်တုန်းက သူမ အိပ်နေခဲ့တယ်။",
+      "answers": [
+        "was sleeping"
+      ],
+      "explain_mm": "she → was + sleeping ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ lunch at noon.  ( eat )",
+      "prompt_mm": "မွန်းတည့် ၁၂ နာရီမှာ ကျွန်တော်တို့ နေ့လယ်စာ စားနေခဲ့ကြတယ်။",
+      "answers": [
+        "were eating"
+      ],
+      "explain_mm": "we → were + eating ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "It ___ heavily last night.  ( rain )",
+      "prompt_mm": "မနေ့ည မိုး သည်းသည်းမည်းမည်း ရွာနေခဲ့တယ်။",
+      "answers": [
+        "was raining"
+      ],
+      "explain_mm": "it → was + raining ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "They was watching TV.",
-      "prompt_mm": "မှားနေတဲ့ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါဦး။",
+      "prompt_en": "She were cooking dinner.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "They were watching TV",
-        "they were watching tv."
+        "She was cooking dinner"
       ],
-      "explain_mm": "Subject က 'they' (plural) ဖြစ်တဲ့အတွက် 'was' မဟုတ်ဘဲ 'were' ကို သုံးရမှာပါ။ ပြီးတော့ verb က 'watching' ဖြစ်ရပါမယ်။"
+      "explain_mm": "she → was (were မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  was  /  she  /  sleeping",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို နေရာတကျပြန်စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် တည်ဆောက်ပေးပါ။",
+      "prompt_en": "They was playing football.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She was sleeping",
-        "she was sleeping."
+        "They were playing football"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + was + verb-ing ပါ။ ဥပမာ → She was sleeping."
+      "explain_mm": "they → were ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — a past moment. Pick a time yesterday (e.g. 8 p.m.) and write 5–8 sentences about what you and people around you were doing then, using was / were + verb-ing.",
-      "prompt_mm": "အပိုင်း ၁ — အတိတ်က အချိန်တစ်ခုအကြောင်း။ မနေ့က အချိန်တစ်ခုခုကို (ဥပမာ ည ၈ နာရီ) ရွေးလိုက်ပါ။ ပြီးရင် အဲဒီအချိန်မှာ ကိုယ်နဲ့ ကိုယ့်ပတ်ဝန်းကျင်ကလူတွေ ဘာတွေလုပ်နေခဲ့ကြသလဲ ဆိုတာကို was / were + verb-ing သုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပါ။ ရေးပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ စာရိုက်ပြီး ထည့်ပေးလို့လည်း ရပါတယ်ခင်ဗျ။",
-      "model": "At eight last night I {v}was doing{/v} my homework. My mother {v}was cooking{/v}. My father {v}was watching{/v} the news. My friends {v}were chatting{/v} online. The rain {v}was falling{/v} outside.",
-      "explain_mm": "was / were + verb-ing ပုံစံကို မှန်မှန်ကန်ကန် သုံးထားဖို့ လိုပါတယ်နော် — subject နဲ့ was/were ကိုက်ညီရမယ်၊ verb မှာလည်း -ing ပါဖို့ မမေ့ပါနဲ့။",
-      "grading": {
-        "grammar_point": "Past continuous (was/were + -ing)",
-        "rule": "was/were + verb-ing for actions in progress at a past moment. was for I/he/she/it; were for you/we/they.",
-        "must_check": [
-          "was/were agrees with the subject",
-          "Main verb ends in -ing",
-          "Describes a past moment in progress (a past time is implied/stated)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Dropping be (I working)",
-          "Wrong agreement (They was)",
-          "Using past simple instead of -ing for the in-progress action"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "I was study at ten.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "I was studying at ten"
+      ],
+      "explain_mm": "was နောက်မှာ verb‑ing (studying) ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a scene interrupted. Write a short paragraph (4–6 sentences) describing a past scene with was/were + -ing, then add one thing that suddenly happened (past simple) — use when / while.",
-      "prompt_mm": "အပိုင်း ၂ — ဖြတ်ဝင်လာတဲ့ လုပ်ဆောင်ချက်တစ်ခု။ ပထမဆုံး was / were + -ing ကိုသုံးပြီး အတိတ်က နောက်ခံမြင်ကွင်းတစ်ခုကို ဖော်ပြပေးပါ။ ပြီးရင် အဲဒီအဖြစ်အပျက်ကြားထဲကို ရုတ်တရက် ဝင်လာတဲ့ လုပ်ဆောင်ချက်တိုလေးတစ်ခု (past simple) ကို ထည့်ရေးပေးပါ။ when / while ကို သုံးဖို့ မမေ့နဲ့နော်။ စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်း) ရေးပြီးရင် scan ဖတ်ပြီး တင်ပေးပါခင်ဗျ။",
-      "model": "{v}While{/v} we {v}were having{/v} dinner, the lights went out. My sister {v}was talking{/v} and my father {v}was laughing{/v}. The radio {v}was playing{/v} music. Then suddenly everything went dark, and everyone {v}was looking{/v} for a candle.",
-      "explain_mm": "ကြာရှည်နေတဲ့ နောက်ခံလုပ်ဆောင်ချက်ကို was/were + -ing (past continuous) နဲ့ ရေးပြီး၊ ကြားဖြတ်ဝင်လာတဲ့ လုပ်ဆောင်ချက်တိုကိုတော့ past simple (V2) နဲ့ ရေးရပါမယ်။ while ကို past continuous နဲ့ တွဲသုံးပြီး when ကိုတော့ past simple နဲ့ တွဲသုံးဖို့ သတိပြုပါနော်။",
-      "grading": {
-        "grammar_point": "Past continuous (was/were + -ing)",
-        "rule": "Background actions in the past continuous; a shorter interrupting action in the past simple. Use when/while correctly.",
-        "must_check": [
-          "Background actions use was/were + -ing",
-          "The interrupting action uses the past simple",
-          "when/while used correctly",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Using past simple for the background action",
-          "Dropping be in the continuous",
-          "Wrong was/were agreement"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "We weren't sleep then.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "We weren't sleeping then"
+      ],
+      "explain_mm": "weren't နောက်မှာ verb‑ing (sleeping) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် ၉ နာရီမှာ တီဗီ ကြည့်နေခဲ့တယ်။",
+      "options": [
+        "I",
+        "was",
+        "watching",
+        "TV",
+        "at",
+        "nine"
+      ],
+      "answers": [
+        "I was watching TV at nine"
+      ],
+      "explain_mm": "I → was + ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ ဘောလုံး ကစားနေခဲ့ကြတယ်။",
+      "options": [
+        "They",
+        "were",
+        "playing",
+        "football"
+      ],
+      "answers": [
+        "They were playing football"
+      ],
+      "explain_mm": "they → were + ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်ရောက်တုန်းက သူမ စာဖတ်နေခဲ့တယ်။",
+      "options": [
+        "She",
+        "was",
+        "reading",
+        "when",
+        "I",
+        "arrived"
+      ],
+      "answers": [
+        "She was reading when I arrived"
+      ],
+      "explain_mm": "background → was reading ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ အဲဒီအချိန်မှာ အိပ်မနေခဲ့ကြပါဘူး။",
+      "options": [
+        "We",
+        "weren't",
+        "sleeping",
+        "then"
+      ],
+      "answers": [
+        "We weren't sleeping then"
+      ],
+      "explain_mm": "weren't + ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မနေ့က သူမ အလုပ်လုပ်နေခဲ့သလား။",
+      "options": [
+        "Was",
+        "she",
+        "working",
+        "yesterday"
+      ],
+      "answers": [
+        "Was she working yesterday"
+      ],
+      "explain_mm": "အမေး → Was + subject + ‑ing ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မိုးရွာတုန်းက ကလေးတွေ ပြေးနေခဲ့ကြတယ်။",
+      "options": [
+        "The",
+        "children",
+        "were",
+        "running",
+        "in",
+        "the",
+        "rain"
+      ],
+      "answers": [
+        "The children were running in the rain"
+      ],
+      "explain_mm": "they → were + ‑ing ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}was / were{/v} + verb-{v}ing{/v} — an action in progress at a past moment.  was (I/he/she/it) · were (you/we/they).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — was / were + verb‑ing ။ အတိတ်က အချိန်တစ်ခုမှာ ဖြစ်နေဆဲ ဖြစ်ရပ်အတွက် သုံးပါ ။ was (I/he/she/it) ၊ were (you/we/they) ။"
 }

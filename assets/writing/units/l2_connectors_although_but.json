@@ -148,7 +148,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "___ it was expensive, I bought it.",
-      "prompt_mm": "စျေးကြီးပေမဲ့ ဝယ်ခဲ့တယ်။",
+      "prompt_mm": "ဈေးကြီးပေမဲ့ ဝယ်လိုက်တယ်။",
       "options": [
         "Although",
         "But",
@@ -157,13 +157,13 @@
       "answers": [
         "Although"
       ],
-      "explain_mm": "ဆန့်ကျင်ဘက် clause တစ်ခုရဲ့ အစမှာ သုံးတာက → Although ပါ။"
+      "explain_mm": "ဆန့်ကျင်ဘက် clause ရှေ့ → Although ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "The room is small, ___ it is comfortable.",
-      "prompt_mm": "အခန်းက သေးပေမဲ့ သက်တောင့်သက်သာ ရှိတယ်။",
+      "prompt_mm": "အခန်းက သေးပေမဲ့ သက်သောင့်သက်သာ ရှိတယ်။",
       "options": [
         "but",
         "although",
@@ -172,98 +172,259 @@
       "answers": [
         "but"
       ],
-      "explain_mm": "ဝါကျနှစ်ကြောင်းကို အလယ်ကနေ ချိတ်ဆက်ပေးတာက → but ပါ။"
+      "explain_mm": "ဆန့်ကျင်ဘက် → but ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ he studied hard, he failed.",
+      "prompt_mm": "ကြိုးစားပေမဲ့ သူ ကျသွားတယ်။",
+      "options": [
+        "Although",
+        "But",
+        "So"
+      ],
+      "answers": [
+        "Although"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် clause ရှေ့ → Although ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "It was raining, ___ we went out.",
+      "prompt_mm": "မိုးရွာနေပေမဲ့ အပြင်ထွက်ခဲ့တယ်။",
+      "options": [
+        "but",
+        "although",
+        "because"
+      ],
+      "answers": [
+        "but"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် → but ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ she was tired, she kept working.",
+      "prompt_mm": "ပင်ပန်းပေမဲ့ သူမ ဆက်လုပ်ခဲ့တယ်။",
+      "options": [
+        "Although",
+        "But",
+        "And"
+      ],
+      "answers": [
+        "Although"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် clause ရှေ့ → Although ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "___ he studied hard, he failed.",
-      "prompt_mm": "ကြိုးစားပေမဲ့ ကျသွားတယ်။",
+      "prompt_en": "___ it was hard, I finished.  ( contrast, clause-start )",
+      "prompt_mm": "ခက်ပေမဲ့ ပြီးအောင် လုပ်ခဲ့တယ်။",
       "answers": [
-        "Although",
-        "although"
+        "Although"
       ],
-      "explain_mm": "ဆန့်ကျင်ဘက် clause တစ်ခုရဲ့ အစမှာ သုံးတာက → Although ပါ။"
+      "explain_mm": "clause ရှေ့ → Although ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I was tired, ___ I kept working.  ( contrast, mid )",
+      "prompt_mm": "ပင်ပန်းတယ်၊ ဒါပေမဲ့ ဆက်လုပ်ခဲ့တယ်။",
+      "answers": [
+        "but"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် → but ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ it's small, the room is nice.  ( clause-start )",
+      "prompt_mm": "သေးပေမဲ့ အခန်းက သပ်ရပ်တယ်။",
+      "answers": [
+        "Although"
+      ],
+      "explain_mm": "clause ရှေ့ → Although ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "The test was hard, ___ I passed.  ( mid )",
+      "prompt_mm": "စာမေးပွဲ ခက်ပေမဲ့ အောင်ခဲ့တယ်။",
+      "answers": [
+        "but"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် → but ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ he is rich, he isn't happy.  ( clause-start )",
+      "prompt_mm": "ချမ်းသာပေမဲ့ ပျော်ရွှင်မှု မရှိဘူး။",
+      "answers": [
+        "Although"
+      ],
+      "explain_mm": "clause ရှေ့ → Although ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Although he is rich, but he is unhappy.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပေးပါနော်။",
+      "prompt_en": "Although it was hard, but I finished.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Although he is rich, he is unhappy",
-        "although he is rich, he is unhappy.",
-        "He is rich, but he is unhappy"
+        "Although it was hard, I finished"
       ],
-      "explain_mm": "although နဲ့ but ကို အတူတူ သုံးလို့မရပါဘူး — တစ်ခုကို ဖြုတ်ပေးပါ။"
+      "explain_mm": "although နဲ့ but ကို တွဲမသုံးရ — တစ်ခုပဲ ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  but  /  cold  /  it  /  was  /  swam  /  we",
-      "prompt_mm": "စကားလုံးတွေကို နေရာမှန်မှာ စီပြီး sentence အမှန်ဖြစ်အောင် ရေးပေးပါနော်။ ( It was cold + but + we swam )",
+      "prompt_en": "But it was expensive, I bought it.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "It was cold but we swam",
-        "it was cold, but we swam.",
-        "It was cold, but we swam"
+        "Although it was expensive, I bought it"
       ],
-      "explain_mm": "A, but B ပုံစံအတိုင်းဆိုရင် → It was cold, but we swam. ဖြစ်သွားမှာပါ။"
+      "explain_mm": "clause ရှေ့ → Although (But မဟုတ်) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — surprising contrasts. Write 5–8 sentences with a contrast (something unexpected), using although and but. Don't use both in the same sentence.",
-      "prompt_mm": "အပိုင်း ၁ — မမျှော်လင့်ထားတဲ့ ဆန့်ကျင်ဘက် အကြောင်းအရာများ။ မမျှော်လင့်ထားတဲ့ အကြောင်းအရာတစ်ခုနဲ့ ဆန့်ကျင်ဘက်ဖြစ်တဲ့ အကြောင်းအရာတစ်ခုကို တွဲပြီး although နဲ့ but သုံးပြီးတော့ sentence ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ရအောင်။ ဝါကျတစ်ကြောင်းမှာ although နဲ့ but နှစ်ခုလုံး အတူတူ မသုံးမိဖို့ သတိပြုပါနော်။ ရေးပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်ပြီး တင်ပေးလို့လည်း ရပါတယ်။",
-      "model": "{v}Although{/v} I was tired, I went to the gym. The class was hard, {v}but{/v} I enjoyed it. {v}Although{/v} it rained, we had a picnic. The food was simple, {v}but{/v} it was tasty. {v}Although{/v} I'm busy, I always find time to read.",
-      "explain_mm": "although က clause ရဲ့ အရှေ့မှာ လာပြီး but ကတော့ ဝါကျနှစ်ကြောင်းကို အလယ်ကနေ ချိတ်ဆက်ပေးပါတယ်။ ဝါကျတစ်ကြောင်းတည်းမှာ although နဲ့ but ကို ရောပြီး မသုံးမိပါစေနဲ့နော်။",
-      "grading": {
-        "grammar_point": "Connectors: although / but",
-        "rule": "although starts a contrast clause; but joins two clauses. Never use both in one sentence.",
-        "must_check": [
-          "although + clause, but joining clauses",
-          "Genuine contrast (something unexpected)",
-          "Not both in the same sentence",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "although … but together",
-          "Using so/because instead of a contrast word",
-          "Comma errors after the although-clause"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Although he studied hard but he failed.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Although he studied hard, he failed"
+      ],
+      "explain_mm": "although နဲ့ but ကို မတွဲရ ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a balanced opinion. Write a short paragraph (4–6 sentences) about a place or thing you like, with both good and bad points, using although and but.",
-      "prompt_mm": "အပိုင်း ၂ — မျှတတဲ့ သုံးသပ်ချက်။ ကိုယ်ကြိုက်တဲ့ နေရာတစ်ခု ဒါမှမဟုတ် အရာတစ်ခုအကြောင်းကို သူ့ရဲ့ ကောင်းတဲ့အချက်ရော၊ အားနည်းတဲ့အချက်ပါ နှစ်မျိုးလုံးပါအောင် although နဲ့ but သုံးပြီး စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးပါ။",
-      "model": "I love my phone. {v}Although{/v} it was expensive, it is very fast. The screen is big, {v}but{/v} the battery is weak. {v}Although{/v} it is heavy, it feels strong. The camera is good, {v}but{/v} it isn't the best. Overall, I'm happy with it.",
-      "explain_mm": "အကြောင်းအရာတစ်ခုရဲ့ ကောင်းတဲ့အချက်နဲ့ အားနည်းတဲ့အချက်တွေကို မျှမျှတတဖြစ်အောင် although နဲ့ but သုံးပြီး ဖော်ပြပေးပါ။ ဝါကျတစ်ကြောင်းတည်းမှာ ဒီနှစ်ခုကို အတူတူ မသုံးမိဖို့ သတိပြုပါနော်။",
-      "grading": {
-        "grammar_point": "Connectors: although / but",
-        "rule": "Express a balanced opinion with contrast words; never combine although and but in one sentence.",
-        "must_check": [
-          "Correct use of although and but",
-          "Both positive and negative points",
-          "Not used together",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "although and but together",
-          "No real contrast",
-          "Sentence-fragment although-clauses"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "But he is rich, he isn't happy.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Although he is rich, he isn't happy"
+      ],
+      "explain_mm": "clause ရှေ့ → Although ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပင်ပန်းပေမဲ့ ဆက်လုပ်ခဲ့တယ်။",
+      "options": [
+        "Although",
+        "I",
+        "was",
+        "tired",
+        "I",
+        "kept",
+        "working"
+      ],
+      "answers": [
+        "Although I was tired I kept working"
+      ],
+      "explain_mm": "Although + clause ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပင်ပန်းတယ် — ဒါပေမဲ့ ဆက်လုပ်ခဲ့တယ်။",
+      "options": [
+        "I",
+        "was",
+        "tired",
+        "but",
+        "I",
+        "kept",
+        "working"
+      ],
+      "answers": [
+        "I was tired but I kept working"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် → but ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သေးပေမဲ့ အခန်းက သပ်ရပ်တယ်။",
+      "options": [
+        "Although",
+        "it",
+        "is",
+        "small",
+        "the",
+        "room",
+        "is",
+        "nice"
+      ],
+      "answers": [
+        "Although it is small the room is nice"
+      ],
+      "explain_mm": "Although + clause ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "စာမေးပွဲ ခက်ပေမဲ့ အောင်ခဲ့တယ်။",
+      "options": [
+        "The",
+        "test",
+        "was",
+        "hard",
+        "but",
+        "I",
+        "passed"
+      ],
+      "answers": [
+        "The test was hard but I passed"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် → but ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ချမ်းသာပေမဲ့ ပျော်ရွှင်မှု မရှိဘူး။",
+      "options": [
+        "Although",
+        "he",
+        "is",
+        "rich",
+        "he",
+        "isn't",
+        "happy"
+      ],
+      "answers": [
+        "Although he is rich he isn't happy"
+      ],
+      "explain_mm": "Although + clause ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဈေးကြီးပေမဲ့ ဝယ်လိုက်တယ်။",
+      "options": [
+        "It",
+        "was",
+        "expensive",
+        "but",
+        "I",
+        "bought",
+        "it"
+      ],
+      "answers": [
+        "It was expensive but I bought it"
+      ],
+      "explain_mm": "ဆန့်ကျင်ဘက် → but ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}Although{/v} + clause, … · A, {v}but{/v} B — contrast (something surprising).  Don't use although AND but together.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — Although + clause, … ၊ A, but B — ဆန့်ကျင်ဘက် (မမျှော်လင့်တဲ့အရာ) ။ although နဲ့ but ကို တစ်ပြိုင်တည်း မသုံးရ ။"
 }

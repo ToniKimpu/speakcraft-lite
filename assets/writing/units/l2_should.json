@@ -139,8 +139,8 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "You're ill. You ___ a doctor. (see)",
-      "prompt_mm": "မင်း နေမကောင်းဘူးဆိုရင် ဆရာဝန်နဲ့ ပြသင့်တယ်နော်။",
+      "prompt_en": "You're ill. You ___ a doctor.",
+      "prompt_mm": "နေမကောင်းဘူး။ ဆရာဝန်နဲ့ ပြသင့်တယ်။",
       "options": [
         "should see",
         "should sees",
@@ -149,13 +149,13 @@
       "answers": [
         "should see"
       ],
-      "explain_mm": "should + verb (base form) ကိုသုံးရမှာမို့လို့ → should see ဖြစ်ပါတယ်နော်။"
+      "explain_mm": "should နောက်မှာ base → should see ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "Children ___ too much TV. (negative — watch)",
-      "prompt_mm": "ကလေးတွေက တီဗီကို အကြာကြီး ဒါမှမဟုတ် အများကြီး မကြည့်သင့်ပါဘူး။",
+      "prompt_en": "Children ___ too much TV.",
+      "prompt_mm": "ကလေးတွေ TV သိပ်မကြည့်သင့်ဘူး။",
       "options": [
         "shouldn't watch",
         "shouldn't watches",
@@ -164,95 +164,246 @@
       "answers": [
         "shouldn't watch"
       ],
-      "explain_mm": "Negative (အငြင်း) ပုံစံဖြစ်တဲ့အတွက် shouldn't + verb (base form) → shouldn't watch ကို သုံးပေးရပါမယ်။"
+      "explain_mm": "အငြင်း → shouldn't + base (watch) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She ___ home early.",
+      "prompt_mm": "သူမ စောစော အိမ်ပြန်သင့်တယ်။",
+      "options": [
+        "should go",
+        "should goes",
+        "should to go"
+      ],
+      "answers": [
+        "should go"
+      ],
+      "explain_mm": "should + base → should go ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "You ___ more water.",
+      "prompt_mm": "ရေ ပိုသောက်သင့်တယ်။",
+      "options": [
+        "should drink",
+        "should drinks",
+        "drink"
+      ],
+      "answers": [
+        "should drink"
+      ],
+      "explain_mm": "should + base → should drink ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ I wear a jacket?",
+      "prompt_mm": "ဂျာကင်တစ်ထည် ဝတ်သင့်လား။",
+      "options": [
+        "Should",
+        "Do",
+        "Will"
+      ],
+      "answers": [
+        "Should"
+      ],
+      "explain_mm": "အကြံ အမေး → Should I …? ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "You ___ (study) before the exam.",
-      "prompt_mm": "စာမေးပွဲ မတိုင်ခင်မှာ စာတွေ ကြိုလုပ်ထားသင့်တယ်နော်။ ( study ကို သုံးပေးပါ )",
+      "prompt_en": "You ___ more water.  ( advice, drink )",
+      "prompt_mm": "ရေ ပိုသောက်သင့်တယ်။",
+      "answers": [
+        "should drink"
+      ],
+      "explain_mm": "should + base → should drink ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ late.  ( negative, be )",
+      "prompt_mm": "နောက်မကျသင့်ဘူး။",
+      "answers": [
+        "shouldn't be",
+        "should not be"
+      ],
+      "explain_mm": "shouldn't + base ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ a doctor.  ( advice, see )",
+      "prompt_mm": "သူ ဆရာဝန်နဲ့ ပြသင့်တယ်။",
+      "answers": [
+        "should see"
+      ],
+      "explain_mm": "should + base → should see ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "You ___ so much sugar.  ( negative, eat )",
+      "prompt_mm": "သကြား အများကြီး မစားသင့်ဘူး။",
+      "answers": [
+        "shouldn't eat"
+      ],
+      "explain_mm": "shouldn't + base ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "Students ___ hard.  ( advice, study )",
+      "prompt_mm": "ကျောင်းသားတွေ ကြိုးစားသင့်တယ်။",
       "answers": [
         "should study"
       ],
-      "explain_mm": "should + verb (base form) ပုံစံကို သုံးရမှာဖြစ်တဲ့အတွက် → should study ဖြစ်ပါတယ်နော်။"
+      "explain_mm": "should + base ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "She should goes home early.",
-      "prompt_mm": "အောက်မှာ မှားနေတဲ့ ဝါကျလေးကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။",
+      "prompt_en": "You should sees a doctor.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She should go home early",
-        "she should go home early."
+        "You should see a doctor"
       ],
-      "explain_mm": "should ရဲ့နောက်မှာ verb base form ကိုပဲ သုံးရမှာမို့လို့ → go ဖြစ်ပါတယ် (goes မဟုတ်ပါဘူးနော်)။"
+      "explain_mm": "should နောက်မှာ base (see) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  should  /  you  /  more  /  rest",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးလေးတွေကို အစဉ်လိုက်ပြန်စီပြီး ဝါကျအမှန်လေးတစ်ခုဖြစ်အောင် ရေးပေးပါနော်။",
+      "prompt_en": "We should to be early.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "You should rest more",
-        "you should rest more."
+        "We should be early"
       ],
-      "explain_mm": "ဝါကျတည်ဆောက်ပုံက Subject + should + verb (base form) + ... ပုံစံဖြစ်ပါတယ် → ဥပမာ You should rest more."
+      "explain_mm": "should နောက်မှာ base — ‘to’ မလို ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — advice for a friend. A friend wants to learn English. Write 5–8 sentences of advice using should and shouldn't.",
-      "prompt_mm": "အပိုင်း ၁ — သူငယ်ချင်းအတွက် အကြံဉာဏ်ပေးကြမယ်။ ကိုယ့်သူငယ်ချင်းတစ်ယောက်က အင်္ဂလိပ်စာသင်ချင်နေတယ်ဆိုပါစို့။ သူ့အတွက် should နဲ့ shouldn't ကိုသုံးပြီး အကြံဉာဏ်ပေးတဲ့ ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးပေးပါနော်။ ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်ပြီး တင်လို့လည်းရပါတယ်။",
-      "model": "You {v}should practise{/v} every day. You {v}should watch{/v} English films. You {v}shouldn't translate{/v} every word. You {v}should speak{/v} with friends. You {v}shouldn't be{/v} afraid of mistakes.",
-      "explain_mm": "သတိထားရမှာက should / shouldn't ရဲ့နောက်မှာ verb (base form) ကိုပဲ သုံးပေးဖို့ပါနော် — -s ပေါင်းတာ၊ to ခံတာတွေ မလုပ်ရပါဘူး။",
-      "grading": {
-        "grammar_point": "should (advice)",
-        "rule": "should/shouldn't + base verb for advice. Same form for all subjects; no -s and no 'to' on the base verb.",
-        "must_check": [
-          "should / shouldn't + base verb",
-          "Advice meaning",
-          "Base verb (no -s, no 'to')",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "should + -s (She should goes)",
-          "should + to (should to rest)",
-          "Wrong negative (don't should)"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She don't should go.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She shouldn't go"
+      ],
+      "explain_mm": "အငြင်း → shouldn't ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — solve a problem. Think of a common problem (stress, money, health) and write a short paragraph (4–6 sentences) of advice using should / shouldn't.",
-      "prompt_mm": "အပိုင်း ၂ — ပြဿနာတစ်ခုကို အတူတူဖြေရှင်းကြည့်ရအောင်။ လူတိုင်းကြုံတွေ့ရတတ်တဲ့ ပြဿနာတစ်ခုခု (ဥပမာ - စိတ်ဖိစီးမှု၊ ငွေရေးကြေးရေး၊ ကျန်းမာရေး) ကို ရွေးလိုက်ပါ။ ပြီးရင် အဲဒီပြဿနာအတွက် should / shouldn't ကိုသုံးပြီး အကြံဉာဏ်ပေးတဲ့ စာပိုဒ်တိုလေး (ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါနော်။ ပြီးသွားရင် scan ဖတ်ပြီး တင်ပေးလို့ရပါတယ်။",
-      "model": "If you feel stressed, you {v}should take{/v} a break. You {v}shouldn't work{/v} all night. You {v}should talk{/v} to a friend about it. You {v}should do{/v} some exercise. You {v}shouldn't keep{/v} everything inside.",
-      "explain_mm": "ပြဿနာတစ်ခုခုအတွက် should / shouldn't ကိုသုံးပြီး အကြံဉာဏ်ပေးတဲ့အခါမှာ verb ကို base form နဲ့ပဲ သုံးဖို့ မမေ့နဲ့နော်။",
-      "grading": {
-        "grammar_point": "should (advice)",
-        "rule": "Give advice for a problem using should/shouldn't + base verb.",
-        "must_check": [
-          "should / shouldn't + base verb",
-          "Advice is relevant to the problem",
-          "Correct base verb form",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Adding -s or 'to' after should",
-          "Wrong negative form",
-          "Mixing in unrelated tenses"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "He should studies more.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He should study more"
+      ],
+      "explain_mm": "should + base (study) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ရေ ပိုသောက်သင့်တယ်။",
+      "options": [
+        "You",
+        "should",
+        "drink",
+        "more",
+        "water"
+      ],
+      "answers": [
+        "You should drink more water"
+      ],
+      "explain_mm": "should + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ နောက်မကျသင့်ဘူး။",
+      "options": [
+        "We",
+        "shouldn't",
+        "be",
+        "late"
+      ],
+      "answers": [
+        "We shouldn't be late"
+      ],
+      "explain_mm": "shouldn't + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ဂျာကင်တစ်ထည် ဝတ်သင့်လား။",
+      "options": [
+        "Should",
+        "I",
+        "wear",
+        "a",
+        "jacket"
+      ],
+      "answers": [
+        "Should I wear a jacket"
+      ],
+      "explain_mm": "အမေး → Should + subject + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ဆရာဝန်နဲ့ ပြသင့်တယ်။",
+      "options": [
+        "He",
+        "should",
+        "see",
+        "a",
+        "doctor"
+      ],
+      "answers": [
+        "He should see a doctor"
+      ],
+      "explain_mm": "should + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း စောစော အိပ်သင့်တယ်။",
+      "options": [
+        "You",
+        "should",
+        "sleep",
+        "early"
+      ],
+      "answers": [
+        "You should sleep early"
+      ],
+      "explain_mm": "should + base ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကလေးတွေ TV သိပ်မကြည့်သင့်ဘူး။",
+      "options": [
+        "Children",
+        "shouldn't",
+        "watch",
+        "too",
+        "much",
+        "TV"
+      ],
+      "answers": [
+        "Children shouldn't watch too much TV"
+      ],
+      "explain_mm": "shouldn't + base ။"
     }
-  ]
+  ],
+  "practice_recap_en": "{v}should{/v} / {v}shouldn't{/v} + base verb — advice, the right thing to do.  Question: {v}Should{/v} I …?",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — should / shouldn't + base verb ။ အကြံဉာဏ်၊ ဘာလုပ်သင့်လဲ ပြောတဲ့အခါ သုံးပါ ။ အမေး — Should I …? ။"
 }

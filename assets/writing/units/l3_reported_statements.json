@@ -160,7 +160,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "\"I am tired.\" → She said she ___ tired.",
-      "prompt_mm": "\"ပင်ပန်းတယ်\" → သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။",
+      "prompt_mm": "‘ပင်ပန်းတယ်’ → သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။",
       "options": [
         "was",
         "is",
@@ -169,7 +169,7 @@
       "answers": [
         "was"
       ],
-      "explain_mm": "Backshift လုပ်တဲ့အခါ am → was ဆိုပြီး ပြောင်းပေးရပါတယ်။ (Subject က Singular / အနည်းကိန်း ဖြစ်လို့ပါ)။"
+      "explain_mm": "backshift: am → was ။"
     },
     {
       "kind": "mcq",
@@ -184,97 +184,251 @@
       "answers": [
         "told"
       ],
-      "explain_mm": "စကားပြန်ပြောတဲ့အခါမှာ လူ (me) ပါလာရင် 'tell' ကို သုံးပေးပါနော် — told me လို့ သုံးရပြီး (said me လို့ မသုံးရပါဘူး)။"
+      "explain_mm": "person ပါရင် → told (said + person မသုံး) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "\"I will call you.\" → He said he ___ call me.",
+      "prompt_mm": "‘ဖုန်းခေါ်မယ်’ → သူ ဖုန်းခေါ်မယ်လို့ ပြောတယ်။",
+      "options": [
+        "would",
+        "will",
+        "will be"
+      ],
+      "answers": [
+        "would"
+      ],
+      "explain_mm": "backshift: will → would ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "\"I live here.\" → He said he ___ there.",
+      "prompt_mm": "‘ဒီမှာ နေတယ်’ → သူ အဲဒီမှာ နေတယ်လို့ ပြောတယ်။",
+      "options": [
+        "lived",
+        "lives",
+        "live"
+      ],
+      "answers": [
+        "lived"
+      ],
+      "explain_mm": "backshift: present → past (lived) ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "\"I can swim.\" → She said she ___ swim.",
+      "prompt_mm": "‘ရေကူးတတ်တယ်’ → သူမ ရေကူးတတ်တယ်လို့ ပြောတယ်။",
+      "options": [
+        "could",
+        "can",
+        "can to"
+      ],
+      "answers": [
+        "could"
+      ],
+      "explain_mm": "backshift: can → could ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "\"I will call you.\" → He said he ___ call me. (1 word)",
-      "prompt_mm": "\"ဖုန်းခေါ်မယ်\" → သူ ဖုန်းခေါ်မယ်လို့ ပြောတယ်။ (will ကို backshift လုပ်ပေးရပါမယ်)",
+      "prompt_en": "\"I am busy.\" → She said she ___ busy.  ( be )",
+      "prompt_mm": "‘အလုပ်များတယ်’ → သူမ အလုပ်များတယ်လို့ ပြောတယ်။",
+      "answers": [
+        "was"
+      ],
+      "explain_mm": "am → was ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "She ___ me that she lived there.  ( with a person )",
+      "prompt_mm": "သူမ အဲဒီမှာ နေတယ်လို့ ငါ့ကို ပြောတယ်။",
+      "answers": [
+        "told"
+      ],
+      "explain_mm": "person ပါ → told ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "\"I will help you.\" → He said he ___ help me.  ( will )",
+      "prompt_mm": "‘ကူမယ်’ → သူ ကူမယ်လို့ ပြောတယ်။",
       "answers": [
         "would"
       ],
-      "explain_mm": "Tense ကို backshift လုပ်တဲ့အခါ will ကနေ would ကို ပြောင်းပေးရပါတယ်။"
+      "explain_mm": "will → would ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "\"I work here.\" → She said she ___ there.  ( work )",
+      "prompt_mm": "‘ဒီမှာ အလုပ်လုပ်တယ်’ → သူမ အဲဒီမှာ အလုပ်လုပ်တယ်လို့ ပြောတယ်။",
+      "answers": [
+        "worked"
+      ],
+      "explain_mm": "present → past (worked) ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He ___ that he was tired.  ( no person )",
+      "prompt_mm": "သူ ပင်ပန်းတယ်လို့ ပြောတယ်။",
+      "answers": [
+        "said"
+      ],
+      "explain_mm": "person မပါ → said ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "She said me that she is happy.",
-      "prompt_mm": "မှားနေတဲ့ sentence ကို အမှန်ဖြစ်အောင် ပြင်ပေးပါနော်။ (say/tell သုံးပုံနဲ့ backshift ကို သတိပြုပါ)။",
+      "prompt_en": "\"I am tired.\" → She said she is tired.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She told me that she was happy",
-        "she told me that she was happy.",
-        "She told me she was happy"
+        "She said she was tired"
       ],
-      "explain_mm": "ဒီမှာ လူ (me) ပါတဲ့အတွက် told me ကို သုံးပေးရပါမယ်။ Tense ကိုလည်း backshift လုပ်ရမှာမို့ is → was ဖြစ်သွားပါတယ်။ → ဒါကြောင့် She told me she was happy။ ဆိုပြီး ဖြစ်သွားတာပါ။"
+      "explain_mm": "backshift: am → was ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Report it:  said  /  she  /  tired  /  was  /  she",
-      "prompt_mm": "ပေးထားတဲ့ စကားလုံးတွေကို အစဉ်လိုက်စီပြီး reported sentence အမှန်လေးတစ်ခု ဖြစ်အောင် ရေးပေးပါ။ ( She said + she was tired )",
+      "prompt_en": "He said me that he worked in a bank.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "She said she was tired",
-        "she said she was tired.",
-        "She said she was tired."
+        "He told me that he worked in a bank"
       ],
-      "explain_mm": "She said (that) she was tired — ဒီမှာ tense ကို backshift လုပ်ထားတဲ့အတွက် 'was' ကို သုံးထားတာပါ။"
+      "explain_mm": "person ပါ → told (said me မဖြစ်) ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — report what people said. Write 5–8 reported statements from direct speech you imagine. Use 'said' / 'told (someone)' and backshift the tense (present→past, will→would, can→could).",
-      "prompt_mm": "အပိုင်း (၁) — သူများပြောတဲ့စကားကို ပြန်ပြောကြည့်ကြမယ်။ ကိုယ့်စိတ်ကူးထဲက တိုက်ရိုက်စကားပြောတွေကို reported statement တွေအနေနဲ့ (၅) ကြောင်းကနေ (၈) ကြောင်းလောက်အထိ ရေးကြည့်ပါ။ 'said' ဒါမှမဟုတ် 'told (တစ်ယောက်ယောက်)' ကို သုံးပြီး tense ကိုလည်း backshift လုပ်ပေးရပါမယ် (ဥပမာ present→past, will→would, can→could)။ ရေးပြီးသွားရင် scan ဖတ်ပြီးတင်ပေးပါ — ဒါမှမဟုတ် ဒီမှာပဲ ရိုက်ထည့်လိုက်လို့လည်း ရပါတယ်နော်။",
-      "model": "My mother {v}said{/v} she {v}was{/v} proud of me. My friend {v}told{/v} me he {v}had found{/v} a new job. The teacher {v}said{/v} the test {v}would{/v} be easy. My sister {v}told{/v} me she {v}couldn't{/v} come. The doctor {v}said{/v} I {v}needed{/v} more rest.",
-      "explain_mm": "သတိရဖို့ကတော့ 'say' နောက်မှာ လူ မလိုက်ပါဘူး၊ 'tell' နောက်မှာတော့ လူ လိုက်ပါတယ်။ Tense ကိုလည်း backshift လုပ်ပေးရပါမယ် — present→past, will→would, can→could ဆိုပြီးတော့ပေါ့။",
-      "grading": {
-        "grammar_point": "Reported statements",
-        "rule": "After a past reporting verb, backshift the tense one step; use 'say' with no person and 'tell' + person.",
-        "must_check": [
-          "Backshift applied (present→past, will→would, can→could)",
-          "say (no person) vs tell + person used correctly",
-          "Pronouns adjusted (I→he/she, etc.)",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "Keeping the original tense (said she is tired)",
-          "'said me' instead of 'told me'",
-          "Forgetting pronoun changes"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "\"I will go.\" → He said he will go.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "He said he would go"
+      ],
+      "explain_mm": "will → would ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a conversation you remember. Write a short paragraph (4–6 sentences) reporting what someone told you recently (news, a story, advice), using reported statements with backshift.",
-      "prompt_mm": "အပိုင်း (၂) — ကိုယ်မှတ်မိနေတဲ့ စကားဝိုင်းတစ်ခုအကြောင်း ရေးကြည့်ကြမယ်။ မကြာသေးခင်က တစ်စုံတစ်ယောက်က ကိုယ့်ကို ပြောပြခဲ့တဲ့အကြောင်းအရာ (သတင်း၊ ဇာတ်လမ်း၊ ဒါမှမဟုတ် အကြံဉာဏ်) တစ်ခုကို reported statement (backshift) တွေ သုံးပြီးတော့ စာပိုဒ်တိုလေး (sentence ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်) ရေးပေးပါ။ ပြီးရင် scan ဖတ်ပြီး တင်ပေးပါနော်။",
-      "model": "Last week my uncle told me about his trip. He {v}said{/v} he {v}had visited{/v} three countries. He {v}told{/v} me the food {v}was{/v} amazing. He {v}said{/v} he {v}would{/v} go again next year. He also {v}said{/v} that he {v}missed{/v} home after a month.",
-      "explain_mm": "Reported statement မှာ 'say' နဲ့ 'tell' ကို နေရာမှန်အောင်သုံးပြီး tense ကို backshift လုပ်ဖို့ မမေ့ပါနဲ့နော်။ နာမ်စားနဲ့ tense ကိုလည်း အမြဲတမ်း ညှိပေးဖို့လိုပါတယ်။",
-      "grading": {
-        "grammar_point": "Reported statements",
-        "rule": "Report a remembered conversation using past reporting verbs and consistent backshift.",
-        "must_check": [
-          "Consistent backshift throughout",
-          "Correct say/tell usage",
-          "Adjusted pronouns/time words",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "Mixing reported and original tense",
-          "said + person",
-          "Unchanged pronouns"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "She told that she was busy.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "She said that she was busy"
+      ],
+      "explain_mm": "person မပါ → said (told + person လို) ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ အလုပ်များတယ်လို့ ပြောတယ်။",
+      "options": [
+        "She",
+        "said",
+        "she",
+        "was",
+        "busy"
+      ],
+      "answers": [
+        "She said she was busy"
+      ],
+      "explain_mm": "am → was ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ဘဏ်မှာ အလုပ်လုပ်တယ်လို့ ငါ့ကို ပြောတယ်။",
+      "options": [
+        "He",
+        "told",
+        "me",
+        "he",
+        "worked",
+        "in",
+        "a",
+        "bank"
+      ],
+      "answers": [
+        "He told me he worked in a bank"
+      ],
+      "explain_mm": "told + person ၊ present → past ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ငါ့ကို ကူမယ်လို့ ပြောတယ်။",
+      "options": [
+        "She",
+        "said",
+        "she",
+        "would",
+        "help",
+        "me"
+      ],
+      "answers": [
+        "She said she would help me"
+      ],
+      "explain_mm": "will → would ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ ရေကူးတတ်တယ်လို့ ပြောတယ်။",
+      "options": [
+        "He",
+        "said",
+        "he",
+        "could",
+        "swim"
+      ],
+      "answers": [
+        "He said he could swim"
+      ],
+      "explain_mm": "can → could ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ အဲဒီမှာ နေတယ်လို့ ငါ့ကို ပြောတယ်။",
+      "options": [
+        "He",
+        "told",
+        "me",
+        "he",
+        "lived",
+        "there"
+      ],
+      "answers": [
+        "He told me he lived there"
+      ],
+      "explain_mm": "told + person ၊ present → past ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။",
+      "options": [
+        "She",
+        "said",
+        "she",
+        "was",
+        "tired"
+      ],
+      "answers": [
+        "She said she was tired"
+      ],
+      "explain_mm": "am → was ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Reported speech: present → {v}past{/v}, will → {v}would{/v}, can → {v}could{/v}.  {v}said{/v} (no person) · {v}told{/v} + me/her.",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — reported speech: present → past ၊ will → would ၊ can → could ။ said (လူ မပါ) ၊ told + me/her ။"
 }

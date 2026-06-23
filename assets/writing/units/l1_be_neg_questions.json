@@ -150,17 +150,32 @@
     {
       "kind": "mcq",
       "grade": "auto",
-      "prompt_en": "She ___ at home. (negative)",
-      "prompt_mm": "သူမ အိမ်မှာ မရှိဘူး။",
+      "prompt_en": "He ___ at home.",
+      "prompt_mm": "သူ အိမ်မှာ မရှိဘူး။",
       "options": [
         "isn't",
         "aren't",
-        "don't"
+        "doesn't"
       ],
       "answers": [
         "isn't"
       ],
-      "explain_mm": "she → isn't (is not)။"
+      "explain_mm": "He (တစ်ယောက်) ဆိုရင် → isn't ။  ➝ He isn't at home."
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "They ___ ready.",
+      "prompt_mm": "သူတို့ အဆင်သင့် မဖြစ်သေးဘူး။",
+      "options": [
+        "isn't",
+        "aren't",
+        "am not"
+      ],
+      "answers": [
+        "aren't"
+      ],
+      "explain_mm": "They (အများ) ဆိုရင် → aren't ။  ➝ They aren't ready."
     },
     {
       "kind": "mcq",
@@ -175,100 +190,227 @@
       "answers": [
         "Are"
       ],
-      "explain_mm": "you → Are you …? (be ကို ရှေ့ထား)။"
+      "explain_mm": "you ဆိုရင် အမေးမှာ → Are ။  ➝ Are you a student?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ she at school?",
+      "prompt_mm": "သူမ ကျောင်းမှာ ရှိလား။",
+      "options": [
+        "Is",
+        "Are",
+        "Does"
+      ],
+      "answers": [
+        "Is"
+      ],
+      "explain_mm": "she ဆိုရင် အမေးမှာ → Is ။  ➝ Is she at school?"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "I ___ hungry.",
+      "prompt_mm": "ကျွန်တော် ဗိုက်မဆာဘူး။",
+      "options": [
+        "'m not",
+        "isn't",
+        "aren't"
+      ],
+      "answers": [
+        "'m not"
+      ],
+      "explain_mm": "I ဆိုရင် အငြင်း → 'm not (am not) ။  ➝ I'm not hungry."
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "They ___ (not / be) ready.",
-      "prompt_mm": "သူတို့ အဆင်သင့် မဖြစ်သေးဘူး။",
+      "prompt_en": "She ___ a nurse.  ( negative )",
+      "prompt_mm": "သူမ သူနာပြု မဟုတ်ဘူး။ ( be + not )",
+      "answers": [
+        "isn't",
+        "is not"
+      ],
+      "explain_mm": "she → isn't ။  ➝ She isn't a nurse."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "We ___ at home.  ( negative )",
+      "prompt_mm": "ကျွန်တော်တို့ အိမ်မှာ မရှိဘူး။ ( be + not )",
       "answers": [
         "aren't",
         "are not"
       ],
-      "explain_mm": "they → aren't (are not)။"
+      "explain_mm": "we → aren't ။  ➝ We aren't at home."
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ they your friends?  ( question )",
+      "prompt_mm": "သူတို့ မင်းသူငယ်ချင်းတွေလား။ ( be ကို ရှေ့ထားပါ )",
+      "answers": [
+        "Are"
+      ],
+      "explain_mm": "they ဆိုရင် အမေး → Are ။  ➝ Are they your friends?"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ he a doctor?  ( question )",
+      "prompt_mm": "သူ ဆရာဝန်တစ်ယောက်လား။ ( be ကို ရှေ့ထားပါ )",
+      "answers": [
+        "Is"
+      ],
+      "explain_mm": "he ဆိုရင် အမေး → Is ။  ➝ Is he a doctor?"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I ___ tired.  ( negative )",
+      "prompt_mm": "ကျွန်တော် မပင်ပန်းဘူး။ ( be + not )",
+      "answers": [
+        "'m not",
+        "am not"
+      ],
+      "explain_mm": "I → 'm not (am not) ။  ➝ I'm not tired."
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Do you happy?",
-      "prompt_mm": "မှားနေတဲ့ မေးခွန်းကို ပြင်ပါ။",
+      "prompt_en": "She not happy.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Are you happy",
-        "Are you happy?",
-        "are you happy?"
+        "She isn't happy",
+        "She is not happy"
       ],
-      "explain_mm": "be ရဲ့ အမေးမှာ Do မသုံးရဘူး → Are you happy?"
+      "explain_mm": "အငြင်းမှာ be + not လိုတယ် — She → isn't ။  ➝ She isn't happy."
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  is  /  he  /  here  /  not",
-      "prompt_mm": "စကားလုံးတွေကို စီပြီး sentence မှန် ရေးပါ။",
+      "prompt_en": "They isn't ready.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "He is not here",
-        "he is not here.",
-        "He isn't here"
+        "They aren't ready"
       ],
-      "explain_mm": "Subject + be + not + ... → He is not here."
+      "explain_mm": "They (အများ) → aren't ။  ➝ They aren't ready."
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — true or not true. Write 5–8 sentences about yourself: some positive (I am …) and some negative (I'm not …). E.g. \"I am a student. I'm not married.\"",
-      "prompt_mm": "အပိုင်း ၁ — မှန် မမှန်။ ကိုယ့်အကြောင်း sentence ၅–၈ ကြောင်း ရေးပါ — အချို့ အတည် (I am …)၊ အချို့ အငြင်း (I'm not …)။ ဥပမာ — \"I am a student. I'm not married.\" ပြီးရင် scan လုပ်ပါ — ဒါမှမဟုတ် ရိုက်ထည့်ပါ။",
-      "model": "I {v}am{/v} from Mandalay. I {v}am not{/v} tall. I {v}am{/v} a student. My English {v}isn't{/v} perfect. My friends {v}aren't{/v} here today.",
-      "explain_mm": "အငြင်းမှာ be နောက် not ထည့်ပါ — I'm not, isn't, aren't။",
-      "grading": {
-        "grammar_point": "be: negatives",
-        "rule": "Negative of be = be + not (I'm not, isn't, aren't). Do not use don't/doesn't with be.",
-        "must_check": [
-          "Negatives use be + not (not don't)",
-          "Correct am/is/are agreement",
-          "Mix of positive and negative",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "don't/doesn't with be (I don't be)",
-          "Wrong agreement (She aren't)",
-          "Dropping be"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Is you a teacher?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Are you a teacher"
+      ],
+      "explain_mm": "you ဆိုရင် → Are ။  ➝ Are you a teacher?"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 4,
-      "max_lines": 6,
-      "prompt_en": "Part 2 — ask questions. Write 4–6 yes/no questions with 'be' to ask a new classmate. E.g. \"Are you from here? Is your family big?\"",
-      "prompt_mm": "အပိုင်း ၂ — မေးခွန်းမေးပါ။ အတန်းဖော်အသစ်တစ်ယောက်ကို be သုံးပြီး yes/no မေးခွန်း ၄–၆ ခု ရေးပါ။ ဥပမာ — \"Are you from here? Is your family big?\" ပြီးရင် scan လုပ်ပါ။",
-      "model": "{v}Are{/v} you a student? {v}Are{/v} you from Yangon? {v}Is{/v} your family big? {v}Are{/v} your classes difficult? {v}Is{/v} your house near here?",
-      "explain_mm": "Am / Is / Are ကို subject ရှေ့မှာ ထားပြီး မေးပါ။",
-      "grading": {
-        "grammar_point": "be: questions",
-        "rule": "Questions with be put am/is/are before the subject (no do/does).",
-        "must_check": [
-          "be comes before the subject",
-          "Correct am/is/are agreement",
-          "Each line is a yes/no question",
-          "4–6 questions"
-        ],
-        "common_mm_errors": [
-          "Using Do/Does with be (Do you a student?)",
-          "Statement order (You are a student?)",
-          "Wrong agreement"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Are she a nurse?",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Is she a nurse"
+      ],
+      "explain_mm": "she ဆိုရင် → Is ။  ➝ Is she a nurse?"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူ အိမ်မှာ မရှိဘူး။",
+      "options": [
+        "He",
+        "isn't",
+        "at",
+        "home"
+      ],
+      "answers": [
+        "He isn't at home"
+      ],
+      "explain_mm": "He → isn't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော် မပင်ပန်းဘူး။",
+      "options": [
+        "I",
+        "am",
+        "not",
+        "tired"
+      ],
+      "answers": [
+        "I am not tired"
+      ],
+      "explain_mm": "I → am not ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်း အဆင်သင့်ဖြစ်ပြီလား။",
+      "options": [
+        "Are",
+        "you",
+        "ready"
+      ],
+      "answers": [
+        "Are you ready"
+      ],
+      "explain_mm": "အမေးမှာ be ကို ရှေ့ထားပါ ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူမ ဆရာမတစ်ယောက်လား။",
+      "options": [
+        "Is",
+        "she",
+        "a",
+        "teacher"
+      ],
+      "answers": [
+        "Is she a teacher"
+      ],
+      "explain_mm": "she ဆိုရင် အမေး → Is ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကျွန်တော်တို့ အဆင်သင့် မဖြစ်သေးဘူး။",
+      "options": [
+        "We",
+        "aren't",
+        "ready"
+      ],
+      "answers": [
+        "We aren't ready"
+      ],
+      "explain_mm": "We → aren't ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "သူတို့ ကျောင်းမှာ ရှိလား။",
+      "options": [
+        "Are",
+        "they",
+        "at",
+        "school"
+      ],
+      "answers": [
+        "Are they at school"
+      ],
+      "explain_mm": "they ဆိုရင် အမေး → Are ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Negatives add not: {v}I'm not{/v} · {v}isn't{/v} · {v}aren't{/v}.  Questions put be first: {v}Am / Is / Are{/v} + subject …?",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — အငြင်းမှာ not ထည့်ပါ (I'm not ၊ isn't ၊ aren't) ။ အမေးမှာ be ကို Subject ရှေ့ထားပါ (Am / Is / Are + subject …?) ။"
 }

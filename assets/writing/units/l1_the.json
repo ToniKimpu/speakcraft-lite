@@ -127,7 +127,7 @@
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "Look at ___ moon tonight!",
-      "prompt_mm": "ဒီည လကို ကြည့်လိုက်ပါဦး။",
+      "prompt_mm": "ဒီည လကို ကြည့်ပါ။",
       "options": [
         "a",
         "an",
@@ -136,110 +136,257 @@
       "answers": [
         "the"
       ],
-      "explain_mm": "လ (moon) က လောကမှာ တစ်ခုတည်းပဲ ရှိတဲ့အတွက် ‘the moon’ လို့ သုံးရပါတယ်။"
+      "explain_mm": "လ (moon) က လောကမှာ တစ်ခုတည်းပဲ ရှိလို့ → the moon ။"
     },
     {
       "kind": "mcq",
       "grade": "auto",
       "prompt_en": "I have a cat. ___ cat is black.",
-      "prompt_mm": "ကျွန်တော့်မှာ ကြောင်တစ်ကောင် ရှိတယ်။ အဲဒီကြောင်လေးက အနက်ရောင်ပါ။",
+      "prompt_mm": "ကျွန်တော့်မှာ ကြောင်တစ်ကောင် ရှိတယ်။ အဲဒီကြောင်က အနက်ရောင်ပါ။",
       "options": [
         "A",
-        "The",
-        "An"
+        "An",
+        "The"
       ],
       "answers": [
         "The"
       ],
-      "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတဲ့အခါမှာတော့ ဘယ်ကြောင်လဲဆိုတာ သိသွားပြီဖြစ်လို့ ‘The cat’ ဆိုပြီး သုံးပါတယ်။"
+      "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတော့ ဘယ်ကြောင်လဲ သိသွားပြီ → The cat ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "Please open ___ window.",
+      "prompt_mm": "ကျေးဇူးပြုပြီး ပြတင်းပေါက် ဖွင့်ပေးပါ။",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "answers": [
+        "the"
+      ],
+      "explain_mm": "ဘယ်ပြတင်းပေါက်လဲ နှစ်ယောက်စလုံး သိနေလို့ (တိကျ) → the window ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "___ sun is very bright today.",
+      "prompt_mm": "ဒီနေ့ နေက အရမ်း တောက်ပတယ်။",
+      "options": [
+        "A",
+        "An",
+        "The"
+      ],
+      "answers": [
+        "The"
+      ],
+      "explain_mm": "နေ (sun) က တစ်ခုတည်းပဲ ရှိလို့ → the sun ။"
+    },
+    {
+      "kind": "mcq",
+      "grade": "auto",
+      "prompt_en": "She is reading ___ book I gave her.",
+      "prompt_mm": "သူ့ကို ကျွန်တော် ပေးတဲ့ စာအုပ်ကို သူဖတ်နေတယ်။",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "answers": [
+        "the"
+      ],
+      "explain_mm": "ဘယ်စာအုပ်လဲ တိကျသိနေလို့ → the book ။"
     },
     {
       "kind": "gap_fill",
       "grade": "auto",
-      "prompt_en": "Please open ___ window. (we both know which)",
-      "prompt_mm": "ပြတင်းပေါက်ကို ဖွင့်ပေးပါ။ (ဘယ် ပြတင်းပေါက်လဲဆိုတာ ပြောတဲ့သူရော နားထောင်တဲ့သူရော သိနေပါတယ်)",
+      "prompt_en": "Close ___ door, please.",
+      "prompt_mm": "တံခါးကို ပိတ်ပေးပါ။",
       "answers": [
         "the"
       ],
-      "explain_mm": "ဘယ်ဟာလဲဆိုတာ သိပြီးသား တိကျတဲ့အရာဖြစ်လို့ ‘the window’ လို့ သုံးပါတယ်။"
+      "explain_mm": "ဘယ်တံခါးလဲ သိနေလို့ (တိကျ) → the door ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "___ children are at school.",
+      "prompt_mm": "ကလေးတွေ ကျောင်းမှာ ရှိနေကြတယ်။",
+      "answers": [
+        "The"
+      ],
+      "explain_mm": "ဘယ်ကလေးတွေလဲ သိနေလို့ → The children ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I can see ___ sun.",
+      "prompt_mm": "နေကို မြင်နိုင်တယ်။",
+      "answers": [
+        "the"
+      ],
+      "explain_mm": "နေ — တစ်ခုတည်း → the sun ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "He opened ___ window.",
+      "prompt_mm": "သူ ပြတင်းပေါက် ဖွင့်လိုက်တယ်။",
+      "answers": [
+        "the"
+      ],
+      "explain_mm": "ဘယ်ပြတင်းပေါက်လဲ သိနေလို့ → the window ။"
+    },
+    {
+      "kind": "gap_fill",
+      "grade": "auto",
+      "prompt_en": "I like ___ book you gave me.",
+      "prompt_mm": "မင်းပေးတဲ့ စာအုပ်ကို ကြိုက်တယ်။",
+      "answers": [
+        "the"
+      ],
+      "explain_mm": "ဘယ်စာအုပ်လဲ တိကျ → the book ။"
     },
     {
       "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "The sun rise in a east.",
-      "prompt_mm": "မှားနေတဲ့ ဝါကျကို အမှန်ဖြစ်အောင် ပြင်ပေးပါ။",
+      "prompt_en": "Look at a moon tonight!",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "The sun rises in the east",
-        "the sun rises in the east."
+        "Look at the moon tonight"
       ],
-      "explain_mm": "‘east’ ဆိုတာ တိကျတဲ့ အရပ်မျက်နှာဖြစ်လို့ ‘the east’ လို့ သုံးရပါတယ်။ ‘the sun’ က singular ဖြစ်လို့ verb မှာ ‘-s’ ထည့်ပြီး ‘rises’ ဖြစ်သွားပါတယ်။ ‘a east’ ဆိုတာ မှားပါတယ်။"
+      "explain_mm": "လ — တစ်ခုတည်း → the moon (a မဟုတ်) ။"
     },
     {
-      "kind": "reorder",
+      "kind": "correct_error",
       "grade": "auto",
-      "prompt_en": "Put in order:  the  /  close  /  door",
-      "prompt_mm": "စကားလုံးတွေကို နေရာတကျပြန်စီပြီး ဝါကျအမှန်တစ်ခုဖြစ်အောင် ရေးပေးပါ။",
+      "prompt_en": "I have a cat. A cat is black.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
       "answers": [
-        "Close the door",
-        "close the door."
+        "I have a cat. The cat is black"
       ],
-      "explain_mm": "‘Close the door’ လို့ ပြောတာက ဘယ်တံခါးကို ဆိုလိုမှန်း နှစ်ယောက်စလုံး သိနေလို့ပါ။"
+      "explain_mm": "ဒုတိယအကြိမ် ထပ်ပြောတော့ → The cat ။"
     },
     {
-      "kind": "scan_sentences",
-      "grade": "ai",
-      "min_lines": 5,
-      "max_lines": 8,
-      "prompt_en": "Part 1 — specific things. Write 5–8 sentences using the for specific or unique things (the sun, the kitchen, the book you have).",
-      "prompt_mm": "အပိုင်း ၁ — တိကျတဲ့အရာများ။ တိကျတဲ့အရာတွေ ဒါမှမဟုတ် လောကမှာ တစ်ခုတည်းပဲရှိတဲ့အရာတွေ (ဥပမာ the sun, the kitchen) အတွက် ‘the’ ကိုသုံးပြီး ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက်အထိ ရေးကြည့်ပါ။ ပြီးသွားရင် စာရွက်ကို scan ဖတ်ပြီးဖြစ်ဖြစ်၊ ဓာတ်ပုံရိုက်ပြီးဖြစ်ဖြစ် ပို့ပေးပါနော်။ ဒီမှာပဲ တိုက်ရိုက်ရိုက်ထည့်ချင်လည်း ရပါတယ်။",
-      "model": "{v}The{/v} sun is hot today. I cleaned {v}the{/v} kitchen this morning. {v}The{/v} book on my desk is new. Please close {v}the{/v} door. {v}The{/v} children are in {v}the{/v} garden.",
-      "explain_mm": "ပြောသူရော နားထောင်သူပါ သိပြီးသားအရာတွေ၊ တိကျတဲ့အရာတွေ၊ လောကမှာ တစ်ခုတည်းပဲရှိတဲ့အရာတွေအတွက် ‘the’ ကို သုံးပေးရပါမယ်။",
-      "grading": {
-        "grammar_point": "the",
-        "rule": "the marks something specific: second mention, shared knowledge, or unique. Works with singular, plural and uncountable.",
-        "must_check": [
-          "the used for specific/known/unique things",
-          "Not used for a first, general singular mention (use a/an there)",
-          "Correct with the noun",
-          "5–8 sentences"
-        ],
-        "common_mm_errors": [
-          "a/an for unique things (a sun)",
-          "the for a first general mention",
-          "Dropping the where needed"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Close a door, please.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "Close the door, please"
+      ],
+      "explain_mm": "ဘယ်တံခါးလဲ သိနေလို့ → the door ။"
     },
     {
-      "kind": "scan_paragraph",
-      "grade": "ai",
-      "prompt_en": "Part 2 — a story with 'a' then 'the'. Write a short paragraph (4–6 sentences). Introduce things with a/an, then refer back with the.",
-      "prompt_mm": "အပိုင်း ၂ — ‘a’ ပြီးရင် ‘the’ လာတဲ့ ပုံပြင်လေး။ ဝါကျ ၄ ကြောင်းကနေ ၆ ကြောင်းလောက်အထိပါတဲ့ စာပိုဒ်တိုလေးတစ်ခု ရေးကြည့်ရအောင်။ အစမှာ အရာဝတ္ထုတွေကို a/an နဲ့ အရင်မိတ်ဆက်ပေးပြီး နောက်ပိုင်းမှာ a/an နဲ့ မိတ်ဆက်ခဲ့တဲ့ အရာတွေကို the သုံးပြီး ပြန်ရည်ညွှန်းပြပါ။ ပြီးသွားရင် scan ဖတ်ပြီး ပို့ပေးပါနော်။",
-      "model": "I saw a dog and a cat in the street. {v}The{/v} dog was big and {v}the{/v} cat was small. {v}The{/v} dog ran to me. I gave {v}the{/v} cat some food. {v}The{/v} animals were friendly.",
-      "explain_mm": "ပထမဆုံးအနေနဲ့ a/an ကိုသုံးပြီး မိတ်ဆက်ပေးပါ။ ပြီးရင် ဒုတိယအကြိမ်မှာ the ကိုသုံးပြီး ပြန်လည်ရည်ညွှန်းတဲ့ပုံစံနဲ့ ရေးပေးရပါမယ်။",
-      "grading": {
-        "grammar_point": "the",
-        "rule": "Introduce with a/an, then use the for the second mention; the for known/unique things.",
-        "must_check": [
-          "a/an for first mention, the after",
-          "the for unique/known things",
-          "Correct noun agreement",
-          "4–6 sentences"
-        ],
-        "common_mm_errors": [
-          "the on every first mention",
-          "a/an on second mention",
-          "Article omission"
-        ],
-        "ignore": [
-          "punctuation",
-          "capitalization"
-        ]
-      }
+      "kind": "correct_error",
+      "grade": "auto",
+      "prompt_en": "Sun is very hot.",
+      "prompt_mm": "မှားနေတဲ့ sentence ကို ပြင်ပါ။",
+      "answers": [
+        "The sun is very hot"
+      ],
+      "explain_mm": "နေ — တစ်ခုတည်း → The sun ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "နေက တောက်ပနေတယ်။",
+      "options": [
+        "The",
+        "sun",
+        "is",
+        "bright"
+      ],
+      "answers": [
+        "The sun is bright"
+      ],
+      "explain_mm": "နေ — တစ်ခုတည်း → The sun ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "တံခါးကို ပိတ်ပေးပါ။",
+      "options": [
+        "Close",
+        "the",
+        "door"
+      ],
+      "answers": [
+        "Close the door"
+      ],
+      "explain_mm": "တိကျ → the door ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ကလေးတွေ ကျောင်းမှာ ရှိနေကြတယ်။",
+      "options": [
+        "The",
+        "children",
+        "are",
+        "at",
+        "school"
+      ],
+      "answers": [
+        "The children are at school"
+      ],
+      "explain_mm": "သိနေတဲ့ ကလေးတွေ → The children ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "လကို ကြည့်ပါ။",
+      "options": [
+        "Look",
+        "at",
+        "the",
+        "moon"
+      ],
+      "answers": [
+        "Look at the moon"
+      ],
+      "explain_mm": "လ — တစ်ခုတည်း → the moon ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "ပြတင်းပေါက်ကို ဖွင့်ပါ။",
+      "options": [
+        "Open",
+        "the",
+        "window"
+      ],
+      "answers": [
+        "Open the window"
+      ],
+      "explain_mm": "တိကျ → the window ။"
+    },
+    {
+      "kind": "word_order",
+      "grade": "auto",
+      "prompt_en": "Arrange the words to say this in English:",
+      "prompt_mm": "မင်းပေးတဲ့ စာအုပ်ကို ကြိုက်တယ်။",
+      "options": [
+        "I",
+        "like",
+        "the",
+        "book",
+        "you",
+        "gave",
+        "me"
+      ],
+      "answers": [
+        "I like the book you gave me"
+      ],
+      "explain_mm": "ဘယ်စာအုပ်လဲ တိကျ → the book ။"
     }
-  ]
+  ],
+  "practice_recap_en": "Use {v}the{/v} for something specific: a second mention, something you both know, or the only one (the sun, the moon).",
+  "practice_recap_mm": "စလေ့ကျင့်ခင် ပြန်နွှေးရအောင် — တိတိကျကျ ရည်ညွှန်းတဲ့အရာအတွက် ‘the’ သုံးပါ — ဒုတိယအကြိမ် ထပ်ပြောတာ၊ နှစ်ယောက်စလုံး သိတာ၊ ဒါမှမဟုတ် တစ်ခုတည်းပဲရှိတာ (the sun, the moon) ။"
 }
