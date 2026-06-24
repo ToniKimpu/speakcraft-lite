@@ -19,6 +19,7 @@ mixin _$AuthEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -35,6 +36,7 @@ mixin _$AuthEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -51,6 +53,7 @@ mixin _$AuthEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -68,6 +71,7 @@ mixin _$AuthEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -81,6 +85,7 @@ mixin _$AuthEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -94,6 +99,7 @@ mixin _$AuthEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -205,6 +211,7 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -224,6 +231,7 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -243,6 +251,7 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -266,6 +275,7 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -282,6 +292,7 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -298,6 +309,7 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -325,6 +337,174 @@ abstract class _AuthCheck implements AuthEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthCheckImplCopyWith<_$AuthCheckImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RefreshUserImplCopyWith<$Res> {
+  factory _$$RefreshUserImplCopyWith(
+          _$RefreshUserImpl value, $Res Function(_$RefreshUserImpl) then) =
+      __$$RefreshUserImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RefreshUserImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$RefreshUserImpl>
+    implements _$$RefreshUserImplCopyWith<$Res> {
+  __$$RefreshUserImplCopyWithImpl(
+      _$RefreshUserImpl _value, $Res Function(_$RefreshUserImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$RefreshUserImpl with DiagnosticableTreeMixin implements _RefreshUser {
+  const _$RefreshUserImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.refreshUser()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthEvent.refreshUser'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RefreshUserImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return refreshUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return refreshUser?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (refreshUser != null) {
+      return refreshUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return refreshUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return refreshUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (refreshUser != null) {
+      return refreshUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RefreshUser implements AuthEvent {
+  const factory _RefreshUser() = _$RefreshUserImpl;
 }
 
 /// @nodoc
@@ -417,6 +597,7 @@ class _$LoginWithEmailImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -436,6 +617,7 @@ class _$LoginWithEmailImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -455,6 +637,7 @@ class _$LoginWithEmailImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -478,6 +661,7 @@ class _$LoginWithEmailImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -494,6 +678,7 @@ class _$LoginWithEmailImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -510,6 +695,7 @@ class _$LoginWithEmailImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -591,6 +777,7 @@ class _$LoginWithGoogleImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -610,6 +797,7 @@ class _$LoginWithGoogleImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -629,6 +817,7 @@ class _$LoginWithGoogleImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -652,6 +841,7 @@ class _$LoginWithGoogleImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -668,6 +858,7 @@ class _$LoginWithGoogleImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -684,6 +875,7 @@ class _$LoginWithGoogleImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -816,6 +1008,7 @@ class _$SignUpWithEmailImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -835,6 +1028,7 @@ class _$SignUpWithEmailImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -854,6 +1048,7 @@ class _$SignUpWithEmailImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -877,6 +1072,7 @@ class _$SignUpWithEmailImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -893,6 +1089,7 @@ class _$SignUpWithEmailImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -909,6 +1106,7 @@ class _$SignUpWithEmailImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1028,6 +1226,7 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -1047,6 +1246,7 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -1066,6 +1266,7 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -1089,6 +1290,7 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -1105,6 +1307,7 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1121,6 +1324,7 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1229,6 +1433,7 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -1248,6 +1453,7 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -1267,6 +1473,7 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -1290,6 +1497,7 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -1306,6 +1514,7 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1322,6 +1531,7 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1431,6 +1641,7 @@ class _$ForgotPasswordImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -1450,6 +1661,7 @@ class _$ForgotPasswordImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -1469,6 +1681,7 @@ class _$ForgotPasswordImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -1492,6 +1705,7 @@ class _$ForgotPasswordImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -1508,6 +1722,7 @@ class _$ForgotPasswordImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1524,6 +1739,7 @@ class _$ForgotPasswordImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1651,6 +1867,7 @@ class _$ResetPasswordImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -1670,6 +1887,7 @@ class _$ResetPasswordImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -1689,6 +1907,7 @@ class _$ResetPasswordImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -1712,6 +1931,7 @@ class _$ResetPasswordImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -1728,6 +1948,7 @@ class _$ResetPasswordImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1744,6 +1965,7 @@ class _$ResetPasswordImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1825,6 +2047,7 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
     required TResult Function(
@@ -1844,6 +2067,7 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
     TResult? Function(
@@ -1863,6 +2087,7 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
     TResult Function(
@@ -1886,6 +2111,7 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
@@ -1902,6 +2128,7 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
@@ -1918,6 +2145,7 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,

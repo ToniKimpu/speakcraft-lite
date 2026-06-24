@@ -16,6 +16,8 @@ import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_pager.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_page.dart';
 import 'package:speakcraft/screens/main/new_version_screen.dart';
+import 'package:speakcraft/screens/premium/premium_payment_page.dart';
+import 'package:speakcraft/screens/premium/payment_status_page.dart';
 import 'package:speakcraft/screens/profiles/update_avatar_page.dart';
 import 'package:speakcraft/screens/profiles/update_name_page.dart';
 
@@ -63,6 +65,10 @@ class PmpRoutes {
       '/important_of_social_health_json_list';
   static const paulRuddInterviewJsonList = '/paul_rudd_interview_json_list';
   static const goingViralTaughtMeJsonList = '/going_viral_taugh_me_json_list';
+
+  // Premium payment (manual KPay/bank screenshot flow)
+  static const premiumPaymentPage = '/premium/payment';
+  static const paymentStatusPage = '/premium/status';
 
   // Writing Practice module — see WRITING_FEATURE_PLAN.md
   static const writingPath = '/writing';
@@ -239,6 +245,10 @@ class PmpRoutes {
           GritJsonPreview(assetPath: args['assetPath'] as String),
           settings,
         );
+      case premiumPaymentPage:
+        return _getRoute(const PremiumPaymentPage(), settings);
+      case paymentStatusPage:
+        return _getRoute(const PaymentStatusPage(), settings);
       case writingPath:
         return _getRoute(const WritingPathPage(), settings);
       case writingTeachSteps:

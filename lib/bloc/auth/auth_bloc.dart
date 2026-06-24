@@ -5,9 +5,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:speakcraft/core/di/service_locator.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/repositories/auth/auth_repository.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 
 import '../../model/app_user/app_user.dart';
 
@@ -16,6 +18,7 @@ part 'auth_bloc.freezed.dart';
 @freezed
 abstract class AuthEvent with _$AuthEvent {
   const factory AuthEvent.authCheck({bool? withLoading}) = _AuthCheck;
+  const factory AuthEvent.refreshUser() = _RefreshUser;
   const factory AuthEvent.loginWithEmail(String email, String password) =
       _LoginWithEmail;
   const factory AuthEvent.loginWithGoogle() = _LoginWithGoogle;
@@ -52,6 +55,11 @@ abstract class AuthState with _$AuthState {
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository _repository;
 
+  /// Realtime subscription to the signed-in user's own `users` row. When the
+  /// admin approves a payment (extends `premium_until`), this fires and we
+  /// silently refresh the cached user so premium unlocks live.
+  RealtimeChannel? _userChannel;
+
   AuthBloc({AuthRepository? repository})
       : _repository = repository ?? sl<AuthRepository>(),
         super(const AuthState.initial()) {
@@ -59,6 +67,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       (event, emit) async {
         await event.when(
           authCheck: (_) => _mapAuthCheckToState(emit),
+          refreshUser: () => _mapRefreshUserToState(emit),
           loginWithEmail: (email, password) =>
               _mapLoginWithEmailToState(email, password, emit),
           loginWithGoogle: () => _mapLoginWithGoogleToState(emit),
@@ -104,6 +113,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const AuthState.deviceIdFailed());
         return;
       }
+      _subscribeUserRealtime();
       emit(const AuthState.authenticated());
     } catch (error) {
       if (error is SocketException || error is TimeoutException) {
@@ -280,7 +290,52 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       sl<ValueNotifier<AppUser>>().value =
           appUser.copyWith(deviceId: localDeviceId);
     }
+    _subscribeUserRealtime();
     emit(const AuthState.authenticated());
+  }
+
+  /// Silent re-fetch of the current user → updates the cached [AppUser] without
+  /// emitting loading / version / device side effects. Used by the app-resume
+  /// lifecycle hook and the premium realtime subscription.
+  Future<void> _mapRefreshUserToState(Emitter<AuthState> emit) async {
+    try {
+      final appUser = await _repository.getCurrentUser();
+      if (appUser != null) {
+        sl<ValueNotifier<AppUser>>().value = appUser;
+      }
+    } catch (e) {
+      AppLogger.instance.error('_refreshUserError: ${e.toString()}', error: e);
+    }
+  }
+
+  void _subscribeUserRealtime() {
+    final uid = supabase.auth.currentUser?.id;
+    if (uid == null) return;
+    _userChannel?.unsubscribe();
+    _userChannel = supabase.channel('public:users:$uid')
+      ..onPostgresChanges(
+        event: PostgresChangeEvent.update,
+        schema: 'public',
+        table: 'users',
+        filter: PostgresChangeFilter(
+          type: PostgresChangeFilterType.eq,
+          column: 'user_id',
+          value: uid,
+        ),
+        callback: (_) => add(const AuthEvent.refreshUser()),
+      )
+      ..subscribe();
+  }
+
+  void _unsubscribeUserRealtime() {
+    _userChannel?.unsubscribe();
+    _userChannel = null;
+  }
+
+  @override
+  Future<void> close() {
+    _unsubscribeUserRealtime();
+    return super.close();
   }
 
   Future<void> _mapLoginWithEmailToState(
@@ -308,6 +363,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _mapLogoutToState(Emitter<AuthState> emit) async {
     try {
       emit(const AuthState.loading());
+      _unsubscribeUserRealtime();
       await _repository.logout();
       AppLogger.instance.debug('_mapLogoutToState: logout successfully!');
       emit(const AuthState.unauthenticated());

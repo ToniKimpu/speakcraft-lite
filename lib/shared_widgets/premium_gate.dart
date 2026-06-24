@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../config/pmp_colors.dart';
+import '../config/pmp_routes.dart';
 import '../config/pmp_text_styles.dart';
 import '../core/di/service_locator.dart';
 import '../model/app_user/app_user.dart';
@@ -142,7 +143,14 @@ Future<void> showPremiumSheet(
                 child: FilledButton.icon(
                   onPressed: () {
                     Navigator.of(context).pop();
-                    onGetPremium?.call();
+                    // Default: route to the manual payment flow. Callers may
+                    // still override with [onGetPremium] (e.g. for IAP later).
+                    if (onGetPremium != null) {
+                      onGetPremium();
+                    } else {
+                      Navigator.of(context)
+                          .pushNamed(PmpRoutes.premiumPaymentPage);
+                    }
                   },
                   icon: const Icon(Icons.workspace_premium_rounded),
                   label: const Text('Get Premium'),

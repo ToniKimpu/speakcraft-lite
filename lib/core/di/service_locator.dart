@@ -15,6 +15,9 @@ import 'package:speakcraft/repositories/auth/auth_repository.dart';
 import 'package:speakcraft/repositories/auth/supabase_auth_repository.dart';
 import 'package:speakcraft/repositories/listening/listening_repository.dart';
 import 'package:speakcraft/repositories/listening/supabase_listening_repository.dart';
+import 'package:speakcraft/bloc/payment/payment_bloc.dart';
+import 'package:speakcraft/repositories/payment/payment_repository.dart';
+import 'package:speakcraft/repositories/payment/supabase_payment_repository.dart';
 import 'package:speakcraft/services/theme_controller.dart';
 
 final sl = GetIt.instance;
@@ -24,6 +27,8 @@ Future<void> setupServiceLocator() async {
   sl.registerLazySingleton<AuthRepository>(() => SupabaseAuthRepository());
   sl.registerLazySingleton<ListeningRepository>(
       () => SupabaseListeningRepository());
+  sl.registerLazySingleton<PaymentRepository>(
+      () => SupabasePaymentRepository());
 
   // Global app state notifiers
   sl.registerLazySingleton<ValueNotifier<AppUser>>(
@@ -55,4 +60,5 @@ Future<void> setupServiceLocator() async {
   sl.registerFactory<UserRecordedSentenceAudioBloc>(
       () => UserRecordedSentenceAudioBloc());
   sl.registerFactory<UserBloc>(() => UserBloc());
+  sl.registerFactory<PaymentBloc>(() => PaymentBloc());
 }

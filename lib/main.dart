@@ -18,7 +18,9 @@ import 'package:speakcraft/speakcraft_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'config/env.dart';
+import 'config/pmp_routes.dart';
 import 'core/di/service_locator.dart';
+import 'services/navigation_service.dart';
 import 'services/share_preference_utils.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/core/logger/dev_logger.dart';
@@ -40,6 +42,21 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 late AndroidNotificationChannel channel;
 bool isFlutterLocalNotificationsInitialized = false;
 
+/// Routes a notification tap. Payload is `jsonEncode(message.data)`; a payment
+/// review notification (`type == 'payment_review'`) opens the status screen.
+void _onNotificationTap(NotificationResponse details) {
+  final payload = details.payload;
+  if (payload == null || payload.isEmpty) return;
+  try {
+    final data = jsonDecode(payload) as Map<String, dynamic>;
+    if (data['type'] == 'payment_review') {
+      navigatorKey.currentState?.pushNamed(PmpRoutes.paymentStatusPage);
+    }
+  } catch (e) {
+    AppLogger.instance.error('notification tap error: $e', error: e);
+  }
+}
+
 Future<void> setupFlutterNotifications() async {
   if (isFlutterLocalNotificationsInitialized) {
     debugPrint('about to abord noti init, already initialized.');
@@ -59,7 +76,7 @@ Future<void> setupFlutterNotifications() async {
       android: AndroidInitializationSettings('ic_notification'),
       iOS: DarwinInitializationSettings(),
     ),
-    onDidReceiveNotificationResponse: (details) {},
+    onDidReceiveNotificationResponse: _onNotificationTap,
   );
 
   flutterLocalNotificationsPlugin

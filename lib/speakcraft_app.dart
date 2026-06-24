@@ -15,11 +15,11 @@ import 'package:speakcraft/main.dart';
 import 'package:speakcraft/main_providers.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'bloc/auth/auth_bloc.dart';
 import 'bloc/internet_checker/internet_checker_bloc.dart';
 import 'l10n/generated/l10n.dart';
+import 'services/navigation_service.dart';
 import 'services/supabase_service.dart';
-
-final _navigatorKey = GlobalKey<NavigatorState>();
 
 class SpeakCraftApp extends StatefulWidget {
   const SpeakCraftApp({super.key});
@@ -28,7 +28,8 @@ class SpeakCraftApp extends StatefulWidget {
   State<SpeakCraftApp> createState() => _SpeakCraftAppState();
 }
 
-class _SpeakCraftAppState extends State<SpeakCraftApp> {
+class _SpeakCraftAppState extends State<SpeakCraftApp>
+    with WidgetsBindingObserver {
   late final StreamSubscription<String> _tokenStream;
   late final StreamSubscription _onMessageStream;
   late final StreamSubscription _onAuthStateChangedStream;
@@ -44,6 +45,7 @@ class _SpeakCraftAppState extends State<SpeakCraftApp> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _connectionChecker = InternetConnectionChecker.createInstance(
       addresses: [
         AddressCheckOption(
@@ -101,9 +103,19 @@ class _SpeakCraftAppState extends State<SpeakCraftApp> {
     _setupConnectionListener();
   }
 
+  // On returning to the foreground, silently re-check premium so an approval
+  // granted while backgrounded reflects immediately (realtime backstop).
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      sl<AuthBloc>().add(const AuthEvent.refreshUser());
+    }
+  }
+
   @override
   void dispose() {
     super.dispose();
+    WidgetsBinding.instance.removeObserver(this);
     _tokenStream.cancel();
     _onMessageStream.cancel();
     _onAuthStateChangedStream.cancel();
@@ -120,7 +132,7 @@ class _SpeakCraftAppState extends State<SpeakCraftApp> {
         builder: (context, themeMode, _) {
           return MaterialApp(
             title: 'SpeakCraft',
-            navigatorKey: _navigatorKey,
+            navigatorKey: navigatorKey,
             debugShowCheckedModeBanner: false,
             theme: PmpThemes.lightTheme,
             darkTheme: PmpThemes.darkTheme,
@@ -145,7 +157,7 @@ class _SpeakCraftAppState extends State<SpeakCraftApp> {
   void _setupConnectionListener() {
     _connectionStatusSubscription = _connectionChecker.onStatusChange.listen(
       (InternetConnectionStatus status) {
-        final navigatorState = _navigatorKey.currentState;
+        final navigatorState = navigatorKey.currentState;
         final context = navigatorState?.context;
         final checkInternetBloc = context?.read<InternetCheckerBloc>();
         AppLogger.instance.debug("_hratnaengApp: ${status.toString()} connection state!");
