@@ -2,12 +2,16 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 
 import '../../config/pmp_colors.dart';
+import '../../config/pmp_text_styles.dart';
 import '../../shared_widgets/glass.dart';
+import '../writing/writing_practice_page.dart';
+import 'utils/takeaway_practice_builder.dart';
 
 /// "Key Takeaways" deck for a video.
 ///
@@ -43,7 +47,24 @@ class _KeyTakeawaysPageState extends State<KeyTakeawaysPage> {
   Map<String, dynamic>? _data;
   bool _loading = true;
   String? _error;
-  bool _markedDone = false;
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  /// Scroll the deck to the bottom — used by the top "study first" hint to drop
+  /// the learner into the cards (and, at the end, the Practice CTA).
+  void _scrollToCards() {
+    if (!_scrollController.hasClients) return;
+    _scrollController.animateTo(
+      _scrollController.position.maxScrollExtent,
+      duration: const Duration(milliseconds: 450),
+      curve: Curves.easeInOut,
+    );
+  }
 
   @override
   void initState() {
@@ -58,15 +79,6 @@ class _KeyTakeawaysPageState extends State<KeyTakeawaysPage> {
             ),
           );
     }
-  }
-
-  void _markDoneOnce() {
-    final id = widget.youtubeId;
-    if (_markedDone || id == null) return;
-    _markedDone = true;
-    context.read<VideoStepProgressBloc>().add(
-          VideoStepProgressEvent.markDone(id, VideoLessonStep.keyTakeaways),
-        );
   }
 
   Future<void> _load() async {
@@ -126,10 +138,37 @@ class _KeyTakeawaysPageState extends State<KeyTakeawaysPage> {
     );
   }
 
+  void _openPractice(BuildContext context, Map<String, dynamic> data) {
+    final unit = TakeawayPracticeBuilder.build(data);
+    if (unit.exercises.isEmpty) return;
+    // Completing the practice ladder is what marks the Key Takeaways step done.
+    // Capture the (root-level) bloc now so the callback doesn't need the pushed
+    // page's context.
+    final id = widget.youtubeId;
+    final progressBloc =
+        id == null ? null : context.read<VideoStepProgressBloc>();
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => WritingPracticePage(
+          unit: unit,
+          onCompleted: (id == null || progressBloc == null)
+              ? null
+              : () => progressBloc.add(
+                    VideoStepProgressEvent.markDone(
+                      id,
+                      VideoLessonStep.keyTakeaways,
+                    ),
+                  ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildDeck(BuildContext context, Map<String, dynamic> data) {
     final cs = Theme.of(context).colorScheme;
-    final takeaways =
-        (data['takeaways'] as List<dynamic>? ?? []).cast<Map<String, dynamic>>();
+    final takeaways = (data['takeaways'] as List<dynamic>? ?? [])
+        .cast<Map<String, dynamic>>();
+    final practiceCount = TakeawayPracticeBuilder.build(data).exercises.length;
 
     // Group by category, preserving the canonical display order.
     final grouped = <String, List<Map<String, dynamic>>>{};
@@ -141,19 +180,25 @@ class _KeyTakeawaysPageState extends State<KeyTakeawaysPage> {
         _categoryOrder.where((c) => grouped.containsKey(c)).toList();
 
     return ListView(
+      controller: _scrollController,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: [
         _DeckHeader(
-          titleMy: data['title_my'] as String? ?? data['title'] as String? ?? '',
+          titleMy:
+              data['title_my'] as String? ?? data['title'] as String? ?? '',
           summaryMy: data['summary_my'] as String? ?? '',
           count: takeaways.length,
         ),
+        if (practiceCount > 0) ...[
+          const SizedBox(height: 12),
+          _PracticeHint(count: practiceCount, onTap: _scrollToCards),
+        ],
         const SizedBox(height: 20),
         for (final cat in orderedCats) ...[
           _SectionHeader(category: cat, count: grouped[cat]!.length),
           const SizedBox(height: 10),
           for (final t in grouped[cat]!) ...[
-            _TakeawayCard(takeaway: t, onExpand: _markDoneOnce),
+            _TakeawayCard(takeaway: t),
             const SizedBox(height: 10),
           ],
           const SizedBox(height: 14),
@@ -164,6 +209,13 @@ class _KeyTakeawaysPageState extends State<KeyTakeawaysPage> {
             style: TextStyle(fontSize: 12, color: cs.onSurfaceVariant),
           ),
         ),
+        if (practiceCount > 0) ...[
+          const SizedBox(height: 20),
+          _PracticeCta(
+            count: practiceCount,
+            onTap: () => _openPractice(context, data),
+          ),
+        ],
       ],
     );
   }
@@ -261,6 +313,115 @@ class _DeckHeader extends StatelessWidget {
   }
 }
 
+// ----------------------------------------------------------- practice hint
+
+/// Slim top banner: tells the learner practice is waiting at the end and nudges
+/// the study-first flow. Tapping it scrolls down into the cards (and the CTA).
+class _PracticeHint extends StatelessWidget {
+  const _PracticeHint({required this.count, required this.onTap});
+
+  final int count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final myColor = PmpColors.myanmarGloss(Theme.of(context).brightness);
+
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        decoration: BoxDecoration(
+          color: PmpColors.accentOrange.withValues(alpha: 0.08),
+          borderRadius: BorderRadius.circular(12),
+          border:
+              Border.all(color: PmpColors.accentOrange.withValues(alpha: 0.25)),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.fitness_center_rounded,
+                size: 16, color: PmpColors.accentOrange),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                'လေ့ကျင့်ခန်း $count ခု အောက်မှာ ရှိပါတယ် — အရင်ဖတ်ပြီးမှ လေ့ကျင့်ပါ',
+                style: PmpTextStyles.body2Regular.copyWith(color: myColor),
+              ),
+            ),
+            Icon(
+              Icons.arrow_downward_rounded,
+              size: 18,
+              color: cs.onSurfaceVariant,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ----------------------------------------------------------- practice CTA
+
+/// "Practice these takeaways" call-to-action — turns the deck into an active
+/// recall ladder (match / fill the gap / build the sentence) instead of a
+/// read-only list. Shown only when the deck yields exercises.
+class _PracticeCta extends StatelessWidget {
+  const _PracticeCta({required this.count, required this.onTap});
+
+  final int count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final myColor = PmpColors.myanmarGloss(Theme.of(context).brightness);
+
+    return GlassCard(
+      onTap: onTap,
+      borderRadius: 16,
+      padding: const EdgeInsets.all(14),
+      child: Row(
+        children: [
+          Container(
+            width: 42,
+            height: 42,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: PmpColors.accentOrange.withValues(alpha: 0.14),
+              border: Border.all(
+                  color: PmpColors.accentOrange.withValues(alpha: 0.30)),
+            ),
+            child: const Icon(Icons.fitness_center_rounded,
+                size: 20, color: PmpColors.accentOrange),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Practice these takeaways',
+                  style: PmpTextStyles.body1Semi.copyWith(color: cs.onSurface),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  'လေ့ကျင့်ခန်း $count ခုကို ဖြေဆိုရင်း မှတ်မိအောင်လေ့ကျင့်ပါ',
+                  style: PmpTextStyles.body2Regular.copyWith(color: myColor),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          Icon(Icons.chevron_right, color: cs.onSurfaceVariant, size: 22),
+        ],
+      ),
+    );
+  }
+}
+
 // -------------------------------------------------------------- section header
 
 class _SectionHeader extends StatelessWidget {
@@ -299,10 +460,9 @@ class _SectionHeader extends StatelessWidget {
 // ----------------------------------------------------------------- card
 
 class _TakeawayCard extends StatefulWidget {
-  const _TakeawayCard({required this.takeaway, this.onExpand});
+  const _TakeawayCard({required this.takeaway});
 
   final Map<String, dynamic> takeaway;
-  final VoidCallback? onExpand;
 
   @override
   State<_TakeawayCard> createState() => _TakeawayCardState();
@@ -333,187 +493,188 @@ class _TakeawayCardState extends State<_TakeawayCard> {
     return GlassCard(
       borderRadius: 14,
       padding: EdgeInsets.zero,
-      onTap: () {
-        setState(() => _expanded = !_expanded);
-        if (_expanded) widget.onExpand?.call();
-      },
+      onTap: () => setState(() => _expanded = !_expanded),
       child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // ---- collapsed header: headword + gloss + category tag ----
-              Padding(
-                padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // ---- collapsed header: headword + gloss + category tag ----
+          Padding(
+            padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.baseline,
+                        textBaseline: TextBaseline.alphabetic,
                         children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.baseline,
-                            textBaseline: TextBaseline.alphabetic,
-                            children: [
-                              Flexible(
-                                child: Text(
-                                  headword,
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: cs.onSurface,
-                                  ),
-                                ),
-                              ),
-                              if (phonetic.isNotEmpty) ...[
-                                const SizedBox(width: 8),
-                                Text(
-                                  phonetic,
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: cs.onSurfaceVariant,
-                                    fontStyle: FontStyle.italic,
-                                  ),
-                                ),
-                              ],
-                            ],
-                          ),
-                          if (pos.isNotEmpty) ...[
-                            const SizedBox(height: 2),
-                            Text(
-                              pos,
+                          Flexible(
+                            child: Text(
+                              headword,
                               style: TextStyle(
-                                fontSize: 11,
-                                color: cs.onSurfaceVariant,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: cs.onSurface,
                               ),
                             ),
-                          ],
-                          if (glossMy.isNotEmpty) ...[
-                            const SizedBox(height: 5),
+                          ),
+                          if (phonetic.isNotEmpty) ...[
+                            const SizedBox(width: 8),
                             Text(
-                              glossMy,
-                              style: TextStyle(
-                                fontSize: 13.5,
-                                fontWeight: FontWeight.w600,
-                                color: myColor,
-                                height: 1.5,
+                              phonetic,
+                              // The app font (Plus Jakarta Sans) lacks the
+                              // IPA stress marks ˈ / ˌ, which render as tofu.
+                              // Noto Sans carries the full IPA block.
+                              style: GoogleFonts.notoSans(
+                                textStyle: TextStyle(
+                                  fontSize: 12,
+                                  color: cs.onSurfaceVariant,
+                                  fontStyle: FontStyle.italic,
+                                ),
                               ),
                             ),
                           ],
                         ],
                       ),
-                    ),
-                    const SizedBox(width: 8),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        _CategoryChip(meta: meta),
-                        const SizedBox(height: 6),
-                        Icon(
-                          _expanded
-                              ? Icons.keyboard_arrow_up
-                              : Icons.keyboard_arrow_down,
-                          size: 20,
-                          color: cs.onSurfaceVariant,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-
-              // ---- expanded body ----
-              if (_expanded) ...[
-                Divider(height: 1, color: cs.outlineVariant),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(14, 12, 14, 14),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      if (explanationMy.isNotEmpty)
+                      if (pos.isNotEmpty) ...[
+                        const SizedBox(height: 2),
                         Text(
-                          explanationMy,
+                          pos,
                           style: TextStyle(
-                            fontSize: 13,
+                            fontSize: 11,
                             color: cs.onSurfaceVariant,
-                            height: 1.7,
-                          ),
-                        ),
-                      if (examples.isNotEmpty) ...[
-                        const SizedBox(height: 12),
-                        for (final ex in examples)
-                          _ExampleRow(
-                            english: ex['english'] as String? ?? '',
-                            burmese: ex['burmese'] as String? ?? '',
-                            highlights: (ex['highlight'] as List<dynamic>? ?? [])
-                                .cast<String>(),
-                            accent: meta.color,
-                            myColor: myColor,
-                          ),
-                      ],
-                      if (tipMy.isNotEmpty) ...[
-                        const SizedBox(height: 12),
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color:
-                                PmpColors.accentOrange.withValues(alpha: 0.08),
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border(
-                              left: BorderSide(
-                                color: PmpColors.accentOrange
-                                    .withValues(alpha: 0.6),
-                                width: 3,
-                              ),
-                            ),
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Icon(Icons.lightbulb_outline,
-                                  size: 16, color: PmpColors.accentOrange),
-                              const SizedBox(width: 8),
-                              Expanded(
-                                child: Text(
-                                  tipMy,
-                                  style: TextStyle(
-                                    fontSize: 12.5,
-                                    color: cs.onSurface,
-                                    height: 1.6,
-                                  ),
-                                ),
-                              ),
-                            ],
                           ),
                         ),
                       ],
-                      if (sourceEn.isNotEmpty) ...[
-                        const SizedBox(height: 12),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(Icons.subdirectory_arrow_right,
-                                size: 14, color: cs.onSurfaceVariant),
-                            const SizedBox(width: 6),
-                            Expanded(
-                              child: Text(
-                                'From the video: "$sourceEn"',
-                                style: TextStyle(
-                                  fontSize: 11.5,
-                                  fontStyle: FontStyle.italic,
-                                  color: cs.onSurfaceVariant,
-                                  height: 1.5,
-                                ),
-                              ),
-                            ),
-                          ],
+                      if (glossMy.isNotEmpty) ...[
+                        const SizedBox(height: 5),
+                        Text(
+                          glossMy,
+                          style: TextStyle(
+                            fontSize: 13.5,
+                            fontWeight: FontWeight.w600,
+                            color: myColor,
+                            height: 1.5,
+                          ),
                         ),
                       ],
                     ],
                   ),
                 ),
+                const SizedBox(width: 8),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    _CategoryChip(meta: meta),
+                    const SizedBox(height: 6),
+                    Icon(
+                      _expanded
+                          ? Icons.keyboard_arrow_up
+                          : Icons.keyboard_arrow_down,
+                      size: 20,
+                      color: cs.onSurfaceVariant,
+                    ),
+                  ],
+                ),
               ],
-            ],
+            ),
           ),
+
+          // ---- expanded body ----
+          if (_expanded) ...[
+            Divider(height: 1, color: cs.outlineVariant),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(14, 12, 14, 14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (explanationMy.isNotEmpty)
+                    Text(
+                      explanationMy,
+                      style: TextStyle(
+                        fontSize: 13,
+                        color: cs.onSurfaceVariant,
+                        height: 1.7,
+                      ),
+                    ),
+                  if (examples.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    for (final ex in examples)
+                      _ExampleRow(
+                        english: ex['english'] as String? ?? '',
+                        burmese: ex['burmese'] as String? ?? '',
+                        highlights: (ex['highlight'] as List<dynamic>? ?? [])
+                            .cast<String>(),
+                        accent: meta.color,
+                        myColor: myColor,
+                      ),
+                  ],
+                  if (tipMy.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: PmpColors.accentOrange.withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border(
+                          left: BorderSide(
+                            color:
+                                PmpColors.accentOrange.withValues(alpha: 0.6),
+                            width: 3,
+                          ),
+                        ),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(Icons.lightbulb_outline,
+                              size: 16, color: PmpColors.accentOrange),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              tipMy,
+                              style: TextStyle(
+                                fontSize: 12.5,
+                                color: cs.onSurface,
+                                height: 1.6,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                  if (sourceEn.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.subdirectory_arrow_right,
+                            size: 14, color: cs.onSurfaceVariant),
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: Text(
+                            'From the video: "$sourceEn"',
+                            style: TextStyle(
+                              fontSize: 11.5,
+                              fontStyle: FontStyle.italic,
+                              color: cs.onSurfaceVariant,
+                              height: 1.5,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
+        ],
+      ),
     );
   }
 }
@@ -662,13 +823,12 @@ const List<String> _categoryOrder = [
 ];
 
 final Map<String, _CatMeta> _catMeta = {
-  'grammar_pattern': const _CatMeta(
-      'သဒ္ဒါပုံစံ (Grammar Patterns)', 'Pattern', Icons.construction_outlined,
-      PmpColors.info500),
+  'grammar_pattern': const _CatMeta('သဒ္ဒါပုံစံ (Grammar Patterns)', 'Pattern',
+      Icons.construction_outlined, PmpColors.info500),
   'phrase': const _CatMeta('အသုံးအနှုန်း (Phrases)', 'Phrase',
       Icons.chat_bubble_outline, PmpColors.primary400),
-  'idiom': const _CatMeta('အီဒီယမ် (Idioms)', 'Idiom', Icons.auto_awesome,
-      PmpColors.secondary400),
+  'idiom': const _CatMeta(
+      'အီဒီယမ် (Idioms)', 'Idiom', Icons.auto_awesome, PmpColors.secondary400),
   'vocabulary': const _CatMeta('ဝေါဟာရ (Vocabulary)', 'Vocab',
       Icons.menu_book_outlined, PmpColors.success500),
   'pronunciation': const _CatMeta('အသံထွက် (Pronunciation)', 'Sound',

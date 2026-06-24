@@ -195,7 +195,7 @@
       "answers": [
         "am"
       ],
-      "explain_mm": "Subject က 'I' ဖြစ်လို့ → am ။  ➝ I am a student."
+      "explain_mm": "Subject က 'I' ဆိုရင် အမြဲတမ်း 'am' ကို သုံးပါတယ်နော်။ 'am' က 'I' ကို နောက်က စကားလုံး (a student) နဲ့ ချိတ်ဆက်ပေးတာပါ။ ➝ I am a student."
     },
     {
       "kind": "mcq",
@@ -210,7 +210,7 @@
       "answers": [
         "is"
       ],
-      "explain_mm": "He / She / It (တစ်ယောက်) ဆိုရင် → is ။  ➝ She is a doctor."
+      "explain_mm": "'She' (သူမ) က he / she / it အုပ်စုထဲက တစ်ယောက်တည်း ဖြစ်တဲ့အတွက် 'is' ကို သုံးရပါတယ်။ ➝ She is a doctor."
     },
     {
       "kind": "mcq",
@@ -225,7 +225,7 @@
       "answers": [
         "are"
       ],
-      "explain_mm": "You / We / They (အများ) ဆိုရင် → are ။  ➝ They are from Yangon."
+      "explain_mm": "'They' (သူတို့) က အများကိန်း — တစ်ယောက်ထက်ပိုလို့ 'are' ကို သုံးပါတယ်။ you / we / they ဆိုရင် 'are' နော်။ ➝ They are from Yangon."
     },
     {
       "kind": "mcq",
@@ -240,7 +240,7 @@
       "answers": [
         "is"
       ],
-      "explain_mm": "He ဆိုရင် → is ။  ➝ He is tall."
+      "explain_mm": "'He' က တစ်ယောက်တည်း (he / she / it) ဖြစ်လို့ 'is' ကို သုံးပါတယ်။ ➝ He is tall."
     },
     {
       "kind": "mcq",
@@ -255,7 +255,7 @@
       "answers": [
         "are"
       ],
-      "explain_mm": "We ဆိုရင် → are ။  ➝ We are friends."
+      "explain_mm": "'We' (ကျွန်တော်တို့) က အများကိန်း ဖြစ်တဲ့အတွက် 'are' ကို သုံးရပါတယ်။ ➝ We are friends."
     },
     {
       "kind": "gap_fill",
@@ -266,7 +266,7 @@
         "is",
         "'s"
       ],
-      "explain_mm": "He → is ။  ➝ He is a farmer."
+      "explain_mm": "'He' က တစ်ယောက်တည်းမို့ 'is' ပါ။ Subject နဲ့ ကိုက်အောင် be ကို ရွေးပေးပါနော်။ ➝ He is a farmer."
     },
     {
       "kind": "gap_fill",
@@ -277,7 +277,7 @@
         "are",
         "'re"
       ],
-      "explain_mm": "You → are ။  ➝ You are kind."
+      "explain_mm": "'You' နဲ့ဆိုရင် 'are' ကို သုံးပါတယ် (you / we / they အုပ်စု)။ ➝ You are kind."
     },
     {
       "kind": "gap_fill",
@@ -288,7 +288,7 @@
         "am",
         "'m"
       ],
-      "explain_mm": "I → am ။  ➝ I am hungry."
+      "explain_mm": "'I' နဲ့ဆို အမြဲတမ်း 'am' ပါနော်။ ➝ I am hungry."
     },
     {
       "kind": "gap_fill",
@@ -299,7 +299,7 @@
         "is",
         "'s"
       ],
-      "explain_mm": "It → is ။  ➝ It is hot today."
+      "explain_mm": "'It' က he / she / it အုပ်စုမို့ 'is' ကို သုံးပါတယ်။ ➝ It is hot today."
     },
     {
       "kind": "gap_fill",
@@ -310,7 +310,7 @@
         "are",
         "'re"
       ],
-      "explain_mm": "We → are ။  ➝ We are at home."
+      "explain_mm": "'We' က အများကိန်း ဖြစ်လို့ 'are' ပါ။ ➝ We are at home."
     },
     {
       "kind": "correct_error",
@@ -320,7 +320,7 @@
       "answers": [
         "She is a nurse"
       ],
-      "explain_mm": "He / She / It → is (are မဟုတ်ပါ)။  ➝ She is a nurse."
+      "explain_mm": "'She' က တစ်ယောက်တည်း ဖြစ်တဲ့အတွက် 'is' သုံးရပါတယ် — 'are' မဟုတ်ပါဘူးနော်။ ➝ She is a nurse."
     },
     {
       "kind": "correct_error",
@@ -330,7 +330,7 @@
       "answers": [
         "I am tired"
       ],
-      "explain_mm": "I → am (is မဟုတ်ပါ)။  ➝ I am tired."
+      "explain_mm": "'I' နဲ့ဆို 'am' ကို သုံးရပါတယ် — 'is' မဟုတ်ပါဘူး။ ➝ I am tired."
     },
     {
       "kind": "correct_error",
@@ -340,7 +340,7 @@
       "answers": [
         "They are students"
       ],
-      "explain_mm": "They → are ၊ noun ကိုလည်း students (အများ)။  ➝ They are students."
+      "explain_mm": "'They' က အများကိန်းမို့ 'are' ပါ။ noun ကိုလည်း 'students' လို့ အများကိန်း ပြောင်းပေးရပါတယ်။ ➝ They are students."
     },
     {
       "kind": "correct_error",
@@ -350,7 +350,7 @@
       "answers": [
         "He is a teacher"
       ],
-      "explain_mm": "Sentence တိုင်းမှာ be ပါရမယ် ။ He → is ။  ➝ He is a teacher."
+      "explain_mm": "Sentence တိုင်းမှာ 'be' (am / is / are) တစ်ခု ပါရပါမယ်နော်။ 'He' ဆိုတော့ 'is' ထည့်ပေးပါ။ ➝ He is a teacher."
     },
     {
       "kind": "word_order",
@@ -366,7 +366,7 @@
       "answers": [
         "She is a doctor"
       ],
-      "explain_mm": "He / She / It → is ။  ➝ She is a doctor."
+      "explain_mm": "'She' (တစ်ယောက်တည်း) နဲ့ဆို 'is' ။ Subject + be + ... အစီအစဉ်နဲ့ စီပါနော်။ ➝ She is a doctor."
     },
     {
       "kind": "word_order",
@@ -382,7 +382,7 @@
       "answers": [
         "I am a teacher"
       ],
-      "explain_mm": "I → am ။  ➝ I am a teacher."
+      "explain_mm": "'I' နဲ့ဆို 'am' ပါ။ ➝ I am a teacher."
     },
     {
       "kind": "word_order",
@@ -398,7 +398,7 @@
       "answers": [
         "They are at school"
       ],
-      "explain_mm": "They → are ။  ➝ They are at school."
+      "explain_mm": "'They' က အများကိန်းမို့ 'are' ပါ။ ➝ They are at school."
     },
     {
       "kind": "word_order",
@@ -413,7 +413,7 @@
       "answers": [
         "He is happy"
       ],
-      "explain_mm": "He → is ။  ➝ He is happy."
+      "explain_mm": "'He' က တစ်ယောက်တည်း (he / she / it) မို့ 'is' ပါ။ ➝ He is happy."
     },
     {
       "kind": "word_order",
@@ -429,7 +429,7 @@
       "answers": [
         "We are from Mandalay"
       ],
-      "explain_mm": "We → are ။  ➝ We are from Mandalay."
+      "explain_mm": "'We' က အများကိန်းမို့ 'are' ပါ။ ➝ We are from Mandalay."
     },
     {
       "kind": "word_order",
@@ -444,7 +444,7 @@
       "answers": [
         "You are kind"
       ],
-      "explain_mm": "You → are ။  ➝ You are kind."
+      "explain_mm": "'You' နဲ့ဆို 'are' ပါ (you / we / they အုပ်စု)။ ➝ You are kind."
     }
   ]
 }

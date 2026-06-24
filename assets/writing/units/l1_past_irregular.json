@@ -197,7 +197,7 @@
       "answers": [
         "went"
       ],
-      "explain_mm": "go → went ။  ➝ He went home."
+      "explain_mm": "'go' က irregular verb ဖြစ်တဲ့အတွက် ‑ed မပေါင်းဘဲ ပုံစံ ပြောင်းသွားတယ် → went ။ ➝ Yesterday he went home."
     },
     {
       "kind": "mcq",
@@ -212,7 +212,7 @@
       "answers": [
         "ate"
       ],
-      "explain_mm": "eat → ate ။  ➝ We ate rice."
+      "explain_mm": "'eat' ရဲ့ အတိတ်က 'ate' ပါ (irregular) ။ ➝ We ate rice for lunch."
     },
     {
       "kind": "mcq",
@@ -227,7 +227,7 @@
       "answers": [
         "drank"
       ],
-      "explain_mm": "drink → drank ။  ➝ I drank tea."
+      "explain_mm": "'drink' ရဲ့ အတိတ်က 'drank' ပါ (irregular) ။ ➝ I drank tea this morning."
     },
     {
       "kind": "mcq",
@@ -242,7 +242,7 @@
       "answers": [
         "had"
       ],
-      "explain_mm": "have → had ။  ➝ She had a good time."
+      "explain_mm": "'have' ရဲ့ အတိတ်က 'had' ပါ (irregular) ။ ➝ She had a good time."
     },
     {
       "kind": "mcq",
@@ -257,7 +257,7 @@
       "answers": [
         "slept"
       ],
-      "explain_mm": "sleep → slept ။  ➝ They slept early."
+      "explain_mm": "'sleep' ရဲ့ အတိတ်က 'slept' ပါ (irregular) ။ ➝ They slept early last night."
     },
     {
       "kind": "gap_fill",
@@ -267,7 +267,7 @@
       "answers": [
         "went"
       ],
-      "explain_mm": "go → went ။  ➝ She went home early."
+      "explain_mm": "go → went ။ ➝ She went home early."
     },
     {
       "kind": "gap_fill",
@@ -277,7 +277,7 @@
       "answers": [
         "ate"
       ],
-      "explain_mm": "eat → ate ။  ➝ He ate too much."
+      "explain_mm": "eat → ate ။ ➝ He ate too much."
     },
     {
       "kind": "gap_fill",
@@ -287,7 +287,7 @@
       "answers": [
         "had"
       ],
-      "explain_mm": "have → had ။  ➝ We had a good time."
+      "explain_mm": "have → had ။ ➝ We had a good time."
     },
     {
       "kind": "gap_fill",
@@ -297,7 +297,7 @@
       "answers": [
         "drank"
       ],
-      "explain_mm": "drink → drank ။  ➝ They drank coffee."
+      "explain_mm": "drink → drank ။ ➝ They drank coffee last night."
     },
     {
       "kind": "gap_fill",
@@ -307,7 +307,7 @@
       "answers": [
         "read"
       ],
-      "explain_mm": "read → read (spelling အတူတူ) ။  ➝ I read a book yesterday."
+      "explain_mm": "'read' ရဲ့ အတိတ်က spelling အတူတူ 'read' ပါ (အသံပဲ ပြောင်းတာ) ။ ➝ I read a book yesterday."
     },
     {
       "kind": "correct_error",
@@ -317,7 +317,7 @@
       "answers": [
         "Yesterday he went home"
       ],
-      "explain_mm": "go → went (goed မဟုတ်) ။  ➝ Yesterday he went home."
+      "explain_mm": "'go' က irregular ဖြစ်လို့ အတိတ်က 'went' ပါ — 'goed' မဖြစ်ပါဘူးနော်။ ➝ Yesterday he went home."
     },
     {
       "kind": "correct_error",
@@ -327,7 +327,7 @@
       "answers": [
         "We ate rice"
       ],
-      "explain_mm": "eat → ate ။  ➝ We ate rice."
+      "explain_mm": "'eat' ရဲ့ အတိတ်က 'ate' ပါ — 'eated' မဟုတ်ပါဘူး။ ➝ We ate rice."
     },
     {
       "kind": "correct_error",
@@ -337,7 +337,7 @@
       "answers": [
         "I drank tea"
       ],
-      "explain_mm": "drink → drank ။  ➝ I drank tea."
+      "explain_mm": "'drink' ရဲ့ အတိတ်က 'drank' ပါ — 'drinked' မဟုတ်ပါဘူး။ ➝ I drank tea."
     },
     {
       "kind": "correct_error",
@@ -347,7 +347,7 @@
       "answers": [
         "She had a good time"
       ],
-      "explain_mm": "have → had ။  ➝ She had a good time."
+      "explain_mm": "'have' ရဲ့ အတိတ်က 'had' ပါ — 'haved' မဟုတ်ပါဘူး။ ➝ She had a good time."
     },
     {
       "kind": "word_order",
@@ -362,7 +362,7 @@
       "answers": [
         "She went home"
       ],
-      "explain_mm": "go → went ။"
+      "explain_mm": "go → went ။ ➝ She went home."
     },
     {
       "kind": "word_order",
@@ -379,7 +379,7 @@
       "answers": [
         "We had a good time"
       ],
-      "explain_mm": "have → had ။"
+      "explain_mm": "have → had ။ ➝ We had a good time."
     },
     {
       "kind": "word_order",
@@ -395,7 +395,7 @@
       "answers": [
         "He ate too much"
       ],
-      "explain_mm": "eat → ate ။"
+      "explain_mm": "eat → ate ။ ➝ He ate too much."
     },
     {
       "kind": "word_order",
@@ -412,7 +412,7 @@
       "answers": [
         "They drank coffee last night"
       ],
-      "explain_mm": "drink → drank ။"
+      "explain_mm": "drink → drank ။ ➝ They drank coffee last night."
     },
     {
       "kind": "word_order",
@@ -429,7 +429,7 @@
       "answers": [
         "I read a book yesterday"
       ],
-      "explain_mm": "read → read ။"
+      "explain_mm": "read → read (spelling အတူတူ) ။ ➝ I read a book yesterday."
     },
     {
       "kind": "word_order",
@@ -444,7 +444,7 @@
       "answers": [
         "You slept early"
       ],
-      "explain_mm": "sleep → slept ။"
+      "explain_mm": "sleep → slept ။ ➝ You slept early."
     }
   ],
   "practice_recap_en": "Irregular verbs change shape: go → {v}went{/v} · eat → {v}ate{/v} · have → {v}had{/v} · drink → {v}drank{/v}.",

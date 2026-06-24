@@ -198,7 +198,7 @@
       "answers": [
         "didn't go"
       ],
-      "explain_mm": "didn't + base (go) ။  ➝ She didn't go to work."
+      "explain_mm": "အတိတ် အငြင်းက 'didn't' ပါ။ 'didn't' နောက်မှာ verb ကို base form (go) သုံးရတယ် — past form မဟုတ်ဘူးနော်။ ➝ She didn't go to work."
     },
     {
       "kind": "mcq",
@@ -213,7 +213,7 @@
       "answers": [
         "Did"
       ],
-      "explain_mm": "အတိတ်အမေး → Did ။  ➝ Did you eat lunch?"
+      "explain_mm": "အတိတ် အမေးမှာ 'Did' ကို ရှေ့ထားပါ။ subject အားလုံးအတွက် 'Did' ပါ။ ➝ Did you eat lunch?"
     },
     {
       "kind": "mcq",
@@ -228,7 +228,7 @@
       "answers": [
         "didn't come"
       ],
-      "explain_mm": "didn't + base (come) ။  ➝ They didn't come."
+      "explain_mm": "အတိတ် အငြင်း → 'didn't' + base (come) ။ ➝ They didn't come to the party."
     },
     {
       "kind": "mcq",
@@ -243,7 +243,7 @@
       "answers": [
         "watch"
       ],
-      "explain_mm": "Did နောက်မှာ base (watch) ။  ➝ Did he watch the film?"
+      "explain_mm": "'Did' နောက်မှာ verb ကို base form (watch) သုံးရတယ် — 'watched' မဟုတ်ဘူး။ ➝ Did he watch the film?"
     },
     {
       "kind": "mcq",
@@ -258,7 +258,7 @@
       "answers": [
         "didn't watch"
       ],
-      "explain_mm": "didn't + base (watch) ။  ➝ I didn't watch TV."
+      "explain_mm": "အတိတ် အငြင်း → 'didn't' + base (watch) ။ ➝ I didn't watch TV last night."
     },
     {
       "kind": "gap_fill",
@@ -269,7 +269,7 @@
         "didn't go",
         "did not go"
       ],
-      "explain_mm": "didn't + base (go) ။  ➝ She didn't go to work."
+      "explain_mm": "'didn't' + base (go) ။ ➝ She didn't go to work."
     },
     {
       "kind": "gap_fill",
@@ -280,7 +280,7 @@
         "didn't watch",
         "did not watch"
       ],
-      "explain_mm": "didn't + base (watch) ။  ➝ I didn't watch TV."
+      "explain_mm": "'didn't' + base (watch) ။ ➝ I didn't watch TV yesterday."
     },
     {
       "kind": "gap_fill",
@@ -290,7 +290,7 @@
       "answers": [
         "Did"
       ],
-      "explain_mm": "အတိတ်အမေး → Did ။  ➝ Did you eat lunch?"
+      "explain_mm": "အတိတ် အမေး → 'Did' ။ ➝ Did you eat lunch?"
     },
     {
       "kind": "gap_fill",
@@ -300,7 +300,7 @@
       "answers": [
         "Did"
       ],
-      "explain_mm": "အတိတ်အမေး → Did ။  ➝ Did they come last night?"
+      "explain_mm": "အတိတ် အမေး → 'Did' ။ ➝ Did they come last night?"
     },
     {
       "kind": "gap_fill",
@@ -310,7 +310,7 @@
       "answers": [
         "cook"
       ],
-      "explain_mm": "Did နောက်မှာ base (cook) ။  ➝ Did she cook dinner?"
+      "explain_mm": "'Did' နောက်မှာ base (cook) ။ ➝ Did she cook dinner?"
     },
     {
       "kind": "correct_error",
@@ -320,7 +320,7 @@
       "answers": [
         "She didn't go to work"
       ],
-      "explain_mm": "didn't နောက်မှာ base (go) — went မဟုတ် ။  ➝ She didn't go to work."
+      "explain_mm": "'didn't' နောက်မှာ base form (go) သုံးရတယ် — 'went' မဟုတ်ပါဘူးနော်။ ➝ She didn't go to work."
     },
     {
       "kind": "correct_error",
@@ -330,7 +330,7 @@
       "answers": [
         "Did you eat lunch yesterday"
       ],
-      "explain_mm": "အတိတ် → Did ။  ➝ Did you eat lunch yesterday?"
+      "explain_mm": "'yesterday' (အတိတ်) ဆိုတော့ 'Did' ပါ — 'Do' မဟုတ်ဘူး။ ➝ Did you eat lunch yesterday?"
     },
     {
       "kind": "correct_error",
@@ -340,7 +340,7 @@
       "answers": [
         "They didn't come"
       ],
-      "explain_mm": "didn't + base (come) ။  ➝ They didn't come."
+      "explain_mm": "'didn't' နောက်မှာ base form (come) ပါ — 'came' မဟုတ်ဘူး။ ➝ They didn't come."
     },
     {
       "kind": "correct_error",
@@ -350,7 +350,7 @@
       "answers": [
         "Did he watch the film"
       ],
-      "explain_mm": "Did နောက် base (watch) ။  ➝ Did he watch the film?"
+      "explain_mm": "'Did' နောက်မှာ base form (watch) ပါ — 'watched' မဟုတ်ဘူး။ ➝ Did he watch the film?"
     },
     {
       "kind": "word_order",
@@ -367,7 +367,7 @@
       "answers": [
         "I didn't watch TV yesterday"
       ],
-      "explain_mm": "didn't + base ။"
+      "explain_mm": "'didn't' + base (watch) ။ ➝ I didn't watch TV yesterday."
     },
     {
       "kind": "word_order",
@@ -384,7 +384,7 @@
       "answers": [
         "She didn't go to work"
       ],
-      "explain_mm": "didn't + base ။"
+      "explain_mm": "'didn't' + base (go) ။ ➝ She didn't go to work."
     },
     {
       "kind": "word_order",
@@ -400,7 +400,7 @@
       "answers": [
         "Did you eat lunch"
       ],
-      "explain_mm": "Did + base ။"
+      "explain_mm": "အတိတ် အမေး → 'Did' + base ။ ➝ Did you eat lunch?"
     },
     {
       "kind": "word_order",
@@ -417,7 +417,7 @@
       "answers": [
         "Did they come last night"
       ],
-      "explain_mm": "Did + base ။"
+      "explain_mm": "အတိတ် အမေး → 'Did' + base ။ ➝ Did they come last night?"
     },
     {
       "kind": "word_order",
@@ -433,7 +433,7 @@
       "answers": [
         "I didn't drink coffee"
       ],
-      "explain_mm": "didn't + base ။"
+      "explain_mm": "'didn't' + base (drink) ။ ➝ I didn't drink coffee."
     },
     {
       "kind": "word_order",
@@ -450,7 +450,7 @@
       "answers": [
         "Did he watch the film"
       ],
-      "explain_mm": "Did + base ။"
+      "explain_mm": "အတိတ် အမေး → 'Did' + base (watch) ။ ➝ Did he watch the film?"
     }
   ],
   "practice_recap_en": "Past negative: {v}didn't{/v} + base.  Question: {v}Did{/v} + subject + base.  (base verb — no -ed!)",

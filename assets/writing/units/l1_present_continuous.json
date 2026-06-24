@@ -224,7 +224,7 @@
       "answers": [
         "is cooking"
       ],
-      "explain_mm": "အခု ဖြစ်နေဆဲ → is cooking ။  ➝ She is cooking dinner now."
+      "explain_mm": "'now' (အခု ဖြစ်နေဆဲ) မို့ present continuous သုံးရတယ်။ 'She' နဲ့ဆို 'is' + verb‑ing → is cooking ။ ➝ She is cooking dinner now."
     },
     {
       "kind": "mcq",
@@ -239,7 +239,7 @@
       "answers": [
         "are playing"
       ],
-      "explain_mm": "they → are + playing ။  ➝ They are playing football."
+      "explain_mm": "'They' နဲ့ဆို 'are' + verb‑ing → are playing ။ ➝ They are playing football now."
     },
     {
       "kind": "mcq",
@@ -254,7 +254,7 @@
       "answers": [
         "am reading"
       ],
-      "explain_mm": "I → am + reading ။  ➝ I am reading a book."
+      "explain_mm": "'I' နဲ့ဆို 'am' + verb‑ing → am reading ။ ➝ I am reading a book right now."
     },
     {
       "kind": "mcq",
@@ -269,7 +269,7 @@
       "answers": [
         "is sleeping"
       ],
-      "explain_mm": "he → is + sleeping ။  ➝ He is sleeping now."
+      "explain_mm": "'He' နဲ့ဆို 'is' + verb‑ing → is sleeping ။ ➝ He is sleeping now."
     },
     {
       "kind": "mcq",
@@ -284,7 +284,7 @@
       "answers": [
         "are studying"
       ],
-      "explain_mm": "we → are + studying ။  ➝ We are studying English."
+      "explain_mm": "'We' နဲ့ဆို 'are' + verb‑ing → are studying ။ ➝ We are studying English now."
     },
     {
       "kind": "gap_fill",
@@ -294,7 +294,7 @@
       "answers": [
         "am reading"
       ],
-      "explain_mm": "I → am + reading ။  ➝ I am reading a book now."
+      "explain_mm": "'I' → 'am' + verb‑ing (reading) ။ ➝ I am reading a book now."
     },
     {
       "kind": "gap_fill",
@@ -304,7 +304,7 @@
       "answers": [
         "is cooking"
       ],
-      "explain_mm": "she → is + cooking ။  ➝ She is cooking dinner."
+      "explain_mm": "'She' → 'is' + verb‑ing (cooking) ။ ➝ She is cooking dinner."
     },
     {
       "kind": "gap_fill",
@@ -314,7 +314,7 @@
       "answers": [
         "are playing"
       ],
-      "explain_mm": "they → are + playing ။  ➝ They are playing football."
+      "explain_mm": "'They' → 'are' + verb‑ing (playing) ။ ➝ They are playing football."
     },
     {
       "kind": "gap_fill",
@@ -324,7 +324,7 @@
       "answers": [
         "are studying"
       ],
-      "explain_mm": "we → are + studying ။  ➝ We are studying English."
+      "explain_mm": "'We' → 'are' + verb‑ing (studying) ။ ➝ We are studying English."
     },
     {
       "kind": "gap_fill",
@@ -334,7 +334,7 @@
       "answers": [
         "is watching"
       ],
-      "explain_mm": "he → is + watching ။  ➝ He is watching TV now."
+      "explain_mm": "'He' → 'is' + verb‑ing (watching) ။ ➝ He is watching TV now."
     },
     {
       "kind": "correct_error",
@@ -344,7 +344,7 @@
       "answers": [
         "She is cooking dinner now"
       ],
-      "explain_mm": "be (is) ထည့်ရမယ် ။  ➝ She is cooking dinner now."
+      "explain_mm": "'be' verb (is) ထည့်ဖို့ မမေ့ပါနဲ့နော် — present continuous က 'be' + verb‑ing ပါ။ ➝ She is cooking dinner now."
     },
     {
       "kind": "correct_error",
@@ -354,7 +354,7 @@
       "answers": [
         "They are playing football"
       ],
-      "explain_mm": "they → are ။  ➝ They are playing football."
+      "explain_mm": "'They' (အများ) နဲ့ဆို 'are' ပါ — 'is' မဟုတ်ပါဘူး။ ➝ They are playing football."
     },
     {
       "kind": "correct_error",
@@ -364,7 +364,7 @@
       "answers": [
         "I am reading a book now"
       ],
-      "explain_mm": "be နောက်မှာ verb‑ing (reading) ။  ➝ I am reading a book now."
+      "explain_mm": "'be' (am) နောက်မှာ verb‑ing (reading) သုံးရတယ် — base form မဟုတ်ဘူး။ ➝ I am reading a book now."
     },
     {
       "kind": "correct_error",
@@ -374,7 +374,7 @@
       "answers": [
         "He is sleeping now"
       ],
-      "explain_mm": "he → is ။  ➝ He is sleeping now."
+      "explain_mm": "'He' (တစ်ယောက်တည်း) နဲ့ဆို 'is' ပါ — 'are' မဟုတ်ပါဘူး။ ➝ He is sleeping now."
     },
     {
       "kind": "word_order",
@@ -392,7 +392,7 @@
       "answers": [
         "I am reading a book now"
       ],
-      "explain_mm": "I → am + ‑ing ။"
+      "explain_mm": "'I' → 'am' + verb‑ing ။ ➝ I am reading a book now."
     },
     {
       "kind": "word_order",
@@ -408,7 +408,7 @@
       "answers": [
         "She is cooking dinner"
       ],
-      "explain_mm": "she → is + ‑ing ။"
+      "explain_mm": "'She' → 'is' + verb‑ing ။ ➝ She is cooking dinner."
     },
     {
       "kind": "word_order",
@@ -424,7 +424,7 @@
       "answers": [
         "They are playing football"
       ],
-      "explain_mm": "they → are + ‑ing ။"
+      "explain_mm": "'They' → 'are' + verb‑ing ။ ➝ They are playing football."
     },
     {
       "kind": "word_order",
@@ -440,7 +440,7 @@
       "answers": [
         "We are studying English"
       ],
-      "explain_mm": "we → are + ‑ing ။"
+      "explain_mm": "'We' → 'are' + verb‑ing ။ ➝ We are studying English."
     },
     {
       "kind": "word_order",
@@ -456,7 +456,7 @@
       "answers": [
         "He is sleeping now"
       ],
-      "explain_mm": "he → is + ‑ing ။"
+      "explain_mm": "'He' → 'is' + verb‑ing ။ ➝ He is sleeping now."
     },
     {
       "kind": "word_order",
@@ -473,7 +473,7 @@
       "answers": [
         "The baby is crying now"
       ],
-      "explain_mm": "it → is + ‑ing ။"
+      "explain_mm": "'The baby' (it) → 'is' + verb‑ing ။ ➝ The baby is crying now."
     }
   ],
   "practice_recap_en": "{v}am / is / are{/v} + verb-{v}ing{/v} — happening now.  I → am · he/she/it → is · you/we/they → are.",

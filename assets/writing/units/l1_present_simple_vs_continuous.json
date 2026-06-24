@@ -135,7 +135,7 @@
       "answers": [
         "goes"
       ],
-      "explain_mm": "every day → အလေ့အထ → present simple (goes) ။"
+      "explain_mm": "'Every day' က အလေ့အထ ပြတဲ့ စကားလုံးမို့ present simple သုံးရတယ်။ 'she' နဲ့ဆို goes (+ s) ။ ➝ Every day she goes to work."
     },
     {
       "kind": "mcq",
@@ -150,7 +150,7 @@
       "answers": [
         "is sleeping"
       ],
-      "explain_mm": "Look! / now → ဖြစ်နေဆဲ → is sleeping ။"
+      "explain_mm": "'Look!' နဲ့ 'now' က အခု ဖြစ်နေဆဲ ပြတဲ့အတွက် present continuous → is sleeping ။ ➝ Look! The baby is sleeping now."
     },
     {
       "kind": "mcq",
@@ -165,7 +165,7 @@
       "answers": [
         "boils"
       ],
-      "explain_mm": "အမှန်တရား → present simple (boils) ။"
+      "explain_mm": "ဒါက အမြဲမှန်တဲ့ အမှန်တရားမို့ present simple → boils ။ ➝ Water boils at 100°C."
     },
     {
       "kind": "mcq",
@@ -180,7 +180,7 @@
       "answers": [
         "drinks"
       ],
-      "explain_mm": "every morning → present simple (drinks) ။"
+      "explain_mm": "'every morning' (အလေ့အထ) မို့ present simple → drinks ။ ➝ She drinks tea every morning."
     },
     {
       "kind": "mcq",
@@ -195,7 +195,7 @@
       "answers": [
         "is raining"
       ],
-      "explain_mm": "Look! / now → present continuous (is raining) ။"
+      "explain_mm": "'Look!' / 'now' (အခု ဖြစ်နေဆဲ) မို့ present continuous → is raining ။ ➝ Look! It is raining now."
     },
     {
       "kind": "gap_fill",
@@ -205,7 +205,7 @@
       "answers": [
         "drinks"
       ],
-      "explain_mm": "every morning → present simple → drinks ။"
+      "explain_mm": "'every morning' (အလေ့အထ) → present simple → drinks ။ ➝ She drinks tea every morning."
     },
     {
       "kind": "gap_fill",
@@ -215,7 +215,7 @@
       "answers": [
         "is drinking"
       ],
-      "explain_mm": "Look! / now → present continuous → is drinking ။"
+      "explain_mm": "'Look!' / 'now' (ဖြစ်နေဆဲ) → present continuous → is drinking ။ ➝ Look! She is drinking coffee now."
     },
     {
       "kind": "gap_fill",
@@ -225,7 +225,7 @@
       "answers": [
         "work"
       ],
-      "explain_mm": "usually → present simple → work ။"
+      "explain_mm": "'usually' (အလေ့အထ) → present simple → work ။ ➝ I usually work at home."
     },
     {
       "kind": "gap_fill",
@@ -235,7 +235,7 @@
       "answers": [
         "am working"
       ],
-      "explain_mm": "today/now → present continuous → am working ။"
+      "explain_mm": "'Today' (အခု ဒီနေ့ ဖြစ်နေဆဲ) → present continuous → am working ။ ➝ Today I am working in the office."
     },
     {
       "kind": "gap_fill",
@@ -245,7 +245,7 @@
       "answers": [
         "rises"
       ],
-      "explain_mm": "အမှန်တရား → present simple → rises ။"
+      "explain_mm": "အမြဲမှန်တဲ့ အမှန်တရား → present simple → rises ။ ➝ The sun rises in the east."
     },
     {
       "kind": "correct_error",
@@ -255,7 +255,7 @@
       "answers": [
         "Every day she goes to work"
       ],
-      "explain_mm": "every day → present simple (goes) ။  ➝ Every day she goes to work."
+      "explain_mm": "'Every day' (အလေ့အထ) ဆိုတော့ present simple သုံးရတယ် → goes ။ ➝ Every day she goes to work."
     },
     {
       "kind": "correct_error",
@@ -265,7 +265,7 @@
       "answers": [
         "Look! The baby is sleeping now"
       ],
-      "explain_mm": "Look! / now → present continuous (is sleeping) ။  ➝ Look! The baby is sleeping now."
+      "explain_mm": "'Look!' / 'now' (ဖြစ်နေဆဲ) ဆိုတော့ present continuous → is sleeping ။ ➝ Look! The baby is sleeping now."
     },
     {
       "kind": "correct_error",
@@ -275,7 +275,7 @@
       "answers": [
         "Water boils at 100°C"
       ],
-      "explain_mm": "အမှန်တရား → present simple (boils) ။  ➝ Water boils at 100°C."
+      "explain_mm": "အမြဲမှန်တဲ့ အမှန်တရားဆိုတော့ present simple → boils ။ ➝ Water boils at 100°C."
     },
     {
       "kind": "correct_error",
@@ -285,7 +285,7 @@
       "answers": [
         "I work at home every day"
       ],
-      "explain_mm": "every day → present simple (work) ။  ➝ I work at home every day."
+      "explain_mm": "'every day' (အလေ့အထ) ဆိုတော့ present simple → work ။ ➝ I work at home every day."
     },
     {
       "kind": "word_order",
@@ -302,7 +302,7 @@
       "answers": [
         "She drinks tea every morning"
       ],
-      "explain_mm": "every morning → present simple ။"
+      "explain_mm": "'every morning' → present simple ။ ➝ She drinks tea every morning."
     },
     {
       "kind": "word_order",
@@ -319,7 +319,7 @@
       "answers": [
         "She is drinking coffee now"
       ],
-      "explain_mm": "now → present continuous ။"
+      "explain_mm": "'now' → present continuous ။ ➝ She is drinking coffee now."
     },
     {
       "kind": "word_order",
@@ -336,7 +336,7 @@
       "answers": [
         "I usually work at home"
       ],
-      "explain_mm": "usually → present simple ။"
+      "explain_mm": "'usually' → present simple ။ ➝ I usually work at home."
     },
     {
       "kind": "word_order",
@@ -355,7 +355,7 @@
       "answers": [
         "Today I am working in the office"
       ],
-      "explain_mm": "today → present continuous ။"
+      "explain_mm": "'Today' (ဖြစ်နေဆဲ) → present continuous ။ ➝ Today I am working in the office."
     },
     {
       "kind": "word_order",
@@ -373,7 +373,7 @@
       "answers": [
         "The sun rises in the east"
       ],
-      "explain_mm": "အမှန်တရား → present simple ။"
+      "explain_mm": "အမှန်တရား → present simple ။ ➝ The sun rises in the east."
     },
     {
       "kind": "word_order",
@@ -390,7 +390,7 @@
       "answers": [
         "They are studying English now"
       ],
-      "explain_mm": "now → present continuous ။"
+      "explain_mm": "'now' → present continuous ။ ➝ They are studying English now."
     }
   ],
   "practice_recap_en": "Habit / fact → {v}present simple{/v} (every day, usually).   Now → {v}present continuous{/v} (now, Look!).",

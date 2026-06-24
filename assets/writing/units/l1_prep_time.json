@@ -166,7 +166,7 @@
       "answers": [
         "in"
       ],
-      "explain_mm": "လ → in July ။"
+      "explain_mm": "လ (months) တွေနဲ့ဆို 'in' ကို သုံးပါတယ် → in July ။ ➝ My birthday is in July."
     },
     {
       "kind": "mcq",
@@ -206,7 +206,7 @@
       "answers": [
         "at"
       ],
-      "explain_mm": "နာရီ → at ။"
+      "explain_mm": "နာရီ အချိန်တွေနဲ့ဆို 'at' ကို သုံးပါတယ်။ ➝ The meeting is at 3 o'clock."
     },
     {
       "kind": "gap_fill",
@@ -216,7 +216,7 @@
       "answers": [
         "in"
       ],
-      "explain_mm": "နှစ် → in ။"
+      "explain_mm": "နှစ် (years) တွေနဲ့ဆို 'in' ကို သုံးပါတယ်။ ➝ I was born in 2000."
     },
     {
       "kind": "gap_fill",
@@ -226,7 +226,7 @@
       "answers": [
         "on"
       ],
-      "explain_mm": "နေ့ရက် → on ။"
+      "explain_mm": "နေ့ရက် (days) တွေနဲ့ဆို 'on' ကို သုံးပါတယ်။ ➝ We meet on Fridays."
     },
     {
       "kind": "gap_fill",
@@ -246,7 +246,7 @@
       "answers": [
         "on"
       ],
-      "explain_mm": "ရက်စွဲ → on ။"
+      "explain_mm": "ရက်စွဲ (dates) တွေနဲ့ဆို 'on' ကို သုံးပါတယ်။ ➝ The party is on 5 July."
     },
     {
       "kind": "correct_error",
@@ -256,7 +256,7 @@
       "answers": [
         "The class starts at 9 o'clock"
       ],
-      "explain_mm": "နာရီ → at ။"
+      "explain_mm": "နာရီ အချိန်နဲ့ဆို 'at' ပါ — 'in' မဟုတ်ပါဘူး။ ➝ The class starts at 9 o'clock."
     },
     {
       "kind": "correct_error",
@@ -266,7 +266,7 @@
       "answers": [
         "We meet on Monday"
       ],
-      "explain_mm": "နေ့ရက် → on ။"
+      "explain_mm": "နေ့ရက်နဲ့ဆို 'on' ပါ — 'in' မဟုတ်ပါဘူး။ ➝ We meet on Monday."
     },
     {
       "kind": "correct_error",
@@ -276,7 +276,7 @@
       "answers": [
         "My birthday is in July"
       ],
-      "explain_mm": "လ → in ။"
+      "explain_mm": "လနဲ့ဆို 'in' ပါ — 'on' မဟုတ်ပါဘူး။ ➝ My birthday is in July."
     },
     {
       "kind": "correct_error",
@@ -303,7 +303,7 @@
       "answers": [
         "The class starts at nine"
       ],
-      "explain_mm": "နာရီ → at ။"
+      "explain_mm": "နာရီ အချိန် → 'at' ။ ➝ The class starts at nine."
     },
     {
       "kind": "word_order",
@@ -319,7 +319,7 @@
       "answers": [
         "We meet on Monday"
       ],
-      "explain_mm": "နေ့ရက် → on ။"
+      "explain_mm": "နေ့ရက် → 'on' ။ ➝ We meet on Monday."
     },
     {
       "kind": "word_order",
@@ -336,7 +336,7 @@
       "answers": [
         "I was born in 2000"
       ],
-      "explain_mm": "နှစ် → in ။"
+      "explain_mm": "နှစ် → 'in' ။ ➝ I was born in 2000."
     },
     {
       "kind": "word_order",
@@ -353,7 +353,7 @@
       "answers": [
         "She reads in the evening"
       ],
-      "explain_mm": "နေ့အပိုင်း → in ။"
+      "explain_mm": "နေ့ရဲ့ အပိုင်း (evening) → 'in' ။ ➝ She reads in the evening."
     },
     {
       "kind": "word_order",
@@ -369,7 +369,7 @@
       "answers": [
         "I sleep at night"
       ],
-      "explain_mm": "‘night’ → at ။"
+      "explain_mm": "'night' ကတော့ 'at' နဲ့ တွဲတယ် → at night ။ ➝ I sleep at night."
     },
     {
       "kind": "word_order",
@@ -386,7 +386,7 @@
       "answers": [
         "My birthday is in July"
       ],
-      "explain_mm": "လ → in ။"
+      "explain_mm": "လ (months) → 'in' ။ ➝ My birthday is in July."
     }
   ],
   "practice_recap_en": "{v}at{/v} times & night (at 9, at night) · {v}on{/v} days & dates (on Monday, on 5 July) · {v}in{/v} months / years / parts of day (in July, in the morning).",

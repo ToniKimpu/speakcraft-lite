@@ -248,7 +248,7 @@
       "answers": [
         "Do"
       ],
-      "explain_mm": "you → Do ။  ➝ Do you like tea?"
+      "explain_mm": "Yes/No အမေးမှာ 'Do/Does' ကို ရှေ့ထားရတယ်။ 'you' (I / you / we / they) နဲ့ဆို 'Do' ပါ။ ➝ Do you like tea?"
     },
     {
       "kind": "mcq",
@@ -263,7 +263,7 @@
       "answers": [
         "Does"
       ],
-      "explain_mm": "she → Does ။  ➝ Does she work in Yangon?"
+      "explain_mm": "'she' (he / she / it) နဲ့ဆို 'Does' ပါ။ ➝ Does she work in Yangon?"
     },
     {
       "kind": "mcq",
@@ -278,7 +278,7 @@
       "answers": [
         "live"
       ],
-      "explain_mm": "Does နောက်မှာ base (live) ။  ➝ Does she live here?"
+      "explain_mm": "'Do/Does' နောက်မှာ verb ကို base form (live) သုံးရတယ် — ‑s မထည့်ရဘူးနော်။ ➝ Does she live here?"
     },
     {
       "kind": "mcq",
@@ -293,7 +293,7 @@
       "answers": [
         "Do"
       ],
-      "explain_mm": "they → Do ။  ➝ Do they speak English?"
+      "explain_mm": "'they' (အများ) နဲ့ဆို 'Do' ပါ။ ➝ Do they speak English?"
     },
     {
       "kind": "mcq",
@@ -308,7 +308,7 @@
       "answers": [
         "drink"
       ],
-      "explain_mm": "Does နောက်မှာ base (drink) ။  ➝ Does he drink coffee?"
+      "explain_mm": "'Does' နောက်မှာ base form (drink) ပါ။ ➝ Does he drink coffee?"
     },
     {
       "kind": "gap_fill",
@@ -318,7 +318,7 @@
       "answers": [
         "Do"
       ],
-      "explain_mm": "you → Do ။  ➝ Do you speak English?"
+      "explain_mm": "'you' နဲ့ဆို 'Do' ။ ➝ Do you speak English?"
     },
     {
       "kind": "gap_fill",
@@ -328,7 +328,7 @@
       "answers": [
         "Does"
       ],
-      "explain_mm": "she → Does ။  ➝ Does she live in Yangon?"
+      "explain_mm": "'she' (he / she / it) နဲ့ဆို 'Does' ။ ➝ Does she live in Yangon?"
     },
     {
       "kind": "gap_fill",
@@ -338,7 +338,7 @@
       "answers": [
         "Do"
       ],
-      "explain_mm": "they → Do ။  ➝ Do they work on weekends?"
+      "explain_mm": "'they' နဲ့ဆို 'Do' ။ ➝ Do they work on weekends?"
     },
     {
       "kind": "gap_fill",
@@ -348,7 +348,7 @@
       "answers": [
         "like"
       ],
-      "explain_mm": "Does နောက်မှာ base (like) ။  ➝ Does he like tea?"
+      "explain_mm": "'Does' နောက်မှာ base (like) ။ ➝ Does he like tea?"
     },
     {
       "kind": "gap_fill",
@@ -358,7 +358,7 @@
       "answers": [
         "eat"
       ],
-      "explain_mm": "Do နောက်မှာ base (eat) ။  ➝ Do you eat rice?"
+      "explain_mm": "'Do' နောက်မှာ base (eat) ။ ➝ Do you eat rice?"
     },
     {
       "kind": "correct_error",
@@ -368,7 +368,7 @@
       "answers": [
         "Do you like tea"
       ],
-      "explain_mm": "you → Do ။  ➝ Do you like tea?"
+      "explain_mm": "'you' နဲ့ဆို 'Do' ပါ — 'Does' မဟုတ်ပါဘူး။ ➝ Do you like tea?"
     },
     {
       "kind": "correct_error",
@@ -378,7 +378,7 @@
       "answers": [
         "Does she work here"
       ],
-      "explain_mm": "she → Does ။  ➝ Does she work here?"
+      "explain_mm": "'she' (he / she / it) နဲ့ဆို 'Does' ပါ။ ➝ Does she work here?"
     },
     {
       "kind": "correct_error",
@@ -388,7 +388,7 @@
       "answers": [
         "Does she live in Yangon"
       ],
-      "explain_mm": "Does နောက်မှာ base (live) ။  ➝ Does she live in Yangon?"
+      "explain_mm": "'Does' နောက်မှာ base form (live) ပါ — 'lives' မဟုတ်ပါဘူး။ ➝ Does she live in Yangon?"
     },
     {
       "kind": "correct_error",
@@ -398,7 +398,7 @@
       "answers": [
         "Does he speak English"
       ],
-      "explain_mm": "he → Does ။  ➝ Does he speak English?"
+      "explain_mm": "'he' နဲ့ဆို 'Does' ။ ➝ Does he speak English?"
     },
     {
       "kind": "word_order",
@@ -414,7 +414,7 @@
       "answers": [
         "Do you speak English"
       ],
-      "explain_mm": "you → Do + base ။"
+      "explain_mm": "'you' → 'Do' + base ။ ➝ Do you speak English?"
     },
     {
       "kind": "word_order",
@@ -431,7 +431,7 @@
       "answers": [
         "Does she live in Yangon"
       ],
-      "explain_mm": "she → Does + base ။"
+      "explain_mm": "'she' → 'Does' + base ။ ➝ Does she live in Yangon?"
     },
     {
       "kind": "word_order",
@@ -448,7 +448,7 @@
       "answers": [
         "Do they work on weekends"
       ],
-      "explain_mm": "they → Do + base ။"
+      "explain_mm": "'they' → 'Do' + base ။ ➝ Do they work on weekends?"
     },
     {
       "kind": "word_order",
@@ -464,7 +464,7 @@
       "answers": [
         "Does he like tea"
       ],
-      "explain_mm": "he → Does + base ။"
+      "explain_mm": "'he' → 'Does' + base ။ ➝ Does he like tea?"
     },
     {
       "kind": "word_order",
@@ -480,7 +480,7 @@
       "answers": [
         "Do you eat rice"
       ],
-      "explain_mm": "you → Do + base ။"
+      "explain_mm": "'you' → 'Do' + base ။ ➝ Do you eat rice?"
     },
     {
       "kind": "word_order",
@@ -496,7 +496,7 @@
       "answers": [
         "Does she watch TV"
       ],
-      "explain_mm": "she → Does + base ။"
+      "explain_mm": "'she' → 'Does' + base ။ ➝ Does she watch TV?"
     }
   ],
   "practice_recap_en": "Questions: {v}Do{/v} + I/you/we/they …?  ·  {v}Does{/v} + he/she/it …?  (base verb — no -s).",

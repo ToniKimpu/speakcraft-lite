@@ -9,6 +9,7 @@ import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/saved_term_table.dart';
 import '../../tables/user_recorded_sentence_audio_table.dart';
 import '../../tables/video_step_progress_table.dart';
+import '../../tables/writing_progress_table.dart';
 
 part 'app_database.g.dart';
 
@@ -18,6 +19,7 @@ part 'app_database.g.dart';
     UserRecordedSentenceAudioTable,
     SavedTermTable,
     VideoStepProgressTable,
+    WritingProgressTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -28,7 +30,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 10;
+  int get schemaVersion => 11;
 
   @override
   MigrationStrategy get migration {
@@ -66,6 +68,10 @@ class AppDatabase extends _$AppDatabase {
           // dead data.
           await customStatement(
               'DROP TABLE IF EXISTS daily_speaking_session_table');
+        }
+        if (from < 11) {
+          // Writing module — local per-unit completion tracking.
+          await m.createTable(writingProgressTable);
         }
       },
       beforeOpen: (details) async {

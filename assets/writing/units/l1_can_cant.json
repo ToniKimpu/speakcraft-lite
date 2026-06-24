@@ -301,7 +301,7 @@
       "answers": [
         "I can cook"
       ],
-      "explain_mm": "can + base ။"
+      "explain_mm": "'can' နောက်မှာ verb ကို base form (cook) သုံးပါတယ် — subject အားလုံး အတူတူပါ။ ➝ I can cook."
     },
     {
       "kind": "word_order",
@@ -348,7 +348,7 @@
       "answers": [
         "She can speak English"
       ],
-      "explain_mm": "can + base ။"
+      "explain_mm": "'can' နောက်မှာ base form (speak) — ‑s မထည့်ရဘူးနော်။ ➝ She can speak English."
     },
     {
       "kind": "word_order",
@@ -364,7 +364,7 @@
       "answers": [
         "We can play football"
       ],
-      "explain_mm": "can + base ။"
+      "explain_mm": "'can' နောက်မှာ base form (play) သုံးပါတယ်။ ➝ We can play football."
     },
     {
       "kind": "word_order",

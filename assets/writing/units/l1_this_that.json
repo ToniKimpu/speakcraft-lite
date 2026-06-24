@@ -142,7 +142,7 @@
       "answers": [
         "This"
       ],
-      "explain_mm": "အနီး + တစ်ခု → this ။  ➝ This book is mine."
+      "explain_mm": "'book' က တစ်ခုတည်း (singular) ဖြစ်ပြီး 'here' (အနီး) မို့ 'This' ကို သုံးပါတယ်။ အနီး + တစ်ခု = this ပါနော်။ ➝ This book is mine."
     },
     {
       "kind": "mcq",
@@ -157,7 +157,7 @@
       "answers": [
         "Those"
       ],
-      "explain_mm": "အဝေး + အများ → those ။  ➝ Those shoes are new."
+      "explain_mm": "'shoes' က အများ (plural) ဖြစ်ပြီး 'over there' (အဝေး) မို့ 'Those' ။ အဝေး + အများ = those ။ ➝ Those shoes are new."
     },
     {
       "kind": "mcq",
@@ -172,7 +172,7 @@
       "answers": [
         "These"
       ],
-      "explain_mm": "အနီး + အများ → these ။  ➝ These mangoes are sweet."
+      "explain_mm": "'mangoes' က အများ ဖြစ်ပြီး 'here' (အနီး) မို့ 'These' ။ အနီး + အများ = these ။ ➝ These mangoes are sweet."
     },
     {
       "kind": "mcq",
@@ -187,7 +187,7 @@
       "answers": [
         "That"
       ],
-      "explain_mm": "အဝေး + တစ်ခု → that ။  ➝ That house is big."
+      "explain_mm": "'house' က တစ်ခုတည်း ဖြစ်ပြီး 'over there' (အဝေး) မို့ 'That' ။ အဝေး + တစ်ခု = that ။ ➝ That house is big."
     },
     {
       "kind": "mcq",
@@ -202,7 +202,7 @@
       "answers": [
         "those"
       ],
-      "explain_mm": "အဝေး + အများ → those ။  ➝ those stars."
+      "explain_mm": "'stars' က အများ ဖြစ်ပြီး ကောင်းကင်က အဝေးမှာ မို့ 'those' ။ ➝ Look at those stars."
     },
     {
       "kind": "gap_fill",
@@ -212,7 +212,7 @@
       "answers": [
         "This"
       ],
-      "explain_mm": "အနီး + တစ်ခု → This ။  ➝ This is my phone."
+      "explain_mm": "အနီး + တစ်ခု မို့ 'This' ။ ➝ This is my phone."
     },
     {
       "kind": "gap_fill",
@@ -222,7 +222,7 @@
       "answers": [
         "That"
       ],
-      "explain_mm": "အဝေး + တစ်ခု → That ။  ➝ That is your house."
+      "explain_mm": "အဝေး + တစ်ခု မို့ 'That' ။ ➝ That is your house."
     },
     {
       "kind": "gap_fill",
@@ -232,7 +232,7 @@
       "answers": [
         "These"
       ],
-      "explain_mm": "အနီး + အများ → These ။  ➝ These books are new."
+      "explain_mm": "အနီး + အများ မို့ 'These' ။ ➝ These books are new."
     },
     {
       "kind": "gap_fill",
@@ -242,7 +242,7 @@
       "answers": [
         "Those"
       ],
-      "explain_mm": "အဝေး + အများ → Those ။  ➝ Those birds are beautiful."
+      "explain_mm": "အဝေး + အများ မို့ 'Those' ။ ➝ Those birds are beautiful."
     },
     {
       "kind": "gap_fill",
@@ -252,7 +252,7 @@
       "answers": [
         "This"
       ],
-      "explain_mm": "အနီး + တစ်ခု → This ။  ➝ This pen is mine."
+      "explain_mm": "အနီး + တစ်ခု မို့ 'This' ။ ➝ This pen is mine."
     },
     {
       "kind": "correct_error",
@@ -262,7 +262,7 @@
       "answers": [
         "These are my shoes"
       ],
-      "explain_mm": "အများ ဆိုရင် → these ။  ➝ These are my shoes."
+      "explain_mm": "'shoes' က အများဆိုတော့ 'These' သုံးရပါတယ် — 'This' က တစ်ခုတည်းအတွက်ပါ။ ➝ These are my shoes."
     },
     {
       "kind": "correct_error",
@@ -272,7 +272,7 @@
       "answers": [
         "This is my book"
       ],
-      "explain_mm": "တစ်ခု ဆိုရင် → this ။  ➝ This is my book."
+      "explain_mm": "'book' က တစ်ခုတည်းဆိုတော့ 'This' ပါ — 'These' က အများအတွက်။ ➝ This is my book."
     },
     {
       "kind": "correct_error",
@@ -282,7 +282,7 @@
       "answers": [
         "Those mangoes are sweet"
       ],
-      "explain_mm": "အဝေး + အများ → those ။  ➝ Those mangoes are sweet."
+      "explain_mm": "'mangoes' (အများ) + အဝေး မို့ 'Those' ။ ➝ Those mangoes are sweet."
     },
     {
       "kind": "correct_error",
@@ -292,7 +292,7 @@
       "answers": [
         "That bird is beautiful"
       ],
-      "explain_mm": "အဝေး + တစ်ခု → that ။  ➝ That bird is beautiful."
+      "explain_mm": "'bird' (တစ်ခု) + အဝေး မို့ 'That' ။ ➝ That bird is beautiful."
     },
     {
       "kind": "word_order",
@@ -308,7 +308,7 @@
       "answers": [
         "This is my phone"
       ],
-      "explain_mm": "အနီး + တစ်ခု → this ။"
+      "explain_mm": "အနီး + တစ်ခု → This ။ ➝ This is my phone."
     },
     {
       "kind": "word_order",
@@ -324,7 +324,7 @@
       "answers": [
         "That is your house"
       ],
-      "explain_mm": "အဝေး + တစ်ခု → that ။"
+      "explain_mm": "အဝေး + တစ်ခု → That ။ ➝ That is your house."
     },
     {
       "kind": "word_order",
@@ -340,7 +340,7 @@
       "answers": [
         "These mangoes are sweet"
       ],
-      "explain_mm": "အနီး + အများ → these ။"
+      "explain_mm": "အနီး + အများ → These ။ ➝ These mangoes are sweet."
     },
     {
       "kind": "word_order",
@@ -356,7 +356,7 @@
       "answers": [
         "Those birds are beautiful"
       ],
-      "explain_mm": "အဝေး + အများ → those ။"
+      "explain_mm": "အဝေး + အများ → Those ။ ➝ Those birds are beautiful."
     },
     {
       "kind": "word_order",
@@ -372,7 +372,7 @@
       "answers": [
         "This is my book"
       ],
-      "explain_mm": "အနီး + တစ်ခု → this ။"
+      "explain_mm": "အနီး + တစ်ခု → This ။ ➝ This is my book."
     },
     {
       "kind": "word_order",
@@ -388,7 +388,7 @@
       "answers": [
         "That car is new"
       ],
-      "explain_mm": "အဝေး + တစ်ခု → that ။"
+      "explain_mm": "အဝေး + တစ်ခု → That ။ ➝ That car is new."
     }
   ],
   "practice_recap_en": "{v}this / these{/v} = near  ·  {v}that / those{/v} = far.   {v}this / that{/v} = one  ·  {v}these / those{/v} = many.",

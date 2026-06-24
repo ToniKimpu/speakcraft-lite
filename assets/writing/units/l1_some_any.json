@@ -207,7 +207,7 @@
       "answers": [
         "some"
       ],
-      "explain_mm": "အတည်ဝါကျ → some ။"
+      "explain_mm": "ဒီဝါကျက အတည်ဝါကျ (positive) ဖြစ်တဲ့အတွက် 'some' ကို သုံးပါတယ်။ ➝ I bought some apples."
     },
     {
       "kind": "gap_fill",
@@ -227,7 +227,7 @@
       "answers": [
         "any"
       ],
-      "explain_mm": "အမေးဝါကျ → any ။"
+      "explain_mm": "ဒါက အမေးဝါကျ (question) ဖြစ်တဲ့အတွက် 'any' ကို သုံးပါတယ်။ ➝ Do you have any questions?"
     },
     {
       "kind": "gap_fill",
@@ -237,7 +237,7 @@
       "answers": [
         "some"
       ],
-      "explain_mm": "အတည်ဝါကျ → some ။"
+      "explain_mm": "အတည်ဝါကျ (positive) ဖြစ်တဲ့အတွက် 'some' ပါ။ ➝ There is some milk."
     },
     {
       "kind": "gap_fill",
@@ -267,7 +267,7 @@
       "answers": [
         "Do you have any water"
       ],
-      "explain_mm": "အမေးဝါကျ → any ။"
+      "explain_mm": "အမေးဝါကျ ဆိုတော့ 'any' ကို သုံးရတယ် — 'some' မဟုတ်ပါဘူးနော်။ ➝ Do you have any water?"
     },
     {
       "kind": "correct_error",
@@ -287,7 +287,7 @@
       "answers": [
         "I bought some apples"
       ],
-      "explain_mm": "အတည်ဝါကျ → some ။"
+      "explain_mm": "အတည်ဝါကျ ဆိုတော့ 'some' ပါ — 'any' မဟုတ်ပါဘူး။ ➝ I bought some apples."
     },
     {
       "kind": "word_order",
@@ -303,7 +303,7 @@
       "answers": [
         "There is some milk"
       ],
-      "explain_mm": "အတည်ဝါကျ → some ။"
+      "explain_mm": "အတည်ဝါကျ (positive) ဖြစ်လို့ 'some' ။ ➝ There is some milk."
     },
     {
       "kind": "word_order",
@@ -319,7 +319,7 @@
       "answers": [
         "There isn't any sugar"
       ],
-      "explain_mm": "အငြင်း → any ။"
+      "explain_mm": "အငြင်းဝါကျ (negative) ဖြစ်လို့ 'any' ။ ➝ There isn't any sugar."
     },
     {
       "kind": "word_order",
@@ -336,7 +336,7 @@
       "answers": [
         "Do you have any questions"
       ],
-      "explain_mm": "အမေး → any ။"
+      "explain_mm": "အမေးဝါကျ (question) ဖြစ်လို့ 'any' ။ ➝ Do you have any questions?"
     },
     {
       "kind": "word_order",
@@ -352,7 +352,7 @@
       "answers": [
         "I bought some apples"
       ],
-      "explain_mm": "အတည်ဝါကျ → some ။"
+      "explain_mm": "အတည်ဝါကျ (positive) ဖြစ်လို့ 'some' ။ ➝ I bought some apples."
     },
     {
       "kind": "word_order",
@@ -368,7 +368,7 @@
       "answers": [
         "I have some money"
       ],
-      "explain_mm": "အတည်ဝါကျ → some ။"
+      "explain_mm": "အတည်ဝါကျ (positive) ဖြစ်လို့ 'some' ။ ➝ I have some money."
     },
     {
       "kind": "word_order",

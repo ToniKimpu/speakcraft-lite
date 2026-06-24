@@ -302,7 +302,7 @@
       "answers": [
         "She is an engineer"
       ],
-      "explain_mm": "vowel အသံ → an ။"
+      "explain_mm": "'engineer' က vowel အသံ (e) နဲ့ စလို့ ရှေ့မှာ 'an' သုံးပါတယ်။ ➝ She is an engineer."
     },
     {
       "kind": "word_order",
@@ -334,7 +334,7 @@
       "answers": [
         "It is an apple"
       ],
-      "explain_mm": "vowel အသံ → an ။"
+      "explain_mm": "'apple' က vowel အသံ (a) နဲ့ စလို့ 'an' ပါ။ ➝ It is an apple."
     },
     {
       "kind": "word_order",

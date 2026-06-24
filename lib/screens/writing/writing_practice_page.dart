@@ -4,6 +4,7 @@ import 'package:speakcraft/shared_widgets/glass.dart';
 import '../../config/pmp_colors.dart';
 import '../../model/writing/writing_unit.dart';
 import '../../model/writing/writing_lexicon.dart';
+import '../../repositories/writing/writing_progress_repository.dart';
 import '../../repositories/writing/writing_reviewer.dart';
 import 'widgets/writing_practice_inputs.dart';
 import 'widgets/writing_practice_widgets.dart';
@@ -22,12 +23,22 @@ import 'widgets/writing_practice_widgets.dart';
 /// [BottomBar], [SummarySheet] and the per-kind inputs); this file owns the
 /// exercise flow — indexing, grading, line management, navigation.
 class WritingPracticePage extends StatefulWidget {
-  const WritingPracticePage({super.key, required this.unit, this.toolkit});
+  const WritingPracticePage({
+    super.key,
+    required this.unit,
+    this.toolkit,
+    this.onCompleted,
+  });
   final WritingUnit unit;
 
   /// The resolved toolkit, shown as a reminder on the handwrite-and-scan tasks
   /// so the learner can see which verbs / time words to use while writing.
   final ResolvedToolkit? toolkit;
+
+  /// Fired once when the learner reaches the end-of-ladder summary, in addition
+  /// to the unit's own local progress marker. Lets a host (e.g. the listening
+  /// "Key Takeaways" step) treat *finishing the exercise* as its completion.
+  final VoidCallback? onCompleted;
 
   @override
   State<WritingPracticePage> createState() => _WritingPracticePageState();
@@ -37,6 +48,9 @@ class _WritingPracticePageState extends State<WritingPracticePage> {
   /// Grades the open `free_write` answers via the `writing-review` edge function.
   /// Swap to [MockWritingReviewer] to work offline without the backend.
   final WritingReviewer _reviewer = const RemoteWritingReviewer();
+
+  /// Marks the unit done (locally) when the ladder is finished.
+  final WritingProgressRepository _progress = WritingProgressRepository();
 
   int _index = 0;
   late final List<ExState> _states = widget.unit.exercises.map((e) {
@@ -145,6 +159,12 @@ class _WritingPracticePageState extends State<WritingPracticePage> {
   }
 
   void _showSummary() {
+    // Reaching the end marks the unit done (any score). Fire-and-forget; the
+    // path screen's stream picks it up.
+    _progress.markDone(widget.unit.id);
+    // Notify any host that owns its own completion (e.g. the Key Takeaways step).
+    widget.onCompleted?.call();
+
     final auto = _exercises
         .where((e) => e.grade == WritingGrade.auto)
         .toList(growable: false);

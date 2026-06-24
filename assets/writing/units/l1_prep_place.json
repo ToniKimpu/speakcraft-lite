@@ -151,7 +151,7 @@
       "answers": [
         "in"
       ],
-      "explain_mm": "အထဲ → in my bag ။"
+      "explain_mm": "'in' က 'အထဲမှာ' (ပိတ်ထားတဲ့ နေရာ) ကို ပြတဲ့အတွက် 'in my bag' လို့ သုံးပါတယ်။ ➝ My phone is in my bag."
     },
     {
       "kind": "mcq",
@@ -166,7 +166,7 @@
       "answers": [
         "at"
       ],
-      "explain_mm": "နေရာ → at home ။"
+      "explain_mm": "'at' က နေရာ/အမှတ်တစ်ခုကို ပြတဲ့အတွက် 'at home' လို့ သုံးပါတယ်။ ➝ She is at home."
     },
     {
       "kind": "mcq",
@@ -216,7 +216,7 @@
       "answers": [
         "in"
       ],
-      "explain_mm": "အထဲ → in ။"
+      "explain_mm": "မီးဖိုချောင် အထဲ (ပိတ်ထားတဲ့ နေရာ) မို့ 'in' ပါ။ ➝ She is in the kitchen."
     },
     {
       "kind": "gap_fill",
@@ -226,7 +226,7 @@
       "answers": [
         "at"
       ],
-      "explain_mm": "နေရာ → at ။"
+      "explain_mm": "နေရာတစ်ခု (school) မှာ ဆိုတဲ့အတွက် 'at' ပါ။ ➝ We are at school."
     },
     {
       "kind": "gap_fill",
@@ -236,7 +236,7 @@
       "answers": [
         "in"
       ],
-      "explain_mm": "အထဲ → in ။"
+      "explain_mm": "သေတ္တာ အထဲ မို့ 'in' ပါ။ ➝ The keys are in the box."
     },
     {
       "kind": "gap_fill",
@@ -266,7 +266,7 @@
       "answers": [
         "She is in the kitchen"
       ],
-      "explain_mm": "အထဲ → in ။"
+      "explain_mm": "အထဲ ဆိုတဲ့အတွက် 'in' ပါ — 'on' မဟုတ်ပါဘူး။ ➝ She is in the kitchen."
     },
     {
       "kind": "correct_error",
@@ -286,7 +286,7 @@
       "answers": [
         "My phone is in my bag"
       ],
-      "explain_mm": "အထဲ → in ။"
+      "explain_mm": "အိတ် အထဲ မို့ 'in' ပါ — 'on' မဟုတ်ပါဘူး။ ➝ My phone is in my bag."
     },
     {
       "kind": "word_order",
@@ -321,7 +321,7 @@
       "answers": [
         "She is in the kitchen"
       ],
-      "explain_mm": "အထဲ → in ။"
+      "explain_mm": "အထဲ (ပိတ်ထားတဲ့ နေရာ) → 'in' ။ ➝ She is in the kitchen."
     },
     {
       "kind": "word_order",
@@ -337,7 +337,7 @@
       "answers": [
         "We are at school"
       ],
-      "explain_mm": "နေရာ → at ။"
+      "explain_mm": "နေရာ/အမှတ်တစ်ခု → 'at' ။ ➝ We are at school."
     },
     {
       "kind": "word_order",
@@ -373,7 +373,7 @@
       "answers": [
         "The keys are in the box"
       ],
-      "explain_mm": "အထဲ → in ။"
+      "explain_mm": "အထဲ → 'in' ။ ➝ The keys are in the box."
     },
     {
       "kind": "word_order",
@@ -389,7 +389,7 @@
       "answers": [
         "I am at home"
       ],
-      "explain_mm": "နေရာ → at home ။"
+      "explain_mm": "နေရာ → 'at home' ။ ➝ I am at home."
     }
   ],
   "practice_recap_en": "{v}in{/v} = inside (in the box, in Yangon) · {v}on{/v} = a surface (on the table) · {v}at{/v} = a point (at home, at school).",

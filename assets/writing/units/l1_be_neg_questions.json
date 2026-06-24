@@ -160,7 +160,7 @@
       "answers": [
         "isn't"
       ],
-      "explain_mm": "He (တစ်ယောက်) ဆိုရင် → isn't ။  ➝ He isn't at home."
+      "explain_mm": "'He' (တစ်ယောက်တည်း) ရဲ့ အငြင်းက 'isn't' (is + not) ပါ။ 'be' verb ကို အငြင်းလုပ်ရင် နောက်မှာ 'not' ထည့်ပေးရတာပါနော်။ ➝ He isn't at home."
     },
     {
       "kind": "mcq",
@@ -175,7 +175,7 @@
       "answers": [
         "aren't"
       ],
-      "explain_mm": "They (အများ) ဆိုရင် → aren't ။  ➝ They aren't ready."
+      "explain_mm": "'They' (အများကိန်း) ရဲ့ အငြင်းက 'aren't' (are + not) ပါ။ ➝ They aren't ready."
     },
     {
       "kind": "mcq",
@@ -190,7 +190,7 @@
       "answers": [
         "Are"
       ],
-      "explain_mm": "you ဆိုရင် အမေးမှာ → Are ။  ➝ Are you a student?"
+      "explain_mm": "အမေးဝါကျမှာ 'be' verb ကို Subject ရဲ့ ရှေ့ ထားပေးရပါတယ်။ 'you' နဲ့ဆို 'Are' ပါ။ ➝ Are you a student?"
     },
     {
       "kind": "mcq",
@@ -205,7 +205,7 @@
       "answers": [
         "Is"
       ],
-      "explain_mm": "she ဆိုရင် အမေးမှာ → Is ။  ➝ Is she at school?"
+      "explain_mm": "အမေးဝါကျမှာ be ကို ရှေ့ထားပါ။ 'she' (တစ်ယောက်တည်း) နဲ့ဆို 'Is' ပါ။ ➝ Is she at school?"
     },
     {
       "kind": "mcq",
@@ -220,7 +220,7 @@
       "answers": [
         "'m not"
       ],
-      "explain_mm": "I ဆိုရင် အငြင်း → 'm not (am not) ။  ➝ I'm not hungry."
+      "explain_mm": "'I' ရဲ့ အငြင်းက ''m not' (am + not) ပါ။ 'I isn't' / 'I aren't' မဖြစ်ပါဘူးနော်။ ➝ I'm not hungry."
     },
     {
       "kind": "gap_fill",
@@ -231,7 +231,7 @@
         "isn't",
         "is not"
       ],
-      "explain_mm": "she → isn't ။  ➝ She isn't a nurse."
+      "explain_mm": "'She' (တစ်ယောက်တည်း) ရဲ့ အငြင်း → 'isn't' ပါ။ ➝ She isn't a nurse."
     },
     {
       "kind": "gap_fill",
@@ -242,7 +242,7 @@
         "aren't",
         "are not"
       ],
-      "explain_mm": "we → aren't ။  ➝ We aren't at home."
+      "explain_mm": "'We' (အများကိန်း) ရဲ့ အငြင်း → 'aren't' ပါ။ ➝ We aren't at home."
     },
     {
       "kind": "gap_fill",
@@ -252,7 +252,7 @@
       "answers": [
         "Are"
       ],
-      "explain_mm": "they ဆိုရင် အမေး → Are ။  ➝ Are they your friends?"
+      "explain_mm": "အမေးမှာ be ကို ရှေ့ထားပါ — 'they' နဲ့ဆို 'Are' ။ ➝ Are they your friends?"
     },
     {
       "kind": "gap_fill",
@@ -262,7 +262,7 @@
       "answers": [
         "Is"
       ],
-      "explain_mm": "he ဆိုရင် အမေး → Is ။  ➝ Is he a doctor?"
+      "explain_mm": "အမေးမှာ be ကို ရှေ့ထားပါ — 'he' နဲ့ဆို 'Is' ။ ➝ Is he a doctor?"
     },
     {
       "kind": "gap_fill",
@@ -273,7 +273,7 @@
         "'m not",
         "am not"
       ],
-      "explain_mm": "I → 'm not (am not) ။  ➝ I'm not tired."
+      "explain_mm": "'I' ရဲ့ အငြင်း → ''m not' (am not) ။ ➝ I'm not tired."
     },
     {
       "kind": "correct_error",
@@ -284,7 +284,7 @@
         "She isn't happy",
         "She is not happy"
       ],
-      "explain_mm": "အငြင်းမှာ be + not လိုတယ် — She → isn't ။  ➝ She isn't happy."
+      "explain_mm": "အငြင်းလုပ်ဖို့ 'be' verb လိုပါတယ် — 'not' တစ်ခုတည်းနဲ့ မရဘူးနော်။ 'She' ဆိုတော့ 'isn't' ။ ➝ She isn't happy."
     },
     {
       "kind": "correct_error",
@@ -294,7 +294,7 @@
       "answers": [
         "They aren't ready"
       ],
-      "explain_mm": "They (အများ) → aren't ။  ➝ They aren't ready."
+      "explain_mm": "'They' (အများကိန်း) ဆိုတော့ 'aren't' ပါ — 'isn't' က တစ်ယောက်တည်းအတွက်ပါ။ ➝ They aren't ready."
     },
     {
       "kind": "correct_error",
@@ -304,7 +304,7 @@
       "answers": [
         "Are you a teacher"
       ],
-      "explain_mm": "you ဆိုရင် → Are ။  ➝ Are you a teacher?"
+      "explain_mm": "'you' နဲ့ဆို 'Are' ပါ — 'Is' မဟုတ်ပါဘူး။ ➝ Are you a teacher?"
     },
     {
       "kind": "correct_error",
@@ -314,7 +314,7 @@
       "answers": [
         "Is she a nurse"
       ],
-      "explain_mm": "she ဆိုရင် → Is ။  ➝ Is she a nurse?"
+      "explain_mm": "'she' (တစ်ယောက်တည်း) နဲ့ဆို 'Is' ပါ — 'Are' မဟုတ်ပါဘူး။ ➝ Is she a nurse?"
     },
     {
       "kind": "word_order",
@@ -330,7 +330,7 @@
       "answers": [
         "He isn't at home"
       ],
-      "explain_mm": "He → isn't ။"
+      "explain_mm": "'He' ရဲ့ အငြင်း → 'isn't' ။ ➝ He isn't at home."
     },
     {
       "kind": "word_order",
@@ -346,7 +346,7 @@
       "answers": [
         "I am not tired"
       ],
-      "explain_mm": "I → am not ။"
+      "explain_mm": "'I' ရဲ့ အငြင်း → 'am not' ။ ➝ I am not tired."
     },
     {
       "kind": "word_order",
@@ -361,7 +361,7 @@
       "answers": [
         "Are you ready"
       ],
-      "explain_mm": "အမေးမှာ be ကို ရှေ့ထားပါ ။"
+      "explain_mm": "အမေးမှာ be (Are) ကို Subject ရှေ့ ထားပါ။ ➝ Are you ready?"
     },
     {
       "kind": "word_order",
@@ -377,7 +377,7 @@
       "answers": [
         "Is she a teacher"
       ],
-      "explain_mm": "she ဆိုရင် အမေး → Is ။"
+      "explain_mm": "အမေးမှာ be (Is) ကို ရှေ့ထား — 'she' နဲ့ဆို 'Is' ။ ➝ Is she a teacher?"
     },
     {
       "kind": "word_order",
@@ -392,7 +392,7 @@
       "answers": [
         "We aren't ready"
       ],
-      "explain_mm": "We → aren't ။"
+      "explain_mm": "'We' ရဲ့ အငြင်း → 'aren't' ။ ➝ We aren't ready."
     },
     {
       "kind": "word_order",
@@ -408,7 +408,7 @@
       "answers": [
         "Are they at school"
       ],
-      "explain_mm": "they ဆိုရင် အမေး → Are ။"
+      "explain_mm": "အမေးမှာ be (Are) ကို ရှေ့ထား — 'they' နဲ့ဆို 'Are' ။ ➝ Are they at school?"
     }
   ],
   "practice_recap_en": "Negatives add not: {v}I'm not{/v} · {v}isn't{/v} · {v}aren't{/v}.  Questions put be first: {v}Am / Is / Are{/v} + subject …?",

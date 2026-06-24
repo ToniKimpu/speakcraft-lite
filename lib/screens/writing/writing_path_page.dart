@@ -1,10 +1,14 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/premium_gate.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
 import '../../config/pmp_routes.dart';
 import '../../model/writing/writing_index.dart';
+import '../../repositories/writing/writing_progress_repository.dart';
 
 /// Writing module — **Phase-1 path screen** (the module's landing page).
 ///
@@ -89,12 +93,16 @@ class _PathBody extends StatefulWidget {
 }
 
 class _PathBodyState extends State<_PathBody> {
-  /// Sections per level, and per-level open/total counts — grouped once from the
+  /// Sections per level, and per-level unit totals — grouped once from the
   /// manifest, preserving its order (curriculum sequence).
   final _byLevel = <int, List<_Section>>{};
-  final _open = <int, int>{};
   final _total = <int, int>{};
   int _level = 1;
+
+  /// Live set of completed unit ids (local Drift), for the green-check states.
+  final _progress = WritingProgressRepository();
+  StreamSubscription<Set<String>>? _doneSub;
+  Set<String> _done = const {};
 
   @override
   void initState() {
@@ -118,16 +126,30 @@ class _PathBodyState extends State<_PathBody> {
           .map((id) =>
               _Section(id: id, name: byId[id]!.first.section, units: byId[id]!))
           .toList(growable: false);
-      final all = byId.values.expand((e) => e).toList(growable: false);
-      _total[lvl] = all.length;
-      _open[lvl] = all.where((u) => u.isOpen).length;
+      _total[lvl] = byId.values.expand((e) => e).length;
     }
+    _doneSub = _progress.watchCompleted().listen((d) {
+      if (mounted) setState(() => _done = d);
+    });
+  }
+
+  @override
+  void dispose() {
+    _doneSub?.cancel();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     final sections = _byLevel[_level];
     final meta = _levelMetas[_level - 1];
+    final premium = hasPremiumAccess();
+    // Level 1 is free; Levels 2 & 3 are premium.
+    final levelLocked = !isUnlocked(isFree: _level == 1);
+    final doneCount = (sections ?? const <_Section>[])
+        .expand((s) => s.units)
+        .where((u) => _done.contains(u.id))
+        .length;
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -137,6 +159,7 @@ class _PathBodyState extends State<_PathBody> {
             child: _LevelSelector(
               selected: _level,
               available: _byLevel.keys.toSet(),
+              premium: premium,
               onSelect: (l) => setState(() => _level = l),
             ),
           ),
@@ -147,8 +170,10 @@ class _PathBodyState extends State<_PathBody> {
                     key: ValueKey(_level),
                     meta: meta,
                     sections: sections,
-                    open: _open[_level] ?? 0,
+                    done: doneCount,
                     total: _total[_level] ?? 0,
+                    completedIds: _done,
+                    levelLocked: levelLocked,
                   )
                 : _LevelTeaserPanel(meta: meta),
           ),
@@ -166,14 +191,21 @@ class _LevelTabsView extends StatelessWidget {
     super.key,
     required this.meta,
     required this.sections,
-    required this.open,
+    required this.done,
     required this.total,
+    required this.completedIds,
+    required this.levelLocked,
   });
 
   final _LevelMeta meta;
   final List<_Section> sections;
-  final int open;
+  final int done;
   final int total;
+
+  /// Completed unit ids (for the green check) and whether this whole level is
+  /// premium-locked for the current user (cards show the lock + paywall tap).
+  final Set<String> completedIds;
+  final bool levelLocked;
 
   @override
   Widget build(BuildContext context) {
@@ -188,8 +220,9 @@ class _LevelTabsView extends StatelessWidget {
             child: _LevelHeader(
               name: meta.name,
               subtitle: meta.subtitle,
-              done: open,
+              done: done,
               total: total,
+              locked: levelLocked,
             ),
           ),
           const SizedBox(height: 14),
@@ -215,7 +248,12 @@ class _LevelTabsView extends StatelessWidget {
                   ListView(
                     padding: const EdgeInsets.fromLTRB(20, 14, 20, 28),
                     children: [
-                      for (final u in s.units) _UnitCard(unit: u),
+                      for (final u in s.units)
+                        _UnitCard(
+                          unit: u,
+                          done: completedIds.contains(u.id),
+                          locked: levelLocked,
+                        ),
                     ],
                   ),
               ],
@@ -233,6 +271,7 @@ class _LevelSelector extends StatelessWidget {
   const _LevelSelector({
     required this.selected,
     required this.available,
+    required this.premium,
     required this.onSelect,
   });
   final int selected;
@@ -240,6 +279,11 @@ class _LevelSelector extends StatelessWidget {
   /// The levels that actually have authored units in the manifest. A level with
   /// no content renders locked (a "coming soon" teaser on tap).
   final Set<int> available;
+
+  /// Whether the current user has premium. Levels 2 & 3 are premium, so their
+  /// pills carry a lock for free users (the level still opens, but its units
+  /// are locked — a soft paywall).
+  final bool premium;
   final ValueChanged<int> onSelect;
 
   @override
@@ -251,7 +295,8 @@ class _LevelSelector extends StatelessWidget {
             child: _LevelPill(
               label: 'Level ${m.level}',
               selected: m.level == selected,
-              locked: !available.contains(m.level),
+              locked: !available.contains(m.level) ||
+                  (m.level >= 2 && !premium),
               onTap: () => onSelect(m.level),
             ),
           ),
@@ -368,12 +413,14 @@ class _LevelHeader extends StatelessWidget {
     required this.subtitle,
     required this.done,
     required this.total,
+    required this.locked,
   });
 
   final String name;
   final String subtitle;
   final int done;
   final int total;
+  final bool locked;
 
   @override
   Widget build(BuildContext context) {
@@ -389,62 +436,105 @@ class _LevelHeader extends StatelessWidget {
             style:
                 PmpTextStyles.body2Regular.copyWith(color: cs.onSurfaceVariant)),
         const SizedBox(height: 10),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(6),
-          child: LinearProgressIndicator(
-            value: total == 0 ? 0 : done / total,
-            minHeight: 6,
-            backgroundColor: cs.surfaceContainerHighest,
-            valueColor: const AlwaysStoppedAnimation<Color>(
-                PmpColors.brandOrange),
+        // For a premium-locked level, show the unlock prompt instead of a
+        // 0-progress bar (the learner can't make progress until they upgrade).
+        if (locked)
+          Row(
+            children: [
+              const Icon(Icons.lock_rounded,
+                  size: 14, color: PmpColors.premiumGoldDeep),
+              const SizedBox(width: 6),
+              Text('Premium — unlock to start',
+                  style: PmpTextStyles.sub.copyWith(
+                      color: PmpColors.premiumGoldDeep,
+                      fontWeight: FontWeight.w700)),
+            ],
+          )
+        else ...[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(6),
+            child: LinearProgressIndicator(
+              value: total == 0 ? 0 : done / total,
+              minHeight: 6,
+              backgroundColor: cs.surfaceContainerHighest,
+              valueColor: const AlwaysStoppedAnimation<Color>(
+                  PmpColors.brandOrange),
+            ),
           ),
-        ),
-        const SizedBox(height: 6),
-        Text('$done of $total lessons ready',
-            style: PmpTextStyles.sub.copyWith(color: cs.onSurfaceVariant)),
+          const SizedBox(height: 6),
+          Text('$done of $total done',
+              style: PmpTextStyles.sub.copyWith(color: cs.onSurfaceVariant)),
+        ],
       ],
     );
   }
 }
 
 class _UnitCard extends StatelessWidget {
-  const _UnitCard({required this.unit});
+  const _UnitCard({
+    required this.unit,
+    required this.done,
+    required this.locked,
+  });
   final WritingUnitSummary unit;
+
+  /// Completed (green check, still redoable).
+  final bool done;
+
+  /// Premium-locked (this level is paid and the user is free) → paywall on tap.
+  final bool locked;
 
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
-    final open = unit.isOpen;
     final mm = PmpColors.myanmarGloss(Theme.of(context).brightness);
+    final published = unit.isOpen;
+
+    // State → leading icon + accent + whether the row reads as muted.
+    final IconData leadingIcon;
+    final Color accent;
+    final bool muted;
+    if (!published) {
+      leadingIcon = Icons.lock_outline_rounded;
+      accent = cs.onSurfaceVariant;
+      muted = true;
+    } else if (locked) {
+      leadingIcon = Icons.lock_rounded;
+      accent = PmpColors.premiumGoldDeep;
+      muted = true;
+    } else if (done) {
+      leadingIcon = Icons.check_rounded;
+      accent = PmpColors.success500;
+      muted = false;
+    } else {
+      leadingIcon = Icons.play_arrow_rounded;
+      accent = cs.primary;
+      muted = false;
+    }
 
     final card = Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
       decoration: BoxDecoration(
-        color: open
-            ? cs.surfaceContainerHighest
-            : cs.surfaceContainerHighest.withValues(alpha: 0.4),
+        color: muted
+            ? cs.surfaceContainerHighest.withValues(alpha: 0.5)
+            : cs.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(14),
         border: Border.all(
-            color: open ? cs.outlineVariant : cs.outlineVariant.withValues(alpha: 0.5)),
+            color: muted
+                ? cs.outlineVariant.withValues(alpha: 0.5)
+                : cs.outlineVariant),
       ),
       child: Row(
         children: [
-          // Leading status dot / check.
           Container(
             width: 30,
             height: 30,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: open
-                  ? cs.primary.withValues(alpha: 0.12)
-                  : cs.outlineVariant.withValues(alpha: 0.4),
+              color: accent.withValues(alpha: 0.14),
               shape: BoxShape.circle,
             ),
-            child: Icon(
-              open ? Icons.play_arrow_rounded : Icons.lock_outline_rounded,
-              size: 18,
-              color: open ? cs.primary : cs.onSurfaceVariant,
-            ),
+            child: Icon(leadingIcon, size: 18, color: accent),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -453,10 +543,10 @@ class _UnitCard extends StatelessWidget {
               children: [
                 Text(unit.title,
                     style: PmpTextStyles.body1Semi.copyWith(
-                        color: open
-                            ? cs.onSurface
-                            : cs.onSurface.withValues(alpha: 0.55))),
-                if (open && unit.subtitleMm.isNotEmpty)
+                        color: muted
+                            ? cs.onSurface.withValues(alpha: 0.55)
+                            : cs.onSurface)),
+                if (published && unit.subtitleMm.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.only(top: 2),
                     child: Text(unit.subtitleMm,
@@ -466,9 +556,8 @@ class _UnitCard extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          if (open)
-            Icon(Icons.chevron_right_rounded, color: cs.onSurfaceVariant)
-          else
+          // Trailing affordance by state.
+          if (!published)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
               decoration: BoxDecoration(
@@ -476,29 +565,39 @@ class _UnitCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text('soon',
-                  style: PmpTextStyles.sub.copyWith(color: cs.onSurfaceVariant)),
-            ),
+                  style:
+                      PmpTextStyles.sub.copyWith(color: cs.onSurfaceVariant)),
+            )
+          else if (locked)
+            const PremiumLockBadge()
+          else
+            Icon(Icons.chevron_right_rounded, color: cs.onSurfaceVariant),
         ],
       ),
     );
 
+    final VoidCallback? onTap = !published
+        ? null
+        : locked
+            ? () => showPremiumSheet(context, featureName: 'Level ${unit.level}')
+            : () => Navigator.pushNamed(
+                  context,
+                  PmpRoutes.writingTeachSteps,
+                  arguments: {'asset': unit.asset},
+                );
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
-      child: open
-          ? Material(
+      child: onTap == null
+          ? card
+          : Material(
               color: Colors.transparent,
               child: InkWell(
                 borderRadius: BorderRadius.circular(14),
-                onTap: () => Navigator.pushNamed(
-                  context,
-                  // Every unit uses the step-by-step pager (Levels 1–3).
-                  PmpRoutes.writingTeachSteps,
-                  arguments: {'asset': unit.asset},
-                ),
+                onTap: onTap,
                 child: card,
               ),
-            )
-          : card,
+            ),
     );
   }
 }

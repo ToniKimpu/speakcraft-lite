@@ -201,7 +201,7 @@
       "answers": [
         "cooked"
       ],
-      "explain_mm": "cook → cooked (+ ed) ။  ➝ She cooked dinner."
+      "explain_mm": "အတိတ် (yesterday) ဖြစ်တဲ့အတွက် verb နောက်မှာ ‑ed ထည့်ပါတယ်။ cook → cooked ။ ➝ Yesterday she cooked dinner."
     },
     {
       "kind": "mcq",
@@ -216,7 +216,7 @@
       "answers": [
         "played"
       ],
-      "explain_mm": "play → played ။  ➝ They played football."
+      "explain_mm": "အတိတ်မို့ ‑ed ထည့်ပါ။ play → played ။ ➝ They played football last week."
     },
     {
       "kind": "mcq",
@@ -231,7 +231,7 @@
       "answers": [
         "studied"
       ],
-      "explain_mm": "study → studied (y → ied) ။  ➝ He studied all day."
+      "explain_mm": "'study' က consonant + y နဲ့ ဆုံးတဲ့အတွက် y ကို i ပြောင်းပြီး ‑ed ပေါင်းရတယ် → studied ။ ➝ He studied all day yesterday."
     },
     {
       "kind": "mcq",
@@ -246,7 +246,7 @@
       "answers": [
         "watched"
       ],
-      "explain_mm": "watch → watched ။  ➝ We watched a film."
+      "explain_mm": "အတိတ်မို့ ‑ed → watched ။ ➝ We watched a film last night."
     },
     {
       "kind": "mcq",
@@ -261,7 +261,7 @@
       "answers": [
         "lived"
       ],
-      "explain_mm": "live → lived (+ d) ။  ➝ She lived in Yangon."
+      "explain_mm": "'live' က ‑e နဲ့ ဆုံးလို့ ‑d ပဲ ပေါင်းရတယ် → lived ။ ➝ She lived in Yangon in 2020."
     },
     {
       "kind": "gap_fill",
@@ -271,7 +271,7 @@
       "answers": [
         "cooked"
       ],
-      "explain_mm": "cook → cooked ။  ➝ She cooked fish last night."
+      "explain_mm": "cook → cooked (+ ed) ။ ➝ She cooked fish last night."
     },
     {
       "kind": "gap_fill",
@@ -281,7 +281,7 @@
       "answers": [
         "watched"
       ],
-      "explain_mm": "watch → watched ။  ➝ We watched a film."
+      "explain_mm": "watch → watched ။ ➝ We watched a film."
     },
     {
       "kind": "gap_fill",
@@ -291,7 +291,7 @@
       "answers": [
         "played"
       ],
-      "explain_mm": "play → played ။  ➝ They played football."
+      "explain_mm": "play → played ။ ➝ They played football."
     },
     {
       "kind": "gap_fill",
@@ -301,7 +301,7 @@
       "answers": [
         "studied"
       ],
-      "explain_mm": "study → studied (y → ied) ။  ➝ He studied all day."
+      "explain_mm": "study → studied (y → ied) ။ ➝ He studied all day."
     },
     {
       "kind": "gap_fill",
@@ -311,7 +311,7 @@
       "answers": [
         "lived"
       ],
-      "explain_mm": "live → lived ။  ➝ I lived in Mandalay."
+      "explain_mm": "live → lived (‑e ဆုံးလို့ ‑d) ။ ➝ I lived in Mandalay."
     },
     {
       "kind": "correct_error",
@@ -321,7 +321,7 @@
       "answers": [
         "Yesterday she cooked dinner"
       ],
-      "explain_mm": "အတိတ် → cooked (+ ed) ။  ➝ Yesterday she cooked dinner."
+      "explain_mm": "အတိတ် (yesterday) ဆိုတော့ verb ကို ‑ed နဲ့ ပြောင်းရတယ် → cooked ။ ➝ Yesterday she cooked dinner."
     },
     {
       "kind": "correct_error",
@@ -331,7 +331,7 @@
       "answers": [
         "He studied all day"
       ],
-      "explain_mm": "study → studied (y → ied) ။  ➝ He studied all day."
+      "explain_mm": "'study' က y နဲ့ ဆုံးလို့ y → i ပြောင်းပြီး ‑ed ပေါင်းရတယ် → studied ('studyed' မဟုတ်ပါဘူး) ။ ➝ He studied all day."
     },
     {
       "kind": "correct_error",
@@ -341,7 +341,7 @@
       "answers": [
         "They played football last week"
       ],
-      "explain_mm": "အတိတ် → played ။  ➝ They played football last week."
+      "explain_mm": "'last week' (အတိတ်) ဆိုတော့ ‑ed → played ။ ➝ They played football last week."
     },
     {
       "kind": "correct_error",
@@ -351,7 +351,7 @@
       "answers": [
         "We watched a film last night"
       ],
-      "explain_mm": "အတိတ် → watched ။  ➝ We watched a film last night."
+      "explain_mm": "'last night' (အတိတ်) ဆိုတော့ ‑ed → watched ။ ➝ We watched a film last night."
     },
     {
       "kind": "word_order",
@@ -368,7 +368,7 @@
       "answers": [
         "She cooked fish last night"
       ],
-      "explain_mm": "cook → cooked ။"
+      "explain_mm": "cook → cooked (+ ed) ။ ➝ She cooked fish last night."
     },
     {
       "kind": "word_order",
@@ -384,7 +384,7 @@
       "answers": [
         "We watched a film"
       ],
-      "explain_mm": "watch → watched ။"
+      "explain_mm": "watch → watched ။ ➝ We watched a film."
     },
     {
       "kind": "word_order",
@@ -399,7 +399,7 @@
       "answers": [
         "They played football"
       ],
-      "explain_mm": "play → played ။"
+      "explain_mm": "play → played ။ ➝ They played football."
     },
     {
       "kind": "word_order",
@@ -415,7 +415,7 @@
       "answers": [
         "He studied all day"
       ],
-      "explain_mm": "study → studied ။"
+      "explain_mm": "study → studied (y → ied) ။ ➝ He studied all day."
     },
     {
       "kind": "word_order",
@@ -430,7 +430,7 @@
       "answers": [
         "I worked yesterday"
       ],
-      "explain_mm": "work → worked ။"
+      "explain_mm": "work → worked (+ ed) ။ ➝ I worked yesterday."
     },
     {
       "kind": "word_order",
@@ -448,7 +448,7 @@
       "answers": [
         "She lived in Yangon in 2020"
       ],
-      "explain_mm": "live → lived ။"
+      "explain_mm": "live → lived (‑e ဆုံးလို့ ‑d) ။ ➝ She lived in Yangon in 2020."
     }
   ],
   "practice_recap_en": "Regular past = verb + {v}-ed{/v} (same for all subjects).  live → lived · study → studied.",

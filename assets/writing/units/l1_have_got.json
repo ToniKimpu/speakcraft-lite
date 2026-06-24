@@ -155,7 +155,7 @@
       "answers": [
         "has"
       ],
-      "explain_mm": "she (he/she/it) → has ။  ➝ She has a new phone."
+      "explain_mm": "'She' (he / she / it) နဲ့ဆို 'has' ကို သုံးပါတယ်။ တစ်ယောက်တည်း ဆိုရင် 'has' ပါနော်။ ➝ She has a new phone."
     },
     {
       "kind": "mcq",
@@ -170,7 +170,7 @@
       "answers": [
         "have"
       ],
-      "explain_mm": "we (I/you/we/they) → have ။  ➝ We have a big garden."
+      "explain_mm": "'We' (I / you / we / they) နဲ့ဆို 'have' ကို သုံးပါတယ်။ ➝ We have a big garden."
     },
     {
       "kind": "mcq",
@@ -185,7 +185,7 @@
       "answers": [
         "doesn't have"
       ],
-      "explain_mm": "he → doesn't have ။  ➝ He doesn't have a car."
+      "explain_mm": "'He' ရဲ့ အငြင်းက 'doesn't have' ပါ။ 'doesn't' နောက်မှာ 'have' (base form) သုံးရတယ်နော်။ ➝ He doesn't have a car."
     },
     {
       "kind": "mcq",
@@ -200,7 +200,7 @@
       "answers": [
         "have"
       ],
-      "explain_mm": "they → have ။  ➝ They have two dogs."
+      "explain_mm": "'They' (အများ) နဲ့ဆို 'have' ။ ➝ They have two dogs."
     },
     {
       "kind": "mcq",
@@ -215,7 +215,7 @@
       "answers": [
         "has"
       ],
-      "explain_mm": "sister (she) → has ။  ➝ My sister has long hair."
+      "explain_mm": "'My sister' က 'she' တစ်ယောက်တည်းမို့ 'has' ။ ➝ My sister has long hair."
     },
     {
       "kind": "gap_fill",
@@ -226,7 +226,7 @@
         "have",
         "have got"
       ],
-      "explain_mm": "I → have ။  ➝ I have a bicycle."
+      "explain_mm": "'I' နဲ့ဆို 'have' ။ ➝ I have a bicycle."
     },
     {
       "kind": "gap_fill",
@@ -237,7 +237,7 @@
         "has",
         "has got"
       ],
-      "explain_mm": "she → has ။  ➝ She has long hair."
+      "explain_mm": "'She' (တစ်ယောက်တည်း) နဲ့ဆို 'has' ။ ➝ She has long hair."
     },
     {
       "kind": "gap_fill",
@@ -248,7 +248,7 @@
         "have",
         "have got"
       ],
-      "explain_mm": "they → have ။  ➝ They have three children."
+      "explain_mm": "'They' (အများ) နဲ့ဆို 'have' ။ ➝ They have three children."
     },
     {
       "kind": "gap_fill",
@@ -258,7 +258,7 @@
       "answers": [
         "doesn't have"
       ],
-      "explain_mm": "he → doesn't have ။  ➝ He doesn't have a phone."
+      "explain_mm": "'He' ရဲ့ အငြင်း → 'doesn't have' ။ ➝ He doesn't have a phone."
     },
     {
       "kind": "gap_fill",
@@ -268,7 +268,7 @@
       "answers": [
         "don't have"
       ],
-      "explain_mm": "we → don't have ။  ➝ We don't have a car."
+      "explain_mm": "'We' ရဲ့ အငြင်း → 'don't have' ။ ➝ We don't have a car."
     },
     {
       "kind": "correct_error",
@@ -278,7 +278,7 @@
       "answers": [
         "She has a new bag"
       ],
-      "explain_mm": "she → has ။  ➝ She has a new bag."
+      "explain_mm": "'She' (တစ်ယောက်တည်း) ဆိုတော့ 'has' ပါ — 'have' မဟုတ်ပါဘူး။ ➝ She has a new bag."
     },
     {
       "kind": "correct_error",
@@ -288,7 +288,7 @@
       "answers": [
         "He has got a car"
       ],
-      "explain_mm": "he → has (got) ။  ➝ He has got a car."
+      "explain_mm": "'He' (တစ်ယောက်တည်း) ဆိုတော့ 'has got' ပါ။ ➝ He has got a car."
     },
     {
       "kind": "correct_error",
@@ -298,7 +298,7 @@
       "answers": [
         "They have two cats"
       ],
-      "explain_mm": "they → have ။  ➝ They have two cats."
+      "explain_mm": "'They' (အများ) ဆိုတော့ 'have' ပါ — 'has' က တစ်ယောက်တည်းအတွက်။ ➝ They have two cats."
     },
     {
       "kind": "correct_error",
@@ -308,7 +308,7 @@
       "answers": [
         "I have a bicycle"
       ],
-      "explain_mm": "I → have ။  ➝ I have a bicycle."
+      "explain_mm": "'I' နဲ့ဆို 'have' ပါ — 'has' မဟုတ်ပါဘူး။ ➝ I have a bicycle."
     },
     {
       "kind": "word_order",
@@ -324,7 +324,7 @@
       "answers": [
         "I have a bicycle"
       ],
-      "explain_mm": "I → have ။"
+      "explain_mm": "'I' → have ။ ➝ I have a bicycle."
     },
     {
       "kind": "word_order",
@@ -340,7 +340,7 @@
       "answers": [
         "She has long hair"
       ],
-      "explain_mm": "she → has ။"
+      "explain_mm": "'She' (he / she / it) → has ။ ➝ She has long hair."
     },
     {
       "kind": "word_order",
@@ -356,7 +356,7 @@
       "answers": [
         "They have three children"
       ],
-      "explain_mm": "they → have ။"
+      "explain_mm": "'They' (အများ) → have ။ ➝ They have three children."
     },
     {
       "kind": "word_order",
@@ -373,7 +373,7 @@
       "answers": [
         "He doesn't have a phone"
       ],
-      "explain_mm": "he → doesn't have ။"
+      "explain_mm": "'He' ရဲ့ အငြင်း → doesn't have (+ base) ။ ➝ He doesn't have a phone."
     },
     {
       "kind": "word_order",
@@ -390,7 +390,7 @@
       "answers": [
         "We have a big house"
       ],
-      "explain_mm": "we → have ။"
+      "explain_mm": "'We' → have ။ ➝ We have a big house."
     },
     {
       "kind": "word_order",
@@ -407,7 +407,7 @@
       "answers": [
         "He has a new car"
       ],
-      "explain_mm": "he → has ။"
+      "explain_mm": "'He' → has ။ ➝ He has a new car."
     }
   ],
   "practice_recap_en": "I / you / we / they → {v}have{/v}  ·  he / she / it → {v}has{/v}.   Negative: {v}don't / doesn't have{/v}.",

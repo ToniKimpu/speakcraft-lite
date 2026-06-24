@@ -171,7 +171,7 @@
       "answers": [
         "were"
       ],
-      "explain_mm": "they → were ။  ➝ They were at home."
+      "explain_mm": "'They' (you / we / they) နဲ့ဆို အတိတ်မှာ 'were' ကို သုံးပါတယ်။ was/were က am/is/are ရဲ့ အတိတ်ပုံစံပါနော်။ ➝ They were at home."
     },
     {
       "kind": "mcq",
@@ -186,7 +186,7 @@
       "answers": [
         "was"
       ],
-      "explain_mm": "she → was ။  ➝ She was a teacher."
+      "explain_mm": "'She' (I / he / she / it) နဲ့ဆို အတိတ်မှာ 'was' ကို သုံးပါတယ်။ ➝ She was a teacher."
     },
     {
       "kind": "mcq",
@@ -201,7 +201,7 @@
       "answers": [
         "was"
       ],
-      "explain_mm": "I → was ။  ➝ I was late."
+      "explain_mm": "'I' နဲ့ဆို 'was' ကို သုံးပါတယ်။ ➝ I was late yesterday."
     },
     {
       "kind": "mcq",
@@ -216,7 +216,7 @@
       "answers": [
         "were"
       ],
-      "explain_mm": "we → were ။  ➝ We were tired."
+      "explain_mm": "'We' (အများ) နဲ့ဆို 'were' ။ ➝ We were tired after work."
     },
     {
       "kind": "mcq",
@@ -231,7 +231,7 @@
       "answers": [
         "was"
       ],
-      "explain_mm": "he → was ။  ➝ He was at school."
+      "explain_mm": "'He' (တစ်ယောက်တည်း) နဲ့ဆို 'was' ။ ➝ He was at school."
     },
     {
       "kind": "gap_fill",
@@ -241,7 +241,7 @@
       "answers": [
         "was"
       ],
-      "explain_mm": "I → was ။  ➝ I was tired yesterday."
+      "explain_mm": "'I' နဲ့ဆို 'was' ။ ➝ I was tired yesterday."
     },
     {
       "kind": "gap_fill",
@@ -251,7 +251,7 @@
       "answers": [
         "were"
       ],
-      "explain_mm": "they → were ။  ➝ They were at home."
+      "explain_mm": "'They' (အများ) နဲ့ဆို 'were' ။ ➝ They were at home."
     },
     {
       "kind": "gap_fill",
@@ -261,7 +261,7 @@
       "answers": [
         "was"
       ],
-      "explain_mm": "she → was ။  ➝ She was a nurse."
+      "explain_mm": "'She' နဲ့ဆို 'was' ။ ➝ She was a nurse."
     },
     {
       "kind": "gap_fill",
@@ -272,7 +272,7 @@
         "weren't",
         "were not"
       ],
-      "explain_mm": "we → weren't ။  ➝ We weren't ready."
+      "explain_mm": "'We' ရဲ့ အငြင်း → 'weren't' (were + not) ။ ➝ We weren't ready."
     },
     {
       "kind": "gap_fill",
@@ -283,7 +283,7 @@
         "wasn't",
         "was not"
       ],
-      "explain_mm": "he → wasn't ။  ➝ He wasn't at home."
+      "explain_mm": "'He' ရဲ့ အငြင်း → 'wasn't' (was + not) ။ ➝ He wasn't at home."
     },
     {
       "kind": "correct_error",
@@ -293,7 +293,7 @@
       "answers": [
         "They were at home"
       ],
-      "explain_mm": "they → were ။  ➝ They were at home."
+      "explain_mm": "'They' (you / we / they) ဆိုတော့ 'were' ပါ — 'was' က I / he / she / it အတွက်ပါ။ ➝ They were at home."
     },
     {
       "kind": "correct_error",
@@ -303,7 +303,7 @@
       "answers": [
         "I was late"
       ],
-      "explain_mm": "I → was ။  ➝ I was late."
+      "explain_mm": "'I' နဲ့ဆို 'was' ပါ — 'were' မဟုတ်ပါဘူး။ ➝ I was late."
     },
     {
       "kind": "correct_error",
@@ -313,7 +313,7 @@
       "answers": [
         "She was a teacher"
       ],
-      "explain_mm": "she → was ။  ➝ She was a teacher."
+      "explain_mm": "'She' (he / she / it) နဲ့ဆို 'was' ပါ။ ➝ She was a teacher."
     },
     {
       "kind": "correct_error",
@@ -323,7 +323,7 @@
       "answers": [
         "We were tired"
       ],
-      "explain_mm": "we → were ။  ➝ We were tired."
+      "explain_mm": "'We' (အများ) ဆိုတော့ 'were' ပါ။ ➝ We were tired."
     },
     {
       "kind": "word_order",
@@ -339,7 +339,7 @@
       "answers": [
         "I was tired yesterday"
       ],
-      "explain_mm": "I → was ။"
+      "explain_mm": "'I' → was ။ ➝ I was tired yesterday."
     },
     {
       "kind": "word_order",
@@ -355,7 +355,7 @@
       "answers": [
         "They were at home"
       ],
-      "explain_mm": "they → were ။"
+      "explain_mm": "'They' (အများ) → were ။ ➝ They were at home."
     },
     {
       "kind": "word_order",
@@ -371,7 +371,7 @@
       "answers": [
         "She was a nurse"
       ],
-      "explain_mm": "she → was ။"
+      "explain_mm": "'She' → was ။ ➝ She was a nurse."
     },
     {
       "kind": "word_order",
@@ -386,7 +386,7 @@
       "answers": [
         "We weren't ready"
       ],
-      "explain_mm": "we → weren't ။"
+      "explain_mm": "'We' ရဲ့ အငြင်း → weren't ။ ➝ We weren't ready."
     },
     {
       "kind": "word_order",
@@ -403,7 +403,7 @@
       "answers": [
         "He was at school yesterday"
       ],
-      "explain_mm": "he → was ။"
+      "explain_mm": "'He' → was ။ ➝ He was at school yesterday."
     },
     {
       "kind": "word_order",
@@ -419,7 +419,7 @@
       "answers": [
         "Were you happy yesterday"
       ],
-      "explain_mm": "အမေးမှာ Were ကို ရှေ့ထားပါ ။"
+      "explain_mm": "အမေးမှာ 'Was/Were' ကို Subject ရှေ့ ထားပါ — 'you' နဲ့ဆို 'Were' ။ ➝ Were you happy yesterday?"
     }
   ],
   "practice_recap_en": "{v}was{/v} = I / he / she / it  ·  {v}were{/v} = you / we / they.  (the past of am / is / are)",

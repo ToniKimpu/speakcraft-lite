@@ -243,7 +243,7 @@
       "answers": [
         "doesn't eat"
       ],
-      "explain_mm": "he → doesn't + base (eat) ။  ➝ He doesn't eat meat."
+      "explain_mm": "'He' (he / she / it) ရဲ့ အငြင်းက 'doesn't' ပါ။ 'doesn't' နောက်မှာ verb ကို base form (eat) သုံးရတယ် — ‑s မထည့်ရဘူးနော်။ ➝ He doesn't eat meat."
     },
     {
       "kind": "mcq",
@@ -258,7 +258,7 @@
       "answers": [
         "don't live"
       ],
-      "explain_mm": "they → don't + base (live) ။  ➝ They don't live in Yangon."
+      "explain_mm": "'My friends' (အများ) ရဲ့ အငြင်းက 'don't' ပါ။ ➝ They don't live in Yangon."
     },
     {
       "kind": "mcq",
@@ -273,7 +273,7 @@
       "answers": [
         "doesn't have"
       ],
-      "explain_mm": "she → doesn't + base (have) ။  ➝ She doesn't have a car."
+      "explain_mm": "'She' ရဲ့ အငြင်း → 'doesn't have' ။ 'doesn't' နောက် base (have) ။ ➝ She doesn't have a car."
     },
     {
       "kind": "mcq",
@@ -288,7 +288,7 @@
       "answers": [
         "don't drink"
       ],
-      "explain_mm": "I → don't + base ။  ➝ I don't drink coffee."
+      "explain_mm": "'I' ရဲ့ အငြင်း → 'don't' ။ ➝ I don't drink coffee."
     },
     {
       "kind": "mcq",
@@ -303,7 +303,7 @@
       "answers": [
         "doesn't work"
       ],
-      "explain_mm": "he → doesn't + base ။  ➝ He doesn't work on weekends."
+      "explain_mm": "'He' ရဲ့ အငြင်း → 'doesn't' + base (work) ။ ➝ He doesn't work on weekends."
     },
     {
       "kind": "gap_fill",
@@ -314,7 +314,7 @@
         "doesn't eat",
         "does not eat"
       ],
-      "explain_mm": "she → doesn't + base (eat) ။  ➝ She doesn't eat meat."
+      "explain_mm": "'She' (he / she / it) → 'doesn't' + base (eat) ။ ➝ She doesn't eat meat."
     },
     {
       "kind": "gap_fill",
@@ -325,7 +325,7 @@
         "don't live",
         "do not live"
       ],
-      "explain_mm": "they → don't + base (live) ။  ➝ They don't live here."
+      "explain_mm": "'They' (အများ) → 'don't' + base (live) ။ ➝ They don't live here."
     },
     {
       "kind": "gap_fill",
@@ -336,7 +336,7 @@
         "don't drink",
         "do not drink"
       ],
-      "explain_mm": "I → don't + base ။  ➝ I don't drink coffee."
+      "explain_mm": "'I' → 'don't' + base (drink) ။ ➝ I don't drink coffee."
     },
     {
       "kind": "gap_fill",
@@ -347,7 +347,7 @@
         "doesn't work",
         "does not work"
       ],
-      "explain_mm": "he → doesn't + base ။  ➝ He doesn't work on weekends."
+      "explain_mm": "'He' → 'doesn't' + base (work) ။ ➝ He doesn't work on weekends."
     },
     {
       "kind": "gap_fill",
@@ -358,7 +358,7 @@
         "don't watch",
         "do not watch"
       ],
-      "explain_mm": "we → don't + base ။  ➝ We don't watch TV."
+      "explain_mm": "'We' → 'don't' + base (watch) ။ ➝ We don't watch TV."
     },
     {
       "kind": "correct_error",
@@ -368,7 +368,7 @@
       "answers": [
         "She doesn't eat meat"
       ],
-      "explain_mm": "she → doesn't (don't မဟုတ်) ။  ➝ She doesn't eat meat."
+      "explain_mm": "'She' (he / she / it) ဆိုတော့ 'doesn't' ပါ — 'don't' မဟုတ်ပါဘူးနော်။ ➝ She doesn't eat meat."
     },
     {
       "kind": "correct_error",
@@ -378,7 +378,7 @@
       "answers": [
         "He doesn't eat rice"
       ],
-      "explain_mm": "doesn't နောက်မှာ base (eat) — eats မဟုတ် ။  ➝ He doesn't eat rice."
+      "explain_mm": "'doesn't' နောက်မှာ base form (eat) သုံးရတယ် — 'eats' မဟုတ်ပါဘူး။ ➝ He doesn't eat rice."
     },
     {
       "kind": "correct_error",
@@ -388,7 +388,7 @@
       "answers": [
         "They don't live here"
       ],
-      "explain_mm": "they → don't ။  ➝ They don't live here."
+      "explain_mm": "'They' (အများ) ဆိုတော့ 'don't' ပါ။ ➝ They don't live here."
     },
     {
       "kind": "correct_error",
@@ -398,7 +398,7 @@
       "answers": [
         "I don't drink coffee"
       ],
-      "explain_mm": "I → don't ။  ➝ I don't drink coffee."
+      "explain_mm": "'I' နဲ့ဆို 'don't' ပါ — 'doesn't' မဟုတ်ပါဘူး။ ➝ I don't drink coffee."
     },
     {
       "kind": "word_order",
@@ -414,7 +414,7 @@
       "answers": [
         "I don't drink coffee"
       ],
-      "explain_mm": "I → don't + base ။"
+      "explain_mm": "'I' → 'don't' + base (drink) ။ ➝ I don't drink coffee."
     },
     {
       "kind": "word_order",
@@ -430,7 +430,7 @@
       "answers": [
         "She doesn't eat meat"
       ],
-      "explain_mm": "she → doesn't + base ။"
+      "explain_mm": "'She' → 'doesn't' + base (eat) ။ ➝ She doesn't eat meat."
     },
     {
       "kind": "word_order",
@@ -446,7 +446,7 @@
       "answers": [
         "They don't live here"
       ],
-      "explain_mm": "they → don't + base ။"
+      "explain_mm": "'They' → 'don't' + base (live) ။ ➝ They don't live here."
     },
     {
       "kind": "word_order",
@@ -463,7 +463,7 @@
       "answers": [
         "He doesn't work on weekends"
       ],
-      "explain_mm": "he → doesn't + base ။"
+      "explain_mm": "'He' → 'doesn't' + base (work) ။ ➝ He doesn't work on weekends."
     },
     {
       "kind": "word_order",
@@ -479,7 +479,7 @@
       "answers": [
         "We don't watch TV"
       ],
-      "explain_mm": "we → don't + base ။"
+      "explain_mm": "'We' → 'don't' + base (watch) ။ ➝ We don't watch TV."
     },
     {
       "kind": "word_order",
@@ -496,7 +496,7 @@
       "answers": [
         "She doesn't have a car"
       ],
-      "explain_mm": "she → doesn't + base (have) ။"
+      "explain_mm": "'She' → 'doesn't' + base (have) ။ ➝ She doesn't have a car."
     }
   ],
   "practice_recap_en": "I / you / we / they → {v}don't{/v} + base  ·  he / she / it → {v}doesn't{/v} + base (no -s!).",

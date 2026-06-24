@@ -192,7 +192,7 @@
       "answers": [
         "work"
       ],
-      "explain_mm": "I / you / we / they → work ။  ➝ They work in Yangon."
+      "explain_mm": "'They' (I / you / we / they) နဲ့ဆို verb ကို base form (work) အတိုင်း သုံးပါတယ်။ ‑s မထည့်ပါဘူးနော်။ ➝ They work in Yangon."
     },
     {
       "kind": "mcq",
@@ -207,7 +207,7 @@
       "answers": [
         "drinks"
       ],
-      "explain_mm": "she (he/she/it) → drinks (+ s) ။  ➝ She drinks tea."
+      "explain_mm": "'She' (he / she / it) နဲ့ဆို verb နောက်မှာ ‑s ထည့်ပေးရပါတယ်။ drink → drinks ။ ➝ She drinks tea every morning."
     },
     {
       "kind": "mcq",
@@ -222,7 +222,7 @@
       "answers": [
         "watches"
       ],
-      "explain_mm": "-ch ဆုံးရင် → watches (+ es) ။  ➝ He watches TV."
+      "explain_mm": "'He' (တစ်ယောက်တည်း) နဲ့ဆို ‑s ထည့်ရတယ်။ 'watch' က ‑ch နဲ့ ဆုံးတဲ့အတွက် ‑es ပေါင်းရတယ် → watches ။ ➝ He watches TV at night."
     },
     {
       "kind": "mcq",
@@ -237,7 +237,7 @@
       "answers": [
         "study"
       ],
-      "explain_mm": "we → study (base, no -s) ။  ➝ We study English."
+      "explain_mm": "'We' နဲ့ဆို base form (study) အတိုင်းပါ — ‑s မထည့်ရပါဘူး။ ➝ We study English."
     },
     {
       "kind": "mcq",
@@ -252,7 +252,7 @@
       "answers": [
         "rises"
       ],
-      "explain_mm": "the sun (it) → rises (+ s) ။  ➝ The sun rises."
+      "explain_mm": "'The sun' က 'it' တစ်ခုတည်းမို့ ‑s ထည့်ရတယ် → rises ။ ➝ The sun rises in the east."
     },
     {
       "kind": "gap_fill",
@@ -262,7 +262,7 @@
       "answers": [
         "go"
       ],
-      "explain_mm": "I → go ။  ➝ I go to work every day."
+      "explain_mm": "'I' နဲ့ဆို base form 'go' ပါ — ‑s မထည့်ပါဘူး။ ➝ I go to work every day."
     },
     {
       "kind": "gap_fill",
@@ -272,7 +272,7 @@
       "answers": [
         "works"
       ],
-      "explain_mm": "she → works (+ s) ။  ➝ She works in a hospital."
+      "explain_mm": "'She' (he / she / it) နဲ့ဆို ‑s ထည့်ရတယ် → works ။ ➝ She works in a hospital."
     },
     {
       "kind": "gap_fill",
@@ -282,7 +282,7 @@
       "answers": [
         "speaks"
       ],
-      "explain_mm": "he → speaks (+ s) ။  ➝ He speaks English."
+      "explain_mm": "'He' နဲ့ဆို ‑s ထည့်ရတယ် → speaks ။ ➝ He speaks English."
     },
     {
       "kind": "gap_fill",
@@ -292,7 +292,7 @@
       "answers": [
         "eat"
       ],
-      "explain_mm": "they → eat (base) ။  ➝ They eat rice."
+      "explain_mm": "'They' (အများ) နဲ့ဆို base form 'eat' ပါ။ ➝ They eat rice every day."
     },
     {
       "kind": "gap_fill",
@@ -302,7 +302,7 @@
       "answers": [
         "cooks"
       ],
-      "explain_mm": "mother (she) → cooks (+ s) ။  ➝ My mother cooks dinner."
+      "explain_mm": "'My mother' က 'she' တစ်ယောက်တည်းမို့ ‑s ထည့်ရတယ် → cooks ။ ➝ My mother cooks dinner."
     },
     {
       "kind": "correct_error",
@@ -312,7 +312,7 @@
       "answers": [
         "She works in Yangon"
       ],
-      "explain_mm": "she → works (+ s) ။  ➝ She works in Yangon."
+      "explain_mm": "'She' (he / she / it) နဲ့ဆို verb မှာ ‑s ထည့်ရတယ် → works ။ ➝ She works in Yangon."
     },
     {
       "kind": "correct_error",
@@ -322,7 +322,7 @@
       "answers": [
         "He watches TV every night"
       ],
-      "explain_mm": "-ch ဆုံးရင် → watches ။  ➝ He watches TV every night."
+      "explain_mm": "'He' နဲ့ဆို ‑s လိုတယ်။ 'watch' က ‑ch ဆုံးလို့ ‑es ပေါင်း → watches ။ ➝ He watches TV every night."
     },
     {
       "kind": "correct_error",
@@ -332,7 +332,7 @@
       "answers": [
         "They work hard"
       ],
-      "explain_mm": "they → work (base, no -s) ။  ➝ They work hard."
+      "explain_mm": "'They' (အများ) နဲ့ဆို base form 'work' ပါ — ‑s မထည့်ရဘူး။ ➝ They work hard."
     },
     {
       "kind": "correct_error",
@@ -342,7 +342,7 @@
       "answers": [
         "The sun rises in the east"
       ],
-      "explain_mm": "the sun (it) → rises ။  ➝ The sun rises in the east."
+      "explain_mm": "'The sun' က 'it' တစ်ခုတည်းမို့ ‑s လိုတယ် → rises ။ ➝ The sun rises in the east."
     },
     {
       "kind": "word_order",
@@ -360,7 +360,7 @@
       "answers": [
         "The sun rises in the east"
       ],
-      "explain_mm": "it → rises (+ s) ။"
+      "explain_mm": "'The sun' (it) → rises (+ s) ။ ➝ The sun rises in the east."
     },
     {
       "kind": "word_order",
@@ -377,7 +377,7 @@
       "answers": [
         "She drinks tea every morning"
       ],
-      "explain_mm": "she → drinks (+ s) ။"
+      "explain_mm": "'She' (he / she / it) → drinks (+ s) ။ ➝ She drinks tea every morning."
     },
     {
       "kind": "word_order",
@@ -393,7 +393,7 @@
       "answers": [
         "They work in Yangon"
       ],
-      "explain_mm": "they → work (base) ။"
+      "explain_mm": "'They' (အများ) → work (base) ။ ➝ They work in Yangon."
     },
     {
       "kind": "word_order",
@@ -411,7 +411,7 @@
       "answers": [
         "I go to work every day"
       ],
-      "explain_mm": "I → go ။"
+      "explain_mm": "'I' → go (base) ။ ➝ I go to work every day."
     },
     {
       "kind": "word_order",
@@ -428,7 +428,7 @@
       "answers": [
         "He watches TV at night"
       ],
-      "explain_mm": "he → watches ။"
+      "explain_mm": "'He' → watches (‑ch ဆုံးလို့ ‑es) ။ ➝ He watches TV at night."
     },
     {
       "kind": "word_order",
@@ -443,7 +443,7 @@
       "answers": [
         "We study English"
       ],
-      "explain_mm": "we → study ။"
+      "explain_mm": "'We' → study (base) ။ ➝ We study English."
     }
   ],
   "practice_recap_en": "I / you / we / they → {v}work{/v}  ·  he / she / it → {v}works{/v} (+ s).  Daily habits, routines & facts.",

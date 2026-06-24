@@ -991,6 +991,208 @@ class VideoStepProgressTableCompanion
   }
 }
 
+class $WritingProgressTableTable extends WritingProgressTable
+    with TableInfo<$WritingProgressTableTable, WritingProgressTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $WritingProgressTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _unitIdMeta = const VerificationMeta('unitId');
+  @override
+  late final GeneratedColumn<String> unitId = GeneratedColumn<String>(
+      'unit_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _completedAtMeta =
+      const VerificationMeta('completedAt');
+  @override
+  late final GeneratedColumn<DateTime> completedAt = GeneratedColumn<DateTime>(
+      'completed_at', aliasedName, false,
+      type: DriftSqlType.dateTime,
+      requiredDuringInsert: false,
+      defaultValue: currentDateAndTime);
+  @override
+  List<GeneratedColumn> get $columns => [unitId, completedAt];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'writing_progress_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<WritingProgressTableData> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('unit_id')) {
+      context.handle(_unitIdMeta,
+          unitId.isAcceptableOrUnknown(data['unit_id']!, _unitIdMeta));
+    } else if (isInserting) {
+      context.missing(_unitIdMeta);
+    }
+    if (data.containsKey('completed_at')) {
+      context.handle(
+          _completedAtMeta,
+          completedAt.isAcceptableOrUnknown(
+              data['completed_at']!, _completedAtMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {unitId};
+  @override
+  WritingProgressTableData map(Map<String, dynamic> data,
+      {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return WritingProgressTableData(
+      unitId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}unit_id'])!,
+      completedAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}completed_at'])!,
+    );
+  }
+
+  @override
+  $WritingProgressTableTable createAlias(String alias) {
+    return $WritingProgressTableTable(attachedDatabase, alias);
+  }
+}
+
+class WritingProgressTableData extends DataClass
+    implements Insertable<WritingProgressTableData> {
+  final String unitId;
+  final DateTime completedAt;
+  const WritingProgressTableData(
+      {required this.unitId, required this.completedAt});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['unit_id'] = Variable<String>(unitId);
+    map['completed_at'] = Variable<DateTime>(completedAt);
+    return map;
+  }
+
+  WritingProgressTableCompanion toCompanion(bool nullToAbsent) {
+    return WritingProgressTableCompanion(
+      unitId: Value(unitId),
+      completedAt: Value(completedAt),
+    );
+  }
+
+  factory WritingProgressTableData.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return WritingProgressTableData(
+      unitId: serializer.fromJson<String>(json['unitId']),
+      completedAt: serializer.fromJson<DateTime>(json['completedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'unitId': serializer.toJson<String>(unitId),
+      'completedAt': serializer.toJson<DateTime>(completedAt),
+    };
+  }
+
+  WritingProgressTableData copyWith({String? unitId, DateTime? completedAt}) =>
+      WritingProgressTableData(
+        unitId: unitId ?? this.unitId,
+        completedAt: completedAt ?? this.completedAt,
+      );
+  WritingProgressTableData copyWithCompanion(
+      WritingProgressTableCompanion data) {
+    return WritingProgressTableData(
+      unitId: data.unitId.present ? data.unitId.value : this.unitId,
+      completedAt:
+          data.completedAt.present ? data.completedAt.value : this.completedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WritingProgressTableData(')
+          ..write('unitId: $unitId, ')
+          ..write('completedAt: $completedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(unitId, completedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is WritingProgressTableData &&
+          other.unitId == this.unitId &&
+          other.completedAt == this.completedAt);
+}
+
+class WritingProgressTableCompanion
+    extends UpdateCompanion<WritingProgressTableData> {
+  final Value<String> unitId;
+  final Value<DateTime> completedAt;
+  final Value<int> rowid;
+  const WritingProgressTableCompanion({
+    this.unitId = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  WritingProgressTableCompanion.insert({
+    required String unitId,
+    this.completedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : unitId = Value(unitId);
+  static Insertable<WritingProgressTableData> custom({
+    Expression<String>? unitId,
+    Expression<DateTime>? completedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (unitId != null) 'unit_id': unitId,
+      if (completedAt != null) 'completed_at': completedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  WritingProgressTableCompanion copyWith(
+      {Value<String>? unitId,
+      Value<DateTime>? completedAt,
+      Value<int>? rowid}) {
+    return WritingProgressTableCompanion(
+      unitId: unitId ?? this.unitId,
+      completedAt: completedAt ?? this.completedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (unitId.present) {
+      map['unit_id'] = Variable<String>(unitId.value);
+    }
+    if (completedAt.present) {
+      map['completed_at'] = Variable<DateTime>(completedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WritingProgressTableCompanion(')
+          ..write('unitId: $unitId, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -1002,6 +1204,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $SavedTermTableTable savedTermTable = $SavedTermTableTable(this);
   late final $VideoStepProgressTableTable videoStepProgressTable =
       $VideoStepProgressTableTable(this);
+  late final $WritingProgressTableTable writingProgressTable =
+      $WritingProgressTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1010,7 +1214,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         listeningPracticeAnswerTable,
         userRecordedSentenceAudioTable,
         savedTermTable,
-        videoStepProgressTable
+        videoStepProgressTable,
+        writingProgressTable
       ];
 }
 
@@ -1816,6 +2021,140 @@ typedef $$VideoStepProgressTableTableProcessedTableManager
         ),
         VideoStepProgress,
         PrefetchHooks Function()>;
+typedef $$WritingProgressTableTableCreateCompanionBuilder
+    = WritingProgressTableCompanion Function({
+  required String unitId,
+  Value<DateTime> completedAt,
+  Value<int> rowid,
+});
+typedef $$WritingProgressTableTableUpdateCompanionBuilder
+    = WritingProgressTableCompanion Function({
+  Value<String> unitId,
+  Value<DateTime> completedAt,
+  Value<int> rowid,
+});
+
+class $$WritingProgressTableTableFilterComposer
+    extends Composer<_$AppDatabase, $WritingProgressTableTable> {
+  $$WritingProgressTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get unitId => $composableBuilder(
+      column: $table.unitId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get completedAt => $composableBuilder(
+      column: $table.completedAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$WritingProgressTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $WritingProgressTableTable> {
+  $$WritingProgressTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get unitId => $composableBuilder(
+      column: $table.unitId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get completedAt => $composableBuilder(
+      column: $table.completedAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$WritingProgressTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $WritingProgressTableTable> {
+  $$WritingProgressTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get unitId =>
+      $composableBuilder(column: $table.unitId, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get completedAt => $composableBuilder(
+      column: $table.completedAt, builder: (column) => column);
+}
+
+class $$WritingProgressTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $WritingProgressTableTable,
+    WritingProgressTableData,
+    $$WritingProgressTableTableFilterComposer,
+    $$WritingProgressTableTableOrderingComposer,
+    $$WritingProgressTableTableAnnotationComposer,
+    $$WritingProgressTableTableCreateCompanionBuilder,
+    $$WritingProgressTableTableUpdateCompanionBuilder,
+    (
+      WritingProgressTableData,
+      BaseReferences<_$AppDatabase, $WritingProgressTableTable,
+          WritingProgressTableData>
+    ),
+    WritingProgressTableData,
+    PrefetchHooks Function()> {
+  $$WritingProgressTableTableTableManager(
+      _$AppDatabase db, $WritingProgressTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$WritingProgressTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$WritingProgressTableTableOrderingComposer(
+                  $db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$WritingProgressTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> unitId = const Value.absent(),
+            Value<DateTime> completedAt = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              WritingProgressTableCompanion(
+            unitId: unitId,
+            completedAt: completedAt,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String unitId,
+            Value<DateTime> completedAt = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              WritingProgressTableCompanion.insert(
+            unitId: unitId,
+            completedAt: completedAt,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$WritingProgressTableTableProcessedTableManager
+    = ProcessedTableManager<
+        _$AppDatabase,
+        $WritingProgressTableTable,
+        WritingProgressTableData,
+        $$WritingProgressTableTableFilterComposer,
+        $$WritingProgressTableTableOrderingComposer,
+        $$WritingProgressTableTableAnnotationComposer,
+        $$WritingProgressTableTableCreateCompanionBuilder,
+        $$WritingProgressTableTableUpdateCompanionBuilder,
+        (
+          WritingProgressTableData,
+          BaseReferences<_$AppDatabase, $WritingProgressTableTable,
+              WritingProgressTableData>
+        ),
+        WritingProgressTableData,
+        PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -1833,4 +2172,6 @@ class $AppDatabaseManager {
   $$VideoStepProgressTableTableTableManager get videoStepProgressTable =>
       $$VideoStepProgressTableTableTableManager(
           _db, _db.videoStepProgressTable);
+  $$WritingProgressTableTableTableManager get writingProgressTable =>
+      $$WritingProgressTableTableTableManager(_db, _db.writingProgressTable);
 }

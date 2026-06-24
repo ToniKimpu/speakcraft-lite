@@ -156,7 +156,7 @@
       "answers": [
         "There is"
       ],
-      "explain_mm": "တစ်ခု ဆိုရင် → There is ။  ➝ There is a book on the desk."
+      "explain_mm": "'a book' က တစ်ခုတည်း (singular) မို့ 'There is' ကို သုံးပါတယ်။ တစ်ခု ရှိရင် 'There is' ပါနော်။ ➝ There is a book on the desk."
     },
     {
       "kind": "mcq",
@@ -171,7 +171,7 @@
       "answers": [
         "There are"
       ],
-      "explain_mm": "အများ ဆိုရင် → There are ။  ➝ There are many people here."
+      "explain_mm": "'many people' က အများ (plural) မို့ 'There are' ။ အများ ရှိရင် 'There are' ။ ➝ There are many people here."
     },
     {
       "kind": "mcq",
@@ -186,7 +186,7 @@
       "answers": [
         "There are"
       ],
-      "explain_mm": "အများ (two) → There are ။  ➝ There are two cats."
+      "explain_mm": "'two cats' (အများ) မို့ 'There are' ။ ➝ There are two cats under the table."
     },
     {
       "kind": "mcq",
@@ -201,7 +201,7 @@
       "answers": [
         "Is there"
       ],
-      "explain_mm": "အမေး + တစ်ခု → Is there ။  ➝ Is there any milk?"
+      "explain_mm": "အမေးဝါကျမို့ 'is/are' ကို ရှေ့ ထားပေးရပါတယ်။ 'milk' နဲ့ဆို 'Is there' ။ ➝ Is there any milk in the fridge?"
     },
     {
       "kind": "mcq",
@@ -216,7 +216,7 @@
       "answers": [
         "There are"
       ],
-      "explain_mm": "အများ (five) → There are ။  ➝ There are five chairs."
+      "explain_mm": "'five chairs' (အများ) မို့ 'There are' ။ ➝ There are five chairs in the room."
     },
     {
       "kind": "gap_fill",
@@ -227,7 +227,7 @@
         "There is",
         "There's"
       ],
-      "explain_mm": "တစ်ခု ဆိုရင် → There is ။  ➝ There is a school near my house."
+      "explain_mm": "'a school' (တစ်ခု) မို့ 'There is' ။ ➝ There is a school near my house."
     },
     {
       "kind": "gap_fill",
@@ -237,7 +237,7 @@
       "answers": [
         "There are"
       ],
-      "explain_mm": "အများ (three) → There are ။  ➝ There are three books."
+      "explain_mm": "'three books' (အများ) မို့ 'There are' ။ ➝ There are three books on the table."
     },
     {
       "kind": "gap_fill",
@@ -248,7 +248,7 @@
         "There isn't",
         "There is not"
       ],
-      "explain_mm": "တစ်ခု + အငြင်း → There isn't ။  ➝ There isn't any water."
+      "explain_mm": "တစ်ခု + အငြင်း မို့ 'There isn't' ။ ➝ There isn't any water in the bottle."
     },
     {
       "kind": "gap_fill",
@@ -259,7 +259,7 @@
         "There aren't",
         "There are not"
       ],
-      "explain_mm": "အများ + အငြင်း → There aren't ။  ➝ There aren't many shops."
+      "explain_mm": "အများ + အငြင်း မို့ 'There aren't' ။ ➝ There aren't many shops here."
     },
     {
       "kind": "gap_fill",
@@ -269,7 +269,7 @@
       "answers": [
         "Is there"
       ],
-      "explain_mm": "အမေး + တစ်ခု → Is there ။  ➝ Is there a hospital?"
+      "explain_mm": "အမေး + တစ်ခု မို့ 'Is there' ။ ➝ Is there a hospital in this town?"
     },
     {
       "kind": "correct_error",
@@ -279,7 +279,7 @@
       "answers": [
         "There are two dogs"
       ],
-      "explain_mm": "အများ (two) → There are ။  ➝ There are two dogs."
+      "explain_mm": "'two dogs' က အများဆိုတော့ 'There are' ပါ — 'There is' က တစ်ခုတည်းအတွက်။ ➝ There are two dogs."
     },
     {
       "kind": "correct_error",
@@ -289,7 +289,7 @@
       "answers": [
         "There is a book on the table"
       ],
-      "explain_mm": "တစ်ခု (a book) → There is ။  ➝ There is a book on the table."
+      "explain_mm": "'a book' က တစ်ခုဆိုတော့ 'There is' ပါ။ ➝ There is a book on the table."
     },
     {
       "kind": "correct_error",
@@ -299,7 +299,7 @@
       "answers": [
         "There are many people"
       ],
-      "explain_mm": "be မဟုတ် — အများ ဆိုရင် → There are ။  ➝ There are many people."
+      "explain_mm": "'There be' မဖြစ်ပါဘူး — 'be' ကို 'is/are' ပြောင်းပေးပါ။ အများဆိုတော့ 'There are' ။ ➝ There are many people."
     },
     {
       "kind": "correct_error",
@@ -309,7 +309,7 @@
       "answers": [
         "Are there many cars"
       ],
-      "explain_mm": "အများ ဆိုရင် အမေး → Are there ။  ➝ Are there many cars?"
+      "explain_mm": "'many cars' (အများ) ရဲ့ အမေး → 'Are there' ။ ➝ Are there many cars?"
     },
     {
       "kind": "word_order",
@@ -328,7 +328,7 @@
       "answers": [
         "There is a book on the table"
       ],
-      "explain_mm": "တစ်ခု → There is ။"
+      "explain_mm": "တစ်ခု → There is ။ ➝ There is a book on the table."
     },
     {
       "kind": "word_order",
@@ -344,7 +344,7 @@
       "answers": [
         "There are five students"
       ],
-      "explain_mm": "အများ → There are ။"
+      "explain_mm": "အများ → There are ။ ➝ There are five students."
     },
     {
       "kind": "word_order",
@@ -360,7 +360,7 @@
       "answers": [
         "There isn't any water"
       ],
-      "explain_mm": "တစ်ခု + အငြင်း → There isn't ။"
+      "explain_mm": "တစ်ခု + အငြင်း → There isn't ။ ➝ There isn't any water."
     },
     {
       "kind": "word_order",
@@ -378,7 +378,7 @@
       "answers": [
         "Are there any shops near here"
       ],
-      "explain_mm": "အများ ဆိုရင် အမေး → Are there ။"
+      "explain_mm": "အများ ရဲ့ အမေး → Are there ။ ➝ Are there any shops near here?"
     },
     {
       "kind": "word_order",
@@ -397,7 +397,7 @@
       "answers": [
         "There are two chairs in the room"
       ],
-      "explain_mm": "အများ → There are ။"
+      "explain_mm": "အများ → There are ။ ➝ There are two chairs in the room."
     },
     {
       "kind": "word_order",
@@ -416,7 +416,7 @@
       "answers": [
         "Is there any milk in the fridge"
       ],
-      "explain_mm": "တစ်ခု ဆိုရင် အမေး → Is there ။"
+      "explain_mm": "တစ်ခု ရဲ့ အမေး → Is there ။ ➝ Is there any milk in the fridge?"
     }
   ],
   "practice_recap_en": "{v}There is{/v} + one thing  ·  {v}There are{/v} + many.   Negative: {v}There isn't / aren't{/v}.   Question: {v}Is / Are there{/v} …?",

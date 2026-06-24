@@ -156,7 +156,7 @@
       "answers": [
         "always drinks"
       ],
-      "explain_mm": "adverb ကို verb ရှေ့ → always drinks ။"
+      "explain_mm": "frequency adverb (always) ကို main verb ရဲ့ ရှေ့မှာ ထားရတယ် → always drinks ။ ➝ She always drinks tea."
     },
     {
       "kind": "mcq",
@@ -170,7 +170,7 @@
       "answers": [
         "is always"
       ],
-      "explain_mm": "be (is) နောက်မှာ → is always ။"
+      "explain_mm": "'be' verb (is) နဲ့ဆိုရင်တော့ adverb ကို be ရဲ့ နောက်မှာ ထားရတယ် → is always ။ ➝ She is always late."
     },
     {
       "kind": "mcq",
@@ -184,7 +184,7 @@
       "answers": [
         "never eat"
       ],
-      "explain_mm": "adverb ကို verb ရှေ့ → never eat ။"
+      "explain_mm": "adverb (never) ကို main verb ရဲ့ ရှေ့မှာ → never eat ။ ➝ They never eat meat."
     },
     {
       "kind": "mcq",
@@ -198,7 +198,7 @@
       "answers": [
         "usually walks"
       ],
-      "explain_mm": "verb ရှေ့ → usually walks ။"
+      "explain_mm": "adverb (usually) ကို main verb ရှေ့ → usually walks ။ ➝ He usually walks to work."
     },
     {
       "kind": "mcq",
@@ -212,7 +212,7 @@
       "answers": [
         "am sometimes"
       ],
-      "explain_mm": "be (am) နောက်မှာ → am sometimes ။"
+      "explain_mm": "'be' verb (am) နဲ့ဆိုရင် adverb ကို be ရဲ့ နောက်မှာ → am sometimes ။ ➝ I am sometimes hungry in the morning."
     },
     {
       "kind": "gap_fill",
@@ -222,7 +222,7 @@
       "answers": [
         "always"
       ],
-      "explain_mm": "adverb ကို verb ရှေ့မှာ ။  ➝ I always drink tea."
+      "explain_mm": "adverb ကို main verb (drink) ရဲ့ ရှေ့မှာ ထားပါ။ ➝ I always drink tea in the morning."
     },
     {
       "kind": "gap_fill",
@@ -232,7 +232,7 @@
       "answers": [
         "often"
       ],
-      "explain_mm": "be နောက်မှာ ။  ➝ She is often late."
+      "explain_mm": "'be' (is) ရဲ့ နောက်မှာ adverb ထားပါ။ ➝ She is often late."
     },
     {
       "kind": "gap_fill",
@@ -242,7 +242,7 @@
       "answers": [
         "never"
       ],
-      "explain_mm": "adverb ကို verb ရှေ့မှာ ။  ➝ They never eat meat."
+      "explain_mm": "main verb (eat) ရဲ့ ရှေ့မှာ။ ➝ They never eat meat."
     },
     {
       "kind": "gap_fill",
@@ -252,7 +252,7 @@
       "answers": [
         "usually"
       ],
-      "explain_mm": "verb ရှေ့မှာ ။  ➝ He usually walks to work."
+      "explain_mm": "main verb (walks) ရဲ့ ရှေ့မှာ။ ➝ He usually walks to work."
     },
     {
       "kind": "gap_fill",
@@ -262,7 +262,7 @@
       "answers": [
         "sometimes"
       ],
-      "explain_mm": "be နောက်မှာ ။  ➝ We are sometimes busy."
+      "explain_mm": "'be' (are) ရဲ့ နောက်မှာ။ ➝ We are sometimes busy."
     },
     {
       "kind": "correct_error",
@@ -272,7 +272,7 @@
       "answers": [
         "She always drinks tea"
       ],
-      "explain_mm": "adverb ကို verb ရှေ့ → always drinks ။  ➝ She always drinks tea."
+      "explain_mm": "adverb (always) ကို main verb ရဲ့ ရှေ့မှာ ထားရတယ် — verb ရဲ့ နောက်မှာ မဟုတ်ဘူးနော်။ ➝ She always drinks tea."
     },
     {
       "kind": "correct_error",
@@ -282,7 +282,7 @@
       "answers": [
         "He is always late"
       ],
-      "explain_mm": "be (is) နောက်မှာ → is always ။  ➝ He is always late."
+      "explain_mm": "'be' verb (is) နဲ့ဆိုရင် adverb ကို be ရဲ့ နောက်မှာ ထားရတယ် → is always ။ ➝ He is always late."
     },
     {
       "kind": "correct_error",
@@ -292,7 +292,7 @@
       "answers": [
         "They never eat meat"
       ],
-      "explain_mm": "verb ရှေ့ → never eat ။  ➝ They never eat meat."
+      "explain_mm": "adverb (never) ကို main verb (eat) ရဲ့ ရှေ့မှာ ထားပါ။ ➝ They never eat meat."
     },
     {
       "kind": "correct_error",
@@ -302,7 +302,7 @@
       "answers": [
         "I usually walk to school"
       ],
-      "explain_mm": "verb ရှေ့ → usually walk ။  ➝ I usually walk to school."
+      "explain_mm": "adverb (usually) ကို main verb ရဲ့ ရှေ့မှာ ထားပါ။ ➝ I usually walk to school."
     },
     {
       "kind": "word_order",
@@ -321,7 +321,7 @@
       "answers": [
         "I always drink tea in the morning"
       ],
-      "explain_mm": "verb ရှေ့ → always drink ။"
+      "explain_mm": "main verb ရဲ့ ရှေ့ → always drink ။ ➝ I always drink tea in the morning."
     },
     {
       "kind": "word_order",
@@ -338,7 +338,7 @@
       "answers": [
         "She usually walks to work"
       ],
-      "explain_mm": "verb ရှေ့ → usually walks ။"
+      "explain_mm": "main verb ရဲ့ ရှေ့ → usually walks ။ ➝ She usually walks to work."
     },
     {
       "kind": "word_order",
@@ -354,7 +354,7 @@
       "answers": [
         "They never eat meat"
       ],
-      "explain_mm": "verb ရှေ့ → never eat ။"
+      "explain_mm": "main verb ရဲ့ ရှေ့ → never eat ။ ➝ They never eat meat."
     },
     {
       "kind": "word_order",
@@ -370,7 +370,7 @@
       "answers": [
         "He is often late"
       ],
-      "explain_mm": "be နောက်မှာ → is often ။"
+      "explain_mm": "'be' (is) ရဲ့ နောက် → is often ။ ➝ He is often late."
     },
     {
       "kind": "word_order",
@@ -386,7 +386,7 @@
       "answers": [
         "We sometimes watch movies"
       ],
-      "explain_mm": "verb ရှေ့ → sometimes watch ။"
+      "explain_mm": "main verb ရဲ့ ရှေ့ → sometimes watch ။ ➝ We sometimes watch movies."
     },
     {
       "kind": "word_order",
@@ -402,7 +402,7 @@
       "answers": [
         "She is always late"
       ],
-      "explain_mm": "be နောက်မှာ → is always ။"
+      "explain_mm": "'be' (is) ရဲ့ နောက် → is always ။ ➝ She is always late."
     }
   ],
   "practice_recap_en": "Frequency adverbs go {v}before{/v} the main verb, but {v}after{/v} am / is / are.",
