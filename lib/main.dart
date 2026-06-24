@@ -12,10 +12,14 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:speakcraft/firebase_options.dart';
 import 'package:speakcraft/firebase_options_dev.dart';
+import 'package:speakcraft/services/reminder_service.dart';
 import 'package:speakcraft/speakcraft_app.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:timezone/data/latest.dart' as tzdata;
+import 'package:timezone/timezone.dart' as tz;
 
 import 'config/env.dart';
 import 'config/pmp_routes.dart';
@@ -126,6 +130,7 @@ Future<void> showFlutterNotification(RemoteMessage message) async {
         priority: Priority.max,
         importance: Importance.max,
         icon: 'ic_notification',
+        color: const Color(0xFF0496C7), // brand cyan — tints the small icon
         playSound: true,
         largeIcon: bigPicture,
         styleInformation: bigPicture == null
@@ -193,11 +198,24 @@ void main() {
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     await _populateDeviceInfo();
     await setupFlutterNotifications();
+    await _initTimezone();
+    // Re-apply the daily reminder schedule (survives reboots/app updates).
+    await sl<ReminderService>().reschedule();
     runApp(const SpeakCraftApp());
   }, (error, stack) {
     // Catch any errors that escape the async zone
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
   });
+}
+
+Future<void> _initTimezone() async {
+  tzdata.initializeTimeZones();
+  try {
+    final info = await FlutterTimezone.getLocalTimezone();
+    tz.setLocalLocation(tz.getLocation(info.identifier));
+  } catch (e) {
+    AppLogger.instance.error('timezone init failed: $e', error: e);
+  }
 }
 
 Future<void> _populateDeviceInfo() async {

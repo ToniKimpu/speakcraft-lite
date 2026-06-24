@@ -3,6 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  flutter_timezone
   gtk
   record_linux
   sqlite3_flutter_libs

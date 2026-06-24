@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SpeakCraft — Onboarding mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Flutter-portable only: full-side borders, OUTER shadows, linear-gradients,
+     border-radius. No inset shadows, no per-side borders, no CSS-only tricks. */
+  :root{
+    --bg0:#080D13; --bg1:#0B141D; --surface:#0E1722; --surface2:#101D29;
+    --cyan:#0496C7; --cyanBright:#28BBE6; --cyanDeep:#03789F;
+    --orange:#EA580C; --orangeBright:#F97316; --success:#00A651;
+    --gold:#F6B23C; --goldDeep:#E08A1E; --onPremium:#3A2400;
+    --text:#EAF2F7; --muted:#8AA0AE; --line:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Inter','Noto Sans Myanmar',sans-serif;
+    background:#05080C; color:var(--text);
+    padding:34px 24px 60px; min-height:100vh;
+  }
+  h1.title{font-size:20px;font-weight:800;letter-spacing:.2px;margin-bottom:4px}
+  p.sub{color:var(--muted);font-size:13px;margin-bottom:26px}
+  .row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  .col{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .cap{font-size:12px;font-weight:700;letter-spacing:.6px;color:var(--muted);text-transform:uppercase}
+
+  .phone{
+    width:300px;height:632px;border-radius:36px;
+    background:linear-gradient(160deg,var(--bg0),var(--bg1));
+    border:1px solid var(--line);
+    box-shadow:0 24px 60px rgba(0,0,0,.55);
+    padding:22px 20px; display:flex; flex-direction:column; position:relative; overflow:hidden;
+  }
+  .mm{font-family:'Noto Sans Myanmar','Inter',sans-serif;}
+  .topbar{display:flex;justify-content:space-between;align-items:center;height:22px}
+  .skip{color:var(--muted);font-size:12.5px;font-weight:600}
+  .grow{flex:1}
+  .dots{display:flex;gap:7px;justify-content:center;margin-top:18px}
+  .dot{width:7px;height:7px;border-radius:8px;background:rgba(255,255,255,.18)}
+  .dot.on{width:22px;background:var(--cyanBright)}
+
+  .cta{
+    width:100%;height:52px;border-radius:16px;border:1px solid transparent;
+    font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;
+    background:linear-gradient(135deg,var(--cyanBright),var(--cyanDeep));color:#04222E;
+    box-shadow:0 10px 24px rgba(40,187,230,.28);
+  }
+  .cta.gold{background:linear-gradient(135deg,var(--gold),var(--goldDeep));color:var(--onPremium);
+            box-shadow:0 10px 24px rgba(246,178,60,.28)}
+  .ghost{width:100%;height:46px;border-radius:14px;border:1px solid var(--line);
+         background:transparent;color:var(--muted);font-weight:600;font-size:14px;
+         display:flex;align-items:center;justify-content:center;margin-top:10px}
+
+  .badge{width:84px;height:84px;border-radius:26px;display:flex;align-items:center;justify-content:center;
+         font-size:40px;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+  .h2{font-size:23px;font-weight:800;line-height:1.25;letter-spacing:.2px}
+  .lead{font-size:14px;color:var(--muted);line-height:1.6}
+  .leadmm{font-size:13.5px;color:#B7CAD6;line-height:1.7}
+
+  .step{display:flex;gap:14px;align-items:center;background:var(--surface);
+        border:1px solid var(--line);border-radius:18px;padding:14px}
+  .stepIcon{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;flex:0 0 auto}
+  .stepT{font-size:15px;font-weight:700}
+  .stepM{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+
+  .opt{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+       padding:15px 16px;display:flex;justify-content:space-between;align-items:center}
+  .opt.sel{border-color:var(--cyanBright);background:linear-gradient(135deg,rgba(40,187,230,.14),rgba(4,150,199,.06))}
+  .optT{font-size:15px;font-weight:700}
+  .optM{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .check{width:22px;height:22px;border-radius:20px;background:var(--cyanBright);color:#04222E;
+         display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+  .ring{width:22px;height:22px;border-radius:20px;border:1px solid var(--line)}
+
+  .chips{display:flex;gap:10px}
+  .chip{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+        padding:14px 0;text-align:center}
+  .chip.sel{border-color:var(--cyanBright);background:linear-gradient(135deg,rgba(40,187,230,.14),rgba(4,150,199,.06))}
+  .chipN{font-size:20px;font-weight:800}
+  .chipM{font-size:11px;color:var(--muted);margin-top:2px}
+
+  .toggle{width:46px;height:28px;border-radius:20px;background:linear-gradient(135deg,var(--cyanBright),var(--cyanDeep));position:relative}
+  .knob{width:22px;height:22px;border-radius:20px;background:#fff;position:absolute;top:3px;left:21px;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+
+  .premCard{border-radius:20px;padding:18px;border:1px solid rgba(246,178,60,.35);
+            background:linear-gradient(150deg,rgba(246,178,60,.16),rgba(224,138,30,.05))}
+  .feat{display:flex;gap:9px;align-items:center;font-size:13px;color:#DCE7EE;margin-top:9px}
+  .ftick{width:18px;height:18px;border-radius:18px;background:var(--gold);color:var(--onPremium);
+         display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex:0 0 auto}
+  .logo{width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,var(--cyanBright),var(--cyanDeep));
+        display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;color:#04222E;
+        box-shadow:0 12px 28px rgba(40,187,230,.3)}
+  .pill{display:inline-flex;gap:6px;align-items:center;background:rgba(246,178,60,.14);
+        border:1px solid rgba(246,178,60,.35);color:var(--gold);font-size:11px;font-weight:700;
+        padding:5px 10px;border-radius:20px}
+</style>
+</head>
+<body>
+  <h1 class="title">SpeakCraft — Onboarding (mockup)</h1>
+  <p class="sub">5 screens · bilingual · shown once on first launch. React to layout/copy and I'll build it in Flutter.</p>
+
+  <div class="row">
+
+    <!-- 1. WELCOME -->
+    <div class="col">
+      <div class="cap">1 · Welcome</div>
+      <div class="phone">
+        <div class="topbar"><span></span><span class="skip">Skip</span></div>
+        <div class="grow" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center">
+          <div class="logo">Sc</div>
+          <div class="h2">Speak English<br>with confidence</div>
+          <div class="h2 mm" style="font-size:18px;color:var(--cyanBright)">ယုံကြည်မှုနဲ့<br>အင်္ဂလိပ်လို ပြောဆိုပါ</div>
+          <div class="lead" style="max-width:230px">Listen, shadow, and write your way to fluent, natural English.</div>
+          <div class="leadmm mm" style="max-width:230px">နားထောင်ပြီး လိုက်ပြော၊ ရေးသားလေ့ကျင့်ကာ သဘာဝကျကျ ပြောတတ်အောင်။</div>
+        </div>
+        <button class="cta">Get started · စတင်မယ်</button>
+        <div class="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+    </div>
+
+    <!-- 2. HOW IT WORKS -->
+    <div class="col">
+      <div class="cap">2 · How it works</div>
+      <div class="phone">
+        <div class="topbar"><span></span><span class="skip">Skip</span></div>
+        <div style="margin-top:18px">
+          <div class="h2">How it works</div>
+          <div class="leadmm mm" style="margin-top:4px">ဘယ်လို အလုပ်လုပ်လဲ</div>
+        </div>
+        <div class="grow" style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+          <div class="step">
+            <div class="stepIcon" style="background:rgba(40,187,230,.16);color:var(--cyanBright)">🎧</div>
+            <div><div class="stepT">1. Listen &amp; Shadow</div><div class="stepM mm">နားထောင်ပြီး လိုက်ပြောပါ — အသံထွက်နဲ့ ရစ်သမ်</div></div>
+          </div>
+          <div class="step">
+            <div class="stepIcon" style="background:rgba(234,88,12,.18);color:var(--orangeBright)">🎤</div>
+            <div><div class="stepT">2. Speak &amp; record</div><div class="stepM mm">ကိုယ့်အသံ ဖမ်းပြီး ပြန်နှိုင်းယှဉ်ပါ</div></div>
+          </div>
+          <div class="step">
+            <div class="stepIcon" style="background:rgba(246,178,60,.18);color:var(--gold)">✍️</div>
+            <div><div class="stepT">3. Write &amp; practice</div><div class="stepM mm">သဒ္ဒါ လေ့ကျင့်ခန်းတွေနဲ့ ချက်ချင်း စစ်ဆေး</div></div>
+          </div>
+        </div>
+        <button class="cta">Next · ရှေ့ဆက်မယ်</button>
+        <div class="dots"><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+    </div>
+
+    <!-- 3. LEVEL -->
+    <div class="col">
+      <div class="cap">3 · Your level</div>
+      <div class="phone">
+        <div class="topbar"><span></span><span class="skip">Skip</span></div>
+        <div style="margin-top:18px">
+          <div class="h2">What's your level?</div>
+          <div class="leadmm mm" style="margin-top:4px">သင့်အဆင့်က ဘယ်လောက်လဲ</div>
+        </div>
+        <div class="grow" style="display:flex;flex-direction:column;justify-content:center;gap:12px">
+          <div class="opt sel">
+            <div><div class="optT">Beginner</div><div class="optM mm">အခြေခံ — အခုမှ စတင်သူ</div></div>
+            <div class="check">✓</div>
+          </div>
+          <div class="opt">
+            <div><div class="optT">Intermediate</div><div class="optM mm">အလယ်အလတ် — အခြေခံ ရှိပြီးသား</div></div>
+            <div class="ring"></div>
+          </div>
+          <div class="opt">
+            <div><div class="optT">Advanced</div><div class="optM mm">အဆင့်မြင့် — ပိုကောင်းအောင်</div></div>
+            <div class="ring"></div>
+          </div>
+        </div>
+        <button class="cta">Next · ရှေ့ဆက်မယ်</button>
+        <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+    </div>
+
+    <!-- 4. GOAL + REMINDERS -->
+    <div class="col">
+      <div class="cap">4 · Habit</div>
+      <div class="phone">
+        <div class="topbar"><span></span><span class="skip">Skip</span></div>
+        <div style="margin-top:18px">
+          <div class="h2">Build the habit</div>
+          <div class="leadmm mm" style="margin-top:4px">နေ့စဉ် အလေ့အထ တည်ဆောက်ပါ</div>
+        </div>
+        <div class="grow" style="display:flex;flex-direction:column;justify-content:center;gap:20px">
+          <div>
+            <div class="stepT" style="margin-bottom:10px">Daily goal · နေ့စဉ် ပန်းတိုင်</div>
+            <div class="chips">
+              <div class="chip"><div class="chipN">5</div><div class="chipM mm">မိနစ်</div></div>
+              <div class="chip sel"><div class="chipN">10</div><div class="chipM mm">မိနစ်</div></div>
+              <div class="chip"><div class="chipN">20</div><div class="chipM mm">မိနစ်</div></div>
+            </div>
+          </div>
+          <div class="step" style="justify-content:space-between">
+            <div style="display:flex;gap:14px;align-items:center">
+              <div class="stepIcon" style="background:rgba(40,187,230,.16);color:var(--cyanBright)">🔔</div>
+              <div><div class="stepT">Daily reminder</div><div class="stepM mm">အချိန်မှန် သတိပေးချက်</div></div>
+            </div>
+            <div class="toggle"><div class="knob"></div></div>
+          </div>
+        </div>
+        <button class="cta">Next · ရှေ့ဆက်မယ်</button>
+        <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div></div>
+      </div>
+    </div>
+
+    <!-- 5. PREMIUM + START -->
+    <div class="col">
+      <div class="cap">5 · Premium &amp; start</div>
+      <div class="phone">
+        <div class="topbar"><span class="pill">⭐ Premium</span><span class="skip">Skip</span></div>
+        <div class="grow" style="display:flex;flex-direction:column;justify-content:center;gap:16px">
+          <div>
+            <div class="h2">Unlock everything</div>
+            <div class="leadmm mm" style="margin-top:4px">Premium နဲ့ အားလုံး ဖွင့်လှစ်ပါ</div>
+          </div>
+          <div class="premCard">
+            <div style="font-weight:800;font-size:15px;color:var(--gold)">Premium — 1 year</div>
+            <div class="feat"><div class="ftick">✓</div> Shadowing &amp; speech practice</div>
+            <div class="feat"><div class="ftick">✓</div> Sentence explanations on every video</div>
+            <div class="feat"><div class="ftick">✓</div> <span class="mm">အကုန် ဖွင့်ထား — ကန့်သတ်မရှိ</span></div>
+          </div>
+          <div class="lead" style="font-size:12.5px">Start free anytime — upgrade whenever you're ready.</div>
+        </div>
+        <button class="cta gold">Get Premium · Premium ယူမယ်</button>
+        <button class="ghost">Start free · အခမဲ့ စတင်မယ်</button>
+        <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

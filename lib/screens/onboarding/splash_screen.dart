@@ -5,6 +5,8 @@ import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/config/common_extensions.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/screens/onboarding/onboarding_page.dart';
+import 'package:speakcraft/services/share_preference_utils.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import '../../bloc/internet_checker/internet_checker_bloc.dart';
@@ -52,10 +54,13 @@ class _SplashScreenState extends State<SplashScreen> {
                   Navigator.pushReplacementNamed(context, PmpRoutes.home);
                 },
                 unauthenticated: () {
+                  // First launch → onboarding once; afterwards → login.
+                  final onboarded = SharedPreferenceUtils.getBool(
+                          OnboardingPage.kDone) ==
+                      true;
                   Navigator.pushReplacementNamed(
                     context,
-                    PmpRoutes.loginScreen,
-                    // (route) => false,
+                    onboarded ? PmpRoutes.loginScreen : PmpRoutes.onboarding,
                   );
                 },
                 onNewVersion: (appVersion) {

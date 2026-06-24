@@ -18,6 +18,7 @@ import 'package:speakcraft/repositories/listening/supabase_listening_repository.
 import 'package:speakcraft/bloc/payment/payment_bloc.dart';
 import 'package:speakcraft/repositories/payment/payment_repository.dart';
 import 'package:speakcraft/repositories/payment/supabase_payment_repository.dart';
+import 'package:speakcraft/services/reminder_service.dart';
 import 'package:speakcraft/services/theme_controller.dart';
 
 final sl = GetIt.instance;
@@ -43,6 +44,7 @@ Future<void> setupServiceLocator() async {
     instanceName: 'isOnline',
   );
   sl.registerLazySingleton<ThemeController>(() => ThemeController.load());
+  sl.registerLazySingleton<ReminderService>(() => ReminderService());
 
   // Global BLoCs (lazySingleton — survive across screens)
   sl.registerLazySingleton<AuthBloc>(() => AuthBloc());

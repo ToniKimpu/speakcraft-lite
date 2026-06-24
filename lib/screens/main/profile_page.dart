@@ -9,8 +9,11 @@ import 'package:speakcraft/core/di/service_locator.dart';
 import 'package:speakcraft/model/app_user/app_user.dart';
 import 'package:speakcraft/screens/main/widgets/app_version_widget.dart';
 import 'package:speakcraft/screens/main/widgets/profile_item_row.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:speakcraft/services/reminder_service.dart';
 import 'package:speakcraft/services/theme_controller.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/premium_status.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/env.dart';
@@ -59,7 +62,11 @@ class ProfilePage extends StatelessWidget {
               children: [
                 _HeroCard(appUser: appUser),
                 const SizedBox(height: 16),
+                const PremiumStatusCard(),
+                const SizedBox(height: 16),
                 const _AppearanceCard(),
+                const SizedBox(height: 16),
+                const _ReminderCard(),
                 const SizedBox(height: 16),
                 _SettingsCard(appUser: appUser),
                 const SizedBox(height: 16),
@@ -334,6 +341,126 @@ class _ThemeOptionTile extends StatelessWidget {
               ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _ReminderCard extends StatefulWidget {
+  const _ReminderCard();
+
+  @override
+  State<_ReminderCard> createState() => _ReminderCardState();
+}
+
+class _ReminderCardState extends State<_ReminderCard> {
+  final ReminderService _service = sl<ReminderService>();
+  late bool _enabled = _service.isEnabled;
+  late TimeOfDay _time = _service.time;
+  bool _busy = false;
+
+  Future<void> _toggle(bool value) async {
+    setState(() => _busy = true);
+    bool granted = true;
+    if (value) {
+      granted = await _service.enable(_time);
+    } else {
+      await _service.disable();
+    }
+    if (!mounted) return;
+    setState(() {
+      _enabled = value;
+      _busy = false;
+    });
+    if (value && !granted) _promptSettings();
+  }
+
+  Future<void> _pickTime() async {
+    final picked =
+        await showTimePicker(context: context, initialTime: _time);
+    if (picked == null || !mounted) return;
+    setState(() => _time = picked);
+    if (_enabled) await _service.enable(_time);
+  }
+
+  void _promptSettings() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content:
+            Text('Turn on notifications in settings to receive reminders.'),
+        behavior: SnackBarBehavior.floating,
+        action: SnackBarAction(label: 'Settings', onPressed: openAppSettings),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Container(
+      width: double.infinity,
+      decoration: ProfilePage._cardDecoration(context),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 6),
+            child: Row(
+              children: [
+                Icon(Icons.notifications_active_outlined,
+                    size: 20, color: cs.onSurface),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Daily reminder',
+                          style: PmpTextStyles.body2Semi
+                              .copyWith(color: cs.onSurface)),
+                      Text('နေ့စဉ် သတိပေးချက်',
+                          style: PmpTextStyles.label2Regular
+                              .copyWith(color: cs.onSurfaceVariant)),
+                    ],
+                  ),
+                ),
+                if (_busy)
+                  const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  )
+                else
+                  Switch(value: _enabled, onChanged: _toggle),
+              ],
+            ),
+          ),
+          if (_enabled) ...[
+            Divider(
+                color: cs.outlineVariant, height: 1, indent: 16, endIndent: 16),
+            InkWell(
+              onTap: _pickTime,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                child: Row(
+                  children: [
+                    Icon(Icons.schedule_rounded,
+                        size: 20, color: cs.onSurfaceVariant),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text('Reminder time',
+                          style: PmpTextStyles.body2Semi
+                              .copyWith(color: cs.onSurface)),
+                    ),
+                    Text(_time.format(context),
+                        style: PmpTextStyles.body2Semi
+                            .copyWith(color: cs.primary)),
+                    const SizedBox(width: 4),
+                    Icon(Icons.chevron_right, color: cs.onSurfaceVariant),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ],
       ),
     );
   }

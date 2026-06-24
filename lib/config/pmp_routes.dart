@@ -16,6 +16,7 @@ import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_pager.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_page.dart';
 import 'package:speakcraft/screens/main/new_version_screen.dart';
+import 'package:speakcraft/screens/onboarding/onboarding_page.dart';
 import 'package:speakcraft/screens/premium/premium_payment_page.dart';
 import 'package:speakcraft/screens/premium/payment_status_page.dart';
 import 'package:speakcraft/screens/profiles/update_avatar_page.dart';
@@ -36,6 +37,7 @@ import '../screens/onboarding/splash_screen.dart';
 
 class PmpRoutes {
   static const splash = 'splash';
+  static const onboarding = '/onboarding';
   static const home = '/home';
   static const loginScreen = '/auth/login';
   static const signUpScreen = '/auth/sign_up';
@@ -79,6 +81,8 @@ class PmpRoutes {
     switch (settings.name) {
       case splash:
         return _getRoute(const SplashScreen(), settings);
+      case onboarding:
+        return _getRoute(const OnboardingPage(), settings);
       case home:
         return _getRoute(const HomePage(), settings);
       case profilePage:

@@ -15,7 +15,10 @@ import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
+import 'package:speakcraft/screens/onboarding/onboarding_page.dart';
+import 'package:speakcraft/services/share_preference_utils.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/premium_status.dart';
 
 import '../../bloc/auth/auth_bloc.dart';
 import 'widgets/module_widget.dart';
@@ -58,6 +61,21 @@ class _HomePageState extends State<HomePage> {
           const VideoStepProgressEvent.loadAll(),
         );
     _sessionTimer = Timer(const Duration(minutes: 1), _onSessionTimerFired);
+    _maybeOpenUpgrade();
+  }
+
+  // If the user tapped "Get Premium" during onboarding, open the payment screen
+  // once they reach home (consumes the flag so it fires only once).
+  void _maybeOpenUpgrade() {
+    if (SharedPreferenceUtils.getBool(OnboardingPage.kPendingUpgrade) != true) {
+      return;
+    }
+    SharedPreferenceUtils.remove(OnboardingPage.kPendingUpgrade);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        Navigator.pushNamed(context, PmpRoutes.premiumPaymentPage);
+      }
+    });
   }
 
   void _onSessionTimerFired() {
@@ -118,6 +136,7 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   const SizedBox(height: 22),
+                  const HomeUpgradeBanner(),
                   const _ContinueLearningSection(),
                   const _SectionLabel('Learn'),
                   ModuleWidget(

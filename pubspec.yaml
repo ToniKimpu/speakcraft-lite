@@ -69,6 +69,8 @@ dependencies:
   pinput: ^6.0.2
   material_symbols_icons: ^4.2951.0
   flutter_svg: ^2.3.0
+  timezone: ^0.10.1
+  flutter_timezone: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -95,9 +97,11 @@ flutter_launcher_icons:
   remove_alpha_ios: true
   min_sdk_android: 21
 
-  image_path: "logo/app_logo.png" # Main app icon
-  adaptive_icon_foreground: "logo/app_logo.png"
-  adaptive_icon_background: "#000000"
+  image_path: "logo/app_logo.png" # Main app icon (iOS + legacy Android)
+  # Adaptive icon as proper layers: transparent white-mic foreground over the
+  # cyan gradient background → seamless under any launcher mask.
+  adaptive_icon_foreground: "logo/app_logo_fg.png"
+  adaptive_icon_background: "logo/app_logo_bg.png"
 
   android_notification_icon: "logo/ic_notification.png" # Notification icon
 
