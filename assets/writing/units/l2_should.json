@@ -133,6 +133,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_eat": {"en": "You {v}should eat{/v} more vegetables.", "mm": "ဟင်းသီးဟင်းရွက် ပိုစားသင့်တယ်။"},
+      "v_drink": {"en": "You {v}should drink{/v} more water.", "mm": "ရေ ပိုသောက်သင့်တယ်။"},
+      "v_sleep": {"en": "You {v}should sleep{/v} early.", "mm": "စောစော အိပ်သင့်တယ်။"},
+      "v_study": {"en": "You {v}should study{/v} every day.", "mm": "နေ့တိုင်း လေ့လာသင့်တယ်။"},
+      "v_work": {"en": "You {v}should work{/v} in a team.", "mm": "အဖွဲ့နဲ့ အလုပ်လုပ်သင့်တယ်။"},
+      "v_go": {"en": "You {v}should go{/v} to the doctor.", "mm": "ဆရာဝန်ဆီ သွားသင့်တယ်။"},
+      "v_read": {"en": "You {v}should read{/v} the instructions.", "mm": "ညွှန်ကြားချက်တွေ ဖတ်သင့်တယ်။"},
+      "v_play": {"en": "You {v}should play{/v} outside more.", "mm": "အပြင်မှာ ပိုကစားသင့်တယ်။"},
+      "v_start": {"en": "You {v}should start{/v} now.", "mm": "အခု စတင်သင့်တယ်။"},
+      "v_cook": {"en": "You {v}should cook{/v} at home.", "mm": "အိမ်မှာ ချက်စားသင့်တယ်။"}
+    },
     "note_mm": "should နဲ့ shouldn't ရဲ့နောက်မှာလိုက်တဲ့ verb က အမြဲတမ်း base form (ဥပမာ rest, study, eat) ဖြစ်ရပါမယ်။ တစ်ယောက်ယောက်ကို အကြံဉာဏ်ပေးချင်တဲ့အခါ ဒီလိုပုံစံလေးတွေနဲ့ သုံးနိုင်ပါတယ် — You should …, You shouldn't …။"
   },
   "exercises": [

@@ -134,6 +134,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_go": {"en": "I {v}will go{/v} tomorrow.", "mm": "မနက်ဖြန် သွားမယ်။"},
+      "v_study": {"en": "I {v}will study{/v} tonight.", "mm": "ဒီည စာလေ့လာမယ်။"},
+      "v_work": {"en": "She {v}will work{/v} late today.", "mm": "သူမ ဒီနေ့ နောက်ကျအထိ အလုပ်လုပ်မယ်။"},
+      "v_play": {"en": "We {v}will play{/v} after lunch.", "mm": "နေ့လယ်စာ ပြီးရင် ကစားမယ်။"},
+      "v_cook": {"en": "I {v}will cook{/v} tonight.", "mm": "ဒီည ဟင်းချက်မယ်။"},
+      "v_read": {"en": "I {v}will read{/v} it later.", "mm": "နောက်မှ ဖတ်မယ်။"},
+      "v_start": {"en": "We {v}will start{/v} at nine.", "mm": "ကိုးနာရီ စမယ်။"},
+      "v_live": {"en": "They {v}will live{/v} in Yangon.", "mm": "သူတို့ ရန်ကုန်မှာ နေမယ်။"},
+      "v_watch": {"en": "I {v}will watch{/v} the match.", "mm": "ပွဲ ကြည့်မယ်။"},
+      "v_eat": {"en": "We {v}will eat{/v} soon.", "mm": "မကြာခင် စားမယ်။"}
+    },
     "note_mm": "အနာဂတ်ကိုပြတဲ့ အချိန်စကားလုံးလေးတွေကတော့ — tomorrow, tonight, next week / month / year, soon, in the future, one day တို့ပဲ ဖြစ်ပါတယ်။ ‘will’ ရဲ့နောက်မှာ Verb ကတော့ အမြဲတမ်း Base form အတိုင်းပဲ လိုက်ရပါတယ်နော်။"
   },
   "exercises": [

@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_go": {"en": "{v}If{/v} you {v}go{/v} now, you {v}will catch{/v} the bus.", "mm": "အခု သွားရင် ဘတ်စ်ကား မီပါလိမ့်မယ်။"},
+      "v_study": {"en": "{v}If{/v} you {v}study{/v} hard, you {v}will pass{/v} the exam.", "mm": "ကြိုးစားလေ့လာရင် စာမေးပွဲ အောင်ပါလိမ့်မယ်။"},
+      "v_work": {"en": "{v}If{/v} you {v}work{/v} late, you {v}will be{/v} tired.", "mm": "နောက်ကျအထိ အလုပ်လုပ်ရင် ပင်ပန်းပါလိမ့်မယ်။"},
+      "v_play": {"en": "{v}If{/v} you {v}play{/v} outside, you {v}will feel{/v} happy.", "mm": "အပြင်မှာ ကစားရင် ပျော်ပါလိမ့်မယ်။"},
+      "v_cook": {"en": "{v}If{/v} you {v}cook{/v} dinner, I {v}will wash{/v} the dishes.", "mm": "ည စာ ချက်ရင် ပန်းကန် ကျွန်တော် ဆေးပေးပါမယ်။"},
+      "v_read": {"en": "{v}If{/v} you {v}read{/v} this book, you {v}will learn{/v} a lot.", "mm": "ဒီစာအုပ် ဖတ်ရင် အများကြီး သိလာပါလိမ့်မယ်။"},
+      "v_eat": {"en": "{v}If{/v} you {v}eat{/v} now, you {v}will not be{/v} hungry later.", "mm": "အခု စားရင် နောက်မှ ဗိုက်မဆာတော့ပါဘူး။"},
+      "v_start": {"en": "{v}If{/v} you {v}start{/v} early, you {v}will finish{/v} on time.", "mm": "စောစော စတင်ရင် အချိန်မီ ပြီးပါလိမ့်မယ်။"},
+      "v_watch": {"en": "{v}If{/v} you {v}watch{/v} the news, you {v}will know{/v} what happened.", "mm": "သတင်း ကြည့်ရင် ဘာဖြစ်တယ်ဆိုတာ သိပါလိမ့်မယ်။"},
+      "v_live": {"en": "{v}If{/v} you {v}live{/v} in London, you {v}will speak{/v} English well.", "mm": "လန်ဒန်မှာ နေရင် အင်္ဂလိပ်စကား ကောင်းကောင်း ပြောတတ်လာပါလိမ့်မယ်။"}
+    },
     "note_mm": "ပုံစံလေးက If + present simple (ဥပမာ rains, studies, has) , … will + verb (base) (ဥပမာ will go, will help) ပါ။ if-clause မှာ 'will' ကို မထည့်မိဖို့ သတိထားပါနော်။ if-clause က ဝါကျအစမှာ လာရင် comma (,) လေး ခံပေးပါ။"
   },
   "exercises": [

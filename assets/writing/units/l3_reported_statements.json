@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "past",
+    "verb_examples": {
+      "v_say": {"en": "She {v}said{/v} she was tired.", "mm": "သူမ ပင်ပန်းတယ်လို့ ပြောတယ်။"},
+      "v_tell": {"en": "He {v}told{/v} me he was busy.", "mm": "သူ အလုပ်များတယ်လို့ ကျွန်တော့်ကို ပြောတယ်။"},
+      "v_work": {"en": "He said he {v}worked{/v} in a bank.", "mm": "သူ ဘဏ်မှာ အလုပ်လုပ်တယ်လို့ ပြောတယ်။"},
+      "v_live": {"en": "She said she {v}lived{/v} in Yangon.", "mm": "သူမ ရန်ကုန်မှာ နေတယ်လို့ ပြောတယ်။"},
+      "v_study": {"en": "He said he {v}studied{/v} every night.", "mm": "သူ ညတိုင်း စာလေ့လာတယ်လို့ ပြောတယ်။"},
+      "v_like": {"en": "She said she {v}liked{/v} the food.", "mm": "သူမ အစားအစာကို ကြိုက်တယ်လို့ ပြောတယ်။"},
+      "v_want": {"en": "He said he {v}wanted{/v} to leave.", "mm": "သူ ထွက်ချင်တယ်လို့ ပြောတယ်။"},
+      "v_know": {"en": "She said she {v}knew{/v} the answer.", "mm": "သူမ အဖြေ သိတယ်လို့ ပြောတယ်။"},
+      "v_see": {"en": "He said he {v}saw{/v} the accident.", "mm": "သူ မတော်တဆမှု မြင်တယ်လို့ ပြောတယ်။"},
+      "v_finish": {"en": "She said she {v}finished{/v} the report.", "mm": "သူမ အစီရင်ခံစာ ပြီးပြီလို့ ပြောတယ်။"}
+    },
     "note_mm": "သတိထားရမှာတွေကတော့ — 'say' နောက်မှာ လူ မလိုက်ပါဘူး၊ 'tell' နောက်မှာတော့ လူ (told me) လိုက်ပါတယ်။ Tense ကို backshift လုပ်ပေးရပါမယ် — present → past (ဥပမာ work → worked, am → was), will → would, can → could ဆိုပြီးပေါ့။ 'that' ကိုတော့ ထည့်ရေးချင်လည်းရတယ်၊ မထည့်ချင်လည်း ရပါတယ် (optional)။"
   },
   "exercises": [

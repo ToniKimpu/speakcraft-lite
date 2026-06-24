@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_go": {"en": "I {v}used to go{/v} there every summer.", "mm": "နွေတိုင်း အဲဒီကို သွားဖြစ်ခဲ့တယ်။"},
+      "v_play": {"en": "We {v}used to play{/v} in the street.", "mm": "လမ်းပေါ်မှာ ကစားဖြစ်ခဲ့တယ်။"},
+      "v_live": {"en": "She {v}used to live{/v} in Mandalay.", "mm": "သူမ မန္တလေးမှာ နေခဲ့ဖူးတယ်။"},
+      "v_work": {"en": "He {v}used to work{/v} at a bank.", "mm": "သူ ဘဏ်မှာ အလုပ်လုပ်ခဲ့ဖူးတယ်။"},
+      "v_study": {"en": "I {v}used to study{/v} late at night.", "mm": "ည နက်နက် စာလေ့လာဖြစ်ခဲ့တယ်။"},
+      "v_read": {"en": "We {v}used to read{/v} comics together.", "mm": "ကာတွန်းတွေ အတူဖတ်ဖြစ်ခဲ့တယ်။"},
+      "v_eat": {"en": "I {v}used to eat{/v} a lot of sweets.", "mm": "အချိုတွေ အများကြီး စားဖြစ်ခဲ့တယ်။"},
+      "v_watch": {"en": "They {v}used to watch{/v} cartoons every morning.", "mm": "မနက်တိုင်း ကာတွန်း ကြည့်ဖြစ်ခဲ့တယ်။"},
+      "v_cook": {"en": "My mother {v}used to cook{/v} on Sundays.", "mm": "အမေက တနင်္ဂနွေနေ့တိုင်း ဟင်းချက်ဖြစ်ခဲ့တယ်။"},
+      "v_speak": {"en": "I {v}used to speak{/v} only Burmese.", "mm": "အရင်က မြန်မာစကားပဲ ပြောခဲ့တယ်။"}
+    },
     "note_mm": "· `used to + base verb` (ဥပမာ used to live, used to play) — ဒါက အတိတ်က အလေ့အထ နဲ့ အခြေအနေ (state) အတွက်ပါ။\n· `would + base verb` — ဒါကတော့ ထပ်ခါထပ်ခါ ဖြစ်ခဲ့တဲ့ action အတွက်ပဲ သုံးပါတယ်။\n· အငြင်း/အမေး ပုံစံမှာတော့ -d ကျသွားပါတယ် — `didn't use to` / `Did you use to …?`"
   },
   "exercises": [

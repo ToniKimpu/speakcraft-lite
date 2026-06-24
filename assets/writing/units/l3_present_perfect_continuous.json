@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "ing",
+    "verb_examples": {
+      "v_work": {"en": "I {v}have been working{/v} all day.", "mm": "တစ်နေ့လုံး အလုပ်လုပ်နေတာ။"},
+      "v_study": {"en": "She {v}has been studying{/v} since morning.", "mm": "မနက်ကတည်းက သူမ စာလေ့လာနေတာ။"},
+      "v_live": {"en": "We {v}have been living{/v} here for five years.", "mm": "ဒီမှာ ငါးနှစ် နေလာတာ။"},
+      "v_play": {"en": "They {v}have been playing{/v} for two hours.", "mm": "နှစ်နာရီ ကစားနေတာ။"},
+      "v_read": {"en": "I {v}have been reading{/v} this book all week.", "mm": "တစ်ပတ်လုံး ဒီစာအုပ် ဖတ်နေတာ။"},
+      "v_cook": {"en": "He {v}has been cooking{/v} since noon.", "mm": "နေ့လယ်ကတည်းက သူ ဟင်းချက်နေတာ။"},
+      "v_watch": {"en": "We {v}have been watching{/v} films all evening.", "mm": "ညနေလုံး ရုပ်ရှင် ကြည့်နေတာ။"},
+      "v_speak": {"en": "She {v}has been speaking{/v} for an hour.", "mm": "တစ်နာရီ စကားပြောနေတာ။"},
+      "v_sleep": {"en": "The baby {v}has been sleeping{/v} for hours.", "mm": "ကလေး နာရီတွေ အိပ်နေတာ။"},
+      "v_eat": {"en": "You {v}have been eating{/v} too much sugar.", "mm": "သကြား များများ စားနေမိတာ။"}
+    },
     "note_mm": "ပုံစံက have/has + been + verb-ing ပါ (ဥပမာ have been working, has been studying)။ 'been' က ပုံသေမို့လို့ ပြောင်းစရာမလိုပါဘူး။ Verb ကိုပဲ -ing ပေါင်းထည့်ပေးပါ။ 'for' (ကြာချိန်) နဲ့ 'since' (စချိန်) တို့နဲ့ တွဲပြီး သုံးပေးရပါမယ်။"
   },
   "exercises": [

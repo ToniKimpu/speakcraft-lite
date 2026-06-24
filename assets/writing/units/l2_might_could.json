@@ -134,6 +134,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_go": {"en": "I {v}might go{/v} to the party.", "mm": "ပါတီကို သွားကောင်းသွားမယ်။"},
+      "v_study": {"en": "She {v}could study{/v} abroad.", "mm": "သူမ နိုင်ငံခြားမှာ ပညာသင်နိုင်တယ်။"},
+      "v_work": {"en": "He {v}might work{/v} on Sunday.", "mm": "သူ တနင်္ဂနွေနေ့ အလုပ်လုပ်ကောင်းလုပ်မယ်။"},
+      "v_play": {"en": "We {v}could play{/v} tennis tomorrow.", "mm": "မနက်ဖြန် တင်းနစ် ကစားနိုင်တယ်။"},
+      "v_cook": {"en": "I {v}might cook{/v} tonight.", "mm": "ဒီည ဟင်းချက်ကောင်းချက်မယ်။"},
+      "v_read": {"en": "You {v}could read{/v} this for ideas.", "mm": "အကြံရဖို့ ဒါကို ဖတ်ကြည့်နိုင်တယ်။"},
+      "v_eat": {"en": "We {v}might eat{/v} at home.", "mm": "အိမ်မှာ စားကောင်းစားမယ်။"},
+      "v_watch": {"en": "They {v}could watch{/v} the game later.", "mm": "နောက်မှ ပွဲကို ကြည့်နိုင်တယ်။"},
+      "v_start": {"en": "We {v}might start{/v} early.", "mm": "စောစော စတင်ကောင်းစတင်မယ်။"},
+      "v_live": {"en": "She {v}could live{/v} with her sister.", "mm": "သူမ အစ်မနဲ့ နေနိုင်တယ်။"}
+    },
     "note_mm": "‘might’, ‘could’, ‘might not’ တို့ရဲ့နောက်မှာ လိုက်တဲ့ verb က အမြဲတမ်း base form (ဥပမာ go, rain, be) ဖြစ်ရပါမယ်။ သိပ်မသေချာတဲ့ ဖြစ်နိုင်ခြေတွေကို ပြောချင်တဲ့အခါမှာ သုံးပေးရပြီး သူတို့ရဲ့ အဓိပ္ပာယ်က ‘maybe’ ဒါမှမဟုတ် ‘perhaps’ နဲ့ ဆင်တူပါတယ်နော်။"
   },
   "exercises": [

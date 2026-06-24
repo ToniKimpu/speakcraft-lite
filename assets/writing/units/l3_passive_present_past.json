@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "past_participle",
+    "verb_examples": {
+      "v_make": {"en": "This bag {v}is made{/v} of leather.", "mm": "ဒီအိတ်ကို သားရေနဲ့ လုပ်ထားတာ။"},
+      "v_build": {"en": "The bridge {v}was built{/v} in 1995.", "mm": "တံတားကို ၁၉၉၅ မှာ ဆောက်ခဲ့တာ။"},
+      "v_write": {"en": "The report {v}was written{/v} last week.", "mm": "အစီရင်ခံစာကို အရင်အပတ်က ရေးခဲ့တာ။"},
+      "v_clean": {"en": "The room {v}is cleaned{/v} every day.", "mm": "အခန်းကို နေ့တိုင်း သန့်ရှင်းရေး လုပ်တယ်။"},
+      "v_send": {"en": "The letter {v}was sent{/v} yesterday.", "mm": "စာကို မနေ့က ပို့ခဲ့တာ။"},
+      "v_use": {"en": "This tool {v}is used{/v} by builders.", "mm": "ဒီကိရိယာကို ဆောက်လုပ်ရေးသမားတွေ သုံးတယ်။"},
+      "v_teach": {"en": "English {v}is taught{/v} at the school.", "mm": "ကျောင်းမှာ အင်္ဂလိပ်စာ သင်ပေးတယ်။"},
+      "v_cook": {"en": "The rice {v}is cooked{/v} in the morning.", "mm": "ထမင်းကို မနက်ပိုင်း ချက်တယ်။"},
+      "v_finish": {"en": "The work {v}was finished{/v} on time.", "mm": "အလုပ်ကို အချိန်မီ ပြီးအောင် လုပ်ခဲ့တယ်။"},
+      "v_see": {"en": "The film {v}was seen{/v} by millions.", "mm": "ရုပ်ရှင်ကို လူသန်းနဲ့ချီ ကြည့်ခဲ့ကြတယ်။"}
+    },
     "note_mm": "passive ရဲ့ ပုံသေနည်းက be + V3 ပါ။ present မှာဆိုရင် is/are + V3 (ဥပမာ is made, are built)၊ past မှာဆိုရင် was/were + V3 (ဥပမာ was written, were cleaned) ဆိုပြီး သုံးရပါတယ်။ V3 ဆိုတာ past participle ကို ပြောတာပါနော်။"
   },
   "exercises": [

@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_work": {"en": "The plan is risky; {v}however{/v}, it {v}works{/v}.", "mm": "အစီအစဉ်က အန္တရာယ်ရှိပေမယ့် အလုပ်ဖြစ်တယ်။"},
+      "v_study": {"en": "She is busy; {v}however{/v}, she {v}studies{/v} daily.", "mm": "သူမ အလုပ်များပေမယ့် နေ့တိုင်း လေ့လာတယ်။"},
+      "v_help": {"en": "It is cheap; {v}moreover{/v}, it {v}helps{/v} beginners.", "mm": "ဈေးသက်သာတယ်၊ ထို့အပြင် စတင်သူတွေကို အထောက်အကူ ဖြစ်တယ်။"},
+      "v_cost": {"en": "Demand rose; {v}therefore{/v}, prices {v}cost{/v} more now.", "mm": "ဝယ်လိုအား တက်လာတယ်၊ ဒါကြောင့် ဈေးတွေ ပိုကျတယ်။"},
+      "v_make": {"en": "The tool is simple; {v}moreover{/v}, it {v}makes{/v} work fast.", "mm": "ကိရိယာက ရိုးရှင်းတယ်၊ ထို့အပြင် အလုပ်ကို မြန်စေတယ်။"},
+      "v_use": {"en": "It is free; {v}therefore{/v}, many people {v}use{/v} it.", "mm": "အခမဲ့ဖြစ်တယ်၊ ဒါကြောင့် လူအများ သုံးကြတယ်။"},
+      "v_live": {"en": "Rent is high; {v}however{/v}, people still {v}live{/v} here.", "mm": "အိမ်လခ ကြီးပေမယ့် လူတွေ ဒီမှာပဲ နေကြတယ်။"},
+      "v_start": {"en": "The team is ready; {v}therefore{/v}, we {v}start{/v} today.", "mm": "အဖွဲ့ အဆင်သင့်ဖြစ်ပြီ၊ ဒါကြောင့် ဒီနေ့ စတယ်။"},
+      "v_finish": {"en": "We planned well; {v}therefore{/v}, we {v}finish{/v} early.", "mm": "ကောင်းကောင်း စီစဉ်ထားတယ်၊ ဒါကြောင့် စောစော ပြီးတယ်။"},
+      "v_want": {"en": "It is useful; {v}moreover{/v}, students {v}want{/v} it.", "mm": "အသုံးဝင်တယ်၊ ထို့အပြင် ကျောင်းသားတွေ လိုချင်ကြတယ်။"}
+    },
     "note_mm": "however (ဆန့်ကျင်ဘက်) · moreover (အချက်ထပ်ဖြည့်) · therefore (အကျိုးဆက်)။ sentence အသစ်ရဲ့အစမှာ သုံးရင် comma ထည့်ပေးပါ၊ ဒါမှမဟုတ် semicolon နောက်မှာလည်း သုံးနိုင်ပါတယ် (…; however, …)။ comma တစ်ခုတည်းသုံးပြီးတော့ sentence နှစ်ခုကို မချိတ်ရပါဘူးနော်။"
   },
   "exercises": [

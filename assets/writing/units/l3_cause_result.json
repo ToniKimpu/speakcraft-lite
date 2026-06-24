@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_work": {"en": "We {v}work{/v} from home {v}due to{/v} the lockdown.", "mm": "ပိတ်ဆို့မှုကြောင့် အိမ်ကနေ အလုပ်လုပ်ကြတယ်။"},
+      "v_study": {"en": "She {v}studies{/v} late {v}because of{/v} her exams.", "mm": "စာမေးပွဲတွေကြောင့် သူမ ည နက်နက် လေ့လာတယ်။"},
+      "v_live": {"en": "They {v}live{/v} in the city {v}because of{/v} work.", "mm": "အလုပ်ကြောင့် သူတို့ မြို့ထဲမှာ နေကြတယ်။"},
+      "v_help": {"en": "Many {v}help{/v} {v}as a result of{/v} the campaign.", "mm": "လှုပ်ရှားမှုကြောင့် အများအပြား ကူညီကြတယ်။"},
+      "v_make": {"en": "We {v}make{/v} less profit {v}due to{/v} the costs.", "mm": "ကုန်ကျစရိတ်တွေကြောင့် အမြတ် နည်းသွားတယ်။"},
+      "v_use": {"en": "We {v}use{/v} less paper {v}because of{/v} the new rule.", "mm": "စည်းမျဉ်းသစ်ကြောင့် စက္ကူ နည်းနည်းပဲ သုံးတယ်။"},
+      "v_cost": {"en": "Things {v}cost{/v} more {v}due to{/v} inflation.", "mm": "ငွေကြေးဖောင်းပွမှုကြောင့် ပစ္စည်းတွေ ဈေးတက်တယ်။"},
+      "v_start": {"en": "We {v}start{/v} late {v}because of{/v} the traffic.", "mm": "ကားပိတ်တာကြောင့် နောက်ကျမှ စတယ်။"},
+      "v_finish": {"en": "We {v}finish{/v} early {v}as a result of{/v} good planning.", "mm": "ကောင်းမွန်တဲ့ စီစဉ်မှုကြောင့် စောစော ပြီးတယ်။"},
+      "v_want": {"en": "People {v}want{/v} change {v}because of{/v} the problems.", "mm": "ပြဿနာတွေကြောင့် လူတွေ ပြောင်းလဲမှု လိုချင်ကြတယ်။"}
+    },
     "note_mm": "because of / due to / as a result of နောက်မှာ noun (clause မဟုတ်) လိုက်ပါတယ်။ because (of မပါ) နောက်မှာတော့ clause လိုက်ပါတယ်။ as a result (of မပါ) ကတော့ result ရဲ့ရှေ့မှာ linker အဖြစ် သုံးပါတယ်။"
   },
   "exercises": [

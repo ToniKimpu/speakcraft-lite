@@ -159,6 +159,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_study": {"en": "I {v}am going to study{/v} tonight.", "mm": "ဒီည စာလေ့လာတော့မယ်။"},
+      "v_work": {"en": "She {v}is going to work{/v} from home.", "mm": "သူမ အိမ်ကနေ အလုပ်လုပ်တော့မယ်။"},
+      "v_start": {"en": "We {v}are going to start{/v} a business.", "mm": "ကျွန်တော်တို့ စီးပွားရေး စတင်တော့မယ်။"},
+      "v_go": {"en": "They {v}are going to go{/v} to Bagan.", "mm": "သူတို့ ပုဂံ သွားတော့မယ်။"},
+      "v_live": {"en": "I {v}am going to live{/v} abroad next year.", "mm": "နောက်နှစ် နိုင်ငံခြားမှာ နေတော့မယ်။"},
+      "v_cook": {"en": "He {v}is going to cook{/v} for us.", "mm": "သူ ကျွန်တော်တို့အတွက် ဟင်းချက်ပေးတော့မယ်။"},
+      "v_play": {"en": "We {v}are going to play{/v} football later.", "mm": "နောက်မှ ဘောလုံး ကစားတော့မယ်။"},
+      "v_read": {"en": "I {v}am going to read{/v} that book.", "mm": "အဲဒီစာအုပ် ဖတ်တော့မယ်။"},
+      "v_watch": {"en": "We {v}are going to watch{/v} a movie tonight.", "mm": "ဒီည ရုပ်ရှင် ကြည့်တော့မယ်။"},
+      "v_eat": {"en": "I {v}am going to eat{/v} out tonight.", "mm": "ဒီည အပြင်မှာ စားတော့မယ်။"}
+    },
     "note_mm": "going to ရဲ့နောက်မှာ လိုက်တဲ့ verb က သူ့ရဲ့မူရင်းပုံစံ base form (go, study, start) ပဲ ဖြစ်ရပါမယ်။ အနာဂတ်ကိုပြတဲ့ အချိန်ပြစကားလုံးတွေကတော့ — tomorrow, next week / month, soon, this weekend, this evening တို့ပဲ ဖြစ်ပါတယ်ခင်ဗျ။"
   },
   "exercises": [

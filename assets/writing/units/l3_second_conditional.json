@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "past",
+    "verb_examples": {
+      "v_go": {"en": "{v}If{/v} I {v}went{/v} abroad, I {v}would learn{/v} faster.", "mm": "နိုင်ငံခြား သွားရရင် ပိုမြန်မြန် တတ်လာမှာ။"},
+      "v_live": {"en": "{v}If{/v} I {v}lived{/v} by the sea, I {v}would swim{/v} every day.", "mm": "ပင်လယ်နားမှာ နေရရင် နေ့တိုင်း ရေကူးမှာ။"},
+      "v_work": {"en": "{v}If{/v} she {v}worked{/v} less, she {v}would be{/v} happier.", "mm": "သူမ အလုပ်နည်းနည်းပဲ လုပ်ရရင် ပိုပျော်မှာ။"},
+      "v_play": {"en": "{v}If{/v} we {v}played{/v} together, it {v}would be{/v} fun.", "mm": "အတူတူ ကစားရရင် ပျော်စရာ ဖြစ်မှာ။"},
+      "v_study": {"en": "{v}If{/v} you {v}studied{/v} more, you {v}would pass{/v}.", "mm": "ပိုလေ့လာရရင် အောင်မှာပေါ့။"},
+      "v_read": {"en": "{v}If{/v} I {v}read{/v} more, I {v}would know{/v} more.", "mm": "ပိုဖတ်ရရင် ပိုသိမှာပေါ့။"},
+      "v_eat": {"en": "{v}If{/v} I {v}ate{/v} less sugar, I {v}would feel{/v} better.", "mm": "သကြား နည်းနည်းပဲ စားရရင် ပိုကျန်းမာမှာ။"},
+      "v_start": {"en": "{v}If{/v} we {v}started{/v} now, we {v}would finish{/v} early.", "mm": "အခု စရရင် စောစော ပြီးမှာ။"},
+      "v_watch": {"en": "{v}If{/v} I {v}watched{/v} less TV, I {v}would sleep{/v} more.", "mm": "တီဗီ နည်းနည်းပဲ ကြည့်ရရင် ပိုအိပ်ရမှာ။"},
+      "v_cook": {"en": "{v}If{/v} I {v}cooked{/v} at home, I {v}would save{/v} money.", "mm": "အိမ်မှာ ချက်စားရရင် ပိုက်ဆံ သက်သာမှာ။"}
+    },
     "note_mm": "ပုံစံက If + past simple (ဥပမာ had, lived, knew · 'be' ဆိုရင်တော့ were), … would + verb (base) (ဥပမာ would go, would help) ပါ။ if-clause ထဲမှာ 'would' လုံးဝ မထည့်ရပါဘူးနော်။ if-clause ကို ဝါကျအရှေ့မှာထားရင် comma (,) ခံပေးဖို့ မမေ့ပါနဲ့။"
   },
   "exercises": [

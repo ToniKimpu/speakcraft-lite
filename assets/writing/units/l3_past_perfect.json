@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "past_participle",
+    "verb_examples": {
+      "v_go": {"en": "She {v}had gone{/v} home before I arrived.", "mm": "ကျွန်တော် မရောက်ခင် သူမ အိမ်ပြန်သွားနှင့်ပြီ။"},
+      "v_eat": {"en": "We {v}had eaten{/v} before the film started.", "mm": "ရုပ်ရှင် မစခင် ကျွန်တော်တို့ စားနှင့်ပြီးပြီ။"},
+      "v_leave": {"en": "The bus {v}had left{/v} when we got there.", "mm": "ကျွန်တော်တို့ ရောက်တော့ ဘတ်စ်ကား ထွက်သွားနှင့်ပြီ။"},
+      "v_start": {"en": "The class {v}had started{/v} when she came in.", "mm": "သူမ ဝင်လာတော့ အတန်း စနှင့်ပြီ။"},
+      "v_finish": {"en": "I {v}had finished{/v} my work by noon.", "mm": "နေ့လယ်ဆို အလုပ် ပြီးနှင့်ပြီ။"},
+      "v_see": {"en": "I knew the place because I {v}had seen{/v} it before.", "mm": "အရင်က မြင်ဖူးနှင့်လို့ အဲဒီနေရာကို သိတာ။"},
+      "v_study": {"en": "He passed because he {v}had studied{/v} hard.", "mm": "ကြိုးစား လေ့လာထားနှင့်လို့ သူ အောင်တာ။"},
+      "v_work": {"en": "She was tired because she {v}had worked{/v} all night.", "mm": "တစ်ညလုံး အလုပ်လုပ်ထားနှင့်လို့ သူမ ပင်ပန်းနေတာ။"},
+      "v_speak": {"en": "They {v}had spoken{/v} before the meeting.", "mm": "အစည်းအဝေး မတိုင်ခင် သူတို့ စကားပြောနှင့်ပြီး။"},
+      "v_call": {"en": "I {v}had called{/v} her before she texted.", "mm": "သူမ စာမပို့ခင် ကျွန်တော် ဖုန်းဆက်နှင့်ပြီး။"}
+    },
     "note_mm": "Past perfect ရဲ့ ပုံစံက had + V3 ပါ (ဥပမာ had gone, had eaten, had left, had finished)။ Subject အားလုံးအတွက် 'had' ကိုပဲ သုံးရပါတယ်နော်။ V3 ဆိုတာ Past participle ကို ပြောတာပါ (Irregular verbs တွေကိုတော့ အထူးသတိထားပေးပါ — ဥပမာ go→gone, eat→eaten, see→seen)။"
   },
   "exercises": [

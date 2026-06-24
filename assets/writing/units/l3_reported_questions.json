@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_ask": {"en": "She {v}asked{/v} where I lived.", "mm": "ကျွန်တော် ဘယ်မှာ နေသလဲဆိုတာ သူမ မေးတယ်။"},
+      "v_tell": {"en": "He {v}told{/v} me to wait outside.", "mm": "အပြင်မှာ စောင့်ဖို့ သူ ပြောတယ်။"},
+      "v_go": {"en": "She asked if I would {v}go{/v} with her.", "mm": "သူမနဲ့ အတူ သွားမလားလို့ မေးတယ်။"},
+      "v_come": {"en": "He asked when I would {v}come{/v} back.", "mm": "ဘယ်တော့ ပြန်လာမလဲလို့ သူ မေးတယ်။"},
+      "v_wait": {"en": "She asked me to {v}wait{/v} for her.", "mm": "သူမကို စောင့်ပေးဖို့ ပြောတယ်။"},
+      "v_work": {"en": "He asked where I {v}worked{/v}.", "mm": "ဘယ်မှာ အလုပ်လုပ်သလဲလို့ သူ မေးတယ်။"},
+      "v_help": {"en": "She asked me to {v}help{/v} her.", "mm": "ကူညီပေးဖို့ သူမ တောင်းဆိုတယ်။"},
+      "v_call": {"en": "He asked me to {v}call{/v} him later.", "mm": "နောက်မှ ဖုန်းဆက်ပေးဖို့ သူ ပြောတယ်။"},
+      "v_finish": {"en": "She asked if I had {v}finished{/v}.", "mm": "ပြီးပြီလားလို့ သူမ မေးတယ်။"},
+      "v_start": {"en": "He asked when we would {v}start{/v}.", "mm": "ဘယ်တော့ စမလဲလို့ သူ မေးတယ်။"}
+    },
     "note_mm": "Reported question အတွက်ကတော့ ask + (wh-/if) + statement order ပုံစံကို သုံးပြီး ('do/did' ဖြုတ်ရပါတယ်)။ Reported command အတွက်ကတော့ tell/ask + လူ + to + base verb (ဥပမာ to wait, to go) ပုံစံကို သုံးပါတယ်။ · အငြင်း (negative) ဆိုရင်တော့ not to + base ဆိုပြီး သုံးရုံပါပဲ။"
   },
   "exercises": [

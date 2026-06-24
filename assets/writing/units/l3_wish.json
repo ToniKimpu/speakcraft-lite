@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "past",
+    "verb_examples": {
+      "v_go": {"en": "I {v}wish{/v} I {v}went{/v} out more.", "mm": "ပိုပြီး အပြင်ထွက်ဖြစ်ရင် ကောင်းမှာ။"},
+      "v_live": {"en": "I {v}wish{/v} I {v}lived{/v} closer to work.", "mm": "အလုပ်နဲ့ ပိုနီးတဲ့နေရာ နေရရင် ကောင်းမှာ။"},
+      "v_work": {"en": "I {v}wish{/v} I {v}worked{/v} fewer hours.", "mm": "အလုပ်ချိန် နည်းနည်းပဲ ဆိုရင် ကောင်းမှာ။"},
+      "v_study": {"en": "I {v}wish{/v} I {v}studied{/v} harder.", "mm": "ပိုကြိုးစား လေ့လာဖြစ်ရင် ကောင်းမှာ။"},
+      "v_know": {"en": "I {v}wish{/v} I {v}knew{/v} the answer.", "mm": "အဖြေ သိရင် ကောင်းမှာ။"},
+      "v_have": {"en": "I {v}wish{/v} I {v}had{/v} more time.", "mm": "အချိန် ပိုရှိရင် ကောင်းမှာ။"},
+      "v_eat": {"en": "I {v}wish{/v} I {v}ate{/v} more healthily.", "mm": "ပိုကျန်းမာအောင် စားဖြစ်ရင် ကောင်းမှာ။"},
+      "v_start": {"en": "I {v}wish{/v} I {v}started{/v} earlier.", "mm": "ပိုစော စဖြစ်ရင် ကောင်းမှာ။"},
+      "v_speak": {"en": "I {v}wish{/v} I {v}spoke{/v} French.", "mm": "ပြင်သစ်စကား ပြောတတ်ရင် ကောင်းမှာ။"},
+      "v_play": {"en": "I {v}wish{/v} I {v}played{/v} the guitar.", "mm": "ဂစ်တာ တီးတတ်ရင် ကောင်းမှာ။"}
+    },
     "note_mm": "wish + past simple (ဥပမာ: had, knew, lived · Verb to be ဆိုရင် were) က အခု မဖြစ်နိုင်တဲ့အရာတွေအတွက်ပါ။ wish + past perfect (ဥပမာ: had gone, had studied) ကတော့ အတိတ်က နောင်တတွေအတွက်ပါ။ 'if only' ဆိုတာကတော့ ခံစားချက်ပိုပြင်းတဲ့ 'wish' ပါပဲ။"
   },
   "exercises": [

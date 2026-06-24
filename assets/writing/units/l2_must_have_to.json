@@ -159,6 +159,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_work": {"en": "You {v}must work{/v} harder.", "mm": "ပိုကြိုးစား အလုပ်လုပ်ရမယ်။"},
+      "v_study": {"en": "I {v}have to study{/v} tonight.", "mm": "ဒီည စာလေ့လာရမယ်။"},
+      "v_start": {"en": "We {v}must start{/v} now.", "mm": "အခု စတင်ရမယ်။"},
+      "v_go": {"en": "She {v}has to go{/v} to work early.", "mm": "သူမ စောစော အလုပ်သွားရမယ်။"},
+      "v_cook": {"en": "I {v}have to cook{/v} dinner.", "mm": "ည စာ ချက်ရမယ်။"},
+      "v_read": {"en": "You {v}must read{/v} the rules.", "mm": "စည်းမျဉ်းတွေ ဖတ်ရမယ်။"},
+      "v_eat": {"en": "You {v}must eat{/v} vegetables.", "mm": "ဟင်းသီးဟင်းရွက် စားရမယ်။"},
+      "v_play": {"en": "Children {v}have to play{/v} safely.", "mm": "ကလေးတွေ ဘေးကင်းအောင် ကစားရမယ်။"},
+      "v_watch": {"en": "You {v}have to watch{/v} your spending.", "mm": "အသုံးစရိတ်ကို ဂရုစိုက်ရမယ်။"},
+      "v_sleep": {"en": "You {v}must sleep{/v} more.", "mm": "ပိုအိပ်ရမယ်။"}
+    },
     "note_mm": "must / have to / has to တို့ရဲ့နောက်မှာ လိုက်တဲ့ verb က အမြဲတမ်း base form (ဥပမာ go, work, wear) ဖြစ်ရပါမယ်။ Subject က he / she / it ဆိုရင် has to သုံးရပြီး၊ mustn't က ‘မလုပ်ရဘူး’ (တားမြစ်တာ)၊ don't have to ကတော့ ‘လုပ်စရာမလိုဘူး’ (မလိုအပ်တာ) ဆိုတဲ့ အဓိပ္ပာယ်တွေပါပဲ။"
   },
   "exercises": [

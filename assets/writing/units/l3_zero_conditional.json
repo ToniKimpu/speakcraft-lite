@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "base",
+    "verb_examples": {
+      "v_go": {"en": "{v}If{/v} you {v}go{/v} to bed late, you {v}feel{/v} tired.", "mm": "ညဘက် နောက်ကျမှ အိပ်ရင် ပင်ပန်းတတ်တယ်။"},
+      "v_eat": {"en": "{v}If{/v} you {v}eat{/v} too much, you {v}feel{/v} sleepy.", "mm": "အလွန်အကျွံ စားရင် အိပ်ချင်လာတယ်။"},
+      "v_work": {"en": "{v}If{/v} you {v}work{/v} hard, you {v}make{/v} progress.", "mm": "ကြိုးစား အလုပ်လုပ်ရင် တိုးတက်မှု ရတယ်။"},
+      "v_play": {"en": "{v}If{/v} children {v}play{/v} outside, they {v}sleep{/v} better.", "mm": "ကလေးတွေ အပြင်မှာ ကစားရင် ပိုကောင်း အိပ်ပျော်တယ်။"},
+      "v_cook": {"en": "{v}If{/v} you {v}cook{/v} rice too long, it {v}gets{/v} sticky.", "mm": "ထမင်းကို ကြာကြာ ချက်ရင် စေးလာတယ်။"},
+      "v_read": {"en": "{v}If{/v} you {v}read{/v} every day, your English {v}improves{/v}.", "mm": "နေ့တိုင်း စာဖတ်ရင် အင်္ဂလိပ်စာ တိုးတက်လာတယ်။"},
+      "v_sleep": {"en": "{v}If{/v} you {v}sleep{/v} well, you {v}work{/v} better.", "mm": "ကောင်းကောင်း အိပ်ရင် အလုပ် ပိုကောင်းလုပ်နိုင်တယ်။"},
+      "v_start": {"en": "{v}If{/v} you {v}start{/v} early, you {v}finish{/v} on time.", "mm": "စောစော စတင်ရင် အချိန်မီ ပြီးတယ်။"},
+      "v_watch": {"en": "{v}If{/v} you {v}watch{/v} TV in English, you {v}learn{/v} new words.", "mm": "အင်္ဂလိပ်လို တီဗီ ကြည့်ရင် စကားလုံးအသစ်တွေ သိလာတယ်။"},
+      "v_live": {"en": "{v}If{/v} you {v}live{/v} near the sea, the air {v}feels{/v} fresh.", "mm": "ပင်လယ်နားမှာ နေရင် လေက လန်းဆန်းတယ်။"}
+    },
     "note_mm": "ပုံစံက If + present simple, … present simple ပါ။ ဝါကျနှစ်ပိုင်းလုံးမှာ present simple ကိုပဲ သုံးရမှာဖြစ်လို့ 'will' လုံးဝမထည့်ရပါဘူးနော်။ Subject က he/she/it (singular) ဆိုရင် Verb မှာ -s/-es ထည့်ပေးဖို့ မမေ့ပါနဲ့။ (ဥပမာ If it rains, the road gets wet။)"
   },
   "exercises": [

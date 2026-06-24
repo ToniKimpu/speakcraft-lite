@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "past_participle",
+    "verb_examples": {
+      "v_make": {"en": "The decision {v}will be made{/v} tomorrow.", "mm": "ဆုံးဖြတ်ချက်ကို မနက်ဖြန် ချမှတ်မယ်။"},
+      "v_build": {"en": "A new school {v}will be built{/v} here.", "mm": "ဒီမှာ ကျောင်းသစ် ဆောက်မယ်။"},
+      "v_write": {"en": "The book {v}has been written{/v} already.", "mm": "စာအုပ်ကို ရေးပြီးသွားပြီ။"},
+      "v_clean": {"en": "The hall {v}has been cleaned{/v}.", "mm": "ခန်းမကို သန့်ရှင်းရေး လုပ်ပြီးပြီ။"},
+      "v_send": {"en": "The parcel {v}has been sent{/v}.", "mm": "ပါဆယ်ကို ပို့ပြီးပြီ။"},
+      "v_use": {"en": "This app {v}can be used{/v} offline.", "mm": "ဒီအက်ပ်ကို အင်တာနက် မလိုဘဲ သုံးနိုင်တယ်။"},
+      "v_finish": {"en": "The job {v}can be finished{/v} today.", "mm": "အလုပ်ကို ဒီနေ့ ပြီးအောင် လုပ်နိုင်တယ်။"},
+      "v_see": {"en": "The stars {v}can be seen{/v} at night.", "mm": "ကြယ်တွေကို ညဘက် မြင်နိုင်တယ်။"},
+      "v_teach": {"en": "This {v}can be taught{/v} in one lesson.", "mm": "ဒါကို သင်ခန်းစာ တစ်ခုနဲ့ သင်ပေးနိုင်တယ်။"},
+      "v_cook": {"en": "Dinner {v}will be cooked{/v} by seven.", "mm": "ည စာကို ခုနစ်နာရီဆို ချက်ပြီးမယ်။"}
+    },
     "note_mm": "'be' verb ကိုပဲ tense အလိုက် ပြောင်းပေးရမှာပါ၊ V3 ကတော့ ပုံစံမပြောင်းပါဘူးနော်။ will be + V3 · is/are being + V3 · has/have been + V3 · modal + be + V3။"
   },
   "exercises": [

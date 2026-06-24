@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "past_participle",
+    "verb_examples": {
+      "v_go": {"en": "{v}If{/v} I {v}had gone{/v} earlier, I {v}would have caught{/v} the train.", "mm": "ပိုစောစော သွားခဲ့ရင် ရထား မီခဲ့မှာ။"},
+      "v_study": {"en": "{v}If{/v} you {v}had studied{/v}, you {v}would have passed{/v}.", "mm": "လေ့လာခဲ့ရင် အောင်ခဲ့မှာ။"},
+      "v_work": {"en": "{v}If{/v} she {v}had worked{/v} harder, she {v}would have won{/v}.", "mm": "ပိုကြိုးစားခဲ့ရင် နိုင်ခဲ့မှာ။"},
+      "v_play": {"en": "{v}If{/v} we {v}had played{/v} better, we {v}would have won{/v}.", "mm": "ပိုကောင်းကောင်း ကစားခဲ့ရင် နိုင်ခဲ့မှာ။"},
+      "v_call": {"en": "{v}If{/v} you {v}had called{/v}, I {v}would have helped{/v}.", "mm": "ဖုန်းဆက်ခဲ့ရင် ကူညီပေးခဲ့မှာ။"},
+      "v_help": {"en": "{v}If{/v} they {v}had helped{/v}, we {v}would have finished{/v}.", "mm": "သူတို့ ကူခဲ့ရင် ပြီးခဲ့မှာ။"},
+      "v_leave": {"en": "{v}If{/v} we {v}had left{/v} early, we {v}would have avoided{/v} the traffic.", "mm": "စောစော ထွက်ခဲ့ရင် ကားပိတ်တာ ရှောင်နိုင်ခဲ့မှာ။"},
+      "v_start": {"en": "{v}If{/v} I {v}had started{/v} sooner, I {v}would have finished{/v}.", "mm": "ပိုစော စခဲ့ရင် ပြီးခဲ့မှာ။"},
+      "v_watch": {"en": "{v}If{/v} I {v}had watched{/v} the news, I {v}would have known{/v}.", "mm": "သတင်း ကြည့်ခဲ့ရင် သိခဲ့မှာ။"},
+      "v_eat": {"en": "{v}If{/v} I {v}had eaten{/v} breakfast, I {v}would not have felt{/v} weak.", "mm": "မနက်စာ စားခဲ့ရင် အားမနည်းခဲ့ဘူး။"}
+    },
     "note_mm": "ပုံစံအကျဉ်းချုပ်ကတော့ If + had + V3 (ဥပမာ had studied, had known, had left), … would have + V3 (ဥပမာ would have passed, would have helped) ပါပဲ။ အရေးကြီးတာက if-clause မှာ would have လုံးဝမထည့်ဖို့ပါပဲ။ V3 ဆိုတာ past participle (gone, seen, done) ကို ပြောတာပါနော်။"
   },
   "exercises": [

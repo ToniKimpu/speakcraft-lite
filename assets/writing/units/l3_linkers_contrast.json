@@ -153,6 +153,18 @@
     ],
     "time_words": [],
     "verb_form": "ing",
+    "verb_examples": {
+      "v_work": {"en": "{v}Despite{/v} {v}working{/v} hard, he failed.", "mm": "ကြိုးစား အလုပ်လုပ်ပေမယ့် သူ ကျရှုံးခဲ့တယ်။"},
+      "v_study": {"en": "{v}Despite{/v} {v}studying{/v} a lot, she felt unsure.", "mm": "အများကြီး လေ့လာပေမယ့် သူမ မသေချာ ဖြစ်နေတယ်။"},
+      "v_live": {"en": "{v}In spite of{/v} {v}living{/v} abroad, he missed home.", "mm": "နိုင်ငံခြားမှာ နေပေမယ့် သူ အိမ်ကို လွမ်းတယ်။"},
+      "v_help": {"en": "{v}Despite{/v} {v}helping{/v} a lot, she got no thanks.", "mm": "အများကြီး ကူညီပေမယ့် သူမ ကျေးဇူးတင်စကား မရခဲ့ဘူး။"},
+      "v_like": {"en": "{v}Despite{/v} {v}liking{/v} the job, he resigned.", "mm": "အလုပ်ကို ကြိုက်ပေမယ့် သူ နုတ်ထွက်ခဲ့တယ်။"},
+      "v_want": {"en": "{v}In spite of{/v} {v}wanting{/v} to go, she stayed.", "mm": "သွားချင်ပေမယ့် သူမ နေခဲ့တယ်။"},
+      "v_cost": {"en": "{v}Despite{/v} {v}costing{/v} a lot, it sold well.", "mm": "ဈေးကြီးပေမယ့် ရောင်းအား ကောင်းခဲ့တယ်။"},
+      "v_make": {"en": "{v}Despite{/v} {v}making{/v} mistakes, he improved.", "mm": "အမှားတွေ လုပ်မိပေမယ့် သူ တိုးတက်လာတယ်။"},
+      "v_start": {"en": "{v}In spite of{/v} {v}starting{/v} late, we finished.", "mm": "နောက်ကျမှ စပေမယ့် ပြီးအောင် လုပ်နိုင်ခဲ့တယ်။"},
+      "v_finish": {"en": "{v}Despite{/v} {v}finishing{/v} early, she stayed.", "mm": "စောစော ပြီးပေမယ့် သူမ ဆက်နေခဲ့တယ်။"}
+    },
     "note_mm": "despite / in spite of နောက်မှာ noun ဒါမှမဟုတ် -ing လိုက်ပါတယ် (ဥပမာ Despite being tired)။ although နောက်မှာတော့ clause လိုက်ရပါတယ် (ဥပမာ Although he was tired)။ whereas ကတော့ နှိုင်းယှဉ်တဲ့အခါသုံးပြီး သူ့ရှေ့မှာ comma ခั่นပေးရပါတယ်။"
   },
   "exercises": [
