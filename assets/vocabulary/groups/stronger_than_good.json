@@ -24,12 +24,24 @@
       "goes_with_note_mm": "နေ့စဉ်သုံးတဲ့ nouns တွေ၊ sounds, looks, feels တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
       "examples": [
         {
-          "en": "That's a great idea.",
-          "mm": ""
+          "en": "That's a {w}great{/w} {c}idea{/c}.",
+          "mm": "ဒါက တကယ့်ကို great ဖြစ်တဲ့ အကြံဉာဏ်ပဲ။"
         },
         {
-          "en": "We had a great time at the beach.",
-          "mm": ""
+          "en": "We had a {w}great{/w} {c}time{/c} at the beach.",
+          "mm": "ကမ်းခြေမှာ ကျွန်တော်တို့ တကယ့်ကို great ဖြစ်တဲ့ အချိန်လေးတွေ ကုန်ဆုံးခဲ့ရတယ်။"
+        },
+        {
+          "en": "That's {w}great{/w} {c}news{/c} — congratulations!",
+          "mm": "ဒါ တကယ့်ကို great ဖြစ်တဲ့ သတင်းပဲ၊ ဂုဏ်ယူပါတယ်နော်။"
+        },
+        {
+          "en": "The {c}weather{/c} was {w}great{/w} all weekend.",
+          "mm": "စနေ၊ တနင်္ဂနွေ တစ်ပတ်လုံး ရာသီဥတုက တကယ့်ကို great ဖြစ်နေတာ။"
+        },
+        {
+          "en": "Thanks, that {c}sounds{/c} {w}great{/w}!",
+          "mm": "ကျေးဇူးပဲ၊ အဲဒါ တကယ့်ကို great ဖြစ်မယ့် ပုံစံပဲ။"
         }
       ],
       "collocations": [
@@ -53,12 +65,24 @@
       "goes_with_note_mm": "View တွေ၊ အတွေ့အကြုံတွေ၊ ပြီးတော့ look, taste, sound တွေနဲ့ တွဲသုံးရင် အရမ်း natural ဖြစ်တယ်။",
       "examples": [
         {
-          "en": "The view from the top was amazing.",
-          "mm": ""
+          "en": "The {c}view{/c} from the top was {w}amazing{/w}.",
+          "mm": "အပေါ်ကနေ ကြည့်လိုက်တဲ့ မြင်ကွင်းက တကယ့်ကို amazing ဖြစ်တယ်။"
         },
         {
-          "en": "She did an amazing job on the project.",
-          "mm": ""
+          "en": "She did an {w}amazing{/w} {c}job{/c} on the project.",
+          "mm": "သူမ ဒီပရောဂျက်မှာ တကယ့်ကို amazing ဖြစ်တဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
+        },
+        {
+          "en": "The food here is {c}absolutely{/c} {w}amazing{/w}.",
+          "mm": "ဒီက အစားအသောက်တွေက တကယ့်ကို amazing ဖြစ်လွန်းတယ်။"
+        },
+        {
+          "en": "What an {w}amazing{/w} {c}experience{/c}!",
+          "mm": "တကယ့်ကို amazing ဖြစ်တဲ့ အတွေ့အကြုံပါလား။"
+        },
+        {
+          "en": "The {c}concert{/c} was {w}amazing{/w} — I'll never forget it.",
+          "mm": "ကွန်เสิร์တ်က တကယ့်ကို amazing ဖြစ်တယ်၊ ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။"
         }
       ],
       "collocations": [
@@ -87,12 +111,24 @@
       "goes_with_note_mm": "Result တွေ၊ အခွင့်အရေးတွေနဲ့ တွဲသုံးလေ့ရှိတယ်။",
       "examples": [
         {
-          "en": "You passed? Fantastic!",
-          "mm": ""
+          "en": "You passed? {w}Fantastic{/w}!",
+          "mm": "အောင်သွားတယ်ပေါ့ ဟုတ်လား? Fantastic ပဲ!"
         },
         {
-          "en": "The food at that restaurant is fantastic.",
-          "mm": ""
+          "en": "The {c}food{/c} at that restaurant is {w}fantastic{/w}.",
+          "mm": "အဲဒီစားသောက်ဆိုင်က အစားအသောက်တွေက တကယ့်ကို fantastic ဖြစ်တယ်။"
+        },
+        {
+          "en": "She got a {w}fantastic{/w} {c}result{/c} in her exam.",
+          "mm": "သူမ စာမေးပွဲမှာ တကယ့်ကို fantastic ဖြစ်တဲ့ ရလဒ်တွေ ရခဲ့တယ်။"
+        },
+        {
+          "en": "That's {w}fantastic{/w} {c}news{/c}!",
+          "mm": "ဒါ တကယ့်ကို fantastic ဖြစ်တဲ့ သတင်းပဲ။"
+        },
+        {
+          "en": "The {c}team{/c} did a {w}fantastic{/w} job.",
+          "mm": "အသင်းက တကယ့်ကို fantastic ဖြစ်တဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
         }
       ],
       "collocations": [
@@ -121,12 +157,24 @@
       "goes_with_note_mm": "Work, quality, standards တွေနဲ့ တွဲသုံးတာ များပါတယ်။",
       "examples": [
         {
-          "en": "She has excellent communication skills.",
-          "mm": ""
+          "en": "She has {w}excellent{/w} {c}communication{/c} skills.",
+          "mm": "သူမမှာ တကယ့်ကို excellent ဖြစ်တဲ့ ဆက်သွယ်ပြောဆိုနိုင်စွမ်း ရှိတယ်။"
         },
         {
-          "en": "The hotel offers excellent service.",
-          "mm": ""
+          "en": "The hotel offers {w}excellent{/w} {c}service{/c}.",
+          "mm": "ဒီဟိုတယ်က တကယ့်ကို excellent ဖြစ်တဲ့ ဝန်ဆောင်မှုတွေ ပေးတယ်။"
+        },
+        {
+          "en": "That's an {w}excellent{/w} {c}point{/c}.",
+          "mm": "ဒါ တကယ့်ကို excellent ဖြစ်တဲ့ အချက်ပဲ။"
+        },
+        {
+          "en": "The car is in {w}excellent{/w} {c}condition{/c}.",
+          "mm": "ကားက တကယ့်ကို excellent ဖြစ်တဲ့ အခြေအနေမှာ ရှိနေတယ်။"
+        },
+        {
+          "en": "He did {w}excellent{/w} {c}work{/c} on the report.",
+          "mm": "သူ အစီရင်ခံစာအတွက် တကယ့်ကို excellent ဖြစ်တဲ့ အလုပ်ကို လုပ်ထားတယ်။"
         }
       ],
       "collocations": [
@@ -151,12 +199,24 @@
       "goes_with_note_mm": "People, times, experiences တွေနဲ့ တွဲသုံးဖို့ အဆင်ပြေဆုံးပါ။",
       "examples": [
         {
-          "en": "We had a wonderful evening together.",
-          "mm": ""
+          "en": "We had a {w}wonderful{/w} {c}evening{/c} together.",
+          "mm": "ကျွန်တော်တို့ အတူတူ တကယ့်ကို wonderful ဖြစ်တဲ့ ညနေခင်းလေးကို ဖြတ်သန်းခဲ့ကြတယ်။"
         },
         {
-          "en": "Thank you — you've been wonderful.",
-          "mm": ""
+          "en": "Thank you — you've been {w}wonderful{/w}.",
+          "mm": "ကျေးဇူးတင်ပါတယ်၊ သင်က တကယ့်ကို wonderful ဖြစ်တဲ့သူပါ။"
+        },
+        {
+          "en": "She's a {w}wonderful{/w} {c}person{/c}.",
+          "mm": "သူမက တကယ့်ကို wonderful ဖြစ်တဲ့ လူတစ်ယောက်ပါ။"
+        },
+        {
+          "en": "What a {w}wonderful{/w} {c}surprise{/c}!",
+          "mm": "ဘယ်လောက်တောင် wonderful ဖြစ်တဲ့ အံ့အားသင့်စရာလေးလဲ။"
+        },
+        {
+          "en": "We had a {w}wonderful{/w} {c}time{/c} on holiday.",
+          "mm": "အားလပ်ရက်မှာ ကျွန်တော်တို့ တကယ့်ကို wonderful ဖြစ်တဲ့ အချိန်လေးတွေ ကုန်ဆုံးခဲ့ရတယ်။"
         }
       ],
       "collocations": [

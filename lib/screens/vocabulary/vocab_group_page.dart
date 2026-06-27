@@ -480,20 +480,54 @@ class _ExampleRow extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(example.en,
-                    style: PmpTextStyles.body2Regular
-                        .copyWith(color: cs.onSurface, height: 1.4)),
+                _ExampleText(text: example.en),
                 if (example.mm.isNotEmpty)
-                  Text(example.mm,
-                      style: PmpTextStyles.label2Regular
-                          .copyWith(color: cs.onSurfaceVariant)),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 1),
+                    child: Text(example.mm,
+                        style: PmpTextStyles.label2Regular
+                            .copyWith(color: cs.onSurfaceVariant)),
+                  ),
               ],
             ),
           ),
-          _SpeakButton(text: example.en, small: true),
+          _SpeakButton(text: stripExampleMarkup(example.en), small: true),
         ],
       ),
     );
+  }
+}
+
+/// Strips the {w}/{c} highlight markup from an example (for TTS / plain use).
+String stripExampleMarkup(String s) =>
+    s.replaceAll(RegExp(r'\{/?[wc]\}'), '');
+
+/// Renders an example, colouring the target word ({w}…{/w}, cyan) and its
+/// collocation partner ({c}…{/c}, orange) so the pairing stands out in context.
+class _ExampleText extends StatelessWidget {
+  const _ExampleText({required this.text});
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final base =
+        PmpTextStyles.body2Regular.copyWith(color: cs.onSurface, height: 1.4);
+    final spans = <TextSpan>[];
+    final re = RegExp(r'\{(w|c)\}(.*?)\{/\1\}');
+    var last = 0;
+    for (final m in re.allMatches(text)) {
+      if (m.start > last) {
+        spans.add(TextSpan(text: text.substring(last, m.start)));
+      }
+      final color = m.group(1) == 'w' ? cs.primary : PmpColors.brandOrange;
+      spans.add(TextSpan(
+          text: m.group(2),
+          style: base.copyWith(color: color, fontWeight: FontWeight.w700)));
+      last = m.end;
+    }
+    if (last < text.length) spans.add(TextSpan(text: text.substring(last)));
+    return Text.rich(TextSpan(style: base, children: spans));
   }
 }
 
