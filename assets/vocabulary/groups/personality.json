@@ -394,14 +394,6 @@
       "options": [],
       "explain_en": "Someone who doesn't joke is serious.",
       "explain_mm": "နောက်ပြောင်မနေဘဲ တည်တည်ငြိမ်ငြိမ်နေတဲ့သူကို serious ဖြစ်တယ်လို့ ခေါ်ပါတယ်။"
-    },
-    {
-      "type": "gap_fill",
-      "prompt": "Type the word: \"The party was so ___!\"",
-      "answer": "fun",
-      "options": [],
-      "explain_en": "An enjoyable event is fun.",
-      "explain_mm": "ပျော်ဖို့ကောင်းတဲ့ အခမ်းအနား ဒါမှမဟုတ် အတွေ့အကြုံကို fun လို့ သုံးပါတယ်။"
     }
   ]
 }
