@@ -1,0 +1,401 @@
+{
+  "id": "weather",
+  "title": "Weather",
+  "level": 1,
+  "order": 16,
+  "theme": "Weather",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "Essential words for talking about the daily weather. These adjectives help you describe the temperature and conditions outside.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက နေ့စဉ်ရာသီဥတုအကြောင်း ပြောတဲ့အခါ အသုံးအများဆုံးတွေမို့လို့ စုပေးထားတာပါ။ အပြင်မှာ ရာသီဥတု ဘယ်လိုရှိလဲဆိုတာကို အပူချိန်ရော၊ အခြေအနေပါ ပြောပြနိုင်ဖို့ ဒီ adjective တွေကို သုံးရတာပေါ့။",
+  "words": [
+    {
+      "word": "sunny",
+      "pos": "adjective",
+      "ipa": "/ˈsʌn.i/",
+      "short_en": "bright with light from the sun",
+      "examples": [
+        {
+          "en": "It's a beautiful {w}sunny{/w} {c}day{/c}.",
+          "mm": "ဒီနေ့တော့ နေသာပြီး အရမ်းလှတဲ့နေ့လေးပဲ။"
+        },
+        {
+          "en": "We went for a walk in the {w}sunny{/w} {c}weather{/c}.",
+          "mm": "နေသာတဲ့ရာသီဥတုမှာ ငါတို့ လမ်းလျှောက်ထွက်ခဲ့ကြတယ်။"
+        },
+        {
+          "en": "The {c}garden{/c} looks lovely when it is {w}sunny{/w}.",
+          "mm": "နေသာတဲ့အချိန်ဆို ဥယျာဉ်လေးက ကြည့်လို့ကောင်းလိုက်တာ။"
+        },
+        {
+          "en": "I love {w}sunny{/w} {c}mornings{/c} in summer.",
+          "mm": "နွေရာသီမှာ နေသာတဲ့ မနက်ခင်းတွေကို ငါအရမ်းသဘောကျတယ်။"
+        },
+        {
+          "en": "It's too {w}sunny{/w} to {c}sit{/c} outside without a hat.",
+          "mm": "နေက အရမ်းပူတော့ ဦးထုပ်မဆောင်းဘဲ အပြင်မှာထိုင်ဖို့ မဖြစ်နိုင်ဘူး။"
+        }
+      ],
+      "short_mm": "နေသာတယ်"
+    },
+    {
+      "word": "cloudy",
+      "pos": "adjective",
+      "ipa": "/ˈklaʊ.di/",
+      "short_en": "with many clouds in the sky",
+      "examples": [
+        {
+          "en": "It's a bit {w}cloudy{/w} {c}today{/c}.",
+          "mm": "ဒီနေ့တော့ မိုးအုံ့နေတာ နည်းနည်းလေးရှိတယ်။"
+        },
+        {
+          "en": "The {c}sky{/c} is very {w}cloudy{/w} this afternoon.",
+          "mm": "ဒီနေ့မွန်းလွဲပိုင်းမှာ ကောင်းကင်ကြီး အရမ်းမိုးအုံ့နေတယ်။"
+        },
+        {
+          "en": "It looks {w}cloudy{/w} — I think it might {c}rain{/c}.",
+          "mm": "မိုးအုံ့နေတာပဲ၊ မိုးရွာတော့မယ်ထင်တယ်။"
+        },
+        {
+          "en": "We had a {w}cloudy{/w} {c}start{/c} to the week.",
+          "mm": "ဒီအပတ်အစမှာ ရာသီဥတုက မိုးအုံ့နေခဲ့တယ်။"
+        },
+        {
+          "en": "Even on {w}cloudy{/w} {c}days{/c}, you can still get sunburnt.",
+          "mm": "မိုးအုံ့နေတဲ့နေ့တွေမှာတောင် နေလောင်နိုင်တယ်နော်။"
+        }
+      ],
+      "short_mm": "တိမ်ထူတယ်"
+    },
+    {
+      "word": "rainy",
+      "pos": "adjective",
+      "ipa": "/ˈreɪ.ni/",
+      "short_en": "having a lot of rain",
+      "examples": [
+        {
+          "en": "I don't like {w}rainy{/w} {c}weekends{/c}.",
+          "mm": "ငါ မိုးရွာတဲ့ စနေ၊ တနင်္ဂနွေနေ့တွေကို မကြိုက်ဘူး။"
+        },
+        {
+          "en": "It's been a very {w}rainy{/w} {c}month{/c}.",
+          "mm": "ဒီလက မိုးရွာတဲ့ရက်တွေ အရမ်းများတယ်။"
+        },
+        {
+          "en": "Bring your {c}umbrella{/c} because it's {w}rainy{/w} outside.",
+          "mm": "အပြင်မှာ မိုးရွာနေလို့ ထီးယူသွားဦး။"
+        },
+        {
+          "en": "We stayed inside on the {w}rainy{/w} {c}afternoon{/c}.",
+          "mm": "မိုးရွာနေတဲ့ မွန်းလွဲပိုင်းမှာ ငါတို့ အိမ်ထဲမှာပဲ နေဖြစ်ခဲ့တယ်။"
+        },
+        {
+          "en": "The {c}streets{/c} are slippery in {w}rainy{/w} weather.",
+          "mm": "မိုးရွာတဲ့ရာသီဥတုမှာ လမ်းတွေက ချော်လွယ်တယ်။"
+        }
+      ],
+      "short_mm": "မိုးရွာတယ်"
+    },
+    {
+      "word": "windy",
+      "pos": "adjective",
+      "ipa": "/ˈwɪn.di/",
+      "short_en": "with a lot of wind",
+      "examples": [
+        {
+          "en": "It's very {w}windy{/w} at the {c}beach{/c} today.",
+          "mm": "ဒီနေ့ ကမ်းခြေမှာ လေအရမ်းတိုက်နေတယ်။"
+        },
+        {
+          "en": "Hold onto your {c}hat{/c} — it's so {w}windy{/w}!",
+          "mm": "ဦးထုပ်ကို သေချာကိုင်ထားနော်၊ လေက တအားတိုက်နေတာ။"
+        },
+        {
+          "en": "The {c}trees{/c} are moving in the {w}windy{/w} weather.",
+          "mm": "လေတိုက်တဲ့ရာသီဥတုမှာ သစ်ပင်တွေ လှုပ်ခါနေတယ်။"
+        },
+        {
+          "en": "It was a {w}windy{/w} {c}night{/c} with lots of noise.",
+          "mm": "ညက လေတိုက်ပြီး ဆူညံသံတွေ အရမ်းများတယ်။"
+        },
+        {
+          "en": "I don't like {w}windy{/w} {c}days{/c} for cycling.",
+          "mm": "လေတိုက်တဲ့နေ့တွေမှာ စက်ဘီးစီးရတာ ငါမကြိုက်ဘူး။"
+        }
+      ],
+      "short_mm": "လေတိုက်တယ်"
+    },
+    {
+      "word": "hot",
+      "pos": "adjective",
+      "ipa": "/hɒt/",
+      "short_en": "having a high temperature",
+      "examples": [
+        {
+          "en": "It's really {w}hot{/w} in this {c}room{/c}.",
+          "mm": "ဒီအခန်းထဲမှာ အရမ်းပူတယ်။"
+        },
+        {
+          "en": "I love {w}hot{/w} {c}summer{/c} days.",
+          "mm": "နွေရာသီရဲ့ ပူပြင်းတဲ့နေ့တွေကို ငါသဘောကျတယ်။"
+        },
+        {
+          "en": "It's too {w}hot{/w} to {c}exercise{/c} right now.",
+          "mm": "အခုအချိန်မှာ လေ့ကျင့်ခန်းလုပ်ဖို့က အရမ်းပူလွန်းတယ်။"
+        },
+        {
+          "en": "Drink plenty of {c}water{/c} when it's {w}hot{/w}.",
+          "mm": "ရာသီဥတုပူတဲ့အခါ ရေများများသောက်ပါ။"
+        },
+        {
+          "en": "The {c}sun{/c} makes it feel very {w}hot{/w}.",
+          "mm": "နေပူတော့ အရမ်းပူသလို ခံစားရတယ်။"
+        }
+      ],
+      "short_mm": "ပူတယ်"
+    },
+    {
+      "word": "cold",
+      "pos": "adjective",
+      "ipa": "/kəʊld/",
+      "short_en": "having a low temperature",
+      "examples": [
+        {
+          "en": "It's very {w}cold{/w} {c}outside{/c} today.",
+          "mm": "ဒီနေ့ အပြင်မှာ အရမ်းအေးတယ်။"
+        },
+        {
+          "en": "I need a {c}coat{/c} because it's {w}cold{/w}.",
+          "mm": "အေးနေလို့ ငါကုတ်အင်္ကျီလိုတယ်။"
+        },
+        {
+          "en": "The {c}water{/c} in the pool is too {w}cold{/w}.",
+          "mm": "ရေကူးကန်ထဲကရေက အရမ်းအေးလွန်းတယ်။"
+        },
+        {
+          "en": "It was a {w}cold{/w} {c}winter{/c} morning.",
+          "mm": "ဆောင်းရာသီရဲ့ အေးစိမ့်တဲ့ မနက်ခင်းတစ်ခု ဖြစ်ခဲ့တယ်။"
+        },
+        {
+          "en": "My {c}hands{/c} are {w}cold{/w}.",
+          "mm": "ငါ့လက်တွေ အေးစက်နေတယ်။"
+        }
+      ],
+      "short_mm": "အေးတယ်"
+    },
+    {
+      "word": "warm",
+      "pos": "adjective",
+      "ipa": "/wɔːm/",
+      "short_en": "a comfortable, pleasant heat",
+      "nuance_en": "\"Warm\" is pleasant; \"hot\" can be uncomfortable.",
+      "examples": [
+        {
+          "en": "It's a nice {w}warm{/w} {c}day{/c}.",
+          "mm": "ဒီနေ့တော့ ရာသီဥတုက နွေးနွေးထွေးထွေးနဲ့ ကောင်းလိုက်တာ။"
+        },
+        {
+          "en": "I like the {w}warm{/w} {c}sunshine{/c} on my face.",
+          "mm": "မျက်နှာပေါ်ကို ကျရောက်လာတဲ့ နွေးထွေးတဲ့ နေရောင်ခြည်ကို ငါကြိုက်တယ်။"
+        },
+        {
+          "en": "It's {w}warm{/w} enough to {c}swim{/c} today.",
+          "mm": "ဒီနေ့ ရေကူးလို့ရလောက်အောင် ရာသီဥတုက နွေးတယ်။"
+        },
+        {
+          "en": "The {c}weather{/c} is {w}warm{/w} in spring.",
+          "mm": "နွေဦးရာသီမှာ ရာသီဥတုက နွေးထွေးတယ်။"
+        },
+        {
+          "en": "Wear a {w}warm{/w} {c}sweater{/c} if you go out.",
+          "mm": "အပြင်ထွက်ရင် နွေးထွေးတဲ့ ဆွယ်တာအင်္ကျီ ဝတ်သွားပါ။"
+        }
+      ],
+      "confuse_with": [
+        "hot"
+      ],
+      "short_mm": "နွေးထွေးတယ်",
+      "nuance_mm": "Hot လိုမျိုး မပူလွန်းဘဲ ခံစားရတာ သက်သောင့်သက်သာ ရှိတဲ့ အပူချိန်မျိုးပါ။"
+    },
+    {
+      "word": "freezing",
+      "pos": "adjective",
+      "ipa": "/ˈfriː.zɪŋ/",
+      "short_en": "extremely cold",
+      "examples": [
+        {
+          "en": "It's {w}freezing{/w} {c}today{/c} — wear a scarf!",
+          "mm": "ဒီနေ့တော့ အရိုးထိအေးနေတာပဲ၊ ပဝါပတ်သွားဦး။"
+        },
+        {
+          "en": "The {c}wind{/c} makes it feel {w}freezing{/w}.",
+          "mm": "လေတိုက်တော့ အရမ်းကို အေးစက်နေသလိုပဲ။"
+        },
+        {
+          "en": "I'm {w}freezing{/w} in this {c}office{/c}.",
+          "mm": "ဒီရုံးခန်းထဲမှာ ငါ အရမ်းအေးနေပြီ။"
+        },
+        {
+          "en": "It was a {w}freezing{/w} {c}night{/c} in January.",
+          "mm": "ဇန်နဝါရီလရဲ့ အေးခဲနေတဲ့ ညတစ်ခု ဖြစ်ခဲ့တယ်။"
+        },
+        {
+          "en": "The {c}lake{/c} is {w}freezing{/w} in winter.",
+          "mm": "ဆောင်းရာသီမှာ အိုင်ရေတွေ အေးခဲနေတယ်။"
+        }
+      ],
+      "short_mm": "အရမ်းအေးတယ်"
+    },
+    {
+      "word": "What's the weather like?",
+      "pos": "phrase",
+      "ipa": "/wɒts ðə ˈweð.ər laɪk/",
+      "short_en": "A question used to ask about the weather",
+      "examples": [
+        {
+          "en": "{w}What's the weather like{/w} in {c}London{/c}?",
+          "mm": "လန်ဒန်မှာ ရာသီဥတု ဘယ်လိုရှိလဲ။"
+        },
+        {
+          "en": "I'll call you to ask: {w}What's the weather like{/w} {c}there{/c}?",
+          "mm": "မင်းဆီ ဖုန်းဆက်ပြီး ဟိုမှာ ရာသီဥတု ဘယ်လိုရှိလဲဆိုတာ မေးမယ်။"
+        },
+        {
+          "en": "{w}What's the weather like{/w}? Should I bring an {c}umbrella{/c}?",
+          "mm": "ရာသီဥတု ဘယ်လိုရှိလဲ။ ငါ ထီးယူသွားသင့်လား။"
+        },
+        {
+          "en": "Before we travel, {w}what's the weather like{/w} in {c}Paris{/c}?",
+          "mm": "ခရီးမသွားခင် ပဲရစ်မှာ ရာသီဥတု ဘယ်လိုရှိလဲဆိုတာ သိချင်တယ်။"
+        },
+        {
+          "en": "Tell me, {w}what's the weather like{/w} {c}today{/c}?",
+          "mm": "ပြောပါဦး၊ ဒီနေ့ ရာသီဥတု ဘယ်လိုရှိလဲ။"
+        }
+      ],
+      "short_mm": "ရာသီဥတု ဘယ်လိုရှိလဲ?"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "It's 35 degrees! It's not just warm, it's ___.",
+      "right": "hot",
+      "wrong": "warm",
+      "why": "\"warm\" is pleasant; \"hot\" is very high temperature.",
+      "why_mm": "Warm က သာယာပြီး နွေးထွေးတာမျိုး၊ Hot ကတော့ အပူချိန် အရမ်းမြင့်ပြီး ပူတာမျိုးပါ။"
+    },
+    {
+      "prompt": "It's only 2 degrees outside — it's not just cold, it's ___.",
+      "right": "freezing",
+      "wrong": "cold",
+      "why": "\"freezing\" is extremely cold.",
+      "why_mm": "Freezing ဆိုတာကတော့ Cold ထက် ပိုပြီး အရမ်းအေးစက်နေတဲ့ အခြေအနေကို ပြောတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "The sky is full of grey clouds. It is ___.",
+      "answer": "cloudy",
+      "options": [
+        "cloudy",
+        "sunny",
+        "hot"
+      ],
+      "explain_en": "Many clouds in the sky means it is cloudy.",
+      "explain_mm": "ကောင်းကင်မှာ တိမ်တွေ အများကြီးဆိုရင် cloudy ဖြစ်တယ်လို့ ပြောရမှာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The sun is shining brightly. It is ___.",
+      "answer": "sunny",
+      "options": [
+        "sunny",
+        "rainy",
+        "cold"
+      ],
+      "explain_en": "Bright light from the sun means it is sunny.",
+      "explain_mm": "နေရောင်ခြည် တောက်ပနေရင်တော့ sunny ဖြစ်တာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I need an umbrella because it is ___.",
+      "answer": "rainy",
+      "options": [
+        "rainy",
+        "hot",
+        "windy"
+      ],
+      "explain_en": "Umbrellas are for rainy weather.",
+      "explain_mm": "မိုးရွာတဲ့ rainy weather မှာ ထီးဆောင်းရတာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My hat blew away because it is so ___.",
+      "answer": "windy",
+      "options": [
+        "windy",
+        "sunny",
+        "warm"
+      ],
+      "explain_en": "Strong wind makes things blow away.",
+      "explain_mm": "လေတွေ အားပြင်းပြင်း တိုက်ရင် windy ဖြစ်တာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It's 38 degrees! It is very ___.",
+      "answer": "hot",
+      "options": [
+        "hot",
+        "cold",
+        "freezing"
+      ],
+      "explain_en": "A high temperature is hot.",
+      "explain_mm": "အပူချိန် မြင့်နေရင် hot ဖြစ်တယ်လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"It's 5 degrees. It's quite ___.\"",
+      "answer": "cold",
+      "options": [],
+      "explain_en": "A low temperature is cold.",
+      "explain_mm": "အပူချိန် နိမ့်နေရင်တော့ cold ဖြစ်တာပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"It's 20 degrees. It's a nice ___ day.\"",
+      "answer": "warm",
+      "options": [],
+      "explain_en": "A pleasant, comfortable temperature is warm.",
+      "explain_mm": "စိတ်သက်သာရာရစေတဲ့ အပူချိန်ကို warm လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"It's minus 5 degrees! It's ___!\"",
+      "answer": "freezing",
+      "options": [],
+      "explain_en": "Extremely cold weather is freezing.",
+      "explain_mm": "တော်တော်လေး အေးနေရင် freezing လို့ ပြောရမှာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___ in New York today?\"",
+      "answer": "What's the weather like",
+      "options": [],
+      "explain_en": "This is the standard question to ask about the weather.",
+      "explain_mm": "ရာသီဥတုအကြောင်း မေးချင်ရင် ဒီမေးခွန်းက အသင့်တော်ဆုံးပါပဲ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The trees are moving a lot. It is ___.",
+      "answer": "windy",
+      "options": [
+        "windy",
+        "cloudy",
+        "sunny"
+      ],
+      "explain_en": "Moving trees indicate strong wind.",
+      "explain_mm": "သစ်ပင်တွေ လှုပ်ခါနေရင် လေတိုက်နေတဲ့ windy အခြေအနေလို့ မှတ်နိုင်ပါတယ်။"
+    }
+  ]
+}

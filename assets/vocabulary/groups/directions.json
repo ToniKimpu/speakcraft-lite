@@ -1,0 +1,388 @@
+{
+  "id": "directions",
+  "title": "Asking the way",
+  "level": 1,
+  "order": 15,
+  "theme": "Directions",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Getting lost is a common problem for beginners. These essential phrases will help you ask for directions and understand the instructions you receive.",
+  "why_grouped_mm": "လမ်းမေးတဲ့အခါနဲ့ လမ်းညွှန်ချက်တွေကို နားလည်အောင် လုပ်တဲ့အခါမှာ သုံးတဲ့ အသုံးအနှုန်းတွေမို့လို့ တစ်စုတည်း စုပေးထားတာပါ။",
+  "words": [
+    {
+      "word": "How do I get to",
+      "pos": "expression",
+      "short_en": "a polite way to ask for directions to a place",
+      "examples": [
+        {
+          "en": "{w}How do I get to{/w} the {c}station{/c}?",
+          "mm": "ဘူတာရုံကို ဘယ်လိုသွားရမလဲခင်ဗျာ။"
+        },
+        {
+          "en": "Excuse me, {w}how do I get to{/w} the {c}museum{/c}?",
+          "mm": "ခွင့်လွှတ်ပါ၊ ပြတိုက်ကို ဘယ်လိုသွားရမလဲဆိုတာ ပြောပြပေးလို့ရမလား။"
+        },
+        {
+          "en": "{w}How do I get to{/w} the city {c}centre{/c} from here?",
+          "mm": "ဒီကနေ မြို့လယ်ခေါင်ကို ဘယ်လိုသွားရမလဲ။"
+        },
+        {
+          "en": "Could you tell me {w}how do I get to{/w} the {c}hospital{/c}?",
+          "mm": "ဆေးရုံကို ဘယ်လိုသွားရမလဲဆိုတာ ပြောပြပေးနိုင်မလား။"
+        },
+        {
+          "en": "{w}How do I get to{/w} the nearest {c}supermarket{/c}?",
+          "mm": "အနီးဆုံး စူပါမားကတ်ကို ဘယ်လိုသွားရမလဲ။"
+        }
+      ],
+      "short_mm": "တစ်နေရာရာကို ဘယ်လိုသွားရမလဲလို့ မေးတာ"
+    },
+    {
+      "word": "go straight on",
+      "pos": "expression",
+      "short_en": "continue moving forward without turning",
+      "examples": [
+        {
+          "en": "{w}Go straight on{/w} until you reach the {c}traffic lights{/c}.",
+          "mm": "မီးပွိုင့်ရောက်တဲ့အထိ တည့်တည့်သွားပါ။"
+        },
+        {
+          "en": "Just {w}go straight on{/w} for two {c}hundred{/c} metres.",
+          "mm": "မီတာနှစ်ရာလောက် တည့်တည့်သာ ဆက်သွားပါ။"
+        },
+        {
+          "en": "You need to {w}go straight on{/w} past the {c}bank{/c}.",
+          "mm": "ဘဏ်ကိုကျော်ပြီး တည့်တည့်သွားဖို့ လိုပါတယ်။"
+        },
+        {
+          "en": "{w}Go straight on{/w} and it's at the end of the {c}road{/c}.",
+          "mm": "တည့်တည့်သွားလိုက်ပါ၊ လမ်းဆုံးမှာရှိပါတယ်။"
+        },
+        {
+          "en": "If you {w}go straight on{/w}, you'll see the {c}park{/c}.",
+          "mm": "တည့်တည့်သွားရင် ပန်းခြံကို တွေ့ရပါလိမ့်မယ်။"
+        }
+      ],
+      "short_mm": "လမ်းအတိုင်း တည့်တည့်သွားတာ"
+    },
+    {
+      "word": "turn left / turn right",
+      "pos": "expression",
+      "short_en": "change your direction at a corner",
+      "examples": [
+        {
+          "en": "{w}Turn left{/w} at the next {c}corner{/c}.",
+          "mm": "နောက်ထပ်ထောင့်ကနေ ဘယ်ဘက်ကိုကွေ့ပါ။"
+        },
+        {
+          "en": "You should {w}turn right{/w} at the {c}roundabout{/c}.",
+          "mm": "အဝိုင်းရောက်ရင် ညာဘက်ကိုကွေ့သင့်ပါတယ်။"
+        },
+        {
+          "en": "{w}Turn left{/w} when you see the {c}hotel{/c}.",
+          "mm": "ဟိုတယ်ကိုတွေ့ရင် ဘယ်ဘက်ကိုကွေ့လိုက်ပါ။"
+        },
+        {
+          "en": "Please {w}turn right{/w} into {c}Baker Street{/c}.",
+          "mm": "ဘေကာလမ်းထဲကို ညာဘက်ကွေ့ပေးပါ။"
+        },
+        {
+          "en": "You need to {w}turn left{/w} at the {c}post office{/c}.",
+          "mm": "စာတိုက်နားရောက်ရင် ဘယ်ဘက်ကိုကွေ့ရပါမယ်။"
+        }
+      ],
+      "short_mm": "ဘယ်ဘက်/ညာဘက်ကို ကွေ့တာ"
+    },
+    {
+      "word": "take the first left",
+      "pos": "expression",
+      "short_en": "turn left at the first road you see",
+      "examples": [
+        {
+          "en": "{w}Take the first left{/w} after the {c}bridge{/c}.",
+          "mm": "တံတားကျော်ပြီး ပထမဆုံးလမ်းဆုံမှာ ဘယ်ဘက်ကိုချိုးပါ။"
+        },
+        {
+          "en": "You should {w}take the first left{/w} at the {c}traffic lights{/c}.",
+          "mm": "မီးပွိုင့်မှာ ပထမဆုံးလမ်းဆုံအတိုင်း ဘယ်ဘက်ကိုချိုးသင့်ပါတယ်။"
+        },
+        {
+          "en": "{w}Take the first left{/w} and it's on your {c}right{/c}.",
+          "mm": "ပထမဆုံးလမ်းဆုံမှာ ဘယ်ဘက်ကိုချိုးလိုက်ပါ၊ ညာဘက်ခြမ်းမှာ ရှိပါလိမ့်မယ်။"
+        },
+        {
+          "en": "Just {w}take the first left{/w} to find the {c}library{/c}.",
+          "mm": "စာကြည့်တိုက်ကိုသွားဖို့ ပထမဆုံးလမ်းဆုံမှာ ဘယ်ဘက်ကိုသာချိုးပါ။"
+        },
+        {
+          "en": "He told me to {w}take the first left{/w} at the {c}school{/c}.",
+          "mm": "သူက ကျောင်းနားက ပထမဆုံးလမ်းဆုံမှာ ဘယ်ဘက်ကိုချိုးဖို့ ပြောခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "ပထမဆုံးတွေ့တဲ့ လမ်းဆုံမှာ ဘယ်ဘက်ကိုကွေ့တာ"
+    },
+    {
+      "word": "it's on your right",
+      "pos": "expression",
+      "short_en": "the location is on the right side",
+      "examples": [
+        {
+          "en": "Walk past the cafe, and {w}it's on your right{/w} next to the {c}shop{/c}.",
+          "mm": "ကဖေးကိုကျော်ပြီးသွားပါ၊ ဆိုင်ဘေးက ညာဘက်ခြမ်းမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "Keep walking, {w}it's on your right{/w} after the {c}cinema{/c}.",
+          "mm": "ဆက်လျှောက်သွားပါ၊ ရုပ်ရှင်ရုံကျော်ပြီးရင် ညာဘက်ခြမ်းမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "You can't miss it, {w}it's on your right{/w} near the {c}bus stop{/c}.",
+          "mm": "မမှားနိုင်ပါဘူး၊ ဘတ်စ်ကားမှတ်တိုင်နားက ညာဘက်ခြမ်းမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "Look for the blue door, {w}it's on your right{/w} down the {c}street{/c}.",
+          "mm": "အပြာရောင်တံခါးကို ရှာကြည့်ပါ၊ လမ်းအတိုင်းသွားရင် ညာဘက်ခြမ်းမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "It's easy to find, {w}it's on your right{/w} by the {c}bakery{/c}.",
+          "mm": "ရှာရလွယ်ပါတယ်၊ မုန့်ဖုတ်ဆိုင်ဘေးက ညာဘက်ခြမ်းမှာ ရှိပါတယ်။"
+        }
+      ],
+      "short_mm": "အဲဒီနေရာက ခင်ဗျားရဲ့ ညာဘက်မှာ ရှိတယ်"
+    },
+    {
+      "word": "opposite",
+      "pos": "expression",
+      "short_en": "directly across from something",
+      "examples": [
+        {
+          "en": "The bank is {w}opposite{/w} the {c}supermarket{/c}.",
+          "mm": "ဘဏ်က စူပါမားကတ်ရဲ့ မျက်နှာချင်းဆိုင်မှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "My house is {w}opposite{/w} the {c}park{/c}.",
+          "mm": "ကျွန်တော့်အိမ်က ပန်းခြံရဲ့ မျက်နှာချင်းဆိုင်မှာပါ။"
+        },
+        {
+          "en": "The cafe is {w}opposite{/w} the train {c}station{/c}.",
+          "mm": "ကဖေးက ရထားဘူတာရုံရဲ့ မျက်နှာချင်းဆိုင်မှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "Look for the shop {w}opposite{/w} the {c}school{/c}.",
+          "mm": "ကျောင်းရဲ့ မျက်နှာချင်းဆိုင်မှာရှိတဲ့ ဆိုင်ကို ရှာကြည့်ပါ။"
+        },
+        {
+          "en": "The hotel is {w}opposite{/w} the main {c}square{/c}.",
+          "mm": "ဟိုတယ်က မြို့လယ်ရင်ပြင်ရဲ့ မျက်နှာချင်းဆိုင်မှာ ရှိပါတယ်။"
+        }
+      ],
+      "short_mm": "မျက်နှာချင်းဆိုင်မှာ ရှိတာ"
+    },
+    {
+      "word": "next to",
+      "pos": "expression",
+      "short_en": "immediately beside something",
+      "examples": [
+        {
+          "en": "The pharmacy is {w}next to{/w} the {c}hospital{/c}.",
+          "mm": "ဆေးဆိုင်က ဆေးရုံဘေးမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "I live {w}next to{/w} the {c}bakery{/c}.",
+          "mm": "ကျွန်တော်က မုန့်ဖုတ်ဆိုင်ဘေးမှာ နေတာပါ။"
+        },
+        {
+          "en": "The post office is {w}next to{/w} the {c}bank{/c}.",
+          "mm": "စာတိုက်က ဘဏ်ဘေးမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "There is a cafe {w}next to{/w} the {c}cinema{/c}.",
+          "mm": "ရုပ်ရှင်ရုံဘေးမှာ ကဖေးဆိုင်လေးတစ်ခု ရှိပါတယ်။"
+        },
+        {
+          "en": "The library is {w}next to{/w} the {c}museum{/c}.",
+          "mm": "စာကြည့်တိုက်က ပြတိုက်ဘေးမှာ ရှိပါတယ်။"
+        }
+      ],
+      "short_mm": "ဘေးနားမှာ ရှိတာ"
+    },
+    {
+      "word": "across from",
+      "pos": "expression",
+      "short_en": "on the other side of a street or space",
+      "nuance_en": "Very similar to 'opposite'.",
+      "confuse_with": [
+        "opposite"
+      ],
+      "examples": [
+        {
+          "en": "The shop is {w}across from{/w} the {c}park{/c}.",
+          "mm": "ဆိုင်က ပန်းခြံရဲ့ တစ်ဖက်ခြမ်းမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "She works in the building {w}across from{/w} the {c}station{/c}.",
+          "mm": "သူမက ဘူတာရုံရဲ့ တစ်ဖက်ခြမ်းက အဆောက်အဦးမှာ အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "There is a cafe {w}across from{/w} the {c}hotel{/c}.",
+          "mm": "ဟိုတယ်ရဲ့ တစ်ဖက်ခြမ်းမှာ ကဖေးဆိုင်လေး ရှိပါတယ်။"
+        },
+        {
+          "en": "The bus stop is {w}across from{/w} the {c}library{/c}.",
+          "mm": "ဘတ်စ်ကားမှတ်တိုင်က စာကြည့်တိုက်ရဲ့ တစ်ဖက်ခြမ်းမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "He lives in the house {w}across from{/w} the {c}school{/c}.",
+          "mm": "သူက ကျောင်းရဲ့ တစ်ဖက်ခြမ်းက အိမ်မှာ နေပါတယ်။"
+        }
+      ],
+      "short_mm": "လမ်းတစ်ဖက်မှာ ရှိတာ",
+      "nuance_mm": "Opposite နဲ့ အဓိပ္ပာယ်တူပေမယ့် လမ်းတစ်ဖက်မှာ ရှိတယ်ဆိုတဲ့ အဓိပ္ပာယ် ပိုဆောင်ပါတယ်။"
+    },
+    {
+      "word": "at the end of the road",
+      "pos": "expression",
+      "short_en": "the final point of a street",
+      "examples": [
+        {
+          "en": "The school is {w}at the end of the road{/w} on the {c}left{/c}.",
+          "mm": "ကျောင်းက လမ်းဆုံး ဘယ်ဘက်ခြမ်းမှာ ရှိပါတယ်။"
+        },
+        {
+          "en": "You'll find the park {w}at the end of the road{/w} near the {c}bridge{/c}.",
+          "mm": "တံတားနားက လမ်းဆုံးမှာ ပန်းခြံကို တွေ့ရပါလိမ့်မယ်။"
+        },
+        {
+          "en": "Just keep walking until you are {w}at the end of the road{/w} by the {c}shop{/c}.",
+          "mm": "ဆိုင်နားက လမ်းဆုံးရောက်တဲ့အထိ ဆက်လျှောက်သွားပါ။"
+        },
+        {
+          "en": "The hotel is located {w}at the end of the road{/w} near the {c}river{/c}.",
+          "mm": "ဟိုတယ်က မြစ်နားက လမ်းဆုံးမှာ တည်ရှိပါတယ်။"
+        },
+        {
+          "en": "Go straight until you are {w}at the end of the road{/w} at the {c}junction{/c}.",
+          "mm": "လမ်းဆုံရှိတဲ့ လမ်းဆုံးရောက်တဲ့အထိ တည့်တည့်သွားပါ။"
+        }
+      ],
+      "short_mm": "လမ်းရဲ့ အဆုံးမှာ"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "The bank is ___ the supermarket, right across the street.",
+      "right": "opposite",
+      "wrong": "next to",
+      "why": "'opposite' means across the street; 'next to' means beside it.",
+      "why_mm": "Opposite က မျက်နှာချင်းဆိုင်၊ next to က ဘေးကပ်လျက်မို့ မတူပါဘူး။"
+    },
+    {
+      "prompt": "To get to the shop, you should ___ at the next corner.",
+      "right": "turn left",
+      "wrong": "go straight on",
+      "why": "'turn left' means change direction; 'go straight on' means don't turn.",
+      "why_mm": "Turn left က ကွေ့ရမှာ၊ go straight on က မကွေ့ဘဲ တည့်တည့်သွားရမှာမို့ ကွာပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "How do you ask for directions?",
+      "answer": "How do I get to",
+      "options": [
+        "How do I get to",
+        "Go straight on",
+        "It's on your right"
+      ],
+      "explain_en": "Use 'How do I get to' to ask for a location.",
+      "explain_mm": "လမ်းမသိလို့ မေးတဲ့အခါ How do I get to ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The building is directly across the street.",
+      "answer": "opposite",
+      "options": [
+        "opposite",
+        "next to",
+        "go straight on"
+      ],
+      "explain_en": "Across the street is 'opposite'.",
+      "explain_mm": "လမ်းတစ်ဖက်မှာ ရှိနေရင် opposite လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Don't turn, just keep going forward.",
+      "answer": "go straight on",
+      "options": [
+        "go straight on",
+        "turn left",
+        "turn right"
+      ],
+      "explain_en": "Moving forward is 'go straight on'.",
+      "explain_mm": "မရပ်မနား တည့်တည့်သွားတာကို go straight on လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The building is beside the bank.",
+      "answer": "next to",
+      "options": [
+        "next to",
+        "opposite",
+        "across from"
+      ],
+      "explain_en": "Beside something is 'next to'.",
+      "explain_mm": "ဘေးကပ်လျက်ကို next to လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The location is on the right side.",
+      "answer": "it's on your right",
+      "options": [
+        "it's on your right",
+        "take the first left",
+        "go straight on"
+      ],
+      "explain_en": "Use 'it's on your right' to describe the position.",
+      "explain_mm": "ကိုယ့်ညာဘက်မှာ ရှိရင် it's on your right လို့ ပြောပေးရပါမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'The park is ___ the school, across the road.'",
+      "answer": "opposite",
+      "options": [],
+      "explain_en": "Across the road is 'opposite'.",
+      "explain_mm": "မျက်နှာချင်းဆိုင်ကို opposite လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: '___ the first left at the traffic lights.'",
+      "answer": "Take",
+      "options": [],
+      "explain_en": "The phrase is 'take the first left'.",
+      "explain_mm": "ပထမဆုံးလမ်းမှာ ဘယ်ကွေ့ဖို့ကို take the first left လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: '___ do I get to the museum?'",
+      "answer": "How",
+      "options": [],
+      "explain_en": "The question starts with 'How do I get to'.",
+      "explain_mm": "လမ်းမေးတဲ့ မေးခွန်းကို How do I get to နဲ့ စမေးရပါမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: 'The hotel is ___ the end of the road.'",
+      "answer": "at",
+      "options": [],
+      "explain_en": "The location is 'at the end of the road'.",
+      "explain_mm": "လမ်းဆုံးမှာ ရှိတဲ့နေရာကို at the end of the road လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: 'The shop is ___ from the library.'",
+      "answer": "across",
+      "options": [],
+      "explain_en": "The phrase is 'across from'.",
+      "explain_mm": "လမ်းတစ်ဖက်ကို across from လို့ သုံးပါတယ်။"
+    }
+  ]
+}

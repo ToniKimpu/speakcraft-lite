@@ -124,6 +124,49 @@
       "order": 11,
       "theme": "Money",
       "word_count": 9
+    },
+    {
+      "id": "home_rooms",
+      "title": "Home & where you live",
+      "level": 1,
+      "order": 12,
+      "theme": "Home",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "time_dates",
+      "title": "Time & dates",
+      "level": 1,
+      "order": 13,
+      "theme": "Time",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "places_town",
+      "title": "Places in town",
+      "level": 1,
+      "order": 14,
+      "theme": "Places",
+      "word_count": 9
+    },
+    {
+      "id": "directions",
+      "title": "Asking the way",
+      "level": 1,
+      "order": 15,
+      "theme": "Directions",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "weather",
+      "title": "Weather",
+      "level": 1,
+      "order": 16,
+      "theme": "Weather",
+      "word_count": 9
     }
   ]
 }

@@ -1,0 +1,381 @@
+{
+  "id": "time_dates",
+  "title": "Time & dates",
+  "level": 1,
+  "order": 13,
+  "theme": "Time",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Telling time and dates correctly is a daily necessity. These phrases cover how to ask, how to answer, and which prepositions to use for different time frames.",
+  "why_grouped_mm": "အချိန်နဲ့ ရက်စွဲတွေကို မှန်မှန်ကန်ကန် ပြောတတ်ဖို့က နေ့စဉ်ဘဝမှာ အရမ်းအရေးကြီးပါတယ်။ ဒီစကားစုတွေက အချိန်မေးနည်း၊ ဖြေနည်းနဲ့ ဘယ်အချိန်မှာ ဘယ် preposition သုံးရမလဲဆိုတာကို ပြောပြပေးထားတာပါ။",
+  "words": [
+    {
+      "word": "What's the time?",
+      "pos": "expression",
+      "short_en": "the standard way to ask someone for the current time",
+      "examples": [
+        {
+          "en": "Excuse me, {w}what's the time{/w}, {c}please{/c}?",
+          "mm": "ခွင့်လွှတ်ပါ၊ အခု အချိန် ဘယ်လောက်ရှိပြီလဲခင်ဗျာ/ရှင်။"
+        },
+        {
+          "en": "{w}What's the time{/w}? I think I'm {c}late{/c}.",
+          "mm": "အချိန် ဘယ်လောက်ရှိပြီလဲ။ ကျွန်တော်/မ နောက်ကျနေပြီထင်တယ်။"
+        },
+        {
+          "en": "Do you know {w}what's the time{/w}? My {c}watch{/c} stopped.",
+          "mm": "အခု အချိန် ဘယ်လောက်ရှိပြီလဲ သိလား။ ကျွန်တော့်နာရီက ရပ်သွားလို့။"
+        },
+        {
+          "en": "I'm sorry, I don't know {w}what's the time{/w} {c}exactly{/c}.",
+          "mm": "တောင်းပန်ပါတယ်၊ အခု အချိန် အတိအကျ ဘယ်လောက်ရှိလဲ ကျွန်တော်/မ မသိဘူး။"
+        },
+        {
+          "en": "Check your phone to see {w}what's the time{/w} {c}now{/c}.",
+          "mm": "အခု အချိန် ဘယ်လောက်ရှိလဲဆိုတာ ဖုန်းထဲမှာ ကြည့်လိုက်ဦး။"
+        }
+      ],
+      "short_mm": "အခုအချိန် ဘယ်လောက်ရှိပြီလဲလို့ မေးတာပါ။"
+    },
+    {
+      "word": "half past",
+      "pos": "expression",
+      "short_en": "thirty minutes after the hour",
+      "examples": [
+        {
+          "en": "The meeting starts at {w}half past{/w} {c}nine{/c}.",
+          "mm": "အစည်းအဝေးက ၉ နာရီခွဲမှာ စမယ်။"
+        },
+        {
+          "en": "It's {w}half past{/w} {c}six{/c} in the morning.",
+          "mm": "မနက် ၆ နာရီခွဲရှိပြီ။"
+        },
+        {
+          "en": "I usually leave work at {w}half past{/w} {c}five{/c}.",
+          "mm": "ကျွန်တော်/မက အလုပ်ကနေ ၅ နာရီခွဲဆို ပြန်လေ့ရှိတယ်။"
+        },
+        {
+          "en": "She arrived at {w}half past{/w} {c}eight{/c} sharp.",
+          "mm": "သူမ ၈ နာရီခွဲ တိတိမှာ ရောက်လာတယ်။"
+        },
+        {
+          "en": "We'll be there by {w}half past{/w} {c}seven{/c}.",
+          "mm": "ကျွန်တော်တို့ ၇ နာရီခွဲလောက်ဆို အဲဒီရောက်နေလိမ့်မယ်။"
+        }
+      ],
+      "short_mm": "နာရီကို မိနစ် ၃၀ ကျော်သွားတာကို ပြောတာပါ။"
+    },
+    {
+      "word": "quarter to",
+      "pos": "expression",
+      "short_en": "fifteen minutes before the hour",
+      "examples": [
+        {
+          "en": "The train leaves at {w}quarter to{/w} {c}three{/c}.",
+          "mm": "ရထားက ၃ နာရီထိုးဖို့ ၁၅ မိနစ်အလိုမှာ ထွက်မယ်။"
+        },
+        {
+          "en": "It's {w}quarter to{/w} {c}nine{/c} right now.",
+          "mm": "အခု ၉ နာရီထိုးဖို့ ၁၅ မိနစ်အလိုပဲ ရှိသေးတယ်။"
+        },
+        {
+          "en": "I'll be home by {w}quarter to{/w} {c}seven{/c}.",
+          "mm": "ကျွန်တော်/မ ၇ နာရီထိုးဖို့ ၁၅ မိနစ်အလိုဆို အိမ်ရောက်နေလိမ့်မယ်။"
+        },
+        {
+          "en": "She finished at {w}quarter to{/w} {c}four{/c}.",
+          "mm": "သူမ ၄ နာရီထိုးဖို့ ၁၅ မိနစ်အလိုမှာ ပြီးသွားတယ်။"
+        },
+        {
+          "en": "Wake me up at {w}quarter to{/w} {c}six{/c}.",
+          "mm": "ကျွန်တော့်ကို ၆ နာရီထိုးဖို့ ၁၅ မိနစ်အလိုကျရင် နှိုးပေးပါ။"
+        }
+      ],
+      "short_mm": "နောက်တစ်နာရီပြည့်ဖို့ ၁၅ မိနစ်ပဲ လိုတော့တာပါ။"
+    },
+    {
+      "word": "in the morning",
+      "pos": "expression",
+      "short_en": "used for the time from sunrise until noon",
+      "nuance_en": "Use 'in' for parts of the day (in the morning, in the afternoon).",
+      "examples": [
+        {
+          "en": "I have a class {w}in the morning{/w} {c}tomorrow{/c}.",
+          "mm": "မနက်ဖြန် မနက်ပိုင်းမှာ ကျွန်တော်/မ အတန်းရှိတယ်။"
+        },
+        {
+          "en": "He drinks coffee {w}in the morning{/w} {c}everyday{/c}.",
+          "mm": "သူက နေ့တိုင်း မနက်ပိုင်းမှာ ကော်ဖီသောက်တယ်။"
+        },
+        {
+          "en": "The shop opens {w}in the morning{/w} at {c}eight{/c}.",
+          "mm": "ဆိုင်က မနက် ၈ နာရီမှာ ဖွင့်တယ်။"
+        },
+        {
+          "en": "It's very quiet {w}in the morning{/w} {c}here{/c}.",
+          "mm": "ဒီမှာ မနက်ပိုင်းဆို အရမ်း တိတ်ဆိတ်တယ်။"
+        },
+        {
+          "en": "Call me {w}in the morning{/w} {c}please{/c}.",
+          "mm": "မနက်ပိုင်းကျရင် ကျွန်တော့်ကို ဖုန်းဆက်ပေးပါ။"
+        }
+      ],
+      "short_mm": "မနက်ခင်းအချိန်ကို ဆိုလိုတာပါ။",
+      "nuance_mm": "တစ်နေ့တာရဲ့ အပိုင်းအခြားတွေကို ပြောရင် 'in' ကိုပဲ သုံးရပါတယ် (in the morning, in the afternoon)။"
+    },
+    {
+      "word": "at the weekend",
+      "pos": "expression",
+      "short_en": "Saturday and Sunday",
+      "nuance_en": "In British English, we say 'at the weekend'. Americans often say 'on the weekend'.",
+      "examples": [
+        {
+          "en": "What are you doing {w}at the weekend{/w} {c}this{/c} time?",
+          "mm": "ဒီတစ်ပတ်ကုန်မှာ ဘာတွေလုပ်ဖို့ရှိလဲ။"
+        },
+        {
+          "en": "We usually visit family {w}at the weekend{/w} {c}together{/c}.",
+          "mm": "ကျွန်တော်တို့က ပိတ်ရက်ဆို မိသားစုနဲ့ အတူတူ တွေ့ဆုံလေ့ရှိတယ်။"
+        },
+        {
+          "en": "I like to relax {w}at the weekend{/w} {c}mostly{/c}.",
+          "mm": "ကျွန်တော်/မကတော့ ပိတ်ရက်ဆို အနားယူရတာကို အဓိကထားပြီး ကြိုက်တယ်။"
+        },
+        {
+          "en": "Are you working {w}at the weekend{/w} {c}again{/c}?",
+          "mm": "ဒီပိတ်ရက်မှာလည်း အလုပ်လုပ်ဦးမှာလား။"
+        },
+        {
+          "en": "The park is busy {w}at the weekend{/w} {c}usually{/c}.",
+          "mm": "ပန်းခြံက ပိတ်ရက်ဆို လူစည်လေ့ရှိတယ်။"
+        }
+      ],
+      "short_mm": "စနေနဲ့ တနင်္ဂနွေနေ့တွေမှာလို့ ပြောတာပါ။",
+      "nuance_mm": "ဗြိတိသျှစနစ်နဲ့ ပြောမယ်ဆိုရင် at ကိုပဲ သုံးဖို့ မှတ်ထားပါ။"
+    },
+    {
+      "word": "on Monday",
+      "pos": "expression",
+      "short_en": "used for specific days of the week",
+      "nuance_en": "Always use 'on' for days of the week.",
+      "examples": [
+        {
+          "en": "I have a doctor's appointment {w}on Monday{/w} {c}morning{/c}.",
+          "mm": "တနင်္လာနေ့ မနက်ပိုင်းမှာ ဆရာဝန်နဲ့ ပြဖို့ ချိန်းထားတယ်။"
+        },
+        {
+          "en": "We start the new project {w}on Monday{/w} {c}next{/c} week.",
+          "mm": "နောက်အပတ် တနင်္လာနေ့ကျရင် စီမံကိန်းသစ် စလုပ်မယ်။"
+        },
+        {
+          "en": "See you {w}on Monday{/w} {c}then{/c}.",
+          "mm": "ဒါဆို တနင်္လာနေ့မှ တွေ့မယ်နော်။"
+        },
+        {
+          "en": "The office is closed {w}on Monday{/w} {c}publicly{/c}.",
+          "mm": "ရုံးက တနင်္လာနေ့ဆို ပိတ်တယ်။"
+        },
+        {
+          "en": "I feel tired {w}on Monday{/w} {c}usually{/c}.",
+          "mm": "ကျွန်တော်/မက တနင်္လာနေ့ဆို ပင်ပန်းသလို ခံစားရတတ်တယ်။"
+        }
+      ],
+      "short_mm": "တနင်္လာနေ့မှာလို့ ဆိုလိုတာပါ။",
+      "nuance_mm": "ရက်တစ်ခုခုကို သတ်မှတ်ပြီး ပြောတဲ့အခါတိုင်း on ကိုပဲ သုံးဖို့ မမေ့ပါနဲ့။"
+    },
+    {
+      "word": "What's the date?",
+      "pos": "expression",
+      "short_en": "asking for the day of the month",
+      "examples": [
+        {
+          "en": "Do you know {w}what's the date{/w} {c}today{/c}?",
+          "mm": "ဒီနေ့ ဘယ်နေ့ရက်စွဲလဲ သိလား။"
+        },
+        {
+          "en": "{w}What's the date{/w} of your {c}birthday{/c}?",
+          "mm": "မင်းရဲ့ မွေးနေ့က ဘယ်နေ့လဲ။"
+        },
+        {
+          "en": "I forgot {w}what's the date{/w} {c}exactly{/c}.",
+          "mm": "ဘယ်နေ့ရက်စွဲလဲဆိုတာ ကျွန်တော်/မ မေ့သွားတယ်။"
+        },
+        {
+          "en": "Can you check {w}what's the date{/w} {c}please{/c}?",
+          "mm": "ဒီနေ့ ဘယ်နေ့ရက်စွဲလဲဆိုတာ ကြည့်ပေးလို့ရမလား။"
+        },
+        {
+          "en": "He asked me {w}what's the date{/w} {c}yesterday{/c}.",
+          "mm": "မနေ့က သူ ကျွန်တော့်ကို ဘယ်နေ့ရက်စွဲလဲလို့ မေးတယ်။"
+        }
+      ],
+      "short_mm": "ဒီနေ့ ဘယ်နေ့လဲလို့ မေးတာပါ။"
+    },
+    {
+      "word": "the first of May",
+      "pos": "expression",
+      "short_en": "a way to say a specific date",
+      "examples": [
+        {
+          "en": "My birthday is {w}the first of May{/w} {c}exactly{/c}.",
+          "mm": "ကျွန်တော့်မွေးနေ့က မေလ ၁ ရက်နေ့ အတိအကျပဲ။"
+        },
+        {
+          "en": "We start our holiday on {w}the first of May{/w} {c}next{/c} year.",
+          "mm": "ကျွန်တော်တို့ရဲ့ အားလပ်ရက်ကို နောက်နှစ် မေလ ၁ ရက်နေ့မှာ စမယ်။"
+        },
+        {
+          "en": "The event is on {w}the first of May{/w} {c}this{/c} month.",
+          "mm": "ပွဲက ဒီလ မေလ ၁ ရက်နေ့မှာ ရှိတယ်။"
+        },
+        {
+          "en": "Is it {w}the first of May{/w} {c}today{/c}?",
+          "mm": "ဒီနေ့က မေလ ၁ ရက်နေ့လား။"
+        },
+        {
+          "en": "The contract ends on {w}the first of May{/w} {c}finally{/c}.",
+          "mm": "စာချုပ်က နောက်ဆုံးအနေနဲ့ မေလ ၁ ရက်နေ့မှာ ကုန်ဆုံးမယ်။"
+        }
+      ],
+      "short_mm": "မေလ ၁ ရက်နေ့လို့ ပြောတာပါ။"
+    },
+    {
+      "word": "at night",
+      "pos": "expression",
+      "short_en": "during the dark hours",
+      "examples": [
+        {
+          "en": "I don't like driving {w}at night{/w} {c}much{/c}.",
+          "mm": "ကျွန်တော်/မ ညဘက် ကားမောင်းရတာ သိပ်မကြိုက်ဘူး။"
+        },
+        {
+          "en": "The city looks beautiful {w}at night{/w} {c}too{/c}.",
+          "mm": "ညဘက်ဆို မြို့ကလည်း လှတယ်။"
+        },
+        {
+          "en": "Do you sleep well {w}at night{/w} {c}usually{/c}?",
+          "mm": "ညဘက်ဆို ကောင်းကောင်း အိပ်ပျော်ရဲ့လား။"
+        },
+        {
+          "en": "It gets very cold {w}at night{/w} {c}here{/c}.",
+          "mm": "ဒီမှာ ညဘက်ဆို အရမ်း အေးတယ်။"
+        },
+        {
+          "en": "He works {w}at night{/w} {c}sometimes{/c}.",
+          "mm": "သူက တစ်ခါတလေ ညဘက်မှာ အလုပ်လုပ်တယ်။"
+        }
+      ],
+      "short_mm": "ညဘက်အချိန်ကို ပြောတာပါ။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I have a meeting ___ Monday.",
+      "right": "on",
+      "wrong": "at",
+      "why": "Use 'on' for specific days, not 'at'.",
+      "why_mm": "ရက်တွေအတွက် on ကိုပဲ သုံးရပြီး at ကို မသုံးရပါဘူး။"
+    },
+    {
+      "prompt": "We meet ___ the morning.",
+      "right": "in",
+      "wrong": "on",
+      "why": "Use 'in' for parts of the day, not 'on'.",
+      "why_mm": "တစ်နေ့တာ အပိုင်းအခြားအတွက် in ကို သုံးရပြီး on ကို မသုံးရပါဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Asking for the current time: \"___?\"",
+      "answer": "What's the time?",
+      "options": [
+        "What's the time?",
+        "What's the date?",
+        "What's the day?"
+      ],
+      "explain_en": "The standard question for the time is 'What's the time?'",
+      "explain_mm": "အချိန်မေးရင် What's the time? လို့ပဲ သုံးရလို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Asking for the day of the month: \"___?\"",
+      "answer": "What's the date?",
+      "options": [
+        "What's the time?",
+        "What's the date?",
+        "What's the day?"
+      ],
+      "explain_en": "The question for the day of the month is 'What's the date?'",
+      "explain_mm": "ရက်စွဲမေးရင် What's the date? လို့ သုံးရလို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "30 minutes past the hour: \"It's ___ six.\"",
+      "answer": "half past",
+      "options": [
+        "half past",
+        "quarter to",
+        "quarter past"
+      ],
+      "explain_en": "30 minutes after is 'half past'.",
+      "explain_mm": "နာရီကို မိနစ် ၃၀ ကျော်ရင် half past ကို သုံးလို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I usually work ___ the weekend.\"",
+      "answer": "at the weekend",
+      "options": [],
+      "explain_en": "In British English, we say 'at the weekend'.",
+      "explain_mm": "ဗြိတိသျှ အင်္ဂလိပ်စကားမှာ at the weekend လို့ ပြောတာ ပိုမှန်လို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"The meeting is on ___ May.\"",
+      "answer": "the first of May",
+      "options": [],
+      "explain_en": "A specific date is expressed as 'the first of May'.",
+      "explain_mm": "ရက်စွဲကို the first of May လို့ ပြောတာ သဘာဝအကျဆုံးမို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I feel sleepy ___ night.\"",
+      "answer": "at",
+      "options": [],
+      "explain_en": "The preposition for night is 'at'.",
+      "explain_mm": "ညဘက်ကို ပြောရင် at night လို့ တွဲသုံးရလို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"We have a test ___ Monday.\"",
+      "answer": "on",
+      "options": [],
+      "explain_en": "Use 'on' for days of the week.",
+      "explain_mm": "ရက်တွေရှေ့မှာ on ကိုပဲ သုံးရလို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"It is 8:45. It is ___ nine.\"",
+      "answer": "quarter to",
+      "options": [],
+      "explain_en": "15 minutes before the hour is 'quarter to'.",
+      "explain_mm": "နာရီမပြည့်ခင် ၁၅ မိနစ်အလိုဆိုရင် quarter to ကို သုံးရလို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I drink tea ___ the morning.\"",
+      "answer": "in",
+      "options": [],
+      "explain_en": "Use 'in' for parts of the day.",
+      "explain_mm": "တစ်နေ့တာ အပိုင်းအခြားတွေအတွက် in ကို သုံးရလို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"What's the ___? It is the 5th.\"",
+      "answer": "date",
+      "options": [],
+      "explain_en": "Asking for the day of the month is 'What's the date?'",
+      "explain_mm": "လထဲက ရက်ကို မေးရင် What's the date? လို့ မေးရလို့ပါ။"
+    }
+  ]
+}
