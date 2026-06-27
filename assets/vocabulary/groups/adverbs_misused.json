@@ -1,0 +1,118 @@
+{
+  "id": "adverbs_misused",
+  "title": "Adverbs people misuse",
+  "level": 2,
+  "order": 2,
+  "theme": "Manner & discourse adverbs",
+  "why_grouped_en": "These -ly adverbs sound advanced, so learners reach for them — and use them wrong. Each has a precise job. Learn what they really mean, and when NOT to use them.",
+  "why_grouped_mm": "ဒီ -ly adverb တွေကို မှားသုံးတတ်ကြတယ်။ တကယ့်အဓိပ္ပာယ်နဲ့ ဘယ်အချိန်သုံးရမလဲ လေ့လာပါ။",
+  "words": [
+    {
+      "word": "literally",
+      "pos": "adverb",
+      "ipa": "/ˈlɪt.ər.əl.i/",
+      "short_en": "in a real, exact way — not exaggerating",
+      "short_mm": "တကယ်တမ်း",
+      "explanation_en": "Use it when something is actually, exactly true — word for word, with no exaggeration.",
+      "nuance_en": "In careful English, don't use it just for emphasis (\"I literally died laughing\"). That's the opposite of its real meaning.",
+      "examples": [
+        { "en": "He translated the text literally, word for word.", "mm": "" },
+        { "en": "The town's name literally means \"new bridge\".", "mm": "" }
+      ],
+      "collocations": ["literally true", "take it literally", "literally means"],
+      "confuse_with": ["figuratively"]
+    },
+    {
+      "word": "actually",
+      "pos": "adverb",
+      "ipa": "/ˈæk.tʃu.ə.li/",
+      "short_en": "in fact (often correcting something)",
+      "short_mm": "တကယ်တော့",
+      "explanation_en": "Signals the truth, often against what was expected or said. Great for polite corrections.",
+      "nuance_en": "Not the same as \"currently\" or \"now\". \"Actually, it's free\" = contrary to what you thought.",
+      "examples": [
+        { "en": "It looks hard, but it's actually quite easy.", "mm": "" },
+        { "en": "Actually, I think you're right.", "mm": "" }
+      ],
+      "collocations": ["actually,", "not actually"],
+      "confuse_with": ["currently", "now"]
+    },
+    {
+      "word": "basically",
+      "pos": "adverb",
+      "ipa": "/ˈbeɪ.sɪk.li/",
+      "short_en": "in the main; to put it simply",
+      "short_mm": "အခြေခံအားဖြင့်",
+      "explanation_en": "Introduces a simple summary of something more complex. \"Basically, we ran out of time.\"",
+      "nuance_en": "Useful, but a filler if overused. Drop it if the sentence works without it.",
+      "examples": [
+        { "en": "Basically, the plan is to leave early and avoid traffic.", "mm": "" },
+        { "en": "It's basically the same as the old one.", "mm": "" }
+      ],
+      "collocations": ["basically the same", "basically,"],
+      "confuse_with": []
+    },
+    {
+      "word": "honestly",
+      "pos": "adverb",
+      "ipa": "/ˈɒn.ɪst.li/",
+      "short_en": "to tell the truth; sincerely",
+      "short_mm": "ရိုးရိုးသားသား ပြောရရင်",
+      "explanation_en": "Flags that you're being frank, often before an honest opinion. Can also show mild frustration.",
+      "nuance_en": "\"Honestly, I didn't enjoy it\" = candid opinion. \"Honestly!\" alone = annoyance.",
+      "examples": [
+        { "en": "Honestly, I'm not sure this will work.", "mm": "" },
+        { "en": "I honestly didn't know about the meeting.", "mm": "" }
+      ],
+      "collocations": ["honestly,", "quite honestly"],
+      "confuse_with": ["seriously"]
+    },
+    {
+      "word": "seriously",
+      "pos": "adverb",
+      "ipa": "/ˈsɪə.ri.əs.li/",
+      "short_en": "in a serious way; really (for emphasis)",
+      "short_mm": "အပြင်းအထန်",
+      "explanation_en": "Two jobs: (1) in a serious manner — \"take it seriously\"; (2) spoken emphasis — \"seriously good\".",
+      "nuance_en": "\"Seriously?\" on its own asks \"really?\" in surprise or doubt.",
+      "examples": [
+        { "en": "You should take this deadline seriously.", "mm": "" },
+        { "en": "That movie was seriously good.", "mm": "" }
+      ],
+      "collocations": ["take seriously", "seriously good", "seriously?"],
+      "confuse_with": ["honestly"]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Exact, word-for-word meaning: \"The phrase ___ translates as 'good morning'.\"",
+      "answer": "literally",
+      "options": ["literally", "basically", "seriously"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Polite correction: \"___, the meeting is on Friday, not Thursday.\"",
+      "answer": "Actually",
+      "options": ["Actually", "Literally", "Honestly"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Simple summary of something complex: \"___, we just need more time.\"",
+      "answer": "Basically",
+      "options": ["Basically", "Literally", "Seriously"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Before a frank opinion: \"___, I think we should start over.\"",
+      "answer": "Honestly",
+      "options": ["Honestly", "Literally", "Actually"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Treat with importance: \"They don't ___ take customer feedback ___.\" (take ... seriously)",
+      "answer": "seriously",
+      "options": ["seriously", "basically", "literally"]
+    }
+  ]
+}

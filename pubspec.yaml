@@ -126,6 +126,8 @@ flutter:
     - assets/important_of_social_health/
     - assets/paul_rudd_interview/
     - assets/going_viral_taugh_me/
+    - assets/vocabulary/
+    - assets/vocabulary/groups/
     - logo/
     # - shorebird.yaml
 

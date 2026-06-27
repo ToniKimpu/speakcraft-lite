@@ -1,0 +1,118 @@
+{
+  "id": "pointing_out_examples",
+  "title": "Pointing things out & giving examples",
+  "level": 2,
+  "order": 1,
+  "theme": "Discourse markers",
+  "why_grouped_en": "These five all help you single something out or give an example — but learners mix them up. \"For example\" and \"such as\" introduce examples; \"especially\", \"particularly\" and \"in particular\" stress that one thing stands out from the rest.",
+  "why_grouped_mm": "ဥပမာ ပေးတဲ့အခါ၊ တစ်ခုကို အထူးပြုပြောတဲ့အခါ သုံးတဲ့ စကားလုံးတွေ။",
+  "words": [
+    {
+      "word": "for example",
+      "pos": "phrase",
+      "ipa": "/fɔːr ɪɡˈzɑːm.pəl/",
+      "short_en": "here is one case that shows my point",
+      "short_mm": "ဥပမာအားဖြင့်",
+      "explanation_en": "Introduces a full example, often a whole clause. Frequently starts a sentence, set off with a comma. Often shortened to \"e.g.\" in writing.",
+      "nuance_en": "Followed by an example sentence or noun. \"For example, prices have risen sharply.\"",
+      "examples": [
+        { "en": "Some animals hibernate. Bears, for example, sleep all winter.", "mm": "" },
+        { "en": "You could save money — for example, by cooking at home.", "mm": "" }
+      ],
+      "collocations": ["for example,", "take ... for example"],
+      "confuse_with": ["such as"]
+    },
+    {
+      "word": "such as",
+      "pos": "phrase",
+      "ipa": "/sʌtʃ æz/",
+      "short_en": "like / for instance",
+      "short_mm": "...ကဲ့သို့",
+      "explanation_en": "Introduces examples inside a sentence — usually a list of nouns, not a full clause. No comma before it when the examples are essential.",
+      "nuance_en": "Use it mid-sentence with nouns: \"fruits such as mangoes and bananas\". Don't follow it with a full sentence.",
+      "examples": [
+        { "en": "I enjoy team sports such as football and basketball.", "mm": "" },
+        { "en": "Bring warm clothes such as a jacket and gloves.", "mm": "" }
+      ],
+      "collocations": ["things such as", "such as these"],
+      "confuse_with": ["for example", "like"]
+    },
+    {
+      "word": "especially",
+      "pos": "adverb",
+      "ipa": "/ɪˈspeʃ.əl.i/",
+      "short_en": "more than the others",
+      "short_mm": "အထူးသဖြင့်",
+      "explanation_en": "Singles out one thing as the most important or extreme in a group. Often after a comma.",
+      "nuance_en": "Don't confuse with \"specially\" (= for a special purpose). \"I love fruit, especially mangoes.\"",
+      "examples": [
+        { "en": "It gets cold here, especially at night.", "mm": "" },
+        { "en": "She loves animals, especially dogs.", "mm": "" }
+      ],
+      "collocations": ["especially when", "especially if", "not especially"],
+      "confuse_with": ["specially", "particularly"]
+    },
+    {
+      "word": "particularly",
+      "pos": "adverb",
+      "ipa": "/pəˈtɪk.jə.lə.li/",
+      "short_en": "especially; to a high degree",
+      "short_mm": "အထူးတလည်",
+      "explanation_en": "Very close to \"especially\". Also means \"very\" in the negative: \"not particularly good\" = not very good.",
+      "nuance_en": "Slightly more formal than \"especially\". \"The exam wasn't particularly hard.\"",
+      "examples": [
+        { "en": "Traffic is bad, particularly on Mondays.", "mm": "" },
+        { "en": "I'm not particularly hungry right now.", "mm": "" }
+      ],
+      "collocations": ["particularly important", "not particularly"],
+      "confuse_with": ["especially", "in particular"]
+    },
+    {
+      "word": "in particular",
+      "pos": "phrase",
+      "ipa": "/ɪn pəˈtɪk.jə.lər/",
+      "short_en": "this one specifically",
+      "short_mm": "အထူးအားဖြင့်",
+      "explanation_en": "Points to one specific item, often placed after the noun it marks. \"One dish in particular stood out.\"",
+      "nuance_en": "Comes after the thing it highlights, unlike \"especially\" which comes before. \"Was there anything in particular you wanted?\"",
+      "examples": [
+        { "en": "I liked the music, one song in particular.", "mm": "" },
+        { "en": "Is there anyone in particular you'd like to invite?", "mm": "" }
+      ],
+      "collocations": ["anything in particular", "no one in particular"],
+      "confuse_with": ["particularly"]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Mid-sentence list of nouns: \"I read fiction ___ thrillers and mysteries.\"",
+      "answer": "such as",
+      "options": ["such as", "for example", "in particular"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Starting a sentence with a full example: \"___, many people now work from home.\"",
+      "answer": "for example",
+      "options": ["For example", "Such as", "In particular"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Singling one thing out before the noun: \"I love the summer, ___ the long evenings.\"",
+      "answer": "especially",
+      "options": ["especially", "in particular", "such as"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "After the noun it highlights: \"Was there a colour ___ you had in mind?\"",
+      "answer": "in particular",
+      "options": ["in particular", "especially", "for example"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Meaning 'not very': \"The film wasn't ___ good.\"",
+      "answer": "particularly",
+      "options": ["particularly", "such as", "for example"]
+    }
+  ]
+}

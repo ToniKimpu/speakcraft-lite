@@ -1,0 +1,112 @@
+{
+  "id": "stronger_than_good",
+  "title": "Stronger than \"good\"",
+  "level": 1,
+  "order": 1,
+  "theme": "Better adjectives",
+  "why_grouped_en": "Beginners lean on \"good\" and \"nice\" for everything. These five say the same idea with more colour — but each has a slightly different strength and feel. Learn them together so you can pick the right one.",
+  "why_grouped_mm": "\"good\" တစ်လုံးတည်း အမြဲသုံးမနေပါနဲ့။ ဒီစကားလုံးတွေက ပိုပြီး အားကောင်းတယ်။",
+  "words": [
+    {
+      "word": "great",
+      "pos": "adjective",
+      "ipa": "/ɡreɪt/",
+      "short_en": "very good",
+      "short_mm": "အရမ်းကောင်းတယ်",
+      "explanation_en": "The everyday step up from \"good\". Safe in almost any situation — spoken or written, casual or work.",
+      "nuance_en": "Neutral and extremely common. When in doubt, \"great\" works.",
+      "examples": [
+        { "en": "That's a great idea.", "mm": "" },
+        { "en": "We had a great time at the beach.", "mm": "" }
+      ],
+      "collocations": ["a great idea", "a great time", "great news"],
+      "confuse_with": []
+    },
+    {
+      "word": "amazing",
+      "pos": "adjective",
+      "ipa": "/əˈmeɪ.zɪŋ/",
+      "short_en": "so good it surprises you",
+      "short_mm": "အံ့သြစရာ ကောင်းတယ်",
+      "explanation_en": "Stronger than \"great\". Use it when something is so good it almost surprises you.",
+      "nuance_en": "Emotional and enthusiastic — great for reactions, a bit much for formal writing.",
+      "examples": [
+        { "en": "The view from the top was amazing.", "mm": "" },
+        { "en": "She did an amazing job on the project.", "mm": "" }
+      ],
+      "collocations": ["an amazing view", "amazing job", "absolutely amazing"],
+      "confuse_with": ["incredible"]
+    },
+    {
+      "word": "fantastic",
+      "pos": "adjective",
+      "ipa": "/fænˈtæs.tɪk/",
+      "short_en": "extremely good",
+      "short_mm": "အရမ်းကို ကောင်းတယ်",
+      "explanation_en": "A warm, upbeat \"very good\". Common in speech to show you're pleased.",
+      "nuance_en": "Friendly and positive. Interchangeable with \"great\" but a notch more excited.",
+      "examples": [
+        { "en": "You passed? Fantastic!", "mm": "" },
+        { "en": "The food at that restaurant is fantastic.", "mm": "" }
+      ],
+      "collocations": ["a fantastic result", "looks fantastic"],
+      "confuse_with": []
+    },
+    {
+      "word": "excellent",
+      "pos": "adjective",
+      "ipa": "/ˈek.sə.lənt/",
+      "short_en": "of very high quality",
+      "short_mm": "အရည်အသွေး မြင့်တယ်",
+      "explanation_en": "\"Very good\" with a focus on quality or standard. Slightly more formal — good for work and feedback.",
+      "nuance_en": "Sounds professional. You'd write \"excellent work\" on a report, not \"amazing work\".",
+      "examples": [
+        { "en": "She has excellent communication skills.", "mm": "" },
+        { "en": "The hotel offers excellent service.", "mm": "" }
+      ],
+      "collocations": ["excellent work", "excellent quality", "an excellent point"],
+      "confuse_with": []
+    },
+    {
+      "word": "wonderful",
+      "pos": "adjective",
+      "ipa": "/ˈwʌn.də.fəl/",
+      "short_en": "very good and makes you feel happy",
+      "short_mm": "နှစ်သက်ဖွယ် ကောင်းတယ်",
+      "explanation_en": "\"Very good\" with warmth and feeling. Used about experiences, people, and moments more than objects.",
+      "nuance_en": "Heart-felt. \"a wonderful person\" sounds kind; \"a wonderful laptop\" sounds odd.",
+      "examples": [
+        { "en": "We had a wonderful evening together.", "mm": "" },
+        { "en": "Thank you — you've been wonderful.", "mm": "" }
+      ],
+      "collocations": ["a wonderful time", "a wonderful person"],
+      "confuse_with": []
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "On a job reference: \"She has ___ attention to detail.\"",
+      "answer": "excellent",
+      "options": ["amazing", "excellent", "wonderful"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Reacting to a surprise: \"You climbed the whole mountain? That's ___!\"",
+      "answer": "amazing",
+      "options": ["amazing", "excellent", "good"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "About a kind person: \"My grandmother was a truly ___ woman.\"",
+      "answer": "wonderful",
+      "options": ["wonderful", "excellent", "fantastic"]
+    },
+    {
+      "type": "which_word",
+      "prompt": "Safe, everyday choice: \"That's a ___ idea, let's do it.\"",
+      "answer": "great",
+      "options": ["great", "wonderful", "excellent"]
+    }
+  ]
+}
