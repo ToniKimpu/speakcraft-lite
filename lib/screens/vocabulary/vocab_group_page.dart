@@ -208,7 +208,8 @@ class _IntroPage extends StatelessWidget {
               Icon(Icons.swipe_left_alt_rounded,
                   size: 18, color: cs.onSurfaceVariant),
               const SizedBox(width: 8),
-              Text('Swipe to meet the ${group.words.length} words',
+              Text(
+                  'Swipe to meet the ${group.words.length} ${group.unit == 'expression' ? 'expressions' : 'words'}',
                   style: PmpTextStyles.label2Regular
                       .copyWith(color: cs.onSurfaceVariant)),
             ],
@@ -577,9 +578,11 @@ class _ComparisonPage extends StatelessWidget {
                         color: cs.primary),
                     const SizedBox(width: 8),
                     Text(
-                        group.style == 'theme'
-                            ? 'Words in this set'
-                            : 'Which one, when?',
+                        group.style != 'theme'
+                            ? 'Which one, when?'
+                            : group.unit == 'expression'
+                                ? 'Expressions in this set'
+                                : 'Words in this set',
                         style: PmpTextStyles.title2SemiBold
                             .copyWith(color: cs.onSurface)),
                   ],
@@ -624,7 +627,8 @@ class _ComparisonPage extends StatelessWidget {
               child: FilledButton.icon(
                 onPressed: onPractice,
                 icon: const Icon(Icons.quiz_outlined),
-                label: Text('Practice these ${group.words.length} words'),
+                label: Text(
+                    'Practice these ${group.words.length} ${group.unit == 'expression' ? 'expressions' : 'words'}'),
               ),
             ),
           ),

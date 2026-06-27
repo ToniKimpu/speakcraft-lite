@@ -15,6 +15,7 @@ class VocabIndexEntry {
     required this.order,
     required this.theme,
     required this.wordCount,
+    this.unit = 'word',
   });
 
   final String id;
@@ -26,6 +27,9 @@ class VocabIndexEntry {
   final String theme;
   final int wordCount;
 
+  /// 'word' or 'expression' — for the count label on the list card.
+  final String unit;
+
   factory VocabIndexEntry.fromJson(Map<String, dynamic> j) => VocabIndexEntry(
         id: j['id'] as String,
         title: j['title'] as String? ?? '',
@@ -33,6 +37,7 @@ class VocabIndexEntry {
         order: (j['order'] as num?)?.toInt() ?? 0,
         theme: j['theme'] as String? ?? '',
         wordCount: (j['word_count'] as num?)?.toInt() ?? 0,
+        unit: j['unit'] as String? ?? 'word',
       );
 }
 
@@ -51,6 +56,7 @@ class VocabGroup {
     required this.minimalPairs,
     required this.exercises,
     this.style = 'contrast',
+    this.unit = 'word',
   });
 
   final String id;
@@ -62,6 +68,11 @@ class VocabGroup {
   /// 'contrast' (which-word-when, the Intermediate style) or 'theme' (topical
   /// Beginner style — lighter, no "Which one, when?" synthesis).
   final String style;
+
+  /// What the entries are: 'word' (single words) or 'expression' (useful
+  /// phrases/chunks — for themes where the words are already known but the
+  /// *saying* isn't, e.g. Family). Drives labels (word vs expression).
+  final String unit;
   final String whyGroupedEn;
   final String whyGroupedMm;
   final List<VocabWord> words;
@@ -77,6 +88,7 @@ class VocabGroup {
         order: (j['order'] as num?)?.toInt() ?? 0,
         theme: j['theme'] as String? ?? '',
         style: j['style'] as String? ?? 'contrast',
+        unit: j['unit'] as String? ?? 'word',
         whyGroupedEn: j['why_grouped_en'] as String? ?? '',
         whyGroupedMm: j['why_grouped_mm'] as String? ?? '',
         words: ((j['words'] as List?) ?? const [])

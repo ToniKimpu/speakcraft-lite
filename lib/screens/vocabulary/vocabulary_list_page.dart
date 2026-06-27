@@ -274,7 +274,8 @@ class _GroupCard extends StatelessWidget {
                     Text(entry.theme,
                         style: PmpTextStyles.label2Regular
                             .copyWith(color: cs.onSurfaceVariant)),
-                    Text('  ·  ${entry.wordCount} words',
+                    Text(
+                        '  ·  ${entry.wordCount} ${entry.unit == 'expression' ? 'expressions' : 'words'}',
                         style: PmpTextStyles.label2Regular
                             .copyWith(color: cs.onSurfaceVariant)),
                   ],
