@@ -257,11 +257,11 @@ class PmpRoutes {
         return _getRoute(const WritingPathPage(), settings);
       case writingTeachSteps:
         final args = settings.arguments as Map<String, dynamic>?;
-        final asset = args?['asset'] as String?;
+        final id = args?['id'] as String?;
         return _getRoute(
-          asset == null
+          id == null
               ? const WritingTeachStepsPage()
-              : WritingTeachStepsPage(assetPath: asset),
+              : WritingTeachStepsPage(unitId: id),
           settings,
         );
       case writingPractice:

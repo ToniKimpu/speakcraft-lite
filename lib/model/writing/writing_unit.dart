@@ -1,10 +1,9 @@
 /// Writing module — content models for the **Phase-0 prototype slice**.
 ///
 /// These are deliberately plain immutable Dart classes (NOT `@freezed`) so the
-/// one-unit device-review prototype needs no `build_runner` step. They map 1:1
-/// to the local JSON under `assets/writing/units/` — and the JSON keys mirror
-/// the future Supabase `writing_lessons` JSONB, so productionizing is a copy.
-/// When the module moves past Phase 0, convert these to `@freezed`.
+/// module needs no `build_runner` step. They map 1:1 to the Supabase
+/// `writing_lessons` JSONB (`teach`/`toolkit`/`exercises`), which the loaders in
+/// [writing_index.dart] fetch online. If the module grows, convert to `@freezed`.
 ///
 /// See repo root `WRITING_FEATURE_PLAN.md` (v2) for the full design.
 library;

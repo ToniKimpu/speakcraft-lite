@@ -5,34 +5,42 @@
 /// tense-unit pulls the form it needs — Present simple uses `third`, Past simple
 /// will reuse the same entry's `past`, etc. Authored once, reused forever.
 ///
-/// Phase-0: loaded from bundled JSON (`assets/writing/lexicon/`). The JSON keys
-/// mirror the future Supabase `writing_lexicon` table (`mm`, `forms` jsonb,
-/// `examples` jsonb, `tags` text[]) so productionizing is a copy.
+/// **Online-only**: loaded from the Supabase `writing_lexicon` table (rows split
+/// by `kind`). No bundled fallback.
 library;
 
-import 'dart:convert';
-
 import 'package:flutter/foundation.dart' show debugPrint;
-import 'package:flutter/services.dart' show rootBundle;
 
+import '../../services/supabase_service.dart';
 import 'writing_unit.dart' show ExamplePair;
 
-const _kVerbsAsset = 'assets/writing/lexicon/verbs.json';
-const _kTimeWordsAsset = 'assets/writing/lexicon/time_words.json';
-const _kAdjectivesAsset = 'assets/writing/lexicon/adjectives.json';
-const _kNounsAsset = 'assets/writing/lexicon/nouns.json';
+// Cached for the session — the lexicon is shared by every unit, so resolve once.
+WritingLexicon? _lexiconCache;
 
-/// Loads and indexes the bundled lexicon files.
+/// Loads and indexes the shared lexicon.
+/// Online-only: queries Supabase `writing_lexicon`, splitting rows by `kind`.
 Future<WritingLexicon> loadWritingLexicon() async {
-  final verbsRaw = await rootBundle.loadString(_kVerbsAsset);
-  final timeRaw = await rootBundle.loadString(_kTimeWordsAsset);
-  final adjRaw = await rootBundle.loadString(_kAdjectivesAsset);
-  final nounRaw = await rootBundle.loadString(_kNounsAsset);
-  return WritingLexicon.fromJson(
-    verbsJson: jsonDecode(verbsRaw) as List,
-    timeWordsJson: jsonDecode(timeRaw) as List,
-    adjectivesJson: jsonDecode(adjRaw) as List,
-    nounsJson: jsonDecode(nounRaw) as List,
+  if (_lexiconCache != null) return _lexiconCache!;
+  final rows = await supabase.from('writing_lexicon').select('id,kind,data');
+  final byKind = <String, List>{
+    'verb': [],
+    'time_word': [],
+    'adjective': [],
+    'noun': [],
+  };
+  for (final r in (rows as List)) {
+    final m = (r as Map).cast<String, dynamic>();
+    final kind = m['kind'] as String?;
+    final data = m['data'];
+    if (kind != null && data != null && byKind.containsKey(kind)) {
+      byKind[kind]!.add(data);
+    }
+  }
+  return _lexiconCache = WritingLexicon.fromJson(
+    verbsJson: byKind['verb']!,
+    timeWordsJson: byKind['time_word']!,
+    adjectivesJson: byKind['adjective']!,
+    nounsJson: byKind['noun']!,
   );
 }
 
