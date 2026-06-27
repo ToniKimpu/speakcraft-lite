@@ -112,31 +112,71 @@
       "type": "which_word",
       "prompt": "Exact, word-for-word meaning: \"The phrase ___ translates as 'good morning'.\"",
       "answer": "literally",
-      "options": ["literally", "basically", "seriously"]
+      "options": ["literally", "basically", "seriously"],
+      "explain_en": "Exact, word-for-word meaning → literally."
     },
     {
       "type": "which_word",
       "prompt": "Polite correction: \"___, the meeting is on Friday, not Thursday.\"",
       "answer": "Actually",
-      "options": ["Actually", "Literally", "Honestly"]
+      "options": ["Actually", "Literally", "Honestly"],
+      "explain_en": "Correcting or revealing the truth → actually."
     },
     {
       "type": "which_word",
       "prompt": "Simple summary of something complex: \"___, we just need more time.\"",
       "answer": "Basically",
-      "options": ["Basically", "Literally", "Seriously"]
+      "options": ["Basically", "Literally", "Seriously"],
+      "explain_en": "A simple summary of something complex → basically."
     },
     {
       "type": "which_word",
       "prompt": "Before a frank opinion: \"___, I think we should start over.\"",
       "answer": "Honestly",
-      "options": ["Honestly", "Literally", "Actually"]
+      "options": ["Honestly", "Literally", "Actually"],
+      "explain_en": "Signalling a frank, sincere opinion → honestly."
     },
     {
       "type": "which_word",
       "prompt": "Treat with importance: \"They don't take customer feedback ___.\"",
       "answer": "seriously",
-      "options": ["seriously", "basically", "literally"]
+      "options": ["seriously", "basically", "literally"],
+      "explain_en": "\"Take ... seriously\" is the fixed phrase."
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"The town's name ___ means 'new bridge'.\"",
+      "answer": "literally",
+      "options": [],
+      "explain_en": "Exactly, word-for-word true → literally (literally means)."
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"It looks expensive, but it's ___ quite cheap.\"",
+      "answer": "actually",
+      "options": [],
+      "explain_en": "Revealing the truth against what you'd expect → actually."
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"You need to take your health ___.\"",
+      "answer": "seriously",
+      "options": [],
+      "explain_en": "Fixed phrase: \"take ... seriously\"."
+    },
+    {
+      "type": "which_word",
+      "prompt": "Prefacing a candid opinion: \"___, I didn't enjoy the film much.\"",
+      "answer": "Honestly",
+      "options": ["Honestly", "Literally", "Basically"],
+      "explain_en": "Prefacing a candid opinion → honestly."
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"___, the two phones are the same.\"",
+      "answer": "basically",
+      "options": [],
+      "explain_en": "Giving a simple summary → basically (basically the same)."
     }
   ]
 }

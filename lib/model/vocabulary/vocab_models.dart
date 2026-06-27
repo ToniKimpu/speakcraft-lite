@@ -195,18 +195,42 @@ class VocabExercise {
     required this.prompt,
     required this.answer,
     required this.options,
+    required this.explainEn,
+    required this.accept,
   });
 
+  /// `which_word` (multiple choice) or `gap_fill` (type the word).
   final String type;
   final String prompt;
   final String answer;
+
+  /// Choices for `which_word` (empty for `gap_fill`).
   final List<String> options;
+
+  /// The "why" shown after answering — reinforces on correct, corrects the
+  /// misconception on wrong.
+  final String explainEn;
+
+  /// Extra accepted answers for `gap_fill` (beyond [answer]); matching is
+  /// case-insensitive so capitalisation isn't listed here.
+  final List<String> accept;
+
+  /// All acceptable answers, normalised for comparison.
+  List<String> get acceptedAnswers =>
+      [answer, ...accept].map((s) => s.trim().toLowerCase()).toList();
+
+  bool isCorrect(String input) =>
+      acceptedAnswers.contains(input.trim().toLowerCase());
 
   factory VocabExercise.fromJson(Map<String, dynamic> j) => VocabExercise(
         type: j['type'] as String? ?? 'which_word',
         prompt: j['prompt'] as String? ?? '',
         answer: j['answer'] as String? ?? '',
         options: ((j['options'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(growable: false),
+        explainEn: j['explain_en'] as String? ?? '',
+        accept: ((j['accept'] as List?) ?? const [])
             .map((e) => e.toString())
             .toList(growable: false),
       );

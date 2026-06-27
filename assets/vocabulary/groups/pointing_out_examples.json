@@ -112,31 +112,72 @@
       "type": "which_word",
       "prompt": "Mid-sentence list of nouns: \"I read fiction ___ thrillers and mysteries.\"",
       "answer": "such as",
-      "options": ["such as", "for example", "in particular"]
+      "options": ["such as", "for example", "in particular"],
+      "explain_en": "A list of example nouns inside the sentence → such as. \"For example\" usually starts its own example."
     },
     {
       "type": "which_word",
       "prompt": "Starting a sentence with a full example: \"___, many people now work from home.\"",
       "answer": "For example",
-      "options": ["For example", "Such as", "In particular"]
+      "options": ["For example", "Such as", "In particular"],
+      "explain_en": "A full example as a new sentence → For example. \"Such as\" can't open a clause like this."
     },
     {
       "type": "which_word",
       "prompt": "Singling one thing out before the noun: \"I love the summer, ___ the long evenings.\"",
       "answer": "especially",
-      "options": ["especially", "in particular", "such as"]
+      "options": ["especially", "in particular", "such as"],
+      "explain_en": "Stress the standout, placed BEFORE it → especially. \"In particular\" would go after the noun."
     },
     {
       "type": "which_word",
       "prompt": "After the noun it highlights: \"Was there a colour ___ you had in mind?\"",
       "answer": "in particular",
-      "options": ["in particular", "especially", "for example"]
+      "options": ["in particular", "especially", "for example"],
+      "explain_en": "Marks one specific thing, placed AFTER the noun (\"a colour ___\") → in particular."
     },
     {
       "type": "which_word",
       "prompt": "Meaning 'not very': \"The film wasn't ___ good.\"",
       "answer": "particularly",
-      "options": ["particularly", "such as", "for example"]
+      "options": ["particularly", "such as", "for example"],
+      "explain_en": "\"Not particularly\" = not very. Only \"particularly\" fits this negative pattern."
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing words: \"Pack light items ___ a scarf and a hat.\"",
+      "answer": "such as",
+      "options": [],
+      "explain_en": "Listing example nouns inside the sentence → such as.",
+      "accept": ["like"]
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"It's busy here, ___ at the weekend.\"",
+      "answer": "especially",
+      "options": [],
+      "explain_en": "Stressing the standout time, right before it → especially."
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing words: \"Is there anything ___ you'd like to order?\"",
+      "answer": "in particular",
+      "options": [],
+      "explain_en": "Comes after the noun (\"anything ___\") → in particular."
+    },
+    {
+      "type": "which_word",
+      "prompt": "A full example as a new sentence: \"You should exercise daily. ___, a short walk after lunch helps.\"",
+      "answer": "For example",
+      "options": ["For example", "Such as", "In particular"],
+      "explain_en": "A new sentence giving a full example → For example. \"Such as\" can't start a clause."
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"I'm not ___ keen on spicy food.\"",
+      "answer": "particularly",
+      "options": [],
+      "explain_en": "\"Not particularly\" = not very. The fixed pattern uses particularly."
     }
   ]
 }

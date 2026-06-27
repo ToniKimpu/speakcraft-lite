@@ -65,14 +65,14 @@ class _VocabGroupPageState extends State<VocabGroupPage> {
       title: Text(widget.title ?? 'Vocabulary'),
       actions: [
         if (group != null)
-          IconButton(
-            tooltip: 'Compare all',
-            icon: const Icon(Icons.table_rows_rounded),
+          TextButton.icon(
             onPressed: () => _controller.animateToPage(
               _comparisonIndex,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeOut,
             ),
+            icon: const Icon(Icons.summarize_outlined, size: 18),
+            label: const Text('Summary'),
           ),
       ],
       body: _error != null

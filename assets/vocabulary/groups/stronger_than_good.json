@@ -112,25 +112,71 @@
       "type": "which_word",
       "prompt": "On a job reference: \"She has ___ attention to detail.\"",
       "answer": "excellent",
-      "options": ["amazing", "excellent", "wonderful"]
+      "options": ["amazing", "excellent", "wonderful"],
+      "explain_en": "Quality and work praise → excellent. \"Amazing\" sounds casual and \"wonderful\" is for people and feelings."
     },
     {
       "type": "which_word",
       "prompt": "Reacting to a surprise: \"You climbed the whole mountain? That's ___!\"",
       "answer": "amazing",
-      "options": ["amazing", "excellent", "good"]
+      "options": ["amazing", "excellent", "good"],
+      "explain_en": "A surprised reaction → amazing. \"Excellent\" is about quality, and \"good\" is too weak for the wow."
     },
     {
       "type": "which_word",
       "prompt": "About a kind person: \"My grandmother was a truly ___ woman.\"",
       "answer": "wonderful",
-      "options": ["wonderful", "excellent", "fantastic"]
+      "options": ["wonderful", "excellent", "fantastic"],
+      "explain_en": "People and warmth → wonderful. \"Excellent/fantastic woman\" sound like a rating, not affection."
     },
     {
       "type": "which_word",
       "prompt": "Safe, everyday choice: \"That's a ___ idea, let's do it.\"",
       "answer": "great",
-      "options": ["great", "wonderful", "excellent"]
+      "options": ["great", "wonderful", "excellent"],
+      "explain_en": "Neutral, everyday \"very good\" → great. \"A great idea\" is the natural pairing."
+    },
+    {
+      "type": "which_word",
+      "prompt": "Pleased reaction in speech: \"You got the job? ___!\"",
+      "answer": "fantastic",
+      "options": ["fantastic", "excellent", "wonderful"],
+      "explain_en": "A warm, upbeat reaction → fantastic. \"Excellent\" feels formal; \"wonderful\" suits people and moments."
+    },
+    {
+      "type": "which_word",
+      "prompt": "On a report: \"The product is of ___ quality.\"",
+      "answer": "excellent",
+      "options": ["excellent", "amazing", "great"],
+      "explain_en": "\"Excellent quality\" is the standard collocation for standards and work."
+    },
+    {
+      "type": "which_word",
+      "prompt": "Thanks for good news: \"Thanks for the ___ news!\"",
+      "answer": "great",
+      "options": ["great", "excellent", "wonderful"],
+      "explain_en": "\"Great news\" is the fixed pairing — we don't say \"excellent/wonderful news\" as naturally."
+    },
+    {
+      "type": "which_word",
+      "prompt": "About a film's visuals: \"The special effects were ___.\"",
+      "answer": "amazing",
+      "options": ["amazing", "excellent", "good"],
+      "explain_en": "Wow-factor and impressive → amazing. \"Excellent\" is more about quality or standard."
+    },
+    {
+      "type": "which_word",
+      "prompt": "A warm experience: \"We had a ___ evening together.\"",
+      "answer": "wonderful",
+      "options": ["wonderful", "excellent", "good"],
+      "explain_en": "A warm shared moment → wonderful. \"Excellent evening\" sounds oddly formal."
+    },
+    {
+      "type": "which_word",
+      "prompt": "Marking an essay: \"Your essay shows ___ structure and clarity.\"",
+      "answer": "excellent",
+      "options": ["excellent", "fantastic", "wonderful"],
+      "explain_en": "Academic, quality feedback → excellent. The others sound too casual or emotional for marking work."
     }
   ]
 }
