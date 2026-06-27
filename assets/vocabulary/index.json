@@ -9,6 +9,14 @@
       "word_count": 5
     },
     {
+      "id": "big_and_small",
+      "title": "Big & small",
+      "level": 1,
+      "order": 2,
+      "theme": "Size",
+      "word_count": 5
+    },
+    {
       "id": "pointing_out_examples",
       "title": "Pointing things out & giving examples",
       "level": 2,
