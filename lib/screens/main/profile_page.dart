@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/auth/auth_bloc.dart';
 import 'package:speakcraft/bloc/user_activity/user_activity_bloc.dart';
@@ -126,6 +127,10 @@ class _HeroCard extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
+          if (appUser.accountId?.isNotEmpty == true) ...[
+            const SizedBox(height: 8),
+            _AccountIdChip(accountId: appUser.accountId!),
+          ],
           const SizedBox(height: 4),
           const AppVersionWidget(),
           const SizedBox(height: 20),
@@ -133,6 +138,50 @@ class _HeroCard extends StatelessWidget {
           const SizedBox(height: 16),
           _StatsRow(),
         ],
+      ),
+    );
+  }
+}
+
+class _AccountIdChip extends StatelessWidget {
+  const _AccountIdChip({required this.accountId});
+
+  final String accountId;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return InkWell(
+      borderRadius: BorderRadius.circular(8),
+      onTap: () async {
+        await Clipboard.setData(ClipboardData(text: accountId));
+        if (!context.mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Account ID copied'),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Account ID: $accountId',
+              style: PmpTextStyles.label2Regular.copyWith(
+                color: colorScheme.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(width: 6),
+            Icon(
+              Icons.copy_rounded,
+              size: 14,
+              color: colorScheme.onSurfaceVariant,
+            ),
+          ],
+        ),
       ),
     );
   }

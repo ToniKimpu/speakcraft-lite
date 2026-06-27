@@ -9,6 +9,7 @@ part 'app_user.g.dart';
 class AppUser with _$AppUser {
   const factory AppUser({
     int? id,
+    @JsonKey(name: 'account_id') String? accountId,
     String? name,
     required String email,
     @JsonKey(name: 'profile_path') String? profilePath,

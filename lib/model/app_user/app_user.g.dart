@@ -9,6 +9,7 @@ part of 'app_user.dart';
 _$AppUserImpl _$$AppUserImplFromJson(Map<String, dynamic> json) =>
     _$AppUserImpl(
       id: (json['id'] as num?)?.toInt(),
+      accountId: json['account_id'] as String?,
       name: json['name'] as String?,
       email: json['email'] as String,
       profilePath: json['profile_path'] as String?,
@@ -23,6 +24,7 @@ _$AppUserImpl _$$AppUserImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$AppUserImplToJson(_$AppUserImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'account_id': instance.accountId,
       'name': instance.name,
       'email': instance.email,
       'profile_path': instance.profilePath,

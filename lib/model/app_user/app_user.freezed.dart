@@ -21,6 +21,8 @@ AppUser _$AppUserFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AppUser {
   int? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'account_id')
+  String? get accountId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   @JsonKey(name: 'profile_path')
@@ -50,6 +52,7 @@ abstract class $AppUserCopyWith<$Res> {
   @useResult
   $Res call(
       {int? id,
+      @JsonKey(name: 'account_id') String? accountId,
       String? name,
       String email,
       @JsonKey(name: 'profile_path') String? profilePath,
@@ -75,6 +78,7 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
   @override
   $Res call({
     Object? id = freezed,
+    Object? accountId = freezed,
     Object? name = freezed,
     Object? email = null,
     Object? profilePath = freezed,
@@ -88,6 +92,10 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
+      accountId: freezed == accountId
+          ? _value.accountId
+          : accountId // ignore: cast_nullable_to_non_nullable
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -129,6 +137,7 @@ abstract class _$$AppUserImplCopyWith<$Res> implements $AppUserCopyWith<$Res> {
   @useResult
   $Res call(
       {int? id,
+      @JsonKey(name: 'account_id') String? accountId,
       String? name,
       String email,
       @JsonKey(name: 'profile_path') String? profilePath,
@@ -152,6 +161,7 @@ class __$$AppUserImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? accountId = freezed,
     Object? name = freezed,
     Object? email = null,
     Object? profilePath = freezed,
@@ -165,6 +175,10 @@ class __$$AppUserImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
+      accountId: freezed == accountId
+          ? _value.accountId
+          : accountId // ignore: cast_nullable_to_non_nullable
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -202,6 +216,7 @@ class __$$AppUserImplCopyWithImpl<$Res>
 class _$AppUserImpl implements _AppUser {
   const _$AppUserImpl(
       {this.id,
+      @JsonKey(name: 'account_id') this.accountId,
       this.name,
       required this.email,
       @JsonKey(name: 'profile_path') this.profilePath,
@@ -215,6 +230,9 @@ class _$AppUserImpl implements _AppUser {
 
   @override
   final int? id;
+  @override
+  @JsonKey(name: 'account_id')
+  final String? accountId;
   @override
   final String? name;
   @override
@@ -237,7 +255,7 @@ class _$AppUserImpl implements _AppUser {
 
   @override
   String toString() {
-    return 'AppUser(id: $id, name: $name, email: $email, profilePath: $profilePath, createdAt: $createdAt, deviceId: $deviceId, totalTokenUsed: $totalTokenUsed, isPremiumUser: $isPremiumUser)';
+    return 'AppUser(id: $id, accountId: $accountId, name: $name, email: $email, profilePath: $profilePath, createdAt: $createdAt, deviceId: $deviceId, totalTokenUsed: $totalTokenUsed, isPremiumUser: $isPremiumUser)';
   }
 
   @override
@@ -246,6 +264,8 @@ class _$AppUserImpl implements _AppUser {
         (other.runtimeType == runtimeType &&
             other is _$AppUserImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.accountId, accountId) ||
+                other.accountId == accountId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.profilePath, profilePath) ||
@@ -262,8 +282,8 @@ class _$AppUserImpl implements _AppUser {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, email, profilePath,
-      createdAt, deviceId, totalTokenUsed, isPremiumUser);
+  int get hashCode => Object.hash(runtimeType, id, accountId, name, email,
+      profilePath, createdAt, deviceId, totalTokenUsed, isPremiumUser);
 
   /// Create a copy of AppUser
   /// with the given fields replaced by the non-null parameter values.
@@ -284,6 +304,7 @@ class _$AppUserImpl implements _AppUser {
 abstract class _AppUser implements AppUser {
   const factory _AppUser(
           {final int? id,
+          @JsonKey(name: 'account_id') final String? accountId,
           final String? name,
           required final String email,
           @JsonKey(name: 'profile_path') final String? profilePath,
@@ -297,6 +318,9 @@ abstract class _AppUser implements AppUser {
 
   @override
   int? get id;
+  @override
+  @JsonKey(name: 'account_id')
+  String? get accountId;
   @override
   String? get name;
   @override
