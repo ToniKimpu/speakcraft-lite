@@ -2,7 +2,7 @@
   "id": "pointing_out_examples",
   "title": "Pointing things out & giving examples",
   "level": 2,
-  "order": 1,
+  "order": 3,
   "theme": "Discourse markers",
   "why_grouped_en": "These five all help you single something out or give an example — but learners mix them up. \"For example\" and \"such as\" introduce examples; \"especially\", \"particularly\" and \"in particular\" stress that one thing stands out. The trick is mostly about position in the sentence.",
   "why_grouped_mm": "",
@@ -18,11 +18,22 @@
       "nuance_en": "Followed by an example sentence or noun: \"For example, prices have risen.\"",
       "goes_with_en": "For example, + clause · take X, for example",
       "examples": [
-        { "en": "Some animals hibernate. Bears, for example, sleep all winter.", "mm": "" },
-        { "en": "You could save money — for example, by cooking at home.", "mm": "" }
+        {
+          "en": "Some animals hibernate. Bears, for example, sleep all winter.",
+          "mm": ""
+        },
+        {
+          "en": "You could save money — for example, by cooking at home.",
+          "mm": ""
+        }
       ],
-      "collocations": ["for example,", "take ... for example"],
-      "confuse_with": ["such as"]
+      "collocations": [
+        "for example,",
+        "take ... for example"
+      ],
+      "confuse_with": [
+        "such as"
+      ]
     },
     {
       "word": "such as",
@@ -35,11 +46,23 @@
       "nuance_en": "Use with nouns: \"fruits such as mangoes\". Don't follow it with a full sentence.",
       "goes_with_en": "nouns such as A and B · things such as these",
       "examples": [
-        { "en": "I enjoy team sports such as football and basketball.", "mm": "" },
-        { "en": "Bring warm clothes such as a jacket and gloves.", "mm": "" }
+        {
+          "en": "I enjoy team sports such as football and basketball.",
+          "mm": ""
+        },
+        {
+          "en": "Bring warm clothes such as a jacket and gloves.",
+          "mm": ""
+        }
       ],
-      "collocations": ["things such as", "such as these"],
-      "confuse_with": ["for example", "like"]
+      "collocations": [
+        "things such as",
+        "such as these"
+      ],
+      "confuse_with": [
+        "for example",
+        "like"
+      ]
     },
     {
       "word": "especially",
@@ -52,11 +75,24 @@
       "nuance_en": "Don't confuse with \"specially\" (= for a special purpose).",
       "goes_with_en": "especially + noun · especially when / if · not especially",
       "examples": [
-        { "en": "It gets cold here, especially at night.", "mm": "" },
-        { "en": "She loves animals, especially dogs.", "mm": "" }
+        {
+          "en": "It gets cold here, especially at night.",
+          "mm": ""
+        },
+        {
+          "en": "She loves animals, especially dogs.",
+          "mm": ""
+        }
       ],
-      "collocations": ["especially when", "especially if", "not especially"],
-      "confuse_with": ["specially", "particularly"]
+      "collocations": [
+        "especially when",
+        "especially if",
+        "not especially"
+      ],
+      "confuse_with": [
+        "specially",
+        "particularly"
+      ]
     },
     {
       "word": "particularly",
@@ -69,11 +105,23 @@
       "nuance_en": "\"The exam wasn't particularly hard\" = it wasn't very hard.",
       "goes_with_en": "particularly + adjective · not particularly",
       "examples": [
-        { "en": "Traffic is bad, particularly on Mondays.", "mm": "" },
-        { "en": "I'm not particularly hungry right now.", "mm": "" }
+        {
+          "en": "Traffic is bad, particularly on Mondays.",
+          "mm": ""
+        },
+        {
+          "en": "I'm not particularly hungry right now.",
+          "mm": ""
+        }
       ],
-      "collocations": ["particularly important", "not particularly"],
-      "confuse_with": ["especially", "in particular"]
+      "collocations": [
+        "particularly important",
+        "not particularly"
+      ],
+      "confuse_with": [
+        "especially",
+        "in particular"
+      ]
     },
     {
       "word": "in particular",
@@ -86,11 +134,22 @@
       "nuance_en": "Comes after the thing it highlights, unlike \"especially\" which comes before.",
       "goes_with_en": "anything / anyone / nothing in particular",
       "examples": [
-        { "en": "I liked the music, one song in particular.", "mm": "" },
-        { "en": "Is there anyone in particular you'd like to invite?", "mm": "" }
+        {
+          "en": "I liked the music, one song in particular.",
+          "mm": ""
+        },
+        {
+          "en": "Is there anyone in particular you'd like to invite?",
+          "mm": ""
+        }
       ],
-      "collocations": ["anything in particular", "no one in particular"],
-      "confuse_with": ["particularly"]
+      "collocations": [
+        "anything in particular",
+        "no one in particular"
+      ],
+      "confuse_with": [
+        "particularly"
+      ]
     }
   ],
   "minimal_pairs": [
@@ -112,35 +171,55 @@
       "type": "which_word",
       "prompt": "Mid-sentence list of nouns: \"I read fiction ___ thrillers and mysteries.\"",
       "answer": "such as",
-      "options": ["such as", "for example", "in particular"],
+      "options": [
+        "such as",
+        "for example",
+        "in particular"
+      ],
       "explain_en": "A list of example nouns inside the sentence → such as. \"For example\" usually starts its own example."
     },
     {
       "type": "which_word",
       "prompt": "Starting a sentence with a full example: \"___, many people now work from home.\"",
       "answer": "For example",
-      "options": ["For example", "Such as", "In particular"],
+      "options": [
+        "For example",
+        "Such as",
+        "In particular"
+      ],
       "explain_en": "A full example as a new sentence → For example. \"Such as\" can't open a clause like this."
     },
     {
       "type": "which_word",
       "prompt": "Singling one thing out before the noun: \"I love the summer, ___ the long evenings.\"",
       "answer": "especially",
-      "options": ["especially", "in particular", "such as"],
+      "options": [
+        "especially",
+        "in particular",
+        "such as"
+      ],
       "explain_en": "Stress the standout, placed BEFORE it → especially. \"In particular\" would go after the noun."
     },
     {
       "type": "which_word",
       "prompt": "After the noun it highlights: \"Was there a colour ___ you had in mind?\"",
       "answer": "in particular",
-      "options": ["in particular", "especially", "for example"],
+      "options": [
+        "in particular",
+        "especially",
+        "for example"
+      ],
       "explain_en": "Marks one specific thing, placed AFTER the noun (\"a colour ___\") → in particular."
     },
     {
       "type": "which_word",
       "prompt": "Meaning 'not very': \"The film wasn't ___ good.\"",
       "answer": "particularly",
-      "options": ["particularly", "such as", "for example"],
+      "options": [
+        "particularly",
+        "such as",
+        "for example"
+      ],
       "explain_en": "\"Not particularly\" = not very. Only \"particularly\" fits this negative pattern."
     },
     {
@@ -149,7 +228,9 @@
       "answer": "such as",
       "options": [],
       "explain_en": "Listing example nouns inside the sentence → such as.",
-      "accept": ["like"]
+      "accept": [
+        "like"
+      ]
     },
     {
       "type": "gap_fill",
@@ -169,7 +250,11 @@
       "type": "which_word",
       "prompt": "A full example as a new sentence: \"You should exercise daily. ___, a short walk after lunch helps.\"",
       "answer": "For example",
-      "options": ["For example", "Such as", "In particular"],
+      "options": [
+        "For example",
+        "Such as",
+        "In particular"
+      ],
       "explain_en": "A new sentence giving a full example → For example. \"Such as\" can't start a clause."
     },
     {

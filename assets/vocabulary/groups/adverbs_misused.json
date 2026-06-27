@@ -2,7 +2,7 @@
   "id": "adverbs_misused",
   "title": "Adverbs people misuse",
   "level": 2,
-  "order": 2,
+  "order": 4,
   "theme": "Manner & discourse adverbs",
   "why_grouped_en": "These -ly adverbs sound advanced, so learners reach for them — and use them wrong. Each has a precise job. Learn what they really mean, what they pair with, and when NOT to use them.",
   "why_grouped_mm": "",
@@ -18,11 +18,23 @@
       "nuance_en": "Don't use it just for emphasis (\"I literally died laughing\") — that's the opposite of its meaning.",
       "goes_with_en": "literally + means / translates · take it literally",
       "examples": [
-        { "en": "He translated the text literally, word for word.", "mm": "" },
-        { "en": "The town's name literally means \"new bridge\".", "mm": "" }
+        {
+          "en": "He translated the text literally, word for word.",
+          "mm": ""
+        },
+        {
+          "en": "The town's name literally means \"new bridge\".",
+          "mm": ""
+        }
       ],
-      "collocations": ["literally true", "take it literally", "literally means"],
-      "confuse_with": ["figuratively"]
+      "collocations": [
+        "literally true",
+        "take it literally",
+        "literally means"
+      ],
+      "confuse_with": [
+        "figuratively"
+      ]
     },
     {
       "word": "actually",
@@ -35,11 +47,23 @@
       "nuance_en": "Not the same as \"currently\" or \"now\". \"Actually, it's free\" = contrary to what you thought.",
       "goes_with_en": "Actually, + clause · not actually",
       "examples": [
-        { "en": "It looks hard, but it's actually quite easy.", "mm": "" },
-        { "en": "Actually, I think you're right.", "mm": "" }
+        {
+          "en": "It looks hard, but it's actually quite easy.",
+          "mm": ""
+        },
+        {
+          "en": "Actually, I think you're right.",
+          "mm": ""
+        }
       ],
-      "collocations": ["actually,", "not actually"],
-      "confuse_with": ["currently", "now"]
+      "collocations": [
+        "actually,",
+        "not actually"
+      ],
+      "confuse_with": [
+        "currently",
+        "now"
+      ]
     },
     {
       "word": "basically",
@@ -52,10 +76,19 @@
       "nuance_en": "Useful, but a filler if overused. Drop it if the sentence works without it.",
       "goes_with_en": "Basically, + clause · basically the same",
       "examples": [
-        { "en": "Basically, the plan is to leave early and avoid traffic.", "mm": "" },
-        { "en": "It's basically the same as the old one.", "mm": "" }
+        {
+          "en": "Basically, the plan is to leave early and avoid traffic.",
+          "mm": ""
+        },
+        {
+          "en": "It's basically the same as the old one.",
+          "mm": ""
+        }
       ],
-      "collocations": ["basically the same", "basically,"],
+      "collocations": [
+        "basically the same",
+        "basically,"
+      ],
       "confuse_with": []
     },
     {
@@ -69,11 +102,22 @@
       "nuance_en": "\"Honestly!\" on its own shows mild frustration.",
       "goes_with_en": "Honestly, + clause · quite honestly",
       "examples": [
-        { "en": "Honestly, I'm not sure this will work.", "mm": "" },
-        { "en": "I honestly didn't know about the meeting.", "mm": "" }
+        {
+          "en": "Honestly, I'm not sure this will work.",
+          "mm": ""
+        },
+        {
+          "en": "I honestly didn't know about the meeting.",
+          "mm": ""
+        }
       ],
-      "collocations": ["honestly,", "quite honestly"],
-      "confuse_with": ["seriously"]
+      "collocations": [
+        "honestly,",
+        "quite honestly"
+      ],
+      "confuse_with": [
+        "seriously"
+      ]
     },
     {
       "word": "seriously",
@@ -86,11 +130,22 @@
       "nuance_en": "\"Seriously?\" on its own asks \"really?\" in surprise or doubt.",
       "goes_with_en": "take (sth) seriously · seriously + adjective",
       "examples": [
-        { "en": "You should take this deadline seriously.", "mm": "" },
-        { "en": "That movie was seriously good.", "mm": "" }
+        {
+          "en": "You should take this deadline seriously.",
+          "mm": ""
+        },
+        {
+          "en": "That movie was seriously good.",
+          "mm": ""
+        }
       ],
-      "collocations": ["take seriously", "seriously good"],
-      "confuse_with": ["honestly"]
+      "collocations": [
+        "take seriously",
+        "seriously good"
+      ],
+      "confuse_with": [
+        "honestly"
+      ]
     }
   ],
   "minimal_pairs": [
@@ -112,35 +167,55 @@
       "type": "which_word",
       "prompt": "Exact, word-for-word meaning: \"The phrase ___ translates as 'good morning'.\"",
       "answer": "literally",
-      "options": ["literally", "basically", "seriously"],
+      "options": [
+        "literally",
+        "basically",
+        "seriously"
+      ],
       "explain_en": "Exact, word-for-word meaning → literally."
     },
     {
       "type": "which_word",
       "prompt": "Polite correction: \"___, the meeting is on Friday, not Thursday.\"",
       "answer": "Actually",
-      "options": ["Actually", "Literally", "Honestly"],
+      "options": [
+        "Actually",
+        "Literally",
+        "Honestly"
+      ],
       "explain_en": "Correcting or revealing the truth → actually."
     },
     {
       "type": "which_word",
       "prompt": "Simple summary of something complex: \"___, we just need more time.\"",
       "answer": "Basically",
-      "options": ["Basically", "Literally", "Seriously"],
+      "options": [
+        "Basically",
+        "Literally",
+        "Seriously"
+      ],
       "explain_en": "A simple summary of something complex → basically."
     },
     {
       "type": "which_word",
       "prompt": "Before a frank opinion: \"___, I think we should start over.\"",
       "answer": "Honestly",
-      "options": ["Honestly", "Literally", "Actually"],
+      "options": [
+        "Honestly",
+        "Literally",
+        "Actually"
+      ],
       "explain_en": "Signalling a frank, sincere opinion → honestly."
     },
     {
       "type": "which_word",
       "prompt": "Treat with importance: \"They don't take customer feedback ___.\"",
       "answer": "seriously",
-      "options": ["seriously", "basically", "literally"],
+      "options": [
+        "seriously",
+        "basically",
+        "literally"
+      ],
       "explain_en": "\"Take ... seriously\" is the fixed phrase."
     },
     {
@@ -168,7 +243,11 @@
       "type": "which_word",
       "prompt": "Prefacing a candid opinion: \"___, I didn't enjoy the film much.\"",
       "answer": "Honestly",
-      "options": ["Honestly", "Literally", "Basically"],
+      "options": [
+        "Honestly",
+        "Literally",
+        "Basically"
+      ],
       "explain_en": "Prefacing a candid opinion → honestly."
     },
     {

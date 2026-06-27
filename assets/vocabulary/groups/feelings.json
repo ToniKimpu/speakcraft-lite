@@ -1,0 +1,265 @@
+{
+  "id": "feelings",
+  "title": "Feelings",
+  "level": 1,
+  "order": 1,
+  "theme": "Feelings & emotions",
+  "style": "theme",
+  "why_grouped_en": "The everyday words for how you feel — so you can answer \"How are you?\" with more than just \"fine\". Two tricky ones to watch: bored vs boring, and nervous vs worried.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက ကိုယ့်ခံစားချက်ကို ပြောပြဖို့ အသုံးများတဲ့ စကားလုံးတွေပေါ့။ 'How are you?' လို့ မေးရင် 'fine' တစ်လုံးတည်းပဲ မဖြေဘဲ ကိုယ်ဖြစ်နေတဲ့ ခံစားချက်ကို သေချာပြောတတ်အောင်လို့ပါ။ နောက်ပြီး လူတွေအမြဲမှားတတ်တဲ့ bored နဲ့ boring၊ nervous နဲ့ worried ကွာခြားချက်တွေကိုလည်း သေချာမှတ်ထားရမယ်နော်။",
+  "words": [
+    {
+      "word": "happy",
+      "pos": "adjective",
+      "ipa": "/ˈhæp.i/",
+      "short_en": "feeling good and pleased",
+      "examples": [
+        {
+          "en": "I'm so {w}happy{/w} to {c}see{/c} you!",
+          "mm": "မင်းကိုတွေ့ရတာ အရမ်းပျော်တာပဲ။"
+        },
+        {
+          "en": "She felt {w}happy{/w} about the good {c}news{/c}.",
+          "mm": "သူမက သတင်းကောင်းကြားတော့ အရမ်းပျော်သွားတယ်။"
+        }
+      ],
+      "short_mm": "ပျော်ရွှင်တဲ့၊ စိတ်ချမ်းသာတဲ့"
+    },
+    {
+      "word": "excited",
+      "pos": "adjective",
+      "ipa": "/ɪkˈsaɪ.tɪd/",
+      "short_en": "very happy and full of energy about something",
+      "examples": [
+        {
+          "en": "The kids are {w}excited{/w} about the {c}trip{/c}.",
+          "mm": "ကလေးတွေက ခရီးသွားရမှာမို့လို့ အရမ်းစိတ်လှုပ်ရှားနေကြတယ်။"
+        },
+        {
+          "en": "I'm so {w}excited{/w} to {c}start{/c} my new job!",
+          "mm": "အလုပ်သစ်စရမှာမို့လို့ အရမ်းစိတ်လှုပ်ရှားနေမိတယ်။"
+        }
+      ],
+      "short_mm": "စိတ်လှုပ်ရှားတဲ့၊ အားတက်တဲ့"
+    },
+    {
+      "word": "tired",
+      "pos": "adjective",
+      "ipa": "/taɪəd/",
+      "short_en": "needing rest or sleep",
+      "examples": [
+        {
+          "en": "I'm really {w}tired{/w} after {c}work{/c}.",
+          "mm": "အလုပ်ဆင်းပြီးတော့ တကယ်ကို အရမ်းပင်ပန်းနေပြီ။"
+        },
+        {
+          "en": "She looks {w}tired{/w} {c}today{/c}.",
+          "mm": "ဒီနေ့ သူမကို ကြည့်ရတာ ပင်ပန်းနေပုံပဲ။"
+        }
+      ],
+      "short_mm": "ပင်ပန်းတဲ့၊ အိပ်ချင်တဲ့"
+    },
+    {
+      "word": "bored",
+      "pos": "adjective",
+      "ipa": "/bɔːd/",
+      "short_en": "not interested; nothing to do",
+      "nuance_en": "\"bored\" describes how YOU feel; \"boring\" describes the thing. Saying \"I'm boring\" means you make other people bored!",
+      "examples": [
+        {
+          "en": "I'm so {w}bored{/w} — there's {c}nothing{/c} to do.",
+          "mm": "ငါတော့ ပျင်းလိုက်တာ၊ ဘာလုပ်ရမှန်းလည်း မသိဘူး။"
+        },
+        {
+          "en": "The students looked {w}bored{/w} in the {c}lesson{/c}.",
+          "mm": "ကျောင်းသားတွေကို ကြည့်ရတာ စာသင်ချိန်မှာ ပျင်းနေကြပုံပဲ။"
+        }
+      ],
+      "confuse_with": [
+        "boring"
+      ],
+      "short_mm": "ပျင်းတဲ့ (ကိုယ်တိုင်ဖြစ်နေတာ)",
+      "nuance_mm": "bored က ကိုယ့်ခံစားချက်၊ boring ကတော့ ပျင်းစရာကောင်းတဲ့အရာ (ဥပမာ- boring movie) ကို ပြောတာပါ။ 'I'm boring' လို့ ပြောလိုက်ရင် ကိုယ်က လူတွေကို ပျင်းအောင်လုပ်တဲ့သူလို့ အဓိပ္ပာယ်ထွက်သွားတတ်လို့ သတိထားနော်။"
+    },
+    {
+      "word": "nervous",
+      "pos": "adjective",
+      "ipa": "/ˈnɜː.vəs/",
+      "short_en": "worried and a little scared before something",
+      "nuance_en": "\"nervous\" = jittery before an event (an exam, a date). \"worried\" = anxious about a problem.",
+      "examples": [
+        {
+          "en": "I'm {w}nervous{/w} about the {c}interview{/c}.",
+          "mm": "အင်တာဗျူးအတွက်နဲ့ စိတ်ပူနေမိတယ်။"
+        },
+        {
+          "en": "He gets {w}nervous{/w} before {c}exams{/c}.",
+          "mm": "သူက စာမေးပွဲမဖြေခင်ဆို အမြဲတမ်း စိတ်လှုပ်ရှားတတ်တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "worried"
+      ],
+      "short_mm": "စိတ်လှုပ်ရှားပြီး ပူပန်နေတဲ့",
+      "nuance_mm": "တစ်ခုခု မလုပ်ခင် ခဏလေးပဲ ဖြစ်တတ်တဲ့ စိတ်လှုပ်ရှားမှုမျိုးပါ။"
+    },
+    {
+      "word": "worried",
+      "pos": "adjective",
+      "ipa": "/ˈwʌr.id/",
+      "short_en": "anxious that something bad might happen",
+      "nuance_en": "\"worried\" = anxious about a problem or outcome. \"nervous\" = jittery just before an event.",
+      "examples": [
+        {
+          "en": "She's {w}worried{/w} about her sick {c}father{/c}.",
+          "mm": "သူမက ဖျားနေတဲ့ သူ့အဖေအတွက် စိတ်ပူနေတယ်။"
+        },
+        {
+          "en": "I'm {w}worried{/w} that I'll be {c}late{/c}.",
+          "mm": "ငါနောက်ကျမှာကို စိတ်ပူနေတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "nervous"
+      ],
+      "short_mm": "စိုးရိမ်နေတဲ့",
+      "nuance_mm": "nervous က အဖြစ်အပျက်တစ်ခုခုမတိုင်ခင် ရင်တုန်တာဆိုရင်၊ worried ကတော့ ပြဿနာတစ်ခုခုကို စိတ်ပူပြီး တွေးပူနေတာမျိုးပါ။"
+    },
+    {
+      "word": "scared",
+      "pos": "adjective",
+      "ipa": "/skeəd/",
+      "short_en": "afraid; frightened",
+      "examples": [
+        {
+          "en": "I'm {w}scared{/w} of {c}spiders{/c}.",
+          "mm": "ငါ ပင့်ကူတွေကို ကြောက်တယ်။"
+        },
+        {
+          "en": "The dog was {w}scared{/w} of the {c}noise{/c}.",
+          "mm": "ခွေးလေးက အသံကျယ်ကျယ်ကို ကြောက်နေတယ်။"
+        }
+      ],
+      "short_mm": "ကြောက်တဲ့"
+    },
+    {
+      "word": "angry",
+      "pos": "adjective",
+      "ipa": "/ˈæŋ.ɡri/",
+      "short_en": "feeling strong annoyance; mad",
+      "examples": [
+        {
+          "en": "He was {w}angry{/w} about the {c}delay{/c}.",
+          "mm": "သူက အချိန်နှောင့်နှေးသွားလို့ ဒေါသထွက်နေတယ်။"
+        },
+        {
+          "en": "Please don't be {w}angry{/w} with {c}me{/c}.",
+          "mm": "ကျေးဇူးပြုပြီး ငါ့ကို စိတ်မဆိုးပါနဲ့။"
+        }
+      ],
+      "short_mm": "ဒေါသထွက်တဲ့"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "There's nothing to do — I'm so ___.",
+      "right": "bored",
+      "wrong": "boring",
+      "why": "\"-ed\" = how you feel. \"I'm boring\" means you make others bored!",
+      "why_mm": "bored က ကိုယ်ဖြစ်တဲ့ခံစားချက်၊ boring က ပျင်းစရာကောင်းတဲ့အရာ။ 'I'm boring' လို့ ပြောရင် ကိုယ့်ကို လူတွေက ပျင်းစရာကောင်းတဲ့လူလို့ ထင်သွားလိမ့်မယ်။"
+    },
+    {
+      "prompt": "She's ___ about her sick father.",
+      "right": "worried",
+      "wrong": "nervous",
+      "why": "\"worried\" = anxious about a problem; \"nervous\" = jittery before an event.",
+      "why_mm": "worried က ပြဿနာတစ်ခုခုကို စိတ်ပူတာ၊ nervous ကတော့ အရေးကြီးတဲ့အလုပ်တစ်ခုခု မလုပ်ခင် ရင်တုန်တာမျိုးပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "There's nothing to do. I feel so ___.",
+      "answer": "bored",
+      "options": [
+        "bored",
+        "boring",
+        "tired"
+      ],
+      "explain_en": "\"-ed\" describes how you feel → bored. \"boring\" describes the thing.",
+      "explain_mm": "ကိုယ်ခံစားရတာကို ပြောရင် -ed နဲ့ သုံးရမယ်။ boring ကတော့ အရာဝတ္ထုတွေအတွက် သုံးတာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It's my birthday tomorrow — I'm so ___!",
+      "answer": "excited",
+      "options": [
+        "excited",
+        "tired",
+        "scared"
+      ],
+      "explain_en": "Happy and full of energy about something coming up → excited.",
+      "explain_mm": "တစ်ခုခုကို စောင့်မျှော်ရင်း စိတ်လှုပ်ရှားပြီး အားတက်နေရင် excited လို့ သုံးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My mum is in hospital. I'm really ___.",
+      "answer": "worried",
+      "options": [
+        "worried",
+        "nervous",
+        "bored"
+      ],
+      "explain_en": "Anxious about a problem → worried.",
+      "explain_mm": "ပြဿနာတစ်ခုခုကြောင့် စိတ်ပူနေရင် worried ကို သုံးရမှာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Just before the interview, I felt very ___.",
+      "answer": "nervous",
+      "options": [
+        "nervous",
+        "angry",
+        "tired"
+      ],
+      "explain_en": "Jittery right before an event → nervous.",
+      "explain_mm": "အရေးကြီးတဲ့အလုပ်တစ်ခုခု မလုပ်ခင် ရင်တုန်ပြီး စိတ်လှုပ်ရှားနေတာမျိုးဆို nervous ပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I don't like the dark — I get ___.",
+      "answer": "scared",
+      "options": [
+        "scared",
+        "excited",
+        "happy"
+      ],
+      "explain_en": "Afraid → scared.",
+      "explain_mm": "ကြောက်လန့်နေတဲ့ ခံစားချက်အတွက် scared ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"After the long day, I was really ___.\"",
+      "answer": "tired",
+      "options": [],
+      "explain_en": "Needing rest or sleep → tired.",
+      "explain_mm": "အလုပ်တွေများပြီး နားချင်နေရင် tired လို့ ပြောရမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"He was ___ because the bus was late again.\"",
+      "answer": "angry",
+      "options": [],
+      "explain_en": "Strong annoyance → angry.",
+      "explain_mm": "အရမ်းစိတ်တိုပြီး ဒေါသထွက်နေရင် angry ပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I'm so ___ to see you again!\"",
+      "answer": "happy",
+      "options": [],
+      "explain_en": "Feeling good and pleased → happy.",
+      "explain_mm": "စိတ်ချမ်းသာပြီး ပျော်ရွှင်နေရင် happy လို့ သုံးပါတယ်။"
+    }
+  ]
+}

@@ -1,9 +1,17 @@
 {
   "groups": [
     {
+      "id": "feelings",
+      "title": "Feelings",
+      "level": 1,
+      "order": 1,
+      "theme": "Feelings & emotions",
+      "word_count": 8
+    },
+    {
       "id": "stronger_than_good",
       "title": "Stronger than \"good\"",
-      "level": 1,
+      "level": 2,
       "order": 1,
       "theme": "Better adjectives",
       "word_count": 5
@@ -11,7 +19,7 @@
     {
       "id": "big_and_small",
       "title": "Big & small",
-      "level": 1,
+      "level": 2,
       "order": 2,
       "theme": "Size",
       "word_count": 5
@@ -20,7 +28,7 @@
       "id": "pointing_out_examples",
       "title": "Pointing things out & giving examples",
       "level": 2,
-      "order": 1,
+      "order": 3,
       "theme": "Discourse markers",
       "word_count": 5
     },
@@ -28,7 +36,7 @@
       "id": "adverbs_misused",
       "title": "Adverbs people misuse",
       "level": 2,
-      "order": 2,
+      "order": 4,
       "theme": "Manner & discourse adverbs",
       "word_count": 5
     }

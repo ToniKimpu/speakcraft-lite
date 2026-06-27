@@ -188,7 +188,7 @@ class _IntroPage extends StatelessWidget {
                   children: [
                     Icon(Icons.lightbulb_outline, size: 18, color: cs.primary),
                     const SizedBox(width: 8),
-                    Text('Why these go together',
+                    Text(group.style == 'theme' ? 'About this set' : 'Why these go together',
                         style: PmpTextStyles.body1Semi
                             .copyWith(color: cs.onSurface)),
                   ],
@@ -569,15 +569,24 @@ class _ComparisonPage extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.fact_check_outlined, size: 20, color: cs.primary),
+                    Icon(
+                        group.style == 'theme'
+                            ? Icons.checklist_rounded
+                            : Icons.fact_check_outlined,
+                        size: 20,
+                        color: cs.primary),
                     const SizedBox(width: 8),
-                    Text('Which one, when?',
+                    Text(
+                        group.style == 'theme'
+                            ? 'Words in this set'
+                            : 'Which one, when?',
                         style: PmpTextStyles.title2SemiBold
                             .copyWith(color: cs.onSurface)),
                   ],
                 ),
                 const SizedBox(height: 14),
-                // Comparison table — generated from each word's use-when rule.
+                // Recap (theme) / comparison (contrast) — both fall out of the
+                // same rows: use-when rule when present, else the meaning.
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(14),
@@ -644,8 +653,10 @@ class _CompareRow extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           Expanded(
+            // Falls back to the word's meaning when there's no use-when rule
+            // (theme groups), so the recap shows word -> meaning bilingually.
             child: BilingualText(
-              mm: word.useWhenMm,
+              mm: word.useWhenMm.isNotEmpty ? word.useWhenMm : word.shortMm,
               en: word.useWhenEn.isNotEmpty ? word.useWhenEn : word.shortEn,
               style: PmpTextStyles.label2Regular,
             ),

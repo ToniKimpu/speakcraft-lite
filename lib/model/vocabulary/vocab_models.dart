@@ -50,6 +50,7 @@ class VocabGroup {
     required this.words,
     required this.minimalPairs,
     required this.exercises,
+    this.style = 'contrast',
   });
 
   final String id;
@@ -57,6 +58,10 @@ class VocabGroup {
   final int level;
   final int order;
   final String theme;
+
+  /// 'contrast' (which-word-when, the Intermediate style) or 'theme' (topical
+  /// Beginner style — lighter, no "Which one, when?" synthesis).
+  final String style;
   final String whyGroupedEn;
   final String whyGroupedMm;
   final List<VocabWord> words;
@@ -71,6 +76,7 @@ class VocabGroup {
         level: (j['level'] as num?)?.toInt() ?? 1,
         order: (j['order'] as num?)?.toInt() ?? 0,
         theme: j['theme'] as String? ?? '',
+        style: j['style'] as String? ?? 'contrast',
         whyGroupedEn: j['why_grouped_en'] as String? ?? '',
         whyGroupedMm: j['why_grouped_mm'] as String? ?? '',
         words: ((j['words'] as List?) ?? const [])
