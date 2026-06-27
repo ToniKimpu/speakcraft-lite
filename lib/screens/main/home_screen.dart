@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.pushNamed(context, PmpRoutes.listeningListPage),
                   ),
                   ModuleWidget(
-                    title: 'Writing Practice',
+                    title: 'Grammar Practice',
                     label1: 'သဒ္ဒါ အခြေခံကနေ စတင်လေ့လာပါ',
                     label2: 'လေ့ကျင့်ခန်းတွေနဲ့ ချက်ချင်း စစ်ဆေးပါ',
                     iconTitle: Icons.edit_document,

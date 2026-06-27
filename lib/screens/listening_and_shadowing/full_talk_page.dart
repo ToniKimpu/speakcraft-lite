@@ -18,7 +18,6 @@ import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 import 'package:speakcraft/repositories/listening/listening_recording_repository.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_line.dart';
-import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_none.dart';
 
 /// PROTOTYPE — "Full talk" recording mode.
@@ -64,7 +63,7 @@ class _FullTalkPageState extends State<FullTalkPage>
   String? _takePath;
   bool _saving = false;
   bool _playing = false;
-  bool _highlightOn = true;
+  bool _autoScrollOn = true;
 
   @override
   void initState() {
@@ -94,7 +93,7 @@ class _FullTalkPageState extends State<FullTalkPage>
     if (_phase != _Phase.recording || !_clock.isRunning) return;
     final pos = _baseline + _clock.elapsed;
     _positionNotifier.value = pos;
-    _autoScroll(pos);
+    if (_autoScrollOn) _autoScroll(pos);
     if (pos >= _endAt) _stopTake();
   }
 
@@ -156,7 +155,7 @@ class _FullTalkPageState extends State<FullTalkPage>
     _clock
       ..reset()
       ..start();
-    if (_itemScrollController.isAttached) {
+    if (_autoScrollOn && _itemScrollController.isAttached) {
       _itemScrollController.scrollTo(index: 0, duration: const Duration(milliseconds: 250));
     }
     setState(() {
@@ -274,21 +273,24 @@ class _FullTalkPageState extends State<FullTalkPage>
         actions: [
           InkWell(
             borderRadius: BorderRadius.circular(6),
-            onTap: () => setState(() => _highlightOn = !_highlightOn),
+            onTap: () => setState(() => _autoScrollOn = !_autoScrollOn),
             child: Container(
               margin: const EdgeInsets.only(right: 12),
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                border: Border.all(color: appBarFg.withValues(alpha: 0.4)),
+                border: Border.all(
+                    color: appBarFg.withValues(alpha: _autoScrollOn ? 0.7 : 0.3)),
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(_highlightOn ? Icons.highlight : Icons.highlight_off,
-                      size: 16, color: appBarFg),
+                  Icon(Icons.swap_vert,
+                      size: 16,
+                      color: appBarFg.withValues(
+                          alpha: _autoScrollOn ? 1 : 0.4)),
                   const SizedBox(width: 6),
-                  Text(_highlightOn ? 'Highlight' : 'No highlight',
+                  Text(_autoScrollOn ? 'Auto-scroll' : 'Auto-scroll off',
                       style: TextStyle(fontSize: 13, color: appBarFg)),
                 ],
               ),
@@ -325,26 +327,16 @@ class _FullTalkPageState extends State<FullTalkPage>
   }
 
   Widget _buildTeleprompter(List<SubtitleLine> lines) {
+    // Word-level highlight was dropped — the shadowing timings aren't accurate
+    // enough to track reliably. The teleprompter is plain scrolling text;
+    // positioning comes from auto-scroll (toggleable from the app bar).
     return ScrollablePositionedList.separated(
       itemScrollController: _itemScrollController,
       itemPositionsListener: _itemPositionsListener,
       itemCount: lines.length,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-      itemBuilder: (context, index) {
-        final line = lines[index];
-        // Highlight off → plain scrolling text (no per-frame rebuild).
-        if (!_highlightOn) return HighlightNone(subtitleLine: line);
-        return RepaintBoundary(
-          child: ValueListenableBuilder<Duration>(
-            valueListenable: _positionNotifier,
-            builder: (_, position, __) => HighlightBackground(
-              subtitleLine: line,
-              position: position,
-              onSeek: (_) {},
-            ),
-          ),
-        );
-      },
+      itemBuilder: (context, index) =>
+          HighlightNone(subtitleLine: lines[index]),
       separatorBuilder: (_, __) => const SizedBox(height: 14),
     );
   }
@@ -374,8 +366,9 @@ class _FullTalkPageState extends State<FullTalkPage>
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          'Record the whole talk in one go. The script scrolls at the speaker’s '
-          'pace — read along and speak. No audio plays.',
+          'Record the whole talk in one go. The script auto-scrolls at the '
+          'speaker’s pace — read along and speak. Turn off auto-scroll to '
+          'scroll it yourself. No audio plays.',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 12.5, color: cs.onSurfaceVariant, height: 1.5),
         ),

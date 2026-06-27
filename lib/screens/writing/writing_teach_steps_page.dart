@@ -1,12 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:speakcraft/shared_widgets/glass.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_routes.dart';
 import '../../config/pmp_text_styles.dart';
+import '../../model/writing/writing_index.dart';
 import '../../model/writing/writing_lexicon.dart';
 import '../../model/writing/writing_unit.dart';
 import 'widgets/writing_steps_check.dart';
@@ -27,11 +25,11 @@ import 'widgets/writing_teach_helpers.dart';
 /// understanding-check in `widgets/writing_steps_check.dart`. This file keeps the
 /// pager state machine (page index, reveal/check gates, navigation).
 class WritingTeachStepsPage extends StatefulWidget {
-  const WritingTeachStepsPage({super.key, this.assetPath = _kDefaultUnitAsset});
+  const WritingTeachStepsPage({super.key, this.unitId = _kDefaultUnitId});
 
-  static const _kDefaultUnitAsset = 'assets/writing/units/l1_be_am_is_are.json';
+  static const _kDefaultUnitId = 'l1_be_am_is_are';
 
-  final String assetPath;
+  final String unitId;
 
   @override
   State<WritingTeachStepsPage> createState() => _WritingTeachStepsPageState();
@@ -56,8 +54,7 @@ class _WritingTeachStepsPageState extends State<WritingTeachStepsPage> {
   late final Future<_StepsData> _data = _load();
 
   Future<_StepsData> _load() async {
-    final raw = await rootBundle.loadString(widget.assetPath);
-    final map = jsonDecode(raw) as Map<String, dynamic>;
+    final map = await loadWritingUnitMap(widget.unitId);
     final unit = WritingUnit.fromJson(map);
 
     final teach = (map['teach'] as Map?)?.cast<String, dynamic>() ?? const {};
@@ -88,7 +85,7 @@ class _WritingTeachStepsPageState extends State<WritingTeachStepsPage> {
       appBar: AppBar(
         leading: const Padding(
             padding: EdgeInsets.only(left: 8), child: GlassBackButton()),
-        title: const Text('Writing'),
+        title: const Text('Grammar'),
       ),
       body: FutureBuilder<_StepsData>(
         future: _data,

@@ -16,6 +16,7 @@ class UserRecordedList extends StatefulWidget {
     required this.audioPlayer,
     required this.currentIndex,
     required this.onTogglePlay,
+    this.emptyMessage,
   });
   final UserRecordedSentenceAudioBloc userRecordedSentenceAudioBloc;
   final int listeningId;
@@ -23,6 +24,10 @@ class UserRecordedList extends StatefulWidget {
   final AudioPlayer audioPlayer;
   final int? currentIndex;
   final Function(ListeningRecording data, int index) onTogglePlay;
+
+  /// Shown when there are no recordings for [sentenceId]. Defaults to the
+  /// localized per-sentence string.
+  final String? emptyMessage;
 
   /// "Take N · 3:42 PM" — derived from list order + created_at (not stored).
   String _label(BuildContext context, ListeningRecording rec, int index) {
@@ -61,7 +66,8 @@ class _UserRecordedListState extends State<UserRecordedList> {
             if (filteredData.isEmpty) {
               return Center(
                 child: Text(
-                  AppLocalizations.of(context).txtNoRecordForSentence,
+                  widget.emptyMessage ??
+                      AppLocalizations.of(context).txtNoRecordForSentence,
                   style: TextStyle(
                     fontSize: 16,
                     color: colorScheme.onSurfaceVariant,

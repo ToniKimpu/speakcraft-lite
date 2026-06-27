@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/bloc/auth/auth_bloc.dart';
@@ -69,6 +70,10 @@ class ProfilePage extends StatelessWidget {
                 const _ReminderCard(),
                 const SizedBox(height: 16),
                 _SettingsCard(appUser: appUser),
+                if (kDebugMode) ...[
+                  const SizedBox(height: 16),
+                  const _ShowcaseDebugCard(),
+                ],
                 const SizedBox(height: 16),
                 const _LogoutCard(),
               ],
@@ -547,6 +552,57 @@ class _SettingsCard extends StatelessWidget {
             },
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Debug-only shortcut into the auto-playing marketing reel (for screen
+/// recording ad videos). Never compiled into release builds — wrapped in a
+/// `kDebugMode` guard at the call site.
+class _ShowcaseDebugCard extends StatelessWidget {
+  const _ShowcaseDebugCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Container(
+      width: double.infinity,
+      decoration: ProfilePage._cardDecoration(context),
+      child: Material(
+        color: Colors.transparent,
+        borderRadius: const BorderRadius.all(Radius.circular(16)),
+        child: InkWell(
+          borderRadius: const BorderRadius.all(Radius.circular(16)),
+          onTap: () => Navigator.pushNamed(context, PmpRoutes.showcasePage),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            child: Row(
+              children: [
+                Container(
+                  height: 36,
+                  width: 35,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: PmpColors.brandCyan,
+                  ),
+                  child: const Icon(Icons.movie_creation_outlined,
+                      size: 20, color: Colors.white),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Play promo reel (debug)',
+                    style: PmpTextStyles.body2Semi.copyWith(
+                      color: colorScheme.onSurface,
+                    ),
+                  ),
+                ),
+                Icon(Icons.chevron_right, color: colorScheme.onSurfaceVariant),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

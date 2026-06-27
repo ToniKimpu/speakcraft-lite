@@ -38,7 +38,7 @@ class _WritingPathPageState extends State<WritingPathPage> {
       appBar: AppBar(
         leading: const Padding(
             padding: EdgeInsets.only(left: 8), child: GlassBackButton()),
-        title: const Text('Writing'),
+        title: const Text('Grammar'),
       ),
       body: FutureBuilder<List<WritingUnitSummary>>(
         future: _data,
@@ -583,7 +583,7 @@ class _UnitCard extends StatelessWidget {
             : () => Navigator.pushNamed(
                   context,
                   PmpRoutes.writingTeachSteps,
-                  arguments: {'asset': unit.asset},
+                  arguments: {'id': unit.id},
                 );
 
     return Padding(

@@ -66,7 +66,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<AuthEvent>(
       (event, emit) async {
         await event.when(
-          authCheck: (_) => _mapAuthCheckToState(emit),
+          authCheck: (withLoading) =>
+              _mapAuthCheckToState(emit, withLoading: withLoading ?? true),
           refreshUser: () => _mapRefreshUserToState(emit),
           loginWithEmail: (email, password) =>
               _mapLoginWithEmailToState(email, password, emit),
@@ -86,37 +87,37 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     );
   }
 
-  Future<void> _mapAuthCheckToState(Emitter<AuthState> emit) async {
+  Future<void> _mapAuthCheckToState(Emitter<AuthState> emit,
+      {bool withLoading = true}) async {
     try {
-      emit(const AuthState.loading());
+      if (withLoading) emit(const AuthState.loading());
       final appUser = await _repository.getCurrentUser();
       if (appUser == null) {
         emit(const AuthState.unauthenticated());
         return;
       }
       sl<ValueNotifier<AppUser>>().value = appUser;
+
+      // Force-update gate. Tolerant parsing — a malformed version row must not
+      // lock an otherwise-valid session out; just skip the gate in that case.
       final appVersion = await _repository.getLatestAppVersion();
       if (appVersion != null) {
-        final buildNumber = appVersion['build_number'] as int;
-        final packageInfo = await PackageInfo.fromPlatform();
-        if (buildNumber > int.parse(packageInfo.buildNumber)) {
+        final latest = (appVersion['build_number'] as num?)?.toInt();
+        final current =
+            int.tryParse((await PackageInfo.fromPlatform()).buildNumber);
+        if (latest != null && current != null && latest > current) {
           emit(AuthState.onNewVersion(appVersion));
           return;
         }
       }
+
       AppLogger.instance
           .debug('_mapAuthCheckToState: appUser: ${appUser.toJson()}');
-      if (appUser.deviceId != null &&
-          appUser.deviceId !=
-              sl<ValueNotifier<String?>>(instanceName: 'deviceId').value) {
-        await _repository.logout();
-        emit(const AuthState.deviceIdFailed());
-        return;
-      }
+      if (await _enforceDeviceLock(appUser, emit)) return;
       _subscribeUserRealtime();
       emit(const AuthState.authenticated());
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(AuthState.error(error.toString()));
@@ -136,7 +137,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -172,7 +173,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       // Confirmation disabled → already signed in.
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(AuthState.error(error.toString()));
@@ -193,7 +194,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final appUser = await _repository.verifySignUpOtp(email, token.trim());
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -210,7 +211,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _repository.resendSignUpOtp(email);
       emit(const AuthState.otpResent());
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -234,7 +235,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _repository.sendPasswordResetOtp(email);
       emit(AuthState.passwordResetOtpSent(email));
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -261,7 +262,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           await _repository.resetPassword(email, token.trim(), newPassword);
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -278,20 +279,55 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _resolveAuthenticatedState(
       AppUser appUser, Emitter<AuthState> emit) async {
     sl<ValueNotifier<AppUser>>().value = appUser;
+    if (await _enforceDeviceLock(appUser, emit)) return;
+    _subscribeUserRealtime();
+    emit(const AuthState.authenticated());
+  }
+
+  /// Single-device lock, shared by `authCheck` and [_resolveAuthenticatedState]
+  /// so the two can't drift. Returns `true` if it emitted a terminal state and
+  /// the caller should stop.
+  Future<bool> _enforceDeviceLock(
+      AppUser appUser, Emitter<AuthState> emit) async {
     final localDeviceId =
         sl<ValueNotifier<String?>>(instanceName: 'deviceId').value;
+
+    // Couldn't read this device's id (provider hiccup) — don't evict a valid
+    // session over a transient failure; skip the lock for this run.
+    if (localDeviceId == null) {
+      AppLogger.instance.error(
+          '_enforceDeviceLock: local deviceId is null — skipping device lock');
+      return false;
+    }
+    // Bound to a different device → block and sign out.
     if (appUser.deviceId != null && appUser.deviceId != localDeviceId) {
       await _repository.logout();
       emit(const AuthState.deviceIdFailed());
-      return;
+      return true;
     }
-    if (appUser.deviceId == null && localDeviceId != null) {
+    // First recognition on this device → bind it now.
+    if (appUser.deviceId == null) {
       await _repository.updateDeviceId(localDeviceId);
       sl<ValueNotifier<AppUser>>().value =
           appUser.copyWith(deviceId: localDeviceId);
     }
-    _subscribeUserRealtime();
-    emit(const AuthState.authenticated());
+    return false;
+  }
+
+  /// True for connectivity-style failures, so we can show the friendly
+  /// "check your connection" state instead of a raw error. Supabase/PostgREST
+  /// surface these as more than just [SocketException].
+  bool _isOffline(Object error) {
+    if (error is SocketException || error is TimeoutException) return true;
+    final msg = error.toString().toLowerCase();
+    return msg.contains('socketexception') ||
+        msg.contains('failed host lookup') ||
+        msg.contains('clientexception') ||
+        msg.contains('connection closed') ||
+        msg.contains('connection reset') ||
+        msg.contains('connection refused') ||
+        msg.contains('network is unreachable') ||
+        msg.contains('retryable');
   }
 
   /// Silent re-fetch of the current user → updates the cached [AppUser] without
@@ -349,7 +385,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final appUser = await _repository.loginWithEmail(email, password);
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         debugPrint("_mapLoginWithEmailToState: ${error.toString()}");
@@ -368,7 +404,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       AppLogger.instance.debug('_mapLogoutToState: logout successfully!');
       emit(const AuthState.unauthenticated());
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (_isOffline(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(AuthState.error(error.toString()));

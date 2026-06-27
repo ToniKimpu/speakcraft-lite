@@ -8,6 +8,7 @@ import 'package:speakcraft/screens/writing/writing_path_page.dart';
 import 'package:speakcraft/screens/writing/writing_teach_steps_page.dart';
 import 'package:speakcraft/screens/writing/writing_practice_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/full_talk_page.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/full_talk_history_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/key_takeaways_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/listening_list_page.dart';
@@ -21,6 +22,7 @@ import 'package:speakcraft/screens/premium/premium_payment_page.dart';
 import 'package:speakcraft/screens/premium/payment_status_page.dart';
 import 'package:speakcraft/screens/profiles/update_avatar_page.dart';
 import 'package:speakcraft/screens/profiles/update_name_page.dart';
+import 'package:speakcraft/screens/showcase/showcase_page.dart';
 
 import '../model/listening/listening.dart';
 import '../screens/grit_json_list.dart';
@@ -53,6 +55,7 @@ class PmpRoutes {
   static const speechPracticeSessionPage = '/speech_practice_session_page';
   static const keyTakeawaysPage = '/key_takeaways_page';
   static const fullTalkPage = '/full_talk_page';
+  static const fullTalkRecordPage = '/full_talk_record_page';
   static const sentenceExplanationList = '/sentence_explanation_list';
   static const sentenceExplanationPage = '/sentence_explanation_page';
   static const sentenceExplanationPager = '/sentence_explanation_pager';
@@ -71,6 +74,11 @@ class PmpRoutes {
   // Premium payment (manual KPay/bank screenshot flow)
   static const premiumPaymentPage = '/premium/payment';
   static const paymentStatusPage = '/premium/status';
+
+  // Writing Practice module — see WRITING_FEATURE_PLAN.md
+  // Internal: auto-playing marketing reel for screen-recording ad videos.
+  // Not surfaced to end users; opened via a debug-only entry on Profile.
+  static const showcasePage = '/showcase';
 
   // Writing Practice module — see WRITING_FEATURE_PLAN.md
   static const writingPath = '/writing';
@@ -184,6 +192,13 @@ class PmpRoutes {
         final args = settings.arguments as Map<String, dynamic>;
         final listening = args['listening'] as Listening;
         return _getRoute(
+          FullTalkHistoryPage(listening: listening),
+          settings,
+        );
+      case fullTalkRecordPage:
+        final args = settings.arguments as Map<String, dynamic>;
+        final listening = args['listening'] as Listening;
+        return _getRoute(
           FullTalkPage(listening: listening),
           settings,
         );
@@ -253,15 +268,17 @@ class PmpRoutes {
         return _getRoute(const PremiumPaymentPage(), settings);
       case paymentStatusPage:
         return _getRoute(const PaymentStatusPage(), settings);
+      case showcasePage:
+        return _getRoute(const ShowcasePage(), settings);
       case writingPath:
         return _getRoute(const WritingPathPage(), settings);
       case writingTeachSteps:
         final args = settings.arguments as Map<String, dynamic>?;
-        final asset = args?['asset'] as String?;
+        final id = args?['id'] as String?;
         return _getRoute(
-          asset == null
+          id == null
               ? const WritingTeachStepsPage()
-              : WritingTeachStepsPage(assetPath: asset),
+              : WritingTeachStepsPage(unitId: id),
           settings,
         );
       case writingPractice:

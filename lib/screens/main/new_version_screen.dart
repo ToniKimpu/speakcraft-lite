@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../config/pmp_colors.dart';
+
 class NewVersionScreen extends StatefulWidget {
   const NewVersionScreen({
     super.key,
@@ -36,6 +38,8 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
     final String versionName = widget.appVersion['version_name'] ?? "";
     final String downloadUrl = widget.appVersion['app_path'] ?? "";
     final String telegramUrl = widget.appVersion['telegram_path'] ?? "";
+    final String releaseNotes =
+        (widget.appVersion['release_notes'] ?? "").toString().trim();
     final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
@@ -89,15 +93,57 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    Text(
-                      'အပ်ဒိတ်အသစ်ရလာပါပြီခင်ဗျာ။\nမကြာမီ အပ်ဒိတ်လုပ်ပေးပါ။',
-                      style: TextStyle(
-                        color: colorScheme.onSurfaceVariant,
-                        fontSize: 15,
-                        height: 1.4,
+                    if (releaseNotes.isNotEmpty)
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(14),
+                        decoration: BoxDecoration(
+                          color: colorScheme.surface,
+                          borderRadius: BorderRadius.circular(12),
+                          border:
+                              Border.all(color: colorScheme.outlineVariant),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(Icons.auto_awesome,
+                                    size: 16, color: colorScheme.primary),
+                                const SizedBox(width: 6),
+                                Text(
+                                  "What's new",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: colorScheme.onSurface,
+                                    fontFamily: "ArchivoBlack Regular",
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              releaseNotes,
+                              style: TextStyle(
+                                color: colorScheme.onSurfaceVariant,
+                                fontSize: 14,
+                                height: 1.5,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    else
+                      Text(
+                        'အပ်ဒိတ်အသစ်ရလာပါပြီခင်ဗျာ။\nမကြာမီ အပ်ဒိတ်လုပ်ပေးပါ။',
+                        style: TextStyle(
+                          color: colorScheme.onSurfaceVariant,
+                          fontSize: 15,
+                          height: 1.4,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
                     const SizedBox(height: 20),
                     if (downloadUrl.isNotEmpty)
                       SizedBox(
@@ -112,7 +158,7 @@ class _NewVersionScreenState extends State<NewVersionScreen> {
                           icon: const Icon(Icons.download_rounded),
                           label: const Text('Download Now'),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF4CAF50),
+                            backgroundColor: PmpColors.success500,
                             foregroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),

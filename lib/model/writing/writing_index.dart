@@ -1,28 +1,69 @@
 /// Writing module — the **units index** (manifest) that backs the path screen.
 ///
 /// A lightweight list of unit summaries so the path page can draw section/unit
-/// cards without parsing every full unit file. Keys mirror the future Supabase
-/// `writing_lessons` row (minus the heavy `teach`/`exercises` JSONB), so the
-/// path query is a copy at Phase 2.
-///
-/// Phase-0: bundled at `assets/writing/units/index.json`. Only `published`
-/// units carry an `asset` and are tappable; the rest render as "coming soon".
+/// cards. **Online-only**: loaded from the Supabase `writing_lessons` table
+/// (RLS returns published units). There is no bundled fallback — the Grammar
+/// module needs a connection.
 library;
 
-import 'dart:convert';
+import '../../services/supabase_service.dart';
 
-import 'package:flutter/services.dart' show rootBundle;
-
-const _kIndexAsset = 'assets/writing/units/index.json';
+// Session cache — the manifest rarely changes mid-session.
+List<WritingUnitSummary>? _indexCache;
 
 /// Loads the units manifest, preserving authored order (curriculum sequence).
+/// Online-only: queries Supabase `writing_lessons` (published units).
 Future<List<WritingUnitSummary>> loadWritingUnitsIndex() async {
-  final raw = await rootBundle.loadString(_kIndexAsset);
-  final list = jsonDecode(raw) as List;
-  return list
-      .map((e) =>
-          WritingUnitSummary.fromJson((e as Map).cast<String, dynamic>()))
-      .toList(growable: false);
+  if (_indexCache != null) return _indexCache!;
+  final rows = await supabase
+      .from('writing_lessons')
+      .select('id,level,section_id,section,order_in_level,title,subtitle_mm')
+      .order('level')
+      .order('section_id')
+      .order('order_in_level');
+  final units = (rows as List).map((r) {
+    final m = (r as Map).cast<String, dynamic>();
+    return WritingUnitSummary.fromJson({
+      'id': m['id'],
+      'level': m['level'],
+      'section_id': m['section_id'],
+      'section': m['section'],
+      'order': m['order_in_level'],
+      'title': m['title'],
+      'subtitle_mm': m['subtitle_mm'],
+      'published': true,
+    });
+  }).toList(growable: false);
+  return _indexCache = units;
+}
+
+/// Loads one full unit as the raw JSON map the teach/practice screens parse.
+/// Online-only: fetches the `writing_lessons` row by id.
+Future<Map<String, dynamic>> loadWritingUnitMap(String id) async {
+  final row = await supabase
+      .from('writing_lessons')
+      .select('id,level,section,order_in_level,type,title,subtitle_mm,'
+          'teach,toolkit,exercises,practice_recap_en,practice_recap_mm')
+      .eq('id', id)
+      .maybeSingle();
+  if (row == null) throw Exception('Grammar unit "$id" not found');
+  final m = row.cast<String, dynamic>();
+  // Reassemble the unit-JSON shape (order_in_level -> order); JSONB columns
+  // arrive already decoded as Map/List.
+  return {
+    'id': m['id'],
+    'level': m['level'],
+    'section': m['section'],
+    'order': m['order_in_level'],
+    'type': m['type'],
+    'title': m['title'],
+    'subtitle_mm': m['subtitle_mm'],
+    'teach': m['teach'] ?? const <String, dynamic>{},
+    'toolkit': m['toolkit'] ?? const <String, dynamic>{},
+    'exercises': m['exercises'] ?? const [],
+    'practice_recap_en': m['practice_recap_en'] ?? '',
+    'practice_recap_mm': m['practice_recap_mm'] ?? '',
+  };
 }
 
 /// One row of the path screen — a unit card's metadata.
@@ -55,8 +96,8 @@ class WritingUnitSummary {
   final String asset;
   final bool published;
 
-  /// A published unit with a loadable asset is the only tappable card.
-  bool get isOpen => published && asset.isNotEmpty;
+  /// A published unit is tappable (its content is fetched online by id).
+  bool get isOpen => published;
 
   factory WritingUnitSummary.fromJson(Map<String, dynamic> json) =>
       WritingUnitSummary(
