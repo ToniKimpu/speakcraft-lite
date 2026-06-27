@@ -4,6 +4,7 @@ import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
 import '../../model/vocabulary/vocab_models.dart';
 import '../../shared_widgets/glass.dart';
+import 'widgets/bilingual_text.dart';
 
 /// Contrast practice for one group: a sequence of "which word fits?" (multiple
 /// choice) and "type the word" (gap-fill) questions. Each answer is followed by
@@ -197,7 +198,8 @@ class _QuestionView extends StatelessWidget {
                     answerLine: (_isGap && !wasCorrect)
                         ? 'Answer: ${question.answer}'
                         : null,
-                    explain: question.explainEn,
+                    explainMm: question.explainMm,
+                    explainEn: question.explainEn,
                   ),
                 ],
               ],
@@ -340,12 +342,14 @@ class _FeedbackCard extends StatelessWidget {
   const _FeedbackCard({
     required this.correct,
     required this.answerLine,
-    required this.explain,
+    required this.explainMm,
+    required this.explainEn,
   });
 
   final bool correct;
   final String? answerLine;
-  final String explain;
+  final String explainMm;
+  final String explainEn;
 
   @override
   Widget build(BuildContext context) {
@@ -376,11 +380,9 @@ class _FeedbackCard extends StatelessWidget {
             Text(answerLine!,
                 style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface)),
           ],
-          if (explain.isNotEmpty) ...[
+          if (explainEn.isNotEmpty || explainMm.isNotEmpty) ...[
             const SizedBox(height: 6),
-            Text(explain,
-                style: PmpTextStyles.body2Regular
-                    .copyWith(color: cs.onSurface, height: 1.4)),
+            BilingualText(mm: explainMm, en: explainEn),
           ],
         ],
       ),

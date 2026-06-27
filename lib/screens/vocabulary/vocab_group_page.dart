@@ -8,6 +8,7 @@ import '../../model/vocabulary/vocab_models.dart';
 import '../../services/vocab_tts_service.dart';
 import '../../shared_widgets/error_retry_view.dart';
 import '../../shared_widgets/glass.dart';
+import 'widgets/bilingual_text.dart';
 
 /// The "learn" flow for one group, as a pager:
 ///   intro (why grouped) → one page per word → a comparison page (the
@@ -193,15 +194,11 @@ class _IntroPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 8),
-                Text(group.whyGroupedEn,
-                    style: PmpTextStyles.body2Regular
-                        .copyWith(color: cs.onSurface, height: 1.5)),
-                if (group.whyGroupedMm.isNotEmpty) ...[
-                  const SizedBox(height: 8),
-                  Text(group.whyGroupedMm,
-                      style: PmpTextStyles.label2Regular
-                          .copyWith(color: cs.onSurfaceVariant, height: 1.5)),
-                ],
+                BilingualText(
+                  mm: group.whyGroupedMm,
+                  en: group.whyGroupedEn,
+                  long: true,
+                ),
               ],
             ),
           ),
@@ -260,17 +257,21 @@ class _WordPage extends StatelessWidget {
                 style: PmpTextStyles.label2Regular
                     .copyWith(color: cs.onSurfaceVariant)),
           const SizedBox(height: 4),
-          Text(word.shortEn,
-              style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface)),
+          BilingualText(
+            mm: word.shortMm,
+            en: word.shortEn,
+            style: PmpTextStyles.body2Semi,
+          ),
 
           // The decision rule — the takeaway, up top.
-          if (word.useWhenEn.isNotEmpty) ...[
+          if (word.useWhenEn.isNotEmpty || word.useWhenMm.isNotEmpty) ...[
             const SizedBox(height: 16),
             _Callout(
               icon: Icons.check_circle_outline,
               color: PmpColors.success500,
               label: 'Use it when',
-              text: word.useWhenEn,
+              mm: word.useWhenMm,
+              en: word.useWhenEn,
             ),
           ],
 
@@ -280,19 +281,23 @@ class _WordPage extends StatelessWidget {
             _GoesWithBlock(word: word),
           ],
 
-          if (word.explanationEn.isNotEmpty) ...[
+          if (word.explanationEn.isNotEmpty ||
+              word.explanationMm.isNotEmpty) ...[
             const SizedBox(height: 16),
-            Text(word.explanationEn,
-                style: PmpTextStyles.body2Regular
-                    .copyWith(color: cs.onSurface, height: 1.5)),
+            BilingualText(
+              mm: word.explanationMm,
+              en: word.explanationEn,
+              long: true,
+            ),
           ],
-          if (word.nuanceEn.isNotEmpty) ...[
+          if (word.nuanceEn.isNotEmpty || word.nuanceMm.isNotEmpty) ...[
             const SizedBox(height: 12),
             _Callout(
               icon: Icons.priority_high_rounded,
               color: PmpColors.brandOrange,
               label: 'Watch out',
-              text: word.nuanceEn,
+              mm: word.nuanceMm,
+              en: word.nuanceEn,
             ),
           ],
           if (word.examples.isNotEmpty) ...[
@@ -320,17 +325,18 @@ class _Callout extends StatelessWidget {
     required this.icon,
     required this.color,
     required this.label,
-    required this.text,
+    required this.mm,
+    required this.en,
   });
 
   final IconData icon;
   final Color color;
   final String label;
-  final String text;
+  final String mm;
+  final String en;
 
   @override
   Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
@@ -352,9 +358,7 @@ class _Callout extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 4),
-          Text(text,
-              style: PmpTextStyles.body2Regular
-                  .copyWith(color: cs.onSurface, height: 1.4)),
+          BilingualText(mm: mm, en: en),
         ],
       ),
     );
@@ -571,10 +575,10 @@ class _CompareRow extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           Expanded(
-            child: Text(
-              word.useWhenEn.isNotEmpty ? word.useWhenEn : word.shortEn,
-              style: PmpTextStyles.label2Regular
-                  .copyWith(color: cs.onSurface, height: 1.35),
+            child: BilingualText(
+              mm: word.useWhenMm,
+              en: word.useWhenEn.isNotEmpty ? word.useWhenEn : word.shortEn,
+              style: PmpTextStyles.label2Regular,
             ),
           ),
         ],
@@ -620,11 +624,13 @@ class _MinimalPairCard extends StatelessWidget {
                   style: PmpTextStyles.body2Semi.copyWith(color: cs.error)),
             ],
           ),
-          if (pair.why.isNotEmpty) ...[
+          if (pair.why.isNotEmpty || pair.whyMm.isNotEmpty) ...[
             const SizedBox(height: 6),
-            Text(pair.why,
-                style: PmpTextStyles.label2Regular
-                    .copyWith(color: cs.onSurfaceVariant, height: 1.35)),
+            BilingualText(
+              mm: pair.whyMm,
+              en: pair.why,
+              style: PmpTextStyles.label2Regular,
+            ),
           ],
         ],
       ),

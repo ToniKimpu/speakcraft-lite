@@ -94,18 +94,21 @@ class VocabMinimalPair {
     required this.right,
     required this.wrong,
     required this.why,
+    required this.whyMm,
   });
 
   final String prompt;
   final String right;
   final String wrong;
   final String why;
+  final String whyMm;
 
   factory VocabMinimalPair.fromJson(Map<String, dynamic> j) => VocabMinimalPair(
         prompt: j['prompt'] as String? ?? '',
         right: j['right'] as String? ?? '',
         wrong: j['wrong'] as String? ?? '',
         why: j['why'] as String? ?? '',
+        whyMm: j['why_mm'] as String? ?? '',
       );
 }
 
@@ -117,8 +120,11 @@ class VocabWord {
     required this.shortEn,
     required this.shortMm,
     required this.useWhenEn,
+    required this.useWhenMm,
     required this.explanationEn,
+    required this.explanationMm,
     required this.nuanceEn,
+    required this.nuanceMm,
     required this.goesWithEn,
     required this.examples,
     required this.collocations,
@@ -136,8 +142,11 @@ class VocabWord {
 
   /// The decision rule — "Use it when …". Drives the comparison table.
   final String useWhenEn;
+  final String useWhenMm;
   final String explanationEn;
+  final String explanationMm;
   final String nuanceEn;
+  final String nuanceMm;
 
   /// Typical partners / frame, e.g. "a great + idea / time / news".
   final String goesWithEn;
@@ -156,8 +165,11 @@ class VocabWord {
         shortEn: j['short_en'] as String? ?? '',
         shortMm: j['short_mm'] as String? ?? '',
         useWhenEn: j['use_when_en'] as String? ?? '',
+        useWhenMm: j['use_when_mm'] as String? ?? '',
         explanationEn: j['explanation_en'] as String? ?? '',
+        explanationMm: j['explanation_mm'] as String? ?? '',
         nuanceEn: j['nuance_en'] as String? ?? '',
+        nuanceMm: j['nuance_mm'] as String? ?? '',
         goesWithEn: j['goes_with_en'] as String? ?? '',
         examples: ((j['examples'] as List?) ?? const [])
             .map(
@@ -196,6 +208,7 @@ class VocabExercise {
     required this.answer,
     required this.options,
     required this.explainEn,
+    required this.explainMm,
     required this.accept,
   });
 
@@ -210,6 +223,7 @@ class VocabExercise {
   /// The "why" shown after answering — reinforces on correct, corrects the
   /// misconception on wrong.
   final String explainEn;
+  final String explainMm;
 
   /// Extra accepted answers for `gap_fill` (beyond [answer]); matching is
   /// case-insensitive so capitalisation isn't listed here.
@@ -230,6 +244,7 @@ class VocabExercise {
             .map((e) => e.toString())
             .toList(growable: false),
         explainEn: j['explain_en'] as String? ?? '',
+        explainMm: j['explain_mm'] as String? ?? '',
         accept: ((j['accept'] as List?) ?? const [])
             .map((e) => e.toString())
             .toList(growable: false),
