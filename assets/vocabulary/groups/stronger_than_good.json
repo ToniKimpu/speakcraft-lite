@@ -14,7 +14,7 @@
       "short_en": "very good",
       "short_mm": "အရမ်းကောင်းတယ်",
       "use_when_en": "You want a safe, everyday \"very good\" — works in almost any situation.",
-      "use_when_mm": "ဘာမဆိုသုံးလို့ရတဲ့ safe ဖြစ်တဲ့စကားလုံးပါ။",
+      "use_when_mm": "Good ထက် ပိုကောင်းတဲ့အကြောင်း ပြောချင်တဲ့အခါမျိုးမှာ သုံးလို့ရတဲ့ စကားလုံးပါ။ သူငယ်ချင်းတွေကြားထဲမှာရော အလုပ်ကိစ္စတွေမှာပါ အကုန်သုံးလို့ရတယ်နော်။",
       "explanation_en": "The everyday step up from \"good\". Safe spoken or written, casual or work.",
       "explanation_mm": "Good ထက် နည်းနည်းပိုကောင်းတဲ့ level ပေါ့။ ပြောတဲ့အခါရော၊ ရေးတဲ့အခါရော အကုန်သုံးလို့ရတယ်။",
       "nuance_en": "Neutral and extremely common. When in doubt, \"great\" works.",
@@ -25,23 +25,23 @@
       "examples": [
         {
           "en": "That's a {w}great{/w} {c}idea{/c}.",
-          "mm": "ဒါက တကယ့်ကို great ဖြစ်တဲ့ အကြံဉာဏ်ပဲ။"
+          "mm": "ဒါ အရမ်းကောင်းတဲ့ အကြံဉာဏ်ပဲ။"
         },
         {
           "en": "We had a {w}great{/w} {c}time{/c} at the beach.",
-          "mm": "ကမ်းခြေမှာ ကျွန်တော်တို့ တကယ့်ကို great ဖြစ်တဲ့ အချိန်လေးတွေ ကုန်ဆုံးခဲ့ရတယ်။"
+          "mm": "ကမ်းခြေမှာ တုန်းက ကျွန်တော်တို့ အရမ်းပျော်ခဲ့ရတယ်။"
         },
         {
           "en": "That's {w}great{/w} {c}news{/c} — congratulations!",
-          "mm": "ဒါ တကယ့်ကို great ဖြစ်တဲ့ သတင်းပဲ၊ ဂုဏ်ယူပါတယ်နော်။"
+          "mm": "ဒါ အရမ်းကောင်းတဲ့ သတင်းပဲ၊ ဂုဏ်ယူပါတယ်နော်။"
         },
         {
           "en": "The {c}weather{/c} was {w}great{/w} all weekend.",
-          "mm": "စနေ၊ တနင်္ဂနွေ တစ်ပတ်လုံး ရာသီဥတုက တကယ့်ကို great ဖြစ်နေတာ။"
+          "mm": "စနေ၊ တနင်္ဂနွေ တစ်ပတ်လုံး ရာသီဥတုက သိပ်ကောင်းတယ်။"
         },
         {
           "en": "Thanks, that {c}sounds{/c} {w}great{/w}!",
-          "mm": "ကျေးဇူးပဲ၊ အဲဒါ တကယ့်ကို great ဖြစ်မယ့် ပုံစံပဲ။"
+          "mm": "ကျေးဇူးပဲ၊ အဲဒါ အရမ်းကောင်းတဲ့ အစီအစဉ်ပဲ။"
         }
       ],
       "collocations": [
@@ -66,23 +66,23 @@
       "examples": [
         {
           "en": "The {c}view{/c} from the top was {w}amazing{/w}.",
-          "mm": "အပေါ်ကနေ ကြည့်လိုက်တဲ့ မြင်ကွင်းက တကယ့်ကို amazing ဖြစ်တယ်။"
+          "mm": "တောင်ထိပ်ကနေ ကြည့်လိုက်တဲ့ မြင်ကွင်းက တကယ့်ကို အံ့ဩစရာကောင်းတယ်။"
         },
         {
           "en": "She did an {w}amazing{/w} {c}job{/c} on the project.",
-          "mm": "သူမ ဒီပရောဂျက်မှာ တကယ့်ကို amazing ဖြစ်တဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
+          "mm": "သူမ ဒီစီမံကိန်းအတွက် အံ့ဩလောက်အောင် ကောင်းတဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
         },
         {
           "en": "The food here is {c}absolutely{/c} {w}amazing{/w}.",
-          "mm": "ဒီက အစားအသောက်တွေက တကယ့်ကို amazing ဖြစ်လွန်းတယ်။"
+          "mm": "ဒီက အစားအစာတွေက တကယ့်ကို ထူးထူးခြားခြား အရသာရှိတယ်။"
         },
         {
           "en": "What an {w}amazing{/w} {c}experience{/c}!",
-          "mm": "တကယ့်ကို amazing ဖြစ်တဲ့ အတွေ့အကြုံပါလား။"
+          "mm": "ဘယ်လောက်တောင် အံ့ဩစရာကောင်းတဲ့ အတွေ့အကြုံလဲ။"
         },
         {
           "en": "The {c}concert{/c} was {w}amazing{/w} — I'll never forget it.",
-          "mm": "ကွန်เสิร์တ်က တကယ့်ကို amazing ဖြစ်တယ်၊ ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။"
+          "mm": "တေးဂီတဖျော်ဖြေပွဲက အံ့ဩစရာကောင်းလွန်းလို့ ကျွန်တော် ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။"
         }
       ],
       "collocations": [
@@ -93,7 +93,7 @@
       "confuse_with": [
         "incredible"
       ],
-      "use_when_mm": "အရမ်းကောင်းလွန်းလို့ အံ့ဩသွားတဲ့အခါမျိုးမှာ သုံးတယ်။",
+      "use_when_mm": "အရမ်းကို အံ့အားသင့်စရာကောင်းလောက်အောင် ကောင်းတဲ့အခါမျိုးမှာ သုံးပါတယ်။ စိတ်လှုပ်ရှားပြီး ပျော်ရွှင်တဲ့အကြောင်းကို ပြချင်တဲ့အခါ သုံးရတာပါ။",
       "explanation_mm": "Great ထက် ပိုပြီးတော့ စိတ်လှုပ်ရှားမှုပါတဲ့ စကားလုံးပါ။",
       "nuance_mm": "Formal ဖြစ်တဲ့နေရာတွေမှာတော့ မသုံးပါနဲ့၊ သူငယ်ချင်းတွေနဲ့ ပြောတဲ့အခါမျိုးမှာပဲ သုံးပါ။"
     },
@@ -112,23 +112,23 @@
       "examples": [
         {
           "en": "You passed? {w}Fantastic{/w}!",
-          "mm": "အောင်သွားတယ်ပေါ့ ဟုတ်လား? Fantastic ပဲ!"
+          "mm": "အောင်သွားတာလား၊ တကယ့်ကို ထူးချွန်လိုက်တာ။"
         },
         {
           "en": "The {c}food{/c} at that restaurant is {w}fantastic{/w}.",
-          "mm": "အဲဒီစားသောက်ဆိုင်က အစားအသောက်တွေက တကယ့်ကို fantastic ဖြစ်တယ်။"
+          "mm": "အဲဒီစားသောက်ဆိုင်က အစားအစာတွေက တကယ့်ကို ထူးခြားကောင်းမွန်တယ်။"
         },
         {
           "en": "She got a {w}fantastic{/w} {c}result{/c} in her exam.",
-          "mm": "သူမ စာမေးပွဲမှာ တကယ့်ကို fantastic ဖြစ်တဲ့ ရလဒ်တွေ ရခဲ့တယ်။"
+          "mm": "သူမ စာမေးပွဲမှာ အံ့ဩလောက်အောင် ကောင်းတဲ့ ရလဒ်တွေ ရခဲ့တယ်။"
         },
         {
           "en": "That's {w}fantastic{/w} {c}news{/c}!",
-          "mm": "ဒါ တကယ့်ကို fantastic ဖြစ်တဲ့ သတင်းပဲ။"
+          "mm": "ဒါ တကယ့်ကို ဝမ်းသာစရာ သတင်းပဲ။"
         },
         {
           "en": "The {c}team{/c} did a {w}fantastic{/w} job.",
-          "mm": "အသင်းက တကယ့်ကို fantastic ဖြစ်တဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
+          "mm": "အသင်းက တကယ့်ကို ထူးချွန်တဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
         }
       ],
       "collocations": [
@@ -136,7 +136,7 @@
         "looks fantastic"
       ],
       "confuse_with": [],
-      "use_when_mm": "စိတ်ကျေနပ်ပြီးတော့ ပျော်ပျော်ပါးပါးနဲ့ ပြောချင်တဲ့အခါ သုံးတယ်။",
+      "use_when_mm": "Great ထက် ပိုပြီးတော့ စိတ်လှုပ်ရှားမှုပါတဲ့ အသုံးအနှုန်းပါ။ ကိုယ် အရမ်းကြိုက်တယ်၊ အရမ်းကောင်းတယ်လို့ ပြောချင်တဲ့အခါမှာ သုံးပေးပါ။",
       "explanation_mm": "Great ထက် ပိုပြီးတော့ အားပါတဲ့၊ friendly ဖြစ်တဲ့ စကားလုံးပါ။",
       "nuance_mm": "Great နဲ့ အဓိပ္ပာယ်တူတူပါပဲ၊ ဒါပေမဲ့ သူက ပိုပြီးတော့ enthusiastic ဖြစ်တယ်။"
     },
@@ -147,7 +147,7 @@
       "short_en": "of very high quality",
       "short_mm": "အရည်အသွေး အရမ်းကောင်းတယ်",
       "use_when_en": "You praise quality, work, or a standard — a bit more formal.",
-      "use_when_mm": "Quality တို့၊ အလုပ်ကိစ္စတို့မှာ သုံးရင် professional ဆန်တယ်။",
+      "use_when_mm": "အလုပ်ကိစ္စတွေ၊ အစီရင်ခံစာတွေ ဒါမှမဟုတ် အရည်အသွေးမြင့်တဲ့အရာတစ်ခုခုအကြောင်း ပြောတဲ့အခါ သုံးပါတယ်။ ပိုပြီးတော့ ပရော်ဖက်ရှင်နယ်ဆန်တဲ့ စကားလုံးလေးပါ။",
       "explanation_en": "\"Very good\" focused on quality. Good for work, feedback, reports.",
       "explanation_mm": "Quality အရမ်းကောင်းတယ်လို့ ပြောချင်တဲ့အခါ သုံးတယ်။ Work feedback ပေးတဲ့အခါမျိုးမှာ သုံးရင် အကောင်းဆုံးပဲ။",
       "nuance_en": "Sounds professional: you'd write \"excellent work\", not \"amazing work\".",
@@ -158,23 +158,23 @@
       "examples": [
         {
           "en": "She has {w}excellent{/w} {c}communication{/c} skills.",
-          "mm": "သူမမှာ တကယ့်ကို excellent ဖြစ်တဲ့ ဆက်သွယ်ပြောဆိုနိုင်စွမ်း ရှိတယ်။"
+          "mm": "သူမမှာ ဆက်သွယ်ပြောဆိုတဲ့ ကျွမ်းကျင်မှုက တကယ့်ကို ထူးချွန်တယ်။"
         },
         {
           "en": "The hotel offers {w}excellent{/w} {c}service{/c}.",
-          "mm": "ဒီဟိုတယ်က တကယ့်ကို excellent ဖြစ်တဲ့ ဝန်ဆောင်မှုတွေ ပေးတယ်။"
+          "mm": "ဒီဟိုတယ်က ဝန်ဆောင်မှု ပေးတာ အရမ်းကောင်းတယ်။"
         },
         {
           "en": "That's an {w}excellent{/w} {c}point{/c}.",
-          "mm": "ဒါ တကယ့်ကို excellent ဖြစ်တဲ့ အချက်ပဲ။"
+          "mm": "ဒါ တကယ့်ကို မှန်ကန်ပြီး ထူးချွန်တဲ့ အချက်ပဲ။"
         },
         {
           "en": "The car is in {w}excellent{/w} {c}condition{/c}.",
-          "mm": "ကားက တကယ့်ကို excellent ဖြစ်တဲ့ အခြေအနေမှာ ရှိနေတယ်။"
+          "mm": "ကားက အခြေအနေ အရမ်းကောင်းနေတယ်။"
         },
         {
           "en": "He did {w}excellent{/w} {c}work{/c} on the report.",
-          "mm": "သူ အစီရင်ခံစာအတွက် တကယ့်ကို excellent ဖြစ်တဲ့ အလုပ်ကို လုပ်ထားတယ်။"
+          "mm": "သူ ဒီအစီရင်ခံစာအတွက် တကယ့်ကို ထူးချွန်တဲ့ အလုပ်ကို လုပ်ခဲ့တယ်။"
         }
       ],
       "collocations": [
@@ -191,7 +191,7 @@
       "short_en": "very good and makes you feel happy",
       "short_mm": "အရမ်းကောင်းပြီးတော့ ပျော်ဖို့ကောင်းတယ်",
       "use_when_en": "You describe people, moments, or experiences with warmth.",
-      "use_when_mm": "လူတွေအကြောင်း၊ အချိန်အခါကောင်းလေးတွေအကြောင်း ပြောတဲ့အခါ သုံးတယ်။",
+      "use_when_mm": "တစ်စုံတစ်ခု ဒါမှမဟုတ် တစ်ယောက်ယောက်ကြောင့် ကိုယ်အရမ်းပျော်ရွှင်ရတဲ့အခါမျိုးမှာ သုံးပါတယ်။ အထူးသဖြင့် လူတွေ ဒါမှမဟုတ် အတွေ့အကြုံကောင်းတွေကို ပြောတဲ့အခါ ပိုလိုက်ဖက်ပါတယ်။",
       "explanation_en": "\"Very good\" with feeling — used about experiences and people more than objects.",
       "nuance_en": "\"a wonderful person\" sounds kind; \"a wonderful laptop\" sounds odd.",
       "goes_with_en": "a wonderful + time / day / evening / experience · a wonderful + person / friend / feeling · it would be wonderful to ...",
@@ -200,23 +200,23 @@
       "examples": [
         {
           "en": "We had a {w}wonderful{/w} {c}evening{/c} together.",
-          "mm": "ကျွန်တော်တို့ အတူတူ တကယ့်ကို wonderful ဖြစ်တဲ့ ညနေခင်းလေးကို ဖြတ်သန်းခဲ့ကြတယ်။"
+          "mm": "ကျွန်တော်တို့ အတူတူ အလွန်ပျော်ရွှင်စရာကောင်းတဲ့ ညနေခင်းကို ဖြတ်သန်းခဲ့ကြတယ်။"
         },
         {
           "en": "Thank you — you've been {w}wonderful{/w}.",
-          "mm": "ကျေးဇူးတင်ပါတယ်၊ သင်က တကယ့်ကို wonderful ဖြစ်တဲ့သူပါ။"
+          "mm": "ကျေးဇူးတင်ပါတယ်၊ သင်က တကယ့်ကို စိတ်သဘောထား ကောင်းမွန်သူပါ။"
         },
         {
           "en": "She's a {w}wonderful{/w} {c}person{/c}.",
-          "mm": "သူမက တကယ့်ကို wonderful ဖြစ်တဲ့ လူတစ်ယောက်ပါ။"
+          "mm": "သူမက တကယ့်ကို စိတ်ထားကောင်းတဲ့ လူတစ်ယောက်ပါ။"
         },
         {
           "en": "What a {w}wonderful{/w} {c}surprise{/c}!",
-          "mm": "ဘယ်လောက်တောင် wonderful ဖြစ်တဲ့ အံ့အားသင့်စရာလေးလဲ။"
+          "mm": "ဘယ်လောက်တောင် ဝမ်းသာစရာကောင်းတဲ့ အံ့ဩစရာ အဖြစ်အပျက်လဲ။"
         },
         {
           "en": "We had a {w}wonderful{/w} {c}time{/c} on holiday.",
-          "mm": "အားလပ်ရက်မှာ ကျွန်တော်တို့ တကယ့်ကို wonderful ဖြစ်တဲ့ အချိန်လေးတွေ ကုန်ဆုံးခဲ့ရတယ်။"
+          "mm": "ကျွန်တော်တို့ အားလပ်ရက်မှာ အလွန်ပျော်စရာကောင်းတဲ့ အချိန်တွေကို ဖြတ်သန်းခဲ့ကြတယ်။"
         }
       ],
       "collocations": [
