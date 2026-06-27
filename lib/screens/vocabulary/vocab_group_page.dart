@@ -276,7 +276,7 @@ class _WordPage extends StatelessWidget {
           ],
 
           // Often used with — the collocation/partners block.
-          if (word.collocations.isNotEmpty) ...[
+          if (word.goesWithEn.isNotEmpty || word.collocations.isNotEmpty) ...[
             const SizedBox(height: 10),
             _GoesWithBlock(word: word),
           ],
@@ -372,6 +372,12 @@ class _GoesWithBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
+    // Each ` · `-separated chunk is one pattern, shown on its own line.
+    final patterns = word.goesWithEn
+        .split('·')
+        .map((s) => s.trim())
+        .where((s) => s.isNotEmpty)
+        .toList();
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
@@ -393,27 +399,55 @@ class _GoesWithBlock extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8),
-          Wrap(
-            spacing: 6,
-            runSpacing: 6,
-            children: [
-              for (final c in word.collocations)
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: cs.surface.withValues(alpha: 0.6),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: cs.outlineVariant),
-                  ),
-                  child: Text(c,
-                      style: PmpTextStyles.body2Regular
-                          .copyWith(color: cs.onSurface)),
-                ),
-            ],
-          ),
+          if (patterns.isNotEmpty)
+            for (final p in patterns)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 5),
+                child: _PatternLine(pattern: p),
+              )
+          else
+            Text(word.collocations.join('   ·   '),
+                style: PmpTextStyles.body2Regular
+                    .copyWith(color: cs.onSurface)),
         ],
       ),
+    );
+  }
+}
+
+/// One collocation pattern, e.g. "a great + idea / time / news". The base
+/// (before " + ") is emphasized; the slot fillers after it are muted, so the
+/// shape of the pattern reads at a glance.
+class _PatternLine extends StatelessWidget {
+  const _PatternLine({required this.pattern});
+  final String pattern;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final base = PmpTextStyles.body2Regular;
+    final plus = pattern.indexOf(' + ');
+    final List<InlineSpan> spans = plus >= 0
+        ? [
+            TextSpan(
+                text: pattern.substring(0, plus),
+                style: base.copyWith(
+                    color: cs.onSurface, fontWeight: FontWeight.w600)),
+            TextSpan(
+                text: pattern.substring(plus),
+                style: base.copyWith(color: cs.onSurfaceVariant)),
+          ]
+        : [TextSpan(text: pattern, style: base.copyWith(color: cs.onSurface))];
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 6),
+          child: Icon(Icons.circle, size: 5, color: cs.onSurfaceVariant),
+        ),
+        const SizedBox(width: 8),
+        Expanded(child: RichText(text: TextSpan(children: spans))),
+      ],
     );
   }
 }
