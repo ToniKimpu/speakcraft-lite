@@ -56,6 +56,31 @@
       "order": 4,
       "theme": "Manner & discourse adverbs",
       "word_count": 5
+    },
+    {
+      "id": "appearance",
+      "title": "What people look like",
+      "level": 1,
+      "order": 4,
+      "theme": "Appearance",
+      "word_count": 9
+    },
+    {
+      "id": "likes_dislikes",
+      "title": "Likes & dislikes",
+      "level": 1,
+      "order": 5,
+      "theme": "Preferences",
+      "word_count": 7
+    },
+    {
+      "id": "body_health",
+      "title": "Health & feeling ill",
+      "level": 1,
+      "order": 6,
+      "theme": "Health",
+      "word_count": 9,
+      "unit": "expression"
     }
   ]
 }
