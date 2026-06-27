@@ -1,0 +1,393 @@
+{
+  "id": "asking_for_things",
+  "title": "Asking politely",
+  "level": 1,
+  "order": 24,
+  "theme": "Requests",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Asking for things is a daily necessity, but being polite is just as important as the request itself. This group covers the essential phrases to sound natural and respectful when you need something.",
+  "why_grouped_mm": "ဒီစကားစုတွေက နေ့စဉ်ဘဝမှာ တစ်ခုခုကို ယဉ်ယဉ်ကျေးကျေး တောင်းဆိုဖို့နဲ့ ကမ်းလှမ်းဖို့အတွက် အရမ်းအသုံးဝင်ပါတယ်။",
+  "words": [
+    {
+      "word": "Could you",
+      "pos": "expression",
+      "short_en": "a polite way to ask someone to do something",
+      "examples": [
+        {
+          "en": "{w}Could you{/w} open the {c}window{/c}?",
+          "mm": "ပြတင်းပေါက်လေး ဖွင့်ပေးလို့ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Could you{/w} help me with this {c}bag{/c}?",
+          "mm": "ဒီအိတ်ကို သယ်ပေးလို့ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Could you{/w} speak a bit more {c}slowly{/c}?",
+          "mm": "နည်းနည်းလောက် ပိုဖြည်းဖြည်း ပြောပေးလို့ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Could you{/w} pass me the {c}salt{/c}?",
+          "mm": "ဆားပုလင်းလေး ကမ်းပေးလို့ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Could you{/w} wait here for a {c}moment{/c}?",
+          "mm": "ဒီနေရာမှာ ခဏလောက် စောင့်ပေးလို့ရမလားရှင်။"
+        }
+      ],
+      "short_mm": "တစ်စုံတစ်ယောက်ကို တစ်ခုခုလုပ်ပေးဖို့ ယဉ်ကျေးစွာ တောင်းဆိုတာပါ။"
+    },
+    {
+      "word": "Can I have",
+      "pos": "expression",
+      "short_en": "a standard way to ask for an item in a shop or cafe",
+      "examples": [
+        {
+          "en": "{w}Can I have{/w} a {c}coffee{/c}, please?",
+          "mm": "ကော်ဖီတစ်ခွက်လောက် ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Can I have{/w} the {c}bill{/c}?",
+          "mm": "ဘေလ်ရှင်းပေးလို့ ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Can I have{/w} a glass of {c}water{/c}?",
+          "mm": "ရေတစ်ခွက်လောက် ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Can I have{/w} another {c}napkin{/c}?",
+          "mm": "တစ်ရှူး နောက်တစ်ခုလောက် ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Can I have{/w} the {c}menu{/c}, please?",
+          "mm": "မီနူးစာအုပ်လေး ကြည့်လို့ရမလားရှင်။"
+        }
+      ],
+      "short_mm": "ဆိုင်တွေမှာ ပစ္စည်းတစ်ခုခု ဝယ်ချင်တဲ့အခါ သုံးတဲ့ စကားစုပါ။"
+    },
+    {
+      "word": "Would you mind",
+      "pos": "expression",
+      "short_en": "a very polite way to ask for a favor",
+      "nuance_en": "Follow this with an -ing verb (e.g., Would you mind helping?).",
+      "examples": [
+        {
+          "en": "{w}Would you mind{/w} {c}closing{/c} the door?",
+          "mm": "တံခါးလေး ပိတ်ပေးလို့ အဆင်ပြေမလားရှင်။"
+        },
+        {
+          "en": "{w}Would you mind{/w} {c}moving{/c} your bag?",
+          "mm": "အိတ်လေး နည်းနည်း ရွှေ့ပေးလို့ အဆင်ပြေမလားရှင်။"
+        },
+        {
+          "en": "{w}Would you mind{/w} {c}taking{/c} a photo of us?",
+          "mm": "ကျွန်မတို့ကို ဓာတ်ပုံလေး ရိုက်ပေးလို့ အဆင်ပြေမလားရှင်။"
+        },
+        {
+          "en": "{w}Would you mind{/w} {c}waiting{/c} outside?",
+          "mm": "အပြင်မှာ ခဏလောက် စောင့်ပေးလို့ အဆင်ပြေမလားရှင်။"
+        },
+        {
+          "en": "{w}Would you mind{/w} {c}turning{/c} down the music?",
+          "mm": "သီချင်းသံလေး နည်းနည်း လျှော့ပေးလို့ အဆင်ပြေမလားရှင်။"
+        }
+      ],
+      "short_mm": "အကူအညီတစ်ခုခု တောင်းတဲ့အခါ အရမ်းယဉ်ကျေးတဲ့ ပုံစံမျိုးပါ။",
+      "nuance_mm": "နောက်ကနေ Verb-ing ပုံစံ လိုက်ရပါမယ်။"
+    },
+    {
+      "word": "I'd like",
+      "pos": "expression",
+      "short_en": "a polite way to state what you want",
+      "examples": [
+        {
+          "en": "{w}I'd like{/w} a {c}sandwich{/c}, please.",
+          "mm": "ဆန်းဒဝစ်ချ် တစ်ခုလောက် စားချင်ပါတယ်ရှင်။"
+        },
+        {
+          "en": "{w}I'd like{/w} to book a {c}table{/c}.",
+          "mm": "စားပွဲတစ်ခုလောက် ကြိုတင်ဘွတ်ကင် လုပ်ချင်ပါတယ်ရှင်။"
+        },
+        {
+          "en": "{w}I'd like{/w} to speak to the {c}manager{/c}.",
+          "mm": "မန်နေဂျာနဲ့ စကားပြောချင်ပါတယ်ရှင်။"
+        },
+        {
+          "en": "{w}I'd like{/w} a {c}ticket{/c} to London.",
+          "mm": "လန်ဒန်သွားမယ့် လက်မှတ်တစ်စောင် လိုချင်ပါတယ်ရှင်။"
+        },
+        {
+          "en": "{w}I'd like{/w} to {c}pay{/c} by card.",
+          "mm": "ကတ်နဲ့ပဲ ရှင်းချင်ပါတယ်ရှင်။"
+        }
+      ],
+      "short_mm": "ကိုယ့်ရဲ့ လိုအင်ဆန္ဒကို ယဉ်ကျေးစွာ ပြောပြတာပါ။"
+    },
+    {
+      "word": "Do you have",
+      "pos": "expression",
+      "short_en": "a way to check if something is available",
+      "examples": [
+        {
+          "en": "{w}Do you have{/w} this in a smaller {c}size{/c}?",
+          "mm": "ဒါလေးထက် ပိုသေးတဲ့ဆိုဒ် ရှိသေးလားရှင်။"
+        },
+        {
+          "en": "{w}Do you have{/w} any {c}vegetarian{/c} options?",
+          "mm": "သက်သတ်လွတ်စားသူတွေအတွက် ရွေးချယ်စရာ ရှိသေးလားရှင်။"
+        },
+        {
+          "en": "{w}Do you have{/w} a {c}phone{/c} charger?",
+          "mm": "ဖုန်းအားသွင်းကြိုး ရှိသေးလားရှင်။"
+        },
+        {
+          "en": "{w}Do you have{/w} a {c}map{/c} of the city?",
+          "mm": "မြို့ပြမြေပုံ ရှိသေးလားရှင်။"
+        },
+        {
+          "en": "{w}Do you have{/w} any {c}stamps{/c}?",
+          "mm": "စာတိုက်တံဆိပ်ခေါင်း ရှိသေးလားရှင်။"
+        }
+      ],
+      "short_mm": "ပစ္စည်းတစ်ခုခု ရှိမရှိ စစ်ဆေးတဲ့အခါ သုံးပါတယ်။"
+    },
+    {
+      "word": "Excuse me",
+      "pos": "expression",
+      "short_en": "used to get someone's attention politely",
+      "examples": [
+        {
+          "en": "{w}Excuse me{/w}, is this {c}seat{/c} taken?",
+          "mm": "ခွင့်လွှတ်ပါ၊ ဒီနေရာမှာ လူထိုင်ထားတာလားရှင်။"
+        },
+        {
+          "en": "{w}Excuse me{/w}, where is the {c}toilet{/c}?",
+          "mm": "ခွင့်လွှတ်ပါ၊ အိမ်သာက ဘယ်နားမှာလဲရှင်။"
+        },
+        {
+          "en": "{w}Excuse me{/w}, can you help me {c}find{/c} this?",
+          "mm": "ခွင့်လွှတ်ပါ၊ ဒါလေး ရှာပေးလို့ရမလားရှင်။"
+        },
+        {
+          "en": "{w}Excuse me{/w}, what {c}time{/c} is it?",
+          "mm": "ခွင့်လွှတ်ပါ၊ အခု ဘယ်နှစ်နာရီရှိပြီလဲရှင်။"
+        },
+        {
+          "en": "{w}Excuse me{/w}, are you the {c}waiter{/c}?",
+          "mm": "ခွင့်လွှတ်ပါ၊ ဝန်ထမ်းပါလားရှင်။"
+        }
+      ],
+      "short_mm": "တစ်ယောက်ယောက်ရဲ့ အာရုံစိုက်မှုကို ယဉ်ကျေးစွာ ရယူတာပါ။"
+    },
+    {
+      "word": "Here you are",
+      "pos": "expression",
+      "short_en": "what you say when you give someone what they asked for",
+      "examples": [
+        {
+          "en": "{w}Here you are{/w}, one {c}coffee{/c}.",
+          "mm": "ရပါပြီ၊ ကော်ဖီတစ်ခွက်ပါ။"
+        },
+        {
+          "en": "{w}Here you are{/w}, your {c}change{/c}.",
+          "mm": "ရပါပြီ၊ အမ်းငွေပါ။"
+        },
+        {
+          "en": "{w}Here you are{/w}, the {c}book{/c} you wanted.",
+          "mm": "ရပါပြီ၊ ရှင်လိုချင်တဲ့ စာအုပ်ပါ။"
+        },
+        {
+          "en": "{w}Here you are{/w}, your {c}passport{/c}.",
+          "mm": "ရပါပြီ၊ နိုင်ငံကူးလက်မှတ်ပါ။"
+        },
+        {
+          "en": "{w}Here you are{/w}, the {c}keys{/c} to the room.",
+          "mm": "ရပါပြီ၊ အခန်းသော့ပါ။"
+        }
+      ],
+      "short_mm": "တစ်ယောက်ယောက်ကို ပစ္စည်းပေးတဲ့အခါ ပြောတဲ့ စကားပါ။"
+    },
+    {
+      "word": "No problem",
+      "pos": "expression",
+      "short_en": "a friendly way to say you are happy to help",
+      "examples": [
+        {
+          "en": "Can I sit here? — {w}No problem{/w}, go {c}ahead{/c}.",
+          "mm": "ဒီမှာ ထိုင်လို့ရမလား။ — ရပါတယ်၊ ထိုင်ပါရှင်။"
+        },
+        {
+          "en": "Thanks for the help! — {w}No problem{/w}, {c}happy{/c} to help.",
+          "mm": "ကူညီပေးလို့ ကျေးဇူးပါ! — ကိစ္စမရှိပါဘူး၊ ကူညီရတာ ဝမ်းသာပါတယ်ရှင်။"
+        },
+        {
+          "en": "Could you move? — {w}No problem{/w}, {c}sorry{/c} about that.",
+          "mm": "နည်းနည်းလောက် ရွှေ့ပေးလို့ရမလား။ — ရပါတယ်၊ တောင်းပန်ပါတယ်ရှင်။"
+        },
+        {
+          "en": "Is it okay if I leave early? — {w}No problem{/w}, see you {c}tomorrow{/c}.",
+          "mm": "စောစောပြန်သွားလို့ အဆင်ပြေမလား။ — ရပါတယ်၊ မနက်ဖြန်မှ တွေ့မယ်နော်။"
+        },
+        {
+          "en": "Can I borrow your pen? — {w}No problem{/w}, here is {c}one{/c}.",
+          "mm": "ဘောပင်လေး ငှားလို့ရမလား။ — ရပါတယ်၊ ဒီမှာယူလိုက်ပါရှင်။"
+        }
+      ],
+      "short_mm": "အဆင်ပြေပါတယ်၊ ကူညီရတာ ဝမ်းသာပါတယ်လို့ ပြောတဲ့ ပုံစံပါ။"
+    },
+    {
+      "word": "Would you like",
+      "pos": "expression",
+      "short_en": "a polite way to offer something to someone",
+      "examples": [
+        {
+          "en": "{w}Would you like{/w} a {c}drink{/c}?",
+          "mm": "ဘာသောက်မလဲရှင်။"
+        },
+        {
+          "en": "{w}Would you like{/w} to {c}sit{/c} down?",
+          "mm": "ထိုင်မလားရှင်။"
+        },
+        {
+          "en": "{w}Would you like{/w} some {c}sugar{/c}?",
+          "mm": "သကြား ထည့်မလားရှင်။"
+        },
+        {
+          "en": "{w}Would you like{/w} to see the {c}menu{/c}?",
+          "mm": "မီနူး ကြည့်မလားရှင်။"
+        },
+        {
+          "en": "{w}Would you like{/w} a {c}bag{/c} for that?",
+          "mm": "အိတ်ထဲ ထည့်ပေးရမလားရှင်။"
+        }
+      ],
+      "short_mm": "တစ်ယောက်ယောက်ကို တစ်ခုခု ကမ်းလှမ်းတဲ့အခါ သုံးပါတယ်။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "___ open the door? (Requesting action)",
+      "right": "Could you",
+      "wrong": "I'd like",
+      "why": "Could you is a request for action; I'd like is for stating a preference.",
+      "why_mm": "Could you က လုပ်ဆောင်ချက်တစ်ခုကို တောင်းဆိုတာဖြစ်ပြီး I'd like က ကိုယ့်ဆန္ဒကို ပြောတာပါ။"
+    },
+    {
+      "prompt": "___ a coffee, please. (Ordering)",
+      "right": "Can I have",
+      "wrong": "Would you like",
+      "why": "Can I have is asking for something; Would you like is offering something.",
+      "why_mm": "Can I have က ကိုယ်လိုချင်တာကို တောင်းဆိုတာဖြစ်ပြီး Would you like က သူများကို ကမ်းလှမ်းတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Asking for a coffee in a cafe: \"___ a coffee, please.\"",
+      "answer": "Can I have",
+      "options": [
+        "Can I have",
+        "Do you have",
+        "Would you like"
+      ],
+      "explain_en": "Use 'Can I have' to request an item.",
+      "explain_mm": "ပစ္စည်းတစ်ခုခု တောင်းဆိုချင်ရင် Can I have ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Asking someone to help you: \"___ help me with this?\"",
+      "answer": "Could you",
+      "options": [
+        "Could you",
+        "I'd like",
+        "Here you are"
+      ],
+      "explain_en": "Use 'Could you' for polite requests.",
+      "explain_mm": "ယဉ်ကျေးစွာ အကူအညီတောင်းချင်ရင် Could you ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Stating what you want to order: \"___ to pay by card.\"",
+      "answer": "I'd like",
+      "options": [
+        "I'd like",
+        "Can I have",
+        "No problem"
+      ],
+      "explain_en": "Use 'I'd like' to state your preference.",
+      "explain_mm": "ကိုယ့်ရဲ့ လိုအင်ဆန္ဒကို ပြောချင်ရင် I'd like ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Checking if a shop has a specific size: \"___ this in a small?\"",
+      "answer": "Do you have",
+      "options": [
+        "Do you have",
+        "Could you",
+        "Would you like"
+      ],
+      "explain_en": "Use 'Do you have' to check availability.",
+      "explain_mm": "ပစ္စည်းရှိမရှိ စစ်ဆေးချင်ရင် Do you have ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Getting attention: \"___, is this seat free?\"",
+      "answer": "Excuse me",
+      "options": [
+        "Excuse me",
+        "No problem",
+        "Here you are"
+      ],
+      "explain_en": "Use 'Excuse me' to politely interrupt.",
+      "explain_mm": "လူတစ်ယောက်ကို အာရုံစိုက်ခိုင်းချင်ရင် Excuse me ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Giving someone their change: \"___, your money.\"",
+      "answer": "Here you are",
+      "options": [
+        "Here you are",
+        "No problem",
+        "I'd like"
+      ],
+      "explain_en": "Use 'Here you are' when handing something over.",
+      "explain_mm": "ပစ္စည်းတစ်ခုခုကို လက်ထဲထည့်ပေးတဲ့အခါ Here you are ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Offering a guest a drink: \"___ a cup of tea?\"",
+      "answer": "Would you like",
+      "options": [
+        "Would you like",
+        "Can I have",
+        "Could you"
+      ],
+      "explain_en": "Use 'Would you like' to make an offer.",
+      "explain_mm": "တစ်စုံတစ်ယောက်ကို တစ်ခုခု ကမ်းလှမ်းချင်ရင် Would you like ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___ mind closing the window?\"",
+      "answer": "Would you",
+      "options": [],
+      "explain_en": "The phrase is 'Would you mind' + -ing verb.",
+      "explain_mm": "Would you mind ရဲ့ နောက်မှာ Verb-ing ပုံစံကို သုံးပေးရပါမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"Can I sit here? — ___!\"",
+      "answer": "No problem",
+      "options": [],
+      "explain_en": "Use 'No problem' to agree politely.",
+      "explain_mm": "ယဉ်ကျေးစွာ သဘောတူညီကြောင်း ပြောချင်ရင် No problem ကို သုံးပေးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___ you like to see the menu?\"",
+      "answer": "Would",
+      "options": [],
+      "explain_en": "The offer phrase is 'Would you like'.",
+      "explain_mm": "ကမ်းလှမ်းတဲ့အခါ Would you like ကို သုံးပေးပါ။"
+    }
+  ]
+}

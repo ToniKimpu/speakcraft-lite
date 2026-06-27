@@ -1,0 +1,383 @@
+{
+  "id": "phrasal_verbs",
+  "title": "Everyday phrasal verbs",
+  "level": 1,
+  "order": 27,
+  "theme": "Phrasal verbs",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Phrasal verbs are essential for natural English. These nine verbs cover common daily actions like managing household items, searching for things, and caring for others.",
+  "why_grouped_mm": "Phrasal verbs တွေက နေ့စဉ်ပြောဆိုတဲ့ English စကားပြောမှာ အရမ်းအရေးကြီးပါတယ်။ ဒီ 9 ခုက အိမ်မှုကိစ္စတွေ၊ ရှာဖွေတာတွေနဲ့ တစ်ယောက်ယောက်ကို စောင့်ရှောက်တာတွေအတွက် သုံးရတာပါ။",
+  "words": [
+    {
+      "word": "turn on",
+      "pos": "expression",
+      "short_en": "to start a machine or light",
+      "examples": [
+        {
+          "en": "Can you {w}turn on{/w} the {c}light{/c}?",
+          "mm": "မီးလေး ဖွင့်ပေးလို့ ရမလား။"
+        },
+        {
+          "en": "I always {w}turn on{/w} the {c}radio{/c} in the morning.",
+          "mm": "ကျွန်တော် မနက်တိုင်း ရေဒီယို ဖွင့်လေ့ရှိတယ်။"
+        },
+        {
+          "en": "Please {w}turn on{/w} the {c}computer{/c} for me.",
+          "mm": "ကျွန်တော့်အတွက် ကွန်ပျူတာလေး ဖွင့်ပေးပါဦး။"
+        },
+        {
+          "en": "Did you {w}turn on{/w} the {c}television{/c}?",
+          "mm": "တီဗီ ဖွင့်လိုက်သေးလား။"
+        },
+        {
+          "en": "It is dark, {w}turn on{/w} the {c}lamp{/c}.",
+          "mm": "မှောင်နေပြီ၊ မီးအိမ်လေး ဖွင့်လိုက်ပါ။"
+        }
+      ],
+      "short_mm": "စက် ဒါမှမဟုတ် မီးကို ဖွင့်တာ"
+    },
+    {
+      "word": "turn off",
+      "pos": "expression",
+      "short_en": "to stop a machine or light",
+      "examples": [
+        {
+          "en": "Please {w}turn off{/w} the {c}fan{/c} when you leave.",
+          "mm": "အပြင်ထွက်ရင် ပန်ကာလေး ပိတ်သွားပေးပါ။"
+        },
+        {
+          "en": "Did you {w}turn off{/w} the {c}stove{/c}?",
+          "mm": "မီးဖိုကို ပိတ်ခဲ့ရဲ့လား။"
+        },
+        {
+          "en": "I forgot to {w}turn off{/w} the {c}lights{/c}.",
+          "mm": "မီးပိတ်ဖို့ မေ့သွားတယ်။"
+        },
+        {
+          "en": "You should {w}turn off{/w} your {c}phone{/c} in class.",
+          "mm": "စာသင်ခန်းထဲမှာ ဖုန်းပိတ်ထားသင့်တယ်။"
+        },
+        {
+          "en": "Can you {w}turn off{/w} the {c}air-con{/c}?",
+          "mm": "အဲကွန်းလေး ပိတ်ပေးလို့ ရမလား။"
+        }
+      ],
+      "short_mm": "စက် ဒါမှမဟုတ် မီးကို ပိတ်တာ"
+    },
+    {
+      "word": "look for",
+      "pos": "expression",
+      "short_en": "to try to find something",
+      "examples": [
+        {
+          "en": "I am {w}looking for{/w} my {c}keys{/c}.",
+          "mm": "ကျွန်တော့်သော့ကို ရှာနေတာ။"
+        },
+        {
+          "en": "She is {w}looking for{/w} a new {c}job{/c}.",
+          "mm": "သူမ အလုပ်သစ် ရှာနေတယ်။"
+        },
+        {
+          "en": "We are {w}looking for{/w} a good {c}restaurant{/c}.",
+          "mm": "ကျွန်တော်တို့ စားကောင်းတဲ့ဆိုင် ရှာနေကြတာ။"
+        },
+        {
+          "en": "Are you {w}looking for{/w} your {c}bag{/c}?",
+          "mm": "မင်းရဲ့အိတ်ကို ရှာနေတာလား။"
+        },
+        {
+          "en": "I spent all day {w}looking for{/w} my {c}glasses{/c}.",
+          "mm": "ကျွန်တော့်မျက်မှန် ရှာရင်းနဲ့ တစ်နေ့လုံး ကုန်သွားတယ်။"
+        }
+      ],
+      "short_mm": "တစ်ခုခုကို ရှာနေတာ"
+    },
+    {
+      "word": "find out",
+      "pos": "expression",
+      "short_en": "to discover information",
+      "examples": [
+        {
+          "en": "I want to {w}find out{/w} the {c}truth{/c}.",
+          "mm": "အမှန်တရားကို သိချင်တယ်။"
+        },
+        {
+          "en": "Did you {w}find out{/w} the {c}time{/c}?",
+          "mm": "အချိန် ဘယ်လောက်ရှိပြီလဲ သိလိုက်ရလား။"
+        },
+        {
+          "en": "We will {w}find out{/w} the {c}result{/c} tomorrow.",
+          "mm": "ရလဒ်ကို မနက်ဖြန်မှ သိရလိမ့်မယ်။"
+        },
+        {
+          "en": "I need to {w}find out{/w} his {c}address{/c}.",
+          "mm": "သူ့လိပ်စာကို သိအောင် လုပ်ရမယ်။"
+        },
+        {
+          "en": "How did you {w}find out{/w} the {c}news{/c}?",
+          "mm": "ဒီသတင်းကို ဘယ်လို သိသွားတာလဲ။"
+        }
+      ],
+      "short_mm": "အချက်အလက်ကို သိအောင်လုပ်တာ"
+    },
+    {
+      "word": "give up",
+      "pos": "expression",
+      "short_en": "to stop doing something difficult",
+      "examples": [
+        {
+          "en": "Never {w}give up{/w} on your {c}dreams{/c}.",
+          "mm": "မင်းရဲ့အိပ်မက်တွေကို ဘယ်တော့မှ လက်မလျှော့ပါနဲ့။"
+        },
+        {
+          "en": "He decided to {w}give up{/w} {c}smoking{/c}.",
+          "mm": "သူ ဆေးလိပ်ဖြတ်ဖို့ ဆုံးဖြတ်လိုက်တယ်။"
+        },
+        {
+          "en": "Don't {w}give up{/w} that {c}easily{/c}!",
+          "mm": "ဒီလောက်နဲ့တော့ အလွယ်တကူ လက်မလျှော့လိုက်ပါနဲ့။"
+        },
+        {
+          "en": "I had to {w}give up{/w} the {c}game{/c}.",
+          "mm": "ကျွန်တော် ကစားပွဲကို လက်လျှော့လိုက်ရတယ်။"
+        },
+        {
+          "en": "She will not {w}give up{/w} her {c}hobby{/c}.",
+          "mm": "သူမ ဝါသနာပါတာကို လက်လျှော့မှာ မဟုတ်ဘူး။"
+        }
+      ],
+      "short_mm": "လုပ်လက်စကို လက်လျှော့လိုက်တာ"
+    },
+    {
+      "word": "look after",
+      "pos": "expression",
+      "short_en": "to take care of someone or something",
+      "examples": [
+        {
+          "en": "Can you {w}look after{/w} my {c}dog{/c}?",
+          "mm": "ကျွန်တော့်ခွေးလေးကို ခဏလောက် ကြည့်ပေးလို့ ရမလား။"
+        },
+        {
+          "en": "I have to {w}look after{/w} my {c}baby{/c}.",
+          "mm": "ကျွန်တော့်ကလေးကို ပြုစုစောင့်ရှောက်ရမယ်။"
+        },
+        {
+          "en": "She {w}looks after{/w} her elderly {c}mother{/c}.",
+          "mm": "သူမက သူ့အမေအိုကြီးကို ပြုစုစောင့်ရှောက်ပေးတယ်။"
+        },
+        {
+          "en": "Who will {w}look after{/w} the {c}house{/c}?",
+          "mm": "အိမ်ကို ဘယ်သူ စောင့်ပေးမှာလဲ။"
+        },
+        {
+          "en": "It is hard to {w}look after{/w} a {c}garden{/c}.",
+          "mm": "ဥယျာဉ်ကို စောင့်ရှောက်ရတာ ခက်တယ်။"
+        }
+      ],
+      "short_mm": "တစ်ယောက်ယောက်ကို စောင့်ရှောက်တာ"
+    },
+    {
+      "word": "come back",
+      "pos": "expression",
+      "short_en": "to return to a place",
+      "examples": [
+        {
+          "en": "When will you {w}come back{/w} {c}home{/c}?",
+          "mm": "ဘယ်တော့ အိမ်ပြန်လာမှာလဲ။"
+        },
+        {
+          "en": "I will {w}come back{/w} in an {c}hour{/c}.",
+          "mm": "တစ်နာရီနေရင် ပြန်လာခဲ့မယ်။"
+        },
+        {
+          "en": "She {w}came back{/w} from {c}work{/c} late.",
+          "mm": "သူမ အလုပ်ကနေ နောက်ကျမှ ပြန်လာတယ်။"
+        },
+        {
+          "en": "Please {w}come back{/w} to the {c}office{/c}.",
+          "mm": "ရုံးကို ပြန်လာခဲ့ပေးပါ။"
+        },
+        {
+          "en": "They {w}came back{/w} from their {c}holiday{/c}.",
+          "mm": "သူတို့ အားလပ်ရက် ခရီးကနေ ပြန်ရောက်လာကြပြီ။"
+        }
+      ],
+      "short_mm": "ပြန်လာတာ"
+    },
+    {
+      "word": "fill in",
+      "pos": "expression",
+      "short_en": "to complete a form or document",
+      "examples": [
+        {
+          "en": "Please {w}fill in{/w} this {c}form{/c}.",
+          "mm": "ဒီဖောင်လေး ဖြည့်ပေးပါ။"
+        },
+        {
+          "en": "I need to {w}fill in{/w} my {c}details{/c}.",
+          "mm": "ကျွန်တော့်အချက်အလက်တွေကို ဖြည့်ဖို့ လိုတယ်။"
+        },
+        {
+          "en": "Did you {w}fill in{/w} the {c}application{/c}?",
+          "mm": "လျှောက်လွှာ ဖြည့်ပြီးပြီလား။"
+        },
+        {
+          "en": "You must {w}fill in{/w} the {c}blanks{/c}.",
+          "mm": "ကွက်လပ်တွေကို မဖြစ်မနေ ဖြည့်ရမယ်။"
+        },
+        {
+          "en": "He helped me {w}fill in{/w} the {c}paperwork{/c}.",
+          "mm": "သူ စာရွက်စာတမ်းတွေ ဖြည့်တာ ကူညီပေးတယ်။"
+        }
+      ],
+      "short_mm": "ပုံစံတစ်ခုကို ဖြည့်တာ"
+    },
+    {
+      "word": "throw away",
+      "pos": "expression",
+      "short_en": "to put something in the bin",
+      "examples": [
+        {
+          "en": "Don't {w}throw away{/w} that {c}paper{/c}.",
+          "mm": "အဲဒီစက္ကူကို လွှင့်မပစ်နဲ့။"
+        },
+        {
+          "en": "I will {w}throw away{/w} the {c}rubbish{/c}.",
+          "mm": "အမှိုက်တွေကို လွှင့်ပစ်လိုက်မယ်။"
+        },
+        {
+          "en": "She {w}threw away{/w} her old {c}shoes{/c}.",
+          "mm": "သူမ သူ့ဖိနပ်အဟောင်းတွေကို လွှင့်ပစ်လိုက်တယ်။"
+        },
+        {
+          "en": "Why did you {w}throw away{/w} the {c}box{/c}?",
+          "mm": "ဘာလို့ အဲဒီသေတ္တာကို လွှင့်ပစ်လိုက်တာလဲ။"
+        },
+        {
+          "en": "You should {w}throw away{/w} expired {c}food{/c}.",
+          "mm": "သက်တမ်းကုန်နေတဲ့ အစားအစာတွေကို လွှင့်ပစ်သင့်တယ်။"
+        }
+      ],
+      "short_mm": "အမှိုက်ပုံးထဲ ပစ်လိုက်တာ"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I need to ___ the light before I sleep.",
+      "right": "turn off",
+      "wrong": "turn on",
+      "why": "turn off = stop, turn on = start.",
+      "why_mm": "turn off က ရပ်တာ၊ turn on က စတာမို့ ဆန့်ကျင်ဘက်ဖြစ်ပါတယ်"
+    },
+    {
+      "prompt": "I am ___ my keys; I can't find them.",
+      "right": "looking for",
+      "wrong": "looking after",
+      "why": "look for = search, look after = care for.",
+      "why_mm": "look for က ရှာတာ၊ look after က ဂရုစိုက်တာမို့ အဓိပ္ပာယ်မတူပါဘူး"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "It is dark. Please ___ the lamp.",
+      "answer": "turn on",
+      "options": [
+        "turn on",
+        "turn off",
+        "give up"
+      ],
+      "explain_en": "To start a light → turn on.",
+      "explain_mm": "မီးကို စဖွင့်တာမို့ turn on လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I am ___ my lost wallet.",
+      "answer": "looking for",
+      "options": [
+        "looking for",
+        "looking after",
+        "coming back"
+      ],
+      "explain_en": "To search for something → look for.",
+      "explain_mm": "တစ်ခုခုကို လိုက်ရှာတာမို့ look for လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Please ___ this form with your name.",
+      "answer": "fill in",
+      "options": [
+        "fill in",
+        "throw away",
+        "find out"
+      ],
+      "explain_en": "To complete a form → fill in.",
+      "explain_mm": "Form တစ်ခုကို ဖြည့်တာမို့ fill in လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Can you ___ the cat while I am away?",
+      "answer": "look after",
+      "options": [
+        "look after",
+        "look for",
+        "come back"
+      ],
+      "explain_en": "To care for someone/something → look after.",
+      "explain_mm": "ဂရုစိုက် စောင့်ရှောက်တာမို့ look after လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Don't ___ your old newspapers.",
+      "answer": "throw away",
+      "options": [
+        "throw away",
+        "turn off",
+        "give up"
+      ],
+      "explain_en": "To put in the bin → throw away.",
+      "explain_mm": "အမှိုက်ပုံးထဲ ပစ်တာမို့ throw away လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I will ___ from my trip tomorrow.\"",
+      "answer": "come back",
+      "options": [],
+      "explain_en": "To return → come back.",
+      "explain_mm": "ပြန်လာတာမို့ come back လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I want to ___ the truth about what happened.\"",
+      "answer": "find out",
+      "options": [],
+      "explain_en": "To discover info → find out.",
+      "explain_mm": "အချက်အလက်ကို သိရတာမို့ find out လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"It is too hard, but I won't ___.\"",
+      "answer": "give up",
+      "options": [],
+      "explain_en": "To stop trying → give up.",
+      "explain_mm": "ကြိုးစားတာကို ရပ်လိုက်တာမို့ give up လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"Please ___ the TV; it is too loud.\"",
+      "answer": "turn off",
+      "options": [],
+      "explain_en": "To stop a machine → turn off.",
+      "explain_mm": "စက်ကို ပိတ်လိုက်တာမို့ turn off လို့ သုံးပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I need to ___ my little brother today.\"",
+      "answer": "look after",
+      "options": [],
+      "explain_en": "To care for someone → look after.",
+      "explain_mm": "တစ်ယောက်ယောက်ကို စောင့်ရှောက်တာမို့ look after လို့ သုံးပါတယ်"
+    }
+  ]
+}

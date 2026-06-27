@@ -1,0 +1,404 @@
+{
+  "id": "school_study",
+  "title": "School & studying",
+  "level": 1,
+  "order": 22,
+  "theme": "Study",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "These phrases cover the daily life of a student, from doing homework to the stress of exams. They are essential for talking about your education and academic progress.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက ကျောင်းသားတစ်ယောက်ရဲ့ နေ့စဉ်ကျောင်းလုပ်ငန်းတွေနဲ့ စာမေးပွဲအကြောင်း ပြောတဲ့အခါ မရှိမဖြစ်လိုအပ်တဲ့ စကားလုံးတွေမို့လို့ အုပ်စုဖွဲ့ထားတာပါ။",
+  "words": [
+    {
+      "word": "do your homework",
+      "pos": "expression",
+      "short_en": "to complete the work given by your teacher",
+      "examples": [
+        {
+          "en": "I need to {w}do my homework{/w} before {c}dinner{/c}.",
+          "mm": "ညစာမစားခင်မှာ ကျောင်းစာတွေလုပ်ဖို့လိုတယ်"
+        },
+        {
+          "en": "Did you {w}do your homework{/w} for {c}maths{/c}?",
+          "mm": "သင်္ချာအတွက် အိမ်စာတွေလုပ်ပြီးပြီလား"
+        },
+        {
+          "en": "He always {w}does his homework{/w} in the {c}library{/c}.",
+          "mm": "သူက အမြဲတမ်း စာကြည့်တိုက်မှာပဲ အိမ်စာလုပ်လေ့ရှိတယ်"
+        },
+        {
+          "en": "I forgot to {w}do my homework{/w} last {c}night{/c}.",
+          "mm": "မနေ့ညက အိမ်စာလုပ်ဖို့ မေ့သွားတယ်"
+        },
+        {
+          "en": "It takes me an hour to {w}do my homework{/w} every {c}day{/c}.",
+          "mm": "နေ့တိုင်း အိမ်စာလုပ်ဖို့ တစ်နာရီလောက် အချိန်ပေးရတယ်"
+        }
+      ],
+      "short_mm": "အိမ်စာလုပ်တာ"
+    },
+    {
+      "word": "hand in",
+      "pos": "expression",
+      "short_en": "to give your work to your teacher",
+      "examples": [
+        {
+          "en": "You must {w}hand in{/w} your {c}essay{/c} by Friday.",
+          "mm": "သောကြာနေ့ နောက်ဆုံးထားပြီး မင်းရဲ့စာစီစာကုံးကို တင်ရမယ်"
+        },
+        {
+          "en": "I forgot to {w}hand in{/w} my {c}project{/c}.",
+          "mm": "ကျွန်တော့်ရဲ့ project ကို တင်ဖို့ မေ့သွားတယ်"
+        },
+        {
+          "en": "She {w}handed in{/w} her {c}work{/c} early.",
+          "mm": "သူမက သူမရဲ့အလုပ်ကို စောစောတင်လိုက်တယ်"
+        },
+        {
+          "en": "Don't forget to {w}hand in{/w} the {c}form{/c}.",
+          "mm": "ပုံစံဖြည့်တဲ့စာရွက်ကို တင်ဖို့ မမေ့နဲ့နော်"
+        },
+        {
+          "en": "We {w}hand in{/w} our {c}homework{/c} every morning.",
+          "mm": "ကျွန်တော်တို့က မနက်တိုင်း အိမ်စာတွေကို တင်ကြတယ်"
+        }
+      ],
+      "short_mm": "အိမ်စာ/အလုပ်အပ်တာ"
+    },
+    {
+      "word": "sit an exam",
+      "pos": "expression",
+      "short_en": "to take an exam",
+      "nuance_en": "British English uses 'sit' an exam; American English uses 'take' an exam.",
+      "examples": [
+        {
+          "en": "I have to {w}sit an exam{/w} in {c}history{/c} tomorrow.",
+          "mm": "မနက်ဖြန် သမိုင်းဘာသာရပ်အတွက် စာမေးပွဲဖြေရမယ်"
+        },
+        {
+          "en": "She is going to {w}sit an exam{/w} at the {c}university{/c}.",
+          "mm": "သူမ တက္ကသိုလ်မှာ စာမေးပွဲဖြေဖို့ ရှိတယ်"
+        },
+        {
+          "en": "How many exams did you {w}sit{/w} this {c}term{/c}?",
+          "mm": "ဒီစာသင်နှစ်မှာ စာမေးပွဲဘယ်နှစ်ခု ဖြေခဲ့ရလဲ"
+        },
+        {
+          "en": "We {w}sit our exams{/w} in the {c}hall{/c}.",
+          "mm": "ကျွန်တော်တို့က စာမေးပွဲတွေကို ခန်းမထဲမှာ ဖြေကြတယ်"
+        },
+        {
+          "en": "He had to {w}sit an exam{/w} to get his {c}certificate{/c}.",
+          "mm": "သူက အောင်လက်မှတ်ရဖို့အတွက် စာမေးပွဲဖြေခဲ့ရတယ်"
+        }
+      ],
+      "confuse_with": [
+        "pass an exam"
+      ],
+      "short_mm": "စာမေးပွဲဖြေတာ",
+      "nuance_mm": "British English မှာ သုံးတာများပြီး American English မှာတော့ take an exam လို့ သုံးပါတယ်။"
+    },
+    {
+      "word": "pass an exam",
+      "pos": "expression",
+      "short_en": "to be successful in an exam",
+      "examples": [
+        {
+          "en": "I hope I {w}pass my exam{/w} in {c}English{/c}.",
+          "mm": "အင်္ဂလိပ်စာမေးပွဲကို အောင်စေချင်တယ်"
+        },
+        {
+          "en": "She worked hard and {w}passed the exam{/w} with {c}ease{/c}.",
+          "mm": "သူမ ကြိုးစားခဲ့လို့ စာမေးပွဲကို အေးအေးဆေးဆေးပဲ အောင်သွားတယ်"
+        },
+        {
+          "en": "It is not easy to {w}pass{/w} a {c}science{/c} exam.",
+          "mm": "သိပ္ပံစာမေးပွဲကို အောင်ဖို့ဆိုတာ မလွယ်ဘူး"
+        },
+        {
+          "en": "Did you {w}pass your exam{/w} this {c}time{/c}?",
+          "mm": "ဒီတစ်ခါ စာမေးပွဲအောင်သွားလား"
+        },
+        {
+          "en": "He was happy to {w}pass the exam{/w} at last {c}attempt{/c}.",
+          "mm": "နောက်ဆုံးကြိုးစားမှုနဲ့ စာမေးပွဲအောင်သွားလို့ သူ အရမ်းပျော်နေတယ်"
+        }
+      ],
+      "confuse_with": [
+        "fail an exam"
+      ],
+      "short_mm": "စာမေးပွဲအောင်တာ"
+    },
+    {
+      "word": "fail an exam",
+      "pos": "expression",
+      "short_en": "to not be successful in an exam",
+      "examples": [
+        {
+          "en": "I am worried I might {w}fail my exam{/w} in {c}physics{/c}.",
+          "mm": "ရူပဗေဒစာမေးပွဲ ကျသွားမှာ စိုးရိမ်တယ်"
+        },
+        {
+          "en": "He {w}failed the exam{/w} because he didn't {c}study{/c}.",
+          "mm": "သူ စာမလုပ်ခဲ့တဲ့အတွက် စာမေးပွဲကျသွားတယ်"
+        },
+        {
+          "en": "It is sad to {w}fail{/w} an important {c}test{/c}.",
+          "mm": "အရေးကြီးတဲ့ စာမေးပွဲတစ်ခု ကျသွားတာ စိတ်မကောင်းစရာပဲ"
+        },
+        {
+          "en": "She {w}failed the exam{/w} by only one {c}mark{/c}.",
+          "mm": "သူမ စာမေးပွဲကို တစ်မှတ်တည်းနဲ့ ကျသွားတာ"
+        },
+        {
+          "en": "Don't worry if you {w}fail an exam{/w} once, just {c}try{/c} again.",
+          "mm": "စာမေးပွဲတစ်ခါကျတာနဲ့ စိတ်မပူပါနဲ့ နောက်တစ်ခါ ထပ်ကြိုးစားကြည့်လိုက်"
+        }
+      ],
+      "confuse_with": [
+        "pass an exam"
+      ],
+      "short_mm": "စာမေးပွဲကျတာ"
+    },
+    {
+      "word": "revise for",
+      "pos": "expression",
+      "short_en": "to study again for an exam",
+      "nuance_en": "British English uses 'revise'; American English uses 'study for'.",
+      "examples": [
+        {
+          "en": "I need to {w}revise for{/w} my {c}biology{/c} exam.",
+          "mm": "ဇီဝဗေဒစာမေးပွဲအတွက် ပြန်နွှေးဖို့ လိုနေတယ်"
+        },
+        {
+          "en": "She is {w}revising for{/w} her {c}maths{/c} test all day.",
+          "mm": "သူမ တစ်နေ့လုံး သင်္ချာစာမေးပွဲအတွက် စာပြန်နွှေးနေတယ်"
+        },
+        {
+          "en": "We {w}revise{/w} in the {c}library{/c} together.",
+          "mm": "ကျွန်တော်တို့ စာကြည့်တိုက်မှာ အတူတူ စာပြန်နွှေးကြတယ်"
+        },
+        {
+          "en": "How long did you {w}revise for{/w} the {c}exam{/c}?",
+          "mm": "စာမေးပွဲအတွက် ဘယ်လောက်ကြာကြာ စာပြန်နွှေးခဲ့လဲ"
+        },
+        {
+          "en": "I have to {w}revise for{/w} three {c}subjects{/c} tonight.",
+          "mm": "ဒီနေ့ည ဘာသာရပ်သုံးခုစာ ပြန်နွှေးရဦးမယ်"
+        }
+      ],
+      "short_mm": "စာပြန်နွေးတာ",
+      "nuance_mm": "British English မှာသုံးပြီး American English မှာတော့ study for လို့ သုံးပါတယ်။"
+    },
+    {
+      "word": "get good marks",
+      "pos": "expression",
+      "short_en": "to receive a high grade",
+      "examples": [
+        {
+          "en": "I want to {w}get good marks{/w} in my {c}test{/c}.",
+          "mm": "ကျွန်တော် စာမေးပွဲမှာ အမှတ်ကောင်းကောင်း ရချင်တယ်"
+        },
+        {
+          "en": "She always {w}gets good marks{/w} in {c}art{/c}.",
+          "mm": "သူမက အနုပညာဘာသာရပ်မှာ အမြဲတမ်း အမှတ်ကောင်းတယ်"
+        },
+        {
+          "en": "It is hard to {w}get good marks{/w} without {c}practising{/c}.",
+          "mm": "လေ့ကျင့်မှုမရှိဘဲနဲ့ အမှတ်ကောင်းဖို့ဆိုတာ ခက်တယ်"
+        },
+        {
+          "en": "He was proud to {w}get good marks{/w} on his {c}essay{/c}.",
+          "mm": "သူ့ရဲ့ စာစီစာကုံးအတွက် အမှတ်ကောင်းရလို့ သူ ဂုဏ်ယူနေတယ်"
+        },
+        {
+          "en": "If you study, you will {w}get good marks{/w} in {c}class{/c}.",
+          "mm": "စာကြိုးစားရင် အတန်းထဲမှာ အမှတ်ကောင်းကောင်း ရမှာပါ"
+        }
+      ],
+      "short_mm": "အမှတ်ကောင်းရတာ"
+    },
+    {
+      "word": "a subject",
+      "pos": "expression",
+      "short_en": "an area of knowledge studied at school",
+      "examples": [
+        {
+          "en": "What is your favourite {w}subject{/w} at {c}school{/c}?",
+          "mm": "ကျောင်းမှာ ဘယ်ဘာသာရပ်ကို အကြိုက်ဆုံးလဲ"
+        },
+        {
+          "en": "I find {w}science{/w} a difficult {c}subject{/c}.",
+          "mm": "သိပ္ပံဘာသာရပ်က ခက်တယ်လို့ ထင်တယ်"
+        },
+        {
+          "en": "She studies every {w}subject{/w} with great {c}interest{/c}.",
+          "mm": "သူမ ဘာသာရပ်တိုင်းကို စိတ်ဝင်တစားနဲ့ လေ့လာတယ်"
+        },
+        {
+          "en": "History is my best {w}subject{/w} in {c}class{/c}.",
+          "mm": "အတန်းထဲမှာ သမိုင်းက ကျွန်တော့်အကြိုက်ဆုံးဘာသာရပ်ပဲ"
+        },
+        {
+          "en": "We have to choose a new {w}subject{/w} to {c}study{/c}.",
+          "mm": "ကျွန်တော်တို့ လေ့လာဖို့ ဘာသာရပ်အသစ်တစ်ခု ရွေးရမယ်"
+        }
+      ],
+      "short_mm": "ဘာသာရပ်"
+    },
+    {
+      "word": "a degree",
+      "pos": "expression",
+      "short_en": "the qualification you get from university",
+      "examples": [
+        {
+          "en": "She is studying for a {w}degree{/w} in {c}law{/c}.",
+          "mm": "သူမ ဥပဒေဘာသာရပ်နဲ့ ဘွဲ့ရဖို့ စာသင်နေတယ်"
+        },
+        {
+          "en": "He finished his {w}degree{/w} at the {c}university{/c}.",
+          "mm": "သူ တက္ကသိုလ်မှာ သူ့ရဲ့ဘွဲ့ကို ရပြီးသွားပြီ"
+        },
+        {
+          "en": "It takes three years to get a {w}degree{/w} in {c}science{/c}.",
+          "mm": "သိပ္ပံဘွဲ့တစ်ခုရဖို့ သုံးနှစ်လောက် ကြာတယ်"
+        },
+        {
+          "en": "She has a {w}degree{/w} from a top {c}college{/c}.",
+          "mm": "သူမက နာမည်ကြီး ကောလိပ်တစ်ခုကနေ ဘွဲ့ရထားတာ"
+        },
+        {
+          "en": "I want to get a {w}degree{/w} to find a better {c}job{/c}.",
+          "mm": "အလုပ်အကိုင် ပိုကောင်းအောင် ဘွဲ့တစ်ခု ရချင်တယ်"
+        }
+      ],
+      "short_mm": "ဘွဲ့"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I didn't study, so I think I will ___ the exam.",
+      "right": "fail",
+      "wrong": "pass",
+      "why": "Fail means to not succeed, pass means to succeed.",
+      "why_mm": "Fail က မအောင်မြင်တာဖြစ်ပြီး Pass က အောင်မြင်တာကို ပြောတာပါ။"
+    },
+    {
+      "prompt": "I have to ___ my essay to the teacher today.",
+      "right": "hand in",
+      "wrong": "sit",
+      "why": "Hand in means to submit work; sit means to take an exam.",
+      "why_mm": "Hand in က အလုပ်အပ်တာဖြစ်ပြီး Sit က စာမေးပွဲဖြေတာကို ပြောတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I need to ___ my homework before I can play.",
+      "answer": "do",
+      "options": [
+        "do",
+        "hand in",
+        "sit"
+      ],
+      "explain_en": "Complete your assigned work → do your homework.",
+      "explain_mm": "ဆရာပေးတဲ့အလုပ်ကို ပြီးအောင်လုပ်တာက do your homework ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Please ___ your project at the front of the room.",
+      "answer": "hand in",
+      "options": [
+        "hand in",
+        "revise",
+        "pass"
+      ],
+      "explain_en": "Submit work to a teacher → hand in.",
+      "explain_mm": "ဆရာ့ဆီ အလုပ်အပ်တာကို hand in လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I am nervous because I have to ___ an exam tomorrow.",
+      "answer": "sit",
+      "options": [
+        "sit",
+        "revise",
+        "get"
+      ],
+      "explain_en": "Take an exam (British English) → sit an exam.",
+      "explain_mm": "British English မှာ စာမေးပွဲဖြေတာကို sit an exam လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She studied for hours and managed to ___ the exam.",
+      "answer": "pass",
+      "options": [
+        "pass",
+        "fail",
+        "sit"
+      ],
+      "explain_en": "Succeed in an exam → pass an exam.",
+      "explain_mm": "အောင်မြင်အောင်ဖြေတာကို pass an exam လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I am so sad, I think I will ___ the exam because it was too hard.",
+      "answer": "fail",
+      "options": [
+        "fail",
+        "pass",
+        "do"
+      ],
+      "explain_en": "Not succeed in an exam → fail an exam.",
+      "explain_mm": "မအောင်မြင်တာကို fail an exam လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I need to ___ for my history test tonight.",
+      "answer": "revise",
+      "options": [
+        "revise",
+        "pass",
+        "hand in"
+      ],
+      "explain_en": "Study again for an exam → revise for.",
+      "explain_mm": "စာမေးပွဲအတွက် စာပြန်နွေးတာကို revise for လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "If you study hard, you will ___ in your exams.",
+      "answer": "get good marks",
+      "options": [
+        "get good marks",
+        "fail",
+        "do homework"
+      ],
+      "explain_en": "Receive high grades → get good marks.",
+      "explain_mm": "အမှတ်ကောင်းရတာကို get good marks လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Maths is my favourite ___ at school.",
+      "answer": "subject",
+      "options": [],
+      "explain_en": "A specific area of study → subject.",
+      "explain_mm": "သင်ယူရတဲ့ ဘာသာရပ်ကို subject လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "She is going to university to get a ___ in medicine.",
+      "answer": "degree",
+      "options": [],
+      "explain_en": "University qualification → degree.",
+      "explain_mm": "တက္ကသိုလ်ကရတဲ့ အရည်အချင်းကို degree လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "I always ___ my homework before I go to bed.",
+      "answer": "do",
+      "options": [],
+      "explain_en": "Complete school work → do homework.",
+      "explain_mm": "ကျောင်းလုပ်ငန်းပြီးအောင်လုပ်တာကို do homework လို့ သုံးပါတယ်။"
+    }
+  ]
+}

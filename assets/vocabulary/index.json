@@ -211,6 +211,76 @@
       "theme": "Technology",
       "word_count": 9,
       "unit": "expression"
+    },
+    {
+      "id": "school_study",
+      "title": "School & studying",
+      "level": 1,
+      "order": 22,
+      "theme": "Study",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "making_plans",
+      "title": "Making plans",
+      "level": 1,
+      "order": 23,
+      "theme": "Plans",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "asking_for_things",
+      "title": "Asking politely",
+      "level": 1,
+      "order": 24,
+      "theme": "Requests",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "opinions",
+      "title": "Giving opinions",
+      "level": 1,
+      "order": 25,
+      "theme": "Opinions",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "common_verbs",
+      "title": "Everyday verbs",
+      "level": 1,
+      "order": 26,
+      "theme": "Common verbs",
+      "word_count": 8
+    },
+    {
+      "id": "phrasal_verbs",
+      "title": "Everyday phrasal verbs",
+      "level": 1,
+      "order": 27,
+      "theme": "Phrasal verbs",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "everyday_expressions",
+      "title": "Everyday expressions",
+      "level": 1,
+      "order": 28,
+      "theme": "Expressions",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "numbers_quantity",
+      "title": "How much & how many",
+      "level": 1,
+      "order": 29,
+      "theme": "Quantity",
+      "word_count": 9
     }
   ]
 }
