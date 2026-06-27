@@ -6,9 +6,10 @@ import '../../model/vocabulary/vocab_models.dart';
 import '../../shared_widgets/glass.dart';
 import 'widgets/bilingual_text.dart';
 
-/// Contrast practice for one group: a sequence of "which word fits?" (multiple
-/// choice) and "type the word" (gap-fill) questions. Each answer is followed by
-/// an explanation — the "why" — shown whether right or wrong.
+/// Contrast practice for one group — mirrors the Grammar practice UX:
+/// one question at a time, **select then Check** (not auto-grade), with
+/// **Back / Check / Next** navigation. Per-question state is preserved, so
+/// going Back shows the earlier answer + its explanation (read-only).
 class VocabPracticePage extends StatefulWidget {
   const VocabPracticePage({super.key, required this.group});
 
@@ -18,6 +19,14 @@ class VocabPracticePage extends StatefulWidget {
   State<VocabPracticePage> createState() => _VocabPracticePageState();
 }
 
+/// Per-question state, kept in a list so navigation never loses an answer.
+class _QState {
+  String? selected; // mcq choice (before/after check)
+  final TextEditingController controller = TextEditingController(); // gap_fill
+  bool checked = false;
+  bool correct = false;
+}
+
 class _VocabPracticePageState extends State<VocabPracticePage> {
   late final List<VocabExercise> _questions = widget.group.exercises
       .where((e) =>
@@ -25,195 +34,233 @@ class _VocabPracticePageState extends State<VocabPracticePage> {
           e.type == 'gap_fill')
       .toList();
 
-  final TextEditingController _textCtrl = TextEditingController();
+  late final List<_QState> _states =
+      List.generate(_questions.length, (_) => _QState());
 
   int _index = 0;
-  int _correct = 0;
-  bool _answered = false;
-  bool _wasCorrect = false;
-  String? _picked;
   bool _done = false;
 
   VocabExercise get _q => _questions[_index];
+  _QState get _state => _states[_index];
+  bool get _isGap => _q.type == 'gap_fill';
+  bool get _isLast => _index == _questions.length - 1;
 
-  void _answer(String value) {
-    if (_answered) return;
-    final correct = _q.isCorrect(value);
-    setState(() {
-      _answered = true;
-      _wasCorrect = correct;
-      _picked = value;
-      if (correct) _correct++;
-    });
+  bool get _canCheck {
+    if (_state.checked) return false;
+    return _isGap
+        ? _state.controller.text.trim().isNotEmpty
+        : _state.selected != null;
   }
 
-  void _submitGap() {
-    final text = _textCtrl.text.trim();
-    if (text.isEmpty) return;
-    _answer(text);
+  void _select(String option) {
+    if (_state.checked) return;
+    setState(() => _state.selected = option);
+  }
+
+  void _check() {
+    if (!_canCheck) return;
+    final answer = _isGap ? _state.controller.text : (_state.selected ?? '');
+    setState(() {
+      _state.checked = true;
+      _state.correct = _q.isCorrect(answer);
+    });
   }
 
   void _next() {
-    if (_index + 1 >= _questions.length) {
+    if (_isLast) {
       setState(() => _done = true);
-      return;
+    } else {
+      setState(() => _index++);
     }
-    setState(() {
-      _index++;
-      _answered = false;
-      _wasCorrect = false;
-      _picked = null;
-      _textCtrl.clear();
-    });
+  }
+
+  void _back() {
+    if (_index > 0) setState(() => _index--);
   }
 
   void _restart() {
     setState(() {
+      for (final s in _states) {
+        s.selected = null;
+        s.controller.clear();
+        s.checked = false;
+        s.correct = false;
+      }
       _index = 0;
-      _correct = 0;
-      _answered = false;
-      _wasCorrect = false;
-      _picked = null;
       _done = false;
-      _textCtrl.clear();
     });
   }
 
   @override
   void dispose() {
-    _textCtrl.dispose();
+    for (final s in _states) {
+      s.controller.dispose();
+    }
     super.dispose();
+  }
+
+  _OptState _optState(String option) {
+    if (!_state.checked) {
+      return option == _state.selected ? _OptState.selected : _OptState.idle;
+    }
+    if (_q.isCorrect(option)) return _OptState.correct;
+    if (option == _state.selected) return _OptState.wrong;
+    return _OptState.idle;
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_questions.isEmpty) {
+      return const GlassScaffold(
+        title: Text('Practice'),
+        body: Center(child: Text('No exercises for this set yet.')),
+      );
+    }
+    if (_done) {
+      final correct = _states.where((s) => s.correct).length;
+      return GlassScaffold(
+        title: const Text('Practice'),
+        body: _ResultView(
+          correct: correct,
+          total: _questions.length,
+          onRetry: _restart,
+          onDone: () => Navigator.pop(context),
+        ),
+      );
+    }
+
+    final cs = Theme.of(context).colorScheme;
+    final q = _q;
     return GlassScaffold(
-      title: const Text('Practice'),
-      body: _questions.isEmpty
-          ? const Center(child: Text('No exercises for this set yet.'))
-          : _done
-              ? _ResultView(
-                  correct: _correct,
-                  total: _questions.length,
-                  onRetry: _restart,
-                  onDone: () => Navigator.pop(context),
-                )
-              : _QuestionView(
-                  index: _index,
-                  total: _questions.length,
-                  question: _q,
-                  answered: _answered,
-                  wasCorrect: _wasCorrect,
-                  picked: _picked,
-                  textController: _textCtrl,
-                  onPick: _answer,
-                  onSubmitGap: _submitGap,
-                  onNext: _next,
-                ),
+      title: Text('Question ${_index + 1} of ${_questions.length}'),
+      body: Column(
+        children: [
+          LinearProgressIndicator(
+            value: (_index + 1) / _questions.length,
+            minHeight: 4,
+            backgroundColor: cs.onSurface.withValues(alpha: 0.10),
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(16, 20, 16, 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(q.prompt,
+                      style: PmpTextStyles.body1Semi
+                          .copyWith(color: cs.onSurface, height: 1.4)),
+                  const SizedBox(height: 20),
+                  if (_isGap)
+                    _GapInput(
+                      controller: _state.controller,
+                      checked: _state.checked,
+                      correct: _state.correct,
+                      onSubmit: _check,
+                    )
+                  else
+                    for (final option in q.options) ...[
+                      _OptionTile(
+                        label: option,
+                        state: _optState(option),
+                        onTap: () => _select(option),
+                      ),
+                      const SizedBox(height: 10),
+                    ],
+                  if (_state.checked) ...[
+                    const SizedBox(height: 6),
+                    _FeedbackCard(
+                      correct: _state.correct,
+                      answerLine: (_isGap && !_state.correct)
+                          ? 'Answer: ${q.answer}'
+                          : null,
+                      explainMm: q.explainMm,
+                      explainEn: q.explainEn,
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ),
+          _BottomBar(
+            checked: _state.checked,
+            canCheck: _canCheck,
+            isLast: _isLast,
+            canBack: _index > 0,
+            onBack: _back,
+            onCheck: _check,
+            onNext: _next,
+          ),
+        ],
+      ),
     );
   }
 }
 
-class _QuestionView extends StatelessWidget {
-  const _QuestionView({
-    required this.index,
-    required this.total,
-    required this.question,
-    required this.answered,
-    required this.wasCorrect,
-    required this.picked,
-    required this.textController,
-    required this.onPick,
-    required this.onSubmitGap,
+class _BottomBar extends StatelessWidget {
+  const _BottomBar({
+    required this.checked,
+    required this.canCheck,
+    required this.isLast,
+    required this.canBack,
+    required this.onBack,
+    required this.onCheck,
     required this.onNext,
   });
 
-  final int index;
-  final int total;
-  final VocabExercise question;
-  final bool answered;
-  final bool wasCorrect;
-  final String? picked;
-  final TextEditingController textController;
-  final ValueChanged<String> onPick;
-  final VoidCallback onSubmitGap;
+  final bool checked;
+  final bool canCheck;
+  final bool isLast;
+  final bool canBack;
+  final VoidCallback onBack;
+  final VoidCallback onCheck;
   final VoidCallback onNext;
-
-  bool get _isGap => question.type == 'gap_fill';
 
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(4),
-            child: LinearProgressIndicator(
-              value: (index + 1) / total,
-              minHeight: 6,
-              backgroundColor: cs.onSurface.withValues(alpha: 0.10),
+    final primary = SizedBox(
+      height: 50,
+      child: checked
+          ? FilledButton.icon(
+              onPressed: onNext,
+              icon: Icon(isLast ? Icons.flag_rounded : Icons.arrow_forward),
+              label: Text(isLast ? 'Finish' : 'Next'),
+            )
+          : FilledButton(
+              onPressed: canCheck ? onCheck : null,
+              child: const Text('Check'),
             ),
-          ),
-          const SizedBox(height: 8),
-          Text('Question ${index + 1} of $total',
-              style: PmpTextStyles.label2Regular
-                  .copyWith(color: cs.onSurfaceVariant)),
-          const SizedBox(height: 20),
-          Expanded(
-            child: ListView(
-              children: [
-                Text(question.prompt,
-                    style: PmpTextStyles.body1Semi
-                        .copyWith(color: cs.onSurface, height: 1.4)),
-                const SizedBox(height: 20),
-                if (_isGap)
-                  _GapInput(
-                    controller: textController,
-                    answered: answered,
-                    wasCorrect: wasCorrect,
-                    onSubmit: onSubmitGap,
-                  )
-                else
-                  for (final option in question.options) ...[
-                    _OptionTile(
-                      label: option,
-                      state: !answered
-                          ? _OptState.idle
-                          : question.isCorrect(option)
-                              ? _OptState.correct
-                              : option == picked
-                                  ? _OptState.wrong
-                                  : _OptState.idle,
-                      onTap: () => onPick(option),
+    );
+    return Container(
+      decoration: BoxDecoration(
+        color: cs.surface.withValues(alpha: 0.6),
+        border: Border(top: BorderSide(color: cs.outlineVariant)),
+      ),
+      child: SafeArea(
+        top: false,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+          child: Row(
+            children: [
+              if (canBack) ...[
+                SizedBox(
+                  height: 50,
+                  child: OutlinedButton(
+                    onPressed: onBack,
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: cs.onSurfaceVariant,
+                      side: BorderSide(color: cs.outlineVariant),
+                      padding: const EdgeInsets.symmetric(horizontal: 18),
                     ),
-                    const SizedBox(height: 10),
-                  ],
-                if (answered) ...[
-                  const SizedBox(height: 6),
-                  _FeedbackCard(
-                    correct: wasCorrect,
-                    answerLine: (_isGap && !wasCorrect)
-                        ? 'Answer: ${question.answer}'
-                        : null,
-                    explainMm: question.explainMm,
-                    explainEn: question.explainEn,
+                    child: const Icon(Icons.arrow_back_rounded),
                   ),
-                ],
+                ),
+                const SizedBox(width: 12),
               ],
-            ),
+              Expanded(child: primary),
+            ],
           ),
-          if (answered)
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton(
-                onPressed: onNext,
-                child: Text(index + 1 >= total ? 'See result' : 'Next'),
-              ),
-            ),
-        ],
+        ),
       ),
     );
   }
@@ -222,65 +269,51 @@ class _QuestionView extends StatelessWidget {
 class _GapInput extends StatelessWidget {
   const _GapInput({
     required this.controller,
-    required this.answered,
-    required this.wasCorrect,
+    required this.checked,
+    required this.correct,
     required this.onSubmit,
   });
 
   final TextEditingController controller;
-  final bool answered;
-  final bool wasCorrect;
+  final bool checked;
+  final bool correct;
   final VoidCallback onSubmit;
 
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
-    final border = !answered
+    final border = !checked
         ? cs.outlineVariant
-        : wasCorrect
+        : correct
             ? PmpColors.success500
             : cs.error;
-    return Column(
-      children: [
-        TextField(
-          controller: controller,
-          enabled: !answered,
-          textInputAction: TextInputAction.done,
-          onSubmitted: (_) => onSubmit(),
-          decoration: InputDecoration(
-            hintText: 'Type the missing word',
-            filled: true,
-            fillColor: cs.surface.withValues(alpha: 0.5),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: border),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: border, width: 1.6),
-            ),
-            disabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: border, width: 1.6),
-            ),
-          ),
+    return TextField(
+      controller: controller,
+      enabled: !checked,
+      textInputAction: TextInputAction.done,
+      onSubmitted: (_) => onSubmit(),
+      decoration: InputDecoration(
+        hintText: 'Type the missing word',
+        filled: true,
+        fillColor: cs.surface.withValues(alpha: 0.5),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: border),
         ),
-        if (!answered) ...[
-          const SizedBox(height: 12),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton(
-              onPressed: onSubmit,
-              child: const Text('Check'),
-            ),
-          ),
-        ],
-      ],
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: border, width: 1.6),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: border, width: 1.6),
+        ),
+      ),
     );
   }
 }
 
-enum _OptState { idle, correct, wrong }
+enum _OptState { idle, selected, correct, wrong }
 
 class _OptionTile extends StatelessWidget {
   const _OptionTile({
@@ -296,8 +329,14 @@ class _OptionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
-    final (Color border, Color bg, IconData? icon, Color iconColor) =
+    final (Color border, Color bg, IconData icon, Color iconColor) =
         switch (state) {
+      _OptState.selected => (
+          cs.primary,
+          cs.primary.withValues(alpha: 0.10),
+          Icons.radio_button_checked,
+          cs.primary
+        ),
       _OptState.correct => (
           PmpColors.success500,
           PmpColors.success500.withValues(alpha: 0.12),
@@ -310,8 +349,12 @@ class _OptionTile extends StatelessWidget {
           Icons.cancel,
           cs.error
         ),
-      _OptState.idle => (cs.outlineVariant, cs.surface.withValues(alpha: 0.4),
-          null, cs.onSurface),
+      _OptState.idle => (
+          cs.outlineVariant,
+          cs.surface.withValues(alpha: 0.4),
+          Icons.radio_button_unchecked,
+          cs.onSurfaceVariant
+        ),
     };
     return InkWell(
       borderRadius: BorderRadius.circular(12),
@@ -321,7 +364,9 @@ class _OptionTile extends StatelessWidget {
         decoration: BoxDecoration(
           color: bg,
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: border, width: 1.4),
+          border: Border.all(
+              color: border,
+              width: state == _OptState.idle ? 1.2 : 1.6),
         ),
         child: Row(
           children: [
@@ -329,7 +374,7 @@ class _OptionTile extends StatelessWidget {
               child: Text(label,
                   style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface)),
             ),
-            if (icon != null) Icon(icon, size: 20, color: iconColor),
+            Icon(icon, size: 20, color: iconColor),
           ],
         ),
       ),
@@ -337,7 +382,7 @@ class _OptionTile extends StatelessWidget {
   }
 }
 
-/// Right/wrong banner + the "why" explanation, shown after answering.
+/// Right/wrong banner + the bilingual "why" explanation, shown after Check.
 class _FeedbackCard extends StatelessWidget {
   const _FeedbackCard({
     required this.correct,
