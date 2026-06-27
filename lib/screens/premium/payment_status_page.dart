@@ -8,6 +8,7 @@ import 'package:speakcraft/core/di/service_locator.dart';
 import 'package:speakcraft/model/app_user/app_user.dart';
 import 'package:speakcraft/model/payment_submission/payment_submission.dart';
 import 'package:speakcraft/repositories/payment/payment_repository.dart';
+import 'package:speakcraft/shared_widgets/error_retry_view.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 
 class PaymentStatusPage extends StatefulWidget {
@@ -50,6 +51,12 @@ class _PaymentStatusPageState extends State<PaymentStatusPage> {
                 if (snapshot.connectionState == ConnectionState.waiting &&
                     !snapshot.hasData) {
                   return const Center(child: CircularProgressIndicator());
+                }
+                if (snapshot.hasError && !snapshot.hasData) {
+                  return ErrorRetryView(
+                    error: snapshot.error,
+                    onRetry: () => setState(() {}),
+                  );
                 }
                 final submissions = snapshot.data ?? [];
                 if (submissions.isEmpty) {

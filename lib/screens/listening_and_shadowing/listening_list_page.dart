@@ -9,6 +9,7 @@ import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
+import 'package:speakcraft/shared_widgets/error_retry_view.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:speakcraft/shared_widgets/premium_gate.dart';
 
@@ -52,6 +53,20 @@ class _ListeningListPageState extends State<ListeningListPage> {
     await prefs.setBool(_introDismissedKey, true);
   }
 
+  /// Re-fetches the catalog and completes once the bloc settles, so a
+  /// RefreshIndicator spinner stops at the right time.
+  Future<void> _reload(BuildContext context) async {
+    final bloc = context.read<ListeningBloc>();
+    bloc.add(const ListeningEvent.loadListenings());
+    await bloc.stream.firstWhere(
+      (s) => s.maybeWhen(
+        loaded: (_) => true,
+        error: (_) => true,
+        orElse: () => false,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -72,11 +87,22 @@ class _ListeningListPageState extends State<ListeningListPage> {
               ),
               loaded: (listenings) {
                 if (listenings.isEmpty) {
-                  return Center(
-                    child: Text(
-                      AppLocalizations.of(context).txtWillUploadSoon,
-                      style: PmpTextStyles.body2Semi
-                          .copyWith(color: colorScheme.onSurface),
+                  // Pull-to-refresh works even on the empty "soon" state.
+                  return RefreshIndicator(
+                    onRefresh: () => _reload(context),
+                    child: ListView(
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      children: [
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.35),
+                        Center(
+                          child: Text(
+                            AppLocalizations.of(context).txtWillUploadSoon,
+                            style: PmpTextStyles.body2Semi
+                                .copyWith(color: colorScheme.onSurface),
+                          ),
+                        ),
+                      ],
                     ),
                   );
                 }
@@ -93,30 +119,41 @@ class _ListeningListPageState extends State<ListeningListPage> {
                     // dismissed (and only once the stored flag has loaded).
                     final showIntro = _introDismissed == false;
                     final leading = showIntro ? 1 : 0;
-                    return ListView.separated(
-                      padding: const EdgeInsets.all(16),
-                      itemCount: listenings.length + leading,
-                      separatorBuilder: (context, index) =>
-                          const SizedBox(height: 14),
-                      itemBuilder: (context, index) {
-                        if (showIntro && index == 0) {
-                          return _ModuleIntroCard(onDismiss: _dismissIntro);
-                        }
-                        final li = index - leading;
-                        final listening = listenings[li];
-                        return _ListeningCard(
-                          listening: listening,
-                          progress: lessonProgressFor(progressState, listening),
-                          // A brand-new learner (nothing started anywhere) gets
-                          // a single "Start here" nudge on the first lesson.
-                          isStartHere: !anyStarted && li == 0,
-                        );
-                      },
+                    return RefreshIndicator(
+                      onRefresh: () => _reload(context),
+                      child: ListView.separated(
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        padding: const EdgeInsets.all(16),
+                        itemCount: listenings.length + leading,
+                        separatorBuilder: (context, index) =>
+                            const SizedBox(height: 14),
+                        itemBuilder: (context, index) {
+                          if (showIntro && index == 0) {
+                            return _ModuleIntroCard(onDismiss: _dismissIntro);
+                          }
+                          final li = index - leading;
+                          final listening = listenings[li];
+                          return _ListeningCard(
+                            listening: listening,
+                            progress:
+                                lessonProgressFor(progressState, listening),
+                            // A brand-new learner (nothing started anywhere)
+                            // gets a single "Start here" nudge on lesson one.
+                            isStartHere: !anyStarted && li == 0,
+                          );
+                        },
+                      ),
                     );
                   },
                 );
               },
-              orElse: () => Container(),
+              error: (message) => ErrorRetryView(
+                error: message,
+                onRetry: () => context
+                    .read<ListeningBloc>()
+                    .add(const ListeningEvent.loadListenings()),
+              ),
+              orElse: () => const SizedBox.shrink(),
             );
           },
         ),

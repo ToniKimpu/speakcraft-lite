@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -8,6 +5,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:speakcraft/core/di/service_locator.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
+import 'package:speakcraft/core/network/network_error.dart';
 import 'package:speakcraft/repositories/auth/auth_repository.dart';
 import 'package:speakcraft/services/supabase_service.dart';
 
@@ -89,13 +87,19 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _mapAuthCheckToState(Emitter<AuthState> emit) async {
     try {
       emit(const AuthState.loading());
-      final appUser = await _repository.getCurrentUser();
+      // Fail fast on a dead/slow network instead of waiting out the ~30s
+      // platform socket timeout on the splash screen.
+      final appUser = await _repository
+          .getCurrentUser()
+          .timeout(const Duration(seconds: 15));
       if (appUser == null) {
         emit(const AuthState.unauthenticated());
         return;
       }
       sl<ValueNotifier<AppUser>>().value = appUser;
-      final appVersion = await _repository.getLatestAppVersion();
+      final appVersion = await _repository
+          .getLatestAppVersion()
+          .timeout(const Duration(seconds: 15));
       if (appVersion != null) {
         final buildNumber = appVersion['build_number'] as int;
         final packageInfo = await PackageInfo.fromPlatform();
@@ -116,7 +120,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       _subscribeUserRealtime();
       emit(const AuthState.authenticated());
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(AuthState.error(error.toString()));
@@ -136,7 +140,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -172,7 +176,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       // Confirmation disabled → already signed in.
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(AuthState.error(error.toString()));
@@ -193,7 +197,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final appUser = await _repository.verifySignUpOtp(email, token.trim());
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -210,7 +214,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _repository.resendSignUpOtp(email);
       emit(const AuthState.otpResent());
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -234,7 +238,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       await _repository.sendPasswordResetOtp(email);
       emit(AuthState.passwordResetOtpSent(email));
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -261,7 +265,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           await _repository.resetPassword(email, token.trim(), newPassword);
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(const AuthState.error(
@@ -349,7 +353,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       final appUser = await _repository.loginWithEmail(email, password);
       await _resolveAuthenticatedState(appUser, emit);
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         debugPrint("_mapLoginWithEmailToState: ${error.toString()}");
@@ -368,7 +372,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       AppLogger.instance.debug('_mapLogoutToState: logout successfully!');
       emit(const AuthState.unauthenticated());
     } catch (error) {
-      if (error is SocketException || error is TimeoutException) {
+      if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));
       } else {
         emit(AuthState.error(error.toString()));

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/error_retry_view.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
@@ -237,6 +238,13 @@ class _YoutubeVideoPageState extends State<YoutubeVideoPage> {
                                 onUserChangePage: (subtitle) {
                                   _controller.seekTo(subtitle.start);
                                 },
+                              ),
+                              error: (msg) => ErrorRetryView(
+                                compact: true,
+                                error: msg,
+                                onRetry: () => _subtitleParsingBloc.add(
+                                  SubtitleParsingEvent.parse(widget.listening),
+                                ),
                               ),
                               orElse: () => const SizedBox.shrink(),
                             ),

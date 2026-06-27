@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/error_retry_view.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -301,11 +302,11 @@ class _FullTalkPageState extends State<FullTalkPage>
         builder: (context, state) {
           return state.maybeWhen(
             loading: () => const Center(child: CircularProgressIndicator()),
-            error: (msg) => Center(
-              child: Padding(
-                padding: const EdgeInsets.all(24),
-                child: Text('Could not load the script.\n$msg',
-                    textAlign: TextAlign.center),
+            error: (msg) => ErrorRetryView(
+              error: msg,
+              title: 'Could not load the script',
+              onRetry: () => _lineBloc.add(
+                ShadowingLineEvent.parse(widget.listening.shadowingPath),
               ),
             ),
             loaded: (lines) {

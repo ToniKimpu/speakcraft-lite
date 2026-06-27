@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
-import 'package:speakcraft/config/common_extensions.dart';
+import 'package:speakcraft/core/network/network_error.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/screens/onboarding/onboarding_page.dart';
@@ -20,16 +20,25 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   bool _socketError = false;
+  // The startup auth check failed (offline or otherwise) — show a retry gate
+  // instead of stranding the user on the logo.
+  bool _failed = false;
+  bool _offlineFail = false;
+
   @override
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 2)).then(
       (value) {
-        if (context.mounted) {
-          context.read<AuthBloc>().add(const AuthEvent.authCheck());
-        }
+        if (!mounted) return;
+        context.read<AuthBloc>().add(const AuthEvent.authCheck());
       },
     );
+  }
+
+  void _retry() {
+    setState(() => _failed = false);
+    context.read<AuthBloc>().add(const AuthEvent.authCheck());
   }
 
   @override
@@ -78,12 +87,18 @@ class _SplashScreenState extends State<SplashScreen> {
                     PmpRoutes.deviceFailedScreen,
                   );
                 },
-                error: (message) {},
+                error: (message) {
+                  setState(() {
+                    _failed = true;
+                    _offlineFail = isOfflineError(message);
+                  });
+                },
                 socketError: (message) {
                   _socketError = true;
-                  showErrorSnackbar(
-                    message,
-                  );
+                  setState(() {
+                    _failed = true;
+                    _offlineFail = true;
+                  });
                 },
                 orElse: () => Container(),
               );
@@ -93,11 +108,12 @@ class _SplashScreenState extends State<SplashScreen> {
             listener: (context, state) {
               state.maybeWhen(
                 accessInternet: () {
-                  AppLogger.instance.debug("_internetCheckerBloc: Accessing internet");
-                  if (_socketError) {
-                    showSuccessSnackbar("You have access to the internet.");
-                    context.read<AuthBloc>().add(const AuthEvent.authCheck());
+                  AppLogger.instance
+                      .debug("_internetCheckerBloc: Accessing internet");
+                  // Auto-retry the moment connectivity returns.
+                  if (_socketError || _failed) {
                     _socketError = false;
+                    _retry();
                   }
                 },
                 orElse: () => -1,
@@ -124,6 +140,37 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: Theme.of(context).colorScheme.onSurface,
                 ),
               ),
+              const SizedBox(height: 32),
+              if (_failed)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Column(
+                    children: [
+                      Text(
+                        _offlineFail
+                            ? "No internet connection.\nCheck your connection and try again."
+                            : "Something went wrong while starting up.",
+                        textAlign: TextAlign.center,
+                        style: PmpTextStyles.body2Regular.copyWith(
+                          color:
+                              Theme.of(context).colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      FilledButton.icon(
+                        onPressed: _retry,
+                        icon: const Icon(Icons.refresh),
+                        label: const Text("Try again"),
+                      ),
+                    ],
+                  ),
+                )
+              else
+                const SizedBox(
+                  height: 22,
+                  width: 22,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
             ],
           ),
         ),

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/error_retry_view.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
@@ -721,7 +722,12 @@ class _SpeechPracticeSessionPageState extends State<SpeechPracticeSessionPage> {
                             ],
                           );
                         },
-                        orElse: () => Container(),
+                        error: (msg) => ErrorRetryView(
+                          error: msg,
+                          onRetry: () => _recordSubtitleBloc
+                              .add(RecordSubtitleEvent.parse(widget.listening)),
+                        ),
+                        orElse: () => const SizedBox.shrink(),
                       );
                     },
                   ),

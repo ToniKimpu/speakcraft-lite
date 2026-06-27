@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:speakcraft/shared_widgets/error_retry_view.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
@@ -481,7 +482,14 @@ class _ShadowingPageState extends State<ShadowingPage>
                                   ),
                                 );
                               },
-                              orElse: () => Container(),
+                              error: (msg) => ErrorRetryView(
+                                error: msg,
+                                onRetry: () => _subtitleLineBloc.add(
+                                  ShadowingLineEvent.parse(
+                                      widget.listening.shadowingPath),
+                                ),
+                              ),
+                              orElse: () => const SizedBox.shrink(),
                             ),
                           ),
                         ],

@@ -167,40 +167,58 @@ void main() {
 
     await dotenv.load(fileName: '.envs/.env.$env');
     Env.validate();
-    await Supabase.initialize(
-      url: Env.supabaseURL,
-      anonKey: Env.supabaseAnonKey,
-    );
+    // Never let a dead/slow network block startup — if these init calls throw
+    // or stall, we still boot to the splash, which shows a retry gate.
+    try {
+      await Supabase.initialize(
+        url: Env.supabaseURL,
+        anonKey: Env.supabaseAnonKey,
+      ).timeout(const Duration(seconds: 20));
+    } catch (e) {
+      debugPrint('Supabase.initialize failed (continuing): $e');
+    }
     AppLogger.init(env == 'prod' ? CrashlyticsLogger() : DevLogger());
 
-    if (Firebase.apps.isEmpty) {
-      await Firebase.initializeApp(
-        options: getOption(env),
-      );
+    try {
+      if (Firebase.apps.isEmpty) {
+        await Firebase.initializeApp(
+          options: getOption(env),
+        ).timeout(const Duration(seconds: 20));
+      }
+
+      // Only collect crash reports in production
+      await FirebaseCrashlytics.instance
+          .setCrashlyticsCollectionEnabled(env == 'prod');
+
+      // Catch Flutter framework errors (e.g. widget build errors)
+      FlutterError.onError =
+          FirebaseCrashlytics.instance.recordFlutterFatalError;
+
+      // Catch platform/async errors outside the Flutter framework
+      PlatformDispatcher.instance.onError = (error, stack) {
+        FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+        return true;
+      };
+    } catch (e) {
+      debugPrint('Firebase setup failed (continuing offline): $e');
     }
-
-    // Only collect crash reports in production
-    await FirebaseCrashlytics.instance
-        .setCrashlyticsCollectionEnabled(env == 'prod');
-
-    // Catch Flutter framework errors (e.g. widget build errors)
-    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
-
-    // Catch platform/async errors outside the Flutter framework
-    PlatformDispatcher.instance.onError = (error, stack) {
-      FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
-      return true;
-    };
 
     await setupServiceLocator();
     await SharedPreferenceUtils.init();
 
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-    await _populateDeviceInfo();
-    await setupFlutterNotifications();
-    await _initTimezone();
-    // Re-apply the daily reminder schedule (survives reboots/app updates).
-    await sl<ReminderService>().reschedule();
+    // These touch Firebase Messaging / device info and can throw offline —
+    // none are essential to render the first screen, so never block on them.
+    try {
+      FirebaseMessaging.onBackgroundMessage(
+          _firebaseMessagingBackgroundHandler);
+      await _populateDeviceInfo();
+      await setupFlutterNotifications();
+      await _initTimezone();
+      // Re-apply the daily reminder schedule (survives reboots/app updates).
+      await sl<ReminderService>().reschedule();
+    } catch (e) {
+      debugPrint('Non-critical startup step failed (continuing): $e');
+    }
     runApp(const SpeakCraftApp());
   }, (error, stack) {
     // Catch any errors that escape the async zone
