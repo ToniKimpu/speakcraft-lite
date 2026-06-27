@@ -1,0 +1,390 @@
+{
+  "id": "friends",
+  "title": "Friends",
+  "level": 1,
+  "order": 7,
+  "theme": "Friends",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Friendship is a key part of daily life. These phrases will help you talk about how you meet new people, spend time together, and describe the different types of friendships you have.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက သူငယ်ချင်းတွေနဲ့ ပတ်သက်ပြီး ပြောဆိုတဲ့အခါမှာ အသုံးအများဆုံး စကားစုတွေ ဖြစ်ပါတယ်။ သူငယ်ချင်းသစ်တွေနဲ့ ဘယ်လိုခင်မင်လာတယ်၊ အချိန်ဘယ်လိုဖြုန်းတယ်၊ သူငယ်ချင်းအမျိုးအစားတွေကို ဘယ်လိုဖော်ပြရမလဲဆိုတာကို ဒီမှာ လေ့လာနိုင်ပါတယ်ဗျ။",
+  "words": [
+    {
+      "word": "a close friend",
+      "pos": "expression",
+      "short_en": "a friend you know very well and trust",
+      "examples": [
+        {
+          "en": "She is a {w}close friend{/w} of {c}mine{/c}.",
+          "mm": "သူမက ကျွန်မရဲ့ ရင်းနှီးတဲ့ သူငယ်ချင်းပါ။"
+        },
+        {
+          "en": "I told my {w}close friend{/w} all my {c}secrets{/c}.",
+          "mm": "ကျွန်မရဲ့ လျှို့ဝှက်ချက်အားလုံးကို ကျွန်မရဲ့ ရင်းနှီးတဲ့ သူငယ်ချင်းကို ပြောပြလိုက်တယ်။"
+        },
+        {
+          "en": "We have been {w}close friends{/w} for {c}years{/c}.",
+          "mm": "ကျွန်တော်တို့ ရင်းနှီးတဲ့ သူငယ်ချင်းတွေ ဖြစ်လာတာ နှစ်တွေတောင် ကြာပြီ။"
+        },
+        {
+          "en": "He is one of my {w}closest friends{/w} at {c}work{/c}.",
+          "mm": "သူက အလုပ်မှာ ကျွန်တော့်ရဲ့ အရင်းနှီးဆုံး သူငယ်ချင်းတွေထဲက တစ်ယောက်ပါ။"
+        },
+        {
+          "en": "You should talk to a {w}close friend{/w} about your {c}problem{/c}.",
+          "mm": "မင်းရဲ့ ပြဿနာကို ရင်းနှီးတဲ့ သူငယ်ချင်းတစ်ယောက်ယောက်နဲ့ တိုင်ပင်သင့်တယ်။"
+        }
+      ],
+      "short_mm": "ရင်းနှီးတဲ့သူငယ်ချင်း"
+    },
+    {
+      "word": "an old friend",
+      "pos": "expression",
+      "short_en": "a friend you have known for a long time",
+      "examples": [
+        {
+          "en": "I met an {w}old friend{/w} in the {c}street{/c} today.",
+          "mm": "ဒီနေ့ လမ်းမှာ ငယ်သူငယ်ချင်းတစ်ယောက်နဲ့ တွေ့ခဲ့တယ်။"
+        },
+        {
+          "en": "It is great to see an {w}old friend{/w} after so {c}long{/c}.",
+          "mm": "ငယ်သူငယ်ချင်းတစ်ယောက်ကို အကြာကြီးနေမှ ပြန်တွေ့ရတာ အရမ်းဝမ်းသာဖို့ကောင်းတယ်။"
+        },
+        {
+          "en": "We are {w}old friends{/w} from {c}school{/c}.",
+          "mm": "ကျွန်တော်တို့က ကျောင်းနေဖက် ငယ်သူငယ်ချင်းတွေပါ။"
+        },
+        {
+          "en": "She is an {w}old friend{/w} of my {c}mother{/c}.",
+          "mm": "သူမက ကျွန်မအမေရဲ့ ငယ်သူငယ်ချင်းပါ။"
+        },
+        {
+          "en": "We caught up on everything like {w}old friends{/w} {c}usually{/c} do.",
+          "mm": "ကျွန်တော်တို့ ငယ်သူငယ်ချင်းတွေလိုပဲ အကြောင်းစုံကို ပြန်ပြောဖြစ်ကြတယ်။"
+        }
+      ],
+      "short_mm": "အရင်ကတည်းက သိတဲ့သူငယ်ချင်း"
+    },
+    {
+      "word": "make friends",
+      "pos": "expression",
+      "short_en": "to start a friendship with someone",
+      "examples": [
+        {
+          "en": "It is easy to {w}make friends{/w} at {c}university{/c}.",
+          "mm": "တက္ကသိုလ်မှာ သူငယ်ချင်းအသစ်ဖွဲ့ရတာ လွယ်တယ်။"
+        },
+        {
+          "en": "She finds it hard to {w}make friends{/w} in a new {c}city{/c}.",
+          "mm": "သူမအတွက်တော့ မြို့သစ်မှာ သူငယ်ချင်းအသစ်ဖွဲ့ဖို့ ခက်ခဲနေတယ်။"
+        },
+        {
+          "en": "We {w}made friends{/w} with our {c}neighbours{/c}.",
+          "mm": "ကျွန်တော်တို့ အိမ်နီးချင်းတွေနဲ့ သူငယ်ချင်းဖြစ်သွားကြတယ်။"
+        },
+        {
+          "en": "He {w}made friends{/w} quickly at the {c}party{/c}.",
+          "mm": "သူက ပါတီပွဲမှာ သူငယ်ချင်းတွေကို မြန်မြန်ဆန်ဆန်ပဲ ဖွဲ့လိုက်နိုင်တယ်။"
+        },
+        {
+          "en": "Do you find it easy to {w}make friends{/w} with {c}strangers{/c}?",
+          "mm": "မင်းအတွက် လူစိမ်းတွေနဲ့ သူငယ်ချင်းဖွဲ့ရတာ လွယ်တယ်လို့ ထင်လား။"
+        }
+      ],
+      "short_mm": "သူငယ်ချင်းဖွဲ့တယ်"
+    },
+    {
+      "word": "get to know someone",
+      "pos": "expression",
+      "short_en": "to spend time with someone to learn more about them",
+      "examples": [
+        {
+          "en": "I would like to {w}get to know{/w} you {c}better{/c}.",
+          "mm": "မင်းအကြောင်းကို ပိုပြီး သိချင်မိတယ်။"
+        },
+        {
+          "en": "It takes time to {w}get to know{/w} a new {c}colleague{/c}.",
+          "mm": "လုပ်ဖော်ကိုင်ဖက်အသစ်တစ်ယောက်အကြောင်း သိဖို့ဆိုတာ အချိန်ယူရတယ်။"
+        },
+        {
+          "en": "We {w}got to know{/w} each other on {c}holiday{/c}.",
+          "mm": "ကျွန်တော်တို့ အားလပ်ရက် ခရီးသွားရင်း တစ်ယောက်နဲ့တစ်ယောက် ပိုသိလာကြတယ်။"
+        },
+        {
+          "en": "I am {w}getting to know{/w} my new {c}flatmate{/c}.",
+          "mm": "ကျွန်တော် အခန်းဖော်အသစ်အကြောင်းကို ပိုသိအောင် ကြိုးစားနေတယ်။"
+        },
+        {
+          "en": "We {w}got to know{/w} each other at the {c}club{/c}.",
+          "mm": "ကျွန်တော်တို့ ကလပ်မှာ တစ်ယောက်နဲ့တစ်ယောက် စပြီး သိကျွမ်းခဲ့ကြတာပါ။"
+        }
+      ],
+      "short_mm": "တစ်ယောက်ယောက်အကြောင်း ပိုသိအောင် လုပ်တယ်"
+    },
+    {
+      "word": "hang out",
+      "pos": "expression",
+      "short_en": "to spend time relaxing with friends",
+      "nuance_en": "Informal. Used for casual time spent together.",
+      "examples": [
+        {
+          "en": "We like to {w}hang out{/w} at the {c}park{/c}.",
+          "mm": "ကျွန်တော်တို့ ပန်းခြံမှာပဲ အချိန်ဖြုန်းရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "Do you want to {w}hang out{/w} this {c}weekend{/c}?",
+          "mm": "ဒီအပတ်ကုန်ကျရင် အပြင်ထွက်ပြီး အချိန်ဖြုန်းကြမလား။"
+        },
+        {
+          "en": "They {w}hang out{/w} together every {c}Friday{/c}.",
+          "mm": "သူတို့က သောကြာနေ့တိုင်း အတူတူ အချိန်ဖြုန်းကြတယ်။"
+        },
+        {
+          "en": "I usually {w}hang out{/w} with my {c}cousins{/c}.",
+          "mm": "ကျွန်တော်ကတော့ များသောအားဖြင့် ဝမ်းကွဲမောင်နှမတွေနဲ့ပဲ အချိန်ဖြုန်းလေ့ရှိတယ်။"
+        },
+        {
+          "en": "We just {w}hung out{/w} and watched {c}movies{/c}.",
+          "mm": "ကျွန်တော်တို့ အတူတူ အချိန်ဖြုန်းရင်း ရုပ်ရှင်တွေ ကြည့်ဖြစ်ကြတယ်။"
+        }
+      ],
+      "short_mm": "အပြင်သွားတယ် / အချိန်ဖြုန်းတယ်",
+      "nuance_mm": "Casual ဖြစ်တဲ့ အသုံးအနှုန်းပါ။"
+    },
+    {
+      "word": "have a lot in common",
+      "pos": "expression",
+      "short_en": "to share the same interests or personality",
+      "examples": [
+        {
+          "en": "We {w}have a lot in common{/w}, like our love for {c}music{/c}.",
+          "mm": "ကျွန်တော်တို့မှာ တူညီတဲ့အချက်တွေ အများကြီးရှိတယ်၊ ဥပမာ- ဂီတကို ဝါသနာပါတာမျိုးပေါ့။"
+        },
+        {
+          "en": "They {w}have a lot in common{/w} and talk for {c}hours{/c}.",
+          "mm": "သူတို့မှာ တူညီတဲ့အချက်တွေ အများကြီးရှိတော့ နာရီပေါင်းများစွာ စကားပြောဖြစ်ကြတယ်။"
+        },
+        {
+          "en": "Do you {w}have a lot in common{/w} with your {c}best friend{/c}?",
+          "mm": "မင်းရဲ့ အရင်းနှီးဆုံးသူငယ်ချင်းနဲ့ မင်းမှာ တူညီတဲ့အချက်တွေ အများကြီးရှိလား။"
+        },
+        {
+          "en": "We {w}have a lot in common{/w}, so we get on {c}well{/c}.",
+          "mm": "ကျွန်တော်တို့မှာ တူညီတဲ့အချက်တွေ အများကြီးရှိတော့ တစ်ယောက်နဲ့တစ်ယောက် အဆင်ပြေတယ်။"
+        },
+        {
+          "en": "Even though we are different, we {w}have a lot in common{/w} {c}really{/c}.",
+          "mm": "ကျွန်တော်တို့က ကွဲပြားပေမဲ့ တကယ်တော့ တူညီတဲ့အချက်တွေ အများကြီးရှိပါတယ်။"
+        }
+      ],
+      "short_mm": "ဝါသနာတူတယ် / တူညီတာတွေ အများကြီးရှိတယ်"
+    },
+    {
+      "word": "get on well",
+      "pos": "expression",
+      "short_en": "to have a good relationship with someone",
+      "nuance_en": "Use 'get on well with' if you mention the person.",
+      "confuse_with": [
+        "hang out"
+      ],
+      "examples": [
+        {
+          "en": "I {w}get on well{/w} with my {c}classmates{/c}.",
+          "mm": "ကျွန်တော်က အတန်းဖော်တွေနဲ့ အဆင်ပြေတယ်။"
+        },
+        {
+          "en": "We {w}get on well{/w} because we are both {c}funny{/c}.",
+          "mm": "ကျွန်တော်တို့နှစ်ယောက်လုံးက ဟာသဉာဏ်ရှိကြတော့ အဆင်ပြေကြတယ်။"
+        },
+        {
+          "en": "They {w}get on well{/w} with each {c}other{/c}.",
+          "mm": "သူတို့တွေ တစ်ယောက်နဲ့တစ်ယောက် အဆင်ပြေကြတယ်။"
+        },
+        {
+          "en": "Do you {w}get on well{/w} with your {c}boss{/c}?",
+          "mm": "မင်း အလုပ်ရှင်နဲ့ အဆင်ပြေရဲ့လား။"
+        },
+        {
+          "en": "We {w}get on well{/w} most of the {c}time{/c}.",
+          "mm": "ကျွန်တော်တို့ အများအားဖြင့်တော့ အဆင်ပြေကြပါတယ်။"
+        }
+      ],
+      "short_mm": "အဆင်ပြေတယ် / ခင်မင်တယ်",
+      "nuance_mm": "ဆက်ဆံရေးကောင်းမွန်တာကို ဆိုလိုပါတယ်။"
+    },
+    {
+      "word": "lose touch",
+      "pos": "expression",
+      "short_en": "to stop communicating with someone over time",
+      "examples": [
+        {
+          "en": "We {w}lost touch{/w} after we left {c}school{/c}.",
+          "mm": "ကျောင်းပြီးသွားတော့ ကျွန်တော်တို့ အဆက်အသွယ် ပြတ်သွားကြတယ်။"
+        },
+        {
+          "en": "It is sad to {w}lose touch{/w} with old {c}friends{/c}.",
+          "mm": "ငယ်သူငယ်ချင်းတွေနဲ့ အဆက်အသွယ်ပြတ်သွားရတာ စိတ်မကောင်းစရာပါ။"
+        },
+        {
+          "en": "We {w}lost touch{/w} because I moved {c}abroad{/c}.",
+          "mm": "ကျွန်တော် နိုင်ငံခြားကို ပြောင်းသွားတော့ သူတို့နဲ့ အဆက်အသွယ် ပြတ်သွားတယ်။"
+        },
+        {
+          "en": "I hope we do not {w}lose touch{/w} {c}soon{/c}.",
+          "mm": "ကျွန်တော်တို့ မကြာခင် အဆက်အသွယ် မပြတ်သွားဖို့ မျှော်လင့်ပါတယ်။"
+        },
+        {
+          "en": "We {w}lost touch{/w} for a few {c}years{/c}.",
+          "mm": "ကျွန်တော်တို့ အဆက်အသွယ် ပြတ်နေတာ နှစ်အနည်းငယ် ရှိပြီ။"
+        }
+      ],
+      "short_mm": "အဆက်အသွယ်ပြတ်သွားတယ်"
+    },
+    {
+      "word": "a friend of mine",
+      "pos": "expression",
+      "short_en": "a way to introduce a friend",
+      "examples": [
+        {
+          "en": "This is {w}a friend of mine{/w}, {c}Sarah{/c}.",
+          "mm": "ဒီတစ်ယောက်က ကျွန်တော့်သူငယ်ချင်း ဆာရာပါ။"
+        },
+        {
+          "en": "I am going out with {w}a friend of mine{/w} {c}tonight{/c}.",
+          "mm": "ဒီည ကျွန်တော့်သူငယ်ချင်းတစ်ယောက်နဲ့ အပြင်သွားမလို့။"
+        },
+        {
+          "en": "She is {w}a friend of mine{/w} from {c}university{/c}.",
+          "mm": "သူမက တက္ကသိုလ်တုန်းက ကျွန်မရဲ့ သူငယ်ချင်းပါ။"
+        },
+        {
+          "en": "I heard that from {w}a friend of mine{/w} {c}yesterday{/c}.",
+          "mm": "အဲဒါကို မနေ့က ကျွန်တော့်သူငယ်ချင်းတစ်ယောက်ဆီက ကြားခဲ့တာပါ။"
+        },
+        {
+          "en": "Do you know {w}a friend of mine{/w} called {c}John{/c}?",
+          "mm": "ဂျွန်လို့ခေါ်တဲ့ ကျွန်တော့်သူငယ်ချင်းကို မင်းသိလား။"
+        }
+      ],
+      "short_mm": "ကျွန်တော့်သူငယ်ချင်းတစ်ယောက်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "We ___ at the park every weekend.",
+      "right": "hang out",
+      "wrong": "lose touch",
+      "why": "Hang out means spending time together; lose touch means stopping communication.",
+      "why_mm": "Hang out က သူငယ်ချင်းနဲ့ အချိန်ဖြုန်းတာဖြစ်ပြီး lose touch က အဆက်အသွယ်ပြတ်သွားတာမို့ ဆန့်ကျင်ဘက်ပါ။"
+    },
+    {
+      "prompt": "I ___ with my new neighbour; we are already good friends.",
+      "right": "get on well",
+      "wrong": "lose touch",
+      "why": "Get on well means having a good relationship; lose touch means the opposite.",
+      "why_mm": "Get on well က ဆက်ဆံရေးကောင်းတာဖြစ်ပြီး lose touch က ဆက်ဆံရေးပြတ်တောက်တာမို့ အဓိပ္ပာယ်ကွဲပြားပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "To start a friendship with someone is to ___.",
+      "answer": "make friends",
+      "options": [
+        "make friends",
+        "hang out",
+        "lose touch"
+      ],
+      "explain_en": "Starting a friendship is making friends.",
+      "explain_mm": "သူငယ်ချင်းအသစ်ဖွဲ့တာကို make friends လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I have known him for 20 years. He is ___.",
+      "answer": "an old friend",
+      "options": [
+        "an old friend",
+        "a close friend",
+        "a friend of mine"
+      ],
+      "explain_en": "Known for a long time = old friend.",
+      "explain_mm": "ကြာကြာကတည်းက သိတာကို an old friend လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We both love football and pizza. We ___.",
+      "answer": "have a lot in common",
+      "options": [
+        "have a lot in common",
+        "lose touch",
+        "get to know someone"
+      ],
+      "explain_en": "Sharing interests = have a lot in common.",
+      "explain_mm": "ဝါသနာတူတာကို have a lot in common လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I want to ___ you better, tell me about your job.\"",
+      "answer": "get to know",
+      "options": [],
+      "explain_en": "Learning more about someone = get to know.",
+      "explain_mm": "တစ်ယောက်အကြောင်း ပိုသိအောင် လုပ်တာကို get to know လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"We moved to different countries and eventually ___.\"",
+      "answer": "lost touch",
+      "options": [],
+      "explain_en": "Stopping contact = lose touch.",
+      "explain_mm": "အဆက်အသွယ်ပြတ်တာကို lose touch လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"This is ___, he is a doctor.\"",
+      "answer": "a friend of mine",
+      "options": [],
+      "explain_en": "Introducing a friend = a friend of mine.",
+      "explain_mm": "သူငယ်ချင်းကို မိတ်ဆက်တဲ့အခါ a friend of mine လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My best friend is someone I trust. She is ___.",
+      "answer": "a close friend",
+      "options": [
+        "a close friend",
+        "an old friend",
+        "a friend of mine"
+      ],
+      "explain_en": "A trusted friend = a close friend.",
+      "explain_mm": "အရမ်းရင်းနှီးတဲ့သူကို a close friend လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"We like to ___ at the cafe after school.\"",
+      "answer": "hang out",
+      "options": [],
+      "explain_en": "Spending time relaxing = hang out.",
+      "explain_mm": "အေးဆေးအချိန်ဖြုန်းတာကို hang out လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I ___ with my brother-in-law; we never fight.\"",
+      "answer": "get on well",
+      "options": [],
+      "explain_en": "Having a good relationship = get on well.",
+      "explain_mm": "ဆက်ဆံရေးကောင်းတာကို get on well လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "If you don't call your friend for years, you ___.",
+      "answer": "lose touch",
+      "options": [
+        "lose touch",
+        "make friends",
+        "hang out"
+      ],
+      "explain_en": "No communication = lose touch.",
+      "explain_mm": "အဆက်အသွယ်မရှိတော့တာကို lose touch လို့ သုံးပါတယ်။"
+    }
+  ]
+}

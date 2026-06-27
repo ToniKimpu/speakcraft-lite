@@ -81,6 +81,49 @@
       "theme": "Health",
       "word_count": 9,
       "unit": "expression"
+    },
+    {
+      "id": "friends",
+      "title": "Friends",
+      "level": 1,
+      "order": 7,
+      "theme": "Friends",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "greetings",
+      "title": "Greetings & introductions",
+      "level": 1,
+      "order": 8,
+      "theme": "Greetings",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "daily_routine",
+      "title": "Daily routine",
+      "level": 1,
+      "order": 9,
+      "theme": "Daily routine",
+      "word_count": 10,
+      "unit": "expression"
+    },
+    {
+      "id": "food_eating",
+      "title": "Food & eating",
+      "level": 1,
+      "order": 10,
+      "theme": "Food",
+      "word_count": 9
+    },
+    {
+      "id": "money_shopping",
+      "title": "Money & shopping",
+      "level": 1,
+      "order": 11,
+      "theme": "Money",
+      "word_count": 9
     }
   ]
 }
