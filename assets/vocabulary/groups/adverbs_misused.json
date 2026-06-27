@@ -4,17 +4,19 @@
   "level": 2,
   "order": 2,
   "theme": "Manner & discourse adverbs",
-  "why_grouped_en": "These -ly adverbs sound advanced, so learners reach for them — and use them wrong. Each has a precise job. Learn what they really mean, and when NOT to use them.",
-  "why_grouped_mm": "ဒီ -ly adverb တွေကို မှားသုံးတတ်ကြတယ်။ တကယ့်အဓိပ္ပာယ်နဲ့ ဘယ်အချိန်သုံးရမလဲ လေ့လာပါ။",
+  "why_grouped_en": "These -ly adverbs sound advanced, so learners reach for them — and use them wrong. Each has a precise job. Learn what they really mean, what they pair with, and when NOT to use them.",
+  "why_grouped_mm": "",
   "words": [
     {
       "word": "literally",
       "pos": "adverb",
       "ipa": "/ˈlɪt.ər.əl.i/",
       "short_en": "in a real, exact way — not exaggerating",
-      "short_mm": "တကယ်တမ်း",
-      "explanation_en": "Use it when something is actually, exactly true — word for word, with no exaggeration.",
-      "nuance_en": "In careful English, don't use it just for emphasis (\"I literally died laughing\"). That's the opposite of its real meaning.",
+      "short_mm": "",
+      "use_when_en": "Something is exactly, really true — word for word, no exaggeration.",
+      "explanation_en": "Use it when something is actually, exactly true.",
+      "nuance_en": "Don't use it just for emphasis (\"I literally died laughing\") — that's the opposite of its meaning.",
+      "goes_with_en": "literally + means / translates · take it literally",
       "examples": [
         { "en": "He translated the text literally, word for word.", "mm": "" },
         { "en": "The town's name literally means \"new bridge\".", "mm": "" }
@@ -27,9 +29,11 @@
       "pos": "adverb",
       "ipa": "/ˈæk.tʃu.ə.li/",
       "short_en": "in fact (often correcting something)",
-      "short_mm": "တကယ်တော့",
-      "explanation_en": "Signals the truth, often against what was expected or said. Great for polite corrections.",
+      "short_mm": "",
+      "use_when_en": "You correct or reveal the truth, often politely.",
+      "explanation_en": "Signals the truth, often against what was expected or said.",
       "nuance_en": "Not the same as \"currently\" or \"now\". \"Actually, it's free\" = contrary to what you thought.",
+      "goes_with_en": "Actually, + clause · not actually",
       "examples": [
         { "en": "It looks hard, but it's actually quite easy.", "mm": "" },
         { "en": "Actually, I think you're right.", "mm": "" }
@@ -42,9 +46,11 @@
       "pos": "adverb",
       "ipa": "/ˈbeɪ.sɪk.li/",
       "short_en": "in the main; to put it simply",
-      "short_mm": "အခြေခံအားဖြင့်",
-      "explanation_en": "Introduces a simple summary of something more complex. \"Basically, we ran out of time.\"",
+      "short_mm": "",
+      "use_when_en": "You give a simple summary of something more complex.",
+      "explanation_en": "Introduces a simple summary. \"Basically, we ran out of time.\"",
       "nuance_en": "Useful, but a filler if overused. Drop it if the sentence works without it.",
+      "goes_with_en": "Basically, + clause · basically the same",
       "examples": [
         { "en": "Basically, the plan is to leave early and avoid traffic.", "mm": "" },
         { "en": "It's basically the same as the old one.", "mm": "" }
@@ -57,9 +63,11 @@
       "pos": "adverb",
       "ipa": "/ˈɒn.ɪst.li/",
       "short_en": "to tell the truth; sincerely",
-      "short_mm": "ရိုးရိုးသားသား ပြောရရင်",
-      "explanation_en": "Flags that you're being frank, often before an honest opinion. Can also show mild frustration.",
-      "nuance_en": "\"Honestly, I didn't enjoy it\" = candid opinion. \"Honestly!\" alone = annoyance.",
+      "short_mm": "",
+      "use_when_en": "You signal a frank, sincere opinion is coming.",
+      "explanation_en": "Flags that you're being frank, often before an honest opinion.",
+      "nuance_en": "\"Honestly!\" on its own shows mild frustration.",
+      "goes_with_en": "Honestly, + clause · quite honestly",
       "examples": [
         { "en": "Honestly, I'm not sure this will work.", "mm": "" },
         { "en": "I honestly didn't know about the meeting.", "mm": "" }
@@ -72,15 +80,31 @@
       "pos": "adverb",
       "ipa": "/ˈsɪə.ri.əs.li/",
       "short_en": "in a serious way; really (for emphasis)",
-      "short_mm": "အပြင်းအထန်",
-      "explanation_en": "Two jobs: (1) in a serious manner — \"take it seriously\"; (2) spoken emphasis — \"seriously good\".",
+      "short_mm": "",
+      "use_when_en": "You mean \"in a serious way\", or stress \"really\" in speech.",
+      "explanation_en": "Two jobs: (1) in a serious manner; (2) spoken emphasis — \"seriously good\".",
       "nuance_en": "\"Seriously?\" on its own asks \"really?\" in surprise or doubt.",
+      "goes_with_en": "take (sth) seriously · seriously + adjective",
       "examples": [
         { "en": "You should take this deadline seriously.", "mm": "" },
         { "en": "That movie was seriously good.", "mm": "" }
       ],
-      "collocations": ["take seriously", "seriously good", "seriously?"],
+      "collocations": ["take seriously", "seriously good"],
       "confuse_with": ["honestly"]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "Revealing the truth: \"___, it's cheaper to buy online.\"",
+      "right": "Actually",
+      "wrong": "Literally",
+      "why": "Reveals / corrects → actually. \"Literally\" means exactly-true, word-for-word."
+    },
+    {
+      "prompt": "\"They don't take safety ___.\"",
+      "right": "seriously",
+      "wrong": "honestly",
+      "why": "\"take ... seriously\" is a fixed phrase. \"take honestly\" isn't English."
     }
   ],
   "exercises": [
@@ -110,7 +134,7 @@
     },
     {
       "type": "which_word",
-      "prompt": "Treat with importance: \"They don't ___ take customer feedback ___.\" (take ... seriously)",
+      "prompt": "Treat with importance: \"They don't take customer feedback ___.\"",
       "answer": "seriously",
       "options": ["seriously", "basically", "literally"]
     }

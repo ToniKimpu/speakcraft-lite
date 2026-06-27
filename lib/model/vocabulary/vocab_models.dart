@@ -48,6 +48,7 @@ class VocabGroup {
     required this.whyGroupedEn,
     required this.whyGroupedMm,
     required this.words,
+    required this.minimalPairs,
     required this.exercises,
   });
 
@@ -59,6 +60,9 @@ class VocabGroup {
   final String whyGroupedEn;
   final String whyGroupedMm;
   final List<VocabWord> words;
+
+  /// Right-vs-wrong contrasts shown on the comparison page.
+  final List<VocabMinimalPair> minimalPairs;
   final List<VocabExercise> exercises;
 
   factory VocabGroup.fromJson(Map<String, dynamic> j) => VocabGroup(
@@ -72,10 +76,36 @@ class VocabGroup {
         words: ((j['words'] as List?) ?? const [])
             .map((e) => VocabWord.fromJson((e as Map).cast<String, dynamic>()))
             .toList(growable: false),
+        minimalPairs: ((j['minimal_pairs'] as List?) ?? const [])
+            .map((e) =>
+                VocabMinimalPair.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(growable: false),
         exercises: ((j['exercises'] as List?) ?? const [])
             .map((e) =>
                 VocabExercise.fromJson((e as Map).cast<String, dynamic>()))
             .toList(growable: false),
+      );
+}
+
+/// One "right word vs wrong word in the same slot" contrast, with the reason.
+class VocabMinimalPair {
+  const VocabMinimalPair({
+    required this.prompt,
+    required this.right,
+    required this.wrong,
+    required this.why,
+  });
+
+  final String prompt;
+  final String right;
+  final String wrong;
+  final String why;
+
+  factory VocabMinimalPair.fromJson(Map<String, dynamic> j) => VocabMinimalPair(
+        prompt: j['prompt'] as String? ?? '',
+        right: j['right'] as String? ?? '',
+        wrong: j['wrong'] as String? ?? '',
+        why: j['why'] as String? ?? '',
       );
 }
 
@@ -86,8 +116,10 @@ class VocabWord {
     required this.ipa,
     required this.shortEn,
     required this.shortMm,
+    required this.useWhenEn,
     required this.explanationEn,
     required this.nuanceEn,
+    required this.goesWithEn,
     required this.examples,
     required this.collocations,
     required this.confuseWith,
@@ -101,8 +133,14 @@ class VocabWord {
   final String ipa;
   final String shortEn;
   final String shortMm;
+
+  /// The decision rule — "Use it when …". Drives the comparison table.
+  final String useWhenEn;
   final String explanationEn;
   final String nuanceEn;
+
+  /// Typical partners / frame, e.g. "a great + idea / time / news".
+  final String goesWithEn;
   final List<VocabExample> examples;
   final List<String> collocations;
   final List<String> confuseWith;
@@ -117,8 +155,10 @@ class VocabWord {
         ipa: j['ipa'] as String? ?? '',
         shortEn: j['short_en'] as String? ?? '',
         shortMm: j['short_mm'] as String? ?? '',
+        useWhenEn: j['use_when_en'] as String? ?? '',
         explanationEn: j['explanation_en'] as String? ?? '',
         nuanceEn: j['nuance_en'] as String? ?? '',
+        goesWithEn: j['goes_with_en'] as String? ?? '',
         examples: ((j['examples'] as List?) ?? const [])
             .map(
                 (e) => VocabExample.fromJson((e as Map).cast<String, dynamic>()))
