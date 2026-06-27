@@ -126,6 +126,8 @@ class VocabWord {
     required this.nuanceEn,
     required this.nuanceMm,
     required this.goesWithEn,
+    required this.goesWithNoteEn,
+    required this.goesWithNoteMm,
     required this.examples,
     required this.collocations,
     required this.confuseWith,
@@ -150,6 +152,11 @@ class VocabWord {
 
   /// Typical partners / frame, e.g. "a great + idea / time / news".
   final String goesWithEn;
+
+  /// One-line note on how the word collocates (e.g. "Pairs with positive
+  /// nouns and with sounds/looks").
+  final String goesWithNoteEn;
+  final String goesWithNoteMm;
   final List<VocabExample> examples;
   final List<String> collocations;
   final List<String> confuseWith;
@@ -171,6 +178,8 @@ class VocabWord {
         nuanceEn: j['nuance_en'] as String? ?? '',
         nuanceMm: j['nuance_mm'] as String? ?? '',
         goesWithEn: j['goes_with_en'] as String? ?? '',
+        goesWithNoteEn: j['goes_with_note_en'] as String? ?? '',
+        goesWithNoteMm: j['goes_with_note_mm'] as String? ?? '',
         examples: ((j['examples'] as List?) ?? const [])
             .map(
                 (e) => VocabExample.fromJson((e as Map).cast<String, dynamic>()))

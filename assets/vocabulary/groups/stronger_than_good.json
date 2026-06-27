@@ -19,7 +19,9 @@
       "explanation_mm": "\"good\" ထက် တစ်ဆင့်တက်တဲ့ နေ့စဉ်သုံးစကားလုံး။ စကားပြောရော အရေးအသားရော၊ formal ရော casual ရော သုံးလို့ရတယ်။",
       "nuance_en": "Neutral and extremely common. When in doubt, \"great\" works.",
       "nuance_mm": "သာမန်ဖြစ်ပြီး အသုံးအများဆုံး။ ဘာသုံးရမှန်း မသိရင် \"great\" ကို သုံးလိုက်ရုံပါပဲ။",
-      "goes_with_en": "a great + idea / time / day · great news · sounds / looks great",
+      "goes_with_en": "a great + idea / time / day / chance · great + news / weather / fun · sounds / looks / feels great · a great deal of (= a lot of)",
+      "goes_with_note_en": "Pairs with everyday positive nouns, and with sounds / looks / feels.",
+      "goes_with_note_mm": "နေ့စဉ်သုံး positive နာမ်တွေ၊ sounds / looks / feels တို့နဲ့ တွဲသုံးတယ်။",
       "examples": [
         { "en": "That's a great idea.", "mm": "" },
         { "en": "We had a great time at the beach.", "mm": "" }
@@ -36,7 +38,9 @@
       "use_when_en": "Something is so good it almost surprises you — great for reactions.",
       "explanation_en": "Stronger than \"great\". Emotional and enthusiastic.",
       "nuance_en": "A bit much for formal writing — keep it for speech and reactions.",
-      "goes_with_en": "an amazing + view / experience / job · absolutely amazing",
+      "goes_with_en": "an amazing + view / place / experience / story · amazing + food / work · absolutely / pretty amazing · look / taste / sound amazing",
+      "goes_with_note_en": "Often with views and experiences, and with look / taste / sound.",
+      "goes_with_note_mm": "မြင်ကွင်း၊ အတွေ့အကြုံတွေနဲ့၊ look / taste / sound တို့နဲ့ များများ တွဲတယ်။",
       "examples": [
         { "en": "The view from the top was amazing.", "mm": "" },
         { "en": "She did an amazing job on the project.", "mm": "" }
@@ -53,7 +57,9 @@
       "use_when_en": "You're pleased and want a warm, upbeat \"very good\" in speech.",
       "explanation_en": "A friendly, positive \"very good\". A notch more excited than \"great\".",
       "nuance_en": "Interchangeable with \"great\", just more enthusiastic.",
-      "goes_with_en": "a fantastic + result / job · looks / sounds fantastic",
+      "goes_with_en": "a fantastic + result / job / opportunity / idea · sounds / looks fantastic · absolutely fantastic",
+      "goes_with_note_en": "Pairs with results and opportunities, and with reactions.",
+      "goes_with_note_mm": "ရလဒ်၊ အခွင့်အရေးတွေနဲ့၊ တုံ့ပြန်ချက်တွေမှာ သုံးတယ်။",
       "examples": [
         { "en": "You passed? Fantastic!", "mm": "" },
         { "en": "The food at that restaurant is fantastic.", "mm": "" }
@@ -73,7 +79,9 @@
       "explanation_mm": "အရည်အသွေးကို အလေးပေးတဲ့ \"very good\"။ အလုပ်၊ feedback၊ အစီရင်ခံစာတွေအတွက် သင့်တယ်။",
       "nuance_en": "Sounds professional: you'd write \"excellent work\", not \"amazing work\".",
       "nuance_mm": "Professional ဆန်တယ်။ \"excellent work\" လို့ ရေးပေမယ့် \"amazing work\" လို့ မရေးပါဘူး။",
-      "goes_with_en": "excellent + work / quality / service · an excellent point",
+      "goes_with_en": "excellent + work / quality / service / condition · an excellent + point / example / idea · in excellent health",
+      "goes_with_note_en": "Pairs with work, quality, and standards — formal in tone.",
+      "goes_with_note_mm": "အလုပ်၊ အရည်အသွေး၊ စံချိန်စံညွှန်းတွေနဲ့ တွဲပြီး formal ဆန်တယ်။",
       "examples": [
         { "en": "She has excellent communication skills.", "mm": "" },
         { "en": "The hotel offers excellent service.", "mm": "" }
@@ -91,7 +99,9 @@
       "use_when_mm": "လူ၊ အခိုက်အတန့်၊ အတွေ့အကြုံတွေကို နွေးထွေးစွာ ဖော်ပြတဲ့အခါ။",
       "explanation_en": "\"Very good\" with feeling — used about experiences and people more than objects.",
       "nuance_en": "\"a wonderful person\" sounds kind; \"a wonderful laptop\" sounds odd.",
-      "goes_with_en": "a wonderful + time / person / evening",
+      "goes_with_en": "a wonderful + time / day / evening / experience · a wonderful + person / friend / feeling · it would be wonderful to ...",
+      "goes_with_note_en": "Pairs with people, times, and experiences.",
+      "goes_with_note_mm": "လူ၊ အချိန်၊ အတွေ့အကြုံတွေနဲ့ တွဲသုံးတယ်။",
       "examples": [
         { "en": "We had a wonderful evening together.", "mm": "" },
         { "en": "Thank you — you've been wonderful.", "mm": "" }

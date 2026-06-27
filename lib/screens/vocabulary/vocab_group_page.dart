@@ -399,10 +399,19 @@ class _GoesWithBlock extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8),
+          if (word.goesWithNoteEn.isNotEmpty ||
+              word.goesWithNoteMm.isNotEmpty) ...[
+            BilingualText(
+              mm: word.goesWithNoteMm,
+              en: word.goesWithNoteEn,
+              style: PmpTextStyles.label2Regular,
+            ),
+            const SizedBox(height: 10),
+          ],
           if (patterns.isNotEmpty)
             for (final p in patterns)
               Padding(
-                padding: const EdgeInsets.only(bottom: 5),
+                padding: const EdgeInsets.only(bottom: 6),
                 child: _PatternLine(pattern: p),
               )
           else
