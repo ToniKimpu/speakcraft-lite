@@ -107,7 +107,35 @@ class _VocabGroupPageState extends State<VocabGroupPage> {
                         ],
                       ),
                     ),
-                    _Dots(count: _pageCount, active: _page),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Row(
+                        children: [
+                          IconButton(
+                            tooltip: 'Previous',
+                            onPressed: _page > 0
+                                ? () => _controller.previousPage(
+                                    duration:
+                                        const Duration(milliseconds: 280),
+                                    curve: Curves.easeOut)
+                                : null,
+                            icon: const Icon(Icons.chevron_left_rounded),
+                          ),
+                          Expanded(
+                              child: _Dots(count: _pageCount, active: _page)),
+                          IconButton(
+                            tooltip: 'Next',
+                            onPressed: _page < _pageCount - 1
+                                ? () => _controller.nextPage(
+                                    duration:
+                                        const Duration(milliseconds: 280),
+                                    curve: Curves.easeOut)
+                                : null,
+                            icon: const Icon(Icons.chevron_right_rounded),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
     );
