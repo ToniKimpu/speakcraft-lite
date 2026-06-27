@@ -1,0 +1,379 @@
+{
+  "id": "transport",
+  "title": "Getting around",
+  "level": 1,
+  "order": 17,
+  "theme": "Transport",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Getting around is a daily necessity. These phrases cover the most common ways to travel, from catching public transport to dealing with busy commute times.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက နေ့စဉ်သွားလာတဲ့အခါ အမြဲသုံးရတဲ့ သယ်ယူပို့ဆောင်ရေးဆိုင်ရာ အသုံးအနှုန်းတွေဖြစ်လို့ စုစည်းပေးထားတာပါ။",
+  "words": [
+    {
+      "word": "take the bus",
+      "pos": "expression",
+      "short_en": "to travel using a bus",
+      "examples": [
+        {
+          "en": "I always {w}take the bus{/w} to {c}work{/c}.",
+          "mm": "ကျွန်တော် အလုပ်သွားရင် အမြဲတမ်း ဘတ်စ်ကားပဲ စီးတယ်"
+        },
+        {
+          "en": "It is cheaper to {w}take the bus{/w} than a {c}taxi{/c}.",
+          "mm": "တက္ကစီစီးတာထက် ဘတ်စ်ကားစီးတာက ပိုက်ဆံပိုကုန်သက်သာတယ်"
+        },
+        {
+          "en": "Does she {w}take the bus{/w} to {c}school{/c}?",
+          "mm": "သူမ ကျောင်းသွားရင် ဘတ်စ်ကားနဲ့ သွားသလား"
+        },
+        {
+          "en": "We decided to {w}take the bus{/w} into the {c}city{/c}.",
+          "mm": "မြို့ထဲကို ဘတ်စ်ကားနဲ့ပဲ သွားကြဖို့ ဆုံးဖြတ်လိုက်တယ်"
+        },
+        {
+          "en": "You can {w}take the bus{/w} from the {c}station{/c}.",
+          "mm": "ဘူတာကနေ ဘတ်စ်ကား စီးသွားလို့ ရတယ်"
+        }
+      ],
+      "short_mm": "ဘတ်စ်ကားစီးတယ်"
+    },
+    {
+      "word": "catch a train",
+      "pos": "expression",
+      "short_en": "to get on a train to travel somewhere",
+      "examples": [
+        {
+          "en": "I need to {w}catch a train{/w} at {c}eight{/c}.",
+          "mm": "ကျွန်တော် ၈ နာရီ ရထားကို ဖမ်းမှဖြစ်မယ်"
+        },
+        {
+          "en": "We usually {w}catch a train{/w} to visit our {c}family{/c}.",
+          "mm": "ကျွန်တော်တို့ မိသားစုဆီသွားရင် ပုံမှန်အားဖြင့် ရထားပဲ စီးလေ့ရှိတယ်"
+        },
+        {
+          "en": "Did you {w}catch a train{/w} this {c}morning{/c}?",
+          "mm": "ဒီမနက် ရထားမှီလိုက်ရဲ့လား"
+        },
+        {
+          "en": "He had to run to {w}catch a train{/w} to {c}London{/c}.",
+          "mm": "သူ လန်ဒန်သွားမယ့် ရထားမှီဖို့ အပြေးလေးသွားခဲ့ရတယ်"
+        },
+        {
+          "en": "It is easy to {w}catch a train{/w} from this {c}platform{/c}.",
+          "mm": "ဒီ ပလက်ဖောင်းကနေ ရထားစီးရတာ လွယ်တယ်"
+        }
+      ],
+      "short_mm": "ရထားစီးတယ်"
+    },
+    {
+      "word": "miss the bus",
+      "pos": "expression",
+      "short_en": "to arrive too late to get on the bus",
+      "examples": [
+        {
+          "en": "I was late and {w}missed the bus{/w} to {c}work{/c}.",
+          "mm": "ကျွန်တော် နောက်ကျသွားလို့ အလုပ်သွားမယ့် ဘတ်စ်ကား လွဲသွားတယ်"
+        },
+        {
+          "en": "If you leave late, you will {w}miss the bus{/w} {c}again{/c}.",
+          "mm": "နောက်ကျမှ ထွက်ရင် ဘတ်စ်ကား ထပ်လွဲလိမ့်မယ်"
+        },
+        {
+          "en": "She {w}missed the bus{/w} because of the {c}traffic{/c}.",
+          "mm": "ကားပိတ်နေလို့ သူမ ဘတ်စ်ကား လွဲသွားတယ်"
+        },
+        {
+          "en": "Don't {w}miss the bus{/w} for the {c}excursion{/c}!",
+          "mm": "အလည်သွားမယ့် ဘတ်စ်ကားကို မလွဲစေနဲ့နော်"
+        },
+        {
+          "en": "He often {w}misses the bus{/w} on {c}Mondays{/c}.",
+          "mm": "သူ တနင်္လာနေ့တိုင်း ဘတ်စ်ကား လွဲလေ့ရှိတယ်"
+        }
+      ],
+      "short_mm": "ကားလွတ်သွားတယ်"
+    },
+    {
+      "word": "get a taxi",
+      "pos": "expression",
+      "short_en": "to hire a taxi for a journey",
+      "examples": [
+        {
+          "en": "It is raining, so let's {w}get a taxi{/w} {c}home{/c}.",
+          "mm": "မိုးရွာနေလို့ အိမ်ပြန်ဖို့ တက္ကစီပဲ ငှားစီးကြရအောင်"
+        },
+        {
+          "en": "We had to {w}get a taxi{/w} from the {c}airport{/c}.",
+          "mm": "လေဆိပ်ကနေ အိမ်ပြန်ဖို့ တက္ကစီ ငှားစီးခဲ့ရတယ်"
+        },
+        {
+          "en": "Can you {w}get a taxi{/w} using an {c}app{/c}?",
+          "mm": "ဖုန်းထဲက အက်ပလီကေးရှင်းသုံးပြီး တက္ကစီ ငှားလို့ ရသလား"
+        },
+        {
+          "en": "They decided to {w}get a taxi{/w} to the {c}hotel{/c}.",
+          "mm": "သူတို့ ဟိုတယ်ကို တက္ကစီနဲ့ သွားဖို့ ဆုံးဖြတ်လိုက်ကြတယ်"
+        },
+        {
+          "en": "I will {w}get a taxi{/w} if I am {c}late{/c}.",
+          "mm": "နောက်ကျနေရင် တက္ကစီပဲ ငှားစီးလိုက်တော့မယ်"
+        }
+      ],
+      "short_mm": "တက္ကစီငှားတယ်"
+    },
+    {
+      "word": "on foot",
+      "pos": "expression",
+      "short_en": "walking instead of using a vehicle",
+      "examples": [
+        {
+          "en": "The shop is close, so I go {w}on foot{/w} {c}there{/c}.",
+          "mm": "ဆိုင်က နီးတဲ့အတွက် ကျွန်တော် လမ်းလျှောက်သွားတယ်"
+        },
+        {
+          "en": "It is faster to travel {w}on foot{/w} in {c}traffic{/c}.",
+          "mm": "ကားပိတ်နေတဲ့အချိန်မှာ လမ်းလျှောက်သွားတာက ပိုမြန်တယ်"
+        },
+        {
+          "en": "We explored the city {w}on foot{/w} all {c}day{/c}.",
+          "mm": "ကျွန်တော်တို့ တစ်နေ့လုံး မြို့ထဲကို လမ်းလျှောက်ပြီး လေ့လာခဲ့ကြတယ်"
+        },
+        {
+          "en": "Is the cinema reachable {w}on foot{/w} from {c}here{/c}?",
+          "mm": "ဒီကနေ ရုပ်ရှင်ရုံကို လမ်းလျှောက်သွားလို့ ရသလား"
+        },
+        {
+          "en": "I prefer to travel {w}on foot{/w} when it is {c}sunny{/c}.",
+          "mm": "နေသာတဲ့အချိန်ဆိုရင် လမ်းလျှောက်သွားရတာကို ပိုသဘောကျတယ်"
+        }
+      ],
+      "short_mm": "လမ်းလျှောက်သွားတယ်"
+    },
+    {
+      "word": "by car",
+      "pos": "expression",
+      "short_en": "traveling in a car",
+      "examples": [
+        {
+          "en": "We are going to the beach {w}by car{/w} {c}today{/c}.",
+          "mm": "ဒီနေ့ ကျွန်တော်တို့ ကားနဲ့ ပင်လယ်ကမ်းခြေကို သွားကြမယ်"
+        },
+        {
+          "en": "Is it better to travel {w}by car{/w} or {c}train{/c}?",
+          "mm": "ကားနဲ့သွားတာ ပိုကောင်းလား၊ ရထားနဲ့သွားတာ ပိုကောင်းလား"
+        },
+        {
+          "en": "She goes to the office {w}by car{/w} {c}daily{/c}.",
+          "mm": "သူမ ရုံးကို နေ့တိုင်း ကားနဲ့သွားတယ်"
+        },
+        {
+          "en": "Traveling {w}by car{/w} gives you more {c}freedom{/c}.",
+          "mm": "ကားနဲ့သွားရင် ပိုပြီး လွတ်လပ်မှု ရှိတယ်"
+        },
+        {
+          "en": "They arrived {w}by car{/w} at the {c}party{/c}.",
+          "mm": "သူတို့ ပါတီပွဲကို ကားနဲ့ ရောက်လာကြတယ်"
+        }
+      ],
+      "short_mm": "ကားနဲ့သွားတယ်"
+    },
+    {
+      "word": "a return ticket",
+      "pos": "expression",
+      "short_en": "a ticket to a place and back again",
+      "nuance_en": "British English. Americans usually say 'round-trip ticket'.",
+      "examples": [
+        {
+          "en": "I would like {w}a return ticket{/w} to {c}Manchester{/c}.",
+          "mm": "မန်ချက်စတာကို သွားဖို့ အပြန်လက်မှတ်တစ်စောင် လိုချင်ပါတယ်"
+        },
+        {
+          "en": "Is {w}a return ticket{/w} cheaper than a {c}single{/c}?",
+          "mm": "တစ်ခေါက်စာလက်မှတ်ထက် အသွားအပြန်လက်မှတ်က ပိုဈေးသက်သာလား"
+        },
+        {
+          "en": "He bought {w}a return ticket{/w} for his {c}holiday{/c}.",
+          "mm": "သူ အားလပ်ရက်ခရီးအတွက် အသွားအပြန်လက်မှတ် ဝယ်ထားတယ်"
+        },
+        {
+          "en": "Make sure you keep {w}a return ticket{/w} {c}safe{/c}.",
+          "mm": "အပြန်လက်မှတ်ကို ပျောက်မသွားအောင် သေချာသိမ်းထားပါ"
+        },
+        {
+          "en": "We need {w}a return ticket{/w} for the {c}journey{/c}.",
+          "mm": "ခရီးစဉ်အတွက် အသွားအပြန်လက်မှတ် လိုအပ်တယ်"
+        }
+      ],
+      "short_mm": "သွားပြန်လက်မှတ်",
+      "nuance_mm": "ဗြိတိသျှအင်္ဂလိပ်စာမှာ သုံးပြီး အမေရိကန်တွေကတော့ round-trip ticket လို့ ခေါ်ကြပါတယ်။"
+    },
+    {
+      "word": "the rush hour",
+      "pos": "expression",
+      "short_en": "the time when most people are traveling to or from work",
+      "examples": [
+        {
+          "en": "Try to avoid {w}the rush hour{/w} {c}traffic{/c}.",
+          "mm": "လူသွားလူလာများတဲ့ အချိန်တွေကို ရှောင်ဖို့ ကြိုးစားပါ"
+        },
+        {
+          "en": "The trains are very crowded during {w}the rush hour{/w} {c}time{/c}.",
+          "mm": "လူသွားလူလာများတဲ့အချိန်မှာ ရထားတွေ အရမ်းကြိတ်ကြိတ်တိုး ဖြစ်နေတယ်"
+        },
+        {
+          "en": "I hate driving in {w}the rush hour{/w} {c}jam{/c}.",
+          "mm": "လူသွားလူလာများပြီး ကားပိတ်တဲ့အချိန်မှာ ကားမောင်းရတာကို မုန်းတယ်"
+        },
+        {
+          "en": "What time is {w}the rush hour{/w} in this {c}city{/c}?",
+          "mm": "ဒီမြို့မှာ လူသွားလူလာ ဘယ်အချိန်မှာ အများဆုံးလဲ"
+        },
+        {
+          "en": "We finished work after {w}the rush hour{/w} {c}ended{/c}.",
+          "mm": "လူသွားလူလာများတဲ့အချိန်ကုန်သွားမှ ကျွန်တော်တို့ အလုပ်သိမ်းခဲ့တယ်"
+        }
+      ],
+      "short_mm": "လူအသွားအလာအများဆုံးအချိန်"
+    },
+    {
+      "word": "the underground",
+      "pos": "expression",
+      "short_en": "the train system that runs under the city",
+      "nuance_en": "Commonly used in London. Americans say 'the subway'.",
+      "examples": [
+        {
+          "en": "We took {w}the underground{/w} to the {c}museum{/c}.",
+          "mm": "ကျွန်တော်တို့ မြေအောက်ရထားနဲ့ ပြတိုက်ကို သွားခဲ့ကြတယ်"
+        },
+        {
+          "en": "Is {w}the underground{/w} fast in {c}London{/c}?",
+          "mm": "လန်ဒန်မှာ မြေအောက်ရထားက မြန်လား"
+        },
+        {
+          "en": "You can travel across town on {w}the underground{/w} {c}lines{/c}.",
+          "mm": "မြို့တစ်ဖက်ကနေ တစ်ဖက်ကို မြေအောက်ရထားလိုင်းတွေနဲ့ သွားလို့ရတယ်"
+        },
+        {
+          "en": "She prefers {w}the underground{/w} to the {c}bus{/c}.",
+          "mm": "သူမ ဘတ်စ်ကားထက် မြေအောက်ရထားစီးရတာကို ပိုကြိုက်တယ်"
+        },
+        {
+          "en": "The map shows all {w}the underground{/w} {c}stations{/c}.",
+          "mm": "မြေပုံမှာ မြေအောက်ရထားဘူတာအားလုံးကို ပြထားတယ်"
+        }
+      ],
+      "short_mm": "မြေအောက်ရထား",
+      "nuance_mm": "လန်ဒန်မှာ the underground လို့ ခေါ်ပြီး အမေရိကန်မှာတော့ subway လို့ ခေါ်ပါတယ်။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I arrived late and ___ the 8:00 bus.",
+      "right": "missed",
+      "wrong": "caught",
+      "why": "If you are late, you fail to catch it, so you 'miss' it.",
+      "why_mm": "အချိန်မီ မမီလိုက်တဲ့အခါ miss လို့ သုံးပြီး၊ အချိန်မီလိုက်စီးနိုင်ရင် catch လို့ သုံးရပါတယ်။"
+    },
+    {
+      "prompt": "I prefer to go ___ rather than taking the bus.",
+      "right": "on foot",
+      "wrong": "by foot",
+      "why": "The correct idiom is 'on foot', not 'by foot'.",
+      "why_mm": "လမ်းလျှောက်တာကို by foot လို့ မပြောရပါဘူး၊ on foot လို့ပဲ မှန်ကန်စွာ သုံးရပါမယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I have a meeting, so I will ___ to get there quickly.",
+      "answer": "get a taxi",
+      "options": [
+        "get a taxi",
+        "on foot",
+        "miss the bus"
+      ],
+      "explain_en": "Taxis are a fast way to travel when you are in a hurry.",
+      "explain_mm": "အရေးတကြီး သွားစရာရှိရင် တက္ကစီက မြန်ဆန်တဲ့အတွက် get a taxi ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "If you want to go there and come back, buy ___.",
+      "answer": "a return ticket",
+      "options": [
+        "a return ticket",
+        "the underground",
+        "by car"
+      ],
+      "explain_en": "A return ticket covers both the outward and inward journey.",
+      "explain_mm": "သွားရော ပြန်ပါ ပါတဲ့ လက်မှတ်ကို a return ticket လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The trains are very busy at 8:00 AM because of ___.",
+      "answer": "the rush hour",
+      "options": [
+        "the rush hour",
+        "the underground",
+        "on foot"
+      ],
+      "explain_en": "Rush hour refers to the peak travel times for commuters.",
+      "explain_mm": "လူတွေ အလုပ်သွား၊ အလုပ်ပြန်ချိန် အသွားအလာများတဲ့ အချိန်ကို rush hour လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I always ___ to the city center because it is cheap.\"",
+      "answer": "take the bus",
+      "options": [],
+      "explain_en": "Using a bus for travel is 'taking the bus'.",
+      "explain_mm": "ဘတ်စ်ကားစီးတာကို take the bus လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"We live nearby, so we go to the shops ___.\"",
+      "answer": "on foot",
+      "options": [],
+      "explain_en": "Walking is described as going 'on foot'.",
+      "explain_mm": "လမ်းလျှောက်တာကို on foot လို့ ပြောရပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"She prefers to travel ___ because she can listen to music.\"",
+      "answer": "by car",
+      "options": [],
+      "explain_en": "Travel in a private vehicle is 'by car'.",
+      "explain_mm": "ကားနဲ့ ခရီးသွားတာကို by car လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I was late, so I ___ to my meeting.\"",
+      "answer": "caught a train",
+      "options": [],
+      "explain_en": "To board a train for a journey is to 'catch a train'.",
+      "explain_mm": "ရထားစီးဖို့အတွက် catch a train လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"London is famous for its large network of ___.\"",
+      "answer": "the underground",
+      "options": [],
+      "explain_en": "The train system under London is called 'the underground'.",
+      "explain_mm": "မြေအောက်ရထားစနစ်ကို the underground လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I am so annoyed! I ___ by one minute.\"",
+      "answer": "missed the bus",
+      "options": [],
+      "explain_en": "Arriving too late for a scheduled departure means you 'missed the bus'.",
+      "explain_mm": "ကားကို အချိန်မီ မမီလိုက်ရင် miss the bus လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"Do you want a single ticket or ___?\"",
+      "answer": "a return ticket",
+      "options": [],
+      "explain_en": "A return ticket is for going and coming back.",
+      "explain_mm": "သွားဖို့နဲ့ ပြန်လာဖို့အတွက် လက်မှတ်ကို a return ticket လို့ သုံးပါတယ်။"
+    }
+  ]
+}

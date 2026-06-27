@@ -167,6 +167,50 @@
       "order": 16,
       "theme": "Weather",
       "word_count": 9
+    },
+    {
+      "id": "transport",
+      "title": "Getting around",
+      "level": 1,
+      "order": 17,
+      "theme": "Transport",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "clothes",
+      "title": "Clothes",
+      "level": 1,
+      "order": 18,
+      "theme": "Clothes",
+      "word_count": 9
+    },
+    {
+      "id": "jobs_work",
+      "title": "Jobs & work",
+      "level": 1,
+      "order": 19,
+      "theme": "Jobs",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "hobbies",
+      "title": "Free time & hobbies",
+      "level": 1,
+      "order": 20,
+      "theme": "Hobbies",
+      "word_count": 9,
+      "unit": "expression"
+    },
+    {
+      "id": "phone_internet",
+      "title": "Phone & internet",
+      "level": 1,
+      "order": 21,
+      "theme": "Technology",
+      "word_count": 9,
+      "unit": "expression"
     }
   ]
 }

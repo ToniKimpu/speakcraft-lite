@@ -1,0 +1,388 @@
+{
+  "id": "jobs_work",
+  "title": "Jobs & work",
+  "level": 1,
+  "order": 19,
+  "theme": "Jobs",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Talking about work is a daily necessity. These phrases cover the essential ways to describe your employment status, your routine, and the people you work with.",
+  "why_grouped_mm": "အလုပ်အကြောင်း ပြောဆိုတဲ့အခါမှာ အသုံးအများဆုံးနဲ့ အခြေခံကျတဲ့ စကားလုံးတွေမို့လို့ စုစည်းပေးထားတာပါ။ အလုပ်အကိုင်၊ အချိန်ဇယားနဲ့ လုပ်ဖော်ကိုင်ဖက်တွေအကြောင်း ပြောတဲ့အခါ ဒီစကားလုံးလေးတွေက အရမ်းအသုံးဝင်ပါတယ်။",
+  "words": [
+    {
+      "word": "a full-time job",
+      "pos": "expression",
+      "short_en": "working standard hours, usually 35-40 hours a week",
+      "examples": [
+        {
+          "en": "I'm looking for {w}a full-time job{/w} in {c}London{/c}.",
+          "mm": "ကျွန်တော် လန်ဒန်မှာ အချိန်ပြည့် အလုပ်တစ်ခု ရှာနေတယ်။"
+        },
+        {
+          "en": "He finally got {w}a full-time job{/w} at the {c}bank{/c}.",
+          "mm": "သူ နောက်ဆုံးတော့ ဘဏ်မှာ အချိန်ပြည့် အလုပ်တစ်ခု ရသွားတယ်။"
+        },
+        {
+          "en": "It's hard to study while working {w}a full-time job{/w} {c}full-time{/c}.",
+          "mm": "အချိန်ပြည့် အလုပ်လုပ်ရင်းနဲ့ စာကျက်ဖို့ဆိုတာ ခက်ခဲတယ်။"
+        },
+        {
+          "en": "She wants {w}a full-time job{/w} with good {c}pay{/c}.",
+          "mm": "သူမ လစာကောင်းတဲ့ အချိန်ပြည့် အလုပ်တစ်ခု လိုချင်တယ်။"
+        },
+        {
+          "en": "Most people have {w}a full-time job{/w} during the {c}week{/c}.",
+          "mm": "လူအများစုကတော့ အလုပ်ရက်တွေမှာ အချိန်ပြည့် အလုပ်လုပ်ကြတယ်။"
+        }
+      ],
+      "short_mm": "ပုံမှန်အလုပ်ချိန်ပြည့် လုပ်ရတဲ့အလုပ်"
+    },
+    {
+      "word": "a part-time job",
+      "pos": "expression",
+      "short_en": "working fewer hours than a full-time job",
+      "examples": [
+        {
+          "en": "I have {w}a part-time job{/w} at a {c}cafe{/c}.",
+          "mm": "ကျွန်တော် ကဖေးဆိုင်တစ်ခုမှာ အချိန်ပိုင်း အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "She works {w}a part-time job{/w} in the {c}evenings{/c}.",
+          "mm": "သူမ ညနေပိုင်းတွေမှာ အချိန်ပိုင်း အလုပ် လုပ်တယ်။"
+        },
+        {
+          "en": "Students often look for {w}a part-time job{/w} to earn {c}money{/c}.",
+          "mm": "ကျောင်းသားတွေက ပိုက်ဆံရဖို့အတွက် အချိန်ပိုင်း အလုပ်တွေကို မကြာခဏ ရှာလေ့ရှိတယ်။"
+        },
+        {
+          "en": "I can't do {w}a part-time job{/w} on {c}Mondays{/c}.",
+          "mm": "ကျွန်တော် တနင်္လာနေ့တွေမှာ အချိန်ပိုင်း အလုပ် မလုပ်နိုင်ဘူး။"
+        },
+        {
+          "en": "He keeps {w}a part-time job{/w} while writing his {c}book{/c}.",
+          "mm": "သူ စာအုပ်ရေးနေရင်းနဲ့ပဲ အချိန်ပိုင်း အလုပ်တစ်ခုကို ဆက်လုပ်ထားတယ်။"
+        }
+      ],
+      "short_mm": "အချိန်ပိုင်းအလုပ်"
+    },
+    {
+      "word": "apply for a job",
+      "pos": "expression",
+      "short_en": "to send your CV or fill out a form to try to get a job",
+      "examples": [
+        {
+          "en": "I want to {w}apply for a job{/w} at that {c}company{/c}.",
+          "mm": "ကျွန်တော် အဲဒီကုမ္ပဏီမှာ အလုပ်လျှောက်ချင်တယ်။"
+        },
+        {
+          "en": "Did you {w}apply for a job{/w} online {c}yesterday{/c}?",
+          "mm": "မနေ့က အွန်လိုင်းကနေ အလုပ် လျှောက်လိုက်သေးလား။"
+        },
+        {
+          "en": "It's time to {w}apply for a job{/w} after {c}graduation{/c}.",
+          "mm": "ကျောင်းပြီးတာနဲ့ အလုပ်လျှောက်ရမယ့် အချိန်ပဲ။"
+        },
+        {
+          "en": "She decided to {w}apply for a job{/w} in {c}sales{/c}.",
+          "mm": "သူမ အရောင်းပိုင်းမှာ အလုပ်လျှောက်ဖို့ ဆုံးဖြတ်လိုက်တယ်။"
+        },
+        {
+          "en": "You should {w}apply for a job{/w} with a good {c}CV{/c}.",
+          "mm": "အလုပ်လျှောက်မယ်ဆိုရင် ကိုယ့်ရဲ့ ကိုယ်ရေးရာဇဝင် အကျဉ်းကောင်းကောင်းနဲ့ လျှောက်သင့်တယ်။"
+        }
+      ],
+      "short_mm": "အလုပ်လျှောက်တယ်"
+    },
+    {
+      "word": "get a job",
+      "pos": "expression",
+      "short_en": "to be hired or start working",
+      "examples": [
+        {
+          "en": "It's not easy to {w}get a job{/w} these {c}days{/c}.",
+          "mm": "ဒီရက်ပိုင်းမှာ အလုပ်ရဖို့ မလွယ်ဘူး။"
+        },
+        {
+          "en": "He managed to {w}get a job{/w} in {c}marketing{/c}.",
+          "mm": "သူ မားကတ်တင်းဌာနမှာ အလုပ်တစ်ခု ရအောင် လုပ်နိုင်ခဲ့တယ်။"
+        },
+        {
+          "en": "She wants to {w}get a job{/w} near her {c}home{/c}.",
+          "mm": "သူမ အိမ်နားမှာပဲ အလုပ်ရချင်တယ်။"
+        },
+        {
+          "en": "I hope to {w}get a job{/w} by next {c}month{/c}.",
+          "mm": "လာမယ့်လဆို အလုပ်ရလိမ့်မယ်လို့ မျှော်လင့်တယ်။"
+        },
+        {
+          "en": "Did you {w}get a job{/w} after the {c}interview{/c}?",
+          "mm": "အင်တာဗျူးပြီးတော့ အလုပ်ရလိုက်လား။"
+        }
+      ],
+      "short_mm": "အလုပ်ရတယ်"
+    },
+    {
+      "word": "a day off",
+      "pos": "expression",
+      "short_en": "a day when you do not have to go to work",
+      "examples": [
+        {
+          "en": "I'm having {w}a day off{/w} on {c}Friday{/c}.",
+          "mm": "ကျွန်တော် သောကြာနေ့မှာ အလုပ်နားရက် ယူထားတယ်။"
+        },
+        {
+          "en": "She took {w}a day off{/w} to visit her {c}mum{/c}.",
+          "mm": "သူမ အမေ့ကို သွားတွေ့ဖို့ အလုပ်နားရက် ယူလိုက်တယ်။"
+        },
+        {
+          "en": "Can I have {w}a day off{/w} next {c}week{/c}?",
+          "mm": "လာမယ့်အပတ်မှာ ကျွန်တော် အလုပ်နားရက် တစ်ရက်လောက် ရနိုင်မလား။"
+        },
+        {
+          "en": "He really needs {w}a day off{/w} from {c}work{/c}.",
+          "mm": "သူ အလုပ်ကနေ နားရက် တစ်ရက်လောက် တကယ် လိုအပ်နေတယ်။"
+        },
+        {
+          "en": "We get {w}a day off{/w} for the {c}holiday{/c}.",
+          "mm": "အားလပ်ရက်အတွက် ကျွန်တော်တို့ အလုပ်နားရက် တစ်ရက် ရတယ်။"
+        }
+      ],
+      "short_mm": "အလုပ်နားတဲ့ရက်"
+    },
+    {
+      "word": "work from home",
+      "pos": "expression",
+      "short_en": "to do your job at home instead of at an office",
+      "examples": [
+        {
+          "en": "I {w}work from home{/w} every {c}Tuesday{/c}.",
+          "mm": "ကျွန်တော် အင်္ဂါနေ့တိုင်း အိမ်ကနေပဲ အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "Does your company let you {w}work from home{/w} {c}often{/c}?",
+          "mm": "မင်းတို့ ကုမ္ပဏီက အိမ်ကနေ အလုပ်လုပ်ခွင့် မကြာခဏ ပေးလား။"
+        },
+        {
+          "en": "It's nice to {w}work from home{/w} in your {c}pyjamas{/c}.",
+          "mm": "အိမ်မှာ ဝတ်နေကျ အဝတ်အစားလေးနဲ့ အလုပ်လုပ်ရတာ သက်သောင့်သက်သာ ရှိတယ်။"
+        },
+        {
+          "en": "She prefers to {w}work from home{/w} with her {c}cat{/c}.",
+          "mm": "သူမကတော့ ကြောင်လေးနဲ့ အိမ်မှာပဲ အလုပ်လုပ်ရတာ ပိုသဘောကျတယ်။"
+        },
+        {
+          "en": "We can {w}work from home{/w} using the {c}internet{/c}.",
+          "mm": "အင်တာနက် သုံးပြီးတော့ အိမ်ကနေ အလုပ်လုပ်လို့ ရတယ်။"
+        }
+      ],
+      "short_mm": "အိမ်ကနေ အလုပ်လုပ်တယ်"
+    },
+    {
+      "word": "a colleague",
+      "pos": "expression",
+      "short_en": "someone you work with",
+      "examples": [
+        {
+          "en": "My {w}colleague{/w} is very {c}helpful{/c}.",
+          "mm": "ကျွန်တော့် လုပ်ဖော်ကိုင်ဖက်က အရမ်း ကူညီတတ်တယ်။"
+        },
+        {
+          "en": "I went for lunch with a {w}colleague{/w} from {c}work{/c}.",
+          "mm": "ကျွန်တော် အလုပ်က လုပ်ဖော်ကိုင်ဖက် တစ်ယောက်နဲ့ နေ့လယ်စာ သွားစားတယ်။"
+        },
+        {
+          "en": "She is a {w}colleague{/w} of my {c}brother{/c}.",
+          "mm": "သူမက ကျွန်တော့်အစ်ကိုရဲ့ လုပ်ဖော်ကိုင်ဖက် ဖြစ်တယ်။"
+        },
+        {
+          "en": "Most of my {w}colleague{/w}s are {c}friendly{/c}.",
+          "mm": "ကျွန်တော့် လုပ်ဖော်ကိုင်ဖက် အများစုက သဘောကောင်းကြတယ်။"
+        },
+        {
+          "en": "I asked my {w}colleague{/w} for some {c}advice{/c}.",
+          "mm": "ကျွန်တော် လုပ်ဖော်ကိုင်ဖက်ဆီက အကြံဉာဏ် တချို့ တောင်းလိုက်တယ်။"
+        }
+      ],
+      "short_mm": "လုပ်ဖော်ကိုင်ဖက်"
+    },
+    {
+      "word": "the boss",
+      "pos": "expression",
+      "short_en": "the person in charge of you at work",
+      "examples": [
+        {
+          "en": "I need to talk to {w}the boss{/w} about my {c}salary{/c}.",
+          "mm": "ကျွန်တော် လစာကိစ္စနဲ့ ပတ်သက်ပြီး အလုပ်ရှင်နဲ့ စကားပြောဖို့ လိုတယ်။"
+        },
+        {
+          "en": "{w}The boss{/w} is away on {c}holiday{/c}.",
+          "mm": "အလုပ်ရှင်က အားလပ်ရက်ခရီး ထွက်သွားတယ်။"
+        },
+        {
+          "en": "She is {w}the boss{/w} of this {c}office{/c}.",
+          "mm": "သူမက ဒီရုံးရဲ့ အကြီးအကဲပဲ။"
+        },
+        {
+          "en": "I have a meeting with {w}the boss{/w} at {c}nine{/c}.",
+          "mm": "ကျွန်တော် ၉ နာရီမှာ အလုပ်ရှင်နဲ့ အစည်းအဝေး ရှိတယ်။"
+        },
+        {
+          "en": "{w}The boss{/w} is very {c}strict{/c}.",
+          "mm": "အလုပ်ရှင်က အရမ်း စည်းကမ်းကြီးတယ်။"
+        }
+      ],
+      "short_mm": "အလုပ်ရှင် (သို့) အထက်လူကြီး"
+    },
+    {
+      "word": "be off sick",
+      "pos": "expression",
+      "short_en": "not at work because you are ill",
+      "nuance_en": "Use \"be off sick\" for the state of being away. \"Call in sick\" is the action of telling your boss.",
+      "confuse_with": [
+        "a day off"
+      ],
+      "examples": [
+        {
+          "en": "He is {w}off sick{/w} with the {c}flu{/c}.",
+          "mm": "သူ တုပ်ကွေးမိပြီး အလုပ်နားထားတယ်။"
+        },
+        {
+          "en": "I had to {w}be off sick{/w} for two {c}days{/c}.",
+          "mm": "ကျွန်တော် ဖျားလို့ နှစ်ရက်လောက် အလုပ်နားလိုက်ရတယ်။"
+        },
+        {
+          "en": "She's been {w}off sick{/w} all {c}week{/c}.",
+          "mm": "သူမ တစ်ပတ်လုံး ဖျားပြီး အလုပ်နားနေတယ်။"
+        },
+        {
+          "en": "Is he {w}off sick{/w} again {c}today{/c}?",
+          "mm": "သူ ဒီနေ့လည်း ဖျားလို့ အလုပ်နားပြန်ပြီလား။"
+        },
+        {
+          "en": "I was {w}off sick{/w} when the {c}meeting{/c} happened.",
+          "mm": "အစည်းအဝေးလုပ်တုန်းက ကျွန်တော် ဖျားနေလို့ အလုပ်နားထားတာ။"
+        }
+      ],
+      "short_mm": "နေမကောင်းလို့ အလုပ်နားတယ်",
+      "nuance_mm": "be off sick က နေမကောင်းတဲ့အခြေအနေကို ပြောတာဖြစ်ပြီး၊ call in sick ကတော့ ဖုန်းဆက်ပြီး ခွင့်တောင်းတဲ့ လုပ်ဆောင်ချက်ပါ။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I'm not at work today because I'm ___.",
+      "right": "off sick",
+      "wrong": "a day off",
+      "why": "\"off sick\" means you are ill; \"a day off\" is a planned break.",
+      "why_mm": "off sick က နေမကောင်းလို့ နားတာဖြစ်ပြီး a day off ကတော့ စီစဉ်ထားတဲ့ အားလပ်ရက် ဒါမှမဟုတ် နားရက်မျိုးကို ပြောတာပါ။"
+    },
+    {
+      "prompt": "I want to ___ a job at that company.",
+      "right": "apply for",
+      "wrong": "get",
+      "why": "\"apply for\" is the process; \"get\" is the result.",
+      "why_mm": "apply for က အလုပ်လျှောက်တဲ့ လုပ်ငန်းစဉ်ဖြစ်ပြီး၊ get ကတော့ အလုပ်ရသွားတဲ့ ရလဒ်ကို ပြောတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I work 40 hours a week. I have ___.",
+      "answer": "a full-time job",
+      "options": [
+        "a full-time job",
+        "a part-time job",
+        "a day off"
+      ],
+      "explain_en": "Standard working hours = full-time.",
+      "explain_mm": "ပုံမှန်အလုပ်ချိန်ပြည့်လုပ်တာကို full-time လို့ ခေါ်တယ်လေ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I don't go to the office; I ___.",
+      "answer": "work from home",
+      "options": [
+        "work from home",
+        "apply for a job",
+        "be off sick"
+      ],
+      "explain_en": "Working at home = work from home.",
+      "explain_mm": "အိမ်ကနေ အလုပ်လုပ်တာကို work from home လို့ ပြောတာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My ___ is the person who manages me.",
+      "answer": "the boss",
+      "options": [
+        "the boss",
+        "a colleague",
+        "a day off"
+      ],
+      "explain_en": "The manager = the boss.",
+      "explain_mm": "မန်နေဂျာ ဒါမှမဟုတ် ကိုယ့်အထက်ကလူကို the boss လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I am not at work because I have a fever. I am ___.",
+      "answer": "off sick",
+      "options": [
+        "off sick",
+        "a day off",
+        "a colleague"
+      ],
+      "explain_en": "Absent due to illness = off sick.",
+      "explain_mm": "နေမကောင်းလို့ အလုပ်မသွားနိုင်တာကို off sick လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Someone I work with is my ___.",
+      "answer": "a colleague",
+      "options": [
+        "a colleague",
+        "the boss",
+        "a part-time job"
+      ],
+      "explain_en": "Workmate = colleague.",
+      "explain_mm": "အတူအလုပ်လုပ်တဲ့သူကို colleague လို့ ခေါ်ပါတယ်နော်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I want to ___ a job at the new shop.\"",
+      "answer": "apply for",
+      "options": [],
+      "explain_en": "To request a job = apply for.",
+      "explain_mm": "အလုပ်လျှောက်တာကို apply for လို့ သုံးတာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I only work 10 hours a week; it's ___.\"",
+      "answer": "a part-time job",
+      "options": [],
+      "explain_en": "Fewer hours than full-time = part-time.",
+      "explain_mm": "အချိန်ပြည့်မဟုတ်ဘဲ နည်းနည်းပဲလုပ်ရတာကို part-time လို့ ခေါ်တာပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I'm tired, I need to take ___ tomorrow.\"",
+      "answer": "a day off",
+      "options": [],
+      "explain_en": "A break from work = a day off.",
+      "explain_mm": "အလုပ်ကနေ နားရက်ကို a day off လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"After many interviews, I finally ___.\"",
+      "answer": "get a job",
+      "options": [],
+      "explain_en": "To successfully be hired = get a job.",
+      "explain_mm": "အလုပ်ရသွားတာကို get a job လို့ ပြောတာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I'm currently ___ with a bad cold.\"",
+      "answer": "off sick",
+      "options": [],
+      "explain_en": "Absent due to illness = off sick.",
+      "explain_mm": "ဖျားလို့ အလုပ်မလာနိုင်တာကို off sick လို့ သုံးတာပဲ။"
+    }
+  ]
+}
