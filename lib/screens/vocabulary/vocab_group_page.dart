@@ -276,7 +276,7 @@ class _WordPage extends StatelessWidget {
           ],
 
           // Often used with — the collocation/partners block.
-          if (word.goesWithEn.isNotEmpty || word.collocations.isNotEmpty) ...[
+          if (word.collocations.isNotEmpty) ...[
             const SizedBox(height: 10),
             _GoesWithBlock(word: word),
           ],
@@ -392,34 +392,26 @@ class _GoesWithBlock extends StatelessWidget {
                       color: cs.onSurface, fontWeight: FontWeight.w700)),
             ],
           ),
-          if (word.goesWithEn.isNotEmpty) ...[
-            const SizedBox(height: 6),
-            Text(word.goesWithEn,
-                style: PmpTextStyles.body2Regular
-                    .copyWith(color: cs.onSurface, height: 1.4)),
-          ],
-          if (word.collocations.isNotEmpty) ...[
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 6,
-              runSpacing: 6,
-              children: [
-                for (final c in word.collocations)
-                  Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: cs.surface.withValues(alpha: 0.6),
-                      borderRadius: BorderRadius.circular(6),
-                      border: Border.all(color: cs.outlineVariant),
-                    ),
-                    child: Text(c,
-                        style: PmpTextStyles.label2Regular
-                            .copyWith(color: cs.onSurfaceVariant)),
+          const SizedBox(height: 8),
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [
+              for (final c in word.collocations)
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: cs.surface.withValues(alpha: 0.6),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: cs.outlineVariant),
                   ),
-              ],
-            ),
-          ],
+                  child: Text(c,
+                      style: PmpTextStyles.body2Regular
+                          .copyWith(color: cs.onSurface)),
+                ),
+            ],
+          ),
         ],
       ),
     );
