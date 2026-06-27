@@ -1,0 +1,407 @@
+{
+  "id": "personality",
+  "title": "Describing people",
+  "level": 1,
+  "order": 3,
+  "theme": "Personality",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "Essential adjectives to describe someone's character. These words help you talk about friends, family, and colleagues in everyday conversation.",
+  "why_grouped_mm": "လူတွေရဲ့ စရိုက်ကို ဖော်ပြတဲ့ အသုံးအများဆုံး နာမဝိသေသန (adjectives) တွေပါ။ သူငယ်ချင်း၊ မိသားစုနဲ့ လုပ်ဖော်ကိုင်ဖက်တွေကို ပြောပြတဲ့အခါ ဒီစကားလုံးတွေက အရမ်းအသုံးဝင်ပါတယ်ပေါ့။",
+  "words": [
+    {
+      "word": "kind",
+      "pos": "adjective",
+      "ipa": "/kaɪnd/",
+      "short_en": "caring and helpful to others",
+      "examples": [
+        {
+          "en": "It was very {w}kind{/w} of you to {c}help{/c}.",
+          "mm": "ကူညီပေးတာ အရမ်းကျေးဇူးတင်ပါတယ်။"
+        },
+        {
+          "en": "She is a {w}kind{/w} {c}person{/c}.",
+          "mm": "သူမက စိတ်သဘောထား ကောင်းတဲ့သူပါ။"
+        },
+        {
+          "en": "Thank you for your {w}kind{/w} {c}words{/c}.",
+          "mm": "အားပေးစကား ပြောပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။"
+        },
+        {
+          "en": "He is always {w}kind{/w} to {c}animals{/c}.",
+          "mm": "သူက တိရစ္ဆာန်တွေကို အမြဲတမ်း သဘောကောင်းပါတယ်။"
+        },
+        {
+          "en": "That's a very {w}kind{/w} {c}offer{/c}.",
+          "mm": "အဲဒါ အရမ်းကောင်းတဲ့ ကမ်းလှမ်းချက်ပဲ။"
+        }
+      ],
+      "short_mm": "စိတ်ထားကောင်းတဲ့၊ ကူညီတတ်တဲ့"
+    },
+    {
+      "word": "funny",
+      "pos": "adjective",
+      "ipa": "/ˈfʌn.i/",
+      "short_en": "making people laugh",
+      "nuance_en": "\"funny\" means you make people laugh. \"fun\" means an activity is enjoyable. \"He is a funny guy\" vs \"The party was fun.\"",
+      "examples": [
+        {
+          "en": "He tells very {w}funny{/w} {c}jokes{/c}.",
+          "mm": "သူက ရယ်ရတဲ့ ဟာသတွေ ပြောတတ်တယ်။"
+        },
+        {
+          "en": "She has a {w}funny{/w} sense of {c}humour{/c}.",
+          "mm": "သူမက ဟာသဉာဏ် အရမ်းကောင်းတယ်။"
+        },
+        {
+          "en": "That was a {w}funny{/w} {c}story{/c}!",
+          "mm": "အဲဒီဇာတ်လမ်းက တကယ့်ကို ရယ်ရတာပဲ။"
+        },
+        {
+          "en": "He is such a {w}funny{/w} {c}guy{/c}.",
+          "mm": "သူက တကယ့်ကို ရယ်ရတဲ့လူပဲ။"
+        },
+        {
+          "en": "We watched a {w}funny{/w} {c}movie{/c} last night.",
+          "mm": "မနေ့ညက ကျွန်တော်တို့ ရယ်ရတဲ့ ရုပ်ရှင်ကြည့်ခဲ့တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "fun"
+      ],
+      "short_mm": "ရယ်စရာကောင်းတဲ့",
+      "nuance_mm": "funny က လူကို ပြောတာပါ၊ fun ကတော့ အလုပ်တစ်ခုခု ဒါမှမဟုတ် အတွေ့အကြုံတစ်ခုခုကို ပြောတာပါ"
+    },
+    {
+      "word": "shy",
+      "pos": "adjective",
+      "ipa": "/ʃaɪ/",
+      "short_en": "nervous meeting new people",
+      "nuance_en": "\"shy\" is about being nervous with people. \"quiet\" just means you don't talk much.",
+      "examples": [
+        {
+          "en": "She was very {w}shy{/w} as a {c}child{/c}.",
+          "mm": "သူမ ငယ်ငယ်တုန်းက အရမ်းရှက်တတ်တယ်။"
+        },
+        {
+          "en": "Don't be {w}shy{/w} — come and {c}say{/c} hello.",
+          "mm": "မရှက်ပါနဲ့ - လာပြီး နှုတ်ဆက်လိုက်ပါ။"
+        },
+        {
+          "en": "He is a bit {w}shy{/w} with {c}strangers{/c}.",
+          "mm": "သူက လူစိမ်းတွေနဲ့ဆို နည်းနည်း ရှက်တတ်တယ်။"
+        },
+        {
+          "en": "She felt {w}shy{/w} in the {c}meeting{/c}.",
+          "mm": "သူမ အစည်းအဝေးမှာ ရှက်သလို ခံစားခဲ့ရတယ်။"
+        },
+        {
+          "en": "He's not {w}shy{/w} about {c}asking{/c} questions.",
+          "mm": "သူက မေးခွန်းတွေ မေးရမှာ မရှက်တတ်ဘူး။"
+        }
+      ],
+      "confuse_with": [
+        "quiet"
+      ],
+      "short_mm": "ရှက်တတ်တဲ့",
+      "nuance_mm": "shy က လူကို ကြောက်ပြီး ရှက်တာပါ၊ quiet ကတော့ စကားနည်းတဲ့သူကို ပြောတာပါ"
+    },
+    {
+      "word": "friendly",
+      "pos": "adjective",
+      "ipa": "/ˈfrend.li/",
+      "short_en": "behaving in a pleasant, kind way",
+      "examples": [
+        {
+          "en": "The staff are very {w}friendly{/w} and {c}helpful{/c}.",
+          "mm": "ဝန်ထမ်းတွေက အရမ်းဖော်ရွေပြီး ကူညီပေးတတ်ကြတယ်။"
+        },
+        {
+          "en": "She gave me a {w}friendly{/w} {c}smile{/c}.",
+          "mm": "သူမ ကျွန်တော့်ကို ဖော်ရွေစွာ ပြုံးပြတယ်။"
+        },
+        {
+          "en": "He is a {w}friendly{/w} {c}neighbour{/c}.",
+          "mm": "သူက ဖော်ရွေတဲ့ အိမ်နီးချင်းပါ။"
+        },
+        {
+          "en": "They are very {w}friendly{/w} {c}people{/c}.",
+          "mm": "သူတို့က အရမ်း ဖော်ရွေတဲ့သူတွေပါ။"
+        },
+        {
+          "en": "It was a {w}friendly{/w} {c}chat{/c}.",
+          "mm": "အဲဒါ ဖော်ရွေတဲ့ စကားစမြည် ပြောဆိုမှုတစ်ခု ဖြစ်ခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "ခင်မင်ဖို့ကောင်းတဲ့"
+    },
+    {
+      "word": "smart",
+      "pos": "adjective",
+      "ipa": "/smɑːt/",
+      "short_en": "intelligent; good at learning",
+      "examples": [
+        {
+          "en": "She is a very {w}smart{/w} {c}student{/c}.",
+          "mm": "သူမက အရမ်းတော်တဲ့ ကျောင်းသူပါ။"
+        },
+        {
+          "en": "That was a {w}smart{/w} {c}decision{/c}.",
+          "mm": "အဲဒါ ထက်မြက်တဲ့ ဆုံးဖြတ်ချက်ပဲ။"
+        },
+        {
+          "en": "He is {w}smart{/w} with {c}computers{/c}.",
+          "mm": "သူက ကွန်ပျူတာနဲ့ ပတ်သက်ရင် တော်တယ်။"
+        },
+        {
+          "en": "She has a {w}smart{/w} {c}idea{/c}.",
+          "mm": "သူမမှာ ထက်မြက်တဲ့ အကြံဉာဏ် ရှိတယ်။"
+        },
+        {
+          "en": "He is the {w}smart{/w} one in the {c}family{/c}.",
+          "mm": "သူက မိသားစုထဲမှာ အတော်ဆုံးပဲ။"
+        }
+      ],
+      "short_mm": "လိမ္မာတဲ့၊ ဉာဏ်ကောင်းတဲ့"
+    },
+    {
+      "word": "confident",
+      "pos": "adjective",
+      "ipa": "/ˈkɒn.fɪ.dənt/",
+      "short_en": "sure of your own abilities",
+      "nuance_en": "\"confident\" is a positive feeling of being sure. \"arrogant\" is negative, thinking you are better than others.",
+      "examples": [
+        {
+          "en": "She is very {w}confident{/w} in her {c}work{/c}.",
+          "mm": "သူမက သူ့အလုပ်မှာ အရမ်း ယုံကြည်မှုရှိတယ်။"
+        },
+        {
+          "en": "He feels {w}confident{/w} about the {c}exam{/c}.",
+          "mm": "သူ စာမေးပွဲအတွက် စိတ်အေးလက်အေး ရှိတယ်။"
+        },
+        {
+          "en": "She is a {w}confident{/w} {c}speaker{/c}.",
+          "mm": "သူမက ယုံကြည်မှုရှိရှိ ပြောတတ်တဲ့သူပါ။"
+        },
+        {
+          "en": "You need to be more {w}confident{/w} in {c}yourself{/c}.",
+          "mm": "မင်း ကိုယ့်ကိုယ်ကိုယ် ပိုယုံကြည်မှု ရှိဖို့ လိုတယ်။"
+        },
+        {
+          "en": "He gave a {w}confident{/w} {c}answer{/c}.",
+          "mm": "သူ ယုံကြည်မှုရှိရှိနဲ့ ဖြေခဲ့တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "arrogant"
+      ],
+      "short_mm": "ယုံကြည်မှုရှိတဲ့",
+      "nuance_mm": "confident က ကောင်းတဲ့ဘက်က ယုံကြည်မှုပါ၊ arrogant ကတော့ ကိုယ့်ကိုယ်ကိုယ် တခြားသူတွေထက် သာတယ်လို့ ထင်တဲ့ မကောင်းတဲ့သဘောမျိုးပါ"
+    },
+    {
+      "word": "lazy",
+      "pos": "adjective",
+      "ipa": "/ˈleɪ.zi/",
+      "short_en": "not wanting to work or do anything",
+      "examples": [
+        {
+          "en": "Don't be so {w}lazy{/w} — {c}clean{/c} your room!",
+          "mm": "ပျင်းမနေပါနဲ့ - မင်းအခန်းကို သန့်ရှင်းရေးလုပ်ပါ။"
+        },
+        {
+          "en": "He had a {w}lazy{/w} {c}Sunday{/c} afternoon.",
+          "mm": "သူ တနင်္ဂနွေနေ့ နေ့လည်ခင်းကို ပျင်းရိစွာ ကုန်ဆုံးခဲ့တယ်။"
+        },
+        {
+          "en": "I'm feeling a bit {w}lazy{/w} {c}today{/c}.",
+          "mm": "ဒီနေ့တော့ နည်းနည်း ပျင်းသလို ခံစားနေရတယ်။"
+        },
+        {
+          "en": "She is not {w}lazy{/w} at {c}all{/c}.",
+          "mm": "သူမက လုံးဝ မပျင်းတတ်ဘူး။"
+        },
+        {
+          "en": "It's a {w}lazy{/w} {c}way{/c} to do things.",
+          "mm": "အဲဒါက ပျင်းတဲ့သူတွေ လုပ်တဲ့နည်းလမ်းပဲ။"
+        }
+      ],
+      "short_mm": "ပျင်းတဲ့"
+    },
+    {
+      "word": "serious",
+      "pos": "adjective",
+      "ipa": "/ˈsɪə.ri.əs/",
+      "short_en": "not joking; quiet and thoughtful",
+      "examples": [
+        {
+          "en": "He is a {w}serious{/w} {c}person{/c}.",
+          "mm": "သူက တည်ကြည်တဲ့သူပါ။"
+        },
+        {
+          "en": "She has a {w}serious{/w} {c}expression{/c}.",
+          "mm": "သူမရဲ့ မျက်နှာအမူအရာက တည်ကြည်နေတယ်။"
+        },
+        {
+          "en": "Are you being {w}serious{/w} about this {c}plan{/c}?",
+          "mm": "ဒီအစီအစဉ်နဲ့ ပတ်သက်ပြီး တကယ်ပဲ ပြောနေတာလား။"
+        },
+        {
+          "en": "He took the {w}serious{/w} {c}situation{/c} well.",
+          "mm": "သူ အဲဒီအရေးကြီးတဲ့ အခြေအနေကို ကောင်းကောင်း ကိုင်တွယ်ခဲ့တယ်။"
+        },
+        {
+          "en": "She is very {w}serious{/w} about her {c}studies{/c}.",
+          "mm": "သူမ သူ့ရဲ့ ပညာရေးအတွက် အရမ်း အလေးအနက်ထားတယ်။"
+        }
+      ],
+      "short_mm": "တည်ကြည်တဲ့၊ အလေးအနက်ထားတဲ့"
+    },
+    {
+      "word": "honest",
+      "pos": "adjective",
+      "ipa": "/ˈɒn.ɪst/",
+      "short_en": "telling the truth; not lying",
+      "examples": [
+        {
+          "en": "She is an {w}honest{/w} {c}person{/c}.",
+          "mm": "သူမက ရိုးသားတဲ့သူပါ။"
+        },
+        {
+          "en": "To be {w}honest{/w}, I don't {c}know{/c}.",
+          "mm": "ရိုးရိုးသားသား ပြောရရင် ကျွန်တော် မသိဘူး။"
+        },
+        {
+          "en": "He gave an {w}honest{/w} {c}opinion{/c}.",
+          "mm": "သူ ရိုးသားတဲ့ အမြင်ကို ပြောပြခဲ့တယ်။"
+        },
+        {
+          "en": "It's important to be {w}honest{/w} with your {c}friends{/c}.",
+          "mm": "သူငယ်ချင်းတွေနဲ့ဆို ရိုးသားဖို့က အရေးကြီးတယ်။"
+        },
+        {
+          "en": "She made an {w}honest{/w} {c}mistake{/c}.",
+          "mm": "သူမ မရည်ရွယ်ဘဲ အမှားတစ်ခု လုပ်မိခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "ရိုးသားတဲ့"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "He tells great jokes; he's so ___.",
+      "right": "funny",
+      "wrong": "fun",
+      "why": "\"funny\" = makes you laugh; \"fun\" = an enjoyable experience.",
+      "why_mm": "funny က လူကို ပြောတာပါ (ရယ်စရာကောင်းတဲ့သူ)၊ fun ကတော့ အတွေ့အကြုံကို ပြောတာပါ (ပျော်စရာကောင်းတဲ့အရာ)။"
+    },
+    {
+      "prompt": "She believes in herself; she is very ___.",
+      "right": "confident",
+      "wrong": "arrogant",
+      "why": "\"confident\" is positive; \"arrogant\" is negative (thinking you are better than others).",
+      "why_mm": "confident က ကိုယ့်ကိုယ်ကိုယ် ယုံကြည်မှုရှိတာဆိုတော့ ကောင်းပါတယ်၊ arrogant ကတော့ ကိုယ့်ကိုယ်ကိုယ် တခြားသူထက် သာတယ်လို့ ထင်နေတာမို့ မကောင်းပါဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "My friend always tells jokes. He is very ___.",
+      "answer": "funny",
+      "options": [
+        "funny",
+        "shy",
+        "lazy"
+      ],
+      "explain_en": "Someone who makes you laugh is funny.",
+      "explain_mm": "လူတွေကို ရယ်အောင် လုပ်ပေးတတ်တဲ့သူကို funny လို့ ခေါ်တယ်ပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She always tells the truth. She is very ___.",
+      "answer": "honest",
+      "options": [
+        "honest",
+        "lazy",
+        "funny"
+      ],
+      "explain_en": "An honest person tells the truth.",
+      "explain_mm": "အမှန်အတိုင်း ပြောတဲ့သူက honest ဖြစ်တာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He doesn't want to do any work today. He is being ___.",
+      "answer": "lazy",
+      "options": [
+        "lazy",
+        "kind",
+        "smart"
+      ],
+      "explain_en": "Not wanting to work is being lazy.",
+      "explain_mm": "အလုပ်မလုပ်ချင်တဲ့သူကို lazy လို့ ခေါ်တယ်လေ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She is nervous when she meets new people. She is ___.",
+      "answer": "shy",
+      "options": [
+        "shy",
+        "friendly",
+        "confident"
+      ],
+      "explain_en": "Being nervous around others is being shy.",
+      "explain_mm": "လူစိမ်းတွေနဲ့တွေ့ရင် ရင်ခုန်ပြီး ရှက်တတ်တာကို shy လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He is very good at learning new things. He is ___.",
+      "answer": "smart",
+      "options": [
+        "smart",
+        "shy",
+        "serious"
+      ],
+      "explain_en": "Intelligent people are smart.",
+      "explain_mm": "ဉာဏ်ရည်ထက်မြက်တဲ့သူကို smart လို့ ခေါ်တာပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"She is always ___ to everyone she meets.\"",
+      "answer": "friendly",
+      "options": [],
+      "explain_en": "Behaving in a pleasant way is being friendly.",
+      "explain_mm": "ဖော်ရွေပြီး ဆက်ဆံရေးကောင်းတဲ့သူကို friendly ဖြစ်တယ်လို့ ပြောတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"He is very ___ of his ability to win.\"",
+      "answer": "confident",
+      "options": [],
+      "explain_en": "Being sure of your abilities is being confident.",
+      "explain_mm": "ကိုယ့်အရည်အချင်းကို ကိုယ်ယုံကြည်တာက confident ဖြစ်တာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"He is so ___ — he helped me carry my bags.\"",
+      "answer": "kind",
+      "options": [],
+      "explain_en": "Helping others is being kind.",
+      "explain_mm": "သူတစ်ပါးကို ကူညီတတ်တဲ့သူက kind ဖြစ်တာပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"She doesn't joke much; she is very ___.\"",
+      "answer": "serious",
+      "options": [],
+      "explain_en": "Someone who doesn't joke is serious.",
+      "explain_mm": "နောက်ပြောင်မနေဘဲ တည်တည်ငြိမ်ငြိမ်နေတဲ့သူကို serious ဖြစ်တယ်လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"The party was so ___!\"",
+      "answer": "fun",
+      "options": [],
+      "explain_en": "An enjoyable event is fun.",
+      "explain_mm": "ပျော်ဖို့ကောင်းတဲ့ အခမ်းအနား ဒါမှမဟုတ် အတွေ့အကြုံကို fun လို့ သုံးပါတယ်။"
+    }
+  ]
+}
