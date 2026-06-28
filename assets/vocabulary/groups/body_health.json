@@ -1,0 +1,388 @@
+{
+  "id": "body_health",
+  "title": "Health & feeling ill",
+  "level": 1,
+  "order": 6,
+  "theme": "Health",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Feeling unwell is a common topic in daily conversation. These phrases will help you explain what is wrong, how you feel, and what you are doing to get better.",
+  "why_grouped_mm": "ဒီစကားစုတွေက ကိုယ်နေမကောင်းဖြစ်တဲ့အခါ ဘာဖြစ်နေလဲ၊ ဘယ်လိုခံစားနေရလဲ၊ ဘာလုပ်ရမလဲဆိုတာကို ပြောပြဖို့ အရမ်းအသုံးဝင်ပါတယ်။",
+  "words": [
+    {
+      "word": "have a cold",
+      "pos": "expression",
+      "short_en": "to be sick with a runny nose, sneezing, and coughing",
+      "examples": [
+        {
+          "en": "I think I'm starting to {w}have a cold{/w} — my {c}nose{/c} is running.",
+          "mm": "ကျွန်တော် အအေးမိတော့မယ်ထင်တယ်၊ နှာရည်တွေယိုနေလို့။"
+        },
+        {
+          "en": "He can't come to work because he {w}has a cold{/w} and a {c}fever{/c}.",
+          "mm": "သူ အအေးမိပြီး ဖျားနေလို့ အလုပ်ကို မလာနိုင်ဘူး။"
+        },
+        {
+          "en": "It's just a {w}cold{/w}, so I'll {c}rest{/c} for a day.",
+          "mm": "အအေးမိရုံလေးပါ၊ ဒါကြောင့် တစ်ရက်လောက် နားလိုက်တော့မယ်။"
+        },
+        {
+          "en": "She {w}has a cold{/w} and a very sore {c}throat{/c}.",
+          "mm": "သူမ အအေးမိပြီး လည်ချောင်း အရမ်းနာနေတယ်။"
+        },
+        {
+          "en": "Everyone in the office seems to {w}have a cold{/w} this {c}week{/c}.",
+          "mm": "ဒီအပတ်ထဲမှာ ရုံးကလူတိုင်း အအေးမိနေကြသလိုပဲ။"
+        }
+      ],
+      "short_mm": "အအေးမိနေတာ"
+    },
+    {
+      "word": "have a headache",
+      "pos": "expression",
+      "short_en": "to have pain in your head",
+      "examples": [
+        {
+          "en": "I've {w}had a headache{/w} all {c}day{/c}.",
+          "mm": "တစ်နေ့လုံး ခေါင်းကိုက်နေတာပဲ။"
+        },
+        {
+          "en": "Take some {c}water{/c} and rest if you {w}have a headache{/w}.",
+          "mm": "ခေါင်းကိုက်နေရင် ရေလေးသောက်ပြီး နားလိုက်ပါ။"
+        },
+        {
+          "en": "The {c}noise{/c} is giving me such a {w}headache{/w}.",
+          "mm": "ဒီဆူညံသံတွေကြောင့် ခေါင်းကို အရမ်းကိုက်လာပြီ။"
+        },
+        {
+          "en": "If you {w}have a headache{/w}, try to {c}sleep{/c}.",
+          "mm": "ခေါင်းကိုက်နေရင် အိပ်ဖို့ ကြိုးစားကြည့်ပါ။"
+        },
+        {
+          "en": "She {w}has a bad headache{/w} from the {c}sun{/c}.",
+          "mm": "သူမ နေပူထဲသွားမိလို့ ခေါင်းတွေ အရမ်းကိုက်နေတယ်။"
+        }
+      ],
+      "short_mm": "ခေါင်းကိုက်နေတာ"
+    },
+    {
+      "word": "feel sick",
+      "pos": "expression",
+      "short_en": "to feel like you might vomit",
+      "nuance_en": "In British English, 'feel sick' usually means you want to vomit. In American English, it can just mean 'feel ill'.",
+      "examples": [
+        {
+          "en": "I {w}feel sick{/w} — I think I ate some bad {c}fish{/c}.",
+          "mm": "နေမကောင်းသလိုပဲ၊ ငါးတစ်မျိုးမျိုး စားမိလို့များလား။"
+        },
+        {
+          "en": "Do you {w}feel sick{/w} after the {c}boat{/c} ride?",
+          "mm": "လှေစီးပြီးသွားတော့ နေမကောင်းဖြစ်သွားလား။"
+        },
+        {
+          "en": "She {w}felt sick{/w} all morning from the {c}flu{/c}.",
+          "mm": "သူမ တုပ်ကွေးမိပြီး မနက်ခင်းတစ်လျှောက်လုံး နေမကောင်းဖြစ်နေတယ်။"
+        },
+        {
+          "en": "If you {w}feel sick{/w}, go and lie {c}down{/c}.",
+          "mm": "နေမကောင်းဘူးဆိုရင် သွားပြီး လှဲနေလိုက်ပါ။"
+        },
+        {
+          "en": "The {c}smell{/c} makes me {w}feel sick{/w}.",
+          "mm": "အဲဒီအနံ့က ကျွန်တော့်ကို နေမကောင်းဖြစ်စေတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "have a cold"
+      ],
+      "short_mm": "အန်ချင်သလို ခံစားရတာ / နေမကောင်းဖြစ်တာ",
+      "nuance_mm": "ဗြိတိန်ဘက်မှာဆိုရင် အန်ချင်တာကို အဓိကဆိုလိုပြီး အမေရိကန်ဘက်မှာတော့ နေမကောင်းတာကို ယေဘုယျပြောတာပါ။"
+    },
+    {
+      "word": "my throat hurts",
+      "pos": "expression",
+      "short_en": "to have pain in the inside of your neck",
+      "examples": [
+        {
+          "en": "{w}My throat hurts{/w} when I {c}swallow{/c}.",
+          "mm": "အစာမျိုလိုက်တိုင်း လည်ချောင်းနာတယ်။"
+        },
+        {
+          "en": "Drink some {c}tea{/c} if {w}your throat hurts{/w}.",
+          "mm": "လည်ချောင်းနာနေရင် လက်ဖက်ရည်လေး နွေးနွေးသောက်ပါ။"
+        },
+        {
+          "en": "I've been shouting, so now {w}my throat hurts{/w} {c}badly{/c}.",
+          "mm": "အော်ဟစ်ထားမိလို့ အခု လည်ချောင်း အရမ်းနာနေတယ်။"
+        },
+        {
+          "en": "Does {w}your throat hurt{/w} when you {c}talk{/c}?",
+          "mm": "စကားပြောတဲ့အခါ လည်ချောင်းနာသေးလား။"
+        },
+        {
+          "en": "It's cold outside, and now {w}my throat hurts{/w} {c}again{/c}.",
+          "mm": "အပြင်မှာ အေးနေလို့ အခု လည်ချောင်း ပြန်နာလာပြန်ပြီ။"
+        }
+      ],
+      "short_mm": "လည်ချောင်းနာနေတာ"
+    },
+    {
+      "word": "see a doctor",
+      "pos": "expression",
+      "short_en": "to visit a medical professional for help",
+      "examples": [
+        {
+          "en": "You should {w}see a doctor{/w} about that {c}cough{/c}.",
+          "mm": "အဲဒီချောင်းဆိုးတာအတွက် ဆရာဝန်နဲ့ ပြသင့်တယ်။"
+        },
+        {
+          "en": "I'm going to {w}see a doctor{/w} this {c}afternoon{/c}.",
+          "mm": "ဒီနေ့ နေ့လယ်ကျရင် ဆရာဝန်နဲ့ သွားပြတော့မယ်။"
+        },
+        {
+          "en": "She needs to {w}see a doctor{/w} for her {c}back{/c}.",
+          "mm": "သူမ ခါးအတွက် ဆရာဝန်နဲ့ ပြဖို့ လိုအပ်တယ်။"
+        },
+        {
+          "en": "It's important to {w}see a doctor{/w} if you {c}faint{/c}.",
+          "mm": "မူးလဲသွားရင် ဆရာဝန်နဲ့ ပြဖို့က အရေးကြီးတယ်။"
+        },
+        {
+          "en": "Did you {w}see a doctor{/w} for your {c}injury{/c}?",
+          "mm": "ဒဏ်ရာအတွက် ဆရာဝန်နဲ့ ပြခဲ့သေးလား။"
+        }
+      ],
+      "short_mm": "ဆရာဝန်နဲ့ ပြတာ"
+    },
+    {
+      "word": "feel better",
+      "pos": "expression",
+      "short_en": "to start recovering from an illness",
+      "examples": [
+        {
+          "en": "I hope you {w}feel better{/w} {c}soon{/c}.",
+          "mm": "မြန်မြန်သက်သာပါစေလို့ ဆုတောင်းပေးပါတယ်။"
+        },
+        {
+          "en": "I {w}feel much better{/w} after a good night's {c}sleep{/c}.",
+          "mm": "ညက ကောင်းကောင်းအိပ်လိုက်ရလို့ အခု အတော်လေး သက်သာသွားပြီ။"
+        },
+        {
+          "en": "Do you {w}feel better{/w} after taking the {c}medicine{/c}?",
+          "mm": "ဆေးသောက်ပြီးတော့ နေလို့ ပိုသက်သာလား။"
+        },
+        {
+          "en": "She says she {w}feels better{/w} {c}today{/c}.",
+          "mm": "သူမ ဒီနေ့တော့ နေလို့ ပိုကောင်းလာတယ်လို့ ပြောတယ်။"
+        },
+        {
+          "en": "Resting will help you {w}feel better{/w} {c}quickly{/c}.",
+          "mm": "နားနားနေနေလုပ်ရင် မြန်မြန် သက်သာလာလိမ့်မယ်။"
+        }
+      ],
+      "short_mm": "သက်သာလာတာ"
+    },
+    {
+      "word": "be in pain",
+      "pos": "expression",
+      "short_en": "to have physical suffering or discomfort",
+      "examples": [
+        {
+          "en": "He is {w}in a lot of pain{/w} after his {c}accident{/c}.",
+          "mm": "မတော်တဆဖြစ်ပြီးတဲ့နောက် သူ အရမ်းကို နာကျင်နေတယ်။"
+        },
+        {
+          "en": "Are you {w}in pain{/w} right {c}now{/c}?",
+          "mm": "အခု နာကျင်နေသေးလား။"
+        },
+        {
+          "en": "She was {w}in pain{/w} for several {c}days{/c}.",
+          "mm": "သူမ ရက်အတော်ကြာအောင် နာကျင်နေခဲ့ရတယ်။"
+        },
+        {
+          "en": "The {c}dentist{/c} will help if you are {w}in pain{/w}.",
+          "mm": "နာကျင်နေရင် သွားဆရာဝန်က ကူညီပေးပါလိမ့်မယ်။"
+        },
+        {
+          "en": "He is {w}in pain{/w} because of his {c}leg{/c}.",
+          "mm": "သူ့ခြေထောက်ကြောင့် သူ အရမ်းနာနေတယ်။"
+        }
+      ],
+      "short_mm": "နာကျင်နေတာ"
+    },
+    {
+      "word": "take some medicine",
+      "pos": "expression",
+      "short_en": "to consume pills or liquid to treat an illness",
+      "examples": [
+        {
+          "en": "You need to {w}take some medicine{/w} for your {c}fever{/c}.",
+          "mm": "ဖျားနေတာအတွက် ဆေးသောက်ဖို့ လိုအပ်တယ်။"
+        },
+        {
+          "en": "I {w}took some medicine{/w} and went to {c}bed{/c}.",
+          "mm": "ဆေးသောက်ပြီးတော့ အိပ်ရာဝင်လိုက်တယ်။"
+        },
+        {
+          "en": "Make sure you {w}take some medicine{/w} with {c}food{/c}.",
+          "mm": "ဆေးကို အစာနဲ့တွဲသောက်ဖို့ သတိထားပါ။"
+        },
+        {
+          "en": "She {w}takes some medicine{/w} every {c}morning{/c}.",
+          "mm": "သူမ မနက်တိုင်း ဆေးသောက်တယ်။"
+        },
+        {
+          "en": "Did you {w}take some medicine{/w} for the {c}pain{/c}?",
+          "mm": "နာတာအတွက် ဆေးသောက်ခဲ့သေးလား။"
+        }
+      ],
+      "short_mm": "ဆေးသောက်တာ"
+    },
+    {
+      "word": "have a temperature",
+      "pos": "expression",
+      "short_en": "to have a body temperature higher than normal (a fever)",
+      "examples": [
+        {
+          "en": "The child {w}has a temperature{/w} and feels very {c}hot{/c}.",
+          "mm": "ကလေးက ဖျားနေပြီး ကိုယ်တွေက အရမ်းပူနေတယ်။"
+        },
+        {
+          "en": "I think I {w}have a temperature{/w} — I'm {c}shivering{/c}.",
+          "mm": "ငါ ဖျားနေပြီထင်တယ်၊ ချမ်းတုန်နေလို့။"
+        },
+        {
+          "en": "She {w}has a high temperature{/w} this {c}evening{/c}.",
+          "mm": "ဒီညနေမှာ သူမ အဖျား အရမ်းတက်နေတယ်။"
+        },
+        {
+          "en": "If you {w}have a temperature{/w}, drink plenty of {c}water{/c}.",
+          "mm": "ဖျားနေရင် ရေများများသောက်ပါ။"
+        },
+        {
+          "en": "He {w}has a temperature{/w}, so keep him in {c}bed{/c}.",
+          "mm": "သူ ဖျားနေတာမို့ အိပ်ရာထဲမှာပဲ နားနေခိုင်းထားပါ။"
+        }
+      ],
+      "short_mm": "ဖျားနေတာ"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I feel like I might be sick. I think I ___.",
+      "right": "have a cold",
+      "wrong": "feel better",
+      "why": "\"have a cold\" describes the illness, while \"feel better\" describes the recovery.",
+      "why_mm": "have a cold က ဖျားနာနေတဲ့ အခြေအနေကို ပြောပြီး feel better က ပြန်ကောင်းလာတဲ့ အခြေအနေကို ပြောတာပါ။"
+    },
+    {
+      "prompt": "My head hurts so much. I ___.",
+      "right": "have a headache",
+      "wrong": "have a temperature",
+      "why": "\"have a headache\" is specific to head pain, whereas \"have a temperature\" refers to fever.",
+      "why_mm": "have a headache က ခေါင်းကိုက်တာကို ပြောပြီး have a temperature က ကိုယ်ပူ/ဖျားတာကို ပြောတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I feel like I might throw up. I ___.",
+      "answer": "feel sick",
+      "options": [
+        "feel sick",
+        "feel better",
+        "have a cold"
+      ],
+      "explain_en": "Feeling like you want to vomit is 'feel sick'.",
+      "explain_mm": "အန်ချင်သလိုဖြစ်တာကို feel sick လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My throat hurts and I'm sneezing. I think I ___.",
+      "answer": "have a cold",
+      "options": [
+        "have a cold",
+        "have a headache",
+        "be in pain"
+      ],
+      "explain_en": "Sneezing and throat pain are common signs of a cold.",
+      "explain_mm": "နှာချေတာနဲ့ လည်ချောင်းနာတာက အအေးမိတဲ့ လက္ခဏာတွေပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm not feeling well, so I should ___.",
+      "answer": "see a doctor",
+      "options": [
+        "see a doctor",
+        "take some medicine",
+        "have a temperature"
+      ],
+      "explain_en": "Visiting a professional when unwell is 'see a doctor'.",
+      "explain_mm": "နေမကောင်းတဲ့အခါ ဆရာဝန်ဆီသွားတာကို see a doctor လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I took my pills and now I ___.",
+      "answer": "feel better",
+      "options": [
+        "feel better",
+        "feel sick",
+        "have a headache"
+      ],
+      "explain_en": "Recovering after medicine means you 'feel better'.",
+      "explain_mm": "ဆေးသောက်ပြီး ပြန်ကောင်းလာရင် feel better ဖြစ်တယ်လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My head is throbbing. I ___.",
+      "answer": "have a headache",
+      "options": [
+        "have a headache",
+        "have a cold",
+        "feel sick"
+      ],
+      "explain_en": "Pain in the head is a headache.",
+      "explain_mm": "ခေါင်းကိုက်တာကို headache လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I'm in so much pain, I need to ___ for my leg.\"",
+      "answer": "take some medicine",
+      "options": [],
+      "explain_en": "Consuming pills for pain is taking medicine.",
+      "explain_mm": "နာကျင်မှုအတွက် ဆေးသောက်တာကို take some medicine လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I'm burning up; I think I ___.\"",
+      "answer": "have a temperature",
+      "options": [],
+      "explain_en": "Having a fever is having a temperature.",
+      "explain_mm": "ကိုယ်ပူနေရင် have a temperature လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"It really hurts to swallow; ___.\"",
+      "answer": "my throat hurts",
+      "options": [],
+      "explain_en": "Pain when swallowing is a sore throat.",
+      "explain_mm": "မျိုချတဲ့အခါ နာရင် လည်ချောင်းနာတာ (sore throat) ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"He is crying because he is ___.\"",
+      "answer": "in pain",
+      "options": [],
+      "explain_en": "Experiencing physical suffering is being in pain.",
+      "explain_mm": "ခန္ဓာကိုယ်မှာ နာကျင်မှုရှိနေတာကို be in pain လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I'm finally starting to ___ after the flu.\"",
+      "answer": "feel better",
+      "options": [],
+      "explain_en": "Recovering is feeling better.",
+      "explain_mm": "နေပြန်ကောင်းလာတာကို feel better လို့ ပြောပါတယ်။"
+    }
+  ]
+}

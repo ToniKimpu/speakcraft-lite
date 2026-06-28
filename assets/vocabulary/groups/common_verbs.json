@@ -1,0 +1,381 @@
+{
+  "id": "common_verbs",
+  "title": "Everyday verbs",
+  "level": 1,
+  "order": 26,
+  "theme": "Common verbs",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "These are the most essential high-frequency verbs in English. Mastering these will help you express almost any daily action.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက အင်္ဂလိပ်စာမှာ အသုံးအများဆုံး ကြိယာတွေမို့လို့ပါ။ ဒါတွေကို ကျွမ်းကျင်သွားရင် နေ့စဉ်သုံး စကားပြောတွေကို အလွယ်တကူ ပြောနိုင်သွားမှာပေါ့။",
+  "words": [
+    {
+      "word": "do",
+      "pos": "verb",
+      "ipa": "/duː/",
+      "short_en": "to perform an action or task",
+      "nuance_en": "Use 'do' for tasks, jobs, or general activities. Use 'make' for creating or producing something new.",
+      "examples": [
+        {
+          "en": "I need to {w}do{/w} my {c}homework{/c}.",
+          "mm": "ကျွန်မ အိမ်စာလုပ်ဖို့ လိုတယ်"
+        },
+        {
+          "en": "Can you {w}do{/w} me a {c}favour{/c}?",
+          "mm": "ကျွန်တော့်ကို တစ်ခုလောက် ကူညီပေးလို့ရမလား"
+        },
+        {
+          "en": "She {w}does{/w} the {c}laundry{/c} every Sunday.",
+          "mm": "သူမက တနင်္ဂနွေနေ့တိုင်း အဝတ်လျှော်တယ်"
+        },
+        {
+          "en": "I have to {w}do{/w} some {c}work{/c} now.",
+          "mm": "ကျွန်တော် အခု အလုပ်နည်းနည်း လုပ်ရဦးမယ်"
+        },
+        {
+          "en": "Did you {w}do{/w} the {c}dishes{/c}?",
+          "mm": "ပန်းကန်တွေ ဆေးပြီးပြီလား"
+        }
+      ],
+      "confuse_with": [
+        "make"
+      ],
+      "short_mm": "လုပ်ဆောင်သည်",
+      "nuance_mm": "Task တွေ၊ အလုပ်တွေ ဒါမှမဟုတ် ယေဘုယျလုပ်ဆောင်ချက်တွေအတွက် 'do' ကို သုံးပါတယ်၊ တစ်ခုခုကို အသစ်ဖန်တီးတာဆိုရင်တော့ 'make' ကို သုံးရမှာပေါ့"
+    },
+    {
+      "word": "make",
+      "pos": "verb",
+      "ipa": "/meɪk/",
+      "short_en": "to create or produce something",
+      "nuance_en": "Use 'make' for things you build, cook, or create. Use 'do' for actions and tasks.",
+      "examples": [
+        {
+          "en": "I will {w}make{/w} some {c}coffee{/c}.",
+          "mm": "ကျွန်တော် ကော်ဖီဖျော်လိုက်မယ်"
+        },
+        {
+          "en": "Don't {w}make{/w} a {c}mess{/c} in the kitchen.",
+          "mm": "မီးဖိုချောင်ထဲမှာ ရှုပ်ပွအောင် မလုပ်နဲ့နော်"
+        },
+        {
+          "en": "She {w}made{/w} a {c}cake{/c} for his birthday.",
+          "mm": "သူမက သူ့မွေးနေ့အတွက် မုန့်ဖုတ်ပေးတယ်"
+        },
+        {
+          "en": "Please don't {w}make{/w} so much {c}noise{/c}.",
+          "mm": "ကျေးဇူးပြုပြီး အရမ်းဆူညံအောင် မလုပ်ပါနဲ့"
+        },
+        {
+          "en": "Did you {w}make{/w} a {c}mistake{/c}?",
+          "mm": "မှားသွားတာမျိုး ရှိလား"
+        }
+      ],
+      "confuse_with": [
+        "do"
+      ],
+      "short_mm": "ဖန်တီးသည်/ပြုလုပ်သည်",
+      "nuance_mm": "ကိုယ်တိုင် တည်ဆောက်တာ၊ ချက်ပြုတ်တာ ဒါမှမဟုတ် ဖန်တီးတဲ့အရာတွေအတွက် 'make' ကို သုံးပါတယ်၊ အလုပ်ကိစ္စတွေအတွက်ဆိုရင်တော့ 'do' ကို သုံးတာပေါ့"
+    },
+    {
+      "word": "have",
+      "pos": "verb",
+      "ipa": "/hæv/",
+      "short_en": "to possess or hold something",
+      "examples": [
+        {
+          "en": "I {w}have{/w} a new {c}car{/c}.",
+          "mm": "ကျွန်တော့်မှာ ကားအသစ်တစ်စီး ရှိတယ်"
+        },
+        {
+          "en": "Do you {w}have{/w} the {c}time{/c}?",
+          "mm": "အခု အချိန် ဘယ်လောက်ရှိပြီလဲ"
+        },
+        {
+          "en": "We {w}have{/w} a {c}meeting{/c} at ten.",
+          "mm": "ကျွန်တော်တို့မှာ ၁၀ နာရီကျရင် အစည်းအဝေး ရှိတယ်"
+        },
+        {
+          "en": "I {w}have{/w} a {c}brother{/c} and two sisters.",
+          "mm": "ကျွန်တော့်မှာ မောင်တစ်ယောက်နဲ့ ညီမနှစ်ယောက် ရှိတယ်"
+        },
+        {
+          "en": "Let's {w}have{/w} some {c}lunch{/c} together.",
+          "mm": "နေ့လယ်စာ အတူတူ စားကြရအောင်"
+        }
+      ],
+      "short_mm": "ပိုင်ဆိုင်သည်"
+    },
+    {
+      "word": "get",
+      "pos": "verb",
+      "ipa": "/ɡet/",
+      "short_en": "to receive, obtain, or become",
+      "examples": [
+        {
+          "en": "I need to {w}get{/w} a {c}job{/c}.",
+          "mm": "ကျွန်တော် အလုပ်တစ်ခု ရှာဖို့ လိုနေတယ်"
+        },
+        {
+          "en": "Did you {w}get{/w} my {c}email{/c}?",
+          "mm": "ကျွန်တော့် အီးမေးလ် ရောက်လား"
+        },
+        {
+          "en": "I {w}get{/w} {c}tired{/c} in the afternoon.",
+          "mm": "နေ့လယ်ပိုင်းဆိုရင် ကျွန်တော် ပင်ပန်းလာတယ်"
+        },
+        {
+          "en": "Where did you {w}get{/w} those {c}shoes{/c}?",
+          "mm": "အဲဒီဖိနပ်ကို ဘယ်မှာ ဝယ်တာလဲ"
+        },
+        {
+          "en": "It's starting to {w}get{/w} {c}dark{/c}.",
+          "mm": "မှောင်စပြုလာပြီ"
+        }
+      ],
+      "short_mm": "ရရှိသည်/ဖြစ်လာသည်"
+    },
+    {
+      "word": "take",
+      "pos": "verb",
+      "ipa": "/teɪk/",
+      "short_en": "to remove, carry, or use transport",
+      "examples": [
+        {
+          "en": "Please {w}take{/w} your {c}bag{/c}.",
+          "mm": "ကျေးဇူးပြုပြီး မင်းအိတ်ကို ယူသွားပါ"
+        },
+        {
+          "en": "I {w}take{/w} the {c}bus{/c} to work.",
+          "mm": "ကျွန်တော် အလုပ်သွားရင် ဘတ်စ်ကားနဲ့ စီးသွားတယ်"
+        },
+        {
+          "en": "It will {w}take{/w} one {c}hour{/c} to get there.",
+          "mm": "အဲဒီကို ရောက်ဖို့ တစ်နာရီလောက် ကြာလိမ့်မယ်"
+        },
+        {
+          "en": "Can you {w}take{/w} a {c}photo{/c} of us?",
+          "mm": "ကျွန်တော်တို့ကို ဓာတ်ပုံလေး တစ်ပုံလောက် ရိုက်ပေးလို့ရမလား"
+        },
+        {
+          "en": "Don't forget to {w}take{/w} your {c}medicine{/c}.",
+          "mm": "ဆေးသောက်ဖို့ မမေ့နဲ့နော်"
+        }
+      ],
+      "short_mm": "ယူဆောင်သည်/စီးသည်"
+    },
+    {
+      "word": "give",
+      "pos": "verb",
+      "ipa": "/ɡɪv/",
+      "short_en": "to offer something to someone",
+      "examples": [
+        {
+          "en": "Can you {w}give{/w} me a {c}hand{/c}?",
+          "mm": "ကျွန်တော့်ကို နည်းနည်းလောက် ကူညီပေးပါလား"
+        },
+        {
+          "en": "I {w}gave{/w} her a {c}gift{/c}.",
+          "mm": "ကျွန်မ သူ့ကို လက်ဆောင်တစ်ခု ပေးလိုက်တယ်"
+        },
+        {
+          "en": "Please {w}give{/w} me the {c}key{/c}.",
+          "mm": "ကျေးဇူးပြုပြီး သော့ကို ပေးပါဦး"
+        },
+        {
+          "en": "They {w}give{/w} {c}money{/c} to charity.",
+          "mm": "သူတို့က ပရဟိတအတွက် ငွေလှူကြတယ်"
+        },
+        {
+          "en": "Don't {w}give{/w} {c}up{/c} yet!",
+          "mm": "အခုထိတော့ လက်မလျှော့လိုက်ပါနဲ့ဦး"
+        }
+      ],
+      "short_mm": "ပေးသည်"
+    },
+    {
+      "word": "go",
+      "pos": "verb",
+      "ipa": "/ɡəʊ/",
+      "short_en": "to move from one place to another",
+      "examples": [
+        {
+          "en": "I {w}go{/w} to {c}school{/c} every day.",
+          "mm": "ကျွန်တော် ကျောင်းနေ့တိုင်း သွားတယ်"
+        },
+        {
+          "en": "Let's {w}go{/w} for a {c}walk{/c}.",
+          "mm": "လမ်းလျှောက်ထွက်ကြရအောင်"
+        },
+        {
+          "en": "She {w}goes{/w} to the {c}gym{/c} at night.",
+          "mm": "သူမက ညဘက်ဆို ဂျင်မ်သွားတယ်"
+        },
+        {
+          "en": "It's time to {w}go{/w} {c}home{/c}.",
+          "mm": "အိမ်ပြန်ရမယ့် အချိန်ရောက်ပြီ"
+        },
+        {
+          "en": "We {w}go{/w} {c}shopping{/c} on Saturdays.",
+          "mm": "ကျွန်တော်တို့ စနေနေ့တိုင်း ဈေးဝယ်ထွက်တယ်"
+        }
+      ],
+      "short_mm": "သွားသည်"
+    },
+    {
+      "word": "come",
+      "pos": "verb",
+      "ipa": "/kʌm/",
+      "short_en": "to move towards the speaker",
+      "examples": [
+        {
+          "en": "Please {w}come{/w} {c}here{/c}.",
+          "mm": "ဒီကို ခဏလောက် လာပေးပါ"
+        },
+        {
+          "en": "Can you {w}come{/w} to my {c}party{/c}?",
+          "mm": "ကျွန်တော့် ပါတီကို လာနိုင်မလား"
+        },
+        {
+          "en": "She {w}comes{/w} from {c}Japan{/c}.",
+          "mm": "သူမက ဂျပန်နိုင်ငံက လာတာ"
+        },
+        {
+          "en": "The {w}bus{/w} is {c}coming{/c} now.",
+          "mm": "ဘတ်စ်ကား လာနေပြီ"
+        },
+        {
+          "en": "Please {w}come{/w} {c}inside{/c} and sit down.",
+          "mm": "အထဲကို ဝင်ခဲ့ပြီး ထိုင်ပါ"
+        }
+      ],
+      "short_mm": "လာသည်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I need to ___ my homework.",
+      "right": "do",
+      "wrong": "make",
+      "why": "Use 'do' for tasks/homework.",
+      "why_mm": "အိမ်စာလုပ်တာ ဒါမှမဟုတ် တာဝန်တစ်ခုခုလုပ်တာဆိုရင် 'do' ကို သုံးပါ"
+    },
+    {
+      "prompt": "I will ___ a cake for your birthday.",
+      "right": "make",
+      "wrong": "do",
+      "why": "Use 'make' for creating something.",
+      "why_mm": "တစ်ခုခုကို အသစ်ဖန်တီးတာ ဒါမှမဟုတ် ပြုလုပ်တာဆိုရင် 'make' ကို သုံးပါ"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I need to ___ my homework.",
+      "answer": "do",
+      "options": [
+        "do",
+        "make",
+        "take"
+      ],
+      "explain_en": "Do is used for tasks and duties.",
+      "explain_mm": "Do ကို တာဝန်တွေနဲ့ အလုပ်ကိစ္စတွေအတွက် သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Can you ___ me a coffee?",
+      "answer": "make",
+      "options": [
+        "make",
+        "do",
+        "give"
+      ],
+      "explain_en": "Make is used for creating food or drinks.",
+      "explain_mm": "Make ကို အစားအစာ ဒါမှမဟုတ် အဖျော်ယမကာတွေ ဖန်တီးတဲ့အခါ သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I always ___ the bus to work.",
+      "answer": "take",
+      "options": [
+        "take",
+        "go",
+        "give"
+      ],
+      "explain_en": "Take is used for transport.",
+      "explain_mm": "Take ကို ယာဉ်စီးသွားတဲ့အခါ သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Please ___ here and sit down.",
+      "answer": "come",
+      "options": [
+        "come",
+        "go",
+        "get"
+      ],
+      "explain_en": "Come is movement towards the speaker.",
+      "explain_mm": "Come က စကားပြောသူဆီကို ဦးတည်လာတဲ့ လှုပ်ရှားမှုကို ဆိုလိုပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I need to ___ a job.",
+      "answer": "get",
+      "options": [
+        "get",
+        "take",
+        "do"
+      ],
+      "explain_en": "Get is used for obtaining something.",
+      "explain_mm": "Get ကို တစ်ခုခု ရရှိတဲ့အခါ သုံးပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Can you ___ me a hand with this box?",
+      "answer": "give",
+      "options": [
+        "give",
+        "make",
+        "do"
+      ],
+      "explain_en": "Give a hand is an idiom for help.",
+      "explain_mm": "Give a hand ဆိုတာ အကူအညီပေးတယ်လို့ အဓိပ္ပာယ်ရတဲ့ စကားစုပါ"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We ___ lunch at 12:00.",
+      "answer": "have",
+      "options": [
+        "have",
+        "take",
+        "go"
+      ],
+      "explain_en": "Have is used for eating meals.",
+      "explain_mm": "Have ကို အစားအစာ စားသောက်တဲ့အခါ သုံးပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "I ___ to the cinema every weekend.",
+      "answer": "go",
+      "options": [],
+      "explain_en": "Go is used for travel or movement.",
+      "explain_mm": "Go ကို ခရီးသွားတာ ဒါမှမဟုတ် နေရာရွေ့တာအတွက် သုံးပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Don't ___ a mess in the living room.",
+      "answer": "make",
+      "options": [],
+      "explain_en": "Make a mess is a common collocation.",
+      "explain_mm": "Make a mess ဆိုတာ အသုံးများတဲ့ စကားတွဲတစ်ခုပါ"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Did you ___ the dishes after dinner?",
+      "answer": "do",
+      "options": [],
+      "explain_en": "Do the dishes is a standard household task.",
+      "explain_mm": "Do the dishes ဆိုတာ အိမ်မှုကိစ္စအတွက် အသုံးများတဲ့ စကားတွဲပေါ့"
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "id": "phone_internet",
+  "title": "Phone & internet",
+  "level": 1,
+  "order": 21,
+  "theme": "Technology",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Modern life revolves around our devices. These phrases cover the essential daily actions you need to talk about your phone and internet usage.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေကတော့ နေ့စဉ်ဘဝမှာ ဖုန်းနဲ့ အင်တာနက်အသုံးပြုတဲ့အခါ မဖြစ်မနေသိထားရမယ့် အသုံးအနှုန်းတွေဖြစ်လို့ စုစည်းပေးထားတာပါ။",
+  "words": [
+    {
+      "word": "make a call",
+      "pos": "expression",
+      "short_en": "to speak to someone on the phone",
+      "examples": [
+        {
+          "en": "I need to {w}make a call{/w} to my {c}boss{/c}.",
+          "mm": "ကျွန်တော် အလုပ်ရှင်ဆီ ဖုန်းဆက်ဖို့ လိုနေတယ်။"
+        },
+        {
+          "en": "Can I {w}make a call{/w} from your {c}phone{/c}?",
+          "mm": "မင်းဖုန်းကနေ ဖုန်းခဏလောက် ဆက်လို့ရမလား။"
+        },
+        {
+          "en": "He went outside to {w}make a call{/w} in {c}private{/c}.",
+          "mm": "သူ တစ်ယောက်တည်း စကားပြောဖို့ အပြင်ထွက်သွားတယ်။"
+        },
+        {
+          "en": "It's too noisy here to {w}make a call{/w} {c}properly{/c}.",
+          "mm": "ဒီနေရာက ဆူညံလွန်းလို့ ဖုန်းကောင်းကောင်း ပြောလို့မရဘူး။"
+        },
+        {
+          "en": "She {w}made a call{/w} to her {c}mother{/c} this morning.",
+          "mm": "ဒီမနက် သူ သူ့အမေဆီ ဖုန်းဆက်လိုက်တယ်။"
+        }
+      ],
+      "short_mm": "ဖုန်းခေါ်တယ်"
+    },
+    {
+      "word": "send a text",
+      "pos": "expression",
+      "short_en": "to send a written message via phone",
+      "examples": [
+        {
+          "en": "Please {w}send a text{/w} when you {c}arrive{/c}.",
+          "mm": "ရောက်ရင် စာလေးပို့ပေးပါ။"
+        },
+        {
+          "en": "I'll {w}send a text{/w} to the {c}group{/c} chat.",
+          "mm": "ကျွန်တော် အဖွဲ့ထဲကို စာလေး ပို့လိုက်မယ်။"
+        },
+        {
+          "en": "Did you {w}send a text{/w} to your {c}friend{/c}?",
+          "mm": "မင်း သူငယ်ချင်းဆီ စာပို့လိုက်သေးလား။"
+        },
+        {
+          "en": "It's faster to {w}send a text{/w} than to {c}call{/c}.",
+          "mm": "ဖုန်းဆက်တာထက် စာပို့တာက ပိုမြန်တယ်။"
+        },
+        {
+          "en": "She {w}sent a text{/w} to confirm the {c}time{/c}.",
+          "mm": "အချိန်အတည်ပြုဖို့ သူ စာပို့လိုက်တယ်။"
+        }
+      ],
+      "short_mm": "စာပို့တယ်"
+    },
+    {
+      "word": "hang up",
+      "pos": "expression",
+      "short_en": "to end a phone conversation",
+      "examples": [
+        {
+          "en": "Don't {w}hang up{/w} on me {c}yet{/c}!",
+          "mm": "ဖုန်းမချလိုက်ပါနဲ့ဦး။"
+        },
+        {
+          "en": "He {w}hung up{/w} the phone in {c}anger{/c}.",
+          "mm": "သူ ဒေါသထွက်ပြီး ဖုန်းချလိုက်တယ်။"
+        },
+        {
+          "en": "I had to {w}hang up{/w} because of a {c}meeting{/c}.",
+          "mm": "အစည်းအဝေးရှိလို့ ဖုန်းချလိုက်ရတယ်။"
+        },
+        {
+          "en": "She {w}hung up{/w} after saying {c}goodbye{/c}.",
+          "mm": "သူ နှုတ်ဆက်ပြီးတာနဲ့ ဖုန်းချလိုက်တယ်။"
+        },
+        {
+          "en": "Why did you {w}hang up{/w} so {c}quickly{/c}?",
+          "mm": "ဘာလို့ ဖုန်းကို အဲ့လောက်မြန်မြန် ချလိုက်တာလဲ။"
+        }
+      ],
+      "short_mm": "ဖုန်းချလိုက်တယ်"
+    },
+    {
+      "word": "run out of battery",
+      "pos": "expression",
+      "short_en": "when your phone loses all power",
+      "examples": [
+        {
+          "en": "My phone is about to {w}run out of battery{/w} {c}soon{/c}.",
+          "mm": "ကျွန်တော့်ဖုန်း ဘက်ထရီ ကုန်တော့မယ်။"
+        },
+        {
+          "en": "I {w}ran out of battery{/w} during the {c}train{/c} ride.",
+          "mm": "ရထားစီးနေတုန်း ဘက်ထရီ ကုန်သွားတယ်။"
+        },
+        {
+          "en": "Always charge your phone before it {w}runs out of battery{/w} {c}completely{/c}.",
+          "mm": "ဘက်ထရီ လုံးဝကုန်ခါနီးတိုင်း အမြဲ အားသွင်းထားပါ။"
+        },
+        {
+          "en": "She couldn't call because she {w}ran out of battery{/w} {c}yesterday{/c}.",
+          "mm": "မနေ့က ဘက်ထရီ ကုန်သွားလို့ သူ ဖုန်းမဆက်နိုင်ခဲ့ဘူး။"
+        },
+        {
+          "en": "My phone {w}runs out of battery{/w} very {c}fast{/c}.",
+          "mm": "ကျွန်တော့်ဖုန်းက ဘက်ထရီ အရမ်းမြန်မြန် ကုန်တယ်။"
+        }
+      ],
+      "short_mm": "ဘက်ထရီကုန်သွားတယ်"
+    },
+    {
+      "word": "no signal",
+      "pos": "expression",
+      "short_en": "when you cannot connect to the network",
+      "examples": [
+        {
+          "en": "I have {w}no signal{/w} in this {c}building{/c}.",
+          "mm": "ဒီအဆောက်အအုံထဲမှာ ဖုန်းလိုင်း မမိဘူး။"
+        },
+        {
+          "en": "There is {w}no signal{/w} in the {c}mountains{/c}.",
+          "mm": "တောင်ပေါ်မှာ ဖုန်းလိုင်း မမိဘူး။"
+        },
+        {
+          "en": "Can you hear me? I think I have {w}no signal{/w} {c}here{/c}.",
+          "mm": "ကြားရလား၊ ဒီနေရာမှာ ဖုန်းလိုင်း မမိဘူး ထင်တယ်။"
+        },
+        {
+          "en": "The {w}no signal{/w} icon is on my {c}screen{/c}.",
+          "mm": "ဖုန်းစခရင်ပေါ်မှာ လိုင်းမရှိတဲ့ သင်္ကေတ ပေါ်နေတယ်။"
+        },
+        {
+          "en": "We had {w}no signal{/w} for the whole {c}trip{/c}.",
+          "mm": "ခရီးစဉ်တစ်လျှောက်လုံး ဖုန်းလိုင်း မမိခဲ့ဘူး။"
+        }
+      ],
+      "short_mm": "ဖုန်းလိုင်းမမိဘူး"
+    },
+    {
+      "word": "go online",
+      "pos": "expression",
+      "short_en": "to connect to the internet",
+      "examples": [
+        {
+          "en": "I need to {w}go online{/w} to check my {c}emails{/c}.",
+          "mm": "အီးမေးလ်တွေ စစ်ဖို့ အင်တာနက် သုံးရမယ်။"
+        },
+        {
+          "en": "You can {w}go online{/w} using the {c}Wi-Fi{/c}.",
+          "mm": "ဝိုင်ဖိုင် သုံးပြီး အင်တာနက် တက်လို့ရတယ်။"
+        },
+        {
+          "en": "She {w}went online{/w} to buy some {c}clothes{/c}.",
+          "mm": "အဝတ်အစားတွေ ဝယ်ဖို့ သူ အင်တာနက် သုံးလိုက်တယ်။"
+        },
+        {
+          "en": "It is easy to {w}go online{/w} with this {c}laptop{/c}.",
+          "mm": "ဒီလက်ပ်တော့ပ်နဲ့ အင်တာနက် သုံးရတာ လွယ်တယ်။"
+        },
+        {
+          "en": "He {w}goes online{/w} every {c}morning{/c}.",
+          "mm": "သူ မနက်တိုင်း အင်တာနက် သုံးတယ်။"
+        }
+      ],
+      "short_mm": "အင်တာနက်ဖွင့်တယ် / အွန်လိုင်းတက်တယ်"
+    },
+    {
+      "word": "download an app",
+      "pos": "expression",
+      "short_en": "to install a program on your phone",
+      "examples": [
+        {
+          "en": "I want to {w}download an app{/w} for {c}music{/c}.",
+          "mm": "သီချင်းနားထောင်ဖို့ အက်ပ်တစ်ခု ဒေါင်းချင်တယ်။"
+        },
+        {
+          "en": "Did you {w}download an app{/w} to learn {c}English{/c}?",
+          "mm": "အင်္ဂလိပ်စာ လေ့လာဖို့ အက်ပ်တစ်ခု ဒေါင်းလိုက်သေးလား။"
+        },
+        {
+          "en": "It is free to {w}download an app{/w} from the {c}store{/c}.",
+          "mm": "စတိုးကနေ အက်ပ်ဒေါင်းတာ အခမဲ့ပါ။"
+        },
+        {
+          "en": "She {w}downloaded an app{/w} to track her {c}fitness{/c}.",
+          "mm": "သူ့ကျန်းမာရေး လေ့ကျင့်ခန်းတွေ မှတ်ထားဖို့ အက်ပ်တစ်ခု ဒေါင်းလိုက်တယ်။"
+        },
+        {
+          "en": "You should {w}download an app{/w} for {c}maps{/c}.",
+          "mm": "လမ်းပြမြေပုံအတွက် အက်ပ်တစ်ခု ဒေါင်းထားသင့်တယ်။"
+        }
+      ],
+      "short_mm": "အက်ပ်တစ်ခုခုကို ဒေါင်းလုဒ်ဆွဲတယ်"
+    },
+    {
+      "word": "log in",
+      "pos": "expression",
+      "short_en": "to enter your username and password",
+      "examples": [
+        {
+          "en": "You need to {w}log in{/w} with your {c}password{/c}.",
+          "mm": "စကားဝှက်နဲ့ အကောင့်ထဲ ဝင်ရမယ်။"
+        },
+        {
+          "en": "I cannot {w}log in{/w} to my {c}account{/c}.",
+          "mm": "ကျွန်တော့်အကောင့်ထဲ ဝင်လို့ မရဘူး။"
+        },
+        {
+          "en": "Please {w}log in{/w} to see the {c}content{/c}.",
+          "mm": "အကြောင်းအရာတွေကို ကြည့်ဖို့ ကျေးဇူးပြုပြီး အကောင့်ထဲ ဝင်ပါ။"
+        },
+        {
+          "en": "She {w}logged in{/w} to check her {c}bank{/c} balance.",
+          "mm": "ဘဏ်လက်ကျန်ငွေ စစ်ဖို့ သူ အကောင့်ထဲ ဝင်လိုက်တယ်။"
+        },
+        {
+          "en": "Don't forget to {w}log in{/w} on the {c}website{/c}.",
+          "mm": "ဝဘ်ဆိုက်ထဲ ဝင်ဖို့ မမေ့နဲ့နော်။"
+        }
+      ],
+      "short_mm": "အကောင့်ဝင်တယ်"
+    },
+    {
+      "word": "charge your phone",
+      "pos": "expression",
+      "short_en": "to connect your phone to electricity",
+      "examples": [
+        {
+          "en": "I need to {w}charge your phone{/w} with this {c}cable{/c}.",
+          "mm": "ဒီကြိုးနဲ့ မင်းဖုန်းကို အားသွင်းပေးရမယ်။"
+        },
+        {
+          "en": "Did you {w}charge your phone{/w} {c}last night{/c}?",
+          "mm": "မနေ့ညက ဖုန်းအားသွင်းလိုက်သေးလား။"
+        },
+        {
+          "en": "You can {w}charge your phone{/w} at the {c}airport{/c}.",
+          "mm": "လေဆိပ်မှာ ဖုန်းအားသွင်းလို့ ရတယ်။"
+        },
+        {
+          "en": "She is {w}charging her phone{/w} in the {c}kitchen{/c}.",
+          "mm": "သူ မီးဖိုချောင်ထဲမှာ ဖုန်းအားသွင်းနေတယ်။"
+        },
+        {
+          "en": "It takes two hours to {w}charge your phone{/w} {c}fully{/c}.",
+          "mm": "ဖုန်းအားအပြည့်သွင်းဖို့ နှစ်နာရီ ကြာတယ်။"
+        }
+      ],
+      "short_mm": "ဖုန်းအားသွင်းတယ်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I tried to call him but the line was dead, so I had to ___.",
+      "right": "hang up",
+      "wrong": "log in",
+      "why": "hang up means to end a call; log in means to access an account.",
+      "why_mm": "hang up က ဖုန်းချတာ၊ log in က အကောင့်ဝင်တာမို့ မတူပါဘူး။"
+    },
+    {
+      "prompt": "My phone is dead, I need to ___.",
+      "right": "charge your phone",
+      "wrong": "go online",
+      "why": "charge your phone provides power; go online requires power.",
+      "why_mm": "charge your phone က အားသွင်းတာ၊ go online က အင်တာနက်သုံးတာမို့ အဓိပ္ပာယ် ကွဲပြားပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I am in the basement and have ___.",
+      "answer": "no signal",
+      "options": [
+        "no signal",
+        "hang up",
+        "log in"
+      ],
+      "explain_en": "No connection to the network → no signal.",
+      "explain_mm": "ဖုန်းလိုင်းမမိတာကို no signal လို့ ခေါ်တယ်လေ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I need to ___ to check my bank account.",
+      "answer": "log in",
+      "options": [
+        "log in",
+        "send a text",
+        "charge your phone"
+      ],
+      "explain_en": "Accessing an account requires you to log in.",
+      "explain_mm": "အကောင့်ထဲကို ဝင်ချင်ရင်တော့ log in လုပ်ရမှာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My phone is dead. I need to ___.",
+      "answer": "charge your phone",
+      "options": [
+        "charge your phone",
+        "make a call",
+        "go online"
+      ],
+      "explain_en": "To give the phone power → charge your phone.",
+      "explain_mm": "ဖုန်းကို ပါဝါပြန်ဖြည့်ဖို့အတွက် charge your phone လုပ်ရတာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"I'll ___ a text to tell you I'm coming.\"",
+      "answer": "send",
+      "options": [],
+      "explain_en": "To send a written message → send a text.",
+      "explain_mm": "စာတိုလေး ပို့ချင်ရင်တော့ send a text ပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"I need to ___ online to look for a job.\"",
+      "answer": "go",
+      "options": [],
+      "explain_en": "To connect to the internet → go online.",
+      "explain_mm": "အင်တာနက်သုံးချင်ရင် go online လုပ်ရတာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"Don't ___ up, I'm still talking!\"",
+      "answer": "hang",
+      "options": [],
+      "explain_en": "To end a call → hang up.",
+      "explain_mm": "ဖုန်းပြောပြီးလို့ ဖုန်းချလိုက်တာကို hang up လို့ ခေါ်တယ်လေ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"I want to ___ an app for editing photos.\"",
+      "answer": "download",
+      "options": [],
+      "explain_en": "To install a new program → download an app.",
+      "explain_mm": "ပရိုဂရမ်အသစ်လေးတွေ ထည့်ချင်ရင် download an app လုပ်ရတာပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"My phone is about to run out of ___.\"",
+      "answer": "battery",
+      "options": [],
+      "explain_en": "When power is low → run out of battery.",
+      "explain_mm": "အားကုန်သွားပြီဆိုရင် run out of battery ဖြစ်သွားတာပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"I need to make a ___ to my mother.\"",
+      "answer": "call",
+      "options": [],
+      "explain_en": "To speak on the phone → make a call.",
+      "explain_mm": "ဖုန်းပြောဖို့ကတော့ make a call ပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The internet is down, so I cannot ___.",
+      "answer": "go online",
+      "options": [
+        "go online",
+        "hang up",
+        "charge your phone"
+      ],
+      "explain_en": "If the internet is down, you cannot go online.",
+      "explain_mm": "အင်တာနက်လိုင်းမရှိရင်တော့ go online လုပ်လို့ မရတော့ဘူးပေါ့။"
+    }
+  ]
+}

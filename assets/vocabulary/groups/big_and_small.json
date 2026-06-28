@@ -1,0 +1,362 @@
+{
+  "id": "big_and_small",
+  "title": "Big & small",
+  "level": 2,
+  "order": 2,
+  "theme": "Size",
+  "why_grouped_en": "These five all describe size, but they're not interchangeable. \"big\" and \"small\" are the everyday words; \"huge\" and \"tiny\" are the strong, emotional versions; and \"large\" is the slightly formal one — the word menus, clothes, and amounts use.",
+  "why_grouped_mm": "ဒီ ၅ ခုလုံးက အရွယ်အစားကို ပြောတာချင်းတူပေမဲ့ သုံးတဲ့နေရာလေးတွေ ကွဲသွားတယ်။ big နဲ့ small က နေ့စဉ်သုံးပေါ့ပေါ့ပါးပါးစကားတွေ၊ huge နဲ့ tiny ကတော့ အံ့သြစရာကောင်းလောက်အောင် အရမ်းကြီးတာ ဒါမှမဟုတ် အရမ်းသေးတာမျိုးကို အလေးပေးပြောချင်တဲ့အခါ သုံးတယ်။ large ကတော့ နည်းနည်း formal ဆန်တဲ့အတွက် menu တွေ၊ အဝတ်အစားဆိုဒ်တွေနဲ့ ပမာဏတွေကို ပြောတဲ့အခါ သုံးပေးရမယ်။",
+  "words": [
+    {
+      "word": "big",
+      "pos": "adjective",
+      "ipa": "/bɪɡ/",
+      "short_en": "large in size",
+      "short_mm": "အရွယ်အစားကြီးတယ်",
+      "use_when_en": "",
+      "explanation_en": "The most common, everyday word for size — safe in almost any spoken sentence, and it works for abstract things too (a big problem).",
+      "explanation_mm": "ဒါက အသုံးအများဆုံးပဲ။ ဘယ်နေရာမှာမဆို သုံးလို့ရတယ်။ အရာဝတ္ထုတင်မကဘဲ a big problem လိုမျိုး abstract ဖြစ်တဲ့အရာတွေအတွက်လည်း သုံးလို့ရတယ်လေ။",
+      "nuance_en": "Very common and casual. In formal writing, \"large\" is often preferred.",
+      "nuance_mm": "အရမ်း casual ဖြစ်တယ်။ စာရေးရင်တော့ large ကို ပိုသုံးကြတယ်။",
+      "goes_with_en": "a big + house / problem / decision / difference · big + news / mistake",
+      "goes_with_note_en": "Pairs with everyday nouns and abstract ones (a big problem, a big decision).",
+      "goes_with_note_mm": "နေ့စဉ်သုံး noun တွေနဲ့ တွဲသုံးတယ်။ a big problem, a big decision ဆိုပြီး သုံးကြတယ်။",
+      "examples": [
+        {
+          "en": "They live in a {w}big{/w} {c}house{/c}.",
+          "mm": "သူတို့ အိမ်ကြီးတစ်လုံးထဲမှာ နေကြတယ်။"
+        },
+        {
+          "en": "We have a {w}big{/w} {c}problem{/c}.",
+          "mm": "ငါတို့မှာ ပြဿနာအကြီးကြီးတစ်ခု ရှိနေတယ်။"
+        },
+        {
+          "en": "That's a {w}big{/w} {c}decision{/c} to make.",
+          "mm": "ဒါက ဆုံးဖြတ်ရခက်တဲ့ အရေးကြီးတဲ့ကိစ္စပဲ။"
+        },
+        {
+          "en": "There's a {w}big{/w} {c}difference{/c} between them.",
+          "mm": "သူတို့နှစ်ခုကြားမှာ ကွာခြားချက်အကြီးကြီး ရှိတယ်။"
+        },
+        {
+          "en": "I have some {w}big{/w} {c}news{/c}!",
+          "mm": "ငါ့မှာ ပြောစရာ သတင်းကောင်းကြီးတစ်ခု ရှိတယ်! "
+        }
+      ],
+      "collocations": [
+        "a big house",
+        "a big problem",
+        "a big decision"
+      ],
+      "confuse_with": [
+        "large"
+      ],
+      "use_when_mm": "Big ကတော့ ဘယ်နေရာမဆို သုံးလို့ရတဲ့ အသုံးအများဆုံးစကားလုံးပဲ။ အရာဝတ္ထုတင်မကဘဲ ပြဿနာတို့၊ ဆုံးဖြတ်ချက်တို့လိုမျိုး စိတ်ကူးယဉ်အရာတွေအတွက်လည်း သုံးလို့ရတယ်။"
+    },
+    {
+      "word": "huge",
+      "pos": "adjective",
+      "ipa": "/hjuːdʒ/",
+      "short_en": "extremely big",
+      "short_mm": "အရမ်းကြီးတယ်",
+      "use_when_en": "",
+      "explanation_en": "The strong, emotional version of \"big\" — use it when something is surprisingly or impressively big.",
+      "explanation_mm": "Big ထက်ပိုပြီး ခံစားချက်ပါတဲ့စကားလုံးပေါ့။ တကယ်ကို အံ့သြစရာကောင်းလောက်အောင် ကြီးနေတဲ့အခါ သုံးတယ်။",
+      "nuance_en": "Don't overuse it — keep it for things that are genuinely big.",
+      "nuance_mm": "အရမ်းကြီး over မလုပ်ပါနဲ့။ တကယ်ကို ကြီးမှပဲ သုံးသင့်တယ်။",
+      "goes_with_en": "a huge + difference / success / crowd · a huge + fan · absolutely huge",
+      "goes_with_note_en": "Often with successes, differences, and amounts; pairs with \"absolutely\".",
+      "goes_with_note_mm": "Success တွေ၊ difference တွေနဲ့ တွဲသုံးလေ့ရှိတယ်။ absolutely huge ဆိုပြီး တွဲသုံးတာမျိုးပေါ့။",
+      "examples": [
+        {
+          "en": "It made a {w}huge{/w} {c}difference{/c}.",
+          "mm": "အဲဒါက အများကြီး ပြောင်းလဲသွားစေတယ်။"
+        },
+        {
+          "en": "The film was a {w}huge{/w} {c}success{/c}.",
+          "mm": "ဒီရုပ်ရှင်က အောင်မြင်မှုအကြီးကြီး ရသွားတယ်။"
+        },
+        {
+          "en": "She's a {w}huge{/w} {c}fan{/c} of jazz.",
+          "mm": "သူက ဂျက်ဇ်တေးဂီတကို အရမ်းကြိုက်တာ။"
+        },
+        {
+          "en": "There was a {w}huge{/w} {c}crowd{/c} at the concert.",
+          "mm": "ပွဲတော်မှာ လူတွေ အများကြီးပဲ။"
+        },
+        {
+          "en": "The garden is {c}absolutely{/c} {w}huge{/w}.",
+          "mm": "ဥယျာဉ်က တကယ့်ကို အကျယ်ကြီးပဲ။"
+        }
+      ],
+      "collocations": [
+        "a huge difference",
+        "a huge success",
+        "absolutely huge"
+      ],
+      "confuse_with": [
+        "big"
+      ],
+      "use_when_mm": "Huge ကတော့ အရမ်းကြီးမားတဲ့အရာတွေ၊ အံ့သြစရာကောင်းလောက်အောင် ကြီးတဲ့အရာတွေကို ပြောချင်မှ သုံးပါ။ ခံစားချက်ပါတဲ့ စကားလုံးမို့လို့ တကယ်ကြီးမှပဲ သုံးဖို့ အကြံပေးချင်တယ်။"
+    },
+    {
+      "word": "large",
+      "pos": "adjective",
+      "ipa": "/lɑːdʒ/",
+      "short_en": "big (a bit formal)",
+      "short_mm": "ကြီးတယ် (formal နည်းနည်းဆန်တယ်)",
+      "use_when_en": "",
+      "explanation_en": "The neutral-to-formal \"big\". It's the standard word for sizes (clothes, drinks) and amounts.",
+      "explanation_mm": "Big ကို formal ဖြစ်အောင် ပြောတာပေါ့။ အဝတ်အစားဆိုဒ်တွေ၊ အဖျော်ယမကာ အရွယ်အစားတွေအတွက် စံသတ်မှတ်ချက်ပဲ။",
+      "nuance_en": "Say \"a large coffee\", not \"a big coffee\", on a menu.",
+      "nuance_mm": "Menu မှာဆိုရင် a big coffee လို့ မပြောဘဲ a large coffee လို့ ပြောမှ natural ဖြစ်တယ်။",
+      "goes_with_en": "a large + amount / number / size · large enough",
+      "goes_with_note_en": "Pairs with amounts, numbers and sizes; the formal/menu choice.",
+      "goes_with_note_mm": "ပမာဏ၊ နံပါတ်နဲ့ ဆိုဒ်တွေနဲ့ တွဲသုံးတယ်။ Formal ဖြစ်တဲ့နေရာမှာ ရွေးသုံးရမယ့်စကားလုံးပေါ့။",
+      "examples": [
+        {
+          "en": "I'll have a {w}large{/w} {c}coffee{/c}, please.",
+          "mm": "ကော်ဖီ အကြီးတစ်ခွက်လောက် ပေးပါ။"
+        },
+        {
+          "en": "They spent a {w}large{/w} {c}amount{/c} of money.",
+          "mm": "သူတို့ ပိုက်ဆံ အများကြီး သုံးလိုက်တယ်။"
+        },
+        {
+          "en": "A {w}large{/w} {c}number{/c} of people came.",
+          "mm": "လူအများကြီး လာကြတယ်။"
+        },
+        {
+          "en": "Do you have this in a {w}large{/w} {c}size{/c}?",
+          "mm": "ဒီဟာမှာ အရွယ်အစားကြီးတာ ရှိသေးလား။"
+        },
+        {
+          "en": "The room was {w}large{/w} {c}enough{/c} for everyone.",
+          "mm": "အခန်းက လူတိုင်းဆံ့လောက်အောင် ကျယ်တယ်။"
+        }
+      ],
+      "collocations": [
+        "a large amount",
+        "a large number",
+        "large size"
+      ],
+      "confuse_with": [
+        "big"
+      ],
+      "use_when_mm": "Large ကတော့ နည်းနည်း ပိုပြီး တည်ငြိမ်တဲ့ပုံစံမျိုးပေါ့။ အထူးသဖြင့် ကော်ဖီဆိုင်တို့၊ အဝတ်အစားဆိုင်တို့မှာဆိုရင် a large coffee လို့ ပြောတာက ပိုပြီး ယဉ်ကျေးပြီး ပရော်ဖက်ရှင်နယ်ဆန်တယ်။"
+    },
+    {
+      "word": "small",
+      "pos": "adjective",
+      "ipa": "/smɔːl/",
+      "short_en": "little in size",
+      "short_mm": "သေးတယ်",
+      "use_when_en": "",
+      "explanation_en": "The most common, everyday word for not-big — neutral and safe almost anywhere.",
+      "explanation_mm": "Big ရဲ့ ဆန့်ကျင်ဘက်ပေါ့။ အသုံးအများဆုံးနဲ့ ဘယ်နေရာမှာမဆို သုံးလို့ရတဲ့ စကားလုံးပဲ။",
+      "nuance_en": "Neutral. \"little\" is the warmer, more emotional version.",
+      "nuance_mm": "Neutral ဖြစ်တယ်။ Little ကတော့ ပိုပြီး ချစ်စရာကောင်းတဲ့ သို့မဟုတ် ခံစားချက်ပါတဲ့ အဓိပ္ပာယ်မျိုး ပိုဆောင်တယ်။",
+      "goes_with_en": "a small + problem / change / amount · a small business / town",
+      "goes_with_note_en": "Pairs with everyday and abstract nouns (a small change, a small problem).",
+      "goes_with_note_mm": "နေ့စဉ်သုံး noun တွေနဲ့ တွဲသုံးတယ်။ a small change, a small problem ဆိုပြီး သုံးတယ်။",
+      "examples": [
+        {
+          "en": "It's a {w}small{/w} {c}problem{/c}, don't worry.",
+          "mm": "ဒါက ပြဿနာအသေးလေးပါ၊ စိတ်မပူပါနဲ့။"
+        },
+        {
+          "en": "She runs a {w}small{/w} {c}business{/c}.",
+          "mm": "သူမက လုပ်ငန်းအသေးလေးတစ်ခု လုပ်နေတယ်။"
+        },
+        {
+          "en": "Let's make a {w}small{/w} {c}change{/c}.",
+          "mm": "နည်းနည်းလောက် ပြင်လိုက်ရအောင်။"
+        },
+        {
+          "en": "I only want a {w}small{/w} {c}amount{/c}.",
+          "mm": "ငါ နည်းနည်းလေးပဲ လိုချင်တယ်။"
+        },
+        {
+          "en": "They live in a {w}small{/w} {c}town{/c}.",
+          "mm": "သူတို့ မြို့လေးတစ်မြို့မှာ နေကြတယ်။"
+        }
+      ],
+      "collocations": [
+        "a small problem",
+        "a small change",
+        "a small business"
+      ],
+      "confuse_with": [
+        "tiny"
+      ],
+      "use_when_mm": "Small ကတော့ သာမန်အရွယ်အစားကို ပြောတဲ့အခါ အသုံးအများဆုံးနဲ့ အလုံခြုံဆုံး စကားလုံးပဲ။ ဘယ်နေရာမှာမဆို သုံးလို့ရတယ်။"
+    },
+    {
+      "word": "tiny",
+      "pos": "adjective",
+      "ipa": "/ˈtaɪ.ni/",
+      "short_en": "extremely small",
+      "short_mm": "အရမ်းသေးတယ်",
+      "use_when_en": "",
+      "explanation_en": "The strong, emotional version of \"small\" — use it when something is surprisingly or sweetly small.",
+      "explanation_mm": "Small ထက်ပိုပြီး ခံစားချက်ပါတဲ့စကားလုံး။ တကယ်ကို စိတ်ဝင်စားစရာကောင်းလောက်အောင် ဒါမှမဟုတ် ချစ်စရာကောင်းလောက်အောင် သေးတဲ့အခါ သုံးတယ်။",
+      "nuance_en": "Emotional: \"a tiny baby\" sounds sweet; \"a tiny bit\" means a very small amount.",
+      "nuance_mm": "Emotional ဖြစ်တယ်။ a tiny baby ဆိုရင် ချစ်ဖို့ကောင်းတယ်၊ a tiny bit ဆိုရင် အရမ်းနည်းနည်းလေးလို့ ပြောတာ။",
+      "goes_with_en": "a tiny + bit / baby / amount · tiny little",
+      "goes_with_note_en": "Often with \"bit\" (a tiny bit = a little) and small, cute things.",
+      "goes_with_note_mm": "a tiny bit (နည်းနည်းလေး) ဆိုတဲ့ phrase နဲ့ အရမ်းတွဲသုံးတယ်။ ချစ်စရာကောင်းတဲ့ အရာသေးသေးလေးတွေနဲ့ တွဲသုံးတယ်။",
+      "examples": [
+        {
+          "en": "Add a {w}tiny{/w} {c}bit{/c} of salt.",
+          "mm": "ဆား နည်းနည်းလေးပဲ ထည့်ပါ။"
+        },
+        {
+          "en": "Look at that {w}tiny{/w} {c}baby{/c}!",
+          "mm": "ဒီကလေးငယ်လေးကို ကြည့်စမ်းပါဦး!"
+        },
+        {
+          "en": "There's only a {w}tiny{/w} {c}amount{/c} left.",
+          "mm": "နည်းနည်းလေးပဲ ကျန်တော့တယ်။"
+        },
+        {
+          "en": "The kitten was {c}absolutely{/c} {w}tiny{/w}.",
+          "mm": "ကြောင်ပေါက်လေးက တကယ့်ကို သေးသေးလေး။"
+        },
+        {
+          "en": "I made a {w}tiny{/w} {c}mistake{/c}.",
+          "mm": "ငါ အမှားအသေးလေးတစ်ခု လုပ်မိသွားတယ်။"
+        }
+      ],
+      "collocations": [
+        "a tiny bit",
+        "a tiny baby",
+        "a tiny amount"
+      ],
+      "confuse_with": [
+        "small"
+      ],
+      "use_when_mm": "Tiny ဆိုတာကတော့ အရမ်းသေးငယ်တဲ့အရာတွေကို ပြောချင်တဲ့အခါ သုံးတယ်။ ဥပမာ- ကလေးလေးတွေ ဒါမှမဟုတ် အရမ်းနည်းတဲ့ ပမာဏမျိုးကို ပြောတဲ့အခါ ပိုပြီး သံယောဇဉ်ပါတဲ့ပုံစံမျိုး ဖြစ်သွားစေတယ်။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "On a menu: \"I'll have a ___ coffee.\"",
+      "right": "large",
+      "wrong": "big",
+      "why": "Drink and clothes sizes use \"large\", not \"big\".",
+      "why_mm": "Drink နဲ့ အဝတ်အစားဆိုဒ်မှာ big မသုံးဘဲ large သုံးရမယ်။"
+    },
+    {
+      "prompt": "\"There's only a ___ bit of milk left.\"",
+      "right": "tiny",
+      "wrong": "huge",
+      "why": "\"a tiny bit\" = a very small amount (a fixed phrase).",
+      "why_mm": "a tiny bit ဆိုတာက အရမ်းနည်းတဲ့ ပမာဏကို ပြောတဲ့ fixed phrase ဖြစ်လို့ပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "On a menu: \"I'll have a ___ coffee, please.\"",
+      "answer": "large",
+      "options": [
+        "large",
+        "big",
+        "huge"
+      ],
+      "explain_en": "Drink and clothes sizes use \"large\", not \"big\".",
+      "explain_mm": "Drink နဲ့ အဝတ်အစားဆိုဒ်တွေမှာဆိုရင် big မသုံးဘဲ large သုံးပေးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Impressively big: \"The concert had a ___ crowd!\"",
+      "answer": "huge",
+      "options": [
+        "huge",
+        "large",
+        "small"
+      ],
+      "explain_en": "An impressively big amount → huge. \"Large crowd\" is fine, but \"huge\" shows the wow.",
+      "explain_mm": "အရမ်းကြီးတဲ့ ပမာဏကို အံ့သြပြီး ပြောချင်ရင် huge သုံးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Everyday: \"They live in a ___ house.\"",
+      "answer": "big",
+      "options": [
+        "big",
+        "large",
+        "huge"
+      ],
+      "explain_en": "Everyday spoken size → big.",
+      "explain_mm": "နေ့စဉ်သုံး အရွယ်အစားဆိုရင် big ပဲ သုံးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Don't worry: \"It's a ___ problem.\"",
+      "answer": "small",
+      "options": [
+        "small",
+        "tiny",
+        "large"
+      ],
+      "explain_en": "Neutral, everyday \"not big\" → small.",
+      "explain_mm": "သာမန်နေ့စဉ်သုံး \"not big\" ဆိုရင် small ပဲ သုံးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Important choice: \"That's a ___ decision — take your time.\"",
+      "answer": "big",
+      "options": [
+        "big",
+        "large",
+        "tiny"
+      ],
+      "explain_en": "Important, abstract things → a big decision (not \"large decision\").",
+      "explain_mm": "အရေးကြီးတဲ့ ဆုံးဖြတ်ချက်လိုမျိုး abstract ဖြစ်ရင် a big decision လို့ပဲ သုံးရမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"A ___ number of people applied for the job.\"",
+      "answer": "large",
+      "options": [],
+      "explain_en": "Formal amounts use \"large\" (a large number / a large amount).",
+      "explain_mm": "Formal ဖြစ်တဲ့ ပမာဏကို ပြောရင် a large number/amount လို့ သုံးရမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"Winning made a ___ difference to her life.\"",
+      "answer": "huge",
+      "options": [],
+      "explain_en": "A big, impressive difference → huge (a huge difference).",
+      "explain_mm": "သိသိသာသာကြီး ကွာခြားချက်ရှိရင် a huge difference လို့ သုံးရမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"The newborn was so ___ !\"",
+      "answer": "tiny",
+      "options": [],
+      "explain_en": "Surprisingly or sweetly small → tiny.",
+      "explain_mm": "အံ့သြစရာကောင်းလောက်အောင် ဒါမှမဟုတ် ချစ်စရာကောင်းလောက်အောင် သေးရင် tiny သုံးရမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"She started a ___ business from home.\"",
+      "answer": "small",
+      "options": [],
+      "explain_en": "\"a small business\" is the natural collocation.",
+      "explain_mm": "a small business ဆိုတာက natural ဖြစ်တဲ့ collocation ပဲ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"Add just a ___ of salt.\" (a very small amount)",
+      "answer": "tiny bit",
+      "options": [],
+      "explain_en": "\"a tiny bit\" = a very small amount.",
+      "explain_mm": "a tiny bit ဆိုတာက အရမ်းနည်းနည်းလေးလို့ ပြောတာပါ။",
+      "accept": [
+        "tiny bit of"
+      ]
+    }
+  ]
+}

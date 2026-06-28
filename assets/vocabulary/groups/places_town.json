@@ -1,0 +1,395 @@
+{
+  "id": "places_town",
+  "title": "Places in town",
+  "level": 1,
+  "order": 14,
+  "theme": "Places",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "Common places you visit in a town. Learning these helps you give directions and talk about your daily routine.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက မြို့တစ်မြို့မှာ နေ့စဉ်သွားလာနေရတဲ့ နေရာတွေဖြစ်လို့ လမ်းညွှန်တဲ့အခါ ဒါမှမဟုတ် ကိုယ့်အကြောင်းပြောတဲ့အခါ အရမ်းအသုံးဝင်ပါတယ်နော်။",
+  "words": [
+    {
+      "word": "the bank",
+      "pos": "noun",
+      "ipa": "/ðə bæŋk/",
+      "short_en": "a place to keep or borrow money",
+      "examples": [
+        {
+          "en": "I need to go to {w}the bank{/w} to {c}withdraw{/c} cash.",
+          "mm": "ကျွန်တော် ပိုက်ဆံထုတ်ဖို့ ဘဏ်ကို သွားရမယ်။"
+        },
+        {
+          "en": "Is {w}the bank{/w} {c}open{/c} on Saturdays?",
+          "mm": "ဘဏ်က စနေနေ့တွေမှာ ဖွင့်လား။"
+        },
+        {
+          "en": "He works at {w}the bank{/w} in the {c}city{/c} centre.",
+          "mm": "သူက မြို့လယ်ကောင်က ဘဏ်မှာ အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "There is {w}the bank{/w} next to the {c}supermarket{/c}.",
+          "mm": "စူပါမားကတ်ဘေးမှာ ဘဏ်ရှိတယ်။"
+        },
+        {
+          "en": "I'll meet you outside {w}the bank{/w} at {c}noon{/c}.",
+          "mm": "နေ့လယ်စာစားချိန်မှာ ဘဏ်အပြင်ဘက်မှာ တွေ့ကြမယ်။"
+        }
+      ],
+      "short_mm": "ဘဏ်"
+    },
+    {
+      "word": "the market",
+      "pos": "noun",
+      "ipa": "/ðə ˈmɑː.kɪt/",
+      "short_en": "a place where you buy fresh food and goods",
+      "examples": [
+        {
+          "en": "We buy fresh {c}fruit{/c} at {w}the market{/w}.",
+          "mm": "ကျွန်တော်တို့ ဈေးမှာ လတ်ဆတ်တဲ့ သစ်သီးဝလံတွေ ဝယ်ကြတယ်။"
+        },
+        {
+          "en": "The {c}prices{/c} at {w}the market{/w} are very cheap.",
+          "mm": "ဈေးထဲက ဈေးနှုန်းတွေက အရမ်းသက်သာတယ်။"
+        },
+        {
+          "en": "Let's go to {w}the market{/w} this {c}morning{/c}.",
+          "mm": "ဒီမနက် ဈေးသွားရအောင်။"
+        },
+        {
+          "en": "She sells {c}clothes{/c} at {w}the market{/w}.",
+          "mm": "သူမက ဈေးမှာ အဝတ်အစားတွေ ရောင်းတယ်။"
+        },
+        {
+          "en": "It's very {c}busy{/c} at {w}the market{/w} on Sundays.",
+          "mm": "တနင်္ဂနွေနေ့ဆို ဈေးထဲမှာ အရမ်းလူစည်ကားတယ်။"
+        }
+      ],
+      "short_mm": "ဈေး"
+    },
+    {
+      "word": "a restaurant",
+      "pos": "noun",
+      "ipa": "/ˈres.tər.ɒnt/",
+      "short_en": "a place where you pay to eat a meal",
+      "examples": [
+        {
+          "en": "We had a lovely {c}dinner{/c} at {w}a restaurant{/w}.",
+          "mm": "ကျွန်တော်တို့ စားသောက်ဆိုင်မှာ ညစာ အရသာရှိရှိ စားခဲ့ကြတယ်။"
+        },
+        {
+          "en": "Do you know {w}a restaurant{/w} that serves {c}pizza{/c}?",
+          "mm": "ပီဇာရတဲ့ စားသောက်ဆိုင် သိလား။"
+        },
+        {
+          "en": "They opened {w}a restaurant{/w} in the {c}town{/c} centre.",
+          "mm": "သူတို့ မြို့လယ်မှာ စားသောက်ဆိုင်တစ်ဆိုင် ဖွင့်လိုက်တယ်။"
+        },
+        {
+          "en": "I booked {w}a restaurant{/w} for our {c}anniversary{/c}.",
+          "mm": "ကျွန်တော်တို့ နှစ်ပတ်လည်နေ့အတွက် စားသောက်ဆိုင်မှာ ကြိုတင်စာရင်းသွင်းထားတယ်။"
+        },
+        {
+          "en": "This is {w}a restaurant{/w} with great {c}service{/c}.",
+          "mm": "ဒီဆိုင်က ဝန်ဆောင်မှု အရမ်းကောင်းတဲ့ စားသောက်ဆိုင်ပဲ။"
+        }
+      ],
+      "short_mm": "စားသောက်ဆိုင်"
+    },
+    {
+      "word": "the station",
+      "pos": "noun",
+      "ipa": "/ðə ˈsteɪ.ʃən/",
+      "short_en": "a place where trains or buses stop",
+      "examples": [
+        {
+          "en": "The {c}train{/c} leaves from {w}the station{/w} at 8:00.",
+          "mm": "ရထားက ဘူတာရုံကနေ ၈ နာရီမှာ ထွက်တယ်။"
+        },
+        {
+          "en": "Can you {c}drive{/c} me to {w}the station{/w}?",
+          "mm": "ကျွန်တော့်ကို ဘူတာရုံအထိ လိုက်ပို့ပေးလို့ရမလား။"
+        },
+        {
+          "en": "I'll wait for you at {w}the station{/w} {c}entrance{/c}.",
+          "mm": "ဘူတာရုံ အဝင်ဝမှာ စောင့်နေမယ်။"
+        },
+        {
+          "en": "How far is {w}the station{/w} from your {c}flat{/c}?",
+          "mm": "ဘူတာရုံက မင်းအိမ်နဲ့ ဘယ်လောက်ဝေးလဲ။"
+        },
+        {
+          "en": "He arrived at {w}the station{/w} just in {c}time{/c}.",
+          "mm": "သူ ဘူတာရုံကို အချိန်မီ ရောက်လာတယ်။"
+        }
+      ],
+      "short_mm": "ဘူတာရုံ"
+    },
+    {
+      "word": "the chemist",
+      "pos": "noun",
+      "ipa": "/ðə ˈkem.ɪst/",
+      "short_en": "a shop that sells medicine and toiletries",
+      "examples": [
+        {
+          "en": "I need to go to {w}the chemist{/w} for some {c}aspirin{/c}.",
+          "mm": "ခေါင်းကိုက်ပျောက်ဆေး ဝယ်ဖို့ ဆေးဆိုင်ကို သွားရမယ်။"
+        },
+        {
+          "en": "Is {w}the chemist{/w} still {c}open{/c}?",
+          "mm": "ဆေးဆိုင် ဖွင့်သေးလား။"
+        },
+        {
+          "en": "You can buy {c}shampoo{/c} at {w}the chemist{/w}.",
+          "mm": "ဆေးဆိုင်မှာ ခေါင်းလျှော်ရည် ဝယ်လို့ရတယ်။"
+        },
+        {
+          "en": "She works as a {c}pharmacist{/c} at {w}the chemist{/w}.",
+          "mm": "သူမက ဆေးဆိုင်မှာ ဆေးဝါးကျွမ်းကျင်သူအဖြစ် အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "There is {w}the chemist{/w} on the {c}high{/c} street.",
+          "mm": "လမ်းမကြီးပေါ်မှာ ဆေးဆိုင်ရှိတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "pharmacy"
+      ],
+      "short_mm": "ဆေးဆိုင်"
+    },
+    {
+      "word": "the post office",
+      "pos": "noun",
+      "ipa": "/ðə ˈpəʊst ˌɒf.ɪs/",
+      "short_en": "a place to send letters and parcels",
+      "examples": [
+        {
+          "en": "I need to buy {c}stamps{/c} at {w}the post office{/w}.",
+          "mm": "စာတိုက်မှာ တံဆိပ်ခေါင်းတွေ ဝယ်ရမယ်။"
+        },
+        {
+          "en": "She went to {w}the post office{/w} to {c}post{/c} a parcel.",
+          "mm": "သူမ ပါဆယ်ထုတ် ပို့ဖို့ စာတိုက်ကို သွားခဲ့တယ်။"
+        },
+        {
+          "en": "Where is {w}the post office{/w} in this {c}area{/c}?",
+          "mm": "ဒီနားမှာ စာတိုက် ဘယ်နားမှာလဲ။"
+        },
+        {
+          "en": "The {c}queue{/c} at {w}the post office{/w} is very long.",
+          "mm": "စာတိုက်မှာ တန်းစီရတာ အရမ်းကြာတယ်။"
+        },
+        {
+          "en": "I'll send the {c}letter{/c} from {w}the post office{/w}.",
+          "mm": "စာကို စာတိုက်ကနေပဲ ပို့လိုက်မယ်။"
+        }
+      ],
+      "short_mm": "စာတိုက်"
+    },
+    {
+      "word": "the city centre",
+      "pos": "noun",
+      "ipa": "/ðə ˌsɪt.i ˈsen.tər/",
+      "short_en": "the main, busy part of a city",
+      "examples": [
+        {
+          "en": "We went shopping in {w}the city centre{/w} {c}yesterday{/c}.",
+          "mm": "မနေ့က မြို့လယ်မှာ ဈေးသွားဝယ်ခဲ့တယ်။"
+        },
+        {
+          "en": "Traffic is always bad in {w}the city centre{/w} at {c}night{/c}.",
+          "mm": "မြို့လယ်မှာ ညဘက်ဆို ကားလမ်း အမြဲကြပ်တယ်။"
+        },
+        {
+          "en": "There are many {c}cafes{/c} in {w}the city centre{/w}.",
+          "mm": "မြို့လယ်မှာ ကော်ဖီဆိုင်တွေ အများကြီးပဲ။"
+        },
+        {
+          "en": "I live quite far from {w}the city centre{/w} {c}area{/c}.",
+          "mm": "ကျွန်တော် မြို့လယ်နဲ့ အတော်လေး ဝေးတဲ့နေရာမှာ နေတယ်။"
+        },
+        {
+          "en": "Let's meet in {w}the city centre{/w} for {c}lunch{/c}.",
+          "mm": "နေ့လယ်စာအတွက် မြို့လယ်မှာ တွေ့ကြမယ်။"
+        }
+      ],
+      "short_mm": "မြို့လယ်ခေါင်"
+    },
+    {
+      "word": "the high street",
+      "pos": "noun",
+      "ipa": "/ðə haɪ striːt/",
+      "short_en": "the main street in a town with most of the shops",
+      "examples": [
+        {
+          "en": "There are many big shops on {w}the high street{/w} {c}today{/c}.",
+          "mm": "ဒီနေ့ လမ်းမကြီးပေါ်မှာ ဆိုင်ကြီးတွေ အများကြီးရှိတယ်။"
+        },
+        {
+          "en": "I took a {c}walk{/c} along {w}the high street{/w}.",
+          "mm": "ကျွန်တော် လမ်းမကြီးတစ်လျှောက် လမ်းလျှောက်ခဲ့တယ်။"
+        },
+        {
+          "en": "Most of the {c}banks{/c} are on {w}the high street{/w}.",
+          "mm": "ဘဏ်အများစုက လမ်းမကြီးပေါ်မှာပဲ ရှိတယ်။"
+        },
+        {
+          "en": "It's the busiest {c}road{/c} — {w}the high street{/w}.",
+          "mm": "ဒါက အလုပ်အရှုပ်ဆုံးလမ်းမကြီးပဲ။"
+        },
+        {
+          "en": "We found a {c}bookshop{/c} on {w}the high street{/w}.",
+          "mm": "လမ်းမကြီးပေါ်မှာ စာအုပ်ဆိုင်တစ်ဆိုင် တွေ့ခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "မြို့မလမ်းမကြီး"
+    },
+    {
+      "word": "the supermarket",
+      "pos": "noun",
+      "ipa": "/ðə ˈsuː.pəˌmɑː.kɪt/",
+      "short_en": "a large shop that sells food and household items",
+      "examples": [
+        {
+          "en": "I need to buy {c}groceries{/c} at {w}the supermarket{/w}.",
+          "mm": "စူပါမားကတ်မှာ ဟင်းသီးဟင်းရွက်တွေ ဝယ်ရမယ်။"
+        },
+        {
+          "en": "She works at {w}the supermarket{/w} as a {c}cashier{/c}.",
+          "mm": "သူမက စူပါမားကတ်မှာ ငွေကိုင်အဖြစ် အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "Is there {w}the supermarket{/w} near your {c}house{/c}?",
+          "mm": "မင်းအိမ်နားမှာ စူပါမားကတ် ရှိလား။"
+        },
+        {
+          "en": "We usually go to {w}the supermarket{/w} on {c}Friday{/c}.",
+          "mm": "ကျွန်တော်တို့ ပုံမှန်အားဖြင့် သောကြာနေ့တိုင်း စူပါမားကတ်ကို သွားကြတယ်။"
+        },
+        {
+          "en": "The {c}trolleys{/c} are at the front of {w}the supermarket{/w}.",
+          "mm": "တွန်းလှည်းတွေကို စူပါမားကတ် အရှေ့ဘက်မှာ ထားထားတယ်။"
+        }
+      ],
+      "short_mm": "စူပါမားကတ်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I need to buy medicine, so I'm going to the ___.",
+      "right": "the chemist",
+      "wrong": "the bank",
+      "why": "The chemist sells medicine; the bank handles money.",
+      "why_mm": "the chemist က ဆေးဝယ်တဲ့နေရာ၊ the bank က ပိုက်ဆံနဲ့ ပတ်သက်တဲ့နေရာဆိုတော့ မတူဘူးလေ။"
+    },
+    {
+      "prompt": "I'm going to ___ to catch my train.",
+      "right": "the station",
+      "wrong": "the post office",
+      "why": "Trains depart from the station; the post office is for mail.",
+      "why_mm": "ရထားစီးဖို့ဆို the station ကို သွားရမှာဖြစ်ပြီး၊ စာပို့ဖို့ဆို the post office ကို သွားရမှာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I need to send a letter. I'm going to ___.",
+      "answer": "the post office",
+      "options": [
+        "the post office",
+        "the bank",
+        "the restaurant"
+      ],
+      "explain_en": "The post office is for sending letters and parcels.",
+      "explain_mm": "စာနဲ့ ပါဆယ်ပို့ဖို့ဆို the post office ကို သွားရမှာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I want to buy some fresh fruit. Let's go to ___.",
+      "answer": "the market",
+      "options": [
+        "the market",
+        "the station",
+        "the chemist"
+      ],
+      "explain_en": "Markets are common places to buy fresh produce.",
+      "explain_mm": "လတ်ဆတ်တဲ့ အသီးအရွက်တွေ ဝယ်ဖို့ဆို the market ကို သွားကြတာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm hungry, let's eat at ___.",
+      "answer": "a restaurant",
+      "options": [
+        "a restaurant",
+        "the bank",
+        "the chemist"
+      ],
+      "explain_en": "Restaurants are places where you pay to eat a meal.",
+      "explain_mm": "အပြင်မှာ အစားအသောက် ဝယ်စားမယ်ဆိုရင် a restaurant ကို သွားရတာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I need to get some aspirin for my headache. I'm going to ___.",
+      "answer": "the chemist",
+      "options": [
+        "the chemist",
+        "the market",
+        "the station"
+      ],
+      "explain_en": "The chemist is the shop for medicine.",
+      "explain_mm": "ဆေးဝယ်ဖို့ဆို the chemist ဆီ သွားရမှာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The main shopping street in town is called ___.",
+      "answer": "the high street",
+      "options": [
+        "the high street",
+        "the city centre",
+        "the station"
+      ],
+      "explain_en": "The high street is the main road with shops.",
+      "explain_mm": "ဆိုင်တွေ အများကြီးရှိတဲ့ မြို့ရဲ့ အဓိကလမ်းမကြီးကို the high street လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I need to withdraw cash from ___.\"",
+      "answer": "the bank",
+      "options": [],
+      "explain_en": "The bank is the place to manage your money.",
+      "explain_mm": "ပိုက်ဆံနဲ့ ပတ်သက်တဲ့ ကိစ္စတွေ လုပ်ဖို့ the bank ကို သွားရပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"The train leaves from ___ at 9:00.\"",
+      "answer": "the station",
+      "options": [],
+      "explain_en": "Trains arrive and depart from the station.",
+      "explain_mm": "ရထားတွေက the station ကနေပဲ ထွက်တာ၊ ဝင်တာ လုပ်တာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"Let's do our weekly food shopping at ___.\"",
+      "answer": "the supermarket",
+      "options": [],
+      "explain_en": "Supermarkets are large shops for food and household items.",
+      "explain_mm": "အိမ်သုံးပစ္စည်းနဲ့ စားစရာတွေ အစုံဝယ်ဖို့ဆို the supermarket ကို သွားတာ အဆင်ပြေဆုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"There are many offices and shops in ___.\"",
+      "answer": "the city centre",
+      "options": [],
+      "explain_en": "The city centre is the busy, central part of town.",
+      "explain_mm": "မြို့ရဲ့ အချက်အချာကျတဲ့ နေရာကို the city centre လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I'll meet you at ___ to buy some stamps.\"",
+      "answer": "the post office",
+      "options": [],
+      "explain_en": "Stamps are sold at the post office.",
+      "explain_mm": "စာပို့တံဆိပ်ခေါင်းတွေကို the post office မှာ ဝယ်လို့ရပါတယ်။"
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "id": "hobbies",
+  "title": "Free time & hobbies",
+  "level": 1,
+  "order": 20,
+  "theme": "Hobbies",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Talking about what you do in your spare time is essential for making friends. These phrases help you describe your interests and activities naturally.",
+  "why_grouped_mm": "ကိုယ့်ရဲ့ အားလပ်ချိန်မှာ ဘာတွေလုပ်လဲဆိုတာကို ပြောတတ်ဖို့က သူငယ်ချင်းအသစ်တွေနဲ့ ရင်းနှီးဖို့ အရမ်းအရေးကြီးတယ်။ ဒီစကားစုလေးတွေက ကိုယ့်ဝါသနာနဲ့ လုပ်ဆောင်ချက်တွေကို သဘာဝကျကျ ပြောပြဖို့ ကူညီပေးပါလိမ့်မယ်။",
+  "words": [
+    {
+      "word": "in my free time",
+      "pos": "expression",
+      "short_en": "when you are not working or studying",
+      "examples": [
+        {
+          "en": "{w}In my free time{/w}, I like to {c}read{/c}.",
+          "mm": "ကျွန်မ အားတဲ့အချိန်ဆို စာဖတ်ရတာကို ကြိုက်တယ်။"
+        },
+        {
+          "en": "What do you do {w}in your free time{/w}? — I {c}play{/c} guitar.",
+          "mm": "မင်း အားတဲ့အချိန်ဆို ဘာလုပ်လေ့ရှိလဲ။ — ကျွန်တော် ဂစ်တာတီးတယ်။"
+        },
+        {
+          "en": "{w}In my free time{/w}, I usually {c}relax{/c} at home.",
+          "mm": "ကျွန်မ အားတဲ့အချိန်ဆို အိမ်မှာပဲ အေးအေးဆေးဆေး နားနေလေ့ရှိတယ်။"
+        },
+        {
+          "en": "She studies English {w}in her free time{/w} to {c}improve{/c}.",
+          "mm": "သူမက အင်္ဂလိပ်စာ တိုးတက်လာအောင် အားတဲ့အချိန်မှာ စာလေ့လာတယ်။"
+        },
+        {
+          "en": "We spend time with {c}friends{/c} {w}in our free time{/w}.",
+          "mm": "ကျွန်တော်တို့ အားတဲ့အချိန်ဆို သူငယ်ချင်းတွေနဲ့ အချိန်ဖြုန်းကြတယ်။"
+        }
+      ],
+      "short_mm": "အားလပ်ချိန်မှာ"
+    },
+    {
+      "word": "be into",
+      "pos": "expression",
+      "short_en": "to like or be interested in something",
+      "nuance_en": "Very common in casual speech. Use 'be into' for hobbies and interests.",
+      "examples": [
+        {
+          "en": "I'm really {w}into{/w} {c}photography{/c} these days.",
+          "mm": "ဒီရက်ပိုင်း ကျွန်တော် ဓာတ်ပုံရိုက်တာကို အရမ်း ဝါသနာပါနေတယ်။"
+        },
+        {
+          "en": "Are you {w}into{/w} {c}football{/c}?",
+          "mm": "မင်း ဘောလုံးကစားတာကို ဝါသနာပါလား။"
+        },
+        {
+          "en": "He's {w}into{/w} {c}cooking{/c} new recipes.",
+          "mm": "သူက ဟင်းချက်နည်းအသစ်တွေ စမ်းချက်ရတာကို ဝါသနာပါတယ်။"
+        },
+        {
+          "en": "We're both {w}into{/w} {c}classic{/c} music.",
+          "mm": "ကျွန်တော်တို့နှစ်ယောက်လုံး ဂန္ထဝင်တေးဂီတကို ဝါသနာပါကြတယ်။"
+        },
+        {
+          "en": "She's not really {w}into{/w} {c}horror{/c} movies.",
+          "mm": "သူမက ထိတ်လန့်စရာရုပ်ရှင်တွေကို သိပ်ပြီးတော့ မကြိုက်ဘူး။"
+        }
+      ],
+      "short_mm": "စိတ်ဝင်စားတယ် / ဝါသနာပါတယ်",
+      "nuance_mm": "သူငယ်ချင်းတွေနဲ့ စကားပြောရင် အရမ်းသုံးတဲ့ ပေါ့ပေါ့ပါးပါးစကားလုံးပါ။"
+    },
+    {
+      "word": "go for a walk",
+      "pos": "expression",
+      "short_en": "to walk for exercise or pleasure",
+      "examples": [
+        {
+          "en": "I like to {w}go for a walk{/w} in the {c}park{/c}.",
+          "mm": "ကျွန်တော် ပန်းခြံထဲမှာ လမ်းလျှောက်ရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "Let's {w}go for a walk{/w} after {c}dinner{/c}.",
+          "mm": "ညစာစားပြီးရင် လမ်းလျှောက်ထွက်ကြရအောင်။"
+        },
+        {
+          "en": "They {w}go for a walk{/w} every {c}Sunday{/c} morning.",
+          "mm": "သူတို့ တနင်္ဂနွေမနက်တိုင်း လမ်းလျှောက်ထွက်ကြတယ်။"
+        },
+        {
+          "en": "She went {w}for a walk{/w} to get some {c}fresh{/c} air.",
+          "mm": "သူမ လတ်ဆတ်တဲ့လေရှူဖို့ လမ်းလျှောက်ထွက်ခဲ့တယ်။"
+        },
+        {
+          "en": "Do you want to {w}go for a walk{/w} {c}outside{/c}?",
+          "mm": "မင်း အပြင်မှာ လမ်းလျှောက်ထွက်ချင်လား။"
+        }
+      ],
+      "short_mm": "လမ်းလျှောက်ထွက်တယ်"
+    },
+    {
+      "word": "go out",
+      "pos": "expression",
+      "short_en": "to leave your house for entertainment",
+      "examples": [
+        {
+          "en": "We like to {w}go out{/w} on Friday {c}nights{/c}.",
+          "mm": "ကျွန်တော်တို့ သောကြာညတွေဆို အပြင်ထွက်ရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "I'm too tired to {w}go out{/w} {c}tonight{/c}.",
+          "mm": "ဒီနေ့ညတော့ အရမ်းပင်ပန်းနေလို့ အပြင်မထွက်နိုင်တော့ဘူး။"
+        },
+        {
+          "en": "Do you {w}go out{/w} with {c}friends{/c} often?",
+          "mm": "မင်း သူငယ်ချင်းတွေနဲ့ အပြင်ခဏခဏ ထွက်ဖြစ်လား။"
+        },
+        {
+          "en": "They {w}go out{/w} to {c}dinner{/c} every week.",
+          "mm": "သူတို့ အပတ်တိုင်း ညစာစားဖို့ အပြင်ထွက်ကြတယ်။"
+        },
+        {
+          "en": "It's nice to {w}go out{/w} and see the {c}city{/c}.",
+          "mm": "အပြင်ထွက်ပြီး မြို့ကို လည်ပတ်ကြည့်ရတာ ကောင်းတာပေါ့။"
+        }
+      ],
+      "short_mm": "အပြင်သွားတယ်"
+    },
+    {
+      "word": "be good at",
+      "pos": "expression",
+      "short_en": "to have a talent for something",
+      "examples": [
+        {
+          "en": "I'm {w}good at{/w} {c}playing{/c} chess.",
+          "mm": "ကျွန်တော် စစ်တုရင် ကစားတတ်တယ်။"
+        },
+        {
+          "en": "She's really {w}good at{/w} {c}drawing{/c} pictures.",
+          "mm": "သူမ ပုံဆွဲတာ အရမ်းတော်တယ်။"
+        },
+        {
+          "en": "Are you {w}good at{/w} {c}swimming{/c}?",
+          "mm": "မင်း ရေကူးတတ်လား။"
+        },
+        {
+          "en": "He's {w}good at{/w} {c}fixing{/c} computers.",
+          "mm": "သူ ကွန်ပျူတာ ပြင်တာ အရမ်းတော်တယ်။"
+        },
+        {
+          "en": "We're not very {w}good at{/w} {c}dancing{/c}.",
+          "mm": "ကျွန်တော်တို့ အက ကတဲ့နေရာမှာ သိပ်မတော်ကြဘူး။"
+        }
+      ],
+      "short_mm": "တော်တယ် / ကျွမ်းကျင်တယ်"
+    },
+    {
+      "word": "watch TV",
+      "pos": "expression",
+      "short_en": "to look at television programmes",
+      "examples": [
+        {
+          "en": "I like to {w}watch TV{/w} in the {c}evening{/c}.",
+          "mm": "ကျွန်တော် ညနေဘက်ဆို ရုပ်မြင်သံကြား ကြည့်ရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "We {w}watch TV{/w} to {c}relax{/c} after work.",
+          "mm": "ကျွန်တော်တို့ အလုပ်ပြီးရင် စိတ်အပန်းဖြေဖို့ ရုပ်မြင်သံကြား ကြည့်ကြတယ်။"
+        },
+        {
+          "en": "Do you {w}watch TV{/w} every {c}day{/c}?",
+          "mm": "မင်း နေ့တိုင်း ရုပ်မြင်သံကြား ကြည့်လား။"
+        },
+        {
+          "en": "They {w}watch TV{/w} shows with their {c}kids{/c}.",
+          "mm": "သူတို့ ကလေးတွေနဲ့အတူ ရုပ်မြင်သံကြား အစီအစဉ်တွေ ကြည့်ကြတယ်။"
+        },
+        {
+          "en": "I don't {w}watch TV{/w} very {c}often{/c}.",
+          "mm": "ကျွန်တော် ရုပ်မြင်သံကြား သိပ်မကြည့်ဖြစ်ဘူး။"
+        }
+      ],
+      "short_mm": "တီဗီကြည့်တယ်"
+    },
+    {
+      "word": "play football",
+      "pos": "expression",
+      "short_en": "to participate in the sport of football",
+      "nuance_en": "Use 'play' for team sports or games. Use 'do' for individual fitness like yoga.",
+      "examples": [
+        {
+          "en": "I {w}play football{/w} with my {c}friends{/c}.",
+          "mm": "ကျွန်တော် သူငယ်ချင်းတွေနဲ့ ဘောလုံးကစားတယ်။"
+        },
+        {
+          "en": "He likes to {w}play football{/w} at the {c}weekend{/c}.",
+          "mm": "သူက စနေ၊ တနင်္ဂနွေဆို ဘောလုံးကစားရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "We {w}play football{/w} in the {c}park{/c}.",
+          "mm": "ကျွန်တော်တို့ ပန်းခြံထဲမှာ ဘောလုံးကစားကြတယ်။"
+        },
+        {
+          "en": "Are you going to {w}play football{/w} {c}today{/c}?",
+          "mm": "မင်း ဒီနေ့ ဘောလုံးကစားဖို့ ရှိလား။"
+        },
+        {
+          "en": "She doesn't {w}play football{/w} very {c}well{/c}.",
+          "mm": "သူမ ဘောလုံးကစားတာ သိပ်မတော်ဘူး။"
+        }
+      ],
+      "confuse_with": [
+        "do yoga"
+      ],
+      "short_mm": "ဘောလုံးကန်တယ်",
+      "nuance_mm": "အဖွဲ့လိုက်ကစားရတဲ့ အားကစားတွေအတွက် play ကို သုံးပါတယ်။"
+    },
+    {
+      "word": "do yoga",
+      "pos": "expression",
+      "short_en": "to practice the exercise of yoga",
+      "examples": [
+        {
+          "en": "I {w}do yoga{/w} to {c}relax{/c}.",
+          "mm": "ကျွန်တော် စိတ်အပန်းဖြေဖို့ ယောဂကျင့်တယ်။"
+        },
+        {
+          "en": "She {w}do yoga{/w} every {c}morning{/c}.",
+          "mm": "သူမ မနက်တိုင်း ယောဂကျင့်တယ်။"
+        },
+        {
+          "en": "Do you want to {w}do yoga{/w} with {c}me{/c}?",
+          "mm": "မင်း ငါနဲ့အတူ ယောဂကျင့်ချင်လား။"
+        },
+        {
+          "en": "They {w}do yoga{/w} at the local {c}gym{/c}.",
+          "mm": "သူတို့ နားနီးရာ အားကစားရုံမှာ ယောဂကျင့်ကြတယ်။"
+        },
+        {
+          "en": "I've started to {w}do yoga{/w} for my {c}health{/c}.",
+          "mm": "ကျန်းမာရေးအတွက် ယောဂစကျင့်နေတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "play football"
+      ],
+      "short_mm": "ယောဂကျင့်တယ်"
+    },
+    {
+      "word": "go swimming",
+      "pos": "expression",
+      "short_en": "to swim for exercise or fun",
+      "examples": [
+        {
+          "en": "I {w}go swimming{/w} at the {c}pool{/c}.",
+          "mm": "ကျွန်တော် ရေကူးကန်မှာ ရေကူးတယ်။"
+        },
+        {
+          "en": "Let's {w}go swimming{/w} this {c}afternoon{/c}.",
+          "mm": "ဒီနေ့လည်ခင်း ရေကူးသွားရအောင်။"
+        },
+        {
+          "en": "She likes to {w}go swimming{/w} in the {c}summer{/c}.",
+          "mm": "သူမ နွေရာသီဆို ရေကူးရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "We {w}go swimming{/w} every {c}Saturday{/c}.",
+          "mm": "ကျွန်တော်တို့ စနေနေ့တိုင်း ရေကူးသွားကြတယ်။"
+        },
+        {
+          "en": "He doesn't {w}go swimming{/w} in the {c}sea{/c}.",
+          "mm": "သူ ပင်လယ်ထဲမှာ ရေမကူးဘူး။"
+        }
+      ],
+      "short_mm": "ရေကူးသွားတယ်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I like to ___ in the park to exercise.",
+      "right": "go for a walk",
+      "wrong": "go out",
+      "why": "\"go for a walk\" is specific to walking; \"go out\" is general for leaving the house.",
+      "why_mm": "go for a walk က လမ်းလျှောက်တာကိုပဲ ဆိုလိုပြီး go out ကတော့ အပြင်သွားတာ အားလုံးကို ခြုံငုံပြီး ပြောတာပါ။"
+    },
+    {
+      "prompt": "I ___ yoga every morning to stay fit.",
+      "right": "do",
+      "wrong": "play",
+      "why": "We use \"do\" for individual exercises like yoga, and \"play\" for team sports.",
+      "why_mm": "တစ်ယောက်တည်းလုပ်တဲ့ လေ့ကျင့်ခန်းတွေအတွက် do ကို သုံးပြီး အဖွဲ့လိုက်ကစားရတဲ့ အားကစားတွေအတွက် play ကို သုံးပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I am very interested in art. I am ___ art.",
+      "answer": "into",
+      "options": [
+        "into",
+        "good at",
+        "out"
+      ],
+      "explain_en": "To be interested in something is to be into it.",
+      "explain_mm": "တစ်ခုခုကို စိတ်ဝင်စားရင် be into လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "When I am not working, I like to ___.",
+      "answer": "go out",
+      "options": [
+        "go out",
+        "do yoga",
+        "play football"
+      ],
+      "explain_en": "To leave the house for fun is to go out.",
+      "explain_mm": "ပျော်ဖို့အတွက် အိမ်ကနေ အပြင်ထွက်တာကို go out လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I ___ every morning because it helps me relax.",
+      "answer": "do yoga",
+      "options": [
+        "do yoga",
+        "go swimming",
+        "watch TV"
+      ],
+      "explain_en": "Yoga is an activity you 'do'.",
+      "explain_mm": "ယောဂက တစ်ယောက်တည်းလုပ်ရတဲ့ လေ့ကျင့်ခန်းမို့ do yoga လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I am very fast in the water. I am ___ swimming.",
+      "answer": "good at",
+      "options": [
+        "good at",
+        "into",
+        "go out"
+      ],
+      "explain_en": "Having a talent for something means you are good at it.",
+      "explain_mm": "တစ်ခုခုကို တော်ရင် be good at လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I like to ___ with my friends on Saturday.",
+      "answer": "play football",
+      "options": [
+        "play football",
+        "do yoga",
+        "watch TV"
+      ],
+      "explain_en": "Football is a team sport you 'play'.",
+      "explain_mm": "ဘောလုံးက အဖွဲ့လိုက်ကစားရတဲ့ အားကစားမို့ play football လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"What do you do ___?\"",
+      "answer": "in your free time",
+      "options": [],
+      "explain_en": "The time when you are not busy is your free time.",
+      "explain_mm": "ကိုယ်အလုပ်မလုပ်တဲ့ အားလပ်ချိန်ကို free time လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I like to ___ after a long day at work.\"",
+      "answer": "watch TV",
+      "options": [],
+      "explain_en": "Watching television is a common way to relax.",
+      "explain_mm": "တီဗီကြည့်တာက အားလပ်ချိန်မှာ အသုံးအများဆုံး အပန်းဖြေနည်းတစ်ခုပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"It's a nice day, let's ___ in the park.\"",
+      "answer": "go for a walk",
+      "options": [],
+      "explain_en": "Walking for pleasure is going for a walk.",
+      "explain_mm": "အပန်းဖြေဖို့ လမ်းလျှောက်တာကို go for a walk လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I love the water, so I ___ every weekend.\"",
+      "answer": "go swimming",
+      "options": [],
+      "explain_en": "Swimming as a hobby is expressed as 'go swimming'.",
+      "explain_mm": "ရေကူးတာကို ဝါသနာတစ်ခုအနေနဲ့ ပြောရင် go swimming လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I'm really ___ music; it's my favourite hobby.\"",
+      "answer": "into",
+      "options": [],
+      "explain_en": "To be into something is to like it.",
+      "explain_mm": "တစ်ခုခုကို သဘောကျရင် be into လို့ သုံးလို့ရပါတယ်။"
+    }
+  ]
+}

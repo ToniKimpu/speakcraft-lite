@@ -1,0 +1,288 @@
+{
+  "id": "adverbs_misused",
+  "title": "Adverbs people misuse",
+  "level": 2,
+  "order": 4,
+  "theme": "Manner & discourse adverbs",
+  "why_grouped_en": "These -ly adverbs sound advanced, so learners reach for them — and use them wrong. Each has a precise job. Learn what they really mean, what they pair with, and when NOT to use them.",
+  "why_grouped_mm": "ဒီ -ly adverb တွေက စကားပြောတဲ့အခါ အသုံးများပေမဲ့ အဓိပ္ပာယ်လွဲပြီး သုံးမိတတ်ကြတယ်။ တစ်ခုချင်းစီရဲ့ အဓိပ္ပာယ်နဲ့ သုံးနှုန်းပုံကို သေချာသိထားရင် စကားပြောတာ ပိုသဘာဝကျသွားမှာပါ။",
+  "words": [
+    {
+      "word": "literally",
+      "pos": "adverb",
+      "ipa": "/ˈlɪt.ər.əl.i/",
+      "short_en": "in a real, exact way — not exaggerating",
+      "short_mm": "တကယ်ကို၊ အတိအကျကို (ချဲ့ကားပြောတာ မဟုတ်ဘဲ)",
+      "use_when_en": "Something is exactly, really true — word for word, no exaggeration.",
+      "explanation_en": "Use it when something is actually, exactly true.",
+      "nuance_en": "Don't use it just for emphasis (\"I literally died laughing\") — that's the opposite of its meaning.",
+      "goes_with_en": "literally + means / translates · take it literally",
+      "examples": [
+        {
+          "en": "He translated the text {w}literally{/w}, word for word.",
+          "mm": "သူက စာသားကို စကားလုံးတိုင်း အတိုင်းအဆအတိုင်း တိုက်ရိုက်ပြန်ဆိုလိုက်တယ်။"
+        },
+        {
+          "en": "The town's name {w}literally{/w} means \"new bridge\".",
+          "mm": "ဒီမြို့နာမည်ရဲ့ အဓိပ္ပာယ်က တိုက်ရိုက်ပြောရရင် 'တံတားသစ်' လို့ ခေါ်တာပါ။"
+        }
+      ],
+      "collocations": [
+        "literally true",
+        "take it literally",
+        "literally means"
+      ],
+      "confuse_with": [
+        "figuratively"
+      ],
+      "explanation_mm": "တစ်ခုခုက တကယ်ဖြစ်ပျက်နေတဲ့အတိုင်း အတိအကျ မှန်ကန်တယ်ဆိုတဲ့အခါ သုံးတယ်လေ။",
+      "nuance_mm": "စကားအဖြစ် 'တကယ်ကို' ဆိုပြီး အလွန်အကျွံ သုံးတာမျိုး မလုပ်ရဘူး။ ဒါက စကားလုံးရဲ့ အဓိပ္ပာယ်ကို ပျက်စေတယ်။",
+      "use_when_mm": "တစ်စုံတစ်ခုက တကယ်ကို ဖြစ်ပျက်နေတာ ဒါမှမဟုတ် အမှန်အတိုင်း ပြောပြချင်တဲ့အခါ သုံးပါ။ အလွန်အကျွံပြောတဲ့နေရာမှာတော့ မသုံးသင့်ပါဘူး။"
+    },
+    {
+      "word": "actually",
+      "pos": "adverb",
+      "ipa": "/ˈæk.tʃu.ə.li/",
+      "short_en": "in fact (often correcting something)",
+      "short_mm": "တကယ်တမ်းကျတော့၊ တကယ်တော့",
+      "use_when_en": "You correct or reveal the truth, often politely.",
+      "explanation_en": "Signals the truth, often against what was expected or said.",
+      "nuance_en": "Not the same as \"currently\" or \"now\". \"Actually, it's free\" = contrary to what you thought.",
+      "goes_with_en": "Actually, + clause · not actually",
+      "examples": [
+        {
+          "en": "It looks hard, but it's {w}actually{/w} quite easy.",
+          "mm": "ကြည့်ရတာ ခက်မယ်ထင်ရပေမယ့် တကယ်တမ်းကျတော့ အတော်လေး လွယ်ပါတယ်။"
+        },
+        {
+          "en": "{w}Actually{/w}, I think you're right.",
+          "mm": "တကယ်တော့ မင်းပြောတာ မှန်တယ်လို့ ငါထင်တယ်။"
+        }
+      ],
+      "collocations": [
+        "actually,",
+        "not actually"
+      ],
+      "confuse_with": [
+        "currently",
+        "now"
+      ],
+      "explanation_mm": "လူတွေ ထင်ထားတာနဲ့ ဆန့်ကျင်ဘက် အမှန်တရားကို ပြောချင်တဲ့အခါ သုံးတယ်။",
+      "nuance_mm": "ဒီစကားလုံးကို 'လက်ရှိ' (currently) ဆိုတဲ့ အဓိပ္ပာယ်နဲ့ မရောထွေးပါနဲ့။",
+      "use_when_mm": "လူတွေ ထင်ထားတာနဲ့ မတူဘဲ တကယ်ဖြစ်နေတဲ့ အမှန်တရားကို ပြောပြချင်တဲ့အခါ ဒါမှမဟုတ် အမှားပြင်တဲ့အခါ သုံးပါ။"
+    },
+    {
+      "word": "basically",
+      "pos": "adverb",
+      "ipa": "/ˈbeɪ.sɪk.li/",
+      "short_en": "in the main; to put it simply",
+      "short_mm": "အနှစ်ချုပ်ပြောရရင်၊ အဓိကအားဖြင့်",
+      "use_when_en": "You give a simple summary of something more complex.",
+      "explanation_en": "Introduces a simple summary. \"Basically, we ran out of time.\"",
+      "nuance_en": "Useful, but a filler if overused. Drop it if the sentence works without it.",
+      "goes_with_en": "Basically, + clause · basically the same",
+      "examples": [
+        {
+          "en": "{w}Basically{/w}, the plan is to leave early and avoid traffic.",
+          "mm": "အခြေခံအားဖြင့်တော့ စီမံကိန်းက စောစောထွက်ပြီး ယာဉ်ကြောပိတ်ဆို့တာကို ရှောင်ဖို့ပါပဲ။"
+        },
+        {
+          "en": "It's {w}basically{/w} the same as the old one.",
+          "mm": "ဒါက အခြေခံအားဖြင့်တော့ ဟောင်းတဲ့ဟာနဲ့ အတူတူပါပဲ။"
+        }
+      ],
+      "collocations": [
+        "basically the same",
+        "basically,"
+      ],
+      "confuse_with": [],
+      "explanation_mm": "ရှုပ်ထွေးတဲ့အကြောင်းအရာတစ်ခုကို ရိုးရိုးရှင်းရှင်းနဲ့ အနှစ်ချုပ်ပြောချင်တဲ့အခါ သုံးတယ်။",
+      "nuance_mm": "စကားပြောတဲ့အခါ အလွန်အကျွံ သုံးရင်တော့ စကားလုံးတွေက ပျင်းစရာကောင်းသွားတတ်တယ်။ လိုအပ်မှပဲ သုံးပါ။",
+      "use_when_mm": "ရှုပ်ထွေးနေတဲ့ အကြောင်းအရာတစ်ခုကို အနှစ်ချုပ်ပြီး ရိုးရိုးရှင်းရှင်း ပြောပြချင်တဲ့အခါ သုံးပါ။"
+    },
+    {
+      "word": "honestly",
+      "pos": "adverb",
+      "ipa": "/ˈɒn.ɪst.li/",
+      "short_en": "to tell the truth; sincerely",
+      "short_mm": "ရိုးရိုးသားသားပြောရရင်၊ အမှန်အတိုင်းပြောရရင်",
+      "use_when_en": "You signal a frank, sincere opinion is coming.",
+      "explanation_en": "Flags that you're being frank, often before an honest opinion.",
+      "nuance_en": "\"Honestly!\" on its own shows mild frustration.",
+      "goes_with_en": "Honestly, + clause · quite honestly",
+      "examples": [
+        {
+          "en": "{w}Honestly{/w}, I'm not sure this will work.",
+          "mm": "ရိုးရိုးသားသားပြောရရင် ဒါ အလုပ်ဖြစ်ပါ့မလားဆိုတာ ငါမသေချာဘူး။"
+        },
+        {
+          "en": "I {w}honestly{/w} didn't know about the meeting.",
+          "mm": "ငါ တကယ်ကို အစည်းအဝေးရှိမှန်း မသိခဲ့တာပါ။"
+        }
+      ],
+      "collocations": [
+        "honestly,",
+        "quite honestly"
+      ],
+      "confuse_with": [
+        "seriously"
+      ],
+      "explanation_mm": "ကိုယ့်ရဲ့ စိတ်ရင်းအမှန်ကို ရိုးသားပွင့်လင်းစွာ ပြောချင်တဲ့အခါ သုံးတယ်။",
+      "nuance_mm": "Honestly! လို့ တစ်လုံးတည်း သုံးလိုက်ရင်တော့ စိတ်ပျက်တဲ့သဘောမျိုး သက်ရောက်သွားတတ်တယ်။",
+      "use_when_mm": "ကိုယ့်ရဲ့ စိတ်ရင်းအမှန်ကို ပြောပြချင်တဲ့အခါ ဒါမှမဟုတ် ကိုယ့်အမြင်ကို ရိုးရိုးသားသား ဖွင့်ပြောတဲ့အခါ သုံးပါ။ တစ်ခါတလေ စိတ်အနှောင့်အယှက်ဖြစ်တဲ့အခါမျိုးမှာလည်း သုံးတတ်ပါတယ်။"
+    },
+    {
+      "word": "seriously",
+      "pos": "adverb",
+      "ipa": "/ˈsɪə.ri.əs.li/",
+      "short_en": "in a serious way; really (for emphasis)",
+      "short_mm": "တကယ်ကို၊ အလေးအနက်ထားပြီး",
+      "use_when_en": "You mean \"in a serious way\", or stress \"really\" in speech.",
+      "explanation_en": "Two jobs: (1) in a serious manner; (2) spoken emphasis — \"seriously good\".",
+      "nuance_en": "\"Seriously?\" on its own asks \"really?\" in surprise or doubt.",
+      "goes_with_en": "take (sth) seriously · seriously + adjective",
+      "examples": [
+        {
+          "en": "You should take this deadline {w}seriously{/w}.",
+          "mm": "ဒီနောက်ဆုံးထားရမယ့်ရက်ကို မင်း အလေးအနက်ထားသင့်တယ်။"
+        },
+        {
+          "en": "That movie was {w}seriously{/w} good.",
+          "mm": "ဒီရုပ်ရှင်က တကယ့်ကို ကောင်းတာပဲ။"
+        }
+      ],
+      "collocations": [
+        "take seriously",
+        "seriously good"
+      ],
+      "confuse_with": [
+        "honestly"
+      ],
+      "explanation_mm": "နှစ်မျိုးသုံးလို့ရတယ်။ တစ်ခုက အလေးအနက်ထားတာ၊ နောက်တစ်ခုက စကားကို အသားပေးပြောတာပါ။",
+      "nuance_mm": "Seriously? လို့ မေးခွန်းထုတ်ရင်တော့ 'တကယ်လား?' ဆိုတဲ့ အံ့ဩတဲ့သဘော သို့မဟုတ် မယုံကြည်တဲ့သဘော ဖြစ်သွားတတ်တယ်။",
+      "use_when_mm": "တစ်ခုခုကို တည်တည်ကြည်ကြည် ပြောချင်တဲ့အခါ ဒါမှမဟုတ် တစ်ခုခုကို အရမ်းကောင်းတယ်လို့ အလေးပေး ပြောချင်တဲ့အခါ သုံးပါ။ မေးခွန်းအနေနဲ့ဆိုရင်တော့ အံ့ဩသွားတဲ့အခါ သုံးပါတယ်။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "Revealing the truth: \"___, it's cheaper to buy online.\"",
+      "right": "Actually",
+      "wrong": "Literally",
+      "why": "Reveals / corrects → actually. \"Literally\" means exactly-true, word-for-word.",
+      "why_mm": "Actually က အမှန်တရားကို ပြင်ပြောတာပါ။ Literally ကတော့ စာသားအတိုင်း အတိအကျကို ပြောတာပါ။"
+    },
+    {
+      "prompt": "\"They don't take safety ___.\"",
+      "right": "seriously",
+      "wrong": "honestly",
+      "why": "\"take ... seriously\" is a fixed phrase. \"take honestly\" isn't English.",
+      "why_mm": "Take ... seriously ဆိုတာက မှန်ကန်တဲ့ စကားစုပါ။ Take honestly ဆိုတာက အင်္ဂလိပ်စကားမှာ မသုံးပါဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Exact, word-for-word meaning: \"The phrase ___ translates as 'good morning'.\"",
+      "answer": "literally",
+      "options": [
+        "literally",
+        "basically",
+        "seriously"
+      ],
+      "explain_en": "Exact, word-for-word meaning → literally.",
+      "explain_mm": "စာသားအတိုင်း အတိအကျ မှန်ကန်တာကို ပြောချင်ရင် literally ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Polite correction: \"___, the meeting is on Friday, not Thursday.\"",
+      "answer": "Actually",
+      "options": [
+        "Actually",
+        "Literally",
+        "Honestly"
+      ],
+      "explain_en": "Correcting or revealing the truth → actually.",
+      "explain_mm": "ထင်ထားတာနဲ့ ဆန့်ကျင်ဘက် အမှန်တရားကို ပြင်ပြောတဲ့အခါ actually ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Simple summary of something complex: \"___, we just need more time.\"",
+      "answer": "Basically",
+      "options": [
+        "Basically",
+        "Literally",
+        "Seriously"
+      ],
+      "explain_en": "A simple summary of something complex → basically.",
+      "explain_mm": "ရှုပ်ထွေးတဲ့အရာကို အတိုချုပ် အနှစ်ချုပ်ပြောတဲ့အခါ basically ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Before a frank opinion: \"___, I think we should start over.\"",
+      "answer": "Honestly",
+      "options": [
+        "Honestly",
+        "Literally",
+        "Actually"
+      ],
+      "explain_en": "Signalling a frank, sincere opinion → honestly.",
+      "explain_mm": "ကိုယ့်ရဲ့ စိတ်ရင်းအမှန်ကို ပွင့်ပွင့်လင်းလင်း ပြောတဲ့အခါ honestly ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Treat with importance: \"They don't take customer feedback ___.\"",
+      "answer": "seriously",
+      "options": [
+        "seriously",
+        "basically",
+        "literally"
+      ],
+      "explain_en": "\"Take ... seriously\" is the fixed phrase.",
+      "explain_mm": "Take ... seriously ဆိုတာက အမြဲတွဲသုံးတဲ့ စကားစု ဖြစ်လို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"The town's name ___ means 'new bridge'.\"",
+      "answer": "literally",
+      "options": [],
+      "explain_en": "Exactly, word-for-word true → literally (literally means).",
+      "explain_mm": "စာသားအတိုင်း အတိအကျ ဖြစ်ပျက်တာကို ပြောချင်ရင် literally ကို သုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"It looks expensive, but it's ___ quite cheap.\"",
+      "answer": "actually",
+      "options": [],
+      "explain_en": "Revealing the truth against what you'd expect → actually.",
+      "explain_mm": "လူတွေထင်ထားတာနဲ့ မတူတဲ့ အမှန်တရားကို ပြောချင်ရင် actually ကို သုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"You need to take your health ___.\"",
+      "answer": "seriously",
+      "options": [],
+      "explain_en": "Fixed phrase: \"take ... seriously\".",
+      "explain_mm": "Take ... seriously ဆိုတဲ့ စကားစုကို သုံးရမှာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Prefacing a candid opinion: \"___, I didn't enjoy the film much.\"",
+      "answer": "Honestly",
+      "options": [
+        "Honestly",
+        "Literally",
+        "Basically"
+      ],
+      "explain_en": "Prefacing a candid opinion → honestly.",
+      "explain_mm": "ကိုယ့်ရဲ့ ရိုးသားတဲ့ အမြင်ကို မပြောခင် honestly နဲ့ စပြောပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the missing word: \"___, the two phones are the same.\"",
+      "answer": "basically",
+      "options": [],
+      "explain_en": "Giving a simple summary → basically (basically the same).",
+      "explain_mm": "Basically the same လို့ ပြောရင် အနှစ်ချုပ်အားဖြင့် အတူတူပဲလို့ ဆိုလိုတာပါ။"
+    }
+  ]
+}

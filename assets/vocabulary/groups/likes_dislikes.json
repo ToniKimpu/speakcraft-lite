@@ -1,0 +1,338 @@
+{
+  "id": "likes_dislikes",
+  "title": "Likes & dislikes",
+  "level": 1,
+  "order": 5,
+  "theme": "Preferences",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "These are the essential verbs to talk about your hobbies and daily preferences. Learning these allows you to express your personality and connect with others by sharing what you enjoy doing.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက ကိုယ့်ရဲ့ ဝါသနာ၊ စိတ်ကြိုက်အရာတွေနဲ့ နေ့စဉ်ဘဝမှာ ဘာလုပ်ရတာ သဘောကျလဲဆိုတာကို ပြောပြဖို့ အရေးကြီးပါတယ်။ ဒီစကားလုံးတွေကို သုံးတတ်သွားရင် ကိုယ့်အကြောင်းကို ပိုပြီး ပွင့်ပွင့်လင်းလင်း ပြောပြနိုင်လာမှာပေါ့။",
+  "words": [
+    {
+      "word": "like",
+      "pos": "verb",
+      "ipa": "/laɪk/",
+      "short_en": "to enjoy something or find it pleasant",
+      "examples": [
+        {
+          "en": "I {w}like{/w} {c}playing{/c} football.",
+          "mm": "ကျွန်တော် ဘောလုံးကစားရတာကို သဘောကျတယ်။"
+        },
+        {
+          "en": "Do you {w}like{/w} {c}spicy{/c} food?",
+          "mm": "မင်း အစပ်စာတွေ စားရတာကို သဘောကျလား။"
+        },
+        {
+          "en": "She {w}like{/w}s {c}listening{/c} to music.",
+          "mm": "သူမ သီချင်းနားထောင်ရတာကို သဘောကျတယ်။"
+        },
+        {
+          "en": "We {w}like{/w} {c}visiting{/c} new places.",
+          "mm": "ကျွန်တော်တို့ နေရာသစ်တွေကို သွားလည်ရတာကို သဘောကျတယ်။"
+        },
+        {
+          "en": "He {w}like{/w}s his new {c}job{/c}.",
+          "mm": "သူ သူ့အလုပ်သစ်ကို သဘောကျတယ်။"
+        }
+      ],
+      "short_mm": "သဘောကျတယ်/ကြိုက်တယ်"
+    },
+    {
+      "word": "love",
+      "pos": "verb",
+      "ipa": "/lʌv/",
+      "short_en": "to like something very much",
+      "examples": [
+        {
+          "en": "I {w}love{/w} {c}swimming{/c} in the sea.",
+          "mm": "ကျွန်တော် ပင်လယ်ထဲမှာ ရေကူးရတာကို အရမ်းကြိုက်တယ်။"
+        },
+        {
+          "en": "She {w}love{/w}s {c}reading{/c} books.",
+          "mm": "သူမ စာဖတ်ရတာကို အရမ်းကြိုက်တယ်။"
+        },
+        {
+          "en": "We {w}love{/w} {c}eating{/c} together.",
+          "mm": "ကျွန်တော်တို့ အတူတူ ထမင်းစားရတာကို အရမ်းကြိုက်တယ်။"
+        },
+        {
+          "en": "He {w}love{/w}s {c}watching{/c} movies.",
+          "mm": "သူ ရုပ်ရှင်ကြည့်ရတာကို အရမ်းကြိုက်တယ်။"
+        },
+        {
+          "en": "I {w}love{/w} {c}sunny{/c} weather.",
+          "mm": "ကျွန်တော် နေသာတဲ့ ရာသီဥတုကို အရမ်းကြိုက်တယ်။"
+        }
+      ],
+      "short_mm": "အလွန်ကြိုက်တယ်/အရမ်းချစ်တယ်"
+    },
+    {
+      "word": "enjoy",
+      "pos": "verb",
+      "ipa": "/ɪnˈdʒɔɪ/",
+      "short_en": "to get pleasure from something",
+      "nuance_en": "Always followed by a noun or an -ing verb. Never say 'enjoy to do'.",
+      "examples": [
+        {
+          "en": "I {w}enjoy{/w} {c}cooking{/c} dinner.",
+          "mm": "ကျွန်တော် ညစာချက်ရတာကို ပျော်တယ်။"
+        },
+        {
+          "en": "Did you {w}enjoy{/w} the {c}party{/c}?",
+          "mm": "မင်း ပါတီပွဲမှာ ပျော်ခဲ့ရဲ့လား။"
+        },
+        {
+          "en": "She {w}enjoy{/w}s {c}walking{/c} in the park.",
+          "mm": "သူမ ပန်းခြံထဲမှာ လမ်းလျှောက်ရတာကို ပျော်တယ်။"
+        },
+        {
+          "en": "We {w}enjoy{/w} {c}traveling{/c} abroad.",
+          "mm": "ကျွန်တော်တို့ နိုင်ငံခြား ခရီးသွားရတာကို ပျော်တယ်။"
+        },
+        {
+          "en": "I really {w}enjoy{/w} {c}learning{/c} English.",
+          "mm": "ကျွန်တော် အင်္ဂလိပ်စာ သင်ယူရတာကို တကယ့်ကို ပျော်တယ်။"
+        }
+      ],
+      "short_mm": "ပျော်မွေ့တယ်/လုပ်ရတာ သဘောကျတယ်",
+      "nuance_mm": "enjoy နောက်မှာ noun သို့မဟုတ် -ing ပဲ လိုက်ရပါမယ်။ enjoy to do လို့ မပြောရပါဘူး။"
+    },
+    {
+      "word": "don't mind",
+      "pos": "phrase",
+      "ipa": "/dəʊnt maɪnd/",
+      "short_en": "to not be bothered by something; it is okay",
+      "examples": [
+        {
+          "en": "I {w}don't mind{/w} {c}waiting{/c} a little.",
+          "mm": "ကျွန်တော် နည်းနည်း စောင့်ရတာ အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "She {w}doesn't mind{/w} the {c}cold{/c} weather.",
+          "mm": "သူမ အေးတဲ့ ရာသီဥတုကို အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "I {w}don't mind{/w} {c}helping{/c} you.",
+          "mm": "ကျွန်တော် မင်းကို ကူညီပေးရတာ အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "He {w}doesn't mind{/w} {c}doing{/c} the dishes.",
+          "mm": "သူ ပန်းကန်ဆေးရတာကို အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "I {w}don't mind{/w} {c}walking{/c} home.",
+          "mm": "ကျွန်တော် အိမ်ကို လမ်းလျှောက်ပြန်ရတာ အဆင်ပြေပါတယ်။"
+        }
+      ],
+      "short_mm": "ကိစ္စမရှိဘူး/ဖြစ်ပါတယ်"
+    },
+    {
+      "word": "hate",
+      "pos": "verb",
+      "ipa": "/heɪt/",
+      "short_en": "to dislike something very much",
+      "examples": [
+        {
+          "en": "I {w}hate{/w} {c}waking{/c} up early.",
+          "mm": "ကျွန်တော် စောစောထရတာကို မုန်းတယ်။"
+        },
+        {
+          "en": "She {w}hate{/w}s {c}being{/c} late.",
+          "mm": "သူမ နောက်ကျတာကို မုန်းတယ်။"
+        },
+        {
+          "en": "We {w}hate{/w} {c}rainy{/c} days.",
+          "mm": "ကျွန်တော်တို့ မိုးရွာတဲ့ရက်တွေကို မုန်းတယ်။"
+        },
+        {
+          "en": "I {w}hate{/w} {c}cleaning{/c} the house.",
+          "mm": "ကျွန်တော် အိမ်သန့်ရှင်းရေး လုပ်ရတာကို မုန်းတယ်။"
+        },
+        {
+          "en": "He {w}hate{/w}s {c}losing{/c} games.",
+          "mm": "သူ ဂိမ်းရှုံးတာကို မုန်းတယ်။"
+        }
+      ],
+      "short_mm": "မုန်းတယ်/အရမ်းမကြိုက်ဘူး"
+    },
+    {
+      "word": "can't stand",
+      "pos": "phrase",
+      "ipa": "/kɑːnt stænd/",
+      "short_en": "to dislike something strongly; to find it annoying",
+      "examples": [
+        {
+          "en": "I {w}can't stand{/w} {c}loud{/c} music.",
+          "mm": "ကျွန်တော် ဆူညံတဲ့ တေးဂီတတွေကို သည်းမခံနိုင်ဘူး။"
+        },
+        {
+          "en": "She {w}can't stand{/w} {c}waiting{/c} in queues.",
+          "mm": "သူမ တန်းစီပြီး စောင့်ရတာကို သည်းမခံနိုင်ဘူး။"
+        },
+        {
+          "en": "I {w}can't stand{/w} {c}hot{/c} weather.",
+          "mm": "ကျွန်တော် ပူပြင်းတဲ့ ရာသီဥတုကို သည်းမခံနိုင်ဘူး။"
+        },
+        {
+          "en": "He {w}can't stand{/w} {c}rude{/c} people.",
+          "mm": "သူ လူယုတ်မာတွေကို သည်းမခံနိုင်ဘူး။"
+        },
+        {
+          "en": "I {w}can't stand{/w} {c}doing{/c} housework.",
+          "mm": "ကျွန်တော် အိမ်မှုကိစ္စ လုပ်ရတာကို သည်းမခံနိုင်ဘူး။"
+        }
+      ],
+      "short_mm": "သည်းမခံနိုင်ဘူး/မကြိုက်လွန်းလို့ စိတ်တောင်တိုတယ်"
+    },
+    {
+      "word": "prefer",
+      "pos": "verb",
+      "ipa": "/prɪˈfɜːr/",
+      "short_en": "to like one thing more than another",
+      "nuance_en": "Use 'prefer X to Y' (e.g., I prefer tea to coffee).",
+      "examples": [
+        {
+          "en": "I {w}prefer{/w} tea {c}to{/c} coffee.",
+          "mm": "ကျွန်တော် ကော်ဖီထက် လက်ဖက်ရည်ကို ပိုသဘောကျတယ်။"
+        },
+        {
+          "en": "She {w}prefer{/w}s {c}reading{/c} to watching TV.",
+          "mm": "သူမ ရုပ်မြင်သံကြား ကြည့်တာထက် စာဖတ်တာကို ပိုသဘောကျတယ်။"
+        },
+        {
+          "en": "I {w}prefer{/w} {c}summer{/c} to winter.",
+          "mm": "ကျွန်တော် ဆောင်းရာသီထက် နွေရာသီကို ပိုသဘောကျတယ်။"
+        },
+        {
+          "en": "We {w}prefer{/w} {c}walking{/c} to driving.",
+          "mm": "ကျွန်တော်တို့ ကားမောင်းတာထက် လမ်းလျှောက်တာကို ပိုသဘောကျတယ်။"
+        },
+        {
+          "en": "He {w}prefer{/w}s {c}cats{/c} to dogs.",
+          "mm": "သူ ခွေးထက် ကြောင်ကို ပိုသဘောကျတယ်။"
+        }
+      ],
+      "short_mm": "ပိုကြိုက်တယ်",
+      "nuance_mm": "prefer X to Y ပုံစံနဲ့ သုံးရပါမယ်။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I ___ tea to coffee.",
+      "right": "prefer",
+      "wrong": "like",
+      "why": "Use 'prefer' when comparing two things with 'to'.",
+      "why_mm": "prefer သုံးတဲ့အခါမှာ than မဟုတ်ဘဲ to နဲ့ တွဲသုံးရတာကို သတိပြုပါ။"
+    },
+    {
+      "prompt": "I ___ waiting; it's okay.",
+      "right": "don't mind",
+      "wrong": "can't stand",
+      "why": "'Don't mind' means you are okay with it, 'can't stand' means you hate it.",
+      "why_mm": "don't mind က အဆင်ပြေတယ်လို့ ဆိုလိုပြီး can't stand ကတော့ လုံးဝသည်းမခံနိုင်ဘူးလို့ ဆိုလိုတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I really ___ swimming; it is my favourite hobby.",
+      "answer": "love",
+      "options": [
+        "love",
+        "hate",
+        "don't mind"
+      ],
+      "explain_en": "To like something very much is to love it.",
+      "explain_mm": "တစ်ခုခုကို အရမ်းကြိုက်တယ်ဆိုရင် love ကို သုံးရမှာပေါ့။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I ___ loud noises. They are so annoying!",
+      "answer": "can't stand",
+      "options": [
+        "can't stand",
+        "enjoy",
+        "like"
+      ],
+      "explain_en": "When you dislike something strongly, you can't stand it.",
+      "explain_mm": "တစ်ခုခုကို သည်းမခံနိုင်လောက်အောင် မကြိုက်ရင် can't stand ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I ___ coffee to tea. It tastes better.",
+      "answer": "prefer",
+      "options": [
+        "prefer",
+        "love",
+        "enjoy"
+      ],
+      "explain_en": "When comparing two things, use 'prefer'.",
+      "explain_mm": "အရာနှစ်ခုကို နှိုင်းယှဉ်ချင်ရင် prefer ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I ___ cleaning the kitchen, but I'll do it if I have to.",
+      "answer": "don't mind",
+      "options": [
+        "don't mind",
+        "love",
+        "hate"
+      ],
+      "explain_en": "If you don't mind something, you are not bothered by it.",
+      "explain_mm": "တစ်ခုခုကို လုပ်ရတာ အဆင်ပြေတယ်၊ ကိစ္စမရှိဘူးဆိုရင် don't mind ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She ___ reading books in the garden.",
+      "answer": "enjoys",
+      "options": [
+        "enjoys",
+        "can't stand",
+        "prefers"
+      ],
+      "explain_en": "To get pleasure from an activity is to enjoy it.",
+      "explain_mm": "အလုပ်တစ်ခုခုကို လုပ်ရတာ ပျော်တယ်ဆိုရင် enjoy ကို သုံးရမှာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'I ___ playing football every weekend.'",
+      "answer": "like",
+      "options": [],
+      "explain_en": "A general verb for enjoying an activity.",
+      "explain_mm": "ဝါသနာတစ်ခုခုကို သဘောကျတယ်လို့ ယေဘုယျပြောချင်ရင် like သုံးလို့ရပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'I ___ waking up early; it makes me tired.'",
+      "answer": "hate",
+      "options": [],
+      "explain_en": "To dislike something very much.",
+      "explain_mm": "အရမ်းမုန်းတယ်ဆိုရင် hate သုံးရပါမယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'Do you ___ listening to jazz music?'",
+      "answer": "enjoy",
+      "options": [],
+      "explain_en": "Use enjoy + -ing for activities.",
+      "explain_mm": "enjoy နောက်မှာ verb ဆိုရင် -ing ထည့်ရမယ်ဆိုတာ မမေ့နဲ့နော်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'I ___ the cold to the heat.'",
+      "answer": "prefer",
+      "options": [],
+      "explain_en": "Use prefer X to Y for comparisons.",
+      "explain_mm": "နှိုင်းယှဉ်တဲ့အခါမှာ prefer X to Y ပုံစံကို သုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'I ___ waiting in long queues.'",
+      "answer": "can't stand",
+      "options": [],
+      "explain_en": "Strong dislike for an annoying situation.",
+      "explain_mm": "စိတ်အနှောင့်အယှက်ဖြစ်လောက်အောင် မကြိုက်ရင် can't stand ကို သုံးပါတယ်။"
+    }
+  ]
+}

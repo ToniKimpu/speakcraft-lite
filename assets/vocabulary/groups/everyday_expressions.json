@@ -1,0 +1,383 @@
+{
+  "id": "everyday_expressions",
+  "title": "Everyday expressions",
+  "level": 1,
+  "order": 28,
+  "theme": "Expressions",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "These are the essential building blocks for natural, polite English conversation. Mastering these phrases will help you sound more like a native speaker and handle common social situations with ease.",
+  "why_grouped_mm": "ဒီစကားစုတွေက နေ့စဉ်ပြောဆိုဆက်သွယ်ရာမှာ အသုံးအများဆုံးနဲ့ သဘာဝကျကျ ပြောတတ်ဖို့ အရေးပါတဲ့ အခြေခံစကားလုံးတွေ ဖြစ်ပါတယ်။",
+  "words": [
+    {
+      "word": "never mind",
+      "pos": "expression",
+      "short_en": "used to tell someone not to worry about a mistake or a problem",
+      "examples": [
+        {
+          "en": "I'm sorry I'm late. — {w}Never mind{/w}, it doesn't {c}matter{/c}.",
+          "mm": "နောက်ကျသွားလို့ တောင်းပန်ပါတယ်။ — ကိစ္စမရှိပါဘူး၊ ရပါတယ်။"
+        },
+        {
+          "en": "I forgot my wallet. — {w}Never mind{/w}, I'll {c}pay{/c}.",
+          "mm": "ကျွန်တော့်ပိုက်ဆံအိတ် မေ့ကျန်ခဲ့တယ်။ — ကိစ္စမရှိပါဘူး၊ ကျွန်တော်ပဲ ရှင်းလိုက်ပါ့မယ်။"
+        },
+        {
+          "en": "Did you find my keys? — {w}Never mind{/w}, I found {c}them{/c}.",
+          "mm": "ကျွန်တော့်သော့တွေ တွေ့လား။ — ကိစ္စမရှိတော့ပါဘူး၊ ကျွန်တော်ပဲ တွေ့သွားပြီ။"
+        },
+        {
+          "en": "{w}Never mind{/w} the price, just {c}buy{/c} it.",
+          "mm": "ဈေးနှုန်းကို ဂရုမစိုက်ပါနဲ့၊ ဝယ်လိုက်တော့။"
+        },
+        {
+          "en": "I can't help you today. — {w}Never mind{/w}, I'll ask {c}someone{/c} else.",
+          "mm": "ဒီနေ့တော့ အကူအညီမပေးနိုင်ဘူးနော်။ — ကိစ္စမရှိပါဘူး၊ တခြားတစ်ယောက်ကိုပဲ မေးလိုက်ပါ့မယ်။"
+        }
+      ],
+      "short_mm": "ကိစ္စမရှိပါဘူး၊ ရပါတယ်"
+    },
+    {
+      "word": "no worries",
+      "pos": "expression",
+      "short_en": "a friendly way to say 'you're welcome' or 'it's okay'",
+      "examples": [
+        {
+          "en": "Thanks for your help! — {w}No worries{/w}, it was a {c}pleasure{/c}.",
+          "mm": "ကူညီပေးလို့ ကျေးဇူးတင်ပါတယ်! — စိတ်မပူပါနဲ့၊ ကူညီရတာ ဝမ်းသာပါတယ်။"
+        },
+        {
+          "en": "Can you meet at five? — {w}No worries{/w}, that {c}works{/c} for me.",
+          "mm": "ငါးနာရီမှာ တွေ့လို့ရမလား။ — စိတ်မပူပါနဲ့၊ အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "Sorry I broke your pen. — {w}No worries{/w}, it was {c}old{/c} anyway.",
+          "mm": "မင်းရဲ့ ဘောပင်ကို ချိုးမိလို့ တောင်းပန်ပါတယ်။ — စိတ်မပူပါနဲ့၊ အဲ့ဒါက အဟောင်းကြီးပါပဲ။"
+        },
+        {
+          "en": "Is it okay if I sit here? — {w}No worries{/w}, go {c}ahead{/c}.",
+          "mm": "ဒီမှာ ထိုင်လို့ရမလား။ — စိတ်မပူပါနဲ့၊ ထိုင်ပါ၊ ထိုင်ပါ။"
+        },
+        {
+          "en": "Thanks for the coffee. — {w}No worries{/w}, {c}anytime{/c}!",
+          "mm": "ကော်ဖီအတွက် ကျေးဇူးပါ။ — စိတ်မပူပါနဲ့၊ အချိန်မရွေးပါပဲ။"
+        }
+      ],
+      "short_mm": "ရပါတယ်၊ ကိစ္စမရှိပါဘူး"
+    },
+    {
+      "word": "of course",
+      "pos": "expression",
+      "short_en": "used to say 'yes' or to show that something is obvious",
+      "examples": [
+        {
+          "en": "Can I borrow this? — {w}Of course{/w}, help {c}yourself{/c}.",
+          "mm": "ဒါလေး ခဏယူသုံးလို့ရမလား။ — ရတာပေါ့၊ ယူသုံးလိုက်ပါ။"
+        },
+        {
+          "en": "Are you coming tonight? — {w}Of course{/w}, I wouldn't {c}miss{/c} it.",
+          "mm": "ဒီည လာမှာလား။ — လာမှာပေါ့၊ ဘယ်လွတ်ပါ့မလဲ။"
+        },
+        {
+          "en": "Is it cold outside? — {w}Of course{/w}, it's {c}winter{/c}!",
+          "mm": "အပြင်မှာ အေးလား။ — အေးတာပေါ့၊ ဆောင်းရာသီပဲဟာ။"
+        },
+        {
+          "en": "Do you like pizza? — {w}Of course{/w}, who {c}doesn't{/c}?",
+          "mm": "ပီဇာကြိုက်လား။ — ကြိုက်တာပေါ့၊ ဘယ်သူက မကြိုက်ဘဲနေမလဲ။"
+        },
+        {
+          "en": "Will you help me? — {w}Of course{/w}, I'd be {c}happy{/c} to.",
+          "mm": "ကျွန်တော့်ကို ကူညီပေးမလား။ — ကူညီပေးမှာပေါ့၊ ဝမ်းသာပါတယ်။"
+        }
+      ],
+      "short_mm": "ဟုတ်တာပေါ့၊ သေချာတာပေါ့"
+    },
+    {
+      "word": "I see",
+      "pos": "expression",
+      "short_en": "used to show that you understand what someone has said",
+      "examples": [
+        {
+          "en": "The bus is late today. — {w}I see{/w}, that's why it's so {c}crowded{/c}.",
+          "mm": "ဒီနေ့ ကားနောက်ကျနေတယ်။ — အော် ဟုတ်လား၊ ဒါကြောင့် လူတွေ အရမ်းများနေတာကိုး။"
+        },
+        {
+          "en": "I can't come because I'm busy. — {w}I see{/w}, maybe {c}later{/c} then.",
+          "mm": "ကျွန်တော် အလုပ်များလို့ မလာနိုင်ဘူး။ — အော် ဟုတ်လား၊ ဒါဆို နောက်မှပဲ ပေါ့လေ။"
+        },
+        {
+          "en": "He's not my brother, he's my cousin. — {w}I see{/w}, thanks for {c}clarifying{/c}.",
+          "mm": "သူက ကျွန်တော့်အစ်ကိုမဟုတ်ဘူး၊ ဝမ်းကွဲအစ်ကိုပါ။ — အော် ဟုတ်လား၊ ရှင်းပြပေးလို့ ကျေးဇူးပါ။"
+        },
+        {
+          "en": "The shop is closed on Sundays. — {w}I see{/w}, I'll come {c}tomorrow{/c}.",
+          "mm": "ဒီဆိုင်က တနင်္ဂနွေနေ့တိုင်း ပိတ်တယ်။ — အော် ဟုတ်လား၊ ဒါဆို မနက်ဖြန်မှပဲ လာတော့မယ်။"
+        },
+        {
+          "en": "Why are you leaving? — {w}I see{/w} your point, but I have to {c}go{/c}.",
+          "mm": "ဘာလို့ ပြန်တော့မှာလဲ။ — မင်းပြောတာလည်း ဟုတ်ပါတယ်၊ ဒါပေမဲ့ ကျွန်တော် သွားမှဖြစ်မယ်။"
+        }
+      ],
+      "short_mm": "အော်... ဟုတ်ပြီ၊ နားလည်ပါပြီ"
+    },
+    {
+      "word": "that's a shame",
+      "pos": "expression",
+      "short_en": "used to show disappointment or sympathy",
+      "examples": [
+        {
+          "en": "It's raining on our picnic day. — {w}That's a shame{/w}, it's such a {c}nice{/c} park.",
+          "mm": "ပစ်နစ်ထွက်မယ့်နေ့မှာ မိုးရွာနေတယ်။ — နှမြောစရာကောင်းလိုက်တာ၊ ပန်းခြံလေးက အရမ်းလှတာကို။"
+        },
+        {
+          "en": "I lost my ticket. — {w}That's a shame{/w}, can you get a {c}refund{/c}?",
+          "mm": "ကျွန်တော့်လက်မှတ် ပျောက်သွားတယ်။ — နှမြောစရာပဲ၊ ပိုက်ဆံပြန်အမ်းခိုင်းလို့ ရမလား။"
+        },
+        {
+          "en": "The movie is sold out. — {w}That's a shame{/w}, I really wanted to {c}see{/c} it.",
+          "mm": "ဒီရုပ်ရှင်လက်မှတ်တွေ ကုန်သွားပြီတဲ့။ — နှမြောစရာပဲ၊ ကျွန်တော် တကယ်ကြည့်ချင်နေတာ။"
+        },
+        {
+          "en": "I can't go to the party. — {w}That's a shame{/w}, we'll miss {c}you{/c}.",
+          "mm": "ကျွန်တော် ပါတီကို မလာနိုင်တော့ဘူး။ — နှမြောစရာပဲ၊ မင်းကို လွမ်းနေမှာနော်။"
+        },
+        {
+          "en": "The restaurant closed down. — {w}That's a shame{/w}, they had great {c}food{/c}.",
+          "mm": "ဒီစားသောက်ဆိုင် ပိတ်သွားပြီ။ — နှမြောစရာပဲ၊ သူတို့ဆီက အစားအစာတွေ အရမ်းကောင်းတာကို။"
+        }
+      ],
+      "short_mm": "နှမြောစရာပဲ၊ စိတ်မကောင်းလိုက်တာ"
+    },
+    {
+      "word": "well done",
+      "pos": "expression",
+      "short_en": "used to praise someone for doing something good",
+      "examples": [
+        {
+          "en": "I passed my exam! — {w}Well done{/w}, I'm so {c}proud{/c} of you.",
+          "mm": "ကျွန်တော် စာမေးပွဲအောင်သွားပြီ! — ဂုဏ်ယူပါတယ်၊ မင်းအတွက် အရမ်းဂုဏ်ယူမိတယ်။"
+        },
+        {
+          "en": "I finished the project early. — {w}Well done{/w}, that's great {c}news{/c}.",
+          "mm": "ကျွန်တော် ပရောဂျက်ကို စောစောပြီးသွားပြီ။ — ဂုဏ်ယူပါတယ်၊ သတင်းကောင်းပဲ။"
+        },
+        {
+          "en": "You played really well today. — {w}Well done{/w}, {c}everyone{/c}!",
+          "mm": "ဒီနေ့တော့ မင်းတို့ အရမ်းကောင်းအောင် ကစားနိုင်ခဲ့တယ်။ — ဂုဏ်ယူပါတယ်၊ အားလုံးပဲ။"
+        },
+        {
+          "en": "I cooked dinner tonight. — {w}Well done{/w}, it tastes {c}delicious{/c}.",
+          "mm": "ဒီညတော့ ကျွန်တော် ညစာချက်ထားတယ်။ — ဂုဏ်ယူပါတယ်၊ အရသာရှိလိုက်တာ။"
+        },
+        {
+          "en": "You solved the puzzle. — {w}Well done{/w}, you're very {c}smart{/c}.",
+          "mm": "မင်း ပုစ္ဆာကို ဖြေရှင်းနိုင်သွားပြီ။ — ဂုဏ်ယူပါတယ်၊ မင်း တော်လိုက်တာ။"
+        }
+      ],
+      "short_mm": "တော်လိုက်တာ၊ ကောင်းလိုက်တာ"
+    },
+    {
+      "word": "good luck",
+      "pos": "expression",
+      "short_en": "used to wish someone success before they do something difficult",
+      "examples": [
+        {
+          "en": "{w}Good luck{/w} with your {c}interview{/c} tomorrow!",
+          "mm": "မနက်ဖြန် အင်တာဗျူးမှာ အောင်မြင်ပါစေ!"
+        },
+        {
+          "en": "I have a driving test today. — {w}Good luck{/w}, you'll be {c}fine{/c}.",
+          "mm": "ဒီနေ့ ကားမောင်းစာမေးပွဲ ဖြေရမယ်။ — ကံကောင်းပါစေ၊ အဆင်ပြေသွားမှာပါ။"
+        },
+        {
+          "en": "{w}Good luck{/w} on your {c}exam{/c}!",
+          "mm": "စာမေးပွဲမှာ ကံကောင်းပါစေ!"
+        },
+        {
+          "en": "I'm starting a new job. — {w}Good luck{/w}, I hope you {c}enjoy{/c} it.",
+          "mm": "ကျွန်တော် အလုပ်သစ် စလုပ်တော့မယ်။ — ကံကောင်းပါစေ၊ အလုပ်ကို သဘောကျမယ်လို့ မျှော်လင့်ပါတယ်။"
+        },
+        {
+          "en": "She's running a marathon. — {w}Good luck{/w} to {c}her{/c}!",
+          "mm": "သူ မာရသွန်ပြေးတော့မယ်။ — ကံကောင်းပါစေလို့ ဆုတောင်းပေးလိုက်ပါ!"
+        }
+      ],
+      "short_mm": "ကံကောင်းပါစေ"
+    },
+    {
+      "word": "by the way",
+      "pos": "expression",
+      "short_en": "used to introduce a new topic or extra information",
+      "examples": [
+        {
+          "en": "{w}By the way{/w}, did you see {c}John{/c}?",
+          "mm": "စကားမစပ်၊ ဂျွန်ကို တွေ့လိုက်သေးလား။"
+        },
+        {
+          "en": "I'm going to the shop. {w}By the way{/w}, we need some {c}milk{/c}.",
+          "mm": "ကျွန်တော် ဆိုင်သွားမလို့။ စကားမစပ်၊ နွားနို့ နည်းနည်း ဝယ်ဖို့လိုတယ်။"
+        },
+        {
+          "en": "Nice shoes! {w}By the way{/w}, where did you get {c}them{/c}?",
+          "mm": "ဖိနပ်လေး လှလိုက်တာ! စကားမစပ်၊ ဘယ်မှာ ဝယ်တာလဲ။"
+        },
+        {
+          "en": "The meeting is at ten. {w}By the way{/w}, bring your {c}laptop{/c}.",
+          "mm": "အစည်းအဝေးက ဆယ်နာရီမှာ။ စကားမစပ်၊ လက်ပ်တော့ပ် (laptop) ယူလာခဲ့နော်။"
+        },
+        {
+          "en": "I love this song. {w}By the way{/w}, who is the {c}singer{/c}?",
+          "mm": "ဒီသီချင်းလေးကို အရမ်းကြိုက်တာပဲ။ စကားမစပ်၊ ဘယ်သူဆိုတာလဲ။"
+        }
+      ],
+      "short_mm": "ဒါနဲ့... စကားမစပ်"
+    },
+    {
+      "word": "fingers crossed",
+      "pos": "expression",
+      "short_en": "used to hope for good luck or a good result",
+      "examples": [
+        {
+          "en": "I hope it doesn't rain. — {w}Fingers crossed{/w}, we want a sunny {c}day{/c}.",
+          "mm": "မိုးမရွာပါစေနဲ့လို့ ဆုတောင်းပါတယ်။ — ကံကောင်းပါစေ၊ ကျွန်တော်တို့လည်း နေသာတာကိုပဲ လိုချင်တာ။"
+        },
+        {
+          "en": "I applied for that job. — {w}Fingers crossed{/w} for {c}you{/c}!",
+          "mm": "ကျွန်တော် အဲ့ဒီအလုပ်အတွက် လျှောက်ထားလိုက်တယ်။ — ကံကောင်းပါစေနော်!"
+        },
+        {
+          "en": "Will you win the game? — {w}Fingers crossed{/w}, I'm trying my {c}best{/c}.",
+          "mm": "မင်းတို့ ဂိမ်းနိုင်ပါ့မလား။ — ကံကောင်းပါစေ၊ ကျွန်တော် အကောင်းဆုံး ကြိုးစားနေပါတယ်။"
+        },
+        {
+          "en": "I hope the bus comes soon. — {w}Fingers crossed{/w}, I'm already {c}late{/c}.",
+          "mm": "ကားလေး မြန်မြန်ရောက်လာပါစေ။ — ကံကောင်းပါစေ၊ ကျွန်တော် နောက်ကျနေပြီ။"
+        },
+        {
+          "en": "Are you going to pass? — {w}Fingers crossed{/w}, I studied {c}hard{/c}.",
+          "mm": "မင်း အောင်ပါ့မလား။ — ကံကောင်းပါစေ၊ ကျွန်တော် ကြိုးစားပြီး စာလုပ်ထားပါတယ်။"
+        }
+      ],
+      "short_mm": "အောင်မြင်ပါစေလို့ ဆုတောင်းပေးပါတယ်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I lost my wallet. — ___.",
+      "right": "Never mind",
+      "wrong": "Well done",
+      "why": "\"Never mind\" is for problems; \"Well done\" is for success.",
+      "why_mm": "Never mind က ပြဿနာအတွက်ဖြစ်ပြီး Well done က အောင်မြင်မှုအတွက် ဖြစ်တယ်"
+    },
+    {
+      "prompt": "I have an interview today. — ___.",
+      "right": "Good luck",
+      "wrong": "That's a shame",
+      "why": "\"Good luck\" is for future success; \"That's a shame\" is for disappointment.",
+      "why_mm": "Good luck က အနာဂတ်အတွက်ဖြစ်ပြီး That's a shame က စိတ်ပျက်စရာအတွက် ဖြစ်တယ်"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "You did a great job on your test! ___!",
+      "answer": "Well done",
+      "options": [
+        "Well done",
+        "I see",
+        "No worries"
+      ],
+      "explain_en": "Praising a good result → Well done.",
+      "explain_mm": "အောင်မြင်မှုတစ်ခုကို ချီးကျူးတဲ့အခါ Well done လို့ သုံးတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm so sorry I broke your glass. — ___.",
+      "answer": "No worries",
+      "options": [
+        "No worries",
+        "Good luck",
+        "Of course"
+      ],
+      "explain_en": "A friendly way to forgive a mistake → No worries.",
+      "explain_mm": "အမှားတစ်ခုကို ခွင့်လွှတ်တဲ့အခါ No worries လို့ ပြောတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The concert is cancelled. — ___.",
+      "answer": "That's a shame",
+      "options": [
+        "That's a shame",
+        "Of course",
+        "By the way"
+      ],
+      "explain_en": "Expressing disappointment → That's a shame.",
+      "explain_mm": "စိတ်မကောင်းဖြစ်တဲ့အကြောင်း ပြတဲ့အခါ That's a shame လို့ သုံးတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I hope I win the lottery. — ___!",
+      "answer": "Fingers crossed",
+      "options": [
+        "Fingers crossed",
+        "I see",
+        "Never mind"
+      ],
+      "explain_en": "Wishing for a good result → Fingers crossed.",
+      "explain_mm": "ရလဒ်ကောင်းဖို့ မျှော်လင့်တဲ့အခါ Fingers crossed လို့ သုံးတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I understand what you mean. — ___.",
+      "answer": "I see",
+      "options": [
+        "I see",
+        "Good luck",
+        "By the way"
+      ],
+      "explain_en": "Showing you understand → I see.",
+      "explain_mm": "နားလည်ကြောင်း ပြတဲ့အခါ I see လို့ သုံးတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I'm going to the cinema. ___ , do you want to come?\"",
+      "answer": "By the way",
+      "options": [],
+      "explain_en": "Introducing a new topic → By the way.",
+      "explain_mm": "ခေါင်းစဉ်အသစ်ပြောင်းတဲ့အခါ By the way လို့ သုံးတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"Can I sit here? — ___ , please do!\"",
+      "answer": "Of course",
+      "options": [],
+      "explain_en": "A polite way to say yes → Of course.",
+      "explain_mm": "ယဉ်ယဉ်ကျေးကျေး သဘောတူတဲ့အခါ Of course လို့ သုံးတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I can't find my pen. — ___ , use mine.\"",
+      "answer": "Never mind",
+      "options": [],
+      "explain_en": "Telling someone not to worry about a problem → Never mind.",
+      "explain_mm": "ပြဿနာအတွက် စိတ်မပူဖို့ပြောရင် Never mind လို့ သုံးတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"You have a big exam today. ___!\"",
+      "answer": "Good luck",
+      "options": [],
+      "explain_en": "Wishing success before a challenge → Good luck.",
+      "explain_mm": "အောင်မြင်ဖို့ ဆုတောင်းပေးတဲ့အခါ Good luck လို့ သုံးတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I'm so sorry I'm late. — ___ , it's okay.\"",
+      "answer": "No worries",
+      "options": [],
+      "explain_en": "A friendly way to say it's okay → No worries.",
+      "explain_mm": "ကိစ္စမရှိဘူးလို့ ဖော်ရွေစွာပြောရင် No worries လို့ သုံးတယ်"
+    }
+  ]
+}

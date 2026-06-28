@@ -162,6 +162,17 @@ class _HomePageState extends State<HomePage> {
                         Navigator.pushNamed(context, PmpRoutes.writingPath),
                   ),
                   ModuleWidget(
+                    title: 'Vocabulary',
+                    label1: 'စကားလုံးတွေကို အုပ်စုဖွဲ့ လေ့လာပါ',
+                    label2: 'နားထောင်ပြီး လေ့ကျင့်ခန်း လုပ်ပါ',
+                    iconTitle: Icons.style,
+                    iconLabel1: Icons.workspaces_outline,
+                    iconLabel2: Icons.record_voice_over_outlined,
+                    accent: ModuleAccent.orange,
+                    onPressed: () =>
+                        Navigator.pushNamed(context, PmpRoutes.vocabularyList),
+                  ),
+                  ModuleWidget(
                     title: l10n.txtModuleBookmarksTitle,
                     label1: l10n.txtModuleBookmarksLabel1,
                     label2: l10n.txtModuleBookmarksLabel2,

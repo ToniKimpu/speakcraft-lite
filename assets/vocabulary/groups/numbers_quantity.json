@@ -1,0 +1,429 @@
+{
+  "id": "numbers_quantity",
+  "title": "How much & how many",
+  "level": 1,
+  "order": 29,
+  "theme": "Quantity",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "Essential words for describing amounts. Learning the difference between countable and uncountable nouns is key to using these correctly.",
+  "why_grouped_mm": "ပမာဏကို ဖော်ပြတဲ့အခါ သုံးရမယ့် အရေးကြီးတဲ့ စကားလုံးတွေပေါ့။ Countable နဲ့ Uncountable noun တွေကို ခွဲခြားတတ်ဖို့က ဒီစကားလုံးတွေကို မှန်မှန်ကန်ကန် သုံးနိုင်ဖို့အတွက် အဓိကပဲ။",
+  "words": [
+    {
+      "word": "many",
+      "pos": "determiner",
+      "ipa": "/ˈmen.i/",
+      "short_en": "a large number of (used with countable nouns)",
+      "nuance_en": "Use 'many' for things you can count (e.g., people, apples, days).",
+      "examples": [
+        {
+          "en": "How {w}many{/w} {c}people{/c} are coming?",
+          "mm": "လူဘယ်နှစ်ယောက်လာမှာလဲ။"
+        },
+        {
+          "en": "I have {w}many{/w} {c}friends{/c} here.",
+          "mm": "ဒီမှာ ကျွန်တော့်သူငယ်ချင်းတွေ အများကြီးရှိတယ်။"
+        },
+        {
+          "en": "She doesn't have {w}many{/w} {c}books{/c}.",
+          "mm": "သူမမှာ စာအုပ်တွေ အများကြီးမရှိဘူး။"
+        },
+        {
+          "en": "Too {w}many{/w} {c}cars{/c} on the road.",
+          "mm": "လမ်းပေါ်မှာ ကားတွေ အရမ်းများနေတယ်။"
+        },
+        {
+          "en": "Are there {w}many{/w} {c}students{/c}?",
+          "mm": "ကျောင်းသားတွေ အများကြီးရှိလား။"
+        }
+      ],
+      "confuse_with": [
+        "much"
+      ],
+      "short_mm": "အများကြီး (ရေတွက်လို့ရတဲ့အရာတွေအတွက်)",
+      "nuance_mm": "Countable noun တွေနဲ့ တွဲသုံးတယ်"
+    },
+    {
+      "word": "much",
+      "pos": "determiner",
+      "ipa": "/mʌtʃ/",
+      "short_en": "a large amount of (used with uncountable nouns)",
+      "nuance_en": "Use 'much' for things you cannot count (e.g., water, time, money).",
+      "examples": [
+        {
+          "en": "How {w}much{/w} {c}money{/c} do you have?",
+          "mm": "မင်းမှာ ပိုက်ဆံဘယ်လောက်ရှိလဲ။"
+        },
+        {
+          "en": "I don't have {w}much{/w} {c}time{/c}.",
+          "mm": "ကျွန်တော့်မှာ အချိန်သိပ်မရှိဘူး။"
+        },
+        {
+          "en": "There isn't {w}much{/w} {c}water{/c} left.",
+          "mm": "ရေသိပ်မကျန်တော့ဘူး။"
+        },
+        {
+          "en": "He doesn't eat {w}much{/w} {c}food{/c}.",
+          "mm": "သူ အစားအသောက်သိပ်မစားဘူး။"
+        },
+        {
+          "en": "Is there {w}much{/w} {c}sugar{/c} in this?",
+          "mm": "ဒီထဲမှာ သကြားအများကြီးပါလား။"
+        }
+      ],
+      "confuse_with": [
+        "many"
+      ],
+      "short_mm": "အများကြီး (ရေတွက်လို့မရတဲ့အရာတွေအတွက်)",
+      "nuance_mm": "Uncountable noun တွေနဲ့ တွဲသုံးတယ်"
+    },
+    {
+      "word": "a few",
+      "pos": "determiner",
+      "ipa": "/ə fjuː/",
+      "short_en": "a small number of (used with countable nouns)",
+      "nuance_en": "Use 'a few' for countable things like friends or minutes.",
+      "examples": [
+        {
+          "en": "I have {w}a few{/w} {c}questions{/c}.",
+          "mm": "ကျွန်တော့်မှာ မေးစရာနည်းနည်းရှိတယ်။"
+        },
+        {
+          "en": "She stayed for {w}a few{/w} {c}minutes{/c}.",
+          "mm": "သူမ မိနစ်အနည်းငယ်လောက်ပဲ နေခဲ့တယ်။"
+        },
+        {
+          "en": "I bought {w}a few{/w} {c}apples{/c}.",
+          "mm": "ကျွန်တော် ပန်းသီးနည်းနည်း ဝယ်ခဲ့တယ်။"
+        },
+        {
+          "en": "There are {w}a few{/w} {c}errors{/c} here.",
+          "mm": "ဒီမှာ မှားနေတာ နည်းနည်းရှိတယ်။"
+        },
+        {
+          "en": "Can you wait {w}a few{/w} {c}days{/c}?",
+          "mm": "ရက်အနည်းငယ်လောက် စောင့်ပေးလို့ရမလား။"
+        }
+      ],
+      "confuse_with": [
+        "a little"
+      ],
+      "short_mm": "နည်းနည်း (ရေတွက်လို့ရတဲ့အရာတွေအတွက်)",
+      "nuance_mm": "Countable noun တွေနဲ့ တွဲသုံးတယ်"
+    },
+    {
+      "word": "a little",
+      "pos": "determiner",
+      "ipa": "/ə ˈlɪt.əl/",
+      "short_en": "a small amount of (used with uncountable nouns)",
+      "nuance_en": "Use 'a little' for uncountable things like milk or salt.",
+      "examples": [
+        {
+          "en": "I need {w}a little{/w} {c}help{/c}.",
+          "mm": "ကျွန်တော့်ကို အကူအညီနည်းနည်းလောက်ပေးပါ။"
+        },
+        {
+          "en": "Add {w}a little{/w} {c}salt{/c} to the soup.",
+          "mm": "ဟင်းရည်ထဲကို ဆားနည်းနည်းထည့်လိုက်ပါ။"
+        },
+        {
+          "en": "She speaks {w}a little{/w} {c}English{/c}.",
+          "mm": "သူမ အင်္ဂလိပ်စာ နည်းနည်းပြောတတ်တယ်။"
+        },
+        {
+          "en": "I drank {w}a little{/w} {c}coffee{/c}.",
+          "mm": "ကျွန်တော် ကော်ဖီနည်းနည်း သောက်လိုက်တယ်။"
+        },
+        {
+          "en": "Just {w}a little{/w} {c}more{/c} time.",
+          "mm": "အချိန်နည်းနည်းလောက်ပဲ ထပ်လိုတော့တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "a few"
+      ],
+      "short_mm": "နည်းနည်း (ရေတွက်လို့မရတဲ့အရာတွေအတွက်)",
+      "nuance_mm": "Uncountable noun တွေနဲ့ တွဲသုံးတယ်"
+    },
+    {
+      "word": "a lot of",
+      "pos": "determiner",
+      "ipa": "/ə lɒt əv/",
+      "short_en": "a large quantity (used with both countable and uncountable)",
+      "examples": [
+        {
+          "en": "I have {w}a lot of{/w} {c}work{/c} today.",
+          "mm": "ဒီနေ့ ကျွန်တော့်မှာ အလုပ်တွေ အများကြီးလုပ်ဖို့ရှိတယ်။"
+        },
+        {
+          "en": "She has {w}a lot of{/w} {c}ideas{/c}.",
+          "mm": "သူမဆီမှာ အကြံဉာဏ်တွေ အများကြီးရှိတယ်။"
+        },
+        {
+          "en": "They own {w}a lot of{/w} {c}land{/c}.",
+          "mm": "သူတို့မှာ မြေတွေ အများကြီးပိုင်တယ်။"
+        },
+        {
+          "en": "There are {w}a lot of{/w} {c}people{/c} here.",
+          "mm": "ဒီမှာ လူတွေအများကြီးပဲ။"
+        },
+        {
+          "en": "He drinks {w}a lot of{/w} {c}tea{/c}.",
+          "mm": "သူ လက်ဖက်ရည် အများကြီးသောက်တယ်။"
+        }
+      ],
+      "short_mm": "အများကြီး / အမြောက်အမြား"
+    },
+    {
+      "word": "enough",
+      "pos": "determiner",
+      "ipa": "/ɪˈnʌf/",
+      "short_en": "as much or as many as necessary",
+      "examples": [
+        {
+          "en": "Is there {w}enough{/w} {c}food{/c}?",
+          "mm": "အစားအသောက် လုံလောက်ရဲ့လား။"
+        },
+        {
+          "en": "I don't have {w}enough{/w} {c}money{/c}.",
+          "mm": "ကျွန်တော့်မှာ ပိုက်ဆံမလုံလောက်ဘူး။"
+        },
+        {
+          "en": "We have {w}enough{/w} {c}chairs{/c} now.",
+          "mm": "အခု ကျွန်တော်တို့မှာ ကုလားထိုင် လုံလောက်ပြီ။"
+        },
+        {
+          "en": "Is that {w}enough{/w} {c}sugar{/c}?",
+          "mm": "အဲ့ဒီသကြားက လုံလောက်ရဲ့လား။"
+        },
+        {
+          "en": "She didn't get {w}enough{/w} {c}sleep{/c}.",
+          "mm": "သူမ အိပ်ရေးမဝဘူး။"
+        }
+      ],
+      "short_mm": "လုံလောက်တဲ့"
+    },
+    {
+      "word": "too much",
+      "pos": "determiner",
+      "ipa": "/tuː mʌtʃ/",
+      "short_en": "more than is necessary (uncountable)",
+      "examples": [
+        {
+          "en": "There is {w}too much{/w} {c}noise{/c}.",
+          "mm": "ဆူညံသံတွေ အရမ်းများနေတယ်။"
+        },
+        {
+          "en": "You put {w}too much{/w} {c}salt{/c} in it.",
+          "mm": "မင်း ဒါထဲကို ဆားအရမ်းထည့်လိုက်တာပဲ။"
+        },
+        {
+          "en": "I have {w}too much{/w} {c}work{/c} to do.",
+          "mm": "ကျွန်တော့်မှာ လုပ်စရာအလုပ်တွေ အရမ်းများနေတယ်။"
+        },
+        {
+          "en": "Don't spend {w}too much{/w} {c}money{/c}.",
+          "mm": "ပိုက်ဆံအရမ်းမသုံးပါနဲ့။"
+        },
+        {
+          "en": "It's {w}too much{/w} {c}pressure{/c} for me.",
+          "mm": "ဒါက ကျွန်တော့်အတွက် ဖိအားအရမ်းများလွန်းတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "too many"
+      ],
+      "short_mm": "အရမ်းများလွန်းတဲ့ (ရေတွက်လို့မရတာ)"
+    },
+    {
+      "word": "too many",
+      "pos": "determiner",
+      "ipa": "/tuː ˈmen.i/",
+      "short_en": "more than is necessary (countable)",
+      "examples": [
+        {
+          "en": "There are {w}too many{/w} {c}people{/c} here.",
+          "mm": "ဒီမှာ လူတွေအရမ်းများနေတယ်။"
+        },
+        {
+          "en": "I have {w}too many{/w} {c}emails{/c}.",
+          "mm": "ကျွန်တော့်မှာ အီးမေးလ်တွေ အရမ်းများနေတယ်။"
+        },
+        {
+          "en": "She bought {w}too many{/w} {c}shoes{/c}.",
+          "mm": "သူမ ဖိနပ်တွေ အရမ်းအများကြီး ဝယ်ခဲ့တယ်။"
+        },
+        {
+          "en": "Don't ask {w}too many{/w} {c}questions{/c}.",
+          "mm": "မေးခွန်းတွေ အရမ်းမမေးပါနဲ့။"
+        },
+        {
+          "en": "There are {w}too many{/w} {c}rules{/c}.",
+          "mm": "စည်းကမ်းတွေ အရမ်းများတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "too much"
+      ],
+      "short_mm": "အရမ်းများလွန်းတဲ့ (ရေတွက်လို့ရတာ)"
+    },
+    {
+      "word": "some",
+      "pos": "determiner",
+      "ipa": "/sʌm/",
+      "short_en": "an unspecified amount or number",
+      "examples": [
+        {
+          "en": "I need {w}some{/w} {c}help{/c} now.",
+          "mm": "ကျွန်တော့်ကို အကူအညီအနည်းငယ် လိုနေတယ်။"
+        },
+        {
+          "en": "Would you like {w}some{/w} {c}coffee{/c}?",
+          "mm": "ကော်ဖီ နည်းနည်းလောက် သောက်မလား။"
+        },
+        {
+          "en": "I have {w}some{/w} {c}good{/c} news.",
+          "mm": "ကျွန်တော့်မှာ သတင်းကောင်းအနည်းငယ်ရှိတယ်။"
+        },
+        {
+          "en": "There are {w}some{/w} {c}people{/c} waiting.",
+          "mm": "လူတချို့ စောင့်နေကြတယ်။"
+        },
+        {
+          "en": "Can I have {w}some{/w} {c}water{/c}?",
+          "mm": "ရေနည်းနည်းလောက် ရနိုင်မလား။"
+        }
+      ],
+      "short_mm": "အနည်းငယ် / အချို့"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "How ___ apples do you have?",
+      "right": "many",
+      "wrong": "much",
+      "why": "Apples are countable, so use 'many'.",
+      "why_mm": "Apples က countable ဖြစ်လို့ many ကို သုံးပေးရမယ်။"
+    },
+    {
+      "prompt": "I have ___ milk, but not enough.",
+      "right": "a little",
+      "wrong": "a few",
+      "why": "Milk is uncountable, so use 'a little'.",
+      "why_mm": "Milk က uncountable ဖြစ်လို့ a little ကို သုံးပေးရမယ်။"
+    },
+    {
+      "prompt": "There are ___ cars on this street.",
+      "right": "too many",
+      "wrong": "too much",
+      "why": "Cars are countable, so use 'too many'.",
+      "why_mm": "Cars က countable ဖြစ်လို့ too many ကို သုံးပေးရမယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "How ___ money do you need?",
+      "answer": "much",
+      "options": [
+        "much",
+        "many",
+        "a few"
+      ],
+      "explain_en": "Money is an uncountable noun.",
+      "explain_mm": "Money က uncountable noun ဖြစ်လို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I have ___ friends in this city.",
+      "answer": "many",
+      "options": [
+        "many",
+        "much",
+        "a little"
+      ],
+      "explain_en": "Friends are countable.",
+      "explain_mm": "Friends က countable ဖြစ်လို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Can I have ___ sugar in my tea?",
+      "answer": "a little",
+      "options": [
+        "a little",
+        "a few",
+        "many"
+      ],
+      "explain_en": "Sugar is uncountable.",
+      "explain_mm": "Sugar က uncountable ဖြစ်လို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I read ___ books last month.",
+      "answer": "a few",
+      "options": [
+        "a few",
+        "a little",
+        "much"
+      ],
+      "explain_en": "Books are countable.",
+      "explain_mm": "Books က countable ဖြစ်လို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "There is ___ traffic today.",
+      "answer": "too much",
+      "options": [
+        "too much",
+        "too many",
+        "a few"
+      ],
+      "explain_en": "Traffic is uncountable.",
+      "explain_mm": "Traffic က uncountable ဖြစ်လို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I made ___ mistakes in the test.",
+      "answer": "too many",
+      "options": [
+        "too many",
+        "too much",
+        "a little"
+      ],
+      "explain_en": "Mistakes are countable.",
+      "explain_mm": "Mistakes က countable ဖြစ်လို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'We don't have ___ time left.'",
+      "answer": "enough",
+      "options": [],
+      "explain_en": "Used to show a sufficient or insufficient amount.",
+      "explain_mm": "လုံလောက်မှု ရှိမရှိ ဖော်ပြဖို့ သုံးတာပေါ့။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'I have ___ of work to do.'",
+      "answer": "a lot",
+      "options": [],
+      "explain_en": "A large quantity.",
+      "explain_mm": "ပမာဏ အများကြီးကို ဆိုလိုတာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'Would you like ___ water?'",
+      "answer": "some",
+      "options": [],
+      "explain_en": "An unspecified amount.",
+      "explain_mm": "တိတိကျကျ မပြောတဲ့ ပမာဏအတွက်ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'How ___ people are coming?'",
+      "answer": "many",
+      "options": [],
+      "explain_en": "Countable noun.",
+      "explain_mm": "ရေတွက်လို့ရတဲ့ noun ဖြစ်လို့ပါ။"
+    }
+  ]
+}

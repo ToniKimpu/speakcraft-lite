@@ -1,0 +1,389 @@
+{
+  "id": "making_plans",
+  "title": "Making plans",
+  "level": 1,
+  "order": 23,
+  "theme": "Plans",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Making plans is a daily necessity in English. This group covers how to invite people, check their availability, and respond to suggestions naturally.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက သူငယ်ချင်းတွေနဲ့ အစီအစဉ်ဆွဲတဲ့အခါ၊ တစ်ယောက်နဲ့တစ်ယောက် အချိန်မေးတဲ့အခါနဲ့ အဆိုပြုချက်တွေကို တုံ့ပြန်တဲ့အခါမှာ သဘာဝကျကျ ပြောတတ်ဖို့အတွက် ဖြစ်ပါတယ်။",
+  "words": [
+    {
+      "word": "Are you free?",
+      "pos": "expression",
+      "short_en": "a polite way to ask if someone has time",
+      "examples": [
+        {
+          "en": "{w}Are you free{/w} this {c}weekend{/c}?",
+          "mm": "ဒီအပတ်ကုန်မှာ အားလား?"
+        },
+        {
+          "en": "{w}Are you free{/w} for a {c}coffee{/c}?",
+          "mm": "ကော်ဖီသောက်ဖို့ အားလား?"
+        },
+        {
+          "en": "I'm wondering if {w}you are free{/w} on {c}Friday{/c}.",
+          "mm": "သောကြာနေ့မှာ အားမလားလို့ စဉ်းစားနေတာပါ။"
+        },
+        {
+          "en": "{w}Are you free{/w} to {c}talk{/c}?",
+          "mm": "စကားပြောဖို့ အားလား?"
+        },
+        {
+          "en": "If {w}you are free{/w}, let's {c}meet{/c}.",
+          "mm": "အားတယ်ဆိုရင် တွေ့ကြရအောင်။"
+        }
+      ],
+      "short_mm": "အားလားလို့ ယဉ်ယဉ်ကျေးကျေး မေးတာပါ။"
+    },
+    {
+      "word": "What are you up to?",
+      "pos": "expression",
+      "short_en": "a casual way to ask what someone is doing",
+      "examples": [
+        {
+          "en": "{w}What are you up to{/w} this {c}evening{/c}?",
+          "mm": "ဒီညနေ ဘာလုပ်ဖို့ရှိလဲ?"
+        },
+        {
+          "en": "Hey, {w}what are you up to{/w} at the {c}moment{/c}?",
+          "mm": "ဟေ့၊ အခု ဘာလုပ်နေလဲ?"
+        },
+        {
+          "en": "{w}What are you up to{/w} on {c}Saturday{/c}?",
+          "mm": "စနေနေ့မှာ ဘာလုပ်ဖို့ရှိလဲ?"
+        },
+        {
+          "en": "I'm bored. {w}What are you up to{/w}, {c}mate{/c}?",
+          "mm": "ငါပျင်းနေလို့၊ မင်းရော ဘာလုပ်နေလဲ သူငယ်ချင်း?"
+        },
+        {
+          "en": "Tell me {w}what you are up to{/w} later {c}today{/c}.",
+          "mm": "ဒီနေ့ နောက်ပိုင်း ဘာလုပ်ဖို့ရှိလဲ ပြောပြပါဦး။"
+        }
+      ],
+      "short_mm": "ဘာလုပ်နေလဲ/ဘာတွေလုပ်ဖို့ရှိလဲလို့ မေးတာပါ။"
+    },
+    {
+      "word": "Let's",
+      "pos": "expression",
+      "short_en": "used to suggest a shared activity",
+      "examples": [
+        {
+          "en": "{w}Let's{/w} go to the {c}cinema{/c}.",
+          "mm": "ရုပ်ရှင်သွားကြည့်ကြရအောင်။"
+        },
+        {
+          "en": "{w}Let's{/w} meet at {c}six{/c}.",
+          "mm": "ခြောက်နာရီမှာ တွေ့ကြရအောင်။"
+        },
+        {
+          "en": "{w}Let's{/w} have {c}lunch{/c} together.",
+          "mm": "နေ့လယ်စာ အတူစားကြရအောင်။"
+        },
+        {
+          "en": "{w}Let's{/w} try that new {c}restaurant{/c}.",
+          "mm": "ဟိုစားသောက်ဆိုင်သစ်ကို စမ်းစားကြည့်ရအောင်။"
+        },
+        {
+          "en": "{w}Let's{/w} go for a {c}walk{/c}.",
+          "mm": "လမ်းလျှောက်ထွက်ကြရအောင်။"
+        }
+      ],
+      "short_mm": "အတူတူလုပ်ကြရအောင်လို့ အဆိုပြုတာပါ။"
+    },
+    {
+      "word": "How about...?",
+      "pos": "expression",
+      "short_en": "used to propose an idea",
+      "examples": [
+        {
+          "en": "{w}How about{/w} meeting on {c}Monday{/c}?",
+          "mm": "တနင်္လာနေ့မှာ တွေ့ကြရင်ရော ဘယ်လိုလဲ?"
+        },
+        {
+          "en": "{w}How about{/w} a {c}drink{/c}?",
+          "mm": "အရက်သောက်ကြမလား?"
+        },
+        {
+          "en": "{w}How about{/w} we go to the {c}park{/c}?",
+          "mm": "ပန်းခြံသွားကြရင်ရော ဘယ်လိုလဲ?"
+        },
+        {
+          "en": "{w}How about{/w} a {c}movie{/c} tonight?",
+          "mm": "ဒီည ရုပ်ရှင်ကြည့်ကြမလား?"
+        },
+        {
+          "en": "{w}How about{/w} ten {c}o'clock{/c}?",
+          "mm": "ဆယ်နာရီဆိုရင်ရော အဆင်ပြေလား?"
+        }
+      ],
+      "short_mm": "ဒီလိုလုပ်ရင်ကောလို့ အကြံပေးတာပါ။"
+    },
+    {
+      "word": "Do you fancy...?",
+      "pos": "expression",
+      "short_en": "a common British way to ask if someone wants to do something",
+      "nuance_en": "Very common in the UK. Follow with an -ing verb (e.g., Do you fancy going...?)",
+      "examples": [
+        {
+          "en": "{w}Do you fancy{/w} going to the {c}pub{/c}?",
+          "mm": "ဘားသွားဖို့ စိတ်ဝင်စားလား?"
+        },
+        {
+          "en": "{w}Do you fancy{/w} a {c}pizza{/c}?",
+          "mm": "ပီဇာစားမလား?"
+        },
+        {
+          "en": "{w}Do you fancy{/w} watching a {c}film{/c}?",
+          "mm": "ရုပ်ရှင်ကြည့်ဖို့ စိတ်ဝင်စားလား?"
+        },
+        {
+          "en": "{w}Do you fancy{/w} coming {c}over{/c}?",
+          "mm": "အိမ်ကို လာလည်မလား?"
+        },
+        {
+          "en": "{w}Do you fancy{/w} a {c}walk{/c}?",
+          "mm": "လမ်းလျှောက်ထွက်ဖို့ စိတ်ဝင်စားလား?"
+        }
+      ],
+      "short_mm": "တစ်ခုခုလုပ်ဖို့ စိတ်ဝင်စားလားလို့ မေးတာပါ။",
+      "nuance_mm": "Do you fancy + verb-ing ပုံစံနဲ့ သုံးရပါမယ်။"
+    },
+    {
+      "word": "I'm busy",
+      "pos": "expression",
+      "short_en": "used to say you have other plans",
+      "examples": [
+        {
+          "en": "Sorry, {w}I'm busy{/w} on {c}Friday{/c}.",
+          "mm": "တောင်းပန်ပါတယ်၊ သောကြာနေ့မှာ အလုပ်များနေလို့ပါ။"
+        },
+        {
+          "en": "{w}I'm busy{/w} with {c}work{/c} right now.",
+          "mm": "အခု အလုပ်တွေ အရမ်းများနေလို့ပါ။"
+        },
+        {
+          "en": "I'd love to, but {w}I'm busy{/w} all {c}day{/c}.",
+          "mm": "လိုက်ချင်ပါတယ်၊ ဒါပေမဲ့ တစ်နေ့လုံး အလုပ်များနေလို့ပါ။"
+        },
+        {
+          "en": "Sadly, {w}I'm busy{/w} with {c}family{/c} tonight.",
+          "mm": "စိတ်မကောင်းပါဘူး၊ ဒီည မိသားစုကိစ္စနဲ့ အလုပ်များနေလို့ပါ။"
+        },
+        {
+          "en": "Can we meet later? {w}I'm busy{/w} until {c}four{/c}.",
+          "mm": "နောက်မှ တွေ့ကြမလား? လေးနာရီအထိ အလုပ်များနေလို့ပါ။"
+        }
+      ],
+      "short_mm": "အလုပ်ရှုပ်နေတယ်/အစီအစဉ်ရှိနေတယ်လို့ ပြောတာပါ။"
+    },
+    {
+      "word": "Sounds good",
+      "pos": "expression",
+      "short_en": "a natural way to agree to a plan",
+      "examples": [
+        {
+          "en": "Meet at noon? — {w}Sounds good{/w}, {c}see{/c} you then.",
+          "mm": "နေ့လယ် ၁၂ နာရီမှာ တွေ့မလား? — ကောင်းသားပဲ၊ အဲဒီအချိန်ကျမှ တွေ့မယ်။"
+        },
+        {
+          "en": "Let's go to the beach. — {w}Sounds good{/w} to {c}me{/c}.",
+          "mm": "ကမ်းခြေသွားကြရအောင်။ — ငါ့အတွက်တော့ အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "We can eat at seven. — {w}Sounds good{/w}, {c}thanks{/c}.",
+          "mm": "ခုနစ်နာရီမှာ စားကြရအောင်။ — ကောင်းသားပဲ၊ ကျေးဇူးပဲ။"
+        },
+        {
+          "en": "How about Friday? — {w}Sounds good{/w}, {c}perfect{/c}.",
+          "mm": "သောကြာနေ့ဆိုရင်ရော? — ကောင်းသားပဲ၊ အိုကေပဲ။"
+        },
+        {
+          "en": "I'll bring the wine. — {w}Sounds good{/w}, {c}cheers{/c}.",
+          "mm": "ငါ ဝိုင်ယူလာခဲ့မယ်။ — ကောင်းသားပဲ၊ ကျေးဇူးပဲ။"
+        }
+      ],
+      "short_mm": "ကောင်းသားပဲ/အဆင်ပြေပါတယ်လို့ သဘောတူတာပါ။"
+    },
+    {
+      "word": "meet up",
+      "pos": "expression",
+      "short_en": "to come together to do something",
+      "examples": [
+        {
+          "en": "Let's {w}meet up{/w} at the {c}station{/c}.",
+          "mm": "ဘူတာရုံမှာ တွေ့ကြရအောင်။"
+        },
+        {
+          "en": "We should {w}meet up{/w} more {c}often{/c}.",
+          "mm": "ငါတို့ ပိုပြီး မကြာခဏ တွေ့သင့်တယ်။"
+        },
+        {
+          "en": "Where do you want to {w}meet up{/w} {c}tomorrow{/c}?",
+          "mm": "မနက်ဖြန် ဘယ်မှာ တွေ့ကြမလဲ?"
+        },
+        {
+          "en": "I'm going to {w}meet up{/w} with {c}friends{/c}.",
+          "mm": "ငါ သူငယ်ချင်းတွေနဲ့ သွားတွေ့မလို့။"
+        },
+        {
+          "en": "Can we {w}meet up{/w} for a {c}chat{/c}?",
+          "mm": "စကားပြောဖို့ တွေ့ကြမလား?"
+        }
+      ],
+      "short_mm": "တွေ့ဆုံကြတာပါ။"
+    },
+    {
+      "word": "See you then",
+      "pos": "expression",
+      "short_en": "a standard way to end a conversation after making plans",
+      "examples": [
+        {
+          "en": "Great, {w}see you then{/w} at {c}eight{/c}.",
+          "mm": "ကောင်းပြီ၊ ရှစ်နာရီမှာ တွေ့မယ်။"
+        },
+        {
+          "en": "Okay, {w}see you then{/w} on {c}Sunday{/c}.",
+          "mm": "အိုကေ၊ တနင်္ဂနွေနေ့ကျမှ တွေ့မယ်။"
+        },
+        {
+          "en": "I'll be there. {w}See you then{/w}, {c}John{/c}.",
+          "mm": "ငါ လာခဲ့မယ်။ တွေ့ကြမယ်နော် John။"
+        },
+        {
+          "en": "See you at the park. {w}See you then{/w}, {c}bye{/c}.",
+          "mm": "ပန်းခြံမှာ တွေ့မယ်။ အဲဒီကျမှ တွေ့ကြမယ်၊ Bye။"
+        },
+        {
+          "en": "Confirmed. {w}See you then{/w} at {c}noon{/c}.",
+          "mm": "အတည်ပြုတယ်။ နေ့လယ် ၁၂ နာရီမှာ တွေ့မယ်။"
+        }
+      ],
+      "short_mm": "အဲ့ဒီကျမှ တွေ့ကြမယ်နော်လို့ ပြောတာပါ။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "___ you free? vs. ___ you up to?",
+      "right": "Are / What are",
+      "wrong": "How / Let's",
+      "why": "\"Are you free\" checks availability; \"What are you up to\" asks about current activity.",
+      "why_mm": "Are you free? က အချိန်ရမရ စစ်ဆေးတာဖြစ်ပြီး What are you up to? က လက်ရှိ ဘာလုပ်နေလဲဆိုတာ မေးတာပါ။"
+    },
+    {
+      "prompt": "___ good vs. ___ you then.",
+      "right": "Sounds / See",
+      "wrong": "Looks / Meet",
+      "why": "\"Sounds good\" is for agreement; \"See you then\" is for confirming a meeting time.",
+      "why_mm": "Sounds good က သဘောတူတဲ့အခါ သုံးပြီး See you then က အစီအစဉ်ကို အတည်ပြုပြီး နှုတ်ဆက်တဲ့အခါ သုံးပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Asking if someone is available: \"___ this evening?\"",
+      "answer": "Are you free",
+      "options": [
+        "Are you free",
+        "Let's",
+        "Sounds good"
+      ],
+      "explain_en": "Used to check availability.",
+      "explain_mm": "Are you free? ကို သုံးပြီး သူအားမအား စစ်ဆေးနိုင်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Suggesting a plan: \"___ go to the park.\"",
+      "answer": "Let's",
+      "options": [
+        "Let's",
+        "I'm busy",
+        "See you then"
+      ],
+      "explain_en": "Used to suggest a shared action.",
+      "explain_mm": "Let's ကို သုံးပြီး အတူတူလုပ်ဖို့ တိုက်တွန်းနိုင်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Asking what someone is doing: \"___ tonight?\"",
+      "answer": "What are you up to",
+      "options": [
+        "What are you up to",
+        "Are you free",
+        "Sounds good"
+      ],
+      "explain_en": "Casual enquiry about plans.",
+      "explain_mm": "What are you up to? က အစီအစဉ်မေးတဲ့ အလွတ်သဘော မေးခွန်းပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Agreeing to a plan: \"Meet at 5pm?\" — \"___.\"",
+      "answer": "Sounds good",
+      "options": [
+        "Sounds good",
+        "I'm busy",
+        "Are you free"
+      ],
+      "explain_en": "Standard way to agree.",
+      "explain_mm": "Sounds good က သဘောတူကြောင်း ပြောတဲ့အခါ သုံးတဲ့ စံနှုန်းတစ်ခုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "British invitation: \"___ going to the cinema?\"",
+      "answer": "Do you fancy",
+      "options": [
+        "Do you fancy",
+        "Let's",
+        "Sounds good"
+      ],
+      "explain_en": "Common British invitation style.",
+      "explain_mm": "Do you fancy...? က ဗြိတိန်မှာ လူသုံးများတဲ့ ဖိတ်ခေါ်ပုံပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Declining an invitation: \"Sorry, ___.\"",
+      "answer": "I'm busy",
+      "options": [
+        "I'm busy",
+        "Sounds good",
+        "See you then"
+      ],
+      "explain_en": "Polite way to say you have plans.",
+      "explain_mm": "I'm busy က အစီအစဉ်ရှိနေလို့ ယဉ်ကျေးစွာ ငြင်းတဲ့အခါ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___ at the cafe at 2pm.\"",
+      "answer": "Let's meet up",
+      "options": [],
+      "explain_en": "Suggesting a place and time to meet.",
+      "explain_mm": "Meet up ကို သုံးပြီး ဘယ်နေရာ ဘယ်အချိန်တွေ့မလဲဆိုတာ ဆွေးနွေးနိုင်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___! See you at the station.\"",
+      "answer": "See you then",
+      "options": [],
+      "explain_en": "Closing a plan conversation.",
+      "explain_mm": "See you then က အစီအစဉ်ဆွဲပြီးတဲ့အခါ စကားပြောကို အဆုံးသတ်ဖို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___ a coffee later?\"",
+      "answer": "How about",
+      "options": [],
+      "explain_en": "Proposing an activity.",
+      "explain_mm": "How about...? ကို သုံးပြီး အလုပ်တစ်ခုခုလုပ်ဖို့ အကြံပေးနိုင်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___ for a drink?\"",
+      "answer": "Are you free",
+      "options": [],
+      "explain_en": "Checking availability.",
+      "explain_mm": "Are you free? က အချိန်ရမရ စစ်ဆေးဖို့ အဓိက သုံးပါတယ်။"
+    }
+  ]
+}

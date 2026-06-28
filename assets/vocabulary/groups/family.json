@@ -1,0 +1,425 @@
+{
+  "id": "family",
+  "title": "Talking about family",
+  "level": 1,
+  "order": 2,
+  "theme": "Family & relationships",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "You already know father, mother, sister — but can you actually talk about your family? These are the phrases you really need: how big your family is, who you take after, and how you get on with everyone.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက ကိုယ့်မိသားစုအကြောင်း ပြောတဲ့အခါ အရမ်းသုံးဝင်ပါတယ်။ အိမ်ထောင်စုအရွယ်အစား၊ မိသားစုဝင်တွေနဲ့ ဆက်ဆံရေး၊ ပြီးတော့ ကိုယ့်အကျင့်စရိုက်တွေ ဘယ်သူနဲ့တူလဲဆိုတာ ပြောပြဖို့အတွက် ဒီအသုံးအနှုန်းတွေကို သေချာမှတ်ထားသင့်ပါတယ်နော်။",
+  "words": [
+    {
+      "word": "There are five of us",
+      "pos": "expression",
+      "short_en": "a natural way to say how many people are in your family",
+      "examples": [
+        {
+          "en": "{w}There are five of us{/w} — my parents, my two brothers and me.",
+          "mm": "ကျွန်တော်တို့အိမ်မှာ ငါးယောက်ရှိတယ်၊ အဖေနဲ့အမေ၊ ကျွန်တော့်အစ်ကိုနှစ်ယောက်ရယ်၊ ကျွန်တော်ရယ်ပေါ့။"
+        },
+        {
+          "en": "How big is your family? — {w}There are{/w} {c}four{/c} of us.",
+          "mm": "မင်းတို့မိသားစုမှာ လူဘယ်နှစ်ယောက်ရှိလဲ။ - လေးယောက်ရှိတယ်။"
+        },
+        {
+          "en": "{w}There are{/w} {c}three{/c} of us at home now.",
+          "mm": "အခုအိမ်မှာ သုံးယောက်ပဲရှိတယ်။"
+        },
+        {
+          "en": "In total, {w}there are{/w} {c}seven{/c} of us.",
+          "mm": "စုစုပေါင်းတော့ ခုနစ်ယောက်ရှိတယ်။"
+        },
+        {
+          "en": "{w}There are{/w} just {c}two{/c} of us — me and my mum.",
+          "mm": "နှစ်ယောက်ပဲရှိတယ်၊ ကျွန်တော်နဲ့ ကျွန်တော့်အမေ။"
+        }
+      ],
+      "short_mm": "မိသားစုဝင် ၅ ယောက်ရှိတယ်လို့ ပြောတာ"
+    },
+    {
+      "word": "a family of five",
+      "pos": "expression",
+      "short_en": "another way to give your family size",
+      "examples": [
+        {
+          "en": "We're {w}a family of{/w} {c}five{/c}.",
+          "mm": "ကျွန်တော်တို့က ငါးယောက်မိသားစုပါ။"
+        },
+        {
+          "en": "They're {w}a family of{/w} {c}six{/c}, so the house is always busy.",
+          "mm": "သူတို့က ခြောက်ယောက်မိသားစုဆိုတော့ အိမ်မှာ အမြဲတမ်း ရှုပ်ရှုပ်ယှက်ယှက်ပဲ။"
+        },
+        {
+          "en": "She comes from {w}a family of{/w} {c}eight{/c}.",
+          "mm": "သူက ရှစ်ယောက်မိသားစုကနေ ဆင်းသက်လာတာ။"
+        },
+        {
+          "en": "We were {w}a family of{/w} {c}four{/c} until the baby arrived.",
+          "mm": "ကလေးမမွေးခင်တုန်းကတော့ ကျွန်တော်တို့က လေးယောက်မိသားစုပေါ့။"
+        },
+        {
+          "en": "It's a big family — {w}a family of{/w} {c}nine{/c}!",
+          "mm": "မိသားစုကြီးပဲ၊ ကိုးယောက်တောင်ရှိတာ။"
+        }
+      ],
+      "short_mm": "၅ ယောက်မိသားစု"
+    },
+    {
+      "word": "the eldest / the youngest",
+      "pos": "expression",
+      "short_en": "the oldest / the youngest child in the family",
+      "nuance_en": "Use \"eldest/youngest\" for family. For things in general, \"oldest\" is fine too.",
+      "examples": [
+        {
+          "en": "I'm {w}the eldest{/w} of {c}three{/c}.",
+          "mm": "ကျွန်တော်က သုံးယောက်မွေးတဲ့အထဲမှာ အကြီးဆုံးပါ။"
+        },
+        {
+          "en": "She's {w}the youngest{/w} in the {c}family{/c}.",
+          "mm": "သူက မိသားစုထဲမှာ အငယ်ဆုံးပဲ။"
+        },
+        {
+          "en": "As {w}the eldest{/w}, I looked after my {c}siblings{/c}.",
+          "mm": "အကြီးဆုံးဆိုတော့ မောင်နှမတွေကို ကျွန်တော်ပဲ ဂရုစိုက်ပေးရတယ်။"
+        },
+        {
+          "en": "He's {w}the youngest{/w}, so everyone {c}spoils{/c} him.",
+          "mm": "သူက အငယ်ဆုံးဆိုတော့ အားလုံးက သူ့ကိုပဲ အလိုလိုက်ကြတယ်။"
+        },
+        {
+          "en": "My sister is {w}the eldest{/w} and I'm in the {c}middle{/c}.",
+          "mm": "ကျွန်တော့်အစ်မက အကြီးဆုံး၊ ကျွန်တော်က အလတ်။"
+        }
+      ],
+      "short_mm": "အကြီးဆုံး / အငယ်ဆုံး (သားသမီး)",
+      "nuance_mm": "မိသားစုဝင်တွေအကြောင်း ပြောရင် oldest/youngest ထက် eldest/youngest က ပိုပြီး သင့်တော်ပါတယ်။"
+    },
+    {
+      "word": "an only child",
+      "pos": "expression",
+      "short_en": "a child with no brothers or sisters",
+      "examples": [
+        {
+          "en": "I'm {w}an only child{/w}.",
+          "mm": "ကျွန်တော်က တစ်ယောက်တည်းမွေးတာပါ။"
+        },
+        {
+          "en": "He grew up as {w}an only child{/w}.",
+          "mm": "သူက တစ်ယောက်တည်းမွေးတဲ့ကလေးအဖြစ် ကြီးပြင်းလာတာ။"
+        },
+        {
+          "en": "As {w}an only child{/w}, she had her own {c}room{/c}.",
+          "mm": "တစ်ယောက်တည်းမွေးတဲ့ကလေးဆိုတော့ သူ့အတွက် အခန်းသီးသန့်ရှိတယ်။"
+        },
+        {
+          "en": "Being {w}an only child{/w} can be {c}lonely{/c} sometimes.",
+          "mm": "တစ်ယောက်တည်းမွေးတဲ့ကလေးဆိုတော့ တစ်ခါတလေကျရင်လည်း အထီးကျန်တတ်တယ်။"
+        },
+        {
+          "en": "{w}An only child{/w} has no {c}brothers{/c} or sisters.",
+          "mm": "တစ်ယောက်တည်းမွေးတဲ့ကလေးဆိုတာ မောင်နှမမရှိတဲ့သူကို ပြောတာ။"
+        }
+      ],
+      "short_mm": "မောင်နှမမရှိတဲ့ တစ်ဦးတည်းသောသားသမီး"
+    },
+    {
+      "word": "siblings",
+      "pos": "expression",
+      "short_en": "your brothers and sisters",
+      "examples": [
+        {
+          "en": "Do you have any {w}siblings{/w}?",
+          "mm": "မင်းမှာ မောင်နှမရှိလား။"
+        },
+        {
+          "en": "I have three {w}siblings{/w} — two brothers and a sister.",
+          "mm": "မောင်နှမ သုံးယောက်ရှိတယ်၊ အစ်ကိုနှစ်ယောက်နဲ့ အစ်မတစ်ယောက်။"
+        },
+        {
+          "en": "My {w}siblings{/w} and I are very {c}close{/c}.",
+          "mm": "ကျွန်တော်နဲ့ ကျွန်တော့်မောင်နှမတွေက အရမ်းခင်ကြတယ်။"
+        },
+        {
+          "en": "She's the only girl among five {w}siblings{/w}.",
+          "mm": "မောင်နှမငါးယောက်ထဲမှာ သူက မိန်းကလေးတစ်ယောက်တည်း။"
+        },
+        {
+          "en": "{w}Siblings{/w} often {c}argue{/c} when they're young.",
+          "mm": "မောင်နှမတွေဆိုတာ ငယ်ငယ်တုန်းက မကြာခဏ ရန်ဖြစ်တတ်ကြတာပဲ။"
+        }
+      ],
+      "short_mm": "မောင်နှမတွေ"
+    },
+    {
+      "word": "take after",
+      "pos": "expression",
+      "short_en": "look or behave like an older relative",
+      "nuance_en": "Only for family — you take after a relative, not a friend. \"I take after my mum\" = I look or act like her.",
+      "examples": [
+        {
+          "en": "I {w}take after{/w} my {c}mother{/c} — same eyes, same laugh.",
+          "mm": "ကျွန်တော်က အမေ့ကို ပုံတူကူးထားသလိုပဲ၊ မျက်လုံးရော၊ ရယ်တာပါ တူတယ်။"
+        },
+        {
+          "en": "She really {w}takes after{/w} her {c}dad{/c}.",
+          "mm": "သူကတော့ အဖေ့ကို အများကြီးတူတယ်။"
+        },
+        {
+          "en": "He {w}takes after{/w} his {c}grandfather{/c} in character.",
+          "mm": "သူ့အကျင့်စရိုက်က သူ့အဘိုးနဲ့ တူတယ်။"
+        },
+        {
+          "en": "You {w}take after{/w} your {c}mum{/c}, don't you?",
+          "mm": "မင်းက အမေ့ကို တူတာပဲနော်။"
+        },
+        {
+          "en": "Both kids {w}take after{/w} their {c}father{/c}.",
+          "mm": "ကလေးနှစ်ယောက်လုံးက အဖေ့ကိုပဲ တူကြတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "get on with"
+      ],
+      "short_mm": "မိဘဘိုးဘွားတွေနဲ့ တူတာ",
+      "nuance_mm": "သူငယ်ချင်းတွေနဲ့ တူတာမျိုး မဟုတ်ဘဲ မိသားစုဝင်တွေနဲ့ တူတဲ့အခါမှပဲ သုံးတာပါ။"
+    },
+    {
+      "word": "get on with",
+      "pos": "expression",
+      "short_en": "have a good relationship with someone",
+      "nuance_en": "British English; American English often says \"get along with\". \"We get on well\" = we have a good relationship.",
+      "examples": [
+        {
+          "en": "I {w}get on well with{/w} my {c}sister{/c}.",
+          "mm": "ကျွန်တော်က ကျွန်တော့်အစ်မနဲ့ အဆင်ပြေတယ်။"
+        },
+        {
+          "en": "Do you {w}get on with{/w} your {c}parents{/c}?",
+          "mm": "မင်းက မိဘတွေနဲ့ အဆင်ပြေရဲ့လား။"
+        },
+        {
+          "en": "They don't really {w}get on{/w} with each {c}other{/c}.",
+          "mm": "သူတို့နှစ်ယောက်ကတော့ အချင်းချင်း သိပ်မတည့်ကြဘူး။"
+        },
+        {
+          "en": "I {w}get on{/w} better with my {c}cousins{/c} than my siblings.",
+          "mm": "ကျွန်တော်က မောင်နှမတွေထက် ဝမ်းကွဲတွေနဲ့ ပိုပြီး အဆင်ပြေတယ်။"
+        },
+        {
+          "en": "We {w}get on{/w} really {c}well{/c}.",
+          "mm": "ကျွန်တော်တို့က အရမ်းကို အဆင်ပြေကြတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "take after"
+      ],
+      "short_mm": "အဆင်ပြေအောင် ပေါင်းသင်းဆက်ဆံတာ",
+      "nuance_mm": "အမေရိကန်ဘက်မှာတော့ get along with လို့ သုံးတာများပြီး ဗြိတိသျှအင်္ဂလိပ်စာမှာတော့ get on with ကို ပိုသုံးပါတယ်။"
+    },
+    {
+      "word": "run in the family",
+      "pos": "expression",
+      "short_en": "a quality or trait that many family members share",
+      "nuance_en": "An idiom — used for things passed down a family (looks, talents, illnesses). \"It runs in the family.\"",
+      "examples": [
+        {
+          "en": "Musical talent {w}runs in the family{/w}.",
+          "mm": "ဂီတဝါသနာပါတာက မိသားစုအလိုက်ပဲ။"
+        },
+        {
+          "en": "Does diabetes {w}run in{/w} your {c}family{/c}?",
+          "mm": "မင်းတို့မိသားစုမှာ ဆီးချိုရောဂါမျိုးရိုးရှိလား။"
+        },
+        {
+          "en": "Being tall {w}runs in the family{/w} — we're all over six foot.",
+          "mm": "အရပ်ရှည်တာက မိသားစုမျိုးရိုးပဲ၊ ကျွန်တော်တို့အားလုံး ခြောက်ပေကျော်ကြတယ်။"
+        },
+        {
+          "en": "A love of cooking {w}runs in{/w} the {c}family{/c}.",
+          "mm": "ဟင်းချက်ဝါသနာပါတာက မိသားစုလိုက်ပဲ။"
+        },
+        {
+          "en": "Red hair {w}runs in{/w} my {c}family{/c}.",
+          "mm": "ဆံပင်နီတာက ကျွန်တော်တို့မိသားစုမျိုးရိုးပဲ။"
+        }
+      ],
+      "short_mm": "မျိုးရိုးလိုက်တာ",
+      "nuance_mm": "ဒါက မိသားစုထဲမှာ အစဉ်အဆက် ဖြစ်လေ့ရှိတဲ့အရာတွေကို ပြောတဲ့ စကားပုံလေးပါ။"
+    },
+    {
+      "word": "a close family",
+      "pos": "expression",
+      "short_en": "a family whose members are emotionally close",
+      "examples": [
+        {
+          "en": "We're a very {w}close{/w} {c}family{/c} — we tell each other everything.",
+          "mm": "ကျွန်တော်တို့မိသားစုက အရမ်းခင်ကြတယ်၊ ဘာမဆို အကုန်တိုင်ပင်ကြတယ်။"
+        },
+        {
+          "en": "They have a really {w}close{/w} {c}relationship{/c}.",
+          "mm": "သူတို့က အရမ်းကို ရင်းနှီးတဲ့ဆက်ဆံရေးရှိကြတယ်။"
+        },
+        {
+          "en": "We may argue, but we're a {w}close{/w} {c}family{/c}.",
+          "mm": "ရန်ဖြစ်ကြပေမဲ့လည်း ကျွန်တော်တို့က ခင်မင်တဲ့မိသားစုပါ။"
+        },
+        {
+          "en": "Sunday lunch keeps us a {w}close{/w} {c}family{/c}.",
+          "mm": "တနင်္ဂနွေနေ့ နေ့လယ်စာစားပွဲက ကျွန်တော်တို့ကို ပိုပြီး ရင်းနှီးစေတယ်။"
+        },
+        {
+          "en": "She's very {w}close{/w} to her {c}mother{/c}.",
+          "mm": "သူက သူ့အမေနဲ့ အရမ်းကို ရင်းနှီးတယ်။"
+        }
+      ],
+      "short_mm": "ရင်းနှီးတဲ့မိသားစု"
+    },
+    {
+      "word": "immediate / extended family",
+      "pos": "expression",
+      "short_en": "your closest relatives (parents, siblings) vs the wider family (aunts, uncles, cousins)",
+      "examples": [
+        {
+          "en": "Only {w}immediate family{/w} came to the {c}wedding{/c}.",
+          "mm": "မင်္ဂလာဆောင်ကို မိသားစုဝင်တွေပဲ ဖိတ်ထားတယ်။"
+        },
+        {
+          "en": "My {w}extended family{/w} is {c}huge{/c} — I have 20 cousins!",
+          "mm": "ကျွန်တော့်ဆွေမျိုးတွေက အရမ်းများတယ်၊ ဝမ်းကွဲတွေတင်ပဲ ၂၀ ရှိတယ်။"
+        },
+        {
+          "en": "We spend holidays with the {w}extended family{/w}.",
+          "mm": "အားလပ်ရက်တွေဆို ဆွေမျိုးတွေနဲ့ပဲ ပေါင်းပြီး ဖြတ်သန်းကြတယ်။"
+        },
+        {
+          "en": "{w}Immediate family{/w} means parents, brothers and {c}sisters{/c}.",
+          "mm": "မိသားစုဝင်ဆိုတာ အဖေ၊ အမေ၊ မောင်နှမတွေကို ပြောတာ။"
+        },
+        {
+          "en": "His {w}extended family{/w} lives all over the {c}country{/c}.",
+          "mm": "သူ့ဆွေမျိုးတွေက တစ်နိုင်ငံလုံး ပြန့်ကျဲနေကြတယ်။"
+        }
+      ],
+      "short_mm": "မိသားစုဝင် (ရင်းနှီးသူ vs ဝေးလံသူ)"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "Everyone says I ___ my mum — same nose, same smile.",
+      "right": "take after",
+      "wrong": "get on with",
+      "why": "\"take after\" = look or act like a relative; \"get on with\" = have a good relationship.",
+      "why_mm": "take after က မိသားစုဝင်နဲ့ တူတာကို ပြောတာဖြစ်ပြီး၊ get on with ကတော့ တစ်ယောက်နဲ့တစ်ယောက် ဆက်ဆံရေးကောင်းတာကို ပြောတာမို့ အဓိပ္ပာယ် လုံးဝမတူပါဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Same eyes, same laugh — I really ___ my dad.",
+      "answer": "take after",
+      "options": [
+        "take after",
+        "get on with",
+        "look at"
+      ],
+      "explain_en": "Resemble an older relative → take after.",
+      "explain_mm": "အကြီးတစ်ယောက်နဲ့ တူတာကို ပြောချင်ရင် take after ကို သုံးပေးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My sister and I are good friends — we ___ really well.",
+      "answer": "get on",
+      "options": [
+        "get on",
+        "take after",
+        "grow up"
+      ],
+      "explain_en": "Have a good relationship → get on (well) with.",
+      "explain_mm": "ဆက်ဆံရေးကောင်းတာကို ပြောချင်ရင် get on (well) with လို့ သုံးရပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I have two younger brothers, so I'm ___.",
+      "answer": "the eldest",
+      "options": [
+        "the eldest",
+        "the youngest",
+        "an only child"
+      ],
+      "explain_en": "The oldest child → the eldest.",
+      "explain_mm": "အကြီးဆုံးသားသမီးကို the eldest လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I have no brothers or sisters. I'm ___.",
+      "answer": "an only child",
+      "options": [
+        "an only child",
+        "the youngest",
+        "a close family"
+      ],
+      "explain_en": "No siblings → an only child.",
+      "explain_mm": "မောင်နှမမရှိရင် an only child လို့ သုံးရပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Saying your family size: \"We're ___ five.\"",
+      "answer": "a family of",
+      "options": [
+        "a family of",
+        "there are",
+        "an only"
+      ],
+      "explain_en": "\"a family of five\" = there are five people in the family.",
+      "explain_mm": "a family of five ဆိုတာ မိသားစုဝင် ၅ ယောက်ရှိတယ်လို့ ပြောတာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Tall genes are common in my family: \"Being tall ___.\"",
+      "answer": "runs in the family",
+      "options": [
+        "runs in the family",
+        "takes after",
+        "gets on"
+      ],
+      "explain_en": "A trait shared across the family → runs in the family.",
+      "explain_mm": "မျိုးရိုးလိုက်တဲ့ အကျင့်စရိုက်ကို runs in the family လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"She ___ her mother — they look so alike.\"",
+      "answer": "takes after",
+      "options": [],
+      "explain_en": "Resemble a relative → take after (she takes after...).",
+      "accept": [
+        "take after"
+      ],
+      "explain_mm": "မိသားစုဝင်နဲ့ တူတာကို take after နဲ့ တွဲသုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"We're a very ___ family — we tell each other everything.\"",
+      "answer": "close",
+      "options": [],
+      "explain_en": "Emotionally close → a close family.",
+      "explain_mm": "စိတ်ပိုင်းဆိုင်ရာ ရင်းနှီးရင် a close family လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"Do you have any ___? — Yes, two brothers.\"",
+      "answer": "siblings",
+      "options": [],
+      "explain_en": "Brothers and sisters → siblings.",
+      "explain_mm": "မောင်နှမတွေကို siblings လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the words: \"He had no brothers or sisters; he was an ___.\"",
+      "answer": "only child",
+      "options": [],
+      "explain_en": "No siblings → an only child.",
+      "explain_mm": "မောင်နှမမရှိသူကို an only child လို့ ခေါ်ပါတယ်။"
+    }
+  ]
+}

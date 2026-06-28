@@ -1,0 +1,412 @@
+{
+  "id": "clothes",
+  "title": "Clothes",
+  "level": 1,
+  "order": 18,
+  "theme": "Clothes",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "Essential vocabulary for talking about what you wear, how to dress, and how clothes look on you. Master the difference between actions and states to sound more natural.",
+  "why_grouped_mm": "အဝတ်အစားတွေနဲ့ ပတ်သက်ပြီး ဝတ်ဆင်ပုံ၊ အရွယ်အစား၊ ပုံစံနဲ့ ပတ်သက်တဲ့ စကားလုံးတွေဖြစ်ပါတယ်။ အလုပ်တစ်ခုလုပ်နေတာလား (Action) ဒါမှမဟုတ် အခြေအနေတစ်ခုလား (State) ဆိုတာကို ခွဲခြားသိထားရင် ပိုသဘာဝကျကျ ပြောတတ်လာမှာပေါ့။",
+  "words": [
+    {
+      "word": "wear",
+      "pos": "verb",
+      "ipa": "/weər/",
+      "short_en": "to have clothes on your body",
+      "nuance_en": "\"wear\" is a state (you have them on). \"put on\" is the action of getting dressed.",
+      "examples": [
+        {
+          "en": "I usually {w}wear{/w} a {c}shirt{/c} to work.",
+          "mm": "ကျွန်တော် အလုပ်သွားရင် အင်္ကျီအင်္ကျီလက်ရှည်ကို ပုံမှန်ဝတ်လေ့ရှိတယ်။"
+        },
+        {
+          "en": "She likes to {w}wear{/w} {c}dresses{/c} in summer.",
+          "mm": "သူမ နွေရာသီမှာ ဂါဝန်ဝတ်ရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "Do you {w}wear{/w} {c}glasses{/c}?",
+          "mm": "မင်း မျက်မှန်တပ်လား။"
+        },
+        {
+          "en": "He is {w}wearing{/w} a warm {c}jacket{/c} today.",
+          "mm": "သူ ဒီနေ့ နွေးထွေးတဲ့ ဂျာကင်အင်္ကျီကို ဝတ်ထားတယ်။"
+        },
+        {
+          "en": "I don't like to {w}wear{/w} {c}hats{/c}.",
+          "mm": "ကျွန်တော် ဦးထုပ်ဆောင်းရတာ မကြိုက်ဘူး။"
+        }
+      ],
+      "confuse_with": [
+        "put on"
+      ],
+      "short_mm": "ဝတ်ထားတယ်",
+      "nuance_mm": "Wear က ဝတ်ထားပြီးသား အခြေအနေ (State) ဖြစ်ပါတယ်။"
+    },
+    {
+      "word": "put on",
+      "pos": "phrasal verb",
+      "ipa": "/pʊt ɒn/",
+      "short_en": "to dress yourself",
+      "nuance_en": "\"put on\" is the action of moving clothes onto your body. \"wear\" is the state of having them on.",
+      "examples": [
+        {
+          "en": "Please {w}put on{/w} your {c}coat{/c} before you go.",
+          "mm": "မသွားခင် မင်းရဲ့ ကုတ်အင်္ကျီကို အရင်ဝတ်လိုက်ဦး။"
+        },
+        {
+          "en": "I need to {w}put on{/w} my {c}shoes{/c}.",
+          "mm": "ကျွန်တော် ဖိနပ်စီးဖို့ လိုတယ်။"
+        },
+        {
+          "en": "She {w}put on{/w} a {c}scarf{/c} because it was cold.",
+          "mm": "ရာသီဥတု အေးတဲ့အတွက် သူမ ပုဝါခြုံလိုက်တယ်။"
+        },
+        {
+          "en": "It's time to {w}put on{/w} your {c}uniform{/c}.",
+          "mm": "ယူနီဖောင်း ဝတ်ရမယ့် အချိန်ရောက်ပြီ။"
+        },
+        {
+          "en": "I {w}put on{/w} my {c}socks{/c} quickly.",
+          "mm": "ကျွန်တော် ခြေအိတ်တွေကို အမြန်ဝတ်လိုက်တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "wear"
+      ],
+      "short_mm": "ဝတ်လိုက်တယ်",
+      "nuance_mm": "Put on က ဝတ်နေတဲ့ အလုပ် (Action) ဖြစ်ပါတယ်။"
+    },
+    {
+      "word": "take off",
+      "pos": "phrasal verb",
+      "ipa": "/teɪk ɒf/",
+      "short_en": "to remove clothes",
+      "examples": [
+        {
+          "en": "Please {w}take off{/w} your {c}shoes{/c} at the door.",
+          "mm": "တံခါးဝမှာ မင်းရဲ့ဖိနပ်ကို ချွတ်ထားခဲ့ပါ။"
+        },
+        {
+          "en": "I want to {w}take off{/w} this heavy {c}sweater{/c}.",
+          "mm": "ဒီအင်္ကျီထူထူကြီးကို ချွတ်ချင်တယ်။"
+        },
+        {
+          "en": "She {w}took off{/w} her {c}hat{/c} inside the house.",
+          "mm": "သူမ အိမ်ထဲမှာ သူမရဲ့ ဦးထုပ်ကို ချွတ်လိုက်တယ်။"
+        },
+        {
+          "en": "It's hot, so I will {w}take off{/w} my {c}jacket{/c}.",
+          "mm": "ပူလို့ ဂျာကင်ကို ချွတ်လိုက်တော့မယ်။"
+        },
+        {
+          "en": "Don't forget to {w}take off{/w} your {c}gloves{/c}.",
+          "mm": "လက်အိတ်ချွတ်ဖို့ မမေ့နဲ့နော်။"
+        }
+      ],
+      "short_mm": "ချွတ်လိုက်တယ်"
+    },
+    {
+      "word": "try on",
+      "pos": "phrasal verb",
+      "ipa": "/traɪ ɒn/",
+      "short_en": "to put clothes on to see if they fit",
+      "examples": [
+        {
+          "en": "Can I {w}try on{/w} this {c}shirt{/c}?",
+          "mm": "ဒီအင်္ကျီကို စမ်းဝတ်ကြည့်လို့ ရမလား။"
+        },
+        {
+          "en": "She went to the {c}room{/c} to {w}try on{/w} the dress.",
+          "mm": "သူမ ဂါဝန်ကို စမ်းဝတ်ကြည့်ဖို့ အခန်းထဲကို သွားတယ်။"
+        },
+        {
+          "en": "I always {w}try on{/w} {c}trousers{/c} before buying.",
+          "mm": "ကျွန်တော် ဘောင်းဘီမဝယ်ခင် အမြဲစမ်းဝတ်ကြည့်တယ်။"
+        },
+        {
+          "en": "He {w}tried on{/w} a new {c}suit{/c}.",
+          "mm": "သူ ဝတ်စုံအသစ်ကို စမ်းဝတ်ကြည့်တယ်။"
+        },
+        {
+          "en": "You should {w}try on{/w} those {c}boots{/c}.",
+          "mm": "မင်း အဲဒီဖိနပ်တွေကို စမ်းစီးကြည့်သင့်တယ်။"
+        }
+      ],
+      "short_mm": "စမ်းဝတ်ကြည့်တယ်"
+    },
+    {
+      "word": "get changed",
+      "pos": "verb phrase",
+      "ipa": "/ɡet tʃeɪndʒd/",
+      "short_en": "to put on different clothes",
+      "examples": [
+        {
+          "en": "I need to {w}get changed{/w} for the {c}party{/c}.",
+          "mm": "ပါတီအတွက် အဝတ်အစား လဲဖို့လိုတယ်။"
+        },
+        {
+          "en": "She {w}got changed{/w} after {c}work{/c}.",
+          "mm": "သူမ အလုပ်ဆင်းပြီးတော့ အဝတ်အစားလဲလိုက်တယ်။"
+        },
+        {
+          "en": "We should {w}get changed{/w} into our {c}swimwear{/c}.",
+          "mm": "ရေကူးဝတ်စုံကို လဲဝတ်သင့်တယ်။"
+        },
+        {
+          "en": "He {w}got changed{/w} in the {c}bathroom{/c}.",
+          "mm": "သူ ရေချိုးခန်းထဲမှာ အဝတ်အစားလဲတယ်။"
+        },
+        {
+          "en": "Are you going to {w}get changed{/w} for {c}dinner{/c}?",
+          "mm": "ညစာစားဖို့ အဝတ်အစား လဲမှာလား။"
+        }
+      ],
+      "short_mm": "အဝတ်အစား လဲလိုက်တယ်"
+    },
+    {
+      "word": "a pair of",
+      "pos": "noun phrase",
+      "ipa": "/ə peər əv/",
+      "short_en": "used for clothes that have two parts (pants, shoes, glasses)",
+      "examples": [
+        {
+          "en": "I bought a new {w}pair of{/w} {c}jeans{/c}.",
+          "mm": "ကျွန်တော် ဘောင်းဘီအသစ် တစ်ထည် ဝယ်လိုက်တယ်။"
+        },
+        {
+          "en": "She is wearing a nice {w}pair of{/w} {c}shoes{/c}.",
+          "mm": "သူမ ဖိနပ်လှလှလေး တစ်ရံ စီးထားတယ်။"
+        },
+        {
+          "en": "He needs a {w}pair of{/w} {c}socks{/c}.",
+          "mm": "သူ့အတွက် ခြေအိတ်တစ်စုံ လိုနေတယ်။"
+        },
+        {
+          "en": "That {w}pair of{/w} {c}trousers{/c} looks good.",
+          "mm": "အဲဒီဘောင်းဘီက ကြည့်ကောင်းတယ်။"
+        },
+        {
+          "en": "I lost my {w}pair of{/w} {c}glasses{/c}.",
+          "mm": "ကျွန်တော့် မျက်မှန် ပျောက်သွားတယ်။"
+        }
+      ],
+      "short_mm": "တစ်စုံ"
+    },
+    {
+      "word": "fit",
+      "pos": "verb",
+      "ipa": "/fɪt/",
+      "short_en": "to be the right size for someone",
+      "nuance_en": "\"fit\" = right size. \"suit\" = looks good on you.",
+      "examples": [
+        {
+          "en": "These {c}shoes{/c} do not {w}fit{/w} me.",
+          "mm": "ဒီဖိနပ်တွေက ကျွန်တော့်ခြေထောက်နဲ့ မတော်ဘူး။"
+        },
+        {
+          "en": "Does this {c}shirt{/c} {w}fit{/w} you?",
+          "mm": "ဒီအင်္ကျီက မင်းနဲ့ တော်ရဲ့လား။"
+        },
+        {
+          "en": "The {c}jacket{/c} doesn't {w}fit{/w} well.",
+          "mm": "ဒီဂျာကင်က အံမဝင်ဘူး။"
+        },
+        {
+          "en": "Those {c}jeans{/c} {w}fit{/w} perfectly.",
+          "mm": "အဲဒီဘောင်းဘီက အတော်လေး အံဝင်ခွင်ကျ ဖြစ်တယ်။"
+        },
+        {
+          "en": "I hope the {c}dress{/c} will {w}fit{/w}.",
+          "mm": "ဒီဂါဝန်က တော်မယ်လို့ မျှော်လင့်တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "suit"
+      ],
+      "short_mm": "တော်တယ် / အတိုင်းအတာ မှန်တယ်",
+      "nuance_mm": "Fit က အရွယ်အစား (Size) နဲ့ ဆိုင်ပါတယ်။"
+    },
+    {
+      "word": "suit",
+      "pos": "verb",
+      "ipa": "/suːt/",
+      "short_en": "to look good on someone",
+      "nuance_en": "\"suit\" = looks good on you. \"fit\" = right size.",
+      "examples": [
+        {
+          "en": "That {c}colour{/c} really {w}suits{/w} you.",
+          "mm": "အဲဒီအရောင်က မင်းနဲ့ အရမ်းလိုက်ဖက်တယ်။"
+        },
+        {
+          "en": "Blue {c}shirts{/c} {w}suit{/w} him.",
+          "mm": "အပြာရောင်အင်္ကျီတွေက သူ့နဲ့လိုက်တယ်။"
+        },
+        {
+          "en": "Does this {c}hat{/c} {w}suit{/w} me?",
+          "mm": "ဒီဦးထုပ်က ငါနဲ့လိုက်ရဲ့လား။"
+        },
+        {
+          "en": "That {c}style{/c} doesn't {w}suit{/w} her.",
+          "mm": "အဲဒီစတိုင်က သူမနဲ့ မလိုက်ဘူး။"
+        },
+        {
+          "en": "Short {c}hair{/c} {w}suits{/w} you.",
+          "mm": "ဆံပင်တိုက မင်းနဲ့ လိုက်တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "fit"
+      ],
+      "short_mm": "လိုက်ဖက်တယ်",
+      "nuance_mm": "Suit က ပုံစံ (Style) နဲ့ ဆိုင်ပါတယ်။"
+    },
+    {
+      "word": "it suits you",
+      "pos": "phrase",
+      "ipa": "/ɪt suːts juː/",
+      "short_en": "a compliment meaning something looks good on you",
+      "examples": [
+        {
+          "en": "That dress is lovely — {w}it suits you{/w}!",
+          "mm": "အဲဒီဂါဝန်လေးက ချစ်စရာလေး၊ မင်းနဲ့ အရမ်းလိုက်တာပဲ။"
+        },
+        {
+          "en": "I like your new glasses, {w}it suits you{/w}.",
+          "mm": "မင်းရဲ့ မျက်မှန်အသစ်ကို ကြိုက်တယ်၊ မင်းနဲ့ လိုက်ဖက်တယ်။"
+        },
+        {
+          "en": "Your new haircut is great, {w}it suits you{/w}.",
+          "mm": "ဆံပင်ညှပ်ပုံအသစ်က အမိုက်စားပဲ၊ မင်းနဲ့ အရမ်းလိုက်တယ်။"
+        },
+        {
+          "en": "You look happy in that colour, {w}it suits you{/w}.",
+          "mm": "အဲဒီအရောင်နဲ့ မင်းကို ကြည့်ရတာ ပျော်ရွှင်နေပုံပဲ၊ မင်းနဲ့ လိုက်ဖက်တယ်။"
+        },
+        {
+          "en": "Try this scarf on, {w}it suits you{/w} well.",
+          "mm": "ဒီပုဝါကို စမ်းပတ်ကြည့်ပါဦး၊ မင်းနဲ့ အရမ်းလိုက်တယ်။"
+        }
+      ],
+      "short_mm": "မင်းနဲ့ လိုက်တယ်နော်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I am ___ my coat because I am cold.",
+      "right": "putting on",
+      "wrong": "wearing",
+      "why": "\"putting on\" is the action; \"wearing\" is the state.",
+      "why_mm": "Put on က ဝတ်နေတဲ့ အလုပ်၊ wear က ဝတ်ထားပြီးတဲ့ အခြေအနေပါ။"
+    },
+    {
+      "prompt": "These shoes are too small, they don't ___.",
+      "right": "fit",
+      "wrong": "suit",
+      "why": "\"fit\" is about size; \"suit\" is about style/looks.",
+      "why_mm": "Fit က အရွယ်အစား (Size)၊ suit က ကြည့်ကောင်းမကောင်း (Style) ပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "It is cold outside, please ___ your coat.",
+      "answer": "put on",
+      "options": [
+        "put on",
+        "take off",
+        "wear"
+      ],
+      "explain_en": "The action of getting dressed is 'put on'.",
+      "explain_mm": "အဝတ်အစား ဝတ်လိုက်တဲ့ အလုပ်ကို put on လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I am ___ a blue shirt today.",
+      "answer": "wearing",
+      "options": [
+        "wearing",
+        "put on",
+        "try on"
+      ],
+      "explain_en": "Describing the current state of having clothes on.",
+      "explain_mm": "အဝတ်အစား ဝတ်ထားပြီးသား အခြေအနေကို ပြောရင် wear ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "These trousers are too big. They don't ___.",
+      "answer": "fit",
+      "options": [
+        "fit",
+        "suit",
+        "wear"
+      ],
+      "explain_en": "When clothes are the wrong size, they don't 'fit'.",
+      "explain_mm": "အရွယ်အစား မတော်ဘူးဆိုရင် fit မဖြစ်ဘူးလို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "That red dress looks great on you! It ___ you.",
+      "answer": "suits",
+      "options": [
+        "suits",
+        "fits",
+        "wears"
+      ],
+      "explain_en": "When something looks good on you, it 'suits' you.",
+      "explain_mm": "ဝတ်လိုက်လို့ ကြည့်ကောင်းနေရင် suit ဖြစ်တယ်လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I am home now, I will ___ my shoes.",
+      "answer": "take off",
+      "options": [
+        "take off",
+        "put on",
+        "get changed"
+      ],
+      "explain_en": "To remove clothes is to 'take off'.",
+      "explain_mm": "အဝတ်အစား ချွတ်တာကို take off လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "I need to ___ before we go to the party.",
+      "answer": "get changed",
+      "options": [],
+      "explain_en": "To change into different clothes.",
+      "explain_mm": "အဝတ်အစား လဲတာကို get changed လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Can I ___ this jacket in the shop?",
+      "answer": "try on",
+      "options": [],
+      "explain_en": "To check if something fits before buying.",
+      "explain_mm": "မဝယ်ခင် စမ်းဝတ်ကြည့်တာကို try on လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "I bought a new ___ jeans yesterday.",
+      "answer": "pair of",
+      "options": [],
+      "explain_en": "Used for clothes with two parts.",
+      "explain_mm": "နှစ်ပိုင်းပါတဲ့ အဝတ်အစားတွေအတွက် a pair of ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "That hat is very nice, it really ___ you.",
+      "answer": "suits",
+      "options": [],
+      "explain_en": "Complimenting how something looks on someone.",
+      "explain_mm": "ကြည့်ကောင်းတယ်လို့ ချီးကျူးရင် it suits you လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "I always ___ my glasses to read.",
+      "answer": "wear",
+      "options": [],
+      "explain_en": "To have something on your body.",
+      "explain_mm": "ကိုယ်မှာ ဝတ်ထားတာကို wear လို့ ပြောပါတယ်။"
+    }
+  ]
+}

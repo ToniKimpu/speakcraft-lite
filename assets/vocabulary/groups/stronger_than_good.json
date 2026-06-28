@@ -1,0 +1,369 @@
+{
+  "id": "stronger_than_good",
+  "title": "Stronger than \"good\"",
+  "level": 2,
+  "order": 1,
+  "theme": "Better adjectives",
+  "why_grouped_en": "Beginners lean on \"good\" and \"nice\" for everything. These five say the same idea with more colour — but each has a slightly different strength, feel, and the words it pairs with. Learn them together so you can pick the right one.",
+  "why_grouped_mm": "Beginner တွေက \"good\" နဲ့ \"nice\" ကိုပဲ သုံးနေကြတာများတယ်။ အခုဒီ ၅ ခုက အဓိပ္ပာယ်ဆင်တူပေမဲ့ သုံးတဲ့နေရာနဲ့ အခြေအနေလေးတွေ ကွဲပြားတာမို့လို့ အတူတူလေ့လာထားရင် အဆင်ပြေမှာပါ။",
+  "words": [
+    {
+      "word": "great",
+      "pos": "adjective",
+      "ipa": "/ɡreɪt/",
+      "short_en": "very good",
+      "short_mm": "အရမ်းကောင်းတယ်",
+      "use_when_en": "You want a safe, everyday \"very good\" — works in almost any situation.",
+      "use_when_mm": "Good ထက် ပိုကောင်းတဲ့အကြောင်း ပြောချင်တဲ့အခါမျိုးမှာ သုံးလို့ရတဲ့ စကားလုံးပါ။ သူငယ်ချင်းတွေကြားထဲမှာရော အလုပ်ကိစ္စတွေမှာပါ အကုန်သုံးလို့ရတယ်နော်။",
+      "explanation_en": "The everyday step up from \"good\". Safe spoken or written, casual or work.",
+      "explanation_mm": "Good ထက် နည်းနည်းပိုကောင်းတဲ့ level ပေါ့။ ပြောတဲ့အခါရော၊ ရေးတဲ့အခါရော အကုန်သုံးလို့ရတယ်။",
+      "nuance_en": "Neutral and extremely common. When in doubt, \"great\" works.",
+      "nuance_mm": "Neutral ဖြစ်တယ်။ ဘာသုံးရမှန်းမသိရင် great ကိုပဲ သုံးလိုက်ပါ။",
+      "goes_with_en": "a great + idea / time / day / chance · great + news / weather / fun · sounds / looks / feels great · a great deal of (= a lot of)",
+      "goes_with_note_en": "Pairs with everyday positive nouns, and with sounds / looks / feels.",
+      "goes_with_note_mm": "နေ့စဉ်သုံးတဲ့ nouns တွေ၊ sounds, looks, feels တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "That's a {w}great{/w} {c}idea{/c}.",
+          "mm": "ဒါ အရမ်းကောင်းတဲ့ အကြံဉာဏ်ပဲ။"
+        },
+        {
+          "en": "We had a {w}great{/w} {c}time{/c} at the beach.",
+          "mm": "ကမ်းခြေမှာ တုန်းက ကျွန်တော်တို့ အရမ်းပျော်ခဲ့ရတယ်။"
+        },
+        {
+          "en": "That's {w}great{/w} {c}news{/c} — congratulations!",
+          "mm": "ဒါ အရမ်းကောင်းတဲ့ သတင်းပဲ၊ ဂုဏ်ယူပါတယ်နော်။"
+        },
+        {
+          "en": "The {c}weather{/c} was {w}great{/w} all weekend.",
+          "mm": "စနေ၊ တနင်္ဂနွေ တစ်ပတ်လုံး ရာသီဥတုက သိပ်ကောင်းတယ်။"
+        },
+        {
+          "en": "Thanks, that {c}sounds{/c} {w}great{/w}!",
+          "mm": "ကျေးဇူးပဲ၊ အဲဒါ အရမ်းကောင်းတဲ့ အစီအစဉ်ပဲ။"
+        }
+      ],
+      "collocations": [
+        "a great idea",
+        "a great time",
+        "great news"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "amazing",
+      "pos": "adjective",
+      "ipa": "/əˈmeɪ.zɪŋ/",
+      "short_en": "so good it surprises you",
+      "short_mm": "အံ့ဩစရာကောင်းလောက်အောင် ကောင်းတယ်",
+      "use_when_en": "Something is so good it almost surprises you — great for reactions.",
+      "explanation_en": "Stronger than \"great\". Emotional and enthusiastic.",
+      "nuance_en": "A bit much for formal writing — keep it for speech and reactions.",
+      "goes_with_en": "an amazing + view / place / experience / story · amazing + food / work · absolutely / pretty amazing · look / taste / sound amazing",
+      "goes_with_note_en": "Often with views and experiences, and with look / taste / sound.",
+      "goes_with_note_mm": "View တွေ၊ အတွေ့အကြုံတွေ၊ ပြီးတော့ look, taste, sound တွေနဲ့ တွဲသုံးရင် အရမ်း natural ဖြစ်တယ်။",
+      "examples": [
+        {
+          "en": "The {c}view{/c} from the top was {w}amazing{/w}.",
+          "mm": "တောင်ထိပ်ကနေ ကြည့်လိုက်တဲ့ မြင်ကွင်းက တကယ့်ကို အံ့ဩစရာကောင်းတယ်။"
+        },
+        {
+          "en": "She did an {w}amazing{/w} {c}job{/c} on the project.",
+          "mm": "သူမ ဒီစီမံကိန်းအတွက် အံ့ဩလောက်အောင် ကောင်းတဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
+        },
+        {
+          "en": "The food here is {c}absolutely{/c} {w}amazing{/w}.",
+          "mm": "ဒီက အစားအစာတွေက တကယ့်ကို ထူးထူးခြားခြား အရသာရှိတယ်။"
+        },
+        {
+          "en": "What an {w}amazing{/w} {c}experience{/c}!",
+          "mm": "ဘယ်လောက်တောင် အံ့ဩစရာကောင်းတဲ့ အတွေ့အကြုံလဲ။"
+        },
+        {
+          "en": "The {c}concert{/c} was {w}amazing{/w} — I'll never forget it.",
+          "mm": "တေးဂီတဖျော်ဖြေပွဲက အံ့ဩစရာကောင်းလွန်းလို့ ကျွန်တော် ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။"
+        }
+      ],
+      "collocations": [
+        "an amazing view",
+        "amazing job",
+        "absolutely amazing"
+      ],
+      "confuse_with": [
+        "incredible"
+      ],
+      "use_when_mm": "အရမ်းကို အံ့အားသင့်စရာကောင်းလောက်အောင် ကောင်းတဲ့အခါမျိုးမှာ သုံးပါတယ်။ စိတ်လှုပ်ရှားပြီး ပျော်ရွှင်တဲ့အကြောင်းကို ပြချင်တဲ့အခါ သုံးရတာပါ။",
+      "explanation_mm": "Great ထက် ပိုပြီးတော့ စိတ်လှုပ်ရှားမှုပါတဲ့ စကားလုံးပါ။",
+      "nuance_mm": "Formal ဖြစ်တဲ့နေရာတွေမှာတော့ မသုံးပါနဲ့၊ သူငယ်ချင်းတွေနဲ့ ပြောတဲ့အခါမျိုးမှာပဲ သုံးပါ။"
+    },
+    {
+      "word": "fantastic",
+      "pos": "adjective",
+      "ipa": "/fænˈtæs.tɪk/",
+      "short_en": "extremely good",
+      "short_mm": "အရမ်းမိုက်တယ်",
+      "use_when_en": "You're pleased and want a warm, upbeat \"very good\" in speech.",
+      "explanation_en": "A friendly, positive \"very good\". A notch more excited than \"great\".",
+      "nuance_en": "Interchangeable with \"great\", just more enthusiastic.",
+      "goes_with_en": "a fantastic + result / job / opportunity / idea · sounds / looks fantastic · absolutely fantastic",
+      "goes_with_note_en": "Pairs with results and opportunities, and with reactions.",
+      "goes_with_note_mm": "Result တွေ၊ အခွင့်အရေးတွေနဲ့ တွဲသုံးလေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "You passed? {w}Fantastic{/w}!",
+          "mm": "အောင်သွားတာလား၊ တကယ့်ကို ထူးချွန်လိုက်တာ။"
+        },
+        {
+          "en": "The {c}food{/c} at that restaurant is {w}fantastic{/w}.",
+          "mm": "အဲဒီစားသောက်ဆိုင်က အစားအစာတွေက တကယ့်ကို ထူးခြားကောင်းမွန်တယ်။"
+        },
+        {
+          "en": "She got a {w}fantastic{/w} {c}result{/c} in her exam.",
+          "mm": "သူမ စာမေးပွဲမှာ အံ့ဩလောက်အောင် ကောင်းတဲ့ ရလဒ်တွေ ရခဲ့တယ်။"
+        },
+        {
+          "en": "That's {w}fantastic{/w} {c}news{/c}!",
+          "mm": "ဒါ တကယ့်ကို ဝမ်းသာစရာ သတင်းပဲ။"
+        },
+        {
+          "en": "The {c}team{/c} did a {w}fantastic{/w} job.",
+          "mm": "အသင်းက တကယ့်ကို ထူးချွန်တဲ့ အလုပ်ကို လုပ်ပြသွားတယ်။"
+        }
+      ],
+      "collocations": [
+        "a fantastic result",
+        "looks fantastic"
+      ],
+      "confuse_with": [],
+      "use_when_mm": "Great ထက် ပိုပြီးတော့ စိတ်လှုပ်ရှားမှုပါတဲ့ အသုံးအနှုန်းပါ။ ကိုယ် အရမ်းကြိုက်တယ်၊ အရမ်းကောင်းတယ်လို့ ပြောချင်တဲ့အခါမှာ သုံးပေးပါ။",
+      "explanation_mm": "Great ထက် ပိုပြီးတော့ အားပါတဲ့၊ friendly ဖြစ်တဲ့ စကားလုံးပါ။",
+      "nuance_mm": "Great နဲ့ အဓိပ္ပာယ်တူတူပါပဲ၊ ဒါပေမဲ့ သူက ပိုပြီးတော့ enthusiastic ဖြစ်တယ်။"
+    },
+    {
+      "word": "excellent",
+      "pos": "adjective",
+      "ipa": "/ˈek.sə.lənt/",
+      "short_en": "of very high quality",
+      "short_mm": "အရည်အသွေး အရမ်းကောင်းတယ်",
+      "use_when_en": "You praise quality, work, or a standard — a bit more formal.",
+      "use_when_mm": "အလုပ်ကိစ္စတွေ၊ အစီရင်ခံစာတွေ ဒါမှမဟုတ် အရည်အသွေးမြင့်တဲ့အရာတစ်ခုခုအကြောင်း ပြောတဲ့အခါ သုံးပါတယ်။ ပိုပြီးတော့ ပရော်ဖက်ရှင်နယ်ဆန်တဲ့ စကားလုံးလေးပါ။",
+      "explanation_en": "\"Very good\" focused on quality. Good for work, feedback, reports.",
+      "explanation_mm": "Quality အရမ်းကောင်းတယ်လို့ ပြောချင်တဲ့အခါ သုံးတယ်။ Work feedback ပေးတဲ့အခါမျိုးမှာ သုံးရင် အကောင်းဆုံးပဲ။",
+      "nuance_en": "Sounds professional: you'd write \"excellent work\", not \"amazing work\".",
+      "nuance_mm": "Formal ဖြစ်တယ်။ \"excellent work\" လို့ ပြောတာက \"amazing work\" ထက် ပိုပြီး professional ဆန်တယ်။",
+      "goes_with_en": "excellent + work / quality / service / condition · an excellent + point / example / idea · in excellent health",
+      "goes_with_note_en": "Pairs with work, quality, and standards — formal in tone.",
+      "goes_with_note_mm": "Work, quality, standards တွေနဲ့ တွဲသုံးတာ များပါတယ်။",
+      "examples": [
+        {
+          "en": "She has {w}excellent{/w} {c}communication{/c} skills.",
+          "mm": "သူမမှာ ဆက်သွယ်ပြောဆိုတဲ့ ကျွမ်းကျင်မှုက တကယ့်ကို ထူးချွန်တယ်။"
+        },
+        {
+          "en": "The hotel offers {w}excellent{/w} {c}service{/c}.",
+          "mm": "ဒီဟိုတယ်က ဝန်ဆောင်မှု ပေးတာ အရမ်းကောင်းတယ်။"
+        },
+        {
+          "en": "That's an {w}excellent{/w} {c}point{/c}.",
+          "mm": "ဒါ တကယ့်ကို မှန်ကန်ပြီး ထူးချွန်တဲ့ အချက်ပဲ။"
+        },
+        {
+          "en": "The car is in {w}excellent{/w} {c}condition{/c}.",
+          "mm": "ကားက အခြေအနေ အရမ်းကောင်းနေတယ်။"
+        },
+        {
+          "en": "He did {w}excellent{/w} {c}work{/c} on the report.",
+          "mm": "သူ ဒီအစီရင်ခံစာအတွက် တကယ့်ကို ထူးချွန်တဲ့ အလုပ်ကို လုပ်ခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "excellent work",
+        "excellent quality",
+        "an excellent point"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "wonderful",
+      "pos": "adjective",
+      "ipa": "/ˈwʌn.də.fəl/",
+      "short_en": "very good and makes you feel happy",
+      "short_mm": "အရမ်းကောင်းပြီးတော့ ပျော်ဖို့ကောင်းတယ်",
+      "use_when_en": "You describe people, moments, or experiences with warmth.",
+      "use_when_mm": "တစ်စုံတစ်ခု ဒါမှမဟုတ် တစ်ယောက်ယောက်ကြောင့် ကိုယ်အရမ်းပျော်ရွှင်ရတဲ့အခါမျိုးမှာ သုံးပါတယ်။ အထူးသဖြင့် လူတွေ ဒါမှမဟုတ် အတွေ့အကြုံကောင်းတွေကို ပြောတဲ့အခါ ပိုလိုက်ဖက်ပါတယ်။",
+      "explanation_en": "\"Very good\" with feeling — used about experiences and people more than objects.",
+      "nuance_en": "\"a wonderful person\" sounds kind; \"a wonderful laptop\" sounds odd.",
+      "goes_with_en": "a wonderful + time / day / evening / experience · a wonderful + person / friend / feeling · it would be wonderful to ...",
+      "goes_with_note_en": "Pairs with people, times, and experiences.",
+      "goes_with_note_mm": "People, times, experiences တွေနဲ့ တွဲသုံးဖို့ အဆင်ပြေဆုံးပါ။",
+      "examples": [
+        {
+          "en": "We had a {w}wonderful{/w} {c}evening{/c} together.",
+          "mm": "ကျွန်တော်တို့ အတူတူ အလွန်ပျော်ရွှင်စရာကောင်းတဲ့ ညနေခင်းကို ဖြတ်သန်းခဲ့ကြတယ်။"
+        },
+        {
+          "en": "Thank you — you've been {w}wonderful{/w}.",
+          "mm": "ကျေးဇူးတင်ပါတယ်၊ သင်က တကယ့်ကို စိတ်သဘောထား ကောင်းမွန်သူပါ။"
+        },
+        {
+          "en": "She's a {w}wonderful{/w} {c}person{/c}.",
+          "mm": "သူမက တကယ့်ကို စိတ်ထားကောင်းတဲ့ လူတစ်ယောက်ပါ။"
+        },
+        {
+          "en": "What a {w}wonderful{/w} {c}surprise{/c}!",
+          "mm": "ဘယ်လောက်တောင် ဝမ်းသာစရာကောင်းတဲ့ အံ့ဩစရာ အဖြစ်အပျက်လဲ။"
+        },
+        {
+          "en": "We had a {w}wonderful{/w} {c}time{/c} on holiday.",
+          "mm": "ကျွန်တော်တို့ အားလပ်ရက်မှာ အလွန်ပျော်စရာကောင်းတဲ့ အချိန်တွေကို ဖြတ်သန်းခဲ့ကြတယ်။"
+        }
+      ],
+      "collocations": [
+        "a wonderful time",
+        "a wonderful person"
+      ],
+      "confuse_with": [],
+      "explanation_mm": "ခံစားချက်ပါတဲ့ 'very good' ပေါ့။ ပစ္စည်းတွေထက် လူတွေနဲ့ အတွေ့အကြုံတွေအတွက် ပိုသုံးတယ်။",
+      "nuance_mm": "\"a wonderful person\" လို့ ပြောရင် နွေးထွေးတဲ့ပုံစံပေါက်ပေမဲ့ \"a wonderful laptop\" လို့ပြောရင် နည်းနည်းထူးဆန်းသွားမယ်။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "On a CV: \"She has ___ communication skills.\"",
+      "right": "excellent",
+      "wrong": "amazing",
+      "why": "Work quality → excellent. \"Amazing\" sounds too casual for a CV.",
+      "why_mm": "CV မှာဆိုရင် formal ဖြစ်တဲ့ excellent ကိုပဲ သုံးသင့်တယ်။"
+    },
+    {
+      "prompt": "About a kind person: \"My grandmother was a ___ woman.\"",
+      "right": "wonderful",
+      "wrong": "excellent",
+      "why": "People & warmth → wonderful. \"Excellent woman\" sounds like a rating.",
+      "why_mm": "လူတစ်ယောက်ကို ချီးကျူးရင် rating ပေးသလိုမျိုး မဖြစ်အောင် wonderful ကို သုံးရမယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "On a job reference: \"She has ___ attention to detail.\"",
+      "answer": "excellent",
+      "options": [
+        "amazing",
+        "excellent",
+        "wonderful"
+      ],
+      "explain_en": "Quality and work praise → excellent. \"Amazing\" sounds casual and \"wonderful\" is for people and feelings.",
+      "explain_mm": "အလုပ်နဲ့ အရည်အသွေးအကြောင်းဆိုရင် excellent ပဲ သုံးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Reacting to a surprise: \"You climbed the whole mountain? That's ___!\"",
+      "answer": "amazing",
+      "options": [
+        "amazing",
+        "excellent",
+        "good"
+      ],
+      "explain_en": "A surprised reaction → amazing. \"Excellent\" is about quality, and \"good\" is too weak for the wow.",
+      "explain_mm": "အံ့ဩသွားတဲ့ reaction ဆိုရင် amazing သုံးမှ natural ဖြစ်မှာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "About a kind person: \"My grandmother was a truly ___ woman.\"",
+      "answer": "wonderful",
+      "options": [
+        "wonderful",
+        "excellent",
+        "fantastic"
+      ],
+      "explain_en": "People and warmth → wonderful. \"Excellent/fantastic woman\" sound like a rating, not affection.",
+      "explain_mm": "လူတစ်ယောက်အကြောင်း ပြောတဲ့အခါ နွေးထွေးမှုရှိတဲ့ wonderful ကို သုံးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Safe, everyday choice: \"That's a ___ idea, let's do it.\"",
+      "answer": "great",
+      "options": [
+        "great",
+        "wonderful",
+        "excellent"
+      ],
+      "explain_en": "Neutral, everyday \"very good\" → great. \"A great idea\" is the natural pairing.",
+      "explain_mm": "Neutral ဖြစ်တဲ့ 'very good' အတွက် great က အကောင်းဆုံးပဲ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Pleased reaction in speech: \"You got the job? ___!\"",
+      "answer": "fantastic",
+      "options": [
+        "fantastic",
+        "excellent",
+        "wonderful"
+      ],
+      "explain_en": "A warm, upbeat reaction → fantastic. \"Excellent\" feels formal; \"wonderful\" suits people and moments.",
+      "explain_mm": "Upbeat ဖြစ်တဲ့ reaction ဆိုရင် fantastic နဲ့ လိုက်ဖက်တယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "On a report: \"The product is of ___ quality.\"",
+      "answer": "excellent",
+      "options": [
+        "excellent",
+        "amazing",
+        "great"
+      ],
+      "explain_en": "\"Excellent quality\" is the standard collocation for standards and work.",
+      "explain_mm": "Quality အကြောင်းပြောရင် excellent quality ဆိုတာက standard ပဲ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Thanks for good news: \"Thanks for the ___ news!\"",
+      "answer": "great",
+      "options": [
+        "great",
+        "excellent",
+        "wonderful"
+      ],
+      "explain_en": "\"Great news\" is the fixed pairing — we don't say \"excellent/wonderful news\" as naturally.",
+      "explain_mm": "Great news ဆိုတာက fixed pairing မို့လို့ အဲ့ဒီအတိုင်းပဲ သုံးရမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "About a film's visuals: \"The special effects were ___.\"",
+      "answer": "amazing",
+      "options": [
+        "amazing",
+        "excellent",
+        "good"
+      ],
+      "explain_en": "Wow-factor and impressive → amazing. \"Excellent\" is more about quality or standard.",
+      "explain_mm": "Wow-factor ပါတဲ့အရာဆိုရင် amazing နဲ့ပဲ တွဲပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "A warm experience: \"We had a ___ evening together.\"",
+      "answer": "wonderful",
+      "options": [
+        "wonderful",
+        "excellent",
+        "good"
+      ],
+      "explain_en": "A warm shared moment → wonderful. \"Excellent evening\" sounds oddly formal.",
+      "explain_mm": "ပျော်စရာအချိန်အခါဆိုရင် wonderful နဲ့ ပြောမှ ခံစားချက်ပါမှာ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Marking an essay: \"Your essay shows ___ structure and clarity.\"",
+      "answer": "excellent",
+      "options": [
+        "excellent",
+        "fantastic",
+        "wonderful"
+      ],
+      "explain_en": "Academic, quality feedback → excellent. The others sound too casual or emotional for marking work.",
+      "explain_mm": "Academic feedback ဆိုရင် formal ဖြစ်တဲ့ excellent ကို သုံးရမယ်။"
+    }
+  ]
+}

@@ -1193,6 +1193,356 @@ class WritingProgressTableCompanion
   }
 }
 
+class $VocabReviewTableTable extends VocabReviewTable
+    with TableInfo<$VocabReviewTableTable, VocabReviewTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VocabReviewTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _groupIdMeta =
+      const VerificationMeta('groupId');
+  @override
+  late final GeneratedColumn<String> groupId = GeneratedColumn<String>(
+      'group_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _wordMeta = const VerificationMeta('word');
+  @override
+  late final GeneratedColumn<String> word = GeneratedColumn<String>(
+      'word', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _boxMeta = const VerificationMeta('box');
+  @override
+  late final GeneratedColumn<int> box = GeneratedColumn<int>(
+      'box', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(1));
+  static const VerificationMeta _dueAtMeta = const VerificationMeta('dueAt');
+  @override
+  late final GeneratedColumn<int> dueAt = GeneratedColumn<int>(
+      'due_at', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _seenMeta = const VerificationMeta('seen');
+  @override
+  late final GeneratedColumn<int> seen = GeneratedColumn<int>(
+      'seen', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _correctMeta =
+      const VerificationMeta('correct');
+  @override
+  late final GeneratedColumn<int> correct = GeneratedColumn<int>(
+      'correct', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  @override
+  List<GeneratedColumn> get $columns =>
+      [groupId, word, box, dueAt, seen, correct];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'vocab_review_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<VocabReviewTableData> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('group_id')) {
+      context.handle(_groupIdMeta,
+          groupId.isAcceptableOrUnknown(data['group_id']!, _groupIdMeta));
+    } else if (isInserting) {
+      context.missing(_groupIdMeta);
+    }
+    if (data.containsKey('word')) {
+      context.handle(
+          _wordMeta, word.isAcceptableOrUnknown(data['word']!, _wordMeta));
+    } else if (isInserting) {
+      context.missing(_wordMeta);
+    }
+    if (data.containsKey('box')) {
+      context.handle(
+          _boxMeta, box.isAcceptableOrUnknown(data['box']!, _boxMeta));
+    }
+    if (data.containsKey('due_at')) {
+      context.handle(
+          _dueAtMeta, dueAt.isAcceptableOrUnknown(data['due_at']!, _dueAtMeta));
+    }
+    if (data.containsKey('seen')) {
+      context.handle(
+          _seenMeta, seen.isAcceptableOrUnknown(data['seen']!, _seenMeta));
+    }
+    if (data.containsKey('correct')) {
+      context.handle(_correctMeta,
+          correct.isAcceptableOrUnknown(data['correct']!, _correctMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {groupId, word};
+  @override
+  VocabReviewTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VocabReviewTableData(
+      groupId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}group_id'])!,
+      word: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}word'])!,
+      box: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}box'])!,
+      dueAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}due_at'])!,
+      seen: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}seen'])!,
+      correct: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}correct'])!,
+    );
+  }
+
+  @override
+  $VocabReviewTableTable createAlias(String alias) {
+    return $VocabReviewTableTable(attachedDatabase, alias);
+  }
+}
+
+class VocabReviewTableData extends DataClass
+    implements Insertable<VocabReviewTableData> {
+  final String groupId;
+
+  /// The taught word/expression (normalised lowercase) — the exercise answer.
+  final String word;
+
+  /// Leitner box 1..5 (higher = longer interval / better known).
+  final int box;
+
+  /// Epoch milliseconds when this word is next due.
+  final int dueAt;
+
+  /// Counters for simple stats / weakest-first ordering.
+  final int seen;
+  final int correct;
+  const VocabReviewTableData(
+      {required this.groupId,
+      required this.word,
+      required this.box,
+      required this.dueAt,
+      required this.seen,
+      required this.correct});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['group_id'] = Variable<String>(groupId);
+    map['word'] = Variable<String>(word);
+    map['box'] = Variable<int>(box);
+    map['due_at'] = Variable<int>(dueAt);
+    map['seen'] = Variable<int>(seen);
+    map['correct'] = Variable<int>(correct);
+    return map;
+  }
+
+  VocabReviewTableCompanion toCompanion(bool nullToAbsent) {
+    return VocabReviewTableCompanion(
+      groupId: Value(groupId),
+      word: Value(word),
+      box: Value(box),
+      dueAt: Value(dueAt),
+      seen: Value(seen),
+      correct: Value(correct),
+    );
+  }
+
+  factory VocabReviewTableData.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return VocabReviewTableData(
+      groupId: serializer.fromJson<String>(json['groupId']),
+      word: serializer.fromJson<String>(json['word']),
+      box: serializer.fromJson<int>(json['box']),
+      dueAt: serializer.fromJson<int>(json['dueAt']),
+      seen: serializer.fromJson<int>(json['seen']),
+      correct: serializer.fromJson<int>(json['correct']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'groupId': serializer.toJson<String>(groupId),
+      'word': serializer.toJson<String>(word),
+      'box': serializer.toJson<int>(box),
+      'dueAt': serializer.toJson<int>(dueAt),
+      'seen': serializer.toJson<int>(seen),
+      'correct': serializer.toJson<int>(correct),
+    };
+  }
+
+  VocabReviewTableData copyWith(
+          {String? groupId,
+          String? word,
+          int? box,
+          int? dueAt,
+          int? seen,
+          int? correct}) =>
+      VocabReviewTableData(
+        groupId: groupId ?? this.groupId,
+        word: word ?? this.word,
+        box: box ?? this.box,
+        dueAt: dueAt ?? this.dueAt,
+        seen: seen ?? this.seen,
+        correct: correct ?? this.correct,
+      );
+  VocabReviewTableData copyWithCompanion(VocabReviewTableCompanion data) {
+    return VocabReviewTableData(
+      groupId: data.groupId.present ? data.groupId.value : this.groupId,
+      word: data.word.present ? data.word.value : this.word,
+      box: data.box.present ? data.box.value : this.box,
+      dueAt: data.dueAt.present ? data.dueAt.value : this.dueAt,
+      seen: data.seen.present ? data.seen.value : this.seen,
+      correct: data.correct.present ? data.correct.value : this.correct,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabReviewTableData(')
+          ..write('groupId: $groupId, ')
+          ..write('word: $word, ')
+          ..write('box: $box, ')
+          ..write('dueAt: $dueAt, ')
+          ..write('seen: $seen, ')
+          ..write('correct: $correct')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(groupId, word, box, dueAt, seen, correct);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is VocabReviewTableData &&
+          other.groupId == this.groupId &&
+          other.word == this.word &&
+          other.box == this.box &&
+          other.dueAt == this.dueAt &&
+          other.seen == this.seen &&
+          other.correct == this.correct);
+}
+
+class VocabReviewTableCompanion extends UpdateCompanion<VocabReviewTableData> {
+  final Value<String> groupId;
+  final Value<String> word;
+  final Value<int> box;
+  final Value<int> dueAt;
+  final Value<int> seen;
+  final Value<int> correct;
+  final Value<int> rowid;
+  const VocabReviewTableCompanion({
+    this.groupId = const Value.absent(),
+    this.word = const Value.absent(),
+    this.box = const Value.absent(),
+    this.dueAt = const Value.absent(),
+    this.seen = const Value.absent(),
+    this.correct = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  VocabReviewTableCompanion.insert({
+    required String groupId,
+    required String word,
+    this.box = const Value.absent(),
+    this.dueAt = const Value.absent(),
+    this.seen = const Value.absent(),
+    this.correct = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : groupId = Value(groupId),
+        word = Value(word);
+  static Insertable<VocabReviewTableData> custom({
+    Expression<String>? groupId,
+    Expression<String>? word,
+    Expression<int>? box,
+    Expression<int>? dueAt,
+    Expression<int>? seen,
+    Expression<int>? correct,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (groupId != null) 'group_id': groupId,
+      if (word != null) 'word': word,
+      if (box != null) 'box': box,
+      if (dueAt != null) 'due_at': dueAt,
+      if (seen != null) 'seen': seen,
+      if (correct != null) 'correct': correct,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  VocabReviewTableCompanion copyWith(
+      {Value<String>? groupId,
+      Value<String>? word,
+      Value<int>? box,
+      Value<int>? dueAt,
+      Value<int>? seen,
+      Value<int>? correct,
+      Value<int>? rowid}) {
+    return VocabReviewTableCompanion(
+      groupId: groupId ?? this.groupId,
+      word: word ?? this.word,
+      box: box ?? this.box,
+      dueAt: dueAt ?? this.dueAt,
+      seen: seen ?? this.seen,
+      correct: correct ?? this.correct,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (groupId.present) {
+      map['group_id'] = Variable<String>(groupId.value);
+    }
+    if (word.present) {
+      map['word'] = Variable<String>(word.value);
+    }
+    if (box.present) {
+      map['box'] = Variable<int>(box.value);
+    }
+    if (dueAt.present) {
+      map['due_at'] = Variable<int>(dueAt.value);
+    }
+    if (seen.present) {
+      map['seen'] = Variable<int>(seen.value);
+    }
+    if (correct.present) {
+      map['correct'] = Variable<int>(correct.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabReviewTableCompanion(')
+          ..write('groupId: $groupId, ')
+          ..write('word: $word, ')
+          ..write('box: $box, ')
+          ..write('dueAt: $dueAt, ')
+          ..write('seen: $seen, ')
+          ..write('correct: $correct, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -1206,6 +1556,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       $VideoStepProgressTableTable(this);
   late final $WritingProgressTableTable writingProgressTable =
       $WritingProgressTableTable(this);
+  late final $VocabReviewTableTable vocabReviewTable =
+      $VocabReviewTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1215,7 +1567,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         userRecordedSentenceAudioTable,
         savedTermTable,
         videoStepProgressTable,
-        writingProgressTable
+        writingProgressTable,
+        vocabReviewTable
       ];
 }
 
@@ -2155,6 +2508,197 @@ typedef $$WritingProgressTableTableProcessedTableManager
         ),
         WritingProgressTableData,
         PrefetchHooks Function()>;
+typedef $$VocabReviewTableTableCreateCompanionBuilder
+    = VocabReviewTableCompanion Function({
+  required String groupId,
+  required String word,
+  Value<int> box,
+  Value<int> dueAt,
+  Value<int> seen,
+  Value<int> correct,
+  Value<int> rowid,
+});
+typedef $$VocabReviewTableTableUpdateCompanionBuilder
+    = VocabReviewTableCompanion Function({
+  Value<String> groupId,
+  Value<String> word,
+  Value<int> box,
+  Value<int> dueAt,
+  Value<int> seen,
+  Value<int> correct,
+  Value<int> rowid,
+});
+
+class $$VocabReviewTableTableFilterComposer
+    extends Composer<_$AppDatabase, $VocabReviewTableTable> {
+  $$VocabReviewTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get groupId => $composableBuilder(
+      column: $table.groupId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get word => $composableBuilder(
+      column: $table.word, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get box => $composableBuilder(
+      column: $table.box, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get dueAt => $composableBuilder(
+      column: $table.dueAt, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get seen => $composableBuilder(
+      column: $table.seen, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get correct => $composableBuilder(
+      column: $table.correct, builder: (column) => ColumnFilters(column));
+}
+
+class $$VocabReviewTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $VocabReviewTableTable> {
+  $$VocabReviewTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get groupId => $composableBuilder(
+      column: $table.groupId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get word => $composableBuilder(
+      column: $table.word, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get box => $composableBuilder(
+      column: $table.box, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get dueAt => $composableBuilder(
+      column: $table.dueAt, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get seen => $composableBuilder(
+      column: $table.seen, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get correct => $composableBuilder(
+      column: $table.correct, builder: (column) => ColumnOrderings(column));
+}
+
+class $$VocabReviewTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $VocabReviewTableTable> {
+  $$VocabReviewTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get groupId =>
+      $composableBuilder(column: $table.groupId, builder: (column) => column);
+
+  GeneratedColumn<String> get word =>
+      $composableBuilder(column: $table.word, builder: (column) => column);
+
+  GeneratedColumn<int> get box =>
+      $composableBuilder(column: $table.box, builder: (column) => column);
+
+  GeneratedColumn<int> get dueAt =>
+      $composableBuilder(column: $table.dueAt, builder: (column) => column);
+
+  GeneratedColumn<int> get seen =>
+      $composableBuilder(column: $table.seen, builder: (column) => column);
+
+  GeneratedColumn<int> get correct =>
+      $composableBuilder(column: $table.correct, builder: (column) => column);
+}
+
+class $$VocabReviewTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VocabReviewTableTable,
+    VocabReviewTableData,
+    $$VocabReviewTableTableFilterComposer,
+    $$VocabReviewTableTableOrderingComposer,
+    $$VocabReviewTableTableAnnotationComposer,
+    $$VocabReviewTableTableCreateCompanionBuilder,
+    $$VocabReviewTableTableUpdateCompanionBuilder,
+    (
+      VocabReviewTableData,
+      BaseReferences<_$AppDatabase, $VocabReviewTableTable,
+          VocabReviewTableData>
+    ),
+    VocabReviewTableData,
+    PrefetchHooks Function()> {
+  $$VocabReviewTableTableTableManager(
+      _$AppDatabase db, $VocabReviewTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VocabReviewTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$VocabReviewTableTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$VocabReviewTableTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> groupId = const Value.absent(),
+            Value<String> word = const Value.absent(),
+            Value<int> box = const Value.absent(),
+            Value<int> dueAt = const Value.absent(),
+            Value<int> seen = const Value.absent(),
+            Value<int> correct = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabReviewTableCompanion(
+            groupId: groupId,
+            word: word,
+            box: box,
+            dueAt: dueAt,
+            seen: seen,
+            correct: correct,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String groupId,
+            required String word,
+            Value<int> box = const Value.absent(),
+            Value<int> dueAt = const Value.absent(),
+            Value<int> seen = const Value.absent(),
+            Value<int> correct = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VocabReviewTableCompanion.insert(
+            groupId: groupId,
+            word: word,
+            box: box,
+            dueAt: dueAt,
+            seen: seen,
+            correct: correct,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$VocabReviewTableTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $VocabReviewTableTable,
+    VocabReviewTableData,
+    $$VocabReviewTableTableFilterComposer,
+    $$VocabReviewTableTableOrderingComposer,
+    $$VocabReviewTableTableAnnotationComposer,
+    $$VocabReviewTableTableCreateCompanionBuilder,
+    $$VocabReviewTableTableUpdateCompanionBuilder,
+    (
+      VocabReviewTableData,
+      BaseReferences<_$AppDatabase, $VocabReviewTableTable,
+          VocabReviewTableData>
+    ),
+    VocabReviewTableData,
+    PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -2174,4 +2718,6 @@ class $AppDatabaseManager {
           _db, _db.videoStepProgressTable);
   $$WritingProgressTableTableTableManager get writingProgressTable =>
       $$WritingProgressTableTableTableManager(_db, _db.writingProgressTable);
+  $$VocabReviewTableTableTableManager get vocabReviewTable =>
+      $$VocabReviewTableTableTableManager(_db, _db.vocabReviewTable);
 }

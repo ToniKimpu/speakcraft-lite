@@ -1,0 +1,375 @@
+{
+  "id": "greetings",
+  "title": "Greetings & introductions",
+  "level": 1,
+  "order": 8,
+  "theme": "Greetings",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Knowing how to start a conversation is the most important step in learning English. These phrases cover everything from meeting new people to saying goodbye in a natural way.",
+  "why_grouped_mm": "အင်္ဂလိပ်စာစလေ့လာတဲ့အခါ လူတွေနဲ့ စတင်စကားပြောတတ်ဖို့က အရေးအကြီးဆုံးပဲ။ ဒီစကားစုတွေက လူသစ်နဲ့တွေ့တဲ့အချိန်ကနေ နှုတ်ဆက်ပြီး ပြန်ခွဲခွာတဲ့အချိန်အထိ သဘာဝကျကျ ပြောတတ်အောင် ကူညီပေးမှာပါ။",
+  "words": [
+    {
+      "word": "How's it going?",
+      "pos": "expression",
+      "short_en": "A casual way to ask 'How are you?'",
+      "examples": [
+        {
+          "en": "{w}How's it going?{/w} — I'm {c}great{/c}, thanks.",
+          "mm": "နေကောင်းလား။ — ကျွန်တော် အရမ်းနေကောင်းပါတယ်၊ ကျေးဇူးတင်ပါတယ်။"
+        },
+        {
+          "en": "{w}How's it going?{/w} — Not {c}bad{/c}, you?",
+          "mm": "နေကောင်းလား။ — မဆိုးပါဘူး၊ မင်းကော။"
+        },
+        {
+          "en": "Hey, {w}how's it going?{/w} — {c}Good{/c}, how about you?",
+          "mm": "ဟေ့၊ နေကောင်းလား။ — ကောင်းပါတယ်၊ မင်းကော ဘယ်လိုနေလဲ။"
+        },
+        {
+          "en": "{w}How's it going?{/w} — Everything is {c}fine{/c}.",
+          "mm": "နေကောင်းလား။ — အားလုံး အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "I haven't seen you in a while, {w}how's it going?{/w} — {c}Busy{/c}!",
+          "mm": "မတွေ့တာ ကြာပြီနော်၊ နေကောင်းလား။ — အလုပ်တွေ အရမ်းများနေတယ်ဗျာ။"
+        }
+      ],
+      "short_mm": "နေကောင်းလား၊ ဘယ်လိုနေလဲ။"
+    },
+    {
+      "word": "Nice to meet you",
+      "pos": "expression",
+      "short_en": "What you say when you are introduced to someone for the first time",
+      "examples": [
+        {
+          "en": "Hi, I'm Sarah. — {w}Nice to meet you{/w}, {c}Sarah{/c}.",
+          "mm": "မင်္ဂလာပါ၊ ကျွန်မက ဆာရာပါ။ — တွေ့ရတာ ဝမ်းသာပါတယ် ဆာရာ။"
+        },
+        {
+          "en": "This is my brother. — {w}Nice to meet you{/w}, {c}nice{/c} to meet you too.",
+          "mm": "ဒါက ကျွန်တော့်အစ်ကိုပါ။ — တွေ့ရတာ ဝမ်းသာပါတယ်၊ ကျွန်တော်လည်း တွေ့ရတာ ဝမ်းသာပါတယ်။"
+        },
+        {
+          "en": "It was {w}nice to meet you{/w}, {c}see{/c} you soon.",
+          "mm": "တွေ့ရတာ ဝမ်းသာပါတယ်၊ နောက်မှ ပြန်တွေ့ကြမယ်နော်။"
+        },
+        {
+          "en": "{w}Nice to meet you{/w}, {c}John{/c}, I've heard a lot about you.",
+          "mm": "တွေ့ရတာ ဝမ်းသာပါတယ် ဂျွန်၊ မင်းအကြောင်း အများကြီး ကြားထားရတယ်။"
+        },
+        {
+          "en": "I'm the new teacher. — {w}Nice to meet you{/w}, {c}welcome{/c}!",
+          "mm": "ကျွန်တော်က ဆရာသစ်ပါ။ — တွေ့ရတာ ဝမ်းသာပါတယ်၊ ကြိုဆိုပါတယ်!။"
+        }
+      ],
+      "short_mm": "တွေ့ရတာ ဝမ်းသာပါတယ်။"
+    },
+    {
+      "word": "This is my friend",
+      "pos": "expression",
+      "short_en": "Used to introduce someone you know to another person",
+      "examples": [
+        {
+          "en": "{w}This is my friend{/w}, {c}Mark{/c}.",
+          "mm": "ဒါက ကျွန်တော့်သူငယ်ချင်း မာ့ခ်ပါ။"
+        },
+        {
+          "en": "{w}This is my friend{/w}, {c}she{/c} is from London.",
+          "mm": "ဒါက ကျွန်တော့်သူငယ်ချင်းပါ၊ သူက လန်ဒန်က လာတာပါ။"
+        },
+        {
+          "en": "Mum, {w}this is my friend{/w} {c}David{/c}.",
+          "mm": "မေမေ၊ ဒါက ကျွန်တော့်သူငယ်ချင်း ဒေးဗစ်ပါ။"
+        },
+        {
+          "en": "{w}This is my friend{/w}, {c}we{/c} work together.",
+          "mm": "ဒါက ကျွန်တော့်သူငယ်ချင်းပါ၊ ကျနော်တို့ အလုပ်အတူတူ လုပ်ကြတာပါ။"
+        },
+        {
+          "en": "Hey, {w}this is my friend{/w} {c}Anna{/c}.",
+          "mm": "ဟေ့၊ ဒါက ကျွန်တော့်သူငယ်ချင်း အန်နာပါ။"
+        }
+      ],
+      "short_mm": "ဒါက ကျွန်တော့်/ကျွန်မရဲ့ သူငယ်ချင်းပါ။"
+    },
+    {
+      "word": "Long time no see",
+      "pos": "expression",
+      "short_en": "Used when you meet someone you haven't seen for a long time",
+      "examples": [
+        {
+          "en": "Wow, {w}long time no see{/w}! How are {c}you{/c}?",
+          "mm": "ဝိုး၊ မတွေ့တာ ကြာပြီနော်! နေကောင်းလား။"
+        },
+        {
+          "en": "{w}Long time no see{/w}, {c}it's{/c} been years!",
+          "mm": "မတွေ့တာ ကြာပြီနော်၊ နှစ်တွေတောင် ကြာသွားပြီ။"
+        },
+        {
+          "en": "Hey! {w}Long time no see{/w}, {c}what's{/c} new?",
+          "mm": "ဟေ့! မတွေ့တာ ကြာပြီနော်၊ ဘာတွေ ထူးခြားလဲ။"
+        },
+        {
+          "en": "{w}Long time no see{/w}, {c}let's{/c} get a coffee.",
+          "mm": "မတွေ့တာ ကြာပြီနော်၊ ကော်ဖီ သွားသောက်ကြရအောင်။"
+        },
+        {
+          "en": "It's been ages, {w}long time no see{/w}, {c}my{/c} friend.",
+          "mm": "ကြာလှပြီနော်၊ မတွေ့တာ ကြာပြီ သူငယ်ချင်း။"
+        }
+      ],
+      "short_mm": "မတွေ့တာတောင် ကြာပြီနော်။"
+    },
+    {
+      "word": "How are you doing?",
+      "pos": "expression",
+      "short_en": "A friendly and standard way to ask about someone's wellbeing",
+      "examples": [
+        {
+          "en": "{w}How are you doing?{/w} — I'm {c}doing{/c} well, thanks.",
+          "mm": "ဘယ်လိုနေလဲ။ — အဆင်ပြေပါတယ်၊ ကျေးဇူးတင်ပါတယ်။"
+        },
+        {
+          "en": "{w}How are you doing?{/w} — {c}Pretty{/c} good, you?",
+          "mm": "ဘယ်လိုနေလဲ။ — တော်တော်လေး အဆင်ပြေတယ်၊ မင်းကော။"
+        },
+        {
+          "en": "Hi, {w}how are you doing?{/w} — {c}All{/c} good here.",
+          "mm": "ဟိုင်း၊ ဘယ်လိုနေလဲ။ — ဒီမှာတော့ အားလုံး အဆင်ပြေပါတယ်။"
+        },
+        {
+          "en": "{w}How are you doing?{/w} — {c}Just{/c} fine.",
+          "mm": "ဘယ်လိုနေလဲ။ — ပုံမှန်ပါပဲ။"
+        },
+        {
+          "en": "{w}How are you doing?{/w} — {c}I'm{/c} okay, thanks for asking.",
+          "mm": "ဘယ်လိုနေလဲ။ — အဆင်ပြေပါတယ်၊ မေးပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။"
+        }
+      ],
+      "short_mm": "နေကောင်းလား၊ ဘာတွေလုပ်နေလဲ။"
+    },
+    {
+      "word": "See you later",
+      "pos": "expression",
+      "short_en": "A common way to say goodbye",
+      "examples": [
+        {
+          "en": "I'm off now. {w}See you later{/w}, {c}everyone{/c}!",
+          "mm": "ကျွန်တော် ပြန်တော့မယ်။ နောက်မှ တွေ့မယ်နော် အားလုံးပဲ။"
+        },
+        {
+          "en": "Bye! {w}See you later{/w}, {c}take{/c} care.",
+          "mm": "သွားတော့မယ်! နောက်မှ တွေ့မယ်၊ ဂရုစိုက်ပါ။"
+        },
+        {
+          "en": "It was great chatting. {w}See you later{/w}, {c}John{/c}.",
+          "mm": "စကားပြောရတာ အရမ်းပျော်ဖို့ ကောင်းတယ်။ နောက်မှ တွေ့မယ် ဂျွန်။"
+        },
+        {
+          "en": "I'll call you tonight. {w}See you later{/w}, {c}mate{/c}.",
+          "mm": "ညကျရင် ဖုန်းဆက်လိုက်မယ်။ နောက်မှ တွေ့မယ် သူငယ်ချင်း။"
+        },
+        {
+          "en": "Have a good day! {w}See you later{/w}, {c}Sarah{/c}.",
+          "mm": "နေ့သစ်လေးမှာ ပျော်ရွှင်ပါစေ! နောက်မှ တွေ့မယ် ဆာရာ။"
+        }
+      ],
+      "short_mm": "နောက်မှတွေ့မယ်။"
+    },
+    {
+      "word": "Take care",
+      "pos": "expression",
+      "short_en": "A warm way to say goodbye, wishing someone well",
+      "examples": [
+        {
+          "en": "It's been lovely meeting you. {w}Take care{/w}, {c}my{/c} friend.",
+          "mm": "တွေ့ရတာ အရမ်းဝမ်းသာပါတယ်။ ဂရုစိုက်ပါ သူငယ်ချင်း။"
+        },
+        {
+          "en": "Goodbye! {w}Take care{/w} of {c}yourself{/c}.",
+          "mm": "သွားတော့မယ်! ကိုယ့်ကိုယ်ကိုယ် ဂရုစိုက်ပါ။"
+        },
+        {
+          "en": "I'm leaving now. {w}Take care{/w}, {c}see{/c} you soon.",
+          "mm": "ကျွန်တော် ထွက်တော့မယ်။ ဂရုစိုက်ပါ၊ မကြာခင် ပြန်တွေ့မယ်။"
+        },
+        {
+          "en": "Safe travels! {w}Take care{/w}, {c}everyone{/c}.",
+          "mm": "ခရီးလမ်းမှာ ဘေးကင်းပါစေ! ဂရုစိုက်ကြပါ အားလုံးပဲ။"
+        },
+        {
+          "en": "Thanks for everything. {w}Take care{/w}, {c}bye{/c}!",
+          "mm": "အားလုံးအတွက် ကျေးဇူးတင်ပါတယ်။ ဂရုစိုက်ပါ၊ သွားတော့မယ်နော်။"
+        }
+      ],
+      "short_mm": "ဂရုစိုက်ပါနော်။"
+    },
+    {
+      "word": "What do you do?",
+      "pos": "expression",
+      "short_en": "A standard question to ask about someone's job",
+      "examples": [
+        {
+          "en": "So, {w}what do you do{/w}? — I'm a {c}teacher{/c}.",
+          "mm": "ဒါနဲ့၊ အလုပ်က ဘာလုပ်လဲ။ — ကျွန်တော်က ဆရာတစ်ယောက်ပါ။"
+        },
+        {
+          "en": "Nice to meet you. {w}What do you do{/w} for a {c}living{/c}?",
+          "mm": "တွေ့ရတာ ဝမ်းသာပါတယ်။ အသက်မွေးဝမ်းကြောင်းအတွက် ဘာအလုပ်လုပ်လဲ။"
+        },
+        {
+          "en": "{w}What do you do{/w}? — I {c}work{/c} in an office.",
+          "mm": "ဘာအလုပ်လုပ်လဲ။ — ကျွန်တော် ရုံးမှာ အလုပ်လုပ်ပါတယ်။"
+        },
+        {
+          "en": "I'm a student. {w}What do you do{/w}, {c}Mark{/c}?",
+          "mm": "ကျွန်တော်က ကျောင်းသားပါ။ မာ့ခ်၊ မင်းကော ဘာအလုပ်လုပ်လဲ။"
+        },
+        {
+          "en": "{w}What do you do{/w}? — I'm a {c}doctor{/c}.",
+          "mm": "ဘာအလုပ်လုပ်လဲ။ — ကျွန်တော်က ဆရာဝန်ပါ။"
+        }
+      ],
+      "short_mm": "ဘာအလုပ်လုပ်လဲ။"
+    },
+    {
+      "word": "Pleased to meet you",
+      "pos": "expression",
+      "short_en": "A slightly more formal way to say 'Nice to meet you'",
+      "examples": [
+        {
+          "en": "Hello, I'm Mr. Smith. — {w}Pleased to meet you{/w}, {c}sir{/c}.",
+          "mm": "မင်္ဂလာပါ၊ ကျွန်တော်က မစ္စတာ စမစ်ပါ။ — တွေ့ရတာ ဝမ်းသာပါတယ် ခင်ဗျာ။"
+        },
+        {
+          "en": "This is my boss. — {w}Pleased to meet you{/w}, {c}Mr.{/c} Jones.",
+          "mm": "ဒါက ကျွန်တော့်အထက်လူကြီးပါ။ — တွေ့ရတာ ဝမ်းသာပါတယ် မစ္စတာ ဂျုံးစ်။"
+        },
+        {
+          "en": "{w}Pleased to meet you{/w}, {c}it's{/c} an honour.",
+          "mm": "တွေ့ရတာ ဝမ်းသာပါတယ်၊ ဂုဏ်ယူမိပါတယ်။"
+        },
+        {
+          "en": "I've heard so much about you. {w}Pleased to meet you{/w}, {c}Anna{/c}.",
+          "mm": "မင်းအကြောင်း အများကြီး ကြားထားရတယ်။ တွေ့ရတာ ဝမ်းသာပါတယ် အန်နာ။"
+        },
+        {
+          "en": "{w}Pleased to meet you{/w}, {c}welcome{/c} to our company.",
+          "mm": "တွေ့ရတာ ဝမ်းသာပါတယ်၊ ကျွန်တော်တို့ ကုမ္ပဏီကို ကြိုဆိုပါတယ်။"
+        }
+      ],
+      "short_mm": "တွေ့ရတာ ဝမ်းသာပါတယ်။"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "___ to meet you. (Casual)",
+      "right": "Nice",
+      "wrong": "Pleased",
+      "why": "\"Nice to meet you\" is standard/casual; \"Pleased to meet you\" is more formal.",
+      "why_mm": "Nice to meet you က သူငယ်ချင်းအချင်းချင်း ပေါ့ပေါ့ပါးပါး ပြောတာဖြစ်ပြီး Pleased to meet you ကတော့ ပိုပြီး တရားဝင်တဲ့ နေရာတွေမှာ သုံးပါတယ်။"
+    },
+    {
+      "prompt": "I haven't seen you in ages! ___",
+      "right": "Long time no see",
+      "wrong": "How's it going",
+      "why": "\"Long time no see\" refers to the duration of time since last meeting.",
+      "why_mm": "Long time no see ဆိုတာက နောက်ဆုံးတွေ့ပြီးကတည်းက ဘယ်လောက်ကြာသွားပြီလဲဆိုတဲ့ အချိန်ကာလကို ရည်ညွှန်းတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Someone says 'I'm a nurse'. You ask: '___?'",
+      "answer": "What do you do?",
+      "options": [
+        "What do you do?",
+        "How are you doing?",
+        "Nice to meet you"
+      ],
+      "explain_en": "Ask about someone's job → What do you do?",
+      "explain_mm": "အလုပ်အကိုင်အကြောင်း မေးချင်ရင် What do you do? ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "You introduce your friend: 'Mum, ___ David.'",
+      "answer": "this is my friend",
+      "options": [
+        "this is my friend",
+        "long time no see",
+        "take care"
+      ],
+      "explain_en": "Introduce a friend → This is my friend.",
+      "explain_mm": "ကိုယ့်သူငယ်ချင်းကို မိတ်ဆက်ပေးတဲ့အခါ This is my friend လို့ ပြောပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "A friendly way to say goodbye is: '___.'",
+      "answer": "Take care",
+      "options": [
+        "Take care",
+        "What do you do?",
+        "How's it going?"
+      ],
+      "explain_en": "A warm goodbye wish → Take care.",
+      "explain_mm": "နှုတ်ဆက်တဲ့အခါ နွေးထွေးတဲ့ ဆုတောင်းစကားအနေနဲ့ Take care ကို သုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: '___! I haven't seen you in years.'",
+      "answer": "Long time no see",
+      "options": [],
+      "explain_en": "When you haven't seen someone for a long time → Long time no see.",
+      "explain_mm": "ကြာမှတွေ့တဲ့သူနဲ့ ဆုံတဲ့အခါ Long time no see လို့ စပြောပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: 'Hi, I'm John. — ___ to meet you.'",
+      "answer": "Nice",
+      "options": [],
+      "explain_en": "The standard response to an introduction → Nice to meet you.",
+      "explain_mm": "မိတ်ဆက်ပေးလို့ နှုတ်ဆက်တဲ့အခါ Nice to meet you လို့ ပြန်ဖြေပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: '___? — I'm great, thanks.'",
+      "answer": "How's it going",
+      "options": [],
+      "explain_en": "A casual 'How are you?' → How's it going?",
+      "explain_mm": "သူငယ်ချင်းကို ပေါ့ပေါ့ပါးပါး နှုတ်ဆက်ချင်ရင် How's it going? ကို သုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: 'I have to go now. ___!'",
+      "answer": "See you later",
+      "options": [],
+      "explain_en": "A common way to say goodbye → See you later.",
+      "explain_mm": "ပြန်ခွဲခွာတဲ့အခါ See you later လို့ ပြောတာ အသုံးအများဆုံးပါပဲ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: '___ are you doing? — I'm fine, thanks.'",
+      "answer": "How",
+      "options": [],
+      "explain_en": "Standard question about wellbeing → How are you doing?",
+      "explain_mm": "တစ်ဖက်လူရဲ့ အခြေအနေကို မေးချင်ရင် How are you doing? လို့ မေးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: '___ to meet you, Mr. President.' (Formal)",
+      "answer": "Pleased",
+      "options": [],
+      "explain_en": "A formal way to say you are happy to meet someone → Pleased to meet you.",
+      "explain_mm": "ပိုပြီး ယဉ်ကျေးတဲ့ ပုံစံမျိုးနဲ့ တွေ့ရတာ ဝမ်းသာကြောင်း ပြောချင်ရင် Pleased to meet you ကို သုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: '___ my friend, Sarah.'",
+      "answer": "This is",
+      "options": [],
+      "explain_en": "To introduce a friend → This is my friend.",
+      "explain_mm": "သူငယ်ချင်းကို မိတ်ဆက်ပေးဖို့အတွက် This is my friend ကို သုံးပါ။"
+    }
+  ]
+}

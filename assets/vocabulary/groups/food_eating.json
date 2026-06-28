@@ -1,0 +1,396 @@
+{
+  "id": "food_eating",
+  "title": "Food & eating",
+  "level": 1,
+  "order": 10,
+  "theme": "Food",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "Essential words for talking about hunger, dining out, and describing food. These are the building blocks for any conversation at a restaurant or home.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက အစားအသောက်အကြောင်း ပြောတဲ့အခါ၊ စားသောက်ဆိုင်သွားတဲ့အခါ အမြဲသုံးရတဲ့ အခြေခံစကားလုံးတွေမို့လို့ စုထားပေးတာပါ။",
+  "words": [
+    {
+      "word": "hungry",
+      "pos": "adjective",
+      "ipa": "/ˈhʌŋ.ɡri/",
+      "short_en": "feeling that you want to eat food",
+      "examples": [
+        {
+          "en": "I'm so {w}hungry{/w} I could {c}eat{/c} a horse!",
+          "mm": "ဗိုက်အရမ်းဆာနေတာ၊ မြင်းတစ်ကောင်တောင် စားနိုင်လောက်တယ်ဗျာ။"
+        },
+        {
+          "en": "Are you {w}hungry{/w} for {c}lunch{/c}?",
+          "mm": "နေ့လယ်စာစားဖို့ ဗိုက်ဆာနေပြီလား။"
+        },
+        {
+          "en": "The kids are always {w}hungry{/w} after {c}school{/c}.",
+          "mm": "ကျောင်းဆင်းရင် ကလေးတွေက အမြဲတမ်း ဗိုက်ဆာနေတတ်ကြတယ်။"
+        },
+        {
+          "en": "I felt a bit {w}hungry{/w} during the {c}meeting{/c}.",
+          "mm": "အစည်းအဝေးလုပ်နေတုန်းက နည်းနည်း ဗိုက်ဆာသလို ဖြစ်သွားတယ်။"
+        },
+        {
+          "en": "Don't go {w}hungry{/w} — have a {c}snack{/c}.",
+          "mm": "ဗိုက်မဆာပါစေနဲ့၊ မုန့်လေးဘာလေး စားထားလိုက်ပါ။"
+        }
+      ],
+      "short_mm": "ဗိုက်ဆာတယ်"
+    },
+    {
+      "word": "thirsty",
+      "pos": "adjective",
+      "ipa": "/ˈθɜː.sti/",
+      "short_en": "feeling that you need to drink something",
+      "examples": [
+        {
+          "en": "I'm really {w}thirsty{/w} after that {c}run{/c}.",
+          "mm": "အဲ့ဒီလို ပြေးပြီးတဲ့နောက်မှာ ရေအရမ်းငတ်သွားတယ်။"
+        },
+        {
+          "en": "Would you like something to {c}drink{/c}? You look {w}thirsty{/w}.",
+          "mm": "တစ်ခုခု သောက်မလား၊ ရေငတ်နေတဲ့ပုံပဲ။"
+        },
+        {
+          "en": "It's a hot day, so I'm very {w}thirsty{/w} for {c}water{/c}.",
+          "mm": "ဒီနေ့ ရာသီဥတုက ပူတော့ ရေအရမ်းငတ်နေတယ်။"
+        },
+        {
+          "en": "He was {w}thirsty{/w} and bought a {c}juice{/c}.",
+          "mm": "သူ ရေငတ်လို့ ဖျော်ရည်တစ်ဘူး ဝယ်သောက်လိုက်တယ်။"
+        },
+        {
+          "en": "Are you {w}thirsty{/w} after your {c}walk{/c}?",
+          "mm": "လမ်းလျှောက်ပြီးလို့ ရေငတ်နေပြီလား။"
+        }
+      ],
+      "short_mm": "ရေဆာတယ်"
+    },
+    {
+      "word": "delicious",
+      "pos": "adjective",
+      "ipa": "/dɪˈlɪʃ.əs/",
+      "short_en": "having a very pleasant taste",
+      "examples": [
+        {
+          "en": "This cake is absolutely {w}delicious{/w}, {c}mum{/c}!",
+          "mm": "ဒီကိတ်မုန့်က တကယ့်ကို အရသာရှိတာပဲ အမေရယ်။"
+        },
+        {
+          "en": "We had a {w}delicious{/w} {c}meal{/c} at the new cafe.",
+          "mm": "ကဖေးအသစ်လေးမှာ အရသာရှိတဲ့ အစားအသောက်တွေ စားခဲ့ရတယ်။"
+        },
+        {
+          "en": "That soup smells {w}delicious{/w} in the {c}kitchen{/c}.",
+          "mm": "မီးဖိုချောင်ထဲက ဟင်းချိုနံ့လေးက သင်းပြီး အရသာရှိနေတယ်။"
+        },
+        {
+          "en": "Thank you for the {w}delicious{/w} {c}dinner{/c}.",
+          "mm": "ညစာအတွက် အရသာရှိတဲ့ ဟင်းလျာတွေ စီစဉ်ပေးလို့ ကျေးဇူးတင်ပါတယ်။"
+        },
+        {
+          "en": "It was the most {w}delicious{/w} {c}pizza{/c} I've ever had.",
+          "mm": "ကျွန်တော် စားဖူးသမျှထဲမှာ ဒီပီဇာက အအရသာရှိဆုံးပဲ။"
+        }
+      ],
+      "short_mm": "အရသာရှိတယ်"
+    },
+    {
+      "word": "a snack",
+      "pos": "noun",
+      "ipa": "/ə snæk/",
+      "short_en": "a small amount of food eaten between meals",
+      "examples": [
+        {
+          "en": "I usually have {w}a snack{/w} in the {c}afternoon{/c}.",
+          "mm": "ကျွန်တော်က နေ့လယ်ဘက်ဆိုရင် မုန့်လေးဘာလေး စားလေ့ရှိတယ်။"
+        },
+        {
+          "en": "Don't eat too many {c}sweets{/c} as {w}a snack{/w}.",
+          "mm": "မုန့်အနေနဲ့ သကြားလုံးတွေ အများကြီး မစားပါနဲ့။"
+        },
+        {
+          "en": "I need {w}a snack{/w} before I start my {c}work{/c}.",
+          "mm": "အလုပ်မစခင်မှာ မုန့်လေးနည်းနည်း စားထားမှ ဖြစ်မယ်။"
+        },
+        {
+          "en": "Keep {w}a snack{/w} in your {c}bag{/c} for later.",
+          "mm": "နောက်မှ စားဖို့အတွက် အိတ်ထဲမှာ မုန့်လေး ထည့်ထားလိုက်ပါ။"
+        },
+        {
+          "en": "Is it okay to have {w}a snack{/w} before {c}dinner{/c}?",
+          "mm": "ညစာမစားခင် မုန့်လေး နည်းနည်း စားထားရင် ရမလား။"
+        }
+      ],
+      "short_mm": "မုန့် (သို့) အဆာပြေစာ"
+    },
+    {
+      "word": "a meal",
+      "pos": "noun",
+      "ipa": "/ə miːl/",
+      "short_en": "an occasion when food is eaten (breakfast, lunch, dinner)",
+      "examples": [
+        {
+          "en": "Breakfast is my favourite {w}a meal{/w} of the {c}day{/c}.",
+          "mm": "မနက်စာက ကျွန်တော့်အတွက် အကြိုက်ဆုံး အစားအစာပဲ။"
+        },
+        {
+          "en": "We enjoyed {w}a meal{/w} at a local {c}restaurant{/c}.",
+          "mm": "ကျွန်တော်တို့ အပြင်က စားသောက်ဆိုင်တစ်ဆိုင်မှာ ထမင်းစားခဲ့ကြတယ်။"
+        },
+        {
+          "en": "It's important to have a healthy {w}a meal{/w} every {c}day{/c}.",
+          "mm": "နေ့တိုင်း ကျန်းမာရေးနဲ့ ညီညွတ်တဲ့ အစားအစာ စားဖို့က အရေးကြီးတယ်။"
+        },
+        {
+          "en": "They shared {w}a meal{/w} with their {c}friends{/c}.",
+          "mm": "သူတို့ သူငယ်ချင်းတွေနဲ့အတူ ထမင်းဝိုင်းဖွဲ့ စားခဲ့ကြတယ်။"
+        },
+        {
+          "en": "I cooked {w}a meal{/w} for my {c}family{/c}.",
+          "mm": "ကျွန်တော် မိသားစုအတွက် ထမင်းဟင်း ချက်ပေးခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "အစာစားချိန် (သို့) အစားအစာ"
+    },
+    {
+      "word": "eat out",
+      "pos": "phrasal verb",
+      "ipa": "/iːt aʊt/",
+      "short_en": "to eat at a restaurant instead of at home",
+      "examples": [
+        {
+          "en": "We like to {w}eat out{/w} on Friday {c}nights{/c}.",
+          "mm": "ကျွန်တော်တို့ သောကြာညဆိုရင် အပြင်မှာ ထမင်းစားရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "It's cheaper to cook at home than to {w}eat out{/w} at a {c}cafe{/c}.",
+          "mm": "ကဖေးမှာ အပြင်ထွက်စားတာထက် အိမ်မှာ ချက်စားတာက ပိုသက်သာတယ်။"
+        },
+        {
+          "en": "Do you want to {w}eat out{/w} for your {c}birthday{/c}?",
+          "mm": "မွေးနေ့အတွက် အပြင်ထွက်ပြီး ထမင်းစားကြမလား။"
+        },
+        {
+          "en": "They {w}eat out{/w} almost every {c}weekend{/c}.",
+          "mm": "သူတို့က တနင်္ဂနွေတိုင်းလိုလို အပြင်မှာပဲ စားကြတယ်။"
+        },
+        {
+          "en": "I'm too tired to cook, let's {w}eat out{/w} at that {c}place{/c}.",
+          "mm": "အရမ်းပင်ပန်းနေလို့ မချက်တော့ဘူး၊ ဟိုဆိုင်မှာပဲ အပြင်ထွက်စားကြရအောင်။"
+        }
+      ],
+      "short_mm": "အပြင်မှာ စားတယ်"
+    },
+    {
+      "word": "order",
+      "pos": "verb",
+      "ipa": "/ˈɔː.dər/",
+      "short_en": "to ask for food or drink in a restaurant",
+      "examples": [
+        {
+          "en": "Are you ready to {w}order{/w} your {c}food{/c}?",
+          "mm": "အစားအသောက် မှာဖို့ အဆင်သင့်ဖြစ်ပြီလား။"
+        },
+        {
+          "en": "I'd like to {w}order{/w} a {c}coffee{/c}, please.",
+          "mm": "ကော်ဖီတစ်ခွက်လောက် မှာချင်လို့ပါ။"
+        },
+        {
+          "en": "We decided to {w}order{/w} a large {c}pizza{/c}.",
+          "mm": "ကျွန်တော်တို့ ပီဇာအကြီးတစ်ချပ် မှာဖို့ ဆုံးဖြတ်လိုက်တယ်။"
+        },
+        {
+          "en": "He {w}order{/w}ed a cold {c}drink{/c} for me.",
+          "mm": "သူ ကျွန်တော့်အတွက် အအေးတစ်ခွက် မှာပေးတယ်။"
+        },
+        {
+          "en": "Can we {w}order{/w} more {c}bread{/c}?",
+          "mm": "ပေါင်မုန့် ထပ်မှာလို့ ရမလား။"
+        }
+      ],
+      "short_mm": "မှာယူသည်"
+    },
+    {
+      "word": "the bill",
+      "pos": "noun",
+      "ipa": "/ðə bɪl/",
+      "short_en": "a piece of paper showing how much you must pay for a meal",
+      "examples": [
+        {
+          "en": "Excuse me, could we have {w}the bill{/w}, please {c}waiter{/c}?",
+          "mm": "ဆရာ၊ ဘီလ်ရှင်းပေးလို့ ရမလားခင်ဗျာ။"
+        },
+        {
+          "en": "I'll pay {w}the bill{/w} for the {c}dinner{/c}.",
+          "mm": "ညစာအတွက် ဘီလ်ကို ကျွန်တော် ရှင်းလိုက်မယ်။"
+        },
+        {
+          "en": "He checked {w}the bill{/w} before paying the {c}cashier{/c}.",
+          "mm": "သူ ငွေရှင်းကောင်တာမှာ မပေးခင် ဘီလ်ကို စစ်ကြည့်တယ်။"
+        },
+        {
+          "en": "They split {w}the bill{/w} after the {c}lunch{/c}.",
+          "mm": "နေ့လယ်စာစားပြီးတော့ သူတို့ ဘီလ်ကို ခွဲရှင်းလိုက်ကြတယ်။"
+        },
+        {
+          "en": "Don't forget to ask for {w}the bill{/w} at the {c}end{/c}.",
+          "mm": "စားပြီးရင် ဘီလ်တောင်းဖို့ မမေ့နဲ့နော်။"
+        }
+      ],
+      "short_mm": "ဘေလ် (သို့) ငွေရှင်းတမ်း"
+    },
+    {
+      "word": "vegetarian",
+      "pos": "adjective/noun",
+      "ipa": "/ˌvedʒ.əˈteə.ri.ən/",
+      "short_en": "not eating meat or fish",
+      "examples": [
+        {
+          "en": "Is this soup {w}vegetarian{/w}? I don't eat {c}meat{/c}.",
+          "mm": "ဒီဟင်းချိုက သက်သတ်လွတ်လားခင်ဗျ၊ ကျွန်တော် အသားမစားဘူး။"
+        },
+        {
+          "en": "She has been a {w}vegetarian{/w} for five {c}years{/c}.",
+          "mm": "သူမ သက်သတ်လွတ် စားလာတာ ၅ နှစ်လောက် ရှိပြီ။"
+        },
+        {
+          "en": "There are many {w}vegetarian{/w} {c}dishes{/c} on the menu.",
+          "mm": "မီနူးထဲမှာ သက်သတ်လွတ် ဟင်းလျာတွေ အများကြီး ရှိတယ်။"
+        },
+        {
+          "en": "He prefers a {w}vegetarian{/w} {c}diet{/c}.",
+          "mm": "သူက သက်သတ်လွတ်ပဲ စားဖို့ ပိုနှစ်သက်တယ်။"
+        },
+        {
+          "en": "We ordered a {w}vegetarian{/w} {c}pizza{/c}.",
+          "mm": "ကျွန်တော်တို့ သက်သတ်လွတ် ပီဇာတစ်ချပ် မှာလိုက်တယ်။"
+        }
+      ],
+      "short_mm": "သက်သတ်လွတ်စားသူ"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I'm ___, I need a drink.",
+      "right": "thirsty",
+      "wrong": "hungry",
+      "why": "thirsty = need drink; hungry = need food.",
+      "why_mm": "thirsty က ရေဆာတာ၊ hungry က အစာဆာတာမို့ ကွဲပြားပါတယ်။"
+    },
+    {
+      "prompt": "I'm going to ___ at a restaurant tonight.",
+      "right": "eat out",
+      "wrong": "order",
+      "why": "eat out = the action of going to a restaurant; order = the action of asking for food.",
+      "why_mm": "eat out က ဆိုင်သွားတဲ့ လုပ်ဆောင်ချက်ဖြစ်ပြီး order က ဆိုင်မှာ အစားအသောက် မှာတဲ့ လုပ်ဆောင်ချက်ဖြစ်ပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I haven't eaten all day. I'm so ___.",
+      "answer": "hungry",
+      "options": [
+        "hungry",
+        "thirsty",
+        "delicious"
+      ],
+      "explain_en": "Wanting to eat food = hungry.",
+      "explain_mm": "အစားအသောက် စားချင်တာက hungry ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We don't want to cook. Let's ___ tonight.",
+      "answer": "eat out",
+      "options": [
+        "eat out",
+        "order",
+        "a snack"
+      ],
+      "explain_en": "To go to a restaurant instead of home = eat out.",
+      "explain_mm": "အိမ်မှာမစားဘဲ ဆိုင်မှာသွားစားတာက eat out ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "This cake is amazing! It's so ___.",
+      "answer": "delicious",
+      "options": [
+        "delicious",
+        "hungry",
+        "thirsty"
+      ],
+      "explain_en": "Having a pleasant taste = delicious.",
+      "explain_mm": "အရသာကောင်းတာက delicious ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm very ___ after that long run. Can I have some water?",
+      "answer": "thirsty",
+      "options": [
+        "thirsty",
+        "hungry",
+        "vegetarian"
+      ],
+      "explain_en": "Needing a drink = thirsty.",
+      "explain_mm": "ရေသောက်ချင်တာက thirsty ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm not very hungry, I'll just have ___.",
+      "answer": "a snack",
+      "options": [
+        "a snack",
+        "a meal",
+        "the bill"
+      ],
+      "explain_en": "A small amount of food between meals = a snack.",
+      "explain_mm": "ကြားထဲမှာ ခဏတာ စားတာက a snack ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Excuse me, can we have ___ please?",
+      "answer": "the bill",
+      "options": [
+        "the bill",
+        "a snack",
+        "a meal"
+      ],
+      "explain_en": "The paper showing what you must pay = the bill.",
+      "explain_mm": "ပေးရမယ့်ငွေ စာရွက်က the bill ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I am a ___ so I don't eat meat.\"",
+      "answer": "vegetarian",
+      "options": [],
+      "explain_en": "Someone who does not eat meat = vegetarian.",
+      "explain_mm": "အသားငါးမစားသူက vegetarian ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"Are you ready to ___ your food?\"",
+      "answer": "order",
+      "options": [],
+      "explain_en": "To ask for food in a restaurant = order.",
+      "explain_mm": "ဆိုင်မှာ အစားအသောက် တောင်းဆိုတာက order ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"Lunch is my favourite ___ of the day.\"",
+      "answer": "a meal",
+      "options": [],
+      "explain_en": "An occasion for eating = a meal.",
+      "explain_mm": "အစာစားတဲ့ အချိန်အခါက a meal ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I'm so ___ I could eat a whole pizza!\"",
+      "answer": "hungry",
+      "options": [],
+      "explain_en": "Feeling the need for food = hungry.",
+      "explain_mm": "ဗိုက်ဆာတာက hungry ဖြစ်ပါတယ်။"
+    }
+  ]
+}

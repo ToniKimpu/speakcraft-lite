@@ -1,0 +1,400 @@
+{
+  "id": "money_shopping",
+  "title": "Money & shopping",
+  "level": 1,
+  "order": 11,
+  "theme": "Money",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "Essential words for handling money and shopping. These will help you talk about prices, budgets, and your shopping habits.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက ငွေကြေးနဲ့ပတ်သက်ပြီး စျေးဝယ်တဲ့အခါ မရှိမဖြစ်လိုအပ်တဲ့ စကားလုံးတွေဖြစ်ပါတယ်။ စျေးနှုန်းတွေ၊ ကိုယ့်ရဲ့ budget နဲ့ စျေးဝယ်တဲ့အလေ့အထတွေကို ပြောပြတဲ့နေရာမှာ အရမ်းအသုံးဝင်ပါတယ်နော်။",
+  "words": [
+    {
+      "word": "cheap",
+      "pos": "adjective",
+      "ipa": "/tʃiːp/",
+      "short_en": "costing very little money",
+      "examples": [
+        {
+          "en": "That shop sells very {w}cheap{/w} {c}clothes{/c}.",
+          "mm": "ဟိုဆိုင်က အဝတ်အစားတွေ အရမ်းဈေးပေါတယ်။"
+        },
+        {
+          "en": "It was a {w}cheap{/w} {c}meal{/c} but it tasted great.",
+          "mm": "ဈေးပေါတဲ့ အစားအစာပေမဲ့ အရသာကတော့ တော်တော်ကောင်းတယ်။"
+        },
+        {
+          "en": "Don't buy that; it's too {w}cheap{/w} and will {c}break{/c}.",
+          "mm": "အဲဒါကို မဝယ်ပါနဲ့၊ အရမ်းဈေးပေါတော့ မကြာခင် ပျက်သွားလိမ့်မယ်။"
+        },
+        {
+          "en": "We found a {w}cheap{/w} {c}hotel{/c} for the weekend.",
+          "mm": "စနေ၊ တနင်္ဂနွေအတွက် ဈေးပေါတဲ့ ဟိုတယ်တစ်ခု ရှာတွေ့ခဲ့တယ်။"
+        },
+        {
+          "en": "Flying is not always {w}cheap{/w} {c}travel{/c}.",
+          "mm": "လေယာဉ်နဲ့ ခရီးသွားတိုင်း ဈေးပေါတာတော့ မဟုတ်ဘူး။"
+        }
+      ],
+      "confuse_with": [
+        "expensive"
+      ],
+      "short_mm": "စျေးသက်သာတဲ့"
+    },
+    {
+      "word": "expensive",
+      "pos": "adjective",
+      "ipa": "/ɪkˈspen.sɪv/",
+      "short_en": "costing a lot of money",
+      "examples": [
+        {
+          "en": "That {c}car{/c} is far too {w}expensive{/w} for me.",
+          "mm": "အဲဒီကားက ကျွန်တော့်အတွက်တော့ အရမ်းဈေးကြီးလွန်းတယ်။"
+        },
+        {
+          "en": "It's an {w}expensive{/w} {c}restaurant{/c}, so let's save up.",
+          "mm": "ဒါက ဈေးကြီးတဲ့ စားသောက်ဆိုင်မို့လို့ ပိုက်ဆံစုထားကြရအောင်။"
+        },
+        {
+          "en": "Everything in this {c}shop{/c} is very {w}expensive{/w}.",
+          "mm": "ဒီဆိုင်မှာရှိတဲ့ ပစ္စည်းမှန်သမျှ အရမ်းဈေးကြီးတယ်။"
+        },
+        {
+          "en": "I can't afford such an {w}expensive{/w} {c}watch{/c}.",
+          "mm": "ဒီလောက်ဈေးကြီးတဲ့ လက်ပတ်နာရီကို ကျွန်တော် မဝယ်နိုင်ဘူး။"
+        },
+        {
+          "en": "Is it {w}expensive{/w} to {c}live{/c} in London?",
+          "mm": "လန်ဒန်မှာနေရတာ ဈေးကြီးလား။"
+        }
+      ],
+      "confuse_with": [
+        "cheap"
+      ],
+      "short_mm": "စျေးကြီးတဲ့"
+    },
+    {
+      "word": "afford",
+      "pos": "verb",
+      "ipa": "/əˈfɔːd/",
+      "short_en": "to have enough money to buy something",
+      "nuance_en": "Usually used with 'can' or 'can't'. \"I can't afford it.\"",
+      "examples": [
+        {
+          "en": "I can't {w}afford{/w} a new {c}laptop{/c} right now.",
+          "mm": "အခုလောလောဆယ်တော့ လက်ပ်တော့အသစ်ဝယ်ဖို့ ပိုက်ဆံမတတ်နိုင်ဘူး။"
+        },
+        {
+          "en": "We can {w}afford{/w} a {c}holiday{/c} this year.",
+          "mm": "ဒီနှစ်တော့ ကျွန်တော်တို့ အားလပ်ရက် ခရီးသွားဖို့ ပိုက်ဆံတတ်နိုင်တယ်။"
+        },
+        {
+          "en": "She works hard to {w}afford{/w} her {c}rent{/c}.",
+          "mm": "သူမက အိမ်လခပေးနိုင်ဖို့ ကြိုးစားပြီး အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "Can you {w}afford{/w} the {c}ticket{/c}?",
+          "mm": "လက်မှတ်ဖိုး ပေးနိုင်လား။"
+        },
+        {
+          "en": "They can't {w}afford{/w} to {c}eat{/c} out every day.",
+          "mm": "သူတို့ နေ့တိုင်း အပြင်မှာ စားဖို့ ပိုက်ဆံမတတ်နိုင်ကြဘူး။"
+        }
+      ],
+      "short_mm": "တတ်နိုင်တယ် (ဝယ်နိုင်တယ်)",
+      "nuance_mm": "I can't afford it (ဒါကို မဝယ်နိုင်ဘူး/ မတတ်နိုင်ဘူး) ဆိုတဲ့ ပုံစံနဲ့ အသုံးများပါတယ်။"
+    },
+    {
+      "word": "pay",
+      "pos": "verb",
+      "ipa": "/peɪ/",
+      "short_en": "to give money for goods or services",
+      "examples": [
+        {
+          "en": "How would you like to {w}pay{/w} for this {c}item{/c}?",
+          "mm": "ဒီပစ္စည်းအတွက် ဘယ်လိုမျိုး ပိုက်ဆံပေးချေချင်ပါသလဲ။"
+        },
+        {
+          "en": "I need to {w}pay{/w} my {c}bills{/c} today.",
+          "mm": "ဒီနေ့ ကျွန်တော် ဘေလ်တွေ ပေးဆောင်ဖို့ လိုတယ်။"
+        },
+        {
+          "en": "Did you {w}pay{/w} by {c}card{/c} or cash?",
+          "mm": "ကတ်နဲ့ ပေးတာလား ဒါမှမဟုတ် ငွေသားနဲ့ ပေးတာလား။"
+        },
+        {
+          "en": "It's time to {w}pay{/w} the {c}waiter{/c}.",
+          "mm": "စားပွဲထိုးကို ပိုက်ဆံရှင်းပေးရမယ့် အချိန်ရောက်ပြီ။"
+        },
+        {
+          "en": "I will {w}pay{/w} for the {c}coffee{/c} this time.",
+          "mm": "ဒီတစ်ခါ ကော်ဖီဖိုးကို ကျွန်တော်ပဲ ရှင်းလိုက်မယ်။"
+        }
+      ],
+      "short_mm": "ငွေပေးချေတယ်"
+    },
+    {
+      "word": "cost",
+      "pos": "verb",
+      "ipa": "/kɒst/",
+      "short_en": "to have a specific price",
+      "examples": [
+        {
+          "en": "How much does this {c}shirt{/c} {w}cost{/w}?",
+          "mm": "ဒီရှပ်အင်္ကျီက ဘယ်လောက်လဲ။"
+        },
+        {
+          "en": "The {c}tickets{/c} {w}cost{/w} fifty pounds.",
+          "mm": "လက်မှတ်ခက ပေါင်ငါးဆယ် ကျသင့်တယ်။"
+        },
+        {
+          "en": "It {w}cost{/w} a lot of {c}money{/c} to fix.",
+          "mm": "ပြုပြင်ဖို့အတွက် ပိုက်ဆံအများကြီး ကုန်သွားတယ်။"
+        },
+        {
+          "en": "Those {c}shoes{/c} {w}cost{/w} too much.",
+          "mm": "အဲဒီဖိနပ်တွေက ဈေးအရမ်းများတယ်။"
+        },
+        {
+          "en": "Everything {w}cost{/w} less than a {c}pound{/c}.",
+          "mm": "ပစ္စည်းအားလုံးက တစ်ပေါင်တောင် မပြည့်ဘူး။"
+        }
+      ],
+      "short_mm": "စျေးပေါက်တယ်/ တန်ဖိုးရှိတယ်"
+    },
+    {
+      "word": "spend",
+      "pos": "verb",
+      "ipa": "/spend/",
+      "short_en": "to use money to buy or pay for things",
+      "examples": [
+        {
+          "en": "I don't want to {w}spend{/w} all my {c}money{/c}.",
+          "mm": "ကျွန်တော့်ပိုက်ဆံတွေ အကုန်လုံးကို မသုံးပစ်ချင်ဘူး။"
+        },
+        {
+          "en": "She likes to {w}spend{/w} on {c}clothes{/c}.",
+          "mm": "သူမက အဝတ်အစားတွေ ဝယ်ဖို့ ပိုက်ဆံသုံးရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "Don't {w}spend{/w} too much at the {c}market{/c}.",
+          "mm": "ဈေးထဲမှာ ပိုက်ဆံအရမ်းမသုံးပါနဲ့။"
+        },
+        {
+          "en": "He {w}spend{/w}s too much {c}time{/c} shopping.",
+          "mm": "သူက ဈေးဝယ်ထွက်တာနဲ့ အချိန်တွေ အရမ်းကုန်နေတယ်။"
+        },
+        {
+          "en": "We {w}spend{/w} most of our {c}income{/c} on food.",
+          "mm": "ကျွန်တော်တို့ရဲ့ ဝင်ငွေအများစုကို အစားအသောက်အတွက်ပဲ သုံးဖြစ်တယ်။"
+        }
+      ],
+      "short_mm": "သုံးစွဲတယ်"
+    },
+    {
+      "word": "a bargain",
+      "pos": "noun",
+      "ipa": "/ə ˈbɑː.ɡɪn/",
+      "short_en": "something bought for a lower price than usual",
+      "examples": [
+        {
+          "en": "This coat was {w}a bargain{/w} in the {c}sale{/c}.",
+          "mm": "ဒီကုတ်အင်္ကျီက အရောင်းပွဲတော်မှာ ဈေးတန်တန်လေး ရလိုက်တာ။"
+        },
+        {
+          "en": "At half price, it's {w}a bargain{/w} for this {c}camera{/c}.",
+          "mm": "တစ်ဝက်ဈေးနဲ့ဆိုတော့ ဒီကင်မရာက တန်လိုက်တာ။"
+        },
+        {
+          "en": "I found {w}a bargain{/w} at the {c}market{/c} today.",
+          "mm": "ဒီနေ့ ဈေးထဲမှာ တန်တဲ့ပစ္စည်းလေး တွေ့လိုက်တယ်။"
+        },
+        {
+          "en": "It's {w}a bargain{/w} — you should {c}buy{/c} it!",
+          "mm": "အရမ်းတန်တယ်၊ ဝယ်သင့်တယ်။"
+        },
+        {
+          "en": "That second-hand {c}bike{/c} was {w}a bargain{/w}.",
+          "mm": "အဲဒီအသုံးပြုပြီးသား စက်ဘီးက အရမ်းတန်တယ်။"
+        }
+      ],
+      "short_mm": "စျေးတန်တယ်"
+    },
+    {
+      "word": "on sale",
+      "pos": "phrase",
+      "ipa": "/ɒn seɪl/",
+      "short_en": "available to buy at a lower price",
+      "examples": [
+        {
+          "en": "These {c}shoes{/c} are {w}on sale{/w} this week.",
+          "mm": "ဒီဖိနပ်တွေကို ဒီအပတ်မှာ လျှော့ဈေးနဲ့ ရောင်းပေးတယ်။"
+        },
+        {
+          "en": "I only buy clothes when they are {w}on sale{/w} at the {c}shop{/c}.",
+          "mm": "ကျွန်တော်က ဆိုင်မှာ လျှော့ဈေးချမှပဲ အဝတ်အစား ဝယ်တယ်။"
+        },
+        {
+          "en": "Everything in the {c}store{/c} is {w}on sale{/w}.",
+          "mm": "ဆိုင်ထဲက ပစ္စည်းအားလုံး လျှော့ဈေးနဲ့ ရောင်းနေတယ်။"
+        },
+        {
+          "en": "This {c}jacket{/c} was {w}on sale{/w} for half price.",
+          "mm": "ဒီဂျက်ကက်ကို တစ်ဝက်ဈေးနဲ့ ရောင်းပေးတယ်။"
+        },
+        {
+          "en": "Are these {c}books{/c} still {w}on sale{/w}?",
+          "mm": "ဒီစာအုပ်တွေက အခုထိ လျှော့ဈေးနဲ့ ရောင်းနေတုန်းလား။"
+        }
+      ],
+      "short_mm": "စျေးလျော့ရောင်းတယ်"
+    },
+    {
+      "word": "a refund",
+      "pos": "noun",
+      "ipa": "/ˈriː.fʌnd/",
+      "short_en": "money returned to you because you are unhappy with an item",
+      "examples": [
+        {
+          "en": "I want {w}a refund{/w} for this broken {c}toy{/c}.",
+          "mm": "ဒီကျိုးနေတဲ့ အရုပ်အတွက် ပိုက်ဆံပြန်အမ်းပေးဖို့ လိုတယ်။"
+        },
+        {
+          "en": "The shop gave me {w}a refund{/w} for the {c}shirt{/c}.",
+          "mm": "ဆိုင်က ဒီအင်္ကျီအတွက် ပိုက်ဆံပြန်အမ်းပေးလိုက်တယ်။"
+        },
+        {
+          "en": "You need a {c}receipt{/c} to get {w}a refund{/w}.",
+          "mm": "ပိုက်ဆံပြန်အမ်းငွေရဖို့ ငွေလက်ခံဖြတ်ပိုင်း လိုတယ်။"
+        },
+        {
+          "en": "They refused to give me {w}a refund{/w} for the {c}food{/c}.",
+          "mm": "သူတို့က အစားအသောက်အတွက် ပိုက်ဆံပြန်အမ်းပေးဖို့ ငြင်းဆိုခဲ့တယ်။"
+        },
+        {
+          "en": "I asked for {w}a refund{/w} because the {c}size{/c} was wrong.",
+          "mm": "အရွယ်အစား မှားနေလို့ ပိုက်ဆံပြန်အမ်းပေးဖို့ တောင်းဆိုခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "ပြန်အမ်းငွေ"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "This car is so ___, I can't buy it.",
+      "right": "expensive",
+      "wrong": "cheap",
+      "why": "Expensive means it costs a lot of money; cheap means it costs very little.",
+      "why_mm": "Expensive က ပိုက်ဆံအများကြီးပေးရတာဖြစ်ပြီး cheap က ပိုက်ဆံအနည်းငယ်ပဲပေးရတာပါ။"
+    },
+    {
+      "prompt": "I bought this for £5 — it's a total ___!",
+      "right": "bargain",
+      "wrong": "refund",
+      "why": "A bargain is a great deal; a refund is getting money back for a return.",
+      "why_mm": "A bargain က စျေးတန်တာဖြစ်ပြီး refund က ပစ္စည်းပြန်ပေးပြီး ပိုက်ဆံပြန်ယူတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "This watch cost £500. It is very ___.",
+      "answer": "expensive",
+      "options": [
+        "expensive",
+        "cheap",
+        "a bargain"
+      ],
+      "explain_en": "Costing a lot of money is expensive.",
+      "explain_mm": "ပိုက်ဆံအများကြီးပေးရရင် expensive ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I don't have enough money. I can't ___ it.",
+      "answer": "afford",
+      "options": [
+        "afford",
+        "pay",
+        "spend"
+      ],
+      "explain_en": "To have enough money to buy something is to afford it.",
+      "explain_mm": "ပစ္စည်းတစ်ခုကို ဝယ်နိုင်လောက်တဲ့ ပိုက်ဆံရှိရင် afford လုပ်နိုင်တယ်လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The item was broken, so I asked for ___.",
+      "answer": "a refund",
+      "options": [
+        "a refund",
+        "a bargain",
+        "on sale"
+      ],
+      "explain_en": "Money returned for a faulty item is a refund.",
+      "explain_mm": "ပစ္စည်းအဆင်မပြေလို့ ပိုက်ဆံပြန်ရတာကို refund လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "These jeans are 50% off! They are ___.",
+      "answer": "on sale",
+      "options": [
+        "on sale",
+        "expensive",
+        "a refund"
+      ],
+      "explain_en": "Items at a lower price are on sale.",
+      "explain_mm": "စျေးလျော့ရောင်းနေတဲ့ပစ္စည်းတွေကို on sale လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "How much does this bag ___?",
+      "answer": "cost",
+      "options": [
+        "cost",
+        "pay",
+        "spend"
+      ],
+      "explain_en": "To ask for the price, we use the verb 'cost'.",
+      "explain_mm": "စျေးနှုန်းကို မေးတဲ့အခါ cost ဆိုတဲ့ ကြိယာကို သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I like to ___ my money on good books.\"",
+      "answer": "spend",
+      "options": [],
+      "explain_en": "Using money to buy things is to spend.",
+      "explain_mm": "ပစ္စည်းဝယ်ဖို့ ပိုက်ဆံသုံးတာကို spend လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"This shirt was only £5. It was a real ___.\"",
+      "answer": "a bargain",
+      "options": [],
+      "explain_en": "A very good price for an item is a bargain.",
+      "explain_mm": "အရမ်းတန်တဲ့စျေးနဲ့ ရတာကို a bargain လို့ ပြောပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I will ___ by card at the counter.\"",
+      "answer": "pay",
+      "options": [],
+      "explain_en": "To give money for goods is to pay.",
+      "explain_mm": "ပစ္စည်းအတွက် ပိုက်ဆံပေးတာကို pay လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"This shop is very ___; everything is very low price.\"",
+      "answer": "cheap",
+      "options": [],
+      "explain_en": "Costing very little money is cheap.",
+      "explain_mm": "ပိုက်ဆံအနည်းငယ်ပဲ ပေးရရင် cheap ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: \"I can't ___ to go on holiday this year.\"",
+      "answer": "afford",
+      "options": [],
+      "explain_en": "Not having enough money means you cannot afford it.",
+      "explain_mm": "ပိုက်ဆံမလုံလောက်ရင် can't afford ဖြစ်ပါတယ်။"
+    }
+  ]
+}

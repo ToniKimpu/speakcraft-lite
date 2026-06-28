@@ -1,0 +1,379 @@
+{
+  "id": "home_rooms",
+  "title": "Home & where you live",
+  "level": 1,
+  "order": 12,
+  "theme": "Home",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "These phrases help you talk about your living situation and daily household tasks. You will learn how to describe your home and what you do to keep it clean.",
+  "why_grouped_mm": "ဒီစကားစုတွေက ကိုယ့်ရဲ့နေထိုင်မှုပုံစံနဲ့ အိမ်မှုကိစ္စတွေကို ပြောပြတဲ့နေရာမှာ သုံးလို့ရပါတယ်။ အိမ်အကြောင်းနဲ့ အိမ်မှာလုပ်ရတဲ့ အလုပ်တွေကို ဘယ်လိုပြောရမလဲဆိုတာ လေ့လာရမှာပါ။",
+  "words": [
+    {
+      "word": "live in a flat",
+      "pos": "expression",
+      "short_en": "to reside in an apartment (British English)",
+      "examples": [
+        {
+          "en": "I {w}live in a flat{/w} in the {c}city{/c} centre.",
+          "mm": "ကျွန်တော် မြို့လယ်က တိုက်ခန်းတစ်ခုမှာ နေပါတယ်။"
+        },
+        {
+          "en": "Do you {w}live in a flat{/w} or a {c}house{/c}?",
+          "mm": "မင်းနေတာ တိုက်ခန်းလား ဒါမှမဟုတ် အိမ်တစ်လုံးလား။"
+        },
+        {
+          "en": "They {w}live in a flat{/w} on the third {c}floor{/c}.",
+          "mm": "သူတို့က တတိယထပ်က တိုက်ခန်းတစ်ခုမှာ နေကြတယ်။"
+        },
+        {
+          "en": "We {w}live in a flat{/w} with a small {c}balcony{/c}.",
+          "mm": "ကျွန်တော်တို့က လသာဆောင်လေးပါတဲ့ တိုက်ခန်းတစ်ခုမှာ နေပါတယ်။"
+        },
+        {
+          "en": "She wants to {w}live in a flat{/w} near her {c}work{/c}.",
+          "mm": "သူမက အလုပ်နဲ့နီးတဲ့ တိုက်ခန်းတစ်ခုမှာ နေချင်တယ်။"
+        }
+      ],
+      "short_mm": "တိုက်ခန်းမှာ နေတယ်"
+    },
+    {
+      "word": "move house",
+      "pos": "expression",
+      "short_en": "to change your place of residence",
+      "examples": [
+        {
+          "en": "We are going to {w}move house{/w} next {c}month{/c}.",
+          "mm": "ကျွန်တော်တို့ လာမယ့်လကျရင် အိမ်ပြောင်းတော့မယ်။"
+        },
+        {
+          "en": "It is stressful to {w}move house{/w} with so much {c}stuff{/c}.",
+          "mm": "ပစ္စည်းတွေ အများကြီးနဲ့ အိမ်ပြောင်းရတာ တကယ့်ကို စိတ်ညစ်စရာကောင်းတယ်။"
+        },
+        {
+          "en": "They {w}move house{/w} every few {c}years{/c}.",
+          "mm": "သူတို့က နှစ်အနည်းငယ်ကြာတိုင်း အိမ်ပြောင်းကြတယ်။"
+        },
+        {
+          "en": "When did you last {w}move house{/w} to this {c}area{/c}?",
+          "mm": "ဒီဘက်ကို နောက်ဆုံးအကြိမ် ဘယ်တုန်းက ပြောင်းလာခဲ့တာလဲ။"
+        },
+        {
+          "en": "I helped my friend {w}move house{/w} last {c}weekend{/c}.",
+          "mm": "ပြီးခဲ့တဲ့အပတ်က ကျွန်တော့်သူငယ်ချင်းကို အိမ်ပြောင်းကူပေးခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "အိမ်ပြောင်းတယ်"
+    },
+    {
+      "word": "do the housework",
+      "pos": "expression",
+      "short_en": "to perform cleaning and chores in the home",
+      "examples": [
+        {
+          "en": "I usually {w}do the housework{/w} on Saturday {c}mornings{/c}.",
+          "mm": "ကျွန်တော်က ပုံမှန်အားဖြင့် စနေနေ့မနက်တိုင်း အိမ်မှုကိစ္စတွေ လုပ်လေ့ရှိတယ်။"
+        },
+        {
+          "en": "We {w}do the housework{/w} together to save {c}time{/c}.",
+          "mm": "အချိန်ကုန်သက်သာအောင် ကျွန်တော်တို့ အိမ်မှုကိစ္စတွေကို ဝိုင်းလုပ်ကြတယ်။"
+        },
+        {
+          "en": "She hates to {w}do the housework{/w} after a long {c}day{/c}.",
+          "mm": "သူမက တစ်နေ့တာ အလုပ်ပင်ပန်းပြီးရင် အိမ်မှုကိစ္စလုပ်ရတာကို မုန်းတယ်။"
+        },
+        {
+          "en": "Who has to {w}do the housework{/w} in your {c}family{/c}?",
+          "mm": "မင်းတို့မိသားစုမှာ အိမ်မှုကိစ္စတွေကို ဘယ်သူလုပ်ရတာလဲ။"
+        },
+        {
+          "en": "I need to {w}do the housework{/w} before the {c}guests{/c} arrive.",
+          "mm": "ဧည့်သည်တွေမလာခင် အိမ်မှုကိစ္စတွေ အရင်လုပ်ထားဖို့ လိုတယ်။"
+        }
+      ],
+      "short_mm": "အိမ်မှုကိစ္စ လုပ်တယ်"
+    },
+    {
+      "word": "tidy up",
+      "pos": "expression",
+      "short_en": "to make a place neat and clean",
+      "examples": [
+        {
+          "en": "Please {w}tidy up{/w} your {c}bedroom{/c} before you go out.",
+          "mm": "အပြင်မသွားခင် မင်းရဲ့အိပ်ခန်းကို အရင်ရှင်းပေးပါ။"
+        },
+        {
+          "en": "I spent all morning trying to {w}tidy up{/w} the {c}kitchen{/c}.",
+          "mm": "ကျွန်တော် မနက်ခင်းတစ်ခါလုံး မီးဖိုချောင်ကို ရှင်းနေရတာနဲ့ပဲ အချိန်ကုန်သွားတယ်။"
+        },
+        {
+          "en": "It is easier to {w}tidy up{/w} if you have less {c}clutter{/c}.",
+          "mm": "ပစ္စည်းတွေ နည်းနည်းပဲရှိရင် ရှင်းရတာ ပိုလွယ်တယ်။"
+        },
+        {
+          "en": "We should {w}tidy up{/w} the {c}living room{/c} now.",
+          "mm": "ခုတော့ ဧည့်ခန်းကို ရှင်းထားသင့်ပြီ။"
+        },
+        {
+          "en": "She likes to {w}tidy up{/w} the {c}desk{/c} every evening.",
+          "mm": "သူမက ညနေတိုင်း စားပွဲကို ရှင်းထားရတာ ကြိုက်တယ်။"
+        }
+      ],
+      "short_mm": "အိမ်ကို ရှင်းလင်းထားတယ်"
+    },
+    {
+      "word": "make the bed",
+      "pos": "expression",
+      "short_en": "to arrange the sheets and covers neatly",
+      "examples": [
+        {
+          "en": "I always {w}make the bed{/w} as soon as I {c}wake up{/c}.",
+          "mm": "ကျွန်တော်က နိုးတာနဲ့ အိပ်ရာကို အမြဲသိမ်းတယ်။"
+        },
+        {
+          "en": "She taught her son how to {w}make the bed{/w} {c}properly{/c}.",
+          "mm": "သူမက သူ့သားကို အိပ်ရာ ဘယ်လိုသပ်သပ်ရပ်ရပ် သိမ်းရမလဲဆိုတာ သင်ပေးခဲ့တယ်။"
+        },
+        {
+          "en": "It only takes a minute to {w}make the bed{/w} {c}neatly{/c}.",
+          "mm": "အိပ်ရာကို သပ်သပ်ရပ်ရပ်သိမ်းဖို့ တစ်မိနစ်ပဲ ကြာတယ်။"
+        },
+        {
+          "en": "Don't forget to {w}make the bed{/w} before you {c}leave{/c}.",
+          "mm": "မထွက်ခင် အိပ်ရာသိမ်းဖို့ မမေ့နဲ့နော်။"
+        },
+        {
+          "en": "He never bothers to {w}make the bed{/w} in the {c}morning{/c}.",
+          "mm": "သူက မနက်ခင်းဆို အိပ်ရာသိမ်းဖို့ကို ဘယ်တော့မှ စိတ်မဝင်စားဘူး။"
+        }
+      ],
+      "short_mm": "အိပ်ရာခင်းတယ်"
+    },
+    {
+      "word": "next door",
+      "pos": "expression",
+      "short_en": "in the house or flat immediately adjacent to yours",
+      "examples": [
+        {
+          "en": "My friend lives {w}next door{/w} to my {c}house{/c}.",
+          "mm": "ကျွန်တော့်သူငယ်ချင်းက ကျွန်တော့်အိမ်ဘေးနားမှာ နေတယ်။"
+        },
+        {
+          "en": "The people who live {w}next door{/w} are very {c}quiet{/c}.",
+          "mm": "ဘေးအိမ်ကလူတွေက အရမ်းကို အေးဆေးတယ်။"
+        },
+        {
+          "en": "I borrowed some milk from the {c}neighbour{/c} {w}next door{/w}.",
+          "mm": "ကျွန်တော် ဘေးအိမ်က အိမ်နီးချင်းဆီက နို့နည်းနည်း ချေးယူလိုက်တယ်။"
+        },
+        {
+          "en": "They moved {w}next door{/w} just last {c}week{/c}.",
+          "mm": "သူတို့က ပြီးခဲ့တဲ့အပတ်ကမှ ဘေးအိမ်ကို ပြောင်းလာကြတာ။"
+        },
+        {
+          "en": "We can hear the music from {w}next door{/w} {c}clearly{/c}.",
+          "mm": "ဘေးအိမ်ကဖွင့်တဲ့ သီချင်းသံတွေကို ကျွန်တော်တို့ အသဲအသန် ကြားနေရတယ်။"
+        }
+      ],
+      "short_mm": "ဘေးအိမ်"
+    },
+    {
+      "word": "a spare room",
+      "pos": "expression",
+      "short_en": "an extra room in a house for guests",
+      "examples": [
+        {
+          "en": "We have {w}a spare room{/w} for when {c}visitors{/c} stay.",
+          "mm": "ဧည့်သည်လာရင်တည်းဖို့ ကျွန်တော်တို့မှာ အပိုအခန်းတစ်ခန်း ရှိတယ်။"
+        },
+        {
+          "en": "She uses {w}a spare room{/w} as a home {c}office{/c}.",
+          "mm": "သူမက အပိုအခန်းတစ်ခန်းကို အိမ်မှာပဲ အလုပ်လုပ်တဲ့ရုံးခန်းအဖြစ် သုံးတယ်။"
+        },
+        {
+          "en": "It is useful to have {w}a spare room{/w} in a big {c}house{/c}.",
+          "mm": "အိမ်ကြီးတစ်လုံးမှာ အပိုအခန်းရှိတာ အသုံးဝင်တယ်။"
+        },
+        {
+          "en": "They converted {w}a spare room{/w} into a {c}nursery{/c}.",
+          "mm": "သူတို့က အပိုအခန်းတစ်ခန်းကို ကလေးထိန်းခန်းအဖြစ် ပြောင်းသုံးလိုက်တယ်။"
+        },
+        {
+          "en": "I wish I had {w}a spare room{/w} for my {c}hobbies{/c}.",
+          "mm": "ကျွန်တော့်ဝါသနာပါတဲ့ အလုပ်တွေလုပ်ဖို့ အပိုအခန်းတစ်ခန်းလောက် ရှိစေချင်တယ်။"
+        }
+      ],
+      "short_mm": "ဧည့်သည်အခန်း"
+    },
+    {
+      "word": "share a flat",
+      "pos": "expression",
+      "short_en": "to live in the same flat with other people",
+      "examples": [
+        {
+          "en": "I {w}share a flat{/w} with two {c}students{/c}.",
+          "mm": "ကျွန်တော် ကျောင်းသားနှစ်ယောက်နဲ့ တိုက်ခန်းအတူနေတယ်။"
+        },
+        {
+          "en": "It is cheaper to {w}share a flat{/w} in the {c}city{/c}.",
+          "mm": "မြို့ထဲမှာ တိုက်ခန်းအတူငှားနေတာက ပိုပြီး စရိတ်သက်သာတယ်။"
+        },
+        {
+          "en": "Do you want to {w}share a flat{/w} with a {c}friend{/c}?",
+          "mm": "မင်း သူငယ်ချင်းတစ်ယောက်ယောက်နဲ့ တိုက်ခန်းအတူနေချင်လား။"
+        },
+        {
+          "en": "We {w}share a flat{/w} and split the {c}rent{/c}.",
+          "mm": "ကျွန်တော်တို့ တိုက်ခန်းအတူနေပြီး အိမ်လခကို ခွဲပေးကြတယ်။"
+        },
+        {
+          "en": "She decided to {w}share a flat{/w} to meet new {c}people{/c}.",
+          "mm": "သူမက လူသစ်တွေနဲ့ သိကျွမ်းချင်လို့ တိုက်ခန်းအတူနေဖို့ ဆုံးဖြတ်လိုက်တယ်။"
+        }
+      ],
+      "short_mm": "တိုက်ခန်းကို တခြားသူနဲ့ တွဲနေတယ်"
+    },
+    {
+      "word": "a block of flats",
+      "pos": "expression",
+      "short_en": "a large building containing many separate flats",
+      "examples": [
+        {
+          "en": "I live in a tall {w}block of flats{/w} near the {c}park{/c}.",
+          "mm": "ကျွန်တော် ပန်းခြံနားက တိုက်ခန်းမြင့်ကြီးတစ်ခုမှာ နေတယ်။"
+        },
+        {
+          "en": "There is a lift in our {w}block of flats{/w} for all {c}residents{/c}.",
+          "mm": "ကျွန်တော်တို့ တိုက်ခန်းမှာ နေတဲ့သူတွေအားလုံးအတွက် ဓာတ်လှေကား ရှိတယ်။"
+        },
+        {
+          "en": "He works in a {w}block of flats{/w} as a {c}caretaker{/c}.",
+          "mm": "သူက တိုက်ခန်းတစ်ခုမှာ အစောင့်အဖြစ် အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "They are building a new {w}block of flats{/w} on this {c}street{/c}.",
+          "mm": "သူတို့က ဒီလမ်းထဲမှာ တိုက်ခန်းအသစ်တစ်ခု ဆောက်နေကြတယ်။"
+        },
+        {
+          "en": "The {w}block of flats{/w} has a secure {c}entrance{/c}.",
+          "mm": "ဒီတိုက်ခန်းက အဝင်အထွက် လုံခြုံမှုရှိတယ်။"
+        }
+      ],
+      "short_mm": "တိုက်ခန်းတွဲ"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I don't live alone; I ___ with my best friend.",
+      "right": "share a flat",
+      "wrong": "live in a flat",
+      "why": "\"share a flat\" implies living with others; \"live in a flat\" just describes the type of home.",
+      "why_mm": "share a flat က တခြားသူနဲ့ တွဲနေတာကို ဆိုလိုပြီး live in a flat ကတော့ ဘယ်လိုအိမ်မျိုးမှာ နေလဲဆိုတာကိုပဲ ပြောတာပါ"
+    },
+    {
+      "prompt": "I need to ___ before the guests arrive.",
+      "right": "tidy up",
+      "wrong": "move house",
+      "why": "\"tidy up\" means cleaning a room; \"move house\" means changing your address.",
+      "why_mm": "tidy up က အခန်းကို ရှင်းလင်းတာဖြစ်ပြီး move house ကတော့ နေရပ်လိပ်စာ ပြောင်းတာကို ဆိုလိုပါတယ်"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I don't have my own house, I ___ in the city.",
+      "answer": "live in a flat",
+      "options": [
+        "live in a flat",
+        "move house",
+        "share a flat"
+      ],
+      "explain_en": "To reside in an apartment is to live in a flat.",
+      "explain_mm": "တိုက်ခန်းမှာ နေတာကို live in a flat လို့ ပြောပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My room is messy, I need to ___.",
+      "answer": "tidy up",
+      "options": [
+        "tidy up",
+        "make the bed",
+        "do the housework"
+      ],
+      "explain_en": "Making a place neat is to tidy up.",
+      "explain_mm": "နေရာတကျ ဖြစ်အောင် ရှင်းတာကို tidy up လို့ ခေါ်ပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I have an extra room for guests, it is ___.",
+      "answer": "a spare room",
+      "options": [
+        "a spare room",
+        "a block of flats",
+        "next door"
+      ],
+      "explain_en": "An extra room for visitors is a spare room.",
+      "explain_mm": "ဧည့်သည်အတွက် အပိုအခန်းကို a spare room လို့ ခေါ်ပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I always ___ as soon as I wake up.\"",
+      "answer": "make the bed",
+      "options": [],
+      "explain_en": "Arranging sheets after waking is making the bed.",
+      "explain_mm": "အိပ်ရာထပြီး အိပ်ရာပြင်တာကို make the bed လို့ ပြောပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"We are going to ___ next month to a bigger place.\"",
+      "answer": "move house",
+      "options": [],
+      "explain_en": "Changing your home address is to move house.",
+      "explain_mm": "အိမ်ပြောင်းတာကို move house လို့ ပြောပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"My friend lives ___ — just on the other side of the wall.\"",
+      "answer": "next door",
+      "options": [],
+      "explain_en": "Living in the adjacent house is living next door.",
+      "explain_mm": "ဘေးအိမ်မှာ နေတာကို living next door လို့ ပြောပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I help my mum ___ every Saturday.\"",
+      "answer": "do the housework",
+      "options": [],
+      "explain_en": "Doing chores and cleaning is doing the housework.",
+      "explain_mm": "အိမ်အလုပ် လုပ်တာကို do the housework လို့ ပြောပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I ___ with two other students to save money.\"",
+      "answer": "share a flat",
+      "options": [],
+      "explain_en": "Living with others in the same flat is sharing a flat.",
+      "explain_mm": "တခြားသူနဲ့ တွဲနေတာကို share a flat လို့ ပြောပါတယ်"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"The new ___ has ten floors and many residents.\"",
+      "answer": "block of flats",
+      "options": [],
+      "explain_en": "A large building with many flats is a block of flats.",
+      "explain_mm": "တိုက်ခန်းတွေ အများကြီးပါတဲ့ အဆောက်အဦကို a block of flats လို့ ခေါ်ပါတယ်"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My neighbour lives ___.",
+      "answer": "next door",
+      "options": [
+        "next door",
+        "a spare room",
+        "a block of flats"
+      ],
+      "explain_en": "The house next to yours is next door.",
+      "explain_mm": "ကိုယ့်အိမ်ဘေးက အိမ်ကို next door လို့ ခေါ်ပါတယ်"
+    }
+  ]
+}

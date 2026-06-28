@@ -1,0 +1,406 @@
+{
+  "id": "appearance",
+  "title": "What people look like",
+  "level": 1,
+  "order": 4,
+  "theme": "Appearance",
+  "style": "theme",
+  "unit": "word",
+  "why_grouped_en": "These are the essential adjectives and phrases for describing someone's physical appearance. We focus on common descriptors for height, build, age, and general features.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက လူတစ်ယောက်ရဲ့ ရုပ်ရည်သွင်ပြင်ကို ဖော်ပြတဲ့အခါ အသုံးအများဆုံးနဲ့ အခြေခံအကျဆုံး စကားလုံးတွေဖြစ်လို့ စုစည်းပေးထားတာပါ။ အရပ်အမောင်း၊ ခန္ဓာကိုယ်ပုံစံ၊ အသက်အရွယ်နဲ့ အခြားထူးခြားတဲ့ အချက်အလက်တွေကို ဘယ်လိုပြောရမလဲဆိုတာကို အဓိကထားပါတယ်။",
+  "words": [
+    {
+      "word": "tall",
+      "pos": "adjective",
+      "ipa": "/tɔːl/",
+      "short_en": "having a greater than average height",
+      "examples": [
+        {
+          "en": "He is very {w}tall{/w} and {c}strong{/c}.",
+          "mm": "သူက အရပ်အရမ်းရှည်ပြီး သန်မာတယ်။"
+        },
+        {
+          "en": "She is a {w}tall{/w} {c}woman{/c}.",
+          "mm": "သူမက အရပ်ရှည်တဲ့ မိန်းကလေးတစ်ယောက်ပါ။"
+        },
+        {
+          "en": "My brother is {w}tall{/w} for his {c}age{/c}.",
+          "mm": "ငါ့အစ်ကိုက သူ့အရွယ်နဲ့ဆို အရပ်ရှည်တယ်။"
+        },
+        {
+          "en": "Look at that {w}tall{/w} {c}building{/c} over there.",
+          "mm": "ဟိုဘက်က အရပ်ရှည်တဲ့ အဆောက်အအုံကို ကြည့်လိုက်ပါ။"
+        },
+        {
+          "en": "I wish I were as {w}tall{/w} as my {c}father{/c}.",
+          "mm": "ငါ့အဖေလို အရပ်ရှည်ရင် ကောင်းမှာပဲ။"
+        }
+      ],
+      "short_mm": "အရပ်ရှည်တယ်"
+    },
+    {
+      "word": "short",
+      "pos": "adjective",
+      "ipa": "/ʃɔːt/",
+      "short_en": "having a small height",
+      "examples": [
+        {
+          "en": "He is a bit {w}short{/w} for a {c}basketball{/c} player.",
+          "mm": "သူက ဘတ်စကက်ဘောသမားတစ်ယောက်အနေနဲ့ဆို အရပ်နည်းနည်းပုတယ်။"
+        },
+        {
+          "en": "She has {w}short{/w} brown {c}hair{/c}.",
+          "mm": "သူမမှာ ဆံပင်ညိုညိုတိုတိုလေး ရှိတယ်။"
+        },
+        {
+          "en": "I am {w}short{/w} like my {c}mother{/c}.",
+          "mm": "ငါက ငါ့အမေလိုပဲ အရပ်ပုတယ်။"
+        },
+        {
+          "en": "The {w}short{/w} {c}boy{/c} is my cousin.",
+          "mm": "အရပ်ပုတဲ့ ကောင်လေးက ငါ့ဝမ်းကွဲပါ။"
+        },
+        {
+          "en": "He wears his hair {w}short{/w} and {c}tidy{/c}.",
+          "mm": "သူက ဆံပင်ကို တိုတိုနဲ့ သပ်သပ်ရပ်ရပ် ညှပ်ထားတယ်။"
+        }
+      ],
+      "short_mm": "အရပ်ပုတယ်"
+    },
+    {
+      "word": "slim",
+      "pos": "adjective",
+      "ipa": "/slɪm/",
+      "short_en": "thin in an attractive or healthy way",
+      "nuance_en": "Use 'slim' as a compliment. 'Thin' or 'skinny' can sound like you are criticising someone's weight.",
+      "examples": [
+        {
+          "en": "She has a {w}slim{/w} {c}figure{/c}.",
+          "mm": "သူမက ကိုယ်လုံးကိုယ်ပေါက် သွယ်လျတယ်။"
+        },
+        {
+          "en": "He is quite {w}slim{/w} and {c}fit{/c}.",
+          "mm": "သူက တော်တော်လေး ပိန်သွယ်ပြီး ကျန်းမာတယ်။"
+        },
+        {
+          "en": "She works hard to stay {w}slim{/w} and {c}healthy{/c}.",
+          "mm": "သူမက ပိန်သွယ်ပြီး ကျန်းမာနေဖို့ အမြဲကြိုးစားတယ်။"
+        },
+        {
+          "en": "The model is very {w}slim{/w} and {c}tall{/c}.",
+          "mm": "မော်ဒယ်က အရမ်းပိန်သွယ်ပြီး အရပ်ရှည်တယ်။"
+        },
+        {
+          "en": "He looks {w}slim{/w} in that {c}suit{/c}.",
+          "mm": "သူက အဲ့ဒီဝတ်စုံကို ဝတ်လိုက်တော့ ကြည့်ကောင်းပြီး ပိန်သွယ်နေတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "thin"
+      ],
+      "short_mm": "သွယ်လျတယ်၊ ပိန်သွယ်တယ်",
+      "nuance_mm": "ဒါက ချီးကျူးတဲ့စကားလုံးမို့ ပြောလို့ကောင်းပါတယ်။"
+    },
+    {
+      "word": "thin",
+      "pos": "adjective",
+      "ipa": "/θɪn/",
+      "short_en": "having little fat on the body",
+      "nuance_en": "Can sound negative or imply someone is unhealthy. Use 'slim' instead for a positive tone.",
+      "examples": [
+        {
+          "en": "He has become very {w}thin{/w} after his {c}illness{/c}.",
+          "mm": "သူက ဖျားပြီးတဲ့နောက်မှာ အရမ်းပိန်သွားတယ်။"
+        },
+        {
+          "en": "The {c}cat{/c} is very {w}thin{/w}.",
+          "mm": "ကြောင်လေးက အရမ်းပိန်တယ်။"
+        },
+        {
+          "en": "She has {w}thin{/w} {c}fingers{/c}.",
+          "mm": "သူမရဲ့ လက်ချောင်းလေးတွေက သေးသွယ်တယ်။"
+        },
+        {
+          "en": "He looks too {w}thin{/w} in those {c}clothes{/c}.",
+          "mm": "အဲ့ဒီအဝတ်အစားတွေ ဝတ်ထားတော့ သူက အရမ်းပိန်သလိုပဲ။"
+        },
+        {
+          "en": "The paper is very {w}thin{/w} and {c}fragile{/c}.",
+          "mm": "စက္ကူက အရမ်းပါးပြီး အလွယ်တကူ စုတ်ပြဲနိုင်တယ်။"
+        }
+      ],
+      "confuse_with": [
+        "slim"
+      ],
+      "short_mm": "ပိန်တယ်",
+      "nuance_mm": "တစ်ခါတလေကျရင် မကျန်းမာသလို ဒါမှမဟုတ် အရမ်းပိန်လွန်းတယ်ဆိုတဲ့ အဓိပ္ပာယ်မျိုး ပါသွားတတ်လို့ သတိထားသုံးသင့်ပါတယ်။"
+    },
+    {
+      "word": "young",
+      "pos": "adjective",
+      "ipa": "/jʌŋ/",
+      "short_en": "in the early part of life",
+      "examples": [
+        {
+          "en": "She is a {w}young{/w} {c}student{/c}.",
+          "mm": "သူမက ငယ်ရွယ်တဲ့ ကျောင်းသူလေးပါ။"
+        },
+        {
+          "en": "He looks very {w}young{/w} for his {c}age{/c}.",
+          "mm": "သူက သူ့အရွယ်နဲ့ဆို အရမ်းငယ်သလိုပဲ။"
+        },
+        {
+          "en": "They are a {w}young{/w} {c}couple{/c}.",
+          "mm": "သူတို့က ငယ်ရွယ်တဲ့ စုံတွဲလေးတွေပါ။"
+        },
+        {
+          "en": "I was very {w}young{/w} when I moved {c}here{/c}.",
+          "mm": "ဒီကို ပြောင်းလာတုန်းက ငါအရမ်းငယ်ပါသေးတယ်။"
+        },
+        {
+          "en": "The {w}young{/w} {c}man{/c} helped me.",
+          "mm": "လူငယ်လေးက ငါ့ကို ကူညီပေးခဲ့တယ်။"
+        }
+      ],
+      "short_mm": "ငယ်ရွယ်တယ်"
+    },
+    {
+      "word": "elderly",
+      "pos": "adjective",
+      "ipa": "/ˈel.də.li/",
+      "short_en": "old; polite way to describe an old person",
+      "examples": [
+        {
+          "en": "The {w}elderly{/w} {c}lady{/c} lives alone.",
+          "mm": "အဘွားကြီးက တစ်ယောက်တည်း နေတယ်။"
+        },
+        {
+          "en": "He is an {w}elderly{/w} {c}gentleman{/c}.",
+          "mm": "သူက အသက်အရွယ်ကြီးရင့်တဲ့ လူကြီးလူကောင်းတစ်ယောက်ပါ။"
+        },
+        {
+          "en": "We should help {w}elderly{/w} {c}people{/c}.",
+          "mm": "ငါတို့က သက်ကြီးရွယ်အိုတွေကို ကူညီသင့်တယ်။"
+        },
+        {
+          "en": "My {w}elderly{/w} {c}grandfather{/c} tells great stories.",
+          "mm": "ငါ့အဘိုးက ပုံပြင်ကောင်းကောင်းတွေ ပြောပြတတ်တယ်။"
+        },
+        {
+          "en": "The {w}elderly{/w} {c}couple{/c} walked slowly.",
+          "mm": "သက်ကြီးစုံတွဲက ဖြည်းဖြည်းချင်း လမ်းလျှောက်သွားတယ်။"
+        }
+      ],
+      "short_mm": "သက်ကြီးရွယ်အို"
+    },
+    {
+      "word": "good-looking",
+      "pos": "adjective",
+      "ipa": "/ˌɡʊdˈlʊk.ɪŋ/",
+      "short_en": "attractive; beautiful or handsome",
+      "examples": [
+        {
+          "en": "He is a very {w}good-looking{/w} {c}man{/c}.",
+          "mm": "သူက အရမ်းကြည့်ကောင်းတဲ့ ယောက်ျားတစ်ယောက်ပါ။"
+        },
+        {
+          "en": "She is {w}good-looking{/w} and {c}smart{/c}.",
+          "mm": "သူမက ကြည့်ကောင်းပြီး ဉာဏ်ကောင်းတယ်။"
+        },
+        {
+          "en": "They are a {w}good-looking{/w} {c}family{/c}.",
+          "mm": "သူတို့မိသားစုက ကြည့်ကောင်းတဲ့ မိသားစုပါ။"
+        },
+        {
+          "en": "He met a {w}good-looking{/w} {c}stranger{/c}.",
+          "mm": "သူက ကြည့်ကောင်းတဲ့ လူစိမ်းတစ်ယောက်နဲ့ တွေ့ခဲ့တယ်။"
+        },
+        {
+          "en": "She is known for being {w}good-looking{/w} and {c}kind{/c}.",
+          "mm": "သူမက ကြည့်ကောင်းပြီး စိတ်သဘောထား ကောင်းတာနဲ့ နာမည်ကြီးတယ်။"
+        }
+      ],
+      "short_mm": "ရုပ်ရည်ချောမောတယ်"
+    },
+    {
+      "word": "has long hair",
+      "pos": "phrase",
+      "ipa": "/həz lɒŋ heər/",
+      "short_en": "hair that reaches past the shoulders",
+      "examples": [
+        {
+          "en": "She {w}has long hair{/w} and {c}blue{/c} eyes.",
+          "mm": "သူမမှာ ဆံပင်ရှည်ရှည်နဲ့ မျက်လုံးပြာပြာလေးတွေ ရှိတယ်။"
+        },
+        {
+          "en": "My sister {w}has long hair{/w} tied in a {c}ponytail{/c}.",
+          "mm": "ငါ့ညီမက ဆံပင်ရှည်တွေကို စုစည်းပြီး မြင်းမြီးပုံစံ စည်းထားတယ်။"
+        },
+        {
+          "en": "The girl who {w}has long hair{/w} is my {c}friend{/c}.",
+          "mm": "ဆံပင်ရှည်တဲ့ မိန်းကလေးက ငါ့သူငယ်ချင်းပါ။"
+        },
+        {
+          "en": "She {w}has long hair{/w} that looks very {c}shiny{/c}.",
+          "mm": "သူမရဲ့ ဆံပင်ရှည်တွေက အရမ်းတောက်ပြောင်တယ်။"
+        },
+        {
+          "en": "He {w}has long hair{/w} and a {c}beard{/c}.",
+          "mm": "သူက ဆံပင်ရှည်ပြီး မုတ်ဆိတ်မွေးလည်း ရှိတယ်။"
+        }
+      ],
+      "short_mm": "ဆံပင်ရှည်တယ်"
+    },
+    {
+      "word": "has blue eyes",
+      "pos": "phrase",
+      "ipa": "/həz bluː aɪz/",
+      "short_en": "eyes that are blue in colour",
+      "examples": [
+        {
+          "en": "The baby {w}has blue eyes{/w} and {c}blonde{/c} hair.",
+          "mm": "ကလေးလေးမှာ မျက်လုံးပြာပြာလေးနဲ့ ရွှေရောင်ဆံပင်လေးတွေ ရှိတယ်။"
+        },
+        {
+          "en": "She {w}has blue eyes{/w} that look like the {c}ocean{/c}.",
+          "mm": "သူမရဲ့ မျက်လုံးပြာပြာလေးတွေက ပင်လယ်ပြင်လိုပဲ။"
+        },
+        {
+          "en": "My father {w}has blue eyes{/w} and {c}glasses{/c}.",
+          "mm": "ငါ့အဖေက မျက်လုံးပြာပြာနဲ့ မျက်မှန်တပ်ထားတယ်။"
+        },
+        {
+          "en": "Everyone says she {w}has blue eyes{/w} like her {c}mother{/c}.",
+          "mm": "သူမက သူ့အမေလိုပဲ မျက်လုံးပြာပြာလေးတွေ ရှိတယ်လို့ လူတိုင်းပြောကြတယ်။"
+        },
+        {
+          "en": "He {w}has blue eyes{/w} and a {c}kind{/c} smile.",
+          "mm": "သူက မျက်လုံးပြာပြာလေးတွေနဲ့ ကြင်နာတတ်တဲ့ အပြုံးကို ပိုင်ဆိုင်ထားတယ်။"
+        }
+      ],
+      "short_mm": "မျက်လုံးပြာတယ်"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "She is very ___. She looks healthy and fit.",
+      "right": "slim",
+      "wrong": "thin",
+      "why": "slim is a positive compliment; thin can sound like you are criticising someone's weight.",
+      "why_mm": "Slim က ချီးကျူးတဲ့သဘောဆောင်ပြီး၊ thin ကတော့ တစ်ခါတလေကျရင် ဝေဖန်သလိုမျိုး ဖြစ်သွားနိုင်ပါတယ်။"
+    },
+    {
+      "prompt": "He is a ___ man. It is a polite way to say he is old.",
+      "right": "elderly",
+      "wrong": "young",
+      "why": "elderly is the polite term for old age.",
+      "why_mm": "Elderly က old ထက် ပိုပြီး ယဉ်ကျေးတဲ့ အသုံးအနှုန်းပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "She is very fit and attractive. She is __.",
+      "answer": "slim",
+      "options": [
+        "slim",
+        "thin",
+        "short"
+      ],
+      "explain_en": "Slim is the positive way to describe someone with little body fat.",
+      "explain_mm": "Slim က ကိုယ်လုံးကိုယ်ပေါက် လှပတဲ့သူကို ချီးကျူးတဲ့အခါ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He is not tall. He is __.",
+      "answer": "short",
+      "options": [
+        "tall",
+        "short",
+        "young"
+      ],
+      "explain_en": "Short is the opposite of tall.",
+      "explain_mm": "Short က tall ရဲ့ ဆန့်ကျင်ဘက် စကားလုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The lady is 90 years old. She is __.",
+      "answer": "elderly",
+      "options": [
+        "young",
+        "elderly",
+        "slim"
+      ],
+      "explain_en": "Elderly is a polite word for an old person.",
+      "explain_mm": "Elderly က အသက်ကြီးတဲ့သူတွေကို ယဉ်ကျေးအောင် ခေါ်တဲ့ စကားလုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He is a very handsome person. He is __.",
+      "answer": "good-looking",
+      "options": [
+        "good-looking",
+        "short",
+        "thin"
+      ],
+      "explain_en": "Good-looking means attractive.",
+      "explain_mm": "Good-looking ဆိုတာ ရုပ်ရည်ကြည့်ကောင်းတာကို ဆိုလိုပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She has hair that reaches her back. She __.",
+      "answer": "has long hair",
+      "options": [
+        "has long hair",
+        "is tall",
+        "is slim"
+      ],
+      "explain_en": "Long hair reaches past the shoulders.",
+      "explain_mm": "Long hair ဆိုတာ ပုခုံးကျော်တဲ့အထိ ရှည်တဲ့ဆံပင်ကို ပြောတာပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'My brother is very ___; he is over 2 metres tall.'",
+      "answer": "tall",
+      "options": [],
+      "explain_en": "Tall describes someone with great height.",
+      "explain_mm": "Tall က အရပ်အမောင်း မြင့်မားတဲ့သူကို ဖော်ပြတဲ့ စကားလုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'She is a ___ woman; she is only 20 years old.'",
+      "answer": "young",
+      "options": [],
+      "explain_en": "Young describes someone in the early part of life.",
+      "explain_mm": "Young က အသက်ငယ်တဲ့သူတွေကို ဖော်ပြတဲ့ စကားလုံးပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'He ___ because his mother has them too.'",
+      "answer": "has blue eyes",
+      "options": [],
+      "explain_en": "This phrase describes eye colour.",
+      "explain_mm": "ဒီစကားစုက မျက်လုံးအရောင်ကို ဖော်ပြပေးတာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Be careful when you say someone is ___, it can sound a bit rude.",
+      "answer": "thin",
+      "options": [
+        "thin",
+        "slim",
+        "tall"
+      ],
+      "explain_en": "Thin can imply someone is unhealthily underweight.",
+      "explain_mm": "Thin လို့ ပြောလိုက်ရင် တစ်ခါတလေကျရင် မကျန်းမာသလို အဓိပ္ပာယ်သက်ရောက်သွားနိုင်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the word: 'The ___ man walked with a stick.'",
+      "answer": "elderly",
+      "options": [],
+      "explain_en": "Elderly is used to describe old people respectfully.",
+      "explain_mm": "Elderly က အသက်ကြီးသူတွေကို ရိုသေတဲ့သဘောနဲ့ သုံးတဲ့ စကားလုံးပါ။"
+    }
+  ]
+}

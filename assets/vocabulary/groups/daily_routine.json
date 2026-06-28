@@ -1,0 +1,419 @@
+{
+  "id": "daily_routine",
+  "title": "Daily routine",
+  "level": 1,
+  "order": 9,
+  "theme": "Daily routine",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "These phrases are the building blocks for talking about your everyday life. Mastering these will help you describe your morning, work, and evening schedule clearly.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက ကိုယ့်ရဲ့နေ့စဉ်ဘဝအကြောင်း ပြောပြတဲ့အခါ အခြေခံအကျဆုံး စကားလုံးတွေဖြစ်ပါတယ်။ ဒါတွေကို သေချာသိထားရင် ကိုယ့်ရဲ့ မနက်ခင်း၊ အလုပ်ချိန်နဲ့ ညနေခင်း အစီအစဉ်တွေကို ပီပီပြင်ပြင် ပြောပြနိုင်မှာပါ။",
+  "words": [
+    {
+      "word": "wake up",
+      "pos": "expression",
+      "short_en": "to open your eyes and stop sleeping",
+      "nuance_en": "You 'wake up' when you open your eyes, but you 'get up' when you actually leave your bed.",
+      "examples": [
+        {
+          "en": "I usually {w}wake up{/w} at {c}seven{/c}.",
+          "mm": "ကျွန်တော်က ခုနစ်နာရီလောက်ဆို အိပ်ရာထလေ့ရှိတယ်။"
+        },
+        {
+          "en": "The baby {w}woke up{/w} in the {c}night{/c}.",
+          "mm": "ကလေးက ညဘက်မှာ နိုးလာတယ်။"
+        },
+        {
+          "en": "I {w}wake up{/w} when the {c}alarm{/c} rings.",
+          "mm": "နှိုးစက်မြည်ရင် ကျွန်တော် နိုးလာတယ်။"
+        },
+        {
+          "en": "Do you {w}wake up{/w} early on {c}Sundays{/c}?",
+          "mm": "မင်း တနင်္ဂနွေနေ့တွေမှာ စောစောနိုးလား။"
+        },
+        {
+          "en": "She {w}woke up{/w} feeling very {c}tired{/c}.",
+          "mm": "သူမ အိပ်ရာနိုးလာတော့ အရမ်းပင်ပန်းနေတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "get up"
+      ],
+      "short_mm": "နိုးလာတာ",
+      "nuance_mm": "wake up ဆိုတာ မျက်လုံးပွင့်လာတာကို ပြောတာဖြစ်ပြီး၊ get up ဆိုတာကတော့ အိပ်ရာထဲကနေ တကယ့်ကို ထလိုက်တာကို ပြောတာပါ။"
+    },
+    {
+      "word": "get up",
+      "pos": "expression",
+      "short_en": "to leave your bed after waking up",
+      "examples": [
+        {
+          "en": "I {w}get up{/w} immediately after {c}waking{/c} up.",
+          "mm": "ကျွန်တော် အိပ်ရာနိုးပြီးတာနဲ့ ချက်ချင်း အိပ်ရာက ထတယ်။"
+        },
+        {
+          "en": "It is hard to {w}get up{/w} on {c}cold{/c} mornings.",
+          "mm": "မနက်ခင်း အေးတဲ့အချိန်မျိုးမှာ အိပ်ရာက ထရတာ ခက်တယ်။"
+        },
+        {
+          "en": "She {w}gets up{/w} at {c}six{/c} every day.",
+          "mm": "သူမ နေ့တိုင်း ခြောက်နာရီဆို အိပ်ရာက ထတယ်။"
+        },
+        {
+          "en": "I like to {w}get up{/w} and have a {c}coffee{/c}.",
+          "mm": "ကျွန်တော် အိပ်ရာကထပြီး ကော်ဖီသောက်ရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "We {w}get up{/w} early to go to {c}work{/c}.",
+          "mm": "ကျွန်တော်တို့ အလုပ်သွားဖို့ စောစော အိပ်ရာက ထကြတယ်။"
+        }
+      ],
+      "confuse_with": [
+        "wake up"
+      ],
+      "short_mm": "အိပ်ရာကထတာ"
+    },
+    {
+      "word": "have a shower",
+      "pos": "expression",
+      "short_en": "to wash your body using a shower",
+      "examples": [
+        {
+          "en": "I always {w}have a shower{/w} in the {c}morning{/c}.",
+          "mm": "ကျွန်တော် မနက်တိုင်း ရေချိုးလေ့ရှိတယ်။"
+        },
+        {
+          "en": "Does he {w}have a shower{/w} before {c}breakfast{/c}?",
+          "mm": "သူ မနက်စာမစားခင် ရေချိုးသလား။"
+        },
+        {
+          "en": "I need to {w}have a shower{/w} after the {c}gym{/c}.",
+          "mm": "အားကစားရုံသွားပြီးရင် ကျွန်တော် ရေချိုးဖို့ လိုတယ်။"
+        },
+        {
+          "en": "She {w}has a shower{/w} to feel {c}fresh{/c}.",
+          "mm": "သူမ လန်းဆန်းနေအောင် ရေချိုးတယ်။"
+        },
+        {
+          "en": "We {w}have a shower{/w} before we go to {c}bed{/c}.",
+          "mm": "ကျွန်တော်တို့ အိပ်ရာမဝင်ခင် ရေချိုးကြတယ်။"
+        }
+      ],
+      "short_mm": "ရေချိုးတာ"
+    },
+    {
+      "word": "get dressed",
+      "pos": "expression",
+      "short_en": "to put on your clothes",
+      "examples": [
+        {
+          "en": "I {w}get dressed{/w} after having {c}breakfast{/c}.",
+          "mm": "ကျွန်တော် မနက်စာစားပြီးမှ အဝတ်အစားလဲတယ်။"
+        },
+        {
+          "en": "She {w}gets dressed{/w} in her {c}uniform{/c}.",
+          "mm": "သူမ သူမရဲ့ ယူနီဖောင်းကို ဝတ်တယ်။"
+        },
+        {
+          "en": "It takes me ten minutes to {w}get dressed{/w} for {c}work{/c}.",
+          "mm": "အလုပ်သွားဖို့ အဝတ်အစားလဲတာ ၁၀ မိနစ်လောက် ကြာတယ်။"
+        },
+        {
+          "en": "Help the children {w}get dressed{/w} for {c}school{/c}.",
+          "mm": "ကလေးတွေကို ကျောင်းသွားဖို့ အဝတ်အစား ဝတ်ပေးလိုက်ပါ။"
+        },
+        {
+          "en": "I {w}get dressed{/w} quickly when I am {c}late{/c}.",
+          "mm": "နောက်ကျနေရင် ကျွန်တော် မြန်မြန် အဝတ်အစားလဲတယ်။"
+        }
+      ],
+      "short_mm": "အဝတ်အစားလဲတာ"
+    },
+    {
+      "word": "have breakfast",
+      "pos": "expression",
+      "short_en": "to eat your first meal of the day",
+      "examples": [
+        {
+          "en": "We {w}have breakfast{/w} at {c}eight{/c} o'clock.",
+          "mm": "ကျွန်တော်တို့ ရှစ်နာရီမှာ မနက်စာ စားကြတယ်။"
+        },
+        {
+          "en": "I don't usually {w}have breakfast{/w} on {c}weekends{/c}.",
+          "mm": "ကျွန်တော် အားလပ်ရက်တွေမှာ မနက်စာ မစားဖြစ်ဘူး။"
+        },
+        {
+          "en": "She {w}has breakfast{/w} with her {c}family{/c}.",
+          "mm": "သူမ မိသားစုနဲ့အတူ မနက်စာ စားတယ်။"
+        },
+        {
+          "en": "Do you {w}have breakfast{/w} before {c}leaving{/c}?",
+          "mm": "မင်း မထွက်ခွာခင် မနက်စာ စားပြီးပြီလား။"
+        },
+        {
+          "en": "I {w}have breakfast{/w} while reading the {c}news{/c}.",
+          "mm": "ကျွန်တော် သတင်းဖတ်ရင်း မနက်စာ စားတယ်။"
+        }
+      ],
+      "short_mm": "မနက်စာစားတာ"
+    },
+    {
+      "word": "go to work",
+      "pos": "expression",
+      "short_en": "to leave home to start your job",
+      "examples": [
+        {
+          "en": "I {w}go to work{/w} by {c}bus{/c}.",
+          "mm": "ကျွန်တော် အလုပ်ကို ကားနဲ့ သွားတယ်။"
+        },
+        {
+          "en": "She {w}goes to work{/w} at {c}nine{/c} AM.",
+          "mm": "သူမ မနက် ၉ နာရီမှာ အလုပ်သွားတယ်။"
+        },
+        {
+          "en": "Do you {w}go to work{/w} on {c}Saturdays{/c}?",
+          "mm": "မင်း စနေနေ့တွေမှာ အလုပ်သွားသလား။"
+        },
+        {
+          "en": "He {w}goes to work{/w} in the {c}city{/c}.",
+          "mm": "သူ မြို့ထဲမှာ အလုပ်လုပ်တယ်။"
+        },
+        {
+          "en": "I {w}go to work{/w} with my {c}colleague{/c}.",
+          "mm": "ကျွန်တော် အလုပ်ဖော်နဲ့အတူ အလုပ်သွားတယ်။"
+        }
+      ],
+      "short_mm": "အလုပ်သွားတာ"
+    },
+    {
+      "word": "get home",
+      "pos": "expression",
+      "short_en": "to arrive back at your house",
+      "examples": [
+        {
+          "en": "I {w}get home{/w} at {c}six{/c} in the evening.",
+          "mm": "ကျွန်တော် ညနေ ခြောက်နာရီမှာ အိမ်ပြန်ရောက်တယ်။"
+        },
+        {
+          "en": "What time do you {w}get home{/w} from {c}work{/c}?",
+          "mm": "မင်း အလုပ်ကနေ ဘယ်အချိန်ပြန်ရောက်လဲ။"
+        },
+        {
+          "en": "She {w}gets home{/w} and {c}relaxes{/c}.",
+          "mm": "သူမ အိမ်ပြန်ရောက်ရင် နားနေလိုက်တယ်။"
+        },
+        {
+          "en": "We {w}get home{/w} before it gets {c}dark{/c}.",
+          "mm": "ကျွန်တော်တို့ မောင်မလာခင် အိမ်ပြန်ရောက်တယ်။"
+        },
+        {
+          "en": "I {w}get home{/w} and feed the {c}cat{/c}.",
+          "mm": "ကျွန်တော် အိမ်ပြန်ရောက်ရင် ကြောင်ကို အစာကျွေးတယ်။"
+        }
+      ],
+      "short_mm": "အိမ်ပြန်ရောက်တာ"
+    },
+    {
+      "word": "have dinner",
+      "pos": "expression",
+      "short_en": "to eat your main evening meal",
+      "examples": [
+        {
+          "en": "We {w}have dinner{/w} at {c}seven{/c} PM.",
+          "mm": "ကျွန်တော်တို့ ည ၇ နာရီမှာ ညစာ စားကြတယ်။"
+        },
+        {
+          "en": "I like to {w}have dinner{/w} with my {c}friends{/c}.",
+          "mm": "ကျွန်တော် သူငယ်ချင်းတွေနဲ့ ညစာစားရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "She {w}has dinner{/w} while watching {c}TV{/c}.",
+          "mm": "သူမ တီဗီကြည့်ရင်း ညစာ စားတယ်။"
+        },
+        {
+          "en": "What do you {w}have dinner{/w} with on {c}Fridays{/c}?",
+          "mm": "မင်း သောကြာနေ့ညတွေမှာ ဘာနဲ့ ညစာစားလဲ။"
+        },
+        {
+          "en": "I {w}have dinner{/w} after a long {c}day{/c}.",
+          "mm": "ကျွန်တော် ပင်ပန်းတဲ့နေ့တစ်နေ့ပြီးရင် ညစာ စားတယ်။"
+        }
+      ],
+      "short_mm": "ညစာစားတာ"
+    },
+    {
+      "word": "brush your teeth",
+      "pos": "expression",
+      "short_en": "to clean your teeth with a toothbrush",
+      "examples": [
+        {
+          "en": "I {w}brush my teeth{/w} every {c}morning{/c}.",
+          "mm": "ကျွန်တော် မနက်တိုင်း သွားတိုက်တယ်။"
+        },
+        {
+          "en": "She {w}brushes her teeth{/w} before {c}bed{/c}.",
+          "mm": "သူမ အိပ်ရာမဝင်ခင် သွားတိုက်တယ်။"
+        },
+        {
+          "en": "Don't forget to {w}brush your teeth{/w} after {c}lunch{/c}.",
+          "mm": "နေ့လယ်စာစားပြီးရင် သွားတိုက်ဖို့ မမေ့နဲ့နော်။"
+        },
+        {
+          "en": "He {w}brushes his teeth{/w} for two {c}minutes{/c}.",
+          "mm": "သူ နှစ်မိနစ်လောက်ကြာအောင် သွားတိုက်တယ်။"
+        },
+        {
+          "en": "We {w}brush our teeth{/w} with {c}toothpaste{/c}.",
+          "mm": "ကျွန်တော်တို့ သွားတိုက်ဆေးနဲ့ သွားတိုက်ကြတယ်။"
+        }
+      ],
+      "short_mm": "သွားတိုက်တာ"
+    },
+    {
+      "word": "go to bed",
+      "pos": "expression",
+      "short_en": "to lie down in bed to sleep",
+      "examples": [
+        {
+          "en": "I {w}go to bed{/w} at {c}ten{/c} o'clock.",
+          "mm": "ကျွန်တော် ၁၀ နာရီဆို အိပ်ရာဝင်တယ်။"
+        },
+        {
+          "en": "She {w}goes to bed{/w} when she is {c}tired{/c}.",
+          "mm": "သူမ ပင်ပန်းလာရင် အိပ်ရာဝင်တယ်။"
+        },
+        {
+          "en": "Do you {w}go to bed{/w} very {c}late{/c}?",
+          "mm": "မင်း အရမ်းနောက်ကျမှ အိပ်ရာဝင်သလား။"
+        },
+        {
+          "en": "I {w}go to bed{/w} and read a {c}book{/c}.",
+          "mm": "ကျွန်တော် အိပ်ရာဝင်ပြီး စာအုပ်ဖတ်တယ်။"
+        },
+        {
+          "en": "He {w}goes to bed{/w} after his {c}shower{/c}.",
+          "mm": "သူ ရေချိုးပြီးမှ အိပ်ရာဝင်တယ်။"
+        }
+      ],
+      "short_mm": "အိပ်ရာဝင်တာ"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I open my eyes, but I don't ___ yet.",
+      "right": "get up",
+      "wrong": "wake up",
+      "why": "Wake up is opening eyes; get up is leaving the bed.",
+      "why_mm": "Wake up ဆိုတာ မျက်လုံးပွင့်လာတာပါ၊ get up ဆိုတာကတော့ အိပ်ရာထဲကနေ တကယ်ထွက်လာတာပါ။"
+    },
+    {
+      "prompt": "I ___ at 7:00 but I didn't ___ until 7:30.",
+      "right": "woke up",
+      "wrong": "get up",
+      "why": "Waking up happens first, getting up happens second.",
+      "why_mm": "Wake up က အရင်ဖြစ်ပြီးမှ get up က နောက်မှ ဖြစ်တာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I open my eyes at 6 AM. I ___.",
+      "answer": "wake up",
+      "options": [
+        "wake up",
+        "get up",
+        "go to bed"
+      ],
+      "explain_en": "Opening your eyes is waking up.",
+      "explain_mm": "မျက်လုံးပွင့်လာတာက wake up ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I leave my bed at 6:15 AM. I ___.",
+      "answer": "get up",
+      "options": [
+        "wake up",
+        "get up",
+        "get dressed"
+      ],
+      "explain_en": "Leaving your bed is getting up.",
+      "explain_mm": "အိပ်ရာကနေ ထလာတာက get up ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I put on my clothes for the day. I ___.",
+      "answer": "get dressed",
+      "options": [
+        "get dressed",
+        "have a shower",
+        "have breakfast"
+      ],
+      "explain_en": "Putting on clothes is getting dressed.",
+      "explain_mm": "အဝတ်အစား ဝတ်တာက get dressed ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I arrive back at my house after work. I ___.",
+      "answer": "get home",
+      "options": [
+        "go to work",
+        "get home",
+        "go to bed"
+      ],
+      "explain_en": "Arriving at your house is getting home.",
+      "explain_mm": "အိမ်ကို ပြန်ရောက်တာက get home ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I wash my body in the bathroom. I ___.",
+      "answer": "have a shower",
+      "options": [
+        "have a shower",
+        "brush your teeth",
+        "have breakfast"
+      ],
+      "explain_en": "Washing your body is having a shower.",
+      "explain_mm": "ရေချိုးတာက have a shower ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I ___ at 8:00 PM before I go to sleep.\"",
+      "answer": "have dinner",
+      "options": [],
+      "explain_en": "Eating the evening meal is having dinner.",
+      "explain_mm": "ညစာစားတာက have dinner ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I ___ because I have to go to the office.\"",
+      "answer": "go to work",
+      "options": [],
+      "explain_en": "Leaving for your job is going to work.",
+      "explain_mm": "အလုပ်သွားတာက go to work ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I ___ with a toothbrush.\"",
+      "answer": "brush your teeth",
+      "options": [],
+      "explain_en": "Cleaning teeth is brushing your teeth.",
+      "explain_mm": "သွားတိုက်တာက brush your teeth ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I always ___ at 7:00 AM to start the day.\"",
+      "answer": "have breakfast",
+      "options": [],
+      "explain_en": "Eating the first meal is having breakfast.",
+      "explain_mm": "မနက်စာစားတာက have breakfast ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I am sleepy, so I will ___ now.\"",
+      "answer": "go to bed",
+      "options": [],
+      "explain_en": "Going to sleep is going to bed.",
+      "explain_mm": "အိပ်ရာဝင်တာက go to bed ဖြစ်ပါတယ်။"
+    }
+  ]
+}

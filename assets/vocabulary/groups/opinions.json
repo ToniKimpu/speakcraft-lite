@@ -1,0 +1,377 @@
+{
+  "id": "opinions",
+  "title": "Giving opinions",
+  "level": 1,
+  "order": 25,
+  "theme": "Opinions",
+  "style": "theme",
+  "unit": "expression",
+  "why_grouped_en": "Learning how to share your thoughts and respond to others is key to holding a conversation. These phrases help you express your view, agree, or disagree politely.",
+  "why_grouped_mm": "စကားပြောတဲ့အခါ ကိုယ့်အမြင်ကို ပြောပြဖို့၊ သူများအမြင်ကို လက်ခံဖို့ ဒါမှမဟုတ် ငြင်းဖို့အတွက် ဒီစာစုလေးတွေက အရမ်းအရေးကြီးပါတယ်။",
+  "words": [
+    {
+      "word": "I think",
+      "pos": "expression",
+      "short_en": "the most common way to state your opinion",
+      "examples": [
+        {
+          "en": "{w}I think{/w} this {c}movie{/c} is great.",
+          "mm": "ဒီဇာတ်ကားက အရမ်းကောင်းတယ်လို့ ကျွန်တော်ထင်တယ်။"
+        },
+        {
+          "en": "{w}I think{/w} we should {c}go{/c} now.",
+          "mm": "အခုသွားသင့်ပြီလို့ ကျွန်တော်ထင်တယ်။"
+        },
+        {
+          "en": "{w}I think{/w} that's a {c}bad{/c} idea.",
+          "mm": "ဒါက မကောင်းတဲ့အကြံအစည်လို့ ကျွန်တော်ထင်တယ်။"
+        },
+        {
+          "en": "{w}I think{/w} he is {c}right{/c}.",
+          "mm": "သူပြောတာ မှန်တယ်လို့ ကျွန်တော်ထင်တယ်။"
+        },
+        {
+          "en": "{w}I think{/w} it will {c}rain{/c} today.",
+          "mm": "ဒီနေ့ မိုးရွာမယ်လို့ ကျွန်တော်ထင်တယ်။"
+        }
+      ],
+      "short_mm": "ကျွန်တော်/ကျွန်မ ထင်တာကတော့"
+    },
+    {
+      "word": "In my opinion",
+      "pos": "expression",
+      "short_en": "a slightly more formal way to introduce your view",
+      "examples": [
+        {
+          "en": "{w}In my opinion{/w}, this is the best {c}restaurant{/c}.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ ဒါက အကောင်းဆုံးစားသောက်ဆိုင်ပဲ။"
+        },
+        {
+          "en": "{w}In my opinion{/w}, it was a {c}mistake{/c}.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ ဒါက မှားယွင်းမှုတစ်ခုပဲ။"
+        },
+        {
+          "en": "{w}In my opinion{/w}, we need more {c}time{/c}.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ အချိန်ပိုလိုမယ်ထင်တယ်။"
+        },
+        {
+          "en": "{w}In my opinion{/w}, she is very {c}talented{/c}.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ သူက အရမ်းတော်တဲ့သူပဲ။"
+        },
+        {
+          "en": "{w}In my opinion{/w}, the {c}plan{/c} is perfect.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ ဒီအစီအစဉ်က ပြည့်စုံလွန်းပါတယ်။"
+        }
+      ],
+      "short_mm": "ကျွန်တော့်/ကျွန်မ အမြင်အရဆိုရင်တော့"
+    },
+    {
+      "word": "I agree",
+      "pos": "expression",
+      "short_en": "used to show you have the same opinion as someone else",
+      "examples": [
+        {
+          "en": "{w}I agree{/w} with {c}you{/c}.",
+          "mm": "ကျွန်တော် သဘောတူပါတယ်။"
+        },
+        {
+          "en": "Yes, {w}I agree{/w} that it is {c}expensive{/c}.",
+          "mm": "ဟုတ်တယ်၊ ဒါက ဈေးကြီးတယ်ဆိုတာကို ကျွန်တော် သဘောတူပါတယ်။"
+        },
+        {
+          "en": "I think it's cold. — {w}I agree{/w}, let's {c}leave{/c}.",
+          "mm": "အေးတယ်လို့ ထင်တယ်။ — ဟုတ်တယ် သဘောတူတယ်၊ သွားကြရအောင်။"
+        },
+        {
+          "en": "{w}I agree{/w} entirely with your {c}point{/c}.",
+          "mm": "မင်းရဲ့အချက်ကို ကျွန်တော် အပြည့်အဝ သဘောတူပါတယ်။"
+        },
+        {
+          "en": "She said it was fun, and {w}I agree{/w} {c}too{/c}.",
+          "mm": "သူမက ပျော်စရာကောင်းတယ်လို့ ပြောတယ်၊ ကျွန်တော်လည်း သဘောတူတယ်။"
+        }
+      ],
+      "short_mm": "ကျွန်တော်/ကျွန်မ သဘောတူပါတယ်"
+    },
+    {
+      "word": "I disagree",
+      "pos": "expression",
+      "short_en": "used to show you have a different opinion",
+      "nuance_en": "This can sound very direct. Use 'I'm not sure' or 'I don't think so' to be more polite.",
+      "examples": [
+        {
+          "en": "{w}I disagree{/w} with that {c}idea{/c}.",
+          "mm": "အဲဒီအကြံအစည်ကို ကျွန်တော် သဘောမတူဘူး။"
+        },
+        {
+          "en": "Actually, {w}I disagree{/w} {c}completely{/c}.",
+          "mm": "တကယ်တော့ ကျွန်တော် လုံးဝ သဘောမတူပါဘူး။"
+        },
+        {
+          "en": "I'm afraid {w}I disagree{/w} with your {c}choice{/c}.",
+          "mm": "စိတ်မကောင်းပေမယ့် မင်းရဲ့ရွေးချယ်မှုကို ကျွန်တော် သဘောမတူနိုင်ဘူး။"
+        },
+        {
+          "en": "He thinks it's easy, but {w}I disagree{/w} {c}entirely{/c}.",
+          "mm": "သူက လွယ်တယ်လို့ ထင်နေပေမယ့် ကျွန်တော် လုံးဝ သဘောမတူဘူး။"
+        },
+        {
+          "en": "{w}I disagree{/w} — it's not the right {c}time{/c}.",
+          "mm": "ကျွန်တော် သဘောမတူဘူး၊ အခုက အချိန်အခါကောင်း မဟုတ်ဘူး။"
+        }
+      ],
+      "short_mm": "ကျွန်တော်/ကျွန်မ သဘောမတူပါဘူး",
+      "nuance_mm": "တိုက်ရိုက်ဆန်လွန်းလို့ နည်းနည်း ရိုင်းသလို ဖြစ်သွားနိုင်ပါတယ်။"
+    },
+    {
+      "word": "I'm not sure",
+      "pos": "expression",
+      "short_en": "a polite way to say you don't agree or don't know yet",
+      "examples": [
+        {
+          "en": "{w}I'm not sure{/w} about that {c}plan{/c}.",
+          "mm": "အဲဒီအစီအစဉ်နဲ့ ပတ်သက်ပြီး ကျွန်တော် သေချာမသိဘူး။"
+        },
+        {
+          "en": "{w}I'm not sure{/w} if that's {c}true{/c}.",
+          "mm": "ဒါက အမှန်ဟုတ်မဟုတ် ကျွန်တော် မသေချာဘူး။"
+        },
+        {
+          "en": "Is it good? — {w}I'm not sure{/w}, let me {c}check{/c}.",
+          "mm": "ကောင်းလား။ — မသေချာဘူး၊ ကျွန်တော် စစ်ကြည့်ပါဦးမယ်။"
+        },
+        {
+          "en": "{w}I'm not sure{/w} I agree with {c}him{/c}.",
+          "mm": "သူနဲ့ ကျွန်တော် သဘောတူရဲ့လားဆိုတာ မသေချာဘူး။"
+        },
+        {
+          "en": "{w}I'm not sure{/w} what to {c}do{/c} next.",
+          "mm": "နောက်ဘာလုပ်ရမလဲဆိုတာ ကျွန်တော် မသေချာဘူး။"
+        }
+      ],
+      "short_mm": "ကျွန်တော်/ကျွန်မ သေချာမသိသေးဘူး/သဘောမတူသေးဘူး"
+    },
+    {
+      "word": "You're right",
+      "pos": "expression",
+      "short_en": "used to tell someone their opinion or fact is correct",
+      "examples": [
+        {
+          "en": "{w}You're right{/w}, it is very {c}hot{/c} today.",
+          "mm": "မင်းပြောတာမှန်တယ်၊ ဒီနေ့ အရမ်းပူတယ်။"
+        },
+        {
+          "en": "I think you're right. — {w}You're right{/w}, {c}sorry{/c}.",
+          "mm": "မင်းပြောတာ မှန်တယ်လို့ ငါထင်တယ်။ — မင်းပြောတာမှန်တယ်၊ တောင်းပန်ပါတယ်။"
+        },
+        {
+          "en": "{w}You're right{/w}, we should {c}go{/c} home.",
+          "mm": "မင်းပြောတာမှန်တယ်၊ ငါတို့ အိမ်ပြန်သင့်ပြီ။"
+        },
+        {
+          "en": "Actually, {w}you're right{/w} about the {c}price{/c}.",
+          "mm": "တကယ်တော့ ဈေးနှုန်းနဲ့ပတ်သက်ပြီး မင်းပြောတာမှန်တယ်။"
+        },
+        {
+          "en": "{w}You're right{/w}, that was a {c}silly{/c} mistake.",
+          "mm": "မင်းပြောတာမှန်တယ်၊ အဲဒါက မိုက်မဲတဲ့အမှားတစ်ခုပဲ။"
+        }
+      ],
+      "short_mm": "ခင်ဗျား/ရှင် ပြောတာ မှန်ပါတယ်"
+    },
+    {
+      "word": "It depends",
+      "pos": "expression",
+      "short_en": "used when you don't have a simple yes or no answer",
+      "examples": [
+        {
+          "en": "Is it good? — {w}It depends{/w} on the {c}price{/c}.",
+          "mm": "ကောင်းလား။ — ဈေးပေါ်မှာ မူတည်တယ်။"
+        },
+        {
+          "en": "Can you go? — {w}It depends{/w} on my {c}work{/c}.",
+          "mm": "မင်းသွားလို့ရမလား။ — ကျွန်တော့်အလုပ်ပေါ်မှာ မူတည်တယ်။"
+        },
+        {
+          "en": "{w}It depends{/w} on the {c}weather{/c}.",
+          "mm": "ရာသီဥတုအပေါ်မှာ မူတည်တယ်။"
+        },
+        {
+          "en": "Do you like it? — {w}It depends{/w} on who {c}asks{/c}.",
+          "mm": "မင်းကြိုက်လား။ — ဘယ်သူမေးလဲဆိုတဲ့အပေါ်မှာ မူတည်တယ်။"
+        },
+        {
+          "en": "{w}It depends{/w} on how much {c}time{/c} we have.",
+          "mm": "အချိန်ဘယ်လောက်ရှိလဲဆိုတဲ့အပေါ်မှာ မူတည်တယ်။"
+        }
+      ],
+      "short_mm": "အခြေအနေပေါ်မှာ မူတည်ပါတယ်"
+    },
+    {
+      "word": "What do you think?",
+      "pos": "expression",
+      "short_en": "used to ask for someone else's opinion",
+      "examples": [
+        {
+          "en": "{w}What do you think{/w} of this {c}dress{/c}?",
+          "mm": "ဒီဂါဝန်အကြောင်း မင်းဘယ်လိုထင်လဲ။"
+        },
+        {
+          "en": "I like it. {w}What do you think{/w}?",
+          "mm": "ငါကြိုက်တယ်။ မင်းရော ဘယ်လိုထင်လဲ။"
+        },
+        {
+          "en": "{w}What do you think{/w} about the new {c}boss{/c}?",
+          "mm": "အလုပ်ရှင်အသစ်အကြောင်း မင်းဘယ်လိုထင်လဲ။"
+        },
+        {
+          "en": "That's my plan. {w}What do you think{/w}?",
+          "mm": "အဲဒါ ငါ့အစီအစဉ်ပဲ။ မင်းဘယ်လိုထင်လဲ။"
+        },
+        {
+          "en": "{w}What do you think{/w} is the best {c}way{/c}?",
+          "mm": "အကောင်းဆုံးနည်းလမ်းက ဘာဖြစ်မယ်လို့ မင်းထင်လဲ။"
+        }
+      ],
+      "short_mm": "ခင်ဗျား/ရှင် ဘယ်လိုထင်လဲ"
+    },
+    {
+      "word": "I reckon",
+      "pos": "expression",
+      "short_en": "a common, informal way to say 'I think' (very common in UK/Australia)",
+      "examples": [
+        {
+          "en": "{w}I reckon{/w} it will {c}rain{/c} soon.",
+          "mm": "မကြာခင် မိုးရွာမယ်လို့ ငါထင်တယ်။"
+        },
+        {
+          "en": "{w}I reckon{/w} he's a good {c}person{/c}.",
+          "mm": "သူက လူကောင်းတစ်ယောက်လို့ ငါထင်တယ်။"
+        },
+        {
+          "en": "{w}I reckon{/w} we should {c}leave{/c} now.",
+          "mm": "ငါတို့ အခုသွားသင့်ပြီလို့ ငါထင်တယ်။"
+        },
+        {
+          "en": "{w}I reckon{/w} that's a great {c}idea{/c}.",
+          "mm": "အဲဒါ အရမ်းကောင်းတဲ့အကြံပဲလို့ ငါထင်တယ်။"
+        },
+        {
+          "en": "{w}I reckon{/w} she'll be {c}late{/c} again.",
+          "mm": "သူမ နောက်ကျဦးမယ်လို့ ငါထင်တယ်။"
+        }
+      ],
+      "short_mm": "ကျွန်တော်/ကျွန်မ ထင်တာကတော့"
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I ___ with you.",
+      "right": "agree",
+      "wrong": "think",
+      "why": "We say 'I agree with you', but 'I think that...'.",
+      "why_mm": "I agree with you လို့ သုံးရပြီး I think that... လို့ သုံးရတာက collocations ကွာခြားလို့ပါ။"
+    },
+    {
+      "prompt": "___, this is a bad idea.",
+      "right": "In my opinion",
+      "wrong": "What do you think",
+      "why": "The first is a statement; the second is a question.",
+      "why_mm": "ပထမတစ်ခုက အမြင်ကို ပြောပြတာဖြစ်ပြီး ဒုတိယတစ်ခုက အမြင်ကို မေးမြန်းတာ ဖြစ်လို့ပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Asking for someone's view: \"___?\"",
+      "answer": "What do you think?",
+      "options": [
+        "What do you think?",
+        "I agree",
+        "I disagree"
+      ],
+      "explain_en": "Asking for an opinion.",
+      "explain_mm": "တစ်ဖက်လူရဲ့ အမြင်ကို မေးမြန်းဖို့အတွက်ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "When you have the same view: \"___.\"",
+      "answer": "I agree",
+      "options": [
+        "I agree",
+        "I'm not sure",
+        "It depends"
+      ],
+      "explain_en": "Confirming you share the same view.",
+      "explain_mm": "ကိုယ့်အမြင်နဲ့ တူကြောင်း အတည်ပြုပေးဖို့ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "When the answer isn't simple: \"___.\"",
+      "answer": "It depends",
+      "options": [
+        "It depends",
+        "I agree",
+        "You're right"
+      ],
+      "explain_en": "Used when the answer varies based on other factors.",
+      "explain_mm": "အဖြေက အခြေအနေပေါ် မူတည်ပြီး ပြောင်းလဲနိုင်တဲ့အခါ သုံးပါတယ်။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___, this is the best cafe.\"",
+      "answer": "In my opinion",
+      "options": [],
+      "explain_en": "A formal way to state your view.",
+      "explain_mm": "ကိုယ့်အမြင်ကို formal ဖြစ်တဲ့ ပုံစံနဲ့ ပြောပြဖို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I ___ it will be a long day.\"",
+      "answer": "reckon",
+      "options": [],
+      "explain_en": "An informal way to say you think something.",
+      "explain_mm": "ကိုယ့်အမြင်ကို သူငယ်ချင်းလိုမျိုး informal ဖြစ်အောင် ပြောဖို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"I ___ with your decision.\"",
+      "answer": "agree",
+      "options": [],
+      "explain_en": "To share the same opinion.",
+      "explain_mm": "အမြင်တူကြောင်း ပြသဖို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___, you are totally correct.\"",
+      "answer": "You're right",
+      "options": [],
+      "explain_en": "Confirming someone is correct.",
+      "explain_mm": "တစ်ဖက်လူပြောတာ မှန်ကြောင်း အတည်ပြုဖို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___ — I don't think that's true.\"",
+      "answer": "I disagree",
+      "options": [],
+      "explain_en": "To state you have a different view.",
+      "explain_mm": "ကိုယ့်အမြင်က တစ်ဖက်လူနဲ့ မတူဘူးလို့ ပြောဖို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"___, let's go to the park.\"",
+      "answer": "I think",
+      "options": [],
+      "explain_en": "The most common way to give an opinion.",
+      "explain_mm": "အမြင်တစ်ခုကို အသုံးအများဆုံး ပုံစံနဲ့ ပြောဖို့ပါ။"
+    },
+    {
+      "type": "gap_fill",
+      "prompt": "Type the phrase: \"Can we go? — ___.\"",
+      "answer": "I'm not sure",
+      "options": [],
+      "explain_en": "A polite way to show doubt.",
+      "explain_mm": "ယဉ်ကျေးတဲ့ ပုံစံနဲ့ သံသယရှိကြောင်း ပြဖို့ပါ။"
+    }
+  ]
+}
