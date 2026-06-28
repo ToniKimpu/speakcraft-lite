@@ -28,6 +28,13 @@ class Env {
       dotenv.env['BUNNY_SPOKEN_PATTERN_API_KEY']!;
   static String get bunnyListeningAPIKey =>
       dotenv.env['BUNNY_LISTENING_API_KEY']!;
+
+  /// Vocabulary audio CDN base, e.g. `https://pmp-english-app.b-cdn.net/vocabularies/`
+  /// (MUST end with `/`). Optional — until audio ships, vocab uses on-device TTS,
+  /// so the app still boots without it. Stored paths are `bunny/<level>/<group>/…`.
+  static String get bunnyVocabBaseUrl =>
+      dotenv.env['BUNNY_VOCAB_API_KEY'] ?? '';
+
   static String get privacyPolicyUrl => dotenv.env['PRIVACY_POLICY']!;
 
   /// Google OAuth web client ID — used as the `serverClientId` for native Google

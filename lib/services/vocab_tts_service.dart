@@ -1,10 +1,10 @@
 import 'package:flutter_tts/flutter_tts.dart';
 
-/// Placeholder audio for the vocabulary **prototype**: on-device TTS.
+/// Fallback audio for vocabulary: on-device TTS.
 ///
-/// Production will instead play pre-generated EdgeTTS clips uploaded to Bunny
-/// (via `VocabWord.audioPath` / `VocabExample.audioPath`). Keeping playback
-/// behind this one service means that swap is localized.
+/// Production plays pre-generated EdgeTTS clips from Bunny when a group is
+/// audio-enabled — the URL is *computed* (see `vocab_audio.dart`), and the UI
+/// falls back to this service when no clip is available.
 class VocabTtsService {
   VocabTtsService._();
   static final VocabTtsService instance = VocabTtsService._();

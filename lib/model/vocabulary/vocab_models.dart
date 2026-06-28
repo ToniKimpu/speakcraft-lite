@@ -63,6 +63,7 @@ class VocabGroup {
     required this.exercises,
     this.style = 'contrast',
     this.unit = 'word',
+    this.hasAudio = false,
   });
 
   final String id;
@@ -70,6 +71,12 @@ class VocabGroup {
   final int level;
   final int order;
   final String theme;
+
+  /// True once pre-generated Bunny audio has been uploaded for this group.
+  /// Audio URLs are *computed* (see [vocab_audio.dart]), never stored — so
+  /// turning audio on is a one-column flip, not a content rewrite. Off → the
+  /// UI falls back to on-device TTS.
+  final bool hasAudio;
 
   /// 'contrast' (which-word-when, the Intermediate style) or 'theme' (topical
   /// Beginner style — lighter, no "Which one, when?" synthesis).
@@ -95,6 +102,7 @@ class VocabGroup {
         theme: j['theme'] as String? ?? '',
         style: j['style'] as String? ?? 'contrast',
         unit: j['unit'] as String? ?? 'word',
+        hasAudio: j['has_audio'] as bool? ?? false,
         whyGroupedEn: j['why_grouped_en'] as String? ?? '',
         whyGroupedMm: j['why_grouped_mm'] as String? ?? '',
         words: ((j['words'] as List?) ?? const [])
@@ -155,7 +163,6 @@ class VocabWord {
     required this.examples,
     required this.collocations,
     required this.confuseWith,
-    this.audioPath,
   });
 
   final String word;
@@ -185,10 +192,6 @@ class VocabWord {
   final List<String> collocations;
   final List<String> confuseWith;
 
-  /// Pre-generated clip path (Bunny) — null in the prototype, which falls back
-  /// to on-device TTS.
-  final String? audioPath;
-
   factory VocabWord.fromJson(Map<String, dynamic> j) => VocabWord(
         word: j['word'] as String? ?? '',
         pos: j['pos'] as String? ?? '',
@@ -214,21 +217,18 @@ class VocabWord {
         confuseWith: ((j['confuse_with'] as List?) ?? const [])
             .map((e) => e.toString())
             .toList(growable: false),
-        audioPath: j['audio_path'] as String?,
       );
 }
 
 class VocabExample {
-  const VocabExample({required this.en, required this.mm, this.audioPath});
+  const VocabExample({required this.en, required this.mm});
 
   final String en;
   final String mm;
-  final String? audioPath;
 
   factory VocabExample.fromJson(Map<String, dynamic> j) => VocabExample(
         en: j['en'] as String? ?? '',
         mm: j['mm'] as String? ?? '',
-        audioPath: j['audio_path'] as String?,
       );
 }
 
