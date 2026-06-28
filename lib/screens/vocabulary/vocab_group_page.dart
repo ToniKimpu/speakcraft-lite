@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_routes.dart';
 import '../../config/pmp_text_styles.dart';
+import '../../model/vocabulary/vocab_audio.dart';
 import '../../model/vocabulary/vocab_loader.dart';
 import '../../model/vocabulary/vocab_models.dart';
 import '../../services/vocab_tts_service.dart';
@@ -94,8 +95,11 @@ class _VocabGroupPageState extends State<VocabGroupPage> {
                         onPageChanged: (i) => setState(() => _page = i),
                         children: [
                           _IntroPage(group: group),
-                          for (final word in group.words)
-                            _WordPage(word: word),
+                          for (var i = 0; i < group.words.length; i++)
+                            _WordPage(
+                                word: group.words[i],
+                                group: group,
+                                wordIndex: i),
                           _ComparisonPage(
                             group: group,
                             onPractice: () => Navigator.pushNamed(
@@ -249,8 +253,11 @@ class _IntroPage extends StatelessWidget {
 }
 
 class _WordPage extends StatelessWidget {
-  const _WordPage({required this.word});
+  const _WordPage(
+      {required this.word, required this.group, required this.wordIndex});
   final VocabWord word;
+  final VocabGroup group;
+  final int wordIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -278,7 +285,9 @@ class _WordPage extends StatelessWidget {
                   ],
                 ),
               ),
-              _SpeakButton(text: word.word),
+              _SpeakButton(
+                  text: word.word,
+                  audioUrl: VocabAudio.wordUrl(group, wordIndex)),
             ],
           ),
           if (word.ipa.isNotEmpty)
@@ -335,7 +344,10 @@ class _WordPage extends StatelessWidget {
                 style: PmpTextStyles.label2Regular
                     .copyWith(color: cs.onSurfaceVariant)),
             const SizedBox(height: 6),
-            for (final ex in word.examples) _ExampleRow(example: ex),
+            for (var j = 0; j < word.examples.length; j++)
+              _ExampleRow(
+                  example: word.examples[j],
+                  audioUrl: VocabAudio.exampleUrl(group, wordIndex, j)),
           ],
           if (word.confuseWith.isNotEmpty) ...[
             const SizedBox(height: 12),
@@ -491,8 +503,9 @@ class _PatternLine extends StatelessWidget {
 }
 
 class _ExampleRow extends StatelessWidget {
-  const _ExampleRow({required this.example});
+  const _ExampleRow({required this.example, this.audioUrl});
   final VocabExample example;
+  final String? audioUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -520,7 +533,10 @@ class _ExampleRow extends StatelessWidget {
               ],
             ),
           ),
-          _SpeakButton(text: stripExampleMarkup(example.en), small: true),
+          _SpeakButton(
+              text: stripExampleMarkup(example.en),
+              audioUrl: audioUrl,
+              small: true),
         ],
       ),
     );
@@ -561,8 +577,9 @@ class _ExampleText extends StatelessWidget {
 }
 
 class _SpeakButton extends StatelessWidget {
-  const _SpeakButton({required this.text, this.small = false});
+  const _SpeakButton({required this.text, this.audioUrl, this.small = false});
   final String text;
+  final String? audioUrl;
   final bool small;
 
   @override
@@ -572,7 +589,8 @@ class _SpeakButton extends StatelessWidget {
       visualDensity: VisualDensity.compact,
       iconSize: small ? 18 : 22,
       icon: Icon(Icons.volume_up_rounded, color: cs.primary),
-      onPressed: () => VocabTtsService.instance.speak(text),
+      onPressed: () =>
+          VocabTtsService.instance.playUrlOrSpeak(audioUrl, text),
       tooltip: 'Listen',
     );
   }
