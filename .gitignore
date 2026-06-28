@@ -76,3 +76,6 @@ bunny_download/
 
 # Marketing / ad material (not part of the app)
 ads/
+
+# Generated TTS clips (staged for Bunny upload; not versioned)
+audio_out/
