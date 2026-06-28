@@ -1,25 +1,14 @@
 /// Vocabulary data access — the **only** place the module reads content.
 ///
-/// Productionizing: content lives in the Supabase `vocab_groups` table (one row
-/// per group: index columns + a `data` JSONB + a `has_audio` flag). The whole
-/// module talks to vocabulary solely through [loadVocabIndex] and
-/// [loadVocabGroup], so the storage swap is confined to this file.
-///
-/// [_online] gates the source: it stays `false` (bundled assets) until the
-/// Supabase table is populated, then flips to `true` (online-only, like Grammar).
+/// Content lives in the Supabase `vocab_groups` table (one row per group: index
+/// columns + a `data` JSONB + a `has_audio` flag). The whole module talks to
+/// vocabulary solely through [loadVocabIndex] and [loadVocabGroup], so the
+/// storage backend is confined to this file. (Authoring source for the table is
+/// `assets/vocabulary/`, seeded via the admin `seed-vocab.mjs` — not bundled.)
 library;
-
-import 'dart:convert';
-
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../../services/supabase_service.dart';
 import 'vocab_models.dart';
-
-/// Flip to `true` once `vocab_groups` is populated → online-only.
-const bool _online = true;
-
-const _kIndexAsset = 'assets/vocabulary/index.json';
 
 // Session cache — the manifest rarely changes mid-session.
 List<VocabIndexEntry>? _indexCache;
@@ -27,18 +16,16 @@ List<VocabIndexEntry>? _indexCache;
 /// Loads the group manifest, sorted by level then authored order.
 Future<List<VocabIndexEntry>> loadVocabIndex() async {
   if (_indexCache != null) return _indexCache!;
-  final entries =
-      _online ? await _indexFromSupabase() : await _indexFromAssets();
+  final entries = await _indexFromSupabase();
   entries.sort((a, b) =>
       a.level != b.level ? a.level.compareTo(b.level) : a.order.compareTo(b.order));
   return _indexCache = entries;
 }
 
 /// Loads one full group by id.
-Future<VocabGroup> loadVocabGroup(String id) =>
-    _online ? _groupFromSupabase(id) : _groupFromAssets(id);
+Future<VocabGroup> loadVocabGroup(String id) => _groupFromSupabase(id);
 
-// ── Supabase (production) ───────────────────────────────────────────────────
+// ── Supabase ────────────────────────────────────────────────────────────────
 
 Future<List<VocabIndexEntry>> _indexFromSupabase() async {
   // RLS returns only published, non-deleted rows (like writing_lessons), so the
@@ -77,19 +64,4 @@ Future<VocabGroup> _groupFromSupabase(String id) async {
   final data = (m['data'] as Map).cast<String, dynamic>();
   data['has_audio'] = m['has_audio'] ?? false;
   return VocabGroup.fromJson(data);
-}
-
-// ── Bundled assets (until _online) ──────────────────────────────────────────
-
-Future<List<VocabIndexEntry>> _indexFromAssets() async {
-  final raw = await rootBundle.loadString(_kIndexAsset);
-  final map = jsonDecode(raw) as Map<String, dynamic>;
-  return ((map['groups'] as List?) ?? const [])
-      .map((e) => VocabIndexEntry.fromJson((e as Map).cast<String, dynamic>()))
-      .toList();
-}
-
-Future<VocabGroup> _groupFromAssets(String id) async {
-  final raw = await rootBundle.loadString('assets/vocabulary/groups/$id.json');
-  return VocabGroup.fromJson(jsonDecode(raw) as Map<String, dynamic>);
 }
