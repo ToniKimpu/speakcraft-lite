@@ -15,12 +15,15 @@ List<WritingUnitSummary>? _indexCache;
 /// Online-only: queries Supabase `writing_lessons` (published units).
 Future<List<WritingUnitSummary>> loadWritingUnitsIndex() async {
   if (_indexCache != null) return _indexCache!;
+  // NB: postgrest-dart's .order() defaults to DESCENDING — pass ascending:true
+  // explicitly so the curriculum runs 1.1, 1.2, … in authored order (not 1.6
+  // first / first lesson last).
   final rows = await supabase
       .from('writing_lessons')
       .select('id,level,section_id,section,order_in_level,title,subtitle_mm')
-      .order('level')
-      .order('section_id')
-      .order('order_in_level');
+      .order('level', ascending: true)
+      .order('section_id', ascending: true)
+      .order('order_in_level', ascending: true);
   final units = (rows as List).map((r) {
     final m = (r as Map).cast<String, dynamic>();
     return WritingUnitSummary.fromJson({
