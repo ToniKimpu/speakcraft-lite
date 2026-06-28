@@ -1,0 +1,422 @@
+{
+  "id": "adj_noun_collocations",
+  "title": "Words that go together",
+  "level": 2,
+  "order": 302,
+  "theme": "Collocations",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "Some adjectives only pair with certain nouns. We say 'heavy rain', not 'strong rain', and 'strong coffee', not 'powerful coffee'. These six common adjectives have fixed noun partners that you need to learn.",
+  "why_grouped_mm": "Adjective တချို့က noun တချို့နဲ့ပဲ တွဲသုံးလို့ရပါတယ်။ ဥပမာ၊ 'strong rain' လို့ မပြောဘဲ 'heavy rain' လို့ပဲ ပြောကြတယ်။ 'powerful coffee' အစား 'strong coffee' လို့ သုံးကြတယ်။ ဒီ adjective ခြောက်လုံးမှာ သူတို့နဲ့ပဲ လိုက်ဖက်တဲ့ noun partner တွေ ရှိတာမို့ အတူတူလေ့လာထားသင့်ပါတယ်။",
+  "words": [
+    {
+      "word": "heavy",
+      "pos": "adjective",
+      "ipa": "/ˈhev.i/",
+      "short_en": "a large amount or degree",
+      "short_mm": "ပမာဏများပြားသော၊ ပြင်းထန်သော",
+      "use_when_en": "To describe a large amount of something, especially things like rain, traffic, or food.",
+      "use_when_mm": "မိုး၊ ကား၊ အစားအစာလိုမျိုး အရာတွေရဲ့ ပမာဏများပြားတာ၊ ပြင်းထန်တာကို ဖော်ပြချင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This describes the intensity or quantity of something, not its physical weight. We say 'heavy rain' (a lot of rain), not 'strong rain'.",
+      "explanation_mm": "ဒီစကားလုံးက ရုပ်ပိုင်းဆိုင်ရာအလေးချိန်ကို ပြောတာမဟုတ်ဘဲ အရေအတွက် (quantity) ဒါမှမဟုတ် ပြင်းထန်မှု (intensity) ကို ဖော်ပြတာပါ။ 'strong rain' လို့မပြောဘဲ 'heavy rain' (မိုးများတာ) လို့ ပြောရပါတယ်။",
+      "nuance_en": "It often has a slightly negative feel: heavy traffic, heavy workload, a heavy smoker (bad for health).",
+      "nuance_mm": "အများအားဖြင့် နည်းနည်း negative သဘောဆောင်ပါတယ်။ ဥပမာ - heavy traffic (ကားအရမ်းပိတ်တာ), heavy workload (အလုပ်အရမ်းများတာ), a heavy smoker (ကျန်းမာရေးအတွက်မကောင်းတဲ့ ဆေးလိပ်သမား)။",
+      "goes_with_en": "heavy + rain / traffic / snow / fog · a heavy + smoker / drinker / sleeper / meal / workload / fine",
+      "goes_with_note_en": "Often used with weather, traffic, and personal habits.",
+      "goes_with_note_mm": "ရာသီဥတု၊ ယာဉ်ကြောပိတ်ဆို့မှုနဲ့ လူတစ်ယောက်ရဲ့ အလေ့အကျင့်တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "We got stuck in {w}heavy{/w} {c}traffic{/c} for over an hour.",
+          "mm": "ကျွန်တော်တို့ တစ်နာရီကျော်လောက် ကားအရမ်းပိတ်နေတဲ့ထဲမှာ ပိတ်မိနေခဲ့တယ်။"
+        },
+        {
+          "en": "The forecast says there will be {w}heavy{/w} {c}rain{/c} this afternoon.",
+          "mm": "ဒီနေ့လယ်ပိုင်းမှာ မိုးသည်းထန်မယ်လို့ မိုးလေဝသက ခန့်မှန်းထားတယ်။"
+        },
+        {
+          "en": "My uncle is a {w}heavy{/w} {c}smoker{/c}; he smokes two packs a day.",
+          "mm": "ကျွန်တော့်ဦးလေးက ဆေးလိပ်အရမ်းသောက်တယ်၊ တစ်နေ့ကို နှစ်ဘူးတောင် သောက်တယ်။"
+        },
+        {
+          "en": "I can't eat any more; that was a very {w}heavy{/w} {c}meal{/c}.",
+          "mm": "ကျွန်တော် ထပ်မစားနိုင်တော့ဘူး၊ ဒါက တကယ်ကို အစာကြေခဲတဲ့ အစားအစာပဲ။"
+        },
+        {
+          "en": "She paid a {w}heavy{/w} {c}fine{/c} for parking in the wrong place.",
+          "mm": "နေရာမှားပြီး ကားရပ်မိလို့ သူ ဒဏ်ငွေအများကြီးဆောင်လိုက်ရတယ်။"
+        }
+      ],
+      "collocations": [
+        "heavy traffic",
+        "heavy rain",
+        "a heavy smoker"
+      ],
+      "confuse_with": [
+        "strong"
+      ]
+    },
+    {
+      "word": "strong",
+      "pos": "adjective",
+      "ipa": "/strɒŋ/",
+      "short_en": "powerful or concentrated",
+      "short_mm": "အားကောင်းသော၊ ပြင်းသော",
+      "use_when_en": "For things that have a powerful effect on your senses (taste, smell) or a powerful force (wind, opinion).",
+      "use_when_mm": "ကိုယ့်ရဲ့အာရုံခံစားမှု (အရသာ၊ အနံ့) တွေအပေါ် သက်ရောက်မှုရှိတဲ့အရာတွေ ဒါမှမဟုတ် အားပြင်းတဲ့အရာတွေ (လေ၊ သဘောထား) အတွက် သုံးပါတယ်။",
+      "explanation_en": "Unlike 'heavy', 'strong' refers to power or concentration. We drink 'strong coffee' (concentrated), not 'heavy coffee'.",
+      "explanation_mm": "'heavy' နဲ့မတူဘဲ 'strong' က အားအင် ဒါမှမဟုတ် ပြင်းအားကို ရည်ညွှန်းပါတယ်။ 'heavy coffee' လို့မပြောဘဲ 'strong coffee' (ကော်ဖီပြင်းပြင်း) လို့ သုံးရပါတယ်။",
+      "nuance_en": "Can be about physical power (a strong person) or metaphorical power (a strong argument).",
+      "nuance_mm": "ရုပ်ပိုင်းဆိုင်ရာ ခွန်အား (a strong person) ကိုလည်း ဖော်ပြနိုင်သလို၊ တင်စားတဲ့ အား (a strong argument) ကိုလည်း ဖော်ပြနိုင်ပါတယ်။",
+      "goes_with_en": "strong + coffee / tea / cheese / smell · a strong + accent / opinion / influence / argument · strong + wind / evidence / competition",
+      "goes_with_note_en": "Pairs with food/drink, opinions, and forces like wind.",
+      "goes_with_note_mm": "အစားအသောက်၊ အမြင်သဘောထားတွေနဲ့ လေလိုမျိုး အားတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "I need some {w}strong{/w} {c}coffee{/c} to wake me up this morning.",
+          "mm": "ဒီမနက် ကျွန်တော်နိုးလာဖို့ ကော်ဖီပြင်းပြင်းတစ်ခွက်လောက် လိုတယ်။"
+        },
+        {
+          "en": "He speaks English with a very {w}strong{/w} {c}accent{/c}.",
+          "mm": "သူက အင်္ဂလိပ်စကားကို ဝဲတဲ့လေသံပြင်းပြင်းနဲ့ ပြောတယ်။"
+        },
+        {
+          "en": "There was a {w}strong{/w} {c}wind{/c} last night that blew a tree down.",
+          "mm": "မနေ့ညက လေပြင်းတိုက်လို့ သစ်ပင်တစ်ပင် လဲကျသွားတယ်။"
+        },
+        {
+          "en": "She has {w}strong{/w} {c}opinions{/c} about everything.",
+          "mm": "သူမက အရာရာတိုင်းအပေါ်မှာ ပြတ်သားတဲ့ ကိုယ်ပိုင်သဘောထားတွေရှိတယ်။"
+        },
+        {
+          "en": "There is {w}strong{/w} {c}evidence{/c} that he was at the scene.",
+          "mm": "သူ အခင်းဖြစ်ပွားရာနေရာမှာ ရှိနေခဲ့တယ်ဆိုတဲ့ ခိုင်မာတဲ့ သက်သေအထောက်အထားတွေ ရှိတယ်။"
+        }
+      ],
+      "collocations": [
+        "strong coffee",
+        "a strong accent",
+        "strong wind"
+      ],
+      "confuse_with": [
+        "heavy",
+        "high"
+      ]
+    },
+    {
+      "word": "high",
+      "pos": "adjective",
+      "ipa": "/haɪ/",
+      "short_en": "at a great level or degree",
+      "short_mm": "အဆင့်မြင့်သော၊ များပြားသော",
+      "use_when_en": "For things measured on a scale, like price, quality, pressure, or chance.",
+      "use_when_mm": "ဈေးနှုန်း၊ အရည်အသွေး၊ ဖိအား၊ ဒါမှမဟုတ် ဖြစ်နိုင်ခြေလိုမျိုး တိုင်းတာလို့ရတဲ့ အရာတွေအတွက် သုံးပါတယ်။",
+      "explanation_en": "'High' is about a level on a scale. We talk about 'high prices' or 'high quality', not 'strong prices'.",
+      "explanation_mm": "'High' ဆိုတာက scale တစ်ခုပေါ်က အဆင့်ကို ပြောတာပါ။ 'strong prices' လို့မပြောဘဲ 'high prices' (ဈေးကြီးတာ) ဒါမှမဟုတ် 'high quality' (အရည်အသွေးမြင့်တာ) လို့ ပြောရပါတယ်။",
+      "nuance_en": "Often used for abstract concepts: high hopes, high standards, high risk.",
+      "nuance_mm": "นามธรรม (abstract) သဘောတရားတွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်: high hopes (မျှော်လင့်ချက်ကြီးကြီး), high standards (စံနှုန်းမြင့်မြင့်), high risk (စွန့်စားရမှုများတာ)။",
+      "goes_with_en": "high + price / quality / standard / level / pressure / speed · a high + chance / risk / salary / temperature",
+      "goes_with_note_en": "Pairs with abstract measurements like price, quality, and risk.",
+      "goes_with_note_mm": "ဈေးနှုန်း၊ အရည်အသွေး၊ စွန့်စားရမှုလိုမျိုး တိုင်းတာလို့ရတဲ့ abstract အရာတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "They are selling it at a very {w}high{/w} {c}price{/c}.",
+          "mm": "သူတို့က ဒါကို ဈေးအရမ်းကြီးကြီးနဲ့ ရောင်းနေတယ်။"
+        },
+        {
+          "en": "This product is known for its {w}high{/w} {c}quality{/c}.",
+          "mm": "ဒီထုတ်ကုန်က သူ့ရဲ့ အရည်အသွေးမြင့်မားမှုအတွက် လူသိများတယ်။"
+        },
+        {
+          "en": "There's a {w}high{/w} {c}chance{/c} it will rain tomorrow.",
+          "mm": "မနက်ဖြန် မိုးရွာဖို့ ဖြစ်နိုင်ခြေများတယ်။"
+        },
+        {
+          "en": "He is under {w}high{/w} {c}pressure{/c} at work right now.",
+          "mm": "သူ အခုလက်ရှိ အလုပ်မှာ ဖိအားအရမ်းများနေတယ်။"
+        },
+        {
+          "en": "She has very {w}high{/w} {c}standards{/c} for her work.",
+          "mm": "သူမက သူ့အလုပ်အတွက် စံနှုန်းတွေ အရမ်းမြင့်မြင့်ထားတယ်။"
+        }
+      ],
+      "collocations": [
+        "a high price",
+        "high quality",
+        "high pressure"
+      ],
+      "confuse_with": [
+        "strong"
+      ]
+    },
+    {
+      "word": "deep",
+      "pos": "adjective",
+      "ipa": "/diːp/",
+      "short_en": "intense or going far down",
+      "short_mm": "နက်ရှိုင်းသော၊ ပြင်းထန်သော",
+      "use_when_en": "For physical depth (deep water) or for intense feelings and abstract concepts (deep sleep, deep trouble).",
+      "use_when_mm": "ရုပ်ပိုင်းဆိုင်ရာ အနက် (deep water) ကို ဖော်ပြချင်တဲ့အခါ သုံးသလို၊ ပြင်းထန်တဲ့ ခံစားချက်တွေနဲ့ abstract သဘောတရားတွေ (deep sleep, deep trouble) အတွက်လည်း သုံးပါတယ်။",
+      "explanation_en": "'Deep' means far below the surface, either literally or metaphorically. We take a 'deep breath' or have a 'deep conversation'.",
+      "explanation_mm": "'Deep' ဆိုတာက မျက်နှာပြင်အောက်မှာ အများကြီးရှိနေတာကို ဆိုလိုတာပါ။ တကယ်မျက်မြင်အားဖြင့်ရော၊ တင်စားပြီးတော့ရော သုံးနိုင်ပါတယ်။ ကျွန်တော်တို့ 'deep breath' (အသက်ပြင်းပြင်းရှူတာ) ယူတယ်၊ 'deep conversation' (လေးနက်တဲ့စကားဝိုင်း) တွေ ပြောကြတယ်။",
+      "nuance_en": "Often suggests seriousness, intensity, or thoroughness.",
+      "nuance_mm": "အလေးအနက်ထားမှု၊ ပြင်းထန်မှု၊ ဒါမှမဟုတ် သေ့သေချာချာ စေ့စေ့စပ်စပ်ရှိမှုကို ဖော်ပြလေ့ရှိပါတယ်။",
+      "goes_with_en": "deep + water / sleep / thought / trouble · a deep + breath / voice / understanding / conversation",
+      "goes_with_note_en": "Pairs with physical depth, states of being, and abstract thought.",
+      "goes_with_note_mm": "ရုပ်ပိုင်းဆိုင်ရာ အနက်၊ ဖြစ်တည်မှုအခြေအနေတွေနဲ့ abstract အတွေးအခေါ်တွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "He was in a {w}deep{/w} {c}sleep{/c} and didn't hear the alarm.",
+          "mm": "သူက နှစ်နှစ်ခြိုက်ခြိုက် အိပ်ပျော်နေလို့ နှိုးစက်သံကိုတောင် မကြားလိုက်ဘူး။"
+        },
+        {
+          "en": "If we don't finish this project on time, we'll be in {w}deep{/w} {c}trouble{/c}.",
+          "mm": "ဒီ project ကို အချိန်မီမပြီးရင် ကျွန်တော်တို့ ဒုက္ခအကြီးအကျယ်ရောက်တော့မှာ။"
+        },
+        {
+          "en": "Let's take a {w}deep{/w} {c}breath{/c} and relax.",
+          "mm": "အသက်ပြင်းပြင်းရှူပြီး အနားယူလိုက်ကြရအောင်။"
+        },
+        {
+          "en": "We had a really {w}deep{/w} {c}conversation{/c} about our future.",
+          "mm": "ကျွန်တော်တို့ရဲ့ အနာဂတ်အကြောင်း လေးလေးနက်နက် ဆွေးနွေးဖြစ်ခဲ့ကြတယ်။"
+        },
+        {
+          "en": "She has a {w}deep{/w} {c}understanding{/c} of the subject.",
+          "mm": "သူမက ဒီဘာသာရပ်အပေါ်မှာ နက်နက်နဲနဲ နားလည်သဘောပေါက်ထားတယ်။"
+        }
+      ],
+      "collocations": [
+        "deep sleep",
+        "deep trouble",
+        "a deep breath"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "fast",
+      "pos": "adjective",
+      "ipa": "/fɑːst/",
+      "short_en": "moving or happening quickly",
+      "short_mm": "အမြန်၊ လျင်မြန်သော",
+      "use_when_en": "To describe speed in movement, learning, or lifestyle.",
+      "use_when_mm": "လှုပ်ရှားမှု၊ သင်ယူမှု၊ ဒါမှမဟုတ် နေထိုင်မှုပုံစံတွေမှာ အရှိန်မြန်တာကို ဖော်ပြချင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "'Fast' is about speed. We eat 'fast food' because it's prepared quickly, and drive in the 'fast lane' to go at a higher speed.",
+      "explanation_mm": "'Fast' ဆိုတာက အမြန်နှုန်းနဲ့ဆိုင်ပါတယ်။ 'fast food' ကို အမြန်ပြင်ဆင်လို့ စားကြတယ်၊ ပြီးတော့ ပိုမြန်မြန်သွားချင်ရင် 'fast lane' ကနေ မောင်းကြတယ်။",
+      "nuance_en": "Can be an adjective (a fast car) or an adverb (drive fast) without changing form.",
+      "nuance_mm": "သူ့ကို adjective (a fast car) အဖြစ်ရော adverb (drive fast) အဖြစ်ရော ပုံစံမပြောင်းဘဲ သုံးနိုင်ပါတယ်။",
+      "goes_with_en": "fast + car / train / computer / learner · fast + food / lane / pace · grow / learn / work fast",
+      "goes_with_note_en": "Pairs with transport, technology, and ways of living or learning.",
+      "goes_with_note_mm": "သယ်ယူပို့ဆောင်ရေး၊ နည်းပညာ၊ နေထိုင်မှုပုံစံတွေနဲ့ သင်ယူမှုတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "I can't afford a {w}fast{/w} {c}car{/c}, but I'd love to have one.",
+          "mm": "ကျွန်တော်က ကားအမြန်ကြီးတွေ မဝယ်နိုင်ပေမဲ့ တစ်စီးလောက်တော့ လိုချင်မိတယ်။"
+        },
+        {
+          "en": "She's a {w}fast{/w} {c}learner{/c}; she picked up the new software in a day.",
+          "mm": "သူက သင်ယူမှုမြန်တယ်၊ software အသစ်ကို တစ်ရက်တည်းနဲ့ တတ်သွားတယ်။"
+        },
+        {
+          "en": "On the motorway, slower traffic should keep out of the {w}fast{/w} {c}lane{/c}.",
+          "mm": "အဝေးပြေးလမ်းမကြီးပေါ်မှာဆိုရင် ဖြည်းဖြည်းမောင်းတဲ့ကားတွေက အမြန်လမ်းကြောကနေ ဖယ်ပေးသင့်တယ်။"
+        },
+        {
+          "en": "I often grab some {w}fast{/w} {c}food{/c} for lunch when I'm busy.",
+          "mm": "ကျွန်တော် အလုပ်များနေတဲ့အခါ နေ့လယ်စာအတွက် အမြန်ရတဲ့ အစားအစာတွေပဲ ဝယ်စားဖြစ်တယ်။"
+        },
+        {
+          "en": "Life in the city moves at a very {w}fast{/w} {c}pace{/c}.",
+          "mm": "မြို့ပြက ဘဝက အရမ်းကို အရှိန်အဟုန်ပြင်းပြင်းနဲ့ သွားနေတယ်။"
+        }
+      ],
+      "collocations": [
+        "fast food",
+        "a fast car",
+        "a fast learner"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "bright",
+      "pos": "adjective",
+      "ipa": "/braɪt/",
+      "short_en": "intelligent, colourful, or full of light",
+      "short_mm": "ထက်မြက်သော၊ အရောင်တောက်သော၊ အလင်းရောင်ရှိသော",
+      "use_when_en": "For clever people or ideas, vivid colours, or a hopeful future.",
+      "use_when_mm": "ထက်မြက်တဲ့လူတွေ ဒါမှမဟုတ် အကြံဉာဏ်တွေ၊ အရောင်စိုစိုတောက်တောက်တွေ၊ ဒါမှမဟုတ် မျှော်လင့်ချက်ရှိတဲ့ အနာဂတ်တွေအတွက် သုံးပါတယ်။",
+      "explanation_en": "'Bright' has several meanings: intelligent (a bright student), full of light or colour (bright colours), or positive and hopeful (a bright future).",
+      "explanation_mm": "'Bright' မှာ အဓိပ္ပာယ်အများကြီးရှိပါတယ်: ဉာဏ်ကောင်းတာ (a bright student), အလင်းရောင် ဒါမှမဟုတ် အရောင်အသွေးစုံတာ (bright colours), ဒါမှမဟုတ် အကောင်းမြင်ပြီး မျှော်လင့်ချက်ရှိတာ (a bright future)။",
+      "nuance_en": "The 'intelligent' meaning is common for children and young people.",
+      "nuance_mm": "'ဉာဏ်ကောင်းတယ်' ဆိုတဲ့အဓိပ္ပာယ်ကို ကလေးတွေနဲ့ လူငယ်တွေအတွက် အသုံးများပါတယ်။",
+      "goes_with_en": "a bright + student / child / idea / future · bright + colours / light / smile",
+      "goes_with_note_en": "Pairs with people, ideas, colours, and the future.",
+      "goes_with_note_mm": "လူတွေ၊ အကြံဉာဏ်တွေ၊ အရောင်တွေနဲ့ အနာဂတ်အကြောင်းတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "She is a very {w}bright{/w} {c}student{/c} and always gets top marks.",
+          "mm": "သူမက အရမ်းထက်မြက်တဲ့ ကျောင်းသူတစ်ယောက်ဖြစ်ပြီး အမြဲတမ်း အမှတ်အများဆုံးရတယ်။"
+        },
+        {
+          "en": "That's a {w}bright{/w} {c}idea{/c}! Why didn't I think of that?",
+          "mm": "ဒါ တကယ်ကို ကောင်းတဲ့အကြံပဲ! ငါဘာလို့ အဲ့ဒါကို မတွေးမိခဲ့တာလဲ။"
+        },
+        {
+          "en": "After graduating, she has a {w}bright{/w} {c}future{/c} ahead of her.",
+          "mm": "ဘွဲ့ရပြီးတဲ့နောက်မှာ သူ့ရှေ့မှာ လျှောက်လှမ်းစရာ တောက်ပတဲ့ အနာဂတ်တစ်ခု ရှိနေတယ်။"
+        },
+        {
+          "en": "I love wearing {w}bright{/w} {c}colours{/c} in the summer.",
+          "mm": "ကျွန်တော် နွေရာသီမှာ အရောင်တောက်တောက်လေးတွေ ဝတ်ရတာ ကြိုက်တယ်။"
+        },
+        {
+          "en": "The sun was so {w}bright{/w} I had to wear {c}sunglasses{/c}.",
+          "mm": "နေက အရမ်းစူးလို့ နေကာမျက်မှန်တပ်ခဲ့ရတယ်။"
+        }
+      ],
+      "collocations": [
+        "a bright future",
+        "bright colours",
+        "a bright idea"
+      ],
+      "confuse_with": []
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "The forecast is for ___ rain this afternoon.",
+      "right": "heavy",
+      "wrong": "strong",
+      "why": "We use 'heavy' for a large amount of rain, not 'strong'. 'Heavy rain' is the correct collocation.",
+      "why_mm": "မိုးများတာကို 'heavy rain' လို့ပဲ ပြောပါတယ်။ 'strong rain' ဆိုတာက မှားတဲ့ collocation ပါ။"
+    },
+    {
+      "prompt": "This coffee is too ___ for me. Can I have some more milk?",
+      "right": "strong",
+      "wrong": "high",
+      "why": "'Strong' is used for concentrated tastes like coffee. 'High' is for levels on a scale, like price or quality.",
+      "why_mm": "ကော်ဖီလိုမျိုး အရသာပြင်းတာကို 'strong' နဲ့ သုံးပါတယ်။ 'High' က ဈေးနှုန်း၊ အရည်အသွေးလိုမျိုး အဆင့်အတန်းတွေကို ပြောတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I couldn't drive to work because of the ___ traffic.",
+      "answer": "heavy",
+      "options": [
+        "heavy",
+        "strong",
+        "high"
+      ],
+      "explain_en": "'Heavy traffic' is the correct collocation for a lot of cars.",
+      "explain_mm": "ကားအရမ်းများတာကို 'heavy traffic' လို့ သုံးတာက မှန်ကန်တဲ့ collocation ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She has a very ___ opinion and isn't afraid to share it.",
+      "answer": "strong",
+      "options": [
+        "deep",
+        "strong",
+        "high"
+      ],
+      "explain_en": "'Strong opinion' is the collocation for a firm belief.",
+      "explain_mm": "ခိုင်မာတဲ့ယုံကြည်ချက်အတွက် 'strong opinion' ဆိုတဲ့ collocation ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Houses in this area are sold at a ___ price.",
+      "answer": "high",
+      "options": [
+        "heavy",
+        "deep",
+        "high"
+      ],
+      "explain_en": "'High price' is the correct collocation for cost.",
+      "explain_mm": "ဈေးနှုန်းအတွက် 'high price' ဆိုတာက မှန်ကန်တဲ့ collocation ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "After a long day, he fell into a ___ sleep.",
+      "answer": "deep",
+      "options": [
+        "deep",
+        "heavy",
+        "strong"
+      ],
+      "explain_en": "We use 'deep sleep' to mean sleeping very soundly.",
+      "explain_mm": "နှစ်နှစ်ခြိုက်ခြိုက်အိပ်ပျော်တာကို 'deep sleep' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He's a ___ learner and understands new concepts easily.",
+      "answer": "fast",
+      "options": [
+        "bright",
+        "fast",
+        "deep"
+      ],
+      "explain_en": "'Fast learner' describes someone who learns quickly.",
+      "explain_mm": "သင်ယူမှုမြန်တဲ့သူကို 'fast learner' လို့ ဖော်ပြပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She wore a dress with ___ colours to the party.",
+      "answer": "bright",
+      "options": [
+        "high",
+        "bright",
+        "strong"
+      ],
+      "explain_en": "'Bright colours' refers to vivid, intense colours.",
+      "explain_mm": "'Bright colours' ဆိုတာက အရောင်တောက်တောက်၊ စိုစိုတွေကို ရည်ညွှန်းပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The doctor told him to stop being such a ___ smoker.",
+      "answer": "heavy",
+      "options": [
+        "strong",
+        "heavy",
+        "deep"
+      ],
+      "explain_en": "The collocation for someone who smokes a lot is a 'heavy smoker'.",
+      "explain_mm": "ဆေးလိပ်အများကြီးသောက်တဲ့သူအတွက် collocation က 'heavy smoker' ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "There is a ___ chance of success if we follow the plan.",
+      "answer": "high",
+      "options": [
+        "strong",
+        "deep",
+        "high"
+      ],
+      "explain_en": "For probability, we use 'high chance'.",
+      "explain_mm": "ဖြစ်နိုင်ခြေအတွက် 'high chance' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Be careful. There's a ___ wind blowing outside.",
+      "answer": "strong",
+      "options": [
+        "heavy",
+        "strong",
+        "fast"
+      ],
+      "explain_en": "'Strong wind' is the correct collocation for powerful wind.",
+      "explain_mm": "လေပြင်းတိုက်တာအတွက် မှန်ကန်တဲ့ collocation က 'strong wind' ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "That's a ___ idea! Let's do it.",
+      "answer": "bright",
+      "options": [
+        "fast",
+        "deep",
+        "bright"
+      ],
+      "explain_en": "A 'bright idea' is a clever or intelligent idea.",
+      "explain_mm": "'Bright idea' ဆိုတာက ထက်မြက်တဲ့ ဒါမှမဟုတ် ဉာဏ်ကောင်းတဲ့ အကြံဉာဏ်တစ်ခုပါ။"
+    }
+  ]
+}

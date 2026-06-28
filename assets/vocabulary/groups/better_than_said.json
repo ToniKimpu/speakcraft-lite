@@ -1,0 +1,382 @@
+{
+  "id": "better_than_said",
+  "title": "Better than \"said\"",
+  "level": 2,
+  "order": 105,
+  "theme": "Reporting verbs",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "In stories and reports, using 'said' over and over is boring. These reporting verbs are better because they show the *purpose* of the speech. They tell the reader HOW something was said, not just that it was said.",
+  "why_grouped_mm": "ဝတ္ထုတွေ၊ အစီရင်ခံစာတွေမှာ 'said' ကိုပဲ ထပ်ခါထပ်ခါသုံးရင် ရိုးအီသွားနိုင်တယ်။ အခုလေ့လာမယ့် reporting verbs တွေက စကားပြောဆိုရခြင်းရဲ့ 'ရည်ရွယ်ချက်' ကိုပါ ဖော်ပြပေးတဲ့အတွက် ပိုကောင်းပါတယ်။ တစ်စုံတစ်ယောက်က စကားပြောခဲ့တယ်ဆိုတာထက် 'ဘယ်လိုပုံစံနဲ့' ပြောခဲ့တယ်ဆိုတာကိုပါ သိစေပါတယ်။",
+  "words": [
+    {
+      "word": "mentioned",
+      "pos": "verb",
+      "ipa": "/ˈmen.ʃənd/",
+      "short_en": "said briefly, in passing",
+      "short_mm": "စကားစပ်မိလို့ ခဏပြောတယ်",
+      "use_when_en": "You refer to something briefly, without going into detail. It wasn't the main point of the conversation.",
+      "use_when_mm": "အကြောင်းအရာတစ်ခုကို အသေးစိတ်မပြောဘဲ အပေါ်ယံ ဒါမှမဟုတ် စကားစပ်မိလို့ ခဏလေးပြောပြချင်တဲ့အခါ သုံးပါတယ်။ အဓိကပြောချင်တဲ့အကြောင်းအရာ မဟုတ်ပါဘူး။",
+      "explanation_en": "To say something as a small part of a larger conversation. It implies the information is not the most important thing being discussed.",
+      "explanation_mm": "ပြောနေတဲ့ စကားဝိုင်းထဲမှာ အဓိကအကြောင်းအရာမဟုတ်ဘဲ အရေးမကြီးတဲ့ အချက်တစ်ခုကို ထည့်ပြောတာမျိုးပါ။",
+      "nuance_en": "Sounds casual and less direct than 'said'. It implies 'this isn't the big news'.",
+      "nuance_mm": "'said' လောက် တိုက်ရိုက်မကျဘဲ ပေါ့ပေါ့ပါးပါးနိုင်တယ်။ 'ဒါက အရေးကြီးတဲ့အကြောင်းတော့ မဟုတ်ပါဘူး' ဆိုတဲ့ သဘောမျိုး သက်ရောက်တယ်။",
+      "goes_with_en": "mentioned + that... / what... · mentioned + something (to someone) · as I mentioned before · briefly mentioned",
+      "goes_with_note_en": "Often followed by 'that' or a wh- word, or used with 'as...before' to refer back.",
+      "goes_with_note_mm": "'that' ဒါမှမဟုတ် wh- စကားလုံးတွေနဲ့ တွဲသုံးလေ့ရှိတယ်။ အရင်က ပြောခဲ့ဖူးတာကို ပြန်ရည်ညွှန်းချင်ရင် 'as...before' နဲ့ တွဲသုံးတယ်။",
+      "examples": [
+        {
+          "en": "She {w}mentioned{/w} {c}that{/c} she might be late.",
+          "mm": "သူမ နောက်ကျနိုင်တယ်လို့ စကားစပ်မိလို့ ပြောသွားတယ်။"
+        },
+        {
+          "en": "He {w}mentioned{/w} your {c}name{/c} in the meeting.",
+          "mm": "အစည်းအဝေးမှာ သူက မင်းနာမည်ကို ထည့်ပြောသွားတယ်။"
+        },
+        {
+          "en": "Did I {w}mention{/w} {c}I'm moving{/c} next month?",
+          "mm": "ငါ နောက်လပြောင်းတော့မယ်လို့ ပြောမိသေးလား။"
+        },
+        {
+          "en": "{c}As I{/c} {w}mentioned{/w} before, the deadline is Friday.",
+          "mm": "အရင်က ပြောခဲ့သလိုပဲ၊ နောက်ဆုံးရက်က သောကြာနေ့နော်။"
+        },
+        {
+          "en": "Someone {w}mentioned{/w} a {c}good restaurant{/c} nearby.",
+          "mm": "တစ်ယောက်ယောက်က အနီးအနားမှာ စားသောက်ဆိုင်ကောင်းကောင်းတစ်ဆိုင်ရှိတယ်လို့ ပြောသွားတယ်။"
+        }
+      ],
+      "collocations": [
+        "mentioned that",
+        "mentioned your name",
+        "as I mentioned"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "explained",
+      "pos": "verb",
+      "ipa": "/ɪkˈspleɪnd/",
+      "short_en": "said something to make it clear",
+      "short_mm": "ရှင်းပြတယ်",
+      "use_when_en": "You are making something easy to understand, often by giving more details or reasons.",
+      "use_when_mm": "တစ်ခုခုကို နားလည်လွယ်အောင် အသေးစိတ်အချက်အလက်တွေ၊ အကြောင်းပြချက်တွေနဲ့ ရှင်းပြတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "More than just saying something; it's about helping someone understand 'why' or 'how'.",
+      "explanation_mm": "ရိုးရိုးပြောတာထက် ပိုပါတယ်။ တစ်ဖက်လူကို 'ဘာကြောင့်' ဒါမှမဟုတ် 'ဘယ်လို' ဆိုတာ နားလည်သွားအောင် ကူညီရှင်းပြပေးတာမျိုးပါ။",
+      "nuance_en": "Often used for processes, reasons, or complex ideas. It has a helpful, teaching tone.",
+      "nuance_mm": "လုပ်ငန်းစဉ်တွေ၊ အကြောင်းပြချက်တွေ၊ ရှုပ်ထွေးတဲ့ အတွေးအခေါ်တွေကို ပြောတဲ့အခါ သုံးလေ့ရှိတယ်။ ကူညီသင်ပြပေးတဲ့ လေသံမျိုး ပေါက်တယ်။",
+      "goes_with_en": "explained + that... / why... / how to... · explained + something (to someone) · carefully explained",
+      "goes_with_note_en": "Followed by a clause ('that', 'why') or a noun phrase. Never 'explained me something' — always 'explained something TO me'.",
+      "goes_with_note_mm": "'that', 'why' တို့နဲ့ တွဲသုံးတယ်။ သတိထားရမှာက 'explained me something' လို့ ဘယ်တော့မှ မသုံးပါဘူး။ 'explained something TO me' လို့ပဲ သုံးရပါမယ်။",
+      "examples": [
+        {
+          "en": "The teacher {w}explained{/w} the {c}rules{/c} of the game to us.",
+          "mm": "ဆရာမက ကျွန်တော်တို့ကို ဂိမ်းရဲ့စည်းကမ်းတွေကို ရှင်းပြခဲ့တယ်။"
+        },
+        {
+          "en": "He {w}explained{/w} {c}how to{/c} use the new software.",
+          "mm": "ဆော့ဖ်ဝဲအသစ်ကို ဘယ်လိုသုံးရမလဲဆိုတာ သူ ရှင်းပြခဲ့တယ်။"
+        },
+        {
+          "en": "Can you {w}explain{/w} {c}why{/c} you were late?",
+          "mm": "မင်း ဘာလို့နောက်ကျရလဲဆိုတာ ရှင်းပြလို့ရမလား။"
+        },
+        {
+          "en": "She {w}explained{/w} {c}that{/c} the project was delayed due to bad weather.",
+          "mm": "ရာသီဥတုဆိုးလို့ ပရောဂျက်နောက်ကျသွားကြောင်း သူမ ရှင်းပြခဲ့တယ်။"
+        },
+        {
+          "en": "I {c}carefully{/c} {w}explained{/w} the situation to my parents.",
+          "mm": "ကျွန်တော် အခြေအနေကို ကျွန်တော့်မိဘတွေ နားလည်အောင် သေချာရှင်းပြခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "explained the rules",
+        "explained how to",
+        "carefully explained"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "replied",
+      "pos": "verb",
+      "ipa": "/rɪˈplaɪd/",
+      "short_en": "said in answer to someone",
+      "short_mm": "ပြန်ဖြေတယ်",
+      "use_when_en": "You are giving an answer to a direct question or responding to something someone said.",
+      "use_when_mm": "မေးခွန်းတစ်ခုကို တိုက်ရိုက်ပြန်ဖြေတဲ့အခါ ဒါမှမဟုတ် တစ်ယောက်ယောက်ပြောတာကို တုံ့ပြန်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This verb always happens in response to someone else. It's part of a two-way conversation.",
+      "explanation_mm": "ဒီ verb က အမြဲတမ်း တစ်ဖက်လူရဲ့ စကားကို တုံ့ပြန်တဲ့အနေနဲ့ပဲ သုံးပါတယ်။ နှစ်ဦးနှစ်ဖက် ပြောဆိုတဲ့ စကားဝိုင်းရဲ့ အစိတ်အပိုင်းတစ်ခုပေါ့။",
+      "nuance_en": "A bit more formal than 'answered'. Common in writing (like emails or stories), while 'answered' is more common in speech.",
+      "nuance_mm": "'answered' ထက် နည်းနည်းပို formal ကျတယ်။ စာရေးတဲ့အခါ (အီးမေးလ်၊ ဝတ္ထု) မျိုးမှာ အသုံးများပြီး စကားပြောမှာတော့ 'answered' ကို ပိုသုံးကြတယ်။",
+      "goes_with_en": "replied + that... · replied + to someone / to an email · replied + with a smile / calmly",
+      "goes_with_note_en": "Often used for reporting the content of an answer ('replied that...') or the manner of answering ('replied calmly').",
+      "goes_with_note_mm": "အဖြေရဲ့ အကြောင်းအရာ ('replied that...') ဒါမှမဟုတ် ဘယ်လိုပုံစံနဲ့ ပြန်ဖြေတယ် ('replied calmly') ဆိုတာကို ဖော်ပြဖို့ သုံးလေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "When I asked him, he {w}replied{/w} {c}that{/c} he didn't know.",
+          "mm": "ကျွန်တော်မေးတော့ သူ မသိဘူးလို့ ပြန်ဖြေခဲ့တယ်။"
+        },
+        {
+          "en": "She hasn't {w}replied{/w} to my {c}email{/c} yet.",
+          "mm": "သူမ ကျွန်တော့်အီးမေးလ်ကို အခုထိ ပြန်မဖြေသေးဘူး။"
+        },
+        {
+          "en": "'I'll be there soon,' he {w}replied{/w} {c}calmly{/c}.",
+          "mm": "'ကျွန်တော် မကြာခင်ရောက်မယ်' လို့ သူက အေးအေးဆေးဆေးပဲ ပြန်ဖြေခဲ့တယ်။"
+        },
+        {
+          "en": "I asked what was wrong, but she just {w}replied{/w} {c}with a shrug{/c}.",
+          "mm": "ကျွန်တော် သူ့ကို ဘာဖြစ်နေလဲမေးတော့ သူ ပခုံးတွန့်ပြတာကလွဲပြီး ဘာမှပြန်မဖြေခဲ့ဘူး။"
+        },
+        {
+          "en": "He took a long time to {w}reply{/w} to the {c}question{/c}.",
+          "mm": "သူ အဲ့ဒီမေးခွန်းကို ပြန်ဖြေဖို့ အချိန်အကြာကြီးယူခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "replied that",
+        "replied to an email",
+        "replied calmly"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "suggested",
+      "pos": "verb",
+      "ipa": "/səˈdʒes.tɪd/",
+      "short_en": "said as an idea or proposal",
+      "short_mm": "အကြံပေးတယ်၊ အဆိုပြုတယ်",
+      "use_when_en": "You are putting forward an idea for someone to consider. It is not a command or an order.",
+      "use_when_mm": "တစ်ယောက်ယောက်ကို စဉ်းစားကြည့်ဖို့ အကြံဉာဏ်တစ်ခု ပေးတဲ့အခါ သုံးပါတယ်။ အမိန့်ပေးတာမျိုး မဟုတ်ပါဘူး။",
+      "explanation_en": "To offer a plan or idea for discussion. It's a gentle way to say what you think should happen.",
+      "explanation_mm": "ဆွေးနွေးတိုင်ပင်ဖို့ အစီအစဉ်တစ်ခု ဒါမှမဟုတ် အကြံဉာဏ်တစ်ခုကို တင်ပြတာပါ။ ဘာလုပ်သင့်တယ်ဆိုတာကို နူးနူးညံ့ညံ့ ပြောတဲ့နည်းလမ်းတစ်ခုပေါ့။",
+      "nuance_en": "Polite and collaborative. Be careful with grammar: 'suggested that we GO' (not 'goes' or 'went'), or 'suggested GOING'.",
+      "nuance_mm": "ယဉ်ကျေးပြီး ပူးပေါင်းဆောင်ရွက်တဲ့သဘော သက်ရောက်တယ်။ သဒ္ဒါကိုတော့ သတိထားရမယ်: 'suggested that we GO' (subjunctive) ဒါမှမဟုတ် 'suggested GOING' (gerund) ဆိုပြီး သုံးရပါတယ်။",
+      "goes_with_en": "suggested + that... (subjunctive) · suggested + verb-ing · suggested + a plan / an idea",
+      "goes_with_note_en": "Followed by a 'that' clause with a base verb (subjunctive), or by a gerund (-ing form).",
+      "goes_with_note_mm": "'that' clause နဲ့ဆိုရင် verb အရင်း (subjunctive) နဲ့ တွဲသုံးပြီး၊ gerund (-ing) နဲ့လည်း တွဲသုံးနိုင်ပါတယ်။",
+      "examples": [
+        {
+          "en": "He {w}suggested{/w} {c}that we meet{/c} for coffee.",
+          "mm": "သူက ကျွန်တော်တို့ကို ကော်ဖီသောက်ရင်းတွေ့ဖို့ အကြံပေးခဲ့တယ်။"
+        },
+        {
+          "en": "My doctor {w}suggested{/w} {c}getting{/c} more exercise.",
+          "mm": "ကျွန်တော့်ဆရာဝန်က လေ့ကျင့်ခန်းပိုလုပ်ဖို့ အကြံပေးခဲ့တယ်။"
+        },
+        {
+          "en": "She {w}suggested{/w} a {c}new plan{/c} to the team.",
+          "mm": "သူမက အဖွဲ့ကို အစီအစဉ်အသစ်တစ်ခု အဆိုပြုခဲ့တယ်။"
+        },
+        {
+          "en": "Can I {w}suggest{/w} a {c}different approach{/c}?",
+          "mm": "ကျွန်တော် တခြားနည်းလမ်းတစ်ခု အကြံပြုလို့ရမလား။"
+        },
+        {
+          "en": "I {w}suggested{/w} {c}waiting{/c} until the rain stopped.",
+          "mm": "မိုးတိတ်တဲ့အထိ စောင့်ဖို့ ကျွန်တော် အကြံပြုခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "suggested that we",
+        "suggested going",
+        "suggested a plan"
+      ],
+      "confuse_with": [
+        "admitted"
+      ]
+    },
+    {
+      "word": "admitted",
+      "pos": "verb",
+      "ipa": "/ədˈmɪt.ɪd/",
+      "short_en": "said something unwillingly was true",
+      "short_mm": "ဝန်ခံတယ်",
+      "use_when_en": "Someone says something is true, often reluctantly or when they have done something wrong.",
+      "use_when_mm": "တစ်ခုခုက မှန်တယ်လို့ ပြောတဲ့အခါမျိုးမှာ သုံးပါတယ်။ အများအားဖြင့် စိတ်မပါဘဲနဲ့ ဒါမှမဟုတ် အမှားလုပ်ထားလို့ ဝန်ခံတာမျိုးပေါ့။",
+      "explanation_en": "To confess to a mistake or crime, or to agree that something you previously denied is actually true.",
+      "explanation_mm": "အမှားတစ်ခု ဒါမှမဟုတ် ပြစ်မှုတစ်ခုကို ဝန်ခံတာ၊ ဒါမှမဟုတ် အရင်က ငြင်းခဲ့တဲ့အရာတစ်ခုက တကယ်မှန်ကြောင်း သဘောတူလိုက်တာမျိုးပါ။",
+      "nuance_en": "Carries a sense of guilt, shame, or reluctance. It's a strong word for confessing.",
+      "nuance_mm": "အပြစ်ရှိသလို၊ ရှက်သလို၊ ဒါမှမဟုတ် မပြောချင်ဘဲ ပြောရသလို ခံစားချက်မျိုး သက်ရောက်တယ်။ ဝန်ခံတဲ့နေရာမှာ သုံးတဲ့ အားပြင်းတဲ့ စကားလုံးတစ်လုံးပါ။",
+      "goes_with_en": "admitted + that... · admitted + verb-ing · admitted + his/her mistake · finally admitted",
+      "goes_with_note_en": "Like 'suggested', it can be followed by a 'that' clause or a gerund (-ing form).",
+      "goes_with_note_mm": "'suggested' လိုပဲ 'that' clause ဒါမှမဟုတ် gerund (-ing) နဲ့ တွဲသုံးနိုင်ပါတယ်။",
+      "examples": [
+        {
+          "en": "He finally {w}admitted{/w} {c}that{/c} he had broken the vase.",
+          "mm": "ပန်းအိုးကို သူခွဲခဲ့တာလို့ နောက်ဆုံးတော့ သူ ဝန်ခံခဲ့တယ်။"
+        },
+        {
+          "en": "She {w}admitted{/w} {c}making{/c} a mistake.",
+          "mm": "သူမ အမှားလုပ်ခဲ့ကြောင်း ဝန်ခံခဲ့တယ်။"
+        },
+        {
+          "en": "The company {w}admitted{/w} {c}responsibility{/c} for the accident.",
+          "mm": "ကုမ္ပဏီက မတော်တဆမှုအတွက် တာဝန်ရှိကြောင်း ဝန်ခံခဲ့တယ်။"
+        },
+        {
+          "en": "I have to {w}admit{/w}, your {c}idea{/c} is better than mine.",
+          "mm": "ဝန်ခံရမယ်၊ မင်းရဲ့အကြံက ငါ့အကြံထက် ပိုကောင်းတယ်။"
+        },
+        {
+          "en": "He was reluctant to {w}admit{/w} his {c}defeat{/c}.",
+          "mm": "သူက သူ့ရဲ့ရှုံးနိမ့်မှုကို ဝန်ခံဖို့ တွန့်ဆုတ်နေခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "admitted that",
+        "admitted making a mistake",
+        "finally admitted"
+      ],
+      "confuse_with": [
+        "suggested"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "She ___ that we take a different route. It was a good idea.",
+      "right": "suggested",
+      "wrong": "explained",
+      "why": "This is about proposing an idea, not making something clear. 'Explained' needs something to clarify.",
+      "why_mm": "ဒါက အကြံဉာဏ်တစ်ခုကို အဆိုပြုတာဖြစ်လို့ suggested ကို သုံးရပါမယ်။ explained က တစ်ခုခုကို ရှင်းပြတာဖြစ်လို့ ဒီနေရာမှာ အဓိပ္ပာယ်မရှိပါဘူး။"
+    },
+    {
+      "prompt": "After being questioned, the thief ___ where he hid the money.",
+      "right": "admitted",
+      "wrong": "mentioned",
+      "why": "'Admitted' means confessing, especially under pressure. 'Mentioned' is too casual for confessing a crime.",
+      "why_mm": "admitted က ဖိအားပေးခံရလို့ ဝန်ခံတာမျိုးမှာ သုံးပါတယ်။ mentioned က အရမ်းပေါ့လွန်းပြီး ပြစ်မှုဝန်ခံတာနဲ့ မလိုက်ဖက်ပါဘူး။"
+    },
+    {
+      "prompt": "The mechanic ___ how the engine works.",
+      "right": "explained",
+      "wrong": "replied",
+      "why": "'Explained' is for making a process clear. 'Replied' needs a question to answer.",
+      "why_mm": "လုပ်ငန်းစဉ်တစ်ခုကို ရှင်းရှင်းလင်းလင်းဖြစ်အောင် ပြောပြတာမို့ explained ကို သုံးရပါမယ်။ replied က မေးခွန်းတစ်ခုကို ပြန်ဖြေတာမျိုးပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "The CEO ___ that profits were down, which the investors did not want to hear.",
+      "answer": "admitted",
+      "options": [
+        "admitted",
+        "suggested",
+        "mentioned"
+      ],
+      "explain_en": "Reluctantly saying something true → admitted.",
+      "explain_mm": "မပြောချင်ဘဲ အမှန်တရားကို ဝန်ခံပြောဆိုတာမျိုးမို့ admitted ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Could you ___ to me how this machine works?",
+      "answer": "explain",
+      "options": [
+        "explain",
+        "reply",
+        "mention"
+      ],
+      "explain_en": "Asking for a clear description of a process → explain.",
+      "explain_mm": "လုပ်ငန်းစဉ်တစ်ခုကို ရှင်းပြခိုင်းတာဖြစ်လို့ explain ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He ___ going to the beach for our holiday.",
+      "answer": "suggested",
+      "options": [
+        "suggested",
+        "admitted",
+        "replied"
+      ],
+      "explain_en": "Proposing an idea for consideration → suggested.",
+      "explain_mm": "အကြံဉာဏ်တစ်ခုကို အဆိုပြုတာဖြစ်လို့ suggested ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She didn't go into detail, she just ___ that she was busy.",
+      "answer": "mentioned",
+      "options": [
+        "mentioned",
+        "explained",
+        "admitted"
+      ],
+      "explain_en": "Saying something briefly without detail → mentioned.",
+      "explain_mm": "အသေးစိတ်မပြောဘဲ အပေါ်ယံပြောသွားတာမို့ mentioned ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I asked him a question, but he never ___.",
+      "answer": "replied",
+      "options": [
+        "replied",
+        "suggested",
+        "explained"
+      ],
+      "explain_en": "Answering a question → replied.",
+      "explain_mm": "မေးခွန်းကို ပြန်ဖြေတာဖြစ်လို့ replied ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "At the end of the meeting, he briefly ___ a few names for the new project team.",
+      "answer": "mentioned",
+      "options": [
+        "mentioned",
+        "replied",
+        "admitted"
+      ],
+      "explain_en": "Referring to something briefly → mentioned. He didn't explain them or confess them.",
+      "explain_mm": "နာမည်တွေကို အကျဉ်းချုံးရည်ညွှန်းပြောသွားတာမို့ mentioned ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "After weeks of denying it, he finally ___ to taking the money.",
+      "answer": "admitted",
+      "options": [
+        "admitted",
+        "suggested",
+        "explained"
+      ],
+      "explain_en": "Confessing to something wrong → admitted.",
+      "explain_mm": "အမှားလုပ်ထားတာကို ဝန်ခံတာဖြစ်လို့ admitted ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I didn't understand the homework, so I asked the teacher to ___ it again.",
+      "answer": "explain",
+      "options": [
+        "explain",
+        "reply",
+        "suggest"
+      ],
+      "explain_en": "Making something clear and understandable → explain.",
+      "explain_mm": "နားလည်အောင် ရှင်းပြခိုင်းတာဖြစ်လို့ explain ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "For our team lunch, Sarah ___ we try the new Italian restaurant.",
+      "answer": "suggested",
+      "options": [
+        "suggested",
+        "replied",
+        "admitted"
+      ],
+      "explain_en": "Putting forward an idea → suggested.",
+      "explain_mm": "အကြံဉာဏ်တစ်ခု တင်ပြတာဖြစ်လို့ suggested ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He sent me a text message an hour ago, but I haven't ___ yet.",
+      "answer": "replied",
+      "options": [
+        "replied",
+        "mentioned",
+        "explained"
+      ],
+      "explain_en": "Responding to a message → replied.",
+      "explain_mm": "စာတစ်စောင်ကို တုံ့ပြန်တာဖြစ်လို့ replied ကို သုံးရပါမယ်။"
+    }
+  ]
+}

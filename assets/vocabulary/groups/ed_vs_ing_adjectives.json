@@ -1,0 +1,432 @@
+{
+  "id": "ed_vs_ing_adjectives",
+  "title": "bored or boring?",
+  "level": 2,
+  "order": 503,
+  "theme": "-ed vs -ing adjectives",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "-ed adjectives describe how you feel inside. -ing adjectives describe the thing or person that *causes* that feeling. 'I am bored' is your feeling. 'The class is boring' is the cause. Saying 'I am boring' is a classic mistake — it means you make other people feel bored!",
+  "why_grouped_mm": "-ed နဲ့ ဆုံးတဲ့ adjective တွေက ကိုယ့်ရဲ့ ခံစားချက်ကို ဖော်ပြတယ်။ -ing နဲ့ ဆုံးတဲ့ adjective တွေက အဲ့ဒီခံစားချက်ကို ဖြစ်စေတဲ့ အရာ ဒါမှမဟုတ် လူကို ဖော်ပြတယ်။ 'I am bored' ဆိုတာက ကိုယ် ပျင်းနေတယ်လို့ ပြောတာ။ 'The class is boring' ဆိုတာက စာသင်ခန်းက ပျင်းစရာကောင်းတယ်လို့ ပြောတာ။ 'I am boring' လို့ မှားပြောမိရင် ကိုယ်က တခြားသူတွေကို ပျင်းအောင်လုပ်တဲ့လူလို့ အဓိပ္ပာယ်ထွက်သွားနိုင်လို့ သတိထားရမယ်နော်။",
+  "words": [
+    {
+      "word": "bored",
+      "pos": "adjective",
+      "ipa": "/bɔːd/",
+      "short_en": "how you feel when nothing interests you",
+      "short_mm": "ပျင်းနေတဲ့ ခံစားချက်",
+      "use_when_en": "To describe your own (or someone else's) feeling of being tired and uninterested.",
+      "use_when_mm": "ကိုယ် ဒါမှမဟုတ် တခြားတစ်ယောက်ယောက်က စိတ်မဝင်စားဘဲ ပျင်းနေတဲ့ ခံစားချက်ကို ဖော်ပြချင်တဲ့အခါ သုံးပါ။",
+      "explanation_en": "This is about a person's internal feeling. The cause of the feeling is something else, which is 'boring'.",
+      "explanation_mm": "ဒါက လူတစ်ယောက်ရဲ့ အတွင်းခံစားချက်နဲ့ သက်ဆိုင်ပါတယ်။ ဒီခံစားချက်ကို ဖြစ်စေတဲ့အကြောင်းရင်းက 'boring' ဖြစ်တဲ့ တခြားအရာတစ်ခုပါ။",
+      "nuance_en": "Never say \"I am boring\" if you mean this feeling. That means you make other people bored!",
+      "nuance_mm": "ကိုယ်ပျင်းနေတယ်ဆိုရင် \"I am boring\" လို့ ဘယ်တော့မှ မပြောပါနဲ့။ အဲ့ဒါက ကိုယ်က တခြားသူတွေကို ပျင်းအောင်လုပ်တဲ့လူလို့ အဓိပ္ပာယ်ပေါက်ပါတယ်။",
+      "goes_with_en": "bored + with / of · get bored · look bored · bored to death / tears (= very bored)",
+      "goes_with_note_en": "Often followed by 'with' or 'of' to say what is causing the feeling.",
+      "goes_with_note_mm": "ဘာကြောင့် ပျင်းတယ်ဆိုတာကို ပြောဖို့ 'with' ဒါမှမဟုတ် 'of' နဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "I'm so {w}bored{/w} {c}with{/c} this TV show.",
+          "mm": "ဒီ တီဗီအစီအစဉ်ကို ကြည့်ရတာ အရမ်းပျင်းနေပြီ။"
+        },
+        {
+          "en": "The children were starting to {c}get{/c} {w}bored{/w}.",
+          "mm": "ကလေးတွေ ပျင်းလာကြပြီ။"
+        },
+        {
+          "en": "He {c}looked{/c} {w}bored{/w} throughout the entire presentation.",
+          "mm": "သူက တင်ဆက်မှုတစ်လျှောက်လုံး ပျင်းနေတဲ့ပုံပဲ။"
+        },
+        {
+          "en": "She was {w}bored{/w} {c}of{/c} doing the same old routine every day.",
+          "mm": "သူမက နေ့တိုင်း ဒီပုံစံခွက်ထဲက အလုပ်တွေကို လုပ်ရတာ ပျင်းနေပြီ။"
+        },
+        {
+          "en": "If you're {w}bored{/w}, why don't you {c}read{/c} a book?",
+          "mm": "မင်း ပျင်းနေရင် စာအုပ်တစ်အုပ်လောက် ဖတ်ကြည့်ပါလား။"
+        }
+      ],
+      "collocations": [
+        "bored with",
+        "bored of",
+        "get bored"
+      ],
+      "confuse_with": [
+        "boring"
+      ]
+    },
+    {
+      "word": "boring",
+      "pos": "adjective",
+      "ipa": "/ˈbɔː.rɪŋ/",
+      "short_en": "describes the thing that causes boredom",
+      "short_mm": "ပျင်းစရာကောင်းတဲ့ အရာကို ဖော်ပြတယ်",
+      "use_when_en": "To describe the thing, person, or situation that *causes* the feeling of boredom.",
+      "use_when_mm": "ပျင်းတဲ့ခံစားချက်ကို ဖြစ်စေတဲ့ အရာ၊ လူ၊ ဒါမှမဟုတ် အခြေအနေကို ဖော်ပြချင်တဲ့အခါ သုံးပါ။",
+      "explanation_en": "This describes the source of the boredom. A film can be boring, a job can be boring, a lecture can be boring.",
+      "explanation_mm": "ဒါက ပျင်းစရာရဲ့ အရင်းအမြစ်ကို ဖော်ပြတာပါ။ ရုပ်ရှင်တစ်ကားက ပျင်းစရာကောင်းနိုင်တယ်၊ အလုပ်တစ်ခုက ပျင်းစရာကောင်းနိုင်တယ်၊ သင်ခန်းစာတစ်ခုက ပျင်းစရာကောင်းနိုင်တယ်။",
+      "nuance_en": "Be careful calling a person 'boring'. It's a strong criticism, meaning they are not an interesting person to be with.",
+      "nuance_mm": "လူတစ်ယောက်ကို 'boring' လို့ ပြောတဲ့အခါ သတိထားပါ။ ဒါက သူနဲ့ အတူရှိနေရတာ စိတ်ဝင်စားစရာမကောင်းဘူးလို့ ပြောတာဖြစ်လို့ ပြင်းထန်တဲ့ ဝေဖန်မှုတစ်ခုပါ။",
+      "goes_with_en": "a boring + film / book / job / person · incredibly / really / so boring",
+      "goes_with_note_en": "Pairs with the nouns (things, people, situations) that cause the feeling.",
+      "goes_with_note_mm": "ခံစားချက်ကို ဖြစ်စေတဲ့ အရာတွေ၊ လူတွေ၊ အခြေအနေတွေ (nouns) နဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "It was such a {w}boring{/w} {c}film{/c} that I fell asleep.",
+          "mm": "အဲ့ဒီရုပ်ရှင်က အရမ်းပျင်းစရာကောင်းလို့ ကျွန်တော် အိပ်ပျော်သွားတယ်။"
+        },
+        {
+          "en": "I have a really {w}boring{/w} {c}job{/c} entering data all day.",
+          "mm": "တစ်နေ့လုံး data တွေထည့်ရတဲ့ ကျွန်တော့်အလုပ်က တကယ်ကို ပျင်းစရာကောင်းတယ်။"
+        },
+        {
+          "en": "This is the most {w}boring{/w} {c}book{/c} I've ever had to read.",
+          "mm": "ဒါက ကျွန်တော်ဖတ်ဖူးသမျှထဲမှာ အပျင်းဆုံးစာအုပ်ပဲ။"
+        },
+        {
+          "en": "The lecture was {c}incredibly{/c} {w}boring{/w}.",
+          "mm": "ပို့ချချက်က မယုံနိုင်လောက်အောင် ပျင်းစရာကောင်းတယ်။"
+        },
+        {
+          "en": "Everyone says he's a {w}boring{/w} {c}person{/c}, but I find him interesting.",
+          "mm": "လူတိုင်းက သူ့ကို ပျင်းစရာကောင်းတဲ့လူလို့ ပြောကြပေမယ့် ကျွန်တော်ကတော့ သူ့ကို စိတ်ဝင်စားစရာကောင်းတယ်လို့ ထင်တယ်။"
+        }
+      ],
+      "collocations": [
+        "a boring film",
+        "a boring job",
+        "incredibly boring"
+      ],
+      "confuse_with": [
+        "bored"
+      ]
+    },
+    {
+      "word": "interested",
+      "pos": "adjective",
+      "ipa": "/ˈɪn.trəs.tɪd/",
+      "short_en": "how you feel — wanting to know more",
+      "short_mm": "စိတ်ဝင်စားတဲ့ ခံစားချက်",
+      "use_when_en": "To describe your feeling of wanting to give your attention to something and discover more about it.",
+      "use_when_mm": "တစ်ခုခုကို အာရုံစိုက်ချင်ပြီး အဲ့ဒီအကြောင်း ပိုသိချင်တဲ့ ကိုယ့်ရဲ့ခံစားချက်ကို ဖော်ပြချင်တဲ့အခါ သုံးပါ။",
+      "explanation_en": "This describes a person's feeling of curiosity or engagement. The thing that causes this feeling is 'interesting'.",
+      "explanation_mm": "ဒါက လူတစ်ယောက်ရဲ့ စူးစမ်းချင်စိတ် ဒါမှမဟုတ် ပါဝင်ပတ်သက်လိုစိတ်ကို ဖော်ပြတာပါ။ ဒီခံစားချက်ကို ဖြစ်စေတဲ့အရာက 'interesting' ဖြစ်ပါတယ်။",
+      "nuance_en": "Saying 'I am interesting' means you think other people find you interesting, which can sound arrogant.",
+      "nuance_mm": "'I am interesting' လို့ပြောရင် တခြားသူတွေက ကိုယ့်ကို စိတ်ဝင်စားစရာကောင်းတယ်လို့ ထင်ကြတယ်လို့ ကိုယ်က ယူဆတဲ့သဘော သက်ရောက်ပြီး မာနကြီးတယ်လို့ ထင်သွားနိုင်ပါတယ်။",
+      "goes_with_en": "interested + in · interested + to know / hear / see · sound / look interested",
+      "goes_with_note_en": "Almost always followed by 'in' before a noun, or 'to' before a verb.",
+      "goes_with_note_mm": "Noun ရဲ့ရှေ့မှာ 'in' နဲ့ အမြဲလိုလို တွဲသုံးပြီး verb ရဲ့ရှေ့မှာတော့ 'to' နဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "I'm very {w}interested{/w} {c}in{/c} history.",
+          "mm": "ကျွန်တော်က သမိုင်းကို အရမ်းစိတ်ဝင်စားတယ်။"
+        },
+        {
+          "en": "She didn't {c}seem{/c} very {w}interested{/w} in what I was saying.",
+          "mm": "သူမက ကျွန်တော်ပြောနေတာကို သိပ်စိတ်ဝင်စားပုံမပြဘူး။"
+        },
+        {
+          "en": "We would be {w}interested{/w} {c}to hear{/c} your opinion.",
+          "mm": "ကျွန်တော်တို့က ရှင့်ရဲ့သဘောထားကို ကြားချင်ပါတယ်။"
+        },
+        {
+          "en": "Are you {w}interested{/w} {c}in joining{/c} the book club?",
+          "mm": "စာအုပ်အသင်းကို ဝင်ဖို့ စိတ်ဝင်စားလား။"
+        },
+        {
+          "en": "He has always been {w}interested{/w} {c}in{/c} learning new languages.",
+          "mm": "သူက ဘာသာစကားအသစ်တွေ သင်ယူရတာကို အမြဲတမ်း စိတ်ဝင်စားခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "interested in",
+        "interested to hear"
+      ],
+      "confuse_with": [
+        "interesting"
+      ]
+    },
+    {
+      "word": "interesting",
+      "pos": "adjective",
+      "ipa": "/ˈɪn.trəs.tɪŋ/",
+      "short_en": "describes the thing that is not boring",
+      "short_mm": "စိတ်ဝင်စားစရာကောင်းတဲ့ အရာကို ဖော်ပြတယ်",
+      "use_when_en": "To describe something or someone that keeps your attention because they are unusual, exciting, or have a lot of ideas.",
+      "use_when_mm": "ထူးခြားတာ၊ စိတ်လှုပ်ရှားစရာကောင်းတာ၊ ဒါမှမဟုတ် အတွေးအခေါ်တွေ အများကြီးရှိတာကြောင့် ကိုယ့်ရဲ့အာရုံကို ဖမ်းစားထားတဲ့ အရာတစ်ခု ဒါမှမဟုတ် လူတစ်ယောက်ကို ဖော်ပြချင်တဲ့အခါ သုံးပါ။",
+      "explanation_en": "This describes the source of the interest. A book can be interesting, a person can be interesting, an idea can be interesting.",
+      "explanation_mm": "ဒါက စိတ်ဝင်စားမှုရဲ့ အရင်းအမြစ်ကို ဖော်ပြတာပါ။ စာအုပ်တစ်အုပ်က စိတ်ဝင်စားစရာကောင်းနိုင်တယ်၊ လူတစ်ယောက်က စိတ်ဝင်စားစရာကောင်းနိုင်တယ်၊ အကြံဉာဏ်တစ်ခုက စိတ်ဝင်စားစရာကောင်းနိုင်တယ်။",
+      "nuance_en": "When you say something is 'interesting', it can sometimes be a polite way to say you don't really like it but don't want to be rude.",
+      "nuance_mm": "တစ်ခုခုကို 'interesting' လို့ ပြောတဲ့အခါ၊ တစ်ခါတလေမှာ ကိုယ်က အဲ့ဒါကို သိပ်မကြိုက်ပေမယ့် ရိုင်းတယ်မဖြစ်ချင်လို့ ယဉ်ကျေးစွာ ပြောတဲ့နည်းလမ်းတစ်ခုလည်း ဖြစ်နိုင်ပါတယ်။",
+      "goes_with_en": "an interesting + idea / question / book / person · really / very / quite interesting · find something interesting",
+      "goes_with_note_en": "Pairs with the nouns (things, people, ideas) that make you feel interested.",
+      "goes_with_note_mm": "သင့်ကို စိတ်ဝင်စားမှုဖြစ်စေတဲ့ အရာတွေ၊ လူတွေ၊ အတွေးအခေါ်တွေ (nouns) နဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "That's a very {w}interesting{/w} {c}question{/c}.",
+          "mm": "ဒါက အရမ်းစိတ်ဝင်စားစရာကောင်းတဲ့ မေးခွန်းပဲ။"
+        },
+        {
+          "en": "She's one of the most {w}interesting{/w} {c}people{/c} I've ever met.",
+          "mm": "သူမက ကျွန်တော်တွေ့ဖူးသမျှထဲမှာ အစိတ်ဝင်စားစရာအကောင်းဆုံး လူတစ်ယောက်ပါ။"
+        },
+        {
+          "en": "I read an {w}interesting{/w} {c}article{/c} about climate change.",
+          "mm": "ရာသီဥတုပြောင်းလဲမှုအကြောင်း စိတ်ဝင်စားစရာကောင်းတဲ့ ဆောင်းပါးတစ်ပုဒ် ဖတ်လိုက်ရတယ်။"
+        },
+        {
+          "en": "I {c}found{/c} the movie quite {w}interesting{/w}.",
+          "mm": "ကျွန်တော်က ဒီရုပ်ရှင်ကို တော်တော်စိတ်ဝင်စားစရာကောင်းတယ်လို့ တွေ့ရှိခဲ့တယ်။"
+        },
+        {
+          "en": "It would be {w}interesting{/w} {c}to see{/c} what happens next.",
+          "mm": "နောက်ဘာဆက်ဖြစ်မလဲဆိုတာကို ကြည့်ရတာ စိတ်ဝင်စားစရာကောင်းမှာပဲ။"
+        }
+      ],
+      "collocations": [
+        "an interesting question",
+        "an interesting person",
+        "find it interesting"
+      ],
+      "confuse_with": [
+        "interested"
+      ]
+    },
+    {
+      "word": "excited",
+      "pos": "adjective",
+      "ipa": "/ɪkˈsaɪ.tɪd/",
+      "short_en": "how you feel — full of anticipation",
+      "short_mm": "စိတ်လှုပ်ရှားနေတဲ့ ခံစားချက်",
+      "use_when_en": "To describe your feeling of being very happy and enthusiastic because something good is going to happen.",
+      "use_when_mm": "အရာကောင်းတစ်ခုခု ဖြစ်လာတော့မှာမို့လို့ အရမ်းပျော်ပြီး စိတ်အားထက်သန်နေတဲ့ ခံစားချက်ကို ဖော်ပြချင်တဲ့အခါ သုံးပါ။",
+      "explanation_en": "This is a person's happy, energetic feeling looking forward to something. The cause of the feeling is 'exciting'.",
+      "explanation_mm": "ဒါက တစ်ခုခုကို မျှော်လင့်ရင်း ပျော်ရွှင်တက်ကြွနေတဲ့ လူတစ်ယောက်ရဲ့ ခံစားချက်ပါ။ ဒီခံစားချက်ကို ဖြစ်စေတဲ့အကြောင်းရင်းက 'exciting' ဖြစ်ပါတယ်။",
+      "nuance_en": "You can be 'excited for' a person (I'm excited for you!) but 'excited about' an event (I'm excited about the party).",
+      "nuance_mm": "လူတစ်ယောက်အတွက်ဆို 'excited for' (မင်းအတွက် ငါစိတ်လှုပ်ရှားတယ်) လို့ သုံးနိုင်ပြီး အဖြစ်အပျက်တစ်ခုအတွက်ဆို 'excited about' (ပါတီအတွက် ငါစိတ်လှုပ်ရှားတယ်) လို့ သုံးပါတယ်။",
+      "goes_with_en": "excited + about / for · excited + to see / hear · get excited · look excited",
+      "goes_with_note_en": "Use 'about' for things and events, and 'to' before a verb.",
+      "goes_with_note_mm": "အရာဝတ္ထုတွေနဲ့ အဖြစ်အပျက်တွေအတွက် 'about' ကို သုံးပြီး verb ရဲ့ရှေ့မှာ 'to' ကို သုံးပါ။",
+      "examples": [
+        {
+          "en": "The children are so {w}excited{/w} {c}about{/c} Christmas.",
+          "mm": "ကလေးတွေက ခရစ္စမတ်အတွက် အရမ်းစိတ်လှုပ်ရှားနေကြတယ်။"
+        },
+        {
+          "en": "I'm really {w}excited{/w} {c}to see{/c} the new movie.",
+          "mm": "ရုပ်ရှင်အသစ်ကြည့်ဖို့ ကျွန်တော် တကယ်ကို စိတ်လှုပ်ရှားနေတယ်။"
+        },
+        {
+          "en": "She was too {w}excited{/w} {c}to sleep{/c}.",
+          "mm": "သူမက အရမ်းစိတ်လှုပ်ရှားနေလို့ အိပ်မပျော်ဘူး။"
+        },
+        {
+          "en": "He didn't {c}seem{/c} very {w}excited{/w} about the news.",
+          "mm": "သူက သတင်းနဲ့ပတ်သက်ပြီး သိပ်စိတ်လှုပ်ရှားပုံမပြဘူး။"
+        },
+        {
+          "en": "We're all {w}excited{/w} {c}for{/c} you and your new job!",
+          "mm": "မင်းနဲ့ မင်းရဲ့အလုပ်သစ်အတွက် ငါတို့အားလုံး စိတ်လှုပ်ရှားနေကြတယ်။"
+        }
+      ],
+      "collocations": [
+        "excited about",
+        "excited to see"
+      ],
+      "confuse_with": [
+        "exciting"
+      ]
+    },
+    {
+      "word": "exciting",
+      "pos": "adjective",
+      "ipa": "/ɪkˈsaɪ.tɪŋ/",
+      "short_en": "describes the thing that is thrilling",
+      "short_mm": "စိတ်လှုပ်ရှားစရာကောင်းတဲ့ အရာကို ဖော်ပြတယ်",
+      "use_when_en": "To describe something that makes you feel very happy and enthusiastic.",
+      "use_when_mm": "သင့်ကို အရမ်းပျော်ရွှင်ပြီး စိတ်အားထက်သန်စေတဲ့ အရာတစ်ခုခုကို ဖော်ပြချင်တဲ့အခါ သုံးပါ။",
+      "explanation_en": "This describes the source of the excitement. A game can be exciting, a trip can be exciting, news can be exciting.",
+      "explanation_mm": "ဒါက စိတ်လှုပ်ရှားမှုရဲ့ အရင်းအမြစ်ကို ဖော်ပြတာပါ။ ကစားပွဲတစ်ခုက စိတ်လှုပ်ရှားစရာကောင်းနိုင်တယ်၊ ခရီးစဉ်တစ်ခုက စိတ်လှုပ်ရှားစရာကောင်းနိုင်တယ်၊ သတင်းတစ်ခုက စိတ်လှုပ်ရှားစရာကောင်းနိုင်တယ်။",
+      "nuance_en": "This word implies energy and action. A quiet, beautiful view is more likely 'amazing' or 'beautiful' than 'exciting'.",
+      "nuance_mm": "ဒီစကားလုံးက တက်ကြွမှုနဲ့ လှုပ်ရှားမှုကို ရည်ညွှန်းပါတယ်။ တိတ်ဆိတ်ပြီး လှပတဲ့ရှုခင်းတစ်ခုက 'exciting' ထက် 'amazing' ဒါမှမဟုတ် 'beautiful' ဖြစ်ဖို့ ပိုများပါတယ်။",
+      "goes_with_en": "an exciting + game / opportunity / time / city · really / very / so exciting · exciting news",
+      "goes_with_note_en": "Pairs with nouns that involve action, opportunity, or energy.",
+      "goes_with_note_mm": "လှုပ်ရှားမှု၊ အခွင့်အရေး၊ ဒါမှမဟုတ် တက်ကြွမှုတွေပါဝင်တဲ့ nouns တွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "It was a really {w}exciting{/w} {c}game{/c} of football.",
+          "mm": "ဒါက တကယ်ကို စိတ်လှုပ်ရှားစရာကောင်းတဲ့ ဘောလုံးပွဲတစ်ပွဲပဲ။"
+        },
+        {
+          "en": "This is the most {w}exciting{/w} {c}opportunity{/c} of my life.",
+          "mm": "ဒါက ကျွန်တော့်ဘဝရဲ့ အစိတ်လှုပ်ရှားစရာအကောင်းဆုံး အခွင့်အရေးပဲ။"
+        },
+        {
+          "en": "We have some very {w}exciting{/w} {c}news{/c} for you.",
+          "mm": "မင်းအတွက် အရမ်းစိတ်လှုပ်ရှားစရာကောင်းတဲ့ သတင်းတချို့ ရှိတယ်။"
+        },
+        {
+          "en": "New York is such an {w}exciting{/w} {c}city{/c} to visit.",
+          "mm": "နယူးယောက်က လည်ပတ်ဖို့ အရမ်းစိတ်လှုပ်ရှားစရာကောင်းတဲ့ မြို့တစ်မြို့ပါ။"
+        },
+        {
+          "en": "Living abroad was a very {w}exciting{/w} {c}experience{/c}.",
+          "mm": "ပြည်ပမှာနေထိုင်ရတာက အရမ်းစိတ်လှုပ်ရှားစရာကောင်းတဲ့ အတွေ့အကြုံတစ်ခုပဲ။"
+        }
+      ],
+      "collocations": [
+        "an exciting game",
+        "an exciting opportunity",
+        "exciting news"
+      ],
+      "confuse_with": [
+        "excited"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "The movie was so ___ that I fell asleep.",
+      "right": "boring",
+      "wrong": "bored",
+      "why": "The movie is the THING that causes the feeling. Things are '-ing'.",
+      "why_mm": "ရုပ်ရှင်က ခံစားချက်ကို ဖြစ်စေတဲ့ 'အရာ' ဖြစ်လို့ '-ing' ကို သုံးရပါမယ်။"
+    },
+    {
+      "prompt": "I'm not ___ in politics.",
+      "right": "interested",
+      "wrong": "interesting",
+      "why": "This is about your personal FEELING. Your feeling is '-ed'.",
+      "why_mm": "ဒါက ကိုယ့်ရဲ့ 'ခံစားချက်' အကြောင်း ပြောနေတာဖြစ်လို့ '-ed' ကို သုံးရပါမယ်။"
+    },
+    {
+      "prompt": "The end of the match was so ___!",
+      "right": "exciting",
+      "wrong": "excited",
+      "why": "The end of the match is the THING that causes excitement. Things are '-ing'.",
+      "why_mm": "ပွဲရဲ့အဆုံးသတ်က စိတ်လှုပ်ရှားမှုကို ဖြစ်စေတဲ့ 'အရာ' ဖြစ်လို့ '-ing' ကို သုံးရပါမယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I have a very ___ job. I just sit at a desk all day.",
+      "answer": "boring",
+      "options": [
+        "bored",
+        "boring",
+        "interested"
+      ],
+      "explain_en": "The job is the THING that causes the feeling, so it is 'boring'.",
+      "explain_mm": "အလုပ်က ခံစားချက်ကိုဖြစ်စေတဲ့ 'အရာ' ဖြစ်လို့ 'boring' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The children are very ___ about their trip to the zoo.",
+      "answer": "excited",
+      "options": [
+        "excited",
+        "exciting",
+        "bored"
+      ],
+      "explain_en": "This describes the FEELING of the children, so we use 'excited'.",
+      "explain_mm": "ဒါက ကလေးတွေရဲ့ 'ခံစားချက်' ကို ဖော်ပြနေတာဖြစ်လို့ 'excited' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She told us a very ___ story about her time in Africa.",
+      "answer": "interesting",
+      "options": [
+        "interested",
+        "boring",
+        "interesting"
+      ],
+      "explain_en": "The story is the THING that causes interest, so it is 'interesting'.",
+      "explain_mm": "ပုံပြင်က စိတ်ဝင်စားမှုကို ဖြစ်စေတဲ့ 'အရာ' ဖြစ်လို့ 'interesting' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I was so ___ during the long flight that I read a whole book.",
+      "answer": "bored",
+      "options": [
+        "boring",
+        "bored",
+        "exciting"
+      ],
+      "explain_en": "This describes your FEELING during the flight, so you were 'bored'.",
+      "explain_mm": "ဒါက လေယာဉ်ပေါ်က ကိုယ့်ရဲ့ 'ခံစားချက်' ကို ဖော်ပြနေတာဖြစ်လို့ 'bored' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Are you ___ in applying for the new position?",
+      "answer": "interested",
+      "options": [
+        "exciting",
+        "interesting",
+        "interested"
+      ],
+      "explain_en": "We are asking about the person's FEELING or desire, so we use 'interested'.",
+      "explain_mm": "လူတစ်ယောက်ရဲ့ 'ခံစားချက်' ဒါမှမဟုတ် ဆန္ဒကို မေးနေတာဖြစ်လို့ 'interested' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It was the most ___ football match I have ever watched.",
+      "answer": "exciting",
+      "options": [
+        "excited",
+        "exciting",
+        "interested"
+      ],
+      "explain_en": "The football match is the THING that causes the feeling, so it was 'exciting'.",
+      "explain_mm": "ဘောလုံးပွဲက ခံစားချက်ကို ဖြစ်စေတဲ့ 'အရာ' ဖြစ်လို့ 'exciting' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "This book is so ___. I can't get past the first chapter.",
+      "answer": "boring",
+      "options": [
+        "bored",
+        "interesting",
+        "boring"
+      ],
+      "explain_en": "The book is the THING causing the feeling, so it is 'boring'.",
+      "explain_mm": "စာအုပ်က ခံစားချက်ကို ဖြစ်စေတဲ့ 'အရာ' ဖြစ်လို့ 'boring' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He gets ___ very easily. He always needs a new challenge.",
+      "answer": "bored",
+      "options": [
+        "boring",
+        "bored",
+        "excited"
+      ],
+      "explain_en": "This describes his internal FEELING, so he gets 'bored'.",
+      "explain_mm": "ဒါက သူ့ရဲ့ အတွင်း 'ခံစားချက်' ကို ဖော်ပြနေတာဖြစ်လို့ သူက 'bored' ဖြစ်သွားတာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We're going on a safari! Isn't that ___?",
+      "answer": "exciting",
+      "options": [
+        "excited",
+        "exciting",
+        "boring"
+      ],
+      "explain_en": "The safari (the THING) is being described, so it is 'exciting'.",
+      "explain_mm": "Safari ဆိုတဲ့ 'အရာ' ကို ဖော်ပြနေတာဖြစ်လို့ 'exciting' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I found his ideas on the future of AI very ___.",
+      "answer": "interesting",
+      "options": [
+        "interested",
+        "interesting",
+        "bored"
+      ],
+      "explain_en": "His ideas are the THING that you found to have a certain quality, so they are 'interesting'.",
+      "explain_mm": "သူ့ရဲ့ အတွေးအခေါ်တွေက အရည်အသွေးတစ်ခုရှိတယ်လို့ ကိုယ်က တွေ့ရှိခဲ့တဲ့ 'အရာ' တွေဖြစ်လို့ 'interesting' ကို သုံးရပါမယ်။"
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "id": "pv_everyday",
+  "title": "Phrasal verbs: everyday life",
+  "level": 2,
+  "order": 203,
+  "theme": "Phrasal verbs",
+  "style": "contrast",
+  "unit": "expression",
+  "why_grouped_en": "These six phrasal verbs are extremely common in everyday conversations. Using them will make your English sound much more natural than using their formal equivalents, like 'postpone' instead of 'put off'.",
+  "why_grouped_mm": "ဒီ phrasal verb ၆ ခုက နေ့စဥ်စကားပြောမှာ အရမ်းအသုံးများပါတယ်။ 'postpone' အစား 'put off' လိုမျိုးသုံးတာက ကိုယ့်ရဲ့အင်္ဂလိပ်စကားကို ပိုပြီးသဘာဝကျစေတဲ့အတွက် ဒီစကားလုံးတွေကို ကျွမ်းကျွမ်းကျင်ကျင် သုံးတတ်ဖို့ လေ့လာထားသင့်ပါတယ်။",
+  "words": [
+    {
+      "word": "turn up",
+      "pos": "phrasal verb",
+      "ipa": "/tɜːn ʌp/",
+      "short_en": "arrive or appear, often unexpectedly",
+      "short_mm": "ရောက်လာတယ်၊ ပေါ်လာတယ် (မထင်မှတ်ဘဲ)",
+      "use_when_en": "Someone arrives, especially later than expected or without being planned. It can also be used when a lost object is found.",
+      "use_when_mm": "တစ်ယောက်ယောက်က မျှော်လင့်ထားတာထက် နောက်ကျပြီးမှ ဒါမှမဟုတ် ကြိုမပြောဘဲ ရောက်လာတဲ့အခါ သုံးပါတယ်။ ပျောက်နေတဲ့ ပစ္စည်းတစ်ခုကို ပြန်တွေ့တဲ့အခါမှာလည်း သုံးနိုင်ပါတယ်။",
+      "explanation_en": "This is a casual way to say 'arrive' or 'appear'. It often implies a slight surprise or a lack of planning.",
+      "explanation_mm": "'arrive' ဒါမှမဟုတ် 'appear' လို့ပြောတာထက် ပိုပြီး ပေါ့ပေါ့ပါးပါးသုံးတဲ့ အသုံးအနှုန်းပါ။ အနည်းငယ် အံ့ဩသွားတဲ့သဘော ဒါမှမဟုတ် ကြိုတင်မစီစဥ်ထားတဲ့သဘော သက်ရောက်ပါတယ်။",
+      "nuance_en": "More informal than 'arrive'. You probably wouldn't write 'The CEO turned up' in a formal report, but it's perfect for everyday speech.",
+      "nuance_mm": "'arrive' ထက် ပိုပြီး informal ဖြစ်ပါတယ်။ တရားဝင် report တွေမှာ 'The CEO turned up' လို့ မရေးသင့်ပေမဲ့ နေ့စဥ်စကားပြောအတွက်တော့ အဆင်ပြေပါတယ်။",
+      "goes_with_en": "turn up + late / on time / unexpectedly / at a party · something turns up",
+      "goes_with_note_en": "Often used with adverbs of time (late) or at places (at the party).",
+      "goes_with_note_mm": "အချိန်ပြတဲ့ adverbs တွေ (late) ဒါမှမဟုတ် နေရာပြတဲ့စကားလုံးတွေ (at the party) နဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "He {w}turned up{/w} {c}late{/c} for the meeting, as usual.",
+          "mm": "သူ အစည်းအဝေးကို ထုံးစံအတိုင်း နောက်ကျမှ ရောက်လာတယ်။"
+        },
+        {
+          "en": "Not many {c}people{/c} {w}turned up{/w} because of the rain.",
+          "mm": "မိုးရွာနေတာကြောင့် လူအများကြီး မရောက်လာကြဘူး။"
+        },
+        {
+          "en": "She {w}turned up{/w} at my {c}house{/c} without calling first.",
+          "mm": "သူမ ကျွန်တော့်အိမ်ကို ဖုန်းကြိုမဆက်ဘဲ ရောက်ချလာတယ်။"
+        },
+        {
+          "en": "Don't worry about your keys, they'll {w}turn up{/w} {c}somewhere{/c}.",
+          "mm": "မင်းရဲ့သော့အတွက် စိတ်မပူပါနဲ့၊ တစ်နေရာရာမှာ ပြန်ပေါ်လာမှာပါ။"
+        },
+        {
+          "en": "My lost {c}wallet{/c} finally {w}turned up{/w} under the sofa.",
+          "mm": "ကျွန်တော့်ရဲ့ ပျောက်နေတဲ့ပိုက်ဆံအိတ်က ဆိုဖာအောက်မှာ နောက်ဆုံးတော့ ပြန်ပေါ်လာတယ်။"
+        }
+      ],
+      "collocations": [
+        "turn up late",
+        "turn up unexpectedly"
+      ],
+      "confuse_with": [
+        "come across"
+      ]
+    },
+    {
+      "word": "put off",
+      "pos": "phrasal verb",
+      "ipa": "/pʊt ɒf/",
+      "short_en": "postpone to a later time",
+      "short_mm": "ရွှေ့ဆိုင်းတယ်၊ နောက်မှလုပ်တယ်",
+      "use_when_en": "You delay doing something or reschedule an event for a later time, often because you don't want to do it.",
+      "use_when_mm": "အလုပ်တစ်ခုကို ချက်ချင်းမလုပ်ဘဲ နောက်ဆုတ်ထားတာမျိုး၊ ဒါမှမဟုတ် အစီအစဉ်တစ်ခုကို နောက်တစ်ချိန်ကို ရွှေ့လိုက်တာမျိုးမှာ သုံးပါတယ်။",
+      "explanation_en": "A very common and natural-sounding alternative to 'postpone' or 'delay'.",
+      "explanation_mm": "'postpone' သို့မဟုတ် 'delay' အစားသုံးနိုင်တဲ့ အရမ်းအသုံးများပြီး သဘာဝကျတဲ့ အသုံးအနှုန်းတစ်ခုပါ။",
+      "nuance_en": "It can suggest laziness or reluctance (I put off my homework), or it can be neutral (We put off the meeting).",
+      "nuance_mm": "ပျင်းလို့ (အိမ်စာလုပ်ဖို့ နောက်ဆုတ်ထားတယ်) ဆိုတဲ့ အဓိပ္ပာယ်လည်း ရသလို၊ သာမန်အခြေအနေ (အစည်းအဝေးကို ရွှေ့လိုက်တယ်) မှာလည်း သုံးနိုင်ပါတယ်။",
+      "goes_with_en": "put off + a meeting / a decision / an appointment / doing something",
+      "goes_with_note_en": "Often followed by a noun (the meeting) or a gerund (-ing form of a verb).",
+      "goes_with_note_mm": "Noun (the meeting) ဒါမှမဟုတ် gerund (verb-ing) နဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "We had to {w}put off{/w} the {c}meeting{/c} until Friday.",
+          "mm": "ကျွန်တော်တို့ အစည်းအဝေးကို သောကြာနေ့အထိ ရွှေ့ဆိုင်းခဲ့ရတယ်။"
+        },
+        {
+          "en": "I keep {w}putting off{/w} {c}going{/c} to the dentist.",
+          "mm": "ကျွန်တော် သွားဆရာဝန်ဆီသွားဖို့ကို တစ်ချိန်လုံး ရွှေ့ဆိုင်းနေမိတယ်။"
+        },
+        {
+          "en": "Never {w}put off{/w} until {c}tomorrow{/c} what you can do today.",
+          "mm": "ဒီနေ့လုပ်လို့ရတဲ့အလုပ်ကို မနက်ဖြန်အထိ ဘယ်တော့မှ မရွှေ့ပါနဲ့။"
+        },
+        {
+          "en": "She {w}put off{/w} making a {c}decision{/c} for as long as possible.",
+          "mm": "သူမ ဆုံးဖြတ်ချက်ချဖို့ကို တတ်နိုင်သလောက် အချိန်ဆွဲထားခဲ့တယ်။"
+        },
+        {
+          "en": "The match was {w}put off{/w} because of the {c}rain{/c}.",
+          "mm": "မိုးကြောင့် ပွဲကို ရွှေ့ဆိုင်းလိုက်ရတယ်။"
+        }
+      ],
+      "collocations": [
+        "put off a meeting",
+        "put off doing something"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "give up",
+      "pos": "phrasal verb",
+      "ipa": "/ɡɪv ʌp/",
+      "short_en": "stop trying; quit a habit",
+      "short_mm": "လက်လျှော့တယ်၊ အကျင့်တစ်ခုကို ဖြတ်တယ်",
+      "use_when_en": "You stop doing something that is difficult, or you quit a habit like smoking or eating sugar.",
+      "use_when_mm": "ခက်ခဲတဲ့အရာတစ်ခုကို ဆက်မလုပ်တော့ဘဲ ရပ်လိုက်တဲ့အခါ၊ ဒါမှမဟုတ် ဆေးလိပ်သောက်တာ၊ သကြားစားတာလို အကျင့်တစ်ခုကို ဖြတ်လိုက်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This means to quit or stop making an effort. It can be negative (He gave up too easily) or positive (I gave up smoking).",
+      "explanation_mm": "ဒါက ကြိုးစားနေတာကို ရပ်လိုက်တာ ဒါမှမဟုတ် အကျင့်တစ်ခုကို ဖြတ်လိုက်တာကို ဆိုလိုပါတယ်။ အနုတ်လက္ခဏာ (သူ အလွယ်တကူ လက်လျှော့လိုက်တယ်) ဖြစ်နိုင်သလို အပေါင်းလက္ခဏာ (ကျွန်တော် ဆေးလိပ်ဖြတ်လိုက်ပြီ) လည်း ဖြစ်နိုင်ပါတယ်။",
+      "nuance_en": "It implies that you were previously trying to do something. You can't 'give up' something you never started.",
+      "nuance_mm": "အရင်က ကြိုးစားခဲ့ဖူးတယ်ဆိုတဲ့ သဘောသက်ရောက်ပါတယ်။ ကိုယ်မစဖူးတဲ့အရာတစ်ခုကို 'give up' လုပ်လို့မရပါဘူး။",
+      "goes_with_en": "give up + smoking / drinking / a bad habit / hope / trying",
+      "goes_with_note_en": "Used for habits (smoking) or abstract things like 'hope' and 'trying'.",
+      "goes_with_note_mm": "အကျင့်တွေ (smoking) ဒါမှမဟုတ် 'hope' နဲ့ 'trying' လိုမျိုး စိတ္တဇနာမ်တွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "My doctor advised me to {w}give up{/w} {c}smoking{/c}.",
+          "mm": "ဆရာဝန်က ကျွန်တော့်ကို ဆေးလိပ်ဖြတ်ဖို့ အကြံပေးခဲ့တယ်။"
+        },
+        {
+          "en": "Even though it was hard, she never {w}gave up{/w} {c}hope{/c}.",
+          "mm": "ခက်ခဲခဲ့ပေမဲ့ သူမ ဘယ်တော့မှ မျှော်လင့်ချက်ကို လက်မလွှတ်ခဲ့ဘူး။"
+        },
+        {
+          "en": "Don't {w}give up{/w}! You're so {c}close{/c} to achieving your goal.",
+          "mm": "လက်မလျှော့လိုက်ပါနဲ့။ မင်းရဲ့ပန်းတိုင်ကိုရောက်ဖို့ အရမ်းနီးနေပြီ။"
+        },
+        {
+          "en": "He {w}gave up{/w} his {c}dream{/c} of becoming a musician.",
+          "mm": "သူ ဂီတပညာရှင်တစ်ယောက်ဖြစ်ချင်တဲ့ သူ့ရဲ့အိပ်မက်ကို လက်လျှော့လိုက်တယ်။"
+        },
+        {
+          "en": "I've decided to {w}give up{/w} eating {c}chocolate{/c} for a month.",
+          "mm": "ကျွန်တော် တစ်လလောက် ချောကလက်စားတာ ဖြတ်ဖို့ ဆုံးဖြတ်လိုက်တယ်။"
+        }
+      ],
+      "collocations": [
+        "give up smoking",
+        "give up hope",
+        "never give up"
+      ],
+      "confuse_with": [
+        "get rid of"
+      ]
+    },
+    {
+      "word": "run out of",
+      "pos": "phrasal verb",
+      "ipa": "/rʌn aʊt əv/",
+      "short_en": "use something completely so there is none left",
+      "short_mm": "ကုန်သွားပြီ၊ မရှိတော့ဘူး",
+      "use_when_en": "You have used all of something (like milk, money, or time) and now you have no more.",
+      "use_when_mm": "နို့၊ ပိုက်ဆံ၊ ဒါမှမဟုတ် အချိန်လိုမျိုး တစ်ခုခုကို အကုန်သုံးလိုက်လို့ လုံးဝမကျန်တော့တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This is a very common phrase to express that a supply of something is finished.",
+      "explanation_mm": "တစ်ခုခုရဲ့ထောက်ပံ့မှု ကုန်သွားပြီလို့ ဖော်ပြဖို့အတွက် အရမ်းအသုံးများတဲ့ စကားစုတစ်ခုပါ။",
+      "nuance_en": "It's a neutral statement of fact. It doesn't imply blame, it just states the situation.",
+      "nuance_mm": "ဒါက အခြေအနေတစ်ခုကို အပြစ်တင်တဲ့သဘောမပါဘဲ သာမန်အတိုင်းပြောတာပါ။",
+      "goes_with_en": "run out of + milk / coffee / money / time / patience / ideas",
+      "goes_with_note_en": "Used with countable and uncountable nouns for things you can use up.",
+      "goes_with_note_mm": "ကုန်သွားနိုင်တဲ့ ရေတွက်လို့ရတဲ့နာမ်တွေ၊ မရတဲ့နာမ်တွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "Oh no, we've {w}run out of{/w} {c}milk{/c}.",
+          "mm": "အိုး၊ ငါတို့ နို့ကုန်သွားပြီ။"
+        },
+        {
+          "en": "I have to finish this report today, but I'm {w}running out of{/w} {c}time{/c}.",
+          "mm": "ဒီ report ကို ဒီနေ့အပြီးလုပ်ရမှာ၊ ဒါပေမဲ့ ငါအချိန်မရှိတော့ဘူး။"
+        },
+        {
+          "en": "We {w}ran out of{/w} {c}petrol{/c} in the middle of the highway.",
+          "mm": "ငါတို့ အဝေးပြေးလမ်းမကြီးအလယ်မှာ ဆီကုန်သွားတယ်။"
+        },
+        {
+          "en": "He {w}ran out of{/w} {c}money{/c} two weeks before his payday.",
+          "mm": "သူ လစာမထွက်ခင် နှစ်ပတ်အလိုမှာ ပိုက်ဆံကုန်သွားတယ်။"
+        },
+        {
+          "en": "The writer {w}ran out of{/w} {c}ideas{/c} for his new book.",
+          "mm": "စာရေးဆရာက သူ့စာအုပ်အသစ်အတွက် အတွေးအခေါ်တွေ ကုန်သွားပြီ။"
+        }
+      ],
+      "collocations": [
+        "run out of time",
+        "run out of money",
+        "run out of milk"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "come across",
+      "pos": "phrasal verb",
+      "ipa": "/kʌm əˈkrɒs/",
+      "short_en": "find something or meet someone by chance",
+      "short_mm": "မမျှော်လင့်ဘဲ တွေ့ရှိတယ်",
+      "use_when_en": "You find something or meet someone unexpectedly, without actively looking for them.",
+      "use_when_mm": "တက်တက်ကြွကြွ ရှာဖွေနေတာမဟုတ်ဘဲ တစ်စုံတစ်ခု ဒါမှမဟုတ် တစ်စုံတစ်ယောက်ကို မထင်မှတ်ဘဲ တွေ့လိုက်ရတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This is a more natural way to say 'find by chance' or 'discover accidentally'.",
+      "explanation_mm": "'find by chance' ဒါမှမဟုတ် 'discover accidentally' လို့ပြောတာထက် ပိုပြီးသဘာဝကျတဲ့ အသုံးအနှုန်းပါ။",
+      "nuance_en": "The key idea is 'by chance'. If you were searching for your keys and found them, you wouldn't say 'I came across my keys'.",
+      "nuance_mm": "အဓိကအချက်က 'မထင်မှတ်ဘဲ' ဆိုတာပါပဲ။ သော့ကို တမင်ရှာနေရင်းတွေ့တာဆိုရင် 'I came across my keys' လို့ မပြောပါဘူး။",
+      "goes_with_en": "come across + an old photo / an interesting article / a useful website / a new word",
+      "goes_with_note_en": "Often used when talking about finding information or old objects.",
+      "goes_with_note_mm": "သတင်းအချက်အလက် ဒါမှမဟုတ် ပစ္စည်းဟောင်းတွေ တွေ့ရှိတဲ့အကြောင်း ပြောတဲ့အခါ အသုံးများပါတယ်။",
+      "examples": [
+        {
+          "en": "I {w}came across{/w} some old {c}photos{/c} while I was cleaning.",
+          "mm": "ကျွန်တော် အခန်းရှင်းနေရင်းနဲ့ ဓာတ်ပုံအဟောင်းတချို့ကို မထင်မှတ်ဘဲ တွေ့လိုက်တယ်။"
+        },
+        {
+          "en": "She {w}came across{/w} a beautiful {c}dress{/c} in a small shop.",
+          "mm": "သူမ ဆိုင်ငယ်လေးတစ်ခုထဲမှာ လှပတဲ့ဂါဝန်လေးတစ်ထည်ကို မထင်မှတ်ဘဲ တွေ့လိုက်တယ်။"
+        },
+        {
+          "en": "While researching, I {w}came across{/w} a very useful {c}website{/c}.",
+          "mm": "လေ့လာရှာဖွေနေရင်းနဲ့ အရမ်းအသုံးဝင်တဲ့ website တစ်ခုကို တွေ့လိုက်တယ်။"
+        },
+        {
+          "en": "Have you ever {w}come across{/w} such a strange {c}problem{/c} before?",
+          "mm": "ဒီလိုမျိုး ထူးဆန်းတဲ့ပြဿနာမျိုးနဲ့ မင်း အရင်က ကြုံဖူးလား။"
+        },
+        {
+          "en": "We {w}came across{/w} a little {c}cafe{/c} on our way to the museum.",
+          "mm": "ကျွန်တော်တို့ ပြတိုက်သွားတဲ့လမ်းမှာ ကော်ဖီဆိုင်လေးတစ်ခုကို မထင်မှတ်ဘဲ တွေ့ခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "come across an old photo",
+        "come across an article"
+      ],
+      "confuse_with": [
+        "turn up"
+      ]
+    },
+    {
+      "word": "get rid of",
+      "pos": "phrasal verb",
+      "ipa": "/ɡet rɪd əv/",
+      "short_en": "remove or throw away something unwanted",
+      "short_mm": "ဖယ်ရှားပစ်တယ်၊ စွန့်ပစ်တယ်",
+      "use_when_en": "You want to remove, sell, or throw away something that you no longer want or need.",
+      "use_when_mm": "ကိုယ်မလိုချင်တော့တဲ့ ဒါမှမဟုတ် မလိုအပ်တော့တဲ့အရာတစ်ခုကို ဖယ်ရှားတာ၊ ရောင်းထုတ်တာ၊ ဒါမှမဟုတ် လွှင့်ပစ်တာမျိုးမှာ သုံးပါတယ်။",
+      "explanation_en": "This can mean to discard trash, sell something, or even solve a problem (get rid of a headache).",
+      "explanation_mm": "အမှိုက်လွှင့်ပစ်တာ၊ တစ်ခုခုကိုရောင်းထုတ်တာ၊ ဒါမှမဟုတ် ပြဿနာတစ်ခုကို ဖြေရှင်းတာ (ခေါင်းကိုက်တာကို ဖယ်ရှားတာ) စတဲ့အဓိပ္ပာယ်တွေ ရနိုင်ပါတယ်။",
+      "nuance_en": "It has a strong feeling of 'unwanted'. You 'get rid of' things you don't want, not things you value.",
+      "nuance_mm": "'မလိုချင်တဲ့' ဆိုတဲ့ ခံစားချက်ပြင်းပါတယ်။ ကိုယ်တန်ဖိုးထားတဲ့အရာတွေကို မဟုတ်ဘဲ မလိုချင်တဲ့အရာတွေကိုမှ 'get rid of' လုပ်ပါတယ်။",
+      "goes_with_en": "get rid of + old clothes / clutter / a bad smell / a headache / a bad habit",
+      "goes_with_note_en": "Used for physical objects (clothes), abstract problems (a headache), or habits.",
+      "goes_with_note_mm": "ရုပ်ပိုင်းဆိုင်ရာပစ္စည်းတွေ (အဝတ်အစား)၊ ပြဿနာတွေ (ခေါင်းကိုက်ခြင်း)၊ ဒါမှမဟုတ် အကျင့်တွေအတွက် သုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "I really need to {w}get rid of{/w} all this {c}clutter{/c} on my desk.",
+          "mm": "ကျွန်တော့်စားပွဲပေါ်က ဒီရှုပ်ပွနေတာတွေအားလုံးကို တကယ် ဖယ်ရှားရှင်းလင်းဖို့ လိုနေပြီ။"
+        },
+        {
+          "en": "She decided to {w}get rid of{/w} her old {c}car{/c} and buy an e-bike.",
+          "mm": "သူမ ကားအဟောင်းကို ရောင်းထုတ်ပြီး e-bike တစ်စီးဝယ်ဖို့ ဆုံးဖြတ်လိုက်တယ်။"
+        },
+        {
+          "en": "How can I {w}get rid of{/w} these {c}weeds{/c} in my garden?",
+          "mm": "ကျွန်တော့်ခြံထဲက ဒီပေါင်းပင်တွေကို ဘယ်လိုဖယ်ရှားရမလဲ။"
+        },
+        {
+          "en": "It's surprisingly difficult to {w}get rid of{/w} a bad {c}habit{/c}.",
+          "mm": "မကောင်းတဲ့အကျင့်တစ်ခုကို ဖျောက်ဖျက်ဖို့က မထင်မှတ်လောက်အောင် ခက်ခဲတယ်။"
+        },
+        {
+          "en": "Let's {w}get rid of{/w} these old {c}magazines{/c}; we never read them.",
+          "mm": "ဒီမဂ္ဂဇင်းအဟောင်းတွေကို လွှင့်ပစ်လိုက်ရအောင်၊ ငါတို့ ဘယ်တော့မှ မဖတ်တော့ဘူး။"
+        }
+      ],
+      "collocations": [
+        "get rid of clutter",
+        "get rid of old clothes",
+        "get rid of a bad habit"
+      ],
+      "confuse_with": [
+        "give up"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "It's hard to ___ a bad habit like biting your nails.",
+      "right": "give up",
+      "wrong": "get rid of",
+      "why": "You stop doing a habit (give up). While 'get rid of a habit' is possible, 'give up' is more common for stopping an action you do.",
+      "why_mm": "အကျင့်တစ်ခုကို ဖြတ်တာက ကိုယ်တိုင်လုပ်တဲ့အရာကို ရပ်တန့်လိုက်တာမို့ 'give up' ကို သုံးပါတယ်။ 'get rid of a habit' လို့ သုံးလို့ရပေမဲ့ 'give up' က ပိုပြီးအသုံးများပါတယ်။"
+    },
+    {
+      "prompt": "I can't make coffee because we've ___ coffee beans.",
+      "right": "run out of",
+      "wrong": "put off",
+      "why": "'Run out of' means you have no more left. 'Put off' means to postpone. They have completely different meanings.",
+      "why_mm": "'Run out of' က ကုန်သွားပြီလို့ အဓိပ္ပာယ်ရပြီး 'put off' က ရွှေ့ဆိုင်းတယ်လို့ အဓိပ္ပာယ်ရပါတယ်။ အဓိပ္ပာယ်လုံးဝ မတူပါဘူး။"
+    },
+    {
+      "prompt": "While cleaning, I ___ an old letter from my friend.",
+      "right": "came across",
+      "wrong": "turned up",
+      "why": "A person finds something by chance (come across). An object itself appears (turns up).",
+      "why_mm": "လူတစ်ယောက်က မထင်မှတ်ဘဲ တစ်ခုခုကို တွေ့ရှိတာဆိုရင် 'come across' ကို သုံးပါတယ်။ ပျောက်နေတဲ့ပစ္စည်းတစ်ခု သူ့အလိုလို ပြန်ပေါ်လာတာမျိုးကိုမှ 'turn up' လို့ သုံးပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Don't ___ doing your homework until the last minute.",
+      "answer": "put off",
+      "options": [
+        "put off",
+        "give up",
+        "get rid of"
+      ],
+      "explain_en": "To delay something is to 'put it off'.",
+      "explain_mm": "တစ်ခုခုကို နောက်ဆုတ်ထားတာ၊ ရွှေ့ဆိုင်းတာကို 'put off' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We're going to ___ petrol soon. We should find a petrol station.",
+      "answer": "run out of",
+      "options": [
+        "run out of",
+        "get rid of",
+        "turn up"
+      ],
+      "explain_en": "When you use all of your supply of something, you 'run out of' it.",
+      "explain_mm": "တစ်ခုခုကို အကုန်သုံးလိုက်လို့ ကုန်သွားတဲ့အခါ 'run out of' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I invited twenty people to the party, but only ten ___.",
+      "answer": "turned up",
+      "options": [
+        "turned up",
+        "came across",
+        "gave up"
+      ],
+      "explain_en": "When people arrive at an event, they 'turn up'.",
+      "explain_mm": "လူတွေက ပွဲတစ်ခုကို ရောက်လာတဲ့အခါ 'turn up' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "This sofa is really old. I think we should ___ it.",
+      "answer": "get rid of",
+      "options": [
+        "get rid of",
+        "run out of",
+        "put off"
+      ],
+      "explain_en": "To remove or throw away an unwanted item is to 'get rid of' it.",
+      "explain_mm": "မလိုချင်တဲ့ပစ္စည်းကို ဖယ်ရှားတာ၊ လွှင့်ပစ်တာကို 'get rid of' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The puzzle was too difficult, so I eventually ___.",
+      "answer": "gave up",
+      "options": [
+        "gave up",
+        "put off",
+        "came across"
+      ],
+      "explain_en": "To stop trying to do something is to 'give up'.",
+      "explain_mm": "တစ်ခုခုကို ဆက်မကြိုးစားတော့ဘဲ လက်လျှော့လိုက်တာကို 'give up' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "While hiking in the forest, we ___ a beautiful hidden waterfall.",
+      "answer": "came across",
+      "options": [
+        "came across",
+        "turned up",
+        "ran out of"
+      ],
+      "explain_en": "To find something by chance is to 'come across' it.",
+      "explain_mm": "တစ်ခုခုကို မထင်မှတ်ဘဲ တွေ့ရှိတာကို 'come across' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The manager decided to ___ the team meeting because several people were sick.",
+      "answer": "put off",
+      "options": [
+        "put off",
+        "get rid of",
+        "give up"
+      ],
+      "explain_en": "'Put off' means to postpone or reschedule for a later time.",
+      "explain_mm": "'Put off' ဆိုတာ နောက်တစ်ချိန်ကို ရွှေ့ဆိုင်းတာကို ဆိုလိုပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I wanted to bake a cake, but I've ___ eggs.",
+      "answer": "run out of",
+      "options": [
+        "run out of",
+        "come across",
+        "turned up"
+      ],
+      "explain_en": "When you have no eggs left, you have 'run out of' eggs.",
+      "explain_mm": "ကြက်ဥမကျန်တော့တဲ့အခါ 'run out of' eggs လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My doctor told me I have to ___ eating so much fast food.",
+      "answer": "give up",
+      "options": [
+        "give up",
+        "get rid of",
+        "put off"
+      ],
+      "explain_en": "To quit a habit, like eating a certain food, is to 'give up' that habit.",
+      "explain_mm": "အစားအသောက်တစ်ခုစားတဲ့အကျင့်လိုမျိုး အကျင့်တစ်ခုကို ဖြတ်တောက်တာကို 'give up' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My lost keys finally ___ inside my old jacket pocket.",
+      "answer": "turned up",
+      "options": [
+        "turned up",
+        "came across",
+        "ran out of"
+      ],
+      "explain_en": "When a lost object is found or appears, it 'turns up'.",
+      "explain_mm": "ပျောက်နေတဲ့ပစ္စည်းတစ်ခုကို ပြန်တွေ့တဲ့အခါ ဒါမှမဟုတ် ပြန်ပေါ်လာတဲ့အခါ 'turn up' လို့ သုံးပါတယ်။"
+    }
+  ]
+}

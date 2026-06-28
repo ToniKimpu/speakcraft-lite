@@ -1,0 +1,437 @@
+{
+  "id": "contrast_linkers",
+  "title": "Showing contrast",
+  "level": 2,
+  "order": 402,
+  "theme": "Linking words",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "These linkers all show a contrast or surprise, but their grammar is different. 'Although' joins two clauses in one sentence, 'despite' takes a noun, and 'however' usually starts a new one. Using the right one is key to sounding fluent.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေအားလုံးက ဆန့်ကျင်ဘက်အဓိပ္ပာယ် ဒါမှမဟုတ် မမျှော်လင့်ထားတဲ့အရာတွေကို ဖော်ပြပေမဲ့ သဒ္ဒါသုံးစွဲပုံချင်း မတူပါဘူး။ 'Although' က clause နှစ်ခုကို ဝါကျတစ်ကြောင်းတည်းမှာ ဆက်ပေးပြီး 'despite' က noun နဲ့ပဲလိုက်ပါတယ်။ 'However' ကတော့ ဝါကျအသစ်ရဲ့အစမှာ သုံးလေ့ရှိတယ်။ မှန်ကန်တဲ့စကားလုံးကို ရွေးသုံးနိုင်ခြင်းက ကျွမ်းကျင်သလိုဖြစ်စေဖို့ အဓိကသော့ချက်ပါပဲ။",
+  "words": [
+    {
+      "word": "however",
+      "pos": "adverb",
+      "ipa": "/haʊˈev.ər/",
+      "short_en": "but (at the start of a sentence)",
+      "short_mm": "ဒါပေမဲ့ (ဝါကျအစမှာသုံးတယ်)",
+      "use_when_en": "To start a new sentence that contrasts with the previous one. Always use a comma after it.",
+      "use_when_mm": "ရှေ့ဝါကျနဲ့ ဆန့်ကျင်ဘက်ဖြစ်တဲ့ အကြောင်းအရာကို ဝါကျအသစ်မှာ စပြောချင်တဲ့အခါ သုံးပါတယ်။ သူ့နောက်မှာ comma အမြဲထည့်ပေးရတယ်။",
+      "explanation_en": "\"However\" connects two full sentences. It shows a contrast or an unexpected result. It's more formal than \"but\". Sentence 1. However, Sentence 2.",
+      "explanation_mm": "\"However\" က ဝါကျနှစ်ကြောင်းကို ဆက်ပေးတယ်။ ဆန့်ကျင်ဘက်အကြောင်း (contrast) ဒါမှမဟုတ် မမျှော်လင့်ထားတဲ့ရလဒ် (unexpected result) ကို ဖော်ပြတယ်။ \"but\" ထက် ပို formal ကျတယ်။ ဝါကျ (၁)။ However, ဝါကျ (၂)။",
+      "nuance_en": "Using \"However,\" makes your writing feel more structured and formal. In speech, \"but\" is much more common.",
+      "nuance_mm": "\"However,\" ကိုသုံးလိုက်ရင် ကိုယ့်စာက ပိုပြီးဖွဲ့စည်းပုံကျ၊ ပိုပြီး formal ဖြစ်သွားစေတယ်။ စကားပြောမှာတော့ \"but\" ကိုပဲ အသုံးများပါတယ်။",
+      "goes_with_en": "[First idea]. However, [contrasting idea].",
+      "goes_with_note_en": "It stands alone at the start of a sentence, followed by a comma.",
+      "goes_with_note_mm": "ဝါကျအစမှာ တစ်လုံးတည်း သီးသန့်ရပ်တည်ပြီး သူ့နောက်က comma လိုက်လေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "It was raining heavily. {w}However{/w}, we decided to {c}go for a walk{/c}.",
+          "mm": "မိုးတွေ သည်းကြီးမည်းကြီး ရွာနေခဲ့တယ်။ ဒါပေမဲ့ ကျွန်တော်တို့ လမ်းထွက်လျှောက်ဖို့ ဆုံးဖြတ်ခဲ့ကြတယ်။"
+        },
+        {
+          "en": "The plan was risky. {w}However{/w}, it was our only {c}chance{/c}.",
+          "mm": "အစီအစဉ်က စွန့်စားရလွန်းတယ်။ ဒါပေမဲ့ အဲ့ဒါက ကျွန်တော်တို့ရဲ့ တစ်ခုတည်းသော အခွင့်အရေးပဲ။"
+        },
+        {
+          "en": "The tickets were expensive. {w}However{/w}, the {c}concert{/c} was worth it.",
+          "mm": "လက်မှတ်တွေက ဈေးကြီးတယ်။ ဒါပေမဲ့ ဂီတပွဲကတော့ တန်ပါတယ်။"
+        },
+        {
+          "en": "I understand your point. {w}However{/w}, I don't completely {c}agree{/c}.",
+          "mm": "မင်းပြောတဲ့အချက်ကို ငါနားလည်တယ်။ ဒါပေမဲ့ လုံးဝတော့ သဘောမတူဘူး။"
+        },
+        {
+          "en": "He said he was busy. {w}However{/w}, he {c}found the time{/c} to help me.",
+          "mm": "သူက အလုပ်မအားဘူးလို့ ပြောတယ်။ ဒါပေမဲ့ ကျွန်တော့်ကို ကူညီဖို့ အချိန်ရှာပေးခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "However, we decided",
+        "However, it was",
+        "However, I don't agree"
+      ],
+      "confuse_with": [
+        "although",
+        "on the other hand"
+      ]
+    },
+    {
+      "word": "although",
+      "pos": "conjunction",
+      "ipa": "/ɔːlˈðəʊ/",
+      "short_en": "in spite of the fact that...",
+      "short_mm": "...ပေမဲ့ / ...သော်လည်း",
+      "use_when_en": "To join two contrasting ideas (clauses) in a single sentence.",
+      "use_when_mm": "ဆန့်ကျင်ဘက်အදහස්နှစ်ခု (clauses) ကို ဝါကျတစ်ကြောင်းတည်းမှာ ပေါင်းဆက်ဖို့ သုံးပါတယ်။",
+      "explanation_en": "\"Although\" introduces a subordinate clause that contrasts with the main clause. You can put it at the start or in the middle: \"Although it rained, we went out.\" OR \"We went out, although it rained.\"",
+      "explanation_mm": "\"Although\" က အဓိက clause နဲ့ ဆန့်ကျင်ဘက်ဖြစ်တဲ့ subordinate clause ကို စပေးတယ်။ ဝါကျအစမှာဖြစ်ဖြစ်၊ အလယ်မှာဖြစ်ဖြစ် ထားလို့ရတယ်။ \"မိုးရွာပေမဲ့ ကျွန်တော်တို့ အပြင်ထွက်ခဲ့တယ်\"။ ဒါမှမဟုတ် \"ကျွန်တော်တို့ အပြင်ထွက်ခဲ့တယ်၊ မိုးရွာပေမဲ့ပေါ့\"။",
+      "nuance_en": "It's slightly more formal than \"but\". It's a very common and useful way to make your sentences more complex.",
+      "nuance_mm": "\"but\" ထက် နည်းနည်းပို formal ကျတယ်။ ဝါကျတွေကို ပိုပြီးရှုပ်ထွေးအောင် (complex sentence) တည်ဆောက်တဲ့နေရာမှာ အရမ်းအသုံးဝင်ပြီး အသုံးများပါတယ်။",
+      "goes_with_en": "although + [subject + verb] clause.",
+      "goes_with_note_en": "It must be followed by a full clause (a subject and a verb), not just a noun.",
+      "goes_with_note_mm": "သူ့နောက်မှာ noun တစ်လုံးတည်း မဟုတ်ဘဲ subject နဲ့ verb ပါတဲ့ clause အပြည့်အစုံ လိုက်ရပါမယ်။",
+      "examples": [
+        {
+          "en": "{w}Although{/w} it was {c}raining{/c}, we went for a walk.",
+          "mm": "မိုးရွာနေပေမဲ့ ကျွန်တော်တို့ လမ်းထွက်လျှောက်ခဲ့ကြတယ်။"
+        },
+        {
+          "en": "He passed the exam, {w}although{/w} he hadn't {c}studied{/c} much.",
+          "mm": "သူ စာသိပ်မလုပ်ခဲ့ပေမဲ့ စာမေးပွဲအောင်သွားတယ်။"
+        },
+        {
+          "en": "{w}Although{/w} she was {c}tired{/c}, she finished the report.",
+          "mm": "သူမ ပင်ပန်းနေပေမဲ့ အစီရင်ခံစာကို အပြီးသတ်ခဲ့တယ်။"
+        },
+        {
+          "en": "I enjoyed the film, {w}although{/w} the {c}ending{/c} was a bit sad.",
+          "mm": "ဇာတ်သိမ်းပိုင်းက နည်းနည်းဝမ်းနည်းစရာကောင်းပေမဲ့ ကျွန်တော် အဲ့ဒီဇာတ်ကားကို ကြိုက်ခဲ့တယ်။"
+        },
+        {
+          "en": "{w}Although{/w} the {c}car{/c} is old, it's still very reliable.",
+          "mm": "ကားက ဟောင်းနေပေမဲ့ အခုထိ အရမ်းအားကိုးရတုန်းပဲ။"
+        }
+      ],
+      "collocations": [
+        "although it was",
+        "although he hadn't",
+        "although she was"
+      ],
+      "confuse_with": [
+        "however",
+        "despite"
+      ]
+    },
+    {
+      "word": "despite",
+      "pos": "preposition",
+      "ipa": "/dɪˈspaɪt/",
+      "short_en": "without being affected by...",
+      "short_mm": "...ရှိနေပေမဲ့ / ...ရှိနေတာတောင်",
+      "use_when_en": "Before a noun or an \"-ing\" verb to show a contrast. It does NOT take a full clause (subject + verb).",
+      "use_when_mm": "noun ဒါမှမဟုတ် \"-ing\" verb ရဲ့ရှေ့မှာ ဆန့်ကျင်ဘက်အဓိပ္ပာယ်ပြဖို့ သုံးပါတယ်။ သူ့နောက်မှာ subject + verb ပါတဲ့ clause အပြည့်အစုံ လိုက်လို့မရပါဘူး။",
+      "explanation_en": "\"Despite\" is a preposition. It shows that something happened even though there was an obstacle. The structure is \"despite + noun\" or \"despite + verb-ing\".",
+      "explanation_mm": "\"Despite\" က preposition တစ်ခုပါ။ အခက်အခဲတစ်ခုရှိနေပေမဲ့ အကြောင်းအရာတစ်ခု ဖြစ်ပျက်ခဲ့တယ်ဆိုတာကို ပြတယ်။ သူ့ရဲ့ structure က \"despite + noun\" ဒါမှမဟုတ် \"despite + verb-ing\" ဖြစ်ပါတယ်။",
+      "nuance_en": "\"In spite of\" means exactly the same thing and has the same grammar. \"Despite\" is just shorter and more common.",
+      "nuance_mm": "\"In spite of\" က အဓိပ္ပာယ်ရော သဒ္ဒါရော အတူတူပါပဲ။ \"Despite\" က ပိုတိုပြီး ပိုအသုံးများတာပဲ ကွာပါတယ်။",
+      "goes_with_en": "despite + the noun / a noun · despite + verb-ing",
+      "goes_with_note_en": "Remember the pattern: despite + thing, NOT despite + sentence.",
+      "goes_with_note_mm": "ဒီပုံစံကို မှတ်ထားပါ - despite + အရာဝတ္ထု၊ despite + ဝါကျ မဟုတ်ပါ။",
+      "examples": [
+        {
+          "en": "We went for a walk {w}despite{/w} the {c}rain{/c}.",
+          "mm": "မိုးရွာနေတာတောင် ကျွန်တော်တို့ လမ်းထွက်လျှောက်ခဲ့ကြတယ်။"
+        },
+        {
+          "en": "She got the job {w}despite{/w} her lack of {c}experience{/c}.",
+          "mm": "အတွေ့အကြုံမရှိတာတောင် သူမ အလုပ်ရသွားတယ်။"
+        },
+        {
+          "en": "{w}Despite{/w} {c}feeling{/c} tired, he went to the gym.",
+          "mm": "ပင်ပန်းနေပေမဲ့ သူ gym သွားခဲ့တယ်။"
+        },
+        {
+          "en": "He is very cheerful {w}despite{/w} his {c}problems{/c}.",
+          "mm": "ပြဿနာတွေ ရှိနေပေမဲ့ သူက အရမ်းကို ပျော်ပျော်နေတတ်တယ်။"
+        },
+        {
+          "en": "{w}Despite{/w} the {c}traffic{/c}, we arrived on time.",
+          "mm": "ကားတွေပိတ်နေပေမဲ့ ကျွန်တော်တို့ အချိန်မီရောက်ခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "despite the rain",
+        "despite the fact that",
+        "despite feeling tired"
+      ],
+      "confuse_with": [
+        "although"
+      ]
+    },
+    {
+      "word": "whereas",
+      "pos": "conjunction",
+      "ipa": "/weərˈæz/",
+      "short_en": "in contrast with the fact that...",
+      "short_mm": "...ဖြစ်ပေမဲ့ / ...ဖြစ်တဲ့အချိန်မှာ",
+      "use_when_en": "To directly compare two different facts or situations. Often used for people's preferences or characteristics.",
+      "use_when_mm": "မတူညီတဲ့ အချက်အလက် ဒါမှမဟုတ် အခြေအနေနှစ်ခုကို တိုက်ရိုက်နှိုင်းယှဉ်ဖို့ သုံးပါတယ်။ လူတွေရဲ့ နှစ်သက်မှုတွေ၊ စရိုက်လက္ခဏာတွေကို နှိုင်းယှဉ်တဲ့အခါ အသုံးများပါတယ်။",
+      "explanation_en": "\"Whereas\" highlights a direct contrast between two things in the same sentence. It's like saying \"but this other thing is completely different.\"",
+      "explanation_mm": "\"Whereas\" က ဝါကျတစ်ကြောင်းတည်းမှာ အရာနှစ်ခုကြားက တိုက်ရိုက်ကွာခြားမှုကို အသားပေးဖော်ပြတယ်။ \"ဒါပေမဲ့ ဟိုဘက်ကဟာကတော့ လုံးဝကို ကွဲပြားတယ်\" လို့ ပြောတာနဲ့တူတယ်။",
+      "nuance_en": "It's quite formal and common in academic or formal writing to compare data or ideas.",
+      "nuance_mm": "သူက တော်တော် formal ကျပြီး academic စာတွေ၊ formal စာတွေမှာ အချက်အလက်တွေ၊ အදහස්တွေကို နှိုင်းယှဉ်တဲ့အခါ အသုံးများပါတယ်။",
+      "goes_with_en": "[Fact 1], whereas [Fact 2].",
+      "goes_with_note_en": "It connects two complete clauses, each with a subject and verb.",
+      "goes_with_note_mm": "subject နဲ့ verb ပါတဲ့ clause အပြည့်အစုံ နှစ်ခုကို ဆက်ပေးပါတယ်။",
+      "examples": [
+        {
+          "en": "My brother is very tall, {w}whereas{/w} I'm quite {c}short{/c}.",
+          "mm": "ကျွန်တော့်အစ်ကိုက အရပ်အရမ်းရှည်ပေမဲ့ ကျွန်တော်ကတော့ တော်တော်ပုတယ်။"
+        },
+        {
+          "en": "She loves city life, {w}whereas{/w} her {c}husband{/c} prefers the countryside.",
+          "mm": "သူမက မြို့ပြဘဝကို ကြိုက်ပေမဲ့ သူမရဲ့ခင်ပွန်းကတော့ ကျေးလက်ဒေသကို ပိုနှစ်သက်တယ်။"
+        },
+        {
+          "en": "Some people love hot weather, {w}whereas{/w} {c}others{/c} hate it.",
+          "mm": "တချို့လူတွေက ပူတဲ့ရာသီဥတုကို ကြိုက်ကြပေမဲ့ တခြားသူတွေကတော့ မကြိုက်ကြဘူး။"
+        },
+        {
+          "en": "The old system was complicated, {w}whereas{/w} the new {c}one{/c} is very simple.",
+          "mm": "စနစ်အဟောင်းက ရှုပ်ထွေးပေမဲ့ အသစ်တစ်ခုကတော့ အရမ်းရှင်းတယ်။"
+        },
+        {
+          "en": "He is an optimist, {w}whereas{/w} his {c}sister{/c} is a pessimist.",
+          "mm": "သူက အကောင်းမြင်သမားဖြစ်ပေမဲ့ သူ့ညီမကတော့ အဆိုးမြင်သမားတစ်ယောက်ပါ။"
+        }
+      ],
+      "collocations": [
+        "whereas I'm",
+        "whereas her husband",
+        "whereas others"
+      ],
+      "confuse_with": [
+        "on the other hand"
+      ]
+    },
+    {
+      "word": "even though",
+      "pos": "conjunction",
+      "ipa": "/ˌiː.vən ˈðəʊ/",
+      "short_en": "a stronger 'although'",
+      "short_mm": "...ဖြစ်နေတာတောင်မှ / ...ပေမဲ့လို့",
+      "use_when_en": "When you want to add emphasis to the contrast. It highlights that the situation is surprising or unexpected.",
+      "use_when_mm": "ဆန့်ကျင်ဘက်အခြေအနေကို အလေးပေးပြောချင်တဲ့အခါ သုံးပါတယ်။ အခြေအနေက အံ့ဩစရာကောင်းတယ်၊ မမျှော်လင့်ထားဘူးဆိုတာကို ပေါ်လွင်စေတယ်။",
+      "explanation_en": "It works exactly like \"although\" grammatically (it joins two clauses), but it adds more emotional weight and emphasis.",
+      "explanation_mm": "သဒ္ဒါပိုင်းမှာတော့ \"although\" နဲ့ အတူတူပါပဲ (clause နှစ်ခုကို ဆက်ပေးတယ်)၊ ဒါပေမဲ့ သူက ခံစားချက်နဲ့ အလေးပေးမှုကို ပိုထည့်ပေးတယ်။",
+      "nuance_en": "Use \"even though\" when the contrast feels strong. \"Although I was tired, I finished\" is a fact. \"Even though I was tired, I finished\" emphasizes how difficult it was.",
+      "nuance_mm": "ဆန့်ကျင်ဘက်က ပိုပြီးအားကောင်းတယ်လို့ ခံစားရတဲ့အခါ \"even though\" ကို သုံးပါ။ \"Although I was tired, I finished\" က အချက်အလက်တစ်ခုကို ပြောတာ။ \"Even though I was tired, I finished\" ကတော့ ပင်ပန်းနေတဲ့ကြားက ကြိုးစားပြီးလုပ်ခဲ့တယ်ဆိုတဲ့ အဓိပ္ပာယ်ကို အလေးပေးတယ်။",
+      "goes_with_en": "even though + [subject + verb] clause.",
+      "goes_with_note_en": "Just like \"although\", it must be followed by a full clause.",
+      "goes_with_note_mm": "\"although\" လိုပဲ၊ သူ့နောက်မှာ clause အပြည့်အစုံ လိုက်ရပါမယ်။",
+      "examples": [
+        {
+          "en": "{w}Even though{/w} he's very {c}rich{/c}, he's not happy.",
+          "mm": "သူ အရမ်းချမ်းသာနေတာတောင်မှ ပျော်ရွှင်မှုမရှိဘူး။"
+        },
+        {
+          "en": "I went to work {w}even though{/w} I {c}felt{/c} really ill.",
+          "mm": "ကျွန်တော် တကယ်နေမကောင်းဖြစ်နေတာတောင်မှ အလုပ်သွားခဲ့တယ်။"
+        },
+        {
+          "en": "She didn't get the job, {w}even though{/w} she had all the right {c}qualifications{/c}.",
+          "mm": "အရည်အချင်းတွေအကုန်ပြည့်စုံနေပေမဲ့လို့ သူမ အလုပ်မရခဲ့ဘူး။"
+        },
+        {
+          "en": "{w}Even though{/w} the {c}team{/c} played well, they lost the game.",
+          "mm": "အသင်းက ကောင်းကောင်းကစားခဲ့တာတောင်မှ ပွဲရှုံးသွားတယ်။"
+        },
+        {
+          "en": "He recognized me {w}even though{/w} we hadn't {c}seen{/c} each other for years.",
+          "mm": "ကျွန်တော်တို့ နှစ်ပေါင်းများစွာမတွေ့ဖြစ်ကြပေမဲ့လို့ သူ ကျွန်တော့်ကို မှတ်မိတယ်။"
+        }
+      ],
+      "collocations": [
+        "even though he is",
+        "even though I felt",
+        "even though she had"
+      ],
+      "confuse_with": [
+        "although",
+        "despite"
+      ]
+    },
+    {
+      "word": "on the other hand",
+      "pos": "phrase",
+      "ipa": "/ɒn ðiː ˈʌð.ə ˌhænd/",
+      "short_en": "from another point of view",
+      "short_mm": "နောက်တစ်ဖက်က ကြည့်ပြန်တော့",
+      "use_when_en": "To introduce the second of two contrasting points or opinions when you are considering both sides of an issue.",
+      "use_when_mm": "ကိစ္စတစ်ခုရဲ့ အမြင်နှစ်ဖက်လုံးကို စဉ်းစားတဲ့အခါ ဒုတိယမြောက် ဆန့်ကျင်ဘက်အချက် ဒါမှမဟုတ် အမြင်ကို စတင်မိတ်ဆက်ဖို့ သုံးပါတယ်။",
+      "explanation_en": "This phrase is used to present a different, often opposite, perspective. It's like looking at two sides of a coin. You can use it in a new sentence, or after a semi-colon (;).",
+      "explanation_mm": "ဒီ phrase ကို မတူညီတဲ့၊ ဆန့်ကျင်ဘက်ဖြစ်တတ်တဲ့ ရှုထောင့်တစ်ခုကို တင်ပြဖို့ သုံးပါတယ်။ ဒင်္ဂါးပြားတစ်ပြားရဲ့ တစ်ဖက်စီကို ကြည့်တာနဲ့တူတယ်။ ဝါကျအသစ်မှာ သုံးလို့ရသလို၊ semi-colon (;) ရဲ့ နောက်မှာလည်း သုံးနိုင်ပါတယ်။",
+      "nuance_en": "Strictly, you should have mentioned the \"first hand\" (e.g., \"On the one hand...\"). But in modern English, people often just use \"On the other hand\" by itself.",
+      "nuance_mm": "တကယ်တော့ \"On the one hand...\" ဆိုပြီး ပထမအမြင်ကို အရင်ပြောသင့်တယ်။ ဒါပေမဲ့ ခေတ်ใหม่အင်္ဂလိပ်စာမှာတော့ \"On the other hand\" ကိုပဲ တစ်ခုတည်း သီးသန့်သုံးကြတာများပါတယ်။",
+      "goes_with_en": "[First viewpoint]. On the other hand, [second viewpoint].",
+      "goes_with_note_en": "It introduces a full sentence and is usually followed by a comma.",
+      "goes_with_note_mm": "သူ့နောက်မှာ ဝါကျအပြည့်အစုံလိုက်ပြီး comma ပါလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "The new phone is expensive. {w}On the other hand{/w}, it has a much better {c}camera{/c}.",
+          "mm": "ဖုန်းအသစ်က ဈေးကြီးတယ်။ နောက်တစ်ဖက်က ကြည့်ပြန်တော့လည်း ကင်မရာက ပိုကောင်းတယ်။"
+        },
+        {
+          "en": "Living in the city is exciting. {w}On the other hand{/w}, the {c}rent{/c} is very high.",
+          "mm": "မြို့မှာနေရတာ စိတ်လှုပ်ရှားစရာကောင်းတယ်။ နောက်တစ်ဖက်က ကြည့်ပြန်တော့ အိမ်ငှားခက အရမ်းများတယ်။"
+        },
+        {
+          "en": "I want to go out tonight; {w}on the other hand{/w}, I'm really {c}tired{/c}.",
+          "mm": "ဒီည အပြင်ထွက်ချင်တယ်၊ ဒါပေမဲ့ နောက်တစ်မျိုးစဉ်းစားကြည့်တော့လည်း ကျွန်တော် တကယ်ပင်ပန်းနေပြီ။"
+        },
+        {
+          "en": "Taking the bus is cheap. {w}On the other hand{/w}, it's much {c}slower{/c} than the train.",
+          "mm": "ဘတ်စ်ကားစီးတာက ဈေးသက်သာတယ်။ နောက်တစ်ဖက်ကကြည့်တော့ ရထားထက် အများကြီးပိုကြာတယ်။"
+        },
+        {
+          "en": "He's very good at his job. {w}On the other hand{/w}, he's not a very good {c}team player{/c}.",
+          "mm": "သူက သူ့အလုပ်မှာ အရမ်းတော်တယ်။ ဒါပေမဲ့ နောက်တစ်ဖက်မှာတော့ သူက အဖွဲ့နဲ့လုပ်ရတာ သိပ်မကောင်းဘူး။"
+        }
+      ],
+      "collocations": [
+        "on the other hand, it has",
+        "on the other hand, I'm"
+      ],
+      "confuse_with": [
+        "however",
+        "whereas"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "We went out ___ the bad weather.",
+      "right": "despite",
+      "wrong": "although",
+      "why": "After the blank is a noun phrase ('the bad weather'), not a clause. 'Despite' takes a noun; 'although' needs a clause (e.g., 'although the weather was bad').",
+      "why_mm": "ကွက်လပ်နောက်မှာ noun ('the bad weather') ပဲ ပါတဲ့အတွက် 'despite' ကို သုံးရပါမယ်။ 'Although' ကို သုံးချင်ရင် 'although the weather was bad' ဆိုတဲ့ clause အပြည့်အစုံ လိုအပ်ပါတယ်။"
+    },
+    {
+      "prompt": "It was raining. ___, we still had a good time.",
+      "right": "However",
+      "wrong": "Although",
+      "why": "The blank starts a new sentence, which is the job of 'However,'. 'Although' is a conjunction used to join two clauses within one sentence.",
+      "why_mm": "ကွက်လပ်က ဝါကျအသစ်ကို စထားတဲ့အတွက် 'However,' ကို သုံးရပါမယ်။ 'Although' က ဝါကျတစ်ကြောင်းတည်းမှာ clause နှစ်ခုကို ဆက်ပေးတဲ့ စကားလုံးပါ။"
+    },
+    {
+      "prompt": "My brother loves spicy food, ___ I prefer mild dishes.",
+      "right": "whereas",
+      "wrong": "on the other hand",
+      "why": "'Whereas' is perfect for a direct comparison of two facts in one sentence. 'On the other hand' is better for comparing two different viewpoints or arguments.",
+      "why_mm": "'Whereas' က ဝါကျတစ်ကြောင်းတည်းမှာ အချက်နှစ်ခုကို တိုက်ရိုက်နှိုင်းယှဉ်ဖို့ အကောင်းဆုံးပါ။ 'On the other hand' ကတော့ မတူညီတဲ့ ရှုထောင့်နှစ်ခုကို နှိုင်းယှဉ်တဲ့အခါ ပိုသင့်တော်ပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "___ he is rich, he lives a very simple life.",
+      "answer": "Although",
+      "options": [
+        "Although",
+        "Despite",
+        "However"
+      ],
+      "explain_en": "'Although' is needed here to connect two clauses ('he is rich' and 'he lives...') in one sentence.",
+      "explain_mm": "ဒီဝါကျမှာ clause နှစ်ခု ('he is rich' နဲ့ 'he lives...') ကို ဆက်ပေးဖို့ 'Although' လိုအပ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The flight was long. ___, the service was excellent.",
+      "answer": "However",
+      "options": [
+        "Whereas",
+        "However",
+        "Despite"
+      ],
+      "explain_en": "'However' is used to start a new sentence that contrasts with the previous one.",
+      "explain_mm": "'However' ကို ရှေ့ဝါကျနဲ့ ဆန့်ကျင်ဘက်ဖြစ်တဲ့ ဝါကျအသစ်တစ်ခုကို စတင်ဖို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She passed the exam ___ not studying very hard.",
+      "answer": "despite",
+      "options": [
+        "although",
+        "despite",
+        "whereas"
+      ],
+      "explain_en": "After the blank is a verb-ing phrase ('not studying...'), so you need the preposition 'despite'.",
+      "explain_mm": "ကွက်လပ်နောက်မှာ verb-ing phrase ('not studying...') ပါတဲ့အတွက် preposition ဖြစ်တဲ့ 'despite' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The hotel is in a great location. ___, it can be quite noisy.",
+      "answer": "On the other hand",
+      "options": [
+        "Despite",
+        "On the other hand",
+        "Whereas"
+      ],
+      "explain_en": "'On the other hand' is used to introduce a contrasting viewpoint or a disadvantage.",
+      "explain_mm": "'On the other hand' ကို ဆန့်ကျင်ဘက်ရှုထောင့် ဒါမှမဟုတ် အားနည်းချက်တစ်ခုကို မိတ်ဆက်ဖို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He likes to stay at home, ___ his wife loves to travel.",
+      "answer": "whereas",
+      "options": [
+        "whereas",
+        "however",
+        "despite"
+      ],
+      "explain_en": "'Whereas' is used to make a direct comparison between two different facts or people.",
+      "explain_mm": "'Whereas' ကို မတူညီတဲ့ အချက်အလက်နှစ်ခု ဒါမှမဟုတ် လူနှစ်ယောက်ကို တိုက်ရိုက်နှိုင်းယှဉ်ဖို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I still enjoyed the party ___ I didn't know anyone there.",
+      "answer": "even though",
+      "options": [
+        "despite",
+        "even though",
+        "however"
+      ],
+      "explain_en": "'Even though' is a stronger version of 'although', emphasizing the surprising contrast.",
+      "explain_mm": "'Even though' က 'although' ထက် ပိုအားကောင်းပြီး အံ့ဩစရာကောင်းတဲ့ ဆန့်ကျင်ဘက်အခြေအနေကို အလေးပေးဖော်ပြပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "___ all the warnings, he decided to go climbing alone.",
+      "answer": "Despite",
+      "options": [
+        "Despite",
+        "Although",
+        "Even though"
+      ],
+      "explain_en": "'Despite' is followed by a noun phrase ('all the warnings'). 'Although' would need a clause.",
+      "explain_mm": "'Despite' ရဲ့နောက်မှာ noun phrase ('all the warnings') လိုက်ပါတယ်။ 'Although' သုံးမယ်ဆိုရင် clause လိုပါလိမ့်မယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The job doesn't pay well. ___, the work is very rewarding.",
+      "answer": "However",
+      "options": [
+        "Whereas",
+        "However",
+        "Despite"
+      ],
+      "explain_en": "To start a new, contrasting sentence, use 'However,'.",
+      "explain_mm": "ဆန့်ကျင်ဘက် ဝါကျအသစ်တစ်ခုကို စတင်ဖို့ 'However,' ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He kept working ___ he had a high fever.",
+      "answer": "even though",
+      "options": [
+        "despite",
+        "even though",
+        "whereas"
+      ],
+      "explain_en": "'Even though' connects the two clauses and adds emphasis to the difficult situation.",
+      "explain_mm": "'Even though' က clause နှစ်ခုကို ဆက်ပေးပြီး ခက်ခဲတဲ့အခြေအနေကို အလေးပေးဖော်ပြပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My sister is a doctor, ___ I am a teacher.",
+      "answer": "whereas",
+      "options": [
+        "although",
+        "however",
+        "whereas"
+      ],
+      "explain_en": "'Whereas' is the best choice for directly comparing two different facts in the same sentence.",
+      "explain_mm": "ဝါကျတစ်ကြောင်းတည်းမှာ မတူညီတဲ့အချက်နှစ်ခုကို တိုက်ရိုက်နှိုင်းယှဉ်ဖို့ 'whereas' က အကောင်းဆုံးရွေးချယ်မှုပါ။"
+    }
+  ]
+}

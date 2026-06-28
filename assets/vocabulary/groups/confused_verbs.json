@@ -1,0 +1,434 @@
+{
+  "id": "confused_verbs",
+  "title": "Easily confused verbs",
+  "level": 2,
+  "order": 504,
+  "theme": "Easily confused verbs",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "These verbs often come in pairs that learners mix up. The key is to focus on the direction of the action: who is giving, and who is receiving? You BORROW from someone; they LEND to you. Learning them together helps you see the difference.",
+  "why_grouped_mm": "ဒီ verb တွေက အဓိပ္ပာယ်ဆင်တူပြီး အတွဲလိုက်လာတတ်လို့ လေ့လာသူတွေ အမှားများပါတယ်။ အဓိကကတော့ action ရဲ့ ဦးတည်ရာကို ကြည့်ဖို့ပါပဲ။ ဘယ်သူက ပေးတာလဲ၊ ဘယ်သူက ယူတာလဲပေါ့။ ကိုယ်က သူများဆီက ငှားရင် BORROW၊ ကိုယ်က သူများကို ငှားပေးရင် LEND ပါ။ ဒီလိုခွဲခြားပြီး မှတ်ထားရင် ပိုလွယ်သွားပါလိမ့်မယ်။",
+  "words": [
+    {
+      "word": "borrow",
+      "pos": "verb",
+      "ipa": "/ˈbɒr.əʊ/",
+      "short_en": "take something to use temporarily",
+      "short_mm": "ခဏငှားသုံးသည် (ကိုယ့်ဆီယူ)",
+      "use_when_en": "You are the one receiving something temporarily. The key preposition is FROM.",
+      "use_when_mm": "ကိုယ့်ဆီကို တစ်ခုခု ခဏယူသုံးဖို့ ငှားတဲ့အခါ သုံးပါတယ်။ FROM နဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "explanation_en": "Borrowing is the action of receiving. If you need a pen, you ask, 'Can I borrow your pen?' The pen comes TO you.",
+      "explanation_mm": "Borrow ဆိုတာက ကိုယ်က လက်ခံရယူတဲ့ action ပါ။ ဥပမာ၊ ဘောပင်လိုချင်ရင် 'Can I borrow your pen?' လို့မေးရတယ်။ ဘောပင်က ကိုယ့်ဆီကို ရောက်လာတာပေါ့။",
+      "nuance_en": "The focus is on you, the receiver. It implies you will give it back.",
+      "nuance_mm": "အဓိကက ကိုယ် (လက်ခံသူ) ပါ။ ပြန်ပေးမယ်ဆိုတဲ့ သဘောလည်း သက်ရောက်ပါတယ်။",
+      "goes_with_en": "borrow + something (a book, money, a car) + FROM someone",
+      "goes_with_note_en": "The pattern is always 'borrow something FROM someone'.",
+      "goes_with_note_mm": "'borrow something FROM someone' ဆိုတဲ့ ပုံစံနဲ့ပဲ အမြဲတွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "Can I {w}borrow{/w} a {c}pen{/c} from you for a minute?",
+          "mm": "ခင်ဗျားဆီက ဘောပင်တစ်ချောင်း ခဏလောက် ငှားလို့ရမလား။"
+        },
+        {
+          "en": "He had to {w}borrow{/w} {c}money{/c} from the bank to buy his car.",
+          "mm": "သူ ကားဝယ်ဖို့ ဘဏ်ကနေ ပိုက်ဆံချေးခဲ့ရတယ်။"
+        },
+        {
+          "en": "I {w}borrowed{/w} this {c}book{/c} from the library last week.",
+          "mm": "ဒီစာအုပ်ကို လွန်ခဲ့တဲ့အပတ်က စာကြည့်တိုက်ကနေ ငှားခဲ့တာ။"
+        },
+        {
+          "en": "Is it okay if I {w}borrow{/w} your {c}umbrella{/c}? It's starting to rain.",
+          "mm": "မိုးရွာတော့မှာမို့လို့ ခင်ဗျားထီး ခဏငှားလို့ အဆင်ပြေလား။"
+        },
+        {
+          "en": "She often {w}borrows{/w} {c}ideas{/c} from her favourite authors.",
+          "mm": "သူမက သူ့အကြိုက်ဆုံး စာရေးဆရာတွေဆီက အတွေးအခေါ်တွေကို မကြာခဏ မှီငြမ်းလေ့ရှိတယ်။"
+        }
+      ],
+      "collocations": [
+        "borrow a pen",
+        "borrow money from",
+        "borrow a book"
+      ],
+      "confuse_with": [
+        "lend"
+      ]
+    },
+    {
+      "word": "lend",
+      "pos": "verb",
+      "ipa": "/lend/",
+      "short_en": "give something for someone to use temporarily",
+      "short_mm": "ခဏငှားပေးသည် (ကိုယ့်ဆီကပေး)",
+      "use_when_en": "You are the one giving something temporarily. The key preposition is TO.",
+      "use_when_mm": "ကိုယ်ကနေ တစ်ခုခုကို ခဏသုံးဖို့ တခြားတစ်ယောက်ကို ပေးတဲ့အခါ သုံးပါတယ်။ TO နဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "explanation_en": "Lending is the action of giving. If your friend needs a pen, you say, 'I can lend you my pen.' The pen goes FROM you.",
+      "explanation_mm": "Lend ဆိုတာက ကိုယ်က ပေးလိုက်တဲ့ action ပါ။ ဥပမာ၊ သူငယ်ချင်းက ဘောပင်လိုနေရင် 'ငါ့ဘောပင် မင်းကို ငှားပေးလို့ရတယ်' လို့ ပြောရတယ်။ ဘောပင်က ကိုယ့်ဆီကနေ ထွက်သွားတာပေါ့။",
+      "nuance_en": "The focus is on you, the giver. The person who borrows is expected to return it.",
+      "nuance_mm": "အဓိကက ကိုယ် (ပေးသူ) ပါ။ ငှားယူသွားတဲ့သူက ပြန်ပေးရမယ်လို့ မျှော်လင့်ထားပါတယ်။",
+      "goes_with_en": "lend + something (a book, money, a car) + TO someone · lend + someone + something",
+      "goes_with_note_en": "The pattern can be 'lend something TO someone' or 'lend someone something'.",
+      "goes_with_note_mm": "'lend something TO someone' ဒါမှမဟုတ် 'lend someone something' ဆိုတဲ့ ပုံစံနှစ်မျိုးလုံးနဲ့ သုံးလို့ရပါတယ်။",
+      "examples": [
+        {
+          "en": "Could you {w}lend{/w} me your {c}charger{/c}? My phone is dead.",
+          "mm": "မင်းရဲ့ အားသွင်းကြိုးလေး ခဏငှားပေးလို့ရမလား။ ငါ့ဖုန်း အားကုန်သွားလို့။"
+        },
+        {
+          "en": "The bank agreed to {w}lend{/w} the {c}company{/c} one million dollars.",
+          "mm": "ဘဏ်က ကုမ္ပဏီကို ဒေါ်လာတစ်သန်း ချေးပေးဖို့ သဘောတူခဲ့တယ်။"
+        },
+        {
+          "en": "I can {w}lend{/w} you my {c}car{/c} for the weekend.",
+          "mm": "စနေ၊ တနင်္ဂနွေအတွက် ငါ့ကားကို မင်းကို ငှားပေးလို့ရတယ်။"
+        },
+        {
+          "en": "She doesn't like to {w}lend{/w} her {c}books{/c} to anyone.",
+          "mm": "သူမက သူ့စာအုပ်တွေကို ဘယ်သူ့ကိုမှ မငှားချင်ဘူး။"
+        },
+        {
+          "en": "Can you {w}lend{/w} me a {c}hand{/c} with these boxes?",
+          "mm": "ဒီပုံးတွေ သယ်တာ ခဏလောက် ကူညီပေးလို့ရမလား။"
+        }
+      ],
+      "collocations": [
+        "lend me your charger",
+        "lend someone money",
+        "lend a hand"
+      ],
+      "confuse_with": [
+        "borrow"
+      ]
+    },
+    {
+      "word": "bring",
+      "pos": "verb",
+      "ipa": "/brɪŋ/",
+      "short_en": "carry something toward the speaker",
+      "short_mm": "ယူလာသည် (ဒီဘက်ကို)",
+      "use_when_en": "For movement towards the speaker's location, or the listener's location if you are going there too. Think 'come with'.",
+      "use_when_mm": "စကားပြောနေတဲ့သူရှိရာ ဒါမှမဟုတ် ကိုယ်သွားမယ့်နေရာကို ပစ္စည်းတစ်ခုခု ယူလာတဲ့အခါ သုံးပါတယ်။ 'ဒီကို ယူလာခဲ့' ဆိုတဲ့ အဓိပ္ပာယ်ပါ။",
+      "explanation_en": "Bring is about movement to 'here'. If you are at home, you ask your friend, 'Can you bring some snacks to my party?' The snacks come to where you are.",
+      "explanation_mm": "Bring ဆိုတာ 'ဒီကို' လာတဲ့ လှုပ်ရှားမှုနဲ့ဆိုင်တယ်။ ကိုယ်က အိမ်မှာရှိနေရင် သူငယ်ချင်းကို 'ငါ့ပါတီကို မုန့်နည်းနည်း ယူခဲ့ပေးလို့ရမလား' လို့မေးရတယ်။ မုန့်တွေက ကိုယ်ရှိတဲ့နေရာကို ရောက်လာတာပေါ့။",
+      "nuance_en": "The direction is always towards the point of focus (usually 'here').",
+      "nuance_mm": "ဦးတည်ရာက အမြဲတမ်း စကားပြောနေတဲ့နေရာ ('ဒီကို') ဘက်ကိုပဲ ဖြစ်ပါတယ်။",
+      "goes_with_en": "bring + something + here / to me · bring + someone + with you · bring it back",
+      "goes_with_note_en": "Often paired with words indicating arrival: here, to me, with you.",
+      "goes_with_note_mm": "Here, to me, with you လိုမျိုး ရောက်ရှိလာခြင်းကိုပြတဲ့ စကားလုံးတွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "Please {w}bring{/w} your {c}report{/c} to the meeting tomorrow.",
+          "mm": "မနက်ဖြန် အစည်းအဝေးကို မင်းရဲ့အစီရင်ခံစာ ယူခဲ့ပေးပါ။"
+        },
+        {
+          "en": "Don't forget to {w}bring{/w} an {c}umbrella{/c} with you; it might rain.",
+          "mm": "မိုးရွာနိုင်လို့ ထီးယူလာဖို့ မမေ့နဲ့နော်။"
+        },
+        {
+          "en": "Are you coming to the picnic? Please {w}bring{/w} some {c}drinks{/c}.",
+          "mm": "ပန်းခြံမှာ နေ့လယ်စာစားပွဲကို လာမှာလား။ သောက်စရာလေးတွေ ယူခဲ့ပေးပါဦး။"
+        },
+        {
+          "en": "She {w}brought{/w} her new {c}boyfriend{/c} to meet her parents.",
+          "mm": "သူမက သူ့မိဘတွေနဲ့ တွေ့ပေးဖို့ သူ့ရည်းစားအသစ်ကို ခေါ်လာခဲ့တယ်။"
+        },
+        {
+          "en": "Could you {w}bring{/w} me that {c}book{/c} from the shelf?",
+          "mm": "စင်ပေါ်က အဲဒီစာအုပ်လေး ဒီကို ယူပေးလို့ရမလား။"
+        }
+      ],
+      "collocations": [
+        "bring your report",
+        "bring an umbrella",
+        "bring some drinks"
+      ],
+      "confuse_with": [
+        "take"
+      ]
+    },
+    {
+      "word": "take",
+      "pos": "verb",
+      "ipa": "/teɪk/",
+      "short_en": "carry something away from the speaker",
+      "short_mm": "ယူသွားသည် (ဟိုဘက်ကို)",
+      "use_when_en": "For movement away from the speaker's location. Think 'go with'.",
+      "use_when_mm": "စကားပြောနေတဲ့သူရှိရာကနေ တခြားတစ်နေရာကို ပစ္စည်းတစ်ခုခု ယူသွားတဲ့အခါ သုံးပါတယ်။ 'ဟိုကို ယူသွား' ဆိုတဲ့ အဓိပ္ပာယ်ပါ။",
+      "explanation_en": "Take is about movement to 'there'. If you are leaving home, you say, 'I need to take my keys with me.' The keys go away from 'here'.",
+      "explanation_mm": "Take ဆိုတာ 'ဟိုကို' သွားတဲ့ လှုပ်ရှားမှုနဲ့ဆိုင်တယ်။ ကိုယ်က အိမ်ကနေ ထွက်တော့မယ်ဆိုရင် 'ငါ့သော့တွေ ယူသွားဖို့လိုတယ်' လို့ ပြောရတယ်။ သော့တွေက 'ဒီကနေ' ထွက်သွားတာပေါ့။",
+      "nuance_en": "The direction is always away from the point of focus (usually 'here').",
+      "nuance_mm": "ဦးတည်ရာက အမြဲတမ်း စကားပြောနေတဲ့နေရာ ('ဒီကနေ') ကနေ ထွက်ခွာသွားတာ ဖြစ်ပါတယ်။",
+      "goes_with_en": "take + something + there / away · take + someone + to a place · take it with you",
+      "goes_with_note_en": "Often paired with words indicating departure: there, away, to the office.",
+      "goes_with_note_mm": "There, away, to the office လိုမျိုး ထွက်ခွာသွားခြင်းကိုပြတဲ့ စကားလုံးတွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "Please {w}take{/w} these {c}documents{/c} to the manager's office.",
+          "mm": "ဒီစာရွက်စာတမ်းတွေကို မန်နေဂျာရုံးခန်းကို ယူသွားပေးပါ။"
+        },
+        {
+          "en": "Don't forget to {w}take{/w} your {c}lunch{/c} when you leave for work.",
+          "mm": "အလုပ်သွားတဲ့အခါ နေ့လယ်စာ ယူသွားဖို့ မမေ့နဲ့နော်။"
+        },
+        {
+          "en": "I'll {w}take{/w} the {c}dog{/c} for a walk later.",
+          "mm": "ခဏနေရင် ခွေးကို လမ်းလျှောက်ခေါ်သွားမယ်။"
+        },
+        {
+          "en": "Can you {w}take{/w} this {c}package{/c} to the post office for me?",
+          "mm": "ဒီပါဆယ်ကို စာတိုက်ကို ကျွန်တော့်အတွက် ယူသွားပေးလို့ရမလား။"
+        },
+        {
+          "en": "He {w}took{/w} his {c}children{/c} to the park.",
+          "mm": "သူ သူ့ကလေးတွေကို ပန်းခြံကို ခေါ်သွားခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "take these documents",
+        "take your lunch",
+        "take someone to"
+      ],
+      "confuse_with": [
+        "bring"
+      ]
+    },
+    {
+      "word": "remember",
+      "pos": "verb",
+      "ipa": "/rɪˈmem.bər/",
+      "short_en": "keep or recall something in your mind",
+      "short_mm": "သတိရသည်၊ မှတ်မိသည် (ကိုယ့်ဘာသာ)",
+      "use_when_en": "The action of not forgetting happens inside your own head.",
+      "use_when_mm": "မမေ့သွားအောင် ကိုယ့်ဦးနှောက်ထဲမှာ သိမ်းထားတာ၊ ဒါမှမဟုတ် ပြန်စဉ်းစားပြီး သတိရတာမျိုးအတွက် သုံးပါတယ်။",
+      "explanation_en": "Remembering is a mental process done by you, for you. You can remember a past event ('I remember my first day of school') or remember to do a future action ('I must remember to buy milk').",
+      "explanation_mm": "Remember ဆိုတာ ကိုယ့်ဘာသာကိုယ်လုပ်တဲ့ စိတ်ပိုင်းဆိုင်ရာ လုပ်ဆောင်ချက်တစ်ခုပါ။ အတိတ်ကအဖြစ်အပျက်တစ်ခုကို သတိရတာ ('ကျောင်းစတက်တဲ့ ပထမဆုံးနေ့ကို ကျွန်တော်မှတ်မိတယ်') ဒါမှမဟုတ် အနာဂတ်မှာလုပ်ရမယ့်အရာကို သတိရတာ ('နွားနို့ဝယ်ဖို့ ငါသတိရမှ') အတွက် သုံးနိုင်ပါတယ်။",
+      "nuance_en": "It's an internal action. No one else is involved.",
+      "nuance_mm": "ဒါက ကိုယ့်အတွင်းစိတ်ထဲမှာပဲ ဖြစ်တဲ့ကိစ္စပါ။ တခြားသူ မပါဝင်ပါဘူး။",
+      "goes_with_en": "remember + to do something · remember + doing something · remember + someone's name / a fact",
+      "goes_with_note_en": "The pattern changes meaning: 'remember to call' (future task) vs. 'remember calling' (past memory).",
+      "goes_with_note_mm": "ပုံစံပေါ်မူတည်ပြီး အဓိပ္ပာယ်ပြောင်းပါတယ်: 'remember to call' (လုပ်ရမယ့်အလုပ်) နဲ့ 'remember calling' (လုပ်ခဲ့တဲ့အမှတ်တရ) ကွာပါတယ်။",
+      "examples": [
+        {
+          "en": "Did you {w}remember{/w} to {c}lock{/c} the door?",
+          "mm": "တံခါးသော့ခတ်ဖို့ သတိရခဲ့ရဲ့လား။"
+        },
+        {
+          "en": "I can't {w}remember{/w} his {c}name{/c}, but I know his face.",
+          "mm": "သူ့နာမည်ကိုတော့ ကျွန်တော်မမှတ်မိဘူး၊ ဒါပေမဲ့ သူ့မျက်နှာကိုတော့ မှတ်မိတယ်။"
+        },
+        {
+          "en": "I suddenly {w}remembered{/w} that I had a {c}meeting{/c} at 3 PM.",
+          "mm": "ကျွန်တော့်မှာ ညနေ ၃ နာရီမှာ အစည်းအဝေးရှိတာကို ရုတ်တရက် သတိရလိုက်တယ်။"
+        },
+        {
+          "en": "I vaguely {w}remember{/w} {c}meeting{/c} him once before.",
+          "mm": "သူနဲ့ တစ်ခါလောက် တွေ့ဖူးသလိုလိုတော့ မှတ်မိသလိုလိုပဲ။"
+        },
+        {
+          "en": "Always {w}remember{/w} the {c}lessons{/c} your parents taught you.",
+          "mm": "မိဘတွေသင်ပေးခဲ့တဲ့ သင်ခန်းစာတွေကို အမြဲတမ်း သတိရပါ။"
+        }
+      ],
+      "collocations": [
+        "remember to lock",
+        "remember someone's name",
+        "remember a meeting"
+      ],
+      "confuse_with": [
+        "remind"
+      ]
+    },
+    {
+      "word": "remind",
+      "pos": "verb",
+      "ipa": "/rɪˈmaɪnd/",
+      "short_en": "make someone else remember something",
+      "short_mm": "သတိပေးသည် (တခြားသူကို)",
+      "use_when_en": "You cause another person to remember something they might have forgotten.",
+      "use_when_mm": "တခြားတစ်ယောက် မေ့သွားနိုင်တဲ့ကိစ္စတစ်ခုကို သတိရလာအောင် ကိုယ်ကလုပ်ပေးတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "Reminding is an external action. You do it to someone else. You say, 'Can you remind me to call my mom?' You are asking someone to help your memory.",
+      "explanation_mm": "Remind ဆိုတာက အပြင်ကနေ လုပ်ဆောင်ပေးတဲ့ action တစ်ခုပါ။ ကိုယ်က တခြားတစ်ယောက်ကို လုပ်ပေးတာပါ။ 'အမေ့ဆီ ဖုန်းဆက်ဖို့ ကျွန်တော့်ကို သတိပေးပါလား' လို့ ပြောတဲ့အခါ၊ ကိုယ့်မှတ်ဉာဏ်ကို ကူညီပေးဖို့ တောင်းဆိုနေတာ ဖြစ်ပါတယ်။",
+      "nuance_en": "It's an action from one person to another. It can also mean 'make me think of something else', e.g., 'You remind me of my brother'.",
+      "nuance_mm": "လူတစ်ယောက်ကနေ နောက်တစ်ယောက်ကို လုပ်ပေးတဲ့ action ပါ။ 'တစ်စုံတစ်ယောက် (သို့) တစ်စုံတစ်ခုကို သတိရစေတယ်' လို့လည်း အဓိပ္ပာယ်ရပါတယ်။ ဥပမာ၊ 'မင်းက ငါ့အစ်ကိုကို သတိရစေတယ်။'",
+      "goes_with_en": "remind + someone + to do something · remind + someone + about something · remind + someone + of something/someone",
+      "goes_with_note_en": "The structure is always 'remind SOMEONE...'.",
+      "goes_with_note_mm": "ဖွဲ့စည်းပုံက အမြဲတမ်း 'remind SOMEONE...' ဆိုတဲ့ ပုံစံနဲ့ပဲ လာပါတယ်။",
+      "examples": [
+        {
+          "en": "Could you {w}remind{/w} {c}me{/c} to buy milk on your way home?",
+          "mm": "အိမ်အပြန်လမ်းမှာ နွားနို့ဝယ်ဖို့ ကျွန်တော့်ကို သတိပေးပါလား။"
+        },
+        {
+          "en": "Let me {w}remind{/w} {c}you{/c} about the deadline on Friday.",
+          "mm": "သောကြာနေ့ နောက်ဆုံးသတ်မှတ်ရက်အကြောင်း မင်းကို ငါသတိပေးပါရစေ။"
+        },
+        {
+          "en": "This song {w}reminds{/w} {c}me{/c} of my childhood.",
+          "mm": "ဒီသီချင်းက ကျွန်တော့်ကို ကလေးဘဝကို ပြန်သတိရစေတယ်။"
+        },
+        {
+          "en": "The teacher {w}reminded{/w} the {c}students{/c} that the exam was next week.",
+          "mm": "နောက်တစ်ပတ်မှာ စာမေးပွဲရှိကြောင်း ဆရာမက ကျောင်းသားတွေကို သတိပေးခဲ့တယ်။"
+        },
+        {
+          "en": "His expression {w}reminded{/w} {c}me{/c} that I had said something wrong.",
+          "mm": "သူ့မျက်နှာအမူအရာက ကျွန်တော်စကားမှားသွားတာကို သတိရသွားစေတယ်။"
+        }
+      ],
+      "collocations": [
+        "remind me to",
+        "remind you about",
+        "reminds me of"
+      ],
+      "confuse_with": [
+        "remember"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "Can you ___ me some money until tomorrow?",
+      "right": "lend",
+      "wrong": "borrow",
+      "why": "The speaker is asking someone to GIVE them money. Giving temporarily is 'lend'.",
+      "why_mm": "စကားပြောသူက တခြားသူကို ပိုက်ဆံ 'ပေးဖို့' တောင်းဆိုနေတာပါ။ ခဏတာ 'ပေးတာ' ဖြစ်လို့ 'lend' ကို သုံးရပါမယ်။"
+    },
+    {
+      "prompt": "When you leave, please ___ the rubbish out with you.",
+      "right": "take",
+      "wrong": "bring",
+      "why": "The action is moving something AWAY from here ('out'). Moving away is 'take'.",
+      "why_mm": "ဒီနေရာကနေ အဝေးကို ('အပြင်') ရွှေ့တဲ့ action ဖြစ်ပါတယ်။ အဝေးကို ယူသွားတာဖြစ်လို့ 'take' ကို သုံးရပါမယ်။"
+    },
+    {
+      "prompt": "Please ___ me to call the client at 4 PM.",
+      "right": "remind",
+      "wrong": "remember",
+      "why": "You are asking someone else to make you remember. This action is 'remind'.",
+      "why_mm": "ကိုယ်သတိရအောင် တခြားတစ်ယောက်ကို လုပ်ခိုင်းတာ ဖြစ်ပါတယ်။ ဒါကြောင့် 'remind' ကို သုံးရပါမယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Could I ___ your phone to make a quick call? Mine has no battery.",
+      "answer": "borrow",
+      "options": [
+        "borrow",
+        "lend",
+        "take"
+      ],
+      "explain_en": "You are asking to receive something temporarily, so you 'borrow' it FROM them.",
+      "explain_mm": "ကိုယ်က ခဏသုံးဖို့ တောင်းတာဖြစ်လို့ 'borrow' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm going to the post office. Do you want me to ___ that parcel for you?",
+      "answer": "take",
+      "options": [
+        "take",
+        "bring",
+        "lend"
+      ],
+      "explain_en": "The action is moving something away from the current location ('to the post office'), so 'take' is correct.",
+      "explain_mm": "လက်ရှိနေရာကနေ တခြားနေရာကို ယူသွားတာဖြစ်လို့ 'take' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Please ___ me to check the oven in 20 minutes.",
+      "answer": "remind",
+      "options": [
+        "remember",
+        "remind",
+        "bring"
+      ],
+      "explain_en": "You are asking another person to help you remember, which is the definition of 'remind'.",
+      "explain_mm": "ကိုယ်သတိရအောင် တခြားတစ်ယောက်ကို ပြောခိုင်းတာဖြစ်လို့ 'remind' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The bank won't ___ us any more money.",
+      "answer": "lend",
+      "options": [
+        "lend",
+        "borrow",
+        "take"
+      ],
+      "explain_en": "The bank is the one GIVING money temporarily, so they 'lend' it TO you.",
+      "explain_mm": "ဘဏ်က ပိုက်ဆံကို (ခဏ) 'ပေး' တဲ့သူဖြစ်လို့ 'lend' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I can't ___ his address. I'll have to look it up.",
+      "answer": "remember",
+      "options": [
+        "remember",
+        "remind",
+        "bring"
+      ],
+      "explain_en": "The action of recalling information in your own mind is 'remember'.",
+      "explain_mm": "ကိုယ့်စိတ်ထဲမှာ သတင်းအချက်အလက်ကို ပြန်ဖော်ထုတ်တာဖြစ်လို့ 'remember' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Are you coming to my place tonight? Don't forget to ___ that game you told me about.",
+      "answer": "bring",
+      "options": [
+        "bring",
+        "take",
+        "remind"
+      ],
+      "explain_en": "The game is moving TOWARDS the speaker's location ('my place'), so 'bring' is correct.",
+      "explain_mm": "ပစ္စည်းက စကားပြောသူရှိရာနေရာကို ရောက်လာမှာဖြစ်လို့ 'bring' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I had to ___ a lot of money from my parents to start my business.",
+      "answer": "borrow",
+      "options": [
+        "borrow",
+        "lend",
+        "remind"
+      ],
+      "explain_en": "You were the one RECEIVING the money temporarily, so you 'borrowed' it FROM them.",
+      "explain_mm": "ကိုယ်က ပိုက်ဆံကို လက်ခံရယူသူဖြစ်လို့ 'borrow' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm leaving the office now. I'll ___ these files home with me to finish.",
+      "answer": "take",
+      "options": [
+        "take",
+        "bring",
+        "remember"
+      ],
+      "explain_en": "You are moving the files AWAY from your current location ('the office'), so you 'take' them.",
+      "explain_mm": "လက်ရှိနေရာကနေ ဖိုင်တွေကို ယူပြီးထွက်သွားတာဖြစ်လို့ 'take' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My phone alarm is set to ___ me about my meeting every morning.",
+      "answer": "remind",
+      "options": [
+        "remind",
+        "remember",
+        "borrow"
+      ],
+      "explain_en": "An external thing (the alarm) is causing you to remember. This action is 'remind'.",
+      "explain_mm": "အပြင်ကအရာတစ်ခု (alarm) က ကိုယ့်ကို သတိရစေတာဖြစ်လို့ 'remind' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Can you ___ me a jacket? It's colder than I thought.",
+      "answer": "lend",
+      "options": [
+        "lend",
+        "borrow",
+        "take"
+      ],
+      "explain_en": "You are asking someone to GIVE you a jacket temporarily. The giver 'lends'.",
+      "explain_mm": "တခြားတစ်ယောက်ကို အကျႌခဏ 'ပေး' ဖို့ တောင်းဆိုနေတာဖြစ်လို့ 'lend' ကို သုံးရပါမယ်။"
+    }
+  ]
+}

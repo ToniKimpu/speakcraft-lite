@@ -1,0 +1,427 @@
+{
+  "id": "reacting_to_news",
+  "title": "Reacting to news",
+  "level": 2,
+  "order": 603,
+  "theme": "Reacting phrases",
+  "style": "contrast",
+  "unit": "expression",
+  "why_grouped_en": "These are short, natural phrases for reacting to good and bad news. Using the right one shows you're listening and understand the feeling. For example, 'what a shame' is for bad news, while 'no way' shows surprise — mixing them up would sound very odd.",
+  "why_grouped_mm": "သတင်းကောင်း၊ သတင်းဆိုးတွေကို ကြားတဲ့အခါမှာ တုံ့ပြန်ပြောဆိုလေ့ရှိတဲ့ စကားတိုလေးတွေပါ။ မှန်ကန်တဲ့အသုံးအနှုန်းကို ရွေးချယ်သုံးစွဲတတ်တာက သင်က နားထောင်နေတယ်ဆိုတာကို ပြပါတယ်။ ဥပမာ 'What a shame' က သတင်းဆိုးအတွက်သုံးပြီး 'No way' က အံ့ဩတာကိုပြတာမို့လို့ မှားသုံးမိရင် အဓိပ္ပာယ်လွဲနိုင်ပါတယ်။",
+  "words": [
+    {
+      "word": "that's great",
+      "pos": "phrase",
+      "ipa": "/ðæts ɡreɪt/",
+      "short_en": "A warm reaction to good news",
+      "short_mm": "သတင်းကောင်းအတွက် နွေးထွေးတဲ့ တုံ့ပြန်မှု",
+      "use_when_en": "Someone shares happy news, like passing a test or getting a promotion.",
+      "use_when_mm": "တစ်ယောက်ယောက်က စာမေးပွဲအောင်တာ၊ ရာထူးတက်တာလိုမျိုး သတင်းကောင်းတွေ ပြောပြတဲ့အခါမှာ သုံးပါတယ်။",
+      "explanation_en": "A simple, warm, and positive way to show you are happy for someone. It's very common and friendly.",
+      "explanation_mm": "တစ်ဖက်လူအတွက် ကိုယ်က ဝမ်းသာကြောင်းပြတဲ့ ရိုးရှင်းပြီး နွေးထွေးတဲ့ အသုံးအနှုန်းပါ။ အလွန်အသုံးများပြီး ဖော်ရွေတဲ့ ခံစားမှု ပေးပါတယ်။",
+      "nuance_en": "It's less formal than 'Congratulations' but still very sincere. It focuses on the news itself being good.",
+      "nuance_mm": "'Congratulations' ထက် ပို casual ဖြစ်ပေမဲ့ ရိုးသားတဲ့ ခံစားမှု ရှိပါတယ်။ လူကို ဂုဏ်ပြုတာထက် သတင်းကောင်းဖြစ်တဲ့အပေါ်မှာ ပိုပြီး အာရုံစိုက်ပါတယ်။",
+      "goes_with_en": "Used after someone says: 'I passed!', 'We're getting married!', 'I got the job!'",
+      "goes_with_note_en": "This phrase directly follows a piece of good news.",
+      "goes_with_note_mm": "ဒီစကားစုကို သတင်းကောင်းတစ်ခု ကြားပြီးတဲ့နောက်မှာ ချက်ချင်း သုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "You {c}passed{/c} your driving test? {w}That's great{/w}!",
+          "mm": "မင်း ကားမောင်းလိုင်စင် အောင်သွားပြီလား။ သိပ်ကောင်းတာပေါ့။"
+        },
+        {
+          "en": "I got the {c}promotion{/c}.' '{w}That's great{/w}! I'm so happy for you.'",
+          "mm": "ကျွန်တော် ရာထူးတိုးသွားပြီ။' 'သိပ်ကောင်းတာပေါ့။ မင်းအတွက် အရမ်းဝမ်းသာတယ်။'"
+        },
+        {
+          "en": "She said {c}yes{/c}! We're engaged.' '{w}That's great{/w} news!'",
+          "mm": "သူ 'ဟုတ်' လို့ ပြောပြီ။ ငါတို့ စေ့စပ်လိုက်ပြီ။' 'သိပ်ကောင်းတဲ့ သတင်းပဲ။'"
+        },
+        {
+          "en": "We finally {c}finished{/c} the project.' '{w}That's great{/w}. Well done, team.'",
+          "mm": "ငါတို့ project ကို အဆုံးသတ်နိုင်ခဲ့ပြီ။' 'သိပ်ကောင်းတယ်။ ကောင်းကောင်းလုပ်နိုင်ခဲ့တယ် အဖွဲ့။'"
+        },
+        {
+          "en": "My sister is coming to {c}visit{/c} next week.' '{w}That's great{/w}! You must be excited.'",
+          "mm": "ငါ့ညီမ နောက်အပတ် အလည်လာမယ်။' 'သိပ်ကောင်းတာပေါ့။ မင်း ပျော်နေမှာပဲ။'"
+        }
+      ],
+      "collocations": [
+        "That's great news!",
+        "That's great to hear."
+      ],
+      "confuse_with": [
+        "congratulations",
+        "that's a relief"
+      ]
+    },
+    {
+      "word": "no way",
+      "pos": "phrase",
+      "ipa": "/noʊ weɪ/",
+      "short_en": "Informal surprise or disbelief",
+      "short_mm": "အံ့ဩတာ၊ မယုံနိုင်တာ",
+      "use_when_en": "You hear something very surprising or hard to believe (it can be good or bad news).",
+      "use_when_mm": "အရမ်းအံ့ဩစရာကောင်းတဲ့ ဒါမှမဟုတ် မယုံနိုင်စရာ သတင်း (သတင်းကောင်းဖြစ်စေ၊ သတင်းဆိုးဖြစ်စေ) ကြားတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "An informal, spoken phrase to show you are shocked. It can mean 'I don't believe you!' or 'Wow, that's amazing!'",
+      "explanation_mm": "ကိုယ်တုန်လှုပ်သွားကြောင်းပြတဲ့ informal အသုံးအနှုန်းပါ။ 'ငါ မင်းကို မယုံဘူး' ဒါမှမဟုတ် 'ဟာ၊ အံ့ဩစရာပဲ' ဆိုတဲ့ အဓိပ္ပာယ်မျိုး သက်ရောက်ပါတယ်။",
+      "nuance_en": "Very informal. Your tone of voice shows if you're happy-surprised or shocked-surprised. Don't use it in formal situations.",
+      "nuance_mm": "အရမ်း informal ဖြစ်ပါတယ်။ ကိုယ့်အသံနေအသံထားက ဝမ်းသာပြီး အံ့ဩတာလား၊ တုန်လှုပ်ပြီး အံ့ဩတာလားဆိုတာကို ပြပါတယ်။ formal အခြေအနေတွေမှာ မသုံးပါနဲ့။",
+      "goes_with_en": "Used after someone says: 'I won the lottery!', 'He quit his job!', 'Guess who I saw today?'",
+      "goes_with_note_en": "This phrase reacts to shocking or unexpected information.",
+      "goes_with_note_mm": "ဒီစကားစုကို တုန်လှုပ်စရာကောင်းတဲ့ သို့မဟုတ် မမျှော်လင့်ထားတဲ့ သတင်းအချက်အလက်တွေအပေါ် တုံ့ပြန်တဲ့အခါ သုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "He quit his {c}job{/c} with no warning.' '{w}No way{/w}! Why?'",
+          "mm": "သူ ဘာမှမပြောဘဲနဲ့ အလုပ်ထွက်လိုက်တယ်။' 'မဖြစ်နိုင်တာ။ ဘာလို့လဲ။'"
+        },
+        {
+          "en": "I just {c}won{/c} two tickets to the concert!' '{w}No way{/w}! You're so lucky!'",
+          "mm": "ငါ ပွဲလက်မှတ်နှစ်စောင် ပေါက်သွားတယ်။' 'တကယ်ကြီးလား။ မင်း သိပ်ကံကောင်းတာပဲ။'"
+        },
+        {
+          "en": "They're {c}closing{/c} the main road tomorrow.' '{w}No way{/w}. That's going to be a problem.'",
+          "mm": "သူတို့ မနက်ဖြန် လမ်းမကြီးကို ပိတ်တော့မယ်တဲ့။' 'ဟာကွာ။ ဒါဆို ဒုက္ခပဲ။'"
+        },
+        {
+          "en": "She finished the marathon in under three {c}hours{/c}.' '{w}No way{/w}! That's incredible.'",
+          "mm": "သူမ မာရသွန်ကို သုံးနာရီအောက်နဲ့ ပန်းဝင်သွားတယ်။' 'မဖြစ်နိုင်တာ။ အံ့ဩစရာပဲ။'"
+        },
+        {
+          "en": "Guess who I {c}saw{/c} at the market? Our old teacher!' '{w}No way{/w}!'",
+          "mm": "ဈေးထဲမှာ ဘယ်သူ့ကိုတွေ့ခဲ့လဲ မှန်းကြည့်စမ်း။ ငါတို့ဆရာဟောင်းလေ။' 'တကယ်ကြီးလား။'"
+        }
+      ],
+      "collocations": [
+        "No way!",
+        "There's no way..."
+      ],
+      "confuse_with": [
+        "you're kidding"
+      ]
+    },
+    {
+      "word": "what a shame",
+      "pos": "phrase",
+      "ipa": "/wɑːt ə ʃeɪm/",
+      "short_en": "Sympathy for disappointing news",
+      "short_mm": "စိတ်ပျက်စရာ သတင်းအတွက် အားပေးစကား",
+      "use_when_en": "You hear mildly bad or disappointing news. It shows you feel sympathy for the other person.",
+      "use_when_mm": "သိပ်မပြင်းထန်တဲ့ သတင်းဆိုး ဒါမှမဟုတ် စိတ်ပျက်စရာသတင်း ကြားရတဲ့အခါ သုံးပါတယ်။ တစ်ဖက်လူအတွက် စိတ်မကောင်းကြောင်း ပြတဲ့သဘောပါ။",
+      "explanation_en": "This is for small disappointments, not for serious tragedies. It means 'That's a pity' or 'I'm sorry to hear that'.",
+      "explanation_mm": "ဒါက ကြီးကြီးမားမား ဝမ်းနည်းစရာတွေအတွက် မဟုတ်ဘဲ သေးသေးမွှားမွှား စိတ်ပျက်စရာတွေအတွက် သုံးတာပါ။ 'น่าเสียดาย' ဒါမှမဟုတ် 'ကြားရတာ စိတ်မကောင်းပါဘူး' လို့ အဓိပ္ပာယ်ရပါတယ်။",
+      "nuance_en": "Use it for things like a cancelled event or bad weather. For very serious news (like a death), you need something stronger like 'I'm so sorry for your loss'.",
+      "nuance_mm": "ပွဲဖျက်လိုက်တာ၊ ရာသီဥတုမကောင်းတာမျိုးတွေအတွက် သုံးပါ။ အရမ်းပြင်းထန်တဲ့ သတင်းဆိုး (ဥပမာ - တစ်ယောက်ယောက်ဆုံးပါးသွားတာ) အတွက်ဆို 'I'm so sorry for your loss' လိုမျိုး ပိုလေးနက်တဲ့စကား သုံးရပါမယ်။",
+      "goes_with_en": "Used after someone says: 'The concert was cancelled.', 'I didn't get the job.', 'It's raining today.'",
+      "goes_with_note_en": "This phrase reacts to news that is a pity or unfortunate.",
+      "goes_with_note_mm": "ဒီစကားစုကို ကံမကောင်းတဲ့၊ ဖြစ်Mသင့်ဘူးလို့ထင်ရတဲ့ သတင်းတွေအပေါ် တုံ့ပြန်တဲ့အခါ သုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "They {c}cancelled{/c} the flight.' '{w}What a shame{/w}. Do you know why?'",
+          "mm": "သူတို့ လေယာဉ်ခရီးစဉ်ကို ဖျက်လိုက်တယ်။' 'ကံဆိုးလိုက်တာ။ ဘာလို့လဲ သိလား။'"
+        },
+        {
+          "en": "I didn't get the {c}job{/c} I applied for.' '{w}What a shame{/w}. I'm sure you'll find something else.'",
+          "mm": "ငါလျှောက်ထားတဲ့အလုပ် မရခဲ့ဘူး။' 'စိတ်မကောင်းစရာပဲ။ မင်း တခြားအလုပ် ရှာတွေ့မှာပါ။'"
+        },
+        {
+          "en": "We have to {c}work{/c} this weekend, so we can't come.' '{w}What a shame{/w}. We'll miss you.'",
+          "mm": "ငါတို့ ဒီပိတ်ရက် အလုပ်လုပ်ရမှာမို့လို့ မလာနိုင်တော့ဘူး။' 'ကံဆိုးလိုက်တာ။ ငါတို့ မင်းတို့ကို သတိရနေမှာ။'"
+        },
+        {
+          "en": "It's {c}raining{/c}, so the picnic is off.' '{w}What a shame{/w}. I was looking forward to it.'",
+          "mm": "မိုးရွာနေလို့ ပျော်ပွဲစားထွက်တာ ဖျက်လိုက်ပြီ။' 'စိတ်မကောင်းစရာပဲ။ ငါ မျှော်လင့်နေခဲ့တာ။'"
+        },
+        {
+          "en": "You just {c}missed{/c} him; he left five minutes ago.' '{w}What a shame{/w}!'",
+          "mm": "မင်း သူနဲ့ လွဲသွားပြီ၊ သူ လွန်ခဲ့တဲ့ ငါးမိနစ်ကပဲ ထွက်သွားတာ။' 'ကံဆိုးလိုက်တာ။'"
+        }
+      ],
+      "collocations": [
+        "What a shame.",
+        "That's a real shame."
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "you're kidding",
+      "pos": "phrase",
+      "ipa": "/jɔːr ˈkɪd.ɪŋ/",
+      "short_en": "Shocked disbelief (good or bad)",
+      "short_mm": "နောက်နေတာလား (အံ့ဩမှုကိုပြသည်)",
+      "use_when_en": "You are very surprised by what you hear and want to check if it's true.",
+      "use_when_mm": "ကြားလိုက်ရတဲ့ သတင်းကို အရမ်းအံ့ဩသွားပြီး တကယ်ဟုတ်မဟုတ် စစ်ဆေးချင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "Similar to 'No way!', but it's more like a question ('Are you serious?'). It can be used for both good and bad surprising news.",
+      "explanation_mm": "'No way!' နဲ့ ဆင်တူပေမဲ့ ဒါက 'တကယ်ပြောနေတာလား' ဆိုတဲ့ မေးခွန်းပုံစံ ပိုဆန်ပါတယ်။ အံ့ဩစရာကောင်းတဲ့ သတင်းကောင်းရော သတင်းဆိုးအတွက်ပါ သုံးနိုင်ပါတယ်။",
+      "nuance_en": "It's informal and very common in conversation. Your tone is important to show if you are happy or unhappy about the news.",
+      "nuance_mm": "Informal ဖြစ်ပြီး စကားပြောမှာ အရမ်းအသုံးများပါတယ်။ ကိုယ့်အသံနေအသံထားက အဲဒီသတင်းအတွက် ဝမ်းသာလား ဝမ်းနည်းလားဆိုတာကို ပြပါတယ်။",
+      "goes_with_en": "Used after someone says: 'I'm moving to Japan!', 'They're charging $50 for a ticket!', 'He proposed!'",
+      "goes_with_note_en": "Use this to question surprising information you just heard.",
+      "goes_with_note_mm": "ကြားလိုက်ရတဲ့ အံ့ဩစရာ သတင်းအချက်အလက်ကို ပြန်မေးတဲ့အခါ ဒီစကားစုကို သုံးပါ။",
+      "examples": [
+        {
+          "en": "I'm moving to {c}Canada{/c} next month.' '{w}You're kidding{/w}! That's amazing!'",
+          "mm": "ငါ နောက်လ ကနေဒါကို ပြောင်းတော့မယ်။' 'နောက်နေတာလား။ သိပ်ကောင်းတာပေါ့။'"
+        },
+        {
+          "en": "They're charging $20 for a cup of {c}coffee{/c} there.' '{w}You're kidding{/w}! That's a ripoff.'",
+          "mm": "အဲဒီမှာ ကော်ဖီတစ်ခွက်ကို ဒေါ်လာ ၂၀ တောင်းနေတယ်။' 'နောက်နေတာလား။ ဒါတော့ လွန်တာပေါ့။'"
+        },
+        {
+          "en": "He {c}proposed{/c} to me last night!' '{w}You're kidding{/w}! Show me the ring!'",
+          "mm": "သူ ညက ငါ့ကို လက်ထပ်ခွင့်တောင်းတယ်။' 'တကယ်ကြီးလား။ လက်စွပ်ပြစမ်း။'"
+        },
+        {
+          "en": "The company is giving everyone a {c}bonus{/c} this year.' '{w}You're kidding{/w}? That's fantastic news.'",
+          "mm": "ကုမ္ပဏီက ဒီနှစ် လူတိုင်းကို ဘောနပ်စ်ပေးမယ်တဲ့။' 'တကယ်ကြီးလား။ သိပ်ကောင်းတဲ့ သတင်းပဲ။'"
+        },
+        {
+          "en": "She {c}resigned{/c} this morning.' '{w}You're kidding{/w}! I just spoke to her.'",
+          "mm": "သူမ ဒီမနက် အလုပ်ထွက်လိုက်ပြီ။' 'နောက်နေတာလား။ ငါ ခုနကပဲ သူနဲ့ စကားပြောပြီးതേး။'"
+        }
+      ],
+      "collocations": [
+        "You're kidding me!",
+        "You have got to be kidding."
+      ],
+      "confuse_with": [
+        "no way"
+      ]
+    },
+    {
+      "word": "congratulations",
+      "pos": "phrase",
+      "ipa": "/kənˌɡrætʃ.əˈleɪ.ʃənz/",
+      "short_en": "To celebrate someone's achievement",
+      "short_mm": "အောင်မြင်မှုအတွက် ဂုဏ်ပြုစကား",
+      "use_when_en": "Someone achieves something significant (e.g., graduation, new job) or has a major life event (e.g., wedding, new baby).",
+      "use_when_mm": "တစ်စုံတစ်ယောက်က ဘွဲ့ရတာ၊ အလုပ်သစ်ရတာလိုမျိုး ထူးခြားတဲ့အောင်မြင်မှုတစ်ခုခု ရတဲ့အခါ ဒါမှမဟုတ် မင်္ဂလာဆောင်၊ ကလေးမွေးတာလိုမျိုး ဘဝရဲ့အရေးကြီးတဲ့ အဖြစ်အပျက်တစ်ခုခု ကြုံတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "A more formal and direct way to praise someone for their personal success or good fortune. It's often followed by 'on...'",
+      "explanation_mm": "တစ်စုံတစ်ယောက်ရဲ့ ကိုယ်ပိုင်အောင်မြင်မှု ဒါမှမဟုတ် ကံကောင်းမှုအတွက် ချီးကျူးဂုဏ်ပြုတဲ့ ပို formal ကျပြီး တိုက်ရိုက်ကျတဲ့ အသုံးအနှုန်းပါ။ များသောအားဖြင့် 'on...' နဲ့ တွဲသုံးပါတယ်။",
+      "nuance_en": "More formal than 'That's great!'. It focuses on the person's achievement, not just the news. Often shortened to 'Congrats!' in casual chat.",
+      "nuance_mm": "'That's great!' ထက် ပို formal ကျပါတယ်။ သတင်းကောင်းဆိုတာထက် လူတစ်ယောက်ရဲ့ အောင်မြင်မှုအပေါ်မှာ အဓိကထားပါတယ်။ ပေါ့ပေါ့ပါးပါး စကားပြောဆိုမှုတွေမှာ 'Congrats!' လို့ အတိုကောက်သုံးလေ့ရှိပါတယ်။",
+      "goes_with_en": "Congratulations on + your new job / your wedding / your graduation / passing your exams / the new baby.",
+      "goes_with_note_en": "Pairs with 'on' followed by the specific achievement or event.",
+      "goes_with_note_mm": "'on' နဲ့ တွဲသုံးပြီး အနောက်ကနေ တိကျတဲ့ အောင်မြင်မှု ဒါမှမဟုတ် အဖြစ်အပျက်ကို ထည့်ပြောလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "{w}Congratulations{/w} on the new {c}job{/c}!",
+          "mm": "အလုပ်သစ်ရတဲ့အတွက် ဂုဏ်ယူပါတယ်။"
+        },
+        {
+          "en": "We heard you're getting {c}married{/c}. {w}Congratulations{/w}!",
+          "mm": "မင်းတို့ မင်္ဂလာဆောင်တော့မယ်လို့ ကြားတယ်။ ဂုဏ်ယူပါတယ်နော်။"
+        },
+        {
+          "en": "{w}Congratulations{/w} on your {c}graduation{/c}, we're so proud of you.",
+          "mm": "ဘွဲ့ရတဲ့အတွက် ဂုဏ်ယူပါတယ်။ မင်းအတွက် ငါတို့ အရမ်းဂုဏ်ယူတယ်။"
+        },
+        {
+          "en": "You {c}passed{/c} your exams! {w}Congratulations{/w}!",
+          "mm": "မင်း စာမေးပွဲတွေ အောင်သွားပြီ။ ဂုဏ်ယူပါတယ်။"
+        },
+        {
+          "en": "I heard about your {c}engagement{/c}. {w}Congratulations{/w} to you both!",
+          "mm": "မင်း စေ့စပ်လိုက်ပြီလို့ ကြားတယ်။ နှစ်ယောက်လုံးအတွက် ဂုဏ်ယူပါတယ်။"
+        }
+      ],
+      "collocations": [
+        "Congratulations on...",
+        "Congratulations to you both."
+      ],
+      "confuse_with": [
+        "that's great"
+      ]
+    },
+    {
+      "word": "that's a relief",
+      "pos": "phrase",
+      "ipa": "/ðæts ə rɪˈliːf/",
+      "short_en": "Feeling better after worrying",
+      "short_mm": "တော်သေးတာပေါ့ (စိုးရိမ်စိတ်ပြေသွားသည့်အခါ)",
+      "use_when_en": "You were worried about something, but then you hear good news that stops the worry.",
+      "use_when_mm": "တစ်ခုခုအတွက် စိုးရိမ်နေခဲ့ပြီးမှ အဲဒီစိုးရိမ်စိတ်ကို ပျောက်သွားစေတဲ့ သတင်းကောင်းကြားရတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This phrase expresses that a source of anxiety or stress has been removed. You feel happy because a bad thing didn't happen.",
+      "explanation_mm": "စိုးရိမ်သောကဖြစ်စေတဲ့ အကြောင်းရင်းတစ်ခု ပျောက်ကွယ်သွားပြီဆိုတာကို ဖော်ပြတဲ့ စကားစုပါ။ မကောင်းတဲ့အရာတစ်ခု မဖြစ်ခဲ့တဲ့အတွက် ပျော်ရွှင်ကြောင်း ပြပါတယ်။",
+      "nuance_en": "The focus is on the *end* of worry. It shows you were previously concerned. You wouldn't say it for news that was never worrying.",
+      "nuance_mm": "စိုးရိမ်စိတ် *ကုန်ဆုံးသွားခြင်း* အပေါ် အဓိကထားပါတယ်။ ကိုယ်က အရင်က စိုးရိမ်နေခဲ့ကြောင်း ပြပါတယ်။ ဘယ်တုန်းကမှ စိုးရိမ်စရာမရှိခဲ့တဲ့ သတင်းတွေအတွက် ဒါကို မသုံးပါဘူး။",
+      "goes_with_en": "Used after someone says: 'The doctor said it's not serious.', 'I found my wallet.', 'The test results are negative.'",
+      "goes_with_note_en": "This reacts to news that solves a problem or removes a worry.",
+      "goes_with_note_mm": "ပြဿနာတစ်ခုကို ဖြေရှင်းပေးတဲ့ ဒါမှမဟုတ် စိုးရိမ်စိတ်ကို ဖယ်ရှားပေးတဲ့ သတင်းတွေအပေါ် တုံ့ပြန်တဲ့အခါ သုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "I found my {c}keys{/c}, they were in my other jacket.' '{w}That's a relief{/w}!'",
+          "mm": "ငါ့သော့တွေ ပြန်တွေ့ပြီ၊ တခြားအကျီအိတ်ထဲမှာ။' 'တော်သေးတာပေါ့။'"
+        },
+        {
+          "en": "The doctor called. The test results are all {c}clear{/c}.' '{w}That's a relief{/w}. I was so worried.'",
+          "mm": "ဆရာဝန် ဖုန်းဆက်တယ်။ စစ်ဆေးချက်အဖြေတွေအားလုံး ကောင်းတယ်တဲ့။' 'တော်ပါသေးရဲ့။ ငါ အရမ်းစိုးရိမ်နေခဲ့တာ။'"
+        },
+        {
+          "en": "Don't worry, the {c}flight{/c} is only delayed, not cancelled.' 'Oh, {w}that's a relief{/w}.'",
+          "mm": "စိတ်မပူနဲ့၊ လေယာဉ်ခရီးစဉ်က နောက်ကျရုံပဲ၊ မဖျက်လိုက်ဘူး။' 'ဪ၊ တော်သေးတာပေါ့။'"
+        },
+        {
+          "en": "It's not {c}broken{/c}, just a sprain.' '{w}That's a relief{/w}.'",
+          "mm": "မကျိုးပါဘူး၊ အကြောเคล็ดရုံလေးပါ။' 'တော်သေးတာပေါ့။'"
+        },
+        {
+          "en": "I thought I had {c}deleted{/c} the file, but it's in the trash folder.' '{w}That's a relief{/w}!'",
+          "mm": "ငါ ဖိုင်ကို ဖျက်လိုက်ပြီထင်တာ၊ ဒါပေမဲ့ အမှိုက်ပုံးထဲမှာ ရှိနေတယ်။' 'တော်သေးတာပေါ့။'"
+        }
+      ],
+      "collocations": [
+        "That's a relief.",
+        "What a relief!"
+      ],
+      "confuse_with": [
+        "that's great"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "My sister is coming to visit next week. → \"___!\"",
+      "right": "That's great",
+      "wrong": "Congratulations",
+      "why": "This is just happy news, not an achievement. 'Congratulations' is for achievements like getting a job or graduating.",
+      "why_mm": "ဒါက ဝမ်းသာစရာသတင်းသက်သက်ပါ၊ အောင်မြင်မှုတစ်ခုမဟုတ်ပါဘူး။ 'Congratulations' ကို အလုပ်ရတာ၊ ဘွဲ့ရတာလိုမျိုး အောင်မြင်မှုတွေအတွက် သုံးပါတယ်။"
+    },
+    {
+      "prompt": "The concert was cancelled because of the rain. → \"___, I was really looking forward to it.\"",
+      "right": "What a shame",
+      "wrong": "No way",
+      "why": "This news is disappointing, so you need to show sympathy with 'What a shame'. 'No way' just shows surprise and sounds unemotional here.",
+      "why_mm": "ဒီသတင်းက စိတ်ပျက်စရာကောင်းလို့ 'What a shame' နဲ့ စိတ်မကောင်းကြောင်း ပြရပါမယ်။ 'No way' က အံ့ဩတာကိုပဲပြပြီး ဒီနေရာမှာ ခံစားချက်မပါတဲ့ပုံ ပေါက်ပါတယ်။"
+    },
+    {
+      "prompt": "The doctor called and the test results were all clear. → \"Oh, ___! I was so worried.\"",
+      "right": "that's a relief",
+      "wrong": "that's great",
+      "why": "The key feeling here is the end of worry. 'That's a relief' perfectly captures this. 'That's great' is too general and misses the feeling of prior anxiety.",
+      "why_mm": "ဒီနေရာက အဓိကခံစားချက်က စိုးရိမ်စိတ်ကုန်သွားတာပါ။ 'That's a relief' က ဒီခံစားချက်ကို အတိအကျဖော်ပြပါတယ်။ 'That's great' က အရမ်းယေဘုယျကျပြီး အရင်က စိုးရိမ်ခဲ့တဲ့ ခံစားချက်ကို မဖော်ပြနိုင်ပါဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "We're having a baby! → \"___! That's wonderful news.\"",
+      "answer": "Congratulations",
+      "options": [
+        "Congratulations",
+        "That's a relief",
+        "What a shame"
+      ],
+      "explain_en": "Having a baby is a major life event that you celebrate with 'Congratulations'.",
+      "explain_mm": "ကလေးရတာက ဘဝရဲ့အရေးကြီးတဲ့ အဖြစ်အပျက်တစ်ခုဖြစ်လို့ 'Congratulations' နဲ့ ဂုဏ်ပြုရပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I can't come to the party, I have to work. → \"Oh, ___! We'll miss you.\"",
+      "answer": "what a shame",
+      "options": [
+        "no way",
+        "what a shame",
+        "that's great"
+      ],
+      "explain_en": "This is disappointing news, so 'what a shame' is the correct way to show sympathy.",
+      "explain_mm": "ဒါက စိတ်ပျက်စရာသတင်းဖြစ်လို့ 'what a shame' က စိတ်မကောင်းကြောင်းပြဖို့ အမှန်ကန်ဆုံးနည်းလမ်းပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He won the lottery! → \"___! I don't believe it.\"",
+      "answer": "No way",
+      "options": [
+        "That's a relief",
+        "What a shame",
+        "No way"
+      ],
+      "explain_en": "'No way' is used to express strong surprise or disbelief about amazing news.",
+      "explain_mm": "'No way' ကို အံ့ဩစရာကောင်းတဲ့သတင်းအတွက် အလွန်အံ့ဩကြောင်း သို့မဟုတ် မယုံနိုင်ကြောင်းပြဖို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I found my lost passport just before the trip. → \"Phew, ___!\"",
+      "answer": "that's a relief",
+      "options": [
+        "that's great",
+        "that's a relief",
+        "you're kidding"
+      ],
+      "explain_en": "Finding a lost passport ends a period of worry, so 'that's a relief' is the perfect response.",
+      "explain_mm": "ပျောက်နေတဲ့ passport ကို ပြန်တွေ့တာက စိုးရိမ်စိတ်ကို အဆုံးသတ်ပေးတဲ့အတွက် 'that's a relief' က အသင့်တော်ဆုံး တုံ့ပြန်မှုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I got a new puppy! → \"___! Can I see a picture?\"",
+      "answer": "That's great",
+      "options": [
+        "Congratulations",
+        "That's great",
+        "That's a relief"
+      ],
+      "explain_en": "This is simple, happy news. 'That's great' is a warm and friendly reaction.",
+      "explain_mm": "ဒါက ရိုးရှင်းပြီး ပျော်စရာကောင်းတဲ့ သတင်းပါ။ 'That's great' က နွေးထွေးပြီး ဖော်ရွေတဲ့ တုံ့ပြန်မှုတစ်ခု ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "They increased the price by 50%! → \"___! That's outrageous.\"",
+      "answer": "You're kidding",
+      "options": [
+        "You're kidding",
+        "Congratulations",
+        "What a shame"
+      ],
+      "explain_en": "'You're kidding' shows shocked disbelief at bad news.",
+      "explain_mm": "'You're kidding' က သတင်းဆိုးတစ်ခုအတွက် တုန်လှုပ်ပြီး မယုံနိုင်ကြောင်း ပြပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "___ on passing your driving test!",
+      "answer": "Congratulations",
+      "options": [
+        "That's great",
+        "Congratulations",
+        "That's a relief"
+      ],
+      "explain_en": "Passing a test is a personal achievement, so 'Congratulations' is the most appropriate phrase.",
+      "explain_mm": "စာမေးပွဲအောင်မြင်တာက ကိုယ်ပိုင်အောင်မြင်မှုတစ်ခုဖြစ်လို့ 'Congratulations' က အသင့်တော်ဆုံး စကားစုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The cafe we like is closing down. → \"___, I loved their coffee.\"",
+      "answer": "What a shame",
+      "options": [
+        "No way",
+        "What a shame",
+        "That's a relief"
+      ],
+      "explain_en": "This is sad or disappointing news, so 'what a shame' is used to express sympathy.",
+      "explain_mm": "ဒါက ဝမ်းနည်းစရာ ဒါမှမဟုတ် စိတ်ပျက်စရာသတင်းဖြစ်လို့ 'what a shame' ကို စိတ်မကောင်းကြောင်းပြဖို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I thought I left my wallet at the restaurant, but it's here in my bag. → \"Oh, good. ___.\"",
+      "answer": "That's a relief",
+      "options": [
+        "That's a relief",
+        "That's great",
+        "Congratulations"
+      ],
+      "explain_en": "The worry about the lost wallet is over, so 'that's a relief' is the correct reaction.",
+      "explain_mm": "ပိုက်ဆံအိတ်ပျောက်မှာ စိုးရိမ်စိတ် ကုန်သွားပြီဖြစ်လို့ 'that's a relief' က မှန်ကန်တဲ့ တုံ့ပြန်မှုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She's moving to another country next week! → \"___! I had no idea.\"",
+      "answer": "You're kidding",
+      "options": [
+        "What a shame",
+        "That's a relief",
+        "You're kidding"
+      ],
+      "explain_en": "'You're kidding' or 'No way' are used for very surprising news. 'You're kidding' fits perfectly here.",
+      "explain_mm": "အရမ်းအံ့ဩစရာကောင်းတဲ့ သတင်းတွေအတွက် 'You're kidding' ဒါမှမဟုတ် 'No way' ကို သုံးပါတယ်။ ဒီနေရာမှာ 'You're kidding' က အံကိုက်ပါပဲ။"
+    }
+  ]
+}

@@ -10,16 +10,6 @@
       "section": "You & feelings"
     },
     {
-      "id": "family",
-      "title": "Talking about family",
-      "level": 1,
-      "order": 100,
-      "theme": "Family & relationships",
-      "word_count": 10,
-      "unit": "expression",
-      "section": "People"
-    },
-    {
       "id": "personality",
       "title": "Describing people",
       "level": 1,
@@ -27,38 +17,6 @@
       "theme": "Personality",
       "word_count": 9,
       "section": "You & feelings"
-    },
-    {
-      "id": "stronger_than_good",
-      "title": "Stronger than \"good\"",
-      "level": 2,
-      "order": 1,
-      "theme": "Better adjectives",
-      "word_count": 5
-    },
-    {
-      "id": "big_and_small",
-      "title": "Big & small",
-      "level": 2,
-      "order": 2,
-      "theme": "Size",
-      "word_count": 5
-    },
-    {
-      "id": "pointing_out_examples",
-      "title": "Pointing things out & giving examples",
-      "level": 2,
-      "order": 3,
-      "theme": "Discourse markers",
-      "word_count": 5
-    },
-    {
-      "id": "adverbs_misused",
-      "title": "Adverbs people misuse",
-      "level": 2,
-      "order": 4,
-      "theme": "Manner & discourse adverbs",
-      "word_count": 5
     },
     {
       "id": "appearance",
@@ -87,6 +45,16 @@
       "word_count": 9,
       "unit": "expression",
       "section": "You & feelings"
+    },
+    {
+      "id": "family",
+      "title": "Talking about family",
+      "level": 1,
+      "order": 100,
+      "theme": "Family & relationships",
+      "word_count": 10,
+      "unit": "expression",
+      "section": "People"
     },
     {
       "id": "friends",
@@ -274,6 +242,16 @@
       "section": "Communication & tools"
     },
     {
+      "id": "everyday_expressions",
+      "title": "Everyday expressions",
+      "level": 1,
+      "order": 503,
+      "theme": "Expressions",
+      "word_count": 9,
+      "unit": "expression",
+      "section": "Communication & tools"
+    },
+    {
       "id": "common_verbs",
       "title": "Everyday verbs",
       "level": 1,
@@ -293,16 +271,6 @@
       "section": "Communication & tools"
     },
     {
-      "id": "everyday_expressions",
-      "title": "Everyday expressions",
-      "level": 1,
-      "order": 503,
-      "theme": "Expressions",
-      "word_count": 9,
-      "unit": "expression",
-      "section": "Communication & tools"
-    },
-    {
       "id": "numbers_quantity",
       "title": "How much & how many",
       "level": 1,
@@ -310,6 +278,216 @@
       "theme": "Quantity",
       "word_count": 9,
       "section": "Communication & tools"
+    },
+    {
+      "id": "stronger_than_good",
+      "title": "Stronger than \"good\"",
+      "level": 2,
+      "order": 101,
+      "theme": "Better adjectives",
+      "word_count": 5,
+      "unit": "word",
+      "section": "Better Word Choice"
+    },
+    {
+      "id": "big_and_small",
+      "title": "Big & small",
+      "level": 2,
+      "order": 102,
+      "theme": "Size",
+      "word_count": 5,
+      "unit": "word",
+      "section": "Better Word Choice"
+    },
+    {
+      "id": "beyond_bad",
+      "title": "Worse than \"bad\"",
+      "level": 2,
+      "order": 103,
+      "theme": "Better adjectives",
+      "word_count": 5,
+      "unit": "word",
+      "section": "Better Word Choice"
+    },
+    {
+      "id": "very_to_strong",
+      "title": "Stop saying \"very\"",
+      "level": 2,
+      "order": 104,
+      "theme": "Strong adjectives",
+      "word_count": 5,
+      "unit": "word",
+      "section": "Better Word Choice"
+    },
+    {
+      "id": "better_than_said",
+      "title": "Better than \"said\"",
+      "level": 2,
+      "order": 105,
+      "theme": "Reporting verbs",
+      "word_count": 5,
+      "unit": "word",
+      "section": "Better Word Choice"
+    },
+    {
+      "id": "pv_relationships",
+      "title": "Phrasal verbs: people",
+      "level": 2,
+      "order": 201,
+      "theme": "Phrasal verbs",
+      "word_count": 6,
+      "unit": "expression",
+      "section": "Phrasal Verbs"
+    },
+    {
+      "id": "pv_work",
+      "title": "Phrasal verbs: work & study",
+      "level": 2,
+      "order": 202,
+      "theme": "Phrasal verbs",
+      "word_count": 6,
+      "unit": "expression",
+      "section": "Phrasal Verbs"
+    },
+    {
+      "id": "pv_everyday",
+      "title": "Phrasal verbs: everyday life",
+      "level": 2,
+      "order": 203,
+      "theme": "Phrasal verbs",
+      "word_count": 6,
+      "unit": "expression",
+      "section": "Phrasal Verbs"
+    },
+    {
+      "id": "delexical_verbs",
+      "title": "make, do, have or take?",
+      "level": 2,
+      "order": 301,
+      "theme": "Collocations",
+      "word_count": 4,
+      "unit": "word",
+      "section": "Collocations"
+    },
+    {
+      "id": "adj_noun_collocations",
+      "title": "Words that go together",
+      "level": 2,
+      "order": 302,
+      "theme": "Collocations",
+      "word_count": 6,
+      "unit": "word",
+      "section": "Collocations"
+    },
+    {
+      "id": "spend_save_waste",
+      "title": "Money & time verbs",
+      "level": 2,
+      "order": 303,
+      "theme": "Collocations",
+      "word_count": 4,
+      "unit": "word",
+      "section": "Collocations"
+    },
+    {
+      "id": "pointing_out_examples",
+      "title": "Pointing things out & giving examples",
+      "level": 2,
+      "order": 401,
+      "theme": "Discourse markers",
+      "word_count": 5,
+      "unit": "word",
+      "section": "Linking & Explaining"
+    },
+    {
+      "id": "contrast_linkers",
+      "title": "Showing contrast",
+      "level": 2,
+      "order": 402,
+      "theme": "Linking words",
+      "word_count": 6,
+      "unit": "word",
+      "section": "Linking & Explaining"
+    },
+    {
+      "id": "result_addition_linkers",
+      "title": "Cause, result & adding",
+      "level": 2,
+      "order": 403,
+      "theme": "Linking words",
+      "word_count": 6,
+      "unit": "word",
+      "section": "Linking & Explaining"
+    },
+    {
+      "id": "adverbs_misused",
+      "title": "Adverbs people misuse",
+      "level": 2,
+      "order": 501,
+      "theme": "Manner & discourse adverbs",
+      "word_count": 5,
+      "unit": "word",
+      "section": "Common Confusions"
+    },
+    {
+      "id": "say_tell_speak_talk",
+      "title": "say, tell, speak or talk?",
+      "level": 2,
+      "order": 502,
+      "theme": "Easily confused verbs",
+      "word_count": 4,
+      "unit": "word",
+      "section": "Common Confusions"
+    },
+    {
+      "id": "ed_vs_ing_adjectives",
+      "title": "bored or boring?",
+      "level": 2,
+      "order": 503,
+      "theme": "-ed vs -ing adjectives",
+      "word_count": 6,
+      "unit": "word",
+      "section": "Common Confusions"
+    },
+    {
+      "id": "confused_verbs",
+      "title": "Easily confused verbs",
+      "level": 2,
+      "order": 504,
+      "theme": "Easily confused verbs",
+      "word_count": 6,
+      "unit": "word",
+      "section": "Common Confusions"
+    },
+    {
+      "id": "giving_opinions",
+      "title": "Giving your opinion",
+      "level": 2,
+      "order": 601,
+      "theme": "Opinion phrases",
+      "word_count": 6,
+      "unit": "expression",
+      "section": "Describing & Reacting"
+    },
+    {
+      "id": "agreeing_disagreeing",
+      "title": "Agreeing & disagreeing",
+      "level": 2,
+      "order": 602,
+      "theme": "Reacting phrases",
+      "word_count": 6,
+      "unit": "expression",
+      "section": "Describing & Reacting"
+    },
+    {
+      "id": "reacting_to_news",
+      "title": "Reacting to news",
+      "level": 2,
+      "order": 603,
+      "theme": "Reacting phrases",
+      "word_count": 6,
+      "unit": "expression",
+      "section": "Describing & Reacting"
     }
   ]
 }

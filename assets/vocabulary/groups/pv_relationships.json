@@ -1,0 +1,423 @@
+{
+  "id": "pv_relationships",
+  "title": "Phrasal verbs: people",
+  "level": 2,
+  "order": 201,
+  "theme": "Phrasal verbs",
+  "style": "contrast",
+  "unit": "expression",
+  "why_grouped_en": "These are common phrasal verbs for talking about relationships — good and bad. They replace more formal single verbs like 'tolerate' or 'admire', and using them will make your spoken English sound much more natural and fluent.",
+  "why_grouped_mm": "ဒါတွေကတော့ လူတွေရဲ့ ဆက်ဆံရေးတွေအကြောင်း ပြောတဲ့အခါ အသုံးများတဲ့ phrasal verb တွေပါ။ 'tolerate' (သည်းခံသည်)၊ 'admire' (လေးစားသည်) လိုမျိုး formal ကျတဲ့ကြိယာတွေအစား ဒီ phrasal verb တွေကို သုံးပေးခြင်းက ကိုယ့်ရဲ့အင်္ဂလိပ်စကားပြောကို ပိုပြီး natural ကျစေပြီး ပိုပြီးတော့လည်း ကျွမ်းကျင်သလို ဖြစ်စေပါတယ်။",
+  "words": [
+    {
+      "word": "get on with",
+      "pos": "phrasal verb",
+      "ipa": "/ɡet ɒn wɪð/",
+      "short_en": "have a good relationship with someone",
+      "short_mm": "တစ်ယောက်ယောက်နဲ့ အဆင်ပြေပြေ ပေါင်းသင်းဆက်ဆံနိုင်တယ်",
+      "use_when_en": "You want to say you have a friendly, easy relationship with someone, especially colleagues or family. It's very common in British English.",
+      "use_when_mm": "လုပ်ဖော်ကိုင်ဖက်တွေ၊ မိသားစုဝင်တွေနဲ့ သဟဇာတဖြစ်ပြီး ရင်းရင်းနှီးနှီးရှိတဲ့အကြောင်း ပြောချင်တဲ့အခါ သုံးပါတယ်။ အထူးသဖြင့် British English မှာ အသုံးများပါတယ်။",
+      "explanation_en": "This phrasal verb describes a positive, harmonious relationship. It implies no arguments or problems.",
+      "explanation_mm": "ဒီ phrasal verb က ပြဿနာမရှိဘဲ အဆင်ပြေချောမွေ့တဲ့ ဆက်ဆံရေးကို ဖော်ပြပါတယ်။ ရန်ဖြစ်တာ၊ ပြဿနာတက်တာမျိုး မရှိဘူးလို့ ဆိုလိုပါတယ်။",
+      "nuance_en": "It's neutral and friendly. In American English, 'get along with' is more common, but 'get on with' is widely understood.",
+      "nuance_mm": "ဒါက neutral ဖြစ်ပြီး friendly ဖြစ်တဲ့ အသုံးအနှုန်းပါ။ American English မှာ 'get along with' ကို ပိုသုံးကြပေမဲ့ 'get on with' ကိုလည်း အားလုံးနားလည်ကြပါတယ်။",
+      "goes_with_en": "get on with + someone / your boss / your colleagues / your neighbours · get on well with someone",
+      "goes_with_note_en": "Always followed by 'with' and the person/people.",
+      "goes_with_note_mm": "'with' နဲ့ လူတစ်ယောက်/လူတွေ အမြဲတမ်းတွဲသုံးရပါတယ်။",
+      "examples": [
+        {
+          "en": "I {w}get on with{/w} my {c}colleagues{/c} really well.",
+          "mm": "ကျွန်တော်က လုပ်ဖော်ကိုင်ဖက်တွေနဲ့ တော်တော်လေး အဆင်ပြေတယ်။"
+        },
+        {
+          "en": "She doesn't {w}get on with{/w} her {c}sister-in-law{/c}.",
+          "mm": "သူမက သူ့ရဲ့ယောက်မနဲ့ အဆင်မပြေဘူး။"
+        },
+        {
+          "en": "How do you {w}get on with{/w} your new {c}boss{/c}?",
+          "mm": "မင်းရဲ့ သူဌေးအသစ်နဲ့ ဘယ်လိုလဲ၊ အဆင်ပြေရဲ့လား။"
+        },
+        {
+          "en": "It's important to {w}get on with{/w} your {c}neighbours{/c}.",
+          "mm": "ကိုယ့်ရဲ့ အိမ်နီးချင်းတွေနဲ့ အဆင်ပြေပြေနေဖို့က အရေးကြီးတယ်။"
+        },
+        {
+          "en": "We all {w}get on with{/w} {c}each other{/c} in the office.",
+          "mm": "ကျွန်တော်တို့ ရုံးမှာ အချင်းချင်း အကုန်အဆင်ပြေကြတယ်။"
+        }
+      ],
+      "collocations": [
+        "get on with colleagues",
+        "get on with your boss",
+        "get on well with"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "fall out with",
+      "pos": "phrasal verb",
+      "ipa": "/fɔːl aʊt wɪð/",
+      "short_en": "argue and stop being friendly with someone",
+      "short_mm": "စကားများပြီး ခင်မင်မှုပျက်သွားတယ်",
+      "use_when_en": "You've had a serious argument with someone (a friend, family member) and your relationship is now broken or damaged.",
+      "use_when_mm": "သူငယ်ချင်း၊ မိသားစုဝင်တစ်ယောက်ယောက်နဲ့ ပြင်းပြင်းထန်ထန် စကားများပြီးနောက်မှာ ဆက်ဆံရေးပျက်သွားတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This implies a more serious disagreement than a simple argument. The friendship or relationship is negatively affected, at least for a while.",
+      "explanation_mm": "ဒါက ရိုးရိုးစကားများတာထက် ပိုပြင်းထန်တဲ့ သဘောထားကွဲလွဲမှုကို ဆိုလိုပါတယ်။ ခင်မင်မှုက ခဏတာဖြစ်ဖြစ်၊ အကြာကြီးဖြစ်ဖြစ် ထိခိုက်သွားပါတယ်။",
+      "nuance_en": "It's less formal than 'to have a disagreement'. It often suggests the reason for the argument was quite serious or silly.",
+      "nuance_mm": "'to have a disagreement' ထက် ပိုပြီး informal ကျပါတယ်။ စကားများရတဲ့အကြောင်းရင်းက တော်တော်လေး ပြင်းထန်တာ ဒါမှမဟုတ် တافهတဲ့ကိစ္စဖြစ်တတ်တာကို ရည်ညွှန်းလေ့ရှိတယ်။",
+      "goes_with_en": "fall out with + a friend / your parents / someone · fall out over + something (money, a boy/girl)",
+      "goes_with_note_en": "Use 'with' for the person and 'over' for the reason.",
+      "goes_with_note_mm": "ဘယ်သူနဲ့ဖြစ်တာလဲဆိုရင် 'with'၊ ဘာကြောင့်ဖြစ်တာလဲဆိုရင် 'over' နဲ့ တွဲသုံးပါ။",
+      "examples": [
+        {
+          "en": "They {w}fell out with{/w} their {c}neighbours{/c} over a parking space.",
+          "mm": "သူတို့ ကားပါကင်ကိစ္စနဲ့ အိမ်နီးချင်းတွေနဲ့ ရန်ဖြစ်ပြီး အဆက်အသွယ်ပြတ်သွားတယ်။"
+        },
+        {
+          "en": "I had a big argument with my best friend, and we've {w}fallen out{/w}.",
+          "mm": "ကျွန်တော် အရင်းနှီးဆုံးသူငယ်ချင်းနဲ့ စကားအကြီးအကျယ်များပြီး ခင်မင်မှုပျက်သွားတယ်။"
+        },
+        {
+          "en": "She {w}fell out with{/w} her {c}parents{/c} when she left university.",
+          "mm": "သူမ တက္ကသိုလ်ကထွက်လိုက်တော့ သူ့မိဘတွေနဲ့ အဆင်မပြေဖြစ်သွားတယ်။"
+        },
+        {
+          "en": "The two brothers {w}fell out{/w} {c}over{/c} their father's will.",
+          "mm": "ညီအစ်ကိုနှစ်ယောက် အဖေ့ရဲ့သေတမ်းစာကိစ္စနဲ့ ခင်မင်မှုပျက်သွားကြတယ်။"
+        },
+        {
+          "en": "Try not to {w}fall out with{/w} your {c}teammates{/c} before the big game.",
+          "mm": "ပွဲကြီးမတိုင်ခင် ကိုယ့်အသင်းဖော်တွေနဲ့ စိတ်ဝမ်းမကွဲအောင် ကြိုးစားပါ။"
+        }
+      ],
+      "collocations": [
+        "fall out with a friend",
+        "fall out over money"
+      ],
+      "confuse_with": [
+        "split up"
+      ]
+    },
+    {
+      "word": "make up",
+      "pos": "phrasal verb",
+      "ipa": "/meɪk ʌp/",
+      "short_en": "become friends again after an argument",
+      "short_mm": "ပြန်အဆင်ပြေသွားတယ်၊ ပြန်တည့်သွားတယ်",
+      "use_when_en": "After a fight or argument, you forgive each other and return to being friendly. It's the positive action after 'falling out'.",
+      "use_when_mm": "ရန်ဖြစ်၊ စကားများပြီးတဲ့နောက်မှာ တစ်ယောက်နဲ့တစ်ယောက် ခွင့်လွှတ်ပြီး သူငယ်ချင်းပြန်ဖြစ်သွားတဲ့အခါ သုံးပါတယ်။ 'fall out' ဖြစ်ပြီးနောက် လုပ်တဲ့ အပြုသဘောဆောင်တဲ့ လုပ်ရပ်ပေါ့။",
+      "explanation_en": "This verb means to resolve a conflict and restore a relationship. It can be used for friends, family, or romantic partners.",
+      "explanation_mm": "ဒီကြိယာက ပဋိပက္ခကိုဖြေရှင်းပြီး ဆက်ဆံရေးကို ပြန်လည်တည်ဆောက်တာကို ဆိုလိုပါတယ်။ သူငယ်ချင်း၊ မိသားစု၊ ချစ်သူတွေအတွက် သုံးနိုင်ပါတယ်။",
+      "nuance_en": "Very common and natural in spoken English. It's often used with 'soon' or 'quickly' to show the argument wasn't too serious.",
+      "nuance_mm": "အင်္ဂလိပ်စကားပြောမှာ အရမ်းအသုံးများပြီး natural ဖြစ်ပါတယ်။ ရန်ဖြစ်တာက သိပ်မပြင်းထန်ဘူးဆိုတာပြဖို့ 'soon' ဒါမှမဟုတ် 'quickly' နဲ့ တွဲသုံးလေ့ရှိတယ်။",
+      "goes_with_en": "make up + with someone · they argued, but they made up · let's make up",
+      "goes_with_note_en": "Can be used with or without an object. 'They made up' is common.",
+      "goes_with_note_mm": "Object ပါသည်ဖြစ်စေ၊ မပါသည်ဖြစ်စေ သုံးနိုင်ပါတယ်။ 'They made up' (သူတို့ ပြန်တည့်သွားကြပြီ) ဆိုတဲ့ပုံစံက အသုံးများပါတယ်။",
+      "examples": [
+        {
+          "en": "They always argue, but they soon {w}make up{/w}.",
+          "mm": "သူတို့က အမြဲတမ်း ရန်ဖြစ်ကြပေမဲ့ ခဏနေရင် ပြန်တည့်သွားကြတာပဲ။"
+        },
+        {
+          "en": "Have you {w}made up{/w} {c}with{/c} Sarah yet?",
+          "mm": "မင်း Sarah နဲ့ ပြန်အဆင်ပြေသွားပြီလား။"
+        },
+        {
+          "en": "I'm tired of fighting. Let's just {w}make up{/w}.",
+          "mm": "ရန်ဖြစ်ရတာ ပင်ပန်းနေပြီ။ ပြန်အဆင်ပြေအောင် လုပ်ကြရအောင်။"
+        },
+        {
+          "en": "After the argument, he sent her {c}flowers{/c} to try and {w}make up{/w}.",
+          "mm": "စကားများပြီးနောက်မှာ သူက ပြန်အဆင်ပြေဖို့ ကြိုးစားတဲ့အနေနဲ့ သူမဆီကို ပန်းတွေပို့ပေးခဲ့တယ်။"
+        },
+        {
+          "en": "It's silly to stay angry. Why don't you two just {w}make up{/w}?",
+          "mm": "စိတ်ဆိုးနေတာက တော်တော်တုံးတဲ့ကိစ္စပဲ။ မင်းတို့နှစ်ယောက် ပြန်မတည့်လိုက်ကြတာလဲ။"
+        }
+      ],
+      "collocations": [
+        "make up with someone",
+        "soon make up"
+      ],
+      "confuse_with": [
+        "fall out with"
+      ]
+    },
+    {
+      "word": "split up",
+      "pos": "phrasal verb",
+      "ipa": "/splɪt ʌp/",
+      "short_en": "end a romantic relationship",
+      "short_mm": "(ချစ်သူတွေ) လမ်းခွဲတယ်၊ ပြတ်သွားတယ်",
+      "use_when_en": "A couple (married or not) ends their romantic relationship. It's more common and less formal than 'divorce' or 'separate'.",
+      "use_when_mm": "စုံတွဲတစ်တွဲ (လက်ထပ်သည်ဖြစ်စေ၊ မထပ်သည်ဖြစ်စေ) သူတို့ရဲ့ ချစ်သူဆက်ဆံရေးကို အဆုံးသတ်လိုက်တဲ့အခါ သုံးပါတယ်။ 'divorce' (ကွာရှင်းသည်) ဒါမှမဟုတ် 'separate' (ခွဲနေသည်) ထက် ပိုအသုံးများပြီး informal ကျပါတယ်။",
+      "explanation_en": "This specifically refers to the end of a romantic partnership. For friends, you would use 'fall out' or 'drift apart'.",
+      "explanation_mm": "ဒါက ချစ်သူစုံတွဲတွေရဲ့ ဆက်ဆံရေးအဆုံးသတ်တာကိုပဲ ရည်ညွှန်းပါတယ်။ သူငယ်ချင်းတွေအတွက်ဆိုရင်တော့ 'fall out' (ရန်ဖြစ်ပြီး ခင်မင်မှုပျက်သွားတယ်) ဒါမှမဟုတ် 'drift apart' (တဖြည်းဖြည်း ဝေးကွာသွားတယ်) ကို သုံးရပါမယ်။",
+      "nuance_en": "Can also mean to separate a group of people ('Let's split up to search'), but in the context of relationships, it always means to end a romance.",
+      "nuance_mm": "လူအုပ်စုကို ခွဲထုတ်တာ ('ရှာဖွေဖို့ လူခွဲလိုက်ကြရအောင်') လို့လည်း အဓိပ္ပာယ်ရနိုင်ပေမဲ့၊ ဆက်ဆံရေးအကြောင်းပြောတဲ့အခါမှာတော့ ချစ်သူတွေလမ်းခွဲတာကိုပဲ ဆိုလိုပါတယ်။",
+      "goes_with_en": "split up + with someone · they decided to split up · after they split up",
+      "goes_with_note_en": "Like 'make up', it can be used with or without an object.",
+      "goes_with_note_mm": "'make up' လိုပဲ၊ object ပါသည်ဖြစ်စေ၊ မပါသည်ဖြစ်စေ သုံးနိုင်ပါတယ်။",
+      "examples": [
+        {
+          "en": "My friend and her boyfriend {w}split up{/w} {c}last month{/c}.",
+          "mm": "ကျွန်တော့်သူငယ်ချင်းနဲ့ သူ့ကောင်လေးက လွန်ခဲ့တဲ့လက လမ်းခွဲသွားကြတယ်။"
+        },
+        {
+          "en": "After five years of marriage, they {c}decided{/c} to {w}split up{/w}.",
+          "mm": "ငါးနှစ်ကြာ လက်ထပ်ပြီးတဲ့နောက်မှာ သူတို့ လမ်းခွဲဖို့ ဆုံးဖြတ်ခဲ့ကြတယ်။"
+        },
+        {
+          "en": "She's feeling very sad {c}since{/c} she {w}split up{/w} with her partner.",
+          "mm": "သူ့လက်တွဲဖော်နဲ့ လမ်းခွဲပြီးကတည်းက သူမ အရမ်းဝမ်းနည်းနေတယ်။"
+        },
+        {
+          "en": "I heard that Tom and Jane {w}split up{/w}.",
+          "mm": "Tom နဲ့ Jane တို့ လမ်းခွဲသွားကြပြီလို့ ကြားတယ်။"
+        },
+        {
+          "en": "Why did they {w}split up{/w}? They {c}seemed{/c} so happy.",
+          "mm": "သူတို့ ဘာလို့လမ်းခွဲသွားကြတာလဲ။ သူတို့ကြည့်ရတာ အရမ်းပျော်နေပုံပဲ။"
+        }
+      ],
+      "collocations": [
+        "split up last year",
+        "decide to split up"
+      ],
+      "confuse_with": [
+        "fall out with"
+      ]
+    },
+    {
+      "word": "look up to",
+      "pos": "phrasal verb",
+      "ipa": "/lʊk ʌp tuː/",
+      "short_en": "admire and respect someone",
+      "short_mm": "လေးစားအားကျတယ်",
+      "use_when_en": "You admire someone and see them as a role model, often because they are older, more experienced, or have achieved a lot.",
+      "use_when_mm": "ကိုယ့်ထက် အသက်ကြီးလို့၊ အတွေ့အကြုံပိုရှိလို့၊ ဒါမှမဟုတ် အောင်မြင်မှုတွေ အများကြီးရထားလို့ တစ်ယောက်ယောက်ကို လေးစားအားကျပြီး စံပြပုဂ္ဂိုလ်အဖြစ် သဘောထားတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This phrasal verb means to have deep respect for someone and want to be like them. It's the opposite of 'look down on'.",
+      "explanation_mm": "ဒီ phrasal verb က တစ်ယောက်ယောက်ကို လေးနက်စွာလေးစားပြီး သူတို့လိုဖြစ်ချင်တာကို ဆိုလိုပါတယ်။ 'look down on' (အထင်သေးသည်) ရဲ့ ဆန့်ကျင်ဘက်ဖြစ်ပါတယ်။",
+      "nuance_en": "It has a warm, positive feeling. It's often used when talking about parents, older siblings, teachers, or public figures.",
+      "nuance_mm": "ဒါက နွေးထွေးပြီး အပြုသဘောဆောင်တဲ့ ခံစားချက်ကို ပေးပါတယ်။ မိဘတွေ၊ အစ်ကိုအစ်မတွေ၊ ဆရာတွေ၊ ဒါမှမဟုတ် လူသိများတဲ့ ပုဂ္ဂိုလ်တွေအကြောင်း ပြောတဲ့အခါ အသုံးများပါတယ်။",
+      "goes_with_en": "look up to + your parents / a teacher / an older sibling / a role model · someone you look up to",
+      "goes_with_note_en": "Always followed by the person you admire.",
+      "goes_with_note_mm": "ကိုယ်လေးစားအားကျတဲ့လူကို အမြဲတမ်း နောက်ကလိုက်ပြီး သုံးရပါတယ်။",
+      "examples": [
+        {
+          "en": "I've always {w}looked up to{/w} my {c}older brother{/c}.",
+          "mm": "ကျွန်တော်က အစ်ကို့ကို အမြဲတမ်း လေးစားအားကျခဲ့တယ်။"
+        },
+        {
+          "en": "She's a {c}leader{/c} that many young people {w}look up to{/w}.",
+          "mm": "သူမက လူငယ်တွေအများကြီး လေးစားအားကျရတဲ့ ခေါင်းဆောင်တစ်ယောက်ပါ။"
+        },
+        {
+          "en": "He was a teacher that all the {c}students{/c} {w}looked up to{/w}.",
+          "mm": "သူက ကျောင်းသားအားလုံး လေးစားအားကျရတဲ့ ဆရာတစ်ယောက်ဖြစ်ခဲ့တယ်။"
+        },
+        {
+          "en": "It's important to have {c}role models{/c} you can {w}look up to{/w}.",
+          "mm": "ကိုယ်လေးစားအားကျရမယ့် စံပြပုဂ္ဂိုလ်တွေရှိဖို့က အရေးကြီးပါတယ်။"
+        },
+        {
+          "en": "Who did you {w}look up to{/w} {c}when{/c} you were a child?",
+          "mm": "ကလေးဘဝတုန်းက မင်း ဘယ်သူ့ကို လေးစားအားကျခဲ့လဲ။"
+        }
+      ],
+      "collocations": [
+        "look up to my parents",
+        "look up to a role model"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "put up with",
+      "pos": "phrasal verb",
+      "ipa": "/pʊt ʌp wɪð/",
+      "short_en": "tolerate something or someone annoying",
+      "short_mm": "စိတ်အနှောင့်အယှက်ဖြစ်စရာကို သည်းခံတယ်",
+      "use_when_en": "You accept a negative or annoying situation without complaining, even though you don't like it.",
+      "use_when_mm": "မကြိုက်ပေမဲ့လည်း မကောင်းတဲ့၊ စိတ်အနှောင့်အယှက်ဖြစ်စရာ အခြေအနေတစ်ခုကို မညည်းမညူဘဲ လက်ခံလိုက်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This means to endure or tolerate. It's a very common, informal replacement for the verb 'tolerate'.",
+      "explanation_mm": "ဒါက ခံနိုင်ရည်ရှိရှိ သည်းခံတာကို ဆိုလိုပါတယ်။ 'tolerate' ဆိုတဲ့ ကြိယာအစား အသုံးများတဲ့ informal အသုံးအနှုန်းတစ်ခု ဖြစ်ပါတယ်။",
+      "nuance_en": "It implies that you are being patient, but your patience might run out. Often used with 'can't' to show you've reached your limit.",
+      "nuance_mm": "ဒါက ကိုယ်က သည်းခံနေတယ်၊ ဒါပေမဲ့ သည်းခံနိုင်စွမ်း ကုန်သွားနိုင်တယ်ဆိုတဲ့ သဘောကိုဆောင်ပါတယ်။ ကိုယ့်ရဲ့ သည်းခံနိုင်စွမ်း အဆုံးစွန်ရောက်သွားပြီဆိုတာပြဖို့ 'can't' နဲ့ တွဲသုံးလေ့ရှိတယ်။",
+      "goes_with_en": "put up with + the noise / the mess / his behaviour / someone · I can't put up with it",
+      "goes_with_note_en": "Used for annoying situations, things, or people.",
+      "goes_with_note_mm": "စိတ်အနှောင့်အယှက်ဖြစ်စရာ အခြေအနေတွေ၊ အရာတွေ၊ လူတွေအတွက် သုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "I don't know how you {w}put up with{/w} that constant {c}noise{/c}.",
+          "mm": "အဲ့ဒီလို တောက်လျှောက်ဆူညံနေတာကို မင်းဘယ်လို သည်းခံနိုင်လဲတော့မသိဘူး။"
+        },
+        {
+          "en": "She had to {w}put up with{/w} a lot of {c}criticism{/c} from her boss.",
+          "mm": "သူမက သူ့သူဌေးဆီက ဝေဖန်မှုတွေကို အများကြီး သည်းခံခဲ့ရတယ်။"
+        },
+        {
+          "en": "I can't {w}put up with{/w} his {c}rudeness{/c} any longer.",
+          "mm": "သူ့ရဲ့ ရိုင်းစိုင်းတာကို ကျွန်တော် ဒီထက်ပိုပြီး သည်းမခံနိုင်တော့ဘူး။"
+        },
+        {
+          "en": "We have to {w}put up with{/w} the {c}bad weather{/c} until spring.",
+          "mm": "နွေဦးမရောက်မချင်း ဒီမကောင်းတဲ့ ရာသီဥတုကို ကျွန်တော်တို့ သည်းခံရဦးမယ်။"
+        },
+        {
+          "en": "He's very difficult, but I {w}put up with{/w} {c}him{/c} because he's my brother.",
+          "mm": "သူက ပေါင်းသင်းရခက်ပေမဲ့ ကျွန်တော့်အစ်ကိုဖြစ်နေလို့ သည်းခံနေရတာ။"
+        }
+      ],
+      "collocations": [
+        "put up with the noise",
+        "can't put up with"
+      ],
+      "confuse_with": []
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "After their big argument, the two friends refused to speak. They had ___.",
+      "right": "fallen out",
+      "wrong": "split up",
+      "why": "For friends, 'fall out' is correct. 'Split up' is for romantic relationships.",
+      "why_mm": "သူငယ်ချင်းတွေအတွက် 'fall out' က မှန်ပါတယ်။ 'Split up' က ချစ်သူစုံတွဲတွေအတွက်ပဲ သုံးပါတယ်။"
+    },
+    {
+      "prompt": "I really admire my history teacher. I ___ her.",
+      "right": "look up to",
+      "wrong": "put up with",
+      "why": "'Look up to' means admire. 'Put up with' means tolerate, which is negative.",
+      "why_mm": "'Look up to' က လေးစားအားကျတာကို ဆိုလိုပါတယ်။ 'Put up with' က သည်းခံတာဖြစ်ပြီး အဆိုးသဘောဆောင်ပါတယ်။"
+    },
+    {
+      "prompt": "They had a fight last week, but they're friends again now. They've ___.",
+      "right": "made up",
+      "wrong": "got on with",
+      "why": "'Make up' means to become friends again after a fight. 'Get on with' describes a generally good relationship, not a single action of reconciliation.",
+      "why_mm": "'Make up' က ရန်ဖြစ်ပြီးမှ ပြန်တည့်သွားတာကို ပြောတာပါ။ 'Get on with' ကတော့ ယေဘုယျအားဖြင့် အဆင်ပြေတဲ့ဆက်ဆံရေးကို ဖော်ပြတာဖြစ်ပြီး ရန်ဖြစ်ပြီးမှ ပြန်คืนดีတာကို မဆိုလိုပါဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I can't ___ his constant complaining anymore! It's driving me crazy.",
+      "answer": "put up with",
+      "options": [
+        "put up with",
+        "look up to",
+        "get on with"
+      ],
+      "explain_en": "To tolerate something annoying is to 'put up with' it.",
+      "explain_mm": "စိတ်အနှောင့်အယှက်ဖြစ်စရာတစ်ခုကို သည်းခံတာကို 'put up with' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My sister and her boyfriend ___ last year, and she's still very upset.",
+      "answer": "split up",
+      "options": [
+        "split up",
+        "fell out",
+        "made up"
+      ],
+      "explain_en": "'Split up' is used for ending a romantic relationship.",
+      "explain_mm": "ချစ်သူစုံတွဲတွေ လမ်းခွဲတာအတွက် 'split up' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm lucky that I really ___ all my colleagues at work.",
+      "answer": "get on with",
+      "options": [
+        "get on with",
+        "look up to",
+        "put up with"
+      ],
+      "explain_en": "'Get on with' means to have a good, friendly relationship.",
+      "explain_mm": "အဆင်ပြေချောမွေ့တဲ့ ဆက်ဆံရေးရှိတာကို 'get on with' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The two best friends ___ over a silly misunderstanding.",
+      "answer": "fell out",
+      "options": [
+        "fell out",
+        "split up",
+        "made up"
+      ],
+      "explain_en": "'Fall out' means to argue and stop being friends. 'Split up' is for couples.",
+      "explain_mm": "ရန်ဖြစ်ပြီး ခင်မင်မှုပျက်သွားတာကို 'fall out' လို့ သုံးပါတယ်။ 'Split up' က စုံတွဲတွေအတွက်ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "As a young musician, I always ___ the great jazz players of the past.",
+      "answer": "looked up to",
+      "options": [
+        "looked up to",
+        "put up with",
+        "got on with"
+      ],
+      "explain_en": "'Look up to' means to admire and respect someone.",
+      "explain_mm": "တစ်ယောက်ယောက်ကို လေးစားအားကျတာကို 'look up to' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "They had a huge argument, but they kissed and ___ the next day.",
+      "answer": "made up",
+      "options": [
+        "made up",
+        "split up",
+        "fell out"
+      ],
+      "explain_en": "'Make up' means to become friends again after a fight.",
+      "explain_mm": "ရန်ဖြစ်ပြီးနောက် ပြန်အဆင်ပြေသွားတာကို 'make up' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I can't believe they broke up! Why did they ___?",
+      "answer": "split up",
+      "options": [
+        "split up",
+        "fall out",
+        "make up"
+      ],
+      "explain_en": "To end a romantic relationship is to 'split up'.",
+      "explain_mm": "ချစ်သူဆက်ဆံရေးကို အဆုံးသတ်တာကို 'split up' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He doesn't ___ his neighbours because they play loud music all night.",
+      "answer": "get on with",
+      "options": [
+        "get on with",
+        "look up to",
+        "make up"
+      ],
+      "explain_en": "'Get on with' (often in the negative) describes having a good or bad relationship.",
+      "explain_mm": "ဆက်ဆံရေးကောင်း/မကောင်းကို ဖော်ပြဖို့ 'get on with' (အများအားဖြင့် အငြင်းဝါကျ) ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My father was my hero. I really ___ him.",
+      "answer": "looked up to",
+      "options": [
+        "looked up to",
+        "put up with",
+        "fell out with"
+      ],
+      "explain_en": "To admire someone as a hero is to 'look up to' them.",
+      "explain_mm": "တစ်ယောက်ယောက်ကို သူရဲကောင်းတစ်ယောက်လို လေးစားအားကျတာကို 'look up to' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "How does she ___ three noisy children in such a small apartment?",
+      "answer": "put up with",
+      "options": [
+        "put up with",
+        "get on with",
+        "make up with"
+      ],
+      "explain_en": "To tolerate a difficult situation (like noise) is to 'put up with' it.",
+      "explain_mm": "ခက်ခဲတဲ့အခြေအနေ (ဆူညံသံလိုမျိုး) ကို သည်းခံတာကို 'put up with' လို့ သုံးပါတယ်။"
+    }
+  ]
+}

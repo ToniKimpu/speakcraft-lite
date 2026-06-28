@@ -1,0 +1,429 @@
+{
+  "id": "pv_work",
+  "title": "Phrasal verbs: work & study",
+  "level": 2,
+  "order": 202,
+  "theme": "Phrasal verbs",
+  "style": "contrast",
+  "unit": "expression",
+  "why_grouped_en": "These phrasal verbs are incredibly common in work and study. While each has a more formal one-word equivalent, like 'carry out' = 'conduct', the phrasal verb is what you'll hear and use most of the time.",
+  "why_grouped_mm": "ဒီ phrasal verb တွေက အလုပ်ခွင်နဲ့ ကျောင်းမှာ အရမ်းသုံးကြတယ်။ တစ်လုံးတည်း formal စကားလုံးတွေ (ဥပမာ carry out = conduct) ရှိပေမဲ့၊ လူအများစုက ဒီ phrasal verb တွေကိုပဲ နေ့စဉ်သုံးစကားပြောမှာ သုံးကြပါတယ်။",
+  "words": [
+    {
+      "word": "carry out",
+      "pos": "phrasal verb",
+      "ipa": "/ˌkær.i ˈaʊt/",
+      "short_en": "to do or complete a task",
+      "short_mm": "တာဝန်တစ်ခုကို ဆောင်ရွက်သည် / အကောင်အထည်ဖော်သည်",
+      "use_when_en": "You are performing a plan, task, or experiment, often one that requires careful steps.",
+      "use_when_mm": "အစီအစဉ်တစ်ခု၊ တာဝန်တစ်ခု၊ ဒါမှမဟုတ် စမ်းသပ်မှုတစ်ခုကို အဆင့်ဆင့် ဂရုတစိုက် လုပ်ဆောင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "A slightly formal phrasal verb meaning to perform or conduct something. It's often used for official tasks, research, or instructions.",
+      "explanation_mm": "တစ်ခုခုကို လုပ်ဆောင်တယ်၊ အကောင်အထည်ဖော်တယ်လို့ အဓိပ္ပာယ်ရတဲ့ အနည်းငယ် formal ကျတဲ့ phrasal verb ပါ။ ရုံးပိုင်းဆိုင်ရာ တာဝန်တွေ၊ သုတေသနတွေ၊ ညွှန်ကြားချက်တွေအတွက် သုံးလေ့ရှိတယ်။",
+      "nuance_en": "Sounds more planned and official than just 'do'. You 'do' your homework, but you 'carry out' a survey.",
+      "nuance_mm": "'do' ထက် ပိုပြီး အစီအစဉ်တကျနဲ့ တရားဝင်ဆန်တဲ့ ခံစားချက်မျိုး ပေးပါတယ်။ အိမ်စာကို 'do' လုပ်တယ်၊ ဒါပေမဲ့ စစ်တမ်းတစ်ခုကိုတော့ 'carry out' လုပ်တယ်လို့ သုံးပါတယ်။",
+      "goes_with_en": "carry out + a plan / a task / an order / instructions / a survey / research / repairs",
+      "goes_with_note_en": "Pairs with nouns for planned activities and official duties.",
+      "goes_with_note_mm": "အစီအစဉ်ချထားတဲ့ လုပ်ဆောင်မှုတွေ၊ တရားဝင်တာဝန်တွေနဲ့ သက်ဆိုင်တဲ့ noun တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "The team will {w}carry out{/w} a detailed {c}survey{/c}.",
+          "mm": "ဒီအဖွဲ့က အသေးစိတ်စစ်တမ်းတစ်ခုကို ကောက်ယူသွားမှာပါ။"
+        },
+        {
+          "en": "We must {w}carry out{/w} the manager's {c}instructions{/c} exactly.",
+          "mm": "ကျွန်တော်တို့ မန်နေဂျာရဲ့ ညွှန်ကြားချက်တွေကို တိတိကျကျ အကောင်အထည်ဖော်ရပါမယ်။"
+        },
+        {
+          "en": "The scientists are {w}carrying out{/w} important {c}research{/c}.",
+          "mm": "သိပ္ပံပညာရှင်တွေက အရေးကြီးတဲ့ သုတေသနတစ်ခုကို ပြုလုပ်နေကြပါတယ်။"
+        },
+        {
+          "en": "The engineer was sent to {w}carry out{/w} emergency {c}repairs{/c}.",
+          "mm": "အရေးပေါ်ပြင်ဆင်မှုတွေလုပ်ဖို့ အင်ဂျင်နီယာကို လွှတ်လိုက်တယ်။"
+        },
+        {
+          "en": "It is your duty to {w}carry out{/w} this {c}order{/c}.",
+          "mm": "ဒီအမိန့်ကို အကောင်အထည်ဖော်ဖို့က မင်းရဲ့တာဝန်ပဲ။"
+        }
+      ],
+      "collocations": [
+        "carry out a survey",
+        "carry out instructions",
+        "carry out research"
+      ],
+      "confuse_with": [
+        "look into"
+      ]
+    },
+    {
+      "word": "fill in",
+      "pos": "phrasal verb",
+      "ipa": "/ˌfɪl ˈɪn/",
+      "short_en": "to complete a form with information",
+      "short_mm": "ဖောင်ဖြည့်သည်",
+      "use_when_en": "You are writing information into the empty spaces on a document. (UK English; US uses 'fill out').",
+      "use_when_mm": "စာရွက်စာတမ်းတစ်ခုပေါ်က ကွက်လပ်တွေမှာ အချက်အလက်တွေ ရေးဖြည့်တဲ့အခါ သုံးပါတယ်။ (UK အသုံးပါ၊ US မှာတော့ 'fill out' လို့ သုံးပါတယ်)။",
+      "explanation_en": "This specifically means to add required information like your name, address, etc., to a form or application.",
+      "explanation_mm": "ဖောင်တစ်ခုပေါ်မှာ နာမည်၊ လိပ်စာလိုမျိုး လိုအပ်တဲ့ အချက်အလက်တွေကို ရေးထည့်တာကို ဆိုလိုပါတယ်။",
+      "nuance_en": "Very specific to forms and documents. Don't confuse it with 'fill up', which means to make something full (e.g., a car with petrol).",
+      "nuance_mm": "ဖောင်တွေ၊ စာရွက်စာတမ်းတွေအတွက်ပဲ သီးသန့်သုံးပါတယ်။ တစ်ခုခုကို အပြည့်ဖြည့်တာ (ဥပမာ ကားဆီဖြည့်တာ) ကို ဆိုလိုတဲ့ 'fill up' နဲ့ မမှားပါနဲ့။",
+      "goes_with_en": "fill in + a form / an application / a questionnaire / the details / the blanks",
+      "goes_with_note_en": "Pairs with nouns for documents that need information.",
+      "goes_with_note_mm": "အချက်အလက်ဖြည့်ဖို့ လိုအပ်တဲ့ စာရွက်စာတမ်း noun တွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "Please {w}fill in{/w} this application {c}form{/c}.",
+          "mm": "ကျေးဇူးပြုပြီး ဒီလျှောက်လွှာဖောင်ကို ဖြည့်ပေးပါ။"
+        },
+        {
+          "en": "I spent an hour {w}filling in{/w} the {c}paperwork{/c} for my visa.",
+          "mm": "ဗီဇာအတွက် စာရွက်စာတမ်းတွေ ဖြည့်ရင်း တစ်နာရီလောက် အချိန်ကုန်သွားတယ်။"
+        },
+        {
+          "en": "Could you {w}fill in{/w} your personal {c}details{/c} on page one?",
+          "mm": "စာမျက်နှာတစ်မှာ ရှင့်ရဲ့ ကိုယ်ရေးအချက်အလက်တွေကို ဖြည့်ပေးလို့ရမလား။"
+        },
+        {
+          "en": "The teacher asked us to {w}fill in{/w} the {c}blanks{/c} in the sentences.",
+          "mm": "ဆရာမက ကျွန်တော်တို့ကို ဝါကျတွေထဲက ကွက်လပ်တွေကို ဖြည့်ခိုင်းတယ်။"
+        },
+        {
+          "en": "You need to {w}fill in{/w} your name and {c}address{/c} here.",
+          "mm": "ဒီနေရာမှာ မင်းရဲ့ နာမည်နဲ့ လိပ်စာကို ဖြည့်ဖို့ လိုတယ်။"
+        }
+      ],
+      "collocations": [
+        "fill in a form",
+        "fill in the details",
+        "fill in the blanks"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "hand in",
+      "pos": "phrasal verb",
+      "ipa": "/ˌhænd ˈɪn/",
+      "short_en": "to submit work to a person in authority",
+      "short_mm": "အလုပ်အပ်သည် / တင်ပြသည်",
+      "use_when_en": "You are giving a completed piece of work (like homework or a report) to a teacher, boss, or official.",
+      "use_when_mm": "ပြီးစီးသွားတဲ့ အလုပ်တစ်ခု (အိမ်စာ၊ report) ကို ဆရာ၊ အထက်လူကြီး၊ ဒါမှမဟုတ် တာဝန်ရှိသူဆီကို ပေးအပ်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This implies a formal submission process, often with a deadline. You give the work to someone who will check or grade it.",
+      "explanation_mm": "Deadline တစ်ခုနဲ့ တရားဝင် အလုပ်အပ်တာမျိုးကို ဆိုလိုပါတယ်။ ကိုယ့်အလုပ်ကို စစ်ဆေးမယ့် ဒါမှမဟုတ် အမှတ်ပေးမယ့်သူဆီကို ပေးတာပေါ့။",
+      "nuance_en": "Different from just 'give'. 'Hand in' is specifically for submitting something you have completed for review.",
+      "nuance_mm": "'give' (ပေးသည်) နဲ့ မတူပါဘူး။ 'Hand in' က ကိုယ်ပြီးစီးအောင် လုပ်ထားတဲ့ အရာတစ်ခုကို စစ်ဆေးဖို့ တင်ပြတာ၊ အပ်နှံတာအတွက်ပဲ သီးသန့်သုံးပါတယ်။",
+      "goes_with_en": "hand in + your homework / your assignment / your essay / your report / your resignation / your notice",
+      "goes_with_note_en": "Pairs with nouns for completed work or official documents.",
+      "goes_with_note_mm": "ပြီးစီးသွားတဲ့ အလုပ် ဒါမှမဟုတ် တရားဝင်စာရွက်စာတမ်းတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "Please {w}hand in{/w} your {c}essays{/c} by Friday.",
+          "mm": "ကျေးဇူးပြုပြီး သောကြာနေ့ နောက်ဆုံးထားပြီး စာစီစာကုံးတွေ အပ်ပေးပါ။"
+        },
+        {
+          "en": "I need to {w}hand in{/w} my {c}report{/c} to the manager tomorrow.",
+          "mm": "မနက်ဖြန် မန်နေဂျာဆီကို ကျွန်တော့် report တင်ရမယ်။"
+        },
+        {
+          "en": "She decided to {w}hand in{/w} her {c}resignation{/c} after finding a new job.",
+          "mm": "အလုပ်သစ်ရှာတွေ့ပြီးနောက်မှာ သူမ အလုပ်ထွက်စာ တင်ဖို့ ဆုံးဖြတ်ခဲ့တယ်။"
+        },
+        {
+          "en": "Have you {w}handed in{/w} your {c}application{/c} yet?",
+          "mm": "မင်း လျှောက်လွှာ တင်ပြီးပြီလား။"
+        },
+        {
+          "en": "Don't forget to {w}hand in{/w} your {c}keys{/c} when you leave the apartment.",
+          "mm": "တိုက်ခန်းကနေ မထွက်ခွာခင် သော့တွေ ပြန်အပ်ဖို့ မမေ့နဲ့နော်။"
+        }
+      ],
+      "collocations": [
+        "hand in an essay",
+        "hand in a report",
+        "hand in your resignation"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "sort out",
+      "pos": "phrasal verb",
+      "ipa": "/ˌsɔːt ˈaʊt/",
+      "short_en": "to solve a problem or organise something",
+      "short_mm": "ပြဿနာဖြေရှင်းသည် / စီစဉ်သည်",
+      "use_when_en": "You are dealing with a problem successfully, or putting things into a proper order or arrangement.",
+      "use_when_mm": "ပြဿနာတစ်ခုကို အောင်မြင်အောင် ဖြေရှင်းတဲ့အခါ၊ ဒါမှမဟုတ် အရာတွေကို စနစ်တကျ စီစဉ်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "A very common phrasal verb meaning to resolve a difficulty, or to arrange things that are messy or confusing.",
+      "explanation_mm": "အခက်အခဲကို ဖြေရှင်းတာ၊ ဒါမှမဟုတ် ရှုပ်ထွေးနေတဲ့အရာတွေကို စီစဉ်တာလို့ အဓိပ္ပာယ်ရတဲ့ အရမ်းအသုံးများတဲ့ phrasal verb ပါ။",
+      "nuance_en": "It has a practical, problem-solving feel. It implies taking something messy and making it neat or clear.",
+      "nuance_mm": "လက်တွေ့ကျကျ ပြဿနာဖြေရှင်းတဲ့ ခံစားချက်မျိုး ပေးပါတယ်။ ရှုပ်ပွနေတဲ့အရာတစ်ခုကို ယူပြီး သပ်ရပ်အောင်၊ ရှင်းလင်းအောင် လုပ်လိုက်တာကို ဆိုလိုပါတယ်။",
+      "goes_with_en": "sort out + a problem / the details / the schedule / the paperwork / your finances / a misunderstanding",
+      "goes_with_note_en": "Pairs with problems, arrangements, and messy situations.",
+      "goes_with_note_mm": "ပြဿနာတွေ၊ အစီအစဉ်တွေ၊ ရှုပ်ထွေးနေတဲ့ အခြေအနေတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "We need to {w}sort out{/w} this {c}problem{/c} before the meeting.",
+          "mm": "အစည်းအဝေးမစခင် ဒီပြဿနာကို ကျွန်တော်တို့ ဖြေရှင်းဖို့ လိုတယ်။"
+        },
+        {
+          "en": "Can you {w}sort out{/w} the {c}schedule{/c} for next week?",
+          "mm": "နောက်အပတ်အတွက် အချိန်ဇယားကို စီစဉ်ပေးလို့ရမလား။"
+        },
+        {
+          "en": "It took hours to {w}sort out{/w} all the {c}paperwork{/c}.",
+          "mm": "ဒီစာရွက်စာတမ်းတွေကို စီစဉ်နေတာနဲ့ နာရီပေါင်းများစွာ ကြာသွားတယ်။"
+        },
+        {
+          "en": "Let's meet tomorrow and {w}sort out{/w} the final {c}details{/c}.",
+          "mm": "မနက်ဖြန်တွေ့ပြီး နောက်ဆုံးအသေးစိတ်အချက်အလက်တွေကို ညှိနှိုင်းကြရအောင်။"
+        },
+        {
+          "en": "Don't worry about the mess, I'll {w}sort it out{/w}.",
+          "mm": "ရှုပ်ပွနေတာအတွက် စိတ်မပူနဲ့၊ ကျွန်တော် ရှင်းလင်းလိုက်ပါ့မယ်။"
+        }
+      ],
+      "collocations": [
+        "sort out a problem",
+        "sort out the schedule",
+        "sort out the details"
+      ],
+      "confuse_with": [
+        "look into"
+      ]
+    },
+    {
+      "word": "look into",
+      "pos": "phrasal verb",
+      "ipa": "/ˈlʊk ˌɪn.tuː/",
+      "short_en": "to investigate or examine the facts",
+      "short_mm": "စုံစမ်းစစ်ဆေးသည်",
+      "use_when_en": "You are starting to investigate a problem, complaint, or situation to find out more about it.",
+      "use_when_mm": "ပြဿနာတစ်ခု၊ တိုင်ကြားချက်တစ်ခု၊ ဒါမှမဟုတ် အခြေအနေတစ်ခုအကြောင်း ပိုမိုသိရှိနိုင်ဖို့ စတင်စုံစမ်းတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This means to examine the facts and information about something. It's often the first step in solving a problem, before you take action.",
+      "explanation_mm": "တစ်ခုခုနဲ့ပတ်သက်တဲ့ အချက်အလက်တွေကို စစ်ဆေးတာကို ဆိုလိုပါတယ်။ ဒါက အရေးမယူခင်၊ ပြဿနာဖြေရှင်းခြင်းရဲ့ ပထမဆုံးအဆင့် ဖြစ်တတ်ပါတယ်။",
+      "nuance_en": "Less intense than 'investigate'. It suggests a preliminary check. You 'look into' a complaint before you 'sort it out'.",
+      "nuance_mm": "'investigate' လောက် မပြင်းထန်ပါဘူး။ ကနဦးစစ်ဆေးတာမျိုးကို ဆိုလိုပါတယ်။ တိုင်ကြားချက်တစ်ခုကို 'sort it out' (မဖြေရှင်း) ခင် 'look into' (စုံစမ်း) ရပါတယ်။",
+      "goes_with_en": "look into + the problem / the matter / the issue / the complaint / the possibility / the cause",
+      "goes_with_note_en": "Pairs with nouns for problems and situations that need examining.",
+      "goes_with_note_mm": "စစ်ဆေးဖို့လိုအပ်တဲ့ ပြဿနာတွေ၊ အခြေအနေတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "The manager promised to {w}look into{/w} the {c}complaint{/c}.",
+          "mm": "မန်နေဂျာက တိုင်ကြားချက်ကို စုံစမ်းစစ်ဆေးပေးမယ်လို့ ကတိပေးခဲ့တယ်။"
+        },
+        {
+          "en": "We are {w}looking into{/w} the {c}possibility{/c} of opening a new branch.",
+          "mm": "ကျွန်တော်တို့ ရုံးခွဲအသစ်ဖွင့်လှစ်နိုင်ခြေကို စဉ်းစားစစ်ဆေးနေပါတယ်။"
+        },
+        {
+          "en": "Could you {w}look into{/w} why the {c}website{/c} is so slow?",
+          "mm": "Website ဘာလို့ ဒီလောက်နှေးနေလဲဆိုတာကို စစ်ဆေးပေးလို့ရမလား။"
+        },
+        {
+          "en": "Police are {w}looking into{/w} the {c}cause{/c} of the accident.",
+          "mm": "ရဲတွေက မတော်တဆမှုဖြစ်ရတဲ့ အကြောင်းရင်းကို စုံစမ်းနေပါတယ်။"
+        },
+        {
+          "en": "I'll {w}look into{/w} the {c}matter{/c} and get back to you.",
+          "mm": "ကျွန်တော် ဒီကိစ္စကို စုံစမ်းပြီး အကြောင်းပြန်ပါ့မယ်။"
+        }
+      ],
+      "collocations": [
+        "look into a complaint",
+        "look into a problem",
+        "look into the matter"
+      ],
+      "confuse_with": [
+        "carry out",
+        "sort out"
+      ]
+    },
+    {
+      "word": "take on",
+      "pos": "phrasal verb",
+      "ipa": "/ˌteɪk ˈɒn/",
+      "short_en": "to accept new work or responsibility; to hire",
+      "short_mm": "အလုပ်/တာဝန်သစ် လက်ခံသည်; ဝန်ထမ်းခန့်သည်",
+      "use_when_en": "You agree to do a piece of work or start a new role, often a challenging one. It can also mean to hire a new employee.",
+      "use_when_mm": "အလုပ်တစ်ခုကို လုပ်ဖို့ ဒါမှမဟုတ် ရာထူးအသစ်တစ်ခုကို စတင်ဖို့ သဘောတူတဲ့အခါ သုံးပါတယ်။ စိန်ခေါ်မှုများတဲ့ အလုပ်မျိုးတွေအတွက် ပိုသုံးပါတယ်။ ဝန်ထမ်းအသစ်ခန့်တာကိုလည်း ဆိုလိုနိုင်ပါတယ်။",
+      "explanation_en": "This has two common work-related meanings: 1) to accept a task or responsibility, and 2) for a company to employ someone.",
+      "explanation_mm": "ဒီ phrasal verb မှာ အလုပ်နဲ့ပတ်သက်တဲ့ အဓိပ္ပာယ်နှစ်မျိုးရှိပါတယ်: (၁) တာဝန်တစ်ခုကို လက်ခံတာ၊ (၂) ကုမ္ပဏီက ဝန်ထမ်းခန့်တာ။",
+      "nuance_en": "Implies a conscious decision to accept something new. 'I'll take on the project' sounds more committed than 'I'll do the project'.",
+      "nuance_mm": "အသစ်အဆန်းတစ်ခုကို သိသိကြီးနဲ့ လက်ခံလိုက်တဲ့ ခံစားချက်မျိုး ပေးပါတယ်။ 'I'll take on the project' လို့ပြောတာက 'I'll do the project' ထက် ပိုပြီး ကတိကဝတ်ပြုတဲ့ပုံ ပေါက်ပါတယ်။",
+      "goes_with_en": "take on + a new project / more work / a new role / extra responsibility / a new employee / a challenge",
+      "goes_with_note_en": "Pairs with nouns for work, roles, and people being hired.",
+      "goes_with_note_mm": "အလုပ်၊ ရာထူး၊ အသစ်ခန့်လိုက်တဲ့ ဝန်ထမ်းတွေနဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "She's decided to {w}take on{/w} the {c}challenge{/c} of managing the team.",
+          "mm": "သူမက ဒီအဖွဲ့ကို စီမံခန့်ခွဲရမယ့် စိန်ခေါ်မှုကို လက်ခံဖို့ ဆုံးဖြတ်လိုက်တယ်။"
+        },
+        {
+          "en": "I'm too busy to {w}take on{/w} any more {c}work{/c} right now.",
+          "mm": "ကျွန်တော် အခုချိန်မှာ နောက်ထပ်အလုပ်တွေ လက်ခံဖို့ အလုပ်အရမ်းများနေတယ်။"
+        },
+        {
+          "en": "The company is {w}taking on{/w} ten new {c}staff{/c} this month.",
+          "mm": "ဒီလမှာ ကုမ္ပဏီက ဝန်ထမ်းအသစ် ဆယ်ယောက် ခန့်နေပါတယ်။"
+        },
+        {
+          "en": "He is going to {w}take on{/w} the {c}role{/c} of project manager.",
+          "mm": "သူက ပရောဂျက်မန်နေဂျာ ရာထူးကို တာဝန်ယူတော့မှာပါ။"
+        },
+        {
+          "en": "Are you sure you want to {w}take on{/w} so much {c}responsibility{/c}?",
+          "mm": "ဒီလောက်ကြီးတဲ့ တာဝန်ကို မင်း တကယ်ပဲ ယူချင်တာ သေချာလား။"
+        }
+      ],
+      "collocations": [
+        "take on a project",
+        "take on more work",
+        "take on new staff"
+      ],
+      "confuse_with": []
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "First, we need to ___ the problem to understand it. Then we can ___ a plan to fix it.",
+      "right": "look into",
+      "wrong": "sort out",
+      "why": "You investigate ('look into') *before* you solve ('sort out'). The order matters.",
+      "why_mm": "ပြဿနာကို အရင်စုံစမ်း ('look into') ပြီးမှ ဖြေရှင်း ('sort out') ရပါတယ်။ အစီအစဉ်က အရေးကြီးပါတယ်။"
+    },
+    {
+      "prompt": "The team will ___ a detailed analysis of the data.",
+      "right": "carry out",
+      "wrong": "take on",
+      "why": "'Carry out' means to perform a planned task. 'Take on' means to accept a new responsibility.",
+      "why_mm": "'Carry out' က အစီအစဉ်တကျ လုပ်ဆောင်တာကို ပြောတာပါ။ 'Take on' က တာဝန်အသစ်ကို လက်ခံတာဖြစ်လို့ ဒီနေရာမှာ အဓိပ္ပာယ်မကိုက်ပါဘူး။"
+    },
+    {
+      "prompt": "All students must ___ their homework by 4 PM.",
+      "right": "hand in",
+      "wrong": "fill in",
+      "why": "'Hand in' is for submitting completed work. 'Fill in' is for completing a form.",
+      "why_mm": "'Hand in' က အလုပ်အပ်တာပါ။ 'Fill in' က ဖောင်ဖြည့်တာဖြစ်လို့ အိမ်စာနဲ့ မဆိုင်ပါဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "We need someone to ___ the task of organising the files.",
+      "answer": "take on",
+      "options": [
+        "take on",
+        "look into",
+        "hand in"
+      ],
+      "explain_en": "To accept a new task or responsibility is to 'take on' it.",
+      "explain_mm": "တာဝန်အသစ်တစ်ခုကို လက်ခံတာဖြစ်လို့ 'take on' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Please ___ this form with your name and address.",
+      "answer": "fill in",
+      "options": [
+        "fill in",
+        "sort out",
+        "carry out"
+      ],
+      "explain_en": "For completing forms with information, we use 'fill in'.",
+      "explain_mm": "ဖောင်မှာ အချက်အလက်ဖြည့်တာဖြစ်လို့ 'fill in' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The teacher told us to ___ our reports after the class.",
+      "answer": "hand in",
+      "options": [
+        "hand in",
+        "take on",
+        "look into"
+      ],
+      "explain_en": "'Hand in' means to submit your completed work to an authority figure like a teacher.",
+      "explain_mm": "ပြီးသွားတဲ့အလုပ်ကို ဆရာဆီ အပ်တာဖြစ်လို့ 'hand in' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Management has promised to ___ the issue of low pay.",
+      "answer": "look into",
+      "options": [
+        "look into",
+        "fill in",
+        "hand in"
+      ],
+      "explain_en": "To investigate or examine a problem is to 'look into' it.",
+      "explain_mm": "ပြဿနာတစ်ခုကို စုံစမ်းစစ်ဆေးတာဖြစ်လို့ 'look into' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It took weeks to ___ all the arrangements for the conference.",
+      "answer": "sort out",
+      "options": [
+        "sort out",
+        "carry out",
+        "take on"
+      ],
+      "explain_en": "'Sort out' is used for organising things or solving complex problems.",
+      "explain_mm": "အရာရာကို စီစဉ်ညှိနှိုင်းတာဖြစ်လို့ 'sort out' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The scientists will ___ a series of experiments.",
+      "answer": "carry out",
+      "options": [
+        "carry out",
+        "look into",
+        "hand in"
+      ],
+      "explain_en": "To perform a planned task like an experiment, we use 'carry out'.",
+      "explain_mm": "စမ်းသပ်မှုလိုမျိုး အစီအစဉ်တကျ လုပ်ဆောင်တာဖြစ်လို့ 'carry out' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I can't ___ any more projects; I'm already too busy.",
+      "answer": "take on",
+      "options": [
+        "take on",
+        "fill in",
+        "sort out"
+      ],
+      "explain_en": "'Take on' means to accept new work or responsibility.",
+      "explain_mm": "အလုပ်အသစ် လက်ခံတာကို ပြောတာဖြစ်လို့ 'take on' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Let's meet and try to ___ this misunderstanding.",
+      "answer": "sort out",
+      "options": [
+        "sort out",
+        "hand in",
+        "look into"
+      ],
+      "explain_en": "To solve a problem like a misunderstanding is to 'sort it out'.",
+      "explain_mm": "နားလည်မှုလွဲတာလို ပြဿနာကို ဖြေရှင်းတာဖြစ်လို့ 'sort out' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The police are going to ___ the strange events in the neighborhood.",
+      "answer": "look into",
+      "options": [
+        "look into",
+        "carry out",
+        "take on"
+      ],
+      "explain_en": "'Look into' means to investigate a situation.",
+      "explain_mm": "အခြေအနေတစ်ခုကို စုံစမ်းစစ်ဆေးတာဖြစ်လို့ 'look into' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "You must ___ your assignment before the deadline on Friday.",
+      "answer": "hand in",
+      "options": [
+        "hand in",
+        "sort out",
+        "fill in"
+      ],
+      "explain_en": "To submit your work is to 'hand it in'.",
+      "explain_mm": "အလုပ်အပ်တာကို ပြောတာဖြစ်လို့ 'hand in' ကို သုံးရပါမယ်။"
+    }
+  ]
+}

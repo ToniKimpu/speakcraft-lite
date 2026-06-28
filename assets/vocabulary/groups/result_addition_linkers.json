@@ -1,0 +1,430 @@
+{
+  "id": "result_addition_linkers",
+  "title": "Cause, result & adding",
+  "level": 2,
+  "order": 403,
+  "theme": "Linking words",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "These words link ideas to show a cause, a result, or to add more information. A common mistake is mixing up the grammar: 'because of' is followed by a noun, while 'so' or 'therefore' introduce a whole new clause.",
+  "why_grouped_mm": "ဒီစကားလုံးတွေက အကြောင်းပြချက်၊ ရလဒ်၊ ဒါမှမဟုတ် အချက်အလက်ထပ်ပေါင်းထည့်တာတွေကို ပြဖို့ သုံးပါတယ်။ အဖြစ်များတဲ့အမှားတစ်ခုကတော့ grammar ရောသုံးတာပါပဲ။ 'because of' နောက်မှာ noun လိုက်ပြီး 'so' ဒါမှမဟုတ် 'therefore' ကတော့ clause အသစ်တစ်ခုကို စပေးပါတယ်။",
+  "words": [
+    {
+      "word": "therefore",
+      "pos": "adverb",
+      "ipa": "/ˈðeə.fɔːr/",
+      "short_en": "a formal way to say 'so'",
+      "short_mm": "ဒါကြောင့်မို့ (formal)",
+      "use_when_en": "In formal writing or speech to show a logical result.",
+      "use_when_mm": "Formal ကျတဲ့ အရေးအသားတွေ၊ စကားပြောတွေမှာ ယုတ္တိကျတဲ့ ရလဒ်တစ်ခုကို ပြဖို့ သုံးပါတယ်။",
+      "explanation_en": "A more formal and serious version of \"so\". It connects a cause to its logical conclusion.",
+      "explanation_mm": "\"so\" ထက် ပိုပြီး formal ကျပြီး ပိုလေးနက်တဲ့ အဓိပ္ပာယ်ရှိပါတယ်။ အကြောင်းတရားတစ်ခုနဲ့ သူ့ရဲ့ ယုတ္တိကျတဲ့ ကောက်ချက်ကို ဆက်စပ်ပေးတယ်။",
+      "nuance_en": "Sounds very logical and is common in academic, business, or legal writing.",
+      "nuance_mm": "အရမ်း ယုတ္တိကျတဲ့ပုံပေါက်ပြီး academic, business, ဒါမှမဟုတ် legal အရေးအသားတွေမှာ အသုံးများတယ်။",
+      "goes_with_en": "often starts a sentence; comes after a semicolon (; therefore, ...); therefore + verb",
+      "goes_with_note_en": "Usually placed at the beginning of a clause, often after a semicolon or a full stop.",
+      "goes_with_note_mm": "Clause တစ်ခုရဲ့ အစမှာ ထားလေ့ရှိပြီး semicolon (;) ဒါမှမဟုတ် full stop (.) နောက်မှာ လိုက်တတ်ပါတယ်။",
+      "examples": [
+        {
+          "en": "Sales were down last quarter; {w}therefore{/w}, we must {c}reduce{/c} our spending.",
+          "mm": "အရင်သုံးလပတ်မှာ အရောင်းကျခဲ့တယ်၊ ဒါကြောင့်မို့ ကျွန်တော်တို့ အသုံးစရိတ်ကို လျှော့ချရမယ်။"
+        },
+        {
+          "en": "He was late and {w}therefore{/w} {c}missed{/c} the start of the meeting.",
+          "mm": "သူ နောက်ကျခဲ့တဲ့အတွက် အစည်းအဝေးအစပိုင်းကို လွတ်သွားတယ်။"
+        },
+        {
+          "en": "The evidence is clear. We can, {w}therefore{/w}, {c}conclude{/c} that he is guilty.",
+          "mm": "သက်သေက ရှင်းနေပြီ။ ဒါကြောင့်မို့ သူအပြစ်ရှိတယ်လို့ ကျွန်တော်တို့ ကောက်ချက်ချနိုင်ပါတယ်။"
+        },
+        {
+          "en": "The company is expanding and {w}therefore{/w} {c}needs{/c} to hire more staff.",
+          "mm": "ကုမ္ပဏီက တိုးချဲ့နေတဲ့အတွက် ဝန်ထမ်းတွေ ထပ်ခန့်ဖို့ လိုအပ်နေပါတယ်။"
+        },
+        {
+          "en": "I think, {w}therefore{/w} I {c}am{/c}.",
+          "mm": "ငါတွေးတယ်၊ ဒါကြောင့် ငါရှိတယ်။"
+        }
+      ],
+      "collocations": [
+        "and therefore",
+        "; therefore,"
+      ],
+      "confuse_with": [
+        "as a result"
+      ]
+    },
+    {
+      "word": "as a result",
+      "pos": "phrase",
+      "ipa": "/æz ə rɪˈzʌlt/",
+      "short_en": "introduces a consequence",
+      "short_mm": "အကျိုးဆက်အနေနဲ့",
+      "use_when_en": "To clearly state the consequence or effect of a previous action.",
+      "use_when_mm": "အရင်လုပ်ခဲ့တဲ့ လုပ်ရပ်တစ်ခုရဲ့ အကျိုးဆက် ဒါမှမဟုတ် သက်ရောက်မှုကို ရှင်းရှင်းလင်းလင်း ပြောပြချင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This phrase directly links a cause to its effect. It's common in both speech and writing and is a little less formal than \"therefore\".",
+      "explanation_mm": "ဒီ phrase က အကြောင်းတရားနဲ့ အကျိုးသက်ရောက်မှုကို တိုက်ရိုက်ချိတ်ဆက်ပေးတယ်။ စကားပြောမှာရော အရေးအသားမှာပါ အသုံးများပြီး \"therefore\" ထက် နည်းနည်း formal ပေါ့တယ်။",
+      "nuance_en": "Focuses on the outcome. You state a fact, and then say what happened because of it.",
+      "nuance_mm": "ရလဒ်ကို အဓိကထားတယ်။ အချက်တစ်ချက်ကို ပြောပြီး အဲ့ဒါကြောင့် ဘာဖြစ်သွားလဲဆိုတာကို ဆက်ပြောတာပါ။",
+      "goes_with_en": "As a result, + [sentence] · As a result of + [noun]",
+      "goes_with_note_en": "Often starts a new sentence. Can also be \"as a result of\" followed by a noun.",
+      "goes_with_note_mm": "ဝါကျအသစ်ရဲ့ အစမှာ ထားလေ့ရှိတယ်။ \"as a result of\" လို့သုံးပြီး နောက်က noun လိုက်တာမျိုးလည်း ရှိတယ်။",
+      "examples": [
+        {
+          "en": "It snowed heavily overnight. {w}As a result{/w}, the {c}schools{/c} were closed.",
+          "mm": "ညက နှင်းတွေ အရမ်းကျခဲ့တယ်။ အကျိုးဆက်အနေနဲ့ ကျောင်းတွေ ပိတ်ထားလိုက်တယ်။"
+        },
+        {
+          "en": "He didn't study for the test. {w}As a result{/w}, he {c}failed{/c}.",
+          "mm": "သူ စာမေးပွဲအတွက် စာမကျက်ခဲ့ဘူး။ အဲ့ဒါကြောင့် သူ စာမေးပွဲကျသွားတယ်။"
+        },
+        {
+          "en": "The flight was delayed. {w}As a result{/w}, I {c}missed{/c} my connecting flight.",
+          "mm": "လေယာဉ်ခရီးစဉ် နောက်ကျသွားတယ်။ အဲ့ဒီအကျိုးဆက်ကြောင့် ကျွန်တော် လေယာဉ်ပြောင်းစီးရမှာ လွတ်သွားတယ်။"
+        },
+        {
+          "en": "She worked hard and, {w}as a result{/w}, {c}received{/c} a promotion.",
+          "mm": "သူမ အလုပ်ကြိုးစားခဲ့တဲ့အတွက် ရာထူးတိုး ရသွားခဲ့တယ်။"
+        },
+        {
+          "en": "{w}As a result{/w} of the {c}storm{/c}, many homes were left without power.",
+          "mm": "မုန်တိုင်းရဲ့ အကျိုးဆက်အနေနဲ့ အိမ်တော်တော်များများ မီးပြတ်သွားခဲ့တယ်။"
+        }
+      ],
+      "collocations": [
+        "as a result of",
+        "and as a result"
+      ],
+      "confuse_with": [
+        "therefore",
+        "because of"
+      ]
+    },
+    {
+      "word": "because of",
+      "pos": "preposition",
+      "ipa": "/bɪˈkɒz əv/",
+      "short_en": "for the reason of (+ noun)",
+      "short_mm": "...ကြောင့် (+ noun)",
+      "use_when_en": "To give the reason for something, followed by a noun or noun phrase.",
+      "use_when_mm": "တစ်ခုခုရဲ့ အကြောင်းပြချက်ကို ပေးချင်တဲ့အခါ သုံးပြီး နောက်မှာ noun ဒါမှမဟုတ် noun phrase လိုက်ရပါတယ်။",
+      "explanation_en": "This is a very common way to state a cause. The key grammar is that it's followed by a noun, not a full sentence (clause).",
+      "explanation_mm": "အကြောင်းပြချက်ပြောတဲ့အခါ အရမ်းအသုံးများတဲ့ ပုံစံပါ။ အဓိက grammar ကတော့ သူ့နောက်မှာ noun လိုက်ရပြီး ဝါကျအပြည့်အစုံ (clause) မလိုက်ရပါဘူး။",
+      "nuance_en": "It's neutral and can be used in almost any context, spoken or written.",
+      "nuance_mm": "Neutral ဖြစ်ပြီး စကားပြော၊ အရေးအသား အခြေအနေ တော်တော်များများမှာ သုံးလို့ရပါတယ်။",
+      "goes_with_en": "... because of + the [noun] / [noun phrase] · because of + you / him / this",
+      "goes_with_note_en": "Always followed by a noun or pronoun. Don't follow it with a subject + verb.",
+      "goes_with_note_mm": "သူ့နောက်မှာ noun ဒါမှမဟုတ် pronoun အမြဲလိုက်ရမယ်။ subject + verb မလိုက်ရပါဘူး။",
+      "examples": [
+        {
+          "en": "The match was cancelled {w}because of{/w} the heavy {c}rain{/c}.",
+          "mm": "မိုးသည်းလွန်းတာကြောင့် ပွဲကို ဖျက်သိမ်းလိုက်ရတယ်။"
+        },
+        {
+          "en": "We were late {w}because of{/w} the {c}traffic{/c}.",
+          "mm": "လမ်းပိတ်နေတာကြောင့် ကျွန်တော်တို့ နောက်ကျသွားတယ်။"
+        },
+        {
+          "en": "He couldn't play {w}because of{/w} his {c}injury{/c}.",
+          "mm": "သူ့ရဲ့ ဒဏ်ရာကြောင့် သူ မကစားနိုင်ခဲ့ဘူး။"
+        },
+        {
+          "en": "She succeeded {w}because of{/w} her hard {c}work{/c}.",
+          "mm": "သူမရဲ့ ကြိုးစားအားထုတ်မှုကြောင့် အောင်မြင်ခဲ့တာပါ။"
+        },
+        {
+          "en": "I'm doing this {w}because of{/w} {c}you{/c}.",
+          "mm": "မင်းကြောင့် ငါ ဒါကို လုပ်နေတာ။"
+        }
+      ],
+      "collocations": [
+        "because of the rain",
+        "because of you"
+      ],
+      "confuse_with": [
+        "due to"
+      ]
+    },
+    {
+      "word": "due to",
+      "pos": "preposition",
+      "ipa": "/djuː tuː/",
+      "short_en": "a more formal 'because of'",
+      "short_mm": "...ကြောင့် (formal)",
+      "use_when_en": "In more formal situations, especially in writing, to mean 'because of'.",
+      "use_when_mm": "ပို formal ကျတဲ့ အခြေအနေတွေမှာ၊ အထူးသဖြင့် အရေးအသားမှာ 'because of' အစား သုံးပါတယ်။",
+      "explanation_en": "\"Due to\" is a slightly more formal alternative to \"because of\". It often follows the verb 'to be' (e.g., \"The delay was due to...\"). Like \"because of\", it's followed by a noun.",
+      "explanation_mm": "\"Due to\" က \"because of\" ထက် နည်းနည်းပို formal ကျတဲ့ အသုံးပါ။ verb 'to be' နောက်မှာ လိုက်လေ့ရှိပါတယ် (ဥပမာ \"The delay was due to...\")။ \"because of\" လိုပဲ သူ့နောက်မှာ noun လိုက်ရပါတယ်။",
+      "nuance_en": "Sounds slightly more official or technical. Common in announcements or reports.",
+      "nuance_mm": "နည်းနည်းပိုပြီး တရားဝင်ဆန်တဲ့၊ ဒါမှမဟုတ် technical ဆန်တဲ့ အသံပေါက်တယ်။ ကြေညာချက်တွေ၊ report တွေမှာ အသုံးများတယ်။",
+      "goes_with_en": "was / is due to + [noun] · delays due to... · cancellations due to...",
+      "goes_with_note_en": "Very common after \"is\" or \"was\". Often used for negative events like delays or problems.",
+      "goes_with_note_mm": "\"is\" ဒါမှမဟုတ် \"was\" နောက်မှာ အရမ်းသုံးလေ့ရှိတယ်။ နောက်ကျတာ၊ ပြဿနာဖြစ်တာလိုမျိုး negative အဖြစ်အပျက်တွေအတွက် သုံးတာများတယ်။",
+      "examples": [
+        {
+          "en": "The flight's {c}delay{/c} was {w}due to{/w} bad weather.",
+          "mm": "လေယာဉ်ခရီးစဉ် နောက်ကျရခြင်းမှာ ဆိုးရွားသော ရာသီဥတုကြောင့် ဖြစ်ပါသည်။"
+        },
+        {
+          "en": "His success is {w}due to{/w} a {c}combination{/c} of talent and hard work.",
+          "mm": "သူ့ရဲ့ အောင်မြင်မှုက အရည်အချင်းနဲ့ ကြိုးစားအားထုတ်မှုတို့ ပေါင်းစပ်မှုကြောင့်ပါ။"
+        },
+        {
+          "en": "Many accidents are {w}due to{/w} careless {c}driving{/c}.",
+          "mm": "မတော်တဆမှုတော်တော်များများက သတိလက်လွတ်မောင်းနှင်မှုကြောင့် ဖြစ်ပွားရတာပါ။"
+        },
+        {
+          "en": "The {c}cancellation{/c} of the event was {w}due to{/w} a lack of interest.",
+          "mm": "ပွဲကို ဖျက်သိမ်းလိုက်ရတာက စိတ်ဝင်စားမှုမရှိတာကြောင့်ပါ။"
+        },
+        {
+          "en": "The company's problems are {w}due to{/w} poor {c}management{/c}.",
+          "mm": "ကုမ္ပဏီရဲ့ ပြဿနာတွေက စီမံခန့်ခွဲမှု ညံ့ဖျင်းတာကြောင့်ပါ။"
+        }
+      ],
+      "collocations": [
+        "due to bad weather",
+        "delay was due to"
+      ],
+      "confuse_with": [
+        "because of"
+      ]
+    },
+    {
+      "word": "in addition",
+      "pos": "phrase",
+      "ipa": "/ɪn əˈdɪʃ.ən/",
+      "short_en": "adds another point or fact",
+      "short_mm": "ထပ်လောင်းပြောရရင် / ဒါ့အပြင်",
+      "use_when_en": "To add a new piece of information to what you have already said.",
+      "use_when_mm": "ကိုယ်ပြောထားပြီးသား အကြောင်းအရာကို အချက်အလက်အသစ်တစ်ခု ထပ်ပေါင်းထည့်ချင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "A simple and clear way to add another point. It usually starts a new sentence. \"In addition to\" can be used before a noun.",
+      "explanation_mm": "နောက်တစ်ချက် ထပ်ပေါင်းထည့်ဖို့ ရိုးရှင်းပြီး ရှင်းလင်းတဲ့ နည်းလမ်းပါ။ ဝါကျအသစ်ရဲ့ အစမှာ ထားလေ့ရှိတယ်။ noun တစ်ခုရဲ့ရှေ့မှာတော့ \"In addition to\" လို့ သုံးနိုင်ပါတယ်။",
+      "nuance_en": "Neutral and useful in both formal and informal writing and speech.",
+      "nuance_mm": "Neutral ဖြစ်ပြီး formal ရော informal အရေးအသား၊ စကားပြောမှာပါ အသုံးဝင်ပါတယ်။",
+      "goes_with_en": "In addition, + [sentence] · In addition to + [noun]",
+      "goes_with_note_en": "Use \"In addition,\" to add a new clause. Use \"In addition to...\" to add a noun.",
+      "goes_with_note_mm": "clause အသစ်ထပ်ထည့်ဖို့ \"In addition,\" ကို သုံးပါ။ noun တစ်ခုထပ်ထည့်ဖို့ \"In addition to...\" ကို သုံးပါ။",
+      "examples": [
+        {
+          "en": "The hotel is in a great location. {w}In addition{/w}, it {c}offers{/c} excellent service.",
+          "mm": "ဟိုတယ်က နေရာကောင်းမှာ ရှိတယ်။ ဒါ့အပြင် ဝန်ဆောင်မှုလည်း အရမ်းကောင်းတယ်။"
+        },
+        {
+          "en": "You need to complete the form. {w}In addition{/w}, you must {c}submit{/c} a recent photograph.",
+          "mm": "သင် ဒီဖောင်ကို ဖြည့်ဖို့လိုတယ်။ ထပ်လောင်းပြီးတော့ မကြာသေးခင်က ရိုက်ထားတဲ့ ဓာတ်ပုံတစ်ပုံ တင်ပေးရပါမယ်။"
+        },
+        {
+          "en": "The new software is faster. {w}In addition{/w}, it's much {c}easier{/c} to use.",
+          "mm": "Software အသစ်က ပိုမြန်တယ်။ ဒါ့အပြင် သုံးရတာလည်း ပိုလွယ်တယ်။"
+        },
+        {
+          "en": "{w}In addition{/w} to {c}English{/c}, she also speaks French and Spanish.",
+          "mm": "အင်္ဂလိပ်စာအပြင် သူမက ပြင်သစ်နဲ့ စပိန်စကားကိုလည်း ပြောတတ်တယ်။"
+        },
+        {
+          "en": "The salary is good. {w}In addition{/w}, the {c}company{/c} provides health insurance.",
+          "mm": "လစာက ကောင်းတယ်။ ဒါ့အပြင် ကုမ္ပဏီက ကျန်းမာရေးအာမခံလည်း ပေးတယ်။"
+        }
+      ],
+      "collocations": [
+        "in addition to",
+        "in addition, it"
+      ],
+      "confuse_with": [
+        "moreover"
+      ]
+    },
+    {
+      "word": "moreover",
+      "pos": "adverb",
+      "ipa": "/mɔːrˈəʊ.vər/",
+      "short_en": "a formal 'also', adds a stronger point",
+      "short_mm": "ဒါ့အပြင် (ပိုခိုင်မာတဲ့အချက်)",
+      "use_when_en": "In formal writing to add another, often more important, fact or reason.",
+      "use_when_mm": "Formal အရေးအသားတွေမှာ နောက်ထပ်အချက်တစ်ခု (ပိုအရေးကြီးတဲ့အချက်) ထပ်ပေါင်းထည့်ဖို့ သုံးပါတယ်။",
+      "explanation_en": "Similar to \"in addition\", but it adds extra weight to the new point. It suggests the new information makes the argument even stronger.",
+      "explanation_mm": "\"in addition\" နဲ့ ဆင်တူပေမယ့် အချက်အသစ်ကို ပိုပြီး အလေးထားစေပါတယ်။ အချက်အလက်အသစ်က युक्तिवादကို ပိုခိုင်မာစေတယ်လို့ ဆိုလိုပါတယ်။",
+      "nuance_en": "Very formal. You wouldn't use it in casual conversation. It's for building a strong, written argument.",
+      "nuance_mm": "အရမ်း formal ကျတယ်။ သာမန်စကားပြောမှာ မသုံးပါဘူး။ ခိုင်မာတဲ့ အရေးအသား युक्तिवाद တည်ဆောက်ဖို့အတွက်ပါ။",
+      "goes_with_en": "Moreover, + [sentence] · ; moreover, ...",
+      "goes_with_note_en": "Almost always starts a new clause, often after a full stop or semicolon.",
+      "goes_with_note_mm": "Clause အသစ်ရဲ့ အစမှာ အမြဲလိုလို သုံးပြီး full stop ဒါမှမဟုတ် semicolon နောက်မှာ လိုက်တတ်ပါတယ်။",
+      "examples": [
+        {
+          "en": "The plan is too expensive. {w}Moreover{/w}, it is not {c}practical{/c}.",
+          "mm": "ဒီအစီအစဉ်က အရမ်းဈေးကြီးတယ်။ ဒါ့အပြင် လက်တွေ့မကျဘူး။"
+        },
+        {
+          "en": "The report is poorly written. {w}Moreover{/w}, it {c}contains{/c} several factual errors.",
+          "mm": "အစီရင်ခံစာက အရေးအသားညံ့တယ်။ ထပ်လောင်းပြောရရင် အချက်အလက်အမှားတွေလည်း အများကြီးပါတယ်။"
+        },
+        {
+          "en": "I don't want to go out tonight. It's cold; {w}moreover{/w}, I'm very {c}tired{/c}.",
+          "mm": "ဒီည ကျွန်တော် အပြင်မသွားချင်ဘူး။ အေးတယ်၊ ဒါ့အပြင် ကျွန်တော် အရမ်းပင်ပန်းနေပြီ။"
+        },
+        {
+          "en": "Electric cars are better for the environment. {w}Moreover{/w}, they are {c}cheaper{/c} to run.",
+          "mm": "လျှပ်စစ်ကားတွေက ပတ်ဝန်းကျင်အတွက် ပိုကောင်းတယ်။ ဒါ့အပြင် မောင်းနှင်စရိတ်လည်း ပိုသက်သာတယ်။"
+        },
+        {
+          "en": "The candidate has a lot of experience. {w}Moreover{/w}, she has excellent {c}references{/c}.",
+          "mm": "လျှောက်ထားသူမှာ အတွေ့အကြုံအများကြီးရှိတယ်။ ဒါ့အပြင် သူမမှာ ထောက်ခံချက်ကောင်းတွေလည်း ရှိတယ်။"
+        }
+      ],
+      "collocations": [
+        "; moreover,",
+        "Moreover, it is"
+      ],
+      "confuse_with": [
+        "in addition",
+        "therefore"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "The flight was cancelled ___ the storm.",
+      "right": "because of",
+      "wrong": "as a result",
+      "why": "We need a preposition before the noun 'the storm'. 'As a result' starts a new clause.",
+      "why_mm": "Noun ('the storm') ရဲ့ရှေ့မှာ preposition လိုပါတယ်။ 'As a result' က clause အသစ်တစ်ခုကို စပေးတာပါ။"
+    },
+    {
+      "prompt": "The project is risky. ___, it's very expensive.",
+      "right": "Moreover",
+      "wrong": "In addition",
+      "why": "The second point ('expensive') is a stronger reason not to do it, so 'Moreover' fits the extra weight better.",
+      "why_mm": "ဒုတိယအချက် ('expensive') က မလုပ်သင့်တဲ့အကြောင်း ပိုခိုင်မာတဲ့အကြောင်းပြချက်ဖြစ်လို့ အလေးထားတဲ့ 'Moreover' က ပိုလိုက်ဖက်ပါတယ်။"
+    },
+    {
+      "prompt": "The delay was ___ a technical issue.",
+      "right": "due to",
+      "wrong": "because of",
+      "why": "After 'was', the more formal 'due to' is the natural choice for an official-sounding reason.",
+      "why_mm": "'was' နောက်မှာ formal ပိုဆန်တဲ့ 'due to' ကို သုံးတာက တရားဝင်အကြောင်းပြချက်အတွက် ပိုပြီး natural ဖြစ်ပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "He worked hard and, ___, got the promotion.",
+      "answer": "as a result",
+      "options": [
+        "as a result",
+        "because of",
+        "moreover"
+      ],
+      "explain_en": "The promotion is a direct consequence of working hard. 'Because of' needs a noun.",
+      "explain_mm": "ရာထူးတိုးတာက အလုပ်ကြိုးစားခြင်းရဲ့ တိုက်ရိုက်အကျိုးဆက်ပါ။ 'Because of' နောက်မှာ noun လိုက်ရပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The museum is closed today ___ a public holiday.",
+      "answer": "due to",
+      "options": [
+        "due to",
+        "therefore",
+        "in addition"
+      ],
+      "explain_en": "'Due to' or 'because of' introduces a noun reason. 'Due to' sounds more official, like an announcement.",
+      "explain_mm": "'Due to' ဒါမှမဟုတ် 'because of' က noun အကြောင်းပြချက်ကို စပေးတယ်။ 'Due to' က ကြေညာချက်လိုမျိုး ပိုပြီးတရားဝင်ဆန်တယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The system is complex. ___, it requires constant maintenance.",
+      "answer": "Moreover",
+      "options": [
+        "Moreover",
+        "Because of",
+        "As a result"
+      ],
+      "explain_en": "This adds a second, stronger negative point. 'Moreover' is perfect for adding weight in a formal context.",
+      "explain_mm": "ဒါက ဒုတိယ၊ ပိုခိုင်မာတဲ့ အနုတ်လက္ခဏာဆောင်တဲ့ အချက်ကို ထပ်ပေါင်းတာပါ။ 'Moreover' က formal အခြေအနေမှာ အလေးထားထပ်ပေါင်းဖို့ အသင့်တော်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I missed the bus; ___, I will be late for work.",
+      "answer": "therefore",
+      "options": [
+        "therefore",
+        "due to",
+        "in addition"
+      ],
+      "explain_en": "Being late is the logical result of missing the bus. 'Therefore' connects the cause and logical result.",
+      "explain_mm": "အလုပ်နောက်ကျတာက ကားလွတ်သွားခြင်းရဲ့ ယုတ္တိကျတဲ့ ရလဒ်ပါ။ 'Therefore' က အကြောင်းတရားနဲ့ ယုတ္တိကျတဲ့ရလဒ်ကို ဆက်ပေးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We can't go to the beach ___ the bad weather.",
+      "answer": "because of",
+      "options": [
+        "because of",
+        "as a result",
+        "therefore"
+      ],
+      "explain_en": "You need a preposition before the noun phrase 'the bad weather'. 'Because of' is the correct choice.",
+      "explain_mm": "Noun phrase 'the bad weather' ရဲ့ရှေ့မှာ preposition လိုပါတယ်။ 'Because of' က အမှန်ကန်ဆုံး ရွေးချယ်မှုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The restaurant has amazing food. ___, the service is excellent.",
+      "answer": "In addition",
+      "options": [
+        "In addition",
+        "Due to",
+        "As a result"
+      ],
+      "explain_en": "You are simply adding another positive point. 'In addition' is the neutral way to do this.",
+      "explain_mm": "နောက်ထပ် အပေါင်းလက္ခဏာဆောင်တဲ့ အချက်တစ်ခုကို ထပ်ပေါင်းထည့်ရုံပါပဲ။ 'In addition' က ဒီလိုလုပ်ဖို့အတွက် neutral အကျဆုံးနည်းလမ်းပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The company lost a lot of money. ___, they had to close one of their branches.",
+      "answer": "As a result",
+      "options": [
+        "As a result",
+        "Because of",
+        "Moreover"
+      ],
+      "explain_en": "Closing the branch is a direct consequence of losing money.",
+      "explain_mm": "ဌာနခွဲပိတ်လိုက်ရတာက ပိုက်ဆံအများကြီးရှုံးခြင်းရဲ့ တိုက်ရိုက်အကျိုးဆက်ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The arguments against the proposal are weak. ___, there is strong public support for it.",
+      "answer": "Moreover",
+      "options": [
+        "Moreover",
+        "Due to",
+        "In addition"
+      ],
+      "explain_en": "'Moreover' adds a stronger, contrasting point that strengthens the main argument.",
+      "explain_mm": "'Moreover' က အဓိက युक्तिवादကို ပိုခိုင်မာစေတဲ့ ဆန့်ကျင်ဘက် အချက်တစ်ခုကို ထပ်ပေါင်းထည့်ပေးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The meeting was postponed ___ the CEO's illness.",
+      "answer": "due to",
+      "options": [
+        "due to",
+        "therefore",
+        "as a result"
+      ],
+      "explain_en": "A formal reason for a postponement. 'Due to' + noun is the best fit.",
+      "explain_mm": "ရွှေ့ဆိုင်းခြင်းအတွက် formal အကြောင်းပြချက်ပါ။ 'Due to' + noun က အလိုက်ဖက်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He forgot his passport; ___, he couldn't board the plane.",
+      "answer": "therefore",
+      "options": [
+        "therefore",
+        "because of",
+        "moreover"
+      ],
+      "explain_en": "Not being able to board is a direct, logical conclusion of forgetting the passport.",
+      "explain_mm": "လေယာဉ်ပေါ်တက်ခွင့်မရတာက passport မေ့သွားခြင်းရဲ့ တိုက်ရိုက်၊ ယုတ္တိကျတဲ့ ကောက်ချက်ပါ။"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "id": "beyond_bad",
+  "title": "Worse than \"bad\"",
+  "level": 2,
+  "order": 103,
+  "theme": "Better adjectives",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "Learners often just say 'bad' for everything negative. These five adjectives are all stronger or more specific, but each one has a different feeling and pairs with different kinds of nouns. Learning them together helps you choose the right word for the right situation.",
+  "why_grouped_mm": "သင်ယူသူတွေက မကောင်းတဲ့အရာတိုင်းအတွက် 'bad' ဆိုတဲ့စကားလုံးကိုပဲ အသုံးများကြတယ်။ ဒီစကားလုံး ၅ ခုက 'bad' ထက် ပိုအားကောင်းပြီး ပိုတိကျတဲ့ အဓိပ္ပာယ်ရှိပါတယ်။ တစ်ခုချင်းစီမှာ မတူညီတဲ့ ခံစားချက်နဲ့ သူတို့နဲ့လိုက်ဖက်တဲ့ နာမ်ပုဒ် (noun) တွေ ရှိပါတယ်။ သူတို့ကို အတူတကွလေ့လာခြင်းက သင့်တော်တဲ့စကားလုံးကို ရွေးချယ်နိုင်ဖို့ ကူညီပေးပါလိမ့်မယ်။",
+  "words": [
+    {
+      "word": "terrible",
+      "pos": "adjective",
+      "ipa": "/ˈter.ə.bəl/",
+      "short_en": "very bad or serious",
+      "short_mm": "အရမ်းဆိုးတယ်၊ ဆိုးရွားတယ်",
+      "use_when_en": "For a strong, common \"very bad\". Good for everyday things like weather, traffic, news, or mistakes.",
+      "use_when_mm": "အားကောင်းပြီး အသုံးများတဲ့ \"very bad\" အတွက် သုံးနိုင်ပါတယ်။ နေ့စဉ်အရာတွေဖြစ်တဲ့ ရာသီဥတု၊ ယာဉ်ကြော၊ သတင်း၊ ဒါမှမဟုတ် အမှားတွေအတွက် သုံးရတာ ကောင်းပါတယ်။",
+      "explanation_en": "The most common, all-purpose adjective for \"very bad\". Works in almost any situation, especially in speech.",
+      "explanation_mm": "'Very bad' အတွက် အသုံးအများဆုံးနဲ့ ဘက်စုံသုံးနိုင်တဲ့ နာမဝိသေသန ဖြစ်ပါတယ်။ အခြေအနေတိုင်းလိုလိုမှာ အဆင်ပြေတယ်၊ အထူးသဖြင့် စကားပြောမှာပေါ့။",
+      "nuance_en": "Strong but not formal. It's the standard, go-to word when something is much worse than just \"bad\".",
+      "nuance_mm": "အားပါပေမဲ့ formal မဆန်ပါဘူး။ တစ်ခုခုက 'bad' ထက် အများကြီးပိုဆိုးတဲ့အခါ သုံးရမယ့် standard စကားလုံးပဲ။",
+      "goes_with_en": "terrible + news / weather / traffic / mistake / accident · a terrible + idea / feeling · feel / look terrible",
+      "goes_with_note_en": "Pairs with everyday negative nouns and situations.",
+      "goes_with_note_mm": "နေ့စဉ်ကြုံတွေ့ရတဲ့ အဆိုးမြင် noun တွေ၊ အခြေအနေတွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "The {c}traffic{/c} was {w}terrible{/w} this morning.",
+          "mm": "ဒီမနက် ယာဉ်ကြောက အရမ်းဆိုးတယ်။"
+        },
+        {
+          "en": "I made a {w}terrible{/w} {c}mistake{/c} at work.",
+          "mm": "ကျွန်တော် အလုပ်မှာ ဆိုးရွားတဲ့ အမှားတစ်ခု လုပ်မိသွားတယ်။"
+        },
+        {
+          "en": "That's {w}terrible{/w} {c}news{/c}. I'm so sorry to hear that.",
+          "mm": "ဒါ တကယ်ကို ဆိုးတဲ့သတင်းပဲ။ ကြားရတာ စိတ်မကောင်းပါဘူး။"
+        },
+        {
+          "en": "The {c}weather{/c} was {w}terrible{/w} all weekend.",
+          "mm": "ပိတ်ရက်တစ်လျှောက်လုံး ရာသီဥတုက ဆိုးရွားနေခဲ့တယ်။"
+        },
+        {
+          "en": "I have a {w}terrible{/w} {c}headache{/c}.",
+          "mm": "ကျွန်တော် ခေါင်းအရမ်းကိုက်နေတယ်။"
+        }
+      ],
+      "collocations": [
+        "terrible news",
+        "terrible mistake",
+        "terrible weather"
+      ],
+      "confuse_with": [
+        "awful"
+      ]
+    },
+    {
+      "word": "awful",
+      "pos": "adjective",
+      "ipa": "/ˈɔː.fəl/",
+      "short_en": "very bad and unpleasant; feeling ill or guilty",
+      "short_mm": "အရမ်းဆိုးတယ်၊ စိတ်မသက်မသာဖြစ်စေတယ်၊ နေမကောင်းဘူး/စိတ်မကောင်းဘူး",
+      "use_when_en": "When something is very bad AND unpleasant. Also used to say you feel ill or guilty (\"I feel awful\").",
+      "use_when_mm": "တစ်ခုခုက အရမ်းဆိုးပြီး စိတ်အနှောင့်အယှက်ဖြစ်စေတဲ့အခါ သုံးတယ်။ ကိုယ်နေမကောင်းဘူး ဒါမှမဟုတ် အပြစ်ရှိသလို ခံစားရတယ် (\"I feel awful\") လို့ ပြောချင်ရင်လည်း သုံးနိုင်တယ်။",
+      "explanation_en": "Similar to \"terrible\", but often with a stronger sense of being unpleasant or making you feel bad. The phrase \"feel awful\" is very common for sickness or guilt.",
+      "explanation_mm": "'Terrible' နဲ့ ဆင်တူပေမဲ့ စိတ်အနှောင့်အယှက်ဖြစ်စေတဲ့ ခံစားချက်ကို ပိုပြီးဖော်ပြတယ်။ \"feel awful\" ဆိုတဲ့ စကားစုက နေမကောင်းတာ ဒါမှမဟုတ် စိတ်မကောင်းဖြစ်တာအတွက် အရမ်းအသုံးများတယ်။",
+      "nuance_en": "Very common in speech. \"That tastes awful\" is stronger than \"terrible\". \"I feel awful\" (for illness) is more common than \"I feel terrible\".",
+      "nuance_mm": "စကားပြောမှာ အရမ်းသုံးများတယ်။ \"That tastes awful\" က \"terrible\" ထက် ပိုပြင်းတယ်။ နေမကောင်းတဲ့အခါ \"I feel awful\" ကို \"I feel terrible\" ထက် ပိုသုံးလေ့ရှိတယ်။",
+      "goes_with_en": "an awful + smell / taste / noise / day · feel / look / sound awful · an awful lot of (= a lot of)",
+      "goes_with_note_en": "Often used with senses (smell, taste, noise) and to describe how you feel.",
+      "goes_with_note_mm": "အနံ့၊ အရသာ၊ အသံလိုမျိုး အာရုံခံစားမှုတွေနဲ့ ကိုယ့်ရဲ့ခံစားချက်ကို ဖော်ပြတဲ့အခါ တွဲသုံးလေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "What's that {w}awful{/w} {c}smell{/c}?",
+          "mm": "အဲဒါ ဘာနံ့ကြီးလဲ၊ ဆိုးလိုက်တာ။"
+        },
+        {
+          "en": "I {c}feel{/c} {w}awful{/w} about forgetting her birthday.",
+          "mm": "သူ့မွေးနေ့ကို မေ့သွားတဲ့အတွက် ကျွန်တော် အရမ်းစိတ်မကောင်းဖြစ်ရတယ်။"
+        },
+        {
+          "en": "The {c}coffee{/c} tasted {w}awful{/w}.",
+          "mm": "ကော်ဖီက အရသာ အရမ်းဆိုးတယ်။"
+        },
+        {
+          "en": "We had an {w}awful{/w} {c}day{/c} at the office.",
+          "mm": "ရုံးမှာ ကျွန်တော်တို့အတွက် ဆိုးရွားတဲ့နေ့တစ်နေ့ ဖြစ်ခဲ့တယ်။"
+        },
+        {
+          "en": "You {c}look{/c} {w}awful{/w}. Are you feeling okay?",
+          "mm": "မင်းကြည့်ရတာ မျက်နှာမကောင်းဘူး။ နေကောင်းရဲ့လား။"
+        }
+      ],
+      "collocations": [
+        "feel awful",
+        "an awful smell",
+        "tastes awful"
+      ],
+      "confuse_with": [
+        "terrible",
+        "dreadful"
+      ]
+    },
+    {
+      "word": "poor",
+      "pos": "adjective",
+      "ipa": "/pɔːr/",
+      "short_en": "low quality, not good enough",
+      "short_mm": "အရည်အသွေးနိမ့်တယ်၊ စံမမီဘူး",
+      "use_when_en": "To talk about low quality or a standard that isn't met. It's more neutral and formal than \"terrible\" or \"awful\".",
+      "use_when_mm": "အရည်အသွေးနိမ့်တာ ဒါမှမဟုတ် စံမမီတဲ့အကြောင်း ပြောတဲ့အခါ သုံးပါတယ်။ 'Terrible' တို့ 'awful' တို့ထက် ပိုပြီး neutral ဖြစ်ပြီး formal ဆန်တယ်။",
+      "explanation_en": "This isn't about feeling; it's about objective standards. Think of work performance, product quality, or test results.",
+      "explanation_mm": "ဒါက ခံစားချက်နဲ့မဆိုင်ဘဲ တိကျတဲ့ စံသတ်မှတ်ချက်တွေနဲ့ ပတ်သက်တယ်။ အလုပ်လုပ်ဆောင်မှု၊ ကုန်ပစ္စည်းအရည်အသွေး၊ စာမေးပွဲရလဒ်တွေကို စဉ်းစားကြည့်ပါ။",
+      "nuance_en": "Sounds more professional or academic. You get a \"poor grade\", not a \"terrible grade\". You complain about \"poor service\", not \"nasty service\".",
+      "nuance_mm": "ပိုပြီး professional ဒါမှမဟုတ် academic ဆန်တယ်။ စာမေးပွဲမှာ \"poor grade\" (ညံ့တဲ့အဆင့်) ရတယ်လို့ ပြောပြီး \"terrible grade\" လို့ မပြောဘူး။ ဝန်ဆောင်မှုမကောင်းရင် \"poor service\" လို့ complain တက်ပြီး \"nasty service\" လို့ မပြောဘူး။",
+      "goes_with_en": "poor + quality / service / performance / condition / result · poor + visibility / connection",
+      "goes_with_note_en": "Pairs with nouns related to standards, performance, and conditions.",
+      "goes_with_note_mm": "စံနှုန်း၊ စွမ်းဆောင်ရည်၊ အခြေအနေတွေနဲ့ ပတ်သက်တဲ့ noun တွေနဲ့ တွဲသုံးတယ်။",
+      "examples": [
+        {
+          "en": "The {c}quality{/c} of the product was very {w}poor{/w}.",
+          "mm": "ကုန်ပစ္စည်းရဲ့ အရည်အသွေးက အရမ်းညံ့တယ်။"
+        },
+        {
+          "en": "We received {w}poor{/w} {c}service{/c} at the restaurant.",
+          "mm": "ကျွန်တော်တို့ အဲဒီစားသောက်ဆိုင်မှာ ဝန်ဆောင်မှုညံ့ဖျင်းတာကို ကြုံခဲ့ရတယ်။"
+        },
+        {
+          "en": "His exam {c}results{/c} were quite {w}poor{/w}.",
+          "mm": "သူ့ရဲ့ စာမေးပွဲရလဒ်တွေက တော်တော်လေး ညံ့တယ်။"
+        },
+        {
+          "en": "The team gave a {w}poor{/w} {c}performance{/c} and lost the game.",
+          "mm": "အသင်းက ညံ့ဖျင်းတဲ့ ကစားပုံနဲ့ ပွဲရှုံးသွားတယ်။"
+        },
+        {
+          "en": "The building is in {w}poor{/w} {c}condition{/c}.",
+          "mm": "အဆောက်အအုံက အခြေအနေမကောင်းဘူး။"
+        }
+      ],
+      "collocations": [
+        "poor quality",
+        "poor service",
+        "poor performance"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "dreadful",
+      "pos": "adjective",
+      "ipa": "/ˈdred.fəl/",
+      "short_en": "very bad, causing dismay or shock",
+      "short_mm": "အလွန်ဆိုးတယ်၊ ထိတ်လန့်စရာကောင်းတယ်",
+      "use_when_en": "For something very bad that causes a feeling of shock or sadness. It's a bit more formal or dramatic than \"terrible\".",
+      "use_when_mm": "ထိတ်လန့်မှု ဒါမှမဟုတ် ဝမ်းနည်းမှုကို ဖြစ်စေတဲ့ အရမ်းဆိုးတဲ့အရာတွေအတွက် သုံးပါတယ်။ 'Terrible' ထက် နည်းနည်းပို formal ဆန်ပြီး ပိုပြီး drama ဆန်တယ်။",
+      "explanation_en": "\"Dreadful\" contains the word \"dread,\" which means a feeling of fear or worry. It's often used for serious events, news, or mistakes.",
+      "explanation_mm": "\"Dreadful\" မှာ ကြောက်ရွံ့ခြင်း၊ စိုးရိမ်ခြင်း အဓိပ္ပာယ်ရတဲ့ \"dread\" ဆိုတဲ့ စကားလုံး ပါနေတယ်။ ဒါကြောင့် ပြင်းထန်တဲ့ အဖြစ်အပျက်တွေ၊ သတင်းတွေ၊ အမှားတွေအတွက် သုံးလေ့ရှိတယ်။",
+      "nuance_en": "Sounds a little old-fashioned or British English. \"A dreadful accident\" sounds more serious than \"a terrible accident\".",
+      "nuance_mm": "နည်းနည်း ခေတ်နောက်ကျတဲ့ပုံ ဒါမှမဟုတ် British English ပုံစံပေါက်တယ်။ \"A dreadful accident\" က \"a terrible accident\" ထက် ပိုပြီး ပြင်းထန်တဲ့ ခံစားချက်ကို ပေးတယ်။",
+      "goes_with_en": "a dreadful + accident / mistake / disease / story · dreadful + news / weather · look / feel dreadful",
+      "goes_with_note_en": "Pairs with serious, shocking, or upsetting events.",
+      "goes_with_note_mm": "ပြင်းထန်ပြီး တုန်လှုပ်စရာကောင်းတဲ့၊ စိတ်မကောင်းစရာ အဖြစ်အပျက်တွေနဲ့ တွဲသုံးတယ်။",
+      "examples": [
+        {
+          "en": "There has been a {w}dreadful{/w} {c}accident{/c} on the motorway.",
+          "mm": "အဝေးပြေးလမ်းမပေါ်မှာ ထိတ်လန့်စရာ မတော်တဆမှုတစ်ခု ဖြစ်သွားတယ်။"
+        },
+        {
+          "en": "The {c}news{/c} from the hospital was {w}dreadful{/w}.",
+          "mm": "ဆေးရုံကလာတဲ့ သတင်းက တုန်လှုပ်စရာကောင်းတယ်။"
+        },
+        {
+          "en": "I'm afraid I've made a {w}dreadful{/w} {c}mistake{/c}.",
+          "mm": "ကျွန်တော် ဆိုးရွားတဲ့ အမှားတစ်ခု လုပ်မိသွားပြီလို့ စိုးရိမ်မိတယ်။"
+        },
+        {
+          "en": "The refugees lived in {w}dreadful{/w} {c}conditions{/c}.",
+          "mm": "ဒုက္ခသည်တွေက ဆိုးရွားလှတဲ့ အခြေအနေတွေမှာ နေထိုင်ခဲ့ကြရတယ်။"
+        },
+        {
+          "en": "What {w}dreadful{/w} {c}weather{/c}! We can't go out.",
+          "mm": "ရာသီဥတုက ဆိုးလိုက်တာ။ ငါတို့ အပြင်ထွက်လို့မရတော့ဘူး။"
+        }
+      ],
+      "collocations": [
+        "a dreadful accident",
+        "dreadful news",
+        "a dreadful mistake"
+      ],
+      "confuse_with": [
+        "terrible",
+        "awful"
+      ]
+    },
+    {
+      "word": "nasty",
+      "pos": "adjective",
+      "ipa": "/ˈnɑː.sti/",
+      "short_en": "unpleasant and harmful or unkind",
+      "short_mm": "မနှစ်မြို့ဖွယ်၊ ထိခိုက်စေတတ်သော၊ မကောင်းသော",
+      "use_when_en": "For something that is not just bad, but also actively unpleasant, unkind, or even a bit malicious or harmful.",
+      "use_when_mm": "ဆိုးရုံတင်မကဘဲ တမင်တကာ စိတ်အနှောင့်အယှက်ဖြစ်စေတဲ့၊ မကြင်နာတဲ့၊ ဒါမှမဟုတ် အန္တရာယ်ဖြစ်စေတဲ့ အရာတွေအတွက် သုံးပါတယ်။",
+      "explanation_en": "This word has a sense of meanness or harm. A \"nasty comment\" is unkind. A \"nasty cut\" is a bad injury. A \"nasty surprise\" is an unpleasant one.",
+      "explanation_mm": "ဒီစကားလုံးမှာ ယုတ်မာခြင်း ဒါမှမဟုတ် ထိခိုက်စေခြင်း သဘောတရား ပါနေတယ်။ \"nasty comment\" က မကြင်နာတဲ့ မှတ်ချက်။ \"nasty cut\" က ဆိုးတဲ့ ဒဏ်ရာ။ \"nasty surprise\" က မမျှော်လင့်ထားတဲ့ မကောင်းတဲ့ အဖြစ်အပျက်။",
+      "nuance_en": "More specific than \"terrible\". It implies something is personally unpleasant or intended to be unkind.",
+      "nuance_mm": "'Terrible' ထက် ပိုပြီး တိကျတယ်။ တစ်စုံတစ်ခုက ကိုယ်ရေးကိုယ်တာအရ မနှစ်မြို့စရာဖြစ်တာ ဒါမှမဟုတ် မကောင်းကြံတဲ့ သဘောကို ဆောင်တယ်။",
+      "goes_with_en": "a nasty + surprise / shock / habit / cold / cut / smell · a nasty + comment / person · turn nasty",
+      "goes_with_note_en": "Pairs with things that are personally unpleasant, unkind, or harmful.",
+      "goes_with_note_mm": "လူတစ်ဦးတစ်ယောက်ကို စိတ်အနှောင့်အယှက်ဖြစ်စေတဲ့၊ မကြင်နာတဲ့၊ ဒါမှမဟုတ် ထိခိုက်စေတဲ့ အရာတွေနဲ့ တွဲသုံးတယ်။",
+      "examples": [
+        {
+          "en": "He made a {w}nasty{/w} {c}comment{/c} about her dress.",
+          "mm": "သူက သူမရဲ့ ဝတ်စုံနဲ့ပတ်သက်ပြီး မကောင်းတဲ့ မှတ်ချက်တစ်ခု ပေးခဲ့တယ်။"
+        },
+        {
+          "en": "I got a {w}nasty{/w} {c}surprise{/c} when I saw the bill.",
+          "mm": "ဘောင်ချာကို မြင်လိုက်ရတော့ ကျွန်တော် မနှစ်မြို့စရာ အံ့ဩမှုတစ်ခု ရလိုက်တယ်။"
+        },
+        {
+          "en": "Be careful with that knife, it can give you a {w}nasty{/w} {c}cut{/c}.",
+          "mm": "အဲဒီဓားကို သတိထားကိုင်၊ မင်းကို ဆိုးဆိုးရွားရွား ရှစေနိုင်တယ်။"
+        },
+        {
+          "en": "She has a {w}nasty{/w} {c}habit{/c} of biting her nails.",
+          "mm": "သူမမှာ လက်သည်းကိုက်တတ်တဲ့ အကျင့်ဆိုးတစ်ခု ရှိတယ်။"
+        },
+        {
+          "en": "There's a {w}nasty{/w} {c}smell{/c} coming from the bin.",
+          "mm": "အမှိုက်ပုံးထဲကနေ အနံ့ဆိုးတစ်ခု ထွက်နေတယ်။"
+        }
+      ],
+      "collocations": [
+        "a nasty comment",
+        "a nasty surprise",
+        "a nasty cut"
+      ],
+      "confuse_with": []
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "The hotel was okay, but the Wi-Fi connection was ___.",
+      "right": "poor",
+      "wrong": "terrible",
+      "why": "\"Poor\" is specific to low quality or standards. \"Poor connection\" is the standard phrase.",
+      "why_mm": "'Poor connection' ဆိုတာ အရည်အသွေးနိမ့်တာကို ပြောတဲ့ standard စကားစုဖြစ်လို့ပါ။ 'Terrible' က ယေဘုယျဆန်လွန်းပါတယ်။"
+    },
+    {
+      "prompt": "I ate something bad and now I feel ___.",
+      "right": "awful",
+      "wrong": "nasty",
+      "why": "\"Feel awful\" means you feel sick. \"Nasty\" describes something unpleasant or unkind, not your health.",
+      "why_mm": "နေမကောင်းဘူးလို့ ပြောချင်ရင် \"feel awful\" ကိုပဲ သုံးရတယ်။ 'Nasty' က မနှစ်မြို့စရာကောင်းတဲ့ အရာတွေ၊ လူတွေအကြောင်း ပြောတာပါ။"
+    },
+    {
+      "prompt": "The official report was of ___ quality and full of mistakes.",
+      "right": "poor",
+      "wrong": "dreadful",
+      "why": "The focus is on the standard of the work, so \"poor\" is best. \"Dreadful\" would mean the content was shocking, which isn't the point here.",
+      "why_mm": "ဒီနေရာမှာ အလုပ်ရဲ့ အရည်အသွေးနဲ့ စံနှုန်းကို အဓိကပြောနေတာမို့ 'poor' က အသင့်တော်ဆုံးပဲ။ 'Dreadful' က အကြောင်းအရာက တုန်လှုပ်စရာကောင်းတယ်လို့ ဆိုလိုတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "That was a ___ thing to say to your friend. You should apologize.",
+      "answer": "nasty",
+      "options": [
+        "poor",
+        "nasty",
+        "dreadful"
+      ],
+      "explain_en": "For an unkind comment, \"nasty\" is the right word. It means mean or malicious.",
+      "explain_mm": "မကြင်နာတဲ့ မှတ်ချက်မျိုးအတွက် 'nasty' က အသင့်တော်ဆုံးပါ။ ယုတ်မာတဲ့ သဘောကိုဆောင်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The company's financial performance last year was very ___.",
+      "answer": "poor",
+      "options": [
+        "poor",
+        "awful",
+        "nasty"
+      ],
+      "explain_en": "For performance and standards, especially in a formal context like business, \"poor\" is the best choice.",
+      "explain_mm": "စွမ်းဆောင်ရည်နဲ့ စံနှုန်းတွေအတွက်၊ အထူးသဖြင့် business လို formal အခြေအနေမှာ 'poor' က အကောင်းဆုံးရွေးချယ်မှုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I feel ___ for shouting at you earlier. I'm so sorry.",
+      "answer": "awful",
+      "options": [
+        "dreadful",
+        "awful",
+        "poor"
+      ],
+      "explain_en": "\"Feel awful\" is the common expression for feeling guilty or sorry about something.",
+      "explain_mm": "အပြစ်ရှိသလို ခံစားရတာ ဒါမှမဟုတ် တစ်ခုခုအတွက် စိတ်မကောင်းဖြစ်တဲ့အခါ \"Feel awful\" ကို အသုံးများပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We got caught in some ___ traffic on the way home.",
+      "answer": "terrible",
+      "options": [
+        "terrible",
+        "poor",
+        "nasty"
+      ],
+      "explain_en": "\"Terrible\" is the most common and natural word to describe very bad traffic.",
+      "explain_mm": "ယာဉ်ကြောပိတ်တာ အရမ်းဆိုးတယ်လို့ ပြောချင်ရင် 'terrible' က အသုံးအများဆုံးနဲ့ အလိုက်ဖက်ဆုံး စကားလုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We heard the ___ news that the factory would be closing down.",
+      "answer": "dreadful",
+      "options": [
+        "poor",
+        "nasty",
+        "dreadful"
+      ],
+      "explain_en": "For shocking and saddening news, \"dreadful\" is a strong choice. It's more formal and serious than \"terrible\".",
+      "explain_mm": "တုန်လှုပ်ပြီး ဝမ်းနည်းစရာ သတင်းအတွက် 'dreadful' က အားကောင်းတဲ့ ရွေးချယ်မှုပါ။ 'terrible' ထက် ပို formal ကျပြီး ပိုပြင်းထန်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The hotel was fine, but the food tasted absolutely ___.",
+      "answer": "awful",
+      "options": [
+        "awful",
+        "poor",
+        "dreadful"
+      ],
+      "explain_en": "\"Awful\" is very commonly used to describe unpleasant tastes and smells.",
+      "explain_mm": "'Awful' ကို မကောင်းတဲ့ အရသာတွေနဲ့ အနံ့တွေအတွက် အသုံးများပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He has a ___ habit of interrupting people when they speak.",
+      "answer": "nasty",
+      "options": [
+        "nasty",
+        "dreadful",
+        "poor"
+      ],
+      "explain_en": "A habit that is unpleasant for other people is a \"nasty\" habit.",
+      "explain_mm": "တခြားသူတွေကို စိတ်အနှောင့်အယှက်ဖြစ်စေတဲ့ အကျင့်တစ်ခုကို \"nasty\" habit လို့ ခေါ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The student's essay showed a ___ understanding of the topic.",
+      "answer": "poor",
+      "options": [
+        "terrible",
+        "nasty",
+        "poor"
+      ],
+      "explain_en": "In an academic context, \"poor\" is used to describe a low standard or lack of quality.",
+      "explain_mm": "ပညာရေးဆိုင်ရာ အကြောင်းအရာတွေမှာ အရည်အသွေးနိမ့်တာ ဒါမှမဟုတ် စံမမီတာကို ဖော်ပြဖို့ 'poor' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "What a ___ day! It hasn't stopped raining and it's so cold.",
+      "answer": "terrible",
+      "options": [
+        "poor",
+        "terrible",
+        "nasty"
+      ],
+      "explain_en": "\"Terrible\" is a great all-purpose word for bad weather.",
+      "explain_mm": "မကောင်းတဲ့ ရာသီဥတုအတွက် 'terrible' က ဘက်စုံသုံးနိုင်တဲ့ စကားလုံးကောင်းတစ်ခုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The hero receives a ___ shock when he discovers the villain's identity.",
+      "answer": "nasty",
+      "options": [
+        "poor",
+        "nasty",
+        "awful"
+      ],
+      "explain_en": "An unpleasant surprise is often called a \"nasty surprise\" or a \"nasty shock\".",
+      "explain_mm": "မမျှော်လင့်ထားတဲ့ မကောင်းတဲ့ အဖြစ်အပျက်ကို \"nasty surprise\" ဒါမှမဟုတ် \"nasty shock\" လို့ ခေါ်လေ့ရှိပါတယ်။"
+    }
+  ]
+}

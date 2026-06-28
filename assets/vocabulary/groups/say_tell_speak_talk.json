@@ -1,0 +1,318 @@
+{
+  "id": "say_tell_speak_talk",
+  "title": "say, tell, speak or talk?",
+  "level": 2,
+  "order": 502,
+  "theme": "Easily confused verbs",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "All four verbs are about using words, but their grammar is different. You 'tell someone something', but you 'say something TO someone'. Learners often confuse these, so learning the patterns is the key to getting them right.",
+  "why_grouped_mm": "ဒီ verb လေးခုလုံးက စကားပြောတာနဲ့ ပတ်သက်ပေမဲ့ သုံးတဲ့ grammar ပုံစံချင်း မတူပါဘူး။ တစ်ယောက်ယောက်ကို တစ်ခုခုပြောပြတာကို 'tell someone something' လို့ သုံးပြီး၊ တစ်ခုခုကို ပြောတာကိုတော့ 'say something TO someone' လို့ သုံးပါတယ်။ ဒီအသုံးတွေကို လေ့လာသူတွေ ခဏခဏမှားတတ်ကြလို့ pattern လေးတွေ မှတ်ထားလိုက်ရင် အလွယ်တကူ မှန်သွားမှာပါ။",
+  "words": [
+    {
+      "word": "say",
+      "pos": "verb",
+      "ipa": "/seɪ/",
+      "short_en": "to state words",
+      "short_mm": "စကားလုံးများကို ပြောဆိုသည်",
+      "use_when_en": "You're reporting the exact words or the content of what was said. The person you're speaking to is optional (use 'to').",
+      "use_when_mm": "တစ်စုံတစ်ယောက် ပြောခဲ့တဲ့ စကား (သို့) အကြောင်းအရာကို ပြန်ပြောပြတဲ့အခါ သုံးပါတယ်။ ဘယ်သူ့ကို ပြောတယ်ဆိုတာ ထည့်ချင်ရင် 'to' နဲ့ သုံးရပါမယ်။",
+      "explanation_en": "Focuses on the words themselves. The structure is SAY + something. You cannot 'say someone something'.",
+      "explanation_mm": "ပြောတဲ့စကားလုံးတွေကို အဓိကထားတယ်။ သူ့ရဲ့ grammar ပုံစံက SAY + something ပါ။ 'say someone something' ဆိုပြီး တိုက်ရိုက်သုံးလို့ မရပါဘူး။",
+      "nuance_en": "Common in reported speech ('He said that...'). It's about the message, not the interaction.",
+      "nuance_mm": "Reported speech ('He said that...') တွေမှာ အသုံးများတယ်။ လူတစ်ယောက်နဲ့တစ်ယောက် စကားပြောတာထက် ပြောလိုက်တဲ့ message ကို ပိုပြီးအာရုံစိုက်တယ်။",
+      "goes_with_en": "say + something / hello / goodbye / a prayer / a few words · say (that) you are sorry · 'What did you say?'",
+      "goes_with_note_en": "Pairs with the content of speech or short, fixed phrases.",
+      "goes_with_note_mm": "ပြောတဲ့အကြောင်းအရာ ဒါမှမဟုတ် တိုတုတ်တဲ့ phrase လေးတွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "She {w}said{/w} {c}hello{/c} to me when she arrived.",
+          "mm": "သူမ ရောက်လာတဲ့အခါ ကျွန်တော့်ကို ဟယ်လိုလို့ နှုတ်ဆက်တယ်။"
+        },
+        {
+          "en": "He {w}said{/w} {c}that{/c} he would be late for the meeting.",
+          "mm": "သူ အစည်းအဝေးကို နောက်ကျမယ်လို့ ပြောသွားတယ်။"
+        },
+        {
+          "en": "What did the manager {w}say{/w} {c}about{/c} the new project?",
+          "mm": "မန်နေဂျာက project အသစ်နဲ့ပတ်သက်ပြီး ဘာပြောသွားလဲ။"
+        },
+        {
+          "en": "Remember to {w}say{/w} '{c}thank you{/c}' when someone helps you.",
+          "mm": "တစ်ယောက်ယောက်က ကူညီတဲ့အခါ 'ကျေးဇူးတင်ပါတယ်' လို့ ပြောဖို့ မမေ့နဲ့နော်။"
+        },
+        {
+          "en": "Before we eat, let's {w}say{/w} a quick {c}prayer{/c}.",
+          "mm": "မစားခင်မှာ ခဏလောက် ဆုတောင်းကြရအောင်။"
+        }
+      ],
+      "collocations": [
+        "say hello/goodbye",
+        "say that...",
+        "say sorry"
+      ],
+      "confuse_with": [
+        "tell"
+      ]
+    },
+    {
+      "word": "tell",
+      "pos": "verb",
+      "ipa": "/tel/",
+      "short_en": "to give information to a person",
+      "short_mm": "တစ်စုံတစ်ယောက်ကို သတင်းအချက်အလက်ပေးသည်",
+      "use_when_en": "You're giving information or instructions to a specific person. The person is a necessary object of the verb.",
+      "use_when_mm": "သတင်းအချက်အလက် ဒါမှမဟုတ် ညွှန်ကြားချက်တွေကို လူတစ်ယောက်ယောက်ကို ပေးတဲ့အခါ သုံးပါတယ်။ ဘယ်သူ့ကို ပြောတယ်ဆိုတာ (object) မပါမဖြစ် ထည့်ပြောဖို့ လိုအပ်ပါတယ်။",
+      "explanation_en": "Focuses on the communication to a person. The structure is TELL + someone + something. You must include the person.",
+      "explanation_mm": "လူတစ်ယောက်ကို ဆက်သွယ်ပြောကြားတာကို အဓိကထားတယ်။ သူ့ရဲ့ grammar ပုံစံက TELL + someone + something ပါ။ ဘယ်သူ့ကိုပြောလဲဆိုတာ မပါမဖြစ် ထည့်ပေးရပါမယ်။",
+      "nuance_en": "Feels more personal than 'say'. It's about transferring information from one person to another.",
+      "nuance_mm": "'say' ထက် ပိုပြီး personal ဖြစ်သလို ခံစားရတယ်။ လူတစ်ယောက်ဆီကနေ နောက်တစ်ယောက်ဆီကို သတင်းအချက်အလက် လွှဲပြောင်းပေးတဲ့သဘောပါ။",
+      "goes_with_en": "tell + me / someone · tell + a story / a joke / a lie / the truth / the time · tell someone to do something",
+      "goes_with_note_en": "Pairs with the person receiving the information and fixed phrases like 'tell a story'.",
+      "goes_with_note_mm": "သတင်းအချက်အလက် လက်ခံတဲ့သူနဲ့ 'tell a story' လိုမျိုး phrase လေးတွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "Can you {w}tell{/w} {c}me{/c} the time, please?",
+          "mm": "အချိန် ဘယ်လောက်ရှိပြီလဲ ပြောပြပေးလို့ရမလား။"
+        },
+        {
+          "en": "He {w}told{/w} {c}us{/c} a funny story about his dog.",
+          "mm": "သူက ကျွန်တော်တို့ကို သူ့ခွေးအကြောင်း ရယ်စရာကောင်းတဲ့ ပုံပြင်တစ်ပုဒ် ပြောပြတယ်။"
+        },
+        {
+          "en": "It's important to always {w}tell{/w} the {c}truth{/c}.",
+          "mm": "အမှန်တရားကို အမြဲပြောဖို့က အရေးကြီးတယ်။"
+        },
+        {
+          "en": "The doctor {w}told{/w} {c}him{/c} to get more rest.",
+          "mm": "ဆရာဝန်က သူ့ကို ပိုပြီးအနားယူဖို့ ပြောလိုက်တယ်။"
+        },
+        {
+          "en": "Don't {w}tell{/w} {c}a lie{/c}; just be honest with me.",
+          "mm": "လိမ်မပြောပါနဲ့၊ ကျွန်တော့်ကို ရိုးရိုးသားသားပဲ ပြောပါ။"
+        }
+      ],
+      "collocations": [
+        "tell me/someone",
+        "tell a story",
+        "tell the truth"
+      ],
+      "confuse_with": [
+        "say"
+      ]
+    },
+    {
+      "word": "speak",
+      "pos": "verb",
+      "ipa": "/spiːk/",
+      "short_en": "to use your voice; to use a language",
+      "short_mm": "စကားပြောသည်; ဘာသာစကားတစ်ခုကို ပြောသည်",
+      "use_when_en": "For languages, or in more formal situations (like presentations or on the phone). Focuses on the ability or act of talking.",
+      "use_when_mm": "ဘာသာစကားတွေအကြောင်း ပြောတဲ့အခါ၊ ဒါမှမဟုတ် presentation တွေ၊ ဖုန်းပြောတာတွေလို formal ကျတဲ့ အခြေအနေတွေမှာ သုံးပါတယ်။ စကားပြောနိုင်တဲ့ အရည်အချင်း ဒါမှမဟုတ် စကားပြောတဲ့ လုပ်ရပ်ကို အဓိကထားတယ်။",
+      "explanation_en": "More formal than 'talk'. Often used for one-way communication or to describe language ability.",
+      "explanation_mm": "'talk' ထက် ပိုပြီး formal ကျပါတယ်။ တစ်ဖက်ကနေပဲ ပြောရတဲ့ အခြေအနေတွေ ဒါမှမဟုတ် ဘာသာစကား ကျွမ်းကျင်မှုကို ဖော်ပြတဲ့အခါ အသုံးများပါတယ်။",
+      "nuance_en": "Sounds more serious or official. 'Can I speak to the manager?' is more formal than 'Can I talk to the manager?'.",
+      "nuance_mm": "ပိုပြီး အလေးအနက်ထားတဲ့ ဒါမှမဟုတ် ရုံးသုံးစကားလိုမျိုး ဖြစ်တယ်။ 'Can I speak to the manager?' က 'Can I talk to the manager?' ထက် ပိုပြီး formal ကျပါတယ်။",
+      "goes_with_en": "speak + English / a language · speak + to/with someone · speak + slowly / clearly / loudly · speak on the phone",
+      "goes_with_note_en": "Pairs with languages, adverbs of manner (slowly, clearly), and more formal prepositions.",
+      "goes_with_note_mm": "ဘာသာစကားတွေ၊ adverb တွေ (slowly, clearly) နဲ့ formal preposition တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "She can {w}speak{/w} three {c}languages{/c} fluently.",
+          "mm": "သူမက ဘာသာစကား သုံးမျိုးကို ကျွမ်းကျွမ်းကျင်ကျင် ပြောနိုင်တယ်။"
+        },
+        {
+          "en": "Could you {w}speak{/w} more {c}slowly{/c}, please?",
+          "mm": "ကျေးဇူးပြုပြီး နည်းနည်းလောက် ဖြည်းဖြည်း ပြောပေးလို့ရမလား။"
+        },
+        {
+          "en": "May I {w}speak{/w} {c}to{/c} the manager?",
+          "mm": "မန်နေဂျာနဲ့ စကားပြောခွင့် ရနိုင်မလားခင်ဗျာ။"
+        },
+        {
+          "en": "He is going to {w}speak{/w} at the {c}conference{/c} tomorrow.",
+          "mm": "သူက မနက်ဖြန် conference မှာ စကားပြောမှာပါ။"
+        },
+        {
+          "en": "Actions {w}speak{/w} louder than {c}words{/c}.",
+          "mm": "စကားလုံးတွေထက် လုပ်ရပ်က ပိုကျယ်လောင်တယ်။ (စကားအရာထက် လက်တွေ့က ပိုအရေးကြီးတယ်)"
+        }
+      ],
+      "collocations": [
+        "speak English",
+        "speak to someone",
+        "speak slowly"
+      ],
+      "confuse_with": [
+        "talk"
+      ]
+    },
+    {
+      "word": "talk",
+      "pos": "verb",
+      "ipa": "/tɔːk/",
+      "short_en": "to have a conversation",
+      "short_mm": "စကားစမြည်ပြောသည်",
+      "use_when_en": "For informal, two-way conversations between people. It's the most common, general word.",
+      "use_when_mm": "လူတွေကြားက ပေါ့ပေါ့ပါးပါး အပြန်အလှန် စကားပြောဆိုမှုတွေအတွက် သုံးပါတယ်။ ဒါက အသုံးအများဆုံးနဲ့ အတွေ့ရအများဆုံး စကားလုံးပါ။",
+      "explanation_en": "The most common and informal verb for a conversation. The structure is TALK + to/with + someone + about + something.",
+      "explanation_mm": "စကားပြောဆိုမှုအတွက် အသုံးအများဆုံးနဲ့ အလွတ်လပ်ဆုံး verb ပါ။ သူ့ရဲ့ grammar ပုံစံက TALK + to/with + someone + about + something ပါ။",
+      "nuance_en": "Relaxed and conversational. 'We need to talk' suggests a serious conversation, but the word itself is informal.",
+      "nuance_mm": "ပေါ့ပေါ့ပါးပါး စကားပြောတဲ့သဘောပါ။ 'We need to talk' (ငါတို့ စကားပြောဖို့လိုပြီ) ဆိုရင်တော့ အလေးအနက်ပြောရမယ့် ကိစ္စကို ဆိုလိုပေမဲ့ စကားလုံးကိုယ်တိုင်ကတော့ informal ပါ။",
+      "goes_with_en": "talk + to/with someone · talk + about something (e.g., the weather, plans) · have a talk · small talk",
+      "goes_with_note_en": "Pairs with prepositions 'to', 'with', and 'about' to describe a conversation.",
+      "goes_with_note_mm": "စကားပြောဆိုမှုကို ဖော်ပြဖို့ 'to', 'with', 'about' ဆိုတဲ့ preposition တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "I need to {w}talk{/w} {c}to{/c} you about our plans for the weekend.",
+          "mm": "ပိတ်ရက်အတွက် ငါတို့အစီအစဉ်နဲ့ပတ်သက်ပြီး မင်းနဲ့ စကားပြောဖို့လိုတယ်။"
+        },
+        {
+          "en": "They {w}talked{/w} on the phone for {c}hours{/c}.",
+          "mm": "သူတို့ ဖုန်းပေါ်မှာ နာရီပေါင်းများစွာ စကားပြောခဲ့ကြတယ်။"
+        },
+        {
+          "en": "What were you {w}talking{/w} {c}about{/c} earlier?",
+          "mm": "မင်းတို့ ခုနက ဘာအကြောင်းတွေ ပြောနေကြတာလဲ။"
+        },
+        {
+          "en": "My parents want to {w}talk{/w} {c}with{/c} my teacher.",
+          "mm": "ကျွန်တော့်မိဘတွေက ဆရာမနဲ့ စကားပြောချင်နေကြတယ်။"
+        },
+        {
+          "en": "Let's sit down and have a proper {w}talk{/w} {c}later{/c}.",
+          "mm": "နောက်မှ သေသေချာချာ ထိုင်ပြီး စကားပြောကြရအောင်။"
+        }
+      ],
+      "collocations": [
+        "talk to/with someone",
+        "talk about something",
+        "have a talk"
+      ],
+      "confuse_with": [
+        "speak"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "He ___ me that he was happy.",
+      "right": "told",
+      "wrong": "said",
+      "why": "After 'tell', you need a person (me). 'Said' can't be followed directly by a person.",
+      "why_mm": "နောက်က 'me' ဆိုတဲ့ object ပါတဲ့အတွက် 'told' ကိုပဲ သုံးရပါမယ်။ 'said' နောက်မှာ object တိုက်ရိုက်လိုက်လို့မရပါဘူး။"
+    },
+    {
+      "prompt": "On the phone: 'May I ___ to the manager?'",
+      "right": "speak",
+      "wrong": "talk",
+      "why": "'Speak' is more formal and common for phone calls or official requests.",
+      "why_mm": "ဖုန်းပြောတဲ့အခါ ဒါမှမဟုတ် ရုံးကိစ္စလိုမျိုးမှာ ပို formal ကျတဲ့ 'speak' ကို သုံးတာက ပိုသင့်တော်ပါတယ်။"
+    },
+    {
+      "prompt": "She didn't ___ goodbye before she left.",
+      "right": "say",
+      "wrong": "tell",
+      "why": "With fixed phrases like 'goodbye' or 'hello', we use 'say'.",
+      "why_mm": "'goodbye', 'hello' လိုမျိုး သတ်မှတ်ထားတဲ့ phrase တွေနဲ့ဆို 'say' ကိုပဲ တွဲသုံးရပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "Could you please ___ me where the nearest bus stop is?",
+      "answer": "tell",
+      "options": [
+        "tell",
+        "say",
+        "speak"
+      ],
+      "explain_en": "Use 'tell' when you give information to a person ('tell me'). 'Say' doesn't take a direct person object.",
+      "explain_mm": "လူတစ်ယောက်ကို သတင်းအချက်အလက်ပေးတဲ့အခါ ('tell me') 'tell' ကို သုံးရပါတယ်။ 'say' နောက်မှာ လူ (object) တိုက်ရိုက်လိုက်လို့ မရပါဘူး။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He didn't ___ a single word during the entire meeting.",
+      "answer": "say",
+      "options": [
+        "say",
+        "tell",
+        "talk"
+      ],
+      "explain_en": "'Say' focuses on the words themselves (or the lack of words).",
+      "explain_mm": "'Say' က စကားလုံးတွေကိုပဲ အဓိကထားတဲ့အတွက် ဒီနေရာမှာ အသင့်တော်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I need to ___ with my boss about taking a holiday.",
+      "answer": "talk",
+      "options": [
+        "talk",
+        "say",
+        "tell"
+      ],
+      "explain_en": "Use 'talk' for an informal, two-way conversation with someone.",
+      "explain_mm": "နှစ်ဦးနှစ်ဖက် အပြန်အလှန် စကားပြောဆိုမှုအတွက် informal ဖြစ်တဲ့ 'talk' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She can ___ three languages fluently.",
+      "answer": "speak",
+      "options": [
+        "speak",
+        "talk",
+        "say"
+      ],
+      "explain_en": "Use 'speak' when referring to language ability.",
+      "explain_mm": "ဘာသာစကား ပြောနိုင်တဲ့ အရည်အချင်းကို ရည်ညွှန်းတဲ့အခါ 'speak' ကို သုံးရပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "My grandfather loves to ___ us stories about his youth.",
+      "answer": "tell",
+      "options": [
+        "tell",
+        "say",
+        "speak"
+      ],
+      "explain_en": "The correct collocation is 'tell a story'. You tell a person a story.",
+      "explain_mm": "မှန်ကန်တဲ့ collocation က 'tell a story' ဖြစ်ပါတယ်။ လူတစ်ယောက်ကို ပုံပြင်ပြောပြတာပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The CEO will ___ to all employees at the town hall meeting.",
+      "answer": "speak",
+      "options": [
+        "speak",
+        "talk",
+        "tell"
+      ],
+      "explain_en": "'Speak' is used for more formal, often one-way, communication to a group.",
+      "explain_mm": "'Speak' ကို ပိုပြီး formal ကျတဲ့၊ တစ်ဖက်ကနေ အုပ်စုတစ်ခုကို စကားပြောတဲ့အခါမျိုးမှာ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "What did the teacher ___ about the upcoming exam?",
+      "answer": "say",
+      "options": [
+        "say",
+        "tell",
+        "talk"
+      ],
+      "explain_en": "Use 'say' to ask about the content or message of what someone said.",
+      "explain_mm": "တစ်စုံတစ်ယောက် ပြောကြားခဲ့တဲ့ အကြောင်းအရာ ဒါမှမဟုတ် message ကို မေးမြန်းတဲ့အခါ 'say' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We stayed up all night, just ___ about anything and everything.",
+      "answer": "talking",
+      "options": [
+        "talking",
+        "saying",
+        "speaking"
+      ],
+      "explain_en": "'Talking about' is the natural choice for a long, informal conversation on various topics.",
+      "explain_mm": "ခေါင်းစဉ်အစုံအလင်နဲ့ ပေါ့ပေါ့ပါးပါး အကြာကြီး စကားပြောတာကို 'talking about' နဲ့ သုံးတာက အလိုက်ဖက်ဆုံးပါ။"
+    }
+  ]
+}

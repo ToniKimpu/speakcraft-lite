@@ -1,0 +1,307 @@
+{
+  "id": "spend_save_waste",
+  "title": "Money & time verbs",
+  "level": 2,
+  "order": 303,
+  "theme": "Collocations",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "These four common verbs are all used with both money and time. But they have very different meanings, so choosing the wrong one can be confusing. Let's learn how each one pairs with 'money' and 'time' to make your meaning clear.",
+  "why_grouped_mm": "ဒီ verb လေးခုလုံးကို ပိုက်ဆံနဲ့ အချိန် နှစ်မျိုးလုံးအတွက် သုံးလို့ရပါတယ်။ ဒါပေမဲ့ အဓိပ္ပာယ်ကတော့ လုံးဝကွဲပြားသွားတာမို့လို့ မှားသုံးမိရင် အထင်လွဲစရာဖြစ်နိုင်တယ်။ 'money' နဲ့ 'time' တို့နဲ့ ဘယ်လိုတွဲသုံးရမလဲဆိုတာ လေ့လာကြည့်ရအောင်။",
+  "words": [
+    {
+      "word": "spend",
+      "pos": "verb",
+      "ipa": "/spend/",
+      "short_en": "use money or time on something",
+      "short_mm": "ပိုက်ဆံ သို့မဟုတ် အချိန်ကို သုံးစွဲသည်",
+      "use_when_en": "You are using up a resource, like money or time, often for a specific purpose or activity.",
+      "use_when_mm": "ပိုက်ဆံ သို့မဟုတ် အချိန်လိုမျိုး အရင်းအမြစ်တစ်ခုခုကို ရည်ရွယ်ချက်တစ်ခုအတွက် သုံးစွဲတဲ့အခါ ပြောပါ။",
+      "explanation_en": "This is the neutral, common verb for using money or time. The key idea is that the resource is used up and gone.",
+      "explanation_mm": "ပိုက်ဆံနဲ့ အချိန်ကို သုံးစွဲတယ်လို့ ပြောဖို့အတွက် အသုံးအများဆုံး verb ပါ။ အဓိကကတော့ သုံးလိုက်တဲ့အတွက် အဲ့ဒီအရာက ကုန်သွားပြီဆိုတဲ့ သဘောပါ။",
+      "nuance_en": "It's neutral — it can be for good things (spending time with family) or bad things (spending too much money).",
+      "nuance_mm": "ဒါက neutral ပါ — ကောင်းတဲ့အရာ (မိသားစုနဲ့ အချိန်ကုန်ဆုံးခြင်း) အတွက်ရော၊ မကောင်းတဲ့အရာ (ပိုက်ဆံတွေ အများကြီးသုံးခြင်း) အတွက်ပါ သုံးနိုင်ပါတယ်။",
+      "goes_with_en": "spend + money / time / the day / the weekend · spend time + on (a hobby) / with (someone) / doing (something) · spend money on (something)",
+      "goes_with_note_en": "Use 'on' for the thing you buy or the topic. Use 'doing' for the verb/activity.",
+      "goes_with_note_mm": "ဝယ်တဲ့ပစ္စည်း ဒါမှမဟုတ် ခေါင်းစဉ်အတွက် 'on' ကိုသုံးပါ။ လုပ်တဲ့အလုပ်/လှုပ်ရှားမှုအတွက် 'doing' ကို သုံးပါ။",
+      "examples": [
+        {
+          "en": "I {w}spend{/w} too much {c}money{/c} on clothes.",
+          "mm": "ကျွန်တော်က အဝတ်အစားတွေပေါ်မှာ ပိုက်ဆံအရမ်းသုံးတယ်။"
+        },
+        {
+          "en": "We {w}spent{/w} the whole {c}day{/c} at the beach.",
+          "mm": "ကျွန်တော်တို့ ကမ်းခြေမှာ တစ်နေ့လုံး အချိန်ကုန်ဆုံးခဲ့တယ်။"
+        },
+        {
+          "en": "How much {c}time{/c} do you {w}spend{/w} studying every day?",
+          "mm": "နေ့တိုင်း စာကျက်ဖို့ အချိန်ဘယ်လောက်ပေးလဲ။"
+        },
+        {
+          "en": "She {w}spends{/w} hours {c}watching{/c} Korean dramas.",
+          "mm": "သူမက ကိုရီးယားကားတွေကြည့်ရင်း နာရီပေါင်းများစွာ အချိန်ကုန်တယ်။"
+        },
+        {
+          "en": "They {w}spent{/w} their life {c}savings{/c} on a new house.",
+          "mm": "သူတို့က အိမ်သစ်တစ်လုံးအတွက် သူတို့ရဲ့ ဘဝစုဆောင်းငွေတွေကို သုံးလိုက်တယ်။"
+        }
+      ],
+      "collocations": [
+        "spend money on",
+        "spend time doing",
+        "spend the weekend"
+      ],
+      "confuse_with": [
+        "waste"
+      ]
+    },
+    {
+      "word": "save",
+      "pos": "verb",
+      "ipa": "/seɪv/",
+      "short_en": "keep for later; not waste",
+      "short_mm": "နောက်မှသုံးရန် သိမ်းဆည်းသည်၊ မဖြုန်းတီး",
+      "use_when_en": "You are keeping a resource (money, time) for future use, or you are using less of it to avoid wasting it.",
+      "use_when_mm": "ပိုက်ဆံ သို့မဟုတ် အချိန်ကို အနာဂတ်မှာသုံးဖို့ သိမ်းဆည်းထားတဲ့အခါ၊ ဒါမှမဟုတ် မဖြုန်းတီးမိအောင် လျှော့သုံးတဲ့အခါ ပြောပါ။",
+      "explanation_en": "The opposite of spending or wasting. It means preserving something valuable for later or making a process more efficient.",
+      "explanation_mm": "'spend' ဒါမှမဟုတ် 'waste' ရဲ့ ဆန့်ကျင်ဘက်ပါ။ တန်ဖိုးရှိတဲ့အရာတစ်ခုကို နောက်အတွက် ထိန်းသိမ်းတာ၊ ဒါမှမဟုတ် လုပ်ငန်းစဉ်တစ်ခုကို ပိုထိရောက်အောင်လုပ်တာကို ဆိုလိုတယ်။",
+      "nuance_en": "\"Save up\" means saving money over a period of time for a specific big purchase.",
+      "nuance_mm": "\"Save up\" ဆိုတာက ပစ္စည်းကြီးကြီးတစ်ခုခုဝယ်ဖို့ အချိန်အတိုင်းအတာတစ်ခုထိ ပိုက်ဆံစုတာကို ပြောတာပါ။",
+      "goes_with_en": "save + money / time / energy / a file · save up + for (a car) / to (buy a house) · save someone the trouble",
+      "goes_with_note_en": "Use 'save up for' for a goal. 'Save time' often means finding a quicker way to do something.",
+      "goes_with_note_mm": "ရည်မှန်းချက်တစ်ခုအတွက် 'save up for' ကိုသုံးပါ။ 'Save time' ဆိုတာက တစ်ခုခုကို ပိုမြန်တဲ့နည်းနဲ့လုပ်တာကို ဆိုလိုလေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "I need to {w}save{/w} {c}money{/c} for my trip to Japan.",
+          "mm": "ဂျပန်ခရီးစဉ်အတွက် ပိုက်ဆံစုရမယ်။"
+        },
+        {
+          "en": "Taking the highway will {w}save{/w} us a lot of {c}time{/c}.",
+          "mm": "အဝေးပြေးလမ်းကသွားရင် ကျွန်တော်တို့အတွက် အချိန်အများကြီး သက်သာစေလိမ့်မယ်။"
+        },
+        {
+          "en": "She's {w}saving up{/w} {c}for{/c} a new laptop.",
+          "mm": "သူမက လက်ပ်တော့အသစ်တစ်လုံးအတွက် ပိုက်ဆံစုနေတယ်။"
+        },
+        {
+          "en": "Remember to {w}save{/w} your {c}work{/c} before you close the program.",
+          "mm": "ပရိုဂရမ်မပိတ်ခင်မှာ သင့်အလုပ်ကို save ဖို့ မမေ့ပါနဲ့။"
+        },
+        {
+          "en": "Cooking at home can {w}save{/w} you a lot of {c}money{/c}.",
+          "mm": "အိမ်မှာ ချက်စားတာက သင့်အတွက် ပိုက်ဆံအများကြီး သက်သာစေနိုင်တယ်။"
+        }
+      ],
+      "collocations": [
+        "save money",
+        "save time",
+        "save up for"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "waste",
+      "pos": "verb",
+      "ipa": "/weɪst/",
+      "short_en": "use badly, for no benefit",
+      "short_mm": "အကျိုးမရှိဘဲ အလဟဿသုံးသည်၊ ဖြုန်းတီးသည်",
+      "use_when_en": "You are using a resource (money, time, energy) poorly, with no good result or benefit.",
+      "use_when_mm": "ပိုက်ဆံ၊ အချိန်၊ ဒါမှမဟုတ် စွမ်းအင်လိုမျိုး အရင်းအမြစ်တစ်ခုခုကို ရလဒ်ကောင်းမရှိဘဲ၊ အကျိုးမရှိဘဲ သုံးစွဲနေတဲ့အခါ ပြောပါ။",
+      "explanation_en": "This has a negative meaning. It's like 'spending' but in a bad, careless, or useless way. 'A waste of...' is the common noun form.",
+      "explanation_mm": "ဒါက အနုတ်လက္ခဏာဆောင်တဲ့ အဓိပ္ပာယ်ပါ။ 'spending' နဲ့ဆင်ပေမဲ့ မကောင်းတဲ့၊ ပေါ့ဆတဲ့၊ ဒါမှမဟုတ် အသုံးမဝင်တဲ့နည်းနဲ့ သုံးတာကို ဆိုလိုတယ်။ 'A waste of...' ဆိုတာက သူ့ရဲ့ noun ပုံစံပါ။",
+      "nuance_en": "It implies you regret it or think it was a bad decision.",
+      "nuance_mm": "ဒါကိုသုံးလိုက်ရင် သင်နောင်တရတယ် ဒါမှမဟုတ် ဆုံးဖြတ်ချက်မှားသွားတယ်လို့ ထင်တဲ့သဘော သက်ရောက်ပါတယ်။",
+      "goes_with_en": "waste + money / time / energy / food · waste time + on (something) / doing (something) · a complete waste of time/money",
+      "goes_with_note_en": "Like 'spend', use 'on' for the thing or 'doing' for the activity.",
+      "goes_with_note_mm": "'spend' လိုပဲ၊ ပစ္စည်းအတွက် 'on' ကိုသုံးပြီး လုပ်ဆောင်ချက်အတွက် 'doing' ကို သုံးပါ။",
+      "examples": [
+        {
+          "en": "Don't {w}waste{/w} your {c}money{/c} on that cheap phone; it will break.",
+          "mm": "အဲ့ဒီဖုန်းပေါပေါပေါ်မှာ ပိုက်ဆံမဖြုန်းနဲ့၊ ပျက်သွားလိမ့်မယ်။"
+        },
+        {
+          "en": "I {w}wasted{/w} the whole {c}afternoon{/c} watching silly videos.",
+          "mm": "အကျိုးမရှိတဲ့ ဗီဒီယိုတွေကြည့်ရင်းနဲ့ နေ့လယ်ခင်းတစ်ခုလုံးကို ဖြုန်းတီးလိုက်တယ်။"
+        },
+        {
+          "en": "The meeting was a complete {w}waste{/w} of {c}time{/c}.",
+          "mm": "အစည်းအဝေးက တကယ့်ကို အချိန်ဖြုန်းတာပဲ။"
+        },
+        {
+          "en": "You're {w}wasting{/w} your {c}breath{/c}; he'll never listen.",
+          "mm": "မင်းရဲ့စကားတွေ အလကားဖြစ်နေပြီ၊ သူ ဘယ်တော့မှ နားထောင်မှာမဟုတ်ဘူး။"
+        },
+        {
+          "en": "Stop {w}wasting{/w} {c}time{/c} and finish your homework.",
+          "mm": "အချိန်မဖြုန်းဘဲနဲ့ မင်းရဲ့အိမ်စာကို အပြီးသတ်လိုက်ပါ။"
+        }
+      ],
+      "collocations": [
+        "waste money",
+        "waste time",
+        "a waste of time"
+      ],
+      "confuse_with": [
+        "spend"
+      ]
+    },
+    {
+      "word": "earn",
+      "pos": "verb",
+      "ipa": "/ɜːn/",
+      "short_en": "get money by working; deserve",
+      "short_mm": "အလုပ်လုပ်၍ ငွေရသည်၊ ထိုက်တန်စွာရရှိသည်",
+      "use_when_en": "You receive money in exchange for work you do. It can also be used for non-money things you get because you deserve them, like respect.",
+      "use_when_mm": "အလုပ်လုပ်လို့ ပိုက်ဆံရတဲ့အခါ သုံးပါတယ်။ ပိုက်ဆံမဟုတ်ဘဲ ကိုယ်နဲ့ထိုက်တန်လို့ ရလာတဲ့အရာတွေ (ဥပမာ - လေးစားမှု) အတွက်လည်း သုံးနိုင်ပါတယ်။",
+      "explanation_en": "This verb connects effort to reward. You work, you earn money. You act well, you earn respect. It's about receiving something you have a right to.",
+      "explanation_mm": "ဒီ verb က ကြိုးစားအားထုတ်မှုနဲ့ ရလဒ်ကို ဆက်စပ်ပေးပါတယ်။ အလုပ်လုပ်တယ်၊ ပိုက်ဆံရတယ်။ ကောင်းကောင်းကျင့်ကြံတယ်၊ လေးစားမှုရတယ်။ ကိုယ်နဲ့ထိုက်တန်တဲ့အရာကို လက်ခံရရှိခြင်းကို ဆိုလိုပါတယ်။",
+      "nuance_en": "Unlike 'win' or 'get', 'earn' always implies you did something to deserve it.",
+      "nuance_mm": "'win' (နိုင်သည်) ဒါမှမဟုတ် 'get' (ရသည်) နဲ့မတူတာက 'earn' မှာ အမြဲတမ်း ကိုယ်က ထိုက်တန်အောင် တစ်ခုခုလုပ်ခဲ့တယ်ဆိုတဲ့ သဘောပါဝင်ပါတယ်။",
+      "goes_with_en": "earn + money / a salary / a living · earn + respect / a reputation / a place (on a team)",
+      "goes_with_note_en": "Pairs with money from work (salary, living) and abstract things you deserve (respect, reputation).",
+      "goes_with_note_mm": "အလုပ်ကရတဲ့ပိုက်ဆံ (လစာ၊ အသက်မွေးဝမ်းကျောင်း) နဲ့ ကိုယ်နဲ့ထိုက်တန်တဲ့ အရာတွေ (လေးစားမှု၊ ဂုဏ်သတင်း) နဲ့ တွဲသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "How much money do you {w}earn{/w} a {c}month{/c}?",
+          "mm": "တစ်လကို ပိုက်ဆံဘယ်လောက်ရှာနိုင်လဲ။"
+        },
+        {
+          "en": "It's hard to {w}earn{/w} a {c}living{/c} as an artist.",
+          "mm": "အနုပညာရှင်တစ်ယောက်အနေနဲ့ အသက်မွေးဝမ်းကျောင်းပြုဖို့ ခက်ခဲတယ်။"
+        },
+        {
+          "en": "She {w}earned{/w} the {c}respect{/c} of her colleagues through hard work.",
+          "mm": "သူမက ကြိုးစားမှုကြောင့် လုပ်ဖော်ကိုင်ဖက်တွေရဲ့ လေးစားမှုကို ရရှိခဲ့တယ်။"
+        },
+        {
+          "en": "He {w}earns{/w} a good {c}salary{/c} at the tech company.",
+          "mm": "သူက နည်းပညာကုမ္ပဏီမှာ လစာကောင်းကောင်းရတယ်။"
+        },
+        {
+          "en": "You have to {w}earn{/w} your {c}place{/c} on the team.",
+          "mm": "အသင်းမှာ နေရာတစ်နေရာရဖို့ မင်းကိုယ်တိုင် ကြိုးစားရယူရမယ်။"
+        }
+      ],
+      "collocations": [
+        "earn money",
+        "earn a living",
+        "earn respect"
+      ],
+      "confuse_with": []
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I try not to ___ money on things I don't need.",
+      "right": "waste",
+      "wrong": "spend",
+      "why": "The sentence implies a bad use of money. 'Spend' is neutral, but 'waste' is negative and fits the context of 'don't need'.",
+      "why_mm": "ဒီဝါကျက ပိုက်ဆံကို မကောင်းတဲ့နည်းနဲ့ သုံးတာကို ဆိုလိုတယ်။ 'Spend' က neutral ဖြစ်ပြီး 'waste' က negative ဖြစ်လို့ 'မလိုအပ်တဲ့အရာ' ဆိုတဲ့ စကားနဲ့ ပိုလိုက်ဖက်ပါတယ်။"
+    },
+    {
+      "prompt": "I'm trying to ___ enough money to buy a new car.",
+      "right": "save",
+      "wrong": "earn",
+      "why": "The goal is to accumulate money for a purchase, which is 'save'. 'Earn' is about getting money from work, not collecting it.",
+      "why_mm": "ကားသစ်ဝယ်ဖို့ ပိုက်ဆံစုဆောင်းတာကို ဆိုလိုတာဖြစ်လို့ 'save' ကို သုံးရပါမယ်။ 'Earn' က အလုပ်လုပ်ပြီး ပိုက်ဆံရှာတာကိုပဲ ပြောတာပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "She works two jobs to ___ a living for her family.",
+      "answer": "earn",
+      "options": [
+        "earn",
+        "save",
+        "spend"
+      ],
+      "explain_en": "You work to get money, which is 'earn a living'.",
+      "explain_mm": "ပိုက်ဆံရဖို့ အလုပ်လုပ်တာဖြစ်လို့ 'earn a living' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Let's take the shortcut; it will ___ us about ten minutes.",
+      "answer": "save",
+      "options": [
+        "spend",
+        "save",
+        "waste"
+      ],
+      "explain_en": "A shortcut makes the journey quicker, so you 'save time'.",
+      "explain_mm": "ဖြတ်လမ်းက ခရီးကို ပိုမြန်စေတဲ့အတွက် 'save time' ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He ___ all his money on a fancy car and now he's broke.",
+      "answer": "spent",
+      "options": [
+        "earned",
+        "saved",
+        "spent"
+      ],
+      "explain_en": "Using money to buy something is 'spending'. The context suggests he used it all up.",
+      "explain_mm": "တစ်ခုခုဝယ်ဖို့ ပိုက်ဆံသုံးတာကို 'spending' လို့ခေါ်တယ်။ သူ ပိုက်ဆံတွေ အကုန်သုံးလိုက်တဲ့သဘောပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Don't ___ your time arguing with him. He won't change his mind.",
+      "answer": "waste",
+      "options": [
+        "save",
+        "waste",
+        "earn"
+      ],
+      "explain_en": "Arguing with no result is a useless activity, so it's a 'waste of time'.",
+      "explain_mm": "ရလဒ်မရှိဘဲ ငြင်းခုံနေတာက အကျိုးမရှိတဲ့အတွက် 'waste of time' ဖြစ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "If you want to buy a house, you need to start to ___ money.",
+      "answer": "save",
+      "options": [
+        "spend",
+        "earn",
+        "save"
+      ],
+      "explain_en": "To prepare for a big purchase, you need to keep money for the future, which is 'save money'.",
+      "explain_mm": "ပစ္စည်းကြီးကြီးတစ်ခုဝယ်ဖို့ ပြင်ဆင်တဲ့အခါ အနာဂတ်အတွက် ပိုက်ဆံကို သိမ်းထားရပါမယ်။ ဒါက 'save money' ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It took him years to ___ the trust of his employees.",
+      "answer": "earn",
+      "options": [
+        "waste",
+        "earn",
+        "spend"
+      ],
+      "explain_en": "Trust is something you get because you deserve it through your actions. You 'earn trust'.",
+      "explain_mm": "ယုံကြည်မှုဆိုတာက ကိုယ့်ရဲ့လုပ်ရပ်တွေကြောင့် ထိုက်ထိုက်တန်တန်ရလာတဲ့အရာပါ။ ဒါကြောင့် 'earn trust' လို့သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The government ___ billions of dollars on the new airport.",
+      "answer": "spent",
+      "options": [
+        "spent",
+        "saved",
+        "earned"
+      ],
+      "explain_en": "Using money for a large project is 'spending money on' it.",
+      "explain_mm": "စီမံကိန်းကြီးတစ်ခုအတွက် ပိုက်ဆံသုံးစွဲတာကို 'spending money on' လို့ သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "That two-hour meeting with no decisions was a complete ___ of time.",
+      "answer": "waste",
+      "options": [
+        "save",
+        "spend",
+        "waste"
+      ],
+      "explain_en": "A meeting with no result is a useless use of time. The noun form is 'a waste of time'.",
+      "explain_mm": "ရလဒ်မထွက်တဲ့ အစည်းအဝေးက အချိန်ကို အလဟဿသုံးတာပါပဲ။ noun ပုံစံက 'a waste of time' ဖြစ်ပါတယ်။"
+    }
+  ]
+}

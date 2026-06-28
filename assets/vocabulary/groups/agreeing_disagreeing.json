@@ -1,0 +1,432 @@
+{
+  "id": "agreeing_disagreeing",
+  "title": "Agreeing & disagreeing",
+  "level": 2,
+  "order": 602,
+  "theme": "Reacting phrases",
+  "style": "contrast",
+  "unit": "expression",
+  "why_grouped_en": "How to agree or push back politely. 'Exactly' is strong agreement; 'I'm not so sure' softens disagreement so you don't sound rude. Tone and politeness matter a lot here.",
+  "why_grouped_mm": "တစ်ယောက်ယောက်ရဲ့ စကားကို သဘောတူကြောင်း၊ ဒါမှမဟုတ် သဘောမတူကြောင်း ယဉ်ယဉ်ကျေးကျေး ဘယ်လိုပြောမလဲ။ 'Exactly' က လုံးဝသဘောတူတာကို ပြပြီး 'I'm not so sure' ကတော့ ကိုယ့်ရဲ့ သဘောထားကွဲလွဲမှုကို နူးညံ့စေတာမို့ ရိုင်းသလို မဖြစ်တော့ဘူး။ ဒီလိုနေရာတွေမှာ အသံနေအသံထားနဲ့ ယဉ်ကျေးမှုက အရမ်းအရေးကြီးပါတယ်။",
+  "words": [
+    {
+      "word": "you've got a point",
+      "pos": "phrase",
+      "ipa": "/juːv ɡɒt ə pɔɪnt/",
+      "short_en": "partly agree; concede a point",
+      "short_mm": "မင်းပြောတာလည်း ဟုတ်သားပဲ",
+      "use_when_en": "You want to admit that one part of someone's argument is correct, even if you don't agree with everything.",
+      "use_when_mm": "တစ်ဖက်လူရဲ့ အငြင်းအခုံထဲက အချက်တစ်ချက်ကို မှန်တယ်လို့ အသိအမှတ်ပြုချင်တဲ့အခါ သုံးပါတယ်။ အကုန်လုံးကို သဘောမတူရင်တောင် ဒီတစ်ချက်တော့ ဟုတ်တယ်လို့ ပြောတာမျိုးပေါ့။",
+      "explanation_en": "This phrase shows you are listening and considering their view. It's a way to concede a single point without ending the discussion.",
+      "explanation_mm": "ဒီစကားက ကိုယ်က သူတို့ပြောတာကို နားထောင်နေတယ်၊ စဉ်းစားပေးနေတယ်ဆိုတာကို ပြပါတယ်။ ဆွေးနွေးမှုကို မရပ်ဘဲ အချက်တစ်ချက်ကိုတော့ လက်ခံတယ်လို့ ပြောတဲ့နည်းပါ။",
+      "nuance_en": "Often followed by \"but...\" to introduce your own counter-argument. It softens disagreement.",
+      "nuance_mm": "ဒီစကားနောက်မှာ \"but...\" ဆိုပြီး ကိုယ့်ရဲ့ တန်ပြန်အငြင်းအခုံကို ဆက်ပြောလေ့ရှိပါတယ်။ သဘောထားကွဲလွဲမှုကို နူးညံ့စေပါတယ်။",
+      "goes_with_en": "you've got a point + there · I see what you mean, you've got a point · OK, you've got a point, but...",
+      "goes_with_note_en": "Usually said with \"there\" at the end. It's a full conversational response.",
+      "goes_with_note_mm": "အဆုံးမှာ \"there\" နဲ့ တွဲသုံးတာများပါတယ်။ ဒါက စကားပြောမှာသုံးတဲ့ တုံ့ပြန်မှုတစ်ခုအဖြစ် ရပ်တည်နိုင်ပါတယ်။",
+      "examples": [
+        {
+          "en": "I still think we should leave early, but {w}you've got a point{/w} {c}about{/c} the traffic.",
+          "mm": "ကျွန်တော်တို့ စောစောထွက်သင့်တယ်လို့ ထင်တုန်းပဲ၊ ဒါပေမဲ့ ယာဉ်ကြောပိတ်ဆို့မှုအကြောင်း မင်းပြောတာလည်း ဟုတ်သားပဲ။"
+        },
+        {
+          "en": "Hmm, {w}you've got a point{/w} {c}there{/c}. I hadn't thought of that.",
+          "mm": "အင်း၊ မင်းပြောတာလည်း ဟုတ်သားပဲ။ ငါအဲဒါကို မစဉ်းစားမိဘူး။"
+        },
+        {
+          "en": "Okay, {w}you've got a point{/w} that it's {c}expensive{/c}, but the quality is much better.",
+          "mm": "ဟုတ်ပြီ၊ ဒါက ဈေးကြီးတယ်ဆိုတာ မင်းပြောတာမှန်တယ်၊ ဒါပေမဲ့ အရည်အသွေးက ပိုကောင်းတယ်လေ။"
+        },
+        {
+          "en": "I see what you mean. {w}You've got a point{/w}; maybe we should {c}reconsider{/c}.",
+          "mm": "မင်းဆိုလိုတာကို ငါနားလည်ပါတယ်။ မင်းပြောတာလည်း ဟုတ်သားပဲ၊ ငါတို့ ပြန်စဉ်းစားသင့်တယ်ထင်တယ်။"
+        },
+        {
+          "en": "While I don't fully agree, {w}you've got a point{/w} when you {c}say{/c} it's risky.",
+          "mm": "ငါ လုံးလုံးသဘောမတူပေမဲ့၊ ဒါက စွန့်စားရတယ်လို့ မင်းပြောတဲ့အခါမှာတော့ မင်းပြောတာမှန်ပါတယ်။"
+        }
+      ],
+      "collocations": [
+        "you've got a point there",
+        "a good point",
+        "you've got a point, but..."
+      ],
+      "confuse_with": [
+        "fair enough"
+      ]
+    },
+    {
+      "word": "exactly",
+      "pos": "adverb",
+      "ipa": "/ɪɡˈzækt.li/",
+      "short_en": "strong agreement; that's right",
+      "short_mm": "ဟုတ်တယ်၊ အတိအကျပဲ",
+      "use_when_en": "Someone says something that is precisely what you think or were about to say.",
+      "use_when_mm": "တစ်ယောက်ယောက်က ကိုယ်တွေးနေတဲ့အရာ၊ ဒါမှမဟုတ် ပြောတော့မယ့်အရာကို ထပ်တူကျအောင် ပြောလိုက်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "A short, strong way to say \"I completely agree\" or \"You are 100% correct\". It shows enthusiasm.",
+      "explanation_mm": "\"ငါ လုံးဝသဘောတူတယ်\" ဒါမှမဟုတ် \"မင်းပြောတာ ရာနှုန်းပြည့်မှန်တယ်\" လို့ပြောတဲ့ တိုတိုနဲ့ ထိရောက်တဲ့နည်းလမ်းပါ။ စိတ်အားထက်သန်မှုကို ပြပါတယ်။",
+      "nuance_en": "Very common in conversation as a one-word response. Can be emphasized for more strength: \"Ex-ACT-ly!\"",
+      "nuance_mm": "စကားပြောမှာ စကားတစ်လုံးတည်းနဲ့ တုံ့ပြန်တဲ့အခါ အရမ်းအသုံးများတယ်။ ပိုပြီးအားပါချင်ရင် အသံကိုဖိပြီး \"Ex-ACT-ly!\" လို့ ပြောနိုင်ပါတယ်။",
+      "goes_with_en": "Exactly! (as a response) · That's exactly + what I think / the point / it · Not exactly",
+      "goes_with_note_en": "Often used on its own as an interjection.",
+      "goes_with_note_mm": "သူ့တစ်လုံးတည်းကို အာမေဍိတ်အနေနဲ့ သုံးတာများပါတယ်။",
+      "examples": [
+        {
+          "en": "So you think we need a new plan? \"{w}Exactly{/w}! This one isn't {c}working{/c}.\"",
+          "mm": "ဒါဆို မင်းက ငါတို့ အစီအစဉ်အသစ်လိုတယ်လို့ ထင်တာလား။ \"အတိအကျပဲ! ဒီဟာက အလုပ်မဖြစ်ဘူး။\""
+        },
+        {
+          "en": "That's {w}exactly{/w} {c}what{/c} I was going to say.",
+          "mm": "ဒါ ငါပြောမလို့ကြံနေတဲ့ စကားနဲ့ အတိအကျပဲ။"
+        },
+        {
+          "en": "He just doesn't listen, does he? \"{w}Exactly{/w}.\"",
+          "mm": "သူက နားကိုမထောင်ဘူးနော်၊ ဟုတ်တယ်မလား။ \"အတိအကျပဲ။\""
+        },
+        {
+          "en": "The problem isn't the cost, it's the time it will take. \"{w}Exactly{/w}, {c}that's{/c} the issue.\"",
+          "mm": "ပြဿနာက ကုန်ကျစရိတ်မဟုတ်ဘူး၊ ကြာမယ့်အချိန်ပဲ။ \"ဟုတ်တယ်၊ အဲဒါက ပြဿနာပဲ။\""
+        },
+        {
+          "en": "This is {w}exactly{/w} the {c}kind{/c} of restaurant I was looking for.",
+          "mm": "ဒါ ငါရှာနေတဲ့ စားသောက်ဆိုင်အမျိုးအစား အတိအကျပဲ။"
+        }
+      ],
+      "collocations": [
+        "that's exactly it",
+        "exactly what I think",
+        "not exactly"
+      ],
+      "confuse_with": [
+        "absolutely"
+      ]
+    },
+    {
+      "word": "fair enough",
+      "pos": "phrase",
+      "ipa": "/ˌfeər ɪˈnʌf/",
+      "short_en": "accept a reason, even if you don't fully agree",
+      "short_mm": "ဟုတ်ပါပြီ၊ ဒါဆိုလည်း လက်ခံပါတယ်",
+      "use_when_en": "You accept someone's decision or explanation as reasonable, even if you don't love it. It often ends a discussion.",
+      "use_when_mm": "တစ်စုံတစ်ယောက်ရဲ့ ဆုံးဖြတ်ချက် ဒါမှမဟုတ် ရှင်းပြချက်ကို ကိုယ်သိပ်မကြိုက်ရင်တောင် လုံလောက်တဲ့အကြောင်းပြချက်ရှိတယ်လို့ လက်ခံလိုက်တဲ့အခါ သုံးပါတယ်။ ဆွေးနွေးမှုကို အဆုံးသတ်လိုက်တဲ့သဘောပါ။",
+      "explanation_en": "This signals that you understand their perspective and won't argue anymore. It means \"Okay, your reason is valid.\"",
+      "explanation_mm": "ဒီစကားက သူတို့ရဲ့အမြင်ကို နားလည်ပြီး ဆက်မငြင်းတော့ဘူးဆိုတာကို ပြပါတယ်။ \"ကောင်းပြီ၊ မင်းရဲ့အကြောင်းပြချက်က ခိုင်လုံပါတယ်\" လို့ အဓိပ္ပာယ်ရပါတယ်။",
+      "nuance_en": "Can sometimes show reluctant agreement. The tone of voice is very important.",
+      "nuance_mm": "တစ်ခါတလေမှာ မလိုမုန်းထားနဲ့ သဘောတူလိုက်တဲ့ပုံစံမျိုးလည်း ပေါက်နိုင်ပါတယ်။ အသံနေအသံထားက အရမ်းအရေးကြီးပါတယ်။",
+      "goes_with_en": "Fair enough (as a response) · OK, fair enough, but... · That seems fair enough.",
+      "goes_with_note_en": "Very common as a short, two-word response to an explanation.",
+      "goes_with_note_mm": "ရှင်းပြချက်တစ်ခုကို တုံ့ပြန်တဲ့အခါ ဒီစကားလုံးနှစ်လုံးတည်းနဲ့ တိုတိုတုတ်တုတ် ပြောလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "I can't come tonight, I have to study. \"Ah, {w}fair enough{/w}. Maybe {c}next time{/c}.\"",
+          "mm": "ငါ ဒီညမလာနိုင်ဘူး၊ စာကျက်ရမယ်။ \"အာ၊ ဟုတ်ပါပြီ။ နောက်တစ်ခါပေါ့။\""
+        },
+        {
+          "en": "I chose this one because it's cheaper. \"{w}Fair enough{/w}, we do need to {c}save money{/c}.\"",
+          "mm": "ဒါက ဈေးသက်သာလို့ ငါရွေးလိုက်တာ။ \"ဟုတ်ပါပြီ၊ ငါတို့ ပိုက်ဆံစုဖို့လိုတာပဲ။\""
+        },
+        {
+          "en": "Sorry, we don't allow dogs in here. \"Okay, {w}fair enough{/w}.\"",
+          "mm": "တောင်းပန်ပါတယ်၊ ဒီထဲကို ခွေးမသွင်းရပါဘူး။ \"ဟုတ်ကဲ့၊ လက်ခံပါတယ်။\""
+        },
+        {
+          "en": "He didn't want to join because he was feeling tired. \"{w}Fair enough{/w}, he's had a {c}long week{/c}.\"",
+          "mm": "သူ ပင်ပန်းနေလို့ မပါချင်ဘူးတဲ့။ \"ဟုတ်ပါပြီ၊ သူ ဒီတစ်ပတ်လုံး အလုပ်များခဲ့တာကိုး။\""
+        },
+        {
+          "en": "That {c}seems{/c} {w}fair enough{/w} to me.",
+          "mm": "အဲဒါ ကျွန်တော့်အတွက်တော့ တော်တော်လေး ကျိုးကြောင်းဆီလျော်တယ်လို့ ထင်ပါတယ်။"
+        }
+      ],
+      "collocations": [
+        "that seems fair enough",
+        "fair enough, but...",
+        "fair enough"
+      ],
+      "confuse_with": [
+        "you've got a point"
+      ]
+    },
+    {
+      "word": "I'm not so sure",
+      "pos": "phrase",
+      "ipa": "/aɪm nɒt səʊ ʃɔːr/",
+      "short_en": "polite, soft disagreement",
+      "short_mm": "အဲဒါတော့ သိပ်မသေချာဘူး",
+      "use_when_en": "You want to disagree gently without being direct or aggressive. It introduces a doubt.",
+      "use_when_mm": "တိုက်ရိုက် ဒါမှမဟုတ် ရန်လိုတဲ့ပုံမပေါက်စေဘဲ ယဉ်ယဉ်ကျေးကျေး သဘောမတူကြောင်း ပြောချင်တဲ့အခါ သုံးပါတယ်။ သံသယတစ်ခုကို စတင်မိတ်ဆက်ပေးလိုက်တာပါ။",
+      "explanation_en": "This is a very common way to soften disagreement. Instead of saying \"That's wrong,\" you say \"I'm not so sure,\" which is much less confrontational.",
+      "explanation_mm": "ဒါက သဘောထားကွဲလွဲမှုကို နူးညံ့စေတဲ့ အရမ်းအသုံးများတဲ့နည်းလမ်းပါ။ \"ဒါ မှားတယ်\" လို့ပြောမယ့်အစား \"အဲဒါတော့ သိပ်မသေချာဘူး\" လို့ပြောတာက ထိပ်တိုက်ရင်ဆိုင်မှု အရမ်းနည်းစေပါတယ်။",
+      "nuance_en": "It invites the other person to explain their idea more, rather than shutting down the conversation.",
+      "nuance_mm": "ဒါက စကားဝိုင်းကို ရပ်တန့်ပစ်မယ့်အစား တစ်ဖက်လူကို သူတို့ရဲ့အကြံဉာဏ်ကို ပိုရှင်းပြဖို့ ဖိတ်ခေါ်တဲ့သဘော သက်ရောက်ပါတယ်။",
+      "goes_with_en": "I'm not so sure + about that / that's a good idea / if that's true.",
+      "goes_with_note_en": "Often followed by \"about that\" or a \"that...\" clause.",
+      "goes_with_note_mm": "သူ့နောက်မှာ \"about that\" ဒါမှမဟုတ် \"that...\" နဲ့စတဲ့ clause တစ်ခု လိုက်လေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "Let's invest all our money in this. \"{w}I'm not so sure{/w} {c}that's{/c} a good idea.\"",
+          "mm": "ငါတို့ပိုက်ဆံအကုန်လုံးကို ဒီမှာ ရင်းနှီးမြှုပ်နှံလိုက်ရအောင်။ \"အဲဒါက အကြံကောင်းတစ်ခုဆိုတာတော့ သိပ်မသေချာဘူး။\""
+        },
+        {
+          "en": "He's definitely the best person for the job. \"{w}I'm not so sure{/w} {c}about that{/c}.\"",
+          "mm": "သူက ဒီအလုပ်အတွက် အကောင်းဆုံးလူဆိုတာ သေချာတယ်။ \"အဲဒါနဲ့ပတ်သက်လို့တော့ ကျွန်တော် သိပ်မသေချာဘူး။\""
+        },
+        {
+          "en": "Everyone says this film is amazing. \"Hmm, {w}I'm not so sure{/w}. I thought it was a bit {c}boring{/c}.\"",
+          "mm": "ဒီရုပ်ရှင်က အရမ်းကောင်းတယ်လို့ လူတိုင်းပြောကြတယ်။ \"အင်း၊ သိပ်မသေချာပါဘူး။ ကျွန်တော်ကတော့ နည်းနည်းပျင်းစရာကောင်းတယ်လို့ ထင်တယ်။\""
+        },
+        {
+          "en": "We should probably leave now to avoid the rain. \"{w}I'm not so sure{/w}. The {c}sky{/c} looks quite clear.\"",
+          "mm": "မိုးမမိအောင် ငါတို့ အခုထွက်သင့်တယ်ထင်တယ်။ \"သိပ်မသေချာပါဘူး။ ကောင်းကင်က တော်တော်သာယာနေသေးတာပဲ။\""
+        },
+        {
+          "en": "{w}I'm not so sure{/w} {c}if{/c} we have enough time to finish.",
+          "mm": "ငါတို့ အပြီးသတ်ဖို့ အချိန်အလုံအလောက်ရှိရဲ့လားဆိုတာ သိပ်မသေချာဘူး။"
+        }
+      ],
+      "collocations": [
+        "I'm not so sure about that",
+        "I'm not so sure that's a good idea"
+      ],
+      "confuse_with": [
+        "I'm afraid I disagree"
+      ]
+    },
+    {
+      "word": "I'm afraid I disagree",
+      "pos": "phrase",
+      "ipa": "/aɪm əˈfreɪd aɪ ˌdɪs.əˈɡriː/",
+      "short_en": "polite but clear disagreement",
+      "short_mm": "စိတ်မကောင်းပေမဲ့ ကျွန်တော် သဘောမတူပါဘူး",
+      "use_when_en": "You need to state your disagreement clearly but politely, often in a more formal or professional setting.",
+      "use_when_mm": "ကိုယ့်ရဲ့ သဘောမတူမှုကို ရှင်းရှင်းလင်းလင်းနဲ့ ယဉ်ကျေးစွာ ပြောဖို့လိုအပ်တဲ့အခါ သုံးပါတယ်။ အများအားဖြင့် ပို formal ကျတဲ့ ဒါမှမဟုတ် အလုပ်ခွင်လိုနေရာမျိုးမှာပေါ့။",
+      "explanation_en": "\"I'm afraid...\" softens the directness of \"I disagree\". It shows you respect the other person's opinion but hold a different one. It's stronger than \"I'm not so sure\".",
+      "explanation_mm": "\"I'm afraid...\" ဆိုတာက \"I disagree\" ဆိုတဲ့ တိုက်ရိုက်စကားကို နူးညံ့စေပါတယ်။ တစ်ဖက်လူရဲ့အမြင်ကို လေးစားပေမဲ့ ကိုယ့်မှာတော့ မတူညီတဲ့အမြင်ရှိတယ်ဆိုတာကို ပြပါတယ်။ \"I'm not so sure\" ထက် ပိုပြတ်သားပါတယ်။",
+      "nuance_en": "This is firm but polite. It clearly states your position without being rude.",
+      "nuance_mm": "ဒါက ပြတ်သားပေမဲ့ ယဉ်ကျေးတဲ့ အသုံးအနှုန်းပါ။ ရိုင်းစိုင်းတဲ့ပုံမပေါက်ဘဲ ကိုယ့်ရဲ့ရပ်တည်ချက်ကို ရှင်းရှင်းလင်းလင်း ဖော်ပြပါတယ်။",
+      "goes_with_en": "I'm afraid I disagree + with you on that / with that statement.",
+      "goes_with_note_en": "Common in meetings or formal discussions.",
+      "goes_with_note_mm": "အစည်းအဝေးတွေ ဒါမှမဟုတ် formal ဆွေးနွေးမှုတွေမှာ အသုံးများပါတယ်။",
+      "examples": [
+        {
+          "en": "The data shows the project is a success. \"{w}I'm afraid I disagree{/w}. The {c}costs{/c} have been too high.\"",
+          "mm": "အချက်အလက်တွေအရ စီမံကိန်းက အောင်မြင်တယ်လို့ ပြနေတယ်။ \"စိတ်မကောင်းပေမဲ့ ကျွန်တော် သဘောမတူပါဘူး။ ကုန်ကျစရိတ်တွေက အရမ်းများနေခဲ့တယ်။\""
+        },
+        {
+          "en": "{w}I'm afraid I disagree{/w} {c}with{/c} your conclusion.",
+          "mm": "ခင်ဗျားရဲ့ ကောက်ချက်ကိုတော့ ကျွန်တော် သဘောမတူနိုင်ပါဘူး။"
+        },
+        {
+          "en": "With all due respect, {w}I'm afraid I disagree{/w} with the {c}CEO{/c} on this point.",
+          "mm": "လေးစားစွာနဲ့ပဲ ပြောရရင်၊ ဒီအချက်နဲ့ပတ်သက်ပြီး CEO နဲ့ ကျွန်တော် သဘောထားကွဲလွဲပါတယ်။"
+        },
+        {
+          "en": "You think we should cancel the event? \"{w}I'm afraid I disagree{/w}. We should postpone it {c}instead{/c}.\"",
+          "mm": "ပွဲကို ဖျက်သိမ်းသင့်တယ်လို့ မင်းထင်လား။ \"စိတ်မကောင်းပေမဲ့ ငါသဘောမတူဘူး။ အဲဒီအစား ငါတို့ ရွှေ့ဆိုင်းသင့်တယ်။\""
+        },
+        {
+          "en": "That's the only way to solve the problem. \"{w}I'm afraid I disagree{/w}; there are other {c}options{/c}.\"",
+          "mm": "ဒါက ပြဿနာကိုဖြေရှင်းဖို့ တစ်ခုတည်းသောနည်းလမ်းပဲ။ \"စိတ်မကောင်းပေမဲ့ ကျွန်တော် သဘောမတူပါဘူး၊ တခြားရွေးချယ်စရာတွေ ရှိပါသေးတယ်။\""
+        }
+      ],
+      "collocations": [
+        "I'm afraid I disagree with you",
+        "with all due respect"
+      ],
+      "confuse_with": [
+        "I'm not so sure"
+      ]
+    },
+    {
+      "word": "absolutely",
+      "pos": "adverb",
+      "ipa": "/ˈæb.sə.luːt.li/",
+      "short_en": "very strong yes / total agreement",
+      "short_mm": "လုံးဝဟုတ်တယ်၊ လုံးဝသဘောတူတယ်",
+      "use_when_en": "You want to show 100% enthusiastic agreement, like a very strong 'yes'.",
+      "use_when_mm": "ရာနှုန်းပြည့် စိတ်အားထက်သန်စွာ သဘောတူကြောင်း ပြချင်တဲ့အခါ သုံးပါတယ်။ အရမ်းအားပါတဲ့ 'yes' လိုမျိုးပေါ့။",
+      "explanation_en": "Stronger than \"yes\" or \"exactly\". It's used to agree with an opinion or to answer a question with a strong 'yes'.",
+      "explanation_mm": "\"Yes\" ဒါမှမဟုတ် \"exactly\" ထက် ပိုအားပါတယ်။ အမြင်တစ်ခုကို သဘောတူဖို့ ဒါမှမဟုတ် မေးခွန်းတစ်ခုကို အားပါတဲ့ 'yes' နဲ့ ဖြေဖို့ သုံးပါတယ်။",
+      "nuance_en": "Can also be used with an adjective to make it stronger (e.g., \"absolutely fantastic\").",
+      "nuance_mm": "နာမဝိသေသန (adjective) တစ်ခုနဲ့ တွဲသုံးပြီး အဓိပ္ပာယ်ကို ပိုအားကောင်းအောင် လုပ်လို့ရပါတယ် (ဥပမာ \"absolutely fantastic\")။",
+      "goes_with_en": "Absolutely! (as a response) · Absolutely + right / correct · Absolutely not (to disagree strongly)",
+      "goes_with_note_en": "A powerful, enthusiastic one-word response. \"Absolutely not\" is a very strong 'no'.",
+      "goes_with_note_mm": "အားပါပြီး စိတ်အားထက်သန်တဲ့ တစ်လုံးတည်း တုံ့ပြန်မှုပါ။ \"Absolutely not\" ကတော့ အရမ်းပြင်းထန်တဲ့ 'no' ပါ။",
+      "examples": [
+        {
+          "en": "Do you think this is the right decision? \"{w}Absolutely{/w}!\"",
+          "mm": "ဒါက မှန်ကန်တဲ့ ဆုံးဖြတ်ချက်လို့ မင်းထင်လား။ \"လုံးဝသေချာတာပေါ့!\""
+        },
+        {
+          "en": "It was a fantastic movie, wasn't it? \"{w}Absolutely{/w}, one of the {c}best{/c} I've seen.\"",
+          "mm": "အရမ်းကောင်းတဲ့ ရုပ်ရှင်ပဲနော်၊ ဟုတ်တယ်မလား။ \"လုံးဝပဲ၊ ငါကြည့်ဖူးသမျှထဲမှာ အကောင်းဆုံးတွေထဲက တစ်ကားပဲ။\""
+        },
+        {
+          "en": "You're {w}absolutely{/w} {c}right{/c} about that.",
+          "mm": "အဲဒီအကြောင်း မင်းပြောတာ လုံးဝမှန်တယ်။"
+        },
+        {
+          "en": "We need to invest more in our staff. \"{w}Absolutely{/w}, I couldn't agree {c}more{/c}.\"",
+          "mm": "ငါတို့ ဝန်ထမ်းတွေအတွက် ပိုပြီး ရင်းနှီးမြှုပ်နှံဖို့ လိုတယ်။ \"လုံးဝပဲ၊ ဒါထက်ပိုပြီး သဘောတူစရာမရှိတော့ဘူး။\""
+        },
+        {
+          "en": "Can I borrow this? \"{w}Absolutely{/w} {c}not{/c}, it's brand new!\"",
+          "mm": "ဒါ ငှားလို့ရမလား။ \"လုံးဝမရဘူး၊ အသစ်ချပ်ချွတ်ပဲ!\""
+        }
+      ],
+      "collocations": [
+        "absolutely right",
+        "absolutely not",
+        "couldn't agree more"
+      ],
+      "confuse_with": [
+        "exactly"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I can't come tonight, I'm too tired. \"OK, ___.\"",
+      "right": "fair enough",
+      "wrong": "you've got a point",
+      "why": "\"Fair enough\" accepts a reason. \"You've got a point\" concedes a point in an argument, which isn't happening here.",
+      "why_mm": "\"Fair enough\" က အကြောင်းပြချက်တစ်ခုကို လက်ခံတာပါ။ \"You've got a point\" က အငြင်းအခုံတစ်ခုထဲက အချက်တစ်ချက်ကို လက်ခံတာဖြစ်လို့ ဒီနေရာမှာ မမှန်ပါဘူး။"
+    },
+    {
+      "prompt": "So you're saying we should focus on quality, not quantity? \"___! That's it.\"",
+      "right": "Exactly",
+      "wrong": "Absolutely",
+      "why": "\"Exactly\" confirms the other person has perfectly understood or stated your idea. \"Absolutely\" is more for agreeing with an opinion.",
+      "why_mm": "\"Exactly\" က တစ်ဖက်လူက ကိုယ့်အကြံကို ထပ်တူကျအောင် နားလည်တယ်ဆိုတာကို အတည်ပြုတာပါ။ \"Absolutely\" ကတော့ အမြင်တစ်ခုကို သဘောတူတာမျိုးမှာ ပိုသုံးပါတယ်။"
+    },
+    {
+      "prompt": "In a business meeting: \"With respect, ___ with that proposal.\"",
+      "right": "I'm afraid I disagree",
+      "wrong": "I'm not so sure",
+      "why": "\"I'm afraid I disagree\" is a clear, polite, and formal way to state your position. \"I'm not so sure\" is softer and less direct, which might be too weak for a formal proposal.",
+      "why_mm": "\"I'm afraid I disagree\" က ရှင်းလင်းပြီး ယဉ်ကျေးတဲ့ formal အသုံးပါ။ \"I'm not so sure\" က ပိုနူးညံ့ပြီး တိုက်ရိုက်မကျတာမို့ formal proposal တစ်ခုအတွက် အားနည်းလွန်းနိုင်ပါတယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "The issue isn't the price, but the quality. \"___! That's what I've been saying.\"",
+      "answer": "Exactly",
+      "options": [
+        "Fair enough",
+        "Exactly",
+        "Absolutely"
+      ],
+      "explain_en": "\"Exactly\" is used when someone says the precise thing you are thinking.",
+      "explain_mm": "တစ်ယောက်ယောက်က ကိုယ်တွေးနေတဲ့အရာကို ထပ်တူကျအောင် ပြောတဲ့အခါ \"Exactly\" ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Let's just ask for a big discount. \"___ that will work. They're usually very strict.\"",
+      "answer": "I'm not so sure",
+      "options": [
+        "I'm not so sure",
+        "I'm afraid I disagree",
+        "You've got a point"
+      ],
+      "explain_en": "Use \"I'm not so sure\" to express gentle doubt or soft disagreement about a plan.",
+      "explain_mm": "အစီအစဉ်တစ်ခုအပေါ် သံသယရှိကြောင်း ဒါမှမဟုတ် သဘောမတူကြောင်း နူးညံ့စွာဖော်ပြဖို့ \"I'm not so sure\" ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I'm sorry, I have to cancel our dinner. I have a family emergency. \"Oh, of course. ___.\"",
+      "answer": "Fair enough",
+      "options": [
+        "Fair enough",
+        "Exactly",
+        "You've got a point"
+      ],
+      "explain_en": "\"Fair enough\" is the right way to accept someone's reason or explanation.",
+      "explain_mm": "တစ်စုံတစ်ယောက်ရဲ့ အကြောင်းပြချက် ဒါမှမဟုတ် ရှင်းပြချက်ကို လက်ခံဖို့ \"Fair enough\" က အမှန်ကန်ဆုံးနည်းလမ်းပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "This city needs better public transport. \"___! I couldn't agree more.\"",
+      "answer": "Absolutely",
+      "options": [
+        "Exactly",
+        "You've got a point",
+        "Absolutely"
+      ],
+      "explain_en": "\"Absolutely\" shows very strong, enthusiastic agreement with an opinion.",
+      "explain_mm": "အမြင်တစ်ခုကို အရမ်းအားထက်သန်စွာ သဘောတူကြောင်းပြဖို့ \"Absolutely\" ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The new design is nice, but ___ that the old one was easier to use.",
+      "answer": "you've got a point",
+      "options": [
+        "fair enough",
+        "absolutely",
+        "you've got a point"
+      ],
+      "explain_en": "Use \"you've got a point\" to concede that one part of an argument is true.",
+      "explain_mm": "အငြင်းအခုံတစ်ခုရဲ့ အစိတ်အပိုင်းတစ်ခုက မှန်ကန်ကြောင်း ဝန်ခံဖို့ \"you've got a point\" ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "In a formal debate: \"My opponent has argued for tax cuts, but ___ with this policy.\"",
+      "answer": "I'm afraid I disagree",
+      "options": [
+        "I'm afraid I disagree",
+        "I'm not so sure",
+        "Fair enough"
+      ],
+      "explain_en": "\"I'm afraid I disagree\" is the best choice for clear, polite, formal disagreement.",
+      "explain_mm": "ရှင်းလင်း၊ ယဉ်ကျေးပြီး formal ကျတဲ့ သဘောမတူမှုကို ဖော်ပြဖို့ \"I'm afraid I disagree\" က အကောင်းဆုံးရွေးချယ်မှုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Was it a difficult exam? \"___! It was the hardest one I've ever taken.\"",
+      "answer": "Absolutely",
+      "options": [
+        "Absolutely",
+        "Fair enough",
+        "Exactly"
+      ],
+      "explain_en": "\"Absolutely\" works as a very strong \"yes\" in response to a question.",
+      "explain_mm": "မေးခွန်းတစ်ခုကို တုံ့ပြန်ရာမှာ အရမ်းအားပါတဲ့ \"yes\" အဖြစ် \"Absolutely\" က အလုပ်လုပ်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It might be too expensive. \"___ there, but I think it's worth it for the quality.\"",
+      "answer": "You've got a point",
+      "options": [
+        "Fair enough",
+        "You've got a point",
+        "I'm not so sure"
+      ],
+      "explain_en": "\"You've got a point there\" concedes the cost issue before making a counter-argument.",
+      "explain_mm": "တန်ပြန်အငြင်းအခုံမလုပ်ခင် ကုန်ကျစရိတ်ပြဿနာကို ဝန်ခံဖို့ \"You've got a point there\" ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "The shop policy says no refunds, only exchanges. \"Okay, ___. I'll choose something else then.\"",
+      "answer": "fair enough",
+      "options": [
+        "fair enough",
+        "I'm afraid I disagree",
+        "exactly"
+      ],
+      "explain_en": "Use \"fair enough\" to accept a rule or decision, even if you don't like it.",
+      "explain_mm": "စည်းကမ်းတစ်ခု ဒါမှမဟုတ် ဆုံးဖြတ်ချက်တစ်ခုကို မကြိုက်ရင်တောင် လက်ခံဖို့ \"fair enough\" ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He said the project would be finished by Friday. \"Hmm, ___ about that. He's always late.\"",
+      "answer": "I'm not so sure",
+      "options": [
+        "exactly",
+        "I'm not so sure",
+        "absolutely"
+      ],
+      "explain_en": "\"I'm not so sure about that\" is a polite way to express doubt based on past experience.",
+      "explain_mm": "အတိတ်က အတွေ့အကြုံအပေါ်မူတည်ပြီး သံသယရှိကြောင်း ယဉ်ကျေးစွာဖော်ပြဖို့ \"I'm not so sure about that\" ကို သုံးပါတယ်။"
+    }
+  ]
+}

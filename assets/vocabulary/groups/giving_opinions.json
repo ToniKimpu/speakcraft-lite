@@ -1,0 +1,430 @@
+{
+  "id": "giving_opinions",
+  "title": "Giving your opinion",
+  "level": 2,
+  "order": 601,
+  "theme": "Opinion phrases",
+  "style": "contrast",
+  "unit": "expression",
+  "why_grouped_en": "There are many ways to introduce your opinion, each with a different feel. 'In my opinion' is a safe, neutral choice, while 'if you ask me' is more casual and blunt. Learning these phrases together helps you pick the right one for the right situation.",
+  "why_grouped_mm": "ကိုယ့်ရဲ့ထင်မြင်ချက်ကို ပြောပြဖို့ နည်းလမ်းအမျိုးမျိုးရှိပြီး တစ်ခုချင်းစီမှာ ခံစားချက်မတူပါဘူး။ 'In my opinion' က ယေဘုယျကျကျသုံးနိုင်ပြီး 'if you ask me' ကတော့ ပိုပြီး ပေါ့ပေါ့ပါးပါးနဲ့ ပွင့်လင်းပါတယ်။ ဒီစကားစုတွေကို အတူတူလေ့လာထားခြင်းအားဖြင့် အခြေအနေနဲ့လိုက်ဖက်တဲ့ စကားလုံးကို ရွေးချယ်နိုင်မှာပါ။",
+  "words": [
+    {
+      "word": "in my opinion",
+      "pos": "phrase",
+      "ipa": "/ɪn maɪ əˈpɪn.jən/",
+      "short_en": "a neutral, slightly formal way to state your view",
+      "short_mm": "သင့်အမြင်ကို ယေဘုယျကျကျ၊ အနည်းငယ် formal ကျကျ ပြောဆိုခြင်း",
+      "use_when_en": "You want to state your view clearly and politely. It works in most situations, from meetings to casual chats.",
+      "use_when_mm": "ကိုယ့်အမြင်ကို ရှင်းရှင်းလင်းလင်းနဲ့ ယဉ်ယဉ်ကျေးကျေး ပြောချင်တဲ့အခါ သုံးပါတယ်။ အစည်းအဝေးတွေကနေ သာမန်စကားပြောဆိုမှုတွေအထိ အခြေအနေအများစုမှာ သုံးနိုင်တယ်။",
+      "explanation_en": "This is the most standard and neutral way to introduce an opinion. It's a safe choice for both formal and informal contexts.",
+      "explanation_mm": "ဒါက ကိုယ့်ရဲ့ထင်မြင်ချက်ကို ပြောဖို့အတွက် အသုံးအများဆုံးနဲ့ အခြေခံအကျဆုံး စကားစုပါ။ Formal ရော informal အခြေအနေတွေမှာပါ သုံးလို့ရပါတယ်။",
+      "nuance_en": "It sounds slightly more formal than just stating the opinion directly. It signals, \"This is just my view, others may differ.\"",
+      "nuance_mm": "ဒီအတိုင်းပြောတာထက် နည်းနည်းပို formal ကျတဲ့ပုံ ပေါက်ပါတယ်။ \"ဒါကတော့ ကျွန်တော့်အမြင်ပါ၊ တခြားသူတွေနဲ့တော့ ကွဲနိုင်ပါတယ်\" ဆိုတဲ့ သဘောကိုဆောင်တယ်။",
+      "goes_with_en": "In my opinion, + full sentence (it's a good idea, we should wait, the film was too long). Often at the start of a sentence.",
+      "goes_with_note_en": "Usually followed by a comma and a complete sentence expressing your view.",
+      "goes_with_note_mm": "သူ့နောက်မှာ comma လေးခံပြီး ကိုယ့်အမြင်ကိုဖော်ပြတဲ့ ဝါကျအပြည့်အစုံ လိုက်လေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "{w}In my opinion{/w}, the new {c}policy{/c} is a mistake.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ မူဝါဒအသစ်က အမှားတစ်ခုပဲ။"
+        },
+        {
+          "en": "The {c}food{/c}, {w}in my opinion{/w}, was overpriced.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ အစားအသောက်က ဈေးကြီးလွန်းတယ်။"
+        },
+        {
+          "en": "{w}In my opinion{/w}, it's {c}too early{/c} to make a decision.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ ဆုံးဖြတ်ချက်ချဖို့ နည်းနည်းစောလွန်းနေသေးတယ်။"
+        },
+        {
+          "en": "She's the best {c}candidate{/c} for the job, {w}in my opinion{/w}.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ သူမက ဒီအလုပ်အတွက် အကောင်းဆုံးလျှောက်ထားသူပဲ။"
+        },
+        {
+          "en": "{w}In my opinion{/w}, we should {c}invest{/c} more in technology.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ ကျွန်တော်တို့ နည်းပညာပိုင်းမှာ ပိုပြီး ရင်းနှီးမြှုပ်နှံသင့်တယ်။"
+        }
+      ],
+      "collocations": [
+        "in my opinion, it's...",
+        "the best choice, in my opinion"
+      ],
+      "confuse_with": [
+        "personally"
+      ]
+    },
+    {
+      "word": "personally",
+      "pos": "adverb",
+      "ipa": "/ˈpɜː.sən.əl.i/",
+      "short_en": "stresses that it's your own view",
+      "short_mm": "ဒါက ကိုယ့်ရဲ့ ကိုယ်ပိုင်အမြင်သက်သက်ဖြစ်ကြောင်း အလေးပေးပြောဆိုခြင်း",
+      "use_when_en": "You want to emphasize that this is your own individual opinion, which might be different from others' or the group's view.",
+      "use_when_mm": "ဒါက ကိုယ့်ရဲ့တစ်ဦးချင်းအမြင်ဖြစ်ပြီး တခြားသူတွေ ဒါမှမဟုတ် အဖွဲ့ရဲ့အမြင်နဲ့ ကွဲပြားနိုင်တယ်ဆိုတာကို အလေးပေးချင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "It separates your view from any official or group position. It's like saying, \"speaking for myself...\"",
+      "explanation_mm": "ဒါက ကိုယ့်အမြင်ကို အများရဲ့အမြင် ဒါမှမဟုတ် တရားဝင်အမြင်နဲ့ ခွဲခြားလိုက်တာပါ။ \"ကျွန်တော့်အနေနဲ့ ပြောရရင်တော့...\" ဆိုတဲ့ အဓိပ္ပာယ်မျိုးပါ။",
+      "nuance_en": "Can be used to soften a potentially controversial opinion, as you're making it clear it's just your own feeling.",
+      "nuance_mm": "ကိုယ့်ရဲ့အမြင်က အငြင်းပွားစရာဖြစ်နိုင်တဲ့အခါ ဒါကကိုယ့်ရဲ့ ခံစားချက်သက်သက်ပါလို့ ရှင်းပြပြီးသားဖြစ်သွားတဲ့အတွက် အခြေအနေကို ပျော့ပျောင်းစေနိုင်ပါတယ်။",
+      "goes_with_en": "Personally, I think... / I feel... / I'd prefer... · I, personally, believe...",
+      "goes_with_note_en": "Often at the start of a sentence, followed by a comma, or placed after \"I\" for emphasis.",
+      "goes_with_note_mm": "ဝါကျအစမှာထားပြီး comma ခံတာများတယ်။ ဒါမှမဟုတ် အလေးပေးချင်ရင် \"I\" ရဲ့နောက်မှာ ထားသုံးပါတယ်။",
+      "examples": [
+        {
+          "en": "{w}Personally{/w}, I {c}think{/c} we should wait a bit longer.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ နောက်နည်းနည်းလောက် စောင့်သင့်တယ်လို့ ထင်တယ်။"
+        },
+        {
+          "en": "I know everyone loves it, but {w}personally{/w}, I don't {c}like{/c} spicy food.",
+          "mm": "လူတိုင်းကြိုက်မှန်းတော့ သိပါတယ်၊ ဒါပေမဲ့ ကျွန်တော်ကတော့ အစပ်မကြိုက်ဘူး။"
+        },
+        {
+          "en": "The company wants to expand, but {w}personally{/w}, I'd {c}prefer{/c} to focus on quality.",
+          "mm": "ကုမ္ပဏီက လုပ်ငန်းချဲ့ချင်ပေမဲ့ ကျွန်တော်ကတော့ အရည်အသွေးကိုပဲ ပိုအာရုံစိုက်ချင်တယ်။"
+        },
+        {
+          "en": "I, {w}personally{/w}, would never {c}spend{/c} that much on a phone.",
+          "mm": "ကျွန်တော်ကိုယ်တိုင်ကတော့ ဖုန်းတစ်လုံးအတွက် အဲ့လောက်ပိုက်ဆံ ဘယ်တော့မှသုံးမှာမဟုတ်ဘူး။"
+        },
+        {
+          "en": "{w}Personally{/w}, I {c}feel{/c} it's a bit of a risk.",
+          "mm": "ကျွန်တော့်စိတ်ထင်တော့ ဒါက စွန့်စားရာနည်းနည်းကျတယ်။"
+        }
+      ],
+      "collocations": [
+        "personally, I think",
+        "personally, I feel"
+      ],
+      "confuse_with": [
+        "in my opinion",
+        "as far as I'm concerned"
+      ]
+    },
+    {
+      "word": "if you ask me",
+      "pos": "phrase",
+      "ipa": "/ɪf juː ɑːsk miː/",
+      "short_en": "a casual, sometimes blunt opinion nobody asked for",
+      "short_mm": "ပေါ့ပေါ့ပါးပါး၊ တစ်ခါတစ်ရံ ပွင့်ပွင့်လင်းလင်း ပြောတဲ့ ကိုယ့်အမြင် (ဘယ်သူမှမမေးဘဲ)",
+      "use_when_en": "You're giving an opinion in a casual, informal chat, especially when nobody has actually asked for it. Can sound a bit critical or blunt.",
+      "use_when_mm": "ပေါ့ပေါ့ပါးပါး စကားပြောဆိုမှုတွေမှာ ကိုယ့်အမြင်ကို ပေးတဲ့အခါ သုံးပါတယ်။ အထူးသဖြင့် ဘယ်သူမှ ကိုယ့်ကို အမြင်မတောင်းထားတဲ့အခါမျိုးမှာပေါ့။ နည်းနည်း ဝေဖန်သလို၊ ပွင့်လင်းလွန်းသလို ပေါက်နိုင်တယ်။",
+      "explanation_en": "This phrase is ironic because people use it when nobody has asked their opinion. It's very common in informal speech.",
+      "explanation_mm": "ဒီစကားစုက ထေ့လုံးသဘောပါတာက ဘယ်သူမှ အမြင်မတောင်းတဲ့အခါကျမှ သုံးလို့ပါ။ ပေါ့ပေါ့ပါးပါး စကားပြောရာမှာတော့ အရမ်းအသုံးများပါတယ်။",
+      "nuance_en": "It often introduces a negative or critical opinion. e.g., \"If you ask me, it's a waste of money.\"",
+      "nuance_mm": "အများအားဖြင့် အပျက်သဘောဆောင်တဲ့ ဒါမှမဟုတ် ဝေဖန်တဲ့ အမြင်မျိုးကို ပြောဖို့ သုံးပါတယ်။ ဥပမာ၊ \"ငါ့ကိုမေးရင်တော့ ဒါက ပိုက်ဆံဖြုန်းတာပဲ။\"",
+      "goes_with_en": "If you ask me, + critical opinion (it's a mistake / a waste of time / he's wrong).",
+      "goes_with_note_en": "Almost always at the start of a sentence and followed by a slightly negative or blunt comment.",
+      "goes_with_note_mm": "ဝါကျအစမှာပဲ အမြဲလိုလိုသုံးပြီး သူ့နောက်မှာ အနည်းငယ် အဆိုးမြင်တဲ့ ဒါမှမဟုတ် ပွင့်လင်းတဲ့ မှတ်ချက်တစ်ခု လိုက်လေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "{w}If you ask me{/w}, that {c}dress{/c} is completely unsuitable for a wedding.",
+          "mm": "ငါ့ကိုမေးရင်တော့ အဲ့ဒီဂါဝန်က မင်္ဂလာဆောင်အတွက် လုံးဝမသင့်တော်ဘူး။"
+        },
+        {
+          "en": "It's a {c}waste of money{/c}, {w}if you ask me{/w}.",
+          "mm": "ငါ့ကိုမေးရင်တော့ ဒါက ပိုက်ဆံဖြုန်းတီးတာပဲ။"
+        },
+        {
+          "en": "{w}If you ask me{/w}, he's making a big {c}mistake{/c}.",
+          "mm": "ငါ့ကိုမေးရင်တော့ သူ အမှားကြီးမှားနေပြီ။"
+        },
+        {
+          "en": "She {c}talks{/c} too much, {w}if you ask me{/w}.",
+          "mm": "ငါ့ကိုသာမေးရင် သူက စကားအရမ်းများတယ်။"
+        },
+        {
+          "en": "{w}If you ask me{/w}, this whole {c}plan{/c} is ridiculous.",
+          "mm": "ငါ့ကိုမေးရင်တော့ ဒီအစီအစဉ်တစ်ခုလုံးက ရယ်စရာကြီး။"
+        }
+      ],
+      "collocations": [
+        "if you ask me, it's a mistake",
+        "a waste of time, if you ask me"
+      ],
+      "confuse_with": [
+        "I'd say"
+      ]
+    },
+    {
+      "word": "as far as I'm concerned",
+      "pos": "phrase",
+      "ipa": "/æz fɑːr æz aɪm kənˈsɜːnd/",
+      "short_en": "an emphatic way to give a firm opinion",
+      "short_mm": "ကိုယ့်အမြင်ကို ခိုင်ခိုင်မာမာ အလေးပေးပြောဆိုခြင်း",
+      "use_when_en": "You want to state your opinion strongly, indicating that this is your final view and you're not likely to change it.",
+      "use_when_mm": "ကိုယ့်အမြင်ကို ပြတ်ပြတ်သားသား ပြောချင်တဲ့အခါ၊ ဒါက ကိုယ့်ရဲ့ နောက်ဆုံးအမြင်ဖြစ်ပြီး ပြောင်းလဲတော့မှာ မဟုတ်ဘူးဆိုတာကို ပြချင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This phrase emphasizes your personal viewpoint and often dismisses other possibilities or opinions. It means \"in my opinion, and that's all that matters to me.\"",
+      "explanation_mm": "ဒီစကားစုက ကိုယ့်ရဲ့တစ်ကိုယ်ရည်အမြင်ကို အလေးပေးပြီး တခြားအမြင်တွေကို ပယ်ချတဲ့သဘော သက်ရောက်ပါတယ်။ \"ကျွန်တော့်အမြင်အရတော့ ဒါက အရေးကြီးဆုံးပဲ\" ဆိုတဲ့ အဓိပ္ပာယ်ပါ။",
+      "nuance_en": "It can sound quite strong and even a bit dismissive or stubborn. Use it when you feel strongly about something.",
+      "nuance_mm": "ဒါက တော်တော်ပြတ်သားပြီး တစ်ခါတလေ တစ်ဖက်လူရဲ့အမြင်ကို အရေးမလုပ်သလို၊ ခေါင်းမာသလို ပေါက်နိုင်တယ်။ တစ်ခုခုကို အရမ်းခိုင်မာတယ်လို့ ယုံကြည်တဲ့အခါမှ သုံးပါ။",
+      "goes_with_en": "As far as I'm concerned, + a firm statement (the decision is final / that's the end of it / he can do what he likes).",
+      "goes_with_note_en": "Used to introduce a strong, final-sounding opinion, often about a decision or a situation.",
+      "goes_with_note_mm": "ပြတ်သားပြီး အပြီးသတ်သဘောဆောင်တဲ့ အမြင်မျိုးကို ဖော်ပြဖို့ သုံးပါတယ်။ ဆုံးဖြတ်ချက်တွေ၊ အခြေအနေတွေနဲ့ ပတ်သက်ပြီး ပြောလေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "{w}As far as I'm concerned{/w}, the {c}matter{/c} is closed.",
+          "mm": "ကျွန်တော့်အတွက်ကတော့ ဒီကိစ္စက ပြီးသွားပြီ။"
+        },
+        {
+          "en": "He can complain all he wants. {w}As far as I'm concerned{/w}, the {c}decision{/c} is final.",
+          "mm": "သူကြိုက်သလောက် မကျေနပ်လို့ရတယ်။ ကျွန်တော့်အတွက်ကတော့ ဒီဆုံးဖြတ်ချက်က အတည်ပဲ။"
+        },
+        {
+          "en": "{w}As far as I'm concerned{/w}, you can {c}wear{/c} whatever you like.",
+          "mm": "ကျွန်တော့်အတွက်ကတော့ မင်းကြိုက်တာ မင်းဝတ်လို့ရတယ်။"
+        },
+        {
+          "en": "There's only one {c}person{/c} to blame, {w}as far as I'm concerned{/w}.",
+          "mm": "ကျွန်တော့်အမြင်အရတော့ အပြစ်တင်စရာလူ တစ်ယောက်ပဲရှိတယ်။"
+        },
+        {
+          "en": "{w}As far as I'm concerned{/w}, that was the best {c}performance{/c} of the night.",
+          "mm": "ကျွန်တော်မြင်တာကတော့ အဲ့ဒါ ညရဲ့အကောင်းဆုံး ဖျော်ဖြေမှုပဲ။"
+        }
+      ],
+      "collocations": [
+        "as far as I'm concerned, the matter is closed",
+        "as far as I'm concerned, it's over"
+      ],
+      "confuse_with": [
+        "personally"
+      ]
+    },
+    {
+      "word": "it seems to me",
+      "pos": "phrase",
+      "ipa": "/ɪt siːmz tuː miː/",
+      "short_en": "a soft, tentative way to give an opinion",
+      "short_mm": "သင့်အမြင်ကို ပျော့ပျော့ပျောင်းပျောင်း၊ မပြတ်မသား ပြောဆိုခြင်း",
+      "use_when_en": "You want to give your opinion gently, based on your observations. It's less direct and more polite than \"I think.\"",
+      "use_when_mm": "ကိုယ်သတိထားမိတာတွေအပေါ်မူတည်ပြီး ကိုယ့်အမြင်ကို ညင်ညင်သာသာ ပြောချင်တဲ့အခါ သုံးပါတယ်။ \"I think\" ထက် ပိုပြီး သွယ်ဝိုက်ပြောတဲ့ပုံစံဖြစ်ပြီး ပိုယဉ်ကျေးပါတယ်။",
+      "explanation_en": "This phrase makes your opinion sound like an impression rather than a hard fact. It leaves room for others to disagree.",
+      "explanation_mm": "ဒီစကားစုက ကိုယ့်အမြင်ကို အချက်အလက်အမှန်တစ်ခုလိုမဟုတ်ဘဲ ကိုယ့်ရဲ့စိတ်ထင်ကို ပြောပြတဲ့ပုံစံမျိုး ဖြစ်စေပါတယ်။ တခြားသူတွေကို သဘောမတူဖို့ နေရာပေးထားရာ ရောက်ပါတယ်။",
+      "nuance_en": "It's a good way to be diplomatic or to offer a suggestion without sounding too forceful.",
+      "nuance_mm": "သံတမန်နည်းကျကျ ပြောဆိုဖို့ ဒါမှမဟုတ် အကြံဉာဏ်တစ်ခုကို ပြင်းပြင်းထန်ထန် မဖြစ်အောင် တင်ပြဖို့ နည်းလမ်းကောင်းတစ်ခုပါ။",
+      "goes_with_en": "It seems to me that + observation (they're not happy / we're going the wrong way / something is wrong).",
+      "goes_with_note_en": "Often followed by \"that\" and a clause describing what you've noticed or how you interpret a situation.",
+      "goes_with_note_mm": "သူ့နောက်မှာ \"that\" နဲ့ ကိုယ်သတိထားမိတဲ့အရာ ဒါမှမဟုတ် အခြေအနေတစ်ခုကို ကိုယ်နားလည်သလို ရှင်းပြတဲ့ clause တစ်ခု လိုက်လေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "{w}It seems to me{/w} that we've {c}overlooked{/c} a key detail.",
+          "mm": "ကျွန်တော်ထင်တာကတော့ ကျွန်တော်တို့ အဓိကကျတဲ့အချက်တစ်ချက်ကို မေ့ကျန်နေခဲ့သလိုပဲ။"
+        },
+        {
+          "en": "{w}It seems to me{/w} they're not really {c}prepared{/c} for the meeting.",
+          "mm": "ကျွန်တော်မြင်တာကတော့ သူတို့ အစည်းအဝေးအတွက် သိပ်အဆင်သင့်မဖြစ်သေးသလိုပဲ။"
+        },
+        {
+          "en": "Doesn't it {c}seem{/c} to you that it's getting colder?",
+          "mm": "တဖြည်းဖြည်းပိုအေးလာတယ်လို့ မင်းမထင်ဘူးလား။"
+        },
+        {
+          "en": "{w}It seems to me{/w} we have two main {c}options{/c}.",
+          "mm": "ကျွန်တော်ထင်တာကတော့ ကျွန်တော်တို့မှာ အဓိကရွေးချယ်စရာနှစ်ခုရှိတယ်။"
+        },
+        {
+          "en": "{w}It seems to me{/w} that something is {c}wrong{/c} with the engine.",
+          "mm": "ကျွန်တော့်စိတ်ထင် အင်ဂျင်မှာ တစ်ခုခုမှားနေသလိုပဲ။"
+        }
+      ],
+      "collocations": [
+        "it seems to me that...",
+        "it seems to me we should..."
+      ],
+      "confuse_with": [
+        "I'd say"
+      ]
+    },
+    {
+      "word": "I'd say",
+      "pos": "phrase",
+      "ipa": "/aɪd seɪ/",
+      "short_en": "a casual, gentle way to give an estimate or opinion",
+      "short_mm": "ခန့်မှန်းချက် သို့မဟုတ် ထင်မြင်ချက်ကို ပေါ့ပေါ့ပါးပါး၊ ညင်ညင်သာသာ ပြောဆိုခြင်း",
+      "use_when_en": "You're giving an opinion you're not 100% sure about, or making a guess or estimate. It's informal and friendly.",
+      "use_when_mm": "ကိုယ် ၁၀၀% မသေချာတဲ့ အမြင်တစ်ခုကို ပေးတဲ့အခါ၊ ဒါမှမဟုတ် ခန့်မှန်းချက်တစ်ခု ပြောတဲ့အခါ သုံးပါတယ်။ ပေါ့ပေါ့ပါးပါးနဲ့ ခင်မင်တဲ့ပုံစံမျိုးပါ။",
+      "explanation_en": "Short for \"I would say,\" this phrase softens your statement. It's like saying, \"If you asked me for my best guess, this would be it.\"",
+      "explanation_mm": "\"I would say\" ရဲ့ အတိုကောက်ဖြစ်ပြီး ကိုယ့်ရဲ့ပြောဆိုချက်ကို ပျော့ပျောင်းစေပါတယ်။ \"မင်းကသာ ငါ့ကို အကောင်းဆုံးခန့်မှန်းချက်တောင်းရင် ဒါဖြစ်လိမ့်မယ်\" လို့ ပြောတာနဲ့တူပါတယ်။",
+      "nuance_en": "Very common for estimating numbers, times, or amounts. \"How far is it?\" \"I'd say about 10 minutes.\"",
+      "nuance_mm": "ကိန်းဂဏန်းတွေ၊ အချိန်တွေ၊ ဒါမှမဟုတ် ပမာဏတွေကို ခန့်မှန်းတဲ့အခါ အရမ်းအသုံးများပါတယ်။ \"ဘယ်လောက်ဝေးသေးလဲ။\" \"၁၀ မိနစ်လောက်တော့ ကြာမယ်ထင်တယ်။\"",
+      "goes_with_en": "I'd say + estimate (about 5 km / around 10 o'clock) · I'd say + gentle opinion (it's the best one / we're ready).",
+      "goes_with_note_en": "Perfect for giving estimates with words like \"about\" or \"around,\" or for softening a direct opinion.",
+      "goes_with_note_mm": "\"about\" ဒါမှမဟုတ် \"around\" လို စကားလုံးတွေနဲ့ ခန့်မှန်းချက်တွေပေးဖို့၊ ဒါမှမဟုတ် တိုက်ရိုက်ပြောတဲ့အမြင်ကို ပျော့ပျောင်းစေဖို့အတွက် အသင့်တော်ဆုံးပါ။",
+      "examples": [
+        {
+          "en": "{w}I'd say{/w} it's {c}about five kilometres{/c} from here.",
+          "mm": "ဒီကနေ ငါးကီလိုမီတာလောက်တော့ ရှိမယ်ထင်တယ်။"
+        },
+        {
+          "en": "A: What's the best way to get there? B: {w}I'd say{/w} you should take the {c}train{/c}.",
+          "mm": "A: အဲ့ဒီကိုသွားဖို့ အကောင်းဆုံးနည်းလမ်းက ဘာလဲ။ B: ရထားစီးသွားသင့်တယ်လို့ ကျွန်တော်ကတော့ ပြောချင်တယ်။"
+        },
+        {
+          "en": "She's, {w}I'd say{/w}, one of the most talented {c}artists{/c} of her generation.",
+          "mm": "သူမက သူ့ခေတ်သူ့အခါမှာ အတော်ဆုံးအနုပညာရှင်တွေထဲက တစ်ယောက်လို့ ပြောလို့ရတယ်။"
+        },
+        {
+          "en": "A: How old is he? B: {w}I'd say{/w} he's in his {c}late forties{/c}.",
+          "mm": "A: သူအသက်ဘယ်လောက်ရှိပြီလဲ။ B: အသက်လေးဆယ်ကျော်လောက်တော့ ရှိမယ်ထင်တယ်။"
+        },
+        {
+          "en": "{w}I'd say{/w} we need to {c}leave{/c} now if we want to be on time.",
+          "mm": "ငါတို့ အချိန်မီရောက်ချင်ရင် အခုထွက်သွားသင့်ပြီလို့ ထင်တယ်။"
+        }
+      ],
+      "collocations": [
+        "I'd say about...",
+        "I'd say it's..."
+      ],
+      "confuse_with": [
+        "it seems to me",
+        "if you ask me"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "To sound diplomatic in a meeting: '___ that we're missing some data.'",
+      "right": "it seems to me",
+      "wrong": "if you ask me",
+      "why": "Diplomacy → it seems to me. 'If you ask me' is too casual and blunt for a formal meeting.",
+      "why_mm": "သံတမန်နည်းကျကျ ပြောချင်ရင် 'it seems to me' ကိုသုံးပါ။ 'If you ask me' က အစည်းအဝေးအတွက် အရမ်း ပေါ့ပေါ့ပါးပါးနိုင်ပြီး ပွင့်လင်းလွန်းပါတယ်။"
+    },
+    {
+      "prompt": "To give a firm, final opinion: '___, the discussion is over.'",
+      "right": "as far as I'm concerned",
+      "wrong": "I'd say",
+      "why": "Firm & final → as far as I'm concerned. 'I'd say' is for gentle, uncertain opinions.",
+      "why_mm": "ခိုင်မာပြီး အပြီးသတ်အမြင်အတွက် 'as far as I'm concerned' ကိုသုံးပါ။ 'I'd say' က မသေချာတဲ့၊ ညင်သာတဲ့အမြင်တွေအတွက်ပါ။"
+    },
+    {
+      "prompt": "To give a standard, neutral opinion: '___, it's a good investment.'",
+      "right": "in my opinion",
+      "wrong": "if you ask me",
+      "why": "Neutral & standard → in my opinion. 'If you ask me' is for casual, often critical, unsolicited opinions.",
+      "why_mm": "ယေဘုယျကျပြီး ဘက်မလိုက်တဲ့အမြင်အတွက် 'in my opinion' ကိုသုံးပါ။ 'If you ask me' က ပေါ့ပေါ့ပါးပါးနဲ့ ဝေဖန်သလိုဖြစ်တတ်တဲ့၊ မတောင်းဘဲပေးတဲ့ အမြင်တွေအတွက်ပါ။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "(In a business email) ___, the proposal is well-structured but needs more detail.",
+      "answer": "In my opinion",
+      "options": [
+        "In my opinion",
+        "If you ask me",
+        "I'd say"
+      ],
+      "explain_en": "A business email needs a neutral, slightly formal phrase like 'in my opinion'.",
+      "explain_mm": "Business email မှာဆိုရင် 'in my opinion' လိုမျိုး ဘက်မလိုက်ဘဲ နည်းနည်း formal ကျတဲ့ စကားစုကို သုံးသင့်ပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "A: How long will it take? B: ___ about an hour.",
+      "answer": "I'd say",
+      "options": [
+        "I'd say",
+        "As far as I'm concerned",
+        "It seems to me"
+      ],
+      "explain_en": "'I'd say' is perfect for making estimates of time, distance, or amounts.",
+      "explain_mm": "အချိန်၊ အကွာအဝေး၊ ပမာဏတွေကို ခန့်မှန်းပြောဆိုဖို့အတွက် 'I'd say' က အသင့်တော်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I know the team agrees, but ___, I think the old design was better.",
+      "answer": "personally",
+      "options": [
+        "personally",
+        "if you ask me",
+        "it seems to me"
+      ],
+      "explain_en": "'Personally' is used to stress that your opinion is different from the group's.",
+      "explain_mm": "ကိုယ့်အမြင်က အများနဲ့မတူဘူးဆိုတာကို အလေးပေးချင်တဲ့အခါ 'Personally' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "___, this whole meeting is a waste of time.",
+      "answer": "If you ask me",
+      "options": [
+        "If you ask me",
+        "It seems to me",
+        "In my opinion"
+      ],
+      "explain_en": "'If you ask me' often introduces a blunt or critical opinion in a casual way.",
+      "explain_mm": "'If you ask me' က ပွင့်လင်းပြီး ဝေဖန်သလိုဖြစ်တဲ့အမြင်ကို ပေါ့ပေါ့ပါးပါးပြောဖို့ သုံးလေ့ရှိပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "___ that he's not telling us the whole truth. He looks nervous.",
+      "answer": "It seems to me",
+      "options": [
+        "In my opinion",
+        "It seems to me",
+        "As far as I'm concerned"
+      ],
+      "explain_en": "Use 'it seems to me' for an opinion based on observation, presented in a soft, gentle way.",
+      "explain_mm": "ကိုယ်သတိထားမိတာကို အခြေခံပြီး အမြင်တစ်ခုကို ညင်ညင်သာသာ ပြောချင်တဲ့အခါ 'it seems to me' ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "You can do what you want, but ___, the project is finished.",
+      "answer": "as far as I'm concerned",
+      "options": [
+        "I'd say",
+        "as far as I'm concerned",
+        "in my opinion"
+      ],
+      "explain_en": "'As far as I'm concerned' gives a strong, final opinion, as if closing the matter.",
+      "explain_mm": "'As far as I'm concerned' က ကိစ္စတစ်ခုကို အပြီးသတ်လိုက်သလိုမျိုး ခိုင်မာပြတ်သားတဲ့အမြင်ကို ပေးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "This is the most logical choice, ___.",
+      "answer": "in my opinion",
+      "options": [
+        "if you ask me",
+        "in my opinion",
+        "I'd say"
+      ],
+      "explain_en": "'In my opinion' is a standard, neutral way to state a reasoned view.",
+      "explain_mm": "ကျိုးကြောင်းဆီလျော်တဲ့အမြင်တစ်ခုကို ယေဘုယျကျကျ ပြောဆိုဖို့ 'in my opinion' က အသင့်တော်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "___, we're not quite ready to launch the product yet.",
+      "answer": "It seems to me",
+      "options": [
+        "As far as I'm concerned",
+        "If you ask me",
+        "It seems to me"
+      ],
+      "explain_en": "This is a gentle, diplomatic way to raise a potential problem. 'It seems to me' is perfect for this.",
+      "explain_mm": "ဖြစ်နိုင်ခြေရှိတဲ့ ပြဿနာတစ်ခုကို ညင်သာစွာနဲ့ သံတမန်နည်းကျကျ တင်ပြတာဖြစ်လို့ 'it seems to me' က အသင့်တော်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I don't care what the critics say. ___, it was a brilliant film.",
+      "answer": "As far as I'm concerned",
+      "options": [
+        "Personally",
+        "As far as I'm concerned",
+        "I'd say"
+      ],
+      "explain_en": "To state a strong opinion that dismisses others, use 'as far as I'm concerned'.",
+      "explain_mm": "တခြားသူတွေရဲ့အမြင်ကို ပယ်ပြီး ကိုယ့်အမြင်ကို ခိုင်ခိုင်မာမာပြောချင်ရင် 'as far as I'm concerned' ကို သုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "A: What do you think of his new car? B: ___, it's a bit too flashy.",
+      "answer": "personally",
+      "options": [
+        "personally",
+        "as far as I'm concerned",
+        "in my opinion"
+      ],
+      "explain_en": "'Personally' is great for giving an individual taste or feeling that others might not share.",
+      "explain_mm": "တခြားသူတွေနဲ့မတူတဲ့ ကိုယ့်ရဲ့တစ်ကိုယ်ရည်အကြိုက် ဒါမှမဟုတ် ခံစားချက်ကို ပြောပြဖို့ 'Personally' က အကောင်းဆုံးပါ။"
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "id": "very_to_strong",
+  "title": "Stop saying \"very\"",
+  "level": 2,
+  "order": 104,
+  "theme": "Strong adjectives",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "Instead of saying 'very' plus an ordinary adjective like 'very tired', a single strong adjective sounds far more natural. Each of these five words replaces a common 'very ___' phrase. Learn the right pairing so you automatically reach for the stronger, more natural word.",
+  "why_grouped_mm": "'very' နဲ့ သာမန် adjective တွဲသုံးတာထက် (ဥပမာ 'very tired')၊ အားကောင်းတဲ့ adjective တစ်လုံးတည်းသုံးတာက ပိုပြီး natural ကျပါတယ်။ ဒီစကားလုံး ၅ လုံးက တွေ့နေကျ 'very ___' တွဲလုံးတွေရဲ့ အစားထိုးတွေပါ။ ပိုကောင်းပြီး ပိုသဘာဝကျတဲ့ စကားလုံးကို အလိုလိုရွေးသုံးနိုင်ဖို့ ဒီတွဲလုံးတွေကို လေ့လာထားကြရအောင်။",
+  "words": [
+    {
+      "word": "exhausted",
+      "pos": "adjective",
+      "ipa": "/ɪɡˈzɔː.stɪd/",
+      "short_en": "very tired",
+      "short_mm": "အရမ်းပင်ပန်းတယ် / မောပန်းနွမ်းနယ်နေတယ်",
+      "use_when_en": "When you're so tired you have no energy left, like after a very long day or hard physical work.",
+      "use_when_mm": "အားအင်မရှိတော့လောက်အောင် ပင်ပန်းနွမ်းနယ်နေတဲ့အခါ သုံးပါတယ်။ ဥပမာ- တစ်နေကုန် အလုပ်လုပ်ပြီးချိန် ဒါမှမဟုတ် အားကစားပြင်းပြင်းထန်ထန် လုပ်ပြီးချိန်မျိုးပေါ့။",
+      "explanation_en": "This is much stronger than 'tired'. It means you are completely drained of energy.",
+      "explanation_mm": "'tired' ထက် အများကြီး ပိုပြင်းထန်ပါတယ်။ လုံးဝ အားကုန်သွားပြီဆိုတဲ့ အဓိပ္ပာယ်ပါ။",
+      "nuance_en": "It's a strong word. You wouldn't say you're 'exhausted' after a short walk, but you would after running a marathon.",
+      "nuance_mm": "အားအရမ်းပါတဲ့ စကားလုံးပါ။ လမ်းနည်းနည်းလျှောက်ပြီး 'exhausted' လို့ မသုံးပါဘူး။ မာရသွန်ပြေးပြီးရင်တော့ သုံးလို့ရပါတယ်။",
+      "goes_with_en": "absolutely / completely / totally exhausted · exhausted from + something · an exhausted look · feeling exhausted",
+      "goes_with_note_en": "Often used with adverbs like 'absolutely' or 'completely' to make it even stronger.",
+      "goes_with_note_mm": "'absolutely', 'completely' တို့လို adverb တွေနဲ့ တွဲသုံးပြီး ပိုပြီး အားကောင်းအောင် လုပ်လေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "After the 12-hour {c}shift{/c}, I was {w}exhausted{/w}.",
+          "mm": "၁၂ နာရီကြာ အလုပ်ဆင်းပြီးတော့ ကျွန်တော် လုံးဝ မလှုပ်နိုင်တော့ဘူး။"
+        },
+        {
+          "en": "He looked {w}exhausted{/w} {c}from{/c} the long journey.",
+          "mm": "ခရီးရှည်ကြီးက ပြန်လာလို့ သူက အရမ်းပင်ပန်းနေတဲ့ပုံပဲ။"
+        },
+        {
+          "en": "I'm {c}absolutely{/c} {w}exhausted{/w}. I'm going straight to bed.",
+          "mm": "ကျွန်တော် တကယ်ကို မောနေပြီ။ အိပ်ရာထဲ တန်းဝင်တော့မယ်။"
+        },
+        {
+          "en": "She gave an {w}exhausted{/w} {c}sigh{/c} and sat down.",
+          "mm": "သူမက မောပန်းစွာ သက်ပြင်းချပြီး ထိုင်ချလိုက်တယ်။"
+        },
+        {
+          "en": "{c}Feeling{/c} {w}exhausted{/w} is a common symptom of the flu.",
+          "mm": "ပင်ပန်းနွမ်းနယ်တယ်လို့ ခံစားရတာက တုပ်ကွေးရဲ့ အဖြစ်များတဲ့ လက္ခဏာတစ်ခုပဲ။"
+        }
+      ],
+      "collocations": [
+        "absolutely exhausted",
+        "exhausted from",
+        "feeling exhausted"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "furious",
+      "pos": "adjective",
+      "ipa": "/ˈfjʊə.ri.əs/",
+      "short_en": "very angry",
+      "short_mm": "အရမ်းဒေါသထွက်တယ် / ဒေါသပေါက်ကွဲနေတယ်",
+      "use_when_en": "When you feel extremely angry, like you might lose control.",
+      "use_when_mm": "ထိန်းမနိုင်သိမ်းမရလောက်အောင် ဒေါသအရမ်းထွက်နေတဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "Much stronger than 'angry' or 'mad'. It describes intense, often uncontrollable anger.",
+      "explanation_mm": "'angry' တို့ 'mad' တို့ထက် အများကြီးပိုပြင်းထန်ပါတယ်။ ပြင်းထန်ပြီး ထိန်းချုပ်ရခက်တဲ့ ဒေါသကို ဖော်ပြတယ်။",
+      "nuance_en": "This is for serious situations. You're 'angry' if someone is late, but 'furious' if they crash your car.",
+      "nuance_mm": "ဒါက ပြင်းထန်တဲ့ အခြေအနေတွေအတွက်ပါ။ တစ်ယောက်ယောက် နောက်ကျရင် 'angry' ဖြစ်နိုင်ပေမဲ့၊ ကိုယ့်ကားကို တိုက်သွားရင်တော့ 'furious' ဖြစ်မှာပါ။",
+      "goes_with_en": "furious with + someone · furious about / at + something · absolutely furious · a furious debate",
+      "goes_with_note_en": "Pairs with 'with' for people and 'about' or 'at' for situations.",
+      "goes_with_note_mm": "လူဆိုရင် 'with' နဲ့၊ အခြေအနေဆိုရင် 'about' ဒါမှမဟုတ် 'at' နဲ့ တွဲသုံးလေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "She was {w}furious{/w} {c}with{/c} him for lying.",
+          "mm": "သူမက လိမ်ညာတဲ့အတွက် သူ့ကို အရမ်းဒေါသထွက်နေတယ်။"
+        },
+        {
+          "en": "He was {c}absolutely{/c} {w}furious{/w} when he saw the damage.",
+          "mm": "ပျက်စီးသွားတာကို မြင်လိုက်ရတော့ သူ ဒေါသပေါက်ကွဲသွားတယ်။"
+        },
+        {
+          "en": "I'm {w}furious{/w} {c}about{/c} the way I've been treated.",
+          "mm": "ကျွန်တော့်ကို ဆက်ဆံတဲ့ပုံစံအတွက် အရမ်းဒေါသထွက်တယ်။"
+        },
+        {
+          "en": "There was a {w}furious{/w} {c}debate{/c} over the new policy.",
+          "mm": "မူဝါဒအသစ်နဲ့ပတ်သက်ပြီး ပြင်းပြင်းထန်ထန် အငြင်းအခုံ ဖြစ်ခဲ့ကြတယ်။"
+        },
+        {
+          "en": "My dad will be {w}furious{/w} {c}when{/c} he finds out I broke the window.",
+          "mm": "မှန်ကို ကျွန်တော်ခွဲလိုက်တာ အဖေသိရင် ဒေါသတွေပွက်ပွက်ဆူတော့မှာပဲ။"
+        }
+      ],
+      "collocations": [
+        "furious with someone",
+        "furious about something",
+        "absolutely furious"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "freezing",
+      "pos": "adjective",
+      "ipa": "/ˈfriː.zɪŋ/",
+      "short_en": "very cold",
+      "short_mm": "အရမ်းအေးတယ် / ခဲမတတ်အေးတယ်",
+      "use_when_en": "When the temperature is extremely low, or you feel uncomfortably cold.",
+      "use_when_mm": "အပူချိန် အရမ်းနိမ့်နေတဲ့အခါ ဒါမှမဟုတ် ကိုယ်တိုင်က အေးလွန်းလို့ မခံနိုင်တဲ့အခါ သုံးပါတယ်။",
+      "explanation_en": "This is the strong version of 'cold'. It can describe the weather or how a person feels.",
+      "explanation_mm": "'cold' ရဲ့ အားကောင်းတဲ့ ပုံစံပါ။ ရာသီဥတုကို ဖော်ပြဖို့ရော၊ လူတစ်ယောက်ရဲ့ ခံစားချက်ကို ပြောဖို့ရော သုံးနိုင်ပါတယ်။",
+      "nuance_en": "Often used informally and with a bit of exaggeration. 'I'm freezing!' is common even inside an air-conditioned room.",
+      "nuance_mm": "Informal အသုံးများပြီး နည်းနည်းပိုပြောတဲ့သဘော ပါတတ်တယ်။ Air-con ခန်းထဲမှာတောင် 'I'm freezing!' လို့ ပြောလေ့ရှိကြတယ်။",
+      "goes_with_en": "it's freezing · freezing cold · absolutely freezing · freezing fog",
+      "goes_with_note_en": "Often used as 'it's freezing' to talk about the weather, or 'I'm freezing' for how you feel.",
+      "goes_with_note_mm": "ရာသီဥတုအကြောင်းပြောရင် 'it's freezing'၊ ကိုယ့်ခံစားချက်ကိုပြောရင် 'I'm freezing' ဆိုပြီး သုံးလေ့ရှိတယ်။",
+      "examples": [
+        {
+          "en": "Put on a coat, it's {w}freezing{/w} {c}outside{/c}!",
+          "mm": "အပြင်မှာ ခဲမတတ်အေးနေတာ၊ အနွေးထည်ဝတ်သွား။"
+        },
+        {
+          "en": "Can you close the window? I'm {c}absolutely{/c} {w}freezing{/w}.",
+          "mm": "ပြတင်းပေါက် ပိတ်ပေးလို့ရမလား။ ကျွန်တော် အေးခဲတော့မယ်။"
+        },
+        {
+          "en": "The water in the lake was {w}freezing{/w} {c}cold{/c}.",
+          "mm": "ကန်ထဲကရေက ရေခဲရေလိုပဲ အေးစက်နေတာ။"
+        },
+        {
+          "en": "We drove through thick, {w}freezing{/w} {c}fog{/c}.",
+          "mm": "ကျွန်တော်တို့တွေ ခဲမတတ်အေးတဲ့ မြူတွေထူထပ်နေတဲ့ကြားက ကားမောင်းခဲ့ရတယ်။"
+        },
+        {
+          "en": "My hands are {w}freezing{/w}—I forgot my {c}gloves{/c}.",
+          "mm": "လက်အိတ်မေ့ကျန်ခဲ့လို့ ကျွန်တော့်လက်တွေ အေးခဲနေပြီ။"
+        }
+      ],
+      "collocations": [
+        "it's freezing",
+        "freezing cold",
+        "absolutely freezing"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "starving",
+      "pos": "adjective",
+      "ipa": "/ˈstɑː.vɪŋ/",
+      "short_en": "very hungry",
+      "short_mm": "အရမ်းဗိုက်ဆာတယ် / ဆာလောင်မွတ်သိပ်နေတယ်",
+      "use_when_en": "Informally, to say you are extremely hungry. It's a common exaggeration.",
+      "use_when_mm": "Informal အသုံးပါ။ အရမ်းဗိုက်ဆာတယ်လို့ ပြောချင်တဲ့အခါ သုံးပါတယ်။ ပုံမှန်သုံးနေကျ ပိုပိုသာသာ ပြောတဲ့ စကားလုံးတစ်ခုပါ။",
+      "explanation_en": "In everyday speech, this replaces 'very hungry'. The literal meaning is 'dying from lack of food', but we use it much more lightly.",
+      "explanation_mm": "နေ့စဉ်စကားပြောမှာ 'very hungry' အစား သုံးပါတယ်။ သူ့ရဲ့ တိုက်ရိုက်အဓိပ္ပာယ်က 'အစာငတ်လို့ သေဆုံးခြင်း' ဖြစ်ပေမဲ့၊ ပေါ့ပေါ့ပါးပါးပဲ သုံးကြတာများပါတယ်။",
+      "nuance_en": "Very common in speech, but sounds too informal for formal writing. Don't use it in a formal report.",
+      "nuance_mm": "စကားပြောမှာ အရမ်းအသုံးများပေမဲ့ စာရေးတဲ့အခါ သိပ်မသုံးသင့်ပါဘူး။ Formal report တွေမှာ ရှောင်ပါ။",
+      "goes_with_en": "I'm starving · absolutely starving · starving to death · starving for + something (figurative)",
+      "goes_with_note_en": "Usually used in the first person: 'I'm starving'. Can also be used figuratively, like 'starving for attention'.",
+      "goes_with_note_mm": "များသောအားဖြင့် 'I'm starving' ဆိုပြီး ကိုယ့်အကြောင်းပြောတဲ့အခါ သုံးပါတယ်။ တင်စားပြီးတော့လည်း သုံးလို့ရပါတယ်။ ဥပမာ - 'starving for attention' (ဂရုစိုက်ခံချင်စိတ် ပြင်းပြနေတာ)။",
+      "examples": [
+        {
+          "en": "What's for dinner? I'm {w}starving{/w}!",
+          "mm": "ညစာ ဘာဟင်းလဲ။ ကျွန်တော် အရမ်းဗိုက်ဆာနေပြီ။"
+        },
+        {
+          "en": "Let's get some {c}food{/c}, I'm {c}absolutely{/c} {w}starving{/w}.",
+          "mm": "တစ်ခုခု သွားစားရအောင်၊ ငါ ဆာလွန်းလို့ သေတော့မယ်။"
+        },
+        {
+          "en": "I haven't eaten {c}all day{/c} and I'm {w}starving{/w}.",
+          "mm": "တစ်နေကုန် ဘာမှမစားရသေးတော့ ဗိုက်အရမ်းဆာနေပြီ။"
+        },
+        {
+          "en": "The kids are always {w}starving{/w} when they get home from {c}school{/c}.",
+          "mm": "ကလေးတွေက ကျောင်းကပြန်လာရင် အမြဲတမ်း ဗိုက်ဆာနေကြတာပဲ။"
+        },
+        {
+          "en": "Can we eat soon? I'm {w}starving{/w} {c}to death{/c}!",
+          "mm": "မကြာခင် စားလို့ရမလား။ ဗိုက်ဆာလွန်းလို့ သေတော့မယ်။"
+        }
+      ],
+      "collocations": [
+        "I'm starving",
+        "absolutely starving",
+        "starving to death"
+      ],
+      "confuse_with": []
+    },
+    {
+      "word": "delighted",
+      "pos": "adjective",
+      "ipa": "/dɪˈlaɪ.tɪd/",
+      "short_en": "very happy or pleased",
+      "short_mm": "အရမ်းဝမ်းသာတယ် / ပျော်ရွှင်ကြည်နူးတယ်",
+      "use_when_en": "When you want to express strong happiness, often in response to good news. It sounds warm and slightly polite.",
+      "use_when_mm": "သတင်းကောင်းတစ်ခုခုကြားလို့ အရမ်းပျော်တဲ့အကြောင်း ပြောချင်တဲ့အခါ သုံးပါတယ်။ နွေးထွေးပြီး ယဉ်ကျေးတဲ့ ခံစားမှုလေး ပေးပါတယ်။",
+      "explanation_en": "Stronger and more expressive than 'happy'. Often used when something has happened that pleases you.",
+      "explanation_mm": "'happy' ထက် ပိုအားကောင်းပြီး ခံစားချက်ကို ပိုဖော်ပြနိုင်ပါတယ်။ ကိုယ့်ကို ပျော်စေတဲ့ အကြောင်းအရာတစ်ခုခု ဖြစ်လာတဲ့အခါ သုံးလေ့ရှိတယ်။",
+      "nuance_en": "It's polite and can be used in both formal and informal situations. 'I'm delighted to meet you' is a warm alternative to 'Nice to meet you'.",
+      "nuance_mm": "ယဉ်ကျေးတဲ့ အသုံးအနှုန်းဖြစ်လို့ formal ရော informal မှာပါ သုံးနိုင်ပါတယ်။ 'I'm delighted to meet you' က 'Nice to meet you' ထက် ပိုနွေးထွေးတဲ့ နှုတ်ဆက်စကားပါ။",
+      "goes_with_en": "delighted to + verb · delighted with / by / at + something · absolutely delighted · delighted to hear...",
+      "goes_with_note_en": "Often followed by 'to' and a verb, or 'with'/'by' and a noun.",
+      "goes_with_note_mm": "နောက်ကနေ 'to' + verb ဒါမှမဟုတ် 'with'/'by' + noun လိုက်လေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "I'm {w}delighted{/w} {c}to hear{/c} your good news!",
+          "mm": "မင်းရဲ့ သတင်းကောင်းကို ကြားရတာ အရမ်းဝမ်းသာတာပဲ။"
+        },
+        {
+          "en": "She was {w}delighted{/w} {c}with{/c} her exam results.",
+          "mm": "သူမက သူ့ရဲ့ စာမေးပွဲရလဒ်အတွက် အရမ်းကို ပျော်နေတယ်။"
+        },
+        {
+          "en": "We would be {w}delighted{/w} {c}to accept{/c} your invitation.",
+          "mm": "သင့်ရဲ့ ဖိတ်ကြားမှုကို လက်ခံရတဲ့အတွက် ကျွန်တော်တို့ အလွန်ပဲ ဝမ်းမြောက်မိပါတယ်။"
+        },
+        {
+          "en": "He was {c}absolutely{/c} {w}delighted{/w} with the gift.",
+          "mm": "သူက လက်ဆောင်ကို ရတော့ အရမ်းကို ပျော်သွားတယ်။"
+        },
+        {
+          "en": "They were {w}delighted{/w} {c}that{/c} so many people came to their wedding.",
+          "mm": "သူတို့ရဲ့ မင်္ဂလာပွဲကို လူအများကြီးလာတဲ့အတွက် အရမ်းကို ဝမ်းသာကြည်နူးနေကြတယ်။"
+        }
+      ],
+      "collocations": [
+        "delighted to hear",
+        "delighted with",
+        "absolutely delighted"
+      ],
+      "confuse_with": []
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "After running a marathon, I feel ___.",
+      "right": "exhausted",
+      "wrong": "furious",
+      "why": "The context is physical tiredness, not anger.",
+      "why_mm": "မာရသွန်ပြေးပြီးရင် ပင်ပန်းမှာပဲလေ။ ဒေါသထွက်မှာ မဟုတ်ဘူး။"
+    },
+    {
+      "prompt": "He was ___ when he found out his best friend had lied to him.",
+      "right": "furious",
+      "wrong": "delighted",
+      "why": "Betrayal causes anger (furious), not happiness (delighted).",
+      "why_mm": "သစ္စာဖောက်ခံရရင် ဒေါသထွက်မှာပေါ့။ ပျော်နေမှာ မဟုတ်ဘူး။"
+    },
+    {
+      "prompt": "I forgot my jacket and now I'm ___!",
+      "right": "freezing",
+      "wrong": "starving",
+      "why": "Forgetting a jacket makes you cold (freezing), not hungry (starving).",
+      "why_mm": "အနွေးထည်မေ့ကျန်ခဲ့ရင် အေးမှာပေါ့။ ဗိုက်ဆာမှာ မဟုတ်ဘူး။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "When I heard I got the promotion, I was absolutely ___.",
+      "answer": "delighted",
+      "options": [
+        "delighted",
+        "exhausted",
+        "furious"
+      ],
+      "explain_en": "Good news causes happiness. 'Delighted' is the perfect word for being very pleased.",
+      "explain_mm": "သတင်းကောင်းကြားရင် ပျော်ရွှင်မှုကို ဖော်ပြတဲ့ 'delighted' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Turn up the heating! It's ___ in here.",
+      "answer": "freezing",
+      "options": [
+        "starving",
+        "freezing",
+        "furious"
+      ],
+      "explain_en": "The context is about temperature. 'Freezing' means very cold.",
+      "explain_mm": "အခန်းအပူချိန်နဲ့ ပတ်သက်တာမို့ 'အေးခဲနေတယ်' လို့ အဓိပ္ပာယ်ရတဲ့ 'freezing' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "She was ___ with her son for breaking the expensive vase.",
+      "answer": "furious",
+      "options": [
+        "delighted",
+        "exhausted",
+        "furious"
+      ],
+      "explain_en": "Breaking something valuable would make a parent very angry, or 'furious'.",
+      "explain_mm": "တန်ဖိုးကြီးပစ္စည်းတစ်ခုခုကို ခွဲလိုက်ရင် မိဘက အရမ်းဒေါသထွက်မှာမို့ 'furious' က အသင့်တော်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I haven't eaten since breakfast. I'm ___!",
+      "answer": "starving",
+      "options": [
+        "starving",
+        "freezing",
+        "delighted"
+      ],
+      "explain_en": "Not eating for a long time makes you very hungry, or 'starving'.",
+      "explain_mm": "အချိန်အကြာကြီး အစာမစားရရင် အရမ်းဗိုက်ဆာမှာဖြစ်လို့ 'starving' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "After studying for 10 hours straight, he was completely ___.",
+      "answer": "exhausted",
+      "options": [
+        "exhausted",
+        "furious",
+        "starving"
+      ],
+      "explain_en": "Long periods of hard work lead to being very tired, or 'exhausted'.",
+      "explain_mm": "အချိန်အကြာကြီး အလုပ်လုပ်တာ၊ စာကျက်တာတွေက အရမ်းပင်ပန်းစေတဲ့အတွက် 'exhausted' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We are ___ to announce the birth of our daughter.",
+      "answer": "delighted",
+      "options": [
+        "freezing",
+        "delighted",
+        "furious"
+      ],
+      "explain_en": "Announcing a birth is a very happy occasion, so 'delighted' is the best fit.",
+      "explain_mm": "ကလေးမွေးတဲ့အကြောင်း ကြေညာတာက အရမ်းပျော်စရာကောင်းတဲ့ အခါသမယမို့ 'delighted' က အလိုက်ဖက်ဆုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "He was ___ about the terrible service at the restaurant.",
+      "answer": "furious",
+      "options": [
+        "furious",
+        "exhausted",
+        "delighted"
+      ],
+      "explain_en": "Bad service makes customers very angry. 'Furious' expresses that strong anger.",
+      "explain_mm": "ဝန်ဆောင်မှုမကောင်းရင် ဒေါသထွက်တတ်ကြတာမို့ ပြင်းထန်တဲ့ဒေါသကို ဖော်ပြတဲ့ 'furious' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I worked a double shift yesterday, so today I'm ___.",
+      "answer": "exhausted",
+      "options": [
+        "starving",
+        "exhausted",
+        "freezing"
+      ],
+      "explain_en": "Working twice the normal hours is very tiring. 'Exhausted' is the right word.",
+      "explain_mm": "နှစ်ဆိုင်းဆက်တိုက် အလုပ်ဆင်းတာက အရမ်းပင်ပန်းစေတဲ့အတွက် 'exhausted' က အမှန်ကန်ဆုံးအဖြေပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It's snowing outside and the wind is blowing. It must be ___.",
+      "answer": "freezing",
+      "options": [
+        "freezing",
+        "starving",
+        "exhausted"
+      ],
+      "explain_en": "Snow and wind are signs of very cold weather, which is 'freezing'.",
+      "explain_mm": "နှင်းကျပြီး လေတိုက်နေတာက အရမ်းအေးတဲ့ ရာသီဥတုရဲ့ လက္ခဏာဖြစ်လို့ 'freezing' ကို သုံးရပါမယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "What time is lunch? I'm ___ to death!",
+      "answer": "starving",
+      "options": [
+        "delighted",
+        "furious",
+        "starving"
+      ],
+      "explain_en": "'Starving to death' is a common, informal phrase for being very hungry.",
+      "explain_mm": "'Starving to death' ဆိုတာ အရမ်းဗိုက်ဆာတယ်လို့ ပြောတဲ့ အသုံးများတဲ့ informal စကားစုတစ်ခုပါ။"
+    }
+  ]
+}

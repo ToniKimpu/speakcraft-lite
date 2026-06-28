@@ -1,0 +1,318 @@
+{
+  "id": "delexical_verbs",
+  "title": "make, do, have or take?",
+  "level": 2,
+  "order": 301,
+  "theme": "Collocations",
+  "style": "contrast",
+  "unit": "word",
+  "why_grouped_en": "These four common verbs have very little meaning on their own; the noun that follows decides which one is right. Learners often confuse them (e.g., 'do a mistake'), so it's essential to learn their fixed pairings.",
+  "why_grouped_mm": "ဒီ verb လေးခုက သူ့ဘာသာသူဆို အဓိပ္ပာယ်သိပ်မရှိပါဘူး။ သူ့နောက်ကလိုက်တဲ့ noun ပေါ်မူတည်ပြီး ဘယ် verb ကို သုံးရမလဲဆိုတာ ကွဲသွားတာပါ။ သင်တန်းသားတွေက ဒါတွေကို မှားသုံးတတ်ကြလို့ (ဥပမာ 'do a mistake') သူတို့ရဲ့ တွဲလုံးမှန်တွေကို လေ့လာထားဖို့ အရေးကြီးပါတယ်။",
+  "words": [
+    {
+      "word": "make",
+      "pos": "verb",
+      "ipa": "/meɪk/",
+      "short_en": "to produce or create a result",
+      "short_mm": "ရလဒ်တစ်ခုခုကို ဖန်တီး/ထုတ်လုပ်သည်",
+      "use_when_en": "When you are creating, building, or producing something that wasn't there before, including results, reactions, and plans.",
+      "use_when_mm": "အရင်ကမရှိသေးတဲ့ အရာတစ်ခုခုကို ဖန်တီးတာ၊ တည်ဆောက်တာ၊ ထုတ်လုပ်တာမျိုးမှာ သုံးပါတယ်။ ရလဒ်တွေ၊ တုံ့ပြန်မှုတွေ၊ အစီအစဉ်တွေအတွက်လည်း သုံးနိုင်တယ်။",
+      "explanation_en": "Think of 'make' as causing a new result or object to exist. This can be physical (make a cake) or abstract (make a decision). The focus is on the product or outcome.",
+      "explanation_mm": "'make' က ရလဒ်အသစ် ဒါမှမဟုတ် ပစ္စည်းအသစ်တစ်ခုကို ဖြစ်ပေါ်စေတယ်လို့ မှတ်ထားပါ။ ကိတ်မုန့်လုပ်တာလိုမျိုး grepp (make a cake) ဖြစ်နိုင်သလို၊ ဆုံးဖြတ်ချက်ချတာလိုမျိုး grepp မဟုတ်တဲ့အရာ (make a decision) လည်း ဖြစ်နိုင်ပါတယ်။ အဓိကက ရလဒ်ကို အာရုံစိုက်တာပါ။",
+      "nuance_en": "Focuses on the output or result of an action.",
+      "nuance_mm": "လုပ်ဆောင်ချက်ရဲ့ ရလဒ် (output/outcome) ကို အဓိကပြောချင်တာပါ။",
+      "goes_with_en": "make a decision, a mistake, plans, an effort, money, friends, a noise, a promise, a difference, a suggestion",
+      "goes_with_note_en": "Often pairs with nouns about results, plans, and communication.",
+      "goes_with_note_mm": "ရလဒ်၊ အစီအစဉ်၊ ဆက်သွယ်ပြောဆိုခြင်းနဲ့ဆိုင်တဲ့ noun တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "We need to {w}make{/w} a {c}decision{/c} by tomorrow.",
+          "mm": "ငါတို့ မနက်ဖြန်အမီ ဆုံးဖြတ်ချက်တစ်ခု ချဖို့လိုတယ်။"
+        },
+        {
+          "en": "Don't worry, everyone {w}makes{/w} {c}mistakes{/c}.",
+          "mm": "စိတ်မပူပါနဲ့၊ လူတိုင်း အမှားလုပ်တတ်ကြတာပဲ။"
+        },
+        {
+          "en": "I'm trying to {w}make{/w} an {c}effort{/c} to exercise more.",
+          "mm": "ကျွန်တော် လေ့ကျင့်ခန်းပိုလုပ်ဖို့ ကြိုးစားနေတယ်။"
+        },
+        {
+          "en": "It's sometimes hard to {w}make{/w} new {c}friends{/c} as an adult.",
+          "mm": "လူကြီးတစ်ယောက်အနေနဲ့ သူငယ်ချင်းအသစ်တွေဖွဲ့ဖို့က တစ်ခါတလေ ခက်ခဲပါတယ်။"
+        },
+        {
+          "en": "Could you {w}make{/w} a {c}suggestion{/c} on where to eat?",
+          "mm": "ဘယ်မှာစားရင်ကောင်းမလဲ အကြံဉာဏ်လေးတစ်ခုလောက် ပေးလို့ရမလား။"
+        }
+      ],
+      "collocations": [
+        "make a decision",
+        "make a mistake",
+        "make an effort"
+      ],
+      "confuse_with": [
+        "do"
+      ]
+    },
+    {
+      "word": "do",
+      "pos": "verb",
+      "ipa": "/duː/",
+      "short_en": "to perform an activity or task",
+      "short_mm": "လုပ်ဆောင်မှု/အလုပ်တစ်ခုကို လုပ်သည်",
+      "use_when_en": "For tasks, jobs, and activities that don't produce a new physical object. It focuses on the process of acting.",
+      "use_when_mm": "အရာဝတ္ထုအသစ် ထွက်မလာတဲ့ အလုပ်တွေ၊ တာဝန်တွေ၊ လုပ်ဆောင်မှုတွေအတွက် သုံးပါတယ်။ လုပ်နေတဲ့ process ကို အဓိကထားပါတယ်။",
+      "explanation_en": "'Do' is about the action itself. We use it for general activities (do something) and for specific duties or work (do homework, do a job). The focus is on the performance.",
+      "explanation_mm": "'Do' ဆိုတာ လုပ်ဆောင်ချက်ကိုယ်တိုင်ကို ပြောတာပါ။ ယေဘုယျလုပ်ဆောင်မှုတွေ (do something) နဲ့ တိကျတဲ့တာဝန်တွေ၊ အလုပ်တွေ (do homework, do a job) အတွက် သုံးပါတယ်။ လုပ်ဆောင်မှုအပိုင်းကို အဓိကထားပါတယ်။",
+      "nuance_en": "Focuses on the process or performance of an action, not the result.",
+      "nuance_mm": "ရလဒ်ကိုမဟုတ်ဘဲ လုပ်ဆောင်နေတဲ့ process ကို အဓိကထားတယ်။",
+      "goes_with_en": "do homework, the housework, a job, business, your best, a favour, research, harm, good, exercise",
+      "goes_with_note_en": "Pairs with nouns about work, chores, and general actions.",
+      "goes_with_note_mm": "အလုပ်၊ အိမ်မှုကိစ္စ နဲ့ ယေဘုယျလုပ်ဆောင်မှုတွေနဲ့ဆိုင်တဲ့ noun တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "Have you {w}done{/w} your {c}homework{/c} yet?",
+          "mm": "မင်း အိမ်စာလုပ်ပြီးပြီလား။"
+        },
+        {
+          "en": "I have to {w}do{/w} the {c}housework{/c} this weekend.",
+          "mm": "ဒီပိတ်ရက်မှာ ကျွန်တော် အိမ်မှုကိစ္စတွေ လုပ်ရမယ်။"
+        },
+        {
+          "en": "Could you {w}do{/w} me a {c}favour{/c} and watch my bag?",
+          "mm": "ကျွန်တော့်ကို အကူအညီတစ်ခုလောက်ပေးပြီး အိတ်ခဏကြည့်ပေးလို့ရမလား။"
+        },
+        {
+          "en": "Just {w}do{/w} your {c}best{/c}; that's all anyone can ask.",
+          "mm": "ကိုယ့်ဘက်က အကောင်းဆုံးသာလုပ်၊ ဒါပဲ တောင်းဆိုစရာရှိတာ။"
+        },
+        {
+          "en": "We {w}do{/w} a lot of {c}business{/c} with companies in Japan.",
+          "mm": "ကျွန်တော်တို့ ဂျပန်ကုမ္ပဏီတွေနဲ့ စီးပွားရေးလုပ်ငန်းတွေ အများကြီးလုပ်ပါတယ်။"
+        }
+      ],
+      "collocations": [
+        "do homework",
+        "do a favour",
+        "do your best"
+      ],
+      "confuse_with": [
+        "make"
+      ]
+    },
+    {
+      "word": "have",
+      "pos": "verb",
+      "ipa": "/hæv/",
+      "short_en": "to experience something",
+      "short_mm": "တစ်စုံတစ်ခုကို တွေ့ကြုံခံစားသည်",
+      "use_when_en": "For experiences, meals, drinks, and conversations. It's often used for things that happen to you or that you participate in.",
+      "use_when_mm": "အတွေ့အကြုံ၊ အစားအသောက်၊ စကားပြောဆိုမှုတွေအတွက် သုံးပါတယ်။ ကိုယ်တိုင်ပါဝင်ခံစားရတဲ့ အရာတွေအတွက် အသုံးများပါတယ်။",
+      "explanation_en": "Instead of 'eat', 'drink', or 'experience', we often use 'have' with a noun. For example, 'have a meal' is more common than 'eat a meal'. It often describes a state or a routine.",
+      "explanation_mm": "'eat', 'drink', 'experience' လို့ တိုက်ရိုက်ပြောမယ့်အစား 'have' နဲ့ noun ကို တွဲသုံးတာက ပို natural ဖြစ်ပါတယ်။ ဥပမာ 'eat a meal' ထက် 'have a meal' က ပိုအသုံးများပါတယ်။ အခြေအနေတစ်ခု ဒါမှမဟုတ် နေ့စဉ်လုပ်နေကျအရာတွေကို ဖော်ပြလေ့ရှိပါတယ်။",
+      "nuance_en": "Often suggests a more relaxed or routine experience compared to 'take'.",
+      "nuance_mm": "'take' နဲ့ယှဉ်ရင် ပိုပြီး အေးဆေးသက်သာတဲ့၊ ဒါမှမဟုတ် ပုံမှန်လုပ်နေကျ ခံစားမှုမျိုး သက်ရောက်တယ်။",
+      "goes_with_en": "have a shower, a break, a meal, fun, a look, a rest, a chat, a drink, a party, a good time",
+      "goes_with_note_en": "Pairs with nouns about routines, relaxation, food, and social events.",
+      "goes_with_note_mm": "နေ့စဉ်လုပ်ငန်းဆောင်တာ၊ အပန်းဖြေခြင်း၊ အစားအသောက်၊ လူမှုရေးပွဲတွေနဲ့ဆိုင်တဲ့ noun တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "I'm going to {w}have{/w} a quick {c}shower{/c} before we go out.",
+          "mm": "အပြင်မသွားခင် ရေမြန်မြန်ချိုးလိုက်ဦးမယ်။"
+        },
+        {
+          "en": "Let's {w}have{/w} a {c}break{/c} for coffee.",
+          "mm": "ကော်ဖီသောက်ဖို့ ခဏနားရအောင်။"
+        },
+        {
+          "en": "We {w}had{/w} so much {c}fun{/c} at the party last night.",
+          "mm": "မနေ့ညက ပါတီမှာ ငါတို့ အရမ်းပျော်ခဲ့တယ်။"
+        },
+        {
+          "en": "Can I {w}have{/w} a {c}look{/c} at your new phone?",
+          "mm": "မင်းရဲ့ဖုန်းအသစ်ကို တစ်ချက်လောက် ကြည့်လို့ရမလား။"
+        },
+        {
+          "en": "We should {w}have{/w} a {c}chat{/c} about this later.",
+          "mm": "ငါတို့ ဒီအကြောင်း နောက်မှ စကားပြောသင့်တယ်။"
+        }
+      ],
+      "collocations": [
+        "have a shower",
+        "have a break",
+        "have fun"
+      ],
+      "confuse_with": [
+        "take"
+      ]
+    },
+    {
+      "word": "take",
+      "pos": "verb",
+      "ipa": "/teɪk/",
+      "short_en": "to perform an action that requires time or effort",
+      "short_mm": "အချိန်/အားစိုက်မှု လိုအပ်သည့် လုပ်ဆောင်ချက်ကို လုပ်သည်",
+      "use_when_en": "For actions where you actively participate or which take a certain amount of time. It often implies a more deliberate action than 'have'.",
+      "use_when_mm": "ကိုယ်တိုင်တက်ကြွစွာ ပါဝင်လုပ်ဆောင်ရတဲ့ ဒါမှမဟုတ် အချိန်အတိုင်းအတာတစ်ခုကြာတဲ့ လုပ်ဆောင်ချက်တွေအတွက် သုံးပါတယ်။ 'have' ထက် ပိုပြီး ရည်ရွယ်ချက်ရှိရှိ လုပ်ဆောင်တဲ့သဘောမျိုး သက်ရောက်ပါတယ်။",
+      "explanation_en": "'Take' often suggests that you are performing a specific action (take a photo) or accepting something (take a seat). It's also used for actions that have a duration.",
+      "explanation_mm": "'Take' က တိကျတဲ့လုပ်ဆောင်ချက်တစ်ခုကို လုပ်တဲ့သဘော (take a photo) ဒါမှမဟုတ် လက်ခံလိုက်တဲ့သဘော (take a seat) မျိုးမှာ သုံးပါတယ်။ အချိန်ကြာတဲ့ လုပ်ဆောင်ချက်တွေအတွက်လည်း သုံးနိုင်ပါတယ်။",
+      "nuance_en": "More active and deliberate than 'have'. 'Take a break' feels more like a decision you made, while 'have a break' is more about the experience.",
+      "nuance_mm": "'have' ထက် ပိုပြီး active ဖြစ်တယ်။ 'Take a break' က ကိုယ်တိုင်ဆုံးဖြတ်ပြီး နားလိုက်တဲ့ ခံစားချက်မျိုးရပြီး 'have a break' ကတော့ အနားယူချိန်ကို ခံစားတာမျိုးပါ။",
+      "goes_with_en": "take a photo, a break, a seat, a risk, your time, notes, an exam, a look, a taxi, a chance",
+      "goes_with_note_en": "Pairs with nouns about transport, time, tests, and active choices.",
+      "goes_with_note_mm": "သယ်ယူပို့ဆောင်ရေး၊ အချိန်၊ စာမေးပွဲ နဲ့ တက်ကြွတဲ့ ရွေးချယ်မှုတွေနဲ့ဆိုင်တဲ့ noun တွေနဲ့ တွဲသုံးလေ့ရှိပါတယ်။",
+      "examples": [
+        {
+          "en": "Could you {w}take{/w} a {c}photo{/c} of us, please?",
+          "mm": "ကျွန်တော်တို့ကို ဓာတ်ပုံတစ်ပုံလောက် ရိုက်ပေးလို့ရမလား။"
+        },
+        {
+          "en": "The project is difficult, so {w}take{/w} your {c}time{/c}.",
+          "mm": "ဒီပရောဂျက်က ခက်တယ်၊ ဒါကြောင့် အချိန်ယူပြီးလုပ်ပါ။"
+        },
+        {
+          "en": "I need to {w}take{/w} some {c}notes{/c} during the meeting.",
+          "mm": "အစည်းအဝေးအတွင်းမှာ ကျွန်တော် မှတ်စုတချို့ ရေးမှတ်ဖို့လိုတယ်။"
+        },
+        {
+          "en": "He decided to {w}take{/w} a {c}risk{/c} and start his own business.",
+          "mm": "သူက စွန့်စားပြီး ကိုယ်ပိုင်လုပ်ငန်းတစ်ခု စတင်ဖို့ ဆုံးဖြတ်ခဲ့တယ်။"
+        },
+        {
+          "en": "Please {w}take{/w} a {c}seat{/c} and the doctor will be with you shortly.",
+          "mm": "ကျေးဇူးပြုပြီး ထိုင်ပါ၊ ဆရာဝန် ခဏနေရင် ရောက်လာပါလိမ့်မယ်။"
+        }
+      ],
+      "collocations": [
+        "take a photo",
+        "take a break",
+        "take notes"
+      ],
+      "confuse_with": [
+        "have"
+      ]
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "prompt": "I need to ___ a decision about my future.",
+      "right": "make",
+      "wrong": "do",
+      "why": "Decisions are results you create, so we 'make' them. 'Do' is for performing tasks.",
+      "why_mm": "ဆုံးဖြတ်ချက် (decision) ဆိုတာက ဖန်တီးလိုက်တဲ့ ရလဒ်တစ်ခုဖြစ်လို့ 'make' နဲ့ပဲ သုံးရတယ်။ 'do' က အလုပ်/တာဝန်တွေအတွက်ပါ။"
+    },
+    {
+      "prompt": "She asked me to ___ her a favour.",
+      "right": "do",
+      "wrong": "make",
+      "why": "'Do someone a favour' is a fixed expression for a helpful action. We don't 'make' favours.",
+      "why_mm": "'Do someone a favour' ဆိုတာက အကူအညီပေးတဲ့ လုပ်ဆောင်ချက်အတွက်သုံးတဲ့ သတ်မှတ်ထားတဲ့ စကားစုပါ။ 'make' a favour လို့ မသုံးပါဘူး။"
+    },
+    {
+      "prompt": "I always ___ notes in class to help me remember.",
+      "right": "take",
+      "wrong": "have",
+      "why": "'Take notes' is a fixed phrase for the active process of writing. 'Have notes' means you possess them.",
+      "why_mm": "'Take notes' ဆိုတာက စာလိုက်ရေးတဲ့ active process အတွက်သုံးတဲ့ စကားစုပါ။ 'Have notes' ဆိုရင် မှတ်စုတွေ ကိုယ့်မှာရှိတယ်လို့ အဓိပ္ပာယ်ရသွားပါမယ်။"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "which_word",
+      "prompt": "I think I ___ a mistake in my calculation.",
+      "answer": "made",
+      "options": [
+        "made",
+        "did",
+        "took"
+      ],
+      "explain_en": "'Make a mistake' is a fixed collocation. We create a mistake, so we use 'make'.",
+      "explain_mm": "'Make a mistake' ဆိုတာက သတ်မှတ်ထားတဲ့ တွဲလုံးပါ။ အမှားတစ်ခုကို ဖန်တီးလိုက်တာမို့ 'make' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "What kind of work do you ___ for a living?",
+      "answer": "do",
+      "options": [
+        "do",
+        "make",
+        "have"
+      ],
+      "explain_en": "For jobs and general work activities, we use 'do'. 'Do work' is the correct pairing.",
+      "explain_mm": "အလုပ်အကိုင်နဲ့ ယေဘုယျလုပ်ငန်းဆောင်တာတွေအတွက် 'do' ကို သုံးပါတယ်။ 'Do work' က တွဲလုံးမှန်ပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "I usually ___ a big breakfast in the morning.",
+      "answer": "have",
+      "options": [
+        "have",
+        "take",
+        "do"
+      ],
+      "explain_en": "For meals (breakfast, lunch, dinner), we use 'have'. It means 'to eat'.",
+      "explain_mm": "အစားအစာတွေ (breakfast, lunch, dinner) အတွက် 'have' ကို သုံးပါတယ်။ 'eat' လို့ အဓိပ္ပာယ်ရပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "You should ___ a look at this report; it's very interesting.",
+      "answer": "take",
+      "options": [
+        "take",
+        "make",
+        "do"
+      ],
+      "explain_en": "'Take a look' is a common phrase meaning 'to look at something'.",
+      "explain_mm": "'Take a look' ဆိုတာက 'တစ်ခုခုကို ကြည့်လိုက်ပါ' လို့ အဓိပ္ပာယ်ရတဲ့ အသုံးများတဲ့ စကားစုပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "We need to ___ plans for the weekend trip.",
+      "answer": "make",
+      "options": [
+        "make",
+        "do",
+        "have"
+      ],
+      "explain_en": "We create plans, so the correct verb is 'make'. 'Make plans' is a fixed collocation.",
+      "explain_mm": "အစီအစဉ်တွေကို ဖန်တီးရတာဖြစ်လို့ verb အမှန်က 'make' ပါ။ 'Make plans' ဆိုတာက သတ်မှတ်ထားတဲ့ တွဲလုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Did you ___ fun at the concert last night?",
+      "answer": "have",
+      "options": [
+        "have",
+        "make",
+        "do"
+      ],
+      "explain_en": "For experiences like 'fun', we use 'have'. The collocation is 'have fun'.",
+      "explain_mm": "'fun' လိုမျိုး အတွေ့အကြုံတွေအတွက် 'have' ကို သုံးပါတယ်။ 'have fun' ဆိုတာက တွဲလုံးပါ။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "It's getting late, let's ___ a taxi home.",
+      "answer": "take",
+      "options": [
+        "take",
+        "have",
+        "make"
+      ],
+      "explain_en": "For forms of transport like a taxi, bus, or train, we use 'take'.",
+      "explain_mm": "တက္ကစီ၊ ဘတ်စ်ကား၊ ရထားလိုမျိုး သယ်ယူပို့ဆောင်ရေးယာဉ်တွေအတွက် 'take' ကို သုံးပါတယ်။"
+    },
+    {
+      "type": "which_word",
+      "prompt": "Don't worry about the result, just ___ your best.",
+      "answer": "do",
+      "options": [
+        "do",
+        "make",
+        "take"
+      ],
+      "explain_en": "'Do your best' is a fixed expression meaning to try as hard as you can.",
+      "explain_mm": "'Do your best' ဆိုတာက ကိုယ်တတ်နိုင်သလောက် အကောင်းဆုံးကြိုးစားပါလို့ အဓိပ္ပာယ်ရတဲ့ သတ်မှတ်ထားတဲ့ စကားစုပါ။"
+    }
+  ]
+}
