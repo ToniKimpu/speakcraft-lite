@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_text_styles.dart';
 import '../../model/vocabulary/vocab_models.dart';
+import '../../repositories/vocabulary/vocab_review_repository.dart';
 import '../../shared_widgets/glass.dart';
 import 'widgets/bilingual_text.dart';
 
@@ -10,10 +11,30 @@ import 'widgets/bilingual_text.dart';
 /// one question at a time, **select then Check** (not auto-grade), with
 /// **Back / Check / Next** navigation. Per-question state is preserved, so
 /// going Back shows the earlier answer + its explanation (read-only).
-class VocabPracticePage extends StatefulWidget {
-  const VocabPracticePage({super.key, required this.group});
+/// One question: an exercise + the group it belongs to (so a result can be
+/// recorded against the right group in the spaced-review system).
+typedef VocabQuestion = ({VocabExercise exercise, String groupId});
 
-  final VocabGroup group;
+class VocabPracticePage extends StatefulWidget {
+  const VocabPracticePage._({required this.items, required this.title});
+
+  /// Practise one group's exercises.
+  factory VocabPracticePage.group(VocabGroup group) => VocabPracticePage._(
+        items: [
+          for (final e in group.exercises)
+            if ((e.type == 'which_word' && e.options.isNotEmpty) ||
+                e.type == 'gap_fill')
+              (exercise: e, groupId: group.id),
+        ],
+        title: 'Practice',
+      );
+
+  /// Run a spaced-review session of mixed questions from many groups.
+  factory VocabPracticePage.review(List<VocabQuestion> items) =>
+      VocabPracticePage._(items: items, title: 'Review');
+
+  final List<VocabQuestion> items;
+  final String title;
 
   @override
   State<VocabPracticePage> createState() => _VocabPracticePageState();
@@ -28,15 +49,13 @@ class _QState {
 }
 
 class _VocabPracticePageState extends State<VocabPracticePage> {
-  late final List<VocabExercise> _questions = widget.group.exercises
-      .where((e) =>
-          (e.type == 'which_word' && e.options.isNotEmpty) ||
-          e.type == 'gap_fill')
-      .toList();
+  late final List<VocabExercise> _questions =
+      [for (final it in widget.items) it.exercise];
 
   late final List<_QState> _states =
       List.generate(_questions.length, (_) => _QState());
 
+  final _review = VocabReviewRepository();
   int _index = 0;
   bool _done = false;
 
@@ -64,6 +83,8 @@ class _VocabPracticePageState extends State<VocabPracticePage> {
       _state.checked = true;
       _state.correct = _q.isCorrect(answer);
     });
+    // Feed the spaced-review system (fire-and-forget).
+    _review.recordResult(widget.items[_index].groupId, _q.answer, _state.correct);
   }
 
   void _next() {
@@ -111,15 +132,15 @@ class _VocabPracticePageState extends State<VocabPracticePage> {
   @override
   Widget build(BuildContext context) {
     if (_questions.isEmpty) {
-      return const GlassScaffold(
-        title: Text('Practice'),
-        body: Center(child: Text('No exercises for this set yet.')),
+      return GlassScaffold(
+        title: Text(widget.title),
+        body: const Center(child: Text('Nothing to practise right now.')),
       );
     }
     if (_done) {
       final correct = _states.where((s) => s.correct).length;
       return GlassScaffold(
-        title: const Text('Practice'),
+        title: Text(widget.title),
         body: _ResultView(
           correct: correct,
           total: _questions.length,

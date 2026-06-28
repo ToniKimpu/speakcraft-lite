@@ -5,6 +5,7 @@ import '../../config/pmp_routes.dart';
 import '../../config/pmp_text_styles.dart';
 import '../../model/vocabulary/vocab_loader.dart';
 import '../../model/vocabulary/vocab_models.dart';
+import '../../repositories/vocabulary/vocab_review_repository.dart';
 import '../../shared_widgets/error_retry_view.dart';
 import '../../shared_widgets/glass.dart';
 
@@ -33,7 +34,17 @@ class _VocabularyListPageState extends State<VocabularyListPage> {
   Widget build(BuildContext context) {
     return GlassScaffold(
       title: const Text('Vocabulary'),
-      body: FutureBuilder<List<VocabIndexEntry>>(
+      body: Column(
+        children: [
+          const _ReviewCard(),
+          Expanded(child: _buildList()),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildList() {
+    return FutureBuilder<List<VocabIndexEntry>>(
         future: _future,
         builder: (context, snap) {
           if (snap.connectionState != ConnectionState.done) {
@@ -52,8 +63,7 @@ class _VocabularyListPageState extends State<VocabularyListPage> {
           }
           return _Body(groups: groups);
         },
-      ),
-    );
+      );
   }
 }
 
@@ -280,6 +290,73 @@ class _ComingSoon extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// Home banner for spaced review — live count of words due, tap to review.
+class _ReviewCard extends StatefulWidget {
+  const _ReviewCard();
+
+  @override
+  State<_ReviewCard> createState() => _ReviewCardState();
+}
+
+class _ReviewCardState extends State<_ReviewCard> {
+  final Stream<int> _due = VocabReviewRepository().watchDueCount();
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return StreamBuilder<int>(
+      stream: _due,
+      builder: (context, snap) {
+        final due = snap.data ?? 0;
+        final active = due > 0;
+        final fg = active ? cs.onPrimary : cs.onSurface;
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+          child: Material(
+            color: active ? cs.primary : cs.surfaceContainerHighest,
+            borderRadius: BorderRadius.circular(14),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(14),
+              onTap: () =>
+                  Navigator.pushNamed(context, PmpRoutes.vocabularyReview),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                child: Row(
+                  children: [
+                    Icon(Icons.refresh_rounded, color: fg),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Review',
+                              style:
+                                  PmpTextStyles.body1Semi.copyWith(color: fg)),
+                          Text(
+                            active
+                                ? '$due word${due == 1 ? '' : 's'} due to review'
+                                : 'Nothing due — keep practising',
+                            style: PmpTextStyles.label2Regular.copyWith(
+                                color: active
+                                    ? cs.onPrimary.withValues(alpha: 0.85)
+                                    : cs.onSurfaceVariant),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Icon(Icons.chevron_right, color: fg),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

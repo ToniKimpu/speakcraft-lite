@@ -9,6 +9,7 @@ import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/saved_term_table.dart';
 import '../../tables/user_recorded_sentence_audio_table.dart';
 import '../../tables/video_step_progress_table.dart';
+import '../../tables/vocab_review_table.dart';
 import '../../tables/writing_progress_table.dart';
 
 part 'app_database.g.dart';
@@ -20,6 +21,7 @@ part 'app_database.g.dart';
     SavedTermTable,
     VideoStepProgressTable,
     WritingProgressTable,
+    VocabReviewTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -30,7 +32,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 11;
+  int get schemaVersion => 12;
 
   @override
   MigrationStrategy get migration {
@@ -72,6 +74,10 @@ class AppDatabase extends _$AppDatabase {
         if (from < 11) {
           // Writing module — local per-unit completion tracking.
           await m.createTable(writingProgressTable);
+        }
+        if (from < 12) {
+          // Vocabulary module — Leitner-lite spaced-review state.
+          await m.createTable(vocabReviewTable);
         }
       },
       beforeOpen: (details) async {

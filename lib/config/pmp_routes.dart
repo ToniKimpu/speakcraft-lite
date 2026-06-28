@@ -11,6 +11,7 @@ import 'package:speakcraft/model/vocabulary/vocab_models.dart';
 import 'package:speakcraft/screens/vocabulary/vocabulary_list_page.dart';
 import 'package:speakcraft/screens/vocabulary/vocab_group_page.dart';
 import 'package:speakcraft/screens/vocabulary/vocab_practice_page.dart';
+import 'package:speakcraft/screens/vocabulary/vocab_review_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/full_talk_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/key_takeaways_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
@@ -85,6 +86,7 @@ class PmpRoutes {
   static const vocabularyList = '/vocabulary';
   static const vocabularyGroup = '/vocabulary/group';
   static const vocabularyPractice = '/vocabulary/practice';
+  static const vocabularyReview = '/vocabulary/review';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -296,9 +298,11 @@ class PmpRoutes {
       case vocabularyPractice:
         final args = settings.arguments as Map<String, dynamic>;
         return _getRoute(
-          VocabPracticePage(group: args['group'] as VocabGroup),
+          VocabPracticePage.group(args['group'] as VocabGroup),
           settings,
         );
+      case vocabularyReview:
+        return _getRoute(const VocabReviewPage(), settings);
       case htmlPreview:
         final args = settings.arguments as Map<String, dynamic>;
         final assetPath = args['assetPath'] as String?;
