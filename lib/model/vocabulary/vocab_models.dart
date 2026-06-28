@@ -17,6 +17,7 @@ class VocabIndexEntry {
     required this.wordCount,
     this.unit = 'word',
     this.section = '',
+    this.isFree = false,
   });
 
   final String id;
@@ -35,6 +36,11 @@ class VocabIndexEntry {
   /// can show section tabs instead of one long scroll. Empty = no section.
   final String section;
 
+  /// Freemium gate (Supabase `vocab_groups.is_free`). Free groups open for
+  /// everyone; premium ones need [AppUser.isPremiumUser]. Beginner = free,
+  /// Intermediate/Upper = premium. Defaults closed (false) when absent.
+  final bool isFree;
+
   factory VocabIndexEntry.fromJson(Map<String, dynamic> j) => VocabIndexEntry(
         id: j['id'] as String,
         title: j['title'] as String? ?? '',
@@ -44,6 +50,7 @@ class VocabIndexEntry {
         wordCount: (j['word_count'] as num?)?.toInt() ?? 0,
         unit: j['unit'] as String? ?? 'word',
         section: j['section'] as String? ?? '',
+        isFree: j['is_free'] as bool? ?? false,
       );
 }
 
@@ -64,6 +71,7 @@ class VocabGroup {
     this.style = 'contrast',
     this.unit = 'word',
     this.hasAudio = false,
+    this.isFree = false,
   });
 
   final String id;
@@ -86,6 +94,10 @@ class VocabGroup {
   /// phrases/chunks — for themes where the words are already known but the
   /// *saying* isn't, e.g. Family). Drives labels (word vs expression).
   final String unit;
+
+  /// Freemium gate — see [VocabIndexEntry.isFree]. Used as a defence-in-depth
+  /// guard on the group screen (the list screen gates before navigation).
+  final bool isFree;
   final String whyGroupedEn;
   final String whyGroupedMm;
   final List<VocabWord> words;
@@ -103,6 +115,7 @@ class VocabGroup {
         style: j['style'] as String? ?? 'contrast',
         unit: j['unit'] as String? ?? 'word',
         hasAudio: j['has_audio'] as bool? ?? false,
+        isFree: j['is_free'] as bool? ?? false,
         whyGroupedEn: j['why_grouped_en'] as String? ?? '',
         whyGroupedMm: j['why_grouped_mm'] as String? ?? '',
         words: ((j['words'] as List?) ?? const [])

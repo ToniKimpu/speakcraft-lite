@@ -8,6 +8,7 @@ import '../../model/vocabulary/vocab_models.dart';
 import '../../repositories/vocabulary/vocab_review_repository.dart';
 import '../../shared_widgets/error_retry_view.dart';
 import '../../shared_widgets/glass.dart';
+import '../../shared_widgets/premium_gate.dart';
 
 /// Vocabulary home — a level selector (Beginner / Intermediate / Upper) on top,
 /// each showing its groups, mirroring the Grammar path's leveled shape. Levels
@@ -105,6 +106,14 @@ class _BodyState extends State<_Body> {
     }
   }
 
+  /// A level reads as "locked" when it has groups, none are free, and the user
+  /// isn't premium — so the pill shows a lock before they tap in.
+  bool _levelLocked(int level) {
+    final groups = _byLevel[level];
+    if (groups == null || groups.isEmpty) return false;
+    return !hasPremiumAccess() && groups.every((g) => !g.isFree);
+  }
+
   @override
   Widget build(BuildContext context) {
     final groups = _byLevel[_level] ?? const <VocabIndexEntry>[];
@@ -123,6 +132,7 @@ class _BodyState extends State<_Body> {
                       label: m.name,
                       selected: m.level == _level,
                       empty: !_byLevel.containsKey(m.level),
+                      locked: _levelLocked(m.level),
                       onTap: () => setState(() => _level = m.level),
                     ),
                   ),
@@ -215,12 +225,14 @@ class _LevelPill extends StatelessWidget {
     required this.label,
     required this.selected,
     required this.empty,
+    required this.locked,
     required this.onTap,
   });
 
   final String label;
   final bool selected;
   final bool empty;
+  final bool locked;
   final VoidCallback onTap;
 
   @override
@@ -242,10 +254,21 @@ class _LevelPill extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             border: selected ? null : Border.all(color: cs.outlineVariant),
           ),
-          child: Text(label,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: PmpTextStyles.labelSemi.copyWith(color: fg)),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (locked) ...[
+                Icon(Icons.lock_rounded, size: 13, color: fg),
+                const SizedBox(width: 4),
+              ],
+              Flexible(
+                child: Text(label,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: PmpTextStyles.labelSemi.copyWith(color: fg)),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -368,15 +391,22 @@ class _GroupCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
+    final unlocked = isUnlocked(isFree: entry.isFree);
     return GlassCard(
       borderRadius: 16,
       blur: false,
       padding: const EdgeInsets.all(14),
-      onTap: () => Navigator.pushNamed(
-        context,
-        PmpRoutes.vocabularyGroup,
-        arguments: {'id': entry.id, 'title': entry.title},
-      ),
+      onTap: () {
+        if (unlocked) {
+          Navigator.pushNamed(
+            context,
+            PmpRoutes.vocabularyGroup,
+            arguments: {'id': entry.id, 'title': entry.title},
+          );
+        } else {
+          showPremiumSheet(context, featureName: 'This word set');
+        }
+      },
       child: Row(
         children: [
           Container(
@@ -386,7 +416,8 @@ class _GroupCard extends StatelessWidget {
               color: PmpColors.brandCyan.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Icon(Icons.style_outlined, color: cs.primary),
+            child: Icon(unlocked ? Icons.style_outlined : Icons.lock_outline,
+                color: unlocked ? cs.primary : cs.onSurfaceVariant),
           ),
           const SizedBox(width: 14),
           Expanded(
@@ -411,7 +442,9 @@ class _GroupCard extends StatelessWidget {
               ],
             ),
           ),
-          Icon(Icons.chevron_right, color: cs.onSurfaceVariant),
+          unlocked
+              ? Icon(Icons.chevron_right, color: cs.onSurfaceVariant)
+              : const PremiumLockBadge(),
         ],
       ),
     );

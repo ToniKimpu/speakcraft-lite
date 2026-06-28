@@ -33,7 +33,8 @@ Future<List<VocabIndexEntry>> _indexFromSupabase() async {
   // — pass ascending:true so the curriculum runs in authored order.
   final rows = await supabase
       .from('vocab_groups')
-      .select('id,level,section,order_in_level,title,theme,unit,word_count')
+      .select(
+          'id,level,section,order_in_level,title,theme,unit,word_count,is_free')
       .order('level', ascending: true)
       .order('order_in_level', ascending: true);
   return (rows as List).map((r) {
@@ -47,6 +48,7 @@ Future<List<VocabIndexEntry>> _indexFromSupabase() async {
       'theme': m['theme'],
       'unit': m['unit'],
       'word_count': m['word_count'],
+      'is_free': m['is_free'],
     });
   }).toList();
 }
@@ -54,14 +56,15 @@ Future<List<VocabIndexEntry>> _indexFromSupabase() async {
 Future<VocabGroup> _groupFromSupabase(String id) async {
   final row = await supabase
       .from('vocab_groups')
-      .select('data,has_audio')
+      .select('data,has_audio,is_free')
       .eq('id', id)
       .maybeSingle();
   if (row == null) throw Exception('Vocab group "$id" not found');
   final m = row.cast<String, dynamic>();
-  // `data` JSONB is the full group; `has_audio` is a separate column → merge it
-  // in so the model sees one map.
+  // `data` JSONB is the full group; `has_audio` / `is_free` are separate
+  // columns → merge them in so the model sees one map.
   final data = (m['data'] as Map).cast<String, dynamic>();
   data['has_audio'] = m['has_audio'] ?? false;
+  data['is_free'] = m['is_free'] ?? false;
   return VocabGroup.fromJson(data);
 }

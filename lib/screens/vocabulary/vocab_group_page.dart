@@ -10,6 +10,7 @@ import '../../model/vocabulary/vocab_models.dart';
 import '../../services/vocab_tts_service.dart';
 import '../../shared_widgets/error_retry_view.dart';
 import '../../shared_widgets/glass.dart';
+import '../../shared_widgets/premium_gate.dart';
 import 'widgets/bilingual_text.dart';
 
 /// The "learn" flow for one group, as a pager:
@@ -33,6 +34,7 @@ class _VocabGroupPageState extends State<VocabGroupPage> {
   final PageController _controller = PageController();
   VocabGroup? _group;
   Object? _error;
+  bool _locked = false;
   int _page = 0;
 
   @override
@@ -44,7 +46,14 @@ class _VocabGroupPageState extends State<VocabGroupPage> {
   Future<void> _load() async {
     try {
       final g = await loadVocabGroup(widget.groupId);
-      if (mounted) setState(() => _group = g);
+      if (!mounted) return;
+      // Defence-in-depth: the list screen gates before navigation, but guard
+      // here too (deep links / stale state) so premium content never opens.
+      if (!isUnlocked(isFree: g.isFree)) {
+        setState(() => _locked = true);
+        return;
+      }
+      setState(() => _group = g);
     } catch (e) {
       if (mounted) setState(() => _error = e);
     }
@@ -78,16 +87,18 @@ class _VocabGroupPageState extends State<VocabGroupPage> {
             label: const Text('Summary'),
           ),
       ],
-      body: _error != null
-          ? ErrorRetryView(
-              error: _error,
-              onRetry: () {
-                setState(() => _error = null);
-                _load();
-              },
-            )
-          : group == null
-              ? const Center(child: CircularProgressIndicator())
+      body: _locked
+          ? _LockedView(onUnlock: () => showPremiumSheet(context))
+          : _error != null
+              ? ErrorRetryView(
+                  error: _error,
+                  onRetry: () {
+                    setState(() => _error = null);
+                    _load();
+                  },
+                )
+              : group == null
+                  ? const Center(child: CircularProgressIndicator())
               : Column(
                   children: [
                     Expanded(
@@ -143,6 +154,46 @@ class _VocabGroupPageState extends State<VocabGroupPage> {
                     ),
                   ],
                 ),
+    );
+  }
+}
+
+/// Shown when a premium group is opened without access (deep link / stale nav).
+class _LockedView extends StatelessWidget {
+  const _LockedView({required this.onUnlock});
+  final VoidCallback onUnlock;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(28),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.workspace_premium_rounded, size: 44, color: cs.primary),
+            const SizedBox(height: 14),
+            Text('Premium word set',
+                style:
+                    PmpTextStyles.title1SemiBold.copyWith(color: cs.onSurface)),
+            const SizedBox(height: 6),
+            Text(
+              'This set is part of Premium. Unlock it to learn these words with '
+              'audio, examples and practice.',
+              textAlign: TextAlign.center,
+              style: PmpTextStyles.body2Regular
+                  .copyWith(color: cs.onSurfaceVariant, height: 1.5),
+            ),
+            const SizedBox(height: 20),
+            FilledButton.icon(
+              onPressed: onUnlock,
+              icon: const Icon(Icons.workspace_premium_rounded),
+              label: const Text('Get Premium'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
