@@ -5,26 +5,26 @@
   "order": 3,
   "theme": "Discourse markers",
   "why_grouped_en": "These five all help you single something out or give an example — but learners mix them up. \"For example\" and \"such as\" introduce examples; \"especially\", \"particularly\" and \"in particular\" stress that one thing stands out. The trick is mostly about position in the sentence.",
-  "why_grouped_mm": "",
+  "why_grouped_mm": "ဒီစကားလုံး ၅ ခုလုံးက တစ်ခုခုကို ထောက်ပြဖို့ ဒါမှမဟုတ် ဥပမာပေးဖို့ သုံးတာပါ။ ဒါပေမဲ့ သုံးတဲ့နေရာနဲ့ အသုံးအနှုန်း ကွာခြားချက်တွေ ရှိပါတယ်။ For example နဲ့ such as က ဥပမာပေးဖို့ဖြစ်ပြီး၊ especially, particularly နဲ့ in particular ကတော့ တစ်ခုခုကို အလေးပေးပြောချင်တဲ့အခါ သုံးပါတယ်။ ဝါကျထဲမှာ ဘယ်နေရာမှာ ထည့်သုံးရမလဲဆိုတာက အဓိကပါပဲ။",
   "words": [
     {
       "word": "for example",
       "pos": "phrase",
       "ipa": "/fɔːr ɪɡˈzɑːm.pəl/",
       "short_en": "here is one case that shows my point",
-      "short_mm": "",
+      "short_mm": "ဥပမာအားဖြင့်",
       "use_when_en": "You give a full example, often starting a new sentence (+ comma).",
       "explanation_en": "Introduces a full example, often a whole clause. Shortened to \"e.g.\" in writing.",
       "nuance_en": "Followed by an example sentence or noun: \"For example, prices have risen.\"",
       "goes_with_en": "For example, + clause · take X, for example",
       "examples": [
         {
-          "en": "Some animals hibernate. Bears, for example, sleep all winter.",
-          "mm": ""
+          "en": "Some animals hibernate. Bears, {w}for example{/w}, sleep all winter.",
+          "mm": "တိရစ္ဆာန်အချို့က ဆောင်းခိုကြတယ်။ ဥပမာ ဝက်ဝံဆိုရင် ဆောင်းရာသီတစ်လျှောက်လုံး အိပ်နေကြတာမျိုးပေါ့။"
         },
         {
-          "en": "You could save money — for example, by cooking at home.",
-          "mm": ""
+          "en": "You could save money — {w}for example{/w}, by cooking at home.",
+          "mm": "မင်း ပိုက်ဆံစုချင်ရင် စုလို့ရတယ်၊ ဥပမာ အိမ်မှာပဲ ဟင်းချက်စားတာမျိုးပေါ့။"
         }
       ],
       "collocations": [
@@ -33,26 +33,29 @@
       ],
       "confuse_with": [
         "such as"
-      ]
+      ],
+      "explanation_mm": "အဓိကအချက်ကို ရှင်းပြဖို့ ဝါကျအပြည့်အစုံနဲ့ ဥပမာပေးတဲ့အခါ သုံးပါတယ်။ စာရေးရင် e.g. လို့ အတိုကောက် ရေးလေ့ရှိပါတယ်။",
+      "nuance_mm": "For example, prices have risen လိုမျိုး ဝါကျတစ်ခုလုံး ဒါမှမဟုတ် နာမ်တစ်ခုခုရဲ့ ရှေ့မှာ သုံးပါတယ်။",
+      "use_when_mm": "တစ်ခုခုကို ရှင်းပြချင်တဲ့အခါ ဒါမှမဟုတ် သက်သေပြချင်တဲ့အခါ ဝါကျအစမှာ သုံးပါတယ်။ နောက်မှာ အပြည့်အစုံရေးရမယ်။"
     },
     {
       "word": "such as",
       "pos": "phrase",
       "ipa": "/sʌtʃ æz/",
       "short_en": "like / for instance",
-      "short_mm": "",
+      "short_mm": "ဥပမာ - ... စတဲ့",
       "use_when_en": "You list example nouns inside a sentence (not a full clause).",
       "explanation_en": "Introduces examples mid-sentence — usually a list of nouns.",
       "nuance_en": "Use with nouns: \"fruits such as mangoes\". Don't follow it with a full sentence.",
       "goes_with_en": "nouns such as A and B · things such as these",
       "examples": [
         {
-          "en": "I enjoy team sports such as football and basketball.",
-          "mm": ""
+          "en": "I enjoy team sports {w}such as{/w} football and basketball.",
+          "mm": "ငါက ဘောလုံးတို့ ဘတ်စကက်ဘောတို့လို အသင်းလိုက်ကစားရတဲ့ အားကစားတွေကို သဘောကျတယ်။"
         },
         {
-          "en": "Bring warm clothes such as a jacket and gloves.",
-          "mm": ""
+          "en": "Bring warm clothes {w}such as{/w} a jacket and gloves.",
+          "mm": "ဂျာကင်အင်္ကျီတို့ လက်အိတ်တို့လို နွေးထွေးတဲ့အဝတ်အစားတွေ ယူလာခဲ့ပါ။"
         }
       ],
       "collocations": [
@@ -62,26 +65,29 @@
       "confuse_with": [
         "for example",
         "like"
-      ]
+      ],
+      "explanation_mm": "ဝါကျအလယ်မှာ နာမ်တွေ (nouns) ကို စာရင်းပြုစုပြီး ဥပမာပေးတဲ့အခါ သုံးပါတယ်။",
+      "nuance_mm": "Fruits such as mangoes လိုမျိုး နာမ်တွေရဲ့နောက်မှာ တွဲသုံးရပါတယ်။ ဝါကျအပြည့်အစုံနဲ့ မသုံးရပါဘူး။",
+      "use_when_mm": "အရာဝတ္ထုတွေ၊ လူတွေရဲ့ နာမည်စာရင်းကို ထည့်ပြောချင်တဲ့အခါ သုံးပါတယ်။ ဝါကျအလယ်မှာ နာမ်တွေနဲ့ တွဲသုံးရတာပါ။"
     },
     {
       "word": "especially",
       "pos": "adverb",
       "ipa": "/ɪˈspeʃ.əl.i/",
       "short_en": "more than the others",
-      "short_mm": "",
+      "short_mm": "အထူးသဖြင့်",
       "use_when_en": "You stress the standout thing — placed right BEFORE it.",
       "explanation_en": "Singles out one thing as the most important in a group. Often after a comma.",
       "nuance_en": "Don't confuse with \"specially\" (= for a special purpose).",
       "goes_with_en": "especially + noun · especially when / if · not especially",
       "examples": [
         {
-          "en": "It gets cold here, especially at night.",
-          "mm": ""
+          "en": "It gets cold here, {w}especially{/w} at night.",
+          "mm": "ဒီမှာက အေးတယ်၊ အထူးသဖြင့် ညဘက်တွေဆို ပိုအေးတယ်။"
         },
         {
-          "en": "She loves animals, especially dogs.",
-          "mm": ""
+          "en": "She loves animals, {w}especially{/w} dogs.",
+          "mm": "သူမက တိရစ္ဆာန်တွေကို ချစ်တယ်၊ အထူးသဖြင့် ခွေးတွေကို ပိုချစ်တယ်။"
         }
       ],
       "collocations": [
@@ -92,26 +98,29 @@
       "confuse_with": [
         "specially",
         "particularly"
-      ]
+      ],
+      "explanation_mm": "အုပ်စုထဲက တစ်ခုခုကို အရေးအကြီးဆုံးအဖြစ် ခွဲထုတ်ပြီး ပြောချင်တဲ့အခါ သုံးပါတယ်။",
+      "nuance_mm": "Specially (ရည်ရွယ်ချက်တစ်ခုအတွက်) နဲ့ မမှားပါစေနဲ့။ အလေးပေးချင်တဲ့ စကားလုံးရဲ့ ရှေ့မှာ ထားသုံးပါတယ်။",
+      "use_when_mm": "အုပ်စုထဲက တစ်ခုခုကို ပိုပြီးတော့ အလေးပေးပြောချင်တဲ့အခါ သုံးပါတယ်။ 'အရမ်းကို' သို့မဟုတ် 'အထူးသဖြင့်' ဆိုတဲ့ အဓိပ္ပာယ်မျိုးပါ။"
     },
     {
       "word": "particularly",
       "pos": "adverb",
       "ipa": "/pəˈtɪk.jə.lə.li/",
       "short_en": "especially; to a high degree",
-      "short_mm": "",
+      "short_mm": "အထူးသဖြင့် / အလွန်",
       "use_when_en": "Same as \"especially\"; or to mean \"not very\" in the negative.",
       "explanation_en": "Very close to \"especially\", slightly more formal. \"not particularly\" = not very.",
       "nuance_en": "\"The exam wasn't particularly hard\" = it wasn't very hard.",
       "goes_with_en": "particularly + adjective · not particularly",
       "examples": [
         {
-          "en": "Traffic is bad, particularly on Mondays.",
-          "mm": ""
+          "en": "Traffic is bad, {w}particularly{/w} on Mondays.",
+          "mm": "ယာဉ်ကြောပိတ်ဆို့မှုက ဆိုးတယ်၊ အထူးသဖြင့် တနင်္လာနေ့တွေမှာပေါ့။"
         },
         {
-          "en": "I'm not particularly hungry right now.",
-          "mm": ""
+          "en": "I'm not {w}particularly{/w} hungry right now.",
+          "mm": "အခုလောလောဆယ်တော့ ငါသိပ်ပြီး ဗိုက်မဆာဘူး။"
         }
       ],
       "collocations": [
@@ -121,26 +130,29 @@
       "confuse_with": [
         "especially",
         "in particular"
-      ]
+      ],
+      "explanation_mm": "Especially နဲ့ အဓိပ္ပာယ်ဆင်တူပေမဲ့ ပိုပြီး တရားဝင်တဲ့ပုံစံ ဖြစ်ပါတယ်။ Not particularly လို့ သုံးရင် 'သိပ်မ...' လို့ အဓိပ္ပာယ်ရပါတယ်။",
+      "nuance_mm": "The exam wasn't particularly hard လိုမျိုး သိပ်မခက်ဘူးလို့ ပြောတဲ့အခါ သုံးပါတယ်။",
+      "use_when_mm": "Especially နဲ့ အဓိပ္ပာယ်တူပေမယ့် ပိုပြီးတော့ ရုံးသုံးဆန်ပါတယ်။ တစ်ခုခုက 'သိပ်ပြီးတော့တော့ မဟုတ်ဘူး' လို့ ပြောချင်ရင်လည်း သုံးလို့ရပါတယ်။"
     },
     {
       "word": "in particular",
       "pos": "phrase",
       "ipa": "/ɪn pəˈtɪk.jə.lər/",
       "short_en": "this one specifically",
-      "short_mm": "",
+      "short_mm": "အထူးသဖြင့် (ဒီအရာကို ရည်ညွှန်းတာ)",
       "use_when_en": "You mark one specific thing — placed right AFTER the noun.",
       "explanation_en": "Points to one specific item, usually after the noun it marks.",
       "nuance_en": "Comes after the thing it highlights, unlike \"especially\" which comes before.",
       "goes_with_en": "anything / anyone / nothing in particular",
       "examples": [
         {
-          "en": "I liked the music, one song in particular.",
-          "mm": ""
+          "en": "I liked the music, one song {w}in particular{/w}.",
+          "mm": "ငါ ဒီတေးဂီတတွေကို သဘောကျတယ်၊ အထူးသဖြင့် သီချင်းတစ်ပုဒ်ကို ပိုကြိုက်တယ်။"
         },
         {
-          "en": "Is there anyone in particular you'd like to invite?",
-          "mm": ""
+          "en": "Is there anyone {w}in particular{/w} you'd like to invite?",
+          "mm": "မင်း ဖိတ်ချင်တဲ့သူ သီးသန့်ရှိသေးလား။"
         }
       ],
       "collocations": [
@@ -149,7 +161,10 @@
       ],
       "confuse_with": [
         "particularly"
-      ]
+      ],
+      "explanation_mm": "အုပ်စုထဲက တစ်ခုခုကို တိတိကျကျ ရည်ညွှန်းချင်တဲ့အခါ သုံးပါတယ်။",
+      "nuance_mm": "Especially နဲ့ မတူတာက in particular ကို သူညွှန်းတဲ့ နာမ်ရဲ့ နောက်မှာ ထားသုံးရပါတယ်။",
+      "use_when_mm": "တစ်ခုခုကို လက်ညှိုးထိုးပြီး သီးသန့်ခွဲထုတ်ပြောချင်တဲ့အခါ သုံးပါတယ်။ အဲ့ဒီအရာကို အရင်ပြောပြီးမှ နောက်ကနေ လိုက်ပြောရတာပါ။"
     }
   ],
   "minimal_pairs": [
@@ -157,13 +172,15 @@
       "prompt": "\"I love the summer, ___ the long evenings.\"",
       "right": "especially",
       "wrong": "in particular",
-      "why": "Before the standout → especially. \"In particular\" must go AFTER the noun."
+      "why": "Before the standout → especially. \"In particular\" must go AFTER the noun.",
+      "why_mm": "အလေးပေးချင်တဲ့ အရာရဲ့ ရှေ့မှာ သုံးရတာမို့ especially ဖြစ်ပြီး in particular ကတော့ နာမ်ရဲ့ နောက်မှာမှ သုံးလို့ရပါတယ်။"
     },
     {
       "prompt": "\"I read fiction ___ thrillers and mysteries.\"",
       "right": "such as",
       "wrong": "for example",
-      "why": "Mid-sentence noun list → such as. \"For example\" usually starts its own example."
+      "why": "Mid-sentence noun list → such as. \"For example\" usually starts its own example.",
+      "why_mm": "ဝါကျအလယ်မှာ နာမ်တွေကို စာရင်းပြုစုရင် such as ကို သုံးပြီး For example ကတော့ ဝါကျအသစ်အဖြစ် စတင်ဖို့ သုံးပါတယ်။"
     }
   ],
   "exercises": [
@@ -176,7 +193,8 @@
         "for example",
         "in particular"
       ],
-      "explain_en": "A list of example nouns inside the sentence → such as. \"For example\" usually starts its own example."
+      "explain_en": "A list of example nouns inside the sentence → such as. \"For example\" usually starts its own example.",
+      "explain_mm": "ဝါကျထဲမှာ နာမ်တွေကို စာရင်းပြုစုထားတာမို့ such as ကို သုံးရပါမယ်။"
     },
     {
       "type": "which_word",
@@ -187,7 +205,8 @@
         "Such as",
         "In particular"
       ],
-      "explain_en": "A full example as a new sentence → For example. \"Such as\" can't open a clause like this."
+      "explain_en": "A full example as a new sentence → For example. \"Such as\" can't open a clause like this.",
+      "explain_mm": "ဝါကျအသစ်နဲ့ ဥပမာပေးတာမို့ For example နဲ့ စရပါမယ်။"
     },
     {
       "type": "which_word",
@@ -198,7 +217,8 @@
         "in particular",
         "such as"
       ],
-      "explain_en": "Stress the standout, placed BEFORE it → especially. \"In particular\" would go after the noun."
+      "explain_en": "Stress the standout, placed BEFORE it → especially. \"In particular\" would go after the noun.",
+      "explain_mm": "အလေးပေးချင်တဲ့ အရာရဲ့ ရှေ့မှာ ထားရတာမို့ especially ကို သုံးရပါမယ်။"
     },
     {
       "type": "which_word",
@@ -209,7 +229,8 @@
         "especially",
         "for example"
       ],
-      "explain_en": "Marks one specific thing, placed AFTER the noun (\"a colour ___\") → in particular."
+      "explain_en": "Marks one specific thing, placed AFTER the noun (\"a colour ___\") → in particular.",
+      "explain_mm": "နာမ်ရဲ့ နောက်မှာ ထားပြီး တိတိကျကျ ရည်ညွှန်းတာမို့ in particular ကို သုံးရပါမယ်။"
     },
     {
       "type": "which_word",
@@ -220,7 +241,8 @@
         "such as",
         "for example"
       ],
-      "explain_en": "\"Not particularly\" = not very. Only \"particularly\" fits this negative pattern."
+      "explain_en": "\"Not particularly\" = not very. Only \"particularly\" fits this negative pattern.",
+      "explain_mm": "Not particularly ဆိုတဲ့ ပုံစံက 'သိပ်မ...' လို့ အဓိပ္ပာယ်ရတဲ့အတွက် ဒီမှာ သုံးရပါမယ်။"
     },
     {
       "type": "gap_fill",
@@ -230,21 +252,24 @@
       "explain_en": "Listing example nouns inside the sentence → such as.",
       "accept": [
         "like"
-      ]
+      ],
+      "explain_mm": "ဝါကျထဲမှာ နာမ်တွေကို ဥပမာပေးတာမို့ such as ကို သုံးရပါမယ်။"
     },
     {
       "type": "gap_fill",
       "prompt": "Type the missing word: \"It's busy here, ___ at the weekend.\"",
       "answer": "especially",
       "options": [],
-      "explain_en": "Stressing the standout time, right before it → especially."
+      "explain_en": "Stressing the standout time, right before it → especially.",
+      "explain_mm": "အချိန်ကို အလေးပေးချင်တာမို့ အဲ့ဒီအချိန်ရဲ့ ရှေ့မှာ especially ကို သုံးရပါမယ်။"
     },
     {
       "type": "gap_fill",
       "prompt": "Type the missing words: \"Is there anything ___ you'd like to order?\"",
       "answer": "in particular",
       "options": [],
-      "explain_en": "Comes after the noun (\"anything ___\") → in particular."
+      "explain_en": "Comes after the noun (\"anything ___\") → in particular.",
+      "explain_mm": "နာမ်ရဲ့ နောက်မှာ ထားပြီး အလေးပေးတာမို့ in particular ကို သုံးရပါမယ်။"
     },
     {
       "type": "which_word",
@@ -255,14 +280,16 @@
         "Such as",
         "In particular"
       ],
-      "explain_en": "A new sentence giving a full example → For example. \"Such as\" can't start a clause."
+      "explain_en": "A new sentence giving a full example → For example. \"Such as\" can't start a clause.",
+      "explain_mm": "ဝါကျအသစ်နဲ့ ဥပမာပေးတာမို့ For example ကို သုံးရပါမယ်။"
     },
     {
       "type": "gap_fill",
       "prompt": "Type the missing word: \"I'm not ___ keen on spicy food.\"",
       "answer": "particularly",
       "options": [],
-      "explain_en": "\"Not particularly\" = not very. The fixed pattern uses particularly."
+      "explain_en": "\"Not particularly\" = not very. The fixed pattern uses particularly.",
+      "explain_mm": "Not particularly ဆိုတဲ့ ပုံသေအသုံးအနှုန်းဖြစ်လို့ particularly ကို သုံးရပါမယ်။"
     }
   ]
 }
