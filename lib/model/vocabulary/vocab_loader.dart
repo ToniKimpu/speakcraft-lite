@@ -17,7 +17,7 @@ import '../../services/supabase_service.dart';
 import 'vocab_models.dart';
 
 /// Flip to `true` once `vocab_groups` is populated → online-only.
-const bool _online = false;
+const bool _online = true;
 
 const _kIndexAsset = 'assets/vocabulary/index.json';
 
@@ -41,10 +41,12 @@ Future<VocabGroup> loadVocabGroup(String id) =>
 // ── Supabase (production) ───────────────────────────────────────────────────
 
 Future<List<VocabIndexEntry>> _indexFromSupabase() async {
+  // RLS returns only published, non-deleted rows (like writing_lessons), so the
+  // query needn't filter. NB: .order() defaults to DESCENDING in postgrest-dart
+  // — pass ascending:true so the curriculum runs in authored order.
   final rows = await supabase
       .from('vocab_groups')
       .select('id,level,section,order_in_level,title,theme,unit,word_count')
-      .eq('published', true)
       .order('level', ascending: true)
       .order('order_in_level', ascending: true);
   return (rows as List).map((r) {
