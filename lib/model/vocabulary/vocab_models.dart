@@ -16,6 +16,7 @@ class VocabIndexEntry {
     required this.theme,
     required this.wordCount,
     this.unit = 'word',
+    this.section = '',
   });
 
   final String id;
@@ -30,6 +31,10 @@ class VocabIndexEntry {
   /// 'word' or 'expression' — for the count label on the list card.
   final String unit;
 
+  /// Optional grouping within a level (e.g. "Daily life") so a large level
+  /// can show section tabs instead of one long scroll. Empty = no section.
+  final String section;
+
   factory VocabIndexEntry.fromJson(Map<String, dynamic> j) => VocabIndexEntry(
         id: j['id'] as String,
         title: j['title'] as String? ?? '',
@@ -38,6 +43,7 @@ class VocabIndexEntry {
         theme: j['theme'] as String? ?? '',
         wordCount: (j['word_count'] as num?)?.toInt() ?? 0,
         unit: j['unit'] as String? ?? 'word',
+        section: j['section'] as String? ?? '',
       );
 }
 

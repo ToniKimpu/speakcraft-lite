@@ -4,26 +4,29 @@
       "id": "feelings",
       "title": "Feelings",
       "level": 1,
-      "order": 1,
+      "order": 0,
       "theme": "Feelings & emotions",
-      "word_count": 11
+      "word_count": 11,
+      "section": "You & feelings"
     },
     {
       "id": "family",
       "title": "Talking about family",
       "level": 1,
-      "order": 2,
+      "order": 100,
       "theme": "Family & relationships",
       "word_count": 10,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "People"
     },
     {
       "id": "personality",
       "title": "Describing people",
       "level": 1,
-      "order": 3,
+      "order": 1,
       "theme": "Personality",
-      "word_count": 9
+      "word_count": 9,
+      "section": "You & feelings"
     },
     {
       "id": "stronger_than_good",
@@ -61,226 +64,252 @@
       "id": "appearance",
       "title": "What people look like",
       "level": 1,
-      "order": 4,
+      "order": 2,
       "theme": "Appearance",
-      "word_count": 9
+      "word_count": 9,
+      "section": "You & feelings"
     },
     {
       "id": "likes_dislikes",
       "title": "Likes & dislikes",
       "level": 1,
-      "order": 5,
+      "order": 3,
       "theme": "Preferences",
-      "word_count": 7
+      "word_count": 7,
+      "section": "You & feelings"
     },
     {
       "id": "body_health",
       "title": "Health & feeling ill",
       "level": 1,
-      "order": 6,
+      "order": 4,
       "theme": "Health",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "You & feelings"
     },
     {
       "id": "friends",
       "title": "Friends",
       "level": 1,
-      "order": 7,
+      "order": 101,
       "theme": "Friends",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "People"
     },
     {
       "id": "greetings",
       "title": "Greetings & introductions",
       "level": 1,
-      "order": 8,
+      "order": 102,
       "theme": "Greetings",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "People"
     },
     {
       "id": "daily_routine",
       "title": "Daily routine",
       "level": 1,
-      "order": 9,
+      "order": 200,
       "theme": "Daily routine",
       "word_count": 10,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Daily life"
     },
     {
       "id": "food_eating",
       "title": "Food & eating",
       "level": 1,
-      "order": 10,
+      "order": 201,
       "theme": "Food",
-      "word_count": 9
+      "word_count": 9,
+      "section": "Daily life"
     },
     {
       "id": "money_shopping",
       "title": "Money & shopping",
       "level": 1,
-      "order": 11,
+      "order": 202,
       "theme": "Money",
-      "word_count": 9
+      "word_count": 9,
+      "section": "Daily life"
     },
     {
       "id": "home_rooms",
       "title": "Home & where you live",
       "level": 1,
-      "order": 12,
+      "order": 203,
       "theme": "Home",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Daily life"
     },
     {
       "id": "time_dates",
       "title": "Time & dates",
       "level": 1,
-      "order": 13,
+      "order": 204,
       "theme": "Time",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Daily life"
     },
     {
       "id": "places_town",
       "title": "Places in town",
       "level": 1,
-      "order": 14,
+      "order": 300,
       "theme": "Places",
-      "word_count": 9
+      "word_count": 9,
+      "section": "Out & about"
     },
     {
       "id": "directions",
       "title": "Asking the way",
       "level": 1,
-      "order": 15,
+      "order": 301,
       "theme": "Directions",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Out & about"
     },
     {
       "id": "weather",
       "title": "Weather",
       "level": 1,
-      "order": 16,
+      "order": 302,
       "theme": "Weather",
-      "word_count": 9
+      "word_count": 9,
+      "section": "Out & about"
     },
     {
       "id": "transport",
       "title": "Getting around",
       "level": 1,
-      "order": 17,
+      "order": 303,
       "theme": "Transport",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Out & about"
     },
     {
       "id": "clothes",
       "title": "Clothes",
       "level": 1,
-      "order": 18,
+      "order": 304,
       "theme": "Clothes",
-      "word_count": 9
+      "word_count": 9,
+      "section": "Out & about"
     },
     {
       "id": "jobs_work",
       "title": "Jobs & work",
       "level": 1,
-      "order": 19,
+      "order": 400,
       "theme": "Jobs",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Work & study"
     },
     {
       "id": "hobbies",
       "title": "Free time & hobbies",
       "level": 1,
-      "order": 20,
+      "order": 401,
       "theme": "Hobbies",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Work & study"
     },
     {
       "id": "phone_internet",
       "title": "Phone & internet",
       "level": 1,
-      "order": 21,
+      "order": 402,
       "theme": "Technology",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Work & study"
     },
     {
       "id": "school_study",
       "title": "School & studying",
       "level": 1,
-      "order": 22,
+      "order": 403,
       "theme": "Study",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Work & study"
     },
     {
       "id": "making_plans",
       "title": "Making plans",
       "level": 1,
-      "order": 23,
+      "order": 500,
       "theme": "Plans",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Communication & tools"
     },
     {
       "id": "asking_for_things",
       "title": "Asking politely",
       "level": 1,
-      "order": 24,
+      "order": 501,
       "theme": "Requests",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Communication & tools"
     },
     {
       "id": "opinions",
       "title": "Giving opinions",
       "level": 1,
-      "order": 25,
+      "order": 502,
       "theme": "Opinions",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Communication & tools"
     },
     {
       "id": "common_verbs",
       "title": "Everyday verbs",
       "level": 1,
-      "order": 26,
+      "order": 504,
       "theme": "Common verbs",
-      "word_count": 8
+      "word_count": 8,
+      "section": "Communication & tools"
     },
     {
       "id": "phrasal_verbs",
       "title": "Everyday phrasal verbs",
       "level": 1,
-      "order": 27,
+      "order": 505,
       "theme": "Phrasal verbs",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Communication & tools"
     },
     {
       "id": "everyday_expressions",
       "title": "Everyday expressions",
       "level": 1,
-      "order": 28,
+      "order": 503,
       "theme": "Expressions",
       "word_count": 9,
-      "unit": "expression"
+      "unit": "expression",
+      "section": "Communication & tools"
     },
     {
       "id": "numbers_quantity",
       "title": "How much & how many",
       "level": 1,
-      "order": 29,
+      "order": 506,
       "theme": "Quantity",
-      "word_count": 9
+      "word_count": 9,
+      "section": "Communication & tools"
     }
   ]
 }

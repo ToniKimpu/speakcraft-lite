@@ -122,29 +122,80 @@ class _BodyState extends State<_Body> {
             ),
           ),
           const SizedBox(height: 14),
+          Expanded(child: _content(context, groups, meta)),
+        ],
+      ),
+    );
+  }
+
+  Widget _content(
+      BuildContext context, List<VocabIndexEntry> groups, _LevelMeta meta) {
+    if (groups.isEmpty) return _ComingSoon(meta: meta);
+
+    // Group by section, preserving the (already section-sorted) order.
+    final sections = <String>[];
+    final bySection = <String, List<VocabIndexEntry>>{};
+    for (final g in groups) {
+      if (!bySection.containsKey(g.section)) {
+        bySection[g.section] = [];
+        sections.add(g.section);
+      }
+      bySection[g.section]!.add(g);
+    }
+
+    // No real sections → simple list (e.g. Intermediate).
+    final hasSections = sections.any((s) => s.isNotEmpty);
+    if (!hasSections) return _list(context, groups, meta.subtitle);
+
+    final cs = Theme.of(context).colorScheme;
+    return DefaultTabController(
+      key: ValueKey(meta.level),
+      length: sections.length,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          TabBar(
+            isScrollable: true,
+            tabAlignment: TabAlignment.start,
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            labelColor: cs.primary,
+            unselectedLabelColor: cs.onSurfaceVariant,
+            labelStyle: PmpTextStyles.body2Semi,
+            unselectedLabelStyle: PmpTextStyles.body2Regular,
+            indicatorColor: cs.primary,
+            indicatorWeight: 2.5,
+            dividerColor: cs.outlineVariant.withValues(alpha: 0.5),
+            tabs: [for (final s in sections) Tab(text: s)],
+          ),
           Expanded(
-            child: groups.isEmpty
-                ? _ComingSoon(meta: meta)
-                : ListView(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 28),
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 12),
-                        child: Text(meta.subtitle,
-                            style: PmpTextStyles.body2Regular.copyWith(
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .onSurfaceVariant)),
-                      ),
-                      for (final entry in groups) ...[
-                        _GroupCard(entry: entry),
-                        const SizedBox(height: 12),
-                      ],
-                    ],
-                  ),
+            child: TabBarView(
+              children: [
+                for (final s in sections) _list(context, bySection[s]!, null),
+              ],
+            ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget _list(
+      BuildContext context, List<VocabIndexEntry> groups, String? subtitle) {
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 28),
+      children: [
+        if (subtitle != null)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Text(subtitle,
+                style: PmpTextStyles.body2Regular.copyWith(
+                    color: Theme.of(context).colorScheme.onSurfaceVariant)),
+          ),
+        for (final entry in groups) ...[
+          _GroupCard(entry: entry),
+          const SizedBox(height: 12),
+        ],
+      ],
     );
   }
 }
