@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../config/pmp_routes.dart';
@@ -291,9 +292,15 @@ class _WordPage extends StatelessWidget {
             ],
           ),
           if (word.ipa.isNotEmpty)
+            // IPA must render in a font with full IPA-Extensions coverage. The
+            // app's Plus Jakarta Sans lacks those glyphs (ɪ ə ˈ ː ɡ ʃ …) and
+            // they fall back inconsistently / show as tofu; Noto Sans covers
+            // the whole block, so the phonetics render cleanly everywhere.
             Text(word.ipa,
-                style: PmpTextStyles.label2Regular
-                    .copyWith(color: cs.onSurfaceVariant)),
+                style: GoogleFonts.notoSans(
+                  textStyle: PmpTextStyles.label2Regular,
+                  color: cs.onSurfaceVariant,
+                )),
           const SizedBox(height: 4),
           BilingualText(
             mm: word.shortMm,
