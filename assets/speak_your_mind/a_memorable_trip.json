@@ -1,0 +1,792 @@
+{
+  "id": "a_memorable_trip",
+  "level": 2,
+  "domain_en": "Telling stories",
+  "domain_mm": "ဇာတ်လမ်း ပြောပြခြင်း",
+  "title_en": "A Memorable Trip",
+  "title_mm": "အမှတ်တရ ခရီးစဉ်တစ်ခု",
+  "promise_en": "Master the art of storytelling by narrating your past travel experiences with confidence.",
+  "promise_mm": "အရင်က သွားခဲ့တဲ့ ခရီးစဉ်တွေအကြောင်းကို ကိုယ့်စကားနဲ့ကိုယ် ပိုင်ပိုင်နိုင်နိုင် ပြန်ပြောတတ်လာမှာပါ။",
+  "intro_en": "Travel stories are the best way to connect with others. In this session, we will practice organizing our memories into a clear, engaging story about a trip you took.",
+  "intro_mm": "ခရီးသွားခဲ့တဲ့ အတွေ့အကြုံတွေဟာ သူတစ်ပါးနဲ့ ရင်းနှီးမှုတည်ဆောက်ဖို့ အကောင်းဆုံးနည်းလမ်းပါ။ ဒီသင်ခန်းစာမှာတော့ ကိုယ့်ခရီးစဉ်အကြောင်းကို စနစ်တကျနဲ့ စိတ်ဝင်စားစရာကောင်းအောင် ပြောပြတတ်ဖို့ လေ့ကျင့်ကြမယ်။",
+  "toolbox": [
+    {
+      "move_en": "Setting the scene (Where and when)",
+      "move_mm": "ခရီးသွားခဲ့တဲ့ နေရာနဲ့ အချိန်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I went to Bagan last year.",
+          "highlight": "last year",
+          "swap_en": "last summer · last month · two months ago",
+          "gloss_mm": "ပြီးခဲ့တဲ့နှစ်က ကျွန်တော် ပုဂံကို သွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m1-i1.mp3"
+        },
+        {
+          "text_en": "We took a trip to Inle Lake during the holidays.",
+          "highlight": "during the holidays",
+          "swap_en": "last weekend · during Thingyan · in the summer",
+          "gloss_mm": "အားလပ်ရက်တုန်းက ကျွန်တော်တို့ အင်းလေးကို ခရီးသွားခဲ့ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m1-i2.mp3"
+        },
+        {
+          "text_en": "I spent my vacation in Ngapali Beach back in December.",
+          "highlight": "back in December",
+          "swap_en": "last winter · early this year · a few years ago",
+          "gloss_mm": "ပြီးခဲ့တဲ့ ဒီဇင်ဘာလတုန်းက ကျွန်တော် ငပလီကမ်းခြေမှာ အားလပ်ရက်ကို ကုန်ဆုံးခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m1-i3.mp3"
+        },
+        {
+          "text_en": "It was just after the rainy season that I visited Mandalay.",
+          "highlight": "just after the rainy season",
+          "swap_en": "right before the hot season · at the peak of winter",
+          "gloss_mm": "မိုးရာသီအပြီးမှာ ကျွန်တော် မန္တလေးကို ရောက်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Saying who you went with",
+      "move_mm": "ဘယ်သူတွေနဲ့ သွားခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I went with my friends.",
+          "highlight": "my friends",
+          "swap_en": "my family · my colleagues · my brother",
+          "gloss_mm": "ကျွန်တော် သူငယ်ချင်းတွေနဲ့ သွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m2-i1.mp3"
+        },
+        {
+          "text_en": "I traveled with a group of friends.",
+          "highlight": "a group of friends",
+          "swap_en": "my cousins · my parents · some close friends",
+          "gloss_mm": "ကျွန်တော် သူငယ်ချင်းအဖွဲ့နဲ့ ခရီးသွားခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m2-i2.mp3"
+        },
+        {
+          "text_en": "I was accompanied by my family on this trip.",
+          "highlight": "accompanied by my family",
+          "swap_en": "accompanied by my colleagues · joined by some friends",
+          "gloss_mm": "ဒီခရီးမှာ ကျွန်တော့်မိသားစုနဲ့အတူ သွားခဲ့တာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m2-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the journey (How you got there)",
+      "move_mm": "ဘယ်လိုသွားခဲ့လဲ (ယာဉ်အမျိုးအစား) ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I went there by bus.",
+          "highlight": "by bus",
+          "swap_en": "by train · by car · by plane · by boat",
+          "gloss_mm": "ကျွန်တော် အဲဒီကို ကားနဲ့ သွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m3-i1.mp3"
+        },
+        {
+          "text_en": "We took a minivan to Mandalay.",
+          "highlight": "took a minivan",
+          "swap_en": "took a bus · caught a train · hopped on a boat",
+          "gloss_mm": "မန္တလေးကို မီနီဘတ်စ်ကားနဲ့ သွားခဲ့ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m3-i2.mp3"
+        },
+        {
+          "text_en": "It was a long drive to reach the beach.",
+          "highlight": "a long drive",
+          "swap_en": "a bumpy ride · a smooth flight · a tiring journey",
+          "gloss_mm": "ကမ်းခြေကိုရောက်ဖို့ ကားနဲ့ အတော်ကြာကြာ စီးခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m3-i3.mp3"
+        },
+        {
+          "text_en": "We spent ten hours traveling by train.",
+          "highlight": "spent ten hours traveling",
+          "swap_en": "spent all day driving · spent three hours flying",
+          "gloss_mm": "ရထားပေါ်မှာ ၁၀ နာရီလောက် အချိန်ကုန်ခဲ့ရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m3-i4.mp3"
+        },
+        {
+          "text_en": "The journey was quite exhausting, but the view made up for it.",
+          "highlight": "quite exhausting",
+          "swap_en": "very comfortable · long and boring · scenic and pleasant",
+          "gloss_mm": "ခရီးက တော်တော်ပင်ပန်းပေမဲ့ ရှုခင်းတွေက အားလုံးကို တန်စေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m3-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Listing main activities",
+      "move_mm": "ဘာတွေလုပ်ခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We went to Bagan and visited many pagodas.",
+          "highlight": "visited many pagodas",
+          "swap_en": "saw the sunset · explored the old temples · took many photos",
+          "gloss_mm": "ကျွန်တော်တို့ ပုဂံသွားပြီး ဘုရားအဆူဆူကို ဖူးခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m4-i1.mp3"
+        },
+        {
+          "text_en": "The highlight of the trip was trying local food at the night market.",
+          "highlight": "trying local food",
+          "swap_en": "renting e-bikes · hiking up the mountain · swimming in the lake",
+          "gloss_mm": "ဒီခရီးစဉ်ရဲ့ အမှတ်တရအဖြစ်ဆုံးကတော့ ညဈေးမှာ ဒေသထွက်အစားအစာတွေကို စားကြည့်ခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m4-i2.mp3"
+        },
+        {
+          "text_en": "We spent most of our time wandering around the tea shops and chatting with locals.",
+          "highlight": "wandering around the tea shops",
+          "swap_en": "soaking up the atmosphere · trekking through the village · relaxing by the beach",
+          "gloss_mm": "ကျွန်တော်တို့ အချိန်အများစုကို လက်ဖက်ရည်ဆိုင်တွေမှာ လျှောက်သွားပြီး ဒေသခံတွေနဲ့ စကားပြောရင်း ကုန်ဆုံးခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m4-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing a beautiful place or view",
+      "move_mm": "လှပတဲ့နေရာ ဒါမှမဟုတ် ရှုခင်းကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The view from the pagoda was beautiful.",
+          "highlight": "beautiful",
+          "swap_en": "amazing · nice · peaceful",
+          "gloss_mm": "ဘုရားပေါ်က မြင်ကွင်းက အရမ်းလှတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m5-i1.mp3"
+        },
+        {
+          "text_en": "The scenery was breathtaking throughout the journey.",
+          "highlight": "breathtaking",
+          "swap_en": "stunning · gorgeous · very scenic",
+          "gloss_mm": "ခရီးတစ်လျှောက်လုံး မြင်ကွင်းက အသက်ရှုမှားလောက်အောင် လှပတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m5-i2.mp3"
+        },
+        {
+          "text_en": "It was such a picturesque spot, especially at sunset.",
+          "highlight": "picturesque spot",
+          "swap_en": "breathtaking location · lovely hidden gem · stunning landscape",
+          "gloss_mm": "အထူးသဖြင့် နေဝင်ချိန်မှာ အရမ်းကို ပန်းချီကားတစ်ချပ်လို လှပတဲ့နေရာလေးပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m5-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning a problem you faced",
+      "move_mm": "ကြုံခဲ့ရတဲ့ အခက်အခဲကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We had a problem with our bus.",
+          "highlight": "a problem with our bus",
+          "swap_en": "a problem with our hotel · some trouble with the taxi · a delay with our flight",
+          "gloss_mm": "ကျွန်တော်တို့ ဘတ်စ်ကားမှာ ပြဿနာတစ်ခု ကြုံခဲ့ရတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m6-i1.mp3"
+        },
+        {
+          "text_en": "It was really annoying because we missed our train.",
+          "highlight": "really annoying because we missed our train",
+          "swap_en": "very stressful because we got lost · quite frustrating because the shop was closed · a bit difficult because it rained all day",
+          "gloss_mm": "ရထားလွဲသွားလို့ တကယ့်ကို စိတ်ညစ်စရာကောင်းခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m6-i2.mp3"
+        },
+        {
+          "text_en": "To make matters worse, we ran out of cash in Mandalay.",
+          "highlight": "To make matters worse",
+          "swap_en": "Unfortunately · As luck would have it",
+          "gloss_mm": "ပိုဆိုးတာက မန္တလေးမှာ ငွေသားကုန်သွားတာပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m6-i3.mp3"
+        },
+        {
+          "text_en": "It turned out to be a total nightmare.",
+          "highlight": "a total nightmare",
+          "swap_en": "a huge headache · a complete disaster",
+          "gloss_mm": "အဲ့ဒီအချိန်က တကယ့်ကို အိပ်မက်ဆိုးကြီးလိုပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining how you solved the problem",
+      "move_mm": "အခက်အခဲကို ဘယ်လိုဖြေရှင်းခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I fixed it by asking a local.",
+          "highlight": "asking a local",
+          "swap_en": "using Google Maps · taking a taxi · calling my friend",
+          "gloss_mm": "ဒေသခံတစ်ယောက်ကို မေးလိုက်ပြီး ဖြေရှင်းခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m7-i1.mp3"
+        },
+        {
+          "text_en": "I managed to solve it by taking a different route.",
+          "highlight": "taking a different route",
+          "swap_en": "booking another hotel · changing my travel plans · asking for help",
+          "gloss_mm": "လမ်းကြောင်းအသစ်တစ်ခု ပြောင်းသွားလိုက်တာနဲ့ အဆင်ပြေသွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m7-i2.mp3"
+        },
+        {
+          "text_en": "I eventually worked things out by staying calm and thinking clearly.",
+          "highlight": "staying calm and thinking clearly",
+          "swap_en": "getting advice from the hotel staff · looking for alternative options",
+          "gloss_mm": "စိတ်အေးအေးထားပြီး စဉ်းစားလိုက်တဲ့အခါ နောက်ဆုံးမှာ ပြဿနာပြေလည်သွားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m7-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the food you tried",
+      "move_mm": "စားခဲ့တဲ့ အစားအသောက်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I tried some local food.",
+          "highlight": "local food",
+          "swap_en": "Shan noodles · mohinga · street food",
+          "gloss_mm": "ကျွန်တော် ဒေသထွက် အစားအသောက်လေးတွေ စားကြည့်ဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m8-i1.mp3"
+        },
+        {
+          "text_en": "The food tasted really good.",
+          "highlight": "tasted really good",
+          "swap_en": "was very delicious · was quite spicy · tasted fresh",
+          "gloss_mm": "အဲဒီအစားအစာက တကယ်ကို အရသာရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m8-i2.mp3"
+        },
+        {
+          "text_en": "I was surprised by how spicy it was.",
+          "highlight": "how spicy it was",
+          "swap_en": "how fresh the fish was · how cheap the meal was · how unique the flavor was",
+          "gloss_mm": "အဲဒီအစားအစာက ဘယ်လောက်တောင် စပ်လိုက်သလဲဆိုတာကို ကျွန်တော် အံ့သြမိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m8-i3.mp3"
+        },
+        {
+          "text_en": "It was one of the most authentic meals I've ever had.",
+          "highlight": "one of the most authentic meals",
+          "swap_en": "the most memorable dish · the best street food experience",
+          "gloss_mm": "ဒါက ကျွန်တော်စားဖူးသမျှထဲမှာ အစစ်အမှန်ဆုံး မြန်မာ့အရသာနဲ့ အစားအစာတစ်ခု ဖြစ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m8-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about meeting new people",
+      "move_mm": "လူသစ်တွေနဲ့ တွေ့ဆုံခဲ့တာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I met some nice people there.",
+          "highlight": "some nice people",
+          "swap_en": "a friendly couple · a group of travelers · a local guide",
+          "gloss_mm": "အဲဒီမှာ လူကောင်းလေးတွေနဲ့ တွေ့ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m9-i1.mp3"
+        },
+        {
+          "text_en": "I made friends with a local family.",
+          "highlight": "made friends with",
+          "swap_en": "became friends with · got to know",
+          "gloss_mm": "ဒေသခံမိသားစုတစ်စုနဲ့ သူငယ်ချင်းဖြစ်ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m9-i2.mp3"
+        },
+        {
+          "text_en": "We hit it off immediately.",
+          "highlight": "hit it off",
+          "swap_en": "got along well · connected",
+          "gloss_mm": "တွေ့တွေ့ချင်းပဲ ခင်မင်သွားကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m9-i3.mp3"
+        },
+        {
+          "text_en": "I had a chance to connect with many interesting people.",
+          "highlight": "had a chance to connect with",
+          "swap_en": "had the opportunity to meet · got the chance to talk to",
+          "gloss_mm": "စိတ်ဝင်စားစရာကောင်းတဲ့ လူတွေအများကြီးနဲ့ ရင်းနှီးခွင့်ရခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m9-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting the best moment",
+      "move_mm": "အမှတ်တရအဖြစ်ဆုံး အချိန်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The best part was the sunset.",
+          "highlight": "The best part was the sunset",
+          "swap_en": "the highlight was the boat trip · the best moment was the dinner",
+          "gloss_mm": "အကောင်းဆုံးအချက်ကတော့ နေဝင်ချိန်ကို ကြည့်ရတာပါပဲ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m10-i1.mp3"
+        },
+        {
+          "text_en": "I really loved the time we spent at the beach.",
+          "highlight": "really loved the time we spent at the beach",
+          "swap_en": "really enjoyed walking around the pagoda · truly loved eating local food",
+          "gloss_mm": "ကမ်းခြေမှာ အချိန်ဖြုန်းခဲ့ရတဲ့ အချိန်လေးကို အရမ်းသဘောကျမိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m10-i2.mp3"
+        },
+        {
+          "text_en": "My favorite memory was definitely when we took the train to Mandalay.",
+          "highlight": "My favorite memory was definitely when we took the train to Mandalay",
+          "swap_en": "The highlight of the trip was definitely the morning trek · My best moment was definitely sitting in that tea shop",
+          "gloss_mm": "ကျွန်တော့်အတွက် အမှတ်တရအဖြစ်ဆုံးကတော့ မန္တလေးကို ရထားနဲ့သွားခဲ့တဲ့အချိန်ပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m10-i3.mp3"
+        },
+        {
+          "text_en": "Nothing beat the feeling of reaching the top of the mountain.",
+          "highlight": "Nothing beat the feeling of reaching the top of the mountain",
+          "swap_en": "Nothing beat the view from the hotel balcony · Nothing beat the sunrise we saw that morning",
+          "gloss_mm": "တောင်ထိပ်ကို ရောက်သွားတဲ့ ခံစားချက်လောက် ကောင်းတာ ဘာမှမရှိတော့ဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m10-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your feelings during the trip",
+      "move_mm": "ခရီးစဉ်အတွင်း ခံစားချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I felt very happy during the trip.",
+          "highlight": "very happy",
+          "swap_en": "excited · relaxed · tired but happy",
+          "gloss_mm": "ခရီးသွားတုန်းက အရမ်းပျော်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m11-i1.mp3"
+        },
+        {
+          "text_en": "It was such an amazing experience for me.",
+          "highlight": "an amazing experience",
+          "swap_en": "a memorable trip · a wonderful time · an unforgettable moment",
+          "gloss_mm": "ကျွန်တော့်အတွက်တော့ တကယ့်ကို အမှတ်တရ အတွေ့အကြုံပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m11-i2.mp3"
+        },
+        {
+          "text_en": "I was completely blown away by the beauty of Bagan.",
+          "highlight": "completely blown away",
+          "swap_en": "truly impressed · absolutely captivated · deeply moved",
+          "gloss_mm": "ပုဂံရဲ့ အလှတရားကို မြင်လိုက်ရတော့ တကယ့်ကို အံ့သြမှင်သက်သွားခဲ့ရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m11-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing how the trip ended",
+      "move_mm": "ခရီးစဉ် ဘယ်လိုပြီးဆုံးခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We came back home in the evening.",
+          "highlight": "came back home",
+          "swap_en": "returned home · got back to Yangon · arrived back",
+          "gloss_mm": "ညနေပိုင်းမှာ အိမ်ပြန်ရောက်ခဲ့ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m12-i1.mp3"
+        },
+        {
+          "text_en": "The trip ended on a high note.",
+          "highlight": "on a high note",
+          "swap_en": "with a great memory · with a wonderful sunset · on a happy note",
+          "gloss_mm": "ခရီးစဉ်က အရမ်းကို ပျော်ရွှင်စရာကောင်းပြီး အဆုံးသတ်ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m12-i2.mp3"
+        },
+        {
+          "text_en": "We felt exhausted but happy when we reached home.",
+          "highlight": "exhausted but happy",
+          "swap_en": "tired but satisfied · a bit sad to leave · really refreshed",
+          "gloss_mm": "အိမ်ပြန်ရောက်တဲ့အခါ ပင်ပန်းပေမယ့် စိတ်ကျေနပ်မှုရှိခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m12-i3.mp3"
+        },
+        {
+          "text_en": "It was a bittersweet end to a perfect getaway.",
+          "highlight": "bittersweet end",
+          "swap_en": "perfect ending · memorable conclusion · slightly sad end",
+          "gloss_mm": "ပြီးပြည့်စုံတဲ့ ခရီးစဉ်တစ်ခုအတွက် အနည်းငယ်လွမ်းဆွတ်စရာကောင်းတဲ့ အဆုံးသတ်တစ်ခုဖြစ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m12-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your overall opinion",
+      "move_mm": "ခရီးစဉ်အပေါ် အမြင်သဘောထား ပြောနည်း",
+      "items": [
+        {
+          "text_en": "The trip was really fun.",
+          "highlight": "really fun",
+          "swap_en": "great · amazing · very good",
+          "gloss_mm": "ခရီးစဉ်က တကယ် ပျော်ဖို့ကောင်းခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m13-i1.mp3"
+        },
+        {
+          "text_en": "It was an unforgettable experience for me.",
+          "highlight": "unforgettable experience",
+          "swap_en": "amazing experience · wonderful time · memorable trip",
+          "gloss_mm": "ဒါက ကျွန်တော့်အတွက် မေ့မရနိုင်တဲ့ အတွေ့အကြုံတစ်ခုပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m13-i2.mp3"
+        },
+        {
+          "text_en": "I had a wonderful time in Bagan.",
+          "highlight": "a wonderful time",
+          "swap_en": "a great time · a lovely time · an awesome time",
+          "gloss_mm": "ပုဂံမှာ တကယ့်ကို အချိန်ကောင်းတွေကို ပိုင်ဆိုင်ခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m13-i3.mp3"
+        },
+        {
+          "text_en": "Everything about the trip exceeded my expectations.",
+          "highlight": "exceeded my expectations",
+          "swap_en": "was better than I expected · was beyond my expectations",
+          "gloss_mm": "ခရီးစဉ်နဲ့ပတ်သက်သမျှ အရာအားလုံးက ကျွန်တော် မျှော်လင့်ထားတာထက် ပိုကောင်းခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m13-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Saying if you would visit again",
+      "move_mm": "နောက်တစ်ခေါက် ထပ်သွားချင်လား ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I definitely want to visit again.",
+          "highlight": "definitely want to visit again",
+          "swap_en": "really want to go back · would love to return",
+          "gloss_mm": "နောက်တစ်ခေါက် သေချာပေါက် ထပ်သွားချင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m14-i1.mp3"
+        },
+        {
+          "text_en": "I'd go back there in a heartbeat.",
+          "highlight": "in a heartbeat",
+          "swap_en": "anytime · the next chance I get · whenever I can",
+          "gloss_mm": "အခွင့်အရေးသာရရင် ချက်ချင်းပြန်သွားမှာပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m14-i2.mp3"
+        },
+        {
+          "text_en": "The trip was so amazing that I'm already planning my next visit.",
+          "highlight": "already planning my next visit",
+          "swap_en": "thinking about when to go back · dreaming of my next trip",
+          "gloss_mm": "ခရီးစဉ်က အရမ်းကောင်းလွန်းလို့ နောက်တစ်ခေါက်သွားဖို့ စီစဉ်နေပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m14-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Reflecting on what you learned",
+      "move_mm": "ခရီးကနေ ဘာတွေရလိုက်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I learned a lot from the trip.",
+          "highlight": "a lot",
+          "swap_en": "a new perspective · some interesting things · so much about myself",
+          "gloss_mm": "ဒီခရီးကနေ ကျွန်တော် အများကြီး သင်ယူခဲ့ရတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m15-i1.mp3"
+        },
+        {
+          "text_en": "It made me realize how much I enjoy nature.",
+          "highlight": "how much I enjoy nature",
+          "swap_en": "the value of simple living · how important it is to slow down · that I need to travel more",
+          "gloss_mm": "သဘာဝတရားကို ဘယ်လောက်တောင် နှစ်သက်မှန်း ဒီခရီးက သိသွားစေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m15-i2.mp3"
+        },
+        {
+          "text_en": "The best takeaway was learning to be more patient.",
+          "highlight": "learning to be more patient",
+          "swap_en": "appreciating the local culture · understanding different ways of life · becoming more independent",
+          "gloss_mm": "ဒီခရီးကနေ အကောင်းဆုံးရလိုက်တဲ့ သင်ခန်းစာက သည်းခံတတ်ဖို့ပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m15-i3.mp3"
+        },
+        {
+          "text_en": "Looking back, the trip really shifted my perspective on daily life.",
+          "highlight": "shifted my perspective on daily life",
+          "swap_en": "changed the way I see things · broadened my horizons · helped me reconnect with myself",
+          "gloss_mm": "ပြန်တွေးကြည့်ရင် ဒီခရီးက ကျွန်တော့်ရဲ့ နေ့စဉ်ဘဝအပေါ် မြင်တဲ့အမြင်ကို တကယ်ပဲ ပြောင်းလဲစေခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_memorable_trip/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Tell me about a memorable trip you took. Write a short story of 6–10 sentences about where you went, who you were with, a challenge you faced, and why it is so special to you.",
+    "prompt_mm": "သင်သွားခဲ့ဖူးတဲ့ ခရီးစဉ်တစ်ခုအကြောင်း ပြောပြပေးပါ။ ဘယ်ကိုသွားခဲ့လဲ၊ ဘယ်သူတွေနဲ့ သွားခဲ့လဲ၊ ကြုံခဲ့ရတဲ့ အခက်အခဲ၊ ဘာကြောင့် အမှတ်တရဖြစ်ရသလဲဆိုတာကို ဝါကျ ၆ ကြောင်းမှ ၁၀ ကြောင်းကြား ရေးသားကြည့်ပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "Destination and time",
+      "Travel companions",
+      "Activities",
+      "A surprise or problem",
+      "Best moment",
+      "Feelings",
+      "Final reflection"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and natural speed.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့အဖြေကို အသံထွက်ပြီး ၂ ခေါက်၊ ၃ ခေါက်လောက် ဖတ်ကြည့်ပါ။ စကားပြောတဲ့အရှိန်ကို ပုံမှန်အတိုင်းဖြစ်အောင် လေ့ကျင့်ပါ။"
+  },
+  "guide": {
+    "model_en": "Last year, I visited Bagan. I went there with my friends. We traveled by bus. We visited many old pagodas. The sunset view was very beautiful. We once got lost in the village. We used a map to find our way back. We ate delicious local noodles. I met many friendly people there. The best moment was watching the sunrise. I felt very happy during this trip. It was an amazing experience. I want to visit Bagan again.",
+    "model_mm": "ပြီးခဲ့တဲ့နှစ်က ကျွန်တော် ပုဂံကို သွားခဲ့ပါတယ်။ ကျွန်တော် သူငယ်ချင်းတွေနဲ့ သွားခဲ့တာပါ။ ကျွန်တော်တို့ ဘတ်စ်ကားနဲ့ သွားခဲ့ကြတယ်။ ရှေးဟောင်းဘုရားပုထိုးတွေကို အများကြီး လေ့လာခဲ့တယ်။ နေဝင်ချိန်ရှုခင်းက အရမ်းလှတယ်။ တစ်ခါတုန်းက ရွာထဲမှာ လမ်းပျောက်သွားတယ်။ မြေပုံကြည့်ပြီး ပြန်လမ်းကို ရှာခဲ့ရတယ်။ ဒေသထွက်ခေါက်ဆွဲတွေကို စားခဲ့တယ်။ အဲဒီမှာ ဖော်ရွေတဲ့လူတွေ အများကြီးနဲ့ တွေ့ခဲ့တယ်။ အမှတ်တရအဖြစ်ဆုံးကတော့ နေထွက်ချိန်ကို ကြည့်ရတာပါ။ ဒီခရီးစဉ်မှာ ကျွန်တော် အရမ်းပျော်ခဲ့တယ်။ တကယ့်ကို အံ့ဩစရာကောင်းတဲ့ ခရီးစဉ်တစ်ခုပါ။ ပုဂံကို နောက်တစ်ခေါက် ထပ်သွားချင်ပါသေးတယ်။",
+    "breakdown": [
+      {
+        "text_en": "Last year, I visited Bagan.",
+        "gloss_mm": "ပြီးခဲ့တဲ့နှစ်က ကျွန်တော် ပုဂံကို သွားခဲ့ပါတယ်။",
+        "why_mm": "အချိန်နှင့် နေရာကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I went there with my friends.",
+        "gloss_mm": "ကျွန်တော် သူငယ်ချင်းတွေနဲ့ သွားခဲ့တာပါ။",
+        "why_mm": "ဘယ်သူတွေနဲ့ သွားခဲ့လဲ ပြောခြင်း"
+      },
+      {
+        "text_en": "We traveled by bus.",
+        "gloss_mm": "ကျွန်တော်တို့ ဘတ်စ်ကားနဲ့ သွားခဲ့ကြတယ်။",
+        "why_mm": "ခရီးသွားနည်းလမ်းကို ပြောခြင်း"
+      },
+      {
+        "text_en": "We visited many old pagodas.",
+        "gloss_mm": "ကျွန်တော်တို့ ရှေးဟောင်းဘုရားပုထိုးတွေကို အများကြီး လေ့လာခဲ့တယ်။",
+        "why_mm": "လုပ်ဆောင်ခဲ့သည့် အဓိကလှုပ်ရှားမှုကို ပြောခြင်း"
+      },
+      {
+        "text_en": "The sunset view was very beautiful.",
+        "gloss_mm": "နေဝင်ချိန်ရှုခင်းက အရမ်းလှတယ်။",
+        "why_mm": "လှပတဲ့နေရာ/ရှုခင်းကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "We once got lost in the village.",
+        "gloss_mm": "တစ်ခါတုန်းက ရွာထဲမှာ လမ်းပျောက်သွားတယ်။",
+        "why_mm": "ကြုံခဲ့ရတဲ့ အခက်အခဲကို ပြောခြင်း"
+      },
+      {
+        "text_en": "We used a map to find our way back.",
+        "gloss_mm": "မြေပုံကြည့်ပြီး ပြန်လမ်းကို ရှာခဲ့ရတယ်။",
+        "why_mm": "အခက်အခဲကို ဖြေရှင်းပုံ ပြောခြင်း"
+      },
+      {
+        "text_en": "We ate delicious local noodles.",
+        "gloss_mm": "ဒေသထွက်ခေါက်ဆွဲတွေကို စားခဲ့တယ်။",
+        "why_mm": "စားခဲ့တဲ့ အစားအသောက်အကြောင်း ပြောခြင်း"
+      },
+      {
+        "text_en": "I met many friendly people there.",
+        "gloss_mm": "အဲဒီမှာ ဖော်ရွေတဲ့လူတွေ အများကြီးနဲ့ တွေ့ခဲ့တယ်။",
+        "why_mm": "လူသစ်တွေနဲ့ တွေ့ဆုံခြင်း"
+      },
+      {
+        "text_en": "The best moment was watching the sunrise.",
+        "gloss_mm": "အမှတ်တရအဖြစ်ဆုံးကတော့ နေထွက်ချိန်ကို ကြည့်ရတာပါ။",
+        "why_mm": "အမှတ်တရအဖြစ်ဆုံးအချိန်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I felt very happy during this trip.",
+        "gloss_mm": "ဒီခရီးစဉ်မှာ ကျွန်တော် အရမ်းပျော်ခဲ့တယ်။",
+        "why_mm": "ခံစားချက်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "It was an amazing experience.",
+        "gloss_mm": "တကယ့်ကို အံ့ဩစရာကောင်းတဲ့ ခရီးစဉ်တစ်ခုပါ။",
+        "why_mm": "အမြင်သဘောထားကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I want to visit Bagan again.",
+        "gloss_mm": "ပုဂံကို နောက်တစ်ခေါက် ထပ်သွားချင်ပါသေးတယ်။",
+        "why_mm": "နောက်တစ်ခေါက် ထပ်သွားချင်လား ပြောခြင်း"
+      }
+    ],
+    "template": "{when}, I visited {place}. I went there with {company}. We traveled by {transport}. We {activity}. The {scenery} was very beautiful. We once {problem}. We {solution} to find our way back. We ate {food}. I {social_interaction}. The best moment was {best_moment}. I felt {feeling} during this trip. It was {opinion}. I want to visit {place} again.",
+    "slots": [
+      {
+        "id": "when",
+        "label_en": "Time",
+        "label_mm": "အချိန်",
+        "hint": "ခရီးသွားခဲ့တဲ့ အချိန်ကို ရွေးပါ",
+        "options": [
+          "Last year",
+          "Last month",
+          "Two years ago",
+          "Last summer"
+        ]
+      },
+      {
+        "id": "place",
+        "label_en": "Destination",
+        "label_mm": "နေရာ",
+        "hint": "သွားခဲ့တဲ့ နေရာကို ရွေးပါ",
+        "options": [
+          "Bagan",
+          "Inle Lake",
+          "Ngapali Beach",
+          "Pyin Oo Lwin"
+        ]
+      },
+      {
+        "id": "company",
+        "label_en": "Company",
+        "label_mm": "ဘယ်သူတွေနဲ့သွားလဲ",
+        "hint": "ဘယ်သူတွေနဲ့ သွားခဲ့လဲ",
+        "options": [
+          "my friends",
+          "my classmates",
+          "my colleagues",
+          "my cousins"
+        ]
+      },
+      {
+        "id": "transport",
+        "label_en": "Transport",
+        "label_mm": "ယာဉ်အမျိုးအစား",
+        "hint": "ဘယ်လိုသွားခဲ့လဲ",
+        "options": [
+          "bus",
+          "train",
+          "car",
+          "boat"
+        ]
+      },
+      {
+        "id": "activity",
+        "label_en": "Activity",
+        "label_mm": "လုပ်ဆောင်ခဲ့သည့်အရာ",
+        "hint": "ဘာတွေလုပ်ခဲ့လဲ",
+        "options": [
+          "visited old pagodas",
+          "hiked the mountains",
+          "swam in the sea",
+          "walked around the town"
+        ]
+      },
+      {
+        "id": "scenery",
+        "label_en": "Scenery",
+        "label_mm": "ရှုခင်း",
+        "hint": "လှပတဲ့နေရာအကြောင်း",
+        "options": [
+          "sunset view",
+          "mountain scenery",
+          "beach view",
+          "garden view"
+        ]
+      },
+      {
+        "id": "problem",
+        "label_en": "Problem",
+        "label_mm": "အခက်အခဲ",
+        "hint": "ကြုံခဲ့ရတဲ့ အခက်အခဲ",
+        "options": [
+          "got lost in the village",
+          "missed the bus",
+          "forgot my bag",
+          "ran out of cash"
+        ]
+      },
+      {
+        "id": "solution",
+        "label_en": "Solution",
+        "label_mm": "ဖြေရှင်းနည်း",
+        "hint": "ဘယ်လိုဖြေရှင်းခဲ့လဲ",
+        "options": [
+          "used a map",
+          "asked a local",
+          "called for help",
+          "took a taxi"
+        ]
+      },
+      {
+        "id": "food",
+        "label_en": "Food",
+        "label_mm": "အစားအသောက်",
+        "hint": "စားခဲ့တဲ့ အစားအသောက်",
+        "options": [
+          "delicious local noodles",
+          "tasty traditional snacks",
+          "fresh seafood",
+          "spicy local curry"
+        ]
+      },
+      {
+        "id": "social_interaction",
+        "label_en": "Meeting people",
+        "label_mm": "လူသစ်တွေနဲ့တွေ့ဆုံခြင်း",
+        "hint": "လူသစ်တွေနဲ့ တွေ့ဆုံခဲ့တာ",
+        "options": [
+          "met many friendly people",
+          "talked with local sellers",
+          "made new friends",
+          "shared stories with travelers"
+        ]
+      },
+      {
+        "id": "best_moment",
+        "label_en": "Best moment",
+        "label_mm": "အမှတ်တရအဖြစ်ဆုံးအချိန်",
+        "hint": "အမှတ်တရအဖြစ်ဆုံးက",
+        "options": [
+          "watching the sunrise",
+          "eating dinner together",
+          "exploring the caves",
+          "walking on the beach"
+        ]
+      },
+      {
+        "id": "feeling",
+        "label_en": "Feeling",
+        "label_mm": "ခံစားချက်",
+        "hint": "ခရီးစဉ်အတွင်း ခံစားချက်",
+        "options": [
+          "very happy",
+          "excited",
+          "relaxed",
+          "amazed"
+        ]
+      },
+      {
+        "id": "opinion",
+        "label_en": "Overall opinion",
+        "label_mm": "အမြင်သဘောထား",
+        "hint": "ခရီးစဉ်အပေါ် အမြင်",
+        "options": [
+          "an amazing experience",
+          "a wonderful trip",
+          "an unforgettable journey",
+          "a peaceful time"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level2/a_memorable_trip/guide-model.mp3"
+  }
+}

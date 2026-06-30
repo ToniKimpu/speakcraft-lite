@@ -1,0 +1,724 @@
+{
+  "id": "health_and_modern_life",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "Health & Modern Life",
+  "title_mm": "ကျန်းမာရေးနှင့် ခေတ်သစ်လူနေမှုဘဝ",
+  "promise_en": "Learn to discuss modern health challenges, express opinions, and suggest solutions with confidence.",
+  "promise_mm": "ခေတ်သစ်လူနေမှုဘဝရဲ့ ကျန်းမာရေးဆိုင်ရာ စိန်ခေါ်မှုတွေကို ကိုယ်ပိုင်အမြင်နဲ့ ဆွေးနွေးတတ်လာမယ်။",
+  "intro_en": "Balancing career, technology, and health is difficult. Use this toolbox to talk about the impact of modern habits on our well-being.",
+  "intro_mm": "အလုပ်၊ နည်းပညာနဲ့ ကျန်းမာရေးကို မျှတအောင် ထိန်းဖို့ ခက်ခဲပါတယ်။ ဒီနေ့ခေတ် လူနေမှုပုံစံတွေက ကျန်းမာရေးအပေါ် ဘယ်လိုသက်ရောက်မှုရှိလဲဆိုတာ ဆွေးနွေးဖို့ ဒီသင်ခန်းစာကို လေ့လာပါ။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the issue",
+      "move_mm": "လက်ရှိဖြစ်နေတဲ့ ပြဿနာကို စတင်မိတ်ဆက်နည်း",
+      "items": [
+        {
+          "text_en": "Many people have health problems these days.",
+          "highlight": "health problems",
+          "swap_en": "stress issues · sleeping troubles · digestive issues",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ လူတော်တော်များများ ကျန်းမာရေးပြဿနာတွေ ရှိနေကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m1-i1.mp3"
+        },
+        {
+          "text_en": "Stress is becoming a serious problem for office workers.",
+          "highlight": "a serious problem",
+          "swap_en": "a major concern · a growing issue · a real challenge",
+          "gloss_mm": "ရုံးဝန်ထမ်းတွေအတွက် စိတ်ဖိစီးမှုက အရေးကြီးတဲ့ ပြဿနာတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m1-i2.mp3"
+        },
+        {
+          "text_en": "One major cause of poor health is our sedentary lifestyle.",
+          "highlight": "One major cause of",
+          "swap_en": "A primary reason for · The main driver behind",
+          "gloss_mm": "ကျန်းမာရေးချို့တဲ့ရတဲ့ အဓိကအကြောင်းရင်းတစ်ခုကတော့ လှုပ်ရှားမှုနည်းတဲ့ နေထိုင်မှုပုံစံကြောင့်ပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m1-i3.mp3"
+        },
+        {
+          "text_en": "This modern lifestyle often leads to chronic fatigue.",
+          "highlight": "leads to",
+          "swap_en": "results in · contributes to · is linked to",
+          "gloss_mm": "ဒီလိုခေတ်မီတဲ့ နေထိုင်မှုပုံစံက မကြာခဏဆိုသလို နာတာရှည် ပင်ပန်းနွမ်းနယ်မှုကို ဖြစ်စေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိအခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Many people work long hours now.",
+          "highlight": "work long hours",
+          "swap_en": "sit at desks all day · skip their lunch breaks · stay up too late",
+          "gloss_mm": "လူတော်တော်များများက အခုနောက်ပိုင်း အလုပ်ချိန် အကြာကြီး လုပ်နေကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m2-i1.mp3"
+        },
+        {
+          "text_en": "It's becoming a common problem to feel stressed.",
+          "highlight": "a common problem",
+          "swap_en": "a real challenge · a major concern · a serious issue",
+          "gloss_mm": "စိတ်ဖိစီးမှု ခံစားရတာက အခုဆိုရင် အဖြစ်များတဲ့ ပြဿနာတစ်ခု ဖြစ်လာတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m2-i2.mp3"
+        },
+        {
+          "text_en": "One major cause is the lack of physical exercise.",
+          "highlight": "the lack of physical exercise",
+          "swap_en": "the habit of eating fast food · the constant screen time · the busy city lifestyle",
+          "gloss_mm": "အဓိက အကြောင်းရင်းတစ်ခုကတော့ ကိုယ်လက်လှုပ်ရှားမှု နည်းပါးခြင်း ဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m2-i3.mp3"
+        },
+        {
+          "text_en": "This lifestyle could lead to serious health issues.",
+          "highlight": "could lead to",
+          "swap_en": "often results in · is likely to cause · might contribute to",
+          "gloss_mm": "ဒီလို နေထိုင်မှုပုံစံက ကျန်းမာရေး ပြဿနာကြီးတွေ ဖြစ်လာစေနိုင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m2-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the cause of the problem",
+      "move_mm": "ပြဿနာဖြစ်ရတဲ့ အကြောင်းရင်းကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "One major cause is lack of exercise.",
+          "highlight": "lack of exercise",
+          "swap_en": "stress · unhealthy eating habits · long working hours",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုက လေ့ကျင့်ခန်းမလုပ်တာပါပဲ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m3-i1.mp3"
+        },
+        {
+          "text_en": "This is mainly due to our busy lifestyle.",
+          "highlight": "mainly due to",
+          "swap_en": "largely caused by · a result of",
+          "gloss_mm": "ဒါက အဓိကအားဖြင့် ကျွန်တော်တို့ရဲ့ အလုပ်များတဲ့ လူနေမှုပုံစံကြောင့်ပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m3-i2.mp3"
+        },
+        {
+          "text_en": "A significant factor contributing to this problem is the constant use of screens.",
+          "highlight": "A significant factor contributing to this problem is",
+          "swap_en": "The root cause of this issue is · A key driver of this trend is",
+          "gloss_mm": "ဒီပြဿနာကို ဖြစ်စေတဲ့ အဓိကအချက်တစ်ခုကတော့ ဖုန်းနဲ့ကွန်ပျူတာကို အမြဲသုံးနေတာပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting common habits (e.g., fast food, sitting)",
+      "move_mm": "အလေ့အကျင့်ဆိုးတွေ (အသင့်စားအစားအစာ၊ အထိုင်များခြင်း) အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Many people eat fast food every day.",
+          "highlight": "eat fast food",
+          "swap_en": "drink bubble tea · sit for long hours · skip breakfast",
+          "gloss_mm": "လူတော်တော်များများက အသင့်စားအစားအစာတွေကို နေ့တိုင်းစားကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m4-i1.mp3"
+        },
+        {
+          "text_en": "This habit of sitting all day is bad for our health.",
+          "highlight": "sitting all day",
+          "swap_en": "eating junk food · staying up late · staring at screens",
+          "gloss_mm": "ဒီလို တစ်နေ့လုံး ထိုင်နေတဲ့ အလေ့အကျင့်က ကျန်းမာရေးအတွက် မကောင်းဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m4-i2.mp3"
+        },
+        {
+          "text_en": "Our sedentary lifestyle is becoming a serious health concern.",
+          "highlight": "sedentary lifestyle",
+          "swap_en": "reliance on instant noodles · constant screen time · lack of physical exercise",
+          "gloss_mm": "လှုပ်ရှားမှုနည်းတဲ့ ကျွန်တော်တို့ရဲ့ နေထိုင်မှုပုံစံက စိုးရိမ်ရတဲ့ ကျန်းမာရေးပြဿနာတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m4-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the physical effects",
+      "move_mm": "ရုပ်ပိုင်းဆိုင်ရာ ထိခိုက်မှုတွေကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "Sitting too long causes back pain.",
+          "highlight": "causes",
+          "swap_en": "leads to · results in · triggers",
+          "gloss_mm": "အချိန်ကြာကြီး ထိုင်တာက ခါးနာတဲ့ဝေဒနာကို ဖြစ်စေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m5-i1.mp3"
+        },
+        {
+          "text_en": "Constant screen time is really straining my eyes.",
+          "highlight": "is really straining",
+          "swap_en": "is tiring · is putting pressure on",
+          "gloss_mm": "ဖုန်း/ကွန်ပျူတာ screen ကြည့်ချိန် များတာက မျက်လုံးကို တကယ် ပင်ပန်းစေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m5-i2.mp3"
+        },
+        {
+          "text_en": "Lack of physical activity often leads to chronic fatigue.",
+          "highlight": "leads to",
+          "swap_en": "contributes to · is a major factor in",
+          "gloss_mm": "ကိုယ်လက်လှုပ်ရှားမှု နည်းတာက မကြာခဏဆိုသလို နာတာရှည် ပင်ပန်းနွမ်းနယ်မှုကို ဖြစ်ပေါ်စေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m5-i3.mp3"
+        },
+        {
+          "text_en": "Modern work habits are taking a toll on our physical health.",
+          "highlight": "taking a toll on",
+          "swap_en": "negatively affecting · damaging",
+          "gloss_mm": "ခေတ်သစ် အလုပ်လုပ်ပုံတွေက ကျွန်တော်တို့ရဲ့ ကျန်းမာရေးကို ထိခိုက်စေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m5-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing mental health/stress",
+      "move_mm": "စိတ်ကျန်းမာရေးနဲ့ စိတ်ဖိစီးမှုအကြောင်း ဆွေးနွေးနည်း",
+      "items": [
+        {
+          "text_en": "Many people feel stressed these days.",
+          "highlight": "feel stressed",
+          "swap_en": "feel overwhelmed · get burned out · struggle with anxiety",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ လူတော်တော်များများ စိတ်ဖိစီးမှု ခံစားနေရတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m6-i1.mp3"
+        },
+        {
+          "text_en": "Work pressure is a common cause of stress.",
+          "highlight": "Work pressure",
+          "swap_en": "Financial worries · Constant phone notifications · The fast pace of city life",
+          "gloss_mm": "အလုပ်ဖိအားက စိတ်ဖိစီးမှုဖြစ်စေတဲ့ အဓိကအကြောင်းရင်း တစ်ခုပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m6-i2.mp3"
+        },
+        {
+          "text_en": "Modern life takes a toll on our mental well-being.",
+          "highlight": "takes a toll on",
+          "swap_en": "negatively impacts · puts a strain on",
+          "gloss_mm": "ခေတ်သစ်လူနေမှုဘဝက ကျွန်တော်တို့ရဲ့ စိတ်ကျန်းမာရေးကို ထိခိုက်စေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m6-i3.mp3"
+        },
+        {
+          "text_en": "We need to prioritize our mental health over success.",
+          "highlight": "prioritize our mental health",
+          "swap_en": "take care of our mental health · give more importance to mental wellness",
+          "gloss_mm": "အောင်မြင်မှုထက် စိတ်ကျန်းမာရေးကို ပိုအလေးထားဖို့ လိုအပ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting different perspectives",
+      "move_mm": "အမြင်ကွဲပြားမှုတွေကို တင်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Many people think that modern life is too stressful.",
+          "highlight": "Many people think that",
+          "swap_en": "Some people say that · Most people believe that",
+          "gloss_mm": "ခေတ်သစ်လူနေမှုပုံစံက ဖိစီးမှုများတယ်လို့ လူအတော်များများ ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m7-i1.mp3"
+        },
+        {
+          "text_en": "On the one hand, technology saves time, but on the other hand, it makes us inactive.",
+          "highlight": "",
+          "swap_en": "In some ways, ... but in other ways, · While it's true that ..., it's also clear that",
+          "gloss_mm": "တစ်ဖက်မှာတော့ နည်းပညာက အချိန်ကုန်သက်သာစေတယ်၊ ဒါပေမဲ့ နောက်တစ်ဖက်မှာကျတော့ လူတွေကို လှုပ်ရှားမှုနည်းစေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m7-i2.mp3"
+        },
+        {
+          "text_en": "There is a growing debate about whether digital devices improve or harm our health.",
+          "highlight": "a growing debate about whether",
+          "swap_en": "a lot of disagreement over whether · divided opinions on whether",
+          "gloss_mm": "ဒီဂျစ်တယ်ကိရိယာတွေက ကျန်းမာရေးကို တိုးတက်စေသလား၊ ထိခိုက်စေသလားဆိုတာနဲ့ ပတ်သက်ပြီး ငြင်းခုံမှုတွေ တိုးလာနေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m7-i3.mp3"
+        },
+        {
+          "text_en": "While some argue that fast food is convenient, others point out its long-term health risks.",
+          "highlight": "While some argue that",
+          "swap_en": "Although many claim that · Even though some believe that",
+          "gloss_mm": "Fast food က အဆင်ပြေတယ်လို့ အချို့က ငြင်းခုံကြပေမဲ့ တချို့ကတော့ ရေရှည်ကျန်းမာရေး ထိခိုက်နိုင်တဲ့အကြောင်း ထောက်ပြကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m7-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing the past and present",
+      "move_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "Life is busier than in the past.",
+          "highlight": "busier than in the past",
+          "swap_en": "healthier than in the past · more stressful than in the past · less active than in the past",
+          "gloss_mm": "အရင်တုန်းကထက်စာရင် အခုဘဝက ပိုပြီး အလုပ်ရှုပ်လာတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m8-i1.mp3"
+        },
+        {
+          "text_en": "Compared to the old days, we move around much less now.",
+          "highlight": "Compared to the old days",
+          "swap_en": "In contrast to the past · Unlike in the past",
+          "gloss_mm": "အရင်ခေတ်တွေနဲ့ ယှဉ်ရင် အခု ကျွန်တော်တို့ လှုပ်ရှားသွားလာမှု အရမ်းနည်းသွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m8-i2.mp3"
+        },
+        {
+          "text_en": "Sedentary jobs have become the norm, unlike the physically demanding work of the past.",
+          "highlight": "have become the norm",
+          "swap_en": "are more common now · have replaced active jobs",
+          "gloss_mm": "အရင်ကလို ခန္ဓာကိုယ်နဲ့ အလုပ်လုပ်ရတာမျိုးမဟုတ်ဘဲ ထိုင်ပြီးလုပ်ရတဲ့ အလုပ်တွေကပဲ အခုခေတ်မှာ ပုံမှန်ဖြစ်လာတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m8-i3.mp3"
+        },
+        {
+          "text_en": "There is a massive shift from traditional home-cooked meals to processed food.",
+          "highlight": "a massive shift from",
+          "swap_en": "a clear move away from · a big change from",
+          "gloss_mm": "အိမ်မှာချက်စားတဲ့ အစားအစာတွေကနေ အသင့်စား အစားအစာတွေဘက်ကို အကြီးအကျယ် ပြောင်းလဲသွားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m8-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Using 'On the one hand... on the other hand'",
+      "move_mm": "တစ်ဖက်မှာ... နောက်တစ်ဖက်မှာ... ဆိုတဲ့ စကားလုံးသုံးနည်း",
+      "items": [
+        {
+          "text_en": "On the one hand, smartphones help us work; on the other hand, they keep us busy all the time.",
+          "highlight": "On the one hand",
+          "swap_en": "For one thing · To begin with",
+          "gloss_mm": "တစ်ဖက်မှာ စမတ်ဖုန်းတွေက အလုပ်လုပ်ဖို့ အထောက်အကူပြုပေမဲ့ နောက်တစ်ဖက်မှာလည်း ကျွန်တော်တို့ကို အချိန်ပြည့် အလုပ်ရှုပ်နေစေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m9-i1.mp3"
+        },
+        {
+          "text_en": "On the one hand, eating out is convenient; on the other hand, it is not as healthy as home-cooked food.",
+          "highlight": "on the other hand",
+          "swap_en": "however · at the same time",
+          "gloss_mm": "တစ်ဖက်မှာ အပြင်မှာ စားတာက အဆင်ပြေပေမဲ့ နောက်တစ်ဖက်မှာတော့ အိမ်ချက်လောက် မကျန်းမာရေးနဲ့ မညီညွတ်ဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m9-i2.mp3"
+        },
+        {
+          "text_en": "On the one hand, modern medical technology saves lives; on the other hand, it makes healthcare very expensive for ordinary people.",
+          "highlight": "",
+          "swap_en": "While it is true that... in contrast · Although... alternatively",
+          "gloss_mm": "တစ်ဖက်မှာ ခေတ်မီဆေးပညာက အသက်တွေကို ကယ်တင်ပေးနေပေမဲ့ နောက်တစ်ဖက်မှာတော့ သာမန်လူတွေအတွက် ကျန်းမာရေးစောင့်ရှောက်မှုက အရမ်းဈေးကြီးသွားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your own opinion",
+      "move_mm": "ကိုယ့်ရဲ့ ကိုယ်ပိုင်အမြင်ကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think health is very important.",
+          "highlight": "I think",
+          "swap_en": "In my opinion · To my mind",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရ ကျန်းမာရေးက အရမ်းအရေးကြီးတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m10-i1.mp3"
+        },
+        {
+          "text_en": "Many people believe that technology makes us lazy.",
+          "highlight": "Many people believe that",
+          "swap_en": "It is widely believed that · A lot of people think that",
+          "gloss_mm": "နည်းပညာကြောင့် လူတွေ ပျင်းလာတယ်လို့ လူအတော်များများက ယုံကြည်ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m10-i2.mp3"
+        },
+        {
+          "text_en": "From my point of view, stress is the biggest issue in our modern life.",
+          "highlight": "From my point of view",
+          "swap_en": "If you ask me · As far as I am concerned",
+          "gloss_mm": "ကျွန်တော့်အမြင်ပြောရရင်တော့ စိတ်ဖိစီးမှုဟာ ခေတ်သစ်လူနေမှုဘဝရဲ့ အကြီးမားဆုံး ပြဿနာပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m10-i3.mp3"
+        },
+        {
+          "text_en": "I am convinced that we need to spend more time exercising.",
+          "highlight": "I am convinced that",
+          "swap_en": "I firmly believe that · I am of the opinion that",
+          "gloss_mm": "ကျွန်တော်တို့ ကိုယ်လက်လှုပ်ရှားမှု ပိုလုပ်ဖို့ လိုအပ်တယ်လို့ ကျွန်တော် အခိုင်အမာ ယုံကြည်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m10-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting possible solutions",
+      "move_mm": "ဖြေရှင်းနိုင်မယ့် နည်းလမ်းတွေ အကြံပေးနည်း",
+      "items": [
+        {
+          "text_en": "You should try to walk more.",
+          "highlight": "try to walk more",
+          "swap_en": "eat more vegetables · drink more water · get more sleep",
+          "gloss_mm": "လမ်းပိုလျှောက်ဖို့ ကြိုးစားသင့်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m11-i1.mp3"
+        },
+        {
+          "text_en": "It might be a good idea to join a gym.",
+          "highlight": "a good idea to join a gym",
+          "swap_en": "a good idea to take a break · a good idea to go for a run · a good idea to limit screen time",
+          "gloss_mm": "အားကစားရုံသွားတာ ဒါမှမဟုတ် Gym ဆော့တာက ကောင်းတဲ့အကြံပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m11-i2.mp3"
+        },
+        {
+          "text_en": "One effective way to manage stress is to practice meditation.",
+          "highlight": "effective way to manage stress is to practice meditation",
+          "swap_en": "effective way to improve health is to cut down on sugar · effective way to stay fit is to practice yoga",
+          "gloss_mm": "စိတ်ဖိစီးမှုကို လျှော့ချဖို့ ထိရောက်တဲ့ နည်းလမ်းတစ်ခုကတော့ တရားထိုင်ခြင်းပဲ ဖြစ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m11-i3.mp3"
+        },
+        {
+          "text_en": "The best approach would be to adopt a healthier diet.",
+          "highlight": "best approach would be to adopt a healthier diet",
+          "swap_en": "best approach would be to maintain a balanced lifestyle · best approach would be to prioritize mental health",
+          "gloss_mm": "အကောင်းဆုံးနည်းလမ်းကတော့ ကျန်းမာရေးနဲ့ညီညွတ်တဲ့ အစားအသောက်ပုံစံကို ပြောင်းလဲဖို့ပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m11-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about personal lifestyle changes",
+      "move_mm": "ကိုယ်တိုင်နေထိုင်မှုပုံစံ ပြောင်းလဲပုံ ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I started to exercise more.",
+          "highlight": "exercise more",
+          "swap_en": "eat healthier food · sleep earlier · drink more water",
+          "gloss_mm": "ကျွန်တော် လေ့ကျင့်ခန်း ပိုလုပ်ဖြစ်လာတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m12-i1.mp3"
+        },
+        {
+          "text_en": "I've been trying to cut down on sugary tea.",
+          "highlight": "cut down on sugary tea",
+          "swap_en": "cut down on oily food · cut down on snacks · cut down on late-night meals",
+          "gloss_mm": "ကျွန်တော် လက်ဖက်ရည်ချို လျှော့သောက်ဖို့ ကြိုးစားနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m12-i2.mp3"
+        },
+        {
+          "text_en": "I've made a conscious effort to walk to the tea shop instead of taking a taxi.",
+          "highlight": "made a conscious effort to walk",
+          "swap_en": "made a conscious effort to cook at home · made a conscious effort to avoid fast food",
+          "gloss_mm": "တက္ကစီစီးမယ့်အစား လက်ဖက်ရည်ဆိုင်ကို လမ်းလျှောက်သွားဖို့ တမင်တကာ ကြိုးစားဖြစ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing concern",
+      "move_mm": "စိုးရိမ်မကင်းဖြစ်မှုကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Modern life is becoming unhealthy.",
+          "highlight": "unhealthy",
+          "swap_en": "too stressful · very busy · hard to manage",
+          "gloss_mm": "ခေတ်သစ်လူနေမှုဘဝက ကျန်းမာရေးနဲ့ မညီညွတ်တော့ဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m13-i1.mp3"
+        },
+        {
+          "text_en": "It is worrying that many people don't get enough sleep.",
+          "highlight": "It is worrying that",
+          "swap_en": "It is alarming that · I am concerned that",
+          "gloss_mm": "လူတော်တော်များများ အိပ်ရေးမဝကြတာ စိုးရိမ်စရာကောင်းတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m13-i2.mp3"
+        },
+        {
+          "text_en": "The rise in sedentary jobs is a major health concern.",
+          "highlight": "a major health concern",
+          "swap_en": "a serious issue · a growing problem · a real threat",
+          "gloss_mm": "လှုပ်ရှားမှုနည်းတဲ့ ရုံးလုပ်ငန်းခွင်တွေ များလာတာက ကျန်းမာရေးအတွက် ကြီးမားတဲ့ စိန်ခေါ်မှုတစ်ခုပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Emphasizing the importance of balance",
+      "move_mm": "မျှတမှုရှိဖို့ အရေးကြီးကြောင်း အလေးပေးပြောနည်း",
+      "items": [
+        {
+          "text_en": "It is important to have a balance in life.",
+          "highlight": "a balance in life",
+          "swap_en": "a good work-life balance · a healthy lifestyle balance",
+          "gloss_mm": "ဘဝမှာ မျှတမှုရှိဖို့က အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m14-i1.mp3"
+        },
+        {
+          "text_en": "Finding the right balance between work and health is essential.",
+          "highlight": "Finding the right balance between work and health",
+          "swap_en": "Maintaining a healthy balance between office and home · Balancing our busy schedules with personal rest",
+          "gloss_mm": "အလုပ်နဲ့ ကျန်းမာရေးကြားမှာ မျှတအောင် လုပ်ထားဖို့က မရှိမဖြစ် လိုအပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m14-i2.mp3"
+        },
+        {
+          "text_en": "Achieving a sustainable balance is crucial to avoiding burnout in this modern age.",
+          "highlight": "a sustainable balance",
+          "swap_en": "a proper work-life equilibrium · a healthy sense of balance",
+          "gloss_mm": "ဒီခေတ်မှာ အလုပ်ပိပြီး ပင်ပန်းနွမ်းနယ်မှုမဖြစ်အောင် ရေရှည်တည်တံ့တဲ့ မျှတမှုမျိုး ရှိဖို့က အလွန်အရေးကြီးပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m14-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your argument",
+      "move_mm": "ဆွေးနွေးချက်ကို အနှစ်ချုပ်နည်း",
+      "items": [
+        {
+          "text_en": "In short, we need to stay healthy.",
+          "highlight": "In short",
+          "swap_en": "Basically · To sum up · All in all",
+          "gloss_mm": "အတိုချုပ်ပြောရရင် ကျန်းမာရေးကို ဂရုစိုက်ဖို့ လိုပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m15-i1.mp3"
+        },
+        {
+          "text_en": "At the end of the day, health comes first.",
+          "highlight": "At the end of the day",
+          "swap_en": "Ultimately · When it all comes down to it",
+          "gloss_mm": "နောက်ဆုံးမှာတော့ ကျန်းမာရေးကပဲ အရေးအကြီးဆုံးပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m15-i2.mp3"
+        },
+        {
+          "text_en": "Considering everything, modern life makes it hard to stay fit.",
+          "highlight": "Considering everything",
+          "swap_en": "Taking everything into account · All things considered",
+          "gloss_mm": "အချက်အားလုံးကို ခြုံငုံကြည့်ရင် ခေတ်ရေစီးကြောင်းအရ ကျန်းမာရေးထိန်းဖို့ ခက်ခဲပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m15-i3.mp3"
+        },
+        {
+          "text_en": "Ultimately, we must balance work and our health.",
+          "highlight": "Ultimately",
+          "swap_en": "In the final analysis · In the long run",
+          "gloss_mm": "နောက်ဆုံးအနေနဲ့ ပြောရရင် အလုပ်နဲ့ ကျန်းမာရေးကို မျှတအောင် လုပ်ဖို့ လိုအပ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/health_and_modern_life/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss the impact of modern life on our health. Describe the main problems (like stress or diet), explain why they happen, and suggest what individuals or society should do to stay healthy.",
+    "prompt_mm": "ခေတ်သစ်လူနေမှုဘဝက ကျွန်တော်တို့ရဲ့ ကျန်းမာရေးအပေါ် ဘယ်လိုသက်ရောက်မှုရှိလဲ ဆွေးနွေးပေးပါ။ အဓိကပြဿနာတွေ (စိတ်ဖိစီးမှု၊ အစားအသောက်ပုံစံ) ကို ဖော်ပြပြီး ဘာကြောင့်ဖြစ်ရတာလဲ၊ ကျန်းမာရေးကောင်းဖို့ တစ်ဦးချင်းစီ ဒါမှမဟုတ် လူ့အဖွဲ့အစည်းက ဘာတွေလုပ်သင့်လဲဆိုတာကို ရေးသားပေးပါ။ (စာကြောင်း ၈ ကြောင်းမှ ၁၂ ကြောင်းအတွင်း)",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Modern lifestyle",
+      "Stress factors",
+      "Unhealthy habits",
+      "Physical/Mental impact",
+      "Compare past/present",
+      "Proposed solutions",
+      "Personal view",
+      "Importance of balance"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to improve your flow and confidence.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ကြည့်ပါ။ ဒါက သင့်ရဲ့ ပြောဆိုမှု ပိုမိုချောမွေ့ပြီး ယုံကြည်မှုရှိလာစေဖို့ ကူညီပေးပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "Modern life brings many health challenges today. People are often too busy to cook healthy meals. On the one hand, technology saves time. On the other hand, it encourages us to sit for long hours. Many people now rely heavily on fast food. This habit leads to serious physical health problems. Stress has also become a common issue in our daily lives. I am very concerned about this trend. We must find a balance between work and rest. Changing our lifestyle is essential for a healthier future.",
+    "model_mm": "ခေတ်သစ်လူနေမှုဘဝက ကျန်းမာရေးအတွက် စိန်ခေါ်မှုများစွာ ယူဆောင်လာပါတယ်။ လူတွေဟာ ကျန်းမာရေးနဲ့ညီညွတ်တဲ့ အစားအစာချက်ပြုတ်ဖို့ အချိန်မရှိကြပါဘူး။ တစ်ဖက်မှာ နည်းပညာက အချိန်ကုန်သက်သာစေပေမယ့် နောက်တစ်ဖက်မှာတော့ အချိန်အကြာကြီးထိုင်နေဖို့ တွန်းအားပေးပါတယ်။ အခုအခါ လူတော်တော်များများဟာ အသင့်စားအစားအစာကိုပဲ အဓိကထား စားသုံးနေကြပါတယ်။ ဒီအလေ့အကျင့်က ရုပ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးပြဿနာတွေကို ဖြစ်စေပါတယ်။ စိတ်ဖိစီးမှုဟာလည်း နေ့စဉ်ဘဝမှာ အဖြစ်များတဲ့ ပြဿနာတစ်ခု ဖြစ်လာပါတယ်။ ဒီအခြေအနေအတွက် ကျွန်တော် အလွန်စိုးရိမ်မိပါတယ်။ ကျွန်တော်တို့ အလုပ်နဲ့ အနားယူခြင်းကြားမှာ မျှတမှုရှိအောင် ရှာဖွေရပါမယ်။ ကျန်းမာရေးနဲ့ညီညွတ်တဲ့ အနာဂတ်အတွက် လူနေမှုပုံစံကို ပြောင်းလဲဖို့ လိုအပ်ပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "Modern life brings many health challenges today.",
+        "gloss_mm": "ခေတ်သစ်လူနေမှုဘဝက ကျန်းမာရေးစိန်ခေါ်မှုများစွာကို ယူဆောင်လာပါတယ်။",
+        "why_mm": "ပြဿနာကို စတင်မိတ်ဆက်ခြင်း"
+      },
+      {
+        "text_en": "People are often too busy to cook healthy meals.",
+        "gloss_mm": "လူတွေဟာ ကျန်းမာရေးနဲ့ညီညွတ်တဲ့ အစားအစာချက်ပြုတ်ဖို့ အလုပ်များလွန်းပါတယ်။",
+        "why_mm": "လက်ရှိအခြေအနေကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "On the one hand, technology saves time.",
+        "gloss_mm": "တစ်ဖက်မှာ နည်းပညာက အချိန်ကုန်သက်သာစေပါတယ်။",
+        "why_mm": "အမြင်ကွဲပြားမှုကို တင်ပြခြင်း"
+      },
+      {
+        "text_en": "On the other hand, it encourages us to sit for long hours.",
+        "gloss_mm": "နောက်တစ်ဖက်မှာတော့ ဒါက အချိန်အကြာကြီးထိုင်နေဖို့ တွန်းအားပေးပါတယ်။",
+        "why_mm": "အမြင်ကွဲပြားမှုကို တင်ပြခြင်း"
+      },
+      {
+        "text_en": "Many people now rely heavily on fast food.",
+        "gloss_mm": "လူတော်တော်များများဟာ အခုအခါ အသင့်စားအစားအစာကို အဓိကထားပါတယ်။",
+        "why_mm": "အလေ့အကျင့်ဆိုးကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "This habit leads to serious physical health problems.",
+        "gloss_mm": "ဒီအလေ့အကျင့်က ရုပ်ပိုင်းဆိုင်ရာကျန်းမာရေးပြဿနာတွေကို ဖြစ်စေပါတယ်။",
+        "why_mm": "ရုပ်ပိုင်းဆိုင်ရာထိခိုက်မှုကို ရှင်းပြခြင်း"
+      },
+      {
+        "text_en": "Stress has also become a common issue in our daily lives.",
+        "gloss_mm": "စိတ်ဖိစီးမှုကလည်း နေ့စဉ်ဘဝမှာ အဖြစ်များတဲ့ ပြဿနာဖြစ်လာပါတယ်။",
+        "why_mm": "စိတ်ကျန်းမာရေးအကြောင်း ဆွေးနွေးခြင်း"
+      },
+      {
+        "text_en": "I am very concerned about this trend.",
+        "gloss_mm": "ဒီလမ်းကြောင်းအတွက် ကျွန်တော် အလွန်စိုးရိမ်မိပါတယ်။",
+        "why_mm": "စိုးရိမ်ကင်းဖြစ်မှုကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "We must find a balance between work and rest.",
+        "gloss_mm": "ကျွန်တော်တို့ အလုပ်နဲ့ အနားယူခြင်းကြားမှာ မျှတမှုရှိအောင် ရှာဖွေရပါမယ်။",
+        "why_mm": "မျှတမှု၏ အရေးပါမှုကို အလေးပေးခြင်း"
+      },
+      {
+        "text_en": "Changing our lifestyle is essential for a healthier future.",
+        "gloss_mm": "ကျန်းမာတဲ့အနာဂတ်အတွက် လူနေမှုပုံစံကို ပြောင်းလဲဖို့ လိုအပ်ပါတယ်။",
+        "why_mm": "အနှစ်ချုပ်ခြင်း"
+      }
+    ],
+    "template": "Modern life brings {health_issue} today. People are often {busy_reason}. On the one hand, {tech_benefit}. On the other hand, {bad_habit_effect}. Many people now rely heavily on {bad_habit}. This habit leads to {physical_problem}. {mental_issue} has also become a common issue in our daily lives. I am very concerned about this trend. We must find a balance between {work_area} and {rest_area}. Changing our lifestyle is essential for {goal}.",
+    "slots": [
+      {
+        "id": "health_issue",
+        "label_en": "Health issue",
+        "label_mm": "ကျန်းမာရေးပြဿနာ",
+        "hint": "အဓိကကျန်းမာရေးပြဿနာကို ရွေးပါ",
+        "options": [
+          "many health challenges",
+          "new physical risks",
+          "serious health concerns"
+        ]
+      },
+      {
+        "id": "busy_reason",
+        "label_en": "Reason for being busy",
+        "label_mm": "အလုပ်များရခြင်းအကြောင်းရင်း",
+        "hint": "ဘာကြောင့် အချိန်မရှိရတာလဲ",
+        "options": [
+          "too busy to cook healthy meals",
+          "too tired to exercise",
+          "focused only on work"
+        ]
+      },
+      {
+        "id": "tech_benefit",
+        "label_en": "Technology benefit",
+        "label_mm": "နည်းပညာ၏ အကျိုးကျေးဇူး",
+        "hint": "နည်းပညာက ဘာကို ကူညီပေးသလဲ",
+        "options": [
+          "technology saves time",
+          "modern gadgets make life easier",
+          "digital tools help us work faster"
+        ]
+      },
+      {
+        "id": "bad_habit_effect",
+        "label_en": "Bad habit effect",
+        "label_mm": "အလေ့အကျင့်ဆိုး၏ အကျိုးဆက်",
+        "hint": "နည်းပညာကြောင့် ဘာဖြစ်လာသလဲ",
+        "options": [
+          "it encourages us to sit for long hours",
+          "it limits our physical movement",
+          "it makes us stay indoors too much"
+        ]
+      },
+      {
+        "id": "bad_habit",
+        "label_en": "Bad habit",
+        "label_mm": "အလေ့အကျင့်ဆိုး",
+        "hint": "ဘာကို အလွန်အကျွံသုံးနေတာလဲ",
+        "options": [
+          "fast food",
+          "processed snacks",
+          "sugary drinks"
+        ]
+      },
+      {
+        "id": "physical_problem",
+        "label_en": "Physical problem",
+        "label_mm": "ရုပ်ပိုင်းဆိုင်ရာ ပြဿနာ",
+        "hint": "ဘာတွေ ဖြစ်လာနိုင်သလဲ",
+        "options": [
+          "serious physical health problems",
+          "weight gain issues",
+          "chronic body pain"
+        ]
+      },
+      {
+        "id": "mental_issue",
+        "label_en": "Mental health issue",
+        "label_mm": "စိတ်ကျန်းမာရေး ပြဿနာ",
+        "hint": "စိတ်ပိုင်းဆိုင်ရာ ဘာတွေဖြစ်သလဲ",
+        "options": [
+          "Stress",
+          "Anxiety",
+          "Mental fatigue"
+        ]
+      },
+      {
+        "id": "work_area",
+        "label_en": "Work area",
+        "label_mm": "အလုပ်ကဏ္ဍ",
+        "hint": "အလုပ်နဲ့ပတ်သက်တဲ့စကားလုံး",
+        "options": [
+          "work",
+          "career goals",
+          "daily tasks"
+        ]
+      },
+      {
+        "id": "rest_area",
+        "label_en": "Rest area",
+        "label_mm": "အနားယူခြင်းကဏ္ဍ",
+        "hint": "အနားယူခြင်းနဲ့ပတ်သက်တဲ့စကားလုံး",
+        "options": [
+          "rest",
+          "personal health",
+          "physical recovery"
+        ]
+      },
+      {
+        "id": "goal",
+        "label_en": "Goal",
+        "label_mm": "ပန်းတိုင်",
+        "hint": "ဘာကို လိုချင်တာလဲ",
+        "options": [
+          "a healthier future",
+          "better long-term wellness",
+          "a balanced life"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level3/health_and_modern_life/guide-model.mp3"
+  }
+}

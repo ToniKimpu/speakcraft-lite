@@ -1,0 +1,489 @@
+{
+  "id": "phones_and_social_media",
+  "level": 2,
+  "domain_en": "Giving your opinion",
+  "domain_mm": "ကိုယ့်အမြင် ဖော်ပြခြင်း",
+  "title_en": "Phones & Social Media",
+  "title_mm": "ဖုန်းနှင့် ဆိုရှယ်မီဒီယာအသုံးပြုခြင်း",
+  "promise_en": "Master the vocabulary to express your personal opinion on digital habits and social media's impact on daily life.",
+  "promise_mm": "ဖုန်းနဲ့ ဆိုရှယ်မီဒီယာတွေက ကိုယ့်ဘဝကို ဘယ်လိုသက်ရောက်မှုရှိလဲဆိုတာကို ကိုယ်ပိုင်အမြင်နဲ့ ပြောတတ်လာအောင် လေ့ကျင့်ပေးပါမယ်။",
+  "intro_en": "We use our phones constantly, but do we control them, or do they control us? Let's talk about the pros, cons, and our digital habits.",
+  "intro_mm": "ကျွန်တော်တို့နေ့တိုင်း ဖုန်းသုံးနေကြပေမဲ့ ဖုန်းက ကျွန်တော်တို့ကို ထိန်းချုပ်နေတာလား၊ ကျွန်တော်တို့ကပဲ ဖုန်းကို ထိန်းချုပ်နေတာလားဆိုတာ စဉ်းစားစရာပါ။ ဒီနေ့တော့ ဖုန်းနဲ့ ဆိုရှယ်မီဒီယာအကြောင်း ဆွေးနွေးကြည့်ကြရအောင်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your general opinion",
+      "move_mm": "ယေဘုယျအမြင်ကို စတင်ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "I think social media is useful.",
+          "highlight": "is useful",
+          "swap_en": "is addictive · is a waste of time · is helpful",
+          "gloss_mm": "လူမှုကွန်ရက်က အသုံးဝင်တယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, phones are necessary these days.",
+          "highlight": "phones are necessary",
+          "swap_en": "social media is distracting · online shopping is convenient",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဒီခေတ်မှာ ဖုန်းက မရှိမဖြစ် လိုအပ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I’d say social media has changed how we live.",
+          "highlight": "has changed how we live",
+          "swap_en": "has made our lives easier · has made us less social",
+          "gloss_mm": "လူမှုကွန်ရက်က ကျွန်တော်တို့ရဲ့ နေထိုင်မှုပုံစံကို ပြောင်းလဲသွားစေတယ်လို့ ပြောရမယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "From my perspective, spending too much time on phones is a double-edged sword.",
+          "highlight": "a double-edged sword",
+          "swap_en": "a necessary evil · a distraction from real life",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဖုန်းသုံးတာက ကောင်းကျိုးဆိုးကျိုး နှစ်ခုလုံးရှိတဲ့ ကိစ္စတစ်ခုပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing how often you use your phone",
+      "move_mm": "ဖုန်းကို ဘယ်လောက်အသုံးပြုလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think I check my phone every few minutes.",
+          "highlight": "every few minutes",
+          "swap_en": "all the time · almost every hour · throughout the day",
+          "gloss_mm": "ကျွန်တော်တော့ ဖုန်းကို မိနစ်အနည်းငယ်တိုင်း စစ်ဆေးနေမိတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, I spend way too much time on my phone.",
+          "highlight": "way too much time",
+          "swap_en": "a lot of time · quite a bit of time · far too much time",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဖုန်းသုံးတဲ့အချိန်က အရမ်းများနေပြီ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say my screen time is pretty high these days.",
+          "highlight": "pretty high",
+          "swap_en": "a bit excessive · under control · quite addictive",
+          "gloss_mm": "ဒီရက်ပိုင်း ဖုန်းသုံးတဲ့အချိန် (Screen time) က တော်တော်များတယ်လို့ ဆိုရမှာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Listing the main reasons for using social media",
+      "move_mm": "ဆိုရှယ်မီဒီယာသုံးရတဲ့ အဓိကအကြောင်းရင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I use social media to keep in touch with my friends.",
+          "highlight": "keep in touch with my friends",
+          "swap_en": "stay updated with the news · watch funny videos · share my daily photos",
+          "gloss_mm": "ကျွန်တော်က သူငယ်ချင်းတွေနဲ့ အဆက်အသွယ်မပြတ်အောင် ဆိုရှယ်မီဒီယာ သုံးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, the main reason I'm on Facebook is to catch up on what's happening.",
+          "highlight": "catch up on what's happening",
+          "swap_en": "see what my friends are up to · check out the latest trends · look for local business deals",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ Facebook သုံးတဲ့ အဓိကအကြောင်းရင်းက ဘာတွေဖြစ်နေလဲဆိုတာ သိရအောင်ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say I mostly use social platforms as a way to kill time while waiting at a tea shop.",
+          "highlight": "kill time",
+          "swap_en": "relieve stress · stay connected with my community · expand my professional network",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်မှာ စောင့်နေရင်း အချိန်ဖြုန်းဖို့အတွက် ဆိုရှယ်မီဒီယာ သုံးဖြစ်တာ များပါတယ်လို့ ပြောရမှာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting a positive side",
+      "move_mm": "အကျိုးကျေးဇူး (သို့) ကောင်းတဲ့ဘက်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think social media is good for staying in touch with friends.",
+          "highlight": "staying in touch with friends",
+          "swap_en": "learning new things · finding information quickly · keeping up with the news",
+          "gloss_mm": "မိတ်ဆွေတွေနဲ့ အဆက်အသွယ်မပြတ်အောင် လုပ်ဖို့အတွက် ဆိုရှယ်မီဒီယာက ကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, it's great because it makes communication so much easier.",
+          "highlight": "makes communication so much easier",
+          "swap_en": "helps us share photos instantly · allows us to video call anyone · bridges the distance between us",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဆက်သွယ်ရေးကို အရမ်းလွယ်ကူသွားစေတာမို့ အများကြီး အထောက်အကူဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say the biggest benefit is that it provides a platform for people to express their creativity.",
+          "highlight": "provides a platform for people to express their creativity",
+          "swap_en": "connects people from all over the world · offers endless educational opportunities · keeps us updated with global events",
+          "gloss_mm": "လူတွေရဲ့ တီထွင်ဖန်တီးနိုင်စွမ်းကို ထုတ်ဖော်ပြသဖို့ နေရာတစ်ခု ဖန်တီးပေးတာက အကြီးမားဆုံး အကျိုးကျေးဇူးပဲလို့ ဆိုရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning a negative impact",
+      "move_mm": "ဆိုးကျိုး (သို့) အားနည်းချက်ကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think phones make us lazy.",
+          "highlight": "make us lazy",
+          "swap_en": "waste our time · distract us from work · make us less social",
+          "gloss_mm": "ဖုန်းတွေက ကျွန်တော်တို့ကို ပျင်းရိသွားစေတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, social media is quite addictive.",
+          "highlight": "quite addictive",
+          "swap_en": "a huge distraction · a bit overwhelming · bad for our mental health",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဆိုရှယ်မီဒီယာက စွဲလမ်းဖို့ အရမ်းလွယ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that excessive screen time really affects our face-to-face communication.",
+          "highlight": "really affects our face-to-face communication",
+          "swap_en": "takes away our quality time · ruins our sleep patterns · limits our real-world experiences",
+          "gloss_mm": "ဖုန်းကို အချိန်အကြာကြီးသုံးတာက လူချင်းတွေ့ဆုံ ပြောဆိုဆက်ဆံမှုတွေကို တကယ်ပဲ ထိခိုက်စေတယ်လို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a personal example",
+      "move_mm": "ကိုယ့်ကိုယ်တွေ့ အတွေ့အကြုံ ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think I spend too much time on my phone.",
+          "highlight": "spend too much time on my phone",
+          "swap_en": "check my notifications too often · scroll through Facebook for hours · waste time on TikTok",
+          "gloss_mm": "ဖုန်းကို အချိန်အများကြီး သုံးမိတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, my life has become easier because of social media.",
+          "highlight": "my life has become easier",
+          "swap_en": "my life has become more stressful · it's hard to focus on work · it helps me stay connected",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာကြောင့် ကျွန်တော့်ဘဝ ပိုလွယ်ကူလာတယ်လို့ ထင်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that social media is a double-edged sword for my daily routine.",
+          "highlight": "a double-edged sword",
+          "swap_en": "a complete distraction · a vital tool for my business · a total waste of my time",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာက ကျွန်တော့်နေ့စဉ်ဘဝအတွက် အကျိုးရော အပြစ်ပါရှိတဲ့ အရာတစ်ခုလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Weighing both sides",
+      "move_mm": "ကောင်းကျိုး၊ ဆိုးကျိုးကို နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think phones are useful but they can be distracting.",
+          "highlight": "useful but they can be distracting",
+          "swap_en": "great for communication but addictive · helpful for learning but sometimes annoying",
+          "gloss_mm": "ဖုန်းတွေက အသုံးဝင်ပေမဲ့ အာရုံနောက်စေနိုင်တယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, social media has pros and cons.",
+          "highlight": "pros and cons",
+          "swap_en": "both good and bad sides · its bright and dark sides",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဆိုရှယ်မီဒီယာမှာ ကောင်းကျိုးရော ဆိုးကျိုးပါ ရှိပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say while social media helps us stay connected, it also wastes a lot of our time.",
+          "highlight": "while social media helps us stay connected, it also wastes a lot of our time",
+          "swap_en": "while phones keep us updated, they also kill our productivity · although the internet is informative, it can spread misinformation",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာက တစ်ယောက်နဲ့တစ်ယောက် အဆက်အသွယ်ရစေပေမဲ့ အချိန်တွေ အများကြီး ကုန်စေတယ်လို့ပဲ ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing with an idea",
+      "move_mm": "တစ်စုံတစ်ယောက်ရဲ့ အမြင်ကို ထောက်ခံပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think you're right about social media being addictive.",
+          "highlight": "you're right about",
+          "swap_en": "you've got a point about · I agree with you about",
+          "gloss_mm": "လူမှုကွန်ရက်တွေက စွဲလမ်းစေတယ်ဆိုတဲ့ မင်းအမြင်ကို ငါသဘောတူတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, that's exactly how it feels to waste time on TikTok.",
+          "highlight": "that's exactly how it feels",
+          "swap_en": "that's exactly the case · that's spot on",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ TikTok မှာ အချိန်ဖြုန်းရတာ အဲ့ဒီအတိုင်းပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say you hit the nail on the head regarding phone distractions.",
+          "highlight": "you hit the nail on the head",
+          "swap_en": "you've hit the nail on the head · you're absolutely right",
+          "gloss_mm": "ဖုန်းကြောင့် အာရုံပျက်ရတဲ့ကိစ္စမှာ မင်းပြောတာ အချက်ကျတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Disagreeing politely",
+      "move_mm": "ယဉ်ယဉ်ကျေးကျေး ငြင်းဆို/သဘောမတူကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I don't really think social media is bad for us.",
+          "highlight": "I don't really think",
+          "swap_en": "I'm not sure if · I don't fully agree that",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာက လူတွေအတွက် မကောင်းဘူးလို့တော့ ကျွန်တော် သိပ်မထင်ဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I see your point, but I feel that phones actually help us stay connected.",
+          "highlight": "I see your point, but",
+          "swap_en": "That might be true, but · I understand that, but",
+          "gloss_mm": "သဘောပေါက်ပါတယ်၊ ဒါပေမဲ့ ဖုန်းတွေက တစ်ယောက်နဲ့တစ်ယောက် အဆက်အသွယ်မပြတ်အောင် ကူညီပေးတယ်လို့ပဲ ကျွန်တော် ထင်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that's not always the case; scrolling on Facebook can be a way to relax after work.",
+          "highlight": "I'd say that's not always the case",
+          "swap_en": "I'm not entirely convinced of that · That's one way to look at it, but",
+          "gloss_mm": "အမြဲတမ်းတော့လည်း မဟုတ်ပါဘူး၊ အလုပ်ပြီးရင် Facebook ကြည့်တာက စိတ်အပန်းဖြေတဲ့နည်းလမ်း တစ်ခုဖြစ်နိုင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing how it affects your work or study",
+      "move_mm": "အလုပ်/ကျောင်းစာအပေါ် သက်ရောက်မှုကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think social media makes me lose focus on my work.",
+          "highlight": "lose focus on my work",
+          "swap_en": "get distracted from my studies · procrastinate on my assignments · waste my time studying",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာက ကျွန်တော့်အလုပ်အပေါ် အာရုံစိုက်မှုကို လျော့ကျစေတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, checking notifications constantly really hinders my productivity.",
+          "highlight": "hinders my productivity",
+          "swap_en": "slows down my work · affects my study habits · keeps me from finishing my tasks",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဖုန်းသတိပေးချက်တွေကို အမြဲကြည့်နေတာက အလုပ်လုပ်နိုင်စွမ်းကို တကယ်ပဲ ထိခိုက်စေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say my phone is a double-edged sword when it comes to keeping up with my projects.",
+          "highlight": "a double-edged sword",
+          "swap_en": "a major distraction · a necessary evil · a huge barrier to my concentration",
+          "gloss_mm": "ပရောဂျက်တွေ လုပ်တဲ့အခါမှာတော့ ဖုန်းက ကောင်းကျိုးရော ဆိုးကျိုးပါ ပေးနိုင်တဲ့အရာတစ်ခုလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about addiction or screen time",
+      "move_mm": "ဖုန်းစွဲလမ်းမှု (သို့) ဖုန်းကြည့်ချိန်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think I spend too much time on my phone.",
+          "highlight": "too much time on my phone",
+          "swap_en": "too much time on Facebook · too much time on TikTok · way too much time scrolling",
+          "gloss_mm": "ကျွန်တော် ဖုန်းကို အချိန်အရမ်းပေးနေရတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, we're all a bit addicted to our screens.",
+          "highlight": "a bit addicted to our screens",
+          "swap_en": "hooked on our phones · constantly checking our notifications",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရဆိုရင် ကျွန်တော်တို့အားလုံး ဖုန်းကို နည်းနည်းစွဲလမ်းနေကြပြီ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say my screen time has become a real problem lately.",
+          "highlight": "become a real problem lately",
+          "swap_en": "gotten out of hand recently · started affecting my work",
+          "gloss_mm": "နောက်ပိုင်းမှာ ဖုန်းကြည့်တဲ့အချိန်က တကယ့်ပြဿနာတစ်ခု ဖြစ်လာတယ်လို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing real life to online life",
+      "move_mm": "လက်တွေ့ဘဝနဲ့ အွန်လိုင်းဘဝကို နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think online life is different from real life.",
+          "highlight": "different from",
+          "swap_en": "not the same as · nothing like",
+          "gloss_mm": "အွန်လိုင်းဘဝနဲ့ လက်တွေ့ဘဝက မတူဘူးလို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, people look happier on social media than in real life.",
+          "highlight": "happier on social media than in real life",
+          "swap_en": "more successful online than in reality · more perfect on Facebook than in person",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ လူတွေက လက်တွေ့ဘဝထက် ဆိုရှယ်မီဒီယာပေါ်မှာ ပိုပျော်ရွှင်နေကြသလိုပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I would say social media is just a highlight reel of someone's life.",
+          "highlight": "a highlight reel of someone's life",
+          "swap_en": "a curated version of reality · just the best parts of life",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာဆိုတာ လူတစ်ယောက်ရဲ့ ဘဝမှာ အကောင်းဆုံးအပိုင်းတွေကိုပဲ ရွေးထုတ်ပြထားတာလို့ ပြောနိုင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting how to use it better",
+      "move_mm": "ပိုကောင်းအောင် ဘယ်လိုသုံးသင့်လဲ အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "I think we should use our phones less.",
+          "highlight": "use our phones less",
+          "swap_en": "check social media less · limit our screen time · spend less time online",
+          "gloss_mm": "ကျွန်တော်တို့ ဖုန်းသုံးတာကို လျှော့သင့်တယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, it is better to turn off notifications when working.",
+          "highlight": "turn off notifications",
+          "swap_en": "put the phone away · silence our phones · disable alerts",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အလုပ်လုပ်တဲ့အချိန်မှာ ဖုန်းသတိပေးချက်တွေကို ပိတ်ထားတာ ပိုကောင်းပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I would suggest setting a specific time for checking messages instead of constantly looking at the screen.",
+          "highlight": "setting a specific time",
+          "swap_en": "allocating a set time · scheduling a window · designating a fixed time",
+          "gloss_mm": "ဖုန်းမျက်နှာပြင်ကို အမြဲကြည့်နေမယ့်အစား မက်ဆေ့ခ်ျတွေကို သတ်မှတ်ချိန်မှာပဲ ကြည့်ဖို့ အကြံပေးချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing a hope for the future",
+      "move_mm": "အနာဂတ်အတွက် မျှော်လင့်ချက် ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think people will spend less time on their phones in the future.",
+          "highlight": "spend less time on their phones",
+          "swap_en": "use social media less · rely on their phones less · be less addicted to screens",
+          "gloss_mm": "နောင်အခါမှာ လူတွေ ဖုန်းသုံးတဲ့အချိန် လျော့သွားလိမ့်မယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, we will hopefully find a better balance with our digital lives.",
+          "highlight": "find a better balance with our digital lives",
+          "swap_en": "use technology more mindfully · control our screen time better · spend more quality time offline",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဒစ်ဂျစ်တယ်ဘဝနဲ့ အပြင်လောကကို ဟန်ချက်ညီညီ ပိုသုံးနိုင်လာမယ်လို့ မျှော်လင့်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that social media platforms will eventually prioritize our mental well-being over engagement.",
+          "highlight": "prioritize our mental well-being over engagement",
+          "swap_en": "focus more on user safety than profit · encourage healthier online habits · value real connection more than likes",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာတွေက လူတွေရဲ့ စိတ်ကျန်းမာရေးကိုပဲ ပိုဦးစားပေးလာမယ့် ခေတ်တစ်ခု ရောက်လာလိမ့်မယ်လို့ ထင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your viewpoint",
+      "move_mm": "ကိုယ့်အမြင်ကို အနှစ်ချုပ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think phones are good but we should use them less.",
+          "highlight": "I think",
+          "swap_en": "In my opinion · Overall, I feel",
+          "gloss_mm": "ဖုန်းတွေက ကောင်းပါတယ်၊ ဒါပေမဲ့ နည်းနည်းပဲ သုံးသင့်တယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, social media is a bit of a distraction.",
+          "highlight": "a bit of a distraction",
+          "swap_en": "a great way to connect · a waste of time · very useful for news",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဆိုရှယ်မီဒီယာက အာရုံလွဲစေတဲ့အရာတစ်ခုပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I’d say the main issue is that we’re losing real-life connections.",
+          "highlight": "the main issue is that",
+          "swap_en": "the best part is that · the bottom line is that",
+          "gloss_mm": "ကျွန်တော်ပြောရရင်တော့ အဓိကပြဿနာက လူချင်းမျက်နှာချင်းဆိုင် ဆက်ဆံမှုတွေ လျော့နည်းလာတာပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "What is your honest opinion on social media? Do you think it helps or hurts people? Write 6–10 sentences sharing your habits, the pros/cons, and your final conclusion.",
+    "prompt_mm": "ဆိုရှယ်မီဒီယာနဲ့ ပတ်သက်ပြီး သင့်ရဲ့ရိုးသားတဲ့ အမြင်က ဘာလဲ။ လူတွေအတွက် အကျိုးရှိလား၊ ဆိုးကျိုးရှိလား။ သင့်ရဲ့ အသုံးပြုပုံ၊ ကောင်းကျိုး/ဆိုးကျိုးနဲ့ သင့်ရဲ့ နောက်ဆုံးကောက်ချက်ကို စာကြောင်းရေ ၆ ကြောင်းမှ ၁၀ ကြောင်းအတွင်း ရေးသားပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "I think that...",
+      "On the other hand...",
+      "For example...",
+      "It helps me to...",
+      "However, I find that...",
+      "In my opinion...",
+      "In conclusion..."
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and confidence.",
+    "speak_aloud_mm": "ကိုယ့်ရဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ပါ။ ဒါက စကားပြောတဲ့အခါ ပိုချောမွေ့ပြီး ယုံကြည်မှုရှိလာစေဖို့ ကူညီပေးပါလိမ့်မယ်။"
+  }
+}

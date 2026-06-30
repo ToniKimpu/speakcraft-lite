@@ -1,0 +1,722 @@
+{
+  "id": "my_free_time",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "My Free Time",
+  "title_mm": "ကျွန်ုပ်၏ အားလပ်ချိန်များ",
+  "promise_en": "Learn to talk about your hobbies and how you recharge after a long week.",
+  "promise_mm": "အားလပ်ချိန်မှာ ကိုယ်ဘာလုပ်တတ်လဲ၊ ဘယ်လိုအနားယူလဲဆိုတာကို သဘာဝကျကျ ပြောတတ်လာစေရမယ်။",
+  "intro_en": "Whether you love tea shops in Yangon or quiet weekends at home, sharing your hobbies is a great way to connect with others.",
+  "intro_mm": "ရန်ကုန်က လက်ဖက်ရည်ဆိုင်ထိုင်တာပဲဖြစ်ဖြစ်၊ အိမ်မှာပဲ ငြိမ်းငြိမ်းချမ်းချမ်း အနားယူတာပဲဖြစ်ဖြစ်၊ ကိုယ့်ဝါသနာတွေကို သူများနဲ့ ဝေမျှတာဟာ လူမှုဆက်ဆံရေးအတွက် အကောင်းဆုံးပါပဲ။",
+  "toolbox": [
+    {
+      "move_en": "Stating how much free time you have",
+      "move_mm": "အားလပ်ချိန် ဘယ်လောက်ရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I have a little free time.",
+          "highlight": "a little free time",
+          "swap_en": "some free time · a lot of free time · no free time",
+          "gloss_mm": "ကျွန်တော် အားလပ်ချိန် နည်းနည်းရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m1-i1.mp3"
+        },
+        {
+          "text_en": "I don't have much free time these days.",
+          "highlight": "much free time",
+          "swap_en": "any free time · enough free time",
+          "gloss_mm": "ဒီရက်ပိုင်း ကျွန်တော့်မှာ အားလပ်ချိန် သိပ်မရှိဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m1-i2.mp3"
+        },
+        {
+          "text_en": "My schedule is packed, so I have hardly any free time.",
+          "highlight": "hardly any free time",
+          "swap_en": "very little free time · practically no free time",
+          "gloss_mm": "ကျွန်တော့်အလုပ်တွေ ရှုပ်နေတော့ အားလပ်ချိန် သိပ်မရှိသလောက်ပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m1-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning your favorite way to relax",
+      "move_mm": "အကြိုက်ဆုံး အနားယူနည်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like to relax by reading books.",
+          "highlight": "reading books",
+          "swap_en": "drinking tea at a tea shop · listening to music · watching movies · going for a walk",
+          "gloss_mm": "စာအုပ်ဖတ်ပြီး အနားယူရတာ ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m2-i1.mp3"
+        },
+        {
+          "text_en": "My favorite way to relax is hanging out at a tea shop.",
+          "highlight": "hanging out at a tea shop",
+          "swap_en": "taking a nap · doing some gardening · scrolling through social media · window shopping",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်ထိုင်ပြီး အနားယူရတာကို အကြိုက်ဆုံးပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m2-i2.mp3"
+        },
+        {
+          "text_en": "Nothing beats chilling at a local tea shop after a long day.",
+          "highlight": "chilling at a local tea shop",
+          "swap_en": "visiting a quiet pagoda · catching up on sleep · going for a jog in the park",
+          "gloss_mm": "တစ်နေ့တာပင်ပန်းပြီးရင်တော့ ရပ်ကွက်ထဲက လက်ဖက်ရည်ဆိုင်မှာ အေးအေးဆေးဆေး ထိုင်ရတာကို ဘာနဲ့မှမလဲနိုင်ဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m2-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about how often you do a hobby",
+      "move_mm": "ဝါသနာတစ်ခုကို ဘယ်လောက်အကြိမ်ရေ လုပ်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I go to the tea shop every day.",
+          "highlight": "every day",
+          "swap_en": "once a week · twice a month · every weekend",
+          "gloss_mm": "ကျွန်တော် လက်ဖက်ရည်ဆိုင်ကို နေ့တိုင်း သွားတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m3-i1.mp3"
+        },
+        {
+          "text_en": "I usually play football on weekends.",
+          "highlight": "usually",
+          "swap_en": "often · sometimes · rarely",
+          "gloss_mm": "ကျွန်တော် ပိတ်ရက်တွေဆိုရင် များသောအားဖြင့် ဘောလုံးကန်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m3-i2.mp3"
+        },
+        {
+          "text_en": "I try to visit the pagoda once in a while.",
+          "highlight": "once in a while",
+          "swap_en": "from time to time · as often as I can · whenever I have free time",
+          "gloss_mm": "ကျွန်တော် အခါအားလျော်စွာ ဘုရားသွားဖြစ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Naming who you usually spend time with",
+      "move_mm": "ဘယ်သူနဲ့ အားလပ်ချိန် ကုန်ဆုံးလေ့ရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I spend my free time with my family.",
+          "highlight": "my family",
+          "swap_en": "my friends · my best friend · my partner",
+          "gloss_mm": "ကျွန်တော် အားလပ်ချိန်မှာ မိသားစုနဲ့ အချိန်ကုန်ဆုံးလေ့ရှိပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m4-i1.mp3"
+        },
+        {
+          "text_en": "I usually hang out with my friends at a tea shop.",
+          "highlight": "my friends",
+          "swap_en": "my colleagues · my cousins · my classmates",
+          "gloss_mm": "ကျွန်တော် အားလပ်ချိန်မှာ သူငယ်ချင်းတွေနဲ့ လက်ဖက်ရည်ဆိုင်မှာ ထိုင်လေ့ရှိပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m4-i2.mp3"
+        },
+        {
+          "text_en": "I prefer to spend my spare time alone to recharge.",
+          "highlight": "alone",
+          "swap_en": "by myself · on my own",
+          "gloss_mm": "ကျွန်တော်က အားလပ်ချိန်မှာ စိတ်အပန်းဖြေဖို့အတွက် တစ်ယောက်တည်းနေရတာကို ပိုသဘောကျပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m4-i3.mp3"
+        },
+        {
+          "text_en": "I mostly cherish those quiet moments with my partner.",
+          "highlight": "my partner",
+          "swap_en": "my siblings · my close friends",
+          "gloss_mm": "ကျွန်တော်က အားလပ်ချိန်မှာ ချစ်သူနဲ့အတူတူ အေးအေးဆေးဆေး ဖြတ်သန်းရတာကို အနှစ်သက်ဆုံးပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Distinguishing between indoor and outdoor activities",
+      "move_mm": "အိမ်တွင်း/အိမ်ပြင် လှုပ်ရှားမှုတွေကို ခွဲခြားပြောနည်း",
+      "items": [
+        {
+          "text_en": "I prefer indoor activities.",
+          "highlight": "indoor activities",
+          "swap_en": "outdoor activities · staying at home · going out",
+          "gloss_mm": "ကျွန်တော်က အိမ်ထဲမှာနေရတာကို ပိုသဘောကျတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m5-i1.mp3"
+        },
+        {
+          "text_en": "I like doing things outside.",
+          "highlight": "doing things outside",
+          "swap_en": "staying indoors · hanging out at tea shops · going for a walk",
+          "gloss_mm": "ကျွန်တော်က အပြင်ထွက်ပြီး တစ်ခုခုလုပ်ရတာ ကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m5-i2.mp3"
+        },
+        {
+          "text_en": "When I'm home, I usually stick to indoor hobbies.",
+          "highlight": "stick to indoor hobbies",
+          "swap_en": "prefer outdoor activities · enjoy outdoor adventures · opt for indoor pastimes",
+          "gloss_mm": "အိမ်မှာရှိတဲ့အချိန်ဆိုရင်တော့ အိမ်တွင်းအလုပ်လေးတွေကိုပဲ လုပ်ဖြစ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m5-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing screen time and digital habits",
+      "move_mm": "ဖုန်း/ကွန်ပျူတာ သုံးတဲ့အလေ့အထ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I spend a lot of time on my phone.",
+          "highlight": "a lot of time",
+          "swap_en": "too much time · a couple of hours · way too much time",
+          "gloss_mm": "ကျွန်တော် ဖုန်းသုံးတဲ့အချိန် တော်တော်များတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m6-i1.mp3"
+        },
+        {
+          "text_en": "I usually scroll through social media before bed.",
+          "highlight": "scroll through social media",
+          "swap_en": "watch YouTube videos · check my notifications · play mobile games",
+          "gloss_mm": "အိပ်ခါနီးရင် social media တွေ လျှောက်ကြည့်ဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m6-i2.mp3"
+        },
+        {
+          "text_en": "I'm trying to cut down on my screen time lately.",
+          "highlight": "cut down on",
+          "swap_en": "limit · reduce · manage",
+          "gloss_mm": "ဒီရက်ပိုင်းမှာ ဖုန်းသုံးတဲ့အချိန်ကို လျှော့ချဖို့ ကြိုးစားနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m6-i3.mp3"
+        },
+        {
+          "text_en": "I find myself getting easily distracted by digital notifications.",
+          "highlight": "getting easily distracted",
+          "swap_en": "losing track of time · hooked",
+          "gloss_mm": "ဖုန်းထဲက notification တွေကြောင့် အာရုံလွယ်လွယ်ပျံ့နေတာကို တွေ့ရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing a sport you play or watch",
+      "move_mm": "အားကစား အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like playing football.",
+          "highlight": "playing football",
+          "swap_en": "watching football · playing badminton · going swimming",
+          "gloss_mm": "ကျွန်တော် ဘောလုံးကစားရတာ ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m7-i1.mp3"
+        },
+        {
+          "text_en": "I'm really into watching Premier League matches.",
+          "highlight": "really into",
+          "swap_en": "a big fan of · into · keen on",
+          "gloss_mm": "ကျွန်တော် ပရီးမီးယားလိဂ်ပွဲတွေကို တကယ်ကို စိတ်ဝင်စားတာ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m7-i2.mp3"
+        },
+        {
+          "text_en": "I try to catch a game at the tea shop whenever I have time.",
+          "highlight": "catch a game",
+          "swap_en": "watch a match · follow the game",
+          "gloss_mm": "အချိန်ရရင် လက်ဖက်ရည်ဆိုင်မှာ ဘောလုံးပွဲကြည့်ဖို့ ကြိုးစားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m7-i3.mp3"
+        },
+        {
+          "text_en": "It's a great way to unwind after a long day at the office.",
+          "highlight": "a great way to unwind",
+          "swap_en": "a perfect way to relax · a good way to de-stress",
+          "gloss_mm": "ရုံးမှာ တစ်နေကုန် ပင်ပန်းလာပြီးနောက်မှာ စိတ်ပြေလက်ပျောက်ဖြစ်ဖို့ အကောင်းဆုံးနည်းလမ်းပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m7-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining why you enjoy a specific hobby",
+      "move_mm": "ဘာကြောင့် ဒီဝါသနာကို ကြိုက်တာလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like reading because it is fun.",
+          "highlight": "it is fun",
+          "swap_en": "it is relaxing · it is interesting · it helps me learn",
+          "gloss_mm": "စာဖတ်ရတာ ပျော်စရာကောင်းလို့ ကျွန်တော် ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m8-i1.mp3"
+        },
+        {
+          "text_en": "I enjoy playing football because it helps me stay fit.",
+          "highlight": "it helps me stay fit",
+          "swap_en": "it clears my mind · it helps me relieve stress · it keeps me active",
+          "gloss_mm": "ဘောလုံးကစားရတာ ကျန်းမာရေးအတွက် ကောင်းလို့ ကျွန်တော် သဘောကျတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m8-i2.mp3"
+        },
+        {
+          "text_en": "I'm really into photography as it allows me to capture beautiful memories.",
+          "highlight": "allows me to capture beautiful memories",
+          "swap_en": "helps me express my creativity · gives me a break from my busy work life · lets me appreciate the details of everyday life",
+          "gloss_mm": "လှပတဲ့ အမှတ်တရတွေကို မှတ်တမ်းတင်ထားနိုင်လို့ ဓာတ်ပုံရိုက်ရတာကို အရမ်း ဝါသနာပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your typical weekend routine",
+      "move_mm": "စနေ/တနင်္ဂနွေမှာ ဘာလုပ်လေ့ရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "On Saturdays, I usually sleep in.",
+          "highlight": "sleep in",
+          "swap_en": "go to the tea shop · visit my parents · do some shopping",
+          "gloss_mm": "စနေနေ့ဆိုရင် ကျွန်တော် အိပ်ရေးဝအောင် အိပ်လေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m9-i1.mp3"
+        },
+        {
+          "text_en": "I spend my weekend catching up on chores.",
+          "highlight": "catching up on chores",
+          "swap_en": "relaxing at home · hanging out with friends · watching Netflix",
+          "gloss_mm": "ကျွန်တော်က တပတ်လုံးမလုပ်ဖြစ်တဲ့ အိမ်မှုကိစ္စတွေကို စနေ/တနင်္ဂနွေမှာပဲ အပြီးလုပ်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m9-i2.mp3"
+        },
+        {
+          "text_en": "I try to keep my weekends free for unwinding.",
+          "highlight": "keep my weekends free for unwinding",
+          "swap_en": "dedicate my weekends to studying · use my weekends to catch up on sleep",
+          "gloss_mm": "စနေ/တနင်္ဂနွေရက်တွေမှာ စိတ်အပန်းဖြေဖို့ပဲ အချိန်ပေးဖြစ်အောင် ကြိုးစားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning places you like to visit",
+      "move_mm": "သွားချင်တဲ့နေရာတွေ အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like to go to the park.",
+          "highlight": "the park",
+          "swap_en": "the tea shop · the cinema · Kandawgyi Lake",
+          "gloss_mm": "ကျွန်တော် ပန်းခြံသွားရတာ ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m10-i1.mp3"
+        },
+        {
+          "text_en": "I enjoy hanging out at a quiet café.",
+          "highlight": "a quiet café",
+          "swap_en": "a local tea shop · the shopping mall · Inya Lake",
+          "gloss_mm": "ကျွန်တော် တိတ်ဆိတ်တဲ့ ကဖေးဆိုင်လေးတွေမှာ အချိန်ဖြုန်းရတာ သဘောကျတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m10-i2.mp3"
+        },
+        {
+          "text_en": "I'm a big fan of visiting Shwedagon Pagoda in the evening.",
+          "highlight": "visiting Shwedagon Pagoda",
+          "swap_en": "going to the gym · exploring downtown streets · hiking in the mountains",
+          "gloss_mm": "ညနေခင်းဆို ရွှေတိဂုံဘုရားသွားရတာကို အရမ်းသဘောကျတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing things you do to recharge energy",
+      "move_mm": "စွမ်းအင်ပြန်ဖြည့်ဖို့ ဘာလုပ်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually relax by reading books.",
+          "highlight": "reading books",
+          "swap_en": "listening to music · watching movies · taking a nap",
+          "gloss_mm": "ကျွန်တော်ကတော့ စာအုပ်ဖတ်ပြီး အနားယူလေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m11-i1.mp3"
+        },
+        {
+          "text_en": "I find it refreshing to go for a walk at Inya Lake.",
+          "highlight": "go for a walk at Inya Lake",
+          "swap_en": "hang out at a tea shop · visit a pagoda · go for a short drive",
+          "gloss_mm": "အင်းလျားကန်ဘေးမှာ လမ်းလျှောက်လိုက်ရင် လန်းဆန်းသွားတာပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m11-i2.mp3"
+        },
+        {
+          "text_en": "Nothing recharges my batteries like a quiet weekend in Mandalay.",
+          "highlight": "a quiet weekend in Mandalay",
+          "swap_en": "a day of meditation · a nice cup of coffee · listening to jazz music",
+          "gloss_mm": "မန္တလေးမှာ တိတ်ဆိတ်တဲ့ သီတင်းပတ်ကုန်လေးကို ဖြတ်သန်းရတာလောက် စိတ်ခွန်အားပြန်ပြည့်တာ မရှိဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m11-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing your habits now vs. in the past",
+      "move_mm": "အရင်နဲ့ အခု အားလပ်ချိန် အသုံးချပုံကို နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I used to play football, but now I prefer going to tea shops.",
+          "highlight": "I used to",
+          "swap_en": "I didn't use to · I used to",
+          "gloss_mm": "အရင်တုန်းကတော့ ဘောလုံးကန်ဖြစ်တယ်၊ အခုတော့ လက်ဖက်ရည်ဆိုင်ထိုင်ရတာ ပိုကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m12-i1.mp3"
+        },
+        {
+          "text_en": "Back in the day, I spent all my free time gaming, but things have changed.",
+          "highlight": "Back in the day",
+          "swap_en": "When I was younger · In my student days",
+          "gloss_mm": "အရင်တုန်းကတော့ အားလပ်ချိန်တိုင်း ဂိမ်းပဲဆော့နေတာ၊ အခုတော့ အခြေအနေတွေ ပြောင်းသွားပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m12-i2.mp3"
+        },
+        {
+          "text_en": "I find myself reading more these days compared to my younger years.",
+          "highlight": "I find myself",
+          "swap_en": "I find myself · I've started",
+          "gloss_mm": "ငယ်ငယ်တုန်းကထက်စာရင် အခုနောက်ပိုင်း စာဖတ်ဖြစ်တာ ပိုများလာတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m12-i3.mp3"
+        },
+        {
+          "text_en": "My weekend routine has shifted from going out to pagoda visits.",
+          "highlight": "has shifted from",
+          "swap_en": "has shifted from · has changed from",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ စနေ၊ တနင်္ဂနွေ လုပ်ရိုးလုပ်စဉ်က အပြင်သွားတာကနေ ဘုရားဖူးသွားတာဘက်ကို ပြောင်းသွားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m12-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning new hobbies you want to try",
+      "move_mm": "အသစ်လုပ်ကြည့်ချင်တဲ့ ဝါသနာတွေ အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I want to try playing the guitar.",
+          "highlight": "playing the guitar",
+          "swap_en": "cooking · swimming · learning photography",
+          "gloss_mm": "ဂစ်တာတီးတာကို စမ်းကြည့်ချင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m13-i1.mp3"
+        },
+        {
+          "text_en": "I'm thinking of starting yoga.",
+          "highlight": "starting yoga",
+          "swap_en": "taking a painting class · joining a gym · going hiking",
+          "gloss_mm": "ယောဂစကျင့်ဖို့ စဉ်းစားနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m13-i2.mp3"
+        },
+        {
+          "text_en": "I've been meaning to get into baking lately.",
+          "highlight": "get into baking",
+          "swap_en": "try my hand at gardening · start learning Japanese · take up cycling",
+          "gloss_mm": "ဒီရက်ပိုင်း မုန့်ဖုတ်တာကို စိတ်ဝင်စားပြီး စမ်းလုပ်ကြည့်ချင်နေတာ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about the cost or budget of a hobby",
+      "move_mm": "ဝါသနာတစ်ခုအတွက် ကုန်ကျစရိတ် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It doesn't cost much.",
+          "highlight": "doesn't cost much",
+          "swap_en": "costs a little bit · is quite cheap · is free",
+          "gloss_mm": "သိပ်မကုန်ကျပါဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m14-i1.mp3"
+        },
+        {
+          "text_en": "I spend about 5,000 kyats on it every week.",
+          "highlight": "5,000 kyats",
+          "swap_en": "a little money · some extra cash · 20,000 kyats",
+          "gloss_mm": "ဒီဝါသနာအတွက် တစ်ပတ်ကို ၅၀၀၀ ကျပ်လောက် သုံးဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m14-i2.mp3"
+        },
+        {
+          "text_en": "It can be a bit expensive to get started.",
+          "highlight": "a bit expensive to get started",
+          "swap_en": "quite budget-friendly · a bit pricey at first · cheap to pick up",
+          "gloss_mm": "စလုပ်ဖို့အတွက်တော့ နည်းနည်းကုန်ကျစရိတ် များနိုင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m14-i3.mp3"
+        },
+        {
+          "text_en": "I try to keep my hobby within a reasonable budget.",
+          "highlight": "within a reasonable budget",
+          "swap_en": "on a tight budget · within my means · on a low budget",
+          "gloss_mm": "ကျွန်တော့်ဝါသနာကို တတ်နိုင်တဲ့ ဘတ်ဂျက်အတွင်းမှာပဲ ထားဖို့ ကြိုးစားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m14-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding how free time affects your mood",
+      "move_mm": "အားလပ်ချိန်က ကိုယ့်စိတ်ခံစားချက်အပေါ် ဘယ်လိုသက်ရောက်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It makes me feel happy.",
+          "highlight": "happy",
+          "swap_en": "relaxed · energized · refreshed · calm",
+          "gloss_mm": "ဒါက ကျွန်တော့်ကို ပျော်ရွှင်စေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m15-i1.mp3"
+        },
+        {
+          "text_en": "I feel so much better after some free time.",
+          "highlight": "so much better",
+          "swap_en": "a lot more relaxed · really refreshed · much more positive",
+          "gloss_mm": "အားလပ်ချိန်နည်းနည်းရပြီးနောက်မှာ ကျွန်တော် အများကြီး ပိုနေလို့ကောင်းသွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m15-i2.mp3"
+        },
+        {
+          "text_en": "It really helps me recharge my batteries.",
+          "highlight": "recharge my batteries",
+          "swap_en": "de-stress after work · clear my head · unwind after a long week",
+          "gloss_mm": "ဒါက ကျွန်တော့်စိတ်အင်အားတွေကို ပြန်လည်ဖြည့်တင်းဖို့ တကယ်ပဲ အထောက်အကူပြုတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m15-i3.mp3"
+        },
+        {
+          "text_en": "Having this time is essential for my mental well-being.",
+          "highlight": "essential for my mental well-being",
+          "swap_en": "vital for keeping me sane · necessary to keep me balanced",
+          "gloss_mm": "ဒီလိုအချိန်မျိုးရှိတာက ကျွန်တော့်ရဲ့ စိတ်ကျန်းမာရေးအတွက် မရှိမဖြစ်လိုအပ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_free_time/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about how you spend your free time. Include what you do, who you are with, and why you enjoy it.",
+    "prompt_mm": "သင့်ရဲ့ အားလပ်ချိန်တွေကို ဘယ်လိုကုန်ဆုံးလဲဆိုတာ စာကြောင်း ၅ ကြောင်းကနေ ၈ ကြောင်းအတွင်း ရေးပါ။ ဘာလုပ်လဲ၊ ဘယ်သူနဲ့ လုပ်လဲ၊ ဘာကြောင့် ကြိုက်လဲဆိုတာကို ထည့်သွင်းရေးပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "hobbies",
+      "relaxation",
+      "frequency",
+      "company",
+      "indoor vs outdoor",
+      "screens",
+      "weekends",
+      "feelings"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to gain confidence and ensure the sentences flow naturally.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ပါ။ ဒါမှ စကားပြောတဲ့အခါ ပိုပြီး ယုံကြည်မှုရှိလာမှာပါ။"
+  },
+  "guide": {
+    "model_en": "I have very little free time during the week. On weekends, I usually relax by reading books. I read for one hour every Saturday. I prefer reading at home because it is quiet. Sometimes, I watch movies on my phone. I enjoy these stories because they are very exciting. In the past, I played football outside every day. Now, I prefer quiet hobbies to recharge my energy. I want to try painting next month. My free time makes me feel very happy and relaxed.",
+    "model_mm": "ကျွန်တော်/မမှာ အလုပ်များတဲ့အတွက် အားလပ်ချိန် အနည်းငယ်ပဲရှိတယ်။ စနေ၊ တနင်္ဂနွေမှာတော့ စာဖတ်ပြီး အနားယူလေ့ရှိတယ်။ စနေနေ့တိုင်း တစ်နာရီလောက် စာဖတ်တယ်။ အိမ်မှာဆိုရင် တိတ်ဆိတ်လို့ စာဖတ်ရတာ ပိုကြိုက်တယ်။ တစ်ခါတလေ ဖုန်းနဲ့ ရုပ်ရှင်ကြည့်တယ်။ ဒီဇာတ်လမ်းတွေကို စိတ်လှုပ်ရှားစရာကောင်းလို့ ကြိုက်တယ်။ အရင်ကဆို အပြင်မှာ ဘောလုံးကန်လေ့ရှိတယ်။ အခုတော့ စွမ်းအင်ပြန်ဖြည့်ဖို့ တိတ်ဆိတ်တဲ့ ဝါသနာတွေကို ပိုကြိုက်တယ်။ နောက်လမှာ ပန်းချီဆွဲတာကို စမ်းကြည့်ချင်တယ်။ အားလပ်ချိန်က ကျွန်တော်/မကို ပျော်ရွှင်ပြီး စိတ်အေးချမ်းစေတယ်။",
+    "breakdown": [
+      {
+        "text_en": "I have very little free time during the week.",
+        "gloss_mm": "တစ်ပတ်တာအတွင်း ကျွန်တော်/မမှာ အားလပ်ချိန် အနည်းငယ်ပဲရှိတယ်။",
+        "why_mm": "အားလပ်ချိန်ပမာဏကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "On weekends, I usually relax by reading books.",
+        "gloss_mm": "စနေ၊ တနင်္ဂနွေမှာတော့ စာဖတ်ပြီး အနားယူလေ့ရှိတယ်။",
+        "why_mm": "အနားယူနည်းကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I read for one hour every Saturday.",
+        "gloss_mm": "စနေနေ့တိုင်း တစ်နာရီလောက် စာဖတ်တယ်။",
+        "why_mm": "ဝါသနာလုပ်တဲ့ အကြိမ်ရေကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I prefer reading at home because it is quiet.",
+        "gloss_mm": "အိမ်မှာဆိုရင် တိတ်ဆိတ်လို့ စာဖတ်ရတာ ပိုကြိုက်တယ်။",
+        "why_mm": "အိမ်တွင်းလှုပ်ရှားမှုနှင့် အကြောင်းရင်းကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "Sometimes, I watch movies on my phone.",
+        "gloss_mm": "တစ်ခါတလေ ဖုန်းနဲ့ ရုပ်ရှင်ကြည့်တယ်။",
+        "why_mm": "ဖုန်းသုံးတဲ့ အလေ့အထကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I enjoy these stories because they are very exciting.",
+        "gloss_mm": "ဒီဇာတ်လမ်းတွေကို စိတ်လှုပ်ရှားစရာကောင်းလို့ ကြိုက်တယ်။",
+        "why_mm": "ဝါသနာကို ဘာကြောင့်ကြိုက်လဲ ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "In the past, I played football outside every day.",
+        "gloss_mm": "အရင်ကဆို အပြင်မှာ ဘောလုံးကန်လေ့ရှိတယ်။",
+        "why_mm": "အရင်က ဝါသနာကို နှိုင်းယှဉ်ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "Now, I prefer quiet hobbies to recharge my energy.",
+        "gloss_mm": "အခုတော့ စွမ်းအင်ပြန်ဖြည့်ဖို့ တိတ်ဆိတ်တဲ့ ဝါသနာတွေကို ပိုကြိုက်တယ်။",
+        "why_mm": "စွမ်းအင်ပြန်ဖြည့်တဲ့ နည်းလမ်းကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I want to try painting next month.",
+        "gloss_mm": "နောက်လမှာ ပန်းချီဆွဲတာကို စမ်းကြည့်ချင်တယ်။",
+        "why_mm": "အသစ်လုပ်ကြည့်ချင်တဲ့ ဝါသနာကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "My free time makes me feel very happy and relaxed.",
+        "gloss_mm": "အားလပ်ချိန်က ကျွန်တော်/မကို ပျော်ရွှင်ပြီး စိတ်အေးချမ်းစေတယ်။",
+        "why_mm": "အားလပ်ချိန်က ကိုယ့်စိတ်ခံစားချက်အပေါ် သက်ရောက်မှုကို နိဂုံးချုပ်ခြင်း။"
+      }
+    ],
+    "template": "I have {time_amount} free time during the week. On weekends, I usually relax by {hobby}. I do this for {frequency} every Saturday. I prefer {location} because it is {reason}. Sometimes, I {digital_habit}. I enjoy this because {why_enjoy}. In the past, I {past_hobby}. Now, I prefer {current_habit} to recharge my energy. I want to try {new_hobby} next month. My free time makes me feel {emotion}.",
+    "slots": [
+      {
+        "id": "time_amount",
+        "label_en": "Amount of free time",
+        "label_mm": "အားလပ်ချိန် ပမာဏ",
+        "hint": "သင်အားလပ်ချိန် ဘယ်လောက်ရှိလဲ",
+        "options": [
+          "very little",
+          "a lot of",
+          "some",
+          "hardly any"
+        ]
+      },
+      {
+        "id": "hobby",
+        "label_en": "Favorite hobby",
+        "label_mm": "အကြိုက်ဆုံး ဝါသနာ",
+        "hint": "သင် အားလပ်ချိန်မှာ ဘာလုပ်လေ့ရှိလဲ",
+        "options": [
+          "gardening",
+          "listening to music",
+          "cooking",
+          "playing games"
+        ]
+      },
+      {
+        "id": "frequency",
+        "label_en": "Frequency",
+        "label_mm": "အကြိမ်ရေ",
+        "hint": "ဘယ်လောက်ကြာကြာ လုပ်လဲ",
+        "options": [
+          "one hour",
+          "two hours",
+          "thirty minutes",
+          "a few minutes"
+        ]
+      },
+      {
+        "id": "location",
+        "label_en": "Location",
+        "label_mm": "နေရာ",
+        "hint": "ဘယ်မှာ လုပ်ရတာ ကြိုက်လဲ",
+        "options": [
+          "staying at home",
+          "going to the park",
+          "visiting a cafe",
+          "the library"
+        ]
+      },
+      {
+        "id": "reason",
+        "label_en": "Reason",
+        "label_mm": "အကြောင်းရင်း",
+        "hint": "ဘာကြောင့် ဒီနေရာကို ကြိုက်တာလဲ",
+        "options": [
+          "peaceful",
+          "convenient",
+          "fun",
+          "comfortable"
+        ]
+      },
+      {
+        "id": "digital_habit",
+        "label_en": "Digital habit",
+        "label_mm": "ဖုန်း/ကွန်ပျူတာ အလေ့အထ",
+        "hint": "ဖုန်းနဲ့ ဘာလုပ်လေ့ရှိလဲ",
+        "options": [
+          "browse social media",
+          "watch short videos",
+          "play online games",
+          "listen to podcasts"
+        ]
+      },
+      {
+        "id": "why_enjoy",
+        "label_en": "Reason for enjoyment",
+        "label_mm": "ဘာကြောင့် ကြိုက်တာလဲ",
+        "hint": "ဒီဝါသနာရဲ့ ကောင်းတဲ့အချက်",
+        "options": [
+          "it is very relaxing",
+          "it keeps me updated",
+          "it is very creative",
+          "it is very fun"
+        ]
+      },
+      {
+        "id": "past_hobby",
+        "label_en": "Past hobby",
+        "label_mm": "အရင်က ဝါသနာ",
+        "hint": "အရင်က ဘာလုပ်ခဲ့ဖူးလဲ",
+        "options": [
+          "played basketball",
+          "went swimming",
+          "drew pictures",
+          "wrote stories"
+        ]
+      },
+      {
+        "id": "current_habit",
+        "label_en": "Current habit",
+        "label_mm": "အခု လက်ရှိအလေ့အထ",
+        "hint": "အခုဘာလုပ်ရတာ ပိုကြိုက်လဲ",
+        "options": [
+          "meditation",
+          "gentle exercise",
+          "reading quiet books",
+          "gardening"
+        ]
+      },
+      {
+        "id": "new_hobby",
+        "label_en": "New hobby",
+        "label_mm": "အသစ်လုပ်ကြည့်ချင်တဲ့ ဝါသနာ",
+        "hint": "နောက်ထပ် ဘာလုပ်ကြည့်ချင်လဲ",
+        "options": [
+          "photography",
+          "learning a language",
+          "baking",
+          "pottery"
+        ]
+      },
+      {
+        "id": "emotion",
+        "label_en": "Emotion",
+        "label_mm": "စိတ်ခံစားချက်",
+        "hint": "အားလပ်ချိန်ပြီးရင် ဘယ်လိုခံစားရလဲ",
+        "options": [
+          "happy and relaxed",
+          "refreshed and focused",
+          "calm and peaceful",
+          "energized"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level1/my_free_time/guide-model.mp3"
+  }
+}

@@ -1,0 +1,705 @@
+{
+  "id": "education_today",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "Education Today",
+  "title_mm": "ယနေ့ခေတ် ပညာရေးစနစ်",
+  "promise_en": "Speak confidently about modern education and its challenges.",
+  "promise_mm": "ယနေ့ခေတ် ပညာရေးစနစ်နဲ့ ပတ်သက်ပြီး ကိုယ့်အမြင်ကို ယုံကြည်မှုရှိရှိ ပြောတတ်လာမယ်။",
+  "intro_en": "Education is a hot topic. Discussing whether our school system prepares us for the real world is essential for personal and national growth.",
+  "intro_mm": "ပညာရေးဆိုတာ အမြဲတမ်း ဆွေးနွေးစရာ ဖြစ်နေတဲ့ ခေါင်းစဉ်တစ်ခုပါ။ ကျွန်တော်တို့ရဲ့ ကျောင်းပညာရေးစနစ်က လက်တွေ့ဘဝအတွက် အဆင်သင့်ဖြစ်စေရဲ့လားဆိုတာ ဆွေးနွေးခြင်းက ကိုယ်တိုင်အတွက်ရော နိုင်ငံအတွက်ပါ အရေးကြီးပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the general topic",
+      "move_mm": "ပညာရေးအကြောင်း စတင်ဆွေးနွေးနည်း",
+      "items": [
+        {
+          "text_en": "Education is very important today.",
+          "highlight": "very important",
+          "swap_en": "the key to success · essential for everyone · the top priority",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ ပညာရေးက အရမ်းအရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m1-i1.mp3"
+        },
+        {
+          "text_en": "Many people think that the education system is changing fast.",
+          "highlight": "the education system",
+          "swap_en": "the way we learn · online learning · the job market",
+          "gloss_mm": "ပညာရေးစနစ်က လျင်မြန်စွာ ပြောင်းလဲနေတယ်လို့ လူအများက ထင်ကြပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m1-i2.mp3"
+        },
+        {
+          "text_en": "Education poses a significant challenge for young people in Myanmar.",
+          "highlight": "a significant challenge",
+          "swap_en": "a major concern · a difficult hurdle · an ongoing issue",
+          "gloss_mm": "မြန်မာနိုင်ငံက လူငယ်တွေအတွက် ပညာရေးဟာ အရေးကြီးတဲ့ စိန်ခေါ်မှုတစ်ခု ဖြစ်နေပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m1-i3.mp3"
+        },
+        {
+          "text_en": "It is widely believed that we need to rethink our approach to education.",
+          "highlight": "rethink our approach to education",
+          "swap_en": "reform the school curriculum · invest more in skill training · focus on practical skills",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ ပညာရေးပုံစံကို ပြန်လည်သုံးသပ်ဖို့ လိုအပ်တယ်လို့ အများက ယုံကြည်ကြပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m1-i4.mp3"
+        },
+        {
+          "text_en": "The gap between theory and practice remains a critical issue in modern education.",
+          "highlight": "a critical issue",
+          "swap_en": "a pressing problem · an urgent matter",
+          "gloss_mm": "စာတွေ့နဲ့ လက်တွေ့ကြားက ကွာဟချက်ဟာ ခေတ်သစ်ပညာရေးမှာ အရေးကြီးတဲ့ ပြဿနာတစ်ခု ဖြစ်နေဆဲပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m1-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိ ပညာရေးအခြေအနေ ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Many people think that online learning is very popular now.",
+          "highlight": "online learning",
+          "swap_en": "private tutoring · vocational training · self-study",
+          "gloss_mm": "အွန်လိုင်းကနေ ပညာသင်ယူတာက အခုခေတ်မှာ အရမ်းရေပန်းစားတယ်လို့ လူအတော်များများ ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m2-i1.mp3"
+        },
+        {
+          "text_en": "It is becoming clear that practical skills are more important than degrees.",
+          "highlight": "practical skills",
+          "swap_en": "soft skills · digital literacy · critical thinking",
+          "gloss_mm": "ဒီဂရီထက် လက်တွေ့ကျတဲ့ ကျွမ်းကျင်မှုတွေက ပိုအရေးကြီးလာတယ်ဆိုတာ သိသာလာပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m2-i2.mp3"
+        },
+        {
+          "text_en": "One major cause of the current gap is the lack of digital access.",
+          "highlight": "the lack of digital access",
+          "swap_en": "the high cost of tuition · the outdated curriculum · the shortage of qualified teachers",
+          "gloss_mm": "လက်ရှိဖြစ်ပေါ်နေတဲ့ ကွာဟချက်ရဲ့ အဓိကအကြောင်းရင်းတစ်ခုကတော့ နည်းပညာနဲ့ သတင်းအချက်အလက် လက်လှမ်းမီမှု နည်းပါးတာပဲ ဖြစ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m2-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating the main problem",
+      "move_mm": "အဓိက ပြဿနာကို ထုတ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "The main problem is the cost of education.",
+          "highlight": "the cost of education",
+          "swap_en": "the lack of practical skills · the outdated curriculum · the pressure on students",
+          "gloss_mm": "အဓိကပြဿနာက ပညာရေးစရိတ်ကြီးမြင့်နေတာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m3-i1.mp3"
+        },
+        {
+          "text_en": "Many people believe that our school system is too theoretical.",
+          "highlight": "too theoretical",
+          "swap_en": "too exam-oriented · not practical enough · failing to prepare students for jobs",
+          "gloss_mm": "လူတော်တော်များများက ကျွန်တော်တို့ရဲ့ ကျောင်းပညာရေးစနစ်က စာတွေ့သက်သက်ပဲဖြစ်နေတယ်လို့ ယုံကြည်ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m3-i2.mp3"
+        },
+        {
+          "text_en": "The real issue is that students are not learning real-world skills.",
+          "highlight": "not learning real-world skills",
+          "swap_en": "struggling to find relevant jobs · focusing only on memorizing facts · unable to think critically",
+          "gloss_mm": "တကယ့်ပြဿနာက ကျောင်းသားတွေက လက်တွေ့ဘဝမှာ သုံးလို့ရတဲ့ ကျွမ်းကျင်မှုတွေကို မသင်ယူနိုင်ကြတာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m3-i3.mp3"
+        },
+        {
+          "text_en": "There is an urgent need to reform the current educational framework.",
+          "highlight": "an urgent need to reform",
+          "swap_en": "a significant gap between school and industry · a pressing need for digital integration",
+          "gloss_mm": "လက်ရှိပညာရေးမူဘောင်ကို ပြုပြင်ပြောင်းလဲဖို့ အရေးတကြီး လိုအပ်နေပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m3-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting the difference between exams and skills",
+      "move_mm": "စာမေးပွဲနဲ့ လက်တွေ့ကျွမ်းကျင်မှု ကွာခြားချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Exam scores are different from real skills.",
+          "highlight": "different from",
+          "swap_en": "not the same as · not always equal to",
+          "gloss_mm": "စာမေးပွဲ အမှတ်တွေက လက်တွေ့ကျွမ်းကျင်မှုတွေနဲ့ မတူပါဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m4-i1.mp3"
+        },
+        {
+          "text_en": "Many people focus too much on passing exams rather than gaining practical skills.",
+          "highlight": "rather than",
+          "swap_en": "instead of",
+          "gloss_mm": "လူတော်တော်များများက လက်တွေ့ကျွမ်းကျင်မှု ရဖို့ထက် စာမေးပွဲအောင်ဖို့ကိုပဲ ပိုအာရုံစိုက်နေကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m4-i2.mp3"
+        },
+        {
+          "text_en": "There is a growing gap between academic success and what employers actually need.",
+          "highlight": "a growing gap between",
+          "swap_en": "a clear difference between · a disconnect between",
+          "gloss_mm": "စာမေးပွဲမှာ ထူးချွန်တာနဲ့ အလုပ်ရှင်တွေ တကယ်လိုအပ်တဲ့ ကျွမ်းကျင်မှုကြားမှာ ကွာဟချက်တွေ တိုးလာနေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m4-i3.mp3"
+        },
+        {
+          "text_en": "Relying solely on exam results often fails to reflect a student's true potential.",
+          "highlight": "fails to reflect",
+          "swap_en": "does not show · cannot capture",
+          "gloss_mm": "စာမေးပွဲရလဒ်ကိုပဲ အားကိုးနေတာက ကျောင်းသားတစ်ယောက်ရဲ့ တကယ့်အရည်အချင်းကို ဖော်ပြပေးနိုင်မှာ မဟုတ်ဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the causes of the problem",
+      "move_mm": "ပြဿနာရဲ့ အကြောင်းရင်းကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "One major cause is the lack of resources.",
+          "highlight": "the lack of resources",
+          "swap_en": "the high cost of tuition · the pressure to pass exams · the lack of practical skills",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုကတော့ လိုအပ်တဲ့ အရင်းအမြစ်တွေ အားနည်းနေတာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m5-i1.mp3"
+        },
+        {
+          "text_en": "The main problem stems from our outdated curriculum.",
+          "highlight": "stems from",
+          "swap_en": "is rooted in · comes down to",
+          "gloss_mm": "အဓိကပြဿနာက ခေတ်နောက်ကျနေတဲ့ သင်ရိုးညွှန်းတမ်းတွေဆီကနေ စတင်တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m5-i2.mp3"
+        },
+        {
+          "text_en": "Many people believe that the issue is largely driven by a rigid testing system.",
+          "highlight": "largely driven by",
+          "swap_en": "mainly caused by · largely the result of",
+          "gloss_mm": "ဒီပြဿနာဟာ စာမေးပွဲစနစ် တင်းကျပ်လွန်းတာကြောင့် ဖြစ်လာတာလို့ လူအများက ယုံကြည်ကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m5-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing an opinion on the teacher's role",
+      "move_mm": "ဆရာတွေရဲ့ အခန်းကဏ္ဍအပေါ် အမြင်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Teachers are very important for students.",
+          "highlight": "very important",
+          "swap_en": "essential · key figures · helpful",
+          "gloss_mm": "ဆရာတွေက ကျောင်းသားတွေအတွက် အလွန်အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m6-i1.mp3"
+        },
+        {
+          "text_en": "I believe teachers should be more than just lecturers.",
+          "highlight": "more than just lecturers",
+          "swap_en": "guides for life · mentors · friends to students",
+          "gloss_mm": "ဆရာဆိုတာ စာသင်ပေးရုံတင်မကဘဲ တခြားအခန်းကဏ္ဍတွေမှာပါ ပါဝင်သင့်တယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m6-i2.mp3"
+        },
+        {
+          "text_en": "Teachers play a vital role in shaping a student's character.",
+          "highlight": "play a vital role in",
+          "swap_en": "have a huge impact on · are instrumental in",
+          "gloss_mm": "ကျောင်းသားတစ်ယောက်ရဲ့ စရိုက်ကို ပုံဖော်ပေးရာမှာ ဆရာတွေက အသက်သွေးကြောသဖွယ် အရေးပါတဲ့ အခန်းကဏ္ဍကနေ ပါဝင်နေပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m6-i3.mp3"
+        },
+        {
+          "text_en": "Nowadays, the role of a teacher is shifting towards becoming a facilitator.",
+          "highlight": "shifting towards becoming a facilitator",
+          "swap_en": "evolving into a coach · changing into a mentor",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ ဆရာတွေရဲ့ အခန်းကဏ္ဍက စာသင်ပေးသူသက်သက်ထက် လမ်းပြပေးသူ (facilitator) အဖြစ် ပြောင်းလဲလာနေပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting two sides of an argument",
+      "move_mm": "အမြင်နှစ်ခုကို ယှဉ်တွဲပြောနည်း",
+      "items": [
+        {
+          "text_en": "Some people think online learning is great, but others disagree.",
+          "highlight": "Some people think",
+          "swap_en": "Many people believe · Some argue that · Most parents feel",
+          "gloss_mm": "အွန်လိုင်းသင်ကြားမှုက ကောင်းတယ်လို့ အချို့က ထင်ကြပေမဲ့ တချို့ကတော့ သဘောမတူကြဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m7-i1.mp3"
+        },
+        {
+          "text_en": "On the one hand, traditional schools build social skills, while on the other hand, online classes offer more flexibility.",
+          "highlight": "On the one hand",
+          "swap_en": "For one thing · To begin with",
+          "gloss_mm": "တစ်ဖက်မှာကျတော့ ကျောင်းတက်တာက လူမှုဆက်ဆံရေးကို တိုးတက်စေပြီး၊ နောက်တစ်ဖက်မှာကျတော့ အွန်လိုင်းသင်တန်းတွေက အချိန်အခွင့်အလမ်း ပိုပေးတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m7-i2.mp3"
+        },
+        {
+          "text_en": "While remote study has clear benefits, it also presents significant challenges for students.",
+          "highlight": "While remote study has clear benefits",
+          "swap_en": "Although digital learning is convenient · Even though online degrees are popular",
+          "gloss_mm": "အွန်လိုင်းသင်ယူမှုမှာ အားသာချက်တွေရှိပေမဲ့ ကျောင်းသားတွေအတွက် စိန်ခေါ်မှုတွေလည်း ရှိနေပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m7-i3.mp3"
+        },
+        {
+          "text_en": "The debate over digital versus physical classrooms remains a contentious issue in our education system.",
+          "highlight": "remains a contentious issue",
+          "swap_en": "is a widely debated topic · creates a lot of disagreement",
+          "gloss_mm": "ကျောင်းတက်တာနဲ့ အွန်လိုင်းသင်တာ နှစ်ခုကြား အငြင်းပွားမှုက ကျွန်တော်တို့ရဲ့ ပညာရေးစနစ်မှာ အခုထိ အငြင်းပွားစရာ ဖြစ်နေတုန်းပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m7-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the consequences of the system",
+      "move_mm": "ပညာရေးစနစ်ရဲ့ နောက်ဆက်တွဲရလဒ် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "This system makes students tired.",
+          "highlight": "makes students tired",
+          "swap_en": "makes students stressed · creates a lot of pressure · limits their creativity",
+          "gloss_mm": "ဒီပညာရေးစနစ်က ကျောင်းသားတွေကို ပင်ပန်းစေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m8-i1.mp3"
+        },
+        {
+          "text_en": "It leads to a lot of pressure for students.",
+          "highlight": "leads to a lot of pressure",
+          "swap_en": "results in less free time · causes students to lose interest · puts too much burden on parents",
+          "gloss_mm": "ဒါက ကျောင်းသားတွေအတွက် ဖိအားတွေ အများကြီး ဖြစ်စေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m8-i2.mp3"
+        },
+        {
+          "text_en": "The focus on exams often results in students neglecting their soft skills.",
+          "highlight": "results in students neglecting their soft skills",
+          "swap_en": "prevents students from exploring their interests · creates a generation that only knows how to memorize · fails to prepare them for the real world",
+          "gloss_mm": "စာမေးပွဲကိုပဲ အလေးပေးတာက ကျောင်းသားတွေရဲ့ အခြားအရည်အချင်းတွေကို လျစ်လျူရှုမိစေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing with previous generations",
+      "move_mm": "အရင်ခေတ်နဲ့ နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Education is more difficult than before.",
+          "highlight": "more difficult than before",
+          "swap_en": "easier than before · more expensive than before · more competitive than before",
+          "gloss_mm": "ပညာရေးက အရင်ကထက် ပိုခက်ခဲလာတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m9-i1.mp3"
+        },
+        {
+          "text_en": "Students have much more pressure compared to our parents' generation.",
+          "highlight": "compared to our parents' generation",
+          "swap_en": "compared to ten years ago · compared to the past",
+          "gloss_mm": "ကျွန်တော်တို့ မိဘတွေခေတ်နဲ့စာရင် ကျောင်းသားတွေမှာ ဖိအားပိုများတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m9-i2.mp3"
+        },
+        {
+          "text_en": "The way we study has changed significantly since the time of our grandparents.",
+          "highlight": "has changed significantly since the time of",
+          "swap_en": "is quite different from the time of · has evolved greatly since the time of",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ စာသင်ယူပုံက အဘိုးအဘွားတွေခေတ်နဲ့စာရင် သိသိသာသာ ကွာခြားသွားပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m9-i3.mp3"
+        },
+        {
+          "text_en": "Unlike the past, online learning is now replacing traditional classrooms.",
+          "highlight": "Unlike the past",
+          "swap_en": "In contrast to previous generations · Contrary to how it used to be",
+          "gloss_mm": "အရင်တုန်းကနဲ့မတူဘဲ အခုဆိုရင် အွန်လိုင်းကနေ စာသင်တာက ရိုးရာစာသင်ခန်းနေရာကို အစားထိုးလာပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m9-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Giving your own view firmly",
+      "move_mm": "ကိုယ့်ရဲ့ အမြင်ကို ခိုင်ခိုင်မာမာပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am sure that practical skills are more important than degrees.",
+          "highlight": "I am sure that",
+          "swap_en": "I strongly believe that · I am convinced that",
+          "gloss_mm": "ဒီဂရီထက် လက်တွေ့ကျွမ်းကျင်မှုက ပိုအရေးကြီးတယ်ဆိုတာ ကျွန်တော် သေချာပေါက် ပြောနိုင်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m10-i1.mp3"
+        },
+        {
+          "text_en": "There is no doubt that technology is changing how we learn.",
+          "highlight": "There is no doubt that",
+          "swap_en": "It is clear that · It is undeniable that",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ သင်ယူမှုပုံစံတွေကို ပြောင်းလဲနေတယ်ဆိုတာ သံသယဖြစ်စရာ မလိုပါဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m10-i2.mp3"
+        },
+        {
+          "text_en": "I firmly maintain that the current education system needs a total overhaul.",
+          "highlight": "I firmly maintain that",
+          "swap_en": "I am of the firm opinion that · I hold the firm view that",
+          "gloss_mm": "လက်ရှိ ပညာရေးစနစ်ကို အလုံးစုံ ပြုပြင်ပြောင်းလဲဖို့ လိုအပ်တယ်ဆိုတဲ့ အမြင်ကို ကျွန်တော် ခိုင်ခိုင်မာမာ ကိုင်စွဲထားပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting possible solutions",
+      "move_mm": "ဖြေရှင်းနိုင်မယ့် နည်းလမ်းများ အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "We should focus more on vocational training.",
+          "highlight": "focus more on",
+          "swap_en": "pay more attention to · spend more time on",
+          "gloss_mm": "ကျွန်တော်တို့အနေနဲ့ အသက်မွေးဝမ်းကျောင်း ပညာရပ်တွေကို ပိုပြီး အာရုံစိုက်သင့်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m11-i1.mp3"
+        },
+        {
+          "text_en": "It might be a good idea to upgrade school facilities.",
+          "highlight": "It might be a good idea to",
+          "swap_en": "Maybe we should · I think it's time to",
+          "gloss_mm": "ကျောင်းက အဆောက်အအုံနဲ့ သင်ထောက်ကူတွေကို အဆင့်မြှင့်တင်ဖို့ စဉ်းစားသင့်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m11-i2.mp3"
+        },
+        {
+          "text_en": "Integrating technology into the classroom would be a step in the right direction.",
+          "highlight": "a step in the right direction",
+          "swap_en": "a practical solution · a great improvement",
+          "gloss_mm": "စာသင်ခန်းတွေမှာ နည်းပညာကို အသုံးပြုတာက မှန်ကန်တဲ့ ခြေလှမ်းတစ်ခု ဖြစ်ပါလိမ့်မယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m11-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Acknowledging the complexity of the issue",
+      "move_mm": "ပြဿနာရဲ့ ရှုပ်ထွေးမှုကို အသိအမှတ်ပြုနည်း",
+      "items": [
+        {
+          "text_en": "It is a difficult issue.",
+          "highlight": "a difficult issue",
+          "swap_en": "a big challenge · a complicated matter · a tough problem",
+          "gloss_mm": "ဒါက ခက်ခဲတဲ့ ပြဿနာတစ်ခုပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m12-i1.mp3"
+        },
+        {
+          "text_en": "There are many sides to this problem.",
+          "highlight": "many sides to this problem",
+          "swap_en": "a lot of factors involved · several points of view",
+          "gloss_mm": "ဒီပြဿနာမှာ ထောင့်ပေါင်းစုံကနေ ကြည့်စရာတွေ အများကြီးရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m12-i2.mp3"
+        },
+        {
+          "text_en": "Education is becoming increasingly complex.",
+          "highlight": "increasingly complex",
+          "swap_en": "more and more complicated · harder to solve",
+          "gloss_mm": "ပညာရေးဆိုတာ တဖြည်းဖြည်းနဲ့ ပိုပြီး ရှုပ်ထွေးလာတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m12-i3.mp3"
+        },
+        {
+          "text_en": "There is no simple answer to such a multifaceted issue.",
+          "highlight": "no simple answer",
+          "swap_en": "no easy solution · no quick fix",
+          "gloss_mm": "ဒီလောက် ရှုပ်ထွေးတဲ့ ပြဿနာအတွက် လွယ်ကူတဲ့ အဖြေဆိုတာ မရှိပါဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m12-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Asking for someone else's opinion",
+      "move_mm": "သူတစ်ပါးအမြင်ကို မေးမြန်းနည်း",
+      "items": [
+        {
+          "text_en": "What do you think about online learning?",
+          "highlight": "What do you think about",
+          "swap_en": "How do you feel about · What is your opinion on",
+          "gloss_mm": "အွန်လိုင်းကနေ ပညာသင်တာနဲ့ ပတ်သက်ပြီး ဘယ်လိုမြင်လဲခင်ဗျာ/ရှင်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m13-i1.mp3"
+        },
+        {
+          "text_en": "I'm curious to hear your take on the current education system.",
+          "highlight": "I'm curious to hear your take on",
+          "swap_en": "I'd love to get your thoughts on · I'm interested in your perspective on",
+          "gloss_mm": "လက်ရှိ ပညာရေးစနစ်နဲ့ ပတ်သက်ပြီး ဆရာ/ဆရာမရဲ့ အမြင်ကို သိချင်မိပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m13-i2.mp3"
+        },
+        {
+          "text_en": "To what extent do you agree that degrees are becoming less important?",
+          "highlight": "To what extent do you agree that",
+          "swap_en": "How much do you agree that · What's your stance on whether",
+          "gloss_mm": "ဒီဂရီလက်မှတ်တွေရဲ့ အရေးပါမှု လျော့နည်းလာတယ်ဆိုတဲ့ အချက်ကို ဘယ်လောက်ထိ ထောက်ခံပါသလဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing the main point",
+      "move_mm": "အဓိကအချက်ကို အကျဉ်းချုပ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "The main point is that education is too expensive.",
+          "highlight": "The main point is that",
+          "swap_en": "The bottom line is that · The core issue is that",
+          "gloss_mm": "အဓိကအချက်ကတော့ ပညာရေးက အရမ်းကုန်ကျစရိတ်များနေတာပါပဲ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m14-i1.mp3"
+        },
+        {
+          "text_en": "Basically, students today prioritize degrees over real skills.",
+          "highlight": "Basically",
+          "swap_en": "In short · To put it simply",
+          "gloss_mm": "အနှစ်ချုပ်ပြောရရင်တော့ ဒီနေ့ခေတ် ကျောင်းသားတွေက ကျွမ်းကျင်မှုထက် ဘွဲ့ကို ပိုအရေးပေးနေကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m14-i2.mp3"
+        },
+        {
+          "text_en": "Everything boils down to the fact that our curriculum needs a major update.",
+          "highlight": "Everything boils down to the fact that",
+          "swap_en": "The crux of the matter is that · It all comes down to the fact that",
+          "gloss_mm": "အရာအားလုံးရဲ့ အနှစ်ချုပ်ကတော့ ကျွန်တော်တို့ရဲ့ သင်ရိုးညွှန်းတမ်းကို အကြီးစားပြင်ဆင်ဖို့ လိုအပ်နေတာပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m14-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding the discussion",
+      "move_mm": "ဆွေးနွေးချက်ကို အဆုံးသတ်နည်း",
+      "items": [
+        {
+          "text_en": "Education is very important.",
+          "highlight": "very important",
+          "swap_en": "essential · the key to success · a priority",
+          "gloss_mm": "ပညာရေးက အရမ်းအရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/education_today/m15-i1.mp3"
+        },
+        {
+          "text_en": "We need to change how we teach.",
+          "highlight": "how we teach",
+          "swap_en": "our education system · the way students learn · the current curriculum",
+          "gloss_mm": "သင်ကြားတဲ့ပုံစံကို ပြောင်းလဲဖို့ လိုအပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/education_today/m15-i2.mp3"
+        },
+        {
+          "text_en": "It is clear that we must invest in better facilities.",
+          "highlight": "must invest in better facilities",
+          "swap_en": "need to focus on practical skills · should prioritize digital literacy · must support our teachers",
+          "gloss_mm": "ပိုကောင်းတဲ့ သင်ကြားရေးပတ်ဝန်းကျင်အတွက် ရင်းနှီးမြှုပ်နှံဖို့ လိုအပ်တယ်ဆိုတာ ထင်ရှားပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/education_today/m15-i3.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss the current education system in your country. Focus on whether it prioritizes real-world skills or just exams, and suggest one way it could be improved.",
+    "prompt_mm": "သင့်နိုင်ငံရဲ့ လက်ရှိ ပညာရေးစနစ်နဲ့ ပတ်သက်ပြီး ဆွေးနွေးပါ။ ကျောင်းပညာရေးက လက်တွေ့ဘဝအတွက် လိုအပ်တဲ့ အရည်အချင်းတွေကို အဓိကထားသလား၊ စာမေးပွဲကိုပဲ ဦးစားပေးသလားဆိုတာကို သင့်အမြင်နဲ့ ၈-၁၂ ကြောင်းခန့် ရေးသားပါ။",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Current situation",
+      "Exams vs Skills",
+      "Teacher's role",
+      "Consequences",
+      "My opinion",
+      "Possible solutions"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to gain confidence and improve your flow.",
+    "speak_aloud_mm": "သင်ရေးသားထားတဲ့ အဖြေကို ယုံကြည်မှုရှိရှိနဲ့ အသံထွက်ပြီး ၂ ကြိမ်၊ ၃ ကြိမ်လောက် ဖတ်ကြည့်ပါ။"
+  },
+  "guide": {
+    "model_en": "Education is the foundation of our future. Currently, many schools focus too much on exams. This is a big problem for students. Exams measure memory, but they do not test real skills. Students study hard just to get good grades. This system limits their creativity. Teachers should be mentors instead of just lecturers. Some people like this system, but others dislike it. It is a complex issue to solve. In my view, we need more practical learning. What do you think about this?",
+    "model_mm": "ပညာရေးသည် ကျွန်ုပ်တို့၏ အနာဂတ်အတွက် အခြေခံအုတ်မြစ် ဖြစ်သည်။ လက်ရှိတွင် ကျောင်းများစွာသည် စာမေးပွဲကို အလွန်အမင်း အာရုံစိုက်နေကြသည်။ ဤသည်မှာ ကျောင်းသားများအတွက် ကြီးမားသော ပြဿနာတစ်ခု ဖြစ်သည်။ စာမေးပွဲများသည် မှတ်ဉာဏ်ကို တိုင်းတာသော်လည်း လက်တွေ့ကျွမ်းကျင်မှုကို မစစ်ဆေးပါ။ ကျောင်းသားများသည် အမှတ်ကောင်းရရန်သာ ကြိုးစားသင်ယူနေကြသည်။ ဤစနစ်သည် သူတို့၏ တီထွင်ဖန်တီးနိုင်စွမ်းကို ကန့်သတ်ထားသည်။ ဆရာများသည် သင်ခန်းစာပို့ချသူထက် လမ်းပြသူများ ဖြစ်သင့်သည်။ အချို့က ဤစနစ်ကို သဘောကျကြသော်လည်း အချို့က မကြိုက်ကြပါ။ ဖြေရှင်းရမည့် ရှုပ်ထွေးသော ပြဿနာတစ်ခု ဖြစ်သည်။ ကျွန်ုပ်အမြင်အရ ကျွန်ုပ်တို့သည် လက်တွေ့သင်ယူမှု ပိုလိုအပ်သည်။ ဤအကြောင်းနှင့် ပတ်သက်၍ သင် ဘယ်လိုထင်သလဲ။",
+    "breakdown": [
+      {
+        "text_en": "Education is the foundation of our future.",
+        "gloss_mm": "ပညာရေးသည် ကျွန်ုပ်တို့၏ အနာဂတ်အတွက် အခြေခံအုတ်မြစ် ဖြစ်သည်။",
+        "why_mm": "ယေဘုယျအကြောင်းအရာကို စတင်မိတ်ဆက်ခြင်း။"
+      },
+      {
+        "text_en": "Currently, many schools focus too much on exams.",
+        "gloss_mm": "လက်ရှိတွင် ကျောင်းများစွာသည် စာမေးပွဲကို အလွန်အမင်း အာရုံစိုက်နေကြသည်။",
+        "why_mm": "လက်ရှိအခြေအနေကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "This is a big problem for students.",
+        "gloss_mm": "ဤသည်မှာ ကျောင်းသားများအတွက် ကြီးမားသော ပြဿနာတစ်ခု ဖြစ်သည်။",
+        "why_mm": "အဓိကပြဿနာကို ထုတ်ပြောခြင်း။"
+      },
+      {
+        "text_en": "Exams measure memory, but they do not test real skills.",
+        "gloss_mm": "စာမေးပွဲများသည် မှတ်ဉာဏ်ကို တိုင်းတာသော်လည်း လက်တွေ့ကျွမ်းကျင်မှုကို မစစ်ဆေးပါ။",
+        "why_mm": "စာမေးပွဲနှင့် ကျွမ်းကျင်မှု ကွာခြားချက်ကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "Students study hard just to get good grades.",
+        "gloss_mm": "ကျောင်းသားများသည် အမှတ်ကောင်းရရန်သာ ကြိုးစားသင်ယူနေကြသည်။",
+        "why_mm": "ပြဿနာ၏ အကြောင်းရင်းကို ရှင်းပြခြင်း။"
+      },
+      {
+        "text_en": "This system limits their creativity.",
+        "gloss_mm": "ဤစနစ်သည် သူတို့၏ တီထွင်ဖန်တီးနိုင်စွမ်းကို ကန့်သတ်ထားသည်။",
+        "why_mm": "စနစ်၏ နောက်ဆက်တွဲရလဒ်ကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "Teachers should be mentors instead of just lecturers.",
+        "gloss_mm": "ဆရာများသည် သင်ခန်းစာပို့ချသူထက် လမ်းပြသူများ ဖြစ်သင့်သည်။",
+        "why_mm": "ဆရာ့အခန်းကဏ္ဍအပေါ် အမြင်ကို ပြောခြင်း။"
+      },
+      {
+        "text_en": "Some people like this system, but others dislike it.",
+        "gloss_mm": "အချို့က ဤစနစ်ကို သဘောကျကြသော်လည်း အချို့က မကြိုက်ကြပါ။",
+        "why_mm": "အမြင်နှစ်ခုကို ယှဉ်တွဲပြောခြင်း။"
+      },
+      {
+        "text_en": "It is a complex issue to solve.",
+        "gloss_mm": "ဖြေရှင်းရမည့် ရှုပ်ထွေးသော ပြဿနာတစ်ခု ဖြစ်သည်။",
+        "why_mm": "ပြဿနာ၏ ရှုပ်ထွေးမှုကို အသိအမှတ်ပြုခြင်း။"
+      },
+      {
+        "text_en": "In my view, we need more practical learning.",
+        "gloss_mm": "ကျွန်ုပ်အမြင်အရ ကျွန်ုပ်တို့သည် လက်တွေ့သင်ယူမှု ပိုလိုအပ်သည်။",
+        "why_mm": "မိမိ၏ အမြင်ကို ခိုင်မာစွာပြောခြင်း။"
+      },
+      {
+        "text_en": "What do you think about this?",
+        "gloss_mm": "ဤအကြောင်းနှင့် ပတ်သက်၍ သင် ဘယ်လိုထင်သလဲ။",
+        "why_mm": "သူတစ်ပါးအမြင်ကို မေးမြန်းခြင်း။"
+      }
+    ],
+    "template": "Education is the {topic_importance}. Currently, many schools {current_action}. This is a big problem for students. Exams measure memory, but {contrast_point}. Students study hard just to {student_goal}. This system {negative_impact}. Teachers should be {teacher_role} instead of just lecturers. Some people like this system, but others dislike it. It is a {complexity_level} issue to solve. In my view, we need {proposed_solution}. What do you think about this?",
+    "slots": [
+      {
+        "id": "topic_importance",
+        "label_en": "Importance of education",
+        "label_mm": "ပညာရေး၏ အရေးပါပုံ",
+        "hint": "ပညာရေးက ဘာကြောင့် အရေးကြီးတာလဲ။",
+        "options": [
+          "foundation of our future",
+          "key to success",
+          "backbone of society",
+          "pathway to development"
+        ]
+      },
+      {
+        "id": "current_action",
+        "label_en": "Current school focus",
+        "label_mm": "ကျောင်းများ၏ လက်ရှိဦးတည်ချက်",
+        "hint": "ကျောင်းတွေက အခု ဘာကို အဓိကထားနေတာလဲ။",
+        "options": [
+          "focus too much on exams",
+          "prioritize grades over learning",
+          "rely on traditional methods",
+          "stress students with homework"
+        ]
+      },
+      {
+        "id": "contrast_point",
+        "label_en": "Difference between exams and skills",
+        "label_mm": "စာမေးပွဲနှင့် ကျွမ်းကျင်မှု ကွာခြားချက်",
+        "hint": "ဘာကို မစစ်ဆေးနိုင်တာလဲ။",
+        "options": [
+          "they do not test real skills",
+          "they ignore critical thinking",
+          "they fail to measure creativity",
+          "they do not show real potential"
+        ]
+      },
+      {
+        "id": "student_goal",
+        "label_en": "Student motivation",
+        "label_mm": "ကျောင်းသားများ၏ ပန်းတိုင်",
+        "hint": "ကျောင်းသားတွေက ဘာရဖို့ ကြိုးစားနေတာလဲ။",
+        "options": [
+          "get good grades",
+          "pass the examinations",
+          "memorize facts",
+          "avoid failing the class"
+        ]
+      },
+      {
+        "id": "negative_impact",
+        "label_en": "Consequences",
+        "label_mm": "နောက်ဆက်တွဲရလဒ်",
+        "hint": "ဒီစနစ်က ဘာကို ထိခိုက်စေတာလဲ။",
+        "options": [
+          "limits their creativity",
+          "stifles their growth",
+          "reduces their curiosity",
+          "discourages original thinking"
+        ]
+      },
+      {
+        "id": "teacher_role",
+        "label_en": "Teacher's role",
+        "label_mm": "ဆရာ့အခန်းကဏ္ဍ",
+        "hint": "ဆရာတွေက ဘယ်လိုဖြစ်သင့်သလဲ။",
+        "options": [
+          "mentors",
+          "facilitators",
+          "guides",
+          "inspirers"
+        ]
+      },
+      {
+        "id": "complexity_level",
+        "label_en": "Complexity",
+        "label_mm": "ရှုပ်ထွေးမှု",
+        "hint": "ဒီပြဿနာက ဘယ်လောက်ခက်ခဲသလဲ။",
+        "options": [
+          "complex",
+          "difficult",
+          "challenging",
+          "deeply rooted"
+        ]
+      },
+      {
+        "id": "proposed_solution",
+        "label_en": "Proposed solution",
+        "label_mm": "အကြံပြုချက်",
+        "hint": "ဘာလုပ်သင့်တယ်လို့ ထင်သလဲ။",
+        "options": [
+          "more practical learning",
+          "a new curriculum",
+          "less exam pressure",
+          "more creative projects"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level3/education_today/guide-model.mp3"
+  }
+}

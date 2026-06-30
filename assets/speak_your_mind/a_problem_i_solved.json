@@ -1,0 +1,782 @@
+{
+  "id": "a_problem_i_solved",
+  "level": 2,
+  "domain_en": "Telling stories",
+  "domain_mm": "ဇာတ်လမ်း ပြောပြခြင်း",
+  "title_en": "A Problem I Solved",
+  "title_mm": "ကျွန်တော်/ကျွန်မ ဖြေရှင်းခဲ့ဖူးတဲ့ ပြဿနာတစ်ခု",
+  "promise_en": "Master the art of storytelling by narrating a past challenge and your successful resolution.",
+  "promise_mm": "ကိုယ်တွေ့ကြုံခဲ့ရတဲ့ အခက်အခဲတစ်ခုကို အစီအစဉ်တကျနဲ့ စိတ်ဝင်စားစရာကောင်းအောင် ပြောပြတတ်လာမှာပါ။",
+  "intro_en": "Everyone faces challenges, whether at work, school, or home. This topic helps you share your experience of overcoming a problem using the past tense.",
+  "intro_mm": "အလုပ်မှာပဲဖြစ်ဖြစ်၊ ကျောင်းမှာပဲဖြစ်ဖြစ်၊ အိမ်မှာပဲဖြစ်ဖြစ် အခက်အခဲတွေနဲ့ ကြုံရတတ်ပါတယ်။ ဒီသင်ခန်းစာက အတိတ်က အခက်အခဲတစ်ခုကို ဘယ်လိုကျော်ဖြတ်ခဲ့လဲဆိုတာကို အင်္ဂလိပ်လို ပြောပြတတ်ဖို့ ကူညီပေးပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Setting the time and place",
+      "move_mm": "အချိန်နဲ့ နေရာကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "It happened last week.",
+          "highlight": "last week",
+          "swap_en": "yesterday · two days ago · last month",
+          "gloss_mm": "ဒါက ပြီးခဲ့တဲ့အပတ်က ဖြစ်ခဲ့တာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m1-i1.mp3"
+        },
+        {
+          "text_en": "I was at the tea shop near Sule Pagoda.",
+          "highlight": "at the tea shop near Sule Pagoda",
+          "swap_en": "at my office · at the bus stop · in my apartment",
+          "gloss_mm": "ကျွန်တော် ဆူးလေဘုရားနားက လက်ဖက်ရည်ဆိုင်မှာ ရှိနေတာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m1-i2.mp3"
+        },
+        {
+          "text_en": "It all started when I was waiting for the bus.",
+          "highlight": "when I was waiting for the bus",
+          "swap_en": "while I was shopping at the market · during my commute to work · when I was checking my email",
+          "gloss_mm": "အကုန်လုံးက ဘတ်စ်ကားစောင့်နေတဲ့အချိန်မှာ စဖြစ်ခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m1-i3.mp3"
+        },
+        {
+          "text_en": "The situation arose during a busy afternoon in downtown Yangon.",
+          "highlight": "during a busy afternoon in downtown Yangon",
+          "swap_en": "while I was dealing with a sudden power cut · back when I was working on my final project",
+          "gloss_mm": "ဒီပြဿနာက ရန်ကုန်မြို့လယ်မှာ လူရှုပ်တဲ့ နေ့လယ်ခင်းတစ်ခုမှာ ဖြစ်လာခဲ့တာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Introducing the people involved",
+      "move_mm": "ပါဝင်ပတ်သက်သူတွေကို မိတ်ဆက်နည်း",
+      "items": [
+        {
+          "text_en": "I worked with my colleague.",
+          "highlight": "my colleague",
+          "swap_en": "my friend · my boss · my brother",
+          "gloss_mm": "ကျွန်တော် အလုပ်ဖော်နဲ့ အတူတူ လုပ်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m2-i1.mp3"
+        },
+        {
+          "text_en": "I was with a team of three people.",
+          "highlight": "a team of three people",
+          "swap_en": "a group of two friends · a few classmates · my manager",
+          "gloss_mm": "ကျွန်တော် လူသုံးယောက်ပါတဲ့ အဖွဲ့နဲ့ အတူရှိခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m2-i2.mp3"
+        },
+        {
+          "text_en": "It was just me and my supervisor handling the issue.",
+          "highlight": "just me and my supervisor",
+          "swap_en": "my friend and I · my team members and I",
+          "gloss_mm": "ပြဿနာကို ဖြေရှင်းတုန်းက ကျွန်တော်နဲ့ ကျွန်တော့်ရဲ့ ကြီးကြပ်ရေးမှူးပဲ ရှိခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m2-i3.mp3"
+        },
+        {
+          "text_en": "I was lucky to have a supportive mentor by my side.",
+          "highlight": "a supportive mentor",
+          "swap_en": "a helpful senior · an experienced colleague",
+          "gloss_mm": "ကျွန်တော့်ဘက်ကနေ ကူညီပေးတဲ့ အတွေ့အကြုံရှိသူတစ်ယောက် ရှိခဲ့လို့ ကံကောင်းတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m2-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the initial situation",
+      "move_mm": "အခြေအနေအစကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I had a big problem at work.",
+          "highlight": "a big problem",
+          "swap_en": "a difficult situation · a stressful day · a technical issue",
+          "gloss_mm": "အလုပ်မှာ ပြဿနာကြီးတစ်ခု ကြုံခဲ့ရတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m3-i1.mp3"
+        },
+        {
+          "text_en": "Things went wrong when I tried to fix the printer.",
+          "highlight": "went wrong",
+          "swap_en": "got messy · got complicated · didn't go as planned",
+          "gloss_mm": "ပရင်တာပြင်ဖို့ ကြိုးစားတုန်းက အဆင်မပြေဖြစ်သွားခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m3-i2.mp3"
+        },
+        {
+          "text_en": "I was under a lot of pressure because of the deadline.",
+          "highlight": "under a lot of pressure",
+          "swap_en": "in a panic · completely stuck · really frustrated",
+          "gloss_mm": "အချိန်မီပြီးဖို့ လိုတာကြောင့် ဖိအားတွေ အများကြီး ရှိနေခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m3-i3.mp3"
+        },
+        {
+          "text_en": "It all started when everything suddenly stopped working.",
+          "highlight": "It all started when",
+          "swap_en": "The whole mess began when · I first realized there was an issue when",
+          "gloss_mm": "အကုန်လုံး ရုတ်တရက် အလုပ်မလုပ်တော့တဲ့အချိန်ကနေ စပြီး ပြဿနာတွေ တက်တာပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m3-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the problem clearly",
+      "move_mm": "ပြဿနာကို ရှင်းရှင်းလင်းလင်း ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "The main problem was the Wi-Fi.",
+          "highlight": "The main problem was",
+          "swap_en": "the biggest issue was · the main challenge was",
+          "gloss_mm": "အဓိကပြဿနာက ဝိုင်ဖိုင် ဖြစ်နေတာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m4-i1.mp3"
+        },
+        {
+          "text_en": "I ran into a problem with my laptop.",
+          "highlight": "ran into a problem with",
+          "swap_en": "faced a problem with · struggled with",
+          "gloss_mm": "ကျွန်တော့်လက်တော့ပ်မှာ ပြဿနာတစ်ခု ကြုံခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m4-i2.mp3"
+        },
+        {
+          "text_en": "Everything went wrong when the power cut out.",
+          "highlight": "Everything went wrong when",
+          "swap_en": "Things got complicated when · I hit a snag when",
+          "gloss_mm": "မီးပျက်သွားတဲ့အချိန်မှာ အားလုံး အဆင်မပြေဖြစ်ကုန်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m4-i3.mp3"
+        },
+        {
+          "text_en": "The situation was tricky because I didn't have enough kyat.",
+          "highlight": "The situation was tricky because",
+          "swap_en": "The main obstacle was that · It was a difficult situation since",
+          "gloss_mm": "ပိုက်ဆံ (ကျပ်) မလောက်တာကြောင့် အခြေအနေက ခက်ခဲသွားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your feelings at that moment",
+      "move_mm": "အဲဒီအချိန်က ခံစားချက်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I was really worried.",
+          "highlight": "really worried",
+          "swap_en": "very nervous · quite stressed · super confused",
+          "gloss_mm": "ကျွန်တော် တကယ်ကို စိတ်ပူနေခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m5-i1.mp3"
+        },
+        {
+          "text_en": "I felt so helpless at that time.",
+          "highlight": "so helpless",
+          "swap_en": "completely lost · very frustrated · really panicked",
+          "gloss_mm": "အဲဒီအချိန်တုန်းက ဘာမှလုပ်လို့မရတော့ဘူးလို့ ခံစားခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m5-i2.mp3"
+        },
+        {
+          "text_en": "It was such a stressful situation for me.",
+          "highlight": "such a stressful situation",
+          "swap_en": "a nightmare of a situation · a very tricky situation",
+          "gloss_mm": "ဒါဟာ ကျွန်တော့်အတွက်တော့ တော်တော်လေး စိတ်ညစ်စရာ အခြေအနေမျိုးပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m5-i3.mp3"
+        },
+        {
+          "text_en": "I was at my wit's end trying to fix it.",
+          "highlight": "at my wit's end",
+          "swap_en": "completely overwhelmed · at a total loss",
+          "gloss_mm": "ဒီပြဿနာကို ဘယ်လိုဖြေရှင်းရမှန်းမသိတော့ဘဲ ရူးမတတ်ဖြစ်ခဲ့ရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m5-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning why it was difficult",
+      "move_mm": "ဘာကြောင့် ခက်ခဲခဲ့တာလဲ ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "It was very difficult for me.",
+          "highlight": "very difficult",
+          "swap_en": "really hard · quite tough",
+          "gloss_mm": "ဒါက ကျွန်တော့်အတွက် အရမ်းခက်ခဲခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m6-i1.mp3"
+        },
+        {
+          "text_en": "The main problem was the limited time.",
+          "highlight": "the limited time",
+          "swap_en": "the lack of money · the communication barrier · the lack of information",
+          "gloss_mm": "အဓိကပြဿနာက အချိန်မလုံလောက်တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m6-i2.mp3"
+        },
+        {
+          "text_en": "I struggled because I had no experience.",
+          "highlight": "I had no experience",
+          "swap_en": "I was new to this · I was all by myself",
+          "gloss_mm": "အတွေ့အကြုံမရှိတဲ့အတွက် ကျွန်တော် အတော်လေး ရုန်းကန်ခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m6-i3.mp3"
+        },
+        {
+          "text_en": "What made it so challenging was the lack of resources.",
+          "highlight": "the lack of resources",
+          "swap_en": "the tight deadline · the unexpected technical issues",
+          "gloss_mm": "ဒီကိစ္စကို ခက်ခဲစေခဲ့တာကတော့ လိုအပ်တဲ့အရင်းအမြစ်တွေ မရှိခဲ့တာပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your first attempt to solve it",
+      "move_mm": "ဖြေရှင်းဖို့ ပထမဆုံးကြိုးစားခဲ့တာကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I tried to fix it myself first.",
+          "highlight": "tried to fix it myself",
+          "swap_en": "tried to solve it myself · tried to call the shop first · tried to restart it first",
+          "gloss_mm": "ကျွန်တော် အရင်ဆုံး ကိုယ့်ဘာသာပဲ ပြင်ကြည့်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m7-i1.mp3"
+        },
+        {
+          "text_en": "My first thought was to ask a friend for help.",
+          "highlight": "ask a friend for help",
+          "swap_en": "look for a YouTube tutorial · check the manual online · call my brother",
+          "gloss_mm": "ကျွန်တော့်စိတ်ထဲ အရင်ဆုံးပေါ်လာတာက သူငယ်ချင်းတစ်ယောက်ကို အကူအညီတောင်းဖို့ပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m7-i2.mp3"
+        },
+        {
+          "text_en": "I initially assumed the issue was just a minor technical glitch.",
+          "highlight": "initially assumed the issue was just a minor technical glitch",
+          "swap_en": "initially thought it was a simple mistake · initially believed it would be easy to fix",
+          "gloss_mm": "အစပိုင်းတုန်းကတော့ ပြဿနာက နည်းနည်းပါးပါး နည်းပညာပိုင်းဆိုင်ရာ အမှားလေးတစ်ခုပဲလို့ ထင်ခဲ့မိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m7-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating that the first attempt failed",
+      "move_mm": "ပထမကြိုးစားချက် မအောင်မြင်ခဲ့တာကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My first idea did not work.",
+          "highlight": "did not work",
+          "swap_en": "failed · didn't succeed",
+          "gloss_mm": "ကျွန်တော့် ပထမဆုံး အကြံဉာဏ်က အဆင်မပြေခဲ့ဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m8-i1.mp3"
+        },
+        {
+          "text_en": "I tried to fix the motorbike, but it was no use.",
+          "highlight": "it was no use",
+          "swap_en": "it didn't help · it was useless",
+          "gloss_mm": "ဆိုင်ကယ်ကို ပြင်ဖို့ ကြိုးစားခဲ့ပေမဲ့ အလကားပဲ ဖြစ်သွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m8-i2.mp3"
+        },
+        {
+          "text_en": "The initial plan didn't go as expected.",
+          "highlight": "didn't go as expected",
+          "swap_en": "didn't turn out well · didn't go according to plan",
+          "gloss_mm": "မူလအစီအစဉ်က မျှော်လင့်ထားသလို ဖြစ်မလာခဲ့ဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m8-i3.mp3"
+        },
+        {
+          "text_en": "My first attempt ended in failure.",
+          "highlight": "ended in failure",
+          "swap_en": "was a complete failure · didn't yield any results",
+          "gloss_mm": "ပထမဆုံး ကြိုးစားချက်ကတော့ အောင်မြင်မှုမရခဲ့ဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m8-i4.mp3"
+        },
+        {
+          "text_en": "I ran into a dead end with my first approach.",
+          "highlight": "ran into a dead end",
+          "swap_en": "hit a wall · reached a standstill",
+          "gloss_mm": "ပထမဆုံး ချဉ်းကပ်ပုံနဲ့တော့ လမ်းပိတ်သွားသလို ဖြစ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m8-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about a turning point",
+      "move_mm": "အခြေအနေပြောင်းလဲသွားတဲ့ အချက်ကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Then I decided to change my plan.",
+          "highlight": "decided to change my plan",
+          "swap_en": "decided to ask for help · realized I was wrong · started to think differently",
+          "gloss_mm": "အဲဒီအချိန်မှာ ကျွန်တော် အစီအစဉ် ပြောင်းဖို့ ဆုံးဖြတ်လိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m9-i1.mp3"
+        },
+        {
+          "text_en": "That was the moment everything changed.",
+          "highlight": "everything changed",
+          "swap_en": "I saw things clearly · I knew what to do · everything fell into place",
+          "gloss_mm": "အဲဒီအချိန်က အရာအားလုံး ပြောင်းလဲသွားတဲ့ အချိန်ပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m9-i2.mp3"
+        },
+        {
+          "text_en": "I reached a turning point when I spoke to my mentor.",
+          "highlight": "reached a turning point",
+          "swap_en": "came to a crossroads · hit a breakthrough",
+          "gloss_mm": "ကျွန်တော့်ဆရာနဲ့ စကားပြောဖြစ်တဲ့အချိန်မှာ အခြေအနေတစ်ရပ် ပြောင်းလဲသွားခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the final solution",
+      "move_mm": "နောက်ဆုံးဖြေရှင်းနိုင်ခဲ့ပုံကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I finally fixed the problem.",
+          "highlight": "fixed the problem",
+          "swap_en": "solved the issue · found a way · finished the task",
+          "gloss_mm": "နောက်ဆုံးတော့ ကျွန်တော် အဲဒီပြဿနာကို ဖြေရှင်းလိုက်နိုင်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m10-i1.mp3"
+        },
+        {
+          "text_en": "I decided to ask for help.",
+          "highlight": "decided to ask for help",
+          "swap_en": "chose to try a new method · started to call a technician · looked up a tutorial online",
+          "gloss_mm": "ကျွန်တော် အကူအညီတောင်းဖို့ ဆုံးဖြတ်လိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m10-i2.mp3"
+        },
+        {
+          "text_en": "I came up with a simple solution.",
+          "highlight": "came up with a simple solution",
+          "swap_en": "found a quick fix · thought of a better plan · tried a different approach",
+          "gloss_mm": "ကျွန်တော် ဖြေရှင်းနိုင်မယ့် နည်းလမ်းကောင်းတစ်ခုကို စဉ်းစားမိလိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m10-i3.mp3"
+        },
+        {
+          "text_en": "I managed to get it sorted out by the end of the day.",
+          "highlight": "managed to get it sorted out",
+          "swap_en": "figured it out · got everything back on track · handled the situation",
+          "gloss_mm": "တစ်နေ့တာကုန်ဆုံးချိန်မှာတော့ အဆင်ပြေအောင် ဖြေရှင်းနိုင်ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m10-i4.mp3"
+        },
+        {
+          "text_en": "It took some time, but I eventually resolved the issue.",
+          "highlight": "eventually resolved the issue",
+          "swap_en": "finally tackled the problem · successfully overcame the challenge",
+          "gloss_mm": "အချိန်တော့ နည်းနည်းယူလိုက်ရတယ်၊ ဒါပေမဲ့ နောက်ဆုံးတော့ ပြဿနာကို ဖြေရှင်းလိုက်နိုင်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m10-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the outcome or result",
+      "move_mm": "ရလဒ်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "In the end, it worked out well.",
+          "highlight": "it worked out well",
+          "swap_en": "everything was fine · the problem was solved · it all turned out okay",
+          "gloss_mm": "နောက်ဆုံးမှာတော့ အဆင်ပြေသွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m11-i1.mp3"
+        },
+        {
+          "text_en": "I was so relieved that the issue was fixed.",
+          "highlight": "so relieved",
+          "swap_en": "very happy · really glad · quite satisfied",
+          "gloss_mm": "ပြဿနာဖြေရှင်းနိုင်သွားလို့ စိတ်သက်သာရာရသွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m11-i2.mp3"
+        },
+        {
+          "text_en": "Everything went back to normal after that.",
+          "highlight": "went back to normal",
+          "swap_en": "returned to normal · got settled · was sorted out",
+          "gloss_mm": "အဲဒီနောက်မှာတော့ အရာအားလုံး ပုံမှန်အတိုင်း ပြန်ဖြစ်သွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m11-i3.mp3"
+        },
+        {
+          "text_en": "It turned out to be a great learning experience for me.",
+          "highlight": "a great learning experience",
+          "swap_en": "a valuable lesson · a good chance to learn · a tough but useful challenge",
+          "gloss_mm": "ဒါက ကျွန်တော့်အတွက်တော့ တန်ဖိုးရှိတဲ့ သင်ခန်းစာတစ်ခု ဖြစ်လာခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m11-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Showing relief or satisfaction",
+      "move_mm": "စိတ်သက်သာရာရမှု သို့မဟုတ် ကျေနပ်မှုကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I was so happy it was over.",
+          "highlight": "so happy",
+          "swap_en": "very relieved · so glad",
+          "gloss_mm": "ပြီးသွားလို့ တော်တော်လေး ပေါ့သွားတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m12-i1.mp3"
+        },
+        {
+          "text_en": "I felt a huge weight off my shoulders.",
+          "highlight": "a huge weight off my shoulders",
+          "swap_en": "a big relief · so much better",
+          "gloss_mm": "ရင်ထဲက အလုံးကြီး ကျသွားသလို ခံစားလိုက်ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m12-i2.mp3"
+        },
+        {
+          "text_en": "It was such a massive relief when I finally fixed it.",
+          "highlight": "a massive relief",
+          "swap_en": "a great comfort · a weight off my mind",
+          "gloss_mm": "နောက်ဆုံးတော့ ပြေလည်သွားလို့ စိတ်သက်သာရာ အကြီးအကျယ် ရသွားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing what you learned",
+      "move_mm": "သင်ခန်းစာရလိုက်တာကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I learned a lot from that.",
+          "highlight": "a lot",
+          "swap_en": "a valuable lesson · something important",
+          "gloss_mm": "အဲဒီအဖြစ်အပျက်ကနေ ကျွန်တော် အများကြီး သင်ခန်းစာရခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m13-i1.mp3"
+        },
+        {
+          "text_en": "It taught me to stay calm in a crisis.",
+          "highlight": "stay calm",
+          "swap_en": "be more patient · think twice · ask for help",
+          "gloss_mm": "အကျပ်အတည်းမှာ စိတ်အေးအေးထားဖို့ ဒီအဖြစ်အပျက်က သင်ပေးလိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m13-i2.mp3"
+        },
+        {
+          "text_en": "That experience made me realize the importance of planning ahead.",
+          "highlight": "the importance of planning ahead",
+          "swap_en": "the value of teamwork · how to communicate better · why honesty matters",
+          "gloss_mm": "အဲဒီအတွေ့အကြုံက ကြိုတင်စီစဉ်ခြင်းရဲ့ အရေးပါပုံကို ကျွန်တော့်ကို သိမြင်စေခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing before and after",
+      "move_mm": "အရင်နဲ့ အခုအခြေအနေကို နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "Before, it was difficult, but now it is easy.",
+          "highlight": "it was difficult",
+          "swap_en": "it was a mess · it was a headache · it was stressful",
+          "gloss_mm": "အရင်တုန်းကတော့ ခက်ခဲခဲ့ပေမဲ့ အခုတော့ လွယ်ကူသွားပါပြီ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m14-i1.mp3"
+        },
+        {
+          "text_en": "Everything changed after I fixed the issue.",
+          "highlight": "Everything changed",
+          "swap_en": "Things got better · The situation improved · Life became easier",
+          "gloss_mm": "ပြဿနာကို ဖြေရှင်းပြီးတဲ့နောက်မှာ အရာအားလုံး ပြောင်းလဲသွားခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m14-i2.mp3"
+        },
+        {
+          "text_en": "Compared to how it was last month, it runs much smoother now.",
+          "highlight": "Compared to how it was",
+          "swap_en": "Looking back at · Unlike · In contrast to",
+          "gloss_mm": "ပြီးခဲ့တဲ့လက အခြေအနေနဲ့ယှဉ်ရင် အခုတော့ အဆင်ပြေချောမွေ့သွားပါပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m14-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding the story",
+      "move_mm": "ပုံပြင်ကို အဆုံးသတ်နည်း",
+      "items": [
+        {
+          "text_en": "Finally, I fixed the problem.",
+          "highlight": "fixed the problem",
+          "swap_en": "solved the issue · finished the work · handled the situation",
+          "gloss_mm": "နောက်ဆုံးတော့ ကျွန်တော် ပြဿနာကို ဖြေရှင်းလိုက်နိုင်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m15-i1.mp3"
+        },
+        {
+          "text_en": "Everything worked out in the end.",
+          "highlight": "Everything worked out",
+          "swap_en": "Everything went well · It all turned out okay",
+          "gloss_mm": "နောက်ဆုံးတော့ အားလုံး အဆင်ပြေသွားခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m15-i2.mp3"
+        },
+        {
+          "text_en": "That was a huge relief for me.",
+          "highlight": "a huge relief",
+          "swap_en": "a big weight off my shoulders · a great comfort",
+          "gloss_mm": "ဒါက ကျွန်တော့်အတွက်တော့ တကယ့်ကို စိတ်အေးသွားရတဲ့ ကိစ္စပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m15-i3.mp3"
+        },
+        {
+          "text_en": "I learned a valuable lesson from that experience.",
+          "highlight": "a valuable lesson",
+          "swap_en": "a good lesson · an important lesson",
+          "gloss_mm": "အဲဒီအတွေ့အကြုံကနေ ကျွန်တော် တန်ဖိုးရှိတဲ့ သင်ခန်းစာတစ်ခု ရခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m15-i4.mp3"
+        },
+        {
+          "text_en": "Looking back, I was glad I handled it that way.",
+          "highlight": "glad I handled it that way",
+          "swap_en": "happy I managed it like that · pleased I solved it that way",
+          "gloss_mm": "ပြန်တွေးကြည့်ရင် အဲဒီလိုမျိုး ဖြေရှင်းခဲ့တာကို ကျွန်တော် ကျေနပ်မိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/a_problem_i_solved/m15-i5.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Tell a story about a problem you once faced. Explain what happened, how you felt, and how you eventually solved it.",
+    "prompt_mm": "သင် တစ်ခါက ကြုံခဲ့ရတဲ့ ပြဿနာတစ်ခုအကြောင်း ပြောပြပေးပါ။ ဘာဖြစ်ခဲ့လဲ၊ ဘယ်လိုခံစားခဲ့ရလဲ၊ နောက်ဆုံး ဘယ်လိုဖြေရှင်းခဲ့လဲဆိုတာကို ၆-၁၀ ဝါကျနဲ့ ရေးသားပြောပြပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "Setting the scene",
+      "The main problem",
+      "Why it was hard",
+      "My first attempt",
+      "The turning point",
+      "The final result",
+      "What I learned"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to improve your flow and confidence.",
+    "speak_aloud_mm": "သင့်ရဲ့ အဖြေကို အသံထွက်ပြီး ၂ ကြိမ်၊ ၃ ကြိမ်လောက် ဖတ်ကြည့်ပါ။ ဒါက သင့်ရဲ့ ပြောဆိုမှုကို ပိုပြီးချောမွေ့ ယုံကြည်မှုရှိစေပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "Last month, I worked on a group project at the library. We had to finish a report, but our laptop suddenly crashed. I felt very worried because the deadline was near. It was difficult because we had no backup files. First, I tried to restart the computer. Unfortunately, it did not work. Then, I remembered we saved files online. I logged into the cloud and found everything. We finished the report on time. I felt so relieved. I learned to always use cloud storage now.",
+    "model_mm": "ပြီးခဲ့တဲ့လက ကျွန်တော် စာကြည့်တိုက်မှာ အဖွဲ့လိုက်လုပ်ရတဲ့ အလုပ်တစ်ခု လုပ်ခဲ့တယ်။ ကျွန်တော်တို့ အစီရင်ခံစာတစ်ခုပြီးအောင် လုပ်ရမှာဖြစ်ပေမဲ့ လက်ပ်တော့ပ်က ရုတ်တရက် ပျက်သွားတယ်။ အချိန်ကပ်နေတဲ့အတွက် ကျွန်တော် အရမ်းစိုးရိမ်ခဲ့တယ်။ အရန်ဖိုင်တွေ မရှိတဲ့အတွက် အခြေအနေက ခက်ခဲခဲ့တယ်။ ပထမဆုံးအနေနဲ့ ကျွန်တော် ကွန်ပျူတာကို ပြန်ဖွင့်ကြည့်တယ်။ ကံမကောင်းစွာနဲ့ပဲ အဆင်မပြေခဲ့ဘူး။ နောက်တော့ ဖိုင်တွေကို အွန်လိုင်းမှာ သိမ်းထားတာကို သတိရသွားတယ်။ ကျွန်တော် cloud ထဲ ဝင်ကြည့်လိုက်တော့ အားလုံးကို ပြန်တွေ့တယ်။ ကျွန်တော်တို့ အစီရင်ခံစာကို အချိန်မီပြီးစီးခဲ့တယ်။ ကျွန်တော် အရမ်းစိတ်သက်သာရာ ရသွားတယ်။ အခုတော့ cloud storage ကို အမြဲသုံးဖို့ သင်ခန်းစာယူလိုက်တယ်။",
+    "breakdown": [
+      {
+        "text_en": "Last month, I worked on a group project at the library.",
+        "gloss_mm": "ပြီးခဲ့တဲ့လက ကျွန်တော် စာကြည့်တိုက်မှာ အဖွဲ့လိုက်အလုပ်တစ်ခု လုပ်ခဲ့တယ်။",
+        "why_mm": "အချိန်နဲ့ နေရာကို ပြောပြခြင်း"
+      },
+      {
+        "text_en": "We had to finish a report, but our laptop suddenly crashed.",
+        "gloss_mm": "ကျွန်တော်တို့ အစီရင်ခံစာတစ်ခုပြီးအောင် လုပ်ရမှာဖြစ်ပေမဲ့ လက်ပ်တော့ပ်က ရုတ်တရက် ပျက်သွားတယ်။",
+        "why_mm": "ပြဿနာကို ရှင်းရှင်းလင်းလင်း ပြောပြခြင်း"
+      },
+      {
+        "text_en": "I felt very worried because the deadline was near.",
+        "gloss_mm": "အချိန်ကပ်နေတဲ့အတွက် ကျွန်တော် အရမ်းစိုးရိမ်ခဲ့တယ်။",
+        "why_mm": "အဲဒီအချိန်က ခံစားချက်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "It was difficult because we had no backup files.",
+        "gloss_mm": "အရန်ဖိုင်တွေ မရှိတဲ့အတွက် အခြေအနေက ခက်ခဲခဲ့တယ်။",
+        "why_mm": "ဘာကြောင့် ခက်ခဲခဲ့တာလဲ ပြောပြခြင်း"
+      },
+      {
+        "text_en": "First, I tried to restart the computer.",
+        "gloss_mm": "ပထမဆုံးအနေနဲ့ ကျွန်တော် ကွန်ပျူတာကို ပြန်ဖွင့်ကြည့်တယ်။",
+        "why_mm": "ဖြေရှင်းဖို့ ပထမဆုံးကြိုးစားခဲ့တာကို ပြောခြင်း"
+      },
+      {
+        "text_en": "Unfortunately, it did not work.",
+        "gloss_mm": "ကံမကောင်းစွာနဲ့ပဲ အဆင်မပြေခဲ့ဘူး။",
+        "why_mm": "ပထမကြိုးစားချက် မအောင်မြင်ခဲ့တာကို ပြောခြင်း"
+      },
+      {
+        "text_en": "Then, I remembered we saved files online.",
+        "gloss_mm": "နောက်တော့ ဖိုင်တွေကို အွန်လိုင်းမှာ သိမ်းထားတာကို သတိရသွားတယ်။",
+        "why_mm": "အခြေအနေပြောင်းလဲသွားတဲ့ အချက်ကို ပြောခြင်း"
+      },
+      {
+        "text_en": "I logged into the cloud and found everything.",
+        "gloss_mm": "ကျွန်တော် cloud ထဲ ဝင်ကြည့်လိုက်တော့ အားလုံးကို ပြန်တွေ့တယ်။",
+        "why_mm": "နောက်ဆုံးဖြေရှင်းနိုင်ခဲ့ပုံကို ပြောပြခြင်း"
+      },
+      {
+        "text_en": "We finished the report on time.",
+        "gloss_mm": "ကျွန်တော်တို့ အစီရင်ခံစာကို အချိန်မီပြီးစီးခဲ့တယ်။",
+        "why_mm": "ရလဒ်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I felt so relieved.",
+        "gloss_mm": "ကျွန်တော် အရမ်းစိတ်သက်သာရာ ရသွားတယ်။",
+        "why_mm": "စိတ်သက်သာရာရမှုကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I learned to always use cloud storage now.",
+        "gloss_mm": "အခုတော့ cloud storage ကို အမြဲသုံးဖို့ သင်ခန်းစာယူလိုက်တယ်။",
+        "why_mm": "သင်ခန်းစာရလိုက်တာကို ပြောပြခြင်း"
+      }
+    ],
+    "template": "{time}, I worked on {task} at the {location}. We had to finish, but {problem}. I felt {emotion} because {reason}. First, I tried to {first_attempt}. Unfortunately, it did not work. Then, I {turning_point}. I {solution}. We finished on time. I felt {feeling}. I learned to {lesson} now.",
+    "slots": [
+      {
+        "id": "time",
+        "label_en": "Time",
+        "label_mm": "အချိန်",
+        "hint": "When did it happen?",
+        "options": [
+          "Last week",
+          "Last month",
+          "Yesterday",
+          "Two days ago"
+        ]
+      },
+      {
+        "id": "task",
+        "label_en": "Task",
+        "label_mm": "အလုပ်",
+        "hint": "What were you doing?",
+        "options": [
+          "a group project",
+          "a school presentation",
+          "a coding assignment",
+          "an office report"
+        ]
+      },
+      {
+        "id": "location",
+        "label_en": "Location",
+        "label_mm": "နေရာ",
+        "hint": "Where were you?",
+        "options": [
+          "library",
+          "office",
+          "classroom",
+          "café"
+        ]
+      },
+      {
+        "id": "problem",
+        "label_en": "Problem",
+        "label_mm": "ပြဿနာ",
+        "hint": "What went wrong?",
+        "options": [
+          "the internet stopped working",
+          "the printer ran out of ink",
+          "my file was corrupted",
+          "the power went out"
+        ]
+      },
+      {
+        "id": "emotion",
+        "label_en": "Emotion",
+        "label_mm": "ခံစားချက်",
+        "hint": "How did you feel?",
+        "options": [
+          "very stressed",
+          "quite worried",
+          "really panicked",
+          "very frustrated"
+        ]
+      },
+      {
+        "id": "reason",
+        "label_en": "Reason",
+        "label_mm": "အကြောင်းပြချက်",
+        "hint": "Why was it hard?",
+        "options": [
+          "the deadline was close",
+          "we had no extra time",
+          "the manager was waiting",
+          "the teacher was watching"
+        ]
+      },
+      {
+        "id": "first_attempt",
+        "label_en": "First attempt",
+        "label_mm": "ပထမဆုံးကြိုးစားမှု",
+        "hint": "What did you try first?",
+        "options": [
+          "restart the device",
+          "check the cables",
+          "call for help",
+          "reopen the software"
+        ]
+      },
+      {
+        "id": "turning_point",
+        "label_en": "Turning point",
+        "label_mm": "အခြေအနေပြောင်းလဲမှု",
+        "hint": "What changed the situation?",
+        "options": [
+          "found a hidden backup",
+          "used my phone's hotspot",
+          "asked a colleague for advice",
+          "checked the settings again"
+        ]
+      },
+      {
+        "id": "solution",
+        "label_en": "Solution",
+        "label_mm": "ဖြေရှင်းချက်",
+        "hint": "How did you solve it?",
+        "options": [
+          "fixed the connection quickly",
+          "retrieved the saved copy",
+          "reset the whole system",
+          "printed from a different drive"
+        ]
+      },
+      {
+        "id": "feeling",
+        "label_en": "Feeling",
+        "label_mm": "ခံစားချက်",
+        "hint": "How do you feel now?",
+        "options": [
+          "so relieved",
+          "very proud",
+          "really happy",
+          "much calmer"
+        ]
+      },
+      {
+        "id": "lesson",
+        "label_en": "Lesson",
+        "label_mm": "သင်ခန်းစာ",
+        "hint": "What did you learn?",
+        "options": [
+          "save my work frequently",
+          "check equipment early",
+          "keep extra copies",
+          "prepare better next time"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level2/a_problem_i_solved/guide-model.mp3"
+  }
+}

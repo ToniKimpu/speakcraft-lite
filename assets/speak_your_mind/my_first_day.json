@@ -1,0 +1,763 @@
+{
+  "id": "my_first_day",
+  "level": 2,
+  "domain_en": "Telling stories",
+  "domain_mm": "ဇာတ်လမ်း ပြောပြခြင်း",
+  "title_en": "My First Day",
+  "title_mm": "ကျွန်ုပ်၏ ပထမဆုံးနေ့ (My First Day)",
+  "promise_en": "Learn to tell a clear, engaging story about a new beginning using past tense.",
+  "promise_mm": "အလုပ်သစ် ဒါမှမဟုတ် ကျောင်းသစ်မှာ ကြုံခဲ့ရတဲ့ ပထမဆုံးနေ့အကြောင်းကို အတိတ်ကာလသုံးပြီး ပုံပြင်လေးလို စနစ်တကျ ပြောတတ်လာစေရမယ်။",
+  "intro_en": "Starting something new is exciting but nerve-wracking. This topic helps you narrate your experience, from the first morning to the final result.",
+  "intro_mm": "အရာသစ်တစ်ခုကို စတင်တဲ့အခါ စိတ်လှုပ်ရှားမှုတွေ၊ စိုးရိမ်မှုတွေ ရှိတတ်ပါတယ်။ ဒီသင်ခန်းစာကနေတစ်ဆင့် သင်ကြုံတွေ့ခဲ့ရတဲ့ ပထမဆုံးနေ့အတွေ့အကြုံကို ဘယ်လို စနစ်တကျ ပြန်ပြောပြရမလဲဆိုတာ လေ့လာနိုင်ပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Setting the scene (time and place)",
+      "move_mm": "ဘယ်အချိန်၊ ဘယ်နေရာမှာလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was my first day at work.",
+          "highlight": "at work",
+          "swap_en": "at school · at the university · at the office",
+          "gloss_mm": "အလုပ်မှာ ကျွန်တော့်ရဲ့ ပထမဆုံးနေ့ ဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m1-i1.mp3"
+        },
+        {
+          "text_en": "I started my first day early in the morning.",
+          "highlight": "early in the morning",
+          "swap_en": "at 8 AM · just after breakfast · on a rainy Monday",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ ပထမဆုံးနေ့ကို မနက်စောစောကတည်းက စခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m1-i2.mp3"
+        },
+        {
+          "text_en": "I remember it clearly; it was a hot afternoon in Yangon.",
+          "highlight": "a hot afternoon in Yangon",
+          "swap_en": "a busy morning at the office · a quiet day at the tea shop · a rainy evening in Mandalay",
+          "gloss_mm": "အဲဒီနေ့ကို အခုထိ မှတ်မိနေသေးတယ်၊ ရန်ကုန်က ပူအိုက်တဲ့ နေ့လယ်ခင်းတစ်ခုပေါ့။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m1-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing how you felt before starting",
+      "move_mm": "မစခင်က ဘယ်လိုခံစားရလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was very nervous.",
+          "highlight": "very nervous",
+          "swap_en": "a little bit nervous · excited · scared",
+          "gloss_mm": "ကျွန်တော် အရမ်း စိုးရိမ်နေမိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m2-i1.mp3"
+        },
+        {
+          "text_en": "I felt a bit anxious about the first day.",
+          "highlight": "a bit anxious",
+          "swap_en": "really nervous · super excited · a little worried",
+          "gloss_mm": "ပထမဆုံးနေ့အတွက် ကျွန်တော် နည်းနည်း စိတ်ပူနေမိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m2-i2.mp3"
+        },
+        {
+          "text_en": "I couldn't sleep because I was so excited.",
+          "highlight": "couldn't sleep",
+          "swap_en": "couldn't stop thinking about it · felt restless",
+          "gloss_mm": "အရမ်းစိတ်လှုပ်ရှားနေတာနဲ့ အိပ်လို့တောင်မရဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m2-i3.mp3"
+        },
+        {
+          "text_en": "I had butterflies in my stomach the night before.",
+          "highlight": "butterflies in my stomach",
+          "swap_en": "a knot in my stomach",
+          "gloss_mm": "မနေ့ညကတည်းက ရင်တုန်ပြီး စိုးရိမ်စိတ်တွေ ဖြစ်နေခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m2-i4.mp3"
+        },
+        {
+          "text_en": "I was overwhelmed with mixed feelings of fear and excitement.",
+          "highlight": "overwhelmed with mixed feelings",
+          "swap_en": "filled with nervous energy",
+          "gloss_mm": "ကြောက်စိတ်နဲ့ စိတ်လှုပ်ရှားမှုတွေ ရောထွေးပြီး စိတ်ထဲမှာ ရှုပ်ထွေးနေခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m2-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your preparations",
+      "move_mm": "ကြိုတင်ပြင်ဆင်မှုတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I prepared my bag the night before.",
+          "highlight": "prepared my bag",
+          "swap_en": "packed my bag · got my uniform ready · laid out my clothes",
+          "gloss_mm": "ညကတည်းက ကျောပိုးအိတ် ပြင်ထားလိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m3-i1.mp3"
+        },
+        {
+          "text_en": "I made sure to set an early alarm.",
+          "highlight": "made sure to set an early alarm",
+          "swap_en": "made sure to sleep early · made sure to double-check my schedule",
+          "gloss_mm": "စောစောထဖို့ နှိုးစက်သေချာပေးထားလိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m3-i2.mp3"
+        },
+        {
+          "text_en": "I meticulously laid out everything I needed.",
+          "highlight": "meticulously laid out everything I needed",
+          "swap_en": "carefully checked my documents · went over my plan for the day",
+          "gloss_mm": "လိုအပ်တာမှန်သမျှ သေချာစေ့စပ်အောင် ပြင်ဆင်ထားခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the purpose of being there",
+      "move_mm": "ဘာကြောင့် အဲဒီကို ရောက်သွားတာလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I went there to study English.",
+          "highlight": "to study English",
+          "swap_en": "to find a job · to look for a tea shop · to meet my friend",
+          "gloss_mm": "ကျွန်တော် အင်္ဂလိပ်စာ လေ့လာဖို့ အဲဒီကို သွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m4-i1.mp3"
+        },
+        {
+          "text_en": "I was there for an interview.",
+          "highlight": "for an interview",
+          "swap_en": "for a job training · for a meeting · for a new class",
+          "gloss_mm": "အလုပ်အင်တာဗျူးရှိလို့ ကျွန်တော် အဲဒီမှာ ရှိနေခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m4-i2.mp3"
+        },
+        {
+          "text_en": "The main reason I went was to get some experience.",
+          "highlight": "to get some experience",
+          "swap_en": "to improve my skills · to challenge myself · to explore the city",
+          "gloss_mm": "ကျွန်တော် အဲဒီကို သွားရတဲ့ အဓိကအကြောင်းအရင်းက အတွေ့အကြုံရဖို့ပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m4-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your first arrival",
+      "move_mm": "ရောက်ရောက်ချင်း အခြေအနေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was very nervous on my first day.",
+          "highlight": "very nervous",
+          "swap_en": "a bit excited · really shy · totally lost",
+          "gloss_mm": "ပထမဆုံးနေ့တုန်းက ကျွန်တော် အရမ်းစိတ်လှုပ်ရှားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m5-i1.mp3"
+        },
+        {
+          "text_en": "I arrived at the office early in the morning.",
+          "highlight": "arrived at the office",
+          "swap_en": "got to the tea shop · reached the school · started my first day",
+          "gloss_mm": "ကျွန်တော် ရုံးကို မနက်စောစောကတည်းက ရောက်နေခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m5-i2.mp3"
+        },
+        {
+          "text_en": "I didn't know what to expect at first.",
+          "highlight": "didn't know what to expect",
+          "swap_en": "had no idea what to do · felt a bit out of place",
+          "gloss_mm": "အစကတော့ ဘာဖြစ်လာမလဲဆိုတာ မသိခဲ့ဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m5-i3.mp3"
+        },
+        {
+          "text_en": "Everything felt completely new and overwhelming to me.",
+          "highlight": "completely new and overwhelming",
+          "swap_en": "quite strange and confusing · a bit daunting but exciting",
+          "gloss_mm": "အရာအားလုံးက ကျွန်တော့်အတွက် အသစ်အဆန်းတွေဖြစ်ပြီး စိတ်ဖိစီးစရာကောင်းခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m5-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Introducing the people you met",
+      "move_mm": "တွေ့ဆုံခဲ့ရတဲ့ လူတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I met my new colleagues on the first day.",
+          "highlight": "my new colleagues",
+          "swap_en": "my new manager · the office team · my new classmates",
+          "gloss_mm": "ပထမဆုံးနေ့မှာ ကျွန်တော် အလုပ်ဖော်အသစ်တွေနဲ့ တွေ့ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m6-i1.mp3"
+        },
+        {
+          "text_en": "The manager was very friendly to me.",
+          "highlight": "very friendly to me",
+          "swap_en": "really helpful · quite welcoming · super kind",
+          "gloss_mm": "မန်နေဂျာက ကျွန်တော့်အပေါ် အရမ်းဖော်ရွေပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m6-i2.mp3"
+        },
+        {
+          "text_en": "I was introduced to the whole team during the tea break.",
+          "highlight": "introduced to the whole team",
+          "swap_en": "introduced to my supervisor · introduced to the department head",
+          "gloss_mm": "လက်ဖက်ရည်သောက်တဲ့အချိန်မှာ အဖွဲ့လိုက်နဲ့ မိတ်ဆက်ပေးခြင်း ခံခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m6-i3.mp3"
+        },
+        {
+          "text_en": "I hit it off with a coworker who lives near my house.",
+          "highlight": "hit it off with",
+          "swap_en": "got along well with · connected immediately with",
+          "gloss_mm": "အိမ်နားမှာနေတဲ့ အလုပ်ဖော်တစ်ယောက်နဲ့ ချက်ချင်း ရင်းနှီးသွားခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the atmosphere/environment",
+      "move_mm": "ပတ်ဝန်းကျင် အခြေအနေ ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The office was very busy.",
+          "highlight": "very busy",
+          "swap_en": "very quiet · really crowded · a bit noisy",
+          "gloss_mm": "ရုံးက အရမ်းကို အလုပ်ရှုပ်နေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m7-i1.mp3"
+        },
+        {
+          "text_en": "Everyone was friendly to me.",
+          "highlight": "friendly to me",
+          "swap_en": "helpful to me · welcoming to me · kind to me",
+          "gloss_mm": "အားလုံးက ကျွန်တော့်ကို ဖော်ရွေကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m7-i2.mp3"
+        },
+        {
+          "text_en": "The atmosphere felt a bit tense.",
+          "highlight": "a bit tense",
+          "swap_en": "really relaxed · quite professional · super lively",
+          "gloss_mm": "ပတ်ဝန်းကျင်က နည်းနည်း တင်းမာနေသလို ခံစားရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m7-i3.mp3"
+        },
+        {
+          "text_en": "It was a lively environment.",
+          "highlight": "a lively environment",
+          "swap_en": "a fast-paced environment · a very calm environment · a welcoming environment",
+          "gloss_mm": "အလုပ်လုပ်ရတာ တက်ကြွတဲ့ ပတ်ဝန်းကျင်မျိုး ဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m7-i4.mp3"
+        },
+        {
+          "text_en": "I was overwhelmed by the hustle and bustle.",
+          "highlight": "the hustle and bustle",
+          "swap_en": "the intense pace of work · the chaotic start to the day",
+          "gloss_mm": "အလုပ်ရှုပ်ပြီး ရှုပ်ထွေးနေတဲ့ ပတ်ဝန်းကျင်ကြောင့် ကျွန်တော် ဘာလုပ်ရမှန်း မသိအောင် ဖြစ်သွားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m7-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about the first task or activity",
+      "move_mm": "ပထမဆုံးလုပ်ခဲ့ရတဲ့ အလုပ်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I started with some data entry.",
+          "highlight": "some data entry",
+          "swap_en": "some filing · answering phone calls · cleaning up my desk",
+          "gloss_mm": "ကျွန်တော် ဒေတာသွင်းတဲ့အလုပ်နဲ့ စတင်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m8-i1.mp3"
+        },
+        {
+          "text_en": "My first task was to organize the files.",
+          "highlight": "organize the files",
+          "swap_en": "set up my computer · greet the customers · check the emails",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ ပထမဆုံးအလုပ်က ဖိုင်တွေ စနစ်တကျ သိမ်းဆည်းဖို့ဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m8-i2.mp3"
+        },
+        {
+          "text_en": "I spent the morning getting familiar with the system.",
+          "highlight": "getting familiar with the system",
+          "swap_en": "learning the office routine · meeting my new team members · reading the company policy",
+          "gloss_mm": "ကျွန်တော် မနက်ခင်းအချိန်ကို စနစ်နဲ့ ရင်းနှီးအောင် လုပ်ရင်း ကုန်ဆုံးခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting a surprise or unexpected moment",
+      "move_mm": "မမျှော်လင့်ထားတဲ့ အဖြစ်အပျက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was surprised that the office was so quiet.",
+          "highlight": "I was surprised that",
+          "swap_en": "I didn't expect that · It was a surprise that",
+          "gloss_mm": "ရုံးခန်းက ဒီလောက်တိတ်ဆိတ်နေလိမ့်မယ်လို့ ကျွန်တော် မထင်ထားခဲ့ဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m9-i1.mp3"
+        },
+        {
+          "text_en": "To my surprise, everyone spoke English in the tea shop.",
+          "highlight": "To my surprise,",
+          "swap_en": "Surprisingly, · Much to my surprise,",
+          "gloss_mm": "စိတ်ဝင်စားဖို့ကောင်းတာက လက်ဖက်ရည်ဆိုင်မှာ လူတိုင်း အင်္ဂလိပ်လို ပြောနေကြတာပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m9-i2.mp3"
+        },
+        {
+          "text_en": "The thing that caught me off guard was how friendly the manager was.",
+          "highlight": "caught me off guard",
+          "swap_en": "really shocked me · completely took me by surprise",
+          "gloss_mm": "မန်နေဂျာက ဒီလောက်ခင်ဖို့ကောင်းလိမ့်မယ်လို့ လုံးဝ မထင်ထားခဲ့မိဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing a problem or challenge",
+      "move_mm": "အခက်အခဲတစ်ခုခု ကြုံခဲ့ရင် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was late for my first day.",
+          "highlight": "late for my first day",
+          "swap_en": "lost on my first day · confused on my first day",
+          "gloss_mm": "ပထမဆုံးနေ့မှာ ကျွန်တော် နောက်ကျခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m10-i1.mp3"
+        },
+        {
+          "text_en": "I didn't know what to do.",
+          "highlight": "didn't know what to do",
+          "swap_en": "didn't know where to go · couldn't find my office",
+          "gloss_mm": "ဘာလုပ်ရမှန်း မသိခဲ့ဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m10-i2.mp3"
+        },
+        {
+          "text_en": "I felt a bit overwhelmed by the new environment.",
+          "highlight": "overwhelmed by the new environment",
+          "swap_en": "nervous about meeting everyone · anxious about the workload",
+          "gloss_mm": "ပတ်ဝန်းကျင်အသစ်ကြောင့် နည်းနည်းလေး စိတ်လှုပ်ရှားပြီး ရင်မောခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m10-i3.mp3"
+        },
+        {
+          "text_en": "The main challenge was that I struggled to understand the instructions.",
+          "highlight": "struggled to understand the instructions",
+          "swap_en": "found it hard to catch people's names · had trouble finding my way around",
+          "gloss_mm": "အဓိက အခက်အခဲကတော့ ညွှန်ကြားချက်တွေကို နားလည်ဖို့ ခက်ခဲခဲ့တာပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m10-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining how you solved the problem",
+      "move_mm": "ပြဿနာကို ဘယ်လိုဖြေရှင်းခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I asked my coworker for help.",
+          "highlight": "asked my coworker for help",
+          "swap_en": "asked my boss for help · asked a friend for help",
+          "gloss_mm": "ကျွန်တော် အလုပ်ဖော်ကို အကူအညီတောင်းခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m11-i1.mp3"
+        },
+        {
+          "text_en": "I figured it out by myself.",
+          "highlight": "figured it out by myself",
+          "swap_en": "fixed it by myself · solved it by myself",
+          "gloss_mm": "ကျွန်တော် ကိုယ့်ဘာသာပဲ ဖြေရှင်းလိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m11-i2.mp3"
+        },
+        {
+          "text_en": "I had to search online to find a solution.",
+          "highlight": "search online to find a solution",
+          "swap_en": "look up the manual · ask around for advice",
+          "gloss_mm": "အဖြေရှာဖို့ အင်တာနက်မှာ ရှာကြည့်ခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m11-i3.mp3"
+        },
+        {
+          "text_en": "I decided to stay calm and re-read the instructions.",
+          "highlight": "stay calm and re-read the instructions",
+          "swap_en": "keep calm and try again · take a breath and check the settings",
+          "gloss_mm": "စိတ်အေးအေးထားပြီး ညွှန်ကြားချက်တွေကို ပြန်ဖတ်ဖို့ ဆုံးဖြတ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m11-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing how your feelings changed",
+      "move_mm": "ခံစားချက်တွေ ဘယ်လိုပြောင်းလဲသွားလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was nervous at first, but then I felt okay.",
+          "highlight": "nervous at first",
+          "swap_en": "scared at first · shy at first · excited at first",
+          "gloss_mm": "စတုန်းကတော့ စိတ်လှုပ်ရှားခဲ့ပေမယ့် နောက်ပိုင်းတော့ အဆင်ပြေသွားတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m12-i1.mp3"
+        },
+        {
+          "text_en": "I felt a bit lost, but soon I got the hang of it.",
+          "highlight": "a bit lost",
+          "swap_en": "really confused · quite nervous · a little bit shy",
+          "gloss_mm": "နည်းနည်းတော့ ဟိုရောက်ဒီရောက်ဖြစ်ပြီး ဘာလုပ်ရမှန်းမသိဖြစ်ခဲ့ပေမယ့် ခဏနေတော့ အခြေအနေကို သဘောပေါက်သွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m12-i2.mp3"
+        },
+        {
+          "text_en": "At the beginning, I was quite overwhelmed, but my confidence grew later on.",
+          "highlight": "quite overwhelmed",
+          "swap_en": "really intimidated · a bit uneasy · very anxious",
+          "gloss_mm": "အစပိုင်းတုန်းကတော့ တော်တော်လေး စိတ်ဖိစီးမှုများခဲ့ပေမယ့် နောက်ပိုင်းတော့ ယုံကြည်မှုတွေ တိုးလာခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing the outcome of the day",
+      "move_mm": "နေ့တစ်နေ့ရဲ့ ရလဒ်ကို ခြုံငုံပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was a good day.",
+          "highlight": "a good day",
+          "swap_en": "a long day · a busy day · a great day",
+          "gloss_mm": "ကောင်းတဲ့နေ့လေးတစ်နေ့ပါပဲ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m13-i1.mp3"
+        },
+        {
+          "text_en": "Overall, it was a productive day.",
+          "highlight": "a productive day",
+          "swap_en": "a tiring day · an interesting day · a challenging day",
+          "gloss_mm": "ခြုံပြောရရင်တော့ အလုပ်တွင်တဲ့နေ့တစ်နေ့ပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m13-i2.mp3"
+        },
+        {
+          "text_en": "All in all, it turned out to be a really memorable day.",
+          "highlight": "a really memorable day",
+          "swap_en": "a total success · a bit of a disaster · quite an eye-opening experience",
+          "gloss_mm": "ခြုံငုံပြောရရင်တော့ တကယ်ကို အမှတ်တရဖြစ်စရာနေ့လေးတစ်နေ့ ဖြစ်သွားခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Reflecting on what you learned",
+      "move_mm": "ဘာတွေသင်ခန်းစာရလိုက်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I learned a lot that day.",
+          "highlight": "a lot",
+          "swap_en": "something new · a few things · how to do the job",
+          "gloss_mm": "အဲဒီနေ့က ကျွန်တော် အများကြီး သင်ယူခဲ့ရတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m14-i1.mp3"
+        },
+        {
+          "text_en": "It was a great way to learn the basics.",
+          "highlight": "a great way to learn",
+          "swap_en": "a tough way to learn · an interesting way to learn · a fast way to learn",
+          "gloss_mm": "အခြေခံတွေကို သင်ယူဖို့အတွက် အဲဒါက အရမ်းကောင်းတဲ့ နည်းလမ်းတစ်ခု ဖြစ်ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m14-i2.mp3"
+        },
+        {
+          "text_en": "I realized that teamwork was very important.",
+          "highlight": "realized that teamwork was very important",
+          "swap_en": "realized that being on time was crucial · learned that asking questions was helpful",
+          "gloss_mm": "အဖွဲ့အစည်းနဲ့ အလုပ်လုပ်ခြင်းက အရမ်းအရေးကြီးတယ်ဆိုတာကို ကျွန်တော် သဘောပေါက်လိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m14-i3.mp3"
+        },
+        {
+          "text_en": "The most valuable lesson I took away was the importance of patience.",
+          "highlight": "The most valuable lesson I took away",
+          "swap_en": "the biggest challenge I faced · the main thing I picked up",
+          "gloss_mm": "ကျွန်တော် ရလိုက်တဲ့ အဖိုးတန်ဆုံး သင်ခန်းစာကတော့ သည်းခံခြင်းရဲ့ အရေးပါမှုပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m14-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a final thought on the experience",
+      "move_mm": "အတွေ့အကြုံအပေါ် ကိုယ့်ရဲ့ အမြင်ချုပ် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was a good experience.",
+          "highlight": "a good experience",
+          "swap_en": "a great day · a memorable day · a tough day",
+          "gloss_mm": "ဒါက ကောင်းတဲ့ အတွေ့အကြုံတစ်ခုပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m15-i1.mp3"
+        },
+        {
+          "text_en": "I felt really happy after that first day.",
+          "highlight": "really happy",
+          "swap_en": "a bit nervous · quite relieved · really excited",
+          "gloss_mm": "ပထမဆုံးနေ့ပြီးတော့ ကျွန်တော် တကယ် ပျော်သွားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m15-i2.mp3"
+        },
+        {
+          "text_en": "Overall, it was a positive start for me.",
+          "highlight": "a positive start",
+          "swap_en": "an eye-opening experience · a challenging start · a really productive day",
+          "gloss_mm": "ခြုံပြောရရင် ဒါဟာ ကျွန်တော့်အတွက် အစပျိုးမှုကောင်းတစ်ခုပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m15-i3.mp3"
+        },
+        {
+          "text_en": "I walked away feeling confident about my new job.",
+          "highlight": "feeling confident",
+          "swap_en": "feeling hopeful · feeling ready for more · feeling much more relaxed",
+          "gloss_mm": "အလုပ်သစ်နဲ့ပတ်သက်ပြီး ယုံကြည်မှုရှိသွားတဲ့ ခံစားချက်နဲ့ ပြန်ခဲ့ရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/my_first_day/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write a story about your first day at a new school or job. Use 6–10 sentences to describe your feelings, the people you met, and how it turned out.",
+    "prompt_mm": "ကျောင်းသစ် ဒါမှမဟုတ် အလုပ်သစ်မှာ ကြုံခဲ့ရတဲ့ ပထမဆုံးနေ့အကြောင်း စာကြောင်း ၆ ကြောင်းမှ ၁၀ ကြောင်းကြား ရေးသားကြည့်ပါ။ ကိုယ့်ရဲ့ ခံစားချက်၊ တွေ့ဆုံခဲ့သူတွေနဲ့ နေ့တစ်နေ့ရဲ့ ရလဒ်တွေကို ထည့်သွင်းပြောပြပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "When and where",
+      "Nervous feelings",
+      "People met",
+      "Surprise",
+      "The challenge",
+      "How it ended",
+      "Final reflection"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to make sure it flows naturally.",
+    "speak_aloud_mm": "ကိုယ့်ရဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ ဒါမှမဟုတ် ၃ ခါ ပြန်ဖတ်ကြည့်ပါ။ စကားလုံးတွေက သဘာဝကျကျ စီးဆင်းမှုရှိမရှိ စစ်ဆေးပါ။"
+  },
+  "guide": {
+    "model_en": "Last Monday, I started my first day at a new office. I felt very nervous before I arrived. I prepared my bag the night before. I was there to start my new job as a clerk. I arrived at the office early in the morning. I met my friendly manager at the door. The office was quiet and clean. I started by organizing my desk files. Surprisingly, my computer did not work at first. I asked a colleague for help to fix it. Soon, I felt much more relaxed and confident. It was a great beginning to my career.",
+    "model_mm": "ပြီးခဲ့တဲ့ တနင်္လာနေ့က ကျွန်တော့်ရဲ့ ရုံးအလုပ် ပထမဆုံးနေ့ကို စတင်ခဲ့ပါတယ်။ မရောက်ခင်က အရမ်းကို စိတ်လှုပ်ရှားနေခဲ့ပါတယ်။ ညကတည်းက အိတ်ကို ကြိုပြင်ထားခဲ့ပါတယ်။ ကျွန်တော် အဲဒီကို ရောက်တာ စာရေးအလုပ်သစ် စတင်ဖို့ပါ။ ရုံးကို မနက်စောစောကတည်းက ရောက်ပါတယ်။ တံခါးဝမှာ ဖော်ရွေတဲ့ မန်နေဂျာနဲ့ တွေ့ခဲ့ပါတယ်။ ရုံးခန်းက တိတ်ဆိတ်ပြီး သန့်ရှင်းပါတယ်။ စားပွဲပေါ်က စာရွက်စာတမ်းတွေကို စီစဉ်ရင်း စလုပ်ခဲ့ပါတယ်။ မမျှော်လင့်ဘဲ ကွန်ပျူတာက အလုပ်မလုပ်ခဲ့ပါဘူး။ လုပ်ဖော်ကိုင်ဖက်တစ်ယောက်ကို အကူအညီတောင်းပြီး ပြင်ခဲ့ပါတယ်။ မကြာခင်မှာပဲ ကျွန်တော် ပိုပြီး စိတ်အေးချမ်းသွားပြီး ယုံကြည်မှုရှိလာပါတယ်။ ဒါဟာ ကျွန်တော့်ရဲ့ အလုပ်သက်တမ်းအတွက် ကောင်းမွန်တဲ့ အစပျိုးမှုတစ်ခုပါပဲ။",
+    "breakdown": [
+      {
+        "text_en": "Last Monday, I started my first day at a new office.",
+        "gloss_mm": "ပြီးခဲ့တဲ့ တနင်္လာနေ့က ရုံးအသစ်မှာ ကျွန်တော့်ရဲ့ ပထမဆုံးနေ့ကို စတင်ခဲ့တယ်။",
+        "why_mm": "အချိန်နှင့် နေရာကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I felt very nervous before I arrived.",
+        "gloss_mm": "ကျွန်တော် မရောက်ခင်က အရမ်းစိတ်လှုပ်ရှားနေခဲ့တယ်။",
+        "why_mm": "မစခင်က ခံစားချက်ကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I prepared my bag the night before.",
+        "gloss_mm": "ကျွန်တော် ညကတည်းက အိတ်ကို ပြင်ထားခဲ့တယ်။",
+        "why_mm": "ကြိုတင်ပြင်ဆင်မှုကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I was there to start my new job as a clerk.",
+        "gloss_mm": "ကျွန်တော် အဲဒီကို ရောက်တာ စာရေးအလုပ်သစ် စတင်ဖို့ ဖြစ်တယ်။",
+        "why_mm": "ဘာကြောင့် အဲဒီကို ရောက်သွားလဲ ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I arrived at the office early in the morning.",
+        "gloss_mm": "ကျွန်တော် ရုံးကို မနက်စောစောက ရောက်ခဲ့တယ်။",
+        "why_mm": "ရောက်ရောက်ချင်း အခြေအနေ ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I met my friendly manager at the door.",
+        "gloss_mm": "ကျွန်တော် တံခါးဝမှာ ဖော်ရွေတဲ့ မန်နေဂျာနဲ့ တွေ့ခဲ့တယ်။",
+        "why_mm": "လူတစ်ယောက်ကို မိတ်ဆက်ခြင်း။"
+      },
+      {
+        "text_en": "The office was quiet and clean.",
+        "gloss_mm": "ရုံးခန်းက တိတ်ဆိတ်ပြီး သန့်ရှင်းတယ်။",
+        "why_mm": "ပတ်ဝန်းကျင် အခြေအနေကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I started by organizing my desk files.",
+        "gloss_mm": "ကျွန်တော် စားပွဲက ဖိုင်တွေကို စီစဉ်ရင်း စတင်ခဲ့တယ်။",
+        "why_mm": "ပထမဆုံးလုပ်ခဲ့တဲ့ အလုပ်အကြောင်း ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "Surprisingly, my computer did not work at first.",
+        "gloss_mm": "အံ့သြစရာကောင်းတာက ကွန်ပျူတာက အစမှာ အလုပ်မလုပ်ခဲ့ဘူး။",
+        "why_mm": "မမျှော်လင့်တဲ့ အဖြစ်အပျက်ကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I asked a colleague for help to fix it.",
+        "gloss_mm": "ကျွန်တော် လုပ်ဖော်ကိုင်ဖက်ကို အကူအညီတောင်းပြီး ပြင်ခဲ့တယ်။",
+        "why_mm": "ပြဿနာကို ဖြေရှင်းပုံ ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "Soon, I felt much more relaxed and confident.",
+        "gloss_mm": "မကြာခင်မှာပဲ ကျွန်တော် ပိုပြီး စိတ်အေးချမ်းပြီး ယုံကြည်မှုရှိသွားတယ်။",
+        "why_mm": "ခံစားချက် ပြောင်းလဲသွားပုံ ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "It was a great beginning to my career.",
+        "gloss_mm": "ဒါဟာ ကျွန်တော့်အလုပ်အတွက် ကောင်းမွန်တဲ့ အစပျိုးမှုတစ်ခုပါ။",
+        "why_mm": "နေ့တစ်နေ့ကို ခြုံငုံသုံးသပ်ခြင်း။"
+      }
+    ],
+    "template": "{time}, I started my first day at a {place}. I felt {emotion} before I arrived. I {preparation} the night before. I was there to start my {role}. I arrived at the {location} early. I met my {person} at the door. The {environment} was quiet and clean. I started by {activity}. Surprisingly, {problem}. I {solution} to fix it. Soon, I felt {new_feeling}. It was a great beginning.",
+    "slots": [
+      {
+        "id": "time",
+        "label_en": "Time",
+        "label_mm": "အချိန်",
+        "hint": "နေ့ရက် သို့မဟုတ် အချိန်ကို ရွေးပါ",
+        "options": [
+          "Last Monday",
+          "Yesterday morning",
+          "Last month"
+        ]
+      },
+      {
+        "id": "place",
+        "label_en": "Place",
+        "label_mm": "နေရာ",
+        "hint": "သင်သွားခဲ့တဲ့ နေရာကို ရွေးပါ",
+        "options": [
+          "new office",
+          "new school",
+          "training center"
+        ]
+      },
+      {
+        "id": "emotion",
+        "label_en": "Emotion",
+        "label_mm": "ခံစားချက်",
+        "hint": "မစခင်က ခံစားချက်ကို ရွေးပါ",
+        "options": [
+          "very nervous",
+          "quite excited",
+          "a bit worried"
+        ]
+      },
+      {
+        "id": "preparation",
+        "label_en": "Preparation",
+        "label_mm": "ကြိုတင်ပြင်ဆင်မှု",
+        "hint": "သင်လုပ်ခဲ့တဲ့ အလုပ်ကို ရွေးပါ",
+        "options": [
+          "checked my bag",
+          "prepared my books",
+          "organized my notes"
+        ]
+      },
+      {
+        "id": "role",
+        "label_en": "Role",
+        "label_mm": "ရာထူး/အလုပ်",
+        "hint": "သင့်ရဲ့ အလုပ်ကို ရွေးပါ",
+        "options": [
+          "new job as a clerk",
+          "internship program",
+          "volunteer role"
+        ]
+      },
+      {
+        "id": "location",
+        "label_en": "Location",
+        "label_mm": "နေရာ",
+        "hint": "နေရာကို ပြန်ပြောပါ",
+        "options": [
+          "office",
+          "building",
+          "campus"
+        ]
+      },
+      {
+        "id": "person",
+        "label_en": "Person",
+        "label_mm": "လူပုဂ္ဂိုလ်",
+        "hint": "သင်တွေ့ခဲ့တဲ့သူ",
+        "options": [
+          "friendly manager",
+          "kind teacher",
+          "helpful supervisor"
+        ]
+      },
+      {
+        "id": "environment",
+        "label_en": "Environment",
+        "label_mm": "ပတ်ဝန်းကျင်",
+        "hint": "ပတ်ဝန်းကျင်အခြေအနေ",
+        "options": [
+          "office",
+          "classroom",
+          "workspace"
+        ]
+      },
+      {
+        "id": "activity",
+        "label_en": "Activity",
+        "label_mm": "လုပ်ဆောင်ချက်",
+        "hint": "ပထမဆုံးလုပ်ခဲ့တဲ့အလုပ်",
+        "options": [
+          "organizing my desk files",
+          "reading the guidelines",
+          "setting up my equipment"
+        ]
+      },
+      {
+        "id": "problem",
+        "label_en": "Problem",
+        "label_mm": "ပြဿနာ",
+        "hint": "ကြုံခဲ့တဲ့အခက်အခဲ",
+        "options": [
+          "my computer did not work",
+          "I lost my key",
+          "the room was locked"
+        ]
+      },
+      {
+        "id": "solution",
+        "label_en": "Solution",
+        "label_mm": "ဖြေရှင်းနည်း",
+        "hint": "ဘယ်လိုဖြေရှင်းလဲ",
+        "options": [
+          "asked a colleague for help",
+          "called the technician",
+          "looked for the spare key"
+        ]
+      },
+      {
+        "id": "new_feeling",
+        "label_en": "New Feeling",
+        "label_mm": "ခံစားချက်အသစ်",
+        "hint": "အခုခံစားရပုံ",
+        "options": [
+          "relaxed and confident",
+          "happy and proud",
+          "calm and ready"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level2/my_first_day/guide-model.mp3"
+  }
+}

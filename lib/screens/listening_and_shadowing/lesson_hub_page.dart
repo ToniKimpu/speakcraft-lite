@@ -82,6 +82,14 @@ class _LessonHubPageState extends State<LessonHubPage> {
           icon: Symbols.mic,
           route: PmpRoutes.speechPracticeSessionPage,
         );
+      case VideoLessonStep.challenge:
+        return const _StepConfig(
+          step: VideoLessonStep.challenge,
+          title: 'Listening Challenge',
+          subtitle: 'No subtitles — mark the sentences you can\'t catch.',
+          icon: Symbols.hearing,
+          route: PmpRoutes.listeningChallengePage,
+        );
     }
   }
 

@@ -1,0 +1,576 @@
+{
+  "id": "an_unforgettable_day",
+  "level": 2,
+  "domain_en": "Telling stories",
+  "domain_mm": "ဇာတ်လမ်း ပြောပြခြင်း",
+  "title_en": "An Unforgettable Day",
+  "title_mm": "မမေ့နိုင်စရာ တစ်နေ့တာ",
+  "promise_en": "Master the art of storytelling to share your meaningful memories with confidence.",
+  "promise_mm": "ကိုယ့်ရဲ့ အမှတ်တရတွေကို ပိုင်ပိုင်နိုင်နိုင်နဲ့ စိတ်လှုပ်ရှားစရာကောင်းအောင် ပြောပြတတ်လာစေရမယ်။",
+  "intro_en": "We all have days that stay with us forever. Whether it was a trip to Bagan, a graduation, or a simple moment with friends, being able to recount these experiences helps us connect with others.",
+  "intro_mm": "လူတိုင်းမှာ တစ်သက်လုံး မမေ့နိုင်တဲ့ နေ့လေးတွေ ရှိကြပါတယ်။ ပုဂံခရီးစဉ်ပဲဖြစ်ဖြစ်၊ ဘွဲ့နှင်းသဘင်ပဲဖြစ်ဖြစ်၊ သူငယ်ချင်းတွေနဲ့ ပျော်ခဲ့တဲ့ အချိန်လေးပဲဖြစ်ဖြစ်၊ ဒီအတွေ့အကြုံတွေကို ပြန်ပြောပြနိုင်ခြင်းက တခြားသူတွေနဲ့ ပိုပြီး ရင်းနှီးစေပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Setting the time and place",
+      "move_mm": "အချိန်နဲ့ နေရာကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was at a tea shop in Yangon.",
+          "highlight": "at a tea shop in Yangon",
+          "swap_en": "at Shwedagon Pagoda · at a beach in Ngapali · at a hotel in Mandalay",
+          "gloss_mm": "ရန်ကုန်က လက်ဖက်ရည်ဆိုင်တစ်ခုမှာ ဖြစ်ခဲ့တာပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "The whole thing happened last Saturday morning.",
+          "highlight": "last Saturday morning",
+          "swap_en": "last weekend · two years ago · during my summer holiday",
+          "gloss_mm": "အဲဒီအဖြစ်အပျက်က ပြီးခဲ့တဲ့ စနေနေ့မနက်က ဖြစ်ခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It all took place back when I was a student at university.",
+          "highlight": "back when I was a student at university",
+          "swap_en": "back when I was a young teenager · during my first year of work",
+          "gloss_mm": "တက္ကသိုလ်ကျောင်းသားဘဝတုန်းက ဖြစ်ပျက်ခဲ့တာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Introducing the people involved",
+      "move_mm": "အတူရှိခဲ့တဲ့သူတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was with my friends that day.",
+          "highlight": "my friends",
+          "swap_en": "my family · my brother · my close friend",
+          "gloss_mm": "အဲဒီနေ့က ကျွန်တော် သူငယ်ချင်းတွေနဲ့ အတူတူရှိခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I went to the pagoda with a few cousins.",
+          "highlight": "a few cousins",
+          "swap_en": "some colleagues · a group of friends · my parents",
+          "gloss_mm": "ကျွန်တော် ဝမ်းကွဲညီအစ်ကိုမောင်နှမတချို့နဲ့ ဘုရားသွားခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I spent the whole day hanging out with some old school buddies.",
+          "highlight": "some old school buddies",
+          "swap_en": "a couple of work friends · my childhood friends",
+          "gloss_mm": "ကျွန်တော် အဲဒီနေ့တစ်နေ့လုံး ကျောင်းနေဖက် သူငယ်ချင်းတွေနဲ့ပဲ အချိန်ကုန်ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It was just me and my best friend, wandering around the tea shop area.",
+          "highlight": "my best friend",
+          "swap_en": "my younger sister · my partner",
+          "gloss_mm": "ကျွန်တော်ရယ်၊ ကျွန်တော့်အချစ်ဆုံးသူငယ်ချင်းရယ်ပဲ လက်ဖက်ရည်ဆိုင်နားတစ်ဝိုက်မှာ လျှောက်သွားနေခဲ့ကြတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the initial atmosphere",
+      "move_mm": "အစပိုင်း အခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "It was a beautiful day.",
+          "highlight": "a beautiful day",
+          "swap_en": "a busy morning · a quiet afternoon · a hot day in Yangon",
+          "gloss_mm": "အဲ့ဒီနေ့က သာယာတဲ့နေ့တစ်နေ့ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "The weather was perfect for a trip.",
+          "highlight": "perfect for a trip",
+          "swap_en": "perfect for a walk · great for going out · nice for a tea shop visit",
+          "gloss_mm": "ရာသီဥတုက ခရီးထွက်ဖို့ အကောင်းဆုံးပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Everything felt so calm and peaceful that morning.",
+          "highlight": "calm and peaceful",
+          "swap_en": "lively and exciting · crowded and noisy · quiet and relaxing",
+          "gloss_mm": "အဲ့ဒီမနက်က အရာအားလုံး တိတ်ဆိတ်ငြိမ်းချမ်းနေသလိုပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I had no idea what was about to happen.",
+          "highlight": "no idea what was about to happen",
+          "swap_en": "no clue that things would change · no idea it would be so memorable",
+          "gloss_mm": "ဘာတွေဖြစ်လာမလဲဆိုတာ ကျွန်တော် လုံးဝမသိခဲ့ဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Sequencing events (First, Then, After that)",
+      "move_mm": "ဖြစ်စဉ်ကို အစဉ်လိုက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "First, I went to Shwedagon Pagoda.",
+          "highlight": "First",
+          "swap_en": "To start with · First thing in the morning",
+          "gloss_mm": "အရင်ဆုံး ကျွန်တော် ရွှေတိဂုံဘုရားကို သွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Then, we had tea at a local shop.",
+          "highlight": "Then",
+          "swap_en": "After that · Following that",
+          "gloss_mm": "ပြီးတော့ ကျွန်တော်တို့ လက်ဖက်ရည်ဆိုင်မှာ လက်ဖက်ရည် သောက်ခဲ့ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "After that, I met my old friends.",
+          "highlight": "After that",
+          "swap_en": "Next · Later on",
+          "gloss_mm": "အဲဒီနောက်မှာတော့ ကျွန်တော့်သူငယ်ချင်းဟောင်းတွေနဲ့ တွေ့ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Once we finished lunch, we headed to Inya Lake.",
+          "highlight": "Once we finished lunch",
+          "swap_en": "As soon as we arrived · By the time we left",
+          "gloss_mm": "နေ့လယ်စာ စားပြီးတာနဲ့ ကျွန်တော်တို့ အင်းလျားကန်ဘက်ကို ဆက်သွားခဲ့ကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "To top it all off, we watched the sunset.",
+          "highlight": "To top it all off",
+          "swap_en": "To wrap up the day · Finally",
+          "gloss_mm": "အားလုံးပြီးဆုံးသွားတဲ့အခါမှာတော့ နေဝင်ချိန်ကို ထိုင်ကြည့်ခဲ့ကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing a sudden change or surprise",
+      "move_mm": "ရုတ်တရက် ပြောင်းလဲသွားတဲ့ အခြေအနေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Suddenly, the weather changed.",
+          "highlight": "Suddenly",
+          "swap_en": "Out of nowhere · All of a sudden",
+          "gloss_mm": "ရုတ်တရက်ကြီး ရာသီဥတုက ပြောင်းသွားတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Everything went wrong when it started to rain.",
+          "highlight": "Everything went wrong",
+          "swap_en": "everything changed · everything turned chaotic",
+          "gloss_mm": "မိုးရွာလာတဲ့အချိန်မှာ အရာအားလုံး ပုံစံပျက်ကုန်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Things took an unexpected turn for the worse.",
+          "highlight": "took an unexpected turn",
+          "swap_en": "took a sudden turn · caught us off guard",
+          "gloss_mm": "အခြေအနေက မျှော်လင့်မထားဘဲ ရုတ်တရက် ဆိုးဝါးသွားခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the high point of the day",
+      "move_mm": "အမှတ်တရ အကောင်းဆုံး အချိန်ကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "The best part was the sunset at Shwedagon.",
+          "highlight": "The best part was",
+          "swap_en": "The highlight of the day was · The most memorable moment was",
+          "gloss_mm": "အကောင်းဆုံး အချိန်ကတော့ ရွှေတိဂုံဘုရားမှာ နေဝင်ချိန်ကို ကြည့်ရတဲ့အချိန်ပါပဲ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I really enjoyed eating mohinga at the tea shop.",
+          "highlight": "I really enjoyed",
+          "swap_en": "I loved · It was amazing",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်မှာ မုန့်ဟင်းခါးစားရတာ တကယ်ကို သဘောကျမိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "That was when I felt truly happy.",
+          "highlight": "That was when I felt truly happy",
+          "swap_en": "that was the highlight of my trip · that was the moment I will never forget",
+          "gloss_mm": "အဲဒီအချိန်တုန်းက တကယ်ကို စိတ်ချမ်းသာခဲ့ရတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "What made the day unforgettable was meeting my old friend.",
+          "highlight": "What made the day unforgettable was",
+          "swap_en": "The highlight of the day was definitely · The moment that stood out was",
+          "gloss_mm": "ဒီနေ့ကို မေ့လို့မရအောင် ဖြစ်သွားစေတာကတော့ သူငယ်ချင်းဟောင်းနဲ့ ပြန်ဆုံလိုက်ရတာပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing physical feelings",
+      "move_mm": "ရုပ်ပိုင်းဆိုင်ရာ ခံစားချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was really tired after the trip.",
+          "highlight": "really tired",
+          "swap_en": "very exhausted · super sleepy · quite hungry",
+          "gloss_mm": "ခရီးသွားပြီးတော့ အရမ်းပင်ပန်းသွားတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "My legs felt like jelly from all the walking.",
+          "highlight": "felt like jelly",
+          "swap_en": "were killing me · were sore · felt heavy",
+          "gloss_mm": "အများကြီး လမ်းလျှောက်လိုက်ရတော့ ခြေထောက်တွေ မနိုင်တော့ဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I was completely worn out by the time we reached home.",
+          "highlight": "completely worn out",
+          "swap_en": "absolutely drained · dead tired · wiped out",
+          "gloss_mm": "အိမ်ပြန်ရောက်တဲ့အချိန်မှာတော့ လုံးဝကို အားကုန်ပြီး မောပန်းနေပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing emotional reactions",
+      "move_mm": "စိတ်ခံစားချက်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I was very happy that day.",
+          "highlight": "very happy",
+          "swap_en": "so excited · really surprised · quite nervous",
+          "gloss_mm": "အဲဒီနေ့က ကျွန်တော် အရမ်းပျော်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I felt so nervous during the presentation.",
+          "highlight": "so nervous",
+          "swap_en": "so relieved · really confused · incredibly stressed",
+          "gloss_mm": "တင်ပြချက်လုပ်တဲ့အချိန်မှာ အရမ်းစိတ်လှုပ်ရှားခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I was deeply touched by their kindness.",
+          "highlight": "deeply touched",
+          "swap_en": "completely overwhelmed · truly inspired · pleasantly surprised",
+          "gloss_mm": "သူတို့ရဲ့ ကြင်နာမှုကြောင့် ကျွန်တော် တကယ်ကို စိတ်လှုပ်ရှားမိခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Handling a problem or challenge",
+      "move_mm": "အခက်အခဲ တစ်ခုခု ကြုံရရင် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I had a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a small problem · a difficult situation · a bit of trouble",
+          "gloss_mm": "ကျွန်တော် အခက်အခဲကြီးတစ်ခု ကြုံခဲ့ရတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I didn't know what to do.",
+          "highlight": "what to do",
+          "swap_en": "how to fix it · where to go · who to call",
+          "gloss_mm": "ဘာလုပ်ရမှန်း မသိတော့ဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I was in a real bind.",
+          "highlight": "in a real bind",
+          "swap_en": "in a tough spot · in a difficult situation",
+          "gloss_mm": "ကျွန်တော် အတော်လေး အကျပ်ရိုက်သွားတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I panicked for a moment.",
+          "highlight": "panicked for a moment",
+          "swap_en": "felt really worried · got quite stressed",
+          "gloss_mm": "ခဏလောက်တော့ တုန်လှုပ်သွားတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I found myself in a bit of a fix.",
+          "highlight": "in a bit of a fix",
+          "swap_en": "in quite a predicament · in a tight corner",
+          "gloss_mm": "တကယ်ကို အခက်ကြုံနေရတဲ့ အခြေအနေမျိုး ဖြစ်သွားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining how the day ended",
+      "move_mm": "နေ့တစ်နေ့ ဘယ်လို ပြီးဆုံးသွားလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "The day ended with a nice dinner.",
+          "highlight": "a nice dinner",
+          "swap_en": "a walk at the park · tea at a shop · a quiet movie",
+          "gloss_mm": "ဒီနေ့လေးက ညစာကောင်းကောင်းလေးနဲ့ ပြီးဆုံးသွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We finally got home late at night.",
+          "highlight": "late at night",
+          "swap_en": "exhausted but happy · with a smile on our faces · feeling very tired",
+          "gloss_mm": "နောက်ဆုံးတော့ ညနက်မှ အိမ်ပြန်ရောက်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It was the perfect end to a memorable day.",
+          "highlight": "perfect end to a memorable day",
+          "swap_en": "great way to wrap up the day · lovely way to finish the day",
+          "gloss_mm": "မမေ့နိုင်စရာနေ့တစ်နေ့အတွက် အကောင်းဆုံး ပြီးဆုံးခြင်းပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I felt so exhausted when I finally hit the bed.",
+          "highlight": "hit the bed",
+          "swap_en": "got home · fell asleep",
+          "gloss_mm": "အိပ်ရာဝင်လိုက်တဲ့အချိန်မှာ အရမ်းပင်ပန်းနေခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating why it was unforgettable",
+      "move_mm": "ဘာကြောင့် မမေ့နိုင်ရတာလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was special because I was with my friends.",
+          "highlight": "I was with my friends",
+          "swap_en": "I was with my family · I was with my partner · I was traveling alone",
+          "gloss_mm": "သူငယ်ချင်းတွေနဲ့အတူရှိနေခဲ့လို့ အဲဒီနေ့က ထူးခြားခဲ့တာပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'll never forget it since I saw the sunrise at Bagan.",
+          "highlight": "I saw the sunrise at Bagan",
+          "swap_en": "I visited Shwedagon Pagoda · I tried street food in Mandalay · I met someone new",
+          "gloss_mm": "ပုဂံမှာ နေထွက်တာကို မြင်လိုက်ရတဲ့အတွက် အဲဒီနေ့ကို ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "What made it truly unforgettable was the unexpected rain.",
+          "highlight": "the unexpected rain",
+          "swap_en": "the kind people I met · the incredible view · the sudden change of plans",
+          "gloss_mm": "မျှော်လင့်မထားဘဲ မိုးရွာခဲ့တာက အဲဒီနေ့ကို တကယ်ကို မမေ့နိုင်အောင် ဖြစ်စေခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It stands out in my memory because it was a life-changing experience.",
+          "highlight": "a life-changing experience",
+          "swap_en": "a turning point in my life · a dream come true · an eye-opening journey",
+          "gloss_mm": "အဲဒီနေ့က ဘဝကို အပြောင်းအလဲဖြစ်စေတဲ့ အတွေ့အကြုံတစ်ခုဖြစ်ခဲ့လို့ ကျွန်တော့်မှတ်ဉာဏ်ထဲမှာ ထင်ထင်ရှားရှား ရှိနေတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing what you learned from the day",
+      "move_mm": "အဲဒီနေ့ကနေ ဘာတွေ သင်ခန်းစာရလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I learned that life is short.",
+          "highlight": "life is short",
+          "swap_en": "family is everything · health is the most important thing · we should be grateful",
+          "gloss_mm": "ဘဝက တိုတောင်းတယ်ဆိုတာကို သိလိုက်ရတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "That day taught me to appreciate the little things.",
+          "highlight": "appreciate the little things",
+          "swap_en": "cherish every moment · slow down and enjoy life · be kind to strangers",
+          "gloss_mm": "အဲဒီနေ့က အသေးအဖွဲလေးတွေကို တန်ဖိုးထားတတ်ဖို့ သင်ပေးလိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It made me realize how important it was to stay positive.",
+          "highlight": "how important it was to stay positive",
+          "swap_en": "how lucky I was to have my friends · how much I needed to change my mindset",
+          "gloss_mm": "စိတ်သဘောထားကောင်းဖို့ ဘယ်လောက်အရေးကြီးလဲဆိုတာကို သဘောပေါက်သွားစေခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I walked away with a new perspective on failure.",
+          "highlight": "a new perspective on failure",
+          "swap_en": "a better understanding of true friendship · a different way of looking at my career",
+          "gloss_mm": "အရေးနိမ့်ခြင်းဆိုတဲ့အပေါ်မှာ အမြင်သစ်တစ်ခု ရသွားခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing nostalgia",
+      "move_mm": "ပြန်လည်လွမ်းဆွတ်မှုကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I still remember that day clearly.",
+          "highlight": "that day",
+          "swap_en": "that trip · that afternoon · the day we visited Shwedagon",
+          "gloss_mm": "အဲဒီနေ့ကို ကျွန်တော် အခုထိ အမှတ်ရနေတုန်းပဲ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I really miss those good old days.",
+          "highlight": "those good old days",
+          "swap_en": "the time we spent in Mandalay · our tea shop hangouts · those carefree moments",
+          "gloss_mm": "အရင်တုန်းက ပျော်စရာကောင်းတဲ့ အချိန်တွေကို တကယ် လွမ်းမိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Thinking about it makes me feel nostalgic.",
+          "highlight": "Thinking about it",
+          "swap_en": "Looking at the old photos · Recalling that trip",
+          "gloss_mm": "အဲဒီအကြောင်း ပြန်တွေးမိရင် လွမ်းဆွတ်သလို ခံစားရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I wish I could go back in time to that moment.",
+          "highlight": "go back in time to that moment",
+          "swap_en": "relive that experience · experience that again",
+          "gloss_mm": "အဲဒီအချိန်ဆီကို ပြန်သွားနိုင်ရင် ကောင်းမှာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing it to other days",
+      "move_mm": "တခြားနေ့တွေနဲ့ နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was better than any other day.",
+          "highlight": "better than any other day",
+          "swap_en": "different from any other day · more special than any other day",
+          "gloss_mm": "အဲဒီနေ့က တခြားနေ့တွေထက် ပိုကောင်းခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "That day stood out from all the others.",
+          "highlight": "stood out from all the others",
+          "swap_en": "felt different from the rest · was unlike any normal day",
+          "gloss_mm": "အဲဒီနေ့က တခြားနေ့တွေနဲ့မတူဘဲ ထူးခြားနေခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It was truly unlike anything I had experienced before.",
+          "highlight": "unlike anything I had experienced before",
+          "swap_en": "nothing like my usual routine · a complete departure from my daily life",
+          "gloss_mm": "အရင်က ကြုံဖူးတဲ့နေ့တွေနဲ့ လုံးဝမတူတဲ့ နေ့တစ်နေ့ ဖြစ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing the significance",
+      "move_mm": "အနှစ်ချုပ် အရေးပါပုံကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was a special day for me.",
+          "highlight": "a special day",
+          "swap_en": "a happy day · a memorable day · a sad day",
+          "gloss_mm": "ဒါက ကျွန်တော့်အတွက် အထူးခြားဆုံးနေ့လေးတစ်နေ့ ဖြစ်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "That day meant a lot to me.",
+          "highlight": "meant a lot",
+          "swap_en": "meant everything · was very important",
+          "gloss_mm": "ဒီနေ့လေးက ကျွန်တော့်အတွက် အဓိပ္ပာယ်အများကြီး ရှိခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I will never forget that day.",
+          "highlight": "never forget",
+          "swap_en": "always remember · cherish the memory of",
+          "gloss_mm": "ဒီနေ့ကိုတော့ ကျွန်တော် ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It was a turning point in my life.",
+          "highlight": "a turning point",
+          "swap_en": "a life-changing experience · an unforgettable lesson",
+          "gloss_mm": "ဒါက ကျွန်တော့်ဘဝရဲ့ အရေးကြီးတဲ့ အလှည့်အပြောင်းတစ်ခု ဖြစ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Tell a story about one day you will never forget. Include what happened, who you were with, and why this memory is still important to you today.",
+    "prompt_mm": "သင် ဘယ်တော့မှ မမေ့နိုင်တဲ့ တစ်နေ့တာ အကြောင်းကို ပြောပြပါ။ ဘာတွေဖြစ်ခဲ့လဲ၊ ဘယ်သူတွေနဲ့ ရှိခဲ့လဲ၊ ပြီးတော့ ဒီအမှတ်တရက ဘာကြောင့် သင့်အတွက် အခုထိ အရေးပါနေရတာလဲ ဆိုတာကို ထည့်ပြောပေးပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "Time and location",
+      "Who was there",
+      "The sequence of events",
+      "The highlight",
+      "Emotional reaction",
+      "Why it matters"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to ensure your flow is natural and your past tense is consistent.",
+    "speak_aloud_mm": "သင်ရေးထားတာကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါလောက် ဖတ်ကြည့်ပါ။ အဆင်ပြေချောမွေ့မှု ရှိမရှိနဲ့ အတိတ်ကာလ ကြိယာတွေကို မှန်ကန်စွာ သုံးထားရဲ့လားဆိုတာ စစ်ဆေးပါ။"
+  }
+}

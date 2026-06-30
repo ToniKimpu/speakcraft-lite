@@ -1,0 +1,774 @@
+{
+  "id": "my_hometown",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "My Hometown",
+  "title_mm": "ကျွန်ုပ်၏ ဇာတိမြို့",
+  "promise_en": "Talk about your hometown with confidence, moving beyond basic 'Where are you from?' questions.",
+  "promise_mm": "ကိုယ့်ဇာတိမြို့အကြောင်းကို 'ဘယ်ကလာတာလဲ' ဆိုတာထက် ပိုပြီး စိတ်ဝင်စားစရာကောင်းအောင် ပြောတတ်လာပါလိမ့်မယ်။",
+  "intro_en": "Whether you come from busy Yangon, historic Mandalay, or a quiet village, your hometown is part of your identity. Use these phrases to paint a picture for others.",
+  "intro_mm": "ရန်ကုန်လို မြို့ကြီးပဲဖြစ်ဖြစ်၊ မန္တလေးလို ရှေးဟောင်းမြို့ပဲဖြစ်ဖြစ်၊ ရွာလေးပဲဖြစ်ဖြစ် ကိုယ့်ဇာတိမြို့က ကိုယ့်ရဲ့ တစ်စိတ်တစ်ပိုင်းပါပဲ။ သူများတွေကို ကိုယ့်မြို့အကြောင်း ပုံဖော်ပြောပြဖို့ ဒီစကားလုံးတွေကို သုံးကြည့်ပါ။",
+  "toolbox": [
+    {
+      "move_en": "Stating where you were born/grew up",
+      "move_mm": "ဘယ်မှာမွေး၊ ဘယ်မှာကြီးလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I was born in Mandalay.",
+          "highlight": "born in Mandalay",
+          "swap_en": "born in Yangon · born in Taunggyi · born in a small village",
+          "gloss_mm": "ကျွန်တော် မန္တလေးမှာ မွေးဖွားခဲ့တာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m1-i1.mp3"
+        },
+        {
+          "text_en": "I grew up in Yangon.",
+          "highlight": "grew up in Yangon",
+          "swap_en": "grew up in Pyin Oo Lwin · grew up in Bagan · grew up in the countryside",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်မှာ ကြီးပြင်းခဲ့တာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m1-i2.mp3"
+        },
+        {
+          "text_en": "I was born and raised in Naypyidaw.",
+          "highlight": "born and raised in Naypyidaw",
+          "swap_en": "born and raised in Mawlamyine · born and raised in Pathein",
+          "gloss_mm": "ကျွန်တော် နေပြည်တော်မှာ မွေး၊ နေပြည်တော်မှာပဲ ကြီးပြင်းခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m1-i3.mp3"
+        },
+        {
+          "text_en": "I spent my childhood in a small town near Mandalay.",
+          "highlight": "spent my childhood in a small town",
+          "swap_en": "spent my childhood in the city center · spent my childhood in a quiet neighborhood",
+          "gloss_mm": "ကျွန်တော့် ငယ်ဘဝကို မန္တလေးအနီးက မြို့လေးတစ်မြို့မှာ ကုန်ဆုံးခဲ့တာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the size of the town",
+      "move_mm": "မြို့ရဲ့ အရွယ်အစား ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My hometown is a small town.",
+          "highlight": "a small town",
+          "swap_en": "a big city · a quiet town · a busy place",
+          "gloss_mm": "ကျွန်တော့်ဇာတိက မြို့လေးတစ်မြို့ပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m2-i1.mp3"
+        },
+        {
+          "text_en": "It's a medium-sized town.",
+          "highlight": "a medium-sized town",
+          "swap_en": "a small town · a large city",
+          "gloss_mm": "ဒါက အလယ်အလတ်အရွယ်အစားရှိတဲ့ မြို့လေးပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m2-i2.mp3"
+        },
+        {
+          "text_en": "It's a sprawling city with many neighborhoods.",
+          "highlight": "a sprawling city",
+          "swap_en": "a compact town · a bustling town",
+          "gloss_mm": "ဒါက ရပ်ကွက်တွေအများကြီးနဲ့ ကျယ်ပြန့်တဲ့ မြို့ကြီးတစ်မြို့ပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m2-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating how long you have lived there",
+      "move_mm": "အဲဒီမှာ ဘယ်လောက်ကြာကြာ နေခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I have lived in Mandalay for ten years.",
+          "highlight": "for ten years",
+          "swap_en": "for five years · for my whole life · since I was born",
+          "gloss_mm": "မန္တလေးမှာ ၁၀ နှစ်လောက် နေခဲ့ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m3-i1.mp3"
+        },
+        {
+          "text_en": "I've been living in Yangon for almost five years.",
+          "highlight": "for almost five years",
+          "swap_en": "for about three years · for over six years · for a couple of years",
+          "gloss_mm": "ရန်ကုန်မှာ နေလာတာ ၅ နှစ်နီးပါး ရှိပါပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m3-i2.mp3"
+        },
+        {
+          "text_en": "I've called Pyin Oo Lwin home for the past decade.",
+          "highlight": "for the past decade",
+          "swap_en": "for the last twenty years · for most of my life",
+          "gloss_mm": "ပြင်ဦးလွင်မှာ နေလာတာ ဆယ်စုနှစ်တစ်ခု ရှိပါပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the atmosphere/vibe",
+      "move_mm": "မြို့ရဲ့ အငွေ့အသက်/ခံစားချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My hometown is a very quiet place.",
+          "highlight": "a very quiet place",
+          "swap_en": "a busy place · a peaceful place · a small town",
+          "gloss_mm": "ကျွန်တော့်ဇာတိက အရမ်းအေးချမ်းတဲ့ နေရာလေးပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m4-i1.mp3"
+        },
+        {
+          "text_en": "It has a really relaxed atmosphere.",
+          "highlight": "a really relaxed atmosphere",
+          "swap_en": "a lively atmosphere · a friendly vibe · a cozy feeling",
+          "gloss_mm": "ဒီမှာက စိတ်အေးလက်အေး ရှိတဲ့ အငွေ့အသက်မျိုး ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m4-i2.mp3"
+        },
+        {
+          "text_en": "The city has a unique charm that makes you feel at home.",
+          "highlight": "a unique charm",
+          "swap_en": "a traditional vibe · a modern energy · a peaceful character",
+          "gloss_mm": "ဒီမြို့မှာ အိမ်မှာလိုမျိုး ခံစားရစေတဲ့ ထူးခြားတဲ့ ဆွဲဆောင်မှုလေး ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m4-i3.mp3"
+        },
+        {
+          "text_en": "Life there moves at a slower pace compared to Yangon.",
+          "highlight": "at a slower pace",
+          "swap_en": "at a fast pace · at a steady pace",
+          "gloss_mm": "ရန်ကုန်နဲ့ယှဉ်ရင် ဒီမှာက နေထိုင်မှုပုံစံက ပိုနှေးကွေးပြီး အေးဆေးတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning famous landmarks or pagodas",
+      "move_mm": "ထင်ရှားတဲ့နေရာ/ဘုရားပုထိုးများ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My hometown is famous for the Shwedagon Pagoda.",
+          "highlight": "famous for the Shwedagon Pagoda",
+          "swap_en": "famous for the Mahamuni Pagoda · known for the U Bein Bridge · well-known for its tea shops",
+          "gloss_mm": "ကျွန်တော့်ဇာတိက ရွှေတိဂုံဘုရားကြောင့် နာမည်ကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m5-i1.mp3"
+        },
+        {
+          "text_en": "We have a very famous pagoda in my town.",
+          "highlight": "a very famous pagoda",
+          "swap_en": "a beautiful old bridge · a historic site · a popular park",
+          "gloss_mm": "ကျွန်တော့်မြို့မှာ အရမ်းနာမည်ကြီးတဲ့ ဘုရားတစ်ဆူ ရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m5-i2.mp3"
+        },
+        {
+          "text_en": "My hometown is home to the ancient Maha Myat Muni.",
+          "highlight": "home to the ancient Maha Myat Muni",
+          "swap_en": "home to the historic Shwezigon Pagoda · home to the famous lake",
+          "gloss_mm": "ကျွန်တော့်ဇာတိမှာ ရှေးဟောင်း မဟာမြတ်မုနိဘုရားကြီး တည်ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m5-i3.mp3"
+        },
+        {
+          "text_en": "If you visit my hometown, the first place you should see is the pagoda.",
+          "highlight": "the first place you should see is the pagoda",
+          "swap_en": "the main attraction is the old bridge · you cannot miss the downtown clock tower",
+          "gloss_mm": "ကျွန်တော့်မြို့ကို လာလည်ရင် အရင်ဆုံးသွားကြည့်သင့်တာကတော့ ဘုရားကြီးပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m5-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about what the town is famous for",
+      "move_mm": "ဘာနဲ့ နာမည်ကြီးလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My hometown is famous for its tea shops.",
+          "highlight": "famous for its tea shops",
+          "swap_en": "famous for its pagodas · famous for its delicious food · famous for its weather",
+          "gloss_mm": "ကျွန်တော့်မွေးရပ်မြေက လက်ဖက်ရည်ဆိုင်တွေနဲ့ နာမည်ကြီးတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m6-i1.mp3"
+        },
+        {
+          "text_en": "It is well-known for its traditional snacks.",
+          "highlight": "well-known for its traditional snacks",
+          "swap_en": "well-known for its handicrafts · well-known for its beautiful scenery · well-known for its gold workshops",
+          "gloss_mm": "အဲဒီနေရာက ရိုးရာမုန့်တွေနဲ့ လူသိများတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m6-i2.mp3"
+        },
+        {
+          "text_en": "My hometown is widely recognized for its unique local festivals.",
+          "highlight": "widely recognized for its unique local festivals",
+          "swap_en": "renowned for its historical sites · famous for its peaceful atmosphere · celebrated for its vibrant night market",
+          "gloss_mm": "ကျွန်တော့်မြို့လေးက ထူးခြားတဲ့ ဒေသန္တရပွဲတော်တွေကြောင့် နာမည်ကျော်ကြားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m6-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the weather",
+      "move_mm": "ရာသီဥတုအခြေအနေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It is hot in my hometown.",
+          "highlight": "hot",
+          "swap_en": "cold · rainy · sunny",
+          "gloss_mm": "ကျွန်တော့်ဇာတိမြို့က ပူတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m7-i1.mp3"
+        },
+        {
+          "text_en": "The weather is very nice there.",
+          "highlight": "very nice",
+          "swap_en": "quite pleasant · cool and breezy · really hot",
+          "gloss_mm": "အဲဒီမှာ ရာသီဥတုက အရမ်းကောင်းတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m7-i2.mp3"
+        },
+        {
+          "text_en": "It gets really hot during the summer.",
+          "highlight": "really hot",
+          "swap_en": "quite chilly · extremely humid · very dry",
+          "gloss_mm": "နွေရာသီဆို တော်တော်လေး ပူတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m7-i3.mp3"
+        },
+        {
+          "text_en": "We have a tropical climate all year round.",
+          "highlight": "a tropical climate",
+          "swap_en": "a mild climate · four distinct seasons",
+          "gloss_mm": "တစ်နှစ်ပတ်လုံး အပူပိုင်းရာသီဥတု ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m7-i4.mp3"
+        },
+        {
+          "text_en": "The weather is quite unpredictable these days.",
+          "highlight": "quite unpredictable",
+          "swap_en": "mostly mild · consistently hot and humid",
+          "gloss_mm": "ဒီရက်ပိုင်း ရာသီဥတုက ခန့်မှန်းရခက်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m7-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the local people",
+      "move_mm": "ဒေသခံတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "The local people are friendly.",
+          "highlight": "friendly",
+          "swap_en": "kind · helpful · very welcoming",
+          "gloss_mm": "ဒေသခံတွေက ဖော်ရွေကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m8-i1.mp3"
+        },
+        {
+          "text_en": "People in my town are very easy-going.",
+          "highlight": "easy-going",
+          "swap_en": "hard-working · generous · down-to-earth",
+          "gloss_mm": "ကျွန်တော့်မြို့က လူတွေက သဘောကောင်းပြီး နေရထိုင်ရ လွယ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m8-i2.mp3"
+        },
+        {
+          "text_en": "The community is known for being extremely hospitable.",
+          "highlight": "extremely hospitable",
+          "swap_en": "tight-knit · warm-hearted · full of life",
+          "gloss_mm": "ဒီရပ်ရွာက လူတွေက ဧည့်ဝတ်ကျေပွန်တာနဲ့ နာမည်ကြီးတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about transportation",
+      "move_mm": "သွားလာရေးအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I go around by bus.",
+          "highlight": "by bus",
+          "swap_en": "by motorbike · by taxi · by bicycle",
+          "gloss_mm": "ကျွန်တော်က ဘတ်စ်ကားနဲ့ သွားလာပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m9-i1.mp3"
+        },
+        {
+          "text_en": "It is easy to get around.",
+          "highlight": "easy to get around",
+          "swap_en": "difficult to get around · convenient to travel",
+          "gloss_mm": "သွားလာရတာ လွယ်ကူပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m9-i2.mp3"
+        },
+        {
+          "text_en": "Traffic is usually very heavy in the city center.",
+          "highlight": "very heavy",
+          "swap_en": "terrible · quite light · manageable",
+          "gloss_mm": "မြို့လယ်ကောင်မှာ ယာဉ်ကြောပိတ်ဆို့မှုက များလေ့ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m9-i3.mp3"
+        },
+        {
+          "text_en": "I usually commute by train to avoid the traffic.",
+          "highlight": "commute by train",
+          "swap_en": "take the bus · ride my bike · take a taxi",
+          "gloss_mm": "ယာဉ်ကြောပိတ်တာရှောင်ဖို့ ကျွန်တော်က ရထားနဲ့ပဲ ခရီးသွားလေ့ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m9-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning local food/tea shops",
+      "move_mm": "စားစရာ/လက်ဖက်ရည်ဆိုင်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My hometown is famous for Mohinga.",
+          "highlight": "famous for Mohinga",
+          "swap_en": "famous for tea shops · known for its street food · great for local snacks",
+          "gloss_mm": "ကျွန်တော့်ဇာတိက မုန့်ဟင်းခါးနဲ့ နာမည်ကြီးတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m10-i1.mp3"
+        },
+        {
+          "text_en": "You must try the tea at our local tea shop.",
+          "highlight": "must try the tea",
+          "swap_en": "have to check out the tea shops · should grab a cup of tea · need to taste the Mohinga",
+          "gloss_mm": "ကျွန်တော်တို့ ရပ်ကွက်ထဲက လက်ဖက်ရည်ဆိုင်မှာ လက်ဖက်ရည် သောက်ကြည့်သင့်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m10-i2.mp3"
+        },
+        {
+          "text_en": "It is the best place to hang out over a cup of tea.",
+          "highlight": "hang out over a cup of tea",
+          "swap_en": "grab a quick breakfast · catch up with friends over tea · enjoy some local delicacies",
+          "gloss_mm": "လက်ဖက်ရည်သောက်ရင်း စကားပြောဖို့ အကောင်းဆုံးနေရာပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m10-i3.mp3"
+        },
+        {
+          "text_en": "The street food scene there is second to none.",
+          "highlight": "second to none",
+          "swap_en": "truly authentic · worth traveling for · really legendary",
+          "gloss_mm": "အဲဒီနေရာက လမ်းဘေးစာတွေကတော့ တခြားဘယ်နေရာနဲ့မှ မလဲနိုင်အောင် ကောင်းတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m10-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing changes in your town",
+      "move_mm": "မြို့ရဲ့ ပြောင်းလဲမှုတွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My hometown has changed a lot.",
+          "highlight": "changed a lot",
+          "swap_en": "changed so much · changed completely · changed in many ways",
+          "gloss_mm": "ကျွန်တော့်ဇာတိမြို့က အများကြီး ပြောင်းလဲသွားပြီ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m11-i1.mp3"
+        },
+        {
+          "text_en": "There are many new buildings now.",
+          "highlight": "many new buildings",
+          "swap_en": "a lot of new condos · some modern shopping malls · a few new hotels",
+          "gloss_mm": "အခုဆိုရင် အဆောက်အဦးအသစ်တွေ အများကြီး ရှိလာပြီ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m11-i2.mp3"
+        },
+        {
+          "text_en": "It has become more modern these days.",
+          "highlight": "become more modern",
+          "swap_en": "become more crowded · turned into a busy city · grown much larger",
+          "gloss_mm": "ဒီရက်ပိုင်းမှာ မြို့က ပိုပြီး ခေတ်မီလာတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m11-i3.mp3"
+        },
+        {
+          "text_en": "The town is hardly recognizable compared to ten years ago.",
+          "highlight": "hardly recognizable",
+          "swap_en": "completely different · almost unrecognizable",
+          "gloss_mm": "လွန်ခဲ့တဲ့ ဆယ်နှစ်ကနဲ့စာရင် ဒီမြို့ကို မှတ်မိဖို့တောင် ခဲယဉ်းသွားပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m11-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing your town to big cities",
+      "move_mm": "မြို့ကြီးတွေနဲ့ နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My hometown is smaller than Yangon.",
+          "highlight": "smaller than Yangon",
+          "swap_en": "quieter than Yangon · less crowded than Mandalay · more peaceful than big cities",
+          "gloss_mm": "ကျွန်တော့်မွေးရပ်မြေက ရန်ကုန်ထက် ပိုသေးပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m12-i1.mp3"
+        },
+        {
+          "text_en": "It’s not as busy as the big cities.",
+          "highlight": "not as busy as the big cities",
+          "swap_en": "not as noisy as the big cities · not as crowded as the city center",
+          "gloss_mm": "ဒါက မြို့ကြီးတွေလောက် မရှုပ်ထွေးပါဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m12-i2.mp3"
+        },
+        {
+          "text_en": "Compared to the capital, life here is much slower.",
+          "highlight": "Compared to the capital",
+          "swap_en": "Unlike Yangon · In contrast to the city",
+          "gloss_mm": "မြို့တော်နဲ့ နှိုင်းယှဉ်ရင် ဒီကဘဝက အများကြီး ပိုအေးချမ်းပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m12-i3.mp3"
+        },
+        {
+          "text_en": "It doesn't have the fast pace of city life.",
+          "highlight": "the fast pace of city life",
+          "swap_en": "the hustle and bustle of Yangon · the constant traffic of the city",
+          "gloss_mm": "ဒီမှာ မြို့ပြလို အလုပ်ရှုပ်ပြီး အချိန်ကုန် မြန်တာမျိုး မရှိပါဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m12-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your favorite childhood spot",
+      "move_mm": "ကလေးဘဝက ကြိုက်တဲ့နေရာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I loved playing at the park.",
+          "highlight": "playing at the park",
+          "swap_en": "the old tea shop · the riverside · the pagoda compound",
+          "gloss_mm": "ကျွန်တော် အဲ့ဒီပန်းခြံမှာ ဆော့ရတာ အရမ်းကြိုက်တယ်",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m13-i1.mp3"
+        },
+        {
+          "text_en": "My favorite place was the old library.",
+          "highlight": "the old library",
+          "swap_en": "the neighborhood playground · the small lake near my house · the school field",
+          "gloss_mm": "ကျွန်တော် အကြိုက်ဆုံးနေရာက အဲ့ဒီစာကြည့်တိုက်ဟောင်းလေးပါ",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m13-i2.mp3"
+        },
+        {
+          "text_en": "I have fond memories of spending time by the river.",
+          "highlight": "spending time by the river",
+          "swap_en": "hanging out at the tea shop · climbing the mango trees · riding my bike around the village",
+          "gloss_mm": "မြစ်ကမ်းနားမှာ အချိန်ဖြုန်းခဲ့တဲ့ အမှတ်တရတွေကို အခုထိ သတိရနေမိတယ်",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning why you left (or stayed)",
+      "move_mm": "ဘာလို့ ထွက်လာတာလဲ (သို့မဟုတ်) ဘာလို့ နေတာလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I moved here for my job.",
+          "highlight": "for my job",
+          "swap_en": "for university · to study · to find work",
+          "gloss_mm": "အလုပ်ကိစ္စနဲ့ ဒီကို ပြောင်းလာတာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m14-i1.mp3"
+        },
+        {
+          "text_en": "I left my hometown to pursue better opportunities.",
+          "highlight": "to pursue better opportunities",
+          "swap_en": "to seek a better future · to get a higher education · to support my family",
+          "gloss_mm": "ပိုကောင်းတဲ့ အခွင့်အလမ်းတွေ ရှာဖို့အတွက် မွေးရပ်မြေကနေ ထွက်လာခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m14-i2.mp3"
+        },
+        {
+          "text_en": "I decided to stay in Mandalay because I feel a strong connection to the local community.",
+          "highlight": "feel a strong connection to the local community",
+          "swap_en": "really enjoy the slow pace of life · want to be close to my aging parents · prefer the peaceful atmosphere of my hometown",
+          "gloss_mm": "ဒီမြို့မှာပဲ ဆက်နေဖို့ ဆုံးဖြတ်လိုက်တာက ဒေသခံတွေနဲ့ ရင်းနှီးမှုရှိပြီး စိတ်သက်သာရာရလို့ပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m14-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your feelings about your hometown",
+      "move_mm": "ဇာတိမြို့အပေါ် ခံစားချက်ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I really love my hometown.",
+          "highlight": "really love",
+          "swap_en": "like · miss · appreciate",
+          "gloss_mm": "ကျွန်တော့်ဇာတိမြို့ကို တကယ်ချစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m15-i1.mp3"
+        },
+        {
+          "text_en": "I have many good memories there.",
+          "highlight": "many good memories",
+          "swap_en": "so many childhood memories · great memories · special memories",
+          "gloss_mm": "အဲဒီမှာ အမှတ်တရကောင်းတွေ အများကြီးရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m15-i2.mp3"
+        },
+        {
+          "text_en": "It's a very peaceful place to live.",
+          "highlight": "very peaceful place",
+          "swap_en": "nice place · quiet town · lively city",
+          "gloss_mm": "နေလို့ကောင်းတဲ့ တည်ငြိမ်အေးချမ်းတဲ့ မြို့လေးပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m15-i3.mp3"
+        },
+        {
+          "text_en": "I always feel at home whenever I go back.",
+          "highlight": "feel at home",
+          "swap_en": "feel comfortable · feel relaxed · feel happy",
+          "gloss_mm": "ပြန်ရောက်တိုင်း အိမ်မှာနေရသလိုမျိုး နွေးထွေးမှုခံစားရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m15-i4.mp3"
+        },
+        {
+          "text_en": "There is a unique charm that keeps me connected to my roots.",
+          "highlight": "unique charm",
+          "swap_en": "special atmosphere · distinct vibe",
+          "gloss_mm": "ကျွန်တော့်အမြစ်တွယ်ရာနဲ့ ချိတ်ဆက်နေစေတဲ့ ထူးခြားတဲ့ဆွဲဆောင်မှုမျိုး ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_hometown/m15-i5.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about your hometown. Include where it is, what it is famous for, and why you feel connected to it.",
+    "prompt_mm": "ကိုယ့်ဇာတိမြို့အကြောင်း ၅ ကြောင်းမှ ၈ ကြောင်းအတွင်း ရေးကြည့်ပါ။ ဘယ်မှာရှိလဲ၊ ဘာနဲ့နာမည်ကြီးလဲ၊ ကိုယ့်အတွက် ဘာလို့ အရေးပါလဲဆိုတာ ထည့်ရေးပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "Location",
+      "Famous landmarks",
+      "Weather",
+      "People",
+      "Food",
+      "Changes",
+      "Feelings"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to make sure it flows naturally.",
+    "speak_aloud_mm": "ရေးပြီးသွားရင် ကိုယ့်ဘာသာ အသံထွက်ပြီး ၂ ခေါက်၊ ၃ ခေါက်လောက် ဖတ်ကြည့်ပါ။ အဆင်ပြေမပြေ စစ်ဆေးကြည့်ပါ။"
+  },
+  "guide": {
+    "model_en": "I was born in Pyin Oo Lwin. It is a small and beautiful town. I lived there for eighteen years. The weather is cool and pleasant all year. The town is famous for its colorful flowers. Local people are very kind and friendly. There are many famous pagodas and parks. I often went to the botanical garden as a child. The town has changed a lot recently. It is much quieter than big cities. I love my hometown very much.",
+    "model_mm": "ကျွန်တော် ပြင်ဦးလွင်မှာ မွေးဖွားခဲ့ပါတယ်။ ဒါဟာ သေးငယ်ပြီး လှပတဲ့မြို့လေးပါ။ ကျွန်တော် အဲဒီမှာ ၁၈ နှစ်ကြာ နေထိုင်ခဲ့ပါတယ်။ ရာသီဥတုက တစ်နှစ်ပတ်လုံး အေးမြပြီး သာယာပါတယ်။ ဒီမြို့က အရောင်စုံပန်းတွေနဲ့ နာမည်ကြီးပါတယ်။ ဒေသခံတွေက အရမ်းသဘောကောင်းပြီး ဖော်ရွေကြပါတယ်။ နာမည်ကြီး ဘုရားပုထိုးတွေနဲ့ ပန်းခြံတွေ အများကြီးရှိပါတယ်။ ကလေးဘဝတုန်းက ကျွန်တော် ရုက္ခဗေဒဥယျာဉ်ကို မကြာခဏ သွားလေ့ရှိတယ်။ မြို့က မကြာသေးမီကမှ အများကြီး ပြောင်းလဲသွားတယ်။ မြို့ကြီးတွေထက် ပိုပြီး တိတ်ဆိတ်ပါတယ်။ ကျွန်တော့်ရဲ့ ဇာတိမြို့ကို ကျွန်တော် အလွန်ချစ်ပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "I was born in Pyin Oo Lwin.",
+        "gloss_mm": "ကျွန်တော် ပြင်ဦးလွင်မှာ မွေးဖွားခဲ့ပါတယ်။",
+        "why_mm": "ဇာတိမြို့ကို စတင်မိတ်ဆက်ခြင်း။"
+      },
+      {
+        "text_en": "It is a small and beautiful town.",
+        "gloss_mm": "ဒါဟာ သေးငယ်ပြီး လှပတဲ့မြို့လေးပါ။",
+        "why_mm": "မြို့ရဲ့ အရွယ်အစားနှင့် ပုံစံကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I lived there for eighteen years.",
+        "gloss_mm": "ကျွန်တော် အဲဒီမှာ ၁၈ နှစ်ကြာ နေထိုင်ခဲ့ပါတယ်။",
+        "why_mm": "နေထိုင်ခဲ့သည့် အချိန်ကာလကို ပြောခြင်း။"
+      },
+      {
+        "text_en": "The weather is cool and pleasant all year.",
+        "gloss_mm": "ရာသီဥတုက တစ်နှစ်ပတ်လုံး အေးမြပြီး သာယာပါတယ်။",
+        "why_mm": "မြို့ရဲ့ ရာသီဥတုအခြေအနေကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "The town is famous for its colorful flowers.",
+        "gloss_mm": "ဒီမြို့က အရောင်စုံပန်းတွေနဲ့ နာမည်ကြီးပါတယ်။",
+        "why_mm": "မြို့ရဲ့ နာမည်ကြီးသည့်အချက်ကို ပြောခြင်း။"
+      },
+      {
+        "text_en": "Local people are very kind and friendly.",
+        "gloss_mm": "ဒေသခံတွေက အရမ်းသဘောကောင်းပြီး ဖော်ရွေကြပါတယ်။",
+        "why_mm": "ဒေသခံလူမျိုးများ၏ စရိုက်ကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "There are many famous pagodas and parks.",
+        "gloss_mm": "နာမည်ကြီး ဘုရားပုထိုးတွေနဲ့ ပန်းခြံတွေ အများကြီးရှိပါတယ်။",
+        "why_mm": "ထင်ရှားသည့်နေရာများကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I often went to the botanical garden as a child.",
+        "gloss_mm": "ကလေးဘဝတုန်းက ကျွန်တော် ရုက္ခဗေဒဥယျာဉ်ကို မကြာခဏ သွားလေ့ရှိတယ်။",
+        "why_mm": "ကလေးဘဝ အမှတ်တရနေရာကို ပြောခြင်း။"
+      },
+      {
+        "text_en": "The town has changed a lot recently.",
+        "gloss_mm": "မြို့က မကြာသေးမီကမှ အများကြီး ပြောင်းလဲသွားတယ်။",
+        "why_mm": "မြို့ရဲ့ ပြောင်းလဲမှုအခြေအနေကို ပြောခြင်း။"
+      },
+      {
+        "text_en": "It is much quieter than big cities.",
+        "gloss_mm": "မြို့ကြီးတွေထက် ပိုပြီး တိတ်ဆိတ်ပါတယ်။",
+        "why_mm": "မြို့ကြီးများနှင့် နှိုင်းယှဉ်ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I love my hometown very much.",
+        "gloss_mm": "ကျွန်တော့်ရဲ့ ဇာတိမြို့ကို ကျွန်တော် အလွန်ချစ်ပါတယ်။",
+        "why_mm": "ဇာတိမြို့အပေါ် ခံစားချက်ကို ဖော်ပြခြင်း။"
+      }
+    ],
+    "template": "I was born in {hometown}. It is a {size_adj} and {beauty_adj} town. I lived there for {years} years. The weather is {weather_adj} all year. The town is famous for its {famous_thing}. Local people are very {people_adj}. There are many famous {landmarks}. I often went to the {childhood_spot} as a child. The town has changed {change_amount} recently. It is much {comparison_adj} than big cities. I love my hometown very much.",
+    "slots": [
+      {
+        "id": "hometown",
+        "label_en": "Hometown Name",
+        "label_mm": "မြို့နာမည်",
+        "hint": "သင်မွေးဖွားရာမြို့နာမည်ကို ထည့်ပါ",
+        "options": [
+          "Yangon",
+          "Mandalay",
+          "Bagan",
+          "Taunggyi",
+          "Pathein"
+        ]
+      },
+      {
+        "id": "size_adj",
+        "label_en": "Size",
+        "label_mm": "အရွယ်အစား",
+        "hint": "မြို့ရဲ့ အရွယ်အစားကို ပြောပါ",
+        "options": [
+          "small",
+          "large",
+          "busy",
+          "quiet",
+          "crowded"
+        ]
+      },
+      {
+        "id": "beauty_adj",
+        "label_en": "Appearance",
+        "label_mm": "အလှအပ",
+        "hint": "မြို့ရဲ့ ပုံပန်းသဏ္ဍာန်ကို ပြောပါ",
+        "options": [
+          "beautiful",
+          "charming",
+          "peaceful",
+          "modern",
+          "historic"
+        ]
+      },
+      {
+        "id": "years",
+        "label_en": "Time Lived",
+        "label_mm": "နေထိုင်ခဲ့သည့်နှစ်",
+        "hint": "အဲဒီမှာ ဘယ်နှစ်နှစ်နေခဲ့လဲ",
+        "options": [
+          "five",
+          "ten",
+          "fifteen",
+          "twenty",
+          "many"
+        ]
+      },
+      {
+        "id": "weather_adj",
+        "label_en": "Weather",
+        "label_mm": "ရာသီဥတု",
+        "hint": "ရာသီဥတုက ဘယ်လိုလဲ",
+        "options": [
+          "cool and pleasant",
+          "hot and dry",
+          "windy",
+          "rainy",
+          "warm"
+        ]
+      },
+      {
+        "id": "famous_thing",
+        "label_en": "Fame",
+        "label_mm": "နာမည်ကြီးသည့်အရာ",
+        "hint": "ဘာနဲ့ နာမည်ကြီးလဲ",
+        "options": [
+          "tasty food",
+          "historic sites",
+          "beautiful mountains",
+          "friendly people",
+          "fresh fruits"
+        ]
+      },
+      {
+        "id": "people_adj",
+        "label_en": "People",
+        "label_mm": "ဒေသခံများ",
+        "hint": "လူတွေက ဘယ်လိုလဲ",
+        "options": [
+          "kind and friendly",
+          "hardworking",
+          "helpful",
+          "cheerful",
+          "polite"
+        ]
+      },
+      {
+        "id": "landmarks",
+        "label_en": "Landmarks",
+        "label_mm": "ထင်ရှားသည့်နေရာများ",
+        "hint": "ဘာတွေရှိလဲ",
+        "options": [
+          "pagodas and parks",
+          "museums and markets",
+          "bridges and rivers",
+          "temples and caves"
+        ]
+      },
+      {
+        "id": "childhood_spot",
+        "label_en": "Childhood Spot",
+        "label_mm": "ကလေးဘဝအမှတ်တရနေရာ",
+        "hint": "ဘယ်နေရာကို သွားရတာ ကြိုက်လဲ",
+        "options": [
+          "local park",
+          "river bank",
+          "old library",
+          "school playground",
+          "bazaar"
+        ]
+      },
+      {
+        "id": "change_amount",
+        "label_en": "Change",
+        "label_mm": "ပြောင်းလဲမှု",
+        "hint": "ဘယ်လောက်ပြောင်းလဲသွားလဲ",
+        "options": [
+          "a lot",
+          "a little",
+          "very quickly",
+          "gradually"
+        ]
+      },
+      {
+        "id": "comparison_adj",
+        "label_en": "Comparison",
+        "label_mm": "နှိုင်းယှဉ်ချက်",
+        "hint": "မြို့ကြီးတွေနဲ့ နှိုင်းယှဉ်ရင်",
+        "options": [
+          "quieter",
+          "slower",
+          "more peaceful",
+          "less expensive"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level1/my_hometown/guide-model.mp3"
+  }
+}

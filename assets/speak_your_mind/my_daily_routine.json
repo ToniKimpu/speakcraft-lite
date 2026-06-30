@@ -1,0 +1,750 @@
+{
+  "id": "my_daily_routine",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "My Daily Routine",
+  "title_mm": "ကျွန်တော့်ရဲ့ နေ့စဉ်လှုပ်ရှားမှုများ",
+  "promise_en": "Master the vocabulary to describe your daily life, from waking up to winding down, with confidence and flow.",
+  "promise_mm": "မနက်အိပ်ရာထချိန်ကစပြီး ညအိပ်ရာဝင်ချိန်အထိ ကိုယ့်ရဲ့နေ့စဉ်ဘဝကို ယုံကြည်မှုရှိရှိနဲ့ စနစ်တကျ ပြောတတ်လာစေရမယ်။",
+  "intro_en": "Daily routines are the foundation of small talk. Whether you're grabbing tea at a shop or at the office, knowing how to describe your schedule helps others connect with you.",
+  "intro_mm": "နေ့စဉ်လုပ်ဆောင်နေတဲ့ အလေ့အကျင့်တွေဟာ စကားစမြည်ပြောတဲ့အခါ အသုံးအများဆုံး အကြောင်းအရာတွေပါ။ လက်ဖက်ရည်ဆိုင်မှာပဲဖြစ်ဖြစ်၊ ရုံးမှာပဲဖြစ်ဖြစ် ကိုယ့်ရဲ့ အချိန်ဇယားကို ပြောပြတတ်ခြင်းက တခြားသူတွေနဲ့ ရင်းနှီးမှုရဖို့ အထောက်အကူပြုပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your wake-up time",
+      "move_mm": "မနက်အိပ်ရာထတဲ့အချိန် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I wake up at six o'clock.",
+          "highlight": "six o'clock",
+          "swap_en": "five thirty · seven o'clock · six thirty",
+          "gloss_mm": "ကျွန်တော် ခြောက်နာရီမှာ အိပ်ရာထတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m1-i1.mp3"
+        },
+        {
+          "text_en": "I usually get up around 6:00 AM.",
+          "highlight": "around 6:00 AM",
+          "swap_en": "around 5:30 AM · about 7:00 AM · just after 6:00 AM",
+          "gloss_mm": "ကျွန်တော်ကတော့ ခြောက်နာရီလောက်မှာ အိပ်ရာထလေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m1-i2.mp3"
+        },
+        {
+          "text_en": "I'm an early bird, so I'm up by 5:30.",
+          "highlight": "up by 5:30",
+          "swap_en": "up by 5:00 · up by 6:00",
+          "gloss_mm": "ကျွန်တော်က မနက်စောစောထတတ်တဲ့သူဆိုတော့ ၅ နာရီခွဲလောက်ဆို အိပ်ရာထပြီးပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m1-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing morning rituals",
+      "move_mm": "မနက်ခင်း လုပ်လေ့ရှိတဲ့အလုပ်များ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I wake up at six o'clock.",
+          "highlight": "at six o'clock",
+          "swap_en": "at five-thirty · early in the morning · as soon as the sun rises",
+          "gloss_mm": "ကျွန်တော် ၆ နာရီမှာ နိုးတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m2-i1.mp3"
+        },
+        {
+          "text_en": "I usually have tea at a local tea shop.",
+          "highlight": "have tea",
+          "swap_en": "grab a quick coffee · have Mohinga · get some breakfast",
+          "gloss_mm": "ကျွန်တော် ပုံမှန်ဆို လက်ဖက်ရည်ဆိုင်မှာ လက်ဖက်ရည် သောက်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m2-i2.mp3"
+        },
+        {
+          "text_en": "I like to start my day with a bit of quiet time.",
+          "highlight": "start my day",
+          "swap_en": "kick off my morning · begin my daily routine",
+          "gloss_mm": "ကျွန်တော် မနက်ခင်းကို အေးအေးဆေးဆေးနဲ့ စတင်ရတာ ကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m2-i3.mp3"
+        },
+        {
+          "text_en": "My morning ritual involves checking my emails before I head out.",
+          "highlight": "involves",
+          "swap_en": "consists of · includes",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ မနက်ခင်း လုပ်ရိုးလုပ်စဉ်ထဲမှာ အပြင်မထွက်ခင် အီးမေးလ်စစ်တာ ပါဝင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m2-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your commute",
+      "move_mm": "ရုံး/ကျောင်းသွားတဲ့လမ်းကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I go to work by bus.",
+          "highlight": "by bus",
+          "swap_en": "by taxi · by motorbike · by train",
+          "gloss_mm": "ကျွန်တော် အလုပ်ကို ကားနဲ့ သွားတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m3-i1.mp3"
+        },
+        {
+          "text_en": "It takes me thirty minutes to get to the office.",
+          "highlight": "thirty minutes",
+          "swap_en": "an hour · forty-five minutes · about twenty minutes",
+          "gloss_mm": "ရုံးရောက်ဖို့ မိနစ်သုံးဆယ်လောက် ကြာတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m3-i2.mp3"
+        },
+        {
+          "text_en": "I usually get stuck in traffic near Sule Pagoda.",
+          "highlight": "get stuck in traffic",
+          "swap_en": "get caught in a traffic jam · get delayed by traffic",
+          "gloss_mm": "ဆူးလေဘုရားနားမှာ ကားပိတ်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m3-i3.mp3"
+        },
+        {
+          "text_en": "My commute is quite exhausting due to the heavy traffic.",
+          "highlight": "quite exhausting",
+          "swap_en": "really stressful · pretty tiring · long and boring",
+          "gloss_mm": "လမ်းမှာ ကားအလွန်ပိတ်တာကြောင့် ခရီးသွားရတာ တော်တော်ပင်ပန်းတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m3-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning breakfast habits",
+      "move_mm": "မနက်စာ စားတဲ့အလေ့အထ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually eat mohinga for breakfast.",
+          "highlight": "mohinga",
+          "swap_en": "noodles · fried rice · toast and eggs · some fruits",
+          "gloss_mm": "ကျွန်တော်က မနက်စာအတွက် မုန့်ဟင်းခါးပဲ များသောအားဖြင့် စားတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m4-i1.mp3"
+        },
+        {
+          "text_en": "I'm a big fan of tea shop breakfast.",
+          "highlight": "a big fan of tea shop breakfast",
+          "swap_en": "a big fan of healthy breakfast · not really a breakfast person",
+          "gloss_mm": "ကျွန်တော်က လက်ဖက်ရည်ဆိုင်မှာ မနက်စာစားရတာ အရမ်းကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m4-i2.mp3"
+        },
+        {
+          "text_en": "I can't start my day without a cup of coffee.",
+          "highlight": "can't start my day without",
+          "swap_en": "hardly ever skip · always make time for",
+          "gloss_mm": "ကော်ဖီတစ်ခွက် မသောက်ရရင် ကျွန်တော် မနက်ခင်းကို စလို့မရဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m4-i3.mp3"
+        },
+        {
+          "text_en": "I usually grab something quick on my way to work.",
+          "highlight": "grab something quick on my way to work",
+          "swap_en": "take my time eating breakfast at home · have a quick bite at the office",
+          "gloss_mm": "ကျွန်တော်က အလုပ်သွားရင်း လမ်းမှာပဲ အမြန်တစ်ခုခု ဝယ်စားဖြစ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your main work or study hours",
+      "move_mm": "အလုပ်ချိန်/ကျောင်းချိန် အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I work from 9 to 5.",
+          "highlight": "from 9 to 5",
+          "swap_en": "from 8 a.m. to 4 p.m. · from 10 to 6",
+          "gloss_mm": "ကျွန်တော်က ၉ နာရီကနေ ၅ နာရီအထိ အလုပ်လုပ်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m5-i1.mp3"
+        },
+        {
+          "text_en": "I usually start work at 9 a.m.",
+          "highlight": "start work at 9 a.m.",
+          "swap_en": "start work at 8:30 · finish work at 5:30 · head to the office at 8",
+          "gloss_mm": "ကျွန်တော်က ပုံမှန်အားဖြင့် မနက် ၉ နာရီမှာ အလုပ်စပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m5-i2.mp3"
+        },
+        {
+          "text_en": "My office hours are flexible.",
+          "highlight": "flexible",
+          "swap_en": "fixed · long · quite demanding",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အလုပ်ချိန်တွေက လိုက်လျောညီထွေ ရှိပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m5-i3.mp3"
+        },
+        {
+          "text_en": "I spend most of my day at the office.",
+          "highlight": "spend most of my day",
+          "swap_en": "spend my whole morning · spend my afternoon",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ တစ်နေ့တာ အချိန်အများစုကို ရုံးမှာပဲ ကုန်ဆုံးပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m5-i4.mp3"
+        },
+        {
+          "text_en": "I'm typically tied up at the office until late evening.",
+          "highlight": "tied up at the office until late evening",
+          "swap_en": "stuck in lectures until 4 p.m. · busy with meetings until 6",
+          "gloss_mm": "ကျွန်တော်က များသောအားဖြင့် ညနေစောင်းအထိ ရုံးမှာပဲ အလုပ်ရှုပ်နေတတ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m5-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your tasks during the day",
+      "move_mm": "နေ့ဘက်မှာ လုပ်ရတဲ့အလုပ်တွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually go to work at 8.",
+          "highlight": "go to work",
+          "swap_en": "start my day · head to the office · leave for work",
+          "gloss_mm": "ကျွန်တော် အလုပ်ကို ၈ နာရီမှာ ပုံမှန် သွားပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m6-i1.mp3"
+        },
+        {
+          "text_en": "I spend my morning answering emails.",
+          "highlight": "spend my morning",
+          "swap_en": "spend my afternoon · spend my lunch break · spend my evening",
+          "gloss_mm": "ကျွန်တော် မနက်ခင်းပိုင်းကို အီးမေးလ်တွေ ပြန်ရင်း ကုန်ဆုံးပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m6-i2.mp3"
+        },
+        {
+          "text_en": "I'm tied up with meetings all afternoon.",
+          "highlight": "tied up with meetings",
+          "swap_en": "busy with paperwork · occupied with customers · dealing with reports",
+          "gloss_mm": "နေ့လယ်ပိုင်းတစ်လျှောက်လုံး အစည်းအဝေးတွေနဲ့ အလုပ်ရှုပ်နေတာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m6-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning lunch breaks",
+      "move_mm": "နေ့လယ်စာ စားချိန်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I take my lunch break at 12:00.",
+          "highlight": "at 12:00",
+          "swap_en": "at noon · at one o'clock · around 12:30",
+          "gloss_mm": "ကျွန်တော် နေ့လယ် ၁၂ နာရီမှာ နေ့လယ်စာ စားနားပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m7-i1.mp3"
+        },
+        {
+          "text_en": "I usually grab lunch with my colleagues.",
+          "highlight": "grab lunch with my colleagues",
+          "swap_en": "go out for lunch with friends · have a quick lunch by myself · eat lunch at the office",
+          "gloss_mm": "ကျွန်တော် အလုပ်ဖော်တွေနဲ့ အတူ နေ့လယ်စာ သွားစားလေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m7-i2.mp3"
+        },
+        {
+          "text_en": "I get an hour for lunch, which is enough time to go to a nearby tea shop.",
+          "highlight": "an hour for lunch",
+          "swap_en": "forty-five minutes for lunch · a short break for lunch",
+          "gloss_mm": "နေ့လယ်စာအတွက် တစ်နာရီ ရတာဆိုတော့ အနီးနားက လက်ဖက်ရည်ဆိုင်သွားဖို့ လုံလောက်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m7-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing how you spend your afternoon",
+      "move_mm": "ညနေပိုင်းမှာ ဘာလုပ်လေ့ရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually drink tea in the afternoon.",
+          "highlight": "drink tea",
+          "swap_en": "take a nap · go for a walk · do some grocery shopping",
+          "gloss_mm": "ကျွန်တော် ညနေဘက်ဆို လက်ဖက်ရည် သောက်လေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m8-i1.mp3"
+        },
+        {
+          "text_en": "I spend my late afternoon at a local tea shop.",
+          "highlight": "at a local tea shop",
+          "swap_en": "at the park · at the gym · in the library",
+          "gloss_mm": "ကျွန်တော် ညနေစောင်းရင် လက်ဖက်ရည်ဆိုင်မှာ အချိန်ကုန်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m8-i2.mp3"
+        },
+        {
+          "text_en": "I try to unwind by catching up with friends after work.",
+          "highlight": "unwind by catching up with friends",
+          "swap_en": "relax by reading a book · recharge by listening to music · destress by going for a run",
+          "gloss_mm": "အလုပ်ပြီးရင် သူငယ်ချင်းတွေနဲ့ စကားပြောပြီး စိတ်အပန်းဖြေလေ့ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about errands or shopping",
+      "move_mm": "ဈေးဝယ်/ကိစ္စဆောင်ရွက်တာတွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I need to go shopping today.",
+          "highlight": "go shopping",
+          "swap_en": "buy some groceries · pick up some things · stop by the market",
+          "gloss_mm": "ဒီနေ့ ကျွန်တော် ဈေးဝယ်သွားဖို့ လိုတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m9-i1.mp3"
+        },
+        {
+          "text_en": "I'm heading to the market to grab some vegetables.",
+          "highlight": "heading to the market",
+          "swap_en": "dropping by the supermarket · going to the shopping mall · swinging by the convenience store",
+          "gloss_mm": "ဟင်းသီးဟင်းရွက်နည်းနည်း ဝယ်ဖို့ ဈေးဘက်ကို သွားမလို့။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m9-i2.mp3"
+        },
+        {
+          "text_en": "I have a few errands to run around Yangon.",
+          "highlight": "have a few errands to run",
+          "swap_en": "have a couple of things to take care of · need to get some chores done",
+          "gloss_mm": "ရန်ကုန်ထဲမှာ လုပ်စရာကိစ္စလေးတွေ နည်းနည်း ရှိနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m9-i3.mp3"
+        },
+        {
+          "text_en": "I usually make time for my weekly grocery run on Sundays.",
+          "highlight": "make time for my weekly grocery run",
+          "swap_en": "set aside time for my weekend shopping · squeeze in my weekly market trip",
+          "gloss_mm": "တနင်္ဂနွေနေ့တိုင်းမှာ တစ်ပတ်စာ ဈေးဝယ်ဖို့ အချိန်ပေးလေ့ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m9-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing evening relaxation",
+      "move_mm": "ညနေခင်း အနားယူပုံ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I watch TV in the evening.",
+          "highlight": "watch TV",
+          "swap_en": "read a book · listen to music · check my phone",
+          "gloss_mm": "ညနေဘက်ဆိုရင် ရုပ်မြင်သံကြား ကြည့်ဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m10-i1.mp3"
+        },
+        {
+          "text_en": "I usually relax by having tea at a teashop.",
+          "highlight": "having tea at a teashop",
+          "swap_en": "going for a walk · chatting with my friends · playing games",
+          "gloss_mm": "ပုံမှန်အားဖြင့်တော့ လက်ဖက်ရည်ဆိုင်မှာ လက်ဖက်ရည်သောက်ရင်း အနားယူဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m10-i2.mp3"
+        },
+        {
+          "text_en": "I like to wind down after a long day at work.",
+          "highlight": "wind down",
+          "swap_en": "chill out · relax",
+          "gloss_mm": "အလုပ်မှာ တစ်နေ့တာပင်ပန်းလာပြီးနောက်မှာတော့ အေးအေးဆေးဆေးပဲ နားချင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about dinner time",
+      "move_mm": "ညစာ စားတဲ့အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually eat dinner at 7 o'clock.",
+          "highlight": "at 7 o'clock",
+          "swap_en": "around 8 · after 7:30 · whenever I get home",
+          "gloss_mm": "ကျွန်တော် ညစာကို ၇ နာရီလောက်မှာ ပုံမှန်စားဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m11-i1.mp3"
+        },
+        {
+          "text_en": "We always have dinner together as a family.",
+          "highlight": "together as a family",
+          "swap_en": "in front of the TV · at the kitchen table · by ourselves",
+          "gloss_mm": "ကျွန်တော်တို့ မိသားစု အမြဲတမ်း ညစာအတူတူ စားကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m11-i2.mp3"
+        },
+        {
+          "text_en": "Dinner is the time when we catch up on our day.",
+          "highlight": "catch up on our day",
+          "swap_en": "chat about our work · share what happened today · talk about our plans",
+          "gloss_mm": "ညစာစားချိန်က တစ်နေ့တာအကြောင်းတွေ ပြန်ပြောဖြစ်တဲ့ အချိန်ပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m11-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning household chores",
+      "move_mm": "အိမ်မှုကိစ္စလုပ်တာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually help with the housework.",
+          "highlight": "help with the housework",
+          "swap_en": "do the laundry · wash the dishes · clean the room",
+          "gloss_mm": "ကျွန်တော် အိမ်မှုကိစ္စတွေကို ပုံမှန် ကူလုပ်ပေးဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m12-i1.mp3"
+        },
+        {
+          "text_en": "I'm responsible for doing the dishes after dinner.",
+          "highlight": "responsible for doing the dishes",
+          "swap_en": "responsible for sweeping the floor · responsible for taking out the trash",
+          "gloss_mm": "ညစာစားပြီးရင် ပန်းကန်ဆေးဖို့က ကျွန်တော့်တာဝန်ပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m12-i2.mp3"
+        },
+        {
+          "text_en": "I try to keep up with the household chores on weekends.",
+          "highlight": "keep up with the household chores",
+          "swap_en": "get on top of the housework · tackle the weekend cleaning",
+          "gloss_mm": "စနေ၊ တနင်္ဂနွေကျရင် အိမ်မှုကိစ္စတွေကို လက်မလွန်အောင် ကြိုတင်ပြီး လုပ်ထားဖြစ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing wind-down activities",
+      "move_mm": "ညအိပ်ခါနီး လုပ်လေ့ရှိတဲ့အလုပ် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I go to bed at 10 PM.",
+          "highlight": "go to bed",
+          "swap_en": "get into bed · lie down",
+          "gloss_mm": "ည ၁၀ နာရီဆို အိပ်ရာဝင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m13-i1.mp3"
+        },
+        {
+          "text_en": "I usually listen to music before I sleep.",
+          "highlight": "before I sleep",
+          "swap_en": "before hitting the sack · before turning in",
+          "gloss_mm": "မအိပ်ခင် သီချင်းနားထောင်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m13-i2.mp3"
+        },
+        {
+          "text_en": "I spend some time scrolling through my phone.",
+          "highlight": "scrolling through my phone",
+          "swap_en": "checking social media · reading a few pages of a book",
+          "gloss_mm": "ဖုန်းလေးဘာလေး ကြည့်ရင်း အချိန်အနည်းငယ် ကုန်ဆုံးတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m13-i3.mp3"
+        },
+        {
+          "text_en": "I like to unwind by watching a short video.",
+          "highlight": "unwind",
+          "swap_en": "relax · de-stress",
+          "gloss_mm": "ဗီဒီယိုအတိုလေးတွေ ကြည့်ပြီး စိတ်ဖြေလေ့ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m13-i4.mp3"
+        },
+        {
+          "text_en": "I make it a habit to reflect on my day.",
+          "highlight": "make it a habit to",
+          "swap_en": "always make sure to · try to",
+          "gloss_mm": "တစ်နေ့တာကို ပြန်တွေးကြည့်တဲ့ အလေ့အကျင့် လုပ်ထားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m13-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating your bedtime",
+      "move_mm": "ညအိပ်ရာဝင်ချိန် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually go to bed at ten.",
+          "highlight": "at ten",
+          "swap_en": "at 11 p.m. · around midnight · at ten-thirty",
+          "gloss_mm": "ကျွန်တော်က အမြဲတမ်း ၁၀ နာရီလောက်ဆို အိပ်ရာဝင်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m14-i1.mp3"
+        },
+        {
+          "text_en": "I try to get to sleep by eleven.",
+          "highlight": "get to sleep by eleven",
+          "swap_en": "head to bed by ten · hit the sack by midnight",
+          "gloss_mm": "ကျွန်တော် ၁၁ နာရီလောက်ဆို အိပ်ပျော်အောင် ကြိုးစားပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m14-i2.mp3"
+        },
+        {
+          "text_en": "I'm usually in bed by eleven o'clock.",
+          "highlight": "in bed by eleven o'clock",
+          "swap_en": "tucked in by midnight · fast asleep by ten",
+          "gloss_mm": "ကျွန်တော်က ၁၁ နာရီလောက်ဆို အိပ်ရာထဲ ရောက်နေတတ်ပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m14-i3.mp3"
+        },
+        {
+          "text_en": "I generally wind down around eleven.",
+          "highlight": "wind down around eleven",
+          "swap_en": "turn in around ten · call it a night by eleven",
+          "gloss_mm": "ကျွန်တော်က ၁၁ နာရီလောက်ဆို အနားယူဖို့ အိပ်ရာဝင်လေ့ရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m14-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your feelings about your routine",
+      "move_mm": "ကိုယ့်နေ့စဉ်ဘဝအပေါ် ခံစားချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am happy with my routine.",
+          "highlight": "happy",
+          "swap_en": "tired · bored · busy · satisfied",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ နေ့စဉ်လှုပ်ရှားမှုတွေကို သဘောကျပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m15-i1.mp3"
+        },
+        {
+          "text_en": "My daily schedule keeps me busy all day.",
+          "highlight": "keeps me busy",
+          "swap_en": "keeps me active · keeps me tired · keeps me going",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အချိန်ဇယားက တစ်နေ့လုံး အလုပ်ရှုပ်နေစေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m15-i2.mp3"
+        },
+        {
+          "text_en": "I find my daily routine a bit repetitive.",
+          "highlight": "a bit repetitive",
+          "swap_en": "very hectic · quite exhausting · somewhat draining",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ နေ့စဉ်အလုပ်တွေက နည်းနည်းတော့ ထပ်ခါတလဲလဲ ဖြစ်နေသလိုပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_daily_routine/m15-i3.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about your typical weekday. Describe what you do from the moment you wake up until you go to sleep.",
+    "prompt_mm": "မင်းရဲ့ သာမန်ရက်တစ်ရက်မှာ ဘာတွေလုပ်လေ့ရှိလဲဆိုတာ စာကြောင်းရေ ၅ ကြောင်းမှ ၈ ကြောင်းကြား ရေးသားပါ။ မနက်အိပ်ရာထချိန်ကစလို့ ညအိပ်ရာဝင်ချိန်အထိ အကြောင်းအရာတွေကို ထည့်သွင်းဖော်ပြပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "Wake up time",
+      "Breakfast",
+      "Commute",
+      "Work tasks",
+      "Lunch break",
+      "Evening relaxation",
+      "Bedtime"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and confidence.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ကြည့်ပါ။ ဒါဟာ စကားပြောတဲ့အခါ ပိုပြီးချောမွေ့ယုံကြည်မှုရှိလာစေဖို့ ကူညီပေးပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "I wake up at 6:00 AM every day. First, I drink a cup of coffee. Then, I take the bus to my office. I eat a light breakfast at my desk. I work on my computer until noon. For lunch, I usually buy noodles. In the afternoon, I finish my tasks. I go home around 5:00 PM. I cook dinner for myself. Finally, I read a book before sleep. I feel very happy with my routine.",
+    "model_mm": "ကျွန်တော်က နေ့တိုင်း မနက် ၆ နာရီမှာ အိပ်ရာထပါတယ်။ ပထမဦးဆုံး ကော်ဖီတစ်ခွက် သောက်ပါတယ်။ ပြီးတော့ ဘတ်စ်ကားစီးပြီး ရုံးကို သွားပါတယ်။ ရုံးမှာ မနက်စာ အပေါ့စား စားပါတယ်။ နေ့လယ်အထိ ကွန်ပျူတာနဲ့ အလုပ်လုပ်ပါတယ်။ နေ့လယ်စာအတွက် ခေါက်ဆွဲ ဝယ်စားလေ့ရှိပါတယ်။ နေ့လယ်ပိုင်းမှာ အလုပ်တွေ အပြီးသတ်ပါတယ်။ ညနေ ၅ နာရီလောက်မှာ အိမ်ပြန်ပါတယ်။ ကိုယ့်အတွက် ညစာ ချက်ပါတယ်။ နောက်ဆုံးအနေနဲ့ အိပ်ခါနီး စာအုပ်ဖတ်ပါတယ်။ ကျွန်တော့်ရဲ့ နေ့စဉ်ဘဝကို အရမ်း သဘောကျပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "I wake up at 6:00 AM every day.",
+        "gloss_mm": "ကျွန်တော်က နေ့တိုင်း မနက် ၆ နာရီမှာ အိပ်ရာထပါတယ်။",
+        "why_mm": "နိုးထချိန်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "First, I drink a cup of coffee.",
+        "gloss_mm": "ပထမဦးဆုံး ကော်ဖီတစ်ခွက် သောက်ပါတယ်။",
+        "why_mm": "မနက်ခင်း အလေ့အထကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "Then, I take the bus to my office.",
+        "gloss_mm": "ပြီးတော့ ဘတ်စ်ကားစီးပြီး ရုံးကို သွားပါတယ်။",
+        "why_mm": "သွားလာရေးလမ်းကြောင်းကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I eat a light breakfast at my desk.",
+        "gloss_mm": "ရုံးမှာ မနက်စာ အပေါ့စား စားပါတယ်။",
+        "why_mm": "မနက်စာ စားသုံးမှုအကြောင်း ပြောပြခြင်း"
+      },
+      {
+        "text_en": "I work on my computer until noon.",
+        "gloss_mm": "နေ့လယ်အထိ ကွန်ပျူတာနဲ့ အလုပ်လုပ်ပါတယ်။",
+        "why_mm": "အလုပ်ချိန်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "For lunch, I usually buy noodles.",
+        "gloss_mm": "နေ့လယ်စာအတွက် ခေါက်ဆွဲ ဝယ်စားလေ့ရှိပါတယ်။",
+        "why_mm": "နေ့လယ်စာ စားချိန်အကြောင်း ပြောပြခြင်း"
+      },
+      {
+        "text_en": "In the afternoon, I finish my tasks.",
+        "gloss_mm": "နေ့လယ်ပိုင်းမှာ အလုပ်တွေ အပြီးသတ်ပါတယ်။",
+        "why_mm": "နေ့ဘက် အလုပ်တာဝန်များကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I go home around 5:00 PM.",
+        "gloss_mm": "ညနေ ၅ နာရီလောက်မှာ အိမ်ပြန်ပါတယ်။",
+        "why_mm": "အလုပ်ချိန်ပြီးဆုံးချိန်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I cook dinner for myself.",
+        "gloss_mm": "ကိုယ့်အတွက် ညစာ ချက်ပါတယ်။",
+        "why_mm": "အိမ်မှုကိစ္စနှင့် ညစာအကြောင်း ပြောပြခြင်း"
+      },
+      {
+        "text_en": "Finally, I read a book before sleep.",
+        "gloss_mm": "နောက်ဆုံးအနေနဲ့ အိပ်ခါနီး စာအုပ်ဖတ်ပါတယ်။",
+        "why_mm": "ညအိပ်ခါနီး အလေ့အထကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I feel very happy with my routine.",
+        "gloss_mm": "ကျွန်တော့်ရဲ့ နေ့စဉ်ဘဝကို အရမ်း သဘောကျပါတယ်။",
+        "why_mm": "နေ့စဉ်ဘဝအပေါ် ခံစားချက်ကို ဖော်ပြခြင်း"
+      }
+    ],
+    "template": "I wake up at {wake_time} every day. First, I {morning_habit}. Then, I {commute_method} to my office. I eat a {breakfast_type} breakfast at my desk. I work on my {main_task} until noon. For lunch, I usually {lunch_habit}. In the afternoon, I {afternoon_task}. I go home around {go_home_time}. I {evening_chore} for myself. Finally, I {bedtime_habit} before sleep. I feel {feeling} with my routine.",
+    "slots": [
+      {
+        "id": "wake_time",
+        "label_en": "Wake-up time",
+        "label_mm": "အိပ်ရာထချိန်",
+        "hint": "အချိန်တစ်ခုကို ရွေးပါ",
+        "options": [
+          "6:00 AM",
+          "7:00 AM",
+          "5:30 AM",
+          "6:30 AM"
+        ]
+      },
+      {
+        "id": "morning_habit",
+        "label_en": "Morning habit",
+        "label_mm": "မနက်ခင်း အလေ့အထ",
+        "hint": "မနက်ခင်း လုပ်လေ့ရှိတဲ့အလုပ်",
+        "options": [
+          "drink a cup of tea",
+          "do some exercise",
+          "drink a cup of coffee",
+          "check my emails"
+        ]
+      },
+      {
+        "id": "commute_method",
+        "label_en": "Commute method",
+        "label_mm": "သွားလာရေးပုံစံ",
+        "hint": "ဘယ်လိုသွားလဲ",
+        "options": [
+          "take the bus",
+          "drive my car",
+          "ride my motorbike",
+          "take the train"
+        ]
+      },
+      {
+        "id": "breakfast_type",
+        "label_en": "Breakfast type",
+        "label_mm": "မနက်စာ အမျိုးအစား",
+        "hint": "ဘယ်လိုမနက်စာလဲ",
+        "options": [
+          "healthy",
+          "light",
+          "quick",
+          "big"
+        ]
+      },
+      {
+        "id": "main_task",
+        "label_en": "Main work task",
+        "label_mm": "အဓိကလုပ်တဲ့အလုပ်",
+        "hint": "ဘာလုပ်လဲ",
+        "options": [
+          "computer",
+          "reports",
+          "projects",
+          "emails"
+        ]
+      },
+      {
+        "id": "lunch_habit",
+        "label_en": "Lunch habit",
+        "label_mm": "နေ့လယ်စာ အလေ့အထ",
+        "hint": "နေ့လယ်စာ ဘယ်လိုစားလဲ",
+        "options": [
+          "buy noodles",
+          "eat a sandwich",
+          "eat rice with curry",
+          "have a salad"
+        ]
+      },
+      {
+        "id": "afternoon_task",
+        "label_en": "Afternoon task",
+        "label_mm": "နေ့လယ်ပိုင်း အလုပ်",
+        "hint": "ဘာလုပ်လဲ",
+        "options": [
+          "finish my reports",
+          "attend meetings",
+          "answer calls",
+          "plan for tomorrow"
+        ]
+      },
+      {
+        "id": "go_home_time",
+        "label_en": "Go home time",
+        "label_mm": "အိမ်ပြန်ချိန်",
+        "hint": "ဘယ်အချိန်ပြန်လဲ",
+        "options": [
+          "5:00 PM",
+          "6:00 PM",
+          "4:30 PM",
+          "7:00 PM"
+        ]
+      },
+      {
+        "id": "evening_chore",
+        "label_en": "Evening chore",
+        "label_mm": "ညနေပိုင်း အိမ်မှုကိစ္စ",
+        "hint": "ဘာလုပ်လဲ",
+        "options": [
+          "cook dinner",
+          "clean my room",
+          "do the laundry",
+          "tidy up the house"
+        ]
+      },
+      {
+        "id": "bedtime_habit",
+        "label_en": "Bedtime habit",
+        "label_mm": "အိပ်ခါနီး အလေ့အထ",
+        "hint": "ဘာလုပ်လဲ",
+        "options": [
+          "read a book",
+          "watch a movie",
+          "listen to music",
+          "meditate"
+        ]
+      },
+      {
+        "id": "feeling",
+        "label_en": "Feeling",
+        "label_mm": "ခံစားချက်",
+        "hint": "ဘယ်လိုခံစားရလဲ",
+        "options": [
+          "very happy",
+          "quite productive",
+          "very satisfied",
+          "relaxed"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level1/my_daily_routine/guide-model.mp3"
+  }
+}

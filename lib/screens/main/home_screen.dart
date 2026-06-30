@@ -16,6 +16,7 @@ import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
 import 'package:speakcraft/screens/onboarding/onboarding_page.dart';
+import 'package:speakcraft/services/analytics_service.dart';
 import 'package:speakcraft/services/share_preference_utils.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:speakcraft/shared_widgets/premium_status.dart';
@@ -147,8 +148,11 @@ class _HomePageState extends State<HomePage> {
                     iconLabel1: Icons.headphones,
                     iconLabel2: Icons.surround_sound,
                     accent: ModuleAccent.cyan,
-                    onPressed: () =>
-                        Navigator.pushNamed(context, PmpRoutes.listeningListPage),
+                    onPressed: () {
+                      AnalyticsService.instance.featureOpen('listening');
+                      Navigator.pushNamed(
+                          context, PmpRoutes.listeningListPage);
+                    },
                   ),
                   ModuleWidget(
                     title: 'Writing Practice',
@@ -158,8 +162,10 @@ class _HomePageState extends State<HomePage> {
                     iconLabel1: Icons.school_outlined,
                     iconLabel2: Icons.fact_check_outlined,
                     accent: ModuleAccent.orange,
-                    onPressed: () =>
-                        Navigator.pushNamed(context, PmpRoutes.writingPath),
+                    onPressed: () {
+                      AnalyticsService.instance.featureOpen('grammar');
+                      Navigator.pushNamed(context, PmpRoutes.writingPath);
+                    },
                   ),
                   ModuleWidget(
                     title: 'Vocabulary',
@@ -169,8 +175,23 @@ class _HomePageState extends State<HomePage> {
                     iconLabel1: Icons.workspaces_outline,
                     iconLabel2: Icons.record_voice_over_outlined,
                     accent: ModuleAccent.orange,
-                    onPressed: () =>
-                        Navigator.pushNamed(context, PmpRoutes.vocabularyList),
+                    onPressed: () {
+                      AnalyticsService.instance.featureOpen('vocabulary');
+                      Navigator.pushNamed(context, PmpRoutes.vocabularyList);
+                    },
+                  ),
+                  ModuleWidget(
+                    title: 'Speak Your Mind',
+                    label1: 'topic အလိုက် အသုံးဝင်တဲ့ စကားစု toolbox',
+                    label2: 'ကိုယ်ပိုင်အကြောင်း ရေး/ပြောပြီး ထုတ်သုံးပါ',
+                    iconTitle: Icons.lightbulb_outline,
+                    iconLabel1: Icons.handyman_outlined,
+                    iconLabel2: Icons.edit_outlined,
+                    accent: ModuleAccent.cyan,
+                    onPressed: () {
+                      AnalyticsService.instance.featureOpen('sym');
+                      Navigator.pushNamed(context, PmpRoutes.speakYourMind);
+                    },
                   ),
                   ModuleWidget(
                     title: l10n.txtModuleBookmarksTitle,

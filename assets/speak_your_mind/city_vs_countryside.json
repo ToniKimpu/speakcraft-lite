@@ -1,0 +1,737 @@
+{
+  "id": "city_vs_countryside",
+  "level": 2,
+  "domain_en": "Giving your opinion",
+  "domain_mm": "ကိုယ့်အမြင် ဖော်ပြခြင်း",
+  "title_en": "City Life vs Countryside",
+  "title_mm": "မြို့ပြဘဝနှင့် နယ်ဘဝ",
+  "promise_en": "Master the vocabulary to express your opinion on where you prefer to live and why.",
+  "promise_mm": "မြို့မှာနေရတာကြိုက်လား၊ နယ်မှာနေရတာကြိုက်လားဆိုတာကို ကိုယ့်အမြင်နဲ့ တိတိကျကျ ပြောတတ်လာစေရမယ်။",
+  "intro_en": "Deciding between the convenience of the city and the peace of the countryside is a common debate. Use these phrases to share your thoughts clearly.",
+  "intro_mm": "ရန်ကုန်လို မြို့ပြရဲ့ အဆင်ပြေမှုနဲ့ နယ်ဘက်က တိတ်ဆိတ်အေးချမ်းမှုတွေကြားမှာ ဘယ်နေရာက ပိုကောင်းလဲဆိုတာကို အင်္ဂလိပ်လို ပြောပြဖို့ ဒီ toolbox က ကူညီပေးပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your general preference",
+      "move_mm": "ကိုယ့်ရဲ့ အကြိုက်ဆုံးနေရာကို အရင်ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think living in the city is better.",
+          "highlight": "living in the city",
+          "swap_en": "living in the countryside · staying in Yangon · life in the village",
+          "gloss_mm": "ကျွန်တော်ထင်တာကတော့ မြို့ပြမှာနေတာ ပိုကောင်းတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m1-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, the countryside is more peaceful.",
+          "highlight": "the countryside",
+          "swap_en": "the city · city life · village life",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ နယ်ဘက်က ပိုပြီး တိတ်ဆိတ်ငြိမ်းချမ်းတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m1-i2.mp3"
+        },
+        {
+          "text_en": "I would say that I prefer the fast pace of city life.",
+          "highlight": "the fast pace of city life",
+          "swap_en": "the slow pace of village life · the quietness of the countryside · the convenience of the city",
+          "gloss_mm": "ကျွန်တော်ပြောရရင်တော့ မြို့ပြရဲ့ အရှိန်အဟုန်မြန်တဲ့ ဘဝကို ပိုသဘောကျတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m1-i3.mp3"
+        },
+        {
+          "text_en": "If I had to choose, I'd go for the countryside for a change of pace.",
+          "highlight": "the countryside",
+          "swap_en": "the city · life in the city · staying in Mandalay",
+          "gloss_mm": "ရွေးရမယ်ဆိုရင်တော့ ပတ်ဝန်းကျင်အပြောင်းအလဲဖြစ်အောင် နယ်ဘက်ကိုပဲ ရွေးမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing a strong opinion",
+      "move_mm": "ကိုယ့်အမြင်ကို ခိုင်ခိုင်မာမာ ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think city life is better.",
+          "highlight": "I think",
+          "swap_en": "In my opinion · I honestly believe",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ မြို့ပြဘဝက ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m2-i1.mp3"
+        },
+        {
+          "text_en": "I would say that living in the countryside is more peaceful.",
+          "highlight": "I would say that",
+          "swap_en": "I am convinced that · My take is that",
+          "gloss_mm": "ကျွန်တော်ကတော့ နယ်မှာနေရတာ ပိုအေးချမ်းတယ်လို့ ဆိုချင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m2-i2.mp3"
+        },
+        {
+          "text_en": "There is no doubt that city living offers more opportunities.",
+          "highlight": "There is no doubt that",
+          "swap_en": "It is undeniable that · I am absolutely certain that",
+          "gloss_mm": "မြို့ပြဘဝက အခွင့်အလမ်း ပိုပေးတယ်ဆိုတာ သံသယဖြစ်စရာ မလိုပါဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m2-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about city convenience",
+      "move_mm": "မြို့ပြရဲ့ အဆင်ပြေမှုတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think living in Yangon is very convenient.",
+          "highlight": "very convenient",
+          "swap_en": "really easy · great for shopping · super handy",
+          "gloss_mm": "ရန်ကုန်မှာနေရတာ အတော်လေး အဆင်ပြေတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m3-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, everything you need is just around the corner.",
+          "highlight": "just around the corner",
+          "swap_en": "within walking distance · just a stone's throw away · easily accessible",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ လိုအပ်တာမှန်သမျှ လက်တစ်ကမ်းမှာပဲ ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m3-i2.mp3"
+        },
+        {
+          "text_en": "I’d say the biggest plus of city life is having 24/7 delivery services.",
+          "highlight": "the biggest plus of city life",
+          "swap_en": "the main benefit of living here · the best thing about the city",
+          "gloss_mm": "မြို့ပြဘဝရဲ့ အကောင်းဆုံးအချက်ကတော့ ၂၄ နာရီ ပို့ဆောင်ရေးဝန်ဆောင်မှုတွေ ရှိနေတာပဲလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m3-i3.mp3"
+        },
+        {
+          "text_en": "I honestly feel that modern amenities make daily life so much smoother here.",
+          "highlight": "make daily life so much smoother",
+          "swap_en": "make everything effortless · make chores a breeze",
+          "gloss_mm": "ဒီမှာက ခေတ်မီအဆောက်အအုံတွေ၊ ဝန်ဆောင်မှုတွေကြောင့် နေ့စဉ်ဘဝက ပိုပြီးချောမွေ့တယ်လို့ ခံစားရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m3-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting countryside peace",
+      "move_mm": "နယ်ဘက်ရဲ့ ငြိမ်းချမ်းမှုနဲ့ သဘာဝအလှအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think the countryside is very quiet.",
+          "highlight": "very quiet",
+          "swap_en": "very peaceful · so relaxing · really calm",
+          "gloss_mm": "နယ်ဘက်က တော်တော်လေး ငြိမ်းချမ်းတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m4-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, life in the village is more peaceful than in Yangon.",
+          "highlight": "more peaceful than in Yangon",
+          "swap_en": "a lot slower than city life · much more relaxing than the city",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ရွာမှာနေရတာ ရန်ကုန်ထက် ပိုငြိမ်းချမ်းပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m4-i2.mp3"
+        },
+        {
+          "text_en": "I’d say the countryside is a perfect place to escape from the city noise.",
+          "highlight": "a perfect place to escape from the city noise",
+          "swap_en": "a great way to recharge your energy · the best place to find some peace of mind",
+          "gloss_mm": "မြို့ပြရဲ့ ဆူညံသံတွေကနေ ခဏလွတ်မြောက်ဖို့ နယ်ဘက်ကတော့ အကောင်းဆုံးနေရာပဲလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m4-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Weighing both sides",
+      "move_mm": "ကောင်းကျိုး၊ ဆိုးကျိုးနှစ်ခုစလုံးကို ချိန်ဆပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think city life is convenient, but the countryside is peaceful.",
+          "highlight": "city life is convenient, but the countryside is peaceful",
+          "swap_en": "city life is fast, but the countryside is quiet · city life is exciting, but the countryside is relaxing",
+          "gloss_mm": "ကျွန်တော်ထင်တာက မြို့ပြဘဝက အဆင်ပြေပေမဲ့ နယ်ဘက်ကတော့ တိတ်ဆိတ်ငြိမ်းချမ်းတယ်ဗျ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m5-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, living in Yangon has more opportunities, yet it's way more stressful than living in a small town.",
+          "highlight": "it's way more stressful than living in a small town",
+          "swap_en": "it's more tiring than living in the village · it's more expensive than living in the countryside",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရ ရန်ကုန်မှာနေတာက အခွင့်အလမ်း ပိုများပေမဲ့ နယ်မြို့လေးတွေမှာ နေတာထက်တော့ ပိုပြီး စိတ်ဖိစီးမှု များတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m5-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that while the city offers better facilities, the countryside provides a much healthier lifestyle.",
+          "highlight": "the city offers better facilities",
+          "swap_en": "the city has better job prospects · the city is full of modern amenities",
+          "gloss_mm": "ကျွန်တော်ကတော့ မြို့ပြမှာသာ အဆောက်အဦ အသုံးအဆောင်တွေ ပိုကောင်းပေမဲ့ နယ်ဘက်က ပိုပြီး ကျန်းမာရေးနဲ့ ညီညွတ်တဲ့ လူနေမှုပုံစံကို ပေးစွမ်းတယ်လို့ မြင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m5-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Using 'On the other hand' for contrast",
+      "move_mm": "အခြားတစ်ဖက်မှာဆိုပြီး အချက်နှစ်ခုကို နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "I think city life is fast. On the other hand, village life is slow.",
+          "highlight": "On the other hand",
+          "swap_en": "However · Conversely",
+          "gloss_mm": "မြို့ပြဘဝက မြန်ဆန်တယ်လို့ ထင်တယ်။ အခြားတစ်ဖက်မှာကျတော့ ရွာမှာနေရတာက အေးဆေးတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m6-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, living in Yangon is expensive. On the other hand, the countryside is much cheaper.",
+          "highlight": "On the other hand",
+          "swap_en": "However · Yet",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရ ရန်ကုန်မှာနေရတာ ကုန်ကျစရိတ်များတယ်။ အခြားတစ်ဖက်မှာကျတော့ နယ်ဘက်တွေမှာက ပိုပြီးသက်သာတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m6-i2.mp3"
+        },
+        {
+          "text_en": "I'd say the city offers great career opportunities; on the other hand, the countryside provides a peaceful environment away from the traffic.",
+          "highlight": "on the other hand",
+          "swap_en": "by contrast · conversely",
+          "gloss_mm": "မြို့ကြီးတွေက အလုပ်အကိုင် အခွင့်အလမ်းကောင်းတွေ ပေးစွမ်းနိုင်တယ်၊ အခြားတစ်ဖက်မှာကျတော့ နယ်ဘက်တွေက ယာဉ်ကြောပိတ်ဆို့မှုတွေကင်းပြီး ငြိမ်းချမ်းတဲ့ ပတ်ဝန်းကျင်ကို ပေးစွမ်းနိုင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m6-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning costs and expenses",
+      "move_mm": "ကုန်ကျစရိတ်နဲ့ ဈေးနှုန်းအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think living in Yangon is more expensive.",
+          "highlight": "more expensive",
+          "swap_en": "cheaper · more affordable · higher in cost",
+          "gloss_mm": "ရန်ကုန်မှာနေရတာ ပိုပြီးကုန်ကျစရိတ်များတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m7-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, daily expenses in the city are much higher.",
+          "highlight": "much higher",
+          "swap_en": "a bit higher · significantly lower · pretty reasonable",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ မြို့ပေါ်မှာ နေ့စဉ်ကုန်ကျစရိတ်တွေက အများကြီး ပိုများတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m7-i2.mp3"
+        },
+        {
+          "text_en": "I’d say the cost of living in the countryside is significantly lower than in the city.",
+          "highlight": "significantly lower",
+          "swap_en": "quite manageable · relatively cheap · far more budget-friendly",
+          "gloss_mm": "နယ်ဘက်မှာ နေထိုင်မှုစရိတ်က မြို့ပေါ်ထက် သိသိသာသာကို ပိုသက်သာတယ်လို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m7-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the atmosphere",
+      "move_mm": "ပတ်ဝန်းကျင် အခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think the city is very noisy.",
+          "highlight": "very noisy",
+          "swap_en": "very crowded · super busy · quite peaceful",
+          "gloss_mm": "မြို့ကြီးက အရမ်းဆူညံတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m8-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, the countryside is more relaxing.",
+          "highlight": "more relaxing",
+          "swap_en": "more quiet · much fresher · more laid-back",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ နယ်ဘက်က ပိုပြီး စိတ်အေးချမ်းရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m8-i2.mp3"
+        },
+        {
+          "text_en": "I'd say the city has a fast-paced atmosphere.",
+          "highlight": "fast-paced atmosphere",
+          "swap_en": "vibrant atmosphere · hectic pace of life · peaceful vibe",
+          "gloss_mm": "မြို့ကြီးကတော့ အချိန်နဲ့အမျှ အလုပ်ရှုပ်ပြီး အရှိန်အဟုန်မြန်တဲ့ ပတ်ဝန်းကျင်မျိုးလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a personal example",
+      "move_mm": "ကိုယ့်အတွေ့အကြုံ တစ်ခုခုကို ဥပမာပေးနည်း",
+      "items": [
+        {
+          "text_en": "I think city life is better because I can find work easily.",
+          "highlight": "city life is better",
+          "swap_en": "countryside life is better · city life is more exciting · countryside life is more peaceful",
+          "gloss_mm": "မြို့ပြဘဝက ပိုကောင်းတယ်လို့ ထင်တယ်၊ ဘာလို့လဲဆိုတော့ အလုပ်အကိုင် ရှာရလွယ်လို့ပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m9-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, living in Yangon is more convenient for me.",
+          "highlight": "living in Yangon",
+          "swap_en": "living in Mandalay · living in a small village · living in the countryside",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ရန်ကုန်မှာနေရတာ ပိုအဆင်ပြေပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m9-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that the countryside is ideal when you want to escape the traffic.",
+          "highlight": "the countryside is ideal",
+          "swap_en": "the city is ideal · a quiet town is ideal",
+          "gloss_mm": "ကားပိတ်တဲ့ဒုက္ခကနေ လွတ်မြောက်ချင်ရင်တော့ နယ်ဘက်မှာနေတာ အကောင်းဆုံးပဲလို့ ပြောချင်ပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m9-i3.mp3"
+        },
+        {
+          "text_en": "From my perspective, the fast pace of the city suits my lifestyle perfectly.",
+          "highlight": "the fast pace of the city",
+          "swap_en": "the slow pace of village life · the quiet atmosphere of the countryside",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ မြို့ပြရဲ့ အလုပ်ရှုပ်တဲ့ပုံစံက ကျွန်တော့်နေထိုင်မှုပုံစံနဲ့ အရမ်းကိုက်ညီပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m9-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Admitting a disadvantage",
+      "move_mm": "အားနည်းချက်တစ်ခုကို ဝန်ခံပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think city life is too noisy.",
+          "highlight": "too noisy",
+          "swap_en": "very crowded · quite expensive · too busy",
+          "gloss_mm": "မြို့ပြဘဝက အရမ်းဆူညံတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m10-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, living in the countryside can be a bit boring.",
+          "highlight": "a bit boring",
+          "swap_en": "a bit lonely · quite inconvenient · too quiet",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ နယ်ဘက်မှာနေရတာ နည်းနည်းပျင်းဖို့ကောင်းနိုင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m10-i2.mp3"
+        },
+        {
+          "text_en": "I'd say the main downside of city living is the constant traffic jams.",
+          "highlight": "the constant traffic jams",
+          "swap_en": "the high cost of living · the lack of green space · the pollution",
+          "gloss_mm": "မြို့မှာနေရတဲ့ အဓိကအားနည်းချက်ကတော့ ယာဉ်ကြောပိတ်ဆို့မှုတွေ မပြတ်ဖြစ်နေတာပဲလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing with someone's view",
+      "move_mm": "သူများအမြင်ကို ထောက်ခံကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think you are right about the traffic in Yangon.",
+          "highlight": "you are right",
+          "swap_en": "you are totally right · you've got a point",
+          "gloss_mm": "ရန်ကုန်က ယာဉ်ကြောပိတ်ဆို့မှုအကြောင်း ပြောတာ အမှန်ပဲ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m11-i1.mp3"
+        },
+        {
+          "text_en": "I totally agree that living in the countryside is more peaceful.",
+          "highlight": "totally agree",
+          "swap_en": "completely agree · agree with you",
+          "gloss_mm": "နယ်ဘက်မှာနေရတာ ပိုအေးချမ်းတယ်ဆိုတာကို ကျွန်တော် လုံးဝသဘောတူပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m11-i2.mp3"
+        },
+        {
+          "text_en": "In my opinion, you hit the nail on the head regarding the high cost of living.",
+          "highlight": "hit the nail on the head",
+          "swap_en": "hit the mark · made a fair point",
+          "gloss_mm": "ကုန်ဈေးနှုန်းကြီးမြင့်မှုနဲ့ပတ်သက်ပြီး မင်းပြောတာ အချက်ကျပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m11-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Disagreeing politely",
+      "move_mm": "ယဉ်ယဉ်ကျေးကျေးနဲ့ သဘောမတူကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I'm afraid I don't really agree that city life is better.",
+          "highlight": "I'm afraid I don't really agree that",
+          "swap_en": "I'm not sure if I agree that · I don't totally agree that",
+          "gloss_mm": "မြို့ပြဘဝက ပိုသာတယ်ဆိုတာကိုတော့ ကျွန်တော် သဘောမတူနိုင်ဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m12-i1.mp3"
+        },
+        {
+          "text_en": "I see your point, but I think the countryside is actually more peaceful.",
+          "highlight": "I see your point, but",
+          "swap_en": "That's a fair point, but · I understand what you mean, but",
+          "gloss_mm": "ပြောတာလည်း ဟုတ်ပါတယ်၊ ဒါပေမဲ့ နယ်ဘက်က ပိုပြီး အေးချမ်းတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m12-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that's debatable, as living in Yangon can be quite stressful.",
+          "highlight": "I'd say that's debatable",
+          "swap_en": "I'm not so sure about that · I have a different take on that",
+          "gloss_mm": "ရန်ကုန်မှာနေရတာ စိတ်ဖိစီးမှုများတဲ့အတွက် အဲဒီအချက်ကိုတော့ ပြန်စဉ်းစားရမယ်ထင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about future plans",
+      "move_mm": "နောင်တစ်ချိန် ဘယ်မှာနေချင်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think I will live in Yangon.",
+          "highlight": "I will live in Yangon",
+          "swap_en": "I will move to the countryside · I will stay in Mandalay · I will go abroad",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်မှာပဲ နေမယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m13-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, settling down in a quiet village is better.",
+          "highlight": "settling down in a quiet village",
+          "swap_en": "retiring in the countryside · moving back to my hometown · living near a pagoda",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရဆိုရင်တော့ တိတ်ဆိတ်တဲ့ ကျေးရွာလေးမှာပဲ အခြေချနေထိုင်တာ ပိုကောင်းမယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m13-i2.mp3"
+        },
+        {
+          "text_en": "I'd say I'd prefer the convenience of city life for the next few years.",
+          "highlight": "the convenience of city life",
+          "swap_en": "the peace and quiet of the countryside · the fresh air of the rural area",
+          "gloss_mm": "လာမယ့်နှစ်အနည်းငယ်အတွက်တော့ မြို့ပြရဲ့ အဆင်ပြေချောင်ချိမှုကိုပဲ ပိုသဘောကျတယ်လို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m13-i3.mp3"
+        },
+        {
+          "text_en": "I'm planning on relocating to somewhere more peaceful once I retire.",
+          "highlight": "relocating to somewhere more peaceful",
+          "swap_en": "moving to a place away from the city noise · settling down in a greener area",
+          "gloss_mm": "အလုပ်ကအနားယူရင် ပိုပြီးအေးချမ်းတဲ့နေရာတစ်ခုကို ပြောင်းဖို့ စီစဉ်ထားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m13-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing your point of view",
+      "move_mm": "ကိုယ့်အမြင်ကို အနှစ်ချုပ်ပြီး ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think city life is better.",
+          "highlight": "city life is better",
+          "swap_en": "countryside life is better · city life is more convenient · the countryside is more peaceful",
+          "gloss_mm": "ကျွန်တော်ကတော့ မြို့ပြဘဝက ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m14-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, the countryside is more relaxing.",
+          "highlight": "the countryside is more relaxing",
+          "swap_en": "the city is too busy · city life is more exciting · the countryside is too quiet",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ နယ်ဘက်က ပိုပြီး စိတ်အေးချမ်းရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m14-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that living in Yangon offers more opportunities than living in a small village.",
+          "highlight": "living in Yangon offers more opportunities",
+          "swap_en": "city life is more fast-paced · the countryside provides a better quality of life",
+          "gloss_mm": "ကျွန်တော်ပြောရရင်တော့ ရန်ကုန်မှာနေတာက ရွာလေးမှာနေတာထက် အခွင့်အလမ်း ပိုများတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m14-i3.mp3"
+        },
+        {
+          "text_en": "Overall, I prefer the peacefulness of the countryside over the hustle and bustle of Mandalay.",
+          "highlight": "I prefer the peacefulness of the countryside over the hustle and bustle of Mandalay",
+          "swap_en": "I prefer the convenience of the city over the slow pace of the country",
+          "gloss_mm": "ခြုံပြောရရင်တော့ မန္တလေးမြို့ကြီးရဲ့ ဆူညံပူလောင်မှုထက် နယ်ဘက်ရဲ့ တိတ်ဆိတ်အေးချမ်းမှုကို ပိုသဘောကျတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m14-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your statement",
+      "move_mm": "စကားကို အဆုံးသတ်ပြီး အတည်ပြုပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think city life is better for me.",
+          "highlight": "better for me",
+          "swap_en": "not my cup of tea · the best choice · a bit too busy for me",
+          "gloss_mm": "ကျွန်တော့်အတွက်တော့ မြို့ပြဘဝက ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m15-i1.mp3"
+        },
+        {
+          "text_en": "All things considered, I prefer living in the countryside.",
+          "highlight": "All things considered",
+          "swap_en": "At the end of the day · When it comes down to it",
+          "gloss_mm": "အရာအားလုံးကို ခြုံငုံကြည့်ရင်တော့ နယ်ဘက်မှာပဲ နေရတာ ပိုသဘောကျတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m15-i2.mp3"
+        },
+        {
+          "text_en": "In my opinion, the peace of the village outweighs the convenience of Yangon.",
+          "highlight": "outweighs",
+          "swap_en": "is better than · is more important than",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ရန်ကုန်ရဲ့ အဆင်ပြေမှုထက် ရွာလေးရဲ့ ငြိမ်းချမ်းမှုက ပိုပြီး တန်ဖိုးရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m15-i3.mp3"
+        },
+        {
+          "text_en": "Ultimately, it really depends on what you value most in life.",
+          "highlight": "Ultimately",
+          "swap_en": "In the final analysis · To sum it all up",
+          "gloss_mm": "နောက်ဆုံးတော့ ဘဝမှာ ကိုယ်ဘာကို အဓိကထားလဲဆိုတဲ့အပေါ်မှာပဲ မူတည်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/city_vs_countryside/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 6–10 sentences about where you prefer to live (city or countryside). Explain why you prefer it, mention one advantage of the other side, and share a brief example from your life.",
+    "prompt_mm": "သင် မြို့မှာနေရတာ ပိုကြိုက်လား၊ နယ်မှာနေရတာ ပိုကြိုက်လားဆိုတာကို စာကြောင်းရေ ၆ ကြောင်းကနေ ၁၀ ကြောင်းအတွင်း ရေးပါ။ ဘာကြောင့်ကြိုက်တာလဲ၊ မကြိုက်တဲ့ဘက်ရဲ့ အားသာချက်တစ်ခုကိုလည်း ထည့်ပြောပြီး ကိုယ့်အတွေ့အကြုံလေး တစ်ခုနဲ့ ဥပမာပေးပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "Stating preference",
+      "City advantages",
+      "Countryside peace",
+      "Personal experience",
+      "Contrasting view",
+      "Final conclusion"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to ensure you sound natural and confident.",
+    "speak_aloud_mm": "ရေးထားတဲ့ စာတွေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါလောက် ပြန်ဖတ်ကြည့်ပါ။ ဒါမှ ကိုယ့်အသံကို ပိုပြီး ယုံကြည်မှုရှိရှိနဲ့ သဘာဝကျကျ ပြောတတ်လာပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "I prefer living in the city. I strongly believe city life is more convenient. We have easy access to hospitals and malls. On the other hand, the countryside is very peaceful. The air is fresh and the nature is beautiful. However, city life is often expensive. My rent is very high every month. Sometimes, the city is too noisy for me. I think the countryside is better for retirement. In conclusion, I choose the city for now but the countryside for later.",
+    "model_mm": "ကျွန်တော်က မြို့မှာနေရတာကို ပိုသဘောကျတယ်။ မြို့ပြဘဝက ပိုအဆင်ပြေတယ်လို့ ကျွန်တော် ခိုင်ခိုင်မာမာ ယုံကြည်တယ်။ ဆေးရုံတွေနဲ့ စျေးဝယ်စင်တာတွေကို လွယ်လွယ်ကူကူ သွားလို့ရတယ်။ အခြားတစ်ဖက်မှာတော့ နယ်ဘက်က အရမ်းငြိမ်းချမ်းတယ်။ လေကောင်းလေသန့်ရပြီး သဘာဝတရားကလည်း လှပတယ်။ ဒါပေမဲ့ မြို့ပြဘဝက ကုန်ကျစရိတ်များတယ်။ ကျွန်တော့်ရဲ့ အိမ်လခက တစ်လကို အရမ်းများတယ်။ တစ်ခါတလေ မြို့က အရမ်းဆူညံတယ်။ အနားယူဖို့ဆိုရင်တော့ နယ်ဘက်က ပိုကောင်းတယ်လို့ ထင်တယ်။ အနှစ်ချုပ်ရရင်တော့ အခုလောလောဆယ် မြို့မှာနေပြီး နောင်တစ်ချိန်ကျမှ နယ်ဘက်မှာ နေချင်တယ်။",
+    "breakdown": [
+      {
+        "text_en": "I prefer living in the city.",
+        "gloss_mm": "ကျွန်တော်က မြို့မှာနေရတာကို ပိုသဘောကျတယ်။",
+        "why_mm": "ကိုယ့်ရဲ့ အကြိုက်ဆုံးနေရာကို အရင်ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I strongly believe city life is more convenient.",
+        "gloss_mm": "မြို့ပြဘဝက ပိုအဆင်ပြေတယ်လို့ ကျွန်တော် ခိုင်ခိုင်မာမာ ယုံကြည်တယ်။",
+        "why_mm": "ကိုယ့်အမြင်ကို ခိုင်ခိုင်မာမာ ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "We have easy access to hospitals and malls.",
+        "gloss_mm": "ဆေးရုံတွေနဲ့ စျေးဝယ်စင်တာတွေကို လွယ်လွယ်ကူကူ သွားလို့ရတယ်။",
+        "why_mm": "မြို့ပြရဲ့ အဆင်ပြေမှုတွေအကြောင်း ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "On the other hand, the countryside is very peaceful.",
+        "gloss_mm": "အခြားတစ်ဖက်မှာတော့ နယ်ဘက်က အရမ်းငြိမ်းချမ်းတယ်။",
+        "why_mm": "အခြားတစ်ဖက်မှာဆိုပြီး အချက်နှစ်ခုကို နှိုင်းယှဉ်ခြင်း။"
+      },
+      {
+        "text_en": "The air is fresh and the nature is beautiful.",
+        "gloss_mm": "လေကောင်းလေသန့်ရပြီး သဘာဝတရားကလည်း လှပတယ်။",
+        "why_mm": "နယ်ဘက်ရဲ့ ငြိမ်းချမ်းမှုနဲ့ သဘာဝအလှအကြောင်း ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "However, city life is often expensive.",
+        "gloss_mm": "ဒါပေမဲ့ မြို့ပြဘဝက ကုန်ကျစရိတ်များတယ်။",
+        "why_mm": "ကုန်ကျစရိတ်နဲ့ ပတ်သက်ပြီး ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "My rent is very high every month.",
+        "gloss_mm": "ကျွန်တော့်ရဲ့ အိမ်လခက တစ်လကို အရမ်းများတယ်။",
+        "why_mm": "ကိုယ့်အတွေ့အကြုံ တစ်ခုခုကို ဥပမာပေးခြင်း။"
+      },
+      {
+        "text_en": "Sometimes, the city is too noisy for me.",
+        "gloss_mm": "တစ်ခါတလေ မြို့က အရမ်းဆူညံတယ်။",
+        "why_mm": "အားနည်းချက်တစ်ခုကို ဝန်ခံပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I think the countryside is better for retirement.",
+        "gloss_mm": "အနားယူဖို့ဆိုရင်တော့ နယ်ဘက်က ပိုကောင်းတယ်လို့ ထင်တယ်။",
+        "why_mm": "နောင်တစ်ချိန် ဘယ်မှာနေချင်လဲ ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "In conclusion, I choose the city for now but the countryside for later.",
+        "gloss_mm": "အနှစ်ချုပ်ရရင်တော့ အခုလောလောဆယ် မြို့မှာနေပြီး နောင်တစ်ချိန်ကျမှ နယ်ဘက်မှာ နေချင်တယ်။",
+        "why_mm": "ကိုယ့်အမြင်ကို အနှစ်ချုပ်ပြီး အဆုံးသတ်ခြင်း။"
+      }
+    ],
+    "template": "I prefer living in the {preferred_location}. I strongly believe {city_or_country} life is more {positive_quality}. We have easy access to {city_facility}. On the other hand, the {opposite_location} is very {peaceful_quality}. The {nature_aspect} is fresh and the {scenery_aspect} is beautiful. However, {city_or_country} life is often {negative_aspect}. My {cost_item} is very high every month. Sometimes, the city is too {noisy_quality} for me. I think the {retirement_location} is better for retirement. In conclusion, I choose the {current_choice} for now but the {future_choice} for later.",
+    "slots": [
+      {
+        "id": "preferred_location",
+        "label_en": "Preferred location",
+        "label_mm": "ကြိုက်နှစ်သက်ရာနေရာ",
+        "hint": "ဘယ်မှာနေရတာကို ကြိုက်လဲ",
+        "options": [
+          "city",
+          "countryside"
+        ]
+      },
+      {
+        "id": "city_or_country",
+        "label_en": "City or Country",
+        "label_mm": "မြို့လား နယ်လား",
+        "hint": "ဘယ်အရာကို အဓိကထားမလဲ",
+        "options": [
+          "city",
+          "countryside"
+        ]
+      },
+      {
+        "id": "positive_quality",
+        "label_en": "Positive quality",
+        "label_mm": "ကောင်းတဲ့အချက်",
+        "hint": "ဘာကြောင့်ကောင်းတာလဲ",
+        "options": [
+          "convenient",
+          "relaxing",
+          "exciting"
+        ]
+      },
+      {
+        "id": "city_facility",
+        "label_en": "City facility",
+        "label_mm": "မြို့ပြရဲ့ အဆောက်အအုံများ",
+        "hint": "မြို့မှာ ဘာတွေရှိလဲ",
+        "options": [
+          "hospitals and malls",
+          "modern offices",
+          "public transport"
+        ]
+      },
+      {
+        "id": "opposite_location",
+        "label_en": "Opposite location",
+        "label_mm": "ဆန့်ကျင်ဘက်နေရာ",
+        "hint": "ခုနကနေရာနဲ့ ဆန့်ကျင်ဘက်",
+        "options": [
+          "countryside",
+          "city"
+        ]
+      },
+      {
+        "id": "peaceful_quality",
+        "label_en": "Peaceful quality",
+        "label_mm": "ငြိမ်းချမ်းမှုအမျိုးအစား",
+        "hint": "နယ်ဘက်က ဘယ်လိုလဲ",
+        "options": [
+          "peaceful",
+          "quiet",
+          "calm"
+        ]
+      },
+      {
+        "id": "nature_aspect",
+        "label_en": "Nature aspect",
+        "label_mm": "သဘာဝပတ်ဝန်းကျင်",
+        "hint": "သဘာဝရဲ့ ဘယ်အရာကို ကြိုက်လဲ",
+        "options": [
+          "air",
+          "environment",
+          "breeze"
+        ]
+      },
+      {
+        "id": "scenery_aspect",
+        "label_en": "Scenery aspect",
+        "label_mm": "ရှုခင်း",
+        "hint": "ဘာတွေလှလဲ",
+        "options": [
+          "nature",
+          "scenery",
+          "landscape"
+        ]
+      },
+      {
+        "id": "negative_aspect",
+        "label_en": "Negative aspect",
+        "label_mm": "အားနည်းချက်",
+        "hint": "ဘာတွေက ခက်ခဲလဲ",
+        "options": [
+          "expensive",
+          "stressful",
+          "busy"
+        ]
+      },
+      {
+        "id": "cost_item",
+        "label_en": "Cost item",
+        "label_mm": "ကုန်ကျစရိတ်",
+        "hint": "ဘာဈေးကြီးလဲ",
+        "options": [
+          "rent",
+          "daily expenses",
+          "cost of living"
+        ]
+      },
+      {
+        "id": "noisy_quality",
+        "label_en": "Noisy quality",
+        "label_mm": "ဆူညံမှု",
+        "hint": "မြို့က ဘာကြောင့်ဆူညံတာလဲ",
+        "options": [
+          "noisy",
+          "crowded",
+          "hectic"
+        ]
+      },
+      {
+        "id": "retirement_location",
+        "label_en": "Retirement location",
+        "label_mm": "အနားယူမယ့်နေရာ",
+        "hint": "အသက်ကြီးရင် ဘယ်မှာနေမလဲ",
+        "options": [
+          "countryside",
+          "small town",
+          "city"
+        ]
+      },
+      {
+        "id": "current_choice",
+        "label_en": "Current choice",
+        "label_mm": "လက်ရှိနေမယ့်နေရာ",
+        "hint": "အခုဘယ်မှာနေမလဲ",
+        "options": [
+          "city",
+          "countryside"
+        ]
+      },
+      {
+        "id": "future_choice",
+        "label_en": "Future choice",
+        "label_mm": "နောင်တစ်ချိန်နေမယ့်နေရာ",
+        "hint": "နောက်မှဘယ်မှာနေမလဲ",
+        "options": [
+          "countryside",
+          "city"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level2/city_vs_countryside/guide-model.mp3"
+  }
+}

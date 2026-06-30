@@ -1,0 +1,538 @@
+{
+  "id": "my_weekend",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "My Weekend",
+  "title_mm": "ကျွန်ုပ်၏ စနေ၊ တနင်္ဂနွေနေ့များ (My Weekend)",
+  "promise_en": "Learn to talk about your weekend routines, relaxation, and hobbies with confidence.",
+  "promise_mm": "ရုံးပိတ်ရက်တွေမှာ ကိုယ်ဘာတွေလုပ်လဲ၊ ဘယ်လိုအနားယူလဲဆိုတာကို ယုံကြည်မှုရှိရှိ ပြောတတ်လာမှာပါ။",
+  "intro_en": "Weekends are a break from our busy lives. Whether you like to sleep in, meet friends at a tea shop, or do household chores, this topic helps you share your lifestyle.",
+  "intro_mm": "ရုံးပိတ်ရက်တွေဟာ အလုပ်ရှုပ်တဲ့နေ့ရက်တွေကနေ ခဏတာ အနားယူရတဲ့အချိန်ပါ။ လက်ဖက်ရည်ဆိုင်ထိုင်တာ၊ အိမ်မှုကိစ္စလုပ်တာ ဒါမှမဟုတ် အိပ်ချိန်ပြည့်အောင်အိပ်တာပဲဖြစ်ဖြစ် ကိုယ့်ရဲ့ပိတ်ရက်ပုံစံအကြောင်း ပြောပြဖို့ ဒီသင်ခန်းစာက ကူညီပေးပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Saying how you feel about weekends",
+      "move_mm": "ပိတ်ရက်ကို ဘယ်လိုသဘောထားလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I really like the weekend.",
+          "highlight": "really like the weekend",
+          "swap_en": "love the weekend · enjoy the weekend · look forward to the weekend",
+          "gloss_mm": "ကျွန်တော် ပိတ်ရက်တွေကို တကယ် သဘောကျတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "The weekend is my favorite time of the week.",
+          "highlight": "my favorite time of the week",
+          "swap_en": "the best part of my week · a relaxing time for me",
+          "gloss_mm": "ပိတ်ရက်က တစ်ပတ်တာမှာ ကျွန်တော် အကြိုက်ဆုံးအချိန်ပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I always treasure my weekends because I get to recharge.",
+          "highlight": "treasure my weekends",
+          "swap_en": "cherish my weekends · value my weekends",
+          "gloss_mm": "စွမ်းအင်ပြန်ဖြည့်နိုင်တာမို့ ပိတ်ရက်တွေကို အမြဲ တန်ဖိုးထားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your sleeping habits",
+      "move_mm": "အိပ်စက်တဲ့ အလေ့အထ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually sleep at 10 p.m.",
+          "highlight": "sleep at 10 p.m.",
+          "swap_en": "sleep at midnight · wake up at 6 a.m. · get up early",
+          "gloss_mm": "ကျွန်တော်က ပုံမှန်အားဖြင့် ည ၁၀ နာရီမှာ အိပ်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I like to sleep in on Saturdays.",
+          "highlight": "sleep in",
+          "swap_en": "stay in bed late · catch up on sleep",
+          "gloss_mm": "စနေနေ့ဆိုရင် အိပ်ရေးဝအောင် အိပ်ရတာ ကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I tend to be a night owl on the weekends.",
+          "highlight": "be a night owl",
+          "swap_en": "be an early bird · struggle to wake up",
+          "gloss_mm": "တနင်္ဂနွေနေ့တွေဆိုရင် ညဉ့်နက်တဲ့အထိ အိပ်မပျော်ဘဲ နေတတ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about household chores",
+      "move_mm": "အိမ်မှုကိစ္စတွေ လုပ်တာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually do the laundry on Saturdays.",
+          "highlight": "do the laundry",
+          "swap_en": "clean the house · wash the dishes · sweep the floor",
+          "gloss_mm": "ကျွန်တော် စနေနေ့တိုင်း အဝတ်လျှော်လေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I spend my Sunday morning tidying up the room.",
+          "highlight": "tidying up the room",
+          "swap_en": "doing the grocery shopping · watering the plants · ironing my clothes",
+          "gloss_mm": "ကျွန်တော် တနင်္ဂနွေမနက်ခင်းကို အခန်းရှင်းရင်းနဲ့ ကုန်ဆုံးတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I try to get all my chores out of the way before noon.",
+          "highlight": "get all my chores out of the way",
+          "swap_en": "finish all my housework · clear my to-do list",
+          "gloss_mm": "နေ့လည်မတိုင်ခင် အိမ်မှုကိစ္စတွေကို အပြီးလုပ်ဖို့ ကြိုးစားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing your shopping habits",
+      "move_mm": "ဈေးဝယ်ထွက်တာနဲ့ ပတ်သက်ပြီး ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually go shopping on Sundays.",
+          "highlight": "go shopping",
+          "swap_en": "buy groceries · do my shopping · head to the market",
+          "gloss_mm": "ကျွန်တော် အားလပ်ရက်တွေဆို ဈေးဝယ်ထွက်လေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I like to visit the supermarket to pick up some things.",
+          "highlight": "pick up some things",
+          "swap_en": "grab a few essentials · stock up on food · get some stuff",
+          "gloss_mm": "ဈေးဝယ်စင်တာသွားပြီး လိုအပ်တာလေးတွေ ဝယ်ရတာ ကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I often spend my Saturday mornings browsing for clothes.",
+          "highlight": "browsing for",
+          "swap_en": "hunting for · checking out · looking for",
+          "gloss_mm": "စနေနေ့မနက်ပိုင်းတွေဆို အဝတ်အစား လျှောက်ကြည့်ရတာ ဝါသနာပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I tend to do my weekly shopping in bulk to save time.",
+          "highlight": "do my weekly shopping in bulk",
+          "swap_en": "hit the market for the whole week · get all my groceries in one go",
+          "gloss_mm": "အချိန်ကုန်သက်သာအောင် တစ်ပတ်စာကို တစ်ခါတည်း အများကြီး ဝယ်လေ့ရှိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning social outings with friends",
+      "move_mm": "သူငယ်ချင်းတွေနဲ့ အပြင်သွားတာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I go out with my friends.",
+          "highlight": "go out with my friends",
+          "swap_en": "hang out with my friends · meet up with my friends",
+          "gloss_mm": "သူငယ်ချင်းတွေနဲ့ အပြင်သွားဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We usually hang out at a tea shop.",
+          "highlight": "hang out at a tea shop",
+          "swap_en": "grab a coffee at a cafe · have dinner at a restaurant · go to the cinema",
+          "gloss_mm": "ကျွန်တော်တို့က များသောအားဖြင့် လက်ဖက်ရည်ဆိုင်မှာ ထိုင်ဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm planning to catch up with some friends this weekend.",
+          "highlight": "catch up with some friends",
+          "swap_en": "meet up with some old friends · grab a bite with some friends",
+          "gloss_mm": "ဒီတစ်ပတ်မှာ သူငယ်ချင်းတွေနဲ့ တွေ့ပြီး အကြောင်းအရာလေးတွေ ပြောဖြစ်ဖို့ စီစဉ်ထားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "We often end up at a local spot near the pagoda.",
+          "highlight": "end up at a local spot",
+          "swap_en": "hang out at a quiet cafe · spend the evening at a mall",
+          "gloss_mm": "နောက်ဆုံးတော့ ဘုရားနားက နေရာတစ်ခုခုမှာပဲ ရောက်သွားတတ်ကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about visits to tea shops or cafes",
+      "move_mm": "လက်ဖက်ရည်ဆိုင် ဒါမှမဟုတ် ကော်ဖီဆိုင်ထိုင်တာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I often go to a tea shop on weekends.",
+          "highlight": "go to a tea shop",
+          "swap_en": "go to a café · hang out at a tea shop",
+          "gloss_mm": "ကျွန်တော် အားလပ်ရက်တွေဆို လက်ဖက်ရည်ဆိုင်သွားလေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I like spending my Sunday morning at a local café.",
+          "highlight": "spending my Sunday morning",
+          "swap_en": "spending my Saturday afternoon · relaxing on Sunday morning",
+          "gloss_mm": "ကျွန်တော် တနင်္ဂနွေမနက်ခင်းတွေကို ဒေသခံကော်ဖီဆိုင်မှာ အချိန်ဖြုန်းရတာ ကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It has become a routine of mine to grab a coffee at a shop near Shwedagon.",
+          "highlight": "become a routine of mine",
+          "swap_en": "become a weekend habit of mine · part of my weekend routine",
+          "gloss_mm": "ရွှေတိဂုံဘုရားနားက ကော်ဖီဆိုင်မှာ ကော်ဖီသောက်တာ ကျွန်တော့်ရဲ့ အလေ့အကျင့်တစ်ခု ဖြစ်နေပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your hobbies",
+      "move_mm": "ဝါသနာပါရာ ဝါသနာရှင်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like reading books on weekends.",
+          "highlight": "reading books",
+          "swap_en": "watching movies · cooking for my family · playing football",
+          "gloss_mm": "စနေ၊ တနင်္ဂနွေမှာ စာဖတ်ရတာကို ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm really into going to tea shops with my friends.",
+          "highlight": "going to tea shops",
+          "swap_en": "visiting pagodas · hiking in the morning · hanging out at the mall",
+          "gloss_mm": "သူငယ်ချင်းတွေနဲ့ လက်ဖက်ရည်ဆိုင်ထိုင်ရတာကို အရမ်းသဘောကျတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I usually spend my free time practicing photography.",
+          "highlight": "practicing photography",
+          "swap_en": "learning a new language · doing some gardening · listening to podcasts",
+          "gloss_mm": "အားလပ်ချိန်တွေမှာ ဓာတ်ပုံရိုက်တာကို လေ့ကျင့်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm a big fan of exploring new cafes around Yangon.",
+          "highlight": "exploring new cafes",
+          "swap_en": "trying out new recipes · playing online games · cycling around the city",
+          "gloss_mm": "ရန်ကုန်မြို့ထဲက ကော်ဖီဆိုင်အသစ်လေးတွေ လိုက်ရှာရတာကို အရမ်းဝါသနာပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about family time",
+      "move_mm": "မိသားစုနဲ့ အချိန်ဖြုန်းတာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I spend the weekend with my family.",
+          "highlight": "spend the weekend with my family",
+          "swap_en": "spend the weekend with my parents · spend the weekend at home",
+          "gloss_mm": "ကျွန်တော် အားလပ်ရက်ကို မိသားစုနဲ့ အတူကုန်ဆုံးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We usually go out for a meal together.",
+          "highlight": "go out for a meal together",
+          "swap_en": "go to the park together · watch a movie together · visit my grandparents",
+          "gloss_mm": "ကျွန်တော်တို့ မိသားစု အမြဲတမ်း အပြင်ထွက်ပြီး အတူတူ ထမင်းစားဖြစ်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It is a great time to catch up with my family.",
+          "highlight": "catch up with my family",
+          "swap_en": "catch up with my siblings · bond with my family",
+          "gloss_mm": "မိသားစုနဲ့ အတူရှိနေရတဲ့အချိန်က တစ်ယောက်နဲ့တစ်ယောက် အကြောင်းအရာတွေ ပြောပြဖို့ အကောင်းဆုံးပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing weekend and weekday routines",
+      "move_mm": "ရုံးပိတ်ရက်နဲ့ လုပ်ငန်းခွင်နေ့ရက်တွေကို နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually work on weekdays, but I rest on weekends.",
+          "highlight": "work on weekdays",
+          "swap_en": "busy on weekdays · tied up with work on weekdays",
+          "gloss_mm": "လုပ်ငန်းခွင်ရက်တွေမှာတော့ အလုပ်လုပ်ရပေမဲ့ ရုံးပိတ်ရက်တွေမှာတော့ နားပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "My weekend routine is totally different from my weekday routine.",
+          "highlight": "totally different from",
+          "swap_en": "a complete change from · a bit different from",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ ရုံးပိတ်ရက်ပုံစံက ရုံးလုပ်ငန်းခွင်ရက်တွေနဲ့ လုံးဝကို ကွာခြားပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "On weekdays I'm tied to my desk, but I try to get out and about on weekends.",
+          "highlight": "tied to my desk",
+          "swap_en": "stuck at the office · busy with meetings",
+          "gloss_mm": "ရုံးပိတ်ရက်တွေမှာတော့ အပြင်ထွက်ဖြစ်အောင် ကြိုးစားပေမဲ့ လုပ်ငန်းခွင်ရက်တွေမှာတော့ ရုံးစားပွဲမှာပဲ အလုပ်နဲ့ လုံးပန်းနေရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Unlike the hectic pace of my work week, my weekends are usually slow and relaxed.",
+          "highlight": "hectic pace of my work week",
+          "swap_en": "busy schedule of my work week · chaotic work week",
+          "gloss_mm": "အလုပ်ရက်တွေရဲ့ အလုပ်ရှုပ်တဲ့ အရှိန်အဟုန်နဲ့ မတူဘဲ ရုံးပိတ်ရက်တွေကတော့ အေးအေးဆေးဆေးပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your preference for staying in vs. going out",
+      "move_mm": "အိမ်မှာနေတာ ဒါမှမဟုတ် အပြင်သွားတာ ဘာပိုကြိုက်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I prefer staying at home on weekends.",
+          "highlight": "prefer staying at home",
+          "swap_en": "prefer going out · like staying in · enjoy relaxing at home",
+          "gloss_mm": "ကျွန်တော် အားလပ်ရက်ဆို အိမ်မှာပဲ နေရတာ ပိုကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm more of an indoor person.",
+          "highlight": "an indoor person",
+          "swap_en": "a homebody · an outdoor person · someone who likes to go out",
+          "gloss_mm": "ကျွန်တော်က အိမ်မှာပဲ နေရတာ ပိုသဘောကျတဲ့သူပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "After a busy week, I'd rather just recharge at home.",
+          "highlight": "recharge at home",
+          "swap_en": "stay in and relax · chill at home · catch up on sleep",
+          "gloss_mm": "အလုပ်ရှုပ်တဲ့ တစ်ပတ်တာအပြီးမှာတော့ အိမ်မှာပဲ နားပြီး အားပြန်ဖြည့်ရတာ ပိုကောင်းပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I find going out a bit draining, so I'd much rather stay in.",
+          "highlight": "find going out a bit draining",
+          "swap_en": "feel like going out is exhausting · prefer the comfort of home",
+          "gloss_mm": "အပြင်သွားရတာ နည်းနည်း ပင်ပန်းတယ်လို့ ခံစားရလို့ အိမ်မှာပဲ နေရတာကို ပိုသဘောကျတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about exercise or physical activities",
+      "move_mm": "ကိုယ်လက်လေ့ကျင့်ခန်း လုပ်တာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually go for a walk on Saturday.",
+          "highlight": "go for a walk",
+          "swap_en": "go for a jog · exercise · play football",
+          "gloss_mm": "ကျွန်တော် စနေနေ့တိုင်း လမ်းလျှောက်ထွက်လေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I like to hit the gym on Sunday mornings.",
+          "highlight": "hit the gym",
+          "swap_en": "go to the gym · do some yoga · go swimming",
+          "gloss_mm": "ကျွန်တော် တနင်္ဂနွေမနက်တိုင်း အားကစားရုံသွားပြီး လေ့ကျင့်ခန်းလုပ်ရတာ ကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I try to keep myself active by going for a hike.",
+          "highlight": "keep myself active",
+          "swap_en": "stay fit · stay in shape",
+          "gloss_mm": "တောင်တက်ရင်းနဲ့ ကိုယ်လက်လှုပ်ရှားမှုရှိအောင် ကြိုးစားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning religious activities like pagoda visits",
+      "move_mm": "ဘုရားဖူးတာလိုမျိုး ဘာသာရေးလုပ်ဆောင်ချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I went to the pagoda on Sunday.",
+          "highlight": "went to the pagoda",
+          "swap_en": "visited a pagoda · went to Shwedagon Pagoda · visited a monastery",
+          "gloss_mm": "တနင်္ဂနွေနေ့က ဘုရားသွားဖူးတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We usually visit the pagoda over the weekend.",
+          "highlight": "visit the pagoda",
+          "swap_en": "go to the pagoda · offer flowers at the temple · pay homage to the Buddha",
+          "gloss_mm": "ကျွန်တော်တို့က စနေ၊ တနင်္ဂနွေဆို ဘုရားသွားဖူးလေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It's become our weekly ritual to pay homage at the pagoda.",
+          "highlight": "pay homage at the pagoda",
+          "swap_en": "visit the local monastery · offer alms to monks",
+          "gloss_mm": "ဘုရားသွားဖူးတာက ကျွန်တော်တို့ရဲ့ အပတ်စဉ်လုပ်နေကျ အလုပ်တစ်ခုလို ဖြစ်နေပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing planning for the upcoming week",
+      "move_mm": "လာမယ့်အပတ်အတွက် စီစဉ်တာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am going to work on Monday.",
+          "highlight": "going to work",
+          "swap_en": "visiting my parents · starting a new project · meeting my friends",
+          "gloss_mm": "တနင်္လာနေ့ကျရင် အလုပ်သွားဖို့ ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I have a lot to do next week.",
+          "highlight": "a lot to do",
+          "swap_en": "a busy schedule · a few things to finish · some errands to run",
+          "gloss_mm": "လာမယ့်အပတ်မှာ လုပ်စရာတွေ အများကြီး ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm planning to catch up on some work.",
+          "highlight": "catch up on some work",
+          "swap_en": "finish up my reports · clear my pending tasks · get ahead of my schedule",
+          "gloss_mm": "ကျန်နေတဲ့ အလုပ်တွေကို အပြီးသတ်ဖို့ စီစဉ်ထားတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've got a packed schedule for the upcoming week.",
+          "highlight": "a packed schedule",
+          "swap_en": "a hectic week ahead · a pretty tight schedule",
+          "gloss_mm": "လာမယ့်အပတ်အတွက် အလုပ်တွေ တအားများပြီး အချိန်မရဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing a perfect weekend",
+      "move_mm": "စိတ်ကူးထဲက အကောင်းဆုံး ပိတ်ရက်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like to relax on the weekend.",
+          "highlight": "relax",
+          "swap_en": "stay at home · sleep in · go out with friends",
+          "gloss_mm": "ပိတ်ရက်ဆိုရင် ကျွန်တော် အနားယူရတာ ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "My ideal weekend is just chilling at a tea shop.",
+          "highlight": "chilling at a tea shop",
+          "swap_en": "hanging out at home · going to the park · watching movies",
+          "gloss_mm": "ကျွန်တော့်အတွက် အကောင်းဆုံး ပိတ်ရက်ကတော့ လက်ဖက်ရည်ဆိုင်မှာ အေးအေးဆေးဆေး ထိုင်ရတာမျိုးပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I love spending my Saturday unwinding after a long work week.",
+          "highlight": "unwinding after a long work week",
+          "swap_en": "catching up on sleep · doing absolutely nothing · exploring the city",
+          "gloss_mm": "တစ်ပတ်တာ အလုပ်တွေပြီးလို့ စနေနေ့မှာ စိတ်အေးလက်အေး နားနေရတာကို အရမ်းကြိုက်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing how you feel on Sunday night",
+      "move_mm": "တနင်္ဂနွေညမှာ ဘယ်လိုခံစားရလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I feel sad because the weekend is over.",
+          "highlight": "the weekend is over",
+          "swap_en": "the holiday is over · tomorrow is Monday",
+          "gloss_mm": "ရုံးပိတ်ရက်ကုန်သွားလို့ စိတ်မကောင်းဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm not ready for Monday morning.",
+          "highlight": "not ready for Monday morning",
+          "swap_en": "dreading the Monday morning rush · not looking forward to the new week",
+          "gloss_mm": "တနင်္လာနေ့မနက်အတွက် အဆင်သင့်မဖြစ်သေးဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Sunday nights always give me the blues.",
+          "highlight": "give me the blues",
+          "swap_en": "make me feel a bit down · leave me feeling restless",
+          "gloss_mm": "တနင်္ဂနွေညဆိုရင် အမြဲတမ်း စိတ်လေးလံသလို ခံစားရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm already dreading the piles of work waiting for me tomorrow.",
+          "highlight": "dreading the piles of work waiting for me",
+          "swap_en": "worrying about the busy week ahead · stressed about the meeting tomorrow morning",
+          "gloss_mm": "မနက်ဖြန် လုပ်ရမယ့် အလုပ်တွေ အပုံလိုက်ကြီးကို တွေးပြီး စိတ်ပူနေမိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about how you typically spend your weekends and why you enjoy them.",
+    "prompt_mm": "သင် ပုံမှန်အားဖြင့် စနေ၊ တနင်္ဂနွေနေ့တွေမှာ ဘာတွေလုပ်လေ့ရှိလဲ၊ ဘာကြောင့် ပိတ်ရက်တွေကို သဘောကျလဲဆိုတာ စာကြောင်း ၅ ကြောင်းမှ ၈ ကြောင်းကြား ရေးသားကြည့်ပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "Sleep in",
+      "Household chores",
+      "Tea shop",
+      "Hobbies",
+      "Family time",
+      "Relaxing",
+      "Weekday vs. Weekend",
+      "Sunday night"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your rhythm and flow.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့ စာသားကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါလောက် ဖတ်ကြည့်ပါ။ ဒါမှ သင့်ရဲ့ ပြောဆိုမှု အရှိန်အဟုန် မှန်ကန်လာမှာပါ။"
+  }
+}

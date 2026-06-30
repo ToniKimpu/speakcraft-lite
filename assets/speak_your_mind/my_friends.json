@@ -1,0 +1,754 @@
+{
+  "id": "my_friends",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "My Friends",
+  "title_mm": "ကျွန်ုပ်၏ သူငယ်ချင်းများ",
+  "promise_en": "Talk about your friends naturally and share stories about the bonds you share.",
+  "promise_mm": "သူငယ်ချင်းများအကြောင်းကို သဘာဝကျကျ ပြောတတ်လာပြီး သင်တို့ရဲ့ ရင်းနှီးမှုတွေကို မျှဝေနိုင်စေရမည်။",
+  "intro_en": "Friends are the family we choose. In this session, you will learn to describe who they are, how you met, and the fun times you spend together.",
+  "intro_mm": "သူငယ်ချင်းဆိုတာ ကိုယ်တိုင်ရွေးချယ်ထားတဲ့ မိသားစုပါပဲ။ ဒီသင်ခန်းစာမှာ သူငယ်ချင်းတွေအကြောင်း၊ ဘယ်လိုစသိခဲ့ကြလဲ၊ အတူတူ ဘာတွေလုပ်လေ့ရှိလဲဆိုတာကို ပြောတတ်အောင် သင်ယူကြပါမယ်။",
+  "toolbox": [
+    {
+      "move_en": "Saying who your friends are",
+      "move_mm": "သူငယ်ချင်းတွေက ဘယ်သူတွေလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My best friend is Htet Htet.",
+          "highlight": "My best friend",
+          "swap_en": "My close friend · My childhood friend · My work friend",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အရင်းနှီးဆုံး သူငယ်ချင်းက ထက်ထက်ပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m1-i1.mp3"
+        },
+        {
+          "text_en": "I usually hang out with Aung Aung.",
+          "highlight": "hang out with",
+          "swap_en": "spend time with · chill with",
+          "gloss_mm": "ကျွန်တော်က အောင်အောင်နဲ့ပဲ အချိန်အမြဲတမ်းလိုလို အတူကုန်ဆုံးဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m1-i2.mp3"
+        },
+        {
+          "text_en": "We've been friends since our university days.",
+          "highlight": "since our university days",
+          "swap_en": "since we were kids · for over ten years",
+          "gloss_mm": "ကျွန်တော်တို့က တက္ကသိုလ်တက်ကတည်းက သူငယ်ချင်းတွေပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m1-i3.mp3"
+        },
+        {
+          "text_en": "She is someone I can always count on.",
+          "highlight": "someone I can always count on",
+          "swap_en": "a friend who is always there for me · someone I trust completely",
+          "gloss_mm": "သူက ဘာပဲဖြစ်ဖြစ် အားကိုးလို့ရတဲ့ သူငယ်ချင်းမျိုးပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing how you met",
+      "move_mm": "ဘယ်လိုစသိခဲ့ကြလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We met at school.",
+          "highlight": "at school",
+          "swap_en": "at university · at work · at a tea shop",
+          "gloss_mm": "ကျွန်တော်တို့ ကျောင်းမှာ စတွေ့ခဲ့ကြတာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m2-i1.mp3"
+        },
+        {
+          "text_en": "We became friends in high school.",
+          "highlight": "in high school",
+          "swap_en": "at university · during my first year at work · at a friend's birthday party",
+          "gloss_mm": "ကျွန်တော်တို့ အထက်တန်းကျောင်းတုန်းက သူငယ်ချင်းတွေ ဖြစ်ခဲ့ကြတာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m2-i2.mp3"
+        },
+        {
+          "text_en": "We hit it off immediately when we first met.",
+          "highlight": "hit it off",
+          "swap_en": "became close · started talking",
+          "gloss_mm": "စတွေ့တဲ့အချိန်ကတည်းက စကားပြော အရမ်းတည့်သွားခဲ့တာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m2-i3.mp3"
+        },
+        {
+          "text_en": "It was through a mutual friend that we got to know each other.",
+          "highlight": "through a mutual friend",
+          "swap_en": "at a pagoda festival · by working on the same project",
+          "gloss_mm": "ကျွန်တော်တို့က ဘုံသူငယ်ချင်းတစ်ယောက်ကတစ်ဆင့် စသိခဲ့ကြတာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m2-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning how long you have known each other",
+      "move_mm": "သိကျွမ်းခဲ့တာ ဘယ်လောက်ကြာပြီလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We have known each other for five years.",
+          "highlight": "for five years",
+          "swap_en": "for ten years · for a long time · since high school",
+          "gloss_mm": "ကျွန်တော်တို့ သိကျွမ်းခဲ့တာ ငါးနှစ်ရှိပြီ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m3-i1.mp3"
+        },
+        {
+          "text_en": "We have been friends for over ten years.",
+          "highlight": "for over ten years",
+          "swap_en": "for ages · since we were kids · for about three years",
+          "gloss_mm": "ကျွန်တော်တို့ သူငယ်ချင်းဖြစ်လာတာ ဆယ်နှစ်ကျော်ပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m3-i2.mp3"
+        },
+        {
+          "text_en": "We go way back to our university days.",
+          "highlight": "go way back to our university days",
+          "swap_en": "go way back to our childhood · have known each other since primary school",
+          "gloss_mm": "ကျွန်တော်တို့က တက္ကသိုလ်တက်ကတည်းက ရင်းနှီးလာကြတာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing their personality",
+      "move_mm": "သူတို့ရဲ့ စရိုက်လက္ခဏာ ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "My friend is very kind.",
+          "highlight": "very kind",
+          "swap_en": "very funny · really friendly · quite shy",
+          "gloss_mm": "ကျွန်တော့်သူငယ်ချင်းက အရမ်းသဘောကောင်းတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m4-i1.mp3"
+        },
+        {
+          "text_en": "She has a great sense of humor.",
+          "highlight": "a great sense of humor",
+          "swap_en": "a positive attitude · a very generous heart · a short temper",
+          "gloss_mm": "သူမက ဟာသဉာဏ် အရမ်းကောင်းတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m4-i2.mp3"
+        },
+        {
+          "text_en": "He is the kind of person who is always there for me.",
+          "highlight": "always there for me",
+          "swap_en": "always willing to help · easy to talk to · always full of energy",
+          "gloss_mm": "သူက လိုအပ်တဲ့အချိန်တိုင်းမှာ အမြဲတမ်း အားကိုးလို့ရတဲ့သူမျိုးပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m4-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about their job or studies",
+      "move_mm": "သူတို့ရဲ့ အလုပ် သို့မဟုတ် ပညာရေးအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My friend is a student.",
+          "highlight": "a student",
+          "swap_en": "a doctor · a teacher · an engineer",
+          "gloss_mm": "ကျွန်တော့်သူငယ်ချင်းက ကျောင်းသားပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m5-i1.mp3"
+        },
+        {
+          "text_en": "He works at a bank in downtown Yangon.",
+          "highlight": "works at a bank",
+          "swap_en": "is studying at YU · runs a small shop · works for a private company",
+          "gloss_mm": "သူက ရန်ကုန်မြို့လယ်က ဘဏ်တစ်ခုမှာ အလုပ်လုပ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m5-i2.mp3"
+        },
+        {
+          "text_en": "She is currently pursuing her master's degree.",
+          "highlight": "pursuing her master's degree",
+          "swap_en": "studying for her final exams · working as a freelance designer · training to be a nurse",
+          "gloss_mm": "သူမက အခု မဟာဘွဲ့အတွက် ပညာသင်ယူနေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m5-i3.mp3"
+        },
+        {
+          "text_en": "He has been working as a software developer for three years.",
+          "highlight": "working as a software developer",
+          "swap_en": "teaching English at a private school · managing a café near Shwedagon Pagoda · working in the civil service",
+          "gloss_mm": "သူက software developer အဖြစ် အလုပ်လုပ်လာတာ ၃ နှစ်ရှိပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m5-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining why you like them",
+      "move_mm": "ဘာကြောင့် သူတို့ကို ခင်ရသလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like him because he is funny.",
+          "highlight": "he is funny",
+          "swap_en": "he is kind · she is helpful · he is honest",
+          "gloss_mm": "သူက လူရယ်မောအောင် လုပ်တတ်လို့ ကျွန်တော်ခင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m6-i1.mp3"
+        },
+        {
+          "text_en": "We get along really well because we share the same interests.",
+          "highlight": "share the same interests",
+          "swap_en": "have a lot in common · understand each other well",
+          "gloss_mm": "ကျွန်တော်တို့က ဝါသနာတူတော့ အဆင်ပြေကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m6-i2.mp3"
+        },
+        {
+          "text_en": "She is the kind of person who is always there for me when things get tough.",
+          "highlight": "always there for me",
+          "swap_en": "always listens to me · never judges me",
+          "gloss_mm": "အခက်အခဲရှိတဲ့အချိန်တိုင်း သူက အမြဲဘေးမှာ ရှိပေးတတ်တဲ့သူပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m6-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your best friend",
+      "move_mm": "အရင်းနှီးဆုံး သူငယ်ချင်းအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My best friend is Htet Htet.",
+          "highlight": "Htet Htet",
+          "swap_en": "Aung Aung · Min Min · Su Su",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အရင်းနှီးဆုံး သူငယ်ချင်းက ထက်ထက်ပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m7-i1.mp3"
+        },
+        {
+          "text_en": "We have been friends for ten years.",
+          "highlight": "ten years",
+          "swap_en": "five years · a long time · since high school",
+          "gloss_mm": "ကျွန်တော်တို့ သူငယ်ချင်းဖြစ်တာ ဆယ်နှစ်ရှိပါပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m7-i2.mp3"
+        },
+        {
+          "text_en": "We usually hang out at a tea shop.",
+          "highlight": "hang out at a tea shop",
+          "swap_en": "meet at the park · go for a walk · grab a coffee",
+          "gloss_mm": "ကျွန်တော်တို့က လက်ဖက်ရည်ဆိုင်မှာပဲ အချိန်ကုန်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m7-i3.mp3"
+        },
+        {
+          "text_en": "She is the person I can always count on.",
+          "highlight": "can always count on",
+          "swap_en": "can always rely on · can always trust",
+          "gloss_mm": "သူက ကျွန်တော် အမြဲအားကိုးလို့ရတဲ့ သူပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m7-i4.mp3"
+        },
+        {
+          "text_en": "We share a very close bond.",
+          "highlight": "very close bond",
+          "swap_en": "strong connection · deep friendship",
+          "gloss_mm": "ကျွန်တော်တို့နှစ်ယောက်က အရမ်းရင်းနှီးတဲ့ ဆက်ဆံရေး ရှိကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m7-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing common interests or hobbies",
+      "move_mm": "ဝါသနာတူတာတွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We both like playing football.",
+          "highlight": "playing football",
+          "swap_en": "watching movies · drinking tea at a tea shop · listening to music",
+          "gloss_mm": "ကျွန်တော်တို့နှစ်ယောက်လုံး ဘောလုံးကန်ရတာကို ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m8-i1.mp3"
+        },
+        {
+          "text_en": "My friend and I are into trying new cafes.",
+          "highlight": "are into trying new cafes",
+          "swap_en": "are into jogging at Kandawgyi Park · are into online gaming · are into photography",
+          "gloss_mm": "ကျွန်တော့်သူငယ်ချင်းနဲ့ကျွန်တော်က ကော်ဖီဆိုင်အသစ်တွေ လိုက်စမ်းရတာကို စိတ်ဝင်စားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m8-i2.mp3"
+        },
+        {
+          "text_en": "We share a passion for traveling around Myanmar.",
+          "highlight": "share a passion for traveling around Myanmar",
+          "swap_en": "share a passion for cooking traditional food · share a passion for learning new languages",
+          "gloss_mm": "ကျွန်တော်တို့နှစ်ယောက်လုံး မြန်မာပြည်အနှံ့ ခရီးသွားရတာကို အလွန်ဝါသနာပါကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about how often you meet",
+      "move_mm": "ဘယ်လောက် မကြာခဏ တွေ့ဖြစ်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I meet my friends every weekend.",
+          "highlight": "every weekend",
+          "swap_en": "every day · every month · once a week",
+          "gloss_mm": "ကျွန်တော် သူငယ်ချင်းတွေကို စနေ၊ တနင်္ဂနွေတိုင်း တွေ့ဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m9-i1.mp3"
+        },
+        {
+          "text_en": "We usually hang out at a tea shop once a week.",
+          "highlight": "once a week",
+          "swap_en": "twice a month · every few months · almost every day",
+          "gloss_mm": "ကျွန်တော်တို့ တစ်ပတ်တစ်ခါ လက်ဖက်ရည်ဆိုင်မှာ ထိုင်ဖြစ်ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m9-i2.mp3"
+        },
+        {
+          "text_en": "We catch up whenever we have some free time.",
+          "highlight": "whenever we have some free time",
+          "swap_en": "as often as we can · whenever we get the chance",
+          "gloss_mm": "အားတဲ့အချိန်တိုင်း ကျွန်တော်တို့ စကားပြောဖြစ်ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m9-i3.mp3"
+        },
+        {
+          "text_en": "We hardly ever see each other lately because of work.",
+          "highlight": "hardly ever",
+          "swap_en": "rarely · seldom",
+          "gloss_mm": "အလုပ်တွေရှုပ်နေလို့ နောက်ပိုင်း သိပ်မတွေ့ဖြစ်တော့ဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m9-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing what you do together",
+      "move_mm": "တွေ့ရင် ဘာတွေ လုပ်ဖြစ်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We usually hang out at a tea shop.",
+          "highlight": "hang out at a tea shop",
+          "swap_en": "go to the cinema · play football · study together",
+          "gloss_mm": "ကျွန်တော်တို့က လက်ဖက်ရည်ဆိုင်မှာပဲ အချိန်ကုန်ဖြစ်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m10-i1.mp3"
+        },
+        {
+          "text_en": "We love grabbing a bite near the pagoda.",
+          "highlight": "grabbing a bite near the pagoda",
+          "swap_en": "catching up over coffee · wandering around downtown · shopping at the night market",
+          "gloss_mm": "ဘုရားနားမှာ စားစရာလေး တစ်ခုခုဝင်စားဖို့ ကျွန်တော်တို့ သဘောကျတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m10-i2.mp3"
+        },
+        {
+          "text_en": "We make it a point to catch up every Sunday.",
+          "highlight": "make it a point to catch up",
+          "swap_en": "always find time to hang out · try to meet up regularly",
+          "gloss_mm": "တနင်္ဂနွေတိုင်းမှာ မဖြစ်မနေ အတူတွေ့ဖြစ်အောင် လုပ်ကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing a memorable story",
+      "move_mm": "အမှတ်တရ အကြောင်းအရာတစ်ခု ပြောနည်း",
+      "items": [
+        {
+          "text_en": "One time, we traveled to Bagan together.",
+          "highlight": "One time",
+          "swap_en": "Last year · During the holidays · Back in university",
+          "gloss_mm": "တစ်ခါတုန်းက ကျွန်တော်တို့ ပုဂံကို အတူတူ သွားလည်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m11-i1.mp3"
+        },
+        {
+          "text_en": "My favorite memory is when we hung out at a tea shop all night.",
+          "highlight": "hung out at a tea shop all night",
+          "swap_en": "went hiking in Pyin Oo Lwin · celebrated his birthday together · studied for exams at the library",
+          "gloss_mm": "ကျွန်တော်တို့ လက်ဖက်ရည်ဆိုင်မှာ တစ်ညလုံး စကားပြောခဲ့တဲ့ အချိန်က အမှတ်တရ အဖြစ်ဆုံးပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m11-i2.mp3"
+        },
+        {
+          "text_en": "I'll never forget the moment we got lost in Yangon.",
+          "highlight": "I'll never forget the moment",
+          "swap_en": "It's unforgettable how · The funniest thing was when",
+          "gloss_mm": "ရန်ကုန်မှာ လမ်းပျောက်သွားတဲ့ အချိန်ကို ကျွန်တော် ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m11-i3.mp3"
+        },
+        {
+          "text_en": "Looking back, that trip was the highlight of our friendship.",
+          "highlight": "the highlight of our friendship",
+          "swap_en": "the best part of our teenage years · a turning point in our relationship",
+          "gloss_mm": "ပြန်တွေးကြည့်ရင် အဲဒီခရီးစဉ်က ကျွန်တော်တို့ သူငယ်ချင်းတွေရဲ့ အမှတ်တရ အကောင်းဆုံး အချိန်ပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m11-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about how you stay in touch",
+      "move_mm": "ဘယ်လို ဆက်သွယ်လေ့ရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I often call my friends.",
+          "highlight": "call",
+          "swap_en": "text · message · email",
+          "gloss_mm": "ကျွန်တော် သူငယ်ချင်းတွေကို မကြာခဏ ဖုန်းဆက်ဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m12-i1.mp3"
+        },
+        {
+          "text_en": "We chat on Viber every day.",
+          "highlight": "chat on Viber",
+          "swap_en": "talk on Messenger · connect on Facebook · keep in touch via Telegram",
+          "gloss_mm": "ကျွန်တော်တို့ Viber ပေါ်မှာ နေ့တိုင်း စကားပြောဖြစ်ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m12-i2.mp3"
+        },
+        {
+          "text_en": "We make it a point to catch up once a week.",
+          "highlight": "make it a point to catch up",
+          "swap_en": "try to meet up · make time to hang out",
+          "gloss_mm": "တစ်ပတ်တစ်ခါတော့ အကြောင်းစုံပြောဖြစ်အောင် (တွေ့ဖြစ်အောင်) ကျွန်တော်တို့ ကြိုးစားကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m12-i3.mp3"
+        },
+        {
+          "text_en": "We stay in touch through our group chat.",
+          "highlight": "stay in touch",
+          "swap_en": "keep in contact · remain close",
+          "gloss_mm": "ကျွန်တော်တို့ အဖွဲ့လိုက် Chat မှာ အဆက်အသွယ် မပြတ်ရှိနေကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m12-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing support in hard times",
+      "move_mm": "အခက်အခဲရှိချိန်မှာ ဘယ်လို ကူညီကြသလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "They always help me when I'm in trouble.",
+          "highlight": "help me when I'm in trouble",
+          "swap_en": "listen to me when I'm stressed · stand by me when things are tough",
+          "gloss_mm": "ကျွန်တော် အခက်အခဲရှိတဲ့အချိန်တိုင်း သူတို့ အမြဲကူညီပေးကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m13-i1.mp3"
+        },
+        {
+          "text_en": "Whenever I have a hard time, they are always there for me.",
+          "highlight": "always there for me",
+          "swap_en": "by my side · ready to support me",
+          "gloss_mm": "ကျွန်တော် အခက်အခဲကြုံတဲ့အခါတိုင်း သူတို့ ကျွန်တော့်ဘေးမှာ အမြဲရှိပေးကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m13-i2.mp3"
+        },
+        {
+          "text_en": "They really go out of their way to support me during difficult times.",
+          "highlight": "go out of their way to support me",
+          "swap_en": "make an effort to cheer me up · do their best to help me out",
+          "gloss_mm": "အခက်အခဲရှိတဲ့အချိန်တွေမှာ သူတို့က ကျွန်တော့်ကို ကူညီဖို့ အတတ်နိုင်ဆုံး ကြိုးစားပေးကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing differences between friends",
+      "move_mm": "သူငယ်ချင်းတွေကြားက ကွာခြားချက်တွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "He is quiet, but I am talkative.",
+          "highlight": "quiet",
+          "swap_en": "shy · serious · laid-back · energetic",
+          "gloss_mm": "သူက တည်ငြိမ်ပေမယ့် ကျွန်တော်ကတော့ စကားများတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m14-i1.mp3"
+        },
+        {
+          "text_en": "We're complete opposites in terms of personality.",
+          "highlight": "complete opposites",
+          "swap_en": "total opposites · very different",
+          "gloss_mm": "ကျွန်တော်တို့နှစ်ယောက်က ကိုယ်ရည်ကိုယ်သွေးချင်း လုံးဝကို ကွာခြားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m14-i2.mp3"
+        },
+        {
+          "text_en": "While he prefers tea shops in Mandalay, I'm more of a coffee person.",
+          "highlight": "prefers",
+          "swap_en": "likes · enjoys · is into",
+          "gloss_mm": "သူက မန္တလေးက လက်ဖက်ရည်ဆိုင်တွေကို သဘောကျပေမယ့် ကျွန်တော်ကတော့ ကော်ဖီကို ပိုသဘောကျတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m14-i3.mp3"
+        },
+        {
+          "text_en": "It’s funny how we have nothing in common, yet we’ve been friends for years.",
+          "highlight": "nothing in common",
+          "swap_en": "very little in common · different interests",
+          "gloss_mm": "ကျွန်တော်တို့နှစ်ယောက် ဘာမှမတူတာက ရယ်စရာကောင်းပေမယ့် နှစ်ပေါင်းများစွာ သူငယ်ချင်းတွေ ဖြစ်နေတုန်းပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m14-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your feelings about friendship",
+      "move_mm": "သူငယ်ချင်းအပေါ် ထားတဲ့ ခံစားချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My friends are very important to me.",
+          "highlight": "very important to me",
+          "swap_en": "special to me · like family to me · everything to me",
+          "gloss_mm": "ကျွန်တော့်သူငယ်ချင်းတွေက ကျွန်တော့်အတွက် အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m15-i1.mp3"
+        },
+        {
+          "text_en": "I feel comfortable when I'm with my friends.",
+          "highlight": "comfortable",
+          "swap_en": "relaxed · happy · at ease",
+          "gloss_mm": "သူငယ်ချင်းတွေနဲ့ ရှိနေရင် ကျွန်တော် စိတ်အေးလက်အေး ရှိပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m15-i2.mp3"
+        },
+        {
+          "text_en": "We always have a great time together at the tea shop.",
+          "highlight": "have a great time together",
+          "swap_en": "have a blast together · really enjoy each other's company",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်မှာ သူငယ်ချင်းတွေနဲ့ စုမိရင် အမြဲပျော်စရာကောင်းပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m15-i3.mp3"
+        },
+        {
+          "text_en": "I really value our friendship.",
+          "highlight": "value our friendship",
+          "swap_en": "cherish our friendship · treasure our bond",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ သူငယ်ချင်းအဖြစ်ကို တန်ဖိုးထားပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m15-i4.mp3"
+        },
+        {
+          "text_en": "My friends are the ones I can always count on.",
+          "highlight": "count on",
+          "swap_en": "rely on · turn to for support",
+          "gloss_mm": "အခက်အခဲရှိရင် အမြဲအားကိုးလို့ရတဲ့ သူငယ်ချင်းတွေ ရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_friends/m15-i5.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about your friends. Include who they are, how you met, and what you usually do when you hang out.",
+    "prompt_mm": "သင့်သူငယ်ချင်းများအကြောင်း စာကြောင်းရေ ၅ ကြောင်းမှ ၈ ကြောင်းအတွင်း ရေးပါ။ သူတို့က ဘယ်သူတွေလဲ၊ ဘယ်လိုစသိခဲ့ကြလဲ၊ တွေ့ရင် ဘာတွေ လုပ်ဖြစ်လဲဆိုတာတွေကို ထည့်သွင်းရေးသားပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "Introduction",
+      "First meeting",
+      "How long",
+      "Personality",
+      "Common activities",
+      "Best friend",
+      "Frequency of meetups",
+      "Closing thought"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to gain confidence and improve your flow.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့အဖြေကို ကိုယ့်ဘာသာ အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ကြည့်ပါ။ ဒါမှ ပိုပြီး ယုံကြည်မှုရှိလာပြီး စကားပြောတာ ပိုသွက်လာပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "I have a few close friends. We met at university five years ago. My best friend is Htet. He is a very kind and honest person. He is currently working as a teacher. We both love playing football on weekends. We meet every Sunday to play and talk. I really like him because he always helps me when I am sad. We usually stay in touch by sending messages. Our friendship is very important to me. I feel happy when I am with my friends.",
+    "model_mm": "ကျွန်တော့်မှာ ရင်းနှီးတဲ့ သူငယ်ချင်း အနည်းငယ်ရှိပါတယ်။ ကျွန်တော်တို့ တက္ကသိုလ်မှာ တွေ့ခဲ့ကြတာ ငါးနှစ်ရှိပါပြီ။ ကျွန်တော့်ရဲ့ အရင်းနှီးဆုံး သူငယ်ချင်းက ထက် ဖြစ်ပါတယ်။ သူက အရမ်းသဘောကောင်းပြီး ရိုးသားတဲ့သူပါ။ သူက လက်ရှိမှာ ဆရာတစ်ယောက်အဖြစ် အလုပ်လုပ်နေပါတယ်။ ကျွန်တော်တို့ နှစ်ယောက်လုံး အားလပ်ရက်တွေမှာ ဘောလုံးကန်ရတာကို ဝါသနာပါတယ်။ ကျွန်တော်တို့ တနင်္ဂနွေနေ့တိုင်း တွေ့ပြီး စကားပြောဖြစ်ကြပါတယ်။ ကျွန်တော် သူ့ကို အရမ်းခင်ရပါတယ်၊ ဘာလို့လဲဆိုတော့ ကျွန်တော် စိတ်ညစ်တဲ့အချိန်တိုင်း သူက အမြဲကူညီပေးလို့ပါ။ ကျွန်တော်တို့ အမြဲတမ်း စာပို့ပြီး ဆက်သွယ်လေ့ရှိပါတယ်။ ကျွန်တော်တို့ရဲ့ သူငယ်ချင်းဆက်ဆံရေးက ကျွန်တော့်အတွက် အရမ်းအရေးကြီးပါတယ်။ သူငယ်ချင်းတွေနဲ့ အတူရှိနေတဲ့အခါ ကျွန်တော် ပျော်ရွှင်ရပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "I have a few close friends.",
+        "gloss_mm": "ကျွန်တော့်မှာ ရင်းနှီးတဲ့ သူငယ်ချင်း အနည်းငယ်ရှိပါတယ်။",
+        "why_mm": "သူငယ်ချင်းတွေအကြောင်း စတင်မိတ်ဆက်ခြင်း"
+      },
+      {
+        "text_en": "We met at university five years ago.",
+        "gloss_mm": "ကျွန်တော်တို့ တက္ကသိုလ်မှာ တွေ့ခဲ့ကြတာ ငါးနှစ်ရှိပါပြီ။",
+        "why_mm": "ဘယ်လိုစသိခဲ့ကြပြီး ဘယ်လောက်ကြာပြီလဲ ပြောခြင်း"
+      },
+      {
+        "text_en": "My best friend is Htet.",
+        "gloss_mm": "ကျွန်တော့်ရဲ့ အရင်းနှီးဆုံး သူငယ်ချင်းက ထက် ဖြစ်ပါတယ်။",
+        "why_mm": "အရင်းနှီးဆုံး သူငယ်ချင်းကို မိတ်ဆက်ခြင်း"
+      },
+      {
+        "text_en": "He is a very kind and honest person.",
+        "gloss_mm": "သူက အရမ်းသဘောကောင်းပြီး ရိုးသားတဲ့သူပါ။",
+        "why_mm": "သူငယ်ချင်းရဲ့ စရိုက်လက္ခဏာကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "He is currently working as a teacher.",
+        "gloss_mm": "သူက လက်ရှိမှာ ဆရာတစ်ယောက်အဖြစ် အလုပ်လုပ်နေပါတယ်။",
+        "why_mm": "သူငယ်ချင်းရဲ့ အလုပ်အကိုင်အကြောင်း ပြောခြင်း"
+      },
+      {
+        "text_en": "We both love playing football on weekends.",
+        "gloss_mm": "ကျွန်တော်တို့ နှစ်ယောက်လုံး အားလပ်ရက်တွေမှာ ဘောလုံးကန်ရတာကို ဝါသနာပါတယ်။",
+        "why_mm": "ဝါသနာတူတာတွေကို ပြောခြင်း"
+      },
+      {
+        "text_en": "We meet every Sunday to play and talk.",
+        "gloss_mm": "ကျွန်တော်တို့ တနင်္ဂနွေနေ့တိုင်း တွေ့ပြီး စကားပြောဖြစ်ကြပါတယ်။",
+        "why_mm": "ဘယ်လောက် မကြာခဏ တွေ့ဖြစ်လဲ ပြောခြင်း"
+      },
+      {
+        "text_en": "I really like him because he always helps me when I am sad.",
+        "gloss_mm": "ကျွန်တော် သူ့ကို အရမ်းခင်ရပါတယ်၊ ဘာလို့လဲဆိုတော့ ကျွန်တော် စိတ်ညစ်တဲ့အချိန်တိုင်း သူက အမြဲကူညီပေးလို့ပါ။",
+        "why_mm": "ဘာကြောင့်ခင်ရသလဲနှင့် အခက်အခဲရှိချိန် ကူညီပုံကို ပြောခြင်း"
+      },
+      {
+        "text_en": "We usually stay in touch by sending messages.",
+        "gloss_mm": "ကျွန်တော်တို့ အမြဲတမ်း စာပို့ပြီး ဆက်သွယ်လေ့ရှိပါတယ်။",
+        "why_mm": "ဘယ်လို ဆက်သွယ်လေ့ရှိလဲ ပြောခြင်း"
+      },
+      {
+        "text_en": "Our friendship is very important to me.",
+        "gloss_mm": "ကျွန်တော်တို့ရဲ့ သူငယ်ချင်းဆက်ဆံရေးက ကျွန်တော့်အတွက် အရမ်းအရေးကြီးပါတယ်။",
+        "why_mm": "သူငယ်ချင်းအပေါ် ထားတဲ့ ခံစားချက်ကို ဖော်ပြခြင်း"
+      }
+    ],
+    "template": "I have a few close friends. We met at {meeting_place} {time_duration} ago. My best friend is {friend_name}. He is a very {personality_adjective} person. He is currently working as a {job_title}. We both love {hobby} on weekends. We meet {frequency} to play and talk. I really like him because he always {support_action}. We usually stay in touch by {communication_method}. Our friendship is very {feeling_word} to me.",
+    "slots": [
+      {
+        "id": "meeting_place",
+        "label_en": "Meeting place",
+        "label_mm": "တွေ့ဆုံခဲ့သည့်နေရာ",
+        "hint": "Where did you first meet?",
+        "options": [
+          "university",
+          "school",
+          "the office",
+          "a cafe",
+          "a party"
+        ]
+      },
+      {
+        "id": "time_duration",
+        "label_en": "Time duration",
+        "label_mm": "သိကျွမ်းခဲ့သည့်အချိန်",
+        "hint": "How long have you known each other?",
+        "options": [
+          "two years",
+          "five years",
+          "ten years",
+          "a few months"
+        ]
+      },
+      {
+        "id": "friend_name",
+        "label_en": "Friend's name",
+        "label_mm": "သူငယ်ချင်းအမည်",
+        "hint": "What is your best friend's name?",
+        "options": [
+          "Htet",
+          "Aye",
+          "Zaw",
+          "May",
+          "Kyaw"
+        ]
+      },
+      {
+        "id": "personality_adjective",
+        "label_en": "Personality",
+        "label_mm": "စရိုက်လက္ခဏာ",
+        "hint": "What are they like?",
+        "options": [
+          "kind and honest",
+          "funny and smart",
+          "helpful and patient",
+          "cheerful and brave"
+        ]
+      },
+      {
+        "id": "job_title",
+        "label_en": "Job title",
+        "label_mm": "အလုပ်အကိုင်",
+        "hint": "What do they do for a living?",
+        "options": [
+          "teacher",
+          "doctor",
+          "engineer",
+          "designer",
+          "student"
+        ]
+      },
+      {
+        "id": "hobby",
+        "label_en": "Hobby",
+        "label_mm": "ဝါသနာ",
+        "hint": "What do you like doing together?",
+        "options": [
+          "playing football",
+          "reading books",
+          "watching movies",
+          "cooking",
+          "traveling"
+        ]
+      },
+      {
+        "id": "frequency",
+        "label_en": "Frequency",
+        "label_mm": "တွေ့ဆုံသည့်အကြိမ်ရေ",
+        "hint": "How often do you meet?",
+        "options": [
+          "every Sunday",
+          "every weekend",
+          "twice a month",
+          "every day"
+        ]
+      },
+      {
+        "id": "support_action",
+        "label_en": "Support action",
+        "label_mm": "ကူညီပေးပုံ",
+        "hint": "How do they help you?",
+        "options": [
+          "listens to my problems",
+          "gives me good advice",
+          "cheers me up",
+          "helps me with work"
+        ]
+      },
+      {
+        "id": "communication_method",
+        "label_en": "Communication method",
+        "label_mm": "ဆက်သွယ်သည့်နည်းလမ်း",
+        "hint": "How do you stay in touch?",
+        "options": [
+          "sending messages",
+          "calling on the phone",
+          "video chatting",
+          "emailing"
+        ]
+      },
+      {
+        "id": "feeling_word",
+        "label_en": "Feeling word",
+        "label_mm": "ခံစားချက်ဖော်ပြသည့်စကားလုံး",
+        "hint": "How do you feel about the friendship?",
+        "options": [
+          "important",
+          "special",
+          "valuable",
+          "meaningful"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level1/my_friends/guide-model.mp3"
+  }
+}

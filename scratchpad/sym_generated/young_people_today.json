@@ -1,0 +1,553 @@
+{
+  "id": "young_people_today",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "Young People Today",
+  "title_mm": "ယနေ့ခေတ် လူငယ်များ",
+  "promise_en": "Master the vocabulary to debate, compare, and express your opinions on modern youth issues confidently.",
+  "promise_mm": "ယနေ့ခေတ် လူငယ်များအကြောင်း ဆွေးနွေးတဲ့အခါ အချက်အလက်တွေကို နှိုင်းယှဉ်ပြီး ကိုယ့်အမြင်ကို ယုံကြည်မှုရှိရှိ ပြောတတ်လာစေရမယ်။",
+  "intro_en": "Young people today face a world that is vastly different from that of previous generations. Technology and social media have changed how they interact, work, and dream. Let's discuss these changes.",
+  "intro_mm": "ယနေ့ခေတ် လူငယ်တွေရဲ့ ဘဝဟာ အရင်မျိုးဆက်တွေနဲ့ လုံးဝမတူတော့ပါဘူး။ နည်းပညာနဲ့ လူမှုကွန်ရက်တွေက သူတို့ရဲ့ ဆက်ဆံရေး၊ အလုပ်အကိုင်နဲ့ ရည်မှန်းချက်တွေကို ပြောင်းလဲပစ်လိုက်ပါတယ်။ ဒီပြောင်းလဲမှုတွေကို အတူဆွေးနွေးကြည့်ရအောင်။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the topic",
+      "move_mm": "ခေါင်းစဉ်ကို စတင်မိတ်ဆက်ခြင်း",
+      "items": [
+        {
+          "text_en": "Many people think young people today are different.",
+          "highlight": "young people today",
+          "swap_en": "the younger generation · today's youth",
+          "gloss_mm": "ဒီနေ့ခေတ်လူငယ်တွေဟာ အရင်ကနဲ့မတူဘူးလို့ လူအများက ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is common to say that today's youth face more pressure.",
+          "highlight": "today's youth",
+          "swap_en": "the new generation · young adults nowadays",
+          "gloss_mm": "ဒီနေ့ခေတ်လူငယ်တွေဟာ ပိုပြီးဖိအားများတယ်လို့ ပြောဆိုလေ့ရှိကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The lifestyle of the younger generation is shifting rapidly.",
+          "highlight": "the younger generation",
+          "swap_en": "today's youth · young people in modern Myanmar",
+          "gloss_mm": "ဒီနေ့ခေတ်လူငယ်တွေရဲ့ နေထိုင်မှုပုံစံဟာ တဖြည်းဖြည်းနဲ့ အရှိန်အဟုန်ပြင်းစွာ ပြောင်းလဲနေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိအခြေအနေကို ဖော်ပြခြင်း",
+      "items": [
+        {
+          "text_en": "Many young people rely on social media too much.",
+          "highlight": "rely on social media too much",
+          "swap_en": "spend all their time online · care too much about likes · prioritize virtual lives",
+          "gloss_mm": "လူငယ်တွေ အခုတလော ဆိုရှယ်မီဒီယာကို အရမ်းမှီခိုနေကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "This is becoming a serious problem for our generation.",
+          "highlight": "a serious problem for our generation",
+          "swap_en": "a big challenge for young people · a worrying trend nowadays · a common issue among youth",
+          "gloss_mm": "ဒါက ဒီမျိုးဆက်အတွက်တော့ တကယ့်ကို ပြဿနာကြီးတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "One major cause is the pressure to succeed early.",
+          "highlight": "pressure to succeed early",
+          "swap_en": "desire for instant fame · lack of clear career guidance · influence of modern lifestyles",
+          "gloss_mm": "အဓိက အကြောင်းရင်းတစ်ခုကတော့ ငယ်ငယ်နဲ့ အောင်မြင်ချင်တဲ့ ဖိအားတွေကြောင့်ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This trend could lead to a loss of traditional values.",
+          "highlight": "a loss of traditional values",
+          "swap_en": "less face-to-face connection · a disconnect from older generations · mental health struggles",
+          "gloss_mm": "ဒီအလေ့အထတွေကြောင့် ရိုးရာတန်ဖိုးတွေကို တဖြည်းဖြည်းနဲ့ ဆုံးရှုံးလာနိုင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing with the past",
+      "move_mm": "အတိတ်က အခြေအနေနဲ့ နှိုင်းယှဉ်ခြင်း",
+      "items": [
+        {
+          "text_en": "Life is different today compared to the past.",
+          "highlight": "different today compared to the past",
+          "swap_en": "much easier now than in the past · more stressful today than it used to be",
+          "gloss_mm": "အရင်တုန်းကနဲ့ယှဉ်ရင် အခုခေတ် လူနေမှုဘဝက တခြားစီပါပဲ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Young people have more freedom than their parents did.",
+          "highlight": "more freedom than their parents did",
+          "swap_en": "more opportunities than their parents had · less patience than their parents had",
+          "gloss_mm": "လူငယ်တွေက သူတို့မိဘတွေထက် လွတ်လပ်ခွင့် ပိုရကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Technology has changed how we socialize in ways that were unimaginable in the past.",
+          "highlight": "in ways that were unimaginable in the past",
+          "swap_en": "far beyond what our parents experienced · in ways that our grandparents could never have predicted",
+          "gloss_mm": "နည်းပညာက လူမှုဆက်ဆံရေးကို အရင်က မတွေးဝံ့လောက်အောင်အထိ ပြောင်းလဲပစ်လိုက်ပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing the role of technology",
+      "move_mm": "နည်းပညာရဲ့ သက်ရောက်မှုကို ပြောဆိုခြင်း",
+      "items": [
+        {
+          "text_en": "Many young people use technology for everything.",
+          "highlight": "for everything",
+          "swap_en": "for entertainment · for studying · for connecting with friends",
+          "gloss_mm": "လူငယ်အများစုက အရာရာတိုင်းအတွက် နည်းပညာကိုပဲ အသုံးပြုကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Social media is changing how young people interact.",
+          "highlight": "changing how young people interact",
+          "swap_en": "changing how we communicate · affecting how students learn · shaping how teenagers behave",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာက လူငယ်တွေ တစ်ယောက်နဲ့တစ်ယောက် ဆက်ဆံပုံကို ပြောင်းလဲစေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Technology often leads to a lack of face-to-face communication.",
+          "highlight": "a lack of face-to-face communication",
+          "swap_en": "a shorter attention span · less physical activity · constant digital distraction",
+          "gloss_mm": "နည်းပညာကြောင့် လူချင်းမျက်နှာချင်းဆိုင် ပြောဆိုမှုတွေ နည်းပါးလာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It is becoming increasingly difficult to disconnect from the digital world.",
+          "highlight": "disconnect from the digital world",
+          "swap_en": "balance screen time and real life · avoid online pressure",
+          "gloss_mm": "ဒီဂျစ်တယ်လောကကြီးကနေ ခဏလောက် အဆက်ဖြတ်ဖို့ဆိုတာ ပိုပြီးခက်ခဲလာတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting one side of an argument",
+      "move_mm": "တစ်ဖက်က အမြင်ကို ပြောပြခြင်း",
+      "items": [
+        {
+          "text_en": "Many young people like technology.",
+          "highlight": "like technology",
+          "swap_en": "prefer online shopping · enjoy social media · value their freedom",
+          "gloss_mm": "လူငယ်တွေက နည်းပညာကို နှစ်သက်ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is true that young people are more independent these days.",
+          "highlight": "more independent",
+          "swap_en": "more tech-savvy · more open-minded · more ambitious",
+          "gloss_mm": "ဒီနေ့ခေတ် လူငယ်တွေက ပိုပြီးတော့ ကိုယ့်အားကိုယ်ကိုးတတ်ကြတာ အမှန်ပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "One major cause is the influence of the internet.",
+          "highlight": "the influence of the internet",
+          "swap_en": "the pressure to succeed · the desire for new experiences · the change in social values",
+          "gloss_mm": "အဓိက အကြောင်းရင်းတစ်ခုကတော့ အင်တာနက်ရဲ့ သက်ရောက်မှုကြောင့် ဖြစ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "There is a growing concern about the lack of interest in tradition.",
+          "highlight": "the lack of interest in tradition",
+          "swap_en": "the erosion of traditional values · the decline in physical activity · the rise of digital distractions",
+          "gloss_mm": "ရိုးရာဓလေ့တွေအပေါ် စိတ်ဝင်စားမှု လျော့နည်းလာတာနဲ့ ပတ်သက်ပြီး စိုးရိမ်မှုတွေ မြင့်တက်လာနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting the counter-argument",
+      "move_mm": "ဆန့်ကျင်ဘက် အမြင်ကို ပြောပြခြင်း",
+      "items": [
+        {
+          "text_en": "Some people think young people are lazy.",
+          "highlight": "Some people think",
+          "swap_en": "Many people argue that · Others might say that",
+          "gloss_mm": "လူတချို့က လူငယ်တွေဟာ ပျင်းကြတယ်လို့ ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is often said that the youth today are too focused on technology.",
+          "highlight": "It is often said that",
+          "swap_en": "Critics often claim that · There is a common view that",
+          "gloss_mm": "ဒီနေ့ခေတ် လူငယ်တွေဟာ နည်းပညာကိုပဲ အလွန်အမင်း အာရုံစိုက်နေကြတယ်လို့ မကြာခဏ ပြောဆိုကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "While some criticize their behavior, others point out that they are more creative than previous generations.",
+          "highlight": "While some criticize their behavior, others point out that",
+          "swap_en": "Even though many complain about their lack of tradition, it is important to note that · Although people often judge them, the reality is that",
+          "gloss_mm": "လူတချို့က သူတို့ရဲ့ အပြုအမူကို ဝေဖန်နေကြပေမဲ့ တချို့ကတော့ သူတို့ဟာ အရင်မျိုးဆက်တွေထက် ပိုပြီး တီထွင်ဖန်တီးနိုင်စွမ်းရှိတယ်လို့ ထောက်ပြကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the causes",
+      "move_mm": "အကြောင်းရင်းကို ရှင်းပြခြင်း",
+      "items": [
+        {
+          "text_en": "One major cause is the internet.",
+          "highlight": "the internet",
+          "swap_en": "social media · peer pressure · high living costs",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုကတော့ အင်တာနက်ကြောင့်ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "This is mainly due to the pressure to succeed.",
+          "highlight": "the pressure to succeed",
+          "swap_en": "the influence of social media · the lack of job opportunities · the fast-paced lifestyle",
+          "gloss_mm": "ဒါက အဓိကအားဖြင့် အောင်မြင်ဖို့ ဖိအားတွေကြောင့် ဖြစ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Many people believe that technology is the driving force behind these changes.",
+          "highlight": "the driving force behind these changes",
+          "swap_en": "the root cause of this behavior · the main factor influencing their mindset",
+          "gloss_mm": "ဒီလိုအပြောင်းအလဲတွေဖြစ်လာရတဲ့ နောက်ကွယ်က အဓိကတွန်းအားက နည်းပညာလို့ လူအများက ယုံကြည်ကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the consequences",
+      "move_mm": "ရလဒ်နဲ့ နောက်ဆက်တွဲများကို ပြောခြင်း",
+      "items": [
+        {
+          "text_en": "This can lead to big problems.",
+          "highlight": "big problems",
+          "swap_en": "serious issues · many difficulties · a lot of stress",
+          "gloss_mm": "ဒါက ပြဿနာအကြီးကြီးတွေ ဖြစ်လာနိုင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "This often results in a lack of focus.",
+          "highlight": "a lack of focus",
+          "swap_en": "less face-to-face contact · unhealthy habits · poor sleep",
+          "gloss_mm": "ဒါက အာရုံစိုက်မှုနည်းသွားတဲ့ ရလဒ်ကို မကြာခဏ ဖြစ်စေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Such habits may have long-term consequences on their health.",
+          "highlight": "long-term consequences",
+          "swap_en": "negative impacts · lasting effects · serious repercussions",
+          "gloss_mm": "ဒီလိုအလေ့အကျင့်တွေက သူတို့ရဲ့ ကျန်းမာရေးအပေါ် ရေရှည်ဆိုးကျိုးတွေ သက်ရောက်နိုင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning specific pressures",
+      "move_mm": "ခံစားနေရတဲ့ ဖိအားတွေကို ပြောပြခြင်း",
+      "items": [
+        {
+          "text_en": "Many young people face pressure to succeed.",
+          "highlight": "pressure to succeed",
+          "swap_en": "pressure to find a good job · pressure to be perfect · pressure from their parents",
+          "gloss_mm": "လူငယ်တော်တော်များများ အောင်မြင်ရမယ်ဆိုတဲ့ ဖိအားကို ခံစားနေကြရတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is difficult to deal with the pressure of social media.",
+          "highlight": "pressure of social media",
+          "swap_en": "pressure of high expectations · pressure to keep up with others",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာကြောင့် ဖြစ်လာတဲ့ ဖိအားတွေကို ရင်ဆိုင်ရတာ ခက်ခဲပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Young people are increasingly struggling under the weight of financial instability.",
+          "highlight": "the weight of financial instability",
+          "swap_en": "the weight of academic expectations · the burden of family responsibilities",
+          "gloss_mm": "လူငယ်တွေဟာ ငွေကြေးမတည်ငြိမ်မှုဆိုတဲ့ ဝန်ထုပ်ဝန်ပိုးအောက်မှာ ပိုပြီးရုန်းကန်နေကြရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating your personal view",
+      "move_mm": "ကိုယ့်ရဲ့ ကိုယ်ပိုင်အမြင်ကို ပြောခြင်း",
+      "items": [
+        {
+          "text_en": "I think young people today have more opportunities.",
+          "highlight": "young people today",
+          "swap_en": "the youth nowadays · the younger generation",
+          "gloss_mm": "ဒီနေ့ခေတ်လူငယ်တွေမှာ အခွင့်အရေးတွေ ပိုများတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, it is harder for young people to find jobs.",
+          "highlight": "In my opinion",
+          "swap_en": "To my mind · From my perspective",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဒီနေ့ခေတ်လူငယ်တွေအတွက် အလုပ်အကိုင်ရှာဖို့ ပိုခက်ခဲတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I would argue that technology is changing how the youth interact.",
+          "highlight": "I would argue that",
+          "swap_en": "It seems to me that · I am convinced that",
+          "gloss_mm": "နည်းပညာက လူငယ်တွေရဲ့ ဆက်ဆံရေးပုံစံကို ပြောင်းလဲနေတယ်လို့ ကျွန်တော် ငြင်းခုံချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Acknowledging the complexity",
+      "move_mm": "ပြဿနာရဲ့ ရှုပ်ထွေးမှုကို ဝန်ခံခြင်း",
+      "items": [
+        {
+          "text_en": "It is a difficult problem to solve.",
+          "highlight": "a difficult problem",
+          "swap_en": "a big challenge · a complicated issue",
+          "gloss_mm": "ဒါကဖြေရှင်းရခက်တဲ့ ပြဿနာတစ်ခုပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "There is no simple answer to this issue.",
+          "highlight": "no simple answer",
+          "swap_en": "no easy solution · no quick fix",
+          "gloss_mm": "ဒီကိစ္စအတွက် လွယ်ကူတဲ့ အဖြေဆိုတာ မရှိပါဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This is a complex matter with many sides.",
+          "highlight": "a complex matter",
+          "swap_en": "a multifaceted issue · a nuanced situation",
+          "gloss_mm": "ဒါဟာ ရှုထောင့်ပေါင်းစုံကနေ ကြည့်ရမယ့် ရှုပ်ထွေးတဲ့ ကိစ္စရပ်တစ်ခုပါ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "We must look at it from different perspectives.",
+          "highlight": "different perspectives",
+          "swap_en": "various angles · many points of view",
+          "gloss_mm": "ဒီကိစ္စကို ထောင့်ပေါင်းစုံကနေ ရှုမြင်ဖို့ လိုအပ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting a possible solution",
+      "move_mm": "ဖြေရှင်းနိုင်မယ့် နည်းလမ်းတစ်ခု အကြံပြုခြင်း",
+      "items": [
+        {
+          "text_en": "We should talk to them more.",
+          "highlight": "talk to them more",
+          "swap_en": "listen to them better · spend time with them · encourage them more",
+          "gloss_mm": "သူတို့နဲ့ ပိုပြီး စကားပြောပေးသင့်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "One way to help is by setting a good example.",
+          "highlight": "setting a good example",
+          "swap_en": "teaching them life skills · limiting their screen time · guiding them patiently",
+          "gloss_mm": "ကူညီနိုင်တဲ့နည်းလမ်းတစ်ခုကတော့ ကိုယ်တိုင် နမူနာကောင်း ပြသပေးဖို့ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It might be effective to foster open communication at home.",
+          "highlight": "foster open communication",
+          "swap_en": "promote healthy habits · provide more mentorship opportunities · encourage critical thinking",
+          "gloss_mm": "အိမ်မှာ ပွင့်ပွင့်လင်းလင်း ပြောဆိုဆက်ဆံတဲ့ ပတ်ဝန်းကျင်မျိုး ဖန်တီးပေးတာက ထိရောက်မှု ရှိနိုင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing or disagreeing with a trend",
+      "move_mm": "ခေတ်ရေစီးကြောင်းတစ်ခုကို သဘောတူ/မတူ ပြောခြင်း",
+      "items": [
+        {
+          "text_en": "I think this trend is a good idea.",
+          "highlight": "a good idea",
+          "swap_en": "a bad idea · a waste of time · helpful",
+          "gloss_mm": "ဒီခေတ်ရေစီးကြောင်းက ကောင်းတဲ့အရာလို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I totally agree with this change.",
+          "highlight": "totally agree with",
+          "swap_en": "partly agree with · don't really agree with · disagree with",
+          "gloss_mm": "ဒီပြောင်းလဲမှုကို ကျွန်တော် အပြည့်အဝ ထောက်ခံတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It seems like a step in the right direction.",
+          "highlight": "a step in the right direction",
+          "swap_en": "a step in the wrong direction · a bit risky · quite unnecessary",
+          "gloss_mm": "ဒါက မှန်ကန်တဲ့ လမ်းကြောင်းဆီကို ဦးတည်နေတဲ့ ခြေလှမ်းတစ်ခုလို့ မြင်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I have mixed feelings about this trend.",
+          "highlight": "mixed feelings about",
+          "swap_en": "some reservations about · serious concerns about · no objections to",
+          "gloss_mm": "ဒီခေတ်ရေစီးကြောင်းနဲ့ ပတ်သက်ပြီး ကျွန်တော့်မှာ ရောထွေးနေတဲ့ ခံစားချက်တွေ ရှိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I am not entirely convinced that this is sustainable.",
+          "highlight": "not entirely convinced that",
+          "swap_en": "fully convinced that · certain that · doubtful that",
+          "gloss_mm": "ဒါက ရေရှည်မှာ ဖြစ်နိုင်ချေရှိတယ်ဆိုတာကို ကျွန်တော် လုံးဝတော့ မယုံကြည်ဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Adding emphasis",
+      "move_mm": "အလေးပေး ပြောဆိုခြင်း",
+      "items": [
+        {
+          "text_en": "It is really important to understand young people.",
+          "highlight": "really important",
+          "swap_en": "very important · truly essential · a big deal",
+          "gloss_mm": "လူငယ်တွေကို နားလည်ပေးဖို့က တကယ်ကို အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Social media is definitely changing how they communicate.",
+          "highlight": "definitely",
+          "swap_en": "certainly · clearly · without a doubt",
+          "gloss_mm": "လူမှုကွန်ရက်က သူတို့ရဲ့ ဆက်သွယ်ပြောဆိုပုံကို အသေအချာပဲ ပြောင်းလဲစေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This trend is quite concerning for the future of our youth.",
+          "highlight": "quite concerning",
+          "swap_en": "very worrying · deeply troubling · a major concern",
+          "gloss_mm": "ဒီရေစီးကြောင်းက လူငယ်တွေရဲ့ အနာဂတ်အတွက် တော်တော်လေး စိုးရိမ်စရာ ဖြစ်နေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "In fact, the pressure to succeed has never been higher.",
+          "highlight": "has never been higher",
+          "swap_en": "is at an all-time high · is greater than ever",
+          "gloss_mm": "တကယ်တော့ အောင်မြင်ဖို့ ဖိအားတွေက အရင်ကထက်ကို ပိုများလာနေတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your thoughts",
+      "move_mm": "နိဂုံးချုပ် စကားပြောခြင်း",
+      "items": [
+        {
+          "text_en": "Young people are the future of our country.",
+          "highlight": "the future of our country",
+          "swap_en": "the backbone of our society · the key to our development",
+          "gloss_mm": "လူငယ်တွေက ကျွန်တော်တို့နိုင်ငံရဲ့ အနာဂတ် ဖြစ်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is important to support them in their choices.",
+          "highlight": "support them in their choices",
+          "swap_en": "listen to their ideas · encourage their creativity",
+          "gloss_mm": "သူတို့ရဲ့ ရွေးချယ်မှုတွေကို ပံ့ပိုးပေးဖို့က အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Ultimately, we should give them more opportunities to shine.",
+          "highlight": "more opportunities to shine",
+          "swap_en": "more space to grow · more freedom to explore",
+          "gloss_mm": "နောက်ဆုံးအနေနဲ့ သူတို့ ထွန်းတောက်ဖို့ အခွင့်အရေးတွေ ပိုပေးသင့်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We must bridge the generation gap to understand them better.",
+          "highlight": "bridge the generation gap",
+          "swap_en": "narrow the divide between generations · find common ground",
+          "gloss_mm": "သူတို့ကို ပိုနားလည်ဖို့အတွက် မျိုးဆက်ကွာဟချက်ကို ပေါင်းကူးပေးဖို့ လိုအပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Their perspective is vital for positive change in Myanmar.",
+          "highlight": "Their perspective is vital",
+          "swap_en": "Their energy is essential · Their vision is crucial",
+          "gloss_mm": "မြန်မာနိုင်ငံမှာ အပြုသဘောဆောင်တဲ့ ပြောင်းလဲမှုတွေဖြစ်ဖို့ သူတို့ရဲ့ အမြင်က အသက်ဝင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write a short paragraph discussing how young people's lives today differ from the past. Mention the impact of social media, the pressures they face, and share your own opinion on whether this change is mostly positive or negative.",
+    "prompt_mm": "ယနေ့ခေတ် လူငယ်တွေရဲ့ ဘဝက အရင်မျိုးဆက်တွေနဲ့ ဘယ်လိုကွာခြားလဲဆိုတာကို စာပိုဒ်တစ်ခု ရေးသားပါ။ လူမှုကွန်ရက်ရဲ့ သက်ရောက်မှု၊ သူတို့ရင်ဆိုင်နေရတဲ့ ဖိအားတွေနဲ့ ဒီပြောင်းလဲမှုက ကောင်းလား၊ ဆိုးလားဆိုတဲ့ ကိုယ့်အမြင်ကို ထည့်သွင်းပြောပြပါ။",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Current vs Past",
+      "Social Media impact",
+      "Key pressures",
+      "On one hand...",
+      "On the other hand...",
+      "In my opinion...",
+      "Possible solution"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and confidence.",
+    "speak_aloud_mm": "သင်ရေးသားထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ကြိမ် ဒါမှမဟုတ် ၃ ကြိမ်လောက် ဖတ်ကြည့်ပါ။ ဒါက သင့်ရဲ့ ပြောဆိုမှု ပိုမိုချောမွေ့ပြီး ယုံကြည်မှုရှိလာစေဖို့ ကူညီပေးပါလိမ့်မယ်။"
+  }
+}

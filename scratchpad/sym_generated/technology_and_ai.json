@@ -1,0 +1,561 @@
+{
+  "id": "technology_and_ai",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "Technology & AI",
+  "title_mm": "နည်းပညာနှင့် အေအိုင် (Technology & AI)",
+  "promise_en": "Master the vocabulary and structure to discuss how AI and technology are reshaping our jobs, daily lives, and the future of Myanmar.",
+  "promise_mm": "နည်းပညာနဲ့ AI က ကျွန်တော်တို့ရဲ့ အလုပ်အကိုင်၊ နေ့စဉ်ဘဝနဲ့ အနာဂတ်အပေါ် ဘယ်လိုသက်ရောက်မှုရှိလဲဆိုတာကို ယုံကြည်မှုရှိရှိ ဆွေးနွေးနိုင်ပါမယ်။",
+  "intro_en": "Technology is evolving faster than ever. From using AI tools in the office to digital banking, it is changing how we live and work in Yangon and beyond.",
+  "intro_mm": "နည်းပညာတွေဟာ အံ့ဩစရာကောင်းလောက်အောင် မြန်မြန်ဆန်ဆန် တိုးတက်လာနေပါတယ်။ ရုံးလုပ်ငန်းတွေမှာ AI အသုံးပြုတာကနေ Digital Banking အထိ နည်းပညာဟာ ကျွန်တော်တို့ရဲ့ နေ့စဉ်ဘဝနဲ့ အလုပ်အကိုင်တွေကို ပြောင်းလဲပစ်လိုက်ပါပြီ။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the topic",
+      "move_mm": "အကြောင်းအရာတစ်ခုကို စတင်မိတ်ဆက်နည်း",
+      "items": [
+        {
+          "text_en": "Technology is changing our lives.",
+          "highlight": "changing our lives",
+          "swap_en": "making things easier · becoming very important · everywhere now",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ ဘဝတွေကို ပြောင်းလဲနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Everyone is talking about AI these days.",
+          "highlight": "talking about AI",
+          "swap_en": "using smartphones · relying on technology · worried about AI",
+          "gloss_mm": "ဒီရက်ပိုင်းမှာ လူတိုင်းက AI အကြောင်း ပြောနေကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Artificial intelligence is rapidly transforming the way we work.",
+          "highlight": "rapidly transforming",
+          "swap_en": "significantly impacting · fundamentally changing",
+          "gloss_mm": "AI က ကျွန်တော်တို့ အလုပ်လုပ်ပုံကို လျင်မြန်စွာ ပြောင်းလဲပစ်လိုက်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It is a double-edged sword for our society.",
+          "highlight": "a double-edged sword",
+          "swap_en": "a game changer · a necessary evil",
+          "gloss_mm": "ဒါက ကျွန်တော်တို့ လူ့အဖွဲ့အစည်းအတွက် အကျိုးရော အပြစ်ပါရှိတဲ့ အရာတစ်ခုပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိအခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Many people use AI every day.",
+          "highlight": "every day",
+          "swap_en": "at work · for their studies · on their phones",
+          "gloss_mm": "လူတော်တော်များများက AI ကို နေ့တိုင်း သုံးနေကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Technology is changing our lives fast.",
+          "highlight": "changing our lives fast",
+          "swap_en": "making things easier · becoming part of everything we do · moving at an incredible speed",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ ဘဝတွေကို မြန်မြန်ဆန်ဆန် ပြောင်းလဲနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "More and more businesses are relying on AI.",
+          "highlight": "relying on AI",
+          "swap_en": "integrating AI into their work · turning to automated systems · using smart tools",
+          "gloss_mm": "လုပ်ငန်းခွင်တွေမှာ AI ကို မှီခိုအားထားလာတာ ပိုများလာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We are currently witnessing a rapid shift in how we approach digital tasks.",
+          "highlight": "witnessing a rapid shift",
+          "swap_en": "seeing a massive transformation · experiencing a digital revolution",
+          "gloss_mm": "ဒီဂျစ်တယ်အလုပ်တွေကို ကိုင်တွယ်တဲ့နေရာမှာ လျင်မြန်တဲ့ အပြောင်းအလဲတစ်ခုကို ကျွန်တော်တို့ လက်ရှိ ကြုံတွေ့နေရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting the benefits",
+      "move_mm": "အကျိုးကျေးဇူးတွေကို ထုတ်ဖော်ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "Technology makes life easier.",
+          "highlight": "makes life easier",
+          "swap_en": "saves a lot of time · helps us connect with people · is very useful for work",
+          "gloss_mm": "နည်းပညာက လူနေမှုဘဝကို ပိုမိုလွယ်ကူစေပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is a great way to access information quickly.",
+          "highlight": "a great way to access information quickly",
+          "swap_en": "a fast way to stay in touch · a convenient tool for studying online",
+          "gloss_mm": "ဒါက အချက်အလက်တွေကို မြန်မြန်ဆန်ဆန် ရှာဖွေဖို့အတွက် အကောင်းဆုံးနည်းလမ်းပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "AI significantly enhances productivity in many professional fields.",
+          "highlight": "significantly enhances productivity",
+          "swap_en": "greatly improves our efficiency · streamlines daily tasks effectively",
+          "gloss_mm": "AI က အလုပ်ခွင်အသီးသီးမှာ လုပ်ငန်းစွမ်းဆောင်ရည်ကို သိသိသာသာ တိုးတက်စေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning potential risks",
+      "move_mm": "ဖြစ်နိုင်ခြေရှိတဲ့ အန္တရာယ်တွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "AI might be dangerous.",
+          "highlight": "might be dangerous",
+          "swap_en": "could be risky · can be harmful · is a bit scary",
+          "gloss_mm": "AI က အန္တရာယ်ရှိနိုင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "There is a risk of losing our jobs.",
+          "highlight": "a risk of losing our jobs",
+          "swap_en": "a risk of privacy leaks · a risk of spreading fake news · a danger of relying too much on tech",
+          "gloss_mm": "အလုပ်အကိုင်တွေ ဆုံးရှုံးရမယ့် အန္တရာယ်ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The biggest concern is that we might lose our personal privacy.",
+          "highlight": "The biggest concern is that",
+          "swap_en": "The main issue is that · A serious drawback is that",
+          "gloss_mm": "အကြီးမားဆုံး စိုးရိမ်စရာကတော့ ကိုယ်ရေးကိုယ်တာ လုံခြုံမှုတွေ ပျောက်ဆုံးသွားနိုင်တာပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Over-reliance on AI poses a significant threat to our critical thinking skills.",
+          "highlight": "poses a significant threat to",
+          "swap_en": "could jeopardize · brings about serious challenges for",
+          "gloss_mm": "AI ကို အရမ်း အားကိုးတာက ကျွန်တော်တို့ရဲ့ ဝေဖန်ပိုင်းခြားနိုင်စွမ်းအတွက် ကြီးမားတဲ့ ခြိမ်းခြောက်မှုတစ်ခု ဖြစ်လာတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Showing two sides of an argument",
+      "move_mm": "အငြင်းပွားစရာ နှစ်ဖက်ကို နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Some people like AI, but others are worried about it.",
+          "highlight": "Some people like AI, but others are worried about it",
+          "swap_en": "Some think AI is helpful, but others think it is dangerous · Some believe AI is the future, but others feel it is a threat",
+          "gloss_mm": "တချို့က AI ကို သဘောကျပေမဲ့ တချို့ကတော့ စိုးရိမ်နေကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "On one hand, AI saves time, but on the other hand, it might replace our jobs.",
+          "highlight": "On one hand, AI saves time, but on the other hand, it might replace our jobs",
+          "swap_en": "On one hand, technology connects us, but on the other hand, it makes us lonely · On one hand, it is convenient, but on the other hand, it creates security risks",
+          "gloss_mm": "တစ်ဖက်မှာကြည့်ရင် AI က အချိန်ကုန်သက်သာစေပေမဲ့ နောက်တစ်ဖက်မှာကျတော့ ကျွန်တော်တို့ရဲ့ အလုပ်အကိုင်တွေကို အစားထိုးသွားမလား စိုးရိမ်ရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "While AI offers incredible efficiency, we must also consider the potential ethical downsides.",
+          "highlight": "offers incredible efficiency",
+          "swap_en": "brings great convenience · provides quick answers",
+          "gloss_mm": "AI က အလုပ်တွင်ကျယ်မှုကို အံ့မခန်းပေးစွမ်းနိုင်ပေမဲ့ သူ့ရဲ့ ဖြစ်လာနိုင်တဲ့ ကျင့်ဝတ်ဆိုင်ရာ အားနည်းချက်တွေကိုလည်း ထည့်သွင်းစဉ်းစားရပါမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "The debate over AI is complex; proponents highlight its benefits, whereas critics focus on the risks.",
+          "highlight": "proponents highlight its benefits, whereas critics focus on the risks",
+          "swap_en": "supporters praise its speed, whereas skeptics worry about privacy · users love the ease of use, whereas experts warn about data loss",
+          "gloss_mm": "AI နဲ့ပတ်သက်တဲ့ ငြင်းခုံမှုတွေက ရှုပ်ထွေးပါတယ်။ ထောက်ခံသူတွေက အကျိုးကျေးဇူးတွေကို ထောက်ပြကြပေမဲ့ ဝေဖန်သူတွေကတော့ အန္တရာယ်တွေကိုပဲ အာရုံစိုက်နေကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining causes",
+      "move_mm": "အကြောင်းရင်းကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "One major cause is the rapid growth of AI.",
+          "highlight": "the rapid growth of AI",
+          "swap_en": "the convenience of smartphones · the popularity of social media · the overuse of gadgets",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုကတော့ AI နည်းပညာ တဟုန်ထိုး တိုးတက်လာတာကြောင့်ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It happens largely because people rely on technology too much.",
+          "highlight": "rely on technology too much",
+          "swap_en": "use their phones constantly · spend all day online · trust AI blindly",
+          "gloss_mm": "ဒါက လူတွေ နည်းပညာကို အလွန်အကျွံ အားကိုးနေကြလို့ ဖြစ်လာတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This trend is primarily driven by the need for instant results.",
+          "highlight": "the need for instant results",
+          "swap_en": "the constant distraction of social media · the automation of daily tasks · the accessibility of information",
+          "gloss_mm": "ဒီဖြစ်စဉ်ကတော့ ချက်ချင်းရလဒ်လိုချင်တဲ့ စိတ်ဆန္ဒကြောင့် အဓိက ဖြစ်ပေါ်လာတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing effects on jobs",
+      "move_mm": "အလုပ်အကိုင်အပေါ် သက်ရောက်မှုကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Many people fear that AI will replace human jobs.",
+          "highlight": "replace human jobs",
+          "swap_en": "take over our jobs · make our roles redundant · replace workers",
+          "gloss_mm": "လူတွေရဲ့ အလုပ်တွေကို AI က အစားထိုးသွားမှာကို လူအများက စိုးရိမ်နေကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Automation is changing the way we work at the office.",
+          "highlight": "changing the way we work",
+          "swap_en": "transforming our daily tasks · reshaping our workflow · changing how we handle jobs",
+          "gloss_mm": "စက်မှုအလိုအလျောက်စနစ်က ရုံးအလုပ်လုပ်ပုံတွေကို ပြောင်းလဲပစ်နေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This technology could lead to mass unemployment in the future.",
+          "highlight": "could lead to mass unemployment",
+          "swap_en": "might result in widespread job losses · could cause a major shift in the job market",
+          "gloss_mm": "ဒီနည်းပညာက အနာဂတ်မှာ အလုပ်လက်မဲ့နှုန်း အများအပြားဖြစ်လာဖို့ ဦးတည်သွားနိုင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It is becoming a serious problem for traditional industries.",
+          "highlight": "becoming a serious problem",
+          "swap_en": "posing a significant challenge · creating a difficult situation",
+          "gloss_mm": "ဒါက ရိုးရာလုပ်ငန်းတွေအတွက်တော့ ပြဿနာကြီးတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing the past and present",
+      "move_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "Life was simpler before technology.",
+          "highlight": "before technology",
+          "swap_en": "in the past · before the internet · ten years ago",
+          "gloss_mm": "နည်းပညာ မတိုးတက်ခင်က ဘဝက ပိုရိုးရှင်းခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Everything is much faster than it used to be.",
+          "highlight": "much faster than it used to be",
+          "swap_en": "more convenient than it used to be · easier than it was back then",
+          "gloss_mm": "အရင်ကထက်စာရင် အရာအားလုံးက ပိုပြီးမြန်ဆန်လာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We rely on AI far more than we did in the past.",
+          "highlight": "far more than we did in the past",
+          "swap_en": "much more than we used to · significantly more than before",
+          "gloss_mm": "အရင်ကထက်စာရင် ကျွန်တော်တို့က AI ကို ပိုပြီး အားကိုးလာကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The digital world has completely transformed how we communicate compared to traditional methods.",
+          "highlight": "completely transformed",
+          "swap_en": "dramatically changed · fundamentally altered",
+          "gloss_mm": "ဒီဂျစ်တယ်ခေတ်က ရိုးရာဆက်သွယ်ရေးနည်းလမ်းတွေနဲ့ယှဉ်ရင် ကျွန်တော်တို့ရဲ့ ဆက်သွယ်ပြောဆိုပုံကို လုံးဝပြောင်းလဲပစ်လိုက်ပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your own view",
+      "move_mm": "ကိုယ့်ရဲ့ အမြင်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think AI is very useful.",
+          "highlight": "very useful",
+          "swap_en": "a bit scary · quite helpful · very confusing",
+          "gloss_mm": "ကျွန်တော်ထင်တာကတော့ AI က အရမ်းကို အသုံးဝင်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It seems to me that AI will change how we work.",
+          "highlight": "It seems to me that",
+          "swap_en": "In my opinion, · I personally feel that · To be honest,",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ AI က ကျွန်တော်တို့ရဲ့ အလုပ်လုပ်ပုံတွေကို ပြောင်းလဲပစ်မှာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I am convinced that technology does more harm than good in some cases.",
+          "highlight": "I am convinced that",
+          "swap_en": "I strongly believe that · There is no doubt that",
+          "gloss_mm": "နည်းပညာဟာ တချို့ကိစ္စတွေမှာ အကျိုးထက် အပြစ်က ပိုများတယ်လို့ ကျွန်တော် အခိုင်အမာ ယုံကြည်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "From my perspective, relying too much on AI is a mistake.",
+          "highlight": "From my perspective,",
+          "swap_en": "As far as I'm concerned, · If you ask me,",
+          "gloss_mm": "ကျွန်တော့်ရှုထောင့်ကကြည့်ရင် AI ကို အရမ်းကြီး အားကိုးတာဟာ မှားယွင်းတဲ့ လုပ်ရပ်တစ်ခုပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Adding a balanced perspective",
+      "move_mm": "မျှတတဲ့ အမြင်တစ်ခုကို ထည့်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "AI is helpful, but it also has downsides.",
+          "highlight": "it also has downsides",
+          "swap_en": "it also brings risks · it has some drawbacks too",
+          "gloss_mm": "AI က အသုံးဝင်ပေမဲ့ အားနည်းချက်တွေလည်း ရှိပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "While technology makes life easier, it can make us lazy.",
+          "highlight": "While technology makes life easier",
+          "swap_en": "Although AI helps with work · Even though apps save time",
+          "gloss_mm": "နည်းပညာက ဘဝကို ပိုလွယ်ကူစေပေမဲ့ လူတွေကို ပျင်းရိစေနိုင်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "There is a trade-off between convenience and our privacy.",
+          "highlight": "a trade-off between convenience and our privacy",
+          "swap_en": "a balance between efficiency and human connection · a double-edged sword when it comes to security",
+          "gloss_mm": "အဆင်ပြေချောမွေ့မှုနဲ့ ကိုယ်ရေးကိုယ်တာလုံခြုံမှုကြားမှာ ချိန်ဆရမယ့် အချက်တစ်ခု ရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting a solution",
+      "move_mm": "ဖြေရှင်းချက်တစ်ခုကို အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "We should use AI to help with work.",
+          "highlight": "We should use",
+          "swap_en": "We could try using · It might be good to use",
+          "gloss_mm": "အလုပ်တွေမှာ အဆင်ပြေအောင် AI ကို သုံးသင့်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "The best way to handle this is by automating repetitive tasks.",
+          "highlight": "The best way to handle this is by",
+          "swap_en": "A good solution would be to · One way to fix this is to",
+          "gloss_mm": "ဒီပြဿနာကို ဖြေရှင်းဖို့ အကောင်းဆုံးနည်းလမ်းက ထပ်ခါတလဲလဲလုပ်ရတဲ့ အလုပ်တွေကို စက်နဲ့လုပ်ခိုင်းဖို့ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It would be more effective to integrate AI tools into our daily workflow.",
+          "highlight": "It would be more effective to",
+          "swap_en": "It might prove beneficial to · The most efficient approach would be to",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ နေ့စဉ်လုပ်ငန်းခွင်ထဲမှာ AI ကိရိယာတွေကို ထည့်သွင်းအသုံးပြုတာက ပိုပြီးထိရောက်မှု ရှိပါလိမ့်မယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Addressing the uncertainty of the future",
+      "move_mm": "အနာဂတ်ရဲ့ မရေရာမှုအပေါ် ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "It is hard to know what will happen.",
+          "highlight": "hard to know",
+          "swap_en": "difficult to predict · impossible to guess",
+          "gloss_mm": "ဘာတွေဆက်ဖြစ်လာမလဲဆိုတာ ခန့်မှန်းရခက်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "No one is sure how AI will change our jobs.",
+          "highlight": "No one is sure",
+          "swap_en": "It is unclear · It remains uncertain",
+          "gloss_mm": "AI က ကျွန်တော်တို့အလုပ်တွေကို ဘယ်လိုသက်ရောက်မလဲဆိုတာ ဘယ်သူမှအတိအကျ မပြောနိုင်ပါဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The future of work remains a subject of much debate.",
+          "highlight": "a subject of much debate",
+          "swap_en": "a complete mystery · a source of great concern",
+          "gloss_mm": "အလုပ်အကိုင်တွေရဲ့ အနာဂတ်ကတော့ ငြင်းခုံစရာ အကြောင်းအရာတစ်ခုအဖြစ် ဆက်ရှိနေပါဦးမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "We are facing a future filled with unknowns.",
+          "highlight": "filled with unknowns",
+          "swap_en": "full of uncertainty · unpredictable",
+          "gloss_mm": "ကျွန်တော်တို့ဟာ မရေရာမှုတွေနဲ့ ပြည့်နှက်နေတဲ့ အနာဂတ်ကို ရင်ဆိုင်နေရပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Using cautionary language",
+      "move_mm": "သတိထားစရာအချက်တွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We must be careful with AI.",
+          "highlight": "be careful with",
+          "swap_en": "be cautious about · watch out for",
+          "gloss_mm": "AI နဲ့ပတ်သက်ရင် သတိထားဖို့ လိုတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is risky to trust AI completely.",
+          "highlight": "risky",
+          "swap_en": "dangerous · not safe",
+          "gloss_mm": "AI ကို အကုန်ယုံကြည်လိုက်ဖို့က အန္တရာယ်ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The main concern is that AI might replace human jobs.",
+          "highlight": "The main concern is",
+          "swap_en": "The biggest problem is · What worries me is",
+          "gloss_mm": "အဓိက စိုးရိမ်စရာက AI က လူတွေရဲ့အလုပ်အကိုင်တွေကို အစားထိုးသွားမှာပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We should remain cautious about the privacy issues.",
+          "highlight": "remain cautious about",
+          "swap_en": "stay alert regarding · keep a close eye on",
+          "gloss_mm": "ကိုယ်ရေးအချက်အလက် လုံခြုံရေးအတွက် သတိနဲ့ ဆက်ရှိနေသင့်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "Over-reliance on technology can lead to serious consequences.",
+          "highlight": "Over-reliance on",
+          "swap_en": "Depending too much on · Relying solely on",
+          "gloss_mm": "နည်းပညာအပေါ် အလွန်အကျွံ မှီခိုခြင်းက ဆိုးရွားတဲ့ အကျိုးဆက်တွေ ဖြစ်စေနိုင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing the issue",
+      "move_mm": "အဓိကအချက်ကို အနှစ်ချုပ်နည်း",
+      "items": [
+        {
+          "text_en": "Many people think AI is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a great tool · a huge challenge · very useful",
+          "gloss_mm": "လူတော်တော်များများက AI ဟာ ပြဿနာကြီးတစ်ခုလို့ ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "This is becoming a serious issue for our jobs.",
+          "highlight": "a serious issue",
+          "swap_en": "a major concern · a difficult situation · a hot topic",
+          "gloss_mm": "ဒါက ကျွန်တော်တို့ရဲ့ အလုပ်အကိုင်အတွက် အရေးကြီးတဲ့ ပြဿနာတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "One major cause of this fear is the speed of AI development.",
+          "highlight": "the speed of AI development",
+          "swap_en": "the lack of regulations · the uncertainty of the future · the rapid change in technology",
+          "gloss_mm": "ဒီလိုစိုးရိမ်မှုတွေ ဖြစ်ရတဲ့ အဓိကအကြောင်းရင်းတစ်ခုက AI တိုးတက်လာတဲ့ အရှိန်အဟုန်ကြောင့်ပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a concluding thought",
+      "move_mm": "နိဂုံးချုပ် စကားပြောနည်း",
+      "items": [
+        {
+          "text_en": "Technology is changing our lives quickly.",
+          "highlight": "changing our lives quickly",
+          "swap_en": "making our lives easier · becoming a part of everything",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ဘဝကို မြန်မြန်ဆန်ဆန် ပြောင်းလဲနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We need to use AI in a smart way.",
+          "highlight": "in a smart way",
+          "swap_en": "wisely · carefully · responsibly",
+          "gloss_mm": "ကျွန်တော်တို့ AI ကို ပညာရှိရှိ သုံးတတ်ဖို့ လိုတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Ultimately, AI should support human creativity rather than replace it.",
+          "highlight": "support human creativity rather than replace it",
+          "swap_en": "improve our work efficiency · help us solve complex problems",
+          "gloss_mm": "နောက်ဆုံးမှာတော့ AI ဟာ လူ့ရဲ့တီထွင်ဖန်တီးမှုကို အစားထိုးတာထက် အထောက်အကူဖြစ်စေသင့်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss how AI and new technology are changing work and life in Myanmar. Share your views on whether these changes are mostly good or bad and what we should prepare for.",
+    "prompt_mm": "AI နဲ့ နည်းပညာသစ်တွေက မြန်မာနိုင်ငံရဲ့ အလုပ်အကိုင်နဲ့ နေ့စဉ်ဘဝတွေကို ဘယ်လိုပြောင်းလဲနေလဲ ဆွေးနွေးပါ။ ဒီပြောင်းလဲမှုတွေက အကျိုးရှိတာများသလား၊ ဆိုးကျိုးရှိတာများသလားဆိုတဲ့ သင့်အမြင်ကို ရေးသားပြီး အနာဂတ်အတွက် ဘာတွေပြင်ဆင်သင့်လဲဆိုတာကို ၈ ကြောင်းကနေ ၁၂ ကြောင်းအတွင်း ဖော်ပြပေးပါ။",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Introduction",
+      "Current situation",
+      "Benefits vs Risks",
+      "Effect on jobs",
+      "My personal view",
+      "Solutions",
+      "Conclusion"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to ensure your flow is natural and your arguments are clear.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ကြိမ်၊ ၃ ကြိမ်လောက် ဖတ်ကြည့်ပါ။ စကားလုံးတွေ စီးဆင်းမှု မှန်ကန်ပြီး သင့်အမြင်တွေ ရှင်းလင်းပြတ်သားဖို့ လိုအပ်ပါတယ်။"
+  }
+}

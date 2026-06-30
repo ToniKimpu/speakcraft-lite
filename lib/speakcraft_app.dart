@@ -10,6 +10,7 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_themes.dart';
 import 'package:speakcraft/core/di/service_locator.dart';
+import 'package:speakcraft/services/analytics_service.dart';
 import 'package:speakcraft/services/theme_controller.dart';
 import 'package:speakcraft/main.dart';
 import 'package:speakcraft/main_providers.dart';
@@ -143,6 +144,7 @@ class _SpeakCraftAppState extends State<SpeakCraftApp>
               GlobalWidgetsLocalizations.delegate,
             ],
             onGenerateRoute: PmpRoutes.generateRoutes,
+            navigatorObservers: [AnalyticsService.instance.navigatorObserver],
             initialRoute: PmpRoutes.splash,
             supportedLocales: const [
               Locale('en'),

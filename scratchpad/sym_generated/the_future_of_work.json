@@ -1,0 +1,553 @@
+{
+  "id": "the_future_of_work",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "The Future of Work",
+  "title_mm": "အလုပ်အကိုင် အနာဂတ်အကြောင်း ဆွေးနွေးခြင်း",
+  "promise_en": "Learn to speak confidently about technology, remote work, and how the job market is changing.",
+  "promise_mm": "နည်းပညာ၊ အဝေးမှအလုပ်လုပ်ခြင်းနဲ့ အလုပ်အကိုင်ဈေးကွက် ပြောင်းလဲပုံတွေအကြောင်း ယုံကြည်မှုရှိရှိ ပြောတတ်လာစေရမယ်။",
+  "intro_en": "The way we work is shifting rapidly. Whether you are worried about AI or excited about working from home, being able to talk about these trends is essential for professional conversations.",
+  "intro_mm": "အလုပ်လုပ်တဲ့ပုံစံတွေက အရမ်းမြန်မြန်ဆန်ဆန် ပြောင်းလဲနေပါတယ်။ AI ကြောင့် စိုးရိမ်တာပဲဖြစ်ဖြစ်၊ အိမ်ကနေ အလုပ်လုပ်ရတာကိုပဲ နှစ်သက်တာပဲဖြစ်ဖြစ်၊ ဒီလိုခေတ်ရေစီးကြောင်းတွေကို အင်္ဂလိပ်လို ပြောနိုင်ဖို့က အလုပ်ခွင်အတွက် အရမ်းအရေးကြီးပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the topic of changing work trends",
+      "move_mm": "အလုပ်အကိုင်ပုံစံ ပြောင်းလဲနေတာကို စတင်ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "Work life is changing a lot.",
+          "highlight": "changing a lot",
+          "swap_en": "becoming more digital · moving online · getting more flexible",
+          "gloss_mm": "အလုပ်အကိုင်ပုံစံတွေ အများကြီး ပြောင်းလဲနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Many people work from home nowadays.",
+          "highlight": "work from home",
+          "swap_en": "do freelancing · work remotely · use AI tools",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ လူတော်တော်များများ အိမ်ကနေ အလုပ်လုပ်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The way we work is shifting significantly.",
+          "highlight": "shifting significantly",
+          "swap_en": "evolving rapidly · undergoing a major transformation · becoming more tech-driven",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ အလုပ်လုပ်ပုံတွေက သိသိသာသာ ပြောင်းလဲလာနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation in Myanmar",
+      "move_mm": "မြန်မာနိုင်ငံရဲ့ လက်ရှိ အလုပ်အကိုင် အခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Many young people are looking for jobs in Yangon.",
+          "highlight": "looking for jobs",
+          "swap_en": "searching for new opportunities · trying to find stable work",
+          "gloss_mm": "လူငယ်အများစုက ရန်ကုန်မှာ အလုပ်ရှာနေကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "The cost of living is rising, so people need higher salaries.",
+          "highlight": "The cost of living is rising",
+          "swap_en": "Prices are getting higher · Inflation is becoming a struggle",
+          "gloss_mm": "ကုန်ဈေးနှုန်းတွေ တက်လာတာကြောင့် လူတွေက လစာပိုရဖို့ လိုအပ်နေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Remote work is becoming popular among tech professionals.",
+          "highlight": "becoming popular",
+          "swap_en": "gaining traction · starting to trend",
+          "gloss_mm": "နည်းပညာပိုင်းမှာ အလုပ်လုပ်တဲ့သူတွေကြားထဲမှာ အိမ်ကနေ အလုပ်လုပ်တာ ခေတ်စားလာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "There is a significant brain drain as skilled workers seek opportunities abroad.",
+          "highlight": "a significant brain drain",
+          "swap_en": "a worrying trend of migration · a loss of local talent",
+          "gloss_mm": "ကျွမ်းကျင်တဲ့ လုပ်သားတွေ ပြည်ပကို ထွက်ခွာသွားကြတာကြောင့် ပညာတတ်လူငယ်တွေ လျော့နည်းလာတဲ့ ပြဿနာ ရှိနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about the rise of remote work",
+      "move_mm": "ရုံးမသွားဘဲ အိမ်ကနေ အလုပ်လုပ်တဲ့ခေတ်စားလာမှုကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Many people prefer to work from home now.",
+          "highlight": "work from home",
+          "swap_en": "do remote work · work remotely",
+          "gloss_mm": "အခုနောက်ပိုင်း လူတော်တော်များများက အိမ်ကနေပဲ အလုပ်လုပ်ရတာကို ပိုသဘောကျကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Working remotely is becoming the new normal.",
+          "highlight": "becoming the new normal",
+          "swap_en": "becoming a common trend · getting more popular every day",
+          "gloss_mm": "အိမ်ကနေ အလုပ်လုပ်တာက ခေတ်ရေစီးကြောင်းသစ်တစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This shift towards remote work gives employees more flexibility.",
+          "highlight": "more flexibility",
+          "swap_en": "a better work-life balance · more freedom in their schedule",
+          "gloss_mm": "ဒီလို အိမ်ကနေ အလုပ်လုပ်တဲ့ ပုံစံပြောင်းလဲမှုက ဝန်ထမ်းတွေကို အချိန်ပိုင်း အဆင်ပြေမှု ပိုရစေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "A major advantage of remote work is avoiding the morning traffic jam.",
+          "highlight": "avoiding the morning traffic jam",
+          "swap_en": "saving time on commuting · cutting down on travel expenses",
+          "gloss_mm": "အိမ်ကနေ အလုပ်လုပ်ခြင်းရဲ့ အဓိကအားသာချက်က မနက်ခင်း ရုံးသွားချိန် ယာဉ်ကြောပိတ်ဆို့မှုတွေကို ရှောင်လွှဲနိုင်တာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning the impact of AI and automation",
+      "move_mm": "AI နဲ့ စက်မှုလုပ်ငန်း အလိုအလျောက်ဖြစ်လာမှုရဲ့ သက်ရောက်မှုကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "AI is changing how we work.",
+          "highlight": "changing",
+          "swap_en": "affecting · transforming · impacting",
+          "gloss_mm": "AI က ကျွန်တော်တို့ရဲ့ အလုပ်လုပ်ပုံတွေကို ပြောင်းလဲနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Many tasks are becoming automated these days.",
+          "highlight": "becoming automated",
+          "swap_en": "being handled by AI · getting computerized · becoming machine-run",
+          "gloss_mm": "ဒီရက်ပိုင်းမှာ အလုပ်အတော်များများက စက်နဲ့လုပ်လာကြပြီ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Automation is gradually replacing many manual jobs.",
+          "highlight": "gradually replacing",
+          "swap_en": "slowly taking over · effectively substituting for",
+          "gloss_mm": "စက်မှုအလိုအလျောက်စနစ်က လူလက်နဲ့လုပ်ရတဲ့ အလုပ်နေရာတွေကို တဖြည်းဖြည်းချင်း အစားထိုးလာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We are witnessing a significant shift in the job market due to AI advancement.",
+          "highlight": "a significant shift",
+          "swap_en": "a major disruption · a radical transformation",
+          "gloss_mm": "AI တိုးတက်လာမှုကြောင့် အလုပ်အကိုင်ဈေးကွက်မှာ သိသာတဲ့ အပြောင်းအလဲကြီးတစ်ခု ဖြစ်ပေါ်လာတာကို မြင်တွေ့နေရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting two sides of an argument",
+      "move_mm": "အမြင်နှစ်မျိုးကို ချိန်ထိုးပြီး ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Some people like working from home, but others prefer the office.",
+          "highlight": "Some people like",
+          "swap_en": "Some employees enjoy · Many workers prefer",
+          "gloss_mm": "အိမ်ကနေ အလုပ်လုပ်တာကို ကြိုက်တဲ့သူတွေရှိသလို ရုံးကိုပဲ ပိုကြိုက်တဲ့သူတွေလည်း ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "On one hand, AI increases efficiency, but on the other hand, it threatens job security.",
+          "highlight": "",
+          "swap_en": "While it is true that ... , it is also true that · While some argue for ... , others point to",
+          "gloss_mm": "တစ်ဖက်ကကြည့်ရင် AI က အလုပ်ပိုတွင်စေပေမဲ့ နောက်တစ်ဖက်မှာတော့ အလုပ်အကိုင် အာမခံချက်ကို ခြိမ်းခြောက်နေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "While remote work offers flexibility, it often leads to a lack of team connection.",
+          "highlight": "While remote work offers flexibility,",
+          "swap_en": "Although digital technology saves time, · Even though remote work is convenient,",
+          "gloss_mm": "အိမ်ကနေ အလုပ်လုပ်တာက အချိန်ပိုင်းမှာ လွတ်လပ်မှုရှိပေမဲ့ အဖွဲ့အစည်းနဲ့ ချိတ်ဆက်မှု အားနည်းသွားတတ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "There is a debate between the convenience of automation and the necessity of human oversight.",
+          "highlight": "There is a debate between",
+          "swap_en": "We must weigh the pros and cons of · It is a trade-off between",
+          "gloss_mm": "စက်တွေ အလိုအလျောက်လုပ်ဆောင်ပေးတဲ့ အဆင်ပြေမှုနဲ့ လူကိုယ်တိုင် ကြီးကြပ်ရမယ့် လိုအပ်ချက်ကြားမှာ အငြင်းပွားစရာတွေ ရှိနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the causes of these changes",
+      "move_mm": "ဒီလိုပြောင်းလဲမှုတွေ ဖြစ်လာရတဲ့ အကြောင်းရင်းကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "The main reason for this change is technology.",
+          "highlight": "The main reason for this change",
+          "swap_en": "The big reason for this change · One cause of this change",
+          "gloss_mm": "ဒီလိုပြောင်းလဲမှုတွေဖြစ်လာရတဲ့ အဓိကအကြောင်းရင်းက နည်းပညာကြောင့်ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "A lot of these shifts are driven by digital transformation.",
+          "highlight": "driven by",
+          "swap_en": "caused by · the result of",
+          "gloss_mm": "ဒီလိုအပြောင်းအလဲအများစုက ဒစ်ဂျစ်တယ်စနစ်ကူးပြောင်းမှုတွေကြောင့် ဖြစ်လာတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Automation is largely responsible for the disappearing roles.",
+          "highlight": "largely responsible for",
+          "swap_en": "the primary factor behind · the main force behind",
+          "gloss_mm": "အလုပ်အကိုင်တွေ ပျောက်ကွယ်သွားရတဲ့အထဲမှာ စက်မှုအလိုအလျောက်လုပ်ဆောင်မှုစနစ်က အဓိကတာဝန်ရှိနေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "We are seeing these trends stemming from global connectivity.",
+          "highlight": "stemming from",
+          "swap_en": "arising from · rooted in",
+          "gloss_mm": "ဒီလိုလမ်းကြောင်းသစ်တွေက ကမ္ဘာတစ်ဝန်း ချိတ်ဆက်မှုတွေကြောင့် ဖြစ်ပေါ်လာတာကို ကျွန်တော်တို့ တွေ့နေရပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing the risks involved",
+      "move_mm": "ဖြစ်ပေါ်လာနိုင်တဲ့ အန္တရာယ် ဒါမှမဟုတ် စိန်ခေါ်မှုတွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Many people fear that AI could replace human jobs.",
+          "highlight": "could replace human jobs",
+          "swap_en": "might take over our work · will make some jobs disappear",
+          "gloss_mm": "AI က လူတွေရဲ့ အလုပ်တွေကို အစားထိုးသွားမှာကို လူအများက စိုးရိမ်နေကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "The biggest risk is that we might lose our personal touch.",
+          "highlight": "might lose our personal touch",
+          "swap_en": "could face job insecurity · might struggle to adapt to new tech",
+          "gloss_mm": "အဓိက အန္တရာယ်ကတော့ လူသားဆန်တဲ့ ဆက်ဆံရေးမျိုး ပျောက်ဆုံးသွားနိုင်တာပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Reliance on automation poses a significant threat to long-term job stability.",
+          "highlight": "poses a significant threat to",
+          "swap_en": "is creating a major challenge for · could potentially jeopardize",
+          "gloss_mm": "အလိုအလျောက် စနစ်တွေအပေါ် မှီခိုနေရတာက ရေရှည်အလုပ်အကိုင် တည်ငြိမ်မှုအတွက် အကြီးအကျယ် ခြိမ်းခြောက်နေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting new opportunities",
+      "move_mm": "ရရှိလာနိုင်တဲ့ အခွင့်အရေးသစ်တွေကို ထောက်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Remote work creates many new opportunities.",
+          "highlight": "many new opportunities",
+          "swap_en": "great chances · exciting possibilities · more flexibility",
+          "gloss_mm": "အဝေးကနေ အလုပ်လုပ်ခြင်းက အခွင့်အရေးသစ်များစွာကို ဖန်တီးပေးတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Digital skills open doors to global job markets.",
+          "highlight": "open doors to",
+          "swap_en": "create access to · lead to",
+          "gloss_mm": "ဒီဂျစ်တယ်ကျွမ်းကျင်မှုတွေက နိုင်ငံတကာ အလုပ်အကိုင်ဈေးကွက်ဆီ လမ်းစဖွင့်ပေးတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The rise of AI is paving the way for innovative career paths.",
+          "highlight": "paving the way for",
+          "swap_en": "creating a foundation for · unlocking potential for",
+          "gloss_mm": "AI နည်းပညာ တိုးတက်လာခြင်းက ဆန်းသစ်တဲ့ အသက်မွေးဝမ်းကျောင်း လမ်းကြောင်းသစ်တွေအတွက် လမ်းခင်းပေးနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing traditional work with modern work",
+      "move_mm": "ရိုးရာအလုပ်နဲ့ ခေတ်သစ်အလုပ်ကို နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Traditional work is different from modern work.",
+          "highlight": "different from",
+          "swap_en": "a bit different from · totally different from",
+          "gloss_mm": "ရိုးရာအလုပ်တွေက ခေတ်သစ်အလုပ်တွေနဲ့ မတူပါဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Modern work offers more flexibility than traditional office jobs.",
+          "highlight": "more flexibility than",
+          "swap_en": "more freedom than · less stability than",
+          "gloss_mm": "ခေတ်သစ်အလုပ်တွေက ရုံးလုပ်ငန်းတွေထက် ပိုပြီး ပေါ့ပေါ့ပါးပါး လုပ်လို့ရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Remote work has largely replaced the traditional nine-to-five routine.",
+          "highlight": "largely replaced",
+          "swap_en": "slowly changed · completely transformed",
+          "gloss_mm": "အဝေးကနေ အလုပ်လုပ်ခြင်းက ရိုးရာရုံးချိန် ၉ နာရီမှ ၅ နာရီအထိ လုပ်ရတဲ့ ပုံစံကို အစားထိုးလာခဲ့ပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "In contrast to the past, today's work environment is digital-first.",
+          "highlight": "In contrast to the past",
+          "swap_en": "Unlike the old days · Compared to the traditional way",
+          "gloss_mm": "အရင်ကနဲ့မတူဘဲ ဒီနေ့ခေတ် အလုပ်ခွင်က နည်းပညာကို အဓိကထားလာကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating which skills will be important in the future",
+      "move_mm": "အနာဂတ်မှာ ဘယ်လိုကျွမ်းကျင်မှုတွေ လိုအပ်မလဲဆိုတာ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think digital skills will be important.",
+          "highlight": "digital skills",
+          "swap_en": "problem-solving skills · communication skills · English language skills",
+          "gloss_mm": "ဒီဂျစ်တယ် ကျွမ်းကျင်မှုတွေက အရေးကြီးမယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Many people believe that being tech-savvy is essential for the future.",
+          "highlight": "being tech-savvy",
+          "swap_en": "having critical thinking skills · being able to adapt to change · mastering AI tools",
+          "gloss_mm": "အနာဂတ်အတွက် နည်းပညာနဲ့ ကျွမ်းကျင်နေဖို့က မရှိမဖြစ် လိုအပ်တယ်လို့ လူအများက ယုံကြည်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We are seeing a growing demand for creative thinking in the workplace.",
+          "highlight": "a growing demand for creative thinking",
+          "swap_en": "a rising need for emotional intelligence · a greater focus on data literacy",
+          "gloss_mm": "အလုပ်ခွင်မှာ တီထွင်ဖန်တီးနိုင်စွမ်းကို ပိုပြီးတော့ အလိုရှိလာကြတာကို တွေ့ရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It is widely anticipated that soft skills will become just as valuable as technical expertise.",
+          "highlight": "soft skills",
+          "swap_en": "interpersonal skills · cross-cultural communication · cognitive flexibility",
+          "gloss_mm": "လူမှုဆက်ဆံရေးဆိုင်ရာ ကျွမ်းကျင်မှုတွေက နည်းပညာပိုင်းဆိုင်ရာ ကျွမ်းကျင်မှုတွေနည်းတူ တန်ဖိုးရှိလာမယ်လို့ အများက မျှော်လင့်ထားကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "The ability to constantly learn new things is going to be the most critical asset for any professional.",
+          "highlight": "The ability to constantly learn new things",
+          "swap_en": "The capacity to handle complex data · The skill of leading remote teams",
+          "gloss_mm": "အရာသစ်တွေကို အမြဲတမ်း သင်ယူနိုင်စွမ်းရှိခြင်းက ပရော်ဖက်ရှင်နယ်တိုင်းအတွက် အရေးအကြီးဆုံး အားသာချက် ဖြစ်လာလိမ့်မယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your personal opinion",
+      "move_mm": "ကိုယ့်ရဲ့ ကိုယ်ပိုင်အမြင်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think working from home is good.",
+          "highlight": "I think",
+          "swap_en": "I feel · In my opinion",
+          "gloss_mm": "အိမ်ကနေ အလုပ်လုပ်တာက ကောင်းတယ်လို့ ကျွန်တော်ထင်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my view, technology makes our work easier.",
+          "highlight": "In my view",
+          "swap_en": "As I see it · If you ask me",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ နည်းပညာက အလုပ်ကို ပိုပြီး လွယ်ကူစေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I am of the opinion that AI will change the job market significantly.",
+          "highlight": "I am of the opinion that",
+          "swap_en": "I strongly believe that · It is my firm belief that",
+          "gloss_mm": "AI က အလုပ်အကိုင်ဈေးကွက်ကို သိသိသာသာ ပြောင်းလဲသွားစေလိမ့်မယ်လို့ ကျွန်တော် ယုံကြည်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting solutions for workers",
+      "move_mm": "အလုပ်သမားတွေအတွက် ဖြေရှင်းနည်း ဒါမှမဟုတ် အကြံပြုချက်ပေးနည်း",
+      "items": [
+        {
+          "text_en": "Workers should learn new skills.",
+          "highlight": "learn new skills",
+          "swap_en": "take online courses · improve their English · practice digital tools",
+          "gloss_mm": "အလုပ်သမားတွေအနေနဲ့ ကျွမ်းကျင်မှုအသစ်တွေကို သင်ယူသင့်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is a good idea to stay updated with technology.",
+          "highlight": "stay updated with technology",
+          "swap_en": "embrace new technology · keep up with digital trends · adapt to new software",
+          "gloss_mm": "နည်းပညာနဲ့ပတ်သက်ပြီး နောက်ဆုံးအခြေအနေတွေကို သိထားတာက ကောင်းတဲ့အကြံပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Upskilling is essential for staying competitive in the job market.",
+          "highlight": "staying competitive",
+          "swap_en": "staying relevant · remaining employable · securing their future",
+          "gloss_mm": "အလုပ်ဈေးကွက်မှာ ယှဉ်ပြိုင်နိုင်စွမ်းရှိဖို့အတွက် ကျွမ်းကျင်မှုမြှင့်တင်ဖို့က မရှိမဖြစ်လိုအပ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Showing uncertainty about the future",
+      "move_mm": "အနာဂတ်အပေါ် မသေချာမှုတွေ ရှိနေကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am not sure what will happen to our jobs.",
+          "highlight": "not sure what will happen",
+          "swap_en": "unsure about the future · worried about what comes next",
+          "gloss_mm": "ကျွန်တော်တို့ အလုပ်အကိုင်တွေ ဘာဆက်ဖြစ်မလဲဆိုတာ မသေချာဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is hard to say how technology will change things.",
+          "highlight": "hard to say",
+          "swap_en": "difficult to predict · tough to tell",
+          "gloss_mm": "နည်းပညာက ဘယ်လိုမျိုး ပြောင်းလဲသွားမလဲဆိုတာ ပြောဖို့ ခက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The future of work remains highly unpredictable.",
+          "highlight": "remains highly unpredictable",
+          "swap_en": "is still up in the air · is very uncertain",
+          "gloss_mm": "အလုပ်အကိုင်နဲ့ ပတ်သက်တဲ့ အနာဂတ်က အလွန်ကို မရေရာသေးဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your viewpoint",
+      "move_mm": "ကိုယ်ပြောလိုတဲ့ အချက်ကို အနှစ်ချုပ်ပြီး နိဂုံးချုပ်နည်း",
+      "items": [
+        {
+          "text_en": "In short, technology will change how we work.",
+          "highlight": "In short",
+          "swap_en": "To sum up · Basically · Overall",
+          "gloss_mm": "အတိုချုပ်ပြောရရင် နည်းပညာက ကျွန်တော်တို့ရဲ့ အလုပ်လုပ်ပုံတွေကို ပြောင်းလဲသွားစေမှာပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "All things considered, remote work is here to stay.",
+          "highlight": "All things considered",
+          "swap_en": "When all is said and done · Looking at the big picture",
+          "gloss_mm": "ဘက်ပေါင်းစုံက ချင့်ချိန်ကြည့်ရင် ရုံးသွားစရာမလိုဘဲ အလုပ်လုပ်တဲ့စနစ်က ဆက်ရှိနေဦးမှာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Ultimately, we must adapt to survive in this new job market.",
+          "highlight": "Ultimately",
+          "swap_en": "At the end of the day · When it comes down to it",
+          "gloss_mm": "နောက်ဆုံးအနေနဲ့ပြောရရင် ဒီအလုပ်ဈေးကွက်သစ်မှာ ဆက်လက်ရပ်တည်ဖို့အတွက် ကျွန်တော်တို့ လိုက်လျောညီထွေဖြစ်အောင် ပြောင်းလဲကြရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Asking for someone else's perspective",
+      "move_mm": "တစ်ဖက်လူရဲ့ အမြင်ကို ပြန်မေးနည်း",
+      "items": [
+        {
+          "text_en": "What do you think about working from home?",
+          "highlight": "What do you think about",
+          "swap_en": "How do you feel about · What is your opinion on",
+          "gloss_mm": "အိမ်ကနေ အလုပ်လုပ်တာနဲ့ ပတ်သက်ပြီး ဘယ်လိုမြင်လဲခင်ဗျာ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Do you agree that AI will change our jobs soon?",
+          "highlight": "Do you agree that",
+          "swap_en": "Do you think that · What's your take on whether",
+          "gloss_mm": "AI က အလုပ်အကိုင်တွေကို မကြာခင် ပြောင်းလဲသွားစေမယ်လို့ ခင်ဗျား သဘောတူလား။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "How do you see the future of office jobs in Yangon?",
+          "highlight": "How do you see",
+          "swap_en": "What's your perspective on · In your view, what is",
+          "gloss_mm": "ရန်ကုန်မှာ ရုံးအလုပ်တွေရဲ့ အနာဂတ်ကို ဘယ်လိုမျိုး မြင်မိလဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm curious to hear your take on remote work.",
+          "highlight": "I'm curious to hear your take on",
+          "swap_en": "I'd love to get your thoughts on · I'm interested in your view on",
+          "gloss_mm": "အဝေးကနေ အလုပ်လုပ်တဲ့ပုံစံနဲ့ ပတ်သက်ပြီး ခင်ဗျားရဲ့ အမြင်ကို သိချင်မိပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss how the future of work is changing in your industry. Mention at least two trends, explain whether you think these changes are positive or negative, and share what skills you are learning to stay prepared.",
+    "prompt_mm": "သင်လုပ်နေတဲ့ လုပ်ငန်းနယ်ပယ်မှာ အလုပ်အကိုင် အနာဂတ် ဘယ်လိုပြောင်းလဲနေလဲဆိုတာ ဆွေးနွေးပါ။ ခေတ်ရေစီးကြောင်း နှစ်ခုကို ထည့်ပြောပါ၊ ဒီပြောင်းလဲမှုတွေက ကောင်းသလား၊ ဆိုးသလား ကိုယ့်အမြင်ကို ရှင်းပြပြီး၊ အနာဂတ်အတွက် သင် ဘာတွေလေ့လာနေလဲဆိုတာ ပြောပြပါ။",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Current trends",
+      "Remote work",
+      "AI impact",
+      "Positive/Negative",
+      "Necessary skills",
+      "Personal view",
+      "Future preparation"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to ensure your flow is natural and your tone is clear.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ကြည့်ပါ။ စကားလုံးတွေ ချောမွေ့မှုရှိမရှိနဲ့ အသံနေအသံထား မှန်မမှန် စစ်ဆေးပါ။"
+  }
+}

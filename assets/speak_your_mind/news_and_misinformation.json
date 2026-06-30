@@ -1,0 +1,741 @@
+{
+  "id": "news_and_misinformation",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "News & Misinformation",
+  "title_mm": "သတင်းအချက်အလက်နှင့် သတင်းမှားများ",
+  "promise_en": "Master the vocabulary to discuss online media, evaluate news sources, and share your perspective on the impact of misinformation in Myanmar.",
+  "promise_mm": "အွန်လိုင်းသတင်းများ၊ သတင်းမှားများအကြောင်းကို ယုံကြည်မှုရှိရှိ ဆွေးနွေးနိုင်ပြီး ကိုယ့်အမြင်ကို တိကျစွာပြောဆိုနိုင်ဖို့ လေ့ကျင့်ပေးပါမယ်။",
+  "intro_en": "In the digital age, news travels fast, but so does misinformation. Discussing how we consume news and verify information is a vital skill for modern communication.",
+  "intro_mm": "ဒီဂျစ်တယ်ခေတ်မှာ သတင်းတွေက မြန်မြန်ဆန်ဆန် ပျံ့နှံ့သလို သတင်းမှားတွေလည်း အများကြီးပါပဲ။ သတင်းတွေကို ဘယ်လိုဖတ်ရှုရမလဲ၊ သတင်းမှန်/မှားကို ဘယ်လိုခွဲခြားမလဲဆိုတာကို ဆွေးနွေးဖို့ လိုအပ်ပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the topic",
+      "move_mm": "သတင်းအကြောင်း စတင်ဆွေးနွေးနည်း",
+      "items": [
+        {
+          "text_en": "Many people believe everything they see on Facebook.",
+          "highlight": "Many people believe",
+          "swap_en": "Everyone believes · Some people believe · Most of my friends believe",
+          "gloss_mm": "လူတော်တော်များများက Facebook ပေါ်မှာတွေ့သမျှကို အကုန်ယုံနေကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m1-i1.mp3"
+        },
+        {
+          "text_en": "This is becoming a serious problem in our society.",
+          "highlight": "a serious problem",
+          "swap_en": "a big issue · a real challenge · a concerning trend",
+          "gloss_mm": "ဒါက ကျွန်တော်တို့ လူ့အဖွဲ့အစည်းမှာ ပြဿနာကြီးတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m1-i2.mp3"
+        },
+        {
+          "text_en": "One major cause is the spread of fake news online.",
+          "highlight": "One major cause",
+          "swap_en": "The main reason · A key factor · The biggest problem",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုကတော့ အွန်လိုင်းမှာ သတင်းအမှားတွေ ပျံ့နှံ့နေတာပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m1-i3.mp3"
+        },
+        {
+          "text_en": "The rapid spread of misinformation poses a threat to public awareness.",
+          "highlight": "poses a threat to",
+          "swap_en": "can damage · creates confusion for · significantly affects",
+          "gloss_mm": "သတင်းအမှားတွေ မြန်မြန်ဆန်ဆန် ပျံ့နှံ့နေတာက ပြည်သူတွေရဲ့ အသိပညာ ဗဟုသုတအတွက် ခြိမ်းခြောက်မှုတစ်ခု ဖြစ်နေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing how you get your daily news",
+      "move_mm": "နေ့စဉ် သတင်းဘယ်ကဖတ်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I get my news from Facebook.",
+          "highlight": "Facebook",
+          "swap_en": "the radio · the television · news websites",
+          "gloss_mm": "ကျွန်တော် သတင်းတွေကို Facebook ကနေ ဖတ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m2-i1.mp3"
+        },
+        {
+          "text_en": "I usually scroll through my news feed in the morning.",
+          "highlight": "scroll through my news feed",
+          "swap_en": "check the headlines · read the online news",
+          "gloss_mm": "ကျွန်တော် မနက်ခင်းဆို သတင်း feed တွေကို လှိမ့်ကြည့်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m2-i2.mp3"
+        },
+        {
+          "text_en": "I rely on online news portals to stay updated.",
+          "highlight": "rely on online news portals",
+          "swap_en": "depend on social media pages · catch up via mobile apps",
+          "gloss_mm": "နောက်ဆုံးရသတင်းတွေကို သိဖို့ အွန်လိုင်းသတင်းဌာနတွေကို အဓိကထားတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m2-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Commenting on the prevalence of misinformation",
+      "move_mm": "သတင်းမှားတွေ ပျံ့နှံ့နေပုံကို မှတ်ချက်ပေးနည်း",
+      "items": [
+        {
+          "text_en": "Many people believe fake news easily.",
+          "highlight": "fake news",
+          "swap_en": "misinformation · rumors · unverified stories",
+          "gloss_mm": "လူတော်တော်များများက သတင်းမှားတွေကို လွယ်လွယ်နဲ့ ယုံမိကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m3-i1.mp3"
+        },
+        {
+          "text_en": "It is becoming a serious problem these days.",
+          "highlight": "a serious problem",
+          "swap_en": "a big issue · a growing concern · a real challenge",
+          "gloss_mm": "ဒါက ဒီရက်ပိုင်းမှာ တကယ့်ကို ပြဿနာကြီးတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m3-i2.mp3"
+        },
+        {
+          "text_en": "Social media makes it spread like wildfire.",
+          "highlight": "spread like wildfire",
+          "swap_en": "spread very quickly · travel fast",
+          "gloss_mm": "လူမှုကွန်ရက်တွေကြောင့် သတင်းတွေက တောမီးလိုပဲ အရမ်းမြန်မြန် ပျံ့နှံ့နေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m3-i3.mp3"
+        },
+        {
+          "text_en": "The rapid proliferation of misinformation is quite alarming.",
+          "highlight": "rapid proliferation",
+          "swap_en": "widespread circulation · constant influx",
+          "gloss_mm": "သတင်းမှားတွေ ဒီလောက်မြန်မြန် ပျံ့နှံ့နေတာက စိုးရိမ်စရာကောင်းလောက်အောင် ဖြစ်လာတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m3-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining why fake news spreads",
+      "move_mm": "သတင်းမှားတွေ ဘာကြောင့် ပျံ့နှံ့သလဲ ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "Many people share fake news because it is exciting.",
+          "highlight": "it is exciting",
+          "swap_en": "it is shocking · it makes them angry · it sounds true",
+          "gloss_mm": "သတင်းအမှားတွေက စိတ်လှုပ်ရှားစရာကောင်းလို့ လူတွေက အလွယ်တကူ ရှယ်လိုက်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m4-i1.mp3"
+        },
+        {
+          "text_en": "One major cause is that people don't check the source.",
+          "highlight": "don't check the source",
+          "swap_en": "don't verify the facts · just read the headline · trust everything online",
+          "gloss_mm": "အဓိကအကြောင်းရင်းကတော့ လူတွေက သတင်းရဲ့အရင်းအမြစ်ကို မစစ်ဆေးကြတာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m4-i2.mp3"
+        },
+        {
+          "text_en": "Sensational headlines play a huge role in spreading misinformation quickly.",
+          "highlight": "play a huge role",
+          "swap_en": "are a big factor · contribute significantly",
+          "gloss_mm": "ဆွဲဆောင်မှုရှိတဲ့ ခေါင်းစဉ်တွေက သတင်းမှားတွေ မြန်မြန်ပျံ့နှံ့ဖို့အတွက် အဓိကနေရာကနေ ပါဝင်နေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m4-i3.mp3"
+        },
+        {
+          "text_en": "Often, misleading content goes viral due to emotional reactions.",
+          "highlight": "due to emotional reactions",
+          "swap_en": "because people panic · because of curiosity · due to fear",
+          "gloss_mm": "စိတ်ခံစားမှု ပြင်းထန်တဲ့အခါမျိုးမှာ အမှားပါတဲ့ အကြောင်းအရာတွေက လူမှုကွန်ရက်မှာ ရေပန်းစားလာတတ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting two sides of an argument",
+      "move_mm": "အငြင်းပွားစရာ နှစ်ဖက်ကို တင်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Some people say news is reliable, but others disagree.",
+          "highlight": "Some people say",
+          "swap_en": "Many people believe · Some argue",
+          "gloss_mm": "သတင်းတွေက ယုံကြည်ရတယ်လို့ တချို့က ပြောကြပေမဲ့ တချို့ကတော့ သဘောမတူကြပါဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m5-i1.mp3"
+        },
+        {
+          "text_en": "On one hand, social media is fast; on the other hand, it spreads fake news.",
+          "highlight": "On one hand",
+          "swap_en": "On the one side",
+          "gloss_mm": "တစ်ဖက်မှာကျတော့ ဆိုရှယ်မီဒီယာက သတင်းမြန်တယ်၊ ဒါပေမဲ့ နောက်တစ်ဖက်မှာကျတော့ မဟုတ်မမှန်တဲ့သတင်းတွေ ပျံ့နှံ့စေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m5-i2.mp3"
+        },
+        {
+          "text_en": "While some prioritize speed, others emphasize the importance of fact-checking.",
+          "highlight": "While some prioritize",
+          "swap_en": "While many favor · Although some insist on",
+          "gloss_mm": "တချို့က သတင်းမြန်ဖို့ကို ဦးစားပေးကြပေမဲ့၊ တချို့ကတော့ အချက်အလက်စစ်ဆေးခြင်းရဲ့ အရေးပါပုံကို ပိုအလေးပေးကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m5-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Giving an example of a common issue",
+      "move_mm": "သာဓကတစ်ခုခုနဲ့ ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "Many people share fake news on Facebook.",
+          "highlight": "fake news",
+          "swap_en": "misleading stories · unverified rumors · clickbait headlines",
+          "gloss_mm": "လူတော်တော်များများက Facebook မှာ သတင်းအတုတွေကို ရှယ်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m6-i1.mp3"
+        },
+        {
+          "text_en": "It is easy to believe rumors without checking the facts.",
+          "highlight": "believe rumors",
+          "swap_en": "share misinformation · trust unverified posts · spread gossip",
+          "gloss_mm": "အချက်အလက်ကို မစစ်ဆေးဘဲ ကောလာဟလတွေကို ယုံမိဖို့ လွယ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m6-i2.mp3"
+        },
+        {
+          "text_en": "One major issue is how quickly misinformation spreads in group chats.",
+          "highlight": "misinformation spreads",
+          "swap_en": "fake news circulates · false rumors travel",
+          "gloss_mm": "အဓိကပြဿနာတစ်ခုကတော့ Group Chat တွေထဲမှာ သတင်းမှားတွေ ဘယ်လောက် မြန်မြန်ပျံ့နှံ့နေလဲဆိုတာပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m6-i3.mp3"
+        },
+        {
+          "text_en": "People often fall victim to sensational headlines designed to trigger panic.",
+          "highlight": "fall victim to",
+          "swap_en": "get misled by · easily buy into",
+          "gloss_mm": "လူတွေက လူထုကို ထိတ်လန့်စေဖို့ ရည်ရွယ်ပြီး ရေးထားတဲ့ ခေါင်းစဉ်ဆန်းဆန်းတွေကို လွယ်လွယ်နဲ့ပဲ ယုံမိတတ်ကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m6-i4.mp3"
+        },
+        {
+          "text_en": "This trend poses a significant threat to public awareness.",
+          "highlight": "poses a significant threat to",
+          "swap_en": "creates a serious problem for · undermines",
+          "gloss_mm": "ဒီလိုအလေ့အထက လူထုရဲ့ အသိပညာ ဗဟုသုတအပေါ်မှာ အကြီးအကျယ် ခြိမ်းခြောက်မှု ဖြစ်စေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m6-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the effects on society",
+      "move_mm": "လူ့အဖွဲ့အစည်းအပေါ် သက်ရောက်မှု ပြောနည်း",
+      "items": [
+        {
+          "text_en": "Fake news is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a real threat · a growing concern",
+          "gloss_mm": "သတင်းအမှားတွေက ပြဿနာကြီးတစ်ခု ဖြစ်နေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m7-i1.mp3"
+        },
+        {
+          "text_en": "It makes people feel confused.",
+          "highlight": "feel confused",
+          "swap_en": "feel worried · feel angry · lose trust",
+          "gloss_mm": "ဒါက လူတွေကို ဝေခွဲမရဖြစ်အောင် လုပ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m7-i2.mp3"
+        },
+        {
+          "text_en": "Misinformation creates a lot of division in our society.",
+          "highlight": "creates a lot of division",
+          "swap_en": "fuels social conflict · destroys public trust · stirs up unnecessary panic",
+          "gloss_mm": "သတင်းအမှားတွေက လူ့အဖွဲ့အစည်းကြားမှာ အကွဲအပြဲတွေ အများကြီး ဖြစ်စေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m7-i3.mp3"
+        },
+        {
+          "text_en": "This trend is really tearing our community apart.",
+          "highlight": "tearing our community apart",
+          "swap_en": "eroding our sense of unity · undermining social stability · spreading fear among neighbors",
+          "gloss_mm": "ဒီလမ်းကြောင်းက ကျွန်တော်တို့ရဲ့ လူမှုအသိုင်းအဝိုင်းကို တကွဲတပြားဖြစ်အောင် လုပ်နေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m7-i4.mp3"
+        },
+        {
+          "text_en": "The unchecked spread of rumors often leads to unnecessary social unrest.",
+          "highlight": "leads to unnecessary social unrest",
+          "swap_en": "exacerbates existing tensions · poses a significant risk to public harmony · distorts our collective perception of reality",
+          "gloss_mm": "ကောလာဟလတွေကို စိစစ်မှုမရှိဘဲ ပျံ့နှံ့စေတာက မလိုအပ်တဲ့ လူမှုရေးမငြိမ်မသက်မှုတွေကို ဖြစ်ပေါ်စေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m7-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your personal concern",
+      "move_mm": "စိုးရိမ်မကင်းဖြစ်မှုကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Fake news is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a real threat · a growing concern",
+          "gloss_mm": "သတင်းတုတွေက ကြီးမားတဲ့ ပြဿနာတစ်ခု ဖြစ်လာတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m8-i1.mp3"
+        },
+        {
+          "text_en": "It worries me that many people believe everything they see online.",
+          "highlight": "It worries me that",
+          "swap_en": "I'm worried that · It concerns me that",
+          "gloss_mm": "အွန်လိုင်းမှာ တွေ့သမျှကို လူတွေက အကုန်ယုံနေကြတာကို ကျွန်တော် စိုးရိမ်မိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m8-i2.mp3"
+        },
+        {
+          "text_en": "I am deeply concerned about how easily misinformation spreads on social media.",
+          "highlight": "deeply concerned about",
+          "swap_en": "very worried about · really uneasy about",
+          "gloss_mm": "လူမှုကွန်ရက်ပေါ်မှာ မှားယွင်းတဲ့သတင်းတွေ ဒီလောက်မြန်မြန် ပျံ့နှံ့နေတာကို ကျွန်တော် တကယ့်ကို စိုးရိမ်မိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining how to check for credibility",
+      "move_mm": "သတင်းမှန်/မှား ဘယ်လိုစစ်မလဲ ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "You should check who wrote the news.",
+          "highlight": "who wrote the news",
+          "swap_en": "who posted the news · where the news is from · if the source is reliable",
+          "gloss_mm": "ဒီသတင်းကို ဘယ်သူရေးလဲဆိုတာ စစ်ဆေးသင့်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m9-i1.mp3"
+        },
+        {
+          "text_en": "I always check if other websites report the same thing.",
+          "highlight": "other websites report the same thing",
+          "swap_en": "official pages confirm the story · major news outlets cover it",
+          "gloss_mm": "တခြားဝဘ်ဆိုက်တွေမှာလည်း ဒီသတင်းမျိုး ဖော်ပြထားသလားဆိုတာ ကျွန်တော် အမြဲစစ်ပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m9-i2.mp3"
+        },
+        {
+          "text_en": "It is important to cross-reference multiple reputable sources.",
+          "highlight": "cross-reference multiple reputable sources",
+          "swap_en": "verify the information with official channels · check the date and context of the post",
+          "gloss_mm": "ယုံကြည်စိတ်ချရတဲ့ သတင်းရင်းမြစ်ပေါင်းစုံနဲ့ ပြန်လည်တိုက်ဆိုင်စစ်ဆေးဖို့က အရေးကြီးပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing traditional media and social media",
+      "move_mm": "ရိုးရာသတင်းနဲ့ ဆိုရှယ်မီဒီယာ နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "Traditional media is more reliable than social media.",
+          "highlight": "more reliable than",
+          "swap_en": "faster than · less accurate than · more trustworthy than",
+          "gloss_mm": "ရိုးရာသတင်းဌာနတွေက ဆိုရှယ်မီဒီယာထက် ပိုပြီး ယုံကြည်စိတ်ချရတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m10-i1.mp3"
+        },
+        {
+          "text_en": "People often prefer social media for getting breaking news.",
+          "highlight": "often prefer",
+          "swap_en": "tend to rely on · mostly use · are increasingly turning to",
+          "gloss_mm": "သတင်းအသစ်တွေကို သိဖို့အတွက် လူတွေက ဆိုရှယ်မီဒီယာကိုပဲ ပိုအားထားကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m10-i2.mp3"
+        },
+        {
+          "text_en": "Social media creates a faster flow of information, but it lacks the fact-checking of traditional journalism.",
+          "highlight": "lacks the fact-checking of",
+          "swap_en": "doesn't have the rigorous verification of · misses the editorial oversight of",
+          "gloss_mm": "ဆိုရှယ်မီဒီယာက သတင်းစီးဆင်းမှု ပိုမြန်ပေမဲ့ ရိုးရာသတင်းဌာနတွေလို အချက်အလက်စစ်ဆေးမှု အားနည်းတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting potential solutions",
+      "move_mm": "ဖြေရှင်းနည်းအကြံပြုချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We should check the source before sharing.",
+          "highlight": "check the source",
+          "swap_en": "verify the information · double-check the facts · read the whole article",
+          "gloss_mm": "သတင်းတစ်ခုကို မဝေမျှခင် ရင်းမြစ်ကို စစ်ဆေးသင့်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m11-i1.mp3"
+        },
+        {
+          "text_en": "It is better to rely on official news outlets.",
+          "highlight": "rely on official news outlets",
+          "swap_en": "trust reputable sources · stick to verified news pages",
+          "gloss_mm": "တရားဝင် သတင်းဌာနတွေကိုသာ အားကိုးတာ ပိုကောင်းပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m11-i2.mp3"
+        },
+        {
+          "text_en": "Digital literacy training is a practical way to combat fake news.",
+          "highlight": "Digital literacy training",
+          "swap_en": "Public awareness campaigns · Stricter social media moderation · Fact-checking initiatives",
+          "gloss_mm": "အွန်လိုင်းသတင်း အမှားတွေကို တိုက်ဖျက်ဖို့အတွက် ဒစ်ဂျစ်တယ် စာတတ်မြောက်ရေး သင်တန်းတွေက အထိရောက်ဆုံး နည်းလမ်းတစ်ခုပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m11-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating your firm opinion",
+      "move_mm": "ကိုယ့်ရဲ့ အမြင်အတိအကျ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think fake news is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a major concern · a dangerous trend",
+          "gloss_mm": "သတင်းမှားတွေက အခုနောက်ပိုင်း အကြီးအကျယ် ပြဿနာဖြစ်နေတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m12-i1.mp3"
+        },
+        {
+          "text_en": "It is clear that social media spreads misinformation too fast.",
+          "highlight": "It is clear that",
+          "swap_en": "There is no doubt that · I am convinced that",
+          "gloss_mm": "လူမှုကွန်ရက်တွေက သတင်းမှားတွေကို မြန်မြန်ဆန်ဆန် ပျံ့နှံ့စေတယ်ဆိုတာ သေချာပေါက်ပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m12-i2.mp3"
+        },
+        {
+          "text_en": "I firmly believe that we must verify sources before sharing.",
+          "highlight": "I firmly believe that",
+          "swap_en": "I hold the view that · It is my honest opinion that",
+          "gloss_mm": "သတင်းတစ်ခုကို မမျှဝေခင်မှာ အရင်းအမြစ်ကို အတည်ပြုရမယ်ဆိုတာကို ကျွန်တော် ခိုင်ခိုင်မာမာ ယုံကြည်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing or disagreeing with a statement",
+      "move_mm": "သဘောတူ/မတူ ထုတ်ဖော်ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "I agree that fake news is a problem.",
+          "highlight": "I agree that",
+          "swap_en": "I don't think · I'm not sure if",
+          "gloss_mm": "သတင်းမှားတွေက ပြဿနာတစ်ခုဆိုတာကို ကျွန်တော် သဘောတူပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m13-i1.mp3"
+        },
+        {
+          "text_en": "You have a point, but social media makes it worse.",
+          "highlight": "You have a point, but",
+          "swap_en": "That's true, but · I see what you mean, but",
+          "gloss_mm": "ပြောတာလည်း ဟုတ်ပါတယ်၊ ဒါပေမဲ့ လူမှုကွန်ရက်တွေကြောင့် ပိုဆိုးသွားတာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m13-i2.mp3"
+        },
+        {
+          "text_en": "I'm inclined to agree because misinformation spreads so quickly.",
+          "highlight": "I'm inclined to agree",
+          "swap_en": "I strongly disagree · I have to disagree",
+          "gloss_mm": "သတင်းမှားတွေက အရမ်းမြန်မြန်ပျံ့နှံ့လို့ ကျွန်တော်လည်း သဘောတူမိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m13-i3.mp3"
+        },
+        {
+          "text_en": "That's a fair point, yet we must check sources carefully.",
+          "highlight": "That's a fair point, yet",
+          "swap_en": "I see your perspective, although · While that may be true, however",
+          "gloss_mm": "ဒါလည်း မှန်ပါတယ်၊ ဒါပေမဲ့ သတင်းရင်းမြစ်တွေကို သေချာစစ်ဆေးဖို့ လိုပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m13-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing the complexity of the issue",
+      "move_mm": "ကိစ္စရပ်ရဲ့ ရှုပ်ထွေးမှုကို အနှစ်ချုပ်နည်း",
+      "items": [
+        {
+          "text_en": "It is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a confusing situation · a difficult topic",
+          "gloss_mm": "ဒါက ကြီးမားတဲ့ ပြဿနာတစ်ခုပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m14-i1.mp3"
+        },
+        {
+          "text_en": "This is becoming a complicated issue.",
+          "highlight": "a complicated issue",
+          "swap_en": "a messy situation · a tricky matter · a real challenge",
+          "gloss_mm": "ဒါက ရှုပ်ထွေးတဲ့ ကိစ္စရပ်တစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m14-i2.mp3"
+        },
+        {
+          "text_en": "There are many sides to this story.",
+          "highlight": "many sides to this story",
+          "swap_en": "different layers to this issue · various factors involved here",
+          "gloss_mm": "ဒီသတင်းမှာ ရှုထောင့်ပေါင်းစုံ ရှိနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m14-i3.mp3"
+        },
+        {
+          "text_en": "It is hard to distinguish fact from fiction these days.",
+          "highlight": "distinguish fact from fiction",
+          "swap_en": "tell the truth from lies · separate genuine news from rumors",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ အမှန်နဲ့ အမှားကို ခွဲခြားဖို့ ခက်ခဲတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m14-i4.mp3"
+        },
+        {
+          "text_en": "The situation is far more nuanced than people realize.",
+          "highlight": "far more nuanced",
+          "swap_en": "a lot more complex · much more deep-rooted",
+          "gloss_mm": "အခြေအနေက လူတွေထင်ထားတာထက် ပိုပြီးတော့ နက်နဲရှုပ်ထွေးတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m14-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your thoughts",
+      "move_mm": "နိဂုံးချုပ် စကားပြောနည်း",
+      "items": [
+        {
+          "text_en": "It is a serious problem for everyone.",
+          "highlight": "a serious problem",
+          "swap_en": "a growing concern · a real challenge · a big issue",
+          "gloss_mm": "ဒါဟာ လူတိုင်းအတွက် ပြဿနာကြီးတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m15-i1.mp3"
+        },
+        {
+          "text_en": "We should be more careful about what we read online.",
+          "highlight": "more careful",
+          "swap_en": "more skeptical · more critical · more cautious",
+          "gloss_mm": "အွန်လိုင်းမှာ ဖတ်တဲ့အရာတွေကို ပိုပြီး သတိထားသင့်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m15-i2.mp3"
+        },
+        {
+          "text_en": "Ultimately, checking the source is the best way to avoid fake news.",
+          "highlight": "checking the source",
+          "swap_en": "verifying the facts · double-checking the information",
+          "gloss_mm": "နောက်ဆုံးမှာတော့ သတင်းမှားတွေကို ရှောင်ရှားဖို့ သတင်းရင်းမြစ်ကို စစ်ဆေးတာက အကောင်းဆုံးပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m15-i3.mp3"
+        },
+        {
+          "text_en": "This trend could have a negative impact on our society.",
+          "highlight": "a negative impact",
+          "swap_en": "long-term consequences · serious social implications",
+          "gloss_mm": "ဒီလမ်းကြောင်းက ကျွန်တော်တို့ လူ့အဖွဲ့အစည်းအပေါ် ဆိုးကျိုးသက်ရောက်နိုင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/news_and_misinformation/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss the impact of online news and misinformation. Explain how you decide if a news story is real, why misinformation spreads so easily, and what we should do to stay informed.",
+    "prompt_mm": "အွန်လိုင်းသတင်းများနှင့် သတင်းမှားများ၏ အကျိုးသက်ရောက်မှုအကြောင်း ဆွေးနွေးပါ။ သတင်းတစ်ခုကို အမှန်/အမှား ဘယ်လိုခွဲခြားသလဲ၊ သတင်းမှားတွေ ဘာကြောင့် လွယ်လွယ်ပျံ့နှံ့သလဲ၊ အမှန်တရားကို သိရှိနိုင်ဖို့ ဘာတွေလုပ်သင့်သလဲဆိုတာကို ရေးသားပါ။ (၈-၁၂ ဝါကျ)",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "News habits",
+      "Why misinformation spreads",
+      "Real vs Fake",
+      "Societal impact",
+      "Personal responsibility",
+      "Possible solutions",
+      "Conclusion"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to gain confidence and improve your flow.",
+    "speak_aloud_mm": "သင်ရေးသားထားတဲ့ အဖြေကို ယုံကြည်မှုရှိရှိနဲ့ အသံထွက်ပြီး ၂ ကြိမ် သို့မဟုတ် ၃ ကြိမ် ဖတ်ကြည့်ပါ။"
+  },
+  "guide": {
+    "model_en": "I read the news online every morning. Recently, I have noticed a lot of misinformation online. Many people share fake news without checking the facts. This is a big problem for our society today. Some think social media is faster than traditional news. Others believe traditional media is more reliable and accurate. I am very worried about the impact of false reports. We must always verify sources before sharing information. I think we need more digital literacy education. In conclusion, managing misinformation is a complex challenge for everyone.",
+    "model_mm": "ကျွန်တော် မနက်တိုင်း အွန်လိုင်းကနေ သတင်းဖတ်ပါတယ်။ မကြာသေးခင်က အွန်လိုင်းမှာ သတင်းမှားတွေ အများကြီးတွေ့နေရပါတယ်။ လူတော်တော်များများက အချက်အလက်မစစ်ဆေးဘဲ သတင်းမှားတွေကို မျှဝေကြပါတယ်။ ဒါဟာ ဒီနေ့ခေတ် လူ့အဖွဲ့အစည်းအတွက် ကြီးမားတဲ့ ပြဿနာတစ်ခုပါ။ တချို့က ဆိုရှယ်မီဒီယာဟာ ရိုးရာသတင်းထက် ပိုမြန်တယ်လို့ ထင်ကြပါတယ်။ တချို့ကတော့ ရိုးရာသတင်းမီဒီယာက ပိုယုံကြည်စိတ်ချရပြီး တိကျတယ်လို့ ယုံကြည်ကြပါတယ်။ သတင်းမှားတွေရဲ့ သက်ရောက်မှုအတွက် ကျွန်တော် တကယ်စိုးရိမ်မိပါတယ်။ သတင်းတစ်ခုခုကို မမျှဝေခင် အမြဲတမ်း အရင်းအမြစ်ကို စစ်ဆေးသင့်ပါတယ်။ ဒစ်ဂျစ်တယ်စာတတ်မြောက်မှု ပညာပေးလုပ်ငန်းတွေ ပိုလိုအပ်တယ်လို့ ကျွန်တော်ထင်ပါတယ်။ နိဂုံးချုပ်ရရင် သတင်းမှားတွေကို ထိန်းချုပ်ဖို့က လူတိုင်းအတွက် ရှုပ်ထွေးတဲ့ စိန်ခေါ်မှုတစ်ခုပါ။",
+    "breakdown": [
+      {
+        "text_en": "I read the news online every morning.",
+        "gloss_mm": "ကျွန်တော် မနက်တိုင်း အွန်လိုင်းကနေ သတင်းဖတ်ပါတယ်။",
+        "why_mm": "နေ့စဉ်သတင်း ဘယ်ကဖတ်လဲဆိုတာ စတင်ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "Recently, I have noticed a lot of misinformation online.",
+        "gloss_mm": "မကြာသေးခင်က အွန်လိုင်းမှာ သတင်းမှားတွေ အများကြီးတွေ့နေရပါတယ်။",
+        "why_mm": "သတင်းမှားတွေ ပျံ့နှံ့နေပုံကို မှတ်ချက်ပေးခြင်း။"
+      },
+      {
+        "text_en": "Many people share fake news without checking the facts.",
+        "gloss_mm": "လူတော်တော်များများက အချက်အလက်မစစ်ဆေးဘဲ သတင်းမှားတွေကို မျှဝေကြပါတယ်။",
+        "why_mm": "သတင်းမှားတွေ ဘာကြောင့်ပျံ့နှံ့သလဲ ရှင်းပြခြင်း။"
+      },
+      {
+        "text_en": "This is a big problem for our society today.",
+        "gloss_mm": "ဒါဟာ ဒီနေ့ခေတ် လူ့အဖွဲ့အစည်းအတွက် ကြီးမားတဲ့ ပြဿနာတစ်ခုပါ။",
+        "why_mm": "လူ့အဖွဲ့အစည်းအပေါ် သက်ရောက်မှုကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "Some think social media is faster than traditional news.",
+        "gloss_mm": "တချို့က ဆိုရှယ်မီဒီယာဟာ ရိုးရာသတင်းထက် ပိုမြန်တယ်လို့ ထင်ကြပါတယ်။",
+        "why_mm": "အငြင်းပွားစရာ နှစ်ဖက်ထဲမှ တစ်ဖက်ကို တင်ပြခြင်း။"
+      },
+      {
+        "text_en": "Others believe traditional media is more reliable and accurate.",
+        "gloss_mm": "တချို့ကတော့ ရိုးရာသတင်းမီဒီယာက ပိုယုံကြည်စိတ်ချရပြီး တိကျတယ်လို့ ယုံကြည်ကြပါတယ်။",
+        "why_mm": "အငြင်းပွားစရာ နှစ်ဖက်ထဲမှ ကျန်တစ်ဖက်ကို တင်ပြခြင်း။"
+      },
+      {
+        "text_en": "I am very worried about the impact of false reports.",
+        "gloss_mm": "သတင်းမှားတွေရဲ့ သက်ရောက်မှုအတွက် ကျွန်တော် တကယ်စိုးရိမ်မိပါတယ်။",
+        "why_mm": "ပုဂ္ဂိုလ်ရေးအရ စိုးရိမ်မှုကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "We must always verify sources before sharing information.",
+        "gloss_mm": "သတင်းတစ်ခုခုကို မမျှဝေခင် အမြဲတမ်း အရင်းအမြစ်ကို စစ်ဆေးသင့်ပါတယ်။",
+        "why_mm": "သတင်းမှန်/မှား ဘယ်လိုစစ်မလဲ ရှင်းပြခြင်း။"
+      },
+      {
+        "text_en": "I think we need more digital literacy education.",
+        "gloss_mm": "ဒစ်ဂျစ်တယ်စာတတ်မြောက်မှု ပညာပေးလုပ်ငန်းတွေ ပိုလိုအပ်တယ်လို့ ကျွန်တော်ထင်ပါတယ်။",
+        "why_mm": "ဖြေရှင်းနည်းအကြံပြုချက် ပြောခြင်း။"
+      },
+      {
+        "text_en": "In conclusion, managing misinformation is a complex challenge for everyone.",
+        "gloss_mm": "နိဂုံးချုပ်ရရင် သတင်းမှားတွေကို ထိန်းချုပ်ဖို့က လူတိုင်းအတွက် ရှုပ်ထွေးတဲ့ စိန်ခေါ်မှုတစ်ခုပါ။",
+        "why_mm": "နိဂုံးချုပ် စကားပြောခြင်း။"
+      }
+    ],
+    "template": "I read the news {news_source} every morning. Recently, I have noticed {observation_about_misinfo}. Many people share fake news {reason_for_sharing}. This is a {negative_impact} for our society today. Some think {pro_social_media} faster than traditional news. Others believe {pro_traditional_media} more reliable and accurate. I am very worried about the {personal_feeling} of false reports. We must always {verification_method} before sharing information. I think we need {suggested_solution}. In conclusion, {final_summary}.",
+    "slots": [
+      {
+        "id": "news_source",
+        "label_en": "News source",
+        "label_mm": "သတင်းရင်းမြစ်",
+        "hint": "Where do you get your news?",
+        "options": [
+          "online",
+          "via social media",
+          "on mobile apps",
+          "from websites"
+        ]
+      },
+      {
+        "id": "observation_about_misinfo",
+        "label_en": "Observation",
+        "label_mm": "တွေ့ရှိချက်",
+        "hint": "What have you noticed?",
+        "options": [
+          "a lot of misinformation online",
+          "many misleading headlines",
+          "frequent fake news posts"
+        ]
+      },
+      {
+        "id": "reason_for_sharing",
+        "label_en": "Reason for sharing",
+        "label_mm": "မျှဝေရတဲ့ အကြောင်းရင်း",
+        "hint": "Why do people share fake news?",
+        "options": [
+          "without checking the facts",
+          "because of panic",
+          "without reading the full story"
+        ]
+      },
+      {
+        "id": "negative_impact",
+        "label_en": "Negative impact",
+        "label_mm": "ဆိုးကျိုး",
+        "hint": "Describe the impact.",
+        "options": [
+          "big problem",
+          "serious threat",
+          "dangerous trend",
+          "growing challenge"
+        ]
+      },
+      {
+        "id": "pro_social_media",
+        "label_en": "Social media view",
+        "label_mm": "ဆိုရှယ်မီဒီယာအပေါ် အမြင်",
+        "hint": "What is the benefit of social media?",
+        "options": [
+          "social media is",
+          "online platforms are",
+          "digital news is"
+        ]
+      },
+      {
+        "id": "pro_traditional_media",
+        "label_en": "Traditional media view",
+        "label_mm": "ရိုးရာမီဒီယာအပေါ် အမြင်",
+        "hint": "Why is traditional media better?",
+        "options": [
+          "traditional media is",
+          "official news is",
+          "mainstream reporting is"
+        ]
+      },
+      {
+        "id": "personal_feeling",
+        "label_en": "Personal feeling",
+        "label_mm": "ကိုယ်ပိုင်ခံစားချက်",
+        "hint": "How do you feel?",
+        "options": [
+          "negative impact",
+          "consequences",
+          "harmful effects"
+        ]
+      },
+      {
+        "id": "verification_method",
+        "label_en": "Verification method",
+        "label_mm": "စစ်ဆေးနည်း",
+        "hint": "How to check?",
+        "options": [
+          "verify sources",
+          "check the facts",
+          "cross-reference reports"
+        ]
+      },
+      {
+        "id": "suggested_solution",
+        "label_en": "Suggested solution",
+        "label_mm": "အကြံပြုချက်",
+        "hint": "What is the solution?",
+        "options": [
+          "more digital literacy education",
+          "stricter platform policies",
+          "better public awareness"
+        ]
+      },
+      {
+        "id": "final_summary",
+        "label_en": "Final summary",
+        "label_mm": "အနှစ်ချုပ်",
+        "hint": "Summarize the issue.",
+        "options": [
+          "managing misinformation is a complex challenge",
+          "fighting fake news requires collective effort",
+          "truth matters in our digital age"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level3/news_and_misinformation/guide-model.mp3"
+  }
+}

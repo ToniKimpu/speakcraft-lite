@@ -1,0 +1,725 @@
+{
+  "id": "life_in_the_future",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "Life in the Future",
+  "title_mm": "အနာဂတ်ဘဝနှင့် ကျွန်ုပ်တို့၏မျှော်လင့်ချက်များ",
+  "promise_en": "Learn to discuss future trends, express your hopes and worries, and debate potential changes in society using sophisticated English phrases.",
+  "promise_mm": "အနာဂတ်ကာလမှာ ဖြစ်လာနိုင်တဲ့ အပြောင်းအလဲတွေ၊ နည်းပညာ၊ လူမှုရေးနဲ့ ပတ်ဝန်းကျင်အကြောင်းကို ပညာသားပါပါ ဆွေးနွေးတတ်လာအောင် လေ့ကျင့်ပေးပါမယ်။",
+  "intro_en": "The world is changing fast. In twenty years, our cities, jobs, and daily routines will look very different. This topic helps you share your vision of the future.",
+  "intro_mm": "ကမ္ဘာကြီးက အရမ်းမြန်ဆန်စွာ ပြောင်းလဲနေပါတယ်။ နောက်နှစ် ၂၀ ကြာရင် ကျွန်တော်တို့မြို့တွေ၊ အလုပ်အကိုင်တွေနဲ့ နေ့စဉ်ဘဝတွေက အခုနဲ့ တော်တော်လေး ကွာခြားသွားမှာပါ။ ဒီခေါင်းစဉ်က အနာဂတ်အပေါ် သင့်အမြင်တွေကို ပြောပြနိုင်ဖို့ ကူညီပေးပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the topic of future change",
+      "move_mm": "အနာဂတ် အပြောင်းအလဲအကြောင်း စတင်ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "Life is changing fast these days.",
+          "highlight": "changing fast",
+          "swap_en": "changing a lot · getting better · becoming more modern",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ လူနေမှုဘဝတွေက မြန်မြန်ဆန်ဆန် ပြောင်းလဲနေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m1-i1.mp3"
+        },
+        {
+          "text_en": "Technology is really transforming our daily lives.",
+          "highlight": "transforming our daily lives",
+          "swap_en": "changing how we work · affecting our future · making everything easier",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ နေ့စဉ်ဘဝတွေကို တကယ်ကို ပြောင်းလဲပစ်နေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m1-i2.mp3"
+        },
+        {
+          "text_en": "The way we live is undergoing a significant shift.",
+          "highlight": "undergoing a significant shift",
+          "swap_en": "facing major changes · going through a big transformation",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ လူနေမှုပုံစံက သိသာထင်ရှားတဲ့ အပြောင်းအလဲတစ်ခုနဲ့ ကြုံတွေ့နေရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m1-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိအခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Life is getting much faster these days.",
+          "highlight": "much faster",
+          "swap_en": "more expensive · more stressful · more complicated",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ ဘဝက အရမ်းမြန်ဆန်လာတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m2-i1.mp3"
+        },
+        {
+          "text_en": "Many people are now worried about the impact of AI.",
+          "highlight": "worried about the impact of AI",
+          "swap_en": "concerned about climate change · anxious about rising prices",
+          "gloss_mm": "လူတော်တော်များများက AI ရဲ့ သက်ရောက်မှုတွေကို စိုးရိမ်နေကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m2-i2.mp3"
+        },
+        {
+          "text_en": "Technology is changing the way we live and work.",
+          "highlight": "changing the way we live and work",
+          "swap_en": "reshaping our daily habits · transforming our social interactions",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ နေထိုင်မှုနဲ့ အလုပ်လုပ်ပုံကို ပြောင်းလဲနေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m2-i3.mp3"
+        },
+        {
+          "text_en": "This trend is becoming a major challenge for the younger generation.",
+          "highlight": "a major challenge",
+          "swap_en": "a serious concern · a significant opportunity",
+          "gloss_mm": "ဒီလမ်းကြောင်းက လူငယ်မျိုးဆက်အတွက် အဓိကစိန်ခေါ်မှုတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m2-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating that there is a lot of debate",
+      "move_mm": "အငြင်းပွားစရာတွေ ရှိနေကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "There is a lot of debate about the future.",
+          "highlight": "a lot of debate",
+          "swap_en": "a lot of disagreement · much discussion · a heated debate",
+          "gloss_mm": "အနာဂတ်နဲ့ပတ်သက်ပြီး အငြင်းပွားစရာတွေ အများကြီးရှိနေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m3-i1.mp3"
+        },
+        {
+          "text_en": "People are divided on how life will change.",
+          "highlight": "divided on",
+          "swap_en": "split on · arguing about",
+          "gloss_mm": "အနာဂတ်ဘဝ ဘယ်လိုပြောင်းလဲမလဲဆိုတာနဲ့ပတ်သက်ပြီး လူတွေအမြင်ကွဲပြားနေကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m3-i2.mp3"
+        },
+        {
+          "text_en": "The topic of AI remains a subject of intense debate.",
+          "highlight": "a subject of intense debate",
+          "swap_en": "a point of contention · a controversial issue",
+          "gloss_mm": "AI နဲ့ပတ်သက်တဲ့အကြောင်းအရာဟာ အခုထိ အငြင်းပွားစရာ အဓိကအချက်ဖြစ်နေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting one side of an argument",
+      "move_mm": "အမြင်တစ်ဖက်ကို တင်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Many people believe that technology will make our lives easier.",
+          "highlight": "Many people believe that",
+          "swap_en": "Some people think that · Most people agree that",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ဘဝကို ပိုလွယ်ကူစေမယ်လို့ လူအများက ယုံကြည်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m4-i1.mp3"
+        },
+        {
+          "text_en": "The main benefit of future technology is better healthcare.",
+          "highlight": "The main benefit of",
+          "swap_en": "The biggest advantage of · One huge plus of",
+          "gloss_mm": "အနာဂတ်နည်းပညာရဲ့ အဓိကအားသာချက်ကတော့ ကျန်းမာရေးစောင့်ရှောက်မှု ပိုကောင်းလာမှာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m4-i2.mp3"
+        },
+        {
+          "text_en": "It is often argued that artificial intelligence will create more jobs.",
+          "highlight": "It is often argued that",
+          "swap_en": "It is widely claimed that · It is commonly suggested that",
+          "gloss_mm": "AI နည်းပညာက အလုပ်အကိုင် အခွင့်အလမ်းတွေကို ပိုဖန်တီးပေးလိမ့်မယ်လို့ ငြင်းခုံပြောဆိုမှုတွေ ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m4-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting the opposing view",
+      "move_mm": "ဆန့်ကျင်ဘက် အမြင်ကို တင်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Some people think technology is good.",
+          "highlight": "technology",
+          "swap_en": "AI · robots · the internet",
+          "gloss_mm": "နည်းပညာက ကောင်းတယ်လို့ လူတချို့က ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m5-i1.mp3"
+        },
+        {
+          "text_en": "Many argue that machines will make life easier.",
+          "highlight": "make life easier",
+          "swap_en": "improve our lives · solve our problems · save us time",
+          "gloss_mm": "စက်တွေက လူတွေရဲ့ဘဝကို ပိုလွယ်ကူစေလိမ့်မယ်လို့ လူအများက ငြင်းခုံကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m5-i2.mp3"
+        },
+        {
+          "text_en": "Others point out that we might lose our human touch.",
+          "highlight": "lose our human touch",
+          "swap_en": "become too isolated · rely too much on gadgets · lose our traditional values",
+          "gloss_mm": "လူသားဆန်တဲ့ အထိအတွေ့တွေ ပျောက်ဆုံးသွားနိုင်တယ်လို့ တခြားသူတွေက ထောက်ပြကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m5-i3.mp3"
+        },
+        {
+          "text_en": "There is a valid concern that automation leads to fewer jobs.",
+          "highlight": "a valid concern",
+          "swap_en": "a strong argument · a growing fear · a common belief",
+          "gloss_mm": "အလုပ်အကိုင်တွေ လျော့နည်းသွားနိုင်တယ်ဆိုတဲ့ စိုးရိမ်ချက်က အခြေအမြစ်ရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m5-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the causes of change",
+      "move_mm": "အပြောင်းအလဲ ဖြစ်ရတဲ့ အကြောင်းရင်းကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "One major cause is technology.",
+          "highlight": "One major cause is",
+          "swap_en": "The main reason is · The biggest factor is",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုကတော့ နည်းပညာကြောင့်ပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m6-i1.mp3"
+        },
+        {
+          "text_en": "This change is happening because of digital transformation.",
+          "highlight": "because of",
+          "swap_en": "due to · as a result of",
+          "gloss_mm": "ဒီအပြောင်းအလဲက ဒစ်ဂျစ်တယ်စနစ်ကူးပြောင်းမှုကြောင့် ဖြစ်လာတာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m6-i2.mp3"
+        },
+        {
+          "text_en": "Many experts point to rapid globalization as the driving force behind this shift.",
+          "highlight": "the driving force behind this shift",
+          "swap_en": "the catalyst for this change · the primary reason for this transformation",
+          "gloss_mm": "ပညာရှင်အတော်များများကတော့ ဒီလိုပြောင်းလဲမှုတွေရဲ့ နောက်ကွယ်က အဓိကတွန်းအားက ကမ္ဘာ့အသွင်ကူးပြောင်းမှုတွေကြောင့်လို့ ဆိုကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m6-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining potential effects",
+      "move_mm": "ဖြစ်ပေါ်လာနိုင်တဲ့ အကျိုးဆက်တွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "This could lead to major changes in our daily lives.",
+          "highlight": "could lead to",
+          "swap_en": "might result in · will likely cause",
+          "gloss_mm": "ဒါက ကျွန်တော်တို့ရဲ့ နေ့စဉ်ဘဝမှာ အပြောင်းအလဲကြီးတွေ ဖြစ်လာစေနိုင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m7-i1.mp3"
+        },
+        {
+          "text_en": "Technology might have a huge impact on how we work.",
+          "highlight": "have a huge impact on",
+          "swap_en": "have a significant effect on · change the way we",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ အလုပ်လုပ်ပုံကို အကြီးအကျယ် သက်ရောက်မှု ရှိလာနိုင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m7-i2.mp3"
+        },
+        {
+          "text_en": "Automation will likely bring about a shift in the job market.",
+          "highlight": "bring about a shift in",
+          "swap_en": "create a massive change in · lead to a transformation of",
+          "gloss_mm": "စက်မှုအလိုအလျောက်စနစ်က အလုပ်အကိုင်ဈေးကွက်မှာ အပြောင်းအလဲတစ်ခုကို ဖန်တီးပေးလိမ့်မယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m7-i3.mp3"
+        },
+        {
+          "text_en": "The long-term consequence of this trend is that people will become more isolated.",
+          "highlight": "The long-term consequence of this trend",
+          "swap_en": "The potential downside of this development · The inevitable result of this shift",
+          "gloss_mm": "ဒီလမ်းကြောင်းရဲ့ ရေရှည်အကျိုးဆက်ကတော့ လူတွေဟာ ပိုပြီး တစ်ကိုယ်တည်းဆန်လာလိမ့်မယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m7-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing the past, present, and future",
+      "move_mm": "အတိတ်၊ ပစ္စုပ္ပန်နဲ့ အနာဂတ်ကို နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "Life is easier now than it was in the past.",
+          "highlight": "easier now than it was in the past",
+          "swap_en": "more convenient now than before · much faster now compared to the past",
+          "gloss_mm": "အရင်တုန်းကထက်စာရင် အခုဘဝက ပိုပြီးလွယ်ကူလာတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m8-i1.mp3"
+        },
+        {
+          "text_en": "Technology has changed our lives compared to how things were ten years ago.",
+          "highlight": "compared to how things were ten years ago",
+          "swap_en": "compared to the old days · compared to our parents' generation",
+          "gloss_mm": "လွန်ခဲ့တဲ့ ဆယ်နှစ်ကနဲ့စာရင် နည်းပညာက ကျွန်တော်တို့ရဲ့ ဘဝတွေကို ပြောင်းလဲပစ်လိုက်ပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m8-i2.mp3"
+        },
+        {
+          "text_en": "Looking ahead, the future will likely be vastly different from the world we know today.",
+          "highlight": "vastly different from the world we know today",
+          "swap_en": "completely unrecognizable from today · a whole new world compared to now",
+          "gloss_mm": "အနာဂတ်ကို ကြည့်လိုက်မယ်ဆိုရင် အခုလက်ရှိကမ္ဘာနဲ့ အများကြီးကွာခြားသွားဖို့ ရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m8-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your personal view/opinion",
+      "move_mm": "ကိုယ်ပိုင်အမြင်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think the future will be better.",
+          "highlight": "I think",
+          "swap_en": "I believe · In my opinion",
+          "gloss_mm": "အနာဂတ်က ပိုကောင်းလာလိမ့်မယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m9-i1.mp3"
+        },
+        {
+          "text_en": "I'm convinced that AI will change our lives.",
+          "highlight": "I'm convinced that",
+          "swap_en": "I'm sure that · I feel strongly that",
+          "gloss_mm": "AI က ကျွန်တော်တို့ဘဝတွေကို ပြောင်းလဲသွားစေလိမ့်မယ်လို့ ကျွန်တော် ယုံကြည်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m9-i2.mp3"
+        },
+        {
+          "text_en": "From my perspective, technology is a double-edged sword.",
+          "highlight": "From my perspective",
+          "swap_en": "As far as I'm concerned · To my way of thinking",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရဆိုရင် နည်းပညာဆိုတာ အကျိုးရော အပြစ်ပါရှိတဲ့ ဓားနှစ်ဖက်လိုပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your hopes for the future",
+      "move_mm": "အနာဂတ်အတွက် မျှော်လင့်ချက်ကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I hope for a better future.",
+          "highlight": "a better future",
+          "swap_en": "a peaceful world · better job opportunities · a stable life",
+          "gloss_mm": "ပိုကောင်းတဲ့ အနာဂတ်ကို ကျွန်တော် မျှော်လင့်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m10-i1.mp3"
+        },
+        {
+          "text_en": "I wish to see more green spaces in Yangon.",
+          "highlight": "more green spaces in Yangon",
+          "swap_en": "better public transport · less traffic in the city · affordable housing for everyone",
+          "gloss_mm": "ရန်ကုန်မှာ အစိမ်းရောင်နေရာတွေ ပိုရှိလာဖို့ မျှော်လင့်မိပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m10-i2.mp3"
+        },
+        {
+          "text_en": "I'm looking forward to a time when technology makes life easier for everyone.",
+          "highlight": "a time when technology makes life easier for everyone",
+          "swap_en": "a future where education is free for all children · a world where there is no poverty",
+          "gloss_mm": "နည်းပညာက လူတိုင်းအတွက် ဘဝကို ပိုလွယ်ကူစေမယ့်အချိန်ကို မျှော်လင့်နေပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Voicing concerns or worries",
+      "move_mm": "စိုးရိမ်ချက်တွေကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I am worried about the future.",
+          "highlight": "worried about the future",
+          "swap_en": "worried about AI · worried about job security · worried about the environment",
+          "gloss_mm": "အနာဂတ်အတွက် စိတ်ပူမိပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m11-i1.mp3"
+        },
+        {
+          "text_en": "It is scary to think about how fast things are changing.",
+          "highlight": "scary to think about",
+          "swap_en": "hard to imagine · confusing to think about",
+          "gloss_mm": "အရာရာ ဘယ်လောက်မြန်မြန် ပြောင်းလဲနေလဲဆိုတာ တွေးကြည့်ရင် ကြောက်စရာကောင်းပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m11-i2.mp3"
+        },
+        {
+          "text_en": "My biggest concern is that machines might replace human jobs.",
+          "highlight": "My biggest concern is that",
+          "swap_en": "My main worry is that · What concerns me most is that",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အကြီးမားဆုံး စိုးရိမ်ချက်ကတော့ စက်တွေက လူတွေရဲ့ အလုပ်တွေကို နေရာယူသွားမှာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m11-i3.mp3"
+        },
+        {
+          "text_en": "There is a growing fear that technology will cause more isolation.",
+          "highlight": "growing fear that",
+          "swap_en": "growing concern that · widespread worry that",
+          "gloss_mm": "နည်းပညာကြောင့် လူတွေ ပိုပြီး အထီးကျန်လာမှာကို စိုးရိမ်မှုတွေ တိုးပွားလာနေပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m11-i4.mp3"
+        },
+        {
+          "text_en": "I find the rapid advancement of technology rather unsettling.",
+          "highlight": "rather unsettling",
+          "swap_en": "deeply concerning · quite alarming",
+          "gloss_mm": "နည်းပညာရဲ့ လျင်မြန်တဲ့ တိုးတက်မှုက ကျွန်တော့်ကို စိတ်မသက်မသာ ဖြစ်စေပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m11-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting possible solutions",
+      "move_mm": "ဖြေရှင်းနိုင်မယ့် နည်းလမ်းတွေကို အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "We should use more solar energy.",
+          "highlight": "use more solar energy",
+          "swap_en": "plant more trees · recycle our plastic · reduce our waste",
+          "gloss_mm": "နေရောင်ခြည်စွမ်းအင်ကို ပိုသုံးသင့်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m12-i1.mp3"
+        },
+        {
+          "text_en": "It is a good idea to switch to electric vehicles.",
+          "highlight": "switch to electric vehicles",
+          "swap_en": "invest in green technology · promote public transportation · limit carbon emissions",
+          "gloss_mm": "လျှပ်စစ်ကားတွေ ပြောင်းသုံးတာက ကောင်းတဲ့အကြံပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m12-i2.mp3"
+        },
+        {
+          "text_en": "One effective strategy would be to implement stricter environmental regulations.",
+          "highlight": "implement stricter environmental regulations",
+          "swap_en": "prioritize sustainable urban planning · foster global cooperation on climate change · incentivize eco-friendly businesses",
+          "gloss_mm": "ထိရောက်တဲ့ နည်းလမ်းတစ်ခုကတော့ ပတ်ဝန်းကျင်ထိန်းသိမ်းရေးဆိုင်ရာ စည်းကမ်းတွေကို ပိုပြီးတင်းကျပ်ဖို့ပါပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Acknowledging that the issue is complex",
+      "move_mm": "ကိစ္စရပ်က ရှုပ်ထွေးကြောင်း အသိအမှတ်ပြုနည်း",
+      "items": [
+        {
+          "text_en": "This is a difficult issue to talk about.",
+          "highlight": "a difficult issue to talk about",
+          "swap_en": "a complicated topic to discuss · a hard question to answer",
+          "gloss_mm": "ဒါက ဆွေးနွေးရခက်တဲ့ ကိစ္စတစ်ခုပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m13-i1.mp3"
+        },
+        {
+          "text_en": "It is not a simple problem to solve.",
+          "highlight": "not a simple problem to solve",
+          "swap_en": "not easy to figure out · not straightforward at all",
+          "gloss_mm": "ဒါက ဖြေရှင်းရလွယ်တဲ့ ပြဿနာမဟုတ်ပါဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m13-i2.mp3"
+        },
+        {
+          "text_en": "There are many different sides to this debate.",
+          "highlight": "many different sides to this debate",
+          "swap_en": "several conflicting views on this matter · various factors to consider",
+          "gloss_mm": "ဒီအငြင်းပွားမှုမှာ ရှုထောင့်အမျိုးမျိုးရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m13-i3.mp3"
+        },
+        {
+          "text_en": "It is complex because there are so many factors involved.",
+          "highlight": "so many factors involved",
+          "swap_en": "a lot of uncertainty involved · many pros and cons to weigh",
+          "gloss_mm": "ပါဝင်ပတ်သက်နေတဲ့ အချက်တွေ အများကြီးမို့လို့ ဒါက ရှုပ်ထွေးပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m13-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Predicting a specific outcome",
+      "move_mm": "ရလဒ်တစ်ခုခုကို ကြိုတင်ခန့်မှန်းနည်း",
+      "items": [
+        {
+          "text_en": "I think robots will do all the chores.",
+          "highlight": "will do all the chores",
+          "swap_en": "will replace most jobs · will become very common · will change our lives",
+          "gloss_mm": "စက်ရုပ်တွေက အိမ်မှုကိစ္စအားလုံးကို လုပ်ပေးလိမ့်မယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m14-i1.mp3"
+        },
+        {
+          "text_en": "It is likely that we will rely more on solar power.",
+          "highlight": "It is likely that",
+          "swap_en": "It is highly probable that · I suspect that",
+          "gloss_mm": "ကျွန်တော်တို့အနေနဲ့ နေရောင်ခြည်စွမ်းအင်ကို ပိုပြီး မှီခိုလာဖို့ ဖြစ်နိုင်ခြေရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m14-i2.mp3"
+        },
+        {
+          "text_en": "This trend is bound to change how we shop at local markets.",
+          "highlight": "is bound to",
+          "swap_en": "is almost certain to · is destined to",
+          "gloss_mm": "ဒီရေစီးကြောင်းက ကျွန်တော်တို့ ဈေးဝယ်တဲ့ပုံစံကို မလွဲမသွေ ပြောင်းလဲသွားစေလိမ့်မယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m14-i3.mp3"
+        },
+        {
+          "text_en": "We can foresee a future where technology is integrated into every aspect of our daily life.",
+          "highlight": "can foresee a future where",
+          "swap_en": "can anticipate a time when · can envision a future where",
+          "gloss_mm": "နည်းပညာက ကျွန်တော်တို့ရဲ့ နေ့စဉ်ဘဝရဲ့ အစိတ်အပိုင်းတိုင်းမှာ ပေါင်းစပ်ပါဝင်လာမယ့် အနာဂတ်ကို ကြိုမြင်နိုင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m14-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding the discussion",
+      "move_mm": "ဆွေးနွေးချက်ကို အနှစ်ချုပ်နည်း",
+      "items": [
+        {
+          "text_en": "Overall, the future looks bright.",
+          "highlight": "the future looks bright",
+          "swap_en": "the future is uncertain · the future will be different · everything will change",
+          "gloss_mm": "ခြုံငုံပြောရရင် အနာဂတ်က တောက်ပနေပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m15-i1.mp3"
+        },
+        {
+          "text_en": "To sum up, technology will change how we live.",
+          "highlight": "technology will change how we live",
+          "swap_en": "AI will change our daily work · robots will help us more · life will become faster",
+          "gloss_mm": "အနှစ်ချုပ်ပြောရရင် နည်းပညာက ကျွန်တော်တို့ရဲ့ နေထိုင်မှုပုံစံကို ပြောင်းလဲသွားစေမှာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m15-i2.mp3"
+        },
+        {
+          "text_en": "All in all, we have to prepare for these changes.",
+          "highlight": "we have to prepare for these changes",
+          "swap_en": "we need to adapt to the new world · we should embrace these innovations",
+          "gloss_mm": "အားလုံးကို ခြုံငုံကြည့်ရင် ဒီပြောင်းလဲမှုတွေအတွက် ကျွန်တော်တို့ ကြိုတင်ပြင်ဆင်ထားဖို့ လိုပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m15-i3.mp3"
+        },
+        {
+          "text_en": "Ultimately, it is up to us to shape the kind of future we want.",
+          "highlight": "it is up to us to shape the kind of future we want",
+          "swap_en": "the future depends on our actions today · we play a key role in building our future",
+          "gloss_mm": "နောက်ဆုံးအနေနဲ့ ပြောရရင် ကျွန်တော်တို့ လိုချင်တဲ့ အနာဂတ်မျိုးကို ဖန်တီးဖို့က ကျွန်တော်တို့ လက်ထဲမှာပဲ ရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level3/life_in_the_future/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss how you think life will change in Myanmar over the next 20 years. Consider technology, city life, and the environment. Share your hopes and one thing you are worried about.",
+    "prompt_mm": "နောက်နှစ် ၂၀ အတွင်း မြန်မာနိုင်ငံရဲ့ ဘဝနေထိုင်မှုပုံစံတွေ ဘယ်လိုပြောင်းလဲသွားမယ်လို့ ထင်ပါသလဲ။ နည်းပညာ၊ မြို့ပြဘဝနဲ့ ပတ်ဝန်းကျင်အခြေအနေတွေကို ထည့်သွင်းစဉ်းစားပြီး သင့်ရဲ့ မျှော်လင့်ချက်တွေနဲ့ စိုးရိမ်တဲ့အချက် တစ်ချက်ကို ရေးသားဆွေးနွေးပါ။ (စာကြောင်းရေ ၈-၁၂ ကြောင်း၊ စာလုံးရေ ၈၀-၂၅၀)",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Current situation",
+      "Technological impact",
+      "On one hand / On the other hand",
+      "Hopes and dreams",
+      "Specific worries",
+      "Potential solutions",
+      "My final view"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to improve your natural flow and confidence.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခေါက်၊ ၃ ခေါက်လောက် ဖတ်ကြည့်ပါ။ ဒါက သင့်စကားပြော စီးဆင်းမှုနဲ့ ယုံကြည်မှုကို ပိုတိုးတက်စေပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "Life in the future will change a lot. Currently, we rely heavily on technology. Many people debate if this is good. Some argue that robots will make life easier. Others fear that machines might take our jobs. Rapid innovation is the main cause of these changes. These shifts will likely increase our productivity. Compared to the past, life is already much faster. In my view, we must balance progress with human needs. I hope for a future where technology serves everyone well.",
+    "model_mm": "အနာဂတ်ဘဝတွေက အများကြီး ပြောင်းလဲသွားလိမ့်မယ်။ လက်ရှိမှာ ကျွန်တော်တို့က နည်းပညာကို အလွန်အမင်း အားကိုးနေရတယ်။ ဒါဟာ ကောင်းမကောင်းဆိုတာနဲ့ ပတ်သက်ပြီး လူတွေ အများကြီး ငြင်းခုံနေကြတယ်။ တချို့က စက်ရုပ်တွေကြောင့် ဘဝပိုလွယ်ကူလာမယ်လို့ ပြောကြတယ်။ တချို့ကတော့ စက်တွေကြောင့် အလုပ်လက်မဲ့ ဖြစ်မှာကို စိုးရိမ်နေကြတယ်။ ဒီလိုပြောင်းလဲမှုတွေရဲ့ အဓိကအကြောင်းရင်းကတော့ တီထွင်ဆန်းသစ်မှုတွေ မြန်ဆန်လာတာပဲ ဖြစ်တယ်။ ဒီအပြောင်းအလဲတွေက ကုန်ထုတ်စွမ်းအားကို မြှင့်တင်ပေးလိမ့်မယ်။ အတိတ်နဲ့ ယှဉ်ရင် လက်ရှိဘဝက ပိုမြန်ဆန်နေပါပြီ။ ကျွန်တော့်အမြင်အရတော့ တိုးတက်မှုနဲ့ လူသားတွေရဲ့ လိုအပ်ချက်ကို မျှတအောင် လုပ်ဆောင်ရမယ်။ နည်းပညာက လူတိုင်းအတွက် အကျိုးရှိစေမယ့် အနာဂတ်မျိုးကို ကျွန်တော် မျှော်လင့်ပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "Life in the future will change a lot.",
+        "gloss_mm": "အနာဂတ်ဘဝတွေက အများကြီး ပြောင်းလဲသွားလိမ့်မယ်။",
+        "why_mm": "အနာဂတ် အပြောင်းအလဲအကြောင်း စတင်ပြောဆိုခြင်း။"
+      },
+      {
+        "text_en": "Currently, we rely heavily on technology.",
+        "gloss_mm": "လက်ရှိမှာ ကျွန်တော်တို့က နည်းပညာကို အလွန်အမင်း အားကိုးနေရတယ်။",
+        "why_mm": "လက်ရှိအခြေအနေကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "Many people debate if this is good.",
+        "gloss_mm": "ဒါဟာ ကောင်းမကောင်းဆိုတာနဲ့ ပတ်သက်ပြီး လူတွေ အများကြီး ငြင်းခုံနေကြတယ်။",
+        "why_mm": "အငြင်းပွားစရာတွေ ရှိနေကြောင်း ပြောခြင်း။"
+      },
+      {
+        "text_en": "Some argue that robots will make life easier.",
+        "gloss_mm": "တချို့က စက်ရုပ်တွေကြောင့် ဘဝပိုလွယ်ကူလာမယ်လို့ ပြောကြတယ်။",
+        "why_mm": "အမြင်တစ်ဖက်ကို တင်ပြခြင်း။"
+      },
+      {
+        "text_en": "Others fear that machines might take our jobs.",
+        "gloss_mm": "တချို့ကတော့ စက်တွေကြောင့် အလုပ်လက်မဲ့ ဖြစ်မှာကို စိုးရိမ်နေကြတယ်။",
+        "why_mm": "ဆန့်ကျင်ဘက် အမြင်ကို တင်ပြခြင်း။"
+      },
+      {
+        "text_en": "Rapid innovation is the main cause of these changes.",
+        "gloss_mm": "ဒီလိုပြောင်းလဲမှုတွေရဲ့ အဓိကအကြောင်းရင်းကတော့ တီထွင်ဆန်းသစ်မှုတွေ မြန်ဆန်လာတာပဲ ဖြစ်တယ်။",
+        "why_mm": "အပြောင်းအလဲ ဖြစ်ရတဲ့ အကြောင်းရင်းကို ရှင်းပြခြင်း။"
+      },
+      {
+        "text_en": "These shifts will likely increase our productivity.",
+        "gloss_mm": "ဒီအပြောင်းအလဲတွေက ကုန်ထုတ်စွမ်းအားကို မြှင့်တင်ပေးလိမ့်မယ်။",
+        "why_mm": "ဖြစ်ပေါ်လာနိုင်တဲ့ အကျိုးဆက်ကို ပြောခြင်း။"
+      },
+      {
+        "text_en": "Compared to the past, life is already much faster.",
+        "gloss_mm": "အတိတ်နဲ့ ယှဉ်ရင် လက်ရှိဘဝက ပိုမြန်ဆန်နေပါပြီ။",
+        "why_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်ခြင်း။"
+      },
+      {
+        "text_en": "In my view, we must balance progress with human needs.",
+        "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ တိုးတက်မှုနဲ့ လူသားတွေရဲ့ လိုအပ်ချက်ကို မျှတအောင် လုပ်ဆောင်ရမယ်။",
+        "why_mm": "ကိုယ်ပိုင်အမြင်ကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I hope for a future where technology serves everyone well.",
+        "gloss_mm": "နည်းပညာက လူတိုင်းအတွက် အကျိုးရှိစေမယ့် အနာဂတ်မျိုးကို ကျွန်တော် မျှော်လင့်ပါတယ်။",
+        "why_mm": "အနာဂတ်အတွက် မျှော်လင့်ချက်ကို ပြောခြင်း။"
+      }
+    ],
+    "template": "Life in the {time_frame} will change a lot. Currently, we rely heavily on {current_dependency}. Many people debate if this is {quality}. Some argue that {positive_outcome} will make life easier. Others fear that {negative_outcome} might happen. {driver_of_change} is the main cause of these changes. These shifts will likely {impact}. Compared to the past, life is already much {comparison_adjective}. In my view, we must {my_solution}. I hope for a future where {hoped_outcome}.",
+    "slots": [
+      {
+        "id": "time_frame",
+        "label_en": "Time frame",
+        "label_mm": "အချိန်ကာလ",
+        "hint": "အနာဂတ်ကာလကို ရွေးချယ်ပါ။",
+        "options": [
+          "near future",
+          "coming decades",
+          "next generation",
+          "years to come"
+        ]
+      },
+      {
+        "id": "current_dependency",
+        "label_en": "Current dependency",
+        "label_mm": "လက်ရှိအားထားရာ",
+        "hint": "လက်ရှိမှာ ဘာကို အဓိကအားထားနေပါသလဲ။",
+        "options": [
+          "digital devices",
+          "artificial intelligence",
+          "the internet",
+          "online connectivity"
+        ]
+      },
+      {
+        "id": "quality",
+        "label_en": "Quality",
+        "label_mm": "အရည်အသွေး",
+        "hint": "အခြေအနေက ကောင်းမကောင်း ရွေးပါ။",
+        "options": [
+          "beneficial",
+          "truly sustainable",
+          "entirely positive",
+          "worth the cost"
+        ]
+      },
+      {
+        "id": "positive_outcome",
+        "label_en": "Positive outcome",
+        "label_mm": "ကောင်းကျိုး",
+        "hint": "ဘာက အဆင်ပြေစေမှာလဲ။",
+        "options": [
+          "automated systems",
+          "smart cities",
+          "advanced medicine",
+          "digital assistants"
+        ]
+      },
+      {
+        "id": "negative_outcome",
+        "label_en": "Negative outcome",
+        "label_mm": "ဆိုးကျိုး",
+        "hint": "ဘာကို စိုးရိမ်ရမလဲ။",
+        "options": [
+          "reduced privacy",
+          "social isolation",
+          "job displacement",
+          "cyber security risks"
+        ]
+      },
+      {
+        "id": "driver_of_change",
+        "label_en": "Driver of change",
+        "label_mm": "ပြောင်းလဲစေတဲ့အကြောင်းရင်း",
+        "hint": "ဘာကြောင့် ပြောင်းလဲတာလဲ။",
+        "options": [
+          "Global connectivity",
+          "Scientific research",
+          "Rapid digitalization",
+          "Environmental pressure"
+        ]
+      },
+      {
+        "id": "impact",
+        "label_en": "Impact",
+        "label_mm": "သက်ရောက်မှု",
+        "hint": "ဘာတွေ ဖြစ်လာမလဲ။",
+        "options": [
+          "transform our society",
+          "reshape our economy",
+          "improve our daily habits",
+          "change how we communicate"
+        ]
+      },
+      {
+        "id": "comparison_adjective",
+        "label_en": "Comparison adjective",
+        "label_mm": "နှိုင်းယှဉ်ချက်နာမဝိသေသန",
+        "hint": "လက်ရှိအခြေအနေကို ဘယ်လိုမြင်လဲ။",
+        "options": [
+          "complex",
+          "demanding",
+          "automated",
+          "interconnected"
+        ]
+      },
+      {
+        "id": "my_solution",
+        "label_en": "My solution",
+        "label_mm": "ကျွန်တော့်အကြံပြုချက်",
+        "hint": "ဘယ်လိုဖြေရှင်းရမလဲ။",
+        "options": [
+          "prioritize ethics",
+          "educate the public",
+          "regulate new tech",
+          "adapt our skills"
+        ]
+      },
+      {
+        "id": "hoped_outcome",
+        "label_en": "Hoped outcome",
+        "label_mm": "မျှော်လင့်ချက်",
+        "hint": "ဘယ်လိုအနာဂတ်ကို လိုချင်သလဲ။",
+        "options": [
+          "innovation benefits everyone",
+          "we live in harmony with nature",
+          "human creativity is valued",
+          "technology bridges global gaps"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level3/life_in_the_future/guide-model.mp3"
+  }
+}

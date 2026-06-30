@@ -15,6 +15,7 @@ enum VideoLessonStep {
   explanation,
   shadowing,
   record,
+  challenge,
 }
 
 @freezed

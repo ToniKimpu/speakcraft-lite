@@ -21,9 +21,7 @@ class PremiumStatusCard extends StatelessWidget {
     return ValueListenableBuilder<AppUser>(
       valueListenable: sl<ValueNotifier<AppUser>>(),
       builder: (context, appUser, _) {
-        return _isPremium(appUser)
-            ? const _PremiumCard()
-            : const _FreeCard();
+        return _isPremium(appUser) ? const _PremiumCard() : const _FreeCard();
       },
     );
   }
@@ -36,8 +34,7 @@ class _PremiumCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlassCard(
       highlight: true,
-      onTap: () =>
-          Navigator.pushNamed(context, PmpRoutes.paymentStatusPage),
+      onTap: () => Navigator.pushNamed(context, PmpRoutes.paymentStatusPage),
       child: Row(
         children: [
           Container(
@@ -106,7 +103,7 @@ class _FreeCard extends StatelessWidget {
                     Text('Free plan', style: PmpTextStyles.body1Semi),
                     const SizedBox(height: 2),
                     Text(
-                      'Unlock shadowing, speech practice & sentence explanations.',
+                      'Unlock Speak Your Mind, Vocabulary, Grammar & more.',
                       style: PmpTextStyles.label2Regular
                           .copyWith(color: cs.onSurfaceVariant),
                     ),
@@ -126,7 +123,7 @@ class _FreeCard extends StatelessWidget {
               style: FilledButton.styleFrom(
                 minimumSize: const Size.fromHeight(46),
                 backgroundColor: PmpColors.premiumGold,
-                foregroundColor: PmpColors.onPremium,
+                foregroundColor: PmpColors.white,
               ),
             ),
           ),
@@ -166,7 +163,7 @@ class HomeUpgradeBanner extends StatelessWidget {
               child: Row(
                 children: [
                   const Icon(Icons.workspace_premium_rounded,
-                      color: PmpColors.onPremium, size: 28),
+                      color: PmpColors.white, size: 28),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Column(
@@ -174,18 +171,18 @@ class HomeUpgradeBanner extends StatelessWidget {
                       children: [
                         Text('Get Premium',
                             style: PmpTextStyles.body1Semi
-                                .copyWith(color: PmpColors.onPremium)),
+                                .copyWith(color: PmpColors.white)),
                         const SizedBox(height: 2),
                         Text(
-                          'Unlock every feature on every video.',
+                          'Unlock every level across every module.',
                           style: PmpTextStyles.label2Regular.copyWith(
-                            color: PmpColors.onPremium.withValues(alpha: 0.85),
+                            color: PmpColors.white.withValues(alpha: 0.85),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  const Icon(Icons.chevron_right, color: PmpColors.onPremium),
+                  const Icon(Icons.chevron_right, color: PmpColors.white),
                 ],
               ),
             ),

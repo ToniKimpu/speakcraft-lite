@@ -1,0 +1,498 @@
+{
+  "id": "money_and_happiness",
+  "level": 2,
+  "domain_en": "Giving your opinion",
+  "domain_mm": "ကိုယ့်အမြင် ဖော်ပြခြင်း",
+  "title_en": "Money & Happiness",
+  "title_mm": "ငွေနှင့် ပျော်ရွှင်မှု",
+  "promise_en": "Learn how to express your personal views on money, happiness, and lifestyle choices clearly.",
+  "promise_mm": "ငွေကြေးနဲ့ ပျော်ရွှင်မှုအကြောင်း ကိုယ့်သဘောထားကို ယုံကြည်မှုရှိရှိနဲ့ ရှင်းရှင်းလင်းလင်း ပြောတတ်လာမှာပါ။",
+  "intro_en": "Everyone has different ideas about money. Does more money always mean more happiness? Let's use these phrases to share your perspective.",
+  "intro_mm": "ငွေနဲ့ ပျော်ရွှင်မှုအပေါ် လူတိုင်းမှာ အမြင်ကိုယ်စီရှိကြပါတယ်။ ပိုက်ဆံပိုရှိတိုင်း ပိုပျော်ရွှင်ရတာ ဟုတ်ပါ့မလား။ ဒီစကားစုတွေကို သုံးပြီး ကိုယ့်အမြင်ကို မျှဝေကြည့်ရအောင်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your general opinion",
+      "move_mm": "ကိုယ့်ရဲ့ အခြေခံအမြင်ကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money is important for happiness.",
+          "highlight": "I think",
+          "swap_en": "I feel · To me",
+          "gloss_mm": "ကျွန်တော်ထင်တာက ငွေက ပျော်ရွှင်ဖို့အတွက် အရေးကြီးတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, money can't buy everything.",
+          "highlight": "In my opinion",
+          "swap_en": "As far as I'm concerned · To my mind",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ငွေနဲ့ အရာအားလုံးကို ဝယ်လို့မရဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that money is just a means to an end.",
+          "highlight": "I'd say that",
+          "swap_en": "It's my belief that · I'm of the view that",
+          "gloss_mm": "ငွေဆိုတာ ရည်မှန်းချက်တစ်ခုဆီ ရောက်ဖို့ သုံးတဲ့ကိရိယာတစ်ခုပဲလို့ ကျွန်တော် ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Saying that money is important for basic needs",
+      "move_mm": "အခြေခံလိုအပ်ချက်အတွက် ငွေအရေးပါပုံ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money is important for basic needs.",
+          "highlight": "money is important for basic needs",
+          "swap_en": "money is necessary for survival · money is essential for daily life",
+          "gloss_mm": "ကျွန်တော်ထင်တာက အခြေခံလိုအပ်ချက်အတွက် ငွေက အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, we need money to cover our daily expenses.",
+          "highlight": "cover our daily expenses",
+          "swap_en": "pay for food and housing · support our daily life · afford the basics",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ နေ့စဉ်ကုန်ကျစရိတ်တွေအတွက် ငွေလိုပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that money is the foundation for securing our fundamental necessities.",
+          "highlight": "the foundation for securing our fundamental necessities",
+          "swap_en": "the key to meeting our basic requirements · essential for maintaining a decent standard of living",
+          "gloss_mm": "ကျွန်တော်ကတော့ အခြေခံလိုအပ်ချက်တွေကို ဖြည့်ဆည်းဖို့ ငွေက အဓိကအခြေခံအုတ်မြစ်လို့ ပြောချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Weighing both sides of the argument",
+      "move_mm": "အမြင်နှစ်ခုကို ချိန်ဆပြီး ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money is important, but it's not everything.",
+          "highlight": "it's not everything",
+          "swap_en": "it can't buy happiness · it isn't the key to happiness",
+          "gloss_mm": "ပိုက်ဆံက အရေးကြီးပေမယ့် အရာရာတိုင်းတော့ မဟုတ်ဘူးလို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, money makes life easier, yet it doesn't guarantee true happiness.",
+          "highlight": "yet it doesn't guarantee true happiness",
+          "swap_en": "but it can't buy peace of mind · though it doesn't ensure contentment",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ပိုက်ဆံက ဘဝကို ပိုလွယ်ကူစေပေမယ့် စစ်မှန်တဲ့ ပျော်ရွှင်မှုကိုတော့ အာမမခံနိုင်ဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that while financial stability is a foundation, money alone cannot fulfill one's emotional needs.",
+          "highlight": "money alone cannot fulfill one's emotional needs",
+          "swap_en": "wealth doesn't necessarily lead to a meaningful life · material success is distinct from personal satisfaction",
+          "gloss_mm": "ငွေကြေးတည်ငြိမ်မှုက အခြေခံဖြစ်ပေမဲ့ ငွေတစ်ခုတည်းနဲ့တော့ စိတ်ပိုင်းဆိုင်ရာ လိုအပ်ချက်တွေကို မဖြည့်ဆည်းပေးနိုင်ဘူးလို့ ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Introducing an opposing point of view",
+      "move_mm": "ဆန့်ကျင်ဘက် အမြင်ကို စတင်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money is important, but happiness is more important.",
+          "highlight": "but",
+          "swap_en": "however · although",
+          "gloss_mm": "ကျွန်တော်ထင်တာကတော့ ပိုက်ဆံက အရေးကြီးပေမဲ့ ပျော်ရွှင်မှုက ပိုအရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, money buys comfort, yet it doesn't always guarantee happiness.",
+          "highlight": "yet",
+          "swap_en": "though · but still",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ပိုက်ဆံက သက်သောင့်သက်သာရှိမှုကို ဝယ်ပေးနိုင်ပေမဲ့ ပျော်ရွှင်မှုကိုတော့ အမြဲတမ်း အာမမခံနိုင်ပါဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say money is a necessity, although it isn't the only source of true fulfillment.",
+          "highlight": "although",
+          "swap_en": "even though · despite the fact that",
+          "gloss_mm": "ကျွန်တော့်အမြင်ကို ပြောရရင် ပိုက်ဆံက မရှိမဖြစ် လိုအပ်တာမှန်ပေမဲ့ စစ်မှန်တဲ့ ကျေနပ်ပျော်ရွှင်မှုအတွက် တစ်ခုတည်းသော အကြောင်းအရင်းတော့ မဟုတ်ပါဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "While some people claim money is everything, I personally think relationships matter more.",
+          "highlight": "While",
+          "swap_en": "Although · Even though",
+          "gloss_mm": "တချို့က ပိုက်ဆံက အရာရာပဲလို့ ပြောကြပေမဲ့ ကျွန်တော့်အမြင်အရတော့ လူမှုဆက်ဆံရေးက ပိုအရေးကြီးပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a reason for your belief",
+      "move_mm": "ကိုယ့်အယူအဆအတွက် အကြောင်းပြချက် ပေးနည်း",
+      "items": [
+        {
+          "text_en": "I think money is important because it buys basic needs.",
+          "highlight": "because it buys basic needs",
+          "swap_en": "because it helps my family · as it makes life easier · since we need it for food",
+          "gloss_mm": "ငွေက မရှိမဖြစ်လိုအပ်တဲ့အရာတွေကို ဝယ်နိုင်လို့ အရေးကြီးတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, money doesn't guarantee happiness, as peace of mind is more valuable.",
+          "highlight": "as peace of mind is more valuable",
+          "swap_en": "since money can't buy health · because relationships matter more · as money isn't everything",
+          "gloss_mm": "စိတ်ငြိမ်းချမ်းမှုက ပိုတန်ဖိုးရှိတဲ့အတွက် ငွေက ပျော်ရွှင်မှုကို အာမမခံနိုင်ဘူးလို့ ကျွန်တော်ယူဆတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say money provides the foundation for comfort, provided that you don't let it control your life.",
+          "highlight": "provided that you don't let it control your life",
+          "swap_en": "assuming you have enough to live well · as long as you spend it wisely",
+          "gloss_mm": "ငွေကို ကိုယ့်ဘဝရဲ့ အရှင်သခင် မဖြစ်စေသရွေ့တော့ ငွေက သက်သောင့်သက်သာရှိတဲ့ ဘဝတစ်ခုအတွက် အခြေခံအုတ်မြစ်ပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Providing a personal example from daily life",
+      "move_mm": "နေ့စဉ်ဘဝကနေ ဥပမာပေး ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money makes it easier to buy basic things.",
+          "highlight": "buy basic things",
+          "swap_en": "eat at nice restaurants · pay for my kids' tuition · afford a new motorbike",
+          "gloss_mm": "ပိုက်ဆံရှိရင် အခြေခံလိုအပ်ချက်တွေကို ဝယ်ရတာ ပိုလွယ်ကူတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, having enough money for tea and snacks with friends makes me happy.",
+          "highlight": "having enough money for tea and snacks with friends",
+          "swap_en": "having extra cash for weekend trips · being able to donate at the pagoda · not worrying about monthly bills",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ သူငယ်ချင်းတွေနဲ့ လက်ဖက်ရည်ဆိုင်ထိုင်ဖို့ ပိုက်ဆံအလုံအလောက်ရှိတာက ပျော်ဖို့ကောင်းတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that while money doesn't buy happiness, it certainly removes the stress of daily survival.",
+          "highlight": "removes the stress of daily survival",
+          "swap_en": "gives me peace of mind · creates more options for my family · helps me focus on my hobbies",
+          "gloss_mm": "ပိုက်ဆံက ပျော်ရွှင်မှုကို မဝယ်နိုင်ပေမယ့် နေ့စဉ်ဘဝရဲ့ စားဝတ်နေရေး အခက်အခဲတွေကိုတော့ ပြေလည်စေတယ်လို့ ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning things that money cannot buy",
+      "move_mm": "ငွေနဲ့ဝယ်လို့မရတဲ့အရာတွေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think money cannot buy true love.",
+          "highlight": "true love",
+          "swap_en": "good health · inner peace · real friendship",
+          "gloss_mm": "ငွေနဲ့ စစ်မှန်တဲ့အချစ်ကို မဝယ်နိုင်ဘူးလို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, you can't put a price on good health.",
+          "highlight": "you can't put a price on",
+          "swap_en": "money can't buy · there is no price for",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ကျန်းမာရေးဆိုတာ ငွေနဲ့ဖြတ်လို့မရတဲ့အရာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that peace of mind is something money just can't buy.",
+          "highlight": "peace of mind",
+          "swap_en": "a meaningful life · genuine happiness · a stress-free life",
+          "gloss_mm": "စိတ်အေးချမ်းမှုဆိုတာ ငွေနဲ့ဝယ်လို့မရတဲ့အရာတစ်ခုလို့ ကျွန်တော်ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your priorities in life",
+      "move_mm": "ဘဝမှာ ဦးစားပေးအရာတွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money is not the most important thing.",
+          "highlight": "money is not the most important thing",
+          "swap_en": "health is the most important thing · family is the most important thing · peace of mind is the most important thing",
+          "gloss_mm": "ငွေဆိုတာ အရေးအကြီးဆုံးအရာ မဟုတ်ဘူးလို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, spending time with family comes first.",
+          "highlight": "spending time with family comes first",
+          "swap_en": "having a stable job comes first · saving money comes first · my own happiness comes first",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ မိသားစုနဲ့ အချိန်ပေးတာက ဦးစားပေးဆုံးပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that inner peace matters more than earning a lot of money.",
+          "highlight": "inner peace matters more than earning a lot of money",
+          "swap_en": "good health matters more than a high salary · personal growth matters more than material wealth",
+          "gloss_mm": "ပိုက်ဆံအများကြီး ရှာတာထက် စိတ်ချမ်းသာဖို့က ပိုအရေးကြီးတယ်လို့ ပြောရမှာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I honestly believe that money cannot buy true happiness.",
+          "highlight": "money cannot buy true happiness",
+          "swap_en": "money isn't everything in life · happiness is more than just having money",
+          "gloss_mm": "ငွေနဲ့ စစ်မှန်တဲ့ပျော်ရွှင်မှုကို ဝယ်လို့မရဘူးလို့ ကျွန်တော် ရိုးသားစွာ ယုံကြည်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing with someone else's opinion",
+      "move_mm": "သူတစ်ပါးအမြင်ကို ထောက်ခံပြောနည်း",
+      "items": [
+        {
+          "text_en": "I agree that money can't buy happiness.",
+          "highlight": "I agree that",
+          "swap_en": "I think that · I feel that",
+          "gloss_mm": "ငွေနဲ့ ပျော်ရွှင်မှုကို ဝယ်လို့မရဘူးဆိုတာ ကျွန်တော် သဘောတူပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "You're right, money is definitely not everything.",
+          "highlight": "You're right,",
+          "swap_en": "I totally agree, · That's true,",
+          "gloss_mm": "ခင်ဗျားပြောတာ မှန်ပါတယ်။ ငွေက အရာရာတော့ မဟုတ်ဘူးပေါ့ဗျာ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I couldn't agree more; money helps, but it isn't the only thing that matters.",
+          "highlight": "I couldn't agree more;",
+          "swap_en": "I'm with you on that; · I share your view that",
+          "gloss_mm": "ကျွန်တော် အပြည့်အဝ ထောက်ခံပါတယ်။ ငွေက အထောက်အကူ ဖြစ်ပေမဲ့ ဒါတစ်ခုတည်းကပဲ အရေးကြီးတာ မဟုတ်ပါဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Disagreeing politely",
+      "move_mm": "ယဉ်ယဉ်ကျေးကျေးနဲ့ ငြင်းဆိုပြောနည်း",
+      "items": [
+        {
+          "text_en": "I see your point, but I think money isn't everything.",
+          "highlight": "I see your point, but",
+          "swap_en": "I understand what you mean, but · That's an interesting perspective, but",
+          "gloss_mm": "ခင်ဗျားပြောတာကို နားလည်ပါတယ်၊ ဒါပေမဲ့ ငွေက အရာရာမဟုတ်ဘူးလို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I hear what you're saying, but in my opinion, money can't buy true happiness.",
+          "highlight": "I hear what you're saying, but",
+          "swap_en": "I see where you're coming from, but · I get that, but",
+          "gloss_mm": "ခင်ဗျားပြောတာကို ကြားရတာပါ၊ ဒါပေမဲ့ ကျွန်တော့်အမြင်အရတော့ ငွေနဲ့ စစ်မှန်တဲ့ပျော်ရွှင်မှုကို ဝယ်လို့မရဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm not so sure about that; I'd say inner peace is more important than wealth.",
+          "highlight": "I'm not so sure about that",
+          "swap_en": "I'm afraid I have to disagree · That's not exactly how I see it",
+          "gloss_mm": "အဲဒီအချက်ကိုတော့ ကျွန်တော် သိပ်သဘောမတူဘူး၊ စိတ်အေးချမ်းမှုက ချမ်းသာကြွယ်ဝမှုထက် ပိုအရေးကြီးတယ်လို့ ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the relationship between stress and money",
+      "move_mm": "ငွေနဲ့ စိတ်ဖိစီးမှုကြား ဆက်စပ်မှုကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money makes life less stressful.",
+          "highlight": "less stressful",
+          "swap_en": "more stressful · easier · harder",
+          "gloss_mm": "ငွေက ဘဝကို စိတ်ဖိစီးမှု လျော့နည်းစေတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, money is the main cause of stress for many people.",
+          "highlight": "the main cause of stress",
+          "swap_en": "a big source of pressure · a common reason for worry",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ငွေက လူတော်တော်များများအတွက် စိတ်ဖိစီးမှုရဲ့ အဓိကအကြောင်းရင်းပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that financial instability is a constant source of anxiety in Yangon.",
+          "highlight": "a constant source of anxiety",
+          "swap_en": "a major cause of daily stress · a never-ending burden",
+          "gloss_mm": "ရန်ကုန်မှာ ငွေကြေး မတည်ငြိမ်မှုက စိတ်ပူပန်မှုတွေ ဖြစ်စေတဲ့ အကြောင်းရင်းတစ်ခုပါပဲလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about financial freedom",
+      "move_mm": "ငွေကြေးလွတ်လပ်မှုအကြောင်း ဆွေးနွေးနည်း",
+      "items": [
+        {
+          "text_en": "I think financial freedom means having enough money to live comfortably.",
+          "highlight": "having enough money to live comfortably",
+          "swap_en": "not worrying about bills · being able to travel whenever I want · doing what I love without stress",
+          "gloss_mm": "ငွေကြေးလွတ်လပ်မှုဆိုတာ စိတ်ပူစရာမလိုဘဲ သက်သောင့်သက်သာ နေနိုင်လောက်တဲ့ ငွေရှိတာလို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, true freedom is when you don't have to work just to pay the bills.",
+          "highlight": "don't have to work just to pay the bills",
+          "swap_en": "can choose the work I enjoy · don't need to count every kyat · can stop working if I want to",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ငွေကြေးလွတ်လပ်မှုဆိုတာ စားဝတ်နေရေးအတွက်ပဲ ရုန်းကန်နေစရာမလိုတော့တဲ့ အခြေအနေမျိုးပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say financial freedom is about having the autonomy to control your own time.",
+          "highlight": "having the autonomy to control your own time",
+          "swap_en": "the ability to live life on your own terms · the peace of mind that comes with savings · the luxury of not being tied to a 9-to-5 job",
+          "gloss_mm": "ငွေကြေးလွတ်လပ်မှုဆိုတာ ကိုယ့်အချိန်ကို ကိုယ်ပိုင်သလို စီမံခန့်ခွဲနိုင်တဲ့ အခွင့်အရေးရှိခြင်းမျိုးလို့ ဆိုချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting what truly matters to you",
+      "move_mm": "ကိုယ့်အတွက် တကယ်အရေးကြီးတာကို အလေးပေးပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money is not the most important thing.",
+          "highlight": "not the most important thing",
+          "swap_en": "not everything · just a tool for living",
+          "gloss_mm": "ကျွန်တော့်အမြင်မှာတော့ ပိုက်ဆံက အရေးအကြီးဆုံးအရာ မဟုတ်ပါဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, peace of mind matters more than a high salary.",
+          "highlight": "peace of mind",
+          "swap_en": "good health · spending time with family · inner happiness",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ လစာကောင်းတာထက် စိတ်ချမ်းသာမှုက ပိုအရေးကြီးပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I’d say that true happiness lies in simple daily moments.",
+          "highlight": "true happiness lies in simple daily moments",
+          "swap_en": "true happiness comes from being with loved ones · true happiness is about meaningful relationships",
+          "gloss_mm": "ကျွန်တော် ပြောရရင်တော့ စစ်မှန်တဲ့ပျော်ရွှင်မှုဆိုတာ နေ့စဉ်ရိုးရှင်းတဲ့ အချိန်လေးတွေမှာပဲ ရှိတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your point of view",
+      "move_mm": "ကိုယ့်အမြင်ကို နိဂုံးချုပ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think money can't buy happiness.",
+          "highlight": "money can't buy happiness",
+          "swap_en": "money isn't everything · happiness is more than just money",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရ ငွေနဲ့ ပျော်ရွှင်မှုကို ဝယ်လို့မရဘူးလို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, money is just a tool for a better life.",
+          "highlight": "a tool for a better life",
+          "swap_en": "a means to an end · the foundation of comfort",
+          "gloss_mm": "ကျွန်တော့်အမြင်မှာတော့ ငွေဆိုတာ ဘဝပိုကောင်းဖို့အတွက် ကိရိယာတစ်ခုပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that true happiness comes from experiences, not possessions.",
+          "highlight": "true happiness comes from experiences, not possessions",
+          "swap_en": "happiness is found in simple moments · money buys comfort but not contentment",
+          "gloss_mm": "ကျွန်တော်ကတော့ စစ်မှန်တဲ့ပျော်ရွှင်မှုဟာ ပစ္စည်းဥစ္စာတွေထက် ကိုယ်ဖြတ်သန်းရတဲ့ အတွေ့အကြုံတွေကနေ လာတာလို့ ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Asking for someone else's thoughts",
+      "move_mm": "သူတစ်ပါးရဲ့ သဘောထားကို ပြန်မေးနည်း",
+      "items": [
+        {
+          "text_en": "I think money is important, but what do you think?",
+          "highlight": "what do you think",
+          "swap_en": "what is your opinion · how do you feel about this",
+          "gloss_mm": "ကျွန်တော်ကတော့ ပိုက်ဆံက အရေးကြီးတယ်လို့ ထင်တယ်။ သင်ရော ဘယ်လိုထင်လဲ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, money doesn't buy happiness. Do you agree with me?",
+          "highlight": "Do you agree with me",
+          "swap_en": "What's your take on this · Do you feel the same way",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ပိုက်ဆံနဲ့ ပျော်ရွှင်မှုကို ဝယ်လို့မရဘူး။ သင်ရော သဘောတူလား။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say money is just a tool for living, wouldn't you agree?",
+          "highlight": "wouldn't you agree",
+          "swap_en": "what's your perspective on that · I'm curious about your thoughts",
+          "gloss_mm": "ကျွန်တော့်အမြင်ကို ပြောရရင် ပိုက်ဆံဆိုတာ အသက်ရှင်ဖို့အတွက် ကိရိယာတစ်ခုပဲ၊ သင်ရော အဲဒီလို မမြင်ဘူးလား။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write a short paragraph about whether money makes people happy. Use your own experiences or observations in Myanmar to support your point.",
+    "prompt_mm": "ငွေကြေးက လူတွေကို ပျော်ရွှင်စေလားဆိုတဲ့အကြောင်း စာပိုဒ်တိုလေး တစ်ခု ရေးပါ။ မြန်မာနိုင်ငံက ကိုယ့်ရဲ့ အတွေ့အကြုံ ဒါမှမဟုတ် လေ့လာချက်တွေကို အခြေခံပြီး ရေးကြည့်ပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "I think...",
+      "On the other hand...",
+      "For example...",
+      "Money is important because...",
+      "However...",
+      "In my experience...",
+      "Most importantly...",
+      "What do you think?"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and natural speed.",
+    "speak_aloud_mm": "ရေးထားတဲ့အဖြေကို အသံထွက်ပြီး ၂ ခေါက်၊ ၃ ခေါက်လောက် ဖတ်ကြည့်ပါ။ စကားပြောတဲ့အရှိန်နဲ့ ပုံမှန်အတိုင်း ဖြစ်အောင် လေ့ကျင့်ပါ။"
+  }
+}

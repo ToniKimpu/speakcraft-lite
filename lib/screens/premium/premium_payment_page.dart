@@ -10,6 +10,7 @@ import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/payment_method/payment_method.dart';
+import 'package:speakcraft/services/analytics_service.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 
 class PremiumPaymentPage extends StatelessWidget {
@@ -52,6 +53,7 @@ class _PaymentViewState extends State<_PaymentView> {
     final method = _selected;
     final proof = _proof;
     if (method == null || proof == null) return;
+    AnalyticsService.instance.paymentSubmitted(method.displayName);
     context
         .read<PaymentBloc>()
         .add(PaymentEvent.submitPayment(method, proof));
@@ -121,7 +123,9 @@ class _PaymentViewState extends State<_PaymentView> {
                         ? null
                         : _money(_selected!.amount, _selected!.currency),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 14),
+                  const _PremiumBenefits(),
+                  const SizedBox(height: 18),
                   Text('1. Pick how you want to pay', style: PmpTextStyles.body1Semi
                       .copyWith(color: cs.onSurface)),
                   const SizedBox(height: 10),
@@ -202,7 +206,7 @@ class _PlanHeader extends StatelessWidget {
                 Text('Premium — 1 year', style: PmpTextStyles.title1SemiBold),
                 const SizedBox(height: 2),
                 Text(
-                  'Unlock shadowing, speech practice & sentence explanations on every video.',
+                  'Full access to every module for a whole year.',
                   style: PmpTextStyles.label2Regular,
                 ),
               ],
@@ -216,6 +220,104 @@ class _PlanHeader extends StatelessWidget {
           ],
         ],
       ),
+    );
+  }
+}
+
+/// What Premium unlocks, across every module — the value pitch. Kept accurate
+/// to the actual gating (SYM L2/L3 + more AI feedback, Vocabulary Intermediate/
+/// Upper, Grammar beyond basics, Listening shadowing/speech/explanations).
+class _PremiumBenefits extends StatelessWidget {
+  const _PremiumBenefits();
+
+  static const _items = <({IconData icon, String title, String sub})>[
+    (
+      icon: Icons.record_voice_over_outlined,
+      title: 'Speak Your Mind — Levels 2 & 3',
+      sub: 'Tell stories, give opinions & discuss real issues — plus more daily '
+          'AI feedback on your writing.',
+    ),
+    (
+      icon: Icons.menu_book_outlined,
+      title: 'Vocabulary — Intermediate & Upper',
+      sub: 'Hundreds more words & expressions, each with audio.',
+    ),
+    (
+      icon: Icons.spellcheck_rounded,
+      title: 'Grammar — every level',
+      sub: 'All grammar levels beyond the basics.',
+    ),
+    (
+      icon: Icons.headphones_outlined,
+      title: 'Listening & Shadowing',
+      sub: 'Shadowing, speech practice & sentence explanations on every video.',
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return GlassCard(
+      highlight: true,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.check_circle,
+                  color: PmpColors.premiumGold, size: 18),
+              const SizedBox(width: 8),
+              Text('Everything in Free, plus:',
+                  style:
+                      PmpTextStyles.body1Semi.copyWith(color: cs.onSurface)),
+            ],
+          ),
+          const SizedBox(height: 14),
+          for (var i = 0; i < _items.length; i++) ...[
+            _BenefitRow(item: _items[i]),
+            if (i != _items.length - 1) const SizedBox(height: 12),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _BenefitRow extends StatelessWidget {
+  const _BenefitRow({required this.item});
+  final ({IconData icon, String title, String sub}) item;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: 36,
+          height: 36,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: PmpColors.premiumGold.withValues(alpha: 0.14),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Icon(item.icon, size: 19, color: PmpColors.premiumGoldDeep),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(item.title,
+                  style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface)),
+              const SizedBox(height: 2),
+              Text(item.sub,
+                  style: PmpTextStyles.label2Regular
+                      .copyWith(color: cs.onSurfaceVariant, height: 1.4)),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

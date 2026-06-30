@@ -1543,6 +1543,915 @@ class VocabReviewTableCompanion extends UpdateCompanion<VocabReviewTableData> {
   }
 }
 
+class $SymSessionTableTable extends SymSessionTable
+    with TableInfo<$SymSessionTableTable, SymSessionTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SymSessionTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _topicIdMeta =
+      const VerificationMeta('topicId');
+  @override
+  late final GeneratedColumn<String> topicId = GeneratedColumn<String>(
+      'topic_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _finalTextMeta =
+      const VerificationMeta('finalText');
+  @override
+  late final GeneratedColumn<String> finalText = GeneratedColumn<String>(
+      'final_text', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _naturalVersionMeta =
+      const VerificationMeta('naturalVersion');
+  @override
+  late final GeneratedColumn<String> naturalVersion = GeneratedColumn<String>(
+      'natural_version', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _scoreMeta = const VerificationMeta('score');
+  @override
+  late final GeneratedColumn<int> score = GeneratedColumn<int>(
+      'score', aliasedName, true,
+      type: DriftSqlType.int, requiredDuringInsert: false);
+  static const VerificationMeta _bandMeta = const VerificationMeta('band');
+  @override
+  late final GeneratedColumn<String> band = GeneratedColumn<String>(
+      'band', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _versionsMeta =
+      const VerificationMeta('versions');
+  @override
+  late final GeneratedColumn<int> versions = GeneratedColumn<int>(
+      'versions', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(1));
+  static const VerificationMeta _recordingPathMeta =
+      const VerificationMeta('recordingPath');
+  @override
+  late final GeneratedColumn<String> recordingPath = GeneratedColumn<String>(
+      'recording_path', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _recordingNameMeta =
+      const VerificationMeta('recordingName');
+  @override
+  late final GeneratedColumn<String> recordingName = GeneratedColumn<String>(
+      'recording_name', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _tokensMeta = const VerificationMeta('tokens');
+  @override
+  late final GeneratedColumn<int> tokens = GeneratedColumn<int>(
+      'tokens', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _versionsJsonMeta =
+      const VerificationMeta('versionsJson');
+  @override
+  late final GeneratedColumn<String> versionsJson = GeneratedColumn<String>(
+      'versions_json', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime,
+      requiredDuringInsert: false,
+      defaultValue: currentDateAndTime);
+  @override
+  List<GeneratedColumn> get $columns => [
+        id,
+        topicId,
+        finalText,
+        naturalVersion,
+        score,
+        band,
+        versions,
+        recordingPath,
+        recordingName,
+        tokens,
+        versionsJson,
+        createdAt
+      ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'sym_session_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<SymSessionTableData> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('topic_id')) {
+      context.handle(_topicIdMeta,
+          topicId.isAcceptableOrUnknown(data['topic_id']!, _topicIdMeta));
+    } else if (isInserting) {
+      context.missing(_topicIdMeta);
+    }
+    if (data.containsKey('final_text')) {
+      context.handle(_finalTextMeta,
+          finalText.isAcceptableOrUnknown(data['final_text']!, _finalTextMeta));
+    } else if (isInserting) {
+      context.missing(_finalTextMeta);
+    }
+    if (data.containsKey('natural_version')) {
+      context.handle(
+          _naturalVersionMeta,
+          naturalVersion.isAcceptableOrUnknown(
+              data['natural_version']!, _naturalVersionMeta));
+    }
+    if (data.containsKey('score')) {
+      context.handle(
+          _scoreMeta, score.isAcceptableOrUnknown(data['score']!, _scoreMeta));
+    }
+    if (data.containsKey('band')) {
+      context.handle(
+          _bandMeta, band.isAcceptableOrUnknown(data['band']!, _bandMeta));
+    }
+    if (data.containsKey('versions')) {
+      context.handle(_versionsMeta,
+          versions.isAcceptableOrUnknown(data['versions']!, _versionsMeta));
+    }
+    if (data.containsKey('recording_path')) {
+      context.handle(
+          _recordingPathMeta,
+          recordingPath.isAcceptableOrUnknown(
+              data['recording_path']!, _recordingPathMeta));
+    }
+    if (data.containsKey('recording_name')) {
+      context.handle(
+          _recordingNameMeta,
+          recordingName.isAcceptableOrUnknown(
+              data['recording_name']!, _recordingNameMeta));
+    }
+    if (data.containsKey('tokens')) {
+      context.handle(_tokensMeta,
+          tokens.isAcceptableOrUnknown(data['tokens']!, _tokensMeta));
+    }
+    if (data.containsKey('versions_json')) {
+      context.handle(
+          _versionsJsonMeta,
+          versionsJson.isAcceptableOrUnknown(
+              data['versions_json']!, _versionsJsonMeta));
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  SymSessionTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SymSessionTableData(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      topicId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}topic_id'])!,
+      finalText: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}final_text'])!,
+      naturalVersion: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}natural_version']),
+      score: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}score']),
+      band: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}band']),
+      versions: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}versions'])!,
+      recordingPath: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}recording_path']),
+      recordingName: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}recording_name']),
+      tokens: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}tokens'])!,
+      versionsJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}versions_json']),
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+    );
+  }
+
+  @override
+  $SymSessionTableTable createAlias(String alias) {
+    return $SymSessionTableTable(attachedDatabase, alias);
+  }
+}
+
+class SymSessionTableData extends DataClass
+    implements Insertable<SymSessionTableData> {
+  final int id;
+
+  /// The topic this session belongs to (e.g. `my_family`).
+  final String topicId;
+
+  /// What the learner finally wrote.
+  final String finalText;
+
+  /// The AI's natural rewrite (null if feedback was skipped / failed).
+  final String? naturalVersion;
+
+  /// Clarity score 0–100 from the last feedback pass.
+  final int? score;
+
+  /// great | good | keep_going.
+  final String? band;
+
+  /// How many drafts (v1, v2, …) the learner went through.
+  final int versions;
+
+  /// On-device path to the voice recording (null if they didn't record).
+  final String? recordingPath;
+  final String? recordingName;
+
+  /// Tokens billed across all versions of this attempt (0 for mock / skipped).
+  final int tokens;
+
+  /// JSON array of every version (v1, v2, …) in this attempt — each with its
+  /// own text + feedback summary. Null/empty ⇒ a single version (use the summary
+  /// columns above). Lets the history show a v1/v2 chain.
+  final String? versionsJson;
+  final DateTime createdAt;
+  const SymSessionTableData(
+      {required this.id,
+      required this.topicId,
+      required this.finalText,
+      this.naturalVersion,
+      this.score,
+      this.band,
+      required this.versions,
+      this.recordingPath,
+      this.recordingName,
+      required this.tokens,
+      this.versionsJson,
+      required this.createdAt});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['topic_id'] = Variable<String>(topicId);
+    map['final_text'] = Variable<String>(finalText);
+    if (!nullToAbsent || naturalVersion != null) {
+      map['natural_version'] = Variable<String>(naturalVersion);
+    }
+    if (!nullToAbsent || score != null) {
+      map['score'] = Variable<int>(score);
+    }
+    if (!nullToAbsent || band != null) {
+      map['band'] = Variable<String>(band);
+    }
+    map['versions'] = Variable<int>(versions);
+    if (!nullToAbsent || recordingPath != null) {
+      map['recording_path'] = Variable<String>(recordingPath);
+    }
+    if (!nullToAbsent || recordingName != null) {
+      map['recording_name'] = Variable<String>(recordingName);
+    }
+    map['tokens'] = Variable<int>(tokens);
+    if (!nullToAbsent || versionsJson != null) {
+      map['versions_json'] = Variable<String>(versionsJson);
+    }
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  SymSessionTableCompanion toCompanion(bool nullToAbsent) {
+    return SymSessionTableCompanion(
+      id: Value(id),
+      topicId: Value(topicId),
+      finalText: Value(finalText),
+      naturalVersion: naturalVersion == null && nullToAbsent
+          ? const Value.absent()
+          : Value(naturalVersion),
+      score:
+          score == null && nullToAbsent ? const Value.absent() : Value(score),
+      band: band == null && nullToAbsent ? const Value.absent() : Value(band),
+      versions: Value(versions),
+      recordingPath: recordingPath == null && nullToAbsent
+          ? const Value.absent()
+          : Value(recordingPath),
+      recordingName: recordingName == null && nullToAbsent
+          ? const Value.absent()
+          : Value(recordingName),
+      tokens: Value(tokens),
+      versionsJson: versionsJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(versionsJson),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory SymSessionTableData.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SymSessionTableData(
+      id: serializer.fromJson<int>(json['id']),
+      topicId: serializer.fromJson<String>(json['topicId']),
+      finalText: serializer.fromJson<String>(json['finalText']),
+      naturalVersion: serializer.fromJson<String?>(json['naturalVersion']),
+      score: serializer.fromJson<int?>(json['score']),
+      band: serializer.fromJson<String?>(json['band']),
+      versions: serializer.fromJson<int>(json['versions']),
+      recordingPath: serializer.fromJson<String?>(json['recordingPath']),
+      recordingName: serializer.fromJson<String?>(json['recordingName']),
+      tokens: serializer.fromJson<int>(json['tokens']),
+      versionsJson: serializer.fromJson<String?>(json['versionsJson']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'topicId': serializer.toJson<String>(topicId),
+      'finalText': serializer.toJson<String>(finalText),
+      'naturalVersion': serializer.toJson<String?>(naturalVersion),
+      'score': serializer.toJson<int?>(score),
+      'band': serializer.toJson<String?>(band),
+      'versions': serializer.toJson<int>(versions),
+      'recordingPath': serializer.toJson<String?>(recordingPath),
+      'recordingName': serializer.toJson<String?>(recordingName),
+      'tokens': serializer.toJson<int>(tokens),
+      'versionsJson': serializer.toJson<String?>(versionsJson),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  SymSessionTableData copyWith(
+          {int? id,
+          String? topicId,
+          String? finalText,
+          Value<String?> naturalVersion = const Value.absent(),
+          Value<int?> score = const Value.absent(),
+          Value<String?> band = const Value.absent(),
+          int? versions,
+          Value<String?> recordingPath = const Value.absent(),
+          Value<String?> recordingName = const Value.absent(),
+          int? tokens,
+          Value<String?> versionsJson = const Value.absent(),
+          DateTime? createdAt}) =>
+      SymSessionTableData(
+        id: id ?? this.id,
+        topicId: topicId ?? this.topicId,
+        finalText: finalText ?? this.finalText,
+        naturalVersion:
+            naturalVersion.present ? naturalVersion.value : this.naturalVersion,
+        score: score.present ? score.value : this.score,
+        band: band.present ? band.value : this.band,
+        versions: versions ?? this.versions,
+        recordingPath:
+            recordingPath.present ? recordingPath.value : this.recordingPath,
+        recordingName:
+            recordingName.present ? recordingName.value : this.recordingName,
+        tokens: tokens ?? this.tokens,
+        versionsJson:
+            versionsJson.present ? versionsJson.value : this.versionsJson,
+        createdAt: createdAt ?? this.createdAt,
+      );
+  SymSessionTableData copyWithCompanion(SymSessionTableCompanion data) {
+    return SymSessionTableData(
+      id: data.id.present ? data.id.value : this.id,
+      topicId: data.topicId.present ? data.topicId.value : this.topicId,
+      finalText: data.finalText.present ? data.finalText.value : this.finalText,
+      naturalVersion: data.naturalVersion.present
+          ? data.naturalVersion.value
+          : this.naturalVersion,
+      score: data.score.present ? data.score.value : this.score,
+      band: data.band.present ? data.band.value : this.band,
+      versions: data.versions.present ? data.versions.value : this.versions,
+      recordingPath: data.recordingPath.present
+          ? data.recordingPath.value
+          : this.recordingPath,
+      recordingName: data.recordingName.present
+          ? data.recordingName.value
+          : this.recordingName,
+      tokens: data.tokens.present ? data.tokens.value : this.tokens,
+      versionsJson: data.versionsJson.present
+          ? data.versionsJson.value
+          : this.versionsJson,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SymSessionTableData(')
+          ..write('id: $id, ')
+          ..write('topicId: $topicId, ')
+          ..write('finalText: $finalText, ')
+          ..write('naturalVersion: $naturalVersion, ')
+          ..write('score: $score, ')
+          ..write('band: $band, ')
+          ..write('versions: $versions, ')
+          ..write('recordingPath: $recordingPath, ')
+          ..write('recordingName: $recordingName, ')
+          ..write('tokens: $tokens, ')
+          ..write('versionsJson: $versionsJson, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      id,
+      topicId,
+      finalText,
+      naturalVersion,
+      score,
+      band,
+      versions,
+      recordingPath,
+      recordingName,
+      tokens,
+      versionsJson,
+      createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SymSessionTableData &&
+          other.id == this.id &&
+          other.topicId == this.topicId &&
+          other.finalText == this.finalText &&
+          other.naturalVersion == this.naturalVersion &&
+          other.score == this.score &&
+          other.band == this.band &&
+          other.versions == this.versions &&
+          other.recordingPath == this.recordingPath &&
+          other.recordingName == this.recordingName &&
+          other.tokens == this.tokens &&
+          other.versionsJson == this.versionsJson &&
+          other.createdAt == this.createdAt);
+}
+
+class SymSessionTableCompanion extends UpdateCompanion<SymSessionTableData> {
+  final Value<int> id;
+  final Value<String> topicId;
+  final Value<String> finalText;
+  final Value<String?> naturalVersion;
+  final Value<int?> score;
+  final Value<String?> band;
+  final Value<int> versions;
+  final Value<String?> recordingPath;
+  final Value<String?> recordingName;
+  final Value<int> tokens;
+  final Value<String?> versionsJson;
+  final Value<DateTime> createdAt;
+  const SymSessionTableCompanion({
+    this.id = const Value.absent(),
+    this.topicId = const Value.absent(),
+    this.finalText = const Value.absent(),
+    this.naturalVersion = const Value.absent(),
+    this.score = const Value.absent(),
+    this.band = const Value.absent(),
+    this.versions = const Value.absent(),
+    this.recordingPath = const Value.absent(),
+    this.recordingName = const Value.absent(),
+    this.tokens = const Value.absent(),
+    this.versionsJson = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  });
+  SymSessionTableCompanion.insert({
+    this.id = const Value.absent(),
+    required String topicId,
+    required String finalText,
+    this.naturalVersion = const Value.absent(),
+    this.score = const Value.absent(),
+    this.band = const Value.absent(),
+    this.versions = const Value.absent(),
+    this.recordingPath = const Value.absent(),
+    this.recordingName = const Value.absent(),
+    this.tokens = const Value.absent(),
+    this.versionsJson = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  })  : topicId = Value(topicId),
+        finalText = Value(finalText);
+  static Insertable<SymSessionTableData> custom({
+    Expression<int>? id,
+    Expression<String>? topicId,
+    Expression<String>? finalText,
+    Expression<String>? naturalVersion,
+    Expression<int>? score,
+    Expression<String>? band,
+    Expression<int>? versions,
+    Expression<String>? recordingPath,
+    Expression<String>? recordingName,
+    Expression<int>? tokens,
+    Expression<String>? versionsJson,
+    Expression<DateTime>? createdAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (topicId != null) 'topic_id': topicId,
+      if (finalText != null) 'final_text': finalText,
+      if (naturalVersion != null) 'natural_version': naturalVersion,
+      if (score != null) 'score': score,
+      if (band != null) 'band': band,
+      if (versions != null) 'versions': versions,
+      if (recordingPath != null) 'recording_path': recordingPath,
+      if (recordingName != null) 'recording_name': recordingName,
+      if (tokens != null) 'tokens': tokens,
+      if (versionsJson != null) 'versions_json': versionsJson,
+      if (createdAt != null) 'created_at': createdAt,
+    });
+  }
+
+  SymSessionTableCompanion copyWith(
+      {Value<int>? id,
+      Value<String>? topicId,
+      Value<String>? finalText,
+      Value<String?>? naturalVersion,
+      Value<int?>? score,
+      Value<String?>? band,
+      Value<int>? versions,
+      Value<String?>? recordingPath,
+      Value<String?>? recordingName,
+      Value<int>? tokens,
+      Value<String?>? versionsJson,
+      Value<DateTime>? createdAt}) {
+    return SymSessionTableCompanion(
+      id: id ?? this.id,
+      topicId: topicId ?? this.topicId,
+      finalText: finalText ?? this.finalText,
+      naturalVersion: naturalVersion ?? this.naturalVersion,
+      score: score ?? this.score,
+      band: band ?? this.band,
+      versions: versions ?? this.versions,
+      recordingPath: recordingPath ?? this.recordingPath,
+      recordingName: recordingName ?? this.recordingName,
+      tokens: tokens ?? this.tokens,
+      versionsJson: versionsJson ?? this.versionsJson,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (topicId.present) {
+      map['topic_id'] = Variable<String>(topicId.value);
+    }
+    if (finalText.present) {
+      map['final_text'] = Variable<String>(finalText.value);
+    }
+    if (naturalVersion.present) {
+      map['natural_version'] = Variable<String>(naturalVersion.value);
+    }
+    if (score.present) {
+      map['score'] = Variable<int>(score.value);
+    }
+    if (band.present) {
+      map['band'] = Variable<String>(band.value);
+    }
+    if (versions.present) {
+      map['versions'] = Variable<int>(versions.value);
+    }
+    if (recordingPath.present) {
+      map['recording_path'] = Variable<String>(recordingPath.value);
+    }
+    if (recordingName.present) {
+      map['recording_name'] = Variable<String>(recordingName.value);
+    }
+    if (tokens.present) {
+      map['tokens'] = Variable<int>(tokens.value);
+    }
+    if (versionsJson.present) {
+      map['versions_json'] = Variable<String>(versionsJson.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SymSessionTableCompanion(')
+          ..write('id: $id, ')
+          ..write('topicId: $topicId, ')
+          ..write('finalText: $finalText, ')
+          ..write('naturalVersion: $naturalVersion, ')
+          ..write('score: $score, ')
+          ..write('band: $band, ')
+          ..write('versions: $versions, ')
+          ..write('recordingPath: $recordingPath, ')
+          ..write('recordingName: $recordingName, ')
+          ..write('tokens: $tokens, ')
+          ..write('versionsJson: $versionsJson, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $ChallengeMarkTableTable extends ChallengeMarkTable
+    with TableInfo<$ChallengeMarkTableTable, ChallengeMarkTableData> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $ChallengeMarkTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _youtubeIdMeta =
+      const VerificationMeta('youtubeId');
+  @override
+  late final GeneratedColumn<String> youtubeId = GeneratedColumn<String>(
+      'youtube_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _sentenceIndexMeta =
+      const VerificationMeta('sentenceIndex');
+  @override
+  late final GeneratedColumn<int> sentenceIndex = GeneratedColumn<int>(
+      'sentence_index', aliasedName, false,
+      type: DriftSqlType.int, requiredDuringInsert: true);
+  static const VerificationMeta _positionMsMeta =
+      const VerificationMeta('positionMs');
+  @override
+  late final GeneratedColumn<int> positionMs = GeneratedColumn<int>(
+      'position_ms', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime,
+      requiredDuringInsert: false,
+      defaultValue: currentDateAndTime);
+  @override
+  List<GeneratedColumn> get $columns =>
+      [youtubeId, sentenceIndex, positionMs, createdAt];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'challenge_mark_table';
+  @override
+  VerificationContext validateIntegrity(
+      Insertable<ChallengeMarkTableData> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('youtube_id')) {
+      context.handle(_youtubeIdMeta,
+          youtubeId.isAcceptableOrUnknown(data['youtube_id']!, _youtubeIdMeta));
+    } else if (isInserting) {
+      context.missing(_youtubeIdMeta);
+    }
+    if (data.containsKey('sentence_index')) {
+      context.handle(
+          _sentenceIndexMeta,
+          sentenceIndex.isAcceptableOrUnknown(
+              data['sentence_index']!, _sentenceIndexMeta));
+    } else if (isInserting) {
+      context.missing(_sentenceIndexMeta);
+    }
+    if (data.containsKey('position_ms')) {
+      context.handle(
+          _positionMsMeta,
+          positionMs.isAcceptableOrUnknown(
+              data['position_ms']!, _positionMsMeta));
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {youtubeId, sentenceIndex};
+  @override
+  ChallengeMarkTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return ChallengeMarkTableData(
+      youtubeId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}youtube_id'])!,
+      sentenceIndex: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}sentence_index'])!,
+      positionMs: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}position_ms'])!,
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+    );
+  }
+
+  @override
+  $ChallengeMarkTableTable createAlias(String alias) {
+    return $ChallengeMarkTableTable(attachedDatabase, alias);
+  }
+}
+
+class ChallengeMarkTableData extends DataClass
+    implements Insertable<ChallengeMarkTableData> {
+  /// The lesson's YouTube id (matches Listening.youtubeId).
+  final String youtubeId;
+
+  /// Index of the marked sentence within the lesson's subtitle list.
+  final int sentenceIndex;
+
+  /// The raw playback position (ms) the learner tapped at — kept for reference.
+  final int positionMs;
+  final DateTime createdAt;
+  const ChallengeMarkTableData(
+      {required this.youtubeId,
+      required this.sentenceIndex,
+      required this.positionMs,
+      required this.createdAt});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['youtube_id'] = Variable<String>(youtubeId);
+    map['sentence_index'] = Variable<int>(sentenceIndex);
+    map['position_ms'] = Variable<int>(positionMs);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  ChallengeMarkTableCompanion toCompanion(bool nullToAbsent) {
+    return ChallengeMarkTableCompanion(
+      youtubeId: Value(youtubeId),
+      sentenceIndex: Value(sentenceIndex),
+      positionMs: Value(positionMs),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory ChallengeMarkTableData.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return ChallengeMarkTableData(
+      youtubeId: serializer.fromJson<String>(json['youtubeId']),
+      sentenceIndex: serializer.fromJson<int>(json['sentenceIndex']),
+      positionMs: serializer.fromJson<int>(json['positionMs']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'youtubeId': serializer.toJson<String>(youtubeId),
+      'sentenceIndex': serializer.toJson<int>(sentenceIndex),
+      'positionMs': serializer.toJson<int>(positionMs),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  ChallengeMarkTableData copyWith(
+          {String? youtubeId,
+          int? sentenceIndex,
+          int? positionMs,
+          DateTime? createdAt}) =>
+      ChallengeMarkTableData(
+        youtubeId: youtubeId ?? this.youtubeId,
+        sentenceIndex: sentenceIndex ?? this.sentenceIndex,
+        positionMs: positionMs ?? this.positionMs,
+        createdAt: createdAt ?? this.createdAt,
+      );
+  ChallengeMarkTableData copyWithCompanion(ChallengeMarkTableCompanion data) {
+    return ChallengeMarkTableData(
+      youtubeId: data.youtubeId.present ? data.youtubeId.value : this.youtubeId,
+      sentenceIndex: data.sentenceIndex.present
+          ? data.sentenceIndex.value
+          : this.sentenceIndex,
+      positionMs:
+          data.positionMs.present ? data.positionMs.value : this.positionMs,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ChallengeMarkTableData(')
+          ..write('youtubeId: $youtubeId, ')
+          ..write('sentenceIndex: $sentenceIndex, ')
+          ..write('positionMs: $positionMs, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(youtubeId, sentenceIndex, positionMs, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is ChallengeMarkTableData &&
+          other.youtubeId == this.youtubeId &&
+          other.sentenceIndex == this.sentenceIndex &&
+          other.positionMs == this.positionMs &&
+          other.createdAt == this.createdAt);
+}
+
+class ChallengeMarkTableCompanion
+    extends UpdateCompanion<ChallengeMarkTableData> {
+  final Value<String> youtubeId;
+  final Value<int> sentenceIndex;
+  final Value<int> positionMs;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const ChallengeMarkTableCompanion({
+    this.youtubeId = const Value.absent(),
+    this.sentenceIndex = const Value.absent(),
+    this.positionMs = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  ChallengeMarkTableCompanion.insert({
+    required String youtubeId,
+    required int sentenceIndex,
+    this.positionMs = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  })  : youtubeId = Value(youtubeId),
+        sentenceIndex = Value(sentenceIndex);
+  static Insertable<ChallengeMarkTableData> custom({
+    Expression<String>? youtubeId,
+    Expression<int>? sentenceIndex,
+    Expression<int>? positionMs,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (youtubeId != null) 'youtube_id': youtubeId,
+      if (sentenceIndex != null) 'sentence_index': sentenceIndex,
+      if (positionMs != null) 'position_ms': positionMs,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  ChallengeMarkTableCompanion copyWith(
+      {Value<String>? youtubeId,
+      Value<int>? sentenceIndex,
+      Value<int>? positionMs,
+      Value<DateTime>? createdAt,
+      Value<int>? rowid}) {
+    return ChallengeMarkTableCompanion(
+      youtubeId: youtubeId ?? this.youtubeId,
+      sentenceIndex: sentenceIndex ?? this.sentenceIndex,
+      positionMs: positionMs ?? this.positionMs,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (youtubeId.present) {
+      map['youtube_id'] = Variable<String>(youtubeId.value);
+    }
+    if (sentenceIndex.present) {
+      map['sentence_index'] = Variable<int>(sentenceIndex.value);
+    }
+    if (positionMs.present) {
+      map['position_ms'] = Variable<int>(positionMs.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ChallengeMarkTableCompanion(')
+          ..write('youtubeId: $youtubeId, ')
+          ..write('sentenceIndex: $sentenceIndex, ')
+          ..write('positionMs: $positionMs, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -1558,6 +2467,10 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       $WritingProgressTableTable(this);
   late final $VocabReviewTableTable vocabReviewTable =
       $VocabReviewTableTable(this);
+  late final $SymSessionTableTable symSessionTable =
+      $SymSessionTableTable(this);
+  late final $ChallengeMarkTableTable challengeMarkTable =
+      $ChallengeMarkTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1568,7 +2481,9 @@ abstract class _$AppDatabase extends GeneratedDatabase {
         savedTermTable,
         videoStepProgressTable,
         writingProgressTable,
-        vocabReviewTable
+        vocabReviewTable,
+        symSessionTable,
+        challengeMarkTable
       ];
 }
 
@@ -2699,6 +3614,447 @@ typedef $$VocabReviewTableTableProcessedTableManager = ProcessedTableManager<
     ),
     VocabReviewTableData,
     PrefetchHooks Function()>;
+typedef $$SymSessionTableTableCreateCompanionBuilder = SymSessionTableCompanion
+    Function({
+  Value<int> id,
+  required String topicId,
+  required String finalText,
+  Value<String?> naturalVersion,
+  Value<int?> score,
+  Value<String?> band,
+  Value<int> versions,
+  Value<String?> recordingPath,
+  Value<String?> recordingName,
+  Value<int> tokens,
+  Value<String?> versionsJson,
+  Value<DateTime> createdAt,
+});
+typedef $$SymSessionTableTableUpdateCompanionBuilder = SymSessionTableCompanion
+    Function({
+  Value<int> id,
+  Value<String> topicId,
+  Value<String> finalText,
+  Value<String?> naturalVersion,
+  Value<int?> score,
+  Value<String?> band,
+  Value<int> versions,
+  Value<String?> recordingPath,
+  Value<String?> recordingName,
+  Value<int> tokens,
+  Value<String?> versionsJson,
+  Value<DateTime> createdAt,
+});
+
+class $$SymSessionTableTableFilterComposer
+    extends Composer<_$AppDatabase, $SymSessionTableTable> {
+  $$SymSessionTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get topicId => $composableBuilder(
+      column: $table.topicId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get finalText => $composableBuilder(
+      column: $table.finalText, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get naturalVersion => $composableBuilder(
+      column: $table.naturalVersion,
+      builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get score => $composableBuilder(
+      column: $table.score, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get band => $composableBuilder(
+      column: $table.band, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get versions => $composableBuilder(
+      column: $table.versions, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get recordingPath => $composableBuilder(
+      column: $table.recordingPath, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get recordingName => $composableBuilder(
+      column: $table.recordingName, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get tokens => $composableBuilder(
+      column: $table.tokens, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get versionsJson => $composableBuilder(
+      column: $table.versionsJson, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$SymSessionTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $SymSessionTableTable> {
+  $$SymSessionTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get topicId => $composableBuilder(
+      column: $table.topicId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get finalText => $composableBuilder(
+      column: $table.finalText, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get naturalVersion => $composableBuilder(
+      column: $table.naturalVersion,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get score => $composableBuilder(
+      column: $table.score, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get band => $composableBuilder(
+      column: $table.band, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get versions => $composableBuilder(
+      column: $table.versions, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get recordingPath => $composableBuilder(
+      column: $table.recordingPath,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get recordingName => $composableBuilder(
+      column: $table.recordingName,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get tokens => $composableBuilder(
+      column: $table.tokens, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get versionsJson => $composableBuilder(
+      column: $table.versionsJson,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$SymSessionTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $SymSessionTableTable> {
+  $$SymSessionTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get topicId =>
+      $composableBuilder(column: $table.topicId, builder: (column) => column);
+
+  GeneratedColumn<String> get finalText =>
+      $composableBuilder(column: $table.finalText, builder: (column) => column);
+
+  GeneratedColumn<String> get naturalVersion => $composableBuilder(
+      column: $table.naturalVersion, builder: (column) => column);
+
+  GeneratedColumn<int> get score =>
+      $composableBuilder(column: $table.score, builder: (column) => column);
+
+  GeneratedColumn<String> get band =>
+      $composableBuilder(column: $table.band, builder: (column) => column);
+
+  GeneratedColumn<int> get versions =>
+      $composableBuilder(column: $table.versions, builder: (column) => column);
+
+  GeneratedColumn<String> get recordingPath => $composableBuilder(
+      column: $table.recordingPath, builder: (column) => column);
+
+  GeneratedColumn<String> get recordingName => $composableBuilder(
+      column: $table.recordingName, builder: (column) => column);
+
+  GeneratedColumn<int> get tokens =>
+      $composableBuilder(column: $table.tokens, builder: (column) => column);
+
+  GeneratedColumn<String> get versionsJson => $composableBuilder(
+      column: $table.versionsJson, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$SymSessionTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $SymSessionTableTable,
+    SymSessionTableData,
+    $$SymSessionTableTableFilterComposer,
+    $$SymSessionTableTableOrderingComposer,
+    $$SymSessionTableTableAnnotationComposer,
+    $$SymSessionTableTableCreateCompanionBuilder,
+    $$SymSessionTableTableUpdateCompanionBuilder,
+    (
+      SymSessionTableData,
+      BaseReferences<_$AppDatabase, $SymSessionTableTable, SymSessionTableData>
+    ),
+    SymSessionTableData,
+    PrefetchHooks Function()> {
+  $$SymSessionTableTableTableManager(
+      _$AppDatabase db, $SymSessionTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SymSessionTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SymSessionTableTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SymSessionTableTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<String> topicId = const Value.absent(),
+            Value<String> finalText = const Value.absent(),
+            Value<String?> naturalVersion = const Value.absent(),
+            Value<int?> score = const Value.absent(),
+            Value<String?> band = const Value.absent(),
+            Value<int> versions = const Value.absent(),
+            Value<String?> recordingPath = const Value.absent(),
+            Value<String?> recordingName = const Value.absent(),
+            Value<int> tokens = const Value.absent(),
+            Value<String?> versionsJson = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              SymSessionTableCompanion(
+            id: id,
+            topicId: topicId,
+            finalText: finalText,
+            naturalVersion: naturalVersion,
+            score: score,
+            band: band,
+            versions: versions,
+            recordingPath: recordingPath,
+            recordingName: recordingName,
+            tokens: tokens,
+            versionsJson: versionsJson,
+            createdAt: createdAt,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            required String topicId,
+            required String finalText,
+            Value<String?> naturalVersion = const Value.absent(),
+            Value<int?> score = const Value.absent(),
+            Value<String?> band = const Value.absent(),
+            Value<int> versions = const Value.absent(),
+            Value<String?> recordingPath = const Value.absent(),
+            Value<String?> recordingName = const Value.absent(),
+            Value<int> tokens = const Value.absent(),
+            Value<String?> versionsJson = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              SymSessionTableCompanion.insert(
+            id: id,
+            topicId: topicId,
+            finalText: finalText,
+            naturalVersion: naturalVersion,
+            score: score,
+            band: band,
+            versions: versions,
+            recordingPath: recordingPath,
+            recordingName: recordingName,
+            tokens: tokens,
+            versionsJson: versionsJson,
+            createdAt: createdAt,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$SymSessionTableTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $SymSessionTableTable,
+    SymSessionTableData,
+    $$SymSessionTableTableFilterComposer,
+    $$SymSessionTableTableOrderingComposer,
+    $$SymSessionTableTableAnnotationComposer,
+    $$SymSessionTableTableCreateCompanionBuilder,
+    $$SymSessionTableTableUpdateCompanionBuilder,
+    (
+      SymSessionTableData,
+      BaseReferences<_$AppDatabase, $SymSessionTableTable, SymSessionTableData>
+    ),
+    SymSessionTableData,
+    PrefetchHooks Function()>;
+typedef $$ChallengeMarkTableTableCreateCompanionBuilder
+    = ChallengeMarkTableCompanion Function({
+  required String youtubeId,
+  required int sentenceIndex,
+  Value<int> positionMs,
+  Value<DateTime> createdAt,
+  Value<int> rowid,
+});
+typedef $$ChallengeMarkTableTableUpdateCompanionBuilder
+    = ChallengeMarkTableCompanion Function({
+  Value<String> youtubeId,
+  Value<int> sentenceIndex,
+  Value<int> positionMs,
+  Value<DateTime> createdAt,
+  Value<int> rowid,
+});
+
+class $$ChallengeMarkTableTableFilterComposer
+    extends Composer<_$AppDatabase, $ChallengeMarkTableTable> {
+  $$ChallengeMarkTableTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get sentenceIndex => $composableBuilder(
+      column: $table.sentenceIndex, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get positionMs => $composableBuilder(
+      column: $table.positionMs, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$ChallengeMarkTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $ChallengeMarkTableTable> {
+  $$ChallengeMarkTableTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get youtubeId => $composableBuilder(
+      column: $table.youtubeId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get sentenceIndex => $composableBuilder(
+      column: $table.sentenceIndex,
+      builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get positionMs => $composableBuilder(
+      column: $table.positionMs, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$ChallengeMarkTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $ChallengeMarkTableTable> {
+  $$ChallengeMarkTableTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get youtubeId =>
+      $composableBuilder(column: $table.youtubeId, builder: (column) => column);
+
+  GeneratedColumn<int> get sentenceIndex => $composableBuilder(
+      column: $table.sentenceIndex, builder: (column) => column);
+
+  GeneratedColumn<int> get positionMs => $composableBuilder(
+      column: $table.positionMs, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$ChallengeMarkTableTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $ChallengeMarkTableTable,
+    ChallengeMarkTableData,
+    $$ChallengeMarkTableTableFilterComposer,
+    $$ChallengeMarkTableTableOrderingComposer,
+    $$ChallengeMarkTableTableAnnotationComposer,
+    $$ChallengeMarkTableTableCreateCompanionBuilder,
+    $$ChallengeMarkTableTableUpdateCompanionBuilder,
+    (
+      ChallengeMarkTableData,
+      BaseReferences<_$AppDatabase, $ChallengeMarkTableTable,
+          ChallengeMarkTableData>
+    ),
+    ChallengeMarkTableData,
+    PrefetchHooks Function()> {
+  $$ChallengeMarkTableTableTableManager(
+      _$AppDatabase db, $ChallengeMarkTableTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$ChallengeMarkTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$ChallengeMarkTableTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$ChallengeMarkTableTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> youtubeId = const Value.absent(),
+            Value<int> sentenceIndex = const Value.absent(),
+            Value<int> positionMs = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              ChallengeMarkTableCompanion(
+            youtubeId: youtubeId,
+            sentenceIndex: sentenceIndex,
+            positionMs: positionMs,
+            createdAt: createdAt,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String youtubeId,
+            required int sentenceIndex,
+            Value<int> positionMs = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              ChallengeMarkTableCompanion.insert(
+            youtubeId: youtubeId,
+            sentenceIndex: sentenceIndex,
+            positionMs: positionMs,
+            createdAt: createdAt,
+            rowid: rowid,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$ChallengeMarkTableTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $ChallengeMarkTableTable,
+    ChallengeMarkTableData,
+    $$ChallengeMarkTableTableFilterComposer,
+    $$ChallengeMarkTableTableOrderingComposer,
+    $$ChallengeMarkTableTableAnnotationComposer,
+    $$ChallengeMarkTableTableCreateCompanionBuilder,
+    $$ChallengeMarkTableTableUpdateCompanionBuilder,
+    (
+      ChallengeMarkTableData,
+      BaseReferences<_$AppDatabase, $ChallengeMarkTableTable,
+          ChallengeMarkTableData>
+    ),
+    ChallengeMarkTableData,
+    PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -2720,4 +4076,8 @@ class $AppDatabaseManager {
       $$WritingProgressTableTableTableManager(_db, _db.writingProgressTable);
   $$VocabReviewTableTableTableManager get vocabReviewTable =>
       $$VocabReviewTableTableTableManager(_db, _db.vocabReviewTable);
+  $$SymSessionTableTableTableManager get symSessionTable =>
+      $$SymSessionTableTableTableManager(_db, _db.symSessionTable);
+  $$ChallengeMarkTableTableTableManager get challengeMarkTable =>
+      $$ChallengeMarkTableTableTableManager(_db, _db.challengeMarkTable);
 }

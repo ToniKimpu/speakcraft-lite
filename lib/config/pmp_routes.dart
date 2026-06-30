@@ -12,10 +12,19 @@ import 'package:speakcraft/screens/vocabulary/vocabulary_list_page.dart';
 import 'package:speakcraft/screens/vocabulary/vocab_group_page.dart';
 import 'package:speakcraft/screens/vocabulary/vocab_practice_page.dart';
 import 'package:speakcraft/screens/vocabulary/vocab_review_page.dart';
+import 'package:speakcraft/model/speak_your_mind/sym_version.dart';
+import 'package:speakcraft/screens/speak_your_mind/speak_your_mind_page.dart';
+import 'package:speakcraft/screens/speak_your_mind/sym_topic_page.dart';
+import 'package:speakcraft/screens/speak_your_mind/sym_produce_page.dart';
+import 'package:speakcraft/screens/speak_your_mind/sym_guide_page.dart';
+import 'package:speakcraft/screens/speak_your_mind/sym_history_page.dart';
+import 'package:speakcraft/screens/speak_your_mind/sym_session_detail_page.dart';
+import 'package:speakcraft/services/app_database/app_database.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/full_talk_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/key_takeaways_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/lesson_hub_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/listening_list_page.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/listening_challenge_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_list.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_page.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_pager.dart';
@@ -61,6 +70,7 @@ class PmpRoutes {
   static const sentenceExplanationList = '/sentence_explanation_list';
   static const sentenceExplanationPage = '/sentence_explanation_page';
   static const sentenceExplanationPager = '/sentence_explanation_pager';
+  static const listeningChallengePage = '/listening_challenge_page';
   static const htmlList = '/html_list';
   static const htmlPreview = '/html_preview';
   static const savedTermsPage = '/saved_terms_page';
@@ -87,6 +97,14 @@ class PmpRoutes {
   static const vocabularyGroup = '/vocabulary/group';
   static const vocabularyPractice = '/vocabulary/practice';
   static const vocabularyReview = '/vocabulary/review';
+
+  // Speak Your Mind — production "bridge" (prototype, bundled JSON)
+  static const speakYourMind = '/speak-your-mind';
+  static const speakYourMindTopic = '/speak-your-mind/topic';
+  static const speakYourMindProduce = '/speak-your-mind/produce';
+  static const speakYourMindGuide = '/speak-your-mind/guide';
+  static const speakYourMindHistory = '/speak-your-mind/history';
+  static const speakYourMindSessionDetail = '/speak-your-mind/session';
 
   static Route generateRoutes(RouteSettings settings) {
     switch (settings.name) {
@@ -125,6 +143,12 @@ class PmpRoutes {
           YoutubeVideoPage(
             listening: listening,
           ),
+          settings,
+        );
+      case listeningChallengePage:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          ListeningChallengePage(listening: args['listening'] as Listening),
           settings,
         );
       case newVersionScreen:
@@ -281,6 +305,44 @@ class PmpRoutes {
           WritingPracticePage(
             unit: args['unit'] as WritingUnit,
             toolkit: args['toolkit'] as ResolvedToolkit?,
+          ),
+          settings,
+        );
+      case speakYourMind:
+        return _getRoute(const SpeakYourMindPage(), settings);
+      case speakYourMindTopic:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          SymTopicPage(topicId: args['id'] as String),
+          settings,
+        );
+      case speakYourMindProduce:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          SymProducePage(
+            topicId: args['id'] as String,
+            resumeSessionId: args['resumeSessionId'] as int?,
+            resumeVersions: args['resumeVersions'] as List<SymVersion>?,
+            resumeRecordingPath: args['resumeRecordingPath'] as String?,
+            initialText: args['initialText'] as String?,
+          ),
+          settings,
+        );
+      case speakYourMindGuide:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          SymGuidePage(topicId: args['id'] as String),
+          settings,
+        );
+      case speakYourMindHistory:
+        return _getRoute(const SymHistoryPage(), settings);
+      case speakYourMindSessionDetail:
+        final args = settings.arguments as Map<String, dynamic>;
+        return _getRoute(
+          SymSessionDetailPage(
+            row: args['row'] as SymSessionTableData,
+            title: args['title'] as String,
+            initialIndex: (args['index'] as int?) ?? 0,
           ),
           settings,
         );

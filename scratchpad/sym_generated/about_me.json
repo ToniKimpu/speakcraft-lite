@@ -1,0 +1,546 @@
+{
+  "id": "about_me",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "About Me",
+  "title_mm": "ကျွန်ုပ်အကြောင်း (About Me)",
+  "promise_en": "Master the art of introducing yourself confidently in any social or professional setting.",
+  "promise_mm": "လူမှုရေး၊ လုပ်ငန်းခွင် စတဲ့ နေရာမျိုးစုံမှာ ကိုယ့်ကိုယ်ကိုယ် ယုံကြည်မှုရှိရှိ မိတ်ဆက်တတ်လာစေမှာပါ။",
+  "intro_en": "Introducing yourself is the first step to building new connections. Use this toolkit to go beyond basic facts and share a genuine glimpse of who you are.",
+  "intro_mm": "ကိုယ့်ကိုယ်ကိုယ် မိတ်ဆက်တာဟာ လူသစ်တွေနဲ့ ရင်းနှီးဖို့ ပထမဆုံးခြေလှမ်းပါပဲ။ ဒီ Toolbox ကိုသုံးပြီး အခြေခံအချက်အလက်တွေတင်မကဘဲ ကိုယ့်အကြောင်းကို စိတ်ဝင်စားစရာကောင်းအောင် ပြောပြနိုင်ပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your name",
+      "move_mm": "နာမည်မိတ်ဆက်နည်း",
+      "items": [
+        {
+          "text_en": "My name is Aung Aung.",
+          "highlight": "Aung Aung",
+          "swap_en": "Kyaw Kyaw · Su Su · Htet Htet",
+          "gloss_mm": "ကျွန်တော့်နာမည်က အောင်အောင်ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "You can call me Aung.",
+          "highlight": "Aung",
+          "swap_en": "Kyaw · Su · Htet",
+          "gloss_mm": "ကျွန်တော့်ကို အောင်လို့ ခေါ်နိုင်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Most people call me Aung.",
+          "highlight": "Most people call me Aung",
+          "swap_en": "Everyone calls me Aung · My friends call me Aung",
+          "gloss_mm": "လူအများစုက ကျွန်တော့်ကို အောင်လို့ပဲ ခေါ်ကြပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Please, just call me Aung.",
+          "highlight": "just call me Aung",
+          "swap_en": "call me by my nickname · feel free to call me Aung",
+          "gloss_mm": "ကျွန်တော့်ကို အောင်လို့ပဲ ခေါ်လိုက်ပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating your age",
+      "move_mm": "အသက်အရွယ်ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I am twenty-five years old.",
+          "highlight": "twenty-five",
+          "swap_en": "twenty-two · thirty · forty-five",
+          "gloss_mm": "ကျွန်တော် အသက် ၂၅ နှစ်ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm twenty-five.",
+          "highlight": "twenty-five",
+          "swap_en": "twenty-two · thirty · forty-five",
+          "gloss_mm": "ကျွန်တော် အသက် ၂၅ နှစ်ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I just turned twenty-five last month.",
+          "highlight": "just turned twenty-five",
+          "swap_en": "just turned thirty · recently turned twenty-two",
+          "gloss_mm": "ပြီးခဲ့တဲ့လကမှ အသက် ၂၅ နှစ် ပြည့်သွားတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm in my mid-twenties.",
+          "highlight": "in my mid-twenties",
+          "swap_en": "in my early thirties · in my late forties",
+          "gloss_mm": "ကျွန်တော် အသက် ၂၀ ကျော် အရွယ်ပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Saying where you are from",
+      "move_mm": "ဇာတိမြို့/ရပ်ရွာအကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am from Yangon.",
+          "highlight": "Yangon",
+          "swap_en": "Mandalay · Naypyidaw · Taunggyi · Mawlamyine",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်ကပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I come from a small town near Mandalay.",
+          "highlight": "a small town near Mandalay",
+          "swap_en": "a big city in Myanmar · a quiet village in Shan State · a coastal town",
+          "gloss_mm": "ကျွန်တော် မန္တလေးနားက မြို့လေးတစ်မြို့ကပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I grew up in Yangon, but my hometown is actually Pyin Oo Lwin.",
+          "highlight": "grew up in Yangon",
+          "swap_en": "was born in Yangon · spent my childhood in Yangon",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်မှာ ကြီးပြင်းတာပါ၊ ဒါပေမဲ့ တကယ်တော့ ကျွန်တော့်ဇာတိက ပြင်ဦးလွင်ပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating your nationality",
+      "move_mm": "လူမျိုး/နိုင်ငံသားဖြစ်ကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am from Myanmar.",
+          "highlight": "from Myanmar",
+          "swap_en": "from Yangon · from Mandalay · from Burma",
+          "gloss_mm": "ကျွန်တော် မြန်မာနိုင်ငံကပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm Burmese.",
+          "highlight": "Burmese",
+          "swap_en": "Myanmar · a local · from here",
+          "gloss_mm": "ကျွန်တော်က မြန်မာလူမျိုးပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I was born and raised in Myanmar.",
+          "highlight": "born and raised in Myanmar",
+          "swap_en": "born and raised in Yangon · born in Mandalay and grew up in Yangon",
+          "gloss_mm": "ကျွန်တော်က မြန်မာပြည်မှာပဲ မွေးပြီး ကြီးပြင်းလာတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've lived in Myanmar my whole life.",
+          "highlight": "my whole life",
+          "swap_en": "my entire life · all my life",
+          "gloss_mm": "ကျွန်တော် တစ်သက်လုံး မြန်မာပြည်မှာပဲ နေလာတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning where you currently live",
+      "move_mm": "လက်ရှိနေထိုင်တဲ့နေရာအကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "I live in Yangon.",
+          "highlight": "in Yangon",
+          "swap_en": "in Mandalay · in Naypyidaw · in Hledan",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်မှာ နေပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm currently living in a house in Kamayut.",
+          "highlight": "in a house in Kamayut",
+          "swap_en": "in an apartment in Sanchaung · in a condo near the city center",
+          "gloss_mm": "လက်ရှိတော့ ကမာရွတ်က အိမ်လေးမှာ နေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've been staying in a quiet neighborhood in Bahan for years.",
+          "highlight": "in a quiet neighborhood in Bahan",
+          "swap_en": "near the Shwedagon Pagoda · in a busy area downtown",
+          "gloss_mm": "ဗဟန်းက ငြိမ်းချမ်းတဲ့ရပ်ကွက်လေးမှာ နေလာတာ ကြာပါပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your job or studies",
+      "move_mm": "အလုပ်အကိုင် သို့မဟုတ် ပညာရေးအကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am a student at Yangon University.",
+          "highlight": "a student at Yangon University",
+          "swap_en": "a teacher at a private school · an accountant in a local firm · a freelancer",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်တက္ကသိုလ်မှာ ကျောင်းသားပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I work as an office clerk in downtown Yangon.",
+          "highlight": "an office clerk",
+          "swap_en": "a software developer · a marketing assistant · a sales representative",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်မြို့လယ်မှာ ရုံးဝန်ထမ်းလုပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm currently majoring in Business Administration.",
+          "highlight": "majoring in Business Administration",
+          "swap_en": "studying English literature · focusing on computer science · pursuing a degree in law",
+          "gloss_mm": "လက်ရှိမှာတော့ စီးပွားရေးစီမံခန့်ခွဲမှုဘာသာရပ်ကို အဓိကထား သင်ယူနေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've been working in the hospitality sector for three years.",
+          "highlight": "working in the hospitality sector",
+          "swap_en": "employed in the construction industry · building a career in digital marketing",
+          "gloss_mm": "ကျွန်တော် ဟိုတယ်နှင့် ခရီးသွားလုပ်ငန်းမှာ လုပ်လာတာ ၃ နှစ် ရှိပါပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the languages you speak",
+      "move_mm": "ပြောတတ်တဲ့ ဘာသာစကားတွေအကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "I speak Burmese and English.",
+          "highlight": "Burmese and English",
+          "swap_en": "Myanmar and Japanese · English and a little bit of Thai · Burmese",
+          "gloss_mm": "ကျွန်တော် ဗမာစာနဲ့ အင်္ဂလိပ်စာ ပြောတတ်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I can communicate in English.",
+          "highlight": "communicate in English",
+          "swap_en": "get by in English · hold a conversation in English",
+          "gloss_mm": "ကျွန်တော် အင်္ဂလိပ်လို အဆင်ပြေအောင် ပြောတတ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm fairly fluent in Japanese.",
+          "highlight": "fairly fluent in Japanese",
+          "swap_en": "conversational in Thai · pretty good at English · bilingual in Burmese and English",
+          "gloss_mm": "ကျွန်တော် ဂျပန်စကားကို တော်တော်လေး ကျွမ်းကျွမ်းကျင်ကျင် ပြောတတ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your personality",
+      "move_mm": "ကိုယ့်စရိုက်လက္ခဏာကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I am a quiet person.",
+          "highlight": "a quiet person",
+          "swap_en": "a friendly person · an active person · a shy person",
+          "gloss_mm": "ကျွန်တော်က တိတ်ဆိတ်တဲ့သူပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I consider myself to be easy-going.",
+          "highlight": "easy-going",
+          "swap_en": "patient · hard-working · optimistic",
+          "gloss_mm": "ကျွန်တော်က ကိုယ့်ကိုယ်ကို သဘောထားကြီးသူလို့ သတ်မှတ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I would describe myself as someone who loves meeting new people.",
+          "highlight": "loves meeting new people",
+          "swap_en": "enjoys working in a team · likes to help others · values honesty",
+          "gloss_mm": "ကျွန်တော်က လူသစ်တွေနဲ့ တွေ့ဆုံရတာကို နှစ်သက်တဲ့သူလို့ ကိုယ့်ကိုယ်ကို ဖော်ပြချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing your hobbies or interests",
+      "move_mm": "ဝါသနာပါရာ သို့မဟုတ် စိတ်ဝင်စားရာအကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like reading books in my free time.",
+          "highlight": "reading books",
+          "swap_en": "playing football · watching movies · cooking at home",
+          "gloss_mm": "အားတဲ့အချိန်ဆို စာဖတ်ရတာ ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm really into going to tea shops with my friends.",
+          "highlight": "going to tea shops",
+          "swap_en": "listening to music · playing games · jogging in the park",
+          "gloss_mm": "သူငယ်ချင်းတွေနဲ့ လက်ဖက်ရည်ဆိုင်ထိုင်ရတာ အရမ်းသဘောကျတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "In my spare time, I'm passionate about photography.",
+          "highlight": "passionate about photography",
+          "swap_en": "passionate about painting · into learning new languages · keen on traveling",
+          "gloss_mm": "အားတဲ့အချိန်တွေမှာ ဓာတ်ပုံရိုက်ရတာကို တကူးတက ဝါသနာပါပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning your goals or ambitions",
+      "move_mm": "ရည်မှန်းချက်တွေအကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "I want to be a teacher.",
+          "highlight": "a teacher",
+          "swap_en": "a doctor · a software engineer · a business owner",
+          "gloss_mm": "ကျွန်တော် ဆရာ/ဆရာမ ဖြစ်ချင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "My goal is to work for a big company.",
+          "highlight": "work for a big company",
+          "swap_en": "study abroad · start my own business · get a promotion",
+          "gloss_mm": "ကျွန်တော့်ရည်မှန်းချက်က ကုမ္ပဏီကြီးတစ်ခုမှာ အလုပ်လုပ်ဖို့ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm working towards getting a master's degree.",
+          "highlight": "getting a master's degree",
+          "swap_en": "becoming more fluent in English · saving up for my own shop",
+          "gloss_mm": "ကျွန်တော် မဟာဘွဲ့ရဖို့ ကြိုးစားနေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've always dreamed of running my own café in Yangon.",
+          "highlight": "running my own café in Yangon",
+          "swap_en": "traveling around the world · building a house for my parents",
+          "gloss_mm": "ရန်ကုန်မှာ ကိုယ်ပိုင်ကော်ဖီဆိုင်လေး ဖွင့်ဖို့ အမြဲတမ်း စိတ်ကူးယဉ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your favorite food or place in Myanmar",
+      "move_mm": "ကြိုက်နှစ်သက်တဲ့ အစားအစာ သို့မဟုတ် နေရာအကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "My favorite food is Mohinga.",
+          "highlight": "Mohinga",
+          "swap_en": "Shan noodles · Fried rice · Biryani · Tea leaf salad",
+          "gloss_mm": "ကျွန်တော် အကြိုက်ဆုံးအစားအစာက မုန့်ဟင်းခါးပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I really love hanging out at Kandawgyi Park.",
+          "highlight": "Kandawgyi Park",
+          "swap_en": "a tea shop in downtown · Shwedagon Pagoda · Inle Lake",
+          "gloss_mm": "ကျွန်တော် ကန်တော်ကြီးပန်းခြံမှာ အချိန်ဖြုန်းရတာ အရမ်းကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Nothing beats a bowl of hot Shan noodles on a rainy day.",
+          "highlight": "a bowl of hot Shan noodles",
+          "swap_en": "a cup of hot tea · some spicy pork skewers · a plate of Mandalay mee shay",
+          "gloss_mm": "မိုးရွာတဲ့နေ့မျိုးမှာ ရှမ်းခေါက်ဆွဲပူပူလေးစားရတာကမှ အကောင်းဆုံးပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I find the atmosphere at Bagan incredibly peaceful.",
+          "highlight": "Bagan",
+          "swap_en": "Inya Lake · the quiet cafes in Mandalay · the riverside in Mawlamyine",
+          "gloss_mm": "ပုဂံရဲ့ဝန်းကျင်က တကယ်ကို တည်ငြိမ်အေးချမ်းတယ်လို့ ခံစားရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating your marital status",
+      "move_mm": "အိမ်ထောင်ရေးအခြေအနေပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am married.",
+          "highlight": "married",
+          "swap_en": "single · engaged · divorced",
+          "gloss_mm": "ကျွန်တော် အိမ်ထောင်ကျပြီးပါပြီ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I am currently single.",
+          "highlight": "currently single",
+          "swap_en": "happily married · seeing someone",
+          "gloss_mm": "လက်ရှိမှာတော့ ကျွန်တော် တစ်ယောက်တည်းပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've been married for five years.",
+          "highlight": "for five years",
+          "swap_en": "for ten years · for a couple of years",
+          "gloss_mm": "ကျွန်တော် အိမ်ထောင်သက် ၅ နှစ် ရှိပါပြီ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm happily hitched.",
+          "highlight": "happily hitched",
+          "swap_en": "happily married · single and loving it",
+          "gloss_mm": "ကျွန်တော် အိမ်ထောင်ရေး အဆင်ပြေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning who you live with",
+      "move_mm": "ဘယ်သူတွေနဲ့ အတူနေလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I live with my parents.",
+          "highlight": "my parents",
+          "swap_en": "my siblings · my grandparents · my brother",
+          "gloss_mm": "ကျွန်တော် မိဘတွေနဲ့ အတူနေပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I share an apartment with my friends.",
+          "highlight": "my friends",
+          "swap_en": "my cousins · two roommates",
+          "gloss_mm": "ကျွန်တော် သူငယ်ချင်းတွေနဲ့ အခန်းဖက်နေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I currently reside with my extended family.",
+          "highlight": "my extended family",
+          "swap_en": "my siblings only · my aging parents",
+          "gloss_mm": "လက်ရှိမှာတော့ ကျွန်တော် မိသားစုဝင်တွေ အားလုံးနဲ့ အတူတူနေဖြစ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Adding a fun fact about yourself",
+      "move_mm": "ကိုယ့်အကြောင်း စိတ်ဝင်စားစရာ အချက်လေးတစ်ခု ထည့်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I love playing football.",
+          "highlight": "playing football",
+          "swap_en": "drinking tea at the shop · reading books · traveling to Bagan",
+          "gloss_mm": "ကျွန်တော် ဘောလုံးကစားရတာ ဝါသနာပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm really into spicy Burmese food.",
+          "highlight": "really into spicy Burmese food",
+          "swap_en": "a huge fan of classic movies · crazy about street food · obsessed with old songs",
+          "gloss_mm": "ကျွန်တော် အစပ်ကြိုက်တဲ့ မြန်မာအစားအစာတွေကို တကယ့်ကို ကြိုက်တာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "One thing about me is that I never miss my morning tea.",
+          "highlight": "never miss my morning tea",
+          "swap_en": "hardly ever go to bed before midnight · always spend my weekends at the pagoda",
+          "gloss_mm": "ကျွန်တော့်အကြောင်း ပြောရရင် မနက်ခင်းလက်ဖက်ရည် မသောက်ရရင် မနေနိုင်ဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Closing the introduction politely",
+      "move_mm": "မိတ်ဆက်စကားကို ယဉ်ယဉ်ကျေးကျေး အဆုံးသတ်နည်း",
+      "items": [
+        {
+          "text_en": "It's nice to meet you.",
+          "highlight": "It's nice to meet you",
+          "swap_en": "Nice to meet you · Glad to meet you",
+          "gloss_mm": "တွေ့ရတာ ဝမ်းသာပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm happy to get to know you.",
+          "highlight": "get to know you",
+          "swap_en": "meet you · talk to you",
+          "gloss_mm": "ခင်ဗျား (မင်း) ကို သိခွင့်ရလို့ ဝမ်းသာပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm really looking forward to working with you.",
+          "highlight": "looking forward to working with you",
+          "swap_en": "looking forward to talking more · hoping we can chat again",
+          "gloss_mm": "ခင်ဗျား (မင်း) နဲ့ အလုပ်အတူလုပ်ဖို့ စိတ်လှုပ်ရှားမိပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It has been a pleasure introducing myself to you.",
+          "highlight": "a pleasure introducing myself to you",
+          "swap_en": "a pleasure getting to know you · great meeting you today",
+          "gloss_mm": "ကိုယ်အကြောင်းကို မိတ်ဆက်ပေးခွင့်ရလို့ ဝမ်းသာပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences introducing yourself to a new group of colleagues or friends. Include your background, what you do, and something unique about your personality.",
+    "prompt_mm": "လုပ်ဖော်ကိုင်ဖက်သစ်တွေ ဒါမှမဟုတ် သူငယ်ချင်းအသစ်တွေနဲ့ တွေ့တဲ့အခါ ကိုယ့်ကိုယ်ကိုယ် (၅) ကြောင်းကနေ (၈) ကြောင်းအတွင်း မိတ်ဆက်ပေးပါ။ ကိုယ့်ရဲ့ ဇာတိ၊ အလုပ်အကိုင်နဲ့ ကိုယ့်စရိုက်အကြောင်းလေးတွေ ထည့်ရေးပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "Name",
+      "Hometown",
+      "Occupation",
+      "Languages",
+      "Personality",
+      "Hobbies",
+      "Goals",
+      "Fun fact"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to gain confidence and ensure the sentences flow naturally.",
+    "speak_aloud_mm": "ရေးထားတာကို အသံထွက်ပြီး (၂) ခေါက် သို့မဟုတ် (၃) ခေါက်လောက် ဖတ်ကြည့်ပါ။ ဒါမှ ကိုယ်ပြောတဲ့စကားက သဘာဝကျပြီး ယုံကြည်မှုရှိရှိ ပြောနိုင်မှာပါ။"
+  }
+}

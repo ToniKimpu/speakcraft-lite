@@ -5,8 +5,10 @@ import '../../model/listening_practice_answer/listening_practice_answer.dart';
 import '../../model/saved_term/saved_term.dart';
 import '../../model/user_recorded_sentence_audio/user_recorded_sentence_audio.dart';
 import '../../model/video_step_progress/video_step_progress.dart';
+import '../../tables/challenge_mark_table.dart';
 import '../../tables/listening_practice_answer_table.dart';
 import '../../tables/saved_term_table.dart';
+import '../../tables/sym_session_table.dart';
 import '../../tables/user_recorded_sentence_audio_table.dart';
 import '../../tables/video_step_progress_table.dart';
 import '../../tables/vocab_review_table.dart';
@@ -22,6 +24,8 @@ part 'app_database.g.dart';
     VideoStepProgressTable,
     WritingProgressTable,
     VocabReviewTable,
+    SymSessionTable,
+    ChallengeMarkTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -32,7 +36,7 @@ class AppDatabase extends _$AppDatabase {
   static AppDatabase instance() => _instance;
 
   @override
-  int get schemaVersion => 12;
+  int get schemaVersion => 16;
 
   @override
   MigrationStrategy get migration {
@@ -78,6 +82,23 @@ class AppDatabase extends _$AppDatabase {
         if (from < 12) {
           // Vocabulary module — Leitner-lite spaced-review state.
           await m.createTable(vocabReviewTable);
+        }
+        if (from < 13) {
+          // Speak Your Mind — produce-session history (text + feedback +
+          // optional local recording path).
+          await m.createTable(symSessionTable);
+        }
+        if (from < 14) {
+          // Speak Your Mind — per-session token cost for the usage meter.
+          await m.addColumn(symSessionTable, symSessionTable.tokens);
+        }
+        if (from < 15) {
+          // Speak Your Mind — full v1/v2/… version chain per attempt.
+          await m.addColumn(symSessionTable, symSessionTable.versionsJson);
+        }
+        if (from < 16) {
+          // Listening Challenge — sentences marked "couldn't catch by ear".
+          await m.createTable(challengeMarkTable);
         }
       },
       beforeOpen: (details) async {

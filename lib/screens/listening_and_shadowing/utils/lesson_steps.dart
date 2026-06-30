@@ -17,6 +17,9 @@ List<VideoLessonStep> visibleLessonSteps(Listening listening) {
     VideoLessonStep.explanation,
     if (listening.shadowingPath.trim().isNotEmpty) VideoLessonStep.shadowing,
     if (listening.recordSubtitlePath.trim().isNotEmpty) VideoLessonStep.record,
+    // The "graduation" step — listen with no subtitles and mark what you miss.
+    // Needs the subtitle data to map marks back to sentences.
+    if (listening.subtitlePath.trim().isNotEmpty) VideoLessonStep.challenge,
   ];
 }
 

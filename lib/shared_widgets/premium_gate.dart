@@ -5,6 +5,7 @@ import '../config/pmp_routes.dart';
 import '../config/pmp_text_styles.dart';
 import '../core/di/service_locator.dart';
 import '../model/app_user/app_user.dart';
+import '../services/analytics_service.dart';
 
 /// True when the signed-in user currently has premium access. Derived
 /// server-side from `users.premium_until` and surfaced as
@@ -35,11 +36,11 @@ class PremiumLockBadge extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.lock_rounded, size: 12, color: PmpColors.onPremium),
+          const Icon(Icons.lock_rounded, size: 12, color: PmpColors.white),
           const SizedBox(width: 4),
           Text('PREMIUM',
               style: PmpTextStyles.sub.copyWith(
-                color: PmpColors.onPremium,
+                color: PmpColors.white,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0.5,
               )),
@@ -92,6 +93,7 @@ Future<void> showPremiumSheet(
   String? featureName,
   VoidCallback? onGetPremium,
 }) {
+  AnalyticsService.instance.premiumSheetShown(featureName ?? 'unknown');
   return showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
@@ -130,18 +132,43 @@ Future<void> showPremiumSheet(
                   ),
                 ],
               ),
-              const SizedBox(height: 14),
+              const SizedBox(height: 12),
               Text(
-                'Unlock the full experience — shadowing, speech practice, and '
-                'sentence explanations on every video.',
+                'Unlock it — and every level across every module:',
                 style: PmpTextStyles.body2Regular
-                    .copyWith(color: cs.onSurfaceVariant, height: 1.5),
+                    .copyWith(color: cs.onSurfaceVariant, height: 1.4),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 14),
+              ...const [
+                'Speak Your Mind — Levels 2 & 3, plus more daily AI feedback',
+                'Vocabulary — Intermediate & Upper word sets',
+                'Grammar — every level beyond the basics',
+                'Listening — shadowing, speech practice & explanations',
+              ].map(
+                (b) => Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(Icons.check_circle,
+                          size: 18, color: PmpColors.premiumGold),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Text(b,
+                            style: PmpTextStyles.body2Regular.copyWith(
+                                color: cs.onSurface, height: 1.4)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
               SizedBox(
                 width: double.infinity,
                 child: FilledButton.icon(
                   onPressed: () {
+                    AnalyticsService.instance
+                        .premiumUpgradeTapped('premium_sheet');
                     Navigator.of(context).pop();
                     // Default: route to the manual payment flow. Callers may
                     // still override with [onGetPremium] (e.g. for IAP later).

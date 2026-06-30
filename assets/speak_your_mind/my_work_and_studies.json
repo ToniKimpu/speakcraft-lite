@@ -1,0 +1,792 @@
+{
+  "id": "my_work_and_studies",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "My Work & Studies",
+  "title_mm": "ကျွန်ုပ်၏ အလုပ်နှင့် ပညာရေး",
+  "promise_en": "Talk confidently about your professional life, studies, and career goals.",
+  "promise_mm": "သင့်အလုပ်၊ ပညာရေးနဲ့ အနာဂတ် ရည်မှန်းချက်တွေကို ယုံကြည်မှုရှိရှိ ပြောတတ်လာမှာပါ။",
+  "intro_en": "Whether you are a student, an office worker, or a business owner, being able to explain what you do is essential for networking.",
+  "intro_mm": "ကျောင်းသားပဲဖြစ်ဖြစ်၊ ဝန်ထမ်းပဲဖြစ်ဖြစ်၊ ကိုယ်ပိုင်လုပ်ငန်းလုပ်သူပဲဖြစ်ဖြစ်၊ ကိုယ့်အလုပ်အကြောင်းကို ရှင်းပြနိုင်ဖို့က အရေးကြီးပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your current status",
+      "move_mm": "လက်ရှိအလုပ် (သို့) ပညာရေးအခြေအနေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am working as a teacher.",
+          "highlight": "working as a teacher",
+          "swap_en": "working as an engineer · a student · an accountant",
+          "gloss_mm": "ကျွန်တော် ဆရာ/ဆရာမ အလုပ်လုပ်နေပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m1-i1.mp3"
+        },
+        {
+          "text_en": "I currently work for a company in Yangon.",
+          "highlight": "work for a company",
+          "swap_en": "work for a bank · work for a local NGO · study at a university",
+          "gloss_mm": "ကျွန်တော် လက်ရှိ ရန်ကုန်က ကုမ္ပဏီတစ်ခုမှာ အလုပ်လုပ်နေပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m1-i2.mp3"
+        },
+        {
+          "text_en": "I'm currently based in Mandalay for my project.",
+          "highlight": "based in Mandalay",
+          "swap_en": "based in Naypyidaw · working from home · currently unemployed",
+          "gloss_mm": "ကျွန်တော့်ပရောဂျက်အတွက် လက်ရှိ မန္တလေးမှာ တာဝန်ကျနေပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m1-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your workplace or school",
+      "move_mm": "လုပ်ငန်းခွင် (သို့) ကျောင်းအကြောင်း ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I work at a small office in Yangon.",
+          "highlight": "a small office in Yangon",
+          "swap_en": "a big school in Mandalay · a bank in downtown · a tech company",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်က ရုံးခန်းလေးတစ်ခုမှာ အလုပ်လုပ်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m2-i1.mp3"
+        },
+        {
+          "text_en": "My workplace is located near the Sule Pagoda.",
+          "highlight": "near the Sule Pagoda",
+          "swap_en": "near the university · in the city center · not far from my home",
+          "gloss_mm": "ကျွန်တော့်အလုပ်က ဆူးလေဘုရားနားမှာ တည်ရှိပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m2-i2.mp3"
+        },
+        {
+          "text_en": "It is a fast-paced environment where I learn a lot.",
+          "highlight": "a fast-paced environment",
+          "swap_en": "a friendly workplace · a very relaxed environment · a professional setting",
+          "gloss_mm": "အဲဒါက အလုပ်တွေမြန်မြန်ဆန်ဆန်လုပ်ရပြီး အများကြီးသင်ယူနိုင်တဲ့ ပတ်ဝန်းကျင်မျိုးပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m2-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining your specific role",
+      "move_mm": "ကိုယ့်ရဲ့ တာဝန်ဝတ္တရား ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I work as an accountant.",
+          "highlight": "work as an accountant",
+          "swap_en": "work as a teacher · work as a sales assistant · work as a doctor",
+          "gloss_mm": "ကျွန်တော် စာရင်းကိုင် အလုပ်လုပ်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m3-i1.mp3"
+        },
+        {
+          "text_en": "I am responsible for managing the office.",
+          "highlight": "responsible for managing the office",
+          "swap_en": "responsible for training new staff · responsible for customer service · responsible for the project",
+          "gloss_mm": "ကျွန်တော့်တာဝန်က ရုံးလုပ်ငန်းတွေကို စီမံခန့်ခွဲဖို့ပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m3-i2.mp3"
+        },
+        {
+          "text_en": "My main duty is to handle customer complaints.",
+          "highlight": "main duty is to handle customer complaints",
+          "swap_en": "main duty is to coordinate with suppliers · main duty is to draft reports",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အဓိကတာဝန်က ဝယ်သူတွေရဲ့ တိုင်ကြားချက်တွေကို ဖြေရှင်းပေးဖို့ပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m3-i3.mp3"
+        },
+        {
+          "text_en": "I oversee the daily operations of the company.",
+          "highlight": "oversee the daily operations of the company",
+          "swap_en": "oversee the marketing strategy · oversee the construction site",
+          "gloss_mm": "ကျွန်တော်က ကုမ္ပဏီရဲ့ နေ့စဉ်လုပ်ငန်းဆောင်တာတွေကို ကြီးကြပ်ပေးရပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m3-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating how long you have been there",
+      "move_mm": "ဒီနေရာမှာ လုပ်လာတာ ဘယ်လောက်ကြာပြီလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I have worked here for two years.",
+          "highlight": "two years",
+          "swap_en": "three months · five years · a long time",
+          "gloss_mm": "ဒီမှာ လုပ်လာတာ နှစ်နှစ် ရှိပါပြီ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m4-i1.mp3"
+        },
+        {
+          "text_en": "I've been with this company for six months.",
+          "highlight": "six months",
+          "swap_en": "a year · two years · a while",
+          "gloss_mm": "ဒီကုမ္ပဏီမှာ လုပ်လာတာ ခြောက်လ ရှိပါပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m4-i2.mp3"
+        },
+        {
+          "text_en": "It's been three years since I joined this office.",
+          "highlight": "three years",
+          "swap_en": "a couple of years · quite a while · over five years",
+          "gloss_mm": "ဒီရုံးကို ရောက်တာ သုံးနှစ် ရှိသွားပါပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m4-i3.mp3"
+        },
+        {
+          "text_en": "I've been working in this field for over a decade.",
+          "highlight": "over a decade",
+          "swap_en": "five years · a long time · nearly ten years",
+          "gloss_mm": "ဒီနယ်ပယ်မှာ လုပ်လာတာ ဆယ်နှစ်ကျော်ပါပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Listing daily routine tasks",
+      "move_mm": "နေ့စဉ်လုပ်ဆောင်ရတဲ့ အလုပ်တွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I start my day by checking emails.",
+          "highlight": "checking emails",
+          "swap_en": "clearing my inbox · reviewing the schedule · updating the report",
+          "gloss_mm": "ကျွန်တော် အလုပ်စရင် အီးမေးလ်တွေအရင် စစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m5-i1.mp3"
+        },
+        {
+          "text_en": "My main task is to handle customer inquiries.",
+          "highlight": "handle customer inquiries",
+          "swap_en": "manage the project files · attend team meetings · coordinate with the suppliers",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အဓိကတာဝန်က ဖောက်သည်တွေရဲ့ မေးမြန်းချက်တွေကို ဖြေရှင်းပေးဖို့ပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m5-i2.mp3"
+        },
+        {
+          "text_en": "I spend most of my afternoon dealing with urgent requests.",
+          "highlight": "dealing with urgent requests",
+          "swap_en": "finalizing the monthly budget · troubleshooting technical issues · brainstorming new marketing ideas",
+          "gloss_mm": "နေ့လည်ပိုင်း အချိန်အများစုကိုတော့ အရေးပေါ်ကိစ္စတွေ ဖြေရှင်းရင်း ကုန်ဆုံးပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m5-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your colleagues or classmates",
+      "move_mm": "လုပ်ဖော်ကိုင်ဖက် (သို့) ကျောင်းနေဖက်တွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My colleague is very helpful.",
+          "highlight": "very helpful",
+          "swap_en": "very kind · really friendly · quite quiet",
+          "gloss_mm": "ကျွန်တော့်လုပ်ဖော်ကိုင်ဖက်က အရမ်းကူညီတတ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m6-i1.mp3"
+        },
+        {
+          "text_en": "I get along well with my classmates.",
+          "highlight": "get along well with",
+          "swap_en": "don't really talk much to · have a great relationship with",
+          "gloss_mm": "ကျွန်တော် ကျောင်းနေဖက်တွေနဲ့ အဆင်ပြေပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m6-i2.mp3"
+        },
+        {
+          "text_en": "He is the go-to person for technical issues.",
+          "highlight": "the go-to person for",
+          "swap_en": "the person I always ask for · the one who handles",
+          "gloss_mm": "နည်းပညာပိုင်းဆိုင်ရာ အခက်အခဲရှိရင် သူ့ဆီပဲ သွားမေးရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m6-i3.mp3"
+        },
+        {
+          "text_en": "She is such a team player.",
+          "highlight": "a team player",
+          "swap_en": "a hard worker · a real motivator · a great leader",
+          "gloss_mm": "သူက အဖွဲ့နဲ့ အလုပ်လုပ်တာ အရမ်းတော်တဲ့သူပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about working or study hours",
+      "move_mm": "အလုပ်ချိန် (သို့) ကျောင်းချိန်အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I work from 9 to 5.",
+          "highlight": "from 9 to 5",
+          "swap_en": "from 8 to 4 · from 9 am to 6 pm · in the morning · in the evening",
+          "gloss_mm": "ကျွန်တော်က မနက် ၉ နာရီကနေ ညနေ ၅ နာရီအထိ အလုပ်လုပ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m7-i1.mp3"
+        },
+        {
+          "text_en": "I usually work eight hours a day.",
+          "highlight": "eight hours a day",
+          "swap_en": "six hours a day · ten hours a day · part-time",
+          "gloss_mm": "ကျွန်တော်က တစ်နေ့ကို ၈ နာရီလောက် ပုံမှန် အလုပ်လုပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m7-i2.mp3"
+        },
+        {
+          "text_en": "I have to work shifts at the office.",
+          "highlight": "work shifts",
+          "swap_en": "work night shifts · work flexible hours · work irregular hours",
+          "gloss_mm": "ကျွန်တော်က ရုံးမှာ အလှည့်ကျ (shift) နဲ့ အလုပ်လုပ်ရပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m7-i3.mp3"
+        },
+        {
+          "text_en": "My schedule is pretty hectic these days.",
+          "highlight": "pretty hectic",
+          "swap_en": "quite packed · very demanding · really busy",
+          "gloss_mm": "ဒီရက်ပိုင်း ကျွန်တော့်အလုပ်ချိန်က အရမ်းကို ရှုပ်ထွေးပြီး အလုပ်များနေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m7-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating what you like about your work",
+      "move_mm": "အလုပ်ရဲ့ ဘယ်အချက်ကို သဘောကျလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like my job because it's fun.",
+          "highlight": "it's fun",
+          "swap_en": "it's interesting · it's easy · it's flexible",
+          "gloss_mm": "ကျွန်တော့်အလုပ်က ပျော်စရာကောင်းလို့ သဘောကျတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m8-i1.mp3"
+        },
+        {
+          "text_en": "The best part about my job is the people.",
+          "highlight": "the people",
+          "swap_en": "the friendly environment · the flexible hours · the salary",
+          "gloss_mm": "ကျွန်တော့်အလုပ်မှာ အကြိုက်ဆုံးအချက်က ဝန်ထမ်းအချင်းချင်းပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m8-i2.mp3"
+        },
+        {
+          "text_en": "I really enjoy the work culture here.",
+          "highlight": "the work culture here",
+          "swap_en": "the opportunities to learn · the challenge of the projects",
+          "gloss_mm": "ဒီနေရာက အလုပ်လုပ်တဲ့ ပုံစံ၊ ရုံးတွင်း ယဉ်ကျေးမှုကို တကယ်သဘောကျတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m8-i3.mp3"
+        },
+        {
+          "text_en": "What I value most is the chance to develop my skills.",
+          "highlight": "the chance to develop my skills",
+          "swap_en": "the work-life balance · the supportive team environment",
+          "gloss_mm": "ကျွန်တော် အတန်ဖိုးအထားဆုံးကတော့ ကိုယ့်အရည်အချင်းကို မြှင့်တင်နိုင်တဲ့ အခွင့်အရေးပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m8-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Stating what you find challenging",
+      "move_mm": "အလုပ်မှာ ဘာတွေအခက်အခဲရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It is hard to finish my tasks on time.",
+          "highlight": "hard to finish my tasks on time",
+          "swap_en": "hard to focus in the office · hard to wake up for early shifts",
+          "gloss_mm": "အလုပ်တွေကို အချိန်မီပြီးအောင်လုပ်ဖို့ ခက်ခဲပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m9-i1.mp3"
+        },
+        {
+          "text_en": "The most challenging part is dealing with difficult customers.",
+          "highlight": "dealing with difficult customers",
+          "swap_en": "balancing work and study · managing my daily schedule · meeting tight deadlines",
+          "gloss_mm": "အဆင်မပြေတဲ့ customer တွေကို ကိုင်တွယ်ဖြေရှင်းရတာက အခက်ဆုံးပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m9-i2.mp3"
+        },
+        {
+          "text_en": "I often struggle with communicating in English at work.",
+          "highlight": "struggle with communicating in English",
+          "swap_en": "struggle with using new software · struggle with understanding technical jargon",
+          "gloss_mm": "အလုပ်မှာ အင်္ဂလိပ်လို ပြောဆိုဆက်သွယ်ရတာ အမြဲလိုလို အခက်တွေ့နေရပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m9-i3.mp3"
+        },
+        {
+          "text_en": "I find it quite overwhelming to keep up with the workload.",
+          "highlight": "quite overwhelming to keep up with the workload",
+          "swap_en": "really draining to commute during rush hour · quite challenging to stay motivated",
+          "gloss_mm": "လုပ်ငန်းခွင်မှာ အလုပ်တာဝန်တွေများလွန်းလို့ ဖိစီးမှုများတယ်လို့ ခံစားရပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m9-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your commute",
+      "move_mm": "အလုပ်သွား/ကျောင်းသွား အခက်အခဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I take the bus to work every day.",
+          "highlight": "take the bus",
+          "swap_en": "take the train · ride my motorbike · catch a taxi",
+          "gloss_mm": "ကျွန်တော် အလုပ်ကို နေ့တိုင်း ဘတ်စ်ကားနဲ့ သွားတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m10-i1.mp3"
+        },
+        {
+          "text_en": "It takes me about an hour to get to the office.",
+          "highlight": "takes me about an hour",
+          "swap_en": "takes me thirty minutes · takes me over an hour · takes me a long time",
+          "gloss_mm": "ရုံးရောက်ဖို့ တစ်နာရီလောက် ကြာတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m10-i2.mp3"
+        },
+        {
+          "text_en": "Traffic in Yangon is really bad during rush hour.",
+          "highlight": "really bad during rush hour",
+          "swap_en": "a nightmare in the morning · quite heavy in the evening · usually okay at noon",
+          "gloss_mm": "ရန်ကုန်မှာ အလုပ်သွားချိန်/ပြန်ချိန်ဆို လမ်းက အရမ်းကြပ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m10-i3.mp3"
+        },
+        {
+          "text_en": "I usually get stuck in traffic on my way to class.",
+          "highlight": "get stuck in traffic",
+          "swap_en": "get caught in the rain · deal with the heat",
+          "gloss_mm": "ကျောင်းသွားတဲ့လမ်းမှာ ယာဉ်ကြောပိတ်ဆို့မှုနဲ့ အမြဲတွေ့ရတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m10-i4.mp3"
+        },
+        {
+          "text_en": "My commute is quite exhausting due to the long distance.",
+          "highlight": "quite exhausting due to the long distance",
+          "swap_en": "pretty stressful because of the crowd · manageable since it is nearby",
+          "gloss_mm": "အဝေးကြီးသွားရတော့ ခရီးလမ်းက တော်တော်ပင်ပန်းတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m10-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing your salary or scholarship",
+      "move_mm": "လစာ (သို့) ပညာသင်ဆုအကြောင်း ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "My salary is quite low.",
+          "highlight": "quite low",
+          "swap_en": "enough for me · not very high · reasonable",
+          "gloss_mm": "ကျွန်တော့်လစာက တော်တော်နည်းတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m11-i1.mp3"
+        },
+        {
+          "text_en": "I'm currently on a scholarship.",
+          "highlight": "on a scholarship",
+          "swap_en": "on a full scholarship · on a partial scholarship",
+          "gloss_mm": "ကျွန်တော် အခု ပညာသင်ဆုနဲ့ တက်နေတာပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m11-i2.mp3"
+        },
+        {
+          "text_en": "The salary package includes medical and travel allowance.",
+          "highlight": "includes medical and travel allowance",
+          "swap_en": "includes a housing allowance · comes with a bonus",
+          "gloss_mm": "ဒီလစာထဲမှာ ဆေးကုသစရိတ်နဲ့ ခရီးစရိတ်တွေ ပါဝင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m11-i3.mp3"
+        },
+        {
+          "text_en": "I'm grateful to receive a monthly stipend of 500,000 kyats.",
+          "highlight": "receive a monthly stipend of 500,000 kyats",
+          "swap_en": "get a monthly salary of 800,000 kyats",
+          "gloss_mm": "တစ်လကို ကျပ် ၅ သိန်း ထောက်ပံ့ကြေး ရတာကိုပဲ ကျေးဇူးတင်မိပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m11-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your boss or teachers",
+      "move_mm": "အထက်လူကြီး (သို့) ဆရာတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My boss is very kind.",
+          "highlight": "very kind",
+          "swap_en": "strict · helpful · busy",
+          "gloss_mm": "ကျွန်တော့်အထက်လူကြီးက အရမ်းသဘောကောင်းတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m12-i1.mp3"
+        },
+        {
+          "text_en": "My teacher is easy to talk to.",
+          "highlight": "easy to talk to",
+          "swap_en": "easy to approach · very patient · good at explaining things",
+          "gloss_mm": "ဆရာက တိုင်ပင်ရလွယ်ကူတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m12-i2.mp3"
+        },
+        {
+          "text_en": "She has a very supportive management style.",
+          "highlight": "supportive management style",
+          "swap_en": "hands-on management style · flexible working style · structured teaching style",
+          "gloss_mm": "သူမရဲ့ စီမံခန့်ခွဲမှုပုံစံက ဝန်ထမ်းတွေကို အားပေးကူညီမှုရှိတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m12-i3.mp3"
+        },
+        {
+          "text_en": "He expects a high standard of work.",
+          "highlight": "a high standard of work",
+          "swap_en": "a lot of dedication · attention to detail · punctuality",
+          "gloss_mm": "သူက အလုပ်အရည်အသွေးကို အရမ်းမြင့်မြင့် မျှော်လင့်ထားတတ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m12-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing your professional achievements",
+      "move_mm": "အလုပ်နဲ့ပတ်သက်ပြီး ဂုဏ်ယူစရာတွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I finished my project on time.",
+          "highlight": "finished my project on time",
+          "swap_en": "completed my report early · met the deadline · hit my sales target",
+          "gloss_mm": "ကျွန်တော့်ပရောဂျက်ကို အချိန်မီ အပြီးသတ်နိုင်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m13-i1.mp3"
+        },
+        {
+          "text_en": "I got promoted to manager last month.",
+          "highlight": "got promoted to manager",
+          "swap_en": "got a pay raise · passed my probation · finished my degree",
+          "gloss_mm": "ပြီးခဲ့တဲ့လကပဲ မန်နေဂျာရာထူး တိုးပေးခံခဲ့ရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m13-i2.mp3"
+        },
+        {
+          "text_en": "I'm proud of leading our team to success.",
+          "highlight": "leading our team to success",
+          "swap_en": "improving our customer service · launching our new app · handling this difficult client",
+          "gloss_mm": "ကျွန်တော်တို့အဖွဲ့ကို အောင်မြင်အောင် ဦးဆောင်နိုင်ခဲ့တဲ့အတွက် ဂုဏ်ယူမိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m13-i3.mp3"
+        },
+        {
+          "text_en": "My greatest achievement so far has been increasing our sales by twenty percent.",
+          "highlight": "increasing our sales by twenty percent",
+          "swap_en": "streamlining our office workflow · closing a major deal with a new partner · winning the 'Employee of the Year' award",
+          "gloss_mm": "အခုထိ ကျွန်တော့်ရဲ့ အကြီးမားဆုံး အောင်မြင်မှုကတော့ ရောင်းအားကို ၂၀ ရာခိုင်နှုန်းအထိ တိုးမြှင့်နိုင်ခဲ့တာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m13-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about future career plans",
+      "move_mm": "အနာဂတ် ရည်မှန်းချက်တွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I want to be a teacher in the future.",
+          "highlight": "be a teacher",
+          "swap_en": "be a programmer · run my own business · work in a bank",
+          "gloss_mm": "အနာဂတ်မှာ ဆရာတစ်ယောက် ဖြစ်ချင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m14-i1.mp3"
+        },
+        {
+          "text_en": "I'm planning to study abroad after graduation.",
+          "highlight": "study abroad",
+          "swap_en": "apply for a new job · switch my career · start a new project",
+          "gloss_mm": "ဘွဲ့ရပြီးရင် ပြည်ပမှာ ပညာသွားသင်ဖို့ စီစဉ်နေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m14-i2.mp3"
+        },
+        {
+          "text_en": "My ultimate goal is to become a manager at a top company.",
+          "highlight": "become a manager at a top company",
+          "swap_en": "open my own cafe in Yangon · work as a freelance designer · move into a management role",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ အဓိကရည်မှန်းချက်ကတော့ ကုမ္ပဏီကြီးတစ်ခုမှာ မန်နေဂျာတစ်ယောက် ဖြစ်ဖို့ပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m14-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing your feelings about your path",
+      "move_mm": "လက်ရှိလမ်းကြောင်းအပေါ် ခံစားချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I am happy with my job.",
+          "highlight": "happy with my job",
+          "swap_en": "happy with my studies · satisfied with my work",
+          "gloss_mm": "ကျွန်တော့်အလုပ်အပေါ် ကျေနပ်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m15-i1.mp3"
+        },
+        {
+          "text_en": "I really enjoy what I do every day.",
+          "highlight": "really enjoy what I do",
+          "swap_en": "like what I do · find my work interesting",
+          "gloss_mm": "နေ့စဉ်လုပ်နေရတဲ့ အလုပ်ကို တကယ် သဘောကျပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m15-i2.mp3"
+        },
+        {
+          "text_en": "To be honest, it is a bit challenging but I am learning a lot.",
+          "highlight": "a bit challenging",
+          "swap_en": "quite tough · very demanding · really busy",
+          "gloss_mm": "အမှန်အတိုင်းပြောရရင် နည်းနည်းတော့ ခက်ခဲပေမဲ့ အများကြီး သင်ယူနေရပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m15-i3.mp3"
+        },
+        {
+          "text_en": "I find my current path quite rewarding.",
+          "highlight": "quite rewarding",
+          "swap_en": "very fulfilling · full of potential",
+          "gloss_mm": "လက်ရှိလျှောက်လှမ်းနေတဲ့ လမ်းကြောင်းက တန်ဖိုးရှိပြီး ကျေနပ်စရာကောင်းတယ်လို့ ခံစားရပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_work_and_studies/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about your work or studies. Include your role, what you do daily, and one goal you have for the future.",
+    "prompt_mm": "သင့်အလုပ် (သို့) ပညာရေးအကြောင်းကို စာကြောင်း ၅ ကြောင်းမှ ၈ ကြောင်းကြား ရေးသားပါ။ သင်လုပ်ရတဲ့ အဓိကတာဝန်၊ နေ့စဉ်လုပ်ရတဲ့အလုပ်တွေနဲ့ အနာဂတ်ရည်မှန်းချက် တစ်ခုကို ထည့်သွင်းပြောပြပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "Job title/Major",
+      "Company/University",
+      "Daily tasks",
+      "Working hours",
+      "Colleagues",
+      "Likes/Dislikes",
+      "Future goals"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to gain confidence and improve your flow.",
+    "speak_aloud_mm": "သင်ရေးသားထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါမှ ၃ ခါလောက် ဖတ်ကြည့်ပါ။ ဒါမှ ယုံကြည်မှုရှိပြီး စကားပြောတာ ပိုသွက်လာပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "I currently work as a graphic designer at a creative agency. I have been with this company for two years. My main job is creating logos and social media content. I start my work at nine in the morning and finish at five. My colleagues are very friendly and helpful. I really like the creative freedom I have here. Sometimes, meeting tight deadlines is quite challenging. The office is located in the city center, so the commute is easy. I am proud of the projects I finished last year. In the future, I want to become a senior designer.",
+    "model_mm": "ကျွန်တော် လက်ရှိမှာ တီထွင်ဖန်တီးမှုအေဂျင်စီတစ်ခုမှာ ဂရပ်ဖစ်ဒီဇိုင်နာအဖြစ် လုပ်ကိုင်နေပါတယ်။ ဒီကုမ္ပဏီမှာ လုပ်လာတာ နှစ်နှစ်ရှိပါပြီ။ ကျွန်တော့်ရဲ့ အဓိကအလုပ်က လိုဂိုတွေနဲ့ ဆိုရှယ်မီဒီယာအတွက် အကြောင်းအရာတွေ ဖန်တီးပေးရတာပါ။ မနက် ၉ နာရီမှာ အလုပ်စပြီး ၅ နာရီမှာ အလုပ်သိမ်းပါတယ်။ လုပ်ဖော်ကိုင်ဖက်တွေက အရမ်းဖော်ရွေပြီး ကူညီတတ်ကြပါတယ်။ ဒီမှာရတဲ့ တီထွင်ဖန်တီးမှု လွတ်လပ်ခွင့်ကို ကျွန်တော် သဘောကျပါတယ်။ တစ်ခါတလေမှာတော့ အချိန်မီပြီးအောင်လုပ်ရတာက စိန်ခေါ်မှုတစ်ခုပါ။ ရုံးက မြို့လယ်မှာရှိတော့ သွားရလာရ လွယ်ကူပါတယ်။ ပြီးခဲ့တဲ့နှစ်က ပြီးမြောက်ခဲ့တဲ့ စီမံကိန်းတွေအတွက် ဂုဏ်ယူမိပါတယ်။ အနာဂတ်မှာတော့ အကြီးတန်းဒီဇိုင်နာတစ်ယောက် ဖြစ်ချင်ပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "I currently work as a graphic designer at a creative agency.",
+        "gloss_mm": "ကျွန်တော် လက်ရှိမှာ တီထွင်ဖန်တီးမှုအေဂျင်စီတစ်ခုမှာ ဂရပ်ဖစ်ဒီဇိုင်နာအဖြစ် လုပ်ကိုင်နေပါတယ်။",
+        "why_mm": "လက်ရှိအလုပ်အကိုင်ကို မိတ်ဆက်ခြင်း။"
+      },
+      {
+        "text_en": "I have been with this company for two years.",
+        "gloss_mm": "ဒီကုမ္ပဏီမှာ လုပ်လာတာ နှစ်နှစ်ရှိပါပြီ။",
+        "why_mm": "လုပ်သက်အကြောင်း ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "My main job is creating logos and social media content.",
+        "gloss_mm": "ကျွန်တော့်ရဲ့ အဓိကအလုပ်က လိုဂိုတွေနဲ့ ဆိုရှယ်မီဒီယာအတွက် အကြောင်းအရာတွေ ဖန်တီးပေးရတာပါ။",
+        "why_mm": "လုပ်ဆောင်ရတဲ့ တာဝန်ဝတ္တရားကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I start my work at nine in the morning and finish at five.",
+        "gloss_mm": "မနက် ၉ နာရီမှာ အလုပ်စပြီး ၅ နာရီမှာ အလုပ်သိမ်းပါတယ်။",
+        "why_mm": "အလုပ်ချိန်အကြောင်း ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "My colleagues are very friendly and helpful.",
+        "gloss_mm": "လုပ်ဖော်ကိုင်ဖက်တွေက အရမ်းဖော်ရွေပြီး ကူညီတတ်ကြပါတယ်။",
+        "why_mm": "လုပ်ဖော်ကိုင်ဖက်များအကြောင်း ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I really like the creative freedom I have here.",
+        "gloss_mm": "ဒီမှာရတဲ့ တီထွင်ဖန်တီးမှု လွတ်လပ်ခွင့်ကို ကျွန်တော် သဘောကျပါတယ်။",
+        "why_mm": "အလုပ်၏ သဘောကျသည့်အချက်ကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "Sometimes, meeting tight deadlines is quite challenging.",
+        "gloss_mm": "တစ်ခါတလေမှာတော့ အချိန်မီပြီးအောင်လုပ်ရတာက စိန်ခေါ်မှုတစ်ခုပါ။",
+        "why_mm": "အလုပ်တွင် ကြုံတွေ့ရသည့် အခက်အခဲကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "The office is located in the city center, so the commute is easy.",
+        "gloss_mm": "ရုံးက မြို့လယ်မှာရှိတော့ သွားရလာရ လွယ်ကူပါတယ်။",
+        "why_mm": "အလုပ်သွား/လာခြင်း အတွေ့အကြုံကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I am proud of the projects I finished last year.",
+        "gloss_mm": "ပြီးခဲ့တဲ့နှစ်က ပြီးမြောက်ခဲ့တဲ့ စီမံကိန်းတွေအတွက် ဂုဏ်ယူမိပါတယ်။",
+        "why_mm": "လုပ်ငန်းခွင်အောင်မြင်မှုအကြောင်း ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "In the future, I want to become a senior designer.",
+        "gloss_mm": "အနာဂတ်မှာတော့ အကြီးတန်းဒီဇိုင်နာတစ်ယောက် ဖြစ်ချင်ပါတယ်။",
+        "why_mm": "အနာဂတ်ရည်မှန်းချက်ကို ဖော်ပြခြင်း။"
+      }
+    ],
+    "template": "I currently work as a {job_title} at a {workplace}. I have been with this company for {duration}. My main job is {main_task}. I start my work at {start_time} and finish at {end_time}. My colleagues are {colleague_description}. I really like the {positive_aspect} I have here. Sometimes, {work_challenge} is quite challenging. The office is located in the {location}, so the commute is {commute_feeling}. I am proud of the {achievement}. In the future, I want to {career_goal}.",
+    "slots": [
+      {
+        "id": "job_title",
+        "label_en": "Job Title",
+        "label_mm": "အလုပ်အကိုင်",
+        "hint": "သင်လုပ်ကိုင်နေတဲ့ အလုပ်အကိုင်ကို ထည့်ပါ။",
+        "options": [
+          "teacher",
+          "software engineer",
+          "sales assistant",
+          "accountant",
+          "nurse"
+        ]
+      },
+      {
+        "id": "workplace",
+        "label_en": "Workplace",
+        "label_mm": "လုပ်ငန်းခွင်အမျိုးအစား",
+        "hint": "သင်အလုပ်လုပ်တဲ့ နေရာကို ထည့်ပါ။",
+        "options": [
+          "local school",
+          "tech startup",
+          "retail store",
+          "hospital",
+          "bank"
+        ]
+      },
+      {
+        "id": "duration",
+        "label_en": "Duration",
+        "label_mm": "လုပ်သက်",
+        "hint": "ဒီနေရာမှာ လုပ်လာတာ ဘယ်လောက်ကြာပြီလဲ။",
+        "options": [
+          "six months",
+          "one year",
+          "three years",
+          "five years"
+        ]
+      },
+      {
+        "id": "main_task",
+        "label_en": "Main Task",
+        "label_mm": "အဓိကတာဝန်",
+        "hint": "နေ့စဉ်လုပ်ရတဲ့ အဓိကအလုပ်ကို ထည့်ပါ။",
+        "options": [
+          "teaching students",
+          "writing code",
+          "helping customers",
+          "managing accounts",
+          "caring for patients"
+        ]
+      },
+      {
+        "id": "start_time",
+        "label_en": "Start Time",
+        "label_mm": "အလုပ်စချိန်",
+        "hint": "အလုပ်စတဲ့အချိန်ကို ထည့်ပါ။",
+        "options": [
+          "eight in the morning",
+          "ten in the morning",
+          "eight-thirty"
+        ]
+      },
+      {
+        "id": "end_time",
+        "label_en": "End Time",
+        "label_mm": "အလုပ်သိမ်းချိန်",
+        "hint": "အလုပ်သိမ်းတဲ့အချိန်ကို ထည့်ပါ။",
+        "options": [
+          "four in the afternoon",
+          "six in the evening",
+          "five-thirty"
+        ]
+      },
+      {
+        "id": "colleague_description",
+        "label_en": "Colleague Description",
+        "label_mm": "လုပ်ဖော်ကိုင်ဖက်များအကြောင်း",
+        "hint": "သူတို့ရဲ့ စရိုက်ကို ဖော်ပြပါ။",
+        "options": [
+          "very supportive",
+          "hardworking",
+          "fun to be with",
+          "very professional"
+        ]
+      },
+      {
+        "id": "positive_aspect",
+        "label_en": "Positive Aspect",
+        "label_mm": "အလုပ်၏ ကောင်းကွက်",
+        "hint": "အလုပ်မှာ ဘာကို သဘောကျလဲ။",
+        "options": [
+          "team spirit",
+          "learning opportunities",
+          "work-life balance",
+          "friendly environment"
+        ]
+      },
+      {
+        "id": "work_challenge",
+        "label_en": "Work Challenge",
+        "label_mm": "အလုပ်၏ အခက်အခဲ",
+        "hint": "အလုပ်မှာ ဘာက စိန်ခေါ်မှုဖြစ်နေလဲ။",
+        "options": [
+          "learning new software",
+          "handling many tasks",
+          "working in a fast-paced environment",
+          "solving complex problems"
+        ]
+      },
+      {
+        "id": "location",
+        "label_en": "Location",
+        "label_mm": "တည်နေရာ",
+        "hint": "ရုံးဘယ်နားမှာရှိလဲ။",
+        "options": [
+          "suburbs",
+          "busy city center",
+          "quiet neighborhood"
+        ]
+      },
+      {
+        "id": "commute_feeling",
+        "label_en": "Commute Feeling",
+        "label_mm": "သွားလာရတာ ဘယ်လိုလဲ",
+        "hint": "အလုပ်သွားရတာ လွယ်ကူလား။",
+        "options": [
+          "very convenient",
+          "a bit tiring",
+          "quite fast"
+        ]
+      },
+      {
+        "id": "achievement",
+        "label_en": "Achievement",
+        "label_mm": "အောင်မြင်မှု",
+        "hint": "သင်ဂုဏ်ယူတဲ့အလုပ်တစ်ခုခုကို ပြောပါ။",
+        "options": [
+          "successful team project",
+          "positive feedback from my boss",
+          "completing my training",
+          "reaching my sales target"
+        ]
+      },
+      {
+        "id": "career_goal",
+        "label_en": "Career Goal",
+        "label_mm": "အနာဂတ်ရည်မှန်းချက်",
+        "hint": "အနာဂတ်မှာ ဘာဖြစ်ချင်လဲ။",
+        "options": [
+          "gain more experience",
+          "get a promotion",
+          "start my own business",
+          "learn a new skill"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level1/my_work_and_studies/guide-model.mp3"
+  }
+}

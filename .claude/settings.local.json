@@ -170,7 +170,29 @@
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/improve_s13.py\")",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Hp/AppData/Local/Temp/claude/D--PMP-Projects-speakcraft-lite/15b14699-d961-44ca-966e-21e3f5bf7874/scratchpad/improve_s14_16.py\")",
       "Bash(rm -f lib/screens/listening_and_shadowing/takeaways_review_page.dart)",
-      "Bash(rm -rf assets/takeaways_review)"
+      "Bash(rm -rf assets/takeaways_review)",
+      "Bash(node scripts/seed-vocab.mjs)",
+      "Bash(printf '\\\\n# Bunny storage write creds \\(build-time only, never bundled\\)\\\\n.bunny.env\\\\n')",
+      "Bash(curl *)",
+      "Bash(PYTHONIOENCODING=utf-8 python section_intermediate.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python seed_intermediate.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python vocab_audio_batch.py beyond_bad very_to_strong better_than_said)",
+      "Bash(PYTHONIOENCODING=utf-8 python gen_vocab_group.py delexical_verbs adj_noun_collocations spend_save_waste say_tell_speak_talk ed_vs_ing_adjectives confused_verbs)",
+      "Bash(PYTHONIOENCODING=utf-8 python vocab_audio_batch.py delexical_verbs adj_noun_collocations spend_save_waste say_tell_speak_talk ed_vs_ing_adjectives confused_verbs)",
+      "Bash(PYTHONIOENCODING=utf-8 python gen_vocab_group.py pv_relationships pv_work pv_everyday contrast_linkers result_addition_linkers)",
+      "Bash(PYTHONIOENCODING=utf-8 python vocab_audio_batch.py pv_relationships pv_work pv_everyday contrast_linkers result_addition_linkers)",
+      "Bash(PYTHONIOENCODING=utf-8 python gen_vocab_group.py giving_opinions agreeing_disagreeing reacting_to_news)",
+      "Bash(PYTHONIOENCODING=utf-8 python vocab_audio_batch.py giving_opinions agreeing_disagreeing reacting_to_news)",
+      "Bash(PYTHONIOENCODING=utf-8 python -u -)",
+      "Bash(PYTHONIOENCODING=utf-8 python -u mm_explainer_test.py)",
+      "Read(//d/PDF/Vocabulary In Use//**)",
+      "Read(//d/PDF/Vocabulary In Use/pre_intermediateAndIntermediate/**)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('D:/PMP_Projects/speakcraft-lite/assets/speak_your_mind/my_family.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
+      "Bash(node *)",
+      "Bash(command -v deno)",
+      "Bash(npx eslint *)",
+      "Bash(echo \"=== EXIT: $? ===\")",
+      "Bash(echo \"=== TSC EXIT: $? ===\")"
     ]
   }
 }

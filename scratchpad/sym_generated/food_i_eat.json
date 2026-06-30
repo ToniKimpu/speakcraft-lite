@@ -1,0 +1,578 @@
+{
+  "id": "food_i_eat",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "Food I Eat",
+  "title_mm": "ကျွန်တော်/ကျွန်မ နှစ်သက်တဲ့ အစားအသောက်များ",
+  "promise_en": "Learn to talk about your daily diet, street food favorites, and cooking habits with confidence.",
+  "promise_mm": "နေ့စဉ်စားသောက်မှု၊ အကြိုက်ဆုံးလမ်းဘေးစာနဲ့ ချက်ပြုတ်မှု အလေ့အထတွေအကြောင်း ယုံကြည်မှုရှိရှိ ပြောတတ်လာစေရမယ်။",
+  "intro_en": "Food is a great conversation starter. Whether you are at a tea shop in Yangon or meeting new people, talking about what you eat helps you connect with others.",
+  "intro_mm": "အစားအသောက်အကြောင်း ပြောတာဟာ စကားစမြည်ပြောဖို့ အကောင်းဆုံးနည်းလမ်းတစ်ခုပါ။ ရန်ကုန်က လက်ဖက်ရည်ဆိုင်မှာပဲဖြစ်ဖြစ်၊ လူသစ်တွေနဲ့ တွေ့တဲ့အခါမျိုးမှာပဲဖြစ်ဖြစ် ကိုယ်စားတဲ့အစာအကြောင်း ပြောပြတာက ရင်းနှီးမှုရစေပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your daily meal routine",
+      "move_mm": "နေ့စဉ် ဘယ်အချိန် ဘာစားလေ့ရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually eat mohinga for breakfast.",
+          "highlight": "mohinga",
+          "swap_en": "fried rice · nan gyi thoke · bread and eggs",
+          "gloss_mm": "ကျွန်တော် မနက်စာအတွက် မုန့်ဟင်းခါး စားလေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I tend to have a light lunch near my office.",
+          "highlight": "a light lunch",
+          "swap_en": "a quick lunch · a heavy lunch · a simple lunch",
+          "gloss_mm": "ကျွန်တော် နေ့လယ်စာကို ရုံးနားမှာပဲ ပေါ့ပေါ့ပါးပါး စားလေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm a big fan of eating Burmese curry for dinner.",
+          "highlight": "eating Burmese curry",
+          "swap_en": "having noodles · grabbing street food · cooking at home",
+          "gloss_mm": "ညစာအတွက် မြန်မာဟင်း စားရတာကို အရမ်းကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I make it a rule to have a healthy meal every evening.",
+          "highlight": "make it a rule to have",
+          "swap_en": "make it a habit to eat · always aim to have",
+          "gloss_mm": "ညတိုင်း ကျန်းမာရေးနဲ့ညီညွတ်တဲ့ အစားအစာကိုပဲ စားဖို့ ကိုယ့်ကိုယ်ကို စည်းကမ်းသတ်မှတ်ထားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Naming your favorite local dishes",
+      "move_mm": "ကိုယ်အကြိုက်ဆုံး မြန်မာ့အစားအစာတွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My favorite food is Mohinga.",
+          "highlight": "Mohinga",
+          "swap_en": "Laphet Thoke · Mandalay Mee Shay · Ohn No Khao Swe",
+          "gloss_mm": "ကျွန်တော် အကြိုက်ဆုံး အစားအစာက မုန့်ဟင်းခါးပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I really love eating Shan noodles.",
+          "highlight": "Shan noodles",
+          "swap_en": "Kyay Oh · Biryani · Fried rice",
+          "gloss_mm": "ကျွန်တော် ရှမ်းခေါက်ဆွဲ စားရတာ အရမ်းကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I can never say no to a good bowl of Mohinga.",
+          "highlight": "a good bowl of Mohinga",
+          "swap_en": "a plate of Laphet Thoke · some spicy Mandalay Mee Shay",
+          "gloss_mm": "ကောင်းတဲ့ မုန့်ဟင်းခါးတစ်ပွဲဆိုရင် ဘယ်တော့မှ လက်မလွှတ်နိုင်ဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the taste of food",
+      "move_mm": "အစားအသောက်ရဲ့ အရသာကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "This mohinga is very tasty.",
+          "highlight": "very tasty",
+          "swap_en": "delicious · spicy · salty · sweet",
+          "gloss_mm": "ဒီမုန့်ဟင်းခါးက အရမ်းအရသာရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It tastes a bit spicy to me.",
+          "highlight": "a bit spicy",
+          "swap_en": "a bit sour · a little bland · quite oily",
+          "gloss_mm": "ကျွန်တော့်အတွက်တော့ နည်းနည်းစပ်သလိုပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This tea shop's laphet thoke has a unique flavor.",
+          "highlight": "a unique flavor",
+          "swap_en": "an amazing kick · a very rich taste · a distinct sourness",
+          "gloss_mm": "ဒီလက်ဖက်ရည်ဆိုင်က လက်ဖက်သုပ်က အရသာတစ်မျိုးလေး ထူးခြားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Saying who prepares your meals",
+      "move_mm": "အိမ်မှာ ဘယ်သူချက်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My mother cooks for us.",
+          "highlight": "My mother",
+          "swap_en": "My father · My sister · My grandmother",
+          "gloss_mm": "ကျွန်တော်တို့အတွက် အမေက ချက်ပေးတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We usually have home-cooked meals.",
+          "highlight": "home-cooked meals",
+          "swap_en": "meals made at home · food prepared by my mom",
+          "gloss_mm": "ကျွန်တော်တို့ အိမ်ချက်ဟင်းကိုပဲ အမြဲစားဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "My meals are mostly prepared by my wife.",
+          "highlight": "prepared by my wife",
+          "swap_en": "prepared by my husband · cooked by my mom · made by my sister",
+          "gloss_mm": "ကျွန်တော့်အတွက် အစားအသောက်တွေကို အိမ်ကပဲ စီစဉ်ပေးတာများတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I rely on my mother for all my meals.",
+          "highlight": "rely on my mother for all my meals",
+          "swap_en": "rely on my wife for cooking · depend on my sister to cook",
+          "gloss_mm": "စားသောက်ရေးကိစ္စအတွက် အမေ့ကိုပဲ အားကိုးရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing eating out vs. eating at home",
+      "move_mm": "အပြင်စာနဲ့ အိမ်စာ ဘာကွာလဲ နှိုင်းယှဉ်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I prefer eating at home to eating out.",
+          "highlight": "eating at home",
+          "swap_en": "home-cooked food · eating in",
+          "gloss_mm": "အပြင်မှာ စားတာထက် အိမ်မှာပဲ ချက်စားရတာကို ပိုသဘောကျတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Eating out is more convenient than cooking at home.",
+          "highlight": "more convenient than",
+          "swap_en": "cheaper than · more relaxing than · less tiring than",
+          "gloss_mm": "အပြင်မှာ စားတာက အိမ်မှာ ချက်စားတာထက် ပိုအဆင်ပြေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Nothing beats the taste of home-cooked meals.",
+          "highlight": "Nothing beats",
+          "swap_en": "There's nothing quite like",
+          "gloss_mm": "အိမ်မှာ ချက်စားတဲ့ အရသာကို ဘာနဲ့မှ မလဲနိုင်ဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I find that cooking at home is far healthier compared to eating at tea shops.",
+          "highlight": "far healthier compared to",
+          "swap_en": "a lot cleaner than · much cheaper than",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်မှာ စားတာနဲ့ ယှဉ်ရင် အိမ်မှာ ချက်စားတာက ပိုပြီး ကျန်းမာရေးနဲ့ ညီညွတ်တယ်လို့ ထင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about street food experiences",
+      "move_mm": "လမ်းဘေးစာတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I love eating street food.",
+          "highlight": "eating street food",
+          "swap_en": "trying street food · buying snacks from street vendors",
+          "gloss_mm": "ကျွန်တော် လမ်းဘေးစာတွေ စားရတာ ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I often grab some tea shop snacks.",
+          "highlight": "grab some tea shop snacks",
+          "swap_en": "get a quick bite at the roadside · stop by a local stall",
+          "gloss_mm": "ကျွန်တော် လက်ဖက်ရည်ဆိုင်က မုန့်တွေ မကြာခဏ ဝယ်စားဖြစ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The street food near my office is really worth trying.",
+          "highlight": "really worth trying",
+          "swap_en": "to die for · a hidden gem · surprisingly good",
+          "gloss_mm": "ကျွန်တော့်ရုံးနားက လမ်းဘေးစာတွေက တကယ်စားသင့်တဲ့ အရသာမျိုးပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I can't resist the smell of fried snacks on the street.",
+          "highlight": "can't resist",
+          "swap_en": "am addicted to · always crave · find it hard to say no to",
+          "gloss_mm": "လမ်းဘေးက ကြော်ထားတဲ့ မုန့်အနံ့လေးတွေကို မစားဘဲ မနေနိုင်ဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your favorite snacks",
+      "move_mm": "အဆာပြေစာ အကြိုက်တွေကို ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My favorite snack is samosa.",
+          "highlight": "samosa",
+          "swap_en": "mohinga · milk tea · fried tofu · potato fritters",
+          "gloss_mm": "ကျွန်တော် အကြိုက်ဆုံး အဆာပြေစာကတော့ ဆမိုဆာပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I usually grab some snacks at the tea shop.",
+          "highlight": "grab some snacks",
+          "swap_en": "have a quick bite · get a light snack · munch on something",
+          "gloss_mm": "ကျွန်တော်က လက်ဖက်ရည်ဆိုင်မှာ အဆာပြေ တစ်ခုခု စားလေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm a big fan of Burmese street food like laphet thoke.",
+          "highlight": "a big fan of",
+          "swap_en": "really into · crazy about · fond of",
+          "gloss_mm": "ကျွန်တော် မြန်မာ့လမ်းဘေးစာ လက်ဖက်သုပ်တွေကို အရမ်းကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Whenever I feel peckish, I opt for some Mandalay mee shay.",
+          "highlight": "feel peckish",
+          "swap_en": "get a bit hungry · have a craving",
+          "gloss_mm": "ဗိုက်နည်းနည်းဆာတိုင်း မန္တလေးမီးရှည်ကိုပဲ ရွေးစားဖြစ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning your go-to beverages",
+      "move_mm": "အမြဲသောက်ဖြစ်တဲ့ အဖျော်ယမကာတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I usually drink milk tea.",
+          "highlight": "milk tea",
+          "swap_en": "black tea · fresh juice · iced coffee · green tea",
+          "gloss_mm": "ကျွန်တော်က များသောအားဖြင့် လက်ဖက်ရည်နို့ဆမ်းပဲ သောက်ဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I can't start my day without a cup of coffee.",
+          "highlight": "a cup of coffee",
+          "swap_en": "a glass of water · a hot tea · a fresh coconut juice",
+          "gloss_mm": "ကော်ဖီတစ်ခွက်မသောက်ရရင် တစ်နေ့တာကို မစနိုင်ဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm a huge fan of sugarcane juice in the afternoon.",
+          "highlight": "sugarcane juice",
+          "swap_en": "falooda · avocado smoothie · iced lemon tea",
+          "gloss_mm": "နေ့လည်ဘက်ဆို ကြံရည်သောက်ရတာ အရမ်းကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Whenever I visit a tea shop, I always order a strong coffee.",
+          "highlight": "a strong coffee",
+          "swap_en": "a warm milk tea · an iced lime juice · a plain tea",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်ရောက်တိုင်း ကော်ဖီခါး (အပြင်း) ပဲ အမြဲမှာဖြစ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing dietary habits or restrictions",
+      "move_mm": "အစားအသောက် အလေ့အကျင့် သို့မဟုတ် ရှောင်တာတွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I don't eat spicy food.",
+          "highlight": "spicy food",
+          "swap_en": "meat · oily food · seafood · dairy",
+          "gloss_mm": "ကျွန်တော် အစပ်မစားဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm trying to cut down on sugar.",
+          "highlight": "cut down on sugar",
+          "swap_en": "cut down on salt · cut down on fried food · cut down on snacks",
+          "gloss_mm": "ကျွန်တော် သကြားလျှော့စားဖို့ ကြိုးစားနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I have to avoid dairy products because of my allergy.",
+          "highlight": "avoid dairy products",
+          "swap_en": "avoid MSG · avoid gluten · avoid red meat",
+          "gloss_mm": "ဓာတ်မတည့်တာကြောင့် နို့ထွက်ပစ္စည်းတွေကို ရှောင်ရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I've been following a strict vegetarian diet lately.",
+          "highlight": "following a strict vegetarian diet",
+          "swap_en": "following a low-carb diet · following a keto diet · watching what I eat",
+          "gloss_mm": "နောက်ပိုင်းမှာတော့ သတ်သတ်လွတ်ပဲ တင်းတင်းကျပ်ကျပ် စားဖြစ်နေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Asking someone for food recommendations",
+      "move_mm": "ဘာစားကောင်းလဲ အကြံဉာဏ်တောင်းနည်း",
+      "items": [
+        {
+          "text_en": "What do you recommend to eat here?",
+          "highlight": "recommend to eat here",
+          "swap_en": "recommend for lunch · suggest for dinner · suggest ordering",
+          "gloss_mm": "ဒီမှာ ဘာစားရင်ကောင်းမလဲ အကြံပေးပါဦး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "What's good to eat at this tea shop?",
+          "highlight": "good to eat at this tea shop",
+          "swap_en": "good to order here · tasty here",
+          "gloss_mm": "ဒီလဖက်ရည်ဆိုင်မှာ ဘာစားကောင်းလဲဗျ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Are there any local dishes you'd recommend?",
+          "highlight": "any local dishes you'd recommend",
+          "swap_en": "any signature dishes I should try · anything special on the menu",
+          "gloss_mm": "ဒီနားက နာမည်ကြီးတဲ့ ဒေသထွက်အစားအစာ ဘာရှိလဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "If I want something authentic, what would you suggest?",
+          "highlight": "something authentic",
+          "swap_en": "something spicy · something light · something traditional",
+          "gloss_mm": "တကယ့် ရိုးရာအရသာစစ်စစ်စားချင်ရင် ဘာစားသင့်လဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing how to cook a simple dish",
+      "move_mm": "ဟင်းတစ်ခွက် ချက်နည်း အကျဉ်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "First, you fry the garlic.",
+          "highlight": "fry the garlic",
+          "swap_en": "boil the water · chop the onions · wash the vegetables",
+          "gloss_mm": "အရင်ဆုံး ကြက်သွန်ဖြူကို ဆီသတ်ရမယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Next, add a little bit of salt.",
+          "highlight": "add a little bit of salt",
+          "swap_en": "add some fish sauce · stir in the curry paste · pour in the coconut milk",
+          "gloss_mm": "ပြီးရင် ဆားနည်းနည်း ထည့်ရမယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I usually sauté the meat until it's brown.",
+          "highlight": "sauté the meat until it's brown",
+          "swap_en": "fry the egg until it's crispy · stir-fry the greens until they wilt",
+          "gloss_mm": "ကျွန်တော်ကတော့ အသားကို အရောင်ရသည်အထိ ဆီသတ်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "You'll want to simmer it over low heat.",
+          "highlight": "simmer it over low heat",
+          "swap_en": "cook it on high heat · steam it for ten minutes",
+          "gloss_mm": "မီးအေးအေးနဲ့ အနှစ်ကျအောင် တည်ထားပေးရမယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The secret is to garnish it with fresh coriander.",
+          "highlight": "garnish it with fresh coriander",
+          "swap_en": "season it with a squeeze of lime · finish it off with some fried chili",
+          "gloss_mm": "ဒီဟင်းရဲ့ လျှို့ဝှက်ချက်ကတော့ နံနံပင်လေး အုပ်လိုက်တာပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining why you like a specific food",
+      "move_mm": "ဒီအစားအစာကို ဘာကြောင့် ကြိုက်တာလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like mohinga because it tastes good.",
+          "highlight": "it tastes good",
+          "swap_en": "it is delicious · it is spicy · it is healthy",
+          "gloss_mm": "မုန့်ဟင်းခါးက အရသာရှိလို့ ကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm a big fan of tea shop snacks.",
+          "highlight": "a big fan of",
+          "swap_en": "really into · crazy about",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်မုန့်တွေကို အရမ်းကြိုက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "What I love most about Mandalay mee is the texture.",
+          "highlight": "What I love most about",
+          "swap_en": "The best thing about · I really appreciate",
+          "gloss_mm": "မန္တလေးမီးမှာ ကျွန်တော်အကြိုက်ဆုံးကတော့ သူ့ရဲ့ အသားအရည် (texture) ပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It's my go-to comfort food after a long day.",
+          "highlight": "my go-to comfort food",
+          "swap_en": "my favorite meal · my regular snack",
+          "gloss_mm": "တစ်နေ့တာ ပင်ပန်းပြီးရင် အမြဲစားဖြစ်တဲ့ အားဆေးလို အစားအစာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about healthy eating choices",
+      "move_mm": "ကျန်းမာရေးနဲ့ညီညွတ်တဲ့ အစားအသောက်ရွေးချယ်မှု ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I try to eat healthy food.",
+          "highlight": "eat healthy food",
+          "swap_en": "eat more vegetables · cut down on sugar · avoid oily food",
+          "gloss_mm": "ကျွန်တော် ကျန်းမာရေးနဲ့ ညီညွတ်တာတွေ စားဖို့ ကြိုးစားတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm trying to cut down on oily food.",
+          "highlight": "cut down on oily food",
+          "swap_en": "cut down on snacks · cut down on soft drinks · cut down on salty food",
+          "gloss_mm": "ကျွန်တော် ဆီကြော်စာတွေ လျှော့စားဖို့ ကြိုးစားနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I make a point of avoiding processed snacks.",
+          "highlight": "avoiding processed snacks",
+          "swap_en": "eating homemade meals · choosing fresh ingredients · limiting my sugar intake",
+          "gloss_mm": "ကျွန်တော် အသင့်စားမုန့်တွေကို ရှောင်ဖို့ အထူးသတိထားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing a memory associated with a food",
+      "move_mm": "အစားအသောက်နဲ့ ဆက်စပ်တဲ့ အမှတ်တရ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I used to eat mohinga with my mom.",
+          "highlight": "used to eat",
+          "swap_en": "would always eat · often ate",
+          "gloss_mm": "ကျွန်တော် ငယ်ငယ်က မေမေနဲ့အတူ မုန့်ဟင်းခါး စားလေ့ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "This food always reminds me of my hometown.",
+          "highlight": "reminds me of",
+          "swap_en": "brings back memories of · makes me think of",
+          "gloss_mm": "ဒီအစားအစာက ကျွန်တော့်ဇာတိကို အမြဲတမ်း သတိရစေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I have fond memories of sharing tea and snacks at the shop.",
+          "highlight": "have fond memories of",
+          "swap_en": "cherish the memory of · have such sweet memories of",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်မှာ မုန့်စားရင်း စကားပြောခဲ့တဲ့ အမှတ်တရတွေကို အမြဲတမ်း သတိရနေမိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing food preferences politely",
+      "move_mm": "မကြိုက်တဲ့ အစားအသောက်ကို ယဉ်ကျေးစွာ ငြင်းနည်း",
+      "items": [
+        {
+          "text_en": "I don't really like spicy food.",
+          "highlight": "spicy food",
+          "swap_en": "oily food · bitter melon · seafood · raw fish",
+          "gloss_mm": "ကျွန်တော် အစပ်စာတွေကို သိပ်မကြိုက်ဘူးဗျ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm not a big fan of fermented tea leaves.",
+          "highlight": "a big fan of fermented tea leaves",
+          "swap_en": "a big fan of mohinga · a big fan of durian · a big fan of offal",
+          "gloss_mm": "လက်ဖက်သုပ်ကို ကျွန်တော် သိပ်ပြီးတော့ မနှစ်သက်ဘူးဗျ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "To be honest, I'm not really into dairy products.",
+          "highlight": "not really into dairy products",
+          "swap_en": "not really into cold drinks · not really into sweet desserts",
+          "gloss_mm": "အမှန်အတိုင်းပြောရရင် နို့ထွက်ပစ္စည်းတွေကို ကျွန်တော် သိပ်မကြိုက်ဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I tend to steer clear of anything too greasy.",
+          "highlight": "steer clear of anything too greasy",
+          "swap_en": "steer clear of anything too salty · avoid anything too spicy",
+          "gloss_mm": "အဆီများတဲ့ အစားအစာတွေကို ကျွန်တော် ရှောင်လေ့ရှိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about your typical daily food, your favorite meal, and whether you prefer eating at home or out.",
+    "prompt_mm": "သင်နေ့စဉ်စားတဲ့ အစားအသောက်တွေ၊ အကြိုက်ဆုံးဟင်းလျာနဲ့ အပြင်မှာစားတာကို ကြိုက်သလား၊ အိမ်မှာချက်စားတာကို ကြိုက်သလားဆိုတာကို စာကြောင်း ၅ ကြောင်းမှ ၈ ကြောင်းအတွင်း ရေးသားပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "Daily meals",
+      "Cooking habits",
+      "Favorite dishes",
+      "Street food",
+      "Healthy choices",
+      "Taste preferences",
+      "Eating out",
+      "Drinks"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and confidence.",
+    "speak_aloud_mm": "ရေးပြီးသွားတဲ့အကြောင်းအရာကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ပါ။ ဒါက သင့်ရဲ့ ပြောဆိုမှု ပိုမိုချောမွေ့လာစေဖို့ ကူညီပေးပါလိမ့်မယ်။"
+  }
+}

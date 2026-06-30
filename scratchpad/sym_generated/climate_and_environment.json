@@ -1,0 +1,561 @@
+{
+  "id": "climate_and_environment",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "Climate & the Environment",
+  "title_mm": "ရာသီဥတုပြောင်းလဲမှုနှင့် ပတ်ဝန်းကျင်",
+  "promise_en": "Master the vocabulary and structure to discuss environmental issues confidently in English.",
+  "promise_mm": "ပတ်ဝန်းကျင်ဆိုင်ရာ ပြဿနာတွေကို အင်္ဂလိပ်လို ယုံကြည်မှုရှိရှိ ဆွေးနွေးနိုင်စေမယ့် စကားလုံးတွေနဲ့ ဝါကျဖွဲ့နည်းတွေကို လေ့လာရမှာပါ။",
+  "intro_en": "Climate change is a global challenge. This topic gives you the tools to express your concerns, discuss causes and effects, and suggest solutions for a cleaner future.",
+  "intro_mm": "ရာသီဥတုပြောင်းလဲမှုဟာ ကမ္ဘာလုံးဆိုင်ရာ စိန်ခေါ်မှုတစ်ခုပါ။ ဒီခေါင်းစဉ်က သင့်အနေနဲ့ ပတ်ဝန်းကျင်အပေါ် စိုးရိမ်ချက်တွေ၊ အကြောင်းရင်းနဲ့ အကျိုးဆက်တွေ၊ ဖြေရှင်းနည်းတွေကို အင်္ဂလိပ်လို ပြောပြနိုင်ဖို့ ကူညီပေးပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the topic",
+      "move_mm": "ခေါင်းစဉ်ကို စတင်မိတ်ဆက်နည်း",
+      "items": [
+        {
+          "text_en": "Climate change is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a major challenge",
+          "gloss_mm": "ရာသီဥတုပြောင်းလဲမှုက ပြဿနာကြီးတစ်ခု ဖြစ်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Pollution is becoming a serious issue in Yangon.",
+          "highlight": "a serious issue",
+          "swap_en": "a major concern · a growing problem",
+          "gloss_mm": "ရန်ကုန်မှာ လေထုညစ်ညမ်းမှုက စိုးရိမ်စရာ ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Many people believe that global warming is getting worse.",
+          "highlight": "getting worse",
+          "swap_en": "reaching a critical point · spiraling out of control",
+          "gloss_mm": "ကမ္ဘာကြီးပူနွေးလာမှုက ပိုဆိုးလာနေတယ်လို့ လူအများက ယုံကြည်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Environmental degradation poses a significant threat to our future.",
+          "highlight": "a significant threat",
+          "swap_en": "an urgent challenge · a global crisis",
+          "gloss_mm": "သဘာဝပတ်ဝန်းကျင် ပျက်စီးယိုယွင်းမှုက ကျွန်တော်တို့ရဲ့ အနာဂတ်အတွက် ကြီးမားတဲ့ ခြိမ်းခြောက်မှုတစ်ခု ဖြစ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိအခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The weather is changing a lot.",
+          "highlight": "changing a lot",
+          "swap_en": "getting hotter · getting unpredictable · becoming very strange",
+          "gloss_mm": "ရာသီဥတုက အများကြီး ပြောင်းလဲနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Pollution is becoming a serious problem.",
+          "highlight": "a serious problem",
+          "swap_en": "a major concern · a global crisis · a big challenge",
+          "gloss_mm": "ညစ်ညမ်းမှုက ပြဿနာကြီးတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "One major cause of this is plastic waste.",
+          "highlight": "One major cause of this",
+          "swap_en": "The main reason for this · A key factor in this",
+          "gloss_mm": "ဒါရဲ့ အဓိကအကြောင်းရင်းတစ်ခုကတော့ ပလတ်စတစ်အမှိုက်တွေပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Rapid urban development is putting pressure on our environment.",
+          "highlight": "putting pressure on",
+          "swap_en": "having a negative impact on · taking a toll on",
+          "gloss_mm": "မြို့ပြဖွံ့ဖြိုးတိုးတက်မှုမြန်ဆန်လာတာက ပတ်ဝန်းကျင်ကို ဖိအားတွေ ဖြစ်စေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating there is a debate",
+      "move_mm": "ဆွေးနွေးစရာ ဖြစ်နေကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "People have different views on climate change.",
+          "highlight": "different views on",
+          "swap_en": "mixed opinions about · divided opinions regarding",
+          "gloss_mm": "ရာသီဥတုပြောင်းလဲမှုနဲ့ ပတ်သက်ပြီး လူတွေမှာ အမြင်သဘောထား အမျိုးမျိုး ရှိကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is a hot topic of debate these days.",
+          "highlight": "a hot topic of debate",
+          "swap_en": "a controversial issue · a highly debated subject",
+          "gloss_mm": "ဒါကတော့ ဒီနေ့ခေတ်မှာ လူပြောများပြီး အငြင်းပွားစရာ ဖြစ်နေတဲ့ ကိစ္စပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The environmental impact remains a point of contention.",
+          "highlight": "a point of contention",
+          "swap_en": "a subject of ongoing discussion · a matter of intense debate",
+          "gloss_mm": "သဘာဝပတ်ဝန်းကျင်အပေါ် သက်ရောက်မှုကတော့ အခုထိ ဆွေးနွေးငြင်းခုံနေရဆဲ အချက်တစ်ခုပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the causes",
+      "move_mm": "အကြောင်းရင်းကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "One major cause is air pollution.",
+          "highlight": "air pollution",
+          "swap_en": "deforestation · plastic waste · global warming",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုကတော့ လေထုညစ်ညမ်းမှုပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Many people believe that factories are the main culprit.",
+          "highlight": "factories",
+          "swap_en": "cars · plastic use · burning trash",
+          "gloss_mm": "စက်ရုံတွေက အဓိကတရားခံလို့ လူအတော်များများ ယုံကြည်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This issue is largely driven by rapid urbanization.",
+          "highlight": "rapid urbanization",
+          "swap_en": "industrial growth · excessive consumption · unsustainable farming",
+          "gloss_mm": "ဒီပြဿနာက မြို့ပြအဆမတန် တိုးချဲ့လာမှုကြောင့် ဖြစ်လာတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the consequences/effects",
+      "move_mm": "အကျိုးဆက်တွေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "This causes a lot of problems.",
+          "highlight": "a lot of problems",
+          "swap_en": "many difficulties · serious issues · big changes",
+          "gloss_mm": "ဒါက ပြဿနာအများကြီးကို ဖြစ်စေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It leads to more extreme weather.",
+          "highlight": "leads to",
+          "swap_en": "results in · causes · contributes to",
+          "gloss_mm": "ဒါက ပိုမိုပြင်းထန်တဲ့ ရာသီဥတုအခြေအနေတွေကို ဖြစ်ပေါ်စေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This is having a negative impact on our environment.",
+          "highlight": "having a negative impact on",
+          "swap_en": "taking a toll on · putting a strain on · causing damage to",
+          "gloss_mm": "ဒါက ကျွန်တော်တို့ရဲ့ ပတ်ဝန်းကျင်အပေါ် ဆိုးကျိုးသက်ရောက်မှုတွေ ရှိနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "These changes result in severe consequences for local farmers.",
+          "highlight": "severe consequences for",
+          "swap_en": "devastating effects on · long-term challenges for",
+          "gloss_mm": "ဒီပြောင်းလဲမှုတွေက ဒေသခံတောင်သူတွေအတွက် ဆိုးရွားတဲ့ အကျိုးဆက်တွေကို ဖြစ်ပေါ်စေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting two sides of an argument",
+      "move_mm": "အမြင်နှစ်မျိုးကို နှိုင်းယှဉ်တင်ပြနည်း",
+      "items": [
+        {
+          "text_en": "Some people think climate change is real, but others disagree.",
+          "highlight": "Some people think",
+          "swap_en": "Many people believe · Most people feel",
+          "gloss_mm": "ရာသီဥတုပြောင်းလဲမှုဟာ တကယ်ဖြစ်ပျက်နေတယ်လို့ တချို့က ယုံကြည်ကြပေမဲ့ တချို့ကတော့ လက်မခံကြဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "On one hand, factories provide jobs; on the other hand, they pollute our air.",
+          "highlight": "On one hand",
+          "swap_en": "For one thing · To begin with",
+          "gloss_mm": "တစ်ဖက်မှာ စက်ရုံတွေက အလုပ်အကိုင်ပေးတယ်၊ နောက်တစ်ဖက်မှာတော့ သူတို့က လေထုကို ညစ်ညမ်းစေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "While some argue that development is our priority, others point to the urgent need for environmental protection.",
+          "highlight": "While some argue that",
+          "swap_en": "Although it is argued that · Despite the claim that",
+          "gloss_mm": "တိုးတက်ရေးက အဓိကလို့ တချို့က ငြင်းခုံကြပေမဲ့ တချို့ကတော့ ပတ်ဝန်းကျင်ထိန်းသိမ်းရေးက အရေးတကြီး လိုအပ်နေတယ်လို့ ထောက်ပြကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It is true that plastic is convenient, yet we must consider its long-term impact on the planet.",
+          "highlight": "It is true that",
+          "swap_en": "Admittedly · It cannot be denied that",
+          "gloss_mm": "ပလတ်စတစ်က သုံးရတာ အဆင်ပြေတာ အမှန်ပါပဲ၊ ဒါပေမဲ့ ကမ္ဘာကြီးပေါ်မှာ သူ့ရဲ့ ရေရှည်သက်ရောက်မှုကိုတော့ ကျွန်တော်တို့ စဉ်းစားရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting urgency",
+      "move_mm": "အရေးတကြီးလုပ်ဆောင်ဖို့ လိုကြောင်းပြောနည်း",
+      "items": [
+        {
+          "text_en": "This is a serious problem now.",
+          "highlight": "a serious problem",
+          "swap_en": "a big issue · an urgent matter · a global concern",
+          "gloss_mm": "ဒါက အခုဆိုရင် အရေးကြီးတဲ့ ပြဿနာတစ်ခု ဖြစ်လာပါပြီ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We need to act fast to save the environment.",
+          "highlight": "act fast",
+          "swap_en": "take immediate action · do something now · stop waiting",
+          "gloss_mm": "ပတ်ဝန်းကျင်ကို ထိန်းသိမ်းဖို့အတွက် ကျွန်တော်တို့ အမြန်ဆုံး လှုပ်ရှားဖို့ လိုအပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Climate change is becoming an emergency that we cannot ignore.",
+          "highlight": "an emergency that we cannot ignore",
+          "swap_en": "a crisis we must face · a threat to our future",
+          "gloss_mm": "ရာသီဥတုပြောင်းလဲမှုဟာ လျစ်လျူရှုလို့မရတဲ့ အရေးပေါ်အခြေအနေတစ်ခု ဖြစ်လာနေပါပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It is high time we addressed these environmental issues.",
+          "highlight": "high time",
+          "swap_en": "the right moment · long overdue",
+          "gloss_mm": "ဒီပတ်ဝန်းကျင်ဆိုင်ရာ ပြဿနာတွေကို အခုချက်ချင်း ကိုင်တွယ်ဖြေရှင်းသင့်တဲ့ အချိန်ရောက်ပါပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing personal observations",
+      "move_mm": "ကိုယ်တွေ့မြင်ရတာတွေကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "The weather is getting hotter every year.",
+          "highlight": "getting hotter",
+          "swap_en": "getting colder · becoming more unpredictable · changing fast",
+          "gloss_mm": "ရာသီဥတုက နှစ်တိုင်း ပိုပိုပူလာတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I've noticed that we have less rain these days.",
+          "highlight": "less rain",
+          "swap_en": "more extreme heat · more floods · shorter winters",
+          "gloss_mm": "ဒီရက်ပိုင်းတွေမှာ မိုးရွာတာ နည်းလာတယ်လို့ သတိထားမိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It seems like the seasons are shifting compared to the past.",
+          "highlight": "shifting",
+          "swap_en": "changing · becoming irregular · getting mixed up",
+          "gloss_mm": "အရင်တုန်းကနဲ့စာရင် ရာသီဥတုအပြောင်းအလဲတွေက ပုံမှန်မဟုတ်တော့သလိုပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Extreme heat waves have become increasingly frequent lately.",
+          "highlight": "increasingly frequent",
+          "swap_en": "more common · a regular occurrence · a daily struggle",
+          "gloss_mm": "နောက်ပိုင်းမှာ အပူလှိုင်းတွေက ခဏခဏ ဖြစ်လာတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your opinion",
+      "move_mm": "ကိုယ့်ရဲ့ အမြင်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think climate change is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a major concern · a global crisis",
+          "gloss_mm": "ရာသီဥတုပြောင်းလဲမှုက ပြဿနာကြီးတစ်ခုလို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I personally feel that plastic waste is getting out of control.",
+          "highlight": "getting out of control",
+          "swap_en": "becoming a major threat · reaching a critical point · a growing concern",
+          "gloss_mm": "ပလတ်စတစ်အမှိုက်တွေက ထိန်းမနိုင်သိမ်းမရ ဖြစ်လာတယ်လို့ ကျွန်တော်ကိုယ်တိုင် ခံစားရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "From my perspective, the excessive use of plastic bags is the primary cause of pollution.",
+          "highlight": "the primary cause of",
+          "swap_en": "the main driver behind · the root cause of · the biggest contributor to",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ပလတ်စတစ်အိတ်တွေ အလွန်အကျွံသုံးတာက ညစ်ညမ်းမှုရဲ့ အဓိကတရားခံပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It is my firm belief that we should take immediate action to protect our environment.",
+          "highlight": "my firm belief",
+          "swap_en": "my strong opinion · my personal conviction",
+          "gloss_mm": "ကျွန်ုပ်တို့ရဲ့ ပတ်ဝန်းကျင်ကို ကာကွယ်ဖို့ ချက်ချင်းလုပ်ဆောင်သင့်တယ်ဆိုတာ ကျွန်တော့်ရဲ့ ခိုင်မာတဲ့အမြင်ပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting individual actions",
+      "move_mm": "တစ်ဦးချင်းလုပ်ဆောင်နိုင်တာကို အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "You should use less plastic.",
+          "highlight": "use less plastic",
+          "swap_en": "recycle your trash · save electricity · use public transport",
+          "gloss_mm": "ပလတ်စတစ် သုံးတာ လျှော့သင့်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is a good idea to carry your own shopping bag.",
+          "highlight": "carry your own shopping bag",
+          "swap_en": "bring your own water bottle · switch to LED bulbs · unplug your devices",
+          "gloss_mm": "ဈေးဝယ်သွားရင် ကိုယ့်အိတ်ကိုယ် ယူသွားတာ အကောင်းဆုံးပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We really ought to be more mindful of our daily energy consumption.",
+          "highlight": "be more mindful of our daily energy consumption",
+          "swap_en": "reduce our personal carbon footprint · adopt more sustainable daily habits",
+          "gloss_mm": "နေ့စဉ် လျှပ်စစ်ဓာတ်အား သုံးစွဲမှုအပေါ် ပိုပြီး သတိထားဖို့ လိုအပ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting government actions",
+      "move_mm": "အစိုးရလုပ်ဆောင်သင့်တာကို အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "The government should ban plastic bags.",
+          "highlight": "ban plastic bags",
+          "swap_en": "limit car traffic · plant more trees · promote recycling",
+          "gloss_mm": "အစိုးရအနေနဲ့ ပလတ်စတစ်အိတ်တွေကို ပိတ်ပင်သင့်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is time for the authorities to invest in renewable energy.",
+          "highlight": "invest in renewable energy",
+          "swap_en": "improve public transport · enforce strict pollution laws · support green businesses",
+          "gloss_mm": "အာဏာပိုင်တွေအနေနဲ့ ပြန်လည်ပြည့်ဖြိုးမြဲစွမ်းအင်ကဏ္ဍမှာ ရင်းနှီးမြှုပ်နှံဖို့ အချိန်တန်ပြီ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The government ought to prioritize sustainable urban planning to reduce emissions.",
+          "highlight": "prioritize sustainable urban planning",
+          "swap_en": "implement stricter carbon taxes · incentivize eco-friendly technologies · mandate waste management reforms",
+          "gloss_mm": "အစိုးရအနေနဲ့ ဓာတ်ငွေ့ထုတ်လွှတ်မှု လျှော့ချဖို့ ရေရှည်တည်တံ့တဲ့ မြို့ပြစီမံကိန်းတွေကို ဦးစားပေး လုပ်ဆောင်သင့်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing the past and present",
+      "move_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "The weather was cooler in the past.",
+          "highlight": "in the past",
+          "swap_en": "ten years ago · when I was a child",
+          "gloss_mm": "အရင်တုန်းက ရာသီဥတုက ပိုအေးတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It’s getting much hotter compared to previous years.",
+          "highlight": "compared to previous years",
+          "swap_en": "compared to when I was young · unlike in the old days",
+          "gloss_mm": "အရင်နှစ်တွေနဲ့ ယှဉ်ရင် အခုပိုပြီး ပူလာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We used to see more trees, but now it’s all concrete buildings.",
+          "highlight": "We used to see",
+          "swap_en": "We used to have · There used to be",
+          "gloss_mm": "အရင်တုန်းကတော့ သစ်ပင်တွေ ပိုတွေ့ရတယ်၊ အခုတော့ အဆောက်အအုံတွေပဲ ရှိတော့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The drastic shift in local temperatures is a stark contrast to what it was like a decade ago.",
+          "highlight": "a stark contrast to",
+          "swap_en": "a complete change from · a noticeable difference from",
+          "gloss_mm": "အခုဖြစ်နေတဲ့ အပူချိန်ပြောင်းလဲမှုက လွန်ခဲ့တဲ့ဆယ်နှစ်ကနဲ့စာရင် အများကြီးကွာခြားနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing or disagreeing with a view",
+      "move_mm": "အမြင်တစ်ခုအပေါ် သဘောတူ/မတူ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I agree that plastic waste is a big problem.",
+          "highlight": "I agree that",
+          "swap_en": "I don't think that · I totally agree that",
+          "gloss_mm": "ပလတ်စတစ်အမှိုက်တွေက ပြဿနာကြီးတစ်ခုဆိုတာကို ကျွန်တော် သဘောတူပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "You have a point, but climate change affects everyone.",
+          "highlight": "You have a point, but",
+          "swap_en": "I see your point, but · That is true, but",
+          "gloss_mm": "ပြောတာလည်း ဟုတ်ပါတယ်၊ ဒါပေမဲ့ ရာသီဥတုပြောင်းလဲမှုက လူတိုင်းကို ထိခိုက်စေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I strongly disagree with the idea that individuals can't make a difference.",
+          "highlight": "I strongly disagree with the idea that",
+          "swap_en": "I couldn't agree more with the idea that · I partially agree with the idea that",
+          "gloss_mm": "တစ်ဦးတစ်ယောက်ချင်းစီက ဘာမှပြောင်းလဲလို့မရဘူးဆိုတဲ့ အယူအဆကို ကျွန်တော် လုံးဝ လက်မခံပါဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing future expectations",
+      "move_mm": "အနာဂတ်အတွက် မျှော်လင့်ချက်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think the weather will get hotter.",
+          "highlight": "get hotter",
+          "swap_en": "change a lot · get more unpredictable · become extreme",
+          "gloss_mm": "ရာသီဥတုက ပိုပူလာလိမ့်မယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We're going to see more floods in the future.",
+          "highlight": "see more floods",
+          "swap_en": "face more water shortages · experience stronger storms · have more heatwaves",
+          "gloss_mm": "အနာဂတ်မှာ ရေကြီးမှုတွေ ပိုဖြစ်လာတာကို တွေ့ရလိမ့်မယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It's likely that our environment will suffer if we don't act now.",
+          "highlight": "will suffer",
+          "swap_en": "will deteriorate · will be permanently damaged · will change for the worse",
+          "gloss_mm": "အခုချက်ချင်း မလုပ်ဆောင်ရင် ပတ်ဝန်းကျင်က ထိခိုက်နစ်နာလာဖို့ များတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm concerned that the next generation will face a climate crisis.",
+          "highlight": "will face a climate crisis",
+          "swap_en": "will deal with severe pollution · will live in a much harsher environment · will struggle with resource scarcity",
+          "gloss_mm": "နောက်လာမယ့်မျိုးဆက်တွေက ရာသီဥတုဆိုင်ရာ အကျပ်အတည်းတွေကို ရင်ဆိုင်ရမှာ စိုးရိမ်မိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your thoughts",
+      "move_mm": "အနှစ်ချုပ်ပြီး အဆုံးသတ်နည်း",
+      "items": [
+        {
+          "text_en": "It is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a major concern · a global challenge",
+          "gloss_mm": "ဒါက ကြီးမားတဲ့ ပြဿနာတစ်ခုပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We really need to do something about this.",
+          "highlight": "do something about this",
+          "swap_en": "take action now · make a change · work together on this",
+          "gloss_mm": "ဒီကိစ္စနဲ့ပတ်သက်ပြီး တစ်ခုခု လုပ်ဖို့ တကယ် လိုအပ်နေပါပြီ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It is time we take the environment seriously.",
+          "highlight": "take the environment seriously",
+          "swap_en": "act to save our planet · focus on sustainability · change our habits",
+          "gloss_mm": "သဘာဝပတ်ဝန်းကျင်ကို အလေးအနက်ထားဖို့ အချိန်တန်ပါပြီ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Ultimately, we must address these climate challenges for future generations.",
+          "highlight": "address these climate challenges",
+          "swap_en": "tackle these environmental threats · confront the climate crisis",
+          "gloss_mm": "အနှစ်ချုပ်ရရင်တော့ နောင်လာနောက်သားတွေအတွက် ဒီရာသီဥတုဆိုင်ရာ စိန်ခေါ်မှုတွေကို ကျွန်တော်တို့ ဖြေရှင်းကြရပါမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss the impact of climate change in Myanmar or globally. Describe the main causes, how it affects our daily lives, and suggest what individuals or the government can do to improve the situation.",
+    "prompt_mm": "ရာသီဥတုပြောင်းလဲမှုက မြန်မာပြည်မှာ ဒါမှမဟုတ် ကမ္ဘာမှာ ဘယ်လိုသက်ရောက်မှုရှိလဲ ဆွေးနွေးပါ။ အဓိကဖြစ်စေတဲ့ အကြောင်းရင်းတွေ၊ နေ့စဉ်ဘဝကို ဘယ်လိုထိခိုက်လဲ၊ နောက်ပြီး လူတစ်ဦးချင်းစီ ဒါမှမဟုတ် အစိုးရအနေနဲ့ ဒီအခြေအနေကို ပိုကောင်းအောင် ဘာတွေလုပ်နိုင်မလဲဆိုတာ ရေးသားပါ။",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Current situation",
+      "Main causes",
+      "Environmental impact",
+      "Comparing past and present",
+      "Individual solutions",
+      "Government roles",
+      "Personal opinion"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to check for flow and natural pronunciation.",
+    "speak_aloud_mm": "သင်ရေးထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခေါက်၊ ၃ ခေါက်လောက် ဖတ်ကြည့်ပါ။ စီးဆင်းမှုရှိမရှိနဲ့ အသံထွက် မှန်မမှန် စစ်ဆေးပါ။"
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "id": "rich_and_poor",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "Rich & Poor",
+  "title_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူ",
+  "promise_en": "Master the vocabulary to discuss socio-economic inequality and express your opinion on social justice confidently.",
+  "promise_mm": "လူ့အဖွဲ့အစည်းရဲ့ ချမ်းသာ/ဆင်းရဲ ကွာဟမှုအကြောင်းကို ကိုယ့်အမြင်နဲ့တကွ ယုံကြည်ချက်ရှိရှိ ပြောဆိုနိုင်အောင် ကူညီပေးပါမယ်။",
+  "intro_en": "Discussions about wealth inequality are common in Myanmar tea shops and workplaces. This topic gives you the tools to move beyond simple observations and debate the deeper causes and solutions.",
+  "intro_mm": "မြန်မာနိုင်ငံက လက်ဖက်ရည်ဆိုင်တွေ၊ ရုံးတွေမှာ ချမ်းသာ/ဆင်းရဲ ကွာဟမှုအကြောင်း မကြာခဏ ပြောဆိုကြလေ့ရှိပါတယ်။ ဒီသင်ခန်းစာကတော့ ဒီလိုအကြောင်းအရာတွေကို ပိုပြီးကျယ်ကျယ်ပြန့်ပြန့်၊ အကြောင်းပြချက်ခိုင်ခိုင်မာမာနဲ့ ဆွေးနွေးနိုင်ဖို့ ကူညီပေးမှာပါ။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the issue",
+      "move_mm": "ပြဿနာတစ်ခုကို စတင်ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "The gap between rich and poor is growing.",
+          "highlight": "growing",
+          "swap_en": "becoming a problem · widening · getting worse",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူကြားက ကွာဟချက်က ပိုကြီးလာနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Many people think that poverty is a serious issue.",
+          "highlight": "poverty",
+          "swap_en": "the wealth gap · rising inequality · the cost of living",
+          "gloss_mm": "ဆင်းရဲနွမ်းပါးမှုက ပြဿနာကြီးတစ်ခုလို့ လူအများက ထင်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Economic inequality has become a pressing concern in our society.",
+          "highlight": "a pressing concern",
+          "swap_en": "a critical issue · a major challenge · a topic of debate",
+          "gloss_mm": "စီးပွားရေးမညီမျှမှုဟာ ကျွန်တော်တို့ လူ့အဖွဲ့အစည်းမှာ အရေးတကြီး ဖြေရှင်းရမယ့် ကိစ္စဖြစ်လာတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိအခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The gap between rich and poor is growing.",
+          "highlight": "The gap between rich and poor",
+          "swap_en": "The income inequality · The difference in living standards",
+          "gloss_mm": "ချမ်းသာတဲ့သူနဲ့ ဆင်းရဲတဲ့သူကြားက ကွာဟချက်က ပိုကြီးလာနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Many families are struggling to make ends meet.",
+          "highlight": "struggling to make ends meet",
+          "swap_en": "finding it hard to survive · finding it difficult to cover daily expenses",
+          "gloss_mm": "မိသားစုတော်တော်များများက စားဝတ်နေရေးအတွက် ရုန်းကန်နေရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It is becoming a serious problem for our society.",
+          "highlight": "a serious problem for our society",
+          "swap_en": "a major concern for everyone · a growing challenge in our country",
+          "gloss_mm": "ဒါက ကျွန်တော်တို့ လူ့အဖွဲ့အစည်းအတွက် အရေးကြီးတဲ့ ပြဿနာတစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The disparity in wealth is widening significantly.",
+          "highlight": "disparity in wealth",
+          "swap_en": "economic divide · economic imbalance",
+          "gloss_mm": "ချမ်းသာကြွယ်ဝမှုကွာဟချက်က သိသိသာသာကို ပိုကျယ်ပြန့်လာနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting the gap between rich and poor",
+      "move_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူ ကွာဟချက်ကို ထောက်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The gap between the rich and the poor is very big.",
+          "highlight": "very big",
+          "swap_en": "growing · widening · becoming a problem",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူကြားက ကွာဟချက်က အရမ်းကြီးမားနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We see a growing divide in our society nowadays.",
+          "highlight": "a growing divide",
+          "swap_en": "a huge wealth gap · a visible wealth disparity",
+          "gloss_mm": "ဒီနေ့ခေတ် လူ့အဖွဲ့အစည်းမှာ ချမ်းသာသူနဲ့ ဆင်းရဲသူ ကွာဟချက်က ပိုကြီးလာတာကို တွေ့ရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The widening wealth gap is creating serious social inequality.",
+          "highlight": "widening wealth gap",
+          "swap_en": "increasing economic disparity · sharp division between classes",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူ ကွာဟချက် ပိုမိုကြီးထွားလာတာက လူမှုရေးမညီမျှမှုတွေကို ဖြစ်ပေါ်စေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining the causes",
+      "move_mm": "ဖြစ်ပေါ်လာတဲ့ အကြောင်းရင်းတွေကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "One major cause is a lack of job opportunities.",
+          "highlight": "a lack of job opportunities",
+          "swap_en": "poor education · low wages · rising prices",
+          "gloss_mm": "အဓိကအကြောင်းရင်းတစ်ခုကတော့ အလုပ်အကိုင်အခွင့်အလမ်း နည်းပါးတာကြောင့်ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Many people believe that unequal access to education is to blame.",
+          "highlight": "unequal access to education",
+          "swap_en": "the high cost of living · the lack of good healthcare · the wealth gap",
+          "gloss_mm": "ပညာရေးအခွင့်အလမ်း မမျှတတာက အဓိကတရားခံလို့ လူအတော်များများ ယုံကြည်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "This gap is primarily driven by systemic economic disadvantages.",
+          "highlight": "systemic economic disadvantages",
+          "swap_en": "limited social mobility · the rapid rise in inflation · historical economic policies",
+          "gloss_mm": "ဒီကွာဟချက်ကတော့ အဓိကအားဖြင့် စနစ်တကျရှိတဲ့ စီးပွားရေးဆိုင်ရာ အားနည်းချက်တွေကြောင့် ဖြစ်ပေါ်လာတာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing the effects on society",
+      "move_mm": "လူ့အဖွဲ့အစည်းအပေါ် သက်ရောက်မှုတွေကို ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "The gap between rich and poor is a big problem.",
+          "highlight": "a big problem",
+          "swap_en": "a serious issue · a major concern · a growing challenge",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူကြားက ကွာဟချက်က ပြဿနာကြီးတစ်ခု ဖြစ်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "This situation makes it hard for many people to get a good education.",
+          "highlight": "hard for many people to get a good education",
+          "swap_en": "difficult for people to find jobs · tough for families to afford healthcare · hard for students to finish school",
+          "gloss_mm": "ဒီအခြေအနေကြောင့် လူအများစု ပညာရေးကောင်းကောင်းရဖို့ ခက်ခဲနေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Such inequality often leads to social unrest in the community.",
+          "highlight": "leads to social unrest",
+          "swap_en": "results in more crime · creates more division · fuels public frustration",
+          "gloss_mm": "ဒီလိုမညီမျှမှုတွေက လူ့အဖွဲ့အစည်းအတွင်း မငြိမ်မသက်မှုတွေကို မကြာခဏ ဖြစ်ပေါ်စေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It is widely believed that wealth concentration hinders economic progress for everyone.",
+          "highlight": "hinders economic progress",
+          "swap_en": "slows down national growth · limits opportunities for others · stops the economy from developing",
+          "gloss_mm": "ချမ်းသာသူတွေဆီမှာပဲ ငွေကြေးစုပုံနေတာက လူတိုင်းအတွက် စီးပွားရေးတိုးတက်မှုကို အဟန့်အတားဖြစ်စေတယ်လို့ လူအများက ယုံကြည်ကြပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting two sides of an argument",
+      "move_mm": "အမြင်နှစ်မျိုးကို ချိန်ထိုးပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "Some people think money brings happiness, but others disagree.",
+          "highlight": "others disagree",
+          "swap_en": "others feel differently · others hold a different view",
+          "gloss_mm": "တချို့က ငွေက ပျော်ရွှင်မှုပေးတယ်လို့ ထင်ကြပေမယ့် တချို့ကတော့ သဘောမတူကြပါဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "On one hand, wealth provides comfort; on the other hand, it can create stress.",
+          "highlight": "On one hand, wealth provides comfort; on the other hand",
+          "swap_en": "While some argue wealth provides comfort, others argue · While money offers security, it also",
+          "gloss_mm": "တစ်ဖက်ကကြည့်ရင် ချမ်းသာတာက သက်သောင့်သက်သာရှိစေပေမယ့် နောက်တစ်ဖက်ကကြည့်ရင်တော့ စိတ်ဖိစီးမှုတွေ ဖြစ်စေနိုင်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "While many believe money is the key to success, a significant number of people argue that values matter more.",
+          "highlight": "a significant number of people argue that",
+          "swap_en": "critics point out that · skeptics maintain that",
+          "gloss_mm": "ငွေက အောင်မြင်မှုရဲ့ သော့ချက်လို့ လူအများက ယုံကြည်ကြပေမယ့် တန်ဖိုးထားမှုတွေက ပိုအရေးကြီးတယ်လို့ ငြင်းခုံသူတွေလည်း အများကြီးရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It is often argued that poverty is a personal failure, yet evidence suggests it is a systemic issue.",
+          "highlight": "It is often argued that",
+          "swap_en": "Some might contend that · It is frequently claimed that",
+          "gloss_mm": "ဆင်းရဲတာက ကိုယ်ပိုင်အားနည်းချက်လို့ ပြောကြလေ့ရှိပေမယ့် အထောက်အထားတွေအရ ဒါဟာ စနစ်ပိုင်းဆိုင်ရာ ပြဿနာတစ်ခု ဖြစ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing agreement or disagreement",
+      "move_mm": "သဘောတူ/မတူကြောင်း ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I totally agree with that point.",
+          "highlight": "totally agree",
+          "swap_en": "agree · completely agree",
+          "gloss_mm": "အဲဒီအချက်ကို ကျွန်တော် လုံးဝ သဘောတူပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I am afraid I disagree with that.",
+          "highlight": "disagree with that",
+          "swap_en": "don't agree with that · have a different view",
+          "gloss_mm": "ဝမ်းနည်းပါတယ်၊ ကျွန်တော်တော့ အဲဒါကို သဘောမတူဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "You have a point, but it's not always that simple.",
+          "highlight": "You have a point",
+          "swap_en": "I see your point · That makes sense",
+          "gloss_mm": "ပြောတာလည်း ဟုတ်ပါတယ်၊ ဒါပေမဲ့ အမြဲတမ်းတော့ ဒီလောက် မရိုးရှင်းပါဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I see where you're coming from, but I beg to differ.",
+          "highlight": "I beg to differ",
+          "swap_en": "I see it differently · I have a different take",
+          "gloss_mm": "ခင်ဗျား ဘာကိုဆိုလိုမှန်း နားလည်ပါတယ်၊ ဒါပေမဲ့ ကျွန်တော့်အမြင်ကတော့ ကွဲပြားပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "That is exactly my view on the matter.",
+          "highlight": "exactly my view",
+          "swap_en": "entirely my view · precisely my opinion",
+          "gloss_mm": "အဲဒါက ဒီကိစ္စနဲ့ပတ်သက်ပြီး ကျွန်တော့်ရဲ့ အမြင်အတိအကျပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Giving your own view",
+      "move_mm": "ကိုယ့်ရဲ့ ကိုယ်ပိုင်အမြင်ကို ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "I think money is not everything.",
+          "highlight": "money is not everything",
+          "swap_en": "money cannot buy happiness · money isn't the only thing that matters",
+          "gloss_mm": "ပိုက်ဆံဆိုတာ အရာရာမဟုတ်ဘူးလို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my view, the gap between rich and poor is growing wider.",
+          "highlight": "the gap between rich and poor is growing wider",
+          "swap_en": "the wealth gap is becoming a big problem · the divide between the rich and poor is increasing",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ချမ်းသာတဲ့သူနဲ့ ဆင်းရဲတဲ့သူကြားက ကွာဟချက်က ပိုပိုပြီး ကြီးမားလာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Personally, I believe that hard work does not always guarantee wealth.",
+          "highlight": "hard work does not always guarantee wealth",
+          "swap_en": "education is the best way to escape poverty · wealth inequality is a failure of the system",
+          "gloss_mm": "ကျွန်တော့်ကိုယ်ပိုင်အမြင်အရတော့ ကြိုးစားတိုင်းလည်း ချမ်းသာလာမယ်လို့ ပြောလို့မရဘူး။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing past and present",
+      "move_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်နည်း",
+      "items": [
+        {
+          "text_en": "Life was simpler in the past.",
+          "highlight": "simpler",
+          "swap_en": "harder · easier · much better",
+          "gloss_mm": "အရင်တုန်းက ဘဝက ပိုရိုးရှင်းတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "People nowadays are busier than before.",
+          "highlight": "busier than before",
+          "swap_en": "more stressed than before · more focused on money than in the past",
+          "gloss_mm": "အရင်ကထက်စာရင် အခုခေတ်လူတွေက ပိုပြီး အလုပ်ရှုပ်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The gap between the rich and the poor has widened significantly over the years.",
+          "highlight": "widened significantly over the years",
+          "swap_en": "grown much larger recently · become more obvious these days",
+          "gloss_mm": "နှစ်တွေကြာလာတာနဲ့အမျှ ချမ်းသာတဲ့သူနဲ့ ဆင်းရဲတဲ့သူကြားက ကွာဟချက်က ပိုပြီး သိသိသာသာ ကြီးမားလာတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting possible solutions",
+      "move_mm": "ဖြေရှင်းနိုင်မယ့် နည်းလမ်းတွေကို အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "We should help poor people.",
+          "highlight": "help poor people",
+          "swap_en": "create more jobs · improve local education · provide better healthcare",
+          "gloss_mm": "ကျွန်တော်တို့ ဆင်းရဲတဲ့သူတွေကို ကူညီသင့်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "One way to reduce poverty is to create more jobs.",
+          "highlight": "create more jobs",
+          "swap_en": "invest in vocational training · support local small businesses · improve access to credit",
+          "gloss_mm": "ဆင်းရဲမွဲတေမှုကို လျှော့ချဖို့ နည်းလမ်းတစ်ခုက အလုပ်အကိုင်တွေ ပိုဖန်တီးပေးဖို့ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The government could bridge the gap by investing in education.",
+          "highlight": "investing in education",
+          "swap_en": "reforming tax policies · expanding social welfare programs · promoting fair wages",
+          "gloss_mm": "အစိုးရအနေနဲ့ ပညာရေးမှာ ရင်းနှီးမြှုပ်နှံမှုတွေ လုပ်ပေးခြင်းအားဖြင့် ချမ်းသာသူနဲ့ ဆင်းရဲသူကြားက ကွာဟချက်ကို လျှော့ချနိုင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about fairness and equality",
+      "move_mm": "တရားမျှတမှုနဲ့ တန်းတူညီမျှမှုအကြောင်း ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "It is not fair that some people are very rich.",
+          "highlight": "It is not fair that",
+          "swap_en": "It is sad that · It is wrong that",
+          "gloss_mm": "လူတချို့ အရမ်းချမ်းသာနေတာဟာ တရားမျှတမှု မရှိဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Everyone should have equal opportunities in life.",
+          "highlight": "equal opportunities",
+          "swap_en": "the same chances · fair treatment",
+          "gloss_mm": "လူတိုင်းဟာ ဘဝမှာ တန်းတူညီမျှတဲ့ အခွင့်အရေးတွေ ရသင့်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The gap between the rich and the poor is growing.",
+          "highlight": "The gap between the rich and the poor",
+          "swap_en": "The divide between the haves and have-nots",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူကြားက ကွာဟချက်က ပိုပိုပြီး ကြီးမားလာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We need to address the systemic inequality in our society.",
+          "highlight": "address the systemic inequality",
+          "swap_en": "tackle the root causes of poverty · bridge the wealth gap",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ လူ့အဖွဲ့အစည်းမှာရှိတဲ့ စနစ်တကျ မမျှတမှုတွေကို ဖြေရှင်းဖို့ လိုအပ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Using phrases to show complexity",
+      "move_mm": "အခြေအနေက ရှုပ်ထွေးကြောင်း ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "It is a difficult problem.",
+          "highlight": "a difficult problem",
+          "swap_en": "a complex issue · a tough situation · a serious matter",
+          "gloss_mm": "ဒါက ခက်ခဲတဲ့ ပြဿနာတစ်ခုပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "There are many sides to this issue.",
+          "highlight": "many sides to this issue",
+          "swap_en": "both sides to this story · different angles to this problem",
+          "gloss_mm": "ဒီကိစ္စမှာ ရှုထောင့်ပေါင်းစုံ ရှိနေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The gap between rich and poor is not just about money.",
+          "highlight": "not just about money",
+          "swap_en": "not merely a financial issue · more than just income",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူကြားက ကွာဟချက်က ငွေကြေးတစ်ခုတည်းနဲ့ မဆိုင်ပါဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It is complicated because there is no easy answer.",
+          "highlight": "no easy answer",
+          "swap_en": "no simple solution · no quick fix",
+          "gloss_mm": "လွယ်ကူတဲ့ အဖြေမရှိတဲ့အတွက် ဒါက ရှုပ်ထွေးပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "We must look at the bigger picture to understand it.",
+          "highlight": "look at the bigger picture",
+          "swap_en": "see the whole picture · consider the broader context",
+          "gloss_mm": "ဒီအကြောင်းကို နားလည်ဖို့အတွက် အခြေအနေတစ်ခုလုံးကို ခြုံငုံကြည့်ဖို့ လိုပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Giving an example to support your point",
+      "move_mm": "ကိုယ့်အချက်ကို ထောက်ခံဖို့ ဥပမာပေးနည်း",
+      "items": [
+        {
+          "text_en": "For example, many rich people donate money to pagodas.",
+          "highlight": "For example",
+          "swap_en": "Take for instance · To illustrate this",
+          "gloss_mm": "ဥပမာအားဖြင့် ချမ်းသာတဲ့သူအများစုက ဘုရားပုထိုးတွေမှာ လှူဒါန်းကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "A good case in point is how expensive healthcare remains for the poor.",
+          "highlight": "A good case in point",
+          "swap_en": "A clear example is · Just look at",
+          "gloss_mm": "ဒီအချက်ကိုပြဖို့ အကောင်းဆုံးဥပမာကတော့ ဆင်းရဲသူတွေအတွက် ကျန်းမာရေးစောင့်ရှောက်မှုက ဘယ်လောက်တောင် ဈေးကြီးနေသေးလဲဆိုတာပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "To illustrate, the gap between the wealthy and the working class is widening in Yangon.",
+          "highlight": "To illustrate",
+          "swap_en": "To demonstrate this · As a concrete example",
+          "gloss_mm": "ရှင်းပြရရင် ရန်ကုန်မှာ ချမ်းသာတဲ့သူတွေနဲ့ အလုပ်သမားလူတန်းစားကြားက ကွာဟချက်က ပိုပြီးတော့ ကျယ်ပြန့်လာနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Asking for someone's opinion",
+      "move_mm": "သူတစ်ပါးရဲ့ အမြင်ကို မေးမြန်းနည်း",
+      "items": [
+        {
+          "text_en": "What do you think about the gap between the rich and the poor?",
+          "highlight": "What do you think about",
+          "swap_en": "How do you feel about · What is your opinion on",
+          "gloss_mm": "ချမ်းသာတဲ့သူနဲ့ ဆင်းရဲတဲ့သူကြားက ကွာဟချက်အပေါ် ဘယ်လိုမြင်လဲ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Do you agree that the gap between the rich and the poor is growing?",
+          "highlight": "Do you agree that",
+          "swap_en": "Would you say that · Is it true that",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူကြားက ကွာဟချက် ပိုကြီးလာတယ်ဆိုတာကို သဘောတူလား။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm curious to hear your take on the rising cost of living in Yangon.",
+          "highlight": "your take on",
+          "swap_en": "your thoughts on · your perspective on",
+          "gloss_mm": "ရန်ကုန်မှာ ကုန်ဈေးနှုန်းတွေ တက်လာတာနဲ့ ပတ်သက်ပြီး မင်းအမြင်ကို သိချင်မိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "To what extent do you feel that wealth inequality is a major issue in our country?",
+          "highlight": "To what extent do you feel that",
+          "swap_en": "How significant do you think it is that",
+          "gloss_mm": "ကျွန်တော်တို့နိုင်ငံမှာ ချမ်းသာဆင်းရဲ ကွာဟမှုက ဘယ်လောက်အထိ အရေးကြီးတဲ့ ပြဿနာလို့ ထင်လဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your thoughts",
+      "move_mm": "ကိုယ့်အယူအဆကို နိဂုံးချုပ်ပြောဆိုနည်း",
+      "items": [
+        {
+          "text_en": "Money is not everything.",
+          "highlight": "not everything",
+          "swap_en": "not the only thing · not the key to happiness",
+          "gloss_mm": "ပိုက်ဆံဆိုတာ အရာရာမဟုတ်ပါဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We should care more about equality.",
+          "highlight": "care more about",
+          "swap_en": "focus more on · pay more attention to",
+          "gloss_mm": "လူမှုရေး တန်းတူညီမျှမှုကို ပိုပြီး အလေးထားသင့်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Bridging the wealth gap is a huge challenge.",
+          "highlight": "Bridging the wealth gap",
+          "swap_en": "Reducing income inequality · Closing the divide between rich and poor",
+          "gloss_mm": "ချမ်းသာသူနဲ့ ဆင်းရဲသူကြား ကွာဟချက်ကို လျှော့ချဖို့ဆိုတာ ကြီးမားတဲ့ စိန်ခေါ်မှုတစ်ခုပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss the wealth gap in society. Explain why it exists, how it affects people's lives, and what you think could be done to reduce it.",
+    "prompt_mm": "လူ့အဖွဲ့အစည်းထဲက ချမ်းသာ/ဆင်းရဲ ကွာဟမှုအကြောင်းကို ဆွေးနွေးပါ။ ဘာကြောင့် ဒီလိုဖြစ်ရသလဲ၊ လူတွေရဲ့ဘဝကို ဘယ်လိုသက်ရောက်မှုရှိလဲ၊ ဒါကိုလျှော့ချဖို့ ဘာတွေလုပ်သင့်တယ်လို့ ထင်လဲဆိုတာ ရေးသားပါ။",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Current situation",
+      "Main causes",
+      "Social impact",
+      "Fairness debate",
+      "Personal view",
+      "Potential solutions"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to ensure your arguments flow naturally and your pronunciation is clear.",
+    "speak_aloud_mm": "ကိုယ့်ရဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ကြည့်ပါ။ စကားလုံးတွေ စီးဆင်းမှုရှိမရှိနဲ့ အသံထွက်ရှင်းလင်းမှု ရှိမရှိ စစ်ဆေးပါ။"
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "id": "online_vs_classroom",
+  "level": 2,
+  "domain_en": "Giving your opinion",
+  "domain_mm": "ကိုယ့်အမြင် ဖော်ပြခြင်း",
+  "title_en": "Online vs Classroom Learning",
+  "title_mm": "အွန်လိုင်းသင်တန်းနှင့် လူကိုယ်တိုင်တက်ရသည့် သင်တန်းများ",
+  "promise_en": "Learn to confidently express your preferences between online and physical classes with clear reasons.",
+  "promise_mm": "အွန်လိုင်းသင်တန်းနဲ့ လူကိုယ်တိုင်တက်ရတဲ့ သင်တန်းတွေထဲမှာ ဘယ်ဟာကို ပိုသဘောကျလဲဆိုတာကို အကြောင်းပြချက်နဲ့တကွ ယုံကြည်မှုရှိရှိ ပြောဆိုနိုင်လာပါမယ်။",
+  "intro_en": "Choosing between the convenience of online learning and the interaction of a physical classroom is a common debate. This topic helps you express your side clearly.",
+  "intro_mm": "အွန်လိုင်းကနေ သင်ယူတာက ပိုအဆင်ပြေလား၊ လူကိုယ်တိုင် သင်တန်းတက်တာက ပိုထိရောက်လားဆိုတာဟာ ဆွေးနွေးစရာ အကြောင်းအရာကောင်းတစ်ခုပါ။ ဒီသင်ခန်းစာက ကိုယ့်အမြင်ကို ရှင်းရှင်းလင်းလင်း ပြောတတ်ဖို့ ကူညီပေးပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your general preference",
+      "move_mm": "ကိုယ့်ရဲ့ အကြိုက်ကို အရင်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think classroom learning is better.",
+          "highlight": "classroom learning",
+          "swap_en": "online learning · face-to-face classes · studying from home",
+          "gloss_mm": "ကျွန်တော်ကတော့ စာသင်ခန်းထဲမှာပဲ တက်ရတာ ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, online classes are more convenient.",
+          "highlight": "more convenient",
+          "swap_en": "more effective · more flexible · easier to manage",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အွန်လိုင်းကနေ သင်ရတာ ပိုပြီး အဆင်ပြေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I’d say I prefer the traditional classroom setting.",
+          "highlight": "prefer the traditional classroom setting",
+          "swap_en": "prefer the convenience of online learning · lean towards self-study online",
+          "gloss_mm": "ကျွန်တော့်အတွက်ဆိုရင်တော့ ရိုးရိုးတန်းခွဲတွေမှာ တက်ရတာကို ပိုသဘောကျတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing an opinion clearly",
+      "move_mm": "ကိုယ့်အမြင်ကို ရှင်းရှင်းလင်းလင်း ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think classroom learning is better.",
+          "highlight": "classroom learning",
+          "swap_en": "online learning · face-to-face classes · studying from home",
+          "gloss_mm": "စာသင်ခန်းထဲမှာ သင်ရတာ ပိုကောင်းတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, online classes are more flexible.",
+          "highlight": "online classes",
+          "swap_en": "classroom learning · group study sessions · remote learning",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အွန်လိုင်းသင်တန်းတွေက အချိန်အခါအလိုက် ပိုပြီး လိုက်လျောညီထွေဖြစ်စေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I would say that classroom interaction is irreplaceable.",
+          "highlight": "classroom interaction",
+          "swap_en": "the convenience of online study · the discipline of physical classrooms",
+          "gloss_mm": "စာသင်ခန်းထဲမှာ အပြန်အလှန် ဆွေးနွေးရတာမျိုးကို ဘာနဲ့မှ အစားထိုးလို့မရဘူးလို့ ဆိုချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Listing pros of online learning",
+      "move_mm": "အွန်လိုင်းသင်တန်းရဲ့ အားသာချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think online learning is very convenient.",
+          "highlight": "very convenient",
+          "swap_en": "easy to manage · really flexible · super time-saving",
+          "gloss_mm": "အွန်လိုင်းသင်တန်းက တော်တော်လေး အဆင်ပြေတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, the best thing about online classes is the flexibility.",
+          "highlight": "the best thing about online classes is the flexibility",
+          "swap_en": "the great part is that I can stay home · the biggest plus is saving travel time",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အွန်လိုင်းသင်တန်းရဲ့ အကောင်းဆုံးအချက်က အချိန်အခါအလိုက် ပြောင်းလဲလေ့လာနိုင်တာပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I’d say online learning allows me to balance my job and studies much better.",
+          "highlight": "balance my job and studies much better",
+          "swap_en": "study at my own pace · cut down on my daily travel costs",
+          "gloss_mm": "အွန်လိုင်းသင်တန်းက အလုပ်နဲ့ ပညာရေးကို ဟန်ချက်ညီညီ ပိုလုပ်နိုင်စေတယ်လို့ ပြောရမှာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning cons of online learning",
+      "move_mm": "အွန်လိုင်းသင်တန်းရဲ့ အားနည်းချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think it is hard to stay focused online.",
+          "highlight": "hard to stay focused",
+          "swap_en": "difficult to concentrate · easy to get distracted",
+          "gloss_mm": "အွန်လိုင်းမှာဆိုရင် စိတ်နှစ်ပြီး သင်ဖို့ ခက်တယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, the internet connection is a big problem.",
+          "highlight": "the internet connection is a big problem",
+          "swap_en": "the slow internet is annoying · connection issues are frequent",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အင်တာနက်လိုင်းက အဓိက ပြဿနာပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say you miss out on real interaction with classmates.",
+          "highlight": "miss out on real interaction",
+          "swap_en": "lose the chance for face-to-face discussion · lack the social aspect",
+          "gloss_mm": "အတန်းဖော်တွေနဲ့ တကယ့်မျက်နှာချင်းဆိုင် အပြန်အလှန် ဆွေးနွေးခွင့်တွေကို လက်လွတ်သွားမယ်လို့ ထင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting benefits of classroom learning",
+      "move_mm": "လူကိုယ်တိုင်တက်ရတဲ့ သင်တန်းရဲ့ အားသာချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think classroom learning is better for focus.",
+          "highlight": "better for focus",
+          "swap_en": "easier to understand · more effective · more engaging",
+          "gloss_mm": "လူကိုယ်တိုင်တက်ရတဲ့ သင်တန်းက အာရုံစိုက်ဖို့ ပိုကောင်းတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, you learn more when you're in a real classroom.",
+          "highlight": "learn more",
+          "swap_en": "get more support · stay motivated · build better relationships",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရဆိုရင် လူကိုယ်တိုင်အတန်းထဲမှာ သင်ရတာက ပိုပြီးတော့ ထိရောက်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say being physically present helps you interact with the teacher better.",
+          "highlight": "interact with the teacher better",
+          "swap_en": "ask questions more easily · network with classmates · stay disciplined",
+          "gloss_mm": "လူကိုယ်တိုင်ရောက်နေတာက ဆရာနဲ့ အပြန်အလှန် ဆက်သွယ်ရတာ ပိုအဆင်ပြေစေတယ်လို့ ဆိုရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Pointing out drawbacks of physical classes",
+      "move_mm": "လူကိုယ်တိုင်တက်ရတဲ့ သင်တန်းရဲ့ အားနည်းချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think going to class takes a lot of time.",
+          "highlight": "takes a lot of time",
+          "swap_en": "is very tiring · is quite expensive · is a bit inconvenient",
+          "gloss_mm": "ကျွန်တော်ထင်တာကတော့ သင်တန်းသွားတက်ရတာ အချိန်အများကြီး ပေးရတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, commuting to school is a real hassle.",
+          "highlight": "commuting to school is a real hassle",
+          "swap_en": "traffic in Yangon is exhausting · attending physical classes is tiring · travel time is a total waste",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ကျောင်းကို သွားရလာရတာ တကယ့်ကို အလုပ်ရှုပ်ပြီး ပင်ပန်းတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say the biggest downside is the lack of flexibility with physical classes.",
+          "highlight": "the biggest downside is the lack of flexibility",
+          "swap_en": "the main drawback is the heavy traffic · the biggest issue is the rigid schedule",
+          "gloss_mm": "သင်တန်းတက်ရတဲ့ အဓိကအားနည်းချက်ကတော့ အချိန်ဇယားက ပြောင်းလွယ်ပြင်လွယ် မရှိတာပဲလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Weighing both sides",
+      "move_mm": "နှစ်ဖက်လုံးကို ချိန်ဆပြီး ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think online classes are flexible, but classroom learning is better for focus.",
+          "highlight": "online classes are flexible, but classroom learning is better for focus",
+          "swap_en": "online learning is convenient, but classroom learning offers better interaction · classroom learning is more engaging, but online classes save time",
+          "gloss_mm": "အွန်လိုင်းသင်တန်းတွေက အချိန်ပေးရတာ လွယ်ကူပေမဲ့ လူကိုယ်တိုင်တက်ရတဲ့အတန်းက အာရုံစိုက်ဖို့ ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, online learning is great for saving time, though it lacks the social aspect of being in a classroom.",
+          "highlight": "lacks the social aspect of being in a classroom",
+          "swap_en": "misses out on the face-to-face interaction · doesn't provide the same hands-on experience",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အွန်လိုင်းသင်တန်းက အချိန်ကုန်သက်သာပေမဲ့ အတန်းထဲမှာ သူငယ်ချင်းတွေနဲ့ ဆက်ဆံရတဲ့ အခွင့်အရေးမျိုးတော့ လျော့နည်းသွားတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that while online platforms offer unparalleled convenience, they struggle to replicate the dynamic environment of a physical classroom.",
+          "highlight": "struggle to replicate the dynamic environment of a physical classroom",
+          "swap_en": "can't quite match the spontaneous discussions of a real classroom · fall short in creating the same collaborative atmosphere as a physical classroom",
+          "gloss_mm": "အွန်လိုင်းပလက်ဖောင်းတွေက အဆင်ပြေလွန်းတယ်ဆိုပေမဲ့ တကယ့်အတန်းခန်းထဲမှာရှိတဲ့ တက်ကြွတဲ့ပတ်ဝန်းကျင်မျိုးကိုတော့ အစားထိုးဖို့ ခက်ခဲလိမ့်မယ်လို့ ထင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Using 'On the other hand' for contrast",
+      "move_mm": "အခြားတစ်ဖက်မှာဆိုပြီး ဆန့်ကျင်ဘက် အမြင်ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like online classes. On the other hand, I miss seeing my classmates.",
+          "highlight": "On the other hand",
+          "swap_en": "However · Conversely · Then again",
+          "gloss_mm": "အွန်လိုင်းအတန်းတွေကို သဘောကျတယ်။ တစ်ဖက်မှာလည်း အတန်းဖော်တွေကို မတွေ့ရတော့ လွမ်းမိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, online learning is convenient. On the other hand, it lacks the face-to-face interaction of a classroom.",
+          "highlight": "On the other hand",
+          "swap_en": "However · But then again · At the same time",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အွန်လိုင်းက သင်ရတာ အဆင်ပြေတယ်။ ဒါပေမဲ့ တစ်ဖက်မှာလည်း စာသင်ခန်းထဲကလို လူချင်းတွေ့ပြီး အပြန်အလှန် ဆွေးနွေးရတဲ့ အရသာ မရှိဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say classroom learning is more effective for focus. On the other hand, online options offer much more flexibility for working students.",
+          "highlight": "On the other hand",
+          "swap_en": "Yet · In contrast · Conversely",
+          "gloss_mm": "စာသင်ခန်းထဲမှာ သင်တာက အာရုံစိုက်ဖို့ ပိုကောင်းတယ်လို့ ထင်တယ်။ ဒါပေမဲ့ တစ်ဖက်မှာလည်း အလုပ်လုပ်နေတဲ့ ကျောင်းသားတွေအတွက် အွန်လိုင်းက အချိန်ပေးရတာ ပိုပြီး လွယ်ကူတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing personal experience",
+      "move_mm": "ကိုယ်တိုင်ကြုံခဲ့ရတာကို မျှဝေနည်း",
+      "items": [
+        {
+          "text_en": "I think classroom learning is better for me.",
+          "highlight": "classroom learning",
+          "swap_en": "online learning · face-to-face classes",
+          "gloss_mm": "ကျွန်တော့်အတွက်တော့ စာသင်ခန်းထဲမှာပဲ သင်ရတာ ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, I find it easier to focus in a classroom.",
+          "highlight": "easier to focus",
+          "swap_en": "harder to stay awake · more interactive · more convenient",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ စာသင်ခန်းထဲမှာဆိုရင် အာရုံစိုက်ရတာ ပိုလွယ်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say that attending classes in person helps me build better relationships with my teachers.",
+          "highlight": "build better relationships",
+          "swap_en": "stay motivated · keep on track · manage my time effectively",
+          "gloss_mm": "ကျွန်တော့်အတွေ့အကြုံအရဆိုရင် လူချင်းတွေ့ပြီး သင်ယူတာက ဆရာတွေနဲ့ ပိုပြီး ရင်းနှီးမှုရှိစေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a specific example",
+      "move_mm": "ဥပမာတစ်ခုခုနဲ့ ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "I think online classes are good, for example, for studying English.",
+          "highlight": "for example",
+          "swap_en": "like · for instance",
+          "gloss_mm": "အွန်လိုင်းကနေ အင်္ဂလိပ်စာ လေ့လာတာမျိုးဆိုရင် အဆင်ပြေတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, classroom learning is better, like when we need to practice speaking in front of a group.",
+          "highlight": "like",
+          "swap_en": "for example · such as",
+          "gloss_mm": "လူအများရှေ့မှာ စကားပြောကျင့်ရတဲ့အခါမျိုးဆိုရင်တော့ စာသင်ခန်းထဲမှာ သင်တာ ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say online learning is very flexible, taking the case of someone who works full-time at a Yangon office.",
+          "highlight": "taking the case of",
+          "swap_en": "if we consider · to illustrate with",
+          "gloss_mm": "ရန်ကုန်မှာ အချိန်ပြည့် အလုပ်လုပ်နေရတဲ့သူတွေရဲ့ အခြေအနေကို ကြည့်ရင် အွန်လိုင်းသင်တန်းတွေက ပိုပြီး အချိန်ပေးရတာ လွယ်ကူတယ်လို့ ပြောရမှာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I think classroom learning builds more discipline, for instance, when students have to commute to a school in Mandalay every day.",
+          "highlight": "for instance",
+          "swap_en": "to give an example · as an example",
+          "gloss_mm": "မန္တလေးမှာရှိတဲ့ စာသင်ကျောင်းကို နေ့တိုင်း သွားတက်ရတဲ့ ကျောင်းသားတွေရဲ့ အဖြစ်ကို ကြည့်ရင် စာသင်ခန်းထဲမှာ သင်တာက စည်းကမ်းပိုရှိစေတယ်လို့ ထင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing with an idea",
+      "move_mm": "တစ်စုံတစ်ယောက်ရဲ့ အမြင်ကို ထောက်ခံနည်း",
+      "items": [
+        {
+          "text_en": "I think you're right about online learning.",
+          "highlight": "you're right about",
+          "swap_en": "you're spot on about · you're totally correct about",
+          "gloss_mm": "အွန်လိုင်းကနေ သင်ယူတာနဲ့ ပတ်သက်ပြီး ပြောတာ မှန်ပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I agree that classroom learning is better for networking.",
+          "highlight": "I agree that",
+          "swap_en": "I totally agree that · I'm with you that",
+          "gloss_mm": "စာသင်ခန်းထဲမှာ သင်ယူတာက လူမှုကွန်ရက် တည်ဆောက်ဖို့ ပိုကောင်းတယ်ဆိုတာ ကျွန်တော် ထောက်ခံပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, your point about flexibility is valid.",
+          "highlight": "",
+          "swap_en": "your point about ... makes sense · your point about ... is well-taken",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အဆင်ပြေချောမွေ့မှုနဲ့ ပတ်သက်ပြီး သင်ပြောတဲ့ အချက်က မှန်ကန်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Disagreeing politely",
+      "move_mm": "ယဉ်ယဉ်ကျေးကျေးနဲ့ လက်မခံကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I don't really agree with that.",
+          "highlight": "don't really agree",
+          "swap_en": "don't see it that way · disagree with you",
+          "gloss_mm": "ကျွန်တော်ကတော့ အဲဒီအချက်ကို သိပ်သဘောမတူဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I see your point, but I think classroom learning is still better.",
+          "highlight": "I see your point, but",
+          "swap_en": "That's true, but · I understand where you're coming from, but",
+          "gloss_mm": "ပြောတာတော့ နားလည်ပါတယ်၊ ဒါပေမဲ့ စာသင်ခန်းထဲမှာ သင်ရတာက ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm afraid I have a different opinion on that.",
+          "highlight": "I'm afraid I have a different opinion",
+          "swap_en": "I have to respectfully disagree · I'm not entirely convinced",
+          "gloss_mm": "စိတ်မကောင်းပါဘူး၊ အဲဒီကိစ္စမှာ ကျွန်တော်ကတော့ အမြင်ချင်း မတူဘူးဗျ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about flexibility",
+      "move_mm": "အချိန်အခွင့်အရေးနဲ့ ပတ်သက်ပြီး ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think online learning is very flexible.",
+          "highlight": "very flexible",
+          "swap_en": "easy to manage · convenient for my schedule · helpful for busy people",
+          "gloss_mm": "အွန်လိုင်းကနေ သင်ယူတာက အချိန်အရမ်းပေးရတာ လွယ်ကူတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, online classes fit my schedule better.",
+          "highlight": "fit my schedule better",
+          "swap_en": "suit my lifestyle better · work well with my office hours · allow me to study at my own pace",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အွန်လိုင်းက သင်တန်းတွေက ကျွန်တော့်အချိန်ဇယားနဲ့ ပိုကိုက်ညီတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'd say the ability to study anytime is a huge advantage of online learning.",
+          "highlight": "the ability to study anytime",
+          "swap_en": "the freedom to learn at my own convenience · the flexibility to attend from anywhere",
+          "gloss_mm": "အွန်လိုင်းသင်တန်းရဲ့ အားသာချက်ကတော့ အချိန်မရွေး သင်ယူနိုင်တာ ဖြစ်မယ်လို့ ကျွန်တော်ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing social interaction",
+      "move_mm": "လူမှုဆက်ဆံရေး ထိတွေ့မှုအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think it is easier to make friends in the classroom.",
+          "highlight": "make friends",
+          "swap_en": "get to know people · talk to classmates · meet new people",
+          "gloss_mm": "စာသင်ခန်းထဲမှာဆိုရင် သူငယ်ချင်းဖွဲ့ရတာ ပိုလွယ်တယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, you miss out on the social side of learning online.",
+          "highlight": "the social side of learning",
+          "swap_en": "the human connection · the classroom atmosphere · the face-to-face interaction",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အွန်လိုင်းကနေ သင်ယူတဲ့အခါ လူမှုဆက်ဆံရေးအပိုင်းကို လွတ်သွားသလိုပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I’d say that online classes lack the spontaneous social interaction we have at a physical school.",
+          "highlight": "spontaneous social interaction",
+          "swap_en": "natural interaction · face-to-face communication · real-time social engagement",
+          "gloss_mm": "အွန်လိုင်းအတန်းတွေမှာ ကျောင်းတက်တဲ့အခါမျိုးမှာ ရတတ်တဲ့ သဘာဝကျကျ လူမှုဆက်ဆံမှုမျိုး မရှိဘူးလို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding your opinion",
+      "move_mm": "ကိုယ့်ရဲ့ အမြင်ကို အနှစ်ချုပ် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I think classroom learning is better.",
+          "highlight": "classroom learning is better",
+          "swap_en": "online learning is more convenient · face-to-face interaction is essential",
+          "gloss_mm": "စာသင်ခန်းထဲမှာ သင်ရတာ ပိုကောင်းတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my opinion, both methods have their own pros and cons.",
+          "highlight": "both methods have their own pros and cons",
+          "swap_en": "online classes are great for busy people · classroom learning builds better relationships",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ နည်းလမ်းနှစ်ခုစလုံးမှာ အားသာချက်၊ အားနည်းချက်တွေ ကိုယ်စီရှိကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I would say that a hybrid approach is the most effective way to learn.",
+          "highlight": "a hybrid approach is the most effective way to learn",
+          "swap_en": "classroom learning remains irreplaceable · online learning is the future of education",
+          "gloss_mm": "ကျွန်တော်ကတော့ ပေါင်းစပ်သင်ကြားမှုစနစ်က သင်ယူဖို့အတွက် အထိရောက်ဆုံးပဲလို့ ဆိုချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 6–10 sentences explaining which way of learning you prefer and why. Include one example from your own experience.",
+    "prompt_mm": "သင် ဘယ်လိုပုံစံနဲ့ သင်ယူရတာကို ပိုသဘောကျလဲ၊ ဘာကြောင့်လဲ ဆိုတာကို ၆ ကြောင်းမှ ၁၀ ကြောင်းအတွင်း ရေးသားပါ။ ကိုယ်တိုင် သင်ယူခဲ့ဖူးတဲ့ အတွေ့အကြုံတစ်ခုကိုလည်း ထည့်သွင်းပြောပြပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "Stating preference",
+      "Pros of online",
+      "Cons of physical",
+      "Personal experience",
+      "Flexibility",
+      "Social interaction",
+      "Final conclusion"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and confidence.",
+    "speak_aloud_mm": "ကိုယ့်ရဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ပါ။ ဒါက စကားပြောတဲ့အခါ ယုံကြည်မှုရှိပြီး ပိုချောမွေ့လာဖို့ ကူညီပေးပါလိမ့်မယ်။"
+  }
+}

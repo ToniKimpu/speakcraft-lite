@@ -35,6 +35,11 @@ class Env {
   static String get bunnyVocabBaseUrl =>
       dotenv.env['BUNNY_VOCAB_API_KEY'] ?? '';
 
+  /// Speak Your Mind audio CDN base (root), e.g. `https://pmp-english-app.b-cdn.net/`
+  /// (MUST end with `/`). Optional — clips fall back to on-device TTS without it.
+  /// Stored paths are `bunny/speak_your_mind/level{N}/<topic>/<file>.mp3`.
+  static String get bunnySymBaseUrl => dotenv.env['BUNNY_SYM_API_KEY'] ?? '';
+
   static String get privacyPolicyUrl => dotenv.env['PRIVACY_POLICY']!;
 
   /// Google OAuth web client ID — used as the `serverClientId` for native Google

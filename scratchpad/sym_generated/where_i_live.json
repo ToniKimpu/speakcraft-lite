@@ -1,0 +1,561 @@
+{
+  "id": "where_i_live",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "Where I Live",
+  "title_mm": "ကျွန်တော်/ကျွန်မနေထိုင်ရာ အရပ်",
+  "promise_en": "Master the vocabulary to describe your home, neighborhood, and living situation with confidence.",
+  "promise_mm": "ကိုယ့်ရဲ့နေအိမ်၊ ရပ်ကွက်နဲ့ နေထိုင်မှုပုံစံကို ယုံကြည်မှုရှိရှိနဲ့ အင်္ဂလိပ်လို ဖော်ပြတတ်လာစေရမယ်။",
+  "intro_en": "Talking about where you live is a classic conversation starter. Whether you live in a busy Yangon condo or a quiet neighborhood in Mandalay, these phrases will help you share your story.",
+  "intro_mm": "ကိုယ့်နေအိမ်အကြောင်း ပြောပြတာက မိတ်ဖွဲ့ရာမှာ အသုံးအများဆုံး စကားပြောခေါင်းစဉ်တစ်ခုပါ။ ရန်ကုန်က ကွန်ဒိုပဲဖြစ်ဖြစ်၊ မန္တလေးက တိတ်ဆိတ်တဲ့ ရပ်ကွက်ပဲဖြစ်ဖြစ် ကိုယ့်အကြောင်း ပြောပြဖို့ ဒီအသုံးအနှုန်းတွေကို သုံးနိုင်ပါတယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your current home type",
+      "move_mm": "ကိုယ်နေတဲ့အိမ်အမျိုးအစား ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I live in an apartment.",
+          "highlight": "an apartment",
+          "swap_en": "a house · a condo · a flat",
+          "gloss_mm": "ကျွန်တော် အိမ်ခန်း (တိုက်ခန်း) မှာ နေပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm currently staying in a house.",
+          "highlight": "a house",
+          "swap_en": "an apartment · a rented house · a condo",
+          "gloss_mm": "ကျွန်တော် အခုလက်ရှိ အိမ်မှာ နေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We live in a high-rise condo downtown.",
+          "highlight": "a high-rise condo",
+          "swap_en": "a traditional house · a semi-detached house · a cozy apartment",
+          "gloss_mm": "ကျွန်တော်တို့ မြို့လယ်က အထပ်မြင့် ကွန်ဒိုမှာ နေကြပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "My place is a modest house in the suburbs.",
+          "highlight": "a modest house",
+          "swap_en": "a spacious apartment · a small flat · an old family house",
+          "gloss_mm": "ကျွန်တော့်အိမ်က မြို့စွန်မှာရှိတဲ့ ရိုးရိုးရှင်းရှင်း အိမ်လေးတစ်လုံးပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Saying how long you have lived there",
+      "move_mm": "အဲဒီမှာနေတာ ဘယ်လောက်ကြာပြီလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I have lived here for five years.",
+          "highlight": "five years",
+          "swap_en": "two years · ten years · a long time",
+          "gloss_mm": "ဒီမှာနေတာ ၅ နှစ်ရှိပါပြီ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I've been living here since 2015.",
+          "highlight": "since 2015",
+          "swap_en": "since I was a kid · since last year · since I got married",
+          "gloss_mm": "ဒီမှာ ၂၀၁၅ ခုနှစ်ကတည်းက နေလာတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've called this place home for over a decade.",
+          "highlight": "over a decade",
+          "swap_en": "almost five years · most of my life · about three years",
+          "gloss_mm": "ဒီနေရာကို ကျွန်တော့်အိမ်လို့ သတ်မှတ်ပြီး နေလာတာ ၁၀ နှစ်ကျော်ပါပြီ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing who you live with",
+      "move_mm": "ဘယ်သူတွေနဲ့ အတူနေလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I live with my parents.",
+          "highlight": "my parents",
+          "swap_en": "my siblings · my grandparents · my brother",
+          "gloss_mm": "ကျွန်တော် မိဘတွေနဲ့ အတူနေပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I live alone in an apartment.",
+          "highlight": "alone",
+          "swap_en": "with my best friend · with my cousin · with a roommate",
+          "gloss_mm": "ကျွန်တော် တိုက်ခန်းမှာ တစ်ယောက်တည်း နေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm currently sharing a house with some colleagues.",
+          "highlight": "sharing a house with some colleagues",
+          "swap_en": "sharing a flat with two friends · living in a dormitory with classmates",
+          "gloss_mm": "အခုလောလောဆယ်တော့ လုပ်ဖော်ကိုင်ဖက်တွေနဲ့ အိမ်ခွဲနေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning the number of rooms",
+      "move_mm": "အခန်းအရေအတွက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My apartment has two rooms.",
+          "highlight": "two rooms",
+          "swap_en": "three rooms · a bedroom and a living room · four rooms",
+          "gloss_mm": "ကျွန်တော့်တိုက်ခန်းမှာ အခန်းနှစ်ခန်း ရှိပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "There are three rooms in my house.",
+          "highlight": "three rooms",
+          "swap_en": "four rooms · five rooms · two bedrooms",
+          "gloss_mm": "ကျွန်တော့်အိမ်မှာ အခန်းသုံးခန်း ရှိပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We live in a two-room apartment.",
+          "highlight": "two-room",
+          "swap_en": "three-room · spacious four-room · small one-room",
+          "gloss_mm": "ကျွန်တော်တို့က အခန်းနှစ်ခန်းပါတဲ့ တိုက်ခန်းမှာ နေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Our place features two main rooms and a kitchen.",
+          "highlight": "two main rooms",
+          "swap_en": "three spacious rooms · four separate rooms",
+          "gloss_mm": "ကျွန်တော်တို့အိမ်မှာ အဓိကအခန်း နှစ်ခန်းနဲ့ မီးဖိုချောင် ပါပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your favorite room",
+      "move_mm": "အကြိုက်ဆုံးအခန်းအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My favorite room is the bedroom.",
+          "highlight": "the bedroom",
+          "swap_en": "the living room · the kitchen · the balcony",
+          "gloss_mm": "ကျွန်တော့်အကြိုက်ဆုံးအခန်းက အိပ်ခန်းပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I spend most of my time in the living room.",
+          "highlight": "most of my time",
+          "swap_en": "a lot of my time · all my free time",
+          "gloss_mm": "ကျွန်တော် အချိန်အများစုကို ဧည့်ခန်းထဲမှာပဲ ကုန်ဆုံးလေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The bedroom is where I feel most relaxed.",
+          "highlight": "where I feel most relaxed",
+          "swap_en": "where I can focus best · where I feel most comfortable",
+          "gloss_mm": "အိပ်ခန်းက ကျွန်တော် အေးအေးဆေးဆေး အရှိဆုံးနေရာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I really love the balcony because of the view of the city.",
+          "highlight": "the view of the city",
+          "swap_en": "the quiet atmosphere · the natural light",
+          "gloss_mm": "မြို့ရှုခင်းကို မြင်ရလို့ ကျွန်တော် လသာဆောင်ကို အတော်သဘောကျတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Saying where your house is located",
+      "move_mm": "အိမ်ဘယ်နားမှာရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I live in Sanchaung.",
+          "highlight": "Sanchaung",
+          "swap_en": "Hledan · downtown Yangon · Mandalay",
+          "gloss_mm": "ကျွန်တော် စမ်းချောင်းမှာ နေပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "My house is near the Shwedagon Pagoda.",
+          "highlight": "near the Shwedagon Pagoda",
+          "swap_en": "near the tea shop · close to the main road · right next to the bus stop",
+          "gloss_mm": "ကျွန်တော့်အိမ်က ရွှေတိဂုံဘုရားအနားမှာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I live in a quiet area in Kamayut.",
+          "highlight": "a quiet area in Kamayut",
+          "swap_en": "a busy street in downtown · a peaceful neighborhood in Insein",
+          "gloss_mm": "ကျွန်တော် ကမာရွတ်က တိတ်ဆိတ်တဲ့ ရပ်ကွက်လေးမှာ နေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "My place is located in a residential area, about twenty minutes from the city center.",
+          "highlight": "a residential area",
+          "swap_en": "the heart of the city · the outskirts of town",
+          "gloss_mm": "ကျွန်တော့်အိမ်က မြို့လယ်ကနေ မိနစ် ၂၀ လောက်ဝေးတဲ့ လူနေရပ်ကွက်ထဲမှာ ရှိပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about nearby landmarks",
+      "move_mm": "အနီးနားက အမှတ်အသားနေရာတွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "There is a pagoda near my house.",
+          "highlight": "a pagoda",
+          "swap_en": "a tea shop · a market · a bus stop · a school",
+          "gloss_mm": "ကျွန်တော့်အိမ်နားမှာ ဘုရားတစ်ဆူ ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I live near the main market.",
+          "highlight": "the main market",
+          "swap_en": "the bus station · the big supermarket · the city center",
+          "gloss_mm": "ကျွန်တော်က ဈေးကြီးနားမှာ နေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "You can find a popular tea shop just around the corner.",
+          "highlight": "just around the corner",
+          "swap_en": "a stone's throw away · within walking distance",
+          "gloss_mm": "ထောင့်ကွေ့လေးမှာပဲ နာမည်ကြီး လက်ဖက်ရည်ဆိုင် ရှိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning essential shops nearby",
+      "move_mm": "အနီးနားက ဈေးဆိုင်တွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "There is a grocery shop near my house.",
+          "highlight": "a grocery shop",
+          "swap_en": "a tea shop · a pharmacy · a small market",
+          "gloss_mm": "ကျွန်တော့်အိမ်နားမှာ ကုန်စုံဆိုင်တစ်ဆိုင် ရှိတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I can find a convenience store just around the corner.",
+          "highlight": "just around the corner",
+          "swap_en": "within walking distance · a five-minute walk away",
+          "gloss_mm": "လမ်းထောင့်မှာပဲ ကုန်စုံဆိုင် (Convenience store) ရှိတော့ အဆင်ပြေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It is very convenient to have a wet market within walking distance.",
+          "highlight": "within walking distance",
+          "swap_en": "right across the street · a short walk away",
+          "gloss_mm": "လမ်းလျှောက်သွားလို့ရတဲ့အကွာအဝေးမှာ ဈေးရှိတော့ အရမ်းအဆင်ပြေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "My neighborhood is well-served by several local shops.",
+          "highlight": "well-served by several local shops",
+          "swap_en": "packed with all the essential shops · conveniently located near all the main shops",
+          "gloss_mm": "ကျွန်တော့်ရပ်ကွက်က လိုအပ်တဲ့ဆိုင်တွေနဲ့ ပြည့်စုံတော့ အရမ်းအဆင်ပြေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the neighborhood atmosphere",
+      "move_mm": "ရပ်ကွက်ရဲ့ ပတ်ဝန်းကျင်အခြေအနေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My neighborhood is very quiet.",
+          "highlight": "very quiet",
+          "swap_en": "very noisy · quite busy · very peaceful",
+          "gloss_mm": "ကျွန်တော့်ရပ်ကွက်က အရမ်းတိတ်ဆိတ်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It's a really lively area to live in.",
+          "highlight": "really lively",
+          "swap_en": "pretty crowded · nice and safe · very friendly",
+          "gloss_mm": "ဒီနေရာက နေရတာ တကယ်ကို စည်ကားတဲ့နေရာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The neighborhood has a friendly vibe.",
+          "highlight": "a friendly vibe",
+          "swap_en": "a laid-back atmosphere · a bustling feel · a welcoming community",
+          "gloss_mm": "ဒီရပ်ကွက်က ရင်းနှီးဖော်ရွေတဲ့ ပတ်ဝန်းကျင်မျိုး ရှိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It’s a nice place with a sense of community.",
+          "highlight": "a sense of community",
+          "swap_en": "a strong neighborhood spirit · a calm atmosphere",
+          "gloss_mm": "ဒီနေရာက လူအချင်းချင်း ရိုင်းပင်းကူညီတတ်တဲ့ စိတ်ဓာတ်ရှိတဲ့ နေရာကောင်းလေးပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about public transport access",
+      "move_mm": "သွားရေးလာရေး အဆင်ပြေမှု ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It is easy to get a bus near my house.",
+          "highlight": "easy to get a bus",
+          "swap_en": "hard to find a taxi · easy to catch a bus · convenient to travel",
+          "gloss_mm": "ကျွန်တော့်အိမ်နားမှာ ဘတ်စ်ကားစီးရတာ လွယ်ကူပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I live close to the bus stop.",
+          "highlight": "close to the bus stop",
+          "swap_en": "right next to the station · just a short walk from the bus stop · within walking distance of the train station",
+          "gloss_mm": "ကျွန်တော်က ကားမှတ်တိုင်နဲ့ နီးနီးလေးမှာ နေတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Public transport is very convenient around here.",
+          "highlight": "very convenient",
+          "swap_en": "quite accessible · easily accessible · super handy",
+          "gloss_mm": "ဒီနားတစ်ဝိုက်မှာ သွားရေးလာရေး အရမ်းအဆင်ပြေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm well-connected to the city center by the bus line.",
+          "highlight": "well-connected to the city center",
+          "swap_en": "within easy reach of downtown · well-served by public transport",
+          "gloss_mm": "ဒီဘတ်စ်ကားလိုင်းတွေနဲ့ မြို့ထဲကို သွားရလာရတာ အရမ်းအဆင်ပြေပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Saying what you like about your home",
+      "move_mm": "အိမ်ရဲ့ အကြိုက်ဆုံးအချက် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like my apartment because it is quiet.",
+          "highlight": "it is quiet",
+          "swap_en": "it is big · it is near my office · it has a nice view",
+          "gloss_mm": "ကျွန်တော့်တိုက်ခန်းက တိတ်ဆိတ်လို့ သဘောကျတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "What I love most about my neighborhood is the convenience.",
+          "highlight": "the convenience",
+          "swap_en": "the friendly neighbors · the tea shop nearby · the peaceful atmosphere",
+          "gloss_mm": "ကျွန်တော့်ရပ်ကွက်မှာ အကြိုက်ဆုံးကတော့ သွားလာရ လွယ်ကူတာပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I really enjoy the fact that it is within walking distance of the market.",
+          "highlight": "within walking distance of the market",
+          "swap_en": "close to the bus stop · far from the busy city center · right next to the pagoda",
+          "gloss_mm": "ဈေးနားမှာဆိုတော့ လမ်းလျှောက်သွားလို့ရတာကို အကြိုက်ဆုံးပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning noise or quietness levels",
+      "move_mm": "ဆူညံသလား၊ တိတ်ဆိတ်သလား ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My neighborhood is very quiet.",
+          "highlight": "very quiet",
+          "swap_en": "very noisy · quite loud · peaceful",
+          "gloss_mm": "ကျွန်တော့်ရပ်ကွက်က အရမ်းတိတ်ဆိတ်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It's a bit noisy because of the traffic.",
+          "highlight": "a bit noisy",
+          "swap_en": "pretty noisy · really loud · fairly quiet",
+          "gloss_mm": "ယာဉ်ကြောပိတ်ဆို့မှုတွေကြောင့် နည်းနည်းဆူညံတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "My street is usually quiet at night.",
+          "highlight": "usually quiet at night",
+          "swap_en": "very busy during the day · noisy all the time · peaceful in the mornings",
+          "gloss_mm": "ကျွန်တော့်လမ်းက ညဘက်ဆိုရင် တိတ်ဆိတ်လေ့ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Living near the tea shop can be quite noisy at times.",
+          "highlight": "quite noisy at times",
+          "swap_en": "extremely loud during the day · surprisingly quiet at night",
+          "gloss_mm": "လက်ဖက်ရည်ဆိုင်နားမှာနေရတာ တစ်ခါတလေ အရမ်းဆူညံနိုင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing your view from the house",
+      "move_mm": "အိမ်ကနေ လှမ်းမြင်ရတဲ့ ရှုခင်းအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I can see the street from my window.",
+          "highlight": "the street",
+          "swap_en": "the pagoda · the garden · the park · the whole city",
+          "gloss_mm": "ကျွန်တော့်ပြတင်းပေါက်ကနေ လမ်းမကြီးကို မြင်ရတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "My balcony overlooks a busy market.",
+          "highlight": "overlooks a busy market",
+          "swap_en": "faces a quiet street · looks out onto a green park · has a view of the Shwedagon Pagoda",
+          "gloss_mm": "ကျွန်တော့် လသာဆောင်ကနေဆိုရင် လူစည်ကားတဲ့ ဈေးကို လှမ်းမြင်ရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The view from my room is absolutely stunning at sunset.",
+          "highlight": "absolutely stunning",
+          "swap_en": "really peaceful · quite breathtaking · nice and relaxing",
+          "gloss_mm": "ကျွန်တော့်အခန်းကနေ မြင်ရတဲ့ ရှုခင်းက နေဝင်ချိန်ဆိုရင် တကယ်ကို လှပလွန်းပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about future housing plans",
+      "move_mm": "နောင်တစ်ချိန် အိမ်ပြောင်းဖို့ အစီအစဉ် ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I want to move to a new apartment.",
+          "highlight": "a new apartment",
+          "swap_en": "a bigger house · a condo in downtown · a quiet neighborhood",
+          "gloss_mm": "ကျွန်တော် အခန်းသစ်တစ်ခုကို ပြောင်းချင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm planning to move out soon.",
+          "highlight": "move out soon",
+          "swap_en": "buy my own place · move to a different township · relocate for work",
+          "gloss_mm": "ကျွန်တော် မကြာခင် အိမ်ပြောင်းဖို့ စီစဉ်နေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I'm looking into buying a house in Yangon.",
+          "highlight": "looking into buying a house",
+          "swap_en": "considering moving to a condo · saving up for a new apartment",
+          "gloss_mm": "ရန်ကုန်မှာ အိမ်တစ်လုံး ဝယ်ဖို့ စဉ်းစားနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Ideally, I'd like to settle down in a quieter area.",
+          "highlight": "settle down in a quieter area",
+          "swap_en": "move closer to the city center · find a place with a nice view",
+          "gloss_mm": "ဖြစ်နိုင်ရင်တော့ ပိုတိတ်ဆိတ်တဲ့နေရာမျိုးမှာ အခြေချချင်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing how you feel about living there",
+      "move_mm": "အဲဒီနေရာမှာ နေရတာ ဘယ်လိုခံစားရလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I like living in my neighborhood.",
+          "highlight": "like living in",
+          "swap_en": "love living in · enjoy living in · don't really like living in",
+          "gloss_mm": "ကျွန်တော် နေတဲ့ရပ်ကွက်လေးကို သဘောကျတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It's a very peaceful place to live.",
+          "highlight": "a very peaceful place",
+          "swap_en": "a very convenient place · a really noisy place · a lively area",
+          "gloss_mm": "ဒီနေရာက နေရတာ အရမ်းအေးချမ်းတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I've grown quite fond of my area over the years.",
+          "highlight": "grown quite fond of",
+          "swap_en": "really gotten used to · started to appreciate · grown attached to",
+          "gloss_mm": "ဒီမှာနေလာတာကြာတော့ ဒီနေရာလေးကို သံယောဇဉ်တွယ်လာတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "The best thing about my neighborhood is that it's so accessible.",
+          "highlight": "so accessible",
+          "swap_en": "so quiet · so close to the tea shops · full of life",
+          "gloss_mm": "ကျွန်တော့်ရပ်ကွက်ရဲ့ အားသာချက်ကတော့ သွားလာရလွယ်ကူတာပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 5–8 sentences about your home and neighborhood. Describe your house, who you live with, and one thing you really like about your area.",
+    "prompt_mm": "ကိုယ့်ရဲ့နေအိမ်နဲ့ ရပ်ကွက်အကြောင်း ၅ ကြောင်းမှ ၈ ကြောင်းကြား ရေးသားကြည့်ပါ။ ကိုယ့်အိမ်အကြောင်း၊ ဘယ်သူတွေနဲ့နေလဲ၊ ပြီးတော့ ကိုယ့်ရပ်ကွက်မှာ ဘာကို အကြိုက်ဆုံးလဲဆိုတာ ထည့်ရေးပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "My home type",
+      "Duration of stay",
+      "Family members",
+      "Nearby shops",
+      "Neighborhood vibe",
+      "Transportation",
+      "Favorite feature"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to ensure your sentences flow naturally and clearly.",
+    "speak_aloud_mm": "ရေးထားတဲ့အဖြေကို အသံထွက်ပြီး ၂ ခါ၊ ၃ ခါလောက် ဖတ်ကြည့်ပါ။ ကိုယ့်အသံကို သဘာဝကျပြီး ရှင်းလင်းမှုရှိမရှိ စစ်ဆေးကြည့်ပါ။"
+  }
+}

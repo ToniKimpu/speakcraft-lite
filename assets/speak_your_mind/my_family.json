@@ -1,0 +1,762 @@
+{
+  "id": "my_family",
+  "level": 1,
+  "domain_en": "Me & my everyday life",
+  "domain_mm": "ကျွန်တော့်/ကျွန်မ နေ့စဉ်ဘဝ",
+  "title_en": "My Family",
+  "title_mm": "ကျွန်တော့်မိသားစု",
+  "promise_en": "After this topic you'll be able to talk about your own family — who's in it, what they do, and how you feel about them.",
+  "promise_mm": "ဒီ topic ပြီးရင် ကိုယ့်မိသားစုအကြောင်း — ဘယ်သူတွေ ပါလဲ၊ ဘာတွေ လုပ်ကြလဲ၊ ကိုယ်က ဘယ်လို ခံစားရလဲ ဆိုတာ ကိုယ်တိုင် ပြောတတ်/ရေးတတ် သွားပါမယ်။",
+  "intro_en": "These are the moves you need to talk about family. You don't have to use them all — pick the ones that fit YOUR family, then write about it.",
+  "intro_mm": "အောက်က စကားစုလေးတွေက မိသားစုအကြောင်း ပြောဖို့ 'လက်နက်တန်ဆာ' တွေပါ။ အကုန် သုံးစရာ မလိုပါဘူး — ကိုယ့်မိသားစုနဲ့ ကိုက်တာလေးတွေ ရွေးပြီး ကိုယ်တိုင် ရေးကြည့်ပါ။",
+  "toolbox": [
+    {
+      "move_en": "Saying your family size",
+      "move_mm": "မိသားစု ဘယ်နှစ်ယောက်ရှိလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I have a family of six.",
+          "highlight": "a family of six",
+          "swap_en": "a family of four · a big family · a small family",
+          "gloss_mm": "ကျွန်တော့်မိသားစုမှာ ၆ ယောက်ရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m1-i1.mp3"
+        },
+        {
+          "text_en": "There are five of us.",
+          "highlight": "five of us",
+          "swap_en": "four of us · six of us · just the three of us",
+          "gloss_mm": "ကျွန်တော်တို့ ငါးယောက် ရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m1-i2.mp3"
+        },
+        {
+          "text_en": "We're a family of four.",
+          "highlight": "a family of four",
+          "swap_en": "a family of five · a family of three",
+          "gloss_mm": "ကျွန်တော်တို့က လေးယောက်သား မိသားစုပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m1-i3.mp3"
+        },
+        {
+          "text_en": "Mine is quite a big family.",
+          "highlight": "quite a big family",
+          "swap_en": "quite a small family · a fairly small family",
+          "gloss_mm": "ကျွန်တော့်မိသားစုက တော်တော်ကြီးတဲ့ မိသားစုပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m1-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Saying who you live with",
+      "move_mm": "ဘယ်သူနဲ့ အတူနေလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I live with my parents.",
+          "highlight": "live with my parents",
+          "swap_en": "live with my grandparents · live with my wife and kids",
+          "gloss_mm": "ကျွန်တော် မိဘတွေနဲ့ အတူနေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m2-i1.mp3"
+        },
+        {
+          "text_en": "I live on my own.",
+          "highlight": "on my own",
+          "swap_en": "with a roommate · away from my family",
+          "gloss_mm": "ကျွန်တော် တစ်ယောက်တည်း နေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m2-i2.mp3"
+        },
+        {
+          "text_en": "I live with my wife and two kids.",
+          "highlight": "my wife and two kids",
+          "swap_en": "my husband · my son · my three children",
+          "gloss_mm": "ကျွန်တော် ဇနီးနဲ့ ကလေး နှစ်ယောက်နဲ့ နေတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m2-i3.mp3"
+        },
+        {
+          "text_en": "We all live under one roof.",
+          "highlight": "under one roof",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်တို့ အားလုံး အိမ်တစ်အိမ်တည်းမှာ အတူနေကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m2-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing what kind of family you have",
+      "move_mm": "ဘယ်လို မိသားစုမျိုးလဲ ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "We're a typical nuclear family.",
+          "highlight": "nuclear family",
+          "swap_en": "a small family",
+          "gloss_mm": "ကျွန်တော်တို့က မိဘနဲ့ သားသမီးပဲ ပါတဲ့ ပုံမှန် မိသားစုလေးပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m3-i1.mp3"
+        },
+        {
+          "text_en": "We're a close-knit family.",
+          "highlight": "a close-knit family",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်တို့က ရင်းနှီးခင်မင်တဲ့ မိသားစုပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m3-i2.mp3"
+        },
+        {
+          "text_en": "I come from an extended family.",
+          "highlight": "an extended family",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်က ဆွေမျိုးစုံ တွဲနေတဲ့ မိသားစုကပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about relatives on each side",
+      "move_mm": "ဖအေ/အမေဘက် ဆွေမျိုးတွေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I have two uncles on my father's side.",
+          "highlight": "on my father's side",
+          "swap_en": "on my mother's side · my aunt · my cousins",
+          "gloss_mm": "အဖေ့ဘက်က ဦးလေး နှစ်ယောက် ရှိတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m4-i1.mp3"
+        },
+        {
+          "text_en": "Most of my relatives live nearby.",
+          "highlight": "my relatives",
+          "swap_en": "my cousins · my aunts and uncles",
+          "gloss_mm": "ကျွန်တော့်ဆွေမျိုး အများစုက အနီးအနားမှာ နေကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m4-i2.mp3"
+        },
+        {
+          "text_en": "We have relatives scattered all over the country.",
+          "highlight": "scattered all over the country",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်တို့ ဆွေမျိုးတွေက တိုင်းပြည်အနှံ့ ပျံ့နှံ့နေတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m4-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing someone's age",
+      "move_mm": "အသက်အရွယ် ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "My father is fifty years old.",
+          "highlight": "fifty years old",
+          "swap_en": "forty · sixty-five · in his thirties",
+          "gloss_mm": "အဖေက အသက် ၅၀ ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m5-i1.mp3"
+        },
+        {
+          "text_en": "My younger brother is still a teenager.",
+          "highlight": "a teenager",
+          "swap_en": "a child · about my age",
+          "gloss_mm": "ကျွန်တော့်ညီက ဆယ်ကျော်သက်ပဲ ရှိသေးတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m5-i2.mp3"
+        },
+        {
+          "text_en": "My father is in his fifties.",
+          "highlight": "in his fifties",
+          "swap_en": "in her forties · in his late sixties · in his middle age",
+          "gloss_mm": "အဖေက အသက် ၅၀ ကျော် (ငါးဆယ့်ဂဏန်း) ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m5-i3.mp3"
+        },
+        {
+          "text_en": "My parents are getting on a bit now.",
+          "highlight": "getting on a bit",
+          "swap_en": "",
+          "gloss_mm": "မိဘတွေ အသက်နည်းနည်း ကြီးလာပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m5-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Saying your position in the family",
+      "move_mm": "မိသားစုထဲက ကိုယ့်အနေအထား ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I'm the eldest of three children.",
+          "highlight": "the eldest of three children",
+          "swap_en": "the youngest of four · the second of three",
+          "gloss_mm": "ကျွန်တော်က ကလေးသုံးယောက်ထဲ အကြီးဆုံးပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m6-i1.mp3"
+        },
+        {
+          "text_en": "I'm the youngest in my family.",
+          "highlight": "the youngest",
+          "swap_en": "the eldest · the middle child",
+          "gloss_mm": "ကျွန်တော်က မိသားစုထဲ အငယ်ဆုံးပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m6-i2.mp3"
+        },
+        {
+          "text_en": "I'm an only child.",
+          "highlight": "an only child",
+          "swap_en": "the only son · the only daughter",
+          "gloss_mm": "ကျွန်တော်က တစ်ဦးတည်းသော ကလေးပါ (မောင်နှမ မရှိဘူး)။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m6-i3.mp3"
+        },
+        {
+          "text_en": "I'm the middle child.",
+          "highlight": "the middle child",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်က အလယ်က ကလေးပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m6-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Saying what family members do",
+      "move_mm": "မိသားစုဝင်တွေ ဘာအလုပ်လုပ်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My father is a teacher.",
+          "highlight": "a teacher",
+          "swap_en": "a doctor · a farmer · a driver",
+          "gloss_mm": "အဖေက ဆရာပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m7-i1.mp3"
+        },
+        {
+          "text_en": "My mother is a housewife.",
+          "highlight": "a housewife",
+          "swap_en": "a nurse · a shop owner",
+          "gloss_mm": "အမေက အိမ်ရှင်မ ပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m7-i2.mp3"
+        },
+        {
+          "text_en": "My father works as an engineer.",
+          "highlight": "works as an engineer",
+          "swap_en": "works as a teacher · works in a bank",
+          "gloss_mm": "အဖေက အင်ဂျင်နီယာ အလုပ်လုပ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m7-i3.mp3"
+        },
+        {
+          "text_en": "My grandfather is retired now.",
+          "highlight": "retired now",
+          "swap_en": "",
+          "gloss_mm": "အဘိုးက အခု အငြိမ်းစား ယူထားပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m7-i4.mp3"
+        },
+        {
+          "text_en": "My brother runs his own business.",
+          "highlight": "runs his own business",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော့်အစ်ကိုက ကိုယ်ပိုင်စီးပွားရေး လုပ်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m7-i5.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Saying where your family is from",
+      "move_mm": "မိသားစု ဘယ်ကလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I'm from Yangon.",
+          "highlight": "from Yangon",
+          "swap_en": "from Mandalay · from a small village",
+          "gloss_mm": "ကျွန်တော် ရန်ကုန်ကပါ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m8-i1.mp3"
+        },
+        {
+          "text_en": "I was born and raised in Mandalay.",
+          "highlight": "born and raised in Mandalay",
+          "swap_en": "born and raised in Yangon",
+          "gloss_mm": "ကျွန်တော် မန္တလေးမှာ မွေးဖွားကြီးပြင်းခဲ့တာ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m8-i2.mp3"
+        },
+        {
+          "text_en": "I was born in Bago but grew up in Yangon.",
+          "highlight": "born in Bago but grew up in Yangon",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော် ပဲခူးမှာ မွေးပြီး ရန်ကုန်မှာ ကြီးပြင်းခဲ့တာ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m8-i3.mp3"
+        },
+        {
+          "text_en": "My family originally comes from Shan State.",
+          "highlight": "originally comes from",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော့်မိသားစုက မူရင်းအားဖြင့် ရှမ်းပြည်နယ်ကပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m8-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing what a family member looks like",
+      "move_mm": "မိသားစုဝင်ရဲ့ ရုပ်ရည် ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "My sister has long hair.",
+          "highlight": "has long hair",
+          "swap_en": "is tall · is short · wears glasses",
+          "gloss_mm": "ကျွန်တော့်အစ်မက ဆံပင်ရှည်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m9-i1.mp3"
+        },
+        {
+          "text_en": "He looks just like my father.",
+          "highlight": "looks just like my father",
+          "swap_en": "looks like my mother",
+          "gloss_mm": "သူက အဖေနဲ့ အတိအကျ တူတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m9-i2.mp3"
+        },
+        {
+          "text_en": "I take after my mother.",
+          "highlight": "take after my mother",
+          "swap_en": "take after my father",
+          "gloss_mm": "ကျွန်တော်က အမေ့ကို ဆင်တယ် (ရုပ်/အကျင့်)။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Describing someone's personality",
+      "move_mm": "စရိုက်လက္ခဏာ ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "My mother is very kind.",
+          "highlight": "very kind",
+          "swap_en": "very caring · really friendly · a bit strict",
+          "gloss_mm": "အမေက အရမ်း သဘောကောင်းတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m10-i1.mp3"
+        },
+        {
+          "text_en": "My sister is really hardworking.",
+          "highlight": "really hardworking",
+          "swap_en": "really funny · very quiet · very generous",
+          "gloss_mm": "ကျွန်တော့်အစ်မက တကယ် အလုပ်ကြိုးစားတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m10-i2.mp3"
+        },
+        {
+          "text_en": "My father has a good sense of humour.",
+          "highlight": "a good sense of humour",
+          "swap_en": "",
+          "gloss_mm": "အဖေက ဟာသဉာဏ် ကောင်းတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m10-i3.mp3"
+        },
+        {
+          "text_en": "My dad is a man of few words.",
+          "highlight": "a man of few words",
+          "swap_en": "",
+          "gloss_mm": "အဖေက စကားနည်းတဲ့ လူပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m10-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about relationships and closeness",
+      "move_mm": "ဆက်ဆံရေးနဲ့ ရင်းနှီးမှု ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I love my family.",
+          "highlight": "love my family",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော် မိသားစုကို ချစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m11-i1.mp3"
+        },
+        {
+          "text_en": "I'm very close to my mother.",
+          "highlight": "very close to my mother",
+          "swap_en": "close to my sister · closer to my dad",
+          "gloss_mm": "ကျွန်တော် အမေနဲ့ အရမ်းရင်းနှီးတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m11-i2.mp3"
+        },
+        {
+          "text_en": "My brother and I get along well.",
+          "highlight": "get along well",
+          "swap_en": "don't always get along",
+          "gloss_mm": "ကျွန်တော်နဲ့ အစ်ကိုက အဆင်ပြေတယ် (သင့်မြတ်တယ်)။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m11-i3.mp3"
+        },
+        {
+          "text_en": "We don't always see eye to eye.",
+          "highlight": "see eye to eye",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်တို့ အမြဲတော့ သဘောထား မတိုက်ဆိုင်ကြဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m11-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about marital status",
+      "move_mm": "အိမ်ထောင်ရေး အခြေအနေ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I'm still single.",
+          "highlight": "still single",
+          "swap_en": "married · engaged",
+          "gloss_mm": "ကျွန်တော် အခုထိ လူပျိုပါ (အိမ်ထောင် မရှိသေးဘူး)။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m12-i1.mp3"
+        },
+        {
+          "text_en": "My older sister is married with two kids.",
+          "highlight": "married with two kids",
+          "swap_en": "single · engaged · divorced",
+          "gloss_mm": "အစ်မကြီးက အိမ်ထောင်ကျပြီး ကလေး နှစ်ယောက် ရှိတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m12-i2.mp3"
+        },
+        {
+          "text_en": "My brother got married last year.",
+          "highlight": "got married last year",
+          "swap_en": "got engaged recently",
+          "gloss_mm": "ကျွန်တော့်အစ်ကို မနှစ်က အိမ်ထောင်ကျခဲ့တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m12-i3.mp3"
+        },
+        {
+          "text_en": "My parents have been married for thirty years.",
+          "highlight": "been married for thirty years",
+          "swap_en": "",
+          "gloss_mm": "မိဘတွေ အိမ်ထောင်ကျတာ အနှစ် ၃၀ ရှိပြီ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m12-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about your grandparents",
+      "move_mm": "အဘိုးအဘွား အကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "My grandmother lives with us.",
+          "highlight": "lives with us",
+          "swap_en": "lives nearby · lives in our hometown",
+          "gloss_mm": "အဘွားက ကျွန်တော်တို့နဲ့ အတူနေတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m13-i1.mp3"
+        },
+        {
+          "text_en": "I'm very fond of my grandparents.",
+          "highlight": "fond of my grandparents",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော် အဘိုးအဘွားကို အရမ်း မြတ်နိုးတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m13-i2.mp3"
+        },
+        {
+          "text_en": "My grandfather passed away a few years ago.",
+          "highlight": "passed away a few years ago",
+          "swap_en": "",
+          "gloss_mm": "အဘိုးက လွန်ခဲ့တဲ့ နှစ်အနည်းငယ်က ဆုံးသွားခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about what your family does together",
+      "move_mm": "မိသားစုနဲ့ အတူ ဘာလုပ်လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We eat dinner together every night.",
+          "highlight": "eat dinner together",
+          "swap_en": "watch TV together · cook together",
+          "gloss_mm": "ကျွန်တော်တို့ ညတိုင်း အတူတူ ညစာ စားကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m14-i1.mp3"
+        },
+        {
+          "text_en": "We go to the pagoda together.",
+          "highlight": "go to the pagoda together",
+          "swap_en": "go to the market · travel to our hometown",
+          "gloss_mm": "ကျွန်တော်တို့ ဘုရားကို အတူတူ သွားကြတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m14-i2.mp3"
+        },
+        {
+          "text_en": "On weekends, we often visit my grandparents.",
+          "highlight": "visit my grandparents",
+          "swap_en": "visit our relatives",
+          "gloss_mm": "စနေတနင်္ဂနွေဆို အဘိုးအဘွားဆီ မကြာခဏ သွားလည်ကြတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m14-i3.mp3"
+        },
+        {
+          "text_en": "We try to spend quality time together.",
+          "highlight": "spend quality time together",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်တို့ အတူတူ အချိန်ကောင်းလေးတွေ ဖြတ်သန်းဖို့ ကြိုးစားကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m14-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing how you feel about your family",
+      "move_mm": "မိသားစုအပေါ် ခံစားချက် ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I love my family very much.",
+          "highlight": "love my family very much",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော် မိသားစုကို အရမ်းချစ်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level1/my_family/m15-i1.mp3"
+        },
+        {
+          "text_en": "My family means everything to me.",
+          "highlight": "means everything to me",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော့်အတွက် မိသားစုက အရာအားလုံးပါ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m15-i2.mp3"
+        },
+        {
+          "text_en": "I'm really grateful for my family.",
+          "highlight": "grateful for my family",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော် မိသားစုအတွက် တကယ် ကျေးဇူးတင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level1/my_family/m15-i3.mp3"
+        },
+        {
+          "text_en": "We've been through a lot together.",
+          "highlight": "been through a lot together",
+          "swap_en": "",
+          "gloss_mm": "ကျွန်တော်တို့ အတူတူ အခက်အခဲ အများကြီး ဖြတ်ကျော်ခဲ့ကြတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level1/my_family/m15-i4.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Tell me about your family in 5–8 sentences. Who is in your family? What do they do? Who are you closest to? Reach into the toolbox above whenever you get stuck.",
+    "prompt_mm": "ကိုယ့်မိသားစုအကြောင်း ဝါကျ ၅ ကြောင်းကနေ ၈ ကြောင်းလောက် ရေးပါ။ ဘယ်သူတွေ ပါသလဲ? ဘာတွေ လုပ်ကြသလဲ? ဘယ်သူနဲ့ အရင်းနှီးဆုံးလဲ? ပိတ်သွားရင် အပေါ်က toolbox ကို ပြန်ကြည့်ပါ။",
+    "min_words": 40,
+    "max_words": 150,
+    "coverage_hints": [
+      "family size",
+      "who you live with",
+      "someone's age",
+      "what they do",
+      "where you're from",
+      "personality",
+      "who you're close to"
+    ],
+    "speak_aloud_en": "Now read your final answer aloud 2–3 times — slowly first, then at a natural speed.",
+    "speak_aloud_mm": "အခု ကိုယ်ရေးထားတဲ့ နောက်ဆုံးအဖြေကို အသံထွက်ပြီး ၂–၃ ခေါက် ဖတ်ကြည့်ပါ — အရင် ဖြည်းဖြည်း၊ ပြီးမှ သဘာဝ အရှိန်နဲ့။"
+  },
+  "guide": {
+    "model_en": "My family has four people. I live with my parents and my sister. We are a very happy family. My father is from Mandalay. He is a teacher. My mother is a nurse. She is very kind. My sister is twenty years old. I am the youngest child in the family. We often eat dinner together. I love my family very much.",
+    "model_mm": "ကျွန်တော့်မိသားစုမှာ လေးယောက်ရှိပါတယ်။ ကျွန်တော်က မိဘတွေနဲ့ အစ်မနဲ့အတူနေပါတယ်။ ကျွန်တော်တို့က အရမ်းပျော်ရွှင်တဲ့ မိသားစုပါ။ ဖခင်က မန္တလေးကပါ။ သူက ဆရာတစ်ယောက်ပါ။ မိခင်က သူနာပြုပါ။ သူက အရမ်းသဘောကောင်းပါတယ်။ အစ်မက အသက်နှစ်ဆယ်ရှိပါပြီ။ ကျွန်တော်က မိသားစုထဲမှာ အငယ်ဆုံးပါ။ ကျွန်တော်တို့ မကြာခဏ ညစာအတူစားကြပါတယ်။ ကျွန်တော့်မိသားစုကို အများကြီးချစ်ပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "My family has four people.",
+        "gloss_mm": "ကျွန်တော့်မိသားစုမှာ လေးယောက်ရှိပါတယ်။",
+        "why_mm": "မိသားစုဝင်အရေအတွက်ကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I live with my parents and my sister.",
+        "gloss_mm": "ကျွန်တော်က မိဘတွေနဲ့ အစ်မနဲ့အတူနေပါတယ်။",
+        "why_mm": "ဘယ်သူတွေနဲ့ အတူနေလဲ ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "We are a very happy family.",
+        "gloss_mm": "ကျွန်တော်တို့က အရမ်းပျော်ရွှင်တဲ့ မိသားစုပါ။",
+        "why_mm": "မိသားစုအမျိုးအစားကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "My father is from Mandalay.",
+        "gloss_mm": "ဖခင်က မန္တလေးကပါ။",
+        "why_mm": "မိသားစုဇာတိကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "He is a teacher.",
+        "gloss_mm": "သူက ဆရာတစ်ယောက်ပါ။",
+        "why_mm": "မိသားစုဝင်ရဲ့ အလုပ်အကိုင်ကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "My mother is a nurse.",
+        "gloss_mm": "မိခင်က သူနာပြုပါ။",
+        "why_mm": "မိသားစုဝင်ရဲ့ အလုပ်အကိုင်ကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "She is very kind.",
+        "gloss_mm": "သူက အရမ်းသဘောကောင်းပါတယ်။",
+        "why_mm": "စရိုက်လက္ခဏာကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "My sister is twenty years old.",
+        "gloss_mm": "အစ်မက အသက်နှစ်ဆယ်ရှိပါပြီ။",
+        "why_mm": "အသက်အရွယ်ကို ဖော်ပြခြင်း။"
+      },
+      {
+        "text_en": "I am the youngest child in the family.",
+        "gloss_mm": "ကျွန်တော်က မိသားစုထဲမှာ အငယ်ဆုံးပါ။",
+        "why_mm": "မိသားစုထဲက ကိုယ့်အနေအထားကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "We often eat dinner together.",
+        "gloss_mm": "ကျွန်တော်တို့ မကြာခဏ ညစာအတူစားကြပါတယ်။",
+        "why_mm": "မိသားစုနဲ့အတူ လုပ်လေ့ရှိတဲ့အရာကို ပြောပြခြင်း။"
+      },
+      {
+        "text_en": "I love my family very much.",
+        "gloss_mm": "ကျွန်တော့်မိသားစုကို အများကြီးချစ်ပါတယ်။",
+        "why_mm": "မိသားစုအပေါ် ခံစားချက်ကို ဖော်ပြခြင်း။"
+      }
+    ],
+    "template": "My family has {family_size} people. I live with {family_members}. We are a {family_type} family. My father is from {hometown}. He is a {father_job}. My mother is a {mother_job}. She is very {personality}. My sister is {sister_age} years old. I am the {family_position} in the family. We often {shared_activity} together. I love my family very much.",
+    "slots": [
+      {
+        "id": "family_size",
+        "label_en": "Family size",
+        "label_mm": "မိသားစုဝင် အရေအတွက်",
+        "hint": "အရေအတွက်ကို ထည့်ပါ",
+        "options": [
+          "three",
+          "four",
+          "five",
+          "six"
+        ]
+      },
+      {
+        "id": "family_members",
+        "label_en": "Who you live with",
+        "label_mm": "ဘယ်သူတွေနဲ့နေလဲ",
+        "hint": "မိသားစုဝင်များကို ထည့်ပါ",
+        "options": [
+          "my parents",
+          "my grandparents",
+          "my brother and sister",
+          "my mother"
+        ]
+      },
+      {
+        "id": "family_type",
+        "label_en": "Family type",
+        "label_mm": "မိသားစုအမျိုးအစား",
+        "hint": "မိသားစုအကြောင်း ဖော်ပြပါ",
+        "options": [
+          "happy",
+          "small",
+          "big",
+          "loving"
+        ]
+      },
+      {
+        "id": "hometown",
+        "label_en": "Hometown",
+        "label_mm": "ဇာတိမြို့",
+        "hint": "မြို့နာမည်ကို ထည့်ပါ",
+        "options": [
+          "Yangon",
+          "Mandalay",
+          "Taunggyi",
+          "Pathein"
+        ]
+      },
+      {
+        "id": "father_job",
+        "label_en": "Father's job",
+        "label_mm": "ဖခင်၏အလုပ်",
+        "hint": "အလုပ်အကိုင်ကို ထည့်ပါ",
+        "options": [
+          "teacher",
+          "doctor",
+          "farmer",
+          "businessperson"
+        ]
+      },
+      {
+        "id": "mother_job",
+        "label_en": "Mother's job",
+        "label_mm": "မိခင်၏အလုပ်",
+        "hint": "အလုပ်အကိုင်ကို ထည့်ပါ",
+        "options": [
+          "nurse",
+          "homemaker",
+          "teacher",
+          "engineer"
+        ]
+      },
+      {
+        "id": "personality",
+        "label_en": "Personality",
+        "label_mm": "စရိုက်လက္ခဏာ",
+        "hint": "မိခင်၏စရိုက်ကို ဖော်ပြပါ",
+        "options": [
+          "kind",
+          "hardworking",
+          "patient",
+          "cheerful"
+        ]
+      },
+      {
+        "id": "sister_age",
+        "label_en": "Sister's age",
+        "label_mm": "အစ်မ၏အသက်",
+        "hint": "အသက်ကို ထည့်ပါ",
+        "options": [
+          "twenty",
+          "eighteen",
+          "twenty-five",
+          "thirty"
+        ]
+      },
+      {
+        "id": "family_position",
+        "label_en": "Position in family",
+        "label_mm": "မိသားစုထဲက ကိုယ့်အနေအထား",
+        "hint": "သင့်နေရာကို ထည့်ပါ",
+        "options": [
+          "youngest child",
+          "eldest child",
+          "only child",
+          "middle child"
+        ]
+      },
+      {
+        "id": "shared_activity",
+        "label_en": "Shared activity",
+        "label_mm": "အတူလုပ်လေ့ရှိသည့်အရာ",
+        "hint": "လုပ်ဆောင်ချက်ကို ထည့်ပါ",
+        "options": [
+          "eat dinner",
+          "watch TV",
+          "go to the park",
+          "visit our grandparents"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level1/my_family/guide-model.mp3"
+  }
+}

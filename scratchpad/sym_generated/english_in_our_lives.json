@@ -1,0 +1,561 @@
+{
+  "id": "english_in_our_lives",
+  "level": 3,
+  "domain_en": "Discussing issues",
+  "domain_mm": "ပြဿနာနဲ့ ခေတ်ပြိုင်ခေါင်းစဉ်များ ဆွေးနွေးခြင်း",
+  "title_en": "English in Our Lives",
+  "title_mm": "ကျွန်ုပ်တို့ဘဝထဲက အင်္ဂလိပ်စာ",
+  "promise_en": "Learn to discuss the influence of English on our careers, education, and culture with confidence.",
+  "promise_mm": "အလုပ်အကိုင်၊ ပညာရေးနဲ့ ယဉ်ကျေးမှုအပေါ် အင်္ဂလိပ်စာရဲ့ သက်ရောက်မှုတွေကို ယုံကြည်မှုရှိရှိနဲ့ ဆွေးနွေးတတ်လာပါမယ်။",
+  "intro_en": "English is more than just a language; it is a global tool that shapes our opportunities and society. Let's talk about why it matters and how we manage this pressure.",
+  "intro_mm": "အင်္ဂလိပ်စာဆိုတာ ဘာသာစကားတစ်ခုထက်ပိုပါတယ်။ ဒါဟာ ကျွန်ုပ်တို့ရဲ့ အခွင့်အရေးနဲ့ လူ့အဖွဲ့အစည်းကို ပုံဖော်ပေးတဲ့ ကမ္ဘာ့ကိရိယာတစ်ခုပါ။ အင်္ဂလိပ်စာက ဘာကြောင့်အရေးကြီးလဲ၊ ဒီဖိအားတွေကို ကျွန်ုပ်တို့ ဘယ်လိုကိုင်တွယ်မလဲဆိုတာ ဆွေးနွေးကြည့်ရအောင်။",
+  "toolbox": [
+    {
+      "move_en": "Introducing the topic",
+      "move_mm": "အကြောင်းအရာကို စတင်မိတ်ဆက်ခြင်း",
+      "items": [
+        {
+          "text_en": "Many people learn English nowadays.",
+          "highlight": "learn English",
+          "swap_en": "study English · use English · practice English",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာ လူတွေ အင်္ဂလိပ်စာကို သင်ယူကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "English is very important for our daily lives.",
+          "highlight": "very important",
+          "swap_en": "essential · necessary · a must",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ နေ့စဉ်ဘဝအတွက် အင်္ဂလိပ်စာက အရမ်းအရေးကြီးတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "English has become a global language in modern society.",
+          "highlight": "a global language",
+          "swap_en": "a bridge for communication · a key to success",
+          "gloss_mm": "ခေတ်သစ်လူ့အဖွဲ့အစည်းမှာ အင်္ဂလိပ်စာက ကမ္ဘာသုံးဘာသာစကား ဖြစ်လာတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the current situation",
+      "move_mm": "လက်ရှိအခြေအနေကို ဖော်ပြခြင်း",
+      "items": [
+        {
+          "text_en": "Many people think English is very important.",
+          "highlight": "very important",
+          "swap_en": "essential · necessary · a must-have skill",
+          "gloss_mm": "လူတော်တော်များများက အင်္ဂလိပ်စာဟာ အရမ်းအရေးကြီးတယ်လို့ ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It is becoming a common requirement for office jobs in Yangon.",
+          "highlight": "a common requirement",
+          "swap_en": "a standard expectation · a key qualification",
+          "gloss_mm": "ရန်ကုန်မှာ ရုံးအလုပ်တွေအတွက် အင်္ဂလိပ်စာက မရှိမဖြစ် လိုအပ်ချက်တစ်ခု ဖြစ်လာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Learning English is now a top priority for students preparing for their future.",
+          "highlight": "a top priority",
+          "swap_en": "a major focus · an urgent goal",
+          "gloss_mm": "အနာဂတ်အတွက် ပြင်ဆင်နေတဲ့ ကျောင်းသားတွေအတွက် အင်္ဂလိပ်စာသင်ယူတာက အဓိက ဦးစားပေး ဖြစ်လာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "There is a growing demand for English proficiency in our daily work life.",
+          "highlight": "a growing demand",
+          "swap_en": "an increasing need · a significant pressure",
+          "gloss_mm": "နေ့စဉ် လုပ်ငန်းခွင်မှာ အင်္ဂလိပ်စာ ကျွမ်းကျင်ဖို့ လိုအပ်ချက်က တိုးပွားလာနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining why English is important for work",
+      "move_mm": "အလုပ်အတွက် အင်္ဂလိပ်စာ ဘာကြောင့်အရေးကြီးလဲ ရှင်းပြခြင်း",
+      "items": [
+        {
+          "text_en": "English is important for my work.",
+          "highlight": "important for my work",
+          "swap_en": "useful for my career · necessary for my job · essential for my daily work",
+          "gloss_mm": "ကျွန်တော့်အလုပ်အတွက် အင်္ဂလိပ်စာက အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I need English to communicate with my colleagues.",
+          "highlight": "communicate with my colleagues",
+          "swap_en": "talk to foreign clients · write emails to partners · understand international reports",
+          "gloss_mm": "ကျွန်တော့်လုပ်ဖော်ကိုင်ဖက်တွေနဲ့ ဆက်သွယ်ဖို့ အင်္ဂလိပ်စာ လိုအပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Knowing English opens up more career opportunities.",
+          "highlight": "opens up more career opportunities",
+          "swap_en": "gives me a competitive edge · helps me get a better salary · allows for promotion",
+          "gloss_mm": "အင်္ဂလိပ်စာ တတ်ထားခြင်းက အလုပ်အကိုင် အခွင့်အလမ်း ပိုများစေပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Proficiency in English is a significant advantage in the job market.",
+          "highlight": "a significant advantage in the job market",
+          "swap_en": "a key requirement for professional growth · a vital skill for modern business",
+          "gloss_mm": "အင်္ဂလိပ်စာ ကျွမ်းကျင်မှုက လက်ရှိ အလုပ်ဈေးကွက်မှာ သိသာထင်ရှားတဲ့ အားသာချက်တစ်ခု ဖြစ်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining why English is important for study",
+      "move_mm": "ပညာရေးအတွက် အင်္ဂလိပ်စာ ဘာကြောင့်အရေးကြီးလဲ ရှင်းပြခြင်း",
+      "items": [
+        {
+          "text_en": "English is important for my studies.",
+          "highlight": "important for my studies",
+          "swap_en": "necessary for my education · key to my academic success",
+          "gloss_mm": "ကျွန်တော့်ပညာရေးအတွက် အင်္ဂလိပ်စာက အရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Most students need English to read textbooks.",
+          "highlight": "need English to read textbooks",
+          "swap_en": "rely on English to research online · use English to understand lectures",
+          "gloss_mm": "ကျောင်းသားအများစုဟာ သင်ရိုးညွှန်းတမ်းတွေ ဖတ်ဖို့ အင်္ဂလိပ်စာ လိုအပ်ပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Proficiency in English opens up many opportunities for international scholarships.",
+          "highlight": "opens up many opportunities for international scholarships",
+          "swap_en": "is essential for pursuing higher education abroad · provides access to global knowledge resources",
+          "gloss_mm": "အင်္ဂလိပ်စာ တတ်ကျွမ်းခြင်းက နိုင်ငံတကာ ပညာသင်ဆုတွေအတွက် အခွင့်အလမ်းများစွာ ပေးစွမ်းပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Stating the pressure to learn English",
+      "move_mm": "အင်္ဂလိပ်စာသင်ယူရတဲ့ ဖိအားအကြောင်း ပြောပြခြင်း",
+      "items": [
+        {
+          "text_en": "Many people feel a lot of pressure to learn English.",
+          "highlight": "a lot of pressure to learn English",
+          "swap_en": "a strong need to learn English · a high demand for English skills",
+          "gloss_mm": "အင်္ဂလိပ်စာသင်ယူဖို့ လူတော်တော်များများက ဖိအားတွေ ခံစားနေရတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It feels like English is a must for getting a good job in Yangon.",
+          "highlight": "is a must for",
+          "swap_en": "is essential for · is non-negotiable for",
+          "gloss_mm": "ရန်ကုန်မှာ အလုပ်ကောင်းကောင်းရဖို့ အင်္ဂလိပ်စာက မဖြစ်မနေ လိုအပ်နေတာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "There is constant societal pressure to keep up with English proficiency.",
+          "highlight": "constant societal pressure",
+          "swap_en": "immense pressure from society · growing pressure from employers",
+          "gloss_mm": "အင်္ဂလိပ်စာ ကျွမ်းကျင်မှုနဲ့အတူ လိုက်မီနိုင်ဖို့ လူမှုရေးအရ ဖိအားတွေ အမြဲရှိနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting the benefits",
+      "move_mm": "အကျိုးကျေးဇူးတွေကို ထောက်ပြခြင်း",
+      "items": [
+        {
+          "text_en": "English helps me get a better job.",
+          "highlight": "get a better job",
+          "swap_en": "find a good job · earn more money · communicate with foreigners",
+          "gloss_mm": "အင်္ဂလိပ်စာက ကျွန်တော့်ကို အလုပ်အကိုင် ပိုကောင်းတာ ရဖို့ ကူညီပေးတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It opens up many opportunities for my career.",
+          "highlight": "opens up many opportunities",
+          "swap_en": "creates new possibilities · provides more chances",
+          "gloss_mm": "ဒါက ကျွန်တော့်ရဲ့ အသက်မွေးဝမ်းကျောင်းအတွက် အခွင့်အလမ်းကောင်းတွေ အများကြီး ပွင့်သွားစေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Being proficient in English gives me a competitive edge in the local market.",
+          "highlight": "a competitive edge",
+          "swap_en": "a significant advantage · better leverage · a head start",
+          "gloss_mm": "အင်္ဂလိပ်စာမှာ ကျွမ်းကျင်တာက ပြည်တွင်းဈေးကွက်မှာ ယှဉ်ပြိုင်နိုင်စွမ်း ပိုရှိစေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It allows me to access a vast wealth of knowledge online.",
+          "highlight": "access a vast wealth of knowledge",
+          "swap_en": "gain global perspectives · broaden my horizons",
+          "gloss_mm": "အင်တာနက်ကနေတစ်ဆင့် ဗဟုသုတတွေ အများကြီးကို လေ့လာနိုင်ဖို့ အထောက်အကူပြုတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Discussing the impact on local culture",
+      "move_mm": "ဒေသခံယဉ်ကျေးမှုအပေါ် သက်ရောက်မှုကို ဆွေးနွေးခြင်း",
+      "items": [
+        {
+          "text_en": "Many people think English changes our culture.",
+          "highlight": "changes our culture",
+          "swap_en": "affects our traditions · influences our daily habits",
+          "gloss_mm": "လူအများစုက အင်္ဂလိပ်စာက ကျွန်တော်တို့ရဲ့ ယဉ်ကျေးမှုကို ပြောင်းလဲစေတယ်လို့ ထင်ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "English is slowly replacing some traditional local terms.",
+          "highlight": "slowly replacing",
+          "swap_en": "gradually changing · starting to overshadow",
+          "gloss_mm": "အင်္ဂလိပ်စာက ဒေသခံစကားလုံးတချို့ကို ဖြည်းဖြည်းချင်း အစားထိုးလာနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Young people are adopting Western styles through English media.",
+          "highlight": "adopting Western styles",
+          "swap_en": "embracing foreign trends · following global fashions",
+          "gloss_mm": "လူငယ်တွေက အင်္ဂလိပ်ဘာသာစကားနဲ့ မီဒီယာတွေကတစ်ဆင့် အနောက်တိုင်းပုံစံတွေကို လက်ခံကျင့်သုံးလာကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "There is a concern that local languages might lose their significance.",
+          "highlight": "might lose their significance",
+          "swap_en": "could fade away over time · are becoming less relevant",
+          "gloss_mm": "ဒေသခံဘာသာစကားတွေက သူတို့ရဲ့ အရေးပါမှုတွေကို ဆုံးရှုံးသွားမလားဆိုတဲ့ စိုးရိမ်မှုတွေ ရှိနေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "Global language dominance often leads to the erosion of traditional values.",
+          "highlight": "leads to the erosion of",
+          "swap_en": "contributes to the decline of · results in the weakening of",
+          "gloss_mm": "ကမ္ဘာ့ဘာသာစကားရဲ့ လွှမ်းမိုးမှုက ရိုးရာတန်ဖိုးတွေကို တဖြည်းဖြည်း ပျက်စီးသွားစေတတ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Presenting two sides of an argument",
+      "move_mm": "အမြင်နှစ်မျိုးကို တင်ပြခြင်း",
+      "items": [
+        {
+          "text_en": "Some people think English is easy, but others say it is hard.",
+          "highlight": "Some people think",
+          "swap_en": "Many people believe · Some argue",
+          "gloss_mm": "အချို့လူတွေက အင်္ဂလိပ်စာဟာ လွယ်တယ်လို့ ထင်ကြပေမယ့် တချို့ကတော့ ခက်တယ်လို့ ပြောကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "On one hand, English helps with jobs, but on the other hand, it takes a lot of time to learn.",
+          "highlight": "On one hand",
+          "swap_en": "On the one side · For one thing",
+          "gloss_mm": "တစ်ဖက်မှာတော့ အင်္ဂလိပ်စာက အလုပ်အကိုင်အတွက် အထောက်အကူပြုပေမယ့် နောက်တစ်ဖက်မှာတော့ သင်ယူဖို့ အချိန်အများကြီးပေးရတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "While English is essential for global business, some argue that it might weaken our local culture.",
+          "highlight": "some argue that",
+          "swap_en": "critics point out that · opponents claim that",
+          "gloss_mm": "အင်္ဂလိပ်စာဟာ ကမ္ဘာ့စီးပွားရေးအတွက် မရှိမဖြစ်လိုအပ်ပေမယ့် တချို့ကတော့ ဒါဟာ ကိုယ့်ရဲ့ ရိုးရာယဉ်ကျေးမှုကို အားနည်းသွားစေနိုင်တယ်လို့ ငြင်းခုံကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "The debate continues between those who prioritize fluency and those who value grammatical accuracy.",
+          "highlight": "between those who prioritize",
+          "swap_en": "between the proponents of · between people who favor",
+          "gloss_mm": "စကားပြောကျွမ်းကျင်မှုကို ဦးစားပေးတဲ့သူတွေနဲ့ သဒ္ဒါမှန်ကန်မှုကို တန်ဖိုးထားတဲ့သူတွေကြားမှာ အငြင်းပွားမှုတွေ ရှိနေတုန်းပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing with an opinion",
+      "move_mm": "အမြင်တစ်ခုနဲ့ သဘောတူညီခြင်း",
+      "items": [
+        {
+          "text_en": "I agree that English is important.",
+          "highlight": "I agree that",
+          "swap_en": "I think that · I feel that",
+          "gloss_mm": "အင်္ဂလိပ်စာက အရေးကြီးတယ်ဆိုတာကို ကျွန်တော် သဘောတူပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "You're absolutely right about English being a key to better jobs.",
+          "highlight": "You're absolutely right about",
+          "swap_en": "I couldn't agree more about · That's exactly how I feel about",
+          "gloss_mm": "အလုပ်အကိုင်ကောင်းတွေရဖို့ အင်္ဂလိပ်စာက အဓိကကျတယ်ဆိုတာနဲ့ ပတ်သက်ပြီး ခင်ဗျားပြောတာ အမှန်ဆုံးပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I share your view that learning English opens up global opportunities.",
+          "highlight": "I share your view that",
+          "swap_en": "I hold the same opinion that · I am of the same mind that",
+          "gloss_mm": "အင်္ဂလိပ်စာလေ့လာတာက ကမ္ဘာ့အခွင့်အလမ်းတွေကို ပွင့်သွားစေတယ်ဆိုတဲ့ ခင်ဗျားရဲ့အမြင်နဲ့ ကျွန်တော်လည်း ထပ်တူကျပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Disagreeing politely",
+      "move_mm": "ယဉ်ယဉ်ကျေးကျေး သဘောမတူကြောင်း ပြောခြင်း",
+      "items": [
+        {
+          "text_en": "I see your point, but I disagree.",
+          "highlight": "I see your point, but I disagree",
+          "swap_en": "I understand what you mean, but I don't think so · I hear you, but I hold a different view",
+          "gloss_mm": "ခင်ဗျားပြောတာကို နားလည်ပါတယ်၊ ဒါပေမဲ့ ကျွန်တော်တော့ သဘောမတူဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "That is true, but I am not entirely sure about that.",
+          "highlight": "I am not entirely sure about that",
+          "swap_en": "I have my doubts about that · I see it differently",
+          "gloss_mm": "အဲဒါတော့ ဟုတ်ပါတယ်၊ ဒါပေမဲ့ ကျွန်တော်ကတော့ သိပ်ပြီး မသေချာဘူး။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "While I respect your opinion, I find it hard to fully agree.",
+          "highlight": "I find it hard to fully agree",
+          "swap_en": "I have a slightly different take on this · I am inclined to disagree with that",
+          "gloss_mm": "ခင်ဗျားရဲ့ အမြင်ကို လေးစားပေမဲ့ အပြည့်အဝတော့ သဘောတူဖို့ ခက်နေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining consequences",
+      "move_mm": "ဖြစ်ပေါ်လာနိုင်တဲ့ ရလဒ်တွေကို ရှင်းပြခြင်း",
+      "items": [
+        {
+          "text_en": "This could lead to better job opportunities.",
+          "highlight": "lead to",
+          "swap_en": "result in · cause",
+          "gloss_mm": "ဒါက ပိုကောင်းတဲ့ အလုပ်အကိုင် အခွင့်အလမ်းတွေ ဆီကို ဦးတည်သွားနိုင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Learning English helps you keep up with the latest trends.",
+          "highlight": "keep up with",
+          "swap_en": "stay updated on · follow",
+          "gloss_mm": "အင်္ဂလိပ်စာ သင်ယူတာက ခေတ်ရေစီးကြောင်းတွေကို နောက်မကျအောင် လိုက်နိုင်ဖို့ ကူညီပေးတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "If you don't know English, you might miss out on important information.",
+          "highlight": "miss out on",
+          "swap_en": "lose · fail to access",
+          "gloss_mm": "အင်္ဂလိပ်စာ မတတ်ရင် အရေးကြီးတဲ့ အချက်အလက်တွေကို လက်လွတ်သွားနိုင်တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "A lack of English skills often hinders career advancement.",
+          "highlight": "hinders",
+          "swap_en": "limits · slows down",
+          "gloss_mm": "အင်္ဂလိပ်စာ အရည်အချင်း အားနည်းခြင်းက အလုပ်အကိုင် တိုးတက်မှုကို အဟန့်အတား ဖြစ်စေတတ်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing the past and present",
+      "move_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်ခြင်း",
+      "items": [
+        {
+          "text_en": "English was not as important in the past as it is today.",
+          "highlight": "not as important in the past as it is today",
+          "swap_en": "less essential years ago compared to now · not a priority back then like it is now",
+          "gloss_mm": "အရင်တုန်းက အင်္ဂလိပ်စာက အခုလောက် အရေးမကြီးခဲ့ဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Learning English is much easier now than it used to be.",
+          "highlight": "much easier now than it used to be",
+          "swap_en": "more accessible these days compared to the past · more convenient now than in previous years",
+          "gloss_mm": "အရင်ကထက်စာရင် အခု အင်္ဂလိပ်စာသင်ရတာ ပိုလွယ်ကူလာတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Unlike the previous generation, young people today view English as a necessity for their careers.",
+          "highlight": "Unlike the previous generation",
+          "swap_en": "In contrast to our parents' time · Contrary to the old days",
+          "gloss_mm": "အရင်မျိုးဆက်တွေနဲ့မတူဘဲ အခုခေတ်လူငယ်တွေက အင်္ဂလိပ်စာကို အလုပ်အကိုင်အတွက် မရှိမဖြစ် လိုအပ်တယ်လို့ မြင်ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We have shifted from traditional classroom learning to a more digital, self-paced approach.",
+          "highlight": "shifted from traditional classroom learning to a more digital, self-paced approach",
+          "swap_en": "moved away from rote memorization toward practical communication · transitioned from textbooks to online resources",
+          "gloss_mm": "ရိုးရာအတန်းထဲမှာ သင်ယူတာကနေ ဒီဂျစ်တယ်နည်းပညာနဲ့ ကိုယ်တိုင်လေ့လာတဲ့ ပုံစံဘက်ကို ကူးပြောင်းလာကြတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Giving your own view",
+      "move_mm": "ကိုယ့်ရဲ့ ကိုယ်ပိုင်အမြင်ကို ပေးခြင်း",
+      "items": [
+        {
+          "text_en": "I think English is very important.",
+          "highlight": "very important",
+          "swap_en": "useful · essential · necessary",
+          "gloss_mm": "အင်္ဂလိပ်စာက အရမ်းအရေးကြီးတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "In my view, learning English opens up more opportunities.",
+          "highlight": "opens up more opportunities",
+          "swap_en": "helps us get better jobs · connects us to the world · is the key to success",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အင်္ဂလိပ်စာသင်ယူတာက အခွင့်အလမ်းတွေကို ပိုပြီးဖွင့်ပေးတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I personally feel that being fluent in English is a major advantage for young people in Yangon.",
+          "highlight": "a major advantage",
+          "swap_en": "a significant asset · a valuable skill · a great benefit",
+          "gloss_mm": "ကျွန်တော့်အနေနဲ့တော့ ရန်ကုန်က လူငယ်တွေအတွက် အင်္ဂလိပ်စာ ကျွမ်းကျင်တာက အဓိကအားသာချက်တစ်ခုလို့ ခံစားရတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting solutions",
+      "move_mm": "ဖြေရှင်းနည်းများကို အကြံပြုခြင်း",
+      "items": [
+        {
+          "text_en": "You should try watching English movies.",
+          "highlight": "watching English movies",
+          "swap_en": "listening to podcasts · reading short stories · practicing with friends",
+          "gloss_mm": "အင်္ဂလိပ်ရုပ်ရှင်တွေ ကြည့်ကြည့်သင့်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "One way to improve is by talking at tea shops.",
+          "highlight": "talking at tea shops",
+          "swap_en": "using language apps · joining a study group · narrating your day out loud",
+          "gloss_mm": "တိုးတက်အောင်လုပ်ဖို့ နည်းလမ်းတစ်ခုကတော့ လက်ဖက်ရည်ဆိုင်မှာ စကားပြောကြည့်တာပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I highly recommend that you immerse yourself in English media.",
+          "highlight": "immerse yourself in English media",
+          "swap_en": "set your phone language to English · attend English speaking clubs · keep an English diary",
+          "gloss_mm": "အင်္ဂလိပ်ဘာသာစကားနဲ့ ထိတွေ့မှုများအောင် ကြိုးစားဖို့ တိုက်တွန်းချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "It might be helpful to start with simple conversations.",
+          "highlight": "start with simple conversations",
+          "swap_en": "find a language partner · focus on daily vocabulary · stop worrying about grammar mistakes",
+          "gloss_mm": "ရိုးရှင်းတဲ့ စကားပြောဆိုမှုတွေကနေ စတင်တာက အထောက်အကူဖြစ်နိုင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding the discussion",
+      "move_mm": "ဆွေးနွေးချက်ကို အနှစ်ချုပ်ခြင်း",
+      "items": [
+        {
+          "text_en": "Overall, English is very important.",
+          "highlight": "very important",
+          "swap_en": "essential · necessary · useful",
+          "gloss_mm": "ခြုံပြောရရင် အင်္ဂလိပ်စာက အရမ်းအရေးကြီးပါတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "At the end of the day, English helps us connect with the world.",
+          "highlight": "helps us connect with the world",
+          "swap_en": "opens up new opportunities · bridges the gap between cultures",
+          "gloss_mm": "အနှစ်ချုပ်ပြောရရင် အင်္ဂလိပ်စာက ကမ္ဘာနဲ့ ချိတ်ဆက်ဖို့ ကူညီပေးပါတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "To sum up, learning English is a lifelong journey.",
+          "highlight": "a lifelong journey",
+          "swap_en": "a continuous process · an investment in our future",
+          "gloss_mm": "အတိုချုပ်ပြောရရင် အင်္ဂလိပ်စာ လေ့လာတာဟာ တစ်သက်တာ ခရီးတစ်ခုပါပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Ultimately, proficiency in English has become a gateway to success in Myanmar.",
+          "highlight": "a gateway to success",
+          "swap_en": "a key to modern careers · an essential tool for development",
+          "gloss_mm": "နောက်ဆုံးပြောရရင် အင်္ဂလိပ်စာ ကျွမ်းကျင်မှုဟာ မြန်မာနိုင်ငံမှာ အောင်မြင်မှုအတွက် တံခါးပေါက်တစ်ခု ဖြစ်လာပါတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Discuss the role of English in Myanmar today. Why do people feel pressured to learn it? Do you think it threatens our local culture, or is it just a necessary skill for the future? Share your personal view.",
+    "prompt_mm": "မြန်မာနိုင်ငံမှာ အင်္ဂလိပ်စာရဲ့ အခန်းကဏ္ဍနဲ့ပတ်သက်ပြီး ဆွေးနွေးပါ။ လူတွေက ဘာလို့ အင်္ဂလိပ်စာသင်ယူဖို့ ဖိအားပေးခံနေရတယ်လို့ ခံစားရတာလဲ။ အင်္ဂလိပ်စာက ဒေသခံယဉ်ကျေးမှုကို ခြိမ်းခြောက်နေတယ်လို့ ထင်လား၊ ဒါမှမဟုတ် အနာဂတ်အတွက် မရှိမဖြစ်လိုအပ်တဲ့ အရည်အချင်းတစ်ခုပဲလား။ ကိုယ့်ရဲ့ ကိုယ်ပိုင်အမြင်ကို ပြောပြပါ။",
+    "min_words": 80,
+    "max_words": 250,
+    "coverage_hints": [
+      "Current trend",
+      "Work opportunities",
+      "Academic pressure",
+      "Cultural impact",
+      "On one hand/other hand",
+      "My personal view",
+      "Future outlook"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to check for flow and natural rhythm.",
+    "speak_aloud_mm": "သင့်အဖြေကို အသံထွက်ပြီး ၂ ကြိမ် သို့မဟုတ် ၃ ကြိမ် ဖတ်ကြည့်ပါ။ စီးဆင်းမှုနဲ့ သဘာဝကျတဲ့ အသံနေအသံထားကို စစ်ဆေးပါ။"
+  }
+}

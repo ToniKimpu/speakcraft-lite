@@ -1,0 +1,627 @@
+{
+  "id": "keeping_traditions",
+  "level": 2,
+  "domain_en": "Giving your opinion",
+  "domain_mm": "ကိုယ့်အမြင် ဖော်ပြခြင်း",
+  "title_en": "Traditions vs Modern Life",
+  "title_mm": "ရိုးရာဓလေ့နှင့် ခေတ်ရေစီးကြောင်း",
+  "promise_en": "Learn to express your views on keeping traditions while embracing modern changes.",
+  "promise_mm": "ရိုးရာဓလေ့တွေကို ထိန်းသိမ်းရင်း ခေတ်နဲ့အညီ ဘယ်လိုနေထိုင်သင့်လဲဆိုတာကို ကိုယ့်အမြင်နဲ့ ပြောတတ်လာပါလိမ့်မယ်။",
+  "intro_en": "In Myanmar, we often balance traditional values with modern life. This topic helps you share your opinion on what to keep and what to change.",
+  "intro_mm": "မြန်မာနိုင်ငံမှာ ရိုးရာဓလေ့နဲ့ ခေတ်သစ်နေထိုင်မှုပုံစံကို မျှတအောင် လုပ်ရတာမျိုး ခဏခဏ ကြုံရပါတယ်။ ဒီခေါင်းစဉ်ကတော့ ဘယ်အရာတွေကို ဆက်ထိန်းသင့်ပြီး ဘယ်အရာတွေ ပြောင်းလဲသင့်တယ်ဆိုတာကို ကိုယ့်အမြင်အတိုင်း ပြောပြဖို့ ကူညီပေးပါလိမ့်မယ်။",
+  "toolbox": [
+    {
+      "move_en": "Stating your general view",
+      "move_mm": "ကိုယ့်ရဲ့ ယေဘုယျအမြင်ကို စတင်ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think traditions are important for us.",
+          "highlight": "traditions are important for us",
+          "swap_en": "modern life is exciting · balancing both is hard",
+          "gloss_mm": "ကျွန်တော်တို့အတွက် ရိုးရာဓလေ့တွေက အရေးကြီးတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m1-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, we should keep our old customs.",
+          "highlight": "we should keep our old customs",
+          "swap_en": "we should embrace new changes · we need to adapt to modern life",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ကျွန်တော်တို့ရဲ့ ရှေးရိုးရာဓလေ့တွေကို ထိန်းသိမ်းသင့်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m1-i2.mp3"
+        },
+        {
+          "text_en": "I'd say it's all about finding a balance between the old and the new.",
+          "highlight": "finding a balance between the old and the new",
+          "swap_en": "prioritizing our heritage while staying modern · blending traditional values with modern technology",
+          "gloss_mm": "ရိုးရာနဲ့ ခေတ်သစ်အကြားမှာ မျှတအောင် လုပ်ဖို့ပဲ အဓိကလို့ ပြောချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m1-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a strong opinion",
+      "move_mm": "ကိုယ့်ရဲ့ ခိုင်မာတဲ့အမြင်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think traditions are important for us.",
+          "highlight": "traditions are important for us",
+          "swap_en": "modern life is better · we should keep our customs · technology is changing everything",
+          "gloss_mm": "ကျွန်တော်တို့အတွက် ရိုးရာတွေက အရေးကြီးတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m2-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, we need to balance the old and the new.",
+          "highlight": "balance the old and the new",
+          "swap_en": "embrace modern technology · respect our traditional values · adapt to the changing world",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ရိုးရာဓလေ့နဲ့ ခေတ်သစ်ဘဝကို မျှတအောင် လုပ်ဖို့ လိုအပ်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m2-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that some traditions are just not practical in today's world.",
+          "highlight": "some traditions are just not practical in today's world",
+          "swap_en": "we shouldn't lose our identity to modernization · keeping up with modern life is unavoidable",
+          "gloss_mm": "ဒီခေတ်မှာ တချို့ရိုးရာတွေက အသုံးမဝင်တော့ဘူးလို့ ပြောရမှာပဲ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m2-i3.mp3"
+        },
+        {
+          "text_en": "I strongly believe that we must preserve our culture while moving forward.",
+          "highlight": "we must preserve our culture while moving forward",
+          "swap_en": "modernization is essential for our progress · we should not blindly follow the past",
+          "gloss_mm": "ရှေ့ဆက်သွားရင်းနဲ့ပဲ ကျွန်တော်တို့ရဲ့ ယဉ်ကျေးမှုကို ထိန်းသိမ်းရမယ်လို့ ခိုင်ခိုင်မာမာ ယုံကြည်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m2-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Weighing both sides",
+      "move_mm": "နှစ်ဖက်လုံးရဲ့ ကောင်းကျိုး/ဆိုးကျိုးကို ချိန်ဆပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think traditions are important, but modern life is more convenient.",
+          "highlight": "but",
+          "swap_en": "yet · although",
+          "gloss_mm": "ရိုးရာဓလေ့တွေက အရေးကြီးတယ်လို့ ကျွန်တော်ထင်ပေမဲ့ ခေတ်သစ်လူနေမှုဘဝက ပိုပြီး အဆင်ပြေပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m3-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, we should keep our culture while enjoying modern technology.",
+          "highlight": "while",
+          "swap_en": "at the same time as · even while",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ခေတ်သစ်နည်းပညာတွေကို သုံးစွဲရင်းနဲ့ပဲ ကျွန်တော်တို့ရဲ့ ယဉ်ကျေးမှုကို ထိန်းသိမ်းထားသင့်ပါတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m3-i2.mp3"
+        },
+        {
+          "text_en": "I'd say there's a trade-off between following old customs and embracing the fast-paced modern lifestyle.",
+          "highlight": "there's a trade-off between",
+          "swap_en": "it's a balance between · we need to weigh",
+          "gloss_mm": "ရှေးရိုးဓလေ့တွေကို လိုက်နာတာနဲ့ ခေတ်နဲ့အညီ လျင်မြန်တဲ့ဘဝနေထိုင်မှုကို လက်ခံတာကြားမှာ အပေးအယူလုပ်ဖို့ လိုအပ်တယ်လို့ ကျွန်တော်ပြောချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m3-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning a positive tradition",
+      "move_mm": "ကောင်းမွန်တဲ့ ရိုးရာဓလေ့တစ်ခုအကြောင်း ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think respecting elders is a great tradition.",
+          "highlight": "respecting elders",
+          "swap_en": "offering alms to monks · visiting pagodas · celebrating Thingyan",
+          "gloss_mm": "သက်ကြီးရွယ်အိုတွေကို ရိုသေလေးစားတာဟာ ကောင်းမွန်တဲ့ ရိုးရာဓလေ့တစ်ခုလို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m4-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, keeping the tradition of offering alms to monks is very meaningful.",
+          "highlight": "offering alms to monks",
+          "swap_en": "respecting elders · eating together as a family · wearing traditional longyis",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဆွမ်းတော်ကပ်တဲ့ ရိုးရာဓလေ့ကို ဆက်ထိန်းထားတာက အဓိပ္ပာယ်ရှိလှတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m4-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that our custom of gathering for family meals really keeps us connected.",
+          "highlight": "gathering for family meals",
+          "swap_en": "celebrating traditional festivals · paying homage to parents during Thadingyut",
+          "gloss_mm": "မိသားစုအတူတူ ထမင်းစားတဲ့ ဓလေ့က ကျွန်တော်တို့ကို ပိုပြီးတော့ ချိတ်ဆက်မှုရှိစေတယ်လို့ ပြောချင်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m4-i3.mp3"
+        },
+        {
+          "text_en": "I believe that passing down cultural values like paying respect to elders remains essential in modern times.",
+          "highlight": "passing down cultural values",
+          "swap_en": "preserving our unique traditions · maintaining our traditional etiquette",
+          "gloss_mm": "သက်ကြီးရွယ်အိုတွေကို ရိုသေတဲ့ ယဉ်ကျေးမှုတန်ဖိုးတွေကို လက်ဆင့်ကမ်းတာဟာ ခေတ်သစ်မှာလည်း မရှိမဖြစ် လိုအပ်တယ်လို့ ကျွန်တော်ယုံကြည်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m4-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Pointing out a necessary change",
+      "move_mm": "ပြောင်းလဲဖို့ လိုအပ်တဲ့အရာကို ထောက်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think we need to update some old traditions.",
+          "highlight": "update some old traditions",
+          "swap_en": "change the way we do things · modernize our customs · rethink some traditions",
+          "gloss_mm": "ကျွန်တော်ထင်တာကတော့ ရှေးရိုးအစဉ်အလာတချို့ကို ခေတ်နဲ့အညီ ပြုပြင်ပြောင်းလဲဖို့ လိုနေပြီ။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m5-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, it’s time to move away from rigid traditions.",
+          "highlight": "move away from rigid traditions",
+          "swap_en": "let go of outdated customs · adapt our old ways",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ တင်းကျပ်တဲ့ အစဉ်အလာတွေကို လျော့ချဖို့ အချိန်တန်ပြီ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m5-i2.mp3"
+        },
+        {
+          "text_en": "I’d say we should stop prioritizing tradition over modern progress.",
+          "highlight": "prioritizing tradition over modern progress",
+          "swap_en": "valuing tradition more than personal choice · following old norms blindly",
+          "gloss_mm": "ကျွန်တော်ကတော့ ခေတ်မီတဲ့ တိုးတက်မှုထက် အစဉ်အလာကိုပဲ ဦးစားပေးနေတာမျိုး ရပ်တန့်သင့်တယ်လို့ မြင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m5-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a personal example",
+      "move_mm": "ကိုယ့်ဘဝကနေ ဥပမာပေး ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think I prefer modern gadgets.",
+          "highlight": "modern gadgets",
+          "swap_en": "online shopping · fast food · digital banking",
+          "gloss_mm": "ကျွန်တော်ကတော့ ခေတ်ပေါ်နည်းပညာသုံး ပစ္စည်းတွေကို ပိုကြိုက်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m6-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, I still value our traditional tea shop culture.",
+          "highlight": "our traditional tea shop culture",
+          "swap_en": "visiting pagodas on full moon days · celebrating Thingyan properly · traditional family dinners",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ လက်ဖက်ရည်ဆိုင်ထိုင်တဲ့ ရိုးရာဓလေ့ကို ကျွန်တော် တန်ဖိုးထားတုန်းပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m6-i2.mp3"
+        },
+        {
+          "text_en": "I'd say my daily life is a mix of both worlds.",
+          "highlight": "a mix of both worlds",
+          "swap_en": "a perfect balance of tradition and modernity · a blend of old and new habits",
+          "gloss_mm": "ကျွန်တော့်နေ့စဉ်ဘဝကတော့ အစဉ်အလာနဲ့ ခေတ်သစ်နှစ်ခုစလုံး ရောနှောနေတယ်လို့ ပြောရမှာပါ။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m6-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Agreeing with a common view",
+      "move_mm": "လူအများစု လက်ခံထားတာကို ထောက်ခံပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think traditions are still important nowadays.",
+          "highlight": "traditions are still important",
+          "swap_en": "family values are still important · keeping our culture is still important",
+          "gloss_mm": "ဒီနေ့ခေတ်မှာလည်း ရိုးရာဓလေ့တွေက အရေးကြီးတုန်းပဲလို့ ကျွန်တော်ထင်ပါတယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m7-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, it's true that we need to balance the old and the new.",
+          "highlight": "balance the old and the new",
+          "swap_en": "keep our roots while moving forward · respect traditions while embracing change",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ရှေးရိုးနဲ့ ခေတ်သစ်ကို မျှတအောင် ထားဖို့ လိုအပ်တယ်ဆိုတာ အမှန်ပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m7-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that modernization doesn't necessarily mean losing our cultural identity.",
+          "highlight": "doesn't necessarily mean losing our cultural identity",
+          "swap_en": "doesn't mean we have to abandon our customs · is perfectly compatible with our traditional values",
+          "gloss_mm": "ခေတ်မီလာတိုင်း ကိုယ့်ရဲ့ ယဉ်ကျေးမှုအနှစ်သာရတွေ ပျောက်ကွယ်သွားရမယ်လို့တော့ မဆိုလိုပါဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m7-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Respectfully disagreeing",
+      "move_mm": "ယဉ်ယဉ်ကျေးကျေးနဲ့ သဘောမတူကြောင်း ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think differently about that.",
+          "highlight": "differently",
+          "swap_en": "a bit differently · otherwise",
+          "gloss_mm": "အဲဒီအချက်နဲ့ ပတ်သက်ပြီး ကျွန်တော်တော့ ဒီလိုမထင်ဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m8-i1.mp3"
+        },
+        {
+          "text_en": "I see your point, but I'm not sure I agree.",
+          "highlight": "I see your point, but",
+          "swap_en": "That's a good point, but · I understand what you mean, but",
+          "gloss_mm": "ခင်ဗျားပြောတာ နားလည်ပါတယ်၊ ဒါပေမဲ့ ကျွန်တော်တော့ သဘောမတူဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m8-i2.mp3"
+        },
+        {
+          "text_en": "In my opinion, we shouldn't abandon our traditions entirely.",
+          "highlight": "shouldn't abandon our traditions entirely",
+          "swap_en": "should value our customs more · need to balance both old and new",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ရိုးရာဓလေ့တွေကို လုံးဝစွန့်ပယ်ဖို့ မသင့်တော်ဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m8-i3.mp3"
+        },
+        {
+          "text_en": "I'd have to respectfully disagree with that perspective.",
+          "highlight": "respectfully disagree",
+          "swap_en": "beg to differ · take a different view",
+          "gloss_mm": "အဲဒီအမြင်နဲ့ ပတ်သက်ပြီးတော့ ကျွန်တော် ယဉ်ယဉ်ကျေးကျေးနဲ့ သဘောမတူနိုင်ပါဘူး။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m8-i4.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining your reason",
+      "move_mm": "ကိုယ့်ရဲ့ အကြောင်းပြချက်ကို ရှင်းပြနည်း",
+      "items": [
+        {
+          "text_en": "I think it's important because of our culture.",
+          "highlight": "because of our culture",
+          "swap_en": "because of our traditions · because of my family values · because it's our custom",
+          "gloss_mm": "ကျွန်တော်တို့ရဲ့ ယဉ်ကျေးမှုကြောင့် ဒါက အရေးကြီးတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m9-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, we should keep it up since it keeps us connected.",
+          "highlight": "since it keeps us connected",
+          "swap_en": "since it reminds us of our roots · because it brings people together · as it makes our community stronger",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ဒါက တစ်ယောက်နဲ့တစ်ယောက် ပိုရင်းနှီးစေတဲ့အတွက် ဆက်ထိန်းသိမ်းသင့်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m9-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that balancing both is necessary given how fast the world is changing.",
+          "highlight": "given how fast the world is changing",
+          "swap_en": "given the pressure of modern life · considering the demands of today's society · seeing as we live in a digital age",
+          "gloss_mm": "လောကကြီးက အရမ်းမြန်မြန်ဆန်ဆန် ပြောင်းလဲနေတဲ့အတွက် နှစ်ခုလုံးကို မျှတအောင် လုပ်ဖို့ လိုအပ်တယ်လို့ ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m9-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting a challenge",
+      "move_mm": "အခက်အခဲတစ်ခုကို မီးမောင်းထိုးပြနည်း",
+      "items": [
+        {
+          "text_en": "I think it's hard to keep up with traditions.",
+          "highlight": "keep up with traditions",
+          "swap_en": "follow old customs · maintain our culture · balance work and family",
+          "gloss_mm": "ရိုးရာဓလေ့တွေကို ဆက်လက်ထိန်းသိမ်းဖို့ ခက်ခဲတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m10-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, the biggest challenge is finding time for family rituals.",
+          "highlight": "finding time for family rituals",
+          "swap_en": "balancing modern work and traditional values · teaching our kids about our culture · keeping our old lifestyle alive",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အခက်ဆုံးက မိသားစုရိုးရာပွဲတွေအတွက် အချိန်ပေးဖို့ပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m10-i2.mp3"
+        },
+        {
+          "text_en": "I’d say the gap between the older and younger generations is becoming quite a struggle.",
+          "highlight": "the gap between the older and younger generations",
+          "swap_en": "the pressure to embrace modern technology · the loss of traditional values in big cities · the conflict between old beliefs and new ideas",
+          "gloss_mm": "မျိုးဆက်ဟောင်းနဲ့ မျိုးဆက်သစ်ကြားက ကွာဟချက်က တော်တော်လေး အခက်အခဲဖြစ်လာတယ်လို့ ဆိုရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m10-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Suggesting a balance",
+      "move_mm": "မျှတအောင် ဘယ်လိုနေထိုင်မလဲဆိုတာ အကြံပြုနည်း",
+      "items": [
+        {
+          "text_en": "I think we should keep both our traditions and modern technology.",
+          "highlight": "keep both our traditions and modern technology",
+          "swap_en": "respect our culture while using modern gadgets · hold onto our values and embrace new ways",
+          "gloss_mm": "ကျွန်မတို့ရဲ့ ရိုးရာဓလေ့တွေနဲ့ ခေတ်မီနည်းပညာတွေကို မျှတအောင် ထိန်းသိမ်းထားသင့်တယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m11-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, it's best to enjoy modern life without forgetting where we come from.",
+          "highlight": "enjoy modern life without forgetting where we come from",
+          "swap_en": "embrace the city life while keeping our roots alive · adapt to modern changes while holding onto our identity",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ကိုယ့်မူလအစကို မမေ့လျော့ဘဲ ခေတ်မီတဲ့ဘဝကို ခံစားတာ အကောင်းဆုံးပါပဲ။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m11-i2.mp3"
+        },
+        {
+          "text_en": "I would say we need to strike a balance between our traditional values and the fast-paced modern lifestyle.",
+          "highlight": "strike a balance between our traditional values and the fast-paced modern lifestyle",
+          "swap_en": "find a middle ground between old customs and current trends · harmonize our heritage with the demands of modern society",
+          "gloss_mm": "ရိုးရာတန်ဖိုးတွေနဲ့ အလျင်အမြန်ပြောင်းလဲနေတဲ့ ခေတ်မီဘဝနေထိုင်မှုပုံစံကြားမှာ မျှတအောင် လုပ်ဖို့ လိုအပ်တယ်လို့ ပြောချင်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m11-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing past and present",
+      "move_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think life was simpler in the past.",
+          "highlight": "life was simpler in the past",
+          "swap_en": "people were more connected in the past · things were slower in the past",
+          "gloss_mm": "အတိတ်တုန်းက ဘဝက ပိုပြီး ရိုးရှင်းတယ်လို့ ကျွန်တော်ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m12-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, we are more connected to technology than ever before.",
+          "highlight": "more connected to technology",
+          "swap_en": "more focused on our careers · more stressed about daily life",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အခုခေတ်မှာ ကျွန်တော်တို့က နည်းပညာနဲ့ အရင်ကထက် ပိုပြီး ထိတွေ့ဆက်ဆံနေရတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m12-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that while modernity offers convenience, we have lost some of our traditional warmth.",
+          "highlight": "we have lost some of our traditional warmth",
+          "swap_en": "we have drifted away from our community roots · we have less time for family gatherings",
+          "gloss_mm": "ခေတ်မီလာတာက အဆင်ပြေပေမဲ့ ကျွန်တော်တို့ရဲ့ ရိုးရာယဉ်ကျေးမှုက နွေးထွေးမှုတချို့ကိုတော့ ဆုံးရှုံးလိုက်ရတယ်လို့ ပြောရမယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m12-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing uncertainty",
+      "move_mm": "သေချာမသိသေးတဲ့အချက်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I'm not sure if traditional customs will disappear soon.",
+          "highlight": "I'm not sure if",
+          "swap_en": "I'm not certain whether · I don't really know if",
+          "gloss_mm": "ရိုးရာဓလေ့တွေ မကြာခင် ပျောက်ကွယ်သွားမလားဆိုတာ ကျွန်တော် သေချာ မသိဘူး။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m13-i1.mp3"
+        },
+        {
+          "text_en": "I honestly can't say whether modern life is better or worse for us.",
+          "highlight": "I honestly can't say whether",
+          "swap_en": "I'm not quite sure if · I find it hard to say if",
+          "gloss_mm": "ခေတ်မီတဲ့ဘဝက ကျွန်တော်တို့အတွက် ပိုကောင်းလား၊ ပိုဆိုးလားဆိုတာ ကျွန်တော် တပ်အပ်မပြောနိုင်ဘူး။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m13-i2.mp3"
+        },
+        {
+          "text_en": "It's difficult to say for sure if these changes are actually sustainable in the long run.",
+          "highlight": "It's difficult to say for sure if",
+          "swap_en": "I'm still on the fence about whether · There's no way to know for certain if",
+          "gloss_mm": "ဒီပြောင်းလဲမှုတွေက ရေရှည်မှာ တကယ်ပဲ အဆင်ပြေနိုင်ပါ့မလားဆိုတာ အတိအကျ ပြောဖို့ ခက်ပါတယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m13-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Giving a final thought",
+      "move_mm": "နိဂုံးချုပ်အနေနဲ့ ကိုယ့်အမြင်ကို တင်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I think we should balance both.",
+          "highlight": "balance both",
+          "swap_en": "keep both alive · value both equally",
+          "gloss_mm": "ကျွန်တော်ထင်တာကတော့ နှစ်ခုလုံးကို မျှတအောင် ထားသင့်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m14-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, it's all about finding a middle ground.",
+          "highlight": "finding a middle ground",
+          "swap_en": "striking a balance · blending the old and the new",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ အလယ်အလတ်လမ်းကို ရှာဖို့က အရေးကြီးတယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m14-i2.mp3"
+        },
+        {
+          "text_en": "I'd say that traditional values should remain the foundation of our modern lifestyle.",
+          "highlight": "remain the foundation of our modern lifestyle",
+          "swap_en": "stay at the heart of our daily life · guide us in this changing world",
+          "gloss_mm": "ကျွန်တော်ပြောရရင်တော့ ရိုးရာတန်ဖိုးတွေကပဲ ခေတ်မီတဲ့ ကျွန်တော်တို့ရဲ့ နေထိုင်မှုပုံစံရဲ့ အခြေခံအုတ်မြစ် ဖြစ်သင့်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m14-i3.mp3"
+        }
+      ]
+    },
+    {
+      "move_en": "Summarizing your position",
+      "move_mm": "ကိုယ့်ရဲ့ ရပ်တည်ချက်ကို ပြန်လည်ချုပ်ငုံ ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I think tradition is still important.",
+          "highlight": "tradition is still important",
+          "swap_en": "modern life is better · we need a balance",
+          "gloss_mm": "ရိုးရာဓလေ့က အခုထိ အရေးကြီးတယ်လို့ ထင်တယ်။",
+          "tag": "simple",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m15-i1.mp3"
+        },
+        {
+          "text_en": "In my opinion, we should keep our old ways while embracing new technology.",
+          "highlight": "keep our old ways while embracing new technology",
+          "swap_en": "mix the old with the new · value our roots despite modern changes",
+          "gloss_mm": "ကျွန်တော့်အမြင်အရတော့ ခေတ်မီနည်းပညာတွေကို လက်ခံရင်းနဲ့ပဲ ကျွန်တော်တို့ရဲ့ အစဉ်အလာတွေကို ထိန်းသိမ်းသင့်တယ်။",
+          "tag": "natural",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m15-i2.mp3"
+        },
+        {
+          "text_en": "I'd say it is a matter of finding the right balance between honoring our heritage and adapting to modern life.",
+          "highlight": "finding the right balance between honoring our heritage and adapting to modern life",
+          "swap_en": "striking a middle ground between past values and future progress · blending cultural identity with contemporary lifestyle",
+          "gloss_mm": "ရိုးရာအမွေအနှစ်တွေကို တန်ဖိုးထားတာနဲ့ ခေတ်နဲ့အညီ လိုက်လျောညီထွေဖြစ်အောင်နေတာ ဒီနှစ်ခုကြားမှာ မျှတအောင် လုပ်ဖို့ပဲလို့ ကျွန်တော်တော့ ပြောချင်တယ်။",
+          "tag": "advanced",
+          "audio": "bunny/speak_your_mind/level2/keeping_traditions/m15-i3.mp3"
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write 6–10 sentences about a specific tradition in Myanmar that you think is still very important today, and one modern change that you think is helpful. Explain why you feel this way.",
+    "prompt_mm": "မြန်မာ့ရိုးရာဓလေ့တစ်ခုခုထဲက အခုထိ အရေးကြီးနေသေးတယ်လို့ ကိုယ်ထင်တဲ့အကြောင်းနဲ့၊ ခေတ်နဲ့အညီ ပြောင်းလဲသင့်တယ်လို့ ကိုယ်ထင်တဲ့အရာတစ်ခုအကြောင်းကို စာကြောင်းရေ ၆ ကြောင်းကနေ ၁၀ ကြောင်းအတွင်း ရေးသားပါ။ ဘာကြောင့် ဒီလိုထင်လဲဆိုတာကိုလည်း ရှင်းပြပေးပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "I think...",
+      "In my opinion...",
+      "On the other hand...",
+      "For example...",
+      "The reason is...",
+      "I feel that...",
+      "It is important to..."
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times to practice your flow and confidence.",
+    "speak_aloud_mm": "ကိုယ့်ရဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ သို့မဟုတ် ၃ ခါ ပြန်ဖတ်ပါ။ ဒါက ကိုယ့်ရဲ့ စကားပြော အရှိန်အဟုန်နဲ့ ယုံကြည်မှုကို တိုးတက်စေပါလိမ့်မယ်။"
+  },
+  "guide": {
+    "model_en": "Traditions are important for our identity. However, modern life changes quickly. I believe we must keep our culture alive. Some old customs are very beautiful. For example, celebrating Thingyan brings people together. But some traditions need to change for modern times. We cannot stay in the past forever. I think we should find a balance. We must respect the old while accepting the new. This helps us live better lives today. I feel that tradition and progress should work together.",
+    "model_mm": "ရိုးရာဓလေ့တွေဟာ ကျွန်တော်တို့ရဲ့ ပုံရိပ်အတွက် အရေးကြီးပါတယ်။ ဒါပေမဲ့ ခေတ်သစ်ဘဝက မြန်မြန်ဆန်ဆန် ပြောင်းလဲနေပါတယ်။ ကျွန်တော်တို့ရဲ့ ယဉ်ကျေးမှုကို ဆက်လက်ထိန်းသိမ်းဖို့ လိုအပ်တယ်လို့ ကျွန်တော် ယုံကြည်ပါတယ်။ ရှေးဟောင်းဓလေ့တချို့ဟာ အလွန်လှပပါတယ်။ ဥပမာအားဖြင့် သင်္ကြန်ပွဲတော်ကို ဆင်နွှဲခြင်းက လူတွေကို စည်းလုံးစေပါတယ်။ ဒါပေမဲ့ တချို့သော ရိုးရာဓလေ့တွေက ခေတ်နဲ့အညီ ပြောင်းလဲဖို့ လိုအပ်ပါတယ်။ ကျွန်တော်တို့ အတိတ်မှာပဲ အမြဲနေလို့မရပါဘူး။ ကျွန်တော်တို့အနေနဲ့ မျှတမှုတစ်ခု ရှာဖွေသင့်တယ်လို့ ထင်ပါတယ်။ အသစ်ကို လက်ခံရင်း အဟောင်းကိုလည်း လေးစားရပါမယ်။ ဒါက ဒီနေ့ခေတ်မှာ ပိုကောင်းတဲ့ဘဝကို ပိုင်ဆိုင်ဖို့ ကူညီပေးပါတယ်။ ရိုးရာဓလေ့နဲ့ တိုးတက်မှုဟာ လက်တွဲလုပ်ဆောင်သင့်တယ်လို့ ကျွန်တော် ခံစားရပါတယ်။",
+    "breakdown": [
+      {
+        "text_en": "Traditions are important for our identity.",
+        "gloss_mm": "ရိုးရာဓလေ့တွေဟာ ကျွန်တော်တို့ရဲ့ ပုံရိပ်အတွက် အရေးကြီးပါတယ်။",
+        "why_mm": "ယေဘုယျအမြင်ကို စတင်ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "However, modern life changes quickly.",
+        "gloss_mm": "ဒါပေမဲ့ ခေတ်သစ်ဘဝက မြန်မြန်ဆန်ဆန် ပြောင်းလဲနေပါတယ်။",
+        "why_mm": "အတိတ်နဲ့ ပစ္စုပ္ပန်ကို နှိုင်းယှဉ်ခြင်း"
+      },
+      {
+        "text_en": "I believe we must keep our culture alive.",
+        "gloss_mm": "ကျွန်တော်တို့ရဲ့ ယဉ်ကျေးမှုကို ဆက်လက်ထိန်းသိမ်းဖို့ လိုအပ်တယ်လို့ ကျွန်တော် ယုံကြည်ပါတယ်။",
+        "why_mm": "ကိုယ့်ရဲ့ ခိုင်မာတဲ့အမြင်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "Some old customs are very beautiful.",
+        "gloss_mm": "ရှေးဟောင်းဓလေ့တချို့ဟာ အလွန်လှပပါတယ်။",
+        "why_mm": "ကောင်းမွန်တဲ့ ရိုးရာဓလေ့ကို ထောက်ခံခြင်း"
+      },
+      {
+        "text_en": "For example, celebrating Thingyan brings people together.",
+        "gloss_mm": "ဥပမာအားဖြင့် သင်္ကြန်ပွဲတော်ကို ဆင်နွှဲခြင်းက လူတွေကို စည်းလုံးစေပါတယ်။",
+        "why_mm": "ကိုယ်ပိုင်ဥပမာ ပေးခြင်း"
+      },
+      {
+        "text_en": "But some traditions need to change for modern times.",
+        "gloss_mm": "ဒါပေမဲ့ တချို့သော ရိုးရာဓလေ့တွေက ခေတ်နဲ့အညီ ပြောင်းလဲဖို့ လိုအပ်ပါတယ်။",
+        "why_mm": "ပြောင်းလဲဖို့ လိုအပ်တာကို ထောက်ပြခြင်း"
+      },
+      {
+        "text_en": "We cannot stay in the past forever.",
+        "gloss_mm": "ကျွန်တော်တို့ အတိတ်မှာပဲ အမြဲနေလို့မရပါဘူး။",
+        "why_mm": "အကြောင်းပြချက်ကို ရှင်းပြခြင်း"
+      },
+      {
+        "text_en": "I think we should find a balance.",
+        "gloss_mm": "ကျွန်တော်တို့အနေနဲ့ မျှတမှုတစ်ခု ရှာဖွေသင့်တယ်လို့ ထင်ပါတယ်။",
+        "why_mm": "မျှတအောင်နေဖို့ အကြံပြုခြင်း"
+      },
+      {
+        "text_en": "We must respect the old while accepting the new.",
+        "gloss_mm": "အသစ်ကို လက်ခံရင်း အဟောင်းကိုလည်း လေးစားရပါမယ်။",
+        "why_mm": "အမြင်ကို အကျဉ်းချုပ်ခြင်း"
+      },
+      {
+        "text_en": "This helps us live better lives today.",
+        "gloss_mm": "ဒါက ဒီနေ့ခေတ်မှာ ပိုကောင်းတဲ့ဘဝကို ပိုင်ဆိုင်ဖို့ ကူညီပေးပါတယ်။",
+        "why_mm": "အကျိုးဆက်ကို ဖော်ပြခြင်း"
+      },
+      {
+        "text_en": "I feel that tradition and progress should work together.",
+        "gloss_mm": "ရိုးရာဓလေ့နဲ့ တိုးတက်မှုဟာ လက်တွဲလုပ်ဆောင်သင့်တယ်လို့ ကျွန်တော် ခံစားရပါတယ်။",
+        "why_mm": "နိဂုံးချုပ်အနေနဲ့ အမြင်တင်ပြခြင်း"
+      }
+    ],
+    "template": "Traditions are {importance_level} for our identity. However, modern life changes quickly. I believe we must {action_culture}. Some old customs are very beautiful. For example, {positive_example} brings people together. But some traditions need to change for modern times. We cannot stay in the past forever. I think we should {suggestion_balance}. We must respect the old while accepting the new. This helps us {benefit_outcome}. I feel that tradition and progress should work together.",
+    "slots": [
+      {
+        "id": "importance_level",
+        "label_en": "Importance Level",
+        "label_mm": "အရေးပါမှုအဆင့်",
+        "hint": "ရိုးရာဓလေ့တွေက ဘယ်လောက်အရေးကြီးလဲ",
+        "options": [
+          "essential",
+          "valuable",
+          "very important",
+          "fundamental"
+        ]
+      },
+      {
+        "id": "action_culture",
+        "label_en": "Action towards Culture",
+        "label_mm": "ယဉ်ကျေးမှုအပေါ် လုပ်ဆောင်ချက်",
+        "hint": "ယဉ်ကျေးမှုကို ဘာလုပ်သင့်သလဲ",
+        "options": [
+          "preserve our culture",
+          "protect our heritage",
+          "keep our culture alive"
+        ]
+      },
+      {
+        "id": "positive_example",
+        "label_en": "Positive Custom",
+        "label_mm": "ကောင်းမွန်တဲ့ဓလေ့",
+        "hint": "ရိုးရာဓလေ့တစ်ခုကို ပြောပါ",
+        "options": [
+          "celebrating Thingyan",
+          "wearing traditional clothes",
+          "respecting elders",
+          "visiting pagodas"
+        ]
+      },
+      {
+        "id": "suggestion_balance",
+        "label_en": "Suggestion",
+        "label_mm": "အကြံပြုချက်",
+        "hint": "ဘယ်လိုမျှတအောင်နေမလဲ",
+        "options": [
+          "find a healthy balance",
+          "adapt to the new world",
+          "blend old and new ways"
+        ]
+      },
+      {
+        "id": "benefit_outcome",
+        "label_en": "Positive Outcome",
+        "label_mm": "ကောင်းကျိုး",
+        "hint": "ဘာကြောင့် မျှတအောင်နေသင့်တာလဲ",
+        "options": [
+          "live better lives today",
+          "create a stronger society",
+          "move forward with confidence"
+        ]
+      }
+    ],
+    "model_audio": "bunny/speak_your_mind/level2/keeping_traditions/guide-model.mp3"
+  }
+}

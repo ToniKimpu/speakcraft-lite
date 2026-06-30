@@ -1,0 +1,545 @@
+{
+  "id": "a_festival_i_celebrated",
+  "level": 2,
+  "domain_en": "Telling stories",
+  "domain_mm": "ဇာတ်လမ်း ပြောပြခြင်း",
+  "title_en": "A Festival I Celebrated",
+  "title_mm": "ကျွန်တော်/ကျွန်မ ပါဝင်ဆင်နွှဲခဲ့တဲ့ ပွဲတော်တစ်ခု",
+  "promise_en": "Master the art of storytelling to describe your favorite festival memories in natural English.",
+  "promise_mm": "ကိုယ်တိုင် ကြုံတွေ့ခဲ့ရတဲ့ ပွဲတော်အတွေ့အကြုံတွေကို သဘာဝကျကျ ပြန်ပြောပြနိုင်ဖို့ လေ့လာကြမယ်။",
+  "intro_en": "Whether it's the excitement of Thingyan or the warmth of a family wedding, recounting past events is a key social skill. This lesson gives you the phrases to describe the 'who, what, when, and how' of your favorite memories.",
+  "intro_mm": "သင်္ကြန်ပွဲတော်ပဲဖြစ်ဖြစ်၊ မိသားစု မင်္ဂလာဆောင်ပဲဖြစ်ဖြစ် အတိတ်က အဖြစ်အပျက်တွေကို ပြန်ပြောပြတာဟာ လူမှုဆက်ဆံရေးမှာ အရေးပါပါတယ်။ ဒီသင်ခန်းစာမှာ ကိုယ့်ရဲ့ အမှတ်တရတွေကို ဖော်ပြဖို့ လိုအပ်တဲ့ စကားလုံးတွေကို လေ့လာသွားမှာပါ။",
+  "toolbox": [
+    {
+      "move_en": "Saying when and where the festival took place",
+      "move_mm": "ပွဲတော် ဘယ်အချိန် ဘယ်နေရာမှာ ကျင်းပခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I went to the Thingyan festival in Yangon last year.",
+          "highlight": "last year",
+          "swap_en": "last month · two years ago · during my childhood",
+          "gloss_mm": "ပြီးခဲ့တဲ့နှစ်က ရန်ကုန်မှာ ကျင်းပတဲ့ သင်္ကြန်ပွဲကို ကျွန်တော် သွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We celebrated the Tazaungdaing festival in Mandalay.",
+          "highlight": "in Mandalay",
+          "swap_en": "at the Shwedagon Pagoda · in my hometown · at my grandparents' village",
+          "gloss_mm": "မန္တလေးမှာ တန်ဆောင်တိုင်ပွဲတော်ကို ကျွန်တော်တို့ ဆင်နွှဲခဲ့ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It took place in Bagan back in November.",
+          "highlight": "back in November",
+          "swap_en": "during the summer holidays · around the full moon day · over the weekend",
+          "gloss_mm": "အဲဒီပွဲကို နိုဝင်ဘာလတုန်းက ပုဂံမှာ ကျင်းပခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The event was held at the city center last week.",
+          "highlight": "at the city center",
+          "swap_en": "at a local monastery · near the river bank · in the heart of the city",
+          "gloss_mm": "ပွဲကို ပြီးခဲ့တဲ့အပတ်က မြို့လယ်ခေါင်မှာ ကျင်းပခဲ့တာပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It happened in Taunggyi during the hot air balloon festival.",
+          "highlight": "during the hot air balloon festival",
+          "swap_en": "during the pagoda festival · over the Thingyan holidays · when I was visiting Inle Lake",
+          "gloss_mm": "တောင်ကြီး မီးပုံးပျံပွဲတော်လုပ်တုန်းက အဲဒီမှာ ဖြစ်ခဲ့တာပါ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning who you went with",
+      "move_mm": "ဘယ်သူနဲ့အတူ သွားခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I went with my friends.",
+          "highlight": "my friends",
+          "swap_en": "my family · my brother · my sister · my colleagues",
+          "gloss_mm": "ကျွန်တော် သူငယ်ချင်းတွေနဲ့အတူ သွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I tagged along with my cousins.",
+          "highlight": "tagged along with",
+          "swap_en": "went with · hung out with",
+          "gloss_mm": "ကျွန်တော် ဝမ်းကွဲမောင်နှမတွေနောက်ကို လိုက်သွားခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I was accompanied by some close friends from work.",
+          "highlight": "accompanied by",
+          "swap_en": "joined by · with",
+          "gloss_mm": "ကျွန်တော့်ရဲ့ ရုံးက ရင်းနှီးတဲ့သူငယ်ချင်းတွေနဲ့အတူ သွားဖြစ်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the atmosphere",
+      "move_mm": "ပွဲတော်ရဲ့ ပတ်ဝန်းကျင် အခြေအနေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The festival was very crowded.",
+          "highlight": "very crowded",
+          "swap_en": "very noisy · full of people · very busy",
+          "gloss_mm": "ပွဲတော်မှာ လူတွေ အရမ်းများပြီး စည်ကားနေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "The atmosphere was really lively.",
+          "highlight": "really lively",
+          "swap_en": "really exciting · quite fun · super joyful",
+          "gloss_mm": "ပွဲတော်ရဲ့ ပတ်ဝန်းကျင်က တကယ်ကို ပျော်စရာကောင်းပြီး စည်ကားနေတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "People were everywhere, and the vibe was incredible.",
+          "highlight": "the vibe was incredible",
+          "swap_en": "the atmosphere was electric · the mood was festive · the energy was amazing",
+          "gloss_mm": "ဘယ်နေရာကြည့်လိုက်ကြည့် လူတွေချည်းပဲ၊ ပွဲရဲ့ အငွေ့အသက်က တကယ့်ကို ထူးခြားကောင်းမွန်နေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Listing the activities you participated in",
+      "move_mm": "ကိုယ်တိုင် ပါဝင်လုပ်ဆောင်ခဲ့တာတွေကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "I went to the pagoda with my friends.",
+          "highlight": "went to the pagoda",
+          "swap_en": "visited the temple · went to the festival site · joined the street parade",
+          "gloss_mm": "ကျွန်တော် သူငယ်ချင်းတွေနဲ့ ဘုရားသွားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I helped my family cook traditional food.",
+          "highlight": "helped my family cook",
+          "swap_en": "helped my mom prepare · helped my friends decorate · helped my neighbors serve",
+          "gloss_mm": "ကျွန်တော် မိသားစုနဲ့အတူ ရိုးရာအစားအစာတွေ ချက်ပြုတ်ရာမှာ ကူညီပေးခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "We spent the whole evening enjoying the live music.",
+          "highlight": "spent the whole evening enjoying",
+          "swap_en": "spent the afternoon watching · spent the entire day participating in",
+          "gloss_mm": "ညနေခင်းတစ်ခုလုံးကို တေးဂီတတွေ နားထောင်ရင်း ပျော်ပျော်ပါးပါး ကုန်ဆုံးခဲ့ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I found myself fully immersed in the local festivities.",
+          "highlight": "fully immersed in",
+          "swap_en": "deeply involved in · completely caught up in",
+          "gloss_mm": "ကျွန်တော် ဒေသခံပွဲတော်ရဲ့ အငွေ့အသက်တွေထဲမှာ အပြည့်အဝ ပျော်ဝင်နေခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about the food and drinks",
+      "move_mm": "စားခဲ့သောက်ခဲ့တဲ့ အစားအသောက်တွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I ate a lot of traditional snacks.",
+          "highlight": "a lot of",
+          "swap_en": "plenty of · some · a few",
+          "gloss_mm": "ကျွန်တော် ရိုးရာမုန့်တွေကို အများကြီး စားခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We had some delicious mohinga at the festival.",
+          "highlight": "some delicious mohinga",
+          "swap_en": "some tasty laphet thoke · some refreshing faluda · a lot of sweet snacks",
+          "gloss_mm": "ပွဲတော်မှာ အရသာရှိတဲ့ မုန့်ဟင်းခါး စားခဲ့ကြတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I helped myself to several servings of sticky rice.",
+          "highlight": "helped myself to",
+          "swap_en": "enjoyed · tried · sampled",
+          "gloss_mm": "ကောက်ညှင်းပေါင်းကို အားရပါးရ စားလိုက်တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "The highlight of the meal was the homemade pickled tea leaves.",
+          "highlight": "The highlight of the meal",
+          "swap_en": "The best part of the feast · The most memorable dish",
+          "gloss_mm": "စားသောက်ပွဲမှာ အကောင်းဆုံးကတော့ အိမ်လုပ် လက်ဖက်သုပ်ပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the clothes you wore",
+      "move_mm": "ဝတ်ဆင်ခဲ့တဲ့ အဝတ်အစားတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I wore a longyi and a shirt.",
+          "highlight": "a longyi and a shirt",
+          "swap_en": "a traditional dress · a white shirt · a new longyi",
+          "gloss_mm": "ကျွန်တော် လုံချည်နဲ့ အင်္ကျီ ဝတ်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I decided to wear my favorite silk longyi.",
+          "highlight": "my favorite silk longyi",
+          "swap_en": "my new traditional outfit · my best clothes",
+          "gloss_mm": "ကျွန်တော် အကြိုက်ဆုံး ပိုးလုံချည်ကို ဝတ်ဖို့ ဆုံးဖြတ်ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I was dressed in traditional Burmese attire for the festival.",
+          "highlight": "traditional Burmese attire",
+          "swap_en": "formal traditional wear · a colorful traditional dress",
+          "gloss_mm": "ပွဲတော်အတွက် မြန်မာ့ရိုးရာဝတ်စုံကို ဝတ်ဆင်ခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "I felt comfortable in the light cotton clothes I chose.",
+          "highlight": "light cotton clothes",
+          "swap_en": "simple traditional clothes · festive outfits",
+          "gloss_mm": "ကျွန်တော် ရွေးချယ်ဝတ်ဆင်ခဲ့တဲ့ ပေါ့ပါးတဲ့ ဝါဂွမ်းအင်္ကျီက သက်သောင့်သက်သာ ရှိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Mentioning a small problem or challenge",
+      "move_mm": "ကြုံတွေ့ခဲ့ရတဲ့ အခက်အခဲအသေးလေးအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "It was a bit crowded.",
+          "highlight": "a bit crowded",
+          "swap_en": "really hot · very noisy · quite busy",
+          "gloss_mm": "လူတွေ နည်းနည်း ကြပ်နေတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "We had a small problem finding a taxi.",
+          "highlight": "a small problem finding a taxi",
+          "swap_en": "a small problem finding parking · a hard time getting a table",
+          "gloss_mm": "တက္ကစီရှာရတာ နည်းနည်း အခက်အခဲ ဖြစ်သွားတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The main downside was the heavy traffic.",
+          "highlight": "The main downside was",
+          "swap_en": "The only trouble was · The annoying part was",
+          "gloss_mm": "အဓိက အခက်အခဲကတော့ လမ်းမှာ ကားတွေ အရမ်းပိတ်နေတာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "Unfortunately, the sudden rain ruined our plans.",
+          "highlight": "the sudden rain ruined our plans",
+          "swap_en": "the long queue ruined our mood · the loud music spoiled the atmosphere",
+          "gloss_mm": "ကံမကောင်းစွာနဲ့ပဲ မိုးရုတ်တရက်ရွာလာလို့ အစီအစဉ်တွေ ပျက်သွားတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Highlighting the best part of the day",
+      "move_mm": "နေ့တစ်နေ့ရဲ့ အပျော်ရွှင်ဆုံး အချိန်ကို ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "The best part was eating mohinga with my friends.",
+          "highlight": "eating mohinga with my friends",
+          "swap_en": "visiting the Shwedagon Pagoda · watching the street parade · dancing at the concert",
+          "gloss_mm": "အပျော်ဆုံးအပိုင်းကတော့ သူငယ်ချင်းတွေနဲ့ မုန့်ဟင်းခါးစားရတဲ့အချိန်ပါ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I really enjoyed spending the evening at the festival fair.",
+          "highlight": "spending the evening at the festival fair",
+          "swap_en": "walking around the night market · listening to the traditional music · meeting my old classmates",
+          "gloss_mm": "ပွဲတော်ဈေးတန်းမှာ ညနေခင်းကို ကုန်ဆုံးလိုက်ရတာ တကယ့်ကို ပျော်ဖို့ကောင်းတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The highlight of the day was definitely catching up with my relatives over tea.",
+          "highlight": "catching up with my relatives over tea",
+          "swap_en": "witnessing the fireworks display · joining the traditional dance performance · wandering through the crowded stalls",
+          "gloss_mm": "ဒီနေ့ရဲ့ အပျော်ဆုံးအချိန်ကတော့ လက်ဖက်ရည်ဆိုင်မှာ ဆွေမျိုးတွေနဲ့ စကားပြောရင်း အမှတ်တရတွေ ပြန်ပြောကြတဲ့အချိန်ပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Expressing your emotions at that moment",
+      "move_mm": "အဲဒီအချိန်က ခံစားချက်ကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "I was very happy that day.",
+          "highlight": "very happy",
+          "swap_en": "so excited · really joyful · very amazed",
+          "gloss_mm": "အဲဒီနေ့က ကျွန်တော် အရမ်းပျော်ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I felt so proud to be part of the celebration.",
+          "highlight": "so proud",
+          "swap_en": "so moved · really impressed · so touched",
+          "gloss_mm": "ပွဲတော်မှာ ပါဝင်ခွင့်ရတာကို ကျွန်တော် အရမ်းဂုဏ်ယူမိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It was such an overwhelming experience for me.",
+          "highlight": "an overwhelming experience",
+          "swap_en": "a truly unforgettable moment · a magical atmosphere · a deeply moving time",
+          "gloss_mm": "ဒါက ကျွန်တော့်အတွက်တော့ တကယ်ကို ရင်ခုန်စိတ်လှုပ်ရှားစရာ အတွေ့အကြုံတစ်ခုပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Talking about the people you met",
+      "move_mm": "တွေ့ဆုံခဲ့ရတဲ့ လူတွေအကြောင်း ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I met my old friends there.",
+          "highlight": "my old friends",
+          "swap_en": "some cousins · my former classmates · my aunt",
+          "gloss_mm": "အဲဒီမှာ ကျွန်တော့် သူငယ်ချင်းဟောင်းတွေကို တွေ့ခဲ့တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I caught up with many relatives.",
+          "highlight": "many relatives",
+          "swap_en": "some neighbors · a few cousins from Mandalay · my childhood friends",
+          "gloss_mm": "ဆွေမျိုးတွေအများကြီးနဲ့ စကားလက်ဆုံကျခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "I bumped into some people I hadn't seen in years.",
+          "highlight": "some people I hadn't seen in years",
+          "swap_en": "a childhood friend I lost touch with · some old neighbors from Yangon",
+          "gloss_mm": "နှစ်အတော်ကြာ မတွေ့ဖြစ်တော့တဲ့ လူတချို့နဲ့ ရုတ်တရက် ဆုံမိတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Describing the music or traditional sounds",
+      "move_mm": "တီးခတ်တဲ့ တေးဂီတ ဒါမှမဟုတ် အသံတွေကို ဖော်ပြနည်း",
+      "items": [
+        {
+          "text_en": "The music was very loud.",
+          "highlight": "very loud",
+          "swap_en": "very fast · really exciting · quite traditional",
+          "gloss_mm": "တေးဂီတသံက အလွန်ကျယ်လောင်တယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I loved the sound of the drums.",
+          "highlight": "the sound of the drums",
+          "swap_en": "the traditional music · the live performance · the cheerful songs",
+          "gloss_mm": "ဒရမ်သံ (စည်သံ) တွေကို ကျွန်တော် သဘောကျတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The traditional rhythm was so energetic.",
+          "highlight": "so energetic",
+          "swap_en": "so lively · really catchy · incredibly festive",
+          "gloss_mm": "ရိုးရာတီးလုံးက တက်ကြွမှု အပြည့်ရှိတယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The whole atmosphere was filled with upbeat music.",
+          "highlight": "filled with upbeat music",
+          "swap_en": "vibrating with traditional melodies · buzzing with festive sounds",
+          "gloss_mm": "ပတ်ဝန်းကျင်တစ်ခုလုံး ပျော်ရွှင်စရာ တေးဂီတသံတွေနဲ့ ပြည့်နှက်နေတယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Explaining how the day ended",
+      "move_mm": "နေ့တစ်နေ့ ဘယ်လို အဆုံးသတ်ခဲ့လဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "We went home late at night.",
+          "highlight": "went home late at night",
+          "swap_en": "went home after the fireworks · headed back home exhausted · finally got home",
+          "gloss_mm": "ညဉ့်နက်မှ အိမ်ပြန်ရောက်ကြတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "I was really tired but felt very happy.",
+          "highlight": "really tired but felt very happy",
+          "swap_en": "exhausted but satisfied · worn out but glad I went · drained but content",
+          "gloss_mm": "တော်တော်ပင်ပန်းပေမယ့် တကယ်ပျော်ရွှင်ခဲ့တယ်။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "It was the perfect way to wrap up the festival.",
+          "highlight": "perfect way to wrap up the festival",
+          "swap_en": "great way to end the day · memorable way to finish the celebration",
+          "gloss_mm": "ပွဲတော်ကို အဆုံးသတ်ဖို့ အကောင်းဆုံးနည်းလမ်းပါပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Sharing what you liked most about the tradition",
+      "move_mm": "ရိုးရာဓလေ့ရဲ့ ဘယ်အချက်ကို အကြိုက်ဆုံးလဲ ပြောနည်း",
+      "items": [
+        {
+          "text_en": "I liked the food the most.",
+          "highlight": "the food",
+          "swap_en": "the music · the decorations · the atmosphere",
+          "gloss_mm": "ကျွန်တော် အစားအသောက်ကို အကြိုက်ဆုံးပဲ။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "My favorite part was visiting the pagoda.",
+          "highlight": "visiting the pagoda",
+          "swap_en": "giving alms to monks · watching the parade · meeting my cousins",
+          "gloss_mm": "ကျွန်တော် အကြိုက်ဆုံးကတော့ ဘုရားသွားရတာပဲ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "What I enjoyed most was the sense of community.",
+          "highlight": "the sense of community",
+          "swap_en": "the lively atmosphere · the traditional dance · the excitement of the crowd",
+          "gloss_mm": "ကျွန်တော် အကြိုက်ဆုံးကတော့ လူတွေအားလုံး ပျော်ပျော်ပါးပါး စုစည်းနေကြတာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        },
+        {
+          "text_en": "The highlight of the festival was definitely the water fight.",
+          "highlight": "The highlight of the festival",
+          "swap_en": "the best thing about the day · the most memorable part",
+          "gloss_mm": "ဒီပွဲတော်ရဲ့ အကောင်းဆုံးအချက်ကတော့ ရေပက်ကစားတာပဲ။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Comparing it to other festivals",
+      "move_mm": "တခြားပွဲတော်တွေနဲ့ နှိုင်းယှဉ် ပြောပြနည်း",
+      "items": [
+        {
+          "text_en": "It was better than other festivals.",
+          "highlight": "better than",
+          "swap_en": "not as fun as · more crowded than · less exciting than",
+          "gloss_mm": "ဒါက တခြားပွဲတော်တွေထက် ပိုကောင်းတယ်။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "Unlike Thingyan, it was much quieter.",
+          "highlight": "Unlike Thingyan",
+          "swap_en": "Unlike the Thadingyut festival · Unlike the Tazaungdaing festival",
+          "gloss_mm": "သင်္ကြန်နဲ့ မတူတာက ဒီပွဲက အရမ်း ပိုတိတ်ဆိတ်တယ်",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "Compared to Thadingyut, the atmosphere felt more spiritual.",
+          "highlight": "Compared to Thadingyut",
+          "swap_en": "Compared to the pagoda festival · Compared to the usual celebrations",
+          "gloss_mm": "သီတင်းကျွတ်နဲ့ ယှဉ်ရင် ဒီပွဲမှာ ပိုပြီး တရားသဘောပါတဲ့ ခံစားချက်မျိုး ရှိတယ်",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "move_en": "Concluding with why you will remember it",
+      "move_mm": "ဘာလို့ ဒီအမှတ်တရကို မေ့မှာမဟုတ်လဲ ဆိုတာနဲ့ အဆုံးသတ်နည်း",
+      "items": [
+        {
+          "text_en": "I will never forget this day.",
+          "highlight": "never forget this day",
+          "swap_en": "always remember this time · never forget the fun we had",
+          "gloss_mm": "ဒီနေ့လေးကို ကျွန်တော် ဘယ်တော့မှ မေ့မှာမဟုတ်ဘူး။",
+          "tag": "simple",
+          "audio": ""
+        },
+        {
+          "text_en": "It was a day that I will always treasure.",
+          "highlight": "a day that I will always treasure",
+          "swap_en": "a moment I will always cherish · a memory I will always keep",
+          "gloss_mm": "ဒါက ကျွန်တော် အမြဲတမ်း တန်ဖိုးထားနေမယ့် နေ့တစ်နေ့ပါ။",
+          "tag": "natural",
+          "audio": ""
+        },
+        {
+          "text_en": "The experience left a lasting impression on me.",
+          "highlight": "left a lasting impression on me",
+          "swap_en": "will stay with me for a long time · holds a special place in my heart",
+          "gloss_mm": "ဒီအတွေ့အကြုံက ကျွန်တော့်စိတ်ထဲမှာ အမြဲစွဲကျန်ရစ်နေခဲ့တယ်။",
+          "tag": "advanced",
+          "audio": ""
+        }
+      ]
+    }
+  ],
+  "produce": {
+    "prompt_en": "Write a story about a festival or celebration you attended. Tell us what happened, who you were with, and why it was special to you.",
+    "prompt_mm": "သင် တက်ရောက်ခဲ့ဖူးတဲ့ ပွဲတော်တစ်ခု ဒါမှမဟုတ် အခမ်းအနားတစ်ခုအကြောင်း ပုံပြင်လေးတစ်ပုဒ် ရေးပါ။ ဘာတွေဖြစ်ပျက်ခဲ့လဲ၊ ဘယ်သူတွေနဲ့ သွားခဲ့လဲ၊ ဘာကြောင့် အမှတ်တရဖြစ်ရလဲဆိုတာကို ရေးသားပါ။",
+    "min_words": 60,
+    "max_words": 200,
+    "coverage_hints": [
+      "Time and Place",
+      "Who was there",
+      "Activities",
+      "The food",
+      "The best moment",
+      "My feelings",
+      "Looking back"
+    ],
+    "speak_aloud_en": "Read your final answer aloud 2–3 times until it flows smoothly.",
+    "speak_aloud_mm": "သင် ရေးသားထားတဲ့ အဖြေကို အသံထွက်ပြီး ၂ ခါ ဒါမှမဟုတ် ၃ ခါလောက် ဖတ်ကြည့်ပါ။ အဆင်ပြေပြေ ပြောနိုင်တဲ့အထိ လေ့ကျင့်ပါ။"
+  }
+}
