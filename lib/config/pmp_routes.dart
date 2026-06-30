@@ -43,6 +43,7 @@ import '../screens/html_day_list.dart';
 import '../screens/html_preview.dart';
 import '../screens/listening_and_shadowing/speech_practice_session_page.dart';
 import '../screens/listening_and_shadowing/youtube_video_page.dart';
+import '../screens/youtube_import/youtube_import_page.dart';
 import '../screens/saved_words/saved_terms_page.dart';
 import '../screens/main/device_failed_screen.dart';
 import '../screens/main/home_screen.dart';
@@ -59,6 +60,7 @@ class PmpRoutes {
   static const listeningListPage = "/listening/listening_list_page";
   static const listeningHub = '/listening/lesson_hub';
   static const youtubeVideoPage = '/youtube_video_page';
+  static const youtubeImport = '/youtube_import';
   static const profilePage = '/profile_page';
   static const updateUserName = '/update_user_name';
   static const updateAvatarPage = '/update_avatar_page';
@@ -136,6 +138,8 @@ class PmpRoutes {
           settings,
         );
 
+      case youtubeImport:
+        return _getRoute(const YoutubeImportPage(), settings);
       case youtubeVideoPage:
         final args = settings.arguments as Map<String, dynamic>;
         final listening = args['listening'] as Listening;
@@ -199,6 +203,7 @@ class PmpRoutes {
           SentenceExplanationPager(
             explanations: args['explanations'] as List<SentenceExplanation>,
             initialIndex: args['index'] as int? ?? 0,
+            importId: args['import_id'] as String? ?? '',
           ),
           settings,
         );

@@ -42,8 +42,10 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
     });
 
     try {
-      final url =
-          Env.bunnyListeningAPIKey + widget.sentenceExplanation.explanationUrl;
+      // Imported videos store an absolute Supabase URL; curated content stores
+      // a Bunny-relative path. Only prepend the Bunny base for the latter.
+      final eu = widget.sentenceExplanation.explanationUrl;
+      final url = eu.startsWith('http') ? eu : Env.bunnyListeningAPIKey + eu;
 
       AppLogger.instance.debug("_loadJson: $url");
 

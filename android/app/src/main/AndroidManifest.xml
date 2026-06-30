@@ -76,5 +76,10 @@
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE" />
         </intent>
+        <!-- YouTube Import: let us detect and hand a link off to these audio
+             downloaders by explicit package (Android 11+ package visibility).
+             Without these, canResolveActivity()/setPackage() can't see them. -->
+        <package android:name="com.snaptube.premium" />
+        <package android:name="com.nemo.vidmate" />
     </queries>
 </manifest>

@@ -49,6 +49,12 @@ mixin _$Listening {
   String get keyTakeawaysPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'listening_category_id')
   int? get listeningCategoryId =>
+      throw _privateConstructorUsedError; // Set (to the user_imports uuid) only for user-imported videos. Empty for
+// curated content. Non-empty ⇒ this is an import: the generatable steps
+// (Key Takeaways, Speak on your own, per-sentence explanations) are shown
+// even before their content exists and are generated lazily on first open.
+  @JsonKey(name: 'import_id')
+  String get importId =>
       throw _privateConstructorUsedError; // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
 // features; on non-free videos free users get subtitle play only, the rest
 // is premium. Gating: isFree || currentUser.isPremiumUser.
@@ -97,6 +103,7 @@ abstract class $ListeningCopyWith<$Res> {
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
       @JsonKey(name: 'key_takeaways_path') String keyTakeawaysPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+      @JsonKey(name: 'import_id') String importId,
       @JsonKey(name: 'is_free') bool isFree,
       @JsonKey(name: 'sentence_count') int sentenceCount,
       @JsonKey(name: 'vocab_count') int vocabCount,
@@ -134,6 +141,7 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
     Object? vocabularyPath = null,
     Object? keyTakeawaysPath = null,
     Object? listeningCategoryId = freezed,
+    Object? importId = null,
     Object? isFree = null,
     Object? sentenceCount = null,
     Object? vocabCount = null,
@@ -204,6 +212,10 @@ class _$ListeningCopyWithImpl<$Res, $Val extends Listening>
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      importId: null == importId
+          ? _value.importId
+          : importId // ignore: cast_nullable_to_non_nullable
+              as String,
       isFree: null == isFree
           ? _value.isFree
           : isFree // ignore: cast_nullable_to_non_nullable
@@ -250,6 +262,7 @@ abstract class _$$ListeningImplCopyWith<$Res>
       @JsonKey(name: 'vocabulary_path') String vocabularyPath,
       @JsonKey(name: 'key_takeaways_path') String keyTakeawaysPath,
       @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+      @JsonKey(name: 'import_id') String importId,
       @JsonKey(name: 'is_free') bool isFree,
       @JsonKey(name: 'sentence_count') int sentenceCount,
       @JsonKey(name: 'vocab_count') int vocabCount,
@@ -285,6 +298,7 @@ class __$$ListeningImplCopyWithImpl<$Res>
     Object? vocabularyPath = null,
     Object? keyTakeawaysPath = null,
     Object? listeningCategoryId = freezed,
+    Object? importId = null,
     Object? isFree = null,
     Object? sentenceCount = null,
     Object? vocabCount = null,
@@ -355,6 +369,10 @@ class __$$ListeningImplCopyWithImpl<$Res>
           ? _value.listeningCategoryId
           : listeningCategoryId // ignore: cast_nullable_to_non_nullable
               as int?,
+      importId: null == importId
+          ? _value.importId
+          : importId // ignore: cast_nullable_to_non_nullable
+              as String,
       isFree: null == isFree
           ? _value.isFree
           : isFree // ignore: cast_nullable_to_non_nullable
@@ -396,6 +414,7 @@ class _$ListeningImpl implements _Listening {
       @JsonKey(name: 'vocabulary_path') this.vocabularyPath = '',
       @JsonKey(name: 'key_takeaways_path') this.keyTakeawaysPath = '',
       @JsonKey(name: 'listening_category_id') this.listeningCategoryId,
+      @JsonKey(name: 'import_id') this.importId = '',
       @JsonKey(name: 'is_free') this.isFree = false,
       @JsonKey(name: 'sentence_count') this.sentenceCount = 0,
       @JsonKey(name: 'vocab_count') this.vocabCount = 0,
@@ -449,6 +468,13 @@ class _$ListeningImpl implements _Listening {
   @override
   @JsonKey(name: 'listening_category_id')
   final int? listeningCategoryId;
+// Set (to the user_imports uuid) only for user-imported videos. Empty for
+// curated content. Non-empty ⇒ this is an import: the generatable steps
+// (Key Takeaways, Speak on your own, per-sentence explanations) are shown
+// even before their content exists and are generated lazily on first open.
+  @override
+  @JsonKey(name: 'import_id')
+  final String importId;
 // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
 // features; on non-free videos free users get subtitle play only, the rest
 // is premium. Gating: isFree || currentUser.isPremiumUser.
@@ -470,7 +496,7 @@ class _$ListeningImpl implements _Listening {
 
   @override
   String toString() {
-    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, keyTakeawaysPath: $keyTakeawaysPath, listeningCategoryId: $listeningCategoryId, isFree: $isFree, sentenceCount: $sentenceCount, vocabCount: $vocabCount, patternCount: $patternCount)';
+    return 'Listening(id: $id, title: $title, thumbnail: $thumbnail, start: $start, end: $end, hasMMSubtitle: $hasMMSubtitle, hasVocabularies: $hasVocabularies, youtubeId: $youtubeId, subtitlePath: $subtitlePath, multipleChoicePath: $multipleChoicePath, shadowingPath: $shadowingPath, recordSubtitlePath: $recordSubtitlePath, sentenceExplanationPath: $sentenceExplanationPath, vocabularyPath: $vocabularyPath, keyTakeawaysPath: $keyTakeawaysPath, listeningCategoryId: $listeningCategoryId, importId: $importId, isFree: $isFree, sentenceCount: $sentenceCount, vocabCount: $vocabCount, patternCount: $patternCount)';
   }
 
   @override
@@ -507,6 +533,8 @@ class _$ListeningImpl implements _Listening {
                 other.keyTakeawaysPath == keyTakeawaysPath) &&
             (identical(other.listeningCategoryId, listeningCategoryId) ||
                 other.listeningCategoryId == listeningCategoryId) &&
+            (identical(other.importId, importId) ||
+                other.importId == importId) &&
             (identical(other.isFree, isFree) || other.isFree == isFree) &&
             (identical(other.sentenceCount, sentenceCount) ||
                 other.sentenceCount == sentenceCount) &&
@@ -536,6 +564,7 @@ class _$ListeningImpl implements _Listening {
         vocabularyPath,
         keyTakeawaysPath,
         listeningCategoryId,
+        importId,
         isFree,
         sentenceCount,
         vocabCount,
@@ -577,6 +606,7 @@ abstract class _Listening implements Listening {
       @JsonKey(name: 'vocabulary_path') final String vocabularyPath,
       @JsonKey(name: 'key_takeaways_path') final String keyTakeawaysPath,
       @JsonKey(name: 'listening_category_id') final int? listeningCategoryId,
+      @JsonKey(name: 'import_id') final String importId,
       @JsonKey(name: 'is_free') final bool isFree,
       @JsonKey(name: 'sentence_count') final int sentenceCount,
       @JsonKey(name: 'vocab_count') final int vocabCount,
@@ -631,7 +661,14 @@ abstract class _Listening implements Listening {
   @override
   @JsonKey(name: 'listening_category_id')
   int?
-      get listeningCategoryId; // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
+      get listeningCategoryId; // Set (to the user_imports uuid) only for user-imported videos. Empty for
+// curated content. Non-empty ⇒ this is an import: the generatable steps
+// (Key Takeaways, Speak on your own, per-sentence explanations) are shown
+// even before their content exists and are generated lazily on first open.
+  @override
+  @JsonKey(name: 'import_id')
+  String
+      get importId; // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
 // features; on non-free videos free users get subtitle play only, the rest
 // is premium. Gating: isFree || currentUser.isPremiumUser.
   @override

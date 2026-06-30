@@ -507,38 +507,32 @@ class _TakeawayCardState extends State<_TakeawayCard> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.baseline,
-                        textBaseline: TextBaseline.alphabetic,
-                        children: [
-                          Flexible(
-                            child: Text(
-                              headword,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: cs.onSurface,
-                              ),
+                      // Headword on its own line (full width) so a long idiom
+                      // doesn't get squeezed into one word per line by the IPA.
+                      Text(
+                        headword,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: cs.onSurface,
+                        ),
+                      ),
+                      // IPA goes UNDER the headword — it can be long, and the app
+                      // font (Plus Jakarta Sans) lacks the stress marks ˈ / ˌ, so
+                      // we render it in Noto Sans which carries the full IPA block.
+                      if (phonetic.isNotEmpty) ...[
+                        const SizedBox(height: 3),
+                        Text(
+                          phonetic,
+                          style: GoogleFonts.notoSans(
+                            textStyle: TextStyle(
+                              fontSize: 12,
+                              color: cs.onSurfaceVariant,
+                              fontStyle: FontStyle.italic,
                             ),
                           ),
-                          if (phonetic.isNotEmpty) ...[
-                            const SizedBox(width: 8),
-                            Text(
-                              phonetic,
-                              // The app font (Plus Jakarta Sans) lacks the
-                              // IPA stress marks ˈ / ˌ, which render as tofu.
-                              // Noto Sans carries the full IPA block.
-                              style: GoogleFonts.notoSans(
-                                textStyle: TextStyle(
-                                  fontSize: 12,
-                                  color: cs.onSurfaceVariant,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ],
-                      ),
+                        ),
+                      ],
                       if (pos.isNotEmpty) ...[
                         const SizedBox(height: 2),
                         Text(

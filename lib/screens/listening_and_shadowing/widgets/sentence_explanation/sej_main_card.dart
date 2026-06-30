@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../config/pmp_colors.dart';
+import 'sej_highlight.dart';
 
 class SejMainCard extends StatelessWidget {
   const SejMainCard({super.key, required this.main});
@@ -34,7 +35,7 @@ class SejMainCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildHighlightedText(
+          buildHighlightedText(
             english,
             highlights,
             TextStyle(
@@ -66,37 +67,4 @@ class SejMainCard extends StatelessWidget {
     );
   }
 
-  Widget _buildHighlightedText(
-    String text,
-    List<String> highlights,
-    TextStyle baseStyle,
-  ) {
-    if (highlights.isEmpty) return Text(text, style: baseStyle);
-
-    final highlightStyle = baseStyle.copyWith(
-      color: PmpColors.warning600,
-      decoration: TextDecoration.underline,
-      decorationColor: PmpColors.warning400.withValues(alpha: 0.5),
-      decorationStyle: TextDecorationStyle.dotted,
-      decorationThickness: 2,
-    );
-
-    final pattern = highlights.map((h) => RegExp.escape(h)).join('|');
-    final regex = RegExp('($pattern)', caseSensitive: false);
-
-    final spans = <TextSpan>[];
-    int lastEnd = 0;
-    for (final match in regex.allMatches(text)) {
-      if (match.start > lastEnd) {
-        spans.add(TextSpan(text: text.substring(lastEnd, match.start)));
-      }
-      spans.add(TextSpan(text: match.group(0), style: highlightStyle));
-      lastEnd = match.end;
-    }
-    if (lastEnd < text.length) {
-      spans.add(TextSpan(text: text.substring(lastEnd)));
-    }
-
-    return Text.rich(TextSpan(style: baseStyle, children: spans));
-  }
 }

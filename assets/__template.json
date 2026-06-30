@@ -1,0 +1,53 @@
+{
+  "title": "Short English headline for this sentence (e.g. 'Career Change & Challenge')",
+  "main": {
+    "english": "The exact sentence from the talk.",
+    "burmese": "မြန်မာဘာသာ ဘာသာပြန်ချက်။",
+    "highlights": ["phrase to highlight", "another phrase"]
+  },
+  "terms": [
+    {
+      "number": 1,
+      "kind": "Noun | Verb | Adjective | Adverb | Phrase | Idiom | Noun Phrase | Verb Phrase | Phrasal Verb | Adverbial Phrase | Grammar Pattern | Emphatic Structure | Rhetorical Style | Transition | Comparison | Structure | Concept | Logical Connection | Context | Proper Noun | Question Structure | Term",
+      "term": "The word or phrase being explained",
+      "translation_my": "တိုတောင်းသော မြန်မာဘာသာပြန် (or empty string if none)",
+      "definition_my": "မြန်မာဘာသာဖြင့် အပြည့်အစုံ ရှင်းလင်းချက်။",
+      "examples": [
+        {
+          "english": "An example sentence using the term.",
+          "burmese": "ထိုဥပမာဝါကျ၏ မြန်မာဘာသာပြန်။"
+        },
+        {
+          "english": "A second example sentence (optional — omit the object if only one example).",
+          "burmese": "ဒုတိယဥပမာ မြန်မာဘာသာပြန်။"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "kind": "Phrasal Verb",
+      "term": "Second term",
+      "translation_my": "",
+      "definition_my": "မြန်မာဘာသာ ရှင်းလင်းချက်။",
+      "examples": []
+    },
+    {
+      "number": 3,
+      "kind": "Grammar Pattern",
+      "term": "Third term — vocabulary table variant (uses 'items' instead of 'examples')",
+      "translation_my": "",
+      "definition_my": "မြန်မာဘာသာ ရှင်းလင်းချက်။",
+      "examples": [],
+      "items": [
+        {
+          "english": "Row used when term is a table of related vocabulary items.",
+          "burmese": "ဇယားတွင် ပါဝင်သော စကားလုံးများ၏ မြန်မာဘာသာပြန်။"
+        }
+      ]
+    }
+  ],
+  "note": {
+    "title_my": "စကားပြောမှတ်ချက်",
+    "body_my": "ဤနေရာတွင် ယဉ်ကျေးမှု၊ အသုံးအနှုန်း သို့မဟုတ် အကြောင်းအရာနှင့်ပတ်သက်သော အပိုမှတ်ချက်ကို ထည့်သွင်းပါ။ note section ကို လုံးဝမလိုအပ်ပါက ဤ field တစ်ခုလုံးကို ဖယ်ထုတ်ပါ။"
+  }
+}

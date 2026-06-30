@@ -36,6 +36,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
 
     _future = fetchSentenceExplanations(
       widget.listening.subtitlePath,
+      isImport: widget.listening.importId.isNotEmpty,
     );
 
     context.read<VideoStepProgressBloc>().add(
@@ -47,8 +48,9 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
   }
 
   Future<List<SentenceExplanation>> fetchSentenceExplanations(
-    String url,
-  ) async {
+    String url, {
+    bool isImport = false,
+  }) async {
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode != 200) {
@@ -58,12 +60,17 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
     final decodedBody = utf8.decode(response.bodyBytes);
     final List data = jsonDecode(decodedBody);
 
-    final filtered = data.where((e) {
-      final url = e['explanation_url'];
-      return url != null && url is String && url.trim().isNotEmpty;
-    }).toList();
+    // Curated content only lists sentences that already have an explanation
+    // file. Imported videos generate explanations on demand, so show every
+    // sentence — the pager creates each one when first opened.
+    final source = isImport
+        ? data
+        : data.where((e) {
+            final url = e['explanation_url'];
+            return url != null && url is String && url.trim().isNotEmpty;
+          }).toList();
 
-    return filtered.map((e) => SentenceExplanation.fromJson(e)).toList();
+    return source.map((e) => SentenceExplanation.fromJson(e)).toList();
   }
 
   @override
@@ -203,6 +210,7 @@ class _SentenceExplanationListState extends State<SentenceExplanationList> {
                               arguments: {
                                 'explanations': items,
                                 'index': index,
+                                'import_id': widget.listening.importId,
                               },
                             );
                           },

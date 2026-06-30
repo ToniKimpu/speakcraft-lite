@@ -119,13 +119,23 @@ class TakeawayPracticeBuilder {
     });
   }
 
+  /// Coerce a `highlight` value to a string list. Gemini sometimes returns a
+  /// single string instead of the requested `[string]`, so accept both.
+  static List<String> _asStringList(dynamic v) {
+    if (v is List) {
+      return v.map((e) => e.toString()).where((s) => s.isNotEmpty).toList();
+    }
+    if (v is String && v.isNotEmpty) return [v];
+    return const [];
+  }
+
   /// `(promptWithBlank, answer)` for the first highlight literally present in
   /// the example's english, else null. Case-insensitive match; the answer keeps
   /// the original casing as authored.
   static (String, String)? _blank(Map<String, dynamic> ex) {
     final english = ex['english'] as String? ?? '';
     final low = english.toLowerCase();
-    for (final h in (ex['highlight'] as List? ?? const []).cast<String>()) {
+    for (final h in _asStringList(ex['highlight'])) {
       if (h.isEmpty) continue;
       final i = low.indexOf(h.toLowerCase());
       if (i < 0) continue;

@@ -32,6 +32,24 @@ class _SejTermCardState extends State<SejTermCard> {
   String get _termText => widget.term['term'] as String? ?? '';
   String get _kind => widget.term['kind'] as String? ?? '';
 
+  /// Phrases to mark in an example. Uses the example's own `highlight` list when
+  /// present; otherwise falls back to the term itself, so examples generated
+  /// before highlights existed still make the term stand out.
+  List<String> _highlightOf(Map<String, dynamic> ex) {
+    final raw = ex['highlight'];
+    if (raw is List) {
+      final list = raw
+          .map((e) => e.toString())
+          .where((s) => s.trim().isNotEmpty)
+          .toList();
+      if (list.isNotEmpty) return list;
+    } else if (raw is String && raw.trim().isNotEmpty) {
+      // Gemini sometimes returns a single string instead of [string].
+      return [raw];
+    }
+    return _termText.trim().isEmpty ? const [] : [_termText];
+  }
+
   @override
   void initState() {
     super.initState();
@@ -257,6 +275,7 @@ class _SejTermCardState extends State<SejTermCard> {
                       (item as Map<String, dynamic>)['english'] as String? ??
                           '',
                   burmese: item['burmese'] as String? ?? '',
+                  highlight: _highlightOf(item),
                 ),
               ),
           ],
@@ -274,6 +293,8 @@ class _SejTermCardState extends State<SejTermCard> {
                   burmese: (examples[i] as Map<String, dynamic>)['burmese']
                           as String? ??
                       '',
+                  highlight:
+                      _highlightOf(examples[i] as Map<String, dynamic>),
                   index: i,
                 ),
               ),

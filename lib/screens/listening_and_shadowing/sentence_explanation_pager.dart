@@ -8,6 +8,7 @@ import 'package:speakcraft/config/env.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
+import 'package:speakcraft/repositories/youtube_import/youtube_import_repository.dart';
 import 'package:speakcraft/shared_widgets/spoken_pattern_footer_widget.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
 
@@ -16,10 +17,15 @@ class SentenceExplanationPager extends StatefulWidget {
     super.key,
     required this.explanations,
     required this.initialIndex,
+    this.importId = '',
   });
 
   final List<SentenceExplanation> explanations;
   final int initialIndex;
+
+  /// Non-empty for imported videos — explanations are generated on demand
+  /// (per sentence) the first time a page is opened.
+  final String importId;
 
   @override
   State<SentenceExplanationPager> createState() =>
@@ -84,6 +90,7 @@ class _SentenceExplanationPagerState extends State<SentenceExplanationPager> {
               itemBuilder: (context, index) {
                 return _ExplanationPageContent(
                   explanation: widget.explanations[index],
+                  importId: widget.importId,
                 );
               },
             ),
@@ -104,8 +111,12 @@ class _SentenceExplanationPagerState extends State<SentenceExplanationPager> {
 }
 
 class _ExplanationPageContent extends StatefulWidget {
-  const _ExplanationPageContent({required this.explanation});
+  const _ExplanationPageContent({
+    required this.explanation,
+    this.importId = '',
+  });
   final SentenceExplanation explanation;
+  final String importId;
 
   @override
   State<_ExplanationPageContent> createState() =>
@@ -114,6 +125,7 @@ class _ExplanationPageContent extends StatefulWidget {
 
 class _ExplanationPageContentState extends State<_ExplanationPageContent>
     with AutomaticKeepAliveClientMixin {
+  final _importRepo = YoutubeImportRepository();
   Map<String, dynamic>? _jsonData;
   _ExplanationError? _error;
   bool _isLoading = false;
@@ -135,8 +147,33 @@ class _ExplanationPageContentState extends State<_ExplanationPageContent>
     });
 
     try {
-      final url =
-          Env.bunnyListeningAPIKey + widget.explanation.explanationUrl;
+      final eu = widget.explanation.explanationUrl;
+
+      // Imported videos with no explanation yet: generate this one sentence on
+      // demand (yt-enrich returns the content directly, so no second fetch).
+      if (eu.isEmpty) {
+        if (widget.importId.isEmpty) {
+          throw const _FriendlyException(_ExplanationError.notFound);
+        }
+        final res = await _importRepo.enrich(
+          importId: widget.importId,
+          step: 'explanation',
+          lineId: widget.explanation.id,
+        );
+        if (res.data == null) {
+          throw const _FriendlyException(_ExplanationError.loadFailed);
+        }
+        if (!mounted) return;
+        setState(() {
+          _jsonData = res.data;
+          _isLoading = false;
+        });
+        return;
+      }
+
+      // Imported videos store an absolute Supabase URL; curated content stores
+      // a Bunny-relative path. Only prepend the Bunny base for the latter.
+      final url = eu.startsWith('http') ? eu : Env.bunnyListeningAPIKey + eu;
       AppLogger.instance.debug("_loadJson: $url");
 
       final response =

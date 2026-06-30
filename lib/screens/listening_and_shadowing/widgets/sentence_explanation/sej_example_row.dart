@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
+import 'sej_highlight.dart';
+
 class SejExampleRow extends StatelessWidget {
   const SejExampleRow({
     super.key,
     required this.english,
     required this.burmese,
+    this.highlight = const [],
     this.index,
   });
 
   final String english;
   final String burmese;
+
+  /// Phrases within [english] to mark (the term in use), so it's obvious.
+  final List<String> highlight;
   final int? index;
 
   @override
@@ -43,9 +49,10 @@ class SejExampleRow extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              buildHighlightedText(
                 english,
-                style: TextStyle(
+                highlight,
+                TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w500,
                   color: colorScheme.onSurface,

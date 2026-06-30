@@ -25,6 +25,11 @@ class Listening with _$Listening {
     // the Key Takeaways step is hidden for this video.
     @JsonKey(name: 'key_takeaways_path') @Default('') String keyTakeawaysPath,
     @JsonKey(name: 'listening_category_id') int? listeningCategoryId,
+    // Set (to the user_imports uuid) only for user-imported videos. Empty for
+    // curated content. Non-empty ⇒ this is an import: the generatable steps
+    // (Key Takeaways, Speak on your own, per-sentence explanations) are shown
+    // even before their content exists and are generated lazily on first open.
+    @JsonKey(name: 'import_id') @Default('') String importId,
     // Per-video free flag (Supabase listenings.is_free). Free videos unlock all
     // features; on non-free videos free users get subtitle play only, the rest
     // is premium. Gating: isFree || currentUser.isPremiumUser.

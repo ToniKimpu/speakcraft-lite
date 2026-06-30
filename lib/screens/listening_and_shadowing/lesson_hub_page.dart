@@ -8,9 +8,11 @@ import 'package:speakcraft/bloc/video_step_progress/video_step_progress_bloc.dar
 import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
+import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/listening/listening.dart';
 import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
+import 'package:speakcraft/repositories/youtube_import/youtube_import_repository.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:speakcraft/shared_widgets/premium_gate.dart';
@@ -25,18 +27,25 @@ class LessonHubPage extends StatefulWidget {
 }
 
 class _LessonHubPageState extends State<LessonHubPage> {
+  final _importRepo = YoutubeImportRepository();
+
+  // Local, mutable copy of the lesson. For imports we populate the
+  // record/key-takeaways paths in place after lazy generation, so the step
+  // pages we navigate to receive a listening with the freshly-generated path.
+  late Listening _listening;
+
   @override
   void initState() {
     super.initState();
+    _listening = widget.listening;
     context
         .read<VideoStepProgressBloc>()
-        .add(VideoStepProgressEvent.loadVideo(widget.listening.youtubeId));
+        .add(VideoStepProgressEvent.loadVideo(_listening.youtubeId));
   }
 
   List<_StepConfig> _visibleSteps() {
     return [
-      for (final step in visibleLessonSteps(widget.listening))
-        _configForStep(step),
+      for (final step in visibleLessonSteps(_listening)) _configForStep(step),
     ];
   }
 
@@ -95,13 +104,28 @@ class _LessonHubPageState extends State<LessonHubPage> {
 
   bool _isLocked(VideoLessonStep step) =>
       step != VideoLessonStep.watch &&
-      !isUnlocked(isFree: widget.listening.isFree);
+      !isUnlocked(isFree: _listening.isFree);
 
-  void _openStep(_StepConfig config) {
+  Future<void> _openStep(_StepConfig config) async {
     if (_isLocked(config.step)) {
       showPremiumSheet(context, featureName: config.title);
       return;
     }
+    // Imported videos generate Key Takeaways / Speak-on-your-own on first open.
+    // (Reaching here means the user is premium — locked steps were handled
+    // above.) Generate, populate the path, then continue.
+    if (config.step == VideoLessonStep.keyTakeaways &&
+        _listening.keyTakeawaysPath.isEmpty &&
+        _listening.importId.isNotEmpty) {
+      if (!await _generate('key_takeaways', config.title)) return;
+    }
+    if (config.step == VideoLessonStep.record &&
+        _listening.recordSubtitlePath.isEmpty &&
+        _listening.importId.isNotEmpty) {
+      if (!await _generate('record', config.title)) return;
+    }
+
+    if (!mounted) return;
     if (config.step == VideoLessonStep.record) {
       _showSpeakModeSheet();
       return;
@@ -109,8 +133,82 @@ class _LessonHubPageState extends State<LessonHubPage> {
     Navigator.pushNamed(
       context,
       config.route,
-      arguments: {'listening': widget.listening},
+      arguments: {'listening': _listening},
     );
+  }
+
+  /// Generate a lazy step (record / key_takeaways) for an import, showing a
+  /// blocking spinner. Returns true on success (path now populated on
+  /// [_listening]); false if it failed (a message was shown).
+  Future<bool> _generate(String step, String featureName) async {
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => _GeneratingDialog(featureName: featureName),
+    );
+    try {
+      final res =
+          await _importRepo.enrich(importId: _listening.importId, step: step);
+      final path = res.path ?? '';
+      if (mounted) {
+        setState(() {
+          _listening = step == 'key_takeaways'
+              ? _listening.copyWith(keyTakeawaysPath: path)
+              : _listening.copyWith(recordSubtitlePath: path);
+        });
+      }
+      return path.isNotEmpty;
+    } on YoutubeImportException catch (e, st) {
+      // Log the raw cause for us; show plain English to the user.
+      AppLogger.instance.error(
+        'YT_ENRICH $step failed: code=${e.code} message=${e.message}',
+        error: e,
+        stackTrace: st,
+      );
+      _showError(_friendlyEnrichError(e, featureName));
+      return false;
+    } catch (e, st) {
+      AppLogger.instance.error('YT_ENRICH $step failed (unexpected): $e',
+          error: e, stackTrace: st);
+      _showError('Something went wrong preparing $featureName. '
+          'Please check your connection and try again.');
+      return false;
+    } finally {
+      if (mounted) Navigator.of(context, rootNavigator: true).pop();
+    }
+  }
+
+  /// Maps an enrichment failure to a friendly, non-technical message. The raw
+  /// cause is logged separately for debugging.
+  String _friendlyEnrichError(YoutubeImportException e, String featureName) {
+    if (e.needsPremium) return '$featureName is a Premium feature.';
+    final raw = (e.message ?? '').toLowerCase();
+    final busy = raw.contains('overload') ||
+        raw.contains('high demand') ||
+        raw.contains('unavailable') ||
+        raw.contains('503') ||
+        raw.contains('429') ||
+        raw.contains('timeout');
+    if (busy) {
+      return "Our AI is busy right now. Please try $featureName again in a moment.";
+    }
+    switch (e.code) {
+      case 'subtitle_unavailable':
+        return "We couldn't load this video's text. Please try again.";
+      case 'import_not_found':
+      case 'forbidden':
+        return "We couldn't find this video. Try reopening it from My Videos.";
+      default:
+        return "We couldn't prepare $featureName just now. Please try again.";
+    }
+  }
+
+  void _showError(String message) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(message),
+      duration: const Duration(seconds: 5),
+    ));
   }
 
   void _showSpeakModeSheet() {
@@ -121,12 +219,12 @@ class _LessonHubPageState extends State<LessonHubPage> {
         onBySection: () {
           Navigator.pop(sheetContext);
           Navigator.pushNamed(context, PmpRoutes.speechPracticeSessionPage,
-              arguments: {'listening': widget.listening});
+              arguments: {'listening': _listening});
         },
         onFullTalk: () {
           Navigator.pop(sheetContext);
           Navigator.pushNamed(context, PmpRoutes.fullTalkPage,
-              arguments: {'listening': widget.listening});
+              arguments: {'listening': _listening});
         },
       ),
     );
@@ -143,7 +241,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
           builder: (context, state) {
             final stepStates = <_StepConfig, VideoStepState>{
               for (final s in steps)
-                s: state.stepStateFor(widget.listening.youtubeId, s.step),
+                s: state.stepStateFor(_listening.youtubeId, s.step),
             };
             final doneCount =
                 stepStates.values.where((s) => s == VideoStepState.done).length;
@@ -161,7 +259,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
                 children: [
                   _Header(
-                    listening: widget.listening,
+                    listening: _listening,
                     doneCount: doneCount,
                     totalCount: steps.length,
                     onPlay: () => _openStep(
@@ -173,7 +271,7 @@ class _LessonHubPageState extends State<LessonHubPage> {
                   ),
                   const SizedBox(height: 20),
                   if (!hasStarted) ...[
-                    _OutcomeBanner(listening: widget.listening),
+                    _OutcomeBanner(listening: _listening),
                     const SizedBox(height: 20),
                   ],
                   for (int i = 0; i < steps.length; i++) ...[
@@ -787,6 +885,39 @@ class _StatusLine extends StatelessWidget {
         ],
         Text(text, style: PmpTextStyles.labelSemi.copyWith(color: color)),
       ],
+    );
+  }
+}
+
+/// Blocking dialog shown while an imported video's step is generated.
+class _GeneratingDialog extends StatelessWidget {
+  const _GeneratingDialog({required this.featureName});
+
+  final String featureName;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return AlertDialog(
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const CircularProgressIndicator(),
+          const SizedBox(height: 18),
+          Text(
+            'Preparing $featureName…',
+            textAlign: TextAlign.center,
+            style: PmpTextStyles.body1Semi.copyWith(color: cs.onSurface),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            'This is generated once, then saved.',
+            textAlign: TextAlign.center,
+            style: PmpTextStyles.body2Regular
+                .copyWith(color: cs.onSurfaceVariant),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -8,6 +8,7 @@ import 'package:speakcraft/config/pmp_colors.dart';
 import 'package:speakcraft/config/pmp_routes.dart';
 import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/listening/listening.dart';
+import 'package:speakcraft/repositories/youtube_import/youtube_import_repository.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
 import 'package:speakcraft/shared_widgets/error_retry_view.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
@@ -73,9 +74,19 @@ class _ListeningListPageState extends State<ListeningListPage> {
     return BlocProvider(
       create: (context) =>
           ListeningBloc()..add(const ListeningEvent.loadListenings()),
-      child: GlassScaffold(
+      child: DefaultTabController(
+        length: 2,
+        child: GlassScaffold(
         title: Text(AppLocalizations.of(context).txtListeningListTitle),
-        body: BlocBuilder<ListeningBloc, ListeningState>(
+        body: Column(
+          children: [
+            const TabBar(
+              tabs: [Tab(text: 'Library'), Tab(text: 'My Videos')],
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  BlocBuilder<ListeningBloc, ListeningState>(
           builder: (context, state) {
             return state.maybeWhen(
               loading: () => const Center(
@@ -156,6 +167,13 @@ class _ListeningListPageState extends State<ListeningListPage> {
               orElse: () => const SizedBox.shrink(),
             );
           },
+                  ),
+                  const _MyVideosTab(),
+                ],
+              ),
+            ),
+          ],
+        ),
         ),
       ),
     );
@@ -560,6 +578,243 @@ class _Thumbnail extends StatelessWidget {
               ),
             ),
         ],
+      ),
+    );
+  }
+}
+
+/// "My Videos" tab — the user's own YouTube imports, with the import entry point
+/// (an empty video here just means they haven't imported anything yet).
+class _MyVideosTab extends StatefulWidget {
+  const _MyVideosTab();
+
+  @override
+  State<_MyVideosTab> createState() => _MyVideosTabState();
+}
+
+class _MyVideosTabState extends State<_MyVideosTab>
+    with AutomaticKeepAliveClientMixin {
+  final _repo = YoutubeImportRepository();
+  late Future<List<UserImport>> _future;
+
+  @override
+  bool get wantKeepAlive => true;
+
+  @override
+  void initState() {
+    super.initState();
+    _future = _repo.listImports();
+  }
+
+  Future<void> _reload() async {
+    final f = _repo.listImports();
+    setState(() => _future = f);
+    await f;
+  }
+
+  Future<void> _openImport() async {
+    await Navigator.pushNamed(context, PmpRoutes.youtubeImport);
+    if (mounted) await _reload();
+  }
+
+  Future<void> _confirmDelete(UserImport item) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Delete this video?'),
+        content: Text(
+          '"${item.title}" will be removed from My Videos. '
+          'This won\'t restore import minutes you\'ve already used.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            style: FilledButton.styleFrom(
+              backgroundColor: Theme.of(ctx).colorScheme.error,
+            ),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+    );
+    if (ok != true) return;
+    try {
+      await _repo.deleteImport(item.id);
+      if (mounted) await _reload();
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Couldn't delete. Please try again.")),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    super.build(context);
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 6),
+          child: SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              icon: const Icon(Icons.add, size: 20),
+              label: const Text('Import a video'),
+              onPressed: _openImport,
+            ),
+          ),
+        ),
+        Expanded(
+          child: FutureBuilder<List<UserImport>>(
+            future: _future,
+            builder: (context, snap) {
+              if (snap.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
+              if (snap.hasError) {
+                return _MyVideosMessage(
+                  icon: Icons.cloud_off,
+                  text: "Couldn't load your videos.",
+                  actionLabel: 'Retry',
+                  onAction: _reload,
+                );
+              }
+              final items = snap.data ?? const <UserImport>[];
+              if (items.isEmpty) {
+                return const _MyVideosMessage(
+                  icon: Icons.video_library_outlined,
+                  text: 'No videos yet.\n'
+                      'Paste a YouTube link to turn any video into a lesson.',
+                );
+              }
+              return RefreshIndicator(
+                onRefresh: _reload,
+                child: ListView.separated(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  padding: const EdgeInsets.all(16),
+                  itemCount: items.length,
+                  separatorBuilder: (_, __) => const SizedBox(height: 14),
+                  itemBuilder: (context, i) => _ImportCard(
+                    item: items[i],
+                    onDelete: () => _confirmDelete(items[i]),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _ImportCard extends StatelessWidget {
+  const _ImportCard({required this.item, required this.onDelete});
+
+  final UserImport item;
+  final VoidCallback onDelete;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return GlassCard(
+      borderRadius: 16,
+      padding: const EdgeInsets.all(12),
+      blur: false,
+      onTap: () => Navigator.pushNamed(
+        context,
+        PmpRoutes.listeningHub,
+        arguments: {'listening': item.toListening()},
+      ),
+      child: Row(
+        children: [
+          _Thumbnail(
+            imageUrl: item.thumbnailUrl,
+            durationSeconds: item.durationSec,
+            isFree: true,
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Text(
+              item.title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: PmpTextStyles.body1Semi.copyWith(color: cs.onSurface),
+            ),
+          ),
+          const SizedBox(width: 4),
+          PopupMenuButton<String>(
+            icon: Icon(Icons.more_vert, color: cs.onSurfaceVariant),
+            onSelected: (v) {
+              if (v == 'delete') onDelete();
+            },
+            itemBuilder: (_) => const [
+              PopupMenuItem(
+                value: 'delete',
+                child: Row(
+                  children: [
+                    Icon(Icons.delete_outline, size: 18),
+                    SizedBox(width: 8),
+                    Text('Delete'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _MyVideosMessage extends StatelessWidget {
+  const _MyVideosMessage({
+    required this.icon,
+    required this.text,
+    this.actionLabel,
+    this.onAction,
+  });
+
+  final IconData icon;
+  final String text;
+  final String? actionLabel;
+  final VoidCallback? onAction;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 44, color: cs.onSurfaceVariant),
+            const SizedBox(height: 14),
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: PmpTextStyles.body2Regular
+                  .copyWith(color: cs.onSurfaceVariant, height: 1.5),
+            ),
+            if (actionLabel != null && onAction != null) ...[
+              const SizedBox(height: 16),
+              FilledButton(onPressed: onAction, child: Text(actionLabel!)),
+            ],
+          ],
+        ),
       ),
     );
   }

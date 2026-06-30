@@ -10,13 +10,19 @@ import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 /// step is always present; the others appear only when their content path is
 /// provided.
 List<VideoLessonStep> visibleLessonSteps(Listening listening) {
+  // Imported videos generate Key Takeaways and "Speak on your own" lazily, so
+  // those steps must be visible even before their content exists (a premium tap
+  // triggers generation). For curated content they appear only when their path
+  // is set.
+  final isImport = listening.importId.isNotEmpty;
   return <VideoLessonStep>[
     if (listening.subtitlePath.trim().isNotEmpty) VideoLessonStep.watch,
-    if (listening.keyTakeawaysPath.trim().isNotEmpty)
+    if (listening.keyTakeawaysPath.trim().isNotEmpty || isImport)
       VideoLessonStep.keyTakeaways,
     VideoLessonStep.explanation,
     if (listening.shadowingPath.trim().isNotEmpty) VideoLessonStep.shadowing,
-    if (listening.recordSubtitlePath.trim().isNotEmpty) VideoLessonStep.record,
+    if (listening.recordSubtitlePath.trim().isNotEmpty || isImport)
+      VideoLessonStep.record,
     // The "graduation" step — listen with no subtitles and mark what you miss.
     // Needs the subtitle data to map marks back to sentences.
     if (listening.subtitlePath.trim().isNotEmpty) VideoLessonStep.challenge,
