@@ -12,9 +12,17 @@ class SupabaseAuthRepository implements AuthRepository {
   Future<AppUser?> getCurrentUser() async {
     final user = supabase.auth.currentSession?.user;
     if (user == null) return null;
+    // maybeSingle (not single) so a session whose profile row is missing returns
+    // null instead of throwing PGRST116. That happens for a stale/deleted user;
+    // sign out so the app falls back to login rather than dead-ending on an
+    // "something went wrong" error with no way forward.
     final dataRes = await supabase
         .rpc('get_user', params: {'user_id_param': user.id})
-        .single();
+        .maybeSingle();
+    if (dataRes == null) {
+      await logout();
+      return null;
+    }
     return AppUser.fromJson(dataRes);
   }
 
@@ -177,24 +185,6 @@ class SupabaseAuthRepository implements AuthRepository {
         .withConverter((json) => AppUser.fromJson(json));
   }
 
-  /// After a conversion, copy the now-real identity (email + display name) from
-  /// auth.users into public.users. handle_new_user only runs on INSERT, so the
-  /// profile row created at guest time still has empty email/name — sync it here
-  /// so get_user returns the real values.
-  Future<void> _syncProfileFromAuth({String? nameOverride}) async {
-    final user = supabase.auth.currentUser;
-    if (user == null) return;
-    final meta = user.userMetadata ?? const {};
-    final name = (nameOverride?.trim().isNotEmpty == true)
-        ? nameOverride!.trim()
-        : ((meta['name'] ?? meta['full_name'] ?? '') as String).trim();
-    final updates = <String, dynamic>{};
-    if ((user.email ?? '').isNotEmpty) updates['email'] = user.email;
-    if (name.isNotEmpty) updates['name'] = name;
-    if (updates.isEmpty) return;
-    await supabase.from('users').update(updates).eq('user_id', user.id);
-  }
-
   @override
   Future<AppUser?> convertGuestWithGoogle() async {
     try {
@@ -214,7 +204,7 @@ class SupabaseAuthRepository implements AuthRepository {
         }
         rethrow;
       }
-      await _syncProfileFromAuth();
+      // The on_auth_user_updated trigger syncs email/name into public.users.
       return await _fetchCurrentUser();
     } on GoogleSignInException catch (e, st) {
       AppLogger.instance.error(
@@ -253,7 +243,7 @@ class SupabaseAuthRepository implements AuthRepository {
         email: email,
         token: token,
       );
-      await _syncProfileFromAuth(nameOverride: name);
+      // The on_auth_user_updated trigger syncs email/name into public.users.
       return await _fetchCurrentUser();
     } on AuthException catch (e) {
       throw Exception(e.message);
