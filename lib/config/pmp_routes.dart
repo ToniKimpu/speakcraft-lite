@@ -194,6 +194,7 @@ class PmpRoutes {
         return _getRoute(
           SentenceExplanationPage(
             sentenceExplanation: sentenceExplanation,
+            importId: args['import_id'] as String? ?? '',
           ),
           settings,
         );

@@ -1,8 +1,12 @@
+import 'package:flutter/foundation.dart' show ValueListenable;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
 import 'package:speakcraft/model/subtitle/subtitle.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_line.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_word.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/shadowing_widgets/highlight_types/highlight_background.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../../config/pmp_colors.dart';
@@ -21,6 +25,10 @@ class SubtitleCard extends StatelessWidget {
     required this.audioPlayer,
     required this.subtitle,
     required this.hasMMSub,
+    this.karaokeEnabled = false,
+    this.positionListenable,
+    this.words = const [],
+    this.importId = '',
     this.explanationLocked = false,
   });
 
@@ -28,6 +36,17 @@ class SubtitleCard extends StatelessWidget {
   final AudioPlayer audioPlayer;
   final Subtitle subtitle;
   final bool hasMMSub;
+
+  /// Karaoke word-highlight: when enabled and we have [words] + a
+  /// [positionListenable], the English line sweeps a per-word highlight in time
+  /// with the video (reusing the shadowing painter).
+  final bool karaokeEnabled;
+  final ValueListenable<Duration>? positionListenable;
+  final List<SubtitleWord> words;
+
+  /// Non-empty for imports — makes "View explanation" appear even before the
+  /// explanation is generated (premium taps generate it on demand).
+  final String importId;
 
   /// When true, "View explanation" is gated behind Premium (non-free video).
   final bool explanationLocked;
@@ -41,11 +60,7 @@ class SubtitleCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            subtitle.english,
-            textAlign: TextAlign.start,
-            style: _englishStyle(context),
-          ),
+          _buildEnglish(context),
           const SizedBox(height: 12),
           if (hasMMSub &&
               subtitle.burmese != null &&
@@ -62,12 +77,42 @@ class SubtitleCard extends StatelessWidget {
               ),
             ),
           const SizedBox(height: 12),
-          if (subtitle.explanationUrl.isNotEmpty)
+          if (subtitle.explanationUrl.isNotEmpty || importId.isNotEmpty)
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: _buildExplanationButton(context),
             ),
         ],
+      ),
+    );
+  }
+
+  /// The English line — karaoke sweep when enabled (and we have word timings),
+  /// otherwise the plain styled sentence.
+  Widget _buildEnglish(BuildContext context) {
+    final listenable = positionListenable;
+    if (!karaokeEnabled || words.isEmpty || listenable == null) {
+      return Text(
+        subtitle.english,
+        textAlign: TextAlign.start,
+        style: _englishStyle(context),
+      );
+    }
+    final line = SubtitleLine(
+      id: subtitle.id?.toString() ?? '',
+      start: subtitle.start.inMilliseconds / 1000.0,
+      end: subtitle.end.inMilliseconds / 1000.0,
+      text: subtitle.english,
+      words: words,
+    );
+    return RepaintBoundary(
+      child: ValueListenableBuilder<Duration>(
+        valueListenable: listenable,
+        builder: (_, position, __) => HighlightBackground(
+          subtitleLine: line,
+          position: position,
+          onSeek: youtubeController.seekTo,
+        ),
       ),
     );
   }
@@ -119,7 +164,9 @@ class SubtitleCard extends StatelessWidget {
       audioPlayer.pause();
     }
     final sentenceExplanation = SentenceExplanation(
-      id: 1,
+      // For imports this must be the real line id so on-demand generation knows
+      // which sentence to explain.
+      id: subtitle.id ?? 0,
       start: subtitle.start.inSeconds.toDouble(),
       end: subtitle.end.inSeconds.toDouble(),
       english: subtitle.english,
@@ -129,7 +176,10 @@ class SubtitleCard extends StatelessWidget {
     Navigator.pushNamed(
       context,
       PmpRoutes.sentenceExplanationPage,
-      arguments: {"sentence_explanation": sentenceExplanation},
+      arguments: {
+        "sentence_explanation": sentenceExplanation,
+        "import_id": importId,
+      },
     );
   }
 

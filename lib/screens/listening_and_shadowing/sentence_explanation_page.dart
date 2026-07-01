@@ -8,15 +8,21 @@ import 'package:speakcraft/config/env.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
+import 'package:speakcraft/repositories/youtube_import/youtube_import_repository.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/sentence_explanation_json_view.dart';
 
 class SentenceExplanationPage extends StatefulWidget {
   const SentenceExplanationPage({
     super.key,
     required this.sentenceExplanation,
+    this.importId = '',
   });
 
   final SentenceExplanation sentenceExplanation;
+
+  /// Non-empty for imported videos — if this sentence has no explanation yet,
+  /// generate it on demand (yt-enrich) instead of failing.
+  final String importId;
 
   @override
   State<SentenceExplanationPage> createState() =>
@@ -24,6 +30,7 @@ class SentenceExplanationPage extends StatefulWidget {
 }
 
 class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
+  final _importRepo = YoutubeImportRepository();
   Map<String, dynamic>? _jsonData;
   _ExplanationError? _error;
   bool _isLoading = false;
@@ -42,9 +49,31 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
     });
 
     try {
+      final eu = widget.sentenceExplanation.explanationUrl;
+
+      // Imported videos with no explanation yet: generate this one on demand.
+      if (eu.isEmpty) {
+        if (widget.importId.isEmpty) {
+          throw const _UserFriendlyException(_ExplanationError.notFound);
+        }
+        final res = await _importRepo.enrich(
+          importId: widget.importId,
+          step: 'explanation',
+          lineId: widget.sentenceExplanation.id,
+        );
+        if (res.data == null) {
+          throw const _UserFriendlyException(_ExplanationError.loadFailed);
+        }
+        if (!mounted) return;
+        setState(() {
+          _jsonData = res.data;
+          _isLoading = false;
+        });
+        return;
+      }
+
       // Imported videos store an absolute Supabase URL; curated content stores
       // a Bunny-relative path. Only prepend the Bunny base for the latter.
-      final eu = widget.sentenceExplanation.explanationUrl;
       final url = eu.startsWith('http') ? eu : Env.bunnyListeningAPIKey + eu;
 
       AppLogger.instance.debug("_loadJson: $url");

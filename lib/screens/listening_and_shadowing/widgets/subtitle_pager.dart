@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show ValueListenable;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
@@ -6,6 +7,7 @@ import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/l10n/generated/l10n.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
 import 'package:speakcraft/model/subtitle/subtitle.dart';
+import 'package:speakcraft/screens/listening_and_shadowing/model/subtitle_word.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/widgets/subtitle_card.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -20,6 +22,10 @@ class SubtitlePager extends StatefulWidget {
     required this.subtitles,
     required this.hasMMSub,
     required this.onUserChangePage,
+    this.karaokeEnabled = false,
+    this.positionListenable,
+    this.wordsPerSubtitle = const [],
+    this.importId = '',
     this.explanationLocked = false,
   });
 
@@ -29,6 +35,16 @@ class SubtitlePager extends StatefulWidget {
   final List<Subtitle> subtitles;
   final bool hasMMSub;
   final void Function(Subtitle subtitle) onUserChangePage;
+
+  /// Karaoke highlight: word timings per subtitle (aligned to [subtitles] by
+  /// index) + a live video-position listenable. Empty/absent ⇒ plain text.
+  final bool karaokeEnabled;
+  final ValueListenable<Duration>? positionListenable;
+  final List<List<SubtitleWord>> wordsPerSubtitle;
+
+  /// Non-empty for imports — surfaces "View explanation" per sentence and
+  /// generates it on demand.
+  final String importId;
 
   /// When true, the in-player "View explanation" link is gated behind Premium.
   final bool explanationLocked;
@@ -112,6 +128,12 @@ class _SubtitlePagerState extends State<SubtitlePager> {
                 audioPlayer: widget.audioPlayer,
                 subtitle: _selectedSubtitle,
                 hasMMSub: widget.hasMMSub,
+                karaokeEnabled: widget.karaokeEnabled,
+                positionListenable: widget.positionListenable,
+                words: _currentIndex < widget.wordsPerSubtitle.length
+                    ? widget.wordsPerSubtitle[_currentIndex]
+                    : const [],
+                importId: widget.importId,
                 explanationLocked: widget.explanationLocked,
               ),
             ),
