@@ -126,10 +126,6 @@ flutter:
     - assets/images/profiles/
     - assets/explanation/
     - assets/subtitles/
-    - assets/zendaya/
-    - assets/important_of_social_health/
-    - assets/paul_rudd_interview/
-    - assets/going_viral_taugh_me/
     - assets/speak_your_mind/
     - logo/
     # - shorebird.yaml

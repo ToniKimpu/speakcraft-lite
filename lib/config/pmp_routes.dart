@@ -81,11 +81,6 @@ class PmpRoutes {
   static const gritJsonList = '/grit_json_list';
   static const gritJsonPreview = '/grit_json_preview';
   static const sentenceExplanationDataList = '/sentence_explanation_data_list';
-  static const zendayaJsonList = '/zendaya_json_list';
-  static const importantOfSocialHealthJsonList =
-      '/important_of_social_health_json_list';
-  static const paulRuddInterviewJsonList = '/paul_rudd_interview_json_list';
-  static const goingViralTaughtMeJsonList = '/going_viral_taugh_me_json_list';
 
   // Premium payment (manual KPay/bank screenshot flow)
   static const premiumPaymentPage = '/premium/payment';
@@ -253,38 +248,6 @@ class PmpRoutes {
           const GritJsonList(
             assetFolder: 'assets/sentence_explanation_data/',
             title: 'Zendaya — JSON Files',
-          ),
-          settings,
-        );
-      case zendayaJsonList:
-        return _getRoute(
-          const GritJsonList(
-            assetFolder: 'assets/zendaya/',
-            title: 'Zendaya',
-          ),
-          settings,
-        );
-      case importantOfSocialHealthJsonList:
-        return _getRoute(
-          const GritJsonList(
-            assetFolder: 'assets/important_of_social_health/',
-            title: 'Important of Social Health',
-          ),
-          settings,
-        );
-      case paulRuddInterviewJsonList:
-        return _getRoute(
-          const GritJsonList(
-            assetFolder: 'assets/paul_rudd_interview/',
-            title: 'Paul Rudd Interview',
-          ),
-          settings,
-        );
-      case goingViralTaughtMeJsonList:
-        return _getRoute(
-          const GritJsonList(
-            assetFolder: 'assets/going_viral_taugh_me/',
-            title: 'Going Viral Taught Me',
           ),
           settings,
         );
