@@ -227,12 +227,26 @@ class SupabaseAuthRepository implements AuthRepository {
       String email, String password, String name) async {
     try {
       // Attach email + password to the current anonymous user. Password applies
-      // now; the email requires confirmation (OTP), same as signup. Name goes to
-      // user_metadata and is copied into public.users after verification.
+      // immediately; the email requires confirmation (OTP), same as signup. Name
+      // goes to user_metadata and is copied into public.users after verification.
       await supabase.auth.updateUser(
         UserAttributes(email: email, password: password, data: {'name': name}),
       );
     } on AuthException catch (e) {
+      // A prior attempt already set this password (updateUser applies the
+      // password immediately, not atomically with the email confirmation), so a
+      // retry fails with same_password. The password is already correct — just
+      // (re)issue the email OTP without touching the password.
+      if (e.code == 'same_password') {
+        try {
+          await supabase.auth.updateUser(
+            UserAttributes(email: email, data: {'name': name}),
+          );
+          return;
+        } on AuthException catch (e2) {
+          throw Exception(e2.message);
+        }
+      }
       throw Exception(e.message);
     }
   }
