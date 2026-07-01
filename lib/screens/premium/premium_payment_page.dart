@@ -12,15 +12,79 @@ import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/model/payment_method/payment_method.dart';
 import 'package:speakcraft/services/analytics_service.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/guest_gate.dart';
 
 class PremiumPaymentPage extends StatelessWidget {
   const PremiumPaymentPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // A guest has no real account to tie a purchase to (and would lose premium
+    // if the guest session is gone), so they must convert first. This is the
+    // single backstop for every entry point into the payment flow.
+    if (isGuestUser()) return const _GuestPremiumGate();
     return BlocProvider(
       create: (_) => PaymentBloc()..add(const PaymentEvent.loadMethods()),
       child: const _PaymentView(),
+    );
+  }
+}
+
+/// Shown instead of the payment form when the user is a guest — routes them to
+/// create an account (which preserves their progress), then they can buy.
+class _GuestPremiumGate extends StatelessWidget {
+  const _GuestPremiumGate();
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return GlassScaffold(
+      title: const Text('Get Premium'),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(28),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.workspace_premium_rounded, size: 56, color: cs.primary),
+              const SizedBox(height: 16),
+              Text(
+                'Create an account to get Premium',
+                textAlign: TextAlign.center,
+                style: PmpTextStyles.title1SemiBold.copyWith(color: cs.onSurface),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Premium is tied to your account. Create one first (it keeps all '
+                'your progress), then you can upgrade.',
+                textAlign: TextAlign.center,
+                style: PmpTextStyles.body2Regular
+                    .copyWith(color: cs.onSurfaceVariant, height: 1.4),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                'Premium ကို အကောင့်နဲ့ ချိတ်ထားတာမို့ အရင် အကောင့်ဖွင့်ပါ။',
+                textAlign: TextAlign.center,
+                style: PmpTextStyles.label2Regular.copyWith(
+                    color: cs.onSurfaceVariant, height: 1.5),
+              ),
+              const SizedBox(height: 22),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton.icon(
+                  onPressed: () => Navigator.pushReplacementNamed(
+                      context, PmpRoutes.convertAccountScreen),
+                  icon: const Icon(Icons.person_add_alt_1),
+                  label: const Text('Create account'),
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size.fromHeight(52),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

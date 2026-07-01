@@ -12,6 +12,7 @@ import 'package:speakcraft/config/pmp_text_styles.dart';
 import 'package:speakcraft/repositories/youtube_import/youtube_import_repository.dart';
 import 'package:speakcraft/screens/youtube_import/downloader_handoff.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/guest_gate.dart';
 import 'package:speakcraft/shared_widgets/premium_gate.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -179,6 +180,10 @@ class _YoutubeImportPageState extends State<YoutubeImportPage> {
   Future<void> _pickAndImport() async {
     final meta = _meta;
     if (meta == null) return;
+
+    // Import runs Whisper + Gemini; guests must create an account first.
+    if (await blockAiForGuest(context, featureName: 'YouTube import')) return;
+    if (!mounted) return;
 
     final picked = await FilePicker.platform.pickFiles(
       type: FileType.audio,

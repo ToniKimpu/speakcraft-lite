@@ -61,6 +61,12 @@ class _LoginScreenState extends State<LoginScreen> {
     _authBloc.add(const AuthEvent.loginWithGoogle());
   }
 
+  void _onGuest() {
+    FocusScope.of(context).unfocus();
+    _loadingAction.value = 'guest';
+    _authBloc.add(const AuthEvent.loginAsGuest());
+  }
+
   @override
   Widget build(BuildContext context) {
     final t = AuthTokens.of(context);
@@ -113,8 +119,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const SizedBox(height: 18),
-                  const Center(
-                    child: AuthGlyph(icon: Symbols.graphic_eq),
+                  Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(22),
+                      child: Image.asset(
+                        'logo/app_logo.png',
+                        width: 84,
+                        height: 84,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 22),
                   Text(
@@ -206,6 +220,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                 width: 20,
                                 height: 20,
                               ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 12),
+                        ValueListenableBuilder<String?>(
+                          valueListenable: _loadingAction,
+                          builder: (context, action, _) {
+                            return AuthGhostButton(
+                              label: 'Continue as guest',
+                              loading: action == 'guest',
+                              onPressed: action == null ? _onGuest : null,
+                              leading: Icon(Symbols.person,
+                                  size: 20, color: t.text),
                             );
                           },
                         ),

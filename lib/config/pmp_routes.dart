@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:speakcraft/model/sentence_explanation/sentence_explanation.dart';
 import 'package:speakcraft/screens/auth/login_screen.dart';
 import 'package:speakcraft/screens/auth/sign_up_screen.dart';
+import 'package:speakcraft/screens/auth/convert_account_screen.dart';
 import 'package:speakcraft/model/writing/writing_unit.dart';
 import 'package:speakcraft/model/writing/writing_lexicon.dart';
 import 'package:speakcraft/screens/writing/writing_path_page.dart';
@@ -56,6 +57,7 @@ class PmpRoutes {
   static const home = '/home';
   static const loginScreen = '/auth/login';
   static const signUpScreen = '/auth/sign_up';
+  static const convertAccountScreen = '/auth/convert_account';
   static const newVersionScreen = '/new_version_screen';
   static const listeningListPage = "/listening/listening_list_page";
   static const listeningHub = '/listening/lesson_hub';
@@ -124,6 +126,8 @@ class PmpRoutes {
         return _getRoute(const LoginScreen(), settings);
       case signUpScreen:
         return _getRoute(const SignUpScreen(), settings);
+      case convertAccountScreen:
+        return _getRoute(const ConvertAccountScreen(), settings);
       case listeningListPage:
         return _getRoute(
           const ListeningListPage(),

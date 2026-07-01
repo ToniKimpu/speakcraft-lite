@@ -12,6 +12,7 @@ import 'package:speakcraft/screens/main/widgets/app_version_widget.dart';
 import 'package:speakcraft/screens/main/widgets/profile_item_row.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:speakcraft/services/reminder_service.dart';
+import 'package:speakcraft/services/supabase_service.dart';
 import 'package:speakcraft/services/theme_controller.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
 import 'package:speakcraft/shared_widgets/premium_status.dart';
@@ -89,6 +90,7 @@ class _HeroCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final isGuest = supabase.auth.currentUser?.isAnonymous == true;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
@@ -112,14 +114,18 @@ class _HeroCard extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            appUser.name?.isNotEmpty == true ? appUser.name! : appUser.email,
+            isGuest
+                ? 'Guest'
+                : (appUser.name?.isNotEmpty == true
+                    ? appUser.name!
+                    : appUser.email),
             style: PmpTextStyles.title1SemiBold.copyWith(
               color: colorScheme.onSurface,
             ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 2),
-          if (appUser.name?.isNotEmpty == true)
+          if (!isGuest && appUser.name?.isNotEmpty == true)
             Text(
               appUser.email,
               style: PmpTextStyles.body2Regular.copyWith(
@@ -130,6 +136,10 @@ class _HeroCard extends StatelessWidget {
           if (appUser.accountId?.isNotEmpty == true) ...[
             const SizedBox(height: 8),
             _AccountIdChip(accountId: appUser.accountId!),
+          ],
+          if (isGuest) ...[
+            const SizedBox(height: 12),
+            _GuestConvertNote(),
           ],
           const SizedBox(height: 4),
           const AppVersionWidget(),
@@ -182,6 +192,67 @@ class _AccountIdChip extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Shown on the profile only while signed in as a guest. Converting links an
+/// email/Google identity to this same anonymous user, so progress + account_id
+/// are preserved (see ConvertAccountScreen).
+class _GuestConvertNote extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: cs.primary.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: cs.primary.withValues(alpha: 0.25)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(Icons.info_outline_rounded, size: 18, color: cs.primary),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'You\'re exploring as a guest.',
+                      style: PmpTextStyles.body2Semi
+                          .copyWith(color: cs.onSurface),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      'Create an account to save your progress and unlock premium.',
+                      style: PmpTextStyles.label2Regular
+                          .copyWith(color: cs.onSurfaceVariant, height: 1.35),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              onPressed: () => Navigator.of(context)
+                  .pushNamed(PmpRoutes.convertAccountScreen),
+              icon: const Icon(Icons.person_add_alt_1, size: 18),
+              label: const Text('Create account'),
+              style: FilledButton.styleFrom(
+                minimumSize: const Size.fromHeight(44),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

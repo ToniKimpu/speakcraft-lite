@@ -15,6 +15,7 @@ import 'package:speakcraft/model/video_step_progress/video_step_progress.dart';
 import 'package:speakcraft/repositories/youtube_import/youtube_import_repository.dart';
 import 'package:speakcraft/screens/listening_and_shadowing/utils/lesson_steps.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/guest_gate.dart';
 import 'package:speakcraft/shared_widgets/premium_gate.dart';
 
 class LessonHubPage extends StatefulWidget {
@@ -111,18 +112,21 @@ class _LessonHubPageState extends State<LessonHubPage> {
       showPremiumSheet(context, featureName: config.title);
       return;
     }
-    // Imported videos generate Key Takeaways / Speak-on-your-own on first open.
-    // (Reaching here means the user is premium — locked steps were handled
-    // above.) Generate, populate the path, then continue.
-    if (config.step == VideoLessonStep.keyTakeaways &&
+    // Imported videos generate Key Takeaways / Speak-on-your-own on first open
+    // (mutually exclusive steps). Generate, populate the path, then continue.
+    final needsKeyTakeaways = config.step == VideoLessonStep.keyTakeaways &&
         _listening.keyTakeawaysPath.isEmpty &&
-        _listening.importId.isNotEmpty) {
-      if (!await _generate('key_takeaways', config.title)) return;
-    }
-    if (config.step == VideoLessonStep.record &&
+        _listening.importId.isNotEmpty;
+    final needsRecord = config.step == VideoLessonStep.record &&
         _listening.recordSubtitlePath.isEmpty &&
-        _listening.importId.isNotEmpty) {
-      if (!await _generate('record', config.title)) return;
+        _listening.importId.isNotEmpty;
+    if (needsKeyTakeaways || needsRecord) {
+      // Generation runs Gemini; guests must create an account. (Reachable for a
+      // free imported video, which isn't premium-locked above.)
+      if (await blockAiForGuest(context, featureName: config.title)) return;
+      if (!mounted) return;
+      final step = needsKeyTakeaways ? 'key_takeaways' : 'record';
+      if (!await _generate(step, config.title)) return;
     }
 
     if (!mounted) return;

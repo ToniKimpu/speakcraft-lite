@@ -22,6 +22,13 @@ mixin _$AuthEvent {
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -39,6 +46,13 @@ mixin _$AuthEvent {
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -56,6 +70,13 @@ mixin _$AuthEvent {
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -74,6 +95,15 @@ mixin _$AuthEvent {
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -88,6 +118,11 @@ mixin _$AuthEvent {
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -102,6 +137,11 @@ mixin _$AuthEvent {
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -214,6 +254,13 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -234,6 +281,13 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -254,6 +308,13 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -278,6 +339,15 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -295,6 +365,11 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -312,6 +387,11 @@ class _$AuthCheckImpl with DiagnosticableTreeMixin implements _AuthCheck {
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -390,6 +470,13 @@ class _$RefreshUserImpl with DiagnosticableTreeMixin implements _RefreshUser {
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -410,6 +497,13 @@ class _$RefreshUserImpl with DiagnosticableTreeMixin implements _RefreshUser {
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -430,6 +524,13 @@ class _$RefreshUserImpl with DiagnosticableTreeMixin implements _RefreshUser {
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -454,6 +555,15 @@ class _$RefreshUserImpl with DiagnosticableTreeMixin implements _RefreshUser {
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -471,6 +581,11 @@ class _$RefreshUserImpl with DiagnosticableTreeMixin implements _RefreshUser {
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -488,6 +603,11 @@ class _$RefreshUserImpl with DiagnosticableTreeMixin implements _RefreshUser {
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -600,6 +720,13 @@ class _$LoginWithEmailImpl
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -620,6 +747,13 @@ class _$LoginWithEmailImpl
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -640,6 +774,13 @@ class _$LoginWithEmailImpl
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -664,6 +805,15 @@ class _$LoginWithEmailImpl
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -681,6 +831,11 @@ class _$LoginWithEmailImpl
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -698,6 +853,11 @@ class _$LoginWithEmailImpl
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -780,6 +940,13 @@ class _$LoginWithGoogleImpl
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -800,6 +967,13 @@ class _$LoginWithGoogleImpl
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -820,6 +994,13 @@ class _$LoginWithGoogleImpl
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -844,6 +1025,15 @@ class _$LoginWithGoogleImpl
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -861,6 +1051,11 @@ class _$LoginWithGoogleImpl
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -878,6 +1073,11 @@ class _$LoginWithGoogleImpl
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -895,6 +1095,1221 @@ class _$LoginWithGoogleImpl
 
 abstract class _LoginWithGoogle implements AuthEvent {
   const factory _LoginWithGoogle() = _$LoginWithGoogleImpl;
+}
+
+/// @nodoc
+abstract class _$$LoginAsGuestImplCopyWith<$Res> {
+  factory _$$LoginAsGuestImplCopyWith(
+          _$LoginAsGuestImpl value, $Res Function(_$LoginAsGuestImpl) then) =
+      __$$LoginAsGuestImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoginAsGuestImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$LoginAsGuestImpl>
+    implements _$$LoginAsGuestImplCopyWith<$Res> {
+  __$$LoginAsGuestImplCopyWithImpl(
+      _$LoginAsGuestImpl _value, $Res Function(_$LoginAsGuestImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LoginAsGuestImpl with DiagnosticableTreeMixin implements _LoginAsGuest {
+  const _$LoginAsGuestImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.loginAsGuest()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'AuthEvent.loginAsGuest'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoginAsGuestImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return loginAsGuest();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return loginAsGuest?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (loginAsGuest != null) {
+      return loginAsGuest();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return loginAsGuest(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return loginAsGuest?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (loginAsGuest != null) {
+      return loginAsGuest(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoginAsGuest implements AuthEvent {
+  const factory _LoginAsGuest() = _$LoginAsGuestImpl;
+}
+
+/// @nodoc
+abstract class _$$ConvertGuestWithGoogleImplCopyWith<$Res> {
+  factory _$$ConvertGuestWithGoogleImplCopyWith(
+          _$ConvertGuestWithGoogleImpl value,
+          $Res Function(_$ConvertGuestWithGoogleImpl) then) =
+      __$$ConvertGuestWithGoogleImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ConvertGuestWithGoogleImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$ConvertGuestWithGoogleImpl>
+    implements _$$ConvertGuestWithGoogleImplCopyWith<$Res> {
+  __$$ConvertGuestWithGoogleImplCopyWithImpl(
+      _$ConvertGuestWithGoogleImpl _value,
+      $Res Function(_$ConvertGuestWithGoogleImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ConvertGuestWithGoogleImpl
+    with DiagnosticableTreeMixin
+    implements _ConvertGuestWithGoogle {
+  const _$ConvertGuestWithGoogleImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.convertGuestWithGoogle()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.convertGuestWithGoogle'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConvertGuestWithGoogleImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return convertGuestWithGoogle();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return convertGuestWithGoogle?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (convertGuestWithGoogle != null) {
+      return convertGuestWithGoogle();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return convertGuestWithGoogle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return convertGuestWithGoogle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (convertGuestWithGoogle != null) {
+      return convertGuestWithGoogle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConvertGuestWithGoogle implements AuthEvent {
+  const factory _ConvertGuestWithGoogle() = _$ConvertGuestWithGoogleImpl;
+}
+
+/// @nodoc
+abstract class _$$ConvertGuestWithEmailImplCopyWith<$Res> {
+  factory _$$ConvertGuestWithEmailImplCopyWith(
+          _$ConvertGuestWithEmailImpl value,
+          $Res Function(_$ConvertGuestWithEmailImpl) then) =
+      __$$ConvertGuestWithEmailImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email, String password, String name});
+}
+
+/// @nodoc
+class __$$ConvertGuestWithEmailImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$ConvertGuestWithEmailImpl>
+    implements _$$ConvertGuestWithEmailImplCopyWith<$Res> {
+  __$$ConvertGuestWithEmailImplCopyWithImpl(_$ConvertGuestWithEmailImpl _value,
+      $Res Function(_$ConvertGuestWithEmailImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? password = null,
+    Object? name = null,
+  }) {
+    return _then(_$ConvertGuestWithEmailImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ConvertGuestWithEmailImpl
+    with DiagnosticableTreeMixin
+    implements _ConvertGuestWithEmail {
+  const _$ConvertGuestWithEmailImpl(this.email, this.password, this.name);
+
+  @override
+  final String email;
+  @override
+  final String password;
+  @override
+  final String name;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.convertGuestWithEmail(email: $email, password: $password, name: $name)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.convertGuestWithEmail'))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('password', password))
+      ..add(DiagnosticsProperty('name', name));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ConvertGuestWithEmailImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, password, name);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ConvertGuestWithEmailImplCopyWith<_$ConvertGuestWithEmailImpl>
+      get copyWith => __$$ConvertGuestWithEmailImplCopyWithImpl<
+          _$ConvertGuestWithEmailImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return convertGuestWithEmail(email, password, name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return convertGuestWithEmail?.call(email, password, name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (convertGuestWithEmail != null) {
+      return convertGuestWithEmail(email, password, name);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return convertGuestWithEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return convertGuestWithEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (convertGuestWithEmail != null) {
+      return convertGuestWithEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ConvertGuestWithEmail implements AuthEvent {
+  const factory _ConvertGuestWithEmail(
+          final String email, final String password, final String name) =
+      _$ConvertGuestWithEmailImpl;
+
+  String get email;
+  String get password;
+  String get name;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ConvertGuestWithEmailImplCopyWith<_$ConvertGuestWithEmailImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$VerifyGuestConvertOtpImplCopyWith<$Res> {
+  factory _$$VerifyGuestConvertOtpImplCopyWith(
+          _$VerifyGuestConvertOtpImpl value,
+          $Res Function(_$VerifyGuestConvertOtpImpl) then) =
+      __$$VerifyGuestConvertOtpImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email, String token, String name});
+}
+
+/// @nodoc
+class __$$VerifyGuestConvertOtpImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$VerifyGuestConvertOtpImpl>
+    implements _$$VerifyGuestConvertOtpImplCopyWith<$Res> {
+  __$$VerifyGuestConvertOtpImplCopyWithImpl(_$VerifyGuestConvertOtpImpl _value,
+      $Res Function(_$VerifyGuestConvertOtpImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? token = null,
+    Object? name = null,
+  }) {
+    return _then(_$VerifyGuestConvertOtpImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$VerifyGuestConvertOtpImpl
+    with DiagnosticableTreeMixin
+    implements _VerifyGuestConvertOtp {
+  const _$VerifyGuestConvertOtpImpl(this.email, this.token, this.name);
+
+  @override
+  final String email;
+  @override
+  final String token;
+  @override
+  final String name;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.verifyGuestConvertOtp(email: $email, token: $token, name: $name)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.verifyGuestConvertOtp'))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('token', token))
+      ..add(DiagnosticsProperty('name', name));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$VerifyGuestConvertOtpImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.token, token) || other.token == token) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, token, name);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$VerifyGuestConvertOtpImplCopyWith<_$VerifyGuestConvertOtpImpl>
+      get copyWith => __$$VerifyGuestConvertOtpImplCopyWithImpl<
+          _$VerifyGuestConvertOtpImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return verifyGuestConvertOtp(email, token, name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return verifyGuestConvertOtp?.call(email, token, name);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (verifyGuestConvertOtp != null) {
+      return verifyGuestConvertOtp(email, token, name);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return verifyGuestConvertOtp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return verifyGuestConvertOtp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (verifyGuestConvertOtp != null) {
+      return verifyGuestConvertOtp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VerifyGuestConvertOtp implements AuthEvent {
+  const factory _VerifyGuestConvertOtp(
+          final String email, final String token, final String name) =
+      _$VerifyGuestConvertOtpImpl;
+
+  String get email;
+  String get token;
+  String get name;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$VerifyGuestConvertOtpImplCopyWith<_$VerifyGuestConvertOtpImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResendGuestConvertOtpImplCopyWith<$Res> {
+  factory _$$ResendGuestConvertOtpImplCopyWith(
+          _$ResendGuestConvertOtpImpl value,
+          $Res Function(_$ResendGuestConvertOtpImpl) then) =
+      __$$ResendGuestConvertOtpImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email});
+}
+
+/// @nodoc
+class __$$ResendGuestConvertOtpImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$ResendGuestConvertOtpImpl>
+    implements _$$ResendGuestConvertOtpImplCopyWith<$Res> {
+  __$$ResendGuestConvertOtpImplCopyWithImpl(_$ResendGuestConvertOtpImpl _value,
+      $Res Function(_$ResendGuestConvertOtpImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+  }) {
+    return _then(_$ResendGuestConvertOtpImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ResendGuestConvertOtpImpl
+    with DiagnosticableTreeMixin
+    implements _ResendGuestConvertOtp {
+  const _$ResendGuestConvertOtpImpl(this.email);
+
+  @override
+  final String email;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.resendGuestConvertOtp(email: $email)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthEvent.resendGuestConvertOtp'))
+      ..add(DiagnosticsProperty('email', email));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResendGuestConvertOtpImpl &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResendGuestConvertOtpImplCopyWith<_$ResendGuestConvertOtpImpl>
+      get copyWith => __$$ResendGuestConvertOtpImplCopyWithImpl<
+          _$ResendGuestConvertOtpImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(bool? withLoading) authCheck,
+    required TResult Function() refreshUser,
+    required TResult Function(String email, String password) loginWithEmail,
+    required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
+    required TResult Function(
+            String email, String password, String name, String? profilePath)
+        signupWithEmail,
+    required TResult Function(String email, String token) verifyOtp,
+    required TResult Function(String email) resendOtp,
+    required TResult Function(String email) forgotPassword,
+    required TResult Function(String email, String token, String newPassword)
+        resetPassword,
+    required TResult Function() logout,
+  }) {
+    return resendGuestConvertOtp(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(bool? withLoading)? authCheck,
+    TResult? Function()? refreshUser,
+    TResult? Function(String email, String password)? loginWithEmail,
+    TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
+    TResult? Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult? Function(String email, String token)? verifyOtp,
+    TResult? Function(String email)? resendOtp,
+    TResult? Function(String email)? forgotPassword,
+    TResult? Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult? Function()? logout,
+  }) {
+    return resendGuestConvertOtp?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(bool? withLoading)? authCheck,
+    TResult Function()? refreshUser,
+    TResult Function(String email, String password)? loginWithEmail,
+    TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
+    TResult Function(
+            String email, String password, String name, String? profilePath)?
+        signupWithEmail,
+    TResult Function(String email, String token)? verifyOtp,
+    TResult Function(String email)? resendOtp,
+    TResult Function(String email)? forgotPassword,
+    TResult Function(String email, String token, String newPassword)?
+        resetPassword,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (resendGuestConvertOtp != null) {
+      return resendGuestConvertOtp(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthCheck value) authCheck,
+    required TResult Function(_RefreshUser value) refreshUser,
+    required TResult Function(_LoginWithEmail value) loginWithEmail,
+    required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
+    required TResult Function(_SignUpWithEmail value) signupWithEmail,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_ForgotPassword value) forgotPassword,
+    required TResult Function(_ResetPassword value) resetPassword,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return resendGuestConvertOtp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthCheck value)? authCheck,
+    TResult? Function(_RefreshUser value)? refreshUser,
+    TResult? Function(_LoginWithEmail value)? loginWithEmail,
+    TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult? Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult? Function(_VerifyOtp value)? verifyOtp,
+    TResult? Function(_ResendOtp value)? resendOtp,
+    TResult? Function(_ForgotPassword value)? forgotPassword,
+    TResult? Function(_ResetPassword value)? resetPassword,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return resendGuestConvertOtp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthCheck value)? authCheck,
+    TResult Function(_RefreshUser value)? refreshUser,
+    TResult Function(_LoginWithEmail value)? loginWithEmail,
+    TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
+    TResult Function(_SignUpWithEmail value)? signupWithEmail,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_ForgotPassword value)? forgotPassword,
+    TResult Function(_ResetPassword value)? resetPassword,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (resendGuestConvertOtp != null) {
+      return resendGuestConvertOtp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResendGuestConvertOtp implements AuthEvent {
+  const factory _ResendGuestConvertOtp(final String email) =
+      _$ResendGuestConvertOtpImpl;
+
+  String get email;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResendGuestConvertOtpImplCopyWith<_$ResendGuestConvertOtpImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1011,6 +2426,13 @@ class _$SignUpWithEmailImpl
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -1031,6 +2453,13 @@ class _$SignUpWithEmailImpl
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1051,6 +2480,13 @@ class _$SignUpWithEmailImpl
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1075,6 +2511,15 @@ class _$SignUpWithEmailImpl
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -1092,6 +2537,11 @@ class _$SignUpWithEmailImpl
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -1109,6 +2559,11 @@ class _$SignUpWithEmailImpl
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -1229,6 +2684,13 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -1249,6 +2711,13 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1269,6 +2738,13 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1293,6 +2769,15 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -1310,6 +2795,11 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -1327,6 +2817,11 @@ class _$VerifyOtpImpl with DiagnosticableTreeMixin implements _VerifyOtp {
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -1436,6 +2931,13 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -1456,6 +2958,13 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1476,6 +2985,13 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1500,6 +3016,15 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -1517,6 +3042,11 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -1534,6 +3064,11 @@ class _$ResendOtpImpl with DiagnosticableTreeMixin implements _ResendOtp {
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -1644,6 +3179,13 @@ class _$ForgotPasswordImpl
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -1664,6 +3206,13 @@ class _$ForgotPasswordImpl
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1684,6 +3233,13 @@ class _$ForgotPasswordImpl
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1708,6 +3264,15 @@ class _$ForgotPasswordImpl
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -1725,6 +3290,11 @@ class _$ForgotPasswordImpl
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -1742,6 +3312,11 @@ class _$ForgotPasswordImpl
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -1870,6 +3445,13 @@ class _$ResetPasswordImpl
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -1890,6 +3472,13 @@ class _$ResetPasswordImpl
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1910,6 +3499,13 @@ class _$ResetPasswordImpl
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -1934,6 +3530,15 @@ class _$ResetPasswordImpl
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -1951,6 +3556,11 @@ class _$ResetPasswordImpl
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -1968,6 +3578,11 @@ class _$ResetPasswordImpl
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,
@@ -2050,6 +3665,13 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
     required TResult Function() refreshUser,
     required TResult Function(String email, String password) loginWithEmail,
     required TResult Function() loginWithGoogle,
+    required TResult Function() loginAsGuest,
+    required TResult Function() convertGuestWithGoogle,
+    required TResult Function(String email, String password, String name)
+        convertGuestWithEmail,
+    required TResult Function(String email, String token, String name)
+        verifyGuestConvertOtp,
+    required TResult Function(String email) resendGuestConvertOtp,
     required TResult Function(
             String email, String password, String name, String? profilePath)
         signupWithEmail,
@@ -2070,6 +3692,13 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
     TResult? Function()? refreshUser,
     TResult? Function(String email, String password)? loginWithEmail,
     TResult? Function()? loginWithGoogle,
+    TResult? Function()? loginAsGuest,
+    TResult? Function()? convertGuestWithGoogle,
+    TResult? Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult? Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult? Function(String email)? resendGuestConvertOtp,
     TResult? Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -2090,6 +3719,13 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
     TResult Function()? refreshUser,
     TResult Function(String email, String password)? loginWithEmail,
     TResult Function()? loginWithGoogle,
+    TResult Function()? loginAsGuest,
+    TResult Function()? convertGuestWithGoogle,
+    TResult Function(String email, String password, String name)?
+        convertGuestWithEmail,
+    TResult Function(String email, String token, String name)?
+        verifyGuestConvertOtp,
+    TResult Function(String email)? resendGuestConvertOtp,
     TResult Function(
             String email, String password, String name, String? profilePath)?
         signupWithEmail,
@@ -2114,6 +3750,15 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
     required TResult Function(_RefreshUser value) refreshUser,
     required TResult Function(_LoginWithEmail value) loginWithEmail,
     required TResult Function(_LoginWithGoogle value) loginWithGoogle,
+    required TResult Function(_LoginAsGuest value) loginAsGuest,
+    required TResult Function(_ConvertGuestWithGoogle value)
+        convertGuestWithGoogle,
+    required TResult Function(_ConvertGuestWithEmail value)
+        convertGuestWithEmail,
+    required TResult Function(_VerifyGuestConvertOtp value)
+        verifyGuestConvertOtp,
+    required TResult Function(_ResendGuestConvertOtp value)
+        resendGuestConvertOtp,
     required TResult Function(_SignUpWithEmail value) signupWithEmail,
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_ResendOtp value) resendOtp,
@@ -2131,6 +3776,11 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
     TResult? Function(_RefreshUser value)? refreshUser,
     TResult? Function(_LoginWithEmail value)? loginWithEmail,
     TResult? Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult? Function(_LoginAsGuest value)? loginAsGuest,
+    TResult? Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult? Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult? Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult? Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult? Function(_SignUpWithEmail value)? signupWithEmail,
     TResult? Function(_VerifyOtp value)? verifyOtp,
     TResult? Function(_ResendOtp value)? resendOtp,
@@ -2148,6 +3798,11 @@ class _$LogoutImpl with DiagnosticableTreeMixin implements _Logout {
     TResult Function(_RefreshUser value)? refreshUser,
     TResult Function(_LoginWithEmail value)? loginWithEmail,
     TResult Function(_LoginWithGoogle value)? loginWithGoogle,
+    TResult Function(_LoginAsGuest value)? loginAsGuest,
+    TResult Function(_ConvertGuestWithGoogle value)? convertGuestWithGoogle,
+    TResult Function(_ConvertGuestWithEmail value)? convertGuestWithEmail,
+    TResult Function(_VerifyGuestConvertOtp value)? verifyGuestConvertOtp,
+    TResult Function(_ResendGuestConvertOtp value)? resendGuestConvertOtp,
     TResult Function(_SignUpWithEmail value)? signupWithEmail,
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_ResendOtp value)? resendOtp,

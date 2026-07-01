@@ -17,9 +17,18 @@ import 'package:speakcraft/shared_widgets/glass.dart';
 const _resendCooldownSeconds = 60;
 
 class OtpVerificationScreen extends StatefulWidget {
-  const OtpVerificationScreen({super.key, required this.email});
+  const OtpVerificationScreen({
+    super.key,
+    required this.email,
+    this.convertName,
+  });
 
   final String email;
+
+  /// When non-null, this screen verifies a GUEST → account conversion (the
+  /// email-change OTP) and carries the name to write into the profile, rather
+  /// than a normal signup OTP.
+  final String? convertName;
 
   @override
   State<OtpVerificationScreen> createState() => _OtpVerificationScreenState();
@@ -65,14 +74,22 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
 
   void _onVerify() {
     FocusScope.of(context).unfocus();
+    final code = _codeController.text.trim();
+    final convertName = widget.convertName;
     _authBloc.add(
-      AuthEvent.verifyOtp(widget.email, _codeController.text.trim()),
+      convertName != null
+          ? AuthEvent.verifyGuestConvertOtp(widget.email, code, convertName)
+          : AuthEvent.verifyOtp(widget.email, code),
     );
   }
 
   void _onResend() {
     FocusScope.of(context).unfocus();
-    _authBloc.add(AuthEvent.resendOtp(widget.email));
+    _authBloc.add(
+      widget.convertName != null
+          ? AuthEvent.resendGuestConvertOtp(widget.email)
+          : AuthEvent.resendOtp(widget.email),
+    );
   }
 
   String _formatCooldown(int seconds) {

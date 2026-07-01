@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/guest_gate.dart';
 
 import '../../config/pmp_colors.dart';
 import '../../model/writing/writing_unit.dart';
@@ -109,8 +110,15 @@ class _WritingPracticePageState extends State<WritingPracticePage> {
     });
   }
 
-  void _check() {
+  Future<void> _check() async {
     final ex = _current;
+    // AI items call the reviewer; guests are prompted to create an account
+    // instead. Auto-graded items (MCQ/exact match) stay open to guests.
+    if (ex.grade == WritingGrade.ai &&
+        await blockAiForGuest(context, featureName: 'AI review')) {
+      return;
+    }
+    if (!mounted) return;
     setState(() {
       _state.checked = true;
       if (ex.grade == WritingGrade.auto) {

@@ -20,6 +20,14 @@ abstract class AuthEvent with _$AuthEvent {
   const factory AuthEvent.loginWithEmail(String email, String password) =
       _LoginWithEmail;
   const factory AuthEvent.loginWithGoogle() = _LoginWithGoogle;
+  const factory AuthEvent.loginAsGuest() = _LoginAsGuest;
+  const factory AuthEvent.convertGuestWithGoogle() = _ConvertGuestWithGoogle;
+  const factory AuthEvent.convertGuestWithEmail(
+      String email, String password, String name) = _ConvertGuestWithEmail;
+  const factory AuthEvent.verifyGuestConvertOtp(
+      String email, String token, String name) = _VerifyGuestConvertOtp;
+  const factory AuthEvent.resendGuestConvertOtp(String email) =
+      _ResendGuestConvertOtp;
   const factory AuthEvent.signupWithEmail(
           String email, String password, String name, String? profilePath) =
       _SignUpWithEmail;
@@ -69,6 +77,14 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           loginWithEmail: (email, password) =>
               _mapLoginWithEmailToState(email, password, emit),
           loginWithGoogle: () => _mapLoginWithGoogleToState(emit),
+          loginAsGuest: () => _mapLoginAsGuestToState(emit),
+          convertGuestWithGoogle: () => _mapConvertGuestWithGoogleToState(emit),
+          convertGuestWithEmail: (email, password, name) =>
+              _mapConvertGuestWithEmailToState(email, password, name, emit),
+          verifyGuestConvertOtp: (email, token, name) =>
+              _mapVerifyGuestConvertOtpToState(email, token, name, emit),
+          resendGuestConvertOtp: (email) =>
+              _mapResendGuestConvertOtpToState(email, emit),
           signupWithEmail: (email, password, name, profilePath) =>
               _mapSignUpWithEmailToState(
                   name, email, password, profilePath, emit),
@@ -148,6 +164,117 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
       AppLogger.instance
           .error('_loginWithGoogleError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapLoginAsGuestToState(Emitter<AuthState> emit) async {
+    emit(const AuthState.loading());
+    try {
+      final appUser = await _repository.loginAsGuest();
+      await _resolveAuthenticatedState(appUser, emit);
+    } catch (error) {
+      if (isOfflineError(error)) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Could not continue as guest. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_loginAsGuestError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapConvertGuestWithGoogleToState(
+      Emitter<AuthState> emit) async {
+    emit(const AuthState.loading());
+    try {
+      final appUser = await _repository.convertGuestWithGoogle();
+      // Null → the user dismissed the Google picker; stay on the convert screen.
+      if (appUser == null) {
+        emit(const AuthState.unauthenticated());
+        return;
+      }
+      await _resolveAuthenticatedState(appUser, emit);
+    } catch (error) {
+      if (isOfflineError(error)) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(AuthState.error(error.toString().replaceFirst('Exception: ', '')));
+      }
+      AppLogger.instance
+          .error('_convertGoogleError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapConvertGuestWithEmailToState(String email, String password,
+      String name, Emitter<AuthState> emit) async {
+    final emailRegex =
+        RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+    if (name.trim().isEmpty || email.isEmpty || password.isEmpty) {
+      emit(const AuthState.error('All fields are required.'));
+      return;
+    }
+    if (!emailRegex.hasMatch(email)) {
+      emit(const AuthState.error('Invalid email format.'));
+      return;
+    }
+    if (password.length < 6) {
+      emit(const AuthState.error('Password must be at least 6 characters.'));
+      return;
+    }
+    emit(const AuthState.loading());
+    try {
+      await _repository.convertGuestWithEmail(email, password, name.trim());
+      // Email needs confirmation → collect the OTP, then verify.
+      emit(AuthState.otpRequired(email));
+    } catch (error) {
+      if (isOfflineError(error)) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(AuthState.error(error.toString().replaceFirst('Exception: ', '')));
+      }
+      AppLogger.instance
+          .error('_convertEmailError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapVerifyGuestConvertOtpToState(
+      String email, String token, String name, Emitter<AuthState> emit) async {
+    if (token.trim().length < 6) {
+      emit(const AuthState.error('Please enter the 6-digit code.'));
+      return;
+    }
+    emit(const AuthState.loading());
+    try {
+      final appUser =
+          await _repository.verifyGuestConvertOtp(email, token.trim(), name);
+      await _resolveAuthenticatedState(appUser, emit);
+    } catch (error) {
+      if (isOfflineError(error)) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Invalid or expired code. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_verifyConvertOtpError: ${error.toString()}', error: error);
+    }
+  }
+
+  Future<void> _mapResendGuestConvertOtpToState(
+      String email, Emitter<AuthState> emit) async {
+    try {
+      await _repository.resendGuestConvertOtp(email);
+      emit(const AuthState.otpResent());
+    } catch (error) {
+      if (isOfflineError(error)) {
+        emit(const AuthState.socketError('Please check your connection.'));
+      } else {
+        emit(const AuthState.error(
+            'Could not resend the code. Please try again.'));
+      }
+      AppLogger.instance
+          .error('_resendConvertOtpError: ${error.toString()}', error: error);
     }
   }
 
@@ -282,6 +409,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _resolveAuthenticatedState(
       AppUser appUser, Emitter<AuthState> emit) async {
     sl<ValueNotifier<AppUser>>().value = appUser;
+    // Guests skip single-device binding: it's zero-friction "just try it", and
+    // the lock only makes sense once they convert to a real account.
+    if (supabase.auth.currentUser?.isAnonymous == true) {
+      _subscribeUserRealtime();
+      emit(const AuthState.authenticated());
+      return;
+    }
     final localDeviceId =
         sl<ValueNotifier<String?>>(instanceName: 'deviceId').value;
     if (appUser.deviceId != null && appUser.deviceId != localDeviceId) {

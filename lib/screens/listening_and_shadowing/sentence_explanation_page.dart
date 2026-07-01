@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:speakcraft/shared_widgets/glass.dart';
+import 'package:speakcraft/shared_widgets/guest_gate.dart';
 import 'package:http/http.dart' as http;
 import 'package:speakcraft/config/env.dart';
 import 'package:speakcraft/core/logger/app_logger.dart';
@@ -55,6 +56,18 @@ class _SentenceExplanationPageState extends State<SentenceExplanationPage> {
       if (eu.isEmpty) {
         if (widget.importId.isEmpty) {
           throw const _UserFriendlyException(_ExplanationError.notFound);
+        }
+        // Generating an explanation runs Gemini; guests must create an account.
+        // This page auto-loads, so prompt post-frame and surface an error state.
+        if (isGuestUser()) {
+          if (mounted) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (mounted) {
+                showGuestAccountSheet(context, featureName: 'AI explanation');
+              }
+            });
+          }
+          throw const _UserFriendlyException(_ExplanationError.loadFailed);
         }
         final res = await _importRepo.enrich(
           importId: widget.importId,

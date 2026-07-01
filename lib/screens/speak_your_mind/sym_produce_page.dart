@@ -15,6 +15,7 @@ import '../../repositories/speak_your_mind/sym_session_repository.dart';
 import '../../services/analytics_service.dart';
 import '../../shared_widgets/error_retry_view.dart';
 import '../../shared_widgets/glass.dart';
+import '../../shared_widgets/guest_gate.dart';
 import '../vocabulary/widgets/bilingual_text.dart';
 import 'widgets/sym_feedback_view.dart';
 import 'widgets/sym_recorder.dart';
@@ -115,6 +116,9 @@ class _SymProducePageState extends State<SymProducePage> {
     final topic = _topic;
     if (topic == null) return;
     FocusScope.of(context).unfocus();
+    // Guests can read the topic but AI feedback needs a real account.
+    if (await blockAiForGuest(context, featureName: 'AI feedback')) return;
+    if (!mounted) return;
     AnalyticsService.instance.symProduceSubmit(widget.topicId, _version);
     setState(() {
       _submittedText = _controller.text.trim();

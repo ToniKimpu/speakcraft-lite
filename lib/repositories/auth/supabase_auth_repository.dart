@@ -124,32 +124,151 @@ class SupabaseAuthRepository implements AuthRepository {
   }
 
   @override
-  Future<AppUser?> loginWithGoogle() async {
+  Future<AppUser> loginAsGuest() async {
+    try {
+      final res = await supabase.auth.signInAnonymously();
+      final user = res.user ?? supabase.auth.currentUser;
+      if (user == null) {
+        throw Exception('Guest sign-in failed: no session.');
+      }
+      // handle_new_user provisions the profile row on this first insert.
+      return await supabase
+          .rpc('get_user', params: {'user_id_param': user.id})
+          .single()
+          .withConverter((json) => AppUser.fromJson(json));
+    } on AuthException catch (e) {
+      throw Exception(e.message);
+    }
+  }
+
+  /// Runs the native Google picker and returns its ID/access tokens. Shared by
+  /// [loginWithGoogle] and [convertGuestWithGoogle]. Throws
+  /// [GoogleSignInException] (code `canceled` when the user dismisses it).
+  Future<({String idToken, String? accessToken})> _googleCredential() async {
     final webClientId = Env.googleWebClientId;
     if (webClientId == null || webClientId.isEmpty) {
       throw Exception('Google sign-in is not configured.');
     }
+    const scopes = ['email', 'profile'];
+    final googleSignIn = GoogleSignIn.instance;
+    await googleSignIn.initialize(serverClientId: webClientId);
+
+    // Try silent sign-in first, then fall back to the interactive picker.
+    var googleUser = await googleSignIn.attemptLightweightAuthentication();
+    googleUser ??= await googleSignIn.authenticate(scopeHint: scopes);
+
+    final authorization =
+        await googleUser.authorizationClient.authorizationForScopes(scopes) ??
+            await googleUser.authorizationClient.authorizeScopes(scopes);
+    final idToken = googleUser.authentication.idToken;
+    if (idToken == null) {
+      throw Exception('Google sign-in failed: no ID token.');
+    }
+    return (idToken: idToken, accessToken: authorization.accessToken);
+  }
+
+  /// Fetches the current user via get_user.
+  Future<AppUser> _fetchCurrentUser() async {
+    final user = supabase.auth.currentUser;
+    if (user == null) throw Exception('No session.');
+    return await supabase
+        .rpc('get_user', params: {'user_id_param': user.id})
+        .single()
+        .withConverter((json) => AppUser.fromJson(json));
+  }
+
+  /// After a conversion, copy the now-real identity (email + display name) from
+  /// auth.users into public.users. handle_new_user only runs on INSERT, so the
+  /// profile row created at guest time still has empty email/name — sync it here
+  /// so get_user returns the real values.
+  Future<void> _syncProfileFromAuth({String? nameOverride}) async {
+    final user = supabase.auth.currentUser;
+    if (user == null) return;
+    final meta = user.userMetadata ?? const {};
+    final name = (nameOverride?.trim().isNotEmpty == true)
+        ? nameOverride!.trim()
+        : ((meta['name'] ?? meta['full_name'] ?? '') as String).trim();
+    final updates = <String, dynamic>{};
+    if ((user.email ?? '').isNotEmpty) updates['email'] = user.email;
+    if (name.isNotEmpty) updates['name'] = name;
+    if (updates.isEmpty) return;
+    await supabase.from('users').update(updates).eq('user_id', user.id);
+  }
+
+  @override
+  Future<AppUser?> convertGuestWithGoogle() async {
     try {
-      const scopes = ['email', 'profile'];
-      final googleSignIn = GoogleSignIn.instance;
-      await googleSignIn.initialize(serverClientId: webClientId);
+      final cred = await _googleCredential();
+      // Link Google to the CURRENT anonymous user (same uid → progress kept).
+      await supabase.auth.linkIdentityWithIdToken(
+        provider: OAuthProvider.google,
+        idToken: cred.idToken,
+        accessToken: cred.accessToken,
+      );
+      await _syncProfileFromAuth();
+      return await _fetchCurrentUser();
+    } on GoogleSignInException catch (e, st) {
+      AppLogger.instance.error(
+        '[GuestConvertGoogle] code=${e.code} description=${e.description}',
+        error: e,
+        stackTrace: st,
+      );
+      if (e.code == GoogleSignInExceptionCode.canceled) return null;
+      throw Exception(e.toString());
+    } on AuthException catch (e) {
+      // e.g. this Google identity is already attached to another account.
+      throw Exception(e.message);
+    }
+  }
 
-      // Try silent sign-in first, then fall back to the interactive picker.
-      var googleUser = await googleSignIn.attemptLightweightAuthentication();
-      googleUser ??= await googleSignIn.authenticate(scopeHint: scopes);
+  @override
+  Future<void> convertGuestWithEmail(
+      String email, String password, String name) async {
+    try {
+      // Attach email + password to the current anonymous user. Password applies
+      // now; the email requires confirmation (OTP), same as signup. Name goes to
+      // user_metadata and is copied into public.users after verification.
+      await supabase.auth.updateUser(
+        UserAttributes(email: email, password: password, data: {'name': name}),
+      );
+    } on AuthException catch (e) {
+      throw Exception(e.message);
+    }
+  }
 
-      final authorization =
-          await googleUser.authorizationClient.authorizationForScopes(scopes) ??
-              await googleUser.authorizationClient.authorizeScopes(scopes);
-      final idToken = googleUser.authentication.idToken;
-      if (idToken == null) {
-        throw Exception('Google sign-in failed: no ID token.');
-      }
+  @override
+  Future<AppUser> verifyGuestConvertOtp(
+      String email, String token, String name) async {
+    try {
+      await supabase.auth.verifyOTP(
+        type: OtpType.emailChange,
+        email: email,
+        token: token,
+      );
+      await _syncProfileFromAuth(nameOverride: name);
+      return await _fetchCurrentUser();
+    } on AuthException catch (e) {
+      throw Exception(e.message);
+    }
+  }
 
+  @override
+  Future<void> resendGuestConvertOtp(String email) async {
+    try {
+      await supabase.auth.resend(type: OtpType.emailChange, email: email);
+    } on AuthException catch (e) {
+      throw Exception(e.message);
+    }
+  }
+
+  @override
+  Future<AppUser?> loginWithGoogle() async {
+    try {
+      final cred = await _googleCredential();
       final res = await supabase.auth.signInWithIdToken(
         provider: OAuthProvider.google,
-        idToken: idToken,
-        accessToken: authorization.accessToken,
+        idToken: cred.idToken,
+        accessToken: cred.accessToken,
       );
       final user = res.user ?? supabase.auth.currentUser;
       if (user == null) {
