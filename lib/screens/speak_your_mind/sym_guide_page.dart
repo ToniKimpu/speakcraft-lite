@@ -178,13 +178,7 @@ class _ModelStep extends StatelessWidget {
                   style: PmpTextStyles.body1Semi.copyWith(color: cs.onSurface)),
             ),
             if (g.modelAudio.isNotEmpty)
-              IconButton(
-                visualDensity: VisualDensity.compact,
-                onPressed: () => VocabTtsService.instance
-                    .playUrlOrSpeak(SymAudio.resolve(g.modelAudio), g.modelEn),
-                icon: Icon(Icons.volume_up_rounded, color: cs.primary),
-                tooltip: 'Listen',
-              ),
+              _ListenButton(url: SymAudio.resolve(g.modelAudio), text: g.modelEn),
           ],
         ),
         const SizedBox(height: 4),
@@ -274,6 +268,56 @@ class _BreakdownCard extends StatelessWidget {
           ],
         ],
       ),
+    );
+  }
+}
+
+/// Play/pause toggle for the model clip. Reflects the shared player's state so
+/// the icon flips to a pause control while playing, and stops audio when the
+/// step is disposed so it doesn't bleed past the guide.
+class _ListenButton extends StatefulWidget {
+  const _ListenButton({required this.url, required this.text});
+  final String? url;
+  final String text;
+
+  @override
+  State<_ListenButton> createState() => _ListenButtonState();
+}
+
+class _ListenButtonState extends State<_ListenButton> {
+  bool _playing = false;
+  bool _started = false;
+
+  @override
+  void dispose() {
+    if (_started) VocabTtsService.instance.stop();
+    super.dispose();
+  }
+
+  Future<void> _toggle() async {
+    if (_playing) {
+      await VocabTtsService.instance.pause();
+    } else {
+      _started = true;
+      await VocabTtsService.instance.playUrlOrSpeak(widget.url, widget.text);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return StreamBuilder<bool>(
+      stream: VocabTtsService.instance.playingStream,
+      builder: (context, snap) {
+        _playing = snap.data ?? false;
+        return IconButton(
+          visualDensity: VisualDensity.compact,
+          onPressed: _toggle,
+          icon: Icon(_playing ? Icons.pause_rounded : Icons.volume_up_rounded,
+              color: cs.primary),
+          tooltip: _playing ? 'Pause' : 'Listen',
+        );
+      },
     );
   }
 }

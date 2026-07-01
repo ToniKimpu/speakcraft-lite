@@ -12,6 +12,16 @@ class VocabTtsService {
   final AudioPlayer _player = AudioPlayer();
   bool _ready = false;
 
+  /// Emits `true` while a pre-generated clip is actively playing (not paused,
+  /// not finished). Lets a button reflect play/pause state. Note: this tracks
+  /// only the just_audio path, not the TTS fallback.
+  Stream<bool> get playingStream => _player.playerStateStream.map(
+      (s) => s.playing && s.processingState != ProcessingState.completed);
+
+  bool get isPlaying =>
+      _player.playing &&
+      _player.processingState != ProcessingState.completed;
+
   Future<void> _ensure() async {
     if (_ready) return;
     await _tts.setLanguage('en-GB'); // content is British English
@@ -43,6 +53,13 @@ class VocabTtsService {
     await speak(text);
   }
 
+
+  Future<void> pause() async {
+    await _player.pause();
+    await _tts.stop();
+  }
+
+  Future<void> resume() => _player.play();
 
   Future<void> stop() async {
     await _player.stop();
