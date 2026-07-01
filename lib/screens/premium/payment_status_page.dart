@@ -65,7 +65,10 @@ class _PaymentStatusPageState extends State<PaymentStatusPage> {
                         context, PmpRoutes.premiumPaymentPage),
                   );
                 }
-                final latest = submissions.last;
+                // Pick the most recent explicitly (highest id) so we never show
+                // a stale submission regardless of the stream's sort order.
+                final latest = submissions
+                    .reduce((a, b) => b.id > a.id ? b : a);
                 if (latest.isApproved) _onApproved(latest.id);
                 return _StatusView(submission: latest, repository: _repository);
               },
@@ -84,7 +87,29 @@ class _StatusView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Gate the "You're Premium" state on the ACTUAL current premium
+    // (users.premium_until), not just the approved submission — otherwise
+    // ending premium in admin would still read as premium here.
+    return FutureBuilder<DateTime?>(
+      future: repository.fetchPremiumUntil(),
+      builder: (context, snap) {
+        if (snap.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        final until = snap.data;
+        final premiumActive = until != null && until.isAfter(DateTime.now());
+        return _content(context, until, premiumActive);
+      },
+    );
+  }
+
+  Widget _content(BuildContext context, DateTime? until, bool premiumActive) {
     final cs = Theme.of(context).colorScheme;
+    // Approved AND still active → "You're Premium". Approved but no longer
+    // active (ended by admin, or expired) → "Premium ended".
+    final showPremium = submission.isApproved && premiumActive;
+    final premiumEnded = submission.isApproved && !premiumActive;
+
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
       children: [
@@ -96,12 +121,20 @@ class _StatusView extends StatelessWidget {
             subtitle:
                 'We\'re checking your screenshot. Premium unlocks automatically once it\'s confirmed — you can leave this screen.',
           )
-        else if (submission.isApproved)
+        else if (showPremium)
           const _StatusHero(
             icon: Icons.workspace_premium_rounded,
             color: PmpColors.premiumGold,
             title: 'You\'re Premium! 🎉',
             subtitle: 'Everything is unlocked. Enjoy your learning.',
+          )
+        else if (premiumEnded)
+          _StatusHero(
+            icon: Icons.workspace_premium_outlined,
+            color: cs.onSurfaceVariant,
+            title: 'Premium ended',
+            subtitle:
+                'Your premium access has ended. Renew any time to unlock everything again.',
           )
         else
           _StatusHero(
@@ -141,23 +174,17 @@ class _StatusView extends StatelessWidget {
                     PmpTextStyles.body2Regular.copyWith(color: cs.onSurface)),
           ),
         ],
-        if (submission.isApproved) ...[
+        if (showPremium && until != null) ...[
           const SizedBox(height: 14),
-          FutureBuilder<DateTime?>(
-            future: repository.fetchPremiumUntil(),
-            builder: (context, snap) {
-              if (snap.data == null) return const SizedBox.shrink();
-              return Text(
-                'Premium active until ${DateFormat.yMMMMd().format(snap.data!)}',
-                textAlign: TextAlign.center,
-                style: PmpTextStyles.body2Semi
-                    .copyWith(color: PmpColors.premiumGoldDeep),
-              );
-            },
+          Text(
+            'Premium active until ${DateFormat.yMMMMd().format(until)}',
+            textAlign: TextAlign.center,
+            style: PmpTextStyles.body2Semi
+                .copyWith(color: PmpColors.premiumGoldDeep),
           ),
         ],
         const SizedBox(height: 24),
-        if (submission.isApproved)
+        if (showPremium)
           FilledButton(
             onPressed: () => Navigator.popUntil(context, (r) => r.isFirst),
             style: FilledButton.styleFrom(
@@ -166,6 +193,14 @@ class _StatusView extends StatelessWidget {
               foregroundColor: PmpColors.onPremium,
             ),
             child: const Text('Continue'),
+          )
+        else if (premiumEnded)
+          FilledButton(
+            onPressed: () => Navigator.pushReplacementNamed(
+                context, PmpRoutes.premiumPaymentPage),
+            style: FilledButton.styleFrom(
+                minimumSize: const Size.fromHeight(52)),
+            child: const Text('Get Premium'),
           )
         else if (submission.isRejected)
           FilledButton(

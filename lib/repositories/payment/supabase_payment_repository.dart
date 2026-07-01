@@ -71,7 +71,10 @@ class SupabasePaymentRepository implements PaymentRepository {
         .from('payment_submissions')
         .stream(primaryKey: ['id'])
         .eq('user_id', userId)
-        .order('created_at')
+        // Ascending (oldest → newest) so the status page's `submissions.last`
+        // is the most recent one. `.order()` defaults to DESCENDING, which would
+        // otherwise make `.last` the oldest submission.
+        .order('created_at', ascending: true)
         .map((rows) => rows.map(PaymentSubmission.fromJson).toList());
   }
 
