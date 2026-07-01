@@ -144,6 +144,7 @@ Future<void> showPremiumSheet(
                 'Vocabulary — Intermediate & Upper word sets',
                 'Grammar — every level beyond the basics',
                 'Listening — shadowing, speech practice & explanations',
+                'YouTube import — turn your own videos into lessons (up to 5 hrs)',
               ].map(
                 (b) => Padding(
                   padding: const EdgeInsets.only(bottom: 10),

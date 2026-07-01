@@ -697,7 +697,7 @@ class _QuotaInfo extends StatelessWidget {
                     text: '$plan — ',
                     style: PmpTextStyles.body2Semi.copyWith(color: cs.onSurface),
                   ),
-                  TextSpan(text: '$remainMin of $budgetMin min import time left'),
+                  TextSpan(text: '$remainMin of $budgetMin min left to import'),
                 ],
               ),
             ),
@@ -730,14 +730,14 @@ class _BudgetWarning extends StatelessWidget {
     final String title;
     final String body;
     if (remainingSec <= 0) {
-      title = isPremium ? 'Import time used up' : 'Free import time used up';
+      title = isPremium ? 'Import limit reached' : 'Free import limit reached';
       body = isPremium
-          ? "You've used all your import time."
-          : 'Upgrade to Premium for 300 minutes of imports.';
+          ? "You've used all your import minutes."
+          : 'Upgrade to Premium for 5 hours of imports.';
     } else {
-      title = 'Not enough import time';
-      body = 'This video is ${fmt(videoSec)}, but you have only '
-          '${fmt(remainingSec)} left${isPremium ? '.' : ' on the free plan.'}';
+      title = 'Not enough time left';
+      body = 'This video is ${fmt(videoSec)}, but you only have '
+          '${fmt(remainingSec)} left to import${isPremium ? '.' : ' on the free plan.'}';
     }
     return Container(
       padding: const EdgeInsets.all(14),

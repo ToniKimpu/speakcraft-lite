@@ -252,6 +252,12 @@ class _PremiumBenefits extends StatelessWidget {
       title: 'Listening & Shadowing',
       sub: 'Shadowing, speech practice & sentence explanations on every video.',
     ),
+    (
+      icon: Icons.smart_display_outlined,
+      title: 'YouTube import — up to 5 hours',
+      sub: 'Turn your own YouTube videos into full lessons — 5 hours of imports '
+          'vs 10 minutes on Free.',
+    ),
   ];
 
   @override
