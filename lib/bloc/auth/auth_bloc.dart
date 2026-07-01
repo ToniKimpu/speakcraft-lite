@@ -51,6 +51,10 @@ abstract class AuthState with _$AuthState {
   const factory AuthState.passwordResetOtpSent(String email) =
       _PasswordResetOtpSent;
   const factory AuthState.deviceIdFailed() = _DeviceIdFailed;
+
+  /// Guest tried to convert with a Google account that already belongs to
+  /// another account. The UI confirms, then signs into it via loginWithGoogle.
+  const factory AuthState.guestGoogleAlreadyExists() = _GuestGoogleAlreadyExists;
   const factory AuthState.onNewPath() = _OnNewPath;
   const factory AuthState.onNewVersion(Map<String, dynamic> appVersion) =
       _OnNewVersion;
@@ -195,6 +199,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }
       await _resolveAuthenticatedState(appUser, emit);
+    } on GuestIdentityExistsException {
+      // The Google account already exists → let the UI offer to sign into it.
+      emit(const AuthState.guestGoogleAlreadyExists());
     } catch (error) {
       if (isOfflineError(error)) {
         emit(const AuthState.socketError('Please check your connection.'));

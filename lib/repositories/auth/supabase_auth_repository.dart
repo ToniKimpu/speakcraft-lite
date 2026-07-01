@@ -199,12 +199,21 @@ class SupabaseAuthRepository implements AuthRepository {
   Future<AppUser?> convertGuestWithGoogle() async {
     try {
       final cred = await _googleCredential();
-      // Link Google to the CURRENT anonymous user (same uid → progress kept).
-      await supabase.auth.linkIdentityWithIdToken(
-        provider: OAuthProvider.google,
-        idToken: cred.idToken,
-        accessToken: cred.accessToken,
-      );
+      try {
+        // Link Google to the CURRENT anonymous user (same uid → progress kept).
+        await supabase.auth.linkIdentityWithIdToken(
+          provider: OAuthProvider.google,
+          idToken: cred.idToken,
+          accessToken: cred.accessToken,
+        );
+      } on AuthException catch (e) {
+        // Already tied to another account → can't link. Let the UI confirm and
+        // sign into that existing account instead.
+        if (e.code == 'identity_already_exists') {
+          throw const GuestIdentityExistsException();
+        }
+        rethrow;
+      }
       await _syncProfileFromAuth();
       return await _fetchCurrentUser();
     } on GoogleSignInException catch (e, st) {
@@ -216,7 +225,6 @@ class SupabaseAuthRepository implements AuthRepository {
       if (e.code == GoogleSignInExceptionCode.canceled) return null;
       throw Exception(e.toString());
     } on AuthException catch (e) {
-      // e.g. this Google identity is already attached to another account.
       throw Exception(e.message);
     }
   }

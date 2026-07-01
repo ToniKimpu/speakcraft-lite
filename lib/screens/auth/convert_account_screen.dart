@@ -65,6 +65,34 @@ class _ConvertAccountScreenState extends State<ConvertAccountScreen> {
     );
   }
 
+  /// The picked Google account already has an account, so it can't be linked to
+  /// this guest. Offer to sign into it — but warn that guest progress is lost.
+  Future<void> _confirmSignInExisting() async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('Account already exists'),
+        content: const Text(
+          'You already have an account with this Google. Sign in to it?\n\n'
+          'Your current guest progress won\'t transfer.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(dialogContext, true),
+            child: const Text('Sign in'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+    _loadingAction.value = 'google';
+    _authBloc.add(const AuthEvent.loginWithGoogle());
+  }
+
   @override
   Widget build(BuildContext context) {
     final t = AuthTokens.of(context);
@@ -76,6 +104,10 @@ class _ConvertAccountScreenState extends State<ConvertAccountScreen> {
           listener: (context, state) {
             state.maybeWhen(
               unauthenticated: () => _loadingAction.value = null,
+              guestGoogleAlreadyExists: () {
+                _loadingAction.value = null;
+                _confirmSignInExisting();
+              },
               otpRequired: (email) {
                 _loadingAction.value = null;
                 Navigator.push(

@@ -3834,6 +3834,7 @@ mixin _$AuthState {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -3850,6 +3851,7 @@ mixin _$AuthState {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -3866,6 +3868,7 @@ mixin _$AuthState {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -3883,6 +3886,8 @@ mixin _$AuthState {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -3899,6 +3904,8 @@ mixin _$AuthState {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -3915,6 +3922,7 @@ mixin _$AuthState {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -3999,6 +4007,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -4018,6 +4027,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -4037,6 +4047,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -4060,6 +4071,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -4079,6 +4092,8 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -4098,6 +4113,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -4170,6 +4186,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -4189,6 +4206,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -4208,6 +4226,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -4231,6 +4250,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -4250,6 +4271,8 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -4269,6 +4292,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements _Loading {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -4343,6 +4367,7 @@ class _$AuthenticatedImpl
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -4362,6 +4387,7 @@ class _$AuthenticatedImpl
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -4381,6 +4407,7 @@ class _$AuthenticatedImpl
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -4404,6 +4431,8 @@ class _$AuthenticatedImpl
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -4423,6 +4452,8 @@ class _$AuthenticatedImpl
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -4442,6 +4473,7 @@ class _$AuthenticatedImpl
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -4516,6 +4548,7 @@ class _$UnauthenticatedImpl
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -4535,6 +4568,7 @@ class _$UnauthenticatedImpl
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -4554,6 +4588,7 @@ class _$UnauthenticatedImpl
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -4577,6 +4612,8 @@ class _$UnauthenticatedImpl
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -4596,6 +4633,8 @@ class _$UnauthenticatedImpl
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -4615,6 +4654,7 @@ class _$UnauthenticatedImpl
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -4716,6 +4756,7 @@ class _$OtpRequiredImpl with DiagnosticableTreeMixin implements _OtpRequired {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -4735,6 +4776,7 @@ class _$OtpRequiredImpl with DiagnosticableTreeMixin implements _OtpRequired {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -4754,6 +4796,7 @@ class _$OtpRequiredImpl with DiagnosticableTreeMixin implements _OtpRequired {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -4777,6 +4820,8 @@ class _$OtpRequiredImpl with DiagnosticableTreeMixin implements _OtpRequired {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -4796,6 +4841,8 @@ class _$OtpRequiredImpl with DiagnosticableTreeMixin implements _OtpRequired {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -4815,6 +4862,7 @@ class _$OtpRequiredImpl with DiagnosticableTreeMixin implements _OtpRequired {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -4895,6 +4943,7 @@ class _$OtpResentImpl with DiagnosticableTreeMixin implements _OtpResent {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -4914,6 +4963,7 @@ class _$OtpResentImpl with DiagnosticableTreeMixin implements _OtpResent {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -4933,6 +4983,7 @@ class _$OtpResentImpl with DiagnosticableTreeMixin implements _OtpResent {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -4956,6 +5007,8 @@ class _$OtpResentImpl with DiagnosticableTreeMixin implements _OtpResent {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -4975,6 +5028,8 @@ class _$OtpResentImpl with DiagnosticableTreeMixin implements _OtpResent {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -4994,6 +5049,7 @@ class _$OtpResentImpl with DiagnosticableTreeMixin implements _OtpResent {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -5099,6 +5155,7 @@ class _$PasswordResetOtpSentImpl
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -5118,6 +5175,7 @@ class _$PasswordResetOtpSentImpl
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -5137,6 +5195,7 @@ class _$PasswordResetOtpSentImpl
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -5160,6 +5219,8 @@ class _$PasswordResetOtpSentImpl
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -5179,6 +5240,8 @@ class _$PasswordResetOtpSentImpl
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -5198,6 +5261,7 @@ class _$PasswordResetOtpSentImpl
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -5281,6 +5345,7 @@ class _$DeviceIdFailedImpl
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -5300,6 +5365,7 @@ class _$DeviceIdFailedImpl
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -5319,6 +5385,7 @@ class _$DeviceIdFailedImpl
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -5342,6 +5409,8 @@ class _$DeviceIdFailedImpl
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -5361,6 +5430,8 @@ class _$DeviceIdFailedImpl
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -5380,6 +5451,7 @@ class _$DeviceIdFailedImpl
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -5395,6 +5467,191 @@ class _$DeviceIdFailedImpl
 
 abstract class _DeviceIdFailed implements AuthState {
   const factory _DeviceIdFailed() = _$DeviceIdFailedImpl;
+}
+
+/// @nodoc
+abstract class _$$GuestGoogleAlreadyExistsImplCopyWith<$Res> {
+  factory _$$GuestGoogleAlreadyExistsImplCopyWith(
+          _$GuestGoogleAlreadyExistsImpl value,
+          $Res Function(_$GuestGoogleAlreadyExistsImpl) then) =
+      __$$GuestGoogleAlreadyExistsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GuestGoogleAlreadyExistsImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$GuestGoogleAlreadyExistsImpl>
+    implements _$$GuestGoogleAlreadyExistsImplCopyWith<$Res> {
+  __$$GuestGoogleAlreadyExistsImplCopyWithImpl(
+      _$GuestGoogleAlreadyExistsImpl _value,
+      $Res Function(_$GuestGoogleAlreadyExistsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GuestGoogleAlreadyExistsImpl
+    with DiagnosticableTreeMixin
+    implements _GuestGoogleAlreadyExists {
+  const _$GuestGoogleAlreadyExistsImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthState.guestGoogleAlreadyExists()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AuthState.guestGoogleAlreadyExists'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GuestGoogleAlreadyExistsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() authenticated,
+    required TResult Function() unauthenticated,
+    required TResult Function(String email) otpRequired,
+    required TResult Function() otpResent,
+    required TResult Function(String email) passwordResetOtpSent,
+    required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
+    required TResult Function() onNewPath,
+    required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
+    required TResult Function(String message) socketError,
+    required TResult Function(String message) error,
+  }) {
+    return guestGoogleAlreadyExists();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? authenticated,
+    TResult? Function()? unauthenticated,
+    TResult? Function(String email)? otpRequired,
+    TResult? Function()? otpResent,
+    TResult? Function(String email)? passwordResetOtpSent,
+    TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
+    TResult? Function()? onNewPath,
+    TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult? Function(String message)? socketError,
+    TResult? Function(String message)? error,
+  }) {
+    return guestGoogleAlreadyExists?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? authenticated,
+    TResult Function()? unauthenticated,
+    TResult Function(String email)? otpRequired,
+    TResult Function()? otpResent,
+    TResult Function(String email)? passwordResetOtpSent,
+    TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
+    TResult Function()? onNewPath,
+    TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
+    TResult Function(String message)? socketError,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (guestGoogleAlreadyExists != null) {
+      return guestGoogleAlreadyExists();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Authenticated value) authenticated,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_OtpRequired value) otpRequired,
+    required TResult Function(_OtpResent value) otpResent,
+    required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
+    required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
+    required TResult Function(_OnNewPath value) onNewPath,
+    required TResult Function(_OnNewVersion value) onNewVersion,
+    required TResult Function(_SocketError value) socketError,
+    required TResult Function(_Error value) error,
+  }) {
+    return guestGoogleAlreadyExists(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Authenticated value)? authenticated,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_OtpRequired value)? otpRequired,
+    TResult? Function(_OtpResent value)? otpResent,
+    TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
+    TResult? Function(_OnNewPath value)? onNewPath,
+    TResult? Function(_OnNewVersion value)? onNewVersion,
+    TResult? Function(_SocketError value)? socketError,
+    TResult? Function(_Error value)? error,
+  }) {
+    return guestGoogleAlreadyExists?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Authenticated value)? authenticated,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_OtpRequired value)? otpRequired,
+    TResult Function(_OtpResent value)? otpResent,
+    TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
+    TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
+    TResult Function(_OnNewPath value)? onNewPath,
+    TResult Function(_OnNewVersion value)? onNewVersion,
+    TResult Function(_SocketError value)? socketError,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (guestGoogleAlreadyExists != null) {
+      return guestGoogleAlreadyExists(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GuestGoogleAlreadyExists implements AuthState {
+  const factory _GuestGoogleAlreadyExists() = _$GuestGoogleAlreadyExistsImpl;
 }
 
 /// @nodoc
@@ -5452,6 +5709,7 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -5471,6 +5729,7 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -5490,6 +5749,7 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -5513,6 +5773,8 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -5532,6 +5794,8 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -5551,6 +5815,7 @@ class _$OnNewPathImpl with DiagnosticableTreeMixin implements _OnNewPath {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -5660,6 +5925,7 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -5679,6 +5945,7 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -5698,6 +5965,7 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -5721,6 +5989,8 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -5740,6 +6010,8 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -5759,6 +6031,7 @@ class _$OnNewVersionImpl with DiagnosticableTreeMixin implements _OnNewVersion {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -5869,6 +6142,7 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -5888,6 +6162,7 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -5907,6 +6182,7 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -5930,6 +6206,8 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -5949,6 +6227,8 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -5968,6 +6248,7 @@ class _$SocketErrorImpl with DiagnosticableTreeMixin implements _SocketError {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,
@@ -6077,6 +6358,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function() otpResent,
     required TResult Function(String email) passwordResetOtpSent,
     required TResult Function() deviceIdFailed,
+    required TResult Function() guestGoogleAlreadyExists,
     required TResult Function() onNewPath,
     required TResult Function(Map<String, dynamic> appVersion) onNewVersion,
     required TResult Function(String message) socketError,
@@ -6096,6 +6378,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function()? otpResent,
     TResult? Function(String email)? passwordResetOtpSent,
     TResult? Function()? deviceIdFailed,
+    TResult? Function()? guestGoogleAlreadyExists,
     TResult? Function()? onNewPath,
     TResult? Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult? Function(String message)? socketError,
@@ -6115,6 +6398,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function()? otpResent,
     TResult Function(String email)? passwordResetOtpSent,
     TResult Function()? deviceIdFailed,
+    TResult Function()? guestGoogleAlreadyExists,
     TResult Function()? onNewPath,
     TResult Function(Map<String, dynamic> appVersion)? onNewVersion,
     TResult Function(String message)? socketError,
@@ -6138,6 +6422,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     required TResult Function(_OtpResent value) otpResent,
     required TResult Function(_PasswordResetOtpSent value) passwordResetOtpSent,
     required TResult Function(_DeviceIdFailed value) deviceIdFailed,
+    required TResult Function(_GuestGoogleAlreadyExists value)
+        guestGoogleAlreadyExists,
     required TResult Function(_OnNewPath value) onNewPath,
     required TResult Function(_OnNewVersion value) onNewVersion,
     required TResult Function(_SocketError value) socketError,
@@ -6157,6 +6443,8 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult? Function(_OtpResent value)? otpResent,
     TResult? Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult? Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult? Function(_GuestGoogleAlreadyExists value)?
+        guestGoogleAlreadyExists,
     TResult? Function(_OnNewPath value)? onNewPath,
     TResult? Function(_OnNewVersion value)? onNewVersion,
     TResult? Function(_SocketError value)? socketError,
@@ -6176,6 +6464,7 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements _Error {
     TResult Function(_OtpResent value)? otpResent,
     TResult Function(_PasswordResetOtpSent value)? passwordResetOtpSent,
     TResult Function(_DeviceIdFailed value)? deviceIdFailed,
+    TResult Function(_GuestGoogleAlreadyExists value)? guestGoogleAlreadyExists,
     TResult Function(_OnNewPath value)? onNewPath,
     TResult Function(_OnNewVersion value)? onNewVersion,
     TResult Function(_SocketError value)? socketError,

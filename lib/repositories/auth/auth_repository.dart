@@ -1,5 +1,13 @@
 import '../../model/app_user/app_user.dart';
 
+/// Thrown by [AuthRepository.convertGuestWithGoogle] when the chosen Google
+/// account is already tied to another account, so it can't be linked to the
+/// guest. The UI confirms with the user, then signs into that existing account
+/// via [AuthRepository.loginWithGoogle] (guest progress does not transfer).
+class GuestIdentityExistsException implements Exception {
+  const GuestIdentityExistsException();
+}
+
 abstract class AuthRepository {
   Future<AppUser?> getCurrentUser();
   Future<AppUser> loginWithEmail(String email, String password);
