@@ -12,18 +12,21 @@ class SupabaseAuthRepository implements AuthRepository {
   Future<AppUser?> getCurrentUser() async {
     final user = supabase.auth.currentSession?.user;
     if (user == null) return null;
-    // maybeSingle (not single) so a session whose profile row is missing returns
-    // null instead of throwing PGRST116. That happens for a stale/deleted user;
-    // sign out so the app falls back to login rather than dead-ending on an
+    // Read the RPC result as a LIST, not .single()/.maybeSingle(): get_user is a
+    // set-returning function called over POST, and postgrest's maybeSingle
+    // PGRST116 workaround only applies to GET — so .maybeSingle() here still
+    // throws "0 rows" (PGRST116) instead of returning null. A list avoids it.
+    // Empty list = the session's profile row is missing (stale/deleted user);
+    // sign out so the app falls back to login rather than dead-ending on a
     // "something went wrong" error with no way forward.
-    final dataRes = await supabase
-        .rpc('get_user', params: {'user_id_param': user.id})
-        .maybeSingle();
-    if (dataRes == null) {
+    final res =
+        await supabase.rpc('get_user', params: {'user_id_param': user.id});
+    final rows = (res as List?) ?? const [];
+    if (rows.isEmpty) {
       await logout();
       return null;
     }
-    return AppUser.fromJson(dataRes);
+    return AppUser.fromJson(Map<String, dynamic>.from(rows.first as Map));
   }
 
   @override
